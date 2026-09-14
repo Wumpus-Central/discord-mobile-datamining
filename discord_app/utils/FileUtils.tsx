@@ -201,14 +201,13 @@ export const uploadSumTooLarge = function uploadSumTooLarge(arg0) {
 export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadblockDescription(arg0) {
   ({ guildId, maxSize } = arg0);
   ({ onClick, hideLearnMore } = arg0);
-  let obj = _Math(4533);
   if (maxSize == null) {
     const currentUser = UserStore.getCurrentUser();
     const userMaxFileSize = enabled(4294).getUserMaxFileSize(currentUser);
     if (null == guildId) {
       maxSize = userMaxFileSize;
     } else {
-      _Math = GuildStore.getGuild(guildId);
+      let _Math = GuildStore.getGuild(guildId);
       if (null != _Math) {
         const FileUploadPowerupHoldoutExperiment = tmp(4562).FileUploadPowerupHoldoutExperiment;
         enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
@@ -237,16 +236,17 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
     }
     const obj5 = enabled(4294);
   }
-  const formatSizeResult = obj.formatSize(maxSize / 1024, { useKibibytes: true });
+  const formatSizeResult = _Math(4533).formatSize(maxSize / 1024, { useKibibytes: true });
+  const obj = _Math(4533);
   const maxFileSizeForPremiumType = _Math(4294).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
   if (true === hideLearnMore) {
     const intl2 = tmp(1114).intl;
-    obj = { maxSize: formatSizeResult, premiumMaxSize: maxFileSizeForPremiumType };
-    let formatResult = intl2.format(tmp(1114).t["+R2TzS"], obj);
+    const obj2 = { maxSize: formatSizeResult, premiumMaxSize: maxFileSizeForPremiumType };
+    let formatResult = intl2.format(tmp(1114).t["+R2TzS"], obj2);
   } else {
     const intl = tmp(1114).intl;
-    obj = { maxSize: formatSizeResult, premiumMaxSize: maxFileSizeForPremiumType, onClick };
-    formatResult = intl.format(tmp(1114).t.tRuxk9, obj);
+    const obj3 = { maxSize: formatSizeResult, premiumMaxSize: maxFileSizeForPremiumType, onClick };
+    formatResult = intl.format(tmp(1114).t.tRuxk9, obj3);
   }
   return formatResult;
 };

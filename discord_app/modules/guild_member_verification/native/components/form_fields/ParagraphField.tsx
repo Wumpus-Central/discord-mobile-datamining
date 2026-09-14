@@ -18,15 +18,15 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/nat
 export default function ParagraphField(field) {
   field = field.field;
   let str = field.response;
-  let obj = { style: closure_5().container, children: null };
-  obj = { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null };
+  const obj = { style: closure_5().container, children: null };
+  const obj2 = { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null };
   if (str == null) {
     str = "";
   }
-  obj.value = str;
+  obj2.value = str;
   const intl = util.intl;
-  obj.placeholder = intl.string(util.t["Sqn+Wh"]);
-  obj.onChange = field.onChange;
+  obj2.placeholder = intl.string(util.t["Sqn+Wh"]);
+  obj2.onChange = field.onChange;
   obj.children = jsx(TextArea.TextArea, { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength, value: null, placeholder: null, onChange: null });
-  return <View label={jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label })} maxLength={maxLength} value={null} placeholder={null} onChange={null} />;
+  return <View style={closure_5().container}>{null}</View>;
 };

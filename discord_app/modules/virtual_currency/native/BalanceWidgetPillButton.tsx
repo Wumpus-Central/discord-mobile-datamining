@@ -1,6 +1,6 @@
-// === Module 11234: BalanceWidgetPillButton ===
+// === Module 11235: BalanceWidgetPillButton ===
 
-// Module 11234 (BalanceWidgetPillButton)
+// Module 11235 (BalanceWidgetPillButton)
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import _modDef8963 from "module_8963" /* 8963 */;
@@ -42,9 +42,9 @@ class BalanceWidgetPillButton {
     if (tmp4) {
       stringResult = intl.string(tmp2(tmp3[4]).t.y0WGqP);
     } else {
-      obj = { balance: null };
-      obj.balance = balance.toString();
-      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj);
+      obj1 = { balance: null };
+      obj1.balance = balance.toString();
+      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj1);
     }
     obj.accessibilityLabel = stringResult;
     obj.disabled = tmp4;

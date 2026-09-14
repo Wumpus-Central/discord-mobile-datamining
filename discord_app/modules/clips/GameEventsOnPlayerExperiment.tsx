@@ -4,10 +4,10 @@
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", name: "2026-07-clips-game-events-on-player", defaultConfig: { enableGameEventsOnPlayer: false }, variations: null };
-obj = { 1: null };
-obj[1] = { enableGameEventsOnPlayer: true };
-obj.variations = obj;
+const obj = { kind: "user", name: "2026-07-clips-game-events-on-player", defaultConfig: { enableGameEventsOnPlayer: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enableGameEventsOnPlayer: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/clips/GameEventsOnPlayerExperiment.tsx");
 

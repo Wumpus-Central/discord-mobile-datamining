@@ -1,6 +1,6 @@
-// === Module 17608: ThreadManager ===
+// === Module 17609: ThreadManager ===
 
-// Module 17608 (ThreadManager)
+// Module 17609 (ThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 8002 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -25,8 +25,8 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
           let obj = DispatcherDefault;
-          obj = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj);
+          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+          let dispatchResult = obj.dispatch(obj2);
           continue;
         }
       });
@@ -73,8 +73,8 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
           let obj = DispatcherDefault;
-          obj = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj);
+          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+          let dispatchResult = obj.dispatch(obj2);
           continue;
         }
       });

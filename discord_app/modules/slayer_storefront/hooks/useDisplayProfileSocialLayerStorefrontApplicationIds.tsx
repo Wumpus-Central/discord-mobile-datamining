@@ -7,6 +7,8 @@ import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes
 import noop from "module_19" /* 19 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7331 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");

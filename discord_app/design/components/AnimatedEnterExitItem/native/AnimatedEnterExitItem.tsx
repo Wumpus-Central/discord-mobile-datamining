@@ -16,12 +16,11 @@ function AnimatedRenderItem(shouldAnimate) {
   let sharedValue;
   __initData = undefined;
   ({ renderItem, item } = shouldAnimate);
-  let obj = shouldAnimate(entering[2]);
   let num = 0;
   if (state === shouldAnimate(entering[3]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
+  sharedValue = shouldAnimate(entering[2]).useSharedValue(num);
   const items = [state, sharedValue];
   const effect = exiting.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
@@ -30,7 +29,7 @@ function AnimatedRenderItem(shouldAnimate) {
       const result1 = sharedValue.set(1);
     }
   }, items);
-  let tmpResult = tmp(tmp2[2]);
+  let obj = shouldAnimate(entering[2]);
   class T {
     constructor() {
       if (!useReducedMotion) {
@@ -68,13 +67,13 @@ function AnimatedRenderItem(shouldAnimate) {
       return;
     }
   }
-  obj = { useReducedMotion, shouldAnimate, state, TransitionStates: tmp(tmp2[3]).TransitionStates, exiting, visible: sharedValue, runOnJS: tmp(tmp2[2]).runOnJS, cleanUp, entering };
-  T.__closure = obj;
+  const tmpResult = shouldAnimate(entering[2]);
+  T.__closure = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[3]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp, entering };
   T.__workletHash = 2197269661090;
   T.__initData = sharedValue;
   __initData = tmp6;
   const animatedStyle = tmpResult.useAnimatedStyle(T);
-  tmpResult = tmp(tmp2[2]);
+  const obj2 = { useReducedMotion, shouldAnimate, state, TransitionStates: shouldAnimate(entering[3]).TransitionStates, exiting, visible: sharedValue, runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp, entering };
   class I {
     constructor() {
       tmp = state === closure_0(closure_1[3]).TransitionStates.YEETED;
@@ -94,8 +93,8 @@ function AnimatedRenderItem(shouldAnimate) {
       return tmp;
     }
   }
-  obj = { state, TransitionStates: tmp(tmp2[3]).TransitionStates, visible: sharedValue, hasExiting: tmp6, useReducedMotion };
-  I.__closure = obj;
+  const tmpResult2 = shouldAnimate(entering[2]);
+  I.__closure = { state, TransitionStates: shouldAnimate(entering[3]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
   I.__workletHash = 11984384474891;
   I.__initData = __initData;
   const fn = function v(arg0, arg1) {
@@ -107,11 +106,12 @@ function AnimatedRenderItem(shouldAnimate) {
       ReanimatedRexport.runOnJS(cleanUp)();
     }
   };
+  const obj3 = { state, TransitionStates: shouldAnimate(entering[3]).TransitionStates, visible: sharedValue, hasExiting: null != exiting, useReducedMotion };
   fn.__closure = { runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp };
   fn.__workletHash = 2105667466259;
   fn.__initData = __initData2;
-  const animatedReaction = tmpResult.useAnimatedReaction(I, fn);
-  const obj1 = { runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp };
+  const animatedReaction = tmpResult2.useAnimatedReaction(I, fn);
+  const obj4 = { runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp };
   return cleanUp(state, { children: renderItem(item, animatedStyle) });
 }
 function renderAnimatedItem(key, arg1, state, cleanUp) {

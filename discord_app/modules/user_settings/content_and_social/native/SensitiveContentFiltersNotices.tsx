@@ -1,12 +1,14 @@
-// === Module 14907: SensitiveContentFiltersNotices ===
+// === Module 14908: SensitiveContentFiltersNotices ===
 
-// Module 14907 (SensitiveContentFiltersNotices)
+// Module 14908 (SensitiveContentFiltersNotices)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14773 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14774 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SafetySettingsNoticeType = fn(8517).SafetySettingsNoticeType;
@@ -15,13 +17,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
 
 export const SensitiveContentFiltersTeenNotice = function SensitiveContentFiltersTeenNotice() {
+  const isTinyBroncoSettingsNoticeEnabled = require("TinyBroncoSettingsNoticesLazy").useIsTinyBroncoSettingsNoticeEnabled();
   let obj = require("TinyBroncoSettingsNoticesLazy");
-  const isTinyBroncoSettingsNoticeEnabled = obj.useIsTinyBroncoSettingsNoticeEnabled();
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(14905).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(14906).ContentFiltersTeenNotice, {});
   } else {
-    obj = {
+    const obj3 = {
       label: tmp(1114).t.EUo0yj,
       labelHook() {
           const obj = LinkingDefault;
@@ -44,16 +46,16 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
   let obj = {
     label: util.t.OX4ybh,
     labelHook() {
-      const obj = { entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-      const result = obj.showAgeVerificationGetStartedModal(obj);
+      const obj = AgeVerificationActionCreatorsDefault;
+      const result = obj.showAgeVerificationGetStartedModal({ entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE });
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
   };
   return jsx(SafetySettingsNoticeDefault, {
     label: util.t.OX4ybh,
     labelHook() {
-      const obj = { entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-      const result = obj.showAgeVerificationGetStartedModal(obj);
+      const obj = AgeVerificationActionCreatorsDefault;
+      const result = obj.showAgeVerificationGetStartedModal({ entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE });
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
   });

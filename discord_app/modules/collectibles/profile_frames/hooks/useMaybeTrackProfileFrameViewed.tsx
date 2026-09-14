@@ -49,19 +49,19 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         }
         if (!current) {
           ref4.current = true;
-          const obj = { profileUi: "PROFILE_FRAME", timeToInteractiveMs: ref.current, timeToLoadMs: timestamp - openedAt, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
+          const obj2 = { profileUi: "PROFILE_FRAME", timeToInteractiveMs: ref.current, timeToLoadMs: timestamp - openedAt, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
           let diff;
           if (null != stateFromStores.startedAt) {
             if (null != stateFromStores.endedAt) {
               diff = stateFromStores.endedAt - stateFromStores.startedAt;
             }
           }
-          obj.timeToFetchMs = diff;
-          obj.viewStartedAt = openedAt;
-          obj.fetchStartedAt = stateFromStores.startedAt;
-          obj.analyticsLocations = analyticsLocations;
+          obj2.timeToFetchMs = diff;
+          obj2.viewStartedAt = openedAt;
+          obj2.fetchStartedAt = stateFromStores.startedAt;
+          obj2.analyticsLocations = analyticsLocations;
           const merged = Object.assign(closure_1_2);
-          const result = obj.maybeTrackUserProfileUiViewed(obj);
+          const result = UserProfileAnalyticsUtils.maybeTrackUserProfileUiViewed(obj2);
         }
       }
     }

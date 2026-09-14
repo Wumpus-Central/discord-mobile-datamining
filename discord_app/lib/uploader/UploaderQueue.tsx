@@ -36,8 +36,8 @@ prototype["drainQueue"] = function drainQueue() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -50,8 +50,8 @@ prototype["drainQueue"] = function drainQueue() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const _aborted = tmp7;
             closure_128_0 = undefined;
@@ -80,8 +80,8 @@ prototype["drainQueue"] = function drainQueue() {
               });
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: promise, done: false };
-              return obj1;
+              const obj4 = { value: promise, done: false };
+              return obj4;
             }
           }
         } else {
@@ -101,7 +101,7 @@ prototype["drainQueue"] = function drainQueue() {
           }
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp32) {

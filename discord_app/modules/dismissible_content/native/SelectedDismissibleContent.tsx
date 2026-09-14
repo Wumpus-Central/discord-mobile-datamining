@@ -1,6 +1,6 @@
-// === Module 10753: SelectedDismissibleContent ===
+// === Module 10754: SelectedDismissibleContent ===
 
-// Module 10753 (SelectedDismissibleContent)
+// Module 10754 (SelectedDismissibleContent)
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,46 +13,31 @@ const result = size.fileFinishedImporting("modules/dismissible_content/native/Se
 
 export default function SelectedDismissibleContent(arg0) {
   ({ contentTypes, children, groupName, bypassAutoDismiss } = arg0);
-  let obj = useSelectedDismissibleContent;
-  const tmp = _slicedToArray(obj.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss), 2);
-  obj = { children: null };
-  obj = { visibleContent: tmp[0], markAsDismissed: tmp[1] };
-  obj.children = children(obj);
-  return React4(React3, obj);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss), 2);
+  const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
+  return React4(React3, obj2);
 };
 export const SelectedVersionedDismissibleContent = function SelectedVersionedDismissibleContent(contentType) {
   ({ latestVersion, groupName, bypassAutoDismiss, children } = contentType);
-  let obj = useSelectedDismissibleContent;
-  const tmp = _slicedToArray(obj.useSelectedVersionedDismissibleContent(contentType.contentType, latestVersion, groupName, bypassAutoDismiss), 2);
-  obj = { children: null };
-  obj = { visibleContent: tmp[0], markAsDismissed: tmp[1] };
-  obj.children = children(obj);
-  return React4(React3, obj);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedVersionedDismissibleContent(contentType.contentType, latestVersion, groupName, bypassAutoDismiss), 2);
+  const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
+  return React4(React3, obj2);
 };
 export const SelectedTimeRecurringDismissibleContent = function SelectedTimeRecurringDismissibleContent(contentType) {
   ({ timeRecurringConfig, groupName, bypassAutoDismiss, children } = contentType);
-  let obj = useSelectedDismissibleContent;
-  const tmp = _slicedToArray(obj.useSelectedTimeRecurringDismissibleContent(contentType.contentType, timeRecurringConfig, groupName, bypassAutoDismiss), 2);
-  obj = { children: null };
-  obj = { visibleContent: tmp[0], markAsDismissed: tmp[1] };
-  obj.children = children(obj);
-  return React4(React3, obj);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(contentType.contentType, timeRecurringConfig, groupName, bypassAutoDismiss), 2);
+  const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
+  return React4(React3, obj2);
 };
 export const SelectedSnowflakeBoundDismissibleContent = function SelectedSnowflakeBoundDismissibleContent(contentType) {
   ({ newSnowflakeId, groupName, bypassAutoDismiss, children } = contentType);
-  let obj = useSelectedDismissibleContent;
-  const tmp = _slicedToArray(obj.useSelectedSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, groupName, bypassAutoDismiss), 2);
-  obj = { children: null };
-  obj = { visibleContent: tmp[0], markAsDismissed: tmp[1] };
-  obj.children = children(obj);
-  return React4(React3, obj);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, groupName, bypassAutoDismiss), 2);
+  const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
+  return React4(React3, obj2);
 };
 export const SelectedTimeReccuringSnowflakeBoundDismissibleContent = function SelectedTimeReccuringSnowflakeBoundDismissibleContent(contentType) {
   ({ newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss, children } = contentType);
-  let obj = useSelectedDismissibleContent;
-  const tmp = _slicedToArray(obj.useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss), 2);
-  obj = { children: null };
-  obj = { visibleContent: tmp[0], markAsDismissed: tmp[1] };
-  obj.children = children(obj);
-  return React4(React3, obj);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss), 2);
+  const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
+  return React4(React3, obj2);
 };

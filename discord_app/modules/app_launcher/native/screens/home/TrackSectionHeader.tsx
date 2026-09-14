@@ -1,7 +1,7 @@
-// === Module 12225: TrackSectionHeader ===
+// === Module 12226: TrackSectionHeader ===
 
-// Module 12225 (TrackSectionHeader)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+// Module 12226 (TrackSectionHeader)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8894 */;
 import AppLauncherStore from "AppLauncherStore" /* 9538 */;
 
@@ -12,11 +12,10 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default function TrackSectionHeader(viewed) {
   viewed = viewed.viewed;
   ({ sectionName, numItems, numVisibleItems, children } = viewed);
-  let obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
-  obj = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: AppLauncherStore.entrypoint() };
-  obj.properties = obj;
-  obj = { disableTrack: !viewed };
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
+  const tmp = useTrackImpressionDefault;
+  obj.properties = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: AppLauncherStore.entrypoint() };
   const items = [viewed];
-  useTrackImpressionDefault(obj, obj, items);
+  tmp(obj, { disableTrack: !viewed }, items);
   return children;
 };

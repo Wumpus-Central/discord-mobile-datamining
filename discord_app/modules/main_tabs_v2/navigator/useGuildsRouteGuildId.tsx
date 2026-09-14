@@ -1,6 +1,6 @@
-// === Module 16111: useGuildsRouteGuildId ===
+// === Module 16113: useGuildsRouteGuildId ===
 
-// Module 16111 (useGuildsRouteGuildId)
+// Module 16113 (useGuildsRouteGuildId)
 import Link from "Link" /* 1484 */;
 import size from "module_2" /* 2 */;
 

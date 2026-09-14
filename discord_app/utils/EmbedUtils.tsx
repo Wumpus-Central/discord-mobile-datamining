@@ -48,27 +48,25 @@ const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/
 let result = size.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
-  let obj = { id: null, url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
-  let obj1 = _modDef12;
-  obj.id = obj1.uniqueId("embed_");
+  const obj = { id: _modDef12.uniqueId("embed_"), url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
   ({ url: obj.url, type: obj.type, title: obj.rawTitle, description: obj.rawDescription, reference_id: obj.referenceId, flags: obj.flags, content_scan_version: obj.contentScanVersion } = footer);
   if (null != footer.footer) {
-    obj = { text: footer.footer.text, iconURL: footer.footer.icon_url, iconProxyURL: footer.footer.proxy_icon_url };
-    obj.footer = obj;
+    const obj3 = { text: footer.footer.text, iconURL: footer.footer.icon_url, iconProxyURL: footer.footer.proxy_icon_url };
+    obj.footer = obj3;
   }
   if (tmp3) {
-    obj = { name: footer.author.name, url: footer.author.url, iconURL: footer.author.icon_url, iconProxyURL: footer.author.proxy_icon_url };
-    obj.author = obj;
+    const obj4 = { name: footer.author.name, url: footer.author.url, iconURL: footer.author.icon_url, iconProxyURL: footer.author.proxy_icon_url };
+    obj.author = obj4;
   }
   if (tmp4) {
-    obj1 = { name: footer.provider.name, url: footer.provider.url };
-    obj.provider = obj1;
+    const obj5 = { name: footer.provider.name, url: footer.provider.url };
+    obj.provider = obj5;
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = _modDef4228;
     const date = new Date(footer.timestamp);
-    obj.timestamp = tmpResult(date);
+    obj.timestamp = _modDef4228(date);
+    const tmpResult = _modDef4228;
   }
   if (null != footer.color) {
     obj.color = utils_ColorUtils.int2hsl(footer.color, false);
@@ -152,11 +150,11 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       const keys = Object.keys({ format: "webp" });
       const item = keys.forEach((item) => {
         const searchParams = str.searchParams;
-        const result = searchParams.set(item, obj2[item]);
+        const result = searchParams.set(item, obj11[item]);
       });
       size3.url = str.toString();
       obj.thumbnail = size3;
-      const obj2 = { format: "webp" };
+      const obj11 = { format: "webp" };
     }
     let tmp27 = null != obj.thumbnail;
     if (tmp27) {
@@ -176,8 +174,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
           }
           let tmp33 = null != id;
           if (tmp33) {
-            tmpResult = SnowflakeUtilsDefault;
-            tmp33 = tmpResult.extractTimestamp(id) < 1492472454139;
+            tmp33 = SnowflakeUtilsDefault.extractTimestamp(id) < 1492472454139;
+            const tmpResult2 = SnowflakeUtilsDefault;
           }
           let tmp34 = isMatch;
           if (tmp33) {
@@ -342,7 +340,8 @@ export const isSocialLayerStorefrontArticleEmbed = function isSocialLayerStorefr
 export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider, maxMediaWidth, maxMediaHeight) {
   if (null != maxMediaWidth) {
     if (null != maxMediaHeight) {
-      let obj = { maxMediaWidth, maxMediaHeight };
+      const obj2 = { maxMediaWidth, maxMediaHeight };
+      let obj = obj2;
     }
     return obj;
   }

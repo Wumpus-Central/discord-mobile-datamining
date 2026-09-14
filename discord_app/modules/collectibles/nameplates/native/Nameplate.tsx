@@ -41,26 +41,26 @@ function NameplateInner(isFocused) {
     flag7 = false;
   }
   let sharedValue;
-  let obj = flag6(504);
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = flag6(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
-  let obj1 = flag6(4373);
+  let obj = flag6(504);
+  const tmp6 = sharedValue(4571)();
   let num = 1;
   if (flag6) {
     num = 0;
   }
-  sharedValue = obj1.useSharedValue(num);
+  sharedValue = flag6(4373).useSharedValue(num);
   const items1 = [sharedValue, flag6];
   const effect = noop.useEffect(() => {
     if (flag6) {
-      const obj = { duration: 100, easing: null };
+      const obj2 = { duration: 100, easing: null };
       const Easing = ReanimatedRexport.Easing;
-      obj.easing = Easing.in(ReanimatedRexport.Easing.ease);
-      const result = sharedValue.set(obj.withTiming(1, obj));
+      obj2.easing = Easing.in(ReanimatedRexport.Easing.ease);
+      const result = sharedValue.set(timing.withTiming(1, obj2));
     }
   }, items1);
-  let tmpResult = tmp(4373);
+  let obj2 = flag6(4373);
   class A {
     constructor() {
       obj = { opacity: closure_1.get() };
@@ -70,10 +70,10 @@ function NameplateInner(isFocused) {
   A.__closure = { opacity: sharedValue };
   A.__workletHash = 15588901070870;
   A.__initData = __initData;
-  const animatedStyle = tmpResult.useAnimatedStyle(A);
-  tmpResult = tmp(1886);
-  const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4571)());
-  const tmp6 = sharedValue(4571)();
+  const animatedStyle = flag6(4373).useAnimatedStyle(A);
+  const tmpResult = flag6(4373);
+  const backgroundGradientColors = flag6(1886).getBackgroundGradientColors(nameplate.palette, tmp6);
+  const tmpResult4 = flag6(1886);
   const nameplateAssets = flag6(8946).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
@@ -89,39 +89,39 @@ function NameplateInner(isFocused) {
   if (str == null) {
     str = "";
   }
-  obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items2 = [tmp4.container, isFocused.style, animatedStyle];
-  obj.style = items2;
+  obj3.style = items2;
   let tmp15Result = null;
   if (null != backgroundGradientColors) {
-    obj = { style: tmp4.gradient, start: null, end: null, colors: null };
+    const obj4 = { style: tmp4.gradient, start: null, end: null, colors: null };
     let num2 = 0;
     if (flag4) {
       num2 = -2;
     }
     const point = { x: num2, y: 0 };
-    obj.start = point;
-    obj.end = { x: 1, y: 0 };
+    obj4.start = point;
+    obj4.end = { x: 1, y: 0 };
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
-    obj.colors = items3;
-    tmp15Result = closure_5(tmp5(5068), obj);
+    obj4.colors = items3;
+    tmp15Result = closure_5(tmp5(5068), obj4);
     const tmp5Result = tmp5(5068);
   }
   const items4 = [tmp15Result, ];
-  const tmpResult1 = flag6(8946);
-  if (tmpResult2.isAndroid()) {
+  const tmpResult5 = flag6(8946);
+  if (tmpResult6.isAndroid()) {
     if (tmp12) {
-      obj1 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_5(tmp(8935).APNGPlayer, obj1);
+      const obj5 = { url: str, style: tmp4.img, autoplay: true };
+      let tmp17 = closure_5(tmp(8935).APNGPlayer, obj5);
     }
     items4[1] = tmp17;
-    obj.children = items4;
-    return closure_6(tmp5(4373).View, obj);
+    obj3.children = items4;
+    return closure_6(tmp5(4373).View, obj3);
   }
   tmp17 = closure_5(tmp5(5668), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
-  const obj2 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
-  tmpResult2 = flag6(1150);
+  const obj6 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
+  tmpResult6 = flag6(1363);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

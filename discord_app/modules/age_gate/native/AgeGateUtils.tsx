@@ -1,7 +1,7 @@
-// === Module 10422: age_gate/AgeGateUtils ===
+// === Module 10423: age_gate/AgeGateUtils ===
 
-// Module 10422 (age_gate/AgeGateUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 10423 (age_gate/AgeGateUtils)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9425 */;
@@ -33,7 +33,6 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = PlatformUtils;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -49,7 +48,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     if (invite != null) {
       const guild2 = invite.guild;
       if (guild2 != null) {
-        let id = guild2.id;
+        const id = guild2.id;
       }
     }
     let tmp10 = !hasItem;
@@ -58,23 +57,24 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     }
     let flag2 = !tmp10;
     if (!tmp10) {
-      id = undefined;
+      let id1;
       const obj2 = ModalActionCreatorsDefault;
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
-          id = guild3.id;
+          id1 = guild3.id;
         }
       }
-      obj = { guildId: id };
-      obj2.pushLazy(asyncRequireImpl(10423, dependencyMap.paths), obj);
+      const obj3 = { guildId: id1 };
+      obj2.pushLazy(asyncRequireImpl(10424, dependencyMap.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10423, dependencyMap.paths);
+      const tmp12 = asyncRequireImpl(10424, dependencyMap.paths);
     }
     return flag2;
   } else {
     return false;
   }
+  obj = PlatformUtils;
 };
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {

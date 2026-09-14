@@ -1,6 +1,6 @@
-// === Module 12582: ChatWarningIcon ===
+// === Module 12583: ChatWarningIcon ===
 
-// Module 12582 (ChatWarningIcon)
+// Module 12583 (ChatWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod8122 from "module_8122" /* 8122 */;

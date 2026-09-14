@@ -1,6 +1,6 @@
-// === Module 15868: UserSettingsDesignSystemContextMenu ===
+// === Module 15870: UserSettingsDesignSystemContextMenu ===
 
-// Module 15868 (UserSettingsDesignSystemContextMenu)
+// Module 15870 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef4600 from "module_4600" /* 4600 */;
@@ -9,11 +9,11 @@ import components_Button_Button from "components/Button/Button" /* 5056 */;
 import Card from "Card" /* 5688 */;
 import _modDef7197 from "module_7197" /* 7197 */;
 import _modDef8070 from "module_8070" /* 8070 */;
-import _modDef11386 from "module_11386" /* 11386 */;
-import _modDef11693 from "module_11693" /* 11693 */;
-import _modDef12902 from "module_12902" /* 12902 */;
-import _modDef15869 from "module_15869" /* 15869 */;
-import _modDef15870 from "module_15870" /* 15870 */;
+import _modDef11387 from "module_11387" /* 11387 */;
+import _modDef11694 from "module_11694" /* 11694 */;
+import _modDef12903 from "module_12903" /* 12903 */;
+import _modDef15871 from "module_15871" /* 15871 */;
+import _modDef15872 from "module_15872" /* 15872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,16 +40,15 @@ function DemoContextMenu(align) {
     if (num2 > 1) {
       const _Array = Array;
       let obj = { length: tmp };
-      let arr = Array.from(obj);
-      let mapped = arr.map(() => {
+      let mapped = Array.from(obj).map(() => {
         closure_0 = length;
+        length = text(num[13]).shuffle(closure_2_8);
         let obj = text(num[13]);
-        length = obj.shuffle(closure_2_8);
         text(num[13]).shuffle(items);
-        obj = { length };
         const obj2 = text(num[13]);
-        return Array.from(obj).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "isArray" };
+        const obj3 = { length };
+        return Array.from({ length }).map((item, index) => {
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: true, action: true };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -61,15 +60,15 @@ function DemoContextMenu(align) {
           return obj;
         });
       });
+      const arr = Array.from(obj);
     } else {
       closure_0 = num;
       closure_1 = _mod12.shuffle(closure_8);
       closure_2 = _mod12.shuffle(items);
       const _Array2 = Array;
-      obj = { length: num };
-      arr = Array.from(obj);
-      mapped = arr.map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "r", action: "isArray" };
+      const obj4 = { length: num };
+      mapped = Array.from(obj4).map((item, index) => {
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: true, action: true };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -80,10 +79,11 @@ function DemoContextMenu(align) {
         };
         return obj;
       });
+      const arr2 = Array.from(obj4);
     }
     return mapped;
   }, items);
-  obj = {
+  obj.children = closure_5(require("ContextMenu").ContextMenu, {
     triggerOnLongPress,
     items: memo,
     align: align.align,
@@ -96,53 +96,50 @@ function DemoContextMenu(align) {
       obj.variant = "primary";
       return hasOwnProperty(components_Button_Button.Button, obj);
     }
-  };
-  obj.children = closure_5(require("ContextMenu").ContextMenu, obj);
+  });
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef12902, _modDef7197, _modDef8070, _modDef11386, _modDef4600, _modDef15869, _modDef15870, _modDef11693];
+let items = [_modDef12903, _modDef7197, _modDef8070, _modDef11387, _modDef4600, _modDef15871, _modDef15872, _modDef11694];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-fn(4636);
-let createStyles = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
-createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 };
-createStyles.divider = createStyles;
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
   const tmp = closure_9();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.card, children: null };
-  items = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You press the button to open the menu and then select an action, or tap and pan down in a single gesture." }), hasOwnProperty(DemoContextMenu, { label: "Open Menu" })];
-  obj.children = items;
-  const items1 = [timestampProducer(Card.Card, obj), , , , , ];
-  const obj1 = { style: tmp.card, children: null };
-  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Long Press" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can also have the menu open on long press instead." }), hasOwnProperty(DemoContextMenu, { triggerOnLongPress: true, label: "Long Press to Open" })];
-  obj1.children = items2;
-  items1[1] = timestampProducer(Card.Card, obj1);
-  const obj2 = { style: tmp.card, children: null };
-  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Sections" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can pass an array of arrays of items to create sections in the menu." }), hasOwnProperty(DemoContextMenu, { label: "Open Sectioned Menu", sections: 3, count: 2 })];
-  obj2.children = items3;
-  items1[2] = timestampProducer(Card.Card, obj2);
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.card, children: null };
-  const items4 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The menu will automatically align itself so that it doesn't overflow offscreen horizontally." }), hasOwnProperty(DemoContextMenu, { alignButton: "flex-end", label: "Open Right-Aligned Menu" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "It will also position itself vertically, so that it doesn't overflow offscreen vertically." }), hasOwnProperty(DemoContextMenu, { count: 8, label: "Open Tall Menu" })];
-  obj3.children = items4;
-  items1[3] = timestampProducer(Card.Card, obj3);
+  items = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You press the button to open the menu and then select an action, or tap and pan down in a single gesture." }), hasOwnProperty(DemoContextMenu, { label: "Open Menu" })];
+  obj3.children = items;
+  const items1 = [timestampProducer(Card.Card, obj3), , , , , ];
+  const obj4 = { style: tmp.card, children: null };
+  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Long Press" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can also have the menu open on long press instead." }), hasOwnProperty(DemoContextMenu, { triggerOnLongPress: true, label: "Long Press to Open" })];
+  obj4.children = items2;
+  items1[1] = timestampProducer(Card.Card, obj4);
   const obj5 = { style: tmp.card, children: null };
+  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Sections" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can pass an array of arrays of items to create sections in the menu." }), hasOwnProperty(DemoContextMenu, { label: "Open Sectioned Menu", sections: 3, count: 2 })];
+  obj5.children = items3;
+  items1[2] = timestampProducer(Card.Card, obj5);
+  const obj6 = { style: tmp.card, children: null };
+  const items4 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The menu will automatically align itself so that it doesn't overflow offscreen horizontally." }), hasOwnProperty(DemoContextMenu, { alignButton: "flex-end", label: "Open Right-Aligned Menu" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "It will also position itself vertically, so that it doesn't overflow offscreen vertically." }), hasOwnProperty(DemoContextMenu, { count: 8, label: "Open Tall Menu" })];
+  obj6.children = items4;
+  items1[3] = timestampProducer(Card.Card, obj6);
+  const obj8 = { style: tmp.card, children: null };
   const items5 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Intentional Alignment" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus can take an align prop to intentionally align the menu, instead of using the automatic menu positioning." }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The align prop can be set to above, below, left, or right of the menu trigger. How the menu positions relative to the start or end of the trigger is then automatically determined based on the available space." }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, align: "right", label: "Open Right" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "left", label: "Open Left" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, align: "below", label: "Always Open Below" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "above", label: "Always Open Above" })];
-  obj5.children = items5;
-  items1[4] = timestampProducer(Card.Card, obj5);
-  const obj10 = { style: tmp.card, children: null };
+  obj8.children = items5;
+  items1[4] = timestampProducer(Card.Card, obj8);
+  const obj13 = { style: tmp.card, children: null };
   const items6 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Overflow Scrolling" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus should not typically have enough items to require scrolling, but with font scaling and smaller devices its possible. In this case, the menu will allow the user to scroll." }), hasOwnProperty(DemoContextMenu, { count: 30, label: "Open Really Tall Menu" })];
-  obj10.children = items6;
-  items1[5] = timestampProducer(Card.Card, obj10);
-  obj.children = items1;
-  obj.children = timestampProducer(React3, obj);
+  obj13.children = items6;
+  items1[5] = timestampProducer(Card.Card, obj13);
+  obj2.children = items1;
+  obj.children = timestampProducer(React3, obj2);
   return hasOwnProperty(React4, obj);
 };

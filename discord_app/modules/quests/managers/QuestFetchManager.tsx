@@ -1,13 +1,13 @@
-// === Module 17928: QuestFetchManager ===
+// === Module 17929: QuestFetchManager ===
 
-// Module 17928 (QuestFetchManager)
+// Module 17929 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
-import QuestsEligibility from "QuestsEligibility" /* 11617 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17929 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import QuestsEligibility from "QuestsEligibility" /* 11618 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17930 */;
 import QuestStore from "QuestStore" /* 7805 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -109,26 +109,25 @@ class QuestFetchManager extends tmp2 {
   }
 }
 QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
-  let obj = QuestsEligibility;
-  let isEligibleForQuests = obj.getIsEligibleForQuests();
+  let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
   }
   if (isEligibleForQuests) {
-    obj = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    obj = { callerSource, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
+    const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
+    const obj4 = { callerSource, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
     const _Date = Date;
-    obj.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
-    obj.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
-    obj.data = obj;
-    SentryUtilsDefault.addBreadcrumb(obj);
-    let tmpResult = QuestActionCreators;
-    const currentQuests = tmpResult.fetchCurrentQuests();
-    tmpResult = PlatformUtils;
-    if (tmpResult.isMac()) {
+    obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
+    obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
+    obj3.data = obj4;
+    SentryUtilsDefault.addBreadcrumb(obj3);
+    const currentQuests = QuestActionCreators.fetchCurrentQuests();
+    const tmpResult = QuestActionCreators;
+    if (tmpResult2.isMac()) {
       const state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
+    tmpResult2 = PlatformUtils;
   }
 };
 const questFetchManager = new QuestFetchManager();

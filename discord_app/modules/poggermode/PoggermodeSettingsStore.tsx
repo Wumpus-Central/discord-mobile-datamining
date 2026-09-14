@@ -112,7 +112,7 @@ Object.defineProperty(prototype, "comboSoundsEnabled", {
 });
 PoggermodeSettingsStore.displayName = "PoggermodeSettingsStore";
 PoggermodeSettingsStore.persistKey = "PoggermodeSettingsStore";
-initialState = {
+const poggermodeSettingsStore = new PoggermodeSettingsStore(DispatcherDefault, {
   POGGERMODE_SETTINGS_UPDATE: function handlePoggermodeSettingsUpdate(settings) {
     const obj = {};
     const merged = Object.assign(obj);
@@ -121,8 +121,7 @@ initialState = {
   POGGERMODE_TEMPORARILY_DISABLED: function handlePoggermodeTemporarilyDisabled() {
     c0 = true;
   }
-};
-const poggermodeSettingsStore = new PoggermodeSettingsStore(DispatcherDefault, initialState);
+});
 const result = size.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
 
 export default poggermodeSettingsStore;

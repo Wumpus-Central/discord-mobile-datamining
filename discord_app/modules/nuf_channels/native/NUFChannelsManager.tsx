@@ -1,6 +1,6 @@
-// === Module 13855: NUFChannelsManager ===
+// === Module 13856: NUFChannelsManager ===
 
-// Module 13855 (NUFChannelsManager)
+// Module 13856 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -51,7 +51,6 @@ class NUFChannelsManager extends tmp2 {
           hasItem1 = features2.has(GuildFeatures.GUILD_ONBOARDING);
         }
         if (hasItem1) {
-          let tmpResult = FlagUtils;
           let num;
           if (selfMember != null) {
             num = selfMember.flags;
@@ -59,10 +58,10 @@ class NUFChannelsManager extends tmp2 {
           if (num == null) {
             num = 0;
           }
-          hasItem1 = tmpResult.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+          hasItem1 = FlagUtils.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+          const tmpResult = FlagUtils;
         }
         if (hasItem1) {
-          tmpResult = FlagUtils;
           let num2;
           if (selfMember != null) {
             num2 = selfMember.flags;
@@ -70,7 +69,8 @@ class NUFChannelsManager extends tmp2 {
           if (num2 == null) {
             num2 = 0;
           }
-          hasItem1 = !tmpResult.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
+          hasItem1 = !FlagUtils.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
+          const tmpResult3 = FlagUtils;
         }
         if (tmp5) {
           tmp5 = !hasItem1;
@@ -81,10 +81,10 @@ class NUFChannelsManager extends tmp2 {
           let isNewUserResult = !value;
           if (!value) {
             isNewUserResult = UserUtils.isNewUser(UserStore.getCurrentUser());
-            const tmpResult1 = UserUtils;
+            const tmpResult4 = UserUtils;
           }
           if (isNewUserResult) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13856, dependencyMap.paths), "NUFChannelsActionSheet");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13857, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }
@@ -122,16 +122,16 @@ prototype["_initialize"] = function _initialize() {
   value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = UserUtils;
-    isNewUserResult = tmpResult.isNewUser(UserStore.getCurrentUser());
+    isNewUserResult = UserUtils.isNewUser(UserStore.getCurrentUser());
+    const tmpResult = UserUtils;
   }
   if (isNewUserResult) {
-    tmpResult = RootNavigationRef;
-    const rootNavigationRef = tmpResult.getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;
       rootNavigationRef.addListener("state", this.handleNavigationStateChanged);
     }
+    const tmpResult2 = RootNavigationRef;
   }
 };
 prototype["_terminate"] = function _terminate() {

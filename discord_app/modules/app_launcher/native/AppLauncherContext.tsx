@@ -1,9 +1,9 @@
-// === Module 11348: AppLauncherContext ===
+// === Module 11349: AppLauncherContext ===
 
-// Module 11348 (AppLauncherContext)
+// Module 11349 (AppLauncherContext)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11349 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ export const useAppLauncherContext = function useAppLauncherContext() {
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;
-  obj = {
+  const ref = noop.useRef({
     getApplicationCommandManager() {
       if (!c0) {
         const _Error = Error;
@@ -82,8 +82,7 @@ export const useAppLauncherContext = function useAppLauncherContext() {
         throw error;
       }
     }
-  };
-  const ref = noop.useRef(obj);
+  });
   const items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
   const memo = noop.useMemo(() => ({ keyboardCloseReasonRef, bottomSheetIndex: sharedValue, bottomSheetPosition: sharedValue1, bottomSheetExpandReasonRef, chatInputRef: ref, width: defaultAppLauncherWidth, entrypoint: TEXT, onActivityItemSelected: "Boolean" }), items);
   context = noop.useContext(context);

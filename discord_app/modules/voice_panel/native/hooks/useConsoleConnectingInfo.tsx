@@ -1,12 +1,14 @@
-// === Module 17282: useConsoleConnectingInfo ===
+// === Module 17284: useConsoleConnectingInfo ===
 
-// Module 17282 (useConsoleConnectingInfo)
+// Module 17284 (useConsoleConnectingInfo)
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9344 */;
 import getConsoleIconDefault from "getConsoleIcon" /* 9593 */;
-import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 17283 */;
-import getConsoleColorDefault from "getConsoleColor" /* 17285 */;
+import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 17285 */;
+import getConsoleColorDefault from "getConsoleColor" /* 17287 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 import SessionsStore from "SessionsStore" /* 4654 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);
@@ -19,9 +21,10 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  let obj = require("useStateFromStores");
   const items = [GameConsoleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj = require("useStateFromStores");
+  const tmp5 = _require;
   const items1 = [SessionsStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => {
     let str;
@@ -49,20 +52,19 @@ export default function useConsoleConnectingInfo(arg0) {
   }
   let channelId1;
   const obj2 = require("useStateFromStores");
-  const tmp5 = _require;
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;
   }
-  obj = { isConnectingToConsole: channelId1 === arg0, isConnectingOrConnectedToConsole: null, icon: null, text: null, color: null, displayCancel: null };
+  const obj3 = { isConnectingToConsole: channelId1 === arg0, isConnectingOrConnectedToConsole: null, icon: null, text: null, color: null, displayCancel: null };
   let channelId2;
   if (stateFromStores != null) {
     channelId2 = stateFromStores.channelId;
   }
-  obj.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
-  obj.icon = getConsoleIconDefault(str);
+  obj3.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
+  obj3.icon = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj.text = tmp5(17284).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
-  obj.color = getConsoleColorDefault(str);
-  obj.displayCancel = tmp9;
-  return obj;
+  obj3.text = tmp5(17286).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj3.color = getConsoleColorDefault(str);
+  obj3.displayCancel = tmp9;
+  return obj3;
 };

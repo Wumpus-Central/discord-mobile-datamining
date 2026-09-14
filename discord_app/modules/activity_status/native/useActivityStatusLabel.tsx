@@ -1,10 +1,10 @@
-// === Module 13398: useActivityStatusLabel ===
+// === Module 13399: useActivityStatusLabel ===
 
-// Module 13398 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11006 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11007 */;
-import isGameActivityDefault from "isGameActivity" /* 11014 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11016 */;
+// Module 13399 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11007 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11008 */;
+import isGameActivityDefault from "isGameActivity" /* 11015 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11017 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -13,7 +13,7 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 const util = v0wJXSh(1114);
-const VoiceActivityStatus = v0wJXSh(11021);
+const VoiceActivityStatus = v0wJXSh(11022);
 require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);
@@ -62,11 +62,10 @@ export default function useActivityStatusLabel(userId) {
       const activities = PresenceStore.getActivities(userId);
     }
     let v0wJXSh = require;
+    let obj = dependencyMap;
     const items = [ApplicationStreamingStore, RelationshipStore];
     const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(userId, items);
-    let obj = { userId, guildId };
-    obj = { ChannelStore, PermissionStore, VoiceStateStore };
-    const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj, obj).voiceChannel;
+    const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity({ userId, guildId }, { ChannelStore, PermissionStore, VoiceStateStore }).voiceChannel;
     if (null != discoverableApplicationStream) {
       let name;
       if (activities != null) {
@@ -119,5 +118,7 @@ export default function useActivityStatusLabel(userId) {
       }
       return tmp17;
     }
+    const obj4 = { userId, guildId };
+    const obj5 = { ChannelStore, PermissionStore, VoiceStateStore };
   }, items3);
 };

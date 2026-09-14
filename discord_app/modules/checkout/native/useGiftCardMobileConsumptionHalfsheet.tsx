@@ -51,7 +51,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     }
     return balance;
   }, items3);
-  const obj3 = enabled(504);
+  let obj3 = enabled(504);
   const items4 = [ref];
   const items5 = [stateFromStores];
   let tmp6 = enabled;
@@ -137,8 +137,8 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
           }
         });
         const obj2 = ActionSheetActionCreatorsDefault;
-        obj = { markAsDismissed };
-        obj2.openLazy(promise, GiftCardMobileConsumptionActionSheet, obj, "stack");
+        const obj3 = { markAsDismissed };
+        obj2.openLazy(promise, GiftCardMobileConsumptionActionSheet, obj3, "stack");
         return () => {
           c0 = true;
           stateFromStores(closure_2[11]).unsubscribe("SHOW_ACTION_SHEET", handleShow);

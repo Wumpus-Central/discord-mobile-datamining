@@ -1,9 +1,11 @@
-// === Module 11524: SafetyToolsActionCreators ===
+// === Module 11525: SafetyToolsActionCreators ===
 
-// Module 11524 (SafetyToolsActionCreators)
+// Module 11525 (SafetyToolsActionCreators)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Constants from "Constants" /* 11496 */;
+import Constants from "Constants" /* 11497 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_3 = Constants.getSafetyToolsActionSheetKey;
 const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
@@ -11,7 +13,7 @@ const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCre
 export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = closure_3(channelId);
   _require = tmp;
-  const obj = {
+  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11526, dependencyMap.paths), tmp, {
     channelId,
     warningId,
     warningType,
@@ -19,6 +21,5 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(ch
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(closure_0);
     }
-  };
-  obj.openLazy(require("asyncRequireImpl")(11525, dependencyMap.paths), tmp, obj);
+  });
 };

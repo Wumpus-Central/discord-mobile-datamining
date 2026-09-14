@@ -1,14 +1,14 @@
-// === Module 16987: MessageRequestsScreenWithTabs ===
+// === Module 16989: MessageRequestsScreenWithTabs ===
 
-// Module 16987 (MessageRequestsScreenWithTabs)
+// Module 16989 (MessageRequestsScreenWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import SegmentedControlState from "SegmentedControlState" /* 9922 */;
 import SegmentedControl from "SegmentedControl" /* 9923 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12026 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 12745 */;
-import MessageRequestListDefault from "MessageRequestList" /* 16988 */;
-import SpamMessageListDefault from "SpamMessageList" /* 17004 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12027 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12746 */;
+import MessageRequestListDefault from "MessageRequestList" /* 16990 */;
+import SpamMessageListDefault from "SpamMessageList" /* 17006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,48 +17,45 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-fn(4636);
-let obj = { container: null, messageRequestContent: null, tabContainer: null };
-obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj.container = obj;
-obj.messageRequestContent = { flex: 1 };
-const createStyles = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
-obj.tabContainer = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_9 = createStyles.createStyles(obj);
+let obj4 = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
 
 export default noop.memo((navigation) => {
   navigation = navigation.navigation;
+  closure_1 = undefined;
   const tmp = closure_9();
-  const tmp2 = _slicedToArray(noop.useState(0), 2);
-  closure_1 = tmp2[1];
+  [obj2.pageWidth, closure_1] = noop.useState(0);
   const items = [navigation];
   const callback = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
   const callback1 = noop.useCallback((nativeEvent) => {
     closure_1(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = { items: null, pageWidth: null, defaultIndex: 0 };
-  obj = { label: null, id: null, page: null };
+  const obj2 = { items: null, pageWidth: null, defaultIndex: 0 };
+  const obj3 = { label: null, id: null, page: null };
   const intl = util.intl;
-  obj.label = intl.string(util.t["7RFcXZ"]);
-  obj.id = constants.REQUEST;
-  obj.page = timestampProducer(MessageRequestListDefault, { goToMessageRequestPreview: callback });
-  const items1 = [obj, ];
-  const obj1 = { label: null, id: null, page: null };
+  obj3.label = intl.string(util.t["7RFcXZ"]);
+  obj3.id = constants.REQUEST;
+  obj3.page = timestampProducer(MessageRequestListDefault, { goToMessageRequestPreview: callback });
+  const items1 = [obj3, ];
+  const obj4 = { label: null, id: null, page: null };
   const intl2 = util.intl;
-  obj1.label = intl2.string(util.t.ulKXHp);
-  obj1.id = constants.SPAM;
-  obj1.page = timestampProducer(SpamMessageListDefault, { goToMessageRequestPreview: callback });
-  items1[1] = obj1;
-  obj.items = items1;
-  obj.pageWidth = tmp2[0];
-  const segmentedControlState = obj.useSegmentedControlState(obj);
-  const obj2 = { style: tmp.container, children: null };
+  obj4.label = intl2.string(util.t.ulKXHp);
+  obj4.id = constants.SPAM;
+  obj4.page = timestampProducer(SpamMessageListDefault, { goToMessageRequestPreview: callback });
+  items1[1] = obj4;
+  obj2.items = items1;
+  const segmentedControlState = SegmentedControlState.useSegmentedControlState(obj2);
+  const obj5 = { style: tmp.container, children: null };
   const items2 = [timestampProducer(View, { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) }), , ];
-  const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
+  const obj6 = { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
   items2[1] = timestampProducer(View, { style: tmp.messageRequestContent, children: timestampProducer(SegmentedControlPages.SegmentedControlPages, { state: segmentedControlState }) });
   items2[2] = timestampProducer(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "message_requests" });
-  obj2.children = items2;
-  return React5(View, obj2);
+  obj5.children = items2;
+  return React5(View, obj5);
 });

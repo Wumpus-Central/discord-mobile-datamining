@@ -1,9 +1,11 @@
-// === Module 11008: useGameMentionsAsPlainText ===
+// === Module 11009: useGameMentionsAsPlainText ===
 
-// Module 11008 (useGameMentionsAsPlainText)
+// Module 11009 (useGameMentionsAsPlainText)
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1916 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const ChannelAutocompleteConstants = fn(5081);

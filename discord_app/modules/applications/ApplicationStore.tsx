@@ -55,9 +55,10 @@ function handleAppWithBot(arg0) {
   ({ userId, applicationId } = arg0);
   let num = closure_10.botUserIdToAppUsage;
   if (null == closure_10.botUserIdToAppUsage[userId]) {
-    let obj = { applicationId, lastUsedMs: null };
+    const obj2 = { applicationId, lastUsedMs: null };
     const _Date = Date;
-    obj.lastUsedMs = Date.now();
+    obj2.lastUsedMs = Date.now();
+    let obj = obj2;
   } else {
     obj = { applicationId, lastUsedMs: tmp2.lastUsedMs };
   }
@@ -179,12 +180,12 @@ prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
 };
 prototype["getGuildEmbeddedApplications"] = function getGuildEmbeddedApplications(arg0, arg1) {
   if (null != arg0) {
-    map2.get(arg0);
-    value = undefined;
+    value = map2.get(arg0);
+    value2 = undefined;
     if (value != null) {
-      value = value.get(arg1);
+      value2 = value.get(arg1);
     }
-    return value;
+    return value2;
   }
 };
 prototype["getApplication"] = function getApplication(arg0) {
@@ -205,8 +206,8 @@ prototype["getApplicationByName"] = function getApplicationByName(name) {
 prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0) {
   return map4.get(arg0);
 };
-prototype["isFetchingApplication"] = function isFetchingApplication(id) {
-  return true === map5.get(id);
+prototype["isFetchingApplication"] = function isFetchingApplication(appId) {
+  return true === map5.get(appId);
 };
 prototype["isHydrated"] = function isHydrated(item) {
   return set.has(item);
@@ -321,13 +322,13 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
   },
   GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function handleGuildEmbeddedApplicationsFetchSuccess(surface) {
     ({ guildId, items } = surface);
-    items = [];
+    const items1 = [];
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let application = nextResult.application;
       let obj = { applicationId: application.id, status: nextResult.status };
-      let arr = items.push(obj);
+      let arr = items1.push(obj);
       let tmp5 = addApplication(ApplicationRecord.createFromServer(application));
       continue;
     }
@@ -338,7 +339,7 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
       const result = map2.set(guildId, map);
       value = map;
     }
-    const result1 = value.set(surface.surface, items);
+    const result1 = value.set(surface.surface, items1);
   },
   GUILD_INTEGRATIONS_UPDATE: handleIntegrationsChanged,
   INTEGRATION_CREATE: handleIntegrationsChanged,

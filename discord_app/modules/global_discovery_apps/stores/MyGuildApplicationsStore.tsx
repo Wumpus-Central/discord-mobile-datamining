@@ -1,6 +1,6 @@
-// === Module 12204: MyGuildApplicationsStore ===
+// === Module 12205: MyGuildApplicationsStore ===
 
-// Module 12204 (MyGuildApplicationsStore)
+// Module 12205 (MyGuildApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -16,7 +16,7 @@ function addToApplicationIdToGuildIds(applicationId) {
   closure_3.applicationIdToGuildIds[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
   const set1 = new Set(closure_3.applicationIdToGuildIds[applicationId]);
 }
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_3 = { applicationIdToGuildIds: {}, lastFetchTimeMs: null, nextFetchRetryTimeMs: null, fetchState: FetchState.NOT_FETCHED };
 const PersistedStore = initializeDefault.PersistedStore;
 class MyGuildApplicationsStore extends PersistedStore {
@@ -54,7 +54,7 @@ prototype["getFetchState"] = function getFetchState() {
 };
 MyGuildApplicationsStore.displayName = "MyGuildApplicationsStore";
 MyGuildApplicationsStore.persistKey = "MyGuildApplicationsStore";
-FetchState = {
+const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_3.applicationIdToGuildIds = {};
     closure_3.lastFetchTimeMs = null;
@@ -115,8 +115,7 @@ FetchState = {
       }
     }
   }
-};
-const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx");
 

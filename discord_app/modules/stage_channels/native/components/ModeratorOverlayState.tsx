@@ -2,7 +2,7 @@
 
 // Module 9790 (ModeratorOverlayState)
 import _mod4259 from "module_4259" /* 4259 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -13,7 +13,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1249).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      overlayDismissedChannelIds(1247).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     }
   };
   return obj;

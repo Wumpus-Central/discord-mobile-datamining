@@ -1,22 +1,21 @@
-// === Module 14684: ColorBlock ===
+// === Module 14685: ColorBlock ===
 
-// Module 14684 (ColorBlock)
+// Module 14685 (ColorBlock)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import Pressables from "Pressables" /* 5204 */;
-import _modDef11693 from "module_11693" /* 11693 */;
+import _modDef11694 from "module_11694" /* 11694 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { colorBlock: null };
-obj = { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
-obj.colorBlock = obj;
+const obj = { colorBlock: { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" } };
 const styles = createStyles.createStyles(obj);
+let obj3 = { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/color_picker/ColorBlock.tsx");
 
@@ -29,57 +28,58 @@ export default noop.memo((color) => {
   const onSelect = color.onSelect;
   const tmp = styles();
   let unsafe_rawColors = dependencyMap;
-  let obj = utils_ColorUtils;
-  const v = obj.int2hsv(color).v;
+  const v = utils_ColorUtils.int2hsv(color).v;
   if (null != onSelect) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
-    const tmp2Result = utils_ColorUtils;
-    obj.accessibilityLabel = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
-    obj = { selected };
-    obj.accessibilityState = obj;
-    obj.onPress = function onPress() {
+    const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
+    const tmp2Result = ColorUtils;
+    obj2.accessibilityLabel = tmp2Result.hexToColorName(utils_ColorUtils.int2hex(color), true);
+    const obj3 = { selected };
+    obj2.accessibilityState = obj3;
+    obj2.onPress = function onPress() {
       return onSelect(color);
     };
     const items = [tmp.colorBlock, style, ];
-    const obj1 = { backgroundColor: utils_ColorUtils.int2hex(color) };
-    items[2] = obj1;
-    obj.style = items;
+    const obj4 = { backgroundColor: null };
+    const tmp2Result4 = utils_ColorUtils;
+    obj4.backgroundColor = utils_ColorUtils.int2hex(color);
+    items[2] = obj4;
+    obj2.style = items;
     if (!selected) {
-      obj.children = null;
-      let tmp10Result = jsx(Pressables.PressableOpacity, obj);
+      obj2.children = null;
+      let tmp10Result1 = jsx(Pressables.PressableOpacity, obj2);
     } else {
-      const obj2 = { source: _modDef11693, color: null };
+      const obj5 = { source: _modDef11694, color: null };
       if (v < 0.5) {
         unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
       } else {
         BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
-      obj2.color = BLACK2;
-      jsx(native.Icon, { source: _modDef11693, color: null });
+      obj5.color = BLACK2;
+      jsx(native.Icon, { source: _modDef11694, color: null });
     }
-    const tmp2Result1 = utils_ColorUtils;
+    const tmp2Result5 = utils_ColorUtils;
   } else {
-    const obj3 = { style: null, children: null };
+    const obj6 = { style: null, children: null };
     const items1 = [tmp.colorBlock, style, ];
-    const obj4 = { backgroundColor: utils_ColorUtils.int2hex(color) };
-    items1[2] = obj4;
-    obj3.style = items1;
+    const obj7 = { backgroundColor: utils_ColorUtils.int2hex(color) };
+    items1[2] = obj7;
+    obj6.style = items1;
     if (!selected) {
-      obj3.children = null;
-      tmp10Result = <View {...obj3} />;
+      obj6.children = null;
+      tmp10Result1 = <View {...obj6} />;
     } else {
-      const obj5 = { source: _modDef11693, color: null };
+      const obj8 = { source: _modDef11694, color: null };
       if (v < 0.5) {
         let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
         BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
-      obj5.color = BLACK;
-      tmp10Result = jsx(native.Icon, { source: _modDef11693, color: null });
+      obj8.color = BLACK;
+      jsx(native.Icon, { source: _modDef11694, color: null });
     }
-    const tmp2Result2 = utils_ColorUtils;
+    const tmp2Result6 = utils_ColorUtils;
   }
-  return tmp10Result;
+  return tmp10Result1;
 });
 export const useStyles = styles;

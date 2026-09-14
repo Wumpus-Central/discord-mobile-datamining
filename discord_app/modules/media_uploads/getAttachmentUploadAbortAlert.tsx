@@ -13,18 +13,18 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   const intl = util.intl;
   const stringResult = intl.string(util.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
-    let obj = { title: stringResult, body: null };
+    const obj2 = { title: stringResult, body: null };
     const intl4 = util.intl;
-    obj = { maxSizeMb: UploadUtils.MAX_TOTAL_ATTACHMENT_SIZE_MB };
-    obj.body = intl4.formatToPlainString(util.t.DYFPg2, obj);
-    return obj;
+    const obj3 = { maxSizeMb: UploadUtils.MAX_TOTAL_ATTACHMENT_SIZE_MB };
+    obj2.body = intl4.formatToPlainString(util.t.DYFPg2, obj3);
+    return obj2;
   } else if (AbortCodes.CLOUD_UPLOAD_NOT_FOUND === code) {
-    const obj1 = { title: stringResult, body: null };
+    const obj4 = { title: stringResult, body: null };
     const intl3 = util.intl;
-    obj1.body = intl3.string(util.t.bQldfH);
-    return obj1;
+    obj4.body = intl3.string(util.t.bQldfH);
+    return obj4;
   } else if (AbortCodes.INVALID_PERMISSIONS === code) {
-    obj = { title: stringResult, body: null };
+    const obj = { title: stringResult, body: null };
     const intl2 = util.intl;
     obj.body = intl2.string(util.t.zl4Weq);
     return obj;

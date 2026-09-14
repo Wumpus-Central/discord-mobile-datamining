@@ -1,13 +1,13 @@
-// === Module 17410: RestrictedHoursManager ===
+// === Module 17412: RestrictedHoursManager ===
 
-// Module 17410 (RestrictedHoursManager)
+// Module 17412 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1394 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7696 */;
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10212 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17405 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17407 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
@@ -21,7 +21,6 @@ function scheduleUpcomingWarning() {
     timeout = null;
   }
   const date = new Date();
-  let obj = FamilyCenterV3Experiment;
   let tmp7 = null;
   if (obj.getIsFamilyCenterV3Enabled({ location: "RestrictedHoursManager" })) {
     tmp7 = null;
@@ -36,12 +35,12 @@ function scheduleUpcomingWarning() {
         const nextStartInfo = restrictedSchedule.getNextStartInfo(date);
         let tmp14 = null;
         if (null != nextStartInfo) {
-          obj = { minutesUntil: nextStartInfo.minutesUntil, startAtMs: null, rule: null };
+          const obj2 = { minutesUntil: nextStartInfo.minutesUntil, startAtMs: null, rule: null };
           const _Date = Date;
           const date1 = new Date(tmp12);
-          obj.startAtMs = date1.setSeconds(0, 0) + 60 * nextStartInfo.minutesUntil * 1000;
-          obj.rule = nextStartInfo.rule;
-          tmp14 = obj;
+          obj2.startAtMs = date1.setSeconds(0, 0) + 60 * nextStartInfo.minutesUntil * 1000;
+          obj2.rule = nextStartInfo.rule;
+          tmp14 = obj2;
         }
         tmp7 = tmp14;
         tmp12 = date;
@@ -57,15 +56,16 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(_modDef2396["0JlDg0"]);
+        const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const tmp5Result = FamilyCenterRestrictedHoursUtils;
+        const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;
-        const formatDaysResult = tmp5Result.formatDays(items);
-        const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();
-        const str4 = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule);
-        obj = { type: "RESTRICTED_HOURS_WARNING", title: stringResult, subtitle: trimmed };
-        DispatcherDefault.dispatch(obj);
+        const tmp5Result2 = FamilyCenterRestrictedHoursUtils;
+        const trimmed = "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(rule).trim();
+        const str4 = "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(rule);
+        const obj3 = { type: "RESTRICTED_HOURS_WARNING", title: stringResult, subtitle: trimmed };
+        DispatcherDefault.dispatch(obj3);
         c9 = combined;
       }
       const _setTimeout2 = setTimeout;
@@ -82,13 +82,14 @@ function scheduleUpcomingWarning() {
       }, Math.max(0, 60 * (tmp7.minutesUntil - 16) * 1000));
     }
   }
+  obj = FamilyCenterV3Experiment;
 }
 function checkAndUpdateModal() {
   const result = FamilyCenterStore.isCurrentUserInRestrictedHours();
   if (result !== isInRestrictedHours) {
     isInRestrictedHours = result;
-    const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
-    obj.dispatch(obj);
+    const obj2 = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
+    DispatcherDefault.dispatch(obj2);
     const obj3 = RestrictedHoursActionCreators;
     if (isInRestrictedHours) {
       const result1 = obj3.openRestrictedHoursModal();
@@ -114,8 +115,8 @@ function handleScheduleUpdate() {
     scheduleUpcomingWarning();
   } else {
     isInRestrictedHours = result;
-    const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
-    obj.dispatch(obj);
+    const obj2 = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
+    DispatcherDefault.dispatch(obj2);
     const obj3 = RestrictedHoursActionCreators;
     if (isInRestrictedHours) {
       const result1 = obj3.openRestrictedHoursModal();
@@ -138,21 +139,21 @@ class RestrictedHoursManager extends tmp2 {
     map = new Map();
     result = map.set(closure_4, handleScheduleUpdate);
     applyArgumentsResult.stores = result.set(closure_5, handleScheduleUpdate);
-    obj = { POST_CONNECTION_OPEN: handleScheduleUpdate, CURRENT_USER_UPDATE: handleScheduleUpdate, NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: handleScreenDowntimeReminderChanged, LOGOUT: handleLogout };
-    applyArgumentsResult.actions = obj;
+    obj1 = { POST_CONNECTION_OPEN: handleScheduleUpdate, CURRENT_USER_UPDATE: handleScheduleUpdate, NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: handleScreenDowntimeReminderChanged, LOGOUT: handleLogout };
+    applyArgumentsResult.actions = obj1;
     return applyArgumentsResult;
   }
 }
 const prototype = RestrictedHoursManager.prototype;
 prototype["_initialize"] = function _initialize() {
   isInRestrictedHours = FamilyCenterStore.isCurrentUserInRestrictedHours();
-  const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours });
   if (isInRestrictedHours) {
     const result = RestrictedHoursActionCreators.openRestrictedHoursModal();
   }
   const interval = setInterval(checkAndUpdateModal, 60000);
   scheduleUpcomingWarning();
+  const obj2 = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours };
 };
 prototype["_terminate"] = function _terminate() {
   if (null != c7) {

@@ -5,6 +5,8 @@ import StreamPermissionUtils from "StreamPermissionUtils" /* 7828 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");

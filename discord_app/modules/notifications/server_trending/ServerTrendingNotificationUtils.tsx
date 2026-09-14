@@ -1,8 +1,8 @@
-// === Module 15595: ServerTrendingNotificationUtils ===
+// === Module 15596: ServerTrendingNotificationUtils ===
 
-// Module 15595 (ServerTrendingNotificationUtils)
+// Module 15596 (ServerTrendingNotificationUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import NotificationConstants from "NotificationConstants" /* 4288 */;
 import size from "module_2" /* 2 */;
@@ -14,6 +14,5 @@ const result = size.fileFinishedImporting("modules/notifications/server_trending
 export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(server_trending_notifications) {
   const EnableServerTrendingNotifications = UserSettings.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
-  const obj = { update_type: constants.ACCOUNT, server_trending_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, server_trending_notifications });
 };

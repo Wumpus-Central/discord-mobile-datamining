@@ -8,14 +8,12 @@ const result = size.fileFinishedImporting("modules/tooltip/TooltipActionCreators
 
 export default {
   acknowledgeTooltip(GIF_PICKER_TOOLTIP) {
-    const obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP });
   },
   attemptToShowTooltip(tooltip) {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip, ignoreMaxShownLimit: flag };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TOOLTIP_SHOW_ATTEMPT", tooltip, ignoreMaxShownLimit: flag });
   }
 };

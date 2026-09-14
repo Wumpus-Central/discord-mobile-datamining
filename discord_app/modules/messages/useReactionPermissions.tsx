@@ -1,11 +1,13 @@
-// === Module 11447: useReactionPermissions ===
+// === Module 11448: useReactionPermissions ===
 
-// Module 11447 (useReactionPermissions)
+// Module 11448 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5494 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;
@@ -18,16 +20,17 @@ export default function useReactionPermissions(guild_id) {
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  let obj = require("initialize");
   const items = [GuildVerificationStore];
   const items1 = [guild_id];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canChatInGuildResult = null == guild_id;
     if (!canChatInGuildResult) {
       canChatInGuildResult = GuildVerificationStore.canChatInGuild(tmp);
     }
     return canChatInGuildResult;
   }, items1);
+  const obj = require("initialize");
+  const tmp2 = stateFromStores;
   const items2 = [LurkingStore];
   const items3 = [guild_id];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
@@ -38,7 +41,6 @@ export default function useReactionPermissions(guild_id) {
     return isLurkingResult;
   }, items3);
   const obj2 = require("initialize");
-  const tmp2 = stateFromStores;
   const items4 = [GuildMemberStore];
   const items5 = [guild_id];
   const stateFromStores2 = require("initialize").useStateFromStores(items4, () => {
@@ -63,14 +65,14 @@ export default function useReactionPermissions(guild_id) {
   const obj5 = require("AutomodPermissionUtils");
   require("ThreadHooks");
   if (null == guild_id) {
-    obj = { disableReactionReads: true, disableReactionCreates: true, disableReactionUpdates: true, isLurking: false, isGuest: false, isPendingMember: false };
+    let obj7 = { disableReactionReads: true, disableReactionCreates: true, disableReactionUpdates: true, isLurking: false, isGuest: false, isPendingMember: false };
   } else {
-    obj = {};
-    obj = { channel: guild_id, canChat: stateFromStores, renderReactions: true, canAddNewReactions: stateFromStores3, isLurking: stateFromStores1, communicationDisabled: _slicedToArray(obj6.useCurrentUserCommunicationDisabled(guild_id), 2)[1], isActiveChannelOrUnarchivableThread: tmp9, isAutomodQuarantined: currentUserAutomodQuaratinedProfile };
-    const merged = Object.assign(guild_id(tmp2[10])(obj));
-    obj.isLurking = stateFromStores1;
-    obj.isGuest = stateFromStores2;
-    obj.isPendingMember = false;
+    obj7 = {};
+    const obj8 = { channel: guild_id, canChat: stateFromStores, renderReactions: true, canAddNewReactions: stateFromStores3, isLurking: stateFromStores1, communicationDisabled: _slicedToArray(obj6.useCurrentUserCommunicationDisabled(guild_id), 2)[1], isActiveChannelOrUnarchivableThread: tmp9, isAutomodQuarantined: currentUserAutomodQuaratinedProfile };
+    const merged = Object.assign(guild_id(tmp2[10])(obj8));
+    obj7.isLurking = stateFromStores1;
+    obj7.isGuest = stateFromStores2;
+    obj7.isPendingMember = false;
   }
-  return obj;
+  return obj7;
 };

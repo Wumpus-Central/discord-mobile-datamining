@@ -1,13 +1,13 @@
-// === Module 16141: useSuggestedFriends ===
+// === Module 16143: useSuggestedFriends ===
 
-// Module 16141 (useSuggestedFriends)
+// Module 16143 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 7764 */;
 
 const require = fn;
-const SuggestedFriendSource = fn(12828).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12829).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
@@ -43,6 +43,5 @@ export default function useSuggestedFriends(arg0) {
       return [];
     }
   }, items1);
-  obj = { added, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
-  return obj;
+  return { added, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
 };

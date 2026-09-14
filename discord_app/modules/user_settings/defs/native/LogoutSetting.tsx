@@ -1,6 +1,6 @@
-// === Module 15642: LogoutSetting ===
+// === Module 15643: LogoutSetting ===
 
-// Module 15642 (LogoutSetting)
+// Module 15643 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
@@ -12,7 +12,7 @@ import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreat
 import DoorExitIcon from "DoorExitIcon" /* 9202 */;
 import PushNotificationDefault from "PushNotification" /* 9817 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function handleLogout() {
@@ -34,24 +34,24 @@ const pressable = SettingBuilders.createPressable({
   parent: null,
   variant: "danger",
   onPress: function showConfirmLogoutAlert() {
-    let obj = { title: null, content: null, actions: null };
+    const obj2 = { title: null, content: null, actions: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["2jxGer"]);
+    obj2.title = intl.string(util.t["2jxGer"]);
     const intl2 = util.intl;
-    obj.content = intl2.string(util.t.SUnWBB);
-    obj = { children: null };
-    const obj1 = { text: null, onPress: null, variant: "destructive" };
+    obj2.content = intl2.string(util.t.SUnWBB);
+    const obj3 = { children: null };
+    const obj4 = { text: null, onPress: null, variant: "destructive" };
     const intl3 = util.intl;
-    obj1.text = intl3.string(util.t["2jxGer"]);
-    obj1.onPress = handleLogout;
-    const items = [React3(AlertModal.AlertActionButton, obj1), ];
-    const obj2 = { variant: "secondary", text: null };
+    obj4.text = intl3.string(util.t["2jxGer"]);
+    obj4.onPress = handleLogout;
+    const items = [React3(AlertModal.AlertActionButton, obj4), ];
+    const obj5 = { variant: "secondary", text: null };
     const intl4 = util.intl;
-    obj2.text = intl4.string(util.t["13/7kX"]);
-    items[1] = React3(AlertModal.AlertActionButton, obj2);
-    obj.children = items;
-    obj.actions = hasOwnProperty(React4, obj);
-    obj.openAlert("logout", React3(AlertModal.AlertModal, obj));
+    obj5.text = intl4.string(util.t["13/7kX"]);
+    items[1] = React3(AlertModal.AlertActionButton, obj5);
+    obj3.children = items;
+    obj2.actions = hasOwnProperty(React4, obj3);
+    useAlertStore.openAlert("logout", React3(AlertModal.AlertModal, obj2));
   }
 });
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/LogoutSetting.tsx");

@@ -1,11 +1,11 @@
-// === Module 17703: GuildSettingsServerTagBadgeGrid ===
+// === Module 17704: GuildSettingsServerTagBadgeGrid ===
 
-// Module 17703 (GuildSettingsServerTagBadgeGrid)
+// Module 17704 (GuildSettingsServerTagBadgeGrid)
 import nativeDefault from "native" /* 576 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12608 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17704 */;
-import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 17705 */;
-import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 17706 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12609 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17705 */;
+import GuildSettingsServerTagPickerCellDefault from "GuildSettingsServerTagPickerCell" /* 17706 */;
+import getGuildTagBadgeLabelDefault from "getGuildTagBadgeLabel" /* 17707 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,13 +14,12 @@ get_ActivityIndicator = fn(17);
 const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, upsellCard: null, upsellPreview: null, upsellText: null };
-createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-createStyles.upsellCard = createStyles;
-createStyles.upsellPreview = { width: 128, flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
-createStyles.upsellText = { flex: 1 };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, upsellCard: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, upsellPreview: null, upsellText: null };
+const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.upsellPreview = { width: 128, flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+obj2.upsellText = { flex: 1 };
+let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagBadgeGrid.tsx");
 
@@ -34,11 +33,12 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     openGuildPowerupsModalDefault({ guildId, autoOpenPerkId: "guildTagsBadgePacks" });
   }, items);
   let obj = { spacing: nativeDefault.space.PX_8, children: null };
-  obj = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
+  const obj2 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1114).intl;
-  obj.children = intl.string(guildId(1114).t.wRnfnY);
-  const items1 = [closure_7(guildId(4632).Text, obj), , ];
-  obj = {
+  obj2.children = intl.string(guildId(1114).t.wRnfnY);
+  const items1 = [closure_7(guildId(4632).Text, obj2), , ];
+  const tmp4 = useGuildTagBadgeCollectionDefault();
+  items1[1] = closure_7(closure_5, {
     accessibilityRole: "radiogroup",
     style: tmp.grid,
     children: unlockedBadges.map((badge) => {
@@ -52,33 +52,32 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
         children: null
       };
       size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-      obj.children = closure_1_7(guildId(14002).GuildBadge, size);
+      obj.children = closure_1_7(guildId(14003).GuildBadge, size);
       return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
     })
-  };
-  items1[1] = closure_7(closure_5, obj);
+  });
   let tmp6Result = lockedBadges.length > 0;
   if (tmp6Result) {
-    const obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const intl2 = tmp7(1114).intl;
-    obj1.accessibilityLabel = intl2.string(tmp7(1114).t.U5p3GZ);
-    obj1.onPress = callback;
-    obj1.style = tmp.upsellCard;
-    const obj2 = { style: tmp.upsellPreview, children: null };
+    obj4.accessibilityLabel = intl2.string(tmp7(1114).t.U5p3GZ);
+    obj4.onPress = callback;
+    obj4.style = tmp.upsellCard;
+    const obj5 = { style: tmp.upsellPreview, children: null };
     const substr = lockedBadges.slice(0, 10);
-    obj2.children = substr.map((badge) => {
+    obj5.children = substr.map((badge) => {
       size = { badge: badge.kind, width: 21, height: 21 };
-      return closure_1_7(guildId(14002).GuildBadge, size, badge.kind);
+      return closure_1_7(guildId(14003).GuildBadge, size, badge.kind);
     });
-    const items2 = [closure_7(closure_5, obj2), , ];
-    const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
+    const items2 = [closure_7(closure_5, obj5), , ];
+    const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
     const intl3 = tmp7(1114).intl;
-    obj3.children = intl3.string(tmp7(1114).t.U5p3GZ);
-    items2[1] = closure_7(tmp7(4632).Text, obj3);
-    const obj4 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-    items2[2] = closure_7(tmp7(7312).ChevronSmallRightIcon, obj4);
-    obj1.children = items2;
-    tmp6Result = closure_8(closure_4, obj1);
+    obj6.children = intl3.string(tmp7(1114).t.U5p3GZ);
+    items2[1] = closure_7(tmp7(4632).Text, obj6);
+    const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
+    items2[2] = closure_7(tmp7(7312).ChevronSmallRightIcon, obj7);
+    obj4.children = items2;
+    tmp6Result = closure_8(closure_4, obj4);
   }
   items1[2] = tmp6Result;
   obj.children = items1;

@@ -1,9 +1,9 @@
-// === Module 16886: SuggestedFriendsScreen ===
+// === Module 16888: SuggestedFriendsScreen ===
 
-// Module 16886 (SuggestedFriendsScreen)
+// Module 16888 (SuggestedFriendsScreen)
 import nativeDefault from "native" /* 576 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16883 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,12 +12,9 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { emptyContainer: null, container: null };
-createStyles = { flex: 1, paddingTop: nativeDefault.space.PX_32 };
-createStyles.emptyContainer = createStyles;
-createStyles.container = { flex: 1 };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
 
@@ -25,9 +22,7 @@ export default function SuggestedFriendsScreen() {
   const tmp = closure_9();
   const analyticsLocations = added(setAdded[6])(added(setAdded[7]).SUGGESTED_FRIENDS).analyticsLocations;
   const effect = friendSuggestions.useEffect(() => {
-    added(setAdded[8]);
-    const obj = { friend_add_type: constants2.FRIENDS_SUGGESTED_FRIENDS_MODAL };
-    obj.track(constants.FRIEND_ADD_VIEWED, obj);
+    added(setAdded[8]).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_SUGGESTED_FRIENDS_MODAL });
   }, []);
   const tmp6 = added(setAdded[9])();
   added = tmp6.added;
@@ -84,27 +79,27 @@ export default function SuggestedFriendsScreen() {
   const callback2 = friendSuggestions.useCallback(() => {
 
   }, []);
-  let obj = { value: analyticsLocations, children: null };
+  const obj = { value: analyticsLocations, children: null };
   const items2 = [closure_7(added(setAdded[12]), { absolute: true }), ];
-  obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.container, children: null };
   if (0 !== friendSuggestions.length) {
-    obj = { sections: null, getItemProps: null, getSectionProps: null, insetStart: 8 };
+    const obj3 = { sections: null, getItemProps: null, getSectionProps: null, insetStart: 8 };
     const items3 = [friendSuggestions.length];
-    obj.sections = items3;
-    obj.getItemProps = callback1;
-    obj.getSectionProps = callback2;
-    let tmp12Result = closure_7(tmp11(tmp3[13]).UsersFastList, obj);
+    obj3.sections = items3;
+    obj3.getItemProps = callback1;
+    obj3.getSectionProps = callback2;
+    let tmp12Result = closure_7(tmp11(tmp3[13]).UsersFastList, obj3);
   } else {
-    const obj1 = { style: tmp.emptyContainer, children: null };
-    const obj2 = { title: null, disableBackgroundOverlay: true };
+    const obj4 = { style: tmp.emptyContainer, children: null };
+    const obj5 = { title: null, disableBackgroundOverlay: true };
     const intl = tmp11(tmp3[15]).intl;
-    obj2.title = intl.string(tmp11(tmp3[15]).t.pxFW8V);
-    obj1.children = closure_7(added(tmp3[14]), obj2);
-    tmp12Result = closure_7(tmp13, obj1);
+    obj5.title = intl.string(tmp11(tmp3[15]).t.pxFW8V);
+    obj4.children = closure_7(added(tmp3[14]), obj5);
+    tmp12Result = closure_7(tmp13, obj4);
     const tmp2Result = added(tmp3[14]);
   }
-  obj.children = tmp12Result;
-  items2[1] = closure_7(onPress, obj);
+  obj2.children = tmp12Result;
+  items2[1] = closure_7(onPress, obj2);
   obj.children = items2;
   return closure_8(analyticsLocations(setAdded[6]).AnalyticsLocationProvider, obj);
 };

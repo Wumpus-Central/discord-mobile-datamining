@@ -1,6 +1,6 @@
-// === Module 10386: MentionGuardUtils ===
+// === Module 10387: MentionGuardUtils ===
 
-// Module 10386 (MentionGuardUtils)
+// Module 10387 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
 import MessageParserDefault from "MessageParser" /* 7784 */;
 import _slicedToArray from "module_32" /* 32 */;

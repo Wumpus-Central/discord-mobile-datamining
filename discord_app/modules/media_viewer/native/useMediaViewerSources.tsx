@@ -30,14 +30,13 @@ export const updateMediaViewerSources = function updateMediaViewerSources(items)
   zustandStore.setState({ sources: items });
 };
 export const removeSpoiler = function removeSpoiler(index) {
-  let obj = zustandStore;
   const field = zustandStore.getField("userRevealedIndexes");
   if (!field.has(index)) {
     const _Set = Set;
     const set = new Set(field);
     set.add(index);
-    obj = { userRevealedIndexes: set };
-    obj.setState(obj);
+    const obj2 = { userRevealedIndexes: set };
+    zustandStore.setState(obj2);
   }
 };
 export const toggleSpoiler = function toggleSpoiler(index) {

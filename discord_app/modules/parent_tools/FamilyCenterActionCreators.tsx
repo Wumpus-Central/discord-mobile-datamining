@@ -5,6 +5,8 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7643 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function maybeFetchCollectiblesForInvoices() {
   const self = this;
@@ -24,8 +26,8 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +40,8 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const _Set = Set;
           const set = new Set();
@@ -56,15 +58,15 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
           const _Array = Array;
           c2 = 1;
           c1 = 1;
-          const obj1 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
-          return obj1;
+          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -94,8 +96,8 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -108,8 +110,8 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const _Set = Set;
           const set = new Set();
@@ -121,15 +123,15 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
           const _Array = Array;
           c2 = 1;
           c1 = 1;
-          const obj1 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
-          return obj1;
+          const obj4 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -152,8 +154,8 @@ let closure_12 = async function _updateLinkForUserId() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -166,18 +168,18 @@ let closure_12 = async function _updateLinkForUserId() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const HTTP = require("HTTPUtils").HTTP;
             const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: null, rejectWithError: null };
-            const obj1 = { linked_user_id, link_status };
-            request.body = obj1;
+            const obj4 = { linked_user_id, link_status };
+            request.body = obj4;
             request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
             const obj7 = require("HTTPUtils");
             c3 = 1;
             c2 = 1;
-            const obj2 = {
+            const obj5 = {
               value: HTTP.patch(request).then((body) => {
                         body = body.body;
                         link_status(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
@@ -185,14 +187,14 @@ let closure_12 = async function _updateLinkForUserId() {
                       }),
               done: false
             };
-            return obj2;
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;
@@ -216,8 +218,8 @@ let closure_13 = async function _removeLinkForUserId() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -230,35 +232,33 @@ let closure_13 = async function _removeLinkForUserId() {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const HTTP = require("HTTPUtils").HTTP;
             const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: null, rejectWithError: null };
-            const obj1 = { linked_user_id };
-            request.body = obj1;
+            const obj4 = { linked_user_id };
+            request.body = obj4;
             request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
             const obj7 = require("HTTPUtils");
             c2 = 1;
             c1 = 1;
-            const obj2 = {
+            const obj5 = {
               value: HTTP.del(request).then((body) => {
                         body = body.body;
-                        c1(c2[5]);
-                        const obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId };
-                        obj.dispatch(obj);
+                        c1(c2[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId });
                         return body;
                       }),
               done: false
             };
-            return obj2;
+            return obj5;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c1 = 3;
@@ -279,8 +279,8 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -293,15 +293,15 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = require("HTTPUtils").HTTP;
-          const obj1 = { url: constants.FAMILY_CENTER_LINK_CODE, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-          value = HTTP.get(obj1);
+          const obj4 = { url: constants.FAMILY_CENTER_LINK_CODE, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+          value = HTTP.get(obj4);
           c1 = 1;
           c0 = 1;
-          const obj2 = {
+          const obj5 = {
             value: value.then((body) => {
                       body = body.body;
                       const link_code = body.link_code;
@@ -310,14 +310,14 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
                     }),
             done: false
           };
-          return obj2;
+          return obj5;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -337,8 +337,8 @@ let closure_15 = async function _shareIarWithParents() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -351,22 +351,22 @@ let closure_15 = async function _shareIarWithParents() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = require("HTTPUtils").HTTP;
-          const obj1 = { url: constants.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: true };
+          const obj4 = { url: constants.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: true };
           c1 = 1;
           c0 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -394,8 +394,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -408,8 +408,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c15 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c13 = 0;
               closure_12 = tmp4;
@@ -421,12 +421,12 @@ export default {
               closure_140_5 = undefined;
               DispatcherDefault.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
               const HTTP = require("HTTPUtils").HTTP;
-              const obj1 = { url: constants.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: null };
-              obj1.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+              const obj5 = { url: constants.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: null };
+              obj5.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
               c14 = 1;
               c15 = 1;
-              const obj2 = { value: HTTP.get(obj1), done: false };
-              return obj2;
+              const obj7 = { value: HTTP.get(obj5), done: false };
+              return obj7;
             }
           } else {
             if (1 === tmp4) {
@@ -435,8 +435,8 @@ export default {
                 throw value;
               } else if (arg0 === 2) {
                 c15 = 3;
-                let obj3 = { value, done: true };
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
                 body = value.body;
                 teen_audit_log = body.teen_audit_log;
@@ -447,12 +447,12 @@ export default {
                 if (teen_audit_log != null) {
                   teen_user_id = teen_audit_log.teen_user_id;
                 }
-                const obj4 = { teenId: teen_user_id, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
+                const obj9 = { teenId: teen_user_id, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
                 let range_start_id;
                 if (teen_audit_log != null) {
                   range_start_id = teen_audit_log.range_start_id;
                 }
-                obj4.rangeStartId = range_start_id;
+                obj9.rangeStartId = range_start_id;
                 let totals;
                 if (teen_audit_log != null) {
                   totals = teen_audit_log.totals;
@@ -460,7 +460,7 @@ export default {
                 if (totals == null) {
                   totals = {};
                 }
-                obj4.totals = totals;
+                obj9.totals = totals;
                 let actions;
                 if (teen_audit_log != null) {
                   actions = teen_audit_log.actions;
@@ -468,7 +468,7 @@ export default {
                 if (actions == null) {
                   actions = [];
                 }
-                obj4.actions = actions;
+                obj9.actions = actions;
                 let users;
                 if (teen_audit_log != null) {
                   users = teen_audit_log.users;
@@ -476,7 +476,7 @@ export default {
                 if (users == null) {
                   users = [];
                 }
-                obj4.users = users;
+                obj9.users = users;
                 let guilds;
                 if (teen_audit_log != null) {
                   guilds = teen_audit_log.guilds;
@@ -484,7 +484,7 @@ export default {
                 if (guilds == null) {
                   guilds = [];
                 }
-                obj4.guilds = guilds;
+                obj9.guilds = guilds;
                 let top_user_activities;
                 if (teen_audit_log != null) {
                   top_user_activities = teen_audit_log.top_user_activities;
@@ -493,7 +493,7 @@ export default {
                 if (top_user_activities == null) {
                   topUserActivities = [];
                 }
-                obj4.topUserActivities = topUserActivities;
+                obj9.topUserActivities = topUserActivities;
                 let top_guild_activities;
                 if (teen_audit_log != null) {
                   top_guild_activities = teen_audit_log.top_guild_activities;
@@ -502,7 +502,7 @@ export default {
                 if (top_guild_activities == null) {
                   topGuildActivities = [];
                 }
-                obj4.topGuildActivities = topGuildActivities;
+                obj9.topGuildActivities = topGuildActivities;
                 let amount;
                 if (teen_audit_log != null) {
                   const total_spend = teen_audit_log.total_spend;
@@ -514,7 +514,7 @@ export default {
                 if (amount == null) {
                   totalSpendAmount = null;
                 }
-                obj4.totalSpendAmount = totalSpendAmount;
+                obj9.totalSpendAmount = totalSpendAmount;
                 let currency;
                 if (teen_audit_log != null) {
                   const total_spend2 = teen_audit_log.total_spend;
@@ -526,19 +526,19 @@ export default {
                 if (currency == null) {
                   totalSpendCurrency = null;
                 }
-                obj4.totalSpendCurrency = totalSpendCurrency;
+                obj9.totalSpendCurrency = totalSpendCurrency;
                 const spending_limit = body.spending_limit;
                 let spendingLimit = spending_limit;
                 if (spending_limit == null) {
                   spendingLimit = null;
                 }
-                obj4.spendingLimit = spendingLimit;
+                obj9.spendingLimit = spendingLimit;
                 const monthly_purchases = body.monthly_purchases;
                 let monthlyPurchases = monthly_purchases;
                 if (monthly_purchases == null) {
                   monthlyPurchases = null;
                 }
-                obj4.monthlyPurchases = monthlyPurchases;
+                obj9.monthlyPurchases = monthlyPurchases;
                 let invoices;
                 if (teen_audit_log != null) {
                   invoices = teen_audit_log.invoices;
@@ -546,7 +546,7 @@ export default {
                 if (invoices == null) {
                   invoices = [];
                 }
-                obj4.invoices = invoices;
+                obj9.invoices = invoices;
                 let gifts;
                 if (teen_audit_log != null) {
                   gifts = teen_audit_log.gifts;
@@ -554,8 +554,8 @@ export default {
                 if (gifts == null) {
                   gifts = [];
                 }
-                obj4.gifts = gifts;
-                closure_140_5 = obj4;
+                obj9.gifts = gifts;
+                closure_140_5 = obj9;
                 let tmp46 = null != closure_140_5.invoices;
                 if (tmp46) {
                   tmp46 = closure_140_5.invoices.length > 0;
@@ -563,8 +563,8 @@ export default {
                 if (tmp46) {
                   c14 = 2;
                   c15 = 1;
-                  let obj5 = { value: closure_141_8(closure_140_5.invoices), done: false };
-                  return obj5;
+                  const obj10 = { value: closure_141_8(closure_140_5.invoices), done: false };
+                  return obj10;
                 }
               }
             } else {
@@ -574,32 +574,31 @@ export default {
                   throw value;
                 } else if (arg0 === 2) {
                   c15 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
+                  const obj11 = { value, done: true };
+                  return obj11;
                 }
               } else if (arg0 === 1) {
                 c15 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c15 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
-              obj3 = closure_141_1(closure_141_2[5]);
-              const obj7 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_5, linkedUsers: linked_users, users: users2, ageGroup: age_group };
-              obj3.dispatch(obj7);
+              const obj12 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_5, linkedUsers: linked_users, users: users2, ageGroup: age_group };
+              closure_141_1(closure_141_2[5]).dispatch(obj12);
               let tmp66 = null != body.restricted_schedule;
               if (tmp66) {
                 tmp66 = null != closure_140_5.teenId;
               }
               if (tmp66) {
-                obj5 = closure_141_1(closure_141_2[5]);
-                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_5.teenId, restrictedSchedule: body.restricted_schedule };
-                obj5.dispatch(obj8);
+                const obj13 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_5.teenId, restrictedSchedule: body.restricted_schedule };
+                closure_141_1(closure_141_2[5]).dispatch(obj13);
+                const obj6 = closure_141_1(closure_141_2[5]);
               }
               c15 = 3;
-              const obj9 = { value: closure_140_5, done: true };
-              return obj9;
+              const obj14 = { value: closure_140_5, done: true };
+              return obj14;
             }
             let tmp52 = null != closure_140_5.gifts;
             if (tmp52) {
@@ -608,8 +607,8 @@ export default {
             if (tmp52) {
               c14 = 3;
               c15 = 1;
-              const obj10 = { value: closure_141_10(closure_140_5.gifts), done: false };
-              return obj10;
+              const obj16 = { value: closure_141_10(closure_140_5.gifts), done: false };
+              return obj16;
             }
           }
         } catch (tmp85) {
@@ -643,8 +642,7 @@ export default {
     })();
   },
   setPendingConnection(match, match2) {
-    const obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId: match, linkCode: match2 };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId: match, linkCode: match2 });
   },
   clearPendingConnection() {
     DispatcherDefault.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
@@ -655,8 +653,8 @@ export default {
     return (async () => {
       const code = tmp2;
       const recipient_id = tmp5;
-      const HTTP = recipient_id(1272).HTTP;
-      const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: { recipient_id, code }, rejectWithError: recipient_id(1272).rejectWithMigratedError() };
+      const HTTP = recipient_id(1270).HTTP;
+      const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: { recipient_id, code }, rejectWithError: recipient_id(1270).rejectWithMigratedError() };
       await HTTP.post(request);
       const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
@@ -675,8 +673,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -689,8 +687,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c11 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_9 = tmp5;
               let body;
@@ -699,13 +697,13 @@ export default {
               topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
               const result = gifts.FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities);
               const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
-              const obj1 = { url: result, rejectWithError: null };
+              const obj6 = { url: result, rejectWithError: null };
               const obj15 = topGuildActivities(totalSpendAmount[5]);
-              obj1.rejectWithError = topUserActivities(totalSpendAmount[6]).rejectWithMigratedError();
+              obj6.rejectWithError = topUserActivities(totalSpendAmount[6]).rejectWithMigratedError();
               v3 = 1;
               c11 = 1;
-              let obj2 = { value: HTTP.get(obj1), done: false };
-              return obj2;
+              const obj7 = { value: HTTP.get(obj6), done: false };
+              return obj7;
             }
           } else {
             if (1 === tmp5) {
@@ -714,24 +712,24 @@ export default {
                 throw value;
               } else if (arg0 === 2) {
                 c11 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
                 body = value.body;
                 teen_audit_log = body.teen_audit_log;
-                let obj4 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, totals: teen_audit_log.totals, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
+                const obj9 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, totals: teen_audit_log.totals, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
                 const top_user_activities = teen_audit_log.top_user_activities;
                 topUserActivities = top_user_activities;
                 if (top_user_activities == null) {
                   topUserActivities = [];
                 }
-                obj4.topUserActivities = topUserActivities;
+                obj9.topUserActivities = topUserActivities;
                 const top_guild_activities = teen_audit_log.top_guild_activities;
                 topGuildActivities = top_guild_activities;
                 if (top_guild_activities == null) {
                   topGuildActivities = [];
                 }
-                obj4.topGuildActivities = topGuildActivities;
+                obj9.topGuildActivities = topGuildActivities;
                 let amount;
                 if (teen_audit_log != null) {
                   const total_spend = teen_audit_log.total_spend;
@@ -743,7 +741,7 @@ export default {
                 if (amount == null) {
                   totalSpendAmount = null;
                 }
-                obj4.totalSpendAmount = totalSpendAmount;
+                obj9.totalSpendAmount = totalSpendAmount;
                 let currency;
                 if (teen_audit_log != null) {
                   const total_spend2 = teen_audit_log.total_spend;
@@ -755,36 +753,38 @@ export default {
                 if (currency == null) {
                   totalSpendCurrency = null;
                 }
-                obj4.totalSpendCurrency = totalSpendCurrency;
+                obj9.totalSpendCurrency = totalSpendCurrency;
                 const spending_limit = body.spending_limit;
                 let spendingLimit = spending_limit;
                 if (spending_limit == null) {
                   spendingLimit = null;
                 }
-                obj4.spendingLimit = spendingLimit;
+                obj9.spendingLimit = spendingLimit;
                 const monthly_purchases = body.monthly_purchases;
                 let monthlyPurchases = monthly_purchases;
                 if (monthly_purchases == null) {
                   monthlyPurchases = null;
                 }
-                obj4.monthlyPurchases = monthlyPurchases;
-                let invoices;
+                obj9.monthlyPurchases = monthlyPurchases;
+                let invoices1;
                 if (teen_audit_log != null) {
-                  invoices = teen_audit_log.invoices;
+                  invoices1 = teen_audit_log.invoices;
                 }
-                if (invoices == null) {
+                let invoices = invoices1;
+                if (invoices1 == null) {
                   invoices = [];
                 }
-                obj4.invoices = invoices;
-                gifts = undefined;
+                obj9.invoices = invoices;
+                let gifts1;
                 if (teen_audit_log != null) {
-                  gifts = teen_audit_log.gifts;
+                  gifts1 = teen_audit_log.gifts;
                 }
-                if (gifts == null) {
+                gifts = gifts1;
+                if (gifts1 == null) {
                   gifts = [];
                 }
-                obj4.gifts = gifts;
-                closure_136_2 = obj4;
+                obj9.gifts = gifts;
+                closure_136_2 = obj9;
                 invoices = closure_136_2.invoices;
                 if (invoices) {
                   invoices = closure_136_2.invoices.length > 0;
@@ -792,8 +792,8 @@ export default {
                 if (invoices) {
                   v3 = 2;
                   c11 = 1;
-                  const obj5 = { value: tmp2(closure_136_2.invoices), done: false };
-                  return obj5;
+                  const obj10 = { value: tmp2(closure_136_2.invoices), done: false };
+                  return obj10;
                 }
               }
             } else {
@@ -803,28 +803,27 @@ export default {
                   throw value;
                 } else if (arg0 === 2) {
                   c11 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
+                  const obj11 = { value, done: true };
+                  return obj11;
                 }
               } else if (arg0 === 1) {
                 c11 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c11 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
-              obj2 = topGuildActivities(totalSpendAmount[5]);
-              const obj7 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_2 };
-              obj2.dispatch(obj7);
+              const obj12 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_2 };
+              topGuildActivities(totalSpendAmount[5]).dispatch(obj12);
               if (null != body.restricted_schedule) {
-                obj4 = topGuildActivities(totalSpendAmount[5]);
-                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
-                obj4.dispatch(obj8);
+                const obj13 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
+                topGuildActivities(totalSpendAmount[5]).dispatch(obj13);
+                const obj5 = topGuildActivities(totalSpendAmount[5]);
               }
               c11 = 3;
-              const obj9 = { value: closure_136_2, done: true };
-              return obj9;
+              const obj14 = { value: closure_136_2, done: true };
+              return obj14;
             }
             gifts = closure_136_2.gifts;
             if (gifts) {
@@ -833,8 +832,8 @@ export default {
             if (gifts) {
               v3 = 3;
               c11 = 1;
-              const obj10 = { value: v3(closure_136_2.gifts), done: false };
-              return obj10;
+              const obj16 = { value: v3(closure_136_2.gifts), done: false };
+              return obj16;
             }
           }
         } catch (tmp60) {
@@ -853,19 +852,19 @@ export default {
       const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
       await HTTP.get({ url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() });
       const teen_audit_log = value.body.teen_audit_log;
-      const obj4 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
+      const obj8 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
       const top_user_activities = teen_audit_log.top_user_activities;
       topUserActivities = top_user_activities;
       if (top_user_activities == null) {
         topUserActivities = [];
       }
-      obj4.topUserActivities = topUserActivities;
+      obj8.topUserActivities = topUserActivities;
       const top_guild_activities = teen_audit_log.top_guild_activities;
       topGuildActivities = top_guild_activities;
       if (top_guild_activities == null) {
         topGuildActivities = [];
       }
-      obj4.topGuildActivities = topGuildActivities;
+      obj8.topGuildActivities = topGuildActivities;
       if (teen_audit_log != null) {
         const total_spend = teen_audit_log.total_spend;
         if (total_spend != null) {
@@ -876,7 +875,7 @@ export default {
       if (amount == null) {
         totalSpendAmount = null;
       }
-      obj4.totalSpendAmount = totalSpendAmount;
+      obj8.totalSpendAmount = totalSpendAmount;
       if (teen_audit_log != null) {
         const total_spend2 = teen_audit_log.total_spend;
         if (total_spend2 != null) {
@@ -887,23 +886,22 @@ export default {
       if (currency == null) {
         totalSpendCurrency = null;
       }
-      obj4.totalSpendCurrency = totalSpendCurrency;
+      obj8.totalSpendCurrency = totalSpendCurrency;
       if (teen_audit_log != null) {
         let invoices = teen_audit_log.invoices;
       }
       if (invoices == null) {
         invoices = [];
       }
-      obj4.invoices = invoices;
+      obj8.invoices = invoices;
       if (teen_audit_log != null) {
         let gifts = teen_audit_log.gifts;
       }
       if (gifts == null) {
         gifts = [];
       }
-      obj4.gifts = gifts;
-      closure_134_1 = obj4;
-      { url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() };
+      obj8.gifts = gifts;
+      closure_134_1 = obj8;
       topGuildActivities(totalSpendAmount[7]).track(tmp5.FAMILY_CENTER_ACTION, { action: gifts.LoadMore, selected_teen_id: closure_135_0, action_display_type: closure_135_1 });
       topGuildActivities(totalSpendAmount[7]);
       topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: closure_134_1 });
@@ -911,18 +909,16 @@ export default {
     })();
   },
   selectTab(REQUESTS) {
-    const obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS });
   },
   fetchTeenSettingsAndConsents(id) {
     _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     value = HTTP.get(obj);
     return value.then((body) => {
       ({ settings, consents } = body.body);
-      const obj = { type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId, settings, consents };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId, settings, consents });
     });
   },
   updateTeenSettings(arg0, arg1, arg2) {
@@ -937,8 +933,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -951,30 +947,29 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(1941).getProtoFieldClass(tmp5(1187).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(1941).getProtoFieldClass(tmp5(1185).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              let tmp33Result = tmp5(1941);
-              const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp5(1187).PreloadedUserSettings, tmp2);
+              const tmp33Result = tmp5(1941);
+              const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp5(1185).PreloadedUserSettings, tmp2);
               if (null != modifiedProto) {
-                const HTTP = tmp5(1272).HTTP;
+                const HTTP = tmp5(1270).HTTP;
                 const request = { url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5), body: null, rejectWithError: null };
-                const obj1 = { settings: null };
-                tmp33Result = tmp5(1223);
-                obj1.settings = tmp33Result.protoToB64(tmp5(1187).PreloadedUserSettings, modifiedProto);
-                request.body = obj1;
-                request.rejectWithError = tmp5(1272).rejectWithMigratedError();
+                const obj4 = { settings: tmp5(1221).protoToB64(tmp5(1185).PreloadedUserSettings, modifiedProto) };
+                request.body = obj4;
+                const tmp33Result3 = tmp5(1221);
+                request.rejectWithError = tmp5(1270).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
-                const obj2 = { value: HTTP.patch(request), done: false };
-                return obj2;
+                const obj5 = { value: HTTP.patch(request), done: false };
+                return obj5;
               } else {
                 c3 = 3;
               }
@@ -985,13 +980,13 @@ export default {
             throw value;
           } else if (arg0 !== 2) {
             settings2 = value.body.settings;
-            obj = tmp2(573);
-            const obj3 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: closure_129_0, settings: settings2 };
-            obj.dispatch(obj3);
+            const obj6 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: closure_129_0, settings: settings2 };
+            tmp2(573).dispatch(obj6);
+            const obj = tmp2(573);
           }
           c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } catch (tmp28) {
           c3 = tmp;
           throw tmp28;
@@ -1003,11 +998,10 @@ export default {
     _require = selectedTeenId;
     const HTTP = require("HTTPUtils").HTTP;
     const request = { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: { grant: items1, revoke: items2 }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    let obj = { grant: items1, revoke: items2 };
+    const obj = { grant: items1, revoke: items2 };
     const obj3 = require("HTTPUtils");
     return HTTP.patch(request).then((body) => {
-      const obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId, consents: body.body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId, consents: body.body });
     });
   }
 };

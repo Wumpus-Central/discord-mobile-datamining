@@ -19,18 +19,18 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
   }
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl2 = util.intl;
-    let obj = { product: name };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t.lvBzLi, obj);
+    const obj2 = { product: name };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.lvBzLi, obj2);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl = util.intl;
-    obj = { product: name };
+    const obj = { product: name };
     formatToPlainStringResult = intl.formatToPlainString(util.t.eR7moP, obj);
   } else {
     formatToPlainStringResult = name;
     if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
       const intl3 = util.intl;
-      obj = { product: name };
-      formatToPlainStringResult = intl3.formatToPlainString(util.t.YFOwHj, obj);
+      const obj3 = { product: name };
+      formatToPlainStringResult = intl3.formatToPlainString(util.t.YFOwHj, obj3);
     }
   }
   return formatToPlainStringResult;

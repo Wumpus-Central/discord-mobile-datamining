@@ -1,11 +1,11 @@
-// === Module 10405: useExpressionPickerTabData ===
+// === Module 10406: useExpressionPickerTabData ===
 
-// Module 10405 (useExpressionPickerTabData)
+// Module 10406 (useExpressionPickerTabData)
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ExpressionPickerConstants = fn(1219);
+const ExpressionPickerConstants = fn(1217);
 ({ ExpressionPickerOrder: c3, ExpressionPickerViewType: closure_4 } = ExpressionPickerConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerTabData.tsx");
@@ -18,28 +18,28 @@ export default function useExpressionPickerTabData(arg0) {
   }
   const items = [expressionPickerTabs];
   const memo = noop.useMemo(() => {
-    let obj = { EMOJI: null, GIF: null, STICKER: null };
-    obj = { label: null, viewType: null, show: null, order: null };
+    const obj = { EMOJI: null, GIF: null, STICKER: null };
+    const obj2 = { label: null, viewType: null, show: null, order: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t.Xu3wE3);
-    obj.viewType = constants.EMOJI;
-    obj.show = expressionPickerTabs.includes(constants.EMOJI);
-    obj.order = React3.indexOf(constants.EMOJI);
-    obj.EMOJI = obj;
-    obj = { label: null, viewType: null, show: null, order: null };
+    obj2.label = intl.string(util.t.Xu3wE3);
+    obj2.viewType = constants.EMOJI;
+    obj2.show = expressionPickerTabs.includes(constants.EMOJI);
+    obj2.order = React3.indexOf(constants.EMOJI);
+    obj.EMOJI = obj2;
+    const obj3 = { label: null, viewType: null, show: null, order: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t["6gUTsS"]);
-    obj.viewType = constants.GIF;
-    obj.show = expressionPickerTabs.includes(constants.GIF);
-    obj.order = React3.indexOf(constants.GIF);
-    obj.GIF = obj;
-    const obj1 = { label: null, viewType: null, show: null, order: null };
+    obj3.label = intl2.string(util.t["6gUTsS"]);
+    obj3.viewType = constants.GIF;
+    obj3.show = expressionPickerTabs.includes(constants.GIF);
+    obj3.order = React3.indexOf(constants.GIF);
+    obj.GIF = obj3;
+    const obj4 = { label: null, viewType: null, show: null, order: null };
     const intl3 = util.intl;
-    obj1.label = intl3.string(util.t.nf1s3u);
-    obj1.viewType = constants.STICKER;
-    obj1.show = expressionPickerTabs.includes(constants.STICKER);
-    obj1.order = React3.indexOf(constants.STICKER);
-    obj.STICKER = obj1;
+    obj4.label = intl3.string(util.t.nf1s3u);
+    obj4.viewType = constants.STICKER;
+    obj4.show = expressionPickerTabs.includes(constants.STICKER);
+    obj4.order = React3.indexOf(constants.STICKER);
+    obj.STICKER = obj4;
     const values = Object.values(obj);
     const found = values.filter((show) => show.show);
     const sorted = found.sort((order) => order.order);

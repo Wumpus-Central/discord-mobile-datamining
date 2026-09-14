@@ -1,6 +1,6 @@
-// === Module 13200: UserProfileRecentActivityCard ===
+// === Module 13201: UserProfileRecentActivityCard ===
 
-// Module 13200 (UserProfileRecentActivityCard)
+// Module 13201 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
@@ -17,11 +17,11 @@ import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8686 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8798 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13129 */;
-import BadgesAll from "Badges" /* 13138 */;
-import TrendingType from "TrendingType" /* 13143 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13150 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13151 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13130 */;
+import BadgesAll from "Badges" /* 13139 */;
+import TrendingType from "TrendingType" /* 13144 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13151 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13152 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -34,15 +34,13 @@ function GamingEntryBadges(entry) {
   const found = items.filter((predicate) => predicate.predicate(entry));
   let obj = { location: "user-profile", style: tmp.badges, children: null };
   if (obj2.isTopGameEntry(entry)) {
-    obj = { style: tmp.badgeCell, children: null };
-    obj = { entry };
-    obj.children = closure_6(BadgesAll.TopGameBadge, obj);
-    let mapped = closure_6(View, obj);
+    const obj3 = { style: tmp.badgeCell, children: null };
+    const obj4 = { entry };
+    obj3.children = closure_6(BadgesAll.TopGameBadge, obj4);
+    let mapped = closure_6(View, obj3);
   } else {
     mapped = found.map((Badge, index) => {
-      let obj = { style: badgeCell.badgeCell, children: null };
-      obj = { entry };
-      obj.children = timestampProducer(Badge.Badge, obj);
+      const obj = { style: badgeCell.badgeCell, children: timestampProducer(Badge.Badge, { entry }) };
       return timestampProducer(View, obj, index);
     });
   }
@@ -52,15 +50,27 @@ function GamingEntryBadges(entry) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let items = [
+  {
+    Badge: BadgesAll.GameTimestampBadge,
+    predicate() {
+      return true;
+    }
+  },
+,
+,
+,
+,
+
+];
 let obj = {
   Badge: BadgesAll.GameTimestampBadge,
   predicate() {
     return true;
   }
 };
-let items = [obj, , , , , ];
-obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8252).isEntryNew };
-items[1] = obj;
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8252).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8252).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -71,7 +81,7 @@ items[2] = {
     return num >= 2;
   }
 };
-let obj1 = {
+let obj3 = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
     let num = utils.getStreakCount(entry);
@@ -88,7 +98,7 @@ items[3] = {
     return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
-let obj2 = {
+let obj4 = {
   Badge: BadgesAll.TrendingBadge,
   predicate(entry) {
     const trendingType = utils.getTrendingType(entry);
@@ -101,7 +111,7 @@ items[4] = {
     return null != utils.getResurrectedEntryLastPlayTime(entry);
   }
 };
-let obj3 = {
+let obj5 = {
   Badge: BadgesAll.ResurrectedBadge,
   predicate(entry) {
     return null != utils.getResurrectedEntryLastPlayTime(entry);
@@ -118,9 +128,9 @@ items[5] = {
     return tmp3;
   }
 };
-fn(4636);
-let obj5 = { body: null, content: null, imageContainer: null, imageAspectRatio: null, posterImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, badgeCell: null };
-let obj4 = {
+const createStyles = fn(4636);
+let obj7 = { body: null, content: null, imageContainer: null, imageAspectRatio: null, posterImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, badgeCell: null };
+let obj6 = {
   Badge: BadgesAll.MarathonBadge,
   predicate(entry) {
     let tmp3 = true === utils.isEntryMarathon(entry);
@@ -131,111 +141,108 @@ let obj4 = {
     return tmp3;
   }
 };
-obj5.body = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
-obj5.content = { flex: 1 };
-obj5.imageContainer = { position: "relative" };
-obj5.imageAspectRatio = { width: 60, maxHeight: 60, aspectRatio: "1 / 1" };
-obj5.posterImageAspectRatio = { width: 60, maxHeight: 100, aspectRatio: "2 / 3" };
+obj7.body = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+obj7.content = { flex: 1 };
+obj7.imageContainer = { position: "relative" };
+obj7.imageAspectRatio = { width: 60, maxHeight: 60, aspectRatio: "1 / 1" };
+obj7.posterImageAspectRatio = { width: 60, maxHeight: 100, aspectRatio: "2 / 3" };
 let size = { borderRadius: nativeDefault.radii.xs, width: "100%", height: "100%" };
-obj5.largeImage = size;
+obj7.largeImage = size;
 const rect = { borderRadius: 16, position: "absolute", right: -4, bottom: -4, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj5.smallImageBackground = rect;
-obj5.smallImage = { width: 24, height: 24, borderRadius: 12 };
-const createStyles = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8 };
-obj5.badges = createStyles;
-let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
-obj5.badgeCell = { width: "50%", paddingRight: nativeDefault.space.PX_8 };
-let closure_9 = createStyles.createStyles(obj5);
+obj7.smallImageBackground = rect;
+obj7.smallImage = { width: 24, height: 24, borderRadius: 12 };
+let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+obj7.badges = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8 };
+let obj10 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_8 };
+obj7.badgeCell = { width: "50%", paddingRight: nativeDefault.space.PX_8 };
+let closure_9 = createStyles.createStyles(obj7);
 let closure_11 = noop.memo((poster) => {
   ({ largeImage, smallImage } = poster);
   const tmp = closure_9();
-  let obj = native;
   let src;
   if (largeImage != null) {
     src = largeImage.src;
   }
   if (null == src) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     items = [, ];
     ({ imageContainer: arr2[0], imageAspectRatio: arr2[1] } = tmp);
-    obj.style = items;
-    obj = { size: "custom", style: tmp.largeImage, color: null };
-    let tmp2Result = shared;
+    obj2.style = items;
+    let obj3 = { size: "custom", style: tmp.largeImage, color: null };
+    const tmp2Result = shared;
     const colors = nativeDefault.colors;
-    obj.color = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-    obj = timestampProducer(UnknownGameIcon.UnknownGameIcon, obj);
-    obj.children = obj;
-    timestampProducer(View, obj);
-    const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
+    obj3.color = shared.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
+    obj3 = timestampProducer(UnknownGameIcon.UnknownGameIcon, obj3);
+    obj2.children = obj3;
+    timestampProducer(View, obj2);
+    const isThemeDarkResult = shared.isThemeDark(obj.useThemeContext().theme);
   } else {
     const items1 = [tmp.imageContainer, ];
-    const obj1 = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     items1[1] = poster.poster ? tmp.posterImageAspectRatio : tmp.imageAspectRatio;
-    obj1.style = items1;
-    const obj2 = { source: null, alt: null, style: null };
-    tmp2Result = AvatarUtils;
-    obj2.source = tmp2Result.makeSource(largeImage.src);
-    obj2.alt = largeImage.alt;
-    obj2.style = tmp.largeImage;
-    const items2 = [timestampProducer(FastImageDefault, obj2), ];
+    obj4.style = items1;
+    const obj5 = { source: null, alt: null, style: null };
+    const tmp7 = FastImageDefault;
+    obj5.source = AvatarUtils.makeSource(largeImage.src);
+    obj5.alt = largeImage.alt;
+    obj5.style = tmp.largeImage;
+    const items2 = [timestampProducer(tmp7, obj5), ];
     let src1;
     if (smallImage != null) {
       src1 = smallImage.src;
     }
     let tmp5Result = null != src1;
     if (tmp5Result) {
-      const obj3 = { style: tmp.smallImageBackground, children: null };
-      const obj4 = { source: null, alt: null, style: null };
+      const obj6 = { style: tmp.smallImageBackground, children: null };
+      const obj7 = { source: null, alt: null, style: null };
       const tmp6Result = FastImageDefault;
-      obj4.source = AvatarUtils.makeSource(smallImage.src);
-      obj4.alt = smallImage.alt;
-      obj4.style = tmp.smallImage;
-      obj3.children = timestampProducer(tmp6Result, obj4);
-      tmp5Result = timestampProducer(View, obj3);
-      const tmp2Result1 = AvatarUtils;
+      obj7.source = AvatarUtils.makeSource(smallImage.src);
+      obj7.alt = smallImage.alt;
+      obj7.style = tmp.smallImage;
+      obj6.children = timestampProducer(tmp6Result, obj7);
+      tmp5Result = timestampProducer(View, obj6);
+      const tmp2Result4 = AvatarUtils;
     }
     items2[1] = tmp5Result;
-    obj1.children = items2;
-    return React5(View, obj1);
+    obj4.children = items2;
+    return React5(View, obj4);
   }
+  obj = native;
 });
 let closure_12 = noop.memo((arg0) => {
   ({ entry, title, subtitle } = arg0);
   ({ largeImage, smallImage, style } = arg0);
   const tmp = closure_9();
-  let obj = { style, children: null };
-  obj = { style: tmp.body, children: null };
-  obj = { largeImage, smallImage, poster: null };
-  let obj3 = ContentInventoryTypes;
-  obj.poster = obj3.isWatchedMediaEntry(entry);
-  items = [timestampProducer(closure_11, obj), ];
-  const obj1 = { style: tmp.content, children: null };
+  const obj = { style, children: null };
+  const obj2 = { style: tmp.body, children: null };
+  const obj3 = { largeImage, smallImage, poster: ContentInventoryTypes.isWatchedMediaEntry(entry) };
+  items = [timestampProducer(closure_11, obj3), ];
+  const obj5 = { style: tmp.content, children: null };
   const isNullOrEmptyResult = StringUtils.isNullOrEmpty(title);
   let tmp2Result = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
-    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: title };
-    tmp2Result = timestampProducer(Text_Text.Text, obj2);
+    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: title };
+    tmp2Result = timestampProducer(Text_Text.Text, obj7);
   }
   const items1 = [tmp2Result, , ];
-  let tmp5Result = StringUtils;
-  const isNullOrEmptyResult1 = tmp5Result.isNullOrEmpty(subtitle);
-  tmp2Result = !isNullOrEmptyResult1;
+  const isNullOrEmptyResult1 = StringUtils.isNullOrEmpty(subtitle);
+  let tmp2Result2 = !isNullOrEmptyResult1;
   if (!isNullOrEmptyResult1) {
-    obj3 = { variant: "text-xs/medium", lineClamp: 1, children: subtitle };
-    tmp2Result = timestampProducer(Text_Text.Text, obj3);
+    const obj8 = { variant: "text-xs/medium", lineClamp: 1, children: subtitle };
+    tmp2Result2 = timestampProducer(Text_Text.Text, obj8);
   }
-  items1[1] = tmp2Result;
-  tmp5Result = ContentInventoryTypes;
-  let isGamingLikeEntryResult = tmp5Result.isGamingLikeEntry(entry);
+  items1[1] = tmp2Result2;
+  const tmp5Result = StringUtils;
+  let isGamingLikeEntryResult = ContentInventoryTypes.isGamingLikeEntry(entry);
   if (isGamingLikeEntryResult) {
-    const obj4 = { entry };
-    isGamingLikeEntryResult = timestampProducer(GamingEntryBadges, obj4);
+    const obj9 = { entry };
+    isGamingLikeEntryResult = timestampProducer(GamingEntryBadges, obj9);
   }
   items1[2] = isGamingLikeEntryResult;
-  obj1.children = items1;
-  items[1] = React5(View, obj1);
-  obj.children = items;
-  obj.children = React5(View, obj);
+  obj5.children = items1;
+  items[1] = React5(View, obj5);
+  obj2.children = items;
+  obj.children = React5(View, obj2);
   return timestampProducer(View, obj);
 });
 size = fn(2);
@@ -244,22 +251,21 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileRecentActivityCard(style) {
   ({ user, entry } = style);
   closure_1 = undefined;
-  let obj = ContentInventoryActivityImageUtils;
-  const imageForContentEntry = obj.useImageForContentEntry({ entry, showCoverImage: false, trackingSource: "user_profile_recent_activity_native" });
+  const imageForContentEntry = ContentInventoryActivityImageUtils.useImageForContentEntry({ entry, showCoverImage: false, trackingSource: "user_profile_recent_activity_native" });
   ({ largeImage, smallImage } = imageForContentEntry);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.USER_PROFILE_RECENT_ACTIVITY_CARD).analyticsLocations;
   const tmp6 = useTrackUserProfileActivityActionDefault({ display: "recent", user, entry, analyticsLocations });
   closure_0 = tmp6;
-  obj = { userId: user.id, onAction: tmp6 };
-  useTrackUserProfileActivityViewDefault(obj);
+  useTrackUserProfileActivityViewDefault({ userId: user.id, onAction: tmp6 });
   let application_id;
   if ("application_id" in entry.extra) {
     application_id = entry.extra.application_id;
   }
-  obj = { location: "UserProfileRecentActivityCard", applicationId: application_id, source: null, trackEntryPointImpression: true, sourceUserId: null };
-  obj.source = GameProfileAnalyticUtils.GameProfileSources.UserProfile;
-  obj.sourceUserId = user.id;
-  const tmp4ResultResult = useOpenGameProfileModalDefault(obj);
+  const obj3 = { location: "UserProfileRecentActivityCard", applicationId: application_id, source: null, trackEntryPointImpression: true, sourceUserId: null };
+  const obj2 = { userId: user.id, onAction: tmp6 };
+  obj3.source = GameProfileAnalyticUtils.GameProfileSources.UserProfile;
+  obj3.sourceUserId = user.id;
+  const tmp4ResultResult = useOpenGameProfileModalDefault(obj3);
   closure_1 = tmp4ResultResult;
   items = [tmp6, tmp4ResultResult];
   const callback = noop.useCallback(() => {
@@ -268,27 +274,26 @@ export default function UserProfileRecentActivityCard(style) {
       closure_1();
     }
   }, items);
-  let tmpResult = ContentInventoryTypes;
+  const tmp4Result = useOpenGameProfileModalDefault;
   if (tmpResult.isGamingLikeEntry(entry)) {
-    const obj1 = { title: entry.extra.game_name };
-    let obj5 = obj1;
+    const obj4 = { title: entry.extra.game_name };
+    let obj8 = obj4;
   } else {
-    tmpResult = ContentInventoryTypes;
-    if (tmpResult.isWatchedMediaEntry(entry)) {
-      const obj2 = { title: entry.extra.media_title, subtitle: entry.extra.media_subtitle };
-      obj5 = obj2;
+    if (tmpResult4.isWatchedMediaEntry(entry)) {
+      const obj5 = { title: entry.extra.media_title, subtitle: entry.extra.media_subtitle };
+      obj8 = obj5;
     } else {
-      if (tmpResult1.isListenedSessionEntry(entry)) {
+      if (tmpResult5.isListenedSessionEntry(entry)) {
         const first = entry.extra.entries[0];
         let media;
         if (first != null) {
           media = first.media;
         }
-        title = undefined;
+        let title1;
         if (media != null) {
-          title = media.title;
+          title1 = media.title;
         }
-        const obj3 = { title, subtitle: null };
+        const obj6 = { title: title1, subtitle: null };
         let name;
         if (media != null) {
           const first1 = media.artists[0];
@@ -296,21 +301,22 @@ export default function UserProfileRecentActivityCard(style) {
             name = first1.name;
           }
         }
-        obj3.subtitle = name;
-        obj5 = obj3;
+        obj6.subtitle = name;
+        obj8 = obj6;
       } else {
-        if (tmpResult2.isLaunchedActivityEntry(entry)) {
-          const obj4 = { title: entry.extra.activity_name };
-          obj5 = obj4;
+        if (tmpResult6.isLaunchedActivityEntry(entry)) {
+          const obj7 = { title: entry.extra.activity_name };
+          obj8 = obj7;
         } else {
-          obj5 = { title: "r" };
+          obj8 = { title: "r" };
         }
-        tmpResult2 = ContentInventoryTypes;
+        tmpResult6 = ContentInventoryTypes;
       }
-      tmpResult1 = ContentInventoryTypes;
+      tmpResult5 = ContentInventoryTypes;
     }
+    tmpResult4 = ContentInventoryTypes;
   }
-  ({ title, subtitle } = obj5);
+  ({ title, subtitle } = obj8);
   let str;
   if (title != null) {
     str = title.trim();
@@ -320,19 +326,19 @@ export default function UserProfileRecentActivityCard(style) {
     trimmed = subtitle.trim();
   }
   const tmp20 = timestampProducer(closure_12, { entry, largeImage, smallImage, title: str, subtitle: trimmed, style: style.style });
-  const obj6 = { value: analyticsLocations, children: null };
+  const obj9 = { value: analyticsLocations, children: null };
   let tmp19Result = tmp20;
   if (null != tmp4ResultResult) {
-    const obj7 = { onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const obj10 = { onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = util.intl;
     if (str == null) {
       str = "";
     }
-    const obj8 = { gameName: str };
-    obj7.accessibilityLabel = intl.formatToPlainString(util.t["9sZWVp"], obj8);
-    obj7.children = tmp20;
-    tmp19Result = timestampProducer(Pressables.PressableOpacity, obj7);
+    const obj11 = { gameName: str };
+    obj10.accessibilityLabel = intl.formatToPlainString(util.t["9sZWVp"], obj11);
+    obj10.children = tmp20;
+    tmp19Result = timestampProducer(Pressables.PressableOpacity, obj10);
   }
-  obj6.children = tmp19Result;
-  return timestampProducer(useAnalyticsLocations.AnalyticsLocationProvider, obj6);
+  obj9.children = tmp19Result;
+  return timestampProducer(useAnalyticsLocations.AnalyticsLocationProvider, obj9);
 };

@@ -1,8 +1,8 @@
-// === Module 13187: UserProfileEditNoteModal ===
+// === Module 13188: UserProfileEditNoteModal ===
 
-// Module 13187 (UserProfileEditNoteModal)
+// Module 13188 (UserProfileEditNoteModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 13188 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13189 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,48 +15,45 @@ export default function UserProfileEditNoteModal(arg0) {
   ({ userId: navigation, onSave: closure_1, onBack: dependencyMap } = arg0);
   _slicedToArray = undefined;
   function handleClose() {
-    let arr = ModalActionCreatorsDefault;
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
     if (dependencyMap != null) {
       dependencyMap();
     }
   }
   navigation = undefined;
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
-  const tmp4 = _slicedToArray(handleClose.useState(false), 2);
-  const onSave = tmp4[1];
+  onSave = undefined;
+  navigation = navigation(1483).useNavigation();
+  [_slicedToArray, onSave] = handleClose.useState(false);
   const items = [navigation];
   const effect = handleClose.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     if (!data.data.closing) {
       onSave(true);
     }
   }), items);
-  _slicedToArray = tmp4[0];
-  let obj1 = navigation(1151);
-  obj = { initialRouteName: "root", headerStatusBarHeight: num, headerStyle: null, screens: null };
-  let tmpResult = tmp(1151);
-  obj = undefined;
+  navigation(1364);
+  const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
+  let obj = navigation(1483);
+  let obj4;
   if (!tmpResult.isAndroid()) {
-    obj = { height: 56 };
+    obj4 = { height: 56 };
   }
-  obj.headerStyle = obj;
-  obj1 = { root: null };
-  const obj2 = { title: null, headerTitle: null, headerLeft: null, render: null };
+  obj3.headerStyle = obj4;
+  const obj5 = { root: null };
+  const obj6 = { title: null, headerTitle: null, headerLeft: null, render: null };
   let intl = tmp(1114).intl;
-  obj2.title = intl.string(navigation(1114).t.sHHsOM);
-  obj2.headerTitle = function headerTitle() {
+  obj6.title = intl.string(navigation(1114).t.sHHsOM);
+  obj6.headerTitle = function headerTitle() {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = navigation(1114).intl;
     obj.children = intl.string(navigation(1114).t.sHHsOM);
     return jsx(navigation(4632).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
-  tmpResult = tmp(5705);
-  obj2.headerLeft = tmpResult.getHeaderCloseButton(handleClose);
-  obj2.render = function render() {
+  tmpResult = navigation(1364);
+  obj6.headerLeft = navigation(5705).getHeaderCloseButton(handleClose);
+  obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
-  obj1.root = obj2;
-  obj.screens = obj1;
-  return jsx(navigation(7103).Navigator, obj);
+  obj5.root = obj6;
+  obj3.screens = obj5;
+  return jsx(navigation(7103).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
 };

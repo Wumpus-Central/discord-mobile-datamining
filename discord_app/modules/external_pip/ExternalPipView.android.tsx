@@ -1,8 +1,8 @@
-// === Module 17109: ExternalPipView ===
+// === Module 17111: ExternalPipView ===
 
-// Module 17109 (ExternalPipView)
+// Module 17111 (ExternalPipView)
 import ExternalPipDefault from "ExternalPip" /* 9740 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17112 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppFreezeStore from "AppFreezeStore" /* 8408 */;
@@ -35,7 +35,7 @@ export default function ExternalPipView() {
   externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;
   const obj2 = externalPipEnabled(callback[5]);
-  [tmp3, closure_129_0] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, closure_129_0] = noop.useState(false);
   callback = noop.useCallback((arg0) => {
     externalPipEnabled(arg0);
     if (!arg0) {

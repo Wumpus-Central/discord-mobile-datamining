@@ -320,12 +320,12 @@ prototype["updateClientMembers"] = function updateClientMembers(items) {
           }
           if (flag2) {
             let obj2 = guild_mod_dash_member_safety_DateUtils;
-            obj = {};
+            let obj3 = {};
             let joinedAtTimestamp = obj2.getJoinedAtTimestamp(tmp6.joinedAt);
             let merged1 = Object.assign(tmp10);
-            obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= self._members.newMemberTimestamp;
-            obj.refreshTimestamp = self.lastRefreshTimestamp;
-            tmp10 = obj;
+            obj3.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= self._members.newMemberTimestamp;
+            obj3.refreshTimestamp = self.lastRefreshTimestamp;
+            tmp10 = obj3;
           }
           let tmp21 = _slicedToArray(self._rawUpdateMember(tmp6.userId, tmp10), 2);
           let first = tmp21[0];
@@ -401,10 +401,9 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
     const items = [..._mod12.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
     HermesBuiltin.arraySpread(_mod12.cloneDeep(self.getMembersByIndex(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
     const item = items.forEach((item) => {
-      let obj = closure_0(self[9]);
       _search = _search._search;
       let flag;
-      const sortValueForMember = obj.getSortValueForMember(item, selectedSort);
+      const sortValueForMember = closure_0(self[9]).getSortValueForMember(item, selectedSort);
       if (_search != null) {
         flag = _search.isMemberIncludedInSearchResults(item);
       }
@@ -413,8 +412,8 @@ prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
       }
       const _members = _search._members;
       if (_members != null) {
-        obj = { sort: sortValueForMember, isIncludedInSearchResults: flag };
-        _members.updateMember(item, obj);
+        const obj2 = { sort: sortValueForMember, isIncludedInSearchResults: flag };
+        _members.updateMember(item, obj2);
       }
     });
     fn();
@@ -483,14 +482,13 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         const _Date = Date;
         const NumberResult = Number(Date.now());
         self._scheduleRefresh(NumberResult);
-        let obj = _mod12;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
+        const cloneDeepResult = _mod12.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
         let flag2 = false;
         for (const item10031 of cloneDeepResult) {
           let _members2 = self._members;
-          obj = { isCurrentGuildMemberByTimestamp: true, refreshTimestamp: NumberResult, user: UserStore.getUser(item10031.userId) };
-          let updateMemberResult = _members2.updateMember(item10031, obj);
+          let obj2 = { isCurrentGuildMemberByTimestamp: true, refreshTimestamp: NumberResult, user: UserStore.getUser(item10031.userId) };
+          let updateMemberResult = _members2.updateMember(item10031, obj2);
           if (!updateMemberResult) {
             updateMemberResult = flag2;
           }
@@ -549,9 +547,8 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
             return self.updatePaginationChunks();
           }
         }
-        let obj = _mod12;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
+        const cloneDeepResult = _mod12.cloneDeep(_members.values(GuildMemberSafetyMembers.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
           if (item10048.isCurrentGuildMemberByTimestamp) {
@@ -561,9 +558,9 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
               flag2 = true;
               flag = true;
               let _members2 = self._members;
-              obj = { isIncludedInSearchResults: null };
-              obj.isIncludedInSearchResults = tmp14;
-              let updateMemberResult = _members2.updateMember(item10048, obj);
+              let obj2 = { isIncludedInSearchResults: null };
+              obj2.isIncludedInSearchResults = tmp14;
+              let updateMemberResult = _members2.updateMember(item10048, obj2);
             }
           }
           continue;

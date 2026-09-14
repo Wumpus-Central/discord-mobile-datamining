@@ -1,10 +1,10 @@
-// === Module 16691: VibegrationsAnalytics ===
+// === Module 16693: VibegrationsAnalytics ===
 
-// Module 16691 (VibegrationsAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 16693 (VibegrationsAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import VibegrationsUtils from "VibegrationsUtils" /* 7347 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16688 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16690 */;
 
 require = fn;
 function vibegrationLocation(project_id, isPreview) {
@@ -51,7 +51,7 @@ let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsAn
 export const VibegrationErrorCodes = { BUILD_FAILED: "BUILD_FAILED", HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED", AGENT_ERROR: "AGENT_ERROR", PUBLISH_FAILED: "PUBLISH_FAILED", WS_OPEN_FAILED: "WS_OPEN_FAILED", SEND_FAILED: "SEND_FAILED", RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR", RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR" };
 export const trackVibegrationTurnResulted = function trackVibegrationTurnResulted(project_id, result) {
   const project = VibegrationsProjectStore.getProject(project_id);
-  let obj = { project_id, project_name: null, application_id: null, preview_application_id: null };
+  const obj2 = { project_id, project_name: null, application_id: null, preview_application_id: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -63,7 +63,7 @@ export const trackVibegrationTurnResulted = function trackVibegrationTurnResulte
       substr = name.slice(0, 256);
     }
   }
-  obj.project_name = substr;
+  obj2.project_name = substr;
   let application_id;
   if (project != null) {
     application_id = project.application_id;
@@ -71,7 +71,7 @@ export const trackVibegrationTurnResulted = function trackVibegrationTurnResulte
   if (application_id == null) {
     application_id = null;
   }
-  obj.application_id = application_id;
+  obj2.application_id = application_id;
   let prop;
   if (project != null) {
     prop = project.preview_application_id;
@@ -79,13 +79,14 @@ export const trackVibegrationTurnResulted = function trackVibegrationTurnResulte
   if (prop == null) {
     prop = null;
   }
-  obj = { preview_application_id: prop };
-  const merged = Object.assign(obj);
+  const obj3 = {};
+  obj2.preview_application_id = prop;
+  const merged = Object.assign(obj2);
   result = result.result;
   if (result == null) {
     result = null;
   }
-  obj.turn_result = result;
+  obj3.turn_result = result;
   let detail = result.detail;
   if (detail == null) {
     detail = result.summary;
@@ -97,27 +98,27 @@ export const trackVibegrationTurnResulted = function trackVibegrationTurnResulte
       substr1 = detail.slice(0, 256);
     }
   }
-  obj.turn_summary = substr1;
+  obj3.turn_summary = substr1;
   let cost_usd = result.cost_usd;
   if (cost_usd == null) {
     cost_usd = null;
   }
-  obj.turn_cost = cost_usd;
+  obj3.turn_cost = cost_usd;
   const tokens = result.tokens;
   if (null == tokens) {
-    let obj1 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+    let obj7 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
   } else {
-    obj1 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+    obj7 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
     ({ input_tokens: obj4.turn_input_tokens, output_tokens: obj4.turn_output_tokens, cache_creation_input_tokens: obj4.turn_cache_write_tokens, cache_read_input_tokens: obj4.turn_cache_read_tokens } = tokens);
-    obj1.turn_total_tokens = tokens.input_tokens + tokens.output_tokens + tokens.cache_creation_input_tokens + tokens.cache_read_input_tokens;
+    obj7.turn_total_tokens = tokens.input_tokens + tokens.output_tokens + tokens.cache_creation_input_tokens + tokens.cache_read_input_tokens;
   }
-  const merged1 = Object.assign(obj1);
-  obj.track(AnalyticEvents.VIBEGRATION_TURN_RESULTED, obj);
+  const merged1 = Object.assign(obj7);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_TURN_RESULTED, obj3);
 };
 export const trackVibegrationDeployed = function trackVibegrationDeployed(project_id, isPreview) {
   isPreview = isPreview.isPreview;
   const project = VibegrationsProjectStore.getProject(project_id);
-  let obj = { project_id, project_name: null, application_id: null, preview_application_id: null };
+  const obj = { project_id, project_name: null, application_id: null, preview_application_id: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -151,7 +152,7 @@ export const trackVibegrationDeployed = function trackVibegrationDeployed(projec
   if (null != tmp6) {
     application = ApplicationStore.getApplication(tmp6);
   }
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(obj);
   let description;
   if (application != null) {
@@ -164,10 +165,10 @@ export const trackVibegrationDeployed = function trackVibegrationDeployed(projec
       substr1 = description.slice(0, 256);
     }
   }
-  obj.project_summary = substr1;
-  obj.is_preview = isPreview;
+  obj3.project_summary = substr1;
+  obj3.is_preview = isPreview;
   const merged1 = Object.assign(vibegrationLocation(project_id, isPreview));
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_DEPLOYED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_DEPLOYED, obj3);
 };
 export const trackVibegrationErrored = function trackVibegrationErrored(project_id, arg1) {
   ({ message, details, isPreview } = arg1);
@@ -176,7 +177,7 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
     isPreview = true;
   }
   const project = VibegrationsProjectStore.getProject(project_id);
-  let obj = { project_id, project_name: null, application_id: null, preview_application_id: null };
+  const obj2 = { project_id, project_name: null, application_id: null, preview_application_id: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -188,7 +189,7 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
       substr = name.slice(0, 256);
     }
   }
-  obj.project_name = substr;
+  obj2.project_name = substr;
   let application_id;
   if (project != null) {
     application_id = project.application_id;
@@ -196,7 +197,7 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
   if (application_id == null) {
     application_id = null;
   }
-  obj.application_id = application_id;
+  obj2.application_id = application_id;
   let prop;
   if (project != null) {
     prop = project.preview_application_id;
@@ -204,12 +205,13 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
   if (prop == null) {
     prop = null;
   }
-  obj = { preview_application_id: prop };
-  const merged = Object.assign(obj);
-  obj.is_preview = isPreview;
+  const obj3 = {};
+  obj2.preview_application_id = prop;
+  const merged = Object.assign(obj2);
+  obj3.is_preview = isPreview;
   const merged1 = Object.assign(vibegrationLocation(project_id, isPreview));
-  obj.error_location = _location;
-  obj.error_code = code;
+  obj3.error_location = _location;
+  obj3.error_code = code;
   let substr1 = null;
   if (null != message) {
     substr1 = null;
@@ -217,7 +219,7 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
       substr1 = message.slice(0, 256);
     }
   }
-  obj.error_message = substr1;
+  obj3.error_message = substr1;
   let substr2 = null;
   if (null != details) {
     substr2 = null;
@@ -225,6 +227,6 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
       substr2 = details.slice(0, 256);
     }
   }
-  obj.error_details = substr2;
-  obj.track(AnalyticEvents.VIBEGRATION_ERRORED, obj);
+  obj3.error_details = substr2;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_ERRORED, obj3);
 };

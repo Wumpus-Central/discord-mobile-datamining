@@ -1,8 +1,8 @@
-// === Module 11403: computeScrollData ===
+// === Module 11404: computeScrollData ===
 
-// Module 11403 (computeScrollData)
+// Module 11404 (computeScrollData)
 import Client from "Client" /* 4567 */;
-import NativeChatUtils from "NativeChatUtils" /* 11404 */;
+import NativeChatUtils from "NativeChatUtils" /* 11405 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
@@ -27,13 +27,13 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp3 = findIndexResult;
       }
       if (null != tmp3) {
-        let obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp3, animate: null, highlight: false, position: null };
+        const obj2 = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp3, animate: null, highlight: false, position: null };
         if (animated) {
           animated = !AccessibilityStore.useReducedMotion;
         }
-        obj.animate = animated;
-        obj.position = NativeChatUtils.ChatScrollPosition.TOP;
-        return obj;
+        obj2.animate = animated;
+        obj2.position = NativeChatUtils.ChatScrollPosition.TOP;
+        return obj2;
       }
     }
   }
@@ -52,7 +52,7 @@ export default function computeScrollData(shouldInitialScroll) {
       tmp6 = findIndexResult1;
     }
     if (null != tmp6) {
-      obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp6, animate: null, highlight: null, position: null };
+      const obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp6, animate: null, highlight: null, position: null };
       const useReducedMotion = AccessibilityStore.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
@@ -82,8 +82,8 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp13 = findIndexResult2;
       }
       if (null != tmp13) {
-        obj = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
-        tmp11 = obj;
+        const obj3 = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
+        tmp11 = obj3;
       }
     }
     tmp4 = tmp11;

@@ -1,9 +1,9 @@
-// === Module 12192: AppsBanner ===
+// === Module 12193: AppsBanner ===
 
-// Module 12192 (AppsBanner)
+// Module 12193 (AppsBanner)
 import util from "util" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12190 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12193 */;
+import BannerBaseDefault from "BannerBase" /* 12191 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,12 +16,11 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/onboardin
 
 export default function AppsBaner() {
   const tmp = closure_5();
-  let obj = { style: tmp.rocketIconContainer, children: null };
-  obj = { style: tmp.rocketIcon };
-  obj.children = jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon });
-  obj = { image: <View style={tmp.rocketIcon} />, text: null };
-  const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
+  const obj = { style: tmp.rocketIconContainer, children: jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon }) };
+  const obj3 = { image: <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>, text: null };
+  const obj2 = { style: tmp.rocketIcon };
+  const tmp2 = <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>;
   const intl = util.intl;
-  obj.text = intl.string(util.t.sjRwMJ);
-  return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIcon} />, text: null });
+  obj3.text = intl.string(util.t.sjRwMJ);
+  return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>, text: null });
 };

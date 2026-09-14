@@ -1,6 +1,6 @@
-// === Module 15247: QuestOrbMultiplierPerkInfoActionSheet ===
+// === Module 15248: QuestOrbMultiplierPerkInfoActionSheet ===
 
-// Module 15247 (QuestOrbMultiplierPerkInfoActionSheet)
+// Module 15248 (QuestOrbMultiplierPerkInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -15,16 +15,14 @@ import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7257 */;
 import openUserSettings from "openUserSettings" /* 7485 */;
 import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10096 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11426 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function Footer(eligibleToReceivePremiumRewards) {
   const callback = noop.useCallback(() => {
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
-    obj = { screen: constants2.PREMIUM };
-    openUserSettings.openUserSettings(obj);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
   }, []);
   const tmp = closure_12();
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
@@ -39,30 +37,30 @@ function Footer(eligibleToReceivePremiumRewards) {
   }, []);
   const Button = components_Button_Button.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
-    obj = { size: "lg", text: null, variant: "primary", onPress: null };
+    let obj2 = { size: "lg", text: null, variant: "primary", onPress: null };
     const intl3 = util.intl;
-    obj.text = intl3.string(util.t.hvVgAZ);
-    obj.onPress = callback1;
-    const items = [React6(Button, obj), ];
-    obj = { size: "lg", variant: "secondary", text: null, onPress: null };
+    obj2.text = intl3.string(util.t.hvVgAZ);
+    obj2.onPress = callback1;
+    const items = [React6(Button, obj2), ];
+    const obj3 = { size: "lg", variant: "secondary", text: null, onPress: null };
     const intl4 = util.intl;
-    obj.text = intl4.string(util.t.cpT0Cq);
-    obj.onPress = callback2;
-    items[1] = React6(components_Button_Button.Button, obj);
+    obj3.text = intl4.string(util.t.cpT0Cq);
+    obj3.onPress = callback2;
+    items[1] = React6(components_Button_Button.Button, obj3);
     obj.children = items;
     let tmp11 = obj;
   } else {
-    const obj1 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
+    const obj4 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
     const intl = util.intl;
-    obj1.text = intl.string(util.t.pj0XBN);
-    obj1.onPress = onPress;
-    obj1.loading = loading;
-    const items1 = [React6(Button, obj1), ];
-    let obj2 = { size: "lg", variant: "secondary", text: null, onPress: null };
+    obj4.text = intl.string(util.t.pj0XBN);
+    obj4.onPress = onPress;
+    obj4.loading = loading;
+    const items1 = [React6(Button, obj4), ];
+    const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(util.t.PcTCB7);
-    obj2.onPress = callback;
-    items1[1] = React6(components_Button_Button.Button, obj2);
+    obj5.text = intl2.string(util.t.PcTCB7);
+    obj5.onPress = callback;
+    items1[1] = React6(components_Button_Button.Button, obj5);
     obj.children = items1;
     tmp11 = obj;
   }
@@ -71,28 +69,27 @@ function Footer(eligibleToReceivePremiumRewards) {
 function SheetContent(arg0) {
   ({ title, body, eligibleToReceivePremiumRewards } = arg0);
   const tmp = closure_12();
-  let obj = useTypeConsolidationTextTransform;
-  const typeConsolidationTextTransform = obj.useTypeConsolidationTextTransform("QuestOrbMultiplierPerkInfo");
-  obj = { children: null };
+  const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("QuestOrbMultiplierPerkInfo");
+  const obj2 = { children: null };
   const items = [React6(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" }), ];
-  obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items1 = [tmp.container, { marginBottom: useSafeAreaInsetsDefault().bottom }];
-  obj.style = items1;
-  const obj1 = { style: tmp.contentContainer, children: null };
+  obj3.style = items1;
+  const obj4 = { style: tmp.contentContainer, children: null };
   const items2 = [React6(View, { style: tmp.riveContainer, children: React6(native.NitroQuestOrbsMultiplierRive, {}) }), , , ];
-  const obj3 = { style: null, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
+  const obj6 = { style: null, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
   const items3 = [, , ];
   ({ text: arr4[0], title: arr4[1] } = tmp);
   items3[2] = typeConsolidationTextTransform;
-  obj3.style = items3;
-  items2[1] = React6(Text_Text.Text, obj3);
+  obj6.style = items3;
+  items2[1] = React6(Text_Text.Text, obj6);
   items2[2] = React6(Text_Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
   items2[3] = React6(Footer, { eligibleToReceivePremiumRewards });
-  obj1.children = items2;
-  obj.children = React7(View, obj1);
-  items[1] = React6(View, obj);
-  obj.children = items;
-  return React7(closure_1_10, obj);
+  obj4.children = items2;
+  obj3.children = React7(View, obj4);
+  items[1] = React6(View, obj3);
+  obj2.children = items;
+  return React7(closure_1_10, obj2);
 }
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -100,27 +97,26 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-fn(4636);
-let createStyles = { container: null, contentContainer: null, text: null, buttonContainer: null, title: null, riveContainer: null };
-createStyles = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.contentContainer = { alignItems: "center", width: "100%", marginTop: nativeDefault.space.PX_48 };
-let obj1 = { alignItems: "center", width: "100%", marginTop: nativeDefault.space.PX_48 };
-createStyles.text = { textAlign: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
-let obj2 = { textAlign: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
-createStyles.buttonContainer = { width: "100%", gap: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_16 };
-createStyles.title = { textTransform: "uppercase", textAlign: "center", lineHeight: 34, paddingHorizontal: 0 };
-createStyles.riveContainer = { width: "100%", height: 160 };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, contentContainer: null, text: null, buttonContainer: null, title: null, riveContainer: null };
+let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.contentContainer = { alignItems: "center", width: "100%", marginTop: nativeDefault.space.PX_48 };
+let obj4 = { alignItems: "center", width: "100%", marginTop: nativeDefault.space.PX_48 };
+obj2.text = { textAlign: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
+let obj5 = { textAlign: "center", paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
+obj2.buttonContainer = { width: "100%", gap: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_16 };
+obj2.title = { textTransform: "uppercase", textAlign: "center", lineHeight: 34, paddingHorizontal: 0 };
+obj2.riveContainer = { width: "100%", height: 160 };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx");
 
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  let obj = multiplier(11426);
-  const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const result = multiplier(11427).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
+  let obj = multiplier(11427);
   const items = [orbMultiplierEligibility];
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
@@ -136,26 +132,26 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   const memo1 = noop.useMemo(() => {
     if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
       const intl2 = util.intl;
-      let obj = { bonusOrbMultiplier: multiplier };
-      let formatResult = intl2.format(_modDef3396.UkrcSH, obj);
+      const obj2 = { bonusOrbMultiplier: multiplier };
+      let formatResult = intl2.format(_modDef3396.UkrcSH, obj2);
     } else {
       const intl = util.intl;
       const format = intl.format;
       const t = util.t;
       if (c2) {
-        obj = { bonusOrbMultiplier: multiplier };
-        formatResult = format(t.NpUfej, obj);
+        const obj3 = { bonusOrbMultiplier: multiplier };
+        formatResult = format(t.NpUfej, obj3);
       } else {
-        obj = { bonusOrbMultiplier: multiplier };
+        const obj = { bonusOrbMultiplier: multiplier };
         formatResult = format(t["G5k+lZ"], obj);
       }
     }
     return formatResult;
   }, items1);
-  obj = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
-  obj = { visible: orbMultiplierEligibility === multiplier(11426).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11426).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
-  const tmp4 = orbMultiplierEligibility === multiplier(11426).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11426).QuestOrbMultiplierEligibilityType.UPSELL;
-  obj.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj.children = closure_8(orbMultiplierEligibility(15244), obj);
-  return closure_8(multiplier(7253).BottomSheet, obj);
+  let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
+  let obj3 = { visible: orbMultiplierEligibility === multiplier(11427).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11427).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
+  const tmp4 = orbMultiplierEligibility === multiplier(11427).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11427).QuestOrbMultiplierEligibilityType.UPSELL;
+  obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
+  obj2.children = closure_8(orbMultiplierEligibility(15245), obj3);
+  return closure_8(multiplier(7253).BottomSheet, obj2);
 };

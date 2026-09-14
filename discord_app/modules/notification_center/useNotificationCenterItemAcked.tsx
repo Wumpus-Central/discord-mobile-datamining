@@ -1,7 +1,9 @@
-// === Module 16514: useNotificationCenterItemAcked ===
+// === Module 16516: useNotificationCenterItemAcked ===
 
-// Module 16514 (useNotificationCenterItemAcked)
-import NotificationCenterStore from "NotificationCenterStore" /* 16507 */;
+// Module 16516 (useNotificationCenterItemAcked)
+import NotificationCenterStore from "NotificationCenterStore" /* 16509 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

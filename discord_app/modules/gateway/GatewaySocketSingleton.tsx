@@ -1,18 +1,18 @@
-// === Module 13717: GatewaySocketSingleton ===
+// === Module 13718: GatewaySocketSingleton ===
 
-// Module 13717 (GatewaySocketSingleton)
+// Module 13718 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import DiscordNativeDefault from "DiscordNative" /* 4257 */;
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7859 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
-import GatewaySocketDefault from "GatewaySocket" /* 13719 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13759 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13762 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13718 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import GatewaySocketDefault from "GatewaySocket" /* 13720 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13760 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13763 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13719 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkUtils from "NetworkUtils" /* 1461 */;
+import NetworkUtils_mod from "NetworkUtils" /* 1461 */;
 
 let closure_5 = new LoggerDefault("ConnectionStore");
 const socket = new GatewaySocketDefault();
@@ -21,47 +21,49 @@ const initialState = tmp3;
 const tmp2 = new LoggerDefault("ConnectionStore");
 socket.handleIdentify = () => {
   const token = AuthenticationStore.getToken();
-  let obj = { hasToken: null != token };
-  closure_5.verbose("handleIdentify called", obj);
+  closure_5.verbose("handleIdentify called", { hasToken: null != token });
   if (null == token) {
     return null;
   } else {
     const state = DiscordAppStateDefault.getState();
-    const installationForTracking = obj.getInstallationForTracking();
-    obj = { token, userId: null, properties: null, presence: null };
-    let id = obj.getId();
+    const installationForTracking = AuthenticationStore.getInstallationForTracking();
+    const obj3 = { token, userId: null, properties: null, presence: null };
+    let id = AuthenticationStore.getId();
     if (id == null) {
       id = MultiAccountSwitchStore.getTargetUserId();
     }
-    obj.userId = id;
-    const obj1 = {};
+    obj3.userId = id;
+    const obj4 = {};
     const merged = Object.assign(AnalyticsUtilsDefault.getSuperProperties());
-    obj1.client_app_state = state;
-    obj1.is_fast_connect = false;
+    obj4.client_app_state = state;
+    obj4.is_fast_connect = false;
     const tmp12Result = AnalyticsUtilsDefault;
-    obj1.gateway_connect_reasons = RequestGatewaySocketAll.describeConnectionReasons();
+    obj4.gateway_connect_reasons = RequestGatewaySocketAll.describeConnectionReasons();
     if (null != installationForTracking) {
-      const obj2 = { installation_id: installationForTracking };
-      let obj3 = obj2;
+      const obj6 = { installation_id: installationForTracking };
+      let obj7 = obj6;
     } else {
-      obj3 = {};
+      obj7 = {};
     }
-    const merged1 = Object.assign(obj3);
-    obj.properties = obj1;
-    obj.presence = initialState.getInitialState();
-    return obj;
+    const merged1 = Object.assign(obj7);
+    obj3.properties = obj4;
+    obj3.presence = initialState.getInitialState();
+    return obj3;
   }
+  const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {
     obj.expeditedHeartbeat(5000, "power monitor resumed");
   });
 }
+let NetworkUtils = NetworkUtils_mod;
 NetworkUtils.addOfflineCallback(() => {
   obj.networkStateChange(15000, "network detected offline.", false);
 });
+let NetworkUtils = NetworkUtils_mod;
 NetworkUtils.addOnlineCallback(() => {
   obj.networkStateChange(5000, "network detected online.");
 });

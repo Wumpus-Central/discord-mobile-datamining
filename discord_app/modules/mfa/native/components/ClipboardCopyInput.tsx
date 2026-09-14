@@ -1,9 +1,11 @@
-// === Module 15765: ClipboardCopyInput ===
+// === Module 15767: ClipboardCopyInput ===
 
-// Module 15765 (ClipboardCopyInput)
+// Module 15767 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
@@ -23,10 +25,10 @@ export default function ClipboardCopyInput(arg0) {
   let stateFromStores;
   _require = noop.useRef(null);
   const ref = noop.useRef(null);
-  let obj = require("initialize");
-  const items = [AppStateStore];
-  stateFromStores = obj.useStateFromStores(items, () => state.getState());
   const tmp = closure_9();
+  const items = [AppStateStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => state.getState());
+  let obj = require("initialize");
   const tmp5 = ref(stateFromStores[8])(isValidClipboardCode);
   closure_3 = tmp5;
   const items1 = [stateFromStores, tmp5, ref(stateFromStores[8])(onChangeCode)];
@@ -39,8 +41,8 @@ export default function ClipboardCopyInput(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -53,15 +55,15 @@ export default function ClipboardCopyInput(arg0) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = undefined;
-              let promise = new Promise((arg0) => setTimeout(arg0, 500));
+              const promise = new Promise((arg0) => setTimeout(arg0, 500));
               c2 = 1;
               v3 = 1;
-              let obj1 = { value: promise, done: false };
-              return obj1;
+              const obj5 = { value: promise, done: false };
+              return obj5;
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -69,14 +71,14 @@ export default function ClipboardCopyInput(arg0) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
-              promise = new Promise((arg0) => ref(closure_1_2[9]).runAfterInteractions(arg0));
+              const promise2 = new Promise((arg0) => ref(closure_1_2[9]).runAfterInteractions(arg0));
               c2 = 2;
               v3 = 1;
-              const obj3 = { value: promise, done: false };
-              return obj3;
+              const obj7 = { value: promise2, done: false };
+              return obj7;
             }
           } else if (2 === tmp4) {
             if (arg0 === 1) {
@@ -84,21 +86,20 @@ export default function ClipboardCopyInput(arg0) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
-              obj1 = closure_2_0(stateFromStores[10]);
               c2 = 3;
               v3 = 1;
-              const obj5 = { value: obj1.getString(), done: false };
-              return obj5;
+              const obj9 = { value: closure_2_0(stateFromStores[10]).getString(), done: false };
+              return obj9;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value.trim();
@@ -133,6 +134,6 @@ export default function ClipboardCopyInput(arg0) {
       })();
     }
   }, items1);
-  obj = { style: tmp.inputContainer, children: jsx(require("TextInput").TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, placeholder, isClearable: true, textContentType, autoComplete, keyboardType, isDisabled }) };
+  const tmp4 = ref(stateFromStores[8])(onChangeCode);
   return <View style={tmp.inputContainer}>{jsx(require("TextInput").TextInput, { ref, autoFocus, autoCorrect: false, autoCapitalize: "none", errorMessage: error, maxLength, onChange: onChangeCode, label, placeholder, isClearable: true, textContentType, autoComplete, keyboardType, isDisabled })}</View>;
 };

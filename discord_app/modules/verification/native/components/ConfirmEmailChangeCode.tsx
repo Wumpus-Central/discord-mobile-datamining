@@ -13,8 +13,7 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
-  let obj = isChangeEmail(1483);
-  const navigation = obj.useNavigation();
+  const navigation = isChangeEmail(1483).useNavigation();
   const items = [isChangeEmail, navigation];
   const callback = noop.useCallback((arg0) => {
     let tmp = arg0;
@@ -30,12 +29,13 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
       push(VerificationModalScenes.ENTER_EMAIL);
     }
   }, items);
-  obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
+  const obj2 = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
+  let obj = isChangeEmail(1483);
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
     await closure_0(c2[7]).confirmEmailChange(closure_0);
     return value;
   });
-  obj.onFormSubmit = function() {
+  obj2.onFormSubmit = function() {
     const self = this;
     const apply = isChangeEmail.apply;
     if (typeof apply === "unknown") {
@@ -45,8 +45,8 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     }
     return applyArgumentsResult;
   };
-  obj.onSuccess = callback;
-  obj.onResend = asyncGeneratorStep(async () => {
+  obj2.onSuccess = callback;
+  obj2.onResend = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -54,8 +54,8 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -68,22 +68,20 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = v3(dependencyMap[7]);
             c1 = 1;
             v3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.sendConfirmationCode();
-            return obj1;
+            const obj5 = { value: v3(dependencyMap[7]).sendConfirmationCode(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;
@@ -96,8 +94,8 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     }
   });
   const intl = isChangeEmail(1114).intl;
-  obj.headerText = intl.string(isChangeEmail(1114).t["2x/2Uo"]);
+  obj2.headerText = intl.string(isChangeEmail(1114).t["2x/2Uo"]);
   const intl2 = isChangeEmail(1114).intl;
-  obj.confirmButtonText = intl2.string(isChangeEmail(1114).t.PDTjLN);
+  obj2.confirmButtonText = intl2.string(isChangeEmail(1114).t.PDTjLN);
   return jsx(navigation(6705), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

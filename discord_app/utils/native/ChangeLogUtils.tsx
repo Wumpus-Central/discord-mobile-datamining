@@ -4,7 +4,6 @@
 import nativeDefault from "native" /* 576 */;
 import _modDef4333 from "module_4333" /* 4333 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 8201 */;
 import noop from "module_19" /* 19 */;
 import CustomMarkup from "CustomMarkup" /* 5076 */;
@@ -13,12 +12,12 @@ require = fn;
 function ChangeLogLink(arg0) {
   ({ node, state } = arg0);
   ({ output, styling } = arg0);
-  let obj = { className: closure_6().link, target: node.target, children: null };
-  obj = {};
+  const obj = { className: closure_6().link, target: node.target, children: null };
+  const obj2 = {};
   const merged = Object.assign(state);
-  obj.inLink = true;
-  obj.children = output(node.content, obj);
-  return jsx(styling.components.Link, {}, state.key);
+  obj2.inLink = true;
+  obj.children = output(node.content, obj2);
+  return jsx(styling.components.Link, { className: closure_6().link, target: node.target, children: null }, state.key);
 }
 function ChangeLogList(styling) {
   ({ output: require, state } = styling);
@@ -39,14 +38,14 @@ function ChangeLogList(styling) {
       item = item.forEach((type, index) => {
         if ("list" === type.type) {
           if (closure_4.length > 0) {
-            let obj = { variant: "text-sm/normal" };
+            const obj = { variant: "text-sm/normal" };
             const merged = Object.assign(closure_2);
             obj.children = closure_0(closure_4, closure_1);
             items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
             closure_4 = [];
           }
-          obj = { children: closure_0(type, closure_1) };
-          items.push(closure_2_5(closure_2_3, obj, index));
+          const obj2 = { children: closure_0(type, closure_1) };
+          items.push(closure_2_5(closure_2_3, obj2, index));
         } else {
           closure_4.push(type);
         }
@@ -79,7 +78,6 @@ function ChangeLogParagraph(state) {
 }
 function ChangeLogStrong(arg0) {
   ({ node, output, state } = arg0);
-  let obj = ManaTypeConsolidationExperiment;
   if (obj.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
     let str;
     if (state != null) {
@@ -88,7 +86,7 @@ function ChangeLogStrong(arg0) {
     if (str == null) {
       str = "text-default";
     }
-    obj = { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) };
+    const obj2 = { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) };
     let reactResult = jsx(Text_Text.Text, { variant: "experimental/body-sm/semibold", color: str, children: MarkupRulesUtils.smartOutput(node, output, state) });
     const tmpResult = MarkupRulesUtils;
   } else {
@@ -99,33 +97,28 @@ function ChangeLogStrong(arg0) {
 }
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
-  let obj = { style: closure_6().image, source: null };
-  obj = { uri: _modDef4333.sanitizeUrl(node.target) };
-  obj.source = obj;
-  return <React4 key={state.key} uri={_modDef4333.sanitizeUrl(node.target)} />;
+  const obj = { style: closure_6().image, source: null };
+  const obj2 = { uri: _modDef4333.sanitizeUrl(node.target) };
+  obj.source = obj2;
+  return <React4 key={state.key} style={closure_6().image} source={null} />;
 }
 function ChangeLogBlockQuote(state) {
   state = state.state;
   ({ node, output } = state);
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  obj = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
-  obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
-  return <React3 key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</React3>;
+  const obj = { style: tmp.container, children: jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) }) };
+  return <React3 key={state.key} style={tmp.container}>{jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) })}</React3>;
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { link: null, list: null, image: null, container: null, text: null };
-createStyles = { color: nativeDefault.colors.TEXT_LINK };
-createStyles.link = createStyles;
-createStyles.list = { marginBottom: 10 };
-createStyles.image = { alignSelf: "center", flex: 1 };
-createStyles.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-createStyles.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, image: { alignSelf: "center", flex: 1 }, container: null, text: null };
+const obj3 = { color: nativeDefault.colors.TEXT_LINK };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
+let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");

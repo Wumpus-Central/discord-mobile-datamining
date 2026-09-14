@@ -1,10 +1,10 @@
-// === Module 12630: GuildPowerupsNotificationsDCF ===
+// === Module 12631: GuildPowerupsNotificationsDCF ===
 
-// Module 12630 (GuildPowerupsNotificationsDCF)
+// Module 12631 (GuildPowerupsNotificationsDCF)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12624 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12631 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12625 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12632 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
@@ -29,13 +29,12 @@ export const useNewPerkAvailableCoachmarkDCF = function useNewPerkAvailableCoach
   return useSelectedDismissibleContent.useSelectedVersionedDismissibleContent(prop, latestVersion);
 };
 export const useGuildPowerupNotificationDCF = function useGuildPowerupNotificationDCF(arg0) {
-  let obj = useSelectedDismissibleContent;
   let prop = null;
   if (arg0) {
     prop = dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION;
   }
-  obj = { cooldownDurationMs: GuildPowerupsNotification.GUILD_POWERUP_NOTIFICATION_COOLDOWN };
-  return obj.useSelectedTimeRecurringDismissibleContent(prop, obj);
+  const obj = useSelectedDismissibleContent;
+  return obj.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: GuildPowerupsNotification.GUILD_POWERUP_NOTIFICATION_COOLDOWN });
 };
 export function useNewGamesCoachmarkDC() {
   const items = [
@@ -56,7 +55,7 @@ export function useGameServerPricingCoachmarkDCF() {
   return items;
 }
 export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
-  let obj = BoostToUnlockMobileCoachmarkExperimentDefault;
+  const obj = BoostToUnlockMobileCoachmarkExperimentDefault;
   let prop = null;
   if (arg0) {
     prop = null;
@@ -64,8 +63,8 @@ export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDC
       prop = dismissible_content.DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }
-  obj = { cooldownDurationMs: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR };
-  return useSelectedDismissibleContent.useSelectedTimeRecurringGuildDismissibleContent(prop, id, obj, GUILD_HEADER_TOOLTIPS);
+  const obj2 = useSelectedDismissibleContent;
+  return obj2.useSelectedTimeRecurringGuildDismissibleContent(prop, id, { cooldownDurationMs: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: GuildPowerupsNotification.BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR }, GUILD_HEADER_TOOLTIPS);
 };
 export function useExpiringPowerupCoachmarkDCF() {
   const items = [

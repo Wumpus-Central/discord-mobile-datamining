@@ -1,24 +1,22 @@
-// === Module 10510: GIFPickerCategoriesPage ===
+// === Module 10511: GIFPickerCategoriesPage ===
 
-// Module 10510 (GIFPickerCategoriesPage)
+// Module 10511 (GIFPickerCategoriesPage)
 import nativeDefault from "native" /* 576 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7165 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10494 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10497 */;
-import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10511 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10495 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10498 */;
+import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10512 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10493 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10494 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((height) => {
-  let obj = { item: null, placeholder: null };
-  obj = { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING };
-  obj.item = obj;
-  obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: height - gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, borderRadius: nativeDefault.radii.xs, flex: 1 };
-  obj.placeholder = obj;
+  const obj = { item: { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING }, placeholder: null };
+  const obj2 = { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING };
+  obj.placeholder = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: height - gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, borderRadius: nativeDefault.radii.xs, flex: 1 };
   return obj;
 });
 const size = fn(2);
@@ -43,9 +41,8 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   }
   const tmp6 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
   closure_4 = tmp6;
-  let tmp3Result = tmp3(tmp2[8]);
   let items = [trendingCategories];
-  trendingCategories = tmp3Result.useStateFromStoresObject(items, () => ({ trendingCategories: trendingCategories.getTrendingCategories() })).trendingCategories;
+  trendingCategories = tmp3(tmp2[8]).useStateFromStoresObject(items, () => ({ trendingCategories: trendingCategories.getTrendingCategories() })).trendingCategories;
   let items1 = [columns, favoritesCategory, trendingCategories];
   const memo = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useMemo(() => {
     let bound;
@@ -57,7 +54,7 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
     let num = 0;
     if (0 < Math.max(items.length, gif_picker_GIFPickerUtils.DEFAULT_CATEGORY_ROWS)) {
       do {
-        let arr = items1.push(items.slice(num, num + columns));
+        let arr2 = items1.push(items.slice(num, num + columns));
         num = num + columns;
         let _Math = Math;
         bound = Math.max(items.length, gif_picker_GIFPickerUtils.DEFAULT_CATEGORY_ROWS);
@@ -81,10 +78,10 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
     for (let num = 0; num < columns; num = num + 1) {
       let tmp2 = tmp[num];
       if (null != tmp2) {
-        let obj = { item: tmp2, onSelectCategory };
+        let obj2 = { item: tmp2, onSelectCategory };
         let tmp7 = jsx(GIFPickerCategoryViewDefault, { item: tmp2, onSelectCategory }, num);
       } else {
-        obj = { style: null };
+        let obj = { style: null };
         let items1 = [, ];
         ({ item: arr2[0], placeholder: arr2[1] } = closure_4);
         obj.style = items1;
@@ -92,19 +89,17 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
       }
       let arr = items.push(tmp7);
     }
-    obj = { style: closure_4.item, collapsable: false, children: items };
     return <View style={closure_4.item} collapsable={false}>{items}</View>;
   }, items3);
-  tmp3Result = tmp3(tmp2[11]);
+  const tmp3Result = tmp3(tmp2[8]);
   const items4 = [GIF_PICKER_ITEM_ESIMTATED_HEIGHT, columns, tmp6];
-  const isPortalKeyboardInModal = tmp3Result.useIsPortalKeyboardInModal();
+  const isPortalKeyboardInModal = tmp3(tmp2[11]).useIsPortalKeyboardInModal();
   const memo1 = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useMemo(() => {
-    let obj = { sectionItem: null };
-    obj = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, shape: "rect", shapeCount: columns, spaceGap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, borderRadius: closure_4.placeholder.borderRadius, colorHex: closure_4.placeholder.backgroundColor, height: GIF_PICKER_ITEM_ESIMTATED_HEIGHT - gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, verticalAlignment: "top" };
-    obj.sectionItem = obj;
+    const obj = { sectionItem: { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, shape: "rect", shapeCount: columns, spaceGap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, borderRadius: closure_4.placeholder.borderRadius, colorHex: closure_4.placeholder.backgroundColor, height: GIF_PICKER_ITEM_ESIMTATED_HEIGHT - gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, verticalAlignment: "top" } };
     return obj;
   }, items4);
   let obj = { estimatedListSize: null, inActionSheet: null, preventNativeModalDismiss: null, insetEnd: null, itemSize: null, sections: null, placeholderConfig: null, renderItem: null, accessibilityLabel: null };
+  const tmp3Result3 = tmp3(tmp2[11]);
   const tmp12 = favoritesCategory(tmp2[13]);
   obj.estimatedListSize = tmp3(tmp2[14]).getCustomKeyboardHeight();
   obj.inActionSheet = columns.inActionSheet;

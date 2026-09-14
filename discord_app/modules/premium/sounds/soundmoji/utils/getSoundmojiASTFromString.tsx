@@ -16,7 +16,6 @@ const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/util
 
 export default function getSoundmojiASTFromString(soundId, guildId) {
   ({ channelId, messageId, soundboardSounds } = guildId);
-  let obj = SoundmojiRenderingExperiment;
   let tmp5;
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = SoundboardStore.getSoundById(tmp2);
@@ -50,8 +49,8 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     }
   }
   if (null == tmp5) {
-    obj = { type: "text", content: getSoundStringDefault(tmp, tmp2) };
-    return obj;
+    const obj3 = { type: "text", content: getSoundStringDefault(tmp, tmp2) };
+    return obj3;
   } else {
     let name;
     if (tmp5 != null) {
@@ -60,19 +59,19 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     if (name == null) {
       name = tmp2;
     }
-    obj = { type: "soundboard", soundId: tmp2, guildId: tmp, messageId: null, channelId: null, content: null, emojiId: null, emojiName: null, emojiSrc: null };
+    const obj4 = { type: "soundboard", soundId: tmp2, guildId: tmp, messageId: null, channelId: null, content: null, emojiId: null, emojiName: null, emojiSrc: null };
     ({ messageId: obj2.messageId, channelId: obj2.channelId } = guildId);
-    obj.content = name;
+    obj4.content = name;
     let emojiId;
     if (tmp5 != null) {
       emojiId = tmp5.emojiId;
     }
-    obj.emojiId = emojiId;
+    obj4.emojiId = emojiId;
     let emojiName;
     if (tmp5 != null) {
       emojiName = tmp5.emojiName;
     }
-    obj.emojiName = emojiName;
+    obj4.emojiName = emojiName;
     let emojiId1;
     if (tmp5 != null) {
       emojiId1 = tmp5.emojiId;
@@ -83,13 +82,14 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
       if (tmp5 != null) {
         emojiId2 = tmp5.emojiId;
       }
-      const obj1 = { id: emojiId2, animated: false, size: 16 };
-      emojiURL = AvatarUtils.getEmojiURL(obj1);
+      const obj5 = { id: emojiId2, animated: false, size: 16 };
+      emojiURL = AvatarUtils.getEmojiURL(obj5);
       const tmp3Result = AvatarUtils;
     }
-    obj.emojiSrc = emojiURL;
-    return obj;
+    obj4.emojiSrc = emojiURL;
+    return obj4;
   }
+  obj = SoundmojiRenderingExperiment;
 };
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {

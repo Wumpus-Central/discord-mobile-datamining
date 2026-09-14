@@ -9,7 +9,7 @@ import _slicedToArray from "module_32" /* 32 */;
 require = fn;
 function parseEncoder(encoderImplementationName) {
   if (null == encoderImplementationName) {
-    return obj.UNKNOWN;
+    return obj2.UNKNOWN;
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_13);
@@ -20,12 +20,12 @@ function parseEncoder(encoderImplementationName) {
         return closure_13[item10012];
       }
     }
-    return obj.UNCATEGORIZED;
+    return obj2.UNCATEGORIZED;
   }
 }
 function parseDecoder(decoderImplementationName) {
   if (null == decoderImplementationName) {
-    return obj.UNKNOWN;
+    return obj3.UNKNOWN;
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_14);
@@ -36,7 +36,7 @@ function parseDecoder(decoderImplementationName) {
         return closure_14[item10012];
       }
     }
-    return obj.UNCATEGORIZED;
+    return obj3.UNCATEGORIZED;
   }
 }
 const React4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000];
@@ -45,12 +45,12 @@ const timestampProducer = [720, 480, 360];
 const dependencyMap = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
 let set = new Set(["passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount"]);
 let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
-let obj = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
-obj = { NVIDIA_CUDA: "nvidia_cuda", NVIDIA_DIRECT_3D: "nvidia_direct_3d", NVIDIA_VULKAN: "nvidia_vulkan", OPENH264: "openh264", VIDEOTOOLBOX: "videotoolbox", AMD_DIRECT_3D: "amd_direct_3d", AMD_VAAPI: "amd_vaapi", INTEL: "intel", INTEL_DIRECT_3D: "intel_direct_3d", INTEL_VAAPI: "intel_vaapi", VP8_LIBVPX: "vp8_libvpx", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", WMF_SW: "wmf_sw", WMF_HW: "wmf_hw", WMF_DIRECT_3D: "wmf_direct_3d", WMF_DIRECT_3D_INTEL: "wmf_direct_3d_intel", WMF_DIRECT_3D_NVIDIA: "wmf_direct_3d_nvidia", WMF_DIRECT_3D_AMD: "wmf_direct_3d_amd", WMF_CHROME: "wmf_chrome", UNCATEGORIZED: "uncategorized", UNKNOWN: "unknown" };
-obj = { VIDEOTOOLBOX: "videotoolbox", VP8_LIBVPX: "vp8_libvpx", ELECTRON: "electron", FFMPEG: "ffmpeg", DAV1D: "dav1d", WEBRTC: "WebRTC", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", UNCATEGORIZED: "uncategorized", D3D11VIDEODECODER: "d3d11videodecoder", ANDROID: "android", UNKNOWN: "unknown" };
-let closure_13 = Object.freeze({ "mediafoundation direct3d intel": obj.WMF_DIRECT_3D_INTEL, "mediafoundation direct3d nvidia": obj.WMF_DIRECT_3D_NVIDIA, "mediafoundation direct3d amd": obj.WMF_DIRECT_3D_AMD, mediafoundationvideoencodeaccelerator: obj.WMF_CHROME, "nvidia: cuda": obj.NVIDIA_CUDA, "nvidia: direct3d": obj.NVIDIA_DIRECT_3D, "nvidia: vulkan": obj.NVIDIA_VULKAN, "amd: direct3d": obj.AMD_DIRECT_3D, "amd: vaapi": obj.AMD_VAAPI, "intel: direct3d": obj.INTEL_DIRECT_3D, "intel: vaapi": obj.INTEL_VAAPI, intel: obj.INTEL, videotoolbox: obj.VIDEOTOOLBOX, openh264: obj.OPENH264, libvpx: obj.VP8_LIBVPX, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, "mediafoundation sw": obj.WMF_SW, "mediafoundation hw": obj.WMF_HW, "mediafoundation direct3d": obj.WMF_DIRECT_3D });
-let closure_14 = Object.freeze({ videotoolbox: obj.VIDEOTOOLBOX, libvpx: obj.VP8_LIBVPX, electron: obj.ELECTRON, ffmpeg: obj.FFMPEG, dav1d: obj.DAV1D, webrtc: obj.WEBRTC, "c2.exynos": obj.EXYNOS, "omx.exynos": obj.EXYNOS, "c2.qti": obj.QUALCOMM, "omx.qcom": obj.QUALCOMM, "c2.mtk": obj.MEDIATEK, "omx.mtk": obj.MEDIATEK, d3d11videodecoder: obj.D3D11VIDEODECODER, "c2.android": obj.ANDROID, "omx.google": obj.ANDROID });
-const obj3 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSideDisableVideo", SenderStopped: 2, [2]: "SenderStopped" };
+const CodecTypes = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
+const obj2 = { NVIDIA_CUDA: "nvidia_cuda", NVIDIA_DIRECT_3D: "nvidia_direct_3d", NVIDIA_VULKAN: "nvidia_vulkan", OPENH264: "openh264", VIDEOTOOLBOX: "videotoolbox", AMD_DIRECT_3D: "amd_direct_3d", AMD_VAAPI: "amd_vaapi", INTEL: "intel", INTEL_DIRECT_3D: "intel_direct_3d", INTEL_VAAPI: "intel_vaapi", VP8_LIBVPX: "vp8_libvpx", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", WMF_SW: "wmf_sw", WMF_HW: "wmf_hw", WMF_DIRECT_3D: "wmf_direct_3d", WMF_DIRECT_3D_INTEL: "wmf_direct_3d_intel", WMF_DIRECT_3D_NVIDIA: "wmf_direct_3d_nvidia", WMF_DIRECT_3D_AMD: "wmf_direct_3d_amd", WMF_CHROME: "wmf_chrome", UNCATEGORIZED: "uncategorized", UNKNOWN: "unknown" };
+const obj3 = { VIDEOTOOLBOX: "videotoolbox", VP8_LIBVPX: "vp8_libvpx", ELECTRON: "electron", FFMPEG: "ffmpeg", DAV1D: "dav1d", WEBRTC: "WebRTC", EXYNOS: "exynos", QUALCOMM: "qualcomm", MEDIATEK: "mediatek", UNCATEGORIZED: "uncategorized", D3D11VIDEODECODER: "d3d11videodecoder", ANDROID: "android", UNKNOWN: "unknown" };
+let closure_13 = Object.freeze({ "mediafoundation direct3d intel": obj2.WMF_DIRECT_3D_INTEL, "mediafoundation direct3d nvidia": obj2.WMF_DIRECT_3D_NVIDIA, "mediafoundation direct3d amd": obj2.WMF_DIRECT_3D_AMD, mediafoundationvideoencodeaccelerator: obj2.WMF_CHROME, "nvidia: cuda": obj2.NVIDIA_CUDA, "nvidia: direct3d": obj2.NVIDIA_DIRECT_3D, "nvidia: vulkan": obj2.NVIDIA_VULKAN, "amd: direct3d": obj2.AMD_DIRECT_3D, "amd: vaapi": obj2.AMD_VAAPI, "intel: direct3d": obj2.INTEL_DIRECT_3D, "intel: vaapi": obj2.INTEL_VAAPI, intel: obj2.INTEL, videotoolbox: obj2.VIDEOTOOLBOX, openh264: obj2.OPENH264, libvpx: obj2.VP8_LIBVPX, "c2.exynos": obj2.EXYNOS, "omx.exynos": obj2.EXYNOS, "c2.qti": obj2.QUALCOMM, "omx.qcom": obj2.QUALCOMM, "c2.mtk": obj2.MEDIATEK, "omx.mtk": obj2.MEDIATEK, "mediafoundation sw": obj2.WMF_SW, "mediafoundation hw": obj2.WMF_HW, "mediafoundation direct3d": obj2.WMF_DIRECT_3D });
+let closure_14 = Object.freeze({ videotoolbox: obj3.VIDEOTOOLBOX, libvpx: obj3.VP8_LIBVPX, electron: obj3.ELECTRON, ffmpeg: obj3.FFMPEG, dav1d: obj3.DAV1D, webrtc: obj3.WEBRTC, "c2.exynos": obj3.EXYNOS, "omx.exynos": obj3.EXYNOS, "c2.qti": obj3.QUALCOMM, "omx.qcom": obj3.QUALCOMM, "c2.mtk": obj3.MEDIATEK, "omx.mtk": obj3.MEDIATEK, d3d11videodecoder: obj3.D3D11VIDEODECODER, "c2.android": obj3.ANDROID, "omx.google": obj3.ANDROID });
+const obj6 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSideDisableVideo", SenderStopped: 2, [2]: "SenderStopped" };
 let RawVideoStats;
 class RawVideoStats {
   constructor() {
@@ -179,7 +179,7 @@ RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, ti
   if (typeof RawVideoStats === "function") {
     let merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
     if (null != resolution) {
-      obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
+      const obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
       ({ bytesSent: obj.bytes, framesEncoded: obj.framesCodec, framesSent } = resolution);
       if (framesSent == null) {
         framesSent = 0;
@@ -453,7 +453,7 @@ class InboundStats {
 const prototype = InboundStats.prototype;
 Object.defineProperty(prototype, "isVideoStopped", {
   get: function isVideoStopped() {
-    return this.videoStoppedReason !== obj3.None;
+    return this.videoStoppedReason !== obj6.None;
   },
   set: undefined
 });
@@ -513,7 +513,7 @@ prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
     videoStoppedWatch2.start();
   } else {
     self.videoStoppedReason = videoStoppedReason & ~SenderStopped;
-    if (self.videoStoppedReason === obj3.None) {
+    if (self.videoStoppedReason === obj6.None) {
       const statsWindow = self.statsWindow;
       statsWindow.splice(0);
       const videoStoppedWatch = self.videoStoppedWatch;
@@ -750,10 +750,10 @@ OutboundStats.prototype["appendTargetRates"] = function appendTargetRates(arg0, 
   }
 };
 
-export const CodecTypes = obj;
-export const Encoders = obj;
-export const Decoders = obj;
-export const VideoStoppedReasons = obj3;
+export { CodecTypes };
+export const Encoders = obj2;
+export const Decoders = obj3;
+export const VideoStoppedReasons = obj6;
 export { parseEncoder };
 export { parseDecoder };
 export const parseCodecType = function parseCodecType(name) {

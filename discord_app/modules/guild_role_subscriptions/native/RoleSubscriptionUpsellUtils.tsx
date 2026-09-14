@@ -1,6 +1,6 @@
-// === Module 10426: RoleSubscriptionUpsellUtils ===
+// === Module 10427: RoleSubscriptionUpsellUtils ===
 
-// Module 10426 (RoleSubscriptionUpsellUtils)
+// Module 10427 (RoleSubscriptionUpsellUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import noop from "module_19" /* 19 */;
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    let obj = {
+    actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(10427, dependencyMap.paths).then((result) => {
+        return asyncRequireImpl(10428, dependencyMap.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             const obj = {};
@@ -25,7 +25,6 @@ export default {
           };
         });
       }
-    };
-    obj.openLazy(obj);
+    });
   }
 };

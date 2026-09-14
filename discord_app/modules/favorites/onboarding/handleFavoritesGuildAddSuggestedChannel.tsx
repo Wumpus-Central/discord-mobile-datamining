@@ -1,7 +1,7 @@
-// === Module 16299: handleFavoritesGuildAddSuggestedChannel ===
+// === Module 16301: handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 16299 (handleFavoritesGuildAddSuggestedChannel)
-import formatResults from "formatResults" /* 11113 */;
+// Module 16301 (handleFavoritesGuildAddSuggestedChannel)
+import formatResults from "formatResults" /* 11114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -13,8 +13,8 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,16 +27,16 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = undefined;
           c3 = 1;
           c4 = 1;
-          let obj1 = { value: formatResults.getOrResolveChannelIdFromDestinationId(closure_0), done: false };
-          return obj1;
+          const obj5 = { value: formatResults.getOrResolveChannelIdFromDestinationId(closure_0), done: false };
+          return obj5;
         }
       } else {
         if (1 === tmp5) {
@@ -45,21 +45,20 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_129_0 = value;
             if (null != closure_129_0) {
-              obj1 = closure_130_0(closure_130_1[2]);
-              const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
+              const obj8 = { channelIds: null, categoryName: null, source: "suggestions" };
               const items = [closure_129_0];
-              obj3.channelIds = items;
+              obj8.channelIds = items;
               const intl = closure_130_0(closure_130_1[3]).intl;
-              obj3.categoryName = intl.string(closure_130_0(closure_130_1[3]).t.OGiMXJ);
+              obj8.categoryName = intl.string(closure_130_0(closure_130_1[3]).t.OGiMXJ);
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: obj1.addFavoriteChannelsToCategory(obj3), done: false };
-              return obj4;
+              const obj9 = { value: closure_130_0(closure_130_1[2]).addFavoriteChannelsToCategory(obj8), done: false };
+              return obj9;
             }
           }
         } else if (arg0 === 1) {
@@ -67,7 +66,7 @@ let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c4 = 3;

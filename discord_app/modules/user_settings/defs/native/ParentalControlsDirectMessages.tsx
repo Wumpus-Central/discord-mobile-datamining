@@ -1,14 +1,14 @@
-// === Module 15983: ParentalControlsDirectMessages ===
+// === Module 15985: ParentalControlsDirectMessages ===
 
-// Module 15983 (ParentalControlsDirectMessages)
+// Module 15985 (ParentalControlsDirectMessages)
 import util from "util" /* 1114 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14914 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14915 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.RAQUSN);
@@ -29,10 +29,9 @@ let SettingBuilders = {
     }
   },
   unsearchable: true
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
-export default SettingBuilders;
-export const ParentalControlsDirectMessages = SettingBuilders;
+export default toggle;
+export const ParentalControlsDirectMessages = toggle;

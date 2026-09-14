@@ -1,12 +1,12 @@
-// === Module 15645: DeviceInfoSetting ===
+// === Module 15646: DeviceInfoSetting ===
 
-// Module 15645 (DeviceInfoSetting)
+// Module 15646 (DeviceInfoSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15644 */;
-import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15646 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15645 */;
+import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15647 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

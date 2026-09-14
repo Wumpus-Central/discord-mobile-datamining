@@ -1,13 +1,13 @@
-// === Module 11898: QuestRewardDetailsBottomSheet ===
+// === Module 11899: QuestRewardDetailsBottomSheet ===
 
-// Module 11898 (QuestRewardDetailsBottomSheet)
+// Module 11899 (QuestRewardDetailsBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7810 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11423 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import QuestUtils from "QuestUtils" /* 11896 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11424 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import QuestUtils from "QuestUtils" /* 11897 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -31,47 +31,46 @@ function QuestRewardDetailsBottomSheet(quest) {
       return null;
     }
   }, items1);
-  let obj = quest(504);
   const items2 = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  let obj1 = quest(11423);
-  const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
-  obj = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
-  obj = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(11899), { quest, height: 56, width: 56, withAnimation: true }), ];
-  obj1 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
-  const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
+  const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  let obj = quest(504);
+  const tmp4 = quest;
+  const defaultRewardName = quest(11424).getDefaultRewardName(quest.config, stateFromStores);
+  const obj3 = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
+  const obj4 = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
+  const items3 = [closure_6(memo(11900), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const obj5 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
+  const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1114).intl;
-  obj2.children = intl.string(quest(1114).t["jyYgZ+"]);
-  const items4 = [closure_6(quest(4632).Text, obj2), closure_6(quest(4632).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
-  obj1.children = items4;
-  items3[1] = closure_7(quest(5054).Stack, obj1);
-  obj.children = items3;
-  const items5 = [closure_7(quest(5054).Stack, obj), ];
+  obj6.children = intl.string(quest(1114).t["jyYgZ+"]);
+  const items4 = [closure_6(quest(4632).Text, obj6), closure_6(quest(4632).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
+  obj5.children = items4;
+  items3[1] = closure_7(quest(5054).Stack, obj5);
+  obj4.children = items3;
+  const items5 = [closure_7(quest(5054).Stack, obj4), ];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
-    const obj3 = { children: null };
-    const obj4 = { style: tmp.separator };
-    const items6 = [closure_6(View, obj4), ];
-    const obj5 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = closure_6(quest(4632).Text, obj5);
-    obj3.children = items6;
-    tmp9Result = closure_7(closure_8, obj3);
+    const obj7 = { children: null };
+    const obj8 = { style: tmp.separator };
+    const items6 = [closure_6(View, obj8), ];
+    const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
+    items6[1] = closure_6(tmp4(4632).Text, obj9);
+    obj7.children = items6;
+    tmp9Result = closure_7(closure_8, obj7);
   }
+  const obj2 = quest(11424);
   items5[1] = tmp9Result;
-  obj.children = items5;
-  return closure_6(quest(7253).BottomSheet, { startExpanded: true, children: closure_7(quest(5054).Stack, obj) });
+  obj3.children = items5;
+  return closure_6(quest(7253).BottomSheet, { startExpanded: true, children: closure_7(quest(5054).Stack, obj3) });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: null, rewardDetailsCopy: null, separator: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
-createStyles.wrapper = createStyles;
-createStyles.rewardDetailsCopy = { flexShrink: 1 };
-createStyles.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_STRONG };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrapper: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, rewardDetailsCopy: { flexShrink: 1 }, separator: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
+obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx");
 
@@ -80,12 +79,11 @@ export default function QuestRewardDetailsBottomSheetConnected(questId) {
     const result = QuestUtils.showQuestUnavailableAlert();
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, []);
-  let obj = hooks_QuestHooks;
-  const nonNullableQuest = obj.useNonNullableQuest(questId.questId, callback);
+  const nonNullableQuest = hooks_QuestHooks.useNonNullableQuest(questId.questId, callback);
   let tmp3 = null;
   if (null != nonNullableQuest) {
-    obj = { quest: nonNullableQuest };
-    tmp3 = timestampProducer(QuestRewardDetailsBottomSheet, obj);
+    const obj2 = { quest: nonNullableQuest };
+    tmp3 = timestampProducer(QuestRewardDetailsBottomSheet, obj2);
   }
   return tmp3;
 };

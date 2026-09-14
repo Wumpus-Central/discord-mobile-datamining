@@ -1,13 +1,13 @@
-// === Module 15578: AndroidMessageNotificationsSetting ===
+// === Module 15579: AndroidMessageNotificationsSetting ===
 
-// Module 15578 (AndroidMessageNotificationsSetting)
+// Module 15579 (AndroidMessageNotificationsSetting)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import _modDef2722 from "module_2722" /* 2722 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15572 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15566 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15573 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15567 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useAndroidMessageNotificationsSettingValue() {
@@ -19,14 +19,15 @@ function useAndroidMessageNotificationsSettingValue() {
 }
 ({ useAndroidMessageNotificationsEnabled: c3, setAndroidMessageNotificationsEnabled } = AndroidNotificationSettingsStore);
 let obj = { useValue: useAndroidMessageNotificationsSettingValue, onValueChange: setAndroidMessageNotificationsEnabled };
-obj = {};
+let SettingBuilders = SettingBuilders_mod;
+const obj2 = {};
 const merged = Object.assign(obj);
-obj.useTitle = function useTitle() {
+obj2.useTitle = function useTitle() {
   const intl = util.intl;
   return intl.string(util.t["zViLy+"]);
 };
-obj.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
-obj.usePredicate = function usePredicate() {
+obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj2.usePredicate = function usePredicate() {
   const tmp = React3();
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
@@ -37,19 +38,20 @@ obj.usePredicate = function usePredicate() {
   }
   return isAndroidResult;
 };
-const toggle = SettingBuilders.createToggle(obj);
-obj = {};
+const toggle = SettingBuilders.createToggle(obj2);
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
 const merged1 = Object.assign(obj);
-obj.useTitle = function useTitle() {
+obj3.useTitle = function useTitle() {
   const intl = util.intl;
   return intl.string(_modDef2722.odJXYJ);
 };
-obj.useDescription = function useDescription() {
+obj3.useDescription = function useDescription() {
   const intl = util.intl;
   return intl.string(_modDef2722["+jwUmI"]);
 };
-obj.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
-obj.usePredicate = function usePredicate() {
+obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj3.usePredicate = function usePredicate() {
   const tmp = React3();
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
@@ -60,7 +62,7 @@ obj.usePredicate = function usePredicate() {
   }
   return isAndroidResult;
 };
-const toggle1 = SettingBuilders.createToggle(obj);
+const toggle1 = SettingBuilders.createToggle(obj3);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 
 export default toggle;

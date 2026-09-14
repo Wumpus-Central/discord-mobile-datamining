@@ -1,6 +1,6 @@
-// === Module 17159: useTransitionToConnectedActivityInVoice ===
+// === Module 17161: useTransitionToConnectedActivityInVoice ===
 
-// Module 17159 (useTransitionToConnectedActivityInVoice)
+// Module 17161 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -38,8 +38,8 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -52,8 +52,8 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_2 = tmp5;
                 closure_1 = tmp2;
@@ -73,18 +73,18 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  const obj1 = { value, done: true };
-                  return obj1;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   embeddedActivityLocationChannelId = handler(4265).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
                     if (closure_2_1(9658)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
-                        const obj2 = { channelId: embeddedActivityLocationChannelId };
+                        const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj3 = { value: closure_2_1(9675)(obj2), done: false };
-                        return obj3;
+                        const obj6 = { value: closure_2_1(9675)(obj5), done: false };
+                        return obj6;
                       }
                     }
                   }
@@ -96,7 +96,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               channel2 = channel.getChannel(embeddedActivityLocationChannelId);

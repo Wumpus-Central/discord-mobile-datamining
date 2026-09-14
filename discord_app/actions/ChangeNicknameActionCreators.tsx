@@ -6,6 +6,8 @@ import util from "util" /* 1114 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
 

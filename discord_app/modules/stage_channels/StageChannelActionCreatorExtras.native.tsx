@@ -17,41 +17,36 @@ const setIsOnStartStageScreen = useIsOnStartStageScreenStore.setIsOnStartStageSc
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
-  const obj = { channel };
-  obj.openLazy(asyncRequireImpl(8515, dependencyMap.paths), hasOwnProperty, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8515, dependencyMap.paths), hasOwnProperty, { channel });
 };
 export function openEndGuildEventConfirmationModal() {
 
 }
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
-  const obj = { channelId };
-  obj.openLazy(asyncRequireImpl(8713, dependencyMap.paths), React4, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8713, dependencyMap.paths), React4, { channelId });
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  const obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl(8741, dependencyMap.paths), timestampProducer, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8741, dependencyMap.paths), timestampProducer, { channel, onAccept });
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
-  const obj = { channelId, onOpenRTCDebugOverlay };
-  obj.openLazy(asyncRequireImpl(8744, dependencyMap.paths), React5, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8744, dependencyMap.paths), React5, { channelId, onOpenRTCDebugOverlay });
 };
 export const openEndStageModal = function openEndStageModal(channel) {
-  const obj = { channel };
-  obj.openLazy(asyncRequireImpl(9210, dependencyMap.paths), React6, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9210, dependencyMap.paths), React6, { channel });
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
-    let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmpResult = PrivateChannelCallUtils;
-      tmpResult.openGuildVoiceModal(isGuildStageVoice);
+      PrivateChannelCallUtils.openGuildVoiceModal(isGuildStageVoice);
+      const tmpResult = PrivateChannelCallUtils;
     } else {
-      obj = { channel: isGuildStageVoice };
+      const obj3 = { channel: isGuildStageVoice };
       const obj2 = ModalActionCreatorsDefault;
-      tmpResult = PrivateChannelCallUtils;
-      obj2.pushLazy(asyncRequireImpl(9596, dependencyMap.paths), obj, tmpResult.getVoiceChannelKey(isGuildStageVoice.id));
       const tmp4 = asyncRequireImpl(9596, dependencyMap.paths);
+      obj2.pushLazy(tmp4, obj3, PrivateChannelCallUtils.getVoiceChannelKey(isGuildStageVoice.id));
+      const tmpResult2 = PrivateChannelCallUtils;
     }
+    obj = StageVoicePanelExperiment;
   }
 };
 export const showPlatformUserProfile = function showPlatformUserProfile(arg0) {
@@ -69,17 +64,17 @@ export const navigateToStage = function navigateToStage(id, arg1) {
     setIsOnStartStageScreen(true);
   }
   if (id.isGuildStageVoice()) {
-    let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmp3Result = PrivateChannelCallUtils;
-      tmp3Result.openGuildVoiceModal(id);
+      PrivateChannelCallUtils.openGuildVoiceModal(id);
+      const tmp3Result = PrivateChannelCallUtils;
     } else {
-      obj = { channel: id };
+      const obj3 = { channel: id };
       const obj2 = ModalActionCreatorsDefault;
-      tmp3Result = PrivateChannelCallUtils;
-      obj2.pushLazy(asyncRequireImpl(9596, dependencyMap.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
       const tmp6 = asyncRequireImpl(9596, dependencyMap.paths);
+      obj2.pushLazy(tmp6, obj3, PrivateChannelCallUtils.getVoiceChannelKey(id.id));
+      const tmp3Result2 = PrivateChannelCallUtils;
     }
+    obj = StageVoicePanelExperiment;
   }
 };
 export function showChannelChangeConfirmationAlert() {

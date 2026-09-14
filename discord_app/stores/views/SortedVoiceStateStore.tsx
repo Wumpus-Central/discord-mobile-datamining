@@ -5,7 +5,7 @@ import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SecondaryIndexMap from "SecondaryIndexMap" /* 4271 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -50,7 +50,7 @@ function makeSortedVoiceState(voiceState, guildId, id, connectedOn) {
   const user = UserStore.getUser(id);
   let tmp3 = user;
   if (null == user) {
-    let obj = { id, username: "...", discriminator: id.slice(-5, -1) };
+    const obj = { id, username: "...", discriminator: id.slice(-5, -1) };
     tmp3 = new UserRecord(obj);
   }
   const member = GuildMemberStore.getMember(guildId, tmp3.id);
@@ -65,12 +65,12 @@ function makeSortedVoiceState(voiceState, guildId, id, connectedOn) {
   if (voiceState.selfStream) {
     str = "\0";
   }
-  obj = { voiceState, user: tmp3, member, comparator: "" + str + nick.toLowerCase() + "\0" + voiceState.userId, nick: null, connectedOn: null };
+  const obj3 = { voiceState, user: tmp3, member, comparator: "" + str + nick.toLowerCase() + "\0" + voiceState.userId, nick: null, connectedOn: null };
   let nick1;
   if (member != null) {
     nick1 = member.nick;
   }
-  obj.nick = nick1;
+  obj3.nick = nick1;
   connectedOn = undefined;
   if (connectedOn != null) {
     connectedOn = connectedOn.connectedOn;
@@ -79,11 +79,11 @@ function makeSortedVoiceState(voiceState, guildId, id, connectedOn) {
     const _Date = Date;
     connectedOn = Date.now();
   }
-  obj.connectedOn = connectedOn;
+  obj3.connectedOn = connectedOn;
   if (tmp2) {
-    obj._isPlaceholder = true;
+    obj3._isPlaceholder = true;
   }
-  return obj;
+  return obj3;
 }
 function handleUpdateUsers() {
   return _modDef12.reduce(closure_13, (arg0, updateUsers) => updateUsers.updateUsers() || arg0, false);
@@ -154,22 +154,21 @@ prototype["updateVoiceState"] = function updateVoiceState(id) {
             nick = member.nick;
           }
           if (nick == null) {
-            let obj = UserUtilsDefault;
-            nick = obj.getName(user);
+            nick = UserUtilsDefault.getName(user);
           }
           const _voiceStates2 = self._voiceStates;
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj.member = member;
+          obj2.member = member;
           let str = "\u0001";
           if (voiceState.selfStream) {
             str = "\0";
           }
           const _HermesInternal = HermesInternal;
-          obj.comparator = "" + str + nick.toLowerCase() + "\0" + voiceState.userId;
-          obj.nick = nick;
-          obj.voiceState = voiceState;
-          const result1 = _voiceStates2.set(id, obj);
+          obj2.comparator = "" + str + nick.toLowerCase() + "\0" + voiceState.userId;
+          obj2.nick = nick;
+          obj2.voiceState = voiceState;
+          const result1 = _voiceStates2.set(id, obj2);
           return true;
         }
       }
@@ -194,20 +193,20 @@ prototype["updateMember"] = function updateMember(arg0) {
     const user = UserStore.getUser(arg0);
     if (null != value) {
       if (null != user) {
-        let member = GuildMemberStore.getMember(self.guildId, user.id);
+        const member1 = GuildMemberStore.getMember(self.guildId, user.id);
         let nick;
-        if (member != null) {
-          nick = member.nick;
+        if (member1 != null) {
+          nick = member1.nick;
         }
-        member = value.member;
+        const member = value.member;
         let nick1;
         if (member != null) {
           nick1 = member.nick;
         }
         if (nick === nick1) {
           let avatar;
-          if (member != null) {
-            avatar = member.avatar;
+          if (member1 != null) {
+            avatar = member1.avatar;
           }
           const member2 = value.member;
           let avatar1;
@@ -217,12 +216,11 @@ prototype["updateMember"] = function updateMember(arg0) {
         }
         const voiceState = value.voiceState;
         let nick2;
-        if (member != null) {
-          nick2 = member.nick;
+        if (member1 != null) {
+          nick2 = member1.nick;
         }
         if (nick2 == null) {
-          let obj = UserUtilsDefault;
-          nick2 = obj.getName(user);
+          nick2 = UserUtilsDefault.getName(user);
         }
         let str = "\u0001";
         if (voiceState.selfStream) {
@@ -230,17 +228,17 @@ prototype["updateMember"] = function updateMember(arg0) {
         }
         const _HermesInternal = HermesInternal;
         const _voiceStates = self._voiceStates;
-        obj = {};
+        const obj2 = {};
         const combined = "" + str + nick2.toLowerCase() + "\0" + voiceState.userId;
         const merged = Object.assign(value);
-        obj.member = member;
-        obj.comparator = combined;
+        obj2.member = member1;
+        obj2.comparator = combined;
         let nick3;
-        if (member != null) {
-          nick3 = member.nick;
+        if (member1 != null) {
+          nick3 = member1.nick;
         }
-        obj.nick = nick3;
-        const result = _voiceStates.set(arg0, obj);
+        obj2.nick = nick3;
+        const result = _voiceStates.set(arg0, obj2);
         return true;
       }
     }

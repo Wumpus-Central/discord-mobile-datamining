@@ -3,9 +3,9 @@
 // Module 4311 (BraintreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: closure_4, PaymentGateways: hasOwnProperty, PaymentSourceTypes: metroRequire } = Constants);
@@ -50,7 +50,7 @@ prototype["getLastURL"] = function getLastURL() {
   return global;
 };
 BraintreeStore.displayName = "BraintreeStore";
-obj = {
+const braintreeStore = new BraintreeStore(DispatcherDefault, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function handleBraintreeCreateClientSuccess(client) {
     client = client.client;
   },
@@ -82,8 +82,7 @@ obj = {
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function handleBraintreeTeardownVenmoClient() {
     c9 = null;
   }
-};
-const braintreeStore = new BraintreeStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
 
 export default braintreeStore;

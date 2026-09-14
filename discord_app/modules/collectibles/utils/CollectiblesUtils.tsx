@@ -12,17 +12,15 @@ const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPreset
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  let obj = { qualityOptions: null, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
-  obj = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
-  obj.qualityOptions = obj;
+  const obj = { qualityOptions: { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate }, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
   if (null != desktopSource) {
     if (null != desktopSource.desktopSource) {
-      obj = { sourceId: desktopSource.desktopSource.id, sound: true };
-      obj.desktopSettings = obj;
+      const obj3 = { sourceId: desktopSource.desktopSource.id, sound: true };
+      obj.desktopSettings = obj3;
     }
     if (null != desktopSource.cameraSource) {
-      const obj1 = { videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid, audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid };
-      obj.cameraSettings = obj1;
+      const obj4 = { videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid, audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid };
+      obj.cameraSettings = obj4;
     }
   }
   return obj;
@@ -75,7 +73,5 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
 };
 export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
   const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
-  let obj = DateUtils;
-  obj = { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: obj.dateFormat(tmp.endsAt, "L") };
-  return obj;
+  return { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: DateUtils.dateFormat(tmp.endsAt, "L") };
 };

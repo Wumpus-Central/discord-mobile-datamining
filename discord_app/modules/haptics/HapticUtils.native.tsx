@@ -1,7 +1,7 @@
 // === Module 4604: HapticUtils ===
 
 // Module 4604 (HapticUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import Patterns from "Patterns" /* 4606 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;

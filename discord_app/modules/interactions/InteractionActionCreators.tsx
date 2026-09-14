@@ -2,7 +2,7 @@
 
 // Module 8234 (InteractionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -14,7 +14,6 @@ let closure_5 = async function _fetchMessageInteractionData() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: Endpoints.MESSAGE_INTERACTION_DATA(closure_0, closure_1), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() });
   const body = value.body;
-  { url: Endpoints.MESSAGE_INTERACTION_DATA(closure_0, closure_1), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   closure_131_1(closure_131_2[2]).dispatch({ type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: closure_130_0, messageId: closure_130_1, interactionData: body });
   return body;
 };
@@ -23,17 +22,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 
 export const queueInteractionComponentState = function queueInteractionComponentState(messageId, nonce, state, componentId) {
-  const obj = { type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId, nonce, state, componentId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId, nonce, state, componentId });
 };
-export const addQueued = function addQueued(nonce, message) {
-  ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = message);
-  const obj = { type: "INTERACTION_QUEUE", data, nonce, messageId, preflight, onCreate, onSuccess, onFailure };
-  obj.dispatch(obj);
+export const addQueued = function addQueued(nonce, arg1) {
+  ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = arg1);
+  DispatcherDefault.dispatch({ type: "INTERACTION_QUEUE", data, nonce, messageId, preflight, onCreate, onSuccess, onFailure });
 };
 export const setFailed = function setFailed(nonce, code, message, status) {
-  const obj = { type: "INTERACTION_FAILURE", nonce, errorMessage: message, errorCode: code, status };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "INTERACTION_FAILURE", nonce, errorMessage: message, errorCode: code, status });
 };
 export const fetchMessageInteractionData = function fetchMessageInteractionData() {
   const self = this;

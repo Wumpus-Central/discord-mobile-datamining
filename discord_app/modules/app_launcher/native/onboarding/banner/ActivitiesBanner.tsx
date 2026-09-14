@@ -1,9 +1,9 @@
-// === Module 12178: ActivitiesBanner ===
+// === Module 12179: ActivitiesBanner ===
 
-// Module 12178 (ActivitiesBanner)
+// Module 12179 (ActivitiesBanner)
 import util from "util" /* 1114 */;
-import useActivityApplications from "useActivityApplications" /* 12167 */;
-import BannerBaseDefault from "BannerBase" /* 12190 */;
+import useActivityApplications from "useActivityApplications" /* 12168 */;
+import BannerBaseDefault from "BannerBase" /* 12191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,16 +13,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
 
 export default function ActivitiesBanner(context) {
-  let obj = { guildId: context.context.channel.guild_id, fetchesShelf: false };
-  [tmp4, tmp5] = _slicedToArray(obj.useActivityApplications(obj), 2);
+  const obj2 = { guildId: context.context.channel.guild_id, fetchesShelf: false };
+  [tmp4, tmp5] = useActivityApplications.useActivityApplications({ guildId: context.context.channel.guild_id, fetchesShelf: false });
   let tmp6Result = null;
   if (null != tmp4) {
     tmp6Result = null;
     if (null != tmp5) {
-      obj = { image: tmp8, text: null };
+      const obj3 = { image: tmp8, text: null };
       const intl = util.intl;
-      const obj1 = { activityName: tmp4.name };
-      obj.text = intl.formatToPlainString(util.t.zHMWuV, obj1);
+      const obj4 = { activityName: tmp4.name };
+      obj3.text = intl.formatToPlainString(util.t.zHMWuV, obj4);
       tmp6Result = jsx(BannerBaseDefault, { image: tmp8, text: null });
       const tmp7Result = BannerBaseDefault;
     }

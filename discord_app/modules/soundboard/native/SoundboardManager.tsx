@@ -1,21 +1,21 @@
-// === Module 14626: SoundboardManager ===
+// === Module 14627: SoundboardManager ===
 
-// Module 14626 (SoundboardManager)
+// Module 14627 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7441 */;
 import SoundUtils from "SoundUtils" /* 10032 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 14628 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14629 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 14629 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14630 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 14627 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 14628 */;
 
 require = fn;
 let map = new Map();
 let closure_8 = new LoggerDefault("SoundboardManagerNative");
-let prototype = function SoundboardManager() {
+const prototype = function SoundboardManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
@@ -92,8 +92,8 @@ let prototype = function SoundboardManager() {
 }.prototype;
 class prototype extends tmp4 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");
 
-export default prototype;
+export default prototype1;

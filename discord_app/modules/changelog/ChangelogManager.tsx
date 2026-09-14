@@ -1,6 +1,6 @@
-// === Module 17437: ChangelogManager ===
+// === Module 17439: ChangelogManager ===
 
-// Module 17437 (ChangelogManager)
+// Module 17439 (ChangelogManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -8,7 +8,7 @@ import ChangelogStore from "ChangelogStore" /* 4650 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
-let prototype = function ChangelogManager() {
+const prototype = function ChangelogManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -24,8 +24,8 @@ let prototype = function ChangelogManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -38,8 +38,8 @@ let prototype = function ChangelogManager() {
             throw value;
           } else if (arg0 === 2) {
             locale = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             applyArgumentsResult = tmp7;
             closure_128_0 = undefined;
@@ -51,8 +51,8 @@ let prototype = function ChangelogManager() {
             c3 = 1;
             c4 = 2;
             locale = 1;
-            let obj1 = { value: tmp3(tmp86[5]).fetchChangelogConfig(), done: false };
-            return obj1;
+            const obj12 = { value: tmp3(tmp86[5]).fetchChangelogConfig(), done: false };
+            return obj12;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -66,8 +66,8 @@ let prototype = function ChangelogManager() {
             c3 = 0;
             tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj17 = { value, done: true };
+            return obj17;
           } else {
             closure_128_0 = value;
             body = closure_128_0.body;
@@ -91,8 +91,8 @@ let prototype = function ChangelogManager() {
               return first;
             })(body, applyArgumentsResult(tmp86[6]).getClientVersionForChangelog());
             const obj23 = applyArgumentsResult(tmp86[6]);
-            let obj3 = { type: "CHANGE_LOG_SET_CONFIG", config: closure_128_0.body, latestChangelogId: closure_128_2 };
-            tmp3(tmp86[7]).dispatch(obj3);
+            const obj20 = { type: "CHANGE_LOG_SET_CONFIG", config: closure_128_0.body, latestChangelogId: closure_128_2 };
+            tmp3(tmp86[7]).dispatch(obj20);
             if (null == closure_128_2) {
               c3 = 0;
               tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
@@ -117,8 +117,8 @@ let prototype = function ChangelogManager() {
               }
               c4 = 3;
               locale = 1;
-              let obj4 = { value: tmp3(tmp86[5]).fetchChangelog(closure_128_2, locale.locale), done: false };
-              return obj4;
+              const obj21 = { value: tmp3(tmp86[5]).fetchChangelog(closure_128_2, locale.locale), done: false };
+              return obj21;
             }
             const obj24 = tmp3(tmp86[7]);
           }
@@ -129,14 +129,13 @@ let prototype = function ChangelogManager() {
           c3 = 0;
           tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
           locale = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj22 = { value, done: true };
+          return obj22;
         } else {
           closure_128_5 = value;
           if (null == closure_128_5) {
             c3 = 0;
-            let obj6 = tmp3(tmp86[7]);
-            obj6.dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
             return { value: "HermesInternal", done: null };
           } else {
@@ -144,8 +143,7 @@ let prototype = function ChangelogManager() {
               if (null != ChangelogStore.lastSeenChangelogDate()) {
                 if (ChangelogStore.isLocked()) {
                   c3 = 0;
-                  obj2 = tmp3(tmp86[7]);
-                  obj2.dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
@@ -154,25 +152,23 @@ let prototype = function ChangelogManager() {
                   const _Date2 = Date;
                   const date1 = new Date(closure_128_4);
                   if (date > date1) {
-                    obj = applyArgumentsResult(tmp86[9]);
-                    obj.openChangelog();
+                    applyArgumentsResult(tmp86[9]).openChangelog();
+                    const obj = applyArgumentsResult(tmp86[9]);
                   }
                   c3 = 0;
-                  obj1 = tmp3(tmp86[7]);
-                  obj1.dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
                   locale = 3;
                   return { value: "HermesInternal", done: null };
                 }
               }
             }
-            obj3 = tmp3(tmp86[5]);
-            obj3.markChangelogAsSeen(closure_128_2, closure_128_5.date);
+            tmp3(tmp86[5]).markChangelogAsSeen(closure_128_2, closure_128_5.date);
             c3 = 0;
-            obj4 = tmp3(tmp86[7]);
-            obj4.dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            const obj4 = tmp3(tmp86[5]);
+            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
             locale = 3;
-            obj6 = { value: undefined, done: true };
-            return obj6;
+            const obj25 = { value: undefined, done: true };
+            return obj25;
           }
         }
       } catch (tmp86) {
@@ -199,8 +195,8 @@ let prototype = function ChangelogManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/ChangelogManager.tsx");
 
-export default prototype;
+export default prototype1;

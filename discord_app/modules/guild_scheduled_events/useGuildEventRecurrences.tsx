@@ -9,6 +9,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");
@@ -17,19 +19,18 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = byWeekday;
-  let obj = require("initialize");
   let items = [recurrenceStartTimes];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(closure_0));
   const tmp4 = usePrevValueDefault(byWeekday);
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      tmp(9795);
       const tmpResult = tmp(9795);
       let _Date = Date;
-      let rRule = tmpResult.getRRule(byWeekday);
+      let rRule = tmp(9795).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
+      const tmpResult2 = tmp(9795);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -67,7 +68,7 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
       scheduled_start_time = stateFromStores.scheduled_start_time;
     }
     items3[2] = scheduled_start_time;
-    obj = {
+    let obj3 = {
       recurrenceStartTimes,
       canViewMoreRecurrences: obj2.useMemo(() => {
           if (null != closure_2) {
@@ -94,14 +95,14 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
             if (null != stateFromStores) {
               const rRule = ScheduleUtils.getRRule(tmp);
               const items = [];
-              let arraySpreadResult = HermesBuiltin.arraySpread(first, 0);
+              const arraySpreadResult = HermesBuiltin.arraySpread(first, 0);
               const obj2 = ScheduleUtils;
-              arraySpreadResult = HermesBuiltin.arraySpread(obj2.generateNextRecurrences(4, rRule, tmp7, true), arraySpreadResult);
+              HermesBuiltin.arraySpread(obj2.generateNextRecurrences(4, rRule, first[first.length - 1], true), arraySpreadResult);
               closure_6(items);
             }
           }
         }
     };
-    return obj;
+    return obj3;
   }
 };

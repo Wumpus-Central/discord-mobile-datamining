@@ -42,17 +42,17 @@ export default function subscribeGuildMembers(arg0) {
         const tmp4 = displayName(self.props);
         let isEqualResult = null != self._subscriptions;
         if (isEqualResult) {
-          let tmpResult = _modDef12;
-          isEqualResult = tmpResult.isEqual(self._subscriptions, tmp4);
+          isEqualResult = _modDef12.isEqual(self._subscriptions, tmp4);
+          const tmpResult = _modDef12;
         }
         if (!isEqualResult) {
           if (null != self._subscriptions) {
-            tmpResult = _modDef12;
-            const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) => displayName(7415).unsubscribeMembers(guildId, userIds));
+            const item = _modDef12.forEach(self._subscriptions, (userIds, guildId) => displayName(7415).unsubscribeMembers(guildId, userIds));
+            const tmpResult3 = _modDef12;
           }
           const item1 = _modDef12.forEach(tmp4, (userIds, guildId) => displayName(7415).subscribeMembers(guildId, userIds));
           self._subscriptions = tmp4;
-          const tmpResult1 = _modDef12;
+          const tmpResult4 = _modDef12;
         }
       }
     };
@@ -91,11 +91,11 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
       }
       if (tmp) {
         c7 = true;
-        reason(1232);
-        let obj = { extra: null };
-        obj = { count: userIds.length, guildId, reason };
-        obj.extra = obj;
-        obj.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj);
+        const obj2 = { extra: null };
+        const obj3 = { count: userIds.length, guildId, reason };
+        obj2.extra = obj3;
+        reason(1230).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1230);
       }
       closure_0(7415).subscribeMembers(guildId, userIds);
       const obj4 = closure_0(7415);

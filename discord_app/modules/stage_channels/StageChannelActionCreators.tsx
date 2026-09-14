@@ -15,7 +15,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
-const HTTPUtils = obj(1272);
+const HTTPUtils = obj(1270);
 const AppAnalyticsUtils = obj(4816);
 const useStageSpeakingForCurrentUser = obj(5503);
 const StageChannelUtils = obj(8518);
@@ -33,36 +33,35 @@ function audienceAckRequestToSpeak(channel, suppress) {
   _modDef38(null != guildId, "This channel cannot be guildless.");
   let obj = require;
   const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(channel.id);
-  let obj1 = useAudienceRequestToSpeakState;
-  const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
+  const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
-    let objResult = useStageSpeakingForCurrentUser;
     if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
       return Promise.resolve();
     }
+    objResult = useStageSpeakingForCurrentUser;
   }
   if (!tmp7) {
-    objResult = AppAnalyticsUtils;
-    obj = {};
+    const obj3 = {};
+    const objResult3 = AppAnalyticsUtils;
     const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel));
-    objResult.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj);
-    const objResult1 = StageChannelUtils;
+    objResult3.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj3);
+    const objResult4 = StageChannelUtils;
   }
   const HTTP = HTTPUtils.HTTP;
   const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
-  obj = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
   if (flag) {
-    obj1 = { silent: flag };
-    let obj2 = obj1;
+    const obj5 = { silent: flag };
+    let obj6 = obj5;
   } else {
-    obj2 = {};
+    obj6 = {};
   }
-  const merged1 = Object.assign(obj2);
-  request.body = obj;
+  const merged1 = Object.assign(obj6);
+  request.body = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
   obj = HTTPUtils;
   result = obj.rejectWithMigratedError();
   request.rejectWithError = result;
   HTTP.patch(request);
+  const obj4 = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
   tmp7 = audienceRequestToSpeakState !== useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || suppress;
 }
 let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
@@ -80,8 +79,8 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -94,8 +93,8 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_5 = tmp2;
             closure_4 = tmp3;
@@ -103,14 +102,13 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
             closure_132_1 = undefined;
             if ("" !== closure_1) {
               if (voiceChannelId.getVoiceChannelId() !== user.id) {
-                let obj2 = StageChannelModalActionCreators;
-                obj2.connectToStage(user);
+                StageChannelModalActionCreators.connectToStage(user);
               }
               const obj4 = StageInstanceActionCreators;
               c6 = 1;
               c7 = 1;
-              const obj1 = { value: obj4.startStageInstance(user.id, closure_1, closure_2, closure_3), done: false };
-              return obj1;
+              const obj6 = { value: obj4.startStageInstance(user.id, closure_1, closure_2, closure_3), done: false };
+              return obj6;
             } else {
               c7 = 3;
               return { value: "HermesInternal", done: null };
@@ -121,13 +119,13 @@ let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_132_1 = value;
           closure_133_11(closure_132_0, false, true);
           c7 = 3;
-          obj = { value: closure_132_1, done: true };
+          const obj = { value: closure_132_1, done: true };
           return obj;
         }
       } catch (tmp22) {
@@ -145,8 +143,8 @@ let closure_13 = async function _editStage(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -159,14 +157,13 @@ let closure_13 = async function _editStage(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if ("" !== closure_1) {
-          let obj2 = StageInstanceActionCreators;
           c4 = 1;
           c3 = 1;
-          const obj1 = { value: obj2.updateStageInstance(tmp5.id, tmp6, tmp7), done: false };
-          return obj1;
+          const obj5 = { value: StageInstanceActionCreators.updateStageInstance(tmp5.id, tmp6, tmp7), done: false };
+          return obj5;
         } else {
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -176,11 +173,11 @@ let closure_13 = async function _editStage(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp10) {
@@ -201,8 +198,8 @@ let closure_14 = async function _endStage(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -215,22 +212,20 @@ let closure_14 = async function _endStage(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = StageInstanceActionCreators;
             c2 = 1;
             c1 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.endStageInstance(id.id);
-            return obj1;
+            const obj5 = { value: StageInstanceActionCreators.endStageInstance(id.id), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c1 = 3;
@@ -253,9 +248,10 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
   const guildId = channel_id.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
-    const obj = {};
+    const obj2 = {};
+    const obj = AppAnalyticsUtils;
     const merged = Object.assign(StageChannelUtils.getStageChannelMetadata(channel_id));
-    obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj);
+    obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj2);
   }
   const HTTP = HTTPUtils.HTTP;
   const request = { url: React7.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -329,8 +325,8 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
       });
       const HTTP2 = HTTPUtils.HTTP;
       const request1 = { url: React7.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
-      obj = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
-      request1.body = obj;
+      const obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
+      request1.body = obj2;
       const patchResult = HTTP.patch(request);
       request1.rejectWithError = HTTPUtils.rejectWithMigratedError();
       return HTTP2.patch(request1);
@@ -355,12 +351,12 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   const obj2 = BigFlagUtilsAll;
   if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
-    let tmp5Result = BigFlagUtilsAll;
-    obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
+    obj.deny = BigFlagUtilsAll.remove(obj.deny, REQUEST_TO_SPEAK);
+    const tmp5Result = BigFlagUtilsAll;
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
-    tmp5Result = BigFlagUtilsAll;
-    obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
+    obj.deny = BigFlagUtilsAll.add(obj.deny, REQUEST_TO_SPEAK);
+    const tmp5Result2 = BigFlagUtilsAll;
   }
   const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(getGuildId.id, obj);
   const tmp2Result = ChannelActionCreatorsDefault;

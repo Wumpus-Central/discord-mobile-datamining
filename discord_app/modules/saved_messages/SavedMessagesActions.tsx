@@ -1,9 +1,9 @@
-// === Module 11834: SavedMessagesActions ===
+// === Module 11835: SavedMessagesActions ===
 
-// Module 11834 (SavedMessagesActions)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 11835 (SavedMessagesActions)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11789 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11790 */;
 
 require = fn;
 let closure_6 = async function _upsertSavedMessage() {
@@ -27,10 +27,7 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
     return Promise.resolve();
   }
   const HTTP = HTTPUtils.HTTP;
-  const obj1 = { url: constants.GET_SAVED_MESSAGES, rejectWithError: null };
-  let obj10 = HTTPUtils;
-  obj1.rejectWithError = obj10.rejectWithMigratedError();
-  await HTTP.get(obj1);
+  await HTTP.get({ url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
   await "HermesInternal";
   closure_128_0 = value;
@@ -38,15 +35,14 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      let obj = closure_1_0(4859);
-      messageRecord = obj.createMessageRecord(message.message);
+      messageRecord = closure_1_0(4859).createMessageRecord(message.message);
+      const obj = closure_1_0(4859);
     }
-    obj = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
-    return obj;
+    const obj2 = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
+    return obj2;
   });
-  obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 };
-  await closure_129_1(closure_129_2[5]).dispatch(obj10);
-  closure_129_1(closure_129_2[5]);
+  await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });
+  { url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() };
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

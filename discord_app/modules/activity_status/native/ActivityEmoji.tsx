@@ -1,6 +1,6 @@
-// === Module 11023: ActivityEmoji ===
+// === Module 11024: ActivityEmoji ===
 
-// Module 11023 (ActivityEmoji)
+// Module 11024 (ActivityEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,6 @@ export default function ActivityEmoji(emoji) {
   importDefault = undefined;
   const tmp = closure_5();
   let ReactionIcon = emoji;
-  let obj = dependencyMap;
   const AnimateEmoji = emoji(1935).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
@@ -51,8 +50,8 @@ export default function ActivityEmoji(emoji) {
       id = emoji.id;
     }
     if (null != id) {
-      const obj = { id: emoji.id, size: 48, animated };
-      return obj.getEmojiURL(obj);
+      const obj2 = { id: emoji.id, size: 48, animated };
+      return AvatarUtilsDefault.getEmojiURL(obj2);
     }
   }, items);
   if (null == emoji) {
@@ -62,22 +61,20 @@ export default function ActivityEmoji(emoji) {
   }
   if (null == emoji) {
     ReactionIcon = ReactionIcon(8883).ReactionIcon;
-    obj = { style, size: "sm" };
+    const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {
-    obj = { src: memo, name: emoji.name, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true };
+    let obj2 = { src: memo, name: emoji.name, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true };
     const items1 = [style, ];
-    size = { width: null, height: null };
-    size.width = size;
-    size.height = size;
-    items1[1] = size;
-    obj.style = items1;
+    const size1 = { width: size, height: size };
+    items1[1] = size1;
+    obj2.style = items1;
     const items2 = [, , ];
     ({ emoji: arr3[0], text: arr3[1] } = tmp);
-    obj = { fontSize: size };
-    items2[2] = obj;
-    obj.textEmojiStyle = items2;
-    obj.fastImageStyle = tmp.emoji;
-    jsx(EmojiDefault, { fontSize: size });
+    const obj3 = { fontSize: size };
+    items2[2] = obj3;
+    obj2.textEmojiStyle = items2;
+    obj2.fastImageStyle = tmp.emoji;
+    jsx(EmojiDefault, { src: memo, name: emoji.name, style: null, textEmojiStyle: null, fastImageStyle: null, adjustsFontSizeToFit: true });
   }
 };

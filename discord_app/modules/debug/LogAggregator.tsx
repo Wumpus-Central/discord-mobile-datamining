@@ -35,7 +35,7 @@ export const report = function report(category) {
     return str;
   })(HermesBuiltin.copyRestArgs());
   if (typeof category === "string") {
-    let obj = { time: null, category: null, message: null };
+    const obj = { time: null, category: null, message: null };
     const _Date = Date;
     obj.time = Date.now();
     obj.category = category;
@@ -43,16 +43,17 @@ export const report = function report(category) {
     closure_0.push(obj);
     let arr = closure_0;
   } else {
-    obj = { time: null, category: null, timing: null, message: null };
+    arr = closure_0;
+    const obj3 = { time: null, category: null, timing: null, message: null };
     const _Date2 = Date;
-    obj.time = Date.now();
+    obj3.time = Date.now();
     ({ name: obj2.category, timing: obj2.timing } = category);
-    obj.message = tmp;
-    arr = closure_0.push(obj);
+    obj3.message = tmp;
+    closure_0.push(obj3);
   }
   if (arr.length > 5000) {
     do {
-      let arr1 = closure_0.shift();
+      let arr6 = closure_0.shift();
       length = closure_0.length;
     } while (length > 5000);
   }

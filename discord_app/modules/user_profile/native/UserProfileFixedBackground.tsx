@@ -18,8 +18,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default noop.memo((style) => {
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
-  let obj = native;
-  const themeContext = obj.useThemeContext();
+  const themeContext = native.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
   const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
   const first = _slicedToArray(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
@@ -28,18 +27,18 @@ export default noop.memo((style) => {
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(1, Math.max(0, bannerHeight / gradientHeight));
-      obj = { colors: null, locations: null, style: null, pointerEvents: "none" };
+      const obj4 = { colors: null, locations: null, style: null, pointerEvents: "none" };
       const items = [first, first, tmp5];
-      obj.colors = items;
+      obj4.colors = items;
       const items1 = [0, bound, 1];
-      obj.locations = items1;
+      obj4.locations = items1;
       const items2 = [React4.absoluteFill, style];
-      obj.style = items2;
+      obj4.style = items2;
       return jsx(LinearGradientDefault, { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
-  obj = { style: null, pointerEvents: "none" };
+  const obj5 = { style: null, pointerEvents: "none" };
   const items3 = [React4.absoluteFill, { backgroundColor: gradientFallbackBackground }, style];
-  obj.style = items3;
+  obj5.style = items3;
   return <hasOwnProperty style={null} pointerEvents="none" />;
 });

@@ -1,11 +1,11 @@
-// === Module 13807: message_previews/MessagePreviewStore ===
+// === Module 13808: message_previews/MessagePreviewStore ===
 
-// Module 13807 (message_previews/MessagePreviewStore)
+// Module 13808 (message_previews/MessagePreviewStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import requireSortedDescending from "requireSortedDescending" /* 5357 */;
-import PreviewData from "PreviewData" /* 13808 */;
+import PreviewData from "PreviewData" /* 13809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4857 */;
@@ -55,12 +55,12 @@ class MessagePreviewStore extends Store {
             return closure_0.handleThreadListSync(arg0);
           }
     };
-    tmp2 = new tmp2(closure_1(closure_2[5]), obj, new.target, tmp2, tmp, new.target, undefined);
-    closure_0 = tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[5]), obj, new.target, tmp2, tmp, new.target, undefined);
+    closure_0 = tmp21;
     map = new Map();
-    tmp2.guilds = map;
-    tmp2.generation = 0;
-    return tmp2;
+    tmp21.guilds = map;
+    tmp21.generation = 0;
+    return tmp21;
   }
 }
 const prototype = MessagePreviewStore.prototype;

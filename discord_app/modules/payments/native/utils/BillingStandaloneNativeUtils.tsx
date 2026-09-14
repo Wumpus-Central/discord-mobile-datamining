@@ -8,25 +8,26 @@ import PaymentConstants from "PaymentConstants" /* 4618 */;
 import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7509 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function emitMWRCSentryErrorOnFailure(items, source, loadId) {
   [tmp4, tmp5] = items;
-  let obj = { destination_url: tmp5, load_id: loadId };
+  const obj = { destination_url: tmp5, load_id: loadId };
   try {
     const _HermesInternal = HermesInternal;
     logger.error("Failed to open mobile web popout to " + tmp5 + ", error response: ", tmp4);
-    let obj1 = MobileWebRedirectCheckoutUtils;
     const _Error = Error;
     const error = new Error("Mobile web redirect checkout mobile app to web popout failed");
-    obj = { extra: null };
-    obj = { failure_response: tmp4 };
+    const obj3 = { extra: null };
+    const obj4 = { failure_response: tmp4 };
     const merged = Object.assign(obj);
-    obj.extra = obj;
-    const result = obj1.captureMobileWebRedirectCheckoutSentryError(error, source, obj);
+    obj3.extra = obj4;
+    const result = MobileWebRedirectCheckoutUtils.captureMobileWebRedirectCheckoutSentryError(error, source, obj3);
   } catch (err) {
     const _Error2 = Error;
     const error1 = new Error("Mobile web redirect checkout mobile app to web popout failed");
-    obj1 = { extra: tmp3 };
-    const result1 = MobileWebRedirectCheckoutUtils.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
+    const obj6 = { extra: tmp3 };
+    const result1 = MobileWebRedirectCheckoutUtils.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj6);
   }
 }
 let CustomCheckoutFlow = PaymentConstants.CustomCheckoutFlow;
@@ -39,17 +40,17 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
   const loadId = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
-  require("BillingStandaloneUtils");
-  const obj = {};
-  const obj2 = require("MetaQuestUtils");
+  const obj = require("BillingStandaloneUtils");
   const tmp = _require;
+  const obj3 = {};
+  const obj2 = require("MetaQuestUtils");
   const merged = Object.assign(arg1);
   if (isMetaQuestResult) {
-    obj.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    let tmp5 = obj;
+    obj3.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    let tmp5 = obj3;
   } else {
-    obj.deepLinkType = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
-    tmp5 = obj;
+    obj3.deepLinkType = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    tmp5 = obj3;
   }
   return obj.goToStandalonePremiumCheckout(tmp5, (body, searchParams) => {
     searchParams = searchParams.searchParams;
@@ -94,13 +95,13 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   if (!obj.isMetaQuest()) {
     prop = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
-  let tmpResult = tmp(1608);
+  obj = require("MetaQuestUtils");
   let prop1;
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(7510);
-  return tmpResult.goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
+  tmpResult = require("MetaQuestUtils");
+  return require("BillingStandaloneUtils").goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
     LinkingDefault.openURLExternally(searchParams.href);

@@ -1,18 +1,18 @@
-// === Module 14790: AccountUsernameSetting ===
+// === Module 14791: AccountUsernameSetting ===
 
-// Module 14790 (AccountUsernameSetting)
+// Module 14791 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12001 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12002 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
@@ -23,8 +23,7 @@ let SettingBuilders = {
     return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
   },
   useDescription: function useAccountUsernameSettingDescription() {
-    let obj = AutomodQuarantineUtils;
-    const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
+    const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
       const nick = guildAutomodProfileQuarantineErrors.nick;
@@ -34,7 +33,7 @@ let SettingBuilders = {
     }
     let tmp5 = null;
     if (null != first) {
-      obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
+      const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
       tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
@@ -45,9 +44,8 @@ let SettingBuilders = {
       return require("UserSettingsChangeUsername").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
-export default SettingBuilders;
+export default route;

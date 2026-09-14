@@ -1,6 +1,6 @@
-// === Module 15707: MobileGameCommunitiesStore ===
+// === Module 15709: MobileGameCommunitiesStore ===
 
-// Module 15707 (MobileGameCommunitiesStore)
+// Module 15709 (MobileGameCommunitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7444 */;
@@ -98,7 +98,7 @@ prototype["DEV_clearState"] = function DEV_clearState() {
 };
 MobileGameCommunitiesStore.displayName = "MobileGameCommunitiesStore";
 MobileGameCommunitiesStore.persistKey = "MobileGameCommunitiesStore";
-guildGameIds = {
+const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefault, {
   MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ guilds, gameIds } = arg0);
     guildGameIds = {};
@@ -112,12 +112,13 @@ guildGameIds = {
       }
       continue;
     }
-    guildGameIds = {};
+    const obj2 = {};
     const merged1 = Object.assign(guildGameIds);
-    guildGameIds.guilds = guilds.map((item) => GuildDiscoveryUtils.makeDiscoverableGuild(item));
-    guildGameIds.lastFetchedAt = Date.now();
-    guildGameIds.lastFetchedGameIds = new Set(gameIds);
-    guildGameIds.guildGameIds = guildGameIds;
+    obj2.guilds = guilds.map((item) => GuildDiscoveryUtils.makeDiscoverableGuild(item));
+    obj2.lastFetchedAt = Date.now();
+    obj2.lastFetchedGameIds = new Set(gameIds);
+    obj2.guildGameIds = guildGameIds;
+    guildGameIds = obj2;
   },
   MOBILE_GAME_COMMUNITIES_DISMISS_GUILD: function handleDismissGuildAction(guildId) {
     const obj = {};
@@ -132,8 +133,7 @@ guildGameIds = {
     obj.dismissedGuildIds = new Set();
     obj.guildGameIds = {};
   }
-};
-const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefault, guildGameIds);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");
 

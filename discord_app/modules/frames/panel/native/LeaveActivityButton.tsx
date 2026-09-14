@@ -1,8 +1,8 @@
-// === Module 17155: panel/LeaveActivityButton ===
+// === Module 17157: panel/LeaveActivityButton ===
 
-// Module 17155 (panel/LeaveActivityButton)
+// Module 17157 (panel/LeaveActivityButton)
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 17145 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 17147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -31,7 +31,8 @@ export const serializeTypingIndicatorStyle = function serializeTypingIndicatorSt
   const emojis = typingIndicatorStyle.emojis;
   obj.emojis = emojis.map((id) => {
     if (null != id.id) {
-      let obj = { custom_emoji_id: id.id };
+      const obj2 = { custom_emoji_id: id.id };
+      let obj = obj2;
     } else {
       obj = { unicode_emoji: id.name };
     }
@@ -49,12 +50,13 @@ export const parseServerTypingIndicatorStyle = function parseServerTypingIndicat
     let obj = {
       emojis: emojis.map((custom_emoji_id) => {
           if (null != custom_emoji_id.custom_emoji_id) {
-            let obj = { id: null, name: "", animated: null };
+            const obj3 = { id: null, name: "", animated: null };
             ({ custom_emoji_id: obj2.id, animated } = custom_emoji_id);
             if (animated == null) {
               animated = false;
             }
-            obj.animated = animated;
+            obj3.animated = animated;
+            let obj = obj3;
           } else {
             let str = custom_emoji_id.unicode_emoji;
             if (str == null) {

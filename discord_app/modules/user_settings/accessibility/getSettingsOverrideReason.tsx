@@ -1,8 +1,10 @@
-// === Module 15415: getSettingsOverrideReason ===
+// === Module 15416: getSettingsOverrideReason ===
 
-// Module 15415 (getSettingsOverrideReason)
+// Module 15416 (getSettingsOverrideReason)
 import util from "util" /* 1114 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 1936 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const constants = fn(1084).SettingsOverrideReasonKeys;

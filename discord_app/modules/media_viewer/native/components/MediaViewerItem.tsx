@@ -1,17 +1,17 @@
-// === Module 13112: MediaViewerItem ===
+// === Module 13113: MediaViewerItem ===
 
-// Module 13112 (MediaViewerItem)
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+// Module 13113 (MediaViewerItem)
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8378 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 13114 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 13115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
@@ -34,7 +34,6 @@ export const MediaViewerItem = noop.memo((index) => {
   let callback4;
   let callback5;
   let callback6;
-  let obj = zoomed;
   ({ entranceAnimationDriver, originLayout, renderMedia, useItemVisible } = index);
   zoomed.useRef(windowWidth);
   zoomed.useRef(windowHeight);
@@ -110,13 +109,13 @@ export const MediaViewerItem = noop.memo((index) => {
       }, 500);
     }
   }, items1);
-  let obj1 = index(panGestureConfig[8]);
-  let flattenSourceResult = obj1.flattenSource(source);
+  const tmp11 = panGesture(zoomed.useState(false), 2);
+  let flattenSourceResult = index(panGestureConfig[8]).flattenSource(source);
   if (flattenSourceResult == null) {
     flattenSourceResult = {};
   }
   obscure = flattenSourceResult.obscure;
-  const tmp11 = panGesture(zoomed.useState(false), 2);
+  const obj2 = index(panGestureConfig[8]);
   mediaItemHasSpoiler = index(panGestureConfig[9]).useMediaItemHasSpoiler(index);
   const tmp18 = onLongPress(panGestureConfig[10])(flattenSourceResult.channelId);
   closure_18 = tmp18;
@@ -169,15 +168,15 @@ export const MediaViewerItem = noop.memo((index) => {
     const TapResult1 = Gesture2.Tap();
     const runOnJSResult1 = Gesture2.Tap().runOnJS(true);
     const enabledResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
-    let tmpResult = PlatformUtils2;
+    const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1);
     let num3 = num;
     if (tmpResult.isAndroid()) {
       num3 = 20;
     }
-    const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1);
-    const maxDistanceResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1).maxDistance(num3);
+    tmpResult = PlatformUtils2;
+    const maxDistanceResult1 = numberOfTapsResult1.maxDistance(num3);
     const Gesture3 = LegacyBaseButton.Gesture;
-    const onStartResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1).maxDistance(num3).onStart(callback4);
+    const onStartResult1 = numberOfTapsResult1.maxDistance(num3).onStart(callback4);
     const TapResult2 = Gesture3.Tap();
     let tmp6 = mediaItemHasSpoiler;
     if (mediaItemHasSpoiler) {
@@ -185,23 +184,23 @@ export const MediaViewerItem = noop.memo((index) => {
     }
     const runOnJSResult2 = Gesture3.Tap().runOnJS(true);
     const enabledResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6);
-    tmpResult = PlatformUtils2;
-    if (tmpResult.isAndroid()) {
+    const numberOfTapsResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1);
+    if (tmpResult2.isAndroid()) {
       num = 20;
     }
-    const numberOfTapsResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1);
-    const maxDistanceResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num);
+    tmpResult2 = PlatformUtils2;
+    const maxDistanceResult2 = numberOfTapsResult2.maxDistance(num);
     const Gesture4 = LegacyBaseButton.Gesture;
-    const onStartResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6);
+    const onStartResult2 = numberOfTapsResult2.maxDistance(num).onStart(callback6);
     const Gesture5 = LegacyBaseButton.Gesture;
-    const ExclusiveResult = Gesture4.Exclusive(Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1).maxDistance(num).onStart(callback6), onStartResult, onStartResult1);
+    const ExclusiveResult = Gesture4.Exclusive(numberOfTapsResult2.maxDistance(num).onStart(callback6), onStartResult, onStartResult1);
     const LongPressResult = Gesture5.LongPress();
     const runOnJSResult3 = Gesture5.LongPress().runOnJS(true);
     const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler);
     const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture6.Simultaneous(ExclusiveResult, Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler).onStart(callback3), panGesture);
   }, items6);
-  obj.useRef(false);
+  zoomed.useRef(false);
   const items7 = [callback1, tmp2, tmp4];
   const effect2 = obj.useEffect(() => {
     if (ref3.current) {
@@ -210,29 +209,29 @@ export const MediaViewerItem = noop.memo((index) => {
       tmp.current = true;
     }
   }, items7);
-  obj = { gesture: memo, children: windowHeight(tmp7(tmp8[13]), { entranceAnimationDriver, index, originLayout, panGestureConfig, renderMedia, source, windowWidth: tmp2, windowHeight: tmp4, useItemVisible }) };
-  const tmp26 = windowHeight(index(panGestureConfig[12]).GestureDetector, obj);
+  const tmp16Result = index(panGestureConfig[9]);
+  const tmp26 = windowHeight(index(panGestureConfig[12]).GestureDetector, { gesture: memo, children: windowHeight(onLongPress(panGestureConfig[13]), { entranceAnimationDriver, index, originLayout, panGestureConfig, renderMedia, source, windowWidth: tmp2, windowHeight: tmp4, useItemVisible }) });
   if (ref) {
-    obj = { ref: ref1, style: null, minimumZoomScale: 1, maximumZoomScale: null, onZoomChanged: null, children: null };
+    const obj4 = { ref: ref1, style: null, minimumZoomScale: 1, maximumZoomScale: null, onZoomChanged: null, children: null };
     let size = { width: tmp2, height: tmp4 };
-    obj.style = size;
-    obj.maximumZoomScale = maximumZoomScale;
-    obj.onZoomChanged = callback2;
-    obj.children = tmp26;
-    let tmp25Result = tmp25(tmp7(tmp8[14]), obj);
+    obj4.style = size;
+    obj4.maximumZoomScale = maximumZoomScale;
+    obj4.onZoomChanged = callback2;
+    obj4.children = tmp26;
+    let tmp25Result = tmp25(tmp7(tmp8[14]), obj4);
   } else {
-    obj1 = { ref, style: null, automaticallyAdjustContentInsets: false, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, minimumZoomScale: 1, maximumZoomScale: null, centerContent: true, scrollEventThrottle: 16, onScroll: null, pointerEvents: null, children: null };
+    let obj5 = { ref, style: null, automaticallyAdjustContentInsets: false, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, minimumZoomScale: 1, maximumZoomScale: null, centerContent: true, scrollEventThrottle: 16, onScroll: null, pointerEvents: null, children: null };
     const size1 = { width: tmp2, height: tmp4 };
-    obj1.style = size1;
-    obj1.maximumZoomScale = maximumZoomScale;
-    obj1.onScroll = callback2;
+    obj5.style = size1;
+    obj5.maximumZoomScale = maximumZoomScale;
+    obj5.onScroll = callback2;
     let str = "auto";
     if (tmp12) {
       str = "none";
     }
-    obj1.pointerEvents = str;
-    obj1.children = tmp26;
-    tmp25Result = tmp25(windowWidth, obj1);
+    obj5.pointerEvents = str;
+    obj5.children = tmp26;
+    tmp25Result = tmp25(windowWidth, obj5);
   }
   return tmp25Result;
 });

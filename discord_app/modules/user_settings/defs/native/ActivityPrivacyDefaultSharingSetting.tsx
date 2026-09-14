@@ -1,18 +1,18 @@
-// === Module 15997: ActivityPrivacyDefaultSharingSetting ===
+// === Module 15999: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 15997 (ActivityPrivacyDefaultSharingSetting)
+// Module 15999 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14940 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15998 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14941 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
@@ -23,22 +23,22 @@ let SettingBuilders = {
   },
   useOptions() {
     return noop.useMemo(() => {
-      let obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+      const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.FzgQna);
       const intl2 = util.intl;
       obj.subLabel = intl2.string(util.t.SQxoyc);
       const items = [obj, , ];
-      obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+      const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
       const intl3 = util.intl;
-      obj.label = intl3.string(util.t["1hvuGH"]);
+      obj2.label = intl3.string(util.t["1hvuGH"]);
       const intl4 = util.intl;
-      obj.subLabel = intl4.string(util.t.odUCPE);
-      items[1] = obj;
-      obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
+      obj2.subLabel = intl4.string(util.t.odUCPE);
+      items[1] = obj2;
+      const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
       const intl5 = util.intl;
-      obj.label = intl5.string(util.t.fQc5la);
-      items[2] = obj;
+      obj3.label = intl5.string(util.t.fQc5la);
+      items[2] = obj3;
       return items;
     }, []);
   },
@@ -52,23 +52,22 @@ let SettingBuilders = {
     const setting = DefaultGuildsActivityRestrictedV2.getSetting();
     const DefaultGuildsActivityRestrictedV22 = UserSettings.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
-    let obj = ActivityPrivacyMatchingExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = ActivityPrivacyUpsellUtils;
-      const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
+      const affectedGuilds = ActivityPrivacyUpsellUtils.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = ActivityPrivacyUpsellUtils;
-        const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
-        obj = { direction: null, affectedGuildIds: null, settingName: null };
+        const activityRestrictionSettingName = ActivityPrivacyUpsellUtils.getActivityRestrictionSettingName(NumberResult);
+        const tmp2Result2 = ActivityPrivacyUpsellUtils;
+        const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
-        obj.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15999, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        obj2.settingName = activityRestrictionSettingName;
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16001, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
       }
+      const tmp2Result = ActivityPrivacyUpsellUtils;
     }
+    obj = ActivityPrivacyMatchingExperiment;
   }
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

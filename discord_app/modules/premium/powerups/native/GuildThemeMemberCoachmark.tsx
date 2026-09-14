@@ -1,6 +1,6 @@
-// === Module 16264: GuildThemeMemberCoachmark ===
+// === Module 16266: GuildThemeMemberCoachmark ===
 
-// Module 16264 (GuildThemeMemberCoachmark)
+// Module 16266 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
@@ -14,11 +14,11 @@ require = fn;
 let closure_6 = fn(4526).GUILD_THEME_POWERUP_BOOST_PRICE;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { coachmarkImage: null };
+const createStyles = fn(4636);
+let obj2 = { coachmarkImage: null };
 let size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
-createStyles.coachmarkImage = size;
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.coachmarkImage = size;
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildThemeMemberCoachmark.tsx");
 
@@ -46,9 +46,9 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(12649).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(12650).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(16265);
+    guildPowerupBannerImage = markAsDismissed(16267);
   }
   const diff = onDismiss - markAsDismissed(4545)(guildId).available;
   c5 = diff;
@@ -79,7 +79,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12649);
-  const coachmark = tmp2(11261).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12650);
+  const coachmark = tmp2(11262).useCoachmark(guildId.targetRef, memo);
   return null;
 };

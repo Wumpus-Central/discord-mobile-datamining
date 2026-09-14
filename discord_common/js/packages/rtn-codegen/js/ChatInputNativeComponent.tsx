@@ -1,17 +1,21 @@
-// === Module 12118: ChatInputNativeComponent ===
+// === Module 12119: ChatInputNativeComponent ===
 
-// Module 12118 (ChatInputNativeComponent)
+// Module 12119 (ChatInputNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 
-let Commands = { uiViewClassName: "DCDChatInput", directEventTypes: { topChangeContentSize: { registrationName: "onChangeContentSize" }, topEndBlur: { registrationName: "onEndBlur" }, topBeginFocus: { registrationName: "onBeginFocus" }, topSelectionOrTextChange: { registrationName: "onSelectionOrTextChange" }, topTextFlushed: { registrationName: "onTextFlushed" }, topPasteImage: { registrationName: "onPasteImage" }, topPasteCommand: { registrationName: "onPasteCommand" }, topRequestSend: { registrationName: "onRequestSend" }, topTapAction: { registrationName: "onTapAction" } }, validAttributes: null };
-Commands = { textColor: _mod26.colorAttribute, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: _mod26.colorAttribute, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: _mod26.colorAttribute, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDChatInput", directEventTypes: { topChangeContentSize: { registrationName: "onChangeContentSize" }, topEndBlur: { registrationName: "onEndBlur" }, topBeginFocus: { registrationName: "onBeginFocus" }, topSelectionOrTextChange: { registrationName: "onSelectionOrTextChange" }, topTextFlushed: { registrationName: "onTextFlushed" }, topPasteImage: { registrationName: "onPasteImage" }, topPasteCommand: { registrationName: "onPasteCommand" }, topRequestSend: { registrationName: "onRequestSend" }, topTapAction: { registrationName: "onTapAction" } }, validAttributes: null };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChangeContentSize: true, onEndBlur: true, onBeginFocus: true, onSelectionOrTextChange: true, onTextFlushed: true, onPasteImage: true, onPasteCommand: true, onRequestSend: true, onTapAction: true }));
-Commands.validAttributes = Commands;
-Commands = {
+__INTERNAL_VIEW_CONFIG.validAttributes = { textColor: _mod26.colorAttribute, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: _mod26.colorAttribute, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: _mod26.colorAttribute, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
+const value = module_65.get("DCDChatInput", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
+
+export default value;
+export { __INTERNAL_VIEW_CONFIG };
+export const Commands = {
   backspace(arg0) {
     renderElement.dispatchCommand(arg0, "backspace", []);
   },
@@ -51,9 +55,3 @@ Commands = {
     renderElement.dispatchCommand(arg0, "updateTextBlocks", items);
   }
 };
-const value = module_65.get("DCDChatInput", () => obj);
-const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
-
-export default value;
-export const __INTERNAL_VIEW_CONFIG = Commands;
-export { Commands };

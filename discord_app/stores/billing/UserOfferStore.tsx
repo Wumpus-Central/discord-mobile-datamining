@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13429 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13430 */;
 import DiscountRecord from "DiscountRecord" /* 7554 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7555 */;
 import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8168 */;
@@ -18,44 +18,43 @@ function emitChanges() {
   return true;
 }
 function rehydrateDiscountOffer(discount) {
-  obj = UserDiscountOfferRecord;
   if (discount instanceof UserDiscountOfferRecord) {
     return discount;
   } else if ("discount_id" in discount) {
-    let fromServer = obj.createFromServer(discount);
+    let fromServer = UserDiscountOfferRecord.createFromServer(discount);
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(discount);
     discount = discount.discount;
     if (null != discount) {
       if (!(discount instanceof DiscountRecord)) {
-        tmp6 = new tmp6(discount);
+        let tmp62 = new tmp6(discount);
       }
-      obj.discount = tmp6;
+      obj2.discount = tmp62;
       let date = null;
       if (null != discount.appliedAt) {
         const _Date = Date;
         date = new Date(discount.appliedAt);
       }
-      obj.appliedAt = date;
+      obj2.appliedAt = date;
       let date1 = null;
       if (null != discount.deletedAt) {
         const _Date2 = Date;
         date1 = new Date(discount.deletedAt);
       }
-      obj.deletedAt = date1;
+      obj2.deletedAt = date1;
       let date2 = null;
       if (null != discount.expiresAt) {
         const _Date3 = Date;
         date2 = new Date(discount.expiresAt);
       }
-      obj.expiresAt = date2;
-      fromServer = new obj(obj);
+      obj2.expiresAt = date2;
+      fromServer = new UserDiscountOfferRecord(obj2);
     }
     if (discount == null) {
       discount = null;
     }
-    tmp6 = discount;
+    tmp62 = discount;
   }
 }
 function handleSubscriptionStoreUpdate() {
@@ -64,14 +63,14 @@ function handleSubscriptionStoreUpdate() {
     return tmp;
   } else {
     if (null != closure_19.userDiscountOffers[closure_1_11]) {
-      let userDiscountOffers = {};
-      userDiscountOffers[closure_1_11] = closure_19.userDiscountOffers[closure_1_11];
-      closure_19.userDiscountOffers = userDiscountOffers;
+      const obj2 = {};
+      obj2[closure_1_11] = closure_19.userDiscountOffers[closure_1_11];
+      closure_19.userDiscountOffers = obj2;
       closure_19.userTrialOffers = {};
     } else if (null == closure_19.userDiscountOffers[closure_1_12]) {
       closure_19.userDiscountOffers = {};
     }
-    userDiscountOffers = {};
+    const userDiscountOffers = {};
     userDiscountOffers[closure_1_12] = closure_19.userDiscountOffers[closure_1_12];
     closure_19.userDiscountOffers = userDiscountOffers;
   }
@@ -86,7 +85,7 @@ const PremiumConstants = fn(1373);
 ({ ANNUAL_DISCOUNT_IDS: closure_9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: closure_11, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
 const OfferTriggerTypes = fn(1085).OfferTriggerTypes;
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F9D1}\u{1F3FE}\u200D\u{1F9B0}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 12.1, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F469}\u{1F3FE}\u200D\u{1F9B1}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 11, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
 let closure_19 = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {
@@ -104,28 +103,27 @@ prototype["initialize"] = function initialize(userTrialOffers) {
     obj.userTrialOffers = Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       const items = [tmp, ];
-      obj = UserTrialOfferRecord;
       if (tmp2 instanceof UserTrialOfferRecord) {
         items[1] = tmp2;
         return items;
       } else if ("trial_id" in tmp2) {
-        let fromServer = obj.createFromServer(tmp2);
+        let fromServer = UserTrialOfferRecord.createFromServer(tmp2);
       } else {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(tmp2);
         let date = null;
         if (null != tmp2.expiresAt) {
           const _Date = Date;
           date = new Date(tmp2.expiresAt);
         }
-        obj.expiresAt = date;
+        obj2.expiresAt = date;
         let date1 = null;
         if (null != tmp2.redeemedAt) {
           const _Date2 = Date;
           date1 = new Date(tmp2.redeemedAt);
         }
-        obj.redeemedAt = date1;
-        fromServer = new obj(obj);
+        obj2.redeemedAt = date1;
+        fromServer = new UserTrialOfferRecord(obj2);
       }
     }));
     let userDiscountOffers = userTrialOffers.userDiscountOffers;
@@ -218,7 +216,7 @@ prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminde
 prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpiringTrialOffersForReminder(items) {
   const self = this;
   dependencyMap = items;
-  let values = Object.values(closure_14);
+  const values = Object.values(closure_14);
   _require = values.map((id) => id.id);
   const currentUser = UserStore.getCurrentUser();
   if (obj.isPremium(currentUser)) {
@@ -227,8 +225,8 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
     }
     return items;
   }
-  values = Object.values(closure_19.userTrialOffers);
-  items = values.filter((trialId) => {
+  const values2 = Object.values(closure_19.userTrialOffers);
+  items = values2.filter((trialId) => {
     let hasItem = closure_0.includes(trialId.trialId);
     if (hasItem) {
       hasItem = null != trialId.expiresAt;
@@ -468,22 +466,22 @@ let items = [
           prop = shouldTriggerOffer.cooldownExpirationTimestamps;
         }
       }
-      let cooldownExpirationTimestamps = {};
+      obj = {};
       const merged = Object.assign(shouldTriggerOffer);
-      cooldownExpirationTimestamps.shouldTriggerOffer = false;
-      cooldownExpirationTimestamps = {};
-      cooldownExpirationTimestamps[OfferTriggerTypes.CHANNEL_OPENED] = 0;
-      cooldownExpirationTimestamps[OfferTriggerTypes.JOIN_VOICE_CHANNEL] = 0;
-      cooldownExpirationTimestamps[OfferTriggerTypes.PREMIUM_UPSELL_VIEWED] = 0;
-      cooldownExpirationTimestamps[OfferTriggerTypes.USER_PROFILE_ACTION] = 0;
-      cooldownExpirationTimestamps[OfferTriggerTypes.VIDEO_STREAM_ENDED] = 0;
-      cooldownExpirationTimestamps.cooldownExpirationTimestamps = cooldownExpirationTimestamps;
-      return cooldownExpirationTimestamps;
+      obj.shouldTriggerOffer = false;
+      const obj2 = {};
+      obj2[OfferTriggerTypes.CHANNEL_OPENED] = 0;
+      obj2[OfferTriggerTypes.JOIN_VOICE_CHANNEL] = 0;
+      obj2[OfferTriggerTypes.PREMIUM_UPSELL_VIEWED] = 0;
+      obj2[OfferTriggerTypes.USER_PROFILE_ACTION] = 0;
+      obj2[OfferTriggerTypes.VIDEO_STREAM_ENDED] = 0;
+      obj.cooldownExpirationTimestamps = obj2;
+      return obj;
     }
   }
 ];
 UserOfferStore.migrations = items;
-obj = {
+const userOfferStore = new UserOfferStore(DispatcherDefault, {
   BILLING_USER_OFFER_FETCH_START: function handleUserOfferFetchStart() {
     closure_19.isFetching = true;
   },
@@ -612,8 +610,7 @@ obj = {
     closure_19.shouldTriggerOffer = false;
     closure_19.cooldownExpirationTimestamps = { [closure_1_16.CHANNEL_OPENED]: 0, [closure_1_16.JOIN_VOICE_CHANNEL]: 0, [closure_1_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_1_16.USER_PROFILE_ACTION]: 0, [closure_1_16.VIDEO_STREAM_ENDED]: 0 };
   }
-};
-const userOfferStore = new UserOfferStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/billing/UserOfferStore.tsx");
 

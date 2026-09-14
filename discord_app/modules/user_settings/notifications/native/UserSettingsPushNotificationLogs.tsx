@@ -1,6 +1,6 @@
-// === Module 15655: UserSettingsPushNotificationLogs ===
+// === Module 15656: UserSettingsPushNotificationLogs ===
 
-// Module 15655 (UserSettingsPushNotificationLogs)
+// Module 15656 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -11,19 +11,18 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { wrap: null, list: null, searchWrap: null, shareButton: null, log: null, code: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.wrap = createStyles;
-createStyles.list = { paddingHorizontal: nativeDefault.space.PX_16 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+const createStyles = fn(4636);
+let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, list: null, searchWrap: null, shareButton: null, log: null, code: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6723).InputHeights.MD, width: fn(6723).InputHeights.MD, justifyContent: "center", alignItems: "center" };
-createStyles.shareButton = size;
-let obj2 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-createStyles.log = { paddingBottom: nativeDefault.space.PX_16 };
-createStyles.code = { fontFamily: fn(1074).Fonts.CODE_BOLD };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.shareButton = size;
+let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
+obj2.code = { fontFamily: fn(1074).Fonts.CODE_BOLD };
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx");
 
@@ -37,10 +36,8 @@ export default function UserSettingsPushNotificationLogs() {
     return str;
   }), 2);
   const defaultValue = tmp[0];
-  const tmp3 = _slicedToArray(noop.useState([]), 2);
-  const first1 = tmp3[0];
-  dependencyMap = tmp3[1];
-  [tmp6, asyncGeneratorStep] = _slicedToArray(noop.useState([]), 2);
+  [first1, dependencyMap] = noop.useState([]);
+  [tmp6, asyncGeneratorStep] = noop.useState([]);
   const effect = noop.useEffect(() => {
     closure_0 = async function _load() {
       if (c3 === 2) {
@@ -50,8 +47,8 @@ export default function UserSettingsPushNotificationLogs() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -64,23 +61,23 @@ export default function UserSettingsPushNotificationLogs() {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_0 = tmp2;
               closure_128_0 = undefined;
               v1 = 1;
               c3 = 1;
-              const obj1 = { value: first1(dependencyMap[10])(), done: false };
-              return obj1;
+              const obj4 = { value: first1(dependencyMap[10])(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;
@@ -142,12 +139,12 @@ export default function UserSettingsPushNotificationLogs() {
   const tmp9 = closure_9();
   _slicedToArray = tmp9;
   let obj = { style: tmp9.wrap, children: null };
-  obj = { style: tmp9.searchWrap, children: null };
+  let obj2 = { style: tmp9.searchWrap, children: null };
   let items1 = [closure_7(defaultValue(7153).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
-  obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
+  let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = defaultValue(1114).intl;
-  obj.accessibilityLabel = intl.string(defaultValue(1114).t.leICvh);
-  obj.onPress = asyncGeneratorStep(async () => {
+  obj3.accessibilityLabel = intl.string(defaultValue(1114).t.leICvh);
+  obj3.onPress = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -155,8 +152,8 @@ export default function UserSettingsPushNotificationLogs() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -169,27 +166,26 @@ export default function UserSettingsPushNotificationLogs() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp5(10319)(), done: false };
-            return obj1;
+            const obj4 = { value: tmp5(10319)(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
-          obj = tmp2(8479);
-          const obj3 = { message: tmp5(10320)(closure_128_0, false) };
-          obj.showShareActionSheet(obj3, "push-notification-logs");
+          const obj6 = { message: tmp5(10320)(closure_128_0, false) };
+          tmp2(8479).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -199,36 +195,36 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj.children = closure_7(defaultValue(9182).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(5204).PressableOpacity, obj);
-  obj.children = items1;
-  let items2 = [closure_8(View, obj), ];
-  let obj1 = { contentContainerStyle: null, data: null, renderItem: null };
-  let obj2 = {};
+  obj3.children = closure_7(defaultValue(9182).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(5204).PressableOpacity, obj3);
+  obj2.children = items1;
+  let items2 = [closure_8(View, obj2), ];
+  let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
+  let obj5 = {};
   const merged = Object.assign(tmp9.list);
-  obj2.paddingBottom = first1(1611)().bottom + first1(576).space.PX_16;
-  obj1.contentContainerStyle = obj2;
-  obj1.data = tmp6;
-  obj1.renderItem = function renderItem(item) {
+  obj5.paddingBottom = first1(1611)().bottom + first1(576).space.PX_16;
+  obj4.contentContainerStyle = obj5;
+  obj4.data = tmp6;
+  obj4.renderItem = function renderItem(item) {
     item = item.item;
     let str = "";
     if (item.silent) {
       str = "~silent~ ";
     }
-    let obj = { style: closure_4.log, children: null };
-    obj = { style: closure_4.code, variant: "text-xs/normal", children: new Date(item.receivedTimestamp).toISOString() };
-    const items = [React5(Text_Text.Text, obj), ];
-    obj = { style: closure_4.code, variant: "text-sm/normal", children: null };
-    const obj1 = { style: closure_4.code, variant: "text-sm/normal", color: "text-brand", children: null };
+    const obj = { style: closure_4.log, children: null };
+    const obj2 = { style: closure_4.code, variant: "text-xs/normal", children: new Date(item.receivedTimestamp).toISOString() };
+    const items = [React5(Text_Text.Text, obj2), ];
+    const obj3 = { style: closure_4.code, variant: "text-sm/normal", children: null };
+    const obj4 = { style: closure_4.code, variant: "text-sm/normal", color: "text-brand", children: null };
     const items1 = [str, "[", item.type, "]", " "];
-    obj1.children = items1;
-    const items2 = [React6(Text_Text.Text, obj1), item.title, " - ", item.content];
-    obj.children = items2;
-    items[1] = React6(Text_Text.Text, obj);
+    obj4.children = items1;
+    const items2 = [React6(Text_Text.Text, obj4), item.title, " - ", item.content];
+    obj3.children = items2;
+    items[1] = React6(Text_Text.Text, obj3);
     obj.children = items;
     return React6(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(9003).FlashList, obj1);
+  items2[1] = closure_7(defaultValue(9003).FlashList, obj4);
   obj.children = items2;
   return closure_8(View, obj);
 };

@@ -1,12 +1,14 @@
-// === Module 15900: useMaybeFetchShopHome ===
+// === Module 15902: useMaybeFetchShopHome ===
 
-// Module 15900 (useMaybeFetchShopHome)
+// Module 15902 (useMaybeFetchShopHome)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7688 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
@@ -28,9 +30,9 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   closure_8 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
-  let obj = require("initialize");
   let items = [hasLoadedExperiments];
-  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  let obj = require("initialize");
   const items1 = [skipNumCategories];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
   const obj2 = require("initialize");
@@ -116,13 +118,13 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     }
   }, items6);
   const items7 = [HOME, tmp13, memo];
-  obj = {
-    isFetchingShopHome: tmp9,
-    fetchShopHomeError: tmp8,
+  const obj4 = require("useHasExpiredShopBlocks");
+  return {
+    isFetchingShopHome: tmp3[5],
+    fetchShopHomeError: tmp3[4],
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
       const collectiblesShopHome = CollectiblesActionCreators.fetchCollectiblesShopHome(closure_0, closure_12, closure_2);
     }, items7)
   };
-  return obj;
 };

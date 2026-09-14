@@ -2,7 +2,7 @@
 
 // Module 2004 (StartupData)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2005 */;
 import size from "module_2" /* 2 */;
 
@@ -11,18 +11,18 @@ const result = size.fileFinishedImporting("modules/app_database/system/StartupDa
 
 export const getUserId = function getUserId() {
   if (obj.isAndroid()) {
-    let userId = NativeAppDatabaseModuleDefault.getConstants().userId;
+    const userId = NativeAppDatabaseModuleDefault.getConstants().userId;
     let tmp6 = null;
     if (null != userId) {
       tmp6 = userId;
     }
     return tmp6;
   } else {
-    userId = NativeModules.DCDAppDatabase.userId;
-    if (userId == null) {
-      userId = null;
+    let userId1 = NativeModules.DCDAppDatabase.userId;
+    if (userId1 == null) {
+      userId1 = null;
     }
-    return userId;
+    return userId1;
   }
   obj = PlatformUtils;
 };

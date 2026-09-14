@@ -1,14 +1,14 @@
-// === Module 14701: UserProfileDisplayNameStylesEditButton ===
+// === Module 14702: UserProfileDisplayNameStylesEditButton ===
 
-// Module 14701 (UserProfileDisplayNameStylesEditButton)
+// Module 14702 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11027 */;
-import _modDef13302 from "module_13302" /* 13302 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14702 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14703 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
+import _modDef13303 from "module_13303" /* 13303 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14703 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14704 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,13 +19,12 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { ggContainer: null, noneIcon: null };
+const createStyles = fn(4636);
+let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
-createStyles.ggContainer = size;
-createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
-createStyles.noneIcon = createStyles;
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.ggContainer = size;
+obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
 
@@ -38,10 +37,10 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   let displayNameStylesEffectConfig;
   const tmp = closure_11();
   _slicedToArray = tmp;
+  const nativeStackNavigation = user(isTryItOut[8]).useNativeStackNavigation();
   let obj = user(isTryItOut[8]);
-  const nativeStackNavigation = obj.useNativeStackNavigation();
-  let obj1 = user(isTryItOut[9]);
-  const isDisplayNameStylesFlywheelSettersEnabled = obj1.useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
+  const isDisplayNameStylesFlywheelSettersEnabled = user(isTryItOut[9]).useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
+  let obj2 = user(isTryItOut[9]);
   if (isDisplayNameStylesFlywheelSettersEnabled) {
     const items = [tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE];
     let items1 = items;
@@ -50,19 +49,19 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }
   let tmp6 = _slicedToArray(user(isTryItOut[10]).useSelectedDismissibleContent(items1, undefined, true), 2);
   closure_5 = tmp7;
-  let tmp2Result = tmp2(tmp3[12]);
-  const guildMemberOrUserPendingDisplayNameStyles = tmp2Result.useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
+  let obj3 = user(isTryItOut[10]);
+  const guildMemberOrUserPendingDisplayNameStyles = user(isTryItOut[12]).useGuildMemberOrUserPendingDisplayNameStyles(user, guildId);
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
-  obj = { userId: user.id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
-  const obj3 = user(isTryItOut[10]);
+  const obj4 = { userId: user.id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
+  const tmp2Result = user(isTryItOut[12]);
   const tmp9 = guildId;
   if (isTryItOut) {
     pendingDisplayNameStyles = tryItOutDisplayNameStyles;
   }
-  obj.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  const tmp10Result = guildId(isTryItOut[13])(obj);
+  obj4.pendingDisplayNameStyles = pendingDisplayNameStyles;
+  const tmp10Result = guildId(isTryItOut[13])(obj4);
   closure_6 = tmp10Result;
-  tmp2Result = tmp2(tmp3[14]);
+  let tmp10 = guildId(isTryItOut[13]);
   let effectId;
   if (tmp10Result != null) {
     effectId = tmp10Result.effectId;
@@ -70,10 +69,10 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   if (effectId == null) {
     effectId = tmp2(tmp3[15]).DisplayNameEffect.SOLID;
   }
-  displayNameStylesEffectConfig = tmp2Result.useDisplayNameStylesEffectConfig(effectId);
+  displayNameStylesEffectConfig = user(isTryItOut[14]).useDisplayNameStylesEffectConfig(effectId);
   const items2 = [guildId, isTryItOut, nativeStackNavigation, tmp6[1]];
   const items3 = [displayNameStylesEffectConfig, tmp10Result];
-  let tmp10 = guildId(isTryItOut[13]);
+  const tmp2Result2 = user(isTryItOut[14]);
   const tmp15 = closure_5(() => {
     if (null == closure_6) {
       const intl2 = util.intl;
@@ -88,34 +87,26 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   const items4 = [tmp10Result, guildId, user.id, tmp];
   const items5 = [tmp10Result];
   const tmp14 = nativeStackNavigation(() => {
-    let obj = AnalyticsUtilsDefault;
-    obj.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
-    obj = { guildId, isTryItOut };
-    nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, obj);
+    AnalyticsUtilsDefault.track(constants.DISPLAY_NAME_STYLES_FROM_SETTINGS);
+    nativeStackNavigation.navigate(constants2.DISPLAY_NAME_STYLES, { guildId, isTryItOut });
     closure_5(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      let obj = { source: _modDef13302, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef13302, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef13303, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef13303, style: closure_3.noneIcon });
     } else {
-      obj = { style: closure_3.ggContainer, children: null };
-      obj = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
+      const obj = { style: closure_3.ggContainer, children: null };
+      const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
       obj.children = jsx(UsernameWithEffectsDefault, { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" });
-      tmp10 = <View userId={user.id} guildId={guildId} userName="Gg" pendingDisplayNameStyles={tmp} ignoreDisabledStylesSetting variant="heading-xl/semibold" />;
+      tmp10 = <View style={closure_3.ggContainer}>{null}</View>;
     }
     return tmp10;
   }, items4);
-  obj = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null };
+  const obj5 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null };
   let intl = tmp2(tmp3[17]).intl;
-  obj.label = intl.string(tmp9(isTryItOut[24])["86GtGH"]);
-  obj1 = { showPremiumIcon: true, showNewBadge: tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE };
-  obj.labelTrailing = jsx(user(isTryItOut[23]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp6[0] === tmp2(tmp3[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE });
-  obj.buttonText = tmp15;
-  obj.accessibilityValue = { text: tmp15 };
-  obj.onPress = tmp14;
-  obj.leading = tmp16();
-  obj.trailing = nativeStackNavigation(() => {
+  obj5.label = intl.string(tmp9(isTryItOut[24])["86GtGH"]);
+  const tmp17 = nativeStackNavigation(() => {
     let tmp3Result = null;
     if (null != closure_6) {
       let colors;
@@ -134,6 +125,12 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
       tmp3Result = jsx(DisplayNameStylesColorSwatchDefault, { colors, effectId: null });
     }
     return tmp3Result;
-  }, items5)();
+  }, items5);
+  obj5.labelTrailing = jsx(user(isTryItOut[23]).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp6[0] === user(isTryItOut[11]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj5.buttonText = tmp15;
+  obj5.accessibilityValue = { text: tmp15 };
+  obj5.onPress = tmp14;
+  obj5.leading = tmp16();
+  obj5.trailing = tmp17();
   return jsx(user(isTryItOut[23]).UserProfileEditFormButton, { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null });
 };

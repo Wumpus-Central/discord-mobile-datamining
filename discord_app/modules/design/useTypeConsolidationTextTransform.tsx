@@ -1,7 +1,6 @@
 // === Module 7082: useTypeConsolidationTextTransform ===
 
 // Module 7082 (useTypeConsolidationTextTransform)
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };
@@ -15,11 +14,11 @@ export const useTypeConsolidationTextTransform = function useTypeConsolidationTe
   return tmp;
 };
 export const useTypeConsolidationEyebrow = function useTypeConsolidationEyebrow(BountiesScrollRecapFooter, variant) {
-  let obj = ManaTypeConsolidationExperiment;
   if (obj.useManaTypeConsolidationExperiment(BountiesScrollRecapFooter)) {
-    obj = { variant: "experimental/body-sm/medium", style };
+    const obj2 = { variant: "experimental/body-sm/medium", style };
+    let obj3 = obj2;
   } else {
-    obj = { variant, style: "a" };
+    obj3 = { variant, style: "a" };
   }
-  return obj;
+  return obj3;
 };

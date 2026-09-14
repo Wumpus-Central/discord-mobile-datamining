@@ -7,7 +7,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 7385 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -68,8 +68,9 @@ function maybeAckViewedChannel(guildId, channelId) {
   }
   if (tmp) {
     DispatcherDefault.wait(() => {
-      const obj = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
-      return obj.ack(closure_0, obj, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(closure_0));
+      const obj = ReadStateActionCreators;
+      const obj2 = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
+      return obj.ack(closure_0, obj2, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(closure_0));
     });
   }
 }
@@ -253,10 +254,10 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
   CACHE_LOADED: seedCommunityBaseline,
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    guild = GuildStore.getGuild(guild.id);
+    const guild1 = GuildStore.getGuild(guild.id);
     let hasItem;
-    if (guild != null) {
-      const features = guild.features;
+    if (guild1 != null) {
+      const features = guild1.features;
       hasItem = features.has(constants3.COMMUNITY);
     }
     if (true === hasItem) {
@@ -268,20 +269,20 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
     guild = guild.guild;
     let hasItem;
     set = undefined;
-    guild = GuildStore.getGuild(guild.id);
-    if (guild != null) {
-      const features = guild.features;
+    const guild1 = GuildStore.getGuild(guild.id);
+    if (guild1 != null) {
+      const features = guild1.features;
       hasItem = features.has(constants3.COMMUNITY);
     }
     if (true === hasItem) {
       if (!set1.has(guild.id)) {
         set1.add(guild.id);
-        const guild1 = GuildStore.getGuild(guild.id);
+        const guild2 = GuildStore.getGuild(guild.id);
         const _Set = Set;
         set = new Set();
         if (tmp14) {
           const items = [, ];
-          ({ rulesChannelId: arr[0], publicUpdatesChannelId: arr[1] } = guild1);
+          ({ rulesChannelId: arr[0], publicUpdatesChannelId: arr[1] } = guild2);
           const item = items.forEach((item) => {
             let hasItem = null != item;
             if (hasItem) {

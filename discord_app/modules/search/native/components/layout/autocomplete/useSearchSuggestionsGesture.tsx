@@ -1,9 +1,11 @@
-// === Module 16732: useSearchSuggestionsGesture ===
+// === Module 16734: useSearchSuggestionsGesture ===
 
-// Module 16732 (useSearchSuggestionsGesture)
+// Module 16734 (useSearchSuggestionsGesture)
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function inBoundingBox(arg0, left, arg2) {

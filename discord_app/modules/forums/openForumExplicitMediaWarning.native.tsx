@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/forums/openForumExplicitMedia
 export default function openForumExplicitMediaWarning(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
       return asyncRequireImpl(9525, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
@@ -25,6 +25,5 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

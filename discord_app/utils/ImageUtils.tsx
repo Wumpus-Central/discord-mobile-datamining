@@ -34,12 +34,15 @@ function fit(size) {
     }
     const _Math5 = Math;
     const _Math6 = Math;
-    width = Math.max(Math.round(bound * num2), minWidth);
+    let width1 = Math.max(Math.round(bound * num2), minWidth);
     const _Math7 = Math;
     const _Math8 = Math;
-    height = Math.max(Math.round(bound1 * num2), num);
+    let height1 = Math.max(Math.round(bound1 * num2), num);
+  } else {
+    width1 = width;
+    height1 = height;
   }
-  return { width, height };
+  return { width: width1, height: height1 };
 }
 function getPalette(width, arg1, arg2) {
   const element = <canvas />;

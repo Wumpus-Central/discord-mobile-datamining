@@ -25,11 +25,11 @@ prototype["getInteractionComponentState"] = function getInteractionComponentStat
   value = closure_0.get(customId);
   let tmp = null;
   if (null != value) {
-    value = value.get(id);
-    if (value == null) {
-      value = null;
+    value2 = value.get(id);
+    if (value2 == null) {
+      value2 = null;
     }
-    tmp = value;
+    tmp = value2;
   }
   return tmp;
 };
@@ -121,11 +121,11 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
         return false;
       } else {
         ({ componentId, messageId } = value);
-        value = closure_0.get(messageId);
-        if (null != value) {
-          if (value.has(componentId)) {
-            value.delete(componentId);
-            if (0 === value.size) {
+        value2 = closure_0.get(messageId);
+        if (null != value2) {
+          if (value2.has(componentId)) {
+            value2.delete(componentId);
+            if (0 === value2.size) {
               closure_0.delete(messageId);
             }
             closure_1 = closure_1 + 1;

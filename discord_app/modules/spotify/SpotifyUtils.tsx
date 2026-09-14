@@ -1,12 +1,12 @@
-// === Module 11878: SpotifyUtils ===
+// === Module 11879: SpotifyUtils ===
 
-// Module 11878 (SpotifyUtils)
+// Module 11879 (SpotifyUtils)
 import DurationsDefault from "Durations" /* 1090 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11880 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11881 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11881 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11879 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11880 */;
 import SpotifyStore from "SpotifyStore" /* 5361 */;
 
 require = fn;
@@ -27,8 +27,8 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -41,26 +41,25 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
           closure_131_0 = undefined;
           closure_131_1 = undefined;
-          let obj2 = UserActivityActionCreators;
           c5 = 1;
           c6 = 1;
-          const obj1 = { value: obj2.getMetadata(closure_0, closure_1), done: false };
-          return obj1;
+          const obj5 = { value: UserActivityActionCreators.getMetadata(closure_0, closure_1), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_131_0 = value;
         const type = closure_131_0.type;
@@ -80,7 +79,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
           if (typeof closure_131_0.context_uri === "string") {
             context_uri = closure_131_0.context_uri;
           }
-          obj = { context_uri, album_id: null, artist_ids: null, type: null, button_urls: null };
+          const obj = { context_uri, album_id: null, artist_ids: null, type: null, button_urls: null };
           const album_id = closure_131_0.album_id;
           closure_132_12(album_id);
           obj.album_id = album_id;
@@ -125,18 +124,17 @@ export const isSpotifyPlayable = function isSpotifyPlayable(getActiveSocketAndDe
   return isProtocolRegisteredResult;
 };
 export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
-  let obj = SpotifyStore;
   const activeSocketAndDevice = SpotifyStore.getActiveSocketAndDevice();
   if (null != activeSocketAndDevice) {
     return Promise.resolve(activeSocketAndDevice);
   } else if (SpotifyProtocolStore.isProtocolRegistered()) {
-    let playableComputerDevices = obj.getPlayableComputerDevices();
+    let playableComputerDevices = SpotifyStore.getPlayableComputerDevices();
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11880).setActiveDevice(socket.accountId, device.id);
-        obj = { socket, device };
-        return Promise.resolve(obj);
+        playableComputerDevices(11881).setActiveDevice(socket.accountId, device.id);
+        const obj4 = { socket, device };
+        return Promise.resolve(obj4);
       }
     }
     const promise = new Promise((arg0, arg1) => {
@@ -151,10 +149,8 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
             closure_2_6.removeChangeListener(closure_3);
             const _setImmediate = setImmediate;
             setImmediate(() => {
-              let obj = playableComputerDevices(dependencyMap[8]);
-              obj.setActiveDevice(socket.accountId, device.id);
-              obj = { socket, device };
-              closure_2_0(obj);
+              playableComputerDevices(dependencyMap[8]).setActiveDevice(socket.accountId, device.id);
+              closure_2_0({ socket, device });
             });
           }
         }

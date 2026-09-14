@@ -9,6 +9,8 @@ import CloudUpload from "CloudUpload" /* 5208 */;
 import uploader_UploadUtils from "uploader/UploadUtils" /* 5217 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const DraftType = DraftStore.DraftType;
 const MAX_UPLOAD_COUNT = Constants.MAX_UPLOAD_COUNT;
 let map = new Map();
@@ -23,16 +25,16 @@ prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(arg1);
+    value2 = map.get(arg1);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
   let first = null;
-  if (value.length > 0) {
-    first = value[0];
+  if (value2.length > 0) {
+    first = value2[0];
   }
   return first;
 };
@@ -42,14 +44,14 @@ prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(arg1);
+    value2 = map.get(arg1);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
-  let num = value.length;
+  let num = value2.length;
   if (num == null) {
     num = 0;
   }
@@ -61,14 +63,14 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(ChannelMessage);
+    value2 = map.get(ChannelMessage);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
-  return value;
+  return value2;
 };
 prototype["getUploadCount"] = function getUploadCount(c1, ChannelMessage) {
   map = map.get(c1);
@@ -76,14 +78,14 @@ prototype["getUploadCount"] = function getUploadCount(c1, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(ChannelMessage);
+    value2 = map.get(ChannelMessage);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
-  let num = value.length;
+  let num = value2.length;
   if (num == null) {
     num = 0;
   }
@@ -96,14 +98,14 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(ChannelMessage);
+    value2 = map.get(ChannelMessage);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
-  return value.find((id) => id.id === closure_0);
+  return value2.find((id) => id.id === closure_0);
 };
 prototype["findUpload"] = function findUpload(id, ChannelMessage, _messages) {
   map = map.get(id);
@@ -111,14 +113,14 @@ prototype["findUpload"] = function findUpload(id, ChannelMessage, _messages) {
     const _Map = Map;
     map = new Map();
   }
-  value = undefined;
+  value2 = undefined;
   if (map != null) {
-    value = map.get(ChannelMessage);
+    value2 = map.get(ChannelMessage);
   }
-  if (value == null) {
-    value = closure_6;
+  if (value2 == null) {
+    value2 = closure_6;
   }
-  return value.find(_messages);
+  return value2.find(_messages);
 };
 UploadAttachmentStore.displayName = "UploadAttachmentStore";
 const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
@@ -129,51 +131,50 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(DraftType.ChannelMessage);
+      value3 = map.get(DraftType.ChannelMessage);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    const items = [...value];
+    const items = [...value3];
     items.shift();
-    let value1 = obj.get(channelId);
-    if (value1 == null) {
+    let value4 = obj.get(channelId);
+    if (value4 == null) {
       const _Map2 = Map;
-      value1 = new Map();
+      value4 = new Map();
     }
-    const result = value1.set(DraftType.ChannelMessage, items);
-    const result1 = obj.set(channelId, value1);
+    const result = value4.set(DraftType.ChannelMessage, items);
+    const result1 = obj.set(channelId, value4);
   },
   UPLOAD_ATTACHMENT_ADD_FILES: function handleAddFiles(arg0) {
     ({ files, channelId } = arg0);
     ({ draftType, allowOptimization: importDefault } = arg0);
     let items;
-    let obj = map;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(draftType);
+      value3 = map.get(draftType);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    items = [...value];
+    items = [...value3];
     if (items.length + files.length > MAX_UPLOAD_COUNT) {
       if (draftType !== DraftType.SlashCommand) {
         if (draftType !== DraftType.ApplicationLauncherCommand) {
-          obj = { title: null, body: null };
+          const obj2 = { title: null, body: null };
           const intl = channelId(items[3]).intl;
-          obj.title = intl.string(channelId(items[3]).t.wOr6hB);
+          obj2.title = intl.string(channelId(items[3]).t.wOr6hB);
           const intl2 = channelId(items[3]).intl;
-          obj = { limit: tmp5 };
-          obj.body = intl2.formatToPlainString(channelId(items[3]).t["qqyp/e"], obj);
-          require("AlertActionCreators").show(obj);
+          const obj3 = { limit: tmp5 };
+          obj2.body = intl2.formatToPlainString(channelId(items[3]).t["qqyp/e"], obj3);
+          require("AlertActionCreators").show(obj2);
           const obj4 = require("AlertActionCreators");
         }
       }
@@ -182,13 +183,13 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
-    let value1 = obj.get(channelId);
-    if (value1 == null) {
+    let value4 = obj.get(channelId);
+    if (value4 == null) {
       const _Map2 = Map;
-      value1 = new Map();
+      value4 = new Map();
     }
-    const result = value1.set(draftType, items);
-    const result1 = obj.set(channelId, value1);
+    const result = value4.set(draftType, items);
+    const result1 = obj.set(channelId, value4);
     const arr2 = require("module_12");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
@@ -198,14 +199,14 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(draftType);
+      value3 = map.get(draftType);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    const items = [...value];
+    const items = [...value3];
     const mapped = items.map((id) => {
       if (id.id === require) {
         if (undefined !== filename) {
@@ -223,13 +224,13 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       }
       return id;
     });
-    let value1 = obj.get(channelId);
-    if (value1 == null) {
+    let value4 = obj.get(channelId);
+    if (value4 == null) {
       const _Map2 = Map;
-      value1 = new Map();
+      value4 = new Map();
     }
-    const result = value1.set(draftType, mapped);
-    const result1 = obj.set(channelId, value1);
+    const result = value4.set(draftType, mapped);
+    const result1 = obj.set(channelId, value4);
   },
   UPLOAD_ATTACHMENT_REMOVE_FILE: function handleRemoveFile(id) {
     ({ channelId, id: require, draftType } = id);
@@ -238,28 +239,25 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(draftType);
+      value3 = map.get(draftType);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    const items = [...value];
-    const findIndexResult = items.findIndex((item) => {
-      const obj = { uri: filename, filename };
-      return obj.doesImageMatchUpload(obj, item);
-    });
+    const items = [...value3];
+    const findIndexResult = items.findIndex((item) => uploader_UploadUtils.doesImageMatchUpload({ uri: filename, filename }, item));
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
       first.removeFromMsgDraft();
-      let value1 = obj.get(channelId);
-      if (value1 == null) {
+      let value4 = obj.get(channelId);
+      if (value4 == null) {
         const _Map2 = Map;
-        value1 = new Map();
+        value4 = new Map();
       }
-      const result = value1.set(draftType, items);
-      const result1 = obj.set(channelId, value1);
+      const result = value4.set(draftType, items);
+      const result1 = obj.set(channelId, value4);
     }
   },
   UPLOAD_ATTACHMENT_REMOVE_FILES: function handleRemoveFiles(arg0) {
@@ -270,14 +268,14 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(draftType);
+      value3 = map.get(draftType);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    items = [...value];
+    items = [...value3];
     const item = attachmentIds.forEach((item) => {
       closure_0 = item;
       const findIndexResult = items.findIndex((id) => closure_0 === id.id);
@@ -286,13 +284,13 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         first.removeFromMsgDraft();
       }
     });
-    let value1 = obj.get(channelId);
-    if (value1 == null) {
+    let value4 = obj.get(channelId);
+    if (value4 == null) {
       const _Map2 = Map;
-      value1 = new Map();
+      value4 = new Map();
     }
-    const result = value1.set(draftType, items);
-    const result1 = obj.set(channelId, value1);
+    const result = value4.set(draftType, items);
+    const result1 = obj.set(channelId, value4);
   },
   UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function handleClearAllFiles(channelId) {
     channelId = channelId.channelId;
@@ -322,24 +320,24 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value = undefined;
+    let value3;
     if (map != null) {
-      value = map.get(draftType);
+      value3 = map.get(draftType);
     }
-    if (value == null) {
-      value = closure_6;
+    if (value3 == null) {
+      value3 = closure_6;
     }
-    const items = [...value];
+    const items = [...value3];
     const found = items.filter((id) => id.id !== require);
     const cloudUpload = new CloudUpload.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
-    let value1 = obj.get(channelId);
-    if (value1 == null) {
+    let value4 = obj.get(channelId);
+    if (value4 == null) {
       const _Map2 = Map;
-      value1 = new Map();
+      value4 = new Map();
     }
-    const result = value1.set(draftType, found);
-    const result1 = obj.set(channelId, value1);
+    const result = value4.set(draftType, found);
+    const result1 = obj.set(channelId, value4);
   }
 });
 let result = size.fileFinishedImporting("stores/UploadAttachmentStore.tsx");

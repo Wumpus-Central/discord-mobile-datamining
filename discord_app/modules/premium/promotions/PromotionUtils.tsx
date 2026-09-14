@@ -1,16 +1,16 @@
-// === Module 13507: PromotionUtils ===
+// === Module 13508: PromotionUtils ===
 
-// Module 13507 (PromotionUtils)
+// Module 13508 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import constants from "constants" /* 10825 */;
+import constants from "constants" /* 10826 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import PromotionRecord from "PromotionRecord" /* 10794 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+import PromotionRecord from "PromotionRecord" /* 10795 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -24,8 +24,8 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +38,8 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -61,23 +61,23 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const HTTP = closure_132_0(closure_132_2[8]).HTTP;
-          const obj2 = { url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[8]).rejectWithMigratedError() };
+          const obj5 = { url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[8]).rejectWithMigratedError() };
           c5 = 2;
           c6 = 1;
-          const obj3 = { value: HTTP.post(obj2), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_131_4 = value;
         body = closure_131_4.body;
@@ -87,22 +87,22 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           ANDROID = closure_132_10.ANDROID;
         }
         closure_131_6 = ANDROID;
-        obj = closure_132_1(closure_132_2[10]);
-        const obj5 = { platform: closure_131_6, status: closure_131_4.status, location_stack: closure_131_3, promotion_id: closure_131_0, name: null, partner: null };
+        obj9 = closure_132_0(closure_132_2[9]);
+        const obj8 = { platform: closure_131_6, status: closure_131_4.status, location_stack: closure_131_3, promotion_id: closure_131_0, name: null, partner: null };
         let name = closure_131_1;
         if (closure_131_1 == null) {
           name = null;
         }
-        obj5.name = name;
+        obj8.name = name;
         let partner = closure_131_2;
         if (closure_131_2 == null) {
           partner = null;
         }
-        obj5.partner = partner;
-        obj.track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj5);
+        obj8.partner = partner;
+        closure_132_1(closure_132_2[10]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
         c6 = 3;
-        const obj6 = { value: closure_132_11(body), done: true };
-        return obj6;
+        const obj10 = { value: closure_132_11(body), done: true };
+        return obj10;
       }
     } catch (tmp27) {
       c6 = tmp;

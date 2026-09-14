@@ -1,14 +1,14 @@
-// === Module 15387: SameAsDeviceThemeSetting ===
+// === Module 15388: SameAsDeviceThemeSetting ===
 
-// Module 15387 (SameAsDeviceThemeSetting)
+// Module 15388 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15257 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15258 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.c445ix);
@@ -30,9 +30,8 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t["+tBsvs"]);
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

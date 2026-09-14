@@ -9,6 +9,8 @@ import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function canEveryoneRoleViewEvent(guildEvent) {
   let tmp = items1;
@@ -19,9 +21,9 @@ function canEveryoneRoleViewEvent(guildEvent) {
   [obj] = tmp;
   let tmp3 = guildEvent;
   if ("entity_type" in guildEvent) {
-    obj = { entityType: null, channelId: null };
     ({ entity_type: obj2.entityType, channel_id: obj2.channelId } = guildEvent);
-    tmp3 = obj;
+    tmp3 = { entityType: null, channelId: null };
+    const obj4 = { entityType: null, channelId: null };
   }
   if (tmp3.entityType === constants.EXTERNAL) {
     return true;

@@ -33,10 +33,11 @@ import _mod2198 from "module_2198" /* 2198 */;
 import _mod2199 from "module_2199" /* 2199 */;
 import _mod2200 from "module_2200" /* 2200 */;
 import _mod2201 from "module_2201" /* 2201 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2171);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/collectibles/web/ShopExternalSkus.messages.js");
 
 export default messagesProxy;

@@ -24,7 +24,7 @@ class SKURecord extends tmp2 {
 const prototype = SKURecord.prototype;
 SKURecord["createFromServer"] = function createFromServer(id) {
   const price = id.price;
-  let obj = { id: id.id, type: id.type, applicationId: id.application_id, application: null, eligiblePaymentGateways: null, googleSkuIds: null, productLine: null, name: null, releaseDate: null, preorderReleaseAt: null, preorderApproximateReleaseDate: null, summary: null, features: null, genres: null, dependentSkuId: null, manifests: null, availableRegions: null, accessType: null, systemRequirements: null, contentRating: null, contentRatingAgency: null, legalNotice: null, price: null, prices: null, premium: null, showAgeGate: null, restricted: null, slug: null, exclusive: null, locales: null, flags: null, externalPurchaseUrl: null, deleted: null, bundledSkuIds: null, bundledSkus: null, tenantMetadata: null, selectedOptions: null, productId: null, thumbnailAssetId: null, description: null, orbsReward: null, eligibleOffers: null, previewAssetPaths: null };
+  const obj = { id: id.id, type: id.type, applicationId: id.application_id, application: null, eligiblePaymentGateways: null, googleSkuIds: null, productLine: null, name: null, releaseDate: null, preorderReleaseAt: null, preorderApproximateReleaseDate: null, summary: null, features: null, genres: null, dependentSkuId: null, manifests: null, availableRegions: null, accessType: null, systemRequirements: null, contentRating: null, contentRatingAgency: null, legalNotice: null, price: null, prices: null, premium: null, showAgeGate: null, restricted: null, slug: null, exclusive: null, locales: null, flags: null, externalPurchaseUrl: null, deleted: null, bundledSkuIds: null, bundledSkus: null, tenantMetadata: null, selectedOptions: null, productId: null, thumbnailAssetId: null, description: null, orbsReward: null, eligibleOffers: null, previewAssetPaths: null };
   let fromServer = null;
   if (null != id.application) {
     fromServer = ApplicationRecord.createFromServer(id.application);
@@ -62,9 +62,9 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   ({ dependent_sku_id: obj.dependentSkuId, manifests: obj.manifests, available_regions: obj.availableRegions, access_type: obj.accessType, system_requirements: obj.systemRequirements, content_rating: obj.contentRating, content_rating_agency: obj.contentRatingAgency, legal_notice: obj.legalNotice } = id);
   let tmp14 = null;
   if (null != price) {
-    obj = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
     ({ amount: obj2.amount, currency: obj2.currency, sale_amount: obj2.saleAmount, sale_percentage: obj2.salePercentage, premium: obj2.premium } = price);
-    tmp14 = obj;
+    tmp14 = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
+    const obj3 = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
   }
   obj.price = tmp14;
   obj.prices = getPricesFromServerDefault(id.prices);
@@ -122,8 +122,8 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.eligibleOffers = eligible_offers;
   let tmp17 = null;
   if (null != id.preview_asset_paths) {
-    obj = { fgStatic: id.preview_asset_paths.fg_static, fgAnimated: id.preview_asset_paths.fg_animated, bgStatic: id.preview_asset_paths.bg_static, bgAnimated: id.preview_asset_paths.bg_animated };
-    tmp17 = obj;
+    const obj5 = { fgStatic: id.preview_asset_paths.fg_static, fgAnimated: id.preview_asset_paths.fg_animated, bgStatic: id.preview_asset_paths.bg_static, bgAnimated: id.preview_asset_paths.bg_animated };
+    tmp17 = obj5;
   }
   obj.previewAssetPaths = tmp17;
   return new SKURecord(obj);
@@ -188,14 +188,15 @@ prototype["getPrice"] = function getPrice() {
         tmp2 = premium[tmp];
       }
       if (null != tmp2) {
-        let obj = { amount: tmp2.amount, currency: price.currency };
-        return obj;
+        const obj3 = { amount: tmp2.amount, currency: price.currency };
+        return obj3;
       }
     }
     if (flag) {
       if (null != price.saleAmount) {
-        obj = { amount: null, currency: null };
         ({ saleAmount: obj2.amount, currency: obj2.currency } = price);
+        let obj = { amount: null, currency: null };
+        const obj5 = { amount: null, currency: null };
       }
       return obj;
     }

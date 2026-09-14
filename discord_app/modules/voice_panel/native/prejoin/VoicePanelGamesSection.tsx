@@ -1,6 +1,6 @@
-// === Module 17270: VoicePanelGamesSection ===
+// === Module 17272: VoicePanelGamesSection ===
 
-// Module 17270 (VoicePanelGamesSection)
+// Module 17272 (VoicePanelGamesSection)
 import util from "util" /* 1114 */;
 import TableRow from "TableRow" /* 5686 */;
 import useGame from "useGame" /* 7412 */;
@@ -9,16 +9,16 @@ import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
 import FormComponents from "FormComponents" /* 9247 */;
 import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 9307 */;
 import GameActivityIconDefault from "GameActivityIcon" /* 9312 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17271 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GameRow(gameId) {
   gameId = gameId.gameId;
-  let obj = useGame;
-  const data = obj.useGame(gameId).data;
-  obj = { gameId, source: GameProfileAnalyticUtils.GameProfileSources.VoiceChannelGames };
-  const tmp4Result = useOpenGameProfileModalDefault(obj);
+  const data = useGame.useGame(gameId).data;
+  const obj2 = { gameId, source: null };
+  obj2.source = GameProfileAnalyticUtils.GameProfileSources.VoiceChannelGames;
+  const tmp4Result = useOpenGameProfileModalDefault(obj2);
   closure_0 = tmp4Result;
   if (null == data) {
     return null;
@@ -29,13 +29,13 @@ function GameRow(gameId) {
       const intl = util.intl;
       name = intl.string(util.t.GIWFlF);
     }
-    obj = { game: data, size: 32, fallback: "placeholder" };
+    const obj3 = { game: data, size: 32, fallback: "placeholder" };
     const tmp7 = jsx(GameActivityIconDefault, { game: data, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
-      const obj1 = { icon: tmp7, label: name, disabled: true };
-      let obj2 = obj1;
+      const obj4 = { icon: tmp7, label: name, disabled: true };
+      let obj5 = obj4;
     } else {
-      obj2 = {
+      obj5 = {
         icon: tmp7,
         label: name,
         arrow: true,
@@ -46,10 +46,10 @@ function GameRow(gameId) {
         accessibilityLabel: null
       };
       const intl2 = util.intl;
-      const obj3 = { gameName: name };
-      obj2.accessibilityLabel = intl2.formatToPlainString(util.t["9sZWVp"], obj3);
+      const obj6 = { gameName: name };
+      obj5.accessibilityLabel = intl2.formatToPlainString(util.t["9sZWVp"], obj6);
     }
-    return jsx(TableRow.TableRow, obj2);
+    return jsx(TableRow.TableRow, obj5);
   }
 }
 const jsx = fn(21).jsx;

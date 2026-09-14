@@ -1,6 +1,6 @@
-// === Module 16829: useSearchSegmentedControlState ===
+// === Module 16831: useSearchSegmentedControlState ===
 
-// Module 16829 (useSearchSegmentedControlState)
+// Module 16831 (useSearchSegmentedControlState)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,8 +23,8 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   let setActiveIndex;
   let derivedValue1;
   ({ items, width } = visibleTabs);
+  const sharedValue = visibleTabs(onSelectedTabChange[1]).useSharedValue(visibleTabs[0]);
   let obj = visibleTabs(onSelectedTabChange[1]);
-  const sharedValue = obj.useSharedValue(visibleTabs[0]);
   class T {
     constructor() {
       return visibleTabs;
@@ -64,12 +64,12 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       ReanimatedRexport.runOnJS(setActiveIndex)(bound1, false);
     }
   };
-  obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
-  fn3.__closure = obj;
+  const obj5 = visibleTabs(onSelectedTabChange[1]);
+  fn3.__closure = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
   fn3.__workletHash = 13456384876758;
   fn3.__initData = setActiveIndex;
-  const animatedReaction = visibleTabs(onSelectedTabChange[1]).useAnimatedReaction(fn2, fn3);
-  const obj5 = visibleTabs(onSelectedTabChange[1]);
+  const animatedReaction = obj5.useAnimatedReaction(fn2, fn3);
+  const obj6 = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
   class C {
     constructor() {
       return closure_7.get();
@@ -92,11 +92,11 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       return;
     }
   }
-  obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, onSelectedTabChange };
-  I.__closure = obj;
+  const obj7 = visibleTabs(onSelectedTabChange[1]);
+  I.__closure = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, onSelectedTabChange };
   I.__workletHash = 8452224388929;
   I.__initData = __initData;
-  const animatedReaction1 = visibleTabs(onSelectedTabChange[1]).useAnimatedReaction(C, I);
-  items = [segmentedControlState, derivedValue1];
-  return sharedValue.useMemo(() => ({ segmentedControlState, selectedTab: derivedValue1 }), items);
+  const animatedReaction1 = obj7.useAnimatedReaction(C, I);
+  const items1 = [segmentedControlState, derivedValue1];
+  return sharedValue.useMemo(() => ({ segmentedControlState, selectedTab: derivedValue1 }), items1);
 };

@@ -1,6 +1,6 @@
-// === Module 15620: LabFeatureActions ===
+// === Module 15621: LabFeatureActions ===
 
-// Module 15620 (LabFeatureActions)
+// Module 15621 (LabFeatureActions)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LabFeatureStore from "LabFeatureStore" /* 8471 */;
 
@@ -17,6 +17,6 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   if (enabled === undefined) {
     enabled = !LabFeatureStore.get(ICYMI_LAB_FEATURE);
   }
-  const obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled });
+  const obj2 = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
 };

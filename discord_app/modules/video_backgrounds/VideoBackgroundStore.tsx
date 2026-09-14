@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9226 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;

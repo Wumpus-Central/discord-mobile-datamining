@@ -1,7 +1,7 @@
-// === Module 15025: RestrictedScheduleActionCreators ===
+// === Module 15026: RestrictedScheduleActionCreators ===
 
-// Module 15025 (RestrictedScheduleActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 15026 (RestrictedScheduleActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -46,8 +46,8 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -60,32 +60,31 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp2;
           closure_2 = tmp5;
           closure_130_0 = closure_0;
           let body;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c4 = 1;
           c5 = 1;
-          const obj2 = { value: HTTP.del(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         body = value.body;
-        obj = closure_131_1(closure_131_2[3]);
-        const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
-        obj.dispatch(obj4);
+        const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
+        closure_131_1(closure_131_2[3]).dispatch(obj7);
         c5 = 3;
         return { value: "HermesInternal", done: null };
       }

@@ -1,33 +1,33 @@
-// === Module 15105: QuestCustomAppStoreOverlayUtils ===
+// === Module 15106: QuestCustomAppStoreOverlayUtils ===
 
-// Module 15105 (QuestCustomAppStoreOverlayUtils)
-import apexExperiment from "apexExperiment" /* 11622 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11631 */;
+// Module 15106 (QuestCustomAppStoreOverlayUtils)
+import apexExperiment from "apexExperiment" /* 11623 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11632 */;
 import size from "module_2" /* 2 */;
 
 function fetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    let tmpResult = QuestPlatformUtils;
-    enabled = null != tmpResult.getInlineStoreParamsFromCta(cta);
+    enabled = null != QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult = QuestPlatformUtils;
   }
   let inlineStoreParamsFromCta = null;
   if (enabled) {
-    tmpResult = QuestPlatformUtils;
-    inlineStoreParamsFromCta = tmpResult.getInlineStoreParamsFromCta(cta);
+    inlineStoreParamsFromCta = QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult4 = QuestPlatformUtils;
   }
   if (null == inlineStoreParamsFromCta) {
     let resolved = Promise.resolve(null);
   } else {
-    const tmpResult1 = AppStoreOverlayContent;
+    const tmpResult5 = AppStoreOverlayContent;
     let url = QuestPlatformUtils.getDirectAppStoreLinkFromCta(cta);
     if (url == null) {
       url = cta.url;
     }
-    resolved = tmpResult1.getAppStoreOverlayContent(inlineStoreParamsFromCta, url);
-    const tmpResult2 = QuestPlatformUtils;
+    resolved = tmpResult5.getAppStoreOverlayContent(inlineStoreParamsFromCta, url);
+    const tmpResult6 = QuestPlatformUtils;
   }
   return resolved;
 }

@@ -3,6 +3,8 @@
 // Module 9799 (useEventException)
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");

@@ -1,9 +1,9 @@
-// === Module 14797: UniqueUsernamesUtils ===
+// === Module 14798: UniqueUsernamesUtils ===
 
-// Module 14797 (UniqueUsernamesUtils)
+// Module 14798 (UniqueUsernamesUtils)
 import util from "util" /* 1114 */;
 import _mod4821 from "module_4821" /* 4821 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14792 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14793 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
@@ -36,7 +36,6 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
     obj.message = intl.string(util.t.PgfBSx);
     return obj;
   });
-  obj = { error: _mod4821.P.nullish };
   const withResult3 = match.with({ rateLimited: true }, () => {
     const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
     const intl = util.intl;
@@ -53,22 +52,8 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
     obj.message = intl.string(util.t.mCrAUb);
     return obj;
   });
-  return match.with({ rateLimited: true }, () => {
-    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
-    const intl = util.intl;
-    obj.message = intl.string(util.t.T15lqn);
-    return obj;
-  }).with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
-    const obj = { type: UniqueUsernamesTypes.NameValidationState.AVAILABLE, message: null };
-    const intl = util.intl;
-    obj.message = intl.string(util.t.PgfBSx);
-    return obj;
-  }).with({ taken: true }, () => {
-    const obj = { type: UniqueUsernamesTypes.NameValidationState.ERROR, message: null };
-    const intl = util.intl;
-    obj.message = intl.string(util.t.mCrAUb);
-    return obj;
-  }).with(obj, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
+  const obj2 = { error: _mod4821.P.nullish };
+  return withResult3.with({ error: _mod4821.P.nullish }, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
 
   });
 };

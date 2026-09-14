@@ -1,6 +1,6 @@
-// === Module 16622: MainTabsContentScrim ===
+// === Module 16624: MainTabsContentScrim ===
 
-// Module 16622 (MainTabsContentScrim)
+// Module 16624 (MainTabsContentScrim)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
@@ -10,11 +10,11 @@ import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 let obj = { scrim: null };
-obj = {};
+const obj2 = {};
 const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
-obj.zIndex = 5;
-obj.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
-obj.scrim = obj;
+obj2.zIndex = 5;
+obj2.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
+obj.scrim = obj2;
 let closure_4 = createStyles.createStyles(obj);
 const __initData = { code: "function MainTabsContentScrimTsx1(){const{interpolate,translateX,maxWidth,Extrapolation}=this.__closure;return{opacity:interpolate(translateX.get(),[maxWidth,0],[0,0.5],Extrapolation.CLAMP)};}" };
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/Ma
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  translateX(4373);
+  const tmp = closure_4();
   const fn = function c() {
     const obj = { opacity: null };
     value = translateX.get();
@@ -30,13 +30,13 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  let obj = { interpolate: translateX(4373).interpolate, translateX, maxWidth, Extrapolation: translateX(4373).Extrapolation };
-  fn.__closure = obj;
+  let obj = translateX(4373);
+  fn.__closure = { interpolate: translateX(4373).interpolate, translateX, maxWidth, Extrapolation: translateX(4373).Extrapolation };
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: null, pointerEvents: "none" };
-  let items = [closure_4().scrim, animatedStyle];
-  obj.style = items;
+  const obj3 = { style: null, pointerEvents: "none" };
+  let items = [tmp.scrim, animatedStyle];
+  obj3.style = items;
   return jsx(maxWidth(4373).View, { style: null, pointerEvents: "none" });
 };

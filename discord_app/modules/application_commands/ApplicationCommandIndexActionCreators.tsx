@@ -18,8 +18,8 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,8 +32,8 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             function retry() {
               const self = this;
@@ -55,35 +55,35 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    const obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
                     c3 = 2;
-                    if (0 === c2) {
+                    if (0 === dependencyMap) {
                       if (arg0 === 1) {
                         c3 = 3;
                         throw value;
                       } else if (arg0 === 2) {
                         c3 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj4 = { value, done: true };
+                        return obj4;
                       } else if (closure_2_4 >= 3) {
                         failure_statuses.push(1002);
                         end({ error: true });
-                        let obj2 = tmp2(c2[2]);
-                        const obj1 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
-                        obj2.dispatch(obj1);
+                        const obj5 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
+                        tmp2(dependencyMap[2]).dispatch(obj5);
                         c3 = 3;
+                        const obj3 = tmp2(dependencyMap[2]);
                       } else {
                         const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
-                        c2 = 1;
+                        dependencyMap = 1;
                         c3 = 1;
-                        obj2 = { value: promise, done: false };
-                        return obj2;
+                        const obj6 = { value: promise, done: false };
+                        return obj6;
                       }
                     } else if (arg0 === 1) {
                       c3 = 3;
@@ -92,7 +92,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                       closure_129_8();
                     }
                     c3 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } catch (tmp22) {
                     c3 = tmp;
@@ -111,8 +111,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
             };
             function end(error) {
               const diff = performance.now() - closure_3;
-              closure_1(url[5]);
-              const obj = { duration_ms: diff, error: error.error, aborted: closure_1.signal.aborted, include_applications: true, retries: Math.max(c4 - 1, 0), kind: null, command_type: null, url, target_type: closure_0.type, target_id: null, failure_statuses: null };
+              const obj2 = { duration_ms: diff, error: error.error, aborted: closure_1.signal.aborted, include_applications: true, retries: Math.max(c4 - 1, 0), kind: null, command_type: null, url, target_type: closure_0.type, target_id: null, failure_statuses: null };
               type = closure_0.type;
               if ("channel" === type) {
                 let channelId = closure_0.channelId;
@@ -129,9 +128,10 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                   }
                 }
               }
-              obj.target_id = channelId;
-              obj.failure_statuses = failure_statuses;
-              obj.track(constants.APPLICATION_COMMAND_PERFORMANCE, obj);
+              obj2.target_id = channelId;
+              obj2.failure_statuses = failure_statuses;
+              closure_1(url[5]).track(constants.APPLICATION_COMMAND_PERFORMANCE, obj2);
+              const obj = closure_1(url[5]);
             }
             const _performance = performance;
             closure_3 = performance.now();
@@ -168,9 +168,9 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                   let dispatchResult = retry(5000);
                 } else {
                   end({ error: false });
-                  closure_1(573);
-                  const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target, index: status.body };
-                  dispatchResult = obj.dispatch(obj);
+                  const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target, index: status.body };
+                  dispatchResult = closure_1(573).dispatch(obj2);
+                  const obj = closure_1(573);
                 }
                 return dispatchResult;
               }, (status) => {
@@ -187,9 +187,9 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                   }
                   failure_statuses.push(num2);
                   end({ error: true });
-                  closure_1(573);
-                  const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
-                  dispatchResult = obj.dispatch(obj);
+                  const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
+                  dispatchResult = closure_1(573).dispatch(obj2);
+                  const obj = closure_1(573);
                 }
                 return dispatchResult;
               });
@@ -203,7 +203,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;
@@ -232,6 +232,5 @@ export const fetchApplicationCommandIndex = function fetchApplicationCommandInde
   return applyArgumentsResult;
 };
 export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
-  const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target });
 };

@@ -1,6 +1,6 @@
-// === Module 10929: carouselMediaItems ===
+// === Module 10930: carouselMediaItems ===
 
-// Module 10929 (carouselMediaItems)
+// Module 10930 (carouselMediaItems)
 import StoreUtils from "StoreUtils" /* 4878 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
 import size from "module_2" /* 2 */;
@@ -40,29 +40,29 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
           let mime_type = tmp7.mime_type;
           let push = items1.push;
           if (mime_type.startsWith("video/")) {
-            let obj = { type: "video", src: null, videoThumbnailSrc: null, thumbnailSrc: null, backgroundSrc: null };
+            let obj3 = { type: "video", src: null, videoThumbnailSrc: null, thumbnailSrc: null, backgroundSrc: null };
             let obj6 = StoreUtils;
             let str3 = "mp4";
-            obj.src = obj6.getAssetURL(applicationId, tmp5, heroWidth, "mp4");
+            obj3.src = obj6.getAssetURL(applicationId, tmp5, heroWidth, "mp4");
             let obj7 = StoreUtils;
             let str4 = "webp";
-            obj.videoThumbnailSrc = obj7.getAssetURL(applicationId, tmp5, heroWidth, "webp");
+            obj3.videoThumbnailSrc = obj7.getAssetURL(applicationId, tmp5, heroWidth, "webp");
             let assetURL;
             if (null != tmp4.thumbnailAssetId) {
               let tmp26Result = StoreUtils;
               let str5 = "webp";
               assetURL = tmp26Result.getAssetURL(applicationId, tmp4.thumbnailAssetId, 112, "webp");
             }
-            obj.thumbnailSrc = assetURL;
+            obj3.thumbnailSrc = assetURL;
             let assetURL1;
             if (null != tmp4.backgroundAssetId) {
-              tmp26Result = StoreUtils;
-              assetURL1 = tmp26Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
+              let tmp26Result2 = StoreUtils;
+              assetURL1 = tmp26Result2.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
             }
-            obj.backgroundSrc = assetURL1;
-            arr = push(obj);
+            obj3.backgroundSrc = assetURL1;
+            let arr2 = push(obj3);
           } else {
-            obj = { type: "image", src: null, thumbnailSrc: null, backgroundSrc: null };
+            let obj = { type: "image", src: null, thumbnailSrc: null, backgroundSrc: null };
             let obj2 = StoreUtils;
             let str = "webp";
             obj.src = obj2.getAssetURL(applicationId, tmp7, heroWidth, "webp");
@@ -75,11 +75,11 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             obj.thumbnailSrc = assetURL2;
             let assetURL3;
             if (null != tmp4.backgroundAssetId) {
-              tmp8Result = StoreUtils;
-              assetURL3 = tmp8Result.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
+              let tmp8Result2 = StoreUtils;
+              assetURL3 = tmp8Result2.getAssetURL(applicationId, tmp4.backgroundAssetId, heroWidth, SlayerStorefrontUtils.LARGE_ASSET_FORMAT);
             }
             obj.backgroundSrc = assetURL3;
-            let arr1 = push(obj);
+            let arr3 = push(obj);
           }
         }
         continue;

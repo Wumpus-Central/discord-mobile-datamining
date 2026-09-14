@@ -71,12 +71,11 @@ export const useIsVisible = function useIsVisible(arg0, arg1) {
   }
   const items = [num];
   const tmp4 = ref3(() => {
-    let obj = map;
     value = map.get(num);
     if (null == value) {
-      obj = { threshold: num };
-      const result = obj.set(num, obj);
-      value = obj;
+      const obj2 = { threshold: num };
+      const result = map.set(num, obj2);
+      value = obj2;
     }
     return value;
   }, items);

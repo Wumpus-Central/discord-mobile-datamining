@@ -1,8 +1,8 @@
-// === Module 12030: AppealIngestionExternalLink ===
+// === Module 12031: AppealIngestionExternalLink ===
 
-// Module 12030 (AppealIngestionExternalLink)
+// Module 12031 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
@@ -13,22 +13,21 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { childButton: null, childContainer: null, childButtonText: null, chevron: null };
-createStyles = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-createStyles.childButton = createStyles;
-createStyles.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
-createStyles.childButtonText = { flex: 1, lineHeight: 20 };
-const obj1 = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
-createStyles.chevron = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs }, childContainer: null, childButtonText: null, chevron: null };
+const obj3 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childButtonText = { flex: 1, lineHeight: 20 };
+const obj4 = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
+obj2.chevron = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionExternalLink.tsx");
 
 export default function AppealIngestionExternalLink(children) {
   ({ url: require, onPress: importDefault } = children);
   const tmp = closure_6();
-  let obj = {
+  const obj = {
     style: tmp.childButton,
     accessibilityRole: "button",
     onPress() {
@@ -39,10 +38,9 @@ export default function AppealIngestionExternalLink(children) {
     },
     children: null
   };
-  obj = { style: tmp.childContainer, children: null };
-  obj = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text };
-  const items = [closure_4(Text_Text.Text, obj), closure_4(native.Icon, { source: _mod8762, color: tmp.chevron.color })];
-  obj.children = items;
-  obj.children = closure_5(View, obj);
+  const obj2 = { style: tmp.childContainer, children: null };
+  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8762, color: tmp.chevron.color })];
+  obj2.children = items;
+  obj.children = closure_5(View, obj2);
   return closure_4(Pressables.PressableHighlight, obj);
 };

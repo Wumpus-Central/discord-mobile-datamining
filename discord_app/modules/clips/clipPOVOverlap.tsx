@@ -1,10 +1,10 @@
-// === Module 14078: clipPOVOverlap ===
+// === Module 14079: clipPOVOverlap ===
 
-// Module 14078 (clipPOVOverlap)
+// Module 14079 (clipPOVOverlap)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ClipsConstants from "ClipsConstants" /* 5213 */;
-import getPOVExportTargetDefault from "getPOVExportTarget" /* 14079 */;
+import getPOVExportTargetDefault from "getPOVExportTarget" /* 14080 */;
 import size from "module_2" /* 2 */;
 
 const ClipType = ClipsConstants.ClipType;
@@ -22,7 +22,6 @@ export const getClipPOVWindow = function getClipPOVWindow(type) {
   }
 };
 export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(nextResult) {
-  let obj = FlagUtils;
   let num = nextResult.flags;
   if (num == null) {
     num = 0;
@@ -36,12 +35,12 @@ export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(ne
   if (null != id) {
     if (null != tmp4) {
       if (hasFlagResult) {
-        obj = { applicationId: id, startTimestamp: tmp4.syncTimestamp - 1000 * tmp4.duration, endTimestamp: tmp4.syncTimestamp };
-        return obj;
+        const obj2 = { applicationId: id, startTimestamp: tmp4.syncTimestamp - 1000 * tmp4.duration, endTimestamp: tmp4.syncTimestamp };
+        return obj2;
       }
     }
   }
-  hasFlagResult = obj.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
+  hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
 };
 export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, nextResult1) {
   if (applicationId.applicationId === nextResult1.applicationId) {

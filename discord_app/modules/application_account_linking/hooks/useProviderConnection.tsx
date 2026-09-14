@@ -6,21 +6,23 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
 
 export const useProviderConnection = function useProviderConnection(provider_id) {
   _require = provider_id;
-  let obj = require("initialize");
   const items = [ConnectedAccountsStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let account = null;
     if (null != closure_0) {
       account = ConnectedAccountsStore.getAccount(null, tmp);
     }
     return account;
   });
+  const obj = require("initialize");
   const items1 = [ConnectedAccountsStore];
   let tmp3 = null != stateFromStores;
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => fetching.isFetching());
@@ -35,8 +37,8 @@ export const useProviderConnection = function useProviderConnection(provider_id)
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -49,42 +51,41 @@ export const useProviderConnection = function useProviderConnection(provider_id)
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp4;
             closure_130_0 = undefined;
             if (null == closure_0) {
               c6 = 3;
-              const obj1 = { value: { success: false }, done: true };
-              return obj1;
+              const obj4 = { value: { success: false }, done: true };
+              return obj4;
             } else {
               c5 = 1;
-              let obj4 = ConnectedAccountsActionCreatorsDefault;
               let _location = closure_0;
               if (closure_0 == null) {
                 _location = "Account Linking";
               }
-              const obj2 = { location: _location };
+              const obj6 = { location: _location };
               c3 = 2;
               c6 = 1;
-              const obj3 = { value: obj4.authorize(tmp27, obj2), done: false };
-              return obj3;
+              const obj7 = { value: ConnectedAccountsActionCreatorsDefault.authorize(tmp27, obj6), done: false };
+              return obj7;
             }
           }
         } else if (1 === tmp7) {
           c5 = 0;
           c6 = 3;
-          obj4 = { value: { success: false }, done: true };
-          return obj4;
+          const obj8 = { value: { success: false }, done: true };
+          return obj8;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_130_0 = value;
           const body = closure_130_0.body;
@@ -93,9 +94,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
             url = body.url;
           }
           if (null != url) {
-            const obj6 = { success: true, url: closure_130_0.body.url };
-          } else {
-            obj = { success: false };
+            const obj10 = { success: true, url: closure_130_0.body.url };
           }
           c5 = 0;
           c6 = 3;
@@ -112,7 +111,8 @@ export const useProviderConnection = function useProviderConnection(provider_id)
     }
   });
   const items2 = [provider_id];
-  obj = {
+  let obj2 = require("initialize");
+  return {
     loading: stateFromStores1,
     hasConnection: tmp3,
     canConnect: null != provider_id,
@@ -128,5 +128,4 @@ export const useProviderConnection = function useProviderConnection(provider_id)
     }, items2),
     account: stateFromStores
   };
-  return obj;
 };

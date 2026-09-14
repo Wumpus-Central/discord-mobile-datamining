@@ -1,8 +1,8 @@
 // === Module 8060: transformReactions ===
 
 // Module 8060 (transformReactions)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ReactionUtils from "ReactionUtils" /* 4287 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
@@ -30,14 +30,12 @@ export default function transformReactions(arg0) {
         animated = emoji.animated;
       }
       if (null == emoji.id) {
-        let obj2 = EmojiUtilsDefault;
-        let uRL = obj2.getURL(emoji.name);
+        let uRL = EmojiUtilsDefault.getURL(emoji.name);
       } else {
-        let obj = { id: emoji.id, animated, size: 48 };
-        uRL = obj.getEmojiURL(obj);
+        const obj2 = { id: emoji.id, animated, size: 48 };
+        uRL = AvatarUtilsDefault.getEmojiURL(obj2);
       }
-      let obj3 = getAccessibilityLabelOrCheapFallbackUnsafe;
-      obj = {
+      const obj5 = {
         expensive() {
             return ReactionUtils.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
           },
@@ -47,46 +45,46 @@ export default function transformReactions(arg0) {
       if (str == null) {
         str = "";
       }
-      obj.cheap = str;
+      obj5.cheap = str;
       let combined = null;
-      const accessibilityLabelOrCheapFallbackUnsafe = obj3.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
+      const accessibilityLabelOrCheapFallbackUnsafe = getAccessibilityLabelOrCheapFallbackUnsafe.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
       if (null != emoji.id) {
         const _HermesInternal = HermesInternal;
         combined = "" + emoji.id;
       }
-      const obj1 = {};
+      const obj6 = {};
       const merged1 = Object.assign(merged);
-      obj2 = {};
+      const obj7 = {};
       const merged2 = Object.assign(emoji);
-      obj2.id = combined;
-      obj2.src = uRL;
-      obj2.displayName = accessibilityLabelOrCheapFallbackUnsafe;
-      obj2.animated = animated;
-      obj1.emoji = obj2;
+      obj7.id = combined;
+      obj7.src = uRL;
+      obj7.displayName = accessibilityLabelOrCheapFallbackUnsafe;
+      obj7.animated = animated;
+      obj6.emoji = obj7;
       const _Array = Array;
-      if (Array.isArray(obj1.burst_colors)) {
-        if (obj1.burst_colors.length > 0) {
-          obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: PlatformUtils.isIOS() };
-          obj1.themedBurstColors = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette(obj3);
+      if (Array.isArray(obj6.burst_colors)) {
+        if (obj6.burst_colors.length > 0) {
+          const obj8 = { colors: obj6.burst_colors, shouldProcessMobileColors: PlatformUtils.isIOS() };
+          obj6.themedBurstColors = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette(obj8);
           const tmp8Result = PlatformUtils;
         }
       }
-      return obj1;
+      return obj6;
     }
   }).map((burst_count) => {
     burst_count = burst_count.burst_count;
     const merged = Object.assign(burst_count, Object.assign({ burst_count: 0 }));
     let num = burst_count;
     if (null === burst_count) {
-      let obj = { burst_count };
+      const obj2 = { burst_count };
       const merged1 = Object.assign(merged);
       const _HermesInternal = HermesInternal;
-      obj.captureMessage("Null burst_count while transforming reaction: " + obj);
+      SentryUtilsDefault.captureMessage("Null burst_count while transforming reaction: " + obj2);
       num = 0;
     }
-    obj = {};
+    const obj3 = {};
     const merged2 = Object.assign(merged);
-    obj.burst_count = num;
-    return obj;
+    obj3.burst_count = num;
+    return obj3;
   });
 };

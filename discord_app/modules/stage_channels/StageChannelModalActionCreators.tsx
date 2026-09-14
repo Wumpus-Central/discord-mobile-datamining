@@ -3,7 +3,7 @@
 // Module 8511 (StageChannelModalActionCreators)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8512 */;
-import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13057 */;
+import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -101,8 +101,8 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -115,8 +115,8 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp5;
             closure_129_0 = closure_0;
@@ -124,15 +124,14 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             if (null != channel) {
               connectToStage(channel, closure_2);
               c4 = 3;
-              let obj1 = { value: closure_0(channel), done: true };
-              return obj1;
+              const obj6 = { value: closure_0(channel), done: true };
+              return obj6;
             } else {
-              let obj4 = closure_0(7424);
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj2 = { value: obj4.stopLurkingAll(items), done: false };
-              return obj2;
+              const obj7 = { value: closure_0(7424).stopLurkingAll(items), done: false };
+              return obj7;
             }
           }
         } else if (1 === tmp5) {
@@ -141,21 +140,20 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
-            obj1 = tmp2(5601);
             c3 = 2;
             c4 = 1;
-            obj4 = { value: obj1.joinGuild(closure_0, { lurker: true }), done: false };
-            return obj4;
+            const obj9 = { value: tmp2(5601).joinGuild(closure_0, { lurker: true }), done: false };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           const result = GuildStore.addConditionalChangeListener(() => {
@@ -163,10 +161,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(13056).initialize();
+              closure_1(13057).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(13056);
+              const obj = closure_1(13057);
             }
             return flag;
           });

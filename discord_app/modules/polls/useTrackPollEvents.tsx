@@ -1,8 +1,8 @@
-// === Module 12336: useTrackPollEvents ===
+// === Module 12337: useTrackPollEvents ===
 
-// Module 12336 (useTrackPollEvents)
+// Module 12337 (useTrackPollEvents)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11849 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,8 +30,8 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
         }
       }
     });
-    const obj = { answers_count: attachments_count.length, attachments_count, emojis_count: allowMultiSelect, stickers_count, allow_multiselect: allowMultiSelect, layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT };
-    obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj);
+    const obj = AppAnalyticsUtilsDefault;
+    obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, { answers_count: attachments_count.length, attachments_count, emojis_count: allowMultiSelect, stickers_count, allow_multiselect: allowMultiSelect, layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT });
   }, items);
   return obj;
 };

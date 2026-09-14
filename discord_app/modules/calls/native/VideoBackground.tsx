@@ -1,7 +1,7 @@
 // === Module 8364: VideoBackground ===
 
 // Module 8364 (VideoBackground)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8366 */;
 import useProfileTileGradientDefault from "useProfileTileGradient" /* 8367 */;
@@ -121,46 +121,46 @@ class VideoBackground {
       if (isStageCall) {
         tmp15 = null;
         if (!tmp11) {
-          obj = { backgroundColor: null };
-          obj.backgroundColor = combined;
-          tmp15 = obj;
+          obj1 = { backgroundColor: null };
+          obj1.backgroundColor = combined;
+          tmp15 = obj1;
         }
       }
       tmp16 = jsx;
       tmp17 = closure_0;
-      obj1 = { source: null };
-      obj1.source = tmp3;
-      tmp18 = obj1;
+      obj6 = { source: null };
+      obj6.source = tmp3;
+      tmp18 = obj6;
       tmp19 = merged;
       merged1 = Object.assign(merged);
       items1 = [, ];
       items1[0] = avatarStyle;
       items1[1] = tmp15;
-      obj1.avatarStyle = items1;
-      obj1.isStageCall = isStageCall;
-      tmp21 = jsx(closure_0(tmp7[12]).Avatar, obj1);
+      obj6.avatarStyle = items1;
+      obj6.isStageCall = isStageCall;
+      tmp21 = jsx(closure_0(tmp7[12]).Avatar, obj6);
       if (null != tmp8Result) {
         tmp25 = jsxs;
-        obj2 = { colors: null, start: null, end: null, style: null, children: null };
-        obj2.colors = tmp8Result;
-        obj2.start = { x: 0, y: 0 };
-        obj2.end = { x: 0, y: 1 };
-        obj2.style = items;
+        obj7 = { colors: null, start: null, end: null, style: null, children: null };
+        obj7.colors = tmp8Result;
+        obj7.start = { x: 0, y: 0 };
+        obj7.end = { x: 0, y: 1 };
+        obj7.style = items;
         items2 = [, ];
         items2[0] = tmp21;
         items2[1] = renderVideoDetailsResult;
-        obj2.children = items2;
-        tmp24 = jsxs(tmp6(tmp7[13]), obj2);
+        obj7.children = items2;
+        tmp24 = jsxs(tmp6(tmp7[13]), obj7);
       } else {
         tmp22 = jsxs;
         tmp23 = View;
-        obj3 = { style: null, children: null };
-        obj3.style = items;
+        obj8 = { style: null, children: null };
+        obj8.style = items;
         items3 = [, ];
         items3[0] = tmp21;
         items3[1] = renderVideoDetailsResult;
-        obj3.children = items3;
-        tmp24 = jsxs(View, obj3);
+        obj8.children = items3;
+        tmp24 = jsxs(View, obj8);
       }
       return tmp24;
     }
@@ -188,12 +188,12 @@ const memoizeResult = apply.memoize((uri) => {
   }
   return tmp;
 });
-VideoBackground.AvatarSizes = fn(1178).AvatarSizes;
+VideoBackground.AvatarSizes = fn(1176).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(VideoBackground);
-export const AvatarSizes = fn(1178).AvatarSizes;
+export const AvatarSizes = fn(1176).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = function useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult) {

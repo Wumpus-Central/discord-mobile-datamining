@@ -27,10 +27,9 @@ let closure_7 = async function _requestGames() {
     await HTTP.get(request);
     if (1 === tmp7) {
       c3 = 0;
-      closure_130_1(closure_130_2[4]);
-      const obj3 = { type: "GAME_FETCH_FAILURE", gameIds: closure_129_0 };
-      obj3.dispatch(obj3);
+      closure_130_1(closure_130_2[4]).dispatch({ type: "GAME_FETCH_FAILURE", gameIds: closure_129_0 });
       c5 = 3;
+      closure_130_1(closure_130_2[4]);
     } else if (arg0 === 1) {
       c5 = 3;
       throw value;
@@ -51,8 +50,8 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -65,20 +64,20 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else if (0 !== length.length) {
           c2 = 1;
           c1 = 1;
-          const obj1 = { value: batchInvocationManager.queue(tmp5), done: false };
-          return obj1;
+          const obj4 = { value: batchInvocationManager.queue(tmp5), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -98,8 +97,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -112,22 +111,21 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj1 = v3(dependencyMap[6]);
+          const obj2 = v3(dependencyMap[6]);
           dependencyMap = 1;
           v3 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = Promise.all(obj1.chunk(closure_0, 20).map(requestGames));
-          return obj1;
+          const obj5 = { value: Promise.all(v3(dependencyMap[6]).chunk(closure_0, 20).map(requestGames)), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         v3 = 3;
         throw value;
       } else if (arg0 === 2) {
         v3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         v3 = 3;
@@ -153,12 +151,10 @@ const batchInvocationManager = new fn(1952).BatchInvocationManager(function() {
     return !GameStore.hasNoData(item);
   },
   onQueued(gameIds) {
-    const obj = { type: "GAME_FETCH", gameIds };
-    return obj.dispatch(obj);
+    return DispatcherDefault.dispatch({ type: "GAME_FETCH", gameIds });
   },
   onCancelled(gameIds) {
-    const obj = { type: "GAME_FETCH_CANCELLED", gameIds };
-    return obj.dispatch(obj);
+    return DispatcherDefault.dispatch({ type: "GAME_FETCH_CANCELLED", gameIds });
   }
 });
 const size = fn(2);

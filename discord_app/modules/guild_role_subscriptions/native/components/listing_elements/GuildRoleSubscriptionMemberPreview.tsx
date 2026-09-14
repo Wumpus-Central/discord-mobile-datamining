@@ -1,11 +1,11 @@
-// === Module 15321: GuildRoleSubscriptionMemberPreview ===
+// === Module 15322: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15321 (GuildRoleSubscriptionMemberPreview)
+// Module 15322 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
@@ -19,14 +19,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, avatar: null, content: null, contextRow: null };
-createStyles = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.avatar = { width: 40, height: 40, borderRadius: 20 };
-createStyles.content = { marginStart: 16 };
-createStyles.contextRow = { flexDirection: "row", alignItems: "center" };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
 
@@ -39,58 +34,57 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
   const tmp3 = closure_9();
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   NicknameUtilsDefault;
   if (null == role) {
     return null;
   } else {
-    let tmp6Result = AvatarUtilsDefault;
     let avatarURL;
     if (stateFromStores != null) {
       avatarURL = stateFromStores.getAvatarURL(guildId, 40);
     }
     if (avatarURL == null) {
-      tmp6Result = AvatarUtilsDefault;
-      avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
+      avatarURL = AvatarUtilsDefault.getDefaultAvatarURL(undefined, undefined);
+      const tmp6Result2 = AvatarUtilsDefault;
     }
-    const source = tmp6Result.makeSource(avatarURL);
+    const source = AvatarUtilsDefault.makeSource(avatarURL);
+    const tmp6Result = AvatarUtilsDefault;
     const roleIconData = RoleIconUtils.getRoleIconData(role, 16);
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items1 = [tmp3.container, style];
-    obj.style = items1;
-    obj = { style: tmp3.avatar, source };
-    const items2 = [timestampProducer(FastImageDefault, obj), ];
-    const obj1 = { style: tmp3.content, children: null };
-    const obj2 = { style: tmp3.contextRow, children: null };
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
-    const obj4 = { color: null };
+    obj2.style = items1;
+    const obj3 = { style: tmp3.avatar, source };
+    const items2 = [timestampProducer(FastImageDefault, obj3), ];
+    const obj4 = { style: tmp3.content, children: null };
+    const obj5 = { style: tmp3.contextRow, children: null };
+    const obj6 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+    const obj7 = { color: null };
     const tmp4Result = RoleIconUtils;
-    obj4.color = utils_ColorUtilsAll.int2hex(role.color);
-    obj3.style = obj4;
-    obj3.children = tmp8;
-    const items3 = [timestampProducer(Text_Text.Text, obj3), , , ];
+    obj7.color = utils_ColorUtilsAll.int2hex(role.color);
+    obj6.style = obj7;
+    obj6.children = tmp8;
+    const items3 = [timestampProducer(Text_Text.Text, obj6), , , ];
     let tmp12Result = null;
     if (null != roleIconData) {
-      const obj5 = { children: null };
+      const obj8 = { children: null };
       const items4 = [timestampProducer(native.Spacer, { size: 4 }), ];
-      const obj6 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
+      const obj9 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
       ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
-      items4[1] = timestampProducer(RoleIconDefault, obj6);
-      obj5.children = items4;
-      tmp12Result = React6(React5, obj5);
+      items4[1] = timestampProducer(RoleIconDefault, obj9);
+      obj8.children = items4;
+      tmp12Result = React6(React5, obj8);
     }
     items3[1] = tmp12Result;
     items3[2] = timestampProducer(native.Spacer, { size: 8 });
     items3[3] = timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
-    obj2.children = items3;
-    const items5 = [React6(View, obj2), ];
-    const obj7 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
-    items5[1] = timestampProducer(Text_Text.Text, obj7);
-    obj1.children = items5;
-    items2[1] = React6(View, obj1);
-    obj.children = items2;
-    return React6(View, obj);
+    obj5.children = items3;
+    const items5 = [React6(View, obj5), ];
+    const obj10 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
+    items5[1] = timestampProducer(Text_Text.Text, obj10);
+    obj4.children = items5;
+    items2[1] = React6(View, obj4);
+    obj2.children = items2;
+    return React6(View, obj2);
   }
 };

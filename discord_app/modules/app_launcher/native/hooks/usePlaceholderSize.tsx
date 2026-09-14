@@ -1,6 +1,6 @@
-// === Module 12183: usePlaceholderSize ===
+// === Module 12184: usePlaceholderSize ===
 
-// Module 12183 (usePlaceholderSize)
+// Module 12184 (usePlaceholderSize)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

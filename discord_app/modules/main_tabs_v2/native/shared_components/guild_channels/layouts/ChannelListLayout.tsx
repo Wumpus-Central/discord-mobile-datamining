@@ -18,14 +18,14 @@ function getLayoutStyles(layout) {
   } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
     return CozyDrawer.CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
   } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = Compact;
+    const tmpResult = Compact;
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
     if (ChannelListLayoutTypes2.ChannelListLayoutTypes.MINIMAL !== layout) {
       const COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
     }
-    tmpResult = Cozy;
-    return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
+    const tmpResult2 = Cozy;
+    return flag ? tmpResult2.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult2.CHANNEL_LIST_STYLES_COZY;
   }
 }
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");

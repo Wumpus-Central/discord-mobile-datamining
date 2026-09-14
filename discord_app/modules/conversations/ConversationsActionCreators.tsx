@@ -2,7 +2,7 @@
 
 // Module 8011 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 4826 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 4834 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
@@ -31,14 +31,13 @@ let closure_8 = async function _fetchChannelConversations(arg0) {
           const _HermesInternal = HermesInternal;
           closure_132_8 = "" + closure_132_2 + ":" + closure_132_3 + ":" + closure_132_4 + ":" + true === closure_132_5;
           if (!closure_133_4.isListFetchPending(closure_132_0, closure_132_8)) {
-            let obj4 = closure_133_1(closure_133_2[6]);
-            let obj2 = { type: "CONVERSATIONS_FETCH_START", channelId: closure_132_0, direction: closure_132_2, requestKey: closure_132_8, isJump: null };
+            const obj7 = { type: "CONVERSATIONS_FETCH_START", channelId: closure_132_0, direction: closure_132_2, requestKey: closure_132_8, isJump: null };
             isJump = closure_132_5;
             if (closure_132_5 == null) {
               isJump = false;
             }
-            obj2.isJump = isJump;
-            obj4.dispatch(obj2);
+            obj7.isJump = isJump;
+            closure_133_1(closure_133_2[6]).dispatch(obj7);
             closure_132_9 = { limit: closure_132_4 };
             if (null != closure_132_3) {
               if ("before" === closure_132_2) {
@@ -51,7 +50,7 @@ let closure_8 = async function _fetchChannelConversations(arg0) {
             }
             if (null != hydrateMessages) {
               closure_132_9.include_messages = true;
-              let limit = hydrateMessages.limit;
+              const limit = hydrateMessages.limit;
               message_limit = limit;
               if (limit == null) {
                 message_limit = undefined;
@@ -63,21 +62,20 @@ let closure_8 = async function _fetchChannelConversations(arg0) {
             const request = { url: closure_133_7.CHANNEL_CONVERSATIONS(closure_132_0), query: closure_132_9, oldFormErrors: true, rejectWithError: true };
             c7 = 3;
             c8 = 1;
-            obj4 = { value: HTTP.get(request), done: false };
-            return obj4;
+            return { value: HTTP.get(request), done: false };
           }
         }
         obj15 = closure_133_0(closure_133_2[5]);
       }
     } else if (2 === tmp7) {
       c6 = 0;
-      obj2 = closure_133_1(closure_133_2[6]);
-      obj2.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: closure_132_0, requestKey: closure_132_8 });
+      closure_133_1(closure_133_2[6]).dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: closure_132_0, requestKey: closure_132_8 });
       if (closure_132_6) {
         const _Error = Error;
         const error = new Error("Failed to fetch conversations");
         throw error;
       }
+      closure_133_1(closure_133_2[6]);
     } else if (arg0 === 1) {
       c8 = 3;
       throw value;
@@ -87,18 +85,18 @@ let closure_8 = async function _fetchChannelConversations(arg0) {
       return { value, done: true };
     } else {
       const conversations = value.body.conversations;
-      const obj7 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: closure_132_0, rawConversations: conversations, direction: closure_132_2, requestKey: closure_132_8, anchor: closure_132_3, isJump: null, fullyHydrated: null };
+      const obj12 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: closure_132_0, rawConversations: conversations, direction: closure_132_2, requestKey: closure_132_8, anchor: closure_132_3, isJump: null, fullyHydrated: null };
       isJump2 = closure_132_5;
       if (closure_132_5 == null) {
         isJump2 = false;
       }
-      obj7.isJump = isJump2;
-      limit = undefined;
+      obj12.isJump = isJump2;
+      let limit1;
       if (hydrateMessages != null) {
-        limit = hydrateMessages.limit;
+        limit1 = hydrateMessages.limit;
       }
-      obj7.fullyHydrated = null == limit;
-      closure_133_1(closure_133_2[6]).dispatch(obj7);
+      obj12.fullyHydrated = null == limit1;
+      closure_133_1(closure_133_2[6]).dispatch(obj12);
       c6 = 0;
       c8 = 3;
       return { value: conversations, done: true };
@@ -145,8 +143,8 @@ let closure_10 = async function _fetchConversationMessages() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -159,8 +157,8 @@ let closure_10 = async function _fetchConversationMessages() {
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_6 = tmp3;
             closure_5 = tmp7;
@@ -175,7 +173,6 @@ let closure_10 = async function _fetchConversationMessages() {
               }
               previewLimit = previewLimit.previewLimit;
               closure_133_2 = tmp18;
-              let obj3 = conversationMetadata;
               ({ includeMessageReferences, includeReactions } = previewLimit);
               conversationMetadata = conversationMetadata.getConversationMetadata(channelId, conversationId);
               if (null == previewLimit) {
@@ -192,43 +189,43 @@ let closure_10 = async function _fetchConversationMessages() {
                 tmp22 = null == hydratedMessages;
               }
               if (tmp22) {
-                if (!obj3.isConversationFetchPending(conversationId, tmp18)) {
-                  let obj4 = DispatcherDefault;
-                  let obj1 = { type: "CONVERSATION_FETCH_START", channelId, conversationId, full: tmp18 };
-                  obj4.dispatch(obj1);
+                if (!obj4.isConversationFetchPending(conversationId, tmp18)) {
+                  const obj7 = { type: "CONVERSATION_FETCH_START", channelId, conversationId, full: tmp18 };
+                  DispatcherDefault.dispatch(obj7);
                   c8 = 1;
                   const HTTP = HTTPUtils.HTTP;
                   const request = { url: Endpoints.CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId), query: null, oldFormErrors: true, rejectWithError: true };
-                  const obj2 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
-                  request.query = obj2;
+                  const obj8 = { limit: previewLimit, include_message_references: includeMessageReferences, include_reactions: includeReactions };
+                  request.query = obj8;
                   c9 = 2;
                   c10 = 1;
-                  obj3 = { value: HTTP.get(request), done: false };
-                  return obj3;
+                  const obj9 = { value: HTTP.get(request), done: false };
+                  return obj9;
                 }
               }
+              obj4 = conversationMetadata;
             }
             obj14 = ConversationExperiments;
           }
         } else {
           if (1 === tmp7) {
             c8 = 0;
-            obj1 = closure_134_1(closure_134_2[6]);
-            obj4 = { type: "CONVERSATION_FETCH_FAILURE", channelId: closure_133_0, conversationId: closure_133_1, full: closure_133_2 };
-            obj1.dispatch(obj4);
+            const obj10 = { type: "CONVERSATION_FETCH_FAILURE", channelId: closure_133_0, conversationId: closure_133_1, full: closure_133_2 };
+            closure_134_1(closure_134_2[6]).dispatch(obj10);
+            const obj2 = closure_134_1(closure_134_2[6]);
           } else if (arg0 === 1) {
             c10 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_133_3 = value;
-            const obj5 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: closure_133_0, conversationId: closure_133_1, messages: closure_133_3.body.messages, messageReferences: closure_133_3.body.reference_messages, fullyHydrated: closure_133_2 };
-            closure_134_1(closure_134_2[6]).dispatch(obj5);
+            const obj11 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: closure_133_0, conversationId: closure_133_1, messages: closure_133_3.body.messages, messageReferences: closure_133_3.body.reference_messages, fullyHydrated: closure_133_2 };
+            closure_134_1(closure_134_2[6]).dispatch(obj11);
             c8 = 0;
             const obj12 = closure_134_1(closure_134_2[6]);
           }
           c8 = 0;
           c10 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c10 = 3;
@@ -267,8 +264,7 @@ export const setSelectedConversation = function setSelectedConversation(channelI
   if (arg3 === undefined) {
     flag = true;
   }
-  let obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId, conversationId });
   fetchConversationMessages(channelId, guildId, conversationId, { includeReactions: true, includeMessageReferences: true });
   const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
   if (flag) {
@@ -279,18 +275,17 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     flag = null != startMessageId;
   }
   if (flag) {
-    obj = { channelId, messageId: conversationMetadata.conversation.startMessageId, flash: false };
-    MessageActionCreatorsDefault.jumpToMessage(obj);
+    const obj3 = { channelId, messageId: conversationMetadata.conversation.startMessageId, flash: false };
+    MessageActionCreatorsDefault.jumpToMessage(obj3);
     const tmpResult = MessageActionCreatorsDefault;
   }
+  const obj2 = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  const obj = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(channelId, conversationId, down) {
-  const obj = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down });
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {

@@ -4,6 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
+const require = globalThis.__r;
+
 let obj = {};
 const Store = initializeDefault.Store;
 class ConnectedAppsStore extends Store {

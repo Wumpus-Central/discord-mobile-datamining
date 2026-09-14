@@ -10,13 +10,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
 const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
-createStyles.label = createStyles;
-createStyles.iconMargin = { marginEnd: nativeDefault.space.PX_16 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.label = {};
+obj2.iconMargin = { marginEnd: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumFeatureList.tsx");
 
@@ -27,19 +26,19 @@ export default function PremiumFeatureList(style) {
   return closure_4(View, {
     style: style.style,
     children: found.map((color, index) => {
-      let obj = { style: null, children: null };
+      const obj = { style: null, children: null };
       const items = [closure_4.item, closure_1_3];
       obj.style = items;
-      obj = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-      obj = { size: "md", color: color.color, style: null };
+      const obj2 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+      const obj3 = { size: "md", color: color.color, style: null };
       const items1 = [closure_4.iconMargin, dependencyMap];
-      obj.style = items1;
-      obj.children = React4(color.IconComponent, obj);
-      const items2 = [React4(View, obj), ];
-      const obj1 = { numberOfLines: 2, style: null, text: color.label };
+      obj3.style = items1;
+      obj2.children = React4(color.IconComponent, obj3);
+      const items2 = [React4(View, obj2), ];
+      const obj4 = { numberOfLines: 2, style: null, text: color.label };
       const items3 = [closure_4.label, closure_1_2];
-      obj1.style = items3;
-      items2[1] = React4(Form.FormRow.Label, obj1);
+      obj4.style = items3;
+      items2[1] = React4(Form.FormRow.Label, obj4);
       obj.children = items2;
       const children = [hasOwnProperty(View, obj, index), ];
       let tmp3 = null;

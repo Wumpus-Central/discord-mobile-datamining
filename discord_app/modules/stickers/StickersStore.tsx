@@ -30,8 +30,8 @@ let closure_11 = async function _loadSavedGuildStickers() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj4 = { value, done: true };
+      return obj4;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -44,24 +44,22 @@ let closure_11 = async function _loadSavedGuildStickers() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp5;
           closure_128_0 = undefined;
           closure_128_1 = undefined;
           if (Loaded === Unloaded.Unloaded) {
-            let obj1 = DatabaseDaosDefault;
-            const databaseResult = obj1.database();
+            const databaseResult = DatabaseDaosDefault.database();
             closure_128_0 = databaseResult;
             if (null != databaseResult) {
               Loaded = tmp27.Loaded;
-              let obj2 = TryLoad;
               c2 = 1;
               c3 = 1;
-              obj1 = { value: obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(5586).getAsync(closure_1_0))), done: false };
-              return obj1;
+              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(5586).getAsync(closure_1_0))), done: false };
+              return obj6;
             }
           }
           c3 = 3;
@@ -72,8 +70,8 @@ let closure_11 = async function _loadSavedGuildStickers() {
       } else if (arg0 !== 2) {
         closure_128_1 = value;
         if (null != closure_128_1) {
-          obj2 = { type: "CACHED_STICKERS_LOADED", stickers: closure_128_1 };
-          closure_129_1(closure_129_2[9]).dispatch(obj2);
+          const obj8 = { type: "CACHED_STICKERS_LOADED", stickers: closure_128_1 };
+          closure_129_1(closure_129_2[9]).dispatch(obj8);
           const obj7 = closure_129_1(closure_129_2[9]);
         }
       }
@@ -158,7 +156,7 @@ prototype["getStickersByGuildId"] = function getStickersByGuildId(guild_id) {
   return GuildStickersStore.getStickersByGuildId(guild_id);
 };
 StickersStore.displayName = "StickersStore";
-obj = {
+const stickersStore = new StickersStore(DispatcherDefault, {
   BACKGROUND_SYNC: function handleBackgroundSync() {
     Unloaded = obj.Unloaded;
   },
@@ -174,8 +172,7 @@ obj = {
   LOGOUT: function handleLogout() {
     Unloaded = obj.Unloaded;
   }
-};
-const stickersStore = new StickersStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/StickersStore.tsx");
 

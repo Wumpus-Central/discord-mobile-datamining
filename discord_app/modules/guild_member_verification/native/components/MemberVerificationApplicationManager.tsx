@@ -1,6 +1,6 @@
-// === Module 17491: MemberVerificationApplicationManager ===
+// === Module 17493: MemberVerificationApplicationManager ===
 
-// Module 17491 (MemberVerificationApplicationManager)
+// Module 17493 (MemberVerificationApplicationManager)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5608 */;
@@ -10,7 +10,7 @@ import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
-let prototype = function MemberVerificationApplicationManager() {
+const prototype = function MemberVerificationApplicationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.isShowingAlert = false;
@@ -71,8 +71,8 @@ let prototype = function MemberVerificationApplicationManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -14,8 +14,8 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,8 +28,8 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = undefined;
@@ -42,7 +42,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
             if (null != secureFramesRosterMapEntry1) {
               c2 = 1;
               c3 = 1;
-              const obj1 = {
+              let obj4 = {
                 value: (function memoizedPairwiseFingerprint(id, secureFramesRosterMapEntry1, arg2, secureFramesRosterMapEntry) {
                               const items = [closure_6, id, , , ];
                               const uint8Array = new Uint8Array(secureFramesRosterMapEntry1);
@@ -52,9 +52,9 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
                               const uint8Array1 = new Uint8Array(secureFramesRosterMapEntry);
                               items[4] = closure_1(206).fromByteArray(uint8Array1);
                               const joined = items.join(":");
-                              value = map.get(joined);
-                              if (null != value) {
-                                return value;
+                              value2 = map.get(joined);
+                              if (null != value2) {
+                                return value2;
                               } else {
                                 const obj4 = joined(9264);
                                 const _Uint8Array = Uint8Array;
@@ -78,7 +78,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
                             })(id, secureFramesRosterMapEntry1, closure_0, secureFramesRosterMapEntry),
                 done: false
               };
-              return obj1;
+              return obj4;
             }
           }
           c3 = 3;
@@ -89,14 +89,14 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_129_1 = value;
-        obj = { fingerprint: closure_129_1, fingerprintUserKey: closure_129_0 };
+        let obj = { fingerprint: closure_129_1, fingerprintUserKey: closure_129_0 };
         c3 = 3;
-        const obj3 = { value: obj, done: true };
-        return obj3;
+        const obj6 = { value: obj, done: true };
+        return obj6;
       }
     } catch (tmp13) {
       c3 = tmp;

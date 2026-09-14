@@ -1,12 +1,12 @@
-// === Module 12901: useCreateGameInvitePost ===
+// === Module 12902: useCreateGameInvitePost ===
 
-// Module 12901 (useCreateGameInvitePost)
+// Module 12902 (useCreateGameInvitePost)
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7375 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
 require = fn;
@@ -22,8 +22,8 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   _slicedToArray = undefined;
   noop = undefined;
   ({ upload, onThreadCreated } = appliedTagIds);
+  const application = description(stateFromStores[6]).useGameInvitesChannelOfficialApplication(parentChannel.id).application;
   let obj = description(stateFromStores[6]);
-  const application = obj.useGameInvitesChannelOfficialApplication(parentChannel.id).application;
   const items = [LocalActivityStore, SelfPresenceStore];
   const items1 = [application];
   stateFromStores = description(stateFromStores[7]).useStateFromStores(items, () => {
@@ -33,7 +33,7 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
     }
     return getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, id);
   }, items1);
-  const obj2 = description(stateFromStores[7]);
+  let obj2 = description(stateFromStores[7]);
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
@@ -44,30 +44,30 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   ({ noMicTag, voiceToggleDisabled } = gameInviteVoiceChatState);
   const memo = noop.useMemo(() => {
     if (null != stateFromStores) {
-      let obj = GameInvitesChannelUtils;
       if (obj.canInviteToActivity(stateFromStores)) {
-        obj = { type: ActivityActionTypes.JOIN, activity: stateFromStores };
-        return obj;
+        const obj2 = { type: ActivityActionTypes.JOIN, activity: stateFromStores };
+        return obj2;
       }
+      obj = GameInvitesChannelUtils;
     }
   }, items2);
-  tmp(tmp2[9]);
-  obj = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
-  const tmpResult = tmp(tmp2[6]);
-  obj.name = tmpResult.deriveThreadName(description);
-  obj.appliedTags = appliedTagIds;
-  obj.activityAction = memo;
+  let obj3 = description(stateFromStores[6]);
+  const obj5 = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
+  const tmpResult = description(stateFromStores[9]);
+  obj5.name = description(stateFromStores[6]).deriveThreadName(description);
+  obj5.appliedTags = appliedTagIds;
+  obj5.activityAction = memo;
   let id;
   if (application != null) {
     id = application.id;
   }
-  obj.applicationId = id;
-  obj.voiceChatEnabled = voiceChatEnabled;
-  obj.upload = upload;
-  obj.onThreadCreated = onThreadCreated;
-  createForumPostCommon = tmpResult.useCreateForumPostCommon(obj);
-  const obj3 = description(stateFromStores[6]);
-  [tmp9, c4] = _slicedToArray(noop.useState(false), 2);
+  obj5.applicationId = id;
+  obj5.voiceChatEnabled = voiceChatEnabled;
+  obj5.upload = upload;
+  obj5.onThreadCreated = onThreadCreated;
+  createForumPostCommon = tmpResult.useCreateForumPostCommon(obj5);
+  const tmpResult2 = description(stateFromStores[6]);
+  [tmp9, c4] = noop.useState(false);
   let tmp10 = !tmp9;
   if (!tmp9) {
     tmp10 = description.trim().length > 0;
@@ -77,14 +77,15 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   }
   noop = tmp10;
   const items3 = [tmp10, createForumPostCommon, description];
-  obj = {
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  return {
     application,
     noMicTag,
     voiceChatEnabled,
     voiceToggleDisabled,
     submitting: tmp9,
     canSubmit: tmp10,
-    submit: obj4.useCallback(createForumPostCommon(function*() {
+    submit: noop.useCallback(createForumPostCommon(function*() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -92,8 +93,8 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -106,8 +107,8 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp3;
               if (closure_5) {
@@ -115,8 +116,8 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
                 c2 = 1;
                 c1 = 2;
                 c3 = 1;
-                const obj1 = { value: createForumPostCommon(description), done: false };
-                return obj1;
+                const obj4 = { value: createForumPostCommon(description), done: false };
+                return obj4;
               }
             }
           } else {
@@ -131,7 +132,7 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
             }
             c2 = 0;
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c3 = 3;
@@ -146,5 +147,4 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
       }
     }), items3)
   };
-  return obj;
 };

@@ -1,9 +1,11 @@
-// === Module 15771: OpenCaptchaTestModal ===
+// === Module 15773: OpenCaptchaTestModal ===
 
-// Module 15771 (OpenCaptchaTestModal)
+// Module 15773 (OpenCaptchaTestModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;

@@ -1,11 +1,13 @@
-// === Module 15152: useFetchCollectiblesProducts ===
+// === Module 15153: useFetchCollectiblesProducts ===
 
-// Module 15152 (useFetchCollectiblesProducts)
+// Module 15153 (useFetchCollectiblesProducts)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SKUStore from "SKUStore" /* 5591 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
@@ -21,7 +23,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   let obj = require("useStateFromStores");
   const items1 = [stateFromStoresArray3];
   const stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(items1, () => skuIds.map((item) => product.getProduct(item)));
-  const obj2 = require("useStateFromStores");
+  let obj2 = require("useStateFromStores");
   const items2 = [stateFromStoresArray3];
   stateFromStoresArray2 = require("useStateFromStores").useStateFromStoresArray(items2, () => skuIds.map((item) => productFetch.getProductFetch(item)));
   const obj4 = require("useStateFromStores");
@@ -69,8 +71,9 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         tmp24 = stateFromStoresArray3[tmp6];
       }
       if (!tmp24) {
-        let obj = { includeBundles };
-        let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj);
+        let obj = CollectiblesActionCreators;
+        let obj2 = { includeBundles };
+        let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj2);
       }
       continue;
     }

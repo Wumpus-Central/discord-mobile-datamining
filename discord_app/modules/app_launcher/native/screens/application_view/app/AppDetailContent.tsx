@@ -1,21 +1,21 @@
-// === Module 12258: AppDetailContent ===
+// === Module 12259: AppDetailContent ===
 
-// Module 12258 (AppDetailContent)
+// Module 12259 (AppDetailContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import TableRow from "TableRow" /* 5686 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
-import AppLauncherContext from "AppLauncherContext" /* 11348 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12183 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 12234 */;
-import BillIcon from "BillIcon" /* 12265 */;
-import ShopIcon from "ShopIcon" /* 12267 */;
+import AppLauncherContext from "AppLauncherContext" /* 11349 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12184 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 12235 */;
+import BillIcon from "BillIcon" /* 12266 */;
+import ShopIcon from "ShopIcon" /* 12268 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,24 +30,23 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = closure_16();
-  let obj = usePlaceholderSize;
-  const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderSize;
-  const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
-  obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
-  obj = { style: null };
+  const placeholderWidth = usePlaceholderSize.usePlaceholderWidth(10, 50);
+  const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
+  const obj3 = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
+  const obj4 = { style: null };
   const items = [tmp.loadingTextPlaceholder, ];
-  obj1 = { width: "" + placeholderWidth + "%" };
-  items[1] = obj1;
-  obj.style = items;
-  obj.label = map1(View, obj);
-  const obj2 = { style: null };
-  const items1 = [tmp.loadingTextPlaceholderSmall, { width: "" + placeholderWidth1 + "%" }];
-  obj2.style = items1;
-  obj.subLabel = map1(View, obj2);
-  obj.start = flag;
-  obj.end = flag2;
-  return map1(TableRow.TableRow, obj);
+  items[1] = { width: "" + placeholderWidth + "%" };
+  obj4.style = items;
+  obj3.label = map1(View, obj4);
+  const obj6 = { style: null };
+  const items1 = [tmp.loadingTextPlaceholderSmall, ];
+  const obj5 = { width: "" + placeholderWidth + "%" };
+  items1[1] = { width: "" + placeholderWidth1 + "%" };
+  obj6.style = items1;
+  obj3.subLabel = map1(View, obj6);
+  obj3.start = flag;
+  obj3.end = flag2;
+  return map1(TableRow.TableRow, obj3);
 }
 class CommandRow {
   constructor(arg0) {
@@ -66,12 +65,15 @@ class CommandRow {
     tmp3 = onPressSend(true, true);
     tmp4 = hasOptions(context, true, true);
     obj2 = closure_0(section[14]);
-    obj = {
+    obj1 = {
       command,
       context,
       beforeExecuteCommand() {
-            const obj = { command, location: _location, triggerSection: ApplicationCommandUtils.getCommandTriggerSection(dependencyMap), sectionName };
-            return obj.trackCommandSelected(obj);
+            const obj2 = { command, location: _location, triggerSection: null, sectionName: null };
+            const obj = ApplicationCommandUtils;
+            obj2.triggerSection = ApplicationCommandUtils.getCommandTriggerSection(dependencyMap);
+            obj2.sectionName = sectionName;
+            return obj.trackCommandSelected(obj2);
           },
       onExecuteCommand,
       tryExecuteCommand: null,
@@ -88,8 +90,8 @@ class CommandRow {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -102,31 +104,31 @@ class CommandRow {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_1 = tmp2;
                 closure_129_0 = command;
                 let channel;
-                const obj1 = { applicationId: command.applicationId, channel: null, commandIntegrationTypes: null, appLauncherContext: null };
+                const obj4 = { applicationId: command.applicationId, channel: null, commandIntegrationTypes: null, appLauncherContext: null };
                 if ("channel" === context.type) {
                   channel = context.channel;
                 }
-                obj1.channel = channel;
-                obj1.commandIntegrationTypes = command.integration_types;
-                const obj2 = { entrypoint, location: _location, sectionName };
-                obj1.appLauncherContext = obj2;
+                obj4.channel = channel;
+                obj4.commandIntegrationTypes = command.integration_types;
+                const obj5 = { entrypoint, location: _location, sectionName };
+                obj4.appLauncherContext = obj5;
                 context = 1;
                 c3 = 1;
-                const obj3 = { value: command(dependencyMap[16]).installApplicationOnDemandIfNeeded(obj1), done: false };
-                return obj3;
+                const obj7 = { value: command(dependencyMap[16]).installApplicationOnDemandIfNeeded(obj4), done: false };
+                return obj7;
               }
             } else if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               if (value.isAuthorized) {
@@ -152,9 +154,9 @@ class CommandRow {
         return applyArgumentsResult;
       };
     }
-    obj.tryExecuteCommand = fn;
-    obj.sectionName = sectionName;
-    commandRowSend = obj2.useCommandRowSend(obj);
+    obj1.tryExecuteCommand = fn;
+    obj1.sectionName = sectionName;
+    commandRowSend = obj2.useCommandRowSend(obj1);
     hasOptions = commandRowSend.hasOptions;
     onPressSend = commandRowSend.onPressSend;
     items = [];
@@ -177,7 +179,7 @@ class CommandRow {
         onPressSend();
       }
     }, items1);
-    obj1 = {
+    obj5 = {
       start: isFirstRow,
       end: isLastRow,
       label: command.displayName,
@@ -192,7 +194,7 @@ class CommandRow {
       onAccessibilityAction: callback,
       trailing: jsx(onPressCommand(tmp2[14]), { hasOptions, sending: commandRowSend.sending, onPressSend })
     };
-    return jsx(tmp(tmp2[12]).TableRow, obj1);
+    return jsx(tmp(tmp2[12]).TableRow, obj5);
   }
 }
 const View = fn(17).View;
@@ -205,30 +207,26 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_12 = fn(5080).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = { headerSpacer: null, list: null, commandsHeaderContainer: null, commandsHeaderTextContainer: null, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-createStyles = { height: fn(12259).EXPANDED_HEADER_HEIGHT - fn(12259).SHEET_HANDLE_CONTAINER_HEIGHT };
-createStyles.headerSpacer = createStyles;
-createStyles.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING };
-createStyles.commandsHeaderContainer = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 };
-createStyles.commandsHeaderTextContainer = { alignItems: "center", flexDirection: "row", gap: 8 };
-createStyles.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
-let obj1 = { borderRadius: nativeDefault.radii.lg };
-createStyles.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
-let obj2 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
-createStyles.monetizationDisclosureTextStyle = { marginLeft: nativeDefault.space.PX_4 };
-let obj3 = { marginLeft: nativeDefault.space.PX_4 };
-createStyles.monetizationDisclosureContainerStyle = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
-createStyles.monetizationDisclosureStyle = { flexDirection: "row", alignItems: "center" };
-let obj4 = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
-createStyles.loadingTextPlaceholder = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
-let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
-createStyles.loadingTextPlaceholderSmall = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
-createStyles.noCommandsTextContainer = { alignItems: "center" };
-let closure_16 = createStyles.createStyles(createStyles);
-let obj7 = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", COMMAND: 1, [1]: "COMMAND" };
+const createStyles = fn(4636);
+let obj2 = { headerSpacer: { height: fn(12260).EXPANDED_HEADER_HEIGHT - fn(12260).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(12260).EXPANDED_HEADER_HEIGHT - fn(12260).SHEET_HANDLE_CONTAINER_HEIGHT };
+obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
+let obj4 = { borderRadius: nativeDefault.radii.lg };
+obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
+let obj5 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
+obj2.monetizationDisclosureTextStyle = { marginLeft: nativeDefault.space.PX_4 };
+let obj6 = { marginLeft: nativeDefault.space.PX_4 };
+obj2.monetizationDisclosureContainerStyle = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
+obj2.monetizationDisclosureStyle = { flexDirection: "row", alignItems: "center" };
+let obj7 = { flexDirection: "row", alignItems: "center", marginBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
+obj2.loadingTextPlaceholder = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+obj2.loadingTextPlaceholderSmall = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+obj2.noCommandsTextContainer = { alignItems: "center" };
+let closure_16 = createStyles.createStyles(obj2);
+let obj10 = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", COMMAND: 1, [1]: "COMMAND" };
 const array = new Array(6);
-let closure_18 = array.fill({ type: obj7.PLACEHOLDER });
+let closure_18 = array.fill({ type: obj10.PLACEHOLDER });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx");
 
@@ -251,19 +249,17 @@ export default function AppDetailContent(context) {
   ({ onPressBack, onActivityItemSelected } = context);
   const tmp = onPressCommand();
   closure_7 = tmp;
-  let obj = context(sectionName[13]);
-  const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
+  const requiredAppLauncherContext = context(sectionName[13]).useRequiredAppLauncherContext();
   const chatInputRef = requiredAppLauncherContext.chatInputRef;
   const keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
-  installOnDemand(sectionName[19]);
-  obj = { context, filters: null, options: null, allowFetch: true };
-  obj = { commandTypes: null };
+  let obj = context(sectionName[13]);
+  let obj3 = { context, filters: null, options: null, allowFetch: true };
+  let obj4 = { commandTypes: null };
   let items = [context(sectionName[20]).ApplicationCommandType.CHAT];
-  obj.commandTypes = items;
-  obj.filters = obj;
-  let obj1 = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
-  obj.options = obj1;
-  const discovery = obj1.useDiscovery(obj);
+  obj4.commandTypes = items;
+  obj3.filters = obj4;
+  obj3.options = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
+  const discovery = installOnDemand(sectionName[19]).useDiscovery(obj3);
   const filterSection = discovery.filterSection;
   const sectionDescriptors = discovery.sectionDescriptors;
   loading = discovery.loading;
@@ -284,8 +280,8 @@ export default function AppDetailContent(context) {
     tmp11 = tmp9;
   }
   if (tmp11) {
-    let tmp4Result = tmp4(tmp3[22]);
-    tmp11 = !tmp4Result.isEmbeddedApp(application);
+    tmp11 = !tmp4(tmp3[22]).isEmbeddedApp(application);
+    const tmp4Result = tmp4(tmp3[22]);
   }
   let items1 = [loading, commands, context.type];
   let items2 = [application.id, filterSection];
@@ -310,8 +306,8 @@ export default function AppDetailContent(context) {
     if (arg2 === undefined) {
       APP_LAUNCHER_APPLICATION_VIEW = ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
     }
-    const obj = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation, installOnDemand, sectionName, entrypoint, onCommandExecuted };
-    const result = obj.handleApplicationCommandSelected(obj);
+    const result = AppLauncherNativeUtils.handleApplicationCommandSelected({ location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation, installOnDemand, sectionName, entrypoint, onCommandExecuted });
+    const obj2 = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation, installOnDemand, sectionName, entrypoint, onCommandExecuted };
   }, items3);
   const items4 = [chatInputRef, keyboardCloseReasonRef, onCommandExecuted];
   callback1 = onCommandExecuted.useCallback(() => {
@@ -333,52 +329,50 @@ export default function AppDetailContent(context) {
   const callback2 = onCommandExecuted.useCallback((arg0) => {
     ({ item, index } = arg0);
     const type = item.type;
-    if (obj7.PLACEHOLDER === type) {
-      let obj = { isFirstRow: 0 === index, isLastRow: index === length.length - 1 };
-      return map1(PlaceholderCommandRow, obj);
+    if (obj10.PLACEHOLDER === type) {
+      const obj2 = { isFirstRow: 0 === index, isLastRow: index === length.length - 1 };
+      return map1(PlaceholderCommandRow, obj2);
     } else if (tmp.COMMAND === type) {
-      obj = { command: item.command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === commands.length - 1, context, onExecuteCommand: callback1, section: found, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW, installOnDemand, sectionName };
+      const obj = { command: item.command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === commands.length - 1, context, onExecuteCommand: callback1, section: found, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW, installOnDemand, sectionName };
       return map1(CommandRow, obj);
     } else {
       return null;
     }
   }, items5);
   const memo1 = onCommandExecuted.useMemo(() => {
-    let obj = PlatformUtils;
-    let isAndroidResult = obj.isAndroid();
+    let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
-      let tmpResult = AppLauncherUtils;
-      isAndroidResult = tmpResult.isApplicationMonetizedWithIAP(application);
+      isAndroidResult = AppLauncherUtils.isApplicationMonetizedWithIAP(application);
+      const tmpResult = AppLauncherUtils;
     }
-    tmpResult = AppLauncherUtils;
-    const result = tmpResult.isApplicationAdSupported(application);
+    const result = AppLauncherUtils.isApplicationAdSupported(application);
     let tmp6 = null;
     if (result) {
-      obj = { style: closure_7.monetizationDisclosureStyle, children: null };
+      const obj2 = { style: closure_7.monetizationDisclosureStyle, children: null };
       const items = [map1(BillIcon.BillIcon, { size: "sm", color: "icon-muted" }), ];
-      obj = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
+      const obj3 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl = util.intl;
-      obj.children = intl.string(util.t["5khEk8"]);
-      items[1] = map1(Text_Text.Text, obj);
-      obj.children = items;
-      tmp6 = closure_2_14(View, obj);
+      obj3.children = intl.string(util.t["5khEk8"]);
+      items[1] = map1(Text_Text.Text, obj3);
+      obj2.children = items;
+      tmp6 = closure_2_14(View, obj2);
     }
     let tmp11 = null;
     if (isAndroidResult) {
-      const obj1 = { style: closure_7.monetizationDisclosureStyle, children: null };
+      const obj4 = { style: closure_7.monetizationDisclosureStyle, children: null };
       const items1 = [map1(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" }), ];
-      const obj2 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
+      const obj5 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl2 = util.intl;
-      obj2.children = intl2.string(util.t["8z5B2U"]);
-      items1[1] = map1(Text_Text.Text, obj2);
-      obj1.children = items1;
-      tmp11 = closure_2_14(View, obj1);
+      obj5.children = intl2.string(util.t["8z5B2U"]);
+      items1[1] = map1(Text_Text.Text, obj5);
+      obj4.children = items1;
+      tmp11 = closure_2_14(View, obj4);
     }
     if (isAndroidResult) {
-      const obj3 = { style: closure_7.monetizationDisclosureContainerStyle, children: null };
+      const obj6 = { style: closure_7.monetizationDisclosureContainerStyle, children: null };
       const items2 = [tmp11, tmp6];
-      obj3.children = items2;
-      let tmp16 = closure_2_14(View, obj3);
+      obj6.children = items2;
+      let tmp16 = closure_2_14(View, obj6);
     } else {
       tmp16 = null;
     }
@@ -393,20 +387,22 @@ export default function AppDetailContent(context) {
     return obj;
   }, items7);
   const memo3 = onCommandExecuted.useMemo(() => ({ bottom: _undefined2 }), items8);
-  tmp4Result = tmp4(tmp3[29]);
-  const appLauncherFlashListProps = tmp4Result.useAppLauncherFlashListProps();
-  const items9 = [c13(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , , ];
-  let obj2 = { sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection };
-  let obj3 = { style: tmp.headerSpacer };
-  const tmp2Result = application(sectionName[29]);
+  let obj2 = installOnDemand(sectionName[19]);
+  let obj5 = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
+  let obj6 = { sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection };
   tmp9 = null == tmp8;
-  if (tmp4Result1.isEmbeddedApp(application)) {
-    const obj4 = { application, context, sectionName, onActivityItemSelected, entrypoint, hasCommands: commands.length > 0 };
-    let tmp26Result = tmp26(tmp2(tmp3[30]), obj4);
+  const appLauncherFlashListProps = context(sectionName[29]).useAppLauncherFlashListProps();
+  const obj7 = { style: tmp.headerSpacer };
+  const tmp4Result4 = context(sectionName[29]);
+  const items9 = [c13(onAauth2Cancel, obj7), , , , , , ];
+  const tmp2Result = application(sectionName[29]);
+  if (tmp4Result5.isEmbeddedApp(application)) {
+    const obj8 = { application, context, sectionName, onActivityItemSelected, entrypoint, hasCommands: commands.length > 0 };
+    let tmp26Result = tmp26(tmp2(tmp3[30]), obj8);
   } else {
-    const obj5 = { application, viewContainerStyle: null, mainContainerStyle: null };
+    const obj9 = { application, viewContainerStyle: null, mainContainerStyle: null };
     ({ viewContainerStyle: obj11.viewContainerStyle, mainContainerStyle: obj11.mainContainerStyle } = tmp);
-    tmp26Result = tmp26(tmp2(tmp3[31]), obj5);
+    tmp26Result = tmp26(tmp2(tmp3[31]), obj9);
   }
   items9[1] = tmp26Result;
   let num3 = 24;
@@ -415,61 +411,61 @@ export default function AppDetailContent(context) {
   }
   items9[2] = c13(context(sectionName[32]).Spacer, { size: num3 });
   items9[3] = memo1;
-  tmp26Result = commands.length > 1 && !loading;
-  if (tmp26Result) {
-    tmp26Result = "channel" === context.type;
+  let tmp26Result3 = commands.length > 1 && !loading;
+  if (tmp26Result3) {
+    tmp26Result3 = "channel" === context.type;
   }
-  if (tmp26Result) {
-    const obj6 = { context, allCommands: commands, onPressCommand, section: found, onExecuteCommand: callback1, installOnDemand, sectionName };
-    tmp26Result = tmp26(tmp2(tmp3[33]), obj6);
+  if (tmp26Result3) {
+    obj10 = { context, allCommands: commands, onPressCommand, section: found, onExecuteCommand: callback1, installOnDemand, sectionName };
+    tmp26Result3 = tmp26(tmp2(tmp3[33]), obj10);
   }
-  items9[4] = tmp26Result;
-  let tmp26Result1 = null;
+  items9[4] = tmp26Result3;
+  let tmp26Result4 = null;
   if (tmp10) {
-    tmp26Result1 = null;
-    if (!tmp4Result2.isEmbeddedApp(application)) {
-      obj7 = { style: tmp.noCommandsTextContainer, children: null };
-      const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
+    tmp26Result4 = null;
+    if (!tmp4Result6.isEmbeddedApp(application)) {
+      const obj12 = { style: tmp.noCommandsTextContainer, children: null };
+      const obj13 = { variant: "text-sm/normal", color: "text-default", children: null };
       let intl = tmp4(tmp3[17]).intl;
-      obj8.children = intl.string(tmp4(tmp3[17]).t["w8+YDM"]);
-      obj7.children = tmp26(tmp4(tmp3[27]).Text, obj8);
-      tmp26Result1 = tmp26(tmp28, obj7);
+      obj13.children = intl.string(tmp4(tmp3[17]).t["w8+YDM"]);
+      obj12.children = tmp26(tmp4(tmp3[27]).Text, obj13);
+      tmp26Result4 = tmp26(tmp28, obj12);
     }
-    tmp4Result2 = tmp4(tmp3[22]);
+    tmp4Result6 = tmp4(tmp3[22]);
   }
-  items9[5] = tmp26Result1;
+  items9[5] = tmp26Result4;
   let tmp24Result = null;
   if (!tmp10) {
     tmp24Result = null;
     if ("channel" === context.type) {
-      const obj9 = { style: tmp.commandsHeaderContainer, children: null };
-      const obj10 = { style: tmp.commandsHeaderTextContainer, children: null };
-      const obj11 = { variant: "text-md/medium", color: "text-default", children: null };
+      const obj14 = { style: tmp.commandsHeaderContainer, children: null };
+      const obj15 = { style: tmp.commandsHeaderTextContainer, children: null };
+      const obj16 = { variant: "text-md/medium", color: "text-default", children: null };
       let intl2 = tmp4(tmp3[17]).intl;
-      obj11.children = intl2.string(tmp4(tmp3[17]).t.GOXqks);
-      obj10.children = tmp26(tmp4(tmp3[27]).Heading, obj11);
-      const items10 = [tmp26(tmp28, obj10), ];
+      obj16.children = intl2.string(tmp4(tmp3[17]).t.GOXqks);
+      obj15.children = tmp26(tmp4(tmp3[27]).Heading, obj16);
+      const items10 = [tmp26(tmp28, obj15), ];
       if (canSort) {
-        const obj12 = {
+        const obj17 = {
           sortOrder: tmp7.sortOrder,
           onSortOptionPress(dependencyMap) {
                   _undefined(dependencyMap);
                 }
         };
-        canSort = tmp26(tmp2(tmp3[34]), obj12);
+        canSort = tmp26(tmp2(tmp3[34]), obj17);
       }
       items10[1] = canSort;
-      obj9.children = items10;
-      tmp24Result = tmp24(tmp28, obj9);
+      obj14.children = items10;
+      tmp24Result = tmp24(tmp28, obj14);
     }
   }
-  tmp4Result1 = context(sectionName[22]);
+  tmp4Result5 = context(sectionName[22]);
   items9[6] = tmp24Result;
   let str3;
   if (loading) {
     str3 = "loading";
   }
-  const obj14 = { children: null };
+  const obj19 = { children: null };
   const items11 = [
     c13(tmp2Result, { ListHeaderComponent: commands(navigation, { children: items9 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback2, data: memo, preserveScrollMomentum: true, lockableScrollableContentOffsetY, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, str3),
     c13(application(sectionName[9]), {
@@ -479,38 +475,38 @@ export default function AppDetailContent(context) {
       showsAddCTA: tmp11,
       onAddAppMenuClick(installAppProps) {
         installAppProps = installAppProps.installAppProps;
-        let obj = application(sectionName[35]);
-        obj.hideActionSheet();
+        let obj2;
+        application(sectionName[35]).hideActionSheet();
         keyboardCloseReasonRef.current = context(sectionName[13]).AppLauncherKeyboardCloseReason.OAUTH_MODAL;
         const current = chatInputRef.current;
         if (current != null) {
           current.closeCustomKeyboard();
         }
-        obj = { location: context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
+        obj2 = { location: context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
         if (null == installAppProps.customInstallUrl) {
-          let tmp3Result = context(sectionName[36]);
-          tmp3Result.trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj);
+          context(sectionName[36]).trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj2);
+          const tmp3Result = context(sectionName[36]);
         }
-        tmp3Result = context(sectionName[37]);
-        obj = {};
+        let obj = application(sectionName[35]);
+        const obj3 = {};
         const merged = Object.assign(installAppProps);
-        obj.source = "app_launcher_app_details";
-        obj.oauth2Callback = function oauth2Callback(canceled) {
+        obj3.source = "app_launcher_app_details";
+        obj3.oauth2Callback = function oauth2Callback(canceled) {
           if (canceled.canceled) {
             if (onAauth2Cancel != null) {
               tmp7();
             }
           } else if (null != tmp) {
-            obj = AppAnalyticsUtils;
-            obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
+            AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj2);
           }
         };
-        tmp3Result.installApplication(obj);
+        context(sectionName[37]).installApplication(obj3);
+        const tmp3Result2 = context(sectionName[37]);
       }
     })
   ];
-  obj14.children = items11;
-  return commands(navigation, obj14);
+  obj19.children = items11;
+  return commands(navigation, obj19);
 };
 export const BETWEEN_SECTIONS_MARGIN = 24;
 export { CommandRow };

@@ -6,6 +6,8 @@ import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import InitialMemberVerificationStore from "InitialMemberVerificationStore" /* 5656 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const setInitialVerification = fn(5656).setInitialVerification;
 const size = fn(2);

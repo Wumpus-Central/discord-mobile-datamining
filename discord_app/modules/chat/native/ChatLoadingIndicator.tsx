@@ -1,6 +1,6 @@
-// === Module 13399: ChatLoadingIndicator ===
+// === Module 13400: ChatLoadingIndicator ===
 
-// Module 13399 (ChatLoadingIndicator)
+// Module 13400 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -16,6 +16,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
+const require = globalThis.__r;
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
@@ -61,17 +62,16 @@ let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backg
 obj.pulse = size;
 let closure_16 = createStyles.createStyles(obj);
 let closure_18 = noop.memo(() => {
-  let obj = initialize;
   const items = [MessageStore, GatewayConnectionStore, SelectedChannelStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     channelId = channelId.getChannelId();
     const isConnectedResult = connected.isConnected();
     if (null == channelId) {
-      let obj = { messagesCached: false, messagesReady: false, connected: isConnectedResult };
-      return obj;
+      const obj2 = { messagesCached: false, messagesReady: false, connected: isConnectedResult };
+      return obj2;
     } else {
       messages = messages.getMessages(channelId);
-      obj = { messagesCached: null, messagesReady: null, connected: null };
+      const obj = { messagesCached: null, messagesReady: null, connected: null };
       ({ cached: obj.messagesCached, ready: obj.messagesReady } = messages);
       obj.connected = isConnectedResult;
       return obj;
@@ -84,20 +84,20 @@ let closure_18 = noop.memo(() => {
   if (messagesCached) {
     str2 = "text-feedback-positive";
   }
-  obj = { variant: "text-md/normal", color: str2, children: null };
+  let obj2 = { variant: "text-md/normal", color: str2, children: null };
   let str3 = "false";
   let str4 = "false";
   if (messagesCached) {
     str4 = "true";
   }
-  obj.children = str4;
-  items1[3] = map1(Text_Text.Text, obj);
+  obj2.children = str4;
+  items1[3] = map1(Text_Text.Text, obj2);
   let tmp4Result = null;
   if (messagesCached !== false) {
-    obj = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
-    obj.children = items2;
-    tmp4Result = closure_1_14(Text_Text.Text, obj);
+    obj3.children = items2;
+    tmp4Result = closure_1_14(Text_Text.Text, obj3);
   }
   items1[4] = tmp4Result;
   const items3 = [closure_1_14(__initData, { children: items1 }), "\n", , , , , ];
@@ -106,21 +106,21 @@ let closure_18 = noop.memo(() => {
   if (messagesReady) {
     str6 = "text-feedback-positive";
   }
-  const obj1 = { variant: "text-md/normal", color: str6, children: null };
+  const obj4 = { variant: "text-md/normal", color: str6, children: null };
   let str7 = str3;
   if (messagesReady) {
     str7 = "true";
   }
-  obj1.children = str7;
-  items4[3] = map1(Text_Text.Text, obj1);
-  tmp4Result = null;
+  obj4.children = str7;
+  items4[3] = map1(Text_Text.Text, obj4);
+  let tmp4Result3 = null;
   if (messagesReady !== true) {
-    const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
-    obj2.children = items5;
-    tmp4Result = closure_1_14(Text_Text.Text, obj2);
+    obj5.children = items5;
+    tmp4Result3 = closure_1_14(Text_Text.Text, obj5);
   }
-  items4[4] = tmp4Result;
+  items4[4] = tmp4Result3;
   items3[2] = closure_1_14(__initData, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", , ];
@@ -128,21 +128,21 @@ let closure_18 = noop.memo(() => {
   if (connected) {
     str10 = "text-feedback-positive";
   }
-  const obj3 = { variant: "text-md/normal", color: str10, children: null };
+  const obj6 = { variant: "text-md/normal", color: str10, children: null };
   let str11 = str3;
   if (connected) {
     str11 = "true";
   }
-  obj3.children = str11;
-  items6[3] = map1(Text_Text.Text, obj3);
-  let tmp4Result1 = null;
+  obj6.children = str11;
+  items6[3] = map1(Text_Text.Text, obj6);
+  let tmp4Result4 = null;
   if (connected !== true) {
-    const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
-    obj4.children = items7;
-    tmp4Result1 = closure_1_14(Text_Text.Text, obj4);
+    obj7.children = items7;
+    tmp4Result4 = closure_1_14(Text_Text.Text, obj7);
   }
-  items6[4] = tmp4Result1;
+  items6[4] = tmp4Result4;
   items3[4] = closure_1_14(__initData, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
@@ -155,17 +155,17 @@ let closure_18 = noop.memo(() => {
   if (messagesCached) {
     str = "text-feedback-positive";
   }
-  const obj5 = { variant: "text-md/normal", color: str, children: null };
+  const obj8 = { variant: "text-md/normal", color: str, children: null };
   if (messagesCached) {
     str3 = "true";
   }
-  obj5.children = str3;
-  items8[3] = map1(Text_Text.Text, obj5);
-  const obj6 = { variant: "text-md/normal", color: "text-default", children: null };
+  obj8.children = str3;
+  items8[3] = map1(Text_Text.Text, obj8);
+  const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
   items8[4] = null;
   items3[6] = closure_1_14(__initData, { children: items8 });
-  obj6.children = items3;
-  return closure_1_14(Text_Text.Text, obj6);
+  obj9.children = items3;
+  return closure_1_14(Text_Text.Text, obj9);
 });
 const __initData = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
 size = fn(2);
@@ -217,12 +217,12 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
 };
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
   const tmp = closure_16();
-  let obj = stateFromStores(504);
   let items = [AccessibilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = stateFromStores(504);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let obj = stateFromStores(504);
+  const tmp2 = stateFromStores;
   const items1 = [UserStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let isStaffResult;
     if (currentUser != null) {
@@ -237,51 +237,51 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return isStaffResult;
   });
-  let obj2 = stateFromStores(4373);
+  let obj2 = stateFromStores(504);
   const fn = function t() {
-    let obj = { transform: null };
+    const obj = { transform: null };
     if (stateFromStores) {
       obj.transform = [];
       let tmp7 = obj;
     } else {
-      obj = { scale: null };
+      const obj2 = { scale: null };
       const obj3 = ReanimatedRexport;
       const obj4 = ReanimatedRexport;
       const withTimingResult = timing.withTiming(1, { duration: 0 });
-      obj = { duration: 1500, easing: null };
+      const obj7 = { duration: 1500, easing: null };
       const Easing = ReanimatedRexport.Easing;
-      obj.easing = Easing.bezier(0.4, 0, 0.2, 1);
-      const withTimingResult1 = timing.withTiming(0.5, obj);
-      const obj1 = { duration: 1500, easing: null };
+      obj7.easing = Easing.bezier(0.4, 0, 0.2, 1);
+      const withTimingResult1 = timing.withTiming(0.5, obj7);
+      const obj9 = { duration: 1500, easing: null };
       const Easing2 = ReanimatedRexport.Easing;
-      obj1.easing = Easing2.bezier(0.4, 0, 0.2, 1);
-      obj.scale = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj1)), -1);
-      const items = [obj];
+      obj9.easing = Easing2.bezier(0.4, 0, 0.2, 1);
+      obj2.scale = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj9)), -1);
+      const items = [obj2];
       obj.transform = items;
       tmp7 = obj;
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4373).withRepeat, withSequence: stateFromStores(4373).withSequence, withTiming: stateFromStores(4637).withTiming, Easing: stateFromStores(4373).Easing };
-  fn.__closure = obj;
+  let obj3 = stateFromStores(4373);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4373).withRepeat, withSequence: stateFromStores(4373).withSequence, withTiming: stateFromStores(4637).withTiming, Easing: stateFromStores(4373).Easing };
   fn.__workletHash = 17454673879926;
   fn.__initData = __initData;
-  obj = { style: tmp.container, children: null };
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1 = { style: null };
+  let obj5 = { style: tmp.container, children: null };
+  const animatedStyle = obj3.useAnimatedStyle(fn);
+  let obj6 = { style: null };
   const items2 = [tmp.pulse, animatedStyle];
-  obj1.style = items2;
-  const items3 = [closure_13(ReanimatedRexportDefault.View, obj1), ];
-  obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  obj6.style = items2;
+  const items3 = [closure_13(ReanimatedRexportDefault.View, obj6), ];
+  let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1114).intl;
-  obj2.children = intl.string(stateFromStores(1114).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(4632).Text, obj2);
-  obj.children = items3;
-  const tmp8 = closure_14(View, obj);
+  obj7.children = intl.string(stateFromStores(1114).t.JwIJMV);
+  items3[1] = closure_13(stateFromStores(4632).Text, obj7);
+  obj5.children = items3;
+  const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
-    let obj3 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(stateFromStores(5204).PressableOpacity, obj3);
+    let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
+    tmp7Result = closure_13(tmp2(5204).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

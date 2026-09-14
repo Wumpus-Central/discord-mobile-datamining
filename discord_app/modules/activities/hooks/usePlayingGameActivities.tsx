@@ -7,6 +7,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_7 = [];
 const size = fn(2);

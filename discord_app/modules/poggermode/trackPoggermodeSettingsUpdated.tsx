@@ -2,7 +2,7 @@
 
 // Module 7935 (trackPoggermodeSettingsUpdated)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PoggermodeConstants from "PoggermodeConstants" /* 7781 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -33,28 +33,28 @@ const result = size.fileFinishedImporting("modules/poggermode/trackPoggermodeSet
 
 export default apply.throttle((arg0) => {
   ({ enabled, combosEnabled, combosRequiredCount, screenshakeEnabled, shakeIntensity, screenshakeEnabledLocations, confettiEnabled, confettiSize, confettiCount, confettiEnabledLocations } = arg0);
-  const obj = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
+  const obj2 = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
   const entries = Object.entries(screenshakeEnabledLocations);
   const found = entries.filter((item) => {
     [, tmp] = item;
     return tmp;
   });
-  obj.screenshake_enabled_locations = found.map((item) => {
+  obj2.screenshake_enabled_locations = found.map((item) => {
     [tmp] = item;
     return closure_0(Number.parseInt(tmp));
   });
-  obj.confetti_enabled = confettiEnabled;
-  obj.confetti_size = confettiSize;
-  obj.confetti_count = confettiCount;
+  obj2.confetti_enabled = confettiEnabled;
+  obj2.confetti_size = confettiSize;
+  obj2.confetti_count = confettiCount;
   closure_0 = getConfettiLocationName;
   const entries1 = Object.entries(confettiEnabledLocations);
   const found1 = entries1.filter((item) => {
     [, tmp] = item;
     return tmp;
   });
-  obj.confetti_enabled_locations = found1.map((item) => {
+  obj2.confetti_enabled_locations = found1.map((item) => {
     [tmp] = item;
     return closure_0(Number.parseInt(tmp));
   });
-  obj.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj2);
 }, 5000);

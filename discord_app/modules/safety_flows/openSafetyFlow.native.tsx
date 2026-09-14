@@ -1,6 +1,6 @@
-// === Module 17978: openSafetyFlow ===
+// === Module 17979: openSafetyFlow ===
 
-// Module 17978 (openSafetyFlow)
+// Module 17979 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
 
@@ -13,8 +13,8 @@ let closure_6 = async function _openSafetyFlow() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,17 +27,17 @@ let closure_6 = async function _openSafetyFlow() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
           dependencyMap = tmp7;
           let requiredAction;
-          let obj1 = closure_0;
+          let obj6 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = {};
+            obj6 = {};
           }
-          requiredAction = obj1.requiredAction;
+          requiredAction = obj6.requiredAction;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
           c6 = 1;
@@ -51,8 +51,8 @@ let closure_6 = async function _openSafetyFlow() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             let action = requiredAction;
             if (requiredAction == null) {
@@ -62,8 +62,8 @@ let closure_6 = async function _openSafetyFlow() {
               c5 = 1;
               c6 = 3;
               c7 = 1;
-              const obj3 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
-              return obj3;
+              const obj9 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+              return obj9;
             } else {
               closure_131_1(closure_131_2[4]).popWithKey(closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
               const obj12 = closure_131_1(closure_131_2[4]);
@@ -72,9 +72,10 @@ let closure_6 = async function _openSafetyFlow() {
         } else {
           if (2 === tmp7) {
             c5 = 0;
-            let obj9 = closure_131_1(closure_131_2[4]);
-            let obj4 = { task: null, initialScreen: closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR };
-            obj9.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj4, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+            const obj11 = { task: null, initialScreen: null };
+            const obj10 = closure_131_1(closure_131_2[4]);
+            obj11.initialScreen = closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR;
+            obj10.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj11, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
             const tmp38 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
           } else {
             if (3 === tmp7) {
@@ -84,8 +85,8 @@ let closure_6 = async function _openSafetyFlow() {
               } else if (arg0 === 2) {
                 c5 = 0;
                 c7 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
                 closure_130_1 = value;
                 if (null == closure_130_1) {
@@ -101,14 +102,13 @@ let closure_6 = async function _openSafetyFlow() {
               } else if (arg0 === 2) {
                 c5 = 0;
                 c7 = 3;
-                let obj6 = { value, done: true };
-                return obj6;
+                const obj15 = { value, done: true };
+                return obj15;
               } else {
-                obj1 = closure_131_0(closure_131_2[6]);
                 c6 = 5;
                 c7 = 1;
-                const obj7 = { value: obj1.getCurrentTask(), done: false };
-                return obj7;
+                const obj16 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+                return obj16;
               }
             } else if (arg0 === 1) {
               c7 = 3;
@@ -116,7 +116,7 @@ let closure_6 = async function _openSafetyFlow() {
             } else if (arg0 === 2) {
               c5 = 0;
               c7 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               closure_130_1 = value;
@@ -140,17 +140,16 @@ let closure_6 = async function _openSafetyFlow() {
               }
               return UPDATE_APP;
             })(closure_130_1);
-            obj4 = closure_131_1(closure_131_2[4]);
-            const obj8 = { task: closure_130_1, initialScreen: closure_130_2 };
-            obj4.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj8, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+            const obj17 = { task: closure_130_1, initialScreen: closure_130_2 };
+            const obj5 = closure_131_1(closure_131_2[4]);
+            obj5.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj17, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
             c5 = 0;
             const tmp21 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
           }
-          obj6 = closure_131_0(closure_131_2[7]);
           c6 = 4;
           c7 = 1;
-          obj9 = { value: obj6.settleAppStoreAgeSignalReport(), done: false };
-          return obj9;
+          const obj18 = { value: closure_131_0(closure_131_2[7]).settleAppStoreAgeSignalReport(), done: false };
+          return obj18;
         }
         c7 = 3;
       }

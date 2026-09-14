@@ -5,6 +5,8 @@ import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7231 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_5 = {};
 const size = fn(2);

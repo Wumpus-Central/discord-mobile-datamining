@@ -1,6 +1,6 @@
-// === Module 12710: getBoostLifecyclePhase ===
+// === Module 12711: getBoostLifecyclePhase ===
 
-// Module 12710 (getBoostLifecyclePhase)
+// Module 12711 (getBoostLifecyclePhase)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 
@@ -18,10 +18,9 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, arg1)
     if (null != ended.endsAt) {
       const endsAt2 = ended.endsAt;
       if (endsAt2.getTime() - arg1 <= c2) {
-        let obj = { phase: "expiring", endsAt: ended.endsAt };
+        const obj2 = { phase: "expiring", endsAt: ended.endsAt };
       }
     }
-    obj = { phase: "gave" };
   }
 };
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {

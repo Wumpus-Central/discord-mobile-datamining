@@ -1,15 +1,15 @@
-// === Module 1228: CustomThemeMobileStore ===
+// === Module 1226: CustomThemeMobileStore ===
 
-// Module 1228 (CustomThemeMobileStore)
+// Module 1226 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import isPerModeThemingActive from "isPerModeThemingActive" /* 4484 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 function reset() {
@@ -93,71 +93,72 @@ prototype["getState"] = function getState() {
     tmp2 = prop.colors.length > 0;
   }
   if (tmp2) {
-    let obj = { theme, customTheme: prop };
+    const obj2 = { theme, customTheme: prop };
+    let obj = obj2;
   } else {
     obj = { theme: "Array", customTheme: "PX_16" };
   }
   return obj;
 };
 prototype["getCustomTheme"] = function getCustomTheme() {
-  let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = ThemeStore;
+    let obj2 = ThemeStore;
     const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
     prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
-      let theme = obj.theme;
+      let theme = obj2.theme;
     } else {
-      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj2.theme);
       const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: theme, customTheme: prop };
+    obj2 = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme, customTheme: prop };
-    let customTheme = obj.customTheme;
-    let tmp10 = null != obj.baseTheme && null != customTheme;
+    const obj3 = { baseTheme, customTheme: prop };
+    const customTheme = obj3.customTheme;
+    let tmp10 = null != obj3.baseTheme && null != customTheme;
     if (tmp10) {
       tmp10 = customTheme.colors.length > 0;
     }
-    customTheme = undefined;
+    let customTheme1;
     if (tmp10) {
-      customTheme = obj.customTheme;
+      customTheme1 = obj3.customTheme;
     }
-    return customTheme;
+    return customTheme1;
   }
+  obj = isPerModeThemingActive;
 };
 prototype["getBaseTheme"] = function getBaseTheme() {
-  let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = ThemeStore;
+    let obj2 = ThemeStore;
     const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
     prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
-      let theme = obj.theme;
+      let theme = obj2.theme;
     } else {
-      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj2.theme);
       const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: theme, customTheme: prop };
+    obj2 = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme, customTheme: prop };
-    const customTheme = obj.customTheme;
-    let tmp10 = null != obj.baseTheme && null != customTheme;
+    const obj3 = { baseTheme, customTheme: prop };
+    const customTheme = obj3.customTheme;
+    let tmp10 = null != obj3.baseTheme && null != customTheme;
     if (tmp10) {
       tmp10 = customTheme.colors.length > 0;
     }
     baseTheme = undefined;
     if (tmp10) {
-      baseTheme = obj.baseTheme;
+      baseTheme = obj3.baseTheme;
     }
     return baseTheme;
   }
+  obj = isPerModeThemingActive;
 };
 prototype["getPreviewTheme"] = function getPreviewTheme() {
   return c5;
@@ -167,21 +168,21 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
     return c5;
   } else {
     if (obj5.isPerModeThemingActive()) {
-      let obj = ThemeStore;
+      let obj2 = ThemeStore;
       const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
       prop = undefined;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
       }
       if (null == prop) {
-        let theme = obj.theme;
+        let theme = obj2.theme;
       } else {
-        theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+        theme = ClientThemesUtils.getCustomThemeBaseTheme(obj2.theme);
         const tmp10Result = ClientThemesUtils;
       }
-      obj = { baseTheme: theme, customTheme: prop };
+      obj2 = { baseTheme: theme, customTheme: prop };
     } else {
-      obj = { baseTheme, customTheme: prop };
+      const obj = { baseTheme, customTheme: prop };
       const customTheme = obj.customTheme;
       let tmp8 = null != obj.baseTheme && null != customTheme;
       if (tmp8) {
@@ -189,9 +190,9 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       }
       let tmp9;
       if (tmp8) {
-        obj = { baseTheme: null, customTheme: null };
         ({ baseTheme: obj4.baseTheme, customTheme: obj4.customTheme } = obj);
-        tmp9 = obj;
+        tmp9 = { baseTheme: null, customTheme: null };
+        const obj3 = { baseTheme: null, customTheme: null };
       }
       return tmp9;
     }
@@ -199,30 +200,30 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
-  let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = ThemeStore;
+    let obj2 = ThemeStore;
     const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
     prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
-      let theme = obj.theme;
+      let theme = obj2.theme;
     } else {
-      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj2.theme);
       const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: theme, customTheme: prop };
+    obj2 = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme, customTheme: prop };
-    const customTheme = obj.customTheme;
-    let tmp10 = null != obj.baseTheme && null != customTheme;
+    const obj3 = { baseTheme, customTheme: prop };
+    const customTheme = obj3.customTheme;
+    let tmp10 = null != obj3.baseTheme && null != customTheme;
     if (tmp10) {
       tmp10 = customTheme.colors.length > 0;
     }
     return tmp10;
   }
+  obj = isPerModeThemingActive;
 };
 CustomThemeMobileStore.displayName = "CustomThemeMobileStore";
 CustomThemeMobileStore.persistKey = "CustomThemeMobileStore";

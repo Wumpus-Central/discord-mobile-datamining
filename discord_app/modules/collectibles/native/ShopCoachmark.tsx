@@ -1,9 +1,9 @@
-// === Module 16900: ShopCoachmark ===
+// === Module 16902: ShopCoachmark ===
 
-// Module 16900 (ShopCoachmark)
+// Module 16902 (ShopCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

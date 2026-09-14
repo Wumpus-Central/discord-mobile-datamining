@@ -1,6 +1,6 @@
-// === Module 10467: getEmojiPopoutMessage ===
+// === Module 10468: getEmojiPopoutMessage ===
 
-// Module 10467 (getEmojiPopoutMessage)
+// Module 10468 (getEmojiPopoutMessage)
 import util from "util" /* 1114 */;
 import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5666 */;
 import size from "module_2" /* 2 */;
@@ -17,8 +17,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
   if (sourceType.sourceType === EmojiSourceDataTypes.APPLICATION) {
     if (null != expressionSourceApplication) {
       const intl8 = util.intl;
-      let obj = { appName: expressionSourceApplication.name };
-      let formatToPlainStringResult = intl8.formatToPlainString(util.t.uERlTd, obj);
+      const obj2 = { appName: expressionSourceApplication.name };
+      let formatToPlainStringResult = intl8.formatToPlainString(util.t.uERlTd, obj2);
       let tmp6 = require;
     }
     ({ isPremium: isPremium2, hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild2, isDiscoverable: isDiscoverable2 } = sourceType);
@@ -35,25 +35,24 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         }
         if (isPremium3) {
           if (isDiscoverable3) {
-            obj = { type: null, text: null, description: null };
-            obj.type = obj.JOIN_GUILD;
+            const obj3 = { type: obj.JOIN_GUILD, text: null, description: null };
             const intl10 = tmp6(1114).intl;
-            obj.text = intl10.string(tmp6(1114).t.riu2R5);
-            let obj2 = obj;
+            obj3.text = intl10.string(tmp6(1114).t.riu2R5);
+            let obj5 = obj3;
           }
-          const obj1 = {};
-          const merged = Object.assign(obj2);
-          obj1.emojiDescription = formatToPlainStringResult;
-          obj1.analyticsType = DEFAULT;
-          return obj1;
+          const obj4 = {};
+          const merged = Object.assign(obj5);
+          obj4.emojiDescription = formatToPlainStringResult;
+          obj4.analyticsType = DEFAULT;
+          return obj4;
         }
         if (!isPremium3) {
-          obj2 = { type: obj.GET_PREMIUM, text: null, description: null };
+          obj5 = { type: obj.GET_PREMIUM, text: null, description: null };
           const intl9 = tmp6(1114).intl;
-          obj2.text = intl9.string(tmp6(1114).t["gl/XHJ"]);
+          obj5.text = intl9.string(tmp6(1114).t["gl/XHJ"]);
         }
-        const obj3 = { type: obj.UNAVAILABLE, text: null, description: null };
-        obj2 = obj3;
+        const obj6 = { type: obj.UNAVAILABLE, text: null, description: null };
+        obj5 = obj6;
       }
     }
     if (!isPremium2) {

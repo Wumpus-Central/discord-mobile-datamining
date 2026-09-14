@@ -9,6 +9,8 @@ import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
 import UserProfileStore from "UserProfileStore" /* 7723 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");
@@ -32,7 +34,7 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
           obj[avatar] = [];
         }
         let arr = obj[avatar];
-        arr = arr.push(key10008);
+        let arr2 = arr.push(key10008);
         continue;
       }
       continue;
@@ -44,18 +46,18 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
 export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndUserPendingNameplate(user, guildId) {
   _require = user;
   dependencyMap = guildId;
-  let obj = require("initialize");
   const items = [GuildMemberStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
       member = GuildMemberStore.getMember(tmp, user.id);
     }
     return member;
   });
+  const obj = require("initialize");
   const items1 = [UserProfileSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ pendingNameplate: UserProfileSettingsStore.getPendingChanges(closure_1).pendingNameplate, pendingErrors: UserProfileSettingsStore.getErrors(closure_1).nameplate }));
-  obj = { userNameplate: user.nameplate, guildNameplate: null, pendingNameplate: null, pendingErrors: null };
+  const obj3 = { userNameplate: user.nameplate, guildNameplate: null, pendingNameplate: null, pendingErrors: null };
   let nameplate;
   ({ pendingNameplate, pendingErrors } = stateFromStoresObject);
   if (stateFromStores != null) {
@@ -64,17 +66,16 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
       nameplate = collectibles.nameplate;
     }
   }
-  obj.guildNameplate = nameplate;
-  obj.pendingNameplate = pendingNameplate;
-  obj.pendingErrors = pendingErrors;
-  return obj;
+  obj3.guildNameplate = nameplate;
+  obj3.pendingNameplate = pendingNameplate;
+  obj3.pendingErrors = pendingErrors;
+  return obj3;
 };
 export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId) {
   _require = stateFromStores;
   dependencyMap = guildId;
-  let obj = require("initialize");
   const items = [GuildMemberStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
       member = null;
@@ -84,6 +85,7 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
     }
     return member;
   });
+  const obj = require("initialize");
   const items1 = [UserProfileSettingsStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: UserProfileSettingsStore.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: UserProfileSettingsStore.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: UserProfileSettingsStore.getErrors(closure_1).displayNameStyles }));
   let displayNameStyles;
@@ -91,16 +93,16 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
   if (stateFromStores != null) {
     displayNameStyles = stateFromStores.displayNameStyles;
   }
-  obj = { userDisplayNameStyles: displayNameStyles, guildDisplayNameStyles: null, pendingDisplayNameStyles: null, tryItOutDisplayNameStyles: null, pendingErrors: null };
+  const obj3 = { userDisplayNameStyles: displayNameStyles, guildDisplayNameStyles: null, pendingDisplayNameStyles: null, tryItOutDisplayNameStyles: null, pendingErrors: null };
   let displayNameStyles1;
   if (stateFromStores != null) {
     displayNameStyles1 = stateFromStores.displayNameStyles;
   }
-  obj.guildDisplayNameStyles = displayNameStyles1;
-  obj.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  obj.tryItOutDisplayNameStyles = tryItOutDisplayNameStyles;
-  obj.pendingErrors = pendingErrors;
-  return obj;
+  obj3.guildDisplayNameStyles = displayNameStyles1;
+  obj3.pendingDisplayNameStyles = pendingDisplayNameStyles;
+  obj3.tryItOutDisplayNameStyles = tryItOutDisplayNameStyles;
+  obj3.pendingErrors = pendingErrors;
+  return obj3;
 };
 export const useUserAvatarDecoration = function useUserAvatarDecoration(user) {
   user = user.user;
@@ -114,10 +116,11 @@ export const useUserAvatarDecoration = function useUserAvatarDecoration(user) {
     return member;
   });
   if (null != guildId) {
-    let avatarDecoration;
+    let avatarDecoration1;
     if (stateFromStores != null) {
-      avatarDecoration = stateFromStores.avatarDecoration;
+      avatarDecoration1 = stateFromStores.avatarDecoration;
     }
+    let avatarDecoration = avatarDecoration1;
   } else {
     avatarDecoration = user.avatarDecoration;
   }
@@ -129,10 +132,11 @@ export const useUserProfileEffect = function useUserProfileEffect(arg0) {
   return initialize.useStateFromStores(items, () => {
     if (null == dependencyMap) {
       const userProfile = UserProfileStore.getUserProfile(user.id);
-      let profileEffect;
+      let profileEffect1;
       if (userProfile != null) {
-        profileEffect = userProfile.profileEffect;
+        profileEffect1 = userProfile.profileEffect;
       }
+      let profileEffect = profileEffect1;
     } else {
       const guildMemberProfile = UserProfileStore.getGuildMemberProfile(user.id, tmp);
       if (guildMemberProfile != null) {
@@ -148,10 +152,11 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
   return initialize.useStateFromStores(items, () => {
     if (null == dependencyMap) {
       const userProfile = UserProfileStore.getUserProfile(user.id);
-      let profileFrame;
+      let profileFrame1;
       if (userProfile != null) {
-        profileFrame = userProfile.profileFrame;
+        profileFrame1 = userProfile.profileFrame;
       }
+      let profileFrame = profileFrame1;
     } else {
       const guildMemberProfile = UserProfileStore.getGuildMemberProfile(user.id, tmp);
       if (guildMemberProfile != null) {

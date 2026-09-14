@@ -1,10 +1,10 @@
-// === Module 15235: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 15236: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 15235 (useVideoQuestClickCtaAndMaybeCloseModal)
+// Module 15236 (useVideoQuestClickCtaAndMaybeCloseModal)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11428 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11429 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,13 +18,13 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
   const getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
-    let obj = URLUtilsDefault;
+    const obj = URLUtilsDefault;
     if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
       onClose();
     }
     obj2 = QuestCopyUtils;
-    obj = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
-    QuestPlatformUtils.openGameLinkDirectly(quest, obj);
     const tmp2Result = QuestPlatformUtils;
+    tmp2Result.openGameLinkDirectly(quest, { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent });
+    const obj3 = { content, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
   }, items);
 };

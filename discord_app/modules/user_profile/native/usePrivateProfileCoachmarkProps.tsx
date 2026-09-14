@@ -1,6 +1,6 @@
-// === Module 16460: usePrivateProfileCoachmarkProps ===
+// === Module 16462: usePrivateProfileCoachmarkProps ===
 
-// Module 16460 (usePrivateProfileCoachmarkProps)
+// Module 16462 (usePrivateProfileCoachmarkProps)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 6466 */;
@@ -43,7 +43,7 @@ export const usePrivateProfileCoachmarkProps = function usePrivateProfileCoachma
   stringResult1 = intl.string(tmp(prop[8]).t.bnNxW1);
   const items = [stringResult1, markAsDismissed, visibleContent];
   return stringResult1.useMemo(() => {
-    let obj = { title: null, description: null, position: "top", visible: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    const obj = { title: null, description: null, position: "top", visible: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.Ve4nS1);
     obj.description = stringResult1;
@@ -58,9 +58,7 @@ export const usePrivateProfileCoachmarkProps = function usePrivateProfileCoachma
     obj.buttonLabel = intl2.string(util.t.eOoTMX);
     obj.onButtonPress = function onButtonPress() {
       closure_1_1(constants2.TAKE_ACTION);
-      visibleContent(markAsDismissed[12]);
-      const obj = { screen: constants.DATA_AND_PRIVACY };
-      obj.openUserSettings(obj);
+      visibleContent(markAsDismissed[12]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
     };
     return obj;
   }, items);

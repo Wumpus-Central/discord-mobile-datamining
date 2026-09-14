@@ -1,7 +1,7 @@
-// === Module 11112: useTrackFavoritesGuildAddModalOpened ===
+// === Module 11113: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 11112 (useTrackFavoritesGuildAddModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 11113 (useTrackFavoritesGuildAddModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -11,7 +11,6 @@ const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackF
 export default function useTrackFavoritesGuildAddModalOpened(source) {
   const items = [source];
   const effect = noop.useEffect(() => {
-    const obj = { source };
-    obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, { source });
   }, items);
 };

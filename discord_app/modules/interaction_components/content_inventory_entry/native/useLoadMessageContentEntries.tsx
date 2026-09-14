@@ -1,6 +1,6 @@
-// === Module 11659: useLoadMessageContentEntries ===
+// === Module 11660: useLoadMessageContentEntries ===
 
-// Module 11659 (useLoadMessageContentEntries)
+// Module 11660 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1894 */;
 import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8246 */;
@@ -10,10 +10,12 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function fetchColors(play) {
   closure_0 = play;
-  return promiseDeduper1.one(play, () => useAvatarColor.maybeFetchColors(closure_0));
+  return promiseDeduper4.one(play, () => useAvatarColor.maybeFetchColors(closure_0));
 }
 let closure_12 = async function _fetchApplicationParts(arg0) {
   if (c4 === 2) {
@@ -23,8 +25,8 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -37,8 +39,8 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -50,7 +52,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
             closure_129_0 = application_id;
             c3 = 1;
             c4 = 1;
-            const obj1 = {
+            const obj4 = {
               value: (function fetchApplication(application_id) {
                           closure_0 = application_id;
                           return closure_9.one(application_id, () => {
@@ -60,7 +62,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
                         })(application_id),
               done: false
             };
-            return obj1;
+            return obj4;
           }
         }
       } else if (1 === tmp5) {
@@ -69,8 +71,8 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           application = closure_130_6.getApplication(closure_129_0);
           closure_130_1(closure_130_2[9])(null != application, "failed to fetch application");
@@ -78,8 +80,8 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
           if (null != iconURL) {
             c3 = 2;
             c4 = 1;
-            const obj3 = { value: closure_130_11(iconURL), done: false };
-            return obj3;
+            const obj6 = { value: closure_130_11(iconURL), done: false };
+            return obj6;
           }
         }
       } else if (arg0 === 1) {
@@ -87,7 +89,7 @@ let closure_12 = async function _fetchApplicationParts(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c4 = 3;
@@ -110,8 +112,8 @@ let closure_13 = async function _fetchUserParts(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -124,12 +126,12 @@ let closure_13 = async function _fetchUserParts(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             c2 = 1;
             c1 = 1;
-            let obj1 = {
+            let obj4 = {
               value: (function fetchUser(author_id) {
                         closure_0 = author_id;
                         return closure_8.one(author_id, closure_4(function*() {
@@ -140,8 +142,8 @@ let closure_13 = async function _fetchUserParts(arg0) {
                             if (arg0 === 1) {
                               throw value;
                             } else if (arg0 === 2) {
-                              let obj = { value, done: true };
-                              return obj;
+                              const obj3 = { value, done: true };
+                              return obj3;
                             } else {
                               return { value: "HermesInternal", done: null };
                             }
@@ -154,22 +156,20 @@ let closure_13 = async function _fetchUserParts(arg0) {
                                   throw value;
                                 } else if (arg0 === 2) {
                                   v3 = 3;
-                                  obj = { value, done: true };
-                                  return obj;
+                                  const obj4 = { value, done: true };
+                                  return obj4;
                                 } else {
-                                  let obj1 = v3(closure_1_2[6]);
                                   c1 = 1;
                                   v3 = 1;
-                                  obj1 = { value: null, done: false };
-                                  obj1.value = obj1.getUser(closure_0);
-                                  return obj1;
+                                  const obj5 = { value: v3(closure_1_2[6]).getUser(closure_0), done: false };
+                                  return obj5;
                                 }
                               } else if (arg0 === 1) {
                                 v3 = 3;
                                 throw value;
                               } else if (arg0 === 2) {
                                 v3 = 3;
-                                obj = { value, done: true };
+                                const obj = { value, done: true };
                                 return obj;
                               } else {
                                 v3 = 3;
@@ -184,14 +184,14 @@ let closure_13 = async function _fetchUserParts(arg0) {
                       })(author_id.author_id),
               done: false
             };
-            return obj1;
+            return obj4;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c1 = 3;
@@ -216,8 +216,8 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -230,20 +230,20 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if ("application_id" in extra.extra) {
             if ("media_assets_large_image" in extra.extra) {
-              let obj1 = require("ApplicationAssetUtils");
               const items = [, ];
               ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
-              const assetImage = obj1.getAssetImage(extra.extra.application_id, extra.extra.media_assets_large_image, items);
+              const assetImage = require("ApplicationAssetUtils").getAssetImage(extra.extra.application_id, extra.extra.media_assets_large_image, items);
               if (null != assetImage) {
                 c2 = 1;
                 c1 = 1;
-                obj1 = { value: fetchColors(assetImage), done: false };
-                return obj1;
+                const obj5 = { value: fetchColors(assetImage), done: false };
+                return obj5;
               }
+              const obj2 = require("ApplicationAssetUtils");
             }
           }
         } else if (arg0 === 1) {
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchWatchedContentParts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c1 = 3;
@@ -271,8 +271,8 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -285,15 +285,15 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else if ("entries" in _require.extra) {
           const image_url = _require.extra.entries[0].media.image_url;
           if (null != image_url) {
             c2 = 1;
             c1 = 1;
-            const obj1 = { value: fetchColors(image_url), done: false };
-            return obj1;
+            const obj4 = { value: fetchColors(image_url), done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -301,7 +301,7 @@ let closure_15 = async function _fetchListenedContentParts(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -320,8 +320,8 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -334,24 +334,22 @@ let closure_16 = async function _fetchTopArtistContentParts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if ("media" in _require.extra) {
           const image_url = _require.extra.media.image_url;
           _modDef38(null != image_url, "missing image url for top artist");
-          let obj1 = require("useAvatarColor");
           c2 = 1;
           c1 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.maybeFetchColors(image_url);
-          return obj1;
+          const obj5 = { value: require("useAvatarColor").maybeFetchColors(image_url), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -375,8 +373,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -389,8 +387,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c11 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_7 = tmp5;
             closure_135_2 = undefined;
@@ -403,8 +401,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  let obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -416,7 +414,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     v3 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     if (components.type === v3(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
@@ -430,8 +428,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                             if (arg0 === 1) {
                               throw value;
                             } else if (arg0 === 2) {
-                              let obj = { value, done: true };
-                              return obj;
+                              const obj2 = { value, done: true };
+                              return obj2;
                             } else {
                               return { value: "HermesInternal", done: null };
                             }
@@ -444,20 +442,20 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                                   throw value;
                                 } else if (arg0 === 2) {
                                   c0 = 3;
-                                  obj = { value, done: true };
-                                  return obj;
+                                  const obj3 = { value, done: true };
+                                  return obj3;
                                 } else {
                                   c1 = 1;
                                   c0 = 1;
-                                  const obj1 = { value: Promise.all(items), done: false };
-                                  return obj1;
+                                  const obj4 = { value: Promise.all(items), done: false };
+                                  return obj4;
                                 }
                               } else if (arg0 === 1) {
                                 c0 = 3;
                                 throw value;
                               } else if (arg0 === 2) {
                                 c0 = 3;
-                                obj = { value, done: true };
+                                const obj = { value, done: true };
                                 return obj;
                               } else {
                                 c0 = 3;
@@ -555,8 +553,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
             if (closure_1 === undefined) {
               c10 = 2;
               c11 = 1;
-              let obj1 = { value: Promise.all(closure_135_0), done: false };
-              return obj1;
+              let obj4 = { value: Promise.all(closure_135_0), done: false };
+              return obj4;
             } else {
               c8 = 1;
               closure_135_2 = tmp34;
@@ -577,8 +575,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c11 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             c11 = 3;
             return { value: "HermesInternal", done: null };
@@ -599,8 +597,8 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                   c8 = 0;
                   closure_1.return();
                   c11 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   const iter2 = method(closure_3);
                   HermesBuiltin.ensureObject("iterator.return() did not return an object");
@@ -608,7 +606,7 @@ let closure_17 = async function _loadContentEntryParts(arg0) {
                     c8 = 0;
                     closure_1.return();
                     c11 = 3;
-                    obj = { value: iter2.value, done: true };
+                    let obj = { value: iter2.value, done: true };
                     return obj;
                   } else {
                     c10 = 3;
@@ -675,9 +673,9 @@ function isMessageRenderable(message) {
     if (nextResult.type === Server.ComponentType.CONTENT_INVENTORY_ENTRY) {
       let tmp3Result = transformContentInventoryEntryMessageComponent;
       let obj = { component: null, message: null };
-      obj = { contentInventoryEntry: null };
-      obj.contentInventoryEntry = tmp2.contentInventoryEntry;
-      obj.component = obj;
+      let obj2 = { contentInventoryEntry: null };
+      obj2.contentInventoryEntry = tmp2.contentInventoryEntry;
+      obj.component = obj2;
       obj.message = message;
       if (null == tmp3Result.transformToRowGeneratedContentInventoryEntryComponent(obj)) {
         iter.return();
@@ -690,14 +688,13 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(1920).ImageSizes;
-new fn(9157).PromiseDeduper();
 const promiseDeduper = new fn(9157).PromiseDeduper();
-const promiseDeduper1 = new fn(9157).PromiseDeduper();
+const promiseDeduper3 = new fn(9157).PromiseDeduper();
+const promiseDeduper4 = new fn(9157).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
 
 export default function useLoadMessageContentEntries(arg0) {
-  _require = arg0;
   closure_1 = first1.useRef(new Map());
   const map = new Map();
   dependencyMap = first1.useRef(new Map());
@@ -709,8 +706,9 @@ export default function useLoadMessageContentEntries(arg0) {
   const tmp7 = unloadedContentEntryMessageIds(first1.useState(new Set()), 2);
   first1 = tmp7[0];
   closure_6 = tmp7[1];
-  let obj = require("useAvatarColor");
-  const colorStore = obj.useColorStore((palette) => palette.palette);
+  const set1 = new Set();
+  _require = undefined;
+  const colorStore = require("useAvatarColor").useColorStore((palette) => palette.palette);
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     if (c7 === 2) {
       c7 = 3;
@@ -719,8 +717,8 @@ export default function useLoadMessageContentEntries(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -733,8 +731,8 @@ export default function useLoadMessageContentEntries(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_130_0 = closure_0;
@@ -754,7 +752,7 @@ export default function useLoadMessageContentEntries(arg0) {
                 c5 = 1;
                 v2 = 2;
                 c7 = 1;
-                const obj1 = {
+                const obj4 = {
                   value: (function loadContentEntryParts() {
                                 const self = this;
                                 const apply = closure_1_17.apply;
@@ -767,7 +765,7 @@ export default function useLoadMessageContentEntries(arg0) {
                               })(closure_1),
                   done: false
                 };
-                return obj1;
+                return obj4;
               }
             }
           }
@@ -805,7 +803,7 @@ export default function useLoadMessageContentEntries(arg0) {
           }
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c7 = 3;
@@ -866,7 +864,8 @@ export default function useLoadMessageContentEntries(arg0) {
     });
   }, items1);
   const items2 = [unloadedContentEntryMessageIds, first1];
-  obj = {
+  let obj = require("useAvatarColor");
+  return {
     unloadedContentEntryMessageIds,
     unloadableContentEntryMessageIds: first1.useMemo(() => {
       const set = new Set();
@@ -875,5 +874,4 @@ export default function useLoadMessageContentEntries(arg0) {
       return set;
     }, items2)
   };
-  return obj;
 };

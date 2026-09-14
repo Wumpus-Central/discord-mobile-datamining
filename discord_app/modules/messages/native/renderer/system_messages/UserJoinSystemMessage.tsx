@@ -19,8 +19,7 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/syst
 
 export const createUserJoinSystemMessage = function createUserJoinSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const channel = ChannelStore.getChannel(message.getChannelId());
   let guildId;
   const systemMessageUserJoinMobile = SystemMessageUtilsDefault.getSystemMessageUserJoinMobile(message.id);
@@ -35,21 +34,20 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);
       }
-      let tmpResult = useIsStickerReplyEnabled;
+      const tmpResult = useIsStickerReplyEnabled;
       if (tmpResult.computeIsStickerReplyEnabled(guildId, channel, message, tmp10)) {
-        tmpResult = transformSticker;
-        transformStickerResult = tmpResult.transformSticker(WelcomeCTAUtils.pickWelcomeSticker(message.id));
-        const tmpResult1 = WelcomeCTAUtils;
+        const tmpResult3 = transformSticker;
+        transformStickerResult = tmpResult3.transformSticker(WelcomeCTAUtils.pickWelcomeSticker(message.id));
+        const tmpResult4 = WelcomeCTAUtils;
       }
     }
   }
-  obj = { content: null, sticker: null, stickerLabel: null };
+  const obj2 = { content: null, sticker: null, stickerLabel: null };
   const intl = util.intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj.content = intl.formatToParts(systemMessageUserJoinMobile, obj);
-  obj.sticker = transformStickerResult;
+  obj2.content = intl.formatToParts(systemMessageUserJoinMobile, { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) });
+  obj2.sticker = transformStickerResult;
   const intl2 = util.intl;
-  obj.stickerLabel = intl2.string(util.t["7Tj6HT"]);
+  obj2.stickerLabel = intl2.string(util.t["7Tj6HT"]);
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return obj2;
 };

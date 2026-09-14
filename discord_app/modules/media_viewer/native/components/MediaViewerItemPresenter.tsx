@@ -1,6 +1,6 @@
-// === Module 13115: MediaViewerItemPresenter ===
+// === Module 13116: MediaViewerItemPresenter ===
 
-// Module 13115 (MediaViewerItemPresenter)
+// Module 13116 (MediaViewerItemPresenter)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,11 +23,10 @@ export default function MediaViewerItemPresenter(windowHeight) {
   let diff3;
   let width2;
   let height2;
-  let obj = windowWidth(entranceAnimationDriver[3]);
-  const entranceAnimation = obj.useEntranceAnimation(entranceAnimationDriver);
+  const entranceAnimation = windowWidth(entranceAnimationDriver[3]).useEntranceAnimation(entranceAnimationDriver);
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
-  let obj1 = windowWidth(entranceAnimationDriver[4]);
-  const mediaItemHasSpoiler = obj1.useMediaItemHasSpoiler(index);
+  let obj = windowWidth(entranceAnimationDriver[3]);
+  const mediaItemHasSpoiler = windowWidth(entranceAnimationDriver[4]).useMediaItemHasSpoiler(index);
   let size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
   const width = size.width;
   const height = size.height;
@@ -35,53 +34,53 @@ export default function MediaViewerItemPresenter(windowHeight) {
   let items = [];
   if (Array.isArray(source)) {
     if (loads <= 1) {
-      obj = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+      let obj3 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
       const _HermesInternal2 = HermesInternal;
-      obj.key = "0:" + index + ":" + source[0].uri;
-      obj.onLoadStart = handleLoadStart;
-      obj.onLoad = handleLoad;
-      obj.onError = handleError;
-      obj.source = source[0];
-      obj.style = diff3.platformStyles;
-      obj.index = index;
-      obj.hasSpoiler = mediaItemHasSpoiler;
-      obj.visible = itemVisible;
-      obj.panGestureConfig = panGestureConfig;
-      items.push(renderMedia(obj));
+      obj3.key = "0:" + index + ":" + source[0].uri;
+      obj3.onLoadStart = handleLoadStart;
+      obj3.onLoad = handleLoad;
+      obj3.onError = handleError;
+      obj3.source = source[0];
+      obj3.style = diff3.platformStyles;
+      obj3.index = index;
+      obj3.hasSpoiler = mediaItemHasSpoiler;
+      obj3.visible = itemVisible;
+      obj3.panGestureConfig = panGestureConfig;
+      items.push(renderMedia(obj3));
     }
     if (loads >= 1) {
-      obj = { key: null, source: null, style: null, onLoad: null, onError: null, pointerEvents: null, fadeDuration: 0, fade: false, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+      let obj4 = { key: null, source: null, style: null, onLoad: null, onError: null, pointerEvents: null, fadeDuration: 0, fade: false, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
       const _HermesInternal3 = HermesInternal;
-      obj.key = "1:" + index + ":" + source[0].uri;
-      obj.source = source[1];
-      obj.style = diff3.platformStyles;
-      obj.onLoad = handleLoad;
-      obj.onError = handleError;
+      obj4.key = "1:" + index + ":" + source[0].uri;
+      obj4.source = source[1];
+      obj4.style = diff3.platformStyles;
+      obj4.onLoad = handleLoad;
+      obj4.onError = handleError;
       let str5 = "auto";
       if (tmp9) {
         str5 = "none";
       }
-      obj.pointerEvents = str5;
-      obj.index = index;
-      obj.hasSpoiler = mediaItemHasSpoiler;
-      obj.visible = itemVisible;
-      obj.panGestureConfig = panGestureConfig;
-      items.push(renderMedia(obj));
+      obj4.pointerEvents = str5;
+      obj4.index = index;
+      obj4.hasSpoiler = mediaItemHasSpoiler;
+      obj4.visible = itemVisible;
+      obj4.panGestureConfig = panGestureConfig;
+      items.push(renderMedia(obj4));
     }
   } else {
-    obj1 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
+    let obj5 = { key: null, onLoadStart: null, onLoad: null, onError: null, source: null, style: null, index: null, hasSpoiler: null, visible: null, panGestureConfig: null };
     const _HermesInternal = HermesInternal;
-    obj1.key = "0:" + index + ":" + source.uri;
-    obj1.onLoadStart = handleLoadStart;
-    obj1.onLoad = handleLoad;
-    obj1.onError = handleError;
-    obj1.source = source;
-    obj1.style = diff3.platformStyles;
-    obj1.index = index;
-    obj1.hasSpoiler = mediaItemHasSpoiler;
-    obj1.visible = itemVisible;
-    obj1.panGestureConfig = panGestureConfig;
-    items.push(renderMedia(obj1));
+    obj5.key = "0:" + index + ":" + source.uri;
+    obj5.onLoadStart = handleLoadStart;
+    obj5.onLoad = handleLoad;
+    obj5.onError = handleError;
+    obj5.source = source;
+    obj5.style = diff3.platformStyles;
+    obj5.index = index;
+    obj5.hasSpoiler = mediaItemHasSpoiler;
+    obj5.visible = itemVisible;
+    obj5.panGestureConfig = panGestureConfig;
+    items.push(renderMedia(obj5));
   }
   const result = width / height;
   let diff = originLayout.x - (width - originLayout.width) / 2 - (windowWidth - width) / 2;
@@ -110,6 +109,8 @@ export default function MediaViewerItemPresenter(windowHeight) {
     tmp18 = height;
     tmp19 = width;
   }
+  let obj2 = windowWidth(entranceAnimationDriver[4]);
+  const tmp5 = windowHeight;
   class F {
     constructor() {
       value = entranceAnimationDriver.get();
@@ -136,19 +137,18 @@ export default function MediaViewerItemPresenter(windowHeight) {
       size.left = obj5.interpolate(value, [0, 1], items3, closure_0(closure_2[6]).Extrapolation.CLAMP);
       obj6 = closure_0(closure_2[6]);
       size.borderRadius = obj6.interpolate(value, [0, 0.25], [16, 0], closure_0(closure_2[6]).Extrapolation.CLAMP);
-      obj = { scale: null };
+      obj1 = { scale: null };
       items4 = [, ];
       items4[0] = closure_5;
       items4[1] = 1;
       obj8 = closure_0(closure_2[6]);
-      obj.scale = obj8.interpolate(value, [0, 1], items4, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      obj1.scale = obj8.interpolate(value, [0, 1], items4, closure_0(closure_2[6]).Extrapolation.CLAMP);
       items5 = [];
-      items5[0] = obj;
+      items5[0] = obj1;
       size.transform = items5;
       return size;
     }
   }
-  const tmp5 = windowHeight;
   const tmpResult = windowWidth(entranceAnimationDriver[6]);
   F.__closure = { entranceAnimationDriver, interpolate: windowWidth(entranceAnimationDriver[6]).interpolate, Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation, startHeight: tmp18, sourceHeight: height, startWidth: tmp19, sourceWidth: width, startTranslateY: diff1, startTranslateX: diff, startScale: num3 };
   F.__workletHash = 15052076990644;
@@ -163,12 +163,12 @@ export default function MediaViewerItemPresenter(windowHeight) {
     obj.child = size1;
     return hasOwnProperty.create(obj);
   }, items1);
-  let obj3 = { collapsable: false, style: memo.container, children: null };
-  let obj4 = { style: memo.child, children: null };
-  let obj5 = { style: null, children: items };
+  const obj7 = { collapsable: false, style: memo.container, children: null };
+  const obj8 = { style: memo.child, children: null };
+  const obj9 = { style: null, children: items };
   let items2 = [memo.presenter, animatedStyle];
-  obj5.style = items2;
-  obj4.children = diff2(tmp5(entranceAnimationDriver[7]), obj5);
-  obj3.children = diff2(height, obj4);
-  return diff2(height, obj3);
+  obj9.style = items2;
+  obj8.children = diff2(tmp5(entranceAnimationDriver[7]), obj9);
+  obj7.children = diff2(height, obj8);
+  return diff2(height, obj7);
 };

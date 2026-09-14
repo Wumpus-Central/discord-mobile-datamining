@@ -2,43 +2,40 @@
 
 // Module 8729 (FormText)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LegacyTokens from "LegacyTokens" /* 5522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_3 = createStyles.createStyles((arg0) => {
-  let obj = { primary: null, text: null };
-  obj = { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-  obj.primary = obj;
+  const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
   let num = 16;
   if ("small" === arg0) {
     num = 12;
   }
-  obj = { fontSize: num, lineHeight: null };
+  const obj3 = { fontSize: num, lineHeight: null };
   let num2 = 22;
   if ("small" === arg0) {
     num2 = 16;
   }
-  obj.lineHeight = num2;
-  obj.text = obj;
+  obj3.lineHeight = num2;
+  obj.text = obj3;
   return obj;
 });
-let obj = { BRAND: null, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
-obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
-obj.BRAND = obj;
-createStyles = { color: nativeDefault.unsafe_rawColors.RED_400 };
-obj.RED = createStyles;
+let obj = { BRAND: { color: nativeDefault.unsafe_rawColors.BRAND_500 }, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
+let obj3 = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+obj.RED = { color: nativeDefault.unsafe_rawColors.RED_400 };
+const obj4 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 obj.GREEN = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
-const obj2 = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
+const obj5 = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.YELLOW = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-const obj3 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+const obj6 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj.LINK = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
-const obj4 = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
+const obj7 = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
 obj.WHITE = { color: nativeDefault.unsafe_rawColors.WHITE };
-const obj5 = { color: nativeDefault.unsafe_rawColors.WHITE };
+const obj8 = { color: nativeDefault.unsafe_rawColors.WHITE };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormText.tsx");
 

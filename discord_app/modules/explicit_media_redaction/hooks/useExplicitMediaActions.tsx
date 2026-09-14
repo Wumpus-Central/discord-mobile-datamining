@@ -15,7 +15,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
   const report = onError.report;
   _slicedToArray = undefined;
   noop = undefined;
-  [tmp2, c3] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, c3] = noop.useState(false);
   noop = tmp2;
   let obj = { reportFalsePositive: null, isReportFalsePositiveLoading: tmp2 };
   const items = [tmp2, onError, onSuccess, report];
@@ -27,8 +27,8 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -41,8 +41,8 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             onError = tmp8;
             closure_128_0 = undefined;
@@ -53,8 +53,8 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
               v0 = 2;
               c4 = 3;
               c5 = 1;
-              const obj1 = { value: report(), done: false };
-              return obj1;
+              const obj4 = { value: report(), done: false };
+              return obj4;
             }
           }
         } else if (1 !== tmp8) {
@@ -73,7 +73,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
             v0 = 0;
             closure_129_3(false);
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (closure_129_1 != null) {

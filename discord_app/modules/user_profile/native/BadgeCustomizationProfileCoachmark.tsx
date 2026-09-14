@@ -1,6 +1,6 @@
-// === Module 16915: BadgeCustomizationProfileCoachmark ===
+// === Module 16917: BadgeCustomizationProfileCoachmark ===
 
-// Module 16915 (BadgeCustomizationProfileCoachmark)
+// Module 16917 (BadgeCustomizationProfileCoachmark)
 import util from "util" /* 1114 */;
 import native from "native" /* 4347 */;
 import noop from "module_19" /* 19 */;
@@ -19,17 +19,15 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
   const stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () => markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()));
   const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
   const memo = stateFromStores.useMemo(() => {
-    let obj = { title: null, description: null, visible: null, position: "bottom", gradientColor: "blue", graphic: null, onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
+    const obj = { title: null, description: null, visible: null, position: "bottom", gradientColor: "blue", graphic: null, onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["9JoKQb"]);
     const intl2 = util.intl;
     const t = util.t;
     obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj.visible = visible;
-    obj = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
-    obj = { dataBinding: { on: visible } };
-    obj.riveProps = obj;
-    obj.graphic = obj;
+    const obj2 = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: { dataBinding: { on: visible } } };
+    obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);
     };

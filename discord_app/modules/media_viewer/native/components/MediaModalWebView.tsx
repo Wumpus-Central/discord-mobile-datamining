@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "";
 if (PlatformUtils.isIOS()) {
   str = "\n  window.addEventListener('click', function(event) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({event: 'click'}));\n  });\n";
@@ -30,21 +30,22 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
   const panGestureConfig = playerState.panGestureConfig;
   ({ style, injectedJavaScript } = playerState);
   const merged = Object.assign(playerState, Object.assign({ style: 0, playerState: 0, onDataReceived: 0, baseURL: 0, injectedJavaScript: 0, panGestureConfig: 0 }));
-  let __closure = playerState(baseURL[5]);
-  const sharedValue = __closure.useSharedValue(1);
-  let obj1 = playerState(baseURL[5]);
-  const sharedValue1 = obj1.useSharedValue(0);
-  let obj2 = playerState(baseURL[5]);
+  let obj = playerState(baseURL[5]);
+  const sharedValue = obj.useSharedValue(1);
+  const tmp2 = closure_10();
+  let tmp3 = baseURL;
+  const sharedValue1 = playerState(baseURL[5]).useSharedValue(0);
+  const obj2 = playerState(baseURL[5]);
   const fn = function f() {
-    obj = { opacity: timing.withTiming(sharedValue1.get()) };
+    const obj = { opacity: timing.withTiming(sharedValue1.get()) };
     return obj;
   };
-  __closure = { withTiming: playerState(baseURL[6]).withTiming, webviewOpacity: sharedValue1 };
-  fn.__closure = __closure;
+  const obj3 = playerState(baseURL[5]);
+  fn.__closure = { withTiming: playerState(baseURL[6]).withTiming, webviewOpacity: sharedValue1 };
   fn.__workletHash = 2179142865986;
   fn.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = playerState(baseURL[5]);
+  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const obj4 = { withTiming: playerState(baseURL[6]).withTiming, webviewOpacity: sharedValue1 };
   class S {
     constructor() {
       obj = { opacity: null };
@@ -53,12 +54,12 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
       return obj;
     }
   }
-  __closure = { withTiming: playerState(baseURL[6]).withTiming, loaderOpacity: sharedValue };
-  S.__closure = __closure;
+  const obj5 = playerState(baseURL[5]);
+  S.__closure = { withTiming: playerState(baseURL[6]).withTiming, loaderOpacity: sharedValue };
   S.__workletHash = 7752174298017;
   S.__initData = __initData2;
   const items = [playerState, sharedValue, sharedValue1];
-  const animatedStyle1 = obj4.useAnimatedStyle(S);
+  const animatedStyle1 = obj5.useAnimatedStyle(S);
   const effect = panGestureConfig.useEffect(() => {
     if (!tmp3) {
       const result = sharedValue.set(0);
@@ -78,7 +79,7 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
     }
     onDataReceived(nativeEvent.nativeEvent.data);
   }, items1);
-  obj1 = { style, children: null };
+  const obj7 = { style, children: null };
   const callback1 = panGestureConfig.useCallback((url) => {
     let tmp = "about:blank" !== url.url;
     if (tmp) {
@@ -96,36 +97,35 @@ export default noop.memo(noop.forwardRef((playerState, ref) => {
     }
     return flag;
   }, items2);
-  obj2 = { style: null, children: null };
+  const obj8 = { style: null, children: null };
   const items3 = [animatedStyle, { flex: 1 }];
-  obj2.style = items3;
-  const obj3 = {};
+  obj8.style = items3;
+  const obj9 = {};
+  const obj6 = { withTiming: playerState(baseURL[6]).withTiming, loaderOpacity: sharedValue };
   const tmp12 = sharedValue1;
   const tmp14 = onDataReceived;
-  const tmp2 = closure_10();
-  let tmp3 = baseURL;
   const merged1 = Object.assign(merged);
-  obj3.injectedJavaScript = "" + injectedJavaScript + "\n" + str;
-  obj3.bounces = false;
-  obj3.ref = ref;
-  obj3.scrollEnabled = false;
-  obj3.javaScriptEnabled = true;
-  obj3.onMessage = callback;
-  obj3.allowsInlineMediaPlayback = true;
-  obj3.mediaPlaybackRequiresUserAction = false;
-  obj3.onShouldStartLoadWithRequest = callback1;
-  obj2.children = closure_6(onDataReceived(baseURL[8]), obj3);
-  const items4 = [closure_6(onDataReceived(baseURL[5]).View, obj2), ];
-  let tmp13Result = playerState !== __closure.PLAYING && playerState !== __closure.PAUSED;
+  obj9.injectedJavaScript = "" + injectedJavaScript + "\n" + str;
+  obj9.bounces = false;
+  obj9.ref = ref;
+  obj9.scrollEnabled = false;
+  obj9.javaScriptEnabled = true;
+  obj9.onMessage = callback;
+  obj9.allowsInlineMediaPlayback = true;
+  obj9.mediaPlaybackRequiresUserAction = false;
+  obj9.onShouldStartLoadWithRequest = callback1;
+  obj8.children = closure_6(onDataReceived(baseURL[8]), obj9);
+  const items4 = [closure_6(onDataReceived(baseURL[5]).View, obj8), ];
+  let tmp13Result = playerState !== obj.PLAYING && playerState !== obj.PAUSED;
   if (tmp13Result) {
-    obj4 = { style: null, children: null };
+    const obj10 = { style: null, children: null };
     const items5 = [animatedStyle1, tmp2.loading];
-    obj4.style = items5;
-    obj4.children = closure_6(sharedValue, { color: "white", size: "large" });
-    tmp13Result = closure_6(tmp14(tmp3[5]).View, obj4);
+    obj10.style = items5;
+    obj10.children = closure_6(sharedValue, { color: "white", size: "large" });
+    tmp13Result = closure_6(tmp14(tmp3[5]).View, obj10);
   }
   items4[1] = tmp13Result;
-  obj1.children = items4;
-  return closure_7(tmp12, obj1);
+  obj7.children = items4;
+  return closure_7(tmp12, obj7);
 }));
 export { PlayerState };

@@ -1,15 +1,15 @@
-// === Module 13146: getActivityPlatform ===
+// === Module 13147: getActivityPlatform ===
 
-// Module 13146 (getActivityPlatform)
+// Module 13147 (getActivityPlatform)
 import Constants from "Constants" /* 1074 */;
 import PlatformsDefault from "Platforms" /* 5364 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8462 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11019 */;
-import isOnXboxDefault from "isOnXbox" /* 13132 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 13133 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13145 */;
-import isOnMetaQuestDefault from "isOnMetaQuest" /* 13147 */;
-import isOnMetaHorizonDefault from "isOnMetaHorizon" /* 13148 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11020 */;
+import isOnXboxDefault from "isOnXbox" /* 13133 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13134 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13146 */;
+import isOnMetaQuestDefault from "isOnMetaQuest" /* 13148 */;
+import isOnMetaHorizonDefault from "isOnMetaHorizon" /* 13149 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;
@@ -23,11 +23,9 @@ export default function getActivityPlatform(session_id) {
   if (null != tmp3) {
     return tmp3;
   } else if (isListeningOnSpotifyDefault(session_id)) {
-    let tmpResult = PlatformsDefault;
-    return tmpResult.get(PlatformTypes.SPOTIFY);
+    return PlatformsDefault.get(PlatformTypes.SPOTIFY);
   } else if (isCrunchyrollActivityDefault(session_id)) {
-    tmpResult = PlatformsDefault;
-    return tmpResult.get(PlatformTypes.CRUNCHYROLL);
+    return PlatformsDefault.get(PlatformTypes.CRUNCHYROLL);
   } else if (isOnXboxDefault(session_id)) {
     return PlatformsDefault.get(PlatformTypes.XBOX);
   } else if (isOnPlayStationDefault(session_id)) {

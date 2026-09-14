@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/activities/native/openIgnoreT
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
-  let obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
       return asyncRequireImpl(9716, dependencyMap.paths).then((IgnoreThermalStateAlert) => {
         IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
@@ -24,6 +24,5 @@ export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

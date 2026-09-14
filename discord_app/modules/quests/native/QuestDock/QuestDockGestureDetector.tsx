@@ -1,16 +1,16 @@
-// === Module 15265: QuestDockGestureDetector ===
+// === Module 15266: QuestDockGestureDetector ===
 
-// Module 15265 (QuestDockGestureDetector)
+// Module 15266 (QuestDockGestureDetector)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import QuestDockUtils from "QuestDockUtils" /* 15174 */;
+import QuestDockUtils from "QuestDockUtils" /* 15175 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function useQuestDockSwipeGesture() {
+  const questDockCreative = questDockExpandHandler(activeQuestDockMode[4]).useQuestDockCreative();
   let obj = questDockExpandHandler(activeQuestDockMode[4]);
-  const questDockCreative = obj.useQuestDockCreative();
   questDockExpandHandler = questDockExpandHandler(activeQuestDockMode[5]).useQuestDockExpandHandler(questDockCreative);
   const context = windowDimensions.useContext(questDockExpandHandler(activeQuestDockMode[6]).QuestDockGestureContext);
   const questDockWrapperSpecs = context.questDockWrapperSpecs;
@@ -31,7 +31,7 @@ function useQuestDockSwipeGesture() {
   const sharedValue1 = questDockExpandHandler(activeQuestDockMode[10]).useSharedValue(0);
   let obj5 = questDockExpandHandler(activeQuestDockMode[10]);
   const sharedValue2 = questDockExpandHandler(activeQuestDockMode[10]).useSharedValue(isVisibleToUser);
-  const obj6 = questDockExpandHandler(activeQuestDockMode[10]);
+  let obj6 = questDockExpandHandler(activeQuestDockMode[10]);
   const youBarTotalHeight = questDockExpandHandler(activeQuestDockMode[11]).useYouBarTotalHeight();
   let obj7 = questDockExpandHandler(activeQuestDockMode[11]);
   const youBarHorizontalMargin = questDockExpandHandler(activeQuestDockMode[12]).useYouBarHorizontalMargin();
@@ -53,11 +53,11 @@ function useQuestDockSwipeGesture() {
         return;
       }
     }
-    let obj = { touchMoveCount: sharedValue1, initialGestureOffset: sharedValue, questDockWrapperSpecs, restingQuestDockMode, QuestDockMode };
-    I.__closure = obj;
+    I.__closure = { touchMoveCount: sharedValue1, initialGestureOffset: sharedValue, questDockWrapperSpecs, restingQuestDockMode, QuestDockMode };
     I.__workletHash = 15649211210155;
     I.__initData = __initData4;
     const maxPointersResult = Gesture.Pan().manualActivation(false).maxPointers(1);
+    const obj = { touchMoveCount: sharedValue1, initialGestureOffset: sharedValue, questDockWrapperSpecs, restingQuestDockMode, QuestDockMode };
     class A {
       constructor(arg0) {
         if (arg0.state === closure_0(activeQuestDockMode[13]).State.BEGAN) {
@@ -148,15 +148,13 @@ function useQuestDockSwipeGesture() {
         return;
       }
     }
-    obj = { State: LegacyBaseButton.State, initialGestureOffset: sharedValue, touchMoveCount: sharedValue1, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, restingQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: React6, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: React7, questDockWrapperSpecs };
-    A.__closure = obj;
+    const onTouchesDownResult = result.onTouchesDown(I);
+    A.__closure = { State: LegacyBaseButton.State, initialGestureOffset: sharedValue, touchMoveCount: sharedValue1, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, restingQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: React6, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: React7, questDockWrapperSpecs };
     A.__workletHash = 16451041821957;
     A.__initData = __initData3;
-    const onTouchesDownResult = result.onTouchesDown(I);
+    let obj2 = { State: LegacyBaseButton.State, initialGestureOffset: sharedValue, touchMoveCount: sharedValue1, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, restingQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: React6, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: React7, questDockWrapperSpecs };
     const fn = function s(absoluteY) {
-      let obj = closure_1_10;
       const diff = absoluteY.absoluteY - closure_1_10.get().absoluteY;
-      let obj1 = closure_1_4;
       value = closure_1_4.get();
       const diff1 = closure_1_10.get().height - diff;
       let tmp4 = diff1 > value;
@@ -167,54 +165,54 @@ function useQuestDockSwipeGesture() {
       if (tmp4) {
         sum = value + (diff1 - value) * closure_2_16;
       }
-      if (obj1.get() > 0) {
+      if (closure_1_4.get() > 0) {
         const _Math = Math;
-        let bound = Math.min(obj1.get(), sharedValue);
+        let bound = Math.min(closure_1_4.get(), sharedValue);
       } else {
         bound = sharedValue;
       }
       if (sum >= bound) {
-        if (!obj.get().isDrawer) {
-          obj = {};
-          const merged = Object.assign(obj.get());
-          obj.isDrawer = true;
-          const result = obj.set(obj);
+        if (!closure_1_10.get().isDrawer) {
+          const obj3 = {};
+          const merged = Object.assign(closure_1_10.get());
+          obj3.isDrawer = true;
+          const result = closure_1_10.set(obj3);
         }
-        obj = {};
+        const obj6 = {};
         const merged1 = Object.assign(questDockWrapperSpecs.get());
-        obj.x = 0;
+        obj6.x = 0;
         let num3 = 0;
         if (youBarTotalHeight > 0) {
           num3 = youBarTotalHeight;
         }
-        obj.y = num3;
-        obj.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockExpandedWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
+        obj6.y = num3;
+        obj6.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockExpandedWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
         const _Math4 = Math;
-        obj.height = Math.min(sum, windowDimensions.get().height);
-        obj.prevDeltaY = diff;
-        const result1 = questDockWrapperSpecs.set(obj);
+        obj6.height = Math.min(sum, windowDimensions.get().height);
+        obj6.prevDeltaY = diff;
+        const result1 = questDockWrapperSpecs.set(obj6);
         const result2 = closure_1_2.set(minExpandedContentHeight.EXPANDED);
         const obj12 = questDockExpandHandler(activeQuestDockMode[14]);
       } else if (sum < sharedValue1) {
         if (closure_1_2.get() === minExpandedContentHeight.CLOSED) {
           const _Math5 = Math;
           const result3 = (1 - Math.min(sum, 0) / restingQuestDockMode) * (restingQuestDockMode - sum);
-          obj1 = {};
+          const obj10 = {};
           const merged2 = Object.assign(questDockWrapperSpecs.get());
-          obj1.x = 0;
+          obj10.x = 0;
           let num2 = 0;
           if (0 < result3) {
             num2 = result3 * closure_2_15;
           }
-          obj1.y = num2;
-          obj1.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockClosedWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
+          obj10.y = num2;
+          obj10.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockClosedWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
           let tmp49 = sum;
           if (0 < result3) {
             tmp49 = restingQuestDockMode;
           }
-          obj1.height = tmp49;
-          obj1.prevDeltaY = diff;
-          const result4 = questDockWrapperSpecs.set(obj1);
+          obj10.height = tmp49;
+          obj10.prevDeltaY = diff;
+          const result4 = questDockWrapperSpecs.set(obj10);
           const result5 = closure_1_2.set(minExpandedContentHeight.CLOSED);
           const obj9 = questDockExpandHandler(activeQuestDockMode[14]);
         }
@@ -226,13 +224,12 @@ function useQuestDockSwipeGesture() {
           num = -Math.min(result6, 0);
         }
         const result7 = questDockOffset.set(num);
-        if (obj.get().isDrawer) {
-          const obj2 = {};
-          const merged3 = Object.assign(obj.get());
-          obj2.isDrawer = false;
-          const result8 = obj.set(obj2);
+        if (closure_1_10.get().isDrawer) {
+          const obj11 = {};
+          const merged3 = Object.assign(closure_1_10.get());
+          obj11.isDrawer = false;
+          const result8 = closure_1_10.set(obj11);
         }
-        let obj3 = questDockWrapperSpecs;
         let tmp17 = height !== questDockWrapperSpecs.get().height;
         if (tmp17) {
           tmp17 = closure_1_2.get() !== minExpandedContentHeight.EXPANDED;
@@ -242,16 +239,16 @@ function useQuestDockSwipeGesture() {
           questDockExpandHandler(activeQuestDockMode[10]).runOnJS(questDockExpandHandler(activeQuestDockMode[15]).triggerHapticFeedback)(questDockExpandHandler(activeQuestDockMode[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
           const runOnJSResult = questDockExpandHandler(activeQuestDockMode[10]).runOnJS(questDockExpandHandler(activeQuestDockMode[15]).triggerHapticFeedback);
         }
-        obj3 = {};
-        const merged4 = Object.assign(obj3.get());
-        obj3.x = 0;
+        const obj13 = {};
+        const merged4 = Object.assign(questDockWrapperSpecs.get());
+        obj13.x = 0;
         let bound1 = result6;
         const result9 = -1 * setRestingQuestDockMode;
         if (youBarTotalHeight > 0) {
           const _Math3 = Math;
           bound1 = Math.min(result6, 0);
         }
-        obj3.y = result9 + bound1;
+        obj13.y = result9 + bound1;
         if (youBarTotalHeight > 0) {
           let left = closure_1_14;
         } else {
@@ -262,19 +259,19 @@ function useQuestDockSwipeGesture() {
         } else {
           right = safeArea.get().right;
         }
-        obj3.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockCollapsedWidth(windowDimensions.get().width, left, right);
-        obj3.height = height;
-        obj3.prevDeltaY = diff;
-        const result10 = obj3.set(obj3);
+        obj13.width = questDockExpandHandler(activeQuestDockMode[14]).getQuestDockCollapsedWidth(windowDimensions.get().width, left, right);
+        obj13.height = height;
+        obj13.prevDeltaY = diff;
+        const result10 = questDockWrapperSpecs.set(obj13);
         const result11 = closure_1_2.set(minExpandedContentHeight.COLLAPSED);
         const obj7 = questDockExpandHandler(activeQuestDockMode[14]);
       }
     };
-    const onTouchesMoveResult = result.onTouchesDown(I).onTouchesMove(A);
+    const onTouchesMoveResult = onTouchesDownResult.onTouchesMove(A);
     fn.__closure = { initialGestureOffset: sharedValue, minExpandedContentHeight, activeQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_2_10, questDockWrapperSpecs, youBarHeight: youBarTotalHeight, getQuestDockExpandedWidth: QuestDockUtils.getQuestDockExpandedWidth, windowDimensions, safeArea, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_2_11, QUEST_DOCK_CLOSED_HEIGHT, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_2_15, getQuestDockClosedWidth: QuestDockUtils.getQuestDockClosedWidth, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_2_14, questDockOffset, runOnJS: ReanimatedRexport.runOnJS, triggerHapticFeedback: HapticUtils.triggerHapticFeedback, HapticFeedbackTypes: HapticUtils.HapticFeedbackTypes, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED, getQuestDockCollapsedWidth: QuestDockUtils.getQuestDockCollapsedWidth, youBarHorizontalMargin };
     fn.__workletHash = 3375221025411;
     fn.__initData = __initData2;
-    let obj1 = { initialGestureOffset: sharedValue, minExpandedContentHeight, activeQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_2_10, questDockWrapperSpecs, youBarHeight: youBarTotalHeight, getQuestDockExpandedWidth: QuestDockUtils.getQuestDockExpandedWidth, windowDimensions, safeArea, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_2_11, QUEST_DOCK_CLOSED_HEIGHT, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_2_15, getQuestDockClosedWidth: QuestDockUtils.getQuestDockClosedWidth, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_2_14, questDockOffset, runOnJS: ReanimatedRexport.runOnJS, triggerHapticFeedback: HapticUtils.triggerHapticFeedback, HapticFeedbackTypes: HapticUtils.HapticFeedbackTypes, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED, getQuestDockCollapsedWidth: QuestDockUtils.getQuestDockCollapsedWidth, youBarHorizontalMargin };
+    let obj3 = { initialGestureOffset: sharedValue, minExpandedContentHeight, activeQuestDockMode, QuestDockMode, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: closure_2_10, questDockWrapperSpecs, youBarHeight: youBarTotalHeight, getQuestDockExpandedWidth: QuestDockUtils.getQuestDockExpandedWidth, windowDimensions, safeArea, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_2_11, QUEST_DOCK_CLOSED_HEIGHT, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_2_15, getQuestDockClosedWidth: QuestDockUtils.getQuestDockClosedWidth, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_2_14, questDockOffset, runOnJS: ReanimatedRexport.runOnJS, triggerHapticFeedback: HapticUtils.triggerHapticFeedback, HapticFeedbackTypes: HapticUtils.HapticFeedbackTypes, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED, getQuestDockCollapsedWidth: QuestDockUtils.getQuestDockCollapsedWidth, youBarHorizontalMargin };
     const fn2 = function t(arg0) {
       ({ velocityY, y } = arg0);
       const absolute = Math.abs(velocityY);
@@ -359,15 +356,15 @@ function useQuestDockSwipeGesture() {
       return;
     }
   }
-  obj = { QuestDockMode: minExpandedContentHeight, runOnJS: questDockExpandHandler(activeQuestDockMode[10]).runOnJS, triggerHapticFeedback: questDockExpandHandler(activeQuestDockMode[15]).triggerHapticFeedback, HapticFeedbackTypes: questDockExpandHandler(activeQuestDockMode[15]).HapticFeedbackTypes };
-  X.__closure = obj;
+  let obj9 = questDockExpandHandler(activeQuestDockMode[10]);
+  X.__closure = { QuestDockMode: minExpandedContentHeight, runOnJS: questDockExpandHandler(activeQuestDockMode[10]).runOnJS, triggerHapticFeedback: questDockExpandHandler(activeQuestDockMode[15]).triggerHapticFeedback, HapticFeedbackTypes: questDockExpandHandler(activeQuestDockMode[15]).HapticFeedbackTypes };
   X.__workletHash = 17417080823410;
   X.__initData = __initData2;
-  const animatedReaction = questDockExpandHandler(activeQuestDockMode[10]).useAnimatedReaction(W, X);
+  const animatedReaction = obj9.useAnimatedReaction(W, X);
   return memo;
 }
 const QuestDockMode = fn(5525).QuestDockMode;
-const QuestDockConstants = fn(15175);
+const QuestDockConstants = fn(15176);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty, QUEST_DOCK_CLOSED_HEIGHT: metroRequire, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: closure_7, QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_8, QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: closure_9, QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: c10, QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_11, QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY: closure_12, QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1, QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_14, QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_15, QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: closure_16 } = QuestDockConstants);
 const jsx = fn(21).jsx;
 let closure_18 = { code: "function QuestDockGestureDetectorTsx1(event){const{QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY,restingQuestDockMode,QuestDockMode,initialGestureOffset,QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT,runOnJS,onExpand,setRestingQuestDockMode}=this.__closure;const{velocityY:velocityY,y:y}=event;const absoluteVelocityY=Math.abs(velocityY);const absoluteY=Math.abs(y);let resultingDockMode;if(absoluteVelocityY>QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY&&velocityY<0){if(restingQuestDockMode.get()===QuestDockMode.EXPANDED){resultingDockMode=QuestDockMode.RESET_TO_PREVIOUS;}else{resultingDockMode=QuestDockMode.EXPANDED;}}else if(absoluteVelocityY<QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY&&initialGestureOffset.get().isDrawer){if(restingQuestDockMode.get()===QuestDockMode.EXPANDED){resultingDockMode=QuestDockMode.RESET_TO_PREVIOUS;}else{resultingDockMode=QuestDockMode.EXPANDED;}}else if(restingQuestDockMode.get()===QuestDockMode.COLLAPSED&&(velocityY>QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY||y>QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT)){resultingDockMode=QuestDockMode.SOFT_DISMISSED;}else if(velocityY>QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY&&restingQuestDockMode.get()!==QuestDockMode.COLLAPSED){resultingDockMode=QuestDockMode.COLLAPSED;}else if(velocityY<0&&absoluteVelocityY>QUEST_DOCK_GESTURE_MODE_TRANSITION_VELOCITY&&restingQuestDockMode.get()===QuestDockMode.CLOSED){resultingDockMode=QuestDockMode.COLLAPSED;}else{if(restingQuestDockMode.get()===QuestDockMode.COLLAPSED||restingQuestDockMode.get()===QuestDockMode.CLOSED){resultingDockMode=QuestDockMode.RESET_TO_PREVIOUS;}else{resultingDockMode=QuestDockMode.COLLAPSED;}}if(restingQuestDockMode.get()===QuestDockMode.CLOSED&&resultingDockMode!==QuestDockMode.EXPANDED&&y<0&&absoluteY>QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT){resultingDockMode=QuestDockMode.COLLAPSED;}if(resultingDockMode===QuestDockMode.EXPANDED){runOnJS(onExpand)();}runOnJS(setRestingQuestDockMode)(resultingDockMode);}" };

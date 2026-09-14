@@ -1,6 +1,6 @@
-// === Module 14266: Slider ===
+// === Module 14267: Slider ===
 
-// Module 14266 (Slider)
+// Module 14267 (Slider)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
@@ -10,16 +10,15 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: null, maximumTrackTintColor: null, startIcon: null, endIcon: null };
-createStyles = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-createStyles.minimumTrackTintColor = createStyles;
-createStyles.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
-let obj1 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
-createStyles.startIcon = { marginRight: nativeDefault.space.PX_8 };
-const obj2 = { marginRight: nativeDefault.space.PX_8 };
-createStyles.endIcon = { marginLeft: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
+let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
+let obj4 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
+obj2.startIcon = { marginRight: nativeDefault.space.PX_8 };
+const obj5 = { marginRight: nativeDefault.space.PX_8 };
+obj2.endIcon = { marginLeft: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Slider/native/Slider.native.tsx");
 
@@ -40,24 +39,24 @@ export const Slider = function Slider(step) {
     }
   }, items);
   if (null != startIcon) {
-    obj = { style: tmp2.startIcon, children: startIcon };
-    tmp6 = closure_5(View, obj);
+    const obj2 = { style: tmp2.startIcon, children: startIcon };
+    tmp6 = closure_5(View, obj2);
   }
   const items1 = [tmp6, , ];
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
   const items2 = [tmp2.slider, step.style];
-  obj.style = items2;
-  obj.step = step;
-  obj.onValueChange = callback;
-  obj.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
-  obj.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
-  obj.tapToSeek = true;
-  items1[1] = closure_5(step(8396), obj);
+  obj3.style = items2;
+  obj3.step = step;
+  obj3.onValueChange = callback;
+  obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
+  obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
+  obj3.tapToSeek = true;
+  items1[1] = closure_5(step(8396), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
-    const obj1 = { style: tmp2.endIcon, children: endIcon };
-    tmp8Result = closure_5(View, obj1);
+    const obj4 = { style: tmp2.endIcon, children: endIcon };
+    tmp8Result = closure_5(View, obj4);
   }
   items1[2] = tmp8Result;
   obj.children = items1;

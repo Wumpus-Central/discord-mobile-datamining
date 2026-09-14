@@ -1,17 +1,19 @@
-// === Module 17655: AutomodStore ===
+// === Module 17656: AutomodStore ===
 
-// Module 17655 (AutomodStore)
+// Module 17656 (AutomodStore)
 import _mod4259 from "module_4259" /* 4259 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 17656 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 17657 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const AutomodTriggerType = fn(11992).AutomodTriggerType;
+const AutomodTriggerType = fn(11993).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1244);
+const identity = fn(1242);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -22,12 +24,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     updateRule(guildId) {
       guildId = guildId.guildId;
       ({ id: closure_2, triggerType } = guildId);
-      let rules = guildId().rules;
-      rules = rules[guildId];
-      if (rules == null) {
-        rules = {};
+      const rules = guildId().rules;
+      let obj = rules[guildId];
+      if (obj == null) {
+        obj = {};
       }
-      let items = rules[triggerType];
+      let items = obj[triggerType];
       if (items == null) {
         items = [];
       }
@@ -52,16 +54,16 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1249).batchUpdates(() => {
-        rules = { rules: null, error: null };
-        rules = {};
+      guildId(1247).batchUpdates(() => {
+        obj = { rules: null, error: null };
+        const obj2 = {};
         const merged = Object.assign(rules);
-        rules = {};
-        const merged1 = Object.assign(rules);
-        rules[triggerType] = mapped;
-        rules[guildId] = rules;
-        rules.rules = rules;
-        guildId(rules);
+        const obj3 = {};
+        const merged1 = Object.assign(obj);
+        obj3[triggerType] = mapped;
+        obj2[guildId] = obj3;
+        obj.rules = obj2;
+        guildId(obj);
       });
     },
     removeRule(arg0, arg1) {
@@ -79,12 +81,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1249).batchUpdates(() => {
-        let obj = { rules: null, error: null };
-        obj = {};
+      closure_0(1247).batchUpdates(() => {
+        const obj = { rules: null, error: null };
+        const obj2 = {};
         const merged = Object.assign(rules);
-        obj[closure_1] = closure_4;
-        obj.rules = obj;
+        obj2[closure_1] = closure_4;
+        obj.rules = obj2;
         closure_0(obj);
       });
     },
@@ -98,8 +100,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -112,8 +114,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             const error = tmp3;
             closure_2 = tmp7;
@@ -135,17 +137,16 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               function convertToRulesByTriggerType(arr) {
                 const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [] };
                 const item = arr.forEach((item) => {
-                  let arr = obj[item.triggerType];
-                  if (arr != null) {
-                    arr = arr.push(item);
+                  if (obj[item.triggerType] != null) {
+                    arr.push(item);
                   }
                 });
                 return obj;
               }
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(closure_0), done: false };
-              return obj1;
+              const obj6 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(closure_0), done: false };
+              return obj6;
             }
           }
         } else {
@@ -154,31 +155,31 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             closure_130_4 = closure_5;
             const aPIError = new closure_0(convertToRulesByTriggerType[9]).APIError(closure_130_4);
             closure_130_3 = aPIError;
-            let obj2 = closure_0(convertToRulesByTriggerType[7]);
-            obj2.batchUpdates(() => {
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
               closure_0({ error });
             });
+            const obj3 = closure_0(convertToRulesByTriggerType[7]);
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_130_1 = convertToRulesByTriggerType(value);
             rules = closure_131_1().rules;
-            obj = closure_0(convertToRulesByTriggerType[7]);
-            obj.batchUpdates(() => {
-              let obj = { rules: null, error: null };
-              obj = {};
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
+              const obj = { rules: null, error: null };
+              const obj2 = {};
               const merged = Object.assign(closure_1_2);
-              obj[closure_1_0] = convertToRulesByTriggerType;
-              obj.rules = obj;
+              obj2[closure_1_0] = convertToRulesByTriggerType;
+              obj.rules = obj2;
               closure_0(obj);
             });
             c4 = 0;
+            let obj = closure_0(convertToRulesByTriggerType[7]);
           }
           c4 = 0;
           c7 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         }
         c7 = 3;
       } catch (tmp32) {
@@ -240,8 +241,8 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -254,8 +255,8 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp3;
             if (!closure_3) {
@@ -264,8 +265,8 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
                 v2(true);
                 c1 = 2;
                 c4 = 1;
-                const obj1 = { value: first(tmp20), done: false };
-                return obj1;
+                const obj4 = { value: first(tmp20), done: false };
+                return obj4;
               }
             }
             c4 = 3;
@@ -284,7 +285,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
         c3 = 0;
         closure_128_1(false);
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp24) {
         closure_2 = tmp24;
@@ -320,8 +321,8 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -334,8 +335,8 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp3;
             if (!closure_3) {
@@ -344,8 +345,8 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
                 v2(true);
                 c1 = 2;
                 c4 = 1;
-                const obj1 = { value: first(tmp20), done: false };
-                return obj1;
+                const obj4 = { value: first(tmp20), done: false };
+                return obj4;
               }
             }
             c4 = 3;
@@ -364,7 +365,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         c3 = 0;
         closure_128_1(false);
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp24) {
         closure_2 = tmp24;
@@ -389,8 +390,8 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -403,20 +404,20 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c1 = 1;
               c0 = 1;
-              const obj1 = { value: closure_2_0(), done: false };
-              return obj1;
+              const obj4 = { value: closure_2_0(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;
@@ -443,7 +444,6 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
     if (obj == null) {
       obj = {};
     }
-    obj = { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-    return obj;
+    return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
   }, require("module_4259").shallow);
 };

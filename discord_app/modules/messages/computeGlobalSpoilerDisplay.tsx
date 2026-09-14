@@ -3,6 +3,8 @@
 // Module 8389 (computeGlobalSpoilerDisplay)
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ Permissions: c3, SpoilerRenderSetting: closure_4 } = Constants);

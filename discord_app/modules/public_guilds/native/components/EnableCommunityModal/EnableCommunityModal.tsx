@@ -1,12 +1,12 @@
-// === Module 17778: EnableCommunityModal ===
+// === Module 17779: EnableCommunityModal ===
 
-// Module 17778 (EnableCommunityModal)
+// Module 17779 (EnableCommunityModal)
 import util from "util" /* 1114 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5711 */;
 import Navigator from "Navigator" /* 7103 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17777 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17779 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17778 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,35 +33,36 @@ export default function EnableCommunityModal() {
       obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
       return closure_1_4(closure_1_0(7480).HeaderActionButton, obj);
     }
-    let obj = {
-      headerRight,
-      headerLeft,
-      headerTitle() {
-        return null;
+    return {
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
+        headerRight,
+        headerLeft,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17781), {});
+        }
       },
-      render() {
-        return closure_1_4(closure_1_1(17780), {});
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17793), {});
+        }
+      },
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17794), {});
+        }
       }
     };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_4(closure_1_1(17792), {});
-      }
-    };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_4(closure_1_1(17793), {});
-      }
-    };
-    return { [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: obj };
   }, []);
   let obj = { screens: memo, initialRouteName: EnableCommunitySharedNavigation.EnableCommunityModalSteps.STEP_1, headerBackTitle: null };
   let intl = util.intl;

@@ -1,7 +1,7 @@
-// === Module 13913: useSpatialAudioControlState ===
+// === Module 13914: useSpatialAudioControlState ===
 
-// Module 13913 (useSpatialAudioControlState)
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13914 */;
+// Module 13914 (useSpatialAudioControlState)
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13915 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
@@ -13,9 +13,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/spatial_audio/useSpatialAudioControlState.tsx");
 
 export default function useSpatialAudioControlState(location) {
-  supported(status[3]);
-  const obj = { location };
-  const enabled = obj.useConfig(obj).enabled;
+  const enabled = supported(status[3]).useConfig({ location }).enabled;
+  const obj = supported(status[3]);
+  const obj2 = { location };
   const items = [MediaEngineStore];
   const stateFromStoresObject = enabled(status[4]).useStateFromStoresObject(items, () => ({ supported: MediaEngineStore.supports(constants.SPATIAL_AUDIO), status: MediaEngineStore.getSpatialAudioStatus() }));
   supported = stateFromStoresObject.supported;
@@ -49,8 +49,7 @@ export const isSpatialAudioBlocked = function isSpatialAudioBlocked(arg0) {
   return !items.includes(arg0);
 };
 export const isSpatialAudioEligible = function isSpatialAudioEligible(RTCConnectionStore) {
-  const obj = { location: RTCConnectionStore };
-  let enabled = obj.getConfig(obj).enabled;
+  let enabled = SpatialAudioForVoiceExperimentDefault.getConfig({ location: RTCConnectionStore }).enabled;
   if (enabled) {
     enabled = MediaEngineStore.supports(constants.SPATIAL_AUDIO);
   }

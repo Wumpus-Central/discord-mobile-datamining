@@ -7,15 +7,14 @@ import Backoff from "Backoff" /* 559 */;
 import size from "module_2" /* 2 */;
 
 const ChannelStreamTypes = Constants.ChannelStreamTypes;
-let obj = { timeout: null, backoff: null, retries: 8 };
-obj = { response: null, deadline: null };
+const obj = { timeout: null, backoff: null, retries: 8 };
+const obj2 = { response: null, deadline: null };
 const frozen = Object.freeze({ referencedAvatarProfile: false, referencedUsernameProfile: false, interactionAvatarProfile: false, interactionUsernameProfile: false, interactionData: false, avatarProfile: false, usernameProfile: false, emojiPicker: false, emojiBurstPicker: false, moreUtilities: false, contextMenu: false });
-obj.response = 10 * DurationsDefault.Millis.SECOND;
-obj.deadline = DurationsDefault.Millis.MINUTE;
-obj.timeout = obj;
+obj2.response = 10 * DurationsDefault.Millis.SECOND;
+obj2.deadline = DurationsDefault.Millis.MINUTE;
+obj.timeout = obj2;
 const result = 0.5 * DurationsDefault.Millis.SECOND;
-Backoff = new Backoff(result, 60 * DurationsDefault.Millis.SECOND);
-obj.backoff = Backoff;
+obj.backoff = new Backoff(result, 60 * DurationsDefault.Millis.SECOND);
 const result1 = size.fileFinishedImporting("modules/messages/MessageConstants.tsx");
 
 export const MESSAGE_GROUP_SPACING = [0, 4, 8, 16, 24];

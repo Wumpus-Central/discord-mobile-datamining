@@ -1,6 +1,6 @@
-// === Module 16037: createChatPanelNativeStackNavigator ===
+// === Module 16039: createChatPanelNativeStackNavigator ===
 
-// Module 16037 (createChatPanelNativeStackNavigator)
+// Module 16039 (createChatPanelNativeStackNavigator)
 import Link from "Link" /* 1484 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import noop from "module_19" /* 19 */;
@@ -11,8 +11,7 @@ function ChatPanelNativeStackNavigator(arg0) {
   let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
   let state;
   let descriptors;
-  let obj = state(descriptors[2]);
-  const navigationBuilder = obj.useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const navigationBuilder = state(descriptors[2]).useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
   const navigation = navigationBuilder.navigation;
@@ -25,7 +24,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     state.routes = items;
     const items1 = [];
     const items2 = [];
-    const filteredDescriptors = {};
+    const obj = {};
     let num = 0;
     let num2 = 0;
     let num3 = 0;
@@ -40,10 +39,10 @@ function ChatPanelNativeStackNavigator(arg0) {
             sum = num2 + 1;
           }
         } else {
-          arr = items2.push(tmp2);
+          let arr2 = items2.push(tmp2);
           sum = num2;
           if (tmp2.key in descriptors) {
-            filteredDescriptors[tmp2.key] = tmp8[tmp2.key];
+            obj[tmp2.key] = tmp8[tmp2.key];
             sum = num2;
           }
         }
@@ -59,9 +58,10 @@ function ChatPanelNativeStackNavigator(arg0) {
     } else if (state.index >= state.routes.length) {
       state.index = state.routes.length - 1;
     }
-    return { state, filteredDescriptors };
+    return { state, filteredDescriptors: obj };
   }, items);
   const state2 = memo.state;
+  let obj = state(descriptors[2]);
   let items1 = [navigation, , ];
   ({ index: arr2[1], key: arr2[2] } = state2);
   const accessibilityPatchedDescriptors = state(descriptors[4]).useAccessibilityPatchedDescriptors(memo.filteredDescriptors);
@@ -94,15 +94,15 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return addListenerResult;
   }, items1);
-  obj = { children: null };
-  obj = {};
+  let obj3 = { children: null };
+  const obj4 = {};
   const merged1 = Object.assign(merged);
-  obj.state = state2;
-  obj.navigation = navigation;
-  obj.descriptors = accessibilityPatchedDescriptors;
-  obj.describe = describe;
-  obj.children = state2(state(descriptors[5]).NativeStackView, obj);
-  return state2(NavigationContent, obj);
+  obj4.state = state2;
+  obj4.navigation = navigation;
+  obj4.descriptors = accessibilityPatchedDescriptors;
+  obj4.describe = describe;
+  obj3.children = state2(state(descriptors[5]).NativeStackView, obj4);
+  return state2(NavigationContent, obj3);
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

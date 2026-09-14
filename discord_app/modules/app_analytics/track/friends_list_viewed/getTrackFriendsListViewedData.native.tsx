@@ -1,11 +1,11 @@
-// === Module 16862: getTrackFriendsListViewedData ===
+// === Module 16864: getTrackFriendsListViewedData ===
 
-// Module 16862 (getTrackFriendsListViewedData)
+// Module 16864 (getTrackFriendsListViewedData)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12808 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import getFriendStatusCountsDefault from "getFriendStatusCounts" /* 16863 */;
+import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12809 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import getFriendStatusCountsDefault from "getFriendStatusCounts" /* 16865 */;
 import FriendSuggestionStore from "FriendSuggestionStore" /* 7764 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7760 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
@@ -21,21 +21,20 @@ export default function getTrackFriendsListViewedData() {
   const localAccount = ConnectedAccountsStore.getLocalAccount(constants.CONTACTS);
   const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.getSetting();
-  let obj = FlagUtils;
-  const hasFlagResult = obj.hasFlag(setting, constants2.FIND_BY_PHONE);
+  const hasFlagResult = FlagUtils.hasFlag(setting, constants2.FIND_BY_PHONE);
   const suggestionCount = FriendSuggestionStore.getSuggestionCount();
-  obj = { num_friends: RelationshipStore.getFriendCount() };
+  const obj3 = { num_friends: RelationshipStore.getFriendCount() };
   const merged = Object.assign(getFriendStatusCountsDefault());
-  obj.num_outgoing_requests = RelationshipStore.getOutgoingCount();
-  obj.num_incoming_requests = RelationshipStore.getPendingCount();
-  obj.num_game_friends = GameRelationshipStore.getGameFriendCount();
-  obj.num_game_outgoing_requests = GameRelationshipStore.getPendingOutgoingCount();
-  obj.num_game_incoming_requests = GameRelationshipStore.getPendingIncomingCount();
-  obj.num_suggestions = suggestionCount;
-  obj.was_dismissed = useContactSyncStore.getState().upsellCTADismissed;
+  obj3.num_outgoing_requests = RelationshipStore.getOutgoingCount();
+  obj3.num_incoming_requests = RelationshipStore.getPendingCount();
+  obj3.num_game_friends = GameRelationshipStore.getGameFriendCount();
+  obj3.num_game_outgoing_requests = GameRelationshipStore.getPendingOutgoingCount();
+  obj3.num_game_incoming_requests = GameRelationshipStore.getPendingIncomingCount();
+  obj3.num_suggestions = suggestionCount;
+  obj3.was_dismissed = useContactSyncStore.getState().upsellCTADismissed;
   const hasFlagResult1 = FlagUtils.hasFlag(setting, constants2.FIND_BY_EMAIL);
-  obj.contact_sync_is_enabled = ContactSyncUtils.isContactSyncEnabled(localAccount);
-  obj.is_discoverable_email = hasFlagResult1;
-  obj.is_discoverable_phone = hasFlagResult;
-  return obj;
+  obj3.contact_sync_is_enabled = ContactSyncUtils.isContactSyncEnabled(localAccount);
+  obj3.is_discoverable_email = hasFlagResult1;
+  obj3.is_discoverable_phone = hasFlagResult;
+  return obj3;
 };

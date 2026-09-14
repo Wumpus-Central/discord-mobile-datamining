@@ -15,14 +15,13 @@ class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
-  let tmp = prototype;
   const merged = Object.assign(super.fromServer(arg0));
   const merged1 = Object.assign(arg0);
   if (typeof prototype === "function") {
-    tmp = new tmp(obj, arg0, this, merged);
-    tmp.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
+    const tmp2 = new prototype(obj, arg0, this, merged);
+    tmp2.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
     ({ title: tmp7.title, description: tmp7.description, accessibilityLabel: tmp7.accessibilityLabel, reducedMotionSrc: tmp7.reducedMotionSrc, thumbnailPreviewSrc: tmp7.thumbnailPreviewSrc, effects: tmp7.effects, animationType: tmp7.animationType, staticFrameSrc: tmp7.staticFrameSrc } = obj);
-    return tmp;
+    return tmp2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

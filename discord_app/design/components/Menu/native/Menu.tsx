@@ -1,9 +1,9 @@
-// === Module 14216: Menu ===
+// === Module 14217: Menu ===
 
-// Module 14216 (Menu)
+// Module 14217 (Menu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -18,16 +18,15 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(14206).STANDARD_EASING };
-fn(4636);
-__closure = { backdrop: null, menu: null };
-let obj1 = {};
+let __closure = { duration: 250, easing: fn(14207).STANDARD_EASING };
+const createStyles = fn(4636);
+let obj2 = { backdrop: null, menu: null };
+let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj1.zIndex = 1;
-__closure.backdrop = obj1;
-const createStyles = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
-__closure.menu = createStyles;
-let closure_10 = createStyles.createStyles(__closure);
+obj4.zIndex = 1;
+obj2.backdrop = obj4;
+obj2.menu = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
+let closure_10 = createStyles.createStyles(obj2);
 const context = noop.createContext({ menuClose: NOOP, menuDismiss: NOOP });
 function measureButtonRef(arg0, arg1) {
   const measureResult = ReanimatedRexport.measure(arg0);
@@ -36,6 +35,7 @@ function measureButtonRef(arg0, arg1) {
     const tmpResult = ReanimatedRexport;
   }
 }
+let obj5 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
 measureButtonRef.__closure = { measure: fn(4373).measure, runOnJS: fn(4373).runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
@@ -59,19 +59,20 @@ export const Menu = function Menu(toggleButtonRef) {
   }
   ({ offset, offsetAnimated } = toggleButtonRef);
   let enabled;
-  let size2;
+  size2 = undefined;
+  closure_5 = undefined;
   onClose = undefined;
   closure_10 = undefined;
   redux = undefined;
   function openMenuCallback() {
-    let obj = PlatformUtils;
     if (obj.isAndroid()) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.ZqK0uI));
     }
-    obj = { ref };
-    const result = setAccessibilityFocus.setAccessibilityFocus(obj);
+    obj = PlatformUtils;
+    const result = setAccessibilityFocus.setAccessibilityFocus({ ref });
+    const obj2 = { ref };
     const tmpResult = setAccessibilityFocus;
   }
   ({ style, children } = toggleButtonRef);
@@ -80,13 +81,12 @@ export const Menu = function Menu(toggleButtonRef) {
   const rect = offsetAnimated(enabled[10])();
   let size = offsetAnimated(enabled[11])();
   _slicedToArray = size2.useRef(null);
-  const tmp7 = _slicedToArray(size2.useState(null), 2);
-  size2 = tmp7[0];
-  closure_5 = tmp7[1];
-  __closure = toggleButtonRef(enabled[8]);
-  const sharedValue = __closure.useSharedValue(0);
-  let obj1 = toggleButtonRef(enabled[8]);
-  const sharedValue1 = obj1.useSharedValue({ width: 0, height: 0 });
+  [size2, closure_5] = size2.useState(null);
+  const sharedValue = toggleButtonRef(enabled[8]).useSharedValue(0);
+  let obj = toggleButtonRef(enabled[8]);
+  const tmp2 = size2;
+  const tmp6 = _slicedToArray;
+  const sharedValue1 = toggleButtonRef(enabled[8]).useSharedValue({ width: 0, height: 0 });
   let items = [toggleButtonRef, size2];
   const layoutEffect = size2.useLayoutEffect(() => {
     let current;
@@ -104,8 +104,8 @@ export const Menu = function Menu(toggleButtonRef) {
   if (onClose == null) {
     onClose = sharedValue;
   }
-  let tmp3Result = tmp3(tmp4[17]);
-  const boxShadowStyle = tmp3Result.generateBoxShadowStyle(tmp3(tmp4[17]).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  let obj2 = toggleButtonRef(enabled[8]);
+  const boxShadowStyle = toggleButtonRef(enabled[17]).generateBoxShadowStyle(tmp3(tmp4[17]).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {
@@ -182,36 +182,37 @@ export const Menu = function Menu(toggleButtonRef) {
     sum5 = tmp19 + num6;
   }
   function handleDismiss() {
-    __closure = { ref: toggleButtonRef };
-    const result = __closure.setAccessibilityFocus(__closure);
+    const obj = setAccessibilityFocus;
+    const result = obj.setAccessibilityFocus({ ref: toggleButtonRef });
     const fn = function t() {
       return toggleButtonRef(enabled[8]).runOnJS(onClose)();
     };
-    __closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
-    fn.__closure = __closure;
+    const obj2 = { ref: toggleButtonRef };
+    const obj3 = timing;
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
     fn.__workletHash = 5879184549724;
     fn.__initData = __initData2;
-    const result1 = sharedValue.set(timing.withTiming(0, __closure, "respect-motion-settings", fn));
+    const result1 = sharedValue.set(obj3.withTiming(0, obj, "respect-motion-settings", fn));
   }
-  __closure = {};
-  __closure[str9] = sum4;
-  __closure[str12] = sum5;
-  __closure.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
-  let items1 = [__closure, str9, str12];
+  let obj3 = {};
+  obj3[str9] = sum4;
+  obj3[str12] = sum5;
+  obj3.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
+  let items1 = [obj3, str9, str12];
   function handleClose() {
+    const obj = timing;
     const fn = function t() {
       return toggleButtonRef(enabled[8]).runOnJS(onClose)();
     };
-    __closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
-    fn.__closure = __closure;
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
     fn.__workletHash = 5879184549724;
     fn.__initData = __initData2;
-    const result = sharedValue.set(__closure.withTiming(0, __closure, "respect-motion-settings", fn));
+    const result = sharedValue.set(obj.withTiming(0, obj, "respect-motion-settings", fn));
   }
-  const tmp6Result = _slicedToArray(items1, 3);
+  const tmp6Result = tmp6(items1, 3);
   closure_10 = tmp23;
   redux = tmp24;
-  tmp3Result = tmp3(tmp4[8]);
+  const tmp3Result = toggleButtonRef(enabled[17]);
   class P {
     constructor() {
       obj = { opacity: closure_6.get(), transform: null };
@@ -252,11 +253,11 @@ export const Menu = function Menu(toggleButtonRef) {
           }
           num4 = x1;
         }
-        obj = { translateX: null };
+        obj1 = { translateX: null };
         items1[1] = num4;
-        obj.translateX = obj3.interpolate(value, [0, 1], items1);
+        obj1.translateX = obj3.interpolate(value, [0, 1], items1);
         items = [, , ];
-        items[0] = obj;
+        items[0] = obj1;
         tmpResult = tmp(tmp2[8]);
         tmp11 = closure_11;
         str2 = "top";
@@ -282,29 +283,30 @@ export const Menu = function Menu(toggleButtonRef) {
           }
           num5 = y1;
         }
-        obj1 = { translateY: null };
+        obj10 = { translateY: null };
         items2[1] = num5;
-        obj1.translateY = tmpResult.interpolate(value3, [0, 1], items2);
-        items[1] = obj1;
-        obj2 = { scale: null };
+        obj10.translateY = tmpResult.interpolate(value3, [0, 1], items2);
+        items[1] = obj10;
+        obj11 = { scale: null };
         num6 = 2;
         num7 = 0.5;
-        obj2.scale = obj2.get() / 2 + 0.5;
-        items[2] = obj2;
+        obj11.scale = obj2.get() / 2 + 0.5;
+        items[2] = obj11;
       }
       obj.transform = items;
       return obj;
     }
   }
-  __closure = { visible: sharedValue, useReducedMotion: enabled, interpolate: tmp3(tmp4[8]).interpolate, dirX: tmp23, size: sharedValue1, offsetAnimated, dirY: tmp24 };
-  P.__closure = __closure;
+  const tmp3Result2 = toggleButtonRef(enabled[8]);
+  P.__closure = { visible: sharedValue, useReducedMotion: enabled, interpolate: toggleButtonRef(enabled[8]).interpolate, dirX: tmp6Result[1], size: sharedValue1, offsetAnimated, dirY: tmp6Result[2] };
   P.__workletHash = 7884133597410;
   P.__initData = __initData;
-  const animatedStyle = tmp3Result.useAnimatedStyle(P);
-  obj1 = { style: null, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: handleDismiss, onAccessibilityEscape: handleDismiss, children: null };
+  const animatedStyle = tmp3Result2.useAnimatedStyle(P);
+  const obj5 = { style: null, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: handleDismiss, onAccessibilityEscape: handleDismiss, children: null };
   let items2 = [tmp.backdrop];
-  obj1.style = items2;
-  const obj2 = {
+  obj5.style = items2;
+  const obj4 = { visible: sharedValue, useReducedMotion: enabled, interpolate: toggleButtonRef(enabled[8]).interpolate, dirX: tmp6Result[1], size: sharedValue1, offsetAnimated, dirY: tmp6Result[2] };
+  let obj6 = {
     accessibilityRole: "list",
     style: null,
     onLayout(nativeEvent) {
@@ -322,24 +324,23 @@ export const Menu = function Menu(toggleButtonRef) {
     children: null
   };
   const items3 = [tmp.menu, boxShadowStyle, tmp6Result[0], animatedStyle, style];
-  obj2.style = items3;
-  let obj3 = { children: null };
-  const obj4 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
-  const Children = size2.Children;
-  obj4.children = Children.map(children, (icon, arg1) => {
+  obj6.style = items3;
+  let obj7 = { children: null };
+  let obj8 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
+  const Children = tmp2.Children;
+  obj8.children = Children.map(children, (icon, arg1) => {
     let cloneElementResult = icon;
     if (0 === arg1) {
-      let obj = noop;
       cloneElementResult = icon;
       if (noop.isValidElement(icon)) {
-        obj = { ref };
-        cloneElementResult = obj.cloneElement(icon, obj);
+        const obj2 = { ref };
+        cloneElementResult = noop.cloneElement(icon, obj2);
       }
     }
     return cloneElementResult;
   });
-  obj3.children = sharedValue1(redux.Provider, obj4);
-  obj2.children = sharedValue1(closure_5, obj3);
-  obj1.children = sharedValue1(offsetAnimated(enabled[8]).View, obj2);
-  return sharedValue1(offsetAnimated(enabled[18]), obj1);
+  obj7.children = sharedValue1(redux.Provider, obj8);
+  obj6.children = sharedValue1(closure_5, obj7);
+  obj5.children = sharedValue1(offsetAnimated(enabled[8]).View, obj6);
+  return sharedValue1(offsetAnimated(enabled[18]), obj5);
 };

@@ -1,6 +1,6 @@
-// === Module 13169: GroupAvatar ===
+// === Module 13170: GroupAvatar ===
 
-// Module 13169 (GroupAvatar)
+// Module 13170 (GroupAvatar)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import timing from "timing" /* 4637 */;
@@ -20,28 +20,28 @@ function AnimatedContainer(children) {
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
-  let obj = scale(translateY[8]);
-  let items = [sharedValue1];
-  const stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
   const tmp = closure_12();
+  let items = [sharedValue1];
+  const stateFromStores = scale(translateY[8]).useStateFromStores(items, () => sharedValue1.useReducedMotion);
+  let obj = scale(translateY[8]);
   let num = 1;
   if (animateOnMount) {
     num = 0;
   }
   sharedValue = scale(translateY[9]).useSharedValue(num);
-  let tmp2Result = tmp2(tmp3[9]);
+  const obj2 = scale(translateY[9]);
   let num2 = 0;
   if (!animateOnMount) {
     num2 = translateY;
   }
-  sharedValue1 = tmp2Result.useSharedValue(num2);
-  tmp2Result = tmp2(tmp3[9]);
+  sharedValue1 = scale(translateY[9]).useSharedValue(num2);
+  const tmp2Result = scale(translateY[9]);
   let num3 = 0;
   if (!animateOnMount) {
     num3 = translateX;
   }
-  sharedValue2 = tmp2Result.useSharedValue(num3);
-  const obj2 = scale(translateY[9]);
+  sharedValue2 = scale(translateY[9]).useSharedValue(num3);
+  const tmp2Result4 = scale(translateY[9]);
   let result = scale;
   if (animateOnMount) {
     result = scale / 2;
@@ -54,50 +54,49 @@ function AnimatedContainer(children) {
     const result2 = sharedValue1.set(translateY);
     const result3 = sharedValue2.set(translateX);
   }, items1);
-  const tmp2Result1 = scale(translateY[9]);
+  const tmp2Result5 = scale(translateY[9]);
   const fn = function y() {
     const obj = { opacity: timing.withTiming(sharedValue.get()), transform: null };
     if (stateFromStores) {
       let withSpringResult = sharedValue2.get();
     } else {
-      let tmpResult = spring;
-      withSpringResult = tmpResult.withSpring(sharedValue2.get(), closure_11);
+      withSpringResult = spring.withSpring(sharedValue2.get(), closure_11);
+      const tmpResult = spring;
     }
     const items = [{ translateX: withSpringResult }, , ];
     if (stateFromStores) {
-      value = sharedValue1.get();
+      let value3 = sharedValue1.get();
     } else {
-      tmpResult = spring;
-      value = tmpResult.withSpring(sharedValue1.get(), closure_11);
+      value3 = spring.withSpring(sharedValue1.get(), closure_11);
+      const tmpResult3 = spring;
     }
-    items[1] = { translateY: value };
+    items[1] = { translateY: value3 };
     if (stateFromStores) {
-      let value1 = sharedValue3.get();
+      let value4 = sharedValue3.get();
     } else {
-      value1 = spring.withSpring(sharedValue3.get(), closure_10);
-      const tmpResult1 = spring;
+      value4 = spring.withSpring(sharedValue3.get(), closure_10);
+      const tmpResult4 = spring;
     }
-    items[2] = { scale: value1 };
+    items[2] = { scale: value4 };
     obj.transform = items;
     return obj;
   };
-  obj = { withTiming: tmp2(tmp3[10]).withTiming, opacityAnimation: sharedValue, useReducedMotion: stateFromStores, translateXAnimation: sharedValue2, withSpring: tmp2(tmp3[11]).withSpring, SPRING_OPTIONS_POSITION, translateYAnimation: sharedValue1, scaleAnimation: sharedValue3, SPRING_OPTIONS_SCALE };
-  fn.__closure = obj;
+  const tmp2Result6 = scale(translateY[9]);
+  fn.__closure = { withTiming: scale(translateY[10]).withTiming, opacityAnimation: sharedValue, useReducedMotion: stateFromStores, translateXAnimation: sharedValue2, withSpring: scale(translateY[11]).withSpring, SPRING_OPTIONS_POSITION, translateYAnimation: sharedValue1, scaleAnimation: sharedValue3, SPRING_OPTIONS_SCALE };
   fn.__workletHash = 8800301056148;
   fn.__initData = __initData;
-  const animatedStyle = scale(translateY[9]).useAnimatedStyle(fn);
-  obj = { style: null, children: children.children };
+  const animatedStyle = tmp2Result6.useAnimatedStyle(fn);
+  const obj4 = { style: null, children: children.children };
   const items2 = [tmp.avatarContainer, animatedStyle];
-  obj.style = items2;
-  return sharedValue2(translateX(translateY[9]).View, obj);
+  obj4.style = items2;
+  return sharedValue2(translateX(translateY[9]).View, obj4);
 }
 function GroupMemberCount(count) {
   count = count.count;
-  let obj = ManaTypeConsolidationExperiment;
-  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GroupAvatar");
+  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GroupAvatar");
   const tmp2 = closure_12();
-  obj = { style: tmp2.avatarWrapper, children: null };
-  obj = { style: tmp2.overflowCount, children: null };
+  const obj2 = { style: tmp2.avatarWrapper, children: null };
+  const obj3 = { style: tmp2.overflowCount, children: null };
   let str = "text-sm/semibold";
   if (manaTypeConsolidationExperiment) {
     str = "text-sm/semibold";
@@ -105,12 +104,12 @@ function GroupMemberCount(count) {
       str = "experimental/body-md/semibold";
     }
   }
-  const obj1 = { variant: str, children: null };
+  const obj4 = { variant: str, children: null };
   const items = ["+", count];
-  obj1.children = items;
-  obj.children = React5(Text_Text.Text, obj1);
-  obj.children = timestampProducer(View, obj);
-  return timestampProducer(View, obj);
+  obj4.children = items;
+  obj3.children = React5(Text_Text.Text, obj4);
+  obj2.children = timestampProducer(View, obj3);
+  return timestampProducer(View, obj2);
 }
 function GroupMemberAvatar(guildId) {
   guildId = guildId.guildId;
@@ -126,9 +125,9 @@ function GroupMemberAvatar(guildId) {
   }, items);
   let tmp3 = null;
   if (null != memo) {
-    let obj = { style: tmp.avatarWrapper, children: null };
-    obj = { style: tmp.avatar, source: memo };
-    obj.children = timestampProducer(FastImageDefault, obj);
+    const obj = { style: tmp.avatarWrapper, children: null };
+    const obj2 = { style: tmp.avatar, source: memo };
+    obj.children = timestampProducer(FastImageDefault, obj2);
     tmp3 = timestampProducer(View, obj);
   }
   return tmp3;
@@ -142,12 +141,7 @@ const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
 const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
 const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles(() => {
-  let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
-  obj = { borderRadius: nativeDefault.radii.sm };
-  obj.shadowContainer = obj;
-  obj.shadowContainerBackground = {};
-  obj.shadowContainerBackgroundLight = { opacity: 0.4 };
-  obj.shadowContainerBackgroundDark = { opacity: 0.15 };
+  const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };
   obj.gradientContainer = size;
   obj.gradientDimOverlay = { position: "absolute", left: 0, top: 0, right: 0, bottom: 0 };
@@ -179,53 +173,54 @@ export default function GroupAvatar(users) {
   let ref;
   noop = undefined;
   const tmp = closure_12();
-  let obj = users(ref[6]);
-  const themeContext = obj.useThemeContext();
+  const themeContext = users(ref[6]).useThemeContext();
   ({ primaryColor, theme } = themeContext);
-  let obj1 = users(ref[6]);
-  let shadowContainerBackground = obj1.isThemeLight(theme) ? tmp.shadowContainerBackgroundLight : tmp.shadowContainerBackgroundDark;
+  let obj = users(ref[6]);
+  const tmp2 = ref;
+  let shadowContainerBackground = users(ref[6]).isThemeLight(theme) ? tmp.shadowContainerBackgroundLight : tmp.shadowContainerBackgroundDark;
   ref = noop.useRef(false);
   const effect = noop.useEffect(() => {
     ref.current = true;
   }, []);
+  let obj2 = users(ref[6]);
   noop = users.length > 4;
   const diff = users.length - 3;
   c4 = diff;
-  const animateOnMount = guildId(ref[7])(ref);
-  obj = { style: tmp.groupContainer, children: null };
+  const animateOnMount = guildId(tmp2[7])(ref);
+  let obj3 = { style: tmp.groupContainer, children: null };
   const items = [tmp.shadowContainer, ];
   const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((item, index) => {
     if (null == users[index]) {
       return null;
     } else {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(item);
       obj.key = tmp.id;
       obj.animateOnMount = animateOnMount;
       if (!closure_3) {
-        obj = { guildId, user: tmp };
-        let tmp13 = timestampProducer(GroupMemberAvatar, obj);
-        <AnimatedContainer guildId={guildId} user={tmp}>{tmp13}</AnimatedContainer>;
+        const obj2 = { guildId, user: tmp };
+        let tmp13 = timestampProducer(GroupMemberAvatar, obj2);
+        <AnimatedContainer {......obj}>{tmp13}</AnimatedContainer>;
       }
-      obj = { count };
-      tmp13 = timestampProducer(GroupMemberCount, obj);
+      const obj3 = { count };
+      tmp13 = timestampProducer(GroupMemberCount, obj3);
     }
   });
   if (null == primaryColor) {
     shadowContainerBackground = tmp.shadowContainerBackground;
   }
-  obj = { style: items, children: null };
+  const obj4 = { style: items, children: null };
   items[1] = shadowContainerBackground;
-  obj1 = { style: tmp.gradientContainer, children: null };
+  const obj5 = { style: tmp.gradientContainer, children: null };
   let tmp10Result = null == primaryColor;
   if (tmp10Result) {
-    const obj2 = { style: tmp.gradientDimOverlay };
-    tmp10Result = tmp10(tmp9, obj2);
+    const obj6 = { style: tmp.gradientDimOverlay };
+    tmp10Result = tmp10(tmp9, obj6);
   }
-  obj1.children = tmp10Result;
-  items1 = [animateOnMount(c4, obj1), animateOnMount(c4, { style: tmp.gradientImageBorder })];
-  obj.children = items1;
-  const items2 = [closure_7(c4, obj), mapped];
-  obj.children = items2;
-  return closure_7(c4, obj);
+  obj5.children = tmp10Result;
+  items1 = [animateOnMount(c4, obj5), animateOnMount(c4, { style: tmp.gradientImageBorder })];
+  obj4.children = items1;
+  const items2 = [closure_7(c4, obj4), mapped];
+  obj3.children = items2;
+  return closure_7(c4, obj3);
 };

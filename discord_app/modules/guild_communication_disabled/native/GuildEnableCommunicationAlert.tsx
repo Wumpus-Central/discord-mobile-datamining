@@ -1,8 +1,8 @@
-// === Module 11973: GuildEnableCommunicationAlert ===
+// === Module 11974: GuildEnableCommunicationAlert ===
 
-// Module 11973 (GuildEnableCommunicationAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CountDownDefault from "CountDown" /* 11061 */;
+// Module 11974 (GuildEnableCommunicationAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import CountDownDefault from "CountDown" /* 11062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,9 +16,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-const createStyles = { wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let closure_12 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
@@ -34,8 +33,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -48,29 +47,27 @@ export default function GuildEnableCommunicationAlert(guildId) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = v1(11972);
             v1 = 1;
             dependencyMap = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.setCommunicationDisabledDuration(guildId, userId);
-            return obj1;
+            const obj5 = { value: v1(11973).setCommunicationDisabledDuration(guildId, userId), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
-          const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
+          const obj7 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
           const intl = tmp4(1114).intl;
-          obj2.content = intl.string(tmp4(1114).t["/Mmbfv"]);
-          obj2.icon = v1(9696);
-          v1(4335).open(obj2);
+          obj7.content = intl.string(tmp4(1114).t["/Mmbfv"]);
+          obj7.icon = v1(9696);
+          v1(4335).open(obj7);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -84,8 +81,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   dependencyMap = tmp2;
   closure_3 = _slicedToArray(userId(8081)(userId, guildId), 1)[0];
   userId(5073)(() => {
-    const obj = { type, guild_id: guildId, other_user_id: userId };
-    obj.track(constants.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
   const merged1 = Object.assign(merged);
@@ -112,8 +108,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj = { style: tmp2.body, children: null };
-  obj = { style: tmp2.description, variant: "text-sm/medium", children: null };
+  const obj2 = { style: tmp2.body, children: null };
+  let obj3 = { style: tmp2.description, variant: "text-sm/medium", children: null };
   const intl4 = tmp9(1114).intl;
   const user = UserStore.getUser(userId);
   const tmp7 = userId(5075);
@@ -121,7 +117,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   if (str == null) {
     str = "";
   }
-  obj.children = intl4.format(guildId(1114).t["t+abNU"], {
+  obj3.children = intl4.format(guildId(1114).t["t+abNU"], {
     username: str,
     countdown(arg0) {
       let num = 0;
@@ -132,15 +128,15 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [closure_10(guildId(4632).Text, obj), ];
-  let obj2 = { style: null, variant: "text-sm/medium", children: null };
+  const items = [closure_10(guildId(4632).Text, obj3), ];
+  let obj5 = { style: null, variant: "text-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
-  obj2.style = items1;
+  obj5.style = items1;
   const intl5 = tmp9(1114).intl;
-  obj2.children = intl5.format(guildId(1114).t.KtENkK, { link });
-  items[1] = closure_10(guildId(4632).Text, obj2);
-  obj.children = items;
-  obj.children = closure_11(View, obj);
+  obj5.children = intl5.format(guildId(1114).t.KtENkK, { link });
+  items[1] = closure_10(guildId(4632).Text, obj5);
+  obj2.children = items;
+  obj.children = closure_11(View, obj2);
   return closure_10(tmp7, obj);
 };

@@ -1,20 +1,22 @@
 // === Module 9817: PushNotification ===
 
 // Module 9817 (PushNotification)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9818 */;
 import NativePushNotificationMonitorModule from "NativePushNotificationMonitorModule" /* 9819 */;
 import openNotificationSettingsDefault from "openNotificationSettings" /* 9820 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const NativeModules = get_ActivityIndicator.NativeModules;
 const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
-let tmp3 = null;
+let tmp32 = null;
 if (null != PushNotificationAndroid) {
-  tmp3 = new tmp3(NativeModules.PushNotificationAndroid);
+  tmp32 = new tmp3(NativeModules.PushNotificationAndroid);
 }
-let closure_5 = tmp3;
+let closure_5 = tmp32;
 let result = size.fileFinishedImporting("lib/pushnotification/PushNotification.tsx");
 
 export default {

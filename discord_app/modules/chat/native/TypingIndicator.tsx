@@ -1,17 +1,17 @@
-// === Module 12093: TypingIndicator ===
+// === Module 12094: TypingIndicator ===
 
-// Module 12093 (TypingIndicator)
+// Module 12094 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import native from "native" /* 4347 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12100 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12101 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5542 */;
-import TypingStore from "TypingStore" /* 12094 */;
+import TypingStore from "TypingStore" /* 12095 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -22,26 +22,27 @@ function TypingIndicatorInner(channel) {
   closure_6 = undefined;
   let sharedValue;
   let sharedValue1;
-  let obj = channel(cleanUp[14]);
-  let customTypingIndicatorConfig = obj.useCustomTypingIndicatorConfig("TypingIndicatorInner");
+  let customTypingIndicatorConfig = channel(cleanUp[14]).useCustomTypingIndicatorConfig("TypingIndicatorInner");
   const canView = customTypingIndicatorConfig.canView;
-  let obj1 = channel(cleanUp[11]);
+  let obj = channel(cleanUp[14]);
   let items = [closure_6];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
-  let obj2 = canView;
+  const stateFromStores = channel(cleanUp[11]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
   const callback = canView.useCallback(() => {
     const result = channel(cleanUp[15]).openCustomTypingIndicatorAnnounceActionSheet();
   }, []);
-  obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds };
-  const tmp7Result = transitionState(cleanUp[16])(obj);
+  const obj4 = { channelId: channel.id, guildId: null, typingUserIds: null };
+  let obj2 = channel(cleanUp[11]);
+  obj4.guildId = channel.getGuildId();
+  obj4.typingUserIds = typingUserIds;
+  const tmp7Result = transitionState(cleanUp[16])(obj4);
   let first = null;
   if (1 === typingUserIds.length) {
     first = typingUserIds[0];
   }
-  let tmpResult = tmp(tmp2[11]);
+  let tmp7 = transitionState(cleanUp[16]);
   const items1 = [TypingStore, UserStore, sharedValue];
   const items2 = [first, canView, stateFromStores, channel];
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
+  const stateFromStoresObject = channel(cleanUp[11]).useStateFromStoresObject(items1, () => {
     if (null != first) {
       if (canView) {
         const user = UserStore.getUser(first);
@@ -79,31 +80,31 @@ function TypingIndicatorInner(channel) {
   closure_6 = tmp11;
   const items3 = [null != stateFromStoresObject.config, , ];
   ({ id: arr4[1], type: arr4[2] } = channel);
-  const effect = obj2.useEffect(() => {
+  const effect = obj3.useEffect(() => {
     if (closure_6) {
-      const obj = { channel_id: null, channel_type: null };
       ({ id: obj2.channel_id, type: obj2.channel_type } = channel);
-      obj.track(AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN, { channel_id: null, channel_type: null });
+      const obj3 = { channel_id: null, channel_type: null };
     }
   }, items3);
-  tmpResult = tmp(tmp2[20]);
-  sharedValue = tmpResult.useSharedValue(undefined);
+  const tmpResult = channel(cleanUp[11]);
+  sharedValue = channel(cleanUp[20]).useSharedValue(undefined);
   const items4 = [sharedValue];
-  const callback1 = obj2.useCallback((nativeEvent) => {
+  const callback1 = obj3.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items4);
-  let tmp7 = transitionState(cleanUp[16]);
+  const tmpResult6 = channel(cleanUp[20]);
   const tmp15 = closure_15(channel(cleanUp[21]).useToken(transitionState(cleanUp[13]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
-  const tmpResult1 = channel(cleanUp[21]);
+  const tmpResult7 = channel(cleanUp[21]);
   sharedValue1 = channel(cleanUp[20]).useSharedValue(0);
   const items5 = [cleanUp, transitionState, sharedValue1];
-  const effect1 = obj2.useEffect(() => {
+  const effect1 = obj3.useEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
       const result = sharedValue1.set(0);
       cleanUp();
     }
   }, items5);
-  const tmpResult2 = channel(cleanUp[20]);
+  const tmpResult8 = channel(cleanUp[20]);
   class O {
     constructor() {
       return closure_7.get();
@@ -138,74 +139,72 @@ function TypingIndicatorInner(channel) {
       return;
     }
   }
-  obj = { translateYValue: sharedValue1, withSpring: tmp(tmp2[23]).withSpring, springStandard: tmp(tmp2[24]).springStandard };
-  V.__closure = obj;
+  const tmpResult9 = channel(cleanUp[20]);
+  V.__closure = { translateYValue: sharedValue1, withSpring: channel(cleanUp[23]).withSpring, springStandard: channel(cleanUp[24]).springStandard };
   V.__workletHash = 14874351700395;
   V.__initData = __initData2;
-  const animatedReaction = channel(cleanUp[20]).useAnimatedReaction(O, V);
-  const tmpResult3 = channel(cleanUp[20]);
+  const animatedReaction = tmpResult9.useAnimatedReaction(O, V);
+  const obj5 = { translateYValue: sharedValue1, withSpring: channel(cleanUp[23]).withSpring, springStandard: channel(cleanUp[24]).springStandard };
   const fn = function z() {
     value = sharedValue.get();
-    let obj = sharedValue1;
     if (0 === sharedValue1.get()) {
       let num = 0;
     } else {
       num = 1;
     }
-    obj = { opacity: num, top: null, transform: null };
+    const obj2 = { opacity: num, top: null, transform: null };
     let height;
     if (value != null) {
       height = value.height;
     }
-    obj.top = height;
-    obj = { translateY: obj.get() };
-    const items = [obj];
-    obj.transform = items;
-    return obj;
+    obj2.top = height;
+    const items = [{ translateY: sharedValue1.get() }];
+    obj2.transform = items;
+    return obj2;
   };
-  obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(tmp2[22]).TransitionStates };
-  fn.__closure = obj1;
+  const tmpResult10 = channel(cleanUp[20]);
+  fn.__closure = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: channel(cleanUp[22]).TransitionStates };
   fn.__workletHash = 15240163018691;
   fn.__initData = __initData3;
-  const animatedStyle = channel(cleanUp[20]).useAnimatedStyle(fn);
-  obj2 = { style: null, onLayout: callback1, children: null };
+  const animatedStyle = tmpResult10.useAnimatedStyle(fn);
+  const obj7 = { style: null, onLayout: callback1, children: null };
   const items6 = [tmp15.typingWrapper, animatedStyle];
-  obj2.style = items6;
-  const obj3 = { style: tmp15.wrapperHoriz, children: null };
-  const obj4 = { style: tmp15.horiz, children: null };
+  obj7.style = items6;
+  const obj8 = { style: tmp15.wrapperHoriz, children: null };
+  const obj9 = { style: tmp15.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj5 = { config: null, username: null, onPress: null };
+    const obj10 = { config: null, username: null, onPress: null };
     ({ config: obj18.config, name: obj18.username } = stateFromStoresObject);
     let tmp27;
     if (customTypingIndicatorConfig.canSet) {
       tmp27 = callback;
     }
-    obj5.onPress = tmp27;
-    let tmp21Result = closure_12(transitionState(tmp2[25]), obj5);
+    obj10.onPress = tmp27;
+    let tmp21Result = closure_12(transitionState(tmp2[25]), obj10);
     const tmp6Result = transitionState(tmp2[25]);
   } else {
-    let tmp20Result = null;
+    let tmp20Result3 = null;
     if (null != tmp7Result) {
-      tmp20Result = closure_12(tmp(tmp2[26]).Ellipsis, {});
+      tmp20Result3 = closure_12(tmp(tmp2[26]).Ellipsis, {});
     }
-    const obj6 = { children: null };
-    const items7 = [tmp20Result, ];
-    const obj7 = { style: tmp15.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp7Result };
-    items7[1] = closure_12(tmp(tmp2[27]).Text, obj7);
-    obj6.children = items7;
-    tmp21Result = closure_14(closure_13, obj6);
+    const obj11 = { children: null };
+    const items7 = [tmp20Result3, ];
+    const obj12 = { style: tmp15.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp7Result };
+    items7[1] = closure_12(tmp(tmp2[27]).Text, obj12);
+    obj11.children = items7;
+    tmp21Result = closure_14(closure_13, obj11);
   }
-  obj4.children = tmp21Result;
-  const items8 = [closure_12(stateFromStores, obj4), ];
-  let tmp20Result1 = null;
+  obj9.children = tmp21Result;
+  const items8 = [closure_12(stateFromStores, obj9), ];
+  let tmp20Result4 = null;
   if (channel.rateLimitPerUser > 0) {
-    const obj8 = { channel, hasTypingText: null != tmp7Result, slowmodeType: sharedValue1.SendMessage };
-    tmp20Result1 = closure_12(transitionState(tmp2[28]), obj8);
+    const obj13 = { channel, hasTypingText: null != tmp7Result, slowmodeType: sharedValue1.SendMessage };
+    tmp20Result4 = closure_12(transitionState(tmp2[28]), obj13);
   }
-  items8[1] = tmp20Result1;
-  obj3.children = items8;
-  obj2.children = closure_14(stateFromStores, obj3);
-  return closure_12(transitionState(cleanUp[20]).View, obj2);
+  items8[1] = tmp20Result4;
+  obj8.children = items8;
+  obj7.children = closure_14(stateFromStores, obj8);
+  return closure_12(transitionState(cleanUp[20]).View, obj7);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -222,12 +221,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles((arg0) => {
-  let obj = { typingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
-  obj = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
-  obj.typingWrapper = obj;
-  obj.wrapperHoriz = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
-  obj = { marginRight: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
-  obj.horiz = obj;
+  const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
+  const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
+  obj.horiz = { marginRight: nativeDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
   obj.text = { flex: 1 };
   return obj;
 });
@@ -242,8 +238,8 @@ export default noop.memo((channel) => {
   const tmp = closure_5(channel.screenIndex);
   let typingUserIds;
   let memo;
+  typingUserIds = typingUserIds(memo[10]).useTypingUserIds(channel.id, 4);
   let obj = typingUserIds(memo[10]);
-  typingUserIds = obj.useTypingUserIds(channel.id, 4);
   let items = [DevSettingsStore];
   const stateFromStores = typingUserIds(memo[11]).useStateFromStores(items, () => DevSettingsStore.get("preview_own_typing_indicator"));
   const obj2 = typingUserIds(memo[11]);
@@ -283,8 +279,7 @@ export default noop.memo((channel) => {
     }
     return tmp4;
   }, items3);
-  obj = { item: memo1, renderItem: renderTypingIndicator };
-  return closure_12(typingUserIds(memo[22]).TransitionItem, obj);
+  return closure_12(typingUserIds(memo[22]).TransitionItem, { item: memo1, renderItem: renderTypingIndicator });
 });
 export const hasTypingIndicatorContent = function hasTypingIndicatorContent(channel, typingUserIdsForDisplay, arg2) {
   let tmp = channel.rateLimitPerUser > 0;

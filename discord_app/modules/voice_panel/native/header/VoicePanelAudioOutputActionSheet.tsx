@@ -18,9 +18,9 @@ import SessionsStore from "SessionsStore" /* 4654 */;
 
 require = fn;
 function VoicePanelAudioPhoneOutputSection() {
-  let obj = availableDevices(563);
+  const tmp = closure_13();
   const items = [AudioManagerStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: AudioManagerStore.getActiveAudioDevice(), availableDevices: AudioManagerStore.getAudioDevices() }));
+  const stateFromStoresObject = availableDevices(563).useStateFromStoresObject(items, () => ({ activeDevice: AudioManagerStore.getActiveAudioDevice(), availableDevices: AudioManagerStore.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
   closure_1 = noop.useCallback((arg0) => {
     availableDevices(9246).setAudioOutputDevice(arg0);
@@ -29,10 +29,10 @@ function VoicePanelAudioPhoneOutputSection() {
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
-    obj = { style: tmp.sectionContainer, title: null, hasIcons: true, children: null };
+    let obj2 = { style: tmp.sectionContainer, title: null, hasIcons: true, children: null };
     const intl = tmp2(1114).intl;
-    obj.title = intl.string(tmp2(1114).t.CxyS15);
-    obj = {
+    obj2.title = intl.string(tmp2(1114).t.CxyS15);
+    const obj3 = {
       value: stateFromStoresObject.activeDevice.deviceId,
       onChange(arg0) {
           closure_0 = arg0;
@@ -43,9 +43,8 @@ function VoicePanelAudioPhoneOutputSection() {
         },
       hasIcons: true,
       children: availableDevices.map((deviceId) => {
-          let obj = { value: deviceId.deviceId, icon: null, label: null, subLabel: null };
-          obj = { source: availableDevices(9211).audioDeviceToIconMap[deviceId.simpleDeviceType] };
-          obj.icon = closure_1_11(availableDevices(5692).TableRowIcon, obj);
+          const obj = { value: deviceId.deviceId, icon: closure_1_11(availableDevices(5692).TableRowIcon, { source: availableDevices(9211).audioDeviceToIconMap[deviceId.simpleDeviceType] }), label: null, subLabel: null };
+          const obj2 = { source: availableDevices(9211).audioDeviceToIconMap[deviceId.simpleDeviceType] };
           obj.label = availableDevices(9211).getAudioDeviceToDisplayText(deviceId);
           const deviceName = deviceId.deviceName;
           let length;
@@ -60,8 +59,8 @@ function VoicePanelAudioPhoneOutputSection() {
           return closure_1_11(availableDevices(5769).TableRadioRow, obj, deviceId.deviceId);
         })
     };
-    obj.children = closure_11(tmp2(5766).TableRadioGroup, obj);
-    tmp5 = closure_11(tmp2(9247).VoicePanelFormSection, obj);
+    obj2.children = closure_11(tmp2(5766).TableRadioGroup, obj3);
+    tmp5 = closure_11(tmp2(9247).VoicePanelFormSection, obj2);
   }
   return tmp5;
 }
@@ -71,10 +70,10 @@ function VoicePanelAudioConsoleSection(channel) {
   let awaitingRemoteSessionInfo;
   arr = arr(9343)();
   dependencyMap = arr(9344)();
-  let obj = channel(563);
-  const items = [awaitingRemoteSessionInfo];
-  const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   let tmp = closure_13();
+  const items = [awaitingRemoteSessionInfo];
+  const stateFromStores = channel(563).useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  let obj = channel(563);
   const items1 = [SessionsStore];
   const stateFromStores1 = channel(563).useStateFromStores(items1, () => {
     let str;
@@ -133,41 +132,41 @@ function VoicePanelAudioConsoleSection(channel) {
   }, items4);
   let tmp10 = null;
   if (arr.length > 0) {
-    obj = { title: null, style: null, hasIcons: true, children: null };
+    let obj4 = { title: null, style: null, hasIcons: true, children: null };
     let intl = tmp3(1114).intl;
-    obj.title = intl.string(tmp3(1114).t.q22XnQ);
-    obj.style = tmp.sectionContainer;
-    obj = { defaultValue: memo, onChange: callback, hasIcons: true, children: null };
+    obj4.title = intl.string(tmp3(1114).t.q22XnQ);
+    obj4.style = tmp.sectionContainer;
+    const obj5 = { defaultValue: memo, onChange: callback, hasIcons: true, children: null };
     const mapped = arr.map((type) => {
       type = type.type;
       if (constants.XBOX === type) {
-        let obj = { label: null, variant: "xbox" };
+        const obj = { label: null, variant: "xbox" };
         const intl = channel(sessionId[14]).intl;
         obj.label = intl.string(channel(sessionId[14]).t.Nfvo72);
         let tmp2 = obj;
       } else {
         tmp2 = null;
         if (tmp.PLAYSTATION === type) {
-          obj = { label: null, variant: "playstation" };
+          const obj2 = { label: null, variant: "playstation" };
           const intl2 = channel(sessionId[14]).intl;
-          obj.label = intl2.string(channel(sessionId[14]).t.fFl4jo);
-          tmp2 = obj;
+          obj2.label = intl2.string(channel(sessionId[14]).t.fFl4jo);
+          tmp2 = obj2;
         }
       }
       let tmp5 = null != tmp2;
       if (tmp5) {
-        obj = { icon: null, label: null, value: null };
-        const obj1 = { source: arr(sessionId[24])(type.type), variant: tmp2.variant };
-        obj.icon = closure_1_11(channel(sessionId[17]).TableRowIcon, obj1);
-        obj.label = tmp2.label;
-        obj.value = type.type;
-        tmp5 = closure_1_11(channel(sessionId[16]).TableRadioRow, obj, type.type);
+        const obj3 = { icon: null, label: null, value: null };
+        const obj4 = { source: arr(sessionId[24])(type.type), variant: tmp2.variant };
+        obj3.icon = closure_1_11(channel(sessionId[17]).TableRowIcon, obj4);
+        obj3.label = tmp2.label;
+        obj3.value = type.type;
+        tmp5 = closure_1_11(channel(sessionId[16]).TableRadioRow, obj3, type.type);
       }
       return tmp5;
     });
-    obj.children = mapped.filter((item) => Boolean(item));
-    obj.children = closure_11(tmp3(5766).TableRadioGroup, obj);
-    tmp10 = closure_11(tmp3(9247).VoicePanelFormSection, obj);
+    obj5.children = mapped.filter((item) => Boolean(item));
+    obj4.children = closure_11(tmp3(5766).TableRadioGroup, obj5);
+    tmp10 = closure_11(tmp3(9247).VoicePanelFormSection, obj4);
   }
   return tmp10;
 }
@@ -183,28 +182,27 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/header/Voice
 
 export default noop.memo(function VoicePanelAudioOutputActionSheet(arg0) {
   ({ channelId: require, isConnectedToVoiceChannel } = arg0);
-  let obj = useStateFromStores;
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(require));
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => ChannelStore.getChannel(require));
   let tmp5Result = null;
   if (null != stateFromStores) {
-    obj = { header: null, children: null };
-    obj = { title: null };
+    const obj2 = { header: null, children: null };
+    const obj3 = { title: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.iwxPM3);
-    obj.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
+    obj3.title = intl.string(util.t.iwxPM3);
+    obj2.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3);
     if (isConnectedToVoiceChannel) {
       isConnectedToVoiceChannel = closure_11(VoicePanelAudioPhoneOutputSection, {});
     }
-    const obj1 = { children: null };
-    const obj2 = { children: null };
+    const obj4 = { children: null };
+    const obj5 = { children: null };
     const items1 = [isConnectedToVoiceChannel, ];
-    const obj3 = { channel: stateFromStores };
-    items1[1] = closure_11(VoicePanelAudioConsoleSection, obj3);
-    obj2.children = items1;
-    obj1.children = closure_12(NativeViewDefault, obj2);
-    obj.children = closure_11(ScrollView, obj1);
-    tmp5Result = closure_11(Sheet_BottomSheet.BottomSheet, obj);
+    const obj6 = { channel: stateFromStores };
+    items1[1] = closure_11(VoicePanelAudioConsoleSection, obj6);
+    obj5.children = items1;
+    obj4.children = closure_12(NativeViewDefault, obj5);
+    obj2.children = closure_11(ScrollView, obj4);
+    tmp5Result = closure_11(Sheet_BottomSheet.BottomSheet, obj2);
   }
   return tmp5Result;
 });

@@ -1,6 +1,6 @@
-// === Module 11847: buildPlatformPollResources ===
+// === Module 11848: buildPlatformPollResources ===
 
-// Module 11847 (buildPlatformPollResources)
+// Module 11848 (buildPlatformPollResources)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import _modDef5699 from "module_5699" /* 5699 */;
@@ -9,7 +9,7 @@ import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8050 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11849).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -23,16 +23,15 @@ let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
   });
   return (arg0, arg1) => {
     let tmp = closure_0(nativeDefault, arg1);
-    const obj = {};
     const merged = Object.assign(closure_1(arg0, arg1));
-    const merged1 = Object.assign(obj.pickBy(closure_0(nativeDefault, arg1), (num) => {
+    const merged1 = Object.assign(apply.pickBy(tmp, (num) => {
       let tmp = typeof num === "number";
       if (typeof num !== "number") {
         tmp = typeof num === "boolean";
       }
       return tmp;
     }));
-    return obj;
+    return {};
   };
 });
 const size = fn(2);

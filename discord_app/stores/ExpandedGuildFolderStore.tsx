@@ -3,7 +3,7 @@
 // Module 5520 (ExpandedGuildFolderStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;

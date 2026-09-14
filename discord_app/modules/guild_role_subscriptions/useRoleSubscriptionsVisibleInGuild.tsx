@@ -6,6 +6,7 @@ import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 735
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
 require = fn;

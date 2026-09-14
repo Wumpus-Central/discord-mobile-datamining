@@ -1,15 +1,15 @@
-// === Module 15391: DarkModeThemeSetting ===
+// === Module 15392: DarkModeThemeSetting ===
 
-// Module 15391 (DarkModeThemeSetting)
+// Module 15392 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15389 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15390 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const SystemTheme = fn(1186).SystemTheme;
-fn(11601);
-let SettingBuilders = {
+const SystemTheme = fn(1184).SystemTheme;
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
@@ -28,9 +28,8 @@ let SettingBuilders = {
       return require("SettingsAppearanceDarkModeThemePickerScreen").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
 
-export default SettingBuilders;
+export default route;

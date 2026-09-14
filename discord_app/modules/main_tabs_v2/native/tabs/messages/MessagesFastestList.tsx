@@ -1,14 +1,14 @@
-// === Module 16197: MessagesFastestList ===
+// === Module 16199: MessagesFastestList ===
 
-// Module 16197 (MessagesFastestList)
+// Module 16199 (MessagesFastestList)
 import nativeDefault from "native" /* 576 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7165 */;
 import FastestListItemTypeDefault from "FastestListItemType" /* 7167 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 16125 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16135 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16137 */;
-import useMessagesData from "useMessagesData" /* 16140 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16191 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16127 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16137 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16139 */;
+import useMessagesData from "useMessagesData" /* 16142 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16193 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
@@ -17,9 +17,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles(() => {
-  let obj = { placeholder: null };
-  obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-  obj.placeholder = obj;
+  const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;
 });
 const size = fn(2);
@@ -60,20 +58,20 @@ export default noop.memo(noop.forwardRef(function MessagesFastestList(listItemSi
   const items1 = [listTop, listLeft, scrollPosition];
   const callback = listLeft.useCallback((arg0, row) => {
     if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
-      let obj = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
+      const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
       return jsx(MessagesItemChannel.MessagesItemChannelFast, { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row });
     } else if (useMessagesData.MessagesDataSections.Channels === arg0) {
-      obj = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
+      const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
       return jsx(MessagesItemChannel.MessagesItemChannelFast, { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row });
     } else if (useMessagesData.MessagesDataSections.Separator === arg0) {
       return jsx(MessagesItemSeparatorDefault, {});
     } else if (useMessagesData.MessagesDataSections.SuggestedFriends === arg0) {
-      const obj1 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
-      const obj2 = { height: listItemSuggestedFriendHeight };
-      const merged = Object.assign(obj1);
+      const obj4 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
+      const obj5 = { height: listItemSuggestedFriendHeight };
+      const merged = Object.assign(obj4);
       return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast, { height: listItemSuggestedFriendHeight });
     } else if (useMessagesData.MessagesDataSections.Placeholders === arg0) {
-      obj = { row, height: listItemHeight };
+      const obj = { row, height: listItemHeight };
       return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
     } else {
       const _Error = Error;
@@ -174,11 +172,9 @@ export default noop.memo(noop.forwardRef(function MessagesFastestList(listItemSi
     }
   }, items5);
   const memo3 = listLeft.useMemo(() => {
-    let obj = { listHeader: null, sectionItem: null };
-    obj = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, colorHex: closure_7.placeholder.backgroundColor, shape: "rect", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
-    obj.listHeader = obj;
-    obj = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM, colorHex: closure_7.placeholder.backgroundColor, labelPadding: nativeDefault.space.PX_4, labelSize: listItemSizes.label, labelSecondarySize: listItemSizes.labelSecondary, padding: nativeDefault.space.PX_16, shape: "circle", shapeSize: listItemSizes.avatar };
-    obj.sectionItem = obj;
+    const obj = { listHeader: { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, colorHex: closure_7.placeholder.backgroundColor, shape: "rect", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 }, sectionItem: null };
+    const obj2 = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, colorHex: closure_7.placeholder.backgroundColor, shape: "rect", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+    obj.sectionItem = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM, colorHex: closure_7.placeholder.backgroundColor, labelPadding: nativeDefault.space.PX_4, labelSize: listItemSizes.label, labelSecondarySize: listItemSizes.labelSecondary, padding: nativeDefault.space.PX_16, shape: "circle", shapeSize: listItemSizes.avatar };
     return obj;
   }, items6);
   return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[15]), { insetEnd, accessibilityLabel, estimatedListSize: "windowSize", keyExtractor: callback2, itemSize: callback1, listId: "dm-messages-list", listFooterSize: memo2.getSize, listFooterAlwaysMounted: true, listHeaderSize: memo1.getSize, listHeaderAlwaysMounted: true, placeholderConfig: memo3, ref, renderItem: callback, renderListFooter: memo2.getComponent, renderListHeader: memo1.getComponent, renderSectionHeader: memo.getComponent, scrollIndicatorInsetEnd: scrollIndicatorInsetBottom, scrollReporting: "animatedCallbacks", scrollHandlerAnimated: handleScrollAnimated, sections: data.sections, sectionHeaderSize: memo.getSize });

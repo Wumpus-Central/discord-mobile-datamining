@@ -3,11 +3,11 @@
 // Module 4657 (CallConstants)
 import size from "module_2" /* 2 */;
 
-let PictureInPictureTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
-PictureInPictureTypes = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
+const ParticipantTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
+const obj2 = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
 const result = size.fileFinishedImporting("modules/calls/CallConstants.tsx");
 
-export const ParticipantTypes = PictureInPictureTypes;
+export { ParticipantTypes };
 export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: "ACTIVITY" };
 export const ParticipantSelectionTypes = { NONE: "NONE", AUTO: "AUTO" };
 export const VoicePlatforms = { DESKTOP: 0, [0]: "DESKTOP", MOBILE: 1, [1]: "MOBILE", XBOX: 2, [2]: "XBOX", PLAYSTATION: 3, [3]: "PLAYSTATION", QUEST: 4, [4]: "QUEST" };
@@ -41,10 +41,10 @@ export const isActivityParticipant = function isActivityParticipant(participant)
   }
   return type === obj.ACTIVITY;
 };
-export { PictureInPictureTypes };
-export const DEFAULT_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 320, [PictureInPictureTypes.CAMERA_PREVIEW]: 160 };
-export const MAX_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 960, [PictureInPictureTypes.CAMERA_PREVIEW]: 480 };
-export const MIN_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 200, [PictureInPictureTypes.CAMERA_PREVIEW]: 160 };
+export const PictureInPictureTypes = obj2;
+export const DEFAULT_PIP_WIDTH = { [obj2.VIDEO]: 320, [obj2.CAMERA_PREVIEW]: 160 };
+export const MAX_PIP_WIDTH = { [obj2.VIDEO]: 960, [obj2.CAMERA_PREVIEW]: 480 };
+export const MIN_PIP_WIDTH = { [obj2.VIDEO]: 200, [obj2.CAMERA_PREVIEW]: 160 };
 export const EMOJI_PICKER_EMOJI_TO_SHOW_COUNT = 8;
 export const MIN_CALL_WIDTH = 550;
 export const MIN_CALL_HEIGHT = 230;

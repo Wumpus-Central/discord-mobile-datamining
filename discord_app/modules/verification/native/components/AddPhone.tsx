@@ -10,6 +10,8 @@ import PhoneStore from "PhoneStore" /* 7044 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
@@ -17,16 +19,12 @@ const UserFlags = fn(1074).UserFlags;
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { background: null, container: null, title: null, input: null, redesignInput: null, button: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.background = createStyles;
-createStyles.container = { padding: 16, flex: 1 };
-createStyles.title = { textAlign: "center" };
-createStyles.input = { marginTop: 24 };
-createStyles.redesignInput = { borderRadius: nativeDefault.radii.lg };
-createStyles.button = { marginTop: 8 };
-let closure_15 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
+obj2.button = { marginTop: 8 };
+let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
 
@@ -35,10 +33,10 @@ export default function AddPhone(reason) {
   reason = reason.reason;
   _slicedToArray = undefined;
   noop = undefined;
-  let first;
+  first = undefined;
   closure_7 = undefined;
-  let first1;
-  let action;
+  first1 = undefined;
+  action = undefined;
   let currentUser;
   closure_12 = undefined;
   closure_13 = async function _handleSubmit() {
@@ -49,8 +47,8 @@ export default function AddPhone(reason) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -63,8 +61,8 @@ export default function AddPhone(reason) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp8;
             closure_128_0 = undefined;
@@ -78,13 +76,13 @@ export default function AddPhone(reason) {
             if (_slicedToArray) {
               c4 = 4;
               c5 = 1;
-              const obj1 = { value: obj7.beginReverifyPhone(combined, reason), done: false };
-              return obj1;
+              const obj4 = { value: obj7.beginReverifyPhone(combined, reason), done: false };
+              return obj4;
             } else {
               c4 = 3;
               c5 = 1;
-              const obj2 = { value: obj7.beginAddPhone(combined, reason), done: false };
-              return obj2;
+              const obj5 = { value: obj7.beginAddPhone(combined, reason), done: false };
+              return obj5;
             }
           }
         } else if (1 === tmp8) {
@@ -114,7 +112,7 @@ export default function AddPhone(reason) {
               c3 = 0;
               closure_129_12(false);
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             closure_129_0(closure_128_0);
@@ -123,8 +121,8 @@ export default function AddPhone(reason) {
           c3 = 0;
           closure_129_12(false);
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         }
       } catch (tmp44) {
         if (tmp5 === c3) {
@@ -139,18 +137,17 @@ export default function AddPhone(reason) {
     }
   };
   const tmp = closure_15();
-  let obj = require("initialize");
   const items = [currentUser];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("initialize");
   const items1 = [action];
   let phone;
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => action.getAction());
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => action.getAction());
   if (stateFromStores != null) {
     phone = stateFromStores.phone;
   }
-  let obj2 = onDeletePhone(tmp3[13]);
-  const result = obj2.isPhoneReverification(stateFromStores, stateFromStores1);
+  let obj2 = require("initialize");
+  const result = onDeletePhone(reason[13]).isPhoneReverification(stateFromStores, stateFromStores1);
   _slicedToArray = result;
   let tmp8 = null != onDeletePhone && null != phone;
   if (tmp8) {
@@ -163,19 +160,17 @@ export default function AddPhone(reason) {
   if (tmp8) {
     tmp8 = !result;
   }
+  let obj3 = onDeletePhone(reason[13]);
   const items2 = [first1];
   const stateFromStores2 = require("initialize").useStateFromStores(items2, () => first1.getCountryCode());
   const tmp2Result = require("initialize");
-  [tmp13, tmp14] = _slicedToArray(stateFromStores2.code.split(" "), 2);
+  [tmp13, tmp14] = stateFromStores2.code.split(" ");
   noop = tmp14;
-  let obj4 = noop;
   let str2 = tmp13;
   if (tmp13 == null) {
     str2 = "";
   }
-  let tmp11Result = tmp11(noop.useState(str2), 2);
-  first = tmp11Result[0];
-  closure_7 = tmp11Result[1];
+  [first, closure_7] = noop.useState(str2);
   if (null != phone) {
     let str3 = phone.replace(first, "");
   } else {
@@ -184,16 +179,14 @@ export default function AddPhone(reason) {
       str3 = "";
     }
   }
-  tmp11Result = tmp11(obj4.useState(str3), 2);
-  first1 = tmp11Result[0];
-  action = tmp11Result[1];
-  const tmp11Result1 = _slicedToArray(obj4.useState(null), 2);
-  currentUser = tmp11Result1[1];
-  obj4.useRef(true);
-  const tmp11Result2 = _slicedToArray(obj4.useState(false), 2);
-  closure_12 = tmp11Result2[1];
+  [first1, action] = noop.useState(str3);
+  const tmp11Result5 = _slicedToArray(noop.useState(null), 2);
+  currentUser = tmp11Result5[1];
+  noop.useRef(true);
+  const tmp11Result6 = _slicedToArray(noop.useState(false), 2);
+  closure_12 = tmp11Result6[1];
   const items3 = [tmp14];
-  const effect = obj4.useEffect(() => {
+  const effect = obj5.useEffect(() => {
     if (ref.current) {
       tmp.current = false;
     } else {
@@ -204,13 +197,13 @@ export default function AddPhone(reason) {
       action(str);
     }
   }, items3);
-  obj = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+  let obj4 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
   const items4 = [tmp.background, reason.style];
-  obj.style = items4;
-  obj = { style: tmp.container, children: null };
+  obj4.style = items4;
+  let obj6 = { style: tmp.container, children: null };
   if (header != null) {
     const items5 = [header, , , ];
-    obj1 = { style: null, textInputStyle: null, label: null, alpha2: null, countryCode: null, value: null, onChangeText: null, forceMode: null, returnKeyType: "done", onSubmitEditing: null, error: null, onPressCountrySelector: null, autoFocus: true };
+    let obj7 = { style: null, textInputStyle: null, label: null, alpha2: null, countryCode: null, value: null, onChangeText: null, forceMode: null, returnKeyType: "done", onSubmitEditing: null, error: null, onPressCountrySelector: null, autoFocus: true };
     ({ input: obj8.style, redesignInput: obj8.textInputStyle } = tmp);
     if (null != phone) {
       if (!result) {
@@ -227,44 +220,43 @@ export default function AddPhone(reason) {
         }
         return applyArgumentsResult;
       }
-      obj1.label = stringResult;
-      obj1.alpha2 = stateFromStores2.alpha2;
-      obj1.countryCode = tmp13;
-      obj1.value = first1;
-      obj1.onChangeText = function onChangeText(arg0, arg1) {
+      obj7.label = stringResult;
+      obj7.alpha2 = stateFromStores2.alpha2;
+      obj7.countryCode = tmp13;
+      obj7.value = first1;
+      obj7.onChangeText = function onChangeText(arg0, arg1) {
         action(arg0);
         closure_7(arg1);
       };
-      obj1.forceMode = require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE;
-      obj1.onSubmitEditing = handleSubmit;
-      obj1.error = tmp11Result1[0];
-      obj1.onPressCountrySelector = function onPressCountrySelector() {
+      obj7.forceMode = require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE;
+      obj7.onSubmitEditing = handleSubmit;
+      obj7.error = tmp11Result5[0];
+      obj7.onPressCountrySelector = function onPressCountrySelector() {
         return onDeletePhone(reason[20]).pushLazy(require("asyncRequireImpl")(reason[21], reason.paths));
       };
-      items5[1] = tmp22(tmp28, obj1);
-      obj2 = { style: tmp.button, children: null };
+      items5[1] = tmp22(tmp28, obj7);
+      const obj9 = { style: tmp.button, children: null };
       let str5 = "lg";
       if (tmp8) {
         str5 = "md";
       }
-      let obj3 = { variant: "primary", size: str5, text: null, onPress: null, loading: null };
+      const obj10 = { variant: "primary", size: str5, text: null, onPress: null, loading: null };
       const intl5 = require("util").intl;
-      obj3.text = intl5.string(require("util").t.PDTjLN);
-      obj3.onPress = handleSubmit;
-      obj3.loading = tmp11Result2[0];
-      obj2.children = tmp22(require("components/Button/Button").Button, obj3);
-      items5[2] = tmp22(tmp25, obj2);
+      obj10.text = intl5.string(require("util").t.PDTjLN);
+      obj10.onPress = handleSubmit;
+      obj10.loading = tmp11Result6[0];
+      obj9.children = tmp22(require("components/Button/Button").Button, obj10);
+      items5[2] = tmp22(tmp25, obj9);
       let tmp22Result = null;
       if (tmp8) {
-        obj4 = { style: tmp.button, children: null };
-        const obj5 = { variant: "secondary", size: "md", text: null, onPress: null };
+        const obj11 = { style: tmp.button, children: null };
+        const obj12 = { variant: "secondary", size: "md", text: null, onPress: null };
         const intl6 = require("util").intl;
-        obj5.text = intl6.string(require("util").t.kYvzoQ);
-        obj5.onPress = function onPress() {
-          let obj = stateFromStores;
+        obj12.text = intl6.string(require("util").t.kYvzoQ);
+        obj12.onPress = function onPress() {
           if (null != stateFromStores) {
-            if (obj.hasFlag(UserFlags.MFA_SMS)) {
-              obj = {
+            if (stateFromStores.hasFlag(UserFlags.MFA_SMS)) {
+              const obj3 = {
                 importer() {
                       return require("asyncRequireImpl")(reason[25], reason.paths).then((result) => {
                         closure_0 = result.default;
@@ -281,31 +273,31 @@ export default function AddPhone(reason) {
                       });
                     }
               };
-              actions_AlertActionCreatorsDefault.openLazy(obj);
+              actions_AlertActionCreatorsDefault.openLazy(obj3);
             } else if (onDeletePhone != null) {
               tmp2();
             }
           }
         };
-        obj4.children = tmp22(require("components/Button/Button").Button, obj5);
-        tmp22Result = tmp22(tmp25, obj4);
+        obj11.children = tmp22(require("components/Button/Button").Button, obj12);
+        tmp22Result = tmp22(tmp25, obj11);
       }
       items5[3] = tmp22Result;
-      obj.children = items5;
-      obj.children = tmp24(tmp25, obj);
-      return tmp22(tmp23, obj);
+      obj6.children = items5;
+      obj4.children = tmp24(tmp25, obj6);
+      return tmp22(tmp23, obj4);
     }
     const intl4 = require("util").intl;
     stringResult = intl4.string(require("util").t["64bX0M"]);
   } else {
-    const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj13 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     if (null != phone) {
       if (!result) {
         const intl = require("util").intl;
         let stringResult1 = intl.string(require("util").t.WO0zBE);
       }
-      obj6.children = stringResult1;
-      tmp22Result = tmp22(tmp31, obj6);
+      obj13.children = stringResult1;
+      tmp22(tmp31, obj13);
     }
     const intl2 = require("util").intl;
     stringResult1 = intl2.string(require("util").t.hY8QTR);

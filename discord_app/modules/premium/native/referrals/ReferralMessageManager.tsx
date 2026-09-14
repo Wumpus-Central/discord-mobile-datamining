@@ -1,10 +1,10 @@
-// === Module 17945: ReferralMessageManager ===
+// === Module 17946: ReferralMessageManager ===
 
-// Module 17945 (ReferralMessageManager)
+// Module 17946 (ReferralMessageManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MessageTypes from "MessageTypes" /* 1089 */;
 import UserOfferActionCreators from "UserOfferActionCreators" /* 8167 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17537 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17538 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 import UserOfferStore from "UserOfferStore" /* 7553 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -33,9 +33,9 @@ class ReferralMessageManager extends tmp6 {
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
-setupLoadFromMessageManagerHandlersDefault(tmp, handleReferralMessages);
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, handleReferralMessages);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
 
-export default tmp;
+export default tmp5;

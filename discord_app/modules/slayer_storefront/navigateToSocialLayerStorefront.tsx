@@ -1,9 +1,9 @@
-// === Module 13512: navigateToSocialLayerStorefront ===
+// === Module 13513: navigateToSocialLayerStorefront ===
 
-// Module 13512 (navigateToSocialLayerStorefront)
+// Module 13513 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1100 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10926 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10927 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7331 */;
@@ -27,8 +27,8 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -41,8 +41,8 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -65,8 +65,8 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_5 = null;
             if (null != closure_129_1) {
@@ -94,19 +94,18 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
                 if (null != closure_129_5) {
                   if (!closure_129_5.has(closure_130_6.PREVIEW_ENABLED)) {
                     if (null != closure_129_1) {
-                      let obj4 = closure_130_1(closure_130_2[8]);
-                      let obj2 = { inviteKey: closure_129_1.code, context: { location: "game_shop" }, skipOnboarding: true };
+                      const obj7 = { inviteKey: closure_129_1.code, context: { location: "game_shop" }, skipOnboarding: true };
                       c3 = 3;
                       c4 = 1;
-                      const obj3 = { value: obj4.acceptInvite(obj2), done: false };
-                      return obj3;
+                      const obj9 = { value: closure_130_1(closure_130_2[8]).acceptInvite(obj7), done: false };
+                      return obj9;
                     }
                   }
                 }
                 c3 = 2;
                 c4 = 1;
-                obj4 = { value: closure_130_0(closure_130_2[7]).startLurking(closure_129_0, {}, { shouldNavigate: false }), done: false };
-                return obj4;
+                const obj10 = { value: closure_130_0(closure_130_2[7]).startLurking(closure_129_0, {}, { shouldNavigate: false }), done: false };
+                return obj10;
               }
             } else {
               c4 = 3;
@@ -119,21 +118,20 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj11 = { value, done: true };
+            return obj11;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
-        obj2 = closure_130_0(closure_130_2[6]);
         c4 = 3;
-        const obj6 = { value: obj2.transitionTo(closure_130_7.CHANNELS_GAME_SHOP(closure_129_0, closure_129_2, closure_129_3, closure_129_4)), done: true };
-        return obj6;
+        const obj12 = { value: closure_130_0(closure_130_2[6]).transitionTo(closure_130_7.CHANNELS_GAME_SHOP(closure_129_0, closure_129_2, closure_129_3, closure_129_4)), done: true };
+        return obj12;
       }
     } catch (tmp50) {
       c4 = tmp;
@@ -154,8 +152,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
   let socialLayerStorefrontGuildId = guildId;
   if (guildId == null) {
-    let obj = SlayerStorefrontUtils;
-    socialLayerStorefrontGuildId = obj.getSocialLayerStorefrontGuildId(applicationId);
+    socialLayerStorefrontGuildId = SlayerStorefrontUtils.getSocialLayerStorefrontGuildId(applicationId);
   }
   if (null == applicationIdFromGuildId) {
     if (null == socialLayerStorefrontGuildId) {
@@ -168,8 +165,8 @@ export default function navigateToSocialLayerStorefront(arg0) {
   if (null != applicationIdFromGuildId) {
     resolved = Promise.resolve(router_utils.transitionTo(React5.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
   } else {
-    obj = { guildId: socialLayerStorefrontGuildId, pageIndex, invite, skuId, slug };
-    resolved = navigateToSocialLayerStorefrontWithGuildPreview(obj);
+    const obj2 = { guildId: socialLayerStorefrontGuildId, pageIndex, invite, skuId, slug };
+    resolved = navigateToSocialLayerStorefrontWithGuildPreview(obj2);
   }
 };
 export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSocialLayerStorefront(forceFetch) {
@@ -183,8 +180,8 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
     guildId = id;
   }
   if (null != guildId) {
-    const obj = { eager: true, forceFetch: forceFetch.forceFetch };
-    const socialLayerStorefront = obj.fetchSocialLayerStorefront(guildId, obj);
+    const obj2 = { eager: true, forceFetch: forceFetch.forceFetch };
+    const socialLayerStorefront = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefront(guildId, obj2);
   }
 };
 export const eagerNavigateToSocialLayerStorefrontForApplication = function eagerNavigateToSocialLayerStorefrontForApplication(arg0) {

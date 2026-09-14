@@ -6,11 +6,13 @@ import GuildThemePresets from "GuildThemePresets" /* 4491 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4564 */;
 import Client from "Client" /* 4567 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import GuildThemePreviewStore from "GuildThemePreviewStore" /* 4522 */;
 import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 4524 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function resolveSavedActiveGuildTheme(stateFromStores) {
@@ -33,7 +35,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
         tmp4 = null;
         if (1 === customUserThemeSettings.colors.length) {
           if (null == customUserThemeSettings.gradientColorStops) {
-            let obj = { type: "custom", customUserThemeSettings };
+            const obj = { type: "custom", customUserThemeSettings };
             tmp4 = obj;
           } else {
             tmp4 = null;
@@ -45,8 +47,8 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
         const guildThemePreset = GuildThemePresets.getGuildThemePreset(themeSettings.presetId);
         let tmp9 = null;
         if (null != guildThemePreset) {
-          obj = { type: "preset", preset: guildThemePreset };
-          tmp9 = obj;
+          const obj3 = { type: "preset", preset: guildThemePreset };
+          tmp9 = obj3;
         }
         tmp5 = tmp9;
       }
@@ -97,7 +99,7 @@ function useActiveGuildThemeForGuildId(context) {
   closure_129_2 = stateFromStores1;
   const items4 = [stateFromStores1];
   const memo = stateFromStores.useMemo(() => resolveSavedActiveGuildTheme(stateFromStores), items4);
-  const obj3 = require("initialize");
+  let obj3 = require("initialize");
   const items5 = [memo];
   const items6 = [context, serverThemeUserEnabled];
   stateFromStores2 = require("initialize").useStateFromStores(items5, () => {
@@ -124,7 +126,7 @@ function useActiveGuildThemeForGuildId(context) {
           tmp9 = null;
           if (1 === customUserThemeSettings.colors.length) {
             if (null == customUserThemeSettings.gradientColorStops) {
-              let obj = { type: "custom", customUserThemeSettings };
+              const obj = { type: "custom", customUserThemeSettings };
               tmp9 = obj;
             } else {
               tmp9 = null;
@@ -136,8 +138,8 @@ function useActiveGuildThemeForGuildId(context) {
           const guildThemePreset = GuildThemePresets.getGuildThemePreset(stateFromStores.presetId);
           let tmp13 = null;
           if (null != guildThemePreset) {
-            obj = { type: "preset", preset: guildThemePreset };
-            tmp13 = obj;
+            const obj3 = { type: "preset", preset: guildThemePreset };
+            tmp13 = obj3;
           }
           tmp7 = tmp13;
         }
@@ -170,7 +172,7 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
       tmp2 = null;
       if (1 === customUserThemeSettings.colors.length) {
         if (null == customUserThemeSettings.gradientColorStops) {
-          let obj = { type: "custom", customUserThemeSettings };
+          const obj = { type: "custom", customUserThemeSettings };
           tmp2 = obj;
         } else {
           tmp2 = null;
@@ -183,8 +185,8 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
       const guildThemePreset = GuildThemePresets.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp6 = null;
       if (null != guildThemePreset) {
-        obj = { type: "preset", preset: guildThemePreset };
-        tmp6 = obj;
+        const obj3 = { type: "preset", preset: guildThemePreset };
+        tmp6 = obj3;
       }
       return tmp6;
     }
@@ -203,7 +205,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
       tmp3 = null;
       if (1 === customUserThemeSettings.colors.length) {
         if (null == customUserThemeSettings.gradientColorStops) {
-          let obj = { type: "custom", customUserThemeSettings };
+          const obj = { type: "custom", customUserThemeSettings };
           tmp3 = obj;
         } else {
           tmp3 = null;
@@ -215,8 +217,8 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
       const guildThemePreset = GuildThemePresets.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp7 = null;
       if (null != guildThemePreset) {
-        obj = { type: "preset", preset: guildThemePreset };
-        tmp7 = obj;
+        const obj3 = { type: "preset", preset: guildThemePreset };
+        tmp7 = obj3;
       }
       tmp = tmp7;
     }

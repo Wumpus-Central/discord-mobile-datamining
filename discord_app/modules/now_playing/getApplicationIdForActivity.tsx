@@ -1,13 +1,13 @@
-// === Module 13837: getApplicationIdForActivity ===
+// === Module 13838: getApplicationIdForActivity ===
 
-// Module 13837 (getApplicationIdForActivity)
+// Module 13838 (getApplicationIdForActivity)
 import Constants from "Constants" /* 1920 */;
 import isStreamingDefault from "isStreaming" /* 8375 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11019 */;
-import isOnXboxDefault from "isOnXbox" /* 13132 */;
-import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13358 */;
-import TwitchApplicationRecord from "TwitchApplicationRecord" /* 13838 */;
-import XboxApplicationRecord from "XboxApplicationRecord" /* 13839 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11020 */;
+import isOnXboxDefault from "isOnXbox" /* 13133 */;
+import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13359 */;
+import TwitchApplicationRecord from "TwitchApplicationRecord" /* 13839 */;
+import XboxApplicationRecord from "XboxApplicationRecord" /* 13840 */;
 import size from "module_2" /* 2 */;
 
 const SpotifyApplication = SpotifyApplicationRecord.SpotifyApplication;

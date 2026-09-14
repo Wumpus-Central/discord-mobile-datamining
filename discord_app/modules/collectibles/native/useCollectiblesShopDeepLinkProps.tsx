@@ -1,6 +1,6 @@
-// === Module 15902: useCollectiblesShopDeepLinkProps ===
+// === Module 15904: useCollectiblesShopDeepLinkProps ===
 
-// Module 15902 (useCollectiblesShopDeepLinkProps)
+// Module 15904 (useCollectiblesShopDeepLinkProps)
 import _mod19 from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import CollectiblesShopStore from "CollectiblesShopStore" /* 7661 */;
@@ -55,23 +55,22 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
   return initialCategorySkuId(() => {
     if (null != initialBaseProductSkuId) {
       if (null != initialCategorySkuId) {
-        let obj = { initialProductSkuId: tmp, initialVariantIndex, initialCategorySkuId: tmp6, productIndex: null, categoryIndex: null };
+        let obj2 = { initialProductSkuId: tmp, initialVariantIndex, initialCategorySkuId: tmp6, productIndex: null, categoryIndex: null };
         let bound;
         if (null != products) {
           const _Math = Math;
           bound = Math.max(0, products.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId));
         }
-        obj.productIndex = bound;
-        obj = categories;
+        obj2.productIndex = bound;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
-          bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === initialCategorySkuId));
+          bound1 = Math.max(0, categories.findIndex((skuId) => skuId.skuId === initialCategorySkuId));
         }
-        obj.categoryIndex = bound1;
+        obj2.categoryIndex = bound1;
       }
-      return obj;
+      return obj2;
     }
-    obj = closure_5;
+    obj2 = closure_5;
   }, items1);
 };

@@ -5,15 +5,17 @@ import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCrea
 import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8005 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const AnalyticsFeedItemSeenManager = AnalyticsFeedItemSeenManager2.AnalyticsFeedItemSeenManager;
 const prototype = function ForumChannelSeenManager(channelId) {
   channelId = channelId.channelId;
   let obj = { windowId: channelId.windowId, isPaused: channelId.isPaused, id: null };
   const FORUM_CHANNEL = require("AnalyticsFeedItemSeenManager").AnalyticsFeedTypes.FORUM_CHANNEL;
   obj.id = concat(FORUM_CHANNEL, "_", channelId);
-  tmp = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
-  _require = tmp;
-  tmp.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
+  const tmp4 = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
+  _require = tmp4;
+  tmp4.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
     let obj = { guildId: closure_0.guildId, channelId: closure_0.channelId, sessionId: closure_0.sessionId, trackedFeedItems: closure_0.trackedFeedItems, isForcedFlush: null != IMMEDIATE };
     return () => {
       (function flushSeenItems(trackedFeedItems) {
@@ -29,23 +31,23 @@ const prototype = function ForumChannelSeenManager(channelId) {
           let tmp3 = nextResult;
           let seenTimeDestructive = obj.computeSeenTimeDestructive(isForcedFlush);
           if (seenTimeDestructive > 0) {
-            items.push(tmp3);
-            let arr = items1.push(tmp5);
+            let arr = items.push(tmp3);
+            let arr2 = items1.push(tmp5);
           }
           continue;
         }
         if (0 !== items.length) {
-          obj = { guildId, channelId, sessionId, postIds: items, additionalTimes: items1 };
-          const result = closure_1_0(dependencyMap[2]).trackForumChannelSeenBatch(obj);
+          const obj3 = { guildId, channelId, sessionId, postIds: items, additionalTimes: items1 };
+          const result = closure_1_0(dependencyMap[2]).trackForumChannelSeenBatch(obj3);
           const obj2 = closure_1_0(dependencyMap[2]);
         }
       })(obj);
     };
   };
-  tmp.guildId = channelId.guildId;
-  tmp.channelId = channelId;
-  tmp.sessionId = require("TrackingUtils").getForumChannelSessionId(channelId);
-  return tmp;
+  tmp4.guildId = channelId.guildId;
+  tmp4.channelId = channelId;
+  tmp4.sessionId = require("TrackingUtils").getForumChannelSessionId(channelId);
+  return tmp4;
 }.prototype;
 class prototype extends AnalyticsFeedItemSeenManager {
 }

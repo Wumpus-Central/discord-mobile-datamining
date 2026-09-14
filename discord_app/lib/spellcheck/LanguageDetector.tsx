@@ -3,6 +3,8 @@
 // Module 5645 (LanguageDetector)
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");
 class LanguageDetector {
   constructor(arg0, arg1) {

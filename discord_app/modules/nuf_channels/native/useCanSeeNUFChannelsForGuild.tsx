@@ -1,11 +1,13 @@
-// === Module 16345: useCanSeeNUFChannelsForGuild ===
+// === Module 16347: useCanSeeNUFChannelsForGuild ===
 
-// Module 16345 (useCanSeeNUFChannelsForGuild)
+// Module 16347 (useCanSeeNUFChannelsForGuild)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserUtils from "UserUtils" /* 4481 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
@@ -29,20 +31,20 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
             const features = guild.features;
             let hasFlagResult = features.has(GuildFeatures.GUILD_ONBOARDING) && null != selfMember;
             if (hasFlagResult) {
-              let tmp10Result = FlagUtils;
               let num = selfMember.flags;
               if (num == null) {
                 num = 0;
               }
-              hasFlagResult = tmp10Result.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+              hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
+              const tmp10Result = FlagUtils;
             }
             if (hasFlagResult) {
-              tmp10Result = FlagUtils;
               let num2 = selfMember.flags;
               if (num2 == null) {
                 num2 = 0;
               }
-              hasFlagResult = !tmp10Result.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
+              hasFlagResult = !FlagUtils.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
+              const tmp10Result2 = FlagUtils;
             }
             return !hasFlagResult;
           }

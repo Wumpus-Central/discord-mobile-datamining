@@ -1,6 +1,6 @@
-// === Module 13305: EditCollectiblesPickerList ===
+// === Module 13306: EditCollectiblesPickerList ===
 
-// Module 13305 (EditCollectiblesPickerList)
+// Module 13306 (EditCollectiblesPickerList)
 import Text_Text from "Text/Text" /* 4632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,9 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: null };
-obj = { paddingHorizontal: fn(13300).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
-obj.header = obj;
+let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13301).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>);
 const size = fn(2);
@@ -29,7 +27,6 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   let listContent = sections.contentContainerStyle;
   c4 = undefined;
   const tmp = closure_7();
-  let obj = flag;
   let num = 0;
   [tmp3, c4] = renderRow(flag.useState(0), 2);
   const callback = flag.useCallback((nativeEvent) => {
@@ -51,7 +48,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(13300).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(13301).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });
@@ -61,30 +58,30 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   const callback1 = obj.useCallback((item) => {
     item = item.item;
     if ("header" === item.type) {
-      let obj = { header: item.header };
+      const obj2 = { header: item.header };
       let tmp4 = <closure_8 header={item.header} />;
     } else {
-      obj = { items: item.items, size: num, selectedSkuId };
+      const obj = { items: item.items, size: num, selectedSkuId };
       tmp4 = renderRow(obj);
     }
     return tmp4;
   }, items1);
   const callback2 = obj.useCallback((type) => type.type, []);
-  obj = { style: null, children: null };
+  let obj2 = { style: null, children: null };
   if (flag) {
-    obj.style = tmp.loadingContainer;
-    obj.children = <c4 animating size="large" />;
-    let tmp17 = obj;
+    obj2.style = tmp.loadingContainer;
+    obj2.children = <c4 animating size="large" />;
+    let tmp17 = obj2;
   } else {
-    obj.style = tmp.list;
-    obj = { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" };
+    obj2.style = tmp.list;
+    const obj3 = { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" };
     if (listContent == null) {
       listContent = tmp.listContent;
     }
-    obj.contentContainerStyle = listContent;
-    obj.onLayout = callback;
-    obj.children = jsx(sections(selectedSkuId[8]).BottomSheetFlashList, { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" });
-    tmp17 = obj;
+    obj3.contentContainerStyle = listContent;
+    obj3.onLayout = callback;
+    obj2.children = jsx(sections(selectedSkuId[8]).BottomSheetFlashList, { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" });
+    tmp17 = obj2;
   }
   return <num {...tmp17} />;
 };

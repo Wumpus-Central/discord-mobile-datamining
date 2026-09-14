@@ -1,6 +1,6 @@
-// === Module 11740: useAppChannelApplication ===
+// === Module 11741: useAppChannelApplication ===
 
-// Module 11740 (useAppChannelApplication)
+// Module 11741 (useAppChannelApplication)
 import Constants from "Constants" /* 1074 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7266 */;
 import size from "module_2" /* 2 */;

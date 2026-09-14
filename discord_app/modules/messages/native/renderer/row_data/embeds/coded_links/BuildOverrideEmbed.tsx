@@ -1,19 +1,19 @@
-// === Module 13350: BuildOverrideEmbed ===
+// === Module 13351: BuildOverrideEmbed ===
 
-// Module 13350 (BuildOverrideEmbed)
+// Module 13351 (BuildOverrideEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1362 */;
 import Constants from "Constants" /* 7838 */;
 import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8040 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
-import BuildOverrideStore2 from "BuildOverrideStore" /* 11558 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11919 */;
-import _modDef11938 from "module_11938" /* 11938 */;
+import BuildOverrideStore2 from "BuildOverrideStore" /* 11559 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
 import _modDef11939 from "module_11939" /* 11939 */;
-import _modDef13349 from "module_13349" /* 13349 */;
-import validateBuildOverrideDefault from "validateBuildOverride" /* 13351 */;
+import _modDef11940 from "module_11940" /* 11940 */;
+import _modDef13350 from "module_13350" /* 13350 */;
+import validateBuildOverrideDefault from "validateBuildOverride" /* 13352 */;
 import size from "module_2" /* 2 */;
 
 const BuildOverrideStore = BuildOverrideStore2;
@@ -28,11 +28,11 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
   const currentBuildOverride = BuildOverrideStore.getCurrentBuildOverride();
   const buildOverride = BuildOverrideStore.getBuildOverride(code);
   if (buildOverride.state === State.Resolving) {
-    let obj = { headerText: "RESOLVING", resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
+    const obj2 = { headerText: "RESOLVING", resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
     ({ resolvingGradientEnd: obj8.resolvingGradientEnd, resolvingGradientStart: obj8.resolvingGradientStart } = colors);
-    obj.type = InviteTypes.GUILD;
+    obj2.type = InviteTypes.GUILD;
     const merged = Object.assign(baseColors);
-    return obj;
+    return obj2;
   } else {
     const override2 = buildOverride.override;
     let id;
@@ -57,19 +57,18 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       }
       tmp10 = id === id1;
     }
-    let tmpResult = validateBuildOverrideDefault;
-    obj = ClientInfoUtilsAll;
-    const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
+    const tmpResult = validateBuildOverrideDefault;
+    const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], ClientInfoUtilsAll.getConstants().Version);
     if (currentBuildOverride.state !== State.Invalid) {
       if (buildOverride.state !== State.Invalid) {
         if (null != buildOverride.override) {
           if (null != id) {
             if (tmpResultResult.valid) {
-              obj = {};
+              const obj3 = {};
               const merged1 = Object.assign(baseColors);
               const intl3 = util.intl;
-              obj.headerText = intl3.string(util.t.Wj3LW4).toLocaleUpperCase();
-              obj.headerColor = colors.headerColor;
+              obj3.headerText = intl3.string(util.t.Wj3LW4).toLocaleUpperCase();
+              obj3.headerColor = colors.headerColor;
               const intl4 = util.intl;
               const override = buildOverride.override;
               let type;
@@ -87,16 +86,16 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               } else {
                 RCYGot = util.t.RCYGot;
               }
-              obj.titleText = intl4.string(RCYGot);
-              obj.titleColor = colors.titleColor;
-              obj.subtitle = id;
-              obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(_modDef13349).uri;
+              obj3.titleText = intl4.string(RCYGot);
+              obj3.titleColor = colors.titleColor;
+              obj3.subtitle = id;
+              obj3.subtitleColor = colors.subtitleColor;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13350).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
               }
-              obj.acceptButtonVariant = str2;
+              obj3.acceptButtonVariant = str2;
               const intl5 = util.intl;
               const string = intl5.string;
               let tX4xrt = util.t;
@@ -106,44 +105,44 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               } else {
                 stringResult1 = string(tX4xrt.nOunHC);
               }
-              obj.acceptLabelText = stringResult1;
-              obj.embedCanBeTapped = true;
-              obj.canBeAccepted = true;
-              obj.type = InviteTypes.GUILD;
+              obj3.acceptLabelText = stringResult1;
+              obj3.embedCanBeTapped = true;
+              obj3.canBeAccepted = true;
+              obj3.type = InviteTypes.GUILD;
               const stringResult = intl3.string(util.t.Wj3LW4);
             }
           }
         }
       }
     }
-    const obj1 = {};
+    const obj5 = {};
     const merged2 = Object.assign(baseColors);
     const intl = util.intl;
-    obj1.headerText = intl.string(util.t.d34xi4).toLocaleUpperCase();
+    obj5.headerText = intl.string(util.t.d34xi4).toLocaleUpperCase();
     const stringResult2 = intl.string(util.t.d34xi4);
-    obj1.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+    obj5.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
     if (tmpResultResult.valid) {
       const intl2 = util.intl;
       let reason = intl2.string(util.t.ODXApH);
     } else {
       reason = tmpResultResult.reason;
     }
-    obj1.titleText = reason;
-    obj1.subtitle = id;
+    obj5.titleText = reason;
+    obj5.subtitle = id;
     let subtitleColor;
     if (null != id) {
       subtitleColor = colors.subtitleColor;
     }
-    obj1.subtitleColor = subtitleColor;
+    obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      tmpResult = _modDef11938;
+      let tmpResult2 = _modDef11939;
     } else {
-      tmpResult = _modDef11939;
+      tmpResult2 = _modDef11940;
     }
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
-    obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-    obj1.type = InviteTypes.GUILD;
-    return obj1;
+    obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
+    obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+    obj5.type = InviteTypes.GUILD;
+    return obj5;
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);
 };

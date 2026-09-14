@@ -5,6 +5,8 @@ import PriceUtils from "PriceUtils" /* 7337 */;
 import ProductIds from "ProductIds" /* 7343 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const size = fn(2);
@@ -12,11 +14,11 @@ let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscoun
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   _require = premiumDiscountOffer;
-  let obj = require("useDiscountedPremiumPlan");
-  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3);
+  const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(premiumDiscountOffer, items3);
   discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [premiumDiscountOffer, discountedProduct];
-  obj = {
+  const obj = require("useDiscountedPremiumPlan");
+  return {
     discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
     discountedPriceString: noop.useMemo(() => {
@@ -55,5 +57,4 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       return null;
     }, items)
   };
-  return obj;
 };

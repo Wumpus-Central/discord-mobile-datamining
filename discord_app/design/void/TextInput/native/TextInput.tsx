@@ -2,7 +2,6 @@
 
 // Module 9887 (TextInput/TextInput)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import shared from "shared" /* 4488 */;
 import noop from "module_19" /* 19 */;
@@ -12,33 +11,30 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1074);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { input: null, placeholderTextColor: null };
-obj = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
-obj.input = obj;
-const createStyles = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-obj.placeholderTextColor = createStyles;
+const createStyles = fn(4636);
+let obj = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
+let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
+obj.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 let closure_6 = createStyles.createStyles(obj);
 const forwardRefResult = noop.forwardRef((style, ref) => {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
   const tmp2 = closure_6();
-  let obj = shared;
-  const theme = obj.useThemeContext().theme;
+  const theme = shared.useThemeContext().theme;
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const tmp6 = shared.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
-  obj = { ref, style: null, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
+  const obj3 = { ref, style: null, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   const items = [tmp2.input, style.style];
-  obj.style = items;
-  let tmp3Result = shared;
-  obj.keyboardAppearance = tmp3Result.isThemeDark(theme) ? React4.DARK : React4.LIGHT;
-  obj.placeholderTextColor = tmp2.placeholderTextColor.color;
-  tmp3Result = PlatformUtils;
+  obj3.style = items;
+  const isThemeDarkResult = shared.isThemeDark(theme);
+  obj3.keyboardAppearance = shared.isThemeDark(theme) ? React4.DARK : React4.LIGHT;
+  obj3.placeholderTextColor = tmp2.placeholderTextColor.color;
+  const tmp3Result = shared;
   let hexWithOpacityResult = tmp6;
-  if (tmp3Result.isAndroid()) {
+  if (tmp3Result3.isAndroid()) {
     hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = ColorUtils;
+    const tmp3Result4 = ColorUtils;
   }
-  obj.selectionColor = hexWithOpacityResult;
+  obj3.selectionColor = hexWithOpacityResult;
   const merged1 = Object.assign(merged);
   return <TextInput ref={ref} style={null} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
 });

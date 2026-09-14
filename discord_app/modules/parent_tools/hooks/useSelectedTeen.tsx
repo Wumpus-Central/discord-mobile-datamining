@@ -5,6 +5,8 @@ import useStateFromStores from "useStateFromStores" /* 563 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");

@@ -1,6 +1,6 @@
-// === Module 14267: Badge/Badge ===
+// === Module 14268: Badge/Badge ===
 
-// Module 14267 (Badge/Badge)
+// Module 14268 (Badge/Badge)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -75,50 +75,50 @@ class Badge {
     if (value > 0) {
       tmp7 = jsx;
       tmp8 = c4;
-      obj = { pointerEvents: "none", style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-      obj.style = tmp5;
-      obj.accessible = accessible;
-      obj.accessibilityLabel = accessibilityLabel;
-      obj.accessibilityElementsHidden = accessibilityElementsHidden;
-      obj.importantForAccessibility = str;
+      obj1 = { pointerEvents: "none", style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+      obj1.style = tmp5;
+      obj1.accessible = accessible;
+      obj1.accessibilityLabel = accessibilityLabel;
+      obj1.accessibilityElementsHidden = accessibilityElementsHidden;
+      obj1.importantForAccessibility = str;
       if (flag2) {
         tmp9 = null;
         if (0 === value) {
-          obj.children = null;
-          tmp7Result = tmp7(tmp8, obj);
+          obj1.children = null;
+          tmp7Result = tmp7(tmp8, obj1);
         }
       }
       if (flag) {
-        obj1 = { style: null };
+        obj9 = { style: null };
         items2 = [, ];
         items2[0] = items2.noCount;
         items2[1] = dotStyle;
-        obj1.style = items2;
-        tmp7Result1 = tmp7(tmp8, obj1);
+        obj9.style = items2;
+        tmp7Result1 = tmp7(tmp8, obj9);
       } else if (flag5) {
-        obj2 = { variant: "experimental/body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
+        obj10 = { variant: "experimental/body-xs/semibold", color: "none", style: null, lineClamp: 1, allowFontScaling: false, children: null };
         items3 = [, ];
         items3[0] = items2.experimentalBadgeText;
         items3[1] = textStyle;
-        obj2.style = items3;
+        obj10.style = items3;
         tmpResult1 = tmp(tmp2[12]);
         tmp14 = globalThis;
         _Math2 = Math;
-        obj2.children = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp7Result1 = tmp7(tmp(tmp2[11]).Text, obj2);
+        obj10.children = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp7Result1 = tmp7(tmp(tmp2[11]).Text, obj10);
       } else {
         tmp10 = style;
-        obj3 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
+        obj11 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
         items4 = [, ];
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
-        obj3.style = items4;
+        obj11.style = items4;
         tmp11 = style(tmp2[13]);
         tmpResult2 = tmp(tmp2[12]);
         tmp12 = globalThis;
         _Math = Math;
-        obj3.children = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp7Result1 = tmp7(tmp11, obj3);
+        obj11.children = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp7Result1 = tmp7(tmp11, obj11);
       }
       tmp15 = tmp7Result1;
     } else {
@@ -128,39 +128,38 @@ class Badge {
   }
 }
 const View = fn(17).View;
-const BadgeConstants = fn(1180);
+const BadgeConstants = fn(1178);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: null, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
-createStyles = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-createStyles.badge = createStyles;
-let obj1 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
+let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
-obj1.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
-obj1.fontFamily = fn(1074).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1150);
+obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
+obj4.fontFamily = fn(1074).Fonts.PRIMARY_BOLD;
+PlatformUtils = fn(1363);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
 }
-obj1.textAlignVertical = str;
-createStyles.badgeText = obj1;
-createStyles.experimentalBadgeText = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+obj4.textAlignVertical = str;
+obj2.badgeText = obj4;
+let obj3 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj2.experimentalBadgeText = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
 let size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
-createStyles.noCount = size;
-let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
-createStyles.unread = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-PlatformUtils = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createStyles.mention = PlatformUtils;
-PlatformUtils = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-createStyles.lowImportanceMention = PlatformUtils;
-const obj3 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-createStyles.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.noCount = size;
+const obj7 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+obj2.unread = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+const obj8 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+obj2.mention = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+const obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+obj2.lowImportanceMention = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+const obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
@@ -179,9 +178,9 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
   let items = [tmp, maskStyle, flag, value];
   if (value > 0) {
     let obj = { pointerEvents: "none", style: tmp2, onLayout, children: null };
-    obj = { style, textStyle, dotStyle, value, maxValue, hideCount, unreadIndicator: flag, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, isMentionLowImportance: maskStyle.isMentionLowImportance };
+    const obj2 = { style, textStyle, dotStyle, value, maxValue, hideCount, unreadIndicator: flag, accessibilityLabel, accessibilityElementsHidden, importantForAccessibility, isMentionLowImportance: maskStyle.isMentionLowImportance };
     obj.children = <Badge style={style} textStyle={textStyle} dotStyle={dotStyle} value={value} maxValue={maxValue} hideCount={hideCount} unreadIndicator={flag} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={accessibilityElementsHidden} importantForAccessibility={importantForAccessibility} isMentionLowImportance={maskStyle.isMentionLowImportance} />;
-    let tmp3 = <View style={style} textStyle={textStyle} dotStyle={dotStyle} value={value} maxValue={maxValue} hideCount={hideCount} unreadIndicator={flag} accessibilityLabel={accessibilityLabel} accessibilityElementsHidden={accessibilityElementsHidden} importantForAccessibility={importantForAccessibility} isMentionLowImportance={maskStyle.isMentionLowImportance} />;
+    let tmp3 = <View pointerEvents="none" style={tmp2} onLayout={onLayout}>{null}</View>;
   } else {
     tmp3 = null;
   }

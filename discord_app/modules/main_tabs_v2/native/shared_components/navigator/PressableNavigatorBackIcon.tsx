@@ -2,7 +2,7 @@
 
 // Module 7968 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7738 */;
@@ -15,14 +15,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles(() => {
-  let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
+  const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
   obj.maskWrapper = rect;
-  obj = { backgroundColor: nativeDefault.colors.PANEL_BG };
-  obj.maskStroke = obj;
+  obj.maskStroke = { backgroundColor: nativeDefault.colors.PANEL_BG };
   obj.actionButtonPressable = { padding: 8, zIndex: 100, borderRadius: 20 };
-  obj = { tintColor: nativeDefault.colors.ICON_SUBTLE };
-  obj.actionButtonIcon = obj;
+  const obj2 = { backgroundColor: nativeDefault.colors.PANEL_BG };
+  obj.actionButtonIcon = { tintColor: nativeDefault.colors.ICON_SUBTLE };
   return obj;
 });
 const size = fn(2);
@@ -34,9 +33,8 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0, badgeCutoutColor: 0 }));
   let stateFromStores;
   const tmp2 = closure_11();
-  let obj = navigation(stateFromStores[9]);
   const items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = navigation(stateFromStores[9]).useStateFromStores(items, () => {
     totalMentionCount = totalMentionCount.getTotalMentionCount();
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
     if (null == currentlySelectedChannelId) {
@@ -54,30 +52,30 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
     }
     obj = totalMentionCount;
   });
-  let obj1 = noop;
   const items1 = [stateFromStores];
   const memo = noop.useMemo(() => {
     if (stateFromStores >= 10) {
       if (tmp < 100) {
-        let obj = { minWidth: native.BADGE_SIZE + 8 };
+        const obj2 = { minWidth: native.BADGE_SIZE + 8 };
+        let obj = obj2;
       } else {
         obj = { minWidth: native.BADGE_SIZE + 12 };
       }
       return obj;
     }
   }, items1);
-  let obj2 = navigation(stateFromStores[10]);
-  const token = obj2.useToken(navigation.badgeCutoutColor);
-  let obj3 = navigation(stateFromStores[11]);
+  let obj = navigation(stateFromStores[9]);
+  const token = navigation(stateFromStores[10]).useToken(navigation.badgeCutoutColor);
+  const obj3 = navigation(stateFromStores[10]);
   let backgroundColor = token;
   if (token == null) {
-    backgroundColor = obj3.useGradientValue(navigation(stateFromStores[11]).GradientPercentage.START);
+    backgroundColor = obj4.useGradientValue(navigation(stateFromStores[11]).GradientPercentage.START);
   }
   if (backgroundColor == null) {
     backgroundColor = tmp2.maskStroke.backgroundColor;
   }
   const items2 = [navigation, onPress];
-  const callback = obj1.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null == onPress) {
       if (navigation != null) {
         navigation.goBack();
@@ -86,32 +84,33 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
       tmp();
     }
   }, items2);
-  obj = { ref };
+  obj4 = navigation(stateFromStores[11]);
+  const obj5 = { ref };
   const merged1 = Object.assign(merged);
-  obj.accessibilityRole = "button";
+  obj5.accessibilityRole = "button";
   if (stateFromStores > 0) {
     const intl2 = tmp3(tmp4[14]).intl;
-    obj = { mentionCount: stateFromStores };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[14]).t.vxFYaM, obj);
+    const obj6 = { mentionCount: stateFromStores };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[14]).t.vxFYaM, obj6);
   } else {
     const intl = tmp3(tmp4[14]).intl;
     formatToPlainStringResult = intl.string(tmp3(tmp4[14]).t["13/7kX"]);
   }
-  obj.accessibilityLabel = formatToPlainStringResult;
-  obj.onPress = callback;
-  obj.style = tmp2.actionButtonPressable;
-  obj1 = { source: tmp10(tmp4[15]), style: { tintColor: tmp2.actionButtonIcon.tintColor } };
-  const items3 = [closure_9(closure_5, obj1), ];
+  obj5.accessibilityLabel = formatToPlainStringResult;
+  obj5.onPress = callback;
+  obj5.style = tmp2.actionButtonPressable;
+  const tmp11 = onPress(stateFromStores[12]);
+  const items3 = [closure_9(closure_5, { source: onPress(stateFromStores[15]), style: { tintColor: tmp2.actionButtonIcon.tintColor } }), ];
   let tmp9Result = null;
   if (stateFromStores > 0) {
-    obj2 = { style: tmp2.maskWrapper, children: null };
-    obj3 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
-    obj2.children = closure_9(tmp10(tmp4[16]), obj3);
-    tmp9Result = closure_9(closure_4, obj2);
+    const obj8 = { style: tmp2.maskWrapper, children: null };
+    const obj9 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
+    obj8.children = closure_9(tmp10(tmp4[16]), obj9);
+    tmp9Result = closure_9(closure_4, obj8);
   }
-  const obj4 = { children: null };
+  const obj10 = { children: null };
   items3[1] = tmp9Result;
-  obj.children = closure_10(closure_4, { children: items3 });
-  obj4.children = closure_9(navigation(stateFromStores[13]).PressableOpacity, obj);
-  return closure_9(onPress(stateFromStores[12]), obj4);
+  obj5.children = closure_10(closure_4, { children: items3 });
+  obj10.children = closure_9(navigation(stateFromStores[13]).PressableOpacity, obj5);
+  return closure_9(tmp11, obj10);
 });

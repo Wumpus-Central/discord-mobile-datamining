@@ -1,12 +1,12 @@
-// === Module 13096: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 13097: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 13096 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 13097 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1114 */;
-import frecency_user_settings from "frecency_user_settings" /* 1222 */;
+import frecency_user_settings from "frecency_user_settings" /* 1220 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10494 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10496 */;
-import GifIcon from "GifIcon" /* 10509 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10495 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10497 */;
+import GifIcon from "GifIcon" /* 10510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,28 +30,28 @@ export default noop.memo(function GIFFavButton(source) {
   items[7] = uri;
   const callback = noop.useCallback(() => {
     if (isFavoriteGIF) {
-      let tmpResult = GIFPickerActionCreators;
-      tmpResult.removeFavoriteGIF(uri);
-      let obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+      GIFPickerActionCreators.removeFavoriteGIF(uri);
+      const tmpResult = GIFPickerActionCreators;
+      const obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
       const intl2 = util.intl;
       obj.content = intl2.string(util.t.in1rga);
       obj.IconComponent = GifIcon.GifIcon;
       ToastActionCreatorsDefault.open(obj);
     } else {
-      tmpResult = GIFPickerUtils;
-      obj = { providerName: null, thumbnail: null };
       ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
-      const gIFThumbnailForFavorite = tmpResult.getGIFThumbnailForFavorite(obj);
+      const gIFThumbnailForFavorite = GIFPickerUtils.getGIFThumbnailForFavorite({ providerName: null, thumbnail: null });
+      const obj6 = { providerName: null, thumbnail: null };
+      const tmpResult2 = GIFPickerUtils;
       const size = { url: uri, src: source.uri, gifSrc: gIFThumbnailForFavorite, width: null, height: null, format: null };
       ({ width: obj4.width, height: obj4.height } = source);
       const GIFType = frecency_user_settings.GIFType;
       size.format = source.isGIFV ? GIFType.VIDEO : GIFType.IMAGE;
       GIFPickerActionCreators.addFavoriteGIF(size);
-      const obj1 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+      const obj7 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
       const intl = util.intl;
-      obj1.content = intl.string(util.t.okQonm);
-      obj1.IconComponent = GifIcon.GifIcon;
-      ToastActionCreatorsDefault.open(obj1);
+      obj7.content = intl.string(util.t.okQonm);
+      obj7.IconComponent = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open(obj7);
     }
   }, items);
   const obj2 = source(isFavoriteGIF[3]);
@@ -70,17 +70,17 @@ export default noop.memo(function GIFFavButton(source) {
   } else {
     stringResult = string(t.nIH0v8);
   }
-  obj = { accessibilityLabel: stringResult, onPress: callback, icon: null };
+  const obj4 = { accessibilityLabel: stringResult, onPress: callback, icon: null };
   if (isFavoriteGIF) {
     StarIcon = StarIcon(YELLOW_300[11]).StarIcon;
-    obj = { color: null, size: "md" };
+    let obj5 = { color: null, size: "md" };
     YELLOW_300 = tmp5(YELLOW_300[12]).unsafe_rawColors.YELLOW_300;
-    obj.color = YELLOW_300;
+    obj5.color = YELLOW_300;
     let tmp4Result = <StarIcon color={null} size="md" />;
   } else {
     tmp4Result = jsx(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
   }
-  obj.icon = tmp4Result;
-  tmp4Result = jsx(uri(YELLOW_300[10]), { accessibilityLabel: stringResult, onPress: callback, icon: null });
+  obj4.icon = tmp4Result;
+  jsx(uri(YELLOW_300[10]), { accessibilityLabel: stringResult, onPress: callback, icon: null });
   const tmp6 = uri(YELLOW_300[10]);
 });

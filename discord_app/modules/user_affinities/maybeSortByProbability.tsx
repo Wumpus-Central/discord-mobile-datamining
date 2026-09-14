@@ -24,10 +24,10 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, u
       if (num == null) {
         num = 0;
       }
-      value = userAffinitiesMap.get(id.id);
+      value2 = userAffinitiesMap.get(id.id);
       let num2;
-      if (value != null) {
-        num2 = value.vcProbability;
+      if (value2 != null) {
+        num2 = value2.vcProbability;
       }
       if (num2 == null) {
         num2 = 0;
@@ -46,10 +46,10 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, u
       if (num == null) {
         num = 0;
       }
-      value = userAffinitiesMap.get(id.id);
+      value2 = userAffinitiesMap.get(id.id);
       let num2;
-      if (value != null) {
-        num2 = value.communicationProbability;
+      if (value2 != null) {
+        num2 = value2.communicationProbability;
       }
       if (num2 == null) {
         num2 = 0;

@@ -1,17 +1,17 @@
-// === Module 14887: AccountWebAuthnViewSetting ===
+// === Module 14888: AccountWebAuthnViewSetting ===
 
-// Module 14887 (AccountWebAuthnViewSetting)
+// Module 14888 (AccountWebAuthnViewSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6698 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 14743 */;
+import WebAuthnStore from "WebAuthnStore" /* 14744 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.y7SXYX);
@@ -28,12 +28,12 @@ let SettingBuilders = {
         flag = false;
       }
       if (!flag) {
-        const obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.v740sh);
+        obj2.title = intl.string(util.t.v740sh);
         const intl2 = util.intl;
-        obj.body = intl2.string(util.t.uggF7o);
-        obj.show(obj);
+        obj2.body = intl2.string(util.t.uggF7o);
+        AlertActionCreatorsDefault.show(obj2);
       }
       return flag;
     }, []);
@@ -55,9 +55,8 @@ let SettingBuilders = {
       return require("UserSettingsWebAuthn").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
-export default SettingBuilders;
+export default route;

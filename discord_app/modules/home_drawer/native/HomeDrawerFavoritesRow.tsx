@@ -1,9 +1,9 @@
-// === Module 16408: HomeDrawerFavoritesRow ===
+// === Module 16410: HomeDrawerFavoritesRow ===
 
-// Module 16408 (HomeDrawerFavoritesRow)
+// Module 16410 (HomeDrawerFavoritesRow)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16401 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16403 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
-  let obj = { title: null, subtitle: null };
-  obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  const obj = { title: null, subtitle: null };
+  const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.wMWyci);
+  obj2.children = intl.string(util.t.wMWyci);
   obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
-  return jsx(HomeDrawerShared.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  return jsx(HomeDrawerShared.HomeDrawerSharedItem, { title: null, subtitle: null });
 };

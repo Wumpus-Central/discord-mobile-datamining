@@ -33,10 +33,11 @@ import _mod3232 from "module_3232" /* 3232 */;
 import _mod3233 from "module_3233" /* 3233 */;
 import _mod3234 from "module_3234" /* 3234 */;
 import _mod3235 from "module_3235" /* 3235 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3205);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/call_feedback_tutorials/web/CallFeedbackTutorials.messages.js");
 
 export default messagesProxy;

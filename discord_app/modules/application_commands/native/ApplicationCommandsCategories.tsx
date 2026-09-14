@@ -1,38 +1,34 @@
-// === Module 12527: ApplicationCommandsCategories ===
+// === Module 12528: ApplicationCommandsCategories ===
 
-// Module 12527 (ApplicationCommandsCategories)
+// Module 12528 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12360 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12361 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12524);
+const ApplicationCommandsCategoriesConstants = fn(12525);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
-obj = { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
-obj.container = obj;
+const createStyles = fn(4636);
+let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
-obj.fadedItem = { opacity: 0.5 };
-const createStyles = { opacity: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj.activeItem = createStyles;
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
+obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.item = { marginVertical: NODE_MARGIN, marginHorizontal: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo((section) => {
   section = section.section;
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: noop } = section);
   const tmp = closure_9();
-  let obj = section(504);
   const items = [GuildMemberStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = section(504).useStateFromStores(items, () => {
     if (null != noop) {
       let botId;
       if (section != null) {
@@ -47,10 +43,10 @@ let closure_10 = noop.memo((section) => {
   const memo = noop.useMemo(() => application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section, stateFromStores), items1);
   let tmp6 = null != memo;
   if (tmp6) {
-    obj = { style: tmp.categoryImage, source: memo };
+    const obj2 = { style: tmp.categoryImage, source: memo };
     tmp6 = jsx(FastImageDefault, { style: tmp.categoryImage, source: memo });
   }
-  obj = {
+  const obj3 = {
     onPress() {
       return importDefault(dependencyMap);
     },
@@ -62,15 +58,15 @@ let closure_10 = noop.memo((section) => {
   const formatToPlainString = intl.formatToPlainString;
   const t = tmp2(1114).t;
   if (active) {
-    const obj1 = { applicationName: section.name };
-    let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj1);
+    const obj4 = { applicationName: section.name };
+    let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
   } else {
-    const obj2 = { applicationName: section.name };
-    formatToPlainStringResult = formatToPlainString(t["9uqD4O"], obj2);
+    const obj5 = { applicationName: section.name };
+    formatToPlainStringResult = formatToPlainString(t["9uqD4O"], obj5);
   }
-  obj.accessibilityLabel = formatToPlainStringResult;
+  obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
-  obj.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
+  obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
   return jsx(section(5204).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
@@ -133,33 +129,12 @@ export default function ApplicationCommandsCategories(onPressSection) {
   let obj = { style: null, children: null };
   const items3 = [closure_9().container, style];
   obj.style = items3;
-  obj = {
-    ref,
-    getItemLayout: callback3,
-    data: sections,
-    keyboardShouldPersistTaps: "always",
-    horizontal: true,
-    keyExtractor(id) {
-      return id.id;
-    },
-    renderItem: noop.useCallback((section) => {
-      const index = section.index;
-      return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
-    }, items2),
-    showsHorizontalScrollIndicator: false,
-    onScroll: callback1,
-    onLayout: callback2
-  };
+  const tmp = closure_9();
   obj.children = <ref3 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
     return id.id;
   }} renderItem={noop.useCallback((section) => {
     const index = section.index;
     return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
   }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
-  return <ref2 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} renderItem={noop.useCallback((section) => {
-    const index = section.index;
-    return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
-  }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
+  return <ref2 style={null}>{null}</ref2>;
 };

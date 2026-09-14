@@ -13,8 +13,7 @@ const result = size.fileFinishedImporting("design/components/ErrorText/native/Er
 export const ErrorText = function ErrorText(children) {
   children = children.children;
   let nodeText;
-  let obj = nodeText(4340);
-  nodeText = obj.getNodeText(children);
+  nodeText = nodeText(4340).getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -26,8 +25,8 @@ export const ErrorText = function ErrorText(children) {
       AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
-  obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
+  const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
   const items1 = [closure_3(nodeText(6711).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
-  obj.children = items1;
-  return closure_4(nodeText(5054).Stack, obj);
+  obj2.children = items1;
+  return closure_4(nodeText(5054).Stack, obj2);
 };

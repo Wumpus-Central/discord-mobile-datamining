@@ -1,6 +1,6 @@
-// === Module 13105: MediaMessagePreviewActionSheet ===
+// === Module 13106: MediaMessagePreviewActionSheet ===
 
-// Module 13105 (MediaMessagePreviewActionSheet)
+// Module 13106 (MediaMessagePreviewActionSheet)
 import router_utils from "router_utils" /* 1100 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
@@ -23,12 +23,12 @@ export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
   const isNonUserBotResult = user.isNonUserBot();
   let canReportUserResult = !isNonUserBotResult;
   if (!isNonUserBotResult) {
-    let tmpResult = tmp(closeMediaModal[3]);
-    canReportUserResult = tmpResult.canReportUser(user);
+    canReportUserResult = tmp(closeMediaModal[3]).canReportUser(user);
+    const tmpResult = tmp(closeMediaModal[3]);
   }
   if (canReportUserResult) {
-    tmpResult = tmp(closeMediaModal[3]);
-    canReportUserResult = tmpResult.canReportMessage(message);
+    canReportUserResult = tmp(closeMediaModal[3]).canReportMessage(message);
+    const tmpResult2 = tmp(closeMediaModal[3]);
   }
   callback = callback.useCallback(() => {
     message(closeMediaModal[4]).hideActionSheet();
@@ -52,32 +52,31 @@ export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
     callback();
     const result = ReportModals.showReportModalForMessage(message, "mobile_media_message_preview_action_sheet");
   }, items2);
-  let obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: tmp(closeMediaModal[11]).ChatArrowRightIcon };
-  obj.icon = closure_4(channel(closeMediaModal[10]).ActionSheetRow.Icon, obj);
+  let obj = { icon: closure_4(channel(closeMediaModal[10]).ActionSheetRow.Icon, { IconComponent: channel(closeMediaModal[11]).ChatArrowRightIcon }), label: null, onPress: null };
   const intl = tmp(closeMediaModal[12]).intl;
   obj.label = intl.string(channel(closeMediaModal[12]).t["+TSRGD"]);
   obj.onPress = callback1;
   const items3 = [closure_4(channel(closeMediaModal[10]).ActionSheetRow, obj), , ];
   if (setting) {
-    const obj1 = { icon: null, label: null, onPress: null };
-    const obj2 = { IconComponent: tmp(closeMediaModal[13]).IdIcon };
-    obj1.icon = closure_4(tmp(closeMediaModal[10]).ActionSheetRow.Icon, obj2);
+    const obj3 = { icon: null, label: null, onPress: null };
+    const obj4 = { IconComponent: tmp(closeMediaModal[13]).IdIcon };
+    obj3.icon = closure_4(tmp(closeMediaModal[10]).ActionSheetRow.Icon, obj4);
     const intl2 = tmp(closeMediaModal[12]).intl;
-    obj1.label = intl2.string(tmp(closeMediaModal[12]).t.zBoHlf);
-    obj1.onPress = callback2;
-    setting = closure_4(tmp(closeMediaModal[10]).ActionSheetRow, obj1);
+    obj3.label = intl2.string(tmp(closeMediaModal[12]).t.zBoHlf);
+    obj3.onPress = callback2;
+    setting = closure_4(tmp(closeMediaModal[10]).ActionSheetRow, obj3);
   }
   items3[1] = setting;
   if (canReportUserResult) {
-    const obj3 = { icon: null, label: null, onPress: null, variant: "danger" };
-    const obj4 = { IconComponent: tmp(closeMediaModal[14]).FlagIcon };
-    obj3.icon = closure_4(tmp(closeMediaModal[10]).ActionSheetRow.Icon, obj4);
+    const obj5 = { icon: null, label: null, onPress: null, variant: "danger" };
+    const obj6 = { IconComponent: tmp(closeMediaModal[14]).FlagIcon };
+    obj5.icon = closure_4(tmp(closeMediaModal[10]).ActionSheetRow.Icon, obj6);
     const intl3 = tmp(closeMediaModal[12]).intl;
-    obj3.label = intl3.string(tmp(closeMediaModal[12]).t["+78Pfm"]);
-    obj3.onPress = callback3;
-    canReportUserResult = closure_4(tmp(closeMediaModal[10]).ActionSheetRow, obj3);
+    obj5.label = intl3.string(tmp(closeMediaModal[12]).t["+78Pfm"]);
+    obj5.onPress = callback3;
+    canReportUserResult = closure_4(tmp(closeMediaModal[10]).ActionSheetRow, obj5);
   }
+  const obj2 = { IconComponent: channel(closeMediaModal[11]).ChatArrowRightIcon };
   items3[2] = canReportUserResult;
   return closure_4(channel(closeMediaModal[9]).ActionSheet, { children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }) });
 });

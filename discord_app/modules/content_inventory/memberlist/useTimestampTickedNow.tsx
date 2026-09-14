@@ -1,10 +1,12 @@
-// === Module 13136: useTimestampTickedNow ===
+// === Module 13137: useTimestampTickedNow ===
 
-// Module 13136 (useTimestampTickedNow)
+// Module 13137 (useTimestampTickedNow)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

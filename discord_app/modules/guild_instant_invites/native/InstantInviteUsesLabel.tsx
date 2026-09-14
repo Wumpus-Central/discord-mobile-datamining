@@ -1,6 +1,6 @@
-// === Module 11079: InstantInviteUsesLabel ===
+// === Module 11080: InstantInviteUsesLabel ===
 
-// Module 11079 (InstantInviteUsesLabel)
+// Module 11080 (InstantInviteUsesLabel)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 

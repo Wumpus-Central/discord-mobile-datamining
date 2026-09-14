@@ -1,10 +1,12 @@
-// === Module 15763: TotpScreen ===
+// === Module 15765: TotpScreen ===
 
-// Module 15763 (TotpScreen)
-import MFA from "MFA" /* 15764 */;
+// Module 15765 (TotpScreen)
+import MFA from "MFA" /* 15766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function isValidClipboardCode(arg0) {
@@ -22,16 +24,16 @@ const result = size.fileFinishedImporting("modules/mfa/native/screens/TotpScreen
 export default function TotpScreen(finish) {
   finish = finish.finish;
   importDefault = undefined;
+  first = undefined;
+  asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [tmp2, c1] = _slicedToArray(noop.useState(false), 2);
-  const tmp3 = _slicedToArray(noop.useState(""), 2);
-  const first = tmp3[0];
-  asyncGeneratorStep = tmp3[1];
+  [tmp2, c1] = noop.useState(false);
+  [first, asyncGeneratorStep] = noop.useState("");
   const tmp = _slicedToArray(noop.useState(false), 2);
-  [tmp5, c4] = _slicedToArray(noop.useState(undefined), 2);
+  [tmp5, c4] = noop.useState(undefined);
   const tmp4 = _slicedToArray(noop.useState(undefined), 2);
-  [tmp7, c5] = _slicedToArray(noop.useState(false), 2);
+  [tmp7, c5] = noop.useState(false);
   _require = asyncGeneratorStep(async (data) => {
     c6 = 0;
     c7 = 0;
@@ -44,8 +46,8 @@ export default function TotpScreen(finish) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -59,8 +61,8 @@ export default function TotpScreen(finish) {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp7;
               tmp3(data);
@@ -69,11 +71,11 @@ export default function TotpScreen(finish) {
                 tmp28(undefined);
                 message(true);
                 v0 = 1;
-                const obj1 = { mfaType: "totp", data };
+                const obj4 = { mfaType: "totp", data };
                 c6 = 2;
                 c7 = 1;
-                const obj2 = { value: data(obj1), done: false };
-                return obj2;
+                const obj5 = { value: data(obj4), done: false };
+                return obj5;
               }
             }
           } else {
@@ -97,7 +99,7 @@ export default function TotpScreen(finish) {
             } else if (arg0 === 2) {
               v0 = 0;
               c7 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               v0(true);
@@ -133,32 +135,32 @@ export default function TotpScreen(finish) {
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   const intl = require("util").intl;
   obj.headerText = intl.string(require("util").t.uc00u5);
-  obj = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, textContentType: "oneTimeCode", autoComplete: "one-time-code", keyboardType: "number-pad" };
+  let obj2 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, textContentType: "oneTimeCode", autoComplete: "one-time-code", keyboardType: "number-pad" };
   const tmp12 = require("MfaOptionScreen");
   const intl2 = require("util").intl;
-  obj.label = intl2.string(require("util").t.HZPBOd);
+  obj2.label = intl2.string(require("util").t.HZPBOd);
   const intl3 = require("util").intl;
-  obj.placeholder = intl3.string(require("util").t.tARzgo);
-  obj.isValidClipboardCode = isValidClipboardCode;
-  obj.maxLength = require("MFA").TOTP_CODE_LENGTH;
-  obj.onChangeCode = onChangeCode;
-  obj.error = tmp5;
+  obj2.placeholder = intl3.string(require("util").t.tARzgo);
+  obj2.isValidClipboardCode = isValidClipboardCode;
+  obj2.maxLength = require("MFA").TOTP_CODE_LENGTH;
+  obj2.onChangeCode = onChangeCode;
+  obj2.error = tmp5;
   let tmp15 = tmp2;
   if (!tmp2) {
     tmp15 = tmp7;
   }
-  obj.isDisabled = tmp15;
-  obj.input = onChangeCode(require("ClipboardCopyInput"), obj);
-  obj = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
+  obj2.isDisabled = tmp15;
+  obj.input = onChangeCode(require("ClipboardCopyInput"), obj2);
+  let obj3 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
   const tmp14 = require("ClipboardCopyInput");
   const intl4 = tmp13(tmp11[6]).intl;
-  obj.text = intl4.string(require("util").t.geKm7t);
+  obj3.text = intl4.string(require("util").t.geKm7t);
   let tmp17 = tmp2;
   if (!tmp2) {
     tmp17 = tmp7;
   }
-  obj.loading = tmp17;
-  obj.onPress = function onPress() {
+  obj3.loading = tmp17;
+  obj3.onPress = function onPress() {
     callback(first);
   };
   if (!tmp2) {
@@ -167,8 +169,8 @@ export default function TotpScreen(finish) {
   if (!tmp2) {
     tmp2 = first.length !== tmp13(tmp11[4]).TOTP_CODE_LENGTH;
   }
-  obj.disabled = tmp2;
-  obj.submit = onChangeCode(tmp10(first[8]), obj);
+  obj3.disabled = tmp2;
+  obj.submit = onChangeCode(tmp10(first[8]), obj3);
   obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
   return onChangeCode(tmp12, obj);
 };

@@ -143,13 +143,13 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits2 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits2) {
-                    let tmp82Result = _modDef5135;
+                    _modDef5135;
                   }
                 }
                 if (null != channel.linkedLobby) {
-                  tmp82Result = _modDef5144;
+                  let tmp82Result2 = _modDef5144;
                 } else {
-                  tmp82Result = _modDef5113;
+                  tmp82Result2 = _modDef5113;
                 }
               }
               return tmp79;
@@ -189,9 +189,9 @@ function getChannelIcon(channel, ignoreTraits) {
                   }
                 }
                 if (channel.isGameInvitesChannel()) {
-                  tmp69Result = _modDef5141;
+                  let tmp69Result2 = _modDef5141;
                 } else {
-                  tmp69Result = importDefault(isMediaChannelResult ? 5133 : 5130);
+                  tmp69Result2 = importDefault(isMediaChannelResult ? 5133 : 5130);
                 }
               }
               return tmp66;
@@ -351,10 +351,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits19 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits19) {
-                    let tmp21Result1 = _modDef5123;
+                    let tmp21Result4 = _modDef5123;
                   }
                 }
-                tmp21Result1 = _modDef5119;
+                tmp21Result4 = _modDef5119;
               }
               return tmp17Result;
             } else if (ChannelTypes.GUILD_DIRECTORY === type) {

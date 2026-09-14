@@ -1,6 +1,6 @@
-// === Module 16433: usePreloadedGuildAsset ===
+// === Module 16435: usePreloadedGuildAsset ===
 
-// Module 16433 (usePreloadedGuildAsset)
+// Module 16435 (usePreloadedGuildAsset)
 import useRefValueDefault from "useRefValue" /* 5667 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,8 +14,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
   dependencyMap = icon;
   _slicedToArray = asset;
   noop = _slicedToArray(noop.useState({}), 2)[1];
-  let obj = { guildId, asset, icon, preloading: icon };
-  const ref = noop.useRef(obj);
+  const ref = noop.useRef({ guildId, asset, icon, preloading: icon });
   const effect = noop.useEffect(() => () => {
     ref.current.guildId = undefined;
   }, []);
@@ -23,7 +22,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
   if (guildId === tmp3.guildId) {
     asset = tmp3.asset;
   }
-  const effect1 = obj.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (guildId === ref.current.guildId) {
       if (null != icon) {
         if (tmp5) {

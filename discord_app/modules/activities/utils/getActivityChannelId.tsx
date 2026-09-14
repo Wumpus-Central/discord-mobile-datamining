@@ -1,6 +1,6 @@
-// === Module 13163: getActivityChannelId ===
+// === Module 13164: getActivityChannelId ===
 
-// Module 13163 (getActivityChannelId)
+// Module 13164 (getActivityChannelId)
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
@@ -24,11 +24,11 @@ export default function getActivityChannelId(userId) {
         session_id1 = activity.session_id;
       }
       const voiceStateForSession = VoiceStateStore.getVoiceStateForSession(userId.userId, session_id1);
-      channelId = undefined;
+      let channelId1;
       if (voiceStateForSession != null) {
-        channelId = voiceStateForSession.channelId;
+        channelId1 = voiceStateForSession.channelId;
       }
-      tmp3 = channelId;
+      tmp3 = channelId1;
     } else {
       tmp3 = channelId;
     }

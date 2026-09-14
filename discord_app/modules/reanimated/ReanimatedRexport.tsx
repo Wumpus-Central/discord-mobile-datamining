@@ -3,8 +3,10 @@
 // Module 4373 (ReanimatedRexport)
 import cancelAnimationDefault from "cancelAnimation" /* 1636 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4374 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 if (PlatformUtils.isAndroid()) {
   const _Object = Object;

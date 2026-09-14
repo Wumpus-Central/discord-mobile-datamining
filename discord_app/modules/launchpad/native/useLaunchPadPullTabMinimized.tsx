@@ -1,16 +1,16 @@
-// === Module 17082: useLaunchPadPullTabMinimized ===
+// === Module 17084: useLaunchPadPullTabMinimized ===
 
-// Module 17082 (useLaunchPadPullTabMinimized)
+// Module 17084 (useLaunchPadPullTabMinimized)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 const DCDScrollTracker = get_ActivityIndicator.NativeModules.DCDScrollTracker;
-let tmp3;
+let tmp32;
 if (DCDScrollTracker) {
-  tmp3 = new tmp3(DCDScrollTracker);
+  tmp32 = new tmp3(DCDScrollTracker);
 }
-let closure_3 = tmp3;
+let closure_3 = tmp32;
 const __initData = { code: "function useLaunchPadPullTabMinimizedTsx1(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");

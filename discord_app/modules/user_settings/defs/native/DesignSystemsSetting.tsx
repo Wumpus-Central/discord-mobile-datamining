@@ -1,11 +1,13 @@
-// === Module 15840: DesignSystemsSetting ===
+// === Module 15842: DesignSystemsSetting ===
 
-// Module 15840 (DesignSystemsSetting)
+// Module 15842 (DesignSystemsSetting)
 import Constants from "Constants" /* 1074 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15345 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15841 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15346 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15843 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

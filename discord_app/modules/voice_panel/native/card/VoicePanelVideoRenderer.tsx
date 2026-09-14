@@ -1,14 +1,14 @@
-// === Module 17242: VoicePanelVideoRenderer ===
+// === Module 17244: VoicePanelVideoRenderer ===
 
-// Module 17242 (VoicePanelVideoRenderer)
+// Module 17244 (VoicePanelVideoRenderer)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import spring from "spring" /* 5055 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9625 */;
 import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9746 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
-import VideoActionCreators from "VideoActionCreators" /* 17113 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
+import VideoActionCreators from "VideoActionCreators" /* 17115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12403).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17199).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12404).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -141,22 +141,20 @@ export default noop.memo(function VideoRenderer(streamKey) {
   let sharedValue10;
   let tmp = onReady();
   let tmp3 = sharedCoords;
-  let obj = id(sharedCoords[16]);
-  const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, { location: "VoicePanelVideoRenderer" });
-  let obj1 = isCamera;
+  const surfaceDirectRendererExperiment = id(sharedCoords[16]).useSurfaceDirectRendererExperiment(userId, { location: "VoicePanelVideoRenderer" });
   const context = isCamera.useContext(streamId(sharedCoords[11]));
   const mode = context.mode;
   const focused = context.focused;
   ({ setFocused: c10, layoutManager } = context);
   const windowDimensions = context.windowDimensions;
-  let obj2 = id(sharedCoords[8]);
-  const sharedValue = obj2.useSharedValue(true);
+  let obj = id(sharedCoords[16]);
+  const sharedValue = id(sharedCoords[8]).useSharedValue(true);
   let obj3 = id(sharedCoords[8]);
-  obj = {};
   const merged = Object.assign(layoutManager.getTargetDimensions(id));
-  const sharedValue1 = obj3.useSharedValue(obj);
-  let obj5 = id(sharedCoords[17]);
-  const pIPState = obj5.usePIPState();
+  const sharedValue1 = id(sharedCoords[8]).useSharedValue({});
+  let obj4 = id(sharedCoords[8]);
+  let obj5 = {};
+  const pIPState = id(sharedCoords[17]).usePIPState();
   let tmp11 = isCamera;
   if (isCamera) {
     tmp11 = pIPState.id === id;
@@ -164,8 +162,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
   if (tmp11) {
     tmp11 = surfaceDirectRendererExperiment;
   }
-  [tmp13, c16] = isScrollVisible(obj1.useState(true), 2);
-  getScaleChangeWithOverscroll = obj1.useRef(() => {
+  let obj6 = id(sharedCoords[17]);
+  [tmp13, c16] = isScrollVisible(isCamera.useState(true), 2);
+  getScaleChangeWithOverscroll = obj2.useRef(() => {
     if (flag2) {
       _undefined(id);
     }
@@ -173,14 +172,14 @@ export default noop.memo(function VideoRenderer(streamKey) {
   onReady = tmp5(tmp3[18])({ streamId, userId, loading: tmp13, videoSpinnerContext, paused: flag3, streamKey: streamKey.streamKey }).onReady;
   streamId(tmp3[19])({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp13 });
   let items = [onReady];
-  const callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     translateX(false);
     translateY.current();
     onReady();
   }, items);
-  let tmp2Result = tmp2(tmp3[20]);
-  setHasActiveVideoOutputSink = tmp2Result.useSetHasActiveVideoOutputSink(context.streamOutputSinkStack);
-  tmp2Result = tmp2(tmp3[8]);
+  const tmp12 = isScrollVisible(isCamera.useState(true), 2);
+  setHasActiveVideoOutputSink = id(tmp3[20]).useSetHasActiveVideoOutputSink(context.streamOutputSinkStack);
+  let tmp2Result = id(tmp3[20]);
   function qe() {
     const items = [mode.get(), , , ];
     value = focused.get();
@@ -233,13 +232,13 @@ export default noop.memo(function VideoRenderer(streamKey) {
       return;
     }
   }
-  obj = { cheapWorkletArrayShallowEqual: tmp2(tmp3[13]).cheapWorkletArrayShallowEqual, runOnJS: tmp2(tmp3[8]).runOnJS, setHasActiveVideoOutputSink, shouldMakeActive, id };
-  Je.__closure = obj;
+  const tmp2Result27 = id(tmp3[8]);
+  Je.__closure = { cheapWorkletArrayShallowEqual: id(tmp3[13]).cheapWorkletArrayShallowEqual, runOnJS: id(tmp3[8]).runOnJS, setHasActiveVideoOutputSink, shouldMakeActive, id };
   Je.__workletHash = 12089612803324;
   Je.__initData = __initData15;
-  const animatedReaction = tmp2Result.useAnimatedReaction(qe, Je);
+  const animatedReaction = tmp2Result27.useAnimatedReaction(qe, Je);
   const items1 = [sharedValue1, layoutManager, id, sharedValue];
-  const callback1 = obj1.useCallback((nativeEvent) => {
+  const callback1 = obj2.useCallback((nativeEvent) => {
     ({ width, height } = nativeEvent.nativeEvent);
     updateSharedValueIfChangedDefault(sharedValue1, { width, height });
     layoutManager.setTargetDimensions(id, width, height);
@@ -250,7 +249,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }, 34);
     }
   }, items1);
-  const tmp12 = isScrollVisible(obj1.useState(true), 2);
+  let obj7 = { cheapWorkletArrayShallowEqual: id(tmp3[13]).cheapWorkletArrayShallowEqual, runOnJS: id(tmp3[8]).runOnJS, setHasActiveVideoOutputSink, shouldMakeActive, id };
   class Be {
     constructor() {
       value = focused.get();
@@ -291,7 +290,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   closure_129_27 = undefined;
   closure_129_28 = undefined;
   closure_129_29 = undefined;
-  const context1 = obj1.useContext(tmp5(tmp3[11]));
+  const context1 = obj2.useContext(tmp5(tmp3[11]));
   const setIsFocusedVideoZoomed = context1.setIsFocusedVideoZoomed;
   closure_129_8 = setIsFocusedVideoZoomed;
   const windowDimensions2 = context1.windowDimensions;
@@ -306,31 +305,31 @@ export default noop.memo(function VideoRenderer(streamKey) {
   closure_129_13 = controlsSpecs;
   const showControls = context1.showControls;
   closure_129_14 = showControls;
-  const tmp2Result1 = id(tmp3[8]);
+  const tmp2Result28 = id(tmp3[8]);
   sharedValue2 = id(tmp3[8]).useSharedValue(1);
   closure_129_15 = sharedValue2;
-  const tmp2Result2 = id(tmp3[8]);
+  const tmp2Result29 = id(tmp3[8]);
   sharedValue3 = id(tmp3[8]).useSharedValue(0);
   closure_129_16 = sharedValue3;
-  const tmp2Result3 = id(tmp3[8]);
+  const tmp2Result30 = id(tmp3[8]);
   sharedValue4 = id(tmp3[8]).useSharedValue(0);
   closure_129_17 = sharedValue4;
-  const tmp2Result4 = id(tmp3[8]);
+  const tmp2Result31 = id(tmp3[8]);
   const sharedValue5 = id(tmp3[8]).useSharedValue(0);
   closure_129_18 = sharedValue5;
-  const tmp2Result5 = id(tmp3[8]);
+  const tmp2Result32 = id(tmp3[8]);
   sharedValue6 = id(tmp3[8]).useSharedValue(false);
   closure_129_19 = sharedValue6;
-  const tmp2Result6 = id(tmp3[8]);
+  const tmp2Result33 = id(tmp3[8]);
   const sharedValue7 = id(tmp3[8]).useSharedValue(0);
   closure_129_20 = sharedValue7;
-  const tmp2Result7 = id(tmp3[8]);
+  const tmp2Result34 = id(tmp3[8]);
   const sharedValue8 = id(tmp3[8]).useSharedValue(false);
   closure_129_21 = sharedValue8;
-  const tmp2Result8 = id(tmp3[8]);
+  const tmp2Result35 = id(tmp3[8]);
   const sharedValue9 = id(tmp3[8]).useSharedValue(null);
   closure_129_22 = sharedValue9;
-  const tmp2Result9 = id(tmp3[8]);
+  const tmp2Result36 = id(tmp3[8]);
   let fn = function w() {
     const result = flag.get().width / flag2.get().width;
     return Math.max(result, flag.get().height / flag2.get().height);
@@ -340,7 +339,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   fn.__initData = setHasActiveVideoOutputSink;
   const derivedValue1 = id(tmp3[8]).useDerivedValue(fn);
   closure_129_23 = derivedValue1;
-  const tmp2Result10 = id(tmp3[8]);
+  const tmp2Result37 = id(tmp3[8]);
   class D {
     constructor() {
       result = c5.get().width / c6.get().width;
@@ -352,7 +351,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   D.__initData = sharedValue2;
   const derivedValue2 = id(tmp3[8]).useDerivedValue(D);
   closure_129_24 = derivedValue2;
-  const tmp2Result11 = id(tmp3[8]);
+  const tmp2Result38 = id(tmp3[8]);
   class I {
     constructor() {
       tmp = 0 === closure_16.get();
@@ -389,23 +388,23 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }
       const result = pIPState.set(spring.withSpring(value, MODE_CHANGE_PHYSICS, str2));
     } else {
-      value = sharedValue6.get();
+      value2 = sharedValue6.get();
       let str = "respect-motion-settings";
       if (layout.get()) {
         str = "animate-never";
       }
-      const result1 = pIPState.set(spring.withSpring(value, MODE_CHANGE_PHYSICS, str));
+      const result1 = pIPState.set(spring.withSpring(value2, MODE_CHANGE_PHYSICS, str));
     }
     const result2 = translateX.set(spring.withSpring(0, SCALE_PHYSICS));
     const result3 = translateY.set(spring.withSpring(0, SCALE_PHYSICS));
     const result4 = sharedValue4.set(arg0);
   }
-  obj1 = { scale: sharedValue2, withSpring: tmp2(tmp3[12]).withSpring, fitScale: derivedValue2, MODE_CHANGE_PHYSICS: layout, disableAnimations: sharedValue, coverScale: derivedValue1, translateX: sharedValue3, SCALE_PHYSICS, translateY: sharedValue4, currentSizeThreshold: sharedValue9 };
-  ae.__closure = obj1;
+  const tmp2Result39 = id(tmp3[8]);
+  ae.__closure = { scale: sharedValue2, withSpring: id(tmp3[12]).withSpring, fitScale: derivedValue2, MODE_CHANGE_PHYSICS: layout, disableAnimations: sharedValue, coverScale: derivedValue1, translateX: sharedValue3, SCALE_PHYSICS, translateY: sharedValue4, currentSizeThreshold: sharedValue9 };
   ae.__workletHash = 16610861286231;
   ae.__initData = sharedValue4;
   const items2 = [sharedValue2, sharedValue3, sharedValue4, derivedValue1, sharedValue9, derivedValue2, sharedValue];
-  const callback2 = obj1.useCallback(ae, items2);
+  const callback2 = obj2.useCallback(ae, items2);
   closure_129_26 = callback2;
   function re() {
     value = sharedCoords.get();
@@ -434,9 +433,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
   re.__workletHash = 15643035811761;
   re.__initData = sharedValue6;
   const items3 = [focused, id, isCamera, sharedValue1, windowDimensions2, callback2];
-  const callback3 = obj1.useCallback(re, items3);
+  const callback3 = obj2.useCallback(re, items3);
   closure_129_27 = callback3;
-  const tmp2Result12 = id(tmp3[8]);
+  let obj8 = { scale: sharedValue2, withSpring: id(tmp3[12]).withSpring, fitScale: derivedValue2, MODE_CHANGE_PHYSICS: layout, disableAnimations: sharedValue, coverScale: derivedValue1, translateX: sharedValue3, SCALE_PHYSICS, translateY: sharedValue4, currentSizeThreshold: sharedValue9 };
   function le() {
     return flag.get();
   }
@@ -458,11 +457,11 @@ export default noop.memo(function VideoRenderer(streamKey) {
     obj = cheapWorkletShallowEqual;
     tmp = current;
   }
-  obj2 = { cheapWorkletShallowEqual: tmp2(tmp3[13]).cheapWorkletShallowEqual, focused, id, resetOnLayoutChange: callback3 };
-  ce.__closure = obj2;
+  const tmp2Result40 = id(tmp3[8]);
+  ce.__closure = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, focused, id, resetOnLayoutChange: callback3 };
   ce.__workletHash = 13816224514199;
   ce.__initData = callback6;
-  const animatedReaction1 = id(tmp3[8]).useAnimatedReaction(le, ce);
+  const animatedReaction1 = tmp2Result40.useAnimatedReaction(le, ce);
   class Le {
     constructor() {
       value = closure_23.get();
@@ -535,7 +534,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   Le.__workletHash = 3902544453390;
   Le.__initData = token;
   const items4 = [derivedValue1, sharedValue2, sharedValue3, sharedValue4, derivedValue, sharedValue1, derivedValue2];
-  const callback4 = obj1.useCallback(Le, items4);
+  const callback4 = obj2.useCallback(Le, items4);
   closure_129_28 = callback4;
   function ye() {
     if (onReady.get() <= 0) {
@@ -563,15 +562,15 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }
     }
   }
-  obj3 = { numGesturesActive: sharedValue5, isInSnap: sharedValue6, resetToDefaultSize: callback2, scale: sharedValue2, fitScale: derivedValue2, videoDimensions: sharedValue1, containerLayout: derivedValue, translateX: sharedValue3, withSpring: tmp2(tmp3[12]).withSpring, SCALE_PHYSICS, translateY: sharedValue4 };
-  ye.__closure = obj3;
+  let obj9 = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, focused, id, resetOnLayoutChange: callback3 };
+  const tmp35 = sharedValue;
+  ye.__closure = { numGesturesActive: sharedValue5, isInSnap: sharedValue6, resetToDefaultSize: callback2, scale: sharedValue2, fitScale: derivedValue2, videoDimensions: sharedValue1, containerLayout: derivedValue, translateX: sharedValue3, withSpring: id(tmp3[12]).withSpring, SCALE_PHYSICS, translateY: sharedValue4 };
   ye.__workletHash = 3493652911835;
   ye.__initData = sharedValue10;
   const items5 = [derivedValue2, sharedValue5, sharedValue6, sharedValue2, sharedValue1, derivedValue, sharedValue3, sharedValue4, callback2];
-  const callback5 = obj1.useCallback(ye, items5);
+  const callback5 = obj2.useCallback(ye, items5);
   closure_129_29 = callback5;
-  const tmp2Result13 = id(tmp3[8]);
-  const tmp35 = sharedValue;
+  const obj10 = { numGesturesActive: sharedValue5, isInSnap: sharedValue6, resetToDefaultSize: callback2, scale: sharedValue2, fitScale: derivedValue2, videoDimensions: sharedValue1, containerLayout: derivedValue, translateX: sharedValue3, withSpring: id(tmp3[12]).withSpring, SCALE_PHYSICS, translateY: sharedValue4 };
   function xe() {
     value = sharedCoords.get();
     id = undefined;
@@ -580,12 +579,12 @@ export default noop.memo(function VideoRenderer(streamKey) {
     }
     let tmp3 = id === id;
     if (tmp3) {
-      value = callback6.get();
-      let value1 = !value;
-      if (value) {
-        value1 = sharedValue3.get();
+      const value3 = callback6.get();
+      let value4 = !value3;
+      if (value3) {
+        value4 = sharedValue3.get();
       }
-      tmp3 = value1;
+      tmp3 = value4;
     }
     return tmp3;
   }
@@ -601,7 +600,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   ke.__workletHash = 10707557639101;
   ke.__initData = __initData3;
   const animatedReaction2 = id(tmp3[8]).useAnimatedReaction(xe, ke);
-  const tmp2Result14 = id(tmp3[8]);
+  const tmp2Result41 = id(tmp3[8]);
   class Me {
     constructor() {
       value = sharedCoords.get();
@@ -624,7 +623,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   be.__workletHash = 8458824233146;
   be.__initData = __initData5;
   const animatedReaction3 = id(tmp3[8]).useAnimatedReaction(Me, be);
-  const tmp2Result15 = id(tmp3[8]);
+  const tmp2Result42 = id(tmp3[8]);
   class Ye {
     constructor() {
       return isScrollVisible.get();
@@ -646,7 +645,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   Ne.__workletHash = 9279120690968;
   Ne.__initData = __initData7;
   const animatedReaction4 = id(tmp3[8]).useAnimatedReaction(Ye, Ne);
-  const tmp2Result16 = id(tmp3[8]);
+  const tmp2Result43 = id(tmp3[8]);
   class Ge {
     constructor() {
       return c6.get();
@@ -684,7 +683,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   Fe.__workletHash = 8464422969486;
   Fe.__initData = __initData9;
   const animatedReaction5 = id(tmp3[8]).useAnimatedReaction(Ge, Fe);
-  const tmp2Result17 = id(tmp3[8]);
+  const tmp2Result44 = id(tmp3[8]);
   function ze() {
     return sharedValue6.get();
   }
@@ -711,7 +710,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   Xe.__workletHash = 10764193588506;
   Xe.__initData = __initData11;
   const animatedReaction6 = id(tmp3[8]).useAnimatedReaction(ze, Xe);
-  const tmp2Result18 = id(tmp3[8]);
+  const tmp2Result45 = id(tmp3[8]);
   function $e() {
     return setHasActiveVideoOutputSink.get();
   }
@@ -731,13 +730,13 @@ export default noop.memo(function VideoRenderer(streamKey) {
       return;
     }
   }
-  const tmp2Result19 = id(tmp3[8]);
+  const tmp2Result46 = id(tmp3[8]);
   Ze.__closure = { runOnJS: id(tmp3[8]).runOnJS, triggerHapticFeedback: id(tmp3[14]).triggerHapticFeedback, HapticFeedbackTypes: id(tmp3[14]).HapticFeedbackTypes };
   Ze.__workletHash = 11115846398818;
   Ze.__initData = __initData13;
-  const animatedReaction7 = tmp2Result19.useAnimatedReaction($e, Ze);
+  const animatedReaction7 = tmp2Result46.useAnimatedReaction($e, Ze);
   const items6 = [tmp13, dismissToPIPGestureRef, focused, id, sharedValue2, sharedValue3, sharedValue4, callback3, sharedValue5, sharedValue9, derivedValue, sharedValue6, callback4, callback5, sharedValue7, sharedValue8, derivedValue3, setFocused, hideControls, controlsSpecs, showControls, derivedValue2];
-  const memo = obj1.useMemo(() => {
+  const memo = obj2.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
     const Gesture3 = LegacyBaseButton.Gesture;
@@ -781,13 +780,13 @@ export default noop.memo(function VideoRenderer(streamKey) {
         return;
       }
     }
-    let obj = { isInDefaultZoom: callback6, resetOnLayoutChange: sharedValue10, focused: sharedCoords, id, runOnJS: ReanimatedRexport2.runOnJS, setFocused: layoutManager };
-    E.__closure = obj;
+    const onTouchesMoveResult = Gesture3.Tap().numberOfTaps(2).onTouchesMove(O);
+    E.__closure = { isInDefaultZoom: callback6, resetOnLayoutChange: sharedValue10, focused: sharedCoords, id, runOnJS: ReanimatedRexport2.runOnJS, setFocused: layoutManager };
     E.__workletHash = 10743965328356;
     E.__initData = __initData;
-    const onTouchesMoveResult = Gesture3.Tap().numberOfTaps(2).onTouchesMove(O);
+    let obj = { isInDefaultZoom: callback6, resetOnLayoutChange: sharedValue10, focused: sharedCoords, id, runOnJS: ReanimatedRexport2.runOnJS, setFocused: layoutManager };
     const Gesture4 = LegacyBaseButton.Gesture;
-    const onStartResult = Gesture3.Tap().numberOfTaps(2).onTouchesMove(O).onStart(E);
+    const onStartResult = onTouchesMoveResult.onStart(E);
     class C {
       constructor(arg0, arg1) {
         return arg1.fail();
@@ -815,13 +814,13 @@ export default noop.memo(function VideoRenderer(streamKey) {
         return;
       }
     }
-    obj = { controlsSpecs: sharedValue, VoicePanelControlsModes, runOnJS: ReanimatedRexport2.runOnJS, showControls: sharedValue1, hideControls: windowDimensions };
-    V.__closure = obj;
+    const onTouchesMoveResult1 = Gesture4.Tap().onTouchesMove(C);
+    V.__closure = { controlsSpecs: sharedValue, VoicePanelControlsModes, runOnJS: ReanimatedRexport2.runOnJS, showControls: sharedValue1, hideControls: windowDimensions };
     V.__workletHash = 11260765819879;
     V.__initData = __initData3;
-    const onTouchesMoveResult1 = Gesture4.Tap().onTouchesMove(C);
+    let obj2 = { controlsSpecs: sharedValue, VoicePanelControlsModes, runOnJS: ReanimatedRexport2.runOnJS, showControls: sharedValue1, hideControls: windowDimensions };
     const Gesture5 = LegacyBaseButton.Gesture;
-    const ExclusiveResult = Gesture2.Exclusive(onStartResult, Gesture4.Tap().onTouchesMove(C).onStart(V));
+    const ExclusiveResult = Gesture2.Exclusive(onStartResult, onTouchesMoveResult1.onStart(V));
     const PinchResult = Gesture5.Pinch();
     class I {
       constructor(arg0, arg1) {
@@ -852,16 +851,16 @@ export default noop.memo(function VideoRenderer(streamKey) {
     D.__closure = { numGesturesActive: onReady, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
     D.__workletHash = 3449238089307;
     D.__initData = __initData7;
-    const obj1 = { numGesturesActive: onReady, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
+    const obj3 = { numGesturesActive: onReady, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
     const onTouchesDownResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I);
     const fn = function w(scaleChange) {
-      PAN_TO_ZOOM_SCALE_FACTOR.get();
       value = PAN_TO_ZOOM_SCALE_FACTOR.get();
+      value2 = PAN_TO_ZOOM_SCALE_FACTOR.get();
       scaleChange = scaleChange.scaleChange;
       if (typeof closure_17 === "function") {
         let sum = scaleChange;
-        if (value < tmp3) {
-          const diff = 1 - value;
+        if (value2 < tmp3) {
+          const diff = 1 - value2;
           const _Math = Math;
           const diff1 = scaleChange - 1;
           sum = 1 + diff1 * Math.max(0.1, 1 - diff * diff * 5);
@@ -883,7 +882,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
     fn.__closure = { scale: pIPState, getScaleChangeWithOverscroll, fitScale, containerLayout: flag, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
     fn.__workletHash = 2077670235308;
     fn.__initData = __initData6;
-    let obj2 = { scale: pIPState, getScaleChangeWithOverscroll, fitScale, containerLayout: flag, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
+    const obj4 = { scale: pIPState, getScaleChangeWithOverscroll, fitScale, containerLayout: flag, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
     const onStartResult1 = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D);
     const fn2 = function v() {
       const result = onReady.set(onReady.get() - 1);
@@ -892,7 +891,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
     fn2.__closure = { numGesturesActive: onReady, handleMovementEnd };
     fn2.__workletHash = 5853458336611;
     fn2.__initData = __initData5;
-    const obj3 = { numGesturesActive: onReady, handleMovementEnd };
+    const obj5 = { numGesturesActive: onReady, handleMovementEnd };
     const onChangeResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D).onChange(fn);
     const Gesture6 = LegacyBaseButton.Gesture;
     const onEndResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D).onChange(fn).onEnd(fn2);
@@ -924,7 +923,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
     S.__closure = { lastTapTimestamp: sharedValue2, PAN_TO_ZOOM_TAP_TIME_MILLIS: 250, isInPanToZoom: sharedValue3 };
     S.__workletHash = 7713579688732;
     S.__initData = __initData13;
-    const obj4 = { lastTapTimestamp: sharedValue2, PAN_TO_ZOOM_TAP_TIME_MILLIS: 250, isInPanToZoom: sharedValue3 };
+    const obj6 = { lastTapTimestamp: sharedValue2, PAN_TO_ZOOM_TAP_TIME_MILLIS: 250, isInPanToZoom: sharedValue3 };
     const onTouchesDownResult1 = result.averageTouches(true).onTouchesDown(fn3);
     const fn4 = function c() {
       if (sharedValue3.get()) {
@@ -938,17 +937,17 @@ export default noop.memo(function VideoRenderer(streamKey) {
     fn4.__closure = { isInPanToZoom: sharedValue3, runOnJS: ReanimatedRexport2.runOnJS, hideControls: windowDimensions, numGesturesActive: onReady, currentSizeThreshold: sharedValue4 };
     fn4.__workletHash = 16349993539830;
     fn4.__initData = __initData12;
-    const obj5 = { isInPanToZoom: sharedValue3, runOnJS: ReanimatedRexport2.runOnJS, hideControls: windowDimensions, numGesturesActive: onReady, currentSizeThreshold: sharedValue4 };
+    const obj7 = { isInPanToZoom: sharedValue3, runOnJS: ReanimatedRexport2.runOnJS, hideControls: windowDimensions, numGesturesActive: onReady, currentSizeThreshold: sharedValue4 };
     const fn5 = function s(changeY) {
       if (sharedValue3.get()) {
         const result = changeY.changeY * pIPState;
-        PAN_TO_ZOOM_SCALE_FACTOR.get();
         value = PAN_TO_ZOOM_SCALE_FACTOR.get();
+        const value4 = PAN_TO_ZOOM_SCALE_FACTOR.get();
         if (typeof closure_17 === "function") {
           const sum = 1 + result;
           let sum1 = sum;
-          if (value < tmp15) {
-            const diff = 1 - value;
+          if (value4 < tmp15) {
+            const diff = 1 - value4;
             const _Math = Math;
             sum1 = 1 + (sum - 1) * Math.max(0.1, 1 - diff * diff * 5);
           }
@@ -957,17 +956,17 @@ export default noop.memo(function VideoRenderer(streamKey) {
           throw new TypeError("Trying to call a non-function");
         }
       } else {
-        const value1 = translateX.get();
-        const result2 = translateX.set(value1 + changeY.changeX / PAN_TO_ZOOM_SCALE_FACTOR.get());
-        value2 = translateY.get();
-        const result3 = translateY.set(value2 + changeY.changeY / PAN_TO_ZOOM_SCALE_FACTOR.get());
+        const value5 = translateX.get();
+        const result2 = translateX.set(value5 + changeY.changeX / PAN_TO_ZOOM_SCALE_FACTOR.get());
+        const value6 = translateY.get();
+        const result3 = translateY.set(value6 + changeY.changeY / PAN_TO_ZOOM_SCALE_FACTOR.get());
       }
       const result4 = setHasActiveVideoOutputSink.set(isInCoverSnap());
     };
     fn5.__closure = { isInPanToZoom: sharedValue3, PAN_TO_ZOOM_SCALE_FACTOR, scale: pIPState, getScaleChangeWithOverscroll, fitScale, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
     fn5.__workletHash = 17282206686388;
     fn5.__initData = __initData11;
-    const obj6 = { isInPanToZoom: sharedValue3, PAN_TO_ZOOM_SCALE_FACTOR, scale: pIPState, getScaleChangeWithOverscroll, fitScale, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
+    const obj8 = { isInPanToZoom: sharedValue3, PAN_TO_ZOOM_SCALE_FACTOR, scale: pIPState, getScaleChangeWithOverscroll, fitScale, translateX, translateY, isInSnap: setHasActiveVideoOutputSink, isInCoverSnap };
     const onStartResult2 = onBeginResult.onStart(fn4);
     const fn6 = function n(velocityX) {
       const result = onReady.set(onReady.get() - 1);
@@ -975,16 +974,16 @@ export default noop.memo(function VideoRenderer(streamKey) {
       const result1 = velocityX.velocityX * sharedValue1;
       const result2 = translateX.set(id(sharedCoords[12]).withSpring(value + result1 / PAN_TO_ZOOM_SCALE_FACTOR.get(), c10));
       const obj = id(sharedCoords[12]);
-      value = translateY.get();
+      value2 = translateY.get();
       const result3 = velocityX.velocityY * sharedValue1;
-      const result4 = translateY.set(id(sharedCoords[12]).withSpring(value + result3 / PAN_TO_ZOOM_SCALE_FACTOR.get(), c10));
+      const result4 = translateY.set(id(sharedCoords[12]).withSpring(value2 + result3 / PAN_TO_ZOOM_SCALE_FACTOR.get(), c10));
       handleMovementEnd();
     };
     const onChangeResult1 = onBeginResult.onStart(fn4).onChange(fn5);
     fn6.__closure = { numGesturesActive: onReady, translateX, withSpring: spring.withSpring, FLING_VELOCITY_SCALING, scale: pIPState, SCALE_PHYSICS, translateY, handleMovementEnd };
     fn6.__workletHash = 10045783163820;
     fn6.__initData = __initData10;
-    const obj7 = { numGesturesActive: onReady, translateX, withSpring: spring.withSpring, FLING_VELOCITY_SCALING, scale: pIPState, SCALE_PHYSICS, translateY, handleMovementEnd };
+    const obj9 = { numGesturesActive: onReady, translateX, withSpring: spring.withSpring, FLING_VELOCITY_SCALING, scale: pIPState, SCALE_PHYSICS, translateY, handleMovementEnd };
     const fn7 = function t() {
       const result = sharedValue3.set(false);
     };
@@ -996,7 +995,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
   value = flag.get();
   __initData = value;
   const items7 = [streamId, isCamera, sharedValue2, sharedValue1, mode, value];
-  callback6 = obj1.useCallback(() => {
+  callback6 = obj2.useCallback(() => {
     let tmp2 = null == streamId;
     if (!tmp2) {
       tmp2 = isCamera;
@@ -1009,7 +1008,7 @@ export default noop.memo(function VideoRenderer(streamKey) {
       VideoActionCreators.updateVideoSize(streamId, size, sharedValue2.get());
     }
   }, items7);
-  let obj4 = { runOnJS: id(tmp3[8]).runOnJS, triggerHapticFeedback: id(tmp3[14]).triggerHapticFeedback, HapticFeedbackTypes: id(tmp3[14]).HapticFeedbackTypes };
+  const obj11 = { runOnJS: id(tmp3[8]).runOnJS, triggerHapticFeedback: id(tmp3[14]).triggerHapticFeedback, HapticFeedbackTypes: id(tmp3[14]).HapticFeedbackTypes };
   class Qe {
     constructor() {
       items = [, , ];
@@ -1039,13 +1038,13 @@ export default noop.memo(function VideoRenderer(streamKey) {
       return;
     }
   }
-  obj5 = { streamId, cheapWorkletShallowEqual: tmp2(tmp3[13]).cheapWorkletShallowEqual, runOnJS: tmp2(tmp3[8]).runOnJS, respondToVideoSizeUpdate: callback6 };
-  Ke.__closure = obj5;
+  const tmp2Result47 = id(tmp3[8]);
+  Ke.__closure = { streamId, cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, runOnJS: id(tmp3[8]).runOnJS, respondToVideoSizeUpdate: callback6 };
   Ke.__workletHash = 5259362546534;
   Ke.__initData = __initData18;
-  const animatedReaction8 = id(tmp3[8]).useAnimatedReaction(Qe, Ke);
+  const animatedReaction8 = tmp2Result47.useAnimatedReaction(Qe, Ke);
   const items8 = [callback6];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     closure_0 = streamId(sharedCoords[23]).addOnPipModeChangedListener((arg0) => {
       if (!arg0) {
         callback6();
@@ -1057,32 +1056,32 @@ export default noop.memo(function VideoRenderer(streamKey) {
       }
     };
   }, items8);
-  const tmp2Result20 = id(tmp3[8]);
+  const obj12 = { streamId, cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, runOnJS: id(tmp3[8]).runOnJS, respondToVideoSizeUpdate: callback6 };
   function dt() {
     value = sharedValue1.get();
     ({ width, height } = value);
     let size = pIPState;
     if (pIPState.mode !== VoicePanelPIPModes.IN_APP) {
-      size = { width, height, opacity: null, transform: null };
+      const size1 = { width, height, opacity: null, transform: null };
       let num = 1;
       let num2 = 1;
       if (sharedValue.get()) {
         num2 = 0;
       }
-      size.opacity = num2;
-      let obj = { scale: sharedValue2.get() };
+      size1.opacity = num2;
+      const obj = { scale: sharedValue2.get() };
       const items = [obj, , , ];
-      obj = { translateX: sharedValue3.get() };
-      items[1] = obj;
-      const obj1 = { translateY: sharedValue4.get() };
-      items[2] = obj1;
+      const obj2 = { translateX: sharedValue3.get() };
+      items[1] = obj2;
+      const obj3 = { translateY: sharedValue4.get() };
+      items[2] = obj3;
       if (flag) {
         num = -1;
       }
-      const obj2 = { scaleX: num };
-      items[3] = obj2;
-      size.transform = items;
-      return size;
+      const obj4 = { scaleX: num };
+      items[3] = obj4;
+      size1.transform = items;
+      return size1;
     } else if (width > height) {
       const result = width * (size.height / height);
       height = sharedValue2;
@@ -1100,24 +1099,24 @@ export default noop.memo(function VideoRenderer(streamKey) {
   dt.__workletHash = 4149619035590;
   dt.__initData = __initData19;
   const animatedStyle = id(tmp3[8]).useAnimatedStyle(dt);
-  let obj6 = { videoDimensions: sharedValue1, pipState: pIPState, VoicePanelPIPModes: focused, scale: sharedValue2, disableAnimations: sharedValue, translateX: sharedValue3, translateY: sharedValue4, mirror: flag };
-  const tmp2Result21 = id(tmp3[8]);
+  const obj13 = { videoDimensions: sharedValue1, pipState: pIPState, VoicePanelPIPModes: focused, scale: sharedValue2, disableAnimations: sharedValue, translateX: sharedValue3, translateY: sharedValue4, mirror: flag };
+  const tmp2Result48 = id(tmp3[8]);
   token = id(tmp3[24]).useToken(tmp5(tmp3[25]).modules.mobile.VOICE_TILE_BORDER_RADIUS);
-  const tmp2Result22 = id(tmp3[24]);
+  const tmp2Result49 = id(tmp3[24]);
   let num = 0;
   if (mode.get() !== flag2.PIP) {
-    value = focused.get();
-    id = undefined;
-    if (value != null) {
-      id = value.id;
+    value2 = focused.get();
+    let id1;
+    if (value2 != null) {
+      id1 = value2.id;
     }
     num = 0;
-    if (id !== id) {
+    if (id1 !== id) {
       num = 0.3;
     }
   }
   sharedValue10 = id(tmp3[8]).useSharedValue(num);
-  const tmp2Result23 = id(tmp3[8]);
+  const tmp2Result50 = id(tmp3[8]);
   const tmp51 = flag2;
   function _t() {
     const obj = { inPip: mode.get() === VoicePanelModes.PIP, isFocused: null };
@@ -1142,8 +1141,9 @@ export default noop.memo(function VideoRenderer(streamKey) {
           }
           let num2 = 0.3;
           if (true === isFocused) {
-            const tmpResult = timing;
-            num2 = tmpResult.withDelay(300, tmpResult.withTiming(0.3, { duration: 0 }, "animate-never"));
+            const tmpResult = ReanimatedRexport2;
+            num2 = tmpResult.withDelay(300, timing.withTiming(0.3, { duration: 0 }, "animate-never"));
+            const tmpResult2 = timing;
           }
           const result = sharedValue10.set(num2);
         }
@@ -1153,12 +1153,12 @@ export default noop.memo(function VideoRenderer(streamKey) {
     obj = cheapWorkletShallowEqual;
     tmp3 = isFocused;
   }
-  const tmp2Result24 = id(tmp3[8]);
+  const tmp2Result51 = id(tmp3[8]);
   ut.__closure = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, strokeOpacity: sharedValue10, withDelay: id(tmp3[8]).withDelay, withTiming: id(tmp3[26]).withTiming };
   ut.__workletHash = 5119744299592;
   ut.__initData = __initData21;
-  const animatedReaction9 = tmp2Result24.useAnimatedReaction(_t, ut);
-  let obj7 = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, strokeOpacity: sharedValue10, withDelay: id(tmp3[8]).withDelay, withTiming: id(tmp3[26]).withTiming };
+  const animatedReaction9 = tmp2Result51.useAnimatedReaction(_t, ut);
+  const obj14 = { cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual, strokeOpacity: sharedValue10, withDelay: id(tmp3[8]).withDelay, withTiming: id(tmp3[26]).withTiming };
   function ft() {
     if (sharedValue6.get()) {
       const rect = { position: "absolute", top: 0, left: 0, bottom: 0, right: 0, borderWidth, overflow: "hidden", borderColor: "white", opacity: 0.5 };
@@ -1179,37 +1179,38 @@ export default noop.memo(function VideoRenderer(streamKey) {
   mt.__initData = __initData23;
   const items9 = [layout, sharedValue];
   const animatedStyle1 = id(tmp3[8]).useAnimatedStyle(ft);
-  const callback7 = obj1.useCallback(mt, items9);
-  const obj8 = { gesture: memo, children: null };
-  const obj9 = { style: null, layout: callback7, children: null };
+  const callback7 = obj2.useCallback(mt, items9);
+  const obj15 = { gesture: memo, children: null };
+  const obj16 = { style: null, layout: callback7, children: null };
   const items10 = [tmp.wrapper, streamKey.style];
-  obj9.style = items10;
-  tmp5(tmp3[27]);
-  const obj10 = { style: null, layout: callback7, children: null };
+  obj16.style = items10;
+  const tmp2Result52 = id(tmp3[8]);
+  const tmp59 = windowDimensions;
+  const obj17 = { style: null, layout: callback7, children: null };
   const items11 = [tmp.animatedWrapperStyles, animatedStyle];
-  obj10.style = items11;
-  const obj11 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId: null, onReady: null, onSize: null, style: null, layout: null };
+  obj17.style = items11;
+  const obj18 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId: null, onReady: null, onSize: null, style: null, layout: null };
   let tmp63 = null;
-  const tmp5Result = tmp5(tmp3[27]);
+  const tmp5Result = streamId(tmp3[27]);
   if (!tmp11) {
     tmp63 = streamId;
   }
-  obj11.streamId = tmp63;
-  obj11.onReady = callback;
-  obj11.onSize = callback1;
-  obj11.style = tmp.video;
-  obj11.layout = callback7;
-  obj10.children = layoutManager(c16, obj11);
-  const items12 = [layoutManager(tmp5Result, obj10), ];
+  obj18.streamId = tmp63;
+  obj18.onReady = callback;
+  obj18.onSize = callback1;
+  obj18.style = tmp.video;
+  obj18.layout = callback7;
+  obj17.children = layoutManager(c16, obj18);
+  const items12 = [layoutManager(streamId(tmp3[27]), obj17), ];
   if (tmp13) {
-    const obj12 = { animate: true, style: tmp.spinner };
-    let tmp58Result = tmp58(tmp5(tmp3[28]), obj12);
+    const obj19 = { animate: true, style: tmp.spinner };
+    let tmp58Result = tmp58(tmp5(tmp3[28]), obj19);
   } else {
-    const obj13 = { style: animatedStyle1, layout: callback7, pointerEvents: "none" };
-    tmp58Result = tmp58(tmp5(tmp3[27]), obj13);
+    const obj20 = { style: animatedStyle1, layout: callback7, pointerEvents: "none" };
+    tmp58Result = tmp58(tmp5(tmp3[27]), obj20);
   }
   items12[1] = tmp58Result;
-  obj9.children = items12;
-  obj8.children = windowDimensions(tmp5Result, obj9);
-  return layoutManager(id(tmp3[15]).GestureDetector, obj8);
+  obj16.children = items12;
+  obj15.children = tmp59(tmp5Result, obj16);
+  return layoutManager(id(tmp3[15]).GestureDetector, obj15);
 });

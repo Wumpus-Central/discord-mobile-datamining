@@ -3,7 +3,7 @@
 // Module 10210 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -85,7 +85,7 @@ const items = [
   }
 ];
 NotificationSettingsStore.migrations = items;
-obj = {
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: handleSetDesktopType,
   NOTIFICATIONS_SET_TTS_TYPE: function handleSetTTSType(ttsType) {
     obj.ttsType = ttsType.ttsType;
@@ -116,8 +116,7 @@ obj = {
   NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function handleSetScreenDowntimeReminder(screenDowntimeReminder) {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   }
-};
-const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

@@ -1,6 +1,6 @@
-// === Module 12706: useGameServerFeaturedGameNames ===
+// === Module 12707: useGameServerFeaturedGameNames ===
 
-// Module 12706 (useGameServerFeaturedGameNames)
+// Module 12707 (useGameServerFeaturedGameNames)
 import useGame from "useGame" /* 7412 */;
 import GameServerConstants from "GameServerConstants" /* 4527 */;
 import size from "module_2" /* 2 */;
@@ -9,8 +9,7 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default function useGameServerFeaturedGameNames() {
-  let obj = useGame;
-  const data = obj.useGame(React2).data;
+  const data = useGame.useGame(React2).data;
   const data2 = useGame.useGame(React3).data;
   let str;
   if (data != null) {
@@ -19,7 +18,7 @@ export default function useGameServerFeaturedGameNames() {
   if (str == null) {
     str = "Minecraft";
   }
-  obj = { gameName: str, gameName2: null };
+  const obj3 = { gameName: str, gameName2: null };
   let str2;
   if (data2 != null) {
     str2 = data2.name;
@@ -27,6 +26,6 @@ export default function useGameServerFeaturedGameNames() {
   if (str2 == null) {
     str2 = "Hytale";
   }
-  obj.gameName2 = str2;
-  return obj;
+  obj3.gameName2 = str2;
+  return obj3;
 };

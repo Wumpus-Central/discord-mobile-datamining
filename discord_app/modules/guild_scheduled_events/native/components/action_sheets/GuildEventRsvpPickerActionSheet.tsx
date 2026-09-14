@@ -13,12 +13,11 @@ const View = fn(17).View;
 const constants = fn(1963).GuildScheduledEventUserResponses;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, buttonWrapper: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.buttonWrapper = { marginTop: nativeDefault.space.PX_24 };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonWrapper: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.buttonWrapper = { marginTop: nativeDefault.space.PX_24 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
 
@@ -30,8 +29,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   const tmp = closure_9();
   const tmp4 = _slicedToArray(defaultValue.useState(event(9836).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
-  let obj = event(9836);
-  const existingRsvp = obj.getExistingRsvp(event.id, null);
+  const existingRsvp = event(9836).getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
     response = existingRsvp.response;
@@ -45,14 +43,15 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     const intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t["8MPCVr"]);
   }
-  obj = { header: closure_7(tmp2(7252).BottomSheetTitleHeader, { title: stringResult }), children: null };
-  obj = { bottom: true, style: tmp.container, children: null };
-  const obj1 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
+  let obj2 = { header: closure_7(event(7252).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const obj3 = { bottom: true, style: tmp.container, children: null };
+  const obj4 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
+  const obj = event(9836);
   const responseOptions = event(9836).getResponseOptions();
-  obj1.children = responseOptions.map((value) => closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [closure_7(event(5766).TableRadioGroup, obj1), ];
-  let obj2 = { style: tmp.buttonWrapper, children: null };
-  const obj3 = {
+  obj4.children = responseOptions.map((value) => closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
+  const items = [closure_7(event(5766).TableRadioGroup, obj4), ];
+  const obj5 = { style: tmp.buttonWrapper, children: null };
+  const obj6 = {
     onPress() {
       let tmp3 = null;
       if (first !== GuildEventRsvpUtils.ResponseOptions.SERIES) {
@@ -68,10 +67,10 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     text: null
   };
   const intl3 = tmp2(1114).intl;
-  obj3.text = intl3.string(event(1114).t.TyCVIq);
-  obj2.children = closure_7(event(5056).Button, obj3);
-  items[1] = closure_7(closure_5, obj2);
-  obj.children = items;
-  obj.children = closure_8(event(7226).SafeAreaPaddingView, obj);
-  return closure_7(event(7253).BottomSheet, obj);
+  obj6.text = intl3.string(event(1114).t.TyCVIq);
+  obj5.children = closure_7(event(5056).Button, obj6);
+  items[1] = closure_7(closure_5, obj5);
+  obj3.children = items;
+  obj2.children = closure_8(event(7226).SafeAreaPaddingView, obj3);
+  return closure_7(event(7253).BottomSheet, obj2);
 };

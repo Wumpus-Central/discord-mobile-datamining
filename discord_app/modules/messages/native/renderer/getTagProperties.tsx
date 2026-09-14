@@ -21,7 +21,6 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = PublicGuildsUtils;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
@@ -63,9 +62,9 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      obj = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "w", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: true, opTagBackgroundColor: true };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "HermesInternal", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: "133f082cc6a7642a4a6e08e490a58839" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
-      return obj;
+      return obj2;
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {
         if (!isSystemDM) {
@@ -91,4 +90,5 @@ export default function getTagProperties(arg0) {
   stringResult = intl3.string(util.t.lKQ7Wt);
   SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.SYSTEM_DM_TAG_SYSTEM_TYPE;
   flag = true;
+  obj = PublicGuildsUtils;
 };

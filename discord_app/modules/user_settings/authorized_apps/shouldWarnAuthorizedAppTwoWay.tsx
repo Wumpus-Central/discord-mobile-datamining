@@ -1,6 +1,6 @@
-// === Module 12727: shouldWarnAuthorizedAppTwoWay ===
+// === Module 12728: shouldWarnAuthorizedAppTwoWay ===
 
-// Module 12727 (shouldWarnAuthorizedAppTwoWay)
+// Module 12728 (shouldWarnAuthorizedAppTwoWay)
 import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9390 */;
 import size from "module_2" /* 2 */;
 

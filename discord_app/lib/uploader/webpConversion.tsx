@@ -2,7 +2,7 @@
 
 // Module 5262 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -29,8 +29,8 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -43,8 +43,8 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp4;
             closure_1 = tmp9;
@@ -54,8 +54,8 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
             if ("image/webp" === type.type) {
               closure_2_4.verbose("[WebP] File already WebP format");
               c6 = 3;
-              const obj1 = { value: constants.ALREADY_WEBP, done: true };
-              return obj1;
+              const obj4 = { value: constants.ALREADY_WEBP, done: true };
+              return obj4;
             } else {
               const items = ["image/png"];
               if (items.includes(type.type)) {
@@ -63,8 +63,8 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
                 if (typeof type.arrayBuffer === "function") {
                   c5 = 4;
                   c6 = 1;
-                  const obj2 = { value: type.arrayBuffer(), done: false };
-                  return obj2;
+                  const obj5 = { value: type.arrayBuffer(), done: false };
+                  return obj5;
                 } else {
                   const promise = new Promise((arg0, arg1) => {
                     closure_0 = arg0;
@@ -79,15 +79,15 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
                   });
                   c5 = 3;
                   c6 = 1;
-                  const obj3 = { value: promise, done: false };
-                  return obj3;
+                  const obj6 = { value: promise, done: false };
+                  return obj6;
                 }
               } else {
                 const _HermesInternal = HermesInternal;
                 closure_2_4.verbose("[WebP] Unsupported format: " + type.type);
                 c6 = 3;
-                const obj4 = { value: constants.UNSUPPORTED_FORMAT, done: true };
-                return obj4;
+                const obj7 = { value: constants.UNSUPPORTED_FORMAT, done: true };
+                return obj7;
               }
             }
           }
@@ -96,15 +96,15 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
           closure_129_3 = closure_3;
           closure_130_4.warn("[WebP] Failed to read file data:", closure_129_3);
           c6 = 3;
-          const obj5 = { value: closure_130_5.CONVERSION_FAILED, done: true };
-          return obj5;
+          const obj8 = { value: closure_130_5.CONVERSION_FAILED, done: true };
+          return obj8;
         } else if (2 === tmp9) {
           c4 = 0;
           closure_129_4 = closure_3;
           closure_130_4.warn("[WebP] PNG analysis failed:", closure_129_4);
           c6 = 3;
-          const obj6 = { value: closure_130_5.CORRUPTED_FILE, done: true };
-          return obj6;
+          const obj9 = { value: closure_130_5.CORRUPTED_FILE, done: true };
+          return obj9;
         } else {
           if (3 === tmp9) {
             if (arg0 === 1) {
@@ -113,8 +113,8 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj10 = { value, done: true };
+              return obj10;
             }
           } else if (4 === tmp9) {
             if (arg0 === 1) {
@@ -123,24 +123,24 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
+              const obj11 = { value, done: true };
+              return obj11;
             }
           } else if (5 === tmp9) {
             c4 = 0;
             closure_129_5 = closure_3;
             closure_130_4.warn("[WebP] ICC profile detection failed:", closure_129_5);
             c6 = 3;
-            const obj9 = { value: closure_130_5.ICC_DETECTION_FAILED, done: true };
-            return obj9;
+            const obj12 = { value: closure_130_5.ICC_DETECTION_FAILED, done: true };
+            return obj12;
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
+            const obj13 = { value, done: true };
+            return obj13;
           } else if (value) {
             c4 = 0;
             c6 = 3;
@@ -148,15 +148,15 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
           } else {
             c4 = 0;
             c6 = 3;
-            obj = { value: closure_130_5.ICC_NON_SRGB_PROFILE, done: true };
+            const obj = { value: closure_130_5.ICC_NON_SRGB_PROFILE, done: true };
             return obj;
           }
           closure_129_1 = value;
           c4 = 2;
           const DiscordImageFactory = closure_130_0(closure_130_2[2]).DiscordImageFactory;
-          const obj11 = DiscordImageFactory.create(closure_129_1);
-          closure_129_2 = obj11;
-          if (null == obj11) {
+          const obj14 = DiscordImageFactory.create(closure_129_1);
+          closure_129_2 = obj14;
+          if (null == obj14) {
             const _Error = Error;
             let error = new Error("DiscordImage.create returned null");
             throw error;
@@ -164,26 +164,26 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
             closure_130_4.verbose("[webp] png uses actual transparency - skipping conversion");
             c4 = 0;
             c6 = 3;
-            const obj12 = { value: closure_130_5.HAS_TRANSPARENCY, done: true };
-            return obj12;
+            const obj15 = { value: closure_130_5.HAS_TRANSPARENCY, done: true };
+            return obj15;
           } else if (closure_129_2.isAnimated()) {
             closure_130_4.verbose("[webp] png is animated (apng) - skipping conversion");
             c4 = 0;
             c6 = 3;
-            const obj13 = { value: closure_130_5.ANIMATED_IMAGE, done: true };
-            return obj13;
+            const obj16 = { value: closure_130_5.ANIMATED_IMAGE, done: true };
+            return obj16;
           } else if (closure_129_2.isPng8()) {
             closure_130_4.verbose("[webp] png is PNG8 format (indexed color) - skipping conversion");
             c4 = 0;
             c6 = 3;
-            const obj14 = { value: closure_130_5.PNG8_FORMAT, done: true };
-            return obj14;
+            const obj17 = { value: closure_130_5.PNG8_FORMAT, done: true };
+            return obj17;
           } else {
             c4 = 3;
             c5 = 6;
             c6 = 1;
-            const obj15 = { value: closure_129_2.hasSrgbIccProfile(), done: false };
-            return obj15;
+            const obj35 = { value: closure_129_2.hasSrgbIccProfile(), done: false };
+            return obj35;
           }
         }
       } catch (tmp71) {
@@ -214,8 +214,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -228,8 +228,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp8;
@@ -263,7 +263,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
             const _URL5 = URL;
             closure_129_4 = URL.createObjectURL(closure_0);
             c4 = 1;
-            let promise = new Promise((arg0, arg1) => {
+            const promise = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               closure_1 = arg1;
               closure_1_3.onload = () => closure_0();
@@ -275,8 +275,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
             });
             c5 = 3;
             c6 = 1;
-            const obj1 = { value: promise, done: false };
-            return obj1;
+            const obj4 = { value: promise, done: false };
+            return obj4;
           }
         }
       } else if (1 === tmp8) {
@@ -290,8 +290,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_129_5 = value;
           if (null == closure_129_5) {
@@ -303,8 +303,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
             closure_129_6 = performance.now();
             c5 = 4;
             c6 = 1;
-            const obj3 = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
-            return obj3;
+            const obj6 = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
+            return obj6;
           }
         }
       } else if (3 === tmp8) {
@@ -316,8 +316,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           const _URL3 = URL;
           URL.revokeObjectURL(closure_129_4);
           c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_129_1.width = closure_129_3.width;
           closure_129_1.height = closure_129_3.height;
@@ -325,13 +325,13 @@ let closure_9 = async function _performWebPConversion(arg0) {
           c4 = 0;
           const _URL8 = URL;
           URL.revokeObjectURL(closure_129_4);
-          promise = new Promise((arg0) => {
+          const promise3 = new Promise((arg0) => {
             closure_1_1.toBlob(arg0, "image/webp", 1);
           });
           c5 = 2;
           c6 = 1;
-          const obj5 = { value: promise, done: false };
-          return obj5;
+          const obj8 = { value: promise3, done: false };
+          return obj8;
         }
       } else if (4 === tmp8) {
         if (arg0 === 1) {
@@ -339,8 +339,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_129_7 = value;
           closure_129_2.clearRect(0, 0, closure_129_1.width, closure_129_1.height);
@@ -349,7 +349,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
           const _URL7 = URL;
           closure_129_9 = URL.createObjectURL(closure_129_5);
           c4 = 2;
-          const promise1 = new Promise((arg0, arg1) => {
+          const promise4 = new Promise((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
             closure_1_8.onload = () => closure_0();
@@ -361,8 +361,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           });
           c5 = 7;
           c6 = 1;
-          const obj7 = { value: promise1, done: false };
-          return obj7;
+          const obj10 = { value: promise4, done: false };
+          return obj10;
         }
       } else if (5 === tmp8) {
         c4 = 0;
@@ -375,8 +375,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_129_10 = value;
           closure_129_11 = closure_130_8(closure_129_7);
@@ -390,9 +390,9 @@ let closure_9 = async function _performWebPConversion(arg0) {
           const _HermesInternal = HermesInternal;
           closure_130_4.verbose("[WebP] Pixel hash results: fileName=" + name + " fileLength={" + closure_129_0.size + "} width=" + width + " height=" + height + " pixelHash=" + closure_129_11 + " mezzanineFileLength={" + closure_129_5.size + "} mezzaninePixelHash=" + closure_129_12 + " match=" + closure_129_13 + " elapsed_ms=" + Math.round(closure_129_14));
           if (closure_129_13) {
-            const obj9 = { success: true, webpBlob: closure_129_5, pixelHashTimeMs: closure_129_14 };
+            const obj12 = { success: true, webpBlob: closure_129_5, pixelHashTimeMs: closure_129_14 };
           } else {
-            const obj10 = { success: false, reason: closure_130_5.PIXEL_HASH_MISMATCH, pixelHashTimeMs: closure_129_14 };
+            const obj13 = { success: false, reason: closure_130_5.PIXEL_HASH_MISMATCH, pixelHashTimeMs: closure_129_14 };
           }
           c6 = 3;
         }
@@ -404,8 +404,8 @@ let closure_9 = async function _performWebPConversion(arg0) {
         const _URL = URL;
         URL.revokeObjectURL(closure_129_9);
         c6 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         closure_129_2.drawImage(closure_129_8, 0, 0);
         c4 = 0;
@@ -413,7 +413,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
         URL.revokeObjectURL(closure_129_9);
         c5 = 6;
         c6 = 1;
-        obj = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
+        const obj = { value: closure_129_2.getImageData(0, 0, closure_129_1.width, closure_129_1.height), done: false };
         return obj;
       }
     } catch (tmp54) {
@@ -437,8 +437,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -451,8 +451,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
@@ -491,8 +491,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
             c5 = 1;
             c6 = 2;
             c7 = 1;
-            const obj1 = { value: _shouldConvertToWebP(originalFile), done: false };
-            return obj1;
+            const obj4 = { value: _shouldConvertToWebP(originalFile), done: false };
+            return obj4;
           }
         }
       } else if (1 === tmp8) {
@@ -501,8 +501,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
         const _HermesInternal3 = HermesInternal;
         closure_131_4.error("[WebP] Conversion failed for " + closure_130_0.name + ":", closure_130_9);
         c7 = 3;
-        const obj2 = { value: closure_130_3(closure_131_5.CONVERSION_FAILED), done: true };
-        return obj2;
+        const obj5 = { value: closure_130_3(closure_131_5.CONVERSION_FAILED), done: true };
+        return obj5;
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c7 = 3;
@@ -510,8 +510,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_130_4 = value;
           if (null != closure_130_4) {
@@ -519,12 +519,12 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
             closure_131_4.verbose("[WebP] Conversion rejected: " + closure_130_4);
             c5 = 0;
             c7 = 3;
-            const obj4 = { value: closure_130_3(closure_130_4), done: true };
-            return obj4;
+            const obj7 = { value: closure_130_3(closure_130_4), done: true };
+            return obj7;
           } else {
             c6 = 3;
             c7 = 1;
-            const obj5 = {
+            const obj8 = {
               value: (function performWebPConversion() {
                           const self = this;
                           const apply = closure_1_9.apply;
@@ -537,7 +537,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
                         })(closure_130_0),
               done: false
             };
-            return obj5;
+            return obj8;
           }
         }
       } else if (arg0 === 1) {
@@ -546,8 +546,8 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_130_5 = value;
         if (closure_130_5.success) {
@@ -571,9 +571,9 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
               const _Math2 = Math;
               const _HermesInternal5 = HermesInternal;
               closure_131_4.verbose("[WebP] Conversion successful: " + name + " to WebP in " + Math.round(closure_130_1) + "ms");
-              const obj7 = { success: true, originalFile: closure_130_0, convertedBlob: webpBlob, sizeBefore: closure_130_0.size, sizeAfter: webpBlob.size, compressionRatio: closure_130_7, hashTimeMs: closure_130_5.pixelHashTimeMs, compressTimeMs: null };
+              const obj10 = { success: true, originalFile: closure_130_0, convertedBlob: webpBlob, sizeBefore: closure_130_0.size, sizeAfter: webpBlob.size, compressionRatio: closure_130_7, hashTimeMs: closure_130_5.pixelHashTimeMs, compressTimeMs: null };
               const _Math3 = Math;
-              obj7.compressTimeMs = Math.round(closure_130_1);
+              obj10.compressTimeMs = Math.round(closure_130_1);
             }
             c5 = 0;
             c7 = 3;
@@ -586,7 +586,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
         }
         c5 = 0;
         c7 = 3;
-        obj = { value: closure_130_3(UNKNOWN_ERROR), done: true };
+        let obj = { value: closure_130_3(UNKNOWN_ERROR), done: true };
         return obj;
       }
     } catch (tmp59) {

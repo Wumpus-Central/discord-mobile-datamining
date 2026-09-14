@@ -1,9 +1,9 @@
-// === Module 12773: ChannelSafeAreaBottomAnimated ===
+// === Module 12774: ChannelSafeAreaBottomAnimated ===
 
-// Module 12773 (ChannelSafeAreaBottomAnimated)
+// Module 12774 (ChannelSafeAreaBottomAnimated)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11485 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11490 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11486 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11491 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -19,18 +19,18 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/C
 export default noop.memo(function ChannelSafeAreaBottom(channelId) {
   const tmp = useChannelSafeAreaHeightSharedValueDefault();
   closure_0 = tmp;
-  let obj = ReanimatedRexport;
+  const tmp2 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
   const fn = function n() {
     return { height: closure_0.get() };
   };
   fn.__closure = { heightSharedValue: tmp };
   fn.__workletHash = 6491350126069;
   fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: animatedStyle, children: null };
-  obj = { style: null };
-  const items = [absoluteFill.absoluteFill, useChannelSafeAreaBottomStylesDefault(channelId.channelId)];
-  obj.style = items;
-  obj.children = <React4 style={null} />;
-  return jsx(ReanimatedRexportDefault.View, { style: null });
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj2 = { style: animatedStyle, children: null };
+  const obj3 = { style: null };
+  const items = [absoluteFill.absoluteFill, tmp2];
+  obj3.style = items;
+  obj2.children = <React4 style={null} />;
+  return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
 });

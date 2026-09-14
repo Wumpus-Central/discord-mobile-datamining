@@ -1,14 +1,14 @@
-// === Module 16403: GuildsBarMessages ===
+// === Module 16405: GuildsBarMessages ===
 
-// Module 16403 (GuildsBarMessages)
+// Module 16405 (GuildsBarMessages)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ChatIcon from "ChatIcon" /* 5152 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 16389 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 16392 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16404 */;
-import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 16405 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 16391 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 16394 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16406 */;
+import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 16407 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
@@ -26,8 +26,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 
 export default noop.memo(function GuildsBarMessages() {
-  let obj = GuildsBarAnimatedItemWrapper;
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
@@ -39,13 +38,13 @@ export default noop.memo(function GuildsBarMessages() {
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "33kozedd0zs6fbauka98psnc7zwom2s", externalChildren: null, expandedChildren: false, children: false };
+  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "status", externalChildren: "voice_start_time", expandedChildren: "cache-and-network", children: "use_filtered_quests" };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = util.intl;
-  obj.label = intl.string(util.t.YUU0RF);
-  obj.externalChildren = badge;
-  obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
-  obj.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "33kozedd0zs6fbauka98psnc7zwom2s", externalChildren: null, expandedChildren: false, children: false });
+  obj3.label = intl.string(util.t.YUU0RF);
+  obj3.externalChildren = badge;
+  obj3.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
+  obj3.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "status", externalChildren: "voice_start_time", expandedChildren: "cache-and-network", children: "use_filtered_quests" });
 });

@@ -33,10 +33,11 @@ import _mod2558 from "module_2558" /* 2558 */;
 import _mod2559 from "module_2559" /* 2559 */;
 import _mod2560 from "module_2560" /* 2560 */;
 import _mod2561 from "module_2561" /* 2561 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2531);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/overlay/web/v3/OverlayWidgets.messages.js");
 
 export default messagesProxy;

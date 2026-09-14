@@ -12,13 +12,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewThemed.tsx");
 
 export default noop.forwardRef(function VisualEffectViewThemed(arg0, ref) {
-  let obj = shared;
+  const tmp3 = useThemeDefault();
   let str = "dark";
   if (obj.isThemeLight(tmp3)) {
     str = "light";
   }
-  obj = { ref, blurTheme: str };
-  tmp3 = useThemeDefault();
+  obj = shared;
+  const obj2 = { ref, blurTheme: str };
   const merged = Object.assign(arg0);
   return jsx(VisualEffectViewDefault, { ref, blurTheme: str });
 });

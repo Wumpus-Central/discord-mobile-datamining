@@ -1,7 +1,7 @@
 // === Module 10124: getEffectiveNoiseCancellation ===
 
 // Module 10124 (getEffectiveNoiseCancellation)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import WindowsEffectsExperiment from "WindowsEffectsExperiment" /* 10125 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,6 @@ const result = size.fileFinishedImporting("modules/noise_cancellation/getEffecti
 
 export default function getEffectiveNoiseCancellation(noiseCancellation, systemMicrophoneMode) {
   if (!obj.isIOS()) {
-    let tmpResult = PlatformUtils;
     if (!tmpResult.isMac()) {
       let tmp3 = noiseCancellation;
       if (noiseCancellation) {
@@ -20,15 +19,15 @@ export default function getEffectiveNoiseCancellation(noiseCancellation, systemM
           tmp5 = "" === systemMicrophoneMode;
         }
         if (!tmp5) {
-          tmpResult = PlatformUtils;
-          tmp5 = !tmpResult.isWindows();
+          tmp5 = !PlatformUtils.isWindows();
+          const tmpResult3 = PlatformUtils;
         }
         if (!tmp5) {
           tmp5 = systemMicrophoneMode !== deep_noise_suppression;
         }
         if (!tmp5) {
           tmp5 = !WindowsEffectsExperiment.getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
-          const tmpResult1 = WindowsEffectsExperiment;
+          const tmpResult4 = WindowsEffectsExperiment;
         }
         if (tmp5) {
           tmp5 = noiseCancellation;

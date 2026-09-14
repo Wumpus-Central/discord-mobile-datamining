@@ -1,10 +1,12 @@
-// === Module 17174: useSortedGuildIdsForSoundboard ===
+// === Module 17176: useSortedGuildIdsForSoundboard ===
 
-// Module 17174 (useSortedGuildIdsForSoundboard)
+// Module 17176 (useSortedGuildIdsForSoundboard)
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
@@ -24,12 +26,12 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
   if (guild_id == null) {
     guild_id = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  let tmpResult = tmp(tmp2[6]);
+  const obj = require("useStateFromStores");
   const items1 = [stateFromStores2];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => stateFromStores2.getFlattenedGuildIds());
-  tmpResult = tmp(tmp2[6]);
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => stateFromStores2.getFlattenedGuildIds());
+  const tmpResult = require("useStateFromStores");
   const items2 = [stateFromStores1];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => {
+  stateFromStores2 = require("useStateFromStores").useStateFromStores(items2, () => {
     let canResult = null == guild_id || null == guild_id.guild_id;
     if (!canResult) {
       canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);

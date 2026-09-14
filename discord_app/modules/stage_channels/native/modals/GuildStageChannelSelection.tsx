@@ -21,18 +21,17 @@ export default function GuildStageChannelSelection(channel) {
   channel = channel.channel;
   const onChangeChannel = channel.onChangeChannel;
   function handleSelectChannel() {
-    let obj = KeyboardManagerUtilsAll;
-    const result = obj.dismissGlobalKeyboard();
+    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const mapped = channelsUserCanStartStageIn.map((id) => {
       const obj = { value: id.id, label: channel(handleSelectChannel[6]).computeChannelName(id, closure_1_5, closure_1_4, true) };
       return obj;
     });
-    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const obj3 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
     const obj2 = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj.title = intl.string(util.t["bxw/f7"]);
-    obj.items = mapped;
-    obj.onItemSelect = function onItemSelect(arg0) {
+    obj3.title = intl.string(util.t["bxw/f7"]);
+    obj3.items = mapped;
+    obj3.onItemSelect = function onItemSelect(arg0) {
       closure_0 = arg0;
       const found = channelsUserCanStartStageIn.find((id) => id.id === closure_0);
       if (null != found) {
@@ -45,33 +44,33 @@ export default function GuildStageChannelSelection(channel) {
     if (channel != null) {
       id = channel.id;
     }
-    obj.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    obj3.selectedItem = id;
+    obj2.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "SelectUpdatesChannel", obj3);
   }
   function renderChannelHook(children, key) {
     return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, key);
   }
-  let obj = channel(handleSelectChannel[5]);
-  const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(channel.guild);
+  const tmp = closure_7();
+  const channelsUserCanStartStageIn = channel(handleSelectChannel[5]).useChannelsUserCanStartStageIn(channel.guild);
   const tmp3 = onChangeChannel(handleSelectChannel[6])(channel);
-  obj = { style: closure_7().channelText, variant: "text-xs/medium", color: "text-default", children: null };
+  let obj2 = { style: tmp.channelText, variant: "text-xs/medium", color: "text-default", children: null };
   let intl = channel(handleSelectChannel[11]).intl;
   const format = intl.format;
   const t = channel(handleSelectChannel[11]).t;
   if (tmp2) {
-    obj = {
+    let obj3 = {
       stageName: tmp3,
       stageHook: renderChannelHook,
       changeHook(children, key) {
           return jsx(Text_Text.Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, key);
         }
     };
-    obj.children = format(t.AkzLcV, obj);
-    let tmp5 = obj;
+    obj2.children = format(t.AkzLcV, obj3);
+    let tmp5 = obj2;
   } else {
-    const obj1 = { stageName: tmp3, stageHook: renderChannelHook };
-    obj.children = format(t["S+9O7g"], obj1);
-    tmp5 = obj;
+    const obj4 = { stageName: tmp3, stageHook: renderChannelHook };
+    obj2.children = format(t["S+9O7g"], obj4);
+    tmp5 = obj2;
   }
   return jsx(channel(handleSelectChannel[12]).Text, tmp5);
 };

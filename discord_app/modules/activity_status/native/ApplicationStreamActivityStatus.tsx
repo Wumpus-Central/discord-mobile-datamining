@@ -1,9 +1,9 @@
-// === Module 11009: ApplicationStreamActivityStatus ===
+// === Module 11010: ApplicationStreamActivityStatus ===
 
-// Module 11009 (ApplicationStreamActivityStatus)
+// Module 11010 (ApplicationStreamActivityStatus)
 import util from "util" /* 1114 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 11010 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 11013 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 11011 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 11014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   if (null != tmp2) {
     const intl2 = util.intl;
-    let obj = { name: tmp2 };
+    const obj = { name: tmp2 };
     let formatResult = intl2.format(util.t["0wJXSh"], obj);
     let tmp7 = require;
   } else {
@@ -51,14 +51,14 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    obj = { icon: tmp7(11011).TvIcon, style: iconStyle };
-    tmp12 = React3(ActivityStatusIconDefault, obj);
+    const obj2 = { icon: tmp7(11012).TvIcon, style: iconStyle };
+    tmp12 = React3(ActivityStatusIconDefault, obj2);
   }
   const children = [tmp12, ];
   let tmp16 = !flag;
   if (!flag) {
-    obj = { style: textStyle, maxFontSizeMultiplier, children: formatResult };
-    tmp16 = React3(ActivityStatusTextDefault, obj);
+    const obj3 = { style: textStyle, maxFontSizeMultiplier, children: formatResult };
+    tmp16 = React3(ActivityStatusTextDefault, obj3);
   }
   children[1] = tmp16;
   return hasOwnProperty(React4, { children });

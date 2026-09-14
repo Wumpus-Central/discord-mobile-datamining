@@ -2,7 +2,7 @@
 
 // Module 8726 (FormTitle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,23 +10,21 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
 const createStyles = fn(4636);
-PlatformUtils = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: null, error: null };
-PlatformUtils = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
-PlatformUtils.titleText = PlatformUtils;
-PlatformUtils = { color: nativeDefault.unsafe_rawColors.RED_400 };
-PlatformUtils.error = PlatformUtils;
-let closure_5 = createStyles.createStyles(PlatformUtils);
+const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
+const obj5 = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
+obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
+let closure_5 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
@@ -59,21 +57,21 @@ export default function FormTitle(thinTitle) {
   if (!flag3) {
     horizontalPadding = tmp.horizontalPadding;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[2] = horizontalPadding;
   items[3] = viewStyle;
   const items1 = [tmp.titleText, textStyle, ];
   if (flag2) {
     flag2 = tmp.error;
   }
-  obj = { style: items1, numberOfLines, accessibilityRole: "header", children: null };
+  const obj2 = { style: items1, numberOfLines, accessibilityRole: "header", children: null };
   items1[2] = flag2;
   let formatted = title;
   if (uppercaseTitle) {
     formatted = title.toUpperCase();
   }
-  obj.children = formatted;
-  const items2 = [React3(native.LegacyText, obj), icon];
+  obj2.children = formatted;
+  const items2 = [React3(native.LegacyText, obj2), icon];
   obj.children = items2;
   return React4(React2, obj);
 };

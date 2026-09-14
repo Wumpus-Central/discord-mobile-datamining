@@ -15,12 +15,11 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
   if (obj.isMetaQuest()) {
     return false;
   } else {
-    let tmpResult = DeviceUtils;
     if (tmpResult.getIsRunningOnSimulator()) {
       return false;
     } else {
-      tmpResult = DeviceUtils;
-      const parts = tmpResult.getSystemVersion().split(".");
+      const tmpResult3 = DeviceUtils;
+      const parts = DeviceUtils.getSystemVersion().split(".");
       const _parseInt = parseInt;
       const parsed = parseInt(parts[0], 10);
       let str3 = parts[1];
@@ -28,8 +27,8 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
         str3 = "0";
       }
       const parsed1 = parseInt(str3, 10);
-      const str = tmpResult.getSystemVersion();
-      if (tmpResult1.isIOS()) {
+      const str = DeviceUtils.getSystemVersion();
+      if (tmpResult4.isIOS()) {
         let tmp9 = parsed > c2;
         if (!tmp9) {
           let tmp10 = parsed === c2;
@@ -44,6 +43,7 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
       }
       return tmp8;
     }
+    tmpResult = DeviceUtils;
   }
   obj = MetaQuestUtils;
 };

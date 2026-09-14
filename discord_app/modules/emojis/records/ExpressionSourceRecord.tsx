@@ -1,7 +1,7 @@
 // === Module 5666: ExpressionSourceRecord ===
 
 // Module 5666 (ExpressionSourceRecord)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import SetUtils from "SetUtils" /* 1974 */;
@@ -70,18 +70,14 @@ prototype["getIconURL"] = function getIconURL(size) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
-  return obj.getGuildIconURL(obj);
+  return AvatarUtilsDefault.getGuildIconURL({ id: this.id, size, icon: this.icon, canAnimate: flag });
 };
 prototype["getIconSource"] = function getIconSource(size) {
   const self = this;
   if (flag === undefined) {
     flag = false;
   }
-  return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    const obj = { id: self.id, size, icon: self.icon, canAnimate };
-    return obj.getGuildIconSource(obj);
-  });
+  return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;

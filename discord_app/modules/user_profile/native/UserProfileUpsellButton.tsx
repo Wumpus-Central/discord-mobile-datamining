@@ -1,7 +1,7 @@
-// === Module 14681: UserProfileUpsellButton ===
+// === Module 14682: UserProfileUpsellButton ===
 
-// Module 14681 (UserProfileUpsellButton)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 14682 (UserProfileUpsellButton)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,22 +19,17 @@ export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7265)().analyticsLocations;
-  let obj = analyticsObject(7549);
-  let label = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
+  const tmp = closure_10();
+  let label = analyticsObject(7549).useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
-    let obj = { type: PremiumUpsellTypes.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: null, location_stack: analyticsLocations };
-    obj = { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject };
-    obj.location = obj;
-    obj.track(constants4.PREMIUM_UPSELL_VIEWED, obj);
+    const obj2 = { type: PremiumUpsellTypes.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON, location: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, location_stack: analyticsLocations };
+    AnalyticsUtilsDefault.track(constants4.PREMIUM_UPSELL_VIEWED, obj2);
   }, items);
-  obj = {
+  let obj2 = {
     onPress() {
-      let obj = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: null, analyticsLocations, analyticsProperties: null };
-      obj = { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject };
-      obj.analyticsLocation = obj;
-      obj.analyticsProperties = { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL };
-      const result = obj.handleShowUpsellAlert(obj);
+      const obj2 = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, analyticsLocations, analyticsProperties: { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL } };
+      const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
     },
     variant: "active",
     text: null,
@@ -47,8 +42,15 @@ export default function UserProfileUpsellButton(analyticsObject) {
     const intl = tmp3(1114).intl;
     label = intl.string(tmp3(1114).t.pj0XBN);
   }
-  obj.text = label;
-  obj = { color: "white", size: "sm", style: closure_10().nitroWheel };
-  obj.icon = jsx(analyticsObject(8785).NitroWheelIcon, { color: "white", size: "sm", style: closure_10().nitroWheel });
-  return jsx(analyticsObject(5056).Button, { color: "white", size: "sm", style: closure_10().nitroWheel });
+  obj2.text = label;
+  obj2.icon = jsx(analyticsObject(8785).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  return jsx(analyticsObject(5056).Button, {
+    onPress() {
+      const obj2 = { initialUpsellKey: constants2.CUSTOM_PROFILES, analyticsLocation: { page: constants.USER_SETTINGS, section: constants3.USER_PROFILE, object: analyticsObject }, analyticsLocations, analyticsProperties: { type: PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL } };
+      const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
+    },
+    variant: "active",
+    text: null,
+    icon: null
+  });
 };

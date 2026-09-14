@@ -14,8 +14,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 export default function XboxLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
@@ -24,6 +23,6 @@ export default function XboxLinkDiscordConsent(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9390).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 };
+  const obj = navigation(1483);
   return jsx(navigation(9363).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9390).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
 };

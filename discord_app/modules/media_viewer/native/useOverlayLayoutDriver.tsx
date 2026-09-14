@@ -1,10 +1,12 @@
-// === Module 13092: useOverlayLayoutDriver ===
+// === Module 13093: useOverlayLayoutDriver ===
 
-// Module 13092 (useOverlayLayoutDriver)
-import native from "native" /* 1178 */;
+// Module 13093 (useOverlayLayoutDriver)
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const __initData = { code: "function useOverlayLayoutDriverTsx1(){const{interpolate,animationDriver}=this.__closure;return{transform:[{translateY:interpolate(animationDriver.get(),[0,0.75,1],[-50,-50,0])}],opacity:interpolate(animationDriver.get(),[0,0.75,1],[0,0,1])};}" };
@@ -19,41 +21,39 @@ export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {
-    const obj = { duration: 300, easing: native.STANDARD_EASING };
-    const result = sharedValue.set(obj.withTiming(1, obj));
+    const obj = timing;
+    const result = sharedValue.set(obj.withTiming(1, { duration: 300, easing: native.STANDARD_EASING }));
   }, items);
   return sharedValue;
 };
 export const useHeaderLayoutAnimation = function useHeaderLayoutAnimation(animationDriver) {
   _require = animationDriver;
-  require("ReanimatedRexport");
   const fn = function o() {
-    let obj = { transform: null, opacity: null };
-    obj = { translateY: ReanimatedRexport.interpolate(animationDriver.get(), [0, 0.75, 1], [-50, -50, 0]) };
-    const items = [obj];
+    const obj = { transform: null, opacity: null };
+    const obj2 = { translateY: ReanimatedRexport.interpolate(animationDriver.get(), [0, 0.75, 1], [-50, -50, 0]) };
+    const items = [obj2];
     obj.transform = items;
     obj.opacity = ReanimatedRexport.interpolate(animationDriver.get(), [0, 0.75, 1], [0, 0, 1]);
     return obj;
   };
-  let obj = { interpolate: require("ReanimatedRexport").interpolate, animationDriver };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, animationDriver };
   fn.__workletHash = 13622939479876;
   fn.__initData = __initData;
   return obj.useAnimatedStyle(fn);
 };
 export const useFooterLayoutAnimation = function useFooterLayoutAnimation(overlayLayoutDriver) {
   _require = overlayLayoutDriver;
-  require("ReanimatedRexport");
   const fn = function n() {
-    let obj = { transform: null, opacity: null };
-    obj = { translateY: ReanimatedRexport.interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [50, 50, 0]) };
-    const items = [obj];
+    const obj = { transform: null, opacity: null };
+    const obj2 = { translateY: ReanimatedRexport.interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [50, 50, 0]) };
+    const items = [obj2];
     obj.transform = items;
     obj.opacity = ReanimatedRexport.interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [0, 0, 1]);
     return obj;
   };
-  let obj = { interpolate: require("ReanimatedRexport").interpolate, animationDriver: overlayLayoutDriver };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, animationDriver: overlayLayoutDriver };
   fn.__workletHash = 15220711492711;
   fn.__initData = __initData2;
   return obj.useAnimatedStyle(fn);

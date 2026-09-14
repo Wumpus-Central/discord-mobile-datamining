@@ -1,22 +1,20 @@
-// === Module 14699: EditIcon ===
+// === Module 14700: EditIcon ===
 
-// Module 14699 (EditIcon)
+// Module 14700 (EditIcon)
 import nativeDefault from "native" /* 576 */;
-import PencilIcon from "PencilIcon" /* 10378 */;
+import PencilIcon from "PencilIcon" /* 10379 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { editIcon: null, xs: null, sm: null };
-createStyles = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.editIcon = createStyles;
+const createStyles = fn(4636);
+const obj2 = { editIcon: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, xs: null, sm: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
-createStyles.xs = size;
+obj2.xs = size;
 const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
-createStyles.sm = size1;
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.sm = size1;
+let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 10535: openStickersPremiumUpsellAlert ===
+// === Module 10536: openStickersPremiumUpsellAlert ===
 
-// Module 10535 (openStickersPremiumUpsellAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 10536 (openStickersPremiumUpsellAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4960 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -19,8 +19,8 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -33,31 +33,30 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const paths = tmp2;
             closure_1 = tmp5;
             closure_129_0 = _location;
-            const obj1 = { type: closure_2_5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL, location: _location };
-            AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj1);
+            const obj4 = { type: closure_2_5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL, location: _location };
+            AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj4);
             const items = [SubscriptionPlanActionCreators.fetchPremiumSubscriptionPlans(), ];
             items[1] = actions_BillingActionCreators.fetchPaymentSources();
             c3 = 1;
             c4 = 1;
-            const obj2 = { value: Promise.all(items), done: false };
-            return obj2;
+            const obj5 = { value: Promise.all(items), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          obj = closure_130_1(closure_130_2[7]);
-          const obj4 = {
+          const obj8 = {
             importer() {
                     return analyticsLocation(paths[9])(paths[8], paths.paths).then((result) => {
                       closure_0 = result.default;
@@ -71,7 +70,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
                   },
             isDismissable: true
           };
-          obj.openLazy(obj4);
+          closure_130_1(closure_130_2[7]).openLazy(obj8);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

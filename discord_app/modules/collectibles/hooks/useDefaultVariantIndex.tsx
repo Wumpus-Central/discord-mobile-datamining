@@ -3,6 +3,8 @@
 // Module 8891 (useDefaultVariantIndex)
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");

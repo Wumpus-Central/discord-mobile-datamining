@@ -2,6 +2,7 @@
 
 // Module 9791 (ModeratorStartStageView)
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9800 */;
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9803 */;
 import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,53 +17,53 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 export default function ModeratorStartStageView(channel) {
   channel = channel.channel;
   const guild_id = channel.guild_id;
-  let obj = guild_id(504);
   const items = [GuildStore];
   const items1 = [guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
-  let obj1 = guild_id(9792);
-  const first = _slicedToArray(obj1.useGuildChannelScheduledEvents(channel.id), 1)[0];
-  let obj2 = guild_id(9801);
-  const canManageGuildEventResult = obj2.useManageResourcePermissions(channel).canManageGuildEvent(first);
-  let obj3 = guild_id(9804);
-  const isLive = obj3.useStageChannelStartEvent(channel.id).isLive;
-  let obj4 = guild_id(9795);
-  const nextRecurrenceIdInEvent = obj4.getNextRecurrenceIdInEvent(first);
-  let tmp10Result2 = null;
+  const stateFromStores = guild_id(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
+  const obj = guild_id(504);
+  const first = _slicedToArray(guild_id(9792).useGuildChannelScheduledEvents(channel.id), 1)[0];
+  const obj2 = guild_id(9792);
+  const obj3 = guild_id(9801);
+  const canManageGuildEventResult = guild_id(9801).useManageResourcePermissions(channel).canManageGuildEvent(first);
+  const tmp7 = useCanCreateAnEventDefault(guild_id);
+  const isLive = guild_id(9804).useStageChannelStartEvent(channel.id).isLive;
+  const obj4 = guild_id(9804);
+  const nextRecurrenceIdInEvent = guild_id(9795).getNextRecurrenceIdInEvent(first);
+  let tmp10Result6 = null;
   if (null != stateFromStores) {
-    obj = { title: null, body: null, children: null };
+    const obj6 = { title: null, body: null, children: null };
     const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t.QGnDLs);
+    obj6.title = intl.string(tmp(1114).t.QGnDLs);
     const intl2 = tmp(1114).intl;
-    obj.body = intl2.string(tmp(1114).t["s/uXzq"]);
+    obj6.body = intl2.string(tmp(1114).t["s/uXzq"]);
     let tmp10Result = null;
     if (canManageGuildEventResult) {
       tmp10Result = null;
       if (null != first) {
-        obj = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
-        tmp10Result = closure_5(tmp(9827).StartEventPrompt, obj);
+        const obj7 = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
+        tmp10Result = closure_5(tmp(9827).StartEventPrompt, obj7);
       }
     }
     const items2 = [tmp10Result, , , ];
-    tmp10Result = null;
+    let tmp10Result4 = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
-      obj1 = { channel, isLive };
-      tmp10Result = closure_5(tmp(10028).StartStagePrompt, obj1);
+      const obj8 = { channel, isLive };
+      tmp10Result4 = closure_5(tmp(10028).StartStagePrompt, obj8);
     }
-    items2[1] = tmp10Result;
-    let tmp10Result1 = null;
+    items2[1] = tmp10Result4;
+    let tmp10Result5 = null;
     if (tmp7) {
-      obj2 = { channel, isLive, guild: stateFromStores };
-      tmp10Result1 = closure_5(tmp(9827).ScheduleEventPrompt, obj2);
+      const obj9 = { channel, isLive, guild: stateFromStores };
+      tmp10Result5 = closure_5(tmp(9827).ScheduleEventPrompt, obj9);
     }
-    obj3 = { children: null };
-    items2[2] = tmp10Result1;
-    obj4 = { onContinue: channel.onSkip };
-    items2[3] = closure_5(tmp(10028).ContinueToStagePrompt, obj4);
-    obj3.children = items2;
-    obj.children = closure_7(closure_6, obj3);
-    tmp10Result2 = closure_5(StageViewWithPromptsDefault, obj);
+    const obj10 = { children: null };
+    items2[2] = tmp10Result5;
+    const obj11 = { onContinue: channel.onSkip };
+    items2[3] = closure_5(tmp(10028).ContinueToStagePrompt, obj11);
+    obj10.children = items2;
+    obj6.children = closure_7(closure_6, obj10);
+    tmp10Result6 = closure_5(StageViewWithPromptsDefault, obj6);
     const tmp5Result = StageViewWithPromptsDefault;
   }
-  return tmp10Result2;
+  return tmp10Result6;
 };

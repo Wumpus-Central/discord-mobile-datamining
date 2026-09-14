@@ -7,7 +7,7 @@ import getFlattedChannelListDefault from "getFlattedChannelList" /* 7215 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 function setIndex(arg0, index) {
@@ -238,6 +238,7 @@ function handleFavoritesUpdate() {
 }
 let GuildChannelStore = fn(2012);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
 let c11 = null;

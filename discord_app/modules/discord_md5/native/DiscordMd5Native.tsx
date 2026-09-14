@@ -1,13 +1,9 @@
 // === Module 5237: DiscordMd5Native ===
 
 // Module 5237 (DiscordMd5Native)
-import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1150 */;
 import DiscordMd5 from "DiscordMd5" /* 5238 */;
-import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
@@ -18,21 +14,9 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
   if (arg1 === undefined) {
     num = 4096;
   }
-  if (obj.isAndroid()) {
-    if (null == NativeFileModuleDefault) {
-      const _Error = Error;
-      const error = new Error("RTNFileManager doesn't exist?");
-      let rejectResult = Promise.reject(error);
-    } else {
-      rejectResult = NativeFileModuleDefault.getFileHash(uri, "md5", num);
-      const tmp3Result = NativeFileModuleDefault;
-    }
-  } else {
-    const DCDFileManager = NativeModules.DCDFileManager;
-    return DCDFileManager.getFileHash(uri, "md5", num);
-  }
-  obj = PlatformUtils;
+  return NativeFileModuleDefault.getFileHash(uri, "md5", num);
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
 
 export default prototype;

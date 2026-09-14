@@ -28,8 +28,8 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = _modDef4228(isMessageRequestTimestamp);
-      const valueOfResult = obj.valueOf();
+      const obj = _modDef4228(isMessageRequestTimestamp);
+      const valueOfResult = _modDef4228(isMessageRequestTimestamp).valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
@@ -39,13 +39,13 @@ function makeSortedChannel(channel) {
     }
     tmp = tmp2;
   }
-  obj = { channelId: channel.id, lastMessageId: tmp, isFavorite: UserGuildSettingsStore.isMessagesFavorite(channel.id), isRequest: null };
+  const obj4 = { channelId: channel.id, lastMessageId: tmp, isFavorite: UserGuildSettingsStore.isMessagesFavorite(channel.id), isRequest: null };
   let isMessageRequestResult = MessageRequestStore.isMessageRequest(channel.id);
   if (!isMessageRequestResult) {
     isMessageRequestResult = SpamMessageRequestStore.isSpam(channel.id);
   }
-  obj.isRequest = isMessageRequestResult;
-  return obj;
+  obj4.isRequest = isMessageRequestResult;
+  return obj4;
 }
 function handleConnectionOpen() {
   secondaryIndexMap.clear();
@@ -74,9 +74,9 @@ const secondaryIndexMap = new fn(4271).SecondaryIndexMap(function indexBy(value)
   return -SnowflakeUtilsDefault.extractTimestamp(arr.lastMessageId);
 });
 let values = [];
-values = [];
+let values2 = [];
 let closure_17 = [];
-const f38847 = () => {
+const f38848 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -89,17 +89,17 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38847 === "function") {
-    secondaryIndexMap.values(constants.FAVORITE);
-    values = secondaryIndexMap.values(constants.DEFAULT);
+  if (typeof f38848 === "function") {
+    values = secondaryIndexMap.values(constants.FAVORITE);
+    values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;
     if (tmp4) {
-      tmp4 = values === values;
+      tmp4 = values2 === values2;
     }
     if (!tmp4) {
       closure_17 = [];
       const item = values.forEach((channelId) => closure_1_17.push(channelId.channelId));
-      const item1 = values.forEach((channelId) => closure_1_17.push(channelId.channelId));
+      const item1 = values2.forEach((channelId) => closure_1_17.push(channelId.channelId));
     }
     return closure_17;
   } else {

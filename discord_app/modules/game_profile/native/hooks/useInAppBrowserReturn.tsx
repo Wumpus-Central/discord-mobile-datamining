@@ -22,8 +22,8 @@ export default function useInAppBrowserReturn(gameId) {
           if (!arg1) {
             if (arg0) {
               c0 = true;
-              let obj = { gameId, initialScrollOffset: scrollY.get() };
-              const result = obj.setGameProfilePendingReturn(obj);
+              const obj2 = { gameId, initialScrollOffset: scrollY.get() };
+              const result = GameProfileActionCreatorsDefault.setGameProfilePendingReturn(obj2);
             }
           }
           if (arg1) {
@@ -32,8 +32,8 @@ export default function useInAppBrowserReturn(gameId) {
               c0 = false;
               const pendingReturn = GameProfileStore.getPendingReturn();
               if (null != pendingReturn) {
-                obj = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
-                GameProfileActionCreatorsDefault.returnToGameProfile(obj);
+                const obj4 = { gameId: pendingReturn.gameId, source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn, initialScrollOffset: pendingReturn.initialScrollOffset };
+                GameProfileActionCreatorsDefault.returnToGameProfile(obj4);
               }
             }
           }

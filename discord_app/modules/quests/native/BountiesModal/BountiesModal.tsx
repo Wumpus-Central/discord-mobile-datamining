@@ -1,6 +1,6 @@
-// === Module 15092: BountiesModal ===
+// === Module 15093: BountiesModal ===
 
-// Module 15092 (BountiesModal)
+// Module 15093 (BountiesModal)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,10 +23,10 @@ export default noop.memo(function BountiesModal(bountyId) {
       },
       render() {
         if (closure_1_2 === bountyId(variant[2]).BountiesModalVariant.VERTICAL_SCROLL) {
-          let obj = { bountyId, sourceQuestContent };
+          const obj2 = { bountyId, sourceQuestContent };
           let tmp7 = jsx(sourceQuestContent(variant[3]), { bountyId, sourceQuestContent });
         } else {
-          obj = { bountyId, sourceQuestContent, bounty };
+          const obj = { bountyId, sourceQuestContent, bounty };
           tmp7 = jsx(sourceQuestContent(variant[4]), { bountyId, sourceQuestContent, bounty });
         }
         return tmp7;

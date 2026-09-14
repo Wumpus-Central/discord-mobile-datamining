@@ -3,17 +3,17 @@
 // Module 0 (Discord)
 import TTITracker from "TTITracker" /* 9 */;
 import _mod17 from "module_17" /* 17 */;
-import isTTITest from "isTTITest" /* 14478 */;
-import installSystrace from "installSystrace" /* 14479 */;
+import isTTITest from "isTTITest" /* 14479 */;
+import installSystrace from "installSystrace" /* 14480 */;
 import logAppStart from "logAppStart" /* 1 */;
 import fast_connect from "fast_connect" /* 15 */;
-import polyfills from "polyfills" /* 14284 */;
+import polyfills from "polyfills" /* 14285 */;
 import checkEnv from "checkEnv" /* 16 */;
-import SentryUtils from "SentryUtils" /* 1232 */;
+import SentryUtils from "SentryUtils" /* 1230 */;
 import size from "module_2" /* 2 */;
 
 let GenerateInvite = require;
-let f18098 = dependencyMap;
+let f18099 = dependencyMap;
 const polyfillsEnd = TTITracker.default.imports.polyfillsEnd;
 polyfillsEnd.record();
 const sentryEnd = TTITracker.default.imports.sentryEnd;
@@ -22,87 +22,87 @@ if (isTTITest.isTTITest) {
   installSystrace.installSystrace();
 }
 const AppRegistry = _mod17.AppRegistry;
-AppRegistry.registerComponent("Discord", () => GenerateInvite(f18098[9]).default);
+AppRegistry.registerComponent("Discord", () => GenerateInvite(f18099[9]).default);
 const runnable = AppRegistry.getRunnable("Discord");
 AppRegistry.registerRunnable("Discord", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f18098[10]).default("Main", () => {
+  return GenerateInvite(f18099[10]).default("Main", () => {
     closure_2(...closure_0);
   });
 });
-AppRegistry.registerComponent("Share", () => GenerateInvite(f18098[11]).default);
+AppRegistry.registerComponent("Share", () => GenerateInvite(f18099[11]).default);
 const runnable2 = AppRegistry.getRunnable("Share");
 AppRegistry.registerRunnable("Share", () => {
   GenerateInvite = [...arguments];
-  return GenerateInvite(f18098[10]).default("Share", () => closure_3(...closure_0));
+  return GenerateInvite(f18099[10]).default("Share", () => closure_3(...closure_0));
 });
 GenerateInvite = "BackgroundSync";
-f18098 = () => GenerateInvite(f18098[13]);
+f18099 = () => GenerateInvite(f18099[13]);
 AppRegistry.registerHeadlessTask("BackgroundSync", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 if (isTTITest.isTTITest) {
   GenerateInvite = "TTITestAction";
-  f18098 = () => GenerateInvite(f18098[14]);
+  f18099 = () => GenerateInvite(f18099[14]);
   AppRegistry.registerHeadlessTask("TTITestAction", () => {
-    closure_0 = GenerateInvite(f18098[12]).default;
-    return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+    closure_0 = GenerateInvite(f18099[12]).default;
+    return (arg0) => closure_0(GenerateInvite, f18099, arg0);
   });
 }
 GenerateInvite = "Disconnect";
-f18098 = () => GenerateInvite(f18098[15]);
+f18099 = () => GenerateInvite(f18099[15]);
 AppRegistry.registerHeadlessTask("Disconnect", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "MarkAsRead";
-f18098 = () => GenerateInvite(f18098[16]);
+f18099 = () => GenerateInvite(f18099[16]);
 AppRegistry.registerHeadlessTask("MarkAsRead", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "MuteAction";
-f18098 = () => GenerateInvite(f18098[17]);
+f18099 = () => GenerateInvite(f18099[17]);
 AppRegistry.registerHeadlessTask("MuteAction", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "ToggleDeafen";
-f18098 = () => GenerateInvite(f18098[18]);
+f18099 = () => GenerateInvite(f18099[18]);
 AppRegistry.registerHeadlessTask("ToggleDeafen", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "ToggleSelfMute";
-f18098 = () => GenerateInvite(f18098[19]);
+f18099 = () => GenerateInvite(f18099[19]);
 AppRegistry.registerHeadlessTask("ToggleSelfMute", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "DismissCallAction";
-f18098 = () => GenerateInvite(f18098[20]);
+f18099 = () => GenerateInvite(f18099[20]);
 AppRegistry.registerHeadlessTask("DismissCallAction", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "DirectReply";
-f18098 = () => GenerateInvite(f18098[21]);
+f18099 = () => GenerateInvite(f18099[21]);
 AppRegistry.registerHeadlessTask("DirectReply", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "SelectVoiceChannel";
-f18098 = () => GenerateInvite(f18098[22]);
+f18099 = () => GenerateInvite(f18099[22]);
 AppRegistry.registerHeadlessTask("SelectVoiceChannel", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 GenerateInvite = "GenerateInvite";
-f18098 = () => GenerateInvite(f18098[23]);
+f18099 = () => GenerateInvite(f18099[23]);
 AppRegistry.registerHeadlessTask("GenerateInvite", () => {
-  closure_0 = GenerateInvite(f18098[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18098, arg0);
+  closure_0 = GenerateInvite(f18099[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18099, arg0);
 });
 const result = size.fileFinishedImporting("index.native.tsx");
 
@@ -161,13 +161,16 @@ function global() {
         }
         return _exports;
       }
-      _exports = (function loadModuleImplementation(id, value) {
-        if (!value) {
+      _exports = (function loadModuleImplementation(id, value2) {
+        value = value2;
+        if (!value2) {
+          value = value2;
           if (length.length > 0) {
             let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
+            value = value2;
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
@@ -176,19 +179,21 @@ function global() {
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
+        value2 = value;
         if (!value) {
+          value2 = value;
           if (nativeRequire) {
             const tmp17 = closure_11(id);
             nativeRequire(tmp17.localId, tmp17.segmentId);
-            value = closure_1.get(id);
+            value2 = closure_1.get(id);
           }
         }
-        if (value) {
-          if (value.hasError) {
-            throw value.error;
+        if (value2) {
+          if (value2.hasError) {
+            throw value2.error;
           } else {
-            value.isInitialized = true;
-            dependencyMap = value.dependencyMap;
+            value2.isInitialized = true;
+            dependencyMap = value2.dependencyMap;
             __timingFunction = tmp14.__timingFunction;
             const __timingFunctionResult = __timingFunction();
             closure_1 = __timingFunctionResult;
@@ -197,11 +202,11 @@ function global() {
               tmp14.__getTotalRequireTime = () => React2 + (__timingFunction() - __timingFunctionResult);
             }
             try {
-              const publicModule = value.publicModule;
+              const publicModule = value2.publicModule;
               publicModule.id = id;
               tmp20(tmp14, closure_6, closure_7, closure_8, publicModule, publicModule.exports, dependencyMap);
-              value.factory = undefined;
-              value.dependencyMap = undefined;
+              value2.factory = undefined;
+              value2.dependencyMap = undefined;
               if (tmp22) {
                 c3 = false;
                 closure_2 = closure_2 + (__timingFunction() - __timingFunctionResult);
@@ -237,10 +242,10 @@ function global() {
       const error = new Error("Cannot find module");
       throw error;
     } else {
-      value = closure_1.get(id);
-      if (value) {
-        if (value.isInitialized) {
-          let _exports = value.publicModule.exports;
+      value2 = closure_1.get(id);
+      if (value2) {
+        if (value2.isInitialized) {
+          let _exports = value2.publicModule.exports;
         }
         let _default = _exports;
         if (_exports) {
@@ -252,13 +257,16 @@ function global() {
         closure_1.get(id).importedDefault = _default;
         return _default;
       }
-      _exports = (function loadModuleImplementation(id, value) {
-        if (!value) {
+      _exports = (function loadModuleImplementation(id, value2) {
+        value = value2;
+        if (!value2) {
+          value = value2;
           if (length.length > 0) {
             let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
+            value = value2;
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
@@ -267,19 +275,21 @@ function global() {
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
+        value2 = value;
         if (!value) {
+          value2 = value;
           if (nativeRequire) {
             const tmp17 = closure_11(id);
             nativeRequire(tmp17.localId, tmp17.segmentId);
-            value = closure_1.get(id);
+            value2 = closure_1.get(id);
           }
         }
-        if (value) {
-          if (value.hasError) {
-            throw value.error;
+        if (value2) {
+          if (value2.hasError) {
+            throw value2.error;
           } else {
-            value.isInitialized = true;
-            dependencyMap = value.dependencyMap;
+            value2.isInitialized = true;
+            dependencyMap = value2.dependencyMap;
             __timingFunction = tmp14.__timingFunction;
             const __timingFunctionResult = __timingFunction();
             closure_1 = __timingFunctionResult;
@@ -288,11 +298,11 @@ function global() {
               tmp14.__getTotalRequireTime = () => React2 + (__timingFunction() - __timingFunctionResult);
             }
             try {
-              const publicModule = value.publicModule;
+              const publicModule = value2.publicModule;
               publicModule.id = id;
               tmp20(tmp14, closure_6, closure_7, closure_8, publicModule, publicModule.exports, dependencyMap);
-              value.factory = undefined;
-              value.dependencyMap = undefined;
+              value2.factory = undefined;
+              value2.dependencyMap = undefined;
               if (tmp22) {
                 c3 = false;
                 closure_2 = closure_2 + (__timingFunction() - __timingFunctionResult);
@@ -313,7 +323,7 @@ function global() {
             return Error("Requiring unknown module \"" + id + "\".");
           })(id);
         }
-      })(id, value);
+      })(id, value2);
     }
   }
   let React5 = metroImportDefault;
@@ -329,10 +339,10 @@ function global() {
       const error = new Error("Cannot find module");
       throw error;
     } else {
-      value = closure_1.get(id);
-      if (value) {
-        if (value.isInitialized) {
-          let _exports = value.publicModule.exports;
+      value2 = closure_1.get(id);
+      if (value2) {
+        if (value2.isInitialized) {
+          let _exports = value2.publicModule.exports;
         }
         if (!_exports) {
           const obj = {};
@@ -361,13 +371,16 @@ function global() {
         closure_1.get(id).importedAll = tmp3;
         return tmp3;
       }
-      _exports = (function loadModuleImplementation(id, value) {
-        if (!value) {
+      _exports = (function loadModuleImplementation(id, value2) {
+        value = value2;
+        if (!value2) {
+          value = value2;
           if (length.length > 0) {
             let num2 = map.get(id);
             if (num2 == null) {
               num2 = 0;
             }
+            value = value2;
             if (null != tmp8[num2]) {
               tmp10(id);
               value = closure_1.get(id);
@@ -376,19 +389,21 @@ function global() {
           }
         }
         const nativeRequire = __timingFunction.nativeRequire;
+        value2 = value;
         if (!value) {
+          value2 = value;
           if (nativeRequire) {
             const tmp17 = closure_11(id);
             nativeRequire(tmp17.localId, tmp17.segmentId);
-            value = closure_1.get(id);
+            value2 = closure_1.get(id);
           }
         }
-        if (value) {
-          if (value.hasError) {
-            throw value.error;
+        if (value2) {
+          if (value2.hasError) {
+            throw value2.error;
           } else {
-            value.isInitialized = true;
-            dependencyMap = value.dependencyMap;
+            value2.isInitialized = true;
+            dependencyMap = value2.dependencyMap;
             __timingFunction = tmp14.__timingFunction;
             const __timingFunctionResult = __timingFunction();
             closure_1 = __timingFunctionResult;
@@ -397,11 +412,11 @@ function global() {
               tmp14.__getTotalRequireTime = () => React2 + (__timingFunction() - __timingFunctionResult);
             }
             try {
-              const publicModule = value.publicModule;
+              const publicModule = value2.publicModule;
               publicModule.id = id;
               tmp20(tmp14, closure_6, closure_7, closure_8, publicModule, publicModule.exports, dependencyMap);
-              value.factory = undefined;
-              value.dependencyMap = undefined;
+              value2.factory = undefined;
+              value2.dependencyMap = undefined;
               if (tmp22) {
                 c3 = false;
                 closure_2 = closure_2 + (__timingFunction() - __timingFunctionResult);
@@ -422,7 +437,7 @@ function global() {
             return Error("Requiring unknown module \"" + id + "\".");
           })(id);
         }
-      })(id, value);
+      })(id, value2);
     }
   }
   let React6 = metroImportAll;
@@ -433,9 +448,9 @@ function global() {
   _window.__r = metroRequire;
   _window["" + globalThis.__METRO_GLOBAL_PREFIX__ + "__d"] = function define(factory, arg1, dependencyMap) {
     if (!closure_1.has(arg1)) {
-      let obj = { dependencyMap, factory, hasError: false, importedAll: React4, importedDefault: React4, isInitialized: false, publicModule: null };
-      obj = { exports: {} };
-      obj.publicModule = obj;
+      const obj = { dependencyMap, factory, hasError: false, importedAll: React4, importedDefault: React4, isInitialized: false, publicModule: null };
+      const obj2 = { exports: {} };
+      obj.publicModule = obj2;
       const result = closure_1.set(arg1, obj);
     }
   };
@@ -700,9 +715,9 @@ function global() {
                         if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(name, StringResult)) {
                           let _String2 = String;
                           let flag3 = true;
-                          let arr = push(React2(formatValueCalls, name, arg2, obj, String(num4), true));
+                          let arr4 = push(React2(formatValueCalls, name, arg2, obj, String(num4), true));
                         } else {
-                          let arr1 = push(str17);
+                          let arr5 = push(str17);
                         }
                       }
                       const item1 = keys.forEach((item) => {
@@ -716,7 +731,7 @@ function global() {
                       mapped = keys.map((item) => c2(obj, closure_1, closure_2, obj, item, c4));
                     }
                     const seen1 = formatValueCalls.seen;
-                    const arr2 = seen1.pop();
+                    seen1.pop();
                     if (mapped.reduce((acc, arr) => {
                       arr.indexOf("\n") >= 0;
                       return acc + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
@@ -875,13 +890,13 @@ function global() {
   closure_129_4 = 2;
   closure_129_5 = 3;
   closure_129_6 = [];
-  let _console = _window2.console;
+  let _console1 = _window2.console;
   if (_window2.nativeLoggingHook) {
     let obj = { time: stub, timeEnd: stub, timeStamp: stub, count: stub, countReset: stub, createTask: consoleCreateTaskStub };
-    if (_console == null) {
-      _console = {};
+    if (_console1 == null) {
+      _console1 = {};
     }
-    let merged = Object.assign(_console);
+    let merged = Object.assign(_console1);
     obj.error = () => {
       if (1 === arguments.length) {
         if (typeof arguments[0] === "string") {
@@ -1255,7 +1270,7 @@ function global() {
               const mapped = Array.apply(null, Array(items3[index] - item.length)).map(() => c0);
               return item + mapped.join("");
             });
-            arr = items4.push("| " + mapped4.join(" | ") + " |");
+            let arr3 = items4.push("| " + mapped4.join(" | ") + " |");
             num2 = num2 + 1;
             length = arr2.length;
           } while (num2 < length);
@@ -1268,13 +1283,12 @@ function global() {
     };
     obj.group = function consoleGroupPolyfill(arg0) {
       let str = arg0;
-      let arr = metroRequire;
       const text = `${metroRequire.join("")}┐`;
       if (!arg0) {
         str = "";
       }
       React.nativeLoggingHook(`${tmp2} ${str}`, c3);
-      arr = arr.push("\u2502");
+      metroRequire.push("\u2502");
     };
     obj.groupEnd = function consoleGroupEndPolyfill() {
       metroRequire.pop();
@@ -1282,13 +1296,12 @@ function global() {
     };
     obj.groupCollapsed = function consoleGroupCollapsedPolyfill(arg0) {
       let str = arg0;
-      let arr = metroRequire;
       const text = `${metroRequire.join("")}┘`;
       if (!arg0) {
         str = "";
       }
       React.nativeLoggingHook(`${tmp2} ${str}`, c3);
-      arr = arr.push("\u2502");
+      metroRequire.push("\u2502");
     };
     obj.assert = function consoleAssertPolyfill(arg0, arg1) {
       if (!arg0) {
@@ -1343,9 +1356,9 @@ function global() {
     let _Object2 = Object;
     let _console4 = console;
     Object.defineProperty(console, "_isPolyfilled", { value: true, enumerable: false });
-  } else if (!_console) {
+  } else if (!_console1) {
     closure_129_8 = tmp4;
-    obj = {
+    let obj2 = {
       debug: _window2.print || stub,
       error: _window2.print || stub,
       info: _window2.print || stub,
@@ -1373,9 +1386,9 @@ function global() {
       timeStamp: stub,
       createTask: consoleCreateTaskStub
     };
-    _window2.console = obj;
+    _window2.console = obj2;
     let _Object = Object;
-    _console = console;
+    let _console = console;
     Object.defineProperty(console, "_isPolyfilled", { value: true, enumerable: false });
   }
   if (typeof globalThis !== "undefined") {
@@ -1395,7 +1408,7 @@ function global() {
   closure_131_1 = true === self.RN$useAlwaysAvailableJSErrorHandling ? self.RN$handleException : ((arg0, arg1) => {
     throw arg0;
   });
-  let obj1 = {
+  let obj3 = {
     setGlobalHandler(arg0) {
       closure_1 = arg0;
     },
@@ -1460,14 +1473,14 @@ function global() {
       }
     }
   };
-  closure_131_2 = obj1;
-  self.ErrorUtils = obj1;
-  // Metro registry: 18053 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
+  closure_131_2 = obj3;
+  self.ErrorUtils = obj3;
+  // Metro registry: 18054 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
   __r(119);
   return __r(0);
 }
 
-function f21289() {
+function f21290() {
   class CanvasManagerNoop {
     constructor() {
       tmp = closure_2_7(this, CanvasManagerNoop);
@@ -1534,7 +1547,7 @@ function f21289() {
   return closure_8(CanvasManagerNoop, items);
 }
 
-function f21290() {
+function f21291() {
   class StylesheetManager {
     constructor(arg0) {
       tmp = closure_2_7(this, StylesheetManager);
@@ -1551,12 +1564,12 @@ function f21290() {
     value: function attachLinkElement(nodeName, attributes) {
       const self = this;
       if ("_cssText" in attributes.attributes) {
-        let obj = { adds: [], removes: [], texts: [], attributes: null };
-        obj = { id: null, attributes: null };
+        const obj = { adds: [], removes: [], texts: [], attributes: null };
         ({ id: obj2.id, attributes: obj2.attributes } = attributes);
-        const items = [obj];
+        const items = [{ id: null, attributes: null }];
         obj.attributes = items;
         self.mutationCb(obj);
+        const obj3 = { id: null, attributes: null };
       }
       self.trackLinkElement(nodeName);
     }
@@ -1580,7 +1593,7 @@ function f21290() {
       value: function adoptStyleSheets(adoptedStyleSheets, id) {
         const self = this;
         if (0 !== adoptedStyleSheets.length) {
-          let obj = { id, styleIds: [] };
+          const obj2 = { id, styleIds: [] };
           const items = [];
           const iter = adoptedStyleSheets[Symbol.iterator]();
           const nextResult = iter.next();
@@ -1592,7 +1605,7 @@ function f21290() {
             } else {
               let addResult = styleMirror2.add(tmp4);
               id = addResult;
-              obj = { styleId: addResult, rules: null };
+              let obj = { styleId: addResult, rules: null };
               let CSSRule = tmp4.rules;
               if (!CSSRule) {
                 CSSRule = globalThis.CSSRule;
@@ -1600,14 +1613,14 @@ function f21290() {
               obj.rules = Array.from(CSSRule, (arg0, index) => ({ rule: closure_1_22(arg0), index }));
               let arr = items.push(obj);
             }
-            let styleIds = obj.styleIds;
-            arr = styleIds.push(id);
+            let styleIds = obj2.styleIds;
+            let arr2 = styleIds.push(id);
             continue;
           }
           if (items.length > 0) {
-            obj.styles = items;
+            obj2.styles = items;
           }
-          self.adoptedStyleSheetCb(obj);
+          self.adoptedStyleSheetCb(obj2);
         }
       }
     },
@@ -1630,7 +1643,7 @@ function f21290() {
   return closure_8(StylesheetManager, items);
 }
 
-function f21291() {
+function f21292() {
   class ProcessedNodeManager {
     constructor() {
       tmp = closure_2_7(this, ProcessedNodeManager);
@@ -1691,7 +1704,7 @@ function f21291() {
   return closure_8(ProcessedNodeManager, items);
 }
 
-function f21292(arg0) {
+function f21293(arg0) {
   return 2 * arg0;
 }
 
@@ -1709,7 +1722,7 @@ function takeFullSnapshot(arg0) {
   }
 }
 
-function f21295() {
+function f21296() {
   class ClickDetector {
     constructor(arg0, arg1) {
       tmp = arg2;
@@ -1736,10 +1749,10 @@ function f21295() {
       const fn = () => {
         self._lastMutation = Date.now() / 1000;
       };
-      let f71882 = fn;
+      let f71885 = fn;
       if (!closure_111) {
         closure_111 = [];
-        f71882(self[8]).fill(f71882(self[8]).GLOBAL_OBJ, "open", (arg0) => {
+        f71885(self[8]).fill(f71885(self[8]).GLOBAL_OBJ, "open", (arg0) => {
           closure_0 = arg0;
           return () => {
             const items = [...arguments];
@@ -1749,20 +1762,20 @@ function f21295() {
               } catch (err) {
               }
             }
-            return closure_0.apply(f71882(self[8]).GLOBAL_OBJ, items);
+            return closure_0.apply(f71885(self[8]).GLOBAL_OBJ, items);
           };
         });
-        const obj = f71882(self[8]);
+        const obj = f71885(self[8]);
       }
       closure_111.push(fn);
-      f71882 = () => {
+      f71885 = () => {
   
       };
       this._teardown = () => {
-        if (typeof f71882 === "function") {
+        if (typeof f71885 === "function") {
           let num2 = -1;
           if (closure_111) {
-            num2 = closure_111.indexOf(f71882);
+            num2 = closure_111.indexOf(f71885);
           }
           if (num2 > -1) {
             closure_111.splice(num2, 1);
@@ -1837,7 +1850,7 @@ function f21295() {
             result = timestamp / 1000;
           }
           const obj = { timestamp: result, clickBreadcrumb: data, clickCount: 0, node: tagName };
-          let _clicks = self._clicks;
+          const _clicks = self._clicks;
           if (!_clicks.some((node) => {
             let tmp2 = node.node === obj.node;
             if (tmp2) {
@@ -1846,8 +1859,8 @@ function f21295() {
             }
             return tmp2;
           })) {
-            _clicks = self._clicks;
-            _clicks.push(obj);
+            const _clicks1 = self._clicks;
+            _clicks1.push(obj);
             if (1 === self._clicks.length) {
               self._scheduleCheckClicks();
             }
@@ -1980,31 +1993,31 @@ function f21295() {
         if (result < 1000 * self._timeout) {
           str = "mutation";
         }
-        let obj = { type: "default", message: null, timestamp: null, category: "ui.slowClickDetected", data: null };
+        const obj = { type: "default", message: null, timestamp: null, category: "ui.slowClickDetected", data: null };
         ({ message: obj.message, timestamp: obj.timestamp } = clickBreadcrumb);
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(clickBreadcrumb.data);
-        obj.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
-        obj.route = _replay.getCurrentRoute();
-        obj.timeAfterClickMs = result;
-        obj.endReason = str;
+        obj2.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
+        obj2.route = _replay.getCurrentRoute();
+        obj2.timeAfterClickMs = result;
+        obj2.endReason = str;
         if (!clickCount) {
           clickCount = 1;
         }
-        obj.clickCount = clickCount;
-        obj.data = obj;
+        obj2.clickCount = clickCount;
+        obj.data = obj2;
         self._addBreadcrumbEvent(_replay, obj);
       } else if (clickCount > 1) {
-        obj = { type: "default", message: null, timestamp: null, category: "ui.multiClick", data: null };
+        const obj4 = { type: "default", message: null, timestamp: null, category: "ui.multiClick", data: null };
         ({ message: obj3.message, timestamp: obj3.timestamp } = clickBreadcrumb);
-        const obj1 = {};
+        const obj7 = {};
         const merged1 = Object.assign(clickBreadcrumb.data);
-        obj1.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
-        obj1.route = _replay.getCurrentRoute();
-        obj1.clickCount = clickCount;
-        obj1.metric = true;
-        obj.data = obj1;
-        self._addBreadcrumbEvent(_replay, obj);
+        obj7.url = ClickDetector(dependencyMap[8]).GLOBAL_OBJ.location.href;
+        obj7.route = _replay.getCurrentRoute();
+        obj7.clickCount = clickCount;
+        obj7.metric = true;
+        obj4.data = obj7;
+        self._addBreadcrumbEvent(_replay, obj4);
       }
       tmp2 = scrollAfter.mutationAfter && scrollAfter.mutationAfter <= self._threshold;
     }
@@ -2023,7 +2036,7 @@ function f21295() {
   return closure_8(ClickDetector, items);
 }
 
-function f21296(arg0) {
+function f21297(arg0) {
   arg0.Document = 0;
   arg0[0] = "Document";
   arg0.DocumentType = 1;
@@ -2049,7 +2062,7 @@ function createResourceEntry(initiatorType) {
   if (items.includes(initiatorType)) {
     return null;
   } else {
-    let obj = { type: null, start: null, end: null, name: null, data: null };
+    const obj = { type: null, start: null, end: null, name: null, data: null };
     const _HermesInternal = HermesInternal;
     obj.type = "" + entryType + "." + initiatorType;
     const obj2 = closure_1_0(closure_1_1[8]);
@@ -2058,18 +2071,17 @@ function createResourceEntry(initiatorType) {
     const tmp2Result = closure_1_0(closure_1_1[8]);
     obj.end = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + responseEnd) / 1000;
     obj.name = name;
-    obj = { size: transferSize, statusCode: responseStatus, decodedBodySize, encodedBodySize };
-    obj.data = obj;
+    const obj3 = { size: transferSize, statusCode: responseStatus, decodedBodySize, encodedBodySize };
+    obj.data = obj3;
     return obj;
   }
 }
 
 function createPaintEntry(arg0) {
   ({ duration, entryType, name, startTime } = arg0);
-  let obj = closure_1_0(closure_1_1[8]);
-  const result = ((obj.browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + startTime) / 1000;
-  obj = { type: entryType, name, start: result, end: result + duration, data: "fill" };
-  return obj;
+  const obj = closure_1_0(closure_1_1[8]);
+  const result = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + startTime) / 1000;
+  return { type: entryType, name, start: result, end: result + duration, data: "fill" };
 }
 
 function createNavigationEntry(arg0) {
@@ -2077,7 +2089,7 @@ function createNavigationEntry(arg0) {
   if (0 === duration) {
     return null;
   } else {
-    let obj = { type: null, start: null, end: null, name: null, data: null };
+    const obj = { type: null, start: null, end: null, name: null, data: null };
     const _HermesInternal = HermesInternal;
     obj.type = "" + tmp + "." + tmp13;
     const obj4 = closure_1_0(closure_1_1[8]);
@@ -2086,8 +2098,8 @@ function createNavigationEntry(arg0) {
     const tmp18Result = closure_1_0(closure_1_1[8]);
     obj.end = ((closure_1_0(closure_1_1[8]).browserPerformanceTimeOrigin() || closure_1_0(closure_1_1[8]).GLOBAL_OBJ.performance.timeOrigin) + domComplete) / 1000;
     obj.name = tmp2;
-    obj = { size: tmp12, decodedBodySize: tmp3, encodedBodySize: tmp4, duration, domInteractive: tmp7, domContentLoadedEventStart: tmp5, domContentLoadedEventEnd: tmp6, loadEventStart: tmp8, loadEventEnd: tmp9, domComplete, redirectCount: tmp10 };
-    obj.data = obj;
+    const obj2 = { size: tmp12, decodedBodySize: tmp3, encodedBodySize: tmp4, duration, domInteractive: tmp7, domContentLoadedEventStart: tmp5, domContentLoadedEventEnd: tmp6, loadEventStart: tmp8, loadEventEnd: tmp9, domComplete, redirectCount: tmp10 };
+    obj.data = obj2;
     return obj;
   }
 }
@@ -2118,17 +2130,17 @@ function makeReplayDebugLogger() {
         debug[closure_0].apply(items1);
         if (traceInternals) {
           const joined = items.join("");
-          let tmpResult = closure_3_0(closure_3_1[8]);
-          let str2 = tmpResult.severityLevelFromString(closure_0);
+          let str2 = closure_3_0(closure_3_1[8]).severityLevelFromString(closure_0);
           if (str2 === undefined) {
             str2 = "info";
           }
-          tmpResult = closure_3_0(closure_3_1[8]);
+          const tmpResult = closure_3_0(closure_3_1[8]);
           obj = { category: "console", data: { logger: "replay" }, level: str2, message: null };
           const _HermesInternal = HermesInternal;
           obj.message = "" + closure_3_132 + joined;
-          obj = { level: str2 };
-          tmpResult.addBreadcrumb(obj, obj);
+          const obj2 = { level: str2 };
+          closure_3_0(closure_3_1[8]).addBreadcrumb(obj, obj2);
+          const tmpResult2 = closure_3_0(closure_3_1[8]);
         }
       };
     });
@@ -2147,16 +2159,16 @@ function makeReplayDebugLogger() {
       const debug = closure_2_0(closure_2_1[8]).debug;
       debug.error(closure_2_132, arg0);
       if (captureExceptions) {
-        let tmp10Result = closure_2_0(closure_2_1[8]);
         obj = { mechanism: { handled: true, type: "auto.function.replay.debug" } };
-        tmp10Result.captureException(arg0, obj);
+        closure_2_0(closure_2_1[8]).captureException(arg0, obj);
+        const tmp10Result = closure_2_0(closure_2_1[8]);
       } else if (traceInternals) {
-        tmp10Result = closure_2_0(closure_2_1[8]);
-        obj = { category: "console", data: { logger: "replay" }, level: "error", message: null };
+        const obj2 = { category: "console", data: { logger: "replay" }, level: "error", message: null };
         const _HermesInternal = HermesInternal;
-        obj.message = "" + closure_2_132 + arg0;
-        const obj1 = { level: "error" };
-        tmp10Result.addBreadcrumb(obj, obj1);
+        obj2.message = "" + closure_2_132 + arg0;
+        const obj3 = { level: "error" };
+        closure_2_0(closure_2_1[8]).addBreadcrumb(obj2, obj3);
+        const tmp10Result2 = closure_2_0(closure_2_1[8]);
       }
     };
     obj.infoTick = () => {
@@ -2167,9 +2179,8 @@ function makeReplayDebugLogger() {
       if (traceInternals) {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          captureExceptions(traceInternals[8]);
-          obj = { category: "console", data: { logger: "replay" }, level: "info", message: "" + closure_2_132 + items[0] };
-          obj.addBreadcrumb(obj, { level: "info" });
+          obj = captureExceptions(traceInternals[8]);
+          obj.addBreadcrumb({ category: "console", data: { logger: "replay" }, level: "info", message: "" + closure_2_132 + items[0] }, { level: "info" });
         }, 0);
       }
     };
@@ -2183,7 +2194,7 @@ function makeReplayDebugLogger() {
   return obj;
 }
 
-function f21302(arg0) {
+function f21303(arg0) {
   class EventBufferSizeExceededError {
     constructor() {
       self = this;
@@ -2206,7 +2217,7 @@ function f21302(arg0) {
   return closure_8(EventBufferSizeExceededError);
 }
 
-function f21303() {
+function f21304() {
   class EventBufferArray {
     constructor() {
       tmp = closure_2_7(this, EventBufferArray);
@@ -2254,8 +2265,8 @@ function f21303() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -2267,7 +2278,7 @@ function f21303() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             const _JSON = JSON;
@@ -2336,7 +2347,7 @@ function f21303() {
   return closure_8(EventBufferArray, items);
 }
 
-function f21304() {
+function f21305() {
   class WorkerHandler {
     constructor(arg0) {
       tmp = closure_2_7(this, WorkerHandler);
@@ -2412,7 +2423,7 @@ function f21304() {
             }
           }
           let _worker = self._worker;
-          listener = _worker.addEventListener("message", listener);
+          const listener1 = _worker.addEventListener("message", listener);
           const _worker2 = self._worker;
           _worker2.postMessage({ id, method, arg: listener });
         });
@@ -2429,7 +2440,7 @@ function f21304() {
   return closure_8(WorkerHandler, items);
 }
 
-function f21305() {
+function f21306() {
   class EventBufferCompressionWorker {
     constructor(arg0) {
       tmp = closure_2_7(this, EventBufferCompressionWorker);
@@ -2562,7 +2573,7 @@ function f21305() {
   return closure_8(EventBufferCompressionWorker, items);
 }
 
-function f21306() {
+function f21307() {
   class EventBufferProxy {
     constructor(arg0) {
       tmp = closure_2_7(this, EventBufferProxy);
@@ -2715,8 +2726,8 @@ function f21306() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -2730,8 +2741,8 @@ function f21306() {
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
               _fallback = self;
               closure_4 = tmp;
@@ -2754,8 +2765,8 @@ function f21306() {
               let _Promise = Promise;
               c8 = 3;
               c9 = 1;
-              let obj1 = { value: Promise.all(items), done: false };
-              return obj1;
+              let obj4 = { value: Promise.all(items), done: false };
+              return obj4;
             }
           } else if (1 === tmp4) {
             c6 = 0;
@@ -2779,7 +2790,7 @@ function f21306() {
             }
             c6 = 0;
             c9 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
         }
@@ -2800,7 +2811,7 @@ function f21306() {
   return closure_8(EventBufferProxy, items);
 }
 
-function f21307(arg0) {
+function f21308(arg0) {
   class TransportStatusCodeError {
     constructor(arg0) {
       self = this;
@@ -2823,7 +2834,7 @@ function f21307(arg0) {
   return closure_8(TransportStatusCodeError);
 }
 
-function f21308(arg0) {
+function f21309(arg0) {
   class RateLimitError {
     constructor(arg0) {
       self = this;
@@ -2848,11 +2859,11 @@ function f21308(arg0) {
   return closure_8(RateLimitError);
 }
 
-function f21309() {
+function f21310() {
   class ReplayContainer {
     constructor(arg0) {
       self = this;
-      f108553 = this;
+      f108556 = this;
       options = arg0.options;
       tmp = closure_2_7(this, ReplayContainer);
       this.eventBuffer = null;
@@ -2875,29 +2886,29 @@ function f21309() {
       this._context = obj;
       this._recordingOptions = arg0.recordingOptions;
       this._options = options;
-      obj = { maxWait: this._options.flushMaxDelay };
+      obj1 = { maxWait: this._options.flushMaxDelay };
       obj3 = closure_2_0(closure_2_1[8]);
-      obj1 = {};
-      merged = Object.assign(obj);
-      obj1.setTimeoutImpl = closure_2_0(closure_2_1[9]).setTimeout;
-      this._debouncedFlush = obj3.debounce(() => f108553._flush(), this._options.flushMinDelay, obj1);
-      f108553 = (timestamp, arg1) => {
+      obj7 = {};
+      merged = Object.assign(obj1);
+      obj7.setTimeoutImpl = closure_2_0(closure_2_1[9]).setTimeout;
+      this._debouncedFlush = obj3.debounce(() => f108556._flush(), this._options.flushMinDelay, obj7);
+      f108556 = (timestamp, arg1) => {
         let flag = false;
-        if (f108553.eventBuffer) {
+        if (f108556.eventBuffer) {
           flag = false;
-          if (!f108553.isPaused()) {
+          if (!f108556.isPaused()) {
             flag = false;
-            if (f108553.isEnabled()) {
+            if (f108556.isEnabled()) {
               timestamp = timestamp.timestamp;
               let result = timestamp;
               if (timestamp <= 9999999999) {
                 result = 1000 * timestamp;
               }
               const _Date = Date;
-              const sum = result + f108553.timeouts.sessionIdlePause;
+              const sum = result + f108556.timeouts.sessionIdlePause;
               let tmp4 = sum >= Date.now();
               if (tmp4) {
-                let flag2 = result <= f108553.getContext().initialTimestamp + f108553.getOptions().maxReplayDuration;
+                let flag2 = result <= f108556.getContext().initialTimestamp + f108556.getOptions().maxReplayDuration;
                 if (!flag2) {
                   flag2 = false;
                   if (closure_2_130) {
@@ -2913,7 +2924,7 @@ function f21309() {
           }
         }
         if (flag) {
-          let resolved = closure_2_147(f108553, timestamp, arg1);
+          let resolved = closure_2_147(f108556, timestamp, arg1);
         } else {
           resolved = Promise.resolve(null);
         }
@@ -2949,22 +2960,22 @@ function f21309() {
           return HermesBuiltin.apply(items2, undefined);
         }
       };
-      options = this.getOptions();
-      ({ slowClickTimeout, slowClickIgnoreSelectors } = options);
+      options1 = this.getOptions();
+      ({ slowClickTimeout, slowClickIgnoreSelectors } = options1);
       tmp7 = undefined;
       if (slowClickTimeout) {
-        obj2 = { threshold: null, timeout: null, scrollTimeout: 300, ignoreSelector: null };
+        obj8 = { threshold: null, timeout: null, scrollTimeout: 300, ignoreSelector: null };
         _Math = Math;
         num = 3000;
-        obj2.threshold = Math.min(3000, slowClickTimeout);
-        obj2.timeout = slowClickTimeout;
+        obj8.threshold = Math.min(3000, slowClickTimeout);
+        obj8.timeout = slowClickTimeout;
         str = "";
         if (slowClickIgnoreSelectors) {
           str2 = ",";
           str = slowClickIgnoreSelectors.join(",");
         }
-        obj2.ignoreSelector = str;
-        tmp7 = obj2;
+        obj8.ignoreSelector = str;
+        tmp7 = obj8;
       }
       if (tmp7) {
         tmp8 = closure_2_115;
@@ -2979,30 +2990,29 @@ function f21309() {
       if (closure_2_130) {
         _experiments = options._experiments;
         tmp15 = closure_2_133;
-        obj3 = { captureExceptions: null, traceInternals: null };
-        obj3.captureExceptions = _experiments.captureExceptions;
-        obj3.traceInternals = _experiments.traceInternals;
-        setConfigResult = closure_2_133.setConfig(obj3);
+        obj9 = { captureExceptions: null, traceInternals: null };
+        obj9.captureExceptions = _experiments.captureExceptions;
+        obj9.traceInternals = _experiments.traceInternals;
+        setConfigResult = closure_2_133.setConfig(obj9);
       }
       self._handleVisibilityChange = () => {
         if ("visible" === closure_0(map[8]).GLOBAL_OBJ.document.visibilityState) {
-          const result = f108553._doChangeToForegroundTasks();
+          const result = f108556._doChangeToForegroundTasks();
         } else {
-          const result1 = f108553._doChangeToBackgroundTasks();
+          const result1 = f108556._doChangeToBackgroundTasks();
         }
       };
       self._handleWindowBlur = () => {
         const merged = Object.assign({ category: "ui.blur" });
-        const result = f108553._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f108556._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleWindowFocus = () => {
         const merged = Object.assign({ category: "ui.focus" });
-        const result = f108553._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f108556._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleKeyboardEvent = (arg0) => {
-        let data = f108553;
-        if (f108553.isEnabled()) {
-          data.updateUserActivity();
+        if (f108556.isEnabled()) {
+          f108556.updateUserActivity();
           ({ metaKey, ctrlKey, altKey, key, target } = arg0);
           let tmp4 = null;
           if (target) {
@@ -3025,22 +3035,22 @@ function f21309() {
                   tmp5 = altKey;
                 }
                 if (tmp5) {
-                  let obj1 = data(map[8]);
-                  const tmp9 = obj1.htmlTreeAsString(target, { maxStringLength: 200 }) || "<unknown>";
-                  data = { category: "ui.keyDown", message: tmp9, data: null };
-                  data = {};
+                  const tmp9 = closure_0(map[8]).htmlTreeAsString(target, { maxStringLength: 200 }) || "<unknown>";
+                  const obj3 = { category: "ui.keyDown", message: tmp9, data: null };
+                  const obj4 = {};
                   const merged = Object.assign(closure_2_122(target, tmp9).data);
-                  data.metaKey = metaKey;
-                  data.shiftKey = tmp3;
-                  data.ctrlKey = ctrlKey;
-                  data.altKey = altKey;
-                  data.key = key;
-                  data.data = data;
-                  obj1 = { timestamp: null, type: "default" };
+                  obj4.metaKey = metaKey;
+                  obj4.shiftKey = tmp3;
+                  obj4.ctrlKey = ctrlKey;
+                  obj4.altKey = altKey;
+                  obj4.key = key;
+                  obj3.data = obj4;
+                  const obj5 = { timestamp: null, type: "default" };
                   const _Date = Date;
-                  obj1.timestamp = Date.now() / 1000;
-                  const merged1 = Object.assign(data);
-                  tmp4 = obj1;
+                  obj5.timestamp = Date.now() / 1000;
+                  const merged1 = Object.assign(obj3);
+                  tmp4 = obj5;
+                  let obj2 = closure_0(map[8]);
                 } else {
                   tmp4 = null;
                 }
@@ -3052,22 +3062,22 @@ function f21309() {
             if ("sentry.transaction" !== tmp4.category) {
               const items = ["ui.click", "ui.input"];
               if (items.includes(tmp4.category)) {
-                data.triggerUserActivity();
+                f108556.triggerUserActivity();
               } else {
-                const result = data.checkAndHandleExpiredSession();
+                const result = f108556.checkAndHandleExpiredSession();
               }
-              data.addUpdate(() => {
-                data = { type: Custom.Custom, timestamp: null, data: null };
+              f108556.addUpdate(() => {
+                obj = { type: Custom.Custom, timestamp: null, data: null };
                 let num = _null.timestamp;
                 if (!num) {
                   num = 0;
                 }
-                data.timestamp = 1000 * num;
-                data = { tag: "breadcrumb", payload: null };
-                const normalizer = f108553(map[8]);
-                data.payload = normalizer.normalize(_null, 10, 1000);
-                data.data = data;
-                data.throttledAddEvent(data);
+                obj.timestamp = 1000 * num;
+                const obj2 = { tag: "breadcrumb", payload: null };
+                const normalizer = f108556(map[8]);
+                obj2.payload = normalizer.normalize(_null, 10, 1000);
+                obj.data = obj2;
+                obj.throttledAddEvent(obj);
                 return "console" === _null.category;
               });
             }
@@ -3175,11 +3185,11 @@ function f21309() {
           closure_1_133.infoTick("Starting replay in session mode");
         }
         self._updateUserActivity();
-        let obj = { maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire };
-        obj = { stickySession: self._options.stickySession, sessionSampleRate: 1, allowBuffering: false };
-        self.session = closure_1_145(obj, obj);
+        self.session = closure_1_145({ maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire }, { stickySession: self._options.stickySession, sessionSampleRate: 1, allowBuffering: false });
         self.recordingMode = "session";
         self._initializeRecording();
+        const obj = { maxReplayDuration: self._options.maxReplayDuration, sessionIdleExpire: self.timeouts.sessionIdleExpire };
+        const obj2 = { stickySession: self._options.stickySession, sessionSampleRate: 1, allowBuffering: false };
       }
     },
     {
@@ -3194,9 +3204,9 @@ function f21309() {
           if (closure_1_130) {
             closure_1_133.infoTick("Starting replay in buffer mode");
           }
-          let obj = { sessionIdleExpire: self.timeouts.sessionIdleExpire, maxReplayDuration: self._options.maxReplayDuration };
-          obj = { stickySession: self._options.stickySession, sessionSampleRate: 0, allowBuffering: true };
-          self.session = closure_1_145(obj, obj);
+          const obj = { sessionIdleExpire: self.timeouts.sessionIdleExpire, maxReplayDuration: self._options.maxReplayDuration };
+          const obj2 = { stickySession: self._options.stickySession, sessionSampleRate: 0, allowBuffering: true };
+          self.session = closure_1_145(obj, obj2);
           self.recordingMode = "buffer";
           self._initializeRecording();
         }
@@ -3208,22 +3218,21 @@ function f21309() {
         const self = this;
         try {
           const _canvas = self._canvas;
-          let obj = {};
+          const obj2 = {};
           const merged = Object.assign(self._recordingOptions);
           if ("buffer" === self.recordingMode) {
-            obj = { checkoutEveryNms: 60000 };
+            let obj3 = { checkoutEveryNms: 60000 };
           } else {
-            obj = self._options._experiments.continuousCheckout;
-            if (obj) {
-              const obj1 = { checkoutEveryNms: null };
+            obj3 = self._options._experiments.continuousCheckout;
+            if (obj3) {
+              const obj4 = { checkoutEveryNms: null };
               const _Math = Math;
-              obj1.checkoutEveryNms = Math.max(360000, self._options._experiments.continuousCheckout);
-              obj = obj1;
+              obj4.checkoutEveryNms = Math.max(360000, self._options._experiments.continuousCheckout);
+              obj3 = obj4;
             }
           }
-          const merged1 = Object.assign(obj);
-          obj.emit = closure_1_169(self);
-          let obj4 = /iPhone|iPad|iPod/i;
+          const merged1 = Object.assign(obj3);
+          obj2.emit = closure_1_169(self);
           let str2;
           if (closure_1_168 != null) {
             str2 = closure_1_168.userAgent;
@@ -3231,11 +3240,10 @@ function f21309() {
           if (str2 == null) {
             str2 = "";
           }
-          if (obj4.test(str2)) {
-            const obj2 = { sampling: { mousemove: false } };
-            let obj3 = obj2;
+          if (obj5.test(str2)) {
+            const obj7 = { sampling: { mousemove: false } };
+            let obj8 = obj7;
           } else {
-            let obj5 = /Macintosh/i;
             let str3;
             if (closure_1_168 != null) {
               str3 = closure_1_168.userAgent;
@@ -3243,7 +3251,7 @@ function f21309() {
             if (str3 == null) {
               str3 = "";
             }
-            if (obj5.test(str3)) {
+            if (obj6.test(str3)) {
               let maxTouchPoints;
               if (closure_1_168 != null) {
                 maxTouchPoints = closure_1_168.maxTouchPoints;
@@ -3255,20 +3263,22 @@ function f21309() {
                 }
               }
             }
-            obj3 = {};
+            obj8 = {};
+            obj6 = /Macintosh/i;
           }
-          const merged2 = Object.assign(obj3);
-          obj.onMutation = self._onMutationHandler.bind(self);
+          const merged2 = Object.assign(obj8);
+          obj2.onMutation = self._onMutationHandler.bind(self);
           if (_canvas) {
-            obj4 = { recordCanvas: null, getCanvasManager: null, sampling: null, dataURLOptions: null };
             ({ recordCanvas: obj10.recordCanvas, getCanvasManager: obj10.getCanvasManager, sampling: obj10.sampling, dataURLOptions: obj10.dataURLOptions } = _canvas);
-            obj5 = obj4;
+            let obj17 = { recordCanvas: null, getCanvasManager: null, sampling: null, dataURLOptions: null };
+            const obj9 = { recordCanvas: null, getCanvasManager: null, sampling: null, dataURLOptions: null };
           } else {
-            obj5 = {};
+            obj17 = {};
           }
-          const merged3 = Object.assign(obj5);
-          self._stopRecording = closure_1_109(obj);
+          const merged3 = Object.assign(obj17);
+          self._stopRecording = closure_1_109(obj2);
           const _onMutationHandler = self._onMutationHandler;
+          obj5 = /iPhone|iPad|iPod/i;
         } catch (tmp20) {
           obj.handleException(tmp20);
         }
@@ -3341,8 +3351,8 @@ function f21309() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -3355,24 +3365,24 @@ function f21309() {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_4 = self;
               closure_3 = tmp3;
               closure_2 = tmp5;
               closure_130_0 = undefined;
               let reason;
-              let obj1 = closure_1;
+              let obj4 = closure_1;
               if (closure_1 === undefined) {
-                obj1 = {};
+                obj4 = {};
               }
-              let flag = obj1.forceFlush;
+              let flag = obj4.forceFlush;
               if (flag === undefined) {
                 flag = false;
               }
               closure_130_0 = flag;
-              reason = obj1.reason;
+              reason = obj4.reason;
               c7 = 1;
               c8 = 1;
               return { value: "PX_16", done: true };
@@ -3384,8 +3394,8 @@ function f21309() {
                 throw value;
               } else if (arg0 === 2) {
                 c8 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj5 = { value, done: true };
+                return obj5;
               } else if (closure_4._isEnabled) {
                 closure_4._isEnabled = false;
                 closure_4.recordingMode = "buffer";
@@ -3406,8 +3416,8 @@ function f21309() {
                 if (closure_130_0) {
                   c7 = 3;
                   c8 = 1;
-                  const obj3 = { value: closure_4._flush({ force: true }), done: false };
-                  return obj3;
+                  const obj6 = { value: closure_4._flush({ force: true }), done: false };
+                  return obj6;
                 } else {
                   const eventBuffer = closure_4.eventBuffer;
                   if (eventBuffer != null) {
@@ -3428,7 +3438,7 @@ function f21309() {
             } else if (arg0 === 2) {
               c5 = 0;
               c8 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c8 = 3;
@@ -3523,11 +3533,11 @@ function f21309() {
       closure_4 = self;
       closure_3 = self;
       closure_2 = tmp2;
-      let obj1 = closure_1;
+      let obj4 = closure_1;
       if (closure_1 === undefined) {
-        obj1 = {};
+        obj4 = {};
       }
-      let flag2 = obj1.continueRecording;
+      let flag2 = obj4.continueRecording;
       if (flag2 === undefined) {
         flag2 = true;
       }
@@ -3685,9 +3695,9 @@ function f21309() {
   };
   items[25] = {
     key: "throttledAddEvent",
-    value: function throttledAddEvent(data, arg1) {
+    value: function throttledAddEvent(arg0, arg1) {
       const self = this;
-      const _throttledAddEventResult = this._throttledAddEvent(data, arg1);
+      const _throttledAddEventResult = this._throttledAddEvent(arg0, arg1);
       if (_throttledAddEventResult === closure_176) {
         let payload = { timestamp: null, type: "default" };
         const _Date = Date;
@@ -3797,9 +3807,7 @@ function f21309() {
   items[28] = {
     key: "_initializeSessionForSampling",
     value: function _initializeSessionForSampling(previousSessionId) {
-      let obj = { sessionIdleExpire: this.timeouts.sessionIdleExpire, maxReplayDuration: this._options.maxReplayDuration, previousSessionId };
-      obj = { stickySession: this._options.stickySession, sessionSampleRate: this._options.sessionSampleRate, allowBuffering: this._options.errorSampleRate > 0 };
-      this.session = closure_1_145(obj, obj);
+      this.session = closure_1_145({ sessionIdleExpire: this.timeouts.sessionIdleExpire, maxReplayDuration: this._options.maxReplayDuration, previousSessionId }, { stickySession: this._options.stickySession, sessionSampleRate: this._options.sessionSampleRate, allowBuffering: this._options.errorSampleRate > 0 });
     }
   };
   items[29] = {
@@ -3842,8 +3850,8 @@ function f21309() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -3856,19 +3864,17 @@ function f21309() {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let obj1 = self;
               closure_3 = self;
               closure_2 = tmp2;
               closure_130_0 = closure_1;
               if (self._isEnabled) {
                 c4 = 1;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.stop({ reason: "refresh session" });
-                return obj1;
+                const obj5 = { value: self.stop({ reason: "refresh session" }), done: false };
+                return obj5;
               } else {
                 c5 = 3;
               }
@@ -3880,7 +3886,7 @@ function f21309() {
             closure_3.initializeSampling(closure_130_0.id);
           }
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp11) {
           c5 = tmp;
@@ -3925,9 +3931,8 @@ function f21309() {
             if (typeof closure_121 === "function") {
               closure_0 = self;
               tmp4((name) => {
-                let obj = closure_0;
                 if (closure_0.isEnabled()) {
-                  obj = { category: null };
+                  let obj2 = { category: null };
                   const _HermesInternal = HermesInternal;
                   ({ target, message } = (function getDomTarget(event) {
                     try {
@@ -3936,37 +3941,37 @@ function f21309() {
                       } else {
                         tmp3 = closure_1_113(event.event);
                       }
-                      obj = obj(obj[8]);
+                      obj = obj(obj3[8]);
                       let str2 = obj.htmlTreeAsString(tmp3, { maxStringLength: 200 });
                       if (!str2) {
                         str2 = "<unknown>";
                       }
                       let str3 = str2;
-                      obj = { target: tmp3, message: str3 };
-                      return obj;
+                      const obj2 = { target: tmp3, message: str3 };
+                      return obj2;
                     } catch (err) {
                       str3 = "<unknown>";
                     }
                   })(name));
-                  obj.category = "ui." + name.name;
+                  obj2.category = "ui." + name.name;
                   const merged = Object.assign(closure_2_122(target, message));
-                  obj = { timestamp: null, type: "default" };
+                  const obj3 = { timestamp: null, type: "default" };
                   const _Date = Date;
-                  obj.timestamp = Date.now() / 1000;
-                  const merged1 = Object.assign(obj);
+                  obj3.timestamp = Date.now() / 1000;
+                  const merged1 = Object.assign(obj2);
                   let clickDetector = "click" === name.name;
                   if (clickDetector) {
                     const event = name.event;
                   }
                   if (clickDetector) {
-                    clickDetector = obj.clickDetector;
+                    clickDetector = closure_0.clickDetector;
                   }
                   if (clickDetector) {
-                    target = undefined;
+                    let target1;
                     if (event != null) {
-                      target = event.target;
+                      target1 = event.target;
                     }
-                    clickDetector = target;
+                    clickDetector = target1;
                   }
                   let shiftKey = !clickDetector;
                   if (clickDetector) {
@@ -3982,7 +3987,7 @@ function f21309() {
                     shiftKey = event.shiftKey;
                   }
                   if (!shiftKey) {
-                    const clickDetector2 = obj.clickDetector;
+                    const clickDetector2 = closure_0.clickDetector;
                     const event2 = name.event;
                     let tmp12 = typeof event2 === "object";
                     if (typeof event2 === "object") {
@@ -4003,27 +4008,27 @@ function f21309() {
                         const tmp14 = target2.closest("button,a") || target2;
                       }
                     }
-                    clickDetector2.handleClick(obj, tmp13);
+                    clickDetector2.handleClick(obj3, tmp13);
                   }
-                  if ("sentry.transaction" !== obj.category) {
+                  if ("sentry.transaction" !== obj3.category) {
                     const items = ["ui.click", "ui.input"];
-                    if (items.includes(obj.category)) {
-                      obj.triggerUserActivity();
+                    if (items.includes(obj3.category)) {
+                      closure_0.triggerUserActivity();
                     } else {
-                      const result = obj.checkAndHandleExpiredSession();
+                      const result = closure_0.checkAndHandleExpiredSession();
                     }
-                    obj.addUpdate(() => {
-                      data = { type: Custom.Custom, timestamp: null, data: null };
+                    closure_0.addUpdate(() => {
+                      obj = { type: Custom.Custom, timestamp: null, data: null };
                       let num = _null.timestamp;
                       if (!num) {
                         num = 0;
                       }
-                      data.timestamp = 1000 * num;
-                      data = { tag: "breadcrumb", payload: null };
-                      const normalizer = f108553(map[8]);
-                      data.payload = normalizer.normalize(_null, 10, 1000);
-                      data.data = data;
-                      data.throttledAddEvent(data);
+                      obj.timestamp = 1000 * num;
+                      const obj2 = { tag: "breadcrumb", payload: null };
+                      const normalizer = f108556(map[8]);
+                      obj2.payload = normalizer.normalize(_null, 10, 1000);
+                      obj.data = obj2;
+                      obj.throttledAddEvent(obj);
                       return "console" === _null.category;
                     });
                   }
@@ -4034,41 +4039,38 @@ function f21309() {
                       } else {
                         tmp3 = closure_1_113(event.event);
                       }
-                      obj = obj(obj[8]);
+                      obj = obj(obj3[8]);
                       let str2 = obj.htmlTreeAsString(tmp3, { maxStringLength: 200 });
                       if (!str2) {
                         str2 = "<unknown>";
                       }
                       let str3 = str2;
-                      obj = { target: tmp3, message: str3 };
-                      return obj;
+                      const obj2 = { target: tmp3, message: str3 };
+                      return obj2;
                     } catch (err) {
                       str3 = "<unknown>";
                     }
                   })(name);
                 }
               });
-              let tmpResult = tmp(dependencyMap[9]);
               closure_129_0 = self;
-              let result = tmpResult.addHistoryInstrumentationHandler((arg0) => {
-                if (data.isEnabled()) {
+              let result = tmp(dependencyMap[9]).addHistoryInstrumentationHandler((arg0) => {
+                if (obj2.isEnabled()) {
                   const _Date = Date;
                   ({ from, to } = arg0);
                   const result = Date.now() / 1000;
-                  data = { type: "navigation.push", start: result, end: result, name: to, data: null };
-                  data = { previous: from };
-                  data.data = data;
-                  const urls = data.getContext().urls;
-                  urls.push(data.name);
-                  data.triggerUserActivity();
-                  data.addUpdate(() => {
-                    const items = [obj];
+                  obj2 = { type: "navigation.push", start: result, end: result, name: to, data: null };
+                  const obj3 = { previous: from };
+                  obj2.data = obj3;
+                  const urls = obj.getContext().urls;
+                  urls.push(obj2.name);
+                  obj.triggerUserActivity();
+                  obj.addUpdate(() => {
+                    const items = [obj2];
                     const mapped = items.map((op) => {
                       const start = op.start;
-                      data = { type: Custom.Custom, timestamp: start, data: null };
-                      data = { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } };
-                      data.data = data;
-                      let throttledAddEventResult = closure_0.throttledAddEvent(data);
+                      const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
+                      let throttledAddEventResult = closure_0.throttledAddEvent(obj);
                       if (typeof throttledAddEventResult === "string") {
                         throttledAddEventResult = Promise.resolve(null);
                       }
@@ -4079,11 +4081,10 @@ function f21309() {
                 }
               });
               closure_130_0 = self;
-              tmpResult = tmp(dependencyMap[8]);
-              const client1 = tmpResult.getClient();
+              const tmpResult = tmp(dependencyMap[9]);
+              const client1 = tmp(dependencyMap[8]).getClient();
               if (client1) {
                 client1.on("beforeAddBreadcrumb", (category) => {
-                  let obj = _true;
                   if (_true.isEnabled()) {
                     let merged4 = category;
                     if (category.category) {
@@ -4106,7 +4107,7 @@ function f21309() {
                               if (Array.isArray(_arguments)) {
                                 if (0 !== _arguments.length) {
                                   c0 = false;
-                                  obj = {};
+                                  const obj2 = {};
                                   const mapped = _arguments.map((item) => {
                                     if (item) {
                                       if (typeof item === "string") {
@@ -4142,63 +4143,63 @@ function f21309() {
                                     }
                                   });
                                   const merged = Object.assign(merged4);
-                                  obj = {};
+                                  const obj3 = {};
                                   const merged1 = Object.assign(merged4.data);
-                                  obj.arguments = mapped;
+                                  obj3.arguments = mapped;
                                   if (c0) {
-                                    const obj1 = { _meta: null };
-                                    const obj2 = { warnings: ["CONSOLE_ARG_TRUNCATED"] };
-                                    obj1._meta = obj2;
-                                    let obj3 = obj1;
+                                    const obj4 = { _meta: null };
+                                    const obj5 = { warnings: ["CONSOLE_ARG_TRUNCATED"] };
+                                    obj4._meta = obj5;
+                                    let obj6 = obj4;
                                   } else {
-                                    obj3 = {};
+                                    obj6 = {};
                                   }
-                                  const merged2 = Object.assign(obj3);
-                                  obj.data = obj;
-                                  let obj4 = { timestamp: null, type: "default" };
+                                  const merged2 = Object.assign(obj6);
+                                  obj2.data = obj3;
+                                  let obj7 = { timestamp: null, type: "default" };
                                   const _Date2 = Date;
-                                  obj4.timestamp = Date.now() / 1000;
-                                  const merged3 = Object.assign(obj);
+                                  obj7.timestamp = Date.now() / 1000;
+                                  const merged3 = Object.assign(obj2);
                                 }
                               }
-                              const obj5 = { timestamp: null, type: "default" };
+                              const obj8 = { timestamp: null, type: "default" };
                               const _Date3 = nowResult.Date;
                               nowResult = _Date3.now();
-                              obj5.timestamp = nowResult / 1000;
+                              obj8.timestamp = nowResult / 1000;
                               merged4 = Object.assign(merged4);
-                              obj4 = obj5;
+                              obj7 = obj8;
                             } else {
-                              let obj6 = { timestamp: null, type: "default" };
+                              let obj9 = { timestamp: null, type: "default" };
                               const _Date = Date;
-                              obj6.timestamp = Date.now() / 1000;
+                              obj9.timestamp = Date.now() / 1000;
                               const merged5 = Object.assign(merged4);
-                              tmp3 = obj6;
+                              tmp3 = obj9;
                             }
                           }
                         }
                       }
                       if (tmp3) {
-                        c0 = obj;
-                        obj6 = tmp3;
+                        c0 = _true;
+                        obj9 = tmp3;
                         if ("sentry.transaction" !== tmp3.category) {
                           const items1 = ["ui.click", "ui.input"];
                           if (items1.includes(tmp3.category)) {
-                            obj.triggerUserActivity();
+                            _true.triggerUserActivity();
                           } else {
-                            const result = obj.checkAndHandleExpiredSession();
+                            const result = _true.checkAndHandleExpiredSession();
                           }
-                          obj.addUpdate(() => {
-                            data = { type: Custom.Custom, timestamp: null, data: null };
+                          _true.addUpdate(() => {
+                            obj = { type: Custom.Custom, timestamp: null, data: null };
                             let num = _null.timestamp;
                             if (!num) {
                               num = 0;
                             }
-                            data.timestamp = 1000 * num;
-                            data = { tag: "breadcrumb", payload: null };
-                            const normalizer = f108553(map[8]);
-                            data.payload = normalizer.normalize(_null, 10, 1000);
-                            data.data = data;
-                            data.throttledAddEvent(data);
+                            obj.timestamp = 1000 * num;
+                            const obj2 = { tag: "breadcrumb", payload: null };
+                            const normalizer = f108556(map[8]);
+                            obj2.payload = normalizer.normalize(_null, 10, 1000);
+                            obj.data = obj2;
+                            obj.throttledAddEvent(obj);
                             return "console" === _null.category;
                           });
                         }
@@ -4211,9 +4212,8 @@ function f21309() {
               closure_131_0 = self;
               const _Object = Object;
               let merged = Object.assign((type, originalException) => {
-                let tags = closure_0;
                 if (closure_0.isEnabled()) {
-                  if (!tags.isPaused()) {
+                  if (!closure_0.isPaused()) {
                     if ("replay_event" === type.type) {
                       delete tmp[tmp2];
                       return type;
@@ -4226,23 +4226,23 @@ function f21309() {
                           }
                         }
                       }
-                      if (tags.checkAndHandleExpiredSession()) {
+                      if (closure_0.checkAndHandleExpiredSession()) {
                         if ("feedback" === type.type) {
-                          tags.flush();
-                          type.contexts.feedback.replay_id = tags.getSessionId();
-                          tags.triggerUserActivity();
-                          tags.addUpdate(() => {
+                          closure_0.flush();
+                          type.contexts.feedback.replay_id = closure_0.getSessionId();
+                          closure_0.triggerUserActivity();
+                          closure_0.addUpdate(() => {
                             const timestamp = type.timestamp;
                             let flag = !timestamp;
                             if (timestamp) {
-                              let data = { type: Custom.Custom, timestamp: 1000 * type.timestamp, data: null };
-                              data = { tag: "breadcrumb", payload: null };
-                              data = { timestamp: type.timestamp, type: "default", category: "sentry.feedback", data: null };
-                              const obj1 = { feedbackId: type.event_id };
-                              data.data = obj1;
-                              data.payload = data;
-                              data.data = data;
-                              data.throttledAddEvent(data);
+                              obj = { type: Custom.Custom, timestamp: 1000 * type.timestamp, data: null };
+                              const obj2 = { tag: "breadcrumb", payload: null };
+                              const obj3 = { timestamp: type.timestamp, type: "default", category: "sentry.feedback", data: null };
+                              const obj4 = { feedbackId: type.event_id };
+                              obj3.data = obj4;
+                              obj2.payload = obj3;
+                              obj.data = obj2;
+                              obj.throttledAddEvent(obj);
                               flag = false;
                             }
                             return flag;
@@ -4270,14 +4270,14 @@ function f21309() {
                             type = !__rrweb__;
                           }
                           if (!type) {
-                            if (!tags.getOptions()._experiments.captureExceptions) {
+                            if (!closure_0.getOptions()._experiments.captureExceptions) {
                               if (closure_2_130) {
                                 logger.log("Ignoring error from rrweb internals", type);
                               }
                               return null;
                             }
                           }
-                          let tmp20 = "buffer" === tags.recordingMode;
+                          let tmp20 = "buffer" === closure_0.recordingMode;
                           if (tmp20) {
                             tmp20 = type.message !== closure_2_11;
                           }
@@ -4290,7 +4290,7 @@ function f21309() {
                             tmp20 = !type2;
                           }
                           if (tmp20) {
-                            const errorSampleRate = tags.getOptions().errorSampleRate;
+                            const errorSampleRate = closure_0.getOptions().errorSampleRate;
                             let tmp22 = undefined !== errorSampleRate;
                             if (tmp22) {
                               const _Math = Math;
@@ -4300,25 +4300,25 @@ function f21309() {
                           }
                           let tmp24 = tmp20;
                           if (!tmp20) {
-                            tmp24 = "session" === tags.recordingMode;
+                            tmp24 = "session" === closure_0.recordingMode;
                           }
                           if (tmp24) {
-                            tags = {};
+                            let obj3 = {};
                             const merged = Object.assign(type.tags);
-                            tags.replayId = tags.getSessionId();
-                            type.tags = tags;
+                            obj3.replayId = closure_0.getSessionId();
+                            type.tags = obj3;
                           }
                           if (tmp20) {
-                            if ("buffer" === tags.recordingMode) {
-                              const session = tags.session;
+                            if ("buffer" === closure_0.recordingMode) {
+                              const session = closure_0.session;
                               let sampled;
                               if (session != null) {
                                 sampled = session.sampled;
                               }
                               if ("buffer" === sampled) {
-                                const session2 = tags.session;
+                                const session2 = closure_0.session;
                                 session2.dirty = true;
-                                if (tags.getOptions().stickySession) {
+                                if (closure_0.getOptions().stickySession) {
                                   closure_2_141(session2);
                                 }
                               }
@@ -4331,12 +4331,12 @@ function f21309() {
                         if (currentScope.getPropagationContext().dsc) {
                           delete tmp5[tmp4];
                         }
-                        let tmp6Result = closure_2_0(dependencyMap[8]);
-                        const activeSpan = tmp6Result.getActiveSpan();
+                        let obj2 = closure_2_0(dependencyMap[8]);
+                        const activeSpan = closure_2_0(dependencyMap[8]).getActiveSpan();
                         if (activeSpan) {
-                          tmp6Result = closure_2_0(dependencyMap[8]);
-                          const dynamicSamplingContextFromSpan = tmp6Result.getDynamicSamplingContextFromSpan(activeSpan);
+                          const dynamicSamplingContextFromSpan = closure_2_0(dependencyMap[8]).getDynamicSamplingContextFromSpan(activeSpan);
                           delete tmp3[tmp2];
+                          const tmp6Result2 = closure_2_0(dependencyMap[8]);
                         }
                         return type;
                       }
@@ -4345,6 +4345,7 @@ function f21309() {
                 }
                 return type;
               }, { id: "Replay" });
+              const tmpResult3 = tmp(dependencyMap[8]);
               tmp(dependencyMap[8]).addEventProcessor(merged);
               if (client) {
                 closure_132_0 = self;
@@ -4362,32 +4363,32 @@ function f21309() {
                     }
                     if (typeof value === "string") {
                       if (value.match(/(reactjs\.org\/docs\/error-decoder\.html\?invariant=|react\.dev\/errors\/)(418|419|422|423|425)/)) {
-                        let data = { category: "replay.hydrate-error", data: null };
-                        data = { url: closure_2_0(dependencyMap[8]).getLocationHref() };
-                        data.data = data;
-                        const obj1 = { timestamp: null, type: "default" };
+                        const obj2 = { category: "replay.hydrate-error", data: null };
+                        const obj3 = { url: closure_2_0(dependencyMap[8]).getLocationHref() };
+                        obj2.data = obj3;
+                        const obj5 = { timestamp: null, type: "default" };
                         const _Date = Date;
-                        obj1.timestamp = Date.now() / 1000;
-                        const merged = Object.assign(data);
-                        if ("sentry.transaction" !== obj1.category) {
+                        obj5.timestamp = Date.now() / 1000;
+                        const merged = Object.assign(obj2);
+                        if ("sentry.transaction" !== obj5.category) {
                           const items = ["ui.click", "ui.input"];
-                          if (items.includes(obj1.category)) {
-                            data.triggerUserActivity();
+                          if (items.includes(obj5.category)) {
+                            closure_0.triggerUserActivity();
                           } else {
-                            const result = data.checkAndHandleExpiredSession();
+                            const result = closure_0.checkAndHandleExpiredSession();
                           }
-                          data.addUpdate(() => {
-                            data = { type: Custom.Custom, timestamp: null, data: null };
+                          closure_0.addUpdate(() => {
+                            obj = { type: Custom.Custom, timestamp: null, data: null };
                             let num = _null.timestamp;
                             if (!num) {
                               num = 0;
                             }
-                            data.timestamp = 1000 * num;
-                            data = { tag: "breadcrumb", payload: null };
-                            const normalizer = f108553(map[8]);
-                            data.payload = normalizer.normalize(_null, 10, 1000);
-                            data.data = data;
-                            data.throttledAddEvent(data);
+                            obj.timestamp = 1000 * num;
+                            const obj2 = { tag: "breadcrumb", payload: null };
+                            const normalizer = f108556(map[8]);
+                            obj2.payload = normalizer.normalize(_null, 10, 1000);
+                            obj.data = obj2;
+                            obj.throttledAddEvent(obj);
                             return "console" === _null.category;
                           });
                         }
@@ -4395,7 +4396,7 @@ function f21309() {
                       }
                     }
                   }
-                  tmp = data.isEnabled() && !type.type;
+                  tmp = closure_0.isEnabled() && !type.type;
                 });
                 closure_133_0 = self;
                 client.on("afterSendEvent", (type, statusCode) => {
@@ -4504,8 +4505,8 @@ function f21309() {
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -4518,8 +4519,8 @@ function f21309() {
                             throw value;
                           } else if (arg0 === 2) {
                             c4 = 3;
-                            obj = { value, done: true };
-                            return obj;
+                            const obj3 = { value, done: true };
+                            return obj3;
                           } else {
                             closure_2 = tmp2;
                             closure_130_0 = sessionId;
@@ -4548,8 +4549,8 @@ function f21309() {
                               if ("api" === tmp16.contexts.feedback.source) {
                                 c3 = 1;
                                 c4 = 1;
-                                const obj1 = { value: obj5.sendBufferedReplayOrFlush(), done: false };
-                                return obj1;
+                                const obj4 = { value: obj5.sendBufferedReplayOrFlush(), done: false };
+                                return obj4;
                               }
                             }
                             c4 = 3;
@@ -4560,7 +4561,7 @@ function f21309() {
                           throw value;
                         } else if (arg0 === 2) {
                           c4 = 3;
-                          obj = { value, done: true };
+                          const obj = { value, done: true };
                           return obj;
                         }
                         closure_130_0.contexts.feedback.replay_id = closure_130_1;
@@ -4589,8 +4590,8 @@ function f21309() {
                     if (arg0 === 1) {
                       throw value;
                     } else if (arg0 === 2) {
-                      let obj = { value, done: true };
-                      return obj;
+                      const obj2 = { value, done: true };
+                      return obj2;
                     } else {
                       return { value: "HermesInternal", done: null };
                     }
@@ -4603,20 +4604,20 @@ function f21309() {
                           throw value;
                         } else if (arg0 === 2) {
                           c0 = 3;
-                          obj = { value, done: true };
-                          return obj;
+                          const obj3 = { value, done: true };
+                          return obj3;
                         } else {
                           c1 = 1;
                           c0 = 1;
-                          const obj1 = { value: closure_0.sendBufferedReplayOrFlush(), done: false };
-                          return obj1;
+                          const obj4 = { value: closure_0.sendBufferedReplayOrFlush(), done: false };
+                          return obj4;
                         }
                       } else if (arg0 === 1) {
                         c0 = 3;
                         throw value;
                       } else if (arg0 === 2) {
                         c0 = 3;
-                        obj = { value, done: true };
+                        const obj = { value, done: true };
                         return obj;
                       } else {
                         c0 = 3;
@@ -4629,7 +4630,7 @@ function f21309() {
                   }
                 }));
               }
-              const tmpResult1 = tmp(dependencyMap[8]);
+              const tmpResult4 = tmp(dependencyMap[8]);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -4639,10 +4640,10 @@ function f21309() {
         }
         self._performanceCleanupCallback = (function setupPerformanceObserver(self) {
           dependencyMap = function addPerformanceEntry(arg0) {
-            let performanceEntries = closure_0.performanceEntries;
+            const performanceEntries = closure_0.performanceEntries;
             if (!performanceEntries.includes(arg0)) {
-              performanceEntries = closure_0.performanceEntries;
-              performanceEntries.push(arg0);
+              const performanceEntries1 = closure_0.performanceEntries;
+              performanceEntries1.push(arg0);
             }
           };
           function onEntries(arg0) {
@@ -4798,10 +4799,8 @@ function f21309() {
       }
       return Promise.all(found1.map((op) => {
         const start = op.start;
-        data = { type: Custom.Custom, timestamp: start, data: null };
-        data = { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } };
-        data.data = data;
-        let throttledAddEventResult = closure_0.throttledAddEvent(data);
+        const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
+        let throttledAddEventResult = closure_0.throttledAddEvent(obj);
         if (typeof throttledAddEventResult === "string") {
           throttledAddEventResult = Promise.resolve(null);
         }
@@ -4863,8 +4862,8 @@ function f21309() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -4877,8 +4876,8 @@ function f21309() {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_3 = self;
               closure_2 = tmp3;
@@ -4897,8 +4896,8 @@ function f21309() {
                   if (sessionId) {
                     c6 = 1;
                     c7 = 1;
-                    const obj1 = { value: self._addPerformanceEntries(), done: false };
-                    return obj1;
+                    const obj4 = { value: self._addPerformanceEntries(), done: false };
+                    return obj4;
                   }
                 }
               }
@@ -4912,8 +4911,8 @@ function f21309() {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               const eventBuffer2 = closure_3.eventBuffer;
               let hasEvents;
@@ -4923,7 +4922,7 @@ function f21309() {
               if (hasEvents) {
                 c6 = 3;
                 c7 = 1;
-                const obj3 = {
+                const obj7 = {
                   value: (function addMemoryEntry(arg0) {
                               self = this;
                               const apply = closure_1_167.apply;
@@ -4936,7 +4935,7 @@ function f21309() {
                             })(closure_3),
                   done: false
                 };
-                return obj3;
+                return obj7;
               }
             }
           } else if (2 === tmp8) {
@@ -4944,8 +4943,7 @@ function f21309() {
             closure_129_0 = closure_5;
             closure_3.handleException(closure_129_0);
             closure_3.stop({ reason: "sendReplay" });
-            let obj5 = self(tmp5[8]);
-            client = obj5.getClient();
+            client = self(tmp5[8]).getClient();
             if (client) {
               let str2 = "send_error";
               if (closure_129_0 instanceof closure_1_173) {
@@ -4954,6 +4952,7 @@ function f21309() {
               closure_129_7 = str2;
               client.recordDroppedEvent(closure_129_7, "replay");
             }
+            const obj6 = self(tmp5[8]);
           } else {
             if (3 === tmp8) {
               if (arg0 === 1) {
@@ -4961,8 +4960,8 @@ function f21309() {
                 throw value;
               } else if (arg0 === 2) {
                 c7 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
+                const obj8 = { value, done: true };
+                return obj8;
               } else if (closure_3.eventBuffer) {
                 if (closure_129_1 === closure_3.getSessionId()) {
                   c4 = 1;
@@ -4982,8 +4981,8 @@ function f21309() {
                     const eventBuffer = closure_3.eventBuffer;
                     c6 = 4;
                     c7 = 1;
-                    obj5 = { value: eventBuffer.finish(), done: false };
-                    return obj5;
+                    const obj9 = { value: eventBuffer.finish(), done: false };
+                    return obj9;
                   }
                 }
               }
@@ -4994,11 +4993,11 @@ function f21309() {
               } else if (arg0 === 2) {
                 c4 = 0;
                 c7 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj10 = { value, done: true };
+                return obj10;
               } else {
                 closure_129_5 = value;
-                const obj7 = {
+                const obj11 = {
                   replayId: closure_129_1,
                   recordingData: closure_129_5,
                   segmentId: closure_129_4,
@@ -5011,8 +5010,8 @@ function f21309() {
                 };
                 c6 = 5;
                 c7 = 1;
-                const obj8 = { value: closure_1_174(obj7), done: false };
-                return obj8;
+                const obj12 = { value: closure_1_174(obj11), done: false };
+                return obj12;
               }
             } else if (arg0 === 1) {
               c7 = 3;
@@ -5022,7 +5021,7 @@ function f21309() {
             }
             c4 = 0;
             c7 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c7 = 3;
@@ -5064,8 +5063,8 @@ function f21309() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -5078,18 +5077,18 @@ function f21309() {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_4 = self;
               closure_3 = tmp4;
               closure_2 = self;
               closure_130_0 = undefined;
-              let obj1 = closure_1;
+              let obj4 = closure_1;
               if (closure_1 === undefined) {
-                obj1 = {};
+                obj4 = {};
               }
-              let flag = obj1.force;
+              let flag = obj4.force;
               if (flag === undefined) {
                 flag = false;
               }
@@ -5111,8 +5110,8 @@ function f21309() {
                 throw value;
               } else if (arg0 === 2) {
                 c8 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
                 if (closure_4._isEnabled) {
                   if (closure_4.checkAndHandleExpiredSession()) {
@@ -5147,8 +5146,8 @@ function f21309() {
                           c5 = 2;
                           c7 = 4;
                           c8 = 1;
-                          const obj3 = { value: closure_4._flushLock, done: false };
-                          return obj3;
+                          const obj6 = { value: closure_4._flushLock, done: false };
+                          return obj6;
                         }
                       }
                       if (closure_1_130) {
@@ -5165,8 +5164,8 @@ function f21309() {
                         closure_4._debouncedFlush();
                       }
                       c8 = 3;
-                      const obj4 = { value: undefined, done: true };
-                      return obj4;
+                      const obj7 = { value: undefined, done: true };
+                      return obj7;
                     }
                   } else if (closure_1_130) {
                     logger.error("Attempting to finish replay event after session expired.");
@@ -5189,7 +5188,7 @@ function f21309() {
                   closure_4._debouncedFlush();
                 }
                 c8 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 c5 = 1;
@@ -5249,11 +5248,11 @@ function f21309() {
     value: function _onMutationHandler(arr) {
       const self = this;
       const ignoreMutations = this._options._experiments.ignoreMutations;
-      let length;
+      let length1;
       if (ignoreMutations != null) {
-        length = ignoreMutations.length;
+        length1 = ignoreMutations.length;
       }
-      if (length) {
+      if (length1) {
         if (arr.some((target) => {
           let matchesResult;
           const obj = (function closestElementOfNode(target) {
@@ -5279,26 +5278,25 @@ function f21309() {
           return false;
         }
       }
-      length = arr.length;
       const mutationLimit = self._options.mutationLimit;
       let tmp2 = mutationLimit;
       if (mutationLimit) {
         tmp2 = length > mutationLimit;
       }
-      if (length > self._options.mutationBreadcrumbLimit) {
+      if (arr.length > self._options.mutationBreadcrumbLimit) {
         let obj = { category: "replay.mutations", data: null };
-        obj = { count: length, limit: tmp2 };
-        obj.data = obj;
-        obj = { timestamp: null, type: "default" };
+        const obj2 = { count: length, limit: tmp2 };
+        obj.data = obj2;
+        const obj3 = { timestamp: null, type: "default" };
         const _Date = Date;
-        obj.timestamp = Date.now() / 1000;
+        obj3.timestamp = Date.now() / 1000;
         const merged = Object.assign(obj);
-        const result = self._createCustomBreadcrumb(obj);
+        const result = self._createCustomBreadcrumb(obj3);
       }
       let flag = !tmp2;
       if (tmp2) {
-        const obj1 = { reason: "mutationLimit", forceFlush: "session" === self.recordingMode };
-        self.stop(obj1);
+        const obj4 = { reason: "mutationLimit", forceFlush: "session" === self.recordingMode };
+        self.stop(obj4);
         flag = false;
       }
       return flag;
@@ -5307,7 +5305,7 @@ function f21309() {
   return closure_8(ReplayContainer, items);
 }
 
-function f21310() {
+function f21311() {
   class Replay {
     constructor() {
       obj = arg0;
@@ -5424,19 +5422,19 @@ function f21310() {
       closure_2 = undefined;
       tmp = closure_2_7(this, Replay);
       this.name = "Replay";
-      obj = { maskTextSelector: null, unmaskTextSelector: null, blockSelector: null, unblockSelector: null, ignoreSelector: null };
+      obj1 = { maskTextSelector: null, unmaskTextSelector: null, blockSelector: null, unblockSelector: null, ignoreSelector: null };
       items = [...[".sentry-mask", "[data-sentry-mask]"]];
-      obj.maskTextSelector = items.join(",");
+      obj1.maskTextSelector = items.join(",");
       items1 = [...[]];
-      obj.unmaskTextSelector = items1.join(",");
+      obj1.unmaskTextSelector = items1.join(",");
       items2 = [...[".sentry-block", "[data-sentry-block]", "base", "iframe[srcdoc]:not([src])"]];
-      obj.blockSelector = items2.join(",");
+      obj1.blockSelector = items2.join(",");
       items3 = [...[]];
-      obj.unblockSelector = items3.join(",");
+      obj1.unblockSelector = items3.join(",");
       items4 = [...[".sentry-ignore", "[data-sentry-ignore]", "input[type=\"file\"]"]];
-      obj.ignoreSelector = items4.join(",");
-      closure_2 = obj;
-      obj1 = {
+      obj1.ignoreSelector = items4.join(",");
+      closure_2 = obj1;
+      obj6 = {
         maskAllInputs: flag4,
         maskAllText: flag3,
         maskInputOptions: { password: true },
@@ -5445,7 +5443,7 @@ function f21310() {
         maskAttributeFn(arg0, str, tagName) {
               let tmp2 = str;
               if (flag3) {
-                if (!maskAttributes.unmaskTextSelector) {
+                if (!obj2.unmaskTextSelector) {
                   if (maskAttributes.includes(arg0)) {
                     let replaced = str.replace(/[\S]/g, "*");
                   } else {
@@ -5468,25 +5466,25 @@ function f21310() {
               return tmp2;
             }
       };
-      merged = Object.assign(obj);
-      obj1.slimDOMOptions = "all";
-      obj1.inlineStylesheet = true;
-      obj1.inlineImages = false;
-      obj1.collectFonts = true;
-      obj1.errorHandler = function errorHandler(arg0) {
+      merged = Object.assign(obj1);
+      obj6.slimDOMOptions = "all";
+      obj6.inlineStylesheet = true;
+      obj6.inlineImages = false;
+      obj6.collectFonts = true;
+      obj6.errorHandler = function errorHandler(arg0) {
         try {
           arg0.__rrweb__ = true;
         } catch (err) {
         }
       };
-      obj1.recordCrossOriginIframes = Boolean(_experiments.recordCrossOriginIframes);
-      this._recordingOptions = obj1;
-      obj2 = { flushMinDelay: num, flushMaxDelay: num2, minReplayDuration: Math.min(num3, 50000), maxReplayDuration: Math.min(num4, closure_2_15), stickySession: flag, useCompression: flag2, workerUrl, blockAllMedia: flag5, maskAllInputs: flag4, maskAllText: flag3, mutationBreadcrumbLimit: num5, mutationLimit: num6, slowClickTimeout: num7, slowClickIgnoreSelectors: prop, networkDetailAllowUrls: prop1, networkDetailDenyUrls: prop2, networkCaptureBodies: flag6, networkRequestHeaders: null, networkResponseHeaders: null, beforeAddRecordingEvent, beforeErrorSampling, onError, attachRawBodyFromRequest, _experiments };
+      obj6.recordCrossOriginIframes = Boolean(_experiments.recordCrossOriginIframes);
+      this._recordingOptions = obj6;
+      obj7 = { flushMinDelay: num, flushMaxDelay: num2, minReplayDuration: Math.min(num3, 50000), maxReplayDuration: Math.min(num4, closure_2_15), stickySession: flag, useCompression: flag2, workerUrl, blockAllMedia: flag5, maskAllInputs: flag4, maskAllText: flag3, mutationBreadcrumbLimit: num5, mutationLimit: num6, slowClickTimeout: num7, slowClickIgnoreSelectors: prop, networkDetailAllowUrls: prop1, networkDetailDenyUrls: prop2, networkCaptureBodies: flag6, networkRequestHeaders: null, networkResponseHeaders: null, beforeAddRecordingEvent, beforeErrorSampling, onError, attachRawBodyFromRequest, _experiments };
       items5 = [...closure_2_179, ...prop3.map((item) => item.toLowerCase())];
-      obj2.networkRequestHeaders = items5;
+      obj7.networkRequestHeaders = items5;
       items6 = [...closure_2_179, ...prop4.map((item) => item.toLowerCase())];
-      obj2.networkResponseHeaders = items6;
-      this._initialOptions = obj2;
+      obj7.networkResponseHeaders = items6;
+      this._initialOptions = obj7;
       if (!this._initialOptions.blockAllMedia) {
         if (self._isInitialized) {
           tmp9 = closure_2_0;
@@ -5675,7 +5673,7 @@ function f21310() {
     value: function _setup(getOptions) {
       const self = this;
       const options = getOptions.getOptions();
-      let obj = { sessionSampleRate: 0, errorSampleRate: 0 };
+      const obj = { sessionSampleRate: 0, errorSampleRate: 0 };
       const merged = Object.assign(this._initialOptions);
       const parseSampleRateResult = Replay(dependencyMap[8]).parseSampleRate(options.replaysSessionSampleRate);
       const obj2 = Replay(dependencyMap[8]);
@@ -5692,11 +5690,11 @@ function f21310() {
       if (null != parseSampleRateResult1) {
         obj.errorSampleRate = parseSampleRateResult1;
       }
-      obj = { options: obj, recordingOptions: self._recordingOptions };
       const obj3 = Replay(dependencyMap[8]);
+      const obj4 = { options: obj, recordingOptions: self._recordingOptions };
       tmp7 = null == parseSampleRateResult && null == parseSampleRateResult1;
-      self._replay = new closure_1_177(obj);
-      const tmp9 = new closure_1_177(obj);
+      self._replay = new closure_1_177({ options: obj, recordingOptions: self._recordingOptions });
+      const tmp9 = new closure_1_177({ options: obj, recordingOptions: self._recordingOptions });
     }
   };
   items[10] = {
@@ -5725,7 +5723,7 @@ function getReplay() {
   return integrationByName;
 }
 
-function f21312(arg0) {
+function f21313(arg0) {
   return new closure_1_183(arg0);
 }
 
@@ -5748,11 +5746,11 @@ function saveWebGLVar(obj, arg1, arg2) {
       if (!value.has(name)) {
         const result1 = value.set(name, []);
       }
-      value = value.get(name);
-      let length = value.indexOf(obj);
+      const value2 = value.get(name);
+      let length = value2.indexOf(obj);
       if (-1 === length) {
-        length = value.length;
-        value.push(obj);
+        length = value2.length;
+        value2.push(obj);
       }
       return length;
     } else {
@@ -5767,7 +5765,7 @@ function serializeArgs(arg0, arg1, arg2) {
 function isInstanceOfWebGLObject(arg0, arg1) {
 }
 
-function f21336() {
+function f21337() {
   class CanvasManager {
     constructor(arg0) {
       self = this;
@@ -5812,7 +5810,7 @@ function f21336() {
       }
       sampling = str;
       recordCanvas = arg0.recordCanvas;
-      f108581 = recordCanvas;
+      f108584 = recordCanvas;
       errorHandler = arg0.errorHandler;
       arg0.sampling = str;
       ({ mutationCb: self.mutationCb, mirror: self.mirror } = arg0);
@@ -5850,7 +5848,7 @@ function f21336() {
               const canvasFPSObserver = self.initCanvasFPSObserver();
             }
           };
-          f108581 = fn;
+          f108584 = fn;
           tmp8 = closure_2_18;
           if (closure_2_18) {
             fn = () => {
@@ -6042,30 +6040,29 @@ function f21336() {
         worker.onmessage = (data) => {
           data = data.data;
           const id = data.id;
-          let obj = self;
           const snapshotInProgressMap = self.snapshotInProgressMap;
           const result = snapshotInProgressMap.set(id, false);
           if ("base64" in data) {
             ({ width, height } = data);
-            obj = { id, type: closure_2_19["2D"], commands: null };
-            obj = { property: "clearRect", args: null };
+            const obj2 = { id, type: closure_2_19["2D"], commands: null };
+            const obj3 = { property: "clearRect", args: null };
             const items = [0, 0, width, height];
-            obj.args = items;
-            const items1 = [obj, ];
-            const obj1 = { property: "drawImage", args: null };
-            const obj2 = { rr_type: "ImageBitmap", args: null };
-            const obj3 = { rr_type: "Blob", data: null, type: null };
-            const obj4 = { rr_type: "ArrayBuffer", base64: data.base64 };
-            const items2 = [obj4];
-            obj3.data = items2;
-            obj3.type = data.type;
-            const items3 = [obj3];
-            obj2.args = items3;
-            const items4 = [obj2, 0, 0, width, height];
-            obj1.args = items4;
-            items1[1] = obj1;
-            obj.commands = items1;
-            obj.mutationCb(obj);
+            obj3.args = items;
+            const items1 = [obj3, ];
+            const obj4 = { property: "drawImage", args: null };
+            const obj5 = { rr_type: "ImageBitmap", args: null };
+            const obj6 = { rr_type: "Blob", data: null, type: null };
+            const obj7 = { rr_type: "ArrayBuffer", base64: data.base64 };
+            const items2 = [obj7];
+            obj6.data = items2;
+            obj6.type = data.type;
+            const items3 = [obj6];
+            obj5.args = items3;
+            const items4 = [obj5, 0, 0, width, height];
+            obj4.args = items4;
+            items1[1] = obj4;
+            obj2.commands = items1;
+            self.mutationCb(obj2);
           }
         };
         return worker;
@@ -6153,13 +6150,13 @@ function f21336() {
           HermesBuiltin.arraySpread(closure_28(WebGLRenderingContext.WebGL2RenderingContext.prototype, v2D.WebGL2, bindResult, arg1, arg2, arg3, 0, WebGLRenderingContext), 0);
           HermesBuiltin.apply(items2, items);
         }
-        const f120905 = () => {
+        const f120908 = () => {
   
         };
         this.restoreHandlers.push(() => {
           items();
           closure_1();
-          if (typeof f120905 === "function") {
+          if (typeof f120908 === "function") {
             const item = closure_130_0.forEach((fn) => fn());
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -6376,7 +6373,7 @@ function f21336() {
   return closure_4(CanvasManager, items);
 }
 
-function f21337(arg0) {
+function f21338(arg0) {
   return 2 * arg0;
 }
 
@@ -6384,16 +6381,15 @@ function createMirror$2() {
   return new closure_1_8();
 }
 
-function f21339() {
+function f21340() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   closure_0 = undefined;
   closure_1 = undefined;
-  obj = undefined;
   [tmp3, tmp4] = closure_1(obj.maxCanvasSize || [], 2);
-  obj = { quality: obj.quality || "medium", enableManualSnapshot: obj.enableManualSnapshot, maxCanvasSize: null };
+  let obj2 = { quality: obj.quality || "medium", enableManualSnapshot: obj.enableManualSnapshot, maxCanvasSize: null };
   if (tmp3) {
     const _Math = Math;
     let bound = Math.min(tmp3, closure_31);
@@ -6409,21 +6405,22 @@ function f21339() {
     bound1 = Math.min(tmp4, tmp6);
   }
   items[1] = bound1;
-  obj.maxCanvasSize = items;
+  obj2.maxCanvasSize = items;
   new Promise((arg0) => {
     closure_1 = arg0;
     return arg0;
   });
-  obj = {
+  return {
     name: "ReplayCanvas",
     getOptions() {
-      const enableManualSnapshot = obj.enableManualSnapshot;
-      const maxCanvasSize = obj.maxCanvasSize;
-      obj = {
+      const enableManualSnapshot = obj2.enableManualSnapshot;
+      const maxCanvasSize = obj2.maxCanvasSize;
+      let merged = Object.assign(medium[obj2.quality] || medium.medium);
+      return {
         enableManualSnapshot,
         recordCanvas: true,
         getCanvasManager(arg0) {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(arg0);
           obj.enableManualSnapshot = enableManualSnapshot;
           obj.maxCanvasSize = maxCanvasSize;
@@ -6441,8 +6438,6 @@ function f21339() {
           return tmp2;
         }
       };
-      let merged = Object.assign(medium[obj.quality] || medium.medium);
-      return obj;
     },
     snapshot(arg0, arg1) {
       closure_0 = arg0;
@@ -6455,8 +6450,8 @@ function f21339() {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            obj = { value, done: true };
-            return obj;
+            obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -6469,16 +6464,16 @@ function f21339() {
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_0 = tmp4;
-                obj = closure_0;
+                let obj = closure_0;
                 if (!closure_0) {
                   c1 = 1;
                   c2 = 1;
-                  const obj1 = { value, done: false };
-                  return obj1;
+                  const obj4 = { value, done: false };
+                  return obj4;
                 }
               }
             } else if (arg0 === 1) {
@@ -6488,8 +6483,8 @@ function f21339() {
               obj = value;
               if (arg0 === 2) {
                 c2 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj5 = { value, done: true };
+                return obj5;
               }
             }
             obj.snapshot(closure_128_0, closure_128_1);
@@ -6503,7 +6498,6 @@ function f21339() {
       })();
     }
   };
-  return obj;
 }
 
 function crc32(arg0, arg1, arg2, arg3) {
@@ -6521,7 +6515,7 @@ function crc32(arg0, arg1, arg2, arg3) {
   return ~tmp5;
 }
 
-function f58399(str) {
+function f58401(str) {
   let sum4;
   let num = 0;
   let num2 = 0;
@@ -6621,7 +6615,7 @@ function f58399(str) {
   return buf8;
 }
 
-function f58400(subarray) {
+function f58402(subarray) {
   if (subarray.length < 65534) {
     if (!subarray.subarray) {
       if (!subarray.subarray) {
@@ -6645,7 +6639,7 @@ function f58400(subarray) {
   }
 }
 
-function f58401(str) {
+function f58403(str) {
   const buf8 = new closure_1_0(closure_1_1[0]).Buf8(str.length);
   for (let num = 0; num < length; num = num + 1) {
     buf8[num] = str.charCodeAt(num);
@@ -6653,7 +6647,7 @@ function f58401(str) {
   return buf8;
 }
 
-function f58402(arg0, arg1) {
+function f58404(arg0, arg1) {
   let sum2;
   let length = arg1;
   if (!arg1) {
@@ -6763,7 +6757,7 @@ function f58402(arg0, arg1) {
   }
 }
 
-function f58403(arg0, arg1) {
+function f58405(arg0, arg1) {
   let length = arg1;
   if (!arg1) {
     length = arg0.length;
@@ -6826,12 +6820,12 @@ function fetch(arg0, arg1) {
     xMLHttpRequest.onload = () => {
       let obj = { statusText: xMLHttpRequest.statusText, headers: null };
       Object.create(closure_2_9.prototype);
-      obj = undefined;
-      obj.map = {};
+      let obj2;
+      obj2.map = {};
       if (undefined instanceof closure_2_9) {
         const item = undefined.forEach(function(item, index) {
           this.append(index, item);
-        }, obj);
+        }, obj2);
       } else {
         const _Array = Array;
         if (Array.isArray(undefined)) {
@@ -6844,7 +6838,7 @@ function fetch(arg0, arg1) {
               const self = this;
               this.append(item[0], item[1]);
             }
-          }, obj);
+          }, obj2);
         }
       }
       let str = xMLHttpRequest.getAllResponseHeaders() || "";
@@ -6862,7 +6856,7 @@ function fetch(arg0, arg1) {
         if (trimmed) {
           const joined = parts.join(":");
           try {
-            obj.append(trimmed, tmp3);
+            obj2.append(trimmed, tmp3);
           } catch (tmp6) {
             const _console = console;
             console.warn("Response " + tmp6.message);
@@ -6870,7 +6864,7 @@ function fetch(arg0, arg1) {
         }
         const str = parts.shift();
       });
-      obj.headers = obj;
+      obj.headers = obj2;
       url = url.url;
       if (0 !== url.indexOf("file://")) {
         obj.status = xMLHttpRequest.status;
@@ -6888,7 +6882,7 @@ function fetch(arg0, arg1) {
       const timerId = setTimeout(() => {
         obj = Object.create(closure_4_14.prototype);
         closure_4_14(closure_2, obj);
-        closure_0(obj);
+        obj2(obj);
       }, 0);
       const str2 = xMLHttpRequest.getAllResponseHeaders() || "".replace(/\r?\n[\t ]+/g, " ");
     };
@@ -6993,7 +6987,7 @@ function fetch(arg0, arg1) {
   });
 }
 
-function f70007(message, name) {
+function f70010(message, name) {
   const error = { message, name, stack: Error(message).stack };
 }
 
@@ -7031,74 +7025,63 @@ function observe(doc) {
       onMutation: closure_1_29,
       mutationCb: closure_1_37,
       mousemoveCb(positions, source) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source, positions };
-          obj.data = obj;
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: { source, positions } };
           closure_1_103(obj);
         },
       mouseInteractionCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.MouseInteraction };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.MouseInteraction };
           closure_1_103(obj);
         },
       scrollCb: closure_1_38,
       viewportResizeCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.ViewportResize };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.ViewportResize };
           closure_1_103(obj);
         },
       inputCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.Input };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.Input };
           closure_1_103(obj);
         },
       mediaInteractionCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.MediaInteraction };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.MediaInteraction };
           closure_1_103(obj);
         },
       styleSheetRuleCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.StyleSheetRule };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.StyleSheetRule };
           closure_1_103(obj);
         },
       styleDeclarationCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.StyleDeclaration };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.StyleDeclaration };
           closure_1_103(obj);
         },
       canvasMutationCb: closure_1_39,
       fontCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.Font };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.Font };
           closure_1_103(obj);
         },
       selectionCb(arg0) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.Selection };
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          obj.data = obj;
+          obj.data = { source: closure_1_74.Selection };
           closure_1_103(obj);
         },
-      customElementCb(define) {
-          let obj = { type: closure_1_73.IncrementalSnapshot, data: null };
-          obj = { source: closure_1_74.CustomElement };
-          const merged = Object.assign(define);
-          obj.data = obj;
+      customElementCb(arg0) {
+          const obj = { type: closure_1_73.IncrementalSnapshot, data: null };
+          const merged = Object.assign(arg0);
+          obj.data = { source: closure_1_74.CustomElement };
           closure_1_103(obj);
         },
       blockClass: closure_1_3,
@@ -7143,9 +7126,7 @@ function observe(doc) {
           observer: observer.observer,
           options: observer.options,
           callback(payload) {
-            let obj = { type: closure_2_73.Plugin, data: null };
-            obj = { plugin: observer.name, payload };
-            obj.data = obj;
+            const obj = { type: closure_2_73.Plugin, data: { plugin: observer.name, payload } };
             closure_2_103(obj);
           }
         }));
@@ -7161,7 +7142,7 @@ function observe(doc) {
   }
 }
 
-function f71876(contentDocument) {
+function f71879(contentDocument) {
   try {
     closure_1_46.push(closure_1_47(contentDocument.contentDocument));
   } catch (tmp5) {
@@ -7175,7 +7156,7 @@ function init() {
   closure_1_46.push(closure_1_47(document));
 }
 
-function f71878() {
+function f71881() {
   closure_2_103({ type: closure_2_73.DomContentLoaded, data: {} });
   if ("DOMContentLoaded" === closure_1_22) {
     if (typeof closure_1_48 === "function") {
@@ -7189,7 +7170,7 @@ function f71878() {
   const obj = { type: closure_2_73.DomContentLoaded, data: {} };
 }
 
-function f71879() {
+function f71882() {
   closure_2_103({ type: closure_2_73.Load, data: {} });
   if ("load" === closure_1_22) {
     if (typeof closure_1_48 === "function") {
@@ -7203,14 +7184,14 @@ function f71879() {
   const obj = { type: closure_2_73.Load, data: {} };
 }
 
-function f71880() {
+function f71883() {
   const item = closure_1_46.forEach((fn) => fn());
   closure_1_42.destroy();
   closure_2_104 = undefined;
   closure_2_79 = undefined;
 }
 
-function f72741(arg0, arg1, str) {
+function f72744(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -7228,7 +7209,7 @@ function f72741(arg0, arg1, str) {
   return "";
 }
 
-function f72743(arg0, arg1) {
+function f72746(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -7277,7 +7258,7 @@ function f72743(arg0, arg1) {
   }
 }
 
-function f72744(arg0, arg1) {
+function f72747(arg0, arg1) {
   closure_1_0(closure_1_1[1]);
   closure_1_0(closure_1_1[1]);
   switch (arg1) {
@@ -7326,7 +7307,7 @@ function f72744(arg0, arg1) {
   }
 }
 
-function f72745(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f72748(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg1) {
     closure_1_0.minimumIntegerDigits = arg2.length;
   } else {
@@ -7346,7 +7327,7 @@ function f72745(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f72746(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f72749(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {
@@ -7366,7 +7347,7 @@ function f72746(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f73750(key10009) {
+function f73753(key10009) {
   const call = hasOwnProperty.call;
   let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(closure_1_0, key10009);
   if (tmp2) {
@@ -7438,26 +7419,26 @@ function encodeLL(arg0, width, height, arg3, arg4, depth, arg6, arg7) {
   if (0 == arg4) {
     num2 = 0;
   }
-  let obj = { ctype: num + num2, depth, frames: [] };
+  const obj = { ctype: num + num2, depth, frames: [] };
   const timestamp = Date.now();
   const result = (arg3 + arg4) * depth;
   let num3 = 0;
   if (0 < arg0.length) {
     do {
       let frames = obj.frames;
-      obj = { rect: null, img: null, blend: 0, dispose: 1, bpp: null, bpl: null };
+      let obj2 = { rect: null, img: null, blend: 0, dispose: 1, bpp: null, bpl: null };
       let size = { x: 0, y: 0, width, height };
-      obj.rect = size;
+      obj2.rect = size;
       let _Uint8Array = Uint8Array;
       let tmp4 = new.target;
       let tmp5 = new.target;
       let uint8Array = new Uint8Array(arg0[num3]);
-      obj.img = uint8Array;
+      obj2.img = uint8Array;
       let _Math = Math;
-      obj.bpp = Math.ceil(result / 8);
+      obj2.bpp = Math.ceil(result / 8);
       let _Math2 = Math;
-      obj.bpl = Math.ceil(tmp3 / 8);
-      let arr = frames.push(obj);
+      obj2.bpl = Math.ceil(tmp3 / 8);
+      let arr = frames.push(obj2);
       num3 = num3 + 1;
       length = arg0.length;
     } while (num3 < length);
@@ -7466,7 +7447,7 @@ function encodeLL(arg0, width, height, arg3, arg4, depth, arg6, arg7) {
   return closure_1_5(obj, width, height, arg6, arg7);
 }
 
-function f79397(arg0, arg1) {
+function f79400(arg0, arg1) {
   return arg1[1].lastUsedMs - arg0[1].lastUsedMs;
 }
 
@@ -7497,8 +7478,7 @@ function touchList(arg0, arg1) {
 }
 
 function _loop4() {
-  let obj = closure_1[1];
-  if (" " === obj[0]) {
+  if (" " === closure_1[1][0]) {
     return 1;
   } else {
     let str = "";
@@ -7512,27 +7492,26 @@ function _loop4() {
     if (str == null) {
       str = "";
     }
-    let obj1 = reversed[reversed.length - 1];
     if (null != closure_2[str]) {
-      obj = { location: closure_1.index, length: str.length + 1, data: null };
-      obj = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: null };
+      const obj3 = { location: closure_1.index, length: str.length + 1, data: null };
+      const obj4 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: null };
       let colorString = null;
       if ("username" === closure_1_5.roleStyle) {
         colorString = tmp3.colorString;
       }
-      obj.color = colorString;
-      obj.data = obj;
-      str.push(obj);
-    } else if (obj1.startsWith(closure_1_22)) {
-      obj1 = { location: closure_1.index, length: 9, data: null };
-      const obj2 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
-      obj1.data = obj2;
-      str.push(obj1);
-    } else if (obj1.startsWith(closure_1_23)) {
-      const obj3 = { location: closure_1.index, length: 5, data: null };
-      const obj4 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
+      obj4.color = colorString;
       obj3.data = obj4;
       str.push(obj3);
+    } else if (obj2.startsWith(closure_1_22)) {
+      const obj5 = { location: closure_1.index, length: 9, data: null };
+      const obj6 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
+      obj5.data = obj6;
+      str.push(obj5);
+    } else if (obj2.startsWith(closure_1_23)) {
+      const obj7 = { location: closure_1.index, length: 5, data: null };
+      const obj8 = { type: closure_1_0(closure_1_2[9]).ChatInputParseResultDataType.ROLE_HIGHLIGHT, color: closure_1_1(closure_1_2[19]).unsafe_rawColors.BRAND_500 };
+      obj7.data = obj8;
+      str.push(obj7);
     }
     const str3 = obj.trimEnd();
   }
@@ -7574,7 +7553,7 @@ function InsertUnicodeExtensionAndCanonicalize(arr, arg1, arg2) {
   tmp2 = arg1[Symbol.iterator]();
 }
 
-function f109162() {
+function f109165() {
   return {
     navigate(arg0, arg1) {
       const navigation = closure_1_0.navigation;
@@ -7591,7 +7570,7 @@ function f109162() {
   };
 }
 
-function f109163() {
+function f109166() {
   return { emit: closure_1_0.navigation.emit };
 }
 
@@ -7602,26 +7581,26 @@ function ot(str) {
   return closure_1_38(closure_1_38({}, found[0]), found[1]);
 }
 
-function f116939(soft_deleted) {
+function f116942(soft_deleted) {
   return !soft_deleted.soft_deleted;
 }
 
-function f116940(soft_deleted) {
+function f116943(soft_deleted) {
   return soft_deleted.soft_deleted;
 }
 
-function f121357(baggage) {
+function f121360(baggage) {
   closure_1_8.setRequestHeader(baggage, closure_1_6[baggage]);
 }
 
-function f122760(arr) {
+function f122763(arr) {
   return arr.every((item) => {
     const ipV6 = regex.regex.ipV6;
     return ipV6.test(item);
   });
 }
 
-function f122761(arg0, tldBlacklist) {
+function f122764(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
@@ -7647,7 +7626,7 @@ function f122761(arg0, tldBlacklist) {
   }
 }
 
-function f122762(arg0, arg1, arg2) {
+function f122765(arg0, arg1, arg2) {
   let tmp14;
   let obj = arg1;
   let tmp = arg2;
@@ -7655,13 +7634,14 @@ function f122762(arg0, arg1, arg2) {
   if (!arg1) {
     obj = {};
   }
+  let obj2 = obj;
   if (typeof obj === "function") {
     domain = obj;
-    obj = {};
+    obj2 = {};
     tmp = obj;
   }
   if (typeof tmp !== "function") {
-    if (obj.checkDNS) {
+    if (obj2.checkDNS) {
       const _TypeError4 = TypeError;
       const typeError = new TypeError("expected callback function for checkDNS option");
       throw typeError;
@@ -7671,34 +7651,34 @@ function f122762(arg0, arg1, arg2) {
   }
   let errorLevel;
   let valid;
-  if (typeof obj.errorLevel === "number") {
+  if (typeof obj2.errorLevel === "number") {
     errorLevel = true;
-    valid = obj.errorLevel;
+    valid = obj2.errorLevel;
   } else {
-    errorLevel = obj.errorLevel;
+    errorLevel = obj2.errorLevel;
     valid = valid.diagnoses.valid;
   }
-  if (obj.tldWhitelist) {
-    if (typeof obj.tldWhitelist === "string") {
-      const items = [obj.tldWhitelist];
-      obj.tldWhitelist = items;
-    } else if ("object" !== domain(obj.tldWhitelist)) {
+  if (obj2.tldWhitelist) {
+    if (typeof obj2.tldWhitelist === "string") {
+      const items = [obj2.tldWhitelist];
+      obj2.tldWhitelist = items;
+    } else if ("object" !== domain(obj2.tldWhitelist)) {
       const _TypeError = TypeError;
       const typeError1 = new TypeError("expected array or object tldWhitelist");
       throw typeError1;
     }
   }
-  if (obj.tldBlacklist) {
-    if (typeof obj.tldBlacklist === "string") {
-      const items1 = [obj.tldBlacklist];
-      obj.tldBlacklist = items1;
-    } else if ("object" !== domain(obj.tldBlacklist)) {
+  if (obj2.tldBlacklist) {
+    if (typeof obj2.tldBlacklist === "string") {
+      const items1 = [obj2.tldBlacklist];
+      obj2.tldBlacklist = items1;
+    } else if ("object" !== domain(obj2.tldBlacklist)) {
       const _TypeError2 = TypeError;
       const typeError2 = new TypeError("expected array or object tldBlacklist");
       throw typeError2;
     }
   }
-  if (obj.minDomainAtoms) {
+  if (obj2.minDomainAtoms) {
     const _TypeError3 = TypeError;
     const typeError3 = new TypeError("expected positive integer minDomainAtoms");
     throw typeError3;
@@ -7711,8 +7691,8 @@ function f122762(arg0, arg1, arg2) {
   let localpart = valid.components.localpart;
   let localpart2 = valid.components.localpart;
   const items2 = [valid.components.localpart];
-  obj = { local: "", domain: "" };
-  const obj1 = { locals: [""], domains: [""] };
+  const obj5 = { local: "", domain: "" };
+  const obj10 = { locals: [""], domains: [""] };
   let sum2 = 0;
   let num = 0;
   let num2 = 0;
@@ -7795,8 +7775,8 @@ function f122762(arg0, arg1, arg2) {
             }
             let sum = num5 + 1;
             sum2 = sum;
-            obj.local = obj.local + obj6;
-            obj1.locals[sum] = "";
+            obj5.local = obj5.local + obj6;
+            obj10.locals[sum] = "";
             tmp32 = localpart2;
             contextFWS = localpart;
             num11 = sum;
@@ -7819,11 +7799,11 @@ function f122762(arg0, arg1, arg2) {
             if (deprecatedLocalPart > dnsWarnNoRecord) {
               dnsWarnNoRecord = deprecatedLocalPart;
             }
-            obj.local = obj.local + obj6;
-            let locals6 = obj1.locals;
+            obj5.local = obj5.local + obj6;
+            let locals6 = obj10.locals;
             locals6[num5] = locals6[num5] + obj6;
             num12 = num4 + 1;
-            arr = items2.push(localpart);
+            let arr2 = items2.push(localpart);
             contextFWS = obj7.components.contextQuotedString;
             tmp32 = localpart2;
             num11 = num;
@@ -7909,7 +7889,7 @@ function f122762(arg0, arg1, arg2) {
                     let error = new Error("unexpected item on context stack");
                     throw error;
                   } else {
-                    if (0 === obj.local.length) {
+                    if (0 === obj5.local.length) {
                       let errNoLocalPart = obj7.diagnoses.errNoLocalPart;
                       if (errNoLocalPart > dnsWarnNoRecord) {
                         dnsWarnNoRecord = errNoLocalPart;
@@ -7919,7 +7899,7 @@ function f122762(arg0, arg1, arg2) {
                       if (errDotEnd > dnsWarnNoRecord) {
                         dnsWarnNoRecord = errDotEnd;
                       }
-                    } else if (obj.local.length > 64) {
+                    } else if (obj5.local.length > 64) {
                       let rfc5322LocalTooLong = obj7.diagnoses.rfc5322LocalTooLong;
                       if (rfc5322LocalTooLong > dnsWarnNoRecord) {
                         dnsWarnNoRecord = rfc5322LocalTooLong;
@@ -8023,8 +8003,8 @@ function f122762(arg0, arg1, arg2) {
                       dnsWarnNoRecord = errExpectingATEXT3;
                     }
                   }
-                  obj.local = obj.local + obj6;
-                  let locals5 = obj1.locals;
+                  obj5.local = obj5.local + obj6;
+                  let locals5 = obj10.locals;
                   locals5[num5] = locals5[num5] + obj6;
                   num12 = num4 + 1;
                   tmp32 = localpart;
@@ -8054,7 +8034,7 @@ function f122762(arg0, arg1, arg2) {
               flag9 = flag2;
             }
           }
-          let arr1 = items2.push(localpart);
+          let arr3 = items2.push(localpart);
           contextFWS = obj7.components.contextFWS;
           flag5 = flag9;
           tmp32 = localpart2;
@@ -8088,7 +8068,7 @@ function f122762(arg0, arg1, arg2) {
               flag8 = true;
             }
           }
-          let arr2 = items2.push(localpart);
+          let arr5 = items2.push(localpart);
           contextFWS = obj7.components.contextComment;
           flag5 = flag8;
           tmp32 = localpart2;
@@ -8122,8 +8102,8 @@ function f122762(arg0, arg1, arg2) {
             }
           }
           sum2 = num5 + 1;
-          obj1.domains[sum2] = "";
-          obj.domain = obj.domain + obj6;
+          obj10.domains[sum2] = "";
+          obj5.domain = obj5.domain + obj6;
           tmp32 = localpart2;
           contextFWS = localpart;
           num11 = sum2;
@@ -8136,14 +8116,14 @@ function f122762(arg0, arg1, arg2) {
           num13 = sum2;
           tmp40 = str3;
         } else if ("[" === obj6) {
-          if (0 === obj.domain.length) {
+          if (0 === obj5.domain.length) {
             num12 = num4 + 1;
-            let arr3 = items2.push(localpart);
+            let arr6 = items2.push(localpart);
             contextFWS = obj7.components.literal;
-            obj.domain = obj.domain + obj6;
-            let domains5 = obj1.domains;
+            obj5.domain = obj5.domain + obj6;
+            let domains5 = obj10.domains;
             domains5[num5] = domains5[num5] + obj6;
-            obj.literal = "";
+            obj5.literal = "";
             tmp32 = localpart2;
             num11 = num;
             diff = num2;
@@ -8271,8 +8251,8 @@ function f122762(arg0, arg1, arg2) {
                         }
                       }
                     }
-                    obj.domain = obj.domain + obj6;
-                    let domains4 = obj1.domains;
+                    obj5.domain = obj5.domain + obj6;
+                    let domains4 = obj10.domains;
                     domains4[num5] = domains4[num5] + obj6;
                     num12 = num4 + 1;
                     tmp39 = flag6;
@@ -8315,7 +8295,7 @@ function f122762(arg0, arg1, arg2) {
               flag7 = true;
             }
           }
-          let arr4 = items2.push(localpart);
+          let arr20 = items2.push(localpart);
           contextFWS = obj7.components.contextFWS;
           flag5 = flag7;
           tmp32 = localpart2;
@@ -8331,7 +8311,7 @@ function f122762(arg0, arg1, arg2) {
       } else if (obj7.components.literal === localpart) {
         if ("]" === obj6) {
           if (dnsWarnNoRecord < obj7.categories.deprecated) {
-            let literal = obj.literal;
+            let literal = obj5.literal;
             let ipV4 = obj7.regex.ipV4;
             let match = ipV4.exec(literal);
             let num14 = -1;
@@ -8361,15 +8341,15 @@ function f122762(arg0, arg1, arg2) {
                 let str14 = text.slice(5);
                 let maxIPv6Groups = obj7.maxIPv6Groups;
                 let parts = str14.split(":");
-                index = str14.indexOf("::");
-                if (~index) {
-                  if (index !== str14.lastIndexOf("::")) {
+                let index1 = str14.indexOf("::");
+                if (~index1) {
+                  if (index1 !== str14.lastIndexOf("::")) {
                     let rfc5322IPv62x2xColon = obj7.diagnoses.rfc5322IPv62x2xColon;
                     if (rfc5322IPv62x2xColon > dnsWarnNoRecord) {
                       dnsWarnNoRecord = rfc5322IPv62x2xColon;
                     }
                   } else {
-                    let tmp85 = 0 !== index && index !== str14.length - 2;
+                    let tmp85 = 0 !== index1 && index1 !== str14.length - 2;
                     let sum4 = maxIPv6Groups;
                     if (!tmp85) {
                       sum4 = maxIPv6Groups + 1;
@@ -8428,8 +8408,8 @@ function f122762(arg0, arg1, arg2) {
               dnsWarnNoRecord = rfc5322DomainLiteral;
             }
           }
-          obj.domain = obj.domain + obj6;
-          let domains3 = obj1.domains;
+          obj5.domain = obj5.domain + obj6;
+          let domains3 = obj10.domains;
           domains3[num5] = domains3[num5] + obj6;
           num12 = num4 + 1;
           contextFWS = items2.pop();
@@ -8447,7 +8427,7 @@ function f122762(arg0, arg1, arg2) {
           if (rfc5322DomainLiteralOBSDText2 > dnsWarnNoRecord) {
             dnsWarnNoRecord = rfc5322DomainLiteralOBSDText2;
           }
-          let arr5 = items2.push(localpart);
+          let arr21 = items2.push(localpart);
           contextFWS = obj7.components.contextQuotedPair;
           tmp32 = localpart2;
           num11 = num;
@@ -8507,9 +8487,9 @@ function f122762(arg0, arg1, arg2) {
                           dnsWarnNoRecord = rfc5322DomainLiteralOBSDText;
                         }
                       }
-                      obj.literal = obj.literal + obj6;
-                      obj.domain = obj.domain + obj6;
-                      let domains2 = obj1.domains;
+                      obj5.literal = obj5.literal + obj6;
+                      obj5.domain = obj5.domain + obj6;
+                      let domains2 = obj10.domains;
                       domains2[num5] = domains2[num5] + obj6;
                       num12 = num4 + 1;
                       tmp32 = localpart2;
@@ -8558,7 +8538,7 @@ function f122762(arg0, arg1, arg2) {
           if (cfwsFWS3 > dnsWarnNoRecord) {
             dnsWarnNoRecord = cfwsFWS3;
           }
-          let arr6 = items2.push(localpart);
+          let arr22 = items2.push(localpart);
           contextFWS = obj7.components.contextFWS;
           tmp32 = localpart2;
           num11 = num;
@@ -8573,7 +8553,7 @@ function f122762(arg0, arg1, arg2) {
         }
       } else if (obj7.components.contextQuotedString === localpart) {
         if ("\\" === obj6) {
-          let arr7 = items2.push(localpart);
+          let arr23 = items2.push(localpart);
           contextFWS = obj7.components.contextQuotedPair;
           tmp32 = localpart2;
           num11 = num;
@@ -8621,8 +8601,8 @@ function f122762(arg0, arg1, arg2) {
             tmp199 = num2;
             if ("\t" !== obj6) {
               if ("\"" === obj6) {
-                obj.local = obj.local + obj6;
-                let locals3 = obj1.locals;
+                obj5.local = obj5.local + obj6;
+                let locals3 = obj10.locals;
                 locals3[num5] = locals3[num5] + obj6;
                 num12 = num4 + 1;
                 contextFWS = items2.pop();
@@ -8648,8 +8628,8 @@ function f122762(arg0, arg1, arg2) {
                         }
                       }
                     }
-                    obj.local = obj.local + obj6;
-                    let locals2 = obj1.locals;
+                    obj5.local = obj5.local + obj6;
+                    let locals2 = obj10.locals;
                     locals2[num5] = locals2[num5] + obj6;
                     num12 = num4 + 1;
                     tmp32 = localpart2;
@@ -8671,15 +8651,15 @@ function f122762(arg0, arg1, arg2) {
               }
             }
           }
-          obj.local = `${obj4.local} `;
-          let locals4 = obj1.locals;
+          obj5.local = `${obj4.local} `;
+          let locals4 = obj10.locals;
           locals4[num5] = `${locals4[num5]} `;
           let cfwsFWS2 = obj7.diagnoses.cfwsFWS;
           if (cfwsFWS2 > dnsWarnNoRecord) {
             dnsWarnNoRecord = cfwsFWS2;
           }
           num12 = num4 + 1;
-          let arr8 = items2.push(localpart);
+          let arr24 = items2.push(localpart);
           contextFWS = obj7.components.contextFWS;
           tmp32 = localpart2;
           num11 = num;
@@ -8707,10 +8687,10 @@ function f122762(arg0, arg1, arg2) {
             }
           }
         }
-        let arr9 = items2.pop();
+        let arr25 = items2.pop();
         let text1 = `\\${obj6}`;
         tmp32 = localpart;
-        contextFWS = arr9;
+        contextFWS = arr25;
         num11 = num;
         diff = num2;
         tmp38 = text1;
@@ -8720,14 +8700,14 @@ function f122762(arg0, arg1, arg2) {
         num12 = num4;
         num13 = num5;
         tmp40 = str3;
-        if (obj7.components.contextComment !== arr9) {
-          if (obj7.components.contextQuotedString === arr9) {
-            obj.local = obj.local + `\\${obj6}`;
-            let locals = obj1.locals;
+        if (obj7.components.contextComment !== arr25) {
+          if (obj7.components.contextQuotedString === arr25) {
+            obj5.local = obj5.local + `\\${obj6}`;
+            let locals = obj10.locals;
             locals[num5] = locals[num5] + `\\${obj6}`;
             num12 = num4 + 2;
             tmp32 = localpart;
-            contextFWS = arr9;
+            contextFWS = arr25;
             num11 = num;
             diff = num2;
             tmp38 = text1;
@@ -8736,13 +8716,13 @@ function f122762(arg0, arg1, arg2) {
             num10 = num3;
             num13 = num5;
             tmp40 = str3;
-          } else if (obj7.components.literal === arr9) {
-            obj.domain = obj.domain + `\\${obj6}`;
-            let domains = obj1.domains;
+          } else if (obj7.components.literal === arr25) {
+            obj5.domain = obj5.domain + `\\${obj6}`;
+            let domains = obj10.domains;
             domains[num5] = domains[num5] + `\\${obj6}`;
             num12 = num4 + 2;
             tmp32 = localpart;
-            contextFWS = arr9;
+            contextFWS = arr25;
             num11 = num;
             diff = num2;
             tmp38 = text1;
@@ -8757,13 +8737,13 @@ function f122762(arg0, arg1, arg2) {
             let str5 = "quoted pair logic invoked in an invalid context: ";
             let tmp59 = new.target;
             let tmp60 = new.target;
-            let error2 = new Error("quoted pair logic invoked in an invalid context: " + arr9);
+            let error2 = new Error("quoted pair logic invoked in an invalid context: " + arr25);
             throw error2;
           }
         }
       } else if (obj7.components.contextComment === localpart) {
         if ("(" === obj6) {
-          let arr10 = items2.push(localpart);
+          let arr26 = items2.push(localpart);
           contextFWS = obj7.components.contextComment;
           tmp32 = localpart2;
           num11 = num;
@@ -8788,7 +8768,7 @@ function f122762(arg0, arg1, arg2) {
           num13 = num5;
           tmp40 = str3;
         } else if ("\\" === obj6) {
-          let arr11 = items2.push(localpart);
+          let arr27 = items2.push(localpart);
           contextFWS = obj7.components.contextQuotedPair;
           tmp32 = localpart2;
           num11 = num;
@@ -8917,7 +8897,7 @@ function f122762(arg0, arg1, arg2) {
           if (cfwsFWS > dnsWarnNoRecord) {
             dnsWarnNoRecord = cfwsFWS;
           }
-          let arr12 = items2.push(localpart);
+          let arr28 = items2.push(localpart);
           contextFWS = obj7.components.contextFWS;
           tmp32 = localpart2;
           num11 = num;
@@ -9091,7 +9071,7 @@ function f122762(arg0, arg1, arg2) {
       if (errFWSCRLFEnd2 > dnsWarnNoRecord) {
         dnsWarnNoRecord = errFWSCRLFEnd2;
       }
-    } else if (0 === obj.domain.length) {
+    } else if (0 === obj5.domain.length) {
       const errNoDomain = obj3.diagnoses.errNoDomain;
       if (errNoDomain > dnsWarnNoRecord) {
         dnsWarnNoRecord = errNoDomain;
@@ -9106,12 +9086,12 @@ function f122762(arg0, arg1, arg2) {
       if (errDomainHyphenEnd2 > dnsWarnNoRecord) {
         dnsWarnNoRecord = errDomainHyphenEnd2;
       }
-    } else if (obj.domain.length > 255) {
+    } else if (obj5.domain.length > 255) {
       const rfc5322DomainTooLong = obj3.diagnoses.rfc5322DomainTooLong;
       if (rfc5322DomainTooLong > dnsWarnNoRecord) {
         dnsWarnNoRecord = rfc5322DomainTooLong;
       }
-    } else if (obj.local.length + obj.domain.length + 1 > 254) {
+    } else if (obj5.local.length + obj5.domain.length + 1 > 254) {
       const rfc5322TooLong = obj3.diagnoses.rfc5322TooLong;
       if (rfc5322TooLong > dnsWarnNoRecord) {
         dnsWarnNoRecord = rfc5322TooLong;
@@ -9122,16 +9102,16 @@ function f122762(arg0, arg1, arg2) {
         dnsWarnNoRecord = rfc5322LabelTooLong2;
       }
     } else {
-      if (obj.minDomainAtoms) {
-        if (obj1.domains.length < obj.minDomainAtoms) {
+      if (obj2.minDomainAtoms) {
+        if (obj10.domains.length < obj2.minDomainAtoms) {
           const errDomainTooShort = obj3.diagnoses.errDomainTooShort;
           if (errDomainTooShort > dnsWarnNoRecord) {
             dnsWarnNoRecord = errDomainTooShort;
           }
         }
       }
-      if (obj.tldWhitelist) {
-        if (!obj3.validDomain(obj1.domains[num8], obj)) {
+      if (obj2.tldWhitelist) {
+        if (!obj3.validDomain(obj10.domains[num8], obj2)) {
           const errUnknownTLD = obj3.diagnoses.errUnknownTLD;
           if (errUnknownTLD > dnsWarnNoRecord) {
             dnsWarnNoRecord = errUnknownTLD;
@@ -9167,7 +9147,7 @@ function f122762(arg0, arg1, arg2) {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      obj = obj1.domains[sum2];
+      obj = obj10.domains[sum2];
     }
     if (dnsWarnNoRecord < valid) {
       dnsWarnNoRecord = closure_2_2.diagnoses.valid;
@@ -9186,12 +9166,12 @@ function f122762(arg0, arg1, arg2) {
     }
     return tmp15;
   }
-  if (obj.checkDNS) {
+  if (obj2.checkDNS) {
     if (dnsWarnNoRecord < obj3.categories.dnsWarn) {
       if (0 === num6) {
-        obj.domain = `${obj4.domain}.`;
+        obj5.domain = `${obj4.domain}.`;
       }
-      domain = obj.domain;
+      domain = obj5.domain;
       const mx = errorLevel.resolveMx(domain, (code, arg1) => {
         if (code) {
           if (code.code !== closure_3_1.NODATA) {
@@ -9257,7 +9237,7 @@ function t(options) {
   this.options = options;
 }
 
-function f122929(lastyear, lastmonth) {
+function f122932(lastyear, lastmonth) {
   let length;
   const self = this;
   const options = this.options;
@@ -9302,7 +9282,7 @@ function f122929(lastyear, lastmonth) {
                 const _Math = Math;
                 if (typeof closure_1_27 === "function") {
                   const tmp21 = closure_1_19[date.getUTCDay(date)];
-                  let obj = { yearlen: num12, nextyearlen: num15, yearordinal: tmp18, yearweekday: tmp21 };
+                  const obj = { yearlen: num12, nextyearlen: num15, yearordinal: tmp18, yearweekday: tmp21 };
                   if (typeof closure_1_20 === "function") {
                     const result2 = lastyear % 4;
                     let tmp24 = result2 === 0;
@@ -9324,12 +9304,12 @@ function f122929(lastyear, lastmonth) {
                       if (typeof tmp19 === "function") {
                         const tmp29 = closure_1_19[date1.getUTCDay(date1)];
                         if (num11 === num20) {
-                          obj = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
-                          let obj1 = obj;
+                          const obj2 = { mmask: closure_1_58, mdaymask: closure_1_61, nmdaymask: closure_1_63, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_65 };
+                          let obj3 = obj2;
                         } else {
-                          obj1 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
+                          obj3 = { mmask: closure_1_59, mdaymask: closure_1_60, nmdaymask: closure_1_62, wdaymask: closure_1_66.slice(tmp29), mrange: closure_1_64 };
                         }
-                        const tmp22Result = closure_1_38(closure_1_38(obj, obj1), { wnomask: null });
+                        const tmp22Result = closure_1_38(closure_1_38(obj, obj3), { wnomask: null });
                         const byweekno = options.byweekno;
                         if (typeof closure_1_12 === "function") {
                           if (typeof closure_1_3 === "function") {
@@ -9658,7 +9638,7 @@ function f122929(lastyear, lastmonth) {
         if (!tmp119) {
           if (lastmonth !== self.lastmonth) {
             ({ yearlen, mrange, wdaymask } = self.yearinfo);
-            const obj2 = { lastyear, lastmonth, nwdaymask: [] };
+            const obj4 = { lastyear, lastmonth, nwdaymask: [] };
             const items2 = [];
             if (options.freq === closure_1_72.YEARLY) {
               const bymonth = options.bymonth;
@@ -9721,7 +9701,7 @@ function f122929(lastyear, lastmonth) {
                         } while (num52 < yearlen);
                       }
                     }
-                    obj2.nwdaymask = items6;
+                    obj4.nwdaymask = items6;
                     let num57 = 0;
                     if (0 < arr9.length) {
                       while (true) {
@@ -9760,7 +9740,7 @@ function f122929(lastyear, lastmonth) {
                             }
                             let tmp147 = first <= diff7 && diff7 <= diff6;
                             if (tmp147) {
-                              obj2.nwdaymask[diff7] = 1;
+                              obj4.nwdaymask[diff7] = 1;
                             }
                             num58 = num58 + 1;
                             continue;
@@ -9775,7 +9755,7 @@ function f122929(lastyear, lastmonth) {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                self.monthinfo = obj2;
+                self.monthinfo = obj4;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -9890,12 +9870,12 @@ function get() {
   return this.yearinfo.nmdaymask;
 }
 
-function f122942() {
+function f122945() {
   const items = [closure_1_7(this.yearlen), 0, this.yearlen];
   return items;
 }
 
-function f122943(arg0, arg1) {
+function f122946(arg0, arg1) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -9931,7 +9911,7 @@ function f122943(arg0, arg1) {
   }
 }
 
-function f122944(arg0, arg1, arg2) {
+function f122947(arg0, arg1, arg2) {
   const self = this;
   const sum = this.yearlen + 7;
   if (typeof closure_1_8 === "function") {
@@ -10003,7 +9983,7 @@ function f122944(arg0, arg1, arg2) {
   }
 }
 
-function f122945(arg0, arg1, arg2) {
+function f122948(arg0, arg1, arg2) {
   const yearlen = this.yearlen;
   if (typeof closure_1_8 === "function") {
     const items = [];
@@ -10056,7 +10036,7 @@ function f122945(arg0, arg1, arg2) {
   }
 }
 
-function f122946(arg0, arg1, arg2, arg3) {
+function f122949(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg2;
   closure_2 = arg3;
@@ -10078,7 +10058,7 @@ function f122946(arg0, arg1, arg2, arg3) {
   obj = closure_4;
 }
 
-function f122947(arg0, arg1, arg2, arg3) {
+function f122950(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg3;
@@ -10107,7 +10087,7 @@ function f122947(arg0, arg1, arg2, arg3) {
   }
 }
 
-function f122948(hour, minute, arg2, arg3) {
+function f122951(hour, minute, arg2, arg3) {
   if (typeof closure_1_49 === "function") {
     let num = arg3;
     const obj = { hour, minute, second: arg2 };
@@ -10122,7 +10102,7 @@ function f122948(hour, minute, arg2, arg3) {
   }
 }
 
-function f122949(arg0) {
+function f122952(arg0) {
   const self = this;
   if (closure_1_39.YEARLY === arg0) {
     const ydayset = self.ydayset;
@@ -10140,7 +10120,7 @@ function f122949(arg0) {
   }
 }
 
-function f122950(arg0) {
+function f122953(arg0) {
   const self = this;
   if (closure_1_39.HOURLY === arg0) {
     const htimeset = self.htimeset;
@@ -10155,10 +10135,10 @@ function f122950(arg0) {
 }
 
 function t(arg0, arg1) {
-  let obj = {};
-  obj = arg0;
+  const obj = {};
+  let obj2 = arg0;
   if (undefined === arg0) {
-    obj = {};
+    obj2 = {};
   }
   let flag = arg1;
   if (undefined === arg1) {
@@ -10167,15 +10147,15 @@ function t(arg0, arg1) {
   let tmp = null;
   if (!flag) {
     if (typeof closure_1_57 === "function") {
-      obj = { all: false, before: [], after: [], between: [] };
-      tmp = obj;
+      const obj3 = { all: false, before: [], after: [], between: [] };
+      tmp = obj3;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
   obj._cache = tmp;
-  obj.origOptions = closure_1_51(obj);
-  const tmp5 = closure_1_38(closure_1_38({}, closure_1_70), closure_1_51(obj));
+  obj.origOptions = closure_1_51(obj2);
+  const tmp5 = closure_1_38(closure_1_38({}, closure_1_70), closure_1_51(obj2));
   if (typeof closure_1_3 === "function") {
     if (null != tmp5.byeaster) {
       tmp5.freq = closure_1_72.YEARLY;
@@ -10361,7 +10341,7 @@ function t(arg0, arg1) {
                             if (tmp43 > 0) {
                               let arr = items4.push(tmp43);
                             } else if (tmp43 < 0) {
-                              arr = items5.push(tmp43);
+                              let arr2 = items5.push(tmp43);
                             }
                             num7 = num7 + 1;
                           } while (num7 < tmp5.bymonthday.length);
@@ -10399,7 +10379,7 @@ function t(arg0, arg1) {
                               tmp5.bynweekday = null;
                               let tmp50 = closure_1_3;
                             } else {
-                              let byweekday = tmp5.byweekday;
+                              const byweekday = tmp5.byweekday;
                               if (typeof closure_1_5 === "function") {
                                 let hasItem = typeof byweekday === "string";
                                 if (typeof byweekday === "string") {
@@ -10411,9 +10391,9 @@ function t(arg0, arg1) {
                                   tmp5.bynweekday = null;
                                   tmp50 = closure_1_3;
                                 } else {
-                                  byweekday = tmp5.byweekday;
+                                  const byweekday1 = tmp5.byweekday;
                                   if (tmp5.byweekday instanceof closure_1_2) {
-                                    if (byweekday.n) {
+                                    if (byweekday1.n) {
                                       if (tmp5.freq <= closure_1_72.MONTHLY) {
                                         const items11 = [tmp5.byweekday.weekday, tmp5.byweekday.n];
                                         const items12 = [items11];
@@ -10430,26 +10410,26 @@ function t(arg0, arg1) {
                                     const items14 = [];
                                     const items15 = [];
                                     let num9 = 0;
-                                    if (0 < byweekday.length) {
+                                    if (0 < byweekday1.length) {
                                       while (typeof closure_1_4 === "function") {
                                         if (typeof tmp54 === "number") {
-                                          let arr1 = items14.push(tmp54);
+                                          let arr3 = items14.push(tmp54);
                                         } else if (typeof closure_1_5 === "function") {
                                           let hasItem1 = typeof tmp54 === "string";
                                           if (typeof tmp54 === "string") {
                                             hasItem1 = closure_1_1.includes(tmp54);
                                           }
                                           if (hasItem1) {
-                                            let arr2 = items14.push(closure_1_2.fromStr(tmp54).weekday);
+                                            let arr4 = items14.push(closure_1_2.fromStr(tmp54).weekday);
                                           } else {
                                             if (tmp54.n) {
                                               if (tmp5.freq <= closure_1_72.MONTHLY) {
                                                 let items16 = [, ];
                                                 ({ weekday: arr16[0], n: arr16[1] } = tmp54);
-                                                let arr3 = items15.push(items16);
+                                                let arr5 = items15.push(items16);
                                               }
                                             }
-                                            let arr4 = items14.push(tmp54.weekday);
+                                            let arr6 = items14.push(tmp54.weekday);
                                           }
                                         } else {
                                           let str32 = "Trying to call a non-function";
@@ -10600,7 +10580,7 @@ function t(arg0, arg1) {
       const _Error = Error;
       const concat = "Invalid frequency: ".concat;
       const combined = "Invalid frequency: ".concat(tmp5.freq, " ");
-      const error1 = new Error(combined.concat(obj.freq));
+      const error1 = new Error(combined.concat(obj2.freq));
       throw error1;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -10611,32 +10591,30 @@ function t(arg0, arg1) {
   const tmp4 = closure_1_38({}, closure_1_70);
 }
 
-function f122952(arg0, arg1) {
+function f122955(arg0, arg1) {
   return closure_1_47(arg0, arg1);
 }
 
-function f122953(arg0, arg1) {
+function f122956(arg0, arg1) {
   let tmp = arg1;
   if (undefined === arg1) {
     tmp = closure_1_41;
   }
-  let tmp2 = closure_1_72;
-  tmp2 = new tmp2(closure_1_47(arg0, tmp) || undefined);
+  new closure_1_72(closure_1_47(arg0, tmp) || undefined);
   return new.target;
 }
 
-function f122954(arg0) {
-  let tmp = closure_1_0;
+function f122957(arg0) {
   const tmp2 = closure_1_0.parseString(arg0) || undefined;
-  tmp = new tmp(tmp2);
-  return Object.create(tmp.prototype);
+  new closure_1_0(tmp2);
+  return Object.create(closure_1_0.prototype);
 }
 
-function f122955(arg0) {
+function f122958(arg0) {
   return closure_1_68(arg0, this.options);
 }
 
-function f122956(arg0, arg1) {
+function f122959(arg0, arg1) {
   let _cacheGetResult = this._cache;
   if (_cacheGetResult) {
     const _cache = tmp._cache;
@@ -10645,14 +10623,14 @@ function f122956(arg0, arg1) {
   return _cacheGetResult;
 }
 
-function f122957(arg0, arg1, arg2) {
+function f122960(arg0, arg1, arg2) {
   if (this._cache) {
     const _cache = tmp._cache;
     return _cache._cacheAdd(arg0, arg1, arg2);
   }
 }
 
-function f122958(iterator) {
+function f122961(iterator) {
   const self = this;
   if (iterator) {
     if (typeof closure_1_40 === "function") {
@@ -10683,7 +10661,7 @@ function f122958(iterator) {
   }
 }
 
-function f122959(getTime, getTime2, arg2, iterator) {
+function f122962(getTime, getTime2, arg2, iterator) {
   let flag = arg2;
   if (undefined === arg2) {
     flag = false;
@@ -10753,7 +10731,7 @@ function f122959(getTime, getTime2, arg2, iterator) {
   }
 }
 
-function f122960(getTime, arg1) {
+function f122963(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -10790,7 +10768,7 @@ function f122960(getTime, arg1) {
   }
 }
 
-function f122961(getTime, arg1) {
+function f122964(getTime, arg1) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -10827,24 +10805,24 @@ function f122961(getTime, arg1) {
   }
 }
 
-function f122962() {
+function f122965() {
   return this.all().length;
 }
 
-function f122963() {
+function f122966() {
   return closure_1_56(this.origOptions);
 }
 
-function f122964(arg0, arg1, arg2) {
+function f122967(arg0, arg1, arg2) {
   new closure_1_45(this, arg0, arg1, arg2);
   return new.target.toString();
 }
 
-function f122965() {
+function f122968() {
   return closure_1_48(this);
 }
 
-function f122966() {
+function f122969() {
   new closure_1_0(this.origOptions);
   return Object.create(closure_1_0.prototype);
 }
@@ -10874,7 +10852,7 @@ function e(arg0) {
   return callResult;
 }
 
-function f122968(accept) {
+function f122971(accept) {
   ({ _rrule, _exrule, _rdate, _exdate } = this);
   let after = accept;
   let before = _exrule;
@@ -10950,9 +10928,8 @@ function f122968(accept) {
   }
   let num = 0;
   if (0 < _rdate.length) {
-    let obj = _rdate[num];
     while (typeof closure_55 === "function") {
-      obj = {};
+      let obj2 = {};
       let _isNaN = isNaN;
       if (isNaN(obj.getTime())) {
         let _RangeError = RangeError;
@@ -10962,9 +10939,9 @@ function f122968(accept) {
         let rangeError = new RangeError("Invalid date passed to DateWithZone");
         throw rangeError;
       } else {
-        obj.date = obj;
-        obj.tzid = tzidResult;
-        let rezonedDateResult = obj.rezonedDate();
+        obj2.date = obj;
+        obj2.tzid = tzidResult;
+        let rezonedDateResult = obj2.rezonedDate();
         let _Date = Date;
         let tmp7 = new.target;
         let tmp8 = new.target;
@@ -11006,43 +10983,43 @@ function f122968(accept) {
   tzidResult = this.tzid();
 }
 
-function f122969(arg0) {
+function f122972(arg0) {
   closure_1_77(arg0, this._rrule);
 }
 
-function f122970(arg0) {
+function f122973(arg0) {
   closure_1_77(arg0, this._exrule);
 }
 
-function f122971(arg0) {
+function f122974(arg0) {
   closure_1_78(arg0, this._rdate);
 }
 
-function f122972(arg0) {
+function f122975(arg0) {
   closure_1_78(arg0, this._exdate);
 }
 
-function f122973() {
+function f122976() {
   const _rrule = this._rrule;
   return _rrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f122974() {
+function f122977() {
   const _exrule = this._exrule;
   return _exrule.map((item) => closure_1_74(item.toString()));
 }
 
-function f122975() {
+function f122978() {
   const _rdate = this._rdate;
   return _rdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f122976() {
+function f122979() {
   const _exdate = this._exdate;
   return _exdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f122977() {
+function f122980() {
   const self = this;
   closure_0 = [];
   let _dtstart = !length;
@@ -11152,23 +11129,23 @@ function f122977() {
   }
 }
 
-function f122978() {
+function f122981() {
   return this.valueOf().join("\n");
 }
 
-function f122979() {
+function f122982() {
   const self = this;
   const _cache = this._cache;
-  Object.create(closure_1_1.prototype);
+  const obj2 = Object.create(closure_1_1.prototype);
   const call = closure_1_0.call;
   const obj = {};
   if (typeof call === "unknown") {
     closure_1_0(obj, _cache);
   } else {
-    let callResult = call(obj, obj, _cache);
+    let callResult = call(obj2, obj, _cache);
   }
   if (!callResult) {
-    callResult = obj;
+    callResult = obj2;
   }
   callResult.dtstart = closure_2_75.apply(callResult, ["dtstart"]);
   callResult.tzid = closure_2_75.apply(callResult, ["tzid"]);
@@ -11187,9 +11164,8 @@ function f122979() {
   return callResult;
 }
 
-function f124157(channelId) {
-  let obj = { channelId: channelId.channel_id };
-  let result = closure_3_22.canWithPartialContext(closure_3_31.CONNECT, obj);
+function f124160(channelId) {
+  let result = closure_3_22.canWithPartialContext(closure_3_31.CONNECT, { channelId: channelId.channel_id });
   if (result) {
     const channel_id = channelId.channel_id;
     let flag = false;
@@ -11214,12 +11190,13 @@ function f124157(channelId) {
     result = !flag;
   }
   if (result) {
-    obj = { kind: "live-guild-stage", stage: channelId };
-    closure_1_2[channelId.channel_id] = obj;
+    const obj2 = { kind: "live-guild-stage", stage: channelId };
+    closure_1_2[channelId.channel_id] = obj2;
   }
+  const obj = { channelId: channelId.channel_id };
 }
 
-function f124158(userId) {
+function f124161(userId) {
   const user = closure_3_26.getUser(userId);
   if (null != user) {
     if (user.bot) {
@@ -11245,23 +11222,23 @@ function f124158(userId) {
   }
 }
 
-function f124159(userId) {
+function f124162(userId) {
   userId = userId.userId;
   closure_1_10(userId, closure_3_23.getPrimaryActivity(userId, closure_2_1), userId);
 }
 
-function f124160(event) {
+function f124163(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: true });
 }
 
-function f124161(event) {
+function f124164(event) {
   return closure_1_13.push({ kind: "guild-event", event, isLive: false });
 }
 
-function f124548(arg0) {
+function f124551(arg0) {
   return closure_2_0.deleteMessage(closure_1_1, closure_1_0, arg0);
 }
 
-function f125500(arg0) {
+function f125503(arg0) {
   return closure_1_0[arg0];
 }

@@ -1,8 +1,8 @@
-// === Module 14189: Status/StatusUtils ===
+// === Module 14190: Status/StatusUtils ===
 
-// Module 14189 (Status/StatusUtils)
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14190 */;
-import StatusConstants from "StatusConstants" /* 1179 */;
+// Module 14190 (Status/StatusUtils)
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14191 */;
+import StatusConstants from "StatusConstants" /* 1177 */;
 import size from "module_2" /* 2 */;
 
 ({ STATUS_PADDING: c2, StatusSizes: c3 } = StatusConstants);
@@ -20,9 +20,9 @@ export const getMobileStatusContainerRect = function getMobileStatusContainerRec
   return size;
 };
 export const getVRStatusContainerRect = function getVRStatusContainerRect(items) {
-  let size = getStatusContainerStyleDefault(items, false, true);
-  size = { width: size.width, height: size.height, cornerRadius: size.borderRadius };
-  return size;
+  const size = getStatusContainerStyleDefault(items, false, true);
+  const size1 = { width: size.width, height: size.height, cornerRadius: size.borderRadius };
+  return size1;
 };
 export const getStatusTypingDimensions = function getStatusTypingDimensions(items) {
   if (constants.SMALL !== items) {

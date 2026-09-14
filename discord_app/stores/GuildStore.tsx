@@ -145,8 +145,8 @@ const guildStore = new GuildStore({
           let tmp11 = new.target;
           date = new Date(additionalFields.joinedAt);
         }
-        obj = { joinedAt: date, premiumSubscriberCount: additionalFields.premiumSubscriberCount };
-        let result = clear.set(properties.id, obj.fromGuildPropertiesWithAdditionalFields(properties, obj));
+        let obj2 = { joinedAt: date, premiumSubscriberCount: additionalFields.premiumSubscriberCount };
+        let result = clear.set(properties.id, obj.fromGuildPropertiesWithAdditionalFields(properties, obj2));
         continue;
       }
       nextResult = iter.next();

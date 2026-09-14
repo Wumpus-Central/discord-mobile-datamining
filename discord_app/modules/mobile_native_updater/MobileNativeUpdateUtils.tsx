@@ -1,10 +1,10 @@
-// === Module 13993: MobileNativeUpdateUtils ===
+// === Module 13994: MobileNativeUpdateUtils ===
 
-// Module 13993 (MobileNativeUpdateUtils)
+// Module 13994 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Linking from "Linking" /* 4331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -17,8 +17,8 @@ let closure_5 = async function _checkForNewerBuild() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -31,8 +31,8 @@ let closure_5 = async function _checkForNewerBuild() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp5;
@@ -45,11 +45,11 @@ let closure_5 = async function _checkForNewerBuild() {
             const _HermesInternal2 = HermesInternal;
             logger.info("Checking " + UPDATE_CONFIG.url + " for updates");
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: UPDATE_CONFIG.url.toString(), headers: { Accept: "application/json" }, rejectWithError: false };
+            const obj4 = { url: UPDATE_CONFIG.url.toString(), headers: { Accept: "application/json" }, rejectWithError: false };
             c2 = 1;
             c3 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(obj4), done: false };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -57,17 +57,17 @@ let closure_5 = async function _checkForNewerBuild() {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
-        const obj3 = { build: closure_128_0.body.build, version: closure_128_0.body.version, buildTimestamp: null, urls: null };
+        const obj6 = { build: closure_128_0.body.build, version: closure_128_0.body.version, buildTimestamp: null, urls: null };
         let infoResult2 = globalThis;
         const _Date = Date;
         const date = new Date(closure_128_0.body.build_timestamp);
-        obj3.buildTimestamp = date;
-        obj3.urls = closure_128_0.body.urls;
-        closure_128_1 = obj3;
+        obj6.buildTimestamp = date;
+        obj6.urls = closure_128_0.body.urls;
+        closure_128_1 = obj6;
         if (closure_128_1.build <= closure_129_3.currentBuild) {
           const _HermesInternal = HermesInternal;
           closure_129_4.info("Update build " + closure_128_1.build + " is older than " + closure_129_3.currentBuild);

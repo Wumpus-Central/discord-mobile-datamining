@@ -2,7 +2,7 @@
 
 // Module 7265 (useAnalyticsLocations)
 import _modDef12 from "module_12" /* 12 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,11 +13,10 @@ const result = size.fileFinishedImporting("modules/app_analytics/useAnalyticsLoc
 
 export default function useAnalyticsLocations() {
   let items = [...arguments];
+  first = undefined;
   _slicedToArray = undefined;
   context = undefined;
-  const tmp = _slicedToArray(context.useState(items), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
+  [first, _slicedToArray] = context.useState(items);
   context = context.useContext(context);
   const items1 = [first, context];
   const memo = context.useMemo(() => {
@@ -44,7 +43,7 @@ export default function useAnalyticsLocations() {
   }, items2);
   const items3 = [items, first];
   const effect = context.useEffect(() => {
-    if (!_modDef1332(items, first)) {
+    if (!_modDef1330(items, first)) {
       closure_2(items);
     }
   }, items3);

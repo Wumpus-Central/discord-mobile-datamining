@@ -1,20 +1,18 @@
-// === Module 16302: GuildHomeChannelRow ===
+// === Module 16304: GuildHomeChannelRow ===
 
-// Module 16302 (GuildHomeChannelRow)
+// Module 16304 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12508 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12509 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
-createStyles.container = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
 
@@ -25,7 +23,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(12508).ChannelModes;
+  const ChannelModes = id(12509).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -33,18 +31,17 @@ export default function GuildHomeChannelRow(selected) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp5 = tmp3;
   }
-  let obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
+  const obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
   const tmp = closure_7();
   const intl = tmp5(1114).intl;
   obj.accessibilityLabel = intl.string(tmp5(1114).t.VbpLyU);
   obj.accessibilityState = { selected };
   obj.mode = DEFAULT;
-  obj = { name: null, mode: null };
+  const obj2 = { name: null, mode: null };
   const intl2 = tmp5(1114).intl;
-  obj.name = intl2.string(tmp5(1114).t.VbpLyU);
-  obj.mode = DEFAULT;
-  obj.name = jsx(tmp5(12508).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(13929).SignPostIcon };
-  obj.icon = jsx(tmp5(12508).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13929).SignPostIcon });
-  return jsx(BaseChannelItemDefault, { mode: DEFAULT, IconComponent: tmp5(13929).SignPostIcon });
+  obj2.name = intl2.string(tmp5(1114).t.VbpLyU);
+  obj2.mode = DEFAULT;
+  obj.name = jsx(tmp5(12509).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12509).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13930).SignPostIcon });
+  return <tmp7 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

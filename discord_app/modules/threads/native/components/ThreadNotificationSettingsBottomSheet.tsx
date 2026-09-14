@@ -1,6 +1,6 @@
-// === Module 11446: ThreadNotificationSettingsBottomSheet ===
+// === Module 11447: ThreadNotificationSettingsBottomSheet ===
 
-// Module 11446 (ThreadNotificationSettingsBottomSheet)
+// Module 11447 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
@@ -12,38 +12,36 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  let obj = channel(10217);
-  const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const threadNotificationSetting = channel(10217).useThreadNotificationSetting(channel);
+  const obj2 = { header: null, children: null };
+  const obj3 = { title: null };
   const intl = channel(1114).intl;
-  obj.title = intl.string(channel(1114).t.h850Ss);
-  obj.header = jsx(channel(7252).BottomSheetTitleHeader, { title: null });
-  const obj1 = {
+  obj3.title = intl.string(channel(1114).t.h850Ss);
+  obj2.header = jsx(channel(7252).BottomSheetTitleHeader, { title: null });
+  const obj4 = {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      const obj = { flags };
-      return obj.setNotificationSettings(channel, obj);
+      return ThreadActionCreatorsDefault.setNotificationSettings(channel, { flags });
     },
     accessibilityLabel: null,
     children: null
   };
   const intl2 = channel(1114).intl;
-  obj1.accessibilityLabel = intl2.string(channel(1114).t.h850Ss);
-  obj1.children = closure_3().map((label) => {
+  obj4.accessibilityLabel = intl2.string(channel(1114).t.h850Ss);
+  const obj = channel(10217);
+  obj4.children = closure_3().map((label) => {
     const setting = label.setting;
     return jsx(channel(dependencyMap[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj.children = jsx(channel(5766).TableRadioGroup, {
+  obj2.children = jsx(channel(5766).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      const obj = { flags };
-      return obj.setNotificationSettings(channel, obj);
+      return ThreadActionCreatorsDefault.setNotificationSettings(channel, { flags });
     },
     accessibilityLabel: null,
     children: null
   });
-  return jsx(channel(7300).ActionSheet, { title: null });
+  return jsx(channel(7300).ActionSheet, { header: null, children: null });
 };

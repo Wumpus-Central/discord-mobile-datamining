@@ -33,10 +33,11 @@ import _mod3134 from "module_3134" /* 3134 */;
 import _mod3135 from "module_3135" /* 3135 */;
 import _mod3136 from "module_3136" /* 3136 */;
 import _mod3139 from "module_3139" /* 3139 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3107);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/application_account_linking/IncentivizedAccountLinking.messages.js");
 
 export default messagesProxy;

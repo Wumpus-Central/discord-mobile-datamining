@@ -1,8 +1,8 @@
-// === Module 11655: getMessageJumpData ===
+// === Module 11656: getMessageJumpData ===
 
-// Module 11655 (getMessageJumpData)
+// Module 11656 (getMessageJumpData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1877 */;
 import Client from "Client" /* 4567 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -46,7 +46,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (null != currentUser) {
             if (lastResult.author.id === currentUser.id) {
               if (null != lastResult1) {
-                let obj = SnowflakeUtilsDefault;
+                SnowflakeUtilsDefault;
               }
               let id = lastResult.id;
               let flag = false;
@@ -60,14 +60,14 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
               }
             }
           }
-          obj = { scrollToMessageId: id, jumpTargetId: tmp13, jumpType: tmp12, jumpSequenceId, minimizeScrolling: flag, focusTargetId: null, shouldInitialScroll: null };
+          const obj2 = { scrollToMessageId: id, jumpTargetId: tmp13, jumpType: tmp12, jumpSequenceId, minimizeScrolling: flag, focusTargetId: null, shouldInitialScroll: null };
           let tmp18 = null;
           if (tmp8) {
             tmp18 = focusTargetId;
           }
-          obj.focusTargetId = tmp18;
-          obj.shouldInitialScroll = tmp6;
-          return obj;
+          obj2.focusTargetId = tmp18;
+          obj2.shouldInitialScroll = tmp6;
+          return obj2;
         }
       }
     }
@@ -105,7 +105,7 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     const tmpResult = useSystemKeyboardHeight;
   }
   obj2 = PlatformUtils;
-  [tmp4, require] = _slicedToArray(noop.useState(num), 2);
+  [tmp4, require] = noop.useState(num);
   const effect = noop.useEffect(() => subscribeToKeyboardUIStore((keyboardHeight) => {
     if (obj.isAndroid()) {
       closure_1_0(keyboardHeight.keyboardHeight);

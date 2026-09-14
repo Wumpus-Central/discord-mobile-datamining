@@ -2,14 +2,14 @@
 
 // Module 4878 (StoreUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import BillingInfoStore from "BillingInfoStore" /* 4296 */;
 import PaymentSourceStore from "PaymentSourceStore" /* 4297 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import allSettled from "allSettled" /* 4879 */;
+import allSettled_mod from "allSettled" /* 4879 */;
 
 require = fn;
 let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
@@ -20,8 +20,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -34,8 +34,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_6 = tmp5;
           closure_5 = tmp2;
@@ -63,8 +63,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_133_2 = closure_134_3.isAuthenticated();
             if (closure_133_1) {
@@ -74,14 +74,14 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                   const paymentSourcesFetchRequest = closure_134_4.paymentSourcesFetchRequest;
                   closure_3 = paymentSourcesFetchRequest;
                   if (paymentSourcesFetchRequest == null) {
-                    let obj2 = closure_134_0(closure_134_1[10]);
-                    closure_3 = obj2.fetchPaymentSources();
+                    closure_3 = closure_134_0(closure_134_1[10]).fetchPaymentSources();
+                    let obj3 = closure_134_0(closure_134_1[10]);
                   }
                   closure_133_3.push(closure_3);
                 }
                 if (!closure_134_4.ipCountryCodeLoaded) {
-                  let obj3 = closure_134_0(closure_134_1[10]);
-                  closure_133_3.push(obj3.fetchIpCountryCode());
+                  closure_133_3.push(closure_134_0(closure_134_1[10]).fetchIpCountryCode());
+                  let obj4 = closure_134_0(closure_134_1[10]);
                 }
                 closure_133_3.push((function waitForSubscriptionsToBeFetched() {
                   closure_0 = closure_2(function*(arg0) {
@@ -92,8 +92,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -106,8 +106,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                             throw value;
                           } else if (arg0 === 2) {
                             c3 = 3;
-                            obj = { value, done: true };
-                            return obj;
+                            const obj4 = { value, done: true };
+                            return obj4;
                           } else {
                             c1 = 0;
                             closure_129_0 = closure_0;
@@ -125,12 +125,10 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                               closure_129_1 = wait;
                               wait();
                             } else {
-                              let obj1 = closure_0(c1[10]);
                               c2 = 1;
                               c3 = 1;
-                              obj1 = { value: null, done: false };
-                              obj1.value = obj1.fetchSubscriptions();
-                              return obj1;
+                              const obj5 = { value: closure_0(c1[10]).fetchSubscriptions(), done: false };
+                              return obj5;
                             }
                             c3 = 3;
                           }
@@ -141,7 +139,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                           closure_129_0();
                         }
                         c3 = 3;
-                        obj = { value, done: true };
+                        const obj = { value, done: true };
                         return obj;
                       } catch (tmp13) {
                         c3 = tmp;
@@ -165,8 +163,8 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
                 items[1] = promise;
                 c7 = 2;
                 c8 = 1;
-                obj2 = { value: Promise.race(items), done: false };
-                return obj2;
+                const obj7 = { value: Promise.race(items), done: false };
+                return obj7;
               }
             }
           }
@@ -175,7 +173,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         defaultBillingCountryCode = closure_134_5.getDefaultBillingCountryCode();
@@ -214,24 +212,24 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
         }
         if (null != defaultBillingCountryCode) {
           if (typeof closure_133_0 === "string") {
-            obj3 = { url: closure_133_0, oldFormErrors: true, rejectWithError: false };
-            closure_133_0 = obj3;
+            const obj8 = { url: closure_133_0, oldFormErrors: true, rejectWithError: false };
+            closure_133_0 = obj8;
           }
           if (typeof closure_133_0.query === "string") {
             const _Error = Error;
             const error = new Error("string query not supported");
             throw error;
           } else {
-            const obj4 = {};
+            const obj9 = {};
             const merged = Object.assign(closure_133_7);
             const merged1 = Object.assign(closure_133_0.query);
-            closure_133_0.query = obj4;
+            closure_133_0.query = obj9;
           }
         }
         const HTTP = closure_134_0(closure_134_1[11]).HTTP;
         c8 = 3;
-        const obj5 = { value: HTTP.get(closure_133_0), done: true };
-        return obj5;
+        const obj10 = { value: HTTP.get(closure_133_0), done: true };
+        return obj10;
       }
     } catch (tmp87) {
       c8 = tmp;
@@ -241,6 +239,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
 };
 const Constants = fn(1074);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
+let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 const isMobile = fn(4877).isMobile;
 let tmp4 = !isMobile;

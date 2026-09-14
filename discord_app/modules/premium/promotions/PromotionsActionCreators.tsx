@@ -1,15 +1,15 @@
-// === Module 13505: PromotionsActionCreators ===
+// === Module 13506: PromotionsActionCreators ===
 
-// Module 13505 (PromotionsActionCreators)
+// Module 13506 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import wrappers from "wrappers" /* 1218 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13506 */;
+import wrappers from "wrappers" /* 1216 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13507 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import PromotionRecord from "PromotionRecord" /* 10794 */;
+import PromotionRecord from "PromotionRecord" /* 10795 */;
 import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -25,8 +25,7 @@ function fetchActivePromotions() {
 let closure_11 = async function _fetchActivePromotions() {
   closure_2 = tmp3;
   locale = locale.locale;
-  let obj1 = { type: "ACTIVE_PROMOTIONS_FETCH", locale };
-  DispatcherDefault.dispatch(obj1);
+  DispatcherDefault.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH", locale });
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants.PROMOTIONS, query: { locale, platform: MarketingComponentPlatform.MarketingComponentPlatform.MOBILE }, oldFormErrors: true, rejectWithError: true };
   await HTTP.get(request);
@@ -44,10 +43,9 @@ let closure_11 = async function _fetchActivePromotions() {
         closure_129_0 = value;
         closure_129_1 = closure_130_7.consumedInboundPromotionId;
         if (!closure_130_7.hasFetchedConsumedInboundPromotionId) {
-          obj1 = closure_130_0(closure_130_2[10]);
           c5 = 3;
           c6 = 1;
-          return { value: obj1.fetchUserEntitlementsForApplication(closure_130_8, false), done: false };
+          return { value: closure_130_0(closure_130_2[10]).fetchUserEntitlementsForApplication(closure_130_8, false), done: false };
         }
       }
     } else if (arg0 === 1) {
@@ -110,8 +108,8 @@ let closure_12 = async function _fetchActiveBogoPromotion() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -124,45 +122,44 @@ let closure_12 = async function _fetchActiveBogoPromotion() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           let body;
           if (!PromotionsStore.isFetchingActiveBogoPromotion) {
             c3 = 1;
-            let obj4 = DispatcherDefault;
-            obj4.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
+            DispatcherDefault.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.BOGO_PROMOTIONS, query: null, rejectWithError: true };
-            const obj1 = { locale: locale.locale };
-            request.query = obj1;
+            const obj6 = { locale: locale.locale };
+            request.query = obj6;
             c4 = 2;
             c5 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj7 = { value: HTTP.get(request), done: false };
+            return obj7;
           }
         }
       } else {
         if (1 === tmp7) {
           c3 = 0;
-          let obj3 = closure_129_1(closure_129_2[7]);
-          obj3.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
+          closure_129_1(closure_129_2[7]).dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
+          const obj4 = closure_129_1(closure_129_2[7]);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
           body = value.body;
-          obj = closure_129_1(closure_129_2[7]);
-          obj3 = { type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: closure_129_5.createFromServer(body) };
-          obj.dispatch(obj3);
+          const obj8 = { type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: closure_129_5.createFromServer(body) };
+          closure_129_1(closure_129_2[7]).dispatch(obj8);
           c3 = 0;
+          const obj = closure_129_1(closure_129_2[7]);
         }
         c3 = 0;
         c5 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       }
       c5 = 3;
     } catch (tmp27) {
@@ -193,25 +190,23 @@ let closure_13 = async function _fetchClaimedOutboundPromotionCodes() {
   await HTTP.get(request);
   if (1 === tmp7) {
     c2 = 0;
-    let obj3 = closure_129_1(closure_129_2[7]);
-    obj3.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
+    closure_129_1(closure_129_2[7]).dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
     c4 = 3;
+    closure_129_1(closure_129_2[7]);
   } else if (arg0 === 1) {
     c4 = 3;
     throw value;
   } else if (arg0 !== 2) {
     const body = value.body;
     closure_128_0 = body.map(closure_129_0(closure_129_2[13]).claimedOutboundPromotionCodeFromServer);
-    obj3 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: closure_128_0 };
-    closure_129_1(closure_129_2[7]).dispatch(obj3);
+    closure_129_1(closure_129_2[7]).dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: closure_128_0 });
     c2 = 0;
     closure_129_1(closure_129_2[7]);
   }
   return value;
 };
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
-  const obj = { type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });
 }
 let closure_8 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
 const Endpoints = fn(1074).Endpoints;

@@ -6,6 +6,8 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function shouldShowMembershipVerificationGate(guildId) {
   let tmp = items;

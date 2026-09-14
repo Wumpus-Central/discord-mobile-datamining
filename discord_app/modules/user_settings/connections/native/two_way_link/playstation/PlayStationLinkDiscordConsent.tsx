@@ -15,8 +15,7 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   platformType = platformType.platformType;
   let navigation;
   ({ callbackCode, callbackState } = platformType);
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
@@ -35,6 +34,5 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   } else {
     PLAYSTATION = tmp(9391).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
   }
-  obj = { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION };
   return jsx(navigation(9363).TwoWayLinkDiscordConsent, { platformType, callbackCode, callbackState, clientId: PLAYSTATION_APPLICATION_ID, scopes: PLAYSTATION_CLIENT_SCOPES, onNext: callback, onError: callback1, redirectUri: PLAYSTATION });
 };

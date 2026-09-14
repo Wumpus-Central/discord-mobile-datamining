@@ -1,8 +1,9 @@
-// === Module 13871: JoinVoiceChannelButton ===
+// === Module 13872: JoinVoiceChannelButton ===
 
-// Module 13871 (JoinVoiceChannelButton)
+// Module 13872 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10067 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
@@ -18,9 +19,9 @@ let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet
 export default function JoinVoiceChannelButton(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  let obj = channel(504);
+  const tmp3 = useIsVoiceChannelFullDefault(channel);
   const items = [PermissionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => !PermissionStore.can(Permissions.CONNECT, channel));
+  const stateFromStores = channel(504).useStateFromStores(items, () => !PermissionStore.can(Permissions.CONNECT, channel));
   const intl = channel(1114).intl;
   let stringResult = intl.string(channel(1114).t.eIi3Om);
   if (tmp3) {
@@ -36,13 +37,13 @@ export default function JoinVoiceChannelButton(channel) {
     }
   }
   const items1 = [channel.id];
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items2 = [tmp.container, channel.style];
-  obj.style = items2;
+  obj2.style = items2;
   const callback = noop.useCallback(() => {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj.children = jsx(channel(5056).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5056).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 };

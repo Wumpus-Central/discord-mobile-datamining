@@ -93,7 +93,7 @@ export const hasSubgameInfoChanged = function hasSubgameInfoChanged(arg0, arg1) 
   return tmp;
 };
 export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGameWithRobloxSubgameInfo(gameMetadata, arg1) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(gameMetadata);
   ({ subgameInfo, application } = arg1);
   gameMetadata = gameMetadata.gameMetadata;
@@ -130,12 +130,12 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
     obj.lastFocused = Math.floor(str / 1000);
   } else {
     if (null != application) {
-      obj = { exePath: gameMetadata.exePath, name: null, id: null, distributor: null };
+      const obj2 = { exePath: gameMetadata.exePath, name: null, id: null, distributor: null };
       ({ name: obj4.name, id: obj4.id } = application);
-      obj.distributor = constants.ROBLOX;
-      if (isDetectionEnabled(obj)) {
-        obj = { exePath: gameMetadata.exePath, name: dependencyMap[constants.ROBLOX], id: RobloxSubgameTypes.ROBLOX_APPLICATION_ID, distributor: constants.ROBLOX };
-        if (isDetectionEnabled(obj)) {
+      obj2.distributor = constants.ROBLOX;
+      if (isDetectionEnabled(obj2)) {
+        const obj3 = { exePath: gameMetadata.exePath, name: dependencyMap[constants.ROBLOX], id: RobloxSubgameTypes.ROBLOX_APPLICATION_ID, distributor: constants.ROBLOX };
+        if (isDetectionEnabled(obj3)) {
           ({ id: obj.id, name: obj.name, name: obj.gameName } = application);
           const _Date2 = Date;
           obj.start = Date.now();
@@ -144,17 +144,17 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
           obj.lastFocused = Math.floor(Date.now() / 1000);
           let tmp9 = require;
         }
-        const obj1 = {};
-        obj1[tmp9(4767).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
+        const obj7 = {};
+        obj7[tmp9(4767).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
         const universeId = subgameInfo.universeId;
         obj.sku = universeId;
         if (null != subgameInfo.placeId) {
-          obj1[tmp9(4767).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
+          obj7[tmp9(4767).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
         }
         const _Object = Object;
         let tmp13;
-        if (Object.keys(obj1).length > 0) {
-          tmp13 = obj1;
+        if (Object.keys(obj7).length > 0) {
+          tmp13 = obj7;
         }
         obj.gameMetadata = tmp13;
       }

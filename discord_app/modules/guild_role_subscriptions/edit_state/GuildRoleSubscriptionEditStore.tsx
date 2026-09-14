@@ -1,6 +1,6 @@
-// === Module 15311: GuildRoleSubscriptionEditStore ===
+// === Module 15312: GuildRoleSubscriptionEditStore ===
 
-// Module 15311 (GuildRoleSubscriptionEditStore)
+// Module 15312 (GuildRoleSubscriptionEditStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -14,12 +14,12 @@ export const useEditStateStore = module_560.create((arg0) => {
     setListing(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      return closure_0(1249).batchUpdates(() => closure_0((listings) => {
-        let obj = { listings: null };
-        obj = {};
+      return closure_0(1247).batchUpdates(() => closure_0((listings) => {
+        const obj = { listings: null };
+        const obj2 = {};
         const merged = Object.assign(listings.listings);
-        obj[closure_1_0] = closure_1_1(listings.listings[closure_1_0]);
-        obj.listings = obj;
+        obj2[closure_1_0] = closure_1_1(listings.listings[closure_1_0]);
+        obj.listings = obj2;
         return obj;
       }));
     },
@@ -27,13 +27,13 @@ export const useEditStateStore = module_560.create((arg0) => {
     setEditStateIdsForGroup(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      return closure_0(1249).batchUpdates(() => {
+      return closure_0(1247).batchUpdates(() => {
         closure_0((editStateIdsForGroup) => {
-          let obj = { editStateIdsForGroup: null };
-          obj = {};
+          const obj = { editStateIdsForGroup: null };
+          const obj2 = {};
           const merged = Object.assign(editStateIdsForGroup.editStateIdsForGroup);
-          obj[closure_1_0] = closure_1_1(editStateIdsForGroup.editStateIdsForGroup[closure_1_0]);
-          obj.editStateIdsForGroup = obj;
+          obj2[closure_1_0] = closure_1_1(editStateIdsForGroup.editStateIdsForGroup[closure_1_0]);
+          obj.editStateIdsForGroup = obj2;
           return obj;
         });
       });

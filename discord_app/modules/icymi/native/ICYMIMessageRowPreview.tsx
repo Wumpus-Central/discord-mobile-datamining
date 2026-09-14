@@ -1,6 +1,6 @@
-// === Module 16591: ICYMIMessageRowPreview ===
+// === Module 16593: ICYMIMessageRowPreview ===
 
-// Module 16591 (ICYMIMessageRowPreview)
+// Module 16593 (ICYMIMessageRowPreview)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -17,8 +17,9 @@ function ICYMIMessageRowPreview(pointerEvents) {
   if (str === undefined) {
     str = "none";
   }
-  let obj = { seeMoreLabelColor: messageOptions(576).colors.TEXT_DEFAULT };
-  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4571)());
+  const tmp = messageOptions(4571)();
+  let obj = createStyles;
+  dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(576).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
   const setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
@@ -27,13 +28,12 @@ function ICYMIMessageRowPreview(pointerEvents) {
   const setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2, messageOptions];
   const memo = setting.useMemo(() => {
-    new RowGeneratorDefault();
-    const obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+    const obj = new RowGeneratorDefault();
     const merged = Object.assign(messageOptions);
-    obj.setOptions(obj);
+    obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  obj = {
+  return setting2(messageOptions(8775), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -50,8 +50,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     rowGenerator: memo,
     messageSizeCacheRef,
     maxHeight
-  };
-  return setting2(messageOptions(8775), obj);
+  });
 }
 const MessageEmbedTypes = fn(1074).MessageEmbedTypes;
 const jsx = fn(21).jsx;
@@ -83,21 +82,21 @@ const memoResult = noop.memo((message) => {
     obj.lineClamp = merged.lineClamp;
     return obj;
   }, items1));
-  obj = {};
+  const obj2 = {};
   const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
-  obj.ignoreMentioned = true;
-  obj.renderReplies = false;
-  obj.renderThreadEmbeds = false;
-  obj.renderReactions = false;
-  obj.renderEmbeds = true;
-  obj.gifAutoPlay = true;
-  obj.animateEmoji = true;
-  obj.renderPolls = true;
-  obj.inlineEmbedMedia = true;
-  obj.renderForumPostActions = false;
-  obj.renderAttachments = true;
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.renderEmbeds = true;
+  obj2.gifAutoPlay = true;
+  obj2.animateEmoji = true;
+  obj2.renderPolls = true;
+  obj2.inlineEmbedMedia = true;
+  obj2.renderForumPostActions = false;
+  obj2.renderAttachments = true;
   const merged3 = Object.assign(message.messageOptions);
-  obj.messageOptions = obj;
+  obj.messageOptions = obj2;
   return <ICYMIMessageRowPreview />;
 });
 const memoResult1 = noop.memo((message) => {
@@ -130,16 +129,16 @@ const memoResult1 = noop.memo((message) => {
     obj.lineClamp = merged.lineClamp;
     return obj;
   }, items1));
-  obj = {};
+  const obj2 = {};
   const merged2 = Object.assign(message(memo[5]).DEFAULT_OPTIONS);
-  obj.ignoreMentioned = true;
-  obj.renderReplies = false;
-  obj.renderThreadEmbeds = false;
-  obj.renderReactions = false;
-  obj.renderEmbeds = true;
-  obj.renderAttachments = true;
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.renderEmbeds = true;
+  obj2.renderAttachments = true;
   const merged3 = Object.assign(message.messageOptions);
-  obj.messageOptions = obj;
+  obj.messageOptions = obj2;
   return <ICYMIMessageRowPreview />;
 });
 const size = fn(2);
@@ -165,21 +164,21 @@ export const MessageRowPreview = noop.memo((message) => {
   const tmp3 = merged(7405)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
-  obj = {};
+  const obj2 = {};
   const merged2 = Object.assign(message(8038).DEFAULT_OPTIONS);
-  obj.ignoreMentioned = true;
-  obj.renderReplies = false;
-  obj.renderThreadEmbeds = false;
-  obj.renderReactions = false;
-  obj.gifAutoPlay = true;
-  obj.animateEmoji = true;
-  obj.renderPolls = true;
-  obj.renderForumPostActions = false;
-  obj.renderAttachments = tmp3;
-  obj.renderEmbeds = tmp3;
-  obj.inlineEmbedMedia = tmp3;
+  obj2.ignoreMentioned = true;
+  obj2.renderReplies = false;
+  obj2.renderThreadEmbeds = false;
+  obj2.renderReactions = false;
+  obj2.gifAutoPlay = true;
+  obj2.animateEmoji = true;
+  obj2.renderPolls = true;
+  obj2.renderForumPostActions = false;
+  obj2.renderAttachments = tmp3;
+  obj2.renderEmbeds = tmp3;
+  obj2.inlineEmbedMedia = tmp3;
   const merged3 = Object.assign(message.messageOptions);
-  obj.messageOptions = obj;
+  obj.messageOptions = obj2;
   obj.seeMoreLabel = "...";
   return <ICYMIMessageRowPreview />;
 });

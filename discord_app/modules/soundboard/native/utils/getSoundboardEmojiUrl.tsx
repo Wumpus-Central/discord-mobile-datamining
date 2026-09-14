@@ -1,6 +1,6 @@
-// === Module 12064: getSoundboardEmojiUrl ===
+// === Module 12065: getSoundboardEmojiUrl ===
 
-// Module 12064 (getSoundboardEmojiUrl)
+// Module 12065 (getSoundboardEmojiUrl)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import size from "module_2" /* 2 */;
 
@@ -10,8 +10,8 @@ export default function getSoundboardEmojiUrl(emojiId, size) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    const obj = { id: emojiId, animated: false, size };
-    emojiURL = obj.getEmojiURL(obj);
+    const obj2 = { id: emojiId, animated: false, size };
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
   }
   return emojiURL;
 };

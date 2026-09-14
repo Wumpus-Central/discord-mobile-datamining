@@ -3,6 +3,8 @@
 // Module 8514 (useStateChannelIsLive)
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");

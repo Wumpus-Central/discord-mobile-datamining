@@ -1,6 +1,6 @@
-// === Module 16318: GuildBoostingProgressBarActionCreators ===
+// === Module 16320: GuildBoostingProgressBarActionCreators ===
 
-// Module 16318 (GuildBoostingProgressBarActionCreators)
+// Module 16320 (GuildBoostingProgressBarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -10,8 +10,7 @@ export const updateGuildPremiumSubscriptionCount = function updateGuildPremiumSu
   importDefault = guildId;
   dependencyMap = premiumCount;
   DispatcherDefault.wait(() => {
-    const obj = { type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount });
   });
 };
 export const resetGuildPremiumSubscriptionCount = function resetGuildPremiumSubscriptionCount() {

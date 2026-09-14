@@ -6,6 +6,8 @@ import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 196
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const useMemo = _mod19.useMemo;
 let closure_4 = GuildScheduledEventsConstants.GuildScheduledEventUserResponses;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");

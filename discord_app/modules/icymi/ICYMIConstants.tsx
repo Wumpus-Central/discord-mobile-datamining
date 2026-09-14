@@ -1,6 +1,6 @@
-// === Module 16546: ICYMIConstants ===
+// === Module 16548: ICYMIConstants ===
 
-// Module 16546 (ICYMIConstants)
+// Module 16548 (ICYMIConstants)
 import DurationsDefault from "Durations" /* 1090 */;
 
 const result = 15 * DurationsDefault.Millis.MINUTE;

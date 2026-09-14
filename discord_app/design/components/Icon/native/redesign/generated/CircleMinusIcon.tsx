@@ -1,10 +1,10 @@
-// === Module 15397: CircleMinusIcon ===
+// === Module 15398: CircleMinusIcon ===
 
-// Module 15397 (CircleMinusIcon)
+// Module 15398 (CircleMinusIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod15398 from "module_15398" /* 15398 */;
 import _mod15399 from "module_15399" /* 15399 */;
+import _mod15400 from "module_15400" /* 15400 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,17 +24,16 @@ export const CircleMinusIcon = function CircleMinusIcon(color) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
-  let obj = { children: null };
-  obj = { source: _mod15398, color: secondaryColor, style };
+  const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, obj), ];
-  obj = { source: _mod15399, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod15399, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod15400, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
-  obj.style = items2;
+  obj3.style = items2;
   const merged2 = Object.assign(merged);
-  items[1] = React4(BaseIconImage.BaseIconImage, obj);
+  items[1] = React4(BaseIconImage.BaseIconImage, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

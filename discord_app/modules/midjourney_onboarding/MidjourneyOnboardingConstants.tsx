@@ -1,6 +1,6 @@
-// === Module 13948: MidjourneyOnboardingConstants ===
+// === Module 13949: MidjourneyOnboardingConstants ===
 
-// Module 13948 (MidjourneyOnboardingConstants)
+// Module 13949 (MidjourneyOnboardingConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingConstants.tsx");

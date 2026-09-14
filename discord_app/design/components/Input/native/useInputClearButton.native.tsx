@@ -15,19 +15,19 @@ export const useInputClearButton = function useInputClearButton(clearProps, clea
   let tmp;
   if (clearProps.isClearable) {
     if (clearState.hasValue) {
-      let obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
-      obj = { onPress: clearState.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
+      const obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
+      const obj2 = { onPress: clearState.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.VkKicb);
-      obj.pressableProps = obj;
+      obj2.accessibilityLabel = intl.string(util.t.VkKicb);
+      obj.pressableProps = obj2;
       tmp = obj;
     }
   }
   let tmp6 = null;
   if (null != tmp) {
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(tmp.pressableProps);
-    obj.children = tmp.content;
+    obj3.children = tmp.content;
     tmp6 = <Pressable />;
   }
   return tmp6;
@@ -35,11 +35,11 @@ export const useInputClearButton = function useInputClearButton(clearProps, clea
 export const useInputClearButtonConfig = function useInputClearButtonConfig(isClearable, state) {
   if (isClearable.isClearable) {
     if (state.hasValue) {
-      let obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
-      obj = { onPress: state.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
+      const obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
+      const obj2 = { onPress: state.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.VkKicb);
-      obj.pressableProps = obj;
+      obj2.accessibilityLabel = intl.string(util.t.VkKicb);
+      obj.pressableProps = obj2;
       return obj;
     }
   }

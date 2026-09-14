@@ -1,8 +1,8 @@
-// === Module 14569: links ===
+// === Module 14570: links ===
 
-// Module 14569 (links)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 14570 (links)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import openUserSettings from "openUserSettings" /* 7485 */;
@@ -11,10 +11,10 @@ import ActivityPopoutUtils from "ActivityPopoutUtils" /* 9664 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9687 */;
 import RPCHelpers from "RPCHelpers" /* 9689 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14550 */;
-import internalDeepLinks from "internalDeepLinks" /* 14570 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14571 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14573 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14551 */;
+import internalDeepLinks from "internalDeepLinks" /* 14571 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14572 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
@@ -33,8 +33,8 @@ let closure_13 = async function _openExternalLink(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -47,8 +47,8 @@ let closure_13 = async function _openExternalLink(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             application = tmp3;
             dependencyMap = tmp5;
@@ -59,40 +59,39 @@ let closure_13 = async function _openExternalLink(arg0) {
             let embeddedActivityLocationChannelId;
             let internalDeepLink = null;
             if (null != obj18.tryValidateEmbeddedAppFrame(closure_0)) {
-              let tmp84Result = internalDeepLinks;
-              internalDeepLink = tmp84Result.resolveInternalDeepLink(url);
+              internalDeepLink = internalDeepLinks.resolveInternalDeepLink(url);
+              const tmp84Result = internalDeepLinks;
             }
             if (null != internalDeepLink) {
               if (PlatformUtils.isPlatformEmbedded) {
-                let obj5 = CrossPlatformNativeUtilsDefault;
-                obj5.focus(null, true);
+                CrossPlatformNativeUtilsDefault.focus(null, true);
               }
-              tmp84Result = internalDeepLinks;
-              if (tmp84Result.openInternalDeepLink(internalDeepLink)) {
+              if (tmp84Result5.openInternalDeepLink(internalDeepLink)) {
                 const application3 = closure_0.application;
                 let id;
                 if (application3 != null) {
                   id = application3.id;
                 }
-                const obj1 = { application_id: id, url, opened: true };
-                AnalyticsUtilsDefault.track(constants2.RPC_OPEN_EXTERNAL_LINK_CALLED, obj1);
+                const obj4 = { application_id: id, url, opened: true };
+                AnalyticsUtilsDefault.track(constants2.RPC_OPEN_EXTERNAL_LINK_CALLED, obj4);
                 c7 = 3;
-                const obj2 = { value: { opened: true }, done: true };
-                return obj2;
+                const obj5 = { value: { opened: true }, done: true };
+                return obj5;
               }
+              tmp84Result5 = internalDeepLinks;
             }
             currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
             c5 = 1;
             const _URL = URL;
-            let str = new URL(url);
-            str = str.toString();
-            closure_130_2 = str;
+            const str = new URL(url);
+            const str1 = str.toString();
+            closure_130_2 = str1;
             if (PlatformUtils.isPlatformEmbedded) {
               let ACTIVITY_POPOUT = null;
-              if (tmp84Result1.shouldOpenActivityInPopoutWindow()) {
+              if (tmp84Result6.shouldOpenActivityInPopoutWindow()) {
                 ACTIVITY_POPOUT = constants.ACTIVITY_POPOUT;
               }
-              tmp84Result1 = ActivityPopoutUtils;
+              tmp84Result6 = ActivityPopoutUtils;
               CrossPlatformNativeUtilsDefault.focus(ACTIVITY_POPOUT, true);
             }
             const application2 = closure_0.application;
@@ -100,56 +99,55 @@ let closure_13 = async function _openExternalLink(arg0) {
             if (application2 != null) {
               id1 = application2.id;
             }
-            application = application.getApplication(id1);
-            closure_130_3 = application;
+            const application1 = application.getApplication(id1);
+            closure_130_3 = application1;
             obj18 = validateEmbeddedAppFrame;
             let _location;
             if (currentEmbeddedActivity != null) {
               _location = currentEmbeddedActivity.location;
             }
             embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
-            const tmp84Result2 = embeddedActivityLocationUtils;
+            const tmp84Result7 = embeddedActivityLocationUtils;
             let id2;
-            if (application != null) {
-              id2 = application.id;
+            if (application1 != null) {
+              id2 = application1.id;
             }
             c6 = 2;
             c7 = 1;
-            const obj3 = { value: fetchIsLinkTrusted.fetchIsLinkTrusted(id2, str), done: false };
-            return obj3;
+            const obj7 = { value: fetchIsLinkTrusted.fetchIsLinkTrusted(id2, str1), done: false };
+            return obj7;
           }
         } else if (1 === tmp8) {
           c5 = 0;
-          const obj4 = { errorCode: closure_131_8.INVALID_COMMAND };
+          const obj8 = { errorCode: closure_131_8.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          let tmp31 = closure_131_1(closure_131_2[17]);
-          tmp31 = new tmp31(obj4, "Invalid URL: " + closure_130_1);
-          throw tmp31;
+          const tmp312 = new closure_131_1(closure_131_2[17])(obj8, "Invalid URL: " + closure_130_1);
+          throw tmp312;
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           if (value) {
             closure_131_1(closure_131_2[14])(closure_130_2);
-            obj = closure_131_1(closure_131_2[10]);
             application = closure_130_0.application;
             let id3;
             if (application != null) {
               id3 = application.id;
             }
-            const obj6 = { application_id: id3, url: closure_130_2, opened: true };
-            obj.track(closure_131_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj6);
+            const obj11 = { application_id: id3, url: closure_130_2, opened: true };
+            closure_131_1(closure_131_2[10]).track(closure_131_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj11);
             const resolved = Promise.resolve({ opened: true });
+            let obj = closure_131_1(closure_131_2[10]);
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              closure_1_0(8488);
-              let obj = {
+              let obj = closure_1_0(8488);
+              const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
                 onClick() {
@@ -162,24 +160,21 @@ let closure_13 = async function _openExternalLink(arg0) {
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1242).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: dependencyMap, opened: true });
+                  closure_1(1240).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: dependencyMap, opened: true });
                   closure_0({ opened: true });
-                  const obj = closure_1(1242);
+                  const obj = closure_1(1240);
                 },
                 onCancel() {
-                  let obj = closure_1(1242);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  obj = { application_id: id, url: dependencyMap, opened: false };
-                  obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, obj);
+                  closure_1(1240).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: dependencyMap, opened: false });
                   closure_0({ opened: false });
                 }
               };
-              obj = { application, channelId };
-              return obj.handleClick(obj, undefined, undefined, closure_1_0(14572).getActivitiesModalContextKey(obj));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14573).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -206,15 +201,15 @@ const items = [, ];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 const weakMap = new WeakMap();
-obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj };
-obj = {
+let obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj2, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj3 };
+obj2 = {
   scope: null,
   validation(string) {
-    createRpcJoiSchemaObjectDefault(string);
-    const obj = { url: null };
-    const requiredResult = obj.required();
-    obj.url = string.string().required();
-    return requiredResult.keys(obj);
+    const obj = createRpcJoiSchemaObjectDefault(string);
+    const obj2 = { url: null };
+    const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
+    obj2.url = string.string().required();
+    return requiredResult.keys(obj2);
   },
   handler(socket) {
     socket = socket.socket;
@@ -227,8 +222,8 @@ obj = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -241,8 +236,8 @@ obj = {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp6;
               closure_129_0 = undefined;
@@ -261,7 +256,7 @@ obj = {
                   c4 = 1;
                   c2 = 2;
                   c5 = 1;
-                  const obj1 = {
+                  const obj4 = {
                     value: (function openExternalLink() {
                                   const self = this;
                                   const apply = closure_1_13.apply;
@@ -274,12 +269,12 @@ obj = {
                                 })(socket, url),
                     done: false
                   };
-                  return obj1;
+                  return obj4;
                 }
               }
               c5 = 3;
-              const obj2 = { value: { opened: false }, done: true };
-              return obj2;
+              const obj5 = { value: { opened: false }, done: true };
+              return obj5;
             }
           } else if (1 === tmp6) {
             c4 = 0;
@@ -296,15 +291,15 @@ obj = {
             const _Date2 = Date;
             closure_129_0.readyAt = Date.now() + 1000;
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             c4 = 0;
             closure_129_0.inFlight = false;
             const _Date = Date;
             closure_129_0.readyAt = Date.now() + 1000;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp21) {
@@ -321,48 +316,46 @@ obj = {
   }
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE];
-obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-obj = {
+obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
+obj3 = {
   validation(arg0) {
     return createRpcJoiSchemaObjectDefault(arg0);
   },
   scope: null,
   handler(socket) {
     socket = socket.socket;
-    let obj = RPCHelpers;
-    const result = obj.validatePostMessageTransport(socket.transport);
+    const result = RPCHelpers.validatePostMessageTransport(socket.transport);
     if (set.has(obj2.validateApplication(socket.application))) {
-      obj = { screen: constants3.CONNECTIONS };
-      openUserSettings.openUserSettings(obj);
+      const obj3 = { screen: constants3.CONNECTIONS };
+      openUserSettings.openUserSettings(obj3);
     } else {
-      obj = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp9 = new RPCErrorDefault(obj, "Command not available for this application");
+      const obj4 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+      const tmp9 = new RPCErrorDefault(obj4, "Command not available for this application");
       throw tmp9;
     }
     obj2 = RPCHelpers;
   }
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
-obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14564);
-let obj1 = {
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
+const CONTEXT_MENU_ICON_NAMES = fn(14565);
+let obj5 = {
   scope: null,
   handler(arg0) {
     ({ socket, args } = arg0);
     ({ custom_id: require, message: importDefault, link_id: dependencyMap } = args);
-    let obj = RPCHelpers;
-    let result = obj.validatePostMessageTransport(socket.transport);
+    let result = RPCHelpers.validatePostMessageTransport(socket.transport);
     const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
     c3 = validateApplicationResult;
     if (null == validateApplicationResult) {
-      obj = { errorCode: constants2.INVALID_COMMAND };
-      const tmp22 = new RPCErrorDefault(obj, "No application.");
+      const obj3 = { errorCode: constants2.INVALID_COMMAND };
+      const tmp22 = new RPCErrorDefault(obj3, "No application.");
       throw tmp22;
     } else {
       if (tmpResult.hasApplicationFlag(socket.application, constants.EMBEDDED)) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
-          let obj = {
+          const result = openActivityShareLinkModal.openActivityShareLinkModal({
             applicationId,
             customId,
             linkId,
@@ -375,13 +368,12 @@ let obj1 = {
               closure_0({ success: tmp2, didCopyLink, didSendMessage: stateFromStores });
               const obj = { success: tmp2, didCopyLink, didSendMessage: stateFromStores };
             }
-          };
-          const result = obj.openActivityShareLinkModal(obj);
+          });
         });
         return promise;
       } else {
-        obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp10 = new RPCErrorDefault(obj, "This application cannot access this API");
+        const obj4 = { errorCode: constants2.INVALID_COMMAND };
+        const tmp10 = new RPCErrorDefault(obj4, "This application cannot access this API");
         throw tmp10;
       }
       tmpResult = ApplicationFlagUtils;
@@ -389,8 +381,8 @@ let obj1 = {
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];
-obj1.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
-obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj1);
+obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items3 };
+obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, obj5);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/links.tsx");
 

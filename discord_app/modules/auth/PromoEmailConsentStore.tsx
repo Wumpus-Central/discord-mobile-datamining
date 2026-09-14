@@ -4,6 +4,8 @@
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const usePromoEmailConsentStore = module_560.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 

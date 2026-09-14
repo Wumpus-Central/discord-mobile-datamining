@@ -1,6 +1,6 @@
-// === Module 15749: useStateFromStoresPerformanceDebugging ===
+// === Module 15751: useStateFromStoresPerformanceDebugging ===
 
-// Module 15749 (useStateFromStoresPerformanceDebugging)
+// Module 15751 (useStateFromStoresPerformanceDebugging)
 import Storage2 from "Storage" /* 510 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -72,13 +72,13 @@ function flushViolators() {
         let text = `${execTime.toFixed(2)}ms`;
         let str = tmp14.execCount;
         let padEndResult3 = `${execTime.toFixed(2)}ms`.padEnd(num2, " ");
-        str = str.toString();
+        let str1 = str.toString();
         let _HermesInternal = HermesInternal;
         let str2 = "| ";
         let str3 = "| ";
         let str4 = "| ";
         let str5 = "|";
-        let logResult5 = logger.log("| " + padEndResult2 + "| " + padEndResult3 + "| " + str.padEnd(num3, " ") + "|");
+        let logResult5 = logger.log("| " + padEndResult2 + "| " + padEndResult3 + "| " + str1.padEnd(num3, " ") + "|");
       }
       continue;
     }
@@ -202,13 +202,12 @@ export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookI
         }
       }
     }
-    let obj = map;
     value = map.get(str8);
     if (value == null) {
-      obj = { name: str8, execCount: 0, execTime: 0, warned: false };
-      value = obj;
+      const obj2 = { name: str8, execCount: 0, execTime: 0, warned: false };
+      value = obj2;
     }
-    const result = obj.set(str8, value);
+    const result = map.set(str8, value);
     return value;
   }
 };

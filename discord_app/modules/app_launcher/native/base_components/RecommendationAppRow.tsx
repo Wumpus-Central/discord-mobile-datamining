@@ -1,8 +1,8 @@
-// === Module 12222: RecommendationAppRow ===
+// === Module 12223: RecommendationAppRow ===
 
-// Module 12222 (RecommendationAppRow)
+// Module 12223 (RecommendationAppRow)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 12212 */;
+import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 12213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,6 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  const obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-  const iconSource = obj.getApplicationIconSource(obj);
+  const iconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   return jsx(AppLauncherHomeScreen.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

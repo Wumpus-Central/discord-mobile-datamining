@@ -1,6 +1,6 @@
-// === Module 16072: AccountDisabledOrDeletionScheduled ===
+// === Module 16074: AccountDisabledOrDeletionScheduled ===
 
-// Module 16072 (AccountDisabledOrDeletionScheduled)
+// Module 16074 (AccountDisabledOrDeletionScheduled)
 import nativeDefault from "native" /* 576 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
 import noop from "module_19" /* 19 */;
@@ -46,11 +46,10 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   handleLogin = handleLogin.handleLogin;
   const onReset = handleLogin.onReset;
   let navigation;
+  navigation = handleLogin(navigation[7]).useNavigation();
   let obj = handleLogin(navigation[7]);
-  navigation = obj.useNavigation();
-  let obj1 = handleLogin(navigation[8]);
   const items = [AuthenticationStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
+  const stateFromStores = handleLogin(navigation[8]).useStateFromStores(items, () => loginStatus.getLoginStatus());
   const ref = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
   const effect = stateFromStores.useEffect(() => {
@@ -100,28 +99,29 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   } else {
     string2Result = string2(t2["pCBti+"]);
   }
-  obj = { contentStyle: { flexGrow: 1 }, children: null };
-  obj = { style: tmp9.container, children: null };
-  obj1 = { children: null };
-  const items4 = [closure_7(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];
-  obj1.children = items4;
-  const items5 = [closure_8(ref, obj1), ];
+  const obj3 = { contentStyle: { flexGrow: 1 }, children: null };
+  const obj4 = { style: tmp9.container, children: null };
   const obj5 = { children: null };
-  const obj6 = { children: null };
-  const obj7 = { variant: "primary", text: null, onPress: null };
+  const obj2 = handleLogin(navigation[8]);
+  const items4 = [closure_7(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), closure_7(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];
+  obj5.children = items4;
+  const items5 = [closure_8(ref, obj5), ];
+  const obj9 = { children: null };
+  const obj10 = { children: null };
+  const obj11 = { variant: "primary", text: null, onPress: null };
   const intl3 = tmp(tmp2[11]).intl;
-  obj7.text = intl3.string(handleLogin(navigation[11]).t.JhDw5o);
-  obj7.onPress = callback;
-  const items6 = [closure_7(handleLogin(navigation[16]).Button, obj7), ];
-  const obj8 = { variant: "secondary", text: null, onPress: null };
+  obj11.text = intl3.string(handleLogin(navigation[11]).t.JhDw5o);
+  obj11.onPress = callback;
+  const items6 = [closure_7(handleLogin(navigation[16]).Button, obj11), ];
+  const obj12 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp(tmp2[11]).intl;
-  obj8.text = intl4.string(handleLogin(navigation[11]).t.v51oiN);
-  obj8.onPress = callback1;
-  items6[1] = closure_7(handleLogin(navigation[16]).Button, obj8);
-  obj6.children = items6;
-  obj5.children = closure_8(handleLogin(navigation[15]).ButtonGroup, obj6);
-  items5[1] = closure_7(ref, obj5);
-  obj.children = items5;
-  obj.children = closure_8(ref, obj);
-  return closure_7(onReset(navigation[12]), obj);
+  obj12.text = intl4.string(handleLogin(navigation[11]).t.v51oiN);
+  obj12.onPress = callback1;
+  items6[1] = closure_7(handleLogin(navigation[16]).Button, obj12);
+  obj10.children = items6;
+  obj9.children = closure_8(handleLogin(navigation[15]).ButtonGroup, obj10);
+  items5[1] = closure_7(ref, obj9);
+  obj4.children = items5;
+  obj3.children = closure_8(ref, obj4);
+  return closure_7(onReset(navigation[12]), obj3);
 };

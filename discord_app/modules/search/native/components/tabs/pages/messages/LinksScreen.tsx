@@ -1,8 +1,8 @@
-// === Module 16814: LinksScreen ===
+// === Module 16816: LinksScreen ===
 
-// Module 16814 (LinksScreen)
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16807 */;
+// Module 16816 (LinksScreen)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16809 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,41 +18,37 @@ export default noop.memo(function LinksScreen(searchContext) {
   let fileOrLinkImageDimensions;
   let placeholderCount;
   ({ isFocused, width } = searchContext);
+  const contentContainerStyles = searchContext(fileOrLinkImageDimensions[3]).useContentContainerStyles();
   let obj = searchContext(fileOrLinkImageDimensions[3]);
-  const contentContainerStyles = obj.useContentContainerStyles();
   let searchMessages = searchContext(fileOrLinkImageDimensions[4]).useSearchMessages(searchContext, tab);
-  const obj2 = searchContext(fileOrLinkImageDimensions[4]);
+  let obj2 = searchContext(fileOrLinkImageDimensions[4]);
   fileOrLinkImageDimensions = searchContext(fileOrLinkImageDimensions[5]).useFileOrLinkImageDimensions(width);
   let obj3 = searchContext(fileOrLinkImageDimensions[5]);
   const onPressMessageItem = searchContext(fileOrLinkImageDimensions[6]).useOnPressMessageItem({ searchContext });
-  const obj4 = searchContext(fileOrLinkImageDimensions[6]);
+  let obj4 = searchContext(fileOrLinkImageDimensions[6]);
   const onPressSearchLink = searchContext(fileOrLinkImageDimensions[6]).useOnPressSearchLink(searchContext);
   let obj5 = searchContext(fileOrLinkImageDimensions[6]);
   const onPressGuildVoiceChannel = searchContext(fileOrLinkImageDimensions[6]).useOnPressGuildVoiceChannel({ searchContext });
   const obj6 = searchContext(fileOrLinkImageDimensions[6]);
-  obj = { searchContext, tab, placeholderHeight: onPressGuildVoiceChannel, numColumns: placeholderCount };
-  const searchMessagesLoadingState = searchContext(fileOrLinkImageDimensions[7]).useSearchMessagesLoadingState(obj);
+  const searchMessagesLoadingState = searchContext(fileOrLinkImageDimensions[7]).useSearchMessagesLoadingState({ searchContext, tab, placeholderHeight: onPressGuildVoiceChannel, numColumns: placeholderCount });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   let items = [onPressMessageItem, searchContext];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const spacing = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
-    const obj = { searchContext, channelId, messageId, index };
-    const result = obj.trackMessageItemPress(obj);
+    const result = BaseMessagesScreen.trackMessageItemPress({ searchContext, channelId, messageId, index });
     onPressMessageItem(channelId, messageId);
   }, items);
   const items1 = [onPressSearchLink, searchContext];
   const callback1 = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId, url, trusted } = arg0);
-    const obj = { searchContext, channelId, messageId, index };
-    const result = obj.trackMessageItemPress(obj);
+    const result = BaseMessagesScreen.trackMessageItemPress({ searchContext, channelId, messageId, index });
     onPressSearchLink(url, trusted);
   }, items1);
   const items2 = [onPressGuildVoiceChannel, searchContext];
   const callback2 = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId, mentionedChannelId } = arg0);
-    const obj = { searchContext, channelId, messageId, index };
-    const result = obj.trackMessageItemPress(obj);
+    const result = BaseMessagesScreen.trackMessageItemPress({ searchContext, channelId, messageId, index });
     onPressGuildVoiceChannel(mentionedChannelId);
   }, items2);
   const items3 = [callback2, callback1, spacing, fileOrLinkImageDimensions, searchMessages, placeholderCount, searchContext];
@@ -66,7 +62,7 @@ export default noop.memo(function LinksScreen(searchContext) {
           const sum = closure_1_1 + index;
           closure_0 = sum;
           const element = { type: onPressSearchLink.LINK, props: null };
-          let obj = {
+          const obj = {
             data,
             onPress(arg0) {
               return closure_2_7(arg0, sum);
@@ -78,10 +74,8 @@ export default noop.memo(function LinksScreen(searchContext) {
               return closure_2_9(arg0, sum);
             },
             imageStyle,
-            containerStyle: null
+            containerStyle: searchContext(fileOrLinkImageDimensions[9]).getGridItemSpacingStyles({ itemIndex: sum, spacing, numColumns: placeholderCount })
           };
-          obj = { itemIndex: sum, spacing, numColumns: placeholderCount };
-          obj.containerStyle = searchContext(fileOrLinkImageDimensions[9]).getGridItemSpacingStyles(obj);
           element.props = obj;
           items.push(element);
         });
@@ -95,22 +89,23 @@ export default noop.memo(function LinksScreen(searchContext) {
         let element = { type: onPressSearchLink.FILE_OR_LINK_PLACEHOLDER, key: null, props: null };
         let _HermesInternal = HermesInternal;
         element.key = "file-or-link-placeholder-" + num;
-        obj = { imageStyle: fileOrLinkImageDimensions, containerStyle: null };
+        let obj2 = { imageStyle: fileOrLinkImageDimensions, containerStyle: null };
         let obj3 = searchContext(fileOrLinkImageDimensions[9]);
-        let obj1 = { itemIndex: length + num, spacing, numColumns: placeholderCount };
-        obj.containerStyle = obj3.getGridItemSpacingStyles(obj1);
-        element.props = obj;
+        let obj4 = { itemIndex: length + num, spacing, numColumns: placeholderCount };
+        obj2.containerStyle = obj3.getGridItemSpacingStyles(obj4);
+        element.props = obj2;
         let arr = items.push(element);
       }
       const obj5 = searchContext(fileOrLinkImageDimensions[10]);
     }
     return items;
   }, items3);
-  obj = { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null };
+  const obj9 = { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null };
   const obj7 = searchContext(fileOrLinkImageDimensions[7]);
-  obj.ItemSeparatorComponent = searchContext(fileOrLinkImageDimensions[11]).CardVerticalSeparator;
-  obj.numColumns = placeholderCount;
-  obj.isFirstPageLoading = isFirstPageLoading;
-  obj.isNextPageLoading = isNextPageLoading;
-  return callback1(searchMessages(fileOrLinkImageDimensions[8]), obj);
+  const obj8 = { searchContext, tab, placeholderHeight: onPressGuildVoiceChannel, numColumns: placeholderCount };
+  obj9.ItemSeparatorComponent = searchContext(fileOrLinkImageDimensions[11]).CardVerticalSeparator;
+  obj9.numColumns = placeholderCount;
+  obj9.isFirstPageLoading = isFirstPageLoading;
+  obj9.isNextPageLoading = isNextPageLoading;
+  return callback1(searchMessages(fileOrLinkImageDimensions[8]), obj9);
 });

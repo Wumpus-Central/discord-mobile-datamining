@@ -4,6 +4,8 @@
 import SteamReleaseStatus from "SteamReleaseStatus" /* 8814 */;
 import GameStore from "GameStore" /* 1916 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Distributors = fn(1074).Distributors;
 const size = fn(2);

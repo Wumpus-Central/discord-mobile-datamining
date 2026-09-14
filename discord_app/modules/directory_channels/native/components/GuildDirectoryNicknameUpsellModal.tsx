@@ -1,10 +1,10 @@
-// === Module 12791: GuildDirectoryNicknameUpsellModal ===
+// === Module 12792: GuildDirectoryNicknameUpsellModal ===
 
-// Module 12791 (GuildDirectoryNicknameUpsellModal)
+// Module 12792 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import GuildIcon from "GuildIcon" /* 5665 */;
@@ -12,13 +12,14 @@ import useInitialValueDefault from "useInitialValue" /* 5679 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6706 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12781 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12790 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12782 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
@@ -46,53 +47,52 @@ function GuildDirectoryNicknameUpsell(arg0) {
     return value;
   };
   const tmp = closure_12();
-  let obj = initialize;
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(_require));
+  const stateFromStores = initialize.useStateFromStores(items, () => GuildStore.getGuild(_require));
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   [obj2, c2] = ref(noop.useState(null), 2);
   const tmp7 = ref(noop.useState(""), 2);
   value = tmp7[0];
   ref = noop.useRef(null);
-  obj = { ref, contentContainerStyle: null, children: null };
+  const obj3 = { ref, contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  obj = { paddingBottom: insets.bottom + nativeDefault.space.PX_16, paddingTop: insets.top };
-  items1[1] = obj;
-  obj.contentContainerStyle = items1;
-  const obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: null };
   const tmp6 = ref(noop.useState(null), 2);
-  obj1.size = GuildIcon.GuildIconSizes.XLARGE;
-  const items2 = [closure_10(GuildIconDefault, obj1), , , , ];
-  obj2 = { style: tmp.header, children: null };
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  items1[1] = { paddingBottom: insets.bottom + nativeDefault.space.PX_16, paddingTop: insets.top };
+  obj3.contentContainerStyle = items1;
+  const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: null };
+  const obj4 = { paddingBottom: insets.bottom + nativeDefault.space.PX_16, paddingTop: insets.top };
+  obj5.size = GuildIcon.GuildIconSizes.XLARGE;
+  const items2 = [closure_10(GuildIconDefault, obj5), , , , ];
+  const obj6 = { style: tmp.header, children: null };
+  const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   let name;
   if (stateFromStores != null) {
     name = stateFromStores.name;
   }
-  obj3.children = intl.format(util.t["d+6kzl"], { guildName: name });
-  const items3 = [closure_10(Text_Text.Text, obj3), ];
-  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj7.children = intl.format(util.t["d+6kzl"], { guildName: name });
+  const items3 = [closure_10(Text_Text.Text, obj7), ];
+  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(util.t.b3L8yx);
-  items3[1] = closure_10(Text_Text.Text, obj4);
-  obj2.children = items3;
-  items2[1] = closure_11(closure_6, obj2);
-  const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
+  obj8.children = intl2.string(util.t.b3L8yx);
+  items3[1] = closure_10(Text_Text.Text, obj8);
+  obj6.children = items3;
+  items2[1] = closure_11(closure_6, obj6);
+  const obj10 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
   const intl3 = util.intl;
-  obj5.label = intl3.string(util.t.ilDlmW);
+  obj10.label = intl3.string(util.t.ilDlmW);
   const intl4 = util.intl;
-  obj5.placeholder = intl4.string(util.t.RfWvWI);
-  obj5.value = value;
-  obj5.onChangeText = tmp7[1];
+  obj10.placeholder = intl4.string(util.t.RfWvWI);
+  obj10.value = value;
+  obj10.onChangeText = tmp7[1];
   ({ input: obj9.style, redesignTextInput: obj9.textStyle } = tmp);
-  obj5.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
+  obj10.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
   let firstFieldErrorMessage;
-  if (obj1 != null) {
-    firstFieldErrorMessage = obj1.getFirstFieldErrorMessage("name");
+  if (obj2 != null) {
+    firstFieldErrorMessage = obj2.getFirstFieldErrorMessage("name");
   }
-  obj5.error = firstFieldErrorMessage;
-  obj5.onFocus = function onFocus() {
+  obj10.error = firstFieldErrorMessage;
+  obj10.onFocus = function onFocus() {
     const timerId = setTimeout(() => {
       const current = ref.current;
       if (current != null) {
@@ -100,7 +100,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  obj5.onBlur = function onBlur() {
+  obj10.onBlur = function onBlur() {
     const timerId = setTimeout(() => {
       const current = ref.current;
       if (current != null) {
@@ -108,13 +108,13 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = closure_10(FreeFormInputGroupDefault, obj5);
+  items2[2] = closure_10(FreeFormInputGroupDefault, obj10);
   items2[3] = closure_10(closure_6, { style: tmp.redesignGrowSpacing });
-  const obj7 = { style: tmp.redesignButtonContainer, children: null };
-  const obj8 = { size: "lg", text: null, onPress: null };
+  const obj12 = { style: tmp.redesignButtonContainer, children: null };
+  const obj22 = { size: "lg", text: null, onPress: null };
   const intl5 = util.intl;
-  obj8.text = intl5.string(util.t.Np4yXU);
-  obj8.onPress = function handleSubmit() {
+  obj22.text = intl5.string(util.t.Np4yXU);
+  obj22.onPress = function handleSubmit() {
     const self = this;
     const apply = closure_5.apply;
     if (typeof apply === "unknown") {
@@ -124,31 +124,25 @@ function GuildDirectoryNicknameUpsell(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj7.children = closure_10(components_Button_Button.Button, obj8);
-  items2[4] = closure_10(closure_6, obj7);
-  obj.children = items2;
-  return closure_11(closure_7, obj);
+  obj12.children = closure_10(components_Button_Button.Button, obj22);
+  items2[4] = closure_10(closure_6, obj12);
+  obj3.children = items2;
+  return closure_11(closure_7, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12780).GuildPrompts;
+const GuildPrompts = fn(12781).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, guildIcon: null, title: null, description: null, header: null, input: null, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-createStyles = { flex: 1, flexGrow: 2, marginTop: fn(5763).NAV_BAR_HEIGHT };
-createStyles.container = createStyles;
-createStyles.guildIcon = { alignSelf: "center", marginTop: 16 };
-createStyles.title = { marginBottom: 8, textAlign: "center" };
-createStyles.description = { textAlign: "center" };
-createStyles.header = { alignItems: "center", justifyContent: "center", padding: 16 };
-createStyles.input = { marginHorizontal: 16 };
-createStyles.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
-let obj1 = { borderRadius: nativeDefault.radii.lg };
-createStyles.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
-const obj2 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
-createStyles.redesignButtonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5763).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5763).NAV_BAR_HEIGHT };
+obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
+let obj4 = { borderRadius: nativeDefault.radii.lg };
+obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+let obj5 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+obj2.redesignButtonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_12 = createStyles.createStyles(obj2);
 const UPSELL_SCREEN_KEY = "UPSELL_SCREEN_KEY";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx");
@@ -164,7 +158,7 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
         GuildDirectoryNicknameUpsellModalActionCreatorsDefault.close();
       }
       let obj = {};
-      obj = {
+      const obj2 = {
         fullscreen: true,
         headerLeft: NavigatorHeader.getHeaderCloseButton(handleClose),
         headerTitle() {
@@ -174,7 +168,7 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
           return closure_2_10(GuildDirectoryNicknameUpsell, { guildId, handleClose });
         }
       };
-      obj[UPSELL_SCREEN_KEY] = obj;
+      obj[UPSELL_SCREEN_KEY] = obj2;
       return obj;
     }),
     initialRouteName: UPSELL_SCREEN_KEY

@@ -1,6 +1,6 @@
-// === Module 15888: UserSettingsDesignSystemSheets ===
+// === Module 15890: UserSettingsDesignSystemSheets ===
 
-// Module 15888 (UserSettingsDesignSystemSheets)
+// Module 15890 (UserSettingsDesignSystemSheets)
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -12,24 +12,24 @@ import TextInput from "TextInput" /* 6707 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import ActionSheetRow from "ActionSheetRow" /* 7302 */;
-import PromoSheet from "PromoSheet" /* 10358 */;
+import PromoSheet from "PromoSheet" /* 10359 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function DemoActionSheet() {
-  [tmp2, tmp3] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, tmp3] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   const first = tmp4[0];
   const tmp6 = _slicedToArray(noop.useState("Header title"), 2);
   const first1 = tmp6[0];
   const tmp = _slicedToArray(noop.useState(false), 2);
-  [tmp9, tmp10] = _slicedToArray(noop.useState("Header subtitle"), 2);
+  [tmp9, tmp10] = noop.useState("Header subtitle");
   require = tmp10;
   const tmp8 = _slicedToArray(noop.useState("Header subtitle"), 2);
-  [tmp12, tmp13] = _slicedToArray(noop.useState("Reset"), 2);
+  [tmp12, tmp13] = noop.useState("Reset");
   importDefault = tmp13;
-  let obj = { title: first1, subtitle: null, leading: null, trailing: null };
+  const obj = { title: first1, subtitle: null, leading: null, trailing: null };
   let tmp17;
   if ("" !== tmp9) {
     tmp17 = tmp9;
@@ -37,19 +37,19 @@ function DemoActionSheet() {
   obj.subtitle = tmp17;
   let tmp14Result = first;
   if (first) {
-    obj = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9848).ActionSheetHeaderPressableText, obj);
+    const obj2 = { onPress: NOOP, label: tmp12 };
+    tmp14Result = React5(tmp15(9848).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
-  tmp14Result = tmp2;
+  let tmp14Result2 = tmp2;
   if (tmp2) {
-    obj = { onPress: NOOP };
-    tmp14Result = React5(tmp15(7301).ActionSheetCloseButton, obj);
+    const obj3 = { onPress: NOOP };
+    tmp14Result2 = React5(tmp15(7301).ActionSheetCloseButton, obj3);
   }
-  const obj1 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
-  obj.trailing = tmp14Result;
-  const obj2 = { spacing: 24, children: null };
-  const obj3 = { children: null };
+  const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
+  obj.trailing = tmp14Result2;
+  const obj5 = { spacing: 24, children: null };
+  const obj6 = { children: null };
   const items = [
     React5(TextInput.TextInput, { value: first1, onChange: tmp6[1], label: "Title" }),
     React5(TextInput.TextInput, {
@@ -63,12 +63,12 @@ function DemoActionSheet() {
       }
     })
   ];
-  obj3.children = items;
-  const items1 = [React6(Stack_Stack.Stack, obj3), , ];
-  const obj5 = { hasIcons: false, children: null };
+  obj6.children = items;
+  const items1 = [React6(Stack_Stack.Stack, obj6), , ];
+  const obj8 = { hasIcons: false, children: null };
   const items2 = [React5(ActionSheetRow.ActionSheetSwitchRow, { value: first, onValueChange: tmp4[1], label: "Show Leading" }), React5(ActionSheetRow.ActionSheetSwitchRow, { value: tmp2, onValueChange: tmp3, label: "Show Trailing" })];
-  obj5.children = items2;
-  items1[1] = React6(ActionSheetRow.ActionSheetRow.Group, obj5);
+  obj8.children = items2;
+  items1[1] = React6(ActionSheetRow.ActionSheetRow.Group, obj8);
   items1[2] = React5(TextInput.TextInput, {
     value: tmp12,
     onChange: tmp13,
@@ -79,15 +79,15 @@ function DemoActionSheet() {
       return tmp13("");
     }
   });
-  obj2.children = items1;
-  obj1.children = React6(Stack_Stack.Stack, obj2);
-  return React5(ActionSheet.ActionSheet, obj1);
+  obj5.children = items1;
+  obj4.children = React6(Stack_Stack.Stack, obj5);
+  return React5(ActionSheet.ActionSheet, obj4);
 }
 function showDemoPromoSheet() {
   ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(DemoPromoSheet), "promo-sheet-demo");
 }
 function DemoPromoSheet() {
-  let obj = {
+  const obj = {
     size: "lg",
     onPress() {
       return ActionSheetActionCreatorsDefault.hideActionSheet("promo-sheet-demo");
@@ -96,13 +96,13 @@ function DemoPromoSheet() {
   };
   const intl = util.intl;
   obj.text = intl.string(util.t.BddRzS);
-  obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-  obj = { type: "image", src: null, aspectRatio: "16/9" };
+  const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
+  const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj.src = { uri: _modDef5915 };
-  obj.graphic = obj;
-  obj.actions = tmp;
-  return React5(PromoSheet.PromoSheet, obj);
+  obj3.src = { uri: _modDef5915 };
+  obj2.graphic = obj3;
+  obj2.actions = tmp;
+  return React5(PromoSheet.PromoSheet, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1074).NOOP;
@@ -114,10 +114,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");
 
 export default function UserSettingsDesignSystemSheets() {
-  let obj = { contentContainerStyle: closure_9().container, children: null };
-  obj = { children: null };
-  obj = { children: null };
-  const obj1 = { children: null };
+  const obj = { contentContainerStyle: closure_9().container, children: null };
+  const obj2 = { children: null };
+  const obj3 = { children: null };
+  const obj4 = { children: null };
   const items = [
     React5(Text_Text.Text, { variant: "text-lg/bold", children: "Action Sheet with Title Header" }),
     React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "An action sheet with a centered title and subtitle, with optional leading and Trailing elements." }),
@@ -128,16 +128,16 @@ export default function UserSettingsDesignSystemSheets() {
       text: "Show Action Sheet"
     })
   ];
-  obj1.children = items;
-  obj.children = React6(Stack_Stack.Stack, obj1);
-  const items1 = [React5(Card.Card, obj), ];
-  const obj3 = { children: null };
-  const obj4 = { children: null };
-  const items2 = [React5(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), React5(components_Button_Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" })];
-  obj4.children = items2;
+  obj4.children = items;
   obj3.children = React6(Stack_Stack.Stack, obj4);
-  items1[1] = React5(Card.Card, obj3);
-  obj.children = items1;
-  obj.children = React6(Stack_Stack.Stack, obj);
+  const items1 = [React5(Card.Card, obj3), ];
+  const obj6 = { children: null };
+  const obj7 = { children: null };
+  const items2 = [React5(Text_Text.Text, { variant: "text-lg/bold", children: "Promo Sheet" }), React5(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "A sheet with an illustration, title, description, and actions." }), React5(components_Button_Button.Button, { onPress: showDemoPromoSheet, text: "Show Promo Sheet" })];
+  obj7.children = items2;
+  obj6.children = React6(Stack_Stack.Stack, obj7);
+  items1[1] = React5(Card.Card, obj6);
+  obj2.children = items1;
+  obj.children = React6(Stack_Stack.Stack, obj2);
   return React5(ScrollView, obj);
 };

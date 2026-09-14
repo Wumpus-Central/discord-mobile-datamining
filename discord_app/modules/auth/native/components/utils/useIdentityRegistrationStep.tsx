@@ -1,16 +1,18 @@
-// === Module 16051: useIdentityRegistrationStep ===
+// === Module 16053: useIdentityRegistrationStep ===
 
-// Module 16051 (useIdentityRegistrationStep)
+// Module 16053 (useIdentityRegistrationStep)
 import util from "util" /* 1114 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16042);
+const RegistrationConstants = fn(16044);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1074).AbortCodes;
 const size = fn(2);
@@ -19,8 +21,7 @@ const result = size.fileFinishedImporting("modules/auth/native/components/utils/
 export const useIdentityRegistrationStep = function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
   _require = REGISTER_IDENTITY;
   importDefault = inputMode;
-  let obj = require("useNavigation");
-  navigation = obj.useNavigation();
+  navigation = require("useNavigation").useNavigation();
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = loginEmail(noop.useState(""), 2);
   loginEmail = tmp4[0];
@@ -51,8 +52,8 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -65,8 +66,8 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_130_0 = sourceState;
               closure_130_1 = undefined;
@@ -75,15 +76,15 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               closure_130_4 = undefined;
               const sum = ref.current + c6;
               closure_130_1 = sum;
-              let obj1 = { email: "Array", phone: sum };
-              v3(obj1);
+              const obj7 = { email: "Array", phone: sum };
+              v3(obj7);
               closure_130_2 = closure_9(sourceState);
               ref = 1;
-              const obj2 = { phone: sum };
+              const obj8 = { phone: sum };
               c6 = 2;
               c7 = 1;
-              let obj3 = { value: sourceState(navigation[9]).registerPhone(obj2), done: false };
-              return obj3;
+              const obj9 = { value: sourceState(navigation[9]).registerPhone(obj8), done: false };
+              return obj9;
             }
           } else if (1 === tmp8) {
             ref = 0;
@@ -92,8 +93,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               c7 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              obj1 = sourceState(navigation[11]);
-              authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(closure_130_5);
+              authenticationErrorsFromAPIError = sourceState(navigation[11]).getAuthenticationErrorsFromAPIError(closure_130_5);
               first1(authenticationErrorsFromAPIError);
               const _Object = Object;
               const keys = Object.keys(authenticationErrorsFromAPIError);
@@ -107,23 +107,24 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
                   tmp30 = null != authenticationErrorsFromAPIError.message;
                 }
                 if (tmp30) {
-                  let obj4 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
-                  obj3 = sourceState(navigation[12]);
-                  let items = [obj3.getCommonErrorDetails(authenticationErrorsFromAPIError.error_code)];
-                  obj4.details = items;
-                  tmp3(obj4);
+                  const obj10 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+                  let items = [sourceState(navigation[12]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code)];
+                  obj10.details = items;
+                  tmp3(obj10);
+                  let obj4 = sourceState(navigation[12]);
                 }
                 c7 = 3;
               }
-              let obj5 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+              const obj11 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
               let phone = 0;
               const items1 = [];
               phone = HermesBuiltin.arraySpread(closure_130_4, 0);
-              obj5 = sourceState(navigation[12]);
-              items1[phone] = obj5.getCommonErrorDetails(authenticationErrorsFromAPIError.error_code);
+              let obj2 = sourceState(navigation[11]);
+              items1[phone] = sourceState(navigation[12]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code);
               phone = phone + 1;
-              obj5.details = items1;
-              tmp3(obj5);
+              obj11.details = items1;
+              tmp3(obj11);
+              const obj6 = sourceState(navigation[12]);
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -131,36 +132,36 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
           } else if (arg0 === 2) {
             ref = 0;
             c7 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
-            const obj6 = { step: closure_130_2, toStep: constants.PHONE_VERIFICATION, actionType: constants2.SUCCESS };
-            tmp3(obj6);
+            const obj12 = { step: closure_130_2, toStep: constants.PHONE_VERIFICATION, actionType: constants2.SUCCESS };
+            tmp3(obj12);
             ref = 0;
-            const obj7 = { title: null, description: null, phone: null, sourceState: null, onPhoneTokenReceived: null, onBail: null };
+            const obj13 = { title: null, description: null, phone: null, sourceState: null, onPhoneTokenReceived: null, onBail: null };
             const intl = sourceState(navigation[8]).intl;
-            obj7.title = intl.string(sourceState(navigation[8]).t.h7hdQh);
+            obj13.title = intl.string(sourceState(navigation[8]).t.h7hdQh);
             const intl2 = sourceState(navigation[8]).intl;
-            const obj8 = { phone: closure_130_1 };
-            obj7.description = intl2.formatToPlainString(sourceState(navigation[8]).t.e5WzVa, obj8);
-            obj7.phone = closure_130_1;
-            obj7.sourceState = sourceState;
-            obj7.onPhoneTokenReceived = function onPhoneTokenReceived(phoneToken) {
-              let obj = { email: "r", phone, phoneToken };
+            const obj15 = { phone: closure_130_1 };
+            obj13.description = intl2.formatToPlainString(sourceState(navigation[8]).t.e5WzVa, obj15);
+            obj13.phone = closure_130_1;
+            obj13.sourceState = sourceState;
+            obj13.onPhoneTokenReceived = function onPhoneTokenReceived(phoneToken) {
+              const obj = { email: "r", phone, phoneToken };
               closure_7(obj);
-              obj = { step: constants.PHONE_VERIFICATION, toStep: closure_0(navigation[14]).getNextRegistrationTransitionStep(closure_0), actionType: constants2.SUCCESS };
-              closure_3(obj);
+              const obj2 = { step: constants.PHONE_VERIFICATION, toStep: closure_0(navigation[14]).getNextRegistrationTransitionStep(closure_0), actionType: constants2.SUCCESS };
+              closure_3(obj2);
               const obj3 = closure_0(navigation[14]);
               const nextAuthState = closure_0(navigation[14]).getNextAuthState(closure_0);
               const obj4 = closure_0(navigation[14]);
               closure_2.dispatch(closure_0(navigation[15]).StackActions.replace(nextAuthState));
             };
-            obj7.onBail = function onBail() {
+            obj13.onBail = function onBail() {
               c7("");
               closure_2.pop();
               sourceState();
             };
-            tmp5.push(sourceState(navigation[13]).AuthStates.VERIFY_PHONE, obj7);
+            tmp5.push(sourceState(navigation[13]).AuthStates.VERIFY_PHONE, obj13);
             c7 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -206,7 +207,8 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     }
     return tmp2;
   }, items2);
-  obj = {
+  let obj = require("useNavigation");
+  return {
     loginEmail,
     setLoginEmail: tmp4[1],
     loginPhone: first1,
@@ -215,7 +217,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     registerAndVerifyPhone: callback1,
     preventSubmitIdentity: memo1,
     identityError: tmp13,
-    validateEmail: obj2.useCallback(() => {
+    validateEmail: noop.useCallback(() => {
       let stringResult = null;
       if (!obj.isEmail(first)) {
         const intl = util.intl;
@@ -224,5 +226,4 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
       return stringResult;
     }, items3)
   };
-  return obj;
 };

@@ -15,11 +15,11 @@ export default function getPricesFromServer(arg0) {
     const entries = Object.entries(arg0);
     reduced = entries.reduce((acc, item) => {
       [tmp, tmp2] = item;
-      let obj = { countryPrices: null, paymentSourcePrices: null };
-      obj = { countryCode: tmp2.country_prices.country_code, prices: null };
+      const obj = { countryPrices: null, paymentSourcePrices: null };
+      const obj2 = { countryCode: tmp2.country_prices.country_code, prices: null };
       const prices = tmp2.country_prices.prices;
-      obj.prices = prices.map((item) => closure_1_0(item, true));
-      obj.countryPrices = obj;
+      obj2.prices = prices.map((item) => closure_1_0(item, true));
+      obj.countryPrices = obj2;
       obj.paymentSourcePrices = {};
       acc[tmp] = obj;
       return acc;

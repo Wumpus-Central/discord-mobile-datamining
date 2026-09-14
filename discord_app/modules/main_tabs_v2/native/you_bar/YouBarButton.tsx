@@ -1,6 +1,6 @@
-// === Module 16487: YouBarButton ===
+// === Module 16489: YouBarButton ===
 
-// Module 16487 (YouBarButton)
+// Module 16489 (YouBarButton)
 import nativeDefault from "native" /* 576 */;
 import IconButton from "IconButton" /* 8202 */;
 import ClipView from "ClipView" /* 8940 */;
@@ -58,20 +58,20 @@ class YouBarButtonIcon {
       return size;
     }, items);
     badgeSize = memo;
-    obj = { size: tmp, badgeSize: 8 };
+    obj1 = { size: tmp, badgeSize: 8 };
     size = undefined;
     badgeSize = undefined;
     c2 = undefined;
     c3 = undefined;
-    size2 = obj.size;
+    size2 = obj1.size;
     size = size2;
-    badgeSize = obj.badgeSize;
-    num3 = obj.xOffset;
+    badgeSize = obj1.badgeSize;
+    num3 = obj1.xOffset;
     if (num3 === undefined) {
       num3 = 0;
     }
     c2 = num3;
-    num4 = obj.yOffset;
+    num4 = obj1.yOffset;
     if (num4 === undefined) {
       num4 = 0;
     }
@@ -85,10 +85,10 @@ class YouBarButtonIcon {
     items2[0] = memo;
     items2[1] = hasBadge;
     memo1 = obj2.useMemo(() => {
-      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "c", padding: "key", minWidth: "ind" };
+      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "call", bottom: "Map", padding: "WireType", minWidth: "accessible" };
       return rect;
     }, items1);
-    obj1 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
+    obj6 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
     memo2 = obj2.useMemo(() => {
       if (size2) {
         const items = [badgeSize];
@@ -106,14 +106,14 @@ class YouBarButtonIcon {
     items3 = [, ];
     items3[0] = jsx(badgeSize(c2[6]), { cutouts: memo2, children: icon });
     if (hasBadge) {
-      obj2 = { style: null, size: 8, badgeStyle: null };
-      obj2.style = memo1;
-      obj2.badgeStyle = badgeStyle;
-      hasBadge = tmp7(tmp8(tmp9[7]), obj2);
+      obj7 = { style: null, size: 8, badgeStyle: null };
+      obj7.style = memo1;
+      obj7.badgeStyle = badgeStyle;
+      hasBadge = tmp7(tmp8(tmp9[7]), obj7);
     }
     items3[1] = hasBadge;
-    obj1.children = items3;
-    return tmp5(tmp6, obj1);
+    obj6.children = items3;
+    return tmp5(tmp6, obj6);
   }
 }
 class YouBarButtonContainer {
@@ -123,28 +123,32 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15178);
+const YouBarConstants = fn(15179);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { buttonContainer: null };
-obj = { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
-obj.buttonContainer = obj;
+let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
 const React7 = createStyles.createStyles(obj);
+let obj3 = { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
 
 export default noop.memo(function YouBarButton(arg0) {
   ({ hasNameplate, icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = arg0);
-  let obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
+  const obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str = "tertiary";
   if (hasNameplate) {
     str = "secondary-overlay";
   }
-  obj = { children: null, variant: str, icon: React5(YouBarButtonIcon, { icon, badgeStyle, hasBadge }), onPress, onLongPress, hitSlop };
-  obj.children = React5(IconButton.IconButton, obj);
-  return React5(YouBarButtonContainer, obj);
+  const obj2 = { children: null };
+  obj.variant = str;
+  obj.icon = React5(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
+  obj.onPress = onPress;
+  obj.onLongPress = onLongPress;
+  obj.hitSlop = hitSlop;
+  obj2.children = React5(IconButton.IconButton, obj);
+  return React5(YouBarButtonContainer, obj2);
 });
 export { YouBarButtonIcon };
 export { YouBarButtonContainer };

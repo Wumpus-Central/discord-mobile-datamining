@@ -1,8 +1,8 @@
-// === Module 13886: Timer ===
+// === Module 13887: Timer ===
 
-// Module 13886 (Timer)
+// Module 13887 (Timer)
 import _modDef12 from "module_12" /* 12 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,10 +123,9 @@ prototype["render"] = function render() {
   ({ seconds, minutes, hours } = state);
   ({ style, hideMinutes } = props);
   if (!props.hideHours) {
-    let obj = _modDef12;
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + obj.padStart(String(hours), 2, "0") + ":";
+    let str = "" + _modDef12.padStart(String(hours), 2, "0") + ":";
   } else {
     str = "";
   }
@@ -143,9 +142,9 @@ prototype["render"] = function render() {
   } else {
     padStartResult = seconds;
   }
-  obj = { style, accessibilityRole: "timer", children: null };
+  const obj4 = { style, accessibilityRole: "timer", children: null };
   const items = [str, str5, padStartResult];
-  obj.children = items;
+  obj4.children = items;
   return jsxs(native.LegacyText, { style, accessibilityRole: "timer", children: null });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };

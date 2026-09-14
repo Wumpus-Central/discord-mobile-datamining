@@ -1,9 +1,8 @@
-// === Module 12391: ChatInputAccessibilityDivider ===
+// === Module 12392: ChatInputAccessibilityDivider ===
 
-// Module 12391 (ChatInputAccessibilityDivider)
+// Module 12392 (ChatInputAccessibilityDivider)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,16 +13,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
 
 export const ChatInputAccessibilityDivider = noop.memo(() => {
-  let obj = useIsScreenReaderEnabled;
   let tmp3 = null;
   if (obj.useIsScreenReaderEnabled()) {
     tmp3 = null;
     if (!tmpResult.isAndroid()) {
-      obj = { nativeID: "chat-input-accessibility-divider", accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null };
+      const obj2 = { nativeID: "chat-input-accessibility-divider", accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t["uKZtC/"]);
+      obj2.accessibilityLabel = intl.string(util.t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
-      obj.style = items;
+      obj2.style = items;
       tmp3 = <React3 nativeID="chat-input-accessibility-divider" accessible accessibilityLabel={null} accessibilityRole="header" style={null} />;
     }
     tmpResult = PlatformUtils;

@@ -1,6 +1,6 @@
-// === Module 12890: ThreadBrowserHooks ===
+// === Module 12891: ThreadBrowserHooks ===
 
-// Module 12890 (ThreadBrowserHooks)
+// Module 12891 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
@@ -14,8 +14,10 @@ import ActiveThreadsStore from "ActiveThreadsStore" /* 5588 */;
 import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7868 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 
+const require = globalThis.__r;
+
 require = fn;
-let closure_5 = fn(12891).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12892).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");
@@ -50,11 +52,10 @@ export const useActiveThreadIds = function useActiveThreadIds(arg0) {
 };
 export const useActiveThreads = function useActiveThreads(channel) {
   closure_129_0 = channel;
-  let obj = memo(504);
   const items = [PermissionStore, ActiveThreadsStore, ChannelStore];
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = memo(504).useStateFromStoresArray(items, () => {
     const values = _modDef12(ActiveThreadsStore.getThreadsForParent(memo.guild_id, memo.id)).values();
     const mapped = values.map((id) => channel.getChannel(id.id));
     const found = mapped.filter(GlobalUtils.isNotNullish);
@@ -72,11 +73,11 @@ export const useActiveThreads = function useActiveThreads(channel) {
     let obj = _modDef12(closure_1_1);
     return sorted.reverse().value();
   }, items2);
+  let obj = memo(504);
   const items3 = [JoinedThreadsStore];
   const items4 = [memo];
   const tmp3 = _slicedToArray(memo(504).useStateFromStores(items3, () => _modDef12.partition(memo, (id) => closure_1_11.hasJoined(id)), items4, memo(504).statesWillNeverBeEqual), 2);
-  obj = { joinedThreadIds: tmp3[0], unjoinedThreadIds: tmp3[1] };
-  return obj;
+  return { joinedThreadIds: tmp3[0], unjoinedThreadIds: tmp3[1] };
 };
 export const useActiveGuildThreads = function useActiveGuildThreads(arg0) {
   _require = arg0;
@@ -110,9 +111,8 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   const result = channel.isModeratorReportChannel();
   noop = result;
   showResolvedFlags = showResolvedFlags(channel.id).showResolvedFlags;
-  let obj = require("initialize");
   const items = [ArchivedThreadsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ loading: ArchivedThreadsStore.isLoading(user.id, closure_1, closure_2, closure_3), isInitialLoad: ArchivedThreadsStore.getIsInitialLoad(user.id, closure_1, closure_2, closure_3), canLoadMore: ArchivedThreadsStore.getCanLoadMore(user.id, closure_1, closure_2, closure_3), nextOffset: ArchivedThreadsStore.getNextOffset(user.id, closure_1, closure_2, closure_3) }));
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ loading: ArchivedThreadsStore.isLoading(user.id, closure_1, closure_2, closure_3), isInitialLoad: ArchivedThreadsStore.getIsInitialLoad(user.id, closure_1, closure_2, closure_3), canLoadMore: ArchivedThreadsStore.getCanLoadMore(user.id, closure_1, closure_2, closure_3), nextOffset: ArchivedThreadsStore.getNextOffset(user.id, closure_1, closure_2, closure_3) }));
   ({ loading, nextOffset } = stateFromStoresObject);
   const isInitialLoad = stateFromStoresObject.isInitialLoad;
   const items1 = [channel, LATEST_ACTIVITY, loadMore, MATCH_SOME, nextOffset, showResolvedFlags, result];
@@ -127,13 +127,13 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
       tmp3 = tmp4;
     }
     if (!tmp3) {
-      const obj = { guildId: null, channelId: null, sortOrder: null, tagFilter: null, tagSetting: null, offset: null };
+      const obj3 = { guildId: null, channelId: null, sortOrder: null, tagFilter: null, tagSetting: null, offset: null };
       ({ guild_id: obj2.guildId, id: obj2.channelId } = closure_0);
-      obj.sortOrder = sortOrder;
-      obj.tagFilter = tagFilter;
-      obj.tagSetting = tagSetting;
-      obj.offset = nextOffset;
-      const archivedThreads = obj.loadArchivedThreads(obj);
+      obj3.sortOrder = sortOrder;
+      obj3.tagFilter = tagFilter;
+      obj3.tagSetting = tagSetting;
+      obj3.offset = nextOffset;
+      const archivedThreads = ThreadActionCreatorsDefault.loadArchivedThreads(obj3);
     }
   }, items1);
   noop.useRef(loadMore);
@@ -150,9 +150,10 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   const effect2 = noop.useEffect(() => {
     ForumActionCreatorsDefault.resort(user.id);
   }, items3);
-  obj = { threadIds: null, canLoadMore: stateFromStoresObject.canLoadMore, loading: null, loadMore: null };
+  const obj2 = { threadIds: null, canLoadMore: null, loading: null, loadMore: null };
+  let obj = require("initialize");
   const items4 = [ArchivedThreadsStore, nextOffset, isInitialLoad];
-  obj.threadIds = require("initialize").useStateFromStoresArray(items4, () => {
+  obj2.threadIds = require("initialize").useStateFromStoresArray(items4, () => {
     const tmpResult = _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3));
     return _modDef12(ArchivedThreadsStore.getThreads(user.id, closure_1, closure_2, closure_3)).filter((item) => {
       if (closure_1_4) {
@@ -171,6 +172,7 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
       return canResult;
     }).value();
   });
+  obj2.canLoadMore = stateFromStoresObject.canLoadMore;
   if (!loading) {
     loading = isInitialLoad;
   }
@@ -180,7 +182,7 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   if (loading) {
     loading = isInitialLoad.can(Permissions.READ_MESSAGE_HISTORY, channel);
   }
-  obj.loading = loading;
-  obj.loadMore = loadMore;
-  return obj;
+  obj2.loading = loading;
+  obj2.loadMore = loadMore;
+  return obj2;
 };

@@ -1,11 +1,12 @@
 // === Module 6697: PushNotificationConstants ===
 
 // Module 6697 (PushNotificationConstants)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import ClientInfoUtils_mod from "ClientInfoUtils" /* 1362 */;
+import MetaQuestUtils_mod from "MetaQuestUtils" /* 1608 */;
 import size from "module_2" /* 2 */;
 
+let ClientInfoUtils = ClientInfoUtils_mod;
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let str;
 if (ClientInfoUtils != null) {
@@ -14,6 +15,7 @@ if (ClientInfoUtils != null) {
 if (str == null) {
   str = "";
 }
+let MetaQuestUtils = MetaQuestUtils_mod;
 MetaQuestUtils = MetaQuestUtils.isQuestRelease();
 const startsWithResult = str.startsWith("com.discord.kodiak");
 const startsWithResult1 = str.startsWith("com.hammerandchisel.discord.local");

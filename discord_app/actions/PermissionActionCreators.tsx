@@ -1,6 +1,6 @@
-// === Module 17031: PermissionActionCreators ===
+// === Module 17033: PermissionActionCreators ===
 
-// Module 17031 (PermissionActionCreators)
+// Module 17033 (PermissionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -21,14 +21,12 @@ export default {
     DispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_PTT_ADMIN_WARNING" });
   },
   requestElevatedProcess(pid) {
-    const obj = { type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid });
   },
   clearElevatedProcess() {
     DispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_ELEVATED_PROCESS" });
   },
   continueNonelevatedProcess(pid) {
-    const obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid });
   }
 };

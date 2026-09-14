@@ -1,12 +1,14 @@
-// === Module 14849: AccountStandingSetting ===
+// === Module 14850: AccountStandingSetting ===
 
-// Module 14849 (AccountStandingSetting)
+// Module 14850 (AccountStandingSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 14850 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 14851 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

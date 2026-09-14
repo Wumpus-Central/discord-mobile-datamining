@@ -1,13 +1,15 @@
-// === Module 10932: NativeCheckoutStoreProvider ===
+// === Module 10933: NativeCheckoutStoreProvider ===
 
-// Module 10932 (NativeCheckoutStoreProvider)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10936 */;
+// Module 10933 (NativeCheckoutStoreProvider)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function NativeCheckoutStoreProvider(children) {
@@ -19,13 +21,12 @@ function NativeCheckoutStoreProvider(children) {
       id = order.id;
     }
     if (id == null) {
-      let obj = v1;
-      id = obj.v4();
+      id = v1.v4();
     }
-    obj = { message: "Checkout session ID: " + id };
-    SentryUtilsDefault.addBreadcrumb(obj);
-    obj = { loadId: id, startTime: Date.now() };
-    return obj;
+    const obj2 = SentryUtilsDefault;
+    obj2.addBreadcrumb({ message: "Checkout session ID: " + id });
+    const obj3 = { message: "Checkout session ID: " + id };
+    return { loadId: id, startTime: Date.now() };
   });
   redux = order(5679)(() => {
     const obj = {};
@@ -37,12 +38,11 @@ function NativeCheckoutStoreProvider(children) {
   value = _slicedToArray(noop.useState(() => React5({ order, checkoutInitParameters, contextMetadata, analyticsFields, paymentGateway: dependencyMap, orderRequired, onOrderRetryCancellation, initialSubscriptionFacet })), 1)[0];
   order(5073)(() => {
     if (null != View) {
-      let obj = PaymentFlowStartedTriggerPoint;
-      const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
-      obj = {};
+      const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
+      const obj3 = {};
       const merged = Object.assign(closure_9);
-      obj.initial_step = initial_step;
-      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj);
+      obj3.initial_step = initial_step;
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj3);
       return () => {
         state = state.getState();
         ({ checkoutSucceeded, purchaseInFlight } = state);
@@ -53,8 +53,8 @@ function NativeCheckoutStoreProvider(children) {
           checkoutSucceeded = purchaseInFlight;
         }
         if (!checkoutSucceeded) {
-          order(1242).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-          const obj = order(1242);
+          order(1240).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+          const obj = order(1240);
         }
       };
     }
@@ -77,12 +77,12 @@ function NativeCheckoutStoreProvider(children) {
     state = state.getState();
     const orderRecord = state.orderRecord;
     if (null != orderRecord) {
-      checkoutInitParameters(10940);
-      let obj = { checkoutSucceeded: tmp2, order: null };
-      obj = { id: null, status: null };
+      const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
-      obj.order = obj;
-      obj.discardDraftOrder(obj);
+      obj2.order = { id: null, status: null };
+      checkoutInitParameters(10941).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10941);
+      const obj5 = { id: null, status: null };
     }
   }, items1);
   return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
@@ -119,7 +119,6 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   let callback;
   let callback1;
   ({ checkoutAnalyticsFields, analyticsInitialStep } = orderRequired);
-  let obj = defaultPlans;
   let tmp = mobileStoreFront();
   [tmp3, c9] = activeSubscription(defaultPlans.useState(null), 2);
   const tmp4 = activeSubscription(defaultPlans.useState(orderRequired), 2);
@@ -140,8 +139,9 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       }
     }
   }
-  let obj1 = require("hooks/NativePaymentHooks");
-  mobileStoreFront = obj1.useMobileStoreFront();
+  const tmp6 = paymentGateway(isGift[9]);
+  const tmp9 = _require;
+  mobileStoreFront = require("hooks/NativePaymentHooks").useMobileStoreFront();
   const effect = obj.useEffect(() => {
     paymentGateway(isGift[11]).dispatch({ type: "IAP_CHECKOUT_START" });
     return () => {
@@ -149,12 +149,12 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     };
   }, []);
   onOrderCreated(function*(arg0) {
-    const obj2 = { orderLineItems: closure_129_0, paymentGateway, isGift, subscriptionFacet: closure_129_1, externalGatewayFacet, countryCode: null };
+    const obj5 = { orderLineItems: closure_129_0, paymentGateway, isGift, subscriptionFacet: closure_129_1, externalGatewayFacet, countryCode: null };
     if (country != null) {
       country = country.country;
     }
-    obj2.countryCode = country;
-    yield closure_0(isGift[12]).createOrder(obj2);
+    obj5.countryCode = country;
+    yield closure_0(isGift[12]).createOrder(obj5);
     closure_129_2 = value;
     _undefined(closure_129_2);
     if (null != v2) {
@@ -221,31 +221,31 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
             const items1 = [];
             HermesBuiltin.arraySpread(defaultPlans.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
             HermesBuiltin.apply(items1, items);
-            let obj = { subscription_preview: null };
-            obj = { currency: null, country_code: null };
+            const obj2 = { subscription_preview: null };
+            const obj4 = { currency: null, country_code: null };
             ({ currency: obj3.currency, country } = country);
-            obj.country_code = country;
-            obj.subscription_preview = obj;
+            obj4.country_code = country;
+            obj2.subscription_preview = obj4;
             if (null != activeSubscription) {
-              obj.subscription_id = activeSubscription.id;
+              obj2.subscription_id = activeSubscription.id;
             }
             let tmp15 = null != initialSubscriptionFacet;
             if (tmp15) {
               tmp15 = null != initialSubscriptionFacet.subscription_preview.subscription_trial_id;
             }
-            let tmp5 = obj;
+            let tmp5 = obj2;
             if (tmp15) {
-              obj.subscription_preview.subscription_trial_id = initialSubscriptionFacet.subscription_preview.subscription_trial_id;
-              tmp5 = obj;
+              obj2.subscription_preview.subscription_trial_id = initialSubscriptionFacet.subscription_preview.subscription_trial_id;
+              tmp5 = obj2;
             }
           } else if (null != sku_id) {
-            obj = { sku_id, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
+            const obj = { sku_id, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
             items.push(obj);
           }
           tmp.current = true;
           tmp = callback1;
-          const obj1 = { orderLineItems: items, subscriptionFacet: tmp5 };
-          callback1(obj1);
+          const obj7 = { orderLineItems: items, subscriptionFacet: tmp5 };
+          callback1(obj7);
         }
       }
     }
@@ -253,22 +253,22 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   if (tmp4[0]) {
     let tmp18 = null;
     if (!flag) {
-      obj = { style: tmp.loadingSpinnerContainer, children: jsx(require("ActivityIndicator/ActivityIndicator").ActivityIndicator, { animating: true, size: "large" }) };
-      tmp18 = <onOrderRetryCancellation style={tmp.loadingSpinnerContainer}>{jsx(require("ActivityIndicator/ActivityIndicator").ActivityIndicator, { animating: true, size: "large" })}</onOrderRetryCancellation>;
+      const obj3 = { style: tmp.loadingSpinnerContainer, children: jsx(tmp9(tmp5[14]).ActivityIndicator, { animating: true, size: "large" }) };
+      tmp18 = <onOrderRetryCancellation style={tmp.loadingSpinnerContainer}>{jsx(tmp9(tmp5[14]).ActivityIndicator, { animating: true, size: "large" })}</onOrderRetryCancellation>;
     }
     let tmp17 = tmp18;
   } else {
-    obj = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, checkoutAnalyticsFields: null, analyticsInitialStep: null, children: null };
-    obj1 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
-    obj.checkoutInitParameters = obj1;
-    obj.order = tmp3;
-    obj.paymentGateway = paymentGateway;
-    obj.onOrderRetryCancellation = onOrderRetryCancellation;
-    obj.orderRequired = orderRequired;
-    obj.initialSubscriptionFacet = initialSubscriptionFacet;
-    obj.checkoutAnalyticsFields = checkoutAnalyticsFields;
-    obj.analyticsInitialStep = analyticsInitialStep;
-    obj.children = orderRequired.children;
+    let obj4 = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, checkoutAnalyticsFields: null, analyticsInitialStep: null, children: null };
+    let obj5 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
+    obj4.checkoutInitParameters = obj5;
+    obj4.order = tmp3;
+    obj4.paymentGateway = paymentGateway;
+    obj4.onOrderRetryCancellation = onOrderRetryCancellation;
+    obj4.orderRequired = orderRequired;
+    obj4.initialSubscriptionFacet = initialSubscriptionFacet;
+    obj4.checkoutAnalyticsFields = checkoutAnalyticsFields;
+    obj4.analyticsInitialStep = analyticsInitialStep;
+    obj4.children = orderRequired.children;
     tmp17 = <callback checkoutInitParameters={null} order={null} paymentGateway={null} onOrderRetryCancellation={null} orderRequired={null} initialSubscriptionFacet={null} checkoutAnalyticsFields={null} analyticsInitialStep={null}>{null}</callback>;
   }
   return tmp17;

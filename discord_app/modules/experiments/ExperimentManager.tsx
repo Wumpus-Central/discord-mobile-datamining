@@ -53,21 +53,21 @@ export const registerGuildExperiment = function registerGuildExperiment(id) {
 export { ExperimentSystem };
 export const overrideBucket = function overrideBucket(system, map, id) {
   if (obj.LEGACY === system) {
-    obj = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: map, experimentBucket: null };
+    const obj2 = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: map, experimentBucket: null };
     let tmp10 = null;
     if (null != id) {
       tmp10 = id;
     }
-    obj.experimentBucket = tmp10;
-    DispatcherDefault.dispatch(obj);
+    obj2.experimentBucket = tmp10;
+    DispatcherDefault.dispatch(obj2);
   } else if (tmp.APEX === system) {
     if (null == id) {
-      obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: map };
-      DispatcherDefault.dispatch(obj);
+      const obj4 = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: map };
+      DispatcherDefault.dispatch(obj4);
     } else {
       obj = DispatcherDefault;
-      const obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: map, variantId: id };
-      obj.dispatch(obj1);
+      const obj6 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: map, variantId: id };
+      obj.dispatch(obj6);
     }
   }
 };

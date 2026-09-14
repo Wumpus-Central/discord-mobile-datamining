@@ -3,14 +3,14 @@
 // Module 4318 (DateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import onTimezoneChangeDefault from "onTimezoneChange" /* 4319 */;
 import SystemDateFormatter from "SystemDateFormatter" /* 4321 */;
 import makeDateFormatterDefault from "makeDateFormatter" /* 4323 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import Dispatcher from "Dispatcher" /* 573 */;
+import Dispatcher_mod from "Dispatcher" /* 573 */;
 
 require = fn;
 function resetCache() {
@@ -60,7 +60,7 @@ function differenceInCalendarDays(d, d2) {
   }
   let date = d;
   if (!tmp) {
-    let obj = { d };
+    const obj = { d };
     logger.error("Invalid date given to startOfDay", obj);
     const _Date2 = Date;
     date = new Date();
@@ -78,8 +78,8 @@ function differenceInCalendarDays(d, d2) {
   }
   let date2 = d2;
   if (!tmp10) {
-    obj = { d: d2 };
-    logger.error("Invalid date given to startOfDay", obj);
+    const obj2 = { d: d2 };
+    logger.error("Invalid date given to startOfDay", obj2);
     const _Date4 = Date;
     date2 = new Date();
   }
@@ -116,7 +116,9 @@ let c4 = 86400000;
 let closure_5 = Object.create(null);
 LocaleStore.addChangeListener(resetCache);
 onTimezoneChangeDefault(resetCache);
+let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("USER_SETTINGS_PROTO_UPDATE", syncHourCycleToIntlConfig);
+let Dispatcher = Dispatcher_mod;
 const subscription1 = Dispatcher.subscribe("CONNECTION_OPEN", syncHourCycleToIntlConfig);
 const items = [{ key: "days", millisecondsInUnit: 86400000 }, { key: "hours", millisecondsInUnit: 3600000 }, { key: "minutes", millisecondsInUnit: 60000 }, { key: "seconds", millisecondsInUnit: 1000 }];
 const size = fn(2);
@@ -284,9 +286,9 @@ export const diffAsUnits = function diffAsUnits(date, expiresAt) {
 export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, time) {
   if (diffAsUnitsResult.days > 0) {
     const intl3 = util.intl;
-    let obj = { days: null, hours: null };
     ({ days: obj3.days, hours: obj3.hours } = diffAsUnitsResult);
-    let formatToPlainStringResult = intl3.formatToPlainString(time.days, obj);
+    let formatToPlainStringResult = intl3.formatToPlainString(time.days, { days: null, hours: null });
+    const obj4 = { days: null, hours: null };
   } else if (diffAsUnitsResult.hours > 0) {
     const intl2 = util.intl;
     time = { hours: null, minutes: null };
@@ -294,7 +296,7 @@ export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, time) {
     formatToPlainStringResult = intl2.formatToPlainString(time.hours, time);
   } else {
     const intl = util.intl;
-    obj = { minutes: null };
+    const obj = { minutes: null };
     const _Math = Math;
     obj.minutes = Math.max(1, diffAsUnitsResult.minutes);
     formatToPlainStringResult = intl.formatToPlainString(time.minutes, obj);

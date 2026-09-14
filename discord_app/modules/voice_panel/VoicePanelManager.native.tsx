@@ -1,11 +1,11 @@
-// === Module 17916: VoicePanelManager ===
+// === Module 17917: VoicePanelManager ===
 
-// Module 17916 (VoicePanelManager)
+// Module 17917 (VoicePanelManager)
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import VoicePanelStore from "VoicePanelStore" /* 4844 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
-let prototype = function VoicePanelManager() {
+const prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     VOICE_CHANNEL_SELECT() {
@@ -33,8 +33,8 @@ let prototype = function VoicePanelManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
-export default prototype;
+export default prototype1;

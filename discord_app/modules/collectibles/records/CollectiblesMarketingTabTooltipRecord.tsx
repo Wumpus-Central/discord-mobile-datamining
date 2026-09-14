@@ -11,7 +11,7 @@ const prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(badge_countdown_ends_at);
   ({ dismissible_content: obj.dismissibleContent, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText } = badge_countdown_ends_at);
   let date;
@@ -22,10 +22,10 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
   obj.badgeCountdownEndsAt = date;
   obj.showHoverGradient = badge_countdown_ends_at.show_hover_gradient;
   if (typeof prototype === "function") {
-    obj = Object.create(prototype.prototype);
-    obj.type = CollectiblesMarketingType.CollectiblesMarketingType.TAB_TOOLTIP;
+    const obj2 = Object.create(prototype.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.TAB_TOOLTIP;
     ({ title: tmp7.title, body: tmp7.body, asset: tmp7.asset, dismissibleContent: tmp7.dismissibleContent, version: tmp7.version, refTargetBackground: tmp7.refTargetBackground, badgeIcon: tmp7.badgeIcon, badgeText: tmp7.badgeText, badgeCountdownEndsAt: tmp7.badgeCountdownEndsAt, showHoverGradient: tmp7.showHoverGradient } = obj);
-    return obj;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

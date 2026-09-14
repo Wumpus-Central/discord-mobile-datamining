@@ -18,17 +18,20 @@ export const WebViewContextProvider = function WebViewContextProvider(children) 
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   closure_0 = tmp3;
   const items = [tmp2[1]];
-  let obj = { value: tmp2[0], children: null };
-  obj = {
-    style: closure_6().placeholderWebView,
-    ref: noop.useCallback((_nativeTag) => {
-      if (_nativeTag) {
-        closure_0(_nativeTag._nativeTag);
-      }
-    }, items),
-    pointerEvents: "none"
-  };
-  const items1 = [React3(View, obj), children.children];
+  const obj = { value: tmp2[0], children: null };
+  const tmp = closure_6();
+  const items1 = [
+    React3(View, {
+      style: closure_6().placeholderWebView,
+      ref: noop.useCallback((_nativeTag) => {
+        if (_nativeTag) {
+          closure_0(_nativeTag._nativeTag);
+        }
+      }, items),
+      pointerEvents: "none"
+    }),
+    children.children
+  ];
   obj.children = items1;
   return React4(context.Provider, obj);
 };

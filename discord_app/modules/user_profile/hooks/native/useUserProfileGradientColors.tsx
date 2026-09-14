@@ -5,6 +5,8 @@ import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8345 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");

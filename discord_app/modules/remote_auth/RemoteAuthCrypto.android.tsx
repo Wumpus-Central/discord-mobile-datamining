@@ -1,7 +1,7 @@
-// === Module 16085: RemoteAuthCrypto ===
+// === Module 16087: RemoteAuthCrypto ===
 
-// Module 16085 (RemoteAuthCrypto)
-import NativeRemoteAuthCryptoModuleDefault from "NativeRemoteAuthCryptoModule" /* 16086 */;
+// Module 16087 (RemoteAuthCrypto)
+import NativeRemoteAuthCryptoModuleDefault from "NativeRemoteAuthCryptoModule" /* 16088 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = {};
@@ -37,6 +37,7 @@ prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(curren
 prototype["decryptNonce"] = function decryptNonce(arg0, encrypted_nonce) {
   closure_0 = encrypted_nonce;
   return (async () => {
+    v3(dependencyMap[1]);
     await v3(c1[1]).decrypt(closure_0).then((result) => result.replace(/\//g, "_").replace(/\+/g, "-"));
     return value;
   })();

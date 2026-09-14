@@ -1,10 +1,10 @@
-// === Module 12534: ChatInputAppCommandManager ===
+// === Module 12535: ChatInputAppCommandManager ===
 
-// Module 12534 (ChatInputAppCommandManager)
+// Module 12535 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 576 */;
 import useGameProfileObscured from "useGameProfileObscured" /* 5192 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12120 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12535 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12121 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12536 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7881 */;
@@ -40,16 +40,15 @@ function areResolvedGamesEqual(size, size2) {
 }
 const ChannelAutocompleteConstants = fn(5081);
 ({ extractGameMentionIds: closure_11, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = ChannelAutocompleteConstants);
-fn(4636);
-let obj = { commandOption: null, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
-obj = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
-obj.commandOption = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
-obj.commandErrorOption = createStyles;
+const createStyles = fn(4636);
+let obj = { commandOption: { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 }, commandErrorOption: null, gameMention: null, timestampMention: null, autocomplete: null };
+let obj3 = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
+obj.commandErrorOption = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
+let obj4 = { backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.xs, fontSize: 14 };
 obj.gameMention = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
-let obj2 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+let obj5 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 obj.timestampMention = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
-let obj3 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+let obj6 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, color: nativeDefault.colors.MENTION_FOREGROUND, borderRadius: nativeDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
 obj.autocomplete = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createStyles.createStyles(obj);
 const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
@@ -58,6 +57,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   const channel = chatInputRef.channel;
   const commandsDisabled = chatInputRef.commandsDisabled;
   let stateFromStores1;
+  first = undefined;
   let stateFromStores2;
   let callback1;
   let tmp = stateFromStores2();
@@ -69,19 +69,18 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   let obj2 = chatInputRef(commandsDisabled[13]);
   const items1 = [stateFromStores];
   stateFromStores1 = chatInputRef(commandsDisabled[13]).useStateFromStores(items1, () => ApplicationCommandAutocompleteStore.getLastResponseNonce(channel.id));
-  const obj3 = chatInputRef(commandsDisabled[13]);
+  let obj3 = chatInputRef(commandsDisabled[13]);
   let text = chatInputRef(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
   let substr = text.slice(1);
   let ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
   const tmp6 = _slicedToArray(applicationCommandOptionValueParser.useState(ref.current), 2);
   closure_9 = tmp6[1];
-  const obj4 = chatInputRef(commandsDisabled[16]);
+  let obj4 = chatInputRef(commandsDisabled[16]);
   const commands = channel(commandsDisabled[17]).useCachedResults({ type: "channel", channel }, chatInputRef(commandsDisabled[18]).ApplicationCommandType.CHAT, tmp6[0]).commands;
   ref = applicationCommandOptionValueParser.useRef(undefined);
-  const tmp7 = _slicedToArray(applicationCommandOptionValueParser.useState([]), 2);
-  const first = tmp7[0];
+  closure_129_1 = undefined;
+  [first, closure_129_1] = applicationCommandOptionValueParser.useState([]);
   closure_129_0 = first;
-  closure_129_1 = tmp7[1];
   const callback = applicationCommandOptionValueParser.useCallback((arg0) => {
     closure_0 = closure_2_11(arg0);
     chatInputStateRef((arg0) => {
@@ -145,17 +144,14 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   const items5 = [stateFromStores, channel, chatInputRef, chatInputStateRef, commandsDisabled, stateFromStores1, applicationCommandOptionValueParser, commands, tmp, callback];
   callback1 = applicationCommandOptionValueParser.useCallback(() => {
     const current = chatInputStateRef.current;
-    let text = current.text;
+    const text = current.text;
     ({ editId, focused, selectionStart, selectionEnd } = current);
     callback(text);
-    let obj = { activeCommand: stateFromStores, channel, commandsDisabled, editId, focused, lastCommandAutocompleteResponseNonce: stateFromStores1, queryCommands: commands, selectionStart, selectionEnd, text };
+    const obj = { activeCommand: stateFromStores, channel, commandsDisabled, editId, focused, lastCommandAutocompleteResponseNonce: stateFromStores1, queryCommands: commands, selectionStart, selectionEnd, text };
     if (null == ref.current) {
-      obj = { props: null, ref: null, optionValueParser: null, styles: null };
-      obj.props = obj;
-      obj.ref = chatInputRef;
-      obj.optionValueParser = applicationCommandOptionValueParser;
+      const obj2 = { props: obj, ref: chatInputRef, optionValueParser: applicationCommandOptionValueParser, styles: null };
       closure_0 = closure_4;
-      obj = {
+      const obj3 = {
         commandOption() {
             return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandOption);
           },
@@ -179,16 +175,16 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
             return chatInputRef(commandsDisabled[10]).convertToNativeStyle(autocomplete);
           }
       };
-      obj.styles = obj;
-      const tmp12 = new ApplicationCommandManagerDefault(obj);
+      obj2.styles = obj3;
+      const tmp12 = new ApplicationCommandManagerDefault(obj2);
       ref.current = tmp12;
     } else {
       const current2 = ref.current;
-      const obj1 = { newState: obj };
-      const result = current2.updateApplicationCommandManagerState(obj1);
+      const obj4 = { newState: obj };
+      const result = current2.updateApplicationCommandManagerState(obj4);
     }
-    text = ChatInputCommandOptionParser.getTextBeforeFirstOption(text).text;
-    const substr = text.slice(1);
+    const text1 = ChatInputCommandOptionParser.getTextBeforeFirstOption(text).text;
+    const substr = text1.slice(1);
     const trimEndResult = substr.trimEnd();
     if (ref.current !== trimEndResult) {
       closure_9(trimEndResult);
@@ -275,7 +271,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj4 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+let obj7 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 

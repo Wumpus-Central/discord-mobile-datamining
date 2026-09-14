@@ -2,14 +2,14 @@
 
 // Module 7563 (stores/AnalyticsTrackingStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7564 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-fn(1250);
-let AnalyticsUtils = {
+const AnalyticsUtils = fn(1248);
+const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
     CONNECTION_OPEN(arg0) {
@@ -54,9 +54,9 @@ let AnalyticsUtils = {
   sendUnloadRequest: fn(7576).sendUnloadRequest
 };
 const items = [AuthenticationStore];
-AnalyticsUtils.waitFor = items;
-AnalyticsUtils = AnalyticsUtils.analyticsTrackingStoreMaker(AnalyticsUtils);
+obj2.waitFor = items;
+const result = AnalyticsUtils.analyticsTrackingStoreMaker(obj2);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
-export default AnalyticsUtils;
+export default result;

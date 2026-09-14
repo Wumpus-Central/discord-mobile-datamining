@@ -2,7 +2,7 @@
 
 // Module 5651 (guild_member_verification/MemberVerificationModalActionCreators)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5628 */;
@@ -15,12 +15,10 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/nat
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = MemberVerificationActionCreatorsDefault;
-    const verificationForm = obj.fetchVerificationForm(guildId);
-    obj = { type, guild_id: guildId };
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, obj);
-    obj = { guildId, onClose: connect };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5652, dependencyMap.paths), obj, React4);
+    const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
+    const obj3 = { type, guild_id: guildId };
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5652, dependencyMap.paths), { guildId, onClose: connect }, React4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -28,8 +26,8 @@ export default {
       flag = false;
     }
     if (!flag) {
-      const obj = { type };
-      obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
+      const obj2 = { type };
+      AnalyticsUtilsDefault.track(AnalyticEvents.MODAL_DISMISSED, obj2);
     }
     ModalActionCreatorsDefault.popWithKey(React4);
   }

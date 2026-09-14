@@ -5,7 +5,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8882 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 ({ View: c2, requireNativeComponent } = get_ActivityIndicator);
@@ -26,20 +26,20 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
   const merged = Object.assign(arg0, Object.assign({ uri: 0, placeholder: 0, placeholderVersion: 0, alt: 0, style: 0 }));
   if (null != placeholder) {
     if (placeholderVersion === obj.THUMBHASH) {
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj.style = style;
-      obj.uri = uri;
-      obj.placeholder = placeholder;
-      obj.placeholderVersion = placeholderVersion;
-      obj.alt = alt;
+      obj2.style = style;
+      obj2.uri = uri;
+      obj2.placeholder = placeholder;
+      obj2.placeholderVersion = placeholderVersion;
+      obj2.alt = alt;
       let tmp4 = <importDefaultResult />;
     }
     return tmp4;
   }
   obj = { style };
   const merged2 = Object.assign(merged);
-  obj = { style, resizeMode: "cover", source: { uri }, alt };
   obj.children = jsx(FastImageDefault, { style, resizeMode: "cover", source: { uri }, alt });
-  tmp4 = <React2 style={style} resizeMode="cover" source={{ uri }} alt={alt} />;
+  tmp4 = <React2 style={style} />;
+  const obj3 = { style, resizeMode: "cover", source: { uri }, alt };
 };

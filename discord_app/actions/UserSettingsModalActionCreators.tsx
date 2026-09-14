@@ -11,7 +11,6 @@ export default {
     DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
   },
   setSection(section) {
-    const obj = { type: "USER_SETTINGS_MODAL_SET_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_SET_SECTION", section });
   }
 };

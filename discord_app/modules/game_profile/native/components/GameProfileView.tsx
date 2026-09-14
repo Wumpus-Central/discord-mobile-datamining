@@ -26,14 +26,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, body: null, buttonsContainer: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj1 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-createStyles.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
+obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(8837).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
 
@@ -44,9 +43,8 @@ export default function GameProfileView(arg0) {
   noop.useRef(null);
   noop.useRef(null);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
-  let obj = useGameProfileInvite;
   const items = [onStoreLinksMeasured];
-  const result = obj.hasGameProfileDiscordWebsite(game);
+  const result = useGameProfileInvite.hasGameProfileDiscordWebsite(game);
   closure_3 = noop.useCallback(() => {
     const current = ref.current;
     const current2 = ref2.current;
@@ -56,10 +54,10 @@ export default function GameProfileView(arg0) {
       }
     }
   }, items);
-  obj = { value: analyticsLocations, children: null };
-  obj = { style: tmp.container, children: null };
+  const obj2 = { value: analyticsLocations, children: null };
+  const obj3 = { style: tmp.container, children: null };
   const items1 = [hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
-  const obj1 = {
+  const obj4 = {
     style: tmp.body,
     onLayout(nativeEvent) {
       closure_1.current = nativeEvent.nativeEvent.layout.y;
@@ -70,7 +68,7 @@ export default function GameProfileView(arg0) {
   const items2 = [hasOwnProperty(GameProfileMediaDefault, { game, viewId, source, trackAction }), , , , , , , , , , ];
   let tmp6Result = websiteButtons.length > 0;
   if (tmp6Result) {
-    const obj2 = {
+    const obj5 = {
       onLayout(nativeEvent) {
           const layout = nativeEvent.nativeEvent.layout;
           closure_2.current = layout.y + layout.height;
@@ -78,9 +76,9 @@ export default function GameProfileView(arg0) {
         },
       children: null
     };
-    const obj3 = { game, websiteButtons, trackAction };
-    obj2.children = hasOwnProperty(GameProfileStoreLinksDefault, obj3);
-    tmp6Result = hasOwnProperty(View, obj2);
+    const obj6 = { game, websiteButtons, trackAction };
+    obj5.children = hasOwnProperty(GameProfileStoreLinksDefault, obj6);
+    tmp6Result = hasOwnProperty(View, obj5);
   }
   items2[1] = tmp6Result;
   items2[2] = hasOwnProperty(GameProfileReviewsDefault, { game, trackAction });
@@ -91,13 +89,13 @@ export default function GameProfileView(arg0) {
   items2[7] = hasOwnProperty(GameProfileShopCarouselDefault, { game, closeModal, trackAction });
   items2[8] = hasOwnProperty(GameProfileSimilarGamesDefault, { gameId: game.id, trackAction });
   items2[9] = hasOwnProperty(GameProfileDetailsDefault, { game, viewId, source, trackAction });
-  const obj6 = { style: tmp.buttonsContainer, children: null };
+  const obj9 = { style: tmp.buttonsContainer, children: null };
   const items3 = [hasOwnProperty(GameProfileGameClaimCtaDefault, { game, trackAction }), hasOwnProperty(GameProfileReportButtonDefault, { applicationId: game.id, trackAction })];
-  obj6.children = items3;
-  items2[10] = timestampProducer(View, obj6);
-  obj1.children = items2;
-  items1[1] = timestampProducer(View, obj1);
-  obj.children = items1;
-  obj.children = timestampProducer(View, obj);
-  return hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj);
+  obj9.children = items3;
+  items2[10] = timestampProducer(View, obj9);
+  obj4.children = items2;
+  items1[1] = timestampProducer(View, obj4);
+  obj3.children = items1;
+  obj2.children = timestampProducer(View, obj3);
+  return hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
 };

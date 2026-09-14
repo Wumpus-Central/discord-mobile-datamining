@@ -3,6 +3,8 @@
 // Module 5707 (useDesignToggle)
 import DesignTogglesStore from "DesignTogglesStore" /* 5708 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");

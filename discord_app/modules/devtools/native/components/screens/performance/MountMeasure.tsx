@@ -1,6 +1,6 @@
-// === Module 15825: MountMeasure ===
+// === Module 15827: MountMeasure ===
 
-// Module 15825 (MountMeasure)
+// Module 15827 (MountMeasure)
 import useMountEffect from "useMountEffect" /* 5073 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,15 +13,7 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 export default function MountMeasure(arg0) {
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
   ({ style, children } = arg0);
-  let obj = useMountEffect;
-  const unmountEffect = obj.useUnmountEffect(() => View(require));
-  obj = {
-    style,
-    onLayout() {
-      return dependencyMap(require);
-    },
-    children
-  };
+  const unmountEffect = useMountEffect.useUnmountEffect(() => View(require));
   return <View style={style} onLayout={function onLayout() {
     return dependencyMap(require);
   }}>{children}</View>;

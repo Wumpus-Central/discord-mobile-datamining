@@ -18,8 +18,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -32,24 +32,23 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let obj2 = tmp4(4769);
               dependencyMap = 1;
               c2 = 1;
-              const obj1 = { value: obj2.canOpenUrlScheme("roblox"), done: false };
-              return obj1;
+              const obj5 = { value: tmp4(4769).canOpenUrlScheme("roblox"), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            obj = tmp4(4767);
+            const obj = tmp4(4767);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

@@ -1,9 +1,9 @@
-// === Module 11703: LegacyUserProfileConnections ===
+// === Module 11704: LegacyUserProfileConnections ===
 
-// Module 11703 (LegacyUserProfileConnections)
+// Module 11704 (LegacyUserProfileConnections)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -15,6 +15,8 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import StreamerModeStore from "StreamerModeStore" /* 4482 */;
 import UserProfileStore from "UserProfileStore" /* 7723 */;
+
+const require = globalThis.__r;
 
 require = fn;
 class ConnectedUserAccount {
@@ -122,10 +124,10 @@ class ConnectedUserAccount {
     if (null != showInvisibleIcon) {
       if (showInvisibleIcon) {
         tmp30 = jsx;
-        obj = { style: null, source: null };
-        obj.style = tmp.connectedAccountOpenHide;
-        obj.source = tmp20(tmp21[18]);
-        tmp28 = jsx(tmp23(tmp21[17]).Icon, obj);
+        obj1 = { style: null, source: null };
+        obj1.style = tmp.connectedAccountOpenHide;
+        obj1.source = tmp20(tmp21[18]);
+        tmp28 = jsx(tmp23(tmp21[17]).Icon, obj1);
       }
       tmp23Result = tmp23(tmp21[20]);
       token = tmp23Result.useToken(tmp20(tmp21[11]).colors.BACKGROUND_MOD_MUTED, theme);
@@ -144,24 +146,24 @@ class ConnectedUserAccount {
       if (account.verified) {
         tmp35 = jsxs;
         tmp36 = View;
-        obj1 = { style: null, children: null };
-        obj1.style = tmp.verifiedCheckContainer;
+        obj31 = { style: null, children: null };
+        obj31.style = tmp.verifiedCheckContainer;
         tmp37 = jsx;
-        obj2 = { style: null, size: null, source: null, color: null };
-        obj2.style = tmp.verifiedCheck;
-        obj2.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
-        obj2.source = tmp20(tmp21[21]);
-        obj2.color = tmp33;
+        obj32 = { style: null, size: null, source: null, color: null };
+        obj32.style = tmp.verifiedCheck;
+        obj32.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
+        obj32.source = tmp20(tmp21[21]);
+        obj32.color = tmp33;
         items = [, ];
-        items[0] = jsx(tmp23(tmp21[17]).Icon, obj2);
-        obj3 = { style: null, size: null, source: null, color: null };
-        obj3.style = tmp.verifiedCheck;
-        obj3.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
-        obj3.source = tmp20(tmp21[22]);
-        obj3.color = WHITE;
-        items[1] = jsx(tmp23(tmp21[17]).Icon, obj3);
-        obj1.children = items;
-        tmp34 = jsxs(View, obj1);
+        items[0] = jsx(tmp23(tmp21[17]).Icon, obj32);
+        obj33 = { style: null, size: null, source: null, color: null };
+        obj33.style = tmp.verifiedCheck;
+        obj33.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
+        obj33.source = tmp20(tmp21[22]);
+        obj33.color = WHITE;
+        items[1] = jsx(tmp23(tmp21[17]).Icon, obj33);
+        obj31.children = items;
+        tmp34 = jsxs(View, obj31);
       }
       obj19 = closure_3;
       items1 = [];
@@ -202,17 +204,17 @@ class ConnectedUserAccount {
       }, items2);
       callback1 = obj19.useCallback(() => {
         if (null != platformUserUrl) {
-          let obj = {
+          let obj2 = {
             href: tmp,
             trusted: account.type !== constants.DOMAIN,
             onConfirm() {
-                account(4816);
-                const obj = { platform_type: type.type, other_user_id };
-                obj.trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, obj);
+                account(4816).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, { platform_type: type.type, other_user_id });
+                const obj = account(4816);
+                const obj2 = { platform_type: type.type, other_user_id };
                 userId(4331).openURL(platformUserUrl);
               }
           };
-          obj.handleClick(obj);
+          MaskedLinkUtils.handleClick(obj2);
         }
       }, items3);
       if (null != platformUserUrl) {
@@ -221,50 +223,50 @@ class ConnectedUserAccount {
         PressableOpacity = Pressable;
       }
       tmp42 = jsx;
-      obj4 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, onLongPress: null, children: null };
-      obj4.accessibilityLabel = memo;
+      obj34 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, onLongPress: null, children: null };
+      obj34.accessibilityLabel = memo;
       tmp43 = undefined;
       if (null != platformUserUrl) {
         tmp43 = callback1;
       }
-      obj4.onPress = tmp43;
-      obj4.onLongPress = callback;
+      obj34.onPress = tmp43;
+      obj34.onLongPress = callback;
       tmp44 = View;
-      obj5 = { style: null, children: null };
+      obj35 = { style: null, children: null };
       items4 = [, ];
       items4[0] = tmp.connectedAccountContainer;
       items4[1] = style;
-      obj5.style = items4;
+      obj35.style = items4;
       tmp45 = jsxs;
-      obj6 = { style: null, children: null };
-      obj6.style = tmp.connectedAccount;
-      obj7 = { size: null, source: null, disableColor: true };
-      obj7.size = tmp23(tmp21[17]).Icon.Sizes.MEDIUM;
-      obj7.source = source;
+      obj36 = { style: null, children: null };
+      obj36.style = tmp.connectedAccount;
+      obj37 = { size: null, source: null, disableColor: true };
+      obj37.size = tmp23(tmp21[17]).Icon.Sizes.MEDIUM;
+      obj37.source = source;
       items5 = [, , ];
-      items5[0] = tmp42(tmp23(tmp21[17]).Icon, obj7);
-      obj8 = { style: null, children: null };
-      obj8.style = tmp.connectedAccountNameContainer;
-      obj9 = { style: null, children: null };
-      obj9.style = tmp.connectedAccountName;
-      obj10 = { variant: "text-md/semibold", style: null, children: null };
-      obj10.style = tmp.connectedAccountNameText;
-      obj10.children = account.name;
+      items5[0] = tmp42(tmp23(tmp21[17]).Icon, obj37);
+      obj38 = { style: null, children: null };
+      obj38.style = tmp.connectedAccountNameContainer;
+      obj39 = { style: null, children: null };
+      obj39.style = tmp.connectedAccountName;
+      obj40 = { variant: "text-md/semibold", style: null, children: null };
+      obj40.style = tmp.connectedAccountNameText;
+      obj40.children = account.name;
       items6 = [, ];
-      items6[0] = tmp42(tmp23(tmp21[31]).Text, obj10);
+      items6[0] = tmp42(tmp23(tmp21[31]).Text, obj40);
       items6[1] = tmp34;
-      obj9.children = items6;
+      obj39.children = items6;
       items7 = [, , ];
-      items7[0] = jsxs(View, obj9);
+      items7[0] = jsxs(View, obj39);
       tmp42Result = null;
       if (null != createdAtDate) {
-        obj11 = { variant: "heading-deprecated-12/medium", style: null, children: null };
-        obj11.style = tmp.connectedAccountNameCreatedAtText;
+        obj41 = { variant: "heading-deprecated-12/medium", style: null, children: null };
+        obj41.style = tmp.connectedAccountNameCreatedAtText;
         intl = tmp23(tmp21[26]).intl;
-        obj12 = { date: null };
-        obj12.date = createdAtDate;
-        obj11.children = intl.format(tmp23(tmp21[26]).t["9rfonh"], obj12);
-        tmp42Result = tmp42(tmp23(tmp21[31]).Text, obj11);
+        obj42 = { date: null };
+        obj42.date = createdAtDate;
+        obj41.children = intl.format(tmp23(tmp21[26]).t["9rfonh"], obj42);
+        tmp42Result = tmp42(tmp23(tmp21[31]).Text, obj41);
       }
       items7[1] = tmp42Result;
       tmp42Result1 = null;
@@ -272,28 +274,28 @@ class ConnectedUserAccount {
         num = 0;
         tmp42Result1 = null;
         if (redditMetadataItems.length > 0) {
-          obj13 = { style: null, children: null };
-          obj13.style = tmp.connectedAccountChildren;
-          obj13.children = redditMetadataItems;
-          tmp42Result1 = tmp42(tmp44, obj13);
+          obj43 = { style: null, children: null };
+          obj43.style = tmp.connectedAccountChildren;
+          obj43.children = redditMetadataItems;
+          tmp42Result1 = tmp42(tmp44, obj43);
         }
       }
       items7[2] = tmp42Result1;
-      obj8.children = items7;
-      items5[1] = tmp45(tmp44, obj8);
+      obj38.children = items7;
+      items5[1] = tmp45(tmp44, obj38);
       items5[2] = tmp28;
-      obj6.children = items5;
-      obj5.children = tmp45(tmp44, obj6);
-      obj4.children = tmp42(tmp44, obj5);
-      return tmp42(PressableOpacity, obj4);
+      obj36.children = items5;
+      obj35.children = tmp45(tmp44, obj36);
+      obj34.children = tmp42(tmp44, obj35);
+      return tmp42(PressableOpacity, obj34);
     }
     tmp28 = null;
     if (null != platformUserUrl) {
       tmp29 = jsx;
-      obj14 = { style: null, source: null };
-      obj14.style = tmp.connectedAccountOpenLink;
-      obj14.source = tmp20(tmp21[19]);
-      tmp28 = jsx(tmp23(tmp21[17]).Icon, obj14);
+      obj44 = { style: null, source: null };
+      obj44.style = tmp.connectedAccountOpenLink;
+      obj44.source = tmp20(tmp21[19]);
+      tmp28 = jsx(tmp23(tmp21[17]).Icon, obj44);
     }
     return;
   }
@@ -310,73 +312,71 @@ class ConnectedApplicationUserRoleAccount {
     roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
     tmp4 = jsxs;
     tmp5 = View;
-    obj = { style: null, children: null };
+    obj1 = { style: null, children: null };
     items = [, ];
     items[0] = tmp.connectedAccountContainer;
     items[1] = global.style;
-    obj.style = items;
+    obj1.style = items;
     tmp6 = null;
     if (null != applicationRoleConnection.platform_name) {
       tmp7 = jsx;
-      obj1 = { variant: "eyebrow", color: "interactive-text-default", children: null };
-      obj1.children = applicationRoleConnection.platform_name;
-      tmp6 = jsx(tmp2(tmp3[31]).Text, obj1);
+      obj11 = { variant: "eyebrow", color: "interactive-text-default", children: null };
+      obj11.children = applicationRoleConnection.platform_name;
+      tmp6 = jsx(tmp2(tmp3[31]).Text, obj11);
     }
     items1 = [, , , ];
     items1[0] = tmp6;
     tmp8 = jsx;
-    obj2 = { style: tmp.appConnectionNameContainer, children: null };
+    obj12 = { style: tmp.appConnectionNameContainer, children: null };
     tmp8Result = null;
     if (null != applicationRoleConnection.platform_username) {
-      obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-      obj3.children = applicationRoleConnection.platform_username;
-      tmp8Result = tmp8(tmp2(tmp3[31]).Text, obj3);
+      obj13 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+      obj13.children = applicationRoleConnection.platform_username;
+      tmp8Result = tmp8(tmp2(tmp3[31]).Text, obj13);
     }
-    obj2.children = tmp8Result;
-    items1[1] = tmp8(tmp5, obj2);
+    obj12.children = tmp8Result;
+    items1[1] = tmp8(tmp5, obj12);
     tmp8Result1 = null;
     if (null != roleConnectionMetadataItems) {
       num = 0;
       tmp8Result1 = null;
       if (roleConnectionMetadataItems.length > 0) {
-        obj4 = { style: null, children: null };
-        obj4.style = tmp.connectedAccountChildren;
-        obj4.children = roleConnectionMetadataItems;
-        tmp8Result1 = tmp8(tmp5, obj4);
+        obj14 = { style: null, children: null };
+        obj14.style = tmp.connectedAccountChildren;
+        obj14.children = roleConnectionMetadataItems;
+        tmp8Result1 = tmp8(tmp5, obj14);
       }
     }
     items1[2] = tmp8Result1;
-    obj5 = { style: { flexDirection: "row" }, children: null };
-    obj6 = { style: tmp.connectedAccountPoweredByContainer, children: null };
-    obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    obj15 = { style: { flexDirection: "row" }, children: null };
+    obj16 = { style: tmp.connectedAccountPoweredByContainer, children: null };
+    obj17 = { variant: "text-xs/normal", color: "text-muted", children: null };
     intl = tmp2(tmp3[26]).intl;
-    obj8 = {
+    obj18 = {
       applicationHook() {
-            let obj = { style: closure_1.connectedAccountPoweredByText, children: null };
+            const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
+              const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
               const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
-              obj.user = tmp12;
-              obj.size = native.AvatarSizes.SIZE_16;
-              tmp5 = closure_2_14(native.Avatar, obj);
+              obj2.user = tmp12;
+              obj2.size = native.AvatarSizes.SIZE_16;
+              tmp5 = closure_2_14(native.Avatar, obj2);
             }
-            const items = [tmp5, ];
-            obj = { variant: "text-xs/normal", color: "text-default", children: applicationRoleConnection.application.name };
-            items[1] = closure_2_14(Text_Text.Text, obj);
+            const items = [tmp5, closure_2_14(Text_Text.Text, { variant: "text-xs/normal", color: "text-default", children: applicationRoleConnection.application.name })];
             obj.children = items;
             return __initData(hasOwnProperty, obj);
           }
     };
-    obj7.children = intl.format(tmp2(tmp3[26]).t.zIT9YA, obj8);
-    obj6.children = tmp8(tmp2(tmp3[31]).Text, obj7);
+    obj17.children = intl.format(tmp2(tmp3[26]).t.zIT9YA, obj18);
+    obj16.children = tmp8(tmp2(tmp3[31]).Text, obj17);
     items2 = [, ];
-    items2[0] = tmp8(tmp5, obj6);
+    items2[0] = tmp8(tmp5, obj16);
     items2[1] = tmp8(tmp5, { style: { flexGrow: 1 } });
-    obj5.children = items2;
-    items1[3] = tmp4(tmp5, obj5);
-    obj.children = items1;
-    return tmp4(tmp5, obj);
+    obj15.children = items2;
+    items1[3] = tmp4(tmp5, obj15);
+    obj1.children = items1;
+    return tmp4(tmp5, obj1);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -386,12 +386,11 @@ const Constants = fn(1074);
 const MetadataFields = fn(5489).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4636);
-let obj = { connectedAccountContainer: null, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
-obj = { paddingHorizontal: 10, paddingVertical: fn(1182).FORM_ROW_VERTICAL_PADDING / 2 };
-obj.connectedAccountContainer = obj;
-const createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj.connectedAccountNameText = createStyles;
+const createStyles = fn(4636);
+let obj = { connectedAccountContainer: { paddingHorizontal: 10, paddingVertical: fn(1180).FORM_ROW_VERTICAL_PADDING / 2 }, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
+let obj3 = { paddingHorizontal: 10, paddingVertical: fn(1180).FORM_ROW_VERTICAL_PADDING / 2 };
+obj.connectedAccountNameText = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.connectedAccountNameCreatedAtText = { color: nativeDefault.colors.TEXT_SUBTLE };
 let size = { height: 24, width: 24, transform: null, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let items = [{ rotate: "135deg" }];
@@ -402,10 +401,10 @@ obj.connectedAccountOpenHide = size1;
 obj.verifiedCheckContainer = { marginLeft: 4, height: 16, width: 16 };
 obj.verifiedCheck = { position: "absolute", left: 0, top: 0 };
 obj.connectedAccountChildren = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" };
-let obj2 = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.appConnectionNameContainer = { flex: 1, flexDirection: "row", alignItems: "center", marginTop: 4 };
-let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.connectedAccountPoweredByContainer = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
 obj.connectedAccountPoweredByAvatar = { marginRight: 4 };
 obj.connectedAccountPoweredByText = { marginTop: -4, alignItems: "center", flexDirection: "row" };
@@ -419,13 +418,12 @@ let result = size.fileFinishedImporting("modules/user_profile/native/LegacyUserP
 
 export default function LegacyUserProfileConnections(user) {
   user = user.user;
-  let obj = user(504);
   const items = [UserProfileStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserProfileStore.getUserProfile(user.id));
-  let obj1 = user(504);
+  const stateFromStores = user(504).useStateFromStores(items, () => UserProfileStore.getUserProfile(user.id));
+  let obj = user(504);
   const items1 = [StreamerModeStore];
   let prop;
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
+  const stateFromStores1 = user(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   if (stateFromStores != null) {
     prop = stateFromStores.applicationRoleConnections;
   }
@@ -456,24 +454,23 @@ export default function LegacyUserProfileConnections(user) {
     return connectedAccounts;
   }, items3);
   closure_129_0 = undefined;
-  let tmpResult = tmp(4347);
-  const theme = tmpResult.useThemeContext().theme;
-  tmpResult = tmp(504);
+  const obj2 = user(504);
+  const theme = user(4347).useThemeContext().theme;
+  const tmpResult = user(4347);
   const items4 = [LocaleStore];
-  closure_129_2 = tmpResult.useStateFromStores(items4, () => LocaleStore.locale);
+  closure_129_2 = user(504).useStateFromStores(items4, () => LocaleStore.locale);
   const mapped = memo.map((applicationRoleConnection, index) => {
-    let obj = { children: null };
-    obj = { applicationRoleConnection, theme: stateFromStores, locale, style: user };
-    obj.children = closure_2_14(closure_19, obj);
+    const obj = { children: closure_2_14(closure_19, { applicationRoleConnection, theme: stateFromStores, locale, style: user }) };
     return closure_2_14(noop.Fragment, obj, index);
   });
   const id = user.id;
   closure_130_1 = undefined;
+  const tmpResult5 = user(504);
   const theme2 = user(4347).useThemeContext().theme;
-  const tmpResult1 = user(4347);
+  const tmpResult6 = user(4347);
   const items5 = [LocaleStore];
   closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
-  const tmpResult2 = user(504);
+  const tmpResult7 = user(504);
   closure_130_4 = user(7606).usePlatformAllowed({ forUserProfile: true });
   const found = memo1.filter((type) => {
     value = PlatformsDefault.get(type.type);
@@ -492,23 +489,23 @@ export default function LegacyUserProfileConnections(user) {
         tmp10 = mapped.length > 0;
       }
       if (tmp10) {
-        obj = { title: null, showContainer: true, children: null };
+        const obj4 = { title: null, showContainer: true, children: null };
         const intl = tmp(1114).intl;
-        obj.title = intl.string(tmp(1114).t.PHjkRE);
-        obj.children = mapped;
-        tmp10 = closure_14(stateFromStores(11711), obj);
-        const tmp13 = stateFromStores(11711);
+        obj4.title = intl.string(tmp(1114).t.PHjkRE);
+        obj4.children = mapped;
+        tmp10 = closure_14(stateFromStores(11712), obj4);
+        const tmp13 = stateFromStores(11712);
       }
-      obj = { children: null };
+      const obj5 = { children: null };
       const items6 = [tmp10, ];
-      obj1 = { title: null, showContainer: true, children: null };
+      const obj6 = { title: null, showContainer: true, children: null };
       const intl2 = tmp(1114).intl;
-      obj1.title = intl2.string(tmp(1114).t["3fe7U5"]);
-      obj1.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11711), obj1);
-      obj.children = items6;
-      tmp17Result = closure_15(closure_16, obj);
-      const tmp16 = stateFromStores(11711);
+      obj6.title = intl2.string(tmp(1114).t["3fe7U5"]);
+      obj6.children = tmp8;
+      items6[1] = closure_14(stateFromStores(11712), obj6);
+      obj5.children = items6;
+      tmp17Result = closure_15(closure_16, obj5);
+      const tmp16 = stateFromStores(11712);
     }
   }
   return tmp17Result;
@@ -522,9 +519,7 @@ export const useAppplicationRoleConnectionItems = function useAppplicationRoleCo
   const items = [LocaleStore];
   dependencyMap = require("initialize").useStateFromStores(items, () => LocaleStore.locale);
   return arr.map((applicationRoleConnection, index) => {
-    let obj = { children: null };
-    obj = { applicationRoleConnection, theme: stateFromStores, locale, style: user };
-    obj.children = closure_2_14(closure_19, obj);
+    const obj = { children: closure_2_14(closure_19, { applicationRoleConnection, theme: stateFromStores, locale, style: user }) };
     return closure_2_14(noop.Fragment, obj, index);
   });
 };
@@ -545,9 +540,7 @@ export const useConnectedAccountItems = function useConnectedAccountItems(arr, u
     return tmp2;
   });
   return found.map((account, index) => {
-    let obj = { children: null };
-    obj = { account, theme, locale, userId, style };
-    obj.children = closure_2_14(closure_18, obj);
+    const obj = { children: closure_2_14(closure_18, { account, theme, locale, userId, style }) };
     return closure_2_14(noop.Fragment, obj, index);
   });
 };

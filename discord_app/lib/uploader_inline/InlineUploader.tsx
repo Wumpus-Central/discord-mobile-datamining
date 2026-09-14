@@ -18,13 +18,12 @@ class InlineUploader {
 }
 const prototype = InlineUploader.prototype;
 InlineUploader["fromBlob"] = function fromBlob(surface, arg1) {
-  let obj = DiscordMd5Default;
-  obj.fromBlob(arg1);
+  DiscordMd5Default.fromBlob(arg1);
   if (typeof InlineUploader === "function") {
-    obj = Object.create(InlineUploader.prototype);
-    obj.surface = surface;
-    obj.originalMd5Promise = tmp3;
-    return obj;
+    const obj2 = Object.create(InlineUploader.prototype);
+    obj2.surface = surface;
+    obj2.originalMd5Promise = tmp3;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

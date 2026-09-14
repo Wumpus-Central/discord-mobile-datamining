@@ -1,10 +1,12 @@
-// === Module 11042: useRecipientsLabel ===
+// === Module 11043: useRecipientsLabel ===
 
-// Module 11042 (useRecipientsLabel)
+// Module 11043 (useRecipientsLabel)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -29,20 +31,20 @@ export const useRecipientsLabel = function useRecipientsLabel(channel) {
       if (0 !== stateFromStoresArray.length) {
         if (1 === first.length) {
           const intl4 = util.intl;
-          let obj = { first: null };
+          const obj4 = { first: null };
           first = first[0];
-          obj.first = first;
-          formatToPlainStringResult = intl4.formatToPlainString(util.t["J+Wpst"], obj);
+          obj4.first = first;
+          formatToPlainStringResult = intl4.formatToPlainString(util.t["J+Wpst"], obj4);
         } else {
           if (2 === first.length) {
             const intl3 = util.intl;
-            obj = { first: null, second: null };
             [obj3.first, obj3.second] = first;
-            formatToPlainStringResult = intl3.formatToPlainString(util.t.gwRP0Y, obj);
+            formatToPlainStringResult = intl3.formatToPlainString(util.t.gwRP0Y, { first: null, second: null });
+            const obj7 = { first: null, second: null };
           } else if (3 !== first.length) {
             const diff = first.length - 3;
             const intl = util.intl;
-            obj = { first: null, second: null, third: null, count: null };
+            const obj = { first: null, second: null, third: null, count: null };
             [obj.first, obj.second, obj.third] = first;
             obj.count = diff;
             formatToPlainStringResult = intl.formatToPlainString(util.t.VYfueb, obj);
@@ -50,7 +52,7 @@ export const useRecipientsLabel = function useRecipientsLabel(channel) {
           const intl2 = util.intl;
           [obj2.first, obj2.second, obj2.third] = first;
           formatToPlainStringResult = intl2.formatToPlainString(util.t.QDB5et, { first: null, second: null, third: null });
-          const obj1 = { first: null, second: null, third: null };
+          const obj8 = { first: null, second: null, third: null };
         }
       }
     }

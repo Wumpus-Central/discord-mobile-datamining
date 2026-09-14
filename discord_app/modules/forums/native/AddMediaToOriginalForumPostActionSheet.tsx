@@ -1,6 +1,6 @@
-// === Module 12127: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12128: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 12127 (AddMediaToOriginalForumPostActionSheet)
+// Module 12128 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -22,8 +22,8 @@ let closure_16 = async function _upload2(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_16 = async function _upload2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp4;
           const analyticsLocations = tmp9;
@@ -63,8 +63,8 @@ let closure_16 = async function _upload2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           const tmp119 = new closure_133_1(closure_133_2[12])();
           closure_132_5 = tmp119;
@@ -72,8 +72,8 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            let obj = closure_0(5260);
-            const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
+            const kestrelConfig = closure_0(5260).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
+            const obj = closure_0(5260);
             const maxFileSizeResult = closure_0(5215).maxFileSize(id.id);
             const obj2 = closure_0(5215);
             const effectiveKestrelLimit = closure_0(5260).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
@@ -81,8 +81,8 @@ let closure_16 = async function _upload2(arg0) {
               closure_1_5.cancel();
               dependencyMap(false);
               closure_1(4603).hideActionSheet();
-              obj = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9440)(obj);
+              const obj5 = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
+              closure_1(9440)(obj5);
               const obj4 = closure_1(4603);
             }
             const obj3 = closure_0(5260);
@@ -115,21 +115,20 @@ let closure_16 = async function _upload2(arg0) {
         c7 = 0;
         closure_132_11 = closure_6;
         closure_132_2(false);
-        let obj10 = closure_133_1(closure_133_2[15]);
-        obj10.hideActionSheet();
-        let obj2 = { file: closure_132_11.file, guildId: closure_132_3.id, analyticsLocations: closure_132_4, code: closure_132_11.code, reason: closure_132_11.reason };
-        const result = closure_133_0(closure_133_2[20]).handleUploadMessageAttachmentsErrors(obj2);
+        closure_133_1(closure_133_2[15]).hideActionSheet();
+        const obj11 = closure_133_1(closure_133_2[15]);
+        const obj8 = { file: closure_132_11.file, guildId: closure_132_3.id, analyticsLocations: closure_132_4, code: closure_132_11.code, reason: closure_132_11.reason };
+        const result = closure_133_0(closure_133_2[20]).handleUploadMessageAttachmentsErrors(obj8);
         c9 = 3;
-        let obj3 = { value: undefined, done: true };
-        return obj3;
+        const obj10 = { value: undefined, done: true };
+        return obj10;
       } else if (3 === tmp9) {
         c7 = 0;
         closure_132_2(false);
-        let obj8 = closure_133_1(closure_133_2[15]);
-        obj8.hideActionSheet();
+        closure_133_1(closure_133_2[15]).hideActionSheet();
         c9 = 3;
-        let obj4 = { value: undefined, done: true };
-        return obj4;
+        const obj13 = { value: undefined, done: true };
+        return obj13;
       } else if (4 === tmp9) {
         if (arg0 === 1) {
           c9 = 3;
@@ -137,8 +136,8 @@ let closure_16 = async function _upload2(arg0) {
         } else if (arg0 === 2) {
           c7 = 0;
           c9 = 3;
-          let obj5 = { value, done: true };
-          return obj5;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           closure_132_9 = value;
           closure_1 = 0;
@@ -152,38 +151,37 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = HermesBuiltin.arraySpread(dependencyMap, closure_1);
           closure_132_6 = items;
           c7 = 2;
-          obj5 = closure_133_1(closure_133_2[21]);
           c8 = 6;
           c9 = 1;
-          const obj6 = { value: obj5.unarchiveThreadIfNecessary(closure_132_0), done: false };
-          return obj6;
+          const obj15 = { value: closure_133_1(closure_133_2[21]).unarchiveThreadIfNecessary(closure_132_0), done: false };
+          return obj15;
         }
       } else {
         if (5 === tmp9) {
           c7 = 0;
           closure_132_12 = closure_6;
           closure_132_2(false);
-          obj3 = closure_133_1(closure_133_2[15]);
-          obj3.hideActionSheet();
+          closure_133_1(closure_133_2[15]).hideActionSheet();
           const tmp24 = new closure_133_1(closure_133_2[23])(closure_132_12);
           closure_132_10 = tmp24;
           if (closure_132_10.code === closure_133_11.EXPLICIT_CONTENT) {
-            obj4 = closure_133_1(closure_133_2[24]);
-            const result1 = obj4.sendExplicitMediaClydeError(closure_132_0, closure_132_10.attachments, closure_133_0(closure_133_2[25]).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+            const result1 = closure_133_1(closure_133_2[24]).sendExplicitMediaClydeError(closure_132_0, closure_132_10.attachments, closure_133_0(closure_133_2[25]).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+            let obj5 = closure_133_1(closure_133_2[24]);
           } else {
-            const obj7 = { title: null, body: null };
+            const obj16 = { title: null, body: null };
             const intl = closure_133_0(closure_133_2[27]).intl;
-            obj7.title = intl.string(closure_133_0(closure_133_2[27]).t.B3vFdU);
+            obj16.title = intl.string(closure_133_0(closure_133_2[27]).t.B3vFdU);
             const anyErrorMessage = closure_132_10.getAnyErrorMessage();
             let message = anyErrorMessage;
             if (anyErrorMessage == null) {
               message = closure_132_10.message;
             }
-            obj7.body = message;
-            closure_133_1(closure_133_2[26]).show(obj7);
+            obj16.body = message;
+            closure_133_1(closure_133_2[26]).show(obj16);
             const obj21 = closure_133_1(closure_133_2[26]);
           }
           c9 = 3;
+          let obj4 = closure_133_1(closure_133_2[15]);
         } else if (6 === tmp9) {
           if (arg0 === 1) {
             c9 = 3;
@@ -191,18 +189,18 @@ let closure_16 = async function _upload2(arg0) {
           } else if (arg0 === 2) {
             c7 = 0;
             c9 = 3;
-            obj8 = { value, done: true };
-            return obj8;
+            const obj17 = { value, done: true };
+            return obj17;
           } else {
             c7 = 3;
             const HTTP = closure_133_0(closure_133_2[22]).HTTP;
             const request = { url: closure_133_12.MESSAGE(closure_132_0, closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0)), body: null, rejectWithError: true };
-            const obj9 = { attachments: closure_132_6 };
-            request.body = obj9;
+            const obj18 = { attachments: closure_132_6 };
+            request.body = obj18;
             c8 = 7;
             c9 = 1;
-            obj10 = { value: HTTP.patch(request), done: false };
-            return obj10;
+            const obj20 = { value: HTTP.patch(request), done: false };
+            return obj20;
           }
         } else if (arg0 === 1) {
           c9 = 3;
@@ -212,7 +210,7 @@ let closure_16 = async function _upload2(arg0) {
         }
         c7 = 0;
         c9 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp80) {
@@ -236,16 +234,12 @@ const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: null, postContent: null, title: null, description: null, button: null, buttonMargin: null };
-createStyles = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
-createStyles.post = createStyles;
-createStyles.postContent = { marginBottom: 0, padding: 8 };
-createStyles.title = { textAlign: "center", marginBottom: 8 };
-createStyles.description = { textAlign: "center", marginBottom: 32 };
-createStyles.button = { borderRadius: nativeDefault.radii.sm };
-createStyles.buttonMargin = { marginBottom: 10 };
-let closure_15 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
+let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
+obj2.button = { borderRadius: nativeDefault.radii.sm };
+obj2.buttonMargin = { marginBottom: 10 };
+let closure_15 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
 
@@ -258,15 +252,15 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   let analyticsLocations;
   c8 = undefined;
   const tmp = closure_15();
-  [tmp3, c3] = _slicedToArray(stateFromStores1.useState(false), 2);
-  let obj = threadId(sendMessage[28]);
+  [tmp3, c3] = stateFromStores1.useState(false);
+  const tmp2 = _slicedToArray(stateFromStores1.useState(false), 2);
   const items = [analyticsLocations];
   const items1 = [threadId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
-  let obj1 = threadId(sendMessage[28]);
+  const stateFromStores = threadId(sendMessage[28]).useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
+  let obj = threadId(sendMessage[28]);
   const items2 = [GuildStore];
   const items3 = [stateFromStores];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => {
+  stateFromStores1 = threadId(sendMessage[28]).useStateFromStores(items2, () => {
     let guildId;
     if (stateFromStores != null) {
       guildId = stateFromStores.getGuildId();
@@ -276,7 +270,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   let obj2 = threadId(sendMessage[28]);
   const items4 = [MessageStore];
   const items5 = [threadId];
-  const stateFromStores2 = obj2.useStateFromStores(items4, () => MessageStore.getMessage(threadId, SnowflakeUtilsDefault.castChannelIdAsMessageId(threadId)), items5);
+  const stateFromStores2 = threadId(sendMessage[28]).useStateFromStores(items4, () => MessageStore.getMessage(threadId, SnowflakeUtilsDefault.castChannelIdAsMessageId(threadId)), items5);
   analyticsLocations = attachments(sendMessage[29])().analyticsLocations;
   const items6 = [stateFromStores, stateFromStores1, stateFromStores2, threadId, attachments, analyticsLocations];
   const items7 = [sendMessage];
@@ -285,7 +279,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
       if (null != stateFromStores2) {
         if (null != stateFromStores1) {
           const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: true });
-          let obj = { threadId, attachments, setIsUploading, guild: tmp2, analyticsLocations };
+          const obj3 = { threadId, attachments, setIsUploading, guild: tmp2, analyticsLocations };
           (function _upload() {
             const self = this;
             const apply = closure_1_16.apply;
@@ -295,20 +289,19 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
               applyArgumentsResult = apply(self, arguments);
             }
             return applyArgumentsResult;
-          })(obj);
+          })(obj3);
         }
       }
     }
-    obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items6);
   const callback1 = stateFromStores1.useCallback(() => {
     const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: false });
     ActionSheetActionCreatorsDefault.hideActionSheet();
     sendMessage();
   }, items7);
-  const tmp2 = _slicedToArray(stateFromStores1.useState(false), 2);
-  [tmp12, c8] = _slicedToArray(stateFromStores1.useState(null), 2);
+  let obj3 = threadId(sendMessage[28]);
+  [tmp12, c8] = stateFromStores1.useState(null);
   const items8 = [attachments];
   const effect = stateFromStores1.useEffect(() => {
     if (null != attachments[0]) {
@@ -331,49 +324,47 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
       tmp16 = size;
     }
   }
-  obj = { startExpanded: true, children: null };
-  obj = { style: tmp.container, children: null };
-  obj1 = { pointerEvents: "none", style: tmp.post, children: null };
-  obj2 = { threadId, localDeviceMedia: tmp16, style: tmp.postContent };
-  obj1.children = closure_13(threadId(sendMessage[33]).ForumPostListDisabled, obj2);
-  const items9 = [closure_13(stateFromStores2, obj1), , , , , ];
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { startExpanded: true, children: null };
+  const obj6 = { style: tmp.container, children: null };
+  const obj7 = { pointerEvents: "none", style: tmp.post, children: closure_13(threadId(sendMessage[33]).ForumPostListDisabled, { threadId, localDeviceMedia: tmp16, style: tmp.postContent }) };
+  const items9 = [closure_13(stateFromStores2, obj7), , , , , ];
+  const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(tmp5[27]).intl;
-  obj3.children = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
-  items9[1] = closure_13(threadId(sendMessage[34]).Text, obj3);
-  const obj4 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
+  obj9.children = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
+  items9[1] = closure_13(threadId(sendMessage[34]).Text, obj9);
+  const obj10 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp4(tmp5[27]).intl;
-  obj4.children = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
-  items9[2] = closure_13(threadId(sendMessage[34]).Text, obj4);
-  const obj5 = { style: tmp.buttonMargin, children: null };
-  const obj6 = { grow: true, variant: "primary", text: null, pillStyle: null, onPress: null, loading: null, disabled: null };
+  obj10.children = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
+  items9[2] = closure_13(threadId(sendMessage[34]).Text, obj10);
+  const obj11 = { style: tmp.buttonMargin, children: null };
+  const obj12 = { grow: true, variant: "primary", text: null, pillStyle: null, onPress: null, loading: null, disabled: null };
   const intl3 = tmp4(tmp5[27]).intl;
-  obj6.text = intl3.string(threadId(sendMessage[27]).t.d611xH);
-  obj6.pillStyle = tmp.button;
-  obj6.onPress = callback;
-  obj6.loading = tmp3;
-  obj6.disabled = tmp3;
-  obj5.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj6);
-  items9[3] = closure_13(stateFromStores2, obj5);
-  const obj7 = { style: tmp.buttonMargin, children: null };
-  const obj8 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
+  obj12.text = intl3.string(threadId(sendMessage[27]).t.d611xH);
+  obj12.pillStyle = tmp.button;
+  obj12.onPress = callback;
+  obj12.loading = tmp3;
+  obj12.disabled = tmp3;
+  obj11.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj12);
+  items9[3] = closure_13(stateFromStores2, obj11);
+  const obj13 = { style: tmp.buttonMargin, children: null };
+  const obj14 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
   const intl4 = tmp4(tmp5[27]).intl;
-  obj8.text = intl4.string(threadId(sendMessage[27]).t["8rKVHL"]);
-  obj8.pillStyle = tmp.button;
-  obj8.onPress = callback1;
-  obj8.disabled = tmp3;
-  obj7.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj8);
-  items9[4] = closure_13(stateFromStores2, obj7);
-  const obj9 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
+  obj14.text = intl4.string(threadId(sendMessage[27]).t["8rKVHL"]);
+  obj14.pillStyle = tmp.button;
+  obj14.onPress = callback1;
+  obj14.disabled = tmp3;
+  obj13.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj14);
+  items9[4] = closure_13(stateFromStores2, obj13);
+  const obj15 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
   const intl5 = tmp4(tmp5[27]).intl;
-  obj9.text = intl5.string(threadId(sendMessage[27]).t["ETE/oC"]);
-  obj9.pillStyle = tmp.button;
-  obj9.onPress = function onPress() {
+  obj15.text = intl5.string(threadId(sendMessage[27]).t["ETE/oC"]);
+  obj15.pillStyle = tmp.button;
+  obj15.onPress = function onPress() {
     return attachments(sendMessage[15]).hideActionSheet();
   };
-  obj9.disabled = tmp3;
-  items9[5] = closure_13(threadId(sendMessage[35]).BaseTextButton, obj9);
-  obj.children = items9;
-  obj.children = closure_14(stateFromStores2, obj);
-  return closure_13(threadId(sendMessage[32]).BottomSheet, obj);
+  obj15.disabled = tmp3;
+  items9[5] = closure_13(threadId(sendMessage[35]).BaseTextButton, obj15);
+  obj6.children = items9;
+  obj5.children = closure_14(stateFromStores2, obj6);
+  return closure_13(threadId(sendMessage[32]).BottomSheet, obj5);
 };

@@ -1,9 +1,9 @@
-// === Module 15416: RoleColorsSetting ===
+// === Module 15417: RoleColorsSetting ===
 
-// Module 15416 (RoleColorsSetting)
+// Module 15417 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -17,23 +17,23 @@ function onRoleColorSettingValueChange(roleStyle) {
 }
 function useRoleColorSettingOptions() {
   return noop.useMemo(() => {
-    let obj = { label: null, value: "username" };
+    const obj = { label: null, value: "username" };
     const intl = util.intl;
     obj.label = intl.string(util.t.YEOEi6);
     const items = [obj, , ];
-    obj = { label: null, value: "dot" };
+    const obj2 = { label: null, value: "dot" };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t.mQaro3);
-    items[1] = obj;
-    obj = { label: null, value: "hidden" };
+    obj2.label = intl2.string(util.t.mQaro3);
+    items[1] = obj2;
+    const obj3 = { label: null, value: "hidden" };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t.Ji2EVJ);
-    items[2] = obj;
+    obj3.label = intl3.string(util.t.Ji2EVJ);
+    items[2] = obj3;
     return items;
   }, []);
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
@@ -42,12 +42,11 @@ let SettingBuilders = {
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
 
-export default SettingBuilders;
+export default radio;
 export { useRoleColorSettingValue };
 export { onRoleColorSettingValueChange };
 export { useRoleColorSettingOptions };

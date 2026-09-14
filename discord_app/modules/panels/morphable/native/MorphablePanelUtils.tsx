@@ -1,7 +1,7 @@
-// === Module 17128: MorphablePanelUtils ===
+// === Module 17130: MorphablePanelUtils ===
 
-// Module 17128 (MorphablePanelUtils)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 12403 */;
+// Module 17130 (MorphablePanelUtils)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 12404 */;
 import size from "module_2" /* 2 */;
 
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
@@ -279,10 +279,8 @@ function getClampedPIPPosition(topAvoidanceRegion) {
       if (typeof tmp15 === "function") {
         const _Math7 = Math;
         const _Math8 = Math;
-        point = { x: null, y: null };
-        point.x = tmp16 + point.x;
-        point.y = Math.min(Math.max(sum, tmp17), tmp18) + point.y;
-        return point;
+        const point1 = { x: tmp16 + point.x, y: Math.min(Math.max(sum, tmp17), tmp18) + point.y };
+        return point1;
       } else {
         throw new TypeError("Trying to call a non-function");
       }

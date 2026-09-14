@@ -14,11 +14,11 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { container: null };
-obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
+let obj3 = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
 const ColorUtils = fn(4486);
-obj.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
-obj.borderRadius = nativeDefault.radii.sm;
-obj.container = obj;
+obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+obj3.borderRadius = nativeDefault.radii.sm;
+obj.container = obj3;
 let closure_8 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
@@ -27,13 +27,13 @@ export default noop.memo((channel) => {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = closure_8();
-  let obj = channel(9601);
-  const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  let obj1 = channel(504);
+  const tmp4 = useCanSpeakInChannelDefault(channel.id);
+  const isConnectedToVoiceChannel = channel(9601).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(9601);
   const items = [GuildStore];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj1.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
-  const tmp4 = useCanSpeakInChannelDefault(channel.id);
+  const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
+  const obj2 = channel(504);
   const items2 = [ApplicationStreamingStore];
   const items3 = [channel.id];
   const stateFromStoresArray = channel(504).useStateFromStoresArray(items2, () => ApplicationStreamingStore.getAllApplicationStreamsForChannel(channel.id), items3);
@@ -52,7 +52,7 @@ export default noop.memo((channel) => {
   const items5 = [];
   items5.push(jsx(channel(10143).StreamVolumeItem, {}));
   if (tmp11) {
-    obj = { channel, disabled: null };
+    const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
     if (tmp12) {
       tmp12 = null == stateFromStoresArray.find((ownerId) => ownerId.ownerId === closure_1);
@@ -64,12 +64,13 @@ export default noop.memo((channel) => {
       }
       tmp12 = reachedLimit;
     }
-    obj.disabled = tmp12;
+    obj5.disabled = tmp12;
     items5.push(jsx(tmp5(10143).ScreenshareButton, { channel, disabled: null }));
   }
-  obj = { channelId: channel.id, isConnectedToVoiceChannel };
   items5.push(jsx(channel(10143).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
   items5.push(jsx(channel(10143).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((children, index) => <View key={index}>{children}</View>) };
+  const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
+  tmp11 = num > 0 && tmp4;
+  const tmp5Result = channel(5498);
   return <View style={tmp.container}>{items5.map((children, index) => <View key={index}>{children}</View>)}</View>;
 });

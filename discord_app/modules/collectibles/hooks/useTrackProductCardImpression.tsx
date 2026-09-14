@@ -1,10 +1,12 @@
-// === Module 15909: useTrackProductCardImpression ===
+// === Module 15911: useTrackProductCardImpression ===
 
-// Module 15909 (useTrackProductCardImpression)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 15911 (useTrackProductCardImpression)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -63,8 +65,7 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
   callback = collectiblesAnalyticsContext.useCallback(() => {
     let priceForCollectiblesProduct = null;
     if (null != stateFromStores) {
-      let obj = CollectiblesUtils;
-      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(stateFromStores, c5, true);
+      priceForCollectiblesProduct = CollectiblesUtils.getPriceForCollectiblesProduct(stateFromStores, c5, true);
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != stateFromStores) {
@@ -74,42 +75,41 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     if (collectiblesAnalyticsContext != null) {
       sessionId = collectiblesAnalyticsContext.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
+    const obj4 = { collectibles_shop_session_id: sessionId, sku_id, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
     let amount;
     if (priceForCollectiblesProduct != null) {
       amount = priceForCollectiblesProduct.amount;
     }
-    obj.display_price = amount;
-    str = undefined;
+    obj4.display_price = amount;
+    let str1;
     if (priceForCollectiblesProduct != null) {
-      str = priceForCollectiblesProduct.currency;
-      str = str.toString();
+      str1 = str.toString();
     }
-    obj.display_price_currency = str;
-    obj.display_price_strikethrough = strikeThroughPriceAmountForCollectiblesProduct;
+    obj4.display_price_currency = str1;
+    obj4.display_price_strikethrough = strikeThroughPriceAmountForCollectiblesProduct;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
       tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
-    obj.position = tilePosition;
-    obj.page_type = page_type;
+    obj4.position = tilePosition;
+    obj4.page_type = page_type;
     let pageCategory;
     if (collectiblesAnalyticsContext != null) {
       pageCategory = collectiblesAnalyticsContext.pageCategory;
     }
-    obj.page_category = pageCategory;
+    obj4.page_category = pageCategory;
     let pageSection;
     if (collectiblesAnalyticsContext != null) {
       pageSection = collectiblesAnalyticsContext.pageSection;
     }
-    obj.page_section = pageSection;
-    obj.type = str;
+    obj4.page_section = pageSection;
+    obj4.type = str;
     let categoryPosition;
     if (collectiblesAnalyticsContext != null) {
       categoryPosition = collectiblesAnalyticsContext.categoryPosition;
     }
-    obj.category_position = categoryPosition;
-    AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_TILE_IMPRESSION, obj);
+    obj4.category_position = categoryPosition;
+    AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_TILE_IMPRESSION, obj4);
   }, items1);
   const items2 = [callback];
   const items3 = [categoryStoreListingId];

@@ -1,6 +1,6 @@
-// === Module 16239: GuildSettingsModalChannelsActionCreators ===
+// === Module 16241: GuildSettingsModalChannelsActionCreators ===
 
-// Module 16239 (GuildSettingsModalChannelsActionCreators)
+// Module 16241 (GuildSettingsModalChannelsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,6 @@ export default {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
   },
   localChannelUpdate(found) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found });
   }
 };

@@ -1,6 +1,6 @@
-// === Module 12873: CreateGuildActionCreators ===
+// === Module 12874: CreateGuildActionCreators ===
 
-// Module 12873 (CreateGuildActionCreators)
+// Module 12874 (CreateGuildActionCreators)
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 
 const require = fn;
@@ -16,9 +16,7 @@ export const showInstantInviteModal = function showInstantInviteModal(arg0) {
     if (!flag) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        defaultChannel(dependencyMap[2]);
-        const obj = { source: constants.GUILD_CREATE };
-        const result = obj.showInstantInviteActionSheet(defaultChannel, obj);
+        const result = defaultChannel(dependencyMap[2]).showInstantInviteActionSheet(defaultChannel, { source: constants.GUILD_CREATE });
       });
       flag = false;
     }

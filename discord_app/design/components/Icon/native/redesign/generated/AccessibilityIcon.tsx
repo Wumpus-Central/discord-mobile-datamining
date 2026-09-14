@@ -1,9 +1,9 @@
-// === Module 15412: AccessibilityIcon ===
+// === Module 15413: AccessibilityIcon ===
 
-// Module 15412 (AccessibilityIcon)
+// Module 15413 (AccessibilityIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod15413 from "module_15413" /* 15413 */;
+import _mod15414 from "module_15414" /* 15414 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AccessibilityIcon = function AccessibilityIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15413, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15414, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -17,14 +17,12 @@ const result = size.fileFinishedImporting("modules/game_profile/native/component
 
 export default function GameProfileSummary(arg0) {
   ({ game, trackAction } = arg0);
+  first = undefined;
   _slicedToArray = undefined;
-  let first1;
-  const tmp2 = _slicedToArray(first1.useState(false), 2);
-  const first = tmp2[0];
-  _slicedToArray = tmp2[1];
-  const tmp4 = _slicedToArray(first1.useState(null), 2);
-  first1 = tmp4[0];
-  closure_4 = tmp4[1];
+  first1 = undefined;
+  closure_4 = undefined;
+  [first, _slicedToArray] = first1.useState(false);
+  [first1, closure_4] = first1.useState(null);
   const items = [first1];
   const items1 = [first, trackAction];
   const callback = first1.useCallback((nativeEvent) => {
@@ -55,15 +53,15 @@ export default function GameProfileSummary(arg0) {
     const intl = trackAction(first[6]).intl;
     const t = trackAction(first[6]).t;
     const stringResult = intl.string(first ? t["6MwJo/"] : t.lBeKY2);
-    let obj = { style: tmp.container, children: null };
-    obj = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: num, onTextLayout: callback, children: summaryLocalized };
-    const items2 = [closure_6(trackAction(first[7]).Text, obj), ];
+    const obj = { style: tmp.container, children: null };
+    const obj2 = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: num, onTextLayout: callback, children: summaryLocalized };
+    const items2 = [closure_6(trackAction(first[7]).Text, obj2), ];
     let tmp13Result = null;
     if (first1) {
-      obj = { onPress: callback1, accessibilityRole: "button", accessibilityLabel: stringResult, children: null };
-      const obj1 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
-      obj.children = closure_6(trackAction(tmp17[7]).Text, obj1);
-      tmp13Result = closure_6(closure_5, obj);
+      const obj3 = { onPress: callback1, accessibilityRole: "button", accessibilityLabel: stringResult, children: null };
+      const obj4 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
+      obj3.children = closure_6(trackAction(tmp17[7]).Text, obj4);
+      tmp13Result = closure_6(closure_5, obj3);
     }
     items2[1] = tmp13Result;
     obj.children = items2;

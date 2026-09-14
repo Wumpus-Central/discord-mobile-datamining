@@ -9,6 +9,8 @@ import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
@@ -38,7 +40,7 @@ function useRevealProviderValue(arg0, channel) {
   }
   stateFromStores1 = tmp;
   const tmp8 = useIsActivityFocusedDefault(channel.id);
-  const tmp10 = tmp2(1150).isIOS() && tmp8;
+  const tmp10 = tmp2(1363).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
@@ -76,24 +78,23 @@ export default function RevealProvider(showStatus) {
   if (!flag2) {
     let str = "light-content";
   } else {
-    let obj = require("shared");
+    require("shared");
     str = "dark-content";
   }
-  obj = { value: tmp2, children: null };
+  const obj2 = { value: tmp2, children: null };
   let tmp11 = !reveal;
-  let tmp4Result = StatusBarDefault;
   if (!reveal) {
     tmp11 = !flag;
   }
-  const items1 = [closure_10(tmp4Result, { hidden: tmp11, animated: true, barStyle: str }), children, ];
+  const items1 = [closure_10(StatusBarDefault, { hidden: tmp11, animated: true, barStyle: str }), children, ];
   let tmp13 = !reveal;
-  tmp4Result = HomeIndicatorDefault;
+  const tmp4Result = StatusBarDefault;
   if (!reveal) {
     tmp13 = !prefersDeferringSystemGestures;
   }
-  items1[2] = closure_10(tmp4Result, { prefersHidden: tmp13, prefersDeferringSystemGestures });
-  obj.children = items1;
-  return closure_11(context.Provider, obj);
+  items1[2] = closure_10(HomeIndicatorDefault, { prefersHidden: tmp13, prefersDeferringSystemGestures });
+  obj2.children = items1;
+  return closure_11(context.Provider, obj2);
 };
 export const RevealContext = context;
 export { useRevealProviderValue };

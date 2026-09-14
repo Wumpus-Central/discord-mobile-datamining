@@ -8,28 +8,22 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds });
 };
 export const unsubscribeMembers = function unsubscribeMembers(guildId, userIds) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds });
 };
 export const subscribeToMemberUpdates = function subscribeToMemberUpdates(guildId) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId });
 };
 export const unsubscribeFromMemberUpdates = function unsubscribeFromMemberUpdates(guildId) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId });
 };
 export const subscribeGuild = function subscribeGuild(guildId) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS", guildId });
 };
 export const subscribeChannel = function subscribeChannel(guildId, channelId, ranges) {
-  const obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges });
 };
 export const subscribeChannelDimensions = function subscribeChannelDimensions(arg0) {
   ({ y, height, rowHeight } = arg0);
@@ -57,7 +51,7 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
     do {
       let sum1 = result + (GuildChannelSubscriptions.MINIMUM_RANGE - 1);
       let items2 = [result, sum1];
-      let arr = items.push(items2);
+      let arr2 = items.push(items2);
       result = sum1 + 1;
     } while (result <= bound2);
   }

@@ -1,6 +1,6 @@
-// === Module 14662: AnimatedKeyboardProviderController ===
+// === Module 14663: AnimatedKeyboardProviderController ===
 
-// Module 14662 (AnimatedKeyboardProviderController)
+// Module 14663 (AnimatedKeyboardProviderController)
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1625 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const __initData = { code: "function AnimatedKeyboardProviderControllerTsx1(e){c
 const __initData2 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 const __initData3 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
 let closure_9 = noop.memo(() => {
-  let obj = { onStart: null, onMove: null, onEnd: null };
+  const obj2 = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
       let OPEN = ReanimatedRexport2.KeyboardState.CLOSED;
@@ -25,18 +25,18 @@ let closure_9 = noop.memo(() => {
     }
     const result = mutable1.set(OPEN);
   };
-  obj = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport2.KeyboardState };
-  fn.__closure = obj;
+  const obj = KeyboardChatScrollView;
+  fn.__closure = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport2.KeyboardState };
   fn.__workletHash = 12130162639136;
   fn.__initData = __initData;
-  obj.onStart = fn;
+  obj2.onStart = fn;
   const fn2 = function t(height) {
     const result = mutable.set(height.height);
   };
   fn2.__closure = { animatedKeyboardHeight: mutable };
   fn2.__workletHash = 1398293011995;
   fn2.__initData = __initData2;
-  obj.onMove = fn2;
+  obj2.onMove = fn2;
   const fn3 = function e(height) {
     if (0 === height.height) {
       let OPEN = ReanimatedRexport2.KeyboardState.CLOSED;
@@ -46,11 +46,13 @@ let closure_9 = noop.memo(() => {
     const result = mutable1.set(OPEN);
     const result1 = mutable.set(height.height);
   };
+  const obj3 = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport2.KeyboardState };
+  const obj4 = { animatedKeyboardHeight: mutable };
   fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport2.KeyboardState, animatedKeyboardHeight: mutable };
   fn3.__workletHash = 10688534401196;
   fn3.__initData = __initData3;
-  obj.onEnd = fn3;
-  obj.useKeyboardHandler(obj, []);
+  obj2.onEnd = fn3;
+  obj.useKeyboardHandler(obj2, []);
   return null;
 });
 const size = fn(2);

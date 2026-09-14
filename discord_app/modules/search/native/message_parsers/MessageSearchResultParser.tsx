@@ -1,12 +1,12 @@
-// === Module 16822: MessageSearchResultParser ===
+// === Module 16824: MessageSearchResultParser ===
 
-// Module 16822 (MessageSearchResultParser)
+// Module 16824 (MessageSearchResultParser)
 import _mod12 from "module_12" /* 12 */;
 import MessageRecord from "MessageRecord" /* 4286 */;
 
 require = fn;
 let closure_3 = fn(7982).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(16823).CachedSearchResultParser;
+fn(16825).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -21,9 +21,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(16824).analyze(tokenizedQueryContent));
+      set = new Set(set(16826).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(16824).shouldHighlight(item, set));
+      const found = parts.find((item) => set(16826).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -43,35 +43,32 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(16824);
+      const obj = set(16826);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {
-    let obj = closure_0;
     if (null != closure_0.tokenizedQueryContent) {
-      if ("" !== obj.tokenizedQueryContent) {
-        let truncateMessageResult = obj.truncateMessage(content.content, obj.tokenizedQueryContent, obj.lineClamp);
+      if ("" !== closure_0.tokenizedQueryContent) {
+        let truncateMessageResult = closure_0.truncateMessage(content.content, closure_0.tokenizedQueryContent, closure_0.lineClamp);
         if (null != truncateMessageResult) {
           const tmp18 = new MessageRecord(content);
           tmp18.content = truncateMessageResult;
           return tmp18;
         } else {
           const mapped = _mod12.chain(content.embeds).map((rawTitle, index) => {
-            let obj = closure_1_0;
             const truncateMessageResult = closure_1_0.truncateMessage(rawTitle.rawTitle, closure_1_0.tokenizedQueryContent, closure_1_0.lineClamp);
             if (null != truncateMessageResult) {
-              obj = { truncated: truncateMessageResult, index, contentType: "title" };
+              const obj2 = { truncated: truncateMessageResult, index, contentType: "title" };
+              let obj3 = obj2;
             } else {
               let rawDescription;
               if (!set.has(rawTitle.type)) {
                 rawDescription = rawTitle.rawDescription;
               }
-              obj = { truncated: null, index: null, contentType: "description" };
-              obj.truncated = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
-              obj.index = index;
-              const truncateMessageResult1 = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
+              obj3 = { truncated: closure_1_0.truncateMessage(rawDescription, closure_1_0.tokenizedQueryContent, closure_1_0.lineClamp), index, contentType: "description" };
+              const truncateMessageResult1 = closure_1_0.truncateMessage(rawDescription, closure_1_0.tokenizedQueryContent, closure_1_0.lineClamp);
             }
-            return obj;
+            return obj3;
           });
           const chainResult = _mod12.chain(content.embeds);
           const valueResult = mapped.find((truncated) => null != truncated.truncated).value();
@@ -80,16 +77,16 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
             const items = [];
             HermesBuiltin.arraySpread(tmp5.embeds, 0);
             tmp5.embeds = items;
-            obj = {};
+            let obj2 = {};
             const merged = Object.assign(tmp5.embeds[valueResult.index]);
             if ("title" === valueResult.contentType) {
-              obj = { rawTitle: valueResult.truncated };
-              let obj1 = obj;
+              let obj3 = { rawTitle: valueResult.truncated };
+              let obj4 = obj3;
             } else {
-              obj1 = { rawDescription: valueResult.truncated };
+              obj4 = { rawDescription: valueResult.truncated };
             }
-            const merged1 = Object.assign(obj1);
-            tmp5.embeds[valueResult.index] = obj;
+            const merged1 = Object.assign(obj4);
+            tmp5.embeds[valueResult.index] = obj2;
             return tmp5;
           } else {
             return content;
@@ -103,7 +100,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
   let obj = require("SearchUtils");
   const tokenizeQueryResult = require("SearchUtils").tokenizeQuery(searchQueryString);
   const searchQueryFromTokens = require("SearchUtils").getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = require("SearchUtils");
+  let obj2 = require("SearchUtils");
   const str = require("SearchUtils").getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {

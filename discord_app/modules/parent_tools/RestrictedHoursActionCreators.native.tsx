@@ -1,8 +1,10 @@
-// === Module 17405: RestrictedHoursActionCreators ===
+// === Module 17407: RestrictedHoursActionCreators ===
 
-// Module 17405 (RestrictedHoursActionCreators)
+// Module 17407 (RestrictedHoursActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 function closeRestrictedHoursModal() {
@@ -13,10 +15,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/RestrictedHoursActionCreators.native.tsx");
 
 export const openRestrictedHoursModal = function openRestrictedHoursModal() {
-  const obj = { onClose: closeRestrictedHoursModal };
-  obj.pushLazy(asyncGeneratorStep(async () => {
+  ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     await require("asyncRequireImpl")(paths[2], paths.paths);
     return value.default;
-  }), obj, RESTRICTED_HOURS_MODAL_KEY, { animation: "none", presentation: "fullScreenModal" });
+  }), { onClose: closeRestrictedHoursModal }, RESTRICTED_HOURS_MODAL_KEY, { animation: "none", presentation: "fullScreenModal" });
 };
 export { closeRestrictedHoursModal };

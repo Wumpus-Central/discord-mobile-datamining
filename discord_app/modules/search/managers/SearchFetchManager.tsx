@@ -1,8 +1,8 @@
-// === Module 12480: SearchFetchManager ===
+// === Module 12481: SearchFetchManager ===
 
-// Module 12480 (SearchFetchManager)
-import AbstractSearchFetchManager2 from "AbstractSearchFetchManager" /* 12478 */;
-import SearchFetcher from "SearchFetcher" /* 12479 */;
+// Module 12481 (SearchFetchManager)
+import AbstractSearchFetchManager2 from "AbstractSearchFetchManager" /* 12479 */;
+import SearchFetcher from "SearchFetcher" /* 12480 */;
 import size from "module_2" /* 2 */;
 
 const AbstractSearchFetchManager = AbstractSearchFetchManager2.AbstractSearchFetchManager;

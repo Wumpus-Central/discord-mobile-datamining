@@ -15,11 +15,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/transitionToMemberVerification.native.tsx");
 
 export const transitionToMemberVerification = function transitionToMemberVerification(guildId) {
-  let obj = MemberVerificationRouteExperiment;
   if (obj.getIsMemberVerificationRouteDeprecated("transitionToMemberVerification")) {
     if (null != GuildStore.getGuild(guildId)) {
-      let tmpResult = router_utils;
-      tmpResult.transitionToGuild(guildId);
+      router_utils.transitionToGuild(guildId);
+      const tmpResult = router_utils;
     } else {
       const request = UserGuildJoinRequestStore.getRequest(guildId);
       let applicationStatus;
@@ -27,22 +26,23 @@ export const transitionToMemberVerification = function transitionToMemberVerific
         applicationStatus = request.applicationStatus;
       }
       if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-        tmpResult = MemberVerificationAlertActionCreators;
-        const result = tmpResult.openMemberVerificationPendingAlert(guildId);
+        const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);
+        const tmpResult6 = MemberVerificationAlertActionCreators;
       } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-        obj = { guildId, canWithdraw: true };
-        const result1 = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert(obj);
-        const tmpResult1 = MemberVerificationAlertActionCreators;
+        const obj2 = { guildId, canWithdraw: true };
+        const result1 = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert(obj2);
+        const tmpResult7 = MemberVerificationAlertActionCreators;
       } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
         router_utils.transitionToGuild(guildId);
-        const tmpResult2 = router_utils;
+        const tmpResult8 = router_utils;
       } else {
         const result2 = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
-        const tmpResult3 = MemberVerificationModalActionCreators;
+        const tmpResult9 = MemberVerificationModalActionCreators;
       }
     }
   } else {
     router_utils.transitionTo(Routes.GUILD_MEMBER_VERIFICATION(guildId));
-    const tmpResult4 = router_utils;
+    const tmpResult10 = router_utils;
   }
+  obj = MemberVerificationRouteExperiment;
 };

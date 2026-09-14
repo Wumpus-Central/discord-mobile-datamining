@@ -1,6 +1,6 @@
-// === Module 16874: MediaKeyboardFloatingSend ===
+// === Module 16876: MediaKeyboardFloatingSend ===
 
-// Module 16874 (MediaKeyboardFloatingSend)
+// Module 16876 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import spring from "spring" /* 5055 */;
@@ -8,21 +8,23 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = { sendContainer: null, gradient: null };
-obj = {};
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.top = undefined;
+obj3.top = undefined;
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj.sendContainer = obj;
-const createStyles = {};
+obj.sendContainer = obj3;
+let obj4 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.color = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
-obj.gradient = createStyles;
+obj4.color = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
+obj.gradient = obj4;
 let closure_8 = createStyles.createStyles(obj);
 const __initData = { code: "function MediaKeyboardFloatingSendTsx1(){const{animatedIndex,INDEX_HEADER_CHANGE_THRESHOLD,hasUploads}=this.__closure;const isSheetOpen=animatedIndex.get()>INDEX_HEADER_CHANGE_THRESHOLD;return isSheetOpen&&hasUploads;}" };
 const __initData2 = { code: "function MediaKeyboardFloatingSendTsx2(visible){const{isSendVisibleSharedValue}=this.__closure;isSendVisibleSharedValue.set(visible);}" };
@@ -38,7 +40,6 @@ export default noop.memo(noop.forwardRef(function MediaKeyboardFloatingSendInner
   let sharedValue;
   const tmp = closure_8();
   _require = tmp;
-  let obj = noop;
   const tmp4 = require("useSafeAreaInsets")();
   [bottom, c1] = sharedValue(noop.useState(null), 2);
   if (bottom == null) {
@@ -47,15 +48,15 @@ export default noop.memo(noop.forwardRef(function MediaKeyboardFloatingSendInner
   closure_129_0 = animatedIndex;
   closure_129_1 = channelId;
   closure_129_2 = draftType;
-  let obj1 = require("initialize");
+  const tmp5 = sharedValue(noop.useState(null), 2);
   let items = [UploadAttachmentStore];
   const items1 = [channelId, draftType];
-  const stateFromStores = obj1.useStateFromStores(items, () => UploadAttachmentStore.getUploadCount(c1, bottom) > 0, items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UploadAttachmentStore.getUploadCount(c1, bottom) > 0, items1);
   closure_129_3 = stateFromStores;
-  let obj2 = require("ReanimatedRexport");
-  sharedValue = obj2.useSharedValue(false);
+  let obj2 = require("initialize");
+  sharedValue = require("ReanimatedRexport").useSharedValue(false);
   closure_129_4 = sharedValue;
-  const tmp5 = sharedValue(noop.useState(null), 2);
+  const obj3 = require("ReanimatedRexport");
   const fn = function c() {
     return closure_0.get() > 0.7 && sharedValue;
   };
@@ -81,12 +82,12 @@ export default noop.memo(noop.forwardRef(function MediaKeyboardFloatingSendInner
     obj.opacity = spring.withSpring(num);
     return obj;
   };
-  obj = { insetFab: bottom, tokens: tmp2(tmp3[6]), withSpring: require("spring").withSpring, sendVisibleSharedValue: sharedValue };
-  fn3.__closure = obj;
+  const obj5 = require("ReanimatedRexport");
+  fn3.__closure = { insetFab: bottom, tokens: require("native"), withSpring: require("spring").withSpring, sendVisibleSharedValue: sharedValue };
   fn3.__workletHash = 6402761213297;
   fn3.__initData = __initData3;
-  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn3);
-  const obj5 = require("ReanimatedRexport");
+  const animatedStyle = obj5.useAnimatedStyle(fn3);
+  const obj6 = { insetFab: bottom, tokens: require("native"), withSpring: require("spring").withSpring, sendVisibleSharedValue: sharedValue };
   const fn4 = function f() {
     let pointerEvents = "none";
     if (sharedValue.get()) {
@@ -99,7 +100,7 @@ export default noop.memo(noop.forwardRef(function MediaKeyboardFloatingSendInner
   fn4.__initData = __initData4;
   const items2 = [tmp.gradient.color];
   const animatedProps = require("ReanimatedRexport").useAnimatedProps(fn4);
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
     const obj2 = _modDef672(closure_0.gradient.color);
     const items = [_modDef672(closure_0.gradient.color).alpha(0).hex(), ];
@@ -108,22 +109,22 @@ export default noop.memo(noop.forwardRef(function MediaKeyboardFloatingSendInner
     obj.colors = items;
     return obj;
   }, items2);
-  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ setInsetFab }));
-  obj = { style: null, animatedProps, children: null };
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setInsetFab }));
+  const obj8 = { style: null, animatedProps, children: null };
   const items3 = [animatedStyle, tmp.sendContainer];
-  obj.style = items3;
-  obj1 = { style: tmp.gradient };
+  obj8.style = items3;
+  const obj9 = { style: tmp.gradient };
   const obj7 = require("ReanimatedRexport");
   const merged = Object.assign(memo);
-  obj1.pointerEvents = "none";
-  const items4 = [closure_6(require("LinearGradient"), obj1), ];
-  obj2 = { accessibilityLabel: null, icon: null, onPress: null, positionBottom: null };
+  obj9.pointerEvents = "none";
+  const items4 = [closure_6(require("LinearGradient"), obj9), ];
+  const obj10 = { accessibilityLabel: null, icon: null, onPress: null, positionBottom: null };
   const intl = require("util").intl;
-  obj2.accessibilityLabel = intl.string(require("util").t.TXNS7S);
-  obj2.icon = closure_6(require("SendMessageIcon").SendMessageIcon, {});
-  obj2.onPress = onSend.onSend;
-  obj2.positionBottom = bottom;
-  items4[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj2);
-  obj.children = items4;
-  return closure_7(require("ReanimatedRexport").View, obj);
+  obj10.accessibilityLabel = intl.string(require("util").t.TXNS7S);
+  obj10.icon = closure_6(require("SendMessageIcon").SendMessageIcon, {});
+  obj10.onPress = onSend.onSend;
+  obj10.positionBottom = bottom;
+  items4[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj10);
+  obj8.children = items4;
+  return closure_7(require("ReanimatedRexport").View, obj8);
 }));

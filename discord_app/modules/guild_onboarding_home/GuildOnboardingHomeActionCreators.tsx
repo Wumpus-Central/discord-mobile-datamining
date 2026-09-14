@@ -1,10 +1,10 @@
-// === Module 12413: GuildOnboardingHomeActionCreators ===
+// === Module 12414: GuildOnboardingHomeActionCreators ===
 
-// Module 12413 (GuildOnboardingHomeActionCreators)
+// Module 12414 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
@@ -22,10 +22,8 @@ let closure_10 = async function _fetchGuildHomeSettings() {
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_START", guildId });
     const HTTP = HTTPUtils.HTTP;
-    let obj2 = { url: closure_2_9.GUILD_HOME_SETTINGS(guildId), oldFormErrors: true, rejectWithError: true };
-    await HTTP.get(obj2);
-    obj2 = closure_130_1(closure_130_2[6]);
-    obj2.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: closure_129_0 });
+    await HTTP.get({ url: closure_2_9.GUILD_HOME_SETTINGS(guildId), oldFormErrors: true, rejectWithError: true });
+    closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: closure_129_0 });
     await "HermesInternal";
     closure_129_1 = value;
     closure_129_2 = closure_130_0(closure_130_2[8]).settingsFromServer(closure_129_1.body);
@@ -46,8 +44,8 @@ let closure_11 = async function _fetchNewMemberActions() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -61,8 +59,8 @@ let closure_11 = async function _fetchNewMemberActions() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp3;
             closure_129_0 = guildId;
@@ -70,40 +68,39 @@ let closure_11 = async function _fetchNewMemberActions() {
             closure_129_2 = undefined;
             isFullServerPreviewResult = fullServerPreview.isFullServerPreview(guildId);
             if (!isFullServerPreviewResult) {
-              let obj4 = DispatcherDefault;
-              const obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId };
-              obj4.dispatch(obj1);
+              const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId };
+              DispatcherDefault.dispatch(obj6);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
-              let obj2 = { url: closure_2_9.GUILD_MEMBER_ACTIONS(guildId), oldFormErrors: true, rejectWithError: true };
+              const obj7 = { url: closure_2_9.GUILD_MEMBER_ACTIONS(guildId), oldFormErrors: true, rejectWithError: true };
               c5 = 2;
               c6 = 1;
-              const obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
+              const obj8 = { value: HTTP.get(obj7), done: false };
+              return obj8;
             }
           }
         } else if (1 === isFullServerPreviewResult) {
           c4 = 0;
-          obj2 = closure_130_1(closure_130_2[6]);
-          obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: closure_129_0 };
-          isFullServerPreviewResult = obj2.dispatch(obj4);
+          const obj9 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: closure_129_0 };
+          isFullServerPreviewResult = closure_130_1(closure_130_2[6]).dispatch(obj9);
+          const obj3 = closure_130_1(closure_130_2[6]);
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           closure_129_1 = value;
           closure_129_2 = closure_130_0(closure_130_2[8]).actionsFromServer(closure_129_1.body);
           const obj11 = closure_130_0(closure_130_2[8]);
-          const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: closure_129_0, memberActions: closure_129_2 };
-          closure_130_1(closure_130_2[6]).dispatch(obj6);
+          const obj13 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: closure_129_0, memberActions: closure_129_2 };
+          closure_130_1(closure_130_2[6]).dispatch(obj13);
           c4 = 0;
           c6 = 3;
-          obj = { value: closure_129_2, done: true };
+          const obj = { value: closure_129_2, done: true };
           return obj;
         }
         c6 = 3;
@@ -199,8 +196,8 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(guil
       isFullServerPreviewResult = null == resourceForChannel;
     }
     if (!isFullServerPreviewResult) {
-      const obj = { guild_id: guildId, channel_id: channel.id, server_guide_channel_type: "resource", channel_action_type: -1 };
-      obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
+      const obj2 = { guild_id: guildId, channel_id: channel.id, server_guide_channel_type: "resource", channel_action_type: -1 };
+      AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj2);
     }
     if (flag) {
       transitionToChannel.transitionToChannel(channelId, { navigationReplace: false });
@@ -221,45 +218,45 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     isFullServerPreviewResult = null == actionForChannel;
   }
   if (!isFullServerPreviewResult) {
-    const obj = { guild_id, channel_id: channel.id, server_guide_channel_type: "member action", channel_action_type: actionForChannel.actionType };
-    obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
+    const obj2 = { guild_id, channel_id: channel.id, server_guide_channel_type: "member action", channel_action_type: actionForChannel.actionType };
+    AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj2);
   }
   transitionToChannel.transitionToChannel(id);
 };
 export const completeNewMemberAction = function completeNewMemberAction(guildId, channelId) {
-  let obj = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId });
   if (!ImpersonateStore.isFullServerPreview(guildId)) {
     const channel = ChannelStore.getChannel(channelId);
     const actionForChannel = GuildOnboardingHomeSettingsStore.getActionForChannel(guildId, channelId);
     if (null != channel) {
       if (null != actionForChannel) {
-        let tmpResult = SnowflakeUtilsDefault;
         let completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
         if (completedActions == null) {
           completedActions = {};
         }
-        closure_0 = tmpResult.keys(completedActions);
+        closure_0 = SnowflakeUtilsDefault.keys(completedActions);
         let newMemberActions = GuildOnboardingHomeSettingsStore.getNewMemberActions(guildId);
         if (newMemberActions == null) {
           newMemberActions = [];
         }
-        tmpResult = AnalyticsUtilsDefault;
-        obj = { guild_id: null, channel_id: null, channel_action_type: null, has_completed_all: null };
+        const tmpResult = SnowflakeUtilsDefault;
+        const obj4 = { guild_id: null, channel_id: null, channel_action_type: null, has_completed_all: null };
         ({ guild_id: obj6.guild_id, id: obj6.channel_id } = channel);
-        obj.channel_action_type = actionForChannel.actionType;
-        obj.has_completed_all = newMemberActions.reduce((acc, channelId) => {
+        obj4.channel_action_type = actionForChannel.actionType;
+        obj4.has_completed_all = newMemberActions.reduce((acc, channelId) => {
           let hasItem = acc;
           if (acc) {
             hasItem = closure_0.includes(channelId.channelId);
           }
           return hasItem;
         }, true);
-        tmpResult.track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj);
+        AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj4);
+        const tmpResult2 = AnalyticsUtilsDefault;
       }
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj1 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
-    HTTP.post(obj1);
+    const obj5 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
+    HTTP.post(obj5);
   }
+  const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };
 };

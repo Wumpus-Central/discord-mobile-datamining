@@ -1,8 +1,8 @@
-// === Module 15623: UploadDebugLogsSetting ===
+// === Module 15624: UploadDebugLogsSetting ===
 
-// Module 15623 (UploadDebugLogsSetting)
+// Module 15624 (UploadDebugLogsSetting)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import DebugUploadManager from "DebugUploadManager" /* 10316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -15,8 +15,8 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,13 +29,13 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp4;
           closure_0 = tmp4;
           (function onUploadDebugLogsRequestStart() {
-            closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1247).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           let uploadDebugLogFiles = DebugLogCategory;
           if (obj8.isIOS()) {
@@ -53,42 +53,42 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
       } else if (1 === tmp8) {
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1247).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         throw dependencyMap;
       } else {
         if (2 === tmp8) {
           c3 = 1;
-          let obj1 = closure_129_1(closure_129_2[8]);
-          obj1 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: closure_129_0(closure_129_2[9]).CircleInformationIcon, content: null };
+          const obj5 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: closure_129_0(closure_129_2[9]).CircleInformationIcon, content: null };
           const intl = closure_129_0(closure_129_2[10]).intl;
-          obj1.content = intl.string(closure_129_0(closure_129_2[10]).t.VzHcSm);
-          obj1.open(obj1);
+          obj5.content = intl.string(closure_129_0(closure_129_2[10]).t.VzHcSm);
+          closure_129_1(closure_129_2[8]).open(obj5);
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
-            closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1247).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;
+          const obj2 = closure_129_1(closure_129_2[8]);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const obj2 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: closure_129_0(closure_129_2[9]).CircleInformationIcon, content: null };
+          const obj7 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: closure_129_0(closure_129_2[9]).CircleInformationIcon, content: null };
           const intl2 = closure_129_0(closure_129_2[10]).intl;
-          obj2.content = intl2.string(closure_129_0(closure_129_2[10]).t.BvyxE7);
-          closure_129_1(closure_129_2[8]).open(obj2);
+          obj7.content = intl2.string(closure_129_0(closure_129_2[10]).t.BvyxE7);
+          closure_129_1(closure_129_2[8]).open(obj7);
           c3 = 1;
           const obj6 = closure_129_1(closure_129_2[8]);
         }
         c3 = 0;
         (function onUploadDebugLogsRequestFinish() {
-          closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1247).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp31) {
@@ -107,10 +107,10 @@ let closure_8 = async function _handleUploadDebugLogSettingPress() {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const DebugLogCategory = fn(1074).DebugLogCategory;
 const jsx = fn(21).jsx;
-let module_560 = fn(560);
+const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11601);
-module_560 = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aY1OH2);
@@ -137,9 +137,8 @@ module_560 = {
   useIsDisabled: function useIsUploadDebugLogsDisabled() {
     return closure_7().isDisabled;
   }
-};
-module_560 = SettingBuilders.createPressable(module_560);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
 
-export default module_560;
+export default pressable;

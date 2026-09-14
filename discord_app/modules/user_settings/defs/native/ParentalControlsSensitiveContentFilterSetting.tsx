@@ -1,12 +1,14 @@
-// === Module 15981: ParentalControlsSensitiveContentFilterSetting ===
+// === Module 15983: ParentalControlsSensitiveContentFilterSetting ===
 
-// Module 15981 (ParentalControlsSensitiveContentFilterSetting)
+// Module 15983 (ParentalControlsSensitiveContentFilterSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5162 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

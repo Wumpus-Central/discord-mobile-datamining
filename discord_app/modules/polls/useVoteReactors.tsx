@@ -1,6 +1,6 @@
-// === Module 11852: useVoteReactors ===
+// === Module 11853: useVoteReactors ===
 
-// Module 11852 (useVoteReactors)
+// Module 11853 (useVoteReactors)
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
 import MessageReactionsStore from "MessageReactionsStore" /* 7864 */;
 
@@ -13,10 +13,9 @@ export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
-  let obj = channelId(reaction[2]);
   let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channelId(reaction[2]).useStateFromStores(items, () => {
     const reactions = MessageReactionsStore.getReactions(channelId, messageId, reaction.emoji, closure_4, MessageReactionsTypes.ReactionTypes.VOTE);
     let items;
     if (reactions != null) {
@@ -27,7 +26,7 @@ export default function useVoteReactors(channelId) {
     }
     return Array.from(items);
   }, items1, messageId(reaction[4]));
-  obj = { reactors: stateFromStores, hasMore: null };
+  const obj2 = { reactors: stateFromStores, hasMore: null };
   const count_details = reaction.count_details;
   let num;
   if (count_details != null) {
@@ -36,6 +35,6 @@ export default function useVoteReactors(channelId) {
   if (num == null) {
     num = 0;
   }
-  obj.hasMore = num > stateFromStores.length;
-  return obj;
+  obj2.hasMore = num > stateFromStores.length;
+  return obj2;
 };

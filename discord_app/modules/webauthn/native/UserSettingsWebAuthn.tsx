@@ -1,12 +1,12 @@
-// === Module 14746: UserSettingsWebAuthn ===
+// === Module 14747: UserSettingsWebAuthn ===
 
-// Module 14746 (UserSettingsWebAuthn)
+// Module 14747 (UserSettingsWebAuthn)
 import Navigator from "Navigator" /* 7103 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14747 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14748 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const WebAuthnScreens = fn(14744).WebAuthnScreens;
+const WebAuthnScreens = fn(14745).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
@@ -20,13 +20,12 @@ export default function UserSettingsWebAuthn(showNav) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = WebAuthnScreens2;
-  const screens = obj.getScreens({ isModal: false });
+  const screens = WebAuthnScreens2.getScreens({ isModal: false });
   const layoutEffect = noop.useLayoutEffect(() => {
     options.setOptions({ headerShown: flag });
   });
-  obj = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
+  const obj2 = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
   const items = [{ name: initialRouteName }];
-  obj.initialRouteStack = items;
+  obj2.initialRouteStack = items;
   return jsx(Navigator.Navigator, { screens, initialRouteName, initialRouteStack: null, useContainer: false });
 };

@@ -1,9 +1,9 @@
-// === Module 15410: useIsFavoritesGuildVisible ===
+// === Module 15411: useIsFavoritesGuildVisible ===
 
-// Module 15410 (useIsFavoritesGuildVisible)
+// Module 15411 (useIsFavoritesGuildVisible)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesHooks from "FavoritesHooks" /* 10352 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10366 */;
+import FavoritesHooks from "FavoritesHooks" /* 10353 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10367 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
@@ -63,8 +63,8 @@ export default function useIsFavoritesGuildVisible() {
   return flag(isExperimentEnabled[5]).useStateFromStores(items, () => computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, { isExperimentEnabled, isFreemium, hasAccess, isIntroPopoverShown: isFavoritesIntroPopoverShown, keepWhileViewing: flag }), items1);
 };
 export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
-  let obj = FavoritesHooks;
-  const favoritesAccess = obj.getFavoritesAccess();
-  obj = { isExperimentEnabled: favoritesAccess.isExperimentEnabled, isFreemium: favoritesAccess.isFreemium, hasAccess: favoritesAccess.hasAccess, isIntroPopoverShown: FavoritesGuildIntroPopover.isFavoritesIntroPopoverShown(), keepWhileViewing: true };
-  return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj);
+  const favoritesAccess = FavoritesHooks.getFavoritesAccess();
+  const obj2 = { isExperimentEnabled: favoritesAccess.isExperimentEnabled, isFreemium: favoritesAccess.isFreemium, hasAccess: favoritesAccess.hasAccess, isIntroPopoverShown: null, keepWhileViewing: true };
+  obj2.isIntroPopoverShown = FavoritesGuildIntroPopover.isFavoritesIntroPopoverShown();
+  return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj2);
 };

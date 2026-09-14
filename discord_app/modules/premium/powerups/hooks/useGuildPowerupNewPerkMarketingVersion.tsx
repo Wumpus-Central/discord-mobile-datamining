@@ -1,11 +1,13 @@
-// === Module 12632: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 12633: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 12632 (useGuildPowerupNewPerkMarketingVersion)
+// Module 12633 (useGuildPowerupNewPerkMarketingVersion)
 import Powerups from "Powerups" /* 4529 */;
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9196 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const GuildPowerupsConstants = fn(4526);

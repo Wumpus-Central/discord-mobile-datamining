@@ -1,10 +1,10 @@
-// === Module 16392: useGuildsBarBottomRightBadge ===
+// === Module 16394: useGuildsBarBottomRightBadge ===
 
-// Module 16392 (useGuildsBarBottomRightBadge)
-import native from "native" /* 1178 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16393 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16394 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16398 */;
+// Module 16394 (useGuildsBarBottomRightBadge)
+import native from "native" /* 1176 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16395 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16396 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,10 +47,10 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
   let items1 = [first, flag, joinRequestState, mentionCount, isMentionLowImportance, memo, token];
   return noop.useMemo(() => {
     if (mentionCount > 0) {
-      let obj = { position: "bottom-right", containerSize: token, width: first - 2 * native.BADGE_PADDING };
-      const tmp20Result = computeGuildsBarCutoutDefault(obj);
-      obj = { badge: null, cutout: null, cutouts: null };
-      const obj1 = {
+      const obj2 = { position: "bottom-right", containerSize: token, width: first - 2 * native.BADGE_PADDING };
+      const tmp20Result = computeGuildsBarCutoutDefault(obj2);
+      const obj3 = { badge: null, cutout: null, cutouts: null };
+      const obj4 = {
         maskStyle: memo,
         value: tmp,
         isMentionLowImportance,
@@ -63,7 +63,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
             }
           }
       };
-      obj.badge = jsx(native.MaskedBadge, {
+      obj3.badge = jsx(native.MaskedBadge, {
         maskStyle: memo,
         value: tmp,
         isMentionLowImportance,
@@ -76,32 +76,32 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
             }
           }
       });
-      obj.cutout = tmp20Result;
+      obj3.cutout = tmp20Result;
       const items = [tmp20Result];
-      obj.cutouts = items;
-      return obj;
-    } else if (null != joinRequestState) {
-      const obj2 = { position: "bottom-right", containerSize: token };
-      const tmp13 = computeGuildsBarCutoutDefault(obj2);
-      const obj3 = { badge: null, cutout: null, cutouts: null };
-      const obj4 = { style: memo, joinRequestState: tmp30 };
-      obj3.badge = jsx(GuildsBarGuildJoinRequestBadgeDefault, { style: memo, joinRequestState: tmp30 });
-      obj3.cutout = tmp13;
-      const items1 = [tmp13];
-      obj3.cutouts = items1;
+      obj3.cutouts = items;
       return obj3;
+    } else if (null != joinRequestState) {
+      const obj5 = { position: "bottom-right", containerSize: token };
+      const tmp13 = computeGuildsBarCutoutDefault(obj5);
+      const obj6 = { badge: null, cutout: null, cutouts: null };
+      const obj7 = { style: memo, joinRequestState: tmp30 };
+      obj6.badge = jsx(GuildsBarGuildJoinRequestBadgeDefault, { style: memo, joinRequestState: tmp30 });
+      obj6.cutout = tmp13;
+      const items1 = [tmp13];
+      obj6.cutouts = items1;
+      return obj6;
     } else if (flag) {
-      obj = { position: "bottom-right", containerSize: token };
+      const obj = { position: "bottom-right", containerSize: token };
       const tmp5 = computeGuildsBarCutoutDefault(obj);
-      const obj5 = { badge: null, cutout: null, cutouts: null };
-      const obj6 = { style: memo };
-      obj5.badge = jsx(InvitesDisabledBadgeDefault, { style: memo });
-      obj5.cutout = tmp5;
+      const obj8 = { badge: null, cutout: null, cutouts: null };
+      const obj9 = { style: memo };
+      obj8.badge = jsx(InvitesDisabledBadgeDefault, { style: memo });
+      obj8.cutout = tmp5;
       const items2 = [tmp5];
-      obj5.cutouts = items2;
-      return obj5;
+      obj8.cutouts = items2;
+      return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "accessible" };
+      return { badge: null, cutout: "Array", cutouts: "isArray" };
     }
   }, items1);
 };

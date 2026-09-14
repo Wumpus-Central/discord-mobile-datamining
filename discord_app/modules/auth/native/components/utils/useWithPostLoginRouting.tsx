@@ -7,6 +7,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ LoginStates: closure_7, AuthStates: closure_8 } = Constants);
@@ -41,28 +43,28 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
       closure_0.push(constants2.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED, obj);
     }
     if (constants.PASSWORD_RECOVERY_PHONE_VERIFICATION === loginStatus) {
-      obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
+      const obj2 = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
       const intl = closure_0(first[6]).intl;
-      obj.title = intl.string(closure_0(first[6]).t["+xqy3d"]);
+      obj2.title = intl.string(closure_0(first[6]).t["+xqy3d"]);
       const intl2 = closure_0(first[6]).intl;
-      obj.description = intl2.string(closure_0(first[6]).t.myKyqh);
-      obj.phone = authStore.getCredentials().login;
-      obj.onPhoneTokenReceived = function onPhoneTokenReceived(arg0) {
+      obj2.description = intl2.string(closure_0(first[6]).t.myKyqh);
+      obj2.phone = authStore.getCredentials().login;
+      obj2.onPhoneTokenReceived = function onPhoneTokenReceived(arg0) {
         const replaced = closure_1_0.replace(constants2.EXTERNAL_LINK, { externalURL: closure_1(first[7])(arg0) });
       };
-      obj.onClose = function onClose() {
+      obj2.onClose = function onClose() {
         handleLogin(dependencyMap[8]).loginReset();
       };
-      let replaced = closure_0.replace(constants2.VERIFY_PHONE, obj);
+      let replaced = closure_0.replace(constants2.VERIFY_PHONE, obj2);
     } else if (constants.PHONE_IP_AUTHORIZATION === loginStatus) {
       const credentials = authStore.getCredentials();
       ({ login: closure_0, password: closure_1 } = credentials);
-      obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
+      let obj3 = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
       const intl3 = closure_0(first[6]).intl;
-      obj.title = intl3.string(closure_0(first[6]).t.w55Oco);
+      obj3.title = intl3.string(closure_0(first[6]).t.w55Oco);
       const intl4 = closure_0(first[6]).intl;
-      obj.description = intl4.string(closure_0(first[6]).t["0/ALaJ"]);
-      obj.phone = authStore.getCredentials().login;
+      obj3.description = intl4.string(closure_0(first[6]).t["0/ALaJ"]);
+      obj3.phone = authStore.getCredentials().login;
       dependencyMap = closure_3(function*(arg0) {
         if (c4 === 2) {
           c4 = 3;
@@ -71,8 +73,8 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -85,25 +87,23 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 c2 = 0;
                 closure_1 = tmp2;
                 closure_129_0 = undefined;
-                let obj1 = handleLogin(dependencyMap[8]);
                 c3 = 1;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.authorizeIPAddress(closure_0);
-                return obj1;
+                const obj5 = { value: handleLogin(dependencyMap[8]).authorizeIPAddress(closure_0), done: false };
+                return obj5;
               }
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               const routes = closure_0.getState().routes;
@@ -121,7 +121,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
           }
         }
       });
-      obj.onPhoneTokenReceived = function() {
+      obj3.onPhoneTokenReceived = function() {
         const self = this;
         const apply = closure_2.apply;
         if (typeof apply === "unknown") {
@@ -131,7 +131,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
         }
         return applyArgumentsResult;
       };
-      obj.onClose = function onClose(arg0) {
+      obj3.onClose = function onClose(arg0) {
         if (arg0) {
           let tmp6 = null != handleLogin;
           if (tmp6) {
@@ -144,7 +144,7 @@ export default function useWithPostLoginRouting(arg0, handleLogin) {
           AuthenticationActionCreatorsDefault.loginReset();
         }
       };
-      closure_0.push(constants2.VERIFY_PHONE, obj);
+      closure_0.push(constants2.VERIFY_PHONE, obj3);
     }
     closure_3(loginStatus);
   }, items1);

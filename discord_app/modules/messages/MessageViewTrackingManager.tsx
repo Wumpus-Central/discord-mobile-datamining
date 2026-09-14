@@ -1,9 +1,9 @@
-// === Module 11438: MessageViewTrackingManager ===
+// === Module 11439: MessageViewTrackingManager ===
 
-// Module 11438 (MessageViewTrackingManager)
+// Module 11439 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import privDefault from "priv" /* 1437 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
@@ -12,25 +12,24 @@ import size from "module_2" /* 2 */;
 
 function getAnalyticsConfig(type) {
   type = type.type;
-  if (properties.ANNOUNCEMENT === type) {
-    properties = { event: AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, properties: null };
-    properties = { message_id: null, channel_id: null, guild_id: null, source_channel_id: null, source_guild_id: null };
+  if (obj.ANNOUNCEMENT === type) {
+    const obj2 = { event: AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, properties: null };
     ({ messageId: obj9.message_id, channelId: obj9.channel_id, guildId: obj9.guild_id, sourceChannelId: obj9.source_channel_id, sourceGuildId: obj9.source_guild_id } = type);
-    properties.properties = properties;
-    return properties;
+    obj2.properties = { message_id: null, channel_id: null, guild_id: null, source_channel_id: null, source_guild_id: null };
+    return obj2;
   } else if (tmp.APP_EMBED === type) {
-    const obj1 = { event: AnalyticEvents.APP_EMBED_VIEWED, properties: null };
+    const obj6 = { event: AnalyticEvents.APP_EMBED_VIEWED, properties: null };
     ({ applicationId: obj7.application_id, linkType: obj7.link_type, messageId: obj7.message_id, channelId: obj7.channel_id, guildId: obj7.guild_id } = type);
-    obj1.properties = { application_id: null, link_type: null, message_id: null, channel_id: null, guild_id: null };
-    return obj1;
+    obj6.properties = { application_id: null, link_type: null, message_id: null, channel_id: null, guild_id: null };
+    return obj6;
   } else if (tmp.OFFICIAL_MESSAGE === type) {
-    const obj3 = { event: AnalyticEvents.OFFICIAL_MESSAGE_VIEWED, properties: null };
+    const obj17 = { event: AnalyticEvents.OFFICIAL_MESSAGE_VIEWED, properties: null };
     ({ messageId: obj5.message_id, channelId: obj5.channel_id, guildId: obj5.guild_id } = type);
-    obj3.properties = { message_id: null, channel_id: null, guild_id: null };
-    return obj3;
+    obj17.properties = { message_id: null, channel_id: null, guild_id: null };
+    return obj17;
   } else if (tmp.VOICE_INVITE_EMBED === type) {
-    const obj5 = { event: discord_common_AnalyticsUtils.ImpressionNames.VOICE_INVITE_EMBED, properties: null };
-    const obj6 = { impression_type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
+    const obj19 = { event: discord_common_AnalyticsUtils.ImpressionNames.VOICE_INVITE_EMBED, properties: null };
+    const obj20 = { impression_type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
     ({ inviteCode: obj3.invite_code, inviteGuildId: obj3.invite_guild_id, inviteChannelId: obj3.invite_channel_id, inviteInstanceId: obj3.invite_instance_id, hasActiveStream: obj3.has_active_stream, treatmentRendered } = type);
     const INVITE_EMBED = AnalyticsLocationDefault.INVITE_EMBED;
     if (treatmentRendered) {
@@ -39,12 +38,12 @@ function getAnalyticsConfig(type) {
     } else {
       items1 = [INVITE_EMBED];
     }
-    obj6.location_stack = items1;
-    obj5.properties = obj6;
-    return obj5;
+    obj20.location_stack = items1;
+    obj19.properties = obj20;
+    return obj19;
   } else {
-    properties = GlobalUtils;
-    return properties.assertNever(type);
+    obj = GlobalUtils;
+    return obj.assertNever(type);
   }
 }
 function getMessageViewKey(type) {
@@ -177,7 +176,7 @@ prototype["drainBuffer"] = function drainBuffer() {
   const self = this;
   while (tmp !== undefined) {
     let tmp4 = getAnalyticsConfig(tmp2);
-    obj = AnalyticsUtilsDefault;
+    let obj = AnalyticsUtilsDefault;
     let trackResult = obj.track(tmp4.event, tmp4.properties);
     continue;
   }

@@ -2,7 +2,7 @@
 
 // Module 9591 (getXboxURIForChannel)
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;

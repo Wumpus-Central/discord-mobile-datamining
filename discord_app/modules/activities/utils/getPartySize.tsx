@@ -1,6 +1,6 @@
-// === Module 11884: getPartySize ===
+// === Module 11885: getPartySize ===
 
-// Module 11884 (getPartySize)
+// Module 11885 (getPartySize)
 import _slicedToArray from "module_32" /* 32 */;
 
 const size = fn(2);
@@ -12,7 +12,7 @@ export const getPartySize = function getPartySize(activity) {
       if (null != activity.party.size) {
         if (activity.party.size.length >= 2) {
           const obj = { partySize: null, maxPartySize: null };
-          [obj.partySize, obj.maxPartySize] = _slicedToArray(activity.party.size, 2);
+          [obj.partySize, obj.maxPartySize] = activity.party.size;
           return obj;
         }
       }

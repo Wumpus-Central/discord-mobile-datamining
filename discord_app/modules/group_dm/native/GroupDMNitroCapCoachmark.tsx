@@ -1,17 +1,17 @@
-// === Module 13404: GroupDMNitroCapCoachmark ===
+// === Module 13405: GroupDMNitroCapCoachmark ===
 
-// Module 13404 (GroupDMNitroCapCoachmark)
+// Module 13405 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
 import _modDef10160 from "module_10160" /* 10160 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11720 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11722).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(11723).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
@@ -28,14 +28,15 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11720).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11721).useGroupDMNitroAudience();
   noop = tmp6;
-  let obj = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
-  const obj2 = channelId(11720);
-  obj.acquisitionStrategy = channelId(11720).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11727)(obj);
+  const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
+  let obj = noop;
+  const obj2 = channelId(11721);
+  obj3.acquisitionStrategy = channelId(11721).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11728)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11727);
+  let tmp7 = _location(11728);
   channelId(7491);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
@@ -51,15 +52,14 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       let intl = util.intl;
       obj.title = intl.string(util.t.d8Spvj);
       const intl2 = util.intl;
-      obj = { number };
-      obj.description = intl2.formatToPlainString(util.t.U3CkDg, obj);
+      obj.description = intl2.formatToPlainString(util.t.U3CkDg, { number });
       obj.visible = visible;
       obj.renderImgComponent = function renderImgComponent() {
         const obj = { text: null, color: null };
         const intl = channelId(1114).intl;
         obj.text = intl.string(channelId(1114).t.oW0eUd);
-        obj.color = channelId(1178).BadgeColors.EXPRESSIVE;
-        return closure_1_8(channelId(1178).TextBadge, obj);
+        obj.color = channelId(1176).BadgeColors.EXPRESSIVE;
+        return closure_1_8(channelId(1176).TextBadge, obj);
       };
       obj.onDismiss = function onDismiss() {
         return number(constants.USER_DISMISS);
@@ -69,7 +69,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       if (closure_4) {
         let tmp7 = _modDef10160;
       } else {
-        obj = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
+        const obj4 = { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE };
         tmp7 = jsx(NitroWheelIcon.NitroWheelIcon, { size: "custom", style: nitroWheelIcon.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE });
       }
       obj.buttonIcon = tmp7;
@@ -81,7 +81,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11719)(channelId, closure_1_1);
+          _location(11720)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -89,9 +89,9 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(11261).useCoachmark(ref, memo);
-    obj = { ref, collapsable: false, children: channelId.children };
+    const coachmark = tmp3(11262).useCoachmark(ref, memo);
+    const obj5 = { ref, collapsable: false, children: channelId.children };
     return <closure_5 ref={ref} collapsable={false}>{channelId.children}</closure_5>;
   }
-  obj4 = _location(11723);
+  obj4 = _location(11724);
 };

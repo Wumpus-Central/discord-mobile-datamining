@@ -1,12 +1,12 @@
-// === Module 16461: useYouBarAccessibilityLabel ===
+// === Module 16463: useYouBarAccessibilityLabel ===
 
-// Module 16461 (useYouBarAccessibilityLabel)
+// Module 16463 (useYouBarAccessibilityLabel)
 import util from "util" /* 1114 */;
 import UserUtils from "UserUtils" /* 4481 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11006 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11007 */;
-import isGameActivityDefault from "isGameActivity" /* 11014 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11016 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11007 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11008 */;
+import isGameActivityDefault from "isGameActivity" /* 11015 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11017 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -14,6 +14,8 @@ import PresenceStore from "PresenceStore" /* 4676 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
@@ -37,39 +39,37 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(11008);
+  let obj3 = require("YouBarGuildTagExperiment");
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
   }
-  closure_3 = tmp3Result.useGameMentionsAsPlainText(tmp7);
+  closure_3 = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(tmp7);
   let tmp8;
   if (isYouBarGuildTagEnabled) {
-    tmp3Result = tmp3(8282);
     let primaryGuild;
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp3Result.getUserPrimaryGuild(primaryGuild);
+    const userPrimaryGuild = tmp3(8282).getUserPrimaryGuild(primaryGuild);
     let tag;
     if (userPrimaryGuild != null) {
       tag = userPrimaryGuild.tag;
     }
     tmp8 = tag;
+    const tmp3Result3 = tmp3(8282);
   }
   tag = tmp8;
-  const obj3 = require("YouBarGuildTagExperiment");
+  const tmp3Result = require("useGameMentionsAsPlainText");
   let items = [SelfPresenceStore, closure_3, RelationshipStore, tag, PermissionStore, VoiceStateStore, PresenceStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const status = SelfPresenceStore.getStatus();
-      let obj = useDiscoverableApplicationStream;
       const items = [ApplicationStreamingStore, RelationshipStore];
-      const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      let obj1 = useUserVoiceActivity;
-      obj = { userId: id };
-      obj = { ChannelStore, PermissionStore, VoiceStateStore };
-      const voiceChannel = obj1.getVisibleUserVoiceActivity(obj, obj).voiceChannel;
+      const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(id, items);
+      const obj3 = { userId: id };
+      const obj4 = { ChannelStore, PermissionStore, VoiceStateStore };
+      const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj3, obj4).voiceChannel;
       let text = null;
       if (closure_2) {
         text = null;
@@ -92,8 +92,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   let stringResult = intl3.string(util.t.eXan7B);
                 }
                 const intl4 = util.intl;
-                obj1 = { name };
-                stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj1);
+                const obj5 = { name };
+                stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj5);
               } else {
                 let found1;
                 if (activities != null) {

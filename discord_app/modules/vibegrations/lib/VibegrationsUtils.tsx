@@ -3,12 +3,14 @@
 // Module 7347 (VibegrationsUtils)
 import VibegrationsTypes from "VibegrationsTypes" /* 7348 */;
 import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7349 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function vibegrationsAppIdFromTopic(topic) {
   if (null != topic) {
@@ -26,7 +28,9 @@ function vibegrationsAppIdFromTopic(topic) {
 function vibegrationsTextChannelsIn(guildId) {
   return GuildChannelStore.getChannels(guildId)[React2].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
 }
+let GuildChannelStore = GuildChannelStore_mod;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c2, GUILD_VOCAL_CHANNELS_KEY: c3 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 ({ Permissions: closure_8, ChannelTypes: closure_9, GuildFeatures: c10 } = Constants);
 let c11 = "vibegrations_application_id=";
 const re12 = /^\d{17,20}$/;
@@ -98,8 +102,7 @@ export const findVibegrationChannelId = function findVibegrationChannelId(guildI
   return null;
 };
 export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, location) {
-  const obj = { guildId: guildId.id, location };
-  let result = obj.isVibegrationsGuildEnabled(obj);
+  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location });
   if (result) {
     const features = guildId.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -109,8 +112,7 @@ export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(
 export const eligibleVibegrationsGuilds = function eligibleVibegrationsGuilds(arr, arg1) {
   closure_0 = arg1;
   const found = arr.filter((guildId) => {
-    const obj = { guildId: guildId.id, location: _location };
-    let result = obj.isVibegrationsGuildEnabled(obj);
+    let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: _location });
     if (result) {
       const features = guildId.features;
       result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -136,9 +138,8 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
     guild = GuildStore.getGuild(guildId);
   }
   if (null != guild) {
-    require("VibegrationsGuildExperiment");
-    let obj = { guildId: guild.id, location };
-    let result = obj.isVibegrationsGuildEnabled(obj);
+    const obj2 = { guildId: guild.id, location };
+    let result = require("VibegrationsGuildExperiment").isVibegrationsGuildEnabled(obj2);
     if (result) {
       let features = guild.features;
       result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -151,8 +152,7 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
   const guildsArray = GuildStore.getGuildsArray();
   _require = location;
   const found = guildsArray.filter((guildId) => {
-    const obj = { guildId: guildId.id, location: _location };
-    let result = obj.isVibegrationsGuildEnabled(obj);
+    let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: _location });
     if (result) {
       const features = guildId.features;
       result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -179,8 +179,7 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
   }
 };
 export const canAccessVibegrations = function canAccessVibegrations(guild, getChannelIdForGuildTransition) {
-  const obj = { guildId: guild.id, location: getChannelIdForGuildTransition };
-  let result = obj.isVibegrationsGuildEnabled(obj);
+  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guild.id, location: getChannelIdForGuildTransition });
   if (result) {
     const features = guild.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -198,14 +197,13 @@ export const canStartVibegrationsProject = function canStartVibegrationsProject(
     canResult = PermissionStore.can(constants.MANAGE_GUILD, features);
   }
   if (canResult) {
-    const obj = { guildId: features.id, location };
-    canResult = obj.isVibegrationsGuildEnabled(obj);
+    const obj2 = { guildId: features.id, location };
+    canResult = VibegrationsGuildExperiment.isVibegrationsGuildEnabled(obj2);
   }
   return canResult;
 };
 export const useCanAccessVibegrations = function useCanAccessVibegrations(guildId, useGuildActionRows) {
-  const obj = { guildId: guildId.id, location: useGuildActionRows };
-  let isVibegrationsGuildEnabled = obj.useIsVibegrationsGuildEnabled(obj);
+  let isVibegrationsGuildEnabled = VibegrationsGuildExperiment.useIsVibegrationsGuildEnabled({ guildId: guildId.id, location: useGuildActionRows });
   const features = guildId.features;
   if (isVibegrationsGuildEnabled) {
     isVibegrationsGuildEnabled = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
@@ -247,34 +245,32 @@ export const isVibegrationsChannelCandidate = function isVibegrationsChannelCand
     result = !hasItem;
   }
   if (result) {
-    let obj = VibegrationsGuildExperiment;
     let guild_id1;
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
-    obj = { guildId: guild_id1, location: ActivitySounds };
-    result = obj.isVibegrationsGuildEnabled(obj);
+    const obj2 = { guildId: guild_id1, location: ActivitySounds };
+    result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled(obj2);
   }
   return result;
 };
 export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChannelCandidate(channel, ChannelActions) {
   _require = channel;
-  let obj = require("initialize");
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     guild_id = undefined;
     if (guild_id != null) {
       guild_id = guild_id.guild_id;
     }
     return GuildStore.getGuild(guild_id);
   });
+  const obj = require("initialize");
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  obj = { guildId: guild_id, location: ChannelActions };
   let tmp4 = null != channel;
-  const isVibegrationsGuildEnabled = require("VibegrationsGuildExperiment").useIsVibegrationsGuildEnabled(obj);
+  const isVibegrationsGuildEnabled = require("VibegrationsGuildExperiment").useIsVibegrationsGuildEnabled({ guildId: guild_id, location: ChannelActions });
   if (tmp4) {
     tmp4 = channel.type === constants2.GUILD_TEXT;
   }

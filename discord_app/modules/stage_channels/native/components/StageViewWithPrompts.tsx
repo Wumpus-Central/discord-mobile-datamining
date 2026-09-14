@@ -22,14 +22,13 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 export default function StageViewWithPrompts(arg0) {
   ({ title, body, children } = arg0);
   const tmp = styles();
-  let obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
+  const obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
   const items = [tmp.container, ];
-  obj = { paddingTop: top + FocusedControls.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
-  ({ top, bottom } = useSafeAreaInsetsDefault());
-  items[1] = obj;
+  const tmp2 = useSafeAreaInsetsDefault();
+  ({ top, bottom } = tmp2);
+  items[1] = { paddingTop: top + FocusedControls.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
   obj.contentContainerStyle = items;
-  obj = { style: tmp.sparkle, theme: ThemeTypes.DARK };
-  const items1 = [timestampProducer(StageSparkleDefault, obj), timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "text-overlay-light", children: title }), timestampProducer(Text_Text.Text, { style: tmp.body, variant: "text-sm/medium", color: "text-overlay-light", children: body }), timestampProducer(React4, { style: tmp.prompts, children })];
+  const items1 = [timestampProducer(StageSparkleDefault, { style: tmp.sparkle, theme: ThemeTypes.DARK }), timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "text-overlay-light", children: title }), timestampProducer(Text_Text.Text, { style: tmp.body, variant: "text-sm/medium", color: "text-overlay-light", children: body }), timestampProducer(React4, { style: tmp.prompts, children })];
   obj.children = items1;
   return React5(React3, obj);
 };

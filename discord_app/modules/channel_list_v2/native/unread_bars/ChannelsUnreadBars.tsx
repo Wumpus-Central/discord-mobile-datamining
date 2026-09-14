@@ -1,6 +1,6 @@
-// === Module 16276: ChannelsUnreadBars ===
+// === Module 16278: ChannelsUnreadBars ===
 
-// Module 16276 (ChannelsUnreadBars)
+// Module 16278 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
@@ -149,10 +149,10 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
                     diff = diff - 1;
                     continue;
                   }
-                  let obj = { beforeItem: null, afterItem: null };
-                  obj = { section: diff1, row: diff, isMention: MENTION === constants.MENTION };
-                  obj.beforeItem = obj;
-                  return obj;
+                  let obj2 = { beforeItem: null, afterItem: null };
+                  let obj3 = { section: diff1, row: diff, isMention: MENTION === constants.MENTION };
+                  obj2.beforeItem = obj3;
+                  return obj2;
                 }
               }
               diff1 = diff1 - 1;
@@ -181,10 +181,10 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
                       break;
                     }
                   }
-                  let obj1 = { afterItem: null, beforeItem: null };
-                  let obj2 = { section: num5, row: num6, isMention: MENTION === constants.MENTION };
-                  obj1.afterItem = obj2;
-                  return obj1;
+                  let obj4 = { afterItem: null, beforeItem: null };
+                  let obj5 = { section: num5, row: num6, isMention: MENTION === constants.MENTION };
+                  obj4.afterItem = obj5;
+                  return obj4;
                 }
               }
               num5 = num5 + 1;
@@ -224,11 +224,9 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   closure_15 = undefined;
   let stateFromStores;
   const id = guildChannels.id;
-  let obj = noop;
   noop = noop.useRef(-1);
   closure_5 = noop.useRef(null);
-  let obj1 = fastList(headerHeight[16]);
-  const youBarTotalHeight = obj1.useYouBarTotalHeight();
+  const youBarTotalHeight = fastList(headerHeight[16]).useYouBarTotalHeight();
   let tmp4 = id(noop.useState(() => findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
   const first = tmp4[0];
   let beforeItem = first.beforeItem;
@@ -276,7 +274,8 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
     };
   }, items1);
   const scrollPosValue = fastList.scrollPosValue;
-  let obj2 = fastList(headerHeight[20]);
+  const obj2 = fastList(headerHeight[16]);
+  const tmp = fastList;
   class L {
     constructor() {
       return scrollPosValue.get();
@@ -290,11 +289,11 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
       ReanimatedRexport.runOnJS(memo)();
     }
   };
-  obj = { runOnJS: fastList(headerHeight[20]).runOnJS, debouncedUpdate: memo };
-  fn.__closure = obj;
+  let obj3 = fastList(headerHeight[20]);
+  fn.__closure = { runOnJS: fastList(headerHeight[20]).runOnJS, debouncedUpdate: memo };
   fn.__workletHash = 17498480935002;
   fn.__initData = __initData2;
-  const animatedReaction = obj2.useAnimatedReaction(L, fn);
+  const animatedReaction = obj3.useAnimatedReaction(L, fn);
   const tmp9 = stateFromStores();
   wrapper = tmp9;
   const tmp11 = guildChannels(headerHeight[21])(fastList.guild);
@@ -338,51 +337,52 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
     }
     str = str3;
   }
+  const obj4 = { runOnJS: fastList(headerHeight[20]).runOnJS, debouncedUpdate: memo };
   const items3 = [youBarTotalHeight];
-  stateFromStores = fastList(headerHeight[19]).useStateFromStores(items3, () => youBarTotalHeight.useReducedMotion);
+  stateFromStores = tmp(headerHeight[19]).useStateFromStores(items3, () => youBarTotalHeight.useReducedMotion);
   const items4 = [beforeItem, stateFromStores, fastList];
   const items5 = [afterItem, stateFromStores, fastList];
   const callback = obj.useCallback(() => {
     if (null != beforeItem) {
-      let obj = HapticUtils;
-      const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      obj = { section: null, item: null, animated: null, orientation: "center" };
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      const obj3 = { section: null, item: null, animated: null, orientation: "center" };
       ({ section: obj2.section, row: obj2.item } = beforeItem);
-      obj.animated = !stateFromStores;
-      fastList.scrollToLocation(obj);
+      obj3.animated = !stateFromStores;
+      fastList.scrollToLocation(obj3);
     }
   }, items4);
-  obj = { style: memo1, pointerEvents: "box-none", children: null };
+  const obj5 = { style: memo1, pointerEvents: "box-none", children: null };
   const callback1 = obj.useCallback(() => {
     if (null != afterItem) {
-      let obj = HapticUtils;
-      const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      obj = { section: null, item: null, animated: null, orientation: "center" };
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      const obj3 = { section: null, item: null, animated: null, orientation: "center" };
       ({ section: obj2.section, row: obj2.item } = afterItem);
-      obj.animated = !stateFromStores;
-      fastList.scrollToLocation(obj);
+      obj3.animated = !stateFromStores;
+      fastList.scrollToLocation(obj3);
     }
   }, items5);
-  obj1 = { position: "top", shown: "before" === str, onPress: callback, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  const obj6 = { position: "top", shown: "before" === str, onPress: callback, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
   let isMention2;
-  let tmp10Result = tmp10(tmp2[25]);
+  const tmp19 = closure_15;
+  const tmp20 = closure_5;
+  const tmpResult = tmp(headerHeight[19]);
   if (beforeItem != null) {
     isMention2 = beforeItem.isMention;
   }
-  obj1.isMention = isMention2;
-  obj1.scrollPosition = fastList.scrollPosValue;
-  obj1.headerHeight = headerHeight;
-  const items6 = [listBottom(tmp10Result, obj1), ];
-  obj2 = { position: "bottom", shown: "after" === str, onPress: callback1, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
+  obj6.isMention = isMention2;
+  obj6.scrollPosition = fastList.scrollPosValue;
+  obj6.headerHeight = headerHeight;
+  const items6 = [listBottom(guildChannels(headerHeight[25]), obj6), ];
+  const obj7 = { position: "bottom", shown: "after" === str, onPress: callback1, isMention: null, scrollPosition: null, listPaddingTop: 0, headerHeight: null };
   let isMention3;
-  tmp10Result = tmp10(tmp2[25]);
+  const tmp10Result = guildChannels(headerHeight[25]);
   if (afterItem != null) {
     isMention3 = afterItem.isMention;
   }
-  obj2.isMention = isMention3;
-  obj2.scrollPosition = fastList.scrollPosValue;
-  obj2.headerHeight = headerHeight;
-  items6[1] = listBottom(tmp10Result, obj2);
-  obj.children = items6;
-  return closure_15(closure_5, obj);
+  obj7.isMention = isMention3;
+  obj7.scrollPosition = fastList.scrollPosValue;
+  obj7.headerHeight = headerHeight;
+  items6[1] = listBottom(guildChannels(headerHeight[25]), obj7);
+  obj5.children = items6;
+  return tmp19(tmp20, obj5);
 });

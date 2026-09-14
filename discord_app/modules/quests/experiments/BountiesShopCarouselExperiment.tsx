@@ -1,13 +1,13 @@
-// === Module 15161: BountiesShopCarouselExperiment ===
+// === Module 15162: BountiesShopCarouselExperiment ===
 
-// Module 15161 (BountiesShopCarouselExperiment)
+// Module 15162 (BountiesShopCarouselExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-06-bounties-shop-carousel", kind: "user", defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default", clickable: false }, variations: null };
-obj = { 1: null, 2: { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: false }, 3: { placement: "inside", sortType: "popularity", buttonVariant: "default", clickable: false }, 4: { placement: "inside", sortType: "recency", buttonVariant: "default", clickable: false }, 5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default", clickable: false }, 6: { placement: "none", sortType: "popularity", buttonVariant: "blurple", clickable: false } };
-obj[6] = { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: true };
-obj.variations = obj;
+const obj = { name: "2026-06-bounties-shop-carousel", kind: "user", defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default", clickable: false }, variations: null };
+const obj2 = { 1: null, 2: { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: false }, 3: { placement: "inside", sortType: "popularity", buttonVariant: "default", clickable: false }, 4: { placement: "inside", sortType: "recency", buttonVariant: "default", clickable: false }, 5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default", clickable: false }, 6: { placement: "none", sortType: "popularity", buttonVariant: "blurple", clickable: false } };
+obj2[6] = { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/quests/experiments/BountiesShopCarouselExperiment.tsx");
 

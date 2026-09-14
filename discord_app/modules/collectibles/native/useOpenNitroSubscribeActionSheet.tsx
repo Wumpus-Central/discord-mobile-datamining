@@ -1,6 +1,6 @@
-// === Module 13280: useOpenNitroSubscribeActionSheet ===
+// === Module 13281: useOpenNitroSubscribeActionSheet ===
 
-// Module 13280 (useOpenNitroSubscribeActionSheet)
+// Module 13281 (useOpenNitroSubscribeActionSheet)
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,9 +19,7 @@ export default function useOpenNitroSubscribeActionSheet() {
   analyticsLocations = COLLECTIBLES_SHOP(analyticsLocations[3])().analyticsLocations;
   const items = [analyticsLocations, COLLECTIBLES_SHOP];
   return noop.useCallback(() => {
-    let obj = { analyticsLocation: null, analyticsLocations, premiumType: PremiumTypes.TIER_2 };
-    obj = { page: constants.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP };
-    obj.analyticsLocation = obj;
+    const obj = { analyticsLocation: { page: constants.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP }, analyticsLocations, premiumType: PremiumTypes.TIER_2 };
     openPremiumPlanSelectionActionSheetDefault(obj);
   }, items);
 };

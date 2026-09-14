@@ -4,6 +4,8 @@
 import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4848 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");

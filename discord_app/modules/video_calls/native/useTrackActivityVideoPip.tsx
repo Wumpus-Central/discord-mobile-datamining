@@ -1,9 +1,11 @@
 // === Module 9785: useTrackActivityVideoPip ===
 
 // Module 9785 (useTrackActivityVideoPip)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9616 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

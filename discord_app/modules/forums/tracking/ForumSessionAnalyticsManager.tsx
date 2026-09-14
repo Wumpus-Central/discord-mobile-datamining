@@ -1,7 +1,7 @@
 // === Module 7873: ForumSessionAnalyticsManager ===
 
 // Module 7873 (ForumSessionAnalyticsManager)
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 class ForumSessionAnalyticsManager {
@@ -9,12 +9,12 @@ class ForumSessionAnalyticsManager {
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(channelId) {
   const self = this;
   if (null == this.session) {
-    let obj = { channelId, sessionId: v1.v4() };
+    const obj = { channelId, sessionId: v1.v4() };
     self.session = obj;
   }
   if (self.session.channelId !== channelId) {
-    obj = { channelId, sessionId: v1.v4() };
-    self.session = obj;
+    const obj3 = { channelId, sessionId: v1.v4() };
+    self.session = obj3;
   }
   return self.session.sessionId;
 };

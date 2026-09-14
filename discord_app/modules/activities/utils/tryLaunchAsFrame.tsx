@@ -16,13 +16,12 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   const application = ApplicationStore.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
-    let obj = canLaunchFrame;
-    tmp2 = !obj.canLaunchFrame(application);
+    tmp2 = !canLaunchFrame.canLaunchFrame(application);
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { applicationId, surface: MAIN_SURFACE, customId, referrerId, analyticsContext };
-    FramesActionCreatorsDefault.launchFrame(obj);
+    const obj3 = { applicationId, surface: MAIN_SURFACE, customId, referrerId, analyticsContext };
+    FramesActionCreatorsDefault.launchFrame(obj3);
     flag = true;
   }
   return flag;

@@ -1,6 +1,6 @@
-// === Module 11912: applyOrientationLock ===
+// === Module 11913: applyOrientationLock ===
 
-// Module 11912 (applyOrientationLock)
+// Module 11913 (applyOrientationLock)
 import DeviceOrientation from "DeviceOrientation" /* 8450 */;
 import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9602 */;
 import size from "module_2" /* 2 */;
@@ -17,8 +17,8 @@ export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
 };
 export const releaseOrientationLock = function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
   if (isOrientationLockSupportedDefault()) {
-    const obj = { unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock };
-    obj.unlockOrientation(obj);
+    const obj2 = { unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock };
+    DeviceOrientation.unlockOrientation(obj2);
   }
 };
 export const restoreDefaultOrientationLock = function restoreDefaultOrientationLock() {

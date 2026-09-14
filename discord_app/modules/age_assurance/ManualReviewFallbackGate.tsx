@@ -21,8 +21,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -35,8 +35,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_1 = tmp3;
                 closure_0 = tmp7;
@@ -47,13 +47,13 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 if (result) {
                   c3 = 3;
                   c4 = 1;
-                  const obj1 = { value: obj14.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-                  return obj1;
+                  const obj5 = { value: obj14.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                  return obj5;
                 } else {
                   c3 = 2;
                   c4 = 1;
-                  const obj2 = { value: obj14.fetchAgeVerificationMethodsV2(), done: false };
-                  return obj2;
+                  const obj7 = { value: obj14.fetchAgeVerificationMethodsV2(), done: false };
+                  return obj7;
                 }
               }
             } else if (1 === tmp7) {
@@ -68,8 +68,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 } else if (arg0 === 2) {
                   c2 = 0;
                   c4 = 3;
-                  let obj3 = { value, done: true };
-                  return obj3;
+                  const obj8 = { value, done: true };
+                  return obj8;
                 }
               } else if (3 === tmp7) {
                 if (arg0 === 1) {
@@ -78,8 +78,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 } else if (arg0 === 2) {
                   c2 = 0;
                   c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  const obj9 = { value, done: true };
+                  return obj9;
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -87,23 +87,22 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
               } else if (arg0 === 2) {
                 c2 = 0;
                 c4 = 3;
-                let obj5 = { value, done: true };
-                return obj5;
+                const obj10 = { value, done: true };
+                return obj10;
               } else {
                 c2 = 0;
                 c4 = 3;
-                obj = { value: 0 === value.length, done: true };
+                const obj = { value: 0 === value.length, done: true };
                 return obj;
               }
               closure_128_0 = value;
-              obj3 = closure_129_1(closure_129_2[4]);
-              const obj6 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_128_0.methods, footerMessage: closure_128_0.footerMessage, outageBannerMessage: closure_128_0.outageBannerMessage };
-              obj3.dispatch(obj6);
-              obj5 = closure_129_0(closure_129_2[5]);
+              const obj11 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_128_0.methods, footerMessage: closure_128_0.footerMessage, outageBannerMessage: closure_128_0.outageBannerMessage };
+              closure_129_1(closure_129_2[4]).dispatch(obj11);
+              const obj4 = closure_129_1(closure_129_2[4]);
               c3 = 4;
               c4 = 1;
-              const obj7 = { value: obj5.getAvailableMethodsV2(closure_128_0.methods), done: false };
-              return obj7;
+              const obj12 = { value: closure_129_0(closure_129_2[5]).getAvailableMethodsV2(closure_128_0.methods), done: false };
+              return obj12;
             }
           } catch (tmp19) {
             if (tmp4 === c2) {
@@ -125,8 +124,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -139,8 +138,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_1 = tmp3;
                 closure_0 = tmp7;
@@ -151,13 +150,13 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 if (result) {
                   c3 = 3;
                   c4 = 1;
-                  const obj1 = { value: obj14.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-                  return obj1;
+                  const obj5 = { value: obj14.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                  return obj5;
                 } else {
                   c3 = 2;
                   c4 = 1;
-                  const obj2 = { value: obj14.fetchAgeVerificationMethodsV2(), done: false };
-                  return obj2;
+                  const obj7 = { value: obj14.fetchAgeVerificationMethodsV2(), done: false };
+                  return obj7;
                 }
               }
             } else if (1 === tmp7) {
@@ -172,8 +171,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 } else if (arg0 === 2) {
                   c2 = 0;
                   c4 = 3;
-                  let obj3 = { value, done: true };
-                  return obj3;
+                  const obj8 = { value, done: true };
+                  return obj8;
                 }
               } else if (3 === tmp7) {
                 if (arg0 === 1) {
@@ -182,8 +181,8 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
                 } else if (arg0 === 2) {
                   c2 = 0;
                   c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  const obj9 = { value, done: true };
+                  return obj9;
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -191,23 +190,22 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
               } else if (arg0 === 2) {
                 c2 = 0;
                 c4 = 3;
-                let obj5 = { value, done: true };
-                return obj5;
+                const obj10 = { value, done: true };
+                return obj10;
               } else {
                 c2 = 0;
                 c4 = 3;
-                obj = { value: 0 === value.length, done: true };
+                const obj = { value: 0 === value.length, done: true };
                 return obj;
               }
               closure_128_0 = value;
-              obj3 = closure_129_1(closure_129_2[4]);
-              const obj6 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_128_0.methods, footerMessage: closure_128_0.footerMessage, outageBannerMessage: closure_128_0.outageBannerMessage };
-              obj3.dispatch(obj6);
-              obj5 = closure_129_0(closure_129_2[5]);
+              const obj11 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_128_0.methods, footerMessage: closure_128_0.footerMessage, outageBannerMessage: closure_128_0.outageBannerMessage };
+              closure_129_1(closure_129_2[4]).dispatch(obj11);
+              const obj4 = closure_129_1(closure_129_2[4]);
               c3 = 4;
               c4 = 1;
-              const obj7 = { value: obj5.getAvailableMethodsV2(closure_128_0.methods), done: false };
-              return obj7;
+              const obj12 = { value: closure_129_0(closure_129_2[5]).getAvailableMethodsV2(closure_128_0.methods), done: false };
+              return obj12;
             }
           } catch (tmp19) {
             if (tmp4 === c2) {

@@ -28,11 +28,10 @@ export default {
     }
     return hideActionSheet.importer().then((alert) => {
       if (flag) {
-        let obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
       }
-      obj = { type: "ALERT_OPEN", alert, isDismissable: flag2 };
-      DispatcherDefault.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "ALERT_OPEN", alert, isDismissable: flag2 });
+      const obj3 = { type: "ALERT_OPEN", alert, isDismissable: flag2 };
     });
   },
   close() {
@@ -122,12 +121,12 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        let obj3 = merged(4603);
-        obj3.hideActionSheet();
+        merged(4603).hideActionSheet();
+        const obj4 = merged(4603);
       }
       if (null != c6) {
-        let obj4 = confirmText(4982);
-        obj4.dismissAlert(c6);
+        confirmText(4982).dismissAlert(c6);
+        const obj5 = confirmText(4982);
       }
       merged(573).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
@@ -138,24 +137,24 @@ export default {
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
       const obj7 = confirmText(4982);
-      obj = { title, content: body2, extraContent: children, actions: null };
-      obj = { variant: null, text: null, onPress: null };
+      const obj3 = { title, content: body2, extraContent: children, actions: null };
+      const obj8 = { variant: null, text: null, onPress: null };
       const obj6 = merged(573);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj.variant = confirmText(5075).getAlertButtonVariant(confirmColor);
-      obj.text = confirmText;
-      obj.onPress = function onPress() {
+      obj8.variant = confirmText(5075).getAlertButtonVariant(confirmColor);
+      obj8.text = confirmText;
+      obj8.onPress = function onPress() {
         c5 = true;
         if (c3 != null) {
           tmp();
         }
       };
-      const items = [c3(confirmText(4986).AlertActionButton, obj), ];
+      const items = [c3(confirmText(4986).AlertActionButton, obj8), ];
       let tmp30Result = null;
       if (null != cancelText) {
-        let obj1 = {
+        const obj9 = {
           variant: "secondary",
           text: cancelText,
           onPress() {
@@ -165,14 +164,14 @@ export default {
                 }
               }
         };
-        tmp30Result = tmp30(tmp29(4986).AlertActionButton, obj1);
+        tmp30Result = tmp30(tmp29(4986).AlertActionButton, obj9);
       }
-      const obj2 = { children: null };
+      const obj11 = { children: null };
       items[1] = tmp30Result;
-      obj2.children = items;
-      obj.actions = tmp31(tmp32, obj2);
-      obj3 = { dismissable: true === isDismissable };
-      obj7.openAlert(text, c3(confirmText(4986).AlertModal, obj), () => {
+      obj11.children = items;
+      obj3.actions = tmp31(tmp32, obj11);
+      const obj12 = { dismissable: true === isDismissable };
+      obj7.openAlert(text, c3(confirmText(4986).AlertModal, obj3), () => {
         if (!c5) {
           if (c4 != null) {
             tmp();
@@ -181,16 +180,16 @@ export default {
         if (c6 === c2) {
           c6 = null;
         }
-      }, obj3);
+      }, obj12);
       const obj10 = confirmText(5075);
     } else {
       if (null != c6) {
-        obj1 = confirmText(4982);
-        obj1.dismissAlert(c6);
+        confirmText(4982).dismissAlert(c6);
         c6 = null;
+        const obj2 = confirmText(4982);
       }
       const self = this;
-      obj4 = {
+      const obj13 = {
         importer() {
             return asyncRequireImpl(5075, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
@@ -206,7 +205,7 @@ export default {
         hideActionSheet: flag,
         isDismissable
       };
-      this.openLazy(obj4);
+      this.openLazy(obj13);
     }
   },
   confirm(arg0) {

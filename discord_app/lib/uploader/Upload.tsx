@@ -3,7 +3,7 @@
 // Module 5209 (Upload)
 import _modDef12 from "module_12" /* 12 */;
 import _mod568 from "module_568" /* 568 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import UploadUtils from "UploadUtils" /* 5210 */;
 import FileUtilsAll from "FileUtils" /* 5215 */;
 import size from "module_2" /* 2 */;
@@ -25,9 +25,9 @@ class Upload extends EventEmitter {
       tmp11 = closure_0;
       tmp12 = closure_3;
       obj3 = closure_0(closure_3[1]);
-      obj = { uri: null, overrideFilename: null, overrideType: null };
+      obj1 = { uri: null, overrideFilename: null, overrideType: null };
       ({ uri: obj4.uri, filename: obj4.overrideFilename, mimeType: obj4.overrideType } = global);
-      file = obj3.getFile(obj);
+      file = obj3.getFile(obj1);
       ({ filename: tmp5.filename, isImage: tmp5.isImage, isVideo: tmp5.isVideo, type: tmp5.mimeType } = file);
       ({ origin: tmp5.origin, durationSecs: tmp5.durationSecs, waveform: tmp5.waveform } = global);
       tmp9 = closure_3;

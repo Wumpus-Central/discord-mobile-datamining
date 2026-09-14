@@ -4,6 +4,8 @@
 import "module_1988";
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/index.tsx");
 for (const key10020 in require("Dao")) {
   arg5[key10020] = require("Dao")[key10020];

@@ -1,6 +1,6 @@
-// === Module 13379: Loading ===
+// === Module 13380: Loading ===
 
-// Module 13379 (Loading)
+// Module 13380 (Loading)
 import nativeDefault from "native" /* 576 */;
 import RowGeneratorConstants from "RowGeneratorConstants" /* 8037 */;
 import createStyles from "createStyles" /* 4636 */;
@@ -19,8 +19,6 @@ export const generateLoadingRowData = function generateLoadingRowData(rowType, t
   } else {
     LOAD_MORE_AFTER = constants3.LOAD_MORE_AFTER;
   }
-  let obj = { type: constants2.LOADING, id: rowType, button: null, color: isLoading ? tmp.loadingColor : tmp.loadButtonColor, changeType, isLoading };
-  obj = { action: { type: LOAD_MORE_AFTER }, backgroundColor: tmp.loadButtonBackgroundColor, cornerRadius: 4, text };
-  obj.button = obj;
+  const obj = { type: constants2.LOADING, id: rowType, button: { action: { type: LOAD_MORE_AFTER }, backgroundColor: tmp.loadButtonBackgroundColor, cornerRadius: 4, text }, color: isLoading ? tmp.loadingColor : tmp.loadButtonColor, changeType, isLoading };
   return obj;
 };

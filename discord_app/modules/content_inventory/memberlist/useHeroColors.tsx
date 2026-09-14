@@ -7,7 +7,7 @@ import tinycolorDefault from "tinycolor" /* 7655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 let c7 = 0.725;
@@ -28,8 +28,7 @@ export default function useHeroColors(pendingAvatarSrc) {
   closure_1 = tmp6;
   const items2 = [first, tmp4[1]];
   return noop.useMemo(() => {
-    let obj = utils_ColorUtils;
-    const hex2intResult = obj.hex2int(first);
+    const hex2intResult = utils_ColorUtils.hex2int(first);
     const hex2intResult1 = utils_ColorUtils.hex2int(closure_1);
     let num = 1;
     let tmp4 = hex2intResult;
@@ -70,16 +69,15 @@ export default function useHeroColors(pendingAvatarSrc) {
       }
       const darkenResult1 = _modDef672(tmp12).darken(0.5);
     }
-    obj = { primaryColor: null, secondaryColor: null };
+    const obj5 = { primaryColor: null, secondaryColor: null };
     obj7 = utils_ColorUtils;
-    obj.primaryColor = utils_ColorUtils.int2hex(tmp5);
-    obj.secondaryColor = utils_ColorUtils.int2hex(tmp13);
-    return obj;
+    obj5.primaryColor = utils_ColorUtils.int2hex(tmp5);
+    obj5.secondaryColor = utils_ColorUtils.int2hex(tmp13);
+    return obj5;
   }, items2);
 };
 export const getHeroColors = function getHeroColors(game_name) {
-  let obj = num(8251);
-  const fallbackHeroColor = obj.getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
+  const fallbackHeroColor = num(8251).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
@@ -90,27 +88,28 @@ export const getHeroColors = function getHeroColors(game_name) {
   if (arr != null) {
     mapped = arr.map((item) => {
       [tmp, tmp2, tmp3] = item;
-      let obj = tinycolorDefault({ r: tmp, g: tmp2, b: tmp3 });
-      ({ h, s, l } = obj.toHsl());
-      obj = { h, s: s * num, l };
-      const toHslResult = obj.toHsl();
-      return tinycolorDefault(obj).toHexString();
+      const obj = tinycolorDefault({ r: tmp, g: tmp2, b: tmp3 });
+      ({ h, s, l } = tinycolorDefault({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+      const obj2 = { h, s: s * num, l };
+      const toHslResult = tinycolorDefault({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+      return tinycolorDefault({ h, s: s * num, l }).toHexString();
     });
   }
   if (mapped == null) {
     const items = [fallbackHeroColor, fallbackHeroColor];
     mapped = items;
   }
-  [tmp7, tmp8] = _slicedToArray(mapped, 2);
-  let tmp2Result = tmp2(1091);
-  const hex2intResult = tmp2Result.hex2int(tmp7);
-  tmp2Result = tmp2(1091);
-  const hex2intResult1 = tmp2Result.hex2int(tmp8);
+  let obj = num(8251);
+  [tmp7, tmp8] = mapped;
   const tmp6 = _slicedToArray(mapped, 2);
+  const hex2intResult = num(1091).hex2int(tmp7);
+  const tmp2Result = num(1091);
+  const hex2intResult1 = num(1091).hex2int(tmp8);
+  const tmp2Result3 = num(1091);
   let num2 = 1;
   let tmp11 = hex2intResult;
   let tmp12 = hex2intResult;
-  if (tmp2Result1.getDarkness(hex2intResult) < c7) {
+  if (tmp2Result4.getDarkness(hex2intResult) < c7) {
     const obj5 = _modDef672(tmp11);
     const numResult = _modDef672(tmp11).darken(0.5).num();
     const sum = num2 + 1;
@@ -126,7 +125,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     }
     const darkenResult = _modDef672(tmp11).darken(0.5);
   }
-  tmp2Result1 = num(1091);
+  tmp2Result4 = num(1091);
   let num3 = 1;
   let tmp19 = hex2intResult1;
   let tmp20 = hex2intResult1;
@@ -146,10 +145,10 @@ export const getHeroColors = function getHeroColors(game_name) {
     }
     const darkenResult1 = _modDef672(tmp19).darken(0.5);
   }
-  obj = { primaryColor: null, secondaryColor: null };
+  let obj2 = { primaryColor: null, secondaryColor: null };
   obj8 = num(1091);
-  obj.primaryColor = num(1091).int2hex(tmp12);
+  obj2.primaryColor = num(1091).int2hex(tmp12);
   const obj13 = num(1091);
-  obj.secondaryColor = num(1091).int2hex(tmp20);
-  return obj;
+  obj2.secondaryColor = num(1091).int2hex(tmp20);
+  return obj2;
 };

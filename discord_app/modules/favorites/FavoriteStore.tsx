@@ -4,8 +4,8 @@
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 function initializeFromUserSettings() {
@@ -33,39 +33,39 @@ function initializeFromUserSettings() {
         if (tmp24.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
         }
-        obj = { id: tmp7, nickname: null, type: null, channelType: null, order: null, parentId: null };
+        let obj5 = { id: tmp7, nickname: null, type: null, channelType: null, order: null, parentId: null };
         let nickname = null;
         if ("" !== tmp24.nickname) {
           nickname = tmp24.nickname;
         }
-        obj.nickname = nickname;
+        obj5.nickname = nickname;
         ({ type: obj2.type, channelType } = tmp24);
         value = undefined;
         if (channelType != null) {
           value = channelType.value;
         }
-        obj.channelType = value;
-        obj.order = tmp24.position;
+        obj5.channelType = value;
+        obj5.order = tmp24.position;
         let parentId = null;
         if (tmp24.parentId !== closure_5) {
           parentId = tmp24.parentId;
         }
         num5 = num5 + 1;
-        obj.parentId = parentId;
-        obj[tmp7] = obj;
+        obj5.parentId = parentId;
+        obj[tmp7] = obj5;
         num4 = sum;
         continue;
       }
     }
   }
-  value = undefined;
+  value2 = undefined;
   if (favorites != null) {
     if (favorites.guildVisible != null) {
-      value = iter.value;
+      value2 = iter.value;
     }
   }
-  let tmp14 = value;
-  if (value == null) {
+  let tmp14 = value2;
+  if (value2 == null) {
     tmp14 = !_mod12.isEmpty(obj);
   }
   flag2 = undefined;
@@ -80,7 +80,7 @@ function initializeFromUserSettings() {
     flag3 = closure_12 !== tmp14;
   }
   if (!flag3) {
-    flag3 = value !== value;
+    flag3 = value2 !== value2;
   }
   if (!flag3) {
     flag3 = flag2 !== flag2;
@@ -126,7 +126,7 @@ Object.defineProperty(prototype, "favoriteGuildEnabled", {
 });
 Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
   get: function favoriteGuildVisibleSetting() {
-    return value;
+    return value2;
   },
   set: undefined
 });

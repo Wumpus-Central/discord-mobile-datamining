@@ -7,7 +7,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 
 require = fn;
-let NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };
+const NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class MemberVerificationFormStore extends Store {
@@ -26,7 +26,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   return _modDef12.find(formFields, MemberVerificationTypes.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
-NO_MEMBER_VERIFICATION_FORM = {
+const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, {
   INVITE_ACCEPT_SUCCESS: function handleInviteData(invite) {
     ({ member_verification_form, guild } = invite.invite);
     let flag = null != guild && null != member_verification_form;
@@ -74,8 +74,7 @@ NO_MEMBER_VERIFICATION_FORM = {
     }
     delete tmp2[tmp];
   }
-};
-const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, NO_MEMBER_VERIFICATION_FORM);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
 

@@ -20,8 +20,7 @@ let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {
   if (channel != null) {
     const guild_id = channel.guild_id;
   }
-  let obj2 = { guildId: guild_id };
-  await EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+  await EmbeddedActivitiesActionCreators.fetchShelf({ guildId: guild_id });
   closure_130_1 = value;
   const activityConfigs = closure_130_1.activityConfigs;
   const applications = closure_130_1.applications;
@@ -35,8 +34,7 @@ let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {
     }
     return application2;
   }
-  obj2 = closure_131_0(closure_131_2[6]);
-  await obj2.fetchApplication(closure_130_0);
+  await closure_131_0(closure_131_2[6]).fetchApplication(closure_130_0);
   closure_130_5 = value;
   return closure_131_5.createFromServer(closure_130_5);
 };

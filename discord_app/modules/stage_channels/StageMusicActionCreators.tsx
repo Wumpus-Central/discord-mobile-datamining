@@ -7,10 +7,8 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {
-  const obj = { type: "STAGE_MUSIC_MUTE", muted };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "STAGE_MUSIC_MUTE", muted });
 };
 export const updateStageMusicShouldPlay = function updateStageMusicShouldPlay(play) {
-  const obj = { type: "STAGE_MUSIC_PLAY", play };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "STAGE_MUSIC_PLAY", play });
 };

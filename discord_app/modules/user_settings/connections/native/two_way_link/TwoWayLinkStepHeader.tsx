@@ -14,13 +14,12 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   ({ idx, total } = arg0);
-  let obj = TwoWayLinkStyles;
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
+  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("TwoWayLinkStepHeader", "text-xs/bold");
-  obj = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: null };
+  const obj3 = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: null };
   const items = [twoWayLinkStyles.stepHeader, typeConsolidationEyebrow.style];
-  obj.style = items;
+  obj3.style = items;
   const intl = util.intl;
-  obj.children = intl.format(util.t.fHz6eR, { number: idx, total });
+  obj3.children = intl.format(util.t.fHz6eR, { number: idx, total });
   return jsx(Text_Text.Text, { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: null });
 };

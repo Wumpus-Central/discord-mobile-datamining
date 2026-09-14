@@ -15,9 +15,9 @@ class ComponentDispatcher {
     eventEmitter = new closure_0(closure_1[0]).EventEmitter();
     merged[0] = eventEmitter;
     merged[1] = {};
-    obj = { maxListeners: 100, enableDevtools: false };
+    obj1 = { maxListeners: 100, enableDevtools: false };
     merged1 = Object.assign(obj);
-    merged.options = obj;
+    merged.options = obj1;
     num = merged.options.maxListeners;
     if (num == null) {
       num = 100;

@@ -18,16 +18,15 @@ const result = size.fileFinishedImporting("modules/channel/native/components/Cre
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = useGuildProfile;
-  guildProfile = obj.useGuildProfile(guildId);
-  ({ guildProfile, fetchGuildProfile } = guildProfile);
+  const guildProfile1 = useGuildProfile.useGuildProfile(guildId);
+  ({ guildProfile, fetchGuildProfile } = guildProfile1);
   let hasItem = null != guildProfile;
   if (hasItem) {
     const VISIBLE = GuildProfileVisibility.GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
-  if (guildProfile.fetchStatus === GuildProfileFetchStatus.FETCHED) {
+  if (guildProfile1.fetchStatus === GuildProfileFetchStatus.FETCHED) {
     tmp6 = !hasItem;
   }
   if (tmp6) {
@@ -39,12 +38,12 @@ export default function CreateChannelTypeDescription(guildId) {
   }, items);
   let tmp9 = null;
   if (tmp6) {
-    obj = { children: null };
-    obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
+    const obj2 = { children: null };
+    const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj.children = intl.string(util.t["2Ab4Id"]);
-    obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
-    tmp9 = <View variant="text-sm/normal" color="text-subtle">{null}</View>;
+    obj3.children = intl.string(util.t["2Ab4Id"]);
+    obj2.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    tmp9 = <View>{null}</View>;
   }
   return tmp9;
 };

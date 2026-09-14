@@ -1,9 +1,9 @@
-// === Module 17522: JankSessionManager ===
+// === Module 17523: JankSessionManager ===
 
-// Module 17522 (JankSessionManager)
+// Module 17523 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
-import clientLaunchId from "clientLaunchId" /* 1340 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17523 */;
+import clientLaunchId from "clientLaunchId" /* 1338 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17524 */;
 import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7563 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -45,21 +45,21 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let properties = self(17523);
-    if (null != properties) {
+    let obj = self(17524);
+    if (null != obj) {
       tmp._isDelivering = true;
-      const pendingReports = properties.getPendingReports();
+      const pendingReports = obj.getPendingReports();
       const nextPromise = pendingReports.then((arr) => {
         closure_0 = arr;
         if (0 !== arr.length) {
           const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            properties = {};
+            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+            const obj4 = {};
             const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            properties.schema_version = 1;
+            obj4.schema_version = 1;
             ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            properties.properties = properties;
-            return properties;
+            obj.properties = obj4;
+            return obj;
           }));
           return result.then(() => {
             obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
@@ -70,13 +70,13 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
         closure_0 = arr;
         if (0 !== arr.length) {
           const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            properties = {};
+            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+            const obj4 = {};
             const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            properties.schema_version = 1;
+            obj4.schema_version = 1;
             ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            properties.properties = properties;
-            return properties;
+            obj.properties = obj4;
+            return obj;
           }));
           return result.then(() => {
             obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));
@@ -91,13 +91,13 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
         closure_0 = arr;
         if (0 !== arr.length) {
           const result = AnalyticsTrackingStore.submitEventsImmediately(arr.map((item) => {
-            properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-            properties = {};
+            obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+            const obj4 = {};
             const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-            properties.schema_version = 1;
+            obj4.schema_version = 1;
             ({ sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count } = item);
-            properties.properties = properties;
-            return properties;
+            obj.properties = obj4;
+            return obj;
           }));
           return result.then(() => {
             obj.ackReports(closure_0.map((sessionId) => sessionId.sessionId));

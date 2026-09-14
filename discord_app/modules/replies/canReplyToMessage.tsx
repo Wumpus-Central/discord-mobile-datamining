@@ -8,6 +8,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Constants = fn(1074);
 ({ MessageFlags: hasOwnProperty, MessageStates: metroRequire } = Constants);

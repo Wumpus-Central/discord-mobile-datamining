@@ -1,8 +1,10 @@
-// === Module 13431: useCheckoutPlanPriceString ===
+// === Module 13432: useCheckoutPlanPriceString ===
 
-// Module 13431 (useCheckoutPlanPriceString)
+// Module 13432 (useCheckoutPlanPriceString)
 import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7512 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
@@ -13,12 +15,12 @@ export const useCheckoutPlan = function useCheckoutPlan(arg0) {
   _require = arg0;
   const tmp2 = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   dependencyMap = tmp2;
-  let obj = require("PlatformUtils");
-  const tmp3 = obj.isIOS() && useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
+  const tmp = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
+  const tmp3 = require("PlatformUtils").isIOS() && tmp;
   noop = tmp3;
-  obj = { plan: null, useOrderPricing: tmp3 };
+  const obj2 = { plan: null, useOrderPricing: tmp3 };
   const items = [tmp2, arg0, tmp3];
-  obj.plan = noop.useMemo(() => {
+  obj2.plan = noop.useMemo(() => {
     availablePlanForItems = null;
     if (closure_2) {
       availablePlanForItems = null;
@@ -31,13 +33,13 @@ export const useCheckoutPlan = function useCheckoutPlan(arg0) {
     }
     return availablePlanForItems;
   }, items);
-  return obj;
+  return obj2;
 };
 export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPrices(productId, discountedPriceString) {
   let memo = productId;
   const tmp2 = regularPriceString((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   const tmp = regularPriceString((orderRequired) => orderRequired.orderRequired);
-  let tmp3 = memo(1150).isIOS() && tmp;
+  let tmp3 = memo(1363).isIOS() && tmp;
   discountedPriceString = tmp3;
   const items = [tmp2, productId, tmp3];
   memo = discountedPriceString.useMemo(() => {
@@ -65,8 +67,8 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
         discountedPriceString = memo.getDiscountedPriceString();
         let tmp7 = null;
         if (null != discountedPriceString) {
-          let obj = { discountedPrice: discountedPriceString, regularPrice: memo.getRegularPriceString() };
-          tmp7 = obj;
+          const obj3 = { discountedPrice: discountedPriceString, regularPrice: memo.getRegularPriceString() };
+          tmp7 = obj3;
         }
         return tmp7;
       }
@@ -75,7 +77,7 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
       if (null != discountedPriceString) {
         tmp3 = null;
         if (null != regularPriceString) {
-          obj = { discountedPrice: tmp, regularPrice: tmp4 };
+          const obj = { discountedPrice: tmp, regularPrice: tmp4 };
           tmp3 = obj;
         }
       }

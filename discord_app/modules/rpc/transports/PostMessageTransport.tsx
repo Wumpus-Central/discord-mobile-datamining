@@ -59,19 +59,19 @@ class PostMessageTransport extends EventEmitter {
         selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
-          closure_1_1(1242);
-          const obj = { application_id: tmp, channel_id: closure_1_0(4265).getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: null, timeout_ms: null };
+          const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
+          const obj = closure_1_1(1240);
+          obj2.channel_id = closure_1_0(4265).getEmbeddedActivityLocationChannelId(tmp2.location);
           const obj3 = closure_1_0(4265);
-          obj.guild_id = closure_1_0(4265).getEmbeddedActivityLocationGuildId(tmp2.location);
-          obj.timeout_ms = timeout_ms;
-          obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
+          obj2.guild_id = closure_1_0(4265).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.timeout_ms = timeout_ms;
+          obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
       }, closure_11);
     };
     tmp4.handleIFrameUnmount = function handleIFrameUnmount(id) {
       id = id.id;
       set.delete(id);
-      let obj = map;
       let found = Array.from(map.entries()).find((item) => {
         [, tmp] = item;
         return tmp.source.iframeId === id;
@@ -80,11 +80,11 @@ class PostMessageTransport extends EventEmitter {
         found = [null, null];
       }
       const arr = Array.from(map.entries());
-      [tmp3, tmp4] = _slicedToArray(found, 2);
+      [tmp3, tmp4] = found;
       if (tmp5) {
-        obj = { code: constants2.CLOSE_NORMAL, message: "iFrame gone" };
-        closure_0.disconnectSocket(tmp4, obj, true);
-        obj.delete(tmp3);
+        const obj2 = { code: constants2.CLOSE_NORMAL, message: "iFrame gone" };
+        closure_0.disconnectSocket(tmp4, obj2, true);
+        map.delete(tmp3);
       }
       const tmp2 = _slicedToArray(found, 2);
       tmp5 = null != tmp4 && null != tmp3;
@@ -100,11 +100,11 @@ class PostMessageTransport extends EventEmitter {
           }
         }
         if (null != tmp) {
-          let obj = { code: null, message: null };
           ({ code: obj2.code, message: obj2.message } = tmp12);
-          closure_0.disconnectSocket(tmp, obj, true);
+          closure_0.disconnectSocket(tmp, { code: null, message: null }, true);
+          const obj3 = { code: null, message: null };
         } else {
-          obj = { code: null, message: null };
+          const obj = { code: null, message: null };
           ({ code: obj.code, message: obj.message } = tmp12);
           postClose(tmp3, obj, tmp2);
         }
@@ -112,8 +112,8 @@ class PostMessageTransport extends EventEmitter {
     };
     tmp4.handleFrame = function handleFrame(origin, source, str) {
       if (origin.origin !== source.source.origin) {
-        let obj = { closeCode: constants2.INVALID_ORIGIN };
-        const tmp24 = new RPCErrorDefault(obj, "Origin has changed");
+        const obj2 = { closeCode: constants2.INVALID_ORIGIN };
+        const tmp24 = new RPCErrorDefault(obj2, "Origin has changed");
         throw tmp24;
       } else {
         try {
@@ -122,15 +122,14 @@ class PostMessageTransport extends EventEmitter {
             const _JSON = JSON;
             parsed = JSON.parse(str);
           }
-          obj = closure_0;
           const onFrameHandled = closure_0.onFrameHandled;
           if (onFrameHandled != null) {
-            onFrameHandled(tmp4, obj.logger, source);
+            onFrameHandled(tmp4, closure_0.logger, source);
           }
-          obj.emit("request", source, parsed);
+          closure_0.emit("request", source, parsed);
         } catch (err) {
-          obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-          const tmp16 = new RPCErrorDefault(obj, "Payload not recognized encoding");
+          const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+          const tmp16 = new RPCErrorDefault(obj3, "Payload not recognized encoding");
           throw tmp16;
         }
       }
@@ -152,8 +151,8 @@ class PostMessageTransport extends EventEmitter {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -166,8 +165,8 @@ class PostMessageTransport extends EventEmitter {
                 throw value;
               } else if (arg0 === 2) {
                 constants2 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_5 = tmp4;
                 closure_4 = tmp9;
@@ -184,8 +183,8 @@ class PostMessageTransport extends EventEmitter {
                 }
                 c8 = 1;
                 constants2 = 1;
-                const obj1 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
-                return obj1;
+                const obj5 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
+                return obj5;
               }
             } else if (1 === tmp9) {
               if (arg0 === 1) {
@@ -193,50 +192,50 @@ class PostMessageTransport extends EventEmitter {
                 throw value;
               } else if (arg0 === 2) {
                 constants2 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
                 closure_132_3 = value.default;
                 constants = 1;
                 const obj13 = closure_1(paths[14])(closure_132_3);
-                let obj3 = { v: null, encoding: null, client_id: null, frame_id: null, sdk_version: null };
+                const obj7 = { v: null, encoding: null, client_id: null, frame_id: null, sdk_version: null };
                 const requiredResult = closure_1(paths[14])(closure_132_3).required();
                 const numberResult = closure_132_3.number();
                 const minResult = closure_132_3.number().min(1);
-                obj3.v = closure_132_3.number().min(1).max(1).required();
+                obj7.v = closure_132_3.number().min(1).max(1).required();
                 const maxResult = closure_132_3.number().min(1).max(1);
                 const stringResult = closure_132_3.string();
-                obj3.encoding = closure_132_3.string().equal("json").optional();
+                obj7.encoding = closure_132_3.string().equal("json").optional();
                 const equalResult = closure_132_3.string().equal("json");
-                obj3.client_id = closure_132_3.string().required();
+                obj7.client_id = closure_132_3.string().required();
                 const stringResult1 = closure_132_3.string();
-                obj3.frame_id = closure_132_3.string().required();
+                obj7.frame_id = closure_132_3.string().required();
                 const stringResult2 = closure_132_3.string();
-                obj3.sdk_version = closure_132_3.string().optional();
-                closure_132_3.assert(closure_132_1, requiredResult.keys(obj3));
+                obj7.sdk_version = closure_132_3.string().optional();
+                closure_132_3.assert(closure_132_1, requiredResult.keys(obj7));
                 constants = 0;
                 closure_132_5 = closure_132_1;
                 frame_id = closure_132_5.frame_id;
                 if (frame_id === closure_132_0.iframeId) {
                   if (set.has(closure_132_0.iframeId)) {
                     if (null != closure_132_5.sdk_version) {
-                      obj3 = closure_1(paths[9]);
-                      const obj4 = { application_id: closure_132_5.client_id, sdk_version: closure_132_5.sdk_version };
-                      obj3.track(constants.ACTIVITY_HANDSHAKE, obj4);
+                      const obj8 = { application_id: closure_132_5.client_id, sdk_version: closure_132_5.sdk_version };
+                      closure_1(paths[9]).track(constants.ACTIVITY_HANDSHAKE, obj8);
+                      const obj4 = closure_1(paths[9]);
                     }
                     constants = 2;
-                    const obj5 = { source: closure_132_0, postMessageToRPCClient: closure_132_2, version: null, logger: null, postClose: null, encoding: null };
+                    const obj9 = { source: closure_132_0, postMessageToRPCClient: closure_132_2, version: null, logger: null, postClose: null, encoding: null };
                     const _Number = Number;
-                    obj5.version = Number(closure_132_5.v);
-                    obj5.logger = closure_133_1.logger;
-                    obj5.postClose = postClose;
+                    obj9.version = Number(closure_132_5.v);
+                    obj9.logger = closure_133_1.logger;
+                    obj9.postClose = postClose;
                     const encoding = closure_132_5.encoding;
                     json = encoding;
                     if (encoding == null) {
                       json = "json";
                     }
-                    obj5.encoding = json;
-                    closure_132_4 = closure_133_1.createPostMessageProxySocket(obj5);
+                    obj9.encoding = json;
+                    closure_132_4 = closure_133_1.createPostMessageProxySocket(obj9);
                     constants = 0;
                     const logger5 = closure_133_1.logger;
                     const _HermesInternal6 = HermesInternal;
@@ -244,24 +243,24 @@ class PostMessageTransport extends EventEmitter {
                     constants = 3;
                     c8 = 5;
                     constants2 = 1;
-                    const obj6 = { value: closure_133_1.validateSocketClient(closure_132_4, closure_132_0.origin, closure_132_5.client_id), done: false };
-                    return obj6;
+                    const obj10 = { value: closure_133_1.validateSocketClient(closure_132_4, closure_132_0.origin, closure_132_5.client_id), done: false };
+                    return obj10;
                   }
                 }
                 const logger6 = closure_133_1.logger;
                 const _HermesInternal7 = HermesInternal;
                 logger6.error("Unrecognized iframe ID: reported " + frame_id + ", expected " + closure_132_0.iframeId);
-                const obj7 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+                const obj11 = { closeCode: constants2.CLOSE_UNSUPPORTED };
                 const _HermesInternal8 = HermesInternal;
-                let tmp109 = closure_1(paths[11]);
-                tmp109 = new tmp109(obj7, "Unrecognized iframe ID " + frame_id);
-                throw tmp109;
+                const stringResult3 = closure_132_3.string();
+                const tmp1092 = new closure_1(paths[11])(obj11, "Unrecognized iframe ID " + frame_id);
+                throw tmp1092;
               }
             } else if (2 === tmp9) {
               constants = 0;
               closure_132_7 = closure_6;
-              const obj8 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-              const tmp67 = new closure_1(paths[11])(obj8, closure_132_7.message);
+              const obj12 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+              const tmp67 = new closure_1(paths[11])(obj12, closure_132_7.message);
               throw tmp67;
             } else if (3 === tmp9) {
               constants = 0;
@@ -283,8 +282,8 @@ class PostMessageTransport extends EventEmitter {
             } else if (arg0 === 2) {
               constants = 0;
               constants2 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
+              const obj14 = { value, done: true };
+              return obj14;
             } else if (set.has(closure_132_0.iframeId)) {
               const result = closure_1_12.set(closure_132_0.iframeId, closure_132_4);
               set.delete(closure_132_0.iframeId);
@@ -301,11 +300,10 @@ class PostMessageTransport extends EventEmitter {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
               logger.error("Iframe ID " + closure_132_0.iframeId + " no longer exists");
-              obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
+              const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
               const _HermesInternal2 = HermesInternal;
-              let tmp15 = closure_1(paths[11]);
-              tmp15 = new tmp15(obj, "Unrecognized iframe ID " + closure_132_0.iframeId);
-              throw tmp15;
+              const tmp151 = new closure_1(paths[11])(obj, "Unrecognized iframe ID " + closure_132_0.iframeId);
+              throw tmp151;
             }
           } catch (tmp123) {
             closure_6 = tmp123;
@@ -343,8 +341,8 @@ class PostMessageTransport extends EventEmitter {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -357,8 +355,8 @@ class PostMessageTransport extends EventEmitter {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_3 = tmp3;
               const paths = tmp7;
@@ -367,8 +365,8 @@ class PostMessageTransport extends EventEmitter {
               closure_130_2 = undefined;
               c6 = 1;
               c7 = 1;
-              const obj1 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
-              return obj1;
+              const obj4 = { value: closure_0(paths[13])(paths[12], paths.paths), done: false };
+              return obj4;
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -376,20 +374,20 @@ class PostMessageTransport extends EventEmitter {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_130_2 = value.default;
               c5 = 1;
               const obj6 = closure_1(paths[14])(closure_130_2);
-              const obj3 = { code: null, message: null };
+              const obj7 = { code: null, message: null };
               const requiredResult = closure_1(paths[14])(closure_130_2).required();
               const _Object = Object;
               const numberResult = closure_130_2.number();
-              obj3.code = closure_130_2.number().valid(Object.values(constants)).required();
+              obj7.code = closure_130_2.number().valid(Object.values(constants)).required();
               const validResult = closure_130_2.number().valid(Object.values(constants));
-              obj3.message = closure_130_2.string().optional();
-              closure_130_2.assert(closure_130_1, requiredResult.keys(obj3));
+              obj7.message = closure_130_2.string().optional();
+              closure_130_2.assert(closure_130_1, requiredResult.keys(obj7));
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
@@ -398,7 +396,7 @@ class PostMessageTransport extends EventEmitter {
           } else {
             c5 = 0;
             closure_130_3 = closure_4;
-            obj = { closeCode: constants.CLOSE_UNSUPPORTED };
+            const obj = { closeCode: constants.CLOSE_UNSUPPORTED };
             const tmp19 = new closure_1(paths[11])(obj, closure_130_3.message);
             throw tmp19;
           }
@@ -437,33 +435,33 @@ class PostMessageTransport extends EventEmitter {
 PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframeId, arg2, arg3) {
   if (Array.isArray(arg2)) {
     const self = this;
-    [tmp5, tmp6] = _slicedToArray(arg2, 2);
+    [tmp5, tmp6] = arg2;
     if (RPCOpcodesDefault.HANDSHAKE === tmp5) {
       if (null != value) {
-        let obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp35 = new RPCErrorDefault(obj, "Already connected");
+        const obj2 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp35 = new RPCErrorDefault(obj2, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
     } else if (RPCOpcodesDefault.FRAME === tmp5) {
       if (null == value) {
-        obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp27 = new RPCErrorDefault(obj, "Not connected");
+        const obj3 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp27 = new RPCErrorDefault(obj3, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
     } else if (RPCOpcodesDefault.CLOSE === tmp5) {
       if (null == value) {
-        const obj1 = { closeCode: constants2.CLOSE_UNSUPPORTED };
-        const tmp20 = new RPCErrorDefault(obj1, "Not connected");
+        const obj4 = { closeCode: constants2.CLOSE_UNSUPPORTED };
+        const tmp20 = new RPCErrorDefault(obj4, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
       }
     } else {
-      obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
+      const obj = { closeCode: constants2.CLOSE_UNSUPPORTED };
       const tmp13 = new RPCErrorDefault(obj, "Invalid opcode");
       throw tmp13;
     }

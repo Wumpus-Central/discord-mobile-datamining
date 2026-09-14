@@ -12,22 +12,22 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { view: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { view: null };
+const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWER;
-createStyles.view = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWER;
+obj2.view = obj3;
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = function PostponeRender(children) {
   children = children.children;
+  first = undefined;
+  importDefault = undefined;
   ({ postpone, ignoreKeyboard, viewStyle } = children);
-  const tmp2 = _slicedToArray(noop.useState(postpone), 2);
-  const first = tmp2[0];
-  importDefault = tmp2[1];
+  [first, importDefault] = noop.useState(postpone);
   dependencyMap = noop.useRef(undefined);
   useMountEffectDefault(() => {
     if (first) {

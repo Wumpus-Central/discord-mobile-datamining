@@ -1,13 +1,13 @@
-// === Module 14798: AccountDisplayNameSetting ===
+// === Module 14799: AccountDisplayNameSetting ===
 
-// Module 14798 (AccountDisplayNameSetting)
+// Module 14799 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
@@ -30,9 +30,8 @@ let SettingBuilders = {
       return require("ProfileCustomizationSettingScreen").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
 
-export default SettingBuilders;
+export default route;

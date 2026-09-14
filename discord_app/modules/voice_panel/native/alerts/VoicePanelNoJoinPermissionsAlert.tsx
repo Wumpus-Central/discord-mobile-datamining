@@ -1,9 +1,9 @@
-// === Module 17296: VoicePanelNoJoinPermissionsAlert ===
+// === Module 17298: VoicePanelNoJoinPermissionsAlert ===
 
-// Module 17296 (VoicePanelNoJoinPermissionsAlert)
+// Module 17298 (VoicePanelNoJoinPermissionsAlert)
 import util from "util" /* 1114 */;
 import AlertModal from "AlertModal" /* 4986 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17297 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,16 +12,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
 
 export default function VoicePanelNoJoinPermissionsAlert() {
-  let obj = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
+  const obj2 = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t["7/2/3M"]);
+  obj2.title = intl.string(util.t["7/2/3M"]);
   const intl2 = util.intl;
-  obj.content = intl2.string(util.t.xsenup);
-  obj = { variant: "secondary", text: null, onPress: null };
+  obj2.content = intl2.string(util.t.xsenup);
+  const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t["NX+WJN"]);
-  obj.onPress = obj.useDismissModalCallback();
-  obj.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
-  return jsx(AlertModal.AlertModal, { variant: "secondary", text: null, onPress: null });
+  obj3.text = intl3.string(util.t["NX+WJN"]);
+  obj3.onPress = AlertModal.useDismissModalCallback();
+  obj2.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
+  return jsx(AlertModal.AlertModal, { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null });
 };
 export const VOICE_PANEL_NO_JOIN_PERMS_KEY = "voice-panel-no-join-perms";

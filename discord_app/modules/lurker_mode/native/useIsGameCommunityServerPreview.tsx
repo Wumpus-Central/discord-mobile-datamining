@@ -1,7 +1,9 @@
-// === Module 16199: useIsGameCommunityServerPreview ===
+// === Module 16201: useIsGameCommunityServerPreview ===
 
-// Module 16199 (useIsGameCommunityServerPreview)
+// Module 16201 (useIsGameCommunityServerPreview)
 import LurkingStore from "LurkingStore" /* 4276 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const JoinGuildSources = fn(1074).JoinGuildSources;

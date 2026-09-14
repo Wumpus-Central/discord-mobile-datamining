@@ -19,9 +19,8 @@ let closure_7 = async function _setUserStatus() {
   closure_129_5 = str;
   const PreloadedUserSettingsActionCreators = closure_130_0(closure_130_2[7]).PreloadedUserSettingsActionCreators;
   await PreloadedUserSettingsActionCreators.updateAsync("status", async (statusCreatedAtMs) => {
-    const StringValue = value(1218).StringValue;
-    let obj = { value };
-    statusCreatedAtMs.status = StringValue.create(obj);
+    const StringValue = value(1216).StringValue;
+    statusCreatedAtMs.status = StringValue.create({ value });
     statusCreatedAtMs.statusExpiresAtMs = statusExpiresAtMs;
     if (closure_1_1 === value) {
       if (null != statusCreatedAtMs.statusCreatedAtMs) {
@@ -29,31 +28,32 @@ let closure_7 = async function _setUserStatus() {
       }
       statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
     }
-    const UInt64Value = value(1218).UInt64Value;
-    obj = { value: "" + Date.now() };
-    statusCreatedAtMs = UInt64Value.create(obj);
+    const UInt64Value = value(1216).UInt64Value;
+    statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
+    const obj = { value };
+    const obj2 = { value: "" + Date.now() };
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {
-    let obj = value(4481);
-    const humanizeStatusResult = obj.humanizeStatus(DND);
+    const humanizeStatusResult = value(4481).humanizeStatus(DND);
     if ("0" === arg1) {
       const intl3 = value(1114).intl;
-      obj = { statusLabel: humanizeStatusResult };
-      return intl3.formatToPlainString(value(1114).t.dO2aLi, obj);
+      const obj2 = { statusLabel: humanizeStatusResult };
+      return intl3.formatToPlainString(value(1114).t.dO2aLi, obj2);
     } else {
       const statusExpiryParts = value(10221).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1114).intl;
-        obj = { statusLabel: humanizeStatusResult, timeString };
-        let formatToPlainStringResult = intl2.formatToPlainString(value(1114).t["r50t/S"], obj);
+        const obj3 = { statusLabel: humanizeStatusResult, timeString };
+        let formatToPlainStringResult = intl2.formatToPlainString(value(1114).t["r50t/S"], obj3);
       } else {
         const intl = value(1114).intl;
-        const obj1 = { statusLabel: humanizeStatusResult, dateString: tmp6, timeString };
-        formatToPlainStringResult = intl.formatToPlainString(value(1114).t["J+GJHv"], obj1);
+        const obj4 = { statusLabel: humanizeStatusResult, dateString: tmp6, timeString };
+        formatToPlainStringResult = intl.formatToPlainString(value(1114).t["J+GJHv"], obj4);
       }
       return formatToPlainStringResult;
     }
+    const obj = value(4481);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);
@@ -61,14 +61,14 @@ let closure_7 = async function _setUserStatus() {
     const merged = Object.assign(closure_130_4.getGlobalStats());
     closure_129_7 = { next_status: closure_129_0, prev_status: status };
     if (null != closure_129_3) {
-      const obj4 = {};
+      const obj8 = {};
       const merged1 = Object.assign(closure_129_7);
       let result = null;
       if (null != closure_129_3) {
         result = closure_129_3 / 60000;
       }
-      obj4.expire_duration_minutes = result;
-      closure_129_7 = obj4;
+      obj8.expire_duration_minutes = result;
+      closure_129_7 = obj8;
     }
     if (null != closure_129_2) {
       const merged2 = Object.assign(closure_129_7);

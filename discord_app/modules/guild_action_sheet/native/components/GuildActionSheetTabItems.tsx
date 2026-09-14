@@ -1,6 +1,6 @@
-// === Module 14060: GuildActionSheetTabItems ===
+// === Module 14061: GuildActionSheetTabItems ===
 
-// Module 14060 (GuildActionSheetTabItems)
+// Module 14061 (GuildActionSheetTabItems)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import actions_BoostingActionCreatorsAll from "actions/BoostingActionCreators" /* 5515 */;
@@ -24,14 +24,13 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let obj = guild(14048);
-  let canAccessSettings = obj.useGuildActionSheetPermissions(guild).canAccessSettings;
+  let canAccessSettings = guild(14049).useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(4545)(guild.id).total;
-  let obj1 = guild(504);
+  let obj = guild(14049);
   const items = [GuildChannelStore];
-  stateFromStores = obj1.useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
-  let obj2 = guild(9953);
-  let shouldRenderInviteResult = obj2.shouldRenderInvite(stateFromStores, guild);
+  stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
+  let obj2 = guild(504);
+  let shouldRenderInviteResult = guild(9953).shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
@@ -44,60 +43,59 @@ export default function GuildActionSheetTabItems(guild) {
       const result = tmp3Result.handleOpenInviteActionsheet(guild, channel.id, stateFromStores, constants4.SERVER_PROFILE);
     }
   }, items1);
-  obj = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
+  let obj4 = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
   if (total > 0) {
     const intl2 = tmp(1114).intl;
-    obj = { subscriptions: total };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["pob/cL"], obj);
+    const obj5 = { subscriptions: total };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["pob/cL"], obj5);
   } else {
     const intl = tmp(1114).intl;
     formatToPlainStringResult = intl.string(tmp(1114).t.Uj0md3);
   }
-  obj1 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
-  obj2 = { color: tmp3(576).unsafe_rawColors.GUILD_BOOSTING_PINK };
-  obj1.icon = closure_12(guild(9505).BoostGemIcon, obj2);
-  obj1.onPress = function onPress() {
-    let obj = { location: null };
-    obj = { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON };
-    obj.location = obj;
-    obj.trackWithMetadata(constants.PREMIUM_GUILD_PROMOTION_OPENED, obj);
+  const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
+  let obj3 = guild(9953);
+  obj6.icon = closure_12(guild(9505).BoostGemIcon, { color: stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_PINK });
+  obj6.onPress = function onPress() {
+    const obj2 = { location: { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON } };
+    AppAnalyticsUtilsDefault.trackWithMetadata(constants.PREMIUM_GUILD_PROMOTION_OPENED, obj2);
+    const obj3 = { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON };
     ActionSheetActionCreatorsDefault.hideActionSheet();
     actions_BoostingActionCreatorsAll.openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(8202).IconButton, obj1), , , ];
+  const items2 = [closure_12(guild(8202).IconButton, obj6), , , ];
   if (shouldRenderInviteResult) {
-    const obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
+    const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1114).intl;
-    obj3.label = intl3.string(tmp(1114).t.VINpSK);
-    obj3.icon = tmp3(10160);
-    obj3.onPress = function onPress() {
+    obj8.label = intl3.string(tmp(1114).t.VINpSK);
+    obj8.icon = tmp3(10160);
+    obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = closure_12(tmp(8202).IconButton, obj3);
+    shouldRenderInviteResult = closure_12(tmp(8202).IconButton, obj8);
   }
   items2[1] = shouldRenderInviteResult;
-  let obj4 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
+  const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
   const intl4 = tmp(1114).intl;
-  obj4.label = intl4.string(guild(1114).t.HcoRu0);
-  obj4.icon = stateFromStores(8053);
-  obj4.onPress = function onPress() {
+  obj9.label = intl4.string(guild(1114).t.HcoRu0);
+  obj9.icon = stateFromStores(8053);
+  obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  items2[2] = closure_12(guild(8202).IconButton, obj4);
+  items2[2] = closure_12(guild(8202).IconButton, obj9);
   if (canAccessSettings) {
-    const obj5 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
+    const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl5 = tmp(1114).intl;
-    obj5.label = intl5.string(tmp(1114).t["3D5yo/"]);
-    obj5.icon = tmp3(7484);
-    obj5.onPress = function onPress() {
+    obj10.label = intl5.string(tmp(1114).t["3D5yo/"]);
+    obj10.icon = tmp3(7484);
+    obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = closure_12(tmp(8202).IconButton, obj5);
+    canAccessSettings = closure_12(tmp(8202).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
-  obj.children = items2;
-  return closure_13(guild(5514).ButtonGroup, obj);
+  obj4.children = items2;
+  return closure_13(guild(5514).ButtonGroup, obj4);
 };

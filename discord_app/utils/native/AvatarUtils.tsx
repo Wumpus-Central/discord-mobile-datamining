@@ -33,6 +33,8 @@ import _modDef1429 from "module_1429" /* 1429 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function ensureAvatarSource(source) {
   if (typeof source === "number") {
     let assetSource = React2.resolveAssetSource(source);
@@ -49,13 +51,18 @@ const items2 = [_modDef1412, _modDef1413, _modDef1414, _modDef1415, _modDef1416,
 const items3 = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424, _modDef1425];
 const MediaManager = NativeModules.MediaManager;
 const set = new Set(MediaManager.getConstants().supportedExtensions);
-let obj = { DEFAULT_AVATARS: items, DEFAULT_AVATARS_SMALL: items1, DEFAULT_AVATARS_SMALL_MAX_SIZE: 24, DEFAULT_PROVISIONAL_AVATARS: items2, DEFAULT_GROUP_DM_AVATARS: items3, BOT_AVATARS: null, DEFAULT_CHANNEL_ICON: null, ensureAvatarSource: null, canUseWebp: null };
-obj = { clyde: _modDef1426, nitro_wumpus: _modDef1427 };
-obj.BOT_AVATARS = obj;
-obj.DEFAULT_CHANNEL_ICON = _modDef1429;
-obj.ensureAvatarSource = ensureAvatarSource;
-obj.canUseWebp = function canUseWebp() {
-  return set.has("webp");
+const obj = {
+  DEFAULT_AVATARS: items,
+  DEFAULT_AVATARS_SMALL: items1,
+  DEFAULT_AVATARS_SMALL_MAX_SIZE: 24,
+  DEFAULT_PROVISIONAL_AVATARS: items2,
+  DEFAULT_GROUP_DM_AVATARS: items3,
+  BOT_AVATARS: { clyde: _modDef1426, nitro_wumpus: _modDef1427 },
+  DEFAULT_CHANNEL_ICON: _modDef1429,
+  ensureAvatarSource,
+  canUseWebp() {
+    return set.has("webp");
+  }
 };
 const result = size.fileFinishedImporting("utils/native/AvatarUtils.tsx");
 

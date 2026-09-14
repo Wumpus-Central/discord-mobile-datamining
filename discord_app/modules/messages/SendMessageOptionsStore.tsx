@@ -1,6 +1,6 @@
-// === Module 11797: SendMessageOptionsStore ===
+// === Module 11798: SendMessageOptionsStore ===
 
-// Module 11797 (SendMessageOptionsStore)
+// Module 11798 (SendMessageOptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageConstants from "MessageConstants" /* 4629 */;

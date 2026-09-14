@@ -1,11 +1,13 @@
-// === Module 14951: RequestDataContent ===
+// === Module 14952: RequestDataContent ===
 
-// Module 14951 (RequestDataContent)
+// Module 14952 (RequestDataContent)
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14952 */;
+import DataHarvestActionCreators from "DataHarvestActionCreators" /* 14953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -21,45 +23,43 @@ const result = size.fileFinishedImporting("modules/user_settings/privacy_and_saf
 
 export default noop.memo(() => {
   const tmp = closure_11();
-  let obj = require("useNavigation");
-  _require = obj.useNavigation();
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
-  importDefault = tmp2[1];
-  obj = {};
-  obj = { value: constants.USERS, label: null, checked: false };
+  _require = require("useNavigation").useNavigation();
+  [obj17.loading, importDefault] = noop.useState(false);
+  let obj2 = {};
+  let obj3 = { value: constants.USERS, label: null, checked: false };
   let intl = require("util").intl;
-  obj.label = intl.string(require("util").t["rfe/x8"]);
-  obj[constants.USERS] = obj;
-  const obj1 = { value: constants.ANALYTICS, label: null, checked: false };
+  obj3.label = intl.string(require("util").t["rfe/x8"]);
+  obj2[constants.USERS] = obj3;
+  let obj4 = { value: constants.ANALYTICS, label: null, checked: false };
   let intl2 = require("util").intl;
-  obj1.label = intl2.string(require("util").t["j+d6RN"]);
-  obj[constants.ANALYTICS] = obj1;
-  let obj2 = { value: constants.ACTIVITIES, label: null, checked: false };
+  obj4.label = intl2.string(require("util").t["j+d6RN"]);
+  obj2[constants.ANALYTICS] = obj4;
+  const obj5 = { value: constants.ACTIVITIES, label: null, checked: false };
   let intl3 = require("util").intl;
-  obj2.label = intl3.string(require("util").t.KO88BS);
-  obj[constants.ACTIVITIES] = obj2;
-  let obj3 = { value: constants.ADS, label: null, checked: false };
+  obj5.label = intl3.string(require("util").t.KO88BS);
+  obj2[constants.ACTIVITIES] = obj5;
+  const obj6 = { value: constants.ADS, label: null, checked: false };
   let intl4 = require("util").intl;
-  obj3.label = intl4.string(require("util").t.wb7QJ3);
-  obj[constants.ADS] = obj3;
-  const obj4 = { value: constants.MESSAGES, label: null, checked: false };
+  obj6.label = intl4.string(require("util").t.wb7QJ3);
+  obj2[constants.ADS] = obj6;
+  const obj7 = { value: constants.MESSAGES, label: null, checked: false };
   const intl5 = require("util").intl;
-  obj4.label = intl5.string(require("util").t["0dO1t+"]);
-  obj[constants.MESSAGES] = obj4;
-  const obj5 = { value: constants.GUILDS, label: null, checked: false };
+  obj7.label = intl5.string(require("util").t["0dO1t+"]);
+  obj2[constants.MESSAGES] = obj7;
+  const obj8 = { value: constants.GUILDS, label: null, checked: false };
   const intl6 = require("util").intl;
-  obj5.label = intl6.string(require("util").t.JN9c36);
-  obj[constants.GUILDS] = obj5;
-  const obj6 = { value: constants.ZENDESK, label: null, checked: false };
+  obj8.label = intl6.string(require("util").t.JN9c36);
+  obj2[constants.GUILDS] = obj8;
+  const obj9 = { value: constants.ZENDESK, label: null, checked: false };
   const intl7 = require("util").intl;
-  obj6.label = intl7.string(require("util").t.yaLeEB);
-  obj[constants.ZENDESK] = obj6;
-  const tmp3 = _slicedToArray(noop.useState(obj), 2);
+  obj9.label = intl7.string(require("util").t.yaLeEB);
+  obj2[constants.ZENDESK] = obj9;
+  const tmp3 = _slicedToArray(noop.useState(obj2), 2);
   first = tmp3[0];
   _slicedToArray = tmp3[1];
   let keys = Object.keys(first);
-  const obj7 = { style: tmp.content, children: null };
-  const obj8 = { style: tmp.header, children: null };
+  const obj10 = { style: tmp.content, children: null };
+  const obj11 = { style: tmp.header, children: null };
   let mapped = keys.map((item, index, arg2) => {
     ({ label, checked } = first[item]);
     closure_0 = item;
@@ -68,12 +68,12 @@ export default noop.memo(() => {
       checked,
       onPress: (checked) => {
         closure_1_3((arg0) => {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(arg0);
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(arg0[checked]);
-          obj.checked = checked;
-          obj[checked] = obj;
+          obj2.checked = checked;
+          obj[checked] = obj2;
           return obj;
         });
       },
@@ -81,50 +81,51 @@ export default noop.memo(() => {
       end: index === arg2.length - 1
     }, item);
   });
-  const obj9 = { style: tmp.title, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj12 = { style: tmp.title, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl8 = require("util").intl;
-  obj9.children = intl8.string(require("util").t.jxXMEz);
-  const items = [closure_8(require("Text/Text").Text, obj9), ];
-  const obj10 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj12.children = intl8.string(require("util").t.jxXMEz);
+  const items = [closure_8(require("Text/Text").Text, obj12), ];
+  const obj13 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl9 = require("util").intl;
-  const obj11 = { helpdeskArticle: require("HelpdeskUtils").getArticleURL(HelpdeskArticles.GDPR_PACKAGE_CONTENTS) };
-  obj10.children = intl9.format(require("util").t.vtRhDA, obj11);
-  items[1] = closure_8(require("Text/Text").Text, obj10);
-  obj8.children = items;
-  const items1 = [closure_9(closure_5, obj8), , ];
+  const obj14 = { helpdeskArticle: null };
+  let obj = require("useNavigation");
+  obj14.helpdeskArticle = require("HelpdeskUtils").getArticleURL(HelpdeskArticles.GDPR_PACKAGE_CONTENTS);
+  obj13.children = intl9.format(require("util").t.vtRhDA, obj14);
+  items[1] = closure_8(require("Text/Text").Text, obj13);
+  obj11.children = items;
+  const items1 = [closure_9(closure_5, obj11), , ];
   const obj15 = require("HelpdeskUtils");
   items1[1] = closure_8(closure_5, { style: tmp.checkboxContainer, children: closure_8(require("TableRowGroup").TableRowGroup, { title: "", hasIcons: false, children: mapped }) });
-  const obj13 = { text: null, onPress: null, loading: null };
+  const obj17 = { text: null, onPress: null, loading: null };
   const intl10 = require("util").intl;
-  obj13.text = intl10.string(require("util").t.NYgNg9);
-  obj13.onPress = function onPress() {
+  obj17.text = intl10.string(require("util").t.NYgNg9);
+  obj17.onPress = function onPress() {
     const keys = Object.keys(first);
     const found = keys.filter((item) => dependencyMap[item].checked);
     const mapped = found.map((item) => dependencyMap[item].value);
     if (0 !== mapped.length) {
       closure_1(true);
-      let obj = DataHarvestActionCreators;
-      const dataHarvest = obj.requestDataHarvest(mapped);
+      const dataHarvest = DataHarvestActionCreators.requestDataHarvest(mapped);
       dataHarvest.then((body) => {
         if (null != body) {
           if (null != body.body) {
-            let obj = { title: null, body: null };
+            const obj2 = { title: null, body: null };
             const intl3 = closure_0(first[7]).intl;
-            obj.title = intl3.string(closure_0(first[7]).t.i2iul5);
+            obj2.title = intl3.string(closure_0(first[7]).t.i2iul5);
             const intl4 = closure_0(first[7]).intl;
-            obj.body = intl4.string(closure_0(first[7]).t["6Nmv4i"]);
-            closure_1(first[13]).show(obj);
+            obj2.body = intl4.string(closure_0(first[7]).t["6Nmv4i"]);
+            closure_1(first[13]).show(obj2);
             closure_1_0.pop();
             const obj3 = closure_1(first[13]);
           }
         }
-        closure_1(first[13]);
-        obj = { title: null, body: null };
+        const obj4 = { title: null, body: null };
         const intl = closure_0(first[7]).intl;
-        obj.title = intl.string(closure_0(first[7]).t.OjbtDm);
+        obj4.title = intl.string(closure_0(first[7]).t.OjbtDm);
         const intl2 = closure_0(first[7]).intl;
-        obj.body = intl2.string(closure_0(first[7]).t["0F5Jyt"]);
-        obj.show(obj);
+        obj4.body = intl2.string(closure_0(first[7]).t["0F5Jyt"]);
+        closure_1(first[13]).show(obj4);
+        const obj = closure_1(first[13]);
       }, (message) => {
         message = undefined;
         if (message != null) {
@@ -144,33 +145,33 @@ export default noop.memo(() => {
           const intl = closure_1_0(1114).intl;
           message = intl.string(closure_1_0(1114).t["0F5Jyt"]);
         }
-        closure_1_1(4980);
-        const obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl2 = closure_1_0(1114).intl;
-        obj.title = intl2.string(closure_1_0(1114).t.OjbtDm);
-        obj.body = message;
-        obj.show(obj);
+        obj2.title = intl2.string(closure_1_0(1114).t.OjbtDm);
+        obj2.body = message;
+        closure_1_1(4980).show(obj2);
+        const obj = closure_1_1(4980);
       }).finally(() => closure_1_1(false));
       const nextPromise = dataHarvest.then((body) => {
         if (null != body) {
           if (null != body.body) {
-            let obj = { title: null, body: null };
+            const obj2 = { title: null, body: null };
             const intl3 = closure_0(first[7]).intl;
-            obj.title = intl3.string(closure_0(first[7]).t.i2iul5);
+            obj2.title = intl3.string(closure_0(first[7]).t.i2iul5);
             const intl4 = closure_0(first[7]).intl;
-            obj.body = intl4.string(closure_0(first[7]).t["6Nmv4i"]);
-            closure_1(first[13]).show(obj);
+            obj2.body = intl4.string(closure_0(first[7]).t["6Nmv4i"]);
+            closure_1(first[13]).show(obj2);
             closure_1_0.pop();
             const obj3 = closure_1(first[13]);
           }
         }
-        closure_1(first[13]);
-        obj = { title: null, body: null };
+        const obj4 = { title: null, body: null };
         const intl = closure_0(first[7]).intl;
-        obj.title = intl.string(closure_0(first[7]).t.OjbtDm);
+        obj4.title = intl.string(closure_0(first[7]).t.OjbtDm);
         const intl2 = closure_0(first[7]).intl;
-        obj.body = intl2.string(closure_0(first[7]).t["0F5Jyt"]);
-        obj.show(obj);
+        obj4.body = intl2.string(closure_0(first[7]).t["0F5Jyt"]);
+        closure_1(first[13]).show(obj4);
+        const obj = closure_1(first[13]);
       }, (message) => {
         message = undefined;
         if (message != null) {
@@ -190,24 +191,23 @@ export default noop.memo(() => {
           const intl = closure_1_0(1114).intl;
           message = intl.string(closure_1_0(1114).t["0F5Jyt"]);
         }
-        closure_1_1(4980);
-        const obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl2 = closure_1_0(1114).intl;
-        obj.title = intl2.string(closure_1_0(1114).t.OjbtDm);
-        obj.body = message;
-        obj.show(obj);
+        obj2.title = intl2.string(closure_1_0(1114).t.OjbtDm);
+        obj2.body = message;
+        closure_1_1(4980).show(obj2);
+        const obj = closure_1_1(4980);
       });
     } else {
-      obj = { title: null, body: null };
+      let obj3 = { title: null, body: null };
       let intl = util.intl;
-      obj.title = intl.string(util.t.OjbtDm);
+      obj3.title = intl.string(util.t.OjbtDm);
       let intl2 = util.intl;
-      obj.body = intl2.string(util.t.W1Rw3D);
-      AlertActionCreatorsDefault.show(obj);
+      obj3.body = intl2.string(util.t.W1Rw3D);
+      AlertActionCreatorsDefault.show(obj3);
     }
   };
-  obj13.loading = tmp2[0];
-  items1[2] = closure_8(require("components/Button/Button").Button, obj13);
-  obj7.children = items1;
-  return closure_9(closure_6, obj7);
+  items1[2] = closure_8(require("components/Button/Button").Button, obj17);
+  obj10.children = items1;
+  return closure_9(closure_6, obj10);
 });

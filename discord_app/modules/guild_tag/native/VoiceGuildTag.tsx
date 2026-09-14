@@ -1,6 +1,6 @@
-// === Module 16220: VoiceGuildTag ===
+// === Module 16222: VoiceGuildTag ===
 
-// Module 16220 (VoiceGuildTag)
+// Module 16222 (VoiceGuildTag)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -10,54 +10,51 @@ const View = fn(17).View;
 const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 const createStyles = fn(4636);
-PlatformUtils = { gapContainer: { height: num }, tagContainer: null, tag: null };
-PlatformUtils = { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 };
+let obj3 = { gapContainer: { height: num }, tagContainer: { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 }, tag: null };
 let num2 = 16;
-PlatformUtils.tagContainer = PlatformUtils;
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   num2 = 13;
 }
-PlatformUtils.tag = { lineHeight: num2 };
-let closure_7 = createStyles.createStyles(PlatformUtils);
+obj3.tag = { lineHeight: num2 };
+let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag.tsx");
 
 export default function VoiceGuildTagChiplet(userId) {
   userId = userId.userId;
   const tmp = closure_7();
-  let obj = userId(504);
   const items = [UserStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
-  let obj1 = userId(8282);
+  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
+  const obj = userId(504);
   let primaryGuild;
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
   }
-  const userPrimaryGuild = obj1.getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = userId(8282).getUserPrimaryGuild(primaryGuild);
   ({ tag, guildId } = userPrimaryGuild);
   if (null != guildId) {
     if (null != tag) {
-      obj = { style: tmp.gapContainer, children: null };
-      obj = { style: tmp.tagContainer, children: null };
+      const obj3 = { style: tmp.gapContainer, children: null };
+      const obj4 = { style: tmp.tagContainer, children: null };
       const guildTagBadgeUrl = tmp2(8282).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
-      obj1 = { source: null, size: null };
-      const obj2 = { uri: guildTagBadgeUrl };
-      obj1.source = obj2;
-      obj1.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(9313).GuildTagBadge, obj1), ];
-      const obj3 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-      items2[1] = closure_5(tmp2(4632).Text, obj3);
-      obj.children = items2;
-      obj.children = closure_6(View, obj);
-      return closure_5(View, obj);
+      const obj5 = { source: null, size: null };
+      const obj6 = { uri: guildTagBadgeUrl };
+      obj5.source = obj6;
+      obj5.size = GuildTagBadgeSize.SIZE_12;
+      const items2 = [closure_5(tmp2(9313).GuildTagBadge, obj5), ];
+      const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
+      items2[1] = closure_5(tmp2(4632).Text, obj7);
+      obj4.children = items2;
+      obj3.children = closure_6(View, obj4);
+      return closure_5(View, obj3);
     }
   }
   return null;

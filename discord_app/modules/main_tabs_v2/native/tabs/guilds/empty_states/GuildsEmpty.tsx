@@ -1,6 +1,6 @@
-// === Module 16364: GuildsEmpty ===
+// === Module 16366: GuildsEmpty ===
 
-// Module 16364 (GuildsEmpty)
+// Module 16366 (GuildsEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
@@ -8,8 +8,8 @@ import getInitialNavigationState from "getInitialNavigationState" /* 4496 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12837 */;
-import _modDef16365 from "module_16365" /* 16365 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12838 */;
+import _modDef16367 from "module_16367" /* 16367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -31,47 +31,47 @@ class GuildsEmptyContent {
     items[0] = tmp.scrollViewContentContainer;
     items[1] = global.contentContainerStyle;
     obj.contentContainerStyle = items;
-    obj = { children: null };
-    obj1 = { style: tmp.content, children: null };
-    obj2 = { style: tmp.illustrationWrapper, children: null };
-    obj3 = { source: closure_1(closure_2[12]), style: tmp.illustration };
-    obj2.children = jsx(Image, obj3);
+    obj1 = { children: null };
+    obj12 = { style: tmp.content, children: null };
+    obj13 = { style: tmp.illustrationWrapper, children: null };
+    obj14 = { source: closure_1(closure_2[12]), style: tmp.illustration };
+    obj13.children = jsx(Image, obj14);
     items1 = [, ];
-    items1[0] = jsx(View, obj2);
-    obj4 = { style: tmp.textWrapper, children: null };
-    obj5 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
+    items1[0] = jsx(View, obj13);
+    obj15 = { style: tmp.textWrapper, children: null };
+    obj16 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
     items2 = [, ];
     ({ text: arr3[0], headerText: arr3[1] } = tmp);
-    obj5.style = items2;
+    obj16.style = items2;
     intl = closure_0(closure_2[13]).intl;
-    obj5.children = intl.string(closure_0(closure_2[13]).t["Y7Ml/I"]);
+    obj16.children = intl.string(closure_0(closure_2[13]).t["Y7Ml/I"]);
     items3 = [, ];
-    items3[0] = jsx(closure_0(closure_2[10]).Heading, obj5);
-    obj6 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+    items3[0] = jsx(closure_0(closure_2[10]).Heading, obj16);
+    obj17 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
     intl2 = closure_0(closure_2[13]).intl;
-    obj6.children = intl2.string(closure_0(closure_2[13]).t.kuyE4r);
-    items3[1] = jsx(closure_0(closure_2[10]).Text, obj6);
-    obj4.children = items3;
-    items1[1] = jsxs(View, obj4);
-    obj1.children = items1;
+    obj17.children = intl2.string(closure_0(closure_2[13]).t.kuyE4r);
+    items3[1] = jsx(closure_0(closure_2[10]).Text, obj17);
+    obj15.children = items3;
+    items1[1] = jsxs(View, obj15);
+    obj12.children = items1;
     items4 = [, ];
-    items4[0] = jsxs(View, obj1);
-    obj7 = { style: tmp.buttonContainer, spacing: 12, children: null };
-    obj8 = { size: "lg", text: null, onPress: null };
+    items4[0] = jsxs(View, obj12);
+    obj18 = { style: tmp.buttonContainer, spacing: 12, children: null };
+    obj19 = { size: "lg", text: null, onPress: null };
     intl3 = closure_0(closure_2[13]).intl;
-    obj8.text = intl3.string(closure_0(closure_2[13]).t.riOUtB);
-    obj8.onPress = handleJoinGuild;
+    obj19.text = intl3.string(closure_0(closure_2[13]).t.riOUtB);
+    obj19.onPress = handleJoinGuild;
     items5 = [, ];
-    items5[0] = jsx(closure_0(closure_2[15]).Button, obj8);
-    obj9 = { size: "lg", variant: "secondary", text: null, onPress: null };
+    items5[0] = jsx(closure_0(closure_2[15]).Button, obj19);
+    obj20 = { size: "lg", variant: "secondary", text: null, onPress: null };
     intl4 = closure_0(closure_2[13]).intl;
-    obj9.text = intl4.string(closure_0(closure_2[13]).t["BetvT+"]);
-    obj9.onPress = handleCreateGuild;
-    items5[1] = jsx(closure_0(closure_2[15]).Button, obj9);
-    obj7.children = items5;
-    items4[1] = jsxs(closure_0(closure_2[14]).Stack, obj7);
-    obj.children = items4;
-    obj.children = jsxs(View, obj);
+    obj20.text = intl4.string(closure_0(closure_2[13]).t["BetvT+"]);
+    obj20.onPress = handleCreateGuild;
+    items5[1] = jsx(closure_0(closure_2[15]).Button, obj20);
+    obj18.children = items5;
+    items4[1] = jsxs(closure_0(closure_2[14]).Stack, obj18);
+    obj1.children = items4;
+    obj.children = jsxs(View, obj1);
     return jsx(ScrollView, obj);
   }
 }
@@ -81,32 +81,31 @@ const Constants = fn(1074);
 ({ ME: closure_11, MOBILE_GUILD_UPSELL_LIST: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let obj = { scrollView: null, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, illustration: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
-obj = { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm };
-obj.scrollView = obj;
-const createStyles = { zIndex: 100, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj.header = createStyles;
+const createStyles = fn(4636);
+let obj = { scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm }, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, illustration: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
+let obj3 = { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm };
+obj.header = { zIndex: 100, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.headerTitle = { height: 56, marginLeft: 16, marginRight: 8, flexDirection: "row", alignItems: "center" };
+let obj4 = { zIndex: 100, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.scrollViewContentContainer = { flexGrow: 2, justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.headerInner = { flex: 1, flexDirection: "row", alignItems: "center" };
-let obj2 = { flexGrow: 2, justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj5 = { flexGrow: 2, justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.content = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj.illustrationWrapper = { width: "100%", paddingHorizontal: 36 };
-let obj3 = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
+let obj6 = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj.illustration = { resizeMode: "contain", alignSelf: "center", marginBottom: nativeDefault.space.PX_24 };
-let obj4 = { resizeMode: "contain", alignSelf: "center", marginBottom: nativeDefault.space.PX_24 };
+let obj7 = { resizeMode: "contain", alignSelf: "center", marginBottom: nativeDefault.space.PX_24 };
 obj.buttonContainer = { paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let obj5 = { paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj8 = { paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
-let obj7 = {};
+let obj10 = {};
 const merged = Object.assign(fn(4632).TextStyleSheet["heading-md/bold"]);
-obj7.fontSize = 18;
-obj7.marginBottom = 8;
-obj.headerText = obj7;
+obj10.fontSize = 18;
+obj10.marginBottom = 8;
+obj.headerText = obj10;
 obj.text = { textAlign: "center" };
 const __initData = createStyles.createStyles(obj);
-let obj6 = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
+let obj9 = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx");
 
@@ -115,18 +114,20 @@ export default noop.memo(function GuildsEmpty(arg0) {
   selectedGuildId = undefined;
   ({ selectedGuildId, style } = arg0);
   const tmp = closure_15();
-  let obj = navigation(1484);
-  navigation = obj.useNavigation();
-  let obj1 = navigation(563);
+  navigation = navigation(1484).useNavigation();
+  const obj = navigation(1484);
   const items = [AuthenticationStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => null != sessionId.getSessionId());
+  const stateFromStores = navigation(563).useStateFromStores(items, () => null != sessionId.getSessionId());
   let tmp6 = null;
   if (stateFromStores) {
     tmp6 = selectedGuildId;
   }
   selectedGuildId = tmp6;
-  obj = { type: navigation(1250).ImpressionTypes.VIEW, name: navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8894)(obj);
+  let obj3 = { type: null, name: null };
+  const obj2 = navigation(563);
+  obj3.type = navigation(1248).ImpressionTypes.VIEW;
+  obj3.name = navigation(1248).ImpressionNames.GUILDS_EMPTY_NUX;
+  selectedGuildId(8894)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -160,31 +161,31 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  let tmp2Result = tmp2(5207);
-  const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(15180);
+  const tmp7 = selectedGuildId(8894);
+  const isScreenLandscape = navigation(5207).useIsScreenLandscape();
+  navigation(15181);
   let tmp14Result = null;
   if (stateFromStores) {
-    obj = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items2 = [tmp.header, style];
-    obj.style = items2;
-    obj1 = { style: tmp.headerTitle, children: null };
-    const obj2 = { style: tmp.headerInner, children: null };
-    let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+    obj4.style = items2;
+    const obj5 = { style: tmp.headerTitle, children: null };
+    const obj6 = { style: tmp.headerInner, children: null };
+    const obj7 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1114).intl;
-    obj3.children = intl.string(tmp2(1114).t["7hB4kg"]);
-    obj2.children = closure_13(tmp2(4632).Text, obj3);
-    obj1.children = closure_13(closure_6, obj2);
-    const items3 = [closure_13(closure_6, obj1), ];
+    obj7.children = intl.string(tmp2(1114).t["7hB4kg"]);
+    obj6.children = closure_13(tmp2(4632).Text, obj7);
+    obj5.children = closure_13(closure_6, obj6);
+    const items3 = [closure_13(closure_6, obj5), ];
     let tmp18;
     if (isScreenLandscape) {
-      const obj4 = { paddingBottom: tmp12 };
-      tmp18 = obj4;
+      const obj8 = { paddingBottom: tmp12 };
+      tmp18 = obj8;
     }
-    const obj5 = { contentContainerStyle: tmp18 };
-    items3[1] = closure_13(GuildsEmptyContent, obj5);
-    obj.children = items3;
-    tmp14Result = closure_14(closure_6, obj);
+    const obj9 = { contentContainerStyle: tmp18 };
+    items3[1] = closure_13(GuildsEmptyContent, obj9);
+    obj4.children = items3;
+    tmp14Result = closure_14(closure_6, obj4);
   }
   return tmp14Result;
 });

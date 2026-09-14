@@ -1,14 +1,16 @@
-// === Module 15757: SelectScreen ===
+// === Module 15759: SelectScreen ===
 
-// Module 15757 (SelectScreen)
+// Module 15759 (SelectScreen)
 import NavigatorConstants from "NavigatorConstants" /* 5763 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
 import RowButton from "RowButton" /* 8718 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(15754).SELECT_NAMES;
+const SELECT_NAMES = fn(15756).SELECT_NAMES;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
@@ -30,23 +32,22 @@ export default function SelectScreen(mfaChallenge) {
   _require = mfaChallenge;
   const tmp = useWideAuthViewDefault();
   const tmp2 = closure_7(tmp);
-  let obj = require("useNavigation");
-  importDefault = obj.useNavigation();
-  obj = { top: !tmp, style: tmp2.container, children: null };
-  obj = { style: tmp2.selectContainer, children: null };
-  const obj1 = { variant: "heading-xl/extrabold", children: null };
+  importDefault = require("useNavigation").useNavigation();
+  const obj2 = { top: !tmp, style: tmp2.container, children: null };
+  const obj3 = { style: tmp2.selectContainer, children: null };
+  const obj4 = { variant: "heading-xl/extrabold", children: null };
   const intl = require("util").intl;
-  obj1.children = intl.string(require("util").t.S9b9bX);
-  const items = [closure_5(require("Text/Text").Heading, obj1), ];
-  const obj2 = { variant: "text-sm/medium", children: null };
+  obj4.children = intl.string(require("util").t.S9b9bX);
+  const items = [closure_5(require("Text/Text").Heading, obj4), ];
+  const obj5 = { variant: "text-sm/medium", children: null };
   const intl2 = require("util").intl;
-  obj2.children = intl2.string(require("util").t.Jz1lXO);
-  items[1] = closure_5(require("Text/Text").Text, obj2);
-  obj.children = items;
-  const items1 = [closure_6(View, obj), ];
-  const obj3 = { style: { marginTop: 16, gap: 8 }, children: null };
+  obj5.children = intl2.string(require("util").t.Jz1lXO);
+  items[1] = closure_5(require("Text/Text").Text, obj5);
+  obj3.children = items;
+  const items1 = [closure_6(View, obj3), ];
+  const obj6 = { style: { marginTop: 16, gap: 8 }, children: null };
   const methods = mfaChallenge.mfaChallenge.methods;
-  obj3.children = methods.map((type) => {
+  obj6.children = methods.map((type) => {
     closure_2 = type;
     return hasOwnProperty(RowButton.RowButton, {
       label: SELECT_NAMES[type.type],
@@ -55,7 +56,7 @@ export default function SelectScreen(mfaChallenge) {
       }
     }, type.type);
   });
-  items1[1] = closure_5(View, obj3);
-  obj.children = items1;
-  return closure_6(require("common/SafeAreaView").SafeAreaPaddingView, obj);
+  items1[1] = closure_5(View, obj6);
+  obj2.children = items1;
+  return closure_6(require("common/SafeAreaView").SafeAreaPaddingView, obj2);
 };

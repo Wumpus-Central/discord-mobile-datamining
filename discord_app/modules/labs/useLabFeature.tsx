@@ -3,6 +3,8 @@
 // Module 8473 (useLabFeature)
 import LabFeatureStore from "LabFeatureStore" /* 8471 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/labs/useLabFeature.tsx");

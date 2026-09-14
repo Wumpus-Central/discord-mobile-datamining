@@ -1,9 +1,11 @@
-// === Module 10941: HeadlessSlayerStorefrontPurchaseRunner ===
+// === Module 10942: HeadlessSlayerStorefrontPurchaseRunner ===
 
-// Module 10941 (HeadlessSlayerStorefrontPurchaseRunner)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 10942 (HeadlessSlayerStorefrontPurchaseRunner)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
@@ -36,14 +38,14 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     }
     onPurchaseError();
   }, items);
-  let obj = { skuId, sku, analyticsLoadId: tmp.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
+  let obj2 = { skuId, sku, analyticsLoadId: tmp.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
   let id;
   if (tmp3 != null) {
     id = tmp3.id;
   }
-  obj.orderId = id;
-  obj.analyticsData = tmp;
-  obj.onPurchaseComplete = function onPurchaseComplete() {
+  obj2.orderId = id;
+  obj2.analyticsData = tmp;
+  obj2.onPurchaseComplete = function onPurchaseComplete() {
     closure_7.current = true;
     if (obj.isIOS()) {
       AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
@@ -51,13 +53,13 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     closure_1_1();
     obj = PlatformUtils;
   };
-  obj.onPurchaseError = onPurchaseError;
-  obj.onPurchasePending = function onPurchasePending() {
+  obj2.onPurchaseError = onPurchaseError;
+  obj2.onPurchasePending = function onPurchasePending() {
 
   };
-  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj);
+  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj2);
   closure_9 = tmp6Result;
-  obj.useRef(0);
+  noop.useRef(0);
   const items1 = [attempt, tmp6Result, onPurchaseError, tmp3, tmp4];
   const effect = obj.useEffect(() => {
     if (ref2.current !== attempt) {

@@ -2,7 +2,7 @@
 
 // Module 1433 (ApexExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/index.tsx");

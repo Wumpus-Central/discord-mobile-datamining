@@ -3,6 +3,8 @@
 // Module 4365
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/index.tsx");
 for (const key10018 in require("BadgesCoachmarkRive")) {
   arg5[key10018] = require("BadgesCoachmarkRive")[key10018];

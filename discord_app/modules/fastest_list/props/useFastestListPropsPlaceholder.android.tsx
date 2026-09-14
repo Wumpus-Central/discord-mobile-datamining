@@ -15,7 +15,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = { borderRadius: "Array", borderTopLeftRadius: "count", borderTopRightRadius: "displayName", borderBottomLeftRadius: "h", borderBottomRightRadius: "e", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "Number", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "Object", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "ct", placeholderFeedColor: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "PX_16", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "call", placeholderType: NONE, width: true, height: true, verticalAlignment: true, horizontalAlignment: true };
+  const size = { borderRadius: "Array", borderTopLeftRadius: "count", borderTopRightRadius: "displayName", borderBottomLeftRadius: "Button", borderBottomRightRadius: "e", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "t", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "to", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "Date", placeholderFeedColor: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "TypeError", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "displayName", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
   if (null == listFooter) {
     return size;
   } else {
@@ -101,10 +101,10 @@ function createNativePlaceholderConfig(listFooter) {
           num7 = 0;
         }
         size.dividerPaddingRight = num7;
-        let tmp9Result = processColor(listFooter.backgroundColorHex);
-        size.placeholderFeedBackgroundColor = tmp9Result;
-        tmp9Result = processColor(listFooter.colorHex);
-        size.placeholderFeedColor = tmp9Result;
+        const tmp10 = processColor(listFooter.dividerColorHex);
+        size.placeholderFeedBackgroundColor = processColor(listFooter.backgroundColorHex);
+        const tmp9Result = processColor(listFooter.backgroundColorHex);
+        size.placeholderFeedColor = processColor(listFooter.colorHex);
         ({ labelSize: obj.placeholderFeedLabelSize, labelSecondarySize } = listFooter);
         if (labelSecondarySize == null) {
           labelSecondarySize = 0;
@@ -121,7 +121,7 @@ function createNativePlaceholderConfig(listFooter) {
         }
         size.placeholderFeedPadding = num8;
         ({ shape: obj.placeholderFeedShape, shapeSize: obj.placeholderFeedShapeSize } = listFooter);
-        const tmp10 = processColor(listFooter.dividerColorHex);
+        const tmp9Result2 = processColor(listFooter.colorHex);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
@@ -133,9 +133,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let sectionItem = { sectionItem: null };
-sectionItem = { type: fn(7165).FastestListPropsPlaceholderType.NONE };
-sectionItem.sectionItem = sectionItem;
+const obj = { sectionItem: { type: fn(7165).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

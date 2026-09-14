@@ -1,12 +1,12 @@
-// === Module 12213: HeroMedia ===
+// === Module 12214: HeroMedia ===
 
-// Module 12213 (HeroMedia)
+// Module 12214 (HeroMedia)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7271 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9782 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11349 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12187 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11350 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12188 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -23,7 +23,6 @@ export default function HeroMedia(arg0) {
   ({ width, contentWidth } = arg0);
   const tmp = closure_6();
   ({ width: width2, contentWidth: contentWidth2 } = { width, contentWidth });
-  let obj = useDefaultAppLauncherWidth;
   if (contentWidth2 == null) {
     if (width2 == null) {
       width2 = obj.useDefaultAppLauncherWidth();
@@ -32,11 +31,11 @@ export default function HeroMedia(arg0) {
   }
   const rounded = Math.floor(9 * contentWidth2 / 16);
   const tmp7 = useEmbeddedActivityBackgroundDefault({ applicationId, size: contentWidth2, names: ["embedded_cover"] });
-  let tmp2Result = initialize;
+  obj = useDefaultAppLauncherWidth;
   const items = [AccessibilityStore];
-  const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = useGetOrFetchApplications;
-  const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
+  const tmp2Result = initialize;
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
     prop = getOrFetchApplication.embeddedActivityConfig;
@@ -56,10 +55,10 @@ export default function HeroMedia(arg0) {
       const size = { muted: true, paused: stateFromStores, src: null, height: null, width: null, poster: null, resizeMode: "cover", accessibilityLabel: null, style: null, videoStyle: null, postponeRender: false };
       if (null != tmp12) {
         if ("" !== tmp12) {
-          obj = { videoURI: tmp12 };
-          let obj4 = obj;
+          const obj2 = { videoURI: tmp12 };
+          let obj7 = obj2;
         }
-        size.src = obj4;
+        size.src = obj7;
         size.height = rounded;
         size.width = contentWidth2;
         size.poster = tmp7.url;
@@ -71,18 +70,18 @@ export default function HeroMedia(arg0) {
         if (str3 == null) {
           str3 = "";
         }
-        obj = { applicationName: str3 };
-        size.accessibilityLabel = intl.formatToPlainString(util.t["Af+EQD"], obj);
+        const obj3 = { applicationName: str3 };
+        size.accessibilityLabel = intl.formatToPlainString(util.t["Af+EQD"], obj3);
         const items1 = [tmp.mediaBackground, , ];
-        const obj1 = { maxHeight: rounded };
-        items1[1] = obj1;
+        const obj4 = { maxHeight: rounded };
+        items1[1] = obj4;
         let tmp14 = null != containerHeight;
         if (tmp14) {
-          const obj2 = { transform: null };
-          const obj3 = { translateY: (containerHeight - rounded) / 2 };
-          const items2 = [obj3];
-          obj2.transform = items2;
-          tmp14 = obj2;
+          const obj5 = { transform: null };
+          const obj6 = { translateY: (containerHeight - rounded) / 2 };
+          const items2 = [obj6];
+          obj5.transform = items2;
+          tmp14 = obj5;
         }
         items1[2] = tmp14;
         size.style = items1;
@@ -93,7 +92,7 @@ export default function HeroMedia(arg0) {
       if (str2 == null) {
         str2 = "";
       }
-      obj4 = { uri: str2 };
+      obj7 = { uri: str2 };
     }
   }
   return tmp15Result;

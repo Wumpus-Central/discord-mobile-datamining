@@ -1,13 +1,13 @@
-// === Module 17195: calculatePIPState ===
+// === Module 17197: calculatePIPState ===
 
-// Module 17195 (calculatePIPState)
+// Module 17197 (calculatePIPState)
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17196 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17198 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 
 require = fn;
-const VoicePanelModes = fn(12402).VoicePanelModes;
+const VoicePanelModes = fn(12403).VoicePanelModes;
 const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
@@ -31,8 +31,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   if (tmp11) {
     set.add(focusedId.focusedId);
   }
-  let obj = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: set, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP };
-  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow(obj);
+  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow({ channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: set, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP });
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -56,6 +55,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     }
     tmp18 = tmp20;
   }
+  const obj = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: set, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP };
   tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
   if (pIPParticipantToShow != null) {
@@ -68,6 +68,6 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   if (tmp10) {
     tmp10 = tmp;
   }
-  obj = { participant: pIPParticipantToShow, dimensions: VoicePanelPIPUtils.computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP) };
-  return obj;
+  const tmp13Result = VoicePanelPIPUtils;
+  return { participant: pIPParticipantToShow, dimensions: VoicePanelPIPUtils.computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP) };
 };

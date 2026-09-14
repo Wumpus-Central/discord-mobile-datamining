@@ -13,8 +13,8 @@ let closure_5 = async function _showReportModal(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_5 = async function _showReportModal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -52,8 +52,8 @@ let closure_5 = async function _showReportModal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c5 = 1;
           const REPORT_TO_MOD = closure_132_0(closure_132_2[1]).ReportMenuTypeSets.REPORT_TO_MOD;
@@ -62,13 +62,13 @@ let closure_5 = async function _showReportModal(arg0) {
           if (hasItem) {
             c6 = 4;
             c7 = 1;
-            const obj2 = { value: obj10.getReportMenuForModeratorReport(closure_131_0, closure_131_1), done: false };
-            return obj2;
+            const obj6 = { value: obj10.getReportMenuForModeratorReport(closure_131_0, closure_131_1), done: false };
+            return obj6;
           } else {
             c6 = 3;
             c7 = 1;
-            const obj3 = { value: obj10.getReportMenu(closure_131_0, closure_131_1), done: false };
-            return obj3;
+            const obj7 = { value: obj10.getReportMenu(closure_131_0, closure_131_1), done: false };
+            return obj7;
           }
         }
       } else {
@@ -87,19 +87,19 @@ let closure_5 = async function _showReportModal(arg0) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           closure_131_4 = value;
-          obj1 = closure_132_1(closure_132_2[3]);
-          const obj4 = { menu: closure_131_4, reportType: closure_131_0, afterSubmit: closure_131_2, isEligibleForFeedback: closure_131_3 };
-          obj1.pushLazy(closure_132_0(closure_132_2[5])(closure_132_2[4], closure_132_2.paths), obj4, closure_132_4);
+          const obj8 = { menu: closure_131_4, reportType: closure_131_0, afterSubmit: closure_131_2, isEligibleForFeedback: closure_131_3 };
+          closure_132_1(closure_132_2[3]).pushLazy(closure_132_0(closure_132_2[5])(closure_132_2[4], closure_132_2.paths), obj8, closure_132_4);
           c5 = 0;
+          const obj2 = closure_132_1(closure_132_2[3]);
         }
         c5 = 0;
         c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj9 = { value, done: true };
+        return obj9;
       }
     } catch (tmp29) {
       if (tmp4 === c5) {

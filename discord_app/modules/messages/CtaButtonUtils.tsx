@@ -1,9 +1,9 @@
-// === Module 12041: CtaButtonUtils ===
+// === Module 12042: CtaButtonUtils ===
 
-// Module 12041 (CtaButtonUtils)
+// Module 12042 (CtaButtonUtils)
 import initialize from "initialize" /* 504 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
-import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 12042 */;
+import useShouldRenderReportFalsePositiveButton from "useShouldRenderReportFalsePositiveButton" /* 12043 */;
 import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4850 */;
 
 require = fn;
@@ -17,15 +17,15 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
-    let tmpResult = AgeVerificationUtils;
     if (tmpResult.isAgeVerificationMessageWithRetryCta(channel_id, id)) {
       CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
     } else {
-      tmpResult = AgeVerificationUtils;
-      if (tmpResult.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
+      if (tmpResult2.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
         CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
       }
+      tmpResult2 = AgeVerificationUtils;
     }
+    tmpResult = AgeVerificationUtils;
   }
   return CONNECT_TO_TEEN;
 };

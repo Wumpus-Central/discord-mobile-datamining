@@ -1,9 +1,11 @@
-// === Module 10930: StorefrontNativeUtils ===
+// === Module 10931: StorefrontNativeUtils ===
 
-// Module 10930 (StorefrontNativeUtils)
+// Module 10931 (StorefrontNativeUtils)
 import IAPStoreDefault from "IAPStore" /* 7340 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9497 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -47,8 +49,9 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       priceString = stateFromStores.priceString;
     }
     if (null != priceString) {
-      let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
       ({ priceString: obj2.normalPrice, priceString: obj2.userPrice } = stateFromStores);
+      let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
+      const obj3 = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

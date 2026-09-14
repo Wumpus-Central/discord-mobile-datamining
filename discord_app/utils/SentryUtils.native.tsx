@@ -1,15 +1,18 @@
-// === Module 1232: SentryUtils ===
+// === Module 1230: SentryUtils ===
 
-// Module 1232 (SentryUtils)
+// Module 1230 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 674 */;
 import _modAll675 from "module_675" /* 675 */;
-import SentryInitUtils from "SentryInitUtils" /* 1233 */;
+import SentryInitUtils_mod from "SentryInitUtils" /* 1231 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const NativeModules = _mod17.NativeModules;
 let closure_5 = new LoggerDefault("Sentry");
+let SentryInitUtils = SentryInitUtils_mod;
 SentryInitUtils = SentryInitUtils.initSentry();
 let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
 
@@ -207,7 +210,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: null };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "A general error has occurred with Cardinal. See description for more information." };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {
@@ -215,8 +218,8 @@ export default {
                 }
                 let tmp4;
                 if (tmp3) {
-                  obj = { "event.origin": timestamp.origin };
-                  tmp4 = obj;
+                  const obj2 = { "event.origin": timestamp.origin };
+                  tmp4 = obj2;
                 }
                 obj.tags = tmp4;
                 const error_message = timestamp.error_message;
@@ -224,7 +227,7 @@ export default {
                 if (typeof error_message === "string") {
                   tmp5 = error_message.length > 0;
                 }
-                obj = {};
+                const obj5 = {};
                 if (tmp5) {
                   ({ error_message: obj.message, error_message: obj3.persisted_error_message } = timestamp);
                 }
@@ -234,7 +237,7 @@ export default {
                   tmp6 = error_stack.length > 0;
                 }
                 if (tmp6) {
-                  obj.persisted_error_stack = timestamp.error_stack;
+                  obj5.persisted_error_stack = timestamp.error_stack;
                 }
                 if (timestamp.is_native) {
                   const exit_reason = timestamp.exit_reason;
@@ -243,7 +246,7 @@ export default {
                     tmp7 = exit_reason.length > 0;
                   }
                   if (tmp7) {
-                    obj.native_exit_reason = timestamp.exit_reason;
+                    obj5.native_exit_reason = timestamp.exit_reason;
                   }
                   const exit_description = timestamp.exit_description;
                   let tmp8 = typeof exit_description === "string";
@@ -251,7 +254,7 @@ export default {
                     tmp8 = exit_description.length > 0;
                   }
                   if (tmp8) {
-                    obj.native_exit_description = timestamp.exit_description;
+                    obj5.native_exit_description = timestamp.exit_description;
                   }
                   const tombstone = timestamp.tombstone;
                   let tmp9 = typeof tombstone === "string";
@@ -259,7 +262,7 @@ export default {
                     tmp9 = tombstone.length > 0;
                   }
                   if (tmp9) {
-                    obj.native_tombstone = timestamp.tombstone;
+                    obj5.native_tombstone = timestamp.tombstone;
                   }
                   const tombstone_cause = timestamp.tombstone_cause;
                   let tmp10 = typeof tombstone_cause === "string";
@@ -267,7 +270,7 @@ export default {
                     tmp10 = tombstone_cause.length > 0;
                   }
                   if (tmp10) {
-                    obj.native_tombstone_cause = timestamp.tombstone_cause;
+                    obj5.native_tombstone_cause = timestamp.tombstone_cause;
                   }
                   const tombstone_hash = timestamp.tombstone_hash;
                   let tmp11 = typeof tombstone_hash === "string";
@@ -275,7 +278,7 @@ export default {
                     tmp11 = tombstone_hash.length > 0;
                   }
                   if (tmp11) {
-                    obj.native_tombstone_hash = timestamp.tombstone_hash;
+                    obj5.native_tombstone_hash = timestamp.tombstone_hash;
                   }
                   const tombstone_group_by = timestamp.tombstone_group_by;
                   let tmp12 = typeof tombstone_group_by === "string";
@@ -283,7 +286,7 @@ export default {
                     tmp12 = tombstone_group_by.length > 0;
                   }
                   if (tmp12) {
-                    obj.native_tombstone_group_by = timestamp.tombstone_group_by;
+                    obj5.native_tombstone_group_by = timestamp.tombstone_group_by;
                   }
                   const tombstone_origin = timestamp.tombstone_origin;
                   let tmp13 = typeof tombstone_origin === "string";
@@ -291,15 +294,15 @@ export default {
                     tmp13 = tombstone_origin.length > 0;
                   }
                   if (tmp13) {
-                    obj.native_tombstone_origin = timestamp.tombstone_origin;
+                    obj5.native_tombstone_origin = timestamp.tombstone_origin;
                   }
                 }
                 let str3 = "false";
                 if (timestamp.is_native) {
                   str3 = "true";
                 }
-                obj.native_is_native = str3;
-                obj.extra = Object.assign({}, obj.extra, obj);
+                obj5.native_is_native = str3;
+                obj.extra = Object.assign({}, obj.extra, obj5);
                 return obj;
               })(timestamp);
             }

@@ -1,9 +1,10 @@
-// === Module 17121: getAdjustedBottomOffsets ===
+// === Module 17123: getAdjustedBottomOffsets ===
 
-// Module 17121 (getAdjustedBottomOffsets)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 17123 (getAdjustedBottomOffsets)
+import PlatformUtils_mod from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isAndroid();
 const fn = function t(arg0) {
   ({ screenBottomOffset, keyboardHeight } = arg0);

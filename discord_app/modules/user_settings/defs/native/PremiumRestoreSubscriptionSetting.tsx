@@ -1,17 +1,17 @@
-// === Module 15326: PremiumRestoreSubscriptionSetting ===
+// === Module 15327: PremiumRestoreSubscriptionSetting ===
 
-// Module 15326 (PremiumRestoreSubscriptionSetting)
+// Module 15327 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 7522 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
@@ -19,34 +19,32 @@ let SettingBuilders = {
   parent: null,
   IconComponent: fn(8785).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = BillingActionCreatorsDefault;
-    const result = obj.restoreAndApplyPurchases(true);
+    const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {
       if (result.length > 0) {
-        require("actions/AlertActionCreators");
-        let obj = { body: null };
+        const obj2 = { body: null };
         const intl = require("util").intl;
-        obj.body = intl.string(require("util").t.pnRpIb);
-        obj.show(obj);
+        obj2.body = intl.string(require("util").t.pnRpIb);
+        require("actions/AlertActionCreators").show(obj2);
+        const obj = require("actions/AlertActionCreators");
       } else {
-        obj = { title: null, body: null };
+        const obj4 = { title: null, body: null };
         const intl2 = require("util").intl;
-        obj.title = intl2.string(require("util").t.WXkaoM);
+        obj4.title = intl2.string(require("util").t.WXkaoM);
         const intl3 = require("util").intl;
-        obj.body = intl3.string(require("util").t.YW7lqS);
-        require("actions/AlertActionCreators").show(obj);
+        obj4.body = intl3.string(require("util").t.YW7lqS);
+        require("actions/AlertActionCreators").show(obj4);
         const obj3 = require("actions/AlertActionCreators");
       }
     }, () => {
-      require("actions/AlertActionCreators");
-      const obj = { title: null, body: null };
+      const obj2 = { title: null, body: null };
       const intl = require("util").intl;
-      obj.title = intl.string(require("util").t.POsVOt);
+      obj2.title = intl.string(require("util").t.POsVOt);
       const intl2 = require("util").intl;
-      obj.body = intl2.string(require("util").t["XbE/Ez"]);
-      obj.show(obj);
+      obj2.body = intl2.string(require("util").t["XbE/Ez"]);
+      require("actions/AlertActionCreators").show(obj2);
     });
-    obj = {
+    actions_AlertActionCreatorsDefault.openLazy({
       importer() {
         return require("asyncRequireImpl")(paths[5], paths.paths).then((result) => {
           closure_0 = result.default;
@@ -56,8 +54,7 @@ let SettingBuilders = {
           };
         });
       }
-    };
-    actions_AlertActionCreatorsDefault.openLazy(obj);
+    });
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
@@ -70,9 +67,8 @@ let SettingBuilders = {
     }
     return tmp4;
   }
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

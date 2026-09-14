@@ -1,13 +1,13 @@
-// === Module 10415: SoundmojiSendingExperiment ===
+// === Module 10416: SoundmojiSendingExperiment ===
 
-// Module 10415 (SoundmojiSendingExperiment)
+// Module 10416 (SoundmojiSendingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: null };
-obj = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
-obj[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
-obj.variations = obj;
+const obj = { name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
+obj2[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16065: usePasswordScore ===
+// === Module 16067: usePasswordScore ===
 
-// Module 16065 (usePasswordScore)
+// Module 16067 (usePasswordScore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/auth/native/components/utils/
 
 export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
 export const usePasswordScore = function usePasswordScore(password) {
-  [tmp2, dependencyMap] = _slicedToArray(noop.useState(null), 2);
+  [tmp2, dependencyMap] = noop.useState(null);
   let tmp = _slicedToArray(noop.useState(null), 2);
-  [tmp4, asyncGeneratorStep] = _slicedToArray(noop.useState(null), 2);
+  [tmp4, asyncGeneratorStep] = noop.useState(null);
   _slicedToArray = noop.useRef(null);
   const effect = noop.useEffect(() => {
     password = asyncGeneratorStep(async (arg0) => {
@@ -24,8 +24,8 @@ export const usePasswordScore = function usePasswordScore(password) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -38,20 +38,18 @@ export const usePasswordScore = function usePasswordScore(password) {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_1 = tmp7;
               closure_129_0 = undefined;
               if (null != closure_0) {
                 if (closure_0.length > 0) {
                   c4 = 1;
-                  let obj1 = closure_0(dependencyMap[4]);
                   c5 = 2;
                   c6 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1.value = obj1.scorePassword(closure_0);
-                  return obj1;
+                  const obj5 = { value: closure_0(dependencyMap[4]).scorePassword(closure_0), done: false };
+                  return obj5;
                 }
               }
             }
@@ -71,7 +69,7 @@ export const usePasswordScore = function usePasswordScore(password) {
             }
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c6 = 3;

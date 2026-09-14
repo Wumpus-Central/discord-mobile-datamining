@@ -1,13 +1,13 @@
-// === Module 1182: FormConstants ===
+// === Module 1180: FormConstants ===
 
-// Module 1182 (FormConstants)
+// Module 1180 (FormConstants)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import shared from "shared" /* 4488 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 24;
 if (PlatformUtils.isAndroid()) {
   num = 32;
@@ -32,7 +32,6 @@ export const TitleStyleType = { DEFAULT: "default", ANDROID_NO_BORDER: "no_borde
 export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
-  let obj = PlatformUtils2;
   if (obj.isAndroid()) {
     if (null != color) {
       const sum = "" + color.toString() + cornerRadius + radius + tmp5;
@@ -41,8 +40,8 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
         return value;
       } else {
         const _Object = Object;
-        obj = { color, radius, borderless, cornerRadius, foreground: tmp5 };
-        const frozen = Object.freeze(obj);
+        const obj2 = { color, radius, borderless, cornerRadius, foreground: tmp5 };
+        const frozen = Object.freeze(obj2);
         const result = map.set(sum, frozen);
         return frozen;
       }
@@ -53,4 +52,5 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   } else {
     return closure_6;
   }
+  obj = PlatformUtils2;
 };

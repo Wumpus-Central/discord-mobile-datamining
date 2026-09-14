@@ -1,6 +1,6 @@
-// === Module 12130: ForumChannelStore ===
+// === Module 12131: ForumChannelStore ===
 
-// Module 12130 (ForumChannelStore)
+// Module 12131 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
 import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7874 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -16,10 +16,9 @@ let closure_6 = function ForumChannelStoreState(set, get) {
     const channelState = channelStates.getChannelState(channelId);
     channelStates = {};
     const merged = Object.assign(value.channelStates);
-    channelStates = {};
     const merged1 = Object.assign(channelState);
     const merged2 = Object.assign(arg1);
-    channelStates[channelId] = channelStates;
+    channelStates[channelId] = {};
     channelStates(dependencyMap[4]).batchUpdates(() => {
       channelStates = { channelStates };
       return channelStates.set(channelStates);
@@ -82,10 +81,9 @@ let closure_7 = module_560.create((set, get) => {
       const channelState = channelStates.getChannelState(channelId);
       channelStates = {};
       const merged = Object.assign(value.channelStates);
-      channelStates = {};
       const merged1 = Object.assign(channelState);
       const merged2 = Object.assign(arg1);
-      channelStates[channelId] = channelStates;
+      channelStates[channelId] = {};
       channelStates(dependencyMap[4]).batchUpdates(() => {
         channelStates = { channelStates };
         return channelStates.set(channelStates);

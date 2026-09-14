@@ -1,20 +1,20 @@
-// === Module 15069: PremiumSetting ===
+// === Module 15070: PremiumSetting ===
 
-// Module 15069 (PremiumSetting)
+// Module 15070 (PremiumSetting)
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11566 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13481 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15070 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11567 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13482 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15071 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
     const currentUser = UserStore.getCurrentUser();
@@ -55,9 +55,8 @@ let SettingBuilders = {
       return require("PremiumSettingScreen").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");
 
-export default SettingBuilders;
+export default route;

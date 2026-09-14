@@ -1,6 +1,6 @@
-// === Module 11007: useUserVoiceActivity ===
+// === Module 11008: useUserVoiceActivity ===
 
-// Module 11007 (useUserVoiceActivity)
+// Module 11008 (useUserVoiceActivity)
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
@@ -85,11 +85,7 @@ export default function useUserVoiceActivity(userId) {
   const includeNonDiscoverable = userId.includeNonDiscoverable;
   const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
   const items1 = [guildId, userId, includeNonDiscoverable];
-  return userId(guildId[4]).useStateFromStoresObject(items, () => {
-    let obj = { userId, guildId, includeNonDiscoverable };
-    obj = { ChannelStore, PermissionStore, VoiceStateStore };
-    return getVisibleUserVoiceActivity(obj, obj);
-  }, items1);
+  return userId(guildId[4]).useStateFromStoresObject(items, () => getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore }), items1);
 };
 export const getUserVoiceState = function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);

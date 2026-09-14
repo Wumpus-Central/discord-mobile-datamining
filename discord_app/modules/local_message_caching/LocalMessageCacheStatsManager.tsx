@@ -1,7 +1,7 @@
-// === Module 18002: LocalMessageCacheStatsManager ===
+// === Module 18003: LocalMessageCacheStatsManager ===
 
-// Module 18002 (LocalMessageCacheStatsManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 18003 (LocalMessageCacheStatsManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MessageCacheStatsDefault from "MessageCacheStats" /* 7591 */;
 import Constants from "Constants" /* 1074 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -41,25 +41,25 @@ function handleAppStateUpdate(state) {
     const _Array = Array;
     const fetchLogs = MessageCacheStatsDefault.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
-    const obj = { num_channels_fetch_started: MessageCacheStatsDefault.channelsFetchStarted.size, num_channels_local_cached: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size, num_channels_fetched_network: MessageCacheStatsDefault.channelsFetchedNetwork.size, num_times_backgrounded: null, fetch_entries: null };
+    const arr = Array.from(fetchLogs.values());
+    const obj2 = { num_channels_fetch_started: MessageCacheStatsDefault.channelsFetchStarted.size, num_channels_local_cached: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size, num_channels_fetched_network: MessageCacheStatsDefault.channelsFetchedNetwork.size, num_times_backgrounded: null, fetch_entries: null };
     const sum = c4 + 1;
     c4 = sum;
-    obj.num_times_backgrounded = sum;
-    obj.fetch_entries = mapped;
-    obj.track(constants.CACHE_STATS_RECORDED, obj);
-    const arr = Array.from(fetchLogs.values());
+    obj2.num_times_backgrounded = sum;
+    obj2.fetch_entries = mapped;
+    AnalyticsUtilsDefault.track(constants.CACHE_STATS_RECORDED, obj2);
   }
 }
 ({ AnalyticEvents: c2, AppStates: c3 } = Constants);
 let c4 = 0;
-let prototype = function LocalMessageCacheStatsManager() {
+const prototype = function LocalMessageCacheStatsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const result = size.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
 
-export default prototype;
+export default prototype1;

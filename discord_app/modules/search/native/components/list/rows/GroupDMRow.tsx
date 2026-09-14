@@ -1,12 +1,12 @@
-// === Module 16760: rows/GroupDMRow ===
+// === Module 16762: rows/GroupDMRow ===
 
-// Module 16760 (rows/GroupDMRow)
-import native from "native" /* 1178 */;
+// Module 16762 (rows/GroupDMRow)
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 11042 */;
-import SearchListRow from "SearchListRow" /* 16759 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 11043 */;
+import SearchListRow from "SearchListRow" /* 16761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,26 +23,26 @@ export default function GroupDMRow(channel) {
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);
-  let obj = { size: native.AvatarSizes.LARGE_48, channel };
+  const obj = { size: native.AvatarSizes.LARGE_48, channel };
   const tmp6 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.LARGE_48, channel });
   const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
-    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp3Result = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel });
   }
   let str2 = str;
   if (str == null) {
     str2 = "";
   }
-  obj = { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
+  const obj4 = { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
   if (str == null) {
     str = "";
   }
-  obj.accessibilityLabel = str;
-  obj.subLabel = tmp3Result;
-  obj.trailing = trailing;
-  obj.accessibilityActions = accessibilityActions;
-  obj.onAccessibilityAction = onAccessibilityAction;
+  obj4.accessibilityLabel = str;
+  obj4.subLabel = tmp3Result;
+  obj4.trailing = trailing;
+  obj4.accessibilityActions = accessibilityActions;
+  obj4.onAccessibilityAction = onAccessibilityAction;
   return jsx(SearchListRow.SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
 };

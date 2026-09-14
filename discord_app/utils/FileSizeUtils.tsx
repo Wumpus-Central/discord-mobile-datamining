@@ -23,11 +23,11 @@ function formatSize(available, arg1) {
     const formatToPlainString2 = intl2.formatToPlainString;
     const t2 = util.t;
     if (tmp.useSpace) {
-      let obj = { size: rounded };
-      let formatToPlainString2Result = formatToPlainString2(t2.cS889N, obj);
+      const obj2 = { size: rounded };
+      let formatToPlainString2Result = formatToPlainString2(t2.cS889N, obj2);
     } else {
-      obj = { size: rounded };
-      formatToPlainString2Result = formatToPlainString2(t2.pIn7Af, obj);
+      const obj3 = { size: rounded };
+      formatToPlainString2Result = formatToPlainString2(t2.pIn7Af, obj3);
     }
     return formatToPlainString2Result;
   } else {
@@ -42,10 +42,10 @@ function formatSize(available, arg1) {
     const formatToPlainString = intl.formatToPlainString;
     const t = util.t;
     if (tmp.useSpace) {
-      const obj1 = { size: result1 };
-      let formatToPlainStringResult = formatToPlainString(t.yhEXX7, obj1);
+      const obj4 = { size: result1 };
+      let formatToPlainStringResult = formatToPlainString(t.yhEXX7, obj4);
     } else {
-      obj = { size: result1 };
+      const obj = { size: result1 };
       formatToPlainStringResult = formatToPlainString(t.TbMX9D, obj);
     }
     return formatToPlainStringResult;
@@ -79,12 +79,12 @@ export const formatKbSize = function formatKbSize(MAX_STICKER_FILE_SIZE, arg1) {
     const formatToPlainString = intl.formatToPlainString;
     const t = util.t;
     if (tmp.useSpace) {
-      let obj = { size: null };
+      const obj2 = { size: null };
       const _Math2 = Math;
-      obj.size = Math.ceil(result);
-      formatToPlainStringResult = formatToPlainString(t.bTzRR6, obj);
+      obj2.size = Math.ceil(result);
+      formatToPlainStringResult = formatToPlainString(t.bTzRR6, obj2);
     } else {
-      obj = { size: null };
+      const obj = { size: null };
       const _Math = Math;
       obj.size = Math.ceil(result);
       formatToPlainStringResult = formatToPlainString(t.kEk9pr, obj);

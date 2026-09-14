@@ -18,8 +18,8 @@ let closure_14 = async function _handleBoostPress() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,33 +32,32 @@ let closure_14 = async function _handleBoostPress() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp2;
-            const obj1 = { source: null, analyticsLocations: null, guildId: null, onBack: null };
-            const obj2 = { page: constants3.PREMIUM_GUILD_USER_MODAL, section, object: constants.BUTTON_CTA, objectType: constants2.BUY };
-            obj1.source = obj2;
-            obj1.analyticsLocations = analyticsLocations;
-            obj1.guildId = guildId;
-            obj1.onBack = function onBack() {
+            const obj4 = { source: null, analyticsLocations: null, guildId: null, onBack: null };
+            const obj5 = { page: constants3.PREMIUM_GUILD_USER_MODAL, section, object: constants.BUTTON_CTA, objectType: constants2.BUY };
+            obj4.source = obj5;
+            obj4.analyticsLocations = analyticsLocations;
+            obj4.guildId = guildId;
+            obj4.onBack = function onBack() {
               return guildId(section[9]).pop();
             };
             c4 = 1;
             c5 = 1;
-            const obj3 = { value: GuildBoostPurchasingUtils.launchGuildBoostFlowOrAlert(obj1), done: false };
-            return obj3;
+            const obj7 = { value: GuildBoostPurchasingUtils.launchGuildBoostFlowOrAlert(obj4), done: false };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          obj = closure_131_0(closure_131_2[10]);
-          obj.closeApplyBoostModal();
+          closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -88,9 +87,10 @@ export default function GuildBoostingSubscribeButton(guild) {
   ({ useShortenedCTA, styles, fractionalPremiumState, premiumGroupRole } = guild);
   const tmp3 = previousGuildSubscriptionSlot(analyticsSection[11])();
   const boostSlots = tmp3;
-  let obj = guild(analyticsSection[12]);
-  const navigation = obj.useNavigation();
+  const navigation = guild(analyticsSection[12]).useNavigation();
   const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[13])().analyticsLocations;
+  let obj = guild(analyticsSection[12]);
+  const tmp = previousGuildSubscriptionSlot;
   let items = [boostSlots];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
     const keys = Object.keys(boostSlots.boostSlots);
@@ -101,18 +101,18 @@ export default function GuildBoostingSubscribeButton(guild) {
     if (null != onAvailableSlotPress) {
       return tmp(guildId, arg1);
     } else {
-      let obj = { guildId, guildBoostSlots: null, location: null, intent: null, onResult: null };
+      const obj2 = { guildId, guildBoostSlots: null, location: null, intent: null, onResult: null };
       let tmp2;
       if (null != arg1) {
         const items = [arg1];
         tmp2 = items;
       }
-      obj.guildBoostSlots = tmp2;
-      obj = { page: constants3.PREMIUM_GUILD_USER_MODAL, section: analyticsSection, object: constants.BUTTON_CTA, objectType: constants2.BUY };
-      obj.location = obj;
-      obj.intent = intent;
-      obj.onResult = onResult;
-      navigation.push(shouldUseMobileWebRedirectCheckout.CONFIRMATION, obj);
+      obj2.guildBoostSlots = tmp2;
+      const obj = { page: constants3.PREMIUM_GUILD_USER_MODAL, section: analyticsSection, object: constants.BUTTON_CTA, objectType: constants2.BUY };
+      obj2.location = obj;
+      obj2.intent = intent;
+      obj2.onResult = onResult;
+      navigation.push(shouldUseMobileWebRedirectCheckout.CONFIRMATION, obj2);
     }
   }, items1);
   let tmp8 = !stateFromStores;
@@ -120,7 +120,7 @@ export default function GuildBoostingSubscribeButton(guild) {
     tmp8 = fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE || premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
     const tmp10 = fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE || premiumGroupRole === tmp4(tmp2[15]).PremiumSubscriptionGroupRole.MEMBER;
   }
-  const tmp11 = previousGuildSubscriptionSlot(analyticsSection[16])("guild_boost_subscribe_button");
+  const tmp11 = tmp(analyticsSection[16])("guild_boost_subscribe_button");
   const shouldUseMobileWebRedirectCheckout = tmp11.shouldUseMobileWebRedirectCheckout;
   handleMobileWebRedirectCheckout = tmp11.handleMobileWebRedirectCheckout;
   const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
@@ -148,8 +148,8 @@ export default function GuildBoostingSubscribeButton(guild) {
     }
     return tmp8;
   }, items2);
-  obj = { style: styles, children: null };
-  obj = {
+  const obj4 = { style: styles, children: null };
+  const obj5 = {
     loading: tmp3,
     variant: "primary",
     onPress() {
@@ -167,12 +167,12 @@ export default function GuildBoostingSubscribeButton(guild) {
   } else {
     stringResult = string(t.gKmQ1G);
   }
-  obj.text = stringResult;
+  obj5.text = stringResult;
   let tmp12Result;
   if (tmp8) {
     tmp12Result = tmp12(tmp4(tmp2[19]).LockIcon, { size: "xs", color: "white" });
   }
-  obj.icon = tmp12Result;
-  obj.children = jsx(guild(analyticsSection[17]).Button, obj);
-  return jsx(View, obj);
+  obj5.icon = tmp12Result;
+  obj4.children = jsx(guild(analyticsSection[17]).Button, obj5);
+  return jsx(View, obj4);
 };

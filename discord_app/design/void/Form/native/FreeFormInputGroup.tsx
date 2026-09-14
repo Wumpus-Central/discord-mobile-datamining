@@ -1,8 +1,8 @@
 // === Module 6706: FreeFormInputGroup ===
 
 // Module 6706 (FreeFormInputGroup)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import RedesignCompat from "RedesignCompat" /* 5767 */;
 import TextInput from "TextInput" /* 6707 */;
@@ -31,8 +31,7 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
   const tmp2 = closure_7();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = PlatformUtils;
-    isAndroidResult = obj.isAndroid();
+    isAndroidResult = PlatformUtils.isAndroid();
   }
   if (!isAndroidResult) {
     isAndroidResult = secureTextEntry;
@@ -40,24 +39,24 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    let obj1 = PlatformUtils;
+    PlatformUtils;
     str = "visible-password";
   }
   const context = noop.useContext(RedesignCompat.RedesignCompatContext);
   const id = noop.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
-    obj = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
-    return hasOwnProperty(TextInput.TextInput, obj);
+    const obj3 = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
+    return hasOwnProperty(TextInput.TextInput, obj3);
   } else {
-    obj = { style, children: null };
+    const obj4 = { style, children: null };
     let tmp14 = null;
     if (null != label) {
-      obj1 = { style: tmp2.label, nativeID: id, children: label };
-      tmp14 = hasOwnProperty(FreeFormLabelDefault, obj1);
+      const obj5 = { style: tmp2.label, nativeID: id, children: label };
+      tmp14 = hasOwnProperty(FreeFormLabelDefault, obj5);
     }
     const items = [tmp14, , , ];
-    const obj2 = {};
+    const obj6 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {
       if (null != label) {
@@ -65,29 +64,29 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
       }
       accessibilityLabel = label;
     }
-    obj2.accessibilityLabel = accessibilityLabel;
-    obj2.accessibilityLabelledBy = id;
-    obj2.error = null != error;
-    obj2.ref = ref;
-    obj2.value = value;
-    obj2.secureTextEntry = isAndroidResult;
-    obj2.keyboardType = str;
+    obj6.accessibilityLabel = accessibilityLabel;
+    obj6.accessibilityLabelledBy = id;
+    obj6.error = null != error;
+    obj6.ref = ref;
+    obj6.value = value;
+    obj6.secureTextEntry = isAndroidResult;
+    obj6.keyboardType = str;
     const items1 = [tmp2.input, accessibilityLabel.textStyle];
-    obj2.style = items1;
-    items[1] = hasOwnProperty(FreeFormTextInputDefault, obj2);
+    obj6.style = items1;
+    items[1] = hasOwnProperty(FreeFormTextInputDefault, obj6);
     let tmp17Result = null;
     if (null != error) {
-      const obj3 = { style: tmp2.error, children: error };
-      tmp17Result = hasOwnProperty(FreeFormErrorLabelDefault, obj3);
+      const obj7 = { style: tmp2.error, children: error };
+      tmp17Result = hasOwnProperty(FreeFormErrorLabelDefault, obj7);
     }
     items[2] = tmp17Result;
-    tmp17Result = null;
+    let tmp17Result2 = null;
     if (null != hint) {
-      const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-      tmp17Result = hasOwnProperty(Text_Text.Text, obj4);
+      const obj8 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+      tmp17Result2 = hasOwnProperty(Text_Text.Text, obj8);
     }
-    items[3] = tmp17Result;
-    obj.children = items;
-    return timestampProducer(View, obj);
+    items[3] = tmp17Result2;
+    obj4.children = items;
+    return timestampProducer(View, obj4);
   }
 });

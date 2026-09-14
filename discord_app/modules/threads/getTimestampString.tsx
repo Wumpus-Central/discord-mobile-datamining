@@ -4,6 +4,8 @@
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 let c3 = 2592000;
 let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/threads/getTimestampString.tsx");

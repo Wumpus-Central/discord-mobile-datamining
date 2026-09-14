@@ -21,7 +21,7 @@ prototype["reset"] = function reset() {
 prototype["get"] = function get(arg0) {
   const obj = {};
   const item = this._get(arg0).forEach((item, index) => {
-    obj[index] = item;
+    obj2[index] = item;
   });
   return obj;
 };
@@ -38,17 +38,16 @@ prototype["clear"] = function clear(arg0) {
 prototype["subscribe"] = function subscribe(arg0, arg1, arg2) {
   const self = this;
   const _getResult = this._get(arg0);
-  let obj = _modDef12;
-  const isEqualResult = obj.isEqual(_getResult.get(arg1), arg2);
+  const isEqualResult = _modDef12.isEqual(_getResult.get(arg1), arg2);
   let flag = !isEqualResult;
   if (!isEqualResult) {
     const result = _getResult.set(arg1, arg2);
     self._subscriptions[arg0] = _getResult;
-    obj = {};
+    const obj2 = {};
     const item = _getResult.forEach((item, index) => {
-      obj[index] = item;
+      obj2[index] = item;
     });
-    self._onChange(arg0, obj);
+    self._onChange(arg0, obj2);
     flag = true;
   }
   return flag;

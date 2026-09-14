@@ -1,8 +1,8 @@
-// === Module 16222: useMemoWithEqualityFunction ===
+// === Module 16224: useMemoWithEqualityFunction ===
 
-// Module 16222 (useMemoWithEqualityFunction)
+// Module 16224 (useMemoWithEqualityFunction)
 import _mod19 from "module_19" /* 19 */;
-import useInitRefDefault from "useInitRef" /* 16223 */;
+import useInitRefDefault from "useInitRef" /* 16225 */;
 import size from "module_2" /* 2 */;
 
 const useRef = _mod19.useRef;

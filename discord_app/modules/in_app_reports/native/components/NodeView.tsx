@@ -20,22 +20,22 @@ require = fn;
 function HeaderView(node) {
   ({ header, subheader, description } = node.node);
   const tmp = closure_18();
-  let obj = { style: tmp.headerContainer, children: null };
+  const obj = { style: tmp.headerContainer, children: null };
   let tmp6 = null != header;
   if (tmp6) {
     tmp6 = "" !== header;
   }
   if (tmp6) {
-    obj = { ref: node.headerRef, style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: header };
-    tmp6 = value2(Text_Text.Text, obj);
+    const obj2 = { ref: node.headerRef, style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: header };
+    tmp6 = value2(Text_Text.Text, obj2);
   }
   const items = [tmp6, , ];
   let tmp9 = null;
   if (null != subheader) {
     tmp9 = null;
     if (subheader.length > 0) {
-      obj = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: tmp3(subheader) };
-      tmp9 = value2(Text_Text.Text, obj);
+      const obj3 = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: tmp3(subheader) };
+      tmp9 = value2(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp9;
@@ -43,8 +43,8 @@ function HeaderView(node) {
   if (null != description) {
     tmp12 = null;
     if (description.length > 0) {
-      const obj1 = { style: tmp.description, variant: "text-xs/medium", color: "text-default", children: description };
-      tmp12 = value2(Text_Text.Text, obj1);
+      const obj4 = { style: tmp.description, variant: "text-xs/medium", color: "text-default", children: description };
+      tmp12 = value2(Text_Text.Text, obj4);
     }
   }
   items[2] = tmp12;
@@ -56,19 +56,17 @@ function InfoView(node) {
   const tmp = closure_18();
   let tmp4 = null;
   if (null != info) {
-    let obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items = [tmp.infoBox, ];
-    obj = { backgroundColor: null };
-    let obj2 = ColorUtils;
-    obj.backgroundColor = obj2.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
-    items[1] = obj;
+    const obj2 = { backgroundColor: ColorUtils.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1) };
+    items[1] = obj2;
     obj.style = items;
-    obj = { size: "md", color: tmp.infoBox.backgroundColor };
-    const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj), ];
-    const obj1 = { style: tmp.infoBoxText, children: null };
-    obj2 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
-    obj1.children = value2(Text_Text.Text, obj2);
-    items1[1] = value2(timestampProducer, obj1);
+    const obj4 = { size: "md", color: tmp.infoBox.backgroundColor };
+    const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj4), ];
+    const obj5 = { style: tmp.infoBoxText, children: null };
+    const obj6 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
+    obj5.children = value2(Text_Text.Text, obj6);
+    items1[1] = value2(timestampProducer, obj5);
     obj.children = items1;
     tmp4 = closure_1_17(timestampProducer, obj);
   }
@@ -78,30 +76,30 @@ function ChildItem(child) {
   child = child.child;
   importDefault = Object.assign(child, Object.assign({ child: 0, nodeMap: 0 }));
   const tmp = closure_18();
-  [tmp3, tmp4] = _slicedToArray(child, 2);
-  let obj = child(504);
+  [tmp3, tmp4] = child;
+  const tmp2 = _slicedToArray(child, 2);
   const items = [DevSettingsStore];
-  let stateFromStores = obj.useStateFromStores(items, () => DevSettingsStore.get("iar_show_report_sub_type_labels"));
+  let stateFromStores = child(504).useStateFromStores(items, () => DevSettingsStore.get("iar_show_report_sub_type_labels"));
   if (child.nodeMap[tmp4] != null) {
     const report_type = tmp8.report_type;
   }
-  obj = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
-  obj = { style: tmp.childContainer, children: null };
-  const obj1 = { style: tmp.childContent, children: null };
+  const obj2 = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
+  const obj3 = { style: tmp.childContainer, children: null };
+  const obj4 = { style: tmp.childContent, children: null };
   const items1 = [closure_16(child(4632).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
-    const obj3 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(4632).Text, obj3);
+    const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
+    stateFromStores = closure_16(tmp5(4632).Text, obj6);
   }
   items1[1] = stateFromStores;
-  obj1.children = items1;
-  const items2 = [closure_17(closure_6, obj1), closure_16(ArrowDefault, {})];
-  obj.children = items2;
-  obj.children = closure_17(closure_6, obj);
-  return closure_16(child(5204).PressableHighlight, obj);
+  obj4.children = items1;
+  const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
+  obj3.children = items2;
+  obj2.children = closure_17(closure_6, obj3);
+  return closure_16(child(5204).PressableHighlight, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -134,36 +132,28 @@ const Constants = fn(1074);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, scrollView: null, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
-createStyles = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
-createStyles.container = createStyles;
-createStyles.scrollView = { flex: 1, alignSelf: "stretch", marginTop: 24 };
-createStyles.childrenContainer = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 };
-createStyles.headerContainer = { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 };
-createStyles.header = { marginBottom: 8, textAlign: "center" };
-createStyles.subheader = { lineHeight: 20, marginBottom: 8, textAlign: "center" };
-createStyles.description = { lineHeight: 16, marginBottom: 8, textAlign: "center" };
-createStyles.infoBox = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
-createStyles.infoBoxText = { flex: 1, marginStart: 8 };
-let obj1 = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
-createStyles.childButton = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-let obj2 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
-createStyles.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
-createStyles.childContent = { flex: 1 };
-createStyles.childButtonText = { lineHeight: 20 };
-createStyles.debugText = { marginTop: 4, lineHeight: 16 };
-let closure_18 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerContainer: { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, description: { lineHeight: 16, marginBottom: 8, textAlign: "center" }, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
+let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
+obj2.infoBox = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+obj2.infoBoxText = { flex: 1, marginStart: 8 };
+let obj4 = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+obj2.childButton = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
+let obj5 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
+obj2.childContent = { flex: 1 };
+obj2.childButtonText = { lineHeight: 20 };
+obj2.debugText = { marginTop: 4, lineHeight: 16 };
+let closure_18 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/NodeView.tsx");
 
 export default function NodeView(node) {
   let external_link = node;
   const tmp = closure_18();
+  let navigation = external_link(ref[21]).useNavigation();
   let obj = external_link(ref[21]);
-  let navigation = obj.useNavigation();
-  let obj1 = external_link(ref[22]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = external_link(ref[22]).useIsScreenReaderEnabled();
   ref = node.useRef(null);
   _slicedToArray = node.useRef(false);
   let items = [navigation, isScreenReaderEnabled];
@@ -172,9 +162,9 @@ export default function NodeView(node) {
       function focusHeader() {
         if (!ref2.current) {
           tmp.current = true;
-          external_link(ref[23]);
-          const obj = { ref, delay: 300 };
-          const result = obj.setAccessibilityFocus(obj);
+          const obj2 = { ref, delay: 300 };
+          const result = external_link(ref[23]).setAccessibilityFocus(obj2);
+          const obj = external_link(ref[23]);
         }
       }
       closure_0 = navigation.addListener("transitionEnd", (data) => {
@@ -186,9 +176,9 @@ export default function NodeView(node) {
         if (true !== closing) {
           if (!ref2.current) {
             ref2.current = true;
-            external_link(ref[23]);
-            const obj = { ref, delay: 300 };
-            const result = obj.setAccessibilityFocus(obj);
+            const obj2 = { ref, delay: 300 };
+            const result = external_link(ref[23]).setAccessibilityFocus(obj2);
+            const obj = external_link(ref[23]);
           }
         }
       });
@@ -215,33 +205,29 @@ export default function NodeView(node) {
     }
     return channel_id;
   }, items1);
-  let elements = node.elements;
-  external_link = "checkbox";
-  const found = elements.find((type) => type.type === skip);
   const elements1 = node.elements;
-  external_link = "text_line_resource";
-  const found1 = elements1.find((type) => type.type === skip);
+  external_link = "checkbox";
+  const found = elements1.find((type) => type.type === skip);
   const elements2 = node.elements;
+  external_link = "text_line_resource";
+  const found1 = elements2.find((type) => type.type === skip);
+  const elements3 = node.elements;
   external_link = "text";
-  const found2 = elements2.find((type) => type.type === skip);
+  const found2 = elements3.find((type) => type.type === skip);
   const REPORT_TO_MOD = external_link(ref[24]).ReportMenuTypeSets.REPORT_TO_MOD;
   const hasItem = REPORT_TO_MOD.has(reportType.name);
-  [tmp14, closure_13] = _slicedToArray(node.useState(false), 2);
-  const tmp15 = _slicedToArray(node.useState(false), 2);
-  const first = tmp15[0];
-  closure_15 = tmp15[1];
-  const tmp17 = _slicedToArray(node.useState(() => ({})), 2);
-  const first1 = tmp17[0];
-  closure_17 = tmp17[1];
-  const tmp19 = _slicedToArray(node.useState(false), 2);
-  closure_18 = tmp19[1];
+  let obj2 = external_link(ref[22]);
+  [tmp14, closure_13] = node.useState(false);
+  [first, closure_15] = node.useState(false);
+  [first1, closure_17] = node.useState(() => ({}));
+  [obj27.hasError, closure_18] = node.useState(false);
   const items2 = [node, found, first1];
   const callback = node.useCallback((destination) => {
-    let obj = { nodeRef: node.id, destination, multiSelect: null };
+    const obj = { nodeRef: node.id, destination, multiSelect: null };
     let tmp2;
     if (null != found) {
-      obj = { name: tmp.name, state: first1 };
-      tmp2 = obj;
+      const obj2 = { name: tmp.name, state: first1 };
+      tmp2 = obj2;
     }
     obj.multiSelect = tmp2;
     return obj;
@@ -314,14 +300,14 @@ export default function NodeView(node) {
         }
       }
       if (reportType.name === MenuTypes.ReportNames.MESSAGE) {
-        let obj = { message_id: reportType.record.id, content_type: reportType.name, report_sub_type: tmp2.report_type, current_node: node.id, next_node: tmp2.id };
-        obj.trackWithMetadata(constants.IAR_NAVIGATE, obj);
+        const obj2 = { message_id: reportType.record.id, content_type: reportType.name, report_sub_type: tmp2.report_type, current_node: node.id, next_node: tmp2.id };
+        AppAnalyticsUtilsDefault.trackWithMetadata(constants.IAR_NAVIGATE, obj2);
       }
-      obj = { node: tmp2, history: null };
+      const obj3 = { node: tmp2, history: null };
       const items1 = [];
       items1[HermesBuiltin.arraySpread(history, 0)] = tmp;
-      obj.history = items1;
-      navigation.push(IN_APP_REPORTS_NODE, obj);
+      obj3.history = items1;
+      navigation.push(IN_APP_REPORTS_NODE, obj3);
       if (onNavigate != null) {
         tmp16(tmp2.key);
       }
@@ -364,11 +350,11 @@ export default function NodeView(node) {
     }
     return tmp2;
   }, []);
-  let obj2 = external_link(ref[28]);
-  const iarReportSettingsUpsells = obj2.useIarReportSettingsUpsells(reportSubType);
-  const elements3 = node.elements;
+  const tmp13 = _slicedToArray(node.useState(false), 2);
+  const iarReportSettingsUpsells = external_link(ref[28]).useIarReportSettingsUpsells(reportSubType);
+  const elements4 = node.elements;
   external_link = "ignore_users";
-  let tmp28 = null != elements3.find((type) => type.type === skip);
+  let tmp28 = null != elements4.find((type) => type.type === skip);
   if (tmp28) {
     let tmp29 = "message" === reportType.name;
     if (!tmp29) {
@@ -382,140 +368,140 @@ export default function NodeView(node) {
     }
     tmp28 = tmp29;
   }
-  let tmp2Result = tmp2(tmp3[29]);
-  let userIsTeen = tmp2Result.useUserIsTeen();
-  tmp2Result = tmp2(tmp3[30]);
-  const activeLinkUsers = tmp2Result.useActiveLinkUsers();
+  let obj3 = external_link(ref[28]);
+  let userIsTeen = external_link(ref[29]).useUserIsTeen();
+  const tmp2Result = external_link(ref[29]);
+  const activeLinkUsers = external_link(ref[30]).useActiveLinkUsers();
   if (userIsTeen) {
     userIsTeen = activeLinkUsers.length > 0;
   }
   if (userIsTeen) {
-    const elements4 = node.elements;
+    const elements5 = node.elements;
     external_link = "share_with_parents";
-    userIsTeen = null != elements4.find((type) => type.type === skip);
+    userIsTeen = null != elements5.find((type) => type.type === skip);
   }
   const rect = { style: tmp.container, bottom: true, top: true, children: null };
-  obj = { style: tmp.scrollView, children: null };
-  obj = { element: null };
-  const elements5 = node.elements;
+  const obj4 = { style: tmp.scrollView, children: null };
+  const obj5 = { element: null };
+  const elements6 = node.elements;
   external_link = "success";
-  const tmp13 = _slicedToArray(node.useState(false), 2);
+  const tmp2Result2 = external_link(ref[30]);
   const tmp32 = history;
-  obj.element = elements5.find((type) => type.type === skip);
-  const items8 = [first1(navigation(ref[32]), obj), first1(callback, { node, headerRef: ref }), first1(callback1, { node }), , , , , , , , , , , , , , , ];
+  obj5.element = elements6.find((type) => type.type === skip);
+  const items8 = [first1(navigation(ref[32]), obj5), first1(callback, { node, headerRef: ref }), first1(callback1, { node }), , , , , , , , , , , , , , , ];
   let tmp33Result = null;
   if (null != found1) {
-    obj1 = { element: found1 };
-    tmp33Result = tmp33(tmp34(tmp3[33]), obj1);
+    const obj6 = { element: found1 };
+    tmp33Result = tmp33(tmp34(tmp3[33]), obj6);
   }
   items8[3] = tmp33Result;
-  tmp33Result = null != found2;
-  if (tmp33Result) {
-    obj2 = { element: found2 };
-    tmp33Result = tmp33(tmp34(tmp3[34]), obj2);
+  let tmp33Result15 = null != found2;
+  if (tmp33Result15) {
+    const obj7 = { element: found2 };
+    tmp33Result15 = tmp33(tmp34(tmp3[34]), obj7);
   }
-  items8[4] = tmp33Result;
-  const elements6 = node.elements;
+  items8[4] = tmp33Result15;
+  const elements7 = node.elements;
   external_link = "message_preview";
-  let tmp33Result1 = null;
-  if (null != elements6.find((type) => type.type === skip)) {
+  let tmp33Result16 = null;
+  if (null != elements7.find((type) => type.type === skip)) {
     if ("message" !== reportType.name) {
       if ("first_dm" !== reportType.name) {
-        tmp33Result1 = null;
+        tmp33Result16 = null;
       }
     }
-    const obj3 = { message: reportType.record };
-    tmp33Result1 = tmp33(tmp34(tmp3[35]), obj3);
+    const obj8 = { message: reportType.record };
+    tmp33Result16 = tmp33(tmp34(tmp3[35]), obj8);
   }
-  items8[5] = tmp33Result1;
-  const elements7 = node.elements;
+  items8[5] = tmp33Result16;
+  const elements8 = node.elements;
   external_link = "user_preview";
-  let tmp33Result2 = null;
-  if (null != elements7.find((type) => type.type === skip)) {
-    tmp33Result2 = null;
+  let tmp33Result17 = null;
+  if (null != elements8.find((type) => type.type === skip)) {
+    tmp33Result17 = null;
     if ("user" === reportType.name) {
-      const obj4 = { user: reportType.record };
-      tmp33Result2 = tmp33(tmp34(tmp3[36]), obj4);
+      const obj9 = { user: reportType.record };
+      tmp33Result17 = tmp33(tmp34(tmp3[36]), obj9);
     }
   }
-  items8[6] = tmp33Result2;
-  const elements8 = node.elements;
+  items8[6] = tmp33Result17;
+  const elements9 = node.elements;
   external_link = "widget_preview";
-  let tmp33Result3 = null;
-  if (null != elements8.find((type) => type.type === skip)) {
-    tmp33Result3 = null;
+  let tmp33Result18 = null;
+  if (null != elements9.find((type) => type.type === skip)) {
+    tmp33Result18 = null;
     if ("widget" === reportType.name) {
       ({ widget: obj13.widget, user_id: obj13.userId } = reportType);
-      tmp33Result3 = tmp33(tmp34(tmp3[37]), { widget: null, userId: null });
-      const obj5 = { widget: null, userId: null };
+      tmp33Result18 = tmp33(tmp34(tmp3[37]), { widget: null, userId: null });
+      const obj10 = { widget: null, userId: null };
     }
   }
-  items8[7] = tmp33Result3;
-  const elements9 = node.elements;
-  external_link = "channel_preview";
-  let tmp33Result4 = null;
-  if (null != elements9.find((type) => type.type === skip)) {
-    tmp33Result4 = null;
-    if ("stage_channel" === reportType.name) {
-      const obj6 = { stageInstance: reportType.record };
-      tmp33Result4 = tmp33(tmp34(tmp3[38]), obj6);
-    }
-  }
-  items8[8] = tmp33Result4;
+  items8[7] = tmp33Result18;
   const elements10 = node.elements;
-  external_link = "guild_preview";
-  let tmp33Result5 = null;
+  external_link = "channel_preview";
+  let tmp33Result19 = null;
   if (null != elements10.find((type) => type.type === skip)) {
-    tmp33Result5 = null;
-    if ("guild" === reportType.name) {
-      const obj7 = { guild: reportType.record };
-      tmp33Result5 = tmp33(tmp34(tmp3[39]), obj7);
+    tmp33Result19 = null;
+    if ("stage_channel" === reportType.name) {
+      const obj11 = { stageInstance: reportType.record };
+      tmp33Result19 = tmp33(tmp34(tmp3[38]), obj11);
     }
   }
-  items8[9] = tmp33Result5;
+  items8[8] = tmp33Result19;
   const elements11 = node.elements;
-  external_link = "guild_scheduled_event_preview";
-  let tmp33Result6 = null;
+  external_link = "guild_preview";
+  let tmp33Result20 = null;
   if (null != elements11.find((type) => type.type === skip)) {
-    tmp33Result6 = null;
-    if ("guild_scheduled_event" === reportType.name) {
-      const obj8 = { event: reportType.record };
-      tmp33Result6 = tmp33(tmp34(tmp3[40]), obj8);
+    tmp33Result20 = null;
+    if ("guild" === reportType.name) {
+      const obj12 = { guild: reportType.record };
+      tmp33Result20 = tmp33(tmp34(tmp3[39]), obj12);
     }
   }
-  items8[10] = tmp33Result6;
+  items8[9] = tmp33Result20;
   const elements12 = node.elements;
-  external_link = "guild_discovery_preview";
-  let tmp33Result7 = null;
+  external_link = "guild_scheduled_event_preview";
+  let tmp33Result21 = null;
   if (null != elements12.find((type) => type.type === skip)) {
-    tmp33Result7 = null;
-    if ("guild_discovery" === reportType.name) {
-      const obj9 = { guild: reportType.record };
-      tmp33Result7 = tmp33(tmp34(tmp3[41]), obj9);
+    tmp33Result21 = null;
+    if ("guild_scheduled_event" === reportType.name) {
+      const obj14 = { event: reportType.record };
+      tmp33Result21 = tmp33(tmp34(tmp3[40]), obj14);
     }
   }
-  items8[11] = tmp33Result7;
-  const obj10 = { element: null, menuName: null, history: null };
+  items8[10] = tmp33Result21;
   const elements13 = node.elements;
+  external_link = "guild_discovery_preview";
+  let tmp33Result22 = null;
+  if (null != elements13.find((type) => type.type === skip)) {
+    tmp33Result22 = null;
+    if ("guild_discovery" === reportType.name) {
+      const obj15 = { guild: reportType.record };
+      tmp33Result22 = tmp33(tmp34(tmp3[41]), obj15);
+    }
+  }
+  items8[11] = tmp33Result22;
+  const obj16 = { element: null, menuName: null, history: null };
+  const elements14 = node.elements;
   external_link = "breadcrumbs";
-  let tmp34Result = tmp34(tmp3[42]);
-  obj10.element = elements13.find((type) => type.type === skip);
-  obj10.menuName = reportType.name;
-  obj10.history = history;
-  items8[12] = first1(tmp34Result, obj10);
-  elements = node.elements;
+  const tmp35 = navigation(ref[32]);
+  obj16.element = elements14.find((type) => type.type === skip);
+  obj16.menuName = reportType.name;
+  obj16.history = history;
+  items8[12] = first1(navigation(ref[42]), obj16);
+  let elements = node.elements;
   let someResult = elements.some((type) => onNavigate.includes(type.type));
   if (someResult) {
     if (!tmp28) {
       const items9 = [tmp28, , , , , ];
       if (userIsTeen) {
-        const obj11 = { parents: activeLinkUsers };
-        userIsTeen = tmp33(tmp34(tmp3[45]), obj11);
+        const obj17 = { parents: activeLinkUsers };
+        userIsTeen = tmp33(tmp34(tmp3[45]), obj17);
       }
       items9[1] = userIsTeen;
-      const elements14 = node.elements;
+      const elements15 = node.elements;
       external_link = "block_users";
-      let tmp51 = null != elements14.find((type) => type.type === skip);
+      let tmp51 = null != elements15.find((type) => type.type === skip);
       if (tmp51) {
         let tmp52 = "message" === reportType.name;
         if (!tmp52) {
@@ -533,9 +519,9 @@ export default function NodeView(node) {
         items9[2] = tmp51;
         let tmp55 = !tmp28;
         if (!tmp28) {
-          const elements15 = node.elements;
+          const elements16 = node.elements;
           external_link = "mute_users";
-          tmp55 = null != elements15.find((type) => type.type === skip);
+          tmp55 = null != elements16.find((type) => type.type === skip);
         }
         if (tmp55) {
           let tmp56 = "message" === reportType.name;
@@ -552,9 +538,9 @@ export default function NodeView(node) {
         }
         if (!tmp55) {
           items9[3] = tmp55;
-          const elements16 = node.elements;
+          const elements17 = node.elements;
           external_link = "delete_message";
-          let callback2Result = null != elements16.find((type) => type.type === skip);
+          let callback2Result = null != elements17.find((type) => type.type === skip);
           if (callback2Result) {
             let tmp60 = "message" === reportType.name;
             if (!tmp60) {
@@ -566,33 +552,33 @@ export default function NodeView(node) {
             callback2Result = callback2(reportType.record);
           }
           if (callback2Result) {
-            const obj12 = { message: reportType.record, reportId };
-            callback2Result = tmp33(tmp34(tmp3[48]), obj12);
+            const obj18 = { message: reportType.record, reportId };
+            callback2Result = tmp33(tmp34(tmp3[48]), obj18);
           }
           items9[4] = callback2Result;
-          const elements17 = node.elements;
+          const elements18 = node.elements;
           external_link = "leave_guild";
-          let tmp33Result8 = null != elements17.find((type) => type.type === skip);
-          if (tmp33Result8) {
-            tmp33Result8 = "guild" === reportType.name;
+          let tmp33Result23 = null != elements18.find((type) => type.type === skip);
+          if (tmp33Result23) {
+            tmp33Result23 = "guild" === reportType.name;
           }
-          if (tmp33Result8) {
-            const obj13 = { guild: reportType.record, reportId, addCallback: node.addOnCloseCallback };
-            tmp33Result8 = tmp33(tmp34(tmp3[49]), obj13);
+          if (tmp33Result23) {
+            const obj19 = { guild: reportType.record, reportId, addCallback: node.addOnCloseCallback };
+            tmp33Result23 = tmp33(tmp34(tmp3[49]), obj19);
           }
-          const obj14 = { children: null };
-          items9[5] = tmp33Result8;
-          obj14.children = items9;
-          someResult = tmp31(tmp47, obj14);
+          const obj20 = { children: null };
+          items9[5] = tmp33Result23;
+          obj20.children = items9;
+          someResult = tmp31(tmp47, obj20);
         } else {
-          tmp34Result = tmp34(tmp3[47]);
           if ("user" === reportType.name) {
             let author3 = reportType.record;
           } else {
             author3 = reportType.record.author;
           }
-          const obj15 = { user: author3, channelId: memo, reportId };
-          tmp33(tmp34Result, obj15);
+          const obj21 = { user: author3, channelId: memo, reportId };
+          tmp33(tmp34(tmp3[47]), obj21);
+          const tmp34Result6 = tmp34(tmp3[47]);
         }
       } else {
         if ("user" === reportType.name) {
@@ -600,9 +586,9 @@ export default function NodeView(node) {
         } else {
           author2 = reportType.record.author;
         }
-        const obj16 = { user: author2, channelId: memo, reportId };
-        tmp33(tmp34(tmp3[46]), obj16);
-        const tmp34Result1 = tmp34(tmp3[46]);
+        const obj22 = { user: author2, channelId: memo, reportId };
+        tmp33(tmp34(tmp3[46]), obj22);
+        const tmp34Result7 = tmp34(tmp3[46]);
       }
     } else {
       if ("user" === reportType.name) {
@@ -610,30 +596,30 @@ export default function NodeView(node) {
       } else {
         author = reportType.record.author;
       }
-      const obj17 = { user: author, channelId: memo, reportId };
-      tmp33(tmp34(tmp3[44]), obj17);
-      const tmp34Result2 = tmp34(tmp3[44]);
+      const obj23 = { user: author, channelId: memo, reportId };
+      tmp33(tmp34(tmp3[44]), obj23);
+      const tmp34Result8 = tmp34(tmp3[44]);
     }
   }
   items8[13] = someResult;
-  const elements18 = node.elements;
+  const elements19 = node.elements;
   external_link = "settings_upsells";
-  let tmp33Result12 = null != elements18.find((type) => type.type === skip);
-  if (tmp33Result12) {
+  let tmp33Result27 = null != elements19.find((type) => type.type === skip);
+  if (tmp33Result27) {
     let tmp63 = "message" === reportType.name;
     if (!tmp63) {
       tmp63 = "report_to_mod_message" === reportType.name;
     }
-    tmp33Result12 = tmp63;
+    tmp33Result27 = tmp63;
   }
-  if (tmp33Result12) {
-    tmp33Result12 = null != iarReportSettingsUpsells;
+  if (tmp33Result27) {
+    tmp33Result27 = null != iarReportSettingsUpsells;
   }
-  if (tmp33Result12) {
-    const obj18 = { settingsUpsells: iarReportSettingsUpsells, channelId: reportType.record.channel_id, reportId, reportType, reportSubType };
-    tmp33Result12 = tmp33(tmp34(tmp3[50]), obj18);
+  if (tmp33Result27) {
+    const obj24 = { settingsUpsells: iarReportSettingsUpsells, channelId: reportType.record.channel_id, reportId, reportType, reportSubType };
+    tmp33Result27 = tmp33(tmp34(tmp3[50]), obj24);
   }
-  items8[14] = tmp33Result12;
+  items8[14] = tmp33Result27;
   items8[15] = first1(navigation(ref[51]), {
     element: found,
     state: first1,
@@ -649,22 +635,22 @@ export default function NodeView(node) {
     }
   });
   items8[16] = first1(ChildrenView, { node, onSelectChild: callback1, nodeMap });
-  const elements19 = node.elements;
+  const elements20 = node.elements;
   external_link = "external_link";
-  let tmp33Result13 = null;
-  if (null != elements19.find((type) => type.type === skip)) {
-    const obj20 = { elements: null };
-    const elements20 = node.elements;
+  let tmp33Result28 = null;
+  if (null != elements20.find((type) => type.type === skip)) {
+    const obj26 = { elements: null };
+    const elements21 = node.elements;
     external_link = "external_link";
-    obj20.elements = elements20.filter((type) => type.type === external_link);
-    tmp33Result13 = tmp33(tmp34(tmp3[52]), obj20);
-    const tmp34Result3 = tmp34(tmp3[52]);
+    obj26.elements = elements21.filter((type) => type.type === external_link);
+    tmp33Result28 = tmp33(tmp34(tmp3[52]), obj26);
+    const tmp34Result9 = tmp34(tmp3[52]);
   }
-  items8[17] = tmp33Result13;
-  obj.children = items8;
-  const items10 = [closure_17(tmp32, obj), ];
-  const obj21 = { isModeratorReport: hasItem, disabled: null, button: null, hasError: null, onPress: null };
-  const obj19 = {
+  items8[17] = tmp33Result28;
+  obj4.children = items8;
+  const items10 = [closure_17(tmp32, obj4), ];
+  const obj27 = { isModeratorReport: hasItem, disabled: null, button: null, hasError: null, onPress: null };
+  const obj25 = {
     element: found,
     state: first1,
     onPress(arg0, arg1) {
@@ -678,7 +664,7 @@ export default function NodeView(node) {
       closure_17(obj);
     }
   };
-  const tmp35 = navigation(ref[32]);
+  const tmp34Result = navigation(ref[42]);
   if (!tmp14) {
     let should_submit_data;
     if (found != null) {
@@ -690,10 +676,9 @@ export default function NodeView(node) {
       tmp68 = 0 === Object.keys(first1).length;
     }
   }
-  obj21.disabled = tmp14;
-  obj21.button = node.button;
-  obj21.hasError = tmp19[0];
-  obj21.onPress = function onPress(type) {
+  obj27.disabled = tmp14;
+  obj27.button = node.button;
+  obj27.onPress = function onPress(type) {
     type = type.type;
     if ("done" !== type) {
       if ("cancel" !== type) {
@@ -752,7 +737,7 @@ export default function NodeView(node) {
     }
     callback1(["", -1]);
   };
-  items10[1] = first1(navigation(ref[53]), obj21);
+  items10[1] = first1(navigation(ref[53]), obj27);
   rect.children = items10;
   return closure_17(external_link(ref[31]).SafeAreaPaddingView, rect);
 };

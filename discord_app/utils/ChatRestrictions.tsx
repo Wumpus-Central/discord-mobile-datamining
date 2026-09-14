@@ -1,9 +1,9 @@
-// === Module 10385: ChatRestrictions ===
+// === Module 10386: ChatRestrictions ===
 
-// Module 10385 (ChatRestrictions)
+// Module 10386 (ChatRestrictions)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10386 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10387 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;
@@ -18,10 +18,8 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp9Result = MentionGuardUtilsDefault;
             if (tmp9Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp9Result = MentionGuardUtilsDefault;
-              const everyoneMemberCountResult = tmp9Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
+              const everyoneMemberCountResult = MentionGuardUtilsDefault.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
               const _Math3 = Math;
@@ -32,19 +30,20 @@ const items = [
               } else if (getGuildId.isThread()) {
                 v47E5Rz = util.t["2YaiQ1"];
               }
-              let obj = { body: null, footer: null };
+              const obj = { body: null, footer: null };
               const intl = util.intl;
-              obj = { role: extractEveryoneRoleResult, count: null };
+              const obj2 = { role: extractEveryoneRoleResult, count: null };
               const _Math4 = Math;
               const result = Math.trunc(everyoneMemberCountResult / powResult) * powResult;
-              obj.count = result.toLocaleString();
-              obj.body = intl.formatToPlainString(v47E5Rz, obj);
+              obj2.count = result.toLocaleString();
+              obj.body = intl.formatToPlainString(v47E5Rz, obj2);
               const intl2 = util.intl;
               obj.footer = intl2.string(util.t.mVyrtu);
               return obj;
             } else {
               return false;
             }
+            tmp9Result = MentionGuardUtilsDefault;
           }
         }
       } else {
@@ -52,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "call"
+    animation: "accessible"
   },
   {
     check(arg0) {

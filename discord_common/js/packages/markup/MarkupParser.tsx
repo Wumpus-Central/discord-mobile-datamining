@@ -4,6 +4,8 @@
 import markup_MarkupParser from "markup/MarkupParser" /* 8092 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
 for (const key10026 in require("MarkupASTUtils")) {
   arg5[key10026] = require("MarkupASTUtils")[key10026];

@@ -1,15 +1,15 @@
-// === Module 15550: DataSavingModeSetting ===
+// === Module 15551: DataSavingModeSetting ===
 
-// Module 15550 (DataSavingModeSetting)
+// Module 15551 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15548 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsText from "UserSettingsText" /* 15549 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
@@ -20,16 +20,15 @@ let SettingBuilders = {
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(dataSavingMode) {
-    const obj = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    const obj2 = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
-    obj.viewImageDescriptions = ViewImageDescriptions.getSetting();
-    obj.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
-    obj.dataSavingMode = dataSavingMode;
-    obj.setDataSavingMode(obj);
+    obj2.viewImageDescriptions = ViewImageDescriptions.getSetting();
+    obj2.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
+    obj2.dataSavingMode = dataSavingMode;
+    UserSettingsText.setDataSavingMode(obj2);
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

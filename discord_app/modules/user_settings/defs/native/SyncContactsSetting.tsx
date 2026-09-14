@@ -1,16 +1,16 @@
-// === Module 14932: SyncContactsSetting ===
+// === Module 14933: SyncContactsSetting ===
 
-// Module 14932 (SyncContactsSetting)
+// Module 14933 (SyncContactsSetting)
 import util from "util" /* 1114 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 14933 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 14934 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
@@ -29,9 +29,8 @@ let SettingBuilders = {
     }
     ContactSyncSettings.handleSyncContacts(localAccount, phone, arg0);
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

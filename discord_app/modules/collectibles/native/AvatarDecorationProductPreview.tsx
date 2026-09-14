@@ -1,8 +1,8 @@
-// === Module 13271: AvatarDecorationProductPreview ===
+// === Module 13272: AvatarDecorationProductPreview ===
 
-// Module 13271 (AvatarDecorationProductPreview)
+// Module 13272 (AvatarDecorationProductPreview)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useShopProductItems from "useShopProductItems" /* 8288 */;
 import useCurrentUser from "useCurrentUser" /* 8295 */;
 import noop from "module_19" /* 19 */;
@@ -16,19 +16,18 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = useCurrentUser;
-  const currentUser = obj.useCurrentUser();
-  let obj1 = useShopProductItems;
-  const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
+  const tmp = closure_4();
+  const currentUser = useCurrentUser.useCurrentUser();
+  const firstAvatarDecoration = useShopProductItems.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {
-    obj = { style: tmp.fullSizePreview, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
+    const obj3 = { style: tmp.fullSizePreview, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
     const intl = util.intl;
-    obj = { a11y_text: firstAvatarDecoration.label };
-    obj.accessibilityLabel = intl.formatToPlainString(util.t.Do2lxE, obj);
-    obj1 = { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
-    obj.children = jsx(native.Avatar, { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
-    tmp5 = <View a11y_text={firstAvatarDecoration.label} />;
+    const obj4 = { a11y_text: firstAvatarDecoration.label };
+    obj3.accessibilityLabel = intl.formatToPlainString(util.t.Do2lxE, obj4);
+    const obj5 = { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
+    obj3.children = jsx(native.Avatar, { user: currentUser, guildId: "r", size: native.AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
+    tmp5 = <View style={tmp.fullSizePreview} pointerEvents="box-none" accessibilityLabel={null} accessibilityRole="image" accessible>{null}</View>;
   }
   return tmp5;
 };

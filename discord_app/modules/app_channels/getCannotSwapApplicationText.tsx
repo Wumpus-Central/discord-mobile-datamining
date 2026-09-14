@@ -1,8 +1,10 @@
-// === Module 16929: getCannotSwapApplicationText ===
+// === Module 16931: getCannotSwapApplicationText ===
 
-// Module 16929 (getCannotSwapApplicationText)
+// Module 16931 (getCannotSwapApplicationText)
 import LocaleStore from "LocaleStore" /* 2025 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

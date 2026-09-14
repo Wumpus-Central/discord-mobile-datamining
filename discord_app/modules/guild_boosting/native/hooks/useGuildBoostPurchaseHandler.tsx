@@ -1,9 +1,11 @@
-// === Module 12667: useGuildBoostPurchaseHandler ===
+// === Module 12668: useGuildBoostPurchaseHandler ===
 
-// Module 12667 (useGuildBoostPurchaseHandler)
+// Module 12668 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -12,9 +14,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
 
 export default function useGuildBoostPurchaseHandler(arg0) {
-  _require = arg0;
-  let obj = require("MobileWebRedirectCheckoutUtils");
-  const result = obj.isMobileWebRedirectCheckoutEnabled();
+  _require = undefined;
+  const result = require("MobileWebRedirectCheckoutUtils").isMobileWebRedirectCheckoutEnabled();
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     if (c4 === 2) {
       c4 = 3;
@@ -23,8 +24,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,47 +38,46 @@ export default function useGuildBoostPurchaseHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10791).getNewAnalyticsLoadId();
+            newAnalyticsLoadId = args(10792).getNewAnalyticsLoadId();
             const obj7 = args(7508);
             c3 = 1;
             c4 = 1;
-            const obj1 = {
+            const obj4 = {
               value: obj7.goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, newAnalyticsLoadId, () => {
-                        guild_id(newAnalyticsLoadId[7]);
-                        const obj = { guild_id, load_id: newAnalyticsLoadId, location_stack: null, custom_checkout_flow: args(newAnalyticsLoadId[4]).getCustomCheckoutFlowForAnalytics() };
+                        const obj2 = { guild_id, load_id: newAnalyticsLoadId, location_stack: null, custom_checkout_flow: null };
                         const items = [...closure_0];
-                        obj.location_stack = items;
-                        obj.track(constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj);
+                        obj2.location_stack = items;
+                        const obj = guild_id(newAnalyticsLoadId[7]);
+                        obj2.custom_checkout_flow = args(newAnalyticsLoadId[4]).getCustomCheckoutFlowForAnalytics();
+                        obj.track(constants.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj2);
                         logger.log("Successfully opened mobile web Guild Boost Management page");
                       }, (arg0) => {
                         logger.error("Failed to open mobile web Guild Boost Management page, error response: ", arg0);
-                        guild_id(newAnalyticsLoadId[8]);
-                        const obj = { title: null, body: null, hideActionSheet: true };
+                        const obj2 = { title: null, body: null, hideActionSheet: true };
                         const intl = args(newAnalyticsLoadId[9]).intl;
-                        obj.title = intl.string(args(newAnalyticsLoadId[9]).t.NrBVjw);
+                        obj2.title = intl.string(args(newAnalyticsLoadId[9]).t.NrBVjw);
                         const intl2 = args(newAnalyticsLoadId[9]).intl;
-                        obj.body = intl2.string(args(newAnalyticsLoadId[9]).t["gD+grx"]);
-                        obj.show(obj);
+                        obj2.body = intl2.string(args(newAnalyticsLoadId[9]).t["gD+grx"]);
+                        guild_id(newAnalyticsLoadId[8]).show(obj2);
                       }),
               done: false
             };
-            return obj1;
+            return obj4;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          obj = args(5515);
-          obj.closeApplyBoostModal();
+          args(5515).closeApplyBoostModal();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -88,7 +88,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
     }
   });
   let items = [arg0];
-  obj = {
+  let obj = require("MobileWebRedirectCheckoutUtils");
+  return {
     shouldUseMobileWebRedirectCheckout: result,
     handleMobileWebRedirectCheckout: noop.useCallback(function() {
       const self = this;
@@ -101,5 +102,4 @@ export default function useGuildBoostPurchaseHandler(arg0) {
       return applyArgumentsResult;
     }, items)
   };
-  return obj;
 };

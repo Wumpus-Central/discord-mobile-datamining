@@ -147,7 +147,6 @@ function handleGuildScheduledEventUpdateOrCreate(guildScheduledEvent) {
 }
 function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
   eventException = eventException.eventException;
-  let obj = secondaryIndexMap;
   value = secondaryIndexMap.get(eventException.event_id);
   if (null == value) {
     return false;
@@ -161,17 +160,17 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     } else {
       items[findIndexResult] = eventException;
     }
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(value);
-    obj.guild_scheduled_event_exceptions = items;
-    const result = obj.set(obj.id, obj);
+    obj2.guild_scheduled_event_exceptions = items;
+    const result = secondaryIndexMap.set(obj2.id, obj2);
     closure_9 = closure_9 + 1;
     return true;
   }
 }
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventStatus: closure_4, GuildScheduledEventStatusDone: hasOwnProperty, GuildScheduledEventUserResponses: metroRequire } = GuildScheduledEventsConstants);
-let StaticGuildEventIndexes = {
+const StaticGuildEventIndexes = {
   EVENT: "event",
   EVENT_ACTIVE: "active",
   EVENT_UPCOMING: "event-upcoming",
@@ -381,7 +380,7 @@ prototype["getUsersForGuildEvent"] = function getUsersForGuildEvent(arg0, arg1) 
   }
 };
 GuildScheduledEventStore.displayName = "GuildScheduledEventStore";
-StaticGuildEventIndexes = {
+const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     secondaryIndexMap.clear();
@@ -539,30 +538,28 @@ StaticGuildEventIndexes = {
   GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: handleGuildScheduledEventExceptionCreateOrUpdate,
   GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: function handleGuildScheduledEventExceptionDelete(eventException) {
     eventException = eventException.eventException;
-    let obj = secondaryIndexMap;
     value = secondaryIndexMap.get(eventException.event_id);
     if (null == value) {
       return false;
     } else {
       const prop = value.guild_scheduled_event_exceptions;
-      obj = {};
+      const obj2 = {};
       const found = prop.filter((event_exception_id) => event_exception_id.event_exception_id !== eventException.event_exception_id);
       const merged = Object.assign(value);
-      obj.guild_scheduled_event_exceptions = found;
-      const result = obj.set(obj.id, obj);
+      obj2.guild_scheduled_event_exceptions = found;
+      const result = secondaryIndexMap.set(obj2.id, obj2);
       closure_9 = closure_9 + 1;
       return true;
     }
   },
   GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: function handleGuildScheduledEventExceptionsDelete(eventId) {
-    let obj = secondaryIndexMap;
     value = secondaryIndexMap.get(eventId.eventId);
     let flag = null != value;
     if (flag) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
-      obj.guild_scheduled_event_exceptions = [];
-      const result = obj.set(obj.id, obj);
+      obj2.guild_scheduled_event_exceptions = [];
+      const result = secondaryIndexMap.set(obj2.id, obj2);
       closure_9 = closure_9 + 1;
       flag = true;
     }
@@ -572,8 +569,7 @@ StaticGuildEventIndexes = {
     secondaryIndexMap.clear();
     return true;
   }
-};
-const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault, StaticGuildEventIndexes);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
 

@@ -37,8 +37,8 @@ prototype["getAll"] = function getAll() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -51,8 +51,8 @@ prototype["getAll"] = function getAll() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             closure_0 = tmp2;
@@ -64,13 +64,13 @@ prototype["getAll"] = function getAll() {
             const userSearchItemsResult = DatabaseDaosDefault.userSearchItems();
             if (null == userSearchItemsResult) {
               c3 = 3;
-              const obj1 = { value: [], done: true };
-              return obj1;
+              const obj4 = { value: [], done: true };
+              return obj4;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: userSearchItemsResult.getMany(), done: false };
-              return obj2;
+              const obj5 = { value: userSearchItemsResult.getMany(), done: false };
+              return obj5;
             }
           }
         } else if (arg0 === 1) {
@@ -78,8 +78,8 @@ prototype["getAll"] = function getAll() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_128_1 = value;
           const _performance = performance;
@@ -87,7 +87,7 @@ prototype["getAll"] = function getAll() {
           const _HermesInternal = HermesInternal;
           closure_129_9.log("asynchronously loaded in " + closure_128_2 - closure_128_0 + "ms (userSearchItems: " + closure_128_1.length + ")");
           c3 = 3;
-          obj = { value: closure_128_1, done: true };
+          const obj = { value: closure_128_1, done: true };
           return obj;
         }
       } catch (tmp6) {
@@ -111,7 +111,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
 };
 prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   const friendIDs = RelationshipStore.getFriendIDs();
-  let obj = {};
+  const obj = {};
   const iter = friendIDs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -121,7 +121,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user) {
       let obj5 = UserSearchUtils;
       let names = obj5.getNames(tmp6);
-      obj = { id: tmp3, type: RelationshipTypes.FRIEND, user: tmp6, names: null, nick: null, affinity: null };
+      let obj2 = { id: tmp3, type: RelationshipTypes.FRIEND, user: tmp6, names: null, nick: null, affinity: null };
       ({ names: obj6.names, nick: obj6.nick } = names);
       let userAffinity = UserAffinitiesV2Store.getUserAffinity(tmp3);
       let num;
@@ -131,8 +131,8 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       if (num == null) {
         num = 0;
       }
-      obj.affinity = num;
-      obj[tmp3] = obj;
+      obj2.affinity = num;
+      obj[tmp3] = obj2;
     }
     continue;
   }
@@ -145,7 +145,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user1) {
       let obj7 = UserSearchUtils;
       let names1 = obj7.getNames(tmp11);
-      obj = { id: item10033.id, type: RelationshipTypes.FRIEND, user: tmp11, names: null, nick: null, affinity: null };
+      let obj4 = { id: item10033.id, type: RelationshipTypes.FRIEND, user: tmp11, names: null, nick: null, affinity: null };
       ({ names: obj8.names, nick: obj8.nick } = names1);
       let userAffinity1 = UserAffinitiesV2Store.getUserAffinity(item10033.id);
       let num2;
@@ -155,8 +155,8 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       if (num2 == null) {
         num2 = 0;
       }
-      obj.affinity = num2;
-      obj[item10033.id] = obj;
+      obj4.affinity = num2;
+      obj[item10033.id] = obj4;
     }
     continue;
   }
@@ -164,15 +164,15 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   result.delete();
   result.putAll(Object.values(obj));
 };
-let size = Object.create(UserSearchItems.prototype);
-let closure_129_0 = size;
-size.actions = {
-  POST_CONNECTION_OPEN: size.handlePostConnectionOpen,
+let obj2 = Object.create(UserSearchItems.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
+  POST_CONNECTION_OPEN: obj2.handlePostConnectionOpen,
   WRITE_CACHES(arg0, arg1) {
     return obj.handleWriteCaches(arg1);
   }
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
 
-export default size;
+export default obj2;

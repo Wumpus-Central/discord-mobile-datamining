@@ -1,11 +1,13 @@
-// === Module 14741: AccountSetting ===
+// === Module 14742: AccountSetting ===
 
-// Module 14741 (AccountSetting)
+// Module 14742 (AccountSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import UserCircleIcon from "UserCircleIcon" /* 11048 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import UserCircleIcon from "UserCircleIcon" /* 11049 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

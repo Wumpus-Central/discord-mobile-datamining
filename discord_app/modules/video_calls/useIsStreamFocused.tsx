@@ -3,6 +3,8 @@
 // Module 9784 (useIsStreamFocused)
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const isStreamParticipant = fn(4657).isStreamParticipant;
 const size = fn(2);

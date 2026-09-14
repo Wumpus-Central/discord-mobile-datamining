@@ -1,20 +1,18 @@
-// === Module 11533: SafetyToolsActionSheetHeader ===
+// === Module 11534: SafetyToolsActionSheetHeader ===
 
-// Module 11533 (SafetyToolsActionSheetHeader)
+// Module 11534 (SafetyToolsActionSheetHeader)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11524 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: null };
-createStyles = { position: "absolute", left: nativeDefault.space.PX_16 };
-createStyles.navbarLeft = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
 
@@ -31,13 +29,10 @@ export default function SafetyToolsActionSheetHeader(channelId) {
     const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
   }, items);
   const items1 = [callback, tmp.navbarLeft];
-  let obj = { style: tmp.navbarContainer, children: null };
+  const obj = { style: tmp.navbarContainer, children: null };
   let memo = null != hasBackButton;
   if (memo) {
-    memo = warningId.useMemo(() => {
-      const obj = { style: navbarLeft.navbarLeft };
-      return React4(obj.getHeaderBackButton(callback), obj);
-    }, items1);
+    memo = warningId.useMemo(() => React4(NavigatorHeader.getHeaderBackButton(callback), { style: navbarLeft.navbarLeft }), items1);
   }
   const items2 = [memo, navbarLeft(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
   obj.children = items2;

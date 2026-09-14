@@ -1,9 +1,9 @@
-// === Module 11167: WishlistItemCard ===
+// === Module 11168: WishlistItemCard ===
 
-// Module 11167 (WishlistItemCard)
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 11168 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 11170 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 11171 */;
+// Module 11168 (WishlistItemCard)
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 11169 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 11171 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 11172 */;
 import noop from "module_19" /* 19 */;
 
 const SKUProductLines = fn(1074).SKUProductLines;
@@ -16,15 +16,15 @@ export default function WishlistItemCard(arg0) {
   const merged = Object.assign(arg0, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0 }));
   const productLine = sku.productLine;
   if (SKUProductLines.COLLECTIBLES === productLine) {
-    let obj = { sku, isOwned, source, wishlistOwnerId };
+    const obj2 = { sku, isOwned, source, wishlistOwnerId };
     const merged1 = Object.assign(merged);
     return jsx(CollectiblesWishlistItemCardDefault, { sku, isOwned, source, wishlistOwnerId });
   } else if (SKUProductLines.PREMIUM === productLine) {
-    obj = { sku, source };
+    const obj3 = { sku, source };
     const merged2 = Object.assign(merged);
     return jsx(PremiumWishlistItemCardDefault, { sku, source });
   } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
-    obj = { sku, isOwned, source, wishlistOwnerId };
+    const obj = { sku, isOwned, source, wishlistOwnerId };
     const merged3 = Object.assign(merged);
     return jsx(SocialLayerStorefrontWishlistItemCardDefault, { sku, isOwned, source, wishlistOwnerId });
   } else {

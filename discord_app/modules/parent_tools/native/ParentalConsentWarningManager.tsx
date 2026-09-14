@@ -1,13 +1,13 @@
-// === Module 17575: ParentalConsentWarningManager ===
+// === Module 17576: ParentalConsentWarningManager ===
 
-// Module 17575 (ParentalConsentWarningManager)
+// Module 17576 (ParentalConsentWarningManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14957 */;
-import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 17578 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14958 */;
+import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 17579 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14956 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14957 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -46,13 +46,13 @@ function maybePresentModal(daysRemaining) {
   }
   if (tmp5) {
     const obj = { daysRemaining };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17576, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17577, dependencyMap.paths), "ParentalConsentWarningModal", obj);
   }
 }
 const FamilyCenterConstants = fn(7641);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1074).AppStates;
-let prototype = function ParentalConsentWarningManager() {
+const prototype = function ParentalConsentWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     PARENTAL_CONSENT_WARNING_FETCH_SUCCESS(warning) {
@@ -121,8 +121,8 @@ let prototype = function ParentalConsentWarningManager() {
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
 
-export default prototype;
+export default prototype1;

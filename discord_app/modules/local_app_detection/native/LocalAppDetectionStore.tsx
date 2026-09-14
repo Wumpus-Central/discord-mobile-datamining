@@ -1,10 +1,10 @@
-// === Module 13800: LocalAppDetectionStore ===
+// === Module 13801: LocalAppDetectionStore ===
 
-// Module 13800 (LocalAppDetectionStore)
+// Module 13801 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13801 */;
-import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 13802 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13802 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 13803 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ConsentStore from "ConsentStore" /* 6696 */;
 
@@ -24,9 +24,9 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
             return closure_0.handleLocalAppDetectionComplete(arg0);
           }
     };
-    tmp2 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
-    closure_0 = tmp2;
-    return tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
+    closure_0 = tmp21;
+    return tmp21;
   }
 }
 const prototype = LocalAppDetectionStore.prototype;
@@ -84,14 +84,14 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
     return false;
   } else {
     const _Date = Date;
-    let obj = {};
+    const obj = {};
     const timestamp = Date.now();
     const merged = Object.assign(closure_7);
     const tmp6 = entries[Symbol.iterator]();
     while (tmp6 !== undefined) {
       let tmp11 = _slicedToArray(tmp8, 2);
-      obj = { detected: tmp11[1], lastScannedAt: timestamp };
-      obj.apps[tmp11[0]] = obj;
+      let obj2 = { detected: tmp11[1], lastScannedAt: timestamp };
+      obj.apps[tmp11[0]] = obj2;
       continue;
     }
     closure_7 = obj;

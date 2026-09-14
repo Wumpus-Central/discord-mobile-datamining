@@ -1,22 +1,24 @@
-// === Module 12603: GuildProgressUtils ===
+// === Module 12604: GuildProgressUtils ===
 
-// Module 12603 (GuildProgressUtils)
+// Module 12604 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12606 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12607 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
-import GuildProgressStore from "GuildProgressStore" /* 12604 */;
+import GuildProgressStore from "GuildProgressStore" /* 12605 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function useIOSCompletionStates(guild) {
   _require = guild;
-  let obj = require("initialize");
   const items = [PermissionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(constants.ADMINISTRATOR, closure_0));
+  const obj = require("initialize");
   const guildPersonalized = require("GuildProgressHooks").useGuildPersonalized(guild);
   const obj2 = require("GuildProgressHooks");
   const guildPopulated = require("GuildProgressHooks").useGuildPopulated(guild);
@@ -31,7 +33,7 @@ function useIOSCompletionStates(guild) {
     items3 = [];
   }
   const channelsMessaged = require("GuildProgressHooks").useChannelsMessaged(items3);
-  let tmpResult = tmp(504);
+  const obj5 = require("GuildProgressHooks");
   const items4 = [GuildProgressStore];
   let stateFromStores2 = channelsMessaged;
   if (!channelsMessaged) {
@@ -47,9 +49,9 @@ function useIOSCompletionStates(guild) {
       return flag;
     });
   }
-  tmpResult = tmp(504);
+  tmpResult = require("initialize");
   const items5 = [GuildStore];
-  const stateFromStores3 = tmpResult.useStateFromStores(items5, () => {
+  const stateFromStores3 = require("initialize").useStateFromStores(items5, () => {
     guild = GuildStore.getGuild(guild.id);
     let num;
     if (guild != null) {
@@ -60,11 +62,11 @@ function useIOSCompletionStates(guild) {
     }
     return num > 0;
   });
-  const obj5 = require("GuildProgressHooks");
+  const tmpResult3 = require("initialize");
   const items6 = [GuildProgressStore];
   const stateFromStores4 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12717).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(12718).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {
@@ -78,24 +80,24 @@ function useIOSCompletionStates(guild) {
     if (!hasItem) {
       hasItem = length === length2;
     }
-    obj = { guildPopulated, guildPersonalized, guildMessaged: stateFromStores2, guildBoosted: stateFromStores3, showBoostStep: enabled, completed: hasItem, dismissed: null, numFinished: null, totalSteps: null };
+    const obj6 = { guildPopulated, guildPersonalized, guildMessaged: stateFromStores2, guildBoosted: stateFromStores3, showBoostStep: enabled, completed: hasItem, dismissed: null, numFinished: null, totalSteps: null };
     let hasItem1 = null == stateFromStores4;
     if (!hasItem1) {
       hasItem1 = stateFromStores4.has(Steps.DISMISSED);
     }
-    obj.dismissed = hasItem1;
+    obj6.dismissed = hasItem1;
     if (hasItem) {
       length = length2;
     }
-    obj.numFinished = length;
-    obj.totalSteps = items7.length;
-    return obj;
+    obj6.numFinished = length;
+    obj6.totalSteps = items7.length;
+    return obj6;
   } else {
     return { guildPopulated: false, guildPersonalized: false, guildMessaged: false, guildChannelCreated: false, guildBoosted: false, showBoostStep: false, completed: true, dismissed: true, numFinished: 0, totalSteps: 0 };
   }
-  const tmpResult1 = require("initialize");
+  const tmpResult4 = require("initialize");
 }
-const Steps = fn(12598).Steps;
+const Steps = fn(12599).Steps;
 const Constants = fn(1074);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -104,8 +106,8 @@ const result = size.fileFinishedImporting("modules/guild_progress/native/GuildPr
 export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
-  const obj = { guild };
-  obj.openLazy(asyncRequireImpl(12605, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequireImpl(12606, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);
@@ -152,11 +154,11 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
     const intl5 = util.intl;
     found = intl5.string(util.t["+Gyklt"]);
   }
-  let obj = { percentComplete: Math.max(3, 100 * length / totalSteps), subtitle: null, completed: null };
+  const obj = { percentComplete: Math.max(3, 100 * length / totalSteps), subtitle: null, completed: null };
   if (length < totalSteps) {
     const intl7 = util.intl;
-    obj = { currStep: length + 1, total: totalSteps, step: found };
-    let formatToPlainStringResult = intl7.formatToPlainString(util.t.zhHW5c, obj);
+    const obj2 = { currStep: length + 1, total: totalSteps, step: found };
+    let formatToPlainStringResult = intl7.formatToPlainString(util.t.zhHW5c, obj2);
   } else {
     const intl6 = util.intl;
     formatToPlainStringResult = intl6.string(util.t["+Gyklt"]);

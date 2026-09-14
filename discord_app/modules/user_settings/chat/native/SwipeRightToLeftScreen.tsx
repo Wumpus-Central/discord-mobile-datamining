@@ -1,8 +1,8 @@
-// === Module 15560: SwipeRightToLeftScreen ===
+// === Module 15561: SwipeRightToLeftScreen ===
 
-// Module 15560 (SwipeRightToLeftScreen)
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
+// Module 15561 (SwipeRightToLeftScreen)
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/user_settings/chat/native/Swi
 
 export default function UserSettingsSwipeRightToLeft() {
   const node = noop.useMemo(() => {
-    let obj = { sections: null };
-    obj = { settings: null };
+    const obj2 = { sections: null };
+    const obj3 = { settings: null };
     const items = [constants.CHAT_GESTURES];
-    obj.settings = items;
-    const items1 = [obj];
-    obj.sections = items1;
-    return obj.createList(obj);
+    obj3.settings = items;
+    const items1 = [obj3];
+    obj2.sections = items1;
+    return SettingBuilders.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
 };

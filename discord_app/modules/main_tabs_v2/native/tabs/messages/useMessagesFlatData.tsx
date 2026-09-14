@@ -1,10 +1,10 @@
-// === Module 16151: useMessagesFlatData ===
+// === Module 16153: useMessagesFlatData ===
 
-// Module 16151 (useMessagesFlatData)
-import useMessagesData from "useMessagesData" /* 16140 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16152 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16190 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16191 */;
+// Module 16153 (useMessagesFlatData)
+import useMessagesData from "useMessagesData" /* 16142 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16154 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16192 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16193 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,8 +49,8 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     let tmp12 = tmp6;
     if (0 < tmp10) {
       do {
-        obj = { kind: "channel", channelId: channels[num3].channelId, row: num3 };
-        arr = listData.push(obj);
+        let obj2 = { kind: "channel", channelId: channels[num3].channelId, row: num3 };
+        let arr7 = listData.push(obj2);
         sum1 = sum1 + listItemHeight;
         num3 = num3 + 1;
         tmp12 = sum1;
@@ -71,8 +71,8 @@ export default function useMessagesFlatData(channels, listItemHeight) {
       friendsHeaderIndex = length;
       if (0 < tmp21) {
         do {
-          let obj1 = { kind: "suggestedFriend", row: num4 };
-          let arr3 = listData.push(obj1);
+          let obj3 = { kind: "suggestedFriend", row: num4 };
+          let arr10 = listData.push(obj3);
           num4 = num4 + 1;
           friendsHeaderOffset = sum2;
           friendsHeaderIndex = length;
@@ -80,8 +80,8 @@ export default function useMessagesFlatData(channels, listItemHeight) {
       }
     }
     for (let num5 = 0; num5 < tmp26; num5 = num5 + 1) {
-      let obj2 = { kind: "placeholder", row: num5 };
-      let arr4 = listData.push(obj2);
+      let obj4 = { kind: "placeholder", row: num5 };
+      let arr11 = listData.push(obj4);
     }
     return { listData, friendsHeaderIndex, friendsHeaderOffset, listHeaderHeight };
   }, items);

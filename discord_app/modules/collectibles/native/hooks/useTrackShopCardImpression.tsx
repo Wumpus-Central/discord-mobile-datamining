@@ -1,11 +1,13 @@
 // === Module 8892: useTrackShopCardImpression ===
 
 // Module 8892 (useTrackShopCardImpression)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import useTrackImpression from "useTrackImpression" /* 8894 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -22,7 +24,7 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   ({ width: closure_4, height: closure_5 } = require("useWindowDimensions")());
   const tmp4 = require("useWindowDimensions")();
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const obj2 = require("useCurrentUser");
+  let obj2 = require("useCurrentUser");
   const shopDiscountSource = require("CollectiblesUtils").getShopDiscountSource(currentUser);
   const ref = analyticsLocations.useRef(null);
   closure_8 = analyticsLocations.useRef(false);
@@ -51,30 +53,31 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   items1[5] = analyticsLocations;
   items1[6] = shopDiscountSource;
   closure_10 = analyticsLocations.useCallback(() => {
-    let obj = { name: discord_common_AnalyticsUtils.ImpressionNames.SHOP_CARD, type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, properties: null };
-    obj = { sku_id: selectedProduct.skuId, card_id: null, shop_session_id: null, position_in_section: null, product_sku_ids: null, location_stack: null, discount_source: null };
+    const obj2 = { name: discord_common_AnalyticsUtils.ImpressionNames.SHOP_CARD, type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, properties: null };
+    const obj3 = { sku_id: selectedProduct.skuId, card_id: null, shop_session_id: null, position_in_section: null, product_sku_ids: null, location_stack: null, discount_source: null };
     let cardId;
     if (collectiblesAnalyticsContext != null) {
       cardId = collectiblesAnalyticsContext.cardId;
     }
-    obj.card_id = cardId;
+    obj3.card_id = cardId;
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
       sessionId = collectiblesAnalyticsContext.sessionId;
     }
-    obj.shop_session_id = sessionId;
+    obj3.shop_session_id = sessionId;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
       tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
-    obj.position_in_section = tilePosition;
-    let tmpResult = CollectiblesProductUtils;
-    obj.product_sku_ids = tmpResult.getProductSkuIds(closure_0);
-    obj.location_stack = analyticsLocations;
-    tmpResult = CollectiblesUtils;
-    obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
-    obj.properties = obj;
-    obj.trackImpression(obj, false, true);
+    obj3.position_in_section = tilePosition;
+    const obj = useTrackImpression;
+    obj3.product_sku_ids = CollectiblesProductUtils.getProductSkuIds(closure_0);
+    obj3.location_stack = analyticsLocations;
+    const tmpResult = CollectiblesProductUtils;
+    obj3.discount_source = CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj2.properties = obj3;
+    obj.trackImpression(obj2, false, true);
+    const tmpResult2 = CollectiblesUtils;
   }, items1);
   tmp3(tmp[9])(() => {
     const current = ref.current;

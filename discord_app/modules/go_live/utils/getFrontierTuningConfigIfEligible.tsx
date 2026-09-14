@@ -19,16 +19,16 @@ export default function getFrontierTuningConfigIfEligible(location, currentUser,
     }
     if (premiumTier === BoostedGuildTiers.NONE) {
       if (!obj4.isPremium(currentUser)) {
-        let obj = PremiumUtilsDefault;
         if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
-          obj = { location, guildId };
-          const config = FrontierTuningExperimentDefault.getConfig(obj);
+          const obj2 = { location, guildId };
+          const config = FrontierTuningExperimentDefault.getConfig(obj2);
           let tmp6 = null;
           if (null != config.maxBitrate) {
             tmp6 = config;
           }
           return tmp6;
         }
+        obj = PremiumUtilsDefault;
       }
       return null;
     }

@@ -1,8 +1,8 @@
-// === Module 17967: AVErrorAnalytics ===
+// === Module 17968: AVErrorAnalytics ===
 
-// Module 17967 (AVErrorAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
+// Module 17968 (AVErrorAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1357 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import VideoQualityStats from "VideoQualityStats" /* 7843 */;
 import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9739 */;
@@ -15,6 +15,8 @@ import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import RTCRegionStore from "RTCRegionStore" /* 4686 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
@@ -54,8 +56,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
       const entries = Object.entries(obj);
       const tmp16 = entries[Symbol.iterator]();
       while (tmp16 !== undefined) {
-        let tmp21 = _slicedToArray(tmp18, 2);
-        let tmp23 = tmp21[1];
+        [, tmp23] = tmp18;
         if (tmp23 > num3) {
           num3 = tmp23;
           tmp12 = tmp22;
@@ -156,8 +157,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   }
   let decodeStreamKeyResult = null;
   if (tmp6 != streamKey) {
-    let tmpResult = tmp(tmp2[13]);
-    decodeStreamKeyResult = tmpResult.decodeStreamKey(streamKey);
+    decodeStreamKeyResult = tmp(tmp2[13]).decodeStreamKey(streamKey);
+    const tmpResult = tmp(tmp2[13]);
   }
   let rTCConnection = null;
   if (tmp6 != streamKey) {
@@ -180,8 +181,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   }
   const state = underlyingError.getState();
   ({ resolution: closure_21, fps: closure_22 } = state);
-  tmpResult = tmp(tmp2[14]);
-  const runningGameAnalytics = tmpResult.getRunningGameAnalytics(tmp26);
+  let obj = require("AVError");
+  const runningGameAnalytics = require("GameAnalyticsUtils").getRunningGameAnalytics(tmp26);
   ({ gameName: closure_23, gameId: closure_24, exe: closure_25, distributor: closure_26 } = runningGameAnalytics);
   const isErrorOutbound = errorInfo.isErrorOutbound;
   if (mediaContext == tmp6) {
@@ -250,7 +251,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
   }
   inboundStats1 = tmp33;
-  let obj = require("AVError");
+  const tmpResult2 = require("GameAnalyticsUtils");
   mediaContext().then((cpu_brand) => {
     const obj = { error_name: error.valueOf(), error_code: errorInfo.errorCode, error_severity: errorInfo.severity, error_category: errorInfo.category, underlying_error: null, error_message: null, guild_id: null, channel_id: null, channel_type: null, rtc_connection_id: null, media_session_id: null, parent_media_session_id: null, context: null, voice_backend_version: null, rtc_worker_backend_version: null, guild_region: null, hostname: null, duration: null, participant_type: null, num_frames: null, num_packets: null, num_bytes: null, num_packets_lost: null, video_codec: null, video_encoder: null, video_decoder: null, audio_capture_sample_rate_mismatch_percent: null, audio_capture_processing_sample_rate: null, voice_processing_process_time_us: null, voice_processing_frame_count: null, voice_processing_sample_rate: null, voice_processing_setup_count: null, incoming_video_stopped_for_occlusion: null, bitrate: null, target_bitrate: null, fps: null, target_fps: null, sender_user_id: null, stream_region: null, stream_source_type: null, num_stream_viewers: null, video_input_resolution_height: null, video_input_frame_rate: null, screenshare_capture_method: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, cpu_brand: null, cpu_vendor: null, cpu_memory: null, gpu_brand: null, gpu_count: null, gpu_memory: null, gpu_device_vendor_id: null, gpu_device_device_id: null, gpu_device_sub_sys_id: null, gpu_device_revision: null, gpu_driver_version: null, cpu_usage: null, memory_usage: null, outbound_bitrate_estimate: null, inbound_bitrate_estimate: null, hardware_enabled: null, audio_input_device_name: null, audio_output_device_name: null, video_device_name: null, audio_subsystem: null, automatic_audio_subsystem: null, audio_layer: null, audio_input_mode: null, automatic_audio_input_sensitivity_enabled: null, audio_input_sensitivity: null, echo_cancellation_enabled: null, noise_suppression_enabled: null, noise_cancellation_enabled: null, automatic_gain_control_enabled: null, sidechain_compression_enabled: null, input_volume: null, output_volume: null, audio_input_device_count: null, audio_output_device_count: null, app_hardware_acceleration_enabled: null, input_device_os_muted: null, input_device_os_volume: null };
     let tmp = underlyingError;
@@ -846,8 +847,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       currentCPUUsagePercent = null;
     }
     obj.cpu_usage = currentCPUUsagePercent;
-    let tmp115Result = ProcessUtilsDefault;
-    let currentMemoryUsageKB = tmp115Result.getCurrentMemoryUsageKB();
+    obj5 = rTCConnection1;
+    let currentMemoryUsageKB = ProcessUtilsDefault.getCurrentMemoryUsageKB();
     if (currentMemoryUsageKB == null) {
       currentMemoryUsageKB = null;
     }
@@ -921,8 +922,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.output_volume = MediaEngineStore.getOutputVolume();
     obj.audio_input_device_count = Object.keys(MediaEngineStore.getInputDevices()).length;
     obj.audio_output_device_count = Object.keys(MediaEngineStore.getOutputDevices()).length;
-    tmp115Result = CrossPlatformNativeUtilsDefault;
-    obj.app_hardware_acceleration_enabled = tmp115Result.getAppHardwareAccelerationEnabled();
+    const tmp115Result = ProcessUtilsDefault;
+    obj.app_hardware_acceleration_enabled = CrossPlatformNativeUtilsDefault.getAppHardwareAccelerationEnabled();
     let inputDeviceOSMuted = MediaEngineStore.getInputDeviceOSMuted();
     if (inputDeviceOSMuted == null) {
       inputDeviceOSMuted = null;
@@ -933,8 +934,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       inputDeviceOSVolume = null;
     }
     obj.input_device_os_volume = inputDeviceOSVolume;
-    obj5 = rTCConnection1;
+    const tmp115Result3 = CrossPlatformNativeUtilsDefault;
     AnalyticsUtilsDefault.track(AnalyticEvents.AV_ERROR_REPORTED, obj);
-    const tmp115Result1 = AnalyticsUtilsDefault;
+    const tmp115Result4 = AnalyticsUtilsDefault;
   });
 };

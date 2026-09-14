@@ -1,6 +1,6 @@
-// === Module 11121: ChannelTabsActionCreators ===
+// === Module 11122: ChannelTabsActionCreators ===
 
-// Module 11121 (ChannelTabsActionCreators)
+// Module 11122 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import transitionToChannel from "transitionToChannel" /* 4647 */;
@@ -8,7 +8,7 @@ import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 *
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 11122 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 11123 */;
 
 require = fn;
 function navigateToTabLocation(found) {
@@ -29,7 +29,6 @@ function navigateToTabLocation(found) {
   }
 }
 function openChannelTabActive(id, guildId) {
-  let obj = SelectedChannelStore;
   const currentlySelectedChannelId = SelectedChannelStore.getCurrentlySelectedChannelId();
   if (0 === ChannelTabsStore.getTabs().length) {
     const channel = ChannelStore.getChannel(id);
@@ -44,9 +43,9 @@ function openChannelTabActive(id, guildId) {
     tmp4 = null != channel && channel.isGuildVocal();
   }
   if (!ChannelTabsStore.isAtMaxTabs()) {
-    obj = { type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: id, guildId, active: true };
-    DispatcherDefault.dispatch(obj);
-    if (obj.getCurrentlySelectedChannelId() !== id) {
+    const obj3 = { type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: id, guildId, active: true };
+    DispatcherDefault.dispatch(obj3);
+    if (SelectedChannelStore.getCurrentlySelectedChannelId() !== id) {
       const channel1 = ChannelStore.getChannel(id);
       if (tmp18) {
         ChannelRTCActionCreatorsDefault.updateChatOpen(id, true);
@@ -62,15 +61,14 @@ function openChannelTabActive(id, guildId) {
   }
 }
 function navigateActiveTabHistory(arg0) {
-  let obj = ChannelTabsStore;
   if (ChannelTabsStore.isEnabled()) {
-    const activeTab = obj.getActiveTab();
+    const activeTab = ChannelTabsStore.getActiveTab();
     if (null == activeTab) {
-      return obj.Passthrough;
+      return ChannelTabsStore.Passthrough;
     } else {
       if ("channel" === activeTab.kind) {
         if (SelectedChannelStore.getCurrentlySelectedChannelId() !== activeTab.channelId) {
-          return obj.Passthrough;
+          return ChannelTabsStore.Passthrough;
         }
       }
       const sum = activeTab.index + arg0;
@@ -81,30 +79,30 @@ function navigateActiveTabHistory(arg0) {
             if (-1 === arg0) {
               str3 = "CHANNEL_TABS_BACK";
             }
-            obj = { type: str3 };
-            DispatcherDefault.dispatch(obj);
+            const obj2 = { type: str3 };
+            DispatcherDefault.dispatch(obj2);
             router_utils.transitionTo(tmp34.routePath);
-            let Navigated = obj.Navigated;
+            let Navigated = ChannelTabsStore.Navigated;
           } else if (null == ChannelStore.getChannel(tmp34.channelId)) {
             if (null != tmp34.guildId) {
               let str2 = "CHANNEL_TABS_FORWARD";
               if (-1 === arg0) {
                 str2 = "CHANNEL_TABS_BACK";
               }
-              obj = { type: str2 };
-              DispatcherDefault.dispatch(obj);
+              const obj3 = { type: str2 };
+              DispatcherDefault.dispatch(obj3);
               router_utils.transitionTo(Routes.CHANNEL(tmp34.guildId, tmp34.channelId));
-              let Noop = obj.Navigated;
+              let Noop = ChannelTabsStore.Navigated;
             } else {
-              Noop = obj.Noop;
+              Noop = ChannelTabsStore.Noop;
             }
           } else {
             let str = "CHANNEL_TABS_FORWARD";
             if (-1 === arg0) {
               str = "CHANNEL_TABS_BACK";
             }
-            const obj1 = { type: str };
-            DispatcherDefault.dispatch(obj1);
+            const obj4 = { type: str };
+            DispatcherDefault.dispatch(obj4);
             ({ channelId, guildId } = tmp34);
             const channel = ChannelStore.getChannel(channelId);
             if (tmp8) {
@@ -116,16 +114,16 @@ function navigateActiveTabHistory(arg0) {
             } else {
               transitionToChannel.transitionToChannel(channelId);
             }
-            Navigated = obj.Navigated;
+            Navigated = ChannelTabsStore.Navigated;
             tmp8 = null != channel && channel.isGuildVocal();
           }
           return Navigated;
         }
       }
-      return obj.Noop;
+      return ChannelTabsStore.Noop;
     }
   } else {
-    return obj.Passthrough;
+    return ChannelTabsStore.Passthrough;
   }
 }
 const Routes = fn(1074).Routes;
@@ -153,14 +151,13 @@ export const openChannelTab = function openChannelTab(channelId, guildId) {
 };
 export { openChannelTabActive };
 export const openDuplicateTab = function openDuplicateTab() {
-  let obj = ChannelTabsStore;
   const activeTab = ChannelTabsStore.getActiveTab();
   if (null != activeTab) {
     if ("route" === activeTab.kind) {
-      if (!obj.isAtMaxTabs()) {
-        obj = { type: "CHANNEL_TABS_OPEN", kind: "route", routePath: null, routeLabel: null, active: true };
+      if (!ChannelTabsStore.isAtMaxTabs()) {
         ({ routePath: obj3.routePath, routeLabel: obj3.routeLabel } = activeTab);
-        DispatcherDefault.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "route", routePath: null, routeLabel: null, active: true });
+        const obj4 = { type: "CHANNEL_TABS_OPEN", kind: "route", routePath: null, routeLabel: null, active: true };
       }
     }
   }
@@ -187,8 +184,8 @@ export const openDuplicateTab = function openDuplicateTab() {
 };
 export const navigateToRoute = function navigateToRoute(routePath, routeLabel) {
   if (0 !== ChannelTabsStore.getTabs().length) {
-    const obj = { type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel };
-    obj.dispatch(obj);
+    const obj2 = { type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath, routeLabel };
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export { TabHistoryNavResult };
@@ -199,57 +196,51 @@ export const goForwardInActiveTab = function goForwardInActiveTab() {
   return navigateActiveTabHistory(1);
 };
 export const setChannelTabsEnabled = function setChannelTabsEnabled(enabled) {
-  const obj = { type: "CHANNEL_TABS_SET_ENABLED", enabled };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled });
 };
 export const selectChannelTab = function selectChannelTab(tabId) {
   closure_0 = tabId;
-  let obj = ChannelTabsStore;
   const tabs = ChannelTabsStore.getTabs();
   const found = tabs.find((id) => id.id === id);
   if (tmp2) {
-    obj = { type: "CHANNEL_TABS_SET_ACTIVE", tabId };
-    DispatcherDefault.dispatch(obj);
+    const obj3 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId };
+    DispatcherDefault.dispatch(obj3);
     navigateToTabLocation(found);
   }
-  tmp2 = null != found && obj.getActiveTabId() !== tabId;
+  tmp2 = null != found && ChannelTabsStore.getActiveTabId() !== tabId;
 };
 export const cycleChannelTab = function cycleChannelTab(arg0) {
-  let obj = ChannelTabsStore;
   const tabs = ChannelTabsStore.getTabs();
   if (tabs.length > 1) {
     const findIndexResult = tabs.findIndex((id) => id.id === activeTabId.getActiveTabId());
     if (-1 !== findIndexResult) {
       const id = tabs[(findIndexResult + arg0 + tabs.length) % tabs.length].id;
-      const tabs1 = obj.getTabs();
+      const tabs1 = ChannelTabsStore.getTabs();
       const found = tabs1.find((id) => id.id === id);
       if (tmp) {
-        obj = { type: "CHANNEL_TABS_SET_ACTIVE", tabId: id };
-        DispatcherDefault.dispatch(obj);
+        const obj3 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId: id };
+        DispatcherDefault.dispatch(obj3);
         navigateToTabLocation(found);
       }
-      tmp = null != found && obj.getActiveTabId() !== id;
+      tmp = null != found && ChannelTabsStore.getActiveTabId() !== id;
     }
   }
 };
 export const moveChannelTab = function moveChannelTab(tabId, toIndex) {
-  const obj = { type: "CHANNEL_TABS_MOVE", tabId, toIndex };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_MOVE", tabId, toIndex });
 };
 export const setChannelTabPinned = function setChannelTabPinned(tabId, pinned) {
-  const obj = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned });
 };
 export const closeChannelTab = function closeChannelTab(tabId) {
   closure_0 = tabId;
-  let obj = ChannelTabsStore;
   const tabs = ChannelTabsStore.getTabs();
   if (-1 !== tabs.findIndex((id) => id.id === closure_0)) {
-    const activeTabId = obj.getActiveTabId();
-    obj = { type: "CHANNEL_TABS_CLOSE", tabId };
-    DispatcherDefault.dispatch(obj);
+    const activeTabId = ChannelTabsStore.getActiveTabId();
+    const obj2 = { type: "CHANNEL_TABS_CLOSE", tabId };
+    DispatcherDefault.dispatch(obj2);
     if (activeTabId === tabId) {
-      const activeTab = obj.getActiveTab();
+      const activeTab = ChannelTabsStore.getActiveTab();
       if (null != activeTab) {
         navigateToTabLocation(activeTab);
       }

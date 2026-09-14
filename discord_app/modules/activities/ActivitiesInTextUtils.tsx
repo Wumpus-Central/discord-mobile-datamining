@@ -5,6 +5,8 @@ import ChannelTypes from "ChannelTypes" /* 1094 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function isActivityInTextSupportedForChannel(channel) {
   if (null == channel) {

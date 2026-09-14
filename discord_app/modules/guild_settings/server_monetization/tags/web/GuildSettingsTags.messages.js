@@ -33,10 +33,11 @@ import _mod2360 from "module_2360" /* 2360 */;
 import _mod2361 from "module_2361" /* 2361 */;
 import _mod2362 from "module_2362" /* 2362 */;
 import _mod2363 from "module_2363" /* 2363 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2333);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/tags/web/GuildSettingsTags.messages.js");
 
 export default messagesProxy;

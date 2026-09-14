@@ -6,15 +6,15 @@ import createExperiment from "module_4550" /* 4550 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: null };
+const obj = { kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: null };
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
 obj.treatments = items;
 let closure_2 = createExperiment.createExperiment(obj);
-obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj1 = { 1: null };
-obj1[1] = { enabled: true };
-obj.variations = obj1;
-let closure_3 = ApexExperiment.createApexExperiment(obj);
+const obj2 = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { enabled: true };
+obj2.variations = obj3;
+let closure_3 = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {

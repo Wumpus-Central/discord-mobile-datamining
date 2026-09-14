@@ -1,6 +1,6 @@
-// === Module 14574: ActivityShareLinkModal ===
+// === Module 14575: ActivityShareLinkModal ===
 
-// Module 14574 (ActivityShareLinkModal)
+// Module 14575 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -8,9 +8,9 @@ import LinkIcon from "LinkIcon" /* 4579 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
-import formatResults from "formatResults" /* 11113 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12261 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14573 */;
+import formatResults from "formatResults" /* 11114 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12262 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,20 +20,19 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10988).UserRowModes;
+let UserRowModes = fn(10989).UserRowModes;
 const MessageSendLocation = fn(4629).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = { headerLeftContainer: null, headerRightContainer: null, header: null, container: null };
-createStyles = { paddingLeft: nativeDefault.space.PX_16 };
-createStyles.headerLeftContainer = createStyles;
-createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-let obj1 = { paddingRight: nativeDefault.space.PX_16 };
-createStyles.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles.container = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let closure_14 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null, container: null };
+let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let obj4 = { paddingRight: nativeDefault.space.PX_16 };
+obj2.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let obj5 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.container = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/ActivityShareLinkModal.tsx");
 
@@ -47,9 +46,8 @@ export default function ActivityShareLinkModal(applicationId) {
   let first1;
   let first3;
   const tmp = first3();
-  let obj = applicationId(linkId[12]);
   const items = [first1];
-  const stateFromStores = obj.useStateFromStores(items, () => first1.getConnectedActivityChannelId());
+  const stateFromStores = applicationId(linkId[12]).useStateFromStores(items, () => first1.getConnectedActivityChannelId());
   const items1 = [stateFromStores];
   const memo = stateFromStores.useMemo(() => {
     let destinationIdFromChannelId;
@@ -58,6 +56,7 @@ export default function ActivityShareLinkModal(applicationId) {
     }
     return destinationIdFromChannelId;
   }, items1);
+  let obj = applicationId(linkId[12]);
   [tmp7, c6] = onShare(stateFromStores.useState(false), 2);
   const tmp8 = onShare(stateFromStores.useState(false), 2);
   const first = tmp8[0];
@@ -68,23 +67,23 @@ export default function ActivityShareLinkModal(applicationId) {
   const callback = stateFromStores.useCallback((arg0) => {
     closure_10(arg0);
   }, []);
-  let obj1 = applicationId(linkId[12]);
+  const tmp6 = onShare(stateFromStores.useState(false), 2);
   const items2 = [currentUser];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const stateFromStores1 = applicationId(linkId[12]).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const tmp13 = onShare(stateFromStores.useState(""), 2);
   const first2 = tmp13[0];
   closure_13 = tmp15;
   const items3 = [applicationId, stateFromStores1, customId, linkId, tmp13[1]];
   const effect = stateFromStores.useEffect(() => {
-    const obj = { applicationId, referrerId: null, customId: null, linkId: null };
+    const obj2 = { applicationId, referrerId: null, customId: null, linkId: null };
     let id;
     if (stateFromStores1 != null) {
       id = stateFromStores1.id;
     }
-    obj.referrerId = id;
-    obj.customId = customId;
-    obj.linkId = linkId;
-    closure_13(obj.getActivityLaunchURL(obj));
+    obj2.referrerId = id;
+    obj2.customId = customId;
+    obj2.linkId = linkId;
+    closure_13(getApplicationInstallURL.getActivityLaunchURL(obj2));
   }, items3);
   const items4 = [first, onShare];
   const callback1 = stateFromStores.useCallback(() => {
@@ -103,8 +102,8 @@ export default function ActivityShareLinkModal(applicationId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -117,16 +116,16 @@ export default function ActivityShareLinkModal(applicationId) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj1 = { value: Promise.all(first1.map(tmp2(11113).getOrResolveChannelIdFromDestinationId)), done: false };
-              return obj1;
+              let obj4 = { value: Promise.all(first1.map(tmp2(11114).getOrResolveChannelIdFromDestinationId)), done: false };
+              return obj4;
             } else {
               c3 = 3;
             }
@@ -136,7 +135,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1369).isNotNullish);
-          closure_128_1 = tmp2(14575).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_1 = tmp2(14576).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -147,8 +146,8 @@ export default function ActivityShareLinkModal(applicationId) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -161,19 +160,17 @@ export default function ActivityShareLinkModal(applicationId) {
                       throw value;
                     } else if (arg0 === 2) {
                       c1 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj5 = { value, done: true };
+                      return obj5;
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        let obj1 = closure_2_1(7559);
-                        let obj2 = closure_2_1(7784);
-                        obj1 = { location: constants.ACTIVITY_SHARE };
+                        const obj2 = closure_2_1(7559);
+                        const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        obj2 = { value: null, done: false };
-                        obj2.value = obj1.sendMessage(closure_0, obj2.parse(channel, c1), false, obj1);
-                        return obj2;
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7784).parse(channel, c1), false, obj6), done: false };
+                        return obj7;
                       }
                     }
                   } else if (arg0 === 1) {
@@ -181,7 +178,7 @@ export default function ActivityShareLinkModal(applicationId) {
                     throw value;
                   } else if (arg0 === 2) {
                     c1 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   }
                   c1 = 3;
@@ -203,19 +200,19 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          const obj5 = tmp2(14575);
-          let obj2 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
+          let obj5 = tmp2(14576);
+          let obj7 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
           const intl = tmp2(1114).intl;
-          const obj3 = { applicationName: closure_129_14.name };
-          obj2.content = intl.formatToPlainString(tmp2(1114).t.jQULqL, obj3);
-          tmp3(4335).open(obj2);
+          const obj8 = { applicationName: closure_129_14.name };
+          obj7.content = intl.formatToPlainString(tmp2(1114).t.jQULqL, obj8);
+          tmp3(4335).open(obj7);
           closure_129_4(true, closure_129_7);
-          const obj6 = tmp3(4335);
-          const result = tmp2(14573).closeActivityShareLinkModal();
-          const obj9 = tmp2(14573);
+          let obj6 = tmp3(4335);
+          const result = tmp2(14574).closeActivityShareLinkModal();
+          const obj9 = tmp2(14574);
         }
         c3 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } catch (tmp11) {
         c3 = tmp;
@@ -230,22 +227,22 @@ export default function ActivityShareLinkModal(applicationId) {
   }, items7);
   let height = customId(linkId[25])({ ignoreKeyboard: true }).height;
   const items8 = [height];
-  obj = {
+  let obj3 = {
     style: stateFromStores.useMemo(() => {
       height = "100%";
       return { height };
     }, items8),
     children: null
   };
-  obj = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
+  let obj7 = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
   let intl = applicationId(linkId[22]).intl;
-  obj.title = intl.string(applicationId(linkId[22]).t.r9qKow);
-  obj.headerTitle = function headerTitle(children) {
+  obj7.title = intl.string(applicationId(linkId[22]).t.r9qKow);
+  obj7.headerTitle = function headerTitle(children) {
     return closure_2_12(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle: message, variant: "redesign/heading-18/bold" });
   };
-  let obj4 = applicationId(linkId[30]);
-  obj.headerLeft = obj4.getHeaderCloseButton(callback1);
-  obj.headerRight = function headerRight(arg0) {
+  let obj2 = applicationId(linkId[12]);
+  obj7.headerLeft = applicationId(linkId[30]).getHeaderCloseButton(callback1);
+  obj7.headerRight = function headerRight(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = onPress;
@@ -255,33 +252,33 @@ export default function ActivityShareLinkModal(applicationId) {
     return closure_2_12(HeaderActionButton.HeaderActionButton, obj);
   };
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const tmp6 = onShare(stateFromStores.useState(false), 2);
+  let obj5 = applicationId(linkId[30]);
   let num = 0;
   if (!obj6.isIOS()) {
     num = customId(linkId[26])().top;
   }
-  obj.headerStatusBarHeight = num + customId(linkId[11]).space.PX_8;
-  const items9 = [first2(applicationId(linkId[28]).Header, obj), ];
-  obj1 = { style: tmp.container, children: null };
+  obj7.headerStatusBarHeight = num + customId(linkId[11]).space.PX_8;
+  const items9 = [first2(applicationId(linkId[28]).Header, obj7), ];
+  let obj8 = { style: tmp.container, children: null };
   const items10 = [first2(customId(linkId[33]), { absolute: true }), first2(customId(linkId[34]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
-  let obj3 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
+  const obj10 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
   let tmp24;
   if (!tmp7) {
     tmp24 = callback2;
   }
-  obj3.onPress = tmp24;
+  obj10.onPress = tmp24;
   if (1 === first1.length) {
     const intl3 = tmp2(tmp3[22]).intl;
     let stringResult = intl3.string(tmp2(tmp3[22]).t.TXNS7S);
   } else {
     const intl2 = tmp2(tmp3[22]).intl;
-    obj4 = { count: length };
-    stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.jWtYUm, obj4);
+    const obj16 = { count: length };
+    stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.jWtYUm, obj16);
   }
-  obj3.text = stringResult;
-  items10[2] = first2(applicationId(linkId[35]).ModalFloatingAction, obj3);
-  obj1.children = items10;
-  items9[1] = closure_13(c6, obj1);
-  obj.children = items9;
-  return closure_13(c6, obj);
+  obj10.text = stringResult;
+  items10[2] = first2(applicationId(linkId[35]).ModalFloatingAction, obj10);
+  obj8.children = items10;
+  items9[1] = closure_13(c6, obj8);
+  obj3.children = items9;
+  return closure_13(c6, obj3);
 };

@@ -1,17 +1,17 @@
-// === Module 1337: getSuperProperties ===
+// === Module 1335: getSuperProperties ===
 
-// Module 1337 (getSuperProperties)
+// Module 1335 (getSuperProperties)
 import Storage5 from "Storage" /* 510 */;
-import encodeProperties from "encodeProperties" /* 1335 */;
-import getSystemLocale2 from "getSystemLocale" /* 1338 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1339 */;
-import clientLaunchId from "clientLaunchId" /* 1340 */;
-import formatDefault from "format" /* 1341 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1342 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1343 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1344 */;
-import DesignIds from "DesignIds" /* 1345 */;
-import SessionStorage3 from "SessionStorage" /* 1346 */;
+import encodeProperties from "encodeProperties" /* 1333 */;
+import getSystemLocale2 from "getSystemLocale" /* 1336 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1337 */;
+import clientLaunchId from "clientLaunchId" /* 1338 */;
+import formatDefault from "format" /* 1339 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1340 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1341 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1342 */;
+import DesignIds from "DesignIds" /* 1343 */;
+import SessionStorage3 from "SessionStorage" /* 1344 */;
 import size from "module_2" /* 2 */;
 
 function getOS() {
@@ -141,38 +141,38 @@ if (null == obj) {
         value = tmp6;
       }
       const Storage3 = Storage5.Storage;
-      value = Storage3.get(referralProperties);
-      if (null == value) {
+      let value3 = Storage3.get(referralProperties);
+      if (null == value3) {
         obj = {};
         const Storage4 = Storage5.Storage;
         const result1 = Storage4.set(referralProperties, obj);
-        value = obj;
+        value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
-      let value1 = SessionStorage.get(referralProperties);
-      if (null == value1) {
-        obj = {};
-        obj = {};
+      let value4 = SessionStorage.get(referralProperties);
+      if (null == value4) {
+        const obj3 = {};
         const _Object = Object;
-        const keys = Object.keys(obj);
+        const keys = Object.keys({});
         const mapped = keys.map((item) => {
-          obj["" + item + "_current"] = obj[item];
-          return obj[item];
+          obj3["" + item + "_current"] = obj2[item];
+          return obj2[item];
         });
         const SessionStorage2 = SessionStorage3.SessionStorage;
-        const result2 = SessionStorage2.set(referralProperties, obj);
-        value1 = obj;
+        const result2 = SessionStorage2.set(referralProperties, obj3);
+        value4 = obj3;
+        const obj2 = {};
       }
-      const obj1 = {};
+      const obj4 = {};
       const merged = Object.assign(value);
-      obj1.browser_user_agent = window.navigator.userAgent || "";
-      obj1.browser_version = formatDefault.version || "";
+      obj4.browser_user_agent = window.navigator.userAgent || "";
+      obj4.browser_version = formatDefault.version || "";
       const tmp16 = formatDefault.version || "";
       const _default = NativeDeviceModule.default;
-      obj1.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
-      const merged1 = Object.assign(value);
-      const merged2 = Object.assign(value1);
-      return obj1;
+      obj4.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
+      const merged1 = Object.assign(value3);
+      const merged2 = Object.assign(value4);
+      return obj4;
     })();
   } catch (err) {
     obj = {};
@@ -185,7 +185,7 @@ function extendSuperProperties(arg0) {
   closure_4 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("6411", 10) };
+  obj = { client_build_number: parseInt("6417", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;

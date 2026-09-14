@@ -21,8 +21,8 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -35,28 +35,27 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
             throw value;
           } else if (arg0 === 2) {
             credentials = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if (undefined !== NativeModules.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
-            let obj1 = credentials(c1[3]);
-            const result = obj1.encodeUserIdForWebAuthn(closure_1);
+            const result = credentials(c1[3]).encodeUserIdForWebAuthn(closure_1);
             const mapped = credentials.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((item) => "" !== item);
-            obj1 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
-            logger.info("signalAllAcceptedCredentials", obj1);
+            const obj5 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
+            logger.info("signalAllAcceptedCredentials", obj5);
             const DCDSecurityKeyManager = tmp19.DCDSecurityKeyManager;
             const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(rpId, result, found);
             c1 = 1;
             credentials = 1;
-            const obj2 = { value: result1.catch(logger.warn), done: false };
-            return obj2;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           credentials = 3;
           throw value;
         } else if (arg0 === 2) {
           credentials = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         credentials = 3;
@@ -78,8 +77,8 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -92,11 +91,10 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if (undefined !== c3.DCDSecurityKeyManager.signalCurrentUserDetails) {
-            let obj1 = username(global_name[3]);
-            const result = obj1.encodeUserIdForWebAuthn(username.id);
+            const result = username(global_name[3]).encodeUserIdForWebAuthn(username.id);
             const email = username.email;
             global_name = email;
             if (email == null) {
@@ -107,21 +105,21 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
               username = tmp7.username;
             }
             username = tmp7.username;
-            obj1 = { rpId, encodedId: result, name: username, displayName: username };
-            logger.info("signalCurrentUserDetails", obj1);
+            const obj5 = { rpId, encodedId: result, name: username, displayName: username };
+            logger.info("signalCurrentUserDetails", obj5);
             const DCDSecurityKeyManager = tmp25.DCDSecurityKeyManager;
             const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(rpId, result, username, username);
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: result1.catch(logger.warn), done: false };
-            return obj2;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c2 = 3;
@@ -143,8 +141,8 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -157,20 +155,20 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             let _catch = NativeModules;
             if (undefined !== NativeModules.DCDSecurityKeyManager.signalUnknownCredential) {
-              let obj1 = closure_0;
+              let obj4 = closure_0;
               if (typeof closure_0 === "string") {
                 const _JSON = JSON;
-                let cred_id = JSON.parse(obj1).id;
+                let cred_id = JSON.parse(obj4).id;
               } else {
-                cred_id = obj1.cred_id;
+                cred_id = obj4.cred_id;
               }
-              obj1 = { rpId, credentialId: cred_id };
-              logger.info("signalUnknownCredential", obj1);
+              obj4 = { rpId, credentialId: cred_id };
+              logger.info("signalUnknownCredential", obj4);
               const DCDSecurityKeyManager = _catch.DCDSecurityKeyManager;
               const result = DCDSecurityKeyManager.signalUnknownCredential(rpId, cred_id);
               _catch = result.catch;
@@ -184,7 +182,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c0 = 3;

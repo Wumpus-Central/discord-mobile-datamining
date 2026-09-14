@@ -6,6 +6,8 @@ import FlagUtils from "FlagUtils" /* 1384 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const size = fn(2);

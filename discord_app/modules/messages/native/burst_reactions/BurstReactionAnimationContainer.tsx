@@ -1,6 +1,6 @@
-// === Module 17025: BurstReactionAnimationContainer ===
+// === Module 17027: BurstReactionAnimationContainer ===
 
-// Module 17025 (BurstReactionAnimationContainer)
+// Module 17027 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
@@ -36,17 +36,17 @@ function BurstReactionAnimationContainerInner() {
       DispatcherDefault.unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  require("ReanimatedRexport");
   let fn = function y() {
     if (null == first) {
-      let obj = { opacity: 0 };
+      let obj2 = { opacity: 0 };
     } else {
-      obj = { opacity: null };
+      const obj3 = { opacity: null };
       const tmp11 = timing;
       const withTiming = tmp11.withTiming;
-      const obj1 = { duration: 300 };
+      const obj4 = { duration: 300 };
       if (first1) {
-        obj.opacity = withTiming(1, obj1);
+        obj3.opacity = withTiming(1, obj4);
+        obj2 = obj3;
       } else {
         const fn = function n(arg0) {
           if (arg0) {
@@ -54,32 +54,34 @@ function BurstReactionAnimationContainerInner() {
             const obj = closure_0(dependencyMap[11]);
           }
         };
-        obj = { runOnJS: ReanimatedRexport.runOnJS, handleComponentFinish };
+        let obj = { runOnJS: ReanimatedRexport.runOnJS, handleComponentFinish };
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
         fn.__initData = __initData;
-        obj.opacity = withTiming(0, obj1, "respect-motion-settings", fn);
+        obj3.opacity = withTiming(0, obj4, "respect-motion-settings", fn);
+        obj2 = obj3;
       }
     }
-    return obj;
+    return obj2;
   };
-  let obj = { animationData, showAnimation: first1, withTiming: require("timing").withTiming, runOnJS: require("ReanimatedRexport").runOnJS, handleComponentFinish };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  const tmp6 = _require;
+  fn.__closure = { animationData, showAnimation: first1, withTiming: require("timing").withTiming, runOnJS: require("ReanimatedRexport").runOnJS, handleComponentFinish };
   fn.__workletHash = 12044515783370;
   fn.__initData = __initData;
   closure_7 = obj.useAnimatedStyle(fn);
   let tmp8 = null;
   if (null != animationData) {
-    obj = { contentTypes: null, children: null };
-    let items = [require("dismissible_content").DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
-    obj.contentTypes = items;
-    obj.children = function children(markAsDismissed) {
+    let obj3 = { contentTypes: null, children: null };
+    let items = [tmp6(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    obj3.contentTypes = items;
+    obj3.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
-      let obj = { style: markAsDismissed.fill, children: null };
-      obj = { style: null, children: null };
+      const obj = { style: markAsDismissed.fill, children: null };
+      const obj2 = { style: null, children: null };
       const items = [markAsDismissed.fill, closure_7];
-      obj.style = items;
-      obj = {
+      obj2.style = items;
+      const obj3 = {
         activeOpacity: closure_0(7886).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
@@ -90,41 +92,41 @@ function BurstReactionAnimationContainerInner() {
         children: null
       };
       const items1 = [closure_1_8(handleComponentFinish, { style: markAsDismissed.background }), , ];
-      const obj2 = { style: markAsDismissed.fill, children: null };
+      const obj5 = { style: markAsDismissed.fill, children: null };
       let tmpResult = null;
       if (first1) {
-        const obj3 = { isFullscreen: true, channelId: null, messageId: null, emoji: null, loop: false, withFadeOut: false, onComplete: null };
+        const obj7 = { isFullscreen: true, channelId: null, messageId: null, emoji: null, loop: false, withFadeOut: false, onComplete: null };
         ({ channelId: obj6.channelId, messageId: obj6.messageId, emoji: obj6.emoji } = first);
-        obj3.onComplete = function onComplete(arg0) {
+        obj7.onComplete = function onComplete(arg0) {
           if (!arg0) {
             closure_1_4(false);
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(7928), obj3);
+        tmpResult = closure_1_8(first(7928), obj7);
       }
-      obj2.children = tmpResult;
-      items1[1] = closure_1_8(handleComponentFinish, obj2);
+      obj5.children = tmpResult;
+      items1[1] = closure_1_8(handleComponentFinish, obj5);
       let tmp6Result = markAsDismissed.visibleContent === closure_0(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
-        const obj4 = { children: null };
-        const obj5 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
+        const obj8 = { children: null };
+        const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
         const intl = closure_0(1114).intl;
-        obj5.children = intl.string(closure_0(1114).t.QpPMih);
-        const items2 = [closure_1_8(closure_0(4632).Text, obj5), ];
-        const obj6 = { style: tmp4.dismissTextBackground };
-        items2[1] = closure_1_8(handleComponentFinish, obj6);
-        obj4.children = items2;
-        tmp6Result = closure_1_10(closure_1_9, obj4);
+        obj9.children = intl.string(closure_0(1114).t.QpPMih);
+        const items2 = [closure_1_8(closure_0(4632).Text, obj9), ];
+        const obj17 = { style: tmp4.dismissTextBackground };
+        items2[1] = closure_1_8(handleComponentFinish, obj17);
+        obj8.children = items2;
+        tmp6Result = closure_1_10(closure_1_9, obj8);
       }
       items1[2] = tmp6Result;
-      obj.children = items1;
-      obj.children = closure_1_10(closure_5, obj);
-      obj.children = closure_1_8(first(4373).View, obj);
-      return closure_1_8(closure_0(1178).OverlayView, obj);
+      obj3.children = items1;
+      obj2.children = closure_1_10(closure_5, obj3);
+      obj.children = closure_1_8(first(4373).View, obj2);
+      return closure_1_8(closure_0(1176).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10753), obj);
-    let tmp11 = animationData(10753);
+    tmp8 = closure_8(animationData(10754), obj3);
+    let tmp11 = animationData(10754);
   }
   return tmp8;
 }
@@ -133,23 +135,23 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.backgroundColor = nativeDefault.colors.BLACK;
-createStyles.opacity = fn(7886).BACKDROP_OPACITY;
-createStyles.background = createStyles;
-let obj1 = {};
+obj3.backgroundColor = nativeDefault.colors.BLACK;
+obj3.opacity = fn(7886).BACKDROP_OPACITY;
+obj2.background = obj3;
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj1.flex = 1;
-obj1.alignItems = "center";
-obj1.justifyContent = "center";
-createStyles.fill = obj1;
-createStyles.dismissTextContainer = { position: "absolute", bottom: 48, zIndex: 1 };
+obj4.flex = 1;
+obj4.alignItems = "center";
+obj4.justifyContent = "center";
+obj2.fill = obj4;
+obj2.dismissTextContainer = { position: "absolute", bottom: 48, zIndex: 1 };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.round, position: "absolute", bottom: -600, height: 700, width: 700 };
-createStyles.dismissTextBackground = size;
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.dismissTextBackground = size;
+let closure_11 = createStyles.createStyles(obj2);
 const __initData = { code: "function BurstReactionAnimationContainerTsx1(){const{animationData,showAnimation,withTiming,runOnJS,handleComponentFinish}=this.__closure;if(animationData==null){return{opacity:0};}if(!showAnimation){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(handleComponentFinish)();})};}return{opacity:withTiming(1,{duration:300})};}" };
 let closure_13 = { code: "function BurstReactionAnimationContainerTsx2(finished){const{runOnJS,handleComponentFinish}=this.__closure;if(finished)runOnJS(handleComponentFinish)();}" };
 size = fn(2);

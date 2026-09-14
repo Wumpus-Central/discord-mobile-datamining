@@ -1,9 +1,11 @@
-// === Module 14575: activityShareLink ===
+// === Module 14576: activityShareLink ===
 
-// Module 14575 (activityShareLink)
+// Module 14576 (activityShareLink)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import findCodedLinks from "findCodedLinks" /* 4619 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const items = [findCodedLinks.parseQuestsEmbedCode];
 const result = size.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");

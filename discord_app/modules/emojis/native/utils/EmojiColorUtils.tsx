@@ -1,6 +1,6 @@
-// === Module 16173: utils/EmojiColorUtils ===
+// === Module 16175: utils/EmojiColorUtils ===
 
-// Module 16173 (utils/EmojiColorUtils)
+// Module 16175 (utils/EmojiColorUtils)
 import privDefault from "priv" /* 1437 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -15,8 +15,8 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp6;
           closure_129_0 = undefined;
@@ -50,20 +50,20 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_129_4 = closure_129_0.get(closure_129_1);
           if (null != closure_129_4) {
             c4 = 3;
-            const obj2 = { value: closure_129_4, done: true };
-            return obj2;
+            const obj5 = { value: closure_129_4, done: true };
+            return obj5;
           } else {
             c3 = 1;
             c2 = 3;
             c4 = 1;
-            const obj3 = { value: closure_129_3(closure_129_2), done: false };
-            return obj3;
+            const obj6 = { value: closure_129_3(closure_129_2), done: false };
+            return obj6;
           }
         }
       } else if (2 === tmp6) {
@@ -76,8 +76,8 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
       } else if (arg0 === 2) {
         c3 = 0;
         c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_5 = value;
         if (null != closure_129_5) {
@@ -85,7 +85,7 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0) {
         }
         c3 = 0;
         c4 = 3;
-        obj = { value: closure_129_5, done: true };
+        const obj = { value: closure_129_5, done: true };
         return obj;
       }
     } catch (tmp24) {
@@ -106,8 +106,8 @@ let closure_5 = async function _getEmojiDominantColors(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -120,8 +120,8 @@ let closure_5 = async function _getEmojiDominantColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -138,13 +138,13 @@ let closure_5 = async function _getEmojiDominantColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = { cache: closure_131_2, cacheKey: closure_131_3(closure_130_0), fallbackParam: closure_130_1, fallbackFunc: closure_131_1.ImageManager.getDominantColors };
+          const obj5 = { cache: closure_131_2, cacheKey: closure_131_3(closure_130_0), fallbackParam: closure_130_1, fallbackFunc: closure_131_1.ImageManager.getDominantColors };
           c4 = 2;
           c5 = 1;
-          const obj3 = {
+          const obj6 = {
             value: (function _getFromCacheOrFallback() {
                       const self = this;
                       const apply = closure_1_4.apply;
@@ -154,24 +154,24 @@ let closure_5 = async function _getEmojiDominantColors(arg0) {
                         applyArgumentsResult = apply(self, arguments);
                       }
                       return applyArgumentsResult;
-                    })(obj2),
+                    })(obj5),
             done: false
           };
-          return obj3;
+          return obj6;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         if (value == null) {
           value = [];
         }
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp15) {

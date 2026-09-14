@@ -69,21 +69,17 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   if ("" === content) {
     return null;
   } else {
-    let obj = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji, unknownUserMentionPlaceholder: true, guildId, channelId, muted: null };
+    const obj4 = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji, unknownUserMentionPlaceholder: true, guildId, channelId, muted: null };
     if (muted == null) {
       muted = false;
     }
-    obj.muted = muted;
-    obj = { content, layout, color, initialParserState: null, fontScale: null, maxFontSizeMultiplier: null, postProcessor: null };
-    obj.initialParserState = obj;
-    obj.fontScale = num;
-    obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    obj.postProcessor = postProcessor;
+    obj4.muted = muted;
+    const obj = { content, layout, color, initialParserState: obj4, fontScale: num, maxFontSizeMultiplier, postProcessor };
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
     const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout, color, num, maxFontSizeMultiplier)];
     const tmp7Result = combineMarkupRulesDefault(items);
     const obj2 = _modDef4333;
-    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
   }
 };
 export const messagePreviewASTCache = tmp2;

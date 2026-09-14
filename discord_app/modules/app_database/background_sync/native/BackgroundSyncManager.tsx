@@ -1,7 +1,7 @@
-// === Module 17432: BackgroundSyncManager ===
+// === Module 17434: BackgroundSyncManager ===
 
-// Module 17432 (BackgroundSyncManager)
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17433 */;
+// Module 17434 (BackgroundSyncManager)
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17435 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

@@ -1,8 +1,8 @@
-// === Module 13437: acomRetry ===
+// === Module 13438: acomRetry ===
 
-// Module 13437 (acomRetry)
+// Module 13438 (acomRetry)
 import BackoffDefault from "Backoff" /* 559 */;
-import ErrorUtilsAll from "ErrorUtils" /* 13433 */;
+import ErrorUtilsAll from "ErrorUtils" /* 13434 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -41,8 +41,8 @@ let closure_10 = async function _retryACOMRequest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -55,8 +55,8 @@ let closure_10 = async function _retryACOMRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
@@ -83,20 +83,20 @@ let closure_10 = async function _retryACOMRequest(arg0) {
         closure_130_6 = closure_5;
         closure_130_5 = closure_131_8(closure_130_6);
         if (closure_130_5 === closure_131_6.REPEATED_REQUEST_REFERENCE_ID) {
-          const obj1 = { kind: "already_applied", error: closure_130_6 };
+          const obj4 = { kind: "already_applied", error: closure_130_6 };
           c7 = 3;
-          const obj2 = { value: obj1, done: true };
-          return obj2;
+          const obj5 = { value: obj4, done: true };
+          return obj5;
         } else {
           if (closure_131_9(closure_130_5)) {
             if (3 !== closure_130_4) {
               const _Date = Date;
               if (Date.now() < closure_130_3) {
-                const promise = new Promise((arg0) => obj8.fail(arg0));
+                const promise = new Promise((arg0) => obj11.fail(arg0));
                 c6 = 3;
                 c7 = 1;
-                const obj3 = { value: promise, done: false };
-                return obj3;
+                const obj6 = { value: promise, done: false };
+                return obj6;
               }
             }
           }
@@ -109,14 +109,14 @@ let closure_10 = async function _retryACOMRequest(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          obj8.value = value;
+          obj11.value = value;
           c4 = 0;
           c7 = 3;
-          const obj5 = { value: obj8, done: true };
-          return obj5;
+          const obj8 = { value: obj11, done: true };
+          return obj8;
         }
       } else if (3 === tmp7) {
         if (arg0 === 1) {
@@ -124,8 +124,8 @@ let closure_10 = async function _retryACOMRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           const items = [closure_131_1(closure_131_3[4]).awaitOnline(), ];
           const obj13 = closure_131_1(closure_131_3[4]);
@@ -134,15 +134,15 @@ let closure_10 = async function _retryACOMRequest(arg0) {
           items[1] = closure_131_0(closure_131_3[5]).timeoutPromise(Math.max(0, closure_130_3 - Date.now()));
           c6 = 4;
           c7 = 1;
-          const obj7 = { value: Promise.race(items), done: false };
-          return obj7;
+          const obj10 = { value: Promise.race(items), done: false };
+          return obj10;
         }
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else if (id2 !== closure_131_5.getId()) {
         throw closure_130_6;
@@ -150,11 +150,11 @@ let closure_10 = async function _retryACOMRequest(arg0) {
         closure_130_4 = closure_130_4 + 1;
       }
       c4 = 1;
-      obj8 = { kind: "completed" };
+      obj11 = { kind: "completed" };
       c6 = 2;
       c7 = 1;
-      const obj9 = { value: closure_130_0(), done: false };
-      return obj9;
+      const obj12 = { value: closure_130_0(), done: false };
+      return obj12;
     } catch (tmp45) {
       closure_5 = tmp45;
       if (tmp4 === c4) {

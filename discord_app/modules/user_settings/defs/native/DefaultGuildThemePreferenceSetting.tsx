@@ -1,15 +1,15 @@
-// === Module 15395: DefaultGuildThemePreferenceSetting ===
+// === Module 15396: DefaultGuildThemePreferenceSetting ===
 
-// Module 15395 (DefaultGuildThemePreferenceSetting)
+// Module 15396 (DefaultGuildThemePreferenceSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4564 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
@@ -22,25 +22,24 @@ let SettingBuilders = {
   },
   useOptions: function useDefaultGuildThemePreferenceOptions() {
     return noop.useMemo(() => {
-      let obj = { label: null, value: null };
+      const obj = { label: null, value: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.aN3RNQ);
       obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
       const items = [obj, ];
-      obj = { label: null, value: null };
+      const obj2 = { label: null, value: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.js8y7t);
-      obj.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
-      items[1] = obj;
+      obj2.label = intl2.string(util.t.js8y7t);
+      obj2.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
+      items[1] = obj2;
       return items;
     }, []);
   },
   usePredicate() {
     return ServerThemeUserExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   }
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

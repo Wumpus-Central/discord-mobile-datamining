@@ -21,12 +21,12 @@ function SteamReviewRow(url) {
   const tmp = closure_9();
   const tmp4Result = trackAction(8806)(trackAction(4331).openURL);
   dependencyMap = tmp4Result;
-  let obj = url(8848);
-  const result = obj.calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating);
-  let obj1 = url(8849);
+  const tmp4 = trackAction(8806);
+  const result = url(8848).calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating);
+  const obj = url(8848);
   const items = [tmp4Result, url, trackAction];
-  const steamReviewScoreDescriptionColor = obj1.getSteamReviewScoreDescriptionColor(result);
-  obj = {
+  const steamReviewScoreDescriptionColor = url(8849).getSteamReviewScoreDescriptionColor(result);
+  const obj3 = {
     onPress: noop.useCallback(() => {
       trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.SteamReviews);
       closure_2(url);
@@ -37,37 +37,37 @@ function SteamReviewRow(url) {
     children: null
   };
   const intl = url(1114).intl;
-  obj.accessibilityLabel = intl.string(url(1114).t.YNC5Di);
+  obj3.accessibilityLabel = intl.string(url(1114).t.YNC5Di);
   const items1 = [tmp.reviewRow, ];
   if (showBorderBottom) {
     showBorderBottom = tmp.reviewRowNotLast;
   }
   items1[1] = showBorderBottom;
-  obj.style = items1;
-  obj = { style: tmp.steamNameContainer, children: null };
-  obj1 = { size: "sm", color: trackAction(576).colors.ICON_STRONG };
-  const items2 = [closure_7(url(8817).SteamNeutralIcon, obj1), closure_7(url(4632).Text, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title })];
-  obj.children = items2;
-  const items3 = [closure_8(closure_4, obj), ];
-  const obj2 = { style: tmp.steamRatingContainer, children: null };
-  const obj3 = { variant: "text-sm/medium", color: steamReviewScoreDescriptionColor, children: null };
-  const tmp4 = trackAction(8806);
-  obj3.children = url(8849).getSteamReviewScoreDescriptionIntl(result);
-  const items4 = [closure_7(url(4632).Text, obj3), ];
+  obj3.style = items1;
+  const obj4 = { style: tmp.steamNameContainer, children: null };
+  const obj2 = url(8849);
+  const items2 = [closure_7(url(8817).SteamNeutralIcon, { size: "sm", color: trackAction(576).colors.ICON_STRONG }), closure_7(url(4632).Text, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title })];
+  obj4.children = items2;
+  const items3 = [closure_8(closure_4, obj4), ];
+  const obj6 = { style: tmp.steamRatingContainer, children: null };
+  const obj7 = { variant: "text-sm/medium", color: steamReviewScoreDescriptionColor, children: null };
+  const obj5 = { size: "sm", color: trackAction(576).colors.ICON_STRONG };
+  obj7.children = url(8849).getSteamReviewScoreDescriptionIntl(result);
+  const items4 = [closure_7(url(4632).Text, obj7), ];
   let tmp12Result = null != ratingCount && result !== tmp6(1934).SteamReviewScoreDescription.NO_USER_REVIEWS;
   if (tmp12Result) {
-    const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+    const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     const intl2 = tmp6(1114).intl;
-    const obj5 = { rating_count: ratingCount.toLocaleString() };
-    obj4.children = intl2.format(tmp6(1114).t.sgIoin, obj5).toString();
-    tmp12Result = closure_7(tmp6(4632).Text, obj4);
-    const str = intl2.format(tmp6(1114).t.sgIoin, obj5);
+    const obj9 = { rating_count: ratingCount.toLocaleString() };
+    obj8.children = intl2.format(tmp6(1114).t.sgIoin, obj9).toString();
+    tmp12Result = closure_7(tmp6(4632).Text, obj8);
+    const str = intl2.format(tmp6(1114).t.sgIoin, obj9);
   }
   items4[1] = tmp12Result;
-  obj2.children = items4;
-  items3[1] = closure_8(closure_4, obj2);
-  obj.children = items3;
-  return closure_8(closure_5, obj);
+  obj6.children = items4;
+  items3[1] = closure_8(closure_4, obj6);
+  obj3.children = items3;
+  return closure_8(closure_5, obj3);
 }
 function OpenCriticReview(url) {
   url = url.url;
@@ -80,7 +80,7 @@ function OpenCriticReview(url) {
     opencritic = reviews.opencritic;
   }
   if (opencritic == null) {
-    opencritic = { topCriticRating: "justifyContent", topCriticRatingCount: "call", tier: "window" };
+    opencritic = { topCriticRating: "test", topCriticRatingCount: "call", tier: "intl" };
   }
   ({ tier, topCriticRating } = opencritic);
   if (topCriticRating == null) {
@@ -99,37 +99,36 @@ function OpenCriticReview(url) {
     closure_2(url);
   }, items);
   if (null != tier) {
-    let obj1 = url(8850);
-    str = obj1.getOpenCriticTierText(tier);
+    str = url(8850).getOpenCriticTierText(tier);
+    const obj2 = url(8850);
   }
   if (null != tier) {
-    let obj3 = url(8850);
-    let openCriticCircleRatingColor = obj3.getOpenCriticCircleRatingColor(tier);
+    let openCriticCircleRatingColor = url(8850).getOpenCriticCircleRatingColor(tier);
+    const obj4 = url(8850);
   } else {
     openCriticCircleRatingColor = { foregroundColor: "", backgroundColor: "" };
   }
-  let obj = { onPress: callback, accessibilityRole: "link", accessibilityLabel: null, style: null, children: null };
+  const obj = { onPress: callback, accessibilityRole: "link", accessibilityLabel: null, style: null, children: null };
   ({ foregroundColor, backgroundColor } = openCriticCircleRatingColor);
   const intl = url(1114).intl;
   obj.accessibilityLabel = intl.string(url(1114).t.aLNBAw);
   obj.style = tmp.reviewRow;
-  obj = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = url(1114).intl;
-  obj.children = intl2.string(url(1114).t["UxvER+"]);
-  const items1 = [closure_7(url(4632).Text, obj), ];
-  obj1 = { style: tmp.opencriticRightContainer, children: null };
+  obj3.children = intl2.string(url(1114).t["UxvER+"]);
+  const items1 = [closure_7(url(4632).Text, obj3), ];
+  const obj5 = { style: tmp.opencriticRightContainer, children: null };
   let tmp12Result = null;
   if (null != tier) {
-    const obj2 = { style: tmp.opencriticTopCriticContainer, accessibilityLabel: str, accessibilityRole: "image", children: null };
-    obj3 = { source: null, style: null, accessible: true, accessibilityLabel: null };
-    const obj4 = { uri: null };
-    let tmp11Result = tmp11(8850);
-    obj4.uri = tmp11Result.getOpenCriticTierImage(tier);
-    obj3.source = obj4;
-    obj3.style = tmp.opencriticTopCriticImage;
-    obj3.accessibilityLabel = str;
-    obj2.children = closure_7(closure_6, obj3);
-    tmp12Result = closure_7(closure_4, obj2);
+    const obj6 = { style: tmp.opencriticTopCriticContainer, accessibilityLabel: str, accessibilityRole: "image", children: null };
+    const obj7 = { source: null, style: null, accessible: true, accessibilityLabel: null };
+    const obj8 = { uri: tmp11(8850).getOpenCriticTierImage(tier) };
+    obj7.source = obj8;
+    obj7.style = tmp.opencriticTopCriticImage;
+    obj7.accessibilityLabel = str;
+    obj6.children = closure_7(closure_6, obj7);
+    tmp12Result = closure_7(closure_4, obj6);
+    const tmp11Result = tmp11(8850);
   }
   const items2 = [tmp12Result, , ];
   let tmp9Result = null;
@@ -138,43 +137,42 @@ function OpenCriticReview(url) {
     if (topCriticRating > 0) {
       tmp9Result = null;
       if (num > 0) {
-        const obj5 = { style: null, accessibilityLabel: null, accessibilityRole: "image", children: null };
+        const obj9 = { style: null, accessibilityLabel: null, accessibilityRole: "image", children: null };
         const items3 = [tmp.opencriticTopCriticContainer, ];
-        const obj6 = { backgroundColor };
-        items3[1] = obj6;
-        obj5.style = items3;
+        const obj10 = { backgroundColor };
+        items3[1] = obj10;
+        obj9.style = items3;
         const intl3 = tmp11(1114).intl;
-        obj5.accessibilityLabel = intl3.string(tmp11(1114).t.Ub4YR1);
-        const obj7 = { rating: topCriticRating, strokeColor: foregroundColor, size: 32 };
-        const items4 = [closure_7(trackAction(8856), obj7), ];
-        const obj8 = { style: tmp.opencriticTopCriticRatingContainer, children: null };
-        const obj9 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
+        obj9.accessibilityLabel = intl3.string(tmp11(1114).t.Ub4YR1);
+        const obj11 = { rating: topCriticRating, strokeColor: foregroundColor, size: 32 };
+        const items4 = [closure_7(trackAction(8856), obj11), ];
+        const obj12 = { style: tmp.opencriticTopCriticRatingContainer, children: null };
+        const obj13 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
         const _Math = Math;
-        obj9.children = Math.floor(topCriticRating);
-        obj8.children = closure_7(tmp11(4632).Text, obj9);
-        items4[1] = closure_7(closure_4, obj8);
-        obj5.children = items4;
-        tmp9Result = closure_8(closure_4, obj5);
+        obj13.children = Math.floor(topCriticRating);
+        obj12.children = closure_7(tmp11(4632).Text, obj13);
+        items4[1] = closure_7(closure_4, obj12);
+        obj9.children = items4;
+        tmp9Result = closure_8(closure_4, obj9);
       }
     }
   }
   items2[1] = tmp9Result;
   if (topCriticRating <= 0) {
-    tmp12Result = null;
+    let tmp12Result2 = null;
     if (null == tier) {
-      const obj10 = { variant: "text-xs/medium", color: null, children: null };
-      tmp11Result = tmp11(8849);
-      obj10.color = tmp11Result.getSteamReviewScoreDescriptionColor(tmp11(1934).SteamReviewScoreDescription.NO_USER_REVIEWS);
+      const obj14 = { variant: "text-xs/medium", color: tmp11(8849).getSteamReviewScoreDescriptionColor(tmp11(1934).SteamReviewScoreDescription.NO_USER_REVIEWS), children: null };
       const intl4 = tmp11(1114).intl;
-      obj10.children = intl4.string(tmp11(1114).t["0xYzpO"]);
-      tmp12Result = closure_7(tmp11(4632).Text, obj10);
+      obj14.children = intl4.string(tmp11(1114).t["0xYzpO"]);
+      tmp12Result2 = closure_7(tmp11(4632).Text, obj14);
+      const tmp11Result2 = tmp11(8849);
     }
   } else {
-    tmp12Result = null;
+    tmp12Result2 = null;
   }
-  items2[2] = tmp12Result;
-  obj1.children = items2;
-  items1[1] = closure_8(closure_4, obj1);
+  items2[2] = tmp12Result2;
+  obj5.children = items2;
+  items1[1] = closure_8(closure_4, obj5);
   obj.children = items1;
   return closure_8(closure_5, obj);
 }
@@ -182,40 +180,38 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, headerText: null, reviewContainer: null, reviewRow: null, reviewRowNotLast: null, steamNameContainer: null, steamRatingContainer: null, opencriticRightContainer: null, opencriticTopCriticContainer: null, opencriticTopCriticImage: null, opencriticTopCriticRatingContainer: null };
-createStyles = { gap: nativeDefault.space.PX_8 };
-createStyles.container = createStyles;
-createStyles.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.reviewContainer = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-let obj2 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-createStyles.reviewRow = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_12 };
-let obj3 = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_12 };
-createStyles.reviewRowNotLast = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj4 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-createStyles.steamNameContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-createStyles.steamRatingContainer = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_4 };
-let obj6 = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_4 };
-createStyles.opencriticRightContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+const createStyles = fn(4636);
+let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, reviewContainer: null, reviewRow: null, reviewRowNotLast: null, steamNameContainer: null, steamRatingContainer: null, opencriticRightContainer: null, opencriticTopCriticContainer: null, opencriticTopCriticImage: null, opencriticTopCriticRatingContainer: null };
+let obj3 = { gap: nativeDefault.space.PX_8 };
+obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.reviewContainer = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+let obj5 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+obj2.reviewRow = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_12 };
+let obj6 = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_12 };
+obj2.reviewRowNotLast = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj7 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj2.steamNameContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.steamRatingContainer = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_4 };
+let obj9 = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_4 };
+obj2.opencriticRightContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
-createStyles.opencriticTopCriticContainer = size;
-createStyles.opencriticTopCriticImage = { width: 32, height: 32 };
-createStyles.opencriticTopCriticRatingContainer = { position: "absolute", top: 0, left: 1, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.opencriticTopCriticContainer = size;
+obj2.opencriticTopCriticImage = { width: 32, height: 32 };
+obj2.opencriticTopCriticRatingContainer = { position: "absolute", top: 0, left: 1, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" };
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileReviews.tsx");
 
 export default function GameProfileReviews(arg0) {
   ({ game, trackAction } = arg0);
   const tmp = closure_9();
-  let obj = useSteamWebsiteUrl;
   let id;
   if (game != null) {
     id = game.id;
   }
-  const steamWebsiteUrl = obj.useSteamWebsiteUrl(id);
+  const steamWebsiteUrl = useSteamWebsiteUrl.useSteamWebsiteUrl(id);
   if (game != null) {
     const opencriticUrl = game.opencriticUrl;
   }
@@ -228,20 +224,19 @@ export default function GameProfileReviews(arg0) {
     if (reviews != null) {
       steam = reviews.steam;
     }
-    let tmp2Result = calculateSteamReviewScoreDescription2;
-    const calculateSteamReviewScoreDescription = tmp2Result.calculateSteamReviewScoreDescription;
+    const calculateSteamReviewScoreDescription = calculateSteamReviewScoreDescription2.calculateSteamReviewScoreDescription;
     if (steam != null) {
-      let recentRating = steam.recentRating;
+      const recentRating = steam.recentRating;
     }
     if (steam != null) {
-      let recentRatingCount = steam.recentRatingCount;
+      const recentRatingCount = steam.recentRatingCount;
     }
     let tmp10 = tmp6;
     if (tmp6) {
       tmp10 = tmp9 !== GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS;
     }
-    tmp2Result = GameProfileReviewUtils;
-    const result = tmp2Result.canShowLocalizedSteamReview(steam);
+    const tmp2Result = calculateSteamReviewScoreDescription2;
+    const result = GameProfileReviewUtils.canShowLocalizedSteamReview(steam);
     if (result) {
       let localizedRating;
       if (!tmp12) {
@@ -272,65 +267,66 @@ export default function GameProfileReviews(arg0) {
       }
       return tmp20Result;
     }
-    obj = { style: tmp.container, children: null };
-    obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
     const intl = util.intl;
-    obj.children = intl.string(util.t.GaAQXP);
-    const items = [React5(Text_Text.Text, obj), ];
-    const obj1 = { style: tmp.reviewContainer, children: null };
+    obj3.children = intl.string(util.t.GaAQXP);
+    const items = [React5(Text_Text.Text, obj3), ];
+    const obj4 = { style: tmp.reviewContainer, children: null };
     let tmp22Result = null;
     if (tmp10) {
       tmp22Result = null;
       if (null != steamWebsiteUrl) {
-        const obj2 = { url: steamWebsiteUrl, showBorderBottom: null, trackAction: null, title: null, rating: null, ratingCount: null, isRecentRating: true };
+        const obj5 = { url: steamWebsiteUrl, showBorderBottom: null, trackAction: null, title: null, rating: null, ratingCount: null, isRecentRating: true };
         let tmp25 = tmp6;
         if (!tmp6) {
           tmp25 = tmp18;
         }
-        obj2.showBorderBottom = tmp25;
-        obj2.trackAction = trackAction;
+        obj5.showBorderBottom = tmp25;
+        obj5.trackAction = trackAction;
         const intl2 = util.intl;
-        obj2.title = intl2.string(util.t.MQGNsN);
-        recentRating = undefined;
+        obj5.title = intl2.string(util.t.MQGNsN);
+        let recentRating1;
         if (steam != null) {
-          recentRating = steam.recentRating;
+          recentRating1 = steam.recentRating;
         }
-        obj2.rating = recentRating;
-        recentRatingCount = undefined;
+        obj5.rating = recentRating1;
+        let recentRatingCount1;
         if (steam != null) {
-          recentRatingCount = steam.recentRatingCount;
+          recentRatingCount1 = steam.recentRatingCount;
         }
-        obj2.ratingCount = recentRatingCount;
-        tmp22Result = React5(SteamReviewRow, obj2);
+        obj5.ratingCount = recentRatingCount1;
+        tmp22Result = React5(SteamReviewRow, obj5);
       }
     }
     const items1 = [tmp22Result, , ];
-    tmp22Result = null;
+    let tmp22Result3 = null;
     if (tmp6) {
-      tmp22Result = null;
+      tmp22Result3 = null;
       if (null != steamWebsiteUrl) {
-        const obj3 = { url: steamWebsiteUrl, showBorderBottom: tmp18, trackAction, title: null, rating: null, ratingCount: null, isRecentRating: false };
+        const obj6 = { url: steamWebsiteUrl, showBorderBottom: tmp18, trackAction, title: null, rating: null, ratingCount: null, isRecentRating: false };
         const intl3 = util.intl;
-        obj3.title = intl3.string(tmp16);
-        obj3.rating = rating;
-        obj3.ratingCount = ratingCount;
-        tmp22Result = React5(SteamReviewRow, obj3);
+        obj6.title = intl3.string(tmp16);
+        obj6.rating = rating;
+        obj6.ratingCount = ratingCount;
+        tmp22Result3 = React5(SteamReviewRow, obj6);
       }
     }
-    items1[1] = tmp22Result;
-    let tmp22Result1 = null;
+    items1[1] = tmp22Result3;
+    let tmp22Result4 = null;
     if (null != opencritic && null != opencriticUrl) {
-      tmp22Result1 = null;
+      tmp22Result4 = null;
       if (null != opencriticUrl) {
-        const obj4 = { game, url: opencriticUrl, trackAction };
-        tmp22Result1 = React5(OpenCriticReview, obj4);
+        const obj7 = { game, url: opencriticUrl, trackAction };
+        tmp22Result4 = React5(OpenCriticReview, obj7);
       }
     }
-    items1[2] = tmp22Result1;
-    obj1.children = items1;
-    items[1] = React6(React4, obj1);
-    obj.children = items;
-    tmp20Result = React6(React4, obj);
+    items1[2] = tmp22Result4;
+    obj4.children = items1;
+    items[1] = React6(React4, obj4);
+    obj2.children = items;
+    tmp20Result = React6(React4, obj2);
     tmp16 = result ? t["aWb+V4"] : t["8e4LiB"];
+    const tmp2Result2 = GameProfileReviewUtils;
   }
 };

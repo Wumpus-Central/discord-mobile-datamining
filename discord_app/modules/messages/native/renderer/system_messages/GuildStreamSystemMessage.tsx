@@ -20,28 +20,25 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   }
   ({ channel_id, guild_id } = messageReference);
   const tmp3 = getHumanizedCallDurationDefault(message);
-  let obj1 = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj = { action: "bindJoinStream", stream: null };
-  obj1 = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
-  obj.stream = obj1;
-  const obj2 = { ended: null != tmp3, content: null };
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  const obj3 = { action: "bindJoinStream", stream: { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id } };
+  const obj5 = { ended: null != tmp3, content: null };
   const intl = util.intl;
   const formatToParts = intl.formatToParts;
   const t = util.t;
   if (null != tmp3) {
-    const obj3 = {};
+    const obj6 = {};
     const merged = Object.assign(obj);
-    obj3.duration = tmp3;
-    let formatToPartsResult = formatToParts(t.FP7rUI, obj3);
+    obj6.duration = tmp3;
+    let formatToPartsResult = formatToParts(t.FP7rUI, obj6);
   } else {
-    const obj4 = {};
+    const obj7 = {};
     const merged1 = Object.assign(obj);
-    obj4.onJoinStream = obj;
-    formatToPartsResult = formatToParts(t.dMmbGk, obj4);
+    obj7.onJoinStream = obj3;
+    formatToPartsResult = formatToParts(t.dMmbGk, obj7);
   }
-  obj2.content = formatToPartsResult;
+  obj5.content = formatToPartsResult;
   const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj2;
+  return obj5;
 };

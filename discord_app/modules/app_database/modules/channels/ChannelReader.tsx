@@ -44,8 +44,8 @@ prototype["getGuildIds"] = function getGuildIds() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -58,8 +58,8 @@ prototype["getGuildIds"] = function getGuildIds() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -71,13 +71,13 @@ prototype["getGuildIds"] = function getGuildIds() {
               const set = new Set();
               c4 = 0;
               c6 = 3;
-              const obj1 = { value: set, done: true };
-              return obj1;
+              const obj4 = { value: set, done: true };
+              return obj4;
             } else {
               c5 = 2;
               c6 = 1;
-              const obj2 = { value: channelsResult.getGuildIds(), done: false };
-              return obj2;
+              const obj5 = { value: channelsResult.getGuildIds(), done: false };
+              return obj5;
             }
           }
         } else if (1 === tmp7) {
@@ -87,16 +87,16 @@ prototype["getGuildIds"] = function getGuildIds() {
           const _Set2 = Set;
           const set1 = new Set();
           c6 = 3;
-          const obj3 = { value: set1, done: true };
-          return obj3;
+          const obj6 = { value: set1, done: true };
+          return obj6;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_0 = value;
           if (value == null) {
@@ -107,7 +107,7 @@ prototype["getGuildIds"] = function getGuildIds() {
           const set2 = new Set(closure_129_0);
           c4 = 0;
           c6 = 3;
-          obj = { value: set2, done: true };
+          const obj = { value: set2, done: true };
           return obj;
         }
       } catch (tmp30) {

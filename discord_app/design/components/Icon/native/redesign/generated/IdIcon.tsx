@@ -1,9 +1,9 @@
-// === Module 10757: IdIcon ===
+// === Module 10758: IdIcon ===
 
-// Module 10757 (IdIcon)
+// Module 10758 (IdIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod10758 from "module_10758" /* 10758 */;
+import _mod10759 from "module_10759" /* 10759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const IdIcon = function IdIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10758, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10759, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

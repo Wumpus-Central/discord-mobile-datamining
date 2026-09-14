@@ -1,12 +1,14 @@
-// === Module 17190: useIsVoicePanelParticipantFocusable ===
+// === Module 17192: useIsVoicePanelParticipantFocusable ===
 
-// Module 17190 (useIsVoicePanelParticipantFocusable)
+// Module 17192 (useIsVoicePanelParticipantFocusable)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import participantHasVideo from "participantHasVideo" /* 9752 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
@@ -43,11 +45,11 @@ function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
       if (React5(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, channelId);
       } else if (React6(participant)) {
-        let tmp4Result = participantHasVideo;
-        result = tmp4Result.canRenderParticipantVideo(participant, tmp);
+        result = participantHasVideo.canRenderParticipantVideo(participant, tmp);
+        const tmp4Result = participantHasVideo;
       } else {
-        tmp4Result = GlobalUtils;
-        tmp4Result.assertNever(participant);
+        GlobalUtils.assertNever(participant);
+        const tmp4Result2 = GlobalUtils;
       }
       return result;
     }

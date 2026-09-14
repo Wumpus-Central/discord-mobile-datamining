@@ -1,7 +1,7 @@
 // === Module 6702: ChangeEmailActionCreators ===
 
 // Module 6702 (ChangeEmailActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -24,10 +24,10 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
-  obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
-  obj.trackedActionData = obj;
-  return obj.put(obj);
+  const obj2 = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
+  const obj = TrackedHTTPUtilsDefault;
+  obj2.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
+  return obj.put(obj2);
 };
 export const confirmEmailChange = function confirmEmailChange() {
   const self = this;

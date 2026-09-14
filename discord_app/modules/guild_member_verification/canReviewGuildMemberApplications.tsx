@@ -4,6 +4,8 @@
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);

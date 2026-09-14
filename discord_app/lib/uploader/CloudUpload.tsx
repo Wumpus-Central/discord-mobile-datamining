@@ -4,8 +4,8 @@
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Upload2 from "Upload" /* 5209 */;
 import uploader_UploadUtils from "uploader/UploadUtils" /* 5217 */;
 import InlineUploaderDefault from "InlineUploader" /* 5250 */;
@@ -13,7 +13,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 import NetworkStore from "NetworkStore" /* 4685 */;
 
 const Upload = Upload2;
@@ -62,20 +62,20 @@ class ResumableUploadError extends Error {
       }
       tmp10 = new.target;
       tmp11 = ResumableUploadError;
-      obj = { cause: null };
-      obj.cause = cause;
+      obj1 = { cause: null };
+      obj1.cause = cause;
       tmp12 = new.target;
       tmp13 = new.target;
       tmp14 = combined;
-      tmp15 = obj;
-      response = new response(combined, obj, errorKind, ":status_", tmp9, str, num, concat);
-      tmp17 = response;
+      tmp15 = obj1;
+      response1 = new response(combined, obj1, errorKind, ":status_", tmp9, str, num, concat);
+      tmp17 = response1;
       str6 = "ResumableUploadError";
-      response.name = "ResumableUploadError";
-      response.phase = global;
-      response.kind = errorKind;
-      response.messageShort = combined;
-      return response;
+      response1.name = "ResumableUploadError";
+      response1.phase = global;
+      response1.kind = errorKind;
+      response1.messageShort = combined;
+      return response1;
     }
     num = undefined;
     if (response != null) {
@@ -133,11 +133,11 @@ ResumableUploadError["rejectionHandler"] = function rejectionHandler(status_chec
   closure_0 = status_check;
   return (response) => {
     if (response instanceof HTTPUtils.HTTPResponseError) {
-      obj = { response };
-      throw new ResumableUploadError(closure_0, obj);
+      const obj2 = { response };
+      throw new ResumableUploadError(closure_0, obj2);
     } else {
       const _Error = Error;
-      obj = { cause: null };
+      const obj = { cause: null };
       if (response instanceof Error) {
         obj.cause = response;
         throw new ResumableUploadError(closure_0, obj);
@@ -322,11 +322,11 @@ prototype["parseRangeHeader"] = function parseRangeHeader(str) {
 };
 prototype["retryOpts"] = function retryOpts() {
   if (this.item.platform === Upload2.UploadPlatform.REACT_NATIVE) {
-    obj = { timeout: DurationsDefault.Millis.HOUR, backoff: null, retries: 12 };
-    let tmp8 = BackoffDefault;
+    const obj2 = { timeout: DurationsDefault.Millis.HOUR, backoff: null, retries: 12 };
     const result = 0.5 * DurationsDefault.Millis.SECOND;
-    tmp8 = new tmp8(result, 30 * DurationsDefault.Millis.MINUTE);
-    obj.backoff = tmp8;
+    const tmp82 = new BackoffDefault(result, 30 * DurationsDefault.Millis.MINUTE);
+    obj2.backoff = tmp82;
+    let obj = obj2;
   } else {
     obj = { timeout: DurationsDefault.Millis.HOUR, retries: 12, backoff: null };
     const tmp5 = new BackoffDefault();
@@ -337,14 +337,13 @@ prototype["retryOpts"] = function retryOpts() {
 prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpts() {
   const self = this;
   if (this.item.platform === Upload2.UploadPlatform.REACT_NATIVE) {
-    let timeout = { timeout: null, backoff: null, retries: 8 };
-    timeout = { response: 30 * DurationsDefault.Millis.SECOND, deadline: 30 * DurationsDefault.Millis.MINUTE };
-    timeout.timeout = timeout;
-    let tmp4 = BackoffDefault;
+    const obj = { timeout: null, backoff: null, retries: 8 };
+    const obj2 = { response: 30 * DurationsDefault.Millis.SECOND, deadline: 30 * DurationsDefault.Millis.MINUTE };
+    obj.timeout = obj2;
     const result = 0.5 * DurationsDefault.Millis.SECOND;
-    tmp4 = new tmp4(result, 60 * DurationsDefault.Millis.SECOND);
-    timeout.backoff = tmp4;
-    let retryOptsResult = timeout;
+    const tmp42 = new BackoffDefault(result, 60 * DurationsDefault.Millis.SECOND);
+    obj.backoff = tmp42;
+    let retryOptsResult = obj;
   } else {
     retryOptsResult = self.retryOpts();
   }
@@ -379,16 +378,16 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
     }
     logger.log(combined, combined1);
     if (self.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
-      const obj1 = { type: self.item.mimeType, uri: self.item.uri, name: self.item.filename };
+      const obj4 = { type: self.item.mimeType, uri: self.item.uri, name: self.item.filename };
       let str6 = "application/octet-stream";
-      if (null != obj1.type) {
+      if (null != obj4.type) {
         str6 = "application/octet-stream";
-        if ("application/json" !== obj1.type) {
-          str6 = obj1.type;
+        if ("application/json" !== obj4.type) {
+          str6 = obj4.type;
         }
       }
       let str4 = str6;
-      let file = obj1;
+      let file = obj4;
     } else {
       file = self.item.file;
       str4 = "application/octet-stream";
@@ -407,10 +406,10 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
   closure_0 = responseUrl;
   const self = this;
   return (async () => {
-    const obj1 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1090).Millis.SECOND }, signal: self._abortController.signal };
+    const obj4 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1090).Millis.SECOND }, signal: self._abortController.signal };
     const _uploadHttpClient = self._uploadHttpClient;
-    _uploadHttpClient.doUpload(obj1);
-    await _uploadHttpClient.doUpload(obj1).then((status) => {
+    _uploadHttpClient.doUpload(obj4);
+    await _uploadHttpClient.doUpload(obj4).then((status) => {
       if (200 !== status.status) {
         if (201 !== status.status) {
           let currentSize = closure_2_14.rejectionHandler("status_check")(status);
@@ -419,7 +418,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       currentSize = v1.currentSize;
     }).catch((error) => {
-      if (error instanceof c0(1272).HTTPResponseError) {
+      if (error instanceof c0(1270).HTTPResponseError) {
         if (308 === error.status) {
           let str = error.headers.range;
           if (str == null) {
@@ -449,8 +448,8 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -463,13 +462,13 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let obj3;
+            let obj7;
             closure_129_0 = undefined;
             let _catch = self;
-            let obj4 = globalThis;
+            let obj5 = globalThis;
             const _HermesInternal = HermesInternal;
             logger.log("Attempting to upload attachment with resumeFrom: " + num + " and attempts: " + self.uploadAttempts);
             if (num > 0) {
@@ -480,10 +479,10 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
               if (headers == null) {
                 config = {};
               }
-              const obj1 = {};
+              const obj4 = {};
               const merged = Object.assign(config);
-              obj1["Content-Range"] = "bytes " + tmp37 + "-" + _catch.currentSize - 1 + "/" + _catch.currentSize;
-              config.headers = obj1;
+              obj4["Content-Range"] = "bytes " + tmp37 + "-" + _catch.currentSize - 1 + "/" + _catch.currentSize;
+              config.headers = obj4;
               let tmp18 = tmp19;
             } else {
               tmp18 = config;
@@ -494,35 +493,35 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
                 tmp18 = tmp16;
               }
             }
-            obj4 = tmp2(tmp3[14]);
-            tmp18.onRequestProgress = obj4.throttle(_catch.createResumeAwareProgressFn(num), 50);
+            obj5 = tmp2(tmp3[14]);
+            tmp18.onRequestProgress = obj5.throttle(_catch.createResumeAwareProgressFn(num), 50);
             const _uploadHttpClient = _catch._uploadHttpClient;
-            const obj2 = { fileByteRange: null };
-            obj3 = { start: num };
-            obj2.fileByteRange = obj3;
-            _catch = _uploadHttpClient.doUpload(tmp18, obj2).catch;
+            const obj6 = { fileByteRange: null };
+            obj7 = { start: num };
+            obj6.fileByteRange = obj7;
+            _catch = _uploadHttpClient.doUpload(tmp18, obj6).catch;
             _catch(ResumableUploadError.rejectionHandler("upload"));
             c3 = 1;
             v3 = 1;
-            const doUploadResult = _uploadHttpClient.doUpload(tmp18, obj2);
+            const doUploadResult = _uploadHttpClient.doUpload(tmp18, obj6);
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_0 = value;
           if (200 !== closure_129_0.status) {
             if (201 !== closure_129_0.status) {
-              const obj5 = { response: closure_129_0 };
-              throw new ResumableUploadError("upload", obj5);
+              const obj9 = { response: closure_129_0 };
+              throw new ResumableUploadError("upload", obj9);
             }
           }
           v3 = 3;
-          obj = { value: closure_129_0, done: true };
+          const obj = { value: closure_129_0, done: true };
           return obj;
         }
       } catch (tmp29) {
@@ -545,8 +544,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -559,8 +558,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp5;
             closure_132_0 = undefined;
@@ -573,8 +572,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             ({ backoff: closure_132_1, retries } = retryOptsResult);
             closure_132_2 = retries;
             const request = { url, body, headers: null, signal: null, onRequestProgress: null, retries: 0, rejectWithError: true, timeout: null };
-            let obj1 = { "Content-Type": next };
-            request.headers = obj1;
+            let obj4 = { "Content-Type": next };
+            request.headers = obj4;
             request.signal = self._abortController.signal;
             request.onRequestProgress = iter4(next[14]).throttle(self.createResumeAwareProgressFn(0), 50);
             request.timeout = retryOptsResult.timeout;
@@ -588,8 +587,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -602,8 +601,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       throw value;
                     } else if (arg0 === 2) {
                       c6 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       closure_2 = tmp3;
                       closure_1 = tmp5;
@@ -616,8 +615,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       responseUrl = c3.responseUrl;
                       c5 = 2;
                       c6 = 1;
-                      const obj1 = { value: c3.ensureFreshResponseUrl(), done: false };
-                      return obj1;
+                      const obj4 = { value: c3.ensureFreshResponseUrl(), done: false };
+                      return obj4;
                     }
                   } else if (1 === tmp8) {
                     c3 = 0;
@@ -627,11 +626,10 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         const _HermesInternal2 = HermesInternal;
                         logger.warn("Error uploading " + c3.id + ": " + closure_129_3.message + ", attempting resumption");
                         c3.uploadAnalytics.uploadResumptionReason = closure_129_3.messageShort;
-                        let obj8 = body(next[15]);
                         c5 = 5;
                         c6 = 1;
-                        const obj2 = { value: obj8.awaitOnline(), done: false };
-                        return obj2;
+                        const obj5 = { value: body(next[15]).awaitOnline(), done: false };
+                        return obj5;
                       }
                     }
                     const _HermesInternal = HermesInternal;
@@ -645,8 +643,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       } else if (arg0 === 2) {
                         c3 = 0;
                         c6 = 3;
-                        const obj3 = { value, done: true };
-                        return obj3;
+                        const obj6 = { value, done: true };
+                        return obj6;
                       } else {
                         closure_130_3.url = c3.responseUrl;
                         if (responseUrl !== c3.responseUrl) {
@@ -655,14 +653,14 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         } else if (c3.uploadAttempts > 1) {
                           c5 = 4;
                           c6 = 1;
-                          const obj4 = {
+                          const obj7 = {
                             value: c3.trackTime("resumptionCheckTimeMs", tmp3(async () => {
                                           await resumePosition.getResumePosition(resumePosition.responseUrl);
                                           return value;
                                         })),
                             done: false
                           };
-                          return obj4;
+                          return obj7;
                         }
                         value = {};
                         c3.startOrResumeUpload(closure_130_3, closure_130_4);
@@ -676,14 +674,14 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       } else if (arg0 === 2) {
                         c3 = 0;
                         c6 = 3;
-                        const obj5 = { value, done: true };
-                        return obj5;
+                        const obj8 = { value, done: true };
+                        return obj8;
                       } else {
                         value.v = value;
                         c3 = 0;
                         c6 = 3;
-                        const obj6 = { value, done: true };
-                        return obj6;
+                        const obj10 = { value, done: true };
+                        return obj10;
                       }
                     } else if (4 === tmp8) {
                       if (arg0 === 1) {
@@ -705,8 +703,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         throw value;
                       } else if (arg0 === 2) {
                         c6 = 3;
-                        const obj7 = { value, done: true };
-                        return obj7;
+                        const obj11 = { value, done: true };
+                        return obj11;
                       } else {
                         closure_129_2 = closure_130_1.fail();
                         const _HermesInternal3 = HermesInternal;
@@ -714,15 +712,15 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         const promise = new Promise((arg0) => setTimeout(arg0, closure_1_2));
                         c5 = 6;
                         c6 = 1;
-                        obj8 = { value: promise, done: false };
-                        return obj8;
+                        const obj12 = { value: promise, done: false };
+                        return obj12;
                       }
                     } else if (arg0 === 1) {
                       c6 = 3;
                       throw value;
                     } else if (arg0 === 2) {
                       c6 = 3;
-                      obj = { value, done: true };
+                      const obj = { value, done: true };
                       return obj;
                     } else {
                       c6 = 3;
@@ -730,8 +728,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                     }
                     c3 = 0;
                     c6 = 3;
-                    const obj9 = { value, done: true };
-                    return obj9;
+                    const obj13 = { value, done: true };
+                    return obj13;
                   }
                 } catch (tmp59) {
                   closure_4 = tmp59;
@@ -772,14 +770,14 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                 const method = HermesBuiltin.getMethod("return");
                 if (method === undefined) {
                   c9 = 3;
-                  let obj2 = { value, done: true };
-                  return obj2;
+                  let obj5 = { value, done: true };
+                  return obj5;
                 } else {
                   const iter2 = method(url);
                   HermesBuiltin.ensureObject("iterator.return() did not return an object");
                   if (iter2.done) {
                     c9 = 3;
-                    obj = { value: iter2.value, done: true };
+                    let obj = { value: iter2.value, done: true };
                     return obj;
                   } else {
                     c8 = 1;
@@ -818,8 +816,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
           closure_132_0 = value;
           if (value) {
             c9 = 3;
-            let obj3 = { value: closure_132_0.v, done: true };
-            return obj3;
+            let obj6 = { value: closure_132_0.v, done: true };
+            return obj6;
           }
         }
         iter4 = next(tmp20);
@@ -867,8 +865,8 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -881,8 +879,8 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp5;
             closure_128_0 = undefined;
@@ -891,8 +889,8 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: tmp3(), done: false };
-            return obj1;
+            const obj4 = { value: tmp3(), done: false };
+            return obj4;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -907,14 +905,14 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
           const _performance2 = performance;
           closure_129_2.uploadAnalytics.timing[closure_129_0] = performance.now() - closure_128_0;
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c3 = 0;
           const _performance = performance;
           closure_129_2.uploadAnalytics.timing[closure_129_0] = performance.now() - closure_128_0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp27) {
@@ -939,8 +937,8 @@ prototype["upload"] = function upload() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -953,8 +951,8 @@ prototype["upload"] = function upload() {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp9;
             closure_132_0 = undefined;
@@ -976,14 +974,14 @@ prototype["upload"] = function upload() {
               if (false === self.reactNativeFilePrepped) {
                 c8 = 1;
                 c9 = 1;
-                let obj1 = { value: self.reactNativeCompressAndExtractData(), done: false };
-                return obj1;
+                const obj5 = { value: self.reactNativeCompressAndExtractData(), done: false };
+                return obj5;
               }
             }
             c9 = 3;
             c6 = 0;
             c9 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } else {
@@ -993,8 +991,8 @@ prototype["upload"] = function upload() {
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj8 = { value, done: true };
+              return obj8;
             }
           } else {
             if (2 === tmp9) {
@@ -1003,8 +1001,8 @@ prototype["upload"] = function upload() {
                 throw value;
               } else if (arg0 === 2) {
                 c9 = 3;
-                let obj3 = { value, done: true };
-                return obj3;
+                const obj9 = { value, done: true };
+                return obj9;
               } else {
                 closure_132_3 = value;
                 if (null != closure_132_3) {
@@ -1016,11 +1014,11 @@ prototype["upload"] = function upload() {
                     }
                     if (tmp130) {
                       closure_3 = closure_133_0;
-                      let obj13 = status(5238);
+                      const obj14 = status(5238);
                       c8 = 3;
                       c9 = 1;
-                      const obj4 = { value: obj13.fromBlob(file).catch(() => null), done: false };
-                      return obj4;
+                      const obj10 = { value: status(5238).fromBlob(file).catch(() => null), done: false };
+                      return obj10;
                     }
                   }
                   const result = closure_133_0.applyConversionAnalytics(closure_132_3.analytics);
@@ -1033,8 +1031,8 @@ prototype["upload"] = function upload() {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  let obj5 = { value, done: true };
-                  return obj5;
+                  const obj11 = { value, done: true };
+                  return obj11;
                 } else {
                   closure_3._originalMd5 = value;
                 }
@@ -1071,8 +1069,8 @@ prototype["upload"] = function upload() {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  let obj6 = { value, done: true };
-                  return obj6;
+                  const obj12 = { value, done: true };
+                  return obj12;
                 } else {
                   closure_132_5 = value;
                   uploadTarget = v0(5255).getUploadTarget(closure_133_0.item.target);
@@ -1080,10 +1078,9 @@ prototype["upload"] = function upload() {
                     if ("" !== closure_132_5.filename) {
                       const currentSize2 = closure_133_0.currentSize;
                       if (0 !== closure_133_0.currentSize) {
-                        obj5 = v0(5260);
-                        kestrelConfig = obj5.getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                        obj6 = v0(5260);
-                        effectiveKestrelLimit = obj6.getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
+                        kestrelConfig = v0(5260).getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
+                        const obj6 = v0(5260);
+                        effectiveKestrelLimit = v0(5260).getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
                         const currentSize = closure_133_0.currentSize;
                         v0 = currentSize;
                         if (currentSize == null) {
@@ -1106,15 +1103,15 @@ prototype["upload"] = function upload() {
                           logger.log("Requesting upload url for " + closure_133_0.id);
                           c8 = 8;
                           c9 = 1;
-                          const obj7 = {
+                          const obj15 = {
                             value: closure_133_0.trackTime("getUploadUrlTimeMs", tmp3(async () => {
                                                     createAttachmentURL = createAttachmentURL.getCreateAttachmentURL(c0.channelId);
                                                     const HTTP = v0(dependencyMap[8]).HTTP;
                                                     const request = { url: createAttachmentURL, body: null, headers: c0.buildOriginalMd5Headers() };
-                                                    const obj1 = { files: null };
+                                                    const obj4 = { files: null };
                                                     const items = [closure_2_5];
-                                                    obj1.files = items;
-                                                    request.body = obj1;
+                                                    obj4.files = items;
+                                                    request.body = obj4;
                                                     const merged = Object.assign(c0.createAttachmentUrlRetryOpts());
                                                     request.rejectWithError = false;
                                                     await HTTP.post(request);
@@ -1122,8 +1119,9 @@ prototype["upload"] = function upload() {
                                                   })),
                             done: false
                           };
-                          return obj7;
+                          return obj15;
                         }
+                        const obj7 = v0(5260);
                       } else {
                         closure_133_0.handleError(constants.ENTITY_EMPTY);
                       }
@@ -1133,8 +1131,8 @@ prototype["upload"] = function upload() {
                   logger.error("File does not have a filename.", JSON.stringify(closure_132_5));
                   closure_133_0.handleError(constants.INVALID_FILE_ASSET);
                   c9 = 3;
-                  const obj8 = { value: undefined, done: true };
-                  return obj8;
+                  const obj16 = { value: undefined, done: true };
+                  return obj16;
                 }
               } else if (6 === tmp9) {
                 c6 = 0;
@@ -1159,13 +1157,13 @@ prototype["upload"] = function upload() {
                   }
                   const _HermesInternal2 = HermesInternal;
                   logger.error("Requesting upload url failed with code " + dependencyMap + " for " + closure_133_0.id);
-                  obj3 = status(1232);
-                  obj3.captureException(closure_132_11);
+                  status(1230).captureException(closure_132_11);
+                  let obj4 = status(1230);
                 }
                 closure_133_0.handleError(closure_132_10);
                 c9 = 3;
-                const obj9 = { value: undefined, done: true };
-                return obj9;
+                const obj17 = { value: undefined, done: true };
+                return obj17;
               } else if (7 === tmp9) {
                 c6 = 0;
                 closure_132_12 = tmp213;
@@ -1183,8 +1181,8 @@ prototype["upload"] = function upload() {
                 } else if (arg0 === 2) {
                   c6 = 0;
                   c9 = 3;
-                  const obj10 = { value, done: true };
-                  return obj10;
+                  const obj19 = { value, done: true };
+                  return obj19;
                 } else {
                   closure_132_9 = value;
                   closure_133_0.setResponseUrl(closure_132_9.body.attachments[0].upload_url);
@@ -1192,14 +1190,14 @@ prototype["upload"] = function upload() {
                   c6 = 2;
                   c8 = 9;
                   c9 = 1;
-                  const obj11 = {
+                  const obj20 = {
                     value: closure_133_0.trackTime("uploadTimeMs", tmp3(async () => {
                                     await c0.uploadFileToCloud();
                                     return value;
                                   })),
                     done: false
                   };
-                  return obj11;
+                  return obj20;
                 }
               } else if (arg0 === 1) {
                 c9 = 3;
@@ -1210,8 +1208,8 @@ prototype["upload"] = function upload() {
                 c6 = 0;
               }
               c9 = 3;
-              let obj12 = { value, done: true };
-              return obj12;
+              const obj21 = { value, done: true };
+              return obj21;
             }
             closure_133_0.item.file = closure_132_3.convertedFile;
             closure_133_0.currentSize = closure_132_3.convertedFile.size;
@@ -1225,8 +1223,8 @@ prototype["upload"] = function upload() {
               tmp141 = tmp144;
             }
             if (!tmp141) {
-              obj12 = v0(5252);
-              closure_133_0.mimeType = obj12.heicMimeType(file);
+              closure_133_0.mimeType = v0(5252).heicMimeType(file);
+              const obj13 = v0(5252);
             }
           }
           if (closure_133_0.isCancelled()) {
@@ -1237,8 +1235,8 @@ prototype["upload"] = function upload() {
                 if (true !== closure_133_0.item.imageConversionEvaluated) {
                   c8 = 4;
                   c9 = 1;
-                  obj13 = { value: CloudUpload.tryConvertToWebP(closure_133_0.item.file, () => v0._aborted, closure_133_0.id), done: false };
-                  return obj13;
+                  const obj22 = { value: CloudUpload.tryConvertToWebP(closure_133_0.item.file, () => v0._aborted, closure_133_0.id), done: false };
+                  return obj22;
                 }
               }
             }
@@ -1259,8 +1257,8 @@ prototype["upload"] = function upload() {
                       file = closure_133_0.item.file;
                       c8 = 2;
                       c9 = 1;
-                      const obj14 = { value: CloudUpload.tryConvertHeicToJpeg(closure_133_0.item.file, () => v0._aborted, closure_133_0.id, config.quality, config.maxFileSizeBytes), done: false };
-                      return obj14;
+                      const obj23 = { value: CloudUpload.tryConvertHeicToJpeg(closure_133_0.item.file, () => v0._aborted, closure_133_0.id, config.quality, config.maxFileSizeBytes), done: false };
+                      return obj23;
                     }
                   }
                   obj25 = v0(5252);
@@ -1292,8 +1290,8 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1306,8 +1304,8 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             dependencyMap = 0;
             closure_1 = tmp2;
@@ -1324,14 +1322,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                 const _HermesInternal6 = HermesInternal;
                 logger.log("reactNativeCompressAndExtractData() file already prepped - " + self.id);
                 c4 = 3;
-                const obj1 = { value: self, done: true };
-                return obj1;
+                const obj5 = { value: self, done: true };
+                return obj5;
               } else {
                 const _HermesInternal5 = HermesInternal;
                 logger.log("Starting compression/conversion for " + self.id);
                 c3 = 1;
                 c4 = 1;
-                let obj2 = {
+                const obj6 = {
                   value: self.trackTime("compressTimeMs", asyncGeneratorStep(async () => {
                                 reactNativeFileIndex = reactNativeFileIndex.reactNativeFileIndex;
                                 if (reactNativeFileIndex == null) {
@@ -1342,14 +1340,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                               })),
                   done: false
                 };
-                return obj2;
+                return obj6;
               }
             } else {
               self.uploadAnalytics.compressAndExtractDisabled = true;
               logger.log("reactNativeCompressAndExtractData() disabled by upload target");
               c4 = 3;
-              const obj3 = { value: self, done: true };
-              return obj3;
+              const obj7 = { value: self, done: true };
+              return obj7;
             }
             obj17 = size(5255);
           }
@@ -1360,8 +1358,8 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
               closure_129_0 = value;
               if (null != closure_129_0) {
@@ -1426,37 +1424,36 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         const fileSize = closure_129_0.fileSize;
                         size = fileSize;
                         if (fileSize == null) {
-                          obj2 = size(5210);
                           c3 = 2;
                           c4 = 1;
-                          const obj5 = { value: obj2.getFileData(uri), done: false };
-                          return obj5;
+                          const obj9 = { value: size(5210).getFileData(uri), done: false };
+                          return obj9;
                         }
                       }
                     }
                   }
-                  const obj6 = { filename: name, uri, type: closure_129_0.file.type };
+                  const obj10 = { filename: name, uri, type: closure_129_0.file.type };
                   const _HermesInternal2 = HermesInternal;
-                  logger.error("Insufficient file data: " + obj6 + " for " + closure_130_0.id);
+                  logger.error("Insufficient file data: " + obj10 + " for " + closure_130_0.id);
                   const _Error2 = Error;
-                  const obj7 = { filename: name, uri, type: closure_129_0.file.type };
+                  const obj11 = { filename: name, uri, type: closure_129_0.file.type };
                   const _HermesInternal3 = HermesInternal;
-                  const error = new Error("Insufficient file data: " + obj7);
+                  const error = new Error("Insufficient file data: " + obj11);
                   throw error;
                 }
               }
               const _HermesInternal4 = HermesInternal;
               logger.error("Failed to get compressed file for " + closure_130_0.id);
               c4 = 3;
-              const obj8 = { value: closure_130_0, done: true };
-              return obj8;
+              const obj12 = { value: closure_130_0, done: true };
+              return obj12;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             size = value.size;
@@ -1473,16 +1470,16 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
           } else {
             const _HermesInternal7 = HermesInternal;
             logger.log("Completed compression and conversion. Output size=" + closure_129_5 + " bytes; filename=" + name + "; uri=" + uri + "; originalMimeType=" + closure_130_0.mimeType + "; mimeType=" + closure_129_4 + " for " + closure_130_0.id);
-            const obj9 = { uri, filename: name, mimeType: closure_129_4 };
-            closure_129_6 = obj9;
-            const obj10 = {};
+            const obj13 = { uri, filename: name, mimeType: closure_129_4 };
+            closure_129_6 = obj13;
+            const obj15 = {};
             const merged = Object.assign(closure_130_0.item);
             const merged1 = Object.assign(closure_129_6);
-            closure_130_0.item = obj10;
+            closure_130_0.item = obj15;
             closure_130_0.reactNativeFilePrepped = true;
             c4 = 3;
-            const obj11 = { value: closure_130_0, done: true };
-            return obj11;
+            const obj16 = { value: closure_130_0, done: true };
+            return obj16;
           }
         }
       } catch (tmp113) {
@@ -1504,8 +1501,8 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1518,8 +1515,8 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp3;
             closure_4 = tmp5;
@@ -1556,8 +1553,8 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
                   c7 = 1;
                   c8 = 2;
                   c9 = 1;
-                  const obj1 = { value: tmp97(tmp98[29])(tmp98[28], tmp98.paths), done: false };
-                  return obj1;
+                  const obj4 = { value: tmp97(tmp98[29])(tmp98[28], tmp98.paths), done: false };
+                  return obj4;
                 }
               }
             } else {
@@ -1591,15 +1588,15 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
             } else if (arg0 === 2) {
               c7 = 0;
               c9 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_132_4 = value;
               closure_132_1 = closure_132_4.ConversionFailureReason;
               c8 = 3;
               c9 = 1;
-              const obj3 = { value: closure_132_4.maybeConvertToWebP(closure_133_0), done: false };
-              return obj3;
+              const obj6 = { value: closure_132_4.maybeConvertToWebP(closure_133_0), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c9 = 3;
@@ -1607,8 +1604,8 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
           } else if (arg0 === 2) {
             c7 = 0;
             c9 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_132_0 = value;
             if (closure_133_1()) {
@@ -1624,7 +1621,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
                   logger.log("webp conversion worked for " + closure_133_2 + ": " + sizeBefore + " -> " + sizeAfter + " bytes (" + compressionRatio.toFixed(2) + "x)");
                   const _File = File;
                   const items = [closure_132_0.convertedBlob];
-                  obj = { type: "image/webp", lastModified: closure_133_0.lastModified };
+                  const obj = { type: "image/webp", lastModified: closure_133_0.lastModified };
                   file = new File(items, closure_133_0.name, obj);
                   closure_132_3.convertedFile = file;
                   closure_132_3.convertedMimeType = "image/webp";
@@ -1659,8 +1656,8 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
           }
           closure_132_3.compressTimeMs = compressTimeMs;
           c9 = 3;
-          const obj5 = { value: closure_132_3, done: true };
-          return obj5;
+          const obj8 = { value: closure_132_3, done: true };
+          return obj8;
         }
       } catch (tmp85) {
         closure_6 = tmp85;
@@ -1688,8 +1685,8 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1702,8 +1699,8 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp7;
             let convertFileToJpeg;
@@ -1713,8 +1710,8 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: closure_0(tmp30[29])(tmp30[30], tmp30.paths), done: false };
-                return obj1;
+                const obj4 = { value: closure_0(tmp30[29])(tmp30[30], tmp30.paths), done: false };
+                return obj4;
               }
             }
             c5 = 3;
@@ -1725,10 +1722,10 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
           closure_128_2 = tmp30;
           const _HermesInternal = HermesInternal;
           logger.warn("heic conversion threw for " + closure_129_2 + ":", closure_128_2);
-          const obj2 = { convertedFile: null, analytics: { convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 } };
+          const obj5 = { convertedFile: null, analytics: { convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 } };
           c5 = 3;
-          const obj3 = { value: obj2, done: true };
-          return obj3;
+          const obj6 = { value: obj5, done: true };
+          return obj6;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
@@ -1736,14 +1733,14 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             convertFileToJpeg = value.convertFileToJpeg;
             c4 = 3;
             c5 = 1;
-            const obj5 = { value: convertFileToJpeg(closure_129_0, "heic", closure_129_3, closure_129_4), done: false };
-            return obj5;
+            const obj8 = { value: convertFileToJpeg(closure_129_0, "heic", closure_129_3, closure_129_4), done: false };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -1751,8 +1748,8 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_128_1 = value;
           let tmp11 = null;
@@ -1761,7 +1758,7 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
           }
           c3 = 0;
           c5 = 3;
-          obj = { value: tmp11, done: true };
+          const obj = { value: tmp11, done: true };
           return obj;
         }
       } catch (tmp30) {
@@ -1853,8 +1850,8 @@ prototype["delete"] = function delete() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1867,18 +1864,17 @@ prototype["delete"] = function delete() {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if (null != self.uploadedFilename) {
-            let obj1 = v3(5255);
-            const uploadTarget = obj1.getUploadTarget(self.item.target);
+            const uploadTarget = v3(5255).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
-            const HTTP = v3(1272).HTTP;
+            const HTTP = v3(1270).HTTP;
             c1 = 2;
             v3 = 1;
-            obj1 = { value: HTTP.del(deleteUploadURL), done: false };
-            return obj1;
+            const obj5 = { value: HTTP.del(deleteUploadURL), done: false };
+            return obj5;
           }
         } else {
           if (1 === tmp6) {
@@ -1891,7 +1887,7 @@ prototype["delete"] = function delete() {
           }
           dependencyMap = 0;
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         v3 = 3;
@@ -1929,8 +1925,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1943,8 +1939,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp3;
             _self = tmp7;
@@ -1954,8 +1950,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             if (responseUrlStale.isResponseUrlStale(self.responseUrlSetAt)) {
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: _self(tmp40[20]).default.getUploadPayload(self), done: false };
-              return obj1;
+              const obj4 = { value: _self(tmp40[20]).default.getUploadPayload(self), done: false };
+              return obj4;
             } else {
               c5 = 3;
             }
@@ -1966,8 +1962,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_128_1 = value;
             const uploadTarget = _self(tmp40[21]).getUploadTarget(closure_129_0.item.target);
@@ -1975,24 +1971,24 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             c3 = 1;
             const HTTP = _self(tmp40[8]).HTTP;
             const request = { url: createAttachmentURL, body: null, headers: null };
-            const obj3 = { files: null };
+            const obj6 = { files: null };
             const items = [closure_128_1];
-            obj3.files = items;
-            request.body = obj3;
+            obj6.files = items;
+            request.body = obj6;
             request.headers = closure_129_0.buildOriginalMd5Headers();
             const merged = Object.assign(closure_129_0.createAttachmentUrlRetryOpts());
             request.rejectWithError = true;
             c4 = 3;
             c5 = 1;
-            const obj4 = { value: HTTP.post(request), done: false };
-            return obj4;
+            const obj7 = { value: HTTP.post(request), done: false };
+            return obj7;
           }
         } else if (2 === tmp7) {
           c3 = 0;
           closure_128_3 = tmp40;
           if (closure_128_3 instanceof _self(tmp40[8]).HTTPResponseError) {
-            const obj5 = { response: closure_128_3 };
-            throw new ResumableUploadError("upload", obj5);
+            const obj8 = { response: closure_128_3 };
+            throw new ResumableUploadError("upload", obj8);
           } else {
             throw closure_128_3;
           }
@@ -2002,8 +1998,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           closure_128_0 = value;
           c3 = 0;
@@ -2020,7 +2016,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             closure_129_0.setUploadedFilename(closure_128_0.body.attachments[0].upload_filename);
           }
         }
-        obj = { response: closure_128_0 };
+        const obj = { response: closure_128_0 };
         throw new ResumableUploadError("upload", obj);
       } catch (tmp40) {
         if (tmp4 === c3) {
@@ -2043,18 +2039,18 @@ prototype["setUploadedFilename"] = function setUploadedFilename(upload_filename)
   this.uploadedFilename = upload_filename;
 };
 prototype["trackUploadStart"] = function trackUploadStart() {
-  obj = { file_size: this.currentSize, mime_type: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, channel_id: null, connection_type: null, effective_connection_speed: null, service_provider: null };
+  const obj3 = { file_size: this.currentSize, mime_type: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, channel_id: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let str = this.mimeType;
   if (str == null) {
     str = "unknown";
   }
-  obj.mime_type = str;
+  obj3.mime_type = str;
   ({ videoUploadQuality: obj2.video_upload_quality, dataSavingMode: obj2.data_saving_mode, dataSavingMode: obj2.low_quality_image_mode } = UnsyncedUserSettingsStore);
-  obj.channel_id = this.channelId;
-  obj.connection_type = NetworkStore.getType();
-  obj.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
-  obj.service_provider = NetworkStore.getServiceProvider();
-  obj.track(constants.ATTACHMENT_UPLOAD_STARTED, obj);
+  obj3.channel_id = this.channelId;
+  obj3.connection_type = NetworkStore.getType();
+  obj3.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
+  obj3.service_provider = NetworkStore.getServiceProvider();
+  AnalyticsUtilsDefault.track(constants.ATTACHMENT_UPLOAD_STARTED, obj3);
 };
 prototype["trackUploadFinished"] = function trackUploadFinished(COMPLETED) {
   const self = this;
@@ -2063,83 +2059,83 @@ prototype["trackUploadFinished"] = function trackUploadFinished(COMPLETED) {
     const _performance = performance;
     num = performance.now() - self.startTime;
   }
-  obj = { duration_ms: num, file_size: self.currentSize, pre_compression_file_size: self.preCompressionSize, final_state: COMPLETED, mime_type: null, num_upload_attempts: null, error_code: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, compress_time_ms: null, get_upload_url_time_ms: null, upload_time_ms: null, converted_mime_type: null, image_compression_quality: null, video_compression_quality: null, image_encoder_type: null, was_converted: null, was_compressed: null, source_media_width: null, source_media_height: null, source_media_format: null, uploaded_image_width: null, uploaded_image_height: null, source_video_bitrate: null, video_duration_ms: null, source_video_profile_name: null, source_video_profile_level: null, target_video_width: null, target_video_height: null, target_video_bitrate: null, target_video_codec: null, target_video_framerate: null, target_video_is_hdr: null, hevc_is_supported: null, progress_update_granularity: null, source_video_framerate: null, channel_id: null, hash_time_ms: null, psnr: null, ssim: null, origin: null, psnr_measurement_latency_ms: null, ssim_measurement_latency_ms: null, upload_resumption_count: null, upload_resumption_reason: null, upload_resumption_position: null, upload_resumption_check_time_ms: null, conversion_failure_reason: null, upload_http_client: null, connection_type: null, effective_connection_speed: null, service_provider: null };
+  const obj3 = { duration_ms: num, file_size: self.currentSize, pre_compression_file_size: self.preCompressionSize, final_state: COMPLETED, mime_type: null, num_upload_attempts: null, error_code: null, video_upload_quality: null, data_saving_mode: null, low_quality_image_mode: null, compress_time_ms: null, get_upload_url_time_ms: null, upload_time_ms: null, converted_mime_type: null, image_compression_quality: null, video_compression_quality: null, image_encoder_type: null, was_converted: null, was_compressed: null, source_media_width: null, source_media_height: null, source_media_format: null, uploaded_image_width: null, uploaded_image_height: null, source_video_bitrate: null, video_duration_ms: null, source_video_profile_name: null, source_video_profile_level: null, target_video_width: null, target_video_height: null, target_video_bitrate: null, target_video_codec: null, target_video_framerate: null, target_video_is_hdr: null, hevc_is_supported: null, progress_update_granularity: null, source_video_framerate: null, channel_id: null, hash_time_ms: null, psnr: null, ssim: null, origin: null, psnr_measurement_latency_ms: null, ssim_measurement_latency_ms: null, upload_resumption_count: null, upload_resumption_reason: null, upload_resumption_position: null, upload_resumption_check_time_ms: null, conversion_failure_reason: null, upload_http_client: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let str = self.mimeType;
   if (str == null) {
     str = "unknown";
   }
-  obj.mime_type = str;
+  obj3.mime_type = str;
   let num2 = self.uploadAnalytics.numUploadAttempts;
   if (num2 == null) {
     num2 = 1;
   }
-  obj.num_upload_attempts = num2;
-  obj.error_code = self.error;
+  obj3.num_upload_attempts = num2;
+  obj3.error_code = self.error;
   ({ videoUploadQuality: obj2.video_upload_quality, dataSavingMode: obj2.data_saving_mode, dataSavingMode: obj2.low_quality_image_mode } = UnsyncedUserSettingsStore);
-  obj.compress_time_ms = self.uploadAnalytics.timing.compressTimeMs;
-  obj.get_upload_url_time_ms = self.uploadAnalytics.timing.getUploadUrlTimeMs;
-  obj.upload_time_ms = self.uploadAnalytics.timing.uploadTimeMs;
+  obj3.compress_time_ms = self.uploadAnalytics.timing.compressTimeMs;
+  obj3.get_upload_url_time_ms = self.uploadAnalytics.timing.getUploadUrlTimeMs;
+  obj3.upload_time_ms = self.uploadAnalytics.timing.uploadTimeMs;
   let str2 = self.uploadAnalytics.convertedMimeType;
   if (str2 == null) {
     str2 = "unknown";
   }
-  obj.converted_mime_type = str2;
+  obj3.converted_mime_type = str2;
   let num3 = self.uploadAnalytics.imageCompressionQuality;
   if (num3 == null) {
     num3 = 0;
   }
-  obj.image_compression_quality = num3;
+  obj3.image_compression_quality = num3;
   let str3 = self.uploadAnalytics.videoCompressionQuality;
   if (str3 == null) {
     str3 = "unknown";
   }
-  obj.video_compression_quality = str3;
+  obj3.video_compression_quality = str3;
   let str4 = self.uploadAnalytics.imageEncoderType;
   if (str4 == null) {
     str4 = "unknown";
   }
-  obj.image_encoder_type = str4;
-  obj.was_converted = null != self.uploadAnalytics.convertedMimeType && self.mimeType !== self.uploadAnalytics.convertedMimeType;
-  obj.was_compressed = self.currentSize < self.preCompressionSize;
-  obj.source_media_width = self.uploadAnalytics.sourceMediaWidth;
-  obj.source_media_height = self.uploadAnalytics.sourceMediaHeight;
-  obj.source_media_format = self.uploadAnalytics.sourceMediaFormat;
-  obj.uploaded_image_width = self.uploadAnalytics.uploadedImageWidth;
-  obj.uploaded_image_height = self.uploadAnalytics.uploadedImageHeight;
-  obj.source_video_bitrate = self.uploadAnalytics.sourceVideoBitrate;
-  obj.video_duration_ms = self.uploadAnalytics.videoDurationMs;
-  obj.source_video_profile_name = self.uploadAnalytics.sourceVideoProfile;
-  obj.source_video_profile_level = self.uploadAnalytics.sourceVideoLevel;
-  obj.target_video_width = self.uploadAnalytics.targetVideoWidth;
-  obj.target_video_height = self.uploadAnalytics.targetVideoHeight;
-  obj.target_video_bitrate = self.uploadAnalytics.targetVideoBitrate;
-  obj.target_video_codec = self.uploadAnalytics.targetVideoCodec;
-  obj.target_video_framerate = self.uploadAnalytics.targetVideoFramerate;
-  obj.target_video_is_hdr = self.uploadAnalytics.targetVideoIsHdr;
-  obj.hevc_is_supported = self.uploadAnalytics.hevcIsSupported;
-  obj.progress_update_granularity = self.uploadAnalytics.progressUpdateGranularity;
-  obj.source_video_framerate = self.uploadAnalytics.sourceVideoFramerate;
-  obj.channel_id = self.channelId;
-  obj.hash_time_ms = self.uploadAnalytics.timing.hashTimeMs;
-  obj.psnr = self.uploadAnalytics.psnr;
-  obj.ssim = self.uploadAnalytics.ssim;
-  obj.origin = self.uploadAnalytics.origin;
-  obj.psnr_measurement_latency_ms = self.uploadAnalytics.psnrMeasurementLatencyMs;
-  obj.ssim_measurement_latency_ms = self.uploadAnalytics.ssimMeasurementLatencyMs;
-  obj.upload_resumption_count = self.uploadAnalytics.uploadResumptionCount;
-  obj.upload_resumption_reason = self.uploadAnalytics.uploadResumptionReason;
-  obj.upload_resumption_position = self.uploadAnalytics.uploadResumptionPosition;
-  obj.upload_resumption_check_time_ms = self.uploadAnalytics.timing.resumptionCheckTimeMs;
-  obj.conversion_failure_reason = self.uploadAnalytics.conversionFailureReason;
+  obj3.image_encoder_type = str4;
+  obj3.was_converted = null != self.uploadAnalytics.convertedMimeType && self.mimeType !== self.uploadAnalytics.convertedMimeType;
+  obj3.was_compressed = self.currentSize < self.preCompressionSize;
+  obj3.source_media_width = self.uploadAnalytics.sourceMediaWidth;
+  obj3.source_media_height = self.uploadAnalytics.sourceMediaHeight;
+  obj3.source_media_format = self.uploadAnalytics.sourceMediaFormat;
+  obj3.uploaded_image_width = self.uploadAnalytics.uploadedImageWidth;
+  obj3.uploaded_image_height = self.uploadAnalytics.uploadedImageHeight;
+  obj3.source_video_bitrate = self.uploadAnalytics.sourceVideoBitrate;
+  obj3.video_duration_ms = self.uploadAnalytics.videoDurationMs;
+  obj3.source_video_profile_name = self.uploadAnalytics.sourceVideoProfile;
+  obj3.source_video_profile_level = self.uploadAnalytics.sourceVideoLevel;
+  obj3.target_video_width = self.uploadAnalytics.targetVideoWidth;
+  obj3.target_video_height = self.uploadAnalytics.targetVideoHeight;
+  obj3.target_video_bitrate = self.uploadAnalytics.targetVideoBitrate;
+  obj3.target_video_codec = self.uploadAnalytics.targetVideoCodec;
+  obj3.target_video_framerate = self.uploadAnalytics.targetVideoFramerate;
+  obj3.target_video_is_hdr = self.uploadAnalytics.targetVideoIsHdr;
+  obj3.hevc_is_supported = self.uploadAnalytics.hevcIsSupported;
+  obj3.progress_update_granularity = self.uploadAnalytics.progressUpdateGranularity;
+  obj3.source_video_framerate = self.uploadAnalytics.sourceVideoFramerate;
+  obj3.channel_id = self.channelId;
+  obj3.hash_time_ms = self.uploadAnalytics.timing.hashTimeMs;
+  obj3.psnr = self.uploadAnalytics.psnr;
+  obj3.ssim = self.uploadAnalytics.ssim;
+  obj3.origin = self.uploadAnalytics.origin;
+  obj3.psnr_measurement_latency_ms = self.uploadAnalytics.psnrMeasurementLatencyMs;
+  obj3.ssim_measurement_latency_ms = self.uploadAnalytics.ssimMeasurementLatencyMs;
+  obj3.upload_resumption_count = self.uploadAnalytics.uploadResumptionCount;
+  obj3.upload_resumption_reason = self.uploadAnalytics.uploadResumptionReason;
+  obj3.upload_resumption_position = self.uploadAnalytics.uploadResumptionPosition;
+  obj3.upload_resumption_check_time_ms = self.uploadAnalytics.timing.resumptionCheckTimeMs;
+  obj3.conversion_failure_reason = self.uploadAnalytics.conversionFailureReason;
   let str5 = "httputils";
   if (self._libdiscoreEnabled) {
     str5 = "libdiscore";
   }
-  obj.upload_http_client = str5;
-  obj.connection_type = NetworkStore.getType();
-  obj.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
-  obj.service_provider = NetworkStore.getServiceProvider();
-  obj.track(constants.ATTACHMENT_UPLOAD_FINISHED, obj);
+  obj3.upload_http_client = str5;
+  obj3.connection_type = NetworkStore.getType();
+  obj3.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
+  obj3.service_provider = NetworkStore.getServiceProvider();
+  AnalyticsUtilsDefault.track(constants.ATTACHMENT_UPLOAD_FINISHED, obj3);
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("lib/uploader/CloudUpload.tsx");

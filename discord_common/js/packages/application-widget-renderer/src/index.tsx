@@ -4,6 +4,7 @@
 import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9140 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
 const discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault = discord_common_resolvedValuesFromUserApplicationIdentityProfile;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");

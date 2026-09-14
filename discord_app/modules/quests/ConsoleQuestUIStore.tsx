@@ -19,15 +19,15 @@ let obj = module_560.create((arg0, arg1) => {
             return errorHintsByQuestId;
           }
         }
-        errorHintsByQuestId = new Map(errorHintsByQuestId.errorHintsByQuestId);
+        const errorHintsByQuestId1 = new Map(errorHintsByQuestId.errorHintsByQuestId);
         if (0 === length.length) {
-          errorHintsByQuestId.delete(closure_0);
+          errorHintsByQuestId1.delete(closure_0);
         } else {
           const items = [];
           HermesBuiltin.arraySpread(length, 0);
-          const result = errorHintsByQuestId.set(closure_0, items);
+          const result = errorHintsByQuestId1.set(closure_0, items);
         }
-        return { errorHintsByQuestId };
+        return { errorHintsByQuestId: errorHintsByQuestId1 };
       });
     },
     getErrorHints(arg0) {

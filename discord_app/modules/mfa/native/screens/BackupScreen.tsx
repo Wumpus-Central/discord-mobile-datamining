@@ -1,13 +1,13 @@
-// === Module 15766: BackupScreen ===
+// === Module 15768: BackupScreen ===
 
-// Module 15766 (BackupScreen)
+// Module 15768 (BackupScreen)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15759 */;
-import buttonDefault from "button" /* 15762 */;
-import MFA from "MFA" /* 15764 */;
-import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 15765 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15761 */;
+import buttonDefault from "button" /* 15764 */;
+import MFA from "MFA" /* 15766 */;
+import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 15767 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,20 +28,20 @@ const result = size.fileFinishedImporting("modules/mfa/native/screens/BackupScre
 export default function BackupScreen(finish) {
   finish = finish.finish;
   c1 = undefined;
+  first = undefined;
+  closure_3 = undefined;
   c4 = undefined;
   c5 = undefined;
+  first1 = undefined;
+  closure_7 = undefined;
   const tmp3 = useWideAuthViewDefault();
-  [tmp5, c1] = _slicedToArray(noop.useState(false), 2);
-  const tmp6 = _slicedToArray(noop.useState(""), 2);
-  const first = tmp6[0];
-  closure_3 = tmp6[1];
+  [tmp5, c1] = noop.useState(false);
+  [first, closure_3] = noop.useState("");
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  [tmp8, c4] = _slicedToArray(noop.useState(undefined), 2);
+  [tmp8, c4] = noop.useState(undefined);
   const tmp7 = _slicedToArray(noop.useState(undefined), 2);
-  [tmp10, c5] = _slicedToArray(noop.useState(false), 2);
-  const tmp11 = _slicedToArray(noop.useState(10), 2);
-  const first1 = tmp11[0];
-  closure_7 = tmp11[1];
+  [tmp10, c5] = noop.useState(false);
+  [first1, closure_7] = noop.useState(10);
   const items = [first1];
   const effect = noop.useEffect(() => {
     if (first1 > 0) {
@@ -95,63 +95,63 @@ export default function BackupScreen(finish) {
     }
     return applyArgumentsResult;
   }, items1);
-  let obj = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "backup" };
+  const obj = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "backup" };
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const intl = util.intl;
   obj.headerText = intl.string(util.t.B2T1HD);
   const intl2 = util.intl;
   obj.subtitle = intl2.string(util.t.c5J7O0);
   if (first1 > 0) {
-    obj = { variant: "text-md/normal", children: null };
+    const obj2 = { variant: "text-md/normal", children: null };
     const intl3 = util.intl;
     const items2 = [intl3.string(util.t.RRtlLg), ];
     const intl4 = util.intl;
-    obj = { countdown: first1 };
-    items2[1] = intl4.format(util.t.tsWkAE, obj);
-    obj.children = items2;
-    let obj1 = obj;
+    const obj3 = { countdown: first1 };
+    items2[1] = intl4.format(util.t.tsWkAE, obj3);
+    obj2.children = items2;
+    let obj4 = obj2;
   } else {
-    obj1 = { variant: "text-md/normal", children: null };
+    obj4 = { variant: "text-md/normal", children: null };
     const intl8 = util.intl;
     const items3 = [intl8.string(util.t.RRtlLg), ];
     const intl9 = util.intl;
     items3[1] = intl9.string(util.t.v3a6Pd);
-    obj1.children = items3;
+    obj4.children = items3;
   }
-  const items4 = [timestampProducer(Text_Text.Text, obj1), ];
-  const obj2 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, autoFocus: null };
-  let tmpResult = ClipboardCopyInputDefault;
+  const items4 = [timestampProducer(Text_Text.Text, obj4), ];
+  const obj5 = { label: null, placeholder: null, isValidClipboardCode: null, maxLength: null, onChangeCode: null, error: null, isDisabled: null, autoFocus: null };
+  const tmp15 = MfaOptionScreenDefault;
   const intl5 = util.intl;
-  obj2.label = intl5.string(util.t["C/ZAw/"]);
+  obj5.label = intl5.string(util.t["C/ZAw/"]);
   const intl6 = util.intl;
-  obj2.placeholder = intl6.string(util.t.fZSi1D);
-  obj2.isValidClipboardCode = isValidClipboardCode;
-  obj2.maxLength = MFA.BACKUP_CODE_MAX_LENGTH;
-  obj2.onChangeCode = function onChangeCode(arg0) {
+  obj5.placeholder = intl6.string(util.t.fZSi1D);
+  obj5.isValidClipboardCode = isValidClipboardCode;
+  obj5.maxLength = MFA.BACKUP_CODE_MAX_LENGTH;
+  obj5.onChangeCode = function onChangeCode(arg0) {
     closure_3(arg0);
     _undefined(undefined);
   };
-  obj2.error = tmp8;
+  obj5.error = tmp8;
   let tmp20 = tmp5;
   if (!tmp5) {
     tmp20 = tmp10;
   }
-  const obj3 = { children: null };
-  obj2.isDisabled = tmp20;
-  obj2.autoFocus = !tmp3;
-  items4[1] = React5(tmpResult, obj2);
-  obj3.children = items4;
-  obj.input = timestampProducer(React6, obj3);
-  const obj4 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  tmpResult = buttonDefault;
+  const obj6 = { children: null };
+  obj5.isDisabled = tmp20;
+  obj5.autoFocus = !tmp3;
+  items4[1] = React5(ClipboardCopyInputDefault, obj5);
+  obj6.children = items4;
+  obj.input = timestampProducer(React6, obj6);
+  const obj7 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
+  const tmpResult = ClipboardCopyInputDefault;
   const intl7 = util.intl;
-  obj4.text = intl7.string(util.t.geKm7t);
+  obj7.text = intl7.string(util.t.geKm7t);
   let tmp22 = tmp5;
   if (!tmp5) {
     tmp22 = tmp10;
   }
-  obj4.loading = tmp22;
-  obj4.onPress = function onPress() {
+  obj7.loading = tmp22;
+  obj7.onPress = function onPress() {
     return closure_8(first);
   };
   if (!tmp5) {
@@ -163,8 +163,8 @@ export default function BackupScreen(finish) {
   if (!tmp5) {
     tmp5 = first1 > 0;
   }
-  obj4.disabled = tmp5;
-  obj.submit = React5(tmpResult, obj4);
+  obj7.disabled = tmp5;
+  obj.submit = React5(buttonDefault, obj7);
   obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
-  return React5(MfaOptionScreenDefault, obj);
+  return React5(tmp15, obj);
 };

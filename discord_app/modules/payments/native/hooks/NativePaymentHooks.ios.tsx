@@ -1,12 +1,12 @@
-// === Module 10933: hooks/NativePaymentHooks ===
+// === Module 10934: hooks/NativePaymentHooks ===
 
-// Module 10933 (hooks/NativePaymentHooks)
+// Module 10934 (hooks/NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import BillingUtils from "BillingUtils" /* 4309 */;
 import ProductIds from "ProductIds" /* 7343 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 7522 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10936 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -44,7 +44,7 @@ function useNativeIAPPayments() {
   if (nativePaymentsConnected) {
     nativePaymentsConnected = null != storeFront;
   }
-  storeFront(10883)(() => {
+  storeFront(10884)(() => {
     let tmp = nativePaymentsConnected;
     if (!nativePaymentsConnected) {
       tmp = c15;
@@ -54,7 +54,7 @@ function useNativeIAPPayments() {
     }
     if (!tmp) {
       c15 = true;
-      let obj = { tags: { alertPriority: "0" }, extra: null };
+      const obj2 = { tags: { alertPriority: "0" }, extra: null };
       let mapped;
       if (closure_2 != null) {
         mapped = closure_2.map((identifier) => identifier.identifier);
@@ -62,9 +62,9 @@ function useNativeIAPPayments() {
       if (mapped == null) {
         mapped = [];
       }
-      obj = { loadedProducts: mapped, genericProductsLoaded, storeFront };
-      obj.extra = obj;
-      const result = obj.captureBillingMessage("useNativeIAPPayments failed to load required context", obj);
+      const obj3 = { loadedProducts: mapped, genericProductsLoaded, storeFront };
+      obj2.extra = obj3;
+      const result = BillingUtils.captureBillingMessage("useNativeIAPPayments failed to load required context", obj2);
     }
   }, 5000);
   return { nativePaymentsConnected, storeFront, canMakePayments };
@@ -77,22 +77,21 @@ function useCreateSubscription(planId) {
   let callback;
   const tmp = useNativeIAPPayments();
   const nativePaymentsConnected = tmp.nativePaymentsConnected;
-  let obj = planId(applicationId[9]);
   const items = [callback];
   const items1 = [planId];
-  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionPlanStore.get(planId), items1);
+  const stateFromStores = planId(applicationId[9]).useStateFromStores(items, () => SubscriptionPlanStore.get(planId), items1);
   const tmp3 = skuId(applicationId[13])(stateFromStores, tmp.storeFront);
   noop = tmp3;
   const tmp4 = skuId(applicationId[14])(() => planId(applicationId[15]).getNewAnalyticsLoadId());
   const load_id = tmp4;
   const items2 = [tmp4, analyticsLocation, applicationId, planId, skuId];
   callback = noop.useCallback(() => {
-    const obj = { load_id, payment_type: closure_2_10[constants.SUBSCRIPTION], subscription_plan_gateway_plan_id: ProductIds.ProductIds.GENERIC_SUBSCRIPTION, subscription_type: constants2.GUILD, is_gift: false, location: analyticsLocation, application_id: applicationId, subscription_plan_id: planId, sku_id: skuId };
-    const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(obj);
+    const obj = PaymentFlowStartedTriggerPoint;
+    const result = obj.trackPaymentFlowStartedAnalyticsAndCTP({ load_id, payment_type: closure_2_10[constants.SUBSCRIPTION], subscription_plan_gateway_plan_id: ProductIds.ProductIds.GENERIC_SUBSCRIPTION, subscription_type: constants2.GUILD, is_gift: false, location: analyticsLocation, application_id: applicationId, subscription_plan_id: planId, sku_id: skuId });
   }, items2);
-  obj = { createSubscription: null, nativePaymentsConnected };
+  const obj2 = { createSubscription: null, nativePaymentsConnected };
   const items3 = [tmp3, nativePaymentsConnected, callback];
-  obj.createSubscription = noop.useCallback(analyticsLocation(function*() {
+  obj2.createSubscription = noop.useCallback(analyticsLocation(function*() {
     v4(tmp30[18])(nativePaymentsConnected, "cannot connect to IAP API");
     v4(tmp30[18])(null != closure_5, "plan not found");
     yield v4(tmp30[10]).restoreAndApplyPurchases();
@@ -110,13 +109,11 @@ function useCreateSubscription(planId) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        return { value, done: true };
       } else {
-        obj2 = tmp3(tmp30[19]);
         v4 = 4;
         c4 = 1;
-        return { value: obj2.fetchSubscriptions(), done: false };
+        return { value: tmp3(tmp30[19]).fetchSubscriptions(), done: false };
       }
     } else if (3 === tmp7) {
       if (arg0 === 1) {
@@ -137,7 +134,7 @@ function useCreateSubscription(planId) {
     }
     return value;
   }), items3);
-  return obj;
+  return obj2;
 }
 function useCancelSubscription(arg0, arg1) {
   _require = arg0;
@@ -145,10 +142,9 @@ function useCancelSubscription(arg0, arg1) {
   const tmp = useNativeIAPPayments();
   const nativePaymentsConnected = tmp.nativePaymentsConnected;
   const storeFront = tmp.storeFront;
-  let obj = require("initialize");
   const items = [SubscriptionStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
   const items2 = [storeFront, stateFromStores];
   memo = memo.useMemo(() => {
     let tmp3 = null != stateFromStores;
@@ -162,9 +158,9 @@ function useCancelSubscription(arg0, arg1) {
   }, items2);
   const tmp4 = require("useCancelSubscriptionParams")(arg0);
   closure_6 = tmp4;
-  obj = { cancelSubscription: null, nativePaymentsConnected };
+  const obj2 = { cancelSubscription: null, nativePaymentsConnected };
   const items3 = [memo, tmp4, nativePaymentsConnected, arg1];
-  obj.cancelSubscription = memo.useCallback(storeFront(function*() {
+  obj2.cancelSubscription = memo.useCallback(storeFront(function*() {
     closure_1(38)(memo, "Cannot update subscription");
     closure_1(38)(nativePaymentsConnected, "Cannot connect to IAP API");
     closure_1(38)(null != closure_6, "Subscription not found");
@@ -173,17 +169,16 @@ function useCancelSubscription(arg0, arg1) {
     yield tmp2(4960).fetchSubscriptions();
     return closure_128_0;
   }), items3);
-  return obj;
+  return obj2;
 }
 function useResubscribeSubscription(arg0) {
   _require = arg0;
   const tmp = useNativeIAPPayments();
   const nativePaymentsConnected = tmp.nativePaymentsConnected;
   const storeFront = tmp.storeFront;
-  let obj = require("initialize");
   const items = [SubscriptionStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => SubscriptionStore.getSubscriptionById(closure_0), items1);
   const items2 = [storeFront, stateFromStores];
   const memo = noop.useMemo(() => {
     let tmp3 = null != stateFromStores;
@@ -197,9 +192,9 @@ function useResubscribeSubscription(arg0) {
   }, items2);
   const tmp4 = nativePaymentsConnected(storeFront[21])(arg0);
   noop = tmp4;
-  obj = { resubscribeSubscription: null, nativePaymentsConnected };
+  const obj2 = { resubscribeSubscription: null, nativePaymentsConnected };
   const items3 = [memo, nativePaymentsConnected, tmp4, stateFromStores];
-  obj.resubscribeSubscription = noop.useCallback(stateFromStores(function*() {
+  obj2.resubscribeSubscription = noop.useCallback(stateFromStores(function*() {
     nativePaymentsConnected(38)(memo, "Cannot update subscription");
     nativePaymentsConnected(38)(nativePaymentsConnected, "Cannot connect to IAP API");
     nativePaymentsConnected(38)(null != closure_5, "Subscription not found");
@@ -209,7 +204,7 @@ function useResubscribeSubscription(arg0) {
     yield tmp2(4960).fetchSubscriptions();
     return closure_128_0;
   }), items3);
-  return obj;
+  return obj2;
 }
 function useGoogleSkuIds() {
   return closure_14;

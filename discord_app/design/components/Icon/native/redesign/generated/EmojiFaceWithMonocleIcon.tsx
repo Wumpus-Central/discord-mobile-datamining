@@ -1,9 +1,9 @@
-// === Module 15458: EmojiFaceWithMonocleIcon ===
+// === Module 15459: EmojiFaceWithMonocleIcon ===
 
-// Module 15458 (EmojiFaceWithMonocleIcon)
+// Module 15459 (EmojiFaceWithMonocleIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod15459 from "module_15459" /* 15459 */;
+import _mod15460 from "module_15460" /* 15460 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EmojiFaceWithMonocleIcon = function EmojiFaceWithMonocleIcon(color)
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15459, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15460, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

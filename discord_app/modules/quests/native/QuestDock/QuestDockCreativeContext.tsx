@@ -1,6 +1,6 @@
-// === Module 15182: QuestDockCreativeContext ===
+// === Module 15183: QuestDockCreativeContext ===
 
-// Module 15182 (QuestDockCreativeContext)
+// Module 15183 (QuestDockCreativeContext)
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export const getCreativeAnalyticsParams = function getCreativeAnalyticsParams(creative) {
   const type = creative.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
-    let obj = { adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: creative.quest.id };
-    return obj;
+    const obj2 = { adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: creative.quest.id };
+    return obj2;
   } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
-    obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: creative.bounty.id };
+    const obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: creative.bounty.id };
     return obj;
   }
 };

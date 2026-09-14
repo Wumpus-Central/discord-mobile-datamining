@@ -6,6 +6,8 @@ import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5653 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");

@@ -1,6 +1,6 @@
-// === Module 13199: UserProfileActivityEmptyStates ===
+// === Module 13200: UserProfileActivityEmptyStates ===
 
-// Module 13199 (UserProfileActivityEmptyStates)
+// Module 13200 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -16,12 +16,11 @@ require = fn;
 function EmptyState(arg0) {
   ({ heading, bodyText, children } = arg0);
   const tmp = closure_10();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.text, children: null };
-  obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.centeredText, children: heading };
-  items = [React5(Text_Text.Text, obj), React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.centeredText, children: bodyText })];
-  obj.children = items;
-  const items1 = [React6(View, obj), children];
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.text, children: null };
+  items = [React5(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.centeredText, children: heading }), React5(Text_Text.Text, { variant: "text-sm/normal", style: tmp.centeredText, children: bodyText })];
+  obj2.children = items;
+  const items1 = [React6(View, obj2), children];
   obj.children = items1;
   return React6(View, obj);
 }
@@ -95,26 +94,25 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-fn(4636);
-let obj = { container: null, text: null, centeredText: null, buttons: null };
-obj = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
-obj.container = obj;
-const createStyles = { gap: nativeDefault.space.PX_8, alignItems: "center" };
-obj.text = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
+let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
+obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
 obj.centeredText = { textAlign: "center" };
+let obj4 = { gap: nativeDefault.space.PX_8, alignItems: "center" };
 obj.buttons = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj);
-const obj2 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+const obj5 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 const memoResult = noop.memo((user) => {
   user = user.user;
   let name;
   ({ guildId, channelId } = user);
-  let obj = name(4788);
-  name = obj.getName(guildId, channelId, user);
-  const intl = user(1114).intl;
   const tmp = closure_10();
+  name = name(4788).getName(guildId, channelId, user);
+  const intl = user(1114).intl;
+  let obj = name(4788);
   items = [user.id];
-  obj = {
+  let obj2 = {
     heading: intl.formatToPlainString(user(1114).t.sjSitP, { name }),
     bodyText: _slicedToArray(noop.useState(() => {
       let sampleResult = _mod12.sample(items);
@@ -125,19 +123,19 @@ const memoResult = noop.memo((user) => {
     }), 1)[0],
     children: null
   };
-  obj = { style: tmp.buttons, children: null };
+  const obj3 = { style: tmp.buttons, children: null };
   const callback = noop.useCallback(() => {
-    const obj = { recipientIds: user.id };
-    obj.openPrivateChannel(obj);
+    ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
+    const obj2 = { recipientIds: user.id };
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
   }, items);
-  const obj1 = { size: "sm", variant: "secondary", text: null, onPress: null };
+  const obj4 = { size: "sm", variant: "secondary", text: null, onPress: null };
   const intl2 = user(1114).intl;
-  obj1.text = intl2.string(user(1114).t["g33r/P"]);
-  obj1.onPress = callback;
-  obj.children = closure_7(user(5056).Button, obj1);
-  obj.children = closure_7(View, obj);
-  return closure_7(EmptyState, obj);
+  obj4.text = intl2.string(user(1114).t["g33r/P"]);
+  obj4.onPress = callback;
+  obj3.children = closure_7(user(5056).Button, obj4);
+  obj2.children = closure_7(View, obj3);
+  return closure_7(EmptyState, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityEmptyStates.tsx");
@@ -146,21 +144,19 @@ export const UserProfileActivityEmptyOtherUser = memoResult;
 export const UserProfileActivityEmptyCurrentUser = noop.memo(() => {
   let obj = { heading: null, bodyText: null, children: null };
   const callback = noop.useCallback(() => {
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideAllActionSheets();
-    obj = { screen: constants.CONNECTIONS };
-    openUserSettings.openUserSettings(obj);
+    ActionSheetActionCreatorsDefault.hideAllActionSheets();
+    openUserSettings.openUserSettings({ screen: constants.CONNECTIONS });
   }, []);
   const intl = util.intl;
   obj.heading = intl.string(util.t.VB6LWY);
   const intl2 = util.intl;
   obj.bodyText = intl2.string(util.t.KpjsU9);
-  obj = { style: closure_10().buttons, children: null };
-  obj = { size: "sm", variant: "secondary", text: null, onPress: null };
+  const obj2 = { style: closure_10().buttons, children: null };
+  const obj3 = { size: "sm", variant: "secondary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t["/Hl24U"]);
-  obj.onPress = callback;
-  obj.children = React5(components_Button_Button.Button, obj);
-  obj.children = React5(View, obj);
+  obj3.text = intl3.string(util.t["/Hl24U"]);
+  obj3.onPress = callback;
+  obj2.children = React5(components_Button_Button.Button, obj3);
+  obj.children = React5(View, obj2);
   return React5(EmptyState, obj);
 });

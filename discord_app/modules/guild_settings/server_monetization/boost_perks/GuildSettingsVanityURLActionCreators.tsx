@@ -3,8 +3,10 @@
 // Module 9198 (GuildSettingsVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
@@ -21,8 +23,7 @@ export const resetCode = function resetCode() {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 };
 export const setCode = function setCode(code) {
-  const obj = { type: "GUILD_SETTINGS_VANITY_URL_SET", code };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code });
 };
 export const saveCode = function saveCode(id, code, arg2) {
   _require = arg2;
@@ -34,8 +35,7 @@ export const saveCode = function saveCode(id, code, arg2) {
     ({ code, uses } = body.body);
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
   }, (body) => {
-    const obj = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body });
     throwErr = undefined;
     if (throwErr != null) {
       throwErr = throwErr.throwErr;
@@ -45,5 +45,6 @@ export const saveCode = function saveCode(id, code, arg2) {
     } else {
       return body;
     }
+    const obj2 = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
   });
 };

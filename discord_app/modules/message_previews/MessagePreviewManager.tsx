@@ -1,15 +1,15 @@
-// === Module 15404: MessagePreviewManager ===
+// === Module 15405: MessagePreviewManager ===
 
-// Module 15404 (MessagePreviewManager)
+// Module 15405 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15405 */;
+import RemoteFetchData from "RemoteFetchData" /* 15406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13807 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13808 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -71,8 +71,8 @@ class MessagePreviewManager extends tmp3 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -86,8 +86,8 @@ class MessagePreviewManager extends tmp3 {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_4 = tmp;
               closure_3 = tmp4;
@@ -112,8 +112,8 @@ class MessagePreviewManager extends tmp3 {
                 throw value;
               } else if (arg0 === 2) {
                 c8 = 3;
-                let obj1 = { value, done: true };
-                return obj1;
+                let obj4 = { value, done: true };
+                return obj4;
               } else if (connected.isConnected()) {
                 if (!closure_132_0.remoteTicking) {
                   if (closure_131_0 <= 5) {
@@ -166,7 +166,7 @@ class MessagePreviewManager extends tmp3 {
               closure_1.return();
               c6 = 0;
               c8 = 3;
-              obj = { value, done: true };
+              let obj = { value, done: true };
               return obj;
             } else {
               c6 = 1;
@@ -211,8 +211,8 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -225,8 +225,8 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp6;
             let id;
@@ -240,16 +240,15 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                 const localFetching5 = self.localFetching;
                 localFetching5.add(closure_0);
                 id = AuthenticationStore.getId();
-                let obj3 = tmp4(tmp56[11]);
-                const messagesResult = obj3.messages();
+                const messagesResult = tmp4(tmp56[11]).messages();
                 let mostRecents;
                 if (messagesResult != null) {
                   mostRecents = messagesResult.getMostRecents(closure_0);
                 }
                 c4 = 3;
                 c5 = 1;
-                const obj1 = { value: mostRecents, done: false };
-                return obj1;
+                const obj5 = { value: mostRecents, done: false };
+                return obj5;
               }
             }
             c5 = 3;
@@ -268,8 +267,8 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
             const localFetching = closure_129_1.localFetching;
             localFetching.delete(closure_129_0);
             c5 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_1 = value;
             let tmp14 = null != closure_128_1;
@@ -277,8 +276,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
               tmp14 = id === AuthenticationStore.getId();
             }
             if (tmp14) {
-              obj = tmp4(tmp56[12]);
-              obj3 = {
+              const obj7 = {
                 type: "MESSAGE_PREVIEWS_LOCALLY_LOADED",
                 guildId: closure_129_0,
                 messages: closure_128_1.map((item) => {
@@ -287,7 +285,8 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                             return items;
                           })
               };
-              obj.dispatch(obj3);
+              tmp4(tmp56[12]).dispatch(obj7);
+              const obj = tmp4(tmp56[12]);
             }
             c3 = 1;
           }
@@ -342,8 +341,8 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -356,33 +355,32 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               let body;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")");
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
-              const obj1 = { channel_ids: nextWantsResult };
-              request.body = obj1;
+              const obj4 = { channel_ids: nextWantsResult };
+              request.body = obj4;
               dependencyMap = 1;
               c3 = 1;
-              const obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.post(request), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             body = value.body;
-            obj = tmp5(573);
-            const obj4 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
-            obj.dispatch(obj4);
+            const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
+            tmp5(573).dispatch(obj7);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }

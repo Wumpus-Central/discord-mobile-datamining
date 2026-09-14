@@ -1,6 +1,6 @@
-// === Module 11987: showBanConfirmModal ===
+// === Module 11988: showBanConfirmModal ===
 
-// Module 11987 (showBanConfirmModal)
+// Module 11988 (showBanConfirmModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/guild_moderation/native/showB
 
 export default function showBanConfirmModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11988, dependencyMap.paths), merged);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11989, dependencyMap.paths), merged);
 };

@@ -16,33 +16,27 @@ function TraitEmoji(emoji) {
   } else {
     let emojiURL;
     if (null != emoji.id) {
-      let obj = { id: null, animated: null, size: 16 };
       ({ id: obj2.id, animated: obj2.animated } = emoji);
-      emojiURL = obj.getEmojiURL(obj);
+      emojiURL = AvatarUtilsDefault.getEmojiURL({ id: null, animated: null, size: 16 });
+      const obj4 = { id: null, animated: null, size: 16 };
     }
-    obj = { src: emojiURL, name: EmojiUtilsDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates, fastImageStyle: tmp.emojiImage };
-    return hasOwnProperty(EmojiDefault, obj);
+    const obj6 = { src: emojiURL, name: EmojiUtilsDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates, fastImageStyle: tmp.emojiImage };
+    return hasOwnProperty(EmojiDefault, obj6);
   }
 }
 function GuildProfileTraitView(trait) {
   trait = trait.trait;
-  let obj = { style: closure_7().trait, children: null };
-  obj = { emoji: trait.emoji };
-  const items = [hasOwnProperty(TraitEmoji, obj), ];
-  obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
-  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  const obj = { style: closure_7().trait, children: null };
+  const items = [hasOwnProperty(TraitEmoji, { emoji: trait.emoji }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: null, emojiImage: null };
-createStyles = { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.trait = createStyles;
-createStyles.emojiImage = { width: 16, height: 16 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE }, emojiImage: { width: 16, height: 16 } };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileTraits.tsx");
 

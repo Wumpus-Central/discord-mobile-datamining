@@ -1,6 +1,6 @@
-// === Module 13790: FriendGroupsStore ===
+// === Module 13791: FriendGroupsStore ===
 
-// Module 13790 (FriendGroupsStore)
+// Module 13791 (FriendGroupsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
@@ -157,8 +157,8 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
     } else {
       const _Set = Set;
       set = new Set(userIds);
-      userIds = tmp3.userIds;
-      const found = userIds.filter((item) => !set.has(item));
+      const userIds1 = tmp3.userIds;
+      const found = userIds1.filter((item) => !set.has(item));
       let flag = found.length !== tmp3.userIds.length;
       if (flag) {
         const obj = {};

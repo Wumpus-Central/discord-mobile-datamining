@@ -1,9 +1,10 @@
 // === Module 1608: MetaQuestUtils ===
 
 // Module 1608 (MetaQuestUtils)
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1342 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1362 */;
+import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1340 */;
 
+let NativeMetaQuestModule = NativeMetaQuestModule_mod;
 NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");

@@ -1,8 +1,8 @@
-// === Module 14190: getStatusContainerStyle ===
+// === Module 14191: getStatusContainerStyle ===
 
-// Module 14190 (getStatusContainerStyle)
-import StatusConstants from "StatusConstants" /* 1179 */;
-import size from "module_2" /* 2 */;
+// Module 14191 (getStatusContainerStyle)
+import StatusConstants from "StatusConstants" /* 1177 */;
+import size_mod from "module_2" /* 2 */;
 
 const STATUS_PADDING = StatusConstants.STATUS_PADDING;
 const StatusSizes = StatusConstants.StatusSizes;
@@ -84,6 +84,7 @@ obj.containerVRLarge = { width: result3 * VR_STATUS_WIDTH_RATIO + 2 * STATUS_PAD
 const result4 = StatusSizes.LARGE * VR_STATUS_SCALE;
 const sum14 = result4 + 2 * STATUS_PADDING;
 obj.containerVRXLarge = { width: result4 * VR_STATUS_WIDTH_RATIO + 2 * STATUS_PADDING, height: sum14, borderRadius: sum14 / 2, paddingLeft: STATUS_PADDING, paddingRight: STATUS_PADDING, paddingTop: STATUS_PADDING, paddingBottom: STATUS_PADDING };
+let size = size_mod;
 const result5 = size.fileFinishedImporting("design/void/Status/native/getStatusContainerStyle.tsx");
 
 export default function getStatusContainerStyle(items, flag) {

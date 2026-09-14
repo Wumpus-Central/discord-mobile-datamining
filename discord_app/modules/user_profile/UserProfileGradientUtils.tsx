@@ -13,18 +13,19 @@ const ThemeTypes = fn(1074).ThemeTypes;
 fn(12);
 const apply = fn(12);
 const memoizeResult = apply.memoize((memo) => {
-  const obj = { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText };
-  const contrastingColor = obj.getContrastingColor(memo, obj);
+  const obj = shared;
+  const contrastingColor = obj.getContrastingColor(memo, { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText });
+  const obj2 = { base: "#ffffff", contrastRatio: shared.WCAGContrastRatios.HighContrastText };
   return utils_ColorUtils.hex2int(contrastingColor);
 }, (arg0) => arg0);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
 
-export const getProfileTheme = function getProfileTheme(tmp4Result1) {
-  if (null == tmp4Result1) {
+export const getProfileTheme = function getProfileTheme(tmp4Result8) {
+  if (null == tmp4Result8) {
     return null;
   } else {
-    if (obj.getDarkness(tmp4Result1) > 0.5) {
+    if (obj.getDarkness(tmp4Result8) > 0.5) {
       let LIGHT = ThemeTypes.DARK;
     } else {
       LIGHT = ThemeTypes.LIGHT;
@@ -54,7 +55,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       const items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult;
       const alpha = parseStringResult.alpha;
-      [tmp8, tmp9, tmp10] = _slicedToArray(items.map((item, index) => Math.floor(alpha * item + (1 - alpha) * items1[index])), 3);
+      [tmp8, tmp9, tmp10] = items.map((item, index) => Math.floor(alpha * item + (1 - alpha) * items1[index]));
       const tmp7 = _slicedToArray(items.map((item, index) => Math.floor(alpha * item + (1 - alpha) * items1[index])), 3);
       const _HermesInternal = HermesInternal;
       return utils_ColorUtils.rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");

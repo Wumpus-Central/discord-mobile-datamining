@@ -1,23 +1,22 @@
-// === Module 12721: useDMMessageToReport ===
+// === Module 12722: useDMMessageToReport ===
 
-// Module 12721 (useDMMessageToReport)
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12579 */;
-import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12722 */;
-import useMessageRequestPreview from "useMessageRequestPreview" /* 12723 */;
+// Module 12722 (useDMMessageToReport)
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12580 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12723 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 12724 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
   let isRelationshipTypeSpamReportable = arg2;
-  let obj = useIsRelationshipTypeSpamReportable;
   if (!arg2) {
     isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
-  let tmp2Result = useLongestChannelMessageBeforeReply;
-  const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
-  tmp2Result = useMessageRequestPreview;
-  const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, { enabled: isRelationshipTypeSpamReportable });
+  obj = useIsRelationshipTypeSpamReportable;
+  const longestChannelMessageBeforeReply = useLongestChannelMessageBeforeReply.useLongestChannelMessageBeforeReply(channel.id, id);
+  const tmp2Result = useLongestChannelMessageBeforeReply;
+  const messageRequestPreview = useMessageRequestPreview.useMessageRequestPreview(channel, { enabled: isRelationshipTypeSpamReportable });
   const message = messageRequestPreview.message;
   let tmp6 = longestChannelMessageBeforeReply;
   ({ loaded, error } = messageRequestPreview);
@@ -35,6 +34,5 @@ export const useDMMessageToReport = function useDMMessageToReport(channel, id, a
     }
     tmp6 = tmp8;
   }
-  obj = { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
-  return obj;
+  return { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
 };

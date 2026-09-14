@@ -1,6 +1,6 @@
-// === Module 10778: NativeMenuActionCreators ===
+// === Module 10779: NativeMenuActionCreators ===
 
-// Module 10778 (NativeMenuActionCreators)
+// Module 10779 (NativeMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
@@ -12,14 +12,11 @@ export default {
   showNativeMenu(key, memo) {
     importDefault = memo;
     DispatcherDefault.wait(() => {
-      let obj = HapticUtils;
-      const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      obj = { type: "SHOW_NATIVE_MENU", key, menu };
-      DispatcherDefault.dispatch(obj);
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      DispatcherDefault.dispatch({ type: "SHOW_NATIVE_MENU", key, menu });
     });
   },
   hideNativeMenu(key) {
-    const obj = { type: "HIDE_NATIVE_MENU", key };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "HIDE_NATIVE_MENU", key });
   }
 };

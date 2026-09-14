@@ -2,7 +2,7 @@
 
 // Module 8493 (LinkAnalyticsUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import LinkUtils from "LinkUtils" /* 4790 */;
 import size from "module_2" /* 2 */;
@@ -72,13 +72,12 @@ export default {
   },
   trackLinkClicked(ctaLink, arg1) {
     if (null != ctaLink) {
-      let obj = URLUtilsDefault;
-      let tmp3 = obj.isDiscordUrl(ctaLink, true) || null != arg1;
+      let tmp3 = URLUtilsDefault.isDiscordUrl(ctaLink, true) || null != arg1;
       AnalyticsUtilsDefault;
-      obj = { is_discord_link: tmp3, discord_link_type: null };
+      const obj2 = { is_discord_link: tmp3, discord_link_type: null };
       if (!tmp3) {
-        obj.discord_link_type = null;
-        tmp5(tmp7, obj);
+        obj2.discord_link_type = null;
+        tmp5(tmp7, obj2);
       } else {
         if (null != arg1) {
           if (null == arg1) {

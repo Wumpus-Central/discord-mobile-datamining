@@ -1,8 +1,8 @@
-// === Module 16139: AddFriendsScreenUtils ===
+// === Module 16141: AddFriendsScreenUtils ===
 
-// Module 16139 (AddFriendsScreenUtils)
+// Module 16141 (AddFriendsScreenUtils)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10998 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -15,8 +15,8 @@ let closure_7 = async function _sendWave(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_7 = async function _sendWave(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp4;
           closure_3 = tmp8;
@@ -55,28 +55,27 @@ let closure_7 = async function _sendWave(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             dMFromUserId = closure_132_4.getDMFromUserId(closure_131_0);
             if (null == dMFromUserId) {
               c6 = 1;
               c7 = 4;
               c8 = 1;
-              const obj2 = { value: closure_132_1(closure_132_2[5]).getDMChannel(closure_131_0), done: false };
-              return obj2;
+              const obj7 = { value: closure_132_1(closure_132_2[5]).getDMChannel(closure_131_0), done: false };
+              return obj7;
             } else {
               c6 = 2;
               if (null != dMFromUserId) {
-                let obj7 = closure_132_0(closure_132_2[8]);
-                const obj3 = { channelId: dMFromUserId, source: closure_131_2 };
-                obj7.trackWaveCtaClicked(obj3);
-                let obj9 = closure_132_1(closure_132_2[9]);
-                let obj4 = { location: closure_132_6.SEND_WAVE };
+                const obj9 = { channelId: dMFromUserId, source: closure_131_2 };
+                closure_132_0(closure_132_2[8]).trackWaveCtaClicked(obj9);
+                const obj10 = closure_132_1(closure_132_2[9]);
+                const obj11 = { location: closure_132_6.SEND_WAVE };
                 c7 = 5;
                 c8 = 1;
-                let obj5 = { value: obj9.sendStickers(dMFromUserId, ["749054660769218631"], "", obj4), done: false };
-                return obj5;
+                const obj12 = { value: obj10.sendStickers(dMFromUserId, ["749054660769218631"], "", obj11), done: false };
+                return obj12;
               } else {
                 c6 = 0;
               }
@@ -86,10 +85,10 @@ let closure_7 = async function _sendWave(arg0) {
           if (2 !== tmp8) {
             if (3 === tmp8) {
               c6 = 0;
-              obj4 = closure_132_0(closure_132_2[6]);
               const intl = closure_132_0(closure_132_2[7]).intl;
-              obj4.presentError(intl.string(closure_132_0(closure_132_2[7]).t.iufib1));
+              closure_132_0(closure_132_2[6]).presentError(intl.string(closure_132_0(closure_132_2[7]).t.iufib1));
               c8 = 3;
+              const obj5 = closure_132_0(closure_132_2[6]);
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c8 = 3;
@@ -97,8 +96,8 @@ let closure_7 = async function _sendWave(arg0) {
               } else if (arg0 === 2) {
                 c6 = 0;
                 c8 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
                 dMFromUserId = value;
                 c6 = 0;
@@ -108,24 +107,23 @@ let closure_7 = async function _sendWave(arg0) {
               throw value;
             } else if (arg0 !== 2) {
               if (closure_131_1) {
-                obj = closure_132_1(closure_132_2[5]);
-                obj7 = { recipientIds: closure_131_0 };
-                obj.openPrivateChannel(obj7);
+                const obj15 = { recipientIds: closure_131_0 };
+                closure_132_1(closure_132_2[5]).openPrivateChannel(obj15);
+                const obj = closure_132_1(closure_132_2[5]);
               }
             }
           }
           c6 = 0;
-          obj5 = closure_132_0(closure_132_2[6]);
           const intl2 = closure_132_0(closure_132_2[7]).intl;
-          obj5.presentError(intl2.string(closure_132_0(closure_132_2[7]).t.iufib1));
+          closure_132_0(closure_132_2[6]).presentError(intl2.string(closure_132_0(closure_132_2[7]).t.iufib1));
           c8 = 3;
-          const obj8 = { value: undefined, done: true };
-          return obj8;
+          const obj16 = { value: undefined, done: true };
+          return obj16;
         }
         c6 = 0;
         c8 = 3;
-        obj9 = { value, done: true };
-        return obj9;
+        const obj17 = { value, done: true };
+        return obj17;
       }
     } catch (tmp57) {
       closure_5 = tmp57;
@@ -147,13 +145,11 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/com
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  obj.cancelFriendRequest(obj);
+  PeopleUtilsDefault.cancelFriendRequest({ userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL });
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  const result = obj.maybeConfirmFriendRequestAccept(obj);
+  const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept({ userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL });
 };
 export const sendWave = function sendWave() {
   const self = this;
@@ -166,8 +162,6 @@ export const sendWave = function sendWave() {
   return applyArgumentsResult;
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  let obj = { userId: user.id, context: null, type: "HermesInternal", fromFriendSuggestion: null };
-  obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  obj.context = obj;
-  obj.addRelationship(obj);
+  const obj2 = { userId: user.id, context: { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL }, type: "HermesInternal", fromFriendSuggestion: null };
+  RelationshipActionCreatorsDefault.addRelationship(obj2);
 };

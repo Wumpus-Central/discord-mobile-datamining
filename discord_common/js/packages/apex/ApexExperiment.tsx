@@ -121,7 +121,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
         const obj = { location: location.location };
         tmpResult = dependencyMap("user", obj);
       }
-      [tmp7, tmp8] = _slicedToArray(evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult), 2);
+      [tmp7, tmp8] = evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult);
       let variantId;
       if (tmp8 != null) {
         variantId = tmp8.variantId;

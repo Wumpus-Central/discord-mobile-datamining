@@ -1,6 +1,6 @@
-// === Module 17487: GuildRoomManager ===
+// === Module 17489: GuildRoomManager ===
 
-// Module 17487 (GuildRoomManager)
+// Module 17489 (GuildRoomManager)
 import GuildRoomActionCreators from "GuildRoomActionCreators" /* 4792 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4836 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -27,8 +27,7 @@ class GuildRoomManager extends tmp2 {
 }
 const prototype = GuildRoomManager.prototype;
 prototype["isExperimentEnabled"] = function isExperimentEnabled(guildId, VOICE_STATE_UPDATE) {
-  const obj = { guildId, location: VOICE_STATE_UPDATE };
-  return obj.getGuildRoomsConfig(obj).enabled;
+  return GuildRoomsExperiment.getGuildRoomsConfig({ guildId, location: VOICE_STATE_UPDATE }).enabled;
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
   const self = this;

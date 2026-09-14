@@ -3,6 +3,8 @@
 // Module 8975
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
 for (const key10018 in require("useFetchVirtualCurrencyBalance")) {
   arg5[key10018] = require("useFetchVirtualCurrencyBalance")[key10018];

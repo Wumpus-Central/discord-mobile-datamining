@@ -1,10 +1,10 @@
-// === Module 11172: WishlistViewMoreCard ===
+// === Module 11173: WishlistViewMoreCard ===
 
-// Module 11172 (WishlistViewMoreCard)
+// Module 11173 (WishlistViewMoreCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import WishlistItemCardDefault from "WishlistItemCard" /* 11167 */;
+import WishlistItemCardDefault from "WishlistItemCard" /* 11168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,14 +14,14 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles(() => {
-  let obj = { moreOverlay: null };
-  obj = {};
+  const obj = { moreOverlay: null };
+  const obj2 = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.borderRadius = nativeDefault.radii.lg;
-  obj.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
-  obj.justifyContent = "center";
-  obj.alignItems = "center";
-  obj.moreOverlay = obj;
+  obj2.borderRadius = nativeDefault.radii.lg;
+  obj2.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+  obj2.justifyContent = "center";
+  obj2.alignItems = "center";
+  obj.moreOverlay = obj2;
   return obj;
 });
 const size = fn(2);
@@ -30,16 +30,16 @@ const result = size.fileFinishedImporting("modules/wishlists/native/WishlistView
 export default function WishlistViewMoreCard(recipientName) {
   recipientName = recipientName.recipientName;
   ({ sku, size, overflowCount, onPress } = recipientName);
-  let obj = { onPress, accessibilityLabel: null, children: null };
+  const obj = { onPress, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t["8uYD+I"], { username: recipientName });
   const items = [timestampProducer(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
-  obj = { style: closure_8().moreOverlay, children: null };
-  obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
+  const obj2 = { style: closure_8().moreOverlay, children: null };
+  const obj3 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.format(util.t.F6iMs4, { count: overflowCount });
-  obj.children = timestampProducer(Text_Text.Text, obj);
-  items[1] = timestampProducer(hasOwnProperty, obj);
+  obj3.children = intl2.format(util.t.F6iMs4, { count: overflowCount });
+  obj2.children = timestampProducer(Text_Text.Text, obj3);
+  items[1] = timestampProducer(hasOwnProperty, obj2);
   obj.children = items;
   return React5(React3, obj);
 };

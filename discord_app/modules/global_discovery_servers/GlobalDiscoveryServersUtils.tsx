@@ -1,22 +1,21 @@
-// === Module 17943: GlobalDiscoveryServersUtils ===
+// === Module 17944: GlobalDiscoveryServersUtils ===
 
-// Module 17943 (GlobalDiscoveryServersUtils)
+// Module 17944 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1114 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13793 */;
-import GlobalDiscoveryServersFeaturedSearchManagerDefault from "GlobalDiscoveryServersFeaturedSearchManager" /* 17942 */;
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13794 */;
+import GlobalDiscoveryServersFeaturedSearchManagerDefault from "GlobalDiscoveryServersFeaturedSearchManager" /* 17943 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
 let closure_15 = async function _navigateToGuild() {
-  const obj2 = {};
+  const obj6 = {};
   const merged = Object.assign(closure_129_5);
-  obj2.loadId = closure_129_0;
-  closure_129_6 = obj2;
+  obj6.loadId = closure_129_0;
+  closure_129_6 = obj6;
   await closure_130_2(closure_130_3[7]).startLurking(closure_129_1, closure_129_4, closure_129_6);
-  closure_130_2(closure_130_3[7]);
   closure_130_1(closure_130_3[8]).track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, { guild_id: closure_129_1, load_id: closure_129_0, card_index: closure_129_2, category_id: closure_129_3, location: closure_129_4 });
   await "HermesInternal";
   closure_1 = tmp2;
@@ -168,7 +167,7 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "ip", discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001952597032753436, emojis: 13336028937370364000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "channel", discoverySplash: "md", emojis: "onAcceptSuccess" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;

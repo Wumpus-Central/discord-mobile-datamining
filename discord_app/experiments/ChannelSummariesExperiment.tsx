@@ -1,12 +1,14 @@
-// === Module 11480: ChannelSummariesExperiment ===
+// === Module 11481: ChannelSummariesExperiment ===
 
-// Module 11480 (ChannelSummariesExperiment)
+// Module 11481 (ChannelSummariesExperiment)
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import GuildRecord from "GuildRecord" /* 1975 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function canSeeChannelSummaries(channel) {
   if (flag === undefined) {
@@ -59,15 +61,16 @@ function canSeeChannelSummaries(channel) {
           let tmp20 = !tmp15;
           if (!tmp15) {
             const features = guild1.features;
-            let hasItem = features.has(constants2.SUMMARIES_ENABLED_GA);
-            if (hasItem) {
-              hasItem = !flag2;
+            let hasItem1 = features.has(constants2.SUMMARIES_ENABLED_GA);
+            if (hasItem1) {
+              let hasItem = !flag2;
               if (flag2) {
                 const features2 = guild1.features;
                 hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
               }
+              hasItem1 = hasItem;
             }
-            tmp20 = hasItem;
+            tmp20 = hasItem1;
           }
           tmp14 = tmp20;
         }
@@ -107,15 +110,16 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
     let tmp7 = !tmp2;
     if (!tmp2) {
       const features = guild.features;
-      let hasItem = features.has(constants2.SUMMARIES_ENABLED_GA);
-      if (hasItem) {
-        hasItem = !flag;
+      let hasItem1 = features.has(constants2.SUMMARIES_ENABLED_GA);
+      if (hasItem1) {
+        let hasItem = !flag;
         if (flag) {
           const features2 = guild.features;
           hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
         }
+        hasItem1 = hasItem;
       }
-      tmp7 = hasItem;
+      tmp7 = hasItem1;
     }
     tmp = tmp7;
   }
@@ -132,14 +136,14 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const items = [GuildStore];
   const items1 = [arg0];
   return require("useStateFromStores").useStateFromStores(items, () => {
-    id = undefined;
+    let id1;
     if (id != null) {
-      id = id.id;
+      id1 = id.id;
     }
-    if (id == null) {
-      id = React5;
+    if (id1 == null) {
+      id1 = React5;
     }
-    const guild = GuildStore.getGuild(id);
+    const guild = GuildStore.getGuild(id1);
     let tmp4 = null != guild;
     if (tmp4) {
       id = guild.id;

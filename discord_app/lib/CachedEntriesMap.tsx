@@ -7,27 +7,27 @@ import size from "module_2" /* 2 */;
 let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.version = 0;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.version = 0;
     map = new Map();
-    obj.data = map;
+    obj1.data = map;
     obj = closure_0(closure_1[0]);
-    obj.cachedValues = obj.cachedFunction(() => {
-      const data = obj.data;
+    obj1.cachedValues = obj.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.values());
     });
     obj2 = closure_0(closure_1[0]);
-    obj.cachedKeys = obj2.cachedFunction(() => {
-      const data = obj.data;
+    obj1.cachedKeys = obj2.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.keys());
     });
     obj3 = closure_0(closure_1[0]);
-    obj.cachedEntries = obj3.cachedFunction(() => {
-      const data = obj.data;
+    obj1.cachedEntries = obj3.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.entries());
     });
-    return obj;
+    return obj1;
   }
 }
 const prototype = CachedEntriesMap.prototype;

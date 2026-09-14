@@ -37,22 +37,22 @@ function computeSubtitle(type, arg1, arg2) {
   if (constants.GUILD_VOICE === type) {
     const activeEventByChannel = GuildScheduledEventStore.getActiveEventByChannel(type.id);
     if (null != activeEventByChannel) {
-      let obj = { type: "event", name: activeEventByChannel.name };
-      return obj;
+      const obj3 = { type: "event", name: activeEventByChannel.name };
+      return obj3;
     } else {
       if (arg2) {
         if (arg1) {
-          let obj1 = ChannelListUtils;
-          if (obj1.hasStream(tmp19)) {
+          if (obj2.hasStream(tmp19)) {
             return { type: "go-live" };
           }
+          obj2 = ChannelListUtils;
         }
       }
       const channelStatus = ChannelStatusStore.getChannelStatus(type);
       if (null != channelStatus) {
         if (channelStatus.length > 0) {
-          obj = { type: "voice", text: channelStatus };
-          return obj;
+          const obj4 = { type: "voice", text: channelStatus };
+          return obj4;
         }
       }
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(type.id);
@@ -67,8 +67,8 @@ function computeSubtitle(type, arg1, arg2) {
       const found = mapped.filter(GlobalUtils.isNotNullish);
       let tmp16 = null;
       if (found.length > 0) {
-        obj1 = { type: "embedded-activities", name: found.join(", ") };
-        tmp16 = obj1;
+        const obj5 = { type: "embedded-activities", name: found.join(", ") };
+        tmp16 = obj5;
       }
       return tmp16;
     }
@@ -76,7 +76,7 @@ function computeSubtitle(type, arg1, arg2) {
     const activeEventByChannel1 = GuildScheduledEventStore.getActiveEventByChannel(type.id);
     let tmp5 = null;
     if (null != activeEventByChannel1) {
-      obj = { type: "event", name: activeEventByChannel1.name };
+      const obj = { type: "event", name: activeEventByChannel1.name };
       tmp5 = obj;
     }
     return tmp5;
@@ -243,7 +243,7 @@ items = [String(ChannelListGuildActionRow.GUILD_DIRECTORY)];
 let set = new Set(items);
 class ChannelListImpl {
   constructor(arg0, arg1, arg2) {
-    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: 0 });
+    merged = Object.assign({ sortedNamedCategories: null, sections: null, rows: null, firstVoiceChannel: "Array", allChannelsById: 0, version: "asc" });
     merged.id = global;
     obj = closure_25;
     merged.hideMutedChannels = closure_25.isGuildCollapsed(merged.id);
@@ -280,8 +280,8 @@ class ChannelListImpl {
       tmp9 = closure_1(tmp3[31])(guild);
     }
     merged.moderatorReportChannelEnabled = tmp9;
-    obj = {};
     obj1 = {};
+    obj9 = {};
     for (const key10068 in mutableGuildChannelsForGuild) {
       tmp67 = key10068;
       tmp68 = mutableGuildChannelsForGuild[key10068];
@@ -289,8 +289,8 @@ class ChannelListImpl {
       if (tmp68.type !== ChannelTypes.GUILD_CATEGORY) {
         continue;
       } else {
-        obj[tmp68.id] = tmp68;
-        obj1[tmp68.id] = [];
+        obj1[tmp68.id] = tmp68;
+        obj9[tmp68.id] = [];
         continue;
       }
       continue;
@@ -304,44 +304,44 @@ class ChannelListImpl {
       tmp70 = key10080;
       tmp41 = mutableGuildChannelsForGuild[key10080];
       type = tmp41.type;
-      arr3 = ChannelTypes;
+      arr13 = ChannelTypes;
       GUILD_CATEGORY = ChannelTypes.GUILD_CATEGORY;
       if (type === GUILD_CATEGORY) {
         continue;
       } else {
         type = tmp41.type;
-        if (type !== arr3.GUILD_DIRECTORY) {
+        if (type !== arr13.GUILD_DIRECTORY) {
           GUILD_CATEGORY = shouldShowInRecents;
           if (shouldShowInRecents(merged, tmp41, initializationData)) {
-            arr = items1.push(tmp41);
+            arr1 = items1.push(tmp41);
           } else {
-            GUILD_CATEGORY = arr3.GUILD_VOICE;
+            GUILD_CATEGORY = arr13.GUILD_VOICE;
             tmp13 = tmp41.type !== GUILD_CATEGORY;
             if (!tmp13) {
             } else {
-              tmp13 = tmp41.type !== arr3.GUILD_STAGE_VOICE;
+              tmp13 = tmp41.type !== arr13.GUILD_STAGE_VOICE;
             }
             if (tmp13) {
             } else {
               tmp14 = null != tmp41.parent_id;
               if (!tmp14) {
               } else {
-                tmp14 = null != obj[tmp41.parent_id];
+                tmp14 = null != obj1[tmp41.parent_id];
               }
               if (!tmp14) {
               } else {
-                arr1 = items2.push(obj[tmp41.parent_id]);
+                arr11 = items2.push(obj1[tmp41.parent_id]);
               }
-              arr2 = items2.push(tmp41);
+              arr12 = items2.push(tmp41);
             }
           }
           if (null == tmp41.parent_id) {
-          } else if (tmp41.parent_id in obj1) {
-            GUILD_CATEGORY = obj1[tmp41.parent_id];
-            arr3 = GUILD_CATEGORY.push(tmp41);
+          } else if (tmp41.parent_id in obj9) {
+            GUILD_CATEGORY = obj9[tmp41.parent_id];
+            arr13 = GUILD_CATEGORY.push(tmp41);
             continue;
           }
-          arr3 = items.push(tmp41);
+          arr13 = items.push(tmp41);
           continue;
         } else {
           GUILD_CATEGORY = null == guild;
@@ -364,13 +364,13 @@ class ChannelListImpl {
       continue;
     }
     merged.categories = {};
-    for (const key10112 in obj1) {
+    for (const key10112 in obj9) {
       GUILD_CATEGORY = key10112;
       type = ChannelListCategoryWithParent;
       tmp11 = new.target;
       tmp72 = merged;
       tmp73 = initializationData;
-      merged.categories[key10112] = new ChannelListCategoryWithParent(merged, obj[key10112], obj1[key10112], initializationData);
+      merged.categories[key10112] = new ChannelListCategoryWithParent(merged, obj1[key10112], obj9[key10112], initializationData);
       continue;
     }
     merged.recentsSectionNumber = RECENTS;
@@ -381,7 +381,7 @@ class ChannelListImpl {
       tmp20 = new.target;
       tmp21 = new.target;
       tmp22 = merged;
-      tmp23 = new closure_66(merged, tmp71, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, items, arr3, mutableGuildChannelsForGuild);
+      tmp23 = new closure_66(merged, tmp71, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, items, arr13, mutableGuildChannelsForGuild);
       tmp24 = tmp23;
       closure_1 = tmp23;
       tmp25 = closure_1;
@@ -414,7 +414,7 @@ class ChannelListImpl {
           tmp35 = new.target;
           tmp36 = new.target;
           tmp37 = merged;
-          tmp38 = new ChannelListRecentsCategory(merged, tmp30, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, tmp32, iter2, mutableGuildChannelsForGuild, new.target, undefined, items2, obj, ChannelListRecentsCategory, items3, globalThis);
+          tmp38 = new ChannelListRecentsCategory(merged, tmp30, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, tmp32, iter2, mutableGuildChannelsForGuild, new.target, undefined, items2, obj1, ChannelListRecentsCategory, items3, globalThis);
           tmp39 = tmp38;
           closure_129_1 = tmp38;
           iter = merged.optInEnabled;
@@ -448,17 +448,17 @@ class ChannelListImpl {
         tmp48 = new.target;
         tmp49 = new.target;
         tmp50 = merged;
-        tmp51 = new ChannelListVoiceChannelsCategory(merged, tmp30, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, iter, iter2, tmp45, new.target, undefined, items2, obj, tmp46);
+        tmp51 = new ChannelListVoiceChannelsCategory(merged, tmp30, tmp44, initializationData, features, tmp11, type, tmp41, GUILD_CATEGORY, items1, iter, iter2, tmp45, new.target, undefined, items2, obj1, tmp46);
         tmp52 = tmp51;
         closure_130_1 = tmp51;
         tmp51.hiddenChannelIds = null;
-        tmp51.categoriesById = obj;
+        tmp51.categoriesById = obj1;
         if (merged.optInEnabled) {
           tmp53 = closure_28;
           tmp51.isCollapsed = closure_28.isVoiceCategoryCollapsed(merged.id);
           flag2 = false;
           tmp51.isMuted = false;
-          tmp51.categoriesById = obj;
+          tmp51.categoriesById = obj1;
           arr9 = tmp25(tmp26[27])(items2);
           mapped = arr9.map((item) => new VoiceChannelListChannel(closure_1, item, closure_0));
           iter3 = mapped.keyBy((id) => id.id);
@@ -468,22 +468,22 @@ class ChannelListImpl {
         tmp56 = new.target;
         if (typeof ChannelListGuildActionSection === "function") {
           tmp57 = fn;
-          obj2 = Object.create(tmp54.prototype);
+          obj10 = Object.create(tmp54.prototype);
           _String = String;
-          obj2.guildActionRows = fn.map(String);
+          obj10.guildActionRows = fn.map(String);
           if (tmp55) {
-            guildActionRows = obj2.guildActionRows;
+            guildActionRows = obj10.guildActionRows;
             _String2 = String;
             tmp59 = ChannelListGuildActionRow;
-            arr4 = guildActionRows.push(String(ChannelListGuildActionRow.GUILD_DIRECTORY));
+            arr14 = guildActionRows.push(String(ChannelListGuildActionRow.GUILD_DIRECTORY));
           }
-          merged.guildActionSection = obj2;
+          merged.guildActionSection = obj10;
           tmp62 = new.target;
           if (typeof ChannelListChannelNoticeSection === "function") {
             tmp63 = importDefault;
-            obj3 = Object.create(tmp61.prototype);
-            obj3.rows = importDefault;
-            merged.channelNoticeSection = obj3;
+            obj11 = Object.create(tmp61.prototype);
+            obj11.rows = importDefault;
+            merged.channelNoticeSection = obj11;
             str = "null";
             str2 = "somehow a null got into categories";
             tmp65 = tmp25(tmp26[33])(!("null" in merged.categories), "somehow a null got into categories");
@@ -690,7 +690,7 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
   }
   const self = this;
   if (null != GUILD_DIRECTORY) {
-    let obj = { row: null, section: null };
+    const obj = { row: null, section: null };
     const guildActionSection = self.getGuildActionSection();
     const rows = guildActionSection.getRows();
     obj.row = rows.indexOf(GUILD_DIRECTORY);
@@ -716,18 +716,18 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
           const shownChannelIds = favoritesCategory.getShownChannelIds();
           const index = shownChannelIds.indexOf(tmp7.id);
           if (index >= 0) {
-            obj = { section: FAVORITES, row: index };
-            items1.push(obj);
+            const obj2 = { section: FAVORITES, row: index };
+            items1.push(obj2);
           }
           const recentsCategory = self.recentsCategory;
           const shownChannelIds1 = recentsCategory.getShownChannelIds();
           const index1 = shownChannelIds1.indexOf(tmp7.id);
           if (index1 >= 0) {
-            const obj1 = { section: self.recentsSectionNumber, row: index1 };
-            items1.push(obj1);
+            const obj3 = { section: self.recentsSectionNumber, row: index1 };
+            items1.push(obj3);
           }
           if (tmp7.type === constants.GUILD_CATEGORY) {
-            const obj2 = {
+            const obj4 = {
               section: _modDef12.findIndex(self.getSortedNamedCategories(), (id) => {
                           id = undefined;
                           if (channel2 != null) {
@@ -736,7 +736,7 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
                           return id.id === id;
                         }) + FIRST_NAMED_CATEGORY
             };
-            const items2 = [obj2];
+            const items2 = [obj4];
             return items2;
           } else {
             const category = self.getCategory(tmp7);
@@ -755,16 +755,16 @@ prototype["getSectionRowsFromChannel"] = function getSectionRowsFromChannel(arg0
                   const threadIds = category.channels[tmp7.id].threadIds;
                   num = threadIds.indexOf(arg0);
                 }
-                const obj3 = { section: sum, row: index2, threadOffset: num };
-                items1.push(obj3);
+                const obj5 = { section: sum, row: index2, threadOffset: num };
+                items1.push(obj5);
               }
             }
             const voiceChannelsCategory = self.voiceChannelsCategory;
             const shownChannelIds3 = voiceChannelsCategory.getShownChannelIds();
             const index3 = shownChannelIds3.indexOf(tmp7.id);
             if (index3 >= 0) {
-              const obj4 = { section: self.voiceChannelsSectionNumber, row: index3 };
-              items1.push(obj4);
+              const obj7 = { section: self.voiceChannelsSectionNumber, row: index3 };
+              items1.push(obj7);
             }
             return items1;
           }
@@ -849,7 +849,7 @@ prototype["getSlicedChannels"] = function getSlicedChannels(arg0, ignoreRecents)
         tmp20 = !tmp8;
       }
       if (tmp20) {
-        arr = items1.push(tmp14);
+        let arr2 = items1.push(tmp14);
       }
       let tmp24 = flag;
       if (!flag) {
@@ -1111,12 +1111,12 @@ prototype2["getFirstVoiceChannel"] = function getFirstVoiceChannel(arg0) {
 };
 const prototype3 = function ChannelListCategoryNoParent(arg0, arg1, arg2) {
   closure_0 = arg2;
-  tmp2 = new tmp2(arg0, new.target, tmp2, new.target, undefined, tmp);
-  importDefault = tmp2;
+  const tmp22 = new tmp2(arg0, new.target, tmp2, new.target, undefined, tmp);
+  importDefault = tmp22;
   const mapped = _modDef12(arg1).map((item) => new ChannelListChannelImpl(closure_1, item, closure_0));
   const arr = _modDef12(arg1);
-  tmp2.channels = mapped.keyBy((id) => id.id).value();
-  return tmp2;
+  tmp22.channels = mapped.keyBy((id) => id.id).value();
+  return tmp22;
 }.prototype;
 class prototype3 extends BaseChannelListCategory {
 }
@@ -1190,17 +1190,17 @@ class ChannelListFavoritesCategory extends BaseChannelListCategory {
     tmp10 = null != channel && null != suggestedChannelId;
     if (tmp10) {
       tmp11 = FavoritesChannelListChannel;
-      obj = {};
-      tmp12 = obj;
+      obj1 = {};
+      tmp12 = obj1;
       tmp13 = fn;
       merged = Object.assign(fn);
-      obj.activeJoinedRelevantThreads = {};
-      obj.activeJoinedUnreadThreads = {};
+      obj1.activeJoinedRelevantThreads = {};
+      obj1.activeJoinedUnreadThreads = {};
       tmp15 = new.target;
       tmp16 = tmp5;
       tmp17 = channel;
-      tmp18 = obj;
-      tmp5.channels[suggestedChannelId] = new FavoritesChannelListChannel(tmp5, channel, obj);
+      tmp18 = obj1;
+      tmp5.channels[suggestedChannelId] = new FavoritesChannelListChannel(tmp5, channel, obj1);
     }
     return tmp5;
   }
@@ -1696,7 +1696,7 @@ class ChannelListGuildActionSection {
       guildActionRows = obj.guildActionRows;
       _String = String;
       tmp2 = ChannelListGuildActionRow;
-      arr = guildActionRows.push(String(ChannelListGuildActionRow.GUILD_DIRECTORY));
+      arr1 = guildActionRows.push(String(ChannelListGuildActionRow.GUILD_DIRECTORY));
     }
     return obj;
   }
@@ -1808,10 +1808,10 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
   ({ activeJoinedRelevantThreads, activeJoinedUnreadThreads } = arg0);
   if (!PermissionStore.can(Permissions.VIEW_CHANNEL, this.record)) {
     if (self.id === selectedVoiceChannelId) {
-      let obj = { renderLevel: closure_35.Show, threadIds: [] };
-      return obj;
+      const obj2 = { renderLevel: closure_35.Show, threadIds: [] };
+      return obj2;
     } else if (!GatedChannelStore.isChannelGatedAndVisible(self.record.guild_id, self.record.id)) {
-      obj = { renderLevel: closure_35.CannotShow, threadIds: [] };
+      const obj = { renderLevel: closure_35.CannotShow, threadIds: [] };
       return obj;
     }
   }
@@ -1819,8 +1819,8 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
   const guild = self.category.guild;
   const favoriteChannelIds = guild.favoriteChannelIds;
   if (favoriteChannelIds.has(self.record.id)) {
-    obj = { renderLevel: closure_35.CannotShow, threadIds: [] };
-    return obj;
+    const obj3 = { renderLevel: closure_35.CannotShow, threadIds: [] };
+    return obj3;
   } else {
     let id;
     if (selectedChannel != null) {
@@ -1829,22 +1829,22 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
     const tmp7 = null != selectedChannel && selectedChannel.isThread() && selectedChannel.parent_id === self.id;
     if (!(id === self.id || selectedVoiceChannelId === self.id)) {
       if (!tmp7) {
-        let obj1 = activeJoinedUnreadThreads[self.id];
+        let obj4 = activeJoinedUnreadThreads[self.id];
       }
-      if (obj1 == null) {
-        obj1 = {};
+      if (obj4 == null) {
+        obj4 = {};
       }
-      const tmp12 = computeThreadIds(self.record, obj1, selectedChannel, selectedVoiceChannelId, guild.hideMutedChannels);
+      const tmp12 = computeThreadIds(self.record, obj4, selectedChannel, selectedVoiceChannelId, guild.hideMutedChannels);
       if (self.id === guild.moderatorReportChannelId) {
-        const obj2 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
-        return obj2;
+        const obj7 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
+        return obj7;
       } else {
         if (guild.optInEnabled) {
           if (guild.hideResourceChannels) {
             const record = self.record;
             if (record.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
-              const obj3 = { renderLevel: tmp6 ? closure_35.Show : closure_35.CannotShow, threadIds: tmp12 };
-              return obj3;
+              const obj8 = { renderLevel: tmp6 ? closure_35.Show : closure_35.CannotShow, threadIds: tmp12 };
+              return obj8;
             }
           }
         }
@@ -1854,21 +1854,19 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
             if (null != parent_id) {
               const optedInChannels2 = guild.optedInChannels;
             }
-            let obj4 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
-            return obj4;
+            const obj9 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
+            return obj9;
           }
         }
         if (!tmp6) {
           if (!tmp7) {
-            obj4 = _modDef12;
-            if (obj4.isEmpty(tmp12)) {
-              let obj5 = ReadStateStore;
+            if (obj5.isEmpty(tmp12)) {
               if (ReadStateStore.getMentionCount(self.id) <= 0) {
                 if (guild.hideMutedChannels) {
                   const mutedChannelIds = guild.mutedChannelIds;
                   if (mutedChannelIds.has(self.id)) {
-                    obj5 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
-                    return obj5;
+                    const obj10 = { renderLevel: closure_35.DoNotShow, threadIds: tmp12 };
+                    return obj10;
                   }
                 }
                 if (self.category.isCollapsed) {
@@ -1881,30 +1879,31 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
                     if (!record2.isGuildVocal()) {
                       if (self.record.type !== constants.GUILD_STORE) {
                         if (__initData(self.record.type)) {
-                          if (!obj5.hasUnread(self.record.id)) {
-                            const obj6 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
-                            return obj6;
+                          if (!ReadStateStore.hasUnread(self.record.id)) {
+                            const obj11 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
+                            return obj11;
                           }
                         }
                       }
                     }
-                    const obj7 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
-                    return obj7;
+                    const obj12 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
+                    return obj12;
                   }
-                  const obj8 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
-                  return obj8;
+                  const obj13 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
+                  return obj13;
                 }
-                const obj9 = { renderLevel: closure_35.Show, threadIds: tmp12 };
-                return obj9;
+                const obj14 = { renderLevel: closure_35.Show, threadIds: tmp12 };
+                return obj14;
               }
             }
+            obj5 = _modDef12;
           }
         }
-        const obj10 = { renderLevel: closure_35.Show, threadIds: tmp12 };
-        return obj10;
+        const obj15 = { renderLevel: closure_35.Show, threadIds: tmp12 };
+        return obj15;
       }
     }
-    obj1 = activeJoinedRelevantThreads[self.id];
+    obj4 = activeJoinedRelevantThreads[self.id];
   }
 };
 class FavoritesChannelListChannel extends BaseChannelListChannel {
@@ -1912,15 +1911,15 @@ class FavoritesChannelListChannel extends BaseChannelListChannel {
 FavoritesChannelListChannel.prototype["computeState"] = function computeState(arg0) {
   const self = this;
   ({ selectedChannel, selectedVoiceChannelId } = arg0);
-  let obj = { renderLevel: null, threadIds: null };
+  const obj = { renderLevel: null, threadIds: null };
   if (PermissionStore.can(Permissions.VIEW_CHANNEL, this.record)) {
     obj.renderLevel = closure_35.Show;
     const record = self.record;
-    obj = arg0.activeJoinedRelevantThreads[self.id];
-    if (obj == null) {
-      obj = {};
+    let obj2 = arg0.activeJoinedRelevantThreads[self.id];
+    if (obj2 == null) {
+      obj2 = {};
     }
-    obj.threadIds = computeThreadIds(record, obj, selectedChannel, selectedVoiceChannelId, false);
+    obj.threadIds = computeThreadIds(record, obj2, selectedChannel, selectedVoiceChannelId, false);
     let tmp2 = obj;
   } else {
     obj.renderLevel = closure_35.CannotShow;
@@ -1936,24 +1935,24 @@ RecentsChannelListChannel.prototype["computeState"] = function computeState(init
   let tmp = initializationData;
   ({ selectedChannel, selectedVoiceChannelId } = initializationData);
   if (PermissionStore.can(Permissions.VIEW_CHANNEL, this.record)) {
-    let obj = { renderLevel: null, threadIds: null };
+    const obj2 = { renderLevel: null, threadIds: null };
     if (shouldShowInRecents(self.category.guild, self.record, tmp)) {
       tmp = closure_35;
-      obj.renderLevel = shouldAlwaysShowInRecents(self, tmp) ? tmp.Show : tmp.WouldShowIfUncollapsed;
+      obj2.renderLevel = shouldAlwaysShowInRecents(self, tmp) ? tmp.Show : tmp.WouldShowIfUncollapsed;
       const record = self.record;
-      obj = initializationData.activeJoinedRelevantThreads[self.id];
-      if (obj == null) {
-        obj = {};
+      let obj3 = initializationData.activeJoinedRelevantThreads[self.id];
+      if (obj3 == null) {
+        obj3 = {};
       }
-      self = computeThreadIds(record, obj, selectedChannel, selectedVoiceChannelId, false);
-      obj.threadIds = self;
+      self = computeThreadIds(record, obj3, selectedChannel, selectedVoiceChannelId, false);
+      obj2.threadIds = self;
       const tmp7 = shouldAlwaysShowInRecents(self, tmp);
     } else {
-      obj.renderLevel = closure_35.DoNotShow;
-      obj.threadIds = [];
+      obj2.renderLevel = closure_35.DoNotShow;
+      obj2.threadIds = [];
     }
   } else {
-    obj = { renderLevel: closure_35.CannotShow, threadIds: [] };
+    const obj = { renderLevel: closure_35.CannotShow, threadIds: [] };
     return obj;
   }
 };
@@ -1964,6 +1963,7 @@ class RecentlyActiveChannelListChannel extends ChannelListChannelImpl {
     ({ renderLevel, threadIds } = state);
     tmp2 = closure_35;
     sortByResult = threadIds;
+    renderLevel1 = renderLevel;
     if (renderLevel > closure_35.CannotShow) {
       parent_id = self.record.parent_id;
       guild = self.category.guild;
@@ -1985,6 +1985,7 @@ class RecentlyActiveChannelListChannel extends ChannelListChannelImpl {
           tmp12 = closure_2;
           obj = closure_1(closure_2[27]);
           sortByResult = obj.sortBy(threadIds, (arg0) => -ReadStateStore.lastMessageTimestamp(arg0));
+          renderLevel1 = renderLevel;
         }
         tmp6 = renderLevel === tmp2.Show;
         if (!tmp6) {
@@ -2002,7 +2003,7 @@ class RecentlyActiveChannelListChannel extends ChannelListChannelImpl {
       }
       renderLevel = tmp2.DoNotShow;
     }
-    return { renderLevel, threadIds: sortByResult };
+    return { renderLevel: renderLevel1, threadIds: sortByResult };
   }
 }
 let closure_77 = RecentlyActiveChannelListChannel.prototype;
@@ -2205,13 +2206,14 @@ prototype12["updateSubtitles"] = function updateSubtitles(arg0, arg1) {
   closure_0 = arg1;
   if (null == arg0) {
     const _Object = Object;
-    let items = Object.values(self.guilds);
+    let items1 = Object.values(self.guilds);
   } else if (arg0 in self.guilds) {
-    items = [self.guilds[arg0]];
+    const items = [self.guilds[arg0]];
+    items1 = items;
   } else {
-    items = [];
+    items1 = [];
   }
-  const item = items.forEach((updateSubtitles) => updateSubtitles.updateSubtitles(closure_0));
+  const item = items1.forEach((updateSubtitles) => updateSubtitles.updateSubtitles(closure_0));
 };
 
 export default ChannelListStates;

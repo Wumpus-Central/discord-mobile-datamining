@@ -1,6 +1,6 @@
-// === Module 12124: ChatInputContentCallbacks ===
+// === Module 12125: ChatInputContentCallbacks ===
 
-// Module 12124 (ChatInputContentCallbacks)
+// Module 12125 (ChatInputContentCallbacks)
 import _modDef12 from "module_12" /* 12 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7389 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7415 */;
@@ -49,9 +49,7 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
   dependencyMap = arg2;
   let tmp = useMessageMaxLengthDefault();
   _slicedToArray = tmp;
-  let tmp2 = _slicedToArray(first.useState(false), 2);
-  first = tmp2[0];
-  closure_5 = tmp2[1];
+  [first, closure_5] = first.useState(false);
   const items = [tmp, arg1, arg2];
   const memo = first.useMemo(() => _modDef12.debounce((arr) => {
     const groups = props.getProps(closure_1_1, dependencyMap).groups;

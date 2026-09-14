@@ -1,13 +1,13 @@
-// === Module 17582: GiftIntentReconcilingManager ===
+// === Module 17583: GiftIntentReconcilingManager ===
 
-// Module 17582 (GiftIntentReconcilingManager)
+// Module 17583 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10872 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10873 */;
 import EphemeralMessageStore from "EphemeralMessageStore" /* 4858 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8183 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -147,9 +147,9 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
             }
             if (tmp11) {
               let obj = DispatcherDefault;
-              obj = { type: "MESSAGE_DELETE", id: item10031.id, channelId: null };
-              obj.channelId = tmp25;
-              let dispatchResult = obj.dispatch(obj);
+              let obj2 = { type: "MESSAGE_DELETE", id: item10031.id, channelId: null };
+              obj2.channelId = tmp25;
+              let dispatchResult = obj.dispatch(obj2);
             }
             continue;
           }
@@ -186,8 +186,8 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    const obj = { giftIntentType: FRIEND_ANNIVERSARY, recipientUserId, giftIntentSecondaryAction: SEND_MESSAGE };
-    const result = obj.sendGiftingPromptSystemMessage(id, obj);
+    const obj2 = { giftIntentType: FRIEND_ANNIVERSARY, recipientUserId, giftIntentSecondaryAction: SEND_MESSAGE };
+    const result = MessageActionCreatorsDefault.sendGiftingPromptSystemMessage(id, obj2);
     flag = true;
   }
   return flag;

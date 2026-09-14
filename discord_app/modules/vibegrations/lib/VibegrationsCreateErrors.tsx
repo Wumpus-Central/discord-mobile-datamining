@@ -1,6 +1,6 @@
-// === Module 16696: VibegrationsCreateErrors ===
+// === Module 16698: VibegrationsCreateErrors ===
 
-// Module 16696 (VibegrationsCreateErrors)
+// Module 16698 (VibegrationsCreateErrors)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
@@ -8,11 +8,11 @@ import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
 const prototype = function VibegrationsCreateError(reason, failureStatus) {
-  tmp = new tmp("vibegrations create failed: " + reason + " [" + failureStatus + "]", " [", failureStatus, "]");
-  tmp.name = "VibegrationsCreateError";
-  tmp.reason = reason;
-  tmp.status = failureStatus;
-  return tmp;
+  const tmp2 = new tmp("vibegrations create failed: " + reason + " [" + failureStatus + "]", " [", failureStatus, "]");
+  tmp2.name = "VibegrationsCreateError";
+  tmp2.reason = reason;
+  tmp2.status = failureStatus;
+  return tmp2;
 }.prototype;
 class prototype extends Error {
 }

@@ -1,7 +1,7 @@
-// === Module 12110: CustomTypingIndicatorGlyph ===
+// === Module 12111: CustomTypingIndicatorGlyph ===
 
-// Module 12110 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12111 */;
+// Module 12111 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12112 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -29,15 +29,15 @@ export default function CustomTypingIndicatorGlyph(config) {
       PX_4 = size / 4;
     }
     obj = { style: null, children: null };
-    obj = { gap: PX_4 };
-    items[1] = obj;
+    const obj4 = { gap: PX_4 };
+    items[1] = obj4;
     obj.style = items;
     items = map.emojis;
     map = items.map;
     obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
-    <View gap={PX_4} />;
+    <View style={null}>{null}</View>;
   } else {
-    return jsx(tmp2(1178).Ellipsis, {});
+    return jsx(tmp2(1176).Ellipsis, {});
   }
   obj3 = map(1392);
 };

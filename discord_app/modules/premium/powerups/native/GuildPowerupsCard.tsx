@@ -1,31 +1,34 @@
-// === Module 12697: GuildPowerupsCard ===
+// === Module 12698: GuildPowerupsCard ===
 
-// Module 12697 (GuildPowerupsCard)
+// Module 12698 (GuildPowerupsCard)
 import nativeDefault from "native" /* 576 */;
 import Card from "Card" /* 5688 */;
 import noop from "module_19" /* 19 */;
-import n from "module_672" /* 672 */;
+import n_mod from "module_672" /* 672 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { cardActive: null, cardExpiring: null, cardRemoving: null };
-createStyles = { borderColor: null };
+const createStyles = fn(4636);
+let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
+const obj3 = { borderColor: null };
+let n = n_mod;
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.GREEN_360);
-createStyles.borderColor = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
-createStyles.cardActive = createStyles;
-const obj1 = { borderColor: null };
+obj3.borderColor = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
+obj2.cardActive = obj3;
+const obj4 = { borderColor: null };
+let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
-obj1.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createStyles.cardExpiring = obj1;
-const obj2 = { borderColor: null };
+obj4.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardExpiring = obj4;
+const obj5 = { borderColor: null };
+let n = n_mod;
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
-obj2.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createStyles.cardRemoving = obj2;
-let closure_4 = createStyles.createStyles(createStyles);
+obj5.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardRemoving = obj5;
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
@@ -34,8 +37,8 @@ export default function GuildPowerupsCard(status) {
   ({ children, containerStyle, style } = status);
   const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));
   const tmp2 = closure_4();
-  let obj = { style: containerStyle, children: null };
-  obj = { border: "faint", radius: 16, shadow: "none" };
+  const obj = { style: containerStyle, children: null };
+  const obj2 = { border: "faint", radius: 16, shadow: "none" };
   const merged1 = Object.assign(merged);
   let type;
   if (status != null) {
@@ -53,8 +56,8 @@ export default function GuildPowerupsCard(status) {
   }
   items[2] = "removing" === type2 && tmp2.cardRemoving;
   items[3] = style;
-  obj.style = items;
-  obj.children = children;
+  obj2.style = items;
+  obj2.children = children;
   obj.children = jsx(Card.Card, { border: "faint", radius: 16, shadow: "none" });
-  return <View border="faint" radius={16} shadow="none" />;
+  return <View style={containerStyle}>{null}</View>;
 };

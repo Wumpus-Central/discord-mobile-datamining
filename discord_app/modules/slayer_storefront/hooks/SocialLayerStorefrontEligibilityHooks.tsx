@@ -11,6 +11,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7331 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");

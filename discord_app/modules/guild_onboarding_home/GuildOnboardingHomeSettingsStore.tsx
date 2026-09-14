@@ -21,7 +21,7 @@ function handleSettingsLoadSuccess(arg0) {
     set.delete(guildId);
   }
 }
-let NO_SETTINGS = { enabled: false };
+const NO_SETTINGS = { enabled: false };
 let closure_1 = [];
 const dependencyMap = {};
 const set = new Set();
@@ -168,7 +168,7 @@ prototype["getNewMemberAction"] = function getNewMemberAction(arg0, arg1) {
   return tmp;
 };
 GuildOnboardingHomeSettingsStore.displayName = "GuildOnboardingHomeSettingsStore";
-NO_SETTINGS = {
+const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(DispatcherDefault, {
   GUILD_HOME_SETTINGS_FETCH_START: function handleSettingsFetchStart(guildId) {
     set.add(guildId.guildId);
   },
@@ -189,12 +189,12 @@ NO_SETTINGS = {
     if (null == dependencyMap[resourceChannel.guildId]) {
       return false;
     } else {
-      let resourceChannels = tmp.resourceChannels;
-      if (resourceChannels == null) {
-        resourceChannels = [];
+      let resourceChannels1 = tmp.resourceChannels;
+      if (resourceChannels1 == null) {
+        resourceChannels1 = [];
       }
-      tmp.resourceChannels = resourceChannels;
-      resourceChannels = tmp.resourceChannels;
+      tmp.resourceChannels = resourceChannels1;
+      const resourceChannels = tmp.resourceChannels;
       const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === resourceChannel.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
@@ -211,12 +211,12 @@ NO_SETTINGS = {
     if (null == dependencyMap[action.guildId]) {
       return false;
     } else {
-      let newMemberActions = tmp.newMemberActions;
-      if (newMemberActions == null) {
-        newMemberActions = [];
+      let newMemberActions1 = tmp.newMemberActions;
+      if (newMemberActions1 == null) {
+        newMemberActions1 = [];
       }
-      tmp.newMemberActions = newMemberActions;
-      newMemberActions = tmp.newMemberActions;
+      tmp.newMemberActions = newMemberActions1;
+      const newMemberActions = tmp.newMemberActions;
       const findIndexResult = newMemberActions.findIndex((channelId) => channelId.channelId === action.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
@@ -239,8 +239,7 @@ NO_SETTINGS = {
       delete tmp2[tmp];
     }
   }
-};
-const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(DispatcherDefault, NO_SETTINGS);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
 

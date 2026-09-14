@@ -1,8 +1,8 @@
-// === Module 14666: KeyCommands ===
+// === Module 14667: KeyCommands ===
 
-// Module 14666 (KeyCommands)
+// Module 14667 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule from "NativeKeyCommandsModule" /* 14667 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 14668 */;
 
 function toNativeKeyCommand(eventName) {
   return { eventName: eventName.eventName, input: eventName.input, modifierFlags: eventName.modifierFlags, discoverabilityTitle: eventName.discoverabilityTitle };
@@ -40,6 +40,7 @@ function unregisterKeyCommand(eventName) {
     });
   }
 }
+let NativeKeyCommandsModule = NativeKeyCommandsModule_mod;
 let closure_3 = [];
 let c4 = false;
 let closure_5 = null;

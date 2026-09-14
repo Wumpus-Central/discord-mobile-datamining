@@ -4,7 +4,7 @@
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
@@ -38,14 +38,14 @@ function callConnect() {
       tmp8 = obj;
     }
     obj[channelId] = tmp8;
-    obj = { type: "CALL_CONNECT", channelId };
-    DispatcherDefault.dispatch(obj);
+    const obj2 = { type: "CALL_CONNECT", channelId };
+    DispatcherDefault.dispatch(obj2);
     flag = true;
   }
   return flag;
 }
 const Endpoints = fn(1074).Endpoints;
-let obj = {};
+let calls = {};
 const enqueuedRings = {};
 const Store = initializeDefault.Store;
 class CallStore extends Store {
@@ -87,7 +87,7 @@ prototype["getInternalState"] = function getInternalState() {
   return calls;
 };
 CallStore.displayName = "CallStore";
-obj = {
+calls = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     return callConnect(true);
   },
@@ -96,11 +96,10 @@ obj = {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(callStoreInternalState) {
     callStoreInternalState = callStoreInternalState.callStoreInternalState;
-    obj = {};
+    const obj = {};
     const merged = Object.assign(callStoreInternalState.calls);
-    obj = {};
     const merged1 = Object.assign(callStoreInternalState.enqueuedRings);
-    closure_8 = obj;
+    closure_8 = {};
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
     return callConnect(true);
@@ -123,8 +122,8 @@ obj = {
   },
   CALL_CREATE: function handleCallCreate(channelId) {
     channelId = channelId.channelId;
-    let body = { channelId, messageId: channelId.messageId, region: channelId.region, ringing: Object.keys(channelId.ongoingRings), unavailable: false, regionUpdated: false };
-    body[channelId] = body;
+    const obj = { channelId, messageId: channelId.messageId, region: channelId.region, ringing: Object.keys(channelId.ongoingRings), unavailable: false, regionUpdated: false };
+    obj[channelId] = obj;
     if (null != enqueuedRings[channelId]) {
       delete tmp[tmp2];
       let tmp3 = arr;
@@ -133,8 +132,8 @@ obj = {
       }
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.CALL_RING(channelId), body: null, oldFormErrors: true, rejectWithError: true };
-      body = { recipients: tmp3 };
-      request.body = body;
+      const obj2 = { recipients: tmp3 };
+      request.body = obj2;
       HTTP.post(request);
     }
   },
@@ -146,7 +145,7 @@ obj = {
       tmp2 = tmp.regionUpdated || tmp.region !== region;
       const tmp3 = tmp.regionUpdated || tmp.region !== region;
     }
-    obj = {};
+    const obj = {};
     const merged = Object.assign(obj[channelId]);
     obj.messageId = messageId;
     obj.region = region;
@@ -158,7 +157,7 @@ obj = {
     ({ channelId, unavailable } = arg0);
     if (true === unavailable) {
       if (null != tmp3) {
-        obj = {};
+        const obj = {};
         const merged = Object.assign(tmp3);
         obj.unavailable = unavailable;
       }
@@ -185,7 +184,7 @@ obj = {
     }
   }
 };
-const callStore = new CallStore(DispatcherDefault, obj);
+const callStore = new CallStore(DispatcherDefault, calls);
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/CallStore.tsx");
 

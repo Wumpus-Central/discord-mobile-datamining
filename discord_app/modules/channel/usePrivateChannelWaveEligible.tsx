@@ -1,8 +1,10 @@
-// === Module 16133: usePrivateChannelWaveEligible ===
+// === Module 16135: usePrivateChannelWaveEligible ===
 
-// Module 16133 (usePrivateChannelWaveEligible)
+// Module 16135 (usePrivateChannelWaveEligible)
 import MessageStore from "MessageStore" /* 4857 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const ChannelFlags = fn(1964).ChannelFlags;

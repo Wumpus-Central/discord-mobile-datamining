@@ -1,6 +1,6 @@
-// === Module 11113: formatResults ===
+// === Module 11114: formatResults ===
 
-// Module 11113 (formatResults)
+// Module 11114 (formatResults)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4649 */;
@@ -33,8 +33,8 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -47,22 +47,20 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const tmp20 = getChannelIdFromDestinationId(_require);
           if (null != tmp20) {
             c1 = 3;
-            const obj1 = { value: tmp20, done: true };
-            return obj1;
+            const obj5 = { value: tmp20, done: true };
+            return obj5;
           } else if ("user" === _require.type) {
             c4 = 1;
-            let obj2 = ChannelActionCreatorsDefault;
             c2 = 2;
             c1 = 1;
-            obj2 = { value: null, done: false };
-            obj2.value = obj2.getOrEnsurePrivateChannel(_require.id);
-            return obj2;
+            const obj6 = { value: ChannelActionCreatorsDefault.getOrEnsurePrivateChannel(_require.id), done: false };
+            return obj6;
           } else {
             c1 = 3;
             return { value: "HermesInternal", done: null };
@@ -78,12 +76,12 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c1 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c4 = 0;
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp10) {
@@ -142,7 +140,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
           if (null != tmp) {
             let arr = items.push(tmp);
           }
-          arr = items.push(tmp9);
+          let arr3 = items.push(tmp9);
         }
       }
     }
@@ -150,7 +148,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(11114).isAllowedType;
+const isAllowedType = fn(11115).isAllowedType;
 const Constants = fn(1074);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const size = fn(2);
@@ -211,10 +209,10 @@ export default function formatResults(hasQuery) {
         mapped2 = [];
       }
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
       if (null == targetDestination) {
         items[arraySpreadResult] = null;
-        arraySpreadResult = HermesBuiltin.arraySpread(mapped2, HermesBuiltin.arraySpread(mapped1, arraySpreadResult + 1));
+        HermesBuiltin.arraySpread(mapped2, HermesBuiltin.arraySpread(mapped1, arraySpreadResult + 1));
         closure_129_1 = undefined;
         closure_129_0 = includeMissingDMs;
         let tmp20 = channelFilter;
@@ -274,7 +272,8 @@ export const getDestinationIdFromChannelId = function getDestinationIdFromChanne
     type = channel.type;
   }
   if (type === constants2.DM) {
-    let obj = { type: "user", id: channel.recipients[0] };
+    const obj2 = { type: "user", id: channel.recipients[0] };
+    let obj = obj2;
   } else {
     obj = { type: "channel", id: channel_id };
   }
@@ -283,7 +282,8 @@ export const getDestinationIdFromChannelId = function getDestinationIdFromChanne
 export const getDestinationIdFromResult = function getDestinationIdFromResult(results) {
   const record = results.record;
   if (results.type === sortByMatchScore.AutocompleterResultTypes.USER) {
-    let obj = { type: "user", id: record.id };
+    const obj2 = { type: "user", id: record.id };
+    let obj = obj2;
   } else {
     obj = { type: "channel", id: record.id };
   }

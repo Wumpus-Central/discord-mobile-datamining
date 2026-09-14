@@ -1,17 +1,17 @@
-// === Module 15066: FriendRequestsMutualFriendsSetting ===
+// === Module 15067: FriendRequestsMutualFriendsSetting ===
 
-// Module 15066 (FriendRequestsMutualFriendsSetting)
+// Module 15067 (FriendRequestsMutualFriendsSetting)
 import util from "util" /* 1114 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
@@ -38,9 +38,8 @@ let SettingBuilders = {
   useIsDisabled() {
     return useParentalControlSettings.useIsParentallyControlled();
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsMutualFriendsSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

@@ -1,6 +1,6 @@
-// === Module 11820: ForwardMessageFooter ===
+// === Module 11821: ForwardMessageFooter ===
 
-// Module 11820 (ForwardMessageFooter)
+// Module 11821 (ForwardMessageFooter)
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,10 +19,10 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   let text;
   noop = undefined;
   ({ forwardOptions, sendLabel, canSend } = message);
-  let obj = message(trackForwardEditContextMessageOnce[4]);
-  trackForwardEditContextMessageOnce = obj.useTrackForwardEditContextMessageOnce();
-  let obj1 = message(trackForwardEditContextMessageOnce[5]);
-  const selectedDestinationChannel = obj1.useSelectedDestinationChannel(selectedDestinations);
+  trackForwardEditContextMessageOnce = message(trackForwardEditContextMessageOnce[4]).useTrackForwardEditContextMessageOnce();
+  const obj = message(trackForwardEditContextMessageOnce[4]);
+  const selectedDestinationChannel = message(trackForwardEditContextMessageOnce[5]).useSelectedDestinationChannel(selectedDestinations);
+  const obj2 = message(trackForwardEditContextMessageOnce[5]);
   const items = [DraftStore];
   const tmp5 = text(noop.useState(message(trackForwardEditContextMessageOnce[6]).useStateFromStoresObject(items, () => DraftStore.getDraft(message.channel_id, DraftType.ForwardContextMessage))), 2);
   text = tmp5[0];
@@ -50,23 +50,23 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   if (destinationNamesWithSlowmode.length > 0) {
     if (text.length > 0) {
       const intl = tmp(tmp2[9]).intl;
-      obj = { count: destinationNamesWithSlowmode.length, channelNames: destinationNamesWithSlowmode.join(", ") };
-      formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[9]).t.xJFpij, obj);
+      const obj6 = { count: destinationNamesWithSlowmode.length, channelNames: destinationNamesWithSlowmode.join(", ") };
+      formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[9]).t.xJFpij, obj6);
     }
   }
-  obj = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
+  const obj7 = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
   const obj5 = message(trackForwardEditContextMessageOnce[5]);
-  obj.preview = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, { message, channel: selectedDestinationChannel, forwardOptions });
-  obj1 = { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null };
+  obj7.preview = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, { message, channel: selectedDestinationChannel, forwardOptions });
+  const obj8 = { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null };
   let tmp15;
   if (!isSending) {
     tmp15 = callback1;
   }
-  obj1.onPress = tmp15;
-  obj1.loading = isSending;
-  obj.sendButton = jsx(message(trackForwardEditContextMessageOnce[12]).Button, { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null });
-  obj.chatInput = jsx(onSend(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
-  obj.warningText = formatToPlainStringResult;
-  obj.avoidKeyboard = isInputFocused;
+  obj8.onPress = tmp15;
+  obj8.loading = isSending;
+  obj7.sendButton = jsx(message(trackForwardEditContextMessageOnce[12]).Button, { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null });
+  obj7.chatInput = jsx(onSend(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
+  obj7.warningText = formatToPlainStringResult;
+  obj7.avoidKeyboard = isInputFocused;
   return jsx(onSend(trackForwardEditContextMessageOnce[10]), { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null });
 };

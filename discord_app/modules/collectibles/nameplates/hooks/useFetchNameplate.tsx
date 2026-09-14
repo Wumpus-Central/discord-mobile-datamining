@@ -1,16 +1,15 @@
-// === Module 14722: useFetchNameplate ===
+// === Module 14723: useFetchNameplate ===
 
-// Module 14722 (useFetchNameplate)
+// Module 14723 (useFetchNameplate)
 import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11176 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11177 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
-  let obj = useFetchCollectiblesProduct;
-  const fetchCollectiblesProduct = obj.useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = useFetchCollectiblesProduct.useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -23,6 +22,8 @@ export const useFetchNameplate = function useFetchNameplate(skuId) {
   if (type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     first1 = product.items[0];
   }
-  obj = { nameplateProduct: product, nameplateRecord: first1, nameplateData: utils.getNameplateData(first1), isFetching: fetchCollectiblesProduct.isFetching };
-  return obj;
+  const obj2 = { nameplateProduct: product, nameplateRecord: first1, nameplateData: null, isFetching: null };
+  obj2.nameplateData = utils.getNameplateData(first1);
+  obj2.isFetching = fetchCollectiblesProduct.isFetching;
+  return obj2;
 };

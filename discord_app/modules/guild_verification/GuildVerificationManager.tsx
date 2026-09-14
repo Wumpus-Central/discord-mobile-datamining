@@ -1,11 +1,11 @@
-// === Module 17490: GuildVerificationManager ===
+// === Module 17492: GuildVerificationManager ===
 
-// Module 17490 (GuildVerificationManager)
+// Module 17492 (GuildVerificationManager)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 8510 */;
-import HubUtilsDefault from "HubUtils" /* 13064 */;
-import GuildVerificationUtils from "GuildVerificationUtils" /* 13065 */;
+import HubUtilsDefault from "HubUtils" /* 13065 */;
+import GuildVerificationUtils from "GuildVerificationUtils" /* 13066 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 
@@ -47,14 +47,14 @@ function handleInviteData(invite) {
   }
 }
 const GuildFeatures = Constants.GuildFeatures;
-let prototype = function GuildVerificationManager() {
+const prototype = function GuildVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { INVITE_ACCEPT_SUCCESS: handleInviteData };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 
-export default prototype;
+export default prototype1;

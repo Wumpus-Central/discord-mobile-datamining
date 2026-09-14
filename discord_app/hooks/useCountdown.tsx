@@ -5,6 +5,8 @@ import _mod19 from "module_19" /* 19 */;
 import DateUtils from "DateUtils" /* 4318 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 _mod19.useCallback;
 const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
 

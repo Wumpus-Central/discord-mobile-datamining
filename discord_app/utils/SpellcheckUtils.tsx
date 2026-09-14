@@ -1,7 +1,7 @@
 // === Module 5638: SpellcheckUtils ===
 
 // Module 5638 (SpellcheckUtils)
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import DiscordNativeDefault from "DiscordNative" /* 4257 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -14,8 +14,8 @@ let closure_7 = async function _setEnabled(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,23 +28,23 @@ let closure_7 = async function _setEnabled(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value, done: false };
-          return obj1;
+          const obj4 = { value, done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_129_1 = value;
@@ -68,8 +68,8 @@ let closure_8 = async function _setLearnedWords(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -82,23 +82,23 @@ let closure_8 = async function _setLearnedWords(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value, done: false };
-          return obj1;
+          const obj4 = { value, done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_129_1 = value;
@@ -122,8 +122,8 @@ let closure_9 = async function _isMisspelled(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -136,8 +136,8 @@ let closure_9 = async function _isMisspelled(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -159,21 +159,21 @@ let closure_9 = async function _isMisspelled(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: closure_131_5, done: false };
-          return obj2;
+          const obj5 = { value: closure_131_5, done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_130_2 = value;
         let isMisspelledResult = null != closure_130_2;
@@ -181,7 +181,7 @@ let closure_9 = async function _isMisspelled(arg0) {
           isMisspelledResult = closure_130_2.isMisspelled(closure_130_0, closure_130_1);
         }
         c5 = 3;
-        obj = { value: isMisspelledResult, done: true };
+        const obj = { value: isMisspelledResult, done: true };
         return obj;
       }
     } catch (tmp16) {
@@ -198,8 +198,8 @@ let closure_10 = async function _getCorrections(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -212,8 +212,8 @@ let closure_10 = async function _getCorrections(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -241,20 +241,20 @@ let closure_10 = async function _getCorrections(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: closure_132_5, done: false };
-          return obj2;
+          const obj5 = { value: closure_132_5, done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_131_3 = value;
@@ -280,8 +280,8 @@ let closure_11 = async function _getCachedMisspelling() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -294,8 +294,8 @@ let closure_11 = async function _getCachedMisspelling() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -317,36 +317,36 @@ let closure_11 = async function _getCachedMisspelling() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c3 = 2;
           c4 = 1;
-          const obj2 = { value: closure_130_5, done: false };
-          return obj2;
+          const obj5 = { value: closure_130_5, done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_129_1 = value;
         if (null == closure_129_1) {
-          const obj4 = { misspelledWord: "", corrections: [] };
+          const obj7 = { misspelledWord: "", corrections: [] };
           c4 = 3;
-          const obj5 = { value: obj4, done: true };
-          return obj5;
+          const obj8 = { value: obj7, done: true };
+          return obj8;
         } else {
           cachedMisspelling = closure_129_1.getCachedMisspelling();
-          obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
+          const obj = { misspelledWord: cachedMisspelling.misspelledWord, corrections: null };
           const corrections = cachedMisspelling.corrections;
           obj.corrections = corrections.slice(0, closure_129_0);
           c4 = 3;
-          const obj6 = { value: obj, done: true };
-          return obj6;
+          const obj9 = { value: obj, done: true };
+          return obj9;
         }
       }
     } catch (tmp12) {
@@ -363,8 +363,8 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -377,23 +377,23 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value, done: false };
-          return obj1;
+          const obj4 = { value, done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_129_1 = value;
@@ -410,7 +410,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
   }
 };
 fn(5639).addPostConnectionCallback;
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;
@@ -517,12 +517,12 @@ export const setAppLocale = function setAppLocale(arg0) {
 };
 export const addResultListener = function addResultListener(arg0) {
   const tmp3 = DiscordNativeDefault;
-  let spellCheck;
+  let spellCheck1;
   if (tmp3 != null) {
-    spellCheck = tmp3.spellCheck;
+    spellCheck1 = tmp3.spellCheck;
   }
-  if (null != spellCheck) {
-    spellCheck = DiscordNativeDefault.spellCheck;
+  if (null != spellCheck1) {
+    const spellCheck = DiscordNativeDefault.spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
       fn2 = () => {

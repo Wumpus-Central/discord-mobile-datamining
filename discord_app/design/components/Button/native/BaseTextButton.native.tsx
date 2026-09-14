@@ -15,9 +15,9 @@ require = fn;
 function CollapsingText(children) {
   const collapseText = children.collapseText;
   let sharedValue;
-  let obj = sharedValue(textCollapsed[6]);
-  sharedValue = obj.useSharedValue(0);
   const tmp = closure_10();
+  sharedValue = sharedValue(textCollapsed[6]).useSharedValue(0);
+  let obj = sharedValue(textCollapsed[6]);
   const fn = function o(nativeEvent) {
     if (0 === sharedValue.get()) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
@@ -29,35 +29,33 @@ function CollapsingText(children) {
   const items = [sharedValue];
   closure_129_0 = sharedValue;
   closure_129_1 = collapseText;
-  const obj2 = sharedValue(textCollapsed[6]);
+  let obj2 = sharedValue(textCollapsed[6]);
   const workletCallback = sharedValue(textCollapsed[6]).useWorkletCallback(fn, items);
   const fn2 = function o() {
-    let obj = sharedValue;
     if (0 === sharedValue.get()) {
-      obj = {};
+      let obj2 = {};
     } else {
       let num2 = 1;
       let num = 0;
       if (1 !== collapseText.get()) {
-        num = obj.get();
+        num = sharedValue.get();
       }
-      obj = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
+      obj2 = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
       if (num2 === collapseText.get()) {
         num2 = 0;
       }
-      obj.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
+      obj2.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
       const tmpResult = spring;
     }
-    return obj;
+    return obj2;
   };
-  obj = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
-  fn2.__closure = obj;
+  const obj3 = sharedValue(textCollapsed[6]);
+  fn2.__closure = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
   fn2.__workletHash = 493185281611;
   fn2.__initData = __initData2;
-  textCollapsed = undefined;
-  const animatedStyle = sharedValue(textCollapsed[6]).useAnimatedStyle(fn2);
+  const animatedStyle = obj3.useAnimatedStyle(fn2);
   textCollapsed = closure_10().textCollapsed;
-  const obj3 = sharedValue(textCollapsed[6]);
+  let obj4 = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
   const fn3 = function s() {
     if (0 === collapseText.get()) {
       let obj = {};
@@ -72,19 +70,18 @@ function CollapsingText(children) {
   fn3.__workletHash = 5824483783888;
   fn3.__initData = __initData3;
   const animatedStyle1 = sharedValue(textCollapsed[6]).useAnimatedStyle(fn3);
-  obj = { style: null, onLayout: workletCallback, children: closure_7(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children }) };
+  obj6 = { style: null, onLayout: workletCallback, children: closure_7(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children }) };
   const items1 = [tmp.container, animatedStyle];
-  obj.style = items1;
-  return closure_7(collapseText(textCollapsed[6]).View, obj);
+  obj6.style = items1;
+  return closure_7(collapseText(textCollapsed[6]).View, obj6);
 }
 function BaseTextButtonIcon(arg0) {
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
-  let obj = ButtonHooks;
-  const iconSizeStyles = obj.useIconSizeStyles(size);
-  obj = { source: icon, style: null };
+  const iconSizeStyles = ButtonHooks.useIconSizeStyles(size);
+  const obj2 = { source: icon, style: null };
   const items = [style, iconSizeStyles, closure_18(iconPosition, iconOpticalOffsetMargin).offset];
-  obj.style = items;
-  return React5(Icon, obj);
+  obj2.style = items;
+  return React5(Icon, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -92,18 +89,18 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0, sm) => {
-  let obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
+  const obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
   if (typeof getTextPlatformLineHeight === "function") {
     if (null != sm) {
-      obj = { sm, md: sm + 0.5, lg: sm + 1.9 };
-      const tmp3 = obj[arg0];
+      const obj2 = { sm, md: sm + 0.5, lg: sm + 1.9 };
+      const tmp3 = obj2[arg0];
     }
     let tmp7;
     if (obj3.isAndroid()) {
       tmp7 = tmp3;
     }
-    obj = { lineHeight: tmp7 };
-    obj.androidLineHeight = obj;
+    const obj4 = { lineHeight: tmp7 };
+    obj.androidLineHeight = obj4;
     obj.icon = { flexShrink: 0, flexGrow: 0 };
     obj.iconLeft = { paddingLeft: 4 };
     obj.iconRight = { paddingRight: 4 };
@@ -116,9 +113,7 @@ let closure_9 = createStyles.createStyles((arg0, sm) => {
 createStyles = fn(4636);
 let closure_10 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
 createStyles = fn(4636);
-let obj = { entityWrapper: null };
-obj = { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-obj.entityWrapper = obj;
+let obj = { entityWrapper: { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" } };
 let closure_11 = createStyles.createStyles(obj);
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
 const redux = noop.createContext("md");
@@ -128,60 +123,38 @@ const __initData3 = { code: "function BaseTextButtonNativeTsx3(){const{collapsed
 createStyles = fn(4636);
 let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   if (0 === marginLeft) {
-    let obj = { offset: {} };
-    return obj;
-  } else if ("start" === arg0) {
-    obj = { offset: null };
-    const obj1 = { marginLeft };
-    obj.offset = obj1;
-    return obj;
-  } else if ("end" === arg0) {
-    const obj2 = { offset: null };
-    const obj3 = { marginRight: marginLeft };
-    obj2.offset = obj3;
+    const obj2 = { offset: {} };
     return obj2;
+  } else if ("start" === arg0) {
+    const obj3 = { offset: null };
+    const obj4 = { marginLeft };
+    obj3.offset = obj4;
+    return obj3;
+  } else if ("end" === arg0) {
+    const obj5 = { offset: null };
+    obj6 = { marginRight: marginLeft };
+    obj5.offset = obj6;
+    return obj5;
   } else {
-    obj = { offset: {} };
+    const obj = { offset: {} };
     return obj;
   }
 });
-createStyles = { sm: null, md: null, lg: null };
+let obj6 = { sm: null, md: null, lg: null };
 const LARGE_BUTTON_HEIGHT = fn(5061).LARGE_BUTTON_HEIGHT;
 const bound = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "accessible", bottom: bound };
-createStyles.sm = rect;
+const rect = { top: bound, left: "Array", right: "isArray", bottom: bound };
+obj6.sm = rect;
 const LARGE_BUTTON_HEIGHT2 = fn(5061).LARGE_BUTTON_HEIGHT;
 const bound1 = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "accessible", bottom: bound1 };
-createStyles.md = rect1;
+const rect1 = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
+obj6.md = rect1;
 const bound2 = Math.max((fn(5061).MINIMUM_HIT_AREA - fn(5061).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "accessible", bottom: bound2 };
-createStyles.lg = rect2;
+const rect2 = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
+obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }
-createStyles = {
-  Icon: function TextButtonIcon(source) {
-    let str = source.variant;
-    if (str === undefined) {
-      str = "icon";
-    }
-    let flag = source.disableColor;
-    if (flag === undefined) {
-      flag = true;
-    }
-    const context = noop.useContext(closure_13);
-    let obj = ButtonHooks;
-    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
-    const tmp4 = React5(Icon, obj);
-    let tmp3Result = tmp4;
-    if ("entity" === str) {
-      obj = { style: tmp2.entityWrapper, children: tmp4 };
-      tmp3Result = React5(timestampProducer, obj);
-    }
-    return tmp3Result;
-  }
-};
 let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) => {
   ({ text, textElement, size } = iconOpticalOffsetMargin);
   ({ style, pillStyle } = iconOpticalOffsetMargin);
@@ -218,12 +191,11 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
   if (null != iconOpticalOffsetMargin.textVariant) {
     let textVariant = iconOpticalOffsetMargin.textVariant;
   } else {
+    textVariant = onPressIn(onLayout[10]).getButtonDefaultTextVariant(size);
     let obj = onPressIn(onLayout[10]);
-    textVariant = obj.getButtonDefaultTextVariant(size);
   }
   const tmp10 = onPressIn(onLayout[13]).TextStyleSheet[textVariant];
   const tmp11 = closure_9(size, tmp10.fontSize);
-  let obj1 = noop;
   const enabled = noop.useContext(onPressIn(onLayout[14]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let str3 = iconOpticalOffsetMargin.variant;
   if (str3 == null) {
@@ -232,17 +204,16 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
   if ("tertiary" === str3) {
     str3 = "secondary";
   }
-  let tmp8Result = tmp8(tmp9[6]);
-  const sharedValue = tmp8Result.useSharedValue(0);
+  const sharedValue = onPressIn(onLayout[6]).useSharedValue(0);
   const startsWithResult = str3.startsWith("expressive");
   noop = startsWithResult;
-  obj1.useRef(null);
-  ref = obj1.useRef({ width: 0, height: 0 });
-  const tmp15 = enabled(obj1.useState({ pressed: false, posx: 0, posy: 0 }), 2);
+  obj2.useRef(null);
+  ref = obj2.useRef({ width: 0, height: 0 });
+  const tmp15 = enabled(noop.useState({ pressed: false, posx: 0, posy: 0 }), 2);
   closure_7 = tmp15[1];
   const items = [onLayout, startsWithResult];
   const items1 = [startsWithResult, onPressIn, enabled];
-  const callback = obj1.useCallback((nativeEvent) => {
+  const callback = obj2.useCallback((nativeEvent) => {
     if (onLayout != null) {
       tmp(nativeEvent);
     }
@@ -253,7 +224,7 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
     }
   }, items);
   const items2 = [startsWithResult, onPressOut];
-  const callback1 = obj1.useCallback((nativeEvent) => {
+  const callback1 = obj2.useCallback((nativeEvent) => {
     if (onPressIn != null) {
       tmp(nativeEvent);
     }
@@ -272,7 +243,7 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_HEAVY);
     }
   }, items1);
-  const callback2 = obj1.useCallback((arg0) => {
+  const callback2 = obj2.useCallback((arg0) => {
     if (onPressOut != null) {
       tmp(arg0);
     }
@@ -286,45 +257,46 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     }
   }, items2);
-  tmp8Result = tmp8(tmp9[12]);
-  const buttonTextColorStyles = tmp8Result.useButtonTextColorStyles(str3);
+  const tmp5 = undefined !== shiny && shiny;
+  const tmp8Result = onPressIn(onLayout[6]);
+  const buttonTextColorStyles = onPressIn(onLayout[12]).useButtonTextColorStyles(str3);
   if (null == icon) {
-    obj = {};
+    let obj3 = {};
   } else {
-    obj = "start" === str ? tmp11.iconLeft : tmp11.iconRight;
+    obj3 = "start" === str ? tmp11.iconLeft : tmp11.iconRight;
   }
   if (null == icon) {
-    obj = { icon, size, style: null, iconOpticalOffsetMargin: null, iconPosition: null };
+    const obj4 = { icon, size, style: null, iconOpticalOffsetMargin: null, iconPosition: null };
     const items3 = [tmp11.icon, ];
-    obj1 = { tintColor: buttonTextColorStyles.color };
-    items3[1] = obj1;
-    obj.style = items3;
-    obj.iconOpticalOffsetMargin = num;
-    obj.iconPosition = str;
-    let tmp20 = closure_7(BaseTextButtonIcon, obj);
+    const obj5 = { tintColor: buttonTextColorStyles.color };
+    items3[1] = obj5;
+    obj4.style = items3;
+    obj4.iconOpticalOffsetMargin = num;
+    obj4.iconPosition = str;
+    let tmp20 = closure_7(BaseTextButtonIcon, obj4);
   } else {
     tmp20 = icon;
   }
   if (null == textElement) {
-    let obj2 = { maxFontSizeMultiplier, numberOfLines: 1, style: null, children: null };
+    obj6 = { maxFontSizeMultiplier, numberOfLines: 1, style: null, children: null };
     const items4 = [tmp11.buttonText, tmp10, , , ];
     let androidLineHeight = null;
-    if (tmp8Result1.isAndroid()) {
+    if (tmp8Result5.isAndroid()) {
       androidLineHeight = tmp11.androidLineHeight;
     }
     items4[2] = androidLineHeight;
     items4[3] = buttonTextColorStyles;
-    items4[4] = obj;
-    obj2.style = items4;
-    obj2.children = text;
-    textElement = closure_7(ref, obj2);
-    tmp8Result1 = tmp8(tmp9[11]);
+    items4[4] = obj3;
+    obj6.style = items4;
+    obj6.children = text;
+    textElement = closure_7(ref, obj6);
+    tmp8Result5 = tmp8(tmp9[11]);
   }
-  const obj3 = { ref };
+  const obj7 = { ref };
   let merged = Object.assign(iconOpticalOffsetMargin);
-  obj3.onPressIn = callback1;
-  obj3.onPressOut = callback2;
-  obj3.onLayout = callback;
+  obj7.onPressIn = callback1;
+  obj7.onPressOut = callback2;
+  obj7.onLayout = callback;
   if (grow2) {
     grow2 = tmp11.grow;
   }
@@ -339,32 +311,32 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
     expressiveButtonContainer = tmp11.expressiveButtonContainer;
   }
   items5[3] = expressiveButtonContainer;
-  obj3.style = items5;
+  obj7.style = items5;
   let str4 = "box-only";
   if (!startsWithResult) {
     str4 = iconOpticalOffsetMargin.pointerEvents;
   }
-  obj3.pointerEvents = str4;
-  obj3.pressed = sharedValue;
-  obj3.accessibilityRole = str2;
+  obj7.pointerEvents = str4;
+  obj7.pressed = sharedValue;
+  obj7.accessibilityRole = str2;
   if (accessibilityLabel == null) {
     accessibilityLabel = tmp8(tmp9[17]).getNodeText(text);
-    const tmp8Result2 = tmp8(tmp9[17]);
+    const tmp8Result6 = tmp8(tmp9[17]);
   }
-  obj3.accessibilityLabel = accessibilityLabel;
-  obj3.hitSlop = createStyles[size];
-  const obj4 = { variant: str3, size, loading: iconOpticalOffsetMargin.loading, pressed: sharedValue, style: pillStyle, shiny: undefined !== shiny && shiny, expressiveRiveRef: null, expressivePressState: null, children: null };
+  obj7.accessibilityLabel = accessibilityLabel;
+  obj7.hitSlop = obj6[size];
+  const obj8 = { variant: str3, size, loading: iconOpticalOffsetMargin.loading, pressed: sharedValue, style: pillStyle, shiny: tmp5, expressiveRiveRef: null, expressivePressState: null, children: null };
   let tmp28;
   if (startsWithResult) {
     tmp28 = ref;
   }
-  obj4.expressiveRiveRef = tmp28;
+  obj8.expressiveRiveRef = tmp28;
   let first;
   if (startsWithResult) {
     first = tmp15[0];
   }
-  obj4.expressivePressState = first;
-  const obj5 = { value: size, children: null };
+  obj8.expressivePressState = first;
+  const obj9 = { value: size, children: null };
   let tmp31 = null != icon;
   if (tmp31) {
     tmp31 = "start" === str;
@@ -375,8 +347,8 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
   const items6 = [tmp31, , ];
   let tmp26Result = textElement;
   if (undefined !== collapseText) {
-    const obj6 = { collapseText, children: textElement };
-    tmp26Result = tmp26(CollapsingText, obj6);
+    const obj10 = { collapseText, children: textElement };
+    tmp26Result = tmp26(CollapsingText, obj10);
   }
   items6[1] = tmp26Result;
   let tmp34 = null != icon;
@@ -387,11 +359,31 @@ let merged = Object.assign({}, noop.forwardRef((iconOpticalOffsetMargin, ref) =>
     tmp34 = tmp20;
   }
   items6[2] = tmp34;
-  obj5.children = items6;
-  obj4.children = closure_8(redux.Provider, obj5);
-  obj3.children = closure_7(onPressIn(onLayout[18]).ButtonPill, obj4);
-  return closure_7(onPressIn(onLayout[16]).BaseButton, obj3);
-}), createStyles);
+  obj9.children = items6;
+  obj8.children = closure_8(redux.Provider, obj9);
+  obj7.children = closure_7(onPressIn(onLayout[18]).ButtonPill, obj8);
+  return closure_7(onPressIn(onLayout[16]).BaseButton, obj7);
+}), {
+  Icon: function TextButtonIcon(source) {
+    let str = source.variant;
+    if (str === undefined) {
+      str = "icon";
+    }
+    let flag = source.disableColor;
+    if (flag === undefined) {
+      flag = true;
+    }
+    const context = noop.useContext(closure_13);
+    const tmp2 = closure_11();
+    const tmp4 = React5(Icon, { source: source.source, disableColor: flag, style: ButtonHooks.useIconSizeStyles(context) });
+    let tmp3Result = tmp4;
+    if ("entity" === str) {
+      const obj3 = { style: tmp2.entityWrapper, children: tmp4 };
+      tmp3Result = React5(timestampProducer, obj3);
+    }
+    return tmp3Result;
+  }
+});
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 

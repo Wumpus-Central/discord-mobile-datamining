@@ -1,14 +1,14 @@
-// === Module 11015: PresenceActivityStatus ===
+// === Module 11016: PresenceActivityStatus ===
 
-// Module 11015 (PresenceActivityStatus)
+// Module 11016 (PresenceActivityStatus)
 import AppsIcon2 from "AppsIcon" /* 5187 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7841 */;
 import GameControllerIcon from "GameControllerIcon" /* 9352 */;
 import MusicIcon from "MusicIcon" /* 10041 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 11010 */;
-import TvIcon from "TvIcon" /* 11011 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 11013 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11016 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 11011 */;
+import TvIcon from "TvIcon" /* 11012 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 11014 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,14 +55,14 @@ export default function PresenceActivityStatus(hideText) {
     tmp12 = null != AppsIcon;
   }
   if (tmp12) {
-    let obj = { icon: AppsIcon, style: iconStyle };
+    const obj = { icon: AppsIcon, style: iconStyle };
     tmp12 = React4(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
   if (!flag) {
-    obj = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
-    tmp15 = React4(ActivityStatusTextDefault, obj);
+    const obj2 = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
+    tmp15 = React4(ActivityStatusTextDefault, obj2);
   }
   children[1] = tmp15;
   return timestampProducer(hasOwnProperty, { children });

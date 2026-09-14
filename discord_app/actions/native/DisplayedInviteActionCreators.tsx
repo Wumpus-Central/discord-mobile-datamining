@@ -15,8 +15,8 @@ export const showInvite = function showInvite(code, username, arg2) {
   }
   ({ deeplinkAttemptId, location: _location } = obj);
   DisplayedInviteStore;
-  obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
-  DispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId });
+  const obj3 = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
   const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
 };
 export const clearDisplayedInvite = function clearDisplayedInvite() {

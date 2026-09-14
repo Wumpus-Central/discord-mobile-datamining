@@ -1,7 +1,7 @@
 // === Module 8274: avatar_decorations/AvatarDecorationUtils ===
 
 // Module 8274 (avatar_decorations/AvatarDecorationUtils)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;

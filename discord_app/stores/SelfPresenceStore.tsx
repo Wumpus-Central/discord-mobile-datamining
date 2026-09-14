@@ -4,17 +4,17 @@
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7502 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11019 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11020 */;
 import SpotifyStore from "SpotifyStore" /* 5361 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 import IdleStore from "IdleStore" /* 5491 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import SessionsStore from "SessionsStore" /* 4654 */;
 
@@ -32,7 +32,7 @@ function filterPlayingActivities(arg0) {
       if (nextResult.type === constants2.PLAYING) {
         let arr = items1.push(tmp4);
       } else {
-        arr = items.push(tmp4);
+        let arr2 = items.push(tmp4);
       }
       continue;
     }
@@ -64,20 +64,20 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = LibraryApplicationUtils;
-          shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+          shouldShowActivityResult = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+          const tmpResult = LibraryApplicationUtils;
         }
       }
       return shouldShowActivityResult;
     } else if (constants2.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = LibraryApplicationUtils;
-        let result = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        let result = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        const tmpResult4 = LibraryApplicationUtils;
       } else {
         const searchGamesByNameResult = DetectableGameStore.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
           result = LibraryApplicationUtils.shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
-          const tmpResult1 = LibraryApplicationUtils;
+          const tmpResult5 = LibraryApplicationUtils;
         } else {
           const ShowCurrentGame = UserSettings.ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
@@ -91,7 +91,7 @@ function shouldShowActivity(flags) {
       let result1 = null == flags.application_id;
       if (!result1) {
         result1 = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
-        const tmpResult2 = LibraryApplicationUtils;
+        const tmpResult6 = LibraryApplicationUtils;
       }
       return result1;
     }
@@ -132,7 +132,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1332(found, found)) {
+    if (!_modDef1330(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -143,13 +143,13 @@ function handleUpdate() {
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
       const tmp12Result = _modDef12;
-      const tmp12ResultResult = _modDef12(items.sort(sortActivity));
-      const iter = _modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
-      closure_27 = filterPlayingActivities(_modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
-      valueResult = _modDef12(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), HermesBuiltin.arraySpread(found, 0));
+      const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
+      const tmp12ResultResult = tmp12Result(items.sort(sortActivity));
+      const iter = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      closure_27 = filterPlayingActivities(tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
+      valueResult = tmp12Result(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
     }
   }
   found = [];

@@ -1,6 +1,6 @@
-// === Module 15341: SidechainCompressionSetting ===
+// === Module 15342: SidechainCompressionSetting ===
 
-// Module 15341 (SidechainCompressionSetting)
+// Module 15342 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
@@ -8,8 +8,8 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
 const Features = fn(4661).Features;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
@@ -29,9 +29,8 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.zlA23F);
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

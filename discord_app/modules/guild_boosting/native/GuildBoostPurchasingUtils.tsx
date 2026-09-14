@@ -13,8 +13,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_3 = tmp2;
           dependencyMap = tmp6;
@@ -55,22 +55,20 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj8 = { value, done: true };
+            return obj8;
           } else if (closure_131_4.hasFetchedSubscriptions()) {
             premiumTypeSubscription = closure_131_4.getPremiumTypeSubscription();
-            let obj3 = closure_131_0(closure_131_2[8]);
-            externalManagementMessage = obj3.getExternalManagementMessage(premiumTypeSubscription);
+            externalManagementMessage = closure_131_0(closure_131_2[8]).getExternalManagementMessage(premiumTypeSubscription);
             if (null != externalManagementMessage) {
               (function alertUnableToManageSub(body, source) {
-                closure_1_1(4981);
-                let obj = { title: null, body: null };
+                const obj2 = { title: null, body: null };
                 const intl = closure_1_0(1114).intl;
-                obj.title = intl.string(closure_1_0(1114).t["8P7MX0"]);
-                obj.body = body;
-                obj.show(obj);
-                obj = { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source };
-                closure_1_1(1242).track(constants.OPEN_MODAL, obj);
+                obj2.title = intl.string(closure_1_0(1114).t["8P7MX0"]);
+                obj2.body = body;
+                closure_1_1(4981).show(obj2);
+                const obj = closure_1_1(4981);
+                closure_1_1(1240).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
               closure_130_8 = null;
@@ -92,12 +90,12 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
               }
             }
             c6 = 3;
+            const obj4 = closure_131_0(closure_131_2[8]);
           } else {
-            obj1 = closure_131_0(closure_131_2[7]);
             c5 = 2;
             c6 = 1;
-            let obj2 = { value: obj1.fetchSubscriptions(), done: false };
-            return obj2;
+            const obj9 = { value: closure_131_0(closure_131_2[7]).fetchSubscriptions(), done: false };
+            return obj9;
           }
         } else if (2 === tmp6) {
           if (arg0 === 1) {
@@ -105,7 +103,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
         } else {
@@ -118,7 +116,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
         }
         closure_130_10 = mobileBoostingEnabled;
         const obj5 = closure_131_0(closure_131_2[11]);
-        obj3 = {
+        const obj10 = {
           showCurrentPlan: false,
           isBoostPurchaseFlow: true,
           allowYearlyBundles: closure_130_10,
@@ -155,7 +153,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
           onPaymentSuccess: closure_130_4,
           onPaymentDismiss: closure_130_5
         };
-        const result = closure_131_0(closure_131_2[12]).launchPremiumPlanSelect(obj3);
+        const result = closure_131_0(closure_131_2[12]).launchPremiumPlanSelect(obj10);
         const obj6 = closure_131_0(closure_131_2[12]);
       }
     } catch (tmp45) {

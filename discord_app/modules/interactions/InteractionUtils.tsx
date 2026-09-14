@@ -18,17 +18,15 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
       throw value;
     } else if (arg0 === 2) {
       c5 = 3;
-      let obj1 = { value, done: true };
-      return obj1;
+      return { value, done: true };
     } else {
       const _Date = Date;
       closure_129_9 = closure_130_1(closure_130_2[4]).fromTimestamp(Date.now());
       if (closure_130_5.canQueueInteraction(closure_129_1, closure_129_9)) {
         c3 = 1;
-        let obj8 = closure_130_1(closure_130_2[5]);
         c4 = 3;
         c5 = 1;
-        return { value: obj8.unarchiveThreadIfNecessary(closure_129_6), done: false };
+        return { value: closure_130_1(closure_130_2[5]).unarchiveThreadIfNecessary(closure_129_6), done: false };
       }
       closure_130_1(closure_130_2[4]);
     }
@@ -46,10 +44,9 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
       return { value, done: true };
     } else {
       c3 = 0;
-      const obj4 = { messageId: closure_129_1, data: null, onFailure: null };
-      let obj5 = { interactionType: closure_130_0(closure_130_2[7]).InteractionTypes.MESSAGE_COMPONENT, applicationId: closure_129_5, customId: closure_129_3, componentId: closure_129_4 };
-      obj4.data = obj5;
-      obj4.onFailure = function onFailure(code, arg1) {
+      const obj10 = { messageId: closure_129_1, data: null, onFailure: null };
+      obj10.data = { interactionType: closure_130_0(closure_130_2[7]).InteractionTypes.MESSAGE_COMPONENT, applicationId: closure_129_5, customId: closure_129_3, componentId: closure_129_4 };
+      obj10.onFailure = function onFailure(code, arg1) {
         let tmp2 = null == arg1;
         if (tmp2) {
           tmp2 = null != code;
@@ -59,28 +56,28 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
           const obj = closure_1(dependencyMap[9]);
         }
       };
-      closure_130_0(closure_130_2[6]).addQueued(closure_129_9, obj4);
+      closure_130_0(closure_130_2[6]).addQueued(closure_129_9, obj10);
       if (null != closure_129_8) {
-        obj1 = closure_130_0(closure_130_2[6]);
-        const result = obj1.queueInteractionComponentState(closure_129_1, closure_129_9, closure_129_8, closure_129_4);
+        const result = closure_130_0(closure_130_2[6]).queueInteractionComponentState(closure_129_1, closure_129_9, closure_129_8, closure_129_4);
+        closure_130_0(closure_130_2[6]);
       }
-      const obj6 = { type: closure_130_0(closure_130_2[7]).InteractionTypes.MESSAGE_COMPONENT, nonce: closure_129_9, guild_id: closure_129_7, channel_id: closure_129_6, message_flags: closure_129_2, message_id: closure_129_1, application_id: closure_129_5, session_id: closure_130_4.getSessionId(), data: null };
+      const obj12 = { type: closure_130_0(closure_130_2[7]).InteractionTypes.MESSAGE_COMPONENT, nonce: closure_129_9, guild_id: closure_129_7, channel_id: closure_129_6, message_flags: closure_129_2, message_id: closure_129_1, application_id: closure_129_5, session_id: closure_130_4.getSessionId(), data: null };
       const merged = Object.assign(closure_130_11(closure_129_8));
-      obj6.data = { component_type: closure_129_0, custom_id: closure_129_3 };
-      closure_129_10 = obj6;
+      obj12.data = { component_type: closure_129_0, custom_id: closure_129_3 };
+      closure_129_10 = obj12;
       const HTTP = closure_130_0(closure_130_2[8]).HTTP;
       const request = { url: closure_130_6.INTERACTIONS, body: closure_129_10, timeout: 3000, rejectWithError: null };
-      obj5 = closure_130_0(closure_130_2[8]);
-      request.rejectWithError = obj5.rejectWithMigratedError();
+      closure_130_0(closure_130_2[6]);
+      request.rejectWithError = closure_130_0(closure_130_2[8]).rejectWithMigratedError();
       c4 = 4;
       c5 = 1;
-      obj8 = {
+      { interactionType: closure_130_0(closure_130_2[7]).InteractionTypes.MESSAGE_COMPONENT, applicationId: closure_129_5, customId: closure_129_3, componentId: closure_129_4 };
+      return {
         value: HTTP.post(request, (arg0) => {
               closure_2_12(closure_1_9, arg0, closure_1_5, closure_1_6, closure_1_7);
             }),
         done: false
       };
-      return obj8;
     }
   } else if (arg0 === 1) {
     c5 = 3;
@@ -149,12 +146,12 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   tmp28 = tmp29;
                 }
                 if (!tmp28) {
-                  let obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId, channelId, guildId: null };
+                  const obj4 = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId, channelId, guildId: null };
                   if (tmp9 == null) {
                     tmp9 = null;
                   }
-                  obj.guildId = tmp9;
-                  DispatcherDefault.dispatch(obj);
+                  obj4.guildId = tmp9;
+                  DispatcherDefault.dispatch(obj4);
                 }
                 let message;
                 if (firstSkemaError != null) {
@@ -165,13 +162,13 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
-              obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId, channelId, guildId: null };
+              const obj8 = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId, channelId, guildId: null };
               let tmp20 = tmp9;
               if (tmp9 == null) {
                 tmp20 = null;
               }
-              obj.guildId = tmp20;
-              DispatcherDefault.dispatch(obj);
+              obj8.guildId = tmp20;
+              DispatcherDefault.dispatch(obj8);
               InteractionActionCreators.setFailed(nonce, undefined, ok.body.message);
             } else {
               const obj2 = InteractionActionCreators;
@@ -181,13 +178,12 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
           }
         }
       }
-      obj = InteractionActionCreators;
       const body = ok.body;
       let code;
       if (body != null) {
         code = body.code;
       }
-      obj.setFailed(nonce, code);
+      InteractionActionCreators.setFailed(nonce, code);
     }
   }
 }

@@ -1,6 +1,6 @@
-// === Module 16580: useSharedICYMILogic ===
+// === Module 16582: useSharedICYMILogic ===
 
-// Module 16580 (useSharedICYMILogic)
+// Module 16582 (useSharedICYMILogic)
 import ICYMITypes from "ICYMITypes" /* 8466 */;
 import ICYMIUtils from "ICYMIUtils" /* 8468 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
@@ -9,8 +9,10 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 8453 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16546).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16548).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
@@ -27,9 +29,9 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   unreadItems = tmp3.unreadItems;
   readItems = tmp3.readItems;
   allUnreadItemsHydrated = tmp3.allUnreadItemsHydrated;
-  let obj = notificationItem(unreadItems[5]);
   let items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getVersion(), []);
+  stateFromStores = notificationItem(unreadItems[5]).useStateFromStores(items, () => stateFromStores.getVersion(), []);
+  let obj = notificationItem(unreadItems[5]);
   const items1 = [stateFromStores];
   const stateFromStores1 = notificationItem(unreadItems[5]).useStateFromStores(items1, () => {
     let isFirstPageHydratedResult = ICYMIStore.isFirstPageHydrated();
@@ -180,20 +182,15 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   }, []);
   const items9 = [onViewableItemsChanged, callback1, callback2];
   const memo = allUnreadItemsHydrated.useMemo(() => {
-    let obj = { viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 50 }, onViewableItemsChanged };
-    const items = [obj, , ];
-    obj = { viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 50, minimumViewTime: 1000 }, onViewableItemsChanged: callback1 };
-    items[1] = obj;
-    obj = { viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 50, minimumViewTime: 50 }, onViewableItemsChanged: callback2 };
-    items[2] = obj;
+    const items = [{ viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 50 }, onViewableItemsChanged }, { viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 50, minimumViewTime: 1000 }, onViewableItemsChanged: callback1 }, { viewabilityConfig: { waitForInteraction: false, viewAreaCoveragePercentThreshold: 50, minimumViewTime: 50 }, onViewableItemsChanged: callback2 }];
     return items;
   }, items9);
   const effect2 = allUnreadItemsHydrated.useEffect(() => {
     closure_1(unreadItems[9]).openICYMITab();
   }, []);
-  const obj5 = notificationItem(unreadItems[5]);
+  let obj5 = notificationItem(unreadItems[5]);
   const items10 = [stateFromStores1, notificationItem, unreadItems, allUnreadItemsHydrated, readItems, stateFromStores3];
-  const obj6 = notificationItem(unreadItems[12]);
+  let obj6 = notificationItem(unreadItems[12]);
   const memo1 = allUnreadItemsHydrated.useMemo(() => {
     const data = [];
     let tmp2 = stateFromStores1;
@@ -207,16 +204,14 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       let obj = { id: notificationItem.id, timestamp: null, data: null, score: null, unread: true };
       const _Date = Date;
       obj.timestamp = Date.now();
-      obj = { kind: "contentInventory", content: null };
-      let obj2 = ICYMIUtils;
-      obj.content = obj2.customStatusToContentInventoryEntry(notificationItem).activity;
-      obj.data = obj;
+      const obj2 = { kind: "contentInventory", content: ICYMIUtils.customStatusToContentInventoryEntry(notificationItem).activity };
+      obj.data = obj2;
       obj.score = notificationItem.score;
       data.push(obj);
     }
     if (stateFromStores1) {
-      obj = { id: "loading", timestamp: 0, unread: false, data: { kind: "loading" } };
-      data.push(obj);
+      const obj4 = { id: "loading", timestamp: 0, unread: false, data: { kind: "loading" } };
+      data.push(obj4);
     } else {
       const item = unreadItems.forEach((item) => {
         if (!obj.isItemNSFW(item)) {
@@ -225,12 +220,11 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         obj = notificationItem(unreadItems[10]);
       });
       if (allUnreadItemsHydrated) {
-        const obj1 = { id: "end", timestamp: 0, unread: false, data: { kind: "end" } };
-        let arr1 = data.push(obj1);
+        const obj5 = { id: "end", timestamp: 0, unread: false, data: { kind: "end" } };
+        data.push(obj5);
       }
-      arr1 = readItems;
       if (readItems.length > 0) {
-        const item1 = arr1.forEach((item) => {
+        const item1 = readItems.forEach((item) => {
           if (!obj.isItemNSFW(item)) {
             data.push(item);
           }
@@ -238,12 +232,12 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         });
       }
       if (stateFromStores3) {
-        obj2 = { id: "bottomLoading", timestamp: 0, unread: false, data: { kind: "bottomLoading" } };
-        data.push(obj2);
+        const obj6 = { id: "bottomLoading", timestamp: 0, unread: false, data: { kind: "bottomLoading" } };
+        data.push(obj6);
       }
     }
     return { data, stickyHeaderIndices: [] };
   }, items10);
-  obj = { data: memo1.data, loading: stateFromStores1, version: stateFromStores, visibleItemIds: arr6, endVisible: tmp[0], isRefreshing: stateFromStores2, handleOnRefresh: notificationItem(unreadItems[12]).useICYMIReloadHandler(notificationItem.showDot), stickyHeaderIndices: memo1.stickyHeaderIndices, viewabilityConfigCallbackPairs: memo };
-  return obj;
+  const iCYMIReloadHandler = notificationItem(unreadItems[12]).useICYMIReloadHandler(notificationItem.showDot);
+  return { data: memo1.data, loading: stateFromStores1, version: stateFromStores, visibleItemIds: arr6, endVisible: tmp[0], isRefreshing: stateFromStores2, handleOnRefresh: notificationItem(unreadItems[12]).useICYMIReloadHandler(notificationItem.showDot), stickyHeaderIndices: memo1.stickyHeaderIndices, viewabilityConfigCallbackPairs: memo };
 };

@@ -3,17 +3,17 @@
 // Module 4456 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import UserUtils from "UserUtils" /* 4481 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4485 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -63,12 +63,12 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = require("isPerModeThemingActive");
-    result = tmpResult.isPerModeThemingActive();
+    result = require("isPerModeThemingActive").isPerModeThemingActive();
+    const tmpResult = require("isPerModeThemingActive");
   }
   if (!result) {
-    tmpResult = ThemeActionCreators;
-    tmpResult.setUseSystemTheme(SystemThemeState.OFF);
+    ThemeActionCreators.setUseSystemTheme(SystemThemeState.OFF);
+    const tmpResult2 = ThemeActionCreators;
   }
   if (null != backgroundGradientPresetId) {
     let tmp10 = null == tmp9;
@@ -91,8 +91,8 @@ function handleUserSettingsProtoStoreUpdate() {
   }
 }
 const isGuildTextChannelType = fn(1961).isGuildTextChannelType;
-const dependencyMap = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
-const SystemThemeState = fn(1186).SystemThemeState;
+const dependencyMap = fn(1228).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1184).SystemThemeState;
 let closure_14 = true;
 let c15 = false;
 let c16 = false;

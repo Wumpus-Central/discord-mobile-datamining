@@ -1,30 +1,29 @@
-// === Module 13562: PremiumFeaturesTable ===
+// === Module 13563: PremiumFeaturesTable ===
 
-// Module 13562 (PremiumFeaturesTable)
+// Module 13563 (PremiumFeaturesTable)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import _modDef13563 from "module_13563" /* 13563 */;
 import _modDef13564 from "module_13564" /* 13564 */;
+import _modDef13565 from "module_13565" /* 13565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CheckIcon() {
-  let obj = shared;
   const tmp3 = useThemeDefault();
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  obj = { source: _modDef13563, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL };
-  return closure_1_11(native.Icon, obj);
+  const isThemeDarkResult = shared.isThemeDark(tmp3);
+  const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+  return closure_1_11(native.Icon, { source: _modDef13564, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef13564, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13565, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
@@ -75,7 +74,7 @@ function Row(withTopBorderRadius) {
   if (withBottomBorder) {
     withBottomBorder = tmp.bottomBorder;
   }
-  let obj = {
+  const obj = {
     style: items,
     onLayout(nativeEvent) {
       return closure_0(nativeEvent.nativeEvent.layout.height);
@@ -83,11 +82,11 @@ function Row(withTopBorderRadius) {
     children: null
   };
   items[1] = withBottomBorder;
-  obj = { style: null, accessible: !flag3, accessibilityLabel: rowName, children: label };
+  const obj2 = { style: null, accessible: !flag3, accessibilityLabel: rowName, children: label };
   const items1 = [, ];
   ({ labelCell: arr2[0], cell: arr2[1] } = tmp);
-  obj.style = items1;
-  const items2 = [closure_1_11(View, obj), , ];
+  obj2.style = items1;
+  const items2 = [closure_1_11(View, obj2), , ];
   const items3 = [, , , , ];
   ({ cell: arr4[0], dataCell: arr4[1] } = tmp);
   let themedHighlightedCell = highlightColumn1;
@@ -104,20 +103,20 @@ function Row(withTopBorderRadius) {
   if (flag2) {
     bottomBorderRadius = tmp.bottomBorderRadius;
   }
-  obj = { style: items3, accessibilityLabel: null, accessible: null, children: null };
+  const obj3 = { style: items3, accessibilityLabel: null, accessible: null, children: null };
   items3[4] = bottomBorderRadius;
   let formatToPlainStringResult;
   if (null != column1AccessibilityLabel) {
     const intl = util.intl;
     const intl2 = util.intl;
-    const obj1 = { accessibilityLabel: column1AccessibilityLabel, rowNumber, rowName, columnNumber: 1, columnName: intl.string(util.t["t9uG/o"]) };
-    formatToPlainStringResult = intl2.formatToPlainString(util.t.EZjXN3, obj1);
+    const obj4 = { accessibilityLabel: column1AccessibilityLabel, rowNumber, rowName, columnNumber: 1, columnName: intl.string(util.t["t9uG/o"]) };
+    formatToPlainStringResult = intl2.formatToPlainString(util.t.EZjXN3, obj4);
     const stringResult = intl.string(util.t["t9uG/o"]);
   }
-  obj.accessibilityLabel = formatToPlainStringResult;
-  obj.accessible = !flag3;
-  obj.children = column1;
-  items2[1] = closure_1_11(View, obj);
+  obj3.accessibilityLabel = formatToPlainStringResult;
+  obj3.accessible = !flag3;
+  obj3.children = column1;
+  items2[1] = closure_1_11(View, obj3);
   if ("nitro_home" === str) {
     if (!highlightColumn1) {
       if (!disableHighlightColumn2) {
@@ -128,8 +127,8 @@ function Row(withTopBorderRadius) {
         const items4 = [topBorderRadius2, , , , , ];
         let tmp10 = flag;
         if (flag) {
-          const obj2 = { borderTopColor: rgba1846919305, borderTopWidth: 2 };
-          tmp10 = obj2;
+          const obj5 = { borderTopColor: rgba1846919305, borderTopWidth: 2 };
+          tmp10 = obj5;
         }
         items4[1] = tmp10;
         let bottomBorderRadius2 = flag2;
@@ -139,35 +138,35 @@ function Row(withTopBorderRadius) {
         items4[2] = bottomBorderRadius2;
         let tmp12 = flag2;
         if (flag2) {
-          const obj3 = { borderBottomColor: rgba1846919305, borderBottomWidth: 2 };
-          tmp12 = obj3;
+          const obj6 = { borderBottomColor: rgba1846919305, borderBottomWidth: 2 };
+          tmp12 = obj6;
         }
-        let obj4 = { style: null, accessibilityLabel: null, accessible: null, children: null };
+        let obj7 = { style: null, accessibilityLabel: null, accessible: null, children: null };
         items4[3] = tmp12;
         items4[4] = tmp.nitroHomeHightlightedBorderLeftRight;
         items4[5] = { overflow: "hidden" };
-        obj4.style = items4;
+        obj7.style = items4;
         let formatToPlainStringResult1;
         if (null != column2AccessibilityLabel) {
           const intl3 = util.intl;
           const intl4 = util.intl;
-          const obj5 = { accessibilityLabel: column2AccessibilityLabel, rowNumber, rowName, columnNumber: 2, columnName: intl3.string(util.t.lG6a5x) };
-          formatToPlainStringResult1 = intl4.formatToPlainString(util.t.EZjXN3, obj5);
+          const obj8 = { accessibilityLabel: column2AccessibilityLabel, rowNumber, rowName, columnNumber: 2, columnName: intl3.string(util.t.lG6a5x) };
+          formatToPlainStringResult1 = intl4.formatToPlainString(util.t.EZjXN3, obj8);
           const stringResult1 = intl3.string(util.t.lG6a5x);
         }
-        obj4.accessibilityLabel = formatToPlainStringResult1;
-        obj4.accessible = !flag3;
+        obj7.accessibilityLabel = formatToPlainStringResult1;
+        obj7.accessible = !flag3;
         const sum = num + num2 + num3;
-        const obj6 = { style: null, start: null, end: null, colors: null, children: null };
-        const obj7 = { height: tmp2[0] - sum };
-        const items5 = [obj7, tmp.dataCell];
-        obj6.style = items5;
+        const obj10 = { style: null, start: null, end: null, colors: null, children: null };
+        const obj11 = { height: tmp2[0] - sum };
+        const items5 = [obj11, tmp.dataCell];
+        obj10.style = items5;
         ({ START: obj9.start, END: obj9.end } = HorizontalGradient);
-        obj6.colors = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
-        obj6.children = column2;
-        obj4.children = closure_1_11(LinearGradientDefault, obj6);
+        obj10.colors = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
+        obj10.children = column2;
+        obj7.children = closure_1_11(LinearGradientDefault, obj10);
       }
-      items2[2] = closure_1_11(View, obj4);
+      items2[2] = closure_1_11(View, obj7);
       obj.children = items2;
       return closure_1_12(View, obj);
     }
@@ -189,20 +188,20 @@ function Row(withTopBorderRadius) {
   if (flag2) {
     flag2 = tmp.bottomBorderRadius;
   }
-  const obj8 = { style: items6, accessibilityLabel: null, accessible: null, children: null };
+  const obj12 = { style: items6, accessibilityLabel: null, accessible: null, children: null };
   items6[4] = flag2;
   let formatToPlainStringResult2;
   if (null != column2AccessibilityLabel) {
     const intl5 = util.intl;
     const intl6 = util.intl;
-    const obj9 = { accessibilityLabel: column2AccessibilityLabel, rowNumber, rowName, columnNumber: 2, columnName: intl5.string(util.t.lG6a5x) };
-    formatToPlainStringResult2 = intl6.formatToPlainString(util.t.EZjXN3, obj9);
+    const obj23 = { accessibilityLabel: column2AccessibilityLabel, rowNumber, rowName, columnNumber: 2, columnName: intl5.string(util.t.lG6a5x) };
+    formatToPlainStringResult2 = intl6.formatToPlainString(util.t.EZjXN3, obj23);
     const stringResult2 = intl5.string(util.t.lG6a5x);
   }
-  obj8.accessibilityLabel = formatToPlainStringResult2;
-  obj8.accessible = !flag3;
-  obj8.children = column2;
-  obj4 = obj8;
+  obj12.accessibilityLabel = formatToPlainStringResult2;
+  obj12.accessible = !flag3;
+  obj12.children = column2;
+  obj7 = obj12;
 }
 const View = fn(17).View;
 const HorizontalGradient = fn(1074).HorizontalGradient;
@@ -211,25 +210,24 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-fn(4636);
-let createStyles = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: null, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
-createStyles = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
-createStyles.topBorderRadius = createStyles;
-createStyles.bottomBorderRadius = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-createStyles.cell = { paddingVertical: 12 };
-createStyles.labelCell = { flex: 1, justifyContent: "flex-start" };
-createStyles.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
-let obj1 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-createStyles.themedHighlightedCell = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
-createStyles.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
-createStyles.premiumGroupCard = { marginTop: 16 };
-createStyles.priceContainer = { alignItems: "center" };
-let closure_14 = createStyles.createStyles(createStyles);
+let createStyles = fn(4636);
+let obj2 = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
+let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+obj2.bottomBorderRadius = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
+obj2.cell = { paddingVertical: 12 };
+obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
+obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
+let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
+obj2.themedHighlightedCell = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
+obj2.premiumGroupCard = { marginTop: 16 };
+obj2.priceContainer = { alignItems: "center" };
+let closure_14 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
-let obj3 = { icon: null };
-let obj2 = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
-obj3.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
-let closure_16 = createStyles.createStyles(obj3);
+let obj7 = { icon: null };
+let obj5 = { backgroundColor: fn(5522).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj7.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
+let closure_16 = createStyles.createStyles(obj7);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesTable.tsx");
 
@@ -267,181 +265,181 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     priceString1 = closure_8;
   }
   const tmp9 = flag;
+  const maxFileSizeForPremiumType = flag(tmp3[18]).getMaxFileSizeForPremiumType(closure_9.TIER_0);
   let obj = flag(tmp3[18]);
-  const maxFileSizeForPremiumType = obj.getMaxFileSizeForPremiumType(closure_9.TIER_0);
-  let obj1 = flag(tmp3[18]);
-  const maxFileSizeForPremiumType1 = obj1.getMaxFileSizeForPremiumType(closure_9.TIER_2);
-  obj = { column1: null, column2: null, withBottomBorder: false, disableAccessibility: true, hidden: !isPremiumGroup };
+  const maxFileSizeForPremiumType1 = flag(tmp3[18]).getMaxFileSizeForPremiumType(closure_9.TIER_2);
+  const obj3 = { column1: null, column2: null, withBottomBorder: false, disableAccessibility: true, hidden: !isPremiumGroup };
   const size = { style: tmp.logo, width: 48, height: 9 };
-  obj.column1 = closure_11(str(tmp3[19]), size);
+  obj3.column1 = closure_11(str(tmp3[19]), size);
   const size1 = { style: tmp.logo, width: 50, height: 9 };
-  obj.column2 = closure_11(str(tmp3[20]), size1);
-  const items = [obj, , , , , , , , , , ];
-  obj = { accessible: true, accessibilityLabel: null, style: null, source: null };
-  let tmp2Result = tmp2(tmp3[21]);
+  obj3.column2 = closure_11(str(tmp3[20]), size1);
+  const items = [obj3, , , , , , , , , , ];
+  const obj4 = { accessible: true, accessibilityLabel: null, style: null, source: null };
+  const obj2 = flag(tmp3[18]);
   const intl = flag(tmp3[15]).intl;
-  obj.accessibilityLabel = intl.string(flag(tmp3[15]).t["t9uG/o"]);
-  obj.style = tmp.logo;
-  let obj6 = flag(tmp3[10]);
-  if (obj6.isThemeDark(tmp4)) {
-    tmp2Result = tmp2(tmp3[22]);
+  obj4.accessibilityLabel = intl.string(flag(tmp3[15]).t["t9uG/o"]);
+  obj4.style = tmp.logo;
+  const tmp2Result = str(tmp3[21]);
+  if (obj7.isThemeDark(tmp4)) {
+    let tmp2Result4 = tmp2(tmp3[22]);
   } else {
-    tmp2Result = tmp2(tmp3[23]);
+    tmp2Result4 = tmp2(tmp3[23]);
   }
-  obj1 = { column1: closure_11(tmp2Result, obj), column2: null, withBottomBorder: false, withTopBorderRadius: true, disableAccessibility: true, hidden: null };
-  obj.source = tmp2Result;
-  const obj2 = { accessible: true, accessibilityLabel: null, style: null, source: null };
+  const obj5 = { column1: closure_11(tmp2Result, obj4), column2: null, withBottomBorder: false, withTopBorderRadius: true, disableAccessibility: true, hidden: null };
+  obj4.source = tmp2Result4;
+  const obj6 = { accessible: true, accessibilityLabel: null, style: null, source: null };
+  obj7 = flag(tmp3[10]);
   const intl2 = tmp9(tmp3[15]).intl;
-  obj2.accessibilityLabel = intl2.string(tmp9(tmp3[15]).t.lG6a5x);
-  obj2.style = tmp.logo;
-  const tmp2Result1 = str(tmp3[21]);
+  obj6.accessibilityLabel = intl2.string(tmp9(tmp3[15]).t.lG6a5x);
+  obj6.style = tmp.logo;
+  const tmp2Result5 = str(tmp3[21]);
   if (tmp9Result.isThemeDark(tmp4)) {
-    let tmp2Result2 = tmp2(tmp3[24]);
+    let tmp2Result6 = tmp2(tmp3[24]);
   } else {
-    tmp2Result2 = tmp2(tmp3[25]);
+    tmp2Result6 = tmp2(tmp3[25]);
   }
-  obj2.source = tmp2Result2;
-  obj1.column2 = closure_11(tmp2Result1, obj2);
-  obj1.hidden = isPremiumGroup;
-  items[1] = obj1;
-  const obj3 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj4 = { text: null };
+  obj6.source = tmp2Result6;
+  obj5.column2 = closure_11(tmp2Result5, obj6);
+  obj5.hidden = isPremiumGroup;
+  items[1] = obj5;
+  const obj8 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj9 = { text: null };
   const intl3 = tmp9(tmp3[15]).intl;
-  obj4.text = intl3.string(tmp9(tmp3[15]).t.LkKGZ2);
-  obj3.label = closure_11(CellText, obj4);
+  obj9.text = intl3.string(tmp9(tmp3[15]).t.LkKGZ2);
+  obj8.label = closure_11(CellText, obj9);
   const intl4 = tmp9(tmp3[15]).intl;
-  obj3.rowName = intl4.string(tmp9(tmp3[15]).t.LkKGZ2);
-  const obj5 = { style: tmp.priceContainer, children: null };
+  obj8.rowName = intl4.string(tmp9(tmp3[15]).t.LkKGZ2);
+  const obj10 = { style: tmp.priceContainer, children: null };
   const parts = priceString.split(/ (?=\()/g);
-  obj5.children = parts.map((text) => closure_1_11(CellText, { text }, text));
-  obj3.column1 = closure_11(View, obj5);
-  obj3.column1AccessibilityLabel = priceString;
-  obj6 = { style: tmp.priceContainer, children: null };
+  obj10.children = parts.map((text) => closure_1_11(CellText, { text }, text));
+  obj8.column1 = closure_11(View, obj10);
+  obj8.column1AccessibilityLabel = priceString;
+  const obj11 = { style: tmp.priceContainer, children: null };
   const parts1 = priceString1.split(/ (?=\()/g);
-  obj6.children = parts1.map((text) => closure_1_11(CellText, { text }, text));
-  obj3.column2 = closure_11(View, obj6);
-  obj3.column2AccessibilityLabel = priceString1;
-  items[2] = obj3;
-  const obj7 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj8 = { text: null };
+  obj11.children = parts1.map((text) => closure_1_11(CellText, { text }, text));
+  obj8.column2 = closure_11(View, obj11);
+  obj8.column2AccessibilityLabel = priceString1;
+  items[2] = obj8;
+  const obj12 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj13 = { text: null };
   const intl5 = tmp9(tmp3[15]).intl;
-  obj8.text = intl5.string(tmp9(tmp3[15]).t.ORlUdL);
-  obj7.label = closure_11(CellText, obj8);
+  obj13.text = intl5.string(tmp9(tmp3[15]).t.ORlUdL);
+  obj12.label = closure_11(CellText, obj13);
   const intl6 = tmp9(tmp3[15]).intl;
-  obj7.rowName = intl6.string(tmp9(tmp3[15]).t.ORlUdL);
-  obj7.column1 = closure_11(CheckIcon, {});
+  obj12.rowName = intl6.string(tmp9(tmp3[15]).t.ORlUdL);
+  obj12.column1 = closure_11(CheckIcon, {});
   const intl7 = tmp9(tmp3[15]).intl;
-  obj7.column1AccessibilityLabel = intl7.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  obj7.column2 = closure_11(CheckIcon, {});
+  obj12.column1AccessibilityLabel = intl7.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  obj12.column2 = closure_11(CheckIcon, {});
   const intl8 = tmp9(tmp3[15]).intl;
-  obj7.column2AccessibilityLabel = intl8.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  items[3] = obj7;
-  const obj9 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj10 = { text: null };
+  obj12.column2AccessibilityLabel = intl8.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  items[3] = obj12;
+  const obj14 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj15 = { text: null };
   const intl9 = tmp9(tmp3[15]).intl;
-  obj10.text = intl9.string(tmp9(tmp3[15]).t["ufhQC+"]);
-  obj9.label = closure_11(CellText, obj10);
+  obj15.text = intl9.string(tmp9(tmp3[15]).t["ufhQC+"]);
+  obj14.label = closure_11(CellText, obj15);
   const intl10 = tmp9(tmp3[15]).intl;
-  obj9.rowName = intl10.string(tmp9(tmp3[15]).t["ufhQC+"]);
-  obj9.column1 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType });
-  obj9.column1AccessibilityLabel = maxFileSizeForPremiumType;
-  obj9.column2 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType1 });
-  obj9.column2AccessibilityLabel = maxFileSizeForPremiumType1;
-  items[4] = obj9;
-  const obj11 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null, hidden: null };
-  const obj12 = { text: null };
+  obj14.rowName = intl10.string(tmp9(tmp3[15]).t["ufhQC+"]);
+  obj14.column1 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType });
+  obj14.column1AccessibilityLabel = maxFileSizeForPremiumType;
+  obj14.column2 = closure_11(tmp9(tmp3[14]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: maxFileSizeForPremiumType1 });
+  obj14.column2AccessibilityLabel = maxFileSizeForPremiumType1;
+  items[4] = obj14;
+  const obj16 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null, hidden: null };
+  const obj17 = { text: null };
   const intl11 = tmp9(tmp3[15]).intl;
-  obj12.text = intl11.string(tmp9(tmp3[15]).t["svn/YX"]);
-  obj11.label = closure_11(CellText, obj12);
+  obj17.text = intl11.string(tmp9(tmp3[15]).t["svn/YX"]);
+  obj16.label = closure_11(CellText, obj17);
   const intl12 = tmp9(tmp3[15]).intl;
-  obj11.rowName = intl12.string(tmp9(tmp3[15]).t["svn/YX"]);
-  obj11.column1 = closure_11(CheckIcon, {});
+  obj16.rowName = intl12.string(tmp9(tmp3[15]).t["svn/YX"]);
+  obj16.column1 = closure_11(CheckIcon, {});
   const intl13 = tmp9(tmp3[15]).intl;
-  obj11.column1AccessibilityLabel = intl13.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  obj11.column2 = closure_11(CheckIcon, {});
+  obj16.column1AccessibilityLabel = intl13.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  obj16.column2 = closure_11(CheckIcon, {});
   const intl14 = tmp9(tmp3[15]).intl;
-  obj11.column2AccessibilityLabel = intl14.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  obj11.hidden = isFractionalOnly;
-  items[5] = obj11;
-  const obj13 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null, hidden: null };
-  const obj14 = { text: null };
+  obj16.column2AccessibilityLabel = intl14.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  obj16.hidden = isFractionalOnly;
+  items[5] = obj16;
+  const obj18 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null, hidden: null };
+  const obj19 = { text: null };
   const intl15 = tmp9(tmp3[15]).intl;
-  obj14.text = intl15.formatToPlainString(tmp9(tmp3[15]).t.DbkNFj, { numBoosts });
-  obj13.label = closure_11(CellText, obj14);
+  obj19.text = intl15.formatToPlainString(tmp9(tmp3[15]).t.DbkNFj, { numBoosts });
+  obj18.label = closure_11(CellText, obj19);
   const intl16 = tmp9(tmp3[15]).intl;
-  obj13.rowName = intl16.formatToPlainString(tmp9(tmp3[15]).t.DbkNFj, { numBoosts });
-  obj13.column1 = closure_11(CloseIcon, {});
+  obj18.rowName = intl16.formatToPlainString(tmp9(tmp3[15]).t.DbkNFj, { numBoosts });
+  obj18.column1 = closure_11(CloseIcon, {});
   const intl17 = tmp9(tmp3[15]).intl;
-  obj13.column1AccessibilityLabel = intl17.string(tmp9(tmp3[15]).t.l4qZrp);
-  obj13.column2 = closure_11(CheckIcon, {});
+  obj18.column1AccessibilityLabel = intl17.string(tmp9(tmp3[15]).t.l4qZrp);
+  obj18.column2 = closure_11(CheckIcon, {});
   const intl18 = tmp9(tmp3[15]).intl;
-  obj13.column2AccessibilityLabel = intl18.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  obj13.hidden = isFractionalOnly;
-  items[6] = obj13;
-  const obj17 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj18 = { text: null };
+  obj18.column2AccessibilityLabel = intl18.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  obj18.hidden = isFractionalOnly;
+  items[6] = obj18;
+  const obj22 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj23 = { text: null };
   const intl19 = tmp9(tmp3[15]).intl;
-  obj18.text = intl19.string(tmp9(tmp3[15]).t["Gv/rQ6"]);
-  obj17.label = closure_11(CellText, obj18);
+  obj23.text = intl19.string(tmp9(tmp3[15]).t["Gv/rQ6"]);
+  obj22.label = closure_11(CellText, obj23);
   const intl20 = tmp9(tmp3[15]).intl;
-  obj17.rowName = intl20.string(tmp9(tmp3[15]).t["Gv/rQ6"]);
-  obj17.column1 = closure_11(CloseIcon, {});
+  obj22.rowName = intl20.string(tmp9(tmp3[15]).t["Gv/rQ6"]);
+  obj22.column1 = closure_11(CloseIcon, {});
   const intl21 = tmp9(tmp3[15]).intl;
-  obj17.column1AccessibilityLabel = intl21.string(tmp9(tmp3[15]).t.l4qZrp);
-  obj17.column2 = closure_11(CheckIcon, {});
+  obj22.column1AccessibilityLabel = intl21.string(tmp9(tmp3[15]).t.l4qZrp);
+  obj22.column2 = closure_11(CheckIcon, {});
   const intl22 = tmp9(tmp3[15]).intl;
-  obj17.column2AccessibilityLabel = intl22.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  items[7] = obj17;
-  const obj19 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj20 = { text: null };
+  obj22.column2AccessibilityLabel = intl22.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  items[7] = obj22;
+  const obj24 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj25 = { text: null };
   const intl23 = tmp9(tmp3[15]).intl;
-  obj20.text = intl23.string(tmp9(tmp3[15]).t.myyAEr);
-  obj19.label = closure_11(CellText, obj20);
+  obj25.text = intl23.string(tmp9(tmp3[15]).t.myyAEr);
+  obj24.label = closure_11(CellText, obj25);
   const intl24 = tmp9(tmp3[15]).intl;
-  obj19.rowName = intl24.string(tmp9(tmp3[15]).t.myyAEr);
-  obj19.column1 = closure_11(CloseIcon, {});
+  obj24.rowName = intl24.string(tmp9(tmp3[15]).t.myyAEr);
+  obj24.column1 = closure_11(CloseIcon, {});
   const intl25 = tmp9(tmp3[15]).intl;
-  obj19.column1AccessibilityLabel = intl25.string(tmp9(tmp3[15]).t.l4qZrp);
-  obj19.column2 = closure_11(CheckIcon, {});
+  obj24.column1AccessibilityLabel = intl25.string(tmp9(tmp3[15]).t.l4qZrp);
+  obj24.column2 = closure_11(CheckIcon, {});
   const intl26 = tmp9(tmp3[15]).intl;
-  obj19.column2AccessibilityLabel = intl26.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  items[8] = obj19;
-  const obj21 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
-  const obj22 = { text: null };
+  obj24.column2AccessibilityLabel = intl26.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  items[8] = obj24;
+  const obj26 = { label: null, rowName: null, column1: null, column1AccessibilityLabel: null, column2: null, column2AccessibilityLabel: null };
+  const obj27 = { text: null };
   const intl27 = tmp9(tmp3[15]).intl;
-  obj22.text = intl27.string(tmp9(tmp3[15]).t.S6yQr8);
-  obj21.label = closure_11(CellText, obj22);
+  obj27.text = intl27.string(tmp9(tmp3[15]).t.S6yQr8);
+  obj26.label = closure_11(CellText, obj27);
   const intl28 = tmp9(tmp3[15]).intl;
-  obj21.rowName = intl28.string(tmp9(tmp3[15]).t.S6yQr8);
-  obj21.column1 = closure_11(CloseIcon, {});
+  obj26.rowName = intl28.string(tmp9(tmp3[15]).t.S6yQr8);
+  obj26.column1 = closure_11(CloseIcon, {});
   const intl29 = tmp9(tmp3[15]).intl;
-  obj21.column1AccessibilityLabel = intl29.string(tmp9(tmp3[15]).t.l4qZrp);
-  obj21.column2 = closure_11(CheckIcon, {});
+  obj26.column1AccessibilityLabel = intl29.string(tmp9(tmp3[15]).t.l4qZrp);
+  obj26.column2 = closure_11(CheckIcon, {});
   const intl30 = tmp9(tmp3[15]).intl;
-  obj21.column2AccessibilityLabel = intl30.string(tmp9(tmp3[15]).t["tq+6t/"]);
-  items[9] = obj21;
+  obj26.column2AccessibilityLabel = intl30.string(tmp9(tmp3[15]).t["tq+6t/"]);
+  items[9] = obj26;
   items[10] = { withBottomBorder: false, withBottomBorderRadius: true, disableAccessibility: true };
   const found = items.filter((hidden) => null != hidden && !hidden.hidden);
-  const obj23 = { style: null, children: null };
+  const obj28 = { style: null, children: null };
   const items1 = [tmp.container, highlightNitroBasic.style];
-  obj23.style = items1;
-  const obj24 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  obj28.style = items1;
+  const obj29 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   if (titleOverride == null) {
     const intl31 = tmp9(tmp3[15]).intl;
     titleOverride = intl31.string(tmp9(tmp3[15]).t.vLz3Zs);
   }
-  obj24.children = titleOverride;
-  const items2 = [closure_11(tmp9(tmp3[14]).Text, obj24), , ];
+  obj29.children = titleOverride;
+  const items2 = [closure_11(tmp9(tmp3[14]).Text, obj29), , ];
   if (isPremiumGroup) {
     isPremiumGroup = null != premiumGroupRole;
   }
   if (isPremiumGroup) {
-    const obj25 = { style: tmp.premiumGroupCard, premiumGroupRole };
-    isPremiumGroup = closure_11(tmp2(tmp3[26]), obj25);
+    const obj30 = { style: tmp.premiumGroupCard, premiumGroupRole };
+    isPremiumGroup = closure_11(tmp2(tmp3[26]), obj30);
   }
   items2[1] = isPremiumGroup;
-  const obj15 = { numBoosts };
-  const obj16 = { numBoosts };
+  const obj20 = { numBoosts };
+  const obj21 = { numBoosts };
   tmp9Result = tmp9(tmp3[10]);
   items2[2] = closure_11(View, {
     style: tmp.table,
@@ -455,6 +453,6 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
       return closure_2_11(Row, obj, rowNumber);
     })
   });
-  obj23.children = items2;
-  return closure_12(View, obj23);
+  obj28.children = items2;
+  return closure_12(View, obj28);
 };

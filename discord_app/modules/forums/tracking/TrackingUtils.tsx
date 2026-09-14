@@ -55,18 +55,18 @@ function collectForumAnalyticsMetadata(sessionId) {
       obj.forum_channel_filter_tag_ids = ForumChannelAnalyticsManagerDefault.getFilterTagIdsAnalytics();
       obj.forum_channel_sort_order = ForumChannelAnalyticsManagerDefault.getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
-        let tmp8Result = ForumSessionAnalyticsManagerDefault;
-        sessionId = tmp8Result.getForumChannelSessionId(channel.id);
+        sessionId = ForumSessionAnalyticsManagerDefault.getForumChannelSessionId(channel.id);
+        const tmp8Result = ForumSessionAnalyticsManagerDefault;
       }
       obj.forum_channel_session_id = sessionId;
-      tmp8Result = ForumChannelAnalyticsManagerDefault;
-      obj.forum_channel_layout = tmp8Result.getLayoutAnalytics(channel.id);
+      obj.forum_channel_layout = ForumChannelAnalyticsManagerDefault.getLayoutAnalytics(channel.id);
       obj.forum_channel_default_sort_order = channel.defaultSortOrder;
+      const tmp8Result3 = ForumChannelAnalyticsManagerDefault;
       obj.forum_channel_tag_setting = ForumChannelAnalyticsManagerDefault.getTagSettingAnalytics(channel.id);
       obj.forum_channel_default_layout = channel.defaultForumLayout;
       obj.forum_channel_is_moderator_report_channel = channel.isModeratorReportChannel();
       tmp = obj;
-      const tmp8Result1 = ForumChannelAnalyticsManagerDefault;
+      const tmp8Result4 = ForumChannelAnalyticsManagerDefault;
     }
   }
   return tmp;
@@ -151,26 +151,25 @@ export const getForumPostAttachmentMimetypes = function getForumPostAttachmentMi
 export { collectForumAnalyticsMetadata };
 export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyticsMetadata(channelId) {
   channelId = channelId.channelId;
-  let obj = ChannelStore;
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isForumPost()) {
-      const channel1 = obj.getChannel(channel.parent_id);
+      const channel1 = ChannelStore.getChannel(channel.parent_id);
       let tmp = null;
       if (null != channel1) {
         tmp = null;
         if (channel1.isForumLikeChannel()) {
-          obj = {};
-          obj = { channelId: channel1.id, sessionId: channelId.sessionId };
-          const merged = Object.assign(collectForumAnalyticsMetadata(obj));
-          obj.thread_approximate_member_count = ThreadMembersStore.getMemberCount(channelId);
-          obj.thread_approximate_message_count = ThreadMessageStore.getCount(channelId);
+          const obj2 = {};
+          const obj3 = { channelId: channel1.id, sessionId: channelId.sessionId };
+          const merged = Object.assign(collectForumAnalyticsMetadata(obj3));
+          obj2.thread_approximate_member_count = ThreadMembersStore.getMemberCount(channelId);
+          obj2.thread_approximate_message_count = ThreadMessageStore.getCount(channelId);
           const threadMetadata = channel.threadMetadata;
           let archived;
           if (threadMetadata != null) {
             archived = threadMetadata.archived;
           }
-          obj.thread_archived = true === archived;
+          obj2.thread_archived = true === archived;
           const threadMetadata2 = channel.threadMetadata;
           let flag2;
           if (threadMetadata2 != null) {
@@ -179,7 +178,7 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           if (flag2 == null) {
             flag2 = false;
           }
-          obj.thread_locked = flag2;
+          obj2.thread_locked = flag2;
           const threadMetadata3 = channel.threadMetadata;
           let num;
           if (threadMetadata3 != null) {
@@ -188,10 +187,10 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           if (num == null) {
             num = 0;
           }
-          obj.thread_auto_archive_duration_minutes = num;
-          obj.thread_approximate_creation_date = SnowflakeUtilsDefault.extractTimestamp(channelId);
-          obj.forum_post_id = channel.id;
-          obj.forum_post_first_message_id = SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
+          obj2.thread_auto_archive_duration_minutes = num;
+          obj2.thread_approximate_creation_date = SnowflakeUtilsDefault.extractTimestamp(channelId);
+          obj2.forum_post_id = channel.id;
+          obj2.forum_post_first_message_id = SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
           const message = ForumPostMessagesStore.getMessage(channel.id);
           let firstMessage = null;
           if (message.loaded) {
@@ -202,7 +201,7 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             const reactions = firstMessage.reactions;
             num3 = reactions.reduce((acc, count) => acc + count.count, 0);
           }
-          obj.forum_post_num_reactions = num3;
+          obj2.forum_post_num_reactions = num3;
           const message1 = ForumPostMessagesStore.getMessage(channel.id);
           let firstMessage1 = null;
           if (message1.loaded) {
@@ -212,13 +211,13 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           if (null != firstMessage1) {
             num4 = firstMessage1.reactions.length;
           }
-          obj.forum_post_num_unique_reactions = num4;
+          obj2.forum_post_num_unique_reactions = num4;
           let set;
-          const channel2 = obj.getChannel(channel.id);
+          const channel2 = ChannelStore.getChannel(channel.id);
           if (null == channel2) {
             let items = [];
           } else {
-            const channel3 = obj.getChannel(channel2.parent_id);
+            const channel3 = ChannelStore.getChannel(channel2.parent_id);
             if (channel3 != null) {
               const availableTags = channel3.availableTags;
             }
@@ -238,23 +237,22 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             }
             items = [];
           }
-          obj.forum_post_applied_tag_ids = items;
-          obj.forum_post_is_pinned = channel.hasFlag(ChannelFlags.PINNED);
-          let tmp8Result = ForumPostAnalyticsManagerDefault;
-          const readStateSnapshotAnalytics = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
+          obj2.forum_post_applied_tag_ids = items;
+          obj2.forum_post_is_pinned = channel.hasFlag(ChannelFlags.PINNED);
+          const readStateSnapshotAnalytics = ForumPostAnalyticsManagerDefault.getReadStateSnapshotAnalytics(channel.id);
           let isNew;
           if (readStateSnapshotAnalytics != null) {
             isNew = readStateSnapshotAnalytics.isNew;
           }
-          obj.forum_post_is_new = isNew;
-          tmp8Result = ForumPostAnalyticsManagerDefault;
-          const readStateSnapshotAnalytics1 = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
+          obj2.forum_post_is_new = isNew;
+          const tmp8Result = ForumPostAnalyticsManagerDefault;
+          const readStateSnapshotAnalytics1 = ForumPostAnalyticsManagerDefault.getReadStateSnapshotAnalytics(channel.id);
           let hasUnreads;
           if (readStateSnapshotAnalytics1 != null) {
             hasUnreads = readStateSnapshotAnalytics1.hasUnreads;
           }
-          obj.forum_post_is_unread = hasUnreads;
-          obj.forum_post_is_following = JoinedThreadsStore.hasJoined(channel.id);
+          obj2.forum_post_is_unread = hasUnreads;
+          obj2.forum_post_is_following = JoinedThreadsStore.hasJoined(channel.id);
           const message2 = ForumPostMessagesStore.getMessage(channel.id);
           let firstMessage2 = null;
           if (message2.loaded) {
@@ -272,7 +270,8 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
               return str;
             });
           }
-          obj.forum_post_attachment_mimetypes = items1;
+          obj2.forum_post_attachment_mimetypes = items1;
+          const tmp8Result2 = ForumPostAnalyticsManagerDefault;
         }
       }
       return tmp;

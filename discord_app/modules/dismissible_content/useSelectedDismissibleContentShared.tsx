@@ -4,6 +4,8 @@
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1947 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const size = fn(2);

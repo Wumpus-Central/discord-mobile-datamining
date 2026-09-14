@@ -1,6 +1,6 @@
-// === Module 13055: useModalPanGesture ===
+// === Module 13056: useModalPanGesture ===
 
-// Module 13055 (useModalPanGesture)
+// Module 13056 (useModalPanGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import spring from "spring" /* 5055 */;
@@ -24,9 +24,9 @@ export default function useModalPanGesture(thresholdVelocity) {
   const onStart = thresholdVelocity.onStart;
   const onEnd = thresholdVelocity.onEnd;
   const onClose = thresholdVelocity.onClose;
-  let obj = num(thresholdTranslate[0]);
-  const sharedValue = obj.useSharedValue({ y: 0 });
+  const sharedValue = num(thresholdTranslate[0]).useSharedValue({ y: 0 });
   const Gesture = num(thresholdTranslate[1]).Gesture;
+  let obj = num(thresholdTranslate[0]);
   const PanResult = Gesture.Pan();
   class J {
     constructor() {
@@ -36,27 +36,27 @@ export default function useModalPanGesture(thresholdVelocity) {
         obj = closure_0(closure_2[0]);
         tmp4 = obj.runOnJS(tmp)();
       }
-      obj = { y: translateY.get() };
-      result = closure_8.set(obj);
+      obj1 = { y: translateY.get() };
+      result = closure_8.set(obj1);
       return;
     }
   }
-  obj = { onStart, runOnJS: num(thresholdTranslate[0]).runOnJS, start: sharedValue, translateY };
-  J.__closure = obj;
+  const enabledResult = Gesture.Pan().enabled(thresholdVelocity.gestureEnabled);
+  J.__closure = { onStart, runOnJS: num(thresholdTranslate[0]).runOnJS, start: sharedValue, translateY };
   J.__workletHash = 15847989720945;
   J.__initData = onStart;
-  const enabledResult = Gesture.Pan().enabled(thresholdVelocity.gestureEnabled);
+  let obj2 = { onStart, runOnJS: num(thresholdTranslate[0]).runOnJS, start: sharedValue, translateY };
   let fn = function x(translationY) {
     const sum = sharedValue.get().y + translationY.translationY;
     const items = [0, maxTranslate];
     const items1 = [0, maxTranslate];
     const result = translateY.set(ReanimatedRexport.interpolate(sum, items, items1, ReanimatedRexport.Extrapolate.CLAMP));
   };
-  obj = { translateY, interpolate: num(thresholdTranslate[0]).interpolate, start: sharedValue, maxTranslate, Extrapolate: num(thresholdTranslate[0]).Extrapolate };
-  fn.__closure = obj;
+  const onStartResult = enabledResult.onStart(J);
+  fn.__closure = { translateY, interpolate: num(thresholdTranslate[0]).interpolate, start: sharedValue, maxTranslate, Extrapolate: num(thresholdTranslate[0]).Extrapolate };
   fn.__workletHash = 6809176231356;
   fn.__initData = translateY;
-  const onStartResult = Gesture.Pan().enabled(thresholdVelocity.gestureEnabled).onStart(J);
+  let obj3 = { translateY, interpolate: num(thresholdTranslate[0]).interpolate, start: sharedValue, maxTranslate, Extrapolate: num(thresholdTranslate[0]).Extrapolate };
   class O {
     constructor(arg0) {
       velocityY = thresholdVelocity.velocityY;
@@ -84,8 +84,8 @@ export default function useModalPanGesture(thresholdVelocity) {
       fn = function n() {
         num(4373).runOnJS(maxTranslate(4839).pop)();
       };
-      obj = { runOnJS: closure_0(closure_2[0]).runOnJS, ModalActionCreators: closure_1(closure_2[3]) };
-      fn.__closure = obj;
+      obj1 = { runOnJS: closure_0(closure_2[0]).runOnJS, ModalActionCreators: closure_1(closure_2[3]) };
+      fn.__closure = obj1;
       fn.__workletHash = 14223008059411;
       fn.__initData = closure_6;
       result1 = obj2.set(obj4.withSpring(height, obj, "respect-motion-settings", fn));
@@ -98,11 +98,11 @@ export default function useModalPanGesture(thresholdVelocity) {
       return;
     }
   }
-  const onUpdateResult = Gesture.Pan().enabled(thresholdVelocity.gestureEnabled).onStart(J).onUpdate(fn);
+  const onUpdateResult = onStartResult.onUpdate(fn);
   O.__closure = { translateY, thresholdTranslate, thresholdVelocity: num, withSpring: num(thresholdTranslate[2]).withSpring, height, runOnJS: num(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]), onClose, onEnd };
   O.__workletHash = 16881029664873;
   O.__initData = height;
-  const obj1 = { translateY, thresholdTranslate, thresholdVelocity: num, withSpring: num(thresholdTranslate[2]).withSpring, height, runOnJS: num(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]), onClose, onEnd };
+  let obj4 = { translateY, thresholdTranslate, thresholdVelocity: num, withSpring: num(thresholdTranslate[2]).withSpring, height, runOnJS: num(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]), onClose, onEnd };
   const onEndResult = onUpdateResult.onEnd(O);
   return onUpdateResult.onEnd(O).failOffsetY(-0.01).activeOffsetY([-5, 15]);
 };

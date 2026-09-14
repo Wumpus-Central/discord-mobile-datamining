@@ -148,14 +148,14 @@ export const fromSerializedPartition = function fromSerializedPartition(id, role
   return obj;
 };
 export const toSerializedPartition = function toSerializedPartition(unsafeMutableRoles) {
-  let obj = {};
+  const obj = {};
   for (const key10004 in arg0) {
     let tmp2 = arg0[key10004];
-    obj = {};
+    let obj2 = {};
     let merged = Object.assign(tmp2);
     let str = tmp2.permissions;
-    obj.permissions = str.toString();
-    obj[key10004] = obj;
+    obj2.permissions = str.toString();
+    obj[key10004] = obj2;
     continue;
   }
   return obj;

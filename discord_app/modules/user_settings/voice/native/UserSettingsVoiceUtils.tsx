@@ -14,19 +14,16 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
-  const obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  const result = obj.setAutomaticGainControl(arg0, obj);
+  const result = AudioActionCreatorsDefault.setAutomaticGainControl(arg0, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
-  const obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  obj.setEchoCancellation(arg0, obj);
+  AudioActionCreatorsDefault.setEchoCancellation(arg0, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
 };
 export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
-  obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  obj.setNoiseCancellation(arg0 === KRISP, obj);
-  obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, obj);
+  obj = AudioActionCreatorsDefault;
+  obj.setNoiseCancellation(arg0 === KRISP, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
+  AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO });
 };
 export { NoiseSuppressionOpt };
 export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption() {

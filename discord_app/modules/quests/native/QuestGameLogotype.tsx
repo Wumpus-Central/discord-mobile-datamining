@@ -1,6 +1,6 @@
-// === Module 15230: QuestGameLogotype ===
+// === Module 15231: QuestGameLogotype ===
 
-// Module 15230 (QuestGameLogotype)
+// Module 15231 (QuestGameLogotype)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,14 +10,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let obj = {};
+let SPRING_CONFIG = {};
 const merged = Object.assign(fn(5059).springSlow);
-obj.overshootClamping = true;
+SPRING_CONFIG.overshootClamping = true;
 const createStyles = fn(4636);
-obj = { logo: { marginBottom: nativeDefault.space.PX_4 } };
-let closure_9 = createStyles.createStyles(obj);
+const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
+let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}" };
-let obj1 = { marginBottom: nativeDefault.space.PX_4 };
+let obj4 = { marginBottom: nativeDefault.space.PX_4 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
 
@@ -41,8 +41,8 @@ export default noop.memo((assetUrl) => {
     if (null != first) {
       const result = size.width / size.height;
       if (null != height) {
-        size = { height, width: height * result };
-        let size2 = size;
+        const size1 = { height, width: height * result };
+        let size2 = size1;
       } else {
         size2 = { height: num / result, width: num };
       }
@@ -69,7 +69,7 @@ export default noop.memo((assetUrl) => {
       tmp = width > 0 && height > 0;
     });
   }, items1);
-  let __closure = assetUrl(height[7]);
+  SPRING_CONFIG = assetUrl(height[7]);
   class C {
     constructor() {
       obj = closure_0(closure_2[8]);
@@ -77,36 +77,35 @@ export default noop.memo((assetUrl) => {
       if (null == closure_7) {
         num = 0;
       }
-      obj = { opacity: obj.withSpring(num, closure_8, "animate-always") };
-      return obj;
+      obj1 = { opacity: obj.withSpring(num, closure_8, "animate-always") };
+      return obj1;
     }
   }
-  __closure = { withSpring: assetUrl(height[8]).withSpring, logoDimensionStyles: memo, SPRING_CONFIG: __closure };
-  C.__closure = __closure;
+  C.__closure = { withSpring: assetUrl(height[8]).withSpring, logoDimensionStyles: memo, SPRING_CONFIG };
   C.__workletHash = 11242802634598;
   C.__initData = __initData;
   const items2 = [assetUrl];
-  const animatedStyle = __closure.useAnimatedStyle(C);
+  const animatedStyle = SPRING_CONFIG.useAnimatedStyle(C);
   const memo1 = maxHeight.useMemo(() => assetUrl.endsWith(".svg"), items2);
-  __closure = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items3 = [animatedStyle, assetUrl.style];
-  __closure.style = items3;
+  obj3.style = items3;
   if (memo1) {
-    const obj1 = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items4 = [memo, tmp.logo];
-    obj1.style = items4;
+    obj4.style = items4;
     size = { height: "100%", width: "100%", uri: assetUrl, onError };
-    obj1.children = tmp10(assetUrl(tmp7[9]).SvgUri, size);
-    let tmp10Result = tmp10(first, obj1);
+    obj4.children = tmp10(assetUrl(tmp7[9]).SvgUri, size);
+    let tmp10Result = tmp10(first, obj4);
   } else {
-    const obj2 = { source: null, style: null, onError: null };
-    const obj3 = { uri: assetUrl };
-    obj2.source = obj3;
+    const obj5 = { source: null, style: null, onError: null };
+    const obj6 = { uri: assetUrl };
+    obj5.source = obj6;
     const items5 = [memo, tmp.logo];
-    obj2.style = items5;
-    obj2.onError = onError;
-    tmp10Result = tmp10(num(tmp7[10]), obj2);
+    obj5.style = items5;
+    obj5.onError = onError;
+    tmp10Result = tmp10(num(tmp7[10]), obj5);
   }
-  __closure.children = tmp10Result;
-  return memo(num(height[7]).View, __closure);
+  obj3.children = tmp10Result;
+  return memo(num(height[7]).View, obj3);
 });

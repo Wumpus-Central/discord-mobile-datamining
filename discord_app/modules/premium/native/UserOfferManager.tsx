@@ -1,13 +1,13 @@
-// === Module 17615: UserOfferManager ===
+// === Module 17616: UserOfferManager ===
 
-// Module 17615 (UserOfferManager)
+// Module 17616 (UserOfferManager)
 import UserStore from "UserStore" /* 1371 */;
 import UserOfferStore from "UserOfferStore" /* 7553 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
 const PaymentGateways = fn(1085).PaymentGateways;
-let prototype = function UserOfferManager() {
+const prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -24,23 +24,23 @@ let prototype = function UserOfferManager() {
     }
     let isPremiumResult = null == currentUser || !currentUser.verified;
     if (!isPremiumResult) {
-      let tmp2Result = applyArgumentsResult(dependencyMap[5]);
-      isPremiumResult = tmp2Result.isPremium(currentUser);
+      isPremiumResult = applyArgumentsResult(dependencyMap[5]).isPremium(currentUser);
+      const tmp2Result = applyArgumentsResult(dependencyMap[5]);
     }
     if (!isPremiumResult) {
       isPremiumResult = fetchingOffer.isFetchingOffer();
     }
     if (!isPremiumResult) {
-      tmp2Result = applyArgumentsResult(dependencyMap[6]);
-      const userOffer = tmp2Result.fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
+      const userOffer = applyArgumentsResult(dependencyMap[6]).fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
+      const tmp2Result2 = applyArgumentsResult(dependencyMap[6]);
     }
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
 
-export default prototype;
+export default prototype1;

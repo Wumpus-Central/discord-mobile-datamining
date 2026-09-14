@@ -1,9 +1,11 @@
-// === Module 12428: useSearchContext ===
+// === Module 12429: useSearchContext ===
 
-// Module 12428 (useSearchContext)
+// Module 12429 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const SearchTypes = fn(1074).SearchTypes;
@@ -21,9 +23,11 @@ export const useGuildChannelSearchContext = function useGuildChannelSearchContex
 export const getChannelDetailsSearchContext = function getChannelDetailsSearchContext(channelId, guildId, isThreadResult) {
   if (isThreadResult) {
     _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-    let obj = { type: SearchTypes.THREAD, guildId, channelId };
+    const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+    let obj = obj2;
   } else if (null == guildId) {
-    obj = { type: SearchTypes.CHANNEL, channelId };
+    const obj3 = { type: SearchTypes.CHANNEL, channelId };
+    obj = obj3;
   } else {
     obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
   }
@@ -47,9 +51,11 @@ export const useChannelDetailsSearchContext = function useChannelDetailsSearchCo
   return noop.useMemo(() => {
     if (stateFromStores) {
       _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-      let obj = { type: SearchTypes.THREAD, guildId, channelId };
+      const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+      let obj = obj2;
     } else if (null == guildId) {
-      obj = { type: SearchTypes.CHANNEL, channelId };
+      const obj3 = { type: SearchTypes.CHANNEL, channelId };
+      obj = obj3;
     } else {
       obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
     }

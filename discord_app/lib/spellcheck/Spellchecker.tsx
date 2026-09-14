@@ -298,15 +298,15 @@ let closure_9 = apply.debounce((detectLanguage, hasAttribute) => {
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      let tmp2Result = DOMUtils;
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        tmp2Result = DOMUtils;
-        if (tmp2Result.isElement(hasAttribute)) {
+        if (tmp2Result2.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;
           }
         }
+        tmp2Result2 = DOMUtils;
       }
+      tmp2Result = DOMUtils;
     }
     textContent = hasAttribute.value;
     obj = DOMUtils;

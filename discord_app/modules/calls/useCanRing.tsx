@@ -13,6 +13,8 @@ import PresenceStore from "PresenceStore" /* 4676 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 const GuildVoiceRingingExperimentDefault = tmp4(9304);
 const require = fn;
 function useCanRingToGuildVoiceChannel(user) {
@@ -148,8 +150,8 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
     const call = CallStore.getCall(channel.id);
     return null != call && null != call.messageId && !CallStore.isCallUnavailable(channel.id);
   } else if (tmp === tmp2) {
-    const obj = { guildId: channel.guild_id, location: "ring" };
-    let enabled = obj.getCurrentConfig(obj).enabled;
+    const obj2 = { guildId: channel.guild_id, location: "ring" };
+    let enabled = GuildVoiceRingingExperimentDefault.getCurrentConfig(obj2).enabled;
     const voiceState = VoiceStateStore.getVoiceState(channel.guild_id, AuthenticationStore.getId());
     if (enabled) {
       enabled = null != voiceState;

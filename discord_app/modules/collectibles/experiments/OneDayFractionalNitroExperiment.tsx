@@ -10,8 +10,8 @@ const result = size.fileFinishedImporting("modules/collectibles/experiments/OneD
 
 export default apexExperiment;
 export const useOneDayFractionalNitroEnabled = function useOneDayFractionalNitroEnabled(product_card) {
-  let obj = { location: product_card };
-  obj = { location: product_card };
-  const tmp = PremiumGroupExperimentDefault(obj);
-  return apexExperiment.useConfig(obj) && !PremiumGroupExperimentDefault(obj);
+  const obj = { location: product_card };
+  const obj2 = { location: product_card };
+  const tmp = PremiumGroupExperimentDefault({ location: product_card });
+  return apexExperiment.useConfig({ location: product_card }) && !PremiumGroupExperimentDefault({ location: product_card });
 };

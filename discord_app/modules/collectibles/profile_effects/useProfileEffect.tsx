@@ -6,6 +6,8 @@ import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const isProfileEffectRecord = fn(7651).isProfileEffectRecord;
 const size = fn(2);

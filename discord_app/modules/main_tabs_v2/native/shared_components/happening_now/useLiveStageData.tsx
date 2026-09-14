@@ -1,11 +1,13 @@
-// === Module 16166: useLiveStageData ===
+// === Module 16168: useLiveStageData ===
 
-// Module 16166 (useLiveStageData)
+// Module 16168 (useLiveStageData)
 import _modDef12 from "module_12" /* 12 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -13,14 +15,14 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_co
 
 export const useLiveStageData = function useLiveStageData(stage) {
   _require = stage;
-  let obj = require("useStateFromStores");
   let items = [memo1];
   const items1 = [stage.channel_id];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => {
     const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(stage.channel_id, StageChannelParticipants.StageChannelParticipantNamedIndex.FRIEND);
     const found = mutableParticipants.filter((type) => type.type === stage(stateFromStoresArray1[4]).StageChannelParticipantTypes.VOICE);
     return found.map((user) => user.user);
   }, items1);
+  const obj = require("useStateFromStores");
   const items2 = [memo1];
   const items3 = [stage.channel_id];
   stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(items2, () => {
@@ -53,6 +55,6 @@ export const useLiveStageData = function useLiveStageData(stage) {
   const obj3 = require("useStateFromStores");
   const items10 = [memo2];
   const items11 = [stage.channel_id];
-  obj = { friends: stateFromStoresArray, speakers: stateFromStoresArray1, audienceCount: stateFromStoresArray2.length, users: memo, audiencePrefixedFriends: memo3, audienceFriends: memo1, channel: require("useStateFromStores").useStateFromStores(items10, () => ChannelStore.getChannel(stage.channel_id), items11) };
-  return obj;
+  const obj4 = require("useStateFromStores");
+  return { friends: stateFromStoresArray, speakers: stateFromStoresArray1, audienceCount: stateFromStoresArray2.length, users: memo, audiencePrefixedFriends: memo3, audienceFriends: memo1, channel: require("useStateFromStores").useStateFromStores(items10, () => ChannelStore.getChannel(stage.channel_id), items11) };
 };

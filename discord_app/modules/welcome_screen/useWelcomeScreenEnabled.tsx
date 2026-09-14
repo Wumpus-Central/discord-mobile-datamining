@@ -1,12 +1,14 @@
-// === Module 12784: useWelcomeScreenEnabled ===
+// === Module 12785: useWelcomeScreenEnabled ===
 
-// Module 12784 (useWelcomeScreenEnabled)
+// Module 12785 (useWelcomeScreenEnabled)
 import Constants from "Constants" /* 1074 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const isGuildTextChannelType = ChannelRecord.isGuildTextChannelType;
 const GuildFeatures = Constants.GuildFeatures;

@@ -1,14 +1,14 @@
-// === Module 10861: GiftingPromotionUtils ===
+// === Module 10862: GiftingPromotionUtils ===
 
-// Module 10861 (GiftingPromotionUtils)
+// Module 10862 (GiftingPromotionUtils)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10868 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10869 */;
-import MarketingComponentType from "MarketingComponentType" /* 10870 */;
+import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10869 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10870 */;
+import MarketingComponentType from "MarketingComponentType" /* 10871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
 
 require = fn;
 const SubscriptionPlans = fn(1373).SubscriptionPlans;
@@ -22,7 +22,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   let items = [hasPreviouslyFetched];
   stateFromStoresArray = first(504).useStateFromStoresArray(items, () => hasPreviouslyFetched.getGiftPromotionRewardSkuIds());
   const obj = first(504);
-  const fetchPurchases = first(10862).useFetchPurchases();
+  const fetchPurchases = first(10863).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -43,9 +43,9 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((item) => item === first(10866).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
-  const obj3 = first(10862);
-  const fetchSummer2026GogoPromoEligibility = first(10867).useFetchSummer2026GogoPromoEligibility(someResult);
+  const someResult = stateFromStoresArray.some((item) => item === first(10867).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
+  const obj3 = first(10863);
+  const fetchSummer2026GogoPromoEligibility = first(10868).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];
@@ -153,10 +153,10 @@ export const createGradientStyle = function createGradientStyle(gradient, arg1) 
     } else {
       joined = gradient.join(", ");
     }
-    obj = { background: null };
+    const obj2 = { background: null };
     const _HermesInternal = HermesInternal;
-    obj.background = "linear-gradient(" + result + "deg, " + joined + ")";
-    return obj;
+    obj2.background = "linear-gradient(" + result + "deg, " + joined + ")";
+    return obj2;
   }
 };
 export const createBackgroundStyle = function createBackgroundStyle(arg0) {
@@ -206,13 +206,13 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = DismissibleContentUnsafeUtils;
-        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        let isDismissed = DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          tmpResult = DismissibleContentUnsafeUtils;
-          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          isDismissed = !DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          const tmpResult2 = DismissibleContentUnsafeUtils;
         }
         tmp5 = isDismissed;
+        const tmpResult = DismissibleContentUnsafeUtils;
       }
       return tmp5;
     }

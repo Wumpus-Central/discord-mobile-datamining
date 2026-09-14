@@ -10,10 +10,10 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 function trackFailure(arg0) {
-  const obj = { name: MetricEvents.MetricEvents.APP_STORE_AGE_VERIFICATION_FAILED, tags: null };
+  const obj2 = { name: MetricEvents.MetricEvents.APP_STORE_AGE_VERIFICATION_FAILED, tags: null };
   const items = ["reason:" + arg0];
-  obj.tags = items;
-  obj.increment(obj);
+  obj2.tags = items;
+  MonitoringAgentDefault.increment(obj2);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
@@ -26,11 +26,11 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   dependencyMap = undefined;
   let callback1;
   noop = undefined;
+  let navigation = modalSessionId(1483).useNavigation();
   let obj = modalSessionId(1483);
-  let navigation = obj.useNavigation();
   [tmp5, c2] = callback1(noop.useState({ type: "loading" }), 2);
-  let obj1 = modalSessionId(4849);
-  const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
+  const tmp4 = callback1(noop.useState({ type: "loading" }), 2);
+  const watchAgeVerificationStatusChange = modalSessionId(4849).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
@@ -44,8 +44,8 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -58,8 +58,8 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             navigation = tmp7;
             closure_129_0 = undefined;
@@ -72,14 +72,14 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
             let v0 = 1;
             const result = unknown(tmp3[9]).warmAgeSignalAttestation();
             const obj12 = unknown(tmp3[9]);
-            let obj1 = { firstAgeGate: unknown(tmp3[11]).MIN_AGE_GATE, secondAgeGate: unknown(tmp3[11]).ADULT_AGE_GATE };
-            const items = [navigation(tmp3[10]).getAgeSignals(obj1), ];
+            const obj6 = { firstAgeGate: unknown(tmp3[11]).MIN_AGE_GATE, secondAgeGate: unknown(tmp3[11]).ADULT_AGE_GATE };
+            const items = [navigation(tmp3[10]).getAgeSignals(obj6), ];
             const obj13 = navigation(tmp3[10]);
             items[1] = unknown(tmp3[9]).getAgeSignalChallenge();
             c5 = 2;
             c6 = 1;
-            const obj2 = { value: Promise.all(items), done: false };
-            return obj2;
+            const obj7 = { value: Promise.all(items), done: false };
+            return obj7;
           }
         } else {
           if (1 === tmp7) {
@@ -103,8 +103,8 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
             } else if (arg0 === 2) {
               v0 = 0;
               c6 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
               closure_129_0 = value;
               closure_129_1 = v0(closure_129_0, 2);
@@ -115,14 +115,13 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
                 closure_130_3();
                 v0 = 0;
                 c6 = 3;
-                let obj4 = { value: undefined, done: true };
-                return obj4;
+                const obj9 = { value: undefined, done: true };
+                return obj9;
               } else {
-                obj4 = unknown(tmp3[9]);
                 c5 = 3;
                 c6 = 1;
-                const obj5 = { value: obj4.getAgeSignalIntegrityToken(closure_129_3, closure_129_2), done: false };
-                return obj5;
+                const obj10 = { value: unknown(tmp3[9]).getAgeSignalIntegrityToken(closure_129_3, closure_129_2), done: false };
+                return obj10;
               }
             }
           } else if (3 === tmp7) {
@@ -132,15 +131,15 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
             } else if (arg0 === 2) {
               v0 = 0;
               c6 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj11 = { value, done: true };
+              return obj11;
             } else {
               closure_129_4 = value;
-              obj1 = unknown(tmp3[12]);
+              const obj2 = unknown(tmp3[12]);
               c5 = 4;
               c6 = 1;
-              const obj7 = { value: obj1.submitAgeSignal(closure_129_2, closure_129_4, false, "user_initiated"), done: false };
-              return obj7;
+              const obj14 = { value: obj2.submitAgeSignal(closure_129_2, closure_129_4, false, "user_initiated"), done: false };
+              return obj14;
             }
           } else if (arg0 === 1) {
             c6 = 3;
@@ -148,7 +147,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
           } else if (arg0 === 2) {
             v0 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_5 = value;
@@ -202,35 +201,35 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     };
   }, items2);
   if ("loading" === tmp5.type) {
-    obj = { children: null };
-    const items3 = [closure_7(ActivityIndicator, { size: "large" }), ];
-    obj = { variant: "text-md/medium", color: "text-strong", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(navigation(2946).MN6I4Y);
-    items3[1] = closure_7(tmp(4632).Text, obj);
-    obj.children = items3;
-    let tmp15 = closure_9(closure_8, obj);
-  } else {
-    obj1 = { children: null };
-    let obj2 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
-    const intl2 = tmp(1114).intl;
-    obj2.children = intl2.string(navigation(2946).tBwanH);
-    const items4 = [closure_7(tmp(4632).Text, obj2), ];
     let obj3 = { children: null };
-    let obj4 = { variant: "primary", size: "lg", text: null, onPress: null };
+    const items3 = [closure_7(ActivityIndicator, { size: "large" }), ];
+    let obj4 = { variant: "text-md/medium", color: "text-strong", children: null };
+    const intl = tmp(1114).intl;
+    obj4.children = intl.string(navigation(2946).MN6I4Y);
+    items3[1] = closure_7(tmp(4632).Text, obj4);
+    obj3.children = items3;
+    let tmp15 = closure_9(closure_8, obj3);
+  } else {
+    const obj5 = { children: null };
+    let obj6 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
+    const intl2 = tmp(1114).intl;
+    obj6.children = intl2.string(navigation(2946).tBwanH);
+    const items4 = [closure_7(tmp(4632).Text, obj6), ];
+    let obj7 = { children: null };
+    let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = tmp(1114).intl;
-    obj4.text = intl3.string(navigation(2946)["Jx33+I"]);
-    obj4.onPress = function onPress() {
+    obj8.text = intl3.string(navigation(2946)["Jx33+I"]);
+    obj8.onPress = function onPress() {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj3.children = closure_7(tmp(5056).Button, obj4);
-    items4[1] = closure_7(tmp(5514).ButtonGroup, obj3);
-    obj1.children = items4;
-    tmp15 = closure_9(closure_8, obj1);
+    obj7.children = closure_7(tmp(5056).Button, obj8);
+    items4[1] = closure_7(tmp(5514).ButtonGroup, obj7);
+    obj5.children = items4;
+    tmp15 = closure_9(closure_8, obj5);
   }
-  let obj5 = { children: null };
-  const tmp4 = callback1(noop.useState({ type: "loading" }), 2);
-  obj5.children = closure_7(modalSessionId(8540).ModalContent, { children: closure_7(modalSessionId(5054).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
-  return closure_7(modalSessionId(8539).ModalScreen, obj5);
+  let obj9 = { children: null };
+  let obj2 = modalSessionId(4849);
+  obj9.children = closure_7(modalSessionId(8540).ModalContent, { children: closure_7(modalSessionId(5054).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
+  return closure_7(modalSessionId(8539).ModalScreen, obj9);
 };

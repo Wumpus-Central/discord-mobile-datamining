@@ -2,7 +2,7 @@
 
 // Module 8766 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7404 */;
 import MenuTypes from "MenuTypes" /* 8753 */;
 import size from "module_2" /* 2 */;
@@ -27,19 +27,20 @@ let obj = {
 const items = [MenuTypes.ReportSubType.SUB_GORE, MenuTypes.ReportSubType.SUB_GLORIFYING_VIOLENCE];
 obj.eligibleReportSubtypes = items;
 obj.onApply = function onApply() {
+  const obj = SensitiveMediaGoreRedactionSettingsUtils;
   const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
-  const obj = {};
+  const obj3 = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.goreContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.goreContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.goreContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
-  return obj.updateGoreContentSetting(obj);
+  return obj.updateGoreContentSetting(obj3);
 };
 obj.predicate = function predicate() {
   const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();

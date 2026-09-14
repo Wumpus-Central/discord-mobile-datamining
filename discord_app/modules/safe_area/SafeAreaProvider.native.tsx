@@ -1,7 +1,7 @@
-// === Module 14664: SafeAreaProvider ===
+// === Module 14665: SafeAreaProvider ===
 
-// Module 14664 (SafeAreaProvider)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 14665 (SafeAreaProvider)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import SafeAreaConstants from "SafeAreaConstants" /* 1613 */;
 import _mod1614 from "module_1614" /* 1614 */;
 import noop from "module_19" /* 19 */;
@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export const SafeAreaReporter = function SafeAreaReporter() {
+  safeAreaInsets = safeAreaInsets(1614).useSafeAreaInsets();
   let obj = safeAreaInsets(1614);
-  safeAreaInsets = obj.useSafeAreaInsets();
   const appEntryKey = safeAreaInsets(1480).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -28,8 +28,8 @@ export const SafeAreaReporter = function SafeAreaReporter() {
         META_QUEST_SAFE_AREA_INSETS = tmp;
         if (tmp3Result.isAndroid()) {
           safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-          const obj3 = closure_1(ref[6]);
-          let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+          let obj3 = closure_1(ref[6]);
+          const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
           let tmp7 = tmp;
           if (null != rect) {
             if (rect.bottom === safeAreaInsets.bottom) {
@@ -37,10 +37,10 @@ export const SafeAreaReporter = function SafeAreaReporter() {
                 tmp7 = safeAreaInsets;
               }
             }
-            rect = { bottom: null, top: null, left: null, right: null };
+            const rect1 = { bottom: null, top: null, left: null, right: null };
             ({ bottom: obj5.bottom, top: obj5.top } = rect);
             ({ left: obj5.left, right: obj5.right } = tmp);
-            safeAreaInsets = rect;
+            safeAreaInsets = rect1;
           }
           META_QUEST_SAFE_AREA_INSETS = tmp7;
           const obj4 = closure_1(ref[7]);
@@ -51,12 +51,12 @@ export const SafeAreaReporter = function SafeAreaReporter() {
       closure_1(ref[6]).setState((byAppEntry) => {
         let tmp3 = byAppEntry;
         if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-          let obj = { byAppEntry: null };
-          obj = {};
+          const obj = { byAppEntry: null };
+          const obj2 = {};
           const merged = Object.assign(byAppEntry.byAppEntry);
-          obj = { safeAreaInsets: tmp2 };
-          obj[tmp] = obj;
-          obj.byAppEntry = obj;
+          const obj3 = { safeAreaInsets: tmp2 };
+          obj2[tmp] = obj3;
+          obj.byAppEntry = obj2;
           tmp3 = obj;
         }
         return tmp3;
@@ -66,58 +66,7 @@ export const SafeAreaReporter = function SafeAreaReporter() {
   }, items);
   dependencyMap = noop.useRef(false);
   const items1 = [safeAreaInsets, appEntryKey];
-  obj = {
-    style,
-    onLayout: noop.useCallback(() => {
-      if (!ref.current) {
-        tmp.current = true;
-        closure_0 = safeAreaInsets;
-        closure_1 = appEntryKey;
-        ReactBatchUpdates.batchUpdates(() => {
-          if (obj.isMetaQuest()) {
-            let META_QUEST_SAFE_AREA_INSETS = closure_0(ref[4]).META_QUEST_SAFE_AREA_INSETS;
-          } else {
-            META_QUEST_SAFE_AREA_INSETS = tmp;
-            if (tmp3Result.isAndroid()) {
-              safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-              const obj3 = closure_1(ref[6]);
-              let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
-              let tmp7 = tmp;
-              if (null != rect) {
-                if (rect.bottom === safeAreaInsets.bottom) {
-                  if (rect.top === safeAreaInsets.top) {
-                    tmp7 = safeAreaInsets;
-                  }
-                }
-                rect = { bottom: null, top: null, left: null, right: null };
-                ({ bottom: obj5.bottom, top: obj5.top } = rect);
-                ({ left: obj5.left, right: obj5.right } = tmp);
-                safeAreaInsets = rect;
-              }
-              META_QUEST_SAFE_AREA_INSETS = tmp7;
-              const obj4 = closure_1(ref[7]);
-            }
-            tmp3Result = closure_0(ref[5]);
-          }
-          obj = closure_0(ref[3]);
-          closure_1(ref[6]).setState((byAppEntry) => {
-            let tmp3 = byAppEntry;
-            if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-              let obj = { byAppEntry: null };
-              obj = {};
-              const merged = Object.assign(byAppEntry.byAppEntry);
-              obj = { safeAreaInsets: tmp2 };
-              obj[tmp] = obj;
-              obj.byAppEntry = obj;
-              tmp3 = obj;
-            }
-            return tmp3;
-          });
-          const obj6 = closure_1(ref[6]);
-        });
-      }
-    }, items1)
-  };
+  let obj2 = safeAreaInsets(1480);
   return <View style={style} onLayout={noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
@@ -130,8 +79,8 @@ export const SafeAreaReporter = function SafeAreaReporter() {
           META_QUEST_SAFE_AREA_INSETS = tmp;
           if (tmp3Result.isAndroid()) {
             safeAreaInsets = closure_1(ref[6]).getState().byAppEntry[closure_1].safeAreaInsets;
-            const obj3 = closure_1(ref[6]);
-            let rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
+            let obj3 = closure_1(ref[6]);
+            const rect = closure_1(ref[7]).getStableSafeAreaInsets(closure_1);
             let tmp7 = tmp;
             if (null != rect) {
               if (rect.bottom === safeAreaInsets.bottom) {
@@ -139,10 +88,10 @@ export const SafeAreaReporter = function SafeAreaReporter() {
                   tmp7 = safeAreaInsets;
                 }
               }
-              rect = { bottom: null, top: null, left: null, right: null };
+              const rect1 = { bottom: null, top: null, left: null, right: null };
               ({ bottom: obj5.bottom, top: obj5.top } = rect);
               ({ left: obj5.left, right: obj5.right } = tmp);
-              safeAreaInsets = rect;
+              safeAreaInsets = rect1;
             }
             META_QUEST_SAFE_AREA_INSETS = tmp7;
             const obj4 = closure_1(ref[7]);
@@ -153,12 +102,12 @@ export const SafeAreaReporter = function SafeAreaReporter() {
         closure_1(ref[6]).setState((byAppEntry) => {
           let tmp3 = byAppEntry;
           if (byAppEntry.byAppEntry[closure_1].safeAreaInsets !== META_QUEST_SAFE_AREA_INSETS) {
-            let obj = { byAppEntry: null };
-            obj = {};
+            const obj = { byAppEntry: null };
+            const obj2 = {};
             const merged = Object.assign(byAppEntry.byAppEntry);
-            obj = { safeAreaInsets: tmp2 };
-            obj[tmp] = obj;
-            obj.byAppEntry = obj;
+            const obj3 = { safeAreaInsets: tmp2 };
+            obj2[tmp] = obj3;
+            obj.byAppEntry = obj2;
             tmp3 = obj;
           }
           return tmp3;

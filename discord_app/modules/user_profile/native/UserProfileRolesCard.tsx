@@ -35,13 +35,13 @@ class RoleItem {
     if (role.name.length <= MAX_VISUAL_ROLE_LENGTH) {
       name = role.name;
     } else {
-      name = role.name;
+      name1 = role.name;
       num = 0;
       tmp3 = globalThis;
       _HermesInternal = HermesInternal;
       str = "...";
       str2 = "";
-      name = "" + name.slice(0, tmp2) + "...";
+      name = "" + name1.slice(0, tmp2) + "...";
     }
     closure_2 = name;
     if (colorString == null) {
@@ -50,8 +50,8 @@ class RoleItem {
     tmp4 = role;
     tmp5 = closure_2;
     obj = role(closure_2[8]);
-    obj = { guildId, roleId: role.id, size: 12 };
-    roleIconProps = obj.useRoleIconProps(obj);
+    obj1 = { guildId, roleId: role.id, size: 12 };
+    roleIconProps = obj.useRoleIconProps(obj1);
     closure_4 = roleIconProps;
     tags = role.tags;
     guild_connections = undefined;
@@ -60,27 +60,25 @@ class RoleItem {
     }
     renderContent = function renderContent() {
       if (closure_5) {
-        let obj = { roleId: role.id, guildId, roleColor: null, size: 12, displayRoleIcon: false };
+        const obj2 = { roleId: role.id, guildId, roleColor: null, size: 12, displayRoleIcon: false };
         colorString = undefined;
         if (role != null) {
           colorString = role.colorString;
         }
-        obj.roleColor = colorString;
-        let tmp3Result = React7(VerifiedRoleIconDefault, obj);
+        obj2.roleColor = colorString;
+        let tmp3Result = React7(VerifiedRoleIconDefault, obj2);
         let tmp8 = React7;
       } else {
-        obj = { color: colorString };
+        const obj = { color: colorString };
         tmp3Result = React7(RoleDot, obj);
         tmp8 = React7;
       }
-      const children = [tmp3Result, , ];
-      obj = { variant: "text-xs/medium", children: name };
-      children[1] = tmp8(Text_Text.Text, obj);
+      const children = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name }), ];
       let tmp8Result = null;
       if (null != roleIconProps) {
-        const obj1 = {};
+        const obj4 = {};
         const merged = Object.assign(roleIconProps);
-        tmp8Result = tmp8(RoleIconDefault, obj1);
+        tmp8Result = tmp8(RoleIconDefault, obj4);
       }
       children[2] = tmp8Result;
       return closure_2_11(closure_2_10, { children });
@@ -102,29 +100,29 @@ class RoleItem {
     }, items);
     tmp11 = jsx;
     if (setting) {
-      obj1 = { onPress: null, onLongPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, style: null, children: null };
-      obj1.onPress = callback;
+      obj6 = { onPress: null, onLongPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, style: null, children: null };
+      obj6.onPress = callback;
       tmp14 = undefined;
       if (setting) {
         if (obj3.useExperiment({ location: "RoleItem" }, { autoTrackExposure: false }).tidaWebformEnabled) {
           tmp14 = tmp10;
         }
       }
-      obj1.onLongPress = tmp14;
-      obj1.accessibilityLabel = name;
+      obj6.onLongPress = tmp14;
+      obj6.accessibilityLabel = name;
       intl = tmp4(tmp5[13]).intl;
-      obj1.accessibilityHint = intl.string(tmp4(tmp5[13]).t.sMsaLg);
-      obj1.style = tmp.role;
+      obj6.accessibilityHint = intl.string(tmp4(tmp5[13]).t.sMsaLg);
+      obj6.style = tmp.role;
       num3 = 0;
-      obj1.children = renderContent();
-      tmp11Result = tmp11(tmp4(tmp5[19]).PressableHighlight, obj1);
+      obj6.children = renderContent();
+      tmp11Result = tmp11(tmp4(tmp5[19]).PressableHighlight, obj6);
     } else {
       tmp12 = closure_4;
-      obj2 = { style: null, children: null };
-      obj2.style = tmp.role;
+      obj7 = { style: null, children: null };
+      obj7.style = tmp.role;
       num2 = 0;
-      obj2.children = renderContent();
-      tmp11Result = tmp11(closure_4, obj2);
+      obj7.children = renderContent();
+      tmp11Result = tmp11(closure_4, obj7);
     }
     return tmp11Result;
   }
@@ -132,17 +130,17 @@ class RoleItem {
 function RolesList(guildMemberRoleIds) {
   guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
   const guildId = guildMemberRoleIds.guildId;
-  let obj = guildMemberRoleIds(504);
+  const tmp = closure_12();
   const items = [GuildRoleStore];
   const items1 = [guildMemberRoleIds, guildId];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = guildMemberRoleIds(504).useStateFromStoresArray(items, () => {
     const manyRoles = GuildRoleStore.getManyRoles(guildId, guildMemberRoleIds);
     return manyRoles.sort(UserProfileRoleUtils.sortRolesByVerification);
   }, items1);
   let tmp2 = null;
   if (0 !== stateFromStoresArray.length) {
-    obj = { style: tmp.roleContainer, children: stateFromStoresArray.map((role) => React7(RoleItem, { role, guildId }, role.id)) };
-    tmp2 = closure_9(View, obj);
+    const obj2 = { style: tmp.roleContainer, children: stateFromStoresArray.map((role) => React7(RoleItem, { role, guildId }, role.id)) };
+    tmp2 = closure_9(View, obj2);
   }
   return tmp2;
 }
@@ -151,23 +149,20 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
-createStyles = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm };
-createStyles.role = createStyles;
+const createStyles = fn(4636);
+let obj2 = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm }, roleDot: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
-createStyles.roleDot = size;
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.roleDot = size;
+let closure_12 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
 
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  let obj = userId(504);
   const items = [GuildMemberStore];
   const items1 = [userId, guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildMemberStore.getMember(guildId, userId), items1);
+  const stateFromStores = userId(504).useStateFromStores(items, () => GuildMemberStore.getMember(guildId, userId), items1);
   let roles;
   if (stateFromStores != null) {
     roles = stateFromStores.roles;
@@ -177,13 +172,13 @@ export default function UserProfileRolesCard(userId) {
   }
   let tmp4 = null;
   if (0 !== roles.length) {
-    obj = { title: null, style: null, children: null };
+    const obj2 = { title: null, style: null, children: null };
     const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t["LPJmL/"]);
-    obj.style = userId.style;
-    obj = { guildId, guildMemberRoleIds: roles };
-    obj.children = closure_9(RolesList, obj);
-    tmp4 = closure_9(guildId(7310), obj);
+    obj2.title = intl.string(tmp(1114).t["LPJmL/"]);
+    obj2.style = userId.style;
+    const obj3 = { guildId, guildMemberRoleIds: roles };
+    obj2.children = closure_9(RolesList, obj3);
+    tmp4 = closure_9(guildId(7310), obj2);
     const tmp7 = guildId(7310);
   }
   return tmp4;

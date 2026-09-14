@@ -1,8 +1,8 @@
-// === Module 14044: GuildBadgeSpider ===
+// === Module 14045: GuildBadgeSpider ===
 
-// Module 14044 (GuildBadgeSpider)
+// Module 14045 (GuildBadgeSpider)
 import inlineStyles from "inlineStyles" /* 8574 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14004 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,15 +28,14 @@ export const GuildBadgeSpider = function GuildBadgeSpider(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }));
-  let obj = { primaryBaseColors, primaryTintColor, primaryTintLuminances, primaryLuminanceWeights: items, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights: items1 };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({ primaryBaseColors, primaryTintColor, primaryTintLuminances, primaryLuminanceWeights: items, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights: items1 });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [React2(inlineStyles.Path, { d: "M7 11h-1v-1h1v1ZM10 11h-1v-1h1v1ZM9 10h-2v-1h2v1ZM10 5h-1v1h-2v-1h-1v-2h4v2Z", fill: primaryColorsTransformed[1] }), , , , , ];
   let str;
   if (secondaryColorsTransformed != null) {
@@ -50,6 +49,6 @@ export const GuildBadgeSpider = function GuildBadgeSpider(width) {
   items[3] = React2(inlineStyles.Path, { d: "M7 14h-1v-1h1v1ZM10 14h-1v-1h1v1Z", fill: "#35ED7E" });
   items[4] = React2(inlineStyles.Path, { d: "M3 7h1V4h1v4h1v1h1v1h-1v2h4v-2h-1v-1h1v-1h1V4h1v3h1V3h1v1h1v3h-1v1h-1v1h-1v1h-1v1h1v-1h2v-1h2v1h-1v1h-1v1h-2v1h2v1h1v1h1v1h-2v-1h-2v-1h-2v-1H6v1h-2v1H2v1H0v-1h1v-1h1v-1h2v-1H2v-1H1v-1H0v-1h2v1h2v-1h-1v-1H2v-1H1V4h1v-1h1v4Zm1 4h1v-1h-1v1Z", fill: "black", fillRule: "evenodd" });
   items[5] = React2(inlineStyles.Path, { d: "M10 16h-1v-1h-2v1h-1v-2h4v2ZM9 9h-2v-1h2v1ZM6 4h-1v-1h1v1ZM11 4h-1v-1h1v1ZM4 3h-1V2h1v1ZM9 2h1v1H6V2h2V0h1v2ZM13 3h-1V2h1v1Z", fill: "black" });
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

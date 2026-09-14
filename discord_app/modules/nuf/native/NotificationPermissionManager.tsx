@@ -1,17 +1,17 @@
-// === Module 17570: NotificationPermissionManager ===
+// === Module 17571: NotificationPermissionManager ===
 
-// Module 17570 (NotificationPermissionManager)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+// Module 17571 (NotificationPermissionManager)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12541 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12538 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12539 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -84,14 +84,13 @@ function showPrompt(arg0, arg1, arg2) {
     clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
-    let obj = PushNotificationActionCreators;
-    const result = obj.setPushPermissionReactivationSeen(closure_0);
-    obj = { impressionName: null, impressionProperties: null, location: null };
+    const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(closure_0);
+    const obj3 = { impressionName: null, impressionProperties: null, location: null };
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
-    obj.impressionProperties = { action_location: location };
-    obj.location = location;
-    obj2.openLazy(asyncRequireImpl(17571, dependencyMap.paths), closure_2_11, obj);
+    obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
+    obj3.impressionProperties = { action_location: location };
+    obj3.location = location;
+    obj2.openLazy(asyncRequireImpl(17572, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -112,8 +111,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -126,8 +125,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
@@ -136,28 +135,28 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
           const NativePermissionManager = NativeModules.NativePermissionManager;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
-          return obj1;
+          const obj4 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
         closure_128_1 = closure_129_0(closure_129_2[16]).allowInAppNotifications();
         const obj5 = closure_129_0(closure_129_2[16]);
-        const obj2 = { os_enabled: closure_128_0 === closure_129_16.AUTHORIZED, foreground_app_enabled: closure_128_1, background_app_enabled: closure_128_1, notification_authorization_status: null };
+        const obj7 = { os_enabled: closure_128_0 === closure_129_16.AUTHORIZED, foreground_app_enabled: closure_128_1, background_app_enabled: closure_128_1, notification_authorization_status: null };
         const obj6 = closure_129_1(closure_129_2[17]);
         let tmp7 = null;
         if (obj8.isIOS()) {
           tmp7 = closure_128_0;
         }
-        obj2.notification_authorization_status = tmp7;
-        obj6.track(closure_129_15.NOTIFICATION_PERMISSION_STATUS, obj2);
+        obj7.notification_authorization_status = tmp7;
+        obj6.track(closure_129_15.NOTIFICATION_PERMISSION_STATUS, obj7);
         c3 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -168,8 +167,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12538).PermissionPromptType;
-const NotificationPermissionConstants = fn(12539);
+const PermissionPromptType = fn(12539).PermissionPromptType;
+const NotificationPermissionConstants = fn(12540);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);
@@ -212,8 +211,8 @@ class NotificationPermissionManager extends tmp4 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -226,14 +225,14 @@ class NotificationPermissionManager extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj1 = { value: _logNotificationPermissionStatus(), done: false };
-              return obj1;
+              const obj4 = { value: _logNotificationPermissionStatus(), done: false };
+              return obj4;
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -241,20 +240,20 @@ class NotificationPermissionManager extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               c1 = 2;
               c2 = 1;
-              const obj3 = { value: closure_128_0._handleNotificationAuthorizationStatusUpdate(), done: false };
-              return obj3;
+              const obj6 = { value: closure_128_0._handleNotificationAuthorizationStatusUpdate(), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c2 = 3;
@@ -274,8 +273,8 @@ class NotificationPermissionManager extends tmp4 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -288,8 +287,8 @@ class NotificationPermissionManager extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp5;
               closure_1 = tmp2;
@@ -309,8 +308,8 @@ class NotificationPermissionManager extends tmp4 {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj1 = { value, done: true };
-                return obj1;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 let tmp7 = closure_129_1;
                 if (!closure_129_1) {
@@ -333,8 +332,8 @@ class NotificationPermissionManager extends tmp4 {
                 }
                 c3 = 2;
                 c4 = 1;
-                const obj2 = { value: shouldShowPrompt(constants.MESSAGE_SENT), done: false };
-                return obj2;
+                const obj5 = { value: shouldShowPrompt(constants.MESSAGE_SENT), done: false };
+                return obj5;
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -343,7 +342,7 @@ class NotificationPermissionManager extends tmp4 {
               tmp6 = value;
               if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
             }
@@ -379,8 +378,8 @@ class NotificationPermissionManager extends tmp4 {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -393,8 +392,8 @@ class NotificationPermissionManager extends tmp4 {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_3 = tmp5;
                 let invite2;
@@ -410,8 +409,8 @@ class NotificationPermissionManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  const obj1 = { value, done: true };
-                  return obj1;
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
                   const guild = invite2.guild;
                   let features;
@@ -425,12 +424,12 @@ class NotificationPermissionManager extends tmp4 {
                   if (closure_1.includes(constants3.COMMUNITY)) {
                     c5 = 3;
                   } else {
-                    let obj3 = closure_1(tmp2[20]);
+                    closure_1(tmp2[20]);
                   }
                   c4 = 2;
                   c5 = 1;
-                  const obj2 = { value: closure_1_19(constants.INVITE_ACCEPTED), done: false };
-                  return obj2;
+                  const obj6 = { value: closure_1_19(constants.INVITE_ACCEPTED), done: false };
+                  return obj6;
                 }
               } else if (2 === tmp5) {
                 if (arg0 === 1) {
@@ -438,15 +437,15 @@ class NotificationPermissionManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj3 = { value, done: true };
-                  return obj3;
+                  const obj7 = { value, done: true };
+                  return obj7;
                 } else {
                   let tmp6 = value;
                   if (!value) {
                     c4 = 3;
                     c5 = 1;
-                    const obj4 = { value: closure_1_21(constants.INVITE_ACCEPTED), done: false };
-                    return obj4;
+                    const obj8 = { value: closure_1_21(constants.INVITE_ACCEPTED), done: false };
+                    return obj8;
                   }
                 }
               } else if (arg0 === 1) {
@@ -456,7 +455,7 @@ class NotificationPermissionManager extends tmp4 {
                 tmp6 = value;
                 if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 }
               }
@@ -559,8 +558,8 @@ class NotificationPermissionManager extends tmp4 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -573,8 +572,8 @@ class NotificationPermissionManager extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               dependencyMap = tmp5;
               closure_1 = tmp2;
@@ -593,8 +592,8 @@ class NotificationPermissionManager extends tmp4 {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj1 = { value, done: true };
-                return obj1;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_129_1 = closure_130_1.previousAppState === applyArgumentsResult(1093).AppStates.BACKGROUND;
                 closure_129_2 = state === applyArgumentsResult(1093).AppStates.ACTIVE;
@@ -605,8 +604,8 @@ class NotificationPermissionManager extends tmp4 {
                 if (tmp7) {
                   c3 = 2;
                   c4 = 1;
-                  const obj2 = { value: closure_130_1._handleNotificationAuthorizationStatusUpdate(), done: false };
-                  return obj2;
+                  const obj5 = { value: closure_130_1._handleNotificationAuthorizationStatusUpdate(), done: false };
+                  return obj5;
                 }
               }
             } else {
@@ -616,15 +615,15 @@ class NotificationPermissionManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               closure_130_1.previousAppState = state;
@@ -634,8 +633,8 @@ class NotificationPermissionManager extends tmp4 {
             if (state === applyArgumentsResult(1093).AppStates.ACTIVE) {
               c3 = 3;
               c4 = 1;
-              const obj4 = { value: _logNotificationPermissionStatus(), done: false };
-              return obj4;
+              const obj7 = { value: _logNotificationPermissionStatus(), done: false };
+              return obj7;
             }
           }
         } catch (tmp22) {
@@ -662,8 +661,8 @@ class NotificationPermissionManager extends tmp4 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -676,28 +675,27 @@ class NotificationPermissionManager extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
               const NativePermissionManager = NativeModules.NativePermissionManager;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
-              return obj1;
+              const obj4 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_128_0 = value;
-            obj = tmp2(c2[15]);
-            const result = obj.updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(c2[15]).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }

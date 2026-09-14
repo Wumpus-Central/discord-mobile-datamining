@@ -10,11 +10,9 @@ const require = fn;
 const Gradients = fn(7535).Gradients;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { cardContainer: null };
-createStyles = { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
-createStyles.cardContainer = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 

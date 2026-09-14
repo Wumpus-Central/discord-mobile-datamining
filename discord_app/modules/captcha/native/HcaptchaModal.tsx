@@ -1,7 +1,7 @@
-// === Module 17403: HcaptchaModal ===
+// === Module 17405: HcaptchaModal ===
 
-// Module 17403 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11410 */;
+// Module 17405 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11411 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -43,9 +43,9 @@ class HcaptchaModal {
     stringResult = intl.string(tmp3(tmp4[12]).t.wsoPhr);
     callback = closure_5.useCallback(() => {
       if (onMessage != null) {
-        let obj = { nativeEvent: null };
-        obj = { data: SharedCaptchaUtils.CaptchaError.CANCEL };
-        obj.nativeEvent = obj;
+        const obj = { nativeEvent: null };
+        const obj2 = { data: SharedCaptchaUtils.CaptchaError.CANCEL };
+        obj.nativeEvent = obj2;
         tmp(obj);
       }
     }, items1);
@@ -56,56 +56,56 @@ class HcaptchaModal {
     });
     tmp13 = jsxs;
     tmp14 = View;
-    obj = { style: tmp2.container, children: null };
+    obj1 = { style: tmp2.container, children: null };
     tmp13Result = !tmp6;
     if (!tmp6) {
-      obj1 = { spacing: null, align: "center", children: null };
-      obj1.spacing = tmp9(tmp4[16]).space.PX_16;
+      obj15 = { spacing: null, align: "center", children: null };
+      obj15.spacing = tmp9(tmp4[16]).space.PX_16;
       tmp16 = jsx;
-      obj2 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
-      obj2.style = tmp2.title;
-      obj2.children = stringResult;
+      obj16 = { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
+      obj16.style = tmp2.title;
+      obj16.children = stringResult;
       items2 = [, ];
-      items2[0] = jsx(tmp3(tmp4[17]).Text, obj2);
+      items2[0] = jsx(tmp3(tmp4[17]).Text, obj16);
       tmp17 = ActivityIndicator;
       tmp3Result = tmp3(tmp4[18]);
       WHITE = undefined;
       if (tmp3Result.isAndroid()) {
         WHITE = tmp9(tmp4[16]).unsafe_rawColors.WHITE;
       }
-      obj3 = { size: "small", color: null };
-      obj3.color = WHITE;
-      items2[1] = tmp16(tmp17, obj3);
-      obj1.children = items2;
-      tmp13Result = tmp13(tmp3(tmp4[15]).Stack, obj1);
+      obj17 = { size: "small", color: null };
+      obj17.color = WHITE;
+      items2[1] = tmp16(tmp17, obj17);
+      obj15.children = items2;
+      tmp13Result = tmp13(tmp3(tmp4[15]).Stack, obj15);
     }
     items3 = [, , ];
     items3[0] = tmp13Result;
-    obj4 = { style: StyleSheet.absoluteFillObject, children: null };
-    obj5 = {};
+    obj18 = { style: StyleSheet.absoluteFillObject, children: null };
+    obj19 = {};
     tmp9Result = tmp9(tmp4[19]);
     merged = Object.assign(tmp);
-    obj5.languageCode = closure_9.locale;
-    obj5.onMessage = onMessage;
-    obj4.children = jsx(tmp9Result, obj5);
-    items3[1] = jsx(tmp14, obj4);
-    obj6 = { style: null, pointerEvents: "box-none", children: null };
+    obj19.languageCode = closure_9.locale;
+    obj19.onMessage = onMessage;
+    obj18.children = jsx(tmp9Result, obj19);
+    items3[1] = jsx(tmp14, obj18);
+    obj20 = { style: null, pointerEvents: "box-none", children: null };
     items4 = [, ];
     items4[0] = tmp2.closeButtonContainer;
-    obj7 = { paddingTop: rect.top + tmp9(tmp4[16]).space.PX_8, paddingLeft: rect.left + tmp9(tmp4[16]).space.PX_16 };
-    items4[1] = obj7;
-    obj6.style = items4;
-    obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    obj21 = { paddingTop: rect.top + tmp9(tmp4[16]).space.PX_8, paddingLeft: rect.left + tmp9(tmp4[16]).space.PX_16 };
+    items4[1] = obj21;
+    obj20.style = items4;
+    obj22 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     intl2 = tmp3(tmp4[12]).intl;
-    obj8.accessibilityLabel = intl2.string(tmp3(tmp4[12]).t.cpT0Cq);
-    obj8.onPress = callback;
-    obj8.style = tmp2.closeButtonHitArea;
-    obj9 = { color: tmp9(tmp4[16]).colors.INTERACTIVE_ICON_DEFAULT };
-    obj8.children = jsx(tmp3(tmp4[21]).XLargeIcon, obj9);
-    obj6.children = jsx(tmp3(tmp4[20]).PressableOpacity, obj8);
-    items3[2] = jsx(tmp14, obj6);
-    obj.children = items3;
-    return tmp13(tmp14, obj);
+    obj22.accessibilityLabel = intl2.string(tmp3(tmp4[12]).t.cpT0Cq);
+    obj22.onPress = callback;
+    obj22.style = tmp2.closeButtonHitArea;
+    obj23 = { color: tmp9(tmp4[16]).colors.INTERACTIVE_ICON_DEFAULT };
+    obj22.children = jsx(tmp3(tmp4[21]).XLargeIcon, obj23);
+    obj20.children = jsx(tmp3(tmp4[20]).PressableOpacity, obj22);
+    items3[2] = jsx(tmp14, obj20);
+    obj1.children = items3;
+    return tmp13(tmp14, obj1);
   }
 }
 let closure_3 = ["onMessage", "onClose"];

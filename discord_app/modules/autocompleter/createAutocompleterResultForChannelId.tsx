@@ -17,9 +17,9 @@ export default function createAutocompleterResultForChannelId(arg0, arg1) {
   if (arg1 === undefined) {
     obj = ChannelStore;
   }
-  let obj1 = UserStore;
+  let obj2 = UserStore;
   if (UserStore === undefined) {
-    obj1 = UserStore;
+    obj2 = UserStore;
   }
   let tmp = RelationshipStore;
   if (RelationshipStore === undefined) {
@@ -29,28 +29,28 @@ export default function createAutocompleterResultForChannelId(arg0, arg1) {
   if (null == channel) {
     return null;
   } else {
-    const channelName = useChannelName.computeChannelName(channel, obj1, tmp);
+    const channelName = useChannelName.computeChannelName(channel, obj2, tmp);
     const type = channel.type;
     if (ChannelTypes.DM === type) {
-      const user = obj1.getUser(channel.getRecipientId());
+      const user = obj2.getUser(channel.getRecipientId());
       let tmp6 = null;
       if (null != user) {
-        obj = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
-        tmp6 = obj;
+        const obj3 = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
+        tmp6 = obj3;
       }
       return tmp6;
     } else if (ChannelTypes.GROUP_DM === type) {
-      obj = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
-      return obj;
+      const obj4 = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
+      return obj4;
     } else {
       if (ChannelTypes.GUILD_VOICE !== type) {
         if (ChannelTypes.GUILD_STAGE_VOICE !== type) {
-          obj1 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
-          return obj1;
+          const obj5 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
+          return obj5;
         }
       }
-      const obj2 = { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
-      return obj2;
+      const obj6 = { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
+      return obj6;
     }
   }
 };

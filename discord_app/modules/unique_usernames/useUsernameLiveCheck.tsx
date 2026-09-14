@@ -1,10 +1,12 @@
-// === Module 14794: useUsernameLiveCheck ===
+// === Module 14795: useUsernameLiveCheck ===
 
-// Module 14794 (useUsernameLiveCheck)
+// Module 14795 (useUsernameLiveCheck)
 import _mod12 from "module_12" /* 12 */;
-import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14797 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14798 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14795 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14796 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

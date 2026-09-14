@@ -7,6 +7,6 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {
-  const obj = { type: "default", level: "info", category: category.category, message: category.message, data: category.data, timestamp: Date.now() };
-  obj.addBreadcrumb(obj);
+  const obj = _modAll675;
+  obj.addBreadcrumb({ type: "default", level: "info", category: category.category, message: category.message, data: category.data, timestamp: Date.now() });
 };

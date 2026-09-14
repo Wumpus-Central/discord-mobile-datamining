@@ -9,21 +9,19 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1074).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+const PlatformUtils = fn(1363);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
-createStyles = { spoiler: null, placeholder: null, spoilerRevealed: null, muted: null };
-createStyles = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
-createStyles.spoiler = createStyles;
+const obj3 = { spoiler: { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, placeholder: null, spoilerRevealed: null, muted: null };
 let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
-createStyles.placeholder = size;
-PlatformUtils = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-createStyles.spoilerRevealed = PlatformUtils;
-createStyles.muted = { opacity: fn(10246).MUTED_OPACITY_CONTENT };
-let closure_6 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj3.placeholder = size;
+const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
+obj3.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
+obj3.muted = { opacity: fn(10246).MUTED_OPACITY_CONTENT };
+let closure_6 = createStyles.createLegacyClassComponentStyles(obj3);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {
   constructor() {
@@ -31,12 +29,11 @@ class Spoiler extends PureComponent {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.state = { revealed: false };
     applyArgumentsResult.handleTap = function handleTap() {
-      let obj = applyArgumentsResult;
       if (!tmp) {
-        obj = { revealed: null };
-        obj.revealed = !obj.state.revealed;
-        obj.setState(obj);
+        const obj2 = { revealed: !applyArgumentsResult.state.revealed };
+        applyArgumentsResult.setState(obj2);
       }
+      tmp = applyArgumentsResult.state.revealed || applyArgumentsResult.props.disableReveal;
     };
     return applyArgumentsResult;
   }
@@ -57,8 +54,8 @@ Spoiler.prototype["render"] = function render() {
   if (0 === Children.count(children)) {
     return null;
   } else {
-    Children = noop.Children;
-    let mapped = Children.map(children, (type) => {
+    const Children1 = noop.Children;
+    let mapped = Children1.map(children, (type) => {
       let map = noop;
       if (!noop.isValidElement(type)) {
         return type;

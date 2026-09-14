@@ -1,11 +1,13 @@
-// === Module 15402: useMessagePreviews ===
+// === Module 15403: useMessagePreviews ===
 
-// Module 15402 (useMessagePreviews)
+// Module 15403 (useMessagePreviews)
 import UserSettings from "UserSettings" /* 1935 */;
 import useIsNsfwGatedDefault from "useIsNsfwGated" /* 7988 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15403 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15404 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

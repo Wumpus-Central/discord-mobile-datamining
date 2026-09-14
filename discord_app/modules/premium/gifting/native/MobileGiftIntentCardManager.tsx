@@ -1,6 +1,6 @@
-// === Module 17581: MobileGiftIntentCardManager ===
+// === Module 17582: MobileGiftIntentCardManager ===
 
-// Module 17581 (MobileGiftIntentCardManager)
+// Module 17582 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import Timers from "Timers" /* 1952 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9978 */;
@@ -9,7 +9,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4857 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8183 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17582 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17583 */;
 
 require = fn;
 const PremiumConstants = fn(1373);
@@ -30,20 +30,20 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
       if (id === SelectedChannelStore.getChannelId()) {
         if (MessageStore.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(10872);
-            const result = tmpResult.logMessageGiftIntentShown(found);
+            const result = tmp(10873).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            tmpResult = tmp(8894);
-            let obj = { name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1250).ImpressionTypes.VIEW, properties: null };
-            obj = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
+            const tmpResult = tmp(10873);
+            const obj = { name: tmp(1248).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION, type: tmp(1248).ImpressionTypes.VIEW, properties: null };
+            const obj2 = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;
             if (userAffinity != null) {
               dmProbability = userAffinity.dmProbability;
             }
-            obj.dm_affinity = dmProbability;
-            obj.channel_id = id;
-            obj.properties = obj;
-            tmpResult.trackImpression(obj);
+            obj2.dm_affinity = dmProbability;
+            obj2.channel_id = id;
+            obj.properties = obj2;
+            tmp(8894).trackImpression(obj);
+            const tmpResult2 = tmp(8894);
           }
         } else {
           MessageStore.whenReady(id, () => {

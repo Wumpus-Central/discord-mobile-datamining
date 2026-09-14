@@ -2,9 +2,9 @@
 
 // Module 8894 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import _modDef1332 from "module_1332" /* 1332 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import uniqueIdDefault from "uniqueId" /* 4840 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function trackImpression(type) {
   ({ name, type, properties } = type);
   if (type.type === discord_common_AnalyticsUtils.ImpressionTypes.MODAL) {
     if (null == type.name) {
-      let obj = closure_1_11();
+      closure_1_11();
     }
   }
   if (!flag2) {
@@ -45,35 +45,34 @@ function trackImpression(type) {
   if (channel_id == null) {
     channel_id = SelectedChannelStore.getChannelId(guild_id);
   }
-  obj = { impression_type: type, location: closure_1_10() };
-  const tmpResult = AppAnalyticsUtils;
-  const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
+  const tmpResult = AnalyticsUtils2;
+  const obj2 = { impression_type: type, location: closure_1_10() };
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
+  const tmpResult4 = AppAnalyticsUtils;
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
-  const result = tmpResult.expandEventProperties(obj);
+  const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
     React7(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
-      const tmpResult2 = AnalyticsUtils2;
+      const tmpResult6 = AnalyticsUtils2;
     }
     React7(name, result);
     tmp15 = null != name && null != type;
   }
-  const tmpResult1 = AppAnalyticsUtils;
+  const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1243);
+const ImpressionStore = fn(1241);
 ({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
-fn(1250);
-const AnalyticsUtils = { analyticEventConfigs: fn(1242).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-let closure_12 = AnalyticsUtils.trackMaker(AnalyticsUtils);
+const AnalyticsUtils = fn(1248);
+let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1240).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
-export default function useTrackImpression(FOR_LATER_POPOUT, arg1) {
-  const current = FOR_LATER_POPOUT;
+export default function useTrackImpression(current, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { disableTrack: false, trackOnInitialLoad: false };
@@ -84,11 +83,11 @@ export default function useTrackImpression(FOR_LATER_POPOUT, arg1) {
   noop.useRef(undefined);
   obj(5073)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1332(ref.current, current);
+      const tmp6 = _modDef1330(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1332(ref2.current, current2);
+      const tmp10 = _modDef1330(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -108,11 +107,11 @@ export default function useTrackImpression(FOR_LATER_POPOUT, arg1) {
   });
   const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1332(ref.current, current);
+      const tmp6 = _modDef1330(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1332(ref2.current, current2);
+      const tmp10 = _modDef1330(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }

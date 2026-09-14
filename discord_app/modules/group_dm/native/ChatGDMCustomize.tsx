@@ -1,6 +1,6 @@
-// === Module 11057: ChatGDMCustomize ===
+// === Module 11058: ChatGDMCustomize ===
 
-// Module 11057 (ChatGDMCustomize)
+// Module 11058 (ChatGDMCustomize)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,21 +14,20 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1074).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-fn(4636);
-let obj = { container: null, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
-obj = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj.container = obj;
-const createStyles = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
-obj.iconUploader = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj.iconUploader = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
+let obj4 = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
 obj.iconClear = { marginTop: nativeDefault.space.PX_8, alignSelf: "center" };
-let obj2 = { marginTop: nativeDefault.space.PX_8, alignSelf: "center" };
+const obj5 = { marginTop: nativeDefault.space.PX_8, alignSelf: "center" };
 obj.textInput = { marginVertical: nativeDefault.space.PX_16 };
-let obj3 = { marginVertical: nativeDefault.space.PX_16 };
+let obj6 = { marginVertical: nativeDefault.space.PX_16 };
 obj.rateLimitedContainer = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-let obj4 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+let obj7 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj.rateLimitedText = { fontSize: 12, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_13 = createStyles.createStyles(obj);
-let obj5 = { fontSize: 12, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj8 = { fontSize: 12, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
 
@@ -38,24 +37,23 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
   let stateFromStores;
   let first;
   _slicedToArray = undefined;
-  let first1;
+  first1 = undefined;
   closure_6 = undefined;
   let hasUnsavedChanges;
-  let first2;
+  first2 = undefined;
   maxLength = undefined;
   c10 = undefined;
   closure_11 = undefined;
   const tmp = closure_13();
-  let obj = channelId(stateFromStores[10]);
   const items = [first2];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj2 = channelId(stateFromStores[11]);
-  let str = obj2.useComputedGroupDmName(stateFromStores);
+  stateFromStores = channelId(stateFromStores[10]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj = channelId(stateFromStores[10]);
+  let str = channelId(stateFromStores[11]).useComputedGroupDmName(stateFromStores);
   if (str == null) {
     str = "";
   }
   let str2 = "";
-  let tmp2Result = tmp2(tmp3[12]);
+  let obj3 = channelId(stateFromStores[11]);
   if (null != stateFromStores) {
     let str3 = tmp4(tmp3[11]).computeGroupDmName(stateFromStores);
     if (str3 == null) {
@@ -64,13 +62,11 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
     str2 = str3;
     const tmp4Result = tmp4(tmp3[11]);
   }
-  const tmp2ResultResult = tmp2Result(str2);
-  let obj4 = first1;
+  const tmp2ResultResult = onFinish(stateFromStores[12])(str2);
   const tmp8 = _slicedToArray(first1.useState(tmp2ResultResult), 2);
   first = tmp8[0];
   _slicedToArray = tmp10;
-  const tmp11 = _slicedToArray(first1.useState(undefined), 2);
-  first1 = tmp11[0];
+  [first1] = first1.useState(undefined);
   closure_6 = tmp13;
   if (first1 !== CLEARED_ICON) {
     let tmp16 = first1;
@@ -100,16 +96,15 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
     tmp20 = tmp21;
   }
   const items1 = [stateFromStores, channelId];
-  const memo = obj4.useMemo(() => ({
+  const memo = obj5.useMemo(() => ({
     makeURL(icon) {
-      onFinish(stateFromStores[13]);
-      const obj = { id, icon, applicationId: null, size: 64 };
+      const obj2 = { id, icon, applicationId: null, size: 64 };
       let applicationId;
       if (icon != null) {
         applicationId = icon.getApplicationId();
       }
-      obj.applicationId = applicationId;
-      return obj.getChannelIconURL(obj);
+      obj2.applicationId = applicationId;
+      return onFinish(stateFromStores[13]).getChannelIconURL(obj2);
     },
     clear() {
       icon = undefined;
@@ -124,17 +119,15 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
     }
   }), items1);
   const items2 = [first !== tmp2ResultResult, first1];
-  hasUnsavedChanges = obj4.useCallback(() => null != first1 || closure_4, items2);
-  let tmp7Result = tmp7(obj4.useState(null), 2);
-  first2 = tmp7Result[0];
-  maxLength = tmp7Result[1];
-  tmp7Result = tmp7(obj4.useState(false), 2);
-  [tmp28, c10] = tmp7Result;
+  hasUnsavedChanges = obj5.useCallback(() => null != first1 || closure_4, items2);
+  [first2, maxLength] = first1.useState(null);
+  const tmp2Result = onFinish(stateFromStores[12]);
+  [tmp28, c10] = first1.useState(false);
   const tmp29 = onFinish(stateFromStores[14])();
   closure_11 = tmp29;
   const items3 = [tmp29, channelId, first, first !== tmp2ResultResult, first1, onFinish];
   const items4 = [first2];
-  const callback1 = obj4.useCallback(first(function*() {
+  const callback1 = obj5.useCallback(first(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -142,8 +135,8 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -156,22 +149,21 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             channelId = tmp8;
             c3 = 2;
             _undefined(true);
             if (null != first1) {
-              let obj6 = tmp4(tmp51[15]);
               let tmp50 = null;
               if (first1 !== CLEARED_ICON) {
                 tmp50 = first1;
               }
               c4 = 3;
               c5 = 1;
-              const obj1 = { value: obj6.setIcon(channelId, tmp50), done: false };
-              return obj1;
+              const obj4 = { value: tmp4(tmp51[15]).setIcon(channelId, tmp50), done: false };
+              return obj4;
             }
           }
         } else if (1 === tmp8) {
@@ -195,11 +187,11 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
               }
               closure_129_9(retry_after1);
             } else {
-              const obj2 = { key: "GCM_ERROR_GENERIC", IconComponent: channelId(tmp51[18]).CircleErrorIcon, content: null };
+              const obj6 = { key: "GCM_ERROR_GENERIC", IconComponent: channelId(tmp51[18]).CircleErrorIcon, content: null };
               const intl2 = channelId(tmp51[16]).intl;
-              const obj3 = { code: closure_128_0.status };
-              obj2.content = intl2.formatToPlainString(channelId(tmp51[16]).t.r477WB, obj3);
-              tmp4(tmp51[17]).open(obj2);
+              const obj8 = { code: closure_128_0.status };
+              obj6.content = intl2.formatToPlainString(channelId(tmp51[16]).t.r477WB, obj8);
+              tmp4(tmp51[17]).open(obj6);
               const obj11 = tmp4(tmp51[17]);
             }
             c3 = 0;
@@ -214,8 +206,8 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
                 c3 = 0;
                 closure_129_10(false);
                 c5 = 3;
-                let obj4 = { value, done: true };
-                return obj4;
+                const obj9 = { value, done: true };
+                return obj9;
               }
             } else if (4 === tmp8) {
               if (arg0 === 1) {
@@ -225,8 +217,8 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
                 c3 = 0;
                 closure_129_10(false);
                 c5 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
+                const obj10 = { value, done: true };
+                return obj10;
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -238,21 +230,20 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
             const intl = channelId(tmp51[16]).intl;
             c4 = 5;
             c5 = 1;
-            obj6 = { value: closure_129_11(intl.string(channelId(tmp51[16]).t.ZhunuI)), done: false };
-            return obj6;
+            const obj12 = { value: closure_129_11(intl.string(channelId(tmp51[16]).t.ZhunuI)), done: false };
+            return obj12;
           }
           c3 = 0;
           closure_129_10(false);
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         if (closure_129_4) {
-          obj4 = tmp4(tmp51[15]);
           c4 = 4;
           c5 = 1;
-          const obj7 = { value: obj4.setName(closure_129_0, closure_129_3), done: false };
-          return obj7;
+          const obj13 = { value: tmp4(tmp51[15]).setName(closure_129_0, closure_129_3), done: false };
+          return obj13;
         }
       } catch (tmp51) {
         if (tmp5 === c3) {
@@ -266,78 +257,78 @@ export default noop.memo(noop.forwardRef((channelId, arg1) => {
       }
     }
   }), items3);
-  const effect = obj4.useEffect(() => {
+  const effect = obj5.useEffect(() => {
     if (null != first2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => closure_1_9(null), 1000 * tmp);
     }
   }, items4);
-  const imperativeHandle = obj4.useImperativeHandle(arg1, () => ({ hasUnsavedChanges }));
+  const imperativeHandle = obj5.useImperativeHandle(arg1, () => ({ hasUnsavedChanges }));
   if (null == stateFromStores) {
-    obj = { style: tmp.container };
-    let tmp44Result = c10(closure_6, obj);
+    let obj2 = { style: tmp.container };
+    let tmp44Result2 = c10(closure_6, obj2);
   } else {
-    obj = { style: tmp.container, contentContainerStyle: null, children: null };
-    let obj1 = { paddingHorizontal: tmp2(tmp3[8]).space.PX_16, paddingBottom: onFinish(stateFromStores[9])({ includeKeyboardHeight: true }).insets.bottom };
-    obj.contentContainerStyle = obj1;
-    obj2 = { style: tmp.iconUploader, onUpload: tmp13, icon: tmp15, makeURL: memo.makeURL, disabled: !tmp19 };
-    const items5 = [c10(tmp2(tmp3[19]), obj2), , , , ];
+    let obj4 = { style: tmp.container, contentContainerStyle: null, children: null };
+    let obj6 = { paddingHorizontal: tmp2(tmp3[8]).space.PX_16, paddingBottom: onFinish(stateFromStores[9])({ includeKeyboardHeight: true }).insets.bottom };
+    obj4.contentContainerStyle = obj6;
+    const obj7 = { style: tmp.iconUploader, onUpload: tmp13, icon: tmp15, makeURL: memo.makeURL, disabled: !tmp19 };
+    const items5 = [c10(tmp2(tmp3[19]), obj7), , , , ];
     let tmp46Result = null;
     if (tmp20) {
-      let obj3 = { onPress: memo.clear, accessibilityRole: "button", children: null };
-      obj4 = { style: tmp.iconClear, variant: "text-sm/semibold", color: "text-link", children: null };
+      let obj8 = { onPress: memo.clear, accessibilityRole: "button", children: null };
+      let obj9 = { style: tmp.iconClear, variant: "text-sm/semibold", color: "text-link", children: null };
       let intl = tmp4(tmp3[16]).intl;
-      obj4.children = intl.string(tmp4(tmp3[16]).t["uY+Nk/"]);
-      obj3.children = tmp46(tmp4(tmp3[21]).Text, obj4);
-      tmp46Result = tmp46(tmp4(tmp3[20]).PressableOpacity, obj3);
+      obj9.children = intl.string(tmp4(tmp3[16]).t["uY+Nk/"]);
+      obj8.children = tmp46(tmp4(tmp3[21]).Text, obj9);
+      tmp46Result = tmp46(tmp4(tmp3[20]).PressableOpacity, obj8);
     }
     items5[1] = tmp46Result;
-    let obj5 = { style: tmp.textInput, children: null };
-    let obj6 = { label: null, placeholder: null, defaultValue: null, maxLength: null, onChange: null, isDisabled: null, isClearable: true };
+    let obj10 = { style: tmp.textInput, children: null };
+    let obj11 = { label: null, placeholder: null, defaultValue: null, maxLength: null, onChange: null, isDisabled: null, isClearable: true };
     let intl2 = tmp4(tmp3[16]).intl;
-    obj6.label = intl2.string(tmp4(tmp3[16]).t.GEGW3P);
-    obj6.placeholder = str;
-    obj6.defaultValue = tmp2ResultResult;
-    obj6.maxLength = maxLength;
-    obj6.onChange = tmp8[1];
-    obj6.isDisabled = tmp28;
-    obj5.children = c10(tmp4(tmp3[22]).TextInput, obj6);
-    items5[2] = c10(hasUnsavedChanges, obj5);
-    let obj7 = { onPress: callback1, text: null, variant: null, disabled: null, loading: null };
+    obj11.label = intl2.string(tmp4(tmp3[16]).t.GEGW3P);
+    obj11.placeholder = str;
+    obj11.defaultValue = tmp2ResultResult;
+    obj11.maxLength = maxLength;
+    obj11.onChange = tmp8[1];
+    obj11.isDisabled = tmp28;
+    obj10.children = c10(tmp4(tmp3[22]).TextInput, obj11);
+    items5[2] = c10(hasUnsavedChanges, obj10);
+    let obj12 = { onPress: callback1, text: null, variant: null, disabled: null, loading: null };
     const intl3 = tmp4(tmp3[16]).intl;
-    obj7.text = intl3.string(tmp4(tmp3[16]).t.K344S7);
+    obj12.text = intl3.string(tmp4(tmp3[16]).t.K344S7);
     let str4 = "secondary";
     if (hasUnsavedChanges()) {
       str4 = "primary";
     }
-    obj7.variant = str4;
+    obj12.variant = str4;
     const callbackResult = hasUnsavedChanges();
     let tmp37 = !callbackResult;
     if (callbackResult) {
       tmp37 = null != first2;
     }
-    obj7.disabled = tmp37;
-    obj7.loading = tmp28;
-    items5[3] = c10(tmp4(tmp3[23]).Button, obj7);
-    tmp44Result = null;
+    obj12.disabled = tmp37;
+    obj12.loading = tmp28;
+    items5[3] = c10(tmp4(tmp3[23]).Button, obj12);
+    let tmp44Result = null;
     if (null != first2) {
-      const obj8 = { style: tmp.rateLimitedContainer, children: null };
-      const obj9 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
+      let obj13 = { style: tmp.rateLimitedContainer, children: null };
+      const obj14 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl4 = tmp4(tmp3[16]).intl;
-      obj9.children = intl4.string(tmp4(tmp3[16]).t.Whhv4w);
-      const items6 = [tmp46(tmp4(tmp3[21]).Text, obj9), ];
-      const obj10 = { style: tmp.rateLimitedText, deadline: null };
+      obj14.children = intl4.string(tmp4(tmp3[16]).t.Whhv4w);
+      const items6 = [tmp46(tmp4(tmp3[21]).Text, obj14), ];
+      const obj15 = { style: tmp.rateLimitedText, deadline: null };
       const _Date = Date;
-      tmp2Result = tmp2(tmp3[24]);
-      obj10.deadline = Date.now() + 1000 * first2;
-      items6[1] = tmp46(tmp2Result, obj10);
-      obj8.children = items6;
-      tmp44Result = tmp44(tmp34, obj8);
+      obj15.deadline = Date.now() + 1000 * first2;
+      items6[1] = tmp46(tmp2(tmp3[24]), obj15);
+      obj13.children = items6;
+      tmp44Result = tmp44(tmp34, obj13);
+      const tmp2Result2 = tmp2(tmp3[24]);
     }
     items5[4] = tmp44Result;
-    obj.children = items5;
-    tmp44Result = tmp44(closure_6, obj);
+    obj4.children = items5;
+    tmp44Result2 = tmp44(closure_6, obj4);
     tmp34 = hasUnsavedChanges;
   }
-  return tmp44Result;
+  return tmp44Result2;
 }));

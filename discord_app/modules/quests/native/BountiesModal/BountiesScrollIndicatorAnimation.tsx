@@ -1,6 +1,6 @@
-// === Module 15126: BountiesScrollIndicatorAnimation ===
+// === Module 15127: BountiesScrollIndicatorAnimation ===
 
-// Module 15126 (BountiesScrollIndicatorAnimation)
+// Module 15127 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import native from "native" /* 4347 */;
@@ -17,10 +17,9 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export default function BountiesScrollIndicatorAnimation(startAnimation) {
   const visible = startAnimation.visible;
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.TEXT_DEFAULT);
   const tmp = closure_7();
-  [tmp6, tmp7] = _slicedToArray(noop.useState(0), 2);
+  const token = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT);
+  [tmp6, tmp7] = noop.useState(0);
   const tmp8 = _slicedToArray(noop.useState(visible), 2);
   if (visible !== tmp8[0]) {
     tmp8[1](visible);
@@ -28,8 +27,6 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
       tmp7((arg0) => arg0 + 1);
     }
   }
-  obj = { style: tmp.container, children: null };
-  obj = { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } };
-  obj.children = jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6);
-  return <View stateMachine="State Machine 1" fit="contain" dataBinding={{ color: token, startAnimation: !startAnimation.isFadingInContent }} />;
+  const obj2 = { style: tmp.container, children: jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6) };
+  return <View style={tmp.container}>{jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6)}</View>;
 };

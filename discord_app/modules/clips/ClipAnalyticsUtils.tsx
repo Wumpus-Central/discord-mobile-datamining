@@ -1,7 +1,7 @@
 // === Module 7842: ClipAnalyticsUtils ===
 
 // Module 7842 (ClipAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import _modDef4755 from "module_4755" /* 4755 */;
 import VideoQualityStats from "VideoQualityStats" /* 7843 */;
@@ -21,14 +21,14 @@ function getClipSignalTypes(arg0) {
     if (constants.MANUAL === type) {
       let arr = items.push("manual");
     } else if (constants.DISTRIBUTED === type) {
-      arr = items.push("distributed");
+      let arr6 = items.push("distributed");
     } else if (constants.LAUGHTER === type) {
-      let arr1 = items.push("laughter");
+      let arr7 = items.push("laughter");
     } else if (constants.SHOUTING === type) {
-      let arr2 = items.push("shouting");
+      let arr8 = items.push("shouting");
     } else if (constants.GAME_EVENT === type) {
       let _HermesInternal = HermesInternal;
-      let arr3 = items.push("game_event:" + tmp2.signal.eventType);
+      let arr9 = items.push("game_event:" + tmp2.signal.eventType);
     }
     continue;
   }
@@ -207,8 +207,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
-    let obj = StreamKeyUtils;
-    rTCConnection = StreamRTCConnectionStore.getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
+    rTCConnection = StreamRTCConnectionStore.getRTCConnection(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
   }
   decision = decision.decision;
   let type;
@@ -230,31 +229,30 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
       str = "auto_ml";
     }
   }
-  obj = {};
-  obj = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
-  const merged = Object.assign(obj);
-  const obj1 = { clip_runtime, current_clip_session_id: null };
+  const obj3 = {};
+  const merged = Object.assign({ clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate });
+  const obj7 = { clip_runtime, current_clip_session_id: null };
   const currentClipsSession = ClipsStore.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
     id = currentClipsSession.id;
   }
-  obj1.current_clip_session_id = id;
-  const merged1 = Object.assign(obj1);
+  obj7.current_clip_session_id = id;
+  const merged1 = Object.assign(obj7);
   let rTCConnectionId;
   if (rTCConnection != null) {
     rTCConnectionId = rTCConnection.getRTCConnectionId();
   }
-  obj.rtc_connection_id = rTCConnectionId;
+  obj3.rtc_connection_id = rTCConnectionId;
   let mediaSessionId;
   if (rTCConnection != null) {
     mediaSessionId = rTCConnection.getMediaSessionId();
   }
-  obj.media_session_id = mediaSessionId;
-  obj.parent_media_session_id = RTCConnectionStore.getMediaSessionId();
+  obj3.media_session_id = mediaSessionId;
+  obj3.parent_media_session_id = RTCConnectionStore.getMediaSessionId();
   ({ guildId: obj2.guild_id, channelId: obj2.channel_id, applicationId: obj2.application_id, applicationName: obj2.application_name, id: obj2.clip_uuid } = decision);
-  obj.clip_event_timeline_size = decision.timeline.length;
-  return obj;
+  obj3.clip_event_timeline_size = decision.timeline.length;
+  return obj3;
 };
 export { getPostSaveClipAnalytics };
 export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, framesEncodedByEncoder, arg2, arg3) {
@@ -280,7 +278,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
       tmp2 = isFavorite;
     }
   }
-  let obj = { is_favorite: tmp2, title_length: null, edit_start_time: null, edit_end_time: null, application_audio_enabled: null, voice_audio_enabled: null, soundboard_audio_enabled: null, crop: null };
+  const obj = { is_favorite: tmp2, title_length: null, edit_start_time: null, edit_end_time: null, application_audio_enabled: null, voice_audio_enabled: null, soundboard_audio_enabled: null, crop: null };
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
@@ -295,81 +293,81 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   obj.title_length = length;
   editMetadata = editMetadata.editMetadata;
   if (editMetadata != null) {
-    let start = editMetadata.start;
+    const start = editMetadata.start;
   }
   const editMetadata2 = isFavorite.editMetadata;
-  start = undefined;
+  let start1;
   if (editMetadata2 != null) {
-    start = editMetadata2.start;
+    start1 = editMetadata2.start;
   }
   let tmp11;
-  if (null != start) {
-    if (!_modDef4755(start, start)) {
-      tmp11 = start;
+  if (null != start1) {
+    if (!_modDef4755(start1, start)) {
+      tmp11 = start1;
     }
   }
   obj.edit_start_time = tmp11;
   const editMetadata3 = editMetadata.editMetadata;
   if (editMetadata3 != null) {
-    let end = editMetadata3.end;
+    const end = editMetadata3.end;
   }
   const editMetadata4 = isFavorite.editMetadata;
-  end = undefined;
+  let end1;
   if (editMetadata4 != null) {
-    end = editMetadata4.end;
+    end1 = editMetadata4.end;
   }
   let tmp15;
-  if (null != end) {
-    if (!_modDef4755(end, end)) {
-      tmp15 = end;
+  if (null != end1) {
+    if (!_modDef4755(end1, end)) {
+      tmp15 = end1;
     }
   }
   obj.edit_end_time = tmp15;
   const editMetadata5 = editMetadata.editMetadata;
   if (editMetadata5 != null) {
-    let applicationAudio = editMetadata5.applicationAudio;
+    const applicationAudio = editMetadata5.applicationAudio;
   }
   const editMetadata6 = isFavorite.editMetadata;
-  applicationAudio = undefined;
+  let applicationAudio1;
   if (editMetadata6 != null) {
-    applicationAudio = editMetadata6.applicationAudio;
+    applicationAudio1 = editMetadata6.applicationAudio;
   }
   let tmp19;
-  if (null != applicationAudio) {
-    if (!_modDef4755(applicationAudio, applicationAudio)) {
-      tmp19 = applicationAudio;
+  if (null != applicationAudio1) {
+    if (!_modDef4755(applicationAudio1, applicationAudio)) {
+      tmp19 = applicationAudio1;
     }
   }
   obj.application_audio_enabled = tmp19;
   const editMetadata7 = editMetadata.editMetadata;
   if (editMetadata7 != null) {
-    let voiceAudio = editMetadata7.voiceAudio;
+    const voiceAudio = editMetadata7.voiceAudio;
   }
   const editMetadata8 = isFavorite.editMetadata;
-  voiceAudio = undefined;
+  let voiceAudio1;
   if (editMetadata8 != null) {
-    voiceAudio = editMetadata8.voiceAudio;
+    voiceAudio1 = editMetadata8.voiceAudio;
   }
   let tmp23;
-  if (null != voiceAudio) {
-    if (!_modDef4755(voiceAudio, voiceAudio)) {
-      tmp23 = voiceAudio;
+  if (null != voiceAudio1) {
+    if (!_modDef4755(voiceAudio1, voiceAudio)) {
+      tmp23 = voiceAudio1;
     }
   }
   obj.voice_audio_enabled = tmp23;
   const editMetadata9 = editMetadata.editMetadata;
   if (editMetadata9 != null) {
-    let soundboardAudio = editMetadata9.soundboardAudio;
+    const soundboardAudio = editMetadata9.soundboardAudio;
   }
   const editMetadata10 = isFavorite.editMetadata;
-  soundboardAudio = undefined;
+  let soundboardAudio1;
   if (editMetadata10 != null) {
-    soundboardAudio = editMetadata10.soundboardAudio;
+    soundboardAudio1 = editMetadata10.soundboardAudio;
   }
   let tmp27;
-  if (null != soundboardAudio) {
-    if (!_modDef4755(soundboardAudio, soundboardAudio)) {
-      tmp27 = soundboardAudio;
+  if (null != soundboardAudio1) {
+    if (!_modDef4755(soundboardAudio1, soundboardAudio)) {
+      tmp27 = soundboardAudio1;
     }
   }
   obj.soundboard_audio_enabled = tmp27;
@@ -377,36 +375,37 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   if (editMetadata11 != null) {
     const crop = editMetadata11.crop;
     if (crop != null) {
-      let preset = crop.preset;
+      const preset = crop.preset;
     }
   }
   const editMetadata12 = isFavorite.editMetadata;
-  preset = undefined;
+  let preset1;
   if (editMetadata12 != null) {
     const crop2 = editMetadata12.crop;
     if (crop2 != null) {
-      preset = crop2.preset;
+      preset1 = crop2.preset;
     }
   }
   let tmp31;
-  if (null != preset) {
-    if (!_modDef4755(preset, preset)) {
-      tmp31 = preset;
+  if (null != preset1) {
+    if (!_modDef4755(preset1, preset)) {
+      tmp31 = preset1;
     }
   }
   obj.crop = tmp31;
   const values = Object.values(obj);
   if (!values.every((item) => null == item)) {
-    obj = { clip_runtime, current_clip_session_id: null };
+    const obj2 = { clip_runtime, current_clip_session_id: null };
     const currentClipsSession = ClipsStore.getCurrentClipsSession();
     let id;
     if (currentClipsSession != null) {
       id = currentClipsSession.id;
     }
-    obj = { current_clip_session_id: id };
-    const merged = Object.assign(obj);
-    obj.clip_uuid = editMetadata.id;
+    const obj4 = {};
+    obj2.current_clip_session_id = id;
+    const merged = Object.assign(obj2);
+    obj4.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
-    AnalyticsUtilsDefault.track(AnalyticEvents.CLIP_EDITED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.CLIP_EDITED, obj4);
   }
 };

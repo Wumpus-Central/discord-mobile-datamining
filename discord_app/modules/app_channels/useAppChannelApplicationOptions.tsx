@@ -26,22 +26,23 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
   if (disabled === undefined) {
     flag = false;
   }
+  let data1;
   let data;
-  let obj = data(data[2]);
   let tmp3;
   if (!flag) {
     tmp3 = guildId;
   }
-  const guildEmbeddedApplications = obj.useGuildEmbeddedApplications(EmbeddedSurfaceType.APP_CHANNEL, tmp3, channelId);
-  data = guildEmbeddedApplications.data;
+  const guildEmbeddedApplications = data1(data[2]).useGuildEmbeddedApplications(EmbeddedSurfaceType.APP_CHANNEL, tmp3, channelId);
+  data1 = guildEmbeddedApplications.data;
   let isLoading = guildEmbeddedApplications.isLoading;
-  const application = data(data[3]).useApplication(selectedApplicationId, true);
+  let obj = data1(data[2]);
+  const application = data1(data[3]).useApplication(selectedApplicationId, true);
   data = application.data;
-  obj = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };
-  let items = [data, data];
-  obj.options = noop.useMemo(() => {
-    let items = data;
-    if (data == null) {
+  const obj2 = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };
+  let items = [data1, data];
+  obj2.options = noop.useMemo(() => {
+    let items = data1;
+    if (data1 == null) {
       items = [];
     }
     const items1 = [...items];
@@ -58,11 +59,11 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
   if (!isLoading) {
     isLoading = application.isLoading;
   }
-  obj.isLoading = isLoading;
-  let tmp6 = null != data;
+  obj2.isLoading = isLoading;
+  let tmp6 = null != data1;
   if (tmp6) {
-    tmp6 = 0 === data.length;
+    tmp6 = 0 === data1.length;
   }
-  obj.hasNoApplications = tmp6;
-  return obj;
+  obj2.hasNoApplications = tmp6;
+  return obj2;
 };

@@ -1,11 +1,13 @@
-// === Module 10865: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10866: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10865 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 10866 (useMaybeFetchCollectiblesCategoriesShared)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
@@ -25,9 +27,9 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   }
   let hasLoadedExperiments;
   let lastSuccessfulFetch;
-  let obj = require("initialize");
   let items = [hasLoadedExperiments];
-  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  let obj = require("initialize");
   const items1 = [lastSuccessfulFetch];
   const tmp2 = _slicedToArray(require("initialize").useStateFromStoresArray(items1, () => {
     const items = [, , , , , , ];
@@ -80,10 +82,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
     }
   }, items2);
   const items3 = [arg0, arg2, tmp2[6]];
-  obj = {
+  let obj2 = require("initialize");
+  return {
     isFetching: tmp2[0],
     categories: tmp2[5],
-    fetchCategoriesError: tmp4,
+    fetchCategoriesError: tmp2[2],
     refreshCategories: stateFromStores(() => {
       const obj = {};
       const merged = Object.assign(closure_0);
@@ -93,5 +96,4 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
       const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(obj, undefined, closure_2);
     }, items3)
   };
-  return obj;
 };

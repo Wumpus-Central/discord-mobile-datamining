@@ -1,9 +1,11 @@
-// === Module 16297: FavoritesGuildSuggestionsStore ===
+// === Module 16299: FavoritesGuildSuggestionsStore ===
 
-// Module 16297 (FavoritesGuildSuggestionsStore)
+// Module 16299 (FavoritesGuildSuggestionsStore)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 1949 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const NOOP = fn(1074).NOOP;
@@ -28,9 +30,9 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = require("FavoritesHooks");
-  const favoritesAccess = obj.useFavoritesAccess();
+  const favoritesAccess = require("FavoritesHooks").useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
+  const obj = require("FavoritesHooks");
   if (isFreemium) {
     isFreemium = favoritesAccess.isFreemium;
   }
@@ -56,8 +58,8 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
     });
   }, items2);
   const layoutEffect1 = noop.useLayoutEffect(() => () => state.setState({ dismiss }), []);
-  obj = { isEligible: isFreemium, isSelected: tmp5[0] === tmp(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
-  return obj;
+  const tmpResult = require("useSelectedDismissibleContent");
+  return { isEligible: isFreemium, isSelected: tmp5[0] === require("dismissible_content").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
 };
 export const useFavoritesGuildSuggestionsDismissal = function useFavoritesGuildSuggestionsDismissal() {
   return state((dismiss) => dismiss.dismiss);

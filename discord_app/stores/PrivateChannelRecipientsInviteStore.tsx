@@ -1,6 +1,6 @@
-// === Module 13843: PrivateChannelRecipientsInviteStore ===
+// === Module 13844: PrivateChannelRecipientsInviteStore ===
 
-// Module 13843 (PrivateChannelRecipientsInviteStore)
+// Module 13844 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import StringUtils from "StringUtils" /* 1925 */;
@@ -25,7 +25,6 @@ function performQuery() {
         closure_3.clearQuery();
       }
       closure_129_0 = channel;
-      let arr = UserStore;
       const currentUser = UserStore.getCurrentUser();
       closure_129_1 = currentUser;
       const items = [];
@@ -34,12 +33,12 @@ function performQuery() {
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
       }
-      arr = items;
+      let arr2 = items;
       if (isStaffResult) {
-        const found = arr.filter((isStaff) => {
+        const found = UserStore.filter((isStaff) => {
           let isStaffResult = isStaff.isStaff();
           if (isStaffResult) {
-            isStaffResult = isStaff.id !== obj1.id;
+            isStaffResult = isStaff.id !== obj3.id;
           }
           return isStaffResult;
         }, false);
@@ -49,15 +48,15 @@ function performQuery() {
         const items1 = [];
         HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(items, 0));
         set = new Set(items1);
-        arr = Array.from(set);
+        arr2 = Array.from(set);
       }
       let isGroupDMResult;
       if (channel != null) {
         isGroupDMResult = channel.isGroupDM();
       }
-      let found1 = arr;
+      let found1 = arr2;
       if (isGroupDMResult) {
-        found1 = arr.filter((item) => {
+        found1 = arr2.filter((item) => {
           recipients = recipients.recipients;
           return !recipients.includes(item);
         });
@@ -68,8 +67,8 @@ function performQuery() {
           if (!user.isProvisional) {
             if (user.bot) {
               if (user.isStaff()) {
-                if (obj1 != null) {
-                  obj1.isStaff();
+                if (obj3 != null) {
+                  obj3.isStaff();
                 }
               }
             }
@@ -96,8 +95,8 @@ function performQuery() {
       }
       if (null != closure_3) {
         let obj = { query, filters: null, blacklist: null, boosters: null };
-        obj = { friends: true, staff: flag2, provisional: false };
-        obj.filters = obj;
+        const obj2 = { friends: true, staff: flag2, provisional: false };
+        obj.filters = obj2;
         obj.blacklist = tmp4;
         const frequentlyWithoutFetchingLatest = FrecencyStore.getFrequentlyWithoutFetchingLatest();
         const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof PrivateChannelRecord && isDM.isDM());
@@ -106,7 +105,7 @@ function performQuery() {
         HermesBuiltin.arraySpread(found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
         const _Math2 = Math;
         let recipients = HermesBuiltin.apply(items2, Math);
-        const obj1 = {};
+        const obj3 = {};
         const item = found2.forEach((id) => {
           scoreWithoutFetchingLatest = FrecencyStore.getScoreWithoutFetchingLatest(id.id);
           const recipientId = id.getRecipientId();
@@ -118,9 +117,9 @@ function performQuery() {
           if (null != ChannelStore.getDMFromUserId(recipientId)) {
             num2 = 0.1;
           }
-          obj1[recipientId] = 1 + scoreWithoutFetchingLatest / closure_0 + num + num2;
+          obj3[recipientId] = 1 + scoreWithoutFetchingLatest / closure_0 + num + num2;
         });
-        obj.boosters = obj1;
+        obj.boosters = obj3;
         closure_3.setQuery(obj);
       }
       return false;
@@ -161,10 +160,10 @@ function parseUserResults(results) {
           if (null != user) {
             if (!obj.isProvisional) {
               if (!obj.bot) {
-                obj = { user: null, comparator: null };
-                obj.user = obj;
-                obj.comparator = comparator;
-                let arr = items.push(obj);
+                let obj2 = { user: null, comparator: null };
+                obj2.user = obj;
+                obj2.comparator = comparator;
+                let arr = items.push(obj2);
               } else if (obj.isStaff()) {
                 let isStaffResult;
                 if (currentUser != null) {

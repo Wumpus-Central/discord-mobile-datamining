@@ -5,6 +5,8 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);

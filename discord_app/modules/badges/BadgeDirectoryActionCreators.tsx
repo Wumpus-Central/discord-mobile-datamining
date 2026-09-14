@@ -2,7 +2,7 @@
 
 // Module 8314 (BadgeDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -27,8 +27,8 @@ let closure_8 = async function _fetchBadgeDirectory(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -41,18 +41,18 @@ let closure_8 = async function _fetchBadgeDirectory(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
           closure_131_1 = undefined;
           closure_131_0 = closure_0;
-          let obj1 = closure_1;
+          let obj5 = closure_1;
           if (closure_1 === undefined) {
-            obj1 = {};
+            obj5 = {};
           }
-          closure_131_1 = obj1;
+          closure_131_1 = obj5;
           closure_131_2 = undefined;
           closure_131_3 = undefined;
           closure_131_4 = undefined;
@@ -71,8 +71,8 @@ let closure_8 = async function _fetchBadgeDirectory(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             let id = closure_131_0;
             if (closure_131_0 == null) {
@@ -105,33 +105,32 @@ let closure_8 = async function _fetchBadgeDirectory(arg0) {
               closure_131_5 = "attempt:" + str3;
               const _Date3 = Date;
               closure_131_6 = Date.now();
-              let obj10 = closure_132_1(closure_132_2[3]);
-              const obj3 = { type: "BADGE_DIRECTORY_FETCH_START", userId: closure_131_2 };
-              obj10.dispatch(obj3);
+              const obj9 = { type: "BADGE_DIRECTORY_FETCH_START", userId: closure_131_2 };
+              closure_132_1(closure_132_2[3]).dispatch(obj9);
               c6 = 1;
               const HTTP = closure_132_0(closure_132_2[4]).HTTP;
-              const obj4 = { url: closure_132_5.USER_BADGES(closure_132_7(closure_131_2)), rejectWithError: true };
+              const obj12 = { url: closure_132_5.USER_BADGES(closure_132_7(closure_131_2)), rejectWithError: true };
               c7 = 3;
               c8 = 1;
-              let obj5 = { value: HTTP.get(obj4), done: false };
-              return obj5;
+              const obj13 = { value: HTTP.get(obj12), done: false };
+              return obj13;
             }
           }
         } else {
           if (2 === tmp7) {
             c6 = 0;
             closure_131_9 = closure_5;
-            obj5 = closure_132_1(closure_132_2[5]);
-            const obj6 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: null };
+            const obj14 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: null };
             const items = [closure_131_4, "result:failure", "catalog_state:unknown", closure_131_5];
-            obj6.tags = items;
+            obj14.tags = items;
             const _Date2 = Date;
-            obj5.distribution(obj6, Date.now() - closure_131_6);
-            let obj7 = closure_132_1(closure_132_2[3]);
-            obj7 = { type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: closure_131_2 };
-            obj7.dispatch(obj7);
-            let obj9 = closure_132_1(closure_132_2[7]);
-            obj9.captureException(closure_131_9);
+            closure_132_1(closure_132_2[5]).distribution(obj14, Date.now() - closure_131_6);
+            const obj6 = closure_132_1(closure_132_2[5]);
+            const obj15 = { type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: closure_131_2 };
+            closure_132_1(closure_132_2[3]).dispatch(obj15);
+            const obj8 = closure_132_1(closure_132_2[3]);
+            closure_132_1(closure_132_2[7]).captureException(closure_131_9);
+            const obj10 = closure_132_1(closure_132_2[7]);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
@@ -145,19 +144,19 @@ let closure_8 = async function _fetchBadgeDirectory(arg0) {
             items1[2] = "catalog_state:" + str;
             items1[3] = closure_131_5;
             closure_131_8 = items1;
-            obj = closure_132_1(closure_132_2[5]);
-            const obj8 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: closure_131_8 };
+            const obj16 = { name: closure_132_0(closure_132_2[6]).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH, tags: closure_131_8 };
             const _Date = Date;
-            obj.distribution(obj8, Date.now() - closure_131_6);
-            obj2 = closure_132_1(closure_132_2[3]);
-            obj9 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: closure_131_2, badges: body.badges };
-            obj2.dispatch(obj9);
+            closure_132_1(closure_132_2[5]).distribution(obj16, Date.now() - closure_131_6);
+            const obj = closure_132_1(closure_132_2[5]);
+            const obj17 = { type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: closure_131_2, badges: body.badges };
+            closure_132_1(closure_132_2[3]).dispatch(obj17);
             c6 = 0;
+            const obj3 = closure_132_1(closure_132_2[3]);
           }
           c6 = 0;
           c8 = 3;
-          obj10 = { value, done: true };
-          return obj10;
+          const obj18 = { value, done: true };
+          return obj18;
         }
         c8 = 3;
       }
@@ -180,8 +179,8 @@ let closure_9 = async function _fetchBadge(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -194,8 +193,8 @@ let closure_9 = async function _fetchBadge(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -213,33 +212,33 @@ let closure_9 = async function _fetchBadge(arg0) {
           if (null != id) {
             c6 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), closure_0), rejectWithError: true };
+            const obj5 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), closure_0), rejectWithError: true };
             c7 = 2;
             c8 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj6 = { value: HTTP.get(obj5), done: false };
+            return obj6;
           }
         }
       } else {
         if (1 === tmp7) {
           c6 = 0;
           closure_131_2 = closure_5;
-          let obj3 = closure_132_1(closure_132_2[7]);
-          obj3.captureException(closure_131_2);
+          closure_132_1(closure_132_2[7]).captureException(closure_131_2);
+          const obj4 = closure_132_1(closure_132_2[7]);
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_131_1 = value;
-          obj = closure_132_1(closure_132_2[3]);
-          obj3 = { type: "BADGE_FETCH_SUCCESS", userId: closure_131_0, badge: closure_131_1.body };
-          obj.dispatch(obj3);
+          const obj7 = { type: "BADGE_FETCH_SUCCESS", userId: closure_131_0, badge: closure_131_1.body };
+          closure_132_1(closure_132_2[3]).dispatch(obj7);
           c6 = 0;
+          const obj = closure_132_1(closure_132_2[3]);
         }
         c6 = 0;
         c8 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       }
       c8 = 3;
     } catch (tmp31) {
@@ -279,6 +278,5 @@ export const fetchBadge = function fetchBadge() {
   return applyArgumentsResult;
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  const obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId });
 };

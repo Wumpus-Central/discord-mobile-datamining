@@ -1,6 +1,6 @@
-// === Module 15004: FamilyCenterAcceptedLinks ===
+// === Module 15005: FamilyCenterAcceptedLinks ===
 
-// Module 15004 (FamilyCenterAcceptedLinks)
+// Module 15005 (FamilyCenterAcceptedLinks)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -9,35 +9,33 @@ import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12049 */;
-import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15005 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15007 */;
-import _modDef15012 from "module_15012" /* 15012 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12050 */;
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15006 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15008 */;
+import _modDef15013 from "module_15013" /* 15013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
-  let str = otherUser.otherUser;
   let tmp4Result = null;
-  if (undefined !== str) {
-    let obj = { otherUser: str, actions: null };
+  if (undefined !== otherUser.otherUser) {
+    const obj2 = { otherUser: str, actions: null };
     const intl = str(1114).intl;
-    str = undefined;
+    let str1;
     if (str != null) {
-      str = str.toString();
+      str1 = str.toString();
     }
-    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    obj = { name: str };
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef2396.T7DUoU, obj);
+    const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const obj3 = { name: str1 };
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef2396.T7DUoU, obj3);
     obj.onPress = function onPress() {
-      const obj = { otherUser: str };
-      obj.pushLazy(asyncRequireImpl(15010, dependencyMap.paths), obj);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15011, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj1 = { size: str(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef15012 };
-    obj.children = closure_6(str(1178).Icon, obj1);
-    obj.actions = closure_6(str(5204).PressableOpacity, obj);
-    tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj);
+    const obj4 = { size: str(1176).Icon.Sizes.SMALL, disableColor: true, source: _modDef15013 };
+    obj.children = closure_6(str(1176).Icon, obj4);
+    obj2.actions = closure_6(str(5204).PressableOpacity, obj);
+    tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
@@ -46,47 +44,42 @@ const FamilyCenterConstants = fn(7641);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: { marginTop: 24 }, content: null, empty: null, header: null };
-createStyles = { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
-createStyles.content = createStyles;
-createStyles.empty = { padding: 20, alignSelf: "center" };
-createStyles.header = { marginBottom: 10 };
-let closure_8 = createStyles.createStyles(createStyles);
+let createStyles = fn(4636);
+let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, empty: { padding: 20, alignSelf: "center" }, header: { marginBottom: 10 } };
+let closure_8 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
-let obj1 = { actionButton: null };
+let obj5 = { actionButton: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
-obj1.actionButton = size;
-let closure_9 = createStyles.createStyles(obj1);
+obj5.actionButton = size;
+let closure_9 = createStyles.createStyles(obj5);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx");
 
 export default function FamilyCenterAcceptedLinks() {
   const tmp = closure_8();
-  let obj = useUserLinks;
-  const activeLinkUsers = obj.useActiveLinkUsers();
-  obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroupDefault() ? React4 : hasOwnProperty };
   const tmp4 = useIsInAdultAgeGroupDefault();
+  const activeLinkUsers = useUserLinks.useActiveLinkUsers();
+  const obj2 = { count: activeLinkUsers.length, max: tmp4 ? React4 : hasOwnProperty };
   const intl = util.intl;
   const tmp5Result = useAgeSpecificText;
   const intl2 = util.intl;
-  obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(_modDef2396["+tnO34"], obj), intl2.formatToPlainString(_modDef2396["pu6/U0"], obj));
+  const obj3 = { style: tmp.container, children: null };
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(_modDef2396["+tnO34"], obj2), intl2.formatToPlainString(_modDef2396["pu6/U0"], obj2));
   const items = [timestampProducer(Text_Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
-  const obj2 = { style: tmp.content, children: null };
+  const obj5 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
-    const obj3 = { style: tmp.empty, children: null };
-    const obj4 = { text: null };
+    const obj6 = { style: tmp.empty, children: null };
+    const obj7 = { text: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef2396.C4ScLD);
-    obj3.children = timestampProducer(FamilyCenterEmptyDefault, obj4);
-    let mapped = timestampProducer(View, obj3);
+    obj7.text = intl3.string(_modDef2396.C4ScLD);
+    obj6.children = timestampProducer(FamilyCenterEmptyDefault, obj7);
+    let mapped = timestampProducer(View, obj6);
     const tmp2Result = FamilyCenterEmptyDefault;
   } else {
     mapped = activeLinkUsers.map((otherUser) => closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id));
   }
-  obj2.children = mapped;
-  items[1] = timestampProducer(View, obj2);
-  obj.children = items;
-  return React5(View, obj);
+  obj5.children = mapped;
+  items[1] = timestampProducer(View, obj5);
+  obj3.children = items;
+  return React5(View, obj3);
 };

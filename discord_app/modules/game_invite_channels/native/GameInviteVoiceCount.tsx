@@ -1,6 +1,6 @@
-// === Module 12155: GameInviteVoiceCount ===
+// === Module 12156: GameInviteVoiceCount ===
 
-// Module 12155 (GameInviteVoiceCount)
+// Module 12156 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
@@ -16,19 +16,19 @@ const result = size.fileFinishedImporting("modules/game_invite_channels/native/G
 
 export default function GameInviteVoiceCount(channel) {
   channel = channel.channel;
-  let obj = channel(504);
+  const tmp = closure_7();
   const items = [SortedVoiceStateStore];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStatesForChannel(channel).length, items1);
+  const stateFromStores = channel(504).useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStatesForChannel(channel).length, items1);
   let tmp5 = null;
   if (0 !== stateFromStores) {
-    obj = { style: tmp.container, children: null };
-    obj = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(5182).VoiceNormalIcon, obj), ];
-    const obj1 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(4632).Text, obj1);
-    obj.children = items2;
-    tmp5 = closure_6(View, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
+    const items2 = [closure_5(tmp2(5182).VoiceNormalIcon, obj3), ];
+    const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
+    items2[1] = closure_5(tmp2(4632).Text, obj4);
+    obj2.children = items2;
+    tmp5 = closure_6(View, obj2);
   }
   return tmp5;
 };

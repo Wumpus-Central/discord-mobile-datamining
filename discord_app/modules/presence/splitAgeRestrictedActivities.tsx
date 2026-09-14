@@ -1,8 +1,8 @@
-// === Module 13849: splitAgeRestrictedActivities ===
+// === Module 13850: splitAgeRestrictedActivities ===
 
-// Module 13849 (splitAgeRestrictedActivities)
+// Module 13850 (splitAgeRestrictedActivities)
 import ContentClassificationReference from "ContentClassificationReference" /* 9610 */;
-import ContentClassificationPresenceFilterExperiment2 from "ContentClassificationPresenceFilterExperiment" /* 13850 */;
+import ContentClassificationPresenceFilterExperiment2 from "ContentClassificationPresenceFilterExperiment" /* 13851 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
@@ -20,21 +20,22 @@ export default function splitAgeRestrictedActivities(activities, hiddenActivitie
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
         let arr = items1.push(tmp5);
       } else {
-        arr = items.push(tmp5);
+        let arr2 = items.push(tmp5);
       }
       continue;
     }
     if (0 === items1.length) {
-      let obj = { activities, hiddenActivities };
+      const obj3 = { activities, hiddenActivities };
+      let obj4 = obj3;
     } else {
-      obj = { activities: items, hiddenActivities: null };
+      obj4 = { activities: items, hiddenActivities: null };
       const items2 = [];
       HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(hiddenActivities, 0));
-      obj.hiddenActivities = items2;
+      obj4.hiddenActivities = items2;
     }
-    return obj;
+    return obj4;
   } else {
-    obj = { activities, hiddenActivities };
+    const obj = { activities, hiddenActivities };
     return obj;
   }
 };

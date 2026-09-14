@@ -1,11 +1,11 @@
-// === Module 17077: LaunchPadPullTabCache ===
+// === Module 17079: LaunchPadPullTabCache ===
 
-// Module 17077 (LaunchPadPullTabCache)
+// Module 17079 (LaunchPadPullTabCache)
 import Storage2 from "Storage" /* 510 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5229 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11597 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11598 */;
 import size from "module_2" /* 2 */;
 
 function setLaunchPadPullTabExclusionRect(arg0) {
@@ -19,10 +19,9 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     tmp = value;
   }
   if (obj.isAndroid()) {
-    let tmp7Result = useWindowDimensions;
-    const diff = tmp7Result.getWindowDimensions().width - hasOwnProperty;
-    tmp7Result = useWindowDimensions;
-    const width = tmp7Result.getWindowDimensions().width;
+    const diff = useWindowDimensions.getWindowDimensions().width - hasOwnProperty;
+    const tmp7Result = useWindowDimensions;
+    const width = useWindowDimensions.getWindowDimensions().width;
     const sum = tmp + React3;
     let left;
     if (_undefined != null) {
@@ -56,6 +55,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
       const items = [_undefined];
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
+    const tmp7Result2 = useWindowDimensions;
   }
   obj = PlatformUtils;
 }

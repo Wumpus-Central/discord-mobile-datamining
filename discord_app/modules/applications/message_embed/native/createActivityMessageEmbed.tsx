@@ -1,8 +1,8 @@
-// === Module 13337: createActivityMessageEmbed ===
+// === Module 13338: createActivityMessageEmbed ===
 
-// Module 13337 (createActivityMessageEmbed)
-import createAppMessageEmbed from "createAppMessageEmbed" /* 12069 */;
-import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 13070 */;
+// Module 13338 (createActivityMessageEmbed)
+import createAppMessageEmbed from "createAppMessageEmbed" /* 12070 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 13071 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
@@ -10,8 +10,7 @@ const result = size.fileFinishedImporting("modules/applications/message_embed/na
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
-  let obj = createAppMessageEmbed;
-  const appMessageEmbed = obj.createAppMessageEmbed({ theme, embedUrl, message, app });
+  const appMessageEmbed = createAppMessageEmbed.createAppMessageEmbed({ theme, embedUrl, message, app });
   if (null == appMessageEmbed) {
     return null;
   } else {
@@ -22,18 +21,18 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       const orFetchCustomActivityLink = CustomActivityLinkUtils.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(appMessageEmbed);
-        obj.title = app.name;
+        obj3.title = app.name;
         ({ title: obj2.header, description: obj2.info } = orFetchCustomActivityLink);
-        obj.bannerRatio = "bot";
+        obj3.bannerRatio = "bot";
         let assetURL = orFetchCustomActivityLink.getAssetURL();
         if (assetURL == null) {
           assetURL = null;
         }
-        obj.staticBannerSrc = assetURL;
-        obj.tagline = null;
-        tmp8 = obj;
+        obj3.staticBannerSrc = assetURL;
+        obj3.tagline = null;
+        tmp8 = obj3;
       }
       return tmp8;
     }

@@ -1,6 +1,6 @@
-// === Module 12203: ApplicationDirectorySimilarApplicationsStore ===
+// === Module 12204: ApplicationDirectorySimilarApplicationsStore ===
 
-// Module 12203 (ApplicationDirectorySimilarApplicationsStore)
+// Module 12204 (ApplicationDirectorySimilarApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
@@ -27,7 +27,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   }
 };
 ApplicationDirectorySimilarApplicationsStore.displayName = "ApplicationDirectorySimilarApplicationsStore";
-obj = {
+const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(DispatcherDefault, {
   APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function handleFetchSimilarApplications(applicationId) {
     obj = {};
     const combined = "applicationId:" + applicationId.applicationId + " guildId:" + applicationId.guildId + " page:" + applicationId.page;
@@ -40,9 +40,10 @@ obj = {
     const combined = "applicationId:" + page.applicationId + " guildId:" + page.guildId + " page:" + page;
     obj = { lastFetchTimeMs: Date.now(), applications: similarApplications, loadId, page, totalPages };
     const result = closure_1.set(combined, obj);
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(obj);
-    obj[combined] = obj.FETCHED;
+    obj2[combined] = obj.FETCHED;
+    obj = obj2;
   },
   APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(applicationId) {
     obj = {};
@@ -50,8 +51,7 @@ obj = {
     const merged = Object.assign(obj);
     obj[combined] = obj.ERROR;
   }
-};
-const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx");
 

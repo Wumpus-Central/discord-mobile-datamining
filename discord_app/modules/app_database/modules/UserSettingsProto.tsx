@@ -3,7 +3,7 @@
 // Module 7592 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import apply from "module_12" /* 12 */;
 
@@ -11,37 +11,35 @@ let obj = importDefault;
 let closure_5 = new LoggerDefault("UserSettingsProto");
 class UserSettingsProto {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.actions = {
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.actions = {
       CONNECTION_OPEN() {
-            return obj.throttledOnChange();
+            return obj2.throttledOnChange();
           },
       USER_SETTINGS_PROTO_UPDATE() {
-            return obj.throttledOnChange();
+            return obj2.throttledOnChange();
           },
       USER_SETTINGS_PROTO_ENQUEUE_UPDATE() {
-            return obj.throttledOnChange();
+            return obj2.throttledOnChange();
           },
       USER_SETTINGS_PROTO_UPDATE_EDIT_INFO() {
-            return obj.throttledOnChange();
+            return obj2.throttledOnChange();
           }
     };
-    obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
+    obj1.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       id = id.getId();
-      obj = obj(dependencyMap[5]);
-      const databaseResult = obj.database(id);
+      const databaseResult = obj2(dependencyMap[5]).database(id);
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           const state = closure_1_3.computeState();
-          obj = closure_1_0(1986);
-          const result = obj.userSettingsTransaction(database);
+          const result = closure_1_0(1986).userSettingsTransaction(database);
           for (const key10014 in state) {
-            obj = { id: null, value: null };
+            obj2 = { id: null, value: null };
             let _Number = Number;
-            obj.id = Number(key10014);
-            obj.value = state[key10014];
-            let putResult = result.put(obj);
+            obj2.id = Number(key10014);
+            obj2.value = state[key10014];
+            let putResult = result.put(obj2);
             continue;
           }
           const versions = closure_1_3.settings.versions;
@@ -52,6 +50,7 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
+          obj = closure_1_0(1986);
           const result1 = closure_1_0(1986).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
           const obj3 = closure_1_0(1986);
@@ -59,8 +58,8 @@ class UserSettingsProto {
       }
     };
     obj = closure_0(closure_1[6]);
-    obj.throttledOnChange = obj.debounce(obj.handleUserSettingsProtoChange, 0);
-    return obj;
+    obj1.throttledOnChange = obj.debounce(obj1.handleUserSettingsProtoChange, 0);
+    return obj1;
   }
 }
 const prototype = UserSettingsProto.prototype;
@@ -74,8 +73,8 @@ prototype["getAll"] = function getAll(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -88,8 +87,8 @@ prototype["getAll"] = function getAll(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp;
             closure_2 = tmp2;
@@ -103,8 +102,8 @@ prototype["getAll"] = function getAll(arg0) {
             let userSettingsResult = obj6.userSettings(closure_0);
             c6 = 1;
             c7 = 1;
-            let obj1 = { value: userSettingsResult.getMany(), done: false };
-            return obj1;
+            let obj4 = { value: userSettingsResult.getMany(), done: false };
+            return obj4;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -112,8 +111,8 @@ prototype["getAll"] = function getAll(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_130_1 = value;
             let _performance = performance;
@@ -151,33 +150,31 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 obj = Object.create(UserSettingsProto.prototype);
 obj.actions = {
   CONNECTION_OPEN() {
-    return obj.throttledOnChange();
+    return obj2.throttledOnChange();
   },
   USER_SETTINGS_PROTO_UPDATE() {
-    return obj.throttledOnChange();
+    return obj2.throttledOnChange();
   },
   USER_SETTINGS_PROTO_ENQUEUE_UPDATE() {
-    return obj.throttledOnChange();
+    return obj2.throttledOnChange();
   },
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO() {
-    return obj.throttledOnChange();
+    return obj2.throttledOnChange();
   }
 };
 obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   id = id.getId();
-  obj = obj(dependencyMap[5]);
-  const databaseResult = obj.database(id);
+  const databaseResult = obj2(dependencyMap[5]).database(id);
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       const state = closure_1_3.computeState();
-      obj = closure_1_0(1986);
-      const result = obj.userSettingsTransaction(database);
+      const result = closure_1_0(1986).userSettingsTransaction(database);
       for (const key10014 in state) {
-        obj = { id: null, value: null };
+        obj2 = { id: null, value: null };
         let _Number = Number;
-        obj.id = Number(key10014);
-        obj.value = state[key10014];
-        let putResult = result.put(obj);
+        obj2.id = Number(key10014);
+        obj2.value = state[key10014];
+        let putResult = result.put(obj2);
         continue;
       }
       const versions = closure_1_3.settings.versions;
@@ -188,6 +185,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
+      obj = closure_1_0(1986);
       const result1 = closure_1_0(1986).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
       const obj3 = closure_1_0(1986);

@@ -5,6 +5,8 @@ import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7841 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
@@ -60,18 +62,17 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const items = [PresenceStore];
   const items1 = [stream];
   return require("initialize").useStateFromStores(items, () => {
-    let obj = PresenceStore;
     let tmp2 = null;
     if (null != stream) {
       let findActivityResult = null;
       if (null != stream) {
-        findActivityResult = obj.findActivity(stream.ownerId, _findPlayingActivity);
+        findActivityResult = PresenceStore.findActivity(stream.ownerId, _findPlayingActivity);
       }
       let tmp5 = null;
       if (null != findActivityResult) {
-        obj = { id: null, name: null };
         ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
-        tmp5 = obj;
+        tmp5 = { id: null, name: null };
+        const obj3 = { id: null, name: null };
       }
       tmp2 = tmp5;
     }

@@ -3,7 +3,7 @@
 // Module 7087 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
 import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 7091 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
@@ -28,8 +28,8 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -42,18 +42,18 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp7;
           closure_2 = tmp2;
           closure_130_1 = undefined;
           closure_130_0 = closure_0;
-          let obj1 = closure_1;
+          let obj6 = closure_1;
           if (closure_1 === undefined) {
-            obj1 = {};
+            obj6 = {};
           }
-          closure_130_1 = obj1;
+          closure_130_1 = obj6;
           closure_130_2 = undefined;
           let body;
           let token;
@@ -67,32 +67,31 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          let obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           const HTTP = closure_131_0(closure_131_2[4]).HTTP;
           const request = { url: closure_131_4.ME, oldFormErrors: true, body: closure_130_0, headers: closure_130_1.headers, rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError() };
           c4 = 2;
           c5 = 1;
-          const obj3 = { value: HTTP.patch(request), done: false };
-          return obj3;
+          const obj8 = { value: HTTP.patch(request), done: false };
+          return obj8;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        let obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_130_2 = value;
         body = closure_130_2.body;
         if (body.token) {
           token = body.token;
           delete tmp4[tmp3];
-          obj = closure_131_1(closure_131_2[3]);
-          const obj5 = { type: "UPDATE_TOKEN", token, userId: body.id };
-          obj.dispatch(obj5);
+          const obj10 = { type: "UPDATE_TOKEN", token, userId: body.id };
+          closure_131_1(closure_131_2[3]).dispatch(obj10);
           let password;
           if (closure_130_0 != null) {
             password = closure_130_0.password;
@@ -106,17 +105,17 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
             tmp19 = null != new_password;
           }
           if (tmp19) {
-            obj2 = closure_131_1(closure_131_2[3]);
-            const obj6 = { type: "PASSWORD_UPDATED", userId: body.id };
-            obj2.dispatch(obj6);
+            const obj11 = { type: "PASSWORD_UPDATED", userId: body.id };
+            closure_131_1(closure_131_2[3]).dispatch(obj11);
+            const obj3 = closure_131_1(closure_131_2[3]);
           }
+          const obj = closure_131_1(closure_131_2[3]);
         }
-        obj4 = closure_131_1(closure_131_2[3]);
-        const obj7 = { type: "CURRENT_USER_UPDATE", user: body };
-        obj4.dispatch(obj7);
+        const obj12 = { type: "CURRENT_USER_UPDATE", user: body };
+        closure_131_1(closure_131_2[3]).dispatch(obj12);
         c5 = 3;
-        const obj8 = { value: closure_130_2, done: true };
-        return obj8;
+        const obj13 = { value: closure_130_2, done: true };
+        return obj13;
       }
     } catch (tmp35) {
       c5 = tmp;
@@ -152,8 +151,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const avatarId = accountUpdateForUpdateRequest.avatarId;
   ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = accountUpdateForUpdateRequest);
   ({ username, discriminator, email, emailToken, password, avatarDescription, newPassword, globalName, legacyUsername, avatarOriginalMd5 } = accountUpdateForUpdateRequest);
-  let obj = avatarId(573);
-  obj.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
+  avatarId(573).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
   const user = { username, email, email_token: emailToken, password, avatar, avatar_description: avatarDescription, avatar_id: avatarId, discriminator, global_name: globalName, legacy_username: legacyUsername, new_password: newPassword };
   if (undefined !== avatarDecoration) {
     let skuId;
@@ -201,19 +199,21 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     user.push_token = value;
   }
   const Storage2 = tmp10(510).Storage;
-  value = Storage2.get(closure_7);
+  value2 = Storage2.get(closure_7);
   let tmp16 = null != push_voip_provider;
   if (tmp16) {
-    tmp16 = null != value;
+    tmp16 = null != value2;
   }
   if (tmp16) {
     user.push_voip_provider = push_voip_provider;
-    user.push_voip_token = value;
+    user.push_voip_token = value2;
   }
-  obj = { headers: avatarId(5250).buildHeadersForMd5({ [avatar(7088).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  const obj4 = { headers: null };
+  const obj = avatarId(573);
   tmp13 = null != tmp12 && null != value;
+  obj4.headers = avatarId(5250).buildHeadersForMd5({ [avatar(7088).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
   let tmpResult = avatarId(5250);
-  return saveProfileAndAccountRequest(user, obj).then((result) => {
+  return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;
     if (tmp4) {
@@ -225,9 +225,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     }
     return result;
   }, (body) => {
-    avatarId(dependencyMap[3]);
-    const obj = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: body.body };
-    obj.dispatch(obj);
+    avatarId(dependencyMap[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: body.body });
     return body;
   });
 };
@@ -263,8 +261,7 @@ export const resetPendingPrimaryGuildChanges = function resetPendingPrimaryGuild
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 };
 export const updateAccount = function updateAccount(settings) {
-  const obj = { type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings });
 };
 export const resetAccount = function resetAccount() {
   DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
@@ -292,14 +289,14 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
     user.push_token = value;
   }
   const Storage2 = tmp4(tmp[8]).Storage;
-  value = Storage2.get(closure_7);
+  value2 = Storage2.get(closure_7);
   let tmp10 = null != push_voip_provider;
   if (tmp10) {
-    tmp10 = null != value;
+    tmp10 = null != value2;
   }
   if (tmp10) {
     user.push_voip_provider = push_voip_provider;
-    user.push_voip_token = value;
+    user.push_voip_token = value2;
   }
   const HTTP = tmp4(tmp[4]).HTTP;
   const request = { url: constants.ME, oldFormErrors: true, body: user, rejectWithError: null };
@@ -310,36 +307,33 @@ export const saveAccountChanges = function saveAccountChanges(user, close) {
   return HTTP.patch(request).then((body) => {
     body = body.body;
     delete tmp2[tmp];
-    let obj = { type: "UPDATE_TOKEN", token: body.token, userId: body.id };
-    obj.dispatch(obj);
-    let obj2 = DispatcherDefault;
-    obj2.dispatch({ type: "CURRENT_USER_UPDATE", user: body });
+    DispatcherDefault.dispatch({ type: "UPDATE_TOKEN", token: body.token, userId: body.id });
+    const obj2 = { type: "UPDATE_TOKEN", token: body.token, userId: body.id };
+    DispatcherDefault.dispatch({ type: "CURRENT_USER_UPDATE", user: body });
     if (undefined !== avatar) {
-      obj = { avatarHash: body.avatar };
-      const result = trackUserAvatarUpdated.trackUserAvatarUpdated(obj);
+      const obj5 = { avatarHash: body.avatar };
+      const result = trackUserAvatarUpdated.trackUserAvatarUpdated(obj5);
     }
     if (null != newPassword) {
-      let tmp3Result = DispatcherDefault;
-      const obj1 = { type: "USER_PASSWORD_UPDATE", user: body, newPassword };
-      tmp3Result.dispatch(obj1);
+      const obj6 = { type: "USER_PASSWORD_UPDATE", user: body, newPassword };
+      DispatcherDefault.dispatch(obj6);
+      const tmp3Result = DispatcherDefault;
     }
     if (tmp11) {
-      tmp3Result = DispatcherDefault;
-      obj2 = { type: "PASSWORD_UPDATED", userId: body.id };
-      tmp3Result.dispatch(obj2);
+      const obj7 = { type: "PASSWORD_UPDATED", userId: body.id };
+      DispatcherDefault.dispatch(obj7);
+      const tmp3Result4 = DispatcherDefault;
     }
     if (close) {
       UserSettingsModalActionCreatorsDefault.close();
-      const tmp3Result1 = UserSettingsModalActionCreatorsDefault;
+      const tmp3Result5 = UserSettingsModalActionCreatorsDefault;
     } else {
       DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
-      const tmp3Result2 = DispatcherDefault;
+      const tmp3Result6 = DispatcherDefault;
     }
     return body;
   }, (body) => {
-    avatar(newPassword[3]);
-    const obj = { type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE", errors: body.body };
-    obj.dispatch(obj);
+    avatar(newPassword[3]).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE", errors: body.body });
     return body;
   });
 };

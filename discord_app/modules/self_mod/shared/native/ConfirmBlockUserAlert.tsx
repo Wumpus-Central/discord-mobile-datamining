@@ -1,6 +1,6 @@
-// === Module 11522: ConfirmBlockUserAlert ===
+// === Module 11523: ConfirmBlockUserAlert ===
 
-// Module 11522 (ConfirmBlockUserAlert)
+// Module 11523 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
@@ -11,17 +11,16 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(11496).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11497).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { header: null, text: null, buttonsContainer: null };
-createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
-createStyles.header = createStyles;
-createStyles.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
-let obj1 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
-createStyles.buttonsContainer = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.PX_8 };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
+obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
+let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
+obj2.buttonsContainer = { gap: nativeDefault.space.PX_12, marginBottom: -nativeDefault.space.PX_8 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
 
@@ -34,17 +33,16 @@ export default function ConfirmBlockUserAlert(userId) {
   const onBlock = userId.onBlock;
   let str = userId.blockButtonVariant;
   const tmp = closure_9();
-  let obj = userId(onCancel[7]);
   const items = [onBlock];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId));
-  let obj1 = userId(onCancel[8]);
-  const lastChannelMessage = obj1.useLastChannelMessage(channelId);
-  let obj2 = channelId(onCancel[9]);
-  const name = obj2.useName(stateFromStores);
+  const stateFromStores = userId(onCancel[7]).useStateFromStores(items, () => UserStore.getUser(userId));
+  let obj = userId(onCancel[7]);
+  const lastChannelMessage = userId(onCancel[8]).useLastChannelMessage(channelId);
+  let obj2 = userId(onCancel[8]);
+  const name = channelId(onCancel[9]).useName(stateFromStores);
   const items1 = [userId, channelId];
   const callback = onClose.useCallback(() => {
-    const obj = { location: LOCATION_CONTEXT_MOBILE };
-    obj.blockUser(userId, obj).then(() => {
+    const obj2 = { location: LOCATION_CONTEXT_MOBILE };
+    RelationshipActionCreatorsDefault.blockUser(userId, { location: LOCATION_CONTEXT_MOBILE }).then(() => {
       const result = channelId(onCancel[11]).showBlockSuccessToast(userId, closure_1_1);
     });
   }, items1);
@@ -68,7 +66,7 @@ export default function ConfirmBlockUserAlert(userId) {
       onBlockAndReport();
     }
   }, items4);
-  obj = {
+  const obj4 = {
     renderConfirmButton() {
       const obj = { size: "lg", onPress, text: null, variant: "secondary" };
       const intl = util.intl;
@@ -77,37 +75,38 @@ export default function ConfirmBlockUserAlert(userId) {
     },
     children: null
   };
-  obj = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = channelId(onCancel[9]);
+  const obj5 = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   let intl = userId(onCancel[15]).intl;
-  obj.children = intl.format(userId(onCancel[15]).t.x5pOn9, { name });
-  const items5 = [callback(userId(onCancel[16]).Text, obj), , ];
-  obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
+  obj5.children = intl.format(userId(onCancel[15]).t.x5pOn9, { name });
+  const items5 = [callback(userId(onCancel[16]).Text, obj5), , ];
+  const obj6 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (description == null) {
     const intl2 = tmp2(tmp3[15]).intl;
-    obj2 = { name };
-    description = intl2.format(tmp2(tmp3[15]).t.pegItC, obj2);
+    const obj7 = { name };
+    description = intl2.format(tmp2(tmp3[15]).t.pegItC, obj7);
   }
-  obj1.children = description;
-  items5[1] = callback(userId(onCancel[16]).Text, obj1);
-  const obj3 = { style: tmp.buttonsContainer, children: null };
-  const obj4 = { size: "lg", onPress: callback1, text: null, variant: null };
+  obj6.children = description;
+  items5[1] = callback(userId(onCancel[16]).Text, obj6);
+  const obj8 = { style: tmp.buttonsContainer, children: null };
+  const obj9 = { size: "lg", onPress: callback1, text: null, variant: null };
   const intl3 = tmp2(tmp3[15]).intl;
-  obj4.text = intl3.string(userId(onCancel[15]).t.l4Emac);
+  obj9.text = intl3.string(userId(onCancel[15]).t.l4Emac);
   if (str == null) {
     str = "destructive";
   }
-  obj4.variant = str;
-  const items6 = [callback(userId(onCancel[14]).Button, obj4), ];
+  obj9.variant = str;
+  const items6 = [callback(userId(onCancel[14]).Button, obj9), ];
   let tmp12Result = null != onBlockAndReport;
   if (tmp12Result) {
-    const obj5 = { size: "lg", onPress: callback2, text: null, variant: "secondary" };
+    const obj10 = { size: "lg", onPress: callback2, text: null, variant: "secondary" };
     const intl4 = tmp2(tmp3[15]).intl;
-    obj5.text = intl4.string(tmp2(tmp3[15]).t["39O+8F"]);
-    tmp12Result = tmp12(tmp2(tmp3[14]).Button, obj5);
+    obj10.text = intl4.string(tmp2(tmp3[15]).t["39O+8F"]);
+    tmp12Result = tmp12(tmp2(tmp3[14]).Button, obj10);
   }
   items6[1] = tmp12Result;
-  obj3.children = items6;
-  items5[2] = onPress(onBlockAndReport, obj3);
-  obj.children = items5;
-  return onPress(channelId(onCancel[13]), obj);
+  obj8.children = items6;
+  items5[2] = onPress(onBlockAndReport, obj8);
+  obj4.children = items5;
+  return onPress(channelId(onCancel[13]), obj4);
 };

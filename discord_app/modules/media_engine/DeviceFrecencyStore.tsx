@@ -25,20 +25,20 @@ let obj = {
   maxSamples: 256,
   numFrequentlyItems: Infinity
 };
-obj = {};
+let obj2 = {};
 const stopWatch = new fn(4665).StopWatch();
-obj[DeviceTypes.AUDIO_INPUT] = stopWatch;
+obj2[DeviceTypes.AUDIO_INPUT] = stopWatch;
 const stopWatch1 = new fn(4665).StopWatch();
-obj[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
+obj2[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
 const stopWatch2 = new fn(4665).StopWatch();
-obj[DeviceTypes.VIDEO_INPUT] = stopWatch2;
+obj2[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
-obj = {};
-obj[DeviceTypes.AUDIO_INPUT] = new FrecencyDefault(obj);
+let obj3 = {};
+obj3[DeviceTypes.AUDIO_INPUT] = new FrecencyDefault(obj);
 const tmp6 = new FrecencyDefault(obj);
-obj[DeviceTypes.AUDIO_OUTPUT] = new FrecencyDefault(obj);
+obj3[DeviceTypes.AUDIO_OUTPUT] = new FrecencyDefault(obj);
 const tmp7 = new FrecencyDefault(obj);
-obj[DeviceTypes.VIDEO_INPUT] = new FrecencyDefault(obj);
+obj3[DeviceTypes.VIDEO_INPUT] = new FrecencyDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class DeviceFrecencyStore extends PersistedStore {
 }
@@ -54,16 +54,16 @@ prototype["initialize"] = function initialize(arg0) {
       tmp2 = dependencyMap[item];
     }
     if (null != tmp2) {
-      obj[item].overwriteHistory(dependencyMap[item]);
+      obj3[item].overwriteHistory(dependencyMap[item]);
     }
-    obj[item].reset();
+    obj2[item].reset();
   });
 };
 prototype["reset"] = function reset() {
   const items = [, , ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((item) => {
-    obj[item].reset();
+    obj2[item].reset();
     dependencyMap[item] = {};
   });
 };
@@ -72,59 +72,57 @@ prototype["track"] = function track(arg0, arg1, usesSinceLastTrack) {
     dependencyMap[arg0][arg1] = 0;
   }
   dependencyMap[arg0][arg1] = dependencyMap[arg0][arg1] + usesSinceLastTrack;
-  obj = { usesSinceLastTrack };
-  obj.track(arg1, obj);
+  obj3[arg0].track(arg1, { usesSinceLastTrack });
+  obj2 = { usesSinceLastTrack };
 };
 prototype["isSampling"] = function isSampling(AUDIO_OUTPUT) {
-  return obj[AUDIO_OUTPUT].isRunning();
+  return obj2[AUDIO_OUTPUT].isRunning();
 };
 prototype["startSampling"] = function startSampling(AUDIO_OUTPUT) {
-  obj[AUDIO_OUTPUT].start();
+  obj2[AUDIO_OUTPUT].start();
 };
 prototype["stopSampling"] = function stopSampling(AUDIO_OUTPUT, oldId) {
-  obj = obj[AUDIO_OUTPUT];
-  obj.stop();
-  const asMillisecondsResult = obj.elapsed().asMilliseconds();
+  obj2[AUDIO_OUTPUT].stop();
+  const asMillisecondsResult = obj2[AUDIO_OUTPUT].elapsed().asMilliseconds();
   if (asMillisecondsResult > 0) {
     let currentDeviceId = oldId;
     if (oldId == null) {
-      obj = {};
-      obj = {
+      obj2 = {};
+      obj3 = {
         getCurrentDeviceId(getInputDeviceId) {
               return getInputDeviceId.getInputDeviceId();
             }
       };
-      obj[DeviceTypes.AUDIO_INPUT] = obj;
-      const obj1 = {
+      obj2[DeviceTypes.AUDIO_INPUT] = obj3;
+      const obj4 = {
         getCurrentDeviceId(getOutputDeviceId) {
               return getOutputDeviceId.getOutputDeviceId();
             }
       };
-      obj[DeviceTypes.AUDIO_OUTPUT] = obj1;
-      const obj2 = {
+      obj2[DeviceTypes.AUDIO_OUTPUT] = obj4;
+      const obj5 = {
         getCurrentDeviceId(getVideoDeviceId) {
               return getVideoDeviceId.getVideoDeviceId();
             }
       };
-      obj[DeviceTypes.VIDEO_INPUT] = obj2;
-      currentDeviceId = obj[AUDIO_OUTPUT].getCurrentDeviceId(MediaEngineStore);
+      obj2[DeviceTypes.VIDEO_INPUT] = obj5;
+      currentDeviceId = obj2[AUDIO_OUTPUT].getCurrentDeviceId(MediaEngineStore);
     }
     const self = this;
     this.track(AUDIO_OUTPUT, currentDeviceId, asMillisecondsResult);
   }
-  obj.reset();
-  const elapsedResult = obj.elapsed();
+  obj2[AUDIO_OUTPUT].reset();
+  const elapsedResult = obj2[AUDIO_OUTPUT].elapsed();
 };
 prototype["getState"] = function getState() {
-  obj = { [closure_1_4.AUDIO_INPUT]: obj[DeviceTypes.AUDIO_INPUT].usageHistory, [closure_1_4.AUDIO_OUTPUT]: obj[DeviceTypes.AUDIO_OUTPUT].usageHistory, [closure_1_4.VIDEO_INPUT]: obj[DeviceTypes.VIDEO_INPUT].usageHistory };
-  return obj;
+  return { [closure_1_4.AUDIO_INPUT]: obj3[DeviceTypes.AUDIO_INPUT].usageHistory, [closure_1_4.AUDIO_OUTPUT]: obj3[DeviceTypes.AUDIO_OUTPUT].usageHistory, [closure_1_4.VIDEO_INPUT]: obj3[DeviceTypes.VIDEO_INPUT].usageHistory };
 };
 prototype["getDeviceIdsSortedByFrecency"] = function getDeviceIdsSortedByFrecency(arg0) {
-  return obj[arg0].frequently;
+  return obj3[arg0].frequently;
 };
 prototype["getUsageStats"] = function getUsageStats() {
   const self = this;
-  obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
+  const obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
   const items = [, ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1] } = DeviceTypes);
   const item = items.forEach((item) => {
@@ -134,7 +132,7 @@ prototype["getUsageStats"] = function getUsageStats() {
     }
     self[item] = Object.entries(closure_9[item]);
   });
-  obj = {
+  obj2 = {
     duration_input_device_used_ids: obj[DeviceTypes.AUDIO_INPUT].map((item) => {
       [tmp, ] = item;
       return tmp;
@@ -152,7 +150,7 @@ prototype["getUsageStats"] = function getUsageStats() {
       return tmp;
     })
   };
-  return obj;
+  return obj2;
 };
 DeviceFrecencyStore.displayName = "DeviceFrecencyStore";
 DeviceFrecencyStore.persistKey = "DeviceFrecencyStore";

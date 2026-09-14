@@ -27,51 +27,49 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
       if (null != user) {
         if (null != currentUser) {
           let colorString = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-          let obj = { userId: recipientId, message, author: colorString, roleStyle: message.roleStyle };
-          obj = { username: colorString.nick, usernameOnClick: null };
-          obj.usernameOnClick = formatUsernameOnClickDefault(obj);
+          const obj = { userId: recipientId, message, author: colorString, roleStyle: message.roleStyle };
+          let obj2 = { username: colorString.nick, usernameOnClick: formatUsernameOnClickDefault(obj) };
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = createStyles;
-              const obj1 = { baseTextColor: nativeDefault.colors.TEXT_SUBTLE };
+              const obj3 = { baseTextColor: nativeDefault.colors.TEXT_SUBTLE };
               const intl2 = util.intl;
               const formatToParts2 = intl2.formatToParts;
-              let t = util.t;
+              let t1 = util.t;
               if (tmp18) {
-                t = {};
-                obj = Object.assign(obj);
-                t.note = content;
+                t1 = {};
+                obj2 = Object.assign(obj2);
+                t1.note = content;
                 content = { colorString: null };
                 colorString = colorString.colorString;
                 content.colorString = colorString;
-                t.formattedNote = content;
-                let formatToParts2Result = formatToParts2(t["6pQebO"], t);
+                t1.formattedNote = content;
+                let formatToParts2Result = formatToParts2(t1["6pQebO"], t1);
               } else {
-                const obj2 = {};
-                const merged = Object.assign(obj);
-                obj2.note = content;
-                const obj3 = { colorString: colorString.colorString };
-                obj2.formattedNote = obj3;
-                formatToParts2Result = formatToParts2(t.bNrwDM, obj2);
+                const obj4 = {};
+                const merged = Object.assign(obj2);
+                obj4.note = content;
+                const obj5 = { colorString: colorString.colorString };
+                obj4.formattedNote = obj5;
+                formatToParts2Result = formatToParts2(t1.bNrwDM, obj4);
               }
-              const baseTextColor = tmp15Result.createNativeStyleProperties(obj1)(message.theme).baseTextColor;
+              const baseTextColor = createStyles.createNativeStyleProperties(obj3)(message.theme).baseTextColor;
+              const tmp15Result = createStyles;
             }
           }
           const intl = util.intl;
           const formatToParts = intl.formatToParts;
-          t = util.t;
+          const t = util.t;
           if (message.author.id === currentUser.id) {
-            let formatToPartsResult = formatToParts(t.REfFZs, obj);
+            let formatToPartsResult = formatToParts(t.REfFZs, obj2);
           } else {
-            formatToPartsResult = formatToParts(t.hyPOTm, obj);
+            formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
-          const obj4 = { content: formatToPartsResult, iconUrl: null, textColor: null };
-          tmp15Result = renderer_EmbedUtils;
-          obj4.iconUrl = tmp15Result.getAssetUriForEmbed(_modDef8180);
-          obj4.textColor = undefined;
+          const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8180);
+          obj6.textColor = undefined;
           const merged1 = Object.assign(createCommonMessageDefault(message));
-          return obj4;
+          return obj6;
         }
       }
       return null;

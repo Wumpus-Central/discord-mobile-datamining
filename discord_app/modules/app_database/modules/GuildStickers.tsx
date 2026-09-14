@@ -119,9 +119,9 @@ prototype["update"] = function update(arg0, arg1, arg2, database) {
     continue;
   }
 };
-let size = Object.create(GuildStickers.prototype);
-let closure_129_0 = size;
-size.actions = {
+const obj2 = Object.create(GuildStickers.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -141,7 +141,7 @@ size.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   }
 };
-size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/GuildStickers.tsx");
 
-export default size;
+export default obj2;

@@ -1,18 +1,18 @@
-// === Module 14953: FamilyCenterSetting ===
+// === Module 14954: FamilyCenterSetting ===
 
-// Module 14953 (FamilyCenterSetting)
+// Module 14954 (FamilyCenterSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import WarningIcon from "WarningIcon" /* 8711 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14954 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14955 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14955 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2396.RZqaJn);
@@ -20,8 +20,7 @@ let SettingBuilders = {
   parent: null,
   IconComponent: fn(5170).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = useIsParentalConsentBannerActive;
-    const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
+    const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
@@ -36,9 +35,9 @@ let SettingBuilders = {
       if (null != daysRemaining) {
         tmp6 = null;
         if (daysRemaining >= 0) {
-          obj = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
+          const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2396.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }
@@ -51,9 +50,8 @@ let SettingBuilders = {
       return require("UserSettingsFamilyCenter").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
 
-export default SettingBuilders;
+export default route;

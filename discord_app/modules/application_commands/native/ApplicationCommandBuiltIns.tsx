@@ -32,26 +32,27 @@ obj.execute = function execute(arg0, channel) {
   if (null != channel) {
     const channelName = channel(4789).computeChannelName(channel, UserStore, RelationshipStore);
     const intl5 = channel(1114).intl;
-    let obj = { name: channelName };
+    let obj2 = { name: channelName };
     const obj5 = channel(4789);
     const intl6 = channel(1114).intl;
-    obj = { name: channelName };
-    let formatResult = intl6.format(channel(1114).t.SSIVOu, obj);
-    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1114).t.hJ5Ap4, obj);
+    const obj4 = { name: channelName };
+    let formatResult = intl6.format(channel(1114).t.SSIVOu, obj4);
+    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1114).t.hJ5Ap4, obj2);
     if (channel.isManaged()) {
       let intl = tmp5(1114).intl;
-      obj = { name: channelName };
+      let obj = { name: channelName };
       formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1114).t.hVGjEW, obj);
       const intl2 = tmp5(1114).intl;
-      const obj1 = { name: channelName };
-      formatResult = intl2.format(tmp5(1114).t.IK1Qvs, obj1);
+      const obj6 = { name: channelName };
+      formatResult = intl2.format(tmp5(1114).t.IK1Qvs, obj6);
     }
-    let obj2 = { title: formatToPlainStringResult1, body: formatResult, confirmText: null, cancelText: null, onConfirm: null };
+    const formatToPlainStringResult = intl5.formatToPlainString(channel(1114).t.hJ5Ap4, obj2);
+    const obj7 = { title: formatToPlainStringResult1, body: formatResult, confirmText: null, cancelText: null, onConfirm: null };
     const intl3 = tmp5(1114).intl;
-    obj2.confirmText = intl3.string(channel(1114).t["26C4oi"]);
+    obj7.confirmText = intl3.string(channel(1114).t["26C4oi"]);
     const intl4 = tmp5(1114).intl;
-    obj2.cancelText = intl4.string(channel(1114).t["ETE/oC"]);
-    obj2.onConfirm = function onConfirm() {
+    obj7.cancelText = intl4.string(channel(1114).t["ETE/oC"]);
+    obj7.onConfirm = function onConfirm() {
       try {
         ChannelActionCreatorsDefault.closePrivateChannel(channel.id);
       } catch (err) {
@@ -59,8 +60,7 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    obj2.show(obj2);
-    const formatToPlainStringResult = intl5.formatToPlainString(channel(1114).t.hJ5Ap4, obj);
+    AlertActionCreatorsDefault.show(obj7);
   }
 };
 const items = [obj];

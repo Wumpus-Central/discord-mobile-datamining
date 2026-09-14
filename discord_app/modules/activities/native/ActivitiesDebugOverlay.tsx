@@ -1,6 +1,6 @@
-// === Module 17254: ActivitiesDebugOverlay ===
+// === Module 17256: ActivitiesDebugOverlay ===
 
-// Module 17254 (ActivitiesDebugOverlay)
+// Module 17256 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -13,14 +13,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-fn(4636);
-const createStyles = { container: null, row: null };
+const createStyles = fn(4636);
+const obj2 = { container: null, row: null };
 let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
 const ColorUtils = fn(4486);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
-createStyles.container = rect;
-createStyles.row = { flexDirection: "row" };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.container = rect;
+obj2.row = { flexDirection: "row" };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
 
@@ -48,14 +48,12 @@ export default function ActivitiesDebugOverlay() {
     }
   }
   const rect = useSafeAreaInsetsDefault();
-  let obj = { style: null, pointerEvents: "none", children: null };
-  const items = [tmp.container, ];
-  obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
-  items[1] = obj;
+  const obj = { style: null, pointerEvents: "none", children: null };
+  const items = [tmp.container, { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 }];
   obj.style = items;
-  obj = { style: tmp.row, children: null };
+  const obj3 = { style: tmp.row, children: null };
   const items1 = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
-  obj.children = items1;
-  obj.children = React4(View, obj);
+  obj3.children = items1;
+  obj.children = React4(View, obj3);
   return hasOwnProperty(View, obj);
 };

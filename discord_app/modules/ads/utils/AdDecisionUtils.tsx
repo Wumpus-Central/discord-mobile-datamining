@@ -63,7 +63,7 @@ export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds
   }
 };
 export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecision(response_ttl_seconds, creative) {
-  let obj = { creative: creative.creative, fetchedAt: creative.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+  const obj = { creative: creative.creative, fetchedAt: creative.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
   response_ttl_seconds = response_ttl_seconds.response_ttl_seconds;
   if (null == response_ttl_seconds) {
     let tmp3 = result;
@@ -83,40 +83,40 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   if (ad_identifiers != null) {
     ad_id = ad_identifiers.ad_id;
   }
-  obj = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+  const obj2 = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
   const ad_identifiers2 = response_ttl_seconds.ad_identifiers;
   let adset_id;
   if (ad_identifiers2 != null) {
     adset_id = ad_identifiers2.adset_id;
   }
-  obj.adset_id = adset_id;
+  obj2.adset_id = adset_id;
   const ad_identifiers3 = response_ttl_seconds.ad_identifiers;
   let ad_set_id;
   if (ad_identifiers3 != null) {
     ad_set_id = ad_identifiers3.ad_set_id;
   }
-  obj.ad_set_id = ad_set_id;
+  obj2.ad_set_id = ad_set_id;
   const ad_identifiers4 = response_ttl_seconds.ad_identifiers;
   let campaign_id;
   if (ad_identifiers4 != null) {
     campaign_id = ad_identifiers4.campaign_id;
   }
-  obj.campaign_id = campaign_id;
+  obj2.campaign_id = campaign_id;
   const ad_identifiers5 = response_ttl_seconds.ad_identifiers;
   let creative_id;
   if (ad_identifiers5 != null) {
     creative_id = ad_identifiers5.creative_id;
   }
-  obj.creative_id = creative_id;
+  obj2.creative_id = creative_id;
   const ad_identifiers6 = response_ttl_seconds.ad_identifiers;
   let creative_type;
   if (ad_identifiers6 != null) {
     creative_type = ad_identifiers6.creative_type;
   }
-  obj.creative_type = creative_type;
-  obj.decision_id = creative.requestId;
-  obj.is_targeted = null != response_ttl_seconds.ad_identifiers;
-  obj.adDecisionData = obj;
+  obj2.creative_type = creative_type;
+  obj2.decision_id = creative.requestId;
+  obj2.is_targeted = null != response_ttl_seconds.ad_identifiers;
+  obj.adDecisionData = obj2;
   ({ ad_context: obj.adContext, metadata_sealed: obj.metadataSealed, traffic_metadata_sealed: obj.trafficMetadataSealed, provenance_metadata_sealed: obj.provenanceMetadataSealed } = response_ttl_seconds);
   return obj;
 };

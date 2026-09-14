@@ -1,8 +1,8 @@
-// === Module 12465: GuildDirectoryPlaceholderRow ===
+// === Module 12466: GuildDirectoryPlaceholderRow ===
 
-// Module 12465 (GuildDirectoryPlaceholderRow)
+// Module 12466 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12466 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12467 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -12,10 +12,10 @@ const createStyles = fn(4636);
 let obj = { row: { flexDirection: "row", padding: 16 }, rowInner: { flex: 1 }, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", marginRight: 16, backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderAvatar = size;
-obj = { height: 15, borderRadius: 5, backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
-obj.placeholderText = obj;
+obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderBody = { width: "100%", marginTop: 10 };
 let closure_5 = createStyles.createStyles(obj);
+let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryPlaceholderRow.tsx");
 
@@ -25,27 +25,26 @@ export default noop.memo(() => {
   const sum = Math.floor(2 * Math.random()) + 2;
   closure_1 = Math.floor(10 * Math.random());
   let obj = { style: tmp.row, children: null };
-  obj = { style: tmp.placeholderAvatar };
   const sum1 = Math.floor(50 * Math.random()) + 10;
-  let items = [closure_3(View, obj), ];
-  obj = { style: tmp.rowInner, children: null };
-  const obj1 = { style: null };
+  let items = [closure_3(View, { style: tmp.placeholderAvatar }), ];
+  const obj3 = { style: tmp.rowInner, children: null };
+  const obj4 = { style: null };
   const items1 = [tmp.placeholderText, { width: "" + sum1 + "%" }];
-  obj1.style = items1;
-  const items2 = [closure_3(View, obj1), ];
+  obj4.style = items1;
+  const items2 = [closure_3(View, obj4), ];
   const array = new Array(sum);
-  const obj2 = { width: "" + sum1 + "%" };
+  const obj2 = { style: tmp.placeholderAvatar };
+  const obj5 = { width: "" + sum1 + "%" };
   items2[1] = array.fill(undefined).map((item, index) => {
-    let obj = { style: null };
+    const obj = { style: null };
     const items = [, , ];
     ({ placeholderText: arr[0], placeholderBody: arr[1] } = closure_0);
-    obj = { width: "" + getChatPlaceholderRowWidthDefault(closure_1 + index) + "%" };
-    items[2] = obj;
+    items[2] = { width: "" + getChatPlaceholderRowWidthDefault(closure_1 + index) + "%" };
     obj.style = items;
     return React3(View, obj, index);
   });
-  obj.children = items2;
-  items[1] = closure_4(View, obj);
+  obj3.children = items2;
+  items[1] = closure_4(View, obj3);
   obj.children = items;
   return closure_4(View, obj);
 });

@@ -16,13 +16,12 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export default function JoinStageView(channel) {
   channel = channel.channel;
-  let obj = StageChannelParticipantStoreHooks;
-  const stageParticipants = obj.useStageParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
+  const stageParticipants = StageChannelParticipantStoreHooks.useStageParticipants(channel.id, StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER);
   const found = stageParticipants.filter((type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.VOICE);
-  obj = { title: null, body: null, children: null };
+  const obj2 = { title: null, body: null, children: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.WZOeQv);
-  obj.body = StageChannelUtils.getParticipantNamesText(channel, found);
-  obj.children = jsx(StageActionBarButtons.JoinStagePrompt, { channel });
+  obj2.title = intl.string(util.t.WZOeQv);
+  obj2.body = StageChannelUtils.getParticipantNamesText(channel, found);
+  obj2.children = jsx(StageActionBarButtons.JoinStagePrompt, { channel });
   return <tmp2 title={null} body={null}>{null}</tmp2>;
 };

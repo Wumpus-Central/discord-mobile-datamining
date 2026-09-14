@@ -27,26 +27,26 @@ const result = size.fileFinishedImporting("modules/user_settings/voice/native/Us
 
 export default function UserSettingsVoice() {
   const tmp = closure_8();
-  let obj = MobileAudioOutputExperimentDefault;
-  let nonContextualStreamOutputPresent = obj.useConfig({ location: "NewUserSettingsVoice" }).nonContextualStreamOutputPresent;
-  obj = { style: tmp.container, children: null };
+  let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({ location: "NewUserSettingsVoice" }).nonContextualStreamOutputPresent;
+  const obj2 = { style: tmp.container, children: null };
   const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
     nonContextualStreamOutputPresent = timestampProducer(UserSettingsVoiceOutputOptionsDefault, {});
   }
   items[1] = nonContextualStreamOutputPresent;
-  obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
+  const obj3 = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
   const intl = util.intl;
-  obj.children = intl.format(util.t["V+B3FH"], { guideURL });
-  items[2] = timestampProducer(Text_Text.Text, obj);
+  obj3.children = intl.format(util.t["V+B3FH"], { guideURL });
+  items[2] = timestampProducer(Text_Text.Text, obj3);
   items[3] = timestampProducer(UserSettingsSoundboardVolumeDefault, {});
-  const obj2 = { spacing: 24, children: null };
+  const obj4 = { guideURL };
+  const obj5 = { spacing: 24, children: null };
   items[4] = isMobileOverlaySupported() && timestampProducer(UserSettingsVoiceOverlayDefault, {});
   items[5] = timestampProducer(UserSettingsVoiceProcessingDefault, {});
   items[6] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, { bottom: true });
-  obj2.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj2);
-  return timestampProducer(View, obj);
+  obj5.children = items;
+  obj2.children = React5(Stack_Stack.Stack, obj5);
+  return timestampProducer(View, obj2);
 };
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {
   const merged = Object.assign(arg0);

@@ -1,6 +1,6 @@
-// === Module 12509: TouchableBackground ===
+// === Module 12510: TouchableBackground ===
 
-// Module 12509 (TouchableBackground)
+// Module 12510 (TouchableBackground)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,11 +8,9 @@ import noop from "module_19" /* 19 */;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { default: null };
-createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-createStyles.default = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { default: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
@@ -23,7 +21,7 @@ export default function TouchableBackground(onPressOut) {
   const merged = Object.assign(onPressOut, Object.assign({ activeBackgroundColor: 0, pressableStyle: 0, style: 0, children: 0, onPressIn: 0, onPressOut: 0 }));
   c2 = undefined;
   const tmp2 = closure_5();
-  [tmp4, c2] = _slicedToArray(noop.useState(false), 2);
+  [tmp4, c2] = noop.useState(false);
   const items = [onPressIn];
   const items1 = [onPressOut];
   const callback = noop.useCallback((arg0) => {
@@ -32,7 +30,7 @@ export default function TouchableBackground(onPressOut) {
       tmp2(arg0);
     }
   }, items);
-  let obj = { accessibilityRole: "button", style: pressableStyle };
+  const obj = { accessibilityRole: "button", style: pressableStyle };
   const callback1 = noop.useCallback((arg0) => {
     if (onPressOut != null) {
       tmp(arg0);
@@ -47,7 +45,7 @@ export default function TouchableBackground(onPressOut) {
     if (activeBackgroundColor == null) {
       activeBackgroundColor = tmp2.default.backgroundColor;
     }
-    obj = { backgroundColor: activeBackgroundColor };
+    const obj2 = { backgroundColor: activeBackgroundColor };
   }
   items2[1] = tmp4;
   obj.children = <React2 style={items2}>{children}</React2>;

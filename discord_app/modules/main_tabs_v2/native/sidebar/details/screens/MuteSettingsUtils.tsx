@@ -65,11 +65,11 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      let tmp7Result = ThreadActionCreatorsDefault;
-      const result = tmp7Result.setNotificationSettings(channel, { muted: false });
+      const result = ThreadActionCreatorsDefault.setNotificationSettings(channel, { muted: false });
+      const tmp7Result = ThreadActionCreatorsDefault;
     } else {
-      tmp7Result = NotificationSettingsModalActionCreatorsDefault;
-      const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, NotificationSettingsUtils.NotificationLabels.Unmuted);
+      const tmp7Result2 = NotificationSettingsModalActionCreatorsDefault;
+      const result1 = tmp7Result2.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, NotificationSettingsUtils.NotificationLabels.Unmuted);
     }
   }
 };
@@ -83,11 +83,11 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      let tmp4Result = ThreadActionCreatorsDefault;
-      const result = tmp4Result.setNotificationSettings(channel, muteSettings);
+      const result = ThreadActionCreatorsDefault.setNotificationSettings(channel, muteSettings);
+      const tmp4Result = ThreadActionCreatorsDefault;
     } else {
-      tmp4Result = NotificationSettingsModalActionCreatorsDefault;
-      const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
+      const tmp4Result2 = NotificationSettingsModalActionCreatorsDefault;
+      const result1 = tmp4Result2.updateChannelOverrideSettings(guildId, channel.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
     }
   } else if (null != guild) {
     const result2 = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guild.id, muteSettings, NotificationSettingsUtils.NotificationLabels.Muted);
@@ -128,35 +128,35 @@ export const getMessageNotificationsText = function getMessageNotificationsText(
   }
 };
 export const getMuteOptions = function getMuteOptions() {
-  let obj = { label: null, duration: null };
+  const obj = { label: null, duration: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["8ot6gv"]);
   obj.duration = MuteUntilSeconds.MINUTES_15;
   const items = [obj, , , , , ];
-  obj = { label: null, duration: null };
-  const intl2 = util.intl;
-  obj.label = intl2.string(util.t.UMWBZr);
-  obj.duration = MuteUntilSeconds.HOURS_1;
-  items[1] = obj;
-  obj = { label: null, duration: null };
-  const intl3 = util.intl;
-  obj.label = intl3.string(util.t.QmYWtu);
-  obj.duration = MuteUntilSeconds.HOURS_3;
-  items[2] = obj;
-  const obj1 = { label: null, duration: null };
-  const intl4 = util.intl;
-  obj1.label = intl4.string(util.t.EpAXPC);
-  obj1.duration = MuteUntilSeconds.HOURS_8;
-  items[3] = obj1;
   const obj2 = { label: null, duration: null };
-  const intl5 = util.intl;
-  obj2.label = intl5.string(util.t["755t4q"]);
-  obj2.duration = MuteUntilSeconds.HOURS_24;
-  items[4] = obj2;
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.UMWBZr);
+  obj2.duration = MuteUntilSeconds.HOURS_1;
+  items[1] = obj2;
   const obj3 = { label: null, duration: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.QmYWtu);
+  obj3.duration = MuteUntilSeconds.HOURS_3;
+  items[2] = obj3;
+  const obj4 = { label: null, duration: null };
+  const intl4 = util.intl;
+  obj4.label = intl4.string(util.t.EpAXPC);
+  obj4.duration = MuteUntilSeconds.HOURS_8;
+  items[3] = obj4;
+  const obj5 = { label: null, duration: null };
+  const intl5 = util.intl;
+  obj5.label = intl5.string(util.t["755t4q"]);
+  obj5.duration = MuteUntilSeconds.HOURS_24;
+  items[4] = obj5;
+  const obj6 = { label: null, duration: null };
   const intl6 = util.intl;
-  obj3.label = intl6.string(util.t.r3LawO);
-  obj3.duration = MuteUntilSeconds.ALWAYS;
-  items[5] = obj3;
+  obj6.label = intl6.string(util.t.r3LawO);
+  obj6.duration = MuteUntilSeconds.ALWAYS;
+  items[5] = obj6;
   return items;
 };

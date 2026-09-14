@@ -1,9 +1,9 @@
-// === Module 15804: TextDisplayComponent ===
+// === Module 15806: TextDisplayComponent ===
 
-// Module 15804 (TextDisplayComponent)
+// Module 15806 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 7992 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11745 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -20,18 +20,17 @@ export default function TextDisplayComponent(type) {
   type = type.type;
   const id = type.id;
   const content = type.content;
-  let obj = type(content[7]);
-  const componentContainerId = obj.useComponentContainerId();
+  const componentContainerId = type(content[7]).useComponentContainerId();
   const channelId = SelectedChannelStore.getChannelId();
   id(content[8])(null != channelId, "channelId not available in TextDisplayComponent");
   let items = [type, id, content, channelId];
   const memo = noop.useMemo(() => {
-    let obj = { type, id, content: null };
+    const obj = { type, id, content: null };
     const obj2 = MarkupUtilsDefault;
-    obj = { channelId, renderOptions };
-    obj.content = obj2.parseToAST(content, true, renderMessageMarkup.getInitialParserState(obj));
+    obj.content = obj2.parseToAST(content, true, renderMessageMarkup.getInitialParserState({ channelId, renderOptions }));
     return JSON.stringify(obj);
   }, items);
+  let obj = type(content[7]);
   const items1 = [AccessibilityStore];
   let obj2 = type(content[11]);
   [tmp6, tmp7] = channelId(type(content[11]).useStateFromStoresArray(items1, () => {
@@ -50,9 +49,9 @@ export default function TextDisplayComponent(type) {
   const stateFromStores = type(content[11]).useStateFromStores(items2, () => ChannelStore.getChannel(channelId));
   const obj3 = type(content[11]);
   const shouldDisplaySpoilerObscurity = type(content[13]).useShouldDisplaySpoilerObscurity(stateFromStores);
-  obj = {
+  const obj5 = {
     model: memo,
-    markdownTextRenderOptions: null,
+    markdownTextRenderOptions: { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldForceRevealSpoilers: !shouldDisplaySpoilerObscurity, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 },
     onTapLink(nativeEvent) {
       const result = handleMessagesTapLink.handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
     },
@@ -65,16 +64,29 @@ export default function TextDisplayComponent(type) {
     onTapEmoji: null,
     style: null
   };
-  obj = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldForceRevealSpoilers: !shouldDisplaySpoilerObscurity, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
-  obj.markdownTextRenderOptions = obj;
   const obj4 = type(content[13]);
-  obj.onLongPressLink = type(content[16]).contentHandlers.onLongPressLink;
-  obj.onTapAttachmentLink = type(content[16]).contentHandlers.onTapAttachmentLink;
-  obj.onLongPressAttachmentLink = type(content[16]).contentHandlers.onLongPressAttachmentLink;
-  obj.onTapMention = type(content[16]).contentHandlers.onTapMention;
-  obj.onTapTimestamp = type(content[16]).contentHandlers.onTapTimestamp;
-  obj.onTapInlineCode = type(content[16]).contentHandlers.onTapInlineCode;
-  obj.onTapEmoji = type(content[16]).contentHandlers.onTapEmoji;
-  obj.style = { width: "100%" };
-  return jsx(id(content[14]), { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldForceRevealSpoilers: !shouldDisplaySpoilerObscurity, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 });
+  const obj6 = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldForceRevealSpoilers: !shouldDisplaySpoilerObscurity, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
+  obj5.onLongPressLink = type(content[16]).contentHandlers.onLongPressLink;
+  obj5.onTapAttachmentLink = type(content[16]).contentHandlers.onTapAttachmentLink;
+  obj5.onLongPressAttachmentLink = type(content[16]).contentHandlers.onLongPressAttachmentLink;
+  obj5.onTapMention = type(content[16]).contentHandlers.onTapMention;
+  obj5.onTapTimestamp = type(content[16]).contentHandlers.onTapTimestamp;
+  obj5.onTapInlineCode = type(content[16]).contentHandlers.onTapInlineCode;
+  obj5.onTapEmoji = type(content[16]).contentHandlers.onTapEmoji;
+  obj5.style = { width: "100%" };
+  return jsx(id(content[14]), {
+    model: memo,
+    markdownTextRenderOptions: { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldForceRevealSpoilers: !shouldDisplaySpoilerObscurity, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 },
+    onTapLink(nativeEvent) {
+      const result = handleMessagesTapLink.handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
+    },
+    onLongPressLink: null,
+    onTapAttachmentLink: null,
+    onLongPressAttachmentLink: null,
+    onTapMention: null,
+    onTapTimestamp: null,
+    onTapInlineCode: null,
+    onTapEmoji: null,
+    style: null
+  });
 };

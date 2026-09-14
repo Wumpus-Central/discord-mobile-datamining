@@ -4,7 +4,7 @@
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9293 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
@@ -16,19 +16,19 @@ const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesExisti
 
 export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   ({ style, userId, userKey } = arg0);
-  let obj = useSecureFramesUserVerifiedKeysCount;
-  const secureFramesUserVerifiedKeysCount = obj.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
+  const tmp = closure_4();
+  const secureFramesUserVerifiedKeysCount = useSecureFramesUserVerifiedKeysCount.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items = [tmp.container, style];
-    obj.style = items;
-    obj = { messageType: native.HelpMessageTypes.INFO, children: null };
+    obj2.style = items;
+    const obj3 = { messageType: native.HelpMessageTypes.INFO, children: null };
     const intl = util.intl;
-    const obj1 = { count: secureFramesUserVerifiedKeysCount };
-    obj.children = intl.format(util.t.uZDkz0, obj1);
-    obj.children = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: null });
-    tmp5 = <View messageType={native.HelpMessageTypes.INFO}>{null}</View>;
+    const obj4 = { count: secureFramesUserVerifiedKeysCount };
+    obj3.children = intl.format(util.t.uZDkz0, obj4);
+    obj2.children = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: null });
+    tmp5 = <View style={null}>{null}</View>;
   }
   return tmp5;
 };

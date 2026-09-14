@@ -1,7 +1,7 @@
-// === Module 12477: SearchTabsFetchManager ===
+// === Module 12478: SearchTabsFetchManager ===
 
-// Module 12477 (SearchTabsFetchManager)
-import SearchFetcher from "SearchFetcher" /* 12479 */;
+// Module 12478 (SearchTabsFetchManager)
+import SearchFetcher from "SearchFetcher" /* 12480 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -9,7 +9,7 @@ let closure_2 = ["include_nsfw", "channel_id"];
 const SearchConstants = fn(7982);
 ({ SEARCH_FILTERS_BY_TAB: closure_4, SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty, SEARCH_QUERY_DEFAULT_FILTERS: metroRequire } = SearchConstants);
 const SearchTypes = fn(1074).SearchTypes;
-const AbstractSearchFetchManager = fn(12478).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12479).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {
 }
 const prototype = SearchTabsFetchManager.prototype;
@@ -26,13 +26,13 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
     } else {
       obj = {};
     }
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(timestampProducer);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(closure_2);
     const merged3 = Object.assign(dependencyMap);
-    obj.limit = require(item);
-    obj.tabs[item] = obj;
+    obj2.limit = require(item);
+    obj.tabs[item] = obj2;
     const tmp = require(item);
   });
   return obj;

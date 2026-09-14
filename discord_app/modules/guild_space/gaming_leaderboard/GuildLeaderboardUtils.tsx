@@ -1,8 +1,8 @@
-// === Module 11037: GuildLeaderboardUtils ===
+// === Module 11038: GuildLeaderboardUtils ===
 
-// Module 11037 (GuildLeaderboardUtils)
+// Module 11038 (GuildLeaderboardUtils)
 import util from "util" /* 1114 */;
-import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 11038 */;
+import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 11039 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,14 +11,13 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 
 export const LEADERBOARD_WINNER_ROLE_NAME_PREFIX = "leaderboard-winner-badge-sentinel-deliberately-longer-than-the-100-character-maximum-role-name-length:";
 export const getLeaderboardWinnerBadgeText = function getLeaderboardWinnerBadgeText(prop) {
-  let obj = GuildLeaderboardStatCopy;
-  const name = obj.getStatName(prop.winningStat).name;
+  const name = GuildLeaderboardStatCopy.getStatName(prop.winningStat).name;
   const winningStreak = prop.winningStreak;
   if (null != winningStreak) {
     if (winningStreak > 1) {
       const intl2 = util.intl;
-      obj = { streakCount: winningStreak, statName: name };
-      let formatToPlainStringResult = intl2.formatToPlainString(util.t.owAd83, obj);
+      const obj2 = { streakCount: winningStreak, statName: name };
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t.owAd83, obj2);
     }
     return formatToPlainStringResult;
   }

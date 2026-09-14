@@ -1,6 +1,6 @@
-// === Module 14697: ChangeAvatarActionSheet ===
+// === Module 14698: ChangeAvatarActionSheet ===
 
-// Module 14697 (ChangeAvatarActionSheet)
+// Module 14698 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,7 +11,7 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import Form from "Form" /* 8716 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14681 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14682 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -20,21 +20,20 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1074).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { nitroWheel: null, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
-createStyles = { marginLeft: nativeDefault.space.PX_8 };
-createStyles.nitroWheel = createStyles;
-createStyles.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };
-let obj1 = { color: nativeDefault.colors.TEXT_DEFAULT };
-createStyles.label = { marginBottom: 4, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
-let obj2 = { marginBottom: 4, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
-createStyles.remove = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let obj3 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-createStyles.upsellButton = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
-createStyles.upsellTitleContainer = { flexDirection: "row", alignItems: "flex-end" };
-createStyles.titleWrapper = { flex: 0 };
-createStyles.titleContainer = { justifyContent: "flex-start" };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
+const obj3 = { marginLeft: nativeDefault.space.PX_8 };
+obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };
+let obj4 = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.label = { marginBottom: 4, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
+let obj5 = { marginBottom: 4, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
+obj2.remove = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj6 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj2.upsellButton = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
+obj2.upsellTitleContainer = { flexDirection: "row", alignItems: "flex-end" };
+obj2.titleWrapper = { flex: 0 };
+obj2.titleContainer = { justifyContent: "flex-start" };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/ChangeAvatarActionSheet.tsx");
 
@@ -49,92 +48,90 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     flag = false;
   }
   const tmp = closure_9();
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = PremiumUtilsDefault;
-  let isPremiumResult = obj1.isPremium(stateFromStores);
-  obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
+  const obj4 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.lqaIxI);
+  obj4.title = intl.string(util.t.lqaIxI);
   if (isPremiumResult) {
     isPremiumResult = timestampProducer(NitroWheelIcon.NitroWheelIcon, {});
   }
-  obj.trailing = isPremiumResult;
+  obj4.trailing = isPremiumResult;
   ({ titleWrapper: obj3.titleWrapperStyle, titleContainer: obj3.titleContainerStyle } = tmp);
-  const items1 = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), ];
-  obj = { label: null, subLabel: null, onPress: null };
+  const items1 = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4), ];
+  const obj5 = { label: null, subLabel: null, onPress: null };
   const intl2 = util.intl;
-  obj.label = intl2.string(util.t["MsUY/S"]);
+  obj5.label = intl2.string(util.t["MsUY/S"]);
   const intl3 = util.intl;
-  obj.subLabel = intl3.string(util.t.r5hKOy);
-  obj.onPress = handleUploadAvatarSelect;
-  const items2 = [timestampProducer(TableRow.TableRow, obj), , , , ];
+  obj5.subLabel = intl3.string(util.t.r5hKOy);
+  obj5.onPress = handleUploadAvatarSelect;
+  const items2 = [timestampProducer(TableRow.TableRow, obj5), , , , ];
   let tmp8Result = null != handleUploadGIFAvatarSelect && !showAnimatedAvatarUpsell;
   if (tmp8Result) {
-    obj1 = { label: null, onPress: null };
+    const obj6 = { label: null, onPress: null };
     const intl4 = util.intl;
-    obj1.label = intl4.string(util.t["xsC+/y"]);
-    obj1.onPress = handleUploadGIFAvatarSelect;
-    tmp8Result = timestampProducer(TableRow.TableRow, obj1);
+    obj6.label = intl4.string(util.t["xsC+/y"]);
+    obj6.onPress = handleUploadGIFAvatarSelect;
+    tmp8Result = timestampProducer(TableRow.TableRow, obj6);
   }
   items2[1] = tmp8Result;
   if (showAnimatedAvatarUpsell) {
-    const obj2 = { label: null, subLabel: null };
-    const obj3 = { style: tmp.upsellTitleContainer, children: null };
-    const obj4 = { text: null };
+    const obj7 = { label: null, subLabel: null };
+    const obj8 = { style: tmp.upsellTitleContainer, children: null };
+    const obj9 = { text: null };
     const intl5 = util.intl;
-    obj4.text = intl5.string(util.t.xZ0Wot);
-    const items3 = [timestampProducer(Form.FormLabel, obj4), ];
-    const obj5 = { style: tmp.nitroWheel, size: "sm" };
-    items3[1] = timestampProducer(NitroWheelIcon.NitroWheelIcon, obj5);
-    obj3.children = items3;
-    obj2.label = React5(View, obj3);
-    const obj6 = { children: null };
-    const obj7 = { style: tmp.sublabel, numberOfLines: 3, text: null };
+    obj9.text = intl5.string(util.t.xZ0Wot);
+    const items3 = [timestampProducer(Form.FormLabel, obj9), ];
+    const obj10 = { style: tmp.nitroWheel, size: "sm" };
+    items3[1] = timestampProducer(NitroWheelIcon.NitroWheelIcon, obj10);
+    obj8.children = items3;
+    obj7.label = React5(View, obj8);
+    const obj11 = { children: null };
+    const obj12 = { style: tmp.sublabel, numberOfLines: 3, text: null };
     const intl6 = util.intl;
-    obj7.text = intl6.string(util.t.L3UPqR);
-    const items4 = [timestampProducer(Form.FormSubLabel, obj7), ];
-    const obj8 = { style: tmp.upsellButton, children: null };
-    const obj9 = { analyticsObject: AnalyticsObjects.ANIMATED_AVATAR, label: null };
+    obj12.text = intl6.string(util.t.L3UPqR);
+    const items4 = [timestampProducer(Form.FormSubLabel, obj12), ];
+    const obj13 = { style: tmp.upsellButton, children: null };
+    const obj14 = { analyticsObject: AnalyticsObjects.ANIMATED_AVATAR, label: null };
     const intl7 = util.intl;
-    obj9.label = intl7.string(util.t.mr4K7D);
-    obj8.children = timestampProducer(UserProfileUpsellButtonDefault, obj9);
-    items4[1] = timestampProducer(View, obj8);
-    obj6.children = items4;
-    obj2.subLabel = React5(React6, obj6);
-    showAnimatedAvatarUpsell = timestampProducer(TableRow.TableRow, obj2);
+    obj14.label = intl7.string(util.t.mr4K7D);
+    obj13.children = timestampProducer(UserProfileUpsellButtonDefault, obj14);
+    items4[1] = timestampProducer(View, obj13);
+    obj11.children = items4;
+    obj7.subLabel = React5(React6, obj11);
+    showAnimatedAvatarUpsell = timestampProducer(TableRow.TableRow, obj7);
     const tmp5Result = UserProfileUpsellButtonDefault;
   }
   items2[2] = showAnimatedAvatarUpsell;
-  tmp8Result = null != handleEditAvatarDecorationSelect;
-  if (tmp8Result) {
-    const obj10 = { label: null, onPress: null };
-    const obj11 = { style: tmp.upsellTitleContainer, children: null };
-    const obj12 = { text: null };
+  let tmp8Result2 = null != handleEditAvatarDecorationSelect;
+  if (tmp8Result2) {
+    const obj15 = { label: null, onPress: null };
+    const obj16 = { style: tmp.upsellTitleContainer, children: null };
+    const obj17 = { text: null };
     const intl8 = util.intl;
-    obj12.text = intl8.string(util.t.BVcYCx);
-    obj11.children = timestampProducer(Form.FormLabel, obj12);
-    obj10.label = timestampProducer(View, obj11);
-    obj10.onPress = handleEditAvatarDecorationSelect;
-    tmp8Result = timestampProducer(TableRow.TableRow, obj10);
+    obj17.text = intl8.string(util.t.BVcYCx);
+    obj16.children = timestampProducer(Form.FormLabel, obj17);
+    obj15.label = timestampProducer(View, obj16);
+    obj15.onPress = handleEditAvatarDecorationSelect;
+    tmp8Result2 = timestampProducer(TableRow.TableRow, obj15);
   }
-  items2[3] = tmp8Result;
+  items2[3] = tmp8Result2;
   if (flag) {
-    const obj13 = { label: null, onPress: null };
-    const obj14 = { style: null, text: null };
+    const obj18 = { label: null, onPress: null };
+    const obj19 = { style: null, text: null };
     const items5 = [, ];
     ({ label: arr6[0], remove: arr6[1] } = tmp);
-    obj14.style = items5;
+    obj19.style = items5;
     const intl9 = util.intl;
-    obj14.text = intl9.string(util.t.twB3fz);
-    obj13.label = timestampProducer(Form.FormLabel, obj14);
-    obj13.onPress = handleRemoveAvatarSelect;
-    flag = timestampProducer(TableRow.TableRow, obj13);
+    obj19.text = intl9.string(util.t.twB3fz);
+    obj18.label = timestampProducer(Form.FormLabel, obj19);
+    obj18.onPress = handleRemoveAvatarSelect;
+    flag = timestampProducer(TableRow.TableRow, obj18);
   }
-  const obj15 = { children: null };
+  const obj36 = { children: null };
   items2[4] = flag;
   items1[1] = React5(TableRowGroup.TableRowGroup, { hasIcons: false, children: items2 });
-  obj15.children = items1;
-  return React5(ActionSheet.ActionSheet, obj15);
+  obj36.children = items1;
+  return React5(ActionSheet.ActionSheet, obj36);
 };

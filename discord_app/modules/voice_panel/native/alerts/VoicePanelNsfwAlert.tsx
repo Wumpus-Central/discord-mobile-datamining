@@ -1,6 +1,6 @@
-// === Module 17300: VoicePanelNsfwAlert ===
+// === Module 17302: VoicePanelNsfwAlert ===
 
-// Module 17300 (VoicePanelNsfwAlert)
+// Module 17302 (VoicePanelNsfwAlert)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
 import noop from "module_19" /* 19 */;
@@ -16,8 +16,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
-  let obj = guildId(4986);
-  dependencyMap = obj.useDismissModalCallback();
+  dependencyMap = guildId(4986).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
   const intl = guildId(1114).intl;
   const string = intl.string;
@@ -27,7 +26,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   } else {
     stringResult = string(t.ZmwvDc);
   }
-  obj = { title: stringResult, content: null, actions: null };
+  const obj2 = { title: stringResult, content: null, actions: null };
   const intl2 = tmp(1114).intl;
   const string2 = intl2.string;
   const t2 = tmp(1114).t;
@@ -36,9 +35,9 @@ export default function VoicePanelNsfwAlert(guildId) {
   } else {
     string2Result = string2(t2.E4Cd5I);
   }
-  obj.content = string2Result;
-  obj = { children: null };
-  const obj1 = {
+  obj2.content = string2Result;
+  const obj3 = { children: null };
+  const obj4 = {
     variant: "primary",
     onPress() {
       GuildActionCreatorsDefault.nsfwAgree(guildId);
@@ -48,9 +47,9 @@ export default function VoicePanelNsfwAlert(guildId) {
     text: null
   };
   const intl3 = tmp(1114).intl;
-  obj1.text = intl3.string(guildId(1114).t.wVq7uo);
-  const items = [closure_5(guildId(4986).AlertActionButton, obj1, "confirm"), ];
-  const obj2 = {
+  obj4.text = intl3.string(guildId(1114).t.wVq7uo);
+  const items = [closure_5(guildId(4986).AlertActionButton, obj4, "confirm"), ];
+  const obj5 = {
     variant: "secondary",
     onPress() {
       GuildActionCreatorsDefault.nsfwReturnToSafety(guildId);
@@ -59,10 +58,10 @@ export default function VoicePanelNsfwAlert(guildId) {
     text: null
   };
   const intl4 = tmp(1114).intl;
-  obj2.text = intl4.string(guildId(1114).t["/g10LC"]);
-  items[1] = closure_5(guildId(4986).AlertActionButton, obj2, "add-profile-picture");
-  obj.children = items;
-  obj.actions = closure_6(guildId(4986).AlertActions, obj);
-  return closure_5(guildId(4986).AlertModal, obj);
+  obj5.text = intl4.string(guildId(1114).t["/g10LC"]);
+  items[1] = closure_5(guildId(4986).AlertActionButton, obj5, "add-profile-picture");
+  obj3.children = items;
+  obj2.actions = closure_6(guildId(4986).AlertActions, obj3);
+  return closure_5(guildId(4986).AlertModal, obj2);
 };
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

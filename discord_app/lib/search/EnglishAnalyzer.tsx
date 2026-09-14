@@ -1,9 +1,11 @@
-// === Module 16824: EnglishAnalyzer ===
+// === Module 16826: EnglishAnalyzer ===
 
-// Module 16824 (EnglishAnalyzer)
+// Module 16826 (EnglishAnalyzer)
 import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 16825 */;
+import snowballStemmer from "snowballStemmer" /* 16827 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function stripPossessive(item) {
   return item.replace(/('|\u2019|\uFF07)(s|S)$/, "");
@@ -65,14 +67,13 @@ function highlightAST(content, set, flag) {
         content = "";
         const parts = content.content.split(/(\W+)/g);
         const item2 = parts.forEach((content) => {
-          let arr = content;
           if (shouldHighlight(content, closure_0, closure_1)) {
             if (arr.length > 0) {
-              let obj = { type: "text", content };
-              arr = items1.push(obj);
+              const obj = { type: "text", content };
+              items1.push(obj);
             }
-            obj = { type: "highlight", content };
-            arr = items1.push(obj);
+            const obj2 = { type: "highlight", content };
+            items1.push(obj2);
             content = "";
           } else {
             content = arr + content;
@@ -86,8 +87,8 @@ function highlightAST(content, set, flag) {
           if ("text" === content.type) {
             content.content = items1;
           } else {
-            obj = { type: "text", content: items1 };
-            const items2 = [obj];
+            let obj2 = { type: "text", content: items1 };
+            const items2 = [obj2];
             content.content = items2;
           }
         }

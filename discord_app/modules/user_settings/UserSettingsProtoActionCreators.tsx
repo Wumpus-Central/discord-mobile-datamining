@@ -4,20 +4,17 @@
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import Dispatcher from "Dispatcher" /* 573 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+import Dispatcher_mod from "Dispatcher" /* 573 */;
 
-let obj = fn;
+let obj2 = fn;
 function updateUserGuildSettings(guildId, arg1, INFREQUENT_USER_ACTION) {
   closure_0 = guildId;
   closure_1 = arg1;
-  return obj.updateAsync("guilds", async (guilds) => {
-    obj = obj(1223);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, closure_1);
-  }, INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (guilds) => obj2(1221).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), INFREQUENT_USER_ACTION);
 }
 function updateRecurringDismissibleContentState() {
   const self = this;
@@ -30,7 +27,7 @@ function updateRecurringDismissibleContentState() {
   return applyArgumentsResult;
 }
 let closure_14 = async function _updateRecurringDismissibleContentState() {
-  await closure_2_11.updateAsync("userContent", async (recurringDismissibleContentStates) => {
+  await PreloadedUserSettingsActionCreators.updateAsync("userContent", async (recurringDismissibleContentStates) => {
     const merged = Object.assign(recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0]);
     const merged1 = Object.assign(closure_1);
     recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
@@ -53,9 +50,11 @@ const Constants = fn(1074);
 ({ AbortCodes: closure_7, Endpoints: closure_8, AnalyticEvents: closure_9 } = Constants);
 const UserSettingsProtoLastWriteTimes = "UserSettingsProtoLastWriteTimes";
 let timestamp = Date.now();
+let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("CONNECTION_OPEN", () => {
   const timestamp = Date.now();
 });
+let Dispatcher = Dispatcher_mod;
 const subscription1 = Dispatcher.subscribe("CONNECTION_CLOSED", () => {
   const timestamp = Date.now();
 });
@@ -83,8 +82,8 @@ class UserSettingsProtoActionCreators {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -97,8 +96,8 @@ class UserSettingsProtoActionCreators {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const protoToSave = tmp7;
               closure_128_0 = undefined;
@@ -113,25 +112,25 @@ class UserSettingsProtoActionCreators {
               closure_128_0 = editInfo;
               if (null != editInfo.protoToSave) {
                 const item = obj.beforeSendCallbacks.forEach((processProto) => processProto.processProto(protoToSave.protoToSave));
-                let obj6 = protoToSave(tmp82[10]);
-                const protoToB64Result = obj6.protoToB64(obj.ProtoClass, editInfo.protoToSave);
+                const protoToB64Result = protoToSave(tmp82[10]).protoToB64(obj.ProtoClass, editInfo.protoToSave);
                 if (null != protoToB64Result) {
                   if ("" !== protoToB64Result) {
                     c3 = 1;
                     obj.saveLastSendTime();
                     const HTTP = protoToSave(tmp82[11]).HTTP;
                     const request = { url: closure_1_8.USER_SETTINGS_PROTO(obj.type), body: null, rejectWithError: false };
-                    let obj1 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
-                    request.body = obj1;
+                    const obj5 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
+                    request.body = obj5;
                     c4 = 2;
                     c5 = 1;
-                    const obj2 = { value: HTTP.patch(request), done: false };
-                    return obj2;
+                    const obj6 = { value: HTTP.patch(request), done: false };
+                    return obj6;
                   }
                 }
                 const logger5 = obj.logger;
                 logger5.log("Not persisting proto because there is nothing to change");
                 const beforeSendCallbacks = obj.beforeSendCallbacks;
+                const obj7 = protoToSave(tmp82[10]);
               } else {
                 const logger4 = obj.logger;
                 logger4.log("Not persisting proto because the proto was null");
@@ -176,8 +175,8 @@ class UserSettingsProtoActionCreators {
                 const _Math = Math;
                 const result = 30 * tmp3(tmp82[9]).Millis.SECOND;
                 timeout = setTimeout(closure_129_0.persistChanges, Math.min(result, closure_128_3 * tmp3(tmp82[9]).Millis.SECOND));
-                const obj3 = { rateLimited: true, timeout };
-                closure_129_0.dispatchChanges(obj3);
+                const obj8 = { rateLimited: true, timeout };
+                closure_129_0.dispatchChanges(obj8);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -185,8 +184,8 @@ class UserSettingsProtoActionCreators {
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj9 = { value, done: true };
+              return obj9;
             } else {
               body2 = value.body;
               if (body2.out_of_date) {
@@ -198,12 +197,12 @@ class UserSettingsProtoActionCreators {
               obj = protoToSave(tmp82[10]);
               closure_128_2 = obj.b64ToProto(closure_129_0.ProtoClass, body2.settings);
               if (null != closure_128_2) {
-                obj1 = tmp3(tmp82[5]);
-                const obj5 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
-                obj6 = { proto: closure_128_2, type: closure_129_0.type };
-                obj5.settings = obj6;
-                obj1.dispatch(obj5);
+                const obj10 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
+                const obj11 = { proto: closure_128_2, type: closure_129_0.type };
+                obj10.settings = obj11;
+                tmp3(tmp82[5]).dispatch(obj10);
                 c3 = 0;
+                obj2 = tmp3(tmp82[5]);
               }
             }
             c3 = 0;
@@ -249,8 +248,8 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -263,8 +262,8 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             let protoFieldClass;
@@ -272,15 +271,15 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
             closure_128_2 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: self.loadIfNecessary(), done: false };
-            return obj1;
+            const obj4 = { value: self.loadIfNecessary(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           protoFieldClass = tmp2(1941).getProtoFieldClass(closure_129_4.ProtoClass, closure_129_0);
@@ -292,14 +291,14 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
             const _String = String;
             const _HermesInternal = HermesInternal;
             logger.log("Updating " + String(closure_129_0) + " with delay " + closure_129_2);
-            const obj2 = { delaySeconds: closure_129_2, jitter: null, onError: null };
+            const obj7 = { delaySeconds: closure_129_2, jitter: null, onError: null };
             let tmp9 = closure_129_2 === constants.AUTOMATED;
             if (!tmp9) {
               tmp9 = closure_129_2 === constants.DAILY;
             }
-            obj2.jitter = tmp9;
-            obj2.onError = closure_129_3;
-            closure_129_4.markDirty(closure_128_2, obj2);
+            obj7.jitter = tmp9;
+            obj7.onError = closure_129_3;
+            closure_129_4.markDirty(closure_128_2, obj7);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -315,13 +314,13 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
   const self = this;
   _modDef38(true, "this cannot run in the overlay");
   const editInfo = this.getEditInfo().editInfo;
-  obj = { timeout: editInfo.timeout };
+  const obj = { timeout: editInfo.timeout };
   if (editInfo.loaded) {
     if (false !== dispatch.dispatch) {
-      obj = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, partial: true, local: true };
-      obj = { type: self.type, proto };
-      obj.settings = obj;
-      Dispatcher.dispatch(obj);
+      obj2 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, partial: true, local: true };
+      const obj3 = { type: self.type, proto };
+      obj2.settings = obj3;
+      Dispatcher.dispatch(obj2);
       const tmpResult = Dispatcher;
     }
     let num = dispatch.delaySeconds;
@@ -367,8 +366,8 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
     if (null == editInfo.protoToSave) {
       obj.protoToSave = proto;
     } else {
-      obj.protoToSave = obj(1223).mergeTopLevelFields(self.ProtoClass, editInfo.protoToSave, proto);
-      const obj5 = obj(1223);
+      obj.protoToSave = obj2(1221).mergeTopLevelFields(self.ProtoClass, editInfo.protoToSave, proto);
+      const obj5 = obj2(1221);
     }
     self.dispatchChanges(obj);
     tmp9 = null != obj.timeout && num < editInfo.timeoutDelay && !editInfo.rateLimited;
@@ -378,19 +377,17 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
   }
 };
 prototype["dispatchChanges"] = function dispatchChanges(changes) {
-  obj = { type: "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO", settings: null };
-  obj = { changes, type: this.type };
-  obj.settings = obj;
-  obj.dispatch(obj);
+  obj2 = { type: "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO", settings: { changes, type: this.type } };
+  Dispatcher.dispatch(obj2);
 };
 prototype["saveLastSendTime"] = function saveLastSendTime() {
-  const Storage = obj(510).Storage;
-  obj = Storage.get(UserSettingsProtoLastWriteTimes);
+  const Storage = obj2(510).Storage;
+  let obj = Storage.get(UserSettingsProtoLastWriteTimes);
   if (obj == null) {
     obj = {};
   }
   obj[this.type] = Date.now();
-  const Storage2 = obj(510).Storage;
+  const Storage2 = obj2(510).Storage;
   const result = Storage2.set(UserSettingsProtoLastWriteTimes, obj);
 };
 prototype["loadIfUncached"] = function loadIfUncached(FRECENCY_AND_FAVORITES_SETTINGS, arg1) {
@@ -414,8 +411,8 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -428,8 +425,8 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp7;
             let settings;
@@ -449,11 +446,11 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
             self.dispatchChanges({ loading: true });
             c3 = 1;
             const HTTP = closure_0(tmp36[11]).HTTP;
-            const obj1 = { url: closure_1_8.USER_SETTINGS_PROTO(self.type), rejectWithError: false };
+            const obj4 = { url: closure_1_8.USER_SETTINGS_PROTO(self.type), rejectWithError: false };
             c4 = 2;
             c5 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(obj4), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -467,8 +464,8 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             settings = value.body.settings;
             closure_128_1 = closure_0(tmp36[10]).b64ToProto(closure_129_1.ProtoClass, settings);
@@ -476,8 +473,8 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
               closure_129_1.dispatchChanges({ loading: false, loaded: true });
               c3 = 0;
               c5 = 3;
-              const obj4 = { value: undefined, done: true };
-              return obj4;
+              const obj7 = { value: undefined, done: true };
+              return obj7;
             } else {
               closure_128_2 = tmp3(tmp36[13])[closure_129_1.type];
               closure_128_3 = closure_0(tmp36[10]).runMigrations(closure_128_1, closure_128_2);
@@ -485,18 +482,18 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
               isDirty = closure_128_3.isDirty;
               cleanupFuncs = closure_128_3.cleanupFuncs;
               const obj11 = closure_0(tmp36[10]);
-              const obj5 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: null, local: false };
-              const obj6 = { type: closure_129_1.type, proto: closure_128_1 };
-              obj5.settings = obj6;
+              const obj8 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: null, local: false };
+              const obj9 = { type: closure_129_1.type, proto: closure_128_1 };
+              obj8.settings = obj9;
               let tmp17 = isDirty;
               if (!isDirty) {
                 tmp17 = closure_129_0;
               }
-              obj5.resetEditInfo = tmp17;
+              obj8.resetEditInfo = tmp17;
               c4 = 3;
               c5 = 1;
-              const obj7 = { value: tmp3(tmp36[5]).dispatch(obj5), done: false };
-              return obj7;
+              const obj13 = { value: tmp3(tmp36[5]).dispatch(obj8), done: false };
+              return obj13;
             }
             const obj10 = closure_0(tmp36[10]);
           }
@@ -506,15 +503,15 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           if (isDirty) {
             const result = closure_129_1.markDirtyFromMigration(proto, cleanupFuncs);
           }
           c3 = 0;
           c5 = 3;
-          obj = { value: closure_128_1, done: true };
+          const obj = { value: closure_128_1, done: true };
           return obj;
         }
       } catch (tmp36) {
@@ -539,7 +536,7 @@ prototype["markDirtyIfHasPendingChange"] = function markDirtyIfHasPendingChange(
   const self = this;
   if (beforeSendCallbacks.some((hasChanges) => hasChanges.hasChanges())) {
     ({ ProtoClass, markDirty } = self);
-    obj = { dispatch: false, delaySeconds: 0, cleanup };
+    const obj = { dispatch: false, delaySeconds: 0, cleanup };
     markDirty(ProtoClass.create(), obj);
   }
 };
@@ -556,22 +553,19 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f75028(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f75031(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f75018 = (arg0) => {
+  const f75021 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
-  return obj.updateAsync("guilds", async (guilds) => {
-    obj = obj(1223);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, closure_1);
-  }, UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (guilds) => obj2(1221).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
-obj = Object.create(UserSettingsProtoActionCreators.prototype);
-obj.beforeSendCallbacks = [];
-obj.lastSendTime = 0;
-obj.persistChanges = asyncGeneratorStep(async () => {
+const PreloadedUserSettingsActionCreators = Object.create(UserSettingsProtoActionCreators.prototype);
+PreloadedUserSettingsActionCreators.beforeSendCallbacks = [];
+PreloadedUserSettingsActionCreators.lastSendTime = 0;
+PreloadedUserSettingsActionCreators.persistChanges = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -579,8 +573,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -593,8 +587,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const protoToSave = tmp7;
           closure_128_0 = undefined;
@@ -609,25 +603,25 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           closure_128_0 = editInfo;
           if (null != editInfo.protoToSave) {
             const item = obj.beforeSendCallbacks.forEach((processProto) => processProto.processProto(protoToSave.protoToSave));
-            let obj6 = protoToSave(tmp82[10]);
-            const protoToB64Result = obj6.protoToB64(obj.ProtoClass, editInfo.protoToSave);
+            const protoToB64Result = protoToSave(tmp82[10]).protoToB64(obj.ProtoClass, editInfo.protoToSave);
             if (null != protoToB64Result) {
               if ("" !== protoToB64Result) {
                 c3 = 1;
                 obj.saveLastSendTime();
                 const HTTP = protoToSave(tmp82[11]).HTTP;
                 const request = { url: closure_1_8.USER_SETTINGS_PROTO(obj.type), body: null, rejectWithError: false };
-                let obj1 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
-                request.body = obj1;
+                const obj5 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
+                request.body = obj5;
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: HTTP.patch(request), done: false };
-                return obj2;
+                const obj6 = { value: HTTP.patch(request), done: false };
+                return obj6;
               }
             }
             const logger5 = obj.logger;
             logger5.log("Not persisting proto because there is nothing to change");
             const beforeSendCallbacks = obj.beforeSendCallbacks;
+            const obj7 = protoToSave(tmp82[10]);
           } else {
             const logger4 = obj.logger;
             logger4.log("Not persisting proto because the proto was null");
@@ -672,8 +666,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
             const _Math = Math;
             const result = 30 * tmp3(tmp82[9]).Millis.SECOND;
             timeout = setTimeout(closure_129_0.persistChanges, Math.min(result, closure_128_3 * tmp3(tmp82[9]).Millis.SECOND));
-            const obj3 = { rateLimited: true, timeout };
-            closure_129_0.dispatchChanges(obj3);
+            const obj8 = { rateLimited: true, timeout };
+            closure_129_0.dispatchChanges(obj8);
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -681,8 +675,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           body2 = value.body;
           if (body2.out_of_date) {
@@ -694,12 +688,12 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           obj = protoToSave(tmp82[10]);
           closure_128_2 = obj.b64ToProto(closure_129_0.ProtoClass, body2.settings);
           if (null != closure_128_2) {
-            obj1 = tmp3(tmp82[5]);
-            const obj5 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
-            obj6 = { proto: closure_128_2, type: closure_129_0.type };
-            obj5.settings = obj6;
-            obj1.dispatch(obj5);
+            const obj10 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
+            const obj11 = { proto: closure_128_2, type: closure_129_0.type };
+            obj10.settings = obj11;
+            tmp3(tmp82[5]).dispatch(obj10);
             c3 = 0;
+            obj2 = tmp3(tmp82[5]);
           }
         }
         c3 = 0;
@@ -717,13 +711,13 @@ obj.persistChanges = asyncGeneratorStep(async () => {
     }
   }
 });
-obj.ProtoClass = fn(1187).PreloadedUserSettings;
-obj.type = UserSettingsTypes.PRELOADED_USER_SETTINGS;
-obj.logger = new LoggerDefault(obj.ProtoClass.typeName);
-obj = Object.create(UserSettingsProtoActionCreators.prototype);
-obj.beforeSendCallbacks = [];
-obj.lastSendTime = 0;
-obj.persistChanges = asyncGeneratorStep(async () => {
+PreloadedUserSettingsActionCreators.ProtoClass = fn(1185).PreloadedUserSettings;
+PreloadedUserSettingsActionCreators.type = UserSettingsTypes.PRELOADED_USER_SETTINGS;
+PreloadedUserSettingsActionCreators.logger = new LoggerDefault(PreloadedUserSettingsActionCreators.ProtoClass.typeName);
+obj2 = Object.create(UserSettingsProtoActionCreators.prototype);
+obj2.beforeSendCallbacks = [];
+obj2.lastSendTime = 0;
+obj2.persistChanges = asyncGeneratorStep(async () => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -731,8 +725,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -745,8 +739,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const protoToSave = tmp7;
           closure_128_0 = undefined;
@@ -761,25 +755,25 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           closure_128_0 = editInfo;
           if (null != editInfo.protoToSave) {
             const item = obj.beforeSendCallbacks.forEach((processProto) => processProto.processProto(protoToSave.protoToSave));
-            let obj6 = protoToSave(tmp82[10]);
-            const protoToB64Result = obj6.protoToB64(obj.ProtoClass, editInfo.protoToSave);
+            const protoToB64Result = protoToSave(tmp82[10]).protoToB64(obj.ProtoClass, editInfo.protoToSave);
             if (null != protoToB64Result) {
               if ("" !== protoToB64Result) {
                 c3 = 1;
                 obj.saveLastSendTime();
                 const HTTP = protoToSave(tmp82[11]).HTTP;
                 const request = { url: closure_1_8.USER_SETTINGS_PROTO(obj.type), body: null, rejectWithError: false };
-                let obj1 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
-                request.body = obj1;
+                const obj5 = { settings: protoToB64Result, required_data_version: editInfo.offlineEditDataVersion };
+                request.body = obj5;
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: HTTP.patch(request), done: false };
-                return obj2;
+                const obj6 = { value: HTTP.patch(request), done: false };
+                return obj6;
               }
             }
             const logger5 = obj.logger;
             logger5.log("Not persisting proto because there is nothing to change");
             const beforeSendCallbacks = obj.beforeSendCallbacks;
+            const obj7 = protoToSave(tmp82[10]);
           } else {
             const logger4 = obj.logger;
             logger4.log("Not persisting proto because the proto was null");
@@ -824,8 +818,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
             const _Math = Math;
             const result = 30 * tmp3(tmp82[9]).Millis.SECOND;
             timeout = setTimeout(closure_129_0.persistChanges, Math.min(result, closure_128_3 * tmp3(tmp82[9]).Millis.SECOND));
-            const obj3 = { rateLimited: true, timeout };
-            closure_129_0.dispatchChanges(obj3);
+            const obj8 = { rateLimited: true, timeout };
+            closure_129_0.dispatchChanges(obj8);
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -833,8 +827,8 @@ obj.persistChanges = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           body2 = value.body;
           if (body2.out_of_date) {
@@ -846,12 +840,12 @@ obj.persistChanges = asyncGeneratorStep(async () => {
           obj = protoToSave(tmp82[10]);
           closure_128_2 = obj.b64ToProto(closure_129_0.ProtoClass, body2.settings);
           if (null != closure_128_2) {
-            obj1 = tmp3(tmp82[5]);
-            const obj5 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
-            obj6 = { proto: closure_128_2, type: closure_129_0.type };
-            obj5.settings = obj6;
-            obj1.dispatch(obj5);
+            const obj10 = { type: "USER_SETTINGS_PROTO_UPDATE", settings: null, resetEditInfo: true, wasSaved: true, local: false };
+            const obj11 = { proto: closure_128_2, type: closure_129_0.type };
+            obj10.settings = obj11;
+            tmp3(tmp82[5]).dispatch(obj10);
             c3 = 0;
+            obj2 = tmp3(tmp82[5]);
           }
         }
         c3 = 0;
@@ -869,10 +863,10 @@ obj.persistChanges = asyncGeneratorStep(async () => {
     }
   }
 });
-obj.ProtoClass = fn(1222).FrecencyUserSettings;
-obj.type = UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS;
-let tmp10 = new LoggerDefault(obj.ProtoClass.typeName);
-obj.logger = new LoggerDefault(obj.ProtoClass.typeName);
+obj2.ProtoClass = fn(1220).FrecencyUserSettings;
+obj2.type = UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS;
+let tmp10 = new LoggerDefault(PreloadedUserSettingsActionCreators.ProtoClass.typeName);
+obj2.logger = new LoggerDefault(obj2.ProtoClass.typeName);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoActionCreators.tsx");
 
@@ -881,9 +875,9 @@ export function markUserSettingsLoadOkayForDevelopment() {
 
 }
 export { UserSettingsProtoActionCreators };
-export const PreloadedUserSettingsActionCreators = obj;
-export const FrecencyUserSettingsActionCreators = obj;
-export const UserSettingsActionCreatorsByType = { [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj, [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj };
+export { PreloadedUserSettingsActionCreators };
+export const FrecencyUserSettingsActionCreators = obj2;
+export const UserSettingsActionCreatorsByType = { [UserSettingsTypes.PRELOADED_USER_SETTINGS]: PreloadedUserSettingsActionCreators, [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj2 };
 export { updateUserAllGuildSettings };
 export { updateUserGuildSettings };
 export const setDefaultGuildThemePreference = function setDefaultGuildThemePreference(GUILD) {
@@ -891,7 +885,7 @@ export const setDefaultGuildThemePreference = function setDefaultGuildThemePrefe
   return obj.updateAsync("appearance", async (defaultGuildThemePreference) => {
     let UNSPECIFIED = defaultGuildThemePreference.defaultGuildThemePreference;
     if (UNSPECIFIED == null) {
-      UNSPECIFIED = obj(1187).GuildThemeSourcePreference.UNSPECIFIED;
+      UNSPECIFIED = obj2(1185).GuildThemeSourcePreference.UNSPECIFIED;
     }
     if (UNSPECIFIED === closure_0) {
       return false;
@@ -902,30 +896,22 @@ export const setDefaultGuildThemePreference = function setDefaultGuildThemePrefe
 };
 export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(guildThemeSourcePreference) {
-  guildThemeSourcePreference = guildThemeSourcePreference(1187).GuildThemeSourcePreference.UNSPECIFIED;
-  const f75018 = (arg0) => {
+  obj2(1185).GuildThemeSourcePreference.UNSPECIFIED;
+  obj2 = guildThemeSourcePreference;
+  const f75021 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
-  return obj.updateAsync("guilds", async (guilds) => {
-    obj = obj(1223);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, closure_1);
-  }, UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (guilds) => obj2(1221).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateUserChannelSettings = function updateUserChannelSettings(arg0, arg1, arg2, INFREQUENT_USER_ACTION) {
   closure_0 = arg1;
   closure_1 = arg2;
   closure_129_0 = arg0;
-  closure_129_1 = (channels) => {
-    obj = obj(1223);
-    return obj.mutateUserChannelSettingsInternal(channels, closure_0, closure_1);
-  };
-  return obj.updateAsync("guilds", async (guilds) => {
-    obj = obj(1223);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, closure_1);
-  }, INFREQUENT_USER_ACTION);
+  closure_129_1 = (channels) => obj2(1221).mutateUserChannelSettingsInternal(channels, closure_0, closure_1);
+  return obj.updateAsync("guilds", async (guilds) => obj2(1221).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), INFREQUENT_USER_ACTION);
 };
 export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_INVITE) {
-  closure_0 = CHANNEL_NOTICE_INVITE;
+  obj2 = CHANNEL_NOTICE_INVITE;
   if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
     const userContent = UserSettingsProtoStore.settings.userContent;
     let dismissedContents;
@@ -934,23 +920,23 @@ export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_I
     }
     let hasBitResult = null != dismissedContents;
     if (hasBitResult) {
-      obj = closure_0(1942);
+      let obj = obj2(1942);
       hasBitResult = obj.hasBit(dismissedContents, CHANNEL_NOTICE_INVITE);
     }
     if (!hasBitResult) {
-      obj = { content_type: closure_0(1943).DismissibleContent[CHANNEL_NOTICE_INVITE] };
-      AnalyticsUtilsDefault.track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj);
+      obj2 = AnalyticsUtilsDefault;
+      const obj3 = { content_type: obj2(1943).DismissibleContent[CHANNEL_NOTICE_INVITE] };
+      obj2.track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj3);
     }
   }
   return obj.updateAsync("userContent", async (dismissedContents) => {
-    obj = obj(1942);
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
       return false;
     } else {
-      dismissedContents.dismissedContents = tmp(1942).addBit(dismissedContents.dismissedContents, closure_0);
-      const tmpResult = tmp(1942);
+      dismissedContents.dismissedContents = obj2(1942).addBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = obj2(1942);
     }
-    tmp = obj;
+    obj = obj2(1942);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export { updateRecurringDismissibleContentState };
@@ -967,21 +953,20 @@ export const updateGuildDismissedContent = function updateGuildDismissedContent(
 export const removeDismissedContent = function removeDismissedContent(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
   closure_0 = DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL;
   return obj.updateAsync("userContent", async (dismissedContents) => {
-    obj = obj(1942);
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
-      dismissedContents.dismissedContents = tmp(1942).removeBit(dismissedContents.dismissedContents, closure_0);
-      const tmpResult = tmp(1942);
+      dismissedContents.dismissedContents = obj2(1942).removeBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = obj2(1942);
     } else {
       return false;
     }
-    tmp = obj;
+    obj = obj2(1942);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const removeDismissedRecurringContent = function removeDismissedRecurringContent(GUILD_POWERUP_NOTIFICATION) {
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f75028 = (guilds) => {
+  const f75031 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -998,7 +983,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f75028(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f75031(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", async (arg0) => {
@@ -1011,13 +996,13 @@ export const checkAllDismissedContents = function checkAllDismissedContents() {
   return obj.updateAsync("userContent", async (recurringDismissibleContentStates) => {
     let uint8Array = new Uint8Array();
     for (const item10020 of tmp2) {
-      obj = closure_1_0(dependencyMap[19]);
+      let obj = obj2(dependencyMap[19]);
       if (obj.isSingleUseDismissibleContent(item10020)) {
-        let tmp5Result = closure_1_0(dependencyMap[16]);
+        let tmp5Result = obj2(dependencyMap[16]);
         uint8Array = tmp5Result.addBit(uint8Array, item10020);
       } else {
-        tmp5Result = closure_1_0(dependencyMap[20]);
-        arg0.recurringDismissibleContentStates[item10020] = tmp5Result.getDismissedRecurringDismissibleContentState(item10020);
+        let tmp5Result2 = obj2(dependencyMap[20]);
+        arg0.recurringDismissibleContentStates[item10020] = tmp5Result2.getDismissedRecurringDismissibleContentState(item10020);
       }
       continue;
     }

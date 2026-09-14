@@ -1,11 +1,13 @@
-// === Module 16956: WebhooksActionCreators ===
+// === Module 16958: WebhooksActionCreators ===
 
-// Module 16956 (WebhooksActionCreators)
+// Module 16958 (WebhooksActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ AbortCodes: c3, Endpoints: closure_4 } = Constants);
 const result = size.fileFinishedImporting("actions/WebhooksActionCreators.tsx");
@@ -13,34 +15,27 @@ const result = size.fileFinishedImporting("actions/WebhooksActionCreators.tsx");
 export default {
   fetchForGuild(id) {
     _require = id;
-    let obj = { type: "WEBHOOKS_FETCHING", guildId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "WEBHOOKS_FETCHING", guildId: id });
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_4.GUILD_WEBHOOKS(id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    value = HTTP.get(obj);
+    const obj3 = { url: closure_4.GUILD_WEBHOOKS(id), oldFormErrors: true, rejectWithError: null };
+    const obj2 = { type: "WEBHOOKS_FETCHING", guildId: id };
+    obj3.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    value = HTTP.get(obj3);
     const obj4 = require("HTTPUtils");
-    value.then((body) => {
-      const obj = { type: "WEBHOOKS_UPDATE", guildId, webhooks: body.body };
-      return obj.dispatch(obj);
-    }).catch((error) => {
-      const obj = { type: "WEBHOOKS_UPDATE", guildId, error: error.body.message };
-      obj.dispatch(obj);
+    value.then((body) => DispatcherDefault.dispatch({ type: "WEBHOOKS_UPDATE", guildId, webhooks: body.body })).catch((error) => {
+      DispatcherDefault.dispatch({ type: "WEBHOOKS_UPDATE", guildId, error: error.body.message });
     });
   },
   fetchForChannel(guildId, channelId) {
     _require = guildId;
     importDefault = channelId;
-    let obj = { type: "WEBHOOKS_FETCHING", guildId, channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "WEBHOOKS_FETCHING", guildId, channelId });
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), oldFormErrors: true, rejectWithError: true };
-    value = HTTP.get(obj);
-    value.then((body) => {
-      const obj = { type: "WEBHOOKS_UPDATE", guildId, channelId, webhooks: body.body };
-      return obj.dispatch(obj);
-    }).catch((error) => {
-      const obj = { type: "WEBHOOKS_UPDATE", guildId, error: error.body.message };
-      obj.dispatch(obj);
+    const obj2 = { type: "WEBHOOKS_FETCHING", guildId, channelId };
+    value = HTTP.get({ url: closure_4.CHANNEL_WEBHOOKS(channelId), oldFormErrors: true, rejectWithError: true });
+    const obj3 = { url: closure_4.CHANNEL_WEBHOOKS(channelId), oldFormErrors: true, rejectWithError: true };
+    value.then((body) => DispatcherDefault.dispatch({ type: "WEBHOOKS_UPDATE", guildId, channelId, webhooks: body.body })).catch((error) => {
+      DispatcherDefault.dispatch({ type: "WEBHOOKS_UPDATE", guildId, error: error.body.message });
     });
   },
   create(guildId, channelId, arg2) {
@@ -56,47 +51,45 @@ export default {
     const postResult = HTTP.post(request);
     return HTTP.post(request).then((body) => {
       body = body.body;
-      const obj = { type: "WEBHOOK_CREATE", guildId, webhook: body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "WEBHOOK_CREATE", guildId, webhook: body });
       return body;
     }).catch((error) => {
       const body = error.body;
       if (null != body) {
         if (body.code === constants.TOO_MANY_WEBHOOKS) {
-          let obj = { title: null, body: null };
+          const obj2 = { title: null, body: null };
           const intl3 = guildId(1114).intl;
-          obj.title = intl3.string(guildId(1114).t.cCqsca);
+          obj2.title = intl3.string(guildId(1114).t.cCqsca);
           const intl4 = guildId(1114).intl;
-          obj.body = intl4.string(guildId(1114).t["w+QZoX"]);
-          AlertActionCreatorsDefault.show(obj);
+          obj2.body = intl4.string(guildId(1114).t["w+QZoX"]);
+          AlertActionCreatorsDefault.show(obj2);
         }
         return null;
       }
       if (429 === error.status) {
-        obj = { title: null, body: null };
+        const obj4 = { title: null, body: null };
         const intl = guildId(1114).intl;
-        obj.title = intl.string(guildId(1114).t.cCqsca);
+        obj4.title = intl.string(guildId(1114).t.cCqsca);
         const intl2 = guildId(1114).intl;
-        obj.body = intl2.string(guildId(1114).t["YBM+UW"]);
-        obj.show(obj);
+        obj4.body = intl2.string(guildId(1114).t["YBM+UW"]);
+        AlertActionCreatorsDefault.show(obj4);
       } else {
-        const obj1 = { title: null, body: null };
+        const obj6 = { title: null, body: null };
         const intl5 = guildId(1114).intl;
-        obj1.title = intl5.string(guildId(1114).t.cCqsca);
+        obj6.title = intl5.string(guildId(1114).t.cCqsca);
         const intl6 = guildId(1114).intl;
-        obj1.body = intl6.string(guildId(1114).t["/4TwKf"]);
-        AlertActionCreatorsDefault.show(obj1);
+        obj6.body = intl6.string(guildId(1114).t["/4TwKf"]);
+        AlertActionCreatorsDefault.show(obj6);
       }
     });
   },
   delete(guildId, webhookId) {
     _require = guildId;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: closure_4.WEBHOOK(webhookId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj = { url: closure_4.WEBHOOK(webhookId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     const obj2 = require("HTTPUtils");
     return HTTP.del(obj).then(() => {
-      const obj = { type: "WEBHOOK_DELETE", guildId, webhookId };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "WEBHOOK_DELETE", guildId, webhookId });
     });
   },
   update(guildId, webhookId, body) {
@@ -106,8 +99,7 @@ export default {
     const obj2 = require("HTTPUtils");
     return HTTP.patch(request).then((body) => {
       body = body.body;
-      const obj = { type: "WEBHOOK_UPDATE", guildId, webhook: body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "WEBHOOK_UPDATE", guildId, webhook: body });
       return body;
     });
   }

@@ -1,12 +1,12 @@
-// === Module 16094: RedesignNotificationModal ===
+// === Module 16096: RedesignNotificationModal ===
 
-// Module 16094 (RedesignNotificationModal)
+// Module 16096 (RedesignNotificationModal)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12540 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12541 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12817 */;
-import _modDef16095 from "module_16095" /* 16095 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12541 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12818 */;
+import _modDef16097 from "module_16097" /* 16097 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,40 +27,37 @@ class RedesignNotificationModal {
     }, items);
     obj = { style: tmp.container, children: null };
     callback1 = closure_3.useCallback(() => {
-      const obj = { action_type: constants2.SKIP_STEP, action_location: constants.ALERT };
-      obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: constants2.SKIP_STEP, action_location: constants.ALERT });
+      const obj2 = { action_type: constants2.SKIP_STEP, action_location: constants.ALERT };
       const result = PushNotificationActionCreators.setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
       const result1 = NotificationPermissionUtil.enableProvisionalPushNotification();
       if (onComplete != null) {
         tmp4(true);
       }
     }, items1);
-    obj = { onAllow: callback, onDontAllow: callback1, header: null, title: null, subtitle: null };
-    obj1 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: null };
+    obj1 = { onAllow: callback, onDontAllow: callback1, header: null, title: null, subtitle: null };
+    obj4 = { resizeMode: "contain", style: tmp.notificationHeaderImage, source: null };
     tmp4 = closure_1(closure_2[11]);
-    obj1.source = closure_1(closure_2[12]);
-    obj.header = jsx(Image, obj1);
+    obj4.source = closure_1(closure_2[12]);
+    obj1.header = jsx(Image, obj4);
     intl = onComplete(closure_2[13]).intl;
-    obj.title = intl.string(onComplete(closure_2[13]).t["3nx0b5"]);
+    obj1.title = intl.string(onComplete(closure_2[13]).t["3nx0b5"]);
     intl2 = onComplete(closure_2[13]).intl;
-    obj.subtitle = intl2.string(onComplete(closure_2[13]).t.Gf7U1T);
-    obj.children = jsx(tmp4, obj);
+    obj1.subtitle = intl2.string(onComplete(closure_2[13]).t.Gf7U1T);
+    obj.children = jsx(tmp4, obj1);
     return jsx(View, obj);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12538).PermissionStateType;
-const NotificationPermissionConstants = fn(12539);
+const PermissionStateType = fn(12539).PermissionStateType;
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, notificationHeaderImage: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: -nativeDefault.space.PX_48 };
-createStyles.container = createStyles;
-createStyles.notificationHeaderImage = { position: "absolute", alignSelf: "center", zIndex: 2, top: -140, height: 156, width: 150 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: -nativeDefault.space.PX_48 }, notificationHeaderImage: { position: "absolute", alignSelf: "center", zIndex: 2, top: -140, height: 156, width: 150 } };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/notification/RedesignNotificationModal.tsx");
 

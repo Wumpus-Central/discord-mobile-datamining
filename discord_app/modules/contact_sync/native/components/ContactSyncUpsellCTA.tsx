@@ -1,22 +1,21 @@
-// === Module 13945: ContactSyncUpsellCTA ===
+// === Module 13946: ContactSyncUpsellCTA ===
 
-// Module 13945 (ContactSyncUpsellCTA)
+// Module 13946 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12805 */;
-import _modDef13946 from "module_13946" /* 13946 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12806 */;
+import _modDef13947 from "module_13947" /* 13947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(12808).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12809).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj.container = obj;
+let obj = { container: { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_7 = createStyles.createStyles(obj);
+let obj3 = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
 
@@ -24,34 +23,33 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   location = location.location;
   let obj = {
     onPress() {
-      const obj = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
         str2 = "Friends List Upsell";
       }
-      obj.location = { page: str2 };
-      obj.track(constants.OPEN_MODAL, obj);
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
       if (str == null) {
         str = "Friends List Upsell";
       }
       ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7297);
-      let obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-      obj = { label: null, onPress: null };
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
       const intl = location(1114).intl;
-      obj.label = intl.string(location(1114).t.WAI6xu);
-      obj.onPress = function onPress() {
+      obj3.label = intl.string(location(1114).t.WAI6xu);
+      obj3.onPress = function onPress() {
         closure_1_3();
       };
-      const items = [obj];
-      obj.options = items;
-      const result = obj.showSimpleActionSheet(obj);
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(7297).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13946,
+    iconSource: _modDef13947,
     title: null,
     subtitle: null
   };
@@ -63,34 +61,33 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.subtitle = intl2.string(location(1114).t.c6KIpg);
   return jsx(location(8716).FormCTA, {
     onPress() {
-      const obj = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
         str2 = "Friends List Upsell";
       }
-      obj.location = { page: str2 };
-      obj.track(constants.OPEN_MODAL, obj);
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
       if (str == null) {
         str = "Friends List Upsell";
       }
       ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      location(7297);
-      let obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-      obj = { label: null, onPress: null };
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
       const intl = location(1114).intl;
-      obj.label = intl.string(location(1114).t.WAI6xu);
-      obj.onPress = function onPress() {
+      obj3.label = intl.string(location(1114).t.WAI6xu);
+      obj3.onPress = function onPress() {
         closure_1_3();
       };
-      const items = [obj];
-      obj.options = items;
-      const result = obj.showSimpleActionSheet(obj);
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(7297).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13946,
+    iconSource: _modDef13947,
     title: null,
     subtitle: null
   });

@@ -12,27 +12,26 @@ import noop from "module_19" /* 19 */;
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
-  let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: _modDef9674, style: tmp.announcementBirb };
-  const items = [timestampProducer(React3, obj), , , ];
-  obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
+  const obj = { style: tmp.alertContainer, children: null };
+  const items = [timestampProducer(React3, { source: _modDef9674, style: tmp.announcementBirb }), , , ];
+  const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["06YebE"]);
-  items[1] = timestampProducer(Text_Text.Text, obj);
-  const obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
+  obj3.children = intl.string(util.t["06YebE"]);
+  items[1] = timestampProducer(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
-  items[2] = timestampProducer(Text_Text.Text, obj1);
-  const obj3 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
+  obj4.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
+  items[2] = timestampProducer(Text_Text.Text, obj4);
+  const obj6 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
   const intl3 = util.intl;
-  obj3.children = intl3.string(util.t.z81WwD);
-  items[3] = timestampProducer(Text_Text.Text, obj3);
+  obj6.children = intl3.string(util.t.z81WwD);
+  items[3] = timestampProducer(Text_Text.Text, obj6);
   obj.children = items;
   return React5(React4, obj);
 }
 function LinkButton() {
-  let obj = { style: closure_8().linkWrapper, children: null };
-  obj = {
+  const obj = { style: closure_8().linkWrapper, children: null };
+  const obj2 = {
     variant: "secondary",
     size: "sm",
     onPress() {
@@ -41,8 +40,8 @@ function LinkButton() {
     text: null
   };
   const intl = util.intl;
-  obj.text = intl.string(util.t.E0gf5l);
-  obj.children = timestampProducer(components_Button_Button.Button, obj);
+  obj2.text = intl.string(util.t.E0gf5l);
+  obj.children = timestampProducer(components_Button_Button.Button, obj2);
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -57,12 +56,12 @@ const result = size.fileFinishedImporting("modules/activities/confirmExternalApp
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
-  const obj = { title: "", children: timestampProducer(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
+  const obj2 = { title: "", children: timestampProducer(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
   const intl = util.intl;
-  obj.confirmText = intl.string(util.t["3PatSz"]);
-  obj.onCancel = onCancel;
+  obj2.confirmText = intl.string(util.t["3PatSz"]);
+  obj2.onCancel = onCancel;
   const intl2 = util.intl;
-  obj.cancelText = intl2.string(util.t["ETE/oC"]);
-  obj.footer = timestampProducer(LinkButton, {});
-  return Promise.resolve(obj.show(obj));
+  obj2.cancelText = intl2.string(util.t["ETE/oC"]);
+  obj2.footer = timestampProducer(LinkButton, {});
+  return Promise.resolve(AlertActionCreatorsDefault.show(obj2));
 };

@@ -14,7 +14,7 @@ let closure_8 = async function _transferToXbox(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } else {
       return { value: "HermesInternal", done: null };
@@ -28,8 +28,8 @@ let closure_8 = async function _transferToXbox(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -38,39 +38,10 @@ let closure_8 = async function _transferToXbox(arg0) {
           closure_129_2 = undefined;
           c3 = 1;
           c4 = 1;
-          const obj1 = { value: GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX), done: false };
-          return obj1;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          c3 = 2;
-          c4 = 1;
-          let obj3 = { value: closure_130_2(closure_130_3[6]).disconnectRemote(), done: false };
+          const obj3 = { value: GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX), done: false };
           return obj3;
         }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj4 = { value, done: true };
-          return obj4;
-        } else {
-          let obj9 = closure_130_2(closure_130_3[6]);
-          c3 = 3;
-          c4 = 1;
-          const obj5 = { value: obj9.getConnectNonce(), done: false };
-          return obj5;
-        }
-      } else if (3 === tmp5) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -79,32 +50,59 @@ let closure_8 = async function _transferToXbox(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_2(closure_130_3[6]).disconnectRemote(), done: false };
+          return obj7;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          c3 = 3;
+          c4 = 1;
+          const obj9 = { value: closure_130_2(closure_130_3[6]).getConnectNonce(), done: false };
+          return obj9;
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
           closure_129_1 = value;
-          const obj7 = { nonce: closure_129_1, forQRCode: false };
-          closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, obj7);
+          const obj12 = { nonce: closure_129_1, forQRCode: false };
+          closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, obj12);
           c3 = 4;
           c4 = 1;
-          const obj8 = { value: closure_130_5.canOpenURL(closure_129_2), done: false };
-          return obj8;
+          const obj14 = { value: closure_130_5.canOpenURL(closure_129_2), done: false };
+          return obj14;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj9 = { value, done: true };
-        return obj9;
+        const obj15 = { value, done: true };
+        return obj15;
       } else if (value) {
         closure_130_1(closure_130_3[11])(closure_129_0.id, closure_130_6.XBOX);
-        obj3 = closure_130_2(closure_130_3[6]);
-        obj3.waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
-        obj4 = closure_130_2(closure_130_3[12]);
-        obj4.stopOwnStream(false);
+        closure_130_2(closure_130_3[6]).waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
+        const obj4 = closure_130_2(closure_130_3[6]);
+        closure_130_2(closure_130_3[12]).stopOwnStream(false);
         closure_130_5.openURL(closure_129_2);
         c4 = 3;
         return { value: "HermesInternal", done: null };
       } else {
-        const obj10 = {
+        const obj17 = {
           importer() {
                   return closure_1_0(paths[10])(paths[9], paths.paths).then((result) => {
                     closure_0 = result.default;
@@ -116,8 +114,8 @@ let closure_8 = async function _transferToXbox(arg0) {
                 }
         };
         c4 = 3;
-        const obj11 = { value: closure_130_1(closure_130_3[8]).openLazy(obj10), done: true };
-        return obj11;
+        const obj18 = { value: closure_130_1(closure_130_3[8]).openLazy(obj17), done: true };
+        return obj18;
       }
     } catch (tmp39) {
       c4 = tmp;

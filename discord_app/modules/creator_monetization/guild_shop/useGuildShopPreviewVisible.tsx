@@ -3,6 +3,8 @@
 // Module 7366 (useGuildShopPreviewVisible)
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ Permissions: c3, GuildFeatures: closure_4 } = Constants);

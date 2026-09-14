@@ -1,9 +1,11 @@
-// === Module 16805: useSearchMessages ===
+// === Module 16807: useSearchMessages ===
 
-// Module 16805 (useSearchMessages)
-import SearchUtils from "SearchUtils" /* 12469 */;
+// Module 16807 (useSearchMessages)
+import SearchUtils from "SearchUtils" /* 12470 */;
 import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

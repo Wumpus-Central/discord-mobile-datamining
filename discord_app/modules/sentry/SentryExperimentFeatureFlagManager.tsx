@@ -1,9 +1,9 @@
-// === Module 18003: SentryExperimentFeatureFlagManager ===
+// === Module 18004: SentryExperimentFeatureFlagManager ===
 
-// Module 18003 (SentryExperimentFeatureFlagManager)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+// Module 18004 (SentryExperimentFeatureFlagManager)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -76,7 +76,7 @@ function syncAllExperimentFlags() {
         continue;
       } else {
         let _HermesInternal = HermesInternal;
-        arr = items.push("" + key10027 + ":" + tmp40);
+        let arr2 = items.push("" + key10027 + ":" + tmp40);
         continue;
       }
       continue;
@@ -133,7 +133,7 @@ function syncAllExperimentFlags() {
               if (isLikelyControl(registeredExperiments[tmp47], tmp21)) {
                 arr6 = items2;
               }
-              let arr1 = arr6.push(combined);
+              let arr3 = arr6.push(combined);
               continue;
             }
             continue;
@@ -173,7 +173,7 @@ function syncAllExperimentFlags() {
             if (isLikelyControl(registeredExperiments[tmp49], variantId2)) {
               arr9 = items5;
             }
-            let arr2 = arr9.push(combined1);
+            let arr4 = arr9.push(combined1);
             continue;
           }
           continue;
@@ -190,7 +190,7 @@ function syncAllExperimentFlags() {
   flushFlags(items6, set);
 }
 const set = new Set();
-let prototype = function SentryExperimentFeatureFlagManager() {
+const prototype = function SentryExperimentFeatureFlagManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const result = new Map().set(ExperimentStore, syncAllExperimentFlags);
   const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
@@ -199,8 +199,8 @@ let prototype = function SentryExperimentFeatureFlagManager() {
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -24,8 +24,8 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -38,8 +38,8 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_6 = tmp3;
             closure_5 = tmp5;
@@ -56,10 +56,10 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
             closure_133_10 = undefined;
             closure_133_11 = undefined;
             c8 = 1;
-            const obj1 = {};
+            const obj6 = {};
             const merged = Object.assign(name);
-            obj1.animated = false;
-            const emojiUrl = EmojiUtils.getEmojiUrl(obj1, 128);
+            obj6.animated = false;
+            const emojiUrl = EmojiUtils.getEmojiUrl(obj6, 128);
             c4 = emojiUrl;
             if (emojiUrl == null) {
               c4 = "";
@@ -68,8 +68,8 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
             const obj12 = getBurstAnimation;
             c9 = 2;
             c10 = 1;
-            let obj2 = { value: obj12.getBurstAnimation(closure_0, closure_1, name.name, closure_3), done: false };
-            return obj2;
+            const obj7 = { value: obj12.getBurstAnimation(closure_0, closure_1, name.name, closure_3), done: false };
+            return obj7;
           }
         } else if (1 === tmp8) {
           c8 = 0;
@@ -82,24 +82,23 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
           } else if (arg0 === 2) {
             c8 = 0;
             c10 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_133_3 = value;
             if ("" !== closure_133_2) {
-              let obj8 = closure_134_0(closure_134_1[6]);
-              closure_133_1 = obj8.makeSource(closure_133_2);
+              closure_133_1 = closure_134_0(closure_134_1[6]).makeSource(closure_133_2);
               const ImageManager3 = closure_134_5.ImageManager;
               c9 = 3;
               c10 = 1;
-              let obj4 = { value: ImageManager3.getAvatarBase64(closure_133_1), done: false };
-              return obj4;
+              const obj10 = { value: ImageManager3.getAvatarBase64(closure_133_1), done: false };
+              return obj10;
             } else {
               const ImageManager2 = closure_134_5.ImageManager;
               c9 = 4;
               c10 = 1;
-              const obj5 = { value: ImageManager2.getEmojiBase64(closure_133_0.name, 128), done: false };
-              return obj5;
+              const obj11 = { value: ImageManager2.getEmojiBase64(closure_133_0.name, 128), done: false };
+              return obj11;
             }
           }
         } else {
@@ -110,8 +109,8 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
             } else if (arg0 === 2) {
               c8 = 0;
               c10 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj13 = { value, done: true };
+              return obj13;
             } else {
               closure_133_4 = value;
               const _HermesInternal2 = HermesInternal;
@@ -124,14 +123,14 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
             } else if (arg0 === 2) {
               c8 = 0;
               c10 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj14 = { value, done: true };
+              return obj14;
             } else {
               const _HermesInternal = HermesInternal;
               closure_133_5 = "data:image/png;base64," + value;
               closure_133_3.assets[0].p = closure_133_5;
-              obj2 = closure_134_0(closure_134_1[6]);
-              closure_133_1 = obj2.makeSource(closure_133_5);
+              closure_133_1 = closure_134_0(closure_134_1[6]).makeSource(closure_133_5);
+              const obj3 = closure_134_0(closure_134_1[6]);
             }
           } else if (arg0 === 1) {
             c10 = 3;
@@ -139,36 +138,36 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
           } else if (arg0 === 2) {
             c8 = 0;
             c10 = 3;
-            obj8 = { value, done: true };
-            return obj8;
+            const obj15 = { value, done: true };
+            return obj15;
           } else {
             closure_133_7 = value;
             closure_133_8 = closure_134_3(closure_133_7[0], 3);
             closure_133_9 = closure_133_8[0];
             closure_133_10 = closure_133_8[1];
             closure_133_11 = closure_133_8[2];
-            const obj9 = { r: closure_133_9, g: closure_133_10, b: closure_133_11 };
-            closure_133_6 = closure_134_0(closure_134_1[8]).replaceAnimationColors(closure_133_6, obj9);
+            const obj17 = { r: closure_133_9, g: closure_133_10, b: closure_133_11 };
+            closure_133_6 = closure_134_0(closure_134_1[8]).replaceAnimationColors(closure_133_6, obj17);
             const _JSON2 = JSON;
             c8 = 0;
             c10 = 3;
-            obj = { value: JSON.parse(closure_133_6), done: true };
+            const obj = { value: JSON.parse(closure_133_6), done: true };
             return obj;
           }
           const _JSON = JSON;
           closure_133_6 = JSON.stringify(closure_133_3);
           if (null == closure_133_0.id) {
             closure_133_6 = closure_133_6.replace(/"a":{"a":0,"k":\[64,64/, "\"a\":{\"a\":0,\"k\":[36,36");
-            obj4 = closure_134_0(closure_134_1[7]);
-            if (obj4.isAndroid()) {
+            if (obj5.isAndroid()) {
               closure_133_6 = closure_133_6.replace(/"w":128,"h":128/, "\"w\":72,\"h\":72");
             }
+            obj5 = closure_134_0(closure_134_1[7]);
           }
           const ImageManager = closure_134_5.ImageManager;
           c9 = 5;
           c10 = 1;
-          const obj10 = { value: ImageManager.getDominantColors(closure_133_1), done: false };
-          return obj10;
+          const obj19 = { value: ImageManager.getDominantColors(closure_133_1), done: false };
+          return obj19;
         }
       } catch (tmp47) {
         closure_7 = tmp47;
@@ -190,8 +189,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -204,8 +203,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -231,8 +230,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           uri = closure_130_6.resolveAssetSource(closure_129_1).uri;
@@ -240,8 +239,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
           const ImageManager2 = closure_130_5.ImageManager;
           c5 = 3;
           c6 = 1;
-          const obj2 = { value: ImageManager2.getAvatarBase64(closure_129_3), done: false };
-          return obj2;
+          const obj5 = { value: ImageManager2.getAvatarBase64(closure_129_3), done: false };
+          return obj5;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -254,8 +253,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_4 = value;
           const _HermesInternal = HermesInternal;
@@ -265,8 +264,8 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
           const ImageManager = closure_130_5.ImageManager;
           c5 = 4;
           c6 = 1;
-          const obj4 = { value: ImageManager.getDominantColors(closure_129_3), done: false };
-          return obj4;
+          const obj7 = { value: ImageManager.getDominantColors(closure_129_3), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -274,20 +273,20 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_129_6 = value;
         closure_129_7 = closure_130_3(closure_129_6[0], 3);
         closure_129_8 = closure_129_7[0];
         closure_129_9 = closure_129_7[1];
         closure_129_10 = closure_129_7[2];
-        const obj6 = { r: closure_129_8, g: closure_129_9, b: closure_129_10 };
-        closure_129_5 = closure_130_0(closure_130_1[8]).replaceAnimationColors(closure_129_5, obj6);
+        const obj10 = { r: closure_129_8, g: closure_129_9, b: closure_129_10 };
+        closure_129_5 = closure_130_0(closure_130_1[8]).replaceAnimationColors(closure_129_5, obj10);
         const _JSON = JSON;
         c4 = 0;
         c6 = 3;
-        obj = { value: JSON.parse(closure_129_5), done: true };
+        const obj = { value: JSON.parse(closure_129_5), done: true };
         return obj;
       }
     } catch (tmp10) {
@@ -324,8 +323,8 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -338,8 +337,8 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_0 = tmp3;
@@ -347,7 +346,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
               if (null != c2) {
                 c2 = 1;
                 c3 = 1;
-                const obj1 = {
+                const obj4 = {
                   value: (function generateAnimationSource(arg0, arg1, arg2, c3) {
                               const self = this;
                               const apply = closure_1_7.apply;
@@ -360,7 +359,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
                             })(closure_0, closure_1, tmp12, c3),
                   done: false
                 };
-                return obj1;
+                return obj4;
               } else {
                 c3 = 3;
               }
@@ -373,7 +372,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
             closure_1_4(closure_128_0);
           }
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp18) {
           c3 = tmp;
@@ -409,8 +408,8 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -423,16 +422,16 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               localImageSource = tmp3;
               animationSource = tmp2;
               closure_128_0 = undefined;
-              const obj1 = { animationSource, localImageSource };
+              const obj4 = { animationSource, localImageSource };
               v1 = 1;
               c3 = 1;
-              const obj2 = {
+              const obj5 = {
                 value: (function generateAnimationSourceFromLocalImage(arg0) {
                           const self = this;
                           const apply = closure_1_8.apply;
@@ -442,17 +441,17 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
                             applyArgumentsResult = apply(self, arguments);
                           }
                           return applyArgumentsResult;
-                        })(obj1),
+                        })(obj4),
                 done: false
               };
-              return obj2;
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;

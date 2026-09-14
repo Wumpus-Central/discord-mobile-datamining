@@ -1,6 +1,6 @@
-// === Module 12671: useDeactivateWarningText ===
+// === Module 12672: useDeactivateWarningText ===
 
-// Module 12671 (useDeactivateWarningText)
+// Module 12672 (useDeactivateWarningText)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import Powerups from "Powerups" /* 4529 */;
@@ -8,6 +8,8 @@ import noop from "module_19" /* 19 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -65,12 +67,12 @@ export default function useDeactivateWarningText(arg0, skuId) {
     if (Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
       if (stateFromStores2 > 0) {
         const intl5 = util.intl;
-        let obj = { perk: tmp.title, memberCount: tmp14 };
-        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2428["4jSvr1"], obj);
+        const obj2 = { perk: tmp.title, memberCount: tmp14 };
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2428["4jSvr1"], obj2);
       } else {
         const intl4 = util.intl;
-        obj = { perk: tmp.title };
-        formatToPlainStringResult = intl4.formatToPlainString(_modDef2428.cavtEo, obj);
+        const obj3 = { perk: tmp.title };
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2428.cavtEo, obj3);
       }
     } else {
       if (Powerups.VANITY_URL_POWERUP_SKU_ID === skuId) {
@@ -92,7 +94,7 @@ export default function useDeactivateWarningText(arg0, skuId) {
             if (Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
               if (Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
                 const intl = util.intl;
-                obj = { perk: tmp.title, memberCount: null };
+                const obj = { perk: tmp.title, memberCount: null };
                 let num = stateFromStores;
                 if (stateFromStores == null) {
                   num = 0;
@@ -108,17 +110,17 @@ export default function useDeactivateWarningText(arg0, skuId) {
         formatToPlainStringResult1 = intl2.string(_modDef2428.Vf2ZcR);
         tmp7 = importDefault;
       }
-      const obj1 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
-      const items = [obj1];
+      const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID };
+      const items = [obj4];
       let tmp20 = stateFromStores1;
       if (stateFromStores1) {
         tmp20 = tmp.skuId === Powerups.GUILD_POWERUP_LEVEL_3_SKU_ID;
       }
       if (tmp20) {
-        const obj2 = { text: null, critical: true };
+        const obj5 = { text: null, critical: true };
         const intl6 = util.intl;
-        obj2.text = intl6.string(tmp7(2428).M4XL5n);
-        items.push(obj2);
+        obj5.text = intl6.string(tmp7(2428).M4XL5n);
+        items.push(obj5);
       }
       return items;
     }

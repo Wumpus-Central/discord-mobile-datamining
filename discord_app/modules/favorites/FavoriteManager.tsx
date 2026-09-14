@@ -1,8 +1,8 @@
-// === Module 17613: FavoriteManager ===
+// === Module 17614: FavoriteManager ===
 
-// Module 17613 (FavoriteManager)
+// Module 17614 (FavoriteManager)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -86,18 +86,18 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16297);
+const FavoritesGuildSuggestionsStore = fn(16299);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
-let prototype = function FavoriteManager() {
+const prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_DELETE: handleChannelDelete, CATEGORY_COLLAPSE: handleCategoryCollapse, CATEGORY_EXPAND: handleCategoryExpand, CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll, CATEGORY_EXPAND_ALL: handleCategoryExpandAll, LOGOUT: handleLogout, THREAD_CREATE: handleThreadCreate, THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate, THREAD_MEMBER_UPDATE: handleThreadMemberUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
-export default prototype;
+export default prototype1;

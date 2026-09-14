@@ -1,6 +1,6 @@
-// === Module 15785: OrbOnboardingPill ===
+// === Module 15787: OrbOnboardingPill ===
 
-// Module 15785 (OrbOnboardingPill)
+// Module 15787 (OrbOnboardingPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -27,10 +27,10 @@ class OrbOnboardingPill {
     obj.importantForAccessibility = str;
     items = [, ];
     items[0] = jsx(tmp3(tmp4[3]).OrbsIcon, { size: "sm" });
-    obj = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
+    obj1 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
     intl = tmp3(tmp4[5]).intl;
-    obj.children = intl.string(tmp3(tmp4[5]).t["9JpRfC"]);
-    items[1] = jsx(tmp3(tmp4[4]).Text, obj);
+    obj1.children = intl.string(tmp3(tmp4[5]).t["9JpRfC"]);
+    items[1] = jsx(tmp3(tmp4[4]).Text, obj1);
     obj.children = items;
     return tmp2(closure_0(closure_1[2]).PressableOpacity, obj);
   }
@@ -38,11 +38,9 @@ class OrbOnboardingPill {
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-fn(4636);
-let createStyles = { container: null };
-createStyles = { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
-createStyles.container = createStyles;
-const React4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 } };
+const React4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
 

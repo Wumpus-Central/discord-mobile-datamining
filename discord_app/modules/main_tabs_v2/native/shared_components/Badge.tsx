@@ -6,14 +6,13 @@ import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { badge: null, badgeClassic: null, mask: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj.badge = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj.badgeClassic = createStyles;
+const createStyles = fn(4636);
+let obj = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, badgeClassic: null, mask: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj.badgeClassic = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.mask = { alignItems: "center", justifyContent: "center" };
 let closure_2 = createStyles.createStyles(obj);
+const obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/Badge.tsx");
 
@@ -39,14 +38,14 @@ export default noop.memo(function Badge(size) {
     size = { backgroundColor: maskColor, height: sum, width: sum, borderRadius: sum / 2 };
     tmp3 = size;
   }
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.mask, tmp3, style];
   obj.style = items;
-  obj = { style: null };
+  const obj2 = { style: null };
   const items1 = [flag ? tmp.badgeClassic : tmp.badge, { height: num, width: num, borderRadius: num / 2 }, badgeStyle];
-  obj.style = items1;
+  obj2.style = items1;
   obj.children = <View style={null} />;
-  return <View style={null} />;
+  return <View style={null}>{null}</View>;
 });
 export const DEFAULT_BADGE_SIZE = 12;
 export const CHANNEL_BADGE_SIZE = 8;

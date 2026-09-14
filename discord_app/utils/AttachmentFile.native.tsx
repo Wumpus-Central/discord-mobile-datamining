@@ -22,8 +22,8 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -36,8 +36,8 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -50,16 +50,16 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
             c6 = 1;
             c7 = 2;
             c8 = 1;
-            const obj1 = { value: utils_UploadUtils.getFileInfo(item, closure_1), done: false };
-            return obj1;
+            const obj4 = { value: utils_UploadUtils.getFileInfo(item, closure_1), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c6 = 0;
           closure_131_5 = closure_5;
           closure_132_4.error("Failed to get attachment file", closure_131_5);
           c8 = 3;
-          const obj2 = { value: undefined, done: true };
-          return obj2;
+          const obj5 = { value: undefined, done: true };
+          return obj5;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             c8 = 3;
@@ -67,8 +67,8 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_131_3 = value;
             attachmentPayload = closure_132_0(closure_132_2[5]).getAttachmentPayload(closure_131_0, closure_131_1, closure_131_3.name);
@@ -76,8 +76,8 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
             const obj10 = closure_132_0(closure_132_2[5]);
             c7 = 4;
             c8 = 1;
-            const obj4 = { value: closure_132_0(closure_132_2[4]).getFileSize(closure_131_3.uri), done: false };
-            return obj4;
+            const obj7 = { value: closure_132_0(closure_132_2[4]).getFileSize(closure_131_3.uri), done: false };
+            return obj7;
           }
         } else {
           if (3 === tmp7) {
@@ -88,24 +88,24 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_131_2 = value;
             c6 = 1;
           }
-          const obj5 = { file: closure_131_3, uri: closure_131_3.uri, name: null, fileSize: null };
+          const obj8 = { file: closure_131_3, uri: closure_131_3.uri, name: null, fileSize: null };
           const filename = attachmentPayload.filename;
           name = filename;
           if (filename == null) {
             name = "";
           }
-          obj5.name = name;
-          obj5.fileSize = closure_131_2;
+          obj8.name = name;
+          obj8.fileSize = closure_131_2;
           c6 = 0;
           c8 = 3;
-          const obj6 = { value: obj5, done: true };
-          return obj6;
+          const obj9 = { value: obj8, done: true };
+          return obj9;
         }
       } catch (tmp24) {
         closure_5 = tmp24;
@@ -129,8 +129,8 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -143,22 +143,20 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj1 = utils_UploadUtils;
           c2 = 1;
           c1 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.cancelGetFileInfo(closure_0);
-          return obj1;
+          const obj5 = { value: utils_UploadUtils.cancelGetFileInfo(closure_0), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;

@@ -1,10 +1,12 @@
-// === Module 11805: retrySendMessage ===
+// === Module 11806: retrySendMessage ===
 
-// Module 11805 (retrySendMessage)
+// Module 11806 (retrySendMessage)
 import MessageConstants from "MessageConstants" /* 4629 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
 import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9439 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const MessageSendLocation = MessageConstants.MessageSendLocation;
 let result = size.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
@@ -38,18 +40,18 @@ export default function retrySendMessage(id, id2, arr) {
     }
     const tmpResult = MessageActionCreatorsDefault;
     id = id.id;
-    obj = { content, tts, invalidEmojis: [], validNonShortcutEmojis: [] };
-    obj = {};
+    const obj3 = { content, tts, invalidEmojis: [], validNonShortcutEmojis: [] };
+    const obj4 = {};
     const merged = Object.assign(obj);
-    obj.nonce = nonce;
-    obj.flags = flags;
-    obj.messageReference = messageReference;
-    obj.location = MessageSendLocation.RETRY;
-    obj.attachmentsToUpload = mapped;
-    obj.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-      const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
-      const result = obj.handleUploadMessageAttachmentsErrors(obj);
+    obj4.nonce = nonce;
+    obj4.flags = flags;
+    obj4.messageReference = messageReference;
+    obj4.location = MessageSendLocation.RETRY;
+    obj4.attachmentsToUpload = mapped;
+    obj4.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
+      const obj = handleUploadAttachmentErrors;
+      const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
     };
-    tmpResult.sendMessage(id, obj, undefined, obj);
+    tmpResult.sendMessage(id, obj3, undefined, obj4);
   }
 };

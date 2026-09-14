@@ -10,14 +10,14 @@ export const toggleUseActivityUrlOverride = function toggleUseActivityUrlOverrid
   DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE" });
 };
 export const setActivityUrlOverride = function setActivityUrlOverride(activityUrlOverride) {
-  const obj = { type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE", activityUrlOverride };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE", activityUrlOverride });
 };
 export const markActivityUsed = function markActivityUsed(id) {
-  const obj = { type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED", applicationId: id, timestamp: new Date().getTime() };
-  obj.dispatch(obj);
+  const obj2 = { type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED", applicationId: id, timestamp: null };
+  const obj = DispatcherDefault;
+  obj2.timestamp = new Date().getTime();
+  obj.dispatch(obj2);
 };
 export const updateFilter = function updateFilter(filter) {
-  const obj = { type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER", filter };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER", filter });
 };

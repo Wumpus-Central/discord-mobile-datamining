@@ -17,8 +17,8 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -31,8 +31,8 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -53,8 +53,8 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             guild = closure_131_8.getGuild(closure_130_0);
             unsafeMutableRoles = closure_131_7.getUnsafeMutableRoles(closure_130_0);
@@ -78,12 +78,12 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     const obj34 = closure_131_0(closure_131_2[8]);
                   }
                   c5 = 3;
-                  const obj2 = { value: result, done: true };
-                  return obj2;
+                  const obj8 = { value: result, done: true };
+                  return obj8;
                 } else if (closure_131_12.ROLE_SUBSCRIPTIONS === tmp31) {
                   c5 = 3;
-                  const obj3 = { value: closure_131_0(closure_131_2[9]).areRoleSubscriptionsVisibleInGuild(closure_130_0, unsafeMutableRoles), done: true };
-                  return obj3;
+                  const obj10 = { value: closure_131_0(closure_131_2[9]).areRoleSubscriptionsVisibleInGuild(closure_130_0, unsafeMutableRoles), done: true };
+                  return obj10;
                 } else if (closure_131_12.SERVER_MONETIZATION_ONBOARDING === tmp31) {
                   let result1 = null != guild;
                   if (result1) {
@@ -91,29 +91,28 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     const obj30 = closure_131_0(closure_131_2[10]);
                   }
                   c5 = 3;
-                  let obj4 = { value: result1, done: true };
-                  return obj4;
+                  const obj12 = { value: result1, done: true };
+                  return obj12;
                 } else if (closure_131_12.GAME_SHOP === tmp31) {
-                  let obj5 = guild;
+                  let obj14 = guild;
                   if (guild == null) {
-                    obj5 = { id: closure_130_0, type: "id-only" };
+                    obj14 = { id: closure_130_0, type: "id-only" };
                   }
                   c5 = 3;
-                  let obj6 = { value: closure_131_0(closure_131_2[11]).hasSocialLayerStorefront(obj5), done: true };
-                  return obj6;
+                  const obj15 = { value: closure_131_0(closure_131_2[11]).hasSocialLayerStorefront(obj14), done: true };
+                  return obj15;
                 } else if (closure_131_12.GUILD_SHOP === tmp31) {
                   c5 = 3;
-                  const obj7 = { value: closure_131_0(closure_131_2[12]).isGuildShopVisibleInGuild(guild, unsafeMutableRoles), done: true };
-                  return obj7;
+                  const obj17 = { value: closure_131_0(closure_131_2[12]).isGuildShopVisibleInGuild(guild, unsafeMutableRoles), done: true };
+                  return obj17;
                 } else if (closure_131_12.MEMBER_APPLICATIONS === tmp31) {
                   c5 = 3;
-                  let obj8 = { value: closure_131_0(closure_131_2[13]).canReviewGuildMemberApplications(closure_130_0), done: true };
-                  return obj8;
+                  const obj18 = { value: closure_131_0(closure_131_2[13]).canReviewGuildMemberApplications(closure_130_0), done: true };
+                  return obj18;
                 } else if (closure_131_12.GUILD_HOME === tmp31) {
-                  let obj20 = closure_131_0(closure_131_2[14]);
                   c5 = 3;
-                  const obj9 = { value: obj20.canSeeOnboardingHome(closure_130_0), done: true };
-                  return obj9;
+                  const obj19 = { value: closure_131_0(closure_131_2[14]).canSeeOnboardingHome(closure_130_0), done: true };
+                  return obj19;
                 } else if (closure_131_12.CHANNEL_BROWSER === tmp31) {
                   let hasItem = null != guild;
                   if (hasItem) {
@@ -121,12 +120,12 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     hasItem = features3.has(closure_131_9.COMMUNITY);
                   }
                   c5 = 3;
-                  let obj10 = { value: hasItem, done: true };
-                  return obj10;
+                  const obj20 = { value: hasItem, done: true };
+                  return obj20;
                 } else if (closure_131_12.GUILD_ONBOARDING === tmp31) {
                   c5 = 3;
-                  const obj11 = { value: closure_131_5.shouldShowOnboarding(closure_130_0), done: true };
-                  return obj11;
+                  const obj22 = { value: closure_131_5.shouldShowOnboarding(closure_130_0), done: true };
+                  return obj22;
                 } else if (closure_131_12.CUSTOMIZE_COMMUNITY === tmp31) {
                   let hasItem1 = null != guild;
                   if (hasItem1) {
@@ -134,13 +133,12 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     hasItem1 = features2.has(closure_131_9.COMMUNITY);
                   }
                   c5 = 3;
-                  let obj12 = { value: hasItem1, done: true };
-                  return obj12;
+                  const obj24 = { value: hasItem1, done: true };
+                  return obj24;
                 } else if (closure_131_12.MEMBER_SAFETY === tmp31) {
-                  let obj15 = closure_131_0(closure_131_2[15]);
                   c5 = 3;
-                  const obj13 = { value: obj15.canAccessMemberSafetyPage(closure_130_0), done: true };
-                  return obj13;
+                  const obj26 = { value: closure_131_0(closure_131_2[15]).canAccessMemberSafetyPage(closure_130_0), done: true };
+                  return obj26;
                 } else if (closure_131_12.GUILD_BOOSTS === tmp31) {
                   c5 = 3;
                   return { value: true, done: true };
@@ -150,11 +148,10 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     tmp78 = closure_131_1(closure_131_2[16])(guild);
                   }
                   c5 = 3;
-                  const obj14 = { value: tmp78, done: true };
-                  return obj14;
+                  const obj28 = { value: tmp78, done: true };
+                  return obj28;
                 } else if (closure_131_12.GAME_SERVERS === tmp31) {
-                  obj12 = closure_131_0(closure_131_2[17]);
-                  let gameServerEnabled = obj12.getGameServerEnabled(closure_130_0, "isAccessibleChannelOrThreadPath");
+                  let gameServerEnabled = closure_131_0(closure_131_2[17]).getGameServerEnabled(closure_130_0, "isAccessibleChannelOrThreadPath");
                   if (gameServerEnabled) {
                     gameServerEnabled = null != guild;
                   }
@@ -163,18 +160,16 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                     gameServerEnabled = features.has(closure_131_9.GAME_SERVERS);
                   }
                   c5 = 3;
-                  obj15 = { value: gameServerEnabled, done: true };
-                  return obj15;
+                  const obj29 = { value: gameServerEnabled, done: true };
+                  return obj29;
                 } else if (closure_131_12.GUILD_OFFICIAL_MESSAGES === tmp31) {
-                  obj10 = closure_131_0(closure_131_2[18]);
                   c5 = 3;
-                  const obj16 = { value: obj10.isGuildOfficialMessagesEnabled(guild, "isAccessibleChannelOrThreadPath"), done: true };
-                  return obj16;
+                  const obj31 = { value: closure_131_0(closure_131_2[18]).isGuildOfficialMessagesEnabled(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj31;
                 } else if (closure_131_12.GUILD_SPACE === tmp31) {
-                  obj8 = closure_131_0(closure_131_2[19]);
                   c5 = 3;
-                  const obj17 = { value: obj8.canUseGuildSpace(guild, "isAccessibleChannelOrThreadPath"), done: true };
-                  return obj17;
+                  const obj33 = { value: closure_131_0(closure_131_2[19]).canUseGuildSpace(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj33;
                 } else {
                   closure_131_0(closure_131_2[20]).assertNever(closure_130_1);
                   const obj39 = closure_131_0(closure_131_2[20]);
@@ -183,11 +178,10 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
               channel2 = closure_131_6.getChannel(closure_130_1);
               let tmp15 = null != channel2;
               if (!tmp15) {
-                obj4 = closure_131_1(closure_131_2[21]);
                 c4 = 2;
                 c5 = 1;
-                const obj18 = { value: obj4.loadThread(closure_130_1), done: false };
-                return obj18;
+                const obj35 = { value: closure_131_1(closure_131_2[21]).loadThread(closure_130_1), done: false };
+                return obj35;
               }
             }
           }
@@ -198,8 +192,8 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj19 = { value, done: true };
-              return obj19;
+              const obj36 = { value, done: true };
+              return obj36;
             } else {
               const channel = closure_131_6.getChannel(closure_130_1);
               channel2 = channel;
@@ -208,11 +202,10 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
                 tmp11 = closure_130_0 === closure_131_10;
               }
               if (tmp11) {
-                obj1 = closure_131_1(closure_131_2[22]);
                 c4 = 3;
                 c5 = 1;
-                obj20 = { value: obj1.openChannel(closure_130_1), done: false };
-                return obj20;
+                const obj37 = { value: closure_131_1(closure_131_2[22]).openChannel(closure_130_1), done: false };
+                return obj37;
               }
             }
           } else if (arg0 === 1) {
@@ -220,7 +213,7 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             channel2 = value;
@@ -228,16 +221,16 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
           tmp15 = null != channel2;
         }
         if (tmp15) {
-          obj6 = closure_131_0(closure_131_2[23]);
-          let canViewChannelResult = obj6.canViewChannel(channel2);
+          let canViewChannelResult = closure_131_0(closure_131_2[23]).canViewChannel(channel2);
           if (!canViewChannelResult) {
             canViewChannelResult = closure_131_4.isChannelGatedAndVisible(closure_130_0, closure_130_1);
           }
           tmp15 = canViewChannelResult;
+          const obj7 = closure_131_0(closure_131_2[23]);
         }
         c5 = 3;
-        const obj21 = { value: tmp15, done: true };
-        return obj21;
+        const obj38 = { value: tmp15, done: true };
+        return obj38;
       }
     } catch (tmp154) {
       c5 = tmp;

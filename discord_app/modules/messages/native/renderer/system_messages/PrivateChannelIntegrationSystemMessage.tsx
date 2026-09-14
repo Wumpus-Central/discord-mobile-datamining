@@ -13,8 +13,7 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/syst
 
 export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp5 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   const application = message.application;
   let bot;
@@ -22,16 +21,16 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     bot = application.bot;
   }
   if (null != bot) {
-    obj = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
+    const obj2 = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
-    let tmpResult = PrivateChannelIntegrationSystemMessageUtils;
-    obj = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
-    let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
+    const obj3 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
+    let privateChannelIntegrationAddedSystemMessageASTContent = PrivateChannelIntegrationSystemMessageUtils.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj3);
+    const tmpResult = PrivateChannelIntegrationSystemMessageUtils;
   } else {
-    tmpResult = PrivateChannelIntegrationSystemMessageUtils;
-    const obj1 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
-    privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
+    const obj4 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
+    privateChannelIntegrationAddedSystemMessageASTContent = PrivateChannelIntegrationSystemMessageUtils.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj4);
+    const tmpResult2 = PrivateChannelIntegrationSystemMessageUtils;
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };

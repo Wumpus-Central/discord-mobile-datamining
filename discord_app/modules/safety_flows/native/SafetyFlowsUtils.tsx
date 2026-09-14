@@ -1,16 +1,18 @@
-// === Module 17985: SafetyFlowsUtils ===
+// === Module 17986: SafetyFlowsUtils ===
 
-// Module 17985 (SafetyFlowsUtils)
+// Module 17986 (SafetyFlowsUtils)
 import util from "util" /* 1114 */;
 import _modDef2690 from "module_2690" /* 2690 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import _modDef9696 from "module_9696" /* 9696 */;
-import types from "types" /* 17979 */;
-import constants from "constants" /* 17980 */;
+import types from "types" /* 17980 */;
+import constants from "constants" /* 17981 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function fetchAndUpdateTask() {
@@ -35,12 +37,11 @@ let closure_7 = async function _fetchAndUpdateTask() {
 };
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
-    let obj = ModalActionCreatorsDefault;
-    obj.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    obj = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9696, content: null };
+    ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9696, content: null };
     const intl = util.intl;
-    obj.content = intl.string(_modDef2690["/fHz9S"]);
-    ToastActionCreatorsDefault.open(obj);
+    obj3.content = intl.string(_modDef2690["/fHz9S"]);
+    ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;
     const tmp16 = types.TASK_TYPE_TO_SCREENS[task_type];
@@ -64,7 +65,7 @@ function navigateToScreenForTask(arr, task_type) {
     if (null != tmp5) {
       arr = arr.push(tmp5[0]);
     } else {
-      arr = arr.push(types.SafetyFlowScreens.UPDATE_APP);
+      arr.push(types.SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -112,8 +113,8 @@ export const useOnTaskComplete = function useOnTaskComplete() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -126,17 +127,17 @@ export const useOnTaskComplete = function useOnTaskComplete() {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp2;
               closure_1 = tmp5;
               closure_129_0 = undefined;
-              const obj1 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
+              const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
               c3 = 1;
               c4 = 1;
-              const obj2 = { value: data(setTask[4]).completeTask(obj1), done: false };
-              return obj2;
+              const obj5 = { value: data(setTask[4]).completeTask(obj4), done: false };
+              return obj5;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -144,20 +145,20 @@ export const useOnTaskComplete = function useOnTaskComplete() {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: fetchAndUpdateTask(closure_2), done: false };
-              return obj4;
+              const obj8 = { value: fetchAndUpdateTask(closure_2), done: false };
+              return obj8;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_0 = value;

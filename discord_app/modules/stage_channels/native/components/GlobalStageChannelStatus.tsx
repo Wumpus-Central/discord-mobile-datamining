@@ -31,8 +31,8 @@ class StageChannelRaiseHandAck {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -45,22 +45,22 @@ class StageChannelRaiseHandAck {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               channel = tmp7;
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj1 = { entryPoint: tmp41(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = tmp3(8529).showAgeVerificationGetStartedModal(obj1);
+                  const obj5 = { entryPoint: tmp41(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = tmp3(8529).showAgeVerificationGetStartedModal(obj5);
                   const obj4 = tmp3(8529);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj2 = { value: tmp41(8516).audienceAckRequestToSpeak(id, false), done: false };
-                  return obj2;
+                  const obj6 = { value: tmp41(8516).audienceAckRequestToSpeak(id, false), done: false };
+                  return obj6;
                 }
                 obj9 = channel(5503);
               }
@@ -84,7 +84,7 @@ class StageChannelRaiseHandAck {
           }
           dependencyMap = 0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp27) {
           if (tmp4 === dependencyMap) {
@@ -116,28 +116,29 @@ class StageChannelRaiseHandAck {
     closure_2 = stateFromStores;
     tmp8 = tmp2(tmp3[13])(() => {
       const intl = util.intl;
-      let obj = { channelName, channelTopic: null };
+      const obj2 = { channelName, channelTopic: null };
       let topic;
       if (stateFromStores != null) {
         topic = stateFromStores.topic;
       }
-      obj = { alertBody: intl.formatToPlainString(util.t.sqnsSP, obj), channelTopic: topic };
-      const result = obj.presentLocalNotification(obj);
+      const obj = PushNotificationDefault;
+      obj2.channelTopic = topic;
+      const result = obj.presentLocalNotification({ alertBody: intl.formatToPlainString(util.t.sqnsSP, obj2) });
     });
     tmp9 = closure_5(closure_6.useState(false), 2);
     [tmp10, closure_3] = tmp9;
     obj2 = channel(tmp3[15]);
-    id = undefined;
-    if (channel != null) {
-      id = channel.id;
-    }
-    stageBlockedUsersCount = obj2.useStageBlockedUsersCount(id);
-    tmp6Result = tmp6(tmp3[15]);
     id1 = undefined;
     if (channel != null) {
       id1 = channel.id;
     }
-    stageIgnoredUsersCount = tmp6Result.useStageIgnoredUsersCount(id1);
+    stageBlockedUsersCount = obj2.useStageBlockedUsersCount(id1);
+    tmp6Result = tmp6(tmp3[15]);
+    id2 = undefined;
+    if (channel != null) {
+      id2 = channel.id;
+    }
+    stageIgnoredUsersCount = tmp6Result.useStageIgnoredUsersCount(id2);
     tmp6Result1 = tmp6(tmp3[16]);
     if (channel != null) {
       id = channel.id;
@@ -146,48 +147,48 @@ class StageChannelRaiseHandAck {
     if (null != stateFromStores) {
       tmp18 = jsxs;
       tmp19 = View;
-      obj = { style: null, children: null };
+      obj1 = { style: null, children: null };
       items2 = [, ];
       items2[0] = tmp.invitedContainer;
-      obj1 = { height: null };
-      obj1.height = tmp16;
-      items2[1] = obj1;
-      obj.style = items2;
+      obj18 = { height: null };
+      obj18.height = tmp16;
+      items2[1] = obj18;
+      obj1.style = items2;
       tmp20 = jsx;
-      obj2 = { style: null, children: null };
-      obj2.style = tmp.row;
-      obj3 = { style: null, accessibilityRole: "header", children: null };
-      obj3.style = tmp.invitedHeaderText;
+      obj19 = { style: null, children: null };
+      obj19.style = tmp.row;
+      obj20 = { style: null, accessibilityRole: "header", children: null };
+      obj20.style = tmp.invitedHeaderText;
       intl2 = tmp6(tmp3[8]).intl;
-      obj3.children = intl2.string(tmp6(tmp3[8]).t.Ul1RJQ);
-      obj2.children = jsx(tmp6(tmp3[22]).LegacyText, obj3);
+      obj20.children = intl2.string(tmp6(tmp3[8]).t.Ul1RJQ);
+      obj19.children = jsx(tmp6(tmp3[22]).LegacyText, obj20);
       items3 = [, , ];
-      items3[0] = jsx(View, obj2);
+      items3[0] = jsx(View, obj19);
       num = 0;
       if (stageBlockedUsersCount <= 0) {
         tmp21 = null;
         if (stageIgnoredUsersCount <= 0) {
           items3[1] = null;
-          obj4 = { style: null, children: null };
-          obj4.style = tmp.row;
-          obj5 = { style: null, children: null };
-          obj5.style = tmp.buttonWrapper;
-          obj6 = { variant: "secondary", onPress: null, pillStyle: null, size: "sm", text: null, grow: true };
-          obj6.onPress = function handleDeclineInvite() {
+          obj21 = { style: null, children: null };
+          obj21.style = tmp.row;
+          obj22 = { style: null, children: null };
+          obj22.style = tmp.buttonWrapper;
+          obj23 = { variant: "secondary", onPress: null, pillStyle: null, size: "sm", text: null, grow: true };
+          obj23.onPress = function handleDeclineInvite() {
             if (null != channel) {
               const result = StageChannelActionCreators.audienceAckRequestToSpeak(tmp, true);
             }
           };
-          obj6.pillStyle = tmp.declineButtonPill;
+          obj23.pillStyle = tmp.declineButtonPill;
           intl6 = tmp6(tmp3[8]).intl;
-          obj6.text = intl6.string(tmp6(tmp3[8]).t["1YDv7a"]);
-          obj5.children = tmp20(tmp6(tmp3[24]).BaseTextButton, obj6);
+          obj23.text = intl6.string(tmp6(tmp3[8]).t["1YDv7a"]);
+          obj22.children = tmp20(tmp6(tmp3[24]).BaseTextButton, obj23);
           items4 = [, ];
-          items4[0] = tmp20(tmp19, obj5);
-          obj7 = { style: null, children: null };
-          obj7.style = tmp.buttonWrapper;
-          obj8 = { variant: "primary-overlay", onPress: null, size: "sm", text: null, loading: null, disabled: null, grow: true };
-          obj8.onPress = function handleAcceptInvite() {
+          items4[0] = tmp20(tmp19, obj22);
+          obj24 = { style: null, children: null };
+          obj24.style = tmp.buttonWrapper;
+          obj25 = { variant: "primary-overlay", onPress: null, size: "sm", text: null, loading: null, disabled: null, grow: true };
+          obj25.onPress = function handleAcceptInvite() {
             const self = this;
             const apply = closure_4.apply;
             if (typeof apply === "unknown") {
@@ -198,41 +199,41 @@ class StageChannelRaiseHandAck {
             return applyArgumentsResult;
           };
           intl7 = tmp6(tmp3[8]).intl;
-          obj8.text = intl7.string(tmp6(tmp3[8]).t.MpO0px);
-          obj8.loading = tmp10;
-          obj8.disabled = tmp10;
-          obj7.children = tmp20(tmp6(tmp3[25]).Button, obj8);
-          items4[1] = tmp20(tmp19, obj7);
-          obj4.children = items4;
-          items3[2] = tmp18(tmp19, obj4);
-          obj.children = items3;
-          tmp18Result = tmp18(tmp19, obj);
+          obj25.text = intl7.string(tmp6(tmp3[8]).t.MpO0px);
+          obj25.loading = tmp10;
+          obj25.disabled = tmp10;
+          obj24.children = tmp20(tmp6(tmp3[25]).Button, obj25);
+          items4[1] = tmp20(tmp19, obj24);
+          obj21.children = items4;
+          items3[2] = tmp18(tmp19, obj21);
+          obj1.children = items3;
+          tmp18Result = tmp18(tmp19, obj1);
         }
       }
-      obj9 = { style: null, children: null };
-      obj9.style = tmp.row;
+      obj26 = { style: null, children: null };
+      obj26.style = tmp.row;
       if (stageBlockedUsersCount <= 0) {
         if (stageIgnoredUsersCount > 0) {
           intl4 = tmp6(tmp3[8]).intl;
-          obj10 = { number: null };
-          obj10.number = stageIgnoredUsersCount;
-          formatResult = intl4.format(tmp6(tmp3[8]).t["0bU4FO"], obj10);
+          obj27 = { number: null };
+          obj27.number = stageIgnoredUsersCount;
+          formatResult = intl4.format(tmp6(tmp3[8]).t["0bU4FO"], obj27);
         } else {
           intl3 = tmp6(tmp3[8]).intl;
-          obj11 = { number: null };
-          obj11.number = stageBlockedUsersCount;
-          formatResult = intl3.format(tmp6(tmp3[8]).t.sFzx0G, obj11);
+          obj28 = { number: null };
+          obj28.number = stageBlockedUsersCount;
+          formatResult = intl3.format(tmp6(tmp3[8]).t.sFzx0G, obj28);
         }
-        obj12 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
-        obj12.children = formatResult;
-        obj9.children = tmp20(tmp22, obj12);
-        tmp20Result = tmp20(tmp19, obj9);
+        obj29 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
+        obj29.children = formatResult;
+        obj26.children = tmp20(tmp22, obj29);
+        tmp20Result = tmp20(tmp19, obj26);
       }
       intl5 = tmp6(tmp3[8]).intl;
-      obj13 = { number: null };
+      obj30 = { number: null };
       stageIgnoredUsersCount = stageBlockedUsersCount + stageIgnoredUsersCount;
-      obj13.number = stageIgnoredUsersCount;
-      formatResult = intl5.format(tmp6(tmp3[8]).t["cXaoI+"], obj13);
+      obj30.number = stageIgnoredUsersCount;
+      formatResult = intl5.format(tmp6(tmp3[8]).t["cXaoI+"], obj30);
     }
     return tmp18Result;
   }
@@ -241,30 +242,29 @@ const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { invitedContainer: null, icon: null, activeSpeakerIcon: null, activeStageIcon: null, topic: null, channel: null, invitedHeaderText: null, noticeContainer: null, row: null, buttonWrapper: null, declineButtonPill: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.invitedContainer = createStyles;
-createStyles.icon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.TEXT_DEFAULT };
-let obj1 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.TEXT_DEFAULT };
-createStyles.activeSpeakerIcon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.WHITE };
-let obj2 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.WHITE };
-createStyles.activeStageIcon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-let obj3 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-createStyles.topic = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj4 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-createStyles.channel = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
-let obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
-createStyles.invitedHeaderText = { color: nativeDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
-let obj6 = { color: nativeDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
-createStyles.noticeContainer = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8, marginTop: -8, paddingBottom: nativeDefault.space.PX_4 };
-let obj7 = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8, marginTop: -8, paddingBottom: nativeDefault.space.PX_4 };
-createStyles.row = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: nativeDefault.space.PX_4 };
-let obj8 = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: nativeDefault.space.PX_4 };
-createStyles.buttonWrapper = { flexGrow: 1, margin: nativeDefault.space.PX_8 };
-let obj9 = { flexGrow: 1, margin: nativeDefault.space.PX_8 };
-createStyles.declineButtonPill = { borderColor: nativeDefault.colors.WHITE };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 }, icon: null, activeSpeakerIcon: null, activeStageIcon: null, topic: null, channel: null, invitedHeaderText: null, noticeContainer: null, row: null, buttonWrapper: null, declineButtonPill: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.icon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+let obj4 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj2.activeSpeakerIcon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.WHITE };
+let obj5 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.colors.WHITE };
+obj2.activeStageIcon = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+let obj6 = { marginEnd: nativeDefault.space.PX_8, tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj2.topic = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let obj7 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+obj2.channel = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+let obj8 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+obj2.invitedHeaderText = { color: nativeDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+let obj9 = { color: nativeDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+obj2.noticeContainer = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8, marginTop: -8, paddingBottom: nativeDefault.space.PX_4 };
+let obj10 = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_8, marginTop: -8, paddingBottom: nativeDefault.space.PX_4 };
+obj2.row = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: nativeDefault.space.PX_4 };
+let obj11 = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: nativeDefault.space.PX_4 };
+obj2.buttonWrapper = { flexGrow: 1, margin: nativeDefault.space.PX_8 };
+let obj12 = { flexGrow: 1, margin: nativeDefault.space.PX_8 };
+obj2.declineButtonPill = { borderColor: nativeDefault.colors.WHITE };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/GlobalStageChannelStatus.tsx");
 
@@ -282,10 +282,9 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   const tmp7 = useIsInvitedToSpeakDefault();
   let invitedHeaderText = useCanSpeakInChannelDefault(id);
-  let obj = id(504);
   const items = [StageInstanceStore];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => StageInstanceStore.getStageInstanceByChannel(id), items1);
+  const stateFromStores = id(504).useStateFromStores(items, () => StageInstanceStore.getStageInstanceByChannel(id), items1);
   if (invitedHeaderText) {
     let activeSpeakerIcon = tmp.activeSpeakerIcon;
   } else {
@@ -293,7 +292,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      let tmp8Result = tmp8(4345);
+      tmp8(4345);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -309,33 +308,31 @@ export default function GlobalStageChannelStatus(arg0) {
           str2 = "";
         }
         if (tmp7) {
-          obj = { channel };
-          let tmp13Result = closure_10(StageChannelRaiseHandAck, obj);
+          const obj2 = { channel };
+          let tmp13Result2 = closure_10(StageChannelRaiseHandAck, obj2);
         } else {
-          obj = { style: tmp.noticeContainer, children: null };
-          const obj1 = { animated: true, barStyle: str };
-          const items2 = [closure_10(StatusBarDefault, obj1), , ];
-          const obj2 = { style: activeSpeakerIcon, size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: null };
-          tmp8Result = tmp8(5109);
-          obj2.source = tmp8Result.getChannelIconWithGuild(channel, guild);
-          items2[1] = closure_10(tmp8(1178).Icon, obj2);
-          tmp13Result = "" !== str2;
+          const obj3 = { style: tmp.noticeContainer, children: null };
+          const obj4 = { animated: true, barStyle: str };
+          const items2 = [closure_10(StatusBarDefault, obj4), , ];
+          const obj5 = { style: activeSpeakerIcon, size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(5109).getChannelIconWithGuild(channel, guild) };
+          items2[1] = closure_10(tmp8(1176).Icon, obj5);
+          let tmp13Result = "" !== str2;
           if (tmp13Result) {
             const items3 = [tmp.topic, ];
             let invitedHeaderText2 = invitedHeaderText;
             if (invitedHeaderText) {
               invitedHeaderText2 = tmp.invitedHeaderText;
             }
-            const obj3 = { style: null, children: null };
+            const obj6 = { style: null, children: null };
             items3[1] = invitedHeaderText2;
-            obj3.style = items3;
+            obj6.style = items3;
             const items4 = [str2, ];
             if (tmp12) {
               tmp17 = null;
             }
             items4[1] = tmp17;
-            obj3.children = items4;
-            tmp13Result = closure_11(tmp8(1178).LegacyText, obj3);
+            obj6.children = items4;
+            tmp13Result = closure_11(tmp8(1176).LegacyText, obj6);
           }
           const items5 = [tmp13Result, ];
           let tmp15Result = !tmp12;
@@ -344,24 +341,26 @@ export default function GlobalStageChannelStatus(arg0) {
             if (invitedHeaderText) {
               invitedHeaderText = tmp.invitedHeaderText;
             }
-            const obj4 = { style: null, children: null };
+            const obj7 = { style: null, children: null };
             items6[1] = invitedHeaderText;
-            obj4.style = items6;
-            obj4.children = combined;
-            tmp15Result = closure_10(tmp8(1178).LegacyText, obj4);
+            obj7.style = items6;
+            obj7.children = combined;
+            tmp15Result = closure_10(tmp8(1176).LegacyText, obj7);
           }
-          const obj5 = { numberOfLines: 1, children: null };
+          const obj8 = { numberOfLines: 1, children: null };
           items5[1] = tmp15Result;
-          obj5.children = items5;
-          items2[2] = closure_11(tmp8(1178).LegacyText, obj5);
-          obj.children = items2;
-          tmp13Result = closure_11(View, obj);
+          obj8.children = items5;
+          items2[2] = closure_11(tmp8(1176).LegacyText, obj8);
+          obj3.children = items2;
+          tmp13Result2 = closure_11(View, obj3);
+          const tmp8Result2 = tmp8(5109);
         }
-        return tmp13Result;
+        return tmp13Result2;
       }
     }
     return null;
   }
   str = "light-content";
+  const obj = id(504);
 };
 export { StageChannelRaiseHandAck };

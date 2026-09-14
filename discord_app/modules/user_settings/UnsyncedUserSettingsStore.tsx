@@ -1,14 +1,14 @@
-// === Module 1185: UnsyncedUserSettingsStore ===
+// === Module 1183: UnsyncedUserSettingsStore ===
 
-// Module 1185 (UnsyncedUserSettingsStore)
+// Module 1183 (UnsyncedUserSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
-import ThemeConstants from "ThemeConstants" /* 1186 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
+import ThemeConstants from "ThemeConstants" /* 1184 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1217 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1218 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -366,7 +366,7 @@ const items = [
   }
 ];
 UnsyncedUserSettingsStore.migrations = items;
-obj = {
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, {
   UNSYNCED_USER_SETTINGS_UPDATE: function handleUnsyncedUserSettingsUpdate(settings) {
     const merged = Object.assign(closure_12);
     const merged1 = Object.assign(settings.settings);
@@ -383,8 +383,7 @@ obj = {
   REGISTER_SUCCESS: function handleRegisterSuccess() {
     closure_12.useSystemTheme = SystemThemeState.ON;
   }
-};
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;

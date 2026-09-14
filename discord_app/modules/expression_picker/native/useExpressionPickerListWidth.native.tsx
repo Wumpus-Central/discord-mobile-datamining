@@ -1,7 +1,7 @@
-// === Module 10419: useExpressionPickerListWidth ===
+// === Module 10420: useExpressionPickerListWidth ===
 
-// Module 10419 (useExpressionPickerListWidth)
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
+// Module 10420 (useExpressionPickerListWidth)
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1217 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 7254 */;

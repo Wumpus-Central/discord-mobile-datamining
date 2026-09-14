@@ -1,10 +1,10 @@
-// === Module 17589: FriendsActionCreators ===
+// === Module 17590: FriendsActionCreators ===
 
-// Module 17589 (FriendsActionCreators)
+// Module 17590 (FriendsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import router_utils from "router_utils" /* 1100 */;
-import trackFriendListClickedDefault from "trackFriendListClicked" /* 16864 */;
+import trackFriendListClickedDefault from "trackFriendListClicked" /* 16866 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -25,19 +25,17 @@ export default {
       const tmpResult = router_utils;
     }
     obj2 = router_utils;
-    obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    DispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section: PENDING });
     if (flag) {
-      obj = { tab_opened: PENDING };
-      trackFriendListClickedDefault(obj);
+      const obj5 = { tab_opened: PENDING };
+      trackFriendListClickedDefault(obj5);
     }
+    const obj3 = { type: "FRIENDS_SET_SECTION", section: PENDING };
   },
   setSection(section) {
-    const obj = { type: "FRIENDS_SET_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section });
   },
   setInitialSection(section) {
-    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_INITIAL_SECTION", section });
   }
 };

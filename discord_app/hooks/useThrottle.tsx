@@ -4,6 +4,8 @@
 import _mod12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function throttleStateFn(arg0) {
   return arg0;

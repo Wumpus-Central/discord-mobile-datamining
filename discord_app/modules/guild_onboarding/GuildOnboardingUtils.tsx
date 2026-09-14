@@ -14,6 +14,8 @@ import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function isChattableChannel(channel) {
   let tmp = null != channel;
@@ -446,7 +448,7 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
         {}[tmp2.channel.id] = tmp2;
         let arr = items.push(tmp2.channel);
         if (isChattableChannel(tmp2.channel)) {
-          arr = items1.push(tmp2.channel.id);
+          let arr2 = items1.push(tmp2.channel.id);
         }
       }
       continue;

@@ -1,8 +1,10 @@
-// === Module 12627: fileUpload ===
+// === Module 12628: fileUpload ===
 
-// Module 12627 (fileUpload)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12628 */;
+// Module 12628 (fileUpload)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const PowerupActiveStatusType = fn(4526).PowerupActiveStatusType;

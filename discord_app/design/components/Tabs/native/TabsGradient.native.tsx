@@ -1,6 +1,6 @@
-// === Module 12888: TabsGradient ===
+// === Module 12889: TabsGradient ===
 
-// Module 12888 (TabsGradient)
+// Module 12889 (TabsGradient)
 import spring from "spring" /* 5055 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,6 @@ export default function TabsGradient(state) {
   const scrollOffset = state.scrollOffset;
   const itemDimensions = state.itemDimensions;
   const pageWidth = state.pageWidth;
-  let obj = derivedValue1(colors[3]);
   const fn = function f() {
     value = itemDimensions.get();
     return value.reduce((acc, width) => {
@@ -45,8 +44,8 @@ export default function TabsGradient(state) {
   fn.__closure = { itemDimensions, state };
   fn.__workletHash = 456613763143;
   fn.__initData = __initData2;
-  const derivedValue = obj.useDerivedValue(fn);
-  let obj1 = derivedValue1(colors[3]);
+  const derivedValue = derivedValue1(colors[3]).useDerivedValue(fn);
+  let obj = derivedValue1(colors[3]);
   const fn2 = function y() {
     let tmp = scrollOffset.get() > 0;
     if (tmp) {
@@ -57,22 +56,21 @@ export default function TabsGradient(state) {
   fn2.__closure = { scrollOffset, totalItemWidth: derivedValue, pageWidth };
   fn2.__workletHash = 13237586618288;
   fn2.__initData = __initData3;
-  derivedValue1 = obj1.useDerivedValue(fn2);
-  let obj2 = derivedValue1(colors[3]);
+  derivedValue1 = derivedValue1(colors[3]).useDerivedValue(fn2);
+  const obj2 = derivedValue1(colors[3]);
   const fn3 = function s() {
-    let obj = spring;
     let num = 0;
     if (derivedValue1.get()) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, closure_8) };
-    return obj;
+    return { opacity: spring.withSpring(num, closure_8) };
   };
-  obj = { withSpring: derivedValue1(colors[6]).withSpring, visible: derivedValue1, SPRING_CONFIG };
-  fn3.__closure = obj;
+  const obj3 = derivedValue1(colors[3]);
+  fn3.__closure = { withSpring: derivedValue1(colors[6]).withSpring, visible: derivedValue1, SPRING_CONFIG };
   fn3.__workletHash = 14959306962615;
   fn3.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(fn3);
+  const animatedStyle = obj3.useAnimatedStyle(fn3);
+  const obj4 = { withSpring: derivedValue1(colors[6]).withSpring, visible: derivedValue1, SPRING_CONFIG };
   class W {
     constructor() {
       obj = closure_5;
@@ -88,38 +86,36 @@ export default function TabsGradient(state) {
   closure_129_0 = derivedValue2;
   const obj5 = derivedValue1(colors[3]);
   const fn4 = function s() {
-    let obj = spring;
     let num = 0;
     if (derivedValue1.get()) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, closure_8) };
-    return obj;
+    return { opacity: spring.withSpring(num, closure_8) };
   };
-  obj = { withSpring: derivedValue1(colors[6]).withSpring, visible: derivedValue2, SPRING_CONFIG };
-  fn4.__closure = obj;
+  const obj6 = derivedValue1(colors[3]);
+  fn4.__closure = { withSpring: derivedValue1(colors[6]).withSpring, visible: derivedValue2, SPRING_CONFIG };
   fn4.__workletHash = 14959306962615;
   fn4.__initData = __initData;
-  const animatedStyle1 = derivedValue1(colors[3]).useAnimatedStyle(fn4);
+  const animatedStyle1 = obj6.useAnimatedStyle(fn4);
   const tmp6 = closure_9();
   let items = [colors];
-  obj1 = { children: null };
-  obj2 = { start: itemDimensions.START, end: itemDimensions.END, colors, style: null, pointerEvents: "none" };
+  const obj8 = { children: null };
+  const obj9 = { start: itemDimensions.START, end: itemDimensions.END, colors, style: null, pointerEvents: "none" };
   const items1 = [, , ];
   ({ left: arr2[0], gradient: arr2[1] } = tmp6);
   items1[2] = animatedStyle;
-  obj2.style = items1;
+  obj9.style = items1;
   const memo = scrollOffset.useMemo(() => {
     const items = [...colors];
     return items.reverse();
   }, items);
-  const items2 = [pageWidth(LinearGradient, obj2), ];
-  const obj3 = { start: itemDimensions.START, end: itemDimensions.END, colors: memo, style: null, pointerEvents: "none" };
+  const items2 = [pageWidth(LinearGradient, obj9), ];
+  const obj10 = { start: itemDimensions.START, end: itemDimensions.END, colors: memo, style: null, pointerEvents: "none" };
   const items3 = [, , ];
   ({ right: arr4[0], gradient: arr4[1] } = tmp6);
   items3[2] = animatedStyle1;
-  obj3.style = items3;
-  items2[1] = pageWidth(LinearGradient, obj3);
-  obj1.children = items2;
-  return closure_6(derivedValue, obj1);
+  obj10.style = items3;
+  items2[1] = pageWidth(LinearGradient, obj10);
+  obj8.children = items2;
+  return closure_6(derivedValue, obj8);
 };

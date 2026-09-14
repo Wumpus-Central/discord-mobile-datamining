@@ -1,22 +1,23 @@
-// === Module 17836: useRoleSubscriptionFormat ===
+// === Module 17837: useRoleSubscriptionFormat ===
 
-// Module 17836 (useRoleSubscriptionFormat)
+// Module 17837 (useRoleSubscriptionFormat)
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const hasPermission = fn(2016).hasPermission;
-const constants = fn(15288).GuildRoleSubscriptionFormat;
+const constants = fn(15289).GuildRoleSubscriptionFormat;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [GuildStore, GuildRoleStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(closure_0);
     let everyoneRole;
     if (null != guild) {
@@ -34,6 +35,5 @@ export default function useRoleSubscriptionFormat(arg0) {
     }
     SOME_CHANNELS = constants.SOME_CHANNELS;
   }, items1);
-  obj = { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
-  return obj;
+  return { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
 };

@@ -1,20 +1,22 @@
-// === Module 16898: useReferralProgramCoachmark ===
+// === Module 16900: useReferralProgramCoachmark ===
 
-// Module 16898 (useReferralProgramCoachmark)
+// Module 16900 (useReferralProgramCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef16899 from "module_16899" /* 16899 */;
+import _modDef16901 from "module_16901" /* 16901 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
-  let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { source: _modDef16899, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16899, style: tmp.coachmarkImage });
-  return <View source={_modDef16899} style={tmp.coachmarkImage} />;
+  const obj = { style: tmp.coachmarkImageContainer, children: null };
+  const obj2 = { source: _modDef16901, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16901, style: tmp.coachmarkImage });
+  return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
@@ -29,8 +31,8 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   disabled = disabled.disabled;
   _require = undefined;
   let visible;
+  let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   let obj = require("DismissibleContentUnsafeUtils");
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
@@ -47,8 +49,8 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;
     if (tmp10) {
-      obj = { props: tmp12 };
-      tmp13 = obj;
+      const obj3 = { props: tmp12 };
+      tmp13 = obj3;
     }
     return tmp13;
   }

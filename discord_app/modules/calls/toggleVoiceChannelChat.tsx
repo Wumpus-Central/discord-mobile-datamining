@@ -1,6 +1,6 @@
-// === Module 14600: toggleVoiceChannelChat ===
+// === Module 14601: toggleVoiceChannelChat ===
 
-// Module 14600 (toggleVoiceChannelChat)
+// Module 14601 (toggleVoiceChannelChat)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
@@ -10,9 +10,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
-  let obj = RTCConnectionStore;
   if (RTCConnectionStore.isConnected()) {
-    const channelId = obj.getChannelId();
+    const channelId = RTCConnectionStore.getChannelId();
     if (null == channelId) {
       return null;
     } else {
@@ -24,8 +23,8 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
             tmp3 = !ChannelRTCStore.getChatOpen(channelId);
           }
           ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, tmp3);
-          obj = { channelId, chatOpen: tmp3 };
-          return obj;
+          const obj2 = { channelId, chatOpen: tmp3 };
+          return obj2;
         }
       }
       return null;

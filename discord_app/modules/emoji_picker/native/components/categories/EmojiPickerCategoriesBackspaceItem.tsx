@@ -1,9 +1,9 @@
-// === Module 10489: EmojiPickerCategoriesBackspaceItem ===
+// === Module 10490: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 10489 (EmojiPickerCategoriesBackspaceItem)
+// Module 10490 (EmojiPickerCategoriesBackspaceItem)
 import util from "util" /* 1114 */;
 import Timers from "Timers" /* 1952 */;
-import BackspaceIcon from "BackspaceIcon" /* 10490 */;
+import BackspaceIcon from "BackspaceIcon" /* 10491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,16 +46,16 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
       current.cancel();
     };
   });
-  let obj = { hitSlop: null, style, accessibilityRole: "keyboardkey", accessibilityLabel: null, delayLongPress: 500, onPressOut: null, onLongPress: null, children: null };
+  const obj = { hitSlop: null, style, accessibilityRole: "keyboardkey", accessibilityLabel: null, delayLongPress: 500, onPressOut: null, onLongPress: null, children: null };
   const rect = { top: NODE_MARGIN, bottom: NODE_MARGIN, right: NODE_MARGIN, left: NODE_MARGIN };
   obj.hitSlop = rect;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["4SnBzF"]);
   obj.onPressOut = callback1;
   obj.onLongPress = callback;
-  obj = { style: null };
+  const obj2 = { style: null };
   const items2 = [iconStyle, { opacity: 0.5 }];
-  obj.style = items2;
+  obj2.style = items2;
   obj.children = jsx(BackspaceIcon.BackspaceIcon, { style: null });
-  return <Pressable style={null} />;
+  return <Pressable hitSlop={null} style={style} accessibilityRole="keyboardkey" accessibilityLabel={null} delayLongPress={500} onPressOut={null} onLongPress={null}>{null}</Pressable>;
 };

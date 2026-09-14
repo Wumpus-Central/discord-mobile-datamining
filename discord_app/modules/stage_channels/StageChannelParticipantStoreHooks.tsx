@@ -5,6 +5,8 @@ import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");

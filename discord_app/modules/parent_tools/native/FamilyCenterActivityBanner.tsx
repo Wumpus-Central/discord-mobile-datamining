@@ -1,32 +1,31 @@
-// === Module 14964: FamilyCenterActivityBanner ===
+// === Module 14965: FamilyCenterActivityBanner ===
 
-// Module 14964 (FamilyCenterActivityBanner)
+// Module 14965 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12049 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14965 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12050 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14966 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FamilyCenterActivityBannerButton() {
-  let obj = useUserLinks;
-  const hasActiveLinks = obj.useHasActiveLinks();
-  const tmp5 = useIsInAdultAgeGroupDefault();
   const tmp = closure_7();
+  const hasActiveLinks = useUserLinks.useHasActiveLinks();
+  const tmp5 = useIsInAdultAgeGroupDefault();
   let tmp6 = null;
   if (!obj2.useHasMaxConnections()) {
     if (tmp5) {
       tmp6 = null;
     }
-    obj = { style: tmp.container, children: null };
-    let tmp7Result = FamilyCenterBannerButton;
-    tmp7Result = hasOwnProperty(tmp5 ? tmp7Result.FamilyCenterParentQRCodeButton : tmp7Result.FamilyCenterTeenQRCodeButton, {});
-    obj.children = tmp7Result;
-    tmp7Result = hasOwnProperty(React3, obj);
+    const obj3 = { style: tmp.container, children: null };
+    let tmp7Result1 = FamilyCenterBannerButton;
+    tmp7Result1 = hasOwnProperty(tmp5 ? tmp7Result1.FamilyCenterParentQRCodeButton : tmp7Result1.FamilyCenterTeenQRCodeButton, {});
+    obj3.children = tmp7Result1;
+    hasOwnProperty(React3, obj3);
   }
   return tmp6;
 }
@@ -36,46 +35,40 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let createStyles = fn(4636);
 let closure_7 = createStyles.createStyles({ container: { width: "100%" } });
-fn(4636);
-createStyles = { container: null, art: null, header: null, description: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
-createStyles.container = createStyles;
-createStyles = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
-createStyles.art = createStyles;
-createStyles.header = { marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
-createStyles.description = { textAlign: "center" };
-let closure_9 = createStyles.createStyles(createStyles);
+createStyles = fn(4636);
+let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 }, art: null, header: null, description: null };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 16, padding: 24, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2 };
+obj3.art = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
+let obj5 = { maxWidth: 243, maxHeight: 119, marginBottom: nativeDefault.space.PX_8 };
+obj3.header = { marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
+obj3.description = { textAlign: "center" };
+let closure_9 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityBanner.tsx");
 
 export default function FamilyCenterActivityBanner() {
   const tmp4 = closure_9();
-  let obj = useUserLinks;
-  const hasMaxConnections = obj.useHasMaxConnections();
-  let obj1 = useAgeSpecificText;
-  const intl = util.intl;
   const tmp3 = useIsInAdultAgeGroupDefault();
+  const hasMaxConnections = useUserLinks.useHasMaxConnections();
+  const intl = util.intl;
+  const obj2 = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj1.useAgeSpecificText(intl.string(_modDef2396["T7GyW+"]), intl2.string(_modDef2396.goKE2b));
-  let obj2 = useAgeSpecificText;
-  const intl3 = util.intl;
+  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2396["T7GyW+"]), intl2.string(_modDef2396.goKE2b));
   const stringResult = intl.string(_modDef2396["T7GyW+"]);
+  const intl3 = util.intl;
+  const obj3 = useAgeSpecificText;
   const intl4 = util.intl;
-  obj = { style: tmp4.container, children: null };
-  obj = { source: null, style: null };
-  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2396.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2396.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj.source = importDefault(tmp3 ? 14972 : 14973);
-  obj.style = tmp4.art;
-  const items = [hasOwnProperty(React4, obj), , , ];
-  obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };
-  items[1] = hasOwnProperty(Text_Text.Text, obj1);
-  obj2 = { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 };
-  items[2] = hasOwnProperty(Text_Text.Text, obj2);
+  const obj4 = { style: tmp4.container, children: null };
+  const obj5 = { source: null, style: null };
+  const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2396.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2396.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
+  obj5.source = importDefault(tmp3 ? 14973 : 14974);
+  obj5.style = tmp4.art;
+  const items = [hasOwnProperty(React4, obj5), hasOwnProperty(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), hasOwnProperty(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;
   if (!hasMaxConnections) {
     tmp13Result = hasOwnProperty(FamilyCenterActivityBannerButton, {});
   }
   items[3] = tmp13Result;
-  obj.children = items;
-  return timestampProducer(React3, obj);
+  obj4.children = items;
+  return timestampProducer(React3, obj4);
 };

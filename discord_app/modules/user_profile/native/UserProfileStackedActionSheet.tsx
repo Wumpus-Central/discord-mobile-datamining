@@ -1,6 +1,6 @@
-// === Module 11285: UserProfileStackedActionSheet ===
+// === Module 11286: UserProfileStackedActionSheet ===
 
-// Module 11285 (UserProfileStackedActionSheet)
+// Module 11286 (UserProfileStackedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -14,16 +14,15 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { header: null, headerSpacer: null, list: null, contentContainer: null, divider: null };
-createStyles = { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 };
-createStyles.header = createStyles;
+const createStyles = fn(4636);
+let obj2 = { header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 }, headerSpacer: null, list: null, contentContainer: null, divider: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24 };
-createStyles.headerSpacer = size;
-createStyles.list = { flex: 1 };
-createStyles.contentContainer = { marginHorizontal: nativeDefault.space.PX_16 };
-createStyles.divider = { marginLeft: 64 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.headerSpacer = size;
+obj2.list = { flex: 1 };
+let obj3 = { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 };
+obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16 };
+obj2.divider = { marginLeft: 64 };
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
 
@@ -32,32 +31,33 @@ export default function UserProfileStackedActionSheet(onBack) {
   ({ title, children } = onBack);
   const merged = Object.assign(onBack, Object.assign({ title: 0, children: 0, onBack: 0 }));
   const tmp2 = closure_6();
-  let tmp4Result = null != onBack;
-  let obj = {};
+  let tmp4Result2 = null != onBack;
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.header, ];
   let str = "center";
-  if (tmp4Result) {
+  if (tmp4Result2) {
     str = "space-between";
   }
-  obj = { style: items, children: null };
+  const obj2 = { style: items, children: null };
   items[1] = { justifyContent: str };
-  if (tmp4Result) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+  let tmp4Result = tmp4Result2;
+  if (tmp4Result2) {
+    const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
-    obj.onPress = onBack;
-    obj.children = React4(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = React4(Pressables.PressableOpacity, obj);
+    obj3.accessibilityLabel = intl.string(util.t["13/7kX"]);
+    obj3.onPress = onBack;
+    obj3.children = React4(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = React4(Pressables.PressableOpacity, obj3);
   }
   const items1 = [tmp4Result, React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
-  if (tmp4Result) {
-    const obj1 = { style: tmp2.headerSpacer };
-    tmp4Result = React4(View, obj1);
+  if (tmp4Result2) {
+    const obj4 = { style: tmp2.headerSpacer };
+    tmp4Result2 = React4(View, obj4);
   }
-  items1[2] = tmp4Result;
-  obj.children = items1;
-  obj.header = hasOwnProperty(View, obj);
+  items1[2] = tmp4Result2;
+  obj2.children = items1;
+  obj.header = hasOwnProperty(View, obj2);
   obj.children = children;
   return React4(Sheet_BottomSheet.BottomSheet, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 13735: ActionBatcher ===
+// === Module 13736: ActionBatcher ===
 
-// Module 13735 (ActionBatcher)
+// Module 13736 (ActionBatcher)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ class ActionBatcher {
       obj.action = closure_0(obj.action, arg0);
     };
     batchers = ActionBatcher.batchers;
-    arr = batchers.push(obj);
+    arr1 = batchers.push(obj);
     return obj;
   }
 }

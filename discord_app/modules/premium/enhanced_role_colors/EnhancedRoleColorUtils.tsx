@@ -12,21 +12,20 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
   if (0 === colors.primary_color) {
     let int2hexResult = DEFAULT_ROLE_COLOR_HEX;
   } else {
-    let obj = utils_ColorUtils;
-    int2hexResult = obj.int2hex(colors.primary_color);
+    int2hexResult = utils_ColorUtils.int2hex(colors.primary_color);
   }
-  obj = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
+  const obj2 = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
   let int2hexResult1 = null;
   if (null != colors.secondary_color) {
     int2hexResult1 = utils_ColorUtils.int2hex(colors.secondary_color);
   }
-  obj.secondaryColor = int2hexResult1;
+  obj2.secondaryColor = int2hexResult1;
   let int2hexResult2 = null;
   if (null != colors.tertiary_color) {
     int2hexResult2 = utils_ColorUtils.int2hex(colors.tertiary_color);
   }
-  obj.tertiaryColor = int2hexResult2;
-  return obj;
+  obj2.tertiaryColor = int2hexResult2;
+  return obj2;
 };
 export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorStrings) {
   let tmp = null != colorStrings;

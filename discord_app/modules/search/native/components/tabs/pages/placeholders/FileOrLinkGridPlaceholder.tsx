@@ -1,10 +1,10 @@
-// === Module 16778: FileOrLinkGridPlaceholder ===
+// === Module 16780: FileOrLinkGridPlaceholder ===
 
-// Module 16778 (FileOrLinkGridPlaceholder)
+// Module 16780 (FileOrLinkGridPlaceholder)
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
 import useFontScale from "useFontScale" /* 5063 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16753 */;
-import SearchListCard from "SearchListCard" /* 16779 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16755 */;
+import SearchListCard from "SearchListCard" /* 16781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,8 +14,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/tabs
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
-  let obj = usePlaceholderStyles;
-  const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
+  const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const width = imageStyle.width;
   const sum = imageStyle.height + 108 * useFontScale.useFontScale();
   c1 = sum;
@@ -24,8 +23,8 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
     const size = { width, height };
     return size;
   }, items);
-  obj = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
+  const obj3 = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
 };

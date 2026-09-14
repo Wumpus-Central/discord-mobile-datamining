@@ -10,6 +10,8 @@ import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_8 = fn(7629).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(1963);
@@ -32,39 +34,37 @@ export default function EditGuildEventWhere(guild) {
   ({ guildEventId, initialGuildEvent } = guild);
   const tmp = closure_16();
   const ref = noop.useRef(null);
-  let obj = guild(ref[11]);
   const items = [ChannelStore];
   const items1 = [guildEvent.channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(guildEvent.channelId), items1);
-  let obj1 = guild(ref[11]);
+  const stateFromStores = guild(ref[11]).useStateFromStores(items, () => ChannelStore.getChannel(guildEvent.channelId), items1);
+  let obj = guild(ref[11]);
   const items2 = [PermissionStore];
   const items3 = [guild];
-  let stateFromStores1 = obj1.useStateFromStores(items2, () => PermissionStore.can(constants2.MANAGE_ROLES, guild), items3);
-  [tmp8, c4] = _slicedToArray(noop.useState(null), 2);
-  let obj2 = guild(ref[12]);
-  noop = obj2.useNavigation();
+  let stateFromStores1 = guild(ref[11]).useStateFromStores(items2, () => PermissionStore.can(constants2.MANAGE_ROLES, guild), items3);
+  let obj2 = guild(ref[11]);
+  [tmp8, c4] = noop.useState(null);
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  obj = { guild, channel: stateFromStores, guildEventId, channelType: null, onChangeChannel: null, style: null };
+  noop = guild(ref[12]).useNavigation();
+  const obj3 = guild(ref[12]);
+  const obj4 = { guild, channel: stateFromStores, guildEventId, channelType: null, onChangeChannel: null, style: null };
   guildEvent(ref[13]);
-  let obj4 = guild(ref[10]);
-  obj.channelType = obj4.getChannelTypeFromEntity(guildEvent.entityType);
-  obj.onChangeChannel = function onChangeChannel(handleSelectChannel) {
+  const tmp9 = closure_8(initialGuildEvent);
+  obj4.channelType = guild(ref[10]).getChannelTypeFromEntity(guildEvent.entityType);
+  obj4.onChangeChannel = function onChangeChannel(handleSelectChannel) {
     _undefined(null);
     onChange({ channelId: handleSelectChannel.id });
   };
-  obj.style = tmp.channelSelection;
+  obj4.style = tmp.channelSelection;
   if (guildEvent.entityType === constants.EXTERNAL) {
     let str = tmp3(tmp4[10]).getLocationFromEventData(guildEvent);
     if (str == null) {
       str = "";
     }
-    obj = {
+    const obj6 = {
       location: str,
       onChange: function handleChangeEventLocation(location) {
           _undefined(null);
-          let obj = { entityMetadata: null };
-          obj = { location };
-          obj.entityMetadata = obj;
+          const obj = { entityMetadata: { location } };
           onChange(obj);
         },
       onFocus() {
@@ -76,7 +76,7 @@ export default function EditGuildEventWhere(guild) {
           }, 100);
         }
     };
-    let tmp10Result = closure_13(tmp3(tmp4[14]).GuildEventLocation, obj);
+    let tmp10Result = closure_13(tmp3(tmp4[14]).GuildEventLocation, obj6);
     const tmp3Result = tmp3(tmp4[10]);
   } else {
     tmp10Result = tmp13;
@@ -84,17 +84,17 @@ export default function EditGuildEventWhere(guild) {
       tmp10Result = null;
     }
   }
-  tmp10Result = null;
+  let tmp10Result2 = null;
   if (null != tmp8) {
-    obj1 = { style: tmp.error, variant: "text-sm/normal", color: "text-feedback-critical", children: tmp8 };
-    tmp10Result = closure_13(tmp3(tmp4[15]).Text, obj1);
+    const obj7 = { style: tmp.error, variant: "text-sm/normal", color: "text-feedback-critical", children: tmp8 };
+    tmp10Result2 = closure_13(tmp3(tmp4[15]).Text, obj7);
   }
-  obj2 = { children: null };
-  const items4 = [tmp10Result, ];
-  const obj3 = { text: null, variant: "primary", onPress: null, disabled: null };
+  const obj8 = { children: null };
+  const items4 = [tmp10Result2, ];
+  const obj9 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp3(tmp4[9]).intl;
-  obj3.text = intl.string(guild(ref[9]).t.PDTjLN);
-  obj3.onPress = function onPress() {
+  obj9.text = intl.string(guild(ref[9]).t.PDTjLN);
+  obj9.onPress = function onPress() {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     try {
       _undefined(null);
@@ -132,20 +132,20 @@ export default function EditGuildEventWhere(guild) {
       AccessibilityAnnouncer.announce(tmp13.message);
     }
   };
-  obj3.disabled = null != tmp8;
-  items4[1] = closure_13(guild(ref[16]).Button, obj3);
-  obj2.children = items4;
-  const tmp9 = closure_8(initialGuildEvent);
-  obj4 = { action: closure_15(closure_14, obj2), ref, children: null };
-  tmp11(tmp4[20]);
-  const obj5 = { title: null, subtitle: null };
-  const tmp11Result = tmp11(tmp4[21]);
+  obj9.disabled = null != tmp8;
+  items4[1] = closure_13(guild(ref[16]).Button, obj9);
+  obj8.children = items4;
+  const obj5 = guild(ref[10]);
+  const obj10 = { action: closure_15(closure_14, obj8), ref, children: null };
+  const tmp15Result = closure_15(closure_14, obj8);
+  const obj11 = { title: null, subtitle: null };
+  const tmp11Result = guildEvent(ref[20]);
   let intl2 = tmp3(tmp4[9]).intl;
-  obj5.title = intl2.string(guild(ref[9]).t["DC+Qm8"]);
+  obj11.title = intl2.string(guild(ref[9]).t["DC+Qm8"]);
   let intl3 = tmp3(tmp4[9]).intl;
-  obj5.subtitle = intl3.string(guild(ref[9]).t.IwmXLP);
+  obj11.subtitle = intl3.string(guild(ref[9]).t.IwmXLP);
   const items5 = [
-    closure_13(tmp11Result, obj5),
+    closure_13(guildEvent(ref[21]), obj11),
     closure_13(guild(ref[14]).GuildEventEntityTypeSelection, {
       guild,
       entityType: guildEvent.entityType,
@@ -168,7 +168,7 @@ export default function EditGuildEventWhere(guild) {
   ,
 
   ];
-  const obj6 = {
+  const obj12 = {
     guild,
     entityType: guildEvent.entityType,
     onChange(entityType) {
@@ -186,20 +186,20 @@ export default function EditGuildEventWhere(guild) {
     },
     disabled: tmp9
   };
-  const tmp15Result = closure_15(closure_14, obj2);
+  const tmp11Result2 = guildEvent(ref[21]);
   items5[3] = set.has(guildEvent.entityType) && closure_13(guildEvent(ref[23]), {});
   if (stateFromStores1) {
-    const obj7 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const obj13 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
     const intl4 = tmp3(tmp4[9]).intl;
-    const obj8 = {
+    const obj14 = {
       onClick() {
           GuildSettingsActionCreatorsDefault.open(guild.id, constants3.ROLES);
         }
     };
-    obj7.children = intl4.format(tmp3(tmp4[9]).t["K+DH2o"], obj8);
-    stateFromStores1 = closure_13(tmp3(tmp4[15]).Text, obj7);
+    obj13.children = intl4.format(tmp3(tmp4[9]).t["K+DH2o"], obj14);
+    stateFromStores1 = closure_13(tmp3(tmp4[15]).Text, obj13);
   }
   items5[4] = stateFromStores1;
-  obj4.children = items5;
-  return closure_15(tmp11Result, obj4);
+  obj10.children = items5;
+  return closure_15(tmp11Result, obj10);
 };

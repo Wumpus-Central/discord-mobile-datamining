@@ -17,7 +17,7 @@ export default function ManualReviewDecidedTeenAlertModal() {
   let intl = util.intl;
   obj.title = intl.string(_modDef2978.AA3xYb);
   const intl2 = util.intl;
-  obj = {
+  obj.content = intl2.format(_modDef2978["2+f8w1"], {
     contentAndSettingsHook(children, key) {
       return jsx(Text_Text.Text, {
         variant: "text-md/normal",
@@ -30,13 +30,12 @@ export default function ManualReviewDecidedTeenAlertModal() {
         children
       }, key);
     }
-  };
-  obj.content = intl2.format(_modDef2978["2+f8w1"], obj);
-  obj = { children: null };
-  const obj1 = { text: null };
+  });
+  const obj3 = { children: null };
+  const obj4 = { text: null };
   const intl3 = util.intl;
-  obj1.text = intl3.string(util.t["NX+WJN"]);
-  obj.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
+  obj4.text = intl3.string(util.t["NX+WJN"]);
+  obj3.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
   obj.actions = jsx(AlertModal.AlertActions, { children: null });
-  return jsx(AlertModal.AlertModal, { children: null });
+  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
 };

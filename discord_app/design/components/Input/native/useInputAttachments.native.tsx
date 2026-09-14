@@ -17,8 +17,8 @@ class InputAttachmentContainer {
       if (null != pressableProps) {
         tmp4 = jsx;
         tmp5 = Pressable;
-        obj = { role: "button" };
-        tmp6 = obj;
+        obj1 = { role: "button" };
+        tmp6 = obj1;
         tmp7 = pressableProps;
         merged = Object.assign(pressableProps);
         pressableProps = function style(pressed) {
@@ -30,12 +30,12 @@ class InputAttachmentContainer {
           items[2] = obj;
           return items;
         };
-        obj.style = pressableProps;
-        obj.onLayout = function onLayout(nativeEvent) {
+        obj1.style = pressableProps;
+        obj1.onLayout = function onLayout(nativeEvent) {
           return dependencyMap(nativeEvent.nativeEvent.layout.width);
         };
-        obj.children = content;
-        tmp3 = jsx(Pressable, obj);
+        obj1.children = content;
+        tmp3 = jsx(Pressable, obj1);
       } else {
         tmp = jsx;
         tmp2 = View;
@@ -79,9 +79,7 @@ export const renderInputAttachment = function renderInputAttachment(BaseIconImag
 };
 export { InputAttachmentContainer };
 export const useInputAttachments = function useInputAttachments(size, leading) {
-  inputStyles(leadingIcon[6]);
-  let obj = { size: size.size, hasLeadingIcon: null != size.leadingIcon };
-  inputStyles = obj.useInputStyles(obj);
+  inputStyles = inputStyles(leadingIcon[6]).useInputStyles({ size: size.size, hasLeadingIcon: null != size.leadingIcon });
   leadingIcon = size.leadingIcon;
   ({ leadingText, trailingIcon } = size);
   const trailingText = size.trailingText;
@@ -127,7 +125,7 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
             return num;
           }), 2);
           const first = tmp23[0];
-          obj = { content: leading, setWidth: tmp22, pressableProps: null, style: null };
+          const obj3 = { content: leading, setWidth: tmp22, pressableProps: null, style: null };
           let prop;
           if (leading != null) {
             prop = leading.leadingPressableProps;
@@ -135,11 +133,11 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
           if (prop == null) {
             prop = leadingPressableProps;
           }
-          const obj1 = { leading: null, trailing: null, inputStyle: null };
-          obj.pressableProps = prop;
-          obj.style = leadingIcon2;
-          obj1.leading = <InputAttachmentContainer content={leading} setWidth={tmp22} pressableProps={null} style={null} />;
-          const obj2 = { content: trailing, setWidth: tmp23[1], pressableProps: null, style: null };
+          const obj4 = { leading: null, trailing: null, inputStyle: null };
+          obj3.pressableProps = prop;
+          obj3.style = leadingIcon2;
+          obj4.leading = <InputAttachmentContainer content={leading} setWidth={tmp22} pressableProps={null} style={null} />;
+          const obj5 = { content: trailing, setWidth: tmp23[1], pressableProps: null, style: null };
           let prop1;
           if (leading != null) {
             prop1 = leading.trailingPressableProps;
@@ -147,21 +145,21 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
           if (prop1 == null) {
             prop1 = trailingPressableProps;
           }
-          obj2.pressableProps = prop1;
-          obj2.style = trailingIcon2;
-          obj1.trailing = <InputAttachmentContainer content={trailing} setWidth={tmp23[1]} pressableProps={null} style={null} />;
+          obj5.pressableProps = prop1;
+          obj5.style = trailingIcon2;
+          obj4.trailing = <InputAttachmentContainer content={trailing} setWidth={tmp23[1]} pressableProps={null} style={null} />;
           let diff;
           if (0 !== tmp21) {
             diff = tmp21 - inputStyles.padding.paddingHorizontal;
           }
-          const obj3 = { marginStart: diff, marginEnd: null };
+          const obj6 = { marginStart: diff, marginEnd: null };
           let diff1;
           if (0 !== first) {
             diff1 = first - inputStyles.padding.paddingHorizontal;
           }
-          obj3.marginEnd = diff1;
-          obj1.inputStyle = obj3;
-          return obj1;
+          obj6.marginEnd = diff1;
+          obj4.inputStyle = obj6;
+          return obj4;
         }
         trailingIcon2 = inputStyles.trailingIcon;
       }
@@ -169,13 +167,15 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
     } else if (null != trailingIcon) {
       let tmp12 = <trailingIcon size="xs" color="input-icon-default" />;
     } else if (null != trailingText) {
-      const obj4 = { variant: "text-md/normal", style: tmp11, children: trailingText };
+      const obj7 = { variant: "text-md/normal", style: tmp11, children: trailingText };
       tmp12 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp11, children: trailingText });
     }
   } else if (null != leadingIcon) {
     let tmp6 = <leadingIcon size="xs" color="input-icon-default" />;
   } else if (null != leadingText) {
-    const obj5 = { variant: "text-md/normal", style: tmp5, children: leadingText };
+    const obj8 = { variant: "text-md/normal", style: tmp5, children: leadingText };
     tmp6 = jsx(tmp(tmp2[5]).Text, { variant: "text-md/normal", style: tmp5, children: leadingText });
   }
+  const obj = inputStyles(leadingIcon[6]);
+  const obj2 = { size: size.size, hasLeadingIcon: null != size.leadingIcon };
 };

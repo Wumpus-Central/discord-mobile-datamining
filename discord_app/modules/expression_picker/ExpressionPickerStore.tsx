@@ -1,23 +1,24 @@
-// === Module 17170: ExpressionPickerStore ===
+// === Module 17172: ExpressionPickerStore ===
 
-// Module 17170 (ExpressionPickerStore)
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
+// Module 17172 (ExpressionPickerStore)
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1217 */;
 import uniqueIdDefault from "uniqueId" /* 4840 */;
-import identity from "module_1244" /* 1244 */;
+import identity_mod from "module_1242" /* 1242 */;
 import module_4507 from "module_4507" /* 4507 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewType;
-let obj = { activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false };
-let closure_3 = Object.freeze(obj);
+let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
+let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-obj = {
+const withEqualityFnResult = identity(module_4507.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
   }
-};
-const withEqualityFnResult = identity(module_4507.persist(() => closure_3, obj));
+}));
 const result = size.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
 
 export const openExpressionPicker = function openExpressionPicker(arg0, arg1, arg2) {
@@ -35,8 +36,8 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
   }
   if (!tmp2) {
     if (null !== state.activeView) {
-      state(1249).batchUpdates(() => withEqualityFnResult.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
-      const obj = state(1249);
+      state(1247).batchUpdates(() => withEqualityFnResult.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+      const obj = state(1247);
     }
   }
 };
@@ -50,23 +51,23 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
     closure_130_0 = EMOJI;
     closure_130_1 = arg0;
     closure_130_2 = arg1;
-    state1(1249).batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
-    const obj3 = state1(1249);
+    state1(1247).batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
+    const obj3 = state1(1247);
   } else {
     if (state.activeViewType === arg0) {
       if (state.activeChannelId === arg1) {
         state1 = withEqualityFnResult.getState();
         if (null !== state1.activeView) {
-          state1(1249).batchUpdates(() => withEqualityFnResult.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
-          const obj4 = state1(1249);
+          state1(1247).batchUpdates(() => withEqualityFnResult.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+          const obj4 = state1(1247);
         }
       }
     }
     const activeView = state.activeView;
     closure_129_1 = arg0;
     closure_129_2 = arg1;
-    state1(1249).batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
-    const obj2 = state1(1249);
+    state1(1247).batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
+    const obj2 = state1(1247);
   }
 };
 export const toggleExpressionPicker = function toggleExpressionPicker(activeView, activeViewType, activeChannelId) {

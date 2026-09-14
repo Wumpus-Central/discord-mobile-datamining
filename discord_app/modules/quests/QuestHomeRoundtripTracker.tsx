@@ -1,11 +1,11 @@
-// === Module 15249: QuestHomeRoundtripTracker ===
+// === Module 15250: QuestHomeRoundtripTracker ===
 
-// Module 15249 (QuestHomeRoundtripTracker)
+// Module 15250 (QuestHomeRoundtripTracker)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -25,18 +25,18 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   }
 };
 prototype["sendMetric"] = function sendMetric(timeout, duration, arg2) {
-  let obj = { timeout, duration };
-  obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, { timeout, duration });
   if (Math.random() <= 0.1) {
-    obj = { name: MetricEvents.MetricEvents.QUEST_HOME_ROUNDTRIP, tags: null };
+    const obj3 = { name: MetricEvents.MetricEvents.QUEST_HOME_ROUNDTRIP, tags: null };
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
-    obj.tags = items;
-    MonitoringAgentDefault.distribution(obj, duration);
+    obj3.tags = items;
+    MonitoringAgentDefault.distribution(obj3, duration);
     const tmpResult = MonitoringAgentDefault;
   }
+  const obj2 = { timeout, duration };
 };
 prototype["startTracking"] = function startTracking() {
   const self = this;

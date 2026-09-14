@@ -1,13 +1,13 @@
-// === Module 15197: AdRecheckIntervalExperiment ===
+// === Module 15198: AdRecheckIntervalExperiment ===
 
-// Module 15197 (AdRecheckIntervalExperiment)
+// Module 15198 (AdRecheckIntervalExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-07-ad-recheck-interval-experiment", kind: "user", defaultConfig: { enableFastAdRecheck: false }, variations: null };
-obj = { 1: null, 2: { enableFastAdRecheck: false }, 3: { enableFastAdRecheck: true }, 4: { enableFastAdRecheck: true }, 5: { enableFastAdRecheck: true } };
-obj[5] = { enableFastAdRecheck: true };
-obj.variations = obj;
+const obj = { name: "2026-07-ad-recheck-interval-experiment", kind: "user", defaultConfig: { enableFastAdRecheck: false }, variations: null };
+const obj2 = { 1: null, 2: { enableFastAdRecheck: false }, 3: { enableFastAdRecheck: true }, 4: { enableFastAdRecheck: true }, 5: { enableFastAdRecheck: true } };
+obj2[5] = { enableFastAdRecheck: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/quests/experiments/AdRecheckIntervalExperiment.tsx");
 

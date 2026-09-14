@@ -1,7 +1,7 @@
 // === Module 10151: ChannelCallSingleController ===
 
 // Module 10151 (ChannelCallSingleController)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -19,9 +19,10 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
   const channel = selectedParticipant.channel;
   const items = [channel.id];
   const effect = noop.useEffect(() => {
-    const obj = { video_layout: "focus" };
+    const obj = AnalyticsUtilsDefault;
+    const obj2 = { video_layout: "focus" };
     const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
-    obj.track(AnalyticEvents.VIDEO_LAYOUT_TOGGLED, obj);
+    obj.track(AnalyticEvents.VIDEO_LAYOUT_TOGGLED, obj2);
   }, items);
   selectedParticipant(504);
   [][0] = ApplicationStreamingStore;
@@ -32,11 +33,11 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
     } else {
       let tmp18 = channel;
       tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10152 : 10154);
-      let obj = { participant: selectedParticipant, channel };
+      let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
-    obj = { participant: selectedParticipant, channel };
+    let obj = { participant: selectedParticipant, channel };
     return jsx(channel(10155), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;

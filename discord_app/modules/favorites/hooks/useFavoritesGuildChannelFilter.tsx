@@ -1,6 +1,6 @@
-// === Module 11111: useFavoritesGuildChannelFilter ===
+// === Module 11112: useFavoritesGuildChannelFilter ===
 
-// Module 11111 (useFavoritesGuildChannelFilter)
+// Module 11112 (useFavoritesGuildChannelFilter)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import sortByMatchScore from "sortByMatchScore" /* 9965 */;
@@ -40,14 +40,13 @@ export default function useFavoritesGuildChannelFilter() {
     } else {
       if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
         if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = GlobalUtils;
-          return tmpResult.assertNever(type);
+          return GlobalUtils.assertNever(type);
         }
       }
       let canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = FavoritesUtils;
-        canResult = tmpResult.isFavoritableChannel(type.record);
+        canResult = FavoritesUtils.isFavoritableChannel(type.record);
+        const tmpResult2 = FavoritesUtils;
       }
       if (canResult) {
         canResult = null == stateFromStores[type.record.id];

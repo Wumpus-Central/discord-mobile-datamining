@@ -1,14 +1,14 @@
-// === Module 14799: AccountEmailSetting ===
+// === Module 14800: AccountEmailSetting ===
 
-// Module 14799 (AccountEmailSetting)
+// Module 14800 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5702 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
@@ -29,9 +29,8 @@ let SettingBuilders = {
     EmailVerificationModalActionCreatorsDefault.open(true);
   },
   withArrow: true
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

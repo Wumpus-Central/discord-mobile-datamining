@@ -11,6 +11,8 @@ import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import StageMusicStore from "StageMusicStore" /* 10029 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function checkVoiceStates() {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();

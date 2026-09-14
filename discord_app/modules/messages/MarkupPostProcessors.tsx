@@ -6,7 +6,9 @@ import EmbedUtils from "EmbedUtils" /* 4973 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
-function checkSpoilerEmbeds(ast, inline) {
+const require = globalThis.__r;
+
+function checkSpoilerEmbeds(ast1, inline) {
   if (inline) {
     const fn2 = (content) => {
       if ("spoiler" !== content.type) {
@@ -3430,8 +3432,8 @@ function checkSpoilerEmbeds(ast, inline) {
     };
     closure_130_0 = fn2;
     const _Array7 = Array;
-    if (ast instanceof Array) {
-      let someResult = ast.some((content) => {
+    if (ast1 instanceof Array) {
+      let someResult = ast1.some((content) => {
         closure_0 = fn;
         if (content instanceof Array) {
           let someResult = content.some((content) => {
@@ -6833,14 +6835,14 @@ function checkSpoilerEmbeds(ast, inline) {
         return someResult;
       });
     } else {
-      someResult = fn2(ast);
+      someResult = fn2(ast1);
       if (null == someResult) {
         const _Array13 = Array;
-        if (!(ast.content instanceof Array)) {
+        if (!(ast1.content instanceof Array)) {
           const _Array8 = Array;
-          let someResult1 = ast.items instanceof Array;
+          let someResult1 = ast1.items instanceof Array;
           if (someResult1) {
-            const items3 = ast.items;
+            const items3 = ast1.items;
             someResult1 = items3.some((content) => {
               closure_0 = fn;
               if (content instanceof Array) {
@@ -10244,7 +10246,7 @@ function checkSpoilerEmbeds(ast, inline) {
             });
           }
         }
-        const content3 = ast.content;
+        const content3 = ast1.content;
         closure_131_0 = fn2;
         const _Array9 = Array;
         if (content3 instanceof Array) {
@@ -17068,15 +17070,15 @@ function checkSpoilerEmbeds(ast, inline) {
       }
     }
   } else {
-    let tmp = "paragraph" === ast[0].type;
+    let tmp = "paragraph" === ast1[0].type;
     if (tmp) {
       let _Array = Array;
-      tmp = ast[0].content instanceof Array;
+      tmp = ast1[0].content instanceof Array;
     }
     if (!tmp) {
       return tmp;
     } else {
-      let content = ast[0].content;
+      let content = ast1[0].content;
       let fn = (content) => {
         if ("spoiler" !== content.type) {
           return null;
@@ -40995,8 +40997,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(1362).isBuildOverrideLink(type.target);
-      const obj = closure_0(1362);
+      tmp = !closure_0(1360).isBuildOverrideLink(type.target);
+      const obj = closure_0(1360);
     }
     return tmp;
   });
@@ -41129,9 +41131,9 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
   }
   if (hasBailedAst) {
     let obj = { type: "text", content: messageContent, originalMatch: null };
-    obj = { index: 0, 0: null };
-    obj[0] = messageContent;
-    obj.originalMatch = obj;
+    const obj2 = { index: 0, 0: null };
+    obj2[0] = messageContent;
+    obj.originalMatch = obj2;
     const items1 = [obj];
     arr = items1;
   }
@@ -41257,8 +41259,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(1362).isBuildOverrideLink(type.target);
-        const obj = closure_0(1362);
+        tmp = !closure_0(1360).isBuildOverrideLink(type.target);
+        const obj = closure_0(1360);
       }
       return tmp;
     });
@@ -41272,7 +41274,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     });
   }
   _require = found1.some((type) => "link" !== type.type);
-  ast = found1.filter((target) => {
+  const ast1 = found1.filter((target) => {
     let parseQuestsEmbedCodeResult = null;
     if (null != target.target) {
       parseQuestsEmbedCodeResult = findCodedLinks.parseQuestsEmbedCode(target.target);
@@ -41288,10 +41290,10 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
   }
   let hasSpoilerEmbeds = false;
   if (contentMessage.embeds.length > 0) {
-    hasSpoilerEmbeds = checkSpoilerEmbeds(ast, inline);
+    hasSpoilerEmbeds = checkSpoilerEmbeds(ast1, inline);
   }
   if (formatInline) {
-    const item4 = ast.forEach((type) => {
+    const item4 = ast1.forEach((type) => {
       let hasItem = closure_1_5.has(type.type);
       if (hasItem) {
         hasItem = null != type.content;
@@ -41373,5 +41375,5 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
       }
     });
   }
-  return { ast, hasSpoilerEmbeds };
+  return { ast: ast1, hasSpoilerEmbeds };
 };

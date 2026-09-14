@@ -1,10 +1,10 @@
-// === Module 16903: useHasNewAdContent ===
+// === Module 16905: useHasNewAdContent ===
 
-// Module 16903 (useHasNewAdContent)
+// Module 16905 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1090 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 15160 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15161 */;
 import QuestStore from "QuestStore" /* 7805 */;
 
 require = fn;
@@ -15,8 +15,7 @@ const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdConte
 
 export default function useHasNewAdContent() {
   const MobileQuestHomeRedDotNotificationExperiment = enabled(stateFromStoresArray[5]).MobileQuestHomeRedDotNotificationExperiment;
-  let obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
-  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig(obj).enabled;
+  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig({ location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER }).enabled;
   const items = [QuestStore];
   const items1 = [enabled];
   stateFromStoresArray = enabled(stateFromStoresArray[6]).useStateFromStoresArray(items, () => {
@@ -31,6 +30,7 @@ export default function useHasNewAdContent() {
     }
     return mapped;
   }, items1);
+  const obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
   const obj2 = enabled(stateFromStoresArray[6]);
   const tmp = enabled;
   const tmp2 = stateFromStoresArray;
@@ -56,8 +56,6 @@ export default function useHasNewAdContent() {
       prop = tmp(tmp2[10]).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
     }
   }
-  obj = { cooldownDurationMs: DAY };
-  const tmp6 = _slicedToArray(enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
-  obj = { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
-  return obj;
+  const tmp6 = _slicedToArray(enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 };

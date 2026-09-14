@@ -14,18 +14,18 @@ export default function serializePushNotificationLogs(arr, arg1) {
     return "No logs";
   } else {
     const Storage = Storage3.Storage;
-    Storage.get(React2);
+    value = Storage.get(React2);
     const Storage2 = Storage3.Storage;
-    value = Storage2.get(React3);
+    value2 = Storage2.get(React3);
     let str2 = "";
     if (null != value) {
       let _HermesInternal = HermesInternal;
       str2 = "Device Token: " + value;
     }
     let str3 = "";
-    if (null != value) {
+    if (null != value2) {
       let _HermesInternal2 = HermesInternal;
-      str3 = "Device Voip Token: " + value;
+      str3 = "Device Voip Token: " + value2;
     }
     const mapped = arr.map((silent) => {
       let str = "Displayed";

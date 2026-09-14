@@ -1,26 +1,28 @@
-// === Module 14191: Status ===
+// === Module 14192: Status ===
 
-// Module 14191 (Status)
+// Module 14192 (Status)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14189 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14190 */;
-import _modDef14192 from "module_14192" /* 14192 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14190 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14191 */;
 import _modDef14193 from "module_14193" /* 14193 */;
 import _modDef14194 from "module_14194" /* 14194 */;
 import _modDef14195 from "module_14195" /* 14195 */;
 import _modDef14196 from "module_14196" /* 14196 */;
 import _modDef14197 from "module_14197" /* 14197 */;
 import _modDef14198 from "module_14198" /* 14198 */;
+import _modDef14199 from "module_14199" /* 14199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const STATUS_PADDING = fn(1179).STATUS_PADDING;
+const STATUS_PADDING = fn(1177).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13159);
+const ChannelAnimationConstants = fn(13160);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -28,8 +30,7 @@ let createStyles = fn(4636);
 let closure_13 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
 createStyles = fn(4636);
 let closure_14 = createStyles.createStyles((items, arg1) => {
-  let obj = Status_StatusUtils;
-  const statusTypingDimensions = obj.getStatusTypingDimensions(items);
+  const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
   if (StatusTypes.ONLINE === arg1) {
     let PRIMARY_400 = nativeDefault.unsafe_rawColors.GREEN_360;
@@ -52,10 +53,10 @@ let closure_14 = createStyles.createStyles((items, arg1) => {
     PRIMARY_400 = nativeDefault.unsafe_rawColors.PRIMARY_400;
     tmp5 = importDefault;
   }
-  obj = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
+  const obj2 = { ellipsis: { backgroundColor: PRIMARY_400, borderRadius: height, height, width: statusTypingDimensions.width, paddingStart: 4, paddingEnd: 2, marginRight: 0 }, ellipsisDot: null };
   const size = { width: dotSize, height: dotSize, backgroundColor: tmp5(576).colors.WHITE };
-  obj.ellipsisDot = size;
-  return obj;
+  obj2.ellipsisDot = size;
+  return obj2;
 });
 const __initData = { code: "function StatusTsx1(){const{enableAnimation,withSpring,width,CHANNEL_SPRING_CONFIG,height,onAnimationFinished,borderRadius,translateX}=this.__closure;const shouldAnimate=enableAnimation.get()?'respect-motion-settings':'animate-never';return{width:withSpring(width,CHANNEL_SPRING_CONFIG,shouldAnimate),height:withSpring(height,CHANNEL_SPRING_CONFIG,shouldAnimate,onAnimationFinished),borderRadius:withSpring(borderRadius,CHANNEL_SPRING_CONFIG,shouldAnimate),transform:[{translateX:withSpring(translateX,CHANNEL_SPRING_CONFIG,shouldAnimate)}]};}" };
 const __initData2 = { code: "function StatusTsx2(){const{withSpring,statusOpacity,CHANNEL_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(statusOpacity,CHANNEL_SPRING_CONFIG)};}" };
@@ -75,31 +76,31 @@ export default function Status(isMobileOnline) {
   if (streaming === undefined) {
     streaming = false;
   }
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [getStatusContainerStyleDefault(size, flag, flag2), style];
   obj.style = items;
-  obj = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
+  const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14192;
+    let tmp4Result = _modDef14193;
   } else if (flag2) {
-    tmp4Result = _modDef14193;
-  } else if (flag) {
     tmp4Result = _modDef14194;
-  } else if (StatusTypes.IDLE === status) {
+  } else if (flag) {
     tmp4Result = _modDef14195;
-  } else if (StatusTypes.DND === status) {
+  } else if (StatusTypes.IDLE === status) {
     tmp4Result = _modDef14196;
+  } else if (StatusTypes.DND === status) {
+    tmp4Result = _modDef14197;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14198;
+        tmp4Result = _modDef14199;
       }
     }
-    tmp4Result = _modDef14197;
+    tmp4Result = _modDef14198;
   }
-  obj.source = tmp4Result;
-  obj.children = closure_1_11(React4, obj);
+  obj2.source = tmp4Result;
+  obj.children = closure_1_11(React4, obj2);
   return closure_1_11(hasOwnProperty, obj);
 };
 export const StatusWithTyping = function StatusWithTyping(status) {
@@ -125,11 +126,11 @@ export const StatusWithTyping = function StatusWithTyping(status) {
   let num2;
   const tmp2 = closure_14(size, status);
   const size2 = require("getStatusContainerStyle")(size, flag, flag2);
-  let obj = enableAnimation(width[18]);
+  const tmp = closure_13();
   if (userId == null) {
     userId = "";
   }
-  const tmp6 = height(obj.useFlashListAnimationDisabler(userId), 2);
+  const tmp6 = height(enableAnimation(width[18]).useFlashListAnimationDisabler(userId), 2);
   enableAnimation = tmp6[0];
   importDefault = tmp8;
   if (typing) {
@@ -146,10 +147,10 @@ export const StatusWithTyping = function StatusWithTyping(status) {
   closure_4 = tmp11;
   num = 0;
   if (typing) {
-    let tmp5Result = tmp5(tmp4[8]);
-    num = tmp5Result.getAnimatedTypingTranslateX(size2.width);
+    num = tmp5(tmp4[8]).getAnimatedTypingTranslateX(size2.width);
+    const tmp5Result = tmp5(tmp4[8]);
   }
-  tmp5Result = tmp5(tmp4[19]);
+  let obj = enableAnimation(width[18]);
   class O {
     constructor() {
       str = "animate-never";
@@ -163,50 +164,50 @@ export const StatusWithTyping = function StatusWithTyping(status) {
       size.height = obj3.withSpring(height, CHANNEL_SPRING_CONFIG, str, closure_1);
       obj4 = closure_0(closure_2[20]);
       size.borderRadius = obj4.withSpring(borderRadius, CHANNEL_SPRING_CONFIG, str);
-      obj = { translateX: null };
+      obj1 = { translateX: null };
       obj6 = closure_0(closure_2[20]);
-      obj.translateX = obj6.withSpring(closure_5, CHANNEL_SPRING_CONFIG, str);
+      obj1.translateX = obj6.withSpring(closure_5, CHANNEL_SPRING_CONFIG, str);
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       size.transform = items;
       return size;
     }
   }
-  size = { enableAnimation, withSpring: tmp5(tmp4[20]).withSpring, width, CHANNEL_SPRING_CONFIG, height, onAnimationFinished: tmp8, borderRadius: tmp11, translateX: num };
-  O.__closure = size;
+  const size1 = { enableAnimation, withSpring: tmp5(tmp4[20]).withSpring, width, CHANNEL_SPRING_CONFIG, height, onAnimationFinished: tmp8, borderRadius: tmp11, translateX: num };
+  O.__closure = size1;
   O.__workletHash = 2188820017597;
   O.__initData = __initData;
   num2 = 1;
-  const animatedStyle = tmp5Result.useAnimatedStyle(O);
+  const animatedStyle = enableAnimation(width[19]).useAnimatedStyle(O);
   if (typing) {
     num2 = 0;
   }
-  const tmp = closure_13();
+  const tmp5Result3 = enableAnimation(width[19]);
   const fn = function f() {
     const obj = { opacity: spring.withSpring(num2, CHANNEL_SPRING_CONFIG) };
     return obj;
   };
-  obj = { withSpring: tmp5(tmp4[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG };
-  fn.__closure = obj;
+  const tmp5Result4 = enableAnimation(width[19]);
+  fn.__closure = { withSpring: enableAnimation(width[20]).withSpring, statusOpacity: num2, CHANNEL_SPRING_CONFIG };
   fn.__workletHash = 7224613224414;
   fn.__initData = __initData2;
-  const animatedStyle1 = enableAnimation(width[19]).useAnimatedStyle(fn);
-  obj = { style: null, collapsable: false, children: null };
+  const animatedStyle1 = tmp5Result4.useAnimatedStyle(fn);
+  let obj3 = { style: null, collapsable: false, children: null };
   let items = [size2, animatedStyle, style];
-  obj.style = items;
+  obj3.style = items;
   if (typing) {
-    const obj1 = { collapsable: false, entering, exiting, style: null, children: null };
+    let obj4 = { collapsable: false, entering, exiting, style: null, children: null };
     const rect = { position: "absolute", left: num2, top: num2 };
     const items1 = [rect];
-    obj1.style = items1;
+    obj4.style = items1;
     ({ ellipsis: obj10.style, ellipsisDot: obj10.dotStyle } = tmp2);
-    obj1.children = closure_11(tmp3(tmp4[21]), { style: null, dotStyle: null, disableScale: true });
-    typing = closure_11(tmp3(tmp4[19]).View, obj1);
-    let obj2 = { style: null, dotStyle: null, disableScale: true };
+    obj4.children = closure_11(tmp3(tmp4[21]), { style: null, dotStyle: null, disableScale: true });
+    typing = closure_11(tmp3(tmp4[19]).View, obj4);
+    const obj5 = { style: null, dotStyle: null, disableScale: true };
   }
   const items2 = [typing, ];
-  let obj3 = { style: animatedStyle1, children: null };
-  let obj4 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
+  const obj6 = { style: animatedStyle1, children: null };
+  const obj7 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
     let tmp3Result = tmp3(tmp4[10]);
   } else if (flag2) {
@@ -226,9 +227,9 @@ export const StatusWithTyping = function StatusWithTyping(status) {
     }
     tmp3Result = tmp3(tmp4[15]);
   }
-  obj4.source = tmp3Result;
-  obj3.children = closure_11(closure_4, obj4);
-  items2[1] = closure_11(require("ReanimatedRexport").View, obj3);
-  obj.children = items2;
-  return closure_12(require("ReanimatedRexport").View, obj);
+  obj7.source = tmp3Result;
+  obj6.children = closure_11(closure_4, obj7);
+  items2[1] = closure_11(require("ReanimatedRexport").View, obj6);
+  obj3.children = items2;
+  return closure_12(require("ReanimatedRexport").View, obj3);
 };

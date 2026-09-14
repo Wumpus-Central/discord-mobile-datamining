@@ -11,52 +11,48 @@ import MobilePhoneIcon from "MobilePhoneIcon" /* 7061 */;
 import EnvelopeIcon2 from "EnvelopeIcon" /* 7184 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function BaseIdentityVerificationField(icon) {
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   let tmp4 = null;
   if (null != icon) {
-    obj = { style: tmp.icon };
-    tmp4 = React4(icon, obj);
+    const obj2 = { style: tmp.icon };
+    tmp4 = React4(icon, obj2);
   }
   const items = [tmp4, , ];
-  obj = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
+  const obj3 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
   const items1 = [tmp.label];
-  obj.style = items1;
-  items[1] = React4(Text_Text.Text, obj);
+  obj3.style = items1;
+  items[1] = React4(Text_Text.Text, obj3);
   if (passesVerification) {
-    const obj1 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
+    const obj4 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = util.intl;
-    obj1.accessibilityLabel = intl2.string(util.t.g62IJl);
-    obj1.children = React4(CheckmarkLargeIcon.CheckmarkLargeIcon, { color: "status-positive" });
-    let obj2 = obj1;
+    obj4.accessibilityLabel = intl2.string(util.t.g62IJl);
+    obj4.children = React4(CheckmarkLargeIcon.CheckmarkLargeIcon, { color: "status-positive" });
+    let obj5 = obj4;
   } else {
-    obj2 = { style: tmp.ctaButton, children: null };
-    const obj3 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
+    obj5 = { style: tmp.ctaButton, children: null };
+    const obj6 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
     const intl = util.intl;
-    obj3.text = intl.string(util.t["13ofGu"]);
-    obj3.onPress = onPress;
-    obj2.children = React4(components_Button_Button.Button, obj3);
+    obj6.text = intl.string(util.t["13ofGu"]);
+    obj6.onPress = onPress;
+    obj5.children = React4(components_Button_Button.Button, obj6);
   }
-  items[2] = React4(View, obj2);
+  items[2] = React4(View, obj5);
   obj.children = items;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
-createStyles = { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.container = createStyles;
-createStyles.icon = { marginLeft: 4, marginRight: 8 };
-createStyles.label = { flex: 1, marginLeft: 4, lineHeight: 20 };
-createStyles.verifiedContainer = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
-createStyles.ctaButton = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
@@ -100,9 +96,10 @@ export default function IdentityVerificationField(arg0) {
       };
     } else {
       fn = MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE === platform ? (() => {
-        require("ModalActionCreators");
-        const obj = { reason: require("PhoneActionCreators").ChangePhoneReason.GUILD_PHONE_REQUIRED };
-        obj.pushLazy(require("asyncRequireImpl")(paths[12], paths.paths), obj);
+        const obj2 = { reason: null };
+        const obj = require("ModalActionCreators");
+        obj2.reason = require("PhoneActionCreators").ChangePhoneReason.GUILD_PHONE_REQUIRED;
+        obj.pushLazy(require("asyncRequireImpl")(paths[12], paths.paths), obj2);
       }) : (() => {
 
       });

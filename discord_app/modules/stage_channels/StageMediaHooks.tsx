@@ -6,6 +6,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");

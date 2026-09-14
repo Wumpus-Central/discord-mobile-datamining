@@ -1,11 +1,11 @@
-// === Module 15896: CollectiblesShopScreen ===
+// === Module 15898: CollectiblesShopScreen ===
 
-// Module 15896 (CollectiblesShopScreen)
+// Module 15898 (CollectiblesShopScreen)
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7488 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15897 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 15898 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15899 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 15900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
   const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
@@ -35,12 +34,12 @@ export default function CollectiblesShopScreen() {
   if (analyticsSource == null) {
     analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
   }
-  obj = { analyticsSource, screen, onNavigateAway: null };
+  const obj4 = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;
   let onNavigateAway;
   if (params3 != null) {
     onNavigateAway = params3.onNavigateAway;
   }
-  obj.onNavigateAway = onNavigateAway;
+  obj4.onNavigateAway = onNavigateAway;
   return jsx(CollectiblesShopV2.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
 };

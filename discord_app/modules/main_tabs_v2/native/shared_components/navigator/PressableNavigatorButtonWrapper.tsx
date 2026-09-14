@@ -6,7 +6,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import MainTabsV2Constants from "MainTabsV2Constants" /* 7967 */;
 import createStyles from "createStyles" /* 4636 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const MIN_HEADER_HEIGHT = MainTabsV2Constants.MIN_HEADER_HEIGHT;
@@ -16,6 +16,7 @@ let size = { flexShrink: 0, flexDirection: "row", alignItems: "center", padding:
 obj.buttonWrapper = size;
 obj.buttonWrapperModal = { marginLeft: -8 };
 let closure_2 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx");
 
 export default function PressableNavigatorButtonWrapper(children) {

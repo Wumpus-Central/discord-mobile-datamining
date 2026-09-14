@@ -82,14 +82,13 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
           if (null == item) {
             return item;
           } else if (item instanceof closure_2_1) {
-            let str = item.toString();
+            let str1 = item.toString();
           } else if (null == closure_0) {
             let _encodeURIComponent = encodeURIComponent;
-            str = encodeURIComponent(item);
+            str1 = encodeURIComponent(item);
           } else {
             const _String = String;
-            str = String(item);
-            const parts = str.split("");
+            const parts = String(item).split("");
             const mapped = parts.map((item) => {
               if (null == closure_1_0) {
                 const _encodeURIComponent = encodeURIComponent;
@@ -99,7 +98,8 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
               }
               return encodeURIComponentResult;
             });
-            str = mapped.join("");
+            str1 = mapped.join("");
+            const str = String(item);
           }
         }));
       };

@@ -1,15 +1,14 @@
-// === Module 11451: ReminderNotification ===
+// === Module 11452: ReminderNotification ===
 
-// Module 11451 (ReminderNotification)
+// Module 11452 (ReminderNotification)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ClockIcon from "ClockIcon" /* 4599 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import showForLaterModal from "showForLaterModal" /* 7962 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10223 */;
 import MessagePreviewTextDefault from "MessagePreviewText" /* 10235 */;
 import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 10300 */;
 import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 10302 */;
@@ -21,49 +20,50 @@ require = fn;
 function NotificationAvatar(arg0) {
   ({ user, guildId } = arg0);
   const tmp = closure_13();
-  cutout = { style: tmp.avatarContainer, children: null };
-  cutout = { user, guildId, size: native.AvatarSizes.NORMAL, cutout };
-  const items = [closure_1_10(native.Avatar, cutout), ];
-  cutout = { style: tmp.cutoutIconContainer, children: closure_1_10(ClockIcon.ClockIcon, { size: "xs", color: nativeDefault.colors.ICON_SUBTLE }) };
-  items[1] = closure_1_10(View, cutout);
-  cutout.children = items;
-  return closure_1_11(View, cutout);
+  const obj = { style: tmp.avatarContainer, children: null };
+  const items = [closure_1_10(native.Avatar, { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 }), ];
+  obj3 = { style: tmp.cutoutIconContainer, children: null };
+  const obj2 = { user, guildId, size: native.AvatarSizes.NORMAL, cutout: obj3 };
+  obj3.children = closure_1_10(ClockIcon.ClockIcon, { size: "xs", color: nativeDefault.colors.ICON_SUBTLE });
+  items[1] = closure_1_10(View, obj3);
+  obj.children = items;
+  return closure_1_11(View, obj);
 }
 function NotificationBody(channel) {
   channel = channel.channel;
   const message = channel.message;
-  let obj = channel(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
-  let obj1 = channel(504);
+  const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
+  const obj = channel(504);
   const items1 = [ChannelStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  let obj2 = channel(10223);
-  const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
+  const stateFromStores1 = channel(504).useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
+  const obj2 = channel(504);
+  const hasPreviewableMedia = channel(10223).useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1094).ChannelTypes.DM;
   let num = 1;
   if (tmp6) {
     num = closure_8;
   }
+  obj3 = channel(10223);
   let tmp10 = null;
   const messagePreviewTextVariant = channel(10223).getMessagePreviewTextVariant();
   if (!tmp6) {
-    obj = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
-    tmp10 = closure_10(MessageNotificationHeaderDefault, obj);
+    const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
+    tmp10 = closure_10(MessageNotificationHeaderDefault, obj4);
   }
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
-      obj = { channel, message, color: "text-default", layout: tmp(7983).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
-      let tmp14 = closure_10(tmp(10237).ChannelRowPreview, obj);
+      const obj5 = { channel, message, color: "text-default", layout: tmp(7983).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
+      let tmp14 = closure_10(tmp(10237).ChannelRowPreview, obj5);
     }
-    obj1 = { children: null };
+    const obj6 = { children: null };
     items2[1] = tmp14;
-    obj1.children = items2;
-    return closure_11(closure_12, obj1);
+    obj6.children = items2;
+    return closure_11(closure_12, obj6);
   }
-  obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
-  tmp14 = closure_10(MessagePreviewTextDefault, obj2);
+  tmp14 = closure_10(MessagePreviewTextDefault, { message, lineClamp: num, showMessageAuthor: true, maxHeight });
+  const obj7 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
   const tmpResult = channel(10223);
 }
 const View = fn(17).View;
@@ -73,18 +73,17 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4636);
-let cutout = { cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } };
-let closure_13 = createStyles.createStyles(cutout);
-cutout = { direction: fn(1178).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
+let closure_13 = createStyles.createStyles({ cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } });
+let obj3 = { direction: fn(1176).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = noop.memo((message) => {
   message = message.message;
-  let obj = InAppNotificationUtils;
+  const tmp = closure_13();
   let tmp4 = null;
   if (obj.useHasPreviewableMedia(message)) {
-    obj = { style: tmp.rightAccessoryContainer, children: null };
-    obj = { message };
-    obj.children = closure_1_10(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj);
-    tmp4 = closure_1_10(View, obj);
+    const obj2 = { style: tmp.rightAccessoryContainer, children: null };
+    obj3 = { message };
+    obj2.children = closure_1_10(MediaPreviewRightAccessory.MediaPreviewRightAccessory, obj3);
+    tmp4 = closure_1_10(View, obj2);
   }
   return tmp4;
 });
@@ -96,7 +95,6 @@ export default noop.memo(function ReminderNotification(notification) {
   const channel = notification.channel;
   const message = notification.savedMessage.message;
   _modDef38(null != message, "Message in a notification should not be null.");
-  let obj = { user: notification.author, guildId: channel.guild_id };
   const items = [notification];
   const memo = noop.useMemo(() => {
     const obj = { type: "simple", text: null };
@@ -105,13 +103,12 @@ export default noop.memo(function ReminderNotification(notification) {
     return obj;
   }, []);
   const callback = noop.useCallback(() => {
-    let obj = ModalActionCreatorsDefault;
-    obj.popAll();
+    ModalActionCreatorsDefault.popAll();
     showForLaterModal.showForLaterModal(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
     ({ savedMessage, author } = notification);
-    obj = { message_id: savedMessage.saveData.messageId, message_author_id: author.id, notification_type: "IN_APP" };
-    AnalyticsUtilsDefault.track(AnalyticEvents.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, { message_id: savedMessage.saveData.messageId, message_author_id: author.id, notification_type: "IN_APP" });
   }, items);
-  obj = { icon: closure_10(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(NotificationBody, { channel, message }) };
-  return closure_10(notification(10298).NotificationPressable, obj);
+  let obj = { user: notification.author, guildId: channel.guild_id };
+  const tmp2 = closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id });
+  return closure_10(notification(10298).NotificationPressable, { icon: closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id }), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(NotificationBody, { channel, message }) });
 });

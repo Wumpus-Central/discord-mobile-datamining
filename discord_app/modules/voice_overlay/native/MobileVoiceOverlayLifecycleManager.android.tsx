@@ -1,13 +1,13 @@
-// === Module 14616: MobileVoiceOverlayLifecycleManager ===
+// === Module 14617: MobileVoiceOverlayLifecycleManager ===
 
-// Module 14616 (MobileVoiceOverlayLifecycleManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 14617 (MobileVoiceOverlayLifecycleManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7858 */;
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10120 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14623 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14624 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -24,14 +24,14 @@ require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14617);
 fn(14618);
 fn(14619);
 fn(14620);
-fn(7095);
-fn(13875);
 fn(14621);
+fn(7095);
+fn(13876);
 fn(14622);
+fn(14623);
 const registerAsset = fn(8746);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
@@ -191,7 +191,7 @@ class MobileVoiceOverlayManager {
         const channel = ChannelStore.getChannel(currentVoiceChannelId);
         if (null != currentVoiceChannelId) {
           if (null != channel) {
-            const overlayUser = obj4.getOverlayUser(id);
+            const overlayUser = obj.getOverlayUser(id);
             if (null != overlayUser) {
               const _Object = Object;
               const keys = Object.keys(VoiceStateStore.getVoiceStatesForChannel(currentVoiceChannelId));
@@ -232,23 +232,21 @@ class MobileVoiceOverlayManager {
                   if (tmp19 !== userId) {
                     let overlayUser2 = obj.getOverlayUser(tmp19);
                     if (null != overlayUser2) {
-                      let arr = items.push(tmp27);
+                      let arr2 = items.push(tmp27);
                       if (items.length >= 3) {
                         iter.return();
                         break;
                       }
-                      let tmp31 = obj;
-                      let obj2 = obj;
                       if (obj.overlayState !== constants.SHOWING) {
                         let str = "";
-                        let result = obj2.refreshChannelSelectorResults("");
+                        let result = obj.refreshChannelSelectorResults("");
                       }
-                      obj2.currentVoiceChannelId = currentVoiceChannelId;
+                      obj.currentVoiceChannelId = currentVoiceChannelId;
                       let obj3 = NativeMobileVoiceOverlayModuleDefault;
                       if (obj3 != null) {
-                        obj = { users: items, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
+                        let obj5 = { users: items, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
                         let obj6 = useChannelName;
-                        obj.channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
+                        obj5.channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
                         let guild = GuildStore.getGuild(currentGuildId);
                         let str2;
                         if (guild != null) {
@@ -257,16 +255,16 @@ class MobileVoiceOverlayManager {
                         if (str2 == null) {
                           str2 = "";
                         }
-                        obj.guildName = str2;
-                        obj.guildId = currentGuildId;
-                        obj.channelId = currentVoiceChannelId;
-                        obj.extraUsers = keys.length - items.length;
-                        obj.deafened = MediaEngineStore.isSelfDeaf();
-                        obj.muted = MediaEngineStore.isSelfMute();
-                        obj.connectionQuality = RTCConnectionStore.getQuality();
-                        obj.canGenerateInvite = PermissionStore.can(constants2.CREATE_INSTANT_INVITE, channel);
-                        obj.channelSelectorResults = tmp31.channelSelectorResults;
-                        let setDataResult = obj3.setData(obj);
+                        obj5.guildName = str2;
+                        obj5.guildId = currentGuildId;
+                        obj5.channelId = currentVoiceChannelId;
+                        obj5.extraUsers = keys.length - items.length;
+                        obj5.deafened = MediaEngineStore.isSelfDeaf();
+                        obj5.muted = MediaEngineStore.isSelfMute();
+                        obj5.connectionQuality = RTCConnectionStore.getQuality();
+                        obj5.canGenerateInvite = PermissionStore.can(constants2.CREATE_INSTANT_INVITE, channel);
+                        obj5.channelSelectorResults = obj.channelSelectorResults;
+                        let setDataResult = obj3.setData(obj5);
                       }
                     }
                   }
@@ -276,29 +274,28 @@ class MobileVoiceOverlayManager {
             }
           }
         }
-        obj4 = obj;
       }
     };
     obj.getVoiceConnectedGuildAndChannel = function getVoiceConnectedGuildAndChannel() {
-      obj = guildId;
       guildId = guildId.getGuildId();
       if (guildId == null) {
         guildId = null;
       }
-      obj = { currentGuildId: guildId, currentVoiceChannelId: null };
-      let channelId = obj.getChannelId();
+      const obj2 = { currentGuildId: guildId, currentVoiceChannelId: null };
+      let channelId = guildId.getChannelId();
       if (channelId == null) {
         channelId = null;
       }
-      obj.currentVoiceChannelId = channelId;
-      return obj;
+      obj2.currentVoiceChannelId = channelId;
+      return obj2;
     };
     obj.refreshChannelSelectorResults = function refreshChannelSelectorResults(query) {
       let currentGuildId = null;
       if (0 === query.length) {
         currentGuildId = obj.getVoiceConnectedGuildAndChannel().currentGuildId;
       }
-      obj = {
+      obj = AutocompleteUtilsDefault;
+      obj.channelSelectorResults = obj.queryChannels({
         query,
         guildId: currentGuildId,
         limit: 15,
@@ -308,8 +305,7 @@ class MobileVoiceOverlayManager {
         },
         type: GUILD_VOCAL_CHANNELS_KEY,
         allowEmptyQueries: true
-      };
-      obj.channelSelectorResults = obj.queryChannels(obj).map((record) => {
+      }).map((record) => {
         record = record.record;
         obj = { channelId: record.id, guildId: record.guild_id, channelName: closure_1_0(dependencyMap[25]).computeChannelName(record, user, closure_1_9), guildName: null, categoryName: null };
         guild = guild.getGuild(record.guild_id);
@@ -335,11 +331,11 @@ class MobileVoiceOverlayManager {
       const voiceConnectedGuildAndChannel = obj.getVoiceConnectedGuildAndChannel();
       const channel = ChannelStore.getChannel(voiceConnectedGuildAndChannel.currentVoiceChannelId);
       const rTCConnectionId = RTCConnectionStore.getRTCConnectionId();
-      obj = { type: "voice", rtc_connection_id: rTCConnectionId };
       const obj2 = AnalyticsUtilsDefault;
+      const obj3 = { type: "voice", rtc_connection_id: rTCConnectionId };
       const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
       const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(voiceConnectedGuildAndChannel.currentGuildId));
-      obj2.track(constants.MOBILE_OVERLAY_OPENED, obj);
+      obj2.track(constants.MOBILE_OVERLAY_OPENED, obj3);
       const obj6 = NativeMobileVoiceOverlayModuleDefault;
       if (obj6 != null) {
         obj6.showOverlay(obj);

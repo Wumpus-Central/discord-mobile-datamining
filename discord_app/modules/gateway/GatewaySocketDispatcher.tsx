@@ -1,17 +1,17 @@
-// === Module 13727: GatewaySocketDispatcher ===
+// === Module 13728: GatewaySocketDispatcher ===
 
-// Module 13727 (GatewaySocketDispatcher)
+// Module 13728 (GatewaySocketDispatcher)
 import LoggerDefault from "Logger" /* 3 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
-import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 13731 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13732 */;
-import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 13733 */;
-import ConnectionStateDefault from "ConnectionState" /* 13734 */;
-import ActionBatcherDefault from "ActionBatcher" /* 13735 */;
+import WorkSchedulerTelemetry from "WorkSchedulerTelemetry" /* 13732 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13733 */;
+import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment" /* 13734 */;
+import ConnectionStateDefault from "ConnectionState" /* 13735 */;
+import ActionBatcherDefault from "ActionBatcher" /* 13736 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_4 = fn(13728).DISPATCHER_IDEAL_TIME_LIMIT_MS;
+let closure_4 = fn(13729).DISPATCHER_IDEAL_TIME_LIMIT_MS;
 let closure_5 = new LoggerDefault("GatewaySocket");
 const set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
@@ -24,34 +24,35 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
 class GatewaySocketDispatcher {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
     obj = closure_0(closure_2[3]);
-    obj.scheduler = obj.createDispatcherWorkScheduler();
-    obj.queue = [];
-    obj.paused = true;
+    obj1.scheduler = obj.createDispatcherWorkScheduler();
+    obj1.queue = [];
+    obj1.paused = true;
     obj2 = closure_0(closure_2[4]);
-    obj.resumeAnalytics = obj2.createResumeAnalytics();
-    obj.getDispatchHandler = null;
-    obj.flush = function flush(arg0) {
-      if (obj.paused) {
+    obj1.resumeAnalytics = obj2.createResumeAnalytics();
+    obj1.getDispatchHandler = null;
+    obj1.flush = function flush(arg0) {
+      if (obj3.paused) {
         return true;
       } else {
         const _performance = performance;
         let num2 = 0;
-        obj = tmp;
-        if (0 < tmp.queue.length) {
+        let obj = obj3;
+        if (0 < obj3.queue.length) {
           let num4 = 0;
           num2 = 0;
-          obj = tmp;
-          if (tmp.queue[0].status === closure_11.Loaded) {
+          obj = obj3;
+          if (obj3.queue[0].status === closure_11.Loaded) {
             const sum = num4 + 1;
             num2 = sum;
-            while (sum < obj.queue.length) {
+            obj = obj3;
+            while (sum < obj3.queue.length) {
               num4 = sum;
               num2 = sum;
-              obj = tmp6;
-              if (tmp6.queue[sum].status !== closure_11.Loaded) {
+              obj = obj3;
+              if (obj3.queue[sum].status !== closure_11.Loaded) {
                 break;
               }
             }
@@ -78,8 +79,8 @@ class GatewaySocketDispatcher {
         nowResult = performance.now();
       }
     };
-    obj.socket = global;
-    return obj;
+    obj1.socket = global;
+    return obj1;
   }
 }
 const prototype = GatewaySocketDispatcher.prototype;
@@ -266,11 +267,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
               if (num2 == null) {
                 num2 = 0;
               }
-              type = undefined;
+              let type1;
               if (tmp14 != null) {
-                type = tmp14.type;
+                type1 = tmp14.type;
               }
-              let tmp16 = null != closure_2 && num2 <= 0 && arr[num].type !== type && num !== diff;
+              let tmp16 = null != closure_2 && num2 <= 0 && arr[num].type !== type1 && num !== diff;
               flag = tmp16;
             }
             sum = num + 1;
@@ -295,7 +296,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13731).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(13732).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];

@@ -1,9 +1,11 @@
-// === Module 13848: isUserSettingsOpen ===
+// === Module 13849: isUserSettingsOpen ===
 
-// Module 13848 (isUserSettingsOpen)
+// Module 13849 (isUserSettingsOpen)
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function isUserSettingsOpen() {
@@ -12,57 +14,57 @@ function isUserSettingsOpen() {
   let tmp2 = !tmp;
   if (!tmp) {
     const rootState = rootNavigationRef.getRootState();
-    let routes;
+    let routes1;
     if (rootState != null) {
-      routes = rootState.routes;
+      routes1 = rootState.routes;
     }
-    let someResult = null != routes;
+    let someResult = null != routes1;
     if (someResult) {
-      routes = rootState.routes;
+      const routes = rootState.routes;
       someResult = routes.some((name) => {
         let tmp = "settings" === name.name;
         if (!tmp) {
           const state = name.state;
-          let routes;
+          let routes1;
           if (state != null) {
-            routes = state.routes;
+            routes1 = state.routes;
           }
-          let someResult = null != routes;
+          let someResult = null != routes1;
           if (someResult) {
-            routes = state.routes;
+            const routes = state.routes;
             someResult = routes.some((name) => {
               let tmp = "settings" === name.name;
               if (!tmp) {
                 const state = name.state;
-                let routes;
+                let routes1;
                 if (state != null) {
-                  routes = state.routes;
+                  routes1 = state.routes;
                 }
-                let someResult = null != routes;
+                let someResult = null != routes1;
                 if (someResult) {
-                  routes = state.routes;
+                  const routes = state.routes;
                   someResult = routes.some((name) => {
                     let tmp = "settings" === name.name;
                     if (!tmp) {
                       const state = name.state;
-                      let routes;
+                      let routes1;
                       if (state != null) {
-                        routes = state.routes;
+                        routes1 = state.routes;
                       }
-                      let someResult = null != routes;
+                      let someResult = null != routes1;
                       if (someResult) {
-                        routes = state.routes;
+                        const routes = state.routes;
                         someResult = routes.some((name) => {
                           let tmp = "settings" === name.name;
                           if (!tmp) {
                             const state = name.state;
-                            let routes;
+                            let routes1;
                             if (state != null) {
-                              routes = state.routes;
+                              routes1 = state.routes;
                             }
-                            let someResult = null != routes;
+                            let someResult = null != routes1;
                             if (someResult) {
-                              routes = state.routes;
+                              const routes = state.routes;
                               someResult = routes.some(() => { ... });
                             }
                             tmp = someResult;
@@ -94,40 +96,40 @@ const result = size.fileFinishedImporting("modules/user_settings/core/isUserSett
 
 export { isUserSettingsOpen };
 export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
-  [tmp2, require] = _slicedToArray(noop.useState(isUserSettingsOpen), 2);
+  [tmp2, require] = noop.useState(isUserSettingsOpen);
   const effect = noop.useEffect(() => {
     function handleStateChange() {
       if (null != rootNavigationRef) {
         const rootState = rootNavigationRef.getRootState();
-        let routes;
+        let routes1;
         if (rootState != null) {
-          routes = rootState.routes;
+          routes1 = rootState.routes;
         }
-        let someResult = null != routes;
+        let someResult = null != routes1;
         if (someResult) {
-          routes = rootState.routes;
+          let routes = rootState.routes;
           someResult = routes.some((name) => {
             let tmp = "settings" === name.name;
             if (!tmp) {
               const state = name.state;
-              let routes;
+              let routes1;
               if (state != null) {
-                routes = state.routes;
+                routes1 = state.routes;
               }
-              let someResult = null != routes;
+              let someResult = null != routes1;
               if (someResult) {
-                routes = state.routes;
+                const routes = state.routes;
                 someResult = routes.some((name) => {
                   let tmp = "settings" === name.name;
                   if (!tmp) {
                     const state = name.state;
-                    let routes;
+                    let routes1;
                     if (state != null) {
-                      routes = state.routes;
+                      routes1 = state.routes;
                     }
-                    let someResult = null != routes;
+                    let someResult = null != routes1;
                     if (someResult) {
-                      routes = state.routes;
+                      const routes = state.routes;
                       someResult = routes.some(() => { ... });
                     }
                     tmp = someResult;

@@ -1,6 +1,6 @@
-// === Module 14934: ContactSyncNameUpdateModal ===
+// === Module 14935: ContactSyncNameUpdateModal ===
 
-// Module 14934 (ContactSyncNameUpdateModal)
+// Module 14935 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import Navigator from "Navigator" /* 7103 */;
@@ -10,8 +10,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 function onClose() {
-  let arr = ModalActionCreatorsDefault;
-  arr = arr.pop();
+  ModalActionCreatorsDefault.pop();
 }
 function ContactSyncNameInputScreen() {
   function onNext() {
@@ -26,14 +25,14 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0) {
     _require(true);
-    await tmp3(12813).updateName(closure_0);
+    await tmp3(12814).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
-      const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
+      const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
       const intl = closure_0(1114).intl;
-      obj2.content = intl.string(closure_0(1114).t.R0RpRX);
-      obj2.icon = tmp3(5678);
-      tmp3(4335).open(obj2);
+      obj7.content = intl.string(closure_0(1114).t.R0RpRX);
+      obj7.icon = tmp3(5678);
+      tmp3(4335).open(obj7);
       closure_129_0(false);
       c4 = 3;
       tmp3(4335);
@@ -47,12 +46,12 @@ function ContactSyncNameInputScreen() {
     }
     return value;
   };
-  let obj = require("ContactSyncUtils");
-  const contactSyncAccount = obj.useContactSyncAccount();
+  const tmp = closure_10();
+  const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
   const tmp3 = _slicedToArray(noop.useState(false), 2);
   _require = tmp3[1];
-  obj = { style: closure_10().container, children: null };
-  obj = {
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -61,15 +60,15 @@ function ContactSyncNameInputScreen() {
     initialName: null
   };
   let str;
-  const tmp = closure_10();
+  const obj = require("ContactSyncUtils");
   if (contactSyncAccount != null) {
     str = contactSyncAccount.name;
   }
   if (str == null) {
     str = "";
   }
-  obj.initialName = str;
-  obj.children = jsx(onNext(12826), {
+  obj3.initialName = str;
+  obj2.children = jsx(onNext(12827), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -77,20 +76,16 @@ function ContactSyncNameInputScreen() {
     loading: tmp3[0],
     initialName: null
   });
-  return <View onNext={onNext} onRemoveName={function onRemoveName() {
-    return onNext(null);
-  }} loading={tmp3[0]} initialName={null} />;
+  return <View style={tmp.container}>{null}</View>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12807).ContactSyncScenes;
+const ContactSyncScenes = fn(12808).ContactSyncScenes;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5763).NAV_BAR_HEIGHT + 32 };
-createStyles.container = createStyles;
-let closure_10 = createStyles.createStyles(createStyles);
-const obj1 = {};
-let obj2 = {
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5763).NAV_BAR_HEIGHT + 32 } };
+let closure_10 = createStyles.createStyles(obj2);
+const obj4 = {};
+const obj5 = {
   render() {
     return <ContactSyncNameInputScreen />;
   },
@@ -100,11 +95,11 @@ let obj2 = {
   title: ""
 };
 const NavigatorHeader = fn(5705);
-obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
-obj1[ContactSyncScenes.NAME_INPUT] = obj2;
+obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+obj4[ContactSyncScenes.NAME_INPUT] = obj5;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
-  return jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
+  return jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj4 });
 };

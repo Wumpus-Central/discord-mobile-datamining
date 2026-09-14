@@ -10,8 +10,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default {
   showModal(locationStack) {
-    const obj = { locationStack };
-    obj.pushLazy(asyncRequireImpl(9400, dependencyMap.paths), obj, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9400, dependencyMap.paths), { locationStack }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

@@ -1,12 +1,14 @@
-// === Module 15250: QuestPreviewToolSetting ===
+// === Module 15251: QuestPreviewToolSetting ===
 
-// Module 15250 (QuestPreviewToolSetting)
+// Module 15251 (QuestPreviewToolSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11616 */;
-import QuestsIcon from "QuestsIcon" /* 15083 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11617 */;
+import QuestsIcon from "QuestsIcon" /* 15084 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

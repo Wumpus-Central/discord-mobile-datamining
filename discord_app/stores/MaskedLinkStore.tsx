@@ -39,18 +39,18 @@ prototype["initialize"] = function initialize() {
     set3 = set1;
   } else {
     ({ trustedDomains, trustedProtocols } = obj);
-    arr = null;
+    let arr3 = null;
     if (null != trustedDomains) {
       const _Array = Array;
-      arr = Array.from(trustedDomains);
+      arr3 = Array.from(trustedDomains);
     }
-    set2 = new Set(arr);
-    let arr1 = null;
+    set2 = new Set(arr3);
+    let arr4 = null;
     if (null != trustedProtocols) {
       const _Array2 = Array;
-      arr1 = Array.from(trustedProtocols);
+      arr4 = Array.from(trustedProtocols);
     }
-    set3 = new Set(arr1);
+    set3 = new Set(arr4);
   }
 };
 prototype["isTrustedDomain"] = function isTrustedDomain(url) {
@@ -90,8 +90,7 @@ MaskedLinkStore.displayName = "MaskedLinkStore";
 const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function handleAddTrustedDomain(url) {
     url = url.url;
-    let obj = MaskedLinkStoreMethodsAdditional;
-    const hostname = obj.getHostname(url);
+    const hostname = MaskedLinkStoreMethodsAdditional.getHostname(url);
     let flag = true;
     if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
       const _window2 = window;
@@ -123,23 +122,23 @@ const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
     } else {
       set2.add(MaskedLinkStoreMethodsAdditional.getHostname(url));
       const Storage = Storage2.Storage;
-      obj = { trustedDomains: set2, trustedProtocols: set3 };
-      const result = Storage.set(MaskedLinkStore, obj);
+      const obj3 = { trustedDomains: set2, trustedProtocols: set3 };
+      const result = Storage.set(MaskedLinkStore, obj3);
       const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
     url = url.url;
-    let obj = MaskedLinkStoreMethodsAdditional;
     if (set3.has(obj.getProtocol(url))) {
       return false;
     } else {
       set3.add(MaskedLinkStoreMethodsAdditional.getProtocol(url));
       const Storage = Storage2.Storage;
-      obj = { trustedDomains: set2, trustedProtocols: set3 };
-      const result = Storage.set(MaskedLinkStore, obj);
+      const obj2 = { trustedDomains: set2, trustedProtocols: set3 };
+      const result = Storage.set(MaskedLinkStore, obj2);
       const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
+    obj = MaskedLinkStoreMethodsAdditional;
   }
 });
 let result = size.fileFinishedImporting("stores/MaskedLinkStore.tsx");

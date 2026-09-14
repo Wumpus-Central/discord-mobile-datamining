@@ -1,6 +1,6 @@
-// === Module 11945: PremiumGiftingIntentUtils ===
+// === Module 11946: PremiumGiftingIntentUtils ===
 
-// Module 11945 (PremiumGiftingIntentUtils)
+// Module 11946 (PremiumGiftingIntentUtils)
 import Constants from "Constants" /* 1074 */;
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import size from "module_2" /* 2 */;
@@ -18,8 +18,9 @@ const result = size.fileFinishedImporting("modules/premium/gifting/utils/Premium
 
 export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {
-    let obj = { chat: null, actionButton: null, actionButtonCoachmark: null };
     ({ FRIEND_ANNIVERSARIES_CHAT: obj2.chat, FRIEND_ANNIVERSARIES_ACTION_BUTTON: obj2.actionButton, FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK: obj2.actionButtonCoachmark } = AnalyticsLocations);
+    let obj = { chat: null, actionButton: null, actionButtonCoachmark: null };
+    const obj3 = { chat: null, actionButton: null, actionButtonCoachmark: null };
   } else {
     obj = {};
   }

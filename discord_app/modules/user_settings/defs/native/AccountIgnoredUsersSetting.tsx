@@ -1,25 +1,23 @@
-// === Module 14895: AccountIgnoredUsersSetting ===
+// === Module 14896: AccountIgnoredUsersSetting ===
 
-// Module 14895 (AccountIgnoredUsersSetting)
+// Module 14896 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   IconComponent: fn(7069).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
-    let obj = initialize;
     const items = [RelationshipStore];
-    const stateFromStoresArray = obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
+    const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
     const intl = util.intl;
-    obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
-    return intl.format(util.t.rXUeOl, obj);
+    return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
   },
   parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
@@ -28,9 +26,8 @@ let SettingBuilders = {
       return require("IgnoredUsersList").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx");
 
-export default SettingBuilders;
+export default route;

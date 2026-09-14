@@ -16,10 +16,10 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
     if (keyByResult == null) {
       keyByResult = {};
     }
-    obj = { assets: keyByResult, lastUpdated: null };
+    let obj2 = { assets: keyByResult, lastUpdated: null };
     let _Date = Date;
-    obj.lastUpdated = Date.now();
-    closure_4[key10012] = obj;
+    obj2.lastUpdated = Date.now();
+    closure_4[key10012] = obj2;
     continue;
   }
 }
@@ -55,7 +55,7 @@ prototype["getApplicationAssets"] = function getApplicationAssets(id) {
   return closure_4[id];
 };
 ApplicationAssetsStore.displayName = "ApplicationAssetsStore";
-obj = {
+const applicationAssetsStore = new ApplicationAssetsStore(DispatcherDefault, {
   APPLICATION_ASSETS_FETCH: function handleFetchApplicationAssets(applicationId) {
     obj = {};
     const merged = Object.assign(obj);
@@ -69,23 +69,21 @@ obj = {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      obj = _modDef12;
-      let keyByResult = obj.keyBy(assets, "name");
+      let keyByResult = _modDef12.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};
       }
-      obj = { assets: keyByResult, lastUpdated: null };
+      const obj2 = { assets: keyByResult, lastUpdated: null };
       const _Date = Date;
-      obj.lastUpdated = Date.now();
-      closure_4[tmp3] = obj;
+      obj2.lastUpdated = Date.now();
+      closure_4[tmp3] = obj2;
     } else {
       delete tmp[tmp2];
     }
   },
   EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: handleFetchEmbeddedActivityShelfSuccess,
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: handleFetchEmbeddedActivityShelfSuccess
-};
-const applicationAssetsStore = new ApplicationAssetsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");
 

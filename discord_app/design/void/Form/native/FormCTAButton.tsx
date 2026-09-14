@@ -2,11 +2,11 @@
 
 // Module 8721 (FormCTAButton)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import RedesignCompat from "RedesignCompat" /* 5767 */;
 import RowButton from "RowButton" /* 8718 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5605 */;
+import TextStyles_mod from "TextStyles" /* 5605 */;
 
 require = fn;
 class FormCTAButton {
@@ -55,20 +55,20 @@ class FormCTAButton {
       obj.color = BRAND;
       tmp5Result = tmp5(ActivityIndicator, obj);
     }
-    obj = { style: null, children: null };
+    obj1 = { style: null, children: null };
     tmp11 = View;
     if (closure_2.useContext(tmp6(tmp7[9]).RedesignCompatContext)) {
-      obj.style = tmp4.rowButton;
-      obj1 = { label: null, onPress: null, arrow: false, disabled: null, testID: null };
-      obj1.label = tmp5Result;
-      obj1.onPress = onPress;
+      obj1.style = tmp4.rowButton;
+      obj5 = { label: null, onPress: null, arrow: false, disabled: null, testID: null };
+      obj5.label = tmp5Result;
+      obj5.onPress = onPress;
       if (!tmp2) {
         tmp2 = tmp3;
       }
-      obj1.disabled = tmp2;
-      obj1.testID = testID;
-      obj.children = tmp5(tmp6(tmp7[10]).RowButton, obj1);
-      tmp16 = obj;
+      obj5.disabled = tmp2;
+      obj5.testID = testID;
+      obj1.children = tmp5(tmp6(tmp7[10]).RowButton, obj5);
+      tmp16 = obj1;
     } else {
       items1 = [, , ];
       items1[0] = tmp4.sectionBody;
@@ -78,49 +78,51 @@ class FormCTAButton {
       }
       items1[1] = disabled2;
       items1[2] = global.style;
-      obj.style = items1;
-      obj2 = { testID: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, android_ripple: null, children: null };
-      obj2.testID = testID;
-      obj2.onPress = onPress;
-      obj2.style = tmp4.button;
+      obj1.style = items1;
+      obj6 = { testID: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, android_ripple: null, children: null };
+      obj6.testID = testID;
+      obj6.onPress = onPress;
+      obj6.style = tmp4.button;
       tmp13 = tmp2;
       tmp12 = Pressable;
       if (!tmp2) {
         tmp13 = tmp3;
       }
-      obj2.disabled = tmp13;
+      obj6.disabled = tmp13;
       tmp14 = getThemedRippleConfig;
       tmp15 = ANDROID_FOREGROUND_RIPPLE;
-      obj2.android_ripple = getThemedRippleConfig(ANDROID_FOREGROUND_RIPPLE);
-      obj2.children = tmp5Result;
-      obj.children = tmp5(tmp12, obj2);
-      tmp16 = obj;
+      obj6.android_ripple = getThemedRippleConfig(ANDROID_FOREGROUND_RIPPLE);
+      obj6.children = tmp5Result;
+      obj1.children = tmp5(tmp12, obj6);
+      tmp16 = obj1;
     }
     return tmp5(tmp11, tmp16);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, Pressable: closure_4, Platform, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const FormConstants = fn(1182);
+const FormConstants = fn(1180);
 ({ ANDROID_FOREGROUND_RIPPLE: metroRequire, getThemedRippleConfig: closure_7 } = FormConstants);
 const Fonts = fn(1074).Fonts;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { rowButton: { paddingHorizontal: 16 }, sectionBody: {}, button: { minHeight: 44, justifyContent: "center" }, text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" }, textBrand: null, textDanger: null, textWarning: null, alignLeft: null, disabled: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { rowButton: { paddingHorizontal: 16 }, sectionBody: {}, button: { minHeight: 44, justifyContent: "center" }, text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" }, textBrand: null, textDanger: null, textWarning: null, alignLeft: null, disabled: null };
+let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
-createStyles.textBrand = createStyles;
+obj2.textBrand = {};
+let TextStyles = TextStyles_mod;
 const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, 16));
-createStyles.textDanger = {};
+obj2.textDanger = {};
+let TextStyles = TextStyles_mod;
 const merged2 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.STATUS_WARNING, 16));
-createStyles.textWarning = {};
-createStyles.alignLeft = { textAlign: "left" };
-createStyles.disabled = { opacity: 0.5 };
-const React7 = createStyles.createStyles(createStyles);
-const obj3 = { BRAND: "brand", DANGER: "danger", WARNING: "warning" };
-FormCTAButton.Colors = obj3;
+obj2.textWarning = {};
+obj2.alignLeft = { textAlign: "left" };
+obj2.disabled = { opacity: 0.5 };
+const React7 = createStyles.createStyles(obj2);
+const obj6 = { BRAND: "brand", DANGER: "danger", WARNING: "warning" };
+FormCTAButton.Colors = obj6;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormCTAButton.tsx");
 
 export default FormCTAButton;
-export const FormCTAButtonColors = obj3;
+export const FormCTAButtonColors = obj6;

@@ -16,8 +16,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_8();
+  navigation = navigation(1483).useNavigation();
   let items = [navigation];
   const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
@@ -30,14 +30,14 @@ export default function CrunchyrollLinkLanding() {
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  obj = { platformType: constants2.CRUNCHYROLL, img: _modDef9403, imgStyle: closure_8().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9403, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1114).intl;
-  obj.headerConnect = intl.string(navigation(1114).t["Da+3NJ"]);
+  obj2.headerConnect = intl.string(navigation(1114).t["Da+3NJ"]);
   const intl2 = navigation(1114).intl;
-  obj.body = intl2.string(navigation(1114).t.MaPpPL);
-  const tmp = closure_8();
-  obj.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
-  obj.onNext = callback;
-  obj.valueProps = memo;
-  return jsx(navigation(9354).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9403, imgStyle: closure_8().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  obj2.body = intl2.string(navigation(1114).t.MaPpPL);
+  let obj = navigation(1483);
+  obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
+  obj2.onNext = callback;
+  obj2.valueProps = memo;
+  return jsx(navigation(9354).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9403, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

@@ -1,6 +1,6 @@
-// === Module 11132: ActionSheetIconHeader ===
+// === Module 11133: ActionSheetIconHeader ===
 
-// Module 11132 (ActionSheetIconHeader)
+// Module 11133 (ActionSheetIconHeader)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,18 +17,18 @@ export const ActionSheetIconHeader = function ActionSheetIconHeader(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = closure_5();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const items = [React3(View, { children: icon }), ];
-  obj = { style: tmp.titles, children: null };
+  const obj2 = { style: tmp.titles, children: null };
   const items1 = [React3(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
   let tmp4Result = null;
   if (null != subtitle) {
-    obj = { variant: "text-xs/medium", color: "text-default", children: subtitle };
-    tmp4Result = React3(Text_Text.Text, obj);
+    const obj3 = { variant: "text-xs/medium", color: "text-default", children: subtitle };
+    tmp4Result = React3(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;
-  obj.children = items1;
-  items[1] = React4(View, obj);
+  obj2.children = items1;
+  items[1] = React4(View, obj2);
   obj.children = items;
   return React4(View, obj);
 };

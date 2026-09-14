@@ -1,13 +1,13 @@
-// === Module 15619: IcymiTabSetting ===
+// === Module 15620: IcymiTabSetting ===
 
-// Module 15619 (IcymiTabSetting)
+// Module 15620 (IcymiTabSetting)
 import util from "util" /* 1114 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
 import ICYMIExperiment from "ICYMIExperiment" /* 8470 */;
 import useLabFeatureDefault from "useLabFeature" /* 8473 */;
-import LabFeatureActions from "LabFeatureActions" /* 15620 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import LabFeatureActions from "LabFeatureActions" /* 15621 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -20,16 +20,15 @@ const toggle = SettingBuilders.createToggle({
     return useLabFeatureDefault(ICYMIExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = ICYMIActionCreatorsDefault;
     let str = "show";
     if (enabled) {
       str = "hide";
     }
-    obj.itemInteracted(str, "icymi_tab_toggle", "press");
+    ICYMIActionCreatorsDefault.itemInteracted(str, "icymi_tab_toggle", "press");
     ICYMIActionCreatorsDefault.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "icymi_tab_toggle", actionIntentType: "configure", actionDestinationType: null } });
     const tmpResult = ICYMIActionCreatorsDefault;
-    obj = { enabled };
-    LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, obj);
+    LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, { enabled });
+    const obj2 = { enabled };
   },
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;

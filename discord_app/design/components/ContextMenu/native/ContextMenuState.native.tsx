@@ -1,14 +1,16 @@
 // === Module 8790: ContextMenuState ===
 
 // Module 8790 (ContextMenuState)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
-let module_560 = fn(560);
-module_560.create(() => ({ menu: null }));
+const module_560 = fn(560);
+let obj2 = module_560.create(() => ({ menu: null }));
 function updateContextMenuState(absoluteX, absoluteY, callback1) {
   ({ pan, itemMeasurements, activeIndex } = callback1);
   const result = pan.set(absoluteY);
@@ -38,8 +40,7 @@ function updateContextMenuState(absoluteX, absoluteY, callback1) {
   }
   const result3 = activeIndex.set(-1);
 }
-module_560 = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: fn(4373).runOnJS, triggerHapticFeedback: fn(4604).triggerHapticFeedback, HapticFeedbackTypes: fn(4604).HapticFeedbackTypes };
-updateContextMenuState.__closure = module_560;
+updateContextMenuState.__closure = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: fn(4373).runOnJS, triggerHapticFeedback: fn(4604).triggerHapticFeedback, HapticFeedbackTypes: fn(4604).HapticFeedbackTypes };
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };
 const size = fn(2);
@@ -50,10 +51,10 @@ export const INDEX_BOUNDS_PAGE_X_OFFSET = 0;
 export const INDEX_BOUNDS_PAGE_Y_OFFSET = 1;
 export const INDEX_BOUNDS_WIDTH_OFFSET = 2;
 export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
-export const ContextMenuStore = module_560;
+export const ContextMenuStore = obj2;
 export const showContextMenu = function showContextMenu(size) {
   _require = size;
-  require("ReactBatchUpdates").batchUpdates(() => module_560.setState({ menu }));
+  require("ReactBatchUpdates").batchUpdates(() => obj2.setState({ menu }));
 };
 export const hideContextMenu = function hideContextMenu() {
   ReactBatchUpdates.batchUpdates(() => {
@@ -67,7 +68,7 @@ export const hideContextMenu = function hideContextMenu() {
   });
 };
 export const useActiveContextMenu = function useActiveContextMenu() {
-  return module_560((menu) => menu.menu);
+  return obj2((menu) => menu.menu);
 };
 export { updateContextMenuState };
 export const useContextMenuState = function useContextMenuState() {

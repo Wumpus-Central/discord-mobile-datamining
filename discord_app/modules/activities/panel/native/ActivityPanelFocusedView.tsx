@@ -1,13 +1,13 @@
-// === Module 17132: ActivityPanelFocusedView ===
+// === Module 17134: ActivityPanelFocusedView ===
 
-// Module 17132 (ActivityPanelFocusedView)
+// Module 17134 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import spring from "spring" /* 5055 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9765 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17124 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17126 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -43,9 +43,9 @@ class BaseActivityPanelFocusedView {
     closure_5 = tmp3;
     tmp4 = transitionCleanUp(closure_2[13])();
     closure_6 = tmp4;
-    context = closure_3.useContext(context);
-    wrapperDimensions = context.wrapperDimensions;
-    wrapperOffset = context.wrapperOffset;
+    context1 = closure_3.useContext(context);
+    wrapperDimensions = context1.wrapperDimensions;
+    wrapperOffset = context1.wrapperOffset;
     obj2 = transitionState(closure_2[16]);
     lockedWebView = obj2.useLockedWebView({ transitionState, context });
     shown = lockedWebView.shown;
@@ -67,7 +67,6 @@ class BaseActivityPanelFocusedView {
       if (!wrapperDimensions.isWindowLandscape) {
         num3 = closure_6.top;
       }
-      let obj = shown;
       const diff1 = diff - num3;
       if (shown.get()) {
         let height = wrapperOffset.get().y;
@@ -87,22 +86,21 @@ class BaseActivityPanelFocusedView {
           const obj = transitionState(updateActivityPanelModeToPIP[18]);
         }
       }
-      obj = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, transitionCleanUp };
-      transitionComplete.__closure = obj;
+      transitionComplete.__closure = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, transitionCleanUp };
       transitionComplete.__workletHash = 16073739070225;
       transitionComplete.__initData = __initData;
       let num4 = 0;
       if (stateFromStores) {
         num4 = 0;
-        if (obj.get()) {
+        if (shown.get()) {
           num4 = 1 - wrapperOffset.get().y / styles.height;
         }
       }
       let num6 = 1;
       if (stateFromStores) {
-        let tmp9Result = timing;
+        const tmp9Result = timing;
         let str2 = "animate-always";
-        if (obj.get()) {
+        if (shown.get()) {
           str2 = "animate-always";
           if (wrapperOffset.get().gestureActive) {
             str2 = "animate-never";
@@ -112,8 +110,8 @@ class BaseActivityPanelFocusedView {
       }
       const size = { opacity: num6, transform: null, top: null, width: null, height: null, borderTopStartRadius: null, borderTopEndRadius: null };
       if (stateFromStores) {
-        obj = { translateY: 0 };
-        const items = [obj];
+        const obj3 = { translateY: 0 };
+        const items = [obj3];
         size.transform = items;
         let num7 = 0;
         if (!wrapperDimensions.isWindowLandscape) {
@@ -126,16 +124,17 @@ class BaseActivityPanelFocusedView {
         size.borderTopEndRadius = num;
         return size;
       } else {
-        tmp9Result = spring;
+        const tmp9Result2 = spring;
         if (!wrapperOffset.get().gestureActive) {
           let tmp21 = React7;
-          tmp9Result.withSpring(height, tmp21, "animate-always", transitionComplete);
+          tmp9Result2.withSpring(height, tmp21, "animate-always", transitionComplete);
         }
         tmp21 = React6;
       }
+      const obj2 = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, transitionCleanUp };
     };
-    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: transitionState(closure_2[19]).TransitionStates, runOnJS: transitionState(closure_2[18]).runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: transitionState(closure_2[20]).withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: transitionState(closure_2[21]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
-    fn.__closure = obj;
+    obj1 = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: transitionState(closure_2[19]).TransitionStates, runOnJS: transitionState(closure_2[18]).runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: transitionState(closure_2[20]).withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: transitionState(closure_2[21]).withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
+    fn.__closure = obj1;
     fn.__workletHash = 3642447648301;
     fn.__initData = closure_20;
     animatedStyle = obj3.useAnimatedStyle(fn);
@@ -155,14 +154,14 @@ class BaseActivityPanelFocusedView {
             num = 1;
           }
         }
-        obj = { opacity: null };
+        obj1 = { opacity: null };
         obj3 = closure_0(closure_2[21]);
-        obj.opacity = obj3.withSpring(num, closure_9);
-        return obj;
+        obj1.opacity = obj3.withSpring(num, closure_9);
+        return obj1;
       }
     }
-    obj1 = { wrapperOffset, shown, windowDimensions: tmp3, withSpring: transitionState(closure_2[21]).withSpring, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
-    T.__closure = obj1;
+    obj12 = { wrapperOffset, shown, windowDimensions: tmp3, withSpring: transitionState(closure_2[21]).withSpring, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
+    T.__closure = obj12;
     T.__workletHash = 8351375063373;
     T.__initData = closure_22;
     items1 = [, ];
@@ -195,17 +194,17 @@ class BaseActivityPanelFocusedView {
     callback = closure_3.useCallback(() => {
       updateActivityPanelModeToPIP();
     }, items2);
-    obj2 = { theme: ThemeTypes.DARK, children: null };
+    obj13 = { theme: ThemeTypes.DARK, children: null };
     tmp14 = jsx;
-    obj3 = { style: null, pointerEvents: "none" };
+    obj14 = { style: null, pointerEvents: "none" };
     items3 = [, ];
     items3[0] = tmp2.shade;
     items3[1] = animatedStyle1;
-    obj3.style = items3;
+    obj14.style = items3;
     items4 = [, ];
-    items4[0] = jsx(transitionCleanUp(closure_2[18]).View, obj3);
-    obj4 = { style: memo, nativeID: "activity-panel-focused-view", accessibilityViewIsModal: true, onAccessibilityEscape: callback, children: null };
-    obj5 = { style: animatedStyle2, children: null };
+    items4[0] = jsx(transitionCleanUp(closure_2[18]).View, obj14);
+    obj15 = { style: memo, nativeID: "activity-panel-focused-view", accessibilityViewIsModal: true, onAccessibilityEscape: callback, children: null };
+    obj16 = { style: animatedStyle2, children: null };
     tmp15 = null;
     if (lockedWebView.renderWebView) {
       tmp15 = null;
@@ -213,39 +212,38 @@ class BaseActivityPanelFocusedView {
         tmp15 = children;
       }
     }
-    obj5.children = tmp15;
+    obj16.children = tmp15;
     items5 = [, ];
-    items5[0] = tmp14(transitionCleanUp(closure_2[18]).View, obj5);
+    items5[0] = tmp14(transitionCleanUp(closure_2[18]).View, obj16);
     items5[1] = header;
-    obj4.children = items5;
-    items4[1] = tmp13(transitionState(closure_2[22]).AccessibilityViewAnimated, obj4);
-    obj2.children = items4;
-    return tmp13(transitionState(closure_2[19]).ThemeContextProvider, obj2);
+    obj15.children = items5;
+    items4[1] = tmp13(transitionState(closure_2[22]).AccessibilityViewAnimated, obj15);
+    obj13.children = items4;
+    return tmp13(transitionState(closure_2[19]).ThemeContextProvider, obj13);
   }
 }
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
 const ActivityPanelConstants = fn(9635);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17127);
+const ActivityPanelNativeConstants = fn(17129);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12402).IS_IOS;
+const IS_IOS = fn(12403).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-fn(4636);
-let obj = { wrapper: null, shade: null };
-obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.wrapper = obj;
-const createStyles = {};
+const createStyles = fn(4636);
+let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
+let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
-createStyles.backgroundColor = nativeDefault.colors.BLACK;
-obj.shade = createStyles;
+obj4.backgroundColor = nativeDefault.colors.BLACK;
+obj.shade = obj4;
 let closure_19 = createStyles.createStyles(obj);
 const __initData = { code: "function ActivityPanelFocusedViewTsx1(){const{wrapperDimensions,lg,IS_IOS,animatedKeyboardHeight,windowDimensions,safeArea,shown,wrapperOffset,transitionState,TransitionStates,runOnJS,transitionCleanUp,reduceMotion,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const topBorderRadius=!wrapperDimensions.isWindowLandscape?lg:0;const keyboardHeight=IS_IOS?animatedKeyboardHeight.get():0;const width=windowDimensions.width;const height=windowDimensions.height-keyboardHeight-(!wrapperDimensions.isWindowLandscape?safeArea.top:0);const y=shown.get()?wrapperOffset.get().y:windowDimensions.height;function transitionComplete(finished=false){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}const targetOpacity=reduceMotion&&shown.get()?1-wrapperOffset.get().y/windowDimensions.height:0;return{opacity:reduceMotion?withTiming(targetOpacity,REDUCED_MOTION_TIMING,shown.get()&&wrapperOffset.get().gestureActive?'animate-never':'animate-always',transitionComplete):1,transform:[{translateY:!reduceMotion?withSpring(y,wrapperOffset.get().gestureActive&&transitionState!==TransitionStates.YEETED?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always',transitionComplete):0}],top:!wrapperDimensions.isWindowLandscape?safeArea.top:0,width:width,height:height,borderTopStartRadius:topBorderRadius,borderTopEndRadius:topBorderRadius};}" };
 let closure_21 = { code: "function transitionComplete_ActivityPanelFocusedViewTsx2(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}" };
 const __initData2 = { code: "function ActivityPanelFocusedViewTsx3(){const{wrapperOffset,shown,windowDimensions,withSpring,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const opacity=function(){if(!wrapperOffset.get().gestureActive){return shown.get()?1:0;}return 1-wrapperOffset.get().y/windowDimensions.height;}();return{opacity:withSpring(opacity,ACTIVITY_LAYOUT_PHYSICS_DEFAULT)};}" };
 const __initData3 = { code: "function ActivityPanelFocusedViewTsx4(){const{IS_IOS,animatedKeyboardHeight,wrapperDimensions}=this.__closure;const keyboardHeight=IS_IOS?animatedKeyboardHeight.get():0;return{width:wrapperDimensions.width,height:wrapperDimensions.height-keyboardHeight};}" };
+let obj3 = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
 
@@ -261,9 +259,8 @@ export default noop.memo((transitionState) => {
   const stateFromStoresObject = transitionState(channel[14]).useStateFromStoresObject(items, () => {
     const connectedActivityLocation = memo1.getConnectedActivityLocation();
     const selfEmbeddedActivityForLocation = memo1.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-    let obj = transitionState(channel[23]);
-    obj = { channel: memo.getChannel(obj.getEmbeddedActivityLocationChannelId(connectedActivityLocation)), hasActivity: null != selfEmbeddedActivityForLocation };
-    return obj;
+    const obj = transitionState(channel[23]);
+    return { channel: memo.getChannel(transitionState(channel[23]).getEmbeddedActivityLocationChannelId(connectedActivityLocation)), hasActivity: null != selfEmbeddedActivityForLocation };
   }, []);
   channel = stateFromStoresObject.channel;
   const hasActivity = stateFromStoresObject.hasActivity;
@@ -285,10 +282,10 @@ export default noop.memo((transitionState) => {
       let obj = map1;
     } else {
       obj = { right: null };
-      obj = { disable: false, override: null };
+      const obj2 = { disable: false, override: null };
       const _Math = Math;
-      obj.override = Math.max(64, transitionState.right);
-      obj.right = obj;
+      obj2.override = Math.max(64, transitionState.right);
+      obj.right = obj2;
     }
     return obj;
   }, items1);
@@ -299,9 +296,7 @@ export default noop.memo((transitionState) => {
   }, []);
   const items2 = [transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity, memo1, channel, tmp5, memo];
   return hasActivity.useMemo(() => {
-    let obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity, context: ActivityPanelStateContextDefault, header: memo1, children: null };
-    obj = { channel, layoutMode: ActivityLayoutMode.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig: memo };
-    obj.children = value2(EmbeddedActivityViewDefault, obj);
+    const obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity, context: ActivityPanelStateContextDefault, header: memo1, children: value2(EmbeddedActivityViewDefault, { channel, layoutMode: ActivityLayoutMode.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig: memo }) };
     return value2(BaseActivityPanelFocusedView, obj);
   }, items2);
 });
@@ -309,27 +304,26 @@ export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocu
   let isWindowLandscape;
   const tmp = isWindowLandscape(1611)();
   closure_0 = tmp;
-  let obj = noop;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;
   isWindowLandscape = !isLandscape;
   if (!isLandscape) {
     isWindowLandscape = wrapperDimensions.isWindowLandscape;
   }
-  obj = { portraitSafeAreasConfig: wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_12 : closure_11, landscapeSafeAreasConfig: null };
+  const obj2 = { portraitSafeAreasConfig: wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_12 : closure_11, landscapeSafeAreasConfig: null };
   const items = [tmp.right, isWindowLandscape];
-  obj.landscapeSafeAreasConfig = obj.useMemo(() => {
+  obj2.landscapeSafeAreasConfig = noop.useMemo(() => {
     if (transitionCleanUp) {
       let obj = map1;
     } else {
       obj = { right: null };
-      obj = { disable: false, override: null };
+      const obj2 = { disable: false, override: null };
       const _Math = Math;
-      obj.override = Math.max(64, transitionState.right);
-      obj.right = obj;
+      obj2.override = Math.max(64, transitionState.right);
+      obj.right = obj2;
     }
     return obj;
   }, items);
-  return obj;
+  return obj2;
 };
 export { BaseActivityPanelFocusedView };

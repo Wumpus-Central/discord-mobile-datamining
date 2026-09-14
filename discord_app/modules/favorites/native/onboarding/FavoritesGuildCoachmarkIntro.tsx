@@ -1,14 +1,14 @@
-// === Module 16409: FavoritesGuildCoachmarkIntro ===
+// === Module 16411: FavoritesGuildCoachmarkIntro ===
 
-// Module 16409 (FavoritesGuildCoachmarkIntro)
+// Module 16411 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10361 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16404 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10362 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16406 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16380 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16382 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
@@ -28,7 +28,6 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   const tmp = _slicedToArray(onDismiss.useState(() => scrollPosition.get() <= 0), 2);
   const visible = tmp[0];
   _slicedToArray = tmp3;
-  markAsDismissed(visible[6]);
   const fn = function v() {
     return scrollPosition.get() <= 0;
   };
@@ -40,8 +39,8 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
       ReanimatedRexport.runOnJS(closure_3)(arg0);
     }
   };
-  let obj = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp3 };
-  fn2.__closure = obj;
+  let obj = markAsDismissed(visible[6]);
+  fn2.__closure = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
   fn2.__workletHash = 13648062364539;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -71,6 +70,7 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
+  const obj2 = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
   const coachmark = markAsDismissed(visible[12]).useCoachmark(markAsDismissed.targetRef, memo);
   return null;
 };

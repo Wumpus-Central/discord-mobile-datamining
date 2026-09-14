@@ -1,6 +1,6 @@
-// === Module 11479: SummaryConstants ===
+// === Module 11480: SummaryConstants ===
 
-// Module 11479 (SummaryConstants)
+// Module 11480 (SummaryConstants)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 
@@ -19,25 +19,25 @@ export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   const intl = util.intl;
   obj.label = intl.string(util.t.wwXl5h);
   const items = [obj, , , , , ];
-  obj = { value: obj.TOO_GENERIC, label: null };
+  const obj2 = { value: obj.TOO_GENERIC, label: null };
   const intl2 = util.intl;
-  obj.label = intl2.string(util.t["t+6knu"]);
-  items[1] = obj;
-  obj = { value: obj.TOO_MANY, label: null };
+  obj2.label = intl2.string(util.t["t+6knu"]);
+  items[1] = obj2;
+  const obj3 = { value: obj.TOO_MANY, label: null };
   const intl3 = util.intl;
-  obj.label = intl3.string(util.t.xnKDnv);
-  items[2] = obj;
-  const obj1 = { value: obj.INACCURATE, label: null };
+  obj3.label = intl3.string(util.t.xnKDnv);
+  items[2] = obj3;
+  const obj4 = { value: obj.INACCURATE, label: null };
   const intl4 = util.intl;
-  obj1.label = intl4.string(util.t.JW5VFj);
-  items[3] = obj1;
-  const obj2 = { value: obj.NOT_USEFUL, label: null };
+  obj4.label = intl4.string(util.t.JW5VFj);
+  items[3] = obj4;
+  const obj5 = { value: obj.NOT_USEFUL, label: null };
   const intl5 = util.intl;
-  obj2.label = intl5.string(util.t.ZtCNiY);
-  items[4] = obj2;
-  const obj3 = { value: obj.OTHER, label: null };
+  obj5.label = intl5.string(util.t.ZtCNiY);
+  items[4] = obj5;
+  const obj6 = { value: obj.OTHER, label: null };
   const intl6 = util.intl;
-  obj3.label = intl6.string(util.t.BufsKk);
-  items[5] = obj3;
+  obj6.label = intl6.string(util.t.BufsKk);
+  items[5] = obj6;
   return items;
 };

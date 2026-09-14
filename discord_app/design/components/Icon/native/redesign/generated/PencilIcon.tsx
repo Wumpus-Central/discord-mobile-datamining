@@ -1,6 +1,6 @@
-// === Module 10378: PencilIcon ===
+// === Module 10379: PencilIcon ===
 
-// Module 10378 (PencilIcon)
+// Module 10379 (PencilIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod8070 from "module_8070" /* 8070 */;

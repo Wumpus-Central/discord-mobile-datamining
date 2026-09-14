@@ -1,10 +1,10 @@
-// === Module 16821: MessagesScreen ===
+// === Module 16823: MessagesScreen ===
 
-// Module 16821 (MessagesScreen)
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16807 */;
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16822 */;
+// Module 16823 (MessagesScreen)
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16809 */;
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16824 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const SearchConstants = fn(7982);
@@ -21,8 +21,8 @@ export default noop.memo(function MessagesScreen(isFocused) {
   Pins = undefined;
   let memo;
   let placeholderCount;
-  let obj = searchContext(stateFromStores[4]);
-  const searchMessages = obj.useSearchMessages(searchContext, tab);
+  const searchMessages = searchContext(stateFromStores[4]).useSearchMessages(searchContext, tab);
+  const obj = searchContext(stateFromStores[4]);
   let items = [callback];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(items, () => SearchQueryStore.getSearchResultsQuery(searchContext), items1);
@@ -31,8 +31,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   const items2 = [onPressMessageItem, searchContext];
   callback = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
-    const obj = { searchContext, channelId, messageId, index };
-    const result = obj.trackMessageItemPress(obj);
+    const result = BaseMessagesScreen.trackMessageItemPress({ searchContext, channelId, messageId, index });
     onPressMessageItem(channelId, messageId);
   }, items2);
   closure_5 = onPressMessageItem.useRef({});
@@ -40,9 +39,8 @@ export default noop.memo(function MessagesScreen(isFocused) {
   Pins = tmp7;
   const items3 = [tmp7, stateFromStores];
   memo = obj4.useMemo(() => new MessageSearchResultParserDefault(stateFromStores, closure_6), items3);
-  let tmpResult = tmp(tmp2[9]);
-  obj = { searchContext, tab, placeholderHeight, numColumns: 1 };
-  const searchMessagesLoadingState = tmpResult.useSearchMessagesLoadingState(obj);
+  let obj3 = searchContext(stateFromStores[6]);
+  const searchMessagesLoadingState = searchContext(stateFromStores[9]).useSearchMessagesLoadingState({ searchContext, tab, placeholderHeight, numColumns: 1 });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items4 = [callback, tmp7, searchMessages, memo, placeholderCount];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
@@ -65,23 +63,22 @@ export default noop.memo(function MessagesScreen(isFocused) {
         items.push(element);
       });
     }
-    searchContext(stateFromStores[10]);
-    let obj = { numColumns: 1, numResults: items.length, placeholderCount };
-    const adjustedPlaceholderCount = obj.getAdjustedPlaceholderCount(obj);
+    const adjustedPlaceholderCount = searchContext(stateFromStores[10]).getAdjustedPlaceholderCount({ numColumns: 1, numResults: items.length, placeholderCount });
     for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
-      obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
+      let obj3 = { type: constants.MESSAGE_PLACEHOLDER, key: null };
       let _HermesInternal = HermesInternal;
-      obj.key = "message-placeholder-" + num;
-      let arr = items.push(obj);
+      obj3.key = "message-placeholder-" + num;
+      let arr = items.push(obj3);
     }
     return items;
   }, items4);
-  tmpResult = tmp(tmp2[11]);
-  const contentContainerStyles = tmpResult.useContentContainerStyles();
-  obj = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null };
-  const obj3 = searchContext(stateFromStores[6]);
-  obj.ItemSeparatorComponent = searchContext(stateFromStores[12]).MessageVerticalSeparator;
-  obj.isFirstPageLoading = isFirstPageLoading;
-  obj.isNextPageLoading = isNextPageLoading;
+  const obj5 = { searchContext, tab, placeholderHeight, numColumns: 1 };
+  const tmpResult = searchContext(stateFromStores[9]);
+  const contentContainerStyles = searchContext(stateFromStores[11]).useContentContainerStyles();
+  const obj6 = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null };
+  const tmpResult2 = searchContext(stateFromStores[11]);
+  obj6.ItemSeparatorComponent = searchContext(stateFromStores[12]).MessageVerticalSeparator;
+  obj6.isFirstPageLoading = isFirstPageLoading;
+  obj6.isNextPageLoading = isNextPageLoading;
   return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null });
 });

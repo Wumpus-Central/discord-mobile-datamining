@@ -1,24 +1,24 @@
-// === Module 13764: ClipsExperiment ===
+// === Module 13765: ClipsExperiment ===
 
-// Module 13764 (ClipsExperiment)
+// Module 13765 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13765 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13766 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
-fn(1433);
-let ApexExperiment = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
-ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
-ApexExperiment[2] = { enableClips: true, ignorePlatformRestriction: true };
-ApexExperiment.variations = ApexExperiment;
-ApexExperiment = ApexExperiment.createApexExperiment(ApexExperiment);
+const ApexExperiment = fn(1433);
+const obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
+const obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
+obj3[2] = { enableClips: true, ignorePlatformRestriction: true };
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
-export const ClipsExperiment = ApexExperiment;
+export const ClipsExperiment = apexExperiment;
 export const areClipsAvailable = function areClipsAvailable() {
   if (isClientClipsCapableDefault(MediaEngineStore)) {
     const currentUser = UserStore.getCurrentUser();
@@ -28,7 +28,7 @@ export const areClipsAvailable = function areClipsAvailable() {
     }
     let enableClips = PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
     if (!enableClips) {
-      enableClips = ApexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
+      enableClips = apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
     }
     return enableClips;
   } else {
@@ -46,7 +46,7 @@ export const useIsClipsAvailable = function useIsClipsAvailable() {
     }
     return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   });
-  return (ApexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
+  return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
 };
 export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeForClipsEarlyAccess(premiumType) {
   premiumType = undefined;

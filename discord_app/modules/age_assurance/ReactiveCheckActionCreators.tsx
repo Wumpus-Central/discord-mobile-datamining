@@ -1,7 +1,7 @@
-// === Module 13852: ReactiveCheckActionCreators ===
+// === Module 13853: ReactiveCheckActionCreators ===
 
-// Module 13852 (ReactiveCheckActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 13853 (ReactiveCheckActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -13,8 +13,8 @@ let closure_5 = async function _fetchReactiveCheckResult() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,19 +27,19 @@ let closure_5 = async function _fetchReactiveCheckResult() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           let body;
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: constants.AGE_VERIFICATION_REACTIVE_CHECK, rejectWithError: true };
+          const obj4 = { url: constants.AGE_VERIFICATION_REACTIVE_CHECK, rejectWithError: true };
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c3 = 0;
@@ -51,17 +51,16 @@ let closure_5 = async function _fetchReactiveCheckResult() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         body = value.body;
-        obj = closure_129_1(closure_129_2[3]);
-        const obj4 = { type: "AGE_VERIFICATION_CHECK_RESULT_SET", status: body.status };
-        obj.dispatch(obj4);
+        const obj7 = { type: "AGE_VERIFICATION_CHECK_RESULT_SET", status: body.status };
+        closure_129_1(closure_129_2[3]).dispatch(obj7);
         c3 = 0;
         c5 = 3;
-        const obj5 = { value: body.status, done: true };
-        return obj5;
+        const obj8 = { value: body.status, done: true };
+        return obj8;
       }
     } catch (tmp19) {
       closure_2 = tmp19;
@@ -82,8 +81,8 @@ let closure_6 = async function _resetAgeVerification() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -96,27 +95,26 @@ let closure_6 = async function _resetAgeVerification() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_0 = tmp2;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: constants.AGE_VERIFICATION_RESET, rejectWithError: true };
+          const obj4 = { url: constants.AGE_VERIFICATION_RESET, rejectWithError: true };
           c1 = 1;
           c2 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        obj = closure_128_1(closure_128_2[3]);
-        obj.dispatch({ type: "AGE_VERIFICATION_RESET" });
+        closure_128_1(closure_128_2[3]).dispatch({ type: "AGE_VERIFICATION_RESET" });
         c2 = 3;
         return { value: "HermesInternal", done: null };
       }

@@ -1,10 +1,10 @@
-// === Module 16247: FavoritesGuildAddActionSheet ===
+// === Module 16249: FavoritesGuildAddActionSheet ===
 
-// Module 16247 (FavoritesGuildAddActionSheet)
+// Module 16249 (FavoritesGuildAddActionSheet)
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4603 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10355 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11108 */;
-import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16248 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10356 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11109 */;
+import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet" /* 16250 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -15,8 +15,7 @@ function handleCreateCategory() {
   const result = FavoritesGuildAddCategoryActionSheet.openFavoritesGuildAddCategoryActionSheet();
 }
 function FavoritesGuildAddActionSheet() {
-  let obj = shouldShowUpsell(favoriteLimit[4]);
-  const favoritesLimitUpsell = obj.useFavoritesLimitUpsell();
+  const favoritesLimitUpsell = shouldShowUpsell(favoriteLimit[4]).useFavoritesLimitUpsell();
   shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
   const isAtLimit = favoritesLimitUpsell.isAtLimit;
   favoriteLimit = favoritesLimitUpsell.favoriteLimit;
@@ -30,30 +29,31 @@ function FavoritesGuildAddActionSheet() {
     }
     openFavoritesGuildAddChannelModalDefault({ source: "favorites_header_add_button_context_menu" });
   }, items);
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const obj2 = { header: null, children: null };
+  const obj3 = { title: null };
   const intl = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj.title = intl.string(shouldShowUpsell(favoriteLimit[9]).t.wMWyci);
-  obj.header = closure_4(shouldShowUpsell(favoriteLimit[8]).BottomSheetTitleHeader, obj);
-  const obj1 = { hasIcons: true, children: null };
-  const obj2 = { label: null, icon: null, onPress: null };
-  const intl2 = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj2.label = intl2.string(isAtLimit(favoriteLimit[11]).G9fGlP);
-  obj2.icon = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon });
-  obj2.onPress = callback;
-  obj1.children = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj2);
-  const items1 = [closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj1), ];
+  obj3.title = intl.string(shouldShowUpsell(favoriteLimit[9]).t.wMWyci);
+  obj2.header = closure_4(shouldShowUpsell(favoriteLimit[8]).BottomSheetTitleHeader, obj3);
   const obj4 = { hasIcons: true, children: null };
   const obj5 = { label: null, icon: null, onPress: null };
-  const intl3 = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj5.label = intl3.string(shouldShowUpsell(favoriteLimit[9]).t["ISN+NM"]);
-  const obj3 = { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon };
-  obj5.icon = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[13]).FolderPlusIcon });
-  obj5.onPress = handleCreateCategory;
+  const intl2 = shouldShowUpsell(favoriteLimit[9]).intl;
+  obj5.label = intl2.string(isAtLimit(favoriteLimit[11]).G9fGlP);
+  let obj = shouldShowUpsell(favoriteLimit[4]);
+  obj5.icon = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon });
+  obj5.onPress = callback;
   obj4.children = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj5);
-  items1[1] = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj4);
-  obj.children = items1;
-  return closure_5(shouldShowUpsell(favoriteLimit[7]).ActionSheet, obj);
+  const items1 = [closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj4), ];
+  const obj7 = { hasIcons: true, children: null };
+  const obj8 = { label: null, icon: null, onPress: null };
+  const intl3 = shouldShowUpsell(favoriteLimit[9]).intl;
+  obj8.label = intl3.string(shouldShowUpsell(favoriteLimit[9]).t["ISN+NM"]);
+  const obj6 = { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon };
+  obj8.icon = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[13]).FolderPlusIcon });
+  obj8.onPress = handleCreateCategory;
+  obj7.children = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj8);
+  items1[1] = closure_4(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj7);
+  obj2.children = items1;
+  return closure_5(shouldShowUpsell(favoriteLimit[7]).ActionSheet, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -62,6 +62,6 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddActionSheet.tsx");
 
 export const openFavoritesGuildAddActionSheet = function openFavoritesGuildAddActionSheet() {
-  const obj = { content: React4(FavoritesGuildAddActionSheet, {}), key: FavoritesGuildAddActionSheet };
-  obj.showActionSheet(obj);
+  const obj = ActionSheetActionCreators;
+  obj.showActionSheet({ content: React4(FavoritesGuildAddActionSheet, {}), key: FavoritesGuildAddActionSheet });
 };

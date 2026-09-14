@@ -6,6 +6,8 @@ import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1481 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_4 = {};
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 13391: VideoGuardExperiment ===
+// === Module 13392: VideoGuardExperiment ===
 
-// Module 13391 (VideoGuardExperiment)
+// Module 13392 (VideoGuardExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: null };
-obj = { 1: null, 2: { videoEnabled: false } };
-obj[2] = { videoEnabled: false };
-obj.variations = obj;
+const obj = { name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: null };
+const obj2 = { 1: null, 2: { videoEnabled: false } };
+obj2[2] = { videoEnabled: false };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/VideoGuardExperiment.tsx");
 

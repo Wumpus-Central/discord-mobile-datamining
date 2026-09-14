@@ -1,28 +1,27 @@
-// === Module 15292: UserSettingsGuildRoleSubscriptions ===
+// === Module 15293: UserSettingsGuildRoleSubscriptions ===
 
-// Module 15292 (UserSettingsGuildRoleSubscriptions)
+// Module 15293 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15293 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15294 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15295 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15298 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15299 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15294 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15295 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15299 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15300 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildRoleSubscriptionsSectionHeader() {
   const tmp = closure_8();
-  let obj = { style: tmp.sectionHeader, children: null };
-  obj = { variant: "eyebrow", color: "text-default", children: null };
+  const obj = { style: tmp.sectionHeader, children: null };
+  const obj2 = { variant: "eyebrow", color: "text-default", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["KzCF/6"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj), ];
-  obj = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj2.children = intl.string(util.t["KzCF/6"]);
+  const items = [hasOwnProperty(Text_Text.Text, obj2), ];
+  const obj3 = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t["Y+ucR7"]);
-  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  obj3.children = intl2.string(util.t["Y+ucR7"]);
+  items[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj.children = items;
   return timestampProducer(React3, obj);
 }
@@ -50,26 +49,25 @@ export default function UserSettingsGuildRoleSubscriptions() {
   const tmp = closure_8();
   useRestorePurchasesDefault({ forceRestore: true });
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });
-  let obj = GuildRoleSubscriptionsHooks;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
     let tmp6Result = hasOwnProperty(LoadingIndicatorDefault, {});
   } else {
-    obj = { style: tmp.container, children: null };
-    obj = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj4 = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
     ({ listContentContainer: obj3.contentContainerStyle, list: obj3.style } = tmp);
-    const obj1 = { key, data: tmp5 };
-    const items = [obj1];
-    obj.sections = items;
-    obj.keyExtractor = function keyExtractor(id) {
+    const obj7 = { key, data: tmp5 };
+    const items = [obj7];
+    obj4.sections = items;
+    obj4.keyExtractor = function keyExtractor(id) {
       return id.id;
     };
-    obj.renderSectionHeader = renderSectionHeader;
-    obj.renderItem = function renderItem(subscription) {
+    obj4.renderSectionHeader = renderSectionHeader;
+    obj4.renderItem = function renderItem(subscription) {
       return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
     };
-    obj.ItemSeparatorComponent = ItemSeparator;
-    obj.children = hasOwnProperty(React4, obj);
-    tmp6Result = hasOwnProperty(React3, obj);
+    obj4.ItemSeparatorComponent = ItemSeparator;
+    obj2.children = hasOwnProperty(React4, obj4);
+    tmp6Result = hasOwnProperty(React3, obj2);
   }
   return tmp6Result;
 };

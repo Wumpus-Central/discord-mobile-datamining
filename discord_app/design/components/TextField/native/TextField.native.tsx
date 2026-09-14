@@ -13,23 +13,22 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
 
 export const TextField = noop.forwardRef((onClear, arg1) => {
-  let obj = useTextField;
-  const textField = obj.useTextField(onClear, arg1);
+  const textField = useTextField.useTextField(onClear, arg1);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(onClear, state);
   let tmp5;
   if (null != inputClearButtonConfig) {
-    obj = { trailing: null, trailingPressableProps: null };
     ({ content: obj3.trailing, pressableProps: obj3.trailingPressableProps } = inputClearButtonConfig);
-    tmp5 = obj;
+    tmp5 = { trailing: null, trailingPressableProps: null };
+    const obj4 = { trailing: null, trailingPressableProps: null };
   }
   const inputAttachments = useInputAttachments.useInputAttachments(onClear, tmp5);
   ({ leading, trailing, inputStyle } = inputAttachments);
-  obj = {};
+  const obj5 = {};
   const merged = Object.assign(inputProps);
-  obj.ref = innerRef;
-  obj.leading = leading;
-  obj.trailing = trailing;
-  obj.inputStyle = inputStyle;
+  obj5.ref = innerRef;
+  obj5.leading = leading;
+  obj5.trailing = trailing;
+  obj5.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });

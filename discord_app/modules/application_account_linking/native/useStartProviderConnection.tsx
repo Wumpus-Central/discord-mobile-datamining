@@ -5,13 +5,14 @@ import LinkingDefault from "Linking" /* 4331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
-  let obj = require("useProviderConnection");
-  const providerConnection = obj.useProviderConnection(provider_id);
+  const providerConnection = require("useProviderConnection").useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
   ({ loading, hasConnection, canConnect, account } = providerConnection);
   _require = asyncGeneratorStep(async (arg0) => {
@@ -22,8 +23,8 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -36,16 +37,16 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c5 = 1;
             c6 = 1;
-            const obj1 = { value: closure_0(closure_0), done: false };
-            return obj1;
+            const obj4 = { value: closure_0(closure_0), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -53,41 +54,40 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_0 = value;
             if (closure_129_0.success) {
               if (null != closure_129_0.url) {
                 c4 = 1;
-                let obj4 = LinkingDefault;
                 c5 = 3;
                 c6 = 1;
-                const obj3 = { value: obj4.openURL(closure_129_0.url), done: false };
-                return obj3;
+                const obj7 = { value: LinkingDefault.openURL(closure_129_0.url), done: false };
+                return obj7;
               }
             }
             c6 = 3;
-            obj4 = { value: { success: false }, done: true };
-            return obj4;
+            const obj8 = { value: { success: false }, done: true };
+            return obj8;
           }
         } else if (2 === tmp7) {
           c4 = 0;
           c6 = 3;
-          const obj5 = { value: { success: false }, done: true };
-          return obj5;
+          const obj9 = { value: { success: false }, done: true };
+          return obj9;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value: { success: true }, done: true };
+          const obj = { value: { success: true }, done: true };
           return obj;
         }
       } catch (tmp18) {
@@ -102,7 +102,8 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
     }
   });
   const items = [startConnection];
-  obj = {
+  let obj = require("useProviderConnection");
+  return {
     loading,
     hasConnection,
     canConnect,
@@ -118,5 +119,4 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
     }, items),
     account
   };
-  return obj;
 };

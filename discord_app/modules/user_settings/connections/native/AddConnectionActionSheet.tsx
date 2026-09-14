@@ -1,6 +1,6 @@
-// === Module 15046: AddConnectionActionSheet ===
+// === Module 15047: AddConnectionActionSheet ===
 
-// Module 15046 (AddConnectionActionSheet)
+// Module 15047 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1074 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1921 */;
@@ -9,8 +9,10 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603
 import TableRow from "TableRow" /* 5686 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function AddApplicationIdentityTableRow(application) {
   application = application.application;
@@ -21,17 +23,15 @@ function AddApplicationIdentityTableRow(application) {
   const tmp2 = analyticsLocations(7268)(application);
   analyticsLocations = analyticsLocations(7265)(analyticsLocations(7285).ACTION_SHEET).analyticsLocations;
   const tmp3 = analyticsLocations(7265);
-  let obj = require("native");
-  const iconSource = application.getIconSource(obj.getIconSize(require("native").IconSizes.LARGE));
-  obj = {
+  const tmp4 = closure_7();
+  const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
+  const obj2 = {
     start,
     end,
     label: application.name,
     onPress() {
-      let obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      obj = { analyticsLocations };
-      _undefined(obj);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      _undefined({ analyticsLocations });
     },
     icon: null,
     trailing: null,
@@ -39,28 +39,28 @@ function AddApplicationIdentityTableRow(application) {
   };
   let tmp7Result = null;
   if (null != iconSource) {
-    obj = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = closure_5(tmp5(1178).Icon, obj);
+    const obj3 = { source: iconSource, style: tmp4.icon, disableColor: true };
+    tmp7Result = closure_5(tmp5(1176).Icon, obj3);
   }
-  obj.icon = tmp7Result;
-  obj.trailing = closure_5(require("TableRow").TableRow.Arrow, {});
-  obj.disabled = !canStartAuthorization;
-  return closure_5(require("TableRow").TableRow, obj, application.id);
+  obj2.icon = tmp7Result;
+  obj2.trailing = closure_5(require("TableRow").TableRow.Arrow, {});
+  obj2.disabled = !canStartAuthorization;
+  return closure_5(require("TableRow").TableRow, obj2, application.id);
 }
 const AnalyticsLocations = Constants.AnalyticsLocations;
 let closure_4 = UserApplicationIdentityConstants.getMigratedApplicationIdentityConnectionsScreenApplications;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };
-obj = { borderRadius: null };
-obj.borderRadius = native.getIconSize(native.Icon.Sizes.LARGE);
-obj.icon = obj;
+let obj2 = { borderRadius: null };
+obj2.borderRadius = native.getIconSize(native.Icon.Sizes.LARGE);
+obj.icon = obj2;
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
 
 export default function AddConnectionActionSheet() {
   _require = found(found1[5])();
-  let obj = require("ConnectionsHooks");
-  const platforms = obj.usePlatforms();
+  let tmp = closure_7();
+  const platforms = require("ConnectionsHooks").usePlatforms();
   found = platforms.filter((migrationData) => {
     let tmp = null == migrationData.migrationData;
     if (!tmp) {
@@ -69,15 +69,15 @@ export default function AddConnectionActionSheet() {
     }
     return tmp;
   });
-  let tmp = closure_7();
+  let obj = require("ConnectionsHooks");
   const tmp2 = found(found1[8]);
   found1 = found(found1[8])(closure_4("AddConnectionActionSheet")).filter((item) => null != item);
-  obj = { scrollable: true, startExpanded: true, header: null, children: null };
-  obj = { title: null };
+  const obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
+  const obj3 = { title: null };
   const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.Zhcj9X);
-  obj.header = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj);
-  const obj1 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
+  obj3.title = intl.string(require("util").t.Zhcj9X);
+  obj2.header = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
+  const obj4 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
   const items = [
     found1.map((application, index) => {
       const obj = { application, start: 0 === index, end: null };
@@ -95,27 +95,25 @@ export default function AddConnectionActionSheet() {
       if (tmp4) {
         tmp4 = 0 === found1.length;
       }
-      let obj = {
+      const obj = {
         start: tmp4,
         end: index === found.length - 1,
         label: label.name,
         onPress() {
-          let obj = found(found1[14]);
-          obj.hideActionSheet();
-          obj = { platformType: type, location: constants.USER_SETTINGS };
-          found(found1[15])(obj);
+          found(found1[14]).hideActionSheet();
+          found(found1[15])({ platformType: type, location: constants.USER_SETTINGS });
         },
         icon: null,
         trailing: null
       };
-      const tmp2Result = shared;
-      obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(closure_0) ? icon.darkPNG : icon.lightPNG), disableColor: true };
-      obj.icon = hasOwnProperty(native.Icon, obj);
+      const tmp2Result = AvatarUtils;
+      const tmp2Result2 = shared;
+      obj.icon = hasOwnProperty(native.Icon, { source: tmp2Result.makeSource(shared.isThemeDark(closure_0) ? icon.darkPNG : icon.lightPNG), disableColor: true });
       obj.trailing = hasOwnProperty(TableRow.TableRow.Arrow, {});
       return hasOwnProperty(TableRow.TableRow, obj, type);
     })
   ];
-  obj1.children = items;
-  obj.children = closure_6(require("BottomSheetModal").BottomSheetScrollView, obj1);
-  return closure_5(require("Sheet/BottomSheet").BottomSheet, obj);
+  obj4.children = items;
+  obj2.children = closure_6(require("BottomSheetModal").BottomSheetScrollView, obj4);
+  return closure_5(require("Sheet/BottomSheet").BottomSheet, obj2);
 };

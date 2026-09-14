@@ -1,6 +1,6 @@
-// === Module 12046: useFamilyCenterActions ===
+// === Module 12047: useFamilyCenterActions ===
 
-// Module 12046 (useFamilyCenterActions)
+// Module 12047 (useFamilyCenterActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,25 +19,17 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   const onError = obj.onError;
   closure_0 = onError;
   let onSuccess = obj.onSuccess;
-  [tmp2, dependencyMap] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, dependencyMap] = noop.useState(false);
   const tmp = _slicedToArray(noop.useState(false), 2);
-  [tmp4, asyncGeneratorStep] = _slicedToArray(noop.useState(false), 2);
+  [tmp4, asyncGeneratorStep] = noop.useState(false);
   const tmp3 = _slicedToArray(noop.useState(false), 2);
-  [tmp6, _slicedToArray] = _slicedToArray(noop.useState(false), 2);
+  [tmp6, _slicedToArray] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  [tmp8, noop] = _slicedToArray(noop.useState(false), 2);
-  const tmp9 = _slicedToArray(noop.useState(false), 2);
-  const isGetLinkCodeLoading = tmp9[0];
-  closure_7 = tmp9[1];
-  const tmp11 = _slicedToArray(noop.useState(false), 2);
-  const first1 = tmp11[0];
-  closure_9 = tmp11[1];
-  const tmp13 = _slicedToArray(noop.useState(false), 2);
-  const first2 = tmp13[0];
-  closure_11 = tmp13[1];
-  const tmp15 = _slicedToArray(noop.useState(false), 2);
-  let first3 = tmp15[0];
-  closure_13 = tmp15[1];
+  [tmp8, noop] = noop.useState(false);
+  [isGetLinkCodeLoading, closure_7] = noop.useState(false);
+  [first1, closure_9] = noop.useState(false);
+  [first2, closure_11] = noop.useState(false);
+  [first3, closure_13] = noop.useState(false);
   let tmp17 = tmp2;
   if (!tmp2) {
     tmp17 = tmp4;
@@ -63,8 +55,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -77,8 +69,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             onSuccess = tmp8;
             closure_129_0 = undefined;
@@ -87,12 +79,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               tmp4(true);
               c4 = 2;
-              let obj1 = closure_0(7642);
               c5 = 3;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.updateLinkForUserId(tmp50, constants.ACTIVE);
-              return obj1;
+              const obj5 = { value: closure_0(7642).updateLinkForUserId(tmp50, constants.ACTIVE), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -111,7 +101,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c4 = 0;
             tmp4(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -157,8 +147,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -171,8 +161,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             onSuccess = tmp8;
@@ -182,12 +172,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               tmp42(true);
               c4 = 2;
-              let obj1 = closure_0(7642);
               c5 = 3;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.updateLinkForUserId(tmp50, constants.DECLINED);
-              return obj1;
+              const obj5 = { value: closure_0(7642).updateLinkForUserId(tmp50, constants.DECLINED), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -206,7 +194,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c4 = 0;
             tmp42(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -251,8 +239,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -265,8 +253,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             onSuccess = tmp8;
@@ -276,12 +264,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               v0(true);
               v0 = 2;
-              let obj1 = closure_0(7642);
               c5 = 3;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.updateLinkForUserId(tmp50, constants.INACTIVE);
-              return obj1;
+              const obj5 = { value: closure_0(7642).updateLinkForUserId(tmp50, constants.INACTIVE), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -300,7 +286,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             v0 = 0;
             v0(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -346,8 +332,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -360,8 +346,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             onSuccess = tmp8;
@@ -371,12 +357,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               v3(true);
               c4 = 2;
-              let obj1 = closure_0(7642);
               v3 = 3;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.removeLinkForUserId(tmp37);
-              return obj1;
+              const obj5 = { value: closure_0(7642).removeLinkForUserId(tmp37), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -395,7 +379,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c4 = 0;
             v3(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -442,8 +426,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -456,8 +440,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp4;
             closure_0 = tmp8;
@@ -467,12 +451,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               closure_7(true);
               c3 = 2;
-              let obj1 = closure_0(tmp42[5]);
               c4 = 3;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.getLinkCodeForCurrentUser();
-              return obj1;
+              const obj5 = { value: closure_0(tmp42[5]).getLinkCodeForCurrentUser(), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -491,7 +473,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c3 = 0;
             closure_129_7(false);
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (closure_129_1 != null) {
@@ -525,8 +507,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -539,8 +521,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             onSuccess = tmp8;
@@ -550,12 +532,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               closure_1_11(true);
               c4 = 2;
-              let obj1 = onSuccess(7642);
               c5 = 3;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.fetchTeenActivity(tmp37);
-              return obj1;
+              const obj5 = { value: onSuccess(7642).fetchTeenActivity(tmp37), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -574,7 +554,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c4 = 0;
             closure_1_11(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -620,8 +600,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -634,8 +614,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp4;
             closure_2 = tmp8;
@@ -645,12 +625,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             } else {
               closure_1_9(true);
               c5 = 2;
-              let obj1 = onSuccess(7642);
               c6 = 3;
               c7 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.requestLink(tmp49, tmp50);
-              return obj1;
+              const obj5 = { value: onSuccess(7642).requestLink(tmp49, tmp50), done: false };
+              return obj5;
             }
           }
         } else if (1 !== tmp8) {
@@ -669,7 +647,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c5 = 0;
             closure_1_9(false);
             c7 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (onSuccess != null) {
@@ -715,8 +693,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -729,8 +707,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             closure_1 = tmp8;
@@ -743,12 +721,11 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
                 if (null != selectedTeenId) {
                   closure_1_13(true);
                   c4 = 2;
-                  let obj1 = onSuccess(7642);
+                  const obj2 = onSuccess(7642);
                   c5 = 3;
                   c6 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1.value = obj1.fetchMoreTeenActivity(selectedTeenId, closure_0, startId, actionsForDisplayType[actionsForDisplayType.length - 1].event_id);
-                  return obj1;
+                  const obj5 = { value: obj2.fetchMoreTeenActivity(selectedTeenId, closure_0, startId, actionsForDisplayType[actionsForDisplayType.length - 1].event_id), done: false };
+                  return obj5;
                 }
               }
             }
@@ -770,7 +747,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             c4 = 0;
             closure_1_13(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c4 = 1;
@@ -795,7 +772,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   });
   const items7 = [first3, onError];
-  obj = {
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  return {
     acceptLinkRequest: callback,
     declineLinkRequest: callback1,
     disconnectLinkRequest: callback2,
@@ -822,5 +800,4 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     isRequestingLink: first1,
     isMoreLoading: first3
   };
-  return obj;
 };

@@ -1,8 +1,8 @@
-// === Module 10934: useCreateSubscriptionParams ===
+// === Module 10935: useCreateSubscriptionParams ===
 
-// Module 10934 (useCreateSubscriptionParams)
-import v1 from "v1" /* 1256 */;
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10935 */;
+// Module 10935 (useCreateSubscriptionParams)
+import v1 from "v1" /* 1254 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,9 +22,9 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
       if (null != closure_1) {
         tmp2 = null;
         if (null != closure_2) {
-          let obj = { requestIdentifier: v1.v4(), items: null, countryCode: null, currency: null };
-          obj = { planId: tmp.id, quantity: 1 };
-          const items = [obj];
+          const obj = { requestIdentifier: v1.v4(), items: null, countryCode: null, currency: null };
+          const obj3 = { planId: tmp.id, quantity: 1 };
+          const items = [obj3];
           obj.items = items;
           ({ country: obj.countryCode, currency: obj.currency } = closure_1);
           tmp2 = obj;

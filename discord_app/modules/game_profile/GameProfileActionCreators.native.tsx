@@ -15,8 +15,8 @@ export default {
     ({ source, sourceUserId, stackingBehavior } = arg0);
     _modDef38(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
     _modDef38(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
-    const obj = { gameId, source, sourceUserId };
-    obj.openLazy(asyncRequireImpl(8804, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(8804, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, sourceUserId }, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
@@ -30,7 +30,6 @@ export default {
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
   },
   clearGameProfilePendingReturn(id) {
-    const obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id });
   }
 };

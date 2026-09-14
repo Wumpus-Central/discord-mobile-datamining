@@ -1,10 +1,12 @@
-// === Module 16925: RegionActionCreators ===
+// === Module 16927: RegionActionCreators ===
 
-// Module 16925 (RegionActionCreators)
+// Module 16927 (RegionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/RegionActionCreators.tsx");
@@ -14,13 +16,7 @@ export default {
     _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
-    value.then((body) => {
-      const obj = { type: "LOAD_REGIONS", regions: body.body, guildId };
-      return obj.dispatch(obj);
-    }, () => {
-      const obj = { type: "LOAD_REGIONS", regions: [], guildId };
-      return obj.dispatch(obj);
-    });
+    value.then((body) => DispatcherDefault.dispatch({ type: "LOAD_REGIONS", regions: body.body, guildId }), () => DispatcherDefault.dispatch({ type: "LOAD_REGIONS", regions: [], guildId }));
   },
   changeCallRegion(id, region) {
     const HTTP = HTTPUtils.HTTP;

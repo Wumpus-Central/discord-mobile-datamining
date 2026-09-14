@@ -1,22 +1,20 @@
-// === Module 16743: SearchScreenLayout ===
+// === Module 16745: SearchScreenLayout ===
 
-// Module 16743 (SearchScreenLayout)
-import AppFreezerDefault from "AppFreezer" /* 16617 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16744 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 16836 */;
+// Module 16745 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 16619 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16746 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 16838 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 const require = fn;
 function SearchFreezeContainer(visible) {
   visible = visible.visible;
   ({ children, containerStyle } = visible);
   const tmp = closure_8();
-  let obj = { manualFreeze: !visible, placeholder: null, children: null };
-  const items = [containerStyle, ];
-  obj = { style: items, "aria-hidden": !visible, children };
-  items[1] = visible ? tmp.visible : tmp.hidden;
-  obj.children = hasOwnProperty(View, obj);
+  const obj = { manualFreeze: !visible, placeholder: null, children: null };
+  const items = [containerStyle, visible ? tmp.visible : tmp.hidden];
+  obj.children = hasOwnProperty(View, { style: items, "aria-hidden": !visible, children });
   return hasOwnProperty(AppFreezerDefault, obj);
 }
 const View = fn(17).View;
@@ -30,13 +28,14 @@ const result = size.fileFinishedImporting("modules/search/native/components/layo
 export default noop.memo((width) => {
   const searchContext = width.searchContext;
   const containerStyle = width.containerStyle;
-  let obj = searchContext(504);
   const items = [SearchQueryStore];
   const items1 = [searchContext];
-  const stateFromStores = obj.useStateFromStores(items, () => SearchQueryStore.isAutocompleteVisible(searchContext), items1);
-  obj = { children: null };
-  obj = { visible: !stateFromStores, containerStyle, children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }) };
-  const items2 = [closure_5(SearchFreezeContainer, obj), closure_5(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: closure_5(AutocompleteScreenDefault, { searchContext }) })];
-  obj.children = items2;
-  return closure_7(closure_6, obj);
+  const stateFromStores = searchContext(504).useStateFromStores(items, () => SearchQueryStore.isAutocompleteVisible(searchContext), items1);
+  const obj2 = { children: null };
+  const obj = searchContext(504);
+  const items2 = [closure_5(SearchFreezeContainer, { visible: !stateFromStores, containerStyle, children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }) }), ];
+  const obj3 = { visible: !stateFromStores, containerStyle, children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }) };
+  items2[1] = closure_5(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: closure_5(AutocompleteScreenDefault, { searchContext }) });
+  obj2.children = items2;
+  return closure_7(closure_6, obj2);
 });

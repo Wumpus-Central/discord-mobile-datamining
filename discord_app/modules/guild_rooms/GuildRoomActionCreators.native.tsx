@@ -4,6 +4,8 @@
 import _guildRoomConnectAll from "_guildRoomConnect" /* 4793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const require = globalThis.__r;
+
 let closure_3 = async function _guildRoomConnect(arg0) {
   await _guildRoomConnectAll.guildRoomConnect(closure_0, closure_1, closure_2, closure_3);
   if (1 === tmp6) {

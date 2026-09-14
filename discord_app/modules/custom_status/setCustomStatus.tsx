@@ -1,12 +1,12 @@
-// === Module 11252: setCustomStatus ===
+// === Module 11253: setCustomStatus ===
 
-// Module 11252 (setCustomStatus)
+// Module 11253 (setCustomStatus)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import _modDef4228 from "module_4228" /* 4228 */;
-import Constants2 from "Constants" /* 11249 */;
-import getClearAfterDurationDefault from "getClearAfterDuration" /* 11253 */;
+import Constants2 from "Constants" /* 11250 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 11254 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants2.ClearAfterValues;
@@ -27,7 +27,7 @@ export default function setCustomStatus(arg0) {
   if (trimmed.length > 0) {
     str = trimmed;
   }
-  let obj = { text: str, expiresAtMs: null, emojiId: null, emojiName: null, createdAtMs: null };
+  const obj = { text: str, expiresAtMs: null, emojiId: null, emojiName: null, createdAtMs: null };
   let str2 = "0";
   if (null != clearAfter) {
     str2 = "0";
@@ -64,7 +64,7 @@ export default function setCustomStatus(arg0) {
   if (null != analyticsContext) {
     _location = analyticsContext.location;
   }
-  obj = { location: _location, emoji_type: null, text_len: null, clear_after: null, prompt_type: null, location_stack: null };
+  const obj3 = { location: _location, emoji_type: null, text_len: null, clear_after: null, prompt_type: null, location_stack: null };
   let tmp11 = null;
   if (null != emojiInfo) {
     let str6 = "unicode";
@@ -73,20 +73,20 @@ export default function setCustomStatus(arg0) {
     }
     tmp11 = str6;
   }
-  obj.emoji_type = tmp11;
-  obj.text_len = trimmed.length;
+  obj3.emoji_type = tmp11;
+  obj3.text_len = trimmed.length;
   let combined = null;
   if (null != clearAfter) {
     const _HermesInternal = HermesInternal;
     combined = "" + clearAfter;
   }
-  obj.clear_after = combined;
+  obj3.clear_after = combined;
   value = undefined;
   if (_prompt != null) {
     value = _prompt.value;
   }
-  obj.prompt_type = value;
-  obj.location_stack = analyticsLocations;
-  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
+  obj3.prompt_type = value;
+  obj3.location_stack = analyticsLocations;
+  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj3);
   return updateSettingResult;
 };

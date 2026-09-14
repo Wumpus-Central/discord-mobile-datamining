@@ -1,6 +1,6 @@
-// === Module 13208: useWishlistViewerCoachmark ===
+// === Module 13209: useWishlistViewerCoachmark ===
 
-// Module 13208 (useWishlistViewerCoachmark)
+// Module 13209 (useWishlistViewerCoachmark)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,8 +22,8 @@ export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(is
     }
     items = [];
   }, items);
-  isCurrentUser(shouldShowWishlistTab[3]);
-  const obj = { isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK, markAsDismissed: tmp4 };
-  [tmp3, tmp4] = _slicedToArray(obj.useSelectedDismissibleContent(memo), 2);
-  return obj;
+  const obj = isCurrentUser(shouldShowWishlistTab[3]);
+  const tmp2 = _slicedToArray(isCurrentUser(shouldShowWishlistTab[3]).useSelectedDismissibleContent(memo), 2);
+  [tmp3, tmp4] = tmp2;
+  return { isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK, markAsDismissed: tmp4 };
 };

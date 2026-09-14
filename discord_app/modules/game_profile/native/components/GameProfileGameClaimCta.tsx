@@ -23,8 +23,8 @@ export default function GameProfileGameClaimCta(trackAction) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,23 +37,21 @@ export default function GameProfileGameClaimCta(trackAction) {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             trackAction(v3(8809).GameProfileTrackActionActions.ClaimGame);
-            let obj1 = v1(7419);
             v1 = 1;
             v3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
-            return obj1;
+            const obj5 = { value: v1(7419).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;

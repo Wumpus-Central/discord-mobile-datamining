@@ -1,6 +1,6 @@
-// === Module 10416: useEmojiPickerSearchState ===
+// === Module 10417: useEmojiPickerSearchState ===
 
-// Module 10416 (useEmojiPickerSearchState)
+// Module 10417 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
@@ -27,20 +27,20 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       }
       const FrecencyUserSettingsActionCreators = channel(1940).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-      let obj = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
-      dependencyMap = ref.searchWithoutFetchingLatest(obj);
-      channel(1249).batchUpdates(() => {
+      const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
+      dependencyMap = ref.searchWithoutFetchingLatest(obj2);
+      channel(1247).batchUpdates(() => {
         ref.current = current;
         closure_5(closure_1);
       });
-      const obj3 = channel(1249);
+      const obj3 = channel(1247);
     } else {
-      obj = channel(1249);
-      obj.batchUpdates(() => {
+      channel(1247).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
+      const obj = channel(1247);
     }
   }, items);
   return obj;

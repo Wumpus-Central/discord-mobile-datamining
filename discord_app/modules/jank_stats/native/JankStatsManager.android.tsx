@@ -1,9 +1,9 @@
-// === Module 17524: JankStatsManager ===
+// === Module 17525: JankStatsManager ===
 
-// Module 17524 (JankStatsManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 17525 (JankStatsManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7578 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17525 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17526 */;
 import Constants from "Constants" /* 1074 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
@@ -69,7 +69,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = NativeJankStatsModuleDefault;
+  const obj = NativeJankStatsModuleDefault;
   let report;
   if (obj != null) {
     report = obj.requestReport();
@@ -80,13 +80,13 @@ prototype["sendReport"] = function sendReport(background) {
     const tmp5 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
   }
   if (!tmp4) {
-    obj = {};
+    const obj2 = {};
     const tmpResult = AnalyticsUtilsDefault;
     const merged = Object.assign(TTIAnalyticsUtils.getDeviceMetadata());
-    obj.version = 2;
+    obj2.version = 2;
     ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
-    obj.trigger = background;
-    tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
+    obj2.trigger = background;
+    tmpResult.track(constants2.ANDROID_JANK_STATS, obj2);
   }
 };
 const jankStatsManager = new JankStatsManager();

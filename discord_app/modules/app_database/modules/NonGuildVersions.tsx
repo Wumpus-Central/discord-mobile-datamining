@@ -5,22 +5,21 @@ import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
-import isCacheEnabled2 from "isCacheEnabled" /* 7751 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 
-require = fn;
+const require = fn;
 let closure_5 = new LoggerDefault("NonGuildVersions");
 class NonGuildVersions {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.actions = {
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.actions = {
       CONNECTION_OPEN(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
+            return obj3.handleConnectionOpen(arg0, arg1);
           },
       BACKGROUND_SYNC(arg0, arg1) {
-            return obj.handleConnectionOpen(arg0, arg1);
+            return obj3.handleConnectionOpen(arg0, arg1);
           }
     };
     tmp2 = closure_2;
@@ -39,10 +38,10 @@ class NonGuildVersions {
               const _isNaN = isNaN;
               const _Number = Number;
               if (!isNaN(Number(guildId))) {
-                obj = closure_1_1(1986);
-                const result = obj.nonGuildVersionsTransaction(database);
-                obj = { id: "initial_guild_id", versionString: guildId };
-                result.put(obj);
+                const result = closure_1_1(1986).nonGuildVersionsTransaction(database);
+                const obj2 = { id: "initial_guild_id", versionString: guildId };
+                result.put(obj2);
+                const obj = closure_1_1(1986);
               }
             }
             const result1 = closure_1_1(1986).nonGuildVersionsTransaction(database);
@@ -52,7 +51,7 @@ class NonGuildVersions {
         }
       }, 10 * closure_1(tmp2[6]).Millis.SECOND));
     }
-    return obj;
+    return obj1;
   }
 }
 const prototype = NonGuildVersions.prototype;
@@ -65,8 +64,8 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -79,25 +78,24 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = DatabaseDaosDefault;
-            const nonGuildVersionsResult = obj3.nonGuildVersions();
+            const nonGuildVersionsResult = DatabaseDaosDefault.nonGuildVersions();
             if (null == nonGuildVersionsResult) {
               c4 = 0;
               c6 = 3;
-              const obj1 = { value: {}, done: true };
-              return obj1;
+              const obj5 = { value: {}, done: true };
+              return obj5;
             } else {
               c5 = 2;
               c6 = 1;
-              const obj2 = { value: nonGuildVersionsResult.getMany(), done: false };
-              return obj2;
+              const obj6 = { value: nonGuildVersionsResult.getMany(), done: false };
+              return obj6;
             }
           }
         } else if (1 === tmp7) {
@@ -105,16 +103,16 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           closure_129_1 = closure_3;
           closure_130_5.warn("couldn't load guild versions", closure_129_1);
           c6 = 3;
-          obj3 = { value: {}, done: true };
-          return obj3;
+          const obj7 = { value: {}, done: true };
+          return obj7;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_0 = value.map((id) => {
             const items = [id.id, "version" in id ? id.version : id.versionString];
@@ -126,7 +124,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           }
           c4 = 0;
           c6 = 3;
-          obj = { value: Object.fromEntries(closure_0), done: true };
+          const obj = { value: Object.fromEntries(closure_0), done: true };
           return obj;
         }
       } catch (tmp20) {
@@ -143,10 +141,9 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(apiCodeVersion, database) {
   if (null != apiCodeVersion.apiCodeVersion) {
-    let obj = DatabaseDaosDefault;
-    const result = obj.nonGuildVersionsTransaction(database);
-    obj = { id: "api_code_version", version: apiCodeVersion.apiCodeVersion };
-    result.put(obj);
+    const result = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
+    const obj2 = { id: "api_code_version", version: apiCodeVersion.apiCodeVersion };
+    result.put(obj2);
   }
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
@@ -156,10 +153,10 @@ let obj = Object.create(NonGuildVersions.prototype);
 let closure_129_0 = obj;
 obj.actions = {
   CONNECTION_OPEN(arg0, arg1) {
-    return obj.handleConnectionOpen(arg0, arg1);
+    return obj3.handleConnectionOpen(arg0, arg1);
   },
   BACKGROUND_SYNC(arg0, arg1) {
-    return obj.handleConnectionOpen(arg0, arg1);
+    return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
 const isCacheEnabled = fn(7751);
@@ -173,10 +170,10 @@ if (isCacheEnabled.isCacheEnabled()) {
           const _isNaN = isNaN;
           const _Number = Number;
           if (!isNaN(Number(guildId))) {
-            obj = closure_1_1(1986);
-            const result = obj.nonGuildVersionsTransaction(database);
-            obj = { id: "initial_guild_id", versionString: guildId };
-            result.put(obj);
+            const result = closure_1_1(1986).nonGuildVersionsTransaction(database);
+            const obj2 = { id: "initial_guild_id", versionString: guildId };
+            result.put(obj2);
+            const obj = closure_1_1(1986);
           }
         }
         const result1 = closure_1_1(1986).nonGuildVersionsTransaction(database);

@@ -1,6 +1,6 @@
-// === Module 13438: UserTrialActionCreators ===
+// === Module 13439: UserTrialActionCreators ===
 
-// Module 13438 (UserTrialActionCreators)
+// Module 13439 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7557 */;
 
@@ -20,8 +20,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -34,8 +34,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               userTrialOffer = tmp7;
               let body;
@@ -43,13 +43,13 @@ export default {
                 c3 = 1;
                 const HTTP = userTrialOffer(tmp26[3]).HTTP;
                 const request = { url: c5.USER_TRIAL_OFFER_ACKNOWLEDGED(tmp38.id), body: null, rejectWithError: null };
-                const obj1 = { payment_gateway: constants.GOOGLE };
-                request.body = obj1;
+                const obj4 = { payment_gateway: constants.GOOGLE };
+                request.body = obj4;
                 request.rejectWithError = userTrialOffer(tmp26[3]).rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: HTTP.post(request), done: false };
-                return obj2;
+                const obj5 = { value: HTTP.post(request), done: false };
+                return obj5;
               }
             }
           } else {
@@ -64,19 +64,19 @@ export default {
               throw value;
             } else if (arg0 !== 2) {
               body = value.body;
-              obj = tmp3(tmp26[4]);
               let fromServer = null;
               if (null != body) {
                 fromServer = c4.createFromServer(body);
               }
-              const obj3 = { type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: fromServer };
-              obj.dispatch(obj3);
+              const obj7 = { type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: fromServer };
+              tmp3(tmp26[4]).dispatch(obj7);
               c3 = 0;
+              const obj = tmp3(tmp26[4]);
             }
             c3 = 0;
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           }
           c5 = 3;
         } catch (tmp26) {

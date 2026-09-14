@@ -9,6 +9,8 @@ import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMedia
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8462 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function isMatchingListeningActivity(extra, party) {
   if (obj.isListenedSessionEntry(extra)) {
     const first = extra.extra.entries[0];

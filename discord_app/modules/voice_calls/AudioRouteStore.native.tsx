@@ -3,7 +3,7 @@
 // Module 9212 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import VoiceCallTypes from "VoiceCallTypes" /* 9213 */;
 import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9214 */;
 import get_ActivityIndicator from "module_17" /* 17 */;

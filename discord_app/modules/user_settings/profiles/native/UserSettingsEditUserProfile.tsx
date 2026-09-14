@@ -1,9 +1,10 @@
-// === Module 14674: UserSettingsEditUserProfile ===
+// === Module 14675: UserSettingsEditUserProfile ===
 
-// Module 14674 (UserSettingsEditUserProfile)
+// Module 14675 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 14675 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 14676 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -13,9 +14,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
 export default function UserSettingsEditUserProfile(arg0) {
-  let obj = stateFromStores(504);
+  let tmp3 = useAnalyticsLocationsDefault;
+  const tmp4 = stateFromStores;
   const items = [UserStore];
-  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
@@ -24,11 +26,11 @@ export default function UserSettingsEditUserProfile(arg0) {
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null };
-    obj = { currentUser: stateFromStores };
+    const obj2 = { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null };
+    const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
-    obj.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(stateFromStores(7265).AnalyticsLocationProvider, { currentUser: stateFromStores });
+    obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
+    tmp7 = jsx(tmp4(7265).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

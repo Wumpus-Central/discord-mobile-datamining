@@ -1,13 +1,13 @@
-// === Module 17413: AcceptInviteManager ===
+// === Module 17415: AcceptInviteManager ===
 
-// Module 17413 (AcceptInviteManager)
+// Module 17415 (AcceptInviteManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7837 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 17415 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 17417 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -20,7 +20,7 @@ require = fn;
 const ACCEPT_INVITE_MODAL_KEY = fn(7773).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1074);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
-let prototype = function AcceptInviteManager() {
+const prototype = function AcceptInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._isRegistration = false;
@@ -76,7 +76,7 @@ let prototype = function AcceptInviteManager() {
               if (null != deeplinkAttemptId) {
                 str = "Deep Link";
               }
-              let obj = { location: str };
+              const obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
               DispatcherDefault.wait(() => set(8864).clearDisplayedInvite());
               flag = false;
@@ -102,16 +102,16 @@ let prototype = function AcceptInviteManager() {
                   if (null != invite.roles) {
                     if (invite.roles.length > 0) {
                       const selfMember = GuildMemberStore.getSelfMember(id);
-                      let roles;
+                      let roles1;
                       if (selfMember != null) {
-                        roles = selfMember.roles;
+                        roles1 = selfMember.roles;
                       }
-                      if (roles == null) {
-                        roles = [];
+                      if (roles1 == null) {
+                        roles1 = [];
                       }
-                      roles = invite.roles;
+                      const roles = invite.roles;
                       flag2 = false;
-                      const set = new Set(roles);
+                      const set = new Set(roles1);
                     }
                   }
                   let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
@@ -133,8 +133,8 @@ let prototype = function AcceptInviteManager() {
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
-          obj = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17414, dependencyMap.paths), obj, ACCEPT_INVITE_MODAL_KEY);
+          const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17416, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }
@@ -148,8 +148,8 @@ let prototype = function AcceptInviteManager() {
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
 
-export default prototype;
+export default prototype1;

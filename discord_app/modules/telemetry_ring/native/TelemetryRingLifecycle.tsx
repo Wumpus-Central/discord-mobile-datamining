@@ -1,10 +1,10 @@
-// === Module 1235: telemetry_ring/TelemetryRingLifecycle ===
+// === Module 1233: telemetry_ring/TelemetryRingLifecycle ===
 
-// Module 1235 (telemetry_ring/TelemetryRingLifecycle)
+// Module 1233 (telemetry_ring/TelemetryRingLifecycle)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1357 */;
 import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1899 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import UserStore from "UserStore" /* 1371 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
@@ -36,11 +36,11 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
   const result = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = ZoomedInTelemetryDefault;
-    tmp6Result.start();
+    ZoomedInTelemetryDefault.start();
+    const tmp6Result = ZoomedInTelemetryDefault;
   } else {
-    tmp6Result = ZoomedInTelemetryDefault;
-    tmp6Result.stop();
+    ZoomedInTelemetryDefault.stop();
+    const tmp6Result2 = ZoomedInTelemetryDefault;
   }
 };
 prototype["_initialize"] = function _initialize() {
@@ -69,11 +69,11 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = ZoomedInTelemetryDefault;
-  tmpResult.stop();
-  tmpResult = ProcessUtilsDefault;
-  const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
+  ZoomedInTelemetryDefault.stop();
+  const tmpResult = ZoomedInTelemetryDefault;
+  const result1 = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
+  const tmpResult2 = ProcessUtilsDefault;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
 const size = fn(2);

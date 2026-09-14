@@ -3,7 +3,7 @@
 // Module 1983 (libdiscoreExperiments)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import js_shim_shim from "js_shim/shim" /* 1351 */;
+import js_shim_shim from "js_shim/shim" /* 1349 */;
 import BridgedStore from "BridgedStore" /* 1984 */;
 import size from "module_2" /* 2 */;
 
@@ -92,9 +92,9 @@ prototype2["getCachedEnabled"] = function getCachedEnabled() {
 };
 class LibdiscoreBridgedStoreExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
-    tmp = new tmp(global, importDefault, new.target);
-    tmp.storeName = require;
-    return tmp;
+    tmp1 = new tmp(global, importDefault, new.target);
+    tmp1.storeName = require;
+    return tmp1;
   }
 }
 const prototype3 = LibdiscoreBridgedStoreExperiment.prototype;
@@ -194,10 +194,10 @@ tmp10.label = "Allow react to render before lazy cache is loaded";
 tmp10.defaultValue = false;
 class LibdiscoreCustomTreatmentsExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
-    tmp = new tmp(global, new.target);
-    tmp.label = require;
-    tmp.treatmentCount = importDefault;
-    return tmp;
+    tmp1 = new tmp(global, new.target);
+    tmp1.label = require;
+    tmp1.treatmentCount = importDefault;
+    return tmp1;
   }
 }
 const prototype5 = LibdiscoreCustomTreatmentsExperiment.prototype;
@@ -220,12 +220,12 @@ tmp13.defaultValue = false;
 const tmp14 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8);
 tmp14.label = "Android Hermes Occupancy Target";
 tmp14.defaultValue = false;
-tmp2 = new tmp2("2026-08-android-rn-reparenting-flag", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8);
-tmp2.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
-tmp2.defaultValue = false;
-tmp3 = new tmp3("2026-08-ios-objc-composed-image-cache", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment, tmp10, tmp11, tmp12, tmp13, tmp14, tmp2, "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions");
-tmp3.label = "iOS ObjC Composed Image Cache";
-tmp3.treatmentCount = 3;
+const tmp22 = new tmp2("2026-08-android-rn-reparenting-flag", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8);
+tmp22.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
+tmp22.defaultValue = false;
+const tmp32 = new tmp3("2026-08-ios-objc-composed-image-cache", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment, tmp10, tmp11, tmp12, tmp13, tmp14, tmp22, "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions");
+tmp32.label = "iOS ObjC Composed Image Cache";
+tmp32.treatmentCount = 3;
 let c7 = false;
 const result = size.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
@@ -239,8 +239,8 @@ export const AndroidPullModeRenderingExperiment = tmp11;
 export const AndroidFrescoCacheExperiment = tmp12;
 export const AndroidChatMosaicSharedPoolExperiment = tmp13;
 export const AndroidHermesOccupancyTargetExperiment = tmp14;
-export const AndroidRNFlagReparenting = tmp2;
-export const IOSObjcComposedImageCacheExperiment = tmp3;
+export const AndroidRNFlagReparenting = tmp22;
+export const IOSObjcComposedImageCacheExperiment = tmp32;
 export function isExperimentSyncDisabled() {
   return c7;
 }

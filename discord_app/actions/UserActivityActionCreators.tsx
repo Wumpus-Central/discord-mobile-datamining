@@ -1,9 +1,11 @@
-// === Module 11881: UserActivityActionCreators ===
+// === Module 11882: UserActivityActionCreators ===
 
-// Module 11881 (UserActivityActionCreators)
+// Module 11882 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 let closure_6 = async function _getMetadata(arg0, arg1) {
@@ -35,7 +37,6 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
     const HTTP = require("HTTPUtils").HTTP;
     await HTTP.get({ url: Endpoints.USER_ACTIVITY_METADATA(closure_1, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
     const body = value.body;
-    { url: Endpoints.USER_ACTIVITY_METADATA(closure_1, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     closure_131_1(closure_131_2[3]).dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: body, userId: closure_130_0 });
     return body;
   })();
@@ -45,20 +46,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  const obj = { type: "ACTIVITY_SYNC", activity, userId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ACTIVITY_SYNC", activity, userId });
 };
 export const play = function play(result, userId) {
   _require = result;
   const spotifyMetadataFromActivity = require("SpotifyUtils").getSpotifyMetadataFromActivity(result, userId);
-  let obj = require("SpotifyUtils");
-  spotifyMetadataFromActivity.then((metadata) => {
-    const obj = { type: "ACTIVITY_PLAY", activity, userId, metadata };
-    return obj.dispatch(obj);
-  }).catch(() => {
-    const obj = { type: "ACTIVITY_PLAY", activity, userId };
-    return obj.dispatch(obj);
-  });
+  const obj = require("SpotifyUtils");
+  spotifyMetadataFromActivity.then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
 };
 export const getMetadata = function getMetadata() {
   const self = this;

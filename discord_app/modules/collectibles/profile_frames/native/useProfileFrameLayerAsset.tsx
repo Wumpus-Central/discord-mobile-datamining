@@ -15,9 +15,8 @@ export default function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
   ({ skuId, layer } = width);
-  collectiblesItemAssetUrl(1883);
-  const obj = { skuId, assetFormat: collectiblesItemAssetUrl(1883).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
-  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl(obj);
+  const obj = collectiblesItemAssetUrl(1883);
+  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1883).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
   dependencyMap = _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];
   const effect = noop.useEffect(() => {

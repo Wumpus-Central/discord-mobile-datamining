@@ -1,7 +1,7 @@
-// === Module 15801: SelectMenuNativeComponent ===
+// === Module 15803: SelectMenuNativeComponent ===
 
-// Module 15801 (SelectMenuNativeComponent)
-import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 15802 */;
+// Module 15803 (SelectMenuNativeComponent)
+import SelectActionComponentViewNativeComponentDefault from "SelectActionComponentViewNativeComponent" /* 15804 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

@@ -6,12 +6,14 @@ import MarkupRulesDefault from "MarkupRules" /* 5079 */;
 import MarkupLiteralImageRuleDefault from "MarkupLiteralImageRule" /* 9145 */;
 import combineMarkupRules from "combineMarkupRules" /* 5078 */;
 import apply from "module_12" /* 12 */;
-import MarkupParser from "MarkupParser" /* 8091 */;
+import MarkupParser_mod from "MarkupParser" /* 8091 */;
 
 const items = ["text", "link", "emoji"];
 const items1 = [apply.pick(MarkupRulesDefault.RULES, items), { image: MarkupLiteralImageRuleDefault }, MarkupReactRulesDefault()];
 const importDefaultResultResult = combineMarkupRules(items1);
+let MarkupParser = MarkupParser_mod;
 let closure_0 = MarkupParser.reactParserFor(importDefaultResultResult);
+let MarkupParser = MarkupParser_mod;
 let closure_1 = MarkupParser.astParserFor(importDefaultResultResult);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetMarkupUtils.native.tsx");

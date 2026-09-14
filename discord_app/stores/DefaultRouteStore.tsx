@@ -8,7 +8,7 @@ import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
-let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
+const obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 let closure_4 = obj;
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
 const PersistedStore = initializeDefault.PersistedStore;
@@ -66,7 +66,7 @@ const items = [
   }
 ];
 DefaultRouteStore.migrations = items;
-obj = {
+const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
   SAVE_LAST_ROUTE: function handleSaveRoute(path) {
     closure_4.lastViewedPath = path.path;
     return true;
@@ -78,8 +78,7 @@ obj = {
   LOGOUT: function handleLogout() {
     closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
   }
-};
-const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

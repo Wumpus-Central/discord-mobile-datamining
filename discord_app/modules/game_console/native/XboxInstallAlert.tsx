@@ -2,21 +2,23 @@
 
 // Module 9592 (XboxInstallAlert)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
 import _modDef9574 from "module_9574" /* 9574 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const GameConsoleConstants = fn(9362);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { externalLinkIcon: null };
+const createStyles = fn(4636);
+const obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
-createStyles.externalLinkIcon = size;
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.externalLinkIcon = size;
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
 
@@ -37,8 +39,8 @@ export default function XboxInstallAlert(arg0) {
     return jsx(native.Icon, { source: _modDef9574, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = closure_0(1150);
-    const isAndroidResult = closure_0(1150).isAndroid();
+    const obj = closure_0(1363);
+    const isAndroidResult = closure_0(1363).isAndroid();
     const openURL = LinkingDefault.openURL;
     if (isAndroidResult) {
       openURL(closure_1_3);

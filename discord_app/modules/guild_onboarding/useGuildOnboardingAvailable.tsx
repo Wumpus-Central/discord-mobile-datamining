@@ -3,6 +3,8 @@
 // Module 7438 (useGuildOnboardingAvailable)
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

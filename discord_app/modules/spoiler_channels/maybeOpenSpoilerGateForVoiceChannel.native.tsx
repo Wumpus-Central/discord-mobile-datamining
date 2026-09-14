@@ -1,9 +1,9 @@
-// === Module 13062: maybeOpenSpoilerGateForVoiceChannel ===
+// === Module 13063: maybeOpenSpoilerGateForVoiceChannel ===
 
-// Module 13062 (maybeOpenSpoilerGateForVoiceChannel)
+// Module 13063 (maybeOpenSpoilerGateForVoiceChannel)
 import useAlertStore from "useAlertStore" /* 4982 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7432 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13063 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13064 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
@@ -17,12 +17,11 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   const channel = ChannelStore.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
-    let obj = SpoilerChannelUtils;
-    tmp2 = !obj.shouldShowSpoilerGateForChannelId(id);
+    tmp2 = !SpoilerChannelUtils.shouldShowSpoilerGateForChannelId(id);
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { channelId: channel.id };
+    const obj3 = { channelId: channel.id };
     useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId: channel.id }));
     flag = true;
   }

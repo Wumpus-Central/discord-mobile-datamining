@@ -8,6 +8,8 @@ import uniqueIdDefault from "uniqueId" /* 4840 */;
 import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 4841 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const AppContext = Constants.AppContext;
 const result = size.fileFinishedImporting("actions/ModalActionCreators.tsx");
 
@@ -21,9 +23,10 @@ export default {
     if (arg4 === undefined) {
       APP = AppContext.APP;
     }
-    const obj = { modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) };
+    const obj = NavigationRouteUtils;
     const merged = Object.assign(arg3);
-    obj.pushModal(obj);
+    obj.pushModal({ modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) });
+    const obj2 = { modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) };
     const element = { type: "MODAL_PUSH", modal, props, key: tmp, appContext: APP };
     DispatcherDefault.dispatch(element);
     return tmp;
@@ -64,10 +67,8 @@ export default {
     DispatcherDefault.dispatch({ type: "MODAL_POP" });
   },
   popWithKey(c3, onExited) {
-    let obj = NavigationRouteUtils;
-    obj.popModal(key, onExited);
-    obj = { type: "MODAL_POP", key, onExited };
-    DispatcherDefault.dispatch(obj);
+    NavigationRouteUtils.popModal(key, onExited);
+    DispatcherDefault.dispatch({ type: "MODAL_POP", key, onExited });
   },
   popAboveKey(voiceChannelKey) {
     return NavigationRouteUtils.popModalsAboveKey(voiceChannelKey);

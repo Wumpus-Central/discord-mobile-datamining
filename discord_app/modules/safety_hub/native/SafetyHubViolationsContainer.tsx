@@ -1,9 +1,9 @@
-// === Module 14861: SafetyHubViolationsContainer ===
+// === Module 14862: SafetyHubViolationsContainer ===
 
-// Module 14861 (SafetyHubViolationsContainer)
+// Module 14862 (SafetyHubViolationsContainer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -11,9 +11,9 @@ import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
 import SafetyHubModels from "SafetyHubModels" /* 8538 */;
 import WarningIcon from "WarningIcon" /* 8711 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11287 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12010 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13660 */;
+import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 11288 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12011 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13661 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
@@ -22,28 +22,27 @@ require = fn;
 function SafetyHubViolationsHeader(count) {
   ({ onClick, opened, status } = count);
   const tmp = closure_14();
-  let obj = { onPress: onClick, style: null, children: null };
+  const obj = { onPress: onClick, style: null, children: null };
   const items = [tmp.header];
   obj.style = items;
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items1 = [tmp.iconBackground];
-  obj.style = items1;
+  obj2.style = items1;
   const colors = nativeDefault.colors;
-  obj = { color: tmp8 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
-  obj.children = closure_1_11(WarningIcon.WarningIcon, obj);
-  const items2 = [closure_1_11(timestampProducer, obj), , ];
-  const obj1 = { style: null, children: null };
+  obj2.children = closure_1_11(WarningIcon.WarningIcon, { color: "active" === status ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" });
+  const items2 = [closure_1_11(timestampProducer, obj2), , ];
+  const obj4 = { style: null, children: null };
   const items3 = [tmp.headerTextContainer];
-  obj1.style = items3;
+  obj4.style = items3;
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = util.t;
   if ("active" === status) {
-    const obj2 = { count: str.toString() };
-    let formatToPlainStringResult = formatToPlainString(t.IeV2oY, obj2);
+    const obj5 = { count: str.toString() };
+    let formatToPlainStringResult = formatToPlainString(t.IeV2oY, obj5);
   } else {
-    const obj3 = { count: str.toString() };
-    formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
+    const obj6 = { count: str.toString() };
+    formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj6);
   }
   const items4 = [closure_1_11(Text_Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
   const intl2 = util.intl;
@@ -55,61 +54,61 @@ function SafetyHubViolationsHeader(count) {
     stringResult = string(t2.SzGV0g);
   }
   items4[1] = closure_1_11(Text_Text.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
-  obj1.children = items4;
-  items2[1] = closure_1_12(timestampProducer, obj1);
+  obj4.children = items4;
+  items2[1] = closure_1_12(timestampProducer, obj4);
   if (opened) {
     let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
   } else {
     ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
   }
-  const obj4 = { size: "md", style: null };
+  const obj7 = { size: "md", style: null };
   const items5 = [tmp.chevron];
-  obj4.style = items5;
-  items2[2] = closure_1_11(ChevronSmallDownIcon, obj4);
+  obj7.style = items5;
+  items2[2] = closure_1_11(ChevronSmallDownIcon, obj7);
   obj.children = items2;
   return closure_1_12(TouchableHitBoxDefault, obj);
 }
 function EmptyActiveState() {
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_14().emptyState];
   obj.style = items;
-  obj = { variant: "heading-sm/extrabold", children: null };
+  const obj2 = { variant: "heading-sm/extrabold", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.reLFaV);
-  const items1 = [closure_1_11(Text_Text.Text, obj), ];
-  obj = { variant: "text-xs/normal", children: null };
+  obj2.children = intl.string(util.t.reLFaV);
+  const items1 = [closure_1_11(Text_Text.Text, obj2), ];
+  const obj3 = { variant: "text-xs/normal", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.ERdH1o);
-  items1[1] = closure_1_11(Text_Text.Text, obj);
+  obj3.children = intl2.string(util.t.ERdH1o);
+  items1[1] = closure_1_11(Text_Text.Text, obj3);
   obj.children = items1;
   return closure_1_12(timestampProducer, obj);
 }
 function EmptyExpiredState() {
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_14().emptyState];
   obj.style = items;
-  obj = { variant: "text-xs/normal", children: null };
+  const obj2 = { variant: "text-xs/normal", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.RV3AXf);
-  obj.children = closure_1_11(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.RV3AXf);
+  obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(timestampProducer, obj);
 }
 function RelativeIncidentTime(timestamp) {
-  let obj = { style: closure_14().incidentDate, children: null };
-  obj = { variant: "text-xs/medium", children: SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp.timestamp) };
-  obj.children = closure_1_11(Text_Text.Text, obj);
+  const obj = { style: closure_14().incidentDate, children: null };
+  const obj2 = { variant: "text-xs/medium", children: SafetyHubUtils.getClassificationRelativeIncidentTime(timestamp.timestamp) };
+  obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(timestampProducer, obj);
 }
 function NewBadge() {
   const tmp = closure_14();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [, ];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
   obj.style = items;
-  obj = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
+  const obj2 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.QKMRC4);
-  obj.children = closure_1_11(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.QKMRC4);
+  obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(timestampProducer, obj);
 }
 function ClassificationDetail(classification) {
@@ -119,8 +118,10 @@ function ClassificationDetail(classification) {
   const description = classification.description;
   const guild_metadata = classification.guild_metadata;
   let obj = description(guild_metadata[16]);
-  let obj1 = id(guild_metadata[17]);
-  const isNewClassification = obj1.useIsNewClassification(classification);
+  const tmp2 = description;
+  const extractTimestampResult = description(guild_metadata[16]).extractTimestamp(id);
+  const tmp5 = id;
+  const isNewClassification = id(guild_metadata[17]).useIsNewClassification(classification);
   const items = [description, guild_metadata];
   const items1 = [tmp.detailContainerOuter, ];
   let prop = null;
@@ -128,7 +129,7 @@ function ClassificationDetail(classification) {
     function hook(children, arg1) {
       return closure_1_11(id(guild_metadata[11]).Text, { variant: "heading-md/extrabold", children }, arg1);
     }
-    let name = { description, descriptionHook: hook };
+    let obj2 = { description, descriptionHook: hook };
     let tmp4 = null;
     if (null != guild_metadata) {
       let member_type;
@@ -136,62 +137,60 @@ function ClassificationDetail(classification) {
         member_type = guild_metadata.member_type;
       }
       let Lb0HVv = require;
-      name = dependencyMap;
+      let obj = dependencyMap;
       if (member_type === SafetyHubModels.MemberType.OWNER) {
         const intl3 = Lb0HVv(1114).intl;
         Lb0HVv = Lb0HVv(1114).t.Lb0HVv;
-        name = {};
-        const merged = Object.assign(name);
+        obj = {};
+        const merged = Object.assign(obj2);
         tmp4 = guild_metadata == tmp4;
-        name = undefined;
+        obj2 = undefined;
         if (!tmp4) {
-          name = guild_metadata.name;
+          obj2 = guild_metadata.name;
         }
-        name.guildName = name;
-        let formatResult = intl3.format(Lb0HVv, name);
+        obj.guildName = obj2;
+        let formatResult = intl3.format(Lb0HVv, obj);
       } else {
         const intl2 = Lb0HVv(1114).intl;
-        const obj = { classification_type: tmp2, classificationHook: hook, guildName: null };
-        name = undefined;
+        const obj4 = { classification_type: tmp2, classificationHook: hook, guildName: null };
+        let name;
         if (guild_metadata != tmp4) {
           name = guild_metadata.name;
         }
-        obj.guildName = name;
-        formatResult = intl2.format(Lb0HVv(1114).t.rmpEPD, obj);
+        obj4.guildName = name;
+        formatResult = intl2.format(Lb0HVv(1114).t.rmpEPD, obj4);
       }
     } else {
       const intl = util.intl;
-      return intl.format(util.t.QY4g5t, name);
+      return intl.format(util.t.QY4g5t, obj2);
     }
   }, items);
   if (isNewClassification) {
     prop = tmp.detailContainerOuterNew;
   }
-  obj = { style: items1, children: null };
+  const obj3 = { style: items1, children: null };
   items1[1] = prop;
-  obj = {
+  let obj4 = {
     onPress() {
-      const obj = { classificationId: id, source: React6.StandingTab };
-      obj.pushLazy(asyncRequireImpl(12008, dependencyMap.paths), obj);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12009, dependencyMap.paths), { classificationId: id, source: React6.StandingTab });
     },
     children: null
   };
-  obj1 = { style: null, children: null };
+  const obj5 = { style: null, children: null };
   const items2 = [tmp.detailContainerInner];
-  obj1.style = items2;
-  const extractTimestampResult = obj.extractTimestamp(id);
-  const tmp5 = id;
+  obj5.style = items2;
+  let obj2 = id(guild_metadata[17]);
   if (isNewClassification) {
     let tmp8Result = closure_11(NewBadge, {});
   } else {
-    const obj2 = { timestamp: extractTimestampResult };
-    tmp8Result = closure_11(RelativeIncidentTime, obj2);
+    const obj6 = { timestamp: extractTimestampResult };
+    tmp8Result = closure_11(RelativeIncidentTime, obj6);
   }
   const items3 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo })];
-  obj1.children = items3;
-  obj.children = closure_12(closure_6, obj1);
-  obj.children = closure_11(description(guild_metadata[9]), obj);
-  return closure_11(closure_6, obj);
+  obj5.children = items3;
+  obj4.children = closure_12(closure_6, obj5);
+  obj3.children = closure_11(tmp2(guild_metadata[9]), obj4);
+  return closure_11(closure_6, obj3);
 }
 class SafetyHubViolationsContainer {
   constructor(arg0) {
@@ -235,8 +234,8 @@ class SafetyHubViolationsContainer {
     items2[3] = stateFromStores;
     effect = closure_4.useEffect(() => {
       if (first) {
-        const obj = { action: React7.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: React6.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
-        obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj);
+        const obj2 = { action: React7.ViewViolationsDropdown, account_standing: safetyHubAccountStanding.state, classification_ids: memo.map((id) => Number(id.id)), source: React6.StandingTab, is_violative_content_shown: false, is_dsa_eligible: stateFromStores };
+        AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_HUB_ACTION, obj2);
       }
     }, items2);
     num = 3;
@@ -246,12 +245,12 @@ class SafetyHubViolationsContainer {
     closure_8 = num;
     tmp11 = jsxs;
     tmp12 = closure_6;
-    obj = { style: null, children: null };
+    obj1 = { style: null, children: null };
     items3 = [];
     items3[0] = tmp.container;
-    obj.style = items3;
+    obj1.style = items3;
     tmp13 = jsx;
-    obj1 = {
+    obj13 = {
       status,
       onClick() {
             return closure_2((arg0) => !arg0);
@@ -260,49 +259,49 @@ class SafetyHubViolationsContainer {
       count: classifications.length
     };
     items4 = [, ];
-    items4[0] = jsx(SafetyHubViolationsHeader, obj1);
+    items4[0] = jsx(SafetyHubViolationsHeader, obj13);
     if (first) {
-      obj2 = { style: null };
+      obj14 = { style: null };
       items5 = [];
       items5[0] = tmp.separator;
-      obj2.style = items5;
+      obj14.style = items5;
       items6 = [, , , , ];
-      items6[0] = tmp13(tmp12, obj2);
+      items6[0] = tmp13(tmp12, obj14);
       num2 = 0;
       tmp14 = memo.length > 0 && memo.map((classification) => closure_1_11(ClassificationDetail, { classification }, classification.id));
       items6[1] = tmp14;
       tmp11Result = memo.length < classifications.length;
       if (tmp11Result) {
         tmp16 = Fragment;
-        obj3 = { children: null };
-        obj4 = { style: null };
+        obj15 = { children: null };
+        obj16 = { style: null };
         items7 = [];
         items7[0] = tmp.separator;
-        obj4.style = items7;
+        obj16.style = items7;
         items8 = [, ];
-        items8[0] = tmp13(tmp12, obj4);
-        obj5 = { style: null, children: null };
+        items8[0] = tmp13(tmp12, obj16);
+        obj17 = { style: null, children: null };
         items9 = [];
         items9[0] = tmp.moreButtonContainer;
-        obj5.style = items9;
+        obj17.style = items9;
         tmp17 = closure_5;
-        obj6 = { style: null, onPress: null, children: null };
+        obj18 = { style: null, onPress: null, children: null };
         items10 = [];
         items10[0] = tmp.moreButton;
-        obj6.style = items10;
-        obj6.onPress = function onPress() {
+        obj18.style = items10;
+        obj18.onPress = function onPress() {
           return closure_4((arg0) => arg0 + num);
         };
-        obj7 = { variant: "heading-sm/semibold", children: null };
+        obj19 = { variant: "heading-sm/semibold", children: null };
         intl = tmp6(tmp7[12]).intl;
-        obj8 = { nextPageSize: null };
-        obj8.nextPageSize = num;
-        obj7.children = intl.format(tmp6(tmp7[12]).t["9Ml56H"], obj8);
-        obj6.children = tmp13(tmp6(tmp7[11]).Text, obj7);
-        obj5.children = tmp13(closure_5, obj6);
-        items8[1] = tmp13(tmp12, obj5);
-        obj3.children = items8;
-        tmp11Result = tmp11(Fragment, obj3);
+        obj20 = { nextPageSize: null };
+        obj20.nextPageSize = num;
+        obj19.children = intl.format(tmp6(tmp7[12]).t["9Ml56H"], obj20);
+        obj18.children = tmp13(tmp6(tmp7[11]).Text, obj19);
+        obj17.children = tmp13(closure_5, obj18);
+        items8[1] = tmp13(tmp12, obj17);
+        obj15.children = items8;
+        tmp11Result = tmp11(Fragment, obj15);
       }
       items6[2] = tmp11Result;
       tmp13Result = 0 === memo.length;
@@ -324,14 +323,14 @@ class SafetyHubViolationsContainer {
         tmp21 = EmptyExpiredState;
         tmp13Result1 = tmp13(EmptyExpiredState, {});
       }
-      obj9 = { children: null };
+      obj21 = { children: null };
       items6[4] = tmp13Result1;
-      obj9.children = items6;
-      first = tmp11(tmp12, obj9);
+      obj21.children = items6;
+      first = tmp11(tmp12, obj21);
     }
     items4[1] = first;
-    obj.children = items4;
-    return tmp11(tmp12, obj);
+    obj1.children = items4;
+    return tmp11(tmp12, obj1);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -341,55 +340,53 @@ const SafetyHubConstants = fn(8537);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4636);
-let createStyles = { connectedContainer: null, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
-createStyles = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
-createStyles.connectedContainer = createStyles;
-createStyles.container = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
-let obj1 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
-createStyles.header = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
-let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
-createStyles.detailContainerOuter = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
-createStyles.detailContainerOuterNew = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-let obj4 = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-createStyles.detailContainerInner = { display: "flex", gap: nativeDefault.space.PX_8 };
-let obj5 = { display: "flex", gap: nativeDefault.space.PX_8 };
-createStyles.iconBackground = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
-createStyles.chevron = { marginLeft: "auto" };
-let obj6 = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
-createStyles.incidentDate = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let obj7 = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.incidentDateNew = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-createStyles.newText = { textTransform: "capitalize" };
-let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-createStyles.emptyState = { display: "flex", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24 };
+const createStyles = fn(4636);
+let obj2 = { connectedContainer: { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 }, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
+let obj3 = { display: "flex", marginTop: nativeDefault.space.PX_12, marginBottom: 36, gap: nativeDefault.space.PX_12 };
+obj2.container = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
+let obj4 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_8, width: "100%" };
+obj2.header = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
+let obj5 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16, width: "100%" };
+obj2.detailContainerOuter = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
+let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: 10 };
+obj2.detailContainerOuterNew = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
+let obj7 = { borderColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
+obj2.detailContainerInner = { display: "flex", gap: nativeDefault.space.PX_8 };
+let obj8 = { display: "flex", gap: nativeDefault.space.PX_8 };
+obj2.iconBackground = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
+obj2.chevron = { marginLeft: "auto" };
+let obj9 = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
+obj2.incidentDate = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
+let obj10 = { alignSelf: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.incidentDateNew = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+obj2.newText = { textTransform: "capitalize" };
+let obj11 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+obj2.emptyState = { display: "flex", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24 };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 10 };
-createStyles.separator = size;
-createStyles.moreButtonContainer = { display: "flex", alignItems: "center", justifyContent: "center" };
+obj2.separator = size;
+obj2.moreButtonContainer = { display: "flex", alignItems: "center", justifyContent: "center" };
 const size1 = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: nativeDefault.radii.xs, borderBottomStartRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
-createStyles.moreButton = size1;
-createStyles.headerTextContainer = { flexShrink: 0, flexGrow: 1, gap: 2 };
-const value = createStyles.createStyles(createStyles);
+obj2.moreButton = size1;
+obj2.headerTextContainer = { flexShrink: 0, flexGrow: 1, gap: 2 };
+const value = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
 
 export default SafetyHubViolationsContainer;
 export const ConnectedSafetyHubViolationsContainer = function ConnectedSafetyHubViolationsContainer() {
-  let obj = useSafetyHubClassifications;
-  const activeSafetyHubClassifications = obj.useActiveSafetyHubClassifications();
-  let obj1 = useSafetyHubClassifications;
-  const expiredSafetyHubClassifications = obj1.useExpiredSafetyHubClassifications();
+  const tmp = closure_14();
+  const activeSafetyHubClassifications = useSafetyHubClassifications.useActiveSafetyHubClassifications();
+  const expiredSafetyHubClassifications = useSafetyHubClassifications.useExpiredSafetyHubClassifications();
   if (0 !== activeSafetyHubClassifications.length) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items = [tmp.connectedContainer];
-    obj.style = items;
-    obj = { status: "active", classifications: activeSafetyHubClassifications };
-    const items1 = [closure_1_11(SafetyHubViolationsContainer, obj), ];
-    obj1 = { status: "expired", classifications: expiredSafetyHubClassifications };
-    items1[1] = closure_1_11(SafetyHubViolationsContainer, obj1);
-    obj.children = items1;
-    let tmp2 = closure_1_12(timestampProducer, obj);
+    obj3.style = items;
+    const obj4 = { status: "active", classifications: activeSafetyHubClassifications };
+    const items1 = [closure_1_11(SafetyHubViolationsContainer, obj4), ];
+    const obj5 = { status: "expired", classifications: expiredSafetyHubClassifications };
+    items1[1] = closure_1_11(SafetyHubViolationsContainer, obj5);
+    obj3.children = items1;
+    let tmp2 = closure_1_12(timestampProducer, obj3);
   } else {
     tmp2 = null;
   }

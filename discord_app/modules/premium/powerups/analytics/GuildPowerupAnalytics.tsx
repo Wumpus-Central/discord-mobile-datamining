@@ -1,7 +1,7 @@
-// === Module 12672: GuildPowerupAnalytics ===
+// === Module 12673: GuildPowerupAnalytics ===
 
-// Module 12672 (GuildPowerupAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12673 (GuildPowerupAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -14,7 +14,6 @@ export const useLogPowerupModalOpened = function useLogPowerupModalOpened(guildI
   noop = DEACTIVATE;
   const items = [DEACTIVATE, guildId, powerup.skuId];
   const effect = noop.useEffect(() => {
-    const obj = { type, sku_id: powerup.skuId, guild_id };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: powerup.skuId, guild_id });
   }, items);
 };

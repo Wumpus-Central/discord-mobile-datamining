@@ -6,16 +6,16 @@ import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 function fromServer(guildId, arg1) {
-  let obj = {};
+  const obj = {};
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    obj = {};
-    obj[TypeTag] = "RawGuildEmoji";
-    obj.guildId = guildId;
+    let obj3 = {};
+    obj3[TypeTag] = "RawGuildEmoji";
+    obj3.guildId = guildId;
     ({ id: obj2.id, animated: obj2.animated, name: obj2.name, require_colons: obj2.require_colons, available: obj2.available, roles: obj2.roles, managed: obj2.managed, version: obj2.version } = nextResult);
-    obj.type = EmojiTypes.EmojiTypes.GUILD;
-    obj[nextResult.id] = obj;
+    obj3.type = EmojiTypes.EmojiTypes.GUILD;
+    obj[nextResult.id] = obj3;
     continue;
   }
   return obj;

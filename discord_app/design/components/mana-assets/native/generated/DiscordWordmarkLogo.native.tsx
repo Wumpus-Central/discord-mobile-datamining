@@ -30,21 +30,24 @@ export const DiscordWordmarkLogo = function DiscordWordmarkLogo(color) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = useToken;
-  const token = obj.useToken(ICON_STRONG);
+  const token = useToken.useToken(ICON_STRONG);
   if (null != token) {
-    obj = { tintColor: token };
-    let tmp6 = obj;
+    const obj2 = { tintColor: token };
+    let tmp6 = obj2;
   } else {
     if (tmp5) {
-      obj = { tintColor: ICON_STRONG };
-      tmp6 = obj;
+      const obj3 = { tintColor: ICON_STRONG };
+      tmp6 = obj3;
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const obj1 = { fadeDuration: 0, source: { uri: _modDef6017 }, style: null, accessible, accessibilityLabel, resizeMode };
+  const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj4.source = { uri: _modDef6017 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
-  obj1.style = items;
-  return <Image fadeDuration={0} source={{ uri: _modDef6017 }} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
+  obj4.style = items;
+  obj4.accessible = accessible;
+  obj4.accessibilityLabel = accessibilityLabel;
+  obj4.resizeMode = resizeMode;
+  return <Image fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />;
 };

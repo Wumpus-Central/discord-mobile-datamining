@@ -28,11 +28,11 @@ export const useSegmentedControlState = function useSegmentedControlState(pageWi
   const sharedValue = items(PX_24[3]).useSharedValue([]);
   let obj = items(PX_24[3]);
   const sharedValue1 = items(PX_24[3]).useSharedValue(-1);
-  const obj2 = items(PX_24[3]);
+  let obj2 = items(PX_24[3]);
   const sharedValue2 = items(PX_24[3]).useSharedValue(0);
   let obj3 = items(PX_24[3]);
   const sharedValue3 = items(PX_24[3]).useSharedValue(0);
-  const obj4 = items(PX_24[3]);
+  let obj4 = items(PX_24[3]);
   const sharedValue4 = items(PX_24[3]).useSharedValue(num);
   const obj5 = items(PX_24[3]);
   const items1 = [num, num];
@@ -61,8 +61,8 @@ export const useSegmentedControlState = function useSegmentedControlState(pageWi
       flag = sharedValue4.get() !== arg0;
     }
     if (flag) {
+      let result = items(PX_24[4]).triggerHapticFeedback(items(PX_24[4]).HapticFeedbackTypes.IMPACT_MEDIUM);
       let obj = items(PX_24[4]);
-      let result = obj.triggerHapticFeedback(items(PX_24[4]).HapticFeedbackTypes.IMPACT_MEDIUM);
     }
     if (arg0 !== sharedValue4.get()) {
       if (null != onPageChangeStart) {
@@ -75,14 +75,13 @@ export const useSegmentedControlState = function useSegmentedControlState(pageWi
             tmp5 = !enabled;
           }
           if (tmp5) {
-            let obj = useIsScreenReaderEnabled;
-            tmp5 = !obj.getIsScreenReaderEnabled();
+            tmp5 = !useIsScreenReaderEnabled.getIsScreenReaderEnabled();
           }
           if (animatedRef != null) {
             const current = animatedRef.current;
             if (current != null) {
-              obj = { x: result1, animated: tmp5 };
-              current.scrollTo(obj);
+              const obj2 = { x: result1, animated: tmp5 };
+              current.scrollTo(obj2);
             }
           }
           if (onSetActiveIndex != null) {
@@ -104,8 +103,8 @@ export const useSegmentedControlState = function useSegmentedControlState(pageWi
         if (animatedRef != null) {
           let current = animatedRef.current;
           if (current != null) {
-            obj = { x: result2, animated: tmp8 };
-            current.scrollTo(obj);
+            const obj4 = { x: result2, animated: tmp8 };
+            current.scrollTo(obj4);
           }
         }
         if (onSetActiveIndex != null) {

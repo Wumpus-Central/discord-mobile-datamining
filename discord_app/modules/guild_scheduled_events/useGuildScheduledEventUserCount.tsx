@@ -6,6 +6,8 @@ import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 99
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 12388: useChatInputFloatingWidth ===
+// === Module 12389: useChatInputFloatingWidth ===
 
-// Module 12388 (useChatInputFloatingWidth)
+// Module 12389 (useChatInputFloatingWidth)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(12091).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(12092).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
@@ -20,12 +20,11 @@ export default function useChatInputFloatingWidth(expanded) {
     num = 0;
   }
   let sharedValue;
-  let obj = expanded(collapsedWidth[2]);
   let num2 = 0;
   if (expanded) {
     num2 = 1;
   }
-  sharedValue = obj.useSharedValue(num2);
+  sharedValue = expanded(collapsedWidth[2]).useSharedValue(num2);
   const items = [expanded, num, sharedValue];
   const effect = expandedWidth.useEffect(() => {
     if (expanded) {
@@ -40,7 +39,8 @@ export default function useChatInputFloatingWidth(expanded) {
     }
     const result1 = sharedValue.set(timing.withTiming(num2, closure_3, "respect-motion-settings"));
   }, items);
-  obj = { animatedStyle: null };
+  let obj2 = { animatedStyle: null };
+  let obj = expanded(collapsedWidth[2]);
   const fn = function p() {
     const obj = { width: null };
     const diff = expandedWidth - collapsedWidth;
@@ -50,6 +50,6 @@ export default function useChatInputFloatingWidth(expanded) {
   fn.__closure = { collapsedWidth, expandedWidth, progress: sharedValue };
   fn.__workletHash = 2289574047387;
   fn.__initData = sharedValue;
-  obj.animatedStyle = expanded(collapsedWidth[2]).useAnimatedStyle(fn);
-  return obj;
+  obj2.animatedStyle = expanded(collapsedWidth[2]).useAnimatedStyle(fn);
+  return obj2;
 };

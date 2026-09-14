@@ -2,7 +2,7 @@
 
 // Module 9200 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1385 */;
 
@@ -56,7 +56,6 @@ export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    const obj = { type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id });
   });
 };

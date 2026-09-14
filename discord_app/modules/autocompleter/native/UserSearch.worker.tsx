@@ -8,17 +8,17 @@ const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
 class UserSearchWorker extends NativeEventEmitter {
   constructor() {
-    tmp = new tmp(UserSearchWorkerManager, new.target, tmp);
-    closure_0 = tmp;
+    tmp1 = new tmp(UserSearchWorkerManager, new.target, tmp);
+    closure_0 = tmp1;
     set = new Set();
-    tmp.handlers = set;
-    tmp.subscription = null;
-    tmp.handleCallback = function handleCallback(data) {
+    tmp1.handlers = set;
+    tmp1.subscription = null;
+    tmp1.handleCallback = function handleCallback(data) {
       handlers = data;
       handlers = handlers.handlers;
       const item = handlers.forEach((fn) => fn({ data }));
     };
-    return tmp;
+    return tmp1;
   }
 }
 const prototype = UserSearchWorker.prototype;
@@ -59,15 +59,15 @@ prototype["removeEventListener"] = function removeEventListener(arg0, arg1) {
 prototype["terminate"] = function terminate() {
   UserSearchWorkerManager.terminate();
 };
-tmp = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
-let closure_129_0 = tmp;
-tmp.handlers = new Set();
-tmp.subscription = null;
-tmp.handleCallback = function handleCallback(data) {
+let tmp2 = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
+let closure_129_0 = tmp2;
+tmp2.handlers = new Set();
+tmp2.subscription = null;
+tmp2.handleCallback = function handleCallback(data) {
   handlers = data;
   handlers = handlers.handlers;
   const item = handlers.forEach((fn) => fn({ data }));
 };
 const result = size.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
 
-export default tmp;
+export default tmp2;

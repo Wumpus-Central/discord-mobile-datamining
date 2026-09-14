@@ -1,8 +1,10 @@
-// === Module 13083: MaskedLinkModalActionCreators ===
+// === Module 13084: MaskedLinkModalActionCreators ===
 
-// Module 13083 (MaskedLinkModalActionCreators)
+// Module 13084 (MaskedLinkModalActionCreators)
 import useAlertStore from "useAlertStore" /* 4982 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;

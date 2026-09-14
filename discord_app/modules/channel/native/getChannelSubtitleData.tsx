@@ -1,6 +1,6 @@
-// === Module 16321: getChannelSubtitleData ===
+// === Module 16323: getChannelSubtitleData ===
 
-// Module 16321 (getChannelSubtitleData)
+// Module 16323 (getChannelSubtitleData)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
@@ -14,20 +14,19 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
     if ("embedded-activities" !== type) {
       if ("event" !== type) {
         if ("go-live" === type) {
-          let obj = { subtitle: null, type: null };
+          const obj2 = { subtitle: null, type: null };
           const intl = util.intl;
-          obj.subtitle = intl.string(util.t.Pa817q);
-          obj.type = subtitle.type;
-          return obj;
+          obj2.subtitle = intl.string(util.t.Pa817q);
+          obj2.type = subtitle.type;
+          return obj2;
         } else if ("voice" === type) {
-          obj = { subtitle: null, type: null };
+          const obj = { subtitle: null, type: null };
           ({ text: obj.subtitle, type: obj.type } = subtitle);
           return obj;
         }
       }
     }
-    obj = { subtitle: null, type: null };
     ({ name: obj3.subtitle, type: obj3.type } = subtitle);
-    return obj;
+    return { subtitle: null, type: null };
   }
 };

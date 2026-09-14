@@ -17,7 +17,6 @@ export default noop.forwardRef((onChange, arg1) => {
   const forceMode = onChange.forceMode;
   const merged = Object.assign(onChange, Object.assign({ onChange: 0, alpha2: 0, countryCode: 0, onPressCountrySelector: 0, forceMode: 0 }));
   noop = undefined;
-  let obj = noop;
   [tmp3, c4] = forceMode(noop.useState(""), 2);
   const ref = noop.useRef(null);
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
@@ -91,6 +90,7 @@ export default noop.forwardRef((onChange, arg1) => {
       return measureLayoutResult;
     }
   }), []);
+  let obj = noop;
   const tmp2 = forceMode(noop.useState(""), 2);
   const tmp6 = onChange;
   const tmp7 = onPressCountrySelector;
@@ -140,11 +140,11 @@ export default noop.forwardRef((onChange, arg1) => {
     obj.accessibilityHint = intl.string(util.t.GwAW3k);
     return obj;
   }, items2);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.ref = ref;
-  obj.onChange = callback;
-  obj.leadingText = combined;
-  obj.leadingPressableProps = memo;
-  return ref(tmp6(tmp7[6]).SplitTextInput, obj);
+  obj3.ref = ref;
+  obj3.onChange = callback;
+  obj3.leadingText = combined;
+  obj3.leadingPressableProps = memo;
+  return ref(tmp6(tmp7[6]).SplitTextInput, obj3);
 });

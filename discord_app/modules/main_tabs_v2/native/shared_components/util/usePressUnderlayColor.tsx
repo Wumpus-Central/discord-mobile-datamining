@@ -1,12 +1,12 @@
-// === Module 17096: usePressUnderlayColor ===
+// === Module 17098: usePressUnderlayColor ===
 
-// Module 17096 (usePressUnderlayColor)
+// Module 17098 (usePressUnderlayColor)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
 import shared from "shared" /* 4488 */;
 import useThemeDefault from "useTheme" /* 4571 */;
-import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17097 */;
+import ChannelEmojiConstants from "ChannelEmojiConstants" /* 17099 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
@@ -23,12 +23,13 @@ export default function usePressUnderlayColor(arr) {
   if (null != substr) {
     hexWithOpacityResult = token;
     if (arr !== closure_3) {
-      const tmp3Result = shared;
+      const tmp3Result = ColorUtils;
       let num3 = 0.08;
-      if (tmp3Result.isThemeDark(tmp2)) {
+      if (tmp3Result2.isThemeDark(tmp2)) {
         num3 = 0.12;
       }
       hexWithOpacityResult = tmp3Result.hexWithOpacity(substr, num3);
+      tmp3Result2 = shared;
     }
   }
   return hexWithOpacityResult;

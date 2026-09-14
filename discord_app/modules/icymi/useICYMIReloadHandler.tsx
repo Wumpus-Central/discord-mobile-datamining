@@ -1,6 +1,6 @@
-// === Module 16582: useICYMIReloadHandler ===
+// === Module 16584: useICYMIReloadHandler ===
 
-// Module 16582 (useICYMIReloadHandler)
+// Module 16584 (useICYMIReloadHandler)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,8 +19,8 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -33,20 +33,20 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             const ICYMIAnalytics = tmp2(8477).ICYMIAnalytics;
             let str = "NoDotShown";
             if (tmp2) {
               str = "DotShown";
             }
-            const obj1 = { variant: str, homeSessionId: "gravity_refresh" };
-            ICYMIAnalytics.trackFeedShown(obj1);
+            const obj5 = { variant: str, homeSessionId: "gravity_refresh" };
+            ICYMIAnalytics.trackFeedShown(obj5);
             v3 = 1;
             dependencyMap = 1;
-            let obj2 = { value: v3(8469).fetchDehydrated({ isReloading: true }), done: false };
-            return obj2;
+            const obj7 = { value: v3(8469).fetchDehydrated({ isReloading: true }), done: false };
+            return obj7;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -54,14 +54,13 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
-            let obj5 = v3(8469);
             v3 = 2;
             dependencyMap = 1;
-            const obj4 = { value: obj5.reloadICYMITab(), done: false };
-            return obj4;
+            const obj9 = { value: v3(8469).reloadICYMITab(), done: false };
+            return obj9;
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -69,25 +68,23 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
-            obj2 = v3(8469);
             v3 = 3;
             dependencyMap = 1;
-            const obj6 = { value: obj2.getGuildChannelScores(), done: false };
-            return obj6;
+            const obj12 = { value: v3(8469).getGuildChannelScores(), done: false };
+            return obj12;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
-          obj = v3(8469);
-          const recommendedGuilds = obj.getRecommendedGuilds();
+          const recommendedGuilds = v3(8469).getRecommendedGuilds();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

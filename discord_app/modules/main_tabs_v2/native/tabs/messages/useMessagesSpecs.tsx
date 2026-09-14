@@ -1,10 +1,10 @@
-// === Module 16121: useMessagesSpecs ===
+// === Module 16123: useMessagesSpecs ===
 
-// Module 16121 (useMessagesSpecs)
+// Module 16123 (useMessagesSpecs)
 import nativeDefault from "native" /* 576 */;
-import MessagesHeader from "MessagesHeader" /* 16122 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 16125 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16137 */;
+import MessagesHeader from "MessagesHeader" /* 16124 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16127 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16139 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,12 +19,11 @@ export default function useMessagesSpecs() {
   top = top(1611)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {
-    let obj = MessagesHeader;
-    const messagesHeaderHeight = obj.getMessagesHeaderHeight(fontScale);
+    const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
     const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
-    obj = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: DM_WIDTH, listItemHeight: messagesItemChannelSizes.height, listItemSizes: _objectWithoutProperties(messagesItemChannelSizes, closure_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
-    obj.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
-    obj.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
-    return obj;
+    const obj3 = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: DM_WIDTH, listItemHeight: messagesItemChannelSizes.height, listItemSizes: _objectWithoutProperties(messagesItemChannelSizes, closure_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
+    obj3.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
+    obj3.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
+    return obj3;
   }, items);
 };

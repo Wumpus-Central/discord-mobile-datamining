@@ -1,6 +1,6 @@
-// === Module 17292: VoicePanelMicButton ===
+// === Module 17294: VoicePanelMicButton ===
 
-// Module 17292 (VoicePanelMicButton)
+// Module 17294 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
@@ -21,6 +21,8 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsxProd = fn(21);
@@ -43,16 +45,15 @@ export const PTTButton = function PTTButton(arg0) {
   let callback1;
   let callback3;
   ({ props, wrapperSpecs } = arg0);
-  let obj = noop;
   const channelId = noop.useContext(onPress2(sharedValue[17])).channelId;
   const tmp = closure_17();
-  [tmp5, c0] = _slicedToArray(noop.useState(false), 2);
+  [tmp5, c0] = noop.useState(false);
   closure_129_0 = channelId;
   closure_129_1 = noop.useRef(null);
-  let obj1 = require("initialize");
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
   const items = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1, onPressIn];
   const items1 = [channelId];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(mute);
     if (null != channel) {
       const obj = { channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore };
@@ -87,7 +88,7 @@ export const PTTButton = function PTTButton(arg0) {
   }, items1);
   closure_130_0 = channelId;
   ({ mute, onPress } = stateFromStoresObject);
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
+  let obj2 = require("initialize");
   const items2 = [ChannelStore, callback3, VoiceStateStore, MediaEngineStore, PermissionStore, callback1];
   const items3 = [channelId];
   const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items2, () => {
@@ -108,8 +109,8 @@ export const PTTButton = function PTTButton(arg0) {
     }
     onPress2 = tmp9;
   }
-  let tmp6Result = tmp6(tmp3[18]);
-  sharedValue = tmp6Result.useSharedValue(false);
+  const obj3 = require("initialize");
+  sharedValue = require("ReanimatedRexport").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -163,26 +164,26 @@ export const PTTButton = function PTTButton(arg0) {
         const tmpResult = c0(sharedValue[18]);
       }
     };
-    let obj = { State: LegacyBaseButton.State, runOnJS: ReanimatedRexport.runOnJS, handleDragStart: callback3 };
-    fn.__closure = obj;
+    const manualActivationResult = Gesture.Pan().manualActivation(true);
+    fn.__closure = { State: LegacyBaseButton.State, runOnJS: ReanimatedRexport.runOnJS, handleDragStart: callback3 };
     fn.__workletHash = 13866422602014;
     fn.__initData = __initData2;
-    const manualActivationResult = Gesture.Pan().manualActivation(true);
+    const obj = { State: LegacyBaseButton.State, runOnJS: ReanimatedRexport.runOnJS, handleDragStart: callback3 };
     const fn2 = function t() {
       c0(sharedValue[18]).runOnJS(callback1)();
     };
-    obj = { runOnJS: ReanimatedRexport.runOnJS, handlePTTEnd: callback1 };
-    fn2.__closure = obj;
+    const onTouchesMoveResult = manualActivationResult.onTouchesMove(fn);
+    fn2.__closure = { runOnJS: ReanimatedRexport.runOnJS, handlePTTEnd: callback1 };
     fn2.__workletHash = 12941114426646;
     fn2.__initData = __initData;
-    return Gesture.Pan().manualActivation(true).onTouchesMove(fn).onFinalize(fn2);
+    return onTouchesMoveResult.onFinalize(fn2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  tmp6Result = tmp6(tmp3[23]);
-  const voicePanelButtonStyles = tmp6Result.useVoicePanelButtonStyles(wrapperSpecs);
-  obj = { gesture: memo, children: null };
+  const tmp6Result = require("ReanimatedRexport");
+  const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
+  const obj4 = { gesture: memo, children: null };
   const element = { onPressIn, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };
-  const obj3 = require("initialize");
+  const tmp6Result2 = require("VoicePanelStyles");
   const intl = tmp6(tmp3[25]).intl;
   element.accessibilityLabel = intl.string(require("util").t.Q8gkVL);
   element.style = tmp5 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
@@ -191,18 +192,18 @@ export const PTTButton = function PTTButton(arg0) {
   } else {
     color = voicePanelButtonStyles.iconFill.color;
   }
-  obj = { children: null };
+  const obj5 = { children: null };
   element.children = closure_13(require("MicrophoneIcon").MicrophoneIcon, { color, size: "lg" });
-  obj.children = closure_13(onPress2(sharedValue[24]), element);
-  const items10 = [closure_13(require("LegacyBaseButton").GestureDetector, obj), ];
-  obj1 = { style: null, variant: "text-xxs/medium", children: null };
+  obj4.children = closure_13(onPress2(sharedValue[24]), element);
+  const items10 = [closure_13(require("LegacyBaseButton").GestureDetector, obj4), ];
+  const obj6 = { style: null, variant: "text-xxs/medium", children: null };
   const items11 = [tmp.text, voicePanelButtonStyles.iconFill];
-  obj1.style = items11;
+  obj6.style = items11;
   const intl2 = tmp6(tmp3[25]).intl;
-  obj1.children = intl2.string(require("util").t.Q8gkVL);
-  items10[1] = closure_13(require("Text/Text").Text, obj1);
-  obj.children = items10;
-  return closure_15(closure_14, obj);
+  obj6.children = intl2.string(require("util").t.Q8gkVL);
+  items10[1] = closure_13(require("Text/Text").Text, obj6);
+  obj5.children = items10;
+  return closure_15(closure_14, obj5);
 };
 export const MicButton = function MicButton(arg0) {
   let mute;
@@ -254,15 +255,15 @@ export const MicButton = function MicButton(arg0) {
   const items2 = [voicePanelButtonStyles, mute, dominantMuteState];
   const memo = noop.useMemo(() => {
     if (dominantMuteState === VoiceActionUtils.DominantMuteState.SERVER_MUTE) {
-      let obj = { color: voicePanelButtonStyles.iconFillRed.color };
-      let tmp3Result = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj);
+      const obj2 = { color: voicePanelButtonStyles.iconFillRed.color };
+      let tmp3Result = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
     } else {
       if (mute) {
         let color = voicePanelButtonStyles.iconFillRed.color;
       } else {
         color = voicePanelButtonStyles.iconFill.color;
       }
-      obj = { color, muted: mute };
+      const obj = { color, muted: mute };
       tmp3Result = map1(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
     }
     return tmp3Result;

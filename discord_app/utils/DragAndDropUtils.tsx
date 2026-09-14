@@ -1,6 +1,6 @@
-// === Module 12545: DragAndDropUtils ===
+// === Module 12546: DragAndDropUtils ===
 
-// Module 12545 (DragAndDropUtils)
+// Module 12546 (DragAndDropUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 
@@ -23,10 +23,10 @@ function calculatePositionDeltas(arg0) {
       logger.warn("Object IDs in the old ordering and the new ordering are not the same.", joined, joined1);
       return [];
     } else {
-      let obj = {};
+      const obj2 = {};
       for (let num = 0; num < length; num = num + 1) {
         let idGetterResult = idGetter(oldOrdering[num]);
-        obj[idGetterResult] = existingPositionGetter(oldOrdering[num]);
+        obj2[idGetterResult] = existingPositionGetter(oldOrdering[num]);
       }
       const items = [];
       for (let num2 = 0; num2 < length; num2 = num2 + 1) {
@@ -35,9 +35,9 @@ function calculatePositionDeltas(arg0) {
         if (!ascending) {
           diff = length - 1 - num2;
         }
-        let tmp5 = obj[idGetterResult1] === diff && existingPositionGetter(newOrdering[num2]) === diff;
+        let tmp5 = obj2[idGetterResult1] === diff && existingPositionGetter(newOrdering[num2]) === diff;
         if (!tmp5) {
-          obj = { id: idGetterResult1, position: diff };
+          let obj = { id: idGetterResult1, position: diff };
           let arr = items.push(obj);
         }
       }
@@ -62,18 +62,17 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    let obj = _modDef12;
-    values = obj.values(objectArray);
+    values = _modDef12.values(objectArray);
   }
-  obj = { oldOrdering: values, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: null };
+  const obj2 = { oldOrdering: values, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: null };
   const items = [...values];
   items.splice(fromPosition, 1);
   items.splice(toPosition, 0, values[fromPosition]);
-  obj.newOrdering = items;
-  obj.idGetter = idGetter;
-  obj.existingPositionGetter = existingPositionGetter;
-  obj.ascending = ascending;
-  return calculatePositionDeltas(obj);
+  obj2.newOrdering = items;
+  obj2.idGetter = idGetter;
+  obj2.existingPositionGetter = existingPositionGetter;
+  obj2.ascending = ascending;
+  return calculatePositionDeltas(obj2);
 }
 const logger = new LoggerDefault("DragAndDropUtils");
 const size = fn(2);

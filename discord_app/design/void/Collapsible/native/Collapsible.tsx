@@ -1,42 +1,39 @@
-// === Module 14182: Collapsible ===
+// === Module 14183: Collapsible ===
 
-// Module 14182 (Collapsible)
+// Module 14183 (Collapsible)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const EXPAND_SPRING = { stiffness: 150, overshootClamping: true };
-fn(4636);
-let createStyles = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.collapsibleContent = createStyles;
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
+let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}" };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Collapsible/native/Collapsible.tsx");
 
 export default function Collapsible(isExpanded) {
   isExpanded = isExpanded.isExpanded;
+  first = undefined;
+  first1 = undefined;
   _slicedToArray = undefined;
-  let first2;
+  first2 = undefined;
+  closure_5 = undefined;
   c6 = undefined;
   ({ children, collapsibleContent, style } = isExpanded);
   const tmp = closure_9();
-  let obj = first2;
-  const tmp2 = _slicedToArray(first2.useState(false), 2);
-  const first = tmp2[0];
+  [first] = first2.useState(false);
   importDefault = tmp4;
-  const tmp5 = _slicedToArray(first2.useState(0), 2);
-  const first1 = tmp5[0];
-  _slicedToArray = tmp5[1];
-  const tmp7 = _slicedToArray(first2.useState(0), 2);
-  first2 = tmp7[0];
-  closure_5 = tmp7[1];
+  [first1, _slicedToArray] = first2.useState(0);
+  [first2, closure_5] = first2.useState(0);
   const items = [first1];
   [][0] = first2;
   const callback = first2.useCallback((nativeEvent) => {
@@ -48,7 +45,6 @@ export default function Collapsible(isExpanded) {
     let num = 0;
     const sum = first1 + num;
     c6 = sum;
-    let obj1 = first(first1[6]);
     class S {
       constructor() {
         obj = { height: null };
@@ -57,13 +53,13 @@ export default function Collapsible(isExpanded) {
         return obj;
       }
     }
-    obj = { withSpring: first(first1[7]).withSpring, totalHeight: sum, EXPAND_SPRING };
-    S.__closure = obj;
+    const obj3 = { withSpring: first(first1[7]).withSpring, totalHeight: sum, EXPAND_SPRING };
+    S.__closure = obj3;
     S.__workletHash = 1072657539267;
     S.__initData = __initData;
     const items1 = [first, tmp4];
-    const animatedStyle = obj1.useAnimatedStyle(S);
-    obj = { style, children: null };
+    const animatedStyle = first(first1[6]).useAnimatedStyle(S);
+    const obj4 = { style, children: null };
     const callback1 = obj.useCallback(() => {
       closure_1(!first);
     }, items1);
@@ -72,20 +68,21 @@ export default function Collapsible(isExpanded) {
     if (sum > 0) {
       tmp22 = animatedStyle;
     }
-    obj1 = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     items2[1] = tmp22;
-    obj1.style = items2;
-    const obj2 = { onLayout: callback, children: null };
-    const obj3 = { onPress: callback1 };
-    obj2.children = children(obj3);
-    const items3 = [c6(closure_5, obj2), ];
-    const obj4 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
-    items3[1] = c6(closure_5, obj4);
-    obj1.children = items3;
-    obj.children = closure_7(require("ReanimatedRexport").View, obj1);
-    return c6(closure_5, obj);
+    obj5.style = items2;
+    const obj6 = { onLayout: callback, children: null };
+    const obj7 = { onPress: callback1 };
+    obj6.children = children(obj7);
+    const items3 = [c6(closure_5, obj6), ];
+    const obj8 = { style: tmp.collapsibleContent, onLayout: tmp10, children: collapsibleContent };
+    items3[1] = c6(closure_5, obj8);
+    obj5.children = items3;
+    obj4.children = closure_7(require("ReanimatedRexport").View, obj5);
+    return c6(closure_5, obj4);
   } else {
     num = 0;
   }
   num = first2;
+  obj = first2;
 };

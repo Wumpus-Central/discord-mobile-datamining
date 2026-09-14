@@ -1,6 +1,6 @@
-// === Module 15613: AppIconRow ===
+// === Module 15614: AppIconRow ===
 
-// Module 15613 (AppIconRow)
+// Module 15614 (AppIconRow)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,9 +8,11 @@ import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import TableRow from "TableRow" /* 5686 */;
 import FormRadio from "FormRadio" /* 5770 */;
 import AppIconTypes from "AppIconTypes" /* 9454 */;
-import AppIconDefault from "AppIcon" /* 15610 */;
+import AppIconDefault from "AppIcon" /* 15611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -36,11 +38,9 @@ const items = [
     return intl.string(util.t.RnMLvl);
   }
 ];
-fn(4636);
-let createStyles = { icon: null };
-createStyles = { borderRadius: nativeDefault.radii.md };
-createStyles.icon = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
@@ -49,7 +49,7 @@ export default function AppIconRow(arg0) {
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
   const id = icon.id;
   if (id === AppIconTypes.PremiumAppIconIds.PIRATE) {
-    let obj = _modDef12;
+    const obj = _modDef12;
     let name = items[obj.random(obj, 0, items.length - 1)]();
   } else {
     name = icon.name;
@@ -65,27 +65,27 @@ export default function AppIconRow(arg0) {
   }
   tmp10Result = null;
   if (!icon.isHidden) {
-    obj = { icon: null, label: null, onLongPress: null, onPress: null, accessibilityRole: null, accessibilityState: null, trailing: null };
-    obj = { id, style: tmp.icon };
-    obj.icon = jsx(AppIconDefault, { id, style: tmp.icon });
-    obj.label = _slicedToArray(noop.useState(name), 1)[0];
-    obj.onLongPress = function onLongPress() {
+    const obj2 = { icon: null, label: null, onLongPress: null, onPress: null, accessibilityRole: null, accessibilityState: null, trailing: null };
+    const obj3 = { id, style: tmp.icon };
+    obj2.icon = jsx(AppIconDefault, { id, style: tmp.icon });
+    obj2.label = _slicedToArray(noop.useState(name), 1)[0];
+    obj2.onLongPress = function onLongPress() {
       return importDefault(id);
     };
-    obj.onPress = function onPress() {
+    obj2.onPress = function onPress() {
       return require(id);
     };
-    obj.accessibilityRole = accessibilityRole;
-    obj.accessibilityState = accessibilityState;
+    obj2.accessibilityRole = accessibilityRole;
+    obj2.accessibilityState = accessibilityState;
     if (!tmp7) {
       if (icon.isPremium) {
-        tmp10Result = null;
+        let tmp10Result2 = null;
       }
-      obj.trailing = tmp10Result;
-      tmp10Result = jsx(TableRow.TableRow, obj, id);
+      obj2.trailing = tmp10Result2;
+      tmp10Result = jsx(TableRow.TableRow, obj2, id);
     }
-    const obj1 = { selected: tmp7 };
-    tmp10Result = jsx(FormRadio.FormRadio, { selected: tmp7 });
+    const obj4 = { selected: tmp7 };
+    tmp10Result2 = jsx(FormRadio.FormRadio, { selected: tmp7 });
   }
   const tmp3Result = useA11yRolesNative;
 };

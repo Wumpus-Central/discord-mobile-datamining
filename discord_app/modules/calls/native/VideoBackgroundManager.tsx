@@ -4,7 +4,7 @@
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
-let prototype = function VideoBackgroundManager() {
+const prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   SelectedChannelStore = applyArgumentsResult;
   applyArgumentsResult.previousSelectedVoiceChannelId = SelectedChannelStore.getVoiceChannelId();
@@ -21,8 +21,8 @@ let prototype = function VideoBackgroundManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -3,7 +3,7 @@
 // Module 7863 (PollsUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import utils_StringUtils from "utils/StringUtils" /* 1926 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import useMessageAuthor from "useMessageAuthor" /* 4869 */;
@@ -13,6 +13,8 @@ import MessageReactionsStore from "MessageReactionsStore" /* 7864 */;
 import MessageStore from "MessageStore" /* 4857 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
@@ -52,43 +54,43 @@ function formatVoterTooltipText(arr, arg1) {
   if (1 === arr.length) {
     if (bound > 0) {
       const intl6 = util.intl;
-      let obj = { a: null, n: null };
+      const obj6 = { a: null, n: null };
       first = first[0];
-      obj.a = first;
-      obj.n = bound;
-      let formatToPlainStringResult = intl6.formatToPlainString(util.t["SV/iZn"], obj);
+      obj6.a = first;
+      obj6.n = bound;
+      let formatToPlainStringResult = intl6.formatToPlainString(util.t["SV/iZn"], obj6);
     } else {
       formatToPlainStringResult = first[0];
     }
   } else if (2 === first.length) {
     if (bound > 0) {
       const intl5 = util.intl;
-      obj = { a: null, b: null, n: null };
+      const obj11 = { a: null, b: null, n: null };
       [obj5.a, obj5.b] = first;
-      obj.n = bound;
-      let formatToPlainStringResult1 = intl5.formatToPlainString(util.t.YBnZK0, obj);
+      obj11.n = bound;
+      let formatToPlainStringResult1 = intl5.formatToPlainString(util.t.YBnZK0, obj11);
     } else {
       const intl4 = util.intl;
       [obj4.a, obj4.b] = first;
       formatToPlainStringResult1 = intl4.formatToPlainString(util.t["O5+f5c"], { a: null, b: null });
-      const obj1 = { a: null, b: null };
+      const obj12 = { a: null, b: null };
     }
   } else if (3 === first.length) {
     if (bound > 0) {
       const intl3 = util.intl;
-      const obj2 = { a: null, b: null, c: null, n: null };
+      const obj13 = { a: null, b: null, c: null, n: null };
       [obj3.a, obj3.b, obj3.c] = first;
-      obj2.n = bound;
-      let formatToPlainStringResult2 = intl3.formatToPlainString(util.t["ThXp+N"], obj2);
+      obj13.n = bound;
+      let formatToPlainStringResult2 = intl3.formatToPlainString(util.t["ThXp+N"], obj13);
     } else {
       const intl2 = util.intl;
-      const obj3 = { a: null, b: null, c: null };
       [obj2.a, obj2.b, obj2.c] = first;
-      formatToPlainStringResult2 = intl2.formatToPlainString(util.t["0UzBM3"], obj3);
+      formatToPlainStringResult2 = intl2.formatToPlainString(util.t["0UzBM3"], { a: null, b: null, c: null });
+      const obj14 = { a: null, b: null, c: null };
     }
   } else {
     const intl = util.intl;
-    obj = { n: bound };
+    const obj = { n: bound };
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
@@ -202,24 +204,24 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
           if (poll_media != null) {
             emoji = poll_media.emoji;
           }
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(poll_media.poll_media);
           let tmp3;
           if (null != emoji) {
-            obj = { id: null, name: null };
+            const obj3 = { id: null, name: null };
             ({ id: obj2.id, name } = emoji);
             if (name == null) {
               name = "";
             }
-            obj.name = name;
-            tmp3 = obj;
+            obj3.name = name;
+            tmp3 = obj3;
           }
           obj.emoji = tmp3;
-          obj = {};
+          const obj5 = {};
           const merged1 = Object.assign(poll_media);
-          obj.answer_id = index + 1;
-          obj.poll_media = obj;
-          return obj;
+          obj5.answer_id = index + 1;
+          obj5.poll_media = obj;
+          return obj5;
         });
       }
     }
@@ -257,10 +259,9 @@ export const getPollReplyPreview = function getPollReplyPreview(message) {
   return str;
 };
 export const getPollResultsReplyPreview = function getPollResultsReplyPreview(message) {
-  let obj = useMessageAuthor;
   const first = message.embeds[0];
   let str;
-  const messageAuthor = obj.getMessageAuthor(message);
+  const messageAuthor = useMessageAuthor.getMessageAuthor(message);
   if (first != null) {
     const fields = first.fields;
     if (fields != null) {
@@ -279,15 +280,13 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
     const tmpResult = utils_StringUtils;
   }
   const intl = util.intl;
-  obj = { username: messageAuthor.nick, title: truncateTextResult };
-  return intl.format(util.t.Vn97Ka, obj);
+  return intl.format(util.t.Vn97Ka, { username: messageAuthor.nick, title: truncateTextResult });
 };
-export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPreviewMobile(message2) {
-  if ("author" in message2) {
-    let obj = useMessageAuthor;
-    const first = message2.embeds[0];
+export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPreviewMobile(message5) {
+  if ("author" in message5) {
+    const first = message5.embeds[0];
     let str;
-    const messageAuthor = obj.getMessageAuthor(message2);
+    const messageAuthor = useMessageAuthor.getMessageAuthor(message5);
     if (first != null) {
       const fields = first.fields;
       if (fields != null) {
@@ -306,8 +305,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
       const tmp2Result = utils_StringUtils;
     }
     const intl = util.intl;
-    obj = { username: messageAuthor.nick, title: truncateTextResult };
-    return intl.formatToParts(util.t.Vn97Ka, obj);
+    const obj2 = { username: messageAuthor.nick, title: truncateTextResult };
+    return intl.formatToParts(util.t.Vn97Ka, obj2);
   } else {
     return null;
   }
@@ -362,17 +361,17 @@ export const formatPollResultNotificationCenterText = function formatPollResultN
   }
   if (0 === totalVotes) {
     const intl3 = util.intl;
-    let obj = { questionText };
-    let formatToPlainStringResult = intl3.formatToPlainString(util.t["8anM0l"], obj);
+    const obj2 = { questionText };
+    let formatToPlainStringResult = intl3.formatToPlainString(util.t["8anM0l"], obj2);
   } else if (null != victorAnswerId) {
     const intl2 = util.intl;
-    obj = { questionText, victorAnswerText, percentage: null };
+    const obj3 = { questionText, victorAnswerText, percentage: null };
     const _HermesInternal2 = HermesInternal;
-    obj.percentage = "" + num + "%";
-    formatToPlainStringResult = intl2.formatToPlainString(util.t["8yEgvE"], obj);
+    obj3.percentage = "" + num + "%";
+    formatToPlainStringResult = intl2.formatToPlainString(util.t["8yEgvE"], obj3);
   } else {
     const intl = util.intl;
-    obj = { questionText, percentage: null };
+    const obj = { questionText, percentage: null };
     const _HermesInternal = HermesInternal;
     obj.percentage = "" + num + "%";
     formatToPlainStringResult = intl.formatToPlainString(util.t.XVk6Zv, obj);

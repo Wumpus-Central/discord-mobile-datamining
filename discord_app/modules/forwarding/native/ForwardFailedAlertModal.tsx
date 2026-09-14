@@ -1,7 +1,7 @@
-// === Module 11831: ForwardFailedAlertModal ===
+// === Module 11832: ForwardFailedAlertModal ===
 
-// Module 11831 (ForwardFailedAlertModal)
-import ForwardModalUtils from "ForwardModalUtils" /* 11809 */;
+// Module 11832 (ForwardFailedAlertModal)
+import ForwardModalUtils from "ForwardModalUtils" /* 11810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,16 +15,14 @@ export default function ForwardFailedAlertModal(message) {
   const forwardOptions = message.forwardOptions;
   const items = [failedDestinations, message, forwardOptions];
   const callback = noop.useCallback(() => {
-    const obj = { message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions };
-    obj.openForwardModal(obj);
+    ForwardModalUtils.openForwardModal({ message, source: "retry-modal", initialSelectedDestinations: failedDestinations, forwardOptions });
   }, items);
-  let obj = { title: null, content: null, failedDestinations: null, onRetry: null };
+  const obj = { title: null, content: null, failedDestinations: null, onRetry: null };
   const intl = message(forwardOptions[4]).intl;
   obj.title = intl.string(message(forwardOptions[4]).t["/OPIaM"]);
   const intl2 = message(forwardOptions[4]).intl;
-  obj = { count: failedDestinations.length };
-  obj.content = intl2.formatToPlainString(message(forwardOptions[4]).t.cn9vFb, obj);
+  obj.content = intl2.formatToPlainString(message(forwardOptions[4]).t.cn9vFb, { count: failedDestinations.length });
   obj.failedDestinations = failedDestinations;
   obj.onRetry = callback;
-  return jsx(failedDestinations(forwardOptions[3]), { count: failedDestinations.length });
+  return jsx(failedDestinations(forwardOptions[3]), { title: null, content: null, failedDestinations: null, onRetry: null });
 };

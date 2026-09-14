@@ -1,6 +1,6 @@
-// === Module 16243: SortableChannels ===
+// === Module 16245: SortableChannels ===
 
-// Module 16243 (SortableChannels)
+// Module 16245 (SortableChannels)
 import noop from "module_19" /* 19 */;
 import apply from "module_12" /* 12 */;
 
@@ -34,9 +34,9 @@ class Row extends Component {
       if (_view != null) {
         _view.measure((arg0, arg1, arg2, frameHeight, arg4, pageY) => {
           if (closure_1_1 != null) {
-            let obj = { layout: null, rowData: null, touch: null };
-            obj = { frameHeight, pageY };
-            obj.layout = obj;
+            const obj = { layout: null, rowData: null, touch: null };
+            const obj2 = { frameHeight, pageY };
+            obj.layout = obj2;
             obj.rowData = rowData;
             obj.touch = nativeEvent.nativeEvent;
             tmp(obj);
@@ -64,21 +64,21 @@ Row.prototype["render"] = function render() {
   ({ active, renderItem, style, sortingEnabled } = props);
   let tmp3 = null;
   if (sortingEnabled) {
-    let obj = { sortHandlers: null, onLongPress: null, onPressOut: null };
-    obj = { onLongPress: self.handleLongPress, onPressOut: list.cancel };
-    obj.sortHandlers = obj;
+    const obj = { sortHandlers: null, onLongPress: null, onPressOut: null };
+    const obj2 = { onLongPress: self.handleLongPress, onPressOut: list.cancel };
+    obj.sortHandlers = obj2;
     obj.onLongPress = self.handleLongPress;
     obj.onPressOut = list.cancel;
     tmp3 = obj;
   }
-  obj = null;
+  let obj3 = null;
   const renderItemResult = renderItem(rowData.data);
   if (active) {
-    obj = { opacity: 0.2 };
+    obj3 = { opacity: 0.2 };
   }
-  const obj1 = { style: null, ref: self.setViewRef, collapsable: false, children: null };
-  const items = [obj, style];
-  obj1.style = items;
+  const obj4 = { style: null, ref: self.setViewRef, collapsable: false, children: null };
+  const items = [obj3, style];
+  obj4.style = items;
   let tmp8 = null;
   if (!isAfter) {
     tmp8 = null;
@@ -101,8 +101,8 @@ Row.prototype["render"] = function render() {
     }
   }
   items1[2] = tmp9;
-  obj1.children = items1;
-  return React5(React3, obj1);
+  obj4.children = items1;
+  return React5(React3, obj4);
 };
 const Component2 = noop.Component;
 class SortRow extends Component2 {
@@ -261,8 +261,8 @@ class SortableChannels extends Component3 {
         diff1 = num3 - 1;
       }
       if (tmp7) {
-        obj = { hoveringIndex: diff1 };
-        obj.setState(obj);
+        const obj2 = { hoveringIndex: diff1 };
+        obj.setState(obj2);
         if (onHoverChange != null) {
           onHoverChange(order[diff1]);
         }
@@ -276,16 +276,16 @@ class SortableChannels extends Component3 {
         pan.setValue({ x: 0, y: 0 });
         obj.moveY = layout.layout.pageY + layout.layout.frameHeight / 2;
         const index = layout.rowData.index;
-        obj = { active: layout, activeIndex: index, hoveringIndex: index };
-        obj.setState(obj, obj.scrollAnimation);
+        const obj2 = { active: layout, activeIndex: index, hoveringIndex: index };
+        obj.setState(obj2, obj.scrollAnimation);
         if (onRowActive != null) {
           onRowActive(layout);
         }
       }
     };
     obj.renderActiveDivider = function renderActiveDivider(arg0) {
-      const active = style.state.active;
-      const renderActiveDivider = style.props.renderActiveDivider;
+      const active = obj.state.active;
+      const renderActiveDivider = obj.props.renderActiveDivider;
       if (null == active) {
         return null;
       } else {
@@ -297,102 +297,102 @@ class SortableChannels extends Component3 {
           }
           let renderActiveDividerResult = renderActiveDivider(frameHeight, arg0, tmp5);
         } else {
-          style = { style: null };
-          style = { height: frameHeight };
-          style.style = style;
-          renderActiveDividerResult = React6(React3, style);
+          obj = { style: null };
+          const obj2 = { height: frameHeight };
+          obj.style = obj2;
+          renderActiveDividerResult = React6(React3, obj);
         }
         return renderActiveDividerResult;
       }
     };
     obj.renderSectionHeader = function renderSectionHeader(data, arg1) {
       let tmp = arg1;
-      const state = rowData.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
-      const order = rowData.props.order;
+      const order = list.props.order;
       ({ activeIndex, panResponder } = state);
       const index = order.indexOf(data.section.category.id);
       let tmp4 = !tmp;
       if (!tmp) {
         let index1;
         if (active != null) {
-          rowData = active.rowData;
+          const rowData = active.rowData;
           if (rowData != null) {
             index1 = rowData.index;
           }
         }
         tmp4 = index1 === index;
       }
-      let str = rowData.props.order[hoveringIndex];
+      let str = list.props.order[hoveringIndex];
       if (str == null) {
         str = "";
       }
-      rowData = { data, index, isRow: false };
-      const itemLayoutProps = rowData.getItemLayoutProps(rowData.index);
-      rowData = {};
-      const merged = Object.assign(rowData.props);
-      const renderSectionHeader = rowData.props.renderSectionHeader;
-      rowData.renderItem = renderSectionHeader.bind(null, data);
+      const obj2 = { data, index, isRow: false };
+      const itemLayoutProps = list.getItemLayoutProps(obj2.index);
+      const obj3 = {};
+      const merged = Object.assign(list.props);
+      const renderSectionHeader = list.props.renderSectionHeader;
+      obj3.renderItem = renderSectionHeader.bind(null, data);
       let renderActiveDividerResult = null;
       if (str === data.section.key) {
-        renderActiveDividerResult = rowData.renderActiveDivider(str);
+        renderActiveDividerResult = list.renderActiveDivider(str);
       }
-      rowData.activeDivider = renderActiveDividerResult;
-      rowData.key = data.section.key;
+      obj3.activeDivider = renderActiveDividerResult;
+      obj3.key = data.section.key;
       if (!tmp) {
         tmp = tmp4;
       }
-      rowData.active = tmp;
-      rowData.list = rowData;
-      rowData.sortingEnabled = rowData.props.sortingEnabled;
-      rowData.hovering = str === data.section.key;
-      rowData.panResponder = panResponder;
-      rowData.rowData = rowData;
-      rowData.onRowActive = rowData.handleRowActive;
-      rowData.isAfter = hoveringIndex > activeIndex;
+      obj3.active = tmp;
+      obj3.list = list;
+      obj3.sortingEnabled = list.props.sortingEnabled;
+      obj3.hovering = str === data.section.key;
+      obj3.panResponder = panResponder;
+      obj3.rowData = obj2;
+      obj3.onRowActive = list.handleRowActive;
+      obj3.isAfter = hoveringIndex > activeIndex;
       return createElement(arg1 ? SortRow : Row, {});
     };
     obj.renderItem = function renderItem(data, arg1) {
       let tmp = arg1;
-      const state = rowData.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
       let tmp3 = !tmp;
       ({ activeIndex, panResponder } = state);
       if (!tmp) {
         let index;
         if (active != null) {
-          rowData = active.rowData;
+          const rowData = active.rowData;
           if (rowData != null) {
             index = rowData.index;
           }
         }
         tmp3 = index === data.item.index;
       }
-      let str = rowData.props.order[hoveringIndex];
+      let str = list.props.order[hoveringIndex];
       if (str == null) {
         str = "";
       }
-      rowData = { data, index: data.item.index, isRow: true };
-      const itemLayoutProps = rowData.getItemLayoutProps(rowData.index);
-      rowData = {};
-      const merged = Object.assign(rowData.props);
+      const obj2 = { data, index: data.item.index, isRow: true };
+      const itemLayoutProps = list.getItemLayoutProps(obj2.index);
+      const obj3 = {};
+      const merged = Object.assign(list.props);
       let renderActiveDividerResult = null;
       if (str === data.item.key) {
-        renderActiveDividerResult = rowData.renderActiveDivider(str);
+        renderActiveDividerResult = list.renderActiveDivider(str);
       }
-      rowData.activeDivider = renderActiveDividerResult;
-      rowData.key = data.item.key;
+      obj3.activeDivider = renderActiveDividerResult;
+      obj3.key = data.item.key;
       if (!tmp) {
         tmp = tmp3;
       }
-      rowData.active = tmp;
-      rowData.list = rowData;
-      rowData.sortingEnabled = rowData.props.sortingEnabled;
-      rowData.hovering = str === data.item.key;
-      rowData.panResponder = panResponder;
-      rowData.rowData = rowData;
-      rowData.onRowActive = rowData.handleRowActive;
-      rowData.isAfter = hoveringIndex > activeIndex;
+      obj3.active = tmp;
+      obj3.list = list;
+      obj3.sortingEnabled = list.props.sortingEnabled;
+      obj3.hovering = str === data.item.key;
+      obj3.panResponder = panResponder;
+      obj3.rowData = obj2;
+      obj3.onRowActive = list.handleRowActive;
+      obj3.isAfter = hoveringIndex > activeIndex;
       return createElement(arg1 ? SortRow : Row, {});
     };
     obj.getItemLayout = function getItemLayout(arg0, index) {
@@ -450,8 +450,8 @@ class SortableChannels extends Component3 {
             }
           }
           if (typeof id === "string") {
-            obj = { y: num, height: tmp };
-            obj.layoutMap[id] = obj;
+            let obj2 = { y: num, height: tmp };
+            obj.layoutMap[id] = obj2;
           }
           return obj;
         }
@@ -510,10 +510,9 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
   const self = this;
   closure_1 = arg0;
   closure_2 = point;
-  let obj = { dx: valueXY.x, dy: valueXY.y };
-  const items = [null, obj];
+  const items = [null, { dx: valueXY.x, dy: valueXY.y }];
   closure_0 = RN.event(items, { useNativeDriver: false });
-  obj = {
+  return hasOwnProperty.create({
     onStartShouldSetPanResponder() {
       return true;
     },
@@ -563,7 +562,6 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       self.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
     },
     onPanResponderRelease() {
-      let obj = self;
       ({ active, hoveringIndex } = self.state);
       const onRowMoved = self.props.onRowMoved;
       self.moved = false;
@@ -573,9 +571,9 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       }
       if (null == active) {
         if (hoveringIndex >= 0) {
-          obj.setState({ hoveringIndex: -1 });
+          self.setState({ hoveringIndex: -1 });
         }
-        obj.moveY = 0;
+        self.moveY = 0;
       } else {
         const index = active.rowData.index;
         let tmp2 = hoveringIndex;
@@ -583,27 +581,26 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
           tmp2 = index;
         }
         if (tmp2 === index) {
-          return obj.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
+          return self.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
         } else {
-          obj = { row: active.rowData, from: index - 1, to: tmp2 - 1 };
+          const obj2 = { row: active.rowData, from: index - 1, to: tmp2 - 1 };
           if (onRowMoved != null) {
-            onRowMoved(obj);
+            onRowMoved(obj2);
           }
-          obj.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
+          self.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
           const _Math = Math;
-          const bound = Math.max(0, obj.scrollContainerHeight - obj.listLayout.height + active.layout.frameHeight);
-          if (obj.scrollValue > bound) {
-            obj = { y: bound };
-            obj.scrollTo(obj);
+          const bound = Math.max(0, self.scrollContainerHeight - self.listLayout.height + active.layout.frameHeight);
+          if (self.scrollValue > bound) {
+            const obj3 = { y: bound };
+            self.scrollTo(obj3);
           }
-          obj.state.active = null;
-          obj.state.hoveringIndex = -1;
-          obj.moveY = 0;
+          self.state.active = null;
+          self.state.hoveringIndex = -1;
+          self.moveY = 0;
         }
       }
     }
-  };
-  return hasOwnProperty.create(obj);
+  });
 };
 prototype["renderActive"] = function renderActive() {
   const self = this;
@@ -621,8 +618,8 @@ prototype["renderActive"] = function renderActive() {
 };
 prototype["render"] = function render() {
   const self = this;
-  let obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
-  obj = { enableEmptySections: true };
+  const obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
+  const obj3 = { enableEmptySections: true };
   ({ active, panResponder } = this.state);
   const merged = Object.assign(this.props);
   const merged1 = Object.assign(panResponder.panHandlers);
@@ -631,15 +628,15 @@ prototype["render"] = function render() {
   if (tmp7) {
     tmp7 = false !== this.props.scrollEnabled;
   }
-  obj.scrollEnabled = tmp7;
+  obj3.scrollEnabled = tmp7;
   ({ renderItem: obj2.renderItem, renderSectionHeader: obj2.renderSectionHeader } = self);
-  obj.stickySectionHeadersEnabled = false;
-  obj.initialNumToRender = 20;
-  obj.keyExtractor = function keyExtractor(key) {
+  obj3.stickySectionHeadersEnabled = false;
+  obj3.initialNumToRender = 20;
+  obj3.keyExtractor = function keyExtractor(key) {
     return key.key;
   };
-  obj.getItemLayout = self.getItemLayout;
-  const items = [React6(timestampProducer, obj), self.renderActive()];
+  obj3.getItemLayout = self.getItemLayout;
+  const items = [React6(timestampProducer, obj3), self.renderActive()];
   obj.children = items;
   return React5(React3, obj);
 };

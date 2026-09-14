@@ -1,6 +1,6 @@
-// === Module 15622: SupportUtils ===
+// === Module 15623: SupportUtils ===
 
-// Module 15622 (SupportUtils)
+// Module 15623 (SupportUtils)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -15,8 +15,8 @@ let closure_6 = async function _emailSupport() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,36 +29,37 @@ let closure_6 = async function _emailSupport() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const tmp10 = LinkingDefault;
           closure_1 = tmp10;
           const openURL = tmp10.openURL;
-          let obj1 = HelpdeskUtilsDefault;
           c2 = 1;
           c3 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.getSubmitRequestURL((function getSessionInfo() {
-            constants = closure_1_2(dependencyMap[2]).getConstants();
-            let str2 = "N/A";
-            if (str.trim().length > 0) {
-              str2 = constants.Manifest;
-            }
-            const obj = closure_1_2(dependencyMap[2]);
-            str = constants.Manifest;
-            const systemVersion = openURL(dependencyMap[3]).getSystemVersion();
-            const obj2 = openURL(dependencyMap[3]);
-            return "App version: " + constants.Version + "\n  Manifest: " + str2 + "\n  iOS version: " + systemVersion + "\n  Device: " + openURL(dependencyMap[3]).getDeviceInfo() + "\n  Language: " + locale.locale;
-          })());
-          return obj1;
+          const obj5 = {
+            value: HelpdeskUtilsDefault.getSubmitRequestURL((function getSessionInfo() {
+                      constants = closure_1_2(dependencyMap[2]).getConstants();
+                      let str2 = "N/A";
+                      if (str.trim().length > 0) {
+                        str2 = constants.Manifest;
+                      }
+                      const obj = closure_1_2(dependencyMap[2]);
+                      str = constants.Manifest;
+                      const systemVersion = openURL(dependencyMap[3]).getSystemVersion();
+                      const obj2 = openURL(dependencyMap[3]);
+                      return "App version: " + constants.Version + "\n  Manifest: " + str2 + "\n  iOS version: " + systemVersion + "\n  Device: " + openURL(dependencyMap[3]).getDeviceInfo() + "\n  Language: " + locale.locale;
+                    })()),
+            done: false
+          };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         openURL(value);

@@ -14,10 +14,10 @@ export default function ConnectionCard(arg0) {
   ({ connection, guildId, location: _location } = arg0);
   const connection_type = connection.connection_type;
   if (OnboardingConnectionType.APPLICATION === connection_type) {
-    let obj = { connection, guildId, location: _location };
+    const obj2 = { connection, guildId, location: _location };
     return jsx(ApplicationConnectionCardDefault, { connection, guildId, location: _location });
   } else if (tmp.PROVIDER_CONNECTED_ACCOUNT === connection_type) {
-    obj = { connection, guildId, location: _location };
+    const obj = { connection, guildId, location: _location };
     return jsx(ProviderConnectionCardDefault, { connection, guildId, location: _location });
   } else {
     const connection_type2 = connection.connection_type;

@@ -5,13 +5,13 @@ import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13717 */;
-import ConnectionStateDefault from "ConnectionState" /* 13734 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13755 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13766 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13718 */;
+import ConnectionStateDefault from "ConnectionState" /* 13735 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13756 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13767 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 5359 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -35,8 +35,8 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -49,8 +49,8 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -107,14 +107,14 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
                   }
                   c3 = 1;
                   c4 = 1;
-                  const obj1 = { value: lastCrash, done: false };
-                  return obj1;
+                  const obj4 = { value: lastCrash, done: false };
+                  return obj4;
                 }
               }
               channel = closure_130_8.getChannel(closure_129_1);
               if (null != channel) {
-                const obj2 = { guildId: channel.getGuildId(), channelId: closure_129_1 };
-                closure_129_0 = obj2;
+                const obj6 = { guildId: channel.getGuildId(), channelId: closure_129_1 };
+                closure_129_0 = obj6;
                 closure_130_0(closure_130_3[17]).muteCustomJoinSound(closure_129_1);
                 const obj5 = closure_130_0(closure_130_3[17]);
               }
@@ -140,14 +140,14 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
                 tmp11 = closure_129_1;
               }
               const result = closure_130_10.setLastSessionVoiceChannelId(tmp11);
-              obj = closure_130_1(closure_130_3[18]);
-              const voiceChannel = obj.selectVoiceChannel(null);
+              const voiceChannel = closure_130_1(closure_130_3[18]).selectVoiceChannel(null);
+              const obj = closure_130_1(closure_130_3[18]);
             }
           }
         }
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj7 = { value, done: true };
+        return obj7;
       } catch (tmp48) {
         c4 = tmp;
         throw tmp48;
@@ -172,7 +172,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1074);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-fn(13717).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(13718).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -493,9 +493,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(13717).socket;
+          const socket = closure_0(13718).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(13717).socket;
+            const socket2 = closure_0(13718).socket;
             socket2.streamDelete(item);
           }
         });

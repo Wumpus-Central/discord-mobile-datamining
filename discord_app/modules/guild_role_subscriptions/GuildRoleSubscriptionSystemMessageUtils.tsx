@@ -39,21 +39,21 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   }
   const t = util.t;
   if (!tmp2) {
-    let obj = { content: flag ? t.mPTTdv : t.mYjFFx, formatParams: null };
-    obj = { username: usernameOnClickHandler.username, usernameHook: usernameOnClickHandler, guildName: null, handleGuildNameClick: null, tierName: null, months: null };
+    const obj = { content: flag ? t.mPTTdv : t.mYjFFx, formatParams: null };
+    const obj2 = { username: usernameOnClickHandler.username, usernameHook: usernameOnClickHandler, guildName: null, handleGuildNameClick: null, tierName: null, months: null };
     let name;
     if (guild != null) {
       name = guild.name;
     }
-    obj.guildName = name;
-    obj.handleGuildNameClick = roleSubscriptionOnClickHandler;
+    obj2.guildName = name;
+    obj2.handleGuildNameClick = roleSubscriptionOnClickHandler;
     let tier_name;
     if (roleSubscriptionData != null) {
       tier_name = roleSubscriptionData.tier_name;
     }
-    obj.tierName = tier_name;
-    obj.months = num;
-    obj.formatParams = obj;
+    obj2.tierName = tier_name;
+    obj2.months = num;
+    obj.formatParams = obj2;
     return obj;
   }
 }
@@ -159,17 +159,17 @@ export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = functi
   return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
 };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guildId, channelId, messageId, roleSubscriptionListingId) {
-  const obj = { guild_id: guildId, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  const obj2 = { guild_id: guildId, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  obj.user_id = id;
-  obj.channel_id = channelId;
-  obj.message_id = messageId;
-  obj.role_subscription_listing_id = roleSubscriptionListingId;
-  obj.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj);
+  obj2.user_id = id;
+  obj2.channel_id = channelId;
+  obj2.message_id = messageId;
+  obj2.role_subscription_listing_id = roleSubscriptionListingId;
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj2);
 };
 export const getRoleSubscriptionPurchaseSystemMessageEventProperties = function getRoleSubscriptionPurchaseSystemMessageEventProperties(guild_id, author) {
   const obj = { guild_id: guild_id.guild_id, sender: null, target_user: null, channel_id: null, message_id: null };

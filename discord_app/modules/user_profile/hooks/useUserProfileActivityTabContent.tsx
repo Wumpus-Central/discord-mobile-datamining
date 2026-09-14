@@ -1,9 +1,9 @@
-// === Module 13196: useUserProfileActivityTabContent ===
+// === Module 13197: useUserProfileActivityTabContent ===
 
-// Module 13196 (useUserProfileActivityTabContent)
+// Module 13197 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 13197 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 13198 */;
 import noop from "module_19" /* 19 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8918 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
@@ -41,10 +41,10 @@ export default function useUserProfileActivityTabContent(userId) {
   voiceActivity = tmp3.voiceActivity;
   const items1 = [recent];
   const memo = voiceActivity.useMemo(() => recent.filter(ContentInventoryTypes.isRecentActivityEntry), items1);
-  let obj = userId(voiceChannel[12]);
   const items2 = [closure_4];
   closure_4 = tmp5;
-  const stateFromStores = obj.useStateFromStores(items2, () => ContentInventoryOutboxStore.isFetchingUserOutbox(userId));
+  const stateFromStores = userId(voiceChannel[12]).useStateFromStores(items2, () => ContentInventoryOutboxStore.isFetchingUserOutbox(userId));
+  const obj = userId(voiceChannel[12]);
   const items3 = [SelfPresenceStore, PresenceStore];
   const stateFromStores1 = userId(voiceChannel[12]).useStateFromStores(items3, () => {
     if (closure_4) {
@@ -116,6 +116,5 @@ export default function useUserProfileActivityTabContent(userId) {
     }
     tmp10 = tmp11;
   }
-  obj = { recent: memo, isFetching: stateFromStores, isCurrentUser: tmp5, hasCurrentActivity: tmp10, hasRecentActivity: memo.length > 0 };
-  return obj;
+  return { recent: memo, isFetching: stateFromStores, isCurrentUser: userId === currentUserId, hasCurrentActivity: tmp10, hasRecentActivity: memo.length > 0 };
 };

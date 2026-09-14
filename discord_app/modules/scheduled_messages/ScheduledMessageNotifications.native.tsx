@@ -12,24 +12,27 @@ import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7947 */;
 import openScheduledMessagesLimitUpsellDefault from "openScheduledMessagesLimitUpsell" /* 7951 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const AbortCodes = Constants.AbortCodes;
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageNotifications.native.tsx");
 
 export const showScheduleMessageSuccessToast = function showScheduleMessageSuccessToast(arg0) {
-  let obj = { key: "SCHEDULED_MESSAGE_CREATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_CREATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
   const intl = util.intl;
-  obj = { timestamp: new Date(arg0).valueOf() };
-  obj.content = intl.formatToPlainString(util.t["CvHu/j"], obj);
-  obj.IconComponent = ClockIcon.ClockIcon;
-  obj.open(obj);
+  const obj3 = { timestamp: null };
+  const obj = ToastActionCreatorsDefault;
+  obj3.timestamp = new Date(arg0).valueOf();
+  obj2.content = intl.formatToPlainString(util.t["CvHu/j"], obj3);
+  obj2.IconComponent = ClockIcon.ClockIcon;
+  obj.open(obj2);
 };
 export const showScheduleMessageFailureToast = function showScheduleMessageFailureToast(error) {
-  let obj = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
   const intl = util.intl;
-  obj = { error };
-  obj.content = intl.formatToPlainString(util.t.PsJmUe, obj);
-  obj.IconComponent = CircleXIcon.CircleXIcon;
-  obj.open(obj);
+  obj2.content = intl.formatToPlainString(util.t.PsJmUe, { error });
+  obj2.IconComponent = CircleXIcon.CircleXIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const handleScheduleMessageError = function handleScheduleMessageError(body) {
   body = body.body;
@@ -40,25 +43,25 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
     const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
     if (scheduledMessagesLimit.isUpgradable) {
-      let tmp11Result = openScheduledMessagesLimitUpsellDefault;
       const items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_ROADBLOCK];
-      tmp11Result(items);
+      openScheduledMessagesLimitUpsellDefault(items);
+      const tmp11Result = openScheduledMessagesLimitUpsellDefault;
     } else {
-      tmp11Result = AlertActionCreatorsDefault;
-      let obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
       const intl2 = util.intl;
-      obj.title = intl2.string(util.t.RLdUVh);
+      obj2.title = intl2.string(util.t.RLdUVh);
       const intl3 = util.intl;
-      obj = { max: tmp10 };
-      obj.body = intl3.formatToPlainString(util.t["3AMt7r"], obj);
+      const obj3 = { max: tmp10 };
+      obj2.body = intl3.formatToPlainString(util.t["3AMt7r"], obj3);
       const intl4 = util.intl;
-      obj.confirmText = intl4.string(util.t.BddRzS);
+      obj2.confirmText = intl4.string(util.t.BddRzS);
       const intl5 = util.intl;
-      obj.cancelText = intl5.string(util.t.lv6bDa);
-      obj.onCancel = function onCancel() {
+      obj2.cancelText = intl5.string(util.t.lv6bDa);
+      obj2.onCancel = function onCancel() {
         return require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[10], paths.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
       };
-      tmp11Result.show(obj);
+      AlertActionCreatorsDefault.show(obj2);
+      const tmp11Result2 = AlertActionCreatorsDefault;
     }
   } else {
     const body2 = body.body;
@@ -69,57 +72,53 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
     if (message == null) {
       message = body.message;
     }
-    obj = ToastActionCreatorsDefault;
-    const obj1 = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+    const obj5 = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
     const intl = util.intl;
-    const obj2 = { error: message };
-    obj1.content = intl.formatToPlainString(util.t.PsJmUe, obj2);
-    obj1.IconComponent = CircleXIcon.CircleXIcon;
-    obj.open(obj1);
+    const obj6 = { error: message };
+    obj5.content = intl.formatToPlainString(util.t.PsJmUe, obj6);
+    obj5.IconComponent = CircleXIcon.CircleXIcon;
+    ToastActionCreatorsDefault.open(obj5);
   }
 };
 export const showScheduledMessageEditSuccessToast = function showScheduledMessageEditSuccessToast() {
-  const obj = { key: "SCHEDULED_MESSAGE_UPDATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_UPDATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
   const intl = util.intl;
-  obj.content = intl.string(util.t.MXsMRk);
-  obj.IconComponent = ClockIcon.ClockIcon;
-  obj.open(obj);
+  obj2.content = intl.string(util.t.MXsMRk);
+  obj2.IconComponent = ClockIcon.ClockIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const showScheduledMessageEditFailureToast = function showScheduledMessageEditFailureToast(message) {
-  let obj = { key: "SCHEDULED_MESSAGE_UPDATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_UPDATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
   const intl = util.intl;
-  obj = { error: message };
-  obj.content = intl.formatToPlainString(util.t.slM6In, obj);
-  obj.IconComponent = CircleXIcon.CircleXIcon;
-  obj.open(obj);
+  obj2.content = intl.formatToPlainString(util.t.slM6In, { error: message });
+  obj2.IconComponent = CircleXIcon.CircleXIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const showScheduleMessageDeleteSuccessToast = function showScheduleMessageDeleteSuccessToast() {
-  const obj = { key: "SCHEDULED_MESSAGE_DELETE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_DELETE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
   const intl = util.intl;
-  obj.content = intl.string(util.t["JF/LWn"]);
-  obj.IconComponent = ClockIcon.ClockIcon;
-  obj.open(obj);
+  obj2.content = intl.string(util.t["JF/LWn"]);
+  obj2.IconComponent = ClockIcon.ClockIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const showScheduleMessageDeleteFailureToast = function showScheduleMessageDeleteFailureToast(message) {
-  let obj = { key: "SCHEDULED_MESSAGE_DELETE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_DELETE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
   const intl = util.intl;
-  obj = { error: message };
-  obj.content = intl.formatToPlainString(util.t.sUvyW3, obj);
-  obj.IconComponent = CircleXIcon.CircleXIcon;
-  obj.open(obj);
+  obj2.content = intl.formatToPlainString(util.t.sUvyW3, { error: message });
+  obj2.IconComponent = CircleXIcon.CircleXIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const showScheduleMessageSentNowSuccessToast = function showScheduleMessageSentNowSuccessToast() {
-  const obj = { key: "SCHEDULED_MESSAGE_SEND_NOW_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_SEND_NOW_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
   const intl = util.intl;
-  obj.content = intl.string(util.t["BHCm/d"]);
-  obj.IconComponent = ClockIcon.ClockIcon;
-  obj.open(obj);
+  obj2.content = intl.string(util.t["BHCm/d"]);
+  obj2.IconComponent = ClockIcon.ClockIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };
 export const showScheduleMessageSentNowFailureToast = function showScheduleMessageSentNowFailureToast(message) {
-  let obj = { key: "SCHEDULED_MESSAGE_SEND_NOW_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  const obj2 = { key: "SCHEDULED_MESSAGE_SEND_NOW_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
   const intl = util.intl;
-  obj = { error: message };
-  obj.content = intl.formatToPlainString(util.t["uy++C+"], obj);
-  obj.IconComponent = CircleXIcon.CircleXIcon;
-  obj.open(obj);
+  obj2.content = intl.formatToPlainString(util.t["uy++C+"], { error: message });
+  obj2.IconComponent = CircleXIcon.CircleXIcon;
+  ToastActionCreatorsDefault.open(obj2);
 };

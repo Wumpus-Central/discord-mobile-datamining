@@ -1,6 +1,6 @@
-// === Module 11065: useShowUnlinkChannelAlert ===
+// === Module 11066: useShowUnlinkChannelAlert ===
 
-// Module 11065 (useShowUnlinkChannelAlert)
+// Module 11066 (useShowUnlinkChannelAlert)
 import util from "util" /* 1114 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
@@ -19,12 +19,12 @@ export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
     yield v2(tmp23[2]).removeLinkedLobby(tmp3);
     if (1 === tmp7) {
       c3 = 0;
-      const obj2 = { title: null, body: null };
+      const obj7 = { title: null, body: null };
       const intl = tmp3(tmp23[4]).intl;
-      obj2.title = intl.string(tmp3(tmp23[4]).t.vFzPFj);
+      obj7.title = intl.string(tmp3(tmp23[4]).t.vFzPFj);
       const intl2 = tmp3(tmp23[4]).intl;
-      obj2.body = intl2.string(tmp3(tmp23[4]).t["6D5WVg"]);
-      v2(tmp23[3]).show(obj2);
+      obj7.body = intl2.string(tmp3(tmp23[4]).t["6D5WVg"]);
+      v2(tmp23[3]).show(obj7);
       c4 = 3;
       v2(tmp23[3]);
     } else if (arg0 === 1) {
@@ -40,18 +40,17 @@ export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
   }), items);
   const items1 = [applicationName, onConfirm];
   return noop.useCallback(() => {
-    let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+    const obj2 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.JmUENg);
+    obj2.title = intl.string(util.t.JmUENg);
     const intl2 = util.intl;
-    obj = { applicationName };
-    obj.body = intl2.format(util.t["6l2osp"], obj);
+    obj2.body = intl2.format(util.t["6l2osp"], { applicationName });
     const intl3 = util.intl;
-    obj.cancelText = intl3.string(util.t["ETE/oC"]);
+    obj2.cancelText = intl3.string(util.t["ETE/oC"]);
     const intl4 = util.intl;
-    obj.confirmText = intl4.string(util.t["cY+Oob"]);
-    obj.onConfirm = onConfirm;
-    obj.confirmColor = common_AlertDefault.Colors.RED;
-    obj.show(obj);
+    obj2.confirmText = intl4.string(util.t["cY+Oob"]);
+    obj2.onConfirm = onConfirm;
+    obj2.confirmColor = common_AlertDefault.Colors.RED;
+    actions_AlertActionCreatorsDefault.show(obj2);
   }, items1);
 };

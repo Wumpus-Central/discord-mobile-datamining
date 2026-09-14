@@ -33,10 +33,11 @@ import _mod3328 from "module_3328" /* 3328 */;
 import _mod3329 from "module_3329" /* 3329 */;
 import _mod3330 from "module_3330" /* 3330 */;
 import _mod3331 from "module_3331" /* 3331 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3301);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/premium/logitech_3pp/Logitech3PP.messages.js");
 
 export default messagesProxy;

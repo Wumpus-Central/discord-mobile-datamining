@@ -1,9 +1,9 @@
-// === Module 15815: DevToolsInAppNotificationTestingScreen ===
+// === Module 15817: DevToolsInAppNotificationTestingScreen ===
 
-// Module 15815 (DevToolsInAppNotificationTestingScreen)
+// Module 15817 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import StickersTypes from "StickersTypes" /* 5349 */;
@@ -18,6 +18,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function getSelectedGuildChannel() {
   const channelId = SelectedChannelStore.getChannelId();
@@ -26,8 +28,7 @@ function getSelectedGuildChannel() {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    let obj1 = ToastActionCreatorsDefault;
-    let obj = {
+    const obj3 = {
       key: "DEV_IN_APP_NOTIF_TEST_ERROR",
       icon() {
           return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -35,8 +36,8 @@ function getSelectedGuildChannel() {
       content: "Select a channel first",
       toastDurationMs: 4000
     };
-    obj1.open(obj);
-    obj = null;
+    ToastActionCreatorsDefault.open(obj3);
+    let obj = null;
   } else {
     const guildId = channel.getGuildId();
     obj = { channel, guild: null };
@@ -49,7 +50,7 @@ function getSelectedGuildChannel() {
   if (null == obj) {
     return null;
   } else if (null == obj.guild) {
-    obj = {
+    const obj6 = {
       key: "DEV_IN_APP_NOTIF_TEST_ERROR",
       icon() {
           return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -57,10 +58,9 @@ function getSelectedGuildChannel() {
       content: "Select a guild channel first",
       toastDurationMs: 4000
     };
-    ToastActionCreatorsDefault.open(obj);
-    obj1 = null;
+    ToastActionCreatorsDefault.open(obj6);
   } else {
-    obj1 = { channel: null, guild: null };
+    const obj9 = { channel: null, guild: null };
     ({ channel: obj4.channel, guild: obj4.guild } = obj);
   }
 }
@@ -74,8 +74,7 @@ function buildTestMessageData(arg0) {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    let obj1 = ToastActionCreatorsDefault;
-    let obj = {
+    const obj3 = {
       key: "DEV_IN_APP_NOTIF_TEST_ERROR",
       icon() {
           return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -83,8 +82,8 @@ function buildTestMessageData(arg0) {
       content: "Select a channel first",
       toastDurationMs: 4000
     };
-    obj1.open(obj);
-    obj = null;
+    ToastActionCreatorsDefault.open(obj3);
+    let obj = null;
   } else {
     const guildId = channel.getGuildId();
     obj = { channel, guild: null };
@@ -96,8 +95,7 @@ function buildTestMessageData(arg0) {
   }
   let currentUser = UserStore.getCurrentUser();
   if (null == currentUser) {
-    let obj3 = ToastActionCreatorsDefault;
-    obj = {
+    const obj5 = {
       key: "DEV_IN_APP_NOTIF_TEST_ERROR",
       icon() {
           return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -105,75 +103,74 @@ function buildTestMessageData(arg0) {
       content: "Current user is null",
       toastDurationMs: 4000
     };
-    obj3.open(obj);
+    ToastActionCreatorsDefault.open(obj5);
     currentUser = null;
   }
   if (null != obj) {
     if (null != currentUser) {
       if ("media-only" === arg0) {
-        obj1 = { content: "", attachments: [], stickerItems: null };
+        const obj6 = { content: "", attachments: [], stickerItems: null };
         name = StickersStore.getStickerById(id);
         if (null != name) {
-          const obj2 = { id: null, format_type: null, name: null };
+          const obj7 = { id: null, format_type: null, name: null };
           ({ id: obj12.id, format_type: obj12.format_type, name } = name);
-          obj2.name = name;
-          obj3 = obj2;
+          obj7.name = name;
+          let obj10 = obj7;
         } else {
-          obj3 = { id, format_type: StickersTypes.StickerFormat.APNG, name: "Cheer" };
+          obj10 = { id, format_type: StickersTypes.StickerFormat.APNG, name: "Cheer" };
         }
-        items1 = [obj3];
-        obj1.stickerItems = items1;
+        items1 = [obj10];
+        obj6.stickerItems = items1;
       } else {
         if ("text-and-media" === arg0) {
-          const obj4 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", attachments: null, stickerItems: null };
+          const obj11 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", attachments: null, stickerItems: null };
           const size = { id: null, url: null, proxy_url: null, filename: "og_img_discord_home.png", size: 54697, width: 1200, height: 630, content_type: "image/png" };
-          let obj7 = SnowflakeUtilsDefault;
-          let obj8 = SnowflakeUtilsDefault;
+          const obj8 = SnowflakeUtilsDefault;
           const _Date = Date;
-          size.id = obj7.cast(obj8.fromTimestamp(Date.now()));
+          size.id = obj8.cast(SnowflakeUtilsDefault.fromTimestamp(Date.now()));
           size.url = httpscdndiscordappcomassetsog_img_discord_homepng;
           size.proxy_url = httpscdndiscordappcomassetsog_img_discord_homepng;
           const items2 = [size];
-          obj4.attachments = items2;
-          obj4.stickerItems = [];
-          let tmp14 = obj4;
+          obj11.attachments = items2;
+          obj11.stickerItems = [];
+          let tmp14 = obj11;
         } else if ("text-only" === arg0) {
-          const obj5 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", attachments: [], stickerItems: [] };
-          tmp14 = obj5;
+          const obj14 = { content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", attachments: [], stickerItems: [] };
+          tmp14 = obj14;
         }
-        const obj6 = { attachments: null, stickerItems: null, reactions: null };
+        const obj17 = { attachments: null, stickerItems: null, reactions: null };
         ({ attachments: obj13.attachments, stickerItems: obj13.stickerItems } = tmp14);
-        obj6.reactions = items;
-        let attachments = obj6.attachments;
+        obj17.reactions = items;
+        let attachments = obj17.attachments;
         if (undefined === attachments) {
           attachments = [];
         }
-        let stickerItems = obj6.stickerItems;
+        let stickerItems = obj17.stickerItems;
         if (undefined === stickerItems) {
           stickerItems = [];
         }
-        let reactions = obj6.reactions;
+        let reactions = obj17.reactions;
         if (undefined === reactions) {
           reactions = [];
         }
-        obj7 = { id: null, channel_id: null, author: null, content: null, attachments: null, sticker_items: null, reactions: null, timestamp: null };
+        const obj27 = { id: null, channel_id: null, author: null, content: null, attachments: null, sticker_items: null, reactions: null, timestamp: null };
         const _Date2 = Date;
-        obj7.id = SnowflakeUtilsDefault.fromTimestamp(Date.now());
-        obj7.channel_id = obj.channel.id;
-        obj7.author = currentUser;
-        obj7.content = tmp14.content;
-        obj7.attachments = attachments;
-        obj7.sticker_items = stickerItems;
-        obj7.reactions = reactions;
+        obj27.id = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+        obj27.channel_id = obj.channel.id;
+        obj27.author = currentUser;
+        obj27.content = tmp14.content;
+        obj27.attachments = attachments;
+        obj27.sticker_items = stickerItems;
+        obj27.reactions = reactions;
         const _Date3 = Date;
         const date = new Date();
-        obj7.timestamp = date;
-        const tmp35 = new MessageRecord(obj7);
-        obj8 = { channel: null, guild: null, user: null, message: null };
+        obj27.timestamp = date;
+        const tmp35 = new MessageRecord(obj27);
+        const obj28 = { channel: null, guild: null, user: null, message: null };
         ({ channel: obj16.channel, guild: obj16.guild } = obj);
-        obj8.user = currentUser;
-        obj8.message = tmp35;
-        return obj8;
+        obj28.user = currentUser;
+        obj28.message = tmp35;
+        return obj28;
       }
     }
   }
@@ -190,16 +187,16 @@ function buildReactionNotification(arg0) {
     return null;
   } else {
     ({ channel, message } = tmp3);
-    let obj = { type: InAppNotificationTypes.REACTION, channel, guild: null, user: null, message: null, parentChannel: null, reaction: null };
+    const obj5 = { type: InAppNotificationTypes.REACTION, channel, guild: null, user: null, message: null, parentChannel: null, reaction: null };
     ({ guild: obj4.guild, user: obj4.user } = tmp3);
-    obj.message = message;
-    channel = undefined;
+    obj5.message = message;
+    let channel1;
     if (null != channel.parent_id) {
-      channel = ChannelStore.getChannel(channel.parent_id);
+      channel1 = ChannelStore.getChannel(channel.parent_id);
     }
-    obj.parentChannel = channel;
-    obj.reaction = reaction;
-    obj = {
+    obj5.parentChannel = channel1;
+    obj5.reaction = reaction;
+    const obj = {
       key: message.id,
       duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.REACTION),
       onDismiss() {
@@ -209,7 +206,7 @@ function buildReactionNotification(arg0) {
     };
     obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
     const merged = Object.assign(obj);
-    return obj;
+    return obj5;
   }
 }
 const ScrollView = fn(17).ScrollView;
@@ -218,12 +215,11 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, content: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.content = { padding: nativeDefault.space.PX_16 };
-let closure_16 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.content = { padding: nativeDefault.space.PX_16 };
+let closure_16 = createStyles.createStyles(obj2);
 let c17 = "781324722394103808";
 let c18 = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
 const reaction = { emoji: { id: null, name: "\u{1F389}", animated: false }, me: false, me_burst: false, count: 1, count_details: { normal: 1 }, burst_count: 0 };
@@ -239,14 +235,14 @@ let items2 = [
         return null;
       } else {
         ({ channel, message } = tmp);
-        let obj = { type: InAppNotificationTypes.MESSAGE, channel, guild: tmp.guild, parentChannel: null, message: null, mentionCount: 1 };
-        channel = undefined;
+        const obj4 = { type: InAppNotificationTypes.MESSAGE, channel, guild: tmp.guild, parentChannel: null, message: null, mentionCount: 1 };
+        let channel1;
         if (null != channel.parent_id) {
-          channel = ChannelStore.getChannel(channel.parent_id);
+          channel1 = ChannelStore.getChannel(channel.parent_id);
         }
-        obj.parentChannel = channel;
-        obj.message = message;
-        obj = {
+        obj4.parentChannel = channel1;
+        obj4.message = message;
+        const obj = {
           key: message.id,
           duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE),
           onDismiss() {
@@ -256,7 +252,7 @@ let items2 = [
         };
         obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
         const merged = Object.assign(obj);
-        return obj;
+        return obj4;
       }
     }
   },
@@ -277,15 +273,15 @@ let items2 = [
         return null;
       } else {
         ({ channel, message } = tmp);
-        let obj = { type: InAppNotificationTypes.MESSAGE_REMINDER, channel, author: tmp.user, savedMessage: null };
-        obj = { message, saveData: null };
-        obj = { channelId: channel.id, messageId: message.id, savedAt: null };
+        const obj = { type: InAppNotificationTypes.MESSAGE_REMINDER, channel, author: tmp.user, savedMessage: null };
+        const obj2 = { message, saveData: null };
+        const obj3 = { channelId: channel.id, messageId: message.id, savedAt: null };
         const _Date = Date;
         const date = new Date();
-        obj.savedAt = date;
-        obj.saveData = obj;
-        obj.savedMessage = obj;
-        const obj1 = {
+        obj3.savedAt = date;
+        obj2.saveData = obj3;
+        obj.savedMessage = obj2;
+        const obj4 = {
           key: message.id,
           duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE_REMINDER),
           onDismiss() {
@@ -293,8 +289,8 @@ let items2 = [
             },
           inAppNotificationId: null
         };
-        obj1.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-        const merged = Object.assign(obj1);
+        obj4.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+        const merged = Object.assign(obj4);
         return obj;
       }
     }
@@ -328,8 +324,7 @@ const items3 = [
         channel = ChannelStore.getChannel(channelId);
       }
       if (null == channel) {
-        let obj1 = ToastActionCreatorsDefault;
-        let obj = {
+        const obj3 = {
           key: "DEV_IN_APP_NOTIF_TEST_ERROR",
           icon() {
               return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -337,8 +332,8 @@ const items3 = [
           content: "Select a channel first",
           toastDurationMs: 4000
         };
-        obj1.open(obj);
-        obj = null;
+        ToastActionCreatorsDefault.open(obj3);
+        let obj = null;
       } else {
         const guildId = channel.getGuildId();
         obj = { channel, guild: null };
@@ -354,17 +349,15 @@ const items3 = [
         const obj4 = SnowflakeUtilsDefault;
         const _Date = Date;
         const castResult = obj4.cast(SnowflakeUtilsDefault.fromTimestamp(Date.now()));
-        obj = { type: InAppNotificationTypes.MESSAGE_FAILED_TO_SEND, channelId: null, messageId: null };
-        obj.channelId = obj.channel.id;
-        obj.messageId = castResult;
-        obj1 = { key: castResult, duration: null, onDismiss: null, inAppNotificationId: null };
-        obj1.duration = InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE_FAILED_TO_SEND);
-        obj1.onDismiss = function onDismiss() {
+        const obj6 = { type: InAppNotificationTypes.MESSAGE_FAILED_TO_SEND, channelId: obj.channel.id, messageId: castResult };
+        const obj7 = { key: castResult, duration: null, onDismiss: null, inAppNotificationId: null };
+        obj7.duration = InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE_FAILED_TO_SEND);
+        obj7.onDismiss = function onDismiss() {
           return InAppNotificationActionCreatorsDefault.clearNotification();
         };
-        obj1.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-        const merged = Object.assign(obj1);
-        return obj;
+        obj7.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+        const merged = Object.assign(obj7);
+        return obj6;
       }
     }
   },
@@ -376,7 +369,7 @@ const items3 = [
       const tmp = getSelectedGuildChannel();
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        let obj = {
+        const obj2 = {
           key: "DEV_IN_APP_NOTIF_TEST_ERROR",
           icon() {
               return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -384,32 +377,32 @@ const items3 = [
           content: "Current user is null",
           toastDurationMs: 4000
         };
-        obj.open(obj);
+        ToastActionCreatorsDefault.open(obj2);
         currentUser = null;
       }
       if (null != tmp) {
         if (null != currentUser) {
           const channel = tmp.channel;
-          obj = { id: null, type: null, name: "Test Thread", guild_id: null, parent_id: null, ownerId: null };
+          const obj3 = { id: null, type: null, name: "Test Thread", guild_id: null, parent_id: null, ownerId: null };
           const obj4 = SnowflakeUtilsDefault;
           const tmp6 = channel.type === constants.GUILD_MEDIA ? constants.MEDIA_THREAD : constants.PUBLIC_THREAD;
           const _Date = Date;
-          obj.id = obj4.cast(SnowflakeUtilsDefault.fromTimestamp(Date.now()));
-          obj.type = tmp6;
-          obj.guild_id = tmp.guild.id;
-          obj.parent_id = channel.id;
-          obj.ownerId = currentUser.id;
-          const tmp11 = createChannelRecord(obj);
-          const obj1 = { type: InAppNotificationTypes.FORUM_THREAD_CREATED, thread: tmp11, threadCreator: currentUser, parentChannel: null, guild: null };
+          obj3.id = obj4.cast(SnowflakeUtilsDefault.fromTimestamp(Date.now()));
+          obj3.type = tmp6;
+          obj3.guild_id = tmp.guild.id;
+          obj3.parent_id = channel.id;
+          obj3.ownerId = currentUser.id;
+          const tmp11 = createChannelRecord(obj3);
+          const obj7 = { type: InAppNotificationTypes.FORUM_THREAD_CREATED, thread: tmp11, threadCreator: currentUser, parentChannel: null, guild: null };
           ({ channel: obj6.parentChannel, guild: obj6.guild } = tmp);
-          const obj2 = { key: tmp11.id, duration: null, onDismiss: null, inAppNotificationId: null };
-          obj2.duration = InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.FORUM_THREAD_CREATED);
-          obj2.onDismiss = function onDismiss() {
+          const obj13 = { key: tmp11.id, duration: null, onDismiss: null, inAppNotificationId: null };
+          obj13.duration = InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.FORUM_THREAD_CREATED);
+          obj13.onDismiss = function onDismiss() {
             return InAppNotificationActionCreatorsDefault.clearNotification();
           };
-          obj2.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-          const merged = Object.assign(obj2);
-          return obj1;
+          obj13.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+          const merged = Object.assign(obj13);
+          return obj7;
         }
       }
       return null;
@@ -420,8 +413,7 @@ const items3 = [
     label: "Bug Reporter",
     subLabel: "Enqueues notification.",
     build: function buildBugReporterNotification() {
-      let obj = { type: InAppNotificationTypes.BUG_REPORTER, image: null };
-      obj = {
+      const obj2 = {
         key: "dev-tools-bug-reporter-test",
         duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.BUG_REPORTER),
         onDismiss() {
@@ -429,8 +421,9 @@ const items3 = [
         },
         inAppNotificationId: null
       };
-      obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      const merged = Object.assign(obj);
+      const obj = { type: InAppNotificationTypes.BUG_REPORTER, image: null };
+      obj2.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+      const merged = Object.assign(obj2);
       return obj;
     }
   },
@@ -442,9 +435,9 @@ const items3 = [
       const tmp = getSelectedGuildChannel();
       let tmp2 = null;
       if (null != tmp) {
-        let obj = { type: InAppNotificationTypes.ALERT, channel: null, guild: null };
+        const obj = { type: InAppNotificationTypes.ALERT, channel: null, guild: null };
         ({ channel: obj.channel, guild: obj.guild } = tmp);
-        obj = {
+        const obj2 = {
           key: tmp.guild.id,
           duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.ALERT),
           onDismiss() {
@@ -452,8 +445,8 @@ const items3 = [
             },
           inAppNotificationId: null
         };
-        obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-        const merged = Object.assign(obj);
+        obj2.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+        const merged = Object.assign(obj2);
         tmp2 = obj;
       }
       return tmp2;
@@ -466,7 +459,7 @@ const items3 = [
     build: function buildMessageRequestNotification() {
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        let obj = {
+        const obj2 = {
           key: "DEV_IN_APP_NOTIF_TEST_ERROR",
           icon() {
               return closure_1_14(require("WarningIcon").WarningIcon, {});
@@ -474,14 +467,14 @@ const items3 = [
           content: "Current user is null",
           toastDurationMs: 4000
         };
-        obj.open(obj);
+        ToastActionCreatorsDefault.open(obj2);
         currentUser = null;
       }
       let tmp5 = null;
       if (null != currentUser) {
-        obj = { type: InAppNotificationTypes.MESSAGE_REQUEST, author: currentUser, numMutualGuilds: 3 };
+        const obj3 = { type: InAppNotificationTypes.MESSAGE_REQUEST, author: currentUser, numMutualGuilds: 3 };
         const _HermesInternal = HermesInternal;
-        const obj1 = {
+        const obj4 = {
           key: "dev-tools-message-request-" + currentUser.id,
           duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE_REQUEST),
           onDismiss() {
@@ -489,9 +482,9 @@ const items3 = [
             },
           inAppNotificationId: null
         };
-        obj1.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-        const merged = Object.assign(obj1);
-        tmp5 = obj;
+        obj4.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+        const merged = Object.assign(obj4);
+        tmp5 = obj3;
       }
       return tmp5;
     }
@@ -501,8 +494,7 @@ const items3 = [
     label: "Restricted Hours Warning",
     subLabel: "Enqueues notification.",
     build: function buildRestrictedHoursWarningNotification() {
-      let obj = { type: InAppNotificationTypes.RESTRICTED_HOURS_WARNING, title: "Restricted Hours Warning", subtitle: "Test restricted hours warning." };
-      obj = {
+      const obj2 = {
         key: "dev-tools-restricted-hours-warning",
         duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.RESTRICTED_HOURS_WARNING),
         onDismiss() {
@@ -510,8 +502,9 @@ const items3 = [
         },
         inAppNotificationId: null
       };
-      obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      const merged = Object.assign(obj);
+      const obj = { type: InAppNotificationTypes.RESTRICTED_HOURS_WARNING, title: "Restricted Hours Warning", subtitle: "Test restricted hours warning." };
+      obj2.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+      const merged = Object.assign(obj2);
       return obj;
     }
   },
@@ -520,8 +513,7 @@ const items3 = [
     label: "Restricted Schedule Updated",
     subLabel: "Enqueues notification.",
     build: function buildRestrictedScheduleUpdatedNotification() {
-      let obj = { type: InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED, title: "Restricted Schedule Updated", subtitle: "Test restricted schedule update." };
-      obj = {
+      const obj2 = {
         key: "dev-tools-restricted-schedule-updated",
         duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED),
         onDismiss() {
@@ -529,8 +521,9 @@ const items3 = [
         },
         inAppNotificationId: null
       };
-      obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      const merged = Object.assign(obj);
+      const obj = { type: InAppNotificationTypes.RESTRICTED_SCHEDULE_UPDATED, title: "Restricted Schedule Updated", subtitle: "Test restricted schedule update." };
+      obj2.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+      const merged = Object.assign(obj2);
       return obj;
     }
   }
@@ -549,47 +542,45 @@ export default function DevToolsInAppNotificationTestingScreen() {
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];
   obj.contentContainerStyle = items;
-  obj = { size: nativeDefault.space.PX_16 };
+  const tmp2 = useSafeAreaInsetsDefault();
   items1 = [
-    closure_14(require("native").Spacer, obj),
+    closure_14(require("native").Spacer, { size: nativeDefault.space.PX_16 }),
     closure_25.map((title) => {
-      let obj = { children: null };
-      obj = { title: title.title, description: "Enqueues notification using the currently selected channel.", hasIcons: true, children: null };
+      const obj = { children: null };
+      const obj2 = { title: title.title, description: "Enqueues notification using the currently selected channel.", hasIcons: true, children: null };
       const options = title.options;
-      obj.children = options.map((label) => {
+      obj2.children = options.map((label) => {
         closure_0 = label;
         return closure_1_14(closure_1_0(5686).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(15670).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(15672).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
           trailing: closure_1_14(closure_1_0(5693).TableRowArrow, {})
         }, label.label);
       });
-      items = [closure_2_14(TableRowGroup.TableRowGroup, obj), ];
-      obj = { size: nativeDefault.space.PX_16 };
-      items[1] = closure_2_14(native.Spacer, obj);
+      items = [closure_2_14(TableRowGroup.TableRowGroup, obj2), closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 })];
       obj.children = items;
       return __initData(noop.Fragment, obj, title.title);
     }),
 
   ];
-  obj = {
+  let obj2 = { size: nativeDefault.space.PX_16 };
+  items1[2] = closure_14(require("TableRowGroup").TableRowGroup, {
     title: "Other Notification Types",
     hasIcons: true,
     children: items3.map((label) => closure_1_14(label(5686).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(15670).BeakerIcon, {}),
+      icon: closure_1_14(label(15672).BeakerIcon, {}),
       onPress() {
         return label(label);
       },
       trailing: closure_1_14(label(5693).TableRowArrow, {})
     }, label.label))
-  };
-  items1[2] = closure_14(require("TableRowGroup").TableRowGroup, obj);
+  });
   obj.children = items1;
   return closure_15(ScrollView, obj);
 };

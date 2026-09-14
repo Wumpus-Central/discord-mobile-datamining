@@ -1,6 +1,6 @@
-// === Module 12397: ChatFloatingNavButton ===
+// === Module 12398: ChatFloatingNavButton ===
 
-// Module 12397 (ChatFloatingNavButton)
+// Module 12398 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
@@ -11,13 +11,13 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { pill: null, icon: null };
+const createStyles = fn(4636);
+let obj2 = { pill: null, icon: null };
 let size = { height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
-createStyles.pill = size;
+obj2.pill = size;
 const size1 = { width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE, height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE };
-createStyles.icon = size1;
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.icon = size1;
+let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ChatFloatingNavButtonTsx1(){const{withSpring,interpolateColor,pressed,bgColor,pressedBgColor,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[bgColor,pressedBgColor]),ON_PRESS_SPRING,'animate-always')};}" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
@@ -28,12 +28,12 @@ export default function ChatFloatingNavButton(arg0) {
   let token1;
   ({ accessibilityLabel, icon, onPress } = arg0);
   const tmp = closure_7();
+  sharedValue = sharedValue(token1[5]).useSharedValue(0);
   let obj = sharedValue(token1[5]);
-  sharedValue = obj.useSharedValue(0);
-  let obj1 = sharedValue(token1[6]);
-  token = obj1.useToken(token(token1[4]).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+  token = sharedValue(token1[6]).useToken(token(token1[4]).colors.MOBILE_FLOATINGBAR_BACKGROUND);
   let obj2 = sharedValue(token1[6]);
-  token1 = obj2.useToken(token(token1[4]).colors.BACKGROUND_BASE_LOWEST);
+  token1 = sharedValue(token1[6]).useToken(token(token1[4]).colors.BACKGROUND_BASE_LOWEST);
+  let obj3 = sharedValue(token1[6]);
   const token2 = sharedValue(token1[6]).useToken(token(token1[4]).colors.CHAT_INPUT_ICON_DEFAULT_TINT);
   const obj4 = sharedValue(token1[6]);
   class C {
@@ -49,17 +49,17 @@ export default function ChatFloatingNavButton(arg0) {
       return obj;
     }
   }
-  obj = { withSpring: sharedValue(token1[7]).withSpring, interpolateColor: sharedValue(token1[5]).interpolateColor, pressed: sharedValue, bgColor: token, pressedBgColor: token1, ON_PRESS_SPRING: sharedValue(token1[8]).ON_PRESS_SPRING };
-  C.__closure = obj;
+  const obj5 = sharedValue(token1[5]);
+  C.__closure = { withSpring: sharedValue(token1[7]).withSpring, interpolateColor: sharedValue(token1[5]).interpolateColor, pressed: sharedValue, bgColor: token, pressedBgColor: token1, ON_PRESS_SPRING: sharedValue(token1[8]).ON_PRESS_SPRING };
   C.__workletHash = 9363515218556;
   C.__initData = __initData;
   let items = [sharedValue];
-  const animatedStyle = sharedValue(token1[5]).useAnimatedStyle(C);
+  const animatedStyle = obj5.useAnimatedStyle(C);
   const items1 = [sharedValue];
   const callback = noop.useCallback(() => {
     const result = sharedValue.set(1);
   }, items);
-  obj = {
+  const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel,
     onPress,
@@ -69,14 +69,14 @@ export default function ChatFloatingNavButton(arg0) {
     }, items1),
     children: null
   };
-  obj1 = { style: null, children: null };
+  const obj8 = { style: null, children: null };
   const items2 = [tmp.pill, animatedStyle];
-  obj1.style = items2;
-  obj2 = { source: icon, style: null };
+  obj8.style = items2;
+  const obj9 = { source: icon, style: null };
   const items3 = [tmp.icon, { tintColor: token2 }];
-  obj2.style = items3;
-  obj1.children = <closure_4 source={icon} style={null} />;
-  obj.children = jsx(token(token1[5]).View, { style: null, children: null });
+  obj9.style = items3;
+  obj8.children = <closure_4 source={icon} style={null} />;
+  obj7.children = jsx(token(token1[5]).View, { style: null, children: null });
   return <closure_5 accessibilityRole="button" accessibilityLabel={accessibilityLabel} onPress={onPress} onPressIn={callback} onPressOut={noop.useCallback(() => {
     const result = sharedValue.set(0);
   }, items1)}>{null}</closure_5>;

@@ -1,6 +1,6 @@
-// === Module 15700: DevToolsDataStorageScreen ===
+// === Module 15702: DevToolsDataStorageScreen ===
 
-// Module 15700 (DevToolsDataStorageScreen)
+// Module 15702 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Link from "Link" /* 1484 */;
@@ -18,10 +18,8 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  let obj = { header: null, children: null };
-  obj = { title: store.getName() };
-  obj.header = jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() });
-  obj = {
+  const obj = { header: jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj3 = {
     hasIcons: false,
     children: jsx(store(7302).ActionSheetRow, {
       variant: "danger",
@@ -47,29 +45,15 @@ function DevToolsPersistedStoresActionSheet(store) {
       }
     })
   });
-  return jsx(store(7300).ActionSheet, {
-    hasIcons: false,
-    children: jsx(store(7302).ActionSheetRow, {
-      variant: "danger",
-      label: "Clear persisted store",
-      subLabel: "App restart required to re-init the cleared store",
-      onPress() {
-        store.clear();
-        ToastActionCreatorsDefault.open({ key: "DevToolsPersistedStoresActionSheet", content: "Store cleared from persisted storage" });
-        close();
-      }
-    })
-  });
+  return jsx(store(7300).ActionSheet, { header: jsx(store(7252).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 }
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { container: null, sectionHeader: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
-obj.container = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
-obj.sectionHeader = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, sectionHeader: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
+obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(() => jsx(TableRow.TableRow, {
   label: "Disable Database",
@@ -84,20 +68,19 @@ let closure_10 = noop.memo(() => jsx(TableRow.TableRow, {
   }
 }));
 let closure_11 = noop.memo(() => {
-  let obj = initialize;
   const items = [DatabaseManagerDefault, AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => DatabaseManagerDefault.database(id.getId()));
+  const stateFromStores = initialize.useStateFromStores(items, () => DatabaseManagerDefault.database(id.getId()));
   let str = "No active database.";
   if (null != stateFromStores) {
     str = stateFromStores.name;
   }
-  obj = { label: str, start: true, end: true, subLabel: null };
+  const obj2 = { label: str, start: true, end: true, subLabel: null };
   let combined;
   if (null != stateFromStores) {
     const _HermesInternal = HermesInternal;
     combined = "Handle: " + stateFromStores.handle;
   }
-  obj.subLabel = combined;
+  obj2.subLabel = combined;
   return jsx(TableRow.TableRow, { label: str, start: true, end: true, subLabel: null });
 });
 let closure_12 = noop.memo(() => jsx(TableRow.TableRow, {
@@ -108,15 +91,7 @@ let closure_12 = noop.memo(() => jsx(TableRow.TableRow, {
   }
 }));
 let closure_13 = noop.memo(() => {
-  let obj = Link;
-  const navigation = obj.useNavigation();
-  obj = {
-    label: "View Cache Stats",
-    end: true,
-    onPress() {
-      navigation.navigate("cacheStats");
-    }
-  };
+  const navigation = Link.useNavigation();
   return jsx(TableRow.TableRow, {
     label: "View Cache Stats",
     end: true,
@@ -165,10 +140,8 @@ export default function DevToolsDataStorageScreen() {
     });
     return obj;
   }, []);
-  const tmp6 = _slicedToArray(noop.useState(() => callback("")), 2);
-  const first = tmp6[0];
+  [first, _slicedToArray] = noop.useState(() => callback(""));
   persistedStores = first.persistedStores;
-  _slicedToArray = tmp6[1];
   let items = [persistedStores, callback];
   const items1 = [tmp];
   const callback1 = noop.useCallback((arg0, arg1) => {
@@ -191,57 +164,48 @@ export default function DevToolsDataStorageScreen() {
       return tmp14;
     } else if (constants.PERSISTED_STORES === arg0) {
       if (0 === arg1) {
-        let obj = { label: null, start: true };
-        obj = {
+        const obj3 = { label: null, start: true };
+        const obj4 = {
           size: "md",
           onChange(arg0) {
                 return closure_1_3(callback(arg0));
               }
         };
-        obj.label = jsx(closure_0(persistedStores[18]).SearchField, {
+        obj3.label = jsx(closure_0(persistedStores[18]).SearchField, {
           size: "md",
           onChange(arg0) {
                 return closure_1_3(callback(arg0));
               }
         });
-        return jsx(closure_0(persistedStores[8]).TableRow, {
-          size: "md",
-          onChange(arg0) {
-                return closure_1_3(callback(arg0));
-              }
-        });
+        return jsx(closure_0(persistedStores[8]).TableRow, { label: null, start: true });
       } else {
         if (1 === arg1) {
           if (0 === persistedStores.length) {
             return jsx(closure_0(persistedStores[8]).TableRow, { label: "No results found.", end: true });
           }
         }
-        obj = {
+        const obj = {
           label: persistedStores[arg1 - 1].getName(),
           end: arg1 === persistedStores.length,
           onPress() {
-                let obj = { default: DevToolsPersistedStoresActionSheet };
-                obj = {
+                ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: DevToolsPersistedStoresActionSheet }), "DevToolsPersistedStoresActionSheet", {
                   store: persistedStores[closure_0 - 1],
                   close() {
                     return closure_1_1(closure_1_2[19]).hideActionSheet("DevToolsPersistedStoresActionSheet");
                   }
-                };
-                obj.openLazy(Promise.resolve(obj), "DevToolsPersistedStoresActionSheet", obj);
+                });
               }
         };
         return jsx(closure_0(persistedStores[8]).TableRow, {
           label: persistedStores[arg1 - 1].getName(),
           end: arg1 === persistedStores.length,
           onPress() {
-                let obj = { default: DevToolsPersistedStoresActionSheet };
-                obj = {
+                ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: DevToolsPersistedStoresActionSheet }), "DevToolsPersistedStoresActionSheet", {
                   store: persistedStores[closure_0 - 1],
                   close() {
                     return closure_1_1(closure_1_2[19]).hideActionSheet("DevToolsPersistedStoresActionSheet");
                   }
-                };
-                obj.openLazy(Promise.resolve(obj), "DevToolsPersistedStoresActionSheet", obj);
+                });
               }
         });
       }
@@ -269,6 +233,6 @@ export default function DevToolsDataStorageScreen() {
   obj.itemSize = tmp2;
   obj.sectionHeaderSize = tmp3;
   obj.placeholderConfig = tmp4;
-  obj = { style: tmp.container, children: jsx(callback(persistedStores[21]), { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true }) };
+  const tmp10 = callback(persistedStores[21]);
   return <View style={tmp.container}>{jsx(callback(persistedStores[21]), { sections: first.sections, renderItem: callback1, renderSectionHeader: callback2, insetEnd: null, itemSize: null, sectionHeaderSize: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true })}</View>;
 };

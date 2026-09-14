@@ -1,11 +1,11 @@
-// === Module 14725: EditNameplateSection ===
+// === Module 14726: EditNameplateSection ===
 
-// Module 14725 (EditNameplateSection)
+// Module 14726 (EditNameplateSection)
 import utils from "utils" /* 1886 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13300 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13301 */;
-import useNameplateSections from "useNameplateSections" /* 14724 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13301 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13302 */;
+import useNameplateSections from "useNameplateSections" /* 14725 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,47 +13,43 @@ const View = fn(17).View;
 const isNameplateRecord = fn(1887).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let obj = { row: null, rowSpacer: null, nameplate: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13300).GUTTER_SIZE };
-obj.row = obj;
-const createStyles = { height: fn(13300).GUTTER_SIZE };
-obj.rowSpacer = createStyles;
+const createStyles = fn(4636);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13301).GUTTER_SIZE }, rowSpacer: null, nameplate: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13301).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13301).GUTTER_SIZE };
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {
   ({ items, selectedSkuId: require, setSelectedNameplate } = arg0);
   ({ guildId: dependencyMap, size: noop } = arg0);
   const tmp = closure_9();
-  items = [setSelectedNameplate];
+  const items1 = [setSelectedNameplate];
   const onPress = noop.useCallback(() => {
     setSelectedNameplate(null);
-  }, items);
+  }, items1);
   let obj = { children: null };
-  obj = { style: tmp.row, children: null };
-  const items1 = [...items, null, null];
-  const substr = items1.slice(0, useCollectibleListLayout.ROW_SIZE);
-  obj.children = substr.map((nameplate, index) => {
+  let obj2 = { style: tmp.row, children: null };
+  const items2 = [...items, null, null];
+  const substr = items2.slice(0, useCollectibleListLayout.ROW_SIZE);
+  obj2.children = substr.map((nameplate, index) => {
     if (nameplate === useNameplateSections.NONE_ITEM) {
-      let obj = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+      const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
     } else if (nameplate === useNameplateSections.SHOP_ITEM) {
-      obj = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
-      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
+      const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_NAMEPLATE_SHEET };
+      return timestampProducer(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
     } else if (isNameplateRecord(nameplate)) {
-      const obj1 = { nameplate, isSelected: closure_1_0 === nameplate.skuId, setSelectedNameplate, size: width };
-      return timestampProducer(memoResult1, obj1, nameplate.skuId);
+      const obj4 = { nameplate, isSelected: closure_1_0 === nameplate.skuId, setSelectedNameplate, size: width };
+      return timestampProducer(memoResult1, obj4, nameplate.skuId);
     } else {
-      obj = { style: null };
+      const obj = { style: null };
       const size = { height: width, width };
       obj.style = size;
       return timestampProducer(View, obj, index);
     }
   });
-  const items2 = [closure_6(onPress, obj), ];
-  obj = { style: tmp.rowSpacer };
-  items2[1] = closure_6(onPress, obj);
-  obj.children = items2;
+  const items3 = [closure_6(onPress, obj2), closure_6(onPress, { style: tmp.rowSpacer })];
+  obj.children = items3;
   return closure_8(closure_7, obj);
 });
 memoResult.displayName = "EditNameplateRow";
@@ -67,12 +63,12 @@ const memoResult1 = noop.memo((nameplate) => {
   const callback = noop.useCallback(() => {
     setSelectedNameplate(nameplate);
   }, items1);
-  let obj = { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: null };
-  obj = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
+  const obj = { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: null };
+  const obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
-  obj.style = items2;
-  obj.children = closure_6(setSelectedNameplate(8945), obj);
-  return closure_6(nameplate(13301).EditCollectiblesListItemProduct, obj);
+  obj2.style = items2;
+  obj.children = closure_6(setSelectedNameplate(8945), obj2);
+  return closure_6(nameplate(13302).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

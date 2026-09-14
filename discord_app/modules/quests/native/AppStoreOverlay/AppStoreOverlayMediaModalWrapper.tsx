@@ -1,6 +1,6 @@
-// === Module 11643: AppStoreOverlayMediaModalWrapper ===
+// === Module 11644: AppStoreOverlayMediaModalWrapper ===
 
-// Module 11643 (AppStoreOverlayMediaModalWrapper)
+// Module 11644 (AppStoreOverlayMediaModalWrapper)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8406 */;
 import MediaModalDefault from "MediaModal" /* 8407 */;
@@ -26,17 +26,17 @@ export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
     ModalActionCreatorsDefault.popWithKey(MEDIA_MODAL_KEY);
   }, items);
   if (ActionSheetStore.isOpen()) {
-    let obj = {};
-    let tmp5Result = MediaModalSheetWrapperDefault;
+    const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.onCloseCallback = onCloseCallback;
-    let tmp4Result = <tmp5Result />;
+    obj2.onCloseCallback = onCloseCallback;
+    let tmp4Result = jsx(MediaModalSheetWrapperDefault, {});
+    const tmp5Result = MediaModalSheetWrapperDefault;
   } else {
-    obj = {};
-    tmp5Result = MediaModalDefault;
+    const obj = {};
     const merged2 = Object.assign(merged);
     obj.onClose = callback;
-    tmp4Result = <tmp5Result />;
+    tmp4Result = jsx(MediaModalDefault, {});
+    const tmp5Result2 = MediaModalDefault;
   }
   return tmp4Result;
 };

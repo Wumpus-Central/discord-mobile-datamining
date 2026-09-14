@@ -2,7 +2,7 @@
 
 // Module 7219 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7220 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -39,8 +39,8 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -53,8 +53,8 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             let tmp7 = null;
             if (null != closure_0) {
@@ -64,14 +64,14 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
                   if (closure_0 == tmp7) {
                     closure_2 = closure_2_7;
                   }
-                  const obj1 = {};
+                  const obj4 = {};
                   tmp7 = closure_2;
-                  obj1[closure_2] = body;
-                  let obj2 = obj1;
+                  obj4[closure_2] = body;
+                  let obj5 = obj4;
                 } else {
-                  obj2 = {};
+                  obj5 = {};
                 }
-                saveUserGuildSettingsBulk(obj2);
+                saveUserGuildSettingsBulk(obj5);
                 c4 = 2;
                 c3 = 1;
               }
@@ -80,8 +80,8 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
             const request = { url: closure_2_5.USER_GUILD_SETTINGS(closure_2_7), body, rejectWithError: false };
             c4 = 1;
             c3 = 1;
-            const obj3 = { value: HTTP.patch(request), done: false };
-            return obj3;
+            const obj6 = { value: HTTP.patch(request), done: false };
+            return obj6;
           }
         } else {
           if (1 === tmp4) {
@@ -90,15 +90,15 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj7 = { value, done: true };
+              return obj7;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c3 = 3;
@@ -132,8 +132,8 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -146,8 +146,8 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const _clearTimeout = clearTimeout;
             clearTimeout(closure_2_9);
@@ -213,10 +213,10 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
                   if (null == guilds[channel.guild_id].channel_overrides) {
                     guilds[channel.guild_id].channel_overrides = {};
                   }
-                  let obj1 = {};
+                  let obj4 = {};
                   let merged = Object.assign(guilds[channel.guild_id].channel_overrides[channel.id]);
-                  obj1.collapsed = channel.id in collapsedCategories;
-                  guilds[channel.guild_id].channel_overrides[channel.id] = obj1;
+                  obj4.collapsed = channel.id in collapsedCategories;
+                  guilds[channel.guild_id].channel_overrides[channel.id] = obj4;
                   flag = true;
                   continue;
                 }
@@ -233,12 +233,12 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
               delete tmp3[tmp2];
               const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.USER_GUILD_SETTINGS_BULK, body: null, rejectWithError: false };
-              const obj3 = { guilds };
-              request.body = obj3;
+              const obj6 = { guilds };
+              request.body = obj6;
               c7 = 1;
               c6 = 1;
-              const obj4 = { value: HTTP.patch(request), done: false };
-              return obj4;
+              const obj7 = { value: HTTP.patch(request), done: false };
+              return obj7;
             } else {
               const items = [];
               c6 = 3;
@@ -252,7 +252,7 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
           const body = value.body;
         }
         c6 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } catch (tmp24) {
         c6 = tmp;
@@ -270,7 +270,7 @@ const Constants = fn(1074);
 let actions = {};
 let closure_9 = 0;
 let closure_10 = 15 * DurationsDefault.Millis.SECOND;
-let prototype = function UserGuildSettingsManager() {
+const prototype = function UserGuildSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   actions = { CATEGORY_COLLAPSE: scheduleSync, CATEGORY_EXPAND: scheduleSync, CATEGORY_COLLAPSE_ALL: scheduleSync, CATEGORY_EXPAND_ALL: scheduleSync, POST_CONNECTION_OPEN: handleConnectionOpen, USER_GUILD_SETTINGS_FULL_UPDATE: handleUserGuildSettingsFullUpdate };
   applyArgumentsResult.actions = actions;
@@ -280,8 +280,8 @@ let prototype = function UserGuildSettingsManager() {
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
 
-export default prototype;
+export default prototype1;

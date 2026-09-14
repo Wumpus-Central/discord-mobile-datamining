@@ -1,9 +1,11 @@
-// === Module 13918: openGuildLimitedAccessInfoModal ===
+// === Module 13919: openGuildLimitedAccessInfoModal ===
 
-// Module 13918 (openGuildLimitedAccessInfoModal)
+// Module 13919 (openGuildLimitedAccessInfoModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Keyboard = fn(17).Keyboard;
@@ -14,14 +16,27 @@ const result = size.fileFinishedImporting("modules/guild_limited_access/openGuil
 export default function openGuildLimitedAccessInfoModal(arg0) {
   _require = arg0;
   Keyboard.dismiss();
-  let obj = require("ChatInputUtils");
-  const bestActiveInput = obj.getBestActiveInput();
+  const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
-  obj = {
+  let obj = require("ChatInputUtils");
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(13919, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(13920, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
+        return (arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.guildId = guildId;
+          return <closure_0 />;
+        };
+      });
+    }
+  });
+  const obj2 = {
+    importer() {
+      return asyncRequireImpl(13920, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -32,5 +47,4 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  actions_AlertActionCreatorsDefault.openLazy(obj);
 };

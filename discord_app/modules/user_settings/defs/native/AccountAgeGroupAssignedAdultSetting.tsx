@@ -1,13 +1,15 @@
-// === Module 14842: AccountAgeGroupAssignedAdultSetting ===
+// === Module 14843: AccountAgeGroupAssignedAdultSetting ===
 
-// Module 14842 (AccountAgeGroupAssignedAdultSetting)
+// Module 14843 (AccountAgeGroupAssignedAdultSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14843 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14844 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

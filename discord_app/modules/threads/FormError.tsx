@@ -1,6 +1,6 @@
-// === Module 16726: threads/FormError ===
+// === Module 16728: threads/FormError ===
 
-// Module 16726 (threads/FormError)
+// Module 16728 (threads/FormError)
 import util from "util" /* 1114 */;
 import AutomodErrorUtils from "AutomodErrorUtils" /* 8043 */;
 import size from "module_2" /* 2 */;
@@ -40,18 +40,18 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = AutomodErrorUtils;
+  const obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
     id = id.id;
   }
   let automodErrorMessageFromErrorResponse = obj.getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
-  obj = { type: obj.AutomodViolation, message: null };
+  const obj2 = { type: obj.AutomodViolation, message: null };
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  obj.message = automodErrorMessageFromErrorResponse;
-  return obj;
+  obj2.message = automodErrorMessageFromErrorResponse;
+  return obj2;
 };
 export const renderError = function renderError(type, content) {
   let tmp = null;

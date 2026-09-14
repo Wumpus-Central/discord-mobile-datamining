@@ -1,12 +1,12 @@
-// === Module 10803: payment_modal_banner ===
+// === Module 10804: payment_modal_banner ===
 
-// Module 10803 (payment_modal_banner)
-import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10798 */;
+// Module 10804 (payment_modal_banner)
+import _mod1186 from "module_1186" /* 1186 */;
+import localized_string from "localized_string" /* 10799 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class PaymentModalBanner$Type extends MessageType {
   constructor() {
     items = [, , , , ];
@@ -29,19 +29,18 @@ class PaymentModalBanner$Type extends MessageType {
             return require("localized_string").LocalizedString;
           }
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.PaymentModalBanner", items, T);
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.PaymentModalBanner", items, T);
+    return tmp1;
   }
 }
-let prototype = PaymentModalBanner$Type.prototype;
+const prototype = PaymentModalBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { assetUrl: "", header: "", body: "" };
+  const obj = { assetUrl: "", header: "", body: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -85,7 +84,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -97,33 +96,33 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, writeUnknownFields) {
   if ("" !== assetUrl.assetUrl) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).string(assetUrl.assetUrl);
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    tag.tag(1, _mod1186.WireType.LengthDelimited).string(assetUrl.assetUrl);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.header) {
-    tag.tag(2, _mod1188.WireType.LengthDelimited).string(assetUrl.header);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    tag.tag(2, _mod1186.WireType.LengthDelimited).string(assetUrl.header);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== assetUrl.body) {
-    tag.tag(3, _mod1188.WireType.LengthDelimited).string(assetUrl.body);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
+    tag.tag(3, _mod1186.WireType.LengthDelimited).string(assetUrl.body);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
   }
   if (assetUrl.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, assetUrl, tag);
@@ -147,8 +146,8 @@ items[4] = {
     return require("localized_string").LocalizedString;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.PaymentModalBanner", items, tmp, T, PaymentModalBanner$Type, prototype, items);
+const prototype1 = new prototype("discord_protos.premium_marketing.v1.PaymentModalBanner", items, tmp, T, PaymentModalBanner$Type, prototype, items);
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/payment_modal_banner.tsx");
 
-export const PaymentModalBanner = prototype;
+export const PaymentModalBanner = prototype1;

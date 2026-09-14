@@ -10,25 +10,25 @@ let result = size.fileFinishedImporting("utils/NumberUtils.tsx");
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c2) {
     const intl2 = util.intl;
-    let obj = { value: count };
+    const obj = { value: count };
     return intl2.formatToPlainString(util.t.OiHat3, obj);
   } else {
     const result = count / tmp;
     const intl = util.intl;
-    obj = { value: result.toFixed(1) };
-    return intl.formatToPlainString(util.t.Iku48I, obj);
+    const obj2 = { value: result.toFixed(1) };
+    return intl.formatToPlainString(util.t.Iku48I, obj2);
   }
 };
 export const humanizeValue = function humanizeValue(newPostCount, stateFromStores) {
   if (newPostCount < 1000) {
     const intl2 = util.intl;
-    let obj = { value: null };
+    const obj2 = { value: null };
     const _Math2 = Math;
-    obj.value = Math.floor(newPostCount);
-    return intl2.formatToPlainString(util.t.OiHat3, obj);
+    obj2.value = Math.floor(newPostCount);
+    return intl2.formatToPlainString(util.t.OiHat3, obj2);
   } else if (newPostCount < c2) {
     const intl = util.intl;
-    obj = { value: null };
+    const obj = { value: null };
     const _Math = Math;
     obj.value = Math.floor(newPostCount / 1000);
     return intl.formatToPlainString(util.t["84R4Tc"], obj);
@@ -38,8 +38,8 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
     const result = Math.floor(10 * newPostCount / tmp7) / 10;
     const numberFormat = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
     const intl3 = util.intl;
-    obj = { value: numberFormat.format(result) };
-    return intl3.formatToPlainString(util.t.Iku48I, obj);
+    const obj3 = { value: numberFormat.format(result) };
+    return intl3.formatToPlainString(util.t.Iku48I, obj3);
   }
 };
 export const parseInteger = function parseInteger(discriminator, arg1) {
@@ -64,7 +64,6 @@ export const formatPercent = function formatPercent(locale, percentComplete, arg
   if (arg2 === undefined) {
     obj = {};
   }
-  obj = { style: "percent", minimumFractionDigits: 0 };
   const merged = Object.assign(obj);
-  return Intl.NumberFormat(locale, obj).format(percentComplete);
+  return Intl.NumberFormat(locale, { style: "percent", minimumFractionDigits: 0 }).format(percentComplete);
 };

@@ -1,14 +1,14 @@
-// === Module 15494: YouBarAvatarDecoAccessibilitySetting ===
+// === Module 15495: YouBarAvatarDecoAccessibilitySetting ===
 
-// Module 15494 (YouBarAvatarDecoAccessibilitySetting)
+// Module 15495 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["34XN2f"]);
@@ -19,12 +19,10 @@ let SettingBuilders = {
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);
   },
   onValueChange(animateAvatarDeco) {
-    const obj = { animateAvatarDeco };
-    return obj.setYouBarAnimations(obj);
+    return AccessibilityActionCreators.setYouBarAnimations({ animateAvatarDeco });
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

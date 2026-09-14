@@ -30,8 +30,7 @@ export const filterScopes = function filterScopes(items) {
   return found;
 };
 export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(query) {
-  let obj = keysSorter;
-  const parsed = obj.parse(query, { arrayFormat: "bracket" });
+  const parsed = keysSorter.parse(query, { arrayFormat: "bracket" });
   const NONE = PermissionUtilsAll.NONE;
   try {
     const deserializer = BigFlagUtilsAll;
@@ -45,10 +44,11 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     ({ channel_id, guild_id } = parsed);
     if (guild_id == null) {
       const channel = ChannelStore.getChannel(channel_id);
-      guild_id = undefined;
+      let guild_id1;
       if (channel != null) {
-        guild_id = channel.guild_id;
+        guild_id1 = channel.guild_id;
       }
+      guild_id = guild_id1;
     }
     if (guild_id == null) {
       guild_id = SelectedGuildStore.getGuildId();
@@ -58,7 +58,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     if (str4 == null) {
       str4 = "";
     }
-    obj = { clientId: str4, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, permissions: null, channelId: null, guildId: null, prompt: null, disableGuildSelect: null, integrationType: null, nonce: null };
+    const obj3 = { clientId: str4, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, permissions: null, channelId: null, guildId: null, prompt: null, disableGuildSelect: null, integrationType: null, nonce: null };
     let str5 = parsed.scope;
     if (str5 == null) {
       str5 = "";
@@ -70,21 +70,21 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       }
     })(guild_id);
     const parts = str5.replace(/\+/g, " ").split(" ");
-    obj.scopes = parts.filter((item) => item.length > 0);
+    obj3.scopes = parts.filter((item) => item.length > 0);
     ({ response_type: obj2.responseType, redirect_uri: obj2.redirectUri, code_challenge: obj2.codeChallenge, code_challenge_method: obj2.codeChallengeMethod, state: obj2.state } = parsed);
-    obj.permissions = deserializeResult;
-    obj.channelId = channel_id;
-    obj.guildId = tmp11;
-    obj.prompt = parsed.prompt;
-    obj.disableGuildSelect = "true" === parsed.disable_guild_select;
+    obj3.permissions = deserializeResult;
+    obj3.channelId = channel_id;
+    obj3.guildId = tmp11;
+    obj3.prompt = parsed.prompt;
+    obj3.disableGuildSelect = "true" === parsed.disable_guild_select;
     let NumberResult;
     if (null != parsed.integration_type) {
       const _Number = Number;
       NumberResult = Number(parsed.integration_type);
     }
-    obj.integrationType = NumberResult;
-    obj.nonce = parsed.nonce;
-    return obj;
+    obj3.integrationType = NumberResult;
+    obj3.nonce = parsed.nonce;
+    return obj3;
   } catch (err) {
   }
 };

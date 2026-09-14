@@ -33,7 +33,7 @@ let merged = Object.assign(noop.memo((fade) => {
   }
   const usesSmallCache = fade.usesSmallCache;
   if (typeof source === "number") {
-    let obj = {};
+    const obj2 = {};
     const merged = Object.assign(fade);
     return <React2 />;
   } else {
@@ -41,7 +41,7 @@ let merged = Object.assign(noop.memo((fade) => {
     if (null != placeholder) {
       assetSource = React2.resolveAssetSource(placeholder);
     }
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(fade);
     const items = [tmp.base, style];
     obj.style = items;
@@ -62,13 +62,18 @@ let merged = Object.assign(noop.memo((fade) => {
 }), {
   preload(arg0) {
     closure_0 = arg0;
-    let promise = new Promise((arg0) => {
+    const items = [
+      new Promise((arg0) => {
+        ImageManager = ImageManager.ImageManager;
+        ImageManager.preload(closure_0, arg0);
+      }),
+
+    ];
+    const promise = new Promise((arg0) => {
       ImageManager = ImageManager.ImageManager;
       ImageManager.preload(closure_0, arg0);
     });
-    const items = [promise, ];
-    promise = new Promise((arg0) => setTimeout(arg0, num));
-    items[1] = promise;
+    items[1] = new Promise((arg0) => setTimeout(arg0, num));
     return Promise.race(items);
   }
 });
@@ -86,7 +91,7 @@ FastImageAndroid.preload = (arg0, arg1) => {
   }
   return racePromise;
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   merged = FastImageAndroid;
 }

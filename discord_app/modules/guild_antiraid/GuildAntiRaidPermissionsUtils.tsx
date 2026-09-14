@@ -4,6 +4,8 @@
 import PermissionStore from "PermissionStore" /* 4275 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10209 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, Permissions: hasOwnProperty } = Constants);

@@ -6,6 +6,8 @@ import AvatarUtils from "AvatarUtils" /* 1396 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8283 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const PremiumTypes = PremiumConstants.PremiumTypes;
 const result = size.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {
@@ -248,16 +250,16 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
   ({ canAnimate, size } = arg0);
   if (null != this.guildId) {
     if (self.isUsingGuildMemberBanner()) {
-      let obj = { id: null, guildId: null, banner: null, canAnimate: null, size: null };
+      const obj2 = { id: null, guildId: null, banner: null, canAnimate: null, size: null };
       ({ userId: obj4.id, guildId: obj4.guildId, banner: obj4.banner } = self);
-      obj.canAnimate = canAnimate;
-      obj.size = size;
-      let guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj);
+      obj2.canAnimate = canAnimate;
+      obj2.size = size;
+      let guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
     }
     return guildMemberBannerURL;
   }
-  obj = { id: self.userId, banner: self.banner, canAnimate, size };
-  guildMemberBannerURL = obj.getUserBannerURL(obj);
+  guildMemberBannerURL = AvatarUtils.getUserBannerURL({ id: self.userId, banner: self.banner, canAnimate, size });
+  const obj6 = { id: self.userId, banner: self.banner, canAnimate, size };
 };
 prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnimate, arg2) {
   let num = arg2;
@@ -278,38 +280,38 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnim
     if (null === pendingBanner) {
       let userBannerURL = null;
       if (self.isUsingGuildMemberBanner()) {
-        let obj = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
-        userBannerURL = AvatarUtils.getUserBannerURL(obj);
+        const obj3 = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
+        userBannerURL = AvatarUtils.getUserBannerURL(obj3);
       }
       let bannerURL = userBannerURL;
     } else {
-      obj = { canAnimate, size: num };
+      const obj = { canAnimate, size: num };
       bannerURL = self.getBannerURL(obj);
     }
     return bannerURL;
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  const obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
+  const obj2 = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
   if (_guildMemberProfile != null) {
     bio = _guildMemberProfile.bio;
   }
-  obj.guildValue = bio;
-  obj.guildId = this.guildId;
-  return obj.getProfilePreviewValue(obj);
+  obj2.guildValue = bio;
+  obj2.guildId = this.guildId;
+  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  const obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+  const obj2 = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;
   if (_guildMemberProfile != null) {
     pronouns = _guildMemberProfile.pronouns;
   }
-  obj.guildValue = pronouns;
-  obj.guildId = this.guildId;
-  return obj.getProfilePreviewValue(obj);
+  obj2.guildValue = pronouns;
+  obj2.guildId = this.guildId;
+  return ProfileCustomizationUtils.getProfilePreviewValue(obj2);
 };
 prototype["getPreviewThemeColors"] = function getPreviewThemeColors(pendingThemeColors) {
   let first;

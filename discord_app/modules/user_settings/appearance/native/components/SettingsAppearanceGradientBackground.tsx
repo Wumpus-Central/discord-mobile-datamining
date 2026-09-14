@@ -1,14 +1,14 @@
-// === Module 15383: SettingsAppearanceGradientBackground ===
+// === Module 15384: SettingsAppearanceGradientBackground ===
 
-// Module 15383 (SettingsAppearanceGradientBackground)
+// Module 15384 (SettingsAppearanceGradientBackground)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15384 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 15385 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15357 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15358 */;
 
-const ReanimatedRexport = ReanimatedRexport2;
+const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
@@ -18,10 +18,11 @@ let num = ReanimatedRexport.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
+let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(5068).LinearGradientNativeComponent);
-let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
+let animatedLinearGradientLoadingProps = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
-obj.colors = items;
+animatedLinearGradientLoadingProps.colors = items;
 const __initData = { code: "function SettingsAppearanceGradientBackgroundTsx1(){const{gradientSize,animatedLinearGradientLoadingProps,themeState,interpolate,tweener,getGradientStartPoint,processColor,interpolateColor}=this.__closure;const{width:width,height:height}=gradientSize.get();if(width===0||height===0){return animatedLinearGradientLoadingProps;}const{themePrev:{colors:colorsPrev,angle:anglePrev},themeCurrent:{colors:colorsCurrent,angle:angleCurrent}}=themeState.get();const angle=90-interpolate(tweener.get(),[0,1],[anglePrev,angleCurrent]);const originPoint=getGradientStartPoint(angle,width,height);return{colors:colorsPrev.map(function(_,i){var _processColor;return(_processColor=processColor(interpolateColor(tweener.get(),[0,1],[colorsPrev[i].hex,colorsCurrent[i].hex])))!==null&&_processColor!==void 0?_processColor:0;}),locations:colorsPrev.map(function(_,i){return interpolate(tweener.get(),[0,1],[colorsPrev[i].stop/100,colorsCurrent[i].stop/100]);}),startPoint:{x:(width/2+originPoint[0])/width,y:(height/2-originPoint[1])/height},endPoint:{x:(width/2-originPoint[0])/width,y:(height/2+originPoint[1])/height}};}" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceGradientBackground.tsx");
@@ -37,7 +38,7 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
   let sharedValue;
   let sharedValue1;
   let sharedValue2;
-  let __closure = BACKGROUND_SURFACE_HIGH;
+  animatedLinearGradientLoadingProps = BACKGROUND_SURFACE_HIGH;
   const memo = BACKGROUND_SURFACE_HIGH.useMemo(() => ["mobile-visual-refresh"], []);
   let items = [themes, themeIndex, isDimmed, memo, BACKGROUND_SURFACE_HIGH];
   const memo1 = BACKGROUND_SURFACE_HIGH.useMemo(() => {
@@ -60,28 +61,28 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
     tmp8 = launchWelcomeSystemTheme;
   }
   closure_129_0 = tmp8;
-  let tmp5Result = tmp5(tmp6[4]);
-  sharedValue = tmp5Result.useSharedValue({ themePrev: tmp8, themeCurrent: tmp8 });
+  let obj2 = isDimmed(themeIndex[6]);
+  sharedValue = isDimmed(themeIndex[4]).useSharedValue({ themePrev: tmp8, themeCurrent: tmp8 });
   closure_129_1 = sharedValue;
-  tmp5Result = tmp5(tmp6[4]);
-  sharedValue1 = tmp5Result.useSharedValue(0);
+  const tmp5Result = isDimmed(themeIndex[4]);
+  sharedValue1 = isDimmed(themeIndex[4]).useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [tmp8, sharedValue, sharedValue1, launchWelcomeSystemTheme];
-  const effect = __closure.useEffect(() => {
+  const effect = animatedLinearGradientLoadingProps.useEffect(() => {
     const result = themes.set({ themePrev: themes.get().themeCurrent, themeCurrent: isDimmed });
     const result1 = themeIndex.set(0);
-    obj = { themePrev: themes.get().themeCurrent, themeCurrent: isDimmed };
+    const obj = { themePrev: themes.get().themeCurrent, themeCurrent: isDimmed };
     const result2 = themeIndex.set(timing.withTiming(1, timingPresets.timingStandard));
   }, items1);
-  const obj2 = isDimmed(themeIndex[6]);
+  const tmp5Result4 = isDimmed(themeIndex[4]);
   sharedValue2 = isDimmed(themeIndex[4]).useSharedValue({ width: 0, height: 0 });
   const items2 = [sharedValue2];
-  const callback = __closure.useCallback((nativeEvent) => {
+  const callback = animatedLinearGradientLoadingProps.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
     const result = sharedValue2.set(size);
   }, items2);
-  const tmp5Result1 = isDimmed(themeIndex[4]);
+  const tmp5Result5 = isDimmed(themeIndex[4]);
   class P {
     constructor() {
       value = closure_7.get();
@@ -105,9 +106,9 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
           tmp8 = themes;
           diff = 90 - obj.interpolate(closure_6.get(), [0, 1], items);
           tmp9 = themes(themeIndex[10])(diff, width, height);
-          obj = { colors: null, locations: null, startPoint: null, endPoint: null };
-          obj.colors = colors.map((item, index) => {
-            obj = ReanimatedRexport2;
+          obj1 = { colors: null, locations: null, startPoint: null, endPoint: null };
+          obj1.colors = colors.map((item, index) => {
+            const obj = ReanimatedRexport2;
             const items = [colors[index].hex, colors[index].hex];
             let num = obj.processColor(ReanimatedRexport2.interpolateColor(sharedValue1.get(), [0, 1], items));
             if (num == null) {
@@ -115,7 +116,7 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
             }
             return num;
           });
-          obj.locations = colors.map((item, index) => {
+          obj1.locations = colors.map((item, index) => {
             const items = [colors[index].stop / 100, colors[index].stop / 100];
             return ReanimatedRexport2.interpolate(sharedValue1.get(), [0, 1], items);
           });
@@ -123,24 +124,24 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
           num2 = 2;
           point.x = (width / 2 + tmp9[0]) / width;
           point.y = (height / 2 - tmp9[1]) / height;
-          obj.startPoint = point;
+          obj1.startPoint = point;
           point1 = { x: null, y: null };
           point1.x = (width / 2 - tmp9[0]) / width;
           point1.y = (height / 2 + tmp9[1]) / height;
-          obj.endPoint = point1;
-          return obj;
+          obj1.endPoint = point1;
+          return obj1;
         }
       }
       return closure_1_8;
     }
   }
-  __closure = { gradientSize: sharedValue2, animatedLinearGradientLoadingProps: __closure, themeState: sharedValue, interpolate: tmp5(tmp6[4]).interpolate, tweener: sharedValue1, getGradientStartPoint: themes(tmp6[10]), processColor: tmp5(tmp6[4]).processColor, interpolateColor: tmp5(tmp6[4]).interpolateColor };
-  P.__closure = __closure;
+  const tmp5Result6 = isDimmed(themeIndex[4]);
+  P.__closure = { gradientSize: sharedValue2, animatedLinearGradientLoadingProps, themeState: sharedValue, interpolate: isDimmed(themeIndex[4]).interpolate, tweener: sharedValue1, getGradientStartPoint: themes(themeIndex[10]), processColor: isDimmed(themeIndex[4]).processColor, interpolateColor: isDimmed(themeIndex[4]).interpolateColor };
   P.__workletHash = 5151435414824;
   P.__initData = __initData;
-  __closure = { style: memo.absoluteFill, onLayout: callback };
-  const animatedProps = isDimmed(themeIndex[4]).useAnimatedProps(P);
-  const merged = Object.assign(__closure);
-  __closure.animatedProps = animatedProps;
-  return sharedValue1(sharedValue2, __closure);
+  const obj4 = { style: memo.absoluteFill, onLayout: callback };
+  const animatedProps = tmp5Result6.useAnimatedProps(P);
+  const merged = Object.assign(animatedLinearGradientLoadingProps);
+  obj4.animatedProps = animatedProps;
+  return sharedValue1(sharedValue2, obj4);
 });

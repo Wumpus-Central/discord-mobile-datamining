@@ -1,7 +1,7 @@
 // === Module 7099: SettingSearchSessionAnalyticsManager ===
 
 // Module 7099 (SettingSearchSessionAnalyticsManager)
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import Tracking from "Tracking" /* 7100 */;
 import size from "module_2" /* 2 */;
 
@@ -31,10 +31,10 @@ prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    const obj = { searchSessionDuration: null };
+    const obj2 = { searchSessionDuration: null };
     const _Date = Date;
-    obj.searchSessionDuration = Date.now() - self.searchSessionStartTime;
-    const result = obj.trackSettingSearchClosed(obj);
+    obj2.searchSessionDuration = Date.now() - self.searchSessionStartTime;
+    const result = Tracking.trackSettingSearchClosed(obj2);
     self.searchSessionId = null;
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;

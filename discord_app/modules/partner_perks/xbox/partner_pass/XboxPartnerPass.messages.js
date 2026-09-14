@@ -33,10 +33,11 @@ import _mod3392 from "module_3392" /* 3392 */;
 import _mod3393 from "module_3393" /* 3393 */;
 import _mod3394 from "module_3394" /* 3394 */;
 import _mod3395 from "module_3395" /* 3395 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3365);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/partner_perks/xbox/partner_pass/XboxPartnerPass.messages.js");
 
 export default messagesProxy;

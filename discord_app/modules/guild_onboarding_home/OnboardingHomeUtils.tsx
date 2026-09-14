@@ -10,6 +10,8 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);

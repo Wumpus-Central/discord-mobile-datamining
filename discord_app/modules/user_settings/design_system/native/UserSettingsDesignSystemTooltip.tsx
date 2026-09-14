@@ -1,6 +1,6 @@
-// === Module 15876: UserSettingsDesignSystemTooltip ===
+// === Module 15878: UserSettingsDesignSystemTooltip ===
 
-// Module 15876 (UserSettingsDesignSystemTooltip)
+// Module 15878 (UserSettingsDesignSystemTooltip)
 import Text_Text from "Text/Text" /* 4632 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import LayerScope from "LayerScope" /* 7259 */;
@@ -10,7 +10,6 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 function Content() {
-  let obj = noop;
   const tmp2 = first2(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
@@ -34,9 +33,9 @@ function Content() {
   if (first) {
     str = "Hide tooltip";
   }
-  const ref = obj.useRef(null);
+  const ref = noop.useRef(null);
   const items1 = [first2, first];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let str = "top";
     if (first2) {
       str = "bottom";
@@ -50,23 +49,24 @@ function Content() {
       }
     };
   }, items1);
-  let obj1 = first1(11262);
-  const tooltip = obj1.useTooltip(ref, memo);
-  obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj1 = {
-    ref,
-    onPress() {
-      closure_1(!first1);
-    },
-    variant: "primary",
-    text: str,
-    size: "md"
+  const tmp8 = first2(items, 2);
+  const tooltip = first1(11263).useTooltip(ref, memo);
+  const obj3 = { children: null };
+  const obj4 = {
+    style: tmp.container,
+    children: closure_5(first1(5056).Button, {
+      ref,
+      onPress() {
+        closure_1(!first1);
+      },
+      variant: "primary",
+      text: str,
+      size: "md"
+    })
   };
-  obj.children = closure_5(first1(5056).Button, obj1);
-  const items2 = [closure_5(View, obj), closure_5(first1(7303).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(7303).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
-  obj.children = items2;
-  return closure_7(closure_6, obj);
+  const items2 = [closure_5(View, obj4), closure_5(first1(7303).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(7303).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
+  obj3.children = items2;
+  return closure_7(closure_6, obj3);
 }
 class TooltipNote {
   constructor() {
@@ -87,9 +87,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
 
 export default function UserSettingsDesignSystemTooltip() {
-  let obj = { style: closure_8().flex, bottom: true, children: null };
-  obj = { children: hasOwnProperty(Content, {}) };
-  obj.children = hasOwnProperty(LayerScope.LayerScope, obj);
+  const obj = { style: closure_8().flex, bottom: true, children: null };
+  const tmp = closure_8();
+  obj.children = hasOwnProperty(LayerScope.LayerScope, { children: hasOwnProperty(Content, {}) });
   return hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj);
 };
 export const useCanRotate = function useCanRotate() {

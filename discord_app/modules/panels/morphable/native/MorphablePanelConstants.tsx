@@ -1,9 +1,10 @@
-// === Module 12403: MorphablePanelConstants ===
+// === Module 12404: MorphablePanelConstants ===
 
-// Module 12403 (MorphablePanelConstants)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 12404 (MorphablePanelConstants)
+import PlatformUtils_mod from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isIOS();
 const result = size.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
 

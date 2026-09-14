@@ -1,6 +1,6 @@
-// === Module 11846: formatPollMessageChatData ===
+// === Module 11847: formatPollMessageChatData ===
 
-// Module 11846 (formatPollMessageChatData)
+// Module 11847 (formatPollMessageChatData)
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
@@ -9,7 +9,7 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
 import _mod4821 from "module_4821" /* 4821 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8880 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11849 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11850 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -35,9 +35,9 @@ function reactionForId(reactions, combined) {
     }
   }
 }
-function computeBasicPollChatData(message, arg1) {
-  let obj = time;
-  if (time === undefined) {
+function computeBasicPollChatData(message, arg1, arg2) {
+  obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
   let formattedExpirationLabel = obj.formattedExpirationLabel;
@@ -58,7 +58,7 @@ function computeBasicPollChatData(message, arg1) {
       tmp6 = obj;
     }
     ({ selectedAnswerIds, submitting, editing, showResults } = tmp6);
-    let reactions = message.reactions;
+    const reactions = message.reactions;
     let tmp8 = null == message.poll;
     if (!tmp8) {
       tmp8 = MessageStore.getMessage(message.channel_id, message.id) === message;
@@ -72,11 +72,14 @@ function computeBasicPollChatData(message, arg1) {
       if (!isSearchHit) {
         tmp12 = null != message;
       }
-      reactions = undefined;
+      let reactions1;
       if (message != null) {
-        reactions = message.reactions;
+        reactions1 = message.reactions;
       }
-      obj3 = reactions;
+      if (reactions1 == null) {
+        reactions1 = reactions;
+      }
+      obj3 = reactions1;
       flag = tmp12;
     }
     const someResult = obj3.some((me_vote) => true === me_vote.me_vote);
@@ -118,7 +121,7 @@ function computeBasicPollChatData(message, arg1) {
       selfMember = GuildMemberStore.getSelfMember(guildId);
     }
     const result = AutomodPermissionUtils.hasAutomodQuarantinedProfile(selfMember);
-    obj = { poll, canTapAnswers: tmp19, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
+    const obj6 = { poll, canTapAnswers: tmp19, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     let tmp30 = tmp16;
     const result1 = CommunicationDisabledUtils.isMemberCommunicationDisabled(selfMember);
     if (tmp16) {
@@ -127,8 +130,8 @@ function computeBasicPollChatData(message, arg1) {
     if (tmp30) {
       tmp30 = !tmp5;
     }
-    obj.canRemoveVote = tmp30;
-    obj.canShowVoteCounts = tmp18;
+    obj6.canRemoveVote = tmp30;
+    obj6.canShowVoteCounts = tmp18;
     let tmp31 = !submitting;
     if (!submitting) {
       tmp31 = tmp14;
@@ -145,34 +148,34 @@ function computeBasicPollChatData(message, arg1) {
     if (tmp31) {
       tmp31 = !result1;
     }
-    obj.canSubmitVote = tmp31;
-    obj.expirationLabel = str;
-    obj.hasSelectedAnswer = selectedAnswerIds.size > 0;
-    obj.hasVoted = tmp16;
-    obj.hasVoteRecorded = someResult;
-    obj.isEditingVote = editing;
-    obj.isExpired = null == str && message.state === constants.SENT;
-    obj.isInteractive = flag;
-    obj.isSent = message.state === constants.SENT;
-    obj.reactions = obj3;
-    obj.selectedAnswerIds = selectedAnswerIds;
-    obj.submitting = submitting;
-    obj.tapShouldOpenVotersModal = tmp18;
-    obj.showResults = showResults;
-    return obj;
+    obj6.canSubmitVote = tmp31;
+    obj6.expirationLabel = str;
+    obj6.hasSelectedAnswer = selectedAnswerIds.size > 0;
+    obj6.hasVoted = tmp16;
+    obj6.hasVoteRecorded = someResult;
+    obj6.isEditingVote = editing;
+    obj6.isExpired = null == str && message.state === constants.SENT;
+    obj6.isInteractive = flag;
+    obj6.isSent = message.state === constants.SENT;
+    obj6.reactions = obj3;
+    obj6.selectedAnswerIds = selectedAnswerIds;
+    obj6.submitting = submitting;
+    obj6.tapShouldOpenVotersModal = tmp18;
+    obj6.showResults = showResults;
+    return obj6;
   }
 }
-const getPollState = fn(11560).getPollState;
+const getPollState = fn(11561).getPollState;
 const Constants = fn(1074);
 ({ MessageStates: c10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1085).ThemeTypes;
-let pollMedia = { channelId: EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: false };
+let obj = { channelId: EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
 
 export default function formatPollMessageChatData(poll, arg1) {
-  let obj = time;
-  if (time === undefined) {
+  obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
   let flag = obj.animateEmoji;
@@ -211,11 +214,10 @@ export default function formatPollMessageChatData(poll, arg1) {
           guildId = getGuildId();
         }
       }
-      let obj1 = flag(layout_type[16]);
       ({ answers, layout_type } = poll);
-      obj = { formattedExpirationLabel: tmp2 };
-      const avatarUrl = obj1.getAvatarUrl(currentUser, guildId);
-      const tmp9 = computeBasicPollChatData(poll, arg1, obj);
+      let obj3 = { formattedExpirationLabel: tmp2 };
+      const avatarUrl = flag(layout_type[16]).getAvatarUrl(currentUser, guildId);
+      const tmp9 = computeBasicPollChatData(poll, arg1, obj3);
       if (null != tmp9) {
         ({ canTapAnswers, canSubmitVote } = tmp9);
         ({ expirationLabel, canRemoveVote, canShowVoteCounts } = tmp9);
@@ -228,11 +230,10 @@ export default function formatPollMessageChatData(poll, arg1) {
         ({ isEditingVote, isExpired } = tmp9);
         ({ isInteractive, reactions } = tmp9);
         ({ selectedAnswerIds: c9, submitting: c10, tapShouldOpenVotersModal, showResults } = tmp9);
-        let tmp5Result = tmp5(tmp6[18]);
-        totalVotes = tmp5Result.getTotalVotes(reactions);
+        totalVotes = tmp5(tmp6[18]).getTotalVotes(reactions);
         const intl2 = tmp5(tmp6[17]).intl;
-        obj = { count: totalVotes };
-        label = intl2.formatToPlainString(tmp5(tmp6[17]).t.XRkuof, obj);
+        let obj4 = { count: totalVotes };
+        label = intl2.formatToPlainString(tmp5(tmp6[17]).t.XRkuof, obj4);
         let _Math = Math;
         const items = [];
         HermesBuiltin.arraySpread(answers.map((answer_id) => {
@@ -280,9 +281,9 @@ export default function formatPollMessageChatData(poll, arg1) {
             }
             tmp6 = flag;
           }
-          pollMedia = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: tmp4, showResults };
           let tmp7 = isExpired;
-          const match = _mod4821.match(pollMedia);
+          const match = _mod4821.match({ didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults });
+          obj = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: num >= closure_14 && 0 !== num, showResults };
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
           const withResult2 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected");
@@ -290,44 +291,44 @@ export default function formatPollMessageChatData(poll, arg1) {
           const withResult4 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted");
           const withResult5 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted");
           const withResult6 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected");
-          pollMedia = { answerId: combined, pollMedia: null, isSelected: null, isVictor: null, didSelfVote: null, style: null, shouldAnimateTransition: null, votesPercentage: null, votes: null };
-          pollMedia = { text: answer_id.poll_media.text, emoji: null, stickerId: null, attachmentIds: null };
+          const obj2 = { answerId: combined, pollMedia: null, isSelected: null, isVictor: null, didSelfVote: null, style: null, shouldAnimateTransition: null, votesPercentage: null, votes: null };
+          const obj3 = { text: answer_id.poll_media.text, emoji: null, stickerId: null, attachmentIds: null };
           let name = answer_id.poll_media.emoji;
-          const obj1 = { animateEmoji: flag };
-          let flag2 = obj1.animateEmoji;
+          const obj4 = { animateEmoji: flag };
+          let flag2 = obj4.animateEmoji;
           const withResult7 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected").with({ isExpired: false, showResults: true }, () => "notVoted");
           if (flag2 === undefined) {
             flag2 = false;
           }
-          let num3 = obj1.size;
+          let num3 = obj4.size;
           if (num3 === undefined) {
             num3 = 48;
           }
           if (null == name) {
-            pollMedia.emoji = undefined;
-            pollMedia.stickerId = answer_id.poll_media.sticker_id;
-            pollMedia.attachmentIds = answer_id.poll_media.attachment_ids;
-            pollMedia.pollMedia = pollMedia;
-            pollMedia.isSelected = hasItem;
+            obj3.emoji = undefined;
+            obj3.stickerId = answer_id.poll_media.sticker_id;
+            obj3.attachmentIds = answer_id.poll_media.attachment_ids;
+            obj2.pollMedia = obj3;
+            obj2.isSelected = hasItem;
             if (tmp7) {
               tmp7 = tmp4;
             }
-            pollMedia.isVictor = tmp7;
-            pollMedia.didSelfVote = tmp6;
-            pollMedia.style = otherwiseResult;
+            obj2.isVictor = tmp7;
+            obj2.didSelfVote = tmp6;
+            obj2.style = otherwiseResult;
             let tmp20 = c10;
             if (c10) {
               tmp20 = !useReducedMotion;
             }
-            pollMedia.shouldAnimateTransition = tmp20;
+            obj2.shouldAnimateTransition = tmp20;
             const _Math = Math;
-            pollMedia.votesPercentage = Math.round(100 * num2);
+            obj2.votesPercentage = Math.round(100 * num2);
             const match1 = _mod4821.match(layout_type);
-            pollMedia.votes = match1.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
+            obj2.votes = match1.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
               const intl = flag(layout_type[17]).intl;
               return intl.formatToPlainString(flag(layout_type[17]).t.XRkuof, { count: num });
             });
-            return pollMedia;
+            return obj2;
           } else {
             let flag3 = name.animated;
             if (tmp11) {
@@ -352,28 +353,29 @@ export default function formatPollMessageChatData(poll, arg1) {
               const _HermesInternal = HermesInternal;
               combined1 = "" + name.id;
             }
-            const obj2 = { id: combined1, name: name.name, displayName: null, src: null, animated: null };
+            const obj5 = { id: combined1, name: name.name, displayName: null, src: null, animated: null };
             if (null == name.id) {
               let name2 = UnicodeEmojisDefault.convertSurrogateToName(name.name);
             } else {
               name2 = name.name;
             }
-            obj2.displayName = name2;
+            obj5.displayName = name2;
             if (null == name.id) {
               name = name.name;
               let uRL = EmojiUtilsDefault.getURL(name);
             } else {
-              const obj3 = { id: name.id, animated: flag2, size: num3 };
-              uRL = AvatarUtilsDefault.getEmojiURL(obj3);
+              const obj6 = { id: name.id, animated: flag2, size: num3 };
+              uRL = AvatarUtilsDefault.getEmojiURL(obj6);
             }
-            obj2.src = uRL;
-            obj2.animated = flag2;
+            obj5.src = uRL;
+            obj5.animated = flag2;
             tmp11 = null == flag3 && null != name.id;
           }
           otherwiseResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected").with({ isExpired: false, showResults: true }, () => "notVoted").otherwise(() => "normalVote");
         });
-        obj1 = { isExpired, canSubmitVote, hasVoted, isEditingVote, canRemoveVote, isInteractive, showResults };
-        let match = tmp5(tmp6[9]).match(obj1);
+        const tmp5Result = tmp5(tmp6[18]);
+        let obj5 = { isExpired, canSubmitVote, hasVoted, isEditingVote, canRemoveVote, isInteractive, showResults };
+        let match = tmp5(tmp6[9]).match(obj5);
         let str = tmp5(tmp6[9]);
         let withResult = match.with({ isInteractive: false }, () => {
 
@@ -388,7 +390,7 @@ export default function formatPollMessageChatData(poll, arg1) {
         }).with({ isExpired: true }, () => {
 
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
           const intl = util.intl;
           obj.label = intl.string(util.t.JwkNU4);
           obj.enabled = hasSelectedAnswer;
@@ -399,13 +401,13 @@ export default function formatPollMessageChatData(poll, arg1) {
         }).with({ isExpired: true }, () => {
 
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
           const intl = util.intl;
           obj.label = intl.string(util.t.JwkNU4);
           obj.enabled = hasSelectedAnswer;
           return obj;
         }).with({ canRemoveVote: true }, () => {
-          const obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.XhQEh8);
           return obj;
@@ -415,50 +417,50 @@ export default function formatPollMessageChatData(poll, arg1) {
         }).with({ isExpired: true }, () => {
 
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
           const intl = util.intl;
           obj.label = intl.string(util.t.JwkNU4);
           obj.enabled = hasSelectedAnswer;
           return obj;
         }).with({ canRemoveVote: true }, () => {
-          const obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.XhQEh8);
           return obj;
         }).with({ hasVoted: false, showResults: true }, () => {
-          const obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
+          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.gNj6In);
           return obj;
         });
-        tmp5Result = tmp5(tmp6[20]);
         let otherwiseResult = match.with({ isInteractive: false }, () => {
 
         }).with({ isExpired: true }, () => {
 
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
           const intl = util.intl;
           obj.label = intl.string(util.t.JwkNU4);
           obj.enabled = hasSelectedAnswer;
           return obj;
         }).with({ canRemoveVote: true }, () => {
-          const obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
+          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "remove" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.XhQEh8);
           return obj;
         }).with({ hasVoted: false, showResults: true }, () => {
-          const obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
+          obj = { label: null, presentation: "secondaryButton", enabled: true, type: "showVotes" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.gNj6In);
           return obj;
         }).otherwise(() => {
-          const obj = { label: null, presentation: "button", enabled: null, type: "submit" };
+          obj = { label: null, presentation: "button", enabled: null, type: "submit" };
           const intl = util.intl;
           obj.label = intl.string(util.t.JwkNU4);
           obj.enabled = canSubmitVote;
           return obj;
         });
+        const tmp5Result2 = tmp5(tmp6[20]);
         const intl3 = tmp5(tmp6[17]).intl;
         const string = intl3.string;
         const t = tmp5(tmp6[17]).t;
@@ -468,24 +470,24 @@ export default function formatPollMessageChatData(poll, arg1) {
           stringResult = string(t.cHfFql);
         }
         c15 = stringResult;
-        isIOSResult = tmp5Result.isIOS();
-        let obj2 = { isExpired, isInteractive, isEditingVote };
-        let match1 = tmp5(tmp6[9]).match(obj2);
+        isIOSResult = tmp5(tmp6[20]).isIOS();
+        let obj6 = { isExpired, isInteractive, isEditingVote };
+        let match1 = tmp5(tmp6[9]).match(obj6);
         let str2 = tmp5(tmp6[9]);
         let withResult5 = match1.with({ isInteractive: false, isExpired: false }, () => {
-          const obj = { label: null, presentation: "text", enabled: false };
+          obj = { label: null, presentation: "text", enabled: false };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.trrip0);
           return obj;
         });
         let tmp21;
         let withResult6 = match1.with({ isInteractive: false, isExpired: false }, () => {
-          const obj = { label: null, presentation: "text", enabled: false };
+          obj = { label: null, presentation: "text", enabled: false };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.trrip0);
           return obj;
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
+          obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t["ETE/oC"]);
           return obj;
@@ -494,28 +496,28 @@ export default function formatPollMessageChatData(poll, arg1) {
           if (!isExpired) {
             if (!hasVoted) {
               if (!showResults) {
-                let obj3 = { label: null, presentation: "textButton", enabled: true, type: "showVotes" };
+                const obj7 = { label: null, presentation: "textButton", enabled: true, type: "showVotes" };
                 const intl4 = tmp5(tmp6[17]).intl;
-                obj3.label = intl4.string(tmp5(tmp6[17]).t["/KHAUF"]);
-                tmp21 = obj3;
+                obj7.label = intl4.string(tmp5(tmp6[17]).t["/KHAUF"]);
+                tmp21 = obj7;
               }
             }
           }
         }
         const allow_multiselect = poll.allow_multiselect;
         const otherwiseResult1 = match1.with({ isInteractive: false, isExpired: false }, () => {
-          const obj = { label: null, presentation: "text", enabled: false };
+          obj = { label: null, presentation: "text", enabled: false };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t.trrip0);
           return obj;
         }).with({ isEditingVote: true }, () => {
-          const obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
+          obj = { label: null, presentation: "textButton", enabled: true, type: "cancel" };
           const intl = flag(layout_type[17]).intl;
           obj.label = intl.string(flag(layout_type[17]).t["ETE/oC"]);
           return obj;
         }).otherwise(() => ({ label, secondaryLabel: expirationLabel, accessibilityHint, presentation: "text", enabled: true, type: "showVoterDetails" }));
-        const obj4 = { isInteractive, isExpired, canSelectMultipleAnswers: allow_multiselect };
-        const match2 = tmp5(tmp6[9]).match(obj4);
+        const obj8 = { isInteractive, isExpired, canSelectMultipleAnswers: allow_multiselect };
+        const match2 = tmp5(tmp6[9]).match(obj8);
         const str3 = tmp5(tmp6[9]);
         let withResult7 = match2.with({ isInteractive: false }, () => {
 
@@ -525,7 +527,7 @@ export default function formatPollMessageChatData(poll, arg1) {
         }).with({ isExpired: true }, () => {
 
         });
-        const obj5 = {
+        const obj9 = {
           question: poll.question,
           promptLabel: match2.with({ isInteractive: false }, () => {
 
@@ -564,34 +566,35 @@ export default function formatPollMessageChatData(poll, arg1) {
           const intl = flag(layout_type[17]).intl;
           return intl.string(flag(layout_type[17]).t.yCXvxa);
         });
-        const obj6 = { tapShouldOpenVotersModal, canTapAnswers, canSelectMultipleAnswers: allow_multiselect };
-        const match3 = tmp5(tmp6[9]).match(obj6);
+        const obj10 = { tapShouldOpenVotersModal, canTapAnswers, canSelectMultipleAnswers: allow_multiselect };
+        const match3 = tmp5(tmp6[9]).match(obj10);
         const str4 = tmp5(tmp6[9]);
         const withResult10 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST);
         const withResult11 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST);
         const withResult12 = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canSelectMultipleAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.RADIO_BUTTONS);
-        obj5.answersInteraction = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canSelectMultipleAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.RADIO_BUTTONS).with({ canSelectMultipleAnswers: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.CHECKBOXES).exhaustive();
+        obj9.answersInteraction = match3.with({ tapShouldOpenVotersModal: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canTapAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.LIST).with({ canSelectMultipleAnswers: false }, () => flag(layout_type[21]).PollChatAnswerInteractionType.RADIO_BUTTONS).with({ canSelectMultipleAnswers: true }, () => flag(layout_type[21]).PollChatAnswerInteractionType.CHECKBOXES).exhaustive();
         let tmp22;
         if (tapShouldOpenVotersModal) {
           tmp22 = stringResult;
         }
-        obj5.answerTapAccessibilityLabel = tmp22;
-        obj5.layoutType = layout_type;
-        const obj7 = { theme: DARK, layoutType: layout_type };
-        obj5.resources = useReducedMotion(tmp6[22])(obj7);
-        obj5.primaryAction = otherwiseResult;
-        obj5.isInteractive = isInteractive;
-        obj5.canTapAnswers = canTapAnswers;
-        obj5.canSelectMultipleAnswers = allow_multiselect;
-        obj5.hasSelectedAnswer = hasSelectedAnswer;
-        obj5.canShowVoteCounts = canShowVoteCounts;
-        obj5.hasVoted = hasVoted;
-        obj5.isExpired = isExpired;
-        obj5.myAvatarUrl = avatarUrl;
-        obj5.secondaryAction = otherwiseResult1;
-        obj5.tertiaryAction = tmp21;
-        return obj5;
+        obj9.answerTapAccessibilityLabel = tmp22;
+        obj9.layoutType = layout_type;
+        const obj11 = { theme: DARK, layoutType: layout_type };
+        obj9.resources = useReducedMotion(tmp6[22])(obj11);
+        obj9.primaryAction = otherwiseResult;
+        obj9.isInteractive = isInteractive;
+        obj9.canTapAnswers = canTapAnswers;
+        obj9.canSelectMultipleAnswers = allow_multiselect;
+        obj9.hasSelectedAnswer = hasSelectedAnswer;
+        obj9.canShowVoteCounts = canShowVoteCounts;
+        obj9.hasVoted = hasVoted;
+        obj9.isExpired = isExpired;
+        obj9.myAvatarUrl = avatarUrl;
+        obj9.secondaryAction = otherwiseResult1;
+        obj9.tertiaryAction = tmp21;
+        return obj9;
       }
+      let obj2 = flag(layout_type[16]);
     }
   }
 };

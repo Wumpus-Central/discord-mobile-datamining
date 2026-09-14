@@ -46,23 +46,23 @@ export const hex2int = function hex2int(c8) {
 };
 export const int2hex = function int2hex(color) {
   if (color <= 16777215) {
-    let str = color >> 16 & 255.toString(16);
-    let combined = str;
-    if (1 === str.length) {
-      const _HermesInternal5 = HermesInternal;
-      combined = "0" + str;
-    }
-    const str1 = color >> 8 & 255.toString(16);
-    let combined1 = str1;
+    const str1 = color >> 16 & 255.toString(16);
+    let combined = str1;
     if (1 === str1.length) {
-      const _HermesInternal6 = HermesInternal;
-      combined1 = "0" + str1;
+      const _HermesInternal5 = HermesInternal;
+      combined = "0" + str1;
     }
-    let str2 = 255 & color.toString(16);
-    let combined2 = str2;
-    if (1 === str2.length) {
+    const str15 = color >> 8 & 255.toString(16);
+    let combined1 = str15;
+    if (1 === str15.length) {
+      const _HermesInternal6 = HermesInternal;
+      combined1 = "0" + str15;
+    }
+    const str16 = 255 & color.toString(16);
+    let combined2 = str16;
+    if (1 === str16.length) {
       const _HermesInternal7 = HermesInternal;
-      combined2 = "0" + str2;
+      combined2 = "0" + str16;
     }
     const _HermesInternal8 = HermesInternal;
     let combined3 = "#" + combined + combined1 + combined2;
@@ -70,32 +70,29 @@ export const int2hex = function int2hex(color) {
     const str7 = color >> 16 & 255;
     const str9 = color >> 8 & 255;
   } else {
-    let str3 = color >> 24 & 255.toString(16);
-    let combined4 = str3;
-    if (1 === str3.length) {
+    const str17 = color >> 24 & 255.toString(16);
+    let combined4 = str17;
+    if (1 === str17.length) {
       const _HermesInternal = HermesInternal;
-      str = "0";
-      combined4 = "0" + str3;
+      combined4 = "0" + str17;
     }
-    str2 = color >> 16 & 255;
-    let str4 = str2.toString(16);
-    let combined5 = str4;
-    if (1 === str4.length) {
+    const str18 = color >> 16 & 255.toString(16);
+    let combined5 = str18;
+    if (1 === str18.length) {
       const _HermesInternal2 = HermesInternal;
-      str3 = "0";
-      combined5 = "0" + str4;
+      combined5 = "0" + str18;
     }
-    str4 = color >> 8 & 255;
-    let str5 = str4.toString(16);
-    let combined6 = str5;
-    if (1 === str5.length) {
+    const str19 = color >> 8 & 255.toString(16);
+    let combined6 = str19;
+    if (1 === str19.length) {
       const _HermesInternal3 = HermesInternal;
-      str5 = "0";
-      combined6 = "0" + str5;
+      combined6 = "0" + str19;
     }
     const _HermesInternal4 = HermesInternal;
     combined3 = "#" + combined4 + combined5 + combined6;
     const str14 = color >> 24 & 255;
+    const str2 = color >> 16 & 255;
+    const str4 = color >> 8 & 255;
   }
   return combined3;
 };
@@ -180,16 +177,17 @@ export const int2rgba = function int2rgba(ColorUtils, arg1) {
   }
   return "rgba(" + ColorUtils >> 16 & 255 + ", " + ColorUtils >> 8 & 255 + ", " + 255 & ColorUtils + ", " + result + ")";
 };
-export const rgb2int = function rgb2int(tmp2Result1) {
-  const match = tmp2Result1.match(re2);
+export const rgb2int = function rgb2int(tmp2Result5) {
+  const match = tmp2Result5.match(re2);
   if (null != match) {
-    let color = { red: null, green: null, blue: null };
+    const color1 = { red: null, green: null, blue: null };
     const _parseInt = parseInt;
-    color.red = parseInt(match[1]);
+    color1.red = parseInt(match[1]);
     const _parseInt2 = parseInt;
-    color.green = parseInt(match[2]);
+    color1.green = parseInt(match[2]);
     const _parseInt3 = parseInt;
-    color.blue = parseInt(match[3]);
+    color1.blue = parseInt(match[3]);
+    let color = color1;
   } else {
     color = { red: 0, green: 0, blue: 0 };
   }

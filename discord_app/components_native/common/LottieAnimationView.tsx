@@ -57,19 +57,19 @@ prototype["render"] = function render() {
   }
   let tmp4;
   if (undefined !== json) {
-    let obj = { aspectRatio: source.w / source.h };
+    const obj = { aspectRatio: source.w / source.h };
     tmp4 = obj;
   }
-  obj = { style: null, collapsable: props.collapsable, children: null };
+  const obj2 = { style: null, collapsable: props.collapsable, children: null };
   const items = [tmp4, style];
-  obj.style = items;
-  obj = { ref: this.setRef, source, style: null };
+  obj2.style = items;
+  const obj3 = { ref: this.setRef, source, style: null };
   const items1 = [tmp4, style];
-  obj.style = items1;
+  obj3.style = items1;
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
-  obj.children = jsx(_modDef5611, { ref: this.setRef, source, style: null });
-  return <View ref={this.setRef} source={source} style={null} />;
+  obj2.children = jsx(_modDef5611, { ref: this.setRef, source, style: null });
+  return <View style={null} collapsable={props.collapsable}>{null}</View>;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };
 const size = fn(2);

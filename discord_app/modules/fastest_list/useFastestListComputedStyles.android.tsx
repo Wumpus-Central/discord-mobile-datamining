@@ -17,11 +17,11 @@ export default function useFastestListComputedStyles(style) {
         obj = { flex: 1 };
       }
       const items = [obj];
-      obj = items;
+      let obj2 = items;
     } else {
-      obj = { flex: 1 };
+      obj2 = { flex: 1 };
     }
-    const flattenResult = StyleSheet.flatten(obj);
+    const flattenResult = StyleSheet.flatten(obj2);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;
@@ -138,8 +138,8 @@ export default function useFastestListComputedStyles(style) {
         }
         if (typeof num3 === "number") {
           if (typeof num4 === "number") {
-            obj = { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
-            return obj;
+            const obj3 = { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
+            return obj3;
           }
         }
         const _Error = Error;

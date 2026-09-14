@@ -1,10 +1,12 @@
-// === Module 11176: useFetchCollectiblesProduct ===
+// === Module 11177: useFetchCollectiblesProduct ===
 
-// Module 11176 (useFetchCollectiblesProduct)
+// Module 11177 (useFetchCollectiblesProduct)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SKUStore from "SKUStore" /* 5591 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
@@ -15,9 +17,8 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCo
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, includeBundles) {
   _require = skuId;
   dependencyMap = includeBundles;
-  let obj = require("useStateFromStores");
   let items = [state];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     value = null;
     if (null != closure_0) {
       value = SKUStore.get(tmp);
@@ -29,17 +30,17 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   }
   _slicedToArray = tmp4;
-  let tmpResult = tmp(563);
+  let obj = require("useStateFromStores");
   const items1 = [stateFromStores1];
-  const tmp6 = _slicedToArray(tmpResult.useStateFromStoresArray(items1, () => {
+  const tmp6 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items1, () => {
     const items = [CollectiblesCategoryStore.getProduct(closure_0), CollectiblesCategoryStore.getProductFetch(closure_0)];
     return items;
   }), 2);
   const product = tmp6[0];
   state = tmp8;
-  tmpResult = tmp(563);
+  const tmpResult = require("useStateFromStores");
   const items2 = [stateFromStores1];
-  stateFromStores1 = tmpResult.useStateFromStores(items2, () => CollectiblesCategoryStore.isProductFetchBackedOff(closure_0));
+  stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () => CollectiblesCategoryStore.isProductFetchBackedOff(closure_0));
   let tmp10 = true === includeBundles;
   if (tmp10) {
     let type;
@@ -76,15 +77,15 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = stateFromStores1;
     }
     if (!tmp2) {
-      const obj = { includeBundles };
-      const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj);
+      const obj2 = { includeBundles };
+      const collectiblesProduct = CollectiblesActionCreators.fetchCollectiblesProduct(closure_0, obj2);
     }
   }, items3);
-  obj = { product, isFetching: null };
+  let obj2 = { product, isFetching: null };
   state = undefined;
   if (tmp6[1] != null) {
     state = tmp8.state;
   }
-  obj.isFetching = "fetching" === state;
-  return obj;
+  obj2.isFetching = "fetching" === state;
+  return obj2;
 };

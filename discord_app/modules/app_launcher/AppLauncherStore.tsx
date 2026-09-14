@@ -28,7 +28,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-let obj = { show: false, entrypoint: fn(9539).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9539).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9539).AppLauncherCloseReason.DISMISSED, initialState: "WireType" };
+const obj = { show: false, entrypoint: fn(9539).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9539).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9539).AppLauncherCloseReason.DISMISSED, initialState: "accessible" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }
@@ -73,7 +73,7 @@ prototype["initialState"] = function initialState() {
   return obj.initialState;
 };
 AppLauncherStore.displayName = "AppLauncherStore";
-obj = {
+const appLauncherStore = new AppLauncherStore(DispatcherDefault, {
   APP_LAUNCHER_SHOW: function handleShow(entrypoint) {
     entrypoint = entrypoint.entrypoint;
     obj.show = true;
@@ -103,8 +103,7 @@ obj = {
   CHANNEL_SELECT: handleDismissWithDismissed,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand
-};
-const appLauncherStore = new AppLauncherStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
 

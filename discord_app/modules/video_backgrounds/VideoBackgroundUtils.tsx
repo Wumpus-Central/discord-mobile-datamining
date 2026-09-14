@@ -1,7 +1,7 @@
 // === Module 9226: VideoBackgroundUtils ===
 
 // Module 9226 (VideoBackgroundUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -134,34 +134,34 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   const channelId = RTCConnectionStore.getChannelId();
   const channel = ChannelStore.getChannel(channelId);
   const voiceStateMetadata = AppAnalyticsUtils.getVoiceStateMetadata(guildId, channelId, true);
-  const obj = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
+  const obj5 = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
   let str = "None";
   if (null != type) {
     str = "Video Background";
   }
-  obj.effect_type = str;
-  obj.effect_detail = getEffectDetailAnalyticsName(type);
-  obj.effect_state = Enabled;
-  obj.channel_id = channelId;
+  obj5.effect_type = str;
+  obj5.effect_detail = getEffectDetailAnalyticsName(type);
+  obj5.effect_state = Enabled;
+  obj5.channel_id = channelId;
   type = undefined;
   if (channel != null) {
     type = channel.type;
   }
-  obj.channel_type = type;
-  obj.guild_id = guildId;
+  obj5.channel_type = type;
+  obj5.guild_id = guildId;
   ({ voice_state_count: obj4.voice_state_count, video_stream_count: obj4.video_stream_count } = voiceStateMetadata);
-  obj.media_session_id = obj.getMediaSessionId();
-  obj.rtc_connection_id = obj.getRTCConnectionId();
-  obj.is_animated = isAnimatedBackgroundOption(type);
-  AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj);
+  obj5.media_session_id = RTCConnectionStore.getMediaSessionId();
+  obj5.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj5.is_animated = isAnimatedBackgroundOption(type);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj5);
 };
 export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(type, is_video, is_from_tenor) {
-  const obj = { is_animated: isAnimatedBackgroundOption(type), is_video, is_from_tenor };
-  obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, obj);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, { is_animated: isAnimatedBackgroundOption(type), is_video, is_from_tenor });
 };
 export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(type) {
-  const obj = { is_animated: isAnimatedBackgroundOption(type) };
-  obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, obj);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, { is_animated: isAnimatedBackgroundOption(type) });
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
@@ -180,13 +180,14 @@ export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProt
       tmp = flag;
     }
     if (tmp) {
-      obj = { oneofKind: "customAsset", customAsset: null };
-      obj = { id: null, assetHash: null };
+      const obj2 = { oneofKind: "customAsset", customAsset: null };
       ({ id: obj4.id, asset: obj4.assetHash } = type);
-      obj.customAsset = obj;
+      obj2.customAsset = { id: null, assetHash: null };
+      obj = obj2;
+      const obj3 = { id: null, assetHash: null };
     } else if ("blur" === type) {
-      const obj1 = { oneofKind: "blur", blur: { useBlur: true } };
-      obj = obj1;
+      const obj7 = { oneofKind: "blur", blur: { useBlur: true } };
+      obj = obj7;
     } else {
       obj = { oneofKind: "presetOption", presetOption: type };
     }

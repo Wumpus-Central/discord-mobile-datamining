@@ -1,13 +1,13 @@
-// === Module 16067: RegisterUsernameInput ===
+// === Module 16069: RegisterUsernameInput ===
 
-// Module 16067 (RegisterUsernameInput)
+// Module 16069 (RegisterUsernameInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6711 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14792 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16059 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14793 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16061 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,17 +21,17 @@ function UsernameStatusMessage(arg0) {
     type = usernameStatus.type;
   }
   if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-    let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
-    obj = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-    const items = [React7(CircleErrorIcon.CircleErrorIcon, obj), ];
-    const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp.status };
-    const merged = Object.assign(createStyles);
-    const merged1 = Object.assign(createStyles);
-    obj1.animated = true;
-    obj1.children = usernameStatus.message;
-    items[1] = React7(Text_Text.Text, obj1);
-    obj.children = items;
-    let tmp6 = closure_1_10(Stack_Stack.Stack, obj);
+    obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
+    obj3 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+    const items = [React7(CircleErrorIcon.CircleErrorIcon, obj3), ];
+    const obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp.status };
+    const merged = Object.assign(obj2);
+    const merged1 = Object.assign(obj3);
+    obj4.animated = true;
+    obj4.children = usernameStatus.message;
+    items[1] = React7(Text_Text.Text, obj4);
+    obj2.children = items;
+    let tmp6 = closure_1_10(Stack_Stack.Stack, obj2);
   } else {
     if (isUsernameFocused) {
       let type1;
@@ -39,22 +39,22 @@ function UsernameStatusMessage(arg0) {
         type1 = usernameStatus.type;
       }
       if (type1 === UniqueUsernamesTypes.NameValidationState.AVAILABLE) {
-        const obj2 = {};
-        const merged2 = Object.assign(createStyles);
-        const merged3 = Object.assign(createStyles);
-        obj2.style = tmp.status;
-        obj2.variant = "text-xs/medium";
-        obj2.animated = true;
-        const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: usernameStatus.message };
-        obj2.children = React7(Text_Text.Text, obj3);
-        tmp6 = React7(Text_Text.Text, obj2);
+        const obj5 = {};
+        const merged2 = Object.assign(obj2);
+        const merged3 = Object.assign(obj3);
+        obj5.style = tmp.status;
+        obj5.variant = "text-xs/medium";
+        obj5.animated = true;
+        const obj6 = { variant: "text-xs/medium", color: "text-feedback-positive", children: usernameStatus.message };
+        obj5.children = React7(Text_Text.Text, obj6);
+        tmp6 = React7(Text_Text.Text, obj5);
       }
     }
     tmp6 = null;
     if (isUsernameFocused) {
-      obj = {};
-      const merged4 = Object.assign(createStyles);
-      const merged5 = Object.assign(createStyles);
+      const obj = {};
+      const merged4 = Object.assign(obj2);
+      const merged5 = Object.assign(obj3);
       obj.style = tmp.inputHint;
       obj.variant = "text-xs/medium";
       obj.color = "text-muted";
@@ -67,21 +67,21 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
-createStyles = { entering: null, exiting: null };
+let obj2 = { entering: null, exiting: null };
 const FadeIn = fn(4373).FadeIn;
-createStyles.entering = FadeIn.duration(300);
+obj2.entering = FadeIn.duration(300);
 const FadeOut = fn(4373).FadeOut;
-createStyles.exiting = FadeOut.duration(300);
-createStyles = { layout: null };
+obj2.exiting = FadeOut.duration(300);
+let obj3 = { layout: null };
 const LinearTransition = fn(4373).LinearTransition;
 const Easing = fn(4373).Easing;
-createStyles.layout = LinearTransition.easing(Easing.inOut(fn(4373).Easing.quad)).duration(300);
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4373).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -92,19 +92,19 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   dependencyMap = undefined;
   ({ username, onSubmitEditing, submitBehavior } = setUsername);
   const ref = noop.useRef(null);
-  let obj = { inputRef: ref, enabled: null };
+  obj2 = { inputRef: ref, enabled: null };
   if (autoFocus == null) {
     autoFocus = false;
   }
-  obj.enabled = autoFocus;
-  useFocusRefOnNavigationDefault(obj);
-  const tmp5 = _slicedToArray(obj.useState(true), 2);
+  obj2.enabled = autoFocus;
+  useFocusRefOnNavigationDefault(obj2);
+  const tmp5 = _slicedToArray(noop.useState(true), 2);
   importDefault = tmp6;
   const tmp7 = closure_8((errors) => errors.errors);
   dependencyMap = tmp7;
   const items = [tmp7, setUsername];
   const items1 = [tmp5[1]];
-  const callback = obj.useCallback((str) => {
+  const callback = noop.useCallback((str) => {
     if (null != user.username) {
       const username = user.username;
       React5(_objectWithoutProperties(user, closure_3));
@@ -112,42 +112,42 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     setUsername(str.toLowerCase());
   }, items);
   const items2 = [tmp5[1]];
-  const callback1 = obj.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     closure_1(true);
   }, items1);
-  const callback2 = obj.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     closure_1(false);
   }, items2);
-  obj = { ref, label: null, accessibilityHint: null, onChange: null, autoCorrect: false, secureTextEntry: null, keyboardType: null, value: null, onSubmitEditing: null, returnKeyType: "next", autoComplete: "username", textContentType: "username", autoCapitalize: "none", onFocus: null, onBlur: null, isClearable: true, status: null, submitBehavior: null };
+  obj3 = { ref, label: null, accessibilityHint: null, onChange: null, autoCorrect: false, secureTextEntry: null, keyboardType: null, value: null, onSubmitEditing: null, returnKeyType: "next", autoComplete: "username", textContentType: "username", autoCapitalize: "none", onFocus: null, onBlur: null, isClearable: true, status: null, submitBehavior: null };
   const intl = setUsername(1114).intl;
-  obj.label = intl.string(setUsername(1114).t.IEpCBQ);
+  obj3.label = intl.string(setUsername(1114).t.IEpCBQ);
   const intl2 = setUsername(1114).intl;
-  obj.accessibilityHint = intl2.string(setUsername(1114).t["47dcUZ"]);
-  obj.onChange = callback;
+  obj3.accessibilityHint = intl2.string(setUsername(1114).t["47dcUZ"]);
+  obj3.onChange = callback;
   const tmp14 = setUsername;
-  obj.secureTextEntry = setUsername(1150).isAndroid();
-  const obj4 = setUsername(1150);
+  obj3.secureTextEntry = setUsername(1363).isAndroid();
+  const obj4 = setUsername(1363);
   let str = "default";
   if (obj5.isAndroid()) {
     str = "visible-password";
   }
-  obj.keyboardType = str;
-  obj.value = username;
-  obj.onSubmitEditing = onSubmitEditing;
-  obj.onFocus = callback1;
-  obj.onBlur = callback2;
+  obj3.keyboardType = str;
+  obj3.value = username;
+  obj3.onSubmitEditing = onSubmitEditing;
+  obj3.onFocus = callback1;
+  obj3.onBlur = callback2;
   let type;
   if (usernameStatus != null) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14792).NameValidationState.ERROR) {
+  if (type === tmp14(14793).NameValidationState.ERROR) {
     str2 = "error";
   }
-  const obj1 = { children: null };
-  obj.status = str2;
-  obj.submitBehavior = submitBehavior;
-  const items3 = [closure_9(setUsername(6707).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
-  obj1.children = items3;
-  return closure_10(closure_11, obj1);
+  const obj6 = { children: null };
+  obj3.status = str2;
+  obj3.submitBehavior = submitBehavior;
+  const items3 = [closure_9(setUsername(6707).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  obj6.children = items3;
+  return closure_10(closure_11, obj6);
 };

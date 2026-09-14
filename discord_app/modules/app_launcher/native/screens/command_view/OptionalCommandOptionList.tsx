@@ -1,11 +1,13 @@
-// === Module 12321: OptionalCommandOptionList ===
+// === Module 12322: OptionalCommandOptionList ===
 
-// Module 12321 (OptionalCommandOptionList)
+// Module 12322 (OptionalCommandOptionList)
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import TableRow from "TableRow" /* 5686 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
@@ -18,11 +20,11 @@ export default function OptionalCommandOptionList(arg0) {
   let tmp2 = null;
   if (0 !== options.length) {
     let obj = { style: tmp, collapsable: false, children: null };
-    obj = {
+    let obj2 = {
       hasIcons: false,
       children: options.map((displayName) => {
           closure_0 = displayName;
-          let obj = {
+          const obj = {
             onPress() {
               return require(closure_0);
             },
@@ -30,21 +32,28 @@ export default function OptionalCommandOptionList(arg0) {
             subLabel: displayName.displayDescription,
             trailing: null
           };
-          obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+          const obj2 = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
           const intl = util.intl;
-          obj.text = intl.string(util.t.OYkgVk);
-          obj.onPress = function onPress() {
+          obj2.text = intl.string(util.t.OYkgVk);
+          obj2.onPress = function onPress() {
             return require(closure_0);
           };
           obj.trailing = jsx(components_Button_Button.Button, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null });
-          return jsx(TableRow.TableRow, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null }, displayName.name);
+          return jsx(TableRow.TableRow, {
+            onPress() {
+              return require(closure_0);
+            },
+            label: displayName.displayName,
+            subLabel: displayName.displayDescription,
+            trailing: null
+          }, displayName.name);
         })
     };
     obj.children = jsx(TableRowGroup.TableRowGroup, {
       hasIcons: false,
       children: options.map((displayName) => {
           closure_0 = displayName;
-          let obj = {
+          const obj = {
             onPress() {
               return require(closure_0);
             },
@@ -52,35 +61,24 @@ export default function OptionalCommandOptionList(arg0) {
             subLabel: displayName.displayDescription,
             trailing: null
           };
-          obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+          const obj2 = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
           const intl = util.intl;
-          obj.text = intl.string(util.t.OYkgVk);
-          obj.onPress = function onPress() {
+          obj2.text = intl.string(util.t.OYkgVk);
+          obj2.onPress = function onPress() {
             return require(closure_0);
           };
           obj.trailing = jsx(components_Button_Button.Button, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null });
-          return jsx(TableRow.TableRow, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null }, displayName.name);
+          return jsx(TableRow.TableRow, {
+            onPress() {
+              return require(closure_0);
+            },
+            label: displayName.displayName,
+            subLabel: displayName.displayDescription,
+            trailing: null
+          }, displayName.name);
         })
     });
-    tmp2 = <View hasIcons={false}>{options.map((displayName) => {
-      closure_0 = displayName;
-      let obj = {
-        onPress() {
-          return require(closure_0);
-        },
-        label: displayName.displayName,
-        subLabel: displayName.displayDescription,
-        trailing: null
-      };
-      obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
-      const intl = util.intl;
-      obj.text = intl.string(util.t.OYkgVk);
-      obj.onPress = function onPress() {
-        return require(closure_0);
-      };
-      obj.trailing = jsx(components_Button_Button.Button, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null });
-      return jsx(TableRow.TableRow, { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null }, displayName.name);
-    })}</View>;
+    tmp2 = <View style={tmp} collapsable={false}>{null}</View>;
   }
   return tmp2;
 };

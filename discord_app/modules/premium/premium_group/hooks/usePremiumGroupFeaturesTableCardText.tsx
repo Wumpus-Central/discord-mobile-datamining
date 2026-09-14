@@ -1,12 +1,12 @@
-// === Module 13572: usePremiumGroupFeaturesTableCardText ===
+// === Module 13573: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13572 (usePremiumGroupFeaturesTableCardText)
+// Module 13573 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import _modDef3074 from "module_3074" /* 3074 */;
 import PremiumGroupUtils from "PremiumGroupUtils" /* 8154 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13573 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13574 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 
 require = fn;
@@ -16,11 +16,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
-  let obj = { useCachedData: true, fetch: arg0 === user.PremiumSubscriptionGroupRole.MEMBER };
-  const tmp4 = usePremiumGroupPrimaryNameDefault(obj);
-  let obj1 = initialize;
+  const tmp4 = usePremiumGroupPrimaryNameDefault({ useCachedData: true, fetch: arg0 === user.PremiumSubscriptionGroupRole.MEMBER });
+  const obj = { useCachedData: true, fetch: arg0 === user.PremiumSubscriptionGroupRole.MEMBER };
   const items = [SubscriptionStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
+  const stateFromStores = initialize.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
   if (arg0 === user.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
@@ -31,8 +30,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       priceString = null;
       if (null != tmp4) {
         const intl = util.intl;
-        obj = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(_modDef3074.Nu9LNm, obj);
+        const obj3 = { primaryName: tmp4, premiumGroupProductName: React4() };
+        priceString = intl.format(_modDef3074.Nu9LNm, obj3);
       }
     }
     let str = "...";
@@ -41,15 +40,15 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     }
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = util.intl;
-      obj = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(_modDef3074["+R/K74"], obj);
+      const obj4 = { helpCenterLink, premiumGroupProductName: React4() };
+      let formatResult = intl3.format(_modDef3074["+R/K74"], obj4);
     } else {
       const intl2 = util.intl;
       const tmp3Result = _modDef3074;
-      obj1 = { helpCenterLink };
-      formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);
+      const obj5 = { helpCenterLink };
+      formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj5);
     }
-    const obj2 = { subheaderString: str, bodyString: formatResult };
-    return obj2;
+    const obj6 = { subheaderString: str, bodyString: formatResult };
+    return obj6;
   }
 };

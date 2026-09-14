@@ -18,17 +18,17 @@ export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfi
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      const obj = { id: null, icon: null, size: 64 };
       ({ id: obj2.id, icon: obj2.icon } = guildProfile);
-      guildIconURL = obj.getGuildIconURL(obj);
+      guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
+      const obj3 = { id: null, icon: null, size: 64 };
     }
   }
-  useAvatarColorDefault(guildIconURL, token);
-  let brandColorPrimary;
+  let brandColorPrimary = useAvatarColorDefault(guildIconURL, token);
+  let brandColorPrimary1;
   if (guildProfile != null) {
-    brandColorPrimary = guildProfile.brandColorPrimary;
+    brandColorPrimary1 = guildProfile.brandColorPrimary;
   }
-  if (null != brandColorPrimary) {
+  if (null != brandColorPrimary1) {
     brandColorPrimary = guildProfile.brandColorPrimary;
   }
   return brandColorPrimary;
@@ -39,9 +39,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
   } else if (null != guildProfileFromInvite.brandColorPrimary) {
     return guildProfileFromInvite.brandColorPrimary;
   } else {
-    let obj = { id: null, icon: null, size: 64 };
     ({ id: obj6.id, icon: obj6.icon } = guildProfileFromInvite);
-    const guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj);
+    const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
     if (null == guildIconURL) {
       return null;
     } else {
@@ -53,8 +52,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         first = tmp13[0];
       }
       if (null != first) {
-        [tmp4, tmp5, tmp6] = _slicedToArray(first, 3);
-        obj = { r: tmp4, g: tmp5, b: tmp6 };
+        [tmp4, tmp5, tmp6] = first;
+        const obj = { r: tmp4, g: tmp5, b: tmp6 };
         const tmp3 = _slicedToArray(first, 3);
         const obj2 = tinycolorDefault(obj);
         let num2 = 1;
@@ -62,12 +61,13 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         if (AccessibilityStore.desaturateUserColors) {
           num2 = AccessibilityStore.saturation;
         }
-        obj = { h, s: s * num2, l };
+        const obj9 = { h, s: s * num2, l };
         const toHslResult = tinycolorDefault(obj).toHsl();
-        return tinycolorDefault(obj).toHexString();
+        return tinycolorDefault(obj9).toHexString();
       } else {
         return null;
       }
     }
+    const obj3 = { id: null, icon: null, size: 64 };
   }
 };

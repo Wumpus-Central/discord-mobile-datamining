@@ -1,6 +1,6 @@
-// === Module 15606: HighlightNotificationsSetting ===
+// === Module 15607: HighlightNotificationsSetting ===
 
-// Module 15606 (HighlightNotificationsSetting)
+// Module 15607 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -10,8 +10,8 @@ function useHighlightNotifications() {
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
@@ -28,10 +28,9 @@ let SettingBuilders = {
       return require("UserSettingsHighlightNotifications").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
-export default SettingBuilders;
+export default route;
 export { useHighlightNotifications };

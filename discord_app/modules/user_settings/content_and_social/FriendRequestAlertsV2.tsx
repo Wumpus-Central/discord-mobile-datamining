@@ -1,13 +1,13 @@
-// === Module 11000: FriendRequestAlertsV2 ===
+// === Module 11001: FriendRequestAlertsV2 ===
 
-// Module 11000 (FriendRequestAlertsV2)
+// Module 11001 (FriendRequestAlertsV2)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: null };
-obj = { 1: null };
-obj[1] = { enabled: true };
-obj.variations = obj;
+const obj = { kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/FriendRequestAlertsV2.tsx");
 

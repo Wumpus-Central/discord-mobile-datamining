@@ -1,18 +1,17 @@
-// === Module 15547: ImageDescriptionsSetting ===
+// === Module 15548: ImageDescriptionsSetting ===
 
-// Module 15547 (ImageDescriptionsSetting)
+// Module 15548 (ImageDescriptionsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15548 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsText from "UserSettingsText" /* 15549 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
 
 require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  const obj = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode };
-  obj.setImageDescriptions(obj);
+  UserSettingsText.setImageDescriptions({ videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode });
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
@@ -23,10 +22,9 @@ let SettingBuilders = {
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;
 export { onImageDescriptionSettingValueChange };

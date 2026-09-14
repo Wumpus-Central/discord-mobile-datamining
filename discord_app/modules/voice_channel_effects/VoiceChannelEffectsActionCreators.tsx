@@ -16,20 +16,20 @@ const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceCh
 export const VoiceChannelEffectSentLocation = { EMOJI_PICKER: "emoji_picker", EFFECT_BAR: "effect_bar" };
 export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCustomCallSoundEffect(id, sound, arg2) {
   const abortController = new AbortController();
-  let obj = abortController(12);
+  const obj = abortController(12);
   let BASIC = VoiceChannelEffectsPersistedStore.getState().animationType;
   if (BASIC == null) {
     BASIC = constants.BASIC;
   }
-  obj = { animation_type: BASIC, animation_id: null };
-  const throttleResult = obj.throttle(() => {
+  const obj2 = { animation_type: BASIC, animation_id: null };
+  const throttleResult = abortController(12).throttle(() => {
     if (SelectedChannelStore.getVoiceChannelId() !== abortController) {
       abortController.abort();
     }
   }, 1000);
-  obj.animation_id = abortController(7452).sampleAnimationId(BASIC, abortController(7452).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
-  const HTTP = tmp2(1272).HTTP;
-  const request = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
+  obj2.animation_id = abortController(7452).sampleAnimationId(BASIC, abortController(7452).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
+  const HTTP = tmp2(1270).HTTP;
+  const request = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj2, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
   const tmp2Result = abortController(7452);
   HTTP.post(request).then(closure_8, () => {
 
@@ -45,9 +45,9 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
     customEmojiById = EmojiStore.getCustomEmojiById(emojiId.emojiId);
   }
   const abortController = new AbortController();
-  abortController(12);
-  const obj = { sound_id: emojiId.soundId, emoji_id: emojiId.emojiId, emoji_name: null };
+  const obj2 = { sound_id: emojiId.soundId, emoji_id: emojiId.emojiId, emoji_name: null };
   let emojiName = emojiId.emojiName;
+  const obj = abortController(12);
   if (emojiName == null) {
     let name;
     if (customEmojiById != null) {
@@ -55,23 +55,23 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
     }
     emojiName = name;
   }
-  obj.emoji_name = emojiName;
+  obj2.emoji_name = emojiName;
   if (emojiId.guildId !== DEFAULT_SOUND_GUILD_ID) {
-    obj.source_guild_id = emojiId.guildId;
+    obj2.source_guild_id = emojiId.guildId;
   }
-  const HTTP = tmp4(1272).HTTP;
+  const HTTP = tmp4(1270).HTTP;
   const request = {
     url: closure_7.SEND_SOUNDBOARD_SOUND(id),
-    body: obj,
+    body: obj2,
     signal: abortController.signal,
-    onRequestProgress: obj.throttle(() => {
+    onRequestProgress: abortController(12).throttle(() => {
       if (SelectedChannelStore.getVoiceChannelId() !== abortController) {
         abortController.abort();
       }
     }, 1000),
     rejectWithError: true
   };
-  const throttleResult = obj.throttle(() => {
+  const throttleResult = abortController(12).throttle(() => {
     if (SelectedChannelStore.getVoiceChannelId() !== abortController) {
       abortController.abort();
     }

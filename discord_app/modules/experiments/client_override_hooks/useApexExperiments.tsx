@@ -1,11 +1,11 @@
-// === Module 11614: useApexExperiments ===
+// === Module 11615: useApexExperiments ===
 
-// Module 11614 (useApexExperiments)
+// Module 11615 (useApexExperiments)
 import apex_ApexTypes from "apex/ApexTypes" /* 1436 */;
 import ExperimentManager from "ExperimentManager" /* 4557 */;
 import experiment from "experiment" /* 7997 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 
 require = fn;
 function makeClientVariant(id) {
@@ -45,30 +45,30 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
     let tmp11 = _slicedToArray(tmp9, 2);
     [tmp12, tmp14] = tmp11;
     if (null == obj[tmp12]) {
-      obj = { system: null, kind: null, name: null, title: null, variants: null };
-      obj.system = require("ExperimentManager").ExperimentSystem.APEX;
+      let obj3 = { system: null, kind: null, name: null, title: null, variants: null };
+      obj3.system = require("ExperimentManager").ExperimentSystem.APEX;
       ({ kind: obj2.kind, name: obj2.name, name: obj2.title } = tmp14);
       let _Object = Object;
       let keys = Object.keys(tmp14.variations);
-      obj.variants = keys.map((item) => {
+      obj3.variants = keys.map((item) => {
         const NumberResult = Number(item);
         obj = { id: NumberResult, label: "Variant " + NumberResult, shortLabel: "Variant " + NumberResult, type: dependencyMap(obj[3]).Variation_Type.UNSPECIFIED };
         return obj;
       });
-      obj[tmp13] = obj;
+      obj[tmp13] = obj3;
     }
     continue;
   }
   return obj;
 }
 function getApexExperimentOverridesInfo(clientOverrides) {
-  let obj = {};
+  const obj = {};
   const entries = Object.entries(clientOverrides);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { experimentId: tmp6, variantId: tmp7.variantId, originalDescriptor: tmp7 };
-    obj[tmp6] = obj;
+    let obj2 = { experimentId: tmp6, variantId: tmp7.variantId, originalDescriptor: tmp7 };
+    obj[tmp6] = obj2;
     continue;
   }
   return obj;
@@ -91,9 +91,9 @@ export const useApexExperiments = function useApexExperiments() {
   closure_3(() => {
     const apexExperimentsMetadata = stateFromStores(stateFromStores1[6]).fetchApexExperimentsMetadata(stateFromStores(stateFromStores1[3]).Experiment_Surface.APP);
   }, []);
-  let obj = stateFromStores(stateFromStores1[7]);
   const items = [ApexExperimentStore];
-  stateFromStores = obj.useStateFromStores(items, () => ApexExperimentStore.getExperimentsMetadata());
+  stateFromStores = stateFromStores(stateFromStores1[7]).useStateFromStores(items, () => ApexExperimentStore.getExperimentsMetadata());
+  const obj = stateFromStores(stateFromStores1[7]);
   const items1 = [ApexExperimentStore];
   stateFromStores1 = stateFromStores(stateFromStores1[7]).useStateFromStores(items1, () => ApexExperimentStore.getRegisteredExperiments());
   const items2 = [stateFromStores, stateFromStores1];
@@ -101,8 +101,8 @@ export const useApexExperiments = function useApexExperiments() {
   const tmp4 = closure_4(() => mergeApexExperiments(stateFromStores, stateFromStores1), items2);
   const items3 = [ApexExperimentStore];
   const stateFromStores2 = stateFromStores(stateFromStores1[7]).useStateFromStores(items3, () => ApexExperimentStore.getClientOverrides());
-  obj = { experiments: tmp4, overridesInfo: null };
+  const obj4 = { experiments: tmp4, overridesInfo: null };
   const items4 = [stateFromStores2];
-  obj.overridesInfo = closure_4(() => getApexExperimentOverridesInfo(stateFromStores2), items4);
-  return obj;
+  obj4.overridesInfo = closure_4(() => getApexExperimentOverridesInfo(stateFromStores2), items4);
+  return obj4;
 };

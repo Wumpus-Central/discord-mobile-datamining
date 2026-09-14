@@ -5,8 +5,10 @@ import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
+const require = globalThis.__r;
+
 const require = fn;
-const ApplicationTypes = fn(1350).ApplicationTypes;
+const ApplicationTypes = fn(1348).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 

@@ -5,7 +5,6 @@ import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8072 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8075 */;
-import canReplyToMessage from "canReplyToMessage" /* 8080 */;
 import size from "module_2" /* 2 */;
 
 const MessageAccessibilityAction = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };
@@ -13,7 +12,7 @@ let result = size.fileFinishedImporting("modules/messages/native/MessageAccessib
 
 export { MessageAccessibilityAction };
 export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
-  let obj = {};
+  const obj = {};
   const intl = util.intl;
   obj[intl.string(util.t.iXAna6)] = obj.VIEW_PROFILE;
   const intl2 = util.intl;
@@ -40,8 +39,8 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
       const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
         const intl9 = util.intl;
-        obj = { emojiName: result.name };
-        formatToPlainStringResult = intl9.formatToPlainString(util.t.eQIttH, obj);
+        const obj2 = { emojiName: result.name };
+        formatToPlainStringResult = intl9.formatToPlainString(util.t.eQIttH, obj2);
       }
       const tmpResult = DoubleTapToReactUtils;
     }
@@ -57,11 +56,11 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
   if (null == channel) {
     return [];
   } else {
-    let obj = { label: null, name: null };
+    const obj2 = { label: null, name: null };
     const intl6 = util.intl;
-    obj.label = intl6.string(util.t.iXAna6);
-    obj.name = obj.VIEW_PROFILE;
-    const items = [obj];
+    obj2.label = intl6.string(util.t.iXAna6);
+    obj2.name = obj.VIEW_PROFILE;
+    const items = [obj2];
     if (canAddNewReactionsDefault(channel)) {
       obj = { label: null, name: null };
       const intl = util.intl;
@@ -77,35 +76,34 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       let formatToPlainStringResult = null;
       if (true !== disableDoubleTap) {
         if (null != setting) {
-          let tmp10Result = DoubleTapToReactUtils;
-          const result = tmp10Result.disambiguatedEmojiFromSettingsValue(setting);
+          const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
             const intl3 = util.intl;
-            obj = { emojiName: result.name };
-            formatToPlainStringResult = intl3.formatToPlainString(util.t.eQIttH, obj);
+            const obj3 = { emojiName: result.name };
+            formatToPlainStringResult = intl3.formatToPlainString(util.t.eQIttH, obj3);
           }
+          const tmp10Result = DoubleTapToReactUtils;
         }
         const intl2 = util.intl;
         formatToPlainStringResult = intl2.formatToPlainString(util.t.eQIttH, { emojiName: "heart" });
       }
       if (null != formatToPlainStringResult) {
-        const obj1 = { label: formatToPlainStringResult, name: tmp12.ADD_QUICK_REACTION };
-        items.push(obj1);
+        const obj4 = { label: formatToPlainStringResult, name: tmp12.ADD_QUICK_REACTION };
+        items.push(obj4);
       }
     }
-    tmp10Result = canReplyToMessage;
-    if (tmp10Result.canReplyToMessage(channel, message)) {
-      const obj2 = { label: null, name: null };
+    if (tmp10Result2.canReplyToMessage(channel, message)) {
+      const obj5 = { label: null, name: null };
       const intl4 = util.intl;
-      obj2.label = intl4.string(util.t["5IEsGx"]);
-      obj2.name = tmp12.REPLY;
-      items.push(obj2);
+      obj5.label = intl4.string(util.t["5IEsGx"]);
+      obj5.name = tmp12.REPLY;
+      items.push(obj5);
     }
-    const obj3 = { label: null, name: null };
+    const obj6 = { label: null, name: null };
     const intl5 = util.intl;
-    obj3.label = intl5.string(util.t.ChPNkN);
-    obj3.name = obj.MESSAGE_ACTIONS_MENU;
-    items.push(obj3);
+    obj6.label = intl5.string(util.t.ChPNkN);
+    obj6.name = obj.MESSAGE_ACTIONS_MENU;
+    items.push(obj6);
     return items;
   }
 };

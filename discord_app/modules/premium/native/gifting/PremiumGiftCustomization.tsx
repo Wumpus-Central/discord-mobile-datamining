@@ -1,6 +1,6 @@
-// === Module 11177: PremiumGiftCustomization ===
+// === Module 11178: PremiumGiftCustomization ===
 
-// Module 11177 (PremiumGiftCustomization)
+// Module 11178 (PremiumGiftCustomization)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,27 +12,24 @@ get_ActivityIndicator = fn(17);
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, scrollViewContainer: null, senderHeaderTitle: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.scrollViewContainer = { paddingBottom: nativeDefault.space.PX_24 };
-let obj1 = { paddingBottom: nativeDefault.space.PX_24 };
-createStyles.senderHeaderTitle = { marginTop: nativeDefault.space.PX_24, marginLeft: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, fontSize: 14 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollViewContainer: null, senderHeaderTitle: null };
+const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.scrollViewContainer = { paddingBottom: nativeDefault.space.PX_24 };
+const obj4 = { paddingBottom: nativeDefault.space.PX_24 };
+obj2.senderHeaderTitle = { marginTop: nativeDefault.space.PX_24, marginLeft: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, fontSize: 14 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomization.tsx");
 
 export default function PremiumGiftCustomization() {
-  let obj = navigation(ref[7]);
-  navigation = obj.useNavigation();
+  navigation = navigation(ref[7]).useNavigation();
   const tmp4 = closure_11();
-  let obj1 = navigation(ref[8]);
-  const nativeGiftContext = obj1.useNativeGiftContext();
+  let obj = navigation(ref[7]);
+  const nativeGiftContext = navigation(ref[8]).useNativeGiftContext();
   ({ recipientUser, premiumType, claimableRewards, selectedGiftingPromotionReward } = nativeGiftContext);
-  let obj2 = navigation(ref[9]);
-  let obj3 = noop;
-  const giftingPromotionDefaultSelectionV2 = obj2.useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward);
+  const obj2 = navigation(ref[8]);
+  const giftingPromotionDefaultSelectionV2 = navigation(ref[9]).useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward);
   const tmp7 = _slicedToArray(noop.useState(0), 2);
   const first = tmp7[0];
   ref = noop.useRef(null);
@@ -57,33 +54,32 @@ export default function PremiumGiftCustomization() {
   }
   _slicedToArray = stringResult;
   const items1 = [navigation, stringResult];
-  const effect = obj3.useEffect(() => {
-    let obj = { title: null };
+  const effect = noop.useEffect(() => {
+    const obj = { title: null };
     const intl = util.intl;
-    obj = { nitroTierName: stringResult };
-    obj.title = intl.formatToPlainString(util.t["RMu0/q"], obj);
+    obj.title = intl.formatToPlainString(util.t["RMu0/q"], { nitroTierName: stringResult });
     navigation.setOptions(obj);
   }, items1);
-  obj = { style: tmp4.container, children: null };
-  obj = { ref, contentContainerStyle: tmp4.scrollViewContainer, showsVerticalScrollIndicator: false, children: null };
+  const obj5 = { style: tmp4.container, children: null };
+  const obj6 = { ref, contentContainerStyle: tmp4.scrollViewContainer, showsVerticalScrollIndicator: false, children: null };
   const items2 = [closure_8(first(ref[11]), {}), closure_8(first(ref[12]), {}), ];
   let tmp13Result = null != recipientUser;
   if (tmp13Result) {
-    obj1 = { children: null };
-    obj2 = { style: tmp4.senderHeaderTitle, variant: "text-md/semibold", children: null };
+    const obj7 = { children: null };
+    const obj8 = { style: tmp4.senderHeaderTitle, variant: "text-md/semibold", children: null };
     const intl3 = tmp(tmp2[10]).intl;
-    obj2.children = intl3.string(tmp(tmp2[10]).t.NlkxGS);
-    const items3 = [closure_8(tmp(tmp2[13]).Text, obj2), , ];
-    obj3 = { user: recipientUser };
-    items3[1] = closure_8(tmp17(tmp2[14]), obj3);
-    const obj4 = { onFocusMessage: callback, setMessagePosition: tmp7[1] };
-    items3[2] = closure_8(tmp17(tmp2[15]), obj4);
-    obj1.children = items3;
-    tmp13Result = closure_10(closure_9, obj1);
+    obj8.children = intl3.string(tmp(tmp2[10]).t.NlkxGS);
+    const items3 = [closure_8(tmp(tmp2[13]).Text, obj8), , ];
+    const obj9 = { user: recipientUser };
+    items3[1] = closure_8(tmp17(tmp2[14]), obj9);
+    const obj10 = { onFocusMessage: callback, setMessagePosition: tmp7[1] };
+    items3[2] = closure_8(tmp17(tmp2[15]), obj10);
+    obj7.children = items3;
+    tmp13Result = closure_10(closure_9, obj7);
   }
   items2[2] = tmp13Result;
-  obj.children = closure_10(closure_5, { children: items2 });
-  const items4 = [closure_8(closure_6, obj), closure_8(first(ref[16]), { defaultSelection: giftingPromotionDefaultSelectionV2 })];
-  obj.children = items4;
-  return closure_10(closure_5, obj);
+  obj6.children = closure_10(closure_5, { children: items2 });
+  const items4 = [closure_8(closure_6, obj6), closure_8(first(ref[16]), { defaultSelection: giftingPromotionDefaultSelectionV2 })];
+  obj5.children = items4;
+  return closure_10(closure_5, obj5);
 };

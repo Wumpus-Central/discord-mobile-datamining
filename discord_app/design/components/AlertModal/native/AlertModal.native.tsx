@@ -31,17 +31,17 @@ function dismissTopAlert() {
     tmp4 = false === first.dismissable;
   }
   if (!tmp4) {
-    let tmpResult = tmp(4982);
     let key;
     if (first != null) {
       key = first.key;
     }
-    tmpResult.dismissAlert(key);
-    tmpResult = tmp(1249);
-    tmpResult.batchUpdates(() => {
+    tmp(4982).dismissAlert(key);
+    const tmpResult = tmp(4982);
+    tmp(1247).batchUpdates(() => {
       const useAlertStore = context(context2[10]).useAlertStore;
       return useAlertStore.setState({ alerts });
     });
+    const tmpResult2 = tmp(1247);
   }
 }
 function AlertModalBackdrop() {
@@ -49,8 +49,7 @@ function AlertModalBackdrop() {
   const tmp2 = _slicedToArray(useSharedAnimationState(), 2);
   const sharedTransitionState = tmp2[0];
   dependencyMap = tmp4;
-  let __closure = context(4982);
-  const alertStore = __closure.useAlertStore((arg0) => {
+  const alertStore = context(4982).useAlertStore((arg0) => {
     const first = arg0.alerts[0];
     let dismissable;
     if (first != null) {
@@ -58,10 +57,11 @@ function AlertModalBackdrop() {
     }
     return false !== dismissable;
   });
+  let obj = context(4982);
   let fn = function t() {
     value = closure_2.get();
     if (typeof withAlertModalSpring === "function") {
-      obj = { opacity: null };
+      let obj = { opacity: null };
       const fn = (arg0) => {
         let tmp = true === arg0;
         if (tmp) {
@@ -73,30 +73,30 @@ function AlertModalBackdrop() {
         }
         if (tmp) {
           context(closure_2[11]).runOnJS(closure_1_0)();
-          obj = context(closure_2[11]);
+          const obj = context(closure_2[11]);
         }
       };
       const obj2 = spring;
-      obj.opacity = obj2.withSpring(value, obj, "animate-always", fn);
+      obj.opacity = obj2.withSpring(value, obj3, "animate-always", fn);
       return obj;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  __closure = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState, TransitionStates: context(4347).TransitionStates, runOnJS: context(4373).runOnJS, cleanUp: context };
-  fn.__closure = __closure;
+  let obj2 = context(4373);
+  fn.__closure = { withAlertModalSpring, sharedVisible: tmp2[1], sharedTransitionState, TransitionStates: context(4347).TransitionStates, runOnJS: context(4373).runOnJS, cleanUp: context };
   fn.__workletHash = 4470729133936;
   fn.__initData = __initData;
-  const animatedStyle = context(4373).useAnimatedStyle(fn);
-  __closure = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj4 = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
   let tmp10 = null;
   if (alertStore) {
     tmp10 = dismissTopAlert;
   }
-  __closure.onDismiss = tmp10;
+  obj4.onDismiss = tmp10;
   const intl = tmp5(1114).intl;
-  __closure.accessibilityLabel = intl.string(context(1114).t.Xkfav5);
-  return closure_10(context(5044).Backdrop, __closure);
+  obj4.accessibilityLabel = intl.string(context(1114).t.Xkfav5);
+  return closure_10(context(5044).Backdrop, obj4);
 }
 class AlertModal {
   constructor(arg0) {
@@ -140,8 +140,8 @@ class AlertModal {
     items[0] = context1;
     effect = closure_6.useEffect(() => {
       if (0 === context1) {
-        obj = { ref, delay: 300 };
-        const result = obj.setAccessibilityFocus(obj);
+        const obj2 = { ref, delay: 300 };
+        const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
       }
     }, items);
     height = closure_1(closure_2[21])().height;
@@ -154,7 +154,7 @@ class AlertModal {
         result = 2 * Math.max(top, bottom);
         value = closure_7.get();
         if (typeof withAlertModalSpring === "function") {
-          obj = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
+          obj1 = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
           tmp5 = closure_0;
           tmp6 = closure_2;
           fn = (arg0) => {
@@ -168,7 +168,7 @@ class AlertModal {
             }
             if (tmp) {
               context(context2[11]).runOnJS(closure_1_0)();
-              obj = context(context2[11]);
+              const obj = context(context2[11]);
             }
           };
           obj3 = closure_0(closure_2[25]);
@@ -178,18 +178,18 @@ class AlertModal {
           tmp9 = value;
           tmp10 = closure_14;
           str2 = "animate-always";
-          obj.opacity = obj3.withSpring(value, closure_14, "animate-always", fn);
+          obj1.opacity = obj3.withSpring(value, closure_14, "animate-always", fn);
           obj4 = closure_5;
           num = 10;
-          obj.zIndex = 10 - closure_5.get();
+          obj1.zIndex = 10 - closure_5.get();
           num2 = 0;
           str3 = "auto";
           if (closure_5.get() > 0) {
             tmp11 = closure_2;
             str3 = closure_2.get();
           }
-          obj.height = str3;
-          obj.maxHeight = diff - result;
+          obj1.height = str3;
+          obj1.maxHeight = diff - result;
           tmp12 = enabled;
           if (enabled) {
             items = [];
@@ -201,15 +201,15 @@ class AlertModal {
               num3 = 1 - 0.1 * obj4.get();
             }
             if (typeof tmp3 === "function") {
-              obj1 = { scale: null };
+              obj9 = { scale: null };
               tmp5Result = tmp5(tmp6[25]);
               tmp13 = tmp5Result;
               tmp14 = num3;
               tmp15 = tmp7;
               str4 = "animate-always";
-              obj1.scale = tmp5Result.withSpring(num3, tmp7, "animate-always", undefined);
+              obj9.scale = tmp5Result.withSpring(num3, tmp7, "animate-always", undefined);
               items = [, ];
-              items[0] = obj1;
+              items[0] = obj9;
               if (1 === obj.get()) {
                 result1 = [0, -20, -34][obj4.get(obj4)];
                 tmp18 = null;
@@ -223,14 +223,14 @@ class AlertModal {
                 diff1 = 50 - 50 * obj4.get();
               }
               if (typeof tmp3 === "function") {
-                obj2 = { translateY: null };
+                obj10 = { translateY: null };
                 tmp5Result1 = tmp5(tmp6[25]);
                 tmp19 = tmp5Result1;
                 tmp20 = diff1;
                 tmp21 = tmp7;
                 str5 = "animate-always";
-                obj2.translateY = tmp5Result1.withSpring(diff1, tmp7, "animate-always", undefined);
-                items[1] = obj2;
+                obj10.translateY = tmp5Result1.withSpring(diff1, tmp7, "animate-always", undefined);
+                items[1] = obj10;
               } else {
                 str8 = "Trying to call a non-function";
                 throw new TypeError("Trying to call a non-function");
@@ -240,16 +240,16 @@ class AlertModal {
               throw new TypeError("Trying to call a non-function");
             }
           }
-          obj.transform = items;
-          return obj;
+          obj1.transform = items;
+          return obj1;
         } else {
           str6 = "Trying to call a non-function";
           throw new TypeError("Trying to call a non-function");
         }
       }
     }
-    obj = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: closure_0(closure_2[9]).TransitionStates, runOnJS: closure_0(closure_2[11]).runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
-    B.__closure = obj;
+    obj1 = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: closure_0(closure_2[9]).TransitionStates, runOnJS: closure_0(closure_2[11]).runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
+    B.__closure = obj1;
     B.__workletHash = 655123755546;
     B.__initData = closure_24;
     items1 = [, ];
@@ -269,17 +269,17 @@ class AlertModal {
         tmp4 = false === first.dismissable;
       }
       if (!tmp4) {
-        let tmpResult = tmp(context2[10]);
         let key;
         if (first != null) {
           key = first.key;
         }
-        tmpResult.dismissAlert(key);
-        tmpResult = tmp(context2[15]);
-        tmpResult.batchUpdates(() => {
+        tmp(context2[10]).dismissAlert(key);
+        const tmpResult = tmp(context2[10]);
+        tmp(context2[15]).batchUpdates(() => {
           const useAlertStore = context(context2[10]).useAlertStore;
           return useAlertStore.setState({ alerts });
         });
+        const tmpResult2 = tmp(context2[15]);
       }
       return true;
     });
@@ -288,7 +288,7 @@ class AlertModal {
     if (0 === context1) {
       str = "auto";
     }
-    obj1 = {
+    obj10 = {
       importantForAccessibility: str,
       accessibilityElementsHidden: 0 !== context1,
       style: null,
@@ -300,17 +300,17 @@ class AlertModal {
     items2 = [, ];
     items2[0] = tmp3.content;
     items2[1] = animatedStyle;
-    obj1.style = items2;
-    obj2 = { style: tmp3.overflow, children: null };
+    obj10.style = items2;
+    obj11 = { style: tmp3.overflow, children: null };
     tmp19 = jsxs;
     tmp17 = bottom;
     tmp18 = closure_7;
     items3 = [, , , ];
     items3[0] = header;
-    obj3 = { spacing: 8, style: null, children: null };
+    obj12 = { spacing: 8, style: null, children: null };
     items4 = [];
     items4[0] = tmp3.body;
-    obj3.style = items4;
+    obj12.style = items4;
     items5 = [, ];
     items5[0] = tmp16(tmp5(tmp6[24]).Text, { ref, variant: "heading-lg/bold", accessibilityRole: "header", color: "mobile-text-heading-primary", children: title });
     tmp16Result = null;
@@ -318,33 +318,32 @@ class AlertModal {
       str2 = "";
       tmp16Result = null;
       if ("" !== content) {
-        obj4 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-        obj4.style = tmp3.contentText;
-        obj4.children = content;
-        tmp16Result = tmp16(tmp5(tmp6[24]).Text, obj4);
+        obj13 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
+        obj13.style = tmp3.contentText;
+        obj13.children = content;
+        tmp16Result = tmp16(tmp5(tmp6[24]).Text, obj13);
       }
     }
     items5[1] = tmp16Result;
-    obj3.children = items5;
-    items3[1] = tmp19(tmp5(tmp6[23]).Stack, obj3);
+    obj12.children = items5;
+    items3[1] = tmp19(tmp5(tmp6[23]).Stack, obj12);
     items3[2] = extraContent;
     tmp16Result1 = null;
     if (null != actions) {
       tmp22 = AlertActions;
-      obj5 = { children: null };
-      obj5.children = actions;
-      tmp16Result1 = tmp16(AlertActions, obj5);
+      obj14 = { children: null };
+      obj14.children = actions;
+      tmp16Result1 = tmp16(AlertActions, obj14);
     }
-    obj6 = { alwaysBounceVertical: false, children: null };
+    obj15 = { alwaysBounceVertical: false, children: null };
     items3[3] = tmp16Result1;
-    obj2.children = tmp19(tmp5(tmp6[23]).Stack, { spacing: 24, children: items3 });
-    obj6.children = tmp16(tmp18, obj2);
-    obj1.children = tmp16(tmp17, obj6);
-    return tmp16(closure_1(closure_2[11]).View, obj1);
+    obj11.children = tmp19(tmp5(tmp6[23]).Stack, { spacing: 24, children: items3 });
+    obj15.children = tmp16(tmp18, obj11);
+    obj10.children = tmp16(tmp17, obj15);
+    return tmp16(closure_1(closure_2[11]).View, obj10);
   }
 }
 function useSharedAnimationState() {
-  let __closure = noop;
   const context = noop.useContext(closure_15);
   const context1 = noop.useContext(closure_16);
   let num = 0;
@@ -352,13 +351,13 @@ function useSharedAnimationState() {
     num = 1;
   }
   sharedValue = context(sharedValue[11]).useSharedValue(num);
-  let tmp3Result = tmp3(tmp4[11]);
-  const sharedValue1 = tmp3Result.useSharedValue(context);
+  const obj2 = context(sharedValue[11]);
+  const sharedValue1 = context(sharedValue[11]).useSharedValue(context);
   const items = [sharedValue, context, sharedValue1];
-  const layoutEffect = __closure.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue1.set(context);
   }, items);
-  tmp3Result = tmp3(tmp4[11]);
+  const tmp3Result = context(sharedValue[11]);
   const fn = function n() {
     return sharedValue1.get();
   };
@@ -377,11 +376,11 @@ function useSharedAnimationState() {
       const result1 = sharedValue.set(1);
     }
   };
-  __closure = { TransitionStates: tmp3(tmp4[9]).TransitionStates, sharedVisible: sharedValue, runOnJS: tmp3(tmp4[11]).runOnJS, cleanUp: context1 };
-  fn2.__closure = __closure;
+  const tmp3Result2 = context(sharedValue[11]);
+  fn2.__closure = { TransitionStates: context(sharedValue[9]).TransitionStates, sharedVisible: sharedValue, runOnJS: context(sharedValue[11]).runOnJS, cleanUp: context1 };
   fn2.__workletHash = 9486923983340;
   fn2.__initData = __initData4;
-  const animatedReaction = tmp3Result.useAnimatedReaction(fn, fn2);
+  const animatedReaction = tmp3Result2.useAnimatedReaction(fn, fn2);
   const items1 = [sharedValue1, sharedValue];
   return items1;
 }
@@ -416,8 +415,8 @@ class AlertActionButton {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -430,8 +429,8 @@ class AlertActionButton {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               let tmp11;
               if (closure_0 != null) {
@@ -443,20 +442,20 @@ class AlertActionButton {
                   c3 = 1;
                   c2 = 2;
                   c4 = 1;
-                  const obj1 = { value: tmp11, done: false };
-                  return obj1;
+                  const obj5 = { value: tmp11, done: false };
+                  return obj5;
                 }
               }
-              let obj2 = closure_0(closure_2[10]);
-              obj2.dismissAlert(c2);
+              closure_0(dependencyMap[10]).dismissAlert(c2);
               c4 = 3;
+              obj3 = closure_0(dependencyMap[10]);
             }
           } else if (1 === tmp7) {
             c3 = 0;
             tmp3(false);
             c4 = 3;
-            obj2 = { value: undefined, done: true };
-            return obj2;
+            const obj6 = { value: undefined, done: true };
+            return obj6;
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -465,7 +464,7 @@ class AlertActionButton {
           }
           c3 = 0;
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp19) {
           if (tmp4 === c3) {
@@ -494,16 +493,16 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, StyleSheet: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-let createStyles = fn(4636);
-let MODAL_SPRING = { root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 }, content: null, overflow: null, body: null, contentText: null };
+const createStyles = fn(4636);
+let obj = { root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 }, content: null, overflow: null, body: null, contentText: null };
 let size = { backgroundColor: nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
-MODAL_SPRING.content = size;
-MODAL_SPRING.overflow = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
-MODAL_SPRING.body = { alignItems: "center" };
-MODAL_SPRING.contentText = { textAlign: "center" };
-createStyles.createStyles(MODAL_SPRING);
-MODAL_SPRING = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
+obj.content = size;
+obj.overflow = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
+obj.body = { alignItems: "center" };
+obj.contentText = { textAlign: "center" };
+createStyles.createStyles(obj);
+let obj3 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
 let context = noop.createContext(fn(4347).TransitionStates.YEETED);
 let context2 = noop.createContext(fn(1085).NOOP);
 const context3 = noop.createContext(0);
@@ -512,11 +511,10 @@ const context5 = noop.createContext(null);
 const __initData = { code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let __initData4 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}" };
 function withAlertModalSpring(value, fn) {
-  obj = spring;
-  return obj.withSpring(value, obj, "animate-always", fn);
+  return spring.withSpring(value, obj3, "animate-always", fn);
 }
-createStyles = { withSpring: fn(5055).withSpring, MODAL_SPRING };
-withAlertModalSpring.__closure = createStyles;
+let obj4 = { withSpring: fn(5055).withSpring, MODAL_SPRING: obj3 };
+withAlertModalSpring.__closure = obj4;
 withAlertModalSpring.__workletHash = 15556562210180;
 withAlertModalSpring.__initData = { code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}" };
 const __initData3 = { code: "function AlertModalNativeTsx4(){const{sharedTransitionState}=this.__closure;return sharedTransitionState.get();}" };
@@ -527,8 +525,10 @@ let result = size.fileFinishedImporting("design/components/AlertModal/native/Ale
 export const AlertModalContainer = noop.memo(() => {
   const tmp = closure_13();
   let items = tmp;
-  obj = items(items[10]);
-  const alertStore = obj.useAlertStore((alerts) => alerts.alerts);
+  const alertStore = items(items[10]).useAlertStore((alerts) => alerts.alerts);
+  let obj = items(items[10]);
+  const tmp2 = items;
+  const tmp3 = items;
   const sharedValue = items(items[11]).useSharedValue(0);
   items = undefined;
   if (0 === alertStore.length) {
@@ -549,10 +549,9 @@ export const AlertModalContainer = noop.memo(() => {
   const items2 = [tmp];
   const items3 = [sharedValue];
   const callback = noop.useCallback((children) => {
-    obj = { style: absoluteFillObject.absoluteFillObject, children: null };
-    obj = { onDismiss: dismissTopAlert, children: closure_2_10(Dialog.Dialog, obj) };
-    obj = { style: items.root, pointerEvents: "box-none", children };
-    obj.children = closure_2_10(React5, obj);
+    const obj = { style: absoluteFillObject.absoluteFillObject, children: null };
+    const obj2 = { onDismiss: dismissTopAlert, children: closure_2_10(React5, { style: items.root, pointerEvents: "box-none", children }) };
+    obj.children = closure_2_10(Dialog.Dialog, obj2);
     return closure_2_10(OverlayViewDefault, obj);
   }, items2);
   const callback1 = noop.useCallback((value, type, value2, value3) => {
@@ -565,17 +564,16 @@ export const AlertModalContainer = noop.memo(() => {
     if ("alert" === type.type) {
       num = type.index;
     }
-    obj = { value: sharedValue, children: null };
-    obj = { value: value3, children: null };
-    obj = { value: value2, children: null };
-    const obj1 = { value: num, children: closure_2_10(redux4.Provider, { value, children: closure_2_10(noop.Suspense, { fallback: null, children: node }) }) };
-    obj.children = closure_2_10(redux3.Provider, obj1);
-    obj.children = closure_2_10(redux.Provider, obj);
-    obj.children = closure_2_10(redux2.Provider, obj);
+    const obj = { value: sharedValue, children: null };
+    const obj2 = { value: value3, children: null };
+    obj3 = { value: value2, children: null };
+    const obj4 = { value: num, children: closure_2_10(redux4.Provider, { value, children: closure_2_10(noop.Suspense, { fallback: null, children: node }) }) };
+    obj3.children = closure_2_10(redux3.Provider, obj4);
+    obj2.children = closure_2_10(redux.Provider, obj3);
+    obj.children = closure_2_10(redux2.Provider, obj2);
     return closure_2_10(redux5.Provider, obj, value);
   }, items3);
-  obj = { wrapChildren: callback, items, renderItem: callback1, getItemKey: getAlertModalItemKey };
-  return closure_10(items(items[9]).TransitionGroup, obj);
+  return closure_10(tmp2(tmp3[9]).TransitionGroup, { wrapChildren: callback, items, renderItem: callback1, getItemKey: getAlertModalItemKey });
 });
 export const useDismissModalCallback = function useDismissModalCallback() {
   const context = noop.useContext(closure_18);
@@ -599,11 +597,11 @@ export const showConfirmModal = function showConfirmModal(arg0) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  obj = { title, content, extraContent, actions: null };
-  obj = { children: null };
+  const obj2 = { title, content, extraContent, actions: null };
+  obj3 = { children: null };
   const items = [closure_1_10(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), closure_1_10(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];
-  obj.children = items;
-  obj.actions = closure_1_11(closure_1_12, obj);
-  obj.openAlert(key, closure_1_10(AlertModal, obj), onCloseCallback, { dismissable });
-  const obj1 = { dismissable };
+  obj3.children = items;
+  obj2.actions = closure_1_11(closure_1_12, obj3);
+  useAlertStore2.openAlert(key, closure_1_10(AlertModal, obj2), onCloseCallback, { dismissable });
+  const obj4 = { dismissable };
 };

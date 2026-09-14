@@ -1,20 +1,22 @@
-// === Module 11609: MessagesHooks ===
+// === Module 11610: MessagesHooks ===
 
-// Module 11609 (MessagesHooks)
+// Module 11610 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7266 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7837 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11610 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11611 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11611 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11441 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11442 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
@@ -124,8 +126,8 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   ({ updateRows: findNodeHandle, scrollToMessageId: VoiceChannelStartTimeStore } = screenIndex);
   const effect = screenIndex.useEffect(() => {
-    const obj = { messages, isMessagesReady, oldestUnreadMessageId, channelId, screenIndex, updateRows, scrollToMessageId };
-    obj.syncMessageDisplay(obj);
+    messages_MessagesUtils.syncMessageDisplay({ messages, isMessagesReady, oldestUnreadMessageId, channelId, screenIndex, updateRows, scrollToMessageId });
+    const obj2 = { messages, isMessagesReady, oldestUnreadMessageId, channelId, screenIndex, updateRows, scrollToMessageId };
     messages_MessagesUtils.recordTimings(channelId, messages);
   }, []);
   const items = [channelId, screenIndex];
@@ -169,7 +171,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
   return memo;
 };
 export const useMessagesState = function useMessagesState() {
-  [tmp2, tmp3] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, tmp3] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   return { shouldForceRender: tmp2, hasJumpedToOriginalPost: tmp4[0], setHasJumpedToOriginalPost: tmp4[1], setShouldForceRender: tmp3 };
 };

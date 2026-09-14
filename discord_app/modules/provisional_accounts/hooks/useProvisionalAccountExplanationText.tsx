@@ -1,9 +1,9 @@
-// === Module 12758: useProvisionalAccountExplanationText ===
+// === Module 12759: useProvisionalAccountExplanationText ===
 
-// Module 12758 (useProvisionalAccountExplanationText)
+// Module 12759 (useProvisionalAccountExplanationText)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12759 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12760 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export const useProvisionalAccountExplanationText = function useProvisionalAccou
   return noop.useMemo(() => {
     if (null != closure_1) {
       const intl = util.intl;
-      let obj = {
+      const obj = {
         helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
         applicationName() {
             return renderApplicationName(closure_1_1);
@@ -28,8 +28,8 @@ export const useProvisionalAccountExplanationText = function useProvisionalAccou
       let formatResult = intl.format(util.t.rSUACb, obj);
     } else {
       const intl2 = util.intl;
-      obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
-      formatResult = intl2.format(util.t["q+N8L6"], obj);
+      const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
+      formatResult = intl2.format(util.t["q+N8L6"], obj3);
     }
     return formatResult;
   }, items);

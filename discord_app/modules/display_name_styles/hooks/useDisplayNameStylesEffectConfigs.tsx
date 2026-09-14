@@ -1,10 +1,10 @@
-// === Module 11030: useDisplayNameStylesEffectConfigs ===
+// === Module 11031: useDisplayNameStylesEffectConfigs ===
 
-// Module 11030 (useDisplayNameStylesEffectConfigs)
+// Module 11031 (useDisplayNameStylesEffectConfigs)
 import util from "util" /* 1114 */;
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 11031 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 11032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,18 +27,16 @@ export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEff
   const items = [effectId, tmp];
   return noop.useMemo(() => {
     const intl = util.intl;
-    let OpWJ3f = previewStyles[effectId];
+    let OpWJ3f = obj[effectId];
     if (OpWJ3f == null) {
       OpWJ3f = _modDef2786.OpWJ3f;
     }
-    previewStyles = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: null, minContrastRatio: null };
-    previewStyles = { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors };
-    previewStyles.previewStyles = previewStyles;
+    obj = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors }, minContrastRatio: null };
     let num = closure_5[effectId];
     if (num == null) {
       num = 3;
     }
-    previewStyles.minContrastRatio = num;
-    return previewStyles;
+    obj.minContrastRatio = num;
+    return obj;
   }, items);
 };

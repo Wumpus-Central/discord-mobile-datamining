@@ -6,14 +6,14 @@ import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamResolutions = StreamSettingsConstants.ApplicationStreamResolutions;
-let obj = { videoPresetResolutionMax: ApplicationStreamResolutions.RESOLUTION_1440 };
-obj = { name: "2026-02-go-live-video-preset-resolution", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null };
-const obj1 = {};
+const obj = { videoPresetResolutionMax: ApplicationStreamResolutions.RESOLUTION_1440 };
+const obj2 = { name: "2026-02-go-live-video-preset-resolution", kind: "user", defaultConfig: obj, variations: null };
+const obj3 = { 1: null };
+const obj4 = {};
 const merged = Object.assign(obj);
-obj1.videoPresetResolutionMax = ApplicationStreamResolutions.RESOLUTION_1080;
-obj[1] = obj1;
-obj.variations = obj;
+obj4.videoPresetResolutionMax = ApplicationStreamResolutions.RESOLUTION_1080;
+obj3[1] = obj4;
+obj2.variations = obj3;
 const result = size.fileFinishedImporting("modules/go_live/GoLiveVideoPresetResolutionExperiment.tsx");
 
-export default ApexExperiment(obj);
+export default ApexExperiment(obj2);

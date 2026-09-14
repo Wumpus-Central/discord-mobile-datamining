@@ -1,6 +1,6 @@
-// === Module 15098: useVisibilityTransition ===
+// === Module 15099: useVisibilityTransition ===
 
-// Module 15098 (useVisibilityTransition)
+// Module 15099 (useVisibilityTransition)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -19,7 +19,6 @@ export const useVisibilityTransition = function useVisibilityTransition(visible)
   noop = undefined;
   __initData = undefined;
   let num;
-  let obj = noop;
   const tmp = exitTiming(noop.useState(false), 2);
   noop = tmp2;
   const tmp3 = exitTiming(noop.useState(visible), 2);
@@ -29,34 +28,35 @@ export const useVisibilityTransition = function useVisibilityTransition(visible)
       tmp2(true);
     }
   }
-  __initData = obj.useCallback(() => {
+  __initData = noop.useCallback(() => {
     closure_3(false);
   }, []);
   num = 0;
   if (visible) {
     num = 1;
   }
-  obj = { opacityStyle: null, shouldRender: null };
+  let obj2 = { opacityStyle: null, shouldRender: null };
   let fn = function k() {
-    let obj = { opacity: null };
+    const obj2 = { opacity: null };
     const fn = function n() {
       visible(entranceTiming[2]).runOnJS(callback)();
     };
-    obj = { runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread };
-    fn.__closure = obj;
+    const obj = timing;
+    const tmp4 = visible ? entranceTiming : exitTiming;
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, animationCallbackJSThread };
     fn.__workletHash = 11904317879470;
     fn.__initData = __initData;
-    obj.opacity = obj.withTiming(num, visible ? entranceTiming : exitTiming, "respect-motion-settings", fn);
-    return obj;
+    obj2.opacity = obj.withTiming(num, tmp4, "respect-motion-settings", fn);
+    return obj2;
   };
-  obj = { withTiming: visible(entranceTiming[3]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: __initData };
-  fn.__closure = obj;
+  const obj3 = visible(entranceTiming[2]);
+  fn.__closure = { withTiming: visible(entranceTiming[3]).withTiming, visibility: num, visible, entranceTiming, exitTiming, runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: __initData };
   fn.__workletHash = 12648900540770;
   fn.__initData = __initData;
-  obj.opacityStyle = visible(entranceTiming[2]).useAnimatedStyle(fn);
+  obj2.opacityStyle = obj3.useAnimatedStyle(fn);
   if (!visible) {
     visible = tmp[0];
   }
-  obj.shouldRender = visible;
-  return obj;
+  obj2.shouldRender = visible;
+  return obj2;
 };

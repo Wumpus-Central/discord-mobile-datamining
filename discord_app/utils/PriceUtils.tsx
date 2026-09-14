@@ -2,7 +2,7 @@
 
 // Module 7337 (PriceUtils)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import utils_PriceUtils from "utils/PriceUtils" /* 7338 */;
 import IAPStore from "IAPStore" /* 7340 */;
@@ -16,7 +16,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   if (localeOverride == null) {
     obj = {};
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
   localeOverride = undefined;
   if (localeOverride != null) {
@@ -31,7 +31,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     hasItem = closure_6.includes(LocaleStore.systemLocale);
   }
   if (hasItem) {
-    obj.currencyDisplay = "code";
+    obj2.currencyDisplay = "code";
   }
   if (isWindowsResult) {
     isWindowsResult = PlatformUtils.isWindows();
@@ -40,12 +40,12 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     isWindowsResult = "en-GB" === LocaleStore.systemLocale;
   }
   if (isWindowsResult) {
-    obj.currencyDisplay = "code";
+    obj2.currencyDisplay = "code";
   }
   if (tmp11) {
-    obj.minimumFractionDigits = 0;
+    obj2.minimumFractionDigits = 0;
   }
-  return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj);
+  return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj2);
 }
 function formatPrice(result, str, localeOverride) {
   const timestamp = Date.now();
@@ -88,20 +88,20 @@ function formatPrice(result, str, localeOverride) {
 function formatRate(priceString, interval, intervalCount) {
   if (interval === SubscriptionIntervalTypes.YEAR) {
     const intl3 = util.intl;
-    let obj = { price: priceString };
-    return intl3.formatToPlainString(util.t["rS8FA+"], obj);
+    const obj2 = { price: priceString };
+    return intl3.formatToPlainString(util.t["rS8FA+"], obj2);
   } else {
     if (interval === SubscriptionIntervalTypes.MONTH) {
       if (1 === intervalCount) {
         const intl2 = util.intl;
-        obj = { price: priceString };
-        return intl2.formatToPlainString(util.t.AbOLNu, obj);
+        const obj3 = { price: priceString };
+        return intl2.formatToPlainString(util.t.AbOLNu, obj3);
       }
     }
     if (interval === SubscriptionIntervalTypes.MONTH) {
       if (intervalCount > 1) {
         const intl = util.intl;
-        obj = { price: priceString, intervalCount };
+        const obj = { price: priceString, intervalCount };
         return intl.formatToPlainString(util.t["Qc+9ww"], obj);
       }
     }

@@ -6,6 +6,8 @@ import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 897
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8977 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 

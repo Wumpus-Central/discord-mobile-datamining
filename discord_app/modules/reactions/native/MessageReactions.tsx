@@ -1,6 +1,6 @@
-// === Module 11388: MessageReactions ===
+// === Module 11389: MessageReactions ===
 
-// Module 11388 (MessageReactions)
+// Module 11389 (MessageReactions)
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import noop from "module_19" /* 19 */;
@@ -21,10 +21,10 @@ export default function MessageReactions(emoji) {
   let items3;
   closure_129_0 = channelId;
   closure_129_1 = messageId;
-  let obj = items3(504);
+  const tmp3 = useAnalyticsLocationsDefault;
   const items = [MessageStore];
   const items1 = [channelId, messageId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = items3(504).useStateFromStores(items, () => {
     const message = MessageStore.getMessage(items3, importDefault);
     return null != message ? message.reactions : closure_6;
   }, items1);
@@ -49,29 +49,29 @@ export default function MessageReactions(emoji) {
   const item = arr4.forEach((burst_count) => {
     if (burst_count.burst_count > 0) {
       if (burst_count.count > 0) {
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(burst_count);
-        obj.count = 0;
-        items3.push(obj);
-        obj = {};
+        obj2.count = 0;
+        items3.push(obj2);
+        const obj3 = {};
         const merged1 = Object.assign(burst_count);
-        obj.burst_count = 0;
-        items3.push(obj);
+        obj3.burst_count = 0;
+        items3.push(obj3);
       }
     }
-    obj = {};
     const merged2 = Object.assign(burst_count);
-    items3.push(obj);
+    items3.push({});
+    const obj = {};
   });
   const sorted = items3.sort((burst_count, burst_count2) => (burst_count2.burst_count > 0 ? burst_count2.burst_count : burst_count2.count) - (burst_count.burst_count > 0 ? burst_count.burst_count : burst_count.count));
-  obj = { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null };
+  let obj2 = { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null };
   if (items3.length > 0) {
-    obj = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
+    let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = jsx(tmp4(11389).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
+    let tmp9Result = jsx(tmp4(11390).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
   } else {
-    tmp9Result = jsx(tmp4(11389).MessageReactionsEmpty, {});
+    tmp9Result = jsx(tmp4(11390).MessageReactionsEmpty, {});
   }
-  obj.children = tmp9Result;
-  return jsx(items3(7265).AnalyticsLocationProvider, { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });
+  obj2.children = tmp9Result;
+  return jsx(items3(7265).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });
 };

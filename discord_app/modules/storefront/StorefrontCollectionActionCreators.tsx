@@ -18,8 +18,8 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -32,8 +32,8 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -69,8 +69,8 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_129_4 = closure_129_0.filter((item) => {
               if (Boolean(item)) {
@@ -93,44 +93,43 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {
             });
             if (0 !== closure_129_4.length) {
               c4 = 1;
-              let obj5 = closure_130_1(closure_130_2[6]);
-              const obj2 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH", collectionIds: closure_129_4 };
-              obj5.dispatch(obj2);
-              let obj7 = closure_130_0(closure_130_2[7]);
+              const obj7 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH", collectionIds: closure_129_4 };
+              closure_130_1(closure_130_2[6]).dispatch(obj7);
+              const obj6 = closure_130_1(closure_130_2[6]);
               const request = { url: closure_130_7.STOREFRONT_COLLECTIONS_WITH_PRODUCTS, query: null, rejectWithError: true };
-              let obj3 = { collection_ids: closure_129_4, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: closure_129_1, include_unpublished_collections: closure_129_2, ignore_cache: closure_129_3 };
-              request.query = obj3;
+              const obj9 = { collection_ids: closure_129_4, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: closure_129_1, include_unpublished_collections: closure_129_2, ignore_cache: closure_129_3 };
+              request.query = obj9;
               c5 = 3;
               c6 = 1;
-              const obj4 = { value: obj7.httpGetWithCountryCodeQuery(request), done: false };
-              return obj4;
+              const obj10 = { value: closure_130_0(closure_130_2[7]).httpGetWithCountryCodeQuery(request), done: false };
+              return obj10;
             }
           }
         } else {
           if (2 === tmp7) {
             c4 = 0;
             closure_129_6 = closure_3;
-            obj3 = closure_130_1(closure_130_2[6]);
-            obj5 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE", collectionIds: closure_129_4, apiError: null };
+            const obj11 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE", collectionIds: closure_129_4, apiError: null };
             const tmp28 = new closure_130_1(closure_130_2[8])(closure_129_6);
-            obj5.apiError = tmp28;
-            obj3.dispatch(obj5);
+            obj11.apiError = tmp28;
+            closure_130_1(closure_130_2[6]).dispatch(obj11);
+            const obj4 = closure_130_1(closure_130_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_5 = value;
-            obj = closure_130_1(closure_130_2[6]);
-            const obj6 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS", collectionIds: closure_129_4, collections: null };
+            const obj12 = { type: "STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS", collectionIds: closure_129_4, collections: null };
             const collections = closure_129_5.body.collections;
-            obj6.collections = collections.map(closure_130_6.fromServer);
-            obj.dispatch(obj6);
+            obj12.collections = collections.map(closure_130_6.fromServer);
+            closure_130_1(closure_130_2[6]).dispatch(obj12);
             c4 = 0;
+            let obj = closure_130_1(closure_130_2[6]);
           }
           c4 = 0;
           c6 = 3;
-          obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         }
         c6 = 3;
       }
@@ -183,8 +182,8 @@ let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -197,8 +196,8 @@ let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -234,10 +233,9 @@ let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
             const tmp29 = getCollectionPageKey(_require);
             closure_129_1 = tmp29;
             closure_129_2 = getCollectionListKey(_require);
-            let obj3 = collectionPageFetchState;
             collectionPageFetchState = collectionPageFetchState.getCollectionPageFetchState(tmp29);
             if ("loading" !== collectionPageFetchState) {
-              const collectionPageFetchedAt = obj3.getCollectionPageFetchedAt(tmp29);
+              const collectionPageFetchedAt = obj4.getCollectionPageFetchedAt(tmp29);
               if (!tmp27) {
                 if (null != collectionPageFetchedAt) {
                   if ("error" === collectionPageFetchState) {
@@ -253,44 +251,44 @@ let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                 }
               }
               c4 = 1;
-              let obj4 = DispatcherDefault;
-              let obj1 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: tmp29 };
-              obj4.dispatch(obj1);
+              const obj8 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH", pageKey: tmp29 };
+              DispatcherDefault.dispatch(obj8);
               const request = { url: constants.STOREFRONT_COLLECTIONS_FOR_APPLICATION, query: null, rejectWithError: true };
-              const obj2 = { application_id: applicationId, use_shop_ordering: tmp24, offset, limit, include_pricing: true, locale: locale.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: tmp25, include_unpublished_collections: tmp26, ignore_cache: tmp27 };
-              request.query = obj2;
+              const obj9 = { application_id: applicationId, use_shop_ordering: tmp24, offset, limit, include_pricing: true, locale: locale.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: tmp25, include_unpublished_collections: tmp26, ignore_cache: tmp27 };
+              request.query = obj9;
               c5 = 2;
               c6 = 1;
-              obj3 = { value: StoreUtils.httpGetWithCountryCodeQuery(request), done: false };
-              return obj3;
+              const obj10 = { value: StoreUtils.httpGetWithCountryCodeQuery(request), done: false };
+              return obj10;
             }
+            obj4 = collectionPageFetchState;
           }
         }
       } else {
         if (1 === tmp8) {
           c4 = 0;
           closure_129_4 = closure_3;
-          obj1 = closure_130_1(closure_130_2[6]);
-          obj4 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE", pageKey: closure_129_1, apiError: null };
+          const obj11 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE", pageKey: closure_129_1, apiError: null };
           const tmp21 = new closure_130_1(closure_130_2[8])(closure_129_4);
-          obj4.apiError = tmp21;
-          obj1.dispatch(obj4);
+          obj11.apiError = tmp21;
+          closure_130_1(closure_130_2[6]).dispatch(obj11);
+          const obj2 = closure_130_1(closure_130_2[6]);
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_129_3 = value;
-          const obj5 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS", pageKey: closure_129_1, listKey: closure_129_2, applicationId: closure_129_0, collections: null, total: null };
+          const obj12 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS", pageKey: closure_129_1, listKey: closure_129_2, applicationId: closure_129_0, collections: null, total: null };
           const collections = closure_129_3.body.collections;
-          obj5.collections = collections.map(closure_130_6.fromServer);
-          obj5.total = closure_129_3.body.total;
-          closure_130_1(closure_130_2[6]).dispatch(obj5);
+          obj12.collections = collections.map(closure_130_6.fromServer);
+          obj12.total = closure_129_3.body.total;
+          closure_130_1(closure_130_2[6]).dispatch(obj12);
           c4 = 0;
           const obj13 = closure_130_1(closure_130_2[6]);
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c6 = 3;
@@ -329,8 +327,8 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -343,8 +341,8 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -371,10 +369,9 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
               if (Boolean(anchorCollectionId)) {
                 const tmp35 = getCollectionsAfterKey(limit);
                 closure_129_0 = tmp35;
-                let obj5 = collectionsAfterFetchState;
                 collectionsAfterFetchState = collectionsAfterFetchState.getCollectionsAfterFetchState(tmp35);
                 if ("loading" !== collectionsAfterFetchState) {
-                  const collectionsAfterFetchedAt = obj5.getCollectionsAfterFetchedAt(tmp35);
+                  const collectionsAfterFetchedAt = obj6.getCollectionsAfterFetchedAt(tmp35);
                   if (!tmp33) {
                     if (null != collectionsAfterFetchedAt) {
                       if ("error" === collectionsAfterFetchState) {
@@ -390,17 +387,17 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
                     }
                   }
                   c4 = 1;
-                  let obj6 = DispatcherDefault;
-                  const obj1 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH", requestKey: tmp35 };
-                  obj6.dispatch(obj1);
+                  const obj5 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH", requestKey: tmp35 };
+                  DispatcherDefault.dispatch(obj5);
                   const request = { url: constants.STOREFRONT_COLLECTIONS_FOR_APPLICATION, query: null, rejectWithError: true };
-                  const obj2 = { application_id: applicationId, use_shop_ordering: true, anchor_collection_id: anchorCollectionId, limit: limit.limit, include_products: false, include_pricing: false, include_google_sku_ids: false, locale: locale.locale, include_unpublished_products: tmp31, include_unpublished_collections: tmp32, ignore_cache: tmp33 };
-                  request.query = obj2;
+                  const obj8 = { application_id: applicationId, use_shop_ordering: true, anchor_collection_id: anchorCollectionId, limit: limit.limit, include_products: false, include_pricing: false, include_google_sku_ids: false, locale: locale.locale, include_unpublished_products: tmp31, include_unpublished_collections: tmp32, ignore_cache: tmp33 };
+                  request.query = obj8;
                   c5 = 2;
                   c6 = 1;
-                  let obj3 = { value: StoreUtils.httpGetWithCountryCodeQuery(request), done: false };
-                  return obj3;
+                  const obj10 = { value: StoreUtils.httpGetWithCountryCodeQuery(request), done: false };
+                  return obj10;
                 }
+                obj6 = collectionsAfterFetchState;
               }
             }
           }
@@ -408,27 +405,27 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
           if (1 === tmp7) {
             c4 = 0;
             closure_129_2 = closure_3;
-            obj3 = closure_130_1(closure_130_2[6]);
-            const obj4 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE", requestKey: closure_129_0, apiError: null };
+            const obj11 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE", requestKey: closure_129_0, apiError: null };
             const tmp28 = new closure_130_1(closure_130_2[8])(closure_129_2);
-            obj4.apiError = tmp28;
-            obj3.dispatch(obj4);
+            obj11.apiError = tmp28;
+            closure_130_1(closure_130_2[6]).dispatch(obj11);
+            const obj4 = closure_130_1(closure_130_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_1 = value;
-            obj = closure_130_1(closure_130_2[6]);
-            obj5 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS", requestKey: closure_129_0, collections: null };
+            const obj12 = { type: "STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS", requestKey: closure_129_0, collections: null };
             const collections = closure_129_1.body.collections;
-            obj5.collections = collections.map(closure_130_6.fromServer);
-            obj.dispatch(obj5);
+            obj12.collections = collections.map(closure_130_6.fromServer);
+            closure_130_1(closure_130_2[6]).dispatch(obj12);
             c4 = 0;
+            const obj = closure_130_1(closure_130_2[6]);
           }
           c4 = 0;
           c6 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj13 = { value, done: true };
+          return obj13;
         }
         c6 = 3;
       } catch (tmp46) {
@@ -451,8 +448,8 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -465,8 +462,8 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -512,8 +509,8 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             const _Boolean = Boolean;
             if (Boolean(closure_129_0)) {
@@ -532,7 +529,7 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
                     fetchParamsForApplication = closure_130_5.getFetchParamsForApplication(closure_129_0);
                     if ("error" !== fetchStateForApplication) {
                       if (null != fetchParamsForApplication) {
-                        const obj2 = { includePricing: closure_129_5, skuTypes: closure_129_4 };
+                        const obj7 = { includePricing: closure_129_5, skuTypes: closure_129_4 };
                       }
                     }
                     c6 = 3;
@@ -540,26 +537,26 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
                   }
                 }
                 c4 = 1;
-                let obj4 = closure_130_1(closure_130_2[6]);
-                const obj3 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH", applicationId: closure_129_0 };
-                obj4.dispatch(obj3);
+                const obj8 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH", applicationId: closure_129_0 };
+                closure_130_1(closure_130_2[6]).dispatch(obj8);
+                const obj5 = closure_130_1(closure_130_2[6]);
                 let httpGetWithCountryCodeQuery = closure_130_0(closure_130_2[7]).httpGetWithCountryCodeQuery;
                 const request = { url: closure_130_7.STOREFRONT_COLLECTIONS_FOR_APPLICATION, query: null, rejectWithError: true };
-                obj4 = { application_id: closure_129_0, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: closure_129_1, include_unpublished_collections: closure_129_2, ignore_cache: closure_129_3 };
+                const obj9 = { application_id: closure_129_0, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, include_unpublished_products: closure_129_1, include_unpublished_collections: closure_129_2, ignore_cache: closure_129_3 };
                 if (null != closure_129_4) {
-                  const obj5 = { sku_types: closure_129_4 };
-                  let obj6 = obj5;
+                  const obj10 = { sku_types: closure_129_4 };
+                  let obj11 = obj10;
                 } else {
-                  obj6 = {};
+                  obj11 = {};
                 }
-                const merged = Object.assign(obj6);
+                const merged = Object.assign(obj11);
                 if (closure_129_5) {
-                  let obj7 = { include_pricing: true };
+                  let obj12 = { include_pricing: true };
                 } else {
-                  obj7 = {};
+                  obj12 = {};
                 }
-                const merged1 = Object.assign(obj7);
-                request.query = obj4;
+                const merged1 = Object.assign(obj12);
+                request.query = obj9;
                 httpGetWithCountryCodeQuery = httpGetWithCountryCodeQuery(request);
                 c5 = 3;
                 c6 = 1;
@@ -571,28 +568,28 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
           if (2 === tmp7) {
             c4 = 0;
             closure_129_11 = closure_3;
-            obj1 = closure_130_1(closure_130_2[6]);
-            const obj8 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE", applicationId: closure_129_0, apiError: null };
+            const obj13 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE", applicationId: closure_129_0, apiError: null };
             const tmp20 = new closure_130_1(closure_130_2[8])(closure_129_11);
-            obj8.apiError = tmp20;
-            obj1.dispatch(obj8);
+            obj13.apiError = tmp20;
+            closure_130_1(closure_130_2[6]).dispatch(obj13);
+            const obj2 = closure_130_1(closure_130_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_10 = value;
-            const obj9 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS", applicationId: closure_129_0, collections: null, includePricing: null, skuTypes: null };
+            const obj14 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS", applicationId: closure_129_0, collections: null, includePricing: null, skuTypes: null };
             const collections = closure_129_10.body.collections;
-            obj9.collections = collections.map(closure_130_6.fromServer);
-            obj9.includePricing = closure_129_5;
-            obj9.skuTypes = closure_129_4;
-            closure_130_1(closure_130_2[6]).dispatch(obj9);
+            obj14.collections = collections.map(closure_130_6.fromServer);
+            obj14.includePricing = closure_129_5;
+            obj14.skuTypes = closure_129_4;
+            closure_130_1(closure_130_2[6]).dispatch(obj14);
             c4 = 0;
             const obj15 = closure_130_1(closure_130_2[6]);
           }
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c6 = 3;

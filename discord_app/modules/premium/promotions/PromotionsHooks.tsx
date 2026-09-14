@@ -1,12 +1,14 @@
-// === Module 13549: PromotionsHooks ===
+// === Module 13550: PromotionsHooks ===
 
-// Module 13549 (PromotionsHooks)
+// Module 13550 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PromotionUtils from "PromotionUtils" /* 13507 */;
+import PromotionUtils from "PromotionUtils" /* 13508 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function useEligibleActiveOutboundPromotions(arg0) {
@@ -37,9 +39,9 @@ function useEligibleActiveOutboundPromotions(arg0) {
     return stateFromStoresArray.filter((id) => {
       let tmp = id.id !== stateFromStores;
       if (tmp) {
-        let result = PromotionUtils.shouldShowOutboundPromotionOnPlatform(id);
-        if (result) {
-          result = PromotionUtils.isDedicatedSurfacePromotion(id);
+        let result1 = PromotionUtils.shouldShowOutboundPromotionOnPlatform(id);
+        if (result1) {
+          const result = PromotionUtils.isDedicatedSurfacePromotion(id);
           flag = !result;
           if (!result) {
             flag = true;
@@ -48,10 +50,10 @@ function useEligibleActiveOutboundPromotions(arg0) {
               flag = true;
             }
           }
-          result = flag;
+          result1 = flag;
           const tmp2Result = PromotionUtils;
         }
-        tmp = result;
+        tmp = result1;
       }
       return tmp;
     });
@@ -68,7 +70,7 @@ export const useOutboundPromotions = function useOutboundPromotions() {
   let obj = stateFromStores(stateFromStores2[4]);
   const items1 = [UserStore];
   const stateFromStores1 = stateFromStores(stateFromStores2[4]).useStateFromStores(items1, () => currentUser.getCurrentUser());
-  const obj2 = stateFromStores(stateFromStores2[4]);
+  let obj2 = stateFromStores(stateFromStores2[4]);
   let obj3 = require("PremiumUtils");
   const isPremiumExactlyResult = require("PremiumUtils").isPremiumExactly(stateFromStores1, PremiumTypes.TIER_2);
   const isPremiumResult = require("PremiumUtils").isPremium(stateFromStores1);
@@ -77,12 +79,12 @@ export const useOutboundPromotions = function useOutboundPromotions() {
     tmp8 = isPremiumExactlyResult;
   }
   importDefault = tmp8;
-  let tmpResult = tmp(tmp2[4]);
+  let obj4 = require("PremiumUtils");
   const items2 = [PromotionsStore];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => PromotionsStore.claimedOutboundPromotionCodes);
-  tmpResult = tmp(tmp2[4]);
+  stateFromStores2 = stateFromStores(stateFromStores2[4]).useStateFromStores(items2, () => PromotionsStore.claimedOutboundPromotionCodes);
+  const tmpResult = stateFromStores(stateFromStores2[4]);
   const items3 = [PromotionsStore];
-  let promotionsLoaded = tmpResult.useStateFromStores(items3, () => PromotionsStore.claimedOutboundPromotionCodesLoaded);
+  let promotionsLoaded = stateFromStores(stateFromStores2[4]).useStateFromStores(items3, () => PromotionsStore.claimedOutboundPromotionCodesLoaded);
   const items4 = [stateFromStores];
   const effect = activeOutboundPromotions.useEffect(() => {
     if (null != stateFromStores) {
@@ -118,9 +120,9 @@ export const useOutboundPromotions = function useOutboundPromotions() {
       const hasItem = set.has(promotion.id);
       let result = !hasItem;
       if (!hasItem) {
-        stateFromStores(stateFromStores2[5]);
-        const obj = { promotionType: promotion.promotionType };
-        result = false === obj.isRecurringPromotion(obj);
+        const obj2 = { promotionType: promotion.promotionType };
+        result = false === stateFromStores(stateFromStores2[5]).isRecurringPromotion(obj2);
+        const obj = stateFromStores(stateFromStores2[5]);
       }
       if (result) {
         result = !stateFromStores(stateFromStores2[5]).isDedicatedSurfacePromotion(promotion);

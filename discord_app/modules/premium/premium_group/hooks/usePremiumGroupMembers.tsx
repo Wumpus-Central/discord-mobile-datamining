@@ -1,10 +1,12 @@
-// === Module 13578: usePremiumGroupMembers ===
+// === Module 13579: usePremiumGroupMembers ===
 
-// Module 13578 (usePremiumGroupMembers)
+// Module 13579 (usePremiumGroupMembers)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 13575 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 13576 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
@@ -36,16 +38,16 @@ export default function usePremiumGroupMembers(subscriptionId, arg1) {
       }
       if (!hasFetchedMembersResult) {
         if (null != closure_0) {
-          const obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: tmp3 };
-          obj.dispatch(obj);
+          const obj2 = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: tmp3 };
+          DispatcherDefault.dispatch(obj2);
         }
       }
     }
   }, items1);
-  obj = { premiumGroupMembers, isLoading: null };
+  const obj3 = { premiumGroupMembers, isLoading: null };
   if (!isFetchingMembers) {
     isFetchingMembers = isUpdatingMembers;
   }
-  obj.isLoading = isFetchingMembers;
-  return obj;
+  obj3.isLoading = isFetchingMembers;
+  return obj3;
 };

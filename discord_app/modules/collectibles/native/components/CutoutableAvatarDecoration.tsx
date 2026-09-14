@@ -18,9 +18,8 @@ export default function CutoutableAvatarDecoration(size) {
   const animate = size.animate;
   let nativeCutouts = size.cutout;
   let tmp2 = decorationStyle;
-  let obj = size(decorationStyle[4]);
   let items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = size(decorationStyle[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [animate, size, avatarDecoration, decorationStyle, stateFromStores];
   const memo = animate.useMemo(() => {
     let tmp2 = true === animate;
@@ -33,18 +32,17 @@ export default function CutoutableAvatarDecoration(size) {
     if (tmp2) {
       tmp2 = null != avatarDecoration;
     }
-    let obj = { avatarDecoration, canAnimate: tmp2, size };
-    const avatarDecorationURL = obj.getAvatarDecorationURL(obj);
-    obj = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: { width: size, height: size }, style: null, shouldAnimate: tmp2, source: null };
+    const avatarDecorationURL = AvatarUtils.getAvatarDecorationURL({ avatarDecoration, canAnimate: tmp2, size });
+    const obj3 = { avatarDecorationUrl: avatarDecorationURL, sizeStyle: { width: size, height: size }, style: null, shouldAnimate: tmp2, source: null };
     size = { width: size, height: size };
     const items = [size, decorationStyle];
-    obj.style = items;
+    obj3.style = items;
     let str2 = avatarDecorationURL;
     if (avatarDecorationURL == null) {
       str2 = "";
     }
-    obj.source = { uri: str2 };
-    return obj;
+    obj3.source = { uri: str2 };
+    return obj3;
   }, items1);
   ({ avatarDecorationUrl, style, sizeStyle, source } = memo);
   let tmp6 = null;
@@ -53,29 +51,29 @@ export default function CutoutableAvatarDecoration(size) {
     if (null != avatarDecorationUrl) {
       if (!tmpResult.isAndroid()) {
         if (null != nativeCutouts) {
-          obj = { style, cutouts: nativeCutouts.nativeCutouts, children: null };
-          obj = { source, style: sizeStyle };
-          obj.children = jsx(avatarDecoration(tmp2[9]), { source, style: sizeStyle });
-          let tmp9 = jsx(avatarDecoration(tmp2[7]), { source, style: sizeStyle });
+          const obj2 = { style, cutouts: nativeCutouts.nativeCutouts, children: null };
+          let obj3 = { source, style: sizeStyle };
+          obj2.children = jsx(avatarDecoration(tmp2[9]), { source, style: sizeStyle });
+          let tmp9 = jsx(avatarDecoration(tmp2[7]), { style, cutouts: nativeCutouts.nativeCutouts, children: null });
           const tmp12 = avatarDecoration(tmp2[7]);
         } else {
-          const obj1 = { source, style };
+          const obj4 = { source, style };
           tmp9 = jsx(avatarDecoration(tmp2[9]), { source, style });
         }
       }
       if (null != nativeCutouts) {
-        const obj2 = { style, cutouts: null, children: null };
+        const obj5 = { style, cutouts: null, children: null };
         nativeCutouts = nativeCutouts.nativeCutouts;
-        obj2.cutouts = nativeCutouts;
-        const obj3 = { url: avatarDecorationUrl, style: sizeStyle };
+        obj5.cutouts = nativeCutouts;
+        const obj6 = { url: avatarDecorationUrl, style: sizeStyle };
         tmp2 = jsx(avatarDecoration(tmp2[8]), { url: avatarDecorationUrl, style: sizeStyle });
-        obj2.children = tmp2;
+        obj5.children = tmp2;
         let tmp16 = jsx(avatarDecoration(tmp2[7]), { style, cutouts: null, children: null });
         const tmp19 = avatarDecoration(tmp2[7]);
       } else {
-        const obj4 = { style, pointerEvents: "none", children: null };
-        const obj5 = { url: avatarDecorationUrl, style: sizeStyle };
-        obj4.children = jsx(avatarDecoration(tmp2[8]), { url: avatarDecorationUrl, style: sizeStyle });
+        const obj7 = { style, pointerEvents: "none", children: null };
+        const obj8 = { url: avatarDecorationUrl, style: sizeStyle };
+        obj7.children = jsx(avatarDecoration(tmp2[8]), { url: avatarDecorationUrl, style: sizeStyle });
         tmp16 = <stateFromStores style={style} pointerEvents="none">{null}</stateFromStores>;
       }
       tmpResult = size(tmp2[6]);

@@ -1,7 +1,9 @@
-// === Module 15754: MFAConstants ===
+// === Module 15756: MFAConstants ===
 
-// Module 15754 (MFAConstants)
+// Module 15756 (MFAConstants)
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const obj = {};
 Object.defineProperty(obj, "webauthn", {

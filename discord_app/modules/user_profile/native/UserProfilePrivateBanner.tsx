@@ -1,6 +1,6 @@
-// === Module 13233: UserProfilePrivateBanner ===
+// === Module 13234: UserProfilePrivateBanner ===
 
-// Module 13233 (UserProfilePrivateBanner)
+// Module 13234 (UserProfilePrivateBanner)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
@@ -12,11 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { banner: null };
-createStyles = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7311).PROFILE_TOP_LAYER_Z_INDEX };
-createStyles.banner = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7311).PROFILE_TOP_LAYER_Z_INDEX } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");
 
@@ -25,19 +23,16 @@ export default function UserProfilePrivateBanner(primaryColor) {
   const items = [closure_6().banner, ];
   let tmp3 = null != primaryColor;
   if (tmp3) {
-    let obj = { backgroundColor: null };
-    let obj1 = utils_ColorUtils;
-    obj.backgroundColor = obj1.int2hex(primaryColor);
+    const obj = { backgroundColor: utils_ColorUtils.int2hex(primaryColor) };
     tmp3 = obj;
   }
-  obj = { style: items, children: null };
+  const obj3 = { style: items, children: null };
   items[1] = tmp3;
-  obj = { size: "xs", color: nativeDefault.colors.TEXT_DEFAULT };
-  const items1 = [React4(LockIcon.LockIcon, obj), ];
-  obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const items1 = [React4(LockIcon.LockIcon, { size: "xs", color: nativeDefault.colors.TEXT_DEFAULT }), ];
+  const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj1.children = intl.string(util.t.KPnd2O);
-  items1[1] = React4(Text_Text.Text, obj1);
-  obj.children = items1;
-  return hasOwnProperty(View, obj);
+  obj5.children = intl.string(util.t.KPnd2O);
+  items1[1] = React4(Text_Text.Text, obj5);
+  obj3.children = items1;
+  return hasOwnProperty(View, obj3);
 };

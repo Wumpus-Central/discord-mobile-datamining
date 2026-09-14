@@ -11,7 +11,7 @@ import ICYMIUtils from "ICYMIUtils" /* 8468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8454 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7629 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8463 */;
@@ -48,11 +48,10 @@ function injectItemsIntoList(arr, arr2, arg2, arg3) {
   c1 = 7;
   const found = arr.filter((type) => type.type !== ACTIVITY);
   const item = arr2.forEach((item, index) => {
-    let arr = found1;
     if ((index + 1) * c1 < found1.length) {
-      arr.splice((index + 1) * tmp, 0, item);
+      found1.splice((index + 1) * tmp, 0, item);
     } else {
-      arr = arr.push(item);
+      found1.push(item);
     }
   });
   return found;
@@ -189,7 +188,7 @@ function reload(arg0) {
     const items3 = [];
     HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(items2, 0));
     const items4 = [items3, items.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    [found, found1] = _slicedToArray(items4, 2);
+    [found, found1] = items4;
     let tmp33 = _slicedToArray(items4, 2);
   }
   (function injectGuildEvents() {
@@ -206,18 +205,18 @@ function reload(arg0) {
           if (!closure_7(item10031)) {
             if (closure_6(item10031, 2 * items2(found1[17]).Seconds.DAY)) {
               if (null == dependencyMap[item10031.id]) {
-                obj = { id: item10031.id, type: null, score: 10, event_id: null };
-                obj.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
-                obj.event_id = item10031.id;
-                dependencyMap[item10031.id] = obj;
+                let obj2 = { id: item10031.id, type: null, score: 10, event_id: null };
+                obj2.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
+                obj2.event_id = item10031.id;
+                dependencyMap[item10031.id] = obj2;
               }
-              obj = { id: item10031.id, type: null, score: 10, data: null };
-              obj.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
-              let obj1 = { guild_id: null, event_id: null, channel_id: null };
+              let obj3 = { id: item10031.id, type: null, score: 10, data: null };
+              obj3.type = items1(found1[19]).ICYMIItemTypes.GUILD_EVENT;
+              let obj7 = { guild_id: null, event_id: null, channel_id: null };
               ({ guild_id: obj4.guild_id, id: obj4.event_id, channel_id } = item10031);
-              obj1.channel_id = channel_id;
-              obj.data = obj1;
-              let arr = items.push(obj);
+              obj7.channel_id = channel_id;
+              obj3.data = obj7;
+              let arr = items.push(obj3);
               let sum = num + 1;
               num = sum;
               if (1 <= sum) {
@@ -275,12 +274,9 @@ function reload(arg0) {
   let sorted = entries.sort((rank, rank2) => rank.rank - rank2.rank);
   const substr = sorted.slice(0, 5);
   const item1 = entries.forEach((content) => {
-    obj = ACTIVITY;
     if (!ACTIVITY.has(content.content.id)) {
-      let tmpResult = utils;
       if (!tmpResult.isEntryExpired(content.content)) {
-        tmpResult = ContentInventoryTypes;
-        if (tmpResult.isGamingLikeEntry(content.content)) {
+        if (tmpResult2.isGamingLikeEntry(content.content)) {
           if (null == dependencyMap[content.content.author_id]) {
             const _Set = Set;
             set = new Set();
@@ -292,31 +288,32 @@ function reload(arg0) {
           obj4 = dependencyMap[content.content.author_id];
         }
         if (null == dependencyMap[content.content.id]) {
-          obj = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, activity: content.content };
-          dependencyMap[content.content.id] = obj;
+          const obj2 = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, activity: content.content };
+          dependencyMap[content.content.id] = obj2;
         }
-        obj = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, data: null };
-        const obj1 = { user_id: content.content.author_id, content_id: content.content.id };
-        obj.data = obj1;
-        obj.add(content.content.id);
-        closure_33[obj.id] = obj;
-        if (null != ICYMIUnreadStateStore.getReadTimestamp(obj.id)) {
-          _slicedToArray.push(obj);
+        const obj3 = { id: content.content.id, type: ICYMITypes.ICYMIItemTypes.ACTIVITY, score: 15, data: null };
+        const obj6 = { user_id: content.content.author_id, content_id: content.content.id };
+        obj3.data = obj6;
+        ACTIVITY.add(content.content.id);
+        closure_33[obj3.id] = obj3;
+        if (null != ICYMIUnreadStateStore.getReadTimestamp(obj3.id)) {
+          _slicedToArray.push(obj3);
         } else {
-          found1.push(obj);
+          found1.push(obj3);
         }
+        tmpResult2 = ContentInventoryTypes;
       }
+      tmpResult = utils;
     }
   });
   ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
   found = found.filter((type) => type.type !== ACTIVITY);
   found1 = found;
   const item2 = items5.forEach((item, index) => {
-    let arr = found1;
     if ((index + 1) * c1 < found1.length) {
-      arr.splice((index + 1) * tmp, 0, item);
+      found1.splice((index + 1) * tmp, 0, item);
     } else {
-      arr = arr.push(item);
+      found1.push(item);
     }
   });
   ACTIVITY = ACTIVITY(found1[19]).ICYMIItemTypes.ACTIVITY;
@@ -324,11 +321,10 @@ function reload(arg0) {
   found1 = undefined;
   found1 = found1.filter((type) => type.type !== ACTIVITY);
   const item3 = items6.forEach((item, index) => {
-    let arr = found1;
     if ((index + 1) * c1 < found1.length) {
-      arr.splice((index + 1) * tmp, 0, item);
+      found1.splice((index + 1) * tmp, 0, item);
     } else {
-      arr = arr.push(item);
+      found1.push(item);
     }
   });
   injectRecommendedGuildsRow();
@@ -595,6 +591,7 @@ function handleAck(channelId) {
 }
 let GuildScheduledEventStore = fn(7629);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
+let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
 const ContentInventoryFeedKey = fn(8476).ContentInventoryFeedKey;
@@ -864,13 +861,13 @@ obj = {
       }
     } else if (null != messageItem) {
       obj = { id: messageItem.message.id, type: items2(items4[19]).ICYMIItemTypes.MESSAGE, score: 50, data: null };
-      obj = { channel_id: messageItem.channel_id, message_id: messageItem.message.id, guild_id: messageItem.guild_id, channel_type: constants.GUILD_TEXT };
-      obj.data = obj;
+      const obj2 = { channel_id: messageItem.channel_id, message_id: messageItem.message.id, guild_id: messageItem.guild_id, channel_type: constants.GUILD_TEXT };
+      obj.data = obj2;
       closure_33[messageItem.message.id] = obj;
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(obj);
-      obj.message = items2(items4[25]).createMessageRecord(messageItem.message);
-      closure_34[messageItem.message.id] = obj;
+      obj3.message = items2(items4[25]).createMessageRecord(messageItem.message);
+      closure_34[messageItem.message.id] = obj3;
       if (null == c28) {
         if (null == closure_32) {
           items1 = [obj];
@@ -912,7 +909,7 @@ obj = {
           const items5 = [];
           HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(items4, 0));
           const items6 = [items5, items2.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-          [closure_45, closure_46] = _slicedToArray(items6, 2);
+          [closure_45, closure_46] = items6;
           const tmp26 = _slicedToArray(items6, 2);
         }
         return true;
@@ -1023,7 +1020,7 @@ obj = {
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
     set = new Set(set1(8466).SUPPORTED_ITEM_TYPES);
-    [arr9, arr10] = _slicedToArray(items5, 2);
+    [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
       if (0 !== c38) {
@@ -1045,17 +1042,13 @@ obj = {
             const tmpResult = tmp(8468);
           }
           const ICYMIAnalytics = tmp(8477).ICYMIAnalytics;
-          newTrackingProps = { newTrackingProps: null, hasNewContent: null, unreadFeedItems: null, readFeedItems: null, homeSessionId: null };
-          newTrackingProps.newTrackingProps = newTrackingProps;
-          newTrackingProps.hasNewContent = hasNewContent;
-          newTrackingProps.unreadFeedItems = arr9;
-          newTrackingProps.readFeedItems = arr10;
+          const obj2 = { newTrackingProps, hasNewContent, unreadFeedItems: arr9, readFeedItems: arr10, homeSessionId: null };
           let str = "background_load";
           if (focused) {
             str = "foreground_load";
           }
-          newTrackingProps.homeSessionId = str;
-          ICYMIAnalytics.trackFeedLoaded(newTrackingProps);
+          obj2.homeSessionId = str;
+          ICYMIAnalytics.trackFeedLoaded(obj2);
         }
       }
     }
@@ -1074,8 +1067,8 @@ obj = {
         hasNewContent = true;
         c39 = true;
       }
-      newTrackingProps = { newUnread: arr9, newRead: arr10 };
-      reload(newTrackingProps);
+      const obj3 = { newUnread: arr9, newRead: arr10 };
+      reload(obj3);
       arr13 = closure_30;
     }
     hasNewContent = false;
@@ -1084,8 +1077,8 @@ obj = {
   LOAD_ICYMI_HYDRATED: function handleLoadHydratedItems(arg0) {
     ({ messageItems, activityItems, requestMessageItems, requestActivityItems, startingIndex, endingIndex } = arg0);
     c54 = true;
-    let data = {};
-    let merged = Object.assign(data);
+    obj = {};
+    let merged = Object.assign(obj);
     _require = messageItems.reduce((acc, message) => {
       acc[message.message.id] = message;
       return acc;
@@ -1098,20 +1091,20 @@ obj = {
       if (null != closure_0[message_id.message_id]) {
         let tmp4 = dependencyMap[message_id.message_id];
         if (null == tmp4) {
-          data = { id: message_id.message_id, type: ICYMITypes.ICYMIItemTypes.MESSAGE, score: -1, data: null };
-          data = { guild_id: null, channel_id: null, message_id: null, channel_type: null, has_mention: false };
+          obj = { id: message_id.message_id, type: ICYMITypes.ICYMIItemTypes.MESSAGE, score: -1, data: null };
+          const obj5 = { guild_id: null, channel_id: null, message_id: null, channel_type: null, has_mention: false };
           ({ guild_id: obj2.guild_id, channel_id: obj2.channel_id } = tmp);
-          data.message_id = tmp.message.id;
-          data.channel_type = constants.GUILD_TEXT;
-          data.data = data;
-          tmp4 = data;
+          obj5.message_id = tmp.message.id;
+          obj5.channel_type = constants.GUILD_TEXT;
+          obj.data = obj5;
+          tmp4 = obj;
         }
         const message = MessageStore.getMessage(tmp.channel_id, tmp.message.id);
         if (null != message) {
-          data = {};
+          const obj7 = {};
           const merged = Object.assign(ICYMIUtils.createGravityMessageFromServer(tmp, tmp4));
-          data.message = message;
-          closure_34[tmp.message.id] = data;
+          obj7.message = message;
+          closure_34[tmp.message.id] = obj7;
         } else {
           closure_34[tmp.message.id] = ICYMIUtils.createGravityMessageFromServer(tmp, tmp4);
         }
@@ -1156,8 +1149,9 @@ obj = {
     }
     obj = {};
     const merged = Object.assign(obj);
-    obj = {};
     const merged1 = Object.assign(obj);
+    obj = {};
+    const obj2 = {};
   },
   LOAD_ICYMI_RECOMMENDED_GUILDS: function loadICYMIRecommendedGuilds(guilds) {
     guilds = guilds.guilds;

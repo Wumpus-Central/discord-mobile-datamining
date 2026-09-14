@@ -26,32 +26,17 @@ export default function UserProfileWidgetReportButton(arg0) {
     return ReportModals.showReportModalForWidget(closure_1_0, importDefault);
   };
   const items = [obj];
-  obj = {
-    items,
-    children(ref) {
-      let obj = { ref: ref.ref };
-      const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
-      obj.hitSlop = hitSlop;
-      obj.accessibilityRole = "button";
-      const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.xpSHSk);
-      obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
-      obj.children = jsx(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED });
-      return <Pressable size="sm" color={nativeDefault.colors.TEXT_MUTED} />;
-    }
-  };
   return jsx(ContextMenu.ContextMenu, {
     items,
     children(ref) {
-      let obj = { ref: ref.ref };
+      const obj = { ref: ref.ref };
       const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
       obj.hitSlop = hitSlop;
       obj.accessibilityRole = "button";
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.xpSHSk);
-      obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
       obj.children = jsx(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED });
-      return <Pressable size="sm" color={nativeDefault.colors.TEXT_MUTED} />;
+      return <Pressable ref={ref.ref} />;
     }
   });
 };

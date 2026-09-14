@@ -4,6 +4,8 @@
 import size from "module_2" /* 2 */;
 import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4358 */;
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {
   arg5[key10018] = require("AccessibilityAnnouncer")[key10018];

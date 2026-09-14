@@ -2,7 +2,7 @@
 
 // Module 9737 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -38,8 +38,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = TimeUtils;
-    const diff = obj.now() - self.spinnerVisibleStart;
+    const diff = TimeUtils.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {
       const logger = self.logger;
@@ -68,8 +67,8 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
           }
         }
       }
-      obj = { video_spinner_context: videoSpinnerContext, duration_video_spinner_visible_ms: diff, rtc_connection_id: RTCConnectionStore.getRTCConnectionId(), media_session_id: RTCConnectionStore.getMediaSessionId(), event_count_for_stream: sum, guild_id: guildId, channel_id: userVoiceChannelId, channel_type: str, spinning_user_id: userId, connection_type: NetworkStore.getType(), effective_connection_speed: NetworkStore.getEffectiveConnectionSpeed(), service_provider: NetworkStore.getServiceProvider() };
-      AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
+      const obj3 = { video_spinner_context: videoSpinnerContext, duration_video_spinner_visible_ms: diff, rtc_connection_id: RTCConnectionStore.getRTCConnectionId(), media_session_id: RTCConnectionStore.getMediaSessionId(), event_count_for_stream: sum, guild_id: guildId, channel_id: userVoiceChannelId, channel_type: str, spinning_user_id: userId, connection_type: NetworkStore.getType(), effective_connection_speed: NetworkStore.getEffectiveConnectionSpeed(), service_provider: NetworkStore.getServiceProvider() };
+      AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj3);
     }
   }
 };

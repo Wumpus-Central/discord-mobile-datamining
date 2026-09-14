@@ -4,7 +4,6 @@
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4338 */;
 import size from "module_2" /* 2 */;
 
 const ActivityIndicator = _mod17.ActivityIndicator;
@@ -21,15 +20,14 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.assign({ size: 0, animating: 0 }));
-  let obj = useToken;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.size = str;
-  obj.animating = flag;
-  obj.color = color;
+  obj2.size = str;
+  obj2.animating = flag;
+  obj2.color = color;
   return <ActivityIndicator />;
 };

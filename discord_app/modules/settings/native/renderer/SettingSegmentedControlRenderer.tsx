@@ -1,23 +1,22 @@
-// === Module 14789: SettingSegmentedControlRenderer ===
+// === Module 14790: SettingSegmentedControlRenderer ===
 
-// Module 14789 (SettingSegmentedControlRenderer)
+// Module 14790 (SettingSegmentedControlRenderer)
 import nativeDefault from "native" /* 576 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14780 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NodeType = fn(11602).NodeType;
+const NodeType = fn(11603).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { controlContainer: null, pageContainer: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
-createStyles.controlContainer = createStyles;
-createStyles.pageContainer = { flex: 1 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { controlContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, pageContainer: { flex: 1 } };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
@@ -27,9 +26,9 @@ export default function SettingSegmentedControl(node) {
   dependencyMap = undefined;
   ({ defaultIndex: c0, settings } = node.node);
   let tmp = closure_11();
-  [tmp3, c2] = _slicedToArray(noop.useState(0), 2);
+  [tmp3, c2] = noop.useState(0);
   let tmp2 = _slicedToArray(noop.useState(0), 2);
-  [tmp5, r10021] = _slicedToArray(noop.useState(() => {
+  [tmp5, r10021] = noop.useState(() => {
     const field = UserSettingSearchStore.getField("selected");
     if (null != field) {
       const index = settings.indexOf(field);
@@ -47,7 +46,7 @@ export default function SettingSegmentedControl(node) {
       }
     }
     return c0;
-  }), 2);
+  });
   let items = [settings];
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
@@ -55,24 +54,19 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14671).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14672).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14779).getSettingTitle(id);
+      obj.label = items(14780).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);
     });
     return items;
   }, items);
-  let obj = require("SegmentedControlState");
-  const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
-  obj = { children: null };
-  obj = { style: tmp.controlContainer, onLayout: callback, children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }) };
-  const items1 = [closure_8(View, obj), ];
   const tmp4 = _slicedToArray(noop.useState(() => {
     const field = UserSettingSearchStore.getField("selected");
     if (null != field) {
@@ -92,7 +86,12 @@ export default function SettingSegmentedControl(node) {
     }
     return c0;
   }), 2);
+  const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
+  const obj2 = { children: null };
+  let obj = require("SegmentedControlState");
+  const items1 = [closure_8(View, { style: tmp.controlContainer, onLayout: callback, children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }) }), ];
+  const obj3 = { style: tmp.controlContainer, onLayout: callback, children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }) };
   items1[1] = closure_8(View, { style: tmp.pageContainer, children: closure_8(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }) });
-  obj.children = items1;
-  return closure_10(closure_9, obj);
+  obj2.children = items1;
+  return closure_10(closure_9, obj2);
 };

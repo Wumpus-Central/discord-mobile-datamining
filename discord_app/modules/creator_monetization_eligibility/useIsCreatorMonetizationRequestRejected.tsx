@@ -1,8 +1,8 @@
-// === Module 17829: useIsCreatorMonetizationRequestRejected ===
+// === Module 17830: useIsCreatorMonetizationRequestRejected ===
 
-// Module 17829 (useIsCreatorMonetizationRequestRejected)
+// Module 17830 (useIsCreatorMonetizationRequestRejected)
 import util from "util" /* 1114 */;
-import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 17798 */;
+import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 17799 */;
 import size from "module_2" /* 2 */;
 
 const constants = CreatorMonetizationEligibilityConstants.CreatorMonetizationApplicationState;
@@ -16,7 +16,7 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
       state = latestRequest.state;
     }
   }
-  let obj = { isApplicationRejected: state === constants.REJECTED, requestCooldownDuration: null };
+  const obj = { isApplicationRejected: state === constants.REJECTED, requestCooldownDuration: null };
   let can_reapply_at;
   if (latestRequest != null) {
     const rejection = latestRequest.rejection;
@@ -38,34 +38,34 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
         let num2 = 43200;
         if (rounded >= 43200) {
           const intl5 = util.intl;
-          obj = { months: null };
+          const obj2 = { months: null };
           const _Math5 = roundResult.Math;
           num2 = rounded / num2;
           roundResult = _Math5.round(num2);
-          obj.months = roundResult;
-          let formatToPlainStringResult = intl5.formatToPlainString(util.t.kridzK, obj);
+          obj2.months = roundResult;
+          let formatToPlainStringResult = intl5.formatToPlainString(util.t.kridzK, obj2);
         } else if (rounded >= 10080) {
           const intl4 = util.intl;
-          obj = { weeks: null };
+          const obj3 = { weeks: null };
           const _Math4 = Math;
-          obj.weeks = Math.round(rounded / 10080);
-          formatToPlainStringResult = intl4.formatToPlainString(util.t.EmoBD2, obj);
+          obj3.weeks = Math.round(rounded / 10080);
+          formatToPlainStringResult = intl4.formatToPlainString(util.t.EmoBD2, obj3);
         } else if (rounded >= 1440) {
           const intl3 = util.intl;
-          const obj1 = { days: null };
+          const obj4 = { days: null };
           const _Math3 = Math;
-          obj1.days = Math.round(rounded / 1440);
-          formatToPlainStringResult = intl3.formatToPlainString(util.t["k2UNz+"], obj1);
+          obj4.days = Math.round(rounded / 1440);
+          formatToPlainStringResult = intl3.formatToPlainString(util.t["k2UNz+"], obj4);
         } else if (rounded >= 60) {
           const intl2 = util.intl;
-          const obj2 = { hours: null };
+          const obj5 = { hours: null };
           const _Math2 = Math;
-          obj2.hours = Math.round(rounded / 60);
-          formatToPlainStringResult = intl2.formatToPlainString(util.t.xCjYxK, obj2);
+          obj5.hours = Math.round(rounded / 60);
+          formatToPlainStringResult = intl2.formatToPlainString(util.t.xCjYxK, obj5);
         } else {
           const intl = util.intl;
-          const obj3 = { minutes: rounded };
-          formatToPlainStringResult = intl.formatToPlainString(util.t.iXLF9W, obj3);
+          const obj6 = { minutes: rounded };
+          formatToPlainStringResult = intl.formatToPlainString(util.t.iXLF9W, obj6);
         }
       }
     }

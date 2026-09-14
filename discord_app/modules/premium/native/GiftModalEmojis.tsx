@@ -1,6 +1,6 @@
-// === Module 11579: GiftModalEmojis ===
+// === Module 11580: GiftModalEmojis ===
 
-// Module 11579 (GiftModalEmojis)
+// Module 11580 (GiftModalEmojis)
 import EmojiDefault from "Emoji" /* 7233 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,39 +19,17 @@ export default function _default(emojiName) {
   if (flag === undefined) {
     flag = false;
   }
+  let tmp = closure_6();
+  const src = emojiName(flag[5]).getURL(emojiName);
   let obj = emojiName(flag[5]);
-  const src = obj.getURL(emojiName);
-  obj = {
-    style: closure_6().emojisContainer,
-    children: items.map((item, index) => {
-      [tmp2, tmp3, tmp4] = _slicedToArray(item, 3);
-      let obj = { src, name: emojiName, style: null, forceTextEmoji: true };
-      const rect = { position: "absolute", top: null, left: null, transform: null };
-      const tmp = _slicedToArray(item, 3);
-      rect.top = "" + tmp2 + "%";
-      rect.left = "" + tmp3 + "%";
-      obj = { rotate: "" + tmp4 + "deg" };
-      items = [obj, ];
-      let num = 1;
-      if (flag) {
-        const _Math = Math;
-        num = 1.5 * Math.random() + 0.5;
-      }
-      items[1] = { scale: num };
-      rect.transform = items;
-      obj.style = rect;
-      return jsx(EmojiDefault, { rotate: "" + tmp4 + "deg" }, "" + index + "-" + emojiName);
-    })
-  };
-  return <View style={closure_6().emojisContainer}>{items.map((item, index) => {
-    [tmp2, tmp3, tmp4] = _slicedToArray(item, 3);
-    let obj = { src, name: emojiName, style: null, forceTextEmoji: true };
+  return <View style={tmp.emojisContainer}>{items.map((item, index) => {
+    [tmp2, tmp3, tmp4] = item;
+    const obj = { src, name: emojiName, style: null, forceTextEmoji: true };
     const rect = { position: "absolute", top: null, left: null, transform: null };
     const tmp = _slicedToArray(item, 3);
     rect.top = "" + tmp2 + "%";
     rect.left = "" + tmp3 + "%";
-    obj = { rotate: "" + tmp4 + "deg" };
-    items = [obj, ];
+    items = [{ rotate: "" + tmp4 + "deg" }, ];
     let num = 1;
     if (flag) {
       const _Math = Math;
@@ -60,6 +38,6 @@ export default function _default(emojiName) {
     items[1] = { scale: num };
     rect.transform = items;
     obj.style = rect;
-    return jsx(EmojiDefault, { rotate: "" + tmp4 + "deg" }, "" + index + "-" + emojiName);
+    return <tmp6 key={"" + index + "-" + emojiName} src={src} name={emojiName} style={null} forceTextEmoji />;
   })}</View>;
 };

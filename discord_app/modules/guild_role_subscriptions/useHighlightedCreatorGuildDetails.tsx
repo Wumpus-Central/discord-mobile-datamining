@@ -1,8 +1,8 @@
-// === Module 17824: useHighlightedCreatorGuildDetails ===
+// === Module 17825: useHighlightedCreatorGuildDetails ===
 
-// Module 17824 (useHighlightedCreatorGuildDetails)
+// Module 17825 (useHighlightedCreatorGuildDetails)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 17825 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 17826 */;
 import noop from "module_19" /* 19 */;
 
 const MarketingURLs = fn(1074).MarketingURLs;
@@ -17,12 +17,11 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   if (highlightedCreatorDetails != null) {
     store_page = highlightedCreatorDetails.store_page;
   }
-  let obj = noop;
-  let role_subscription;
+  let role_subscription1;
   if (store_page != null) {
-    role_subscription = store_page.role_subscription;
+    role_subscription1 = store_page.role_subscription;
   }
-  const items = [role_subscription];
+  const items = [role_subscription1];
   const memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
@@ -62,11 +61,10 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   if (store_page != null) {
     icon_hash = store_page.guild.icon_hash;
   }
-  obj = { id, icon: icon_hash, size };
-  const guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj);
+  const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id, icon: icon_hash, size });
   const items1 = [memo, arg1];
   let diff = null;
-  const memo1 = obj.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let substr = memo;
     if (null != memo) {
       substr = memo;
@@ -96,7 +94,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     }
   }
   if (store_page != null) {
-    role_subscription = store_page.role_subscription;
+    let role_subscription = store_page.role_subscription;
     if (role_subscription != null) {
       const subscriber_count = role_subscription.subscriber_count;
     }
@@ -112,12 +110,12 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     tmp13 = null != guildIconURL;
   }
   if (tmp13) {
-    obj = { hasAllImperativeDetails: tmp13, isLoading, details: null };
-    const obj1 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: guildIconURL, storePageUrl: result, subscriberCount: subscriber_count, emojisToShow: memo1, notShownEmojiCount: diff };
-    obj.details = obj1;
-    let obj2 = obj;
+    const obj3 = { hasAllImperativeDetails: tmp13, isLoading, details: null };
+    const obj4 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: guildIconURL, storePageUrl: result, subscriberCount: subscriber_count, emojisToShow: memo1, notShownEmojiCount: diff };
+    obj3.details = obj4;
+    let obj5 = obj3;
   } else {
-    obj2 = { hasAllImperativeDetails: tmp13, isLoading, error: tmp3.error };
+    obj5 = { hasAllImperativeDetails: tmp13, isLoading, error: tmp3.error };
   }
-  return obj2;
+  return obj5;
 };

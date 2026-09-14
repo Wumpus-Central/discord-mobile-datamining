@@ -14,7 +14,7 @@ const View = fn(17).View;
 let closure_4 = fn(5047).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_7 = PlatformUtils.isAndroid();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");
@@ -42,18 +42,17 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
       DARK = ThemeTypes.DARK;
     }
   }
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_DEFAULT, DARK);
-  let obj1 = useToken;
-  let token1 = obj1.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, DARK);
+  const tmp2 = closure_4();
+  const token = useToken.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_DEFAULT, DARK);
+  let token1 = useToken.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, DARK);
   if ("default" === blurStyle) {
     token1 = token;
   }
   const items = [{ backgroundColor: token1 }, merged.style, ];
   let tmp11;
   if (null != android_fallbackColor) {
-    obj = { backgroundColor: android_fallbackColor };
-    tmp11 = obj;
+    const obj3 = { backgroundColor: android_fallbackColor };
+    tmp11 = obj3;
   }
   items[2] = tmp11;
   if ("light" === blurTheme) {
@@ -64,10 +63,9 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
       DARK2 = ThemeTypes.DARK;
     }
   }
-  let tmp6Result = useToken;
-  const token2 = tmp6Result.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, DARK2);
-  tmp6Result = useToken;
-  let token3 = tmp6Result.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, DARK2);
+  const token2 = useToken.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, DARK2);
+  const tmp6Result = useToken;
+  let token3 = useToken.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, DARK2);
   if ("default" === blurStyle) {
     token3 = token2;
   }
@@ -83,12 +81,12 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
     tmp17 = tmp18;
   }
   if (tmp17) {
-    obj = { ref };
+    const obj4 = { ref };
     const merged1 = Object.assign(merged);
-    obj.style = items;
+    obj4.style = items;
     let tmp19Result = <View ref={ref} />;
   } else if (closure_7) {
-    obj1 = { ref, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null };
+    const obj5 = { ref, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null };
     if (blurAmountOverride == null) {
       if (null == num) {
         if (tmp3) {
@@ -104,32 +102,32 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
       }
       blurAmountOverride = num;
     }
-    obj1.blurAmount = blurAmountOverride;
-    obj1.blurTintIOSParityCompensationColor = token3;
+    obj5.blurAmount = blurAmountOverride;
+    obj5.blurTintIOSParityCompensationColor = token3;
     if (tintColorOverride == null) {
       tintColorOverride = tintColor;
     }
-    obj1.tintColor = tintColorOverride;
-    obj1.blurTargetViewNativeId = android_blurTargetViewNativeId;
+    obj5.tintColor = tintColorOverride;
+    obj5.blurTargetViewNativeId = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
     tmp19Result = jsx(VisualEffectViewAndroidDefault, { ref, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null });
     const tmp8Result = VisualEffectViewAndroidDefault;
   } else {
-    const obj2 = { ref, blurEffectName: null, blurAmount: null, tintColor: null };
+    const obj6 = { ref, blurEffectName: null, blurAmount: null, tintColor: null };
     if (blurEffectNameOverride != null) {
-      obj2.blurEffectName = blurEffectNameOverride;
+      obj6.blurEffectName = blurEffectNameOverride;
       let tmp28 = blurAmountOverride;
       if (blurAmountOverride == null) {
         tmp28 = num;
       }
-      obj2.blurAmount = tmp28;
+      obj6.blurAmount = tmp28;
       let tmp29 = tintColorOverride;
       if (tintColorOverride == null) {
         tmp29 = tintColor;
       }
-      obj2.tintColor = tmp29;
+      obj6.tintColor = tmp29;
       const merged3 = Object.assign(merged);
-      tmp19Result = <tmp20 {...obj2} />;
+      tmp19Result = <tmp20 {...obj6} />;
     } else {
       if (!VisualEffectViewIOS.MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
         if (tmp3) {

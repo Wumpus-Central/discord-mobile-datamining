@@ -1,6 +1,6 @@
-// === Module 15423: DisplayNameStylesEffectOrder ===
+// === Module 15424: DisplayNameStylesEffectOrder ===
 
-// Module 15423 (DisplayNameStylesEffectOrder)
+// Module 15424 (DisplayNameStylesEffectOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

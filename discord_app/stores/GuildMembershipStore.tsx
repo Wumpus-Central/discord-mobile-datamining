@@ -33,11 +33,11 @@ class GuildMembershipStore extends Store {
       }
     }
     obj.GUILD_DELETE = GUILD_DELETE;
-    tmp = new tmp(tmp2, obj, closure_0(closure_2[1]).DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
-    closure_0 = tmp;
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[1]).DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
+    closure_0 = tmp1;
     set = new Set();
-    tmp.guildIds = set;
-    return tmp;
+    tmp1.guildIds = set;
+    return tmp1;
   }
 }
 const prototype = GuildMembershipStore.prototype;
@@ -92,10 +92,10 @@ let obj = {
     return closure_0.handleGuildDelete(arg0);
   }
 };
-tmp = new tmp(Dispatcher, obj, fn(573).DispatchBand.Early, GuildMembershipStore, tmp, Dispatcher, obj, new.target, undefined, handleGuildDelete, globalThis);
-let closure_129_0 = tmp;
-tmp.guildIds = new Set();
+let tmp2 = new tmp(Dispatcher, obj, fn(573).DispatchBand.Early, GuildMembershipStore, tmp, Dispatcher, obj, new.target, undefined, handleGuildDelete, globalThis);
+let closure_129_0 = tmp2;
+tmp2.guildIds = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/GuildMembershipStore.tsx");
 
-export default tmp;
+export default tmp2;

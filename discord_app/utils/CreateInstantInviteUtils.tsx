@@ -1,12 +1,14 @@
-// === Module 17910: CreateInstantInviteUtils ===
+// === Module 17911: CreateInstantInviteUtils ===
 
-// Module 17910 (CreateInstantInviteUtils)
+// Module 17911 (CreateInstantInviteUtils)
 import Constants from "Constants" /* 1074 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import size from "module_2" /* 2 */;
 
+let GuildChannelStore = GuildChannelStore_mod;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 

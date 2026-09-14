@@ -21,8 +21,7 @@ function defaultMeridiem(arg0, arg1, arg2) {
   return str;
 }
 function getLocaleData() {
-  let obj = _modDef4228;
-  const _config = obj.localeData()._config;
+  const _config = _modDef4228.localeData()._config;
   ({ months, monthsShort, weekdays, weekdaysShort, weekdaysMin, meridiem } = _config);
   if (undefined === meridiem) {
     meridiem = defaultMeridiem;
@@ -34,12 +33,12 @@ function getLocaleData() {
   ordinal = "month";
   let format5 = months;
   if (typeof months === "function") {
-    let tmpResult = _modDef4228;
-    closure_2 = months.bind(tmpResult.localeData());
+    closure_2 = months.bind(_modDef4228.localeData());
     let fn = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
+    const tmpResult = _modDef4228;
   } else {
     const _Array = Array;
     let format = months;
@@ -49,16 +48,16 @@ function getLocaleData() {
     format5 = format;
     fn = (arg0) => format5[arg0];
   }
-  obj = { months: fn, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, meridiem: null, ordinal: null, longDateFormat: null, longFormatters: null, week: null };
+  const obj2 = { months: fn, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, meridiem: null, ordinal: null, longDateFormat: null, longFormatters: null, week: null };
   ordinal = "month";
   format5 = monthsShort;
   if (typeof monthsShort === "function") {
-    tmpResult = _modDef4228;
-    closure_2 = monthsShort.bind(tmpResult.localeData());
+    closure_2 = monthsShort.bind(_modDef4228.localeData());
     let fn2 = (arg0, arg1) => {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
+    const tmpResult5 = _modDef4228;
   } else {
     const _Array2 = Array;
     let format2 = monthsShort;
@@ -68,7 +67,7 @@ function getLocaleData() {
     format5 = format2;
     fn2 = (arg0) => format5[arg0];
   }
-  obj.monthsShort = fn2;
+  obj2.monthsShort = fn2;
   ordinal = "day";
   format5 = weekdays;
   if (typeof weekdays === "function") {
@@ -77,7 +76,7 @@ function getLocaleData() {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult1 = _modDef4228;
+    const tmpResult6 = _modDef4228;
   } else {
     const _Array3 = Array;
     let format3 = weekdays;
@@ -87,7 +86,7 @@ function getLocaleData() {
     format5 = format3;
     fn3 = (arg0) => format5[arg0];
   }
-  obj.weekdays = fn3;
+  obj2.weekdays = fn3;
   ordinal = "day";
   format5 = weekdaysShort;
   if (typeof weekdaysShort === "function") {
@@ -96,7 +95,7 @@ function getLocaleData() {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult2 = _modDef4228;
+    const tmpResult7 = _modDef4228;
   } else {
     const _Array4 = Array;
     let format4 = weekdaysShort;
@@ -106,7 +105,7 @@ function getLocaleData() {
     format5 = format4;
     fn4 = (arg0) => format5[arg0];
   }
-  obj.weekdaysShort = fn4;
+  obj2.weekdaysShort = fn4;
   ordinal = "day";
   format5 = weekdaysMin;
   if (typeof weekdaysMin === "function") {
@@ -115,7 +114,7 @@ function getLocaleData() {
       closure_0 = arg0;
       return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
-    const tmpResult3 = _modDef4228;
+    const tmpResult8 = _modDef4228;
   } else {
     const _Array5 = Array;
     format5 = weekdaysMin;
@@ -124,16 +123,16 @@ function getLocaleData() {
     }
     fn5 = (arg0) => format5[arg0];
   }
-  obj.weekdaysMin = fn5;
-  obj.meridiem = meridiem;
+  obj2.weekdaysMin = fn5;
+  obj2.meridiem = meridiem;
   if (typeof ordinal === "string") {
     ordinal = (arg0) => ordinal.replace("%d", "" + arg0);
   }
-  obj.ordinal = ordinal;
-  obj.longDateFormat = longDateFormat;
-  obj.longFormatters = [];
-  obj.week = week;
-  return obj;
+  obj2.ordinal = ordinal;
+  obj2.longDateFormat = longDateFormat;
+  obj2.longFormatters = [];
+  obj2.week = week;
+  return obj2;
 }
 let result = size.fileFinishedImporting("lib/makeDateFormatter.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 11989: MemberRolesList ===
+// === Module 11990: MemberRolesList ===
 
-// Module 11989 (MemberRolesList)
-import RolePillDefault from "RolePill" /* 11078 */;
+// Module 11990 (MemberRolesList)
+import RolePillDefault from "RolePill" /* 11079 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
@@ -16,9 +16,9 @@ const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx
 export default function MemberRolesList(userRoles) {
   userRoles = userRoles.userRoles;
   const guild = userRoles.guild;
-  let obj = userRoles(504);
+  const tmp = closure_6();
   const items = [GuildRoleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
+  const stateFromStores = userRoles(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
   const tmp4 = <View />;
   let tmp2Result = tmp4;
   if (null != userRoles) {
@@ -50,10 +50,10 @@ export default function MemberRolesList(userRoles) {
         }
         return num;
       });
-      obj = { style: null, children: null };
+      const obj2 = { style: null, children: null };
       const items1 = [tmp.wrapper, userRoles.style];
-      obj.style = items1;
-      obj.children = sorted.map((role) => jsx(RolePillDefault, { role, guildId: guild.id }, role.id));
+      obj2.style = items1;
+      obj2.children = sorted.map((role) => jsx(RolePillDefault, { role, guildId: guild.id }, role.id));
       tmp2Result = <View style={null}>{null}</View>;
     }
   }

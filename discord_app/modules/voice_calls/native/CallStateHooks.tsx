@@ -1,10 +1,12 @@
-// === Module 13883: CallStateHooks ===
+// === Module 13884: CallStateHooks ===
 
-// Module 13883 (CallStateHooks)
+// Module 13884 (CallStateHooks)
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 5359 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1074);
@@ -12,7 +14,7 @@ const Constants = fn(1074);
 const ParticipantTypes = fn(4657).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "PX_16" });
-obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
+let obj2 = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
@@ -60,9 +62,9 @@ export default function _default() {
   });
   const tmp3 = id(9344)();
   dependencyMap = tmp3;
+  obj2 = require("initialize");
   const items2 = [RTCConnectionStore];
-  stateFromStores = require("initialize").useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
-  const obj2 = require("initialize");
+  stateFromStores = obj2.useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
   const items3 = [RTCConnectionStore];
   const items4 = [stateFromStores, tmp3, tmp];
   const stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
@@ -92,7 +94,7 @@ export default function _default() {
     }
   }, items4);
   obj.initialized = obj.initialized || flag2;
-  let state = obj.CONNECTING;
+  let state = obj2.CONNECTING;
   let initialized = tmp6.initialized;
   if (flag) {
     state = tmp7.DISCONNECTING;
@@ -113,4 +115,4 @@ export default function _default() {
   }
   return { state, initialized };
 };
-export const CallStates = obj;
+export const CallStates = obj2;

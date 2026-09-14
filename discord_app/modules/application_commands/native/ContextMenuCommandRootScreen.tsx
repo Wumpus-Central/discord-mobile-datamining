@@ -1,6 +1,6 @@
-// === Module 16981: ContextMenuCommandRootScreen ===
+// === Module 16983: ContextMenuCommandRootScreen ===
 
-// Module 16981 (ContextMenuCommandRootScreen)
+// Module 16983 (ContextMenuCommandRootScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -15,12 +15,11 @@ const ApplicationCommandConstants = fn(5080);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = { content: null, sectionHeader: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.content = createStyles;
-createStyles.sectionHeader = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_13 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, sectionHeader: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.sectionHeader = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
 
@@ -45,10 +44,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
   closure_18 = undefined;
   c19 = undefined;
   let scaledTextLineHeight;
-  let obj = navigation(onPressAppCommand[8]);
   let items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
-  let obj1 = stateFromStores;
+  const stateFromStores = navigation(onPressAppCommand[8]).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   closure_6 = stateFromStores.useRef(false);
   const tmp4 = onClose(stateFromStores.useState(""), 2);
   const first = tmp4[0];
@@ -61,30 +58,30 @@ export default function ContextMenuCommandRootScreen(navigation) {
       }
     }
   }), items1);
-  let obj2 = commandTargetId(onPressAppCommand[9]);
-  obj = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
+  let obj = navigation(onPressAppCommand[8]);
+  let obj4 = { context: { channel, type: "channel" }, filters: null, options: null, allowFetch: true };
   let tmp8;
   if ("" !== first) {
     tmp8 = first;
   }
-  obj = { text: tmp8, commandTypes: null };
+  const obj5 = { text: tmp8, commandTypes: null };
   let items2 = [params.commandType];
-  obj.commandTypes = items2;
-  obj.filters = obj;
-  obj1 = { limit: commands, includeFrecency: !tmp6, scoreMethod: null };
+  obj5.commandTypes = items2;
+  obj4.filters = obj5;
+  const obj6 = { limit: commands, includeFrecency: "" === first, scoreMethod: null };
   let prop;
   if ("" !== first) {
     prop = tmp(tmp2[10]).ScoreMethod.COMMAND_OR_APPLICATION;
   }
-  obj1.scoreMethod = prop;
-  obj.options = obj1;
-  const discovery = obj2.useDiscovery(obj);
+  obj6.scoreMethod = prop;
+  obj4.options = obj6;
+  const discovery = commandTargetId(onPressAppCommand[9]).useDiscovery(obj4);
   commands = discovery.commands;
   commandsByActiveSection = discovery.commandsByActiveSection;
   sectionDescriptors = discovery.sectionDescriptors;
   loading = discovery.loading;
   let items3 = [sectionDescriptors];
-  sections = obj1.useMemo(() => {
+  sections = obj2.useMemo(() => {
     sections = {};
     const item = sectionDescriptors.forEach((id) => {
       sections[id.id] = id;
@@ -92,23 +89,22 @@ export default function ContextMenuCommandRootScreen(navigation) {
     return { sections };
   }, items3).sections;
   let items4 = [channel, commandTargetId, stateFromStores, navigation, onPressAppCommand];
-  onPressCommand = obj1.useCallback((command) => {
+  onPressCommand = obj2.useCallback((command) => {
     if (onPressAppCommand != null) {
       tmp();
     }
     closure_6.current = true;
-    let obj = { command, optionValues: {}, context: null, commandTargetId };
-    obj = { channel, guild: stateFromStores };
-    obj.context = obj;
+    const obj = { command, optionValues: {}, context: { channel, guild: stateFromStores }, commandTargetId };
     executeCommandDefault(obj);
     let parent = navigation.getParent();
     if (parent == null) {
       parent = navigation;
     }
     parent.goBack();
+    const obj2 = { channel, guild: stateFromStores };
   }, items4);
   let items5 = [commandsByActiveSection, navigation, onPressCommand];
-  callback1 = obj1.useCallback((section) => {
+  callback1 = obj2.useCallback((section) => {
     const found = commandsByActiveSection.find((section) => section.section.id === section.id);
     let data;
     if (found != null) {
@@ -120,7 +116,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
     navigation.navigate("app", { section, commands: data, onPressCommand });
   }, items5);
   const items6 = [loading, commands.length, commandsByActiveSection];
-  const memo = obj1.useMemo(() => {
+  const memo = obj2.useMemo(() => {
     if (!loading) {
       if (0 !== commands.length) {
         const found = commandsByActiveSection.find((section) => section.section.id === constants.FRECENCY);
@@ -142,34 +138,32 @@ export default function ContextMenuCommandRootScreen(navigation) {
   frecencyItems = memo.frecencyItems;
   appItems = memo.appItems;
   const items7 = [loading, commands, "" !== first, frecencyItems, appItems];
-  memo1 = obj1.useMemo(() => {
+  memo1 = obj2.useMemo(() => {
     if (loading) {
       const items = [{ type: "placeholder" }];
       const items1 = [items];
       return items1;
+    } else if (0 === commands.length) {
+      const items2 = [{ type: "no_commands" }];
+      const items3 = [items2];
+      return items3;
+    } else if (closure_7) {
+      const items4 = [commands.map((command) => ({ type: "command", command }))];
+      return items4;
     } else {
-      let arr = commands;
-      if (0 === commands.length) {
-        const items2 = [{ type: "no_commands" }];
-        const items3 = [items2];
-        return items3;
-      } else if (closure_7) {
-        const items4 = [arr.map((command) => ({ type: "command", command }))];
-        return items4;
-      } else {
-        const items5 = [];
-        if (frecencyItems.length > 0) {
-          arr = items5.push(tmp2);
-        }
-        if (appItems.length > 0) {
-          arr = items5.push(tmp4);
-        }
-        return items5;
+      const items5 = [];
+      if (frecencyItems.length > 0) {
+        items5.push(tmp2);
       }
+      if (appItems.length > 0) {
+        items5.push(tmp4);
+      }
+      return items5;
     }
   }, items7);
   const items8 = [memo1];
-  const memo2 = obj1.useMemo(() => memo1.map((item) => item.length), items8);
+  let obj3 = commandTargetId(onPressAppCommand[9]);
+  const memo2 = obj2.useMemo(() => memo1.map((item) => item.length), items8);
   const tmp18 = onPressCommand();
   closure_18 = tmp18;
   c19 = "text-sm/semibold";
@@ -177,7 +171,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   scaledTextLineHeight = navigation(onPressAppCommand[14]).useScaledTextLineHeight("text-sm/semibold");
   const items9 = [loading, commands.length, "" !== first, frecencyItems.length, tmp18.sectionHeader];
   const items10 = [memo1, onPressCommand, callback1, sections];
-  const callback2 = obj1.useCallback((arg0) => {
+  const callback2 = obj2.useCallback((arg0) => {
     if (!loading) {
       if (0 !== commands.length) {
         if (!closure_7) {
@@ -197,17 +191,17 @@ export default function ContextMenuCommandRootScreen(navigation) {
     return null;
   }, items9);
   const items11 = [loading, commands.length, "" !== first, scaledTextLineHeight, tmp18.sectionHeader.paddingTop, tmp18.sectionHeader.paddingBottom];
-  const callback3 = obj1.useCallback((arg0, arg1) => {
+  const callback3 = obj2.useCallback((arg0, arg1) => {
     closure_0 = tmp;
     const type = tmp.type;
     if ("placeholder" === type) {
-      let obj = { start: tmp2, end: tmp3 };
-      return sectionDescriptors(navigation(onPressAppCommand[17]).ContextMenuCommandLoadingItem, obj, "placeholder");
+      const obj2 = { start: tmp2, end: tmp3 };
+      return sectionDescriptors(navigation(onPressAppCommand[17]).ContextMenuCommandLoadingItem, obj2, "placeholder");
     } else if ("no_commands" === type) {
-      obj = { start: tmp2, end: tmp3 };
-      return sectionDescriptors(navigation(onPressAppCommand[17]).ContextMenuCommandEmptyItem, obj, "no_commands");
+      const obj3 = { start: tmp2, end: tmp3 };
+      return sectionDescriptors(navigation(onPressAppCommand[17]).ContextMenuCommandEmptyItem, obj3, "no_commands");
     } else if ("command" === type) {
-      const obj1 = {
+      const obj4 = {
         item: tmp.command,
         onPress() {
             return callback(closure_0.command);
@@ -216,9 +210,9 @@ export default function ContextMenuCommandRootScreen(navigation) {
         start: tmp2,
         end: tmp3
       };
-      return sectionDescriptors(channel(onPressAppCommand[17]), obj1, tmp.command.id);
+      return sectionDescriptors(channel(onPressAppCommand[17]), obj4, tmp.command.id);
     } else if ("app" === type) {
-      obj = {
+      const obj = {
         section: tmp.section,
         onPress() {
             return callback1(closure_0.section);
@@ -230,7 +224,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
     }
   }, items10);
   let tmp27Result = tmp6;
-  const memo3 = obj1.useMemo(() => {
+  const memo3 = obj2.useMemo(() => {
     let num = 0;
     if (!loading) {
       num = 0;
@@ -256,22 +250,22 @@ export default function ContextMenuCommandRootScreen(navigation) {
     if (tmp6) {
       num2 = tmp15(tmp2[7]).space.PX_16;
     }
-    obj2 = { style: null, children: null };
-    const obj3 = { marginBottom: num2 };
-    items12[1] = obj3;
-    obj2.style = items12;
-    const obj4 = { size: "md", onChange: tmp4[1], placeholder: null };
+    const obj7 = { style: null, children: null };
+    const obj8 = { marginBottom: num2 };
+    items12[1] = obj8;
+    obj7.style = items12;
+    const obj9 = { size: "md", onChange: tmp4[1], placeholder: null };
     let intl = tmp(tmp2[15]).intl;
-    obj4.placeholder = intl.string(tmp(tmp2[15]).t.m1UwbP);
-    obj2.children = sectionDescriptors(tmp(tmp2[18]).SearchField, obj4);
-    tmp27Result = tmp27(closure_6, obj2);
+    obj9.placeholder = intl.string(tmp(tmp2[15]).t.m1UwbP);
+    obj7.children = sectionDescriptors(tmp(tmp2[18]).SearchField, obj9);
+    tmp27Result = tmp27(closure_6, obj7);
   }
-  const obj5 = { children: null };
+  const obj10 = { children: null };
   const items13 = [tmp27Result, ];
   const tmp23 = sections;
   const tmp24 = loading;
   const tmpResult = navigation(onPressAppCommand[14]);
   items13[1] = sectionDescriptors(channel(onPressAppCommand[19]), { sections: memo2, estimatedListSize: "windowSize", itemSize: tmp16, insetEnd: channel(onPressAppCommand[12])({ includeKeyboardHeight: true }).insets.bottom, renderItem: callback3, renderSectionHeader: callback2, sectionHeaderSize: memo3, style: tmp18.content });
-  obj5.children = items13;
-  return tmp23(tmp24, obj5);
+  obj10.children = items13;
+  return tmp23(tmp24, obj10);
 };

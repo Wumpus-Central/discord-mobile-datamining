@@ -1,14 +1,14 @@
-// === Module 13908: VideoQuality ===
+// === Module 13909: VideoQuality ===
 
-// Module 13908 (VideoQuality)
+// Module 13909 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import VideoQualityStats from "VideoQualityStats" /* 7843 */;
 import Histogram from "Histogram" /* 7844 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13905 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13906 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
 
 require = fn;
@@ -261,7 +261,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
       if (decoderUsageStats.has(userId)) {
         value = decoderUsageStats.get(userId);
       }
-      let obj = { codec_asymmetric_session: tmp, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
+      const obj = { codec_asymmetric_session: tmp, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
       let num = value.get(VideoQualityStats.CodecTypes.H264);
       if (num == null) {
         num = 0;
@@ -301,38 +301,38 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     HermesBuiltin.arraySpread(encoderUsageStats.keys(), 0);
     map = encoderUsageStats.get(items.sort()[0]);
   }
-  obj = { codec_asymmetric_session: tmp, codec_h264_encode_duration_sec: null, codec_h265_encode_duration_sec: null, codec_vp8_encode_duration_sec: null, codec_vp9_encode_duration_sec: null, codec_av1_encode_duration_sec: null, codec_unknown_encode_duration_sec: null };
+  const obj2 = { codec_asymmetric_session: this.asymmetricCodecUpdates > this.symmetricCodecUpdates, codec_h264_encode_duration_sec: null, codec_h265_encode_duration_sec: null, codec_vp8_encode_duration_sec: null, codec_vp9_encode_duration_sec: null, codec_av1_encode_duration_sec: null, codec_unknown_encode_duration_sec: null };
   let num8 = map.get(VideoQualityStats.CodecTypes.H264);
   if (num8 == null) {
     num8 = 0;
   }
-  obj.codec_h264_encode_duration_sec = num8;
+  obj2.codec_h264_encode_duration_sec = num8;
   let num9 = map.get(VideoQualityStats.CodecTypes.H265);
   if (num9 == null) {
     num9 = 0;
   }
-  obj.codec_h265_encode_duration_sec = num9;
+  obj2.codec_h265_encode_duration_sec = num9;
   let num10 = map.get(VideoQualityStats.CodecTypes.VP8);
   if (num10 == null) {
     num10 = 0;
   }
-  obj.codec_vp8_encode_duration_sec = num10;
+  obj2.codec_vp8_encode_duration_sec = num10;
   let num11 = map.get(VideoQualityStats.CodecTypes.VP9);
   if (num11 == null) {
     num11 = 0;
   }
-  obj.codec_vp9_encode_duration_sec = num11;
+  obj2.codec_vp9_encode_duration_sec = num11;
   let num12 = map.get(VideoQualityStats.CodecTypes.AV1);
   if (num12 == null) {
     num12 = 0;
   }
-  obj.codec_av1_encode_duration_sec = num12;
+  obj2.codec_av1_encode_duration_sec = num12;
   let num13 = map.get(VideoQualityStats.CodecTypes.UNKNOWN);
   if (num13 == null) {
     num13 = 0;
   }
-  obj.codec_unknown_encode_duration_sec = num13;
-  return obj;
+  obj2.codec_unknown_encode_duration_sec = num13;
+  return obj2;
 };
 prototype["getCameraDurationStats"] = function getCameraDurationStats() {
   const obj = { camera_enabled_duration: null, camera_send_opportunity_duration: null, camera_send_duration: null, num_camera_on_toggles: this.cameraToggles };
@@ -349,7 +349,6 @@ prototype["getOutboundStats"] = function getOutboundStats() {
   let items = [];
   let item = self(12).forEach(this.outboundStats, (vmafHistogram, arg1) => {
     closure_0 = arg1;
-    let obj = self;
     const connection = self.connection;
     let streamParameters;
     if (connection != null) {
@@ -375,18 +374,16 @@ prototype["getOutboundStats"] = function getOutboundStats() {
     const report2 = targetBitrateHistogram.getReport(items1);
     const outboundBandwidthSurplus = vmafHistogram.outboundBandwidthSurplus;
     const report3 = outboundBandwidthSurplus.getReport(items1);
-    const videoEntropy = obj.videoEntropy;
+    const videoEntropy = self.videoEntropy;
     const report4 = videoEntropy.getReport(items1);
     const result = vmafHistogram.aggregationDuration / 1000;
     if (!obj2.isWeb()) {
-      let tmp9Result = PlatformUtils;
       if (!tmp9Result.isIOS()) {
-        tmp9Result = PlatformUtils;
-        if (!tmp9Result.isAndroid()) {
+        if (!tmp9Result2.isAndroid()) {
           let framesCodec = vmafHistogram.aggregatedProperties.screenshareFramesUnique;
         }
-        obj = {};
-        const merged = Object.assign(obj.getStats(vmafHistogram));
+        const obj3 = {};
+        const merged = Object.assign(self.getStats(vmafHistogram));
         let num2 = 0;
         if (0 < result) {
           let num3 = vmafHistogram.targetFrames;
@@ -395,8 +392,8 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           }
           num2 = Math.round(num3 / result);
         }
-        obj.target_fps = num2;
-        const connection2 = obj.connection;
+        obj3.target_fps = num2;
+        const connection2 = self.connection;
         let context;
         if (connection2 != null) {
           context = connection2.context;
@@ -408,7 +405,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
             result1 = framesCodec / result;
           }
         }
-        obj.unique_captured_fps = result1;
+        obj3.unique_captured_fps = result1;
         let num4 = 0;
         if (0 < result) {
           let num5 = vmafHistogram.targetBytesNetwork;
@@ -417,42 +414,42 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           }
           num4 = Math.round(8 * num5 / result);
         }
-        obj.target_bitrate_network = num4;
+        obj3.target_bitrate_network = num4;
         let tmp18 = null;
         if (report2.count > 0) {
           tmp18 = report2.percentiles[1];
         }
-        obj.target_bitrate_network_percentile1 = tmp18;
+        obj3.target_bitrate_network_percentile1 = tmp18;
         let tmp19 = null;
         if (report2.count > 0) {
           tmp19 = report2.percentiles[5];
         }
-        obj.target_bitrate_network_percentile5 = tmp19;
+        obj3.target_bitrate_network_percentile5 = tmp19;
         let tmp20 = null;
         if (report2.count > 0) {
           tmp20 = report2.percentiles[10];
         }
-        obj.target_bitrate_network_percentile10 = tmp20;
+        obj3.target_bitrate_network_percentile10 = tmp20;
         let tmp21 = null;
         if (report2.count > 0) {
           tmp21 = report2.percentiles[25];
         }
-        obj.target_bitrate_network_percentile25 = tmp21;
+        obj3.target_bitrate_network_percentile25 = tmp21;
         let tmp22 = null;
         if (report2.count > 0) {
           tmp22 = report2.percentiles[50];
         }
-        obj.target_bitrate_network_percentile50 = tmp22;
+        obj3.target_bitrate_network_percentile50 = tmp22;
         let tmp23 = null;
         if (report2.count > 0) {
           tmp23 = report2.percentiles[75];
         }
-        obj.target_bitrate_network_percentile75 = tmp23;
+        obj3.target_bitrate_network_percentile75 = tmp23;
         let tmp24 = null;
         if (report2.count > 0) {
           tmp24 = report2.percentiles[99];
         }
-        obj.target_bitrate_network_percentile99 = tmp24;
+        obj3.target_bitrate_network_percentile99 = tmp24;
         let num7 = 0;
         if (0 < result) {
           let num8 = vmafHistogram.targetBytesMax;
@@ -461,7 +458,7 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           }
           num7 = Math.round(8 * num8 / result);
         }
-        obj.target_bitrate_max = num7;
+        obj3.target_bitrate_max = num7;
         let num10 = 0;
         if (0 < result) {
           let num11 = vmafHistogram.outboundBytesAvailable;
@@ -470,337 +467,339 @@ prototype["getOutboundStats"] = function getOutboundStats() {
           }
           num10 = Math.round(8 * num11 / result);
         }
-        obj.outbound_bandwidth_estimate = num10;
+        obj3.outbound_bandwidth_estimate = num10;
         let tmp27 = null;
         if (report3.count > 0) {
           tmp27 = report3.percentiles[1];
         }
-        obj.outbound_bandwidth_surplus_percentile1 = tmp27;
+        obj3.outbound_bandwidth_surplus_percentile1 = tmp27;
         let tmp28 = null;
         if (report3.count > 0) {
           tmp28 = report3.percentiles[5];
         }
-        obj.outbound_bandwidth_surplus_percentile5 = tmp28;
+        obj3.outbound_bandwidth_surplus_percentile5 = tmp28;
         let tmp29 = null;
         if (report3.count > 0) {
           tmp29 = report3.percentiles[10];
         }
-        obj.outbound_bandwidth_surplus_percentile10 = tmp29;
+        obj3.outbound_bandwidth_surplus_percentile10 = tmp29;
         let tmp30 = null;
         if (report3.count > 0) {
           tmp30 = report3.percentiles[25];
         }
-        obj.outbound_bandwidth_surplus_percentile25 = tmp30;
+        obj3.outbound_bandwidth_surplus_percentile25 = tmp30;
         let tmp31 = null;
         if (report3.count > 0) {
           tmp31 = report3.percentiles[50];
         }
-        obj.outbound_bandwidth_surplus_percentile50 = tmp31;
+        obj3.outbound_bandwidth_surplus_percentile50 = tmp31;
         let tmp32 = null;
         if (report3.count > 0) {
           tmp32 = report3.percentiles[75];
         }
-        obj.outbound_bandwidth_surplus_percentile75 = tmp32;
+        obj3.outbound_bandwidth_surplus_percentile75 = tmp32;
         let tmp33 = null;
         if (report3.count > 0) {
           tmp33 = report3.percentiles[99];
         }
-        obj.outbound_bandwidth_surplus_percentile99 = tmp33;
+        obj3.outbound_bandwidth_surplus_percentile99 = tmp33;
         const tmp34 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.NVIDIA_CUDA];
         let num13 = 0;
         if (null != tmp34) {
           const _Math = Math;
           num13 = Math.round(tmp34);
         }
-        obj.duration_encoder_nvidia_cuda = num13;
+        obj3.duration_encoder_nvidia_cuda = num13;
         const tmp36 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.NVIDIA_DIRECT_3D];
         let num14 = 0;
         if (null != tmp36) {
           const _Math2 = Math;
           num14 = Math.round(tmp36);
         }
-        obj.duration_encoder_nvidia_direct3d = num14;
+        obj3.duration_encoder_nvidia_direct3d = num14;
         const tmp38 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.NVIDIA_VULKAN];
         let num15 = 0;
         if (null != tmp38) {
           const _Math3 = Math;
           num15 = Math.round(tmp38);
         }
-        obj.duration_encoder_nvidia_vulkan = num15;
+        obj3.duration_encoder_nvidia_vulkan = num15;
         const tmp40 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.OPENH264];
         let num16 = 0;
         if (null != tmp40) {
           const _Math4 = Math;
           num16 = Math.round(tmp40);
         }
-        obj.duration_encoder_openh264 = num16;
+        obj3.duration_encoder_openh264 = num16;
         const tmp42 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.VIDEOTOOLBOX];
         let num17 = 0;
         if (null != tmp42) {
           const _Math5 = Math;
           num17 = Math.round(tmp42);
         }
-        obj.duration_encoder_videotoolbox = num17;
+        obj3.duration_encoder_videotoolbox = num17;
         const tmp44 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.AMD_DIRECT_3D];
         let num18 = 0;
         if (null != tmp44) {
           const _Math6 = Math;
           num18 = Math.round(tmp44);
         }
-        obj.duration_encoder_amd_direct3d = num18;
+        obj3.duration_encoder_amd_direct3d = num18;
         const tmp46 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.AMD_VAAPI];
         let num19 = 0;
         if (null != tmp46) {
           const _Math7 = Math;
           num19 = Math.round(tmp46);
         }
-        obj.duration_encoder_amd_vaapi = num19;
+        obj3.duration_encoder_amd_vaapi = num19;
         const tmp48 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.INTEL];
         let num20 = 0;
         if (null != tmp48) {
           const _Math8 = Math;
           num20 = Math.round(tmp48);
         }
-        obj.duration_encoder_intel = num20;
+        obj3.duration_encoder_intel = num20;
         const tmp50 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.INTEL_DIRECT_3D];
         let num21 = 0;
         if (null != tmp50) {
           const _Math9 = Math;
           num21 = Math.round(tmp50);
         }
-        obj.duration_encoder_intel_direct3d = num21;
+        obj3.duration_encoder_intel_direct3d = num21;
         const tmp52 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.INTEL_VAAPI];
         let num22 = 0;
         if (null != tmp52) {
           const _Math10 = Math;
           num22 = Math.round(tmp52);
         }
-        obj.duration_encoder_intel_vaapi = num22;
+        obj3.duration_encoder_intel_vaapi = num22;
         const tmp54 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.VP8_LIBVPX];
         let num23 = 0;
         if (null != tmp54) {
           const _Math11 = Math;
           num23 = Math.round(tmp54);
         }
-        obj.duration_encoder_vp8_libvpx = num23;
+        obj3.duration_encoder_vp8_libvpx = num23;
         const tmp56 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.UNCATEGORIZED];
         let num24 = 0;
         if (null != tmp56) {
           const _Math12 = Math;
           num24 = Math.round(tmp56);
         }
-        obj.duration_encoder_uncategorized = num24;
+        obj3.duration_encoder_uncategorized = num24;
         const tmp58 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.WMF_CHROME];
         let num25 = 0;
         if (null != tmp58) {
           const _Math13 = Math;
           num25 = Math.round(tmp58);
         }
-        obj.duration_encoder_wmf_chrome = num25;
+        obj3.duration_encoder_wmf_chrome = num25;
         const tmp60 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.UNKNOWN];
         let num26 = 0;
         if (null != tmp60) {
           const _Math14 = Math;
           num26 = Math.round(tmp60);
         }
-        obj.duration_encoder_unknown = num26;
-        obj.quality = 0;
-        obj.average_encode_time_ms = vmafHistogram.averageEncodeTime;
+        obj3.duration_encoder_unknown = num26;
+        obj3.quality = 0;
+        obj3.average_encode_time_ms = vmafHistogram.averageEncodeTime;
         let result2 = null;
         if (vmafHistogram.vmafScoreNum > 0) {
           result2 = vmafHistogram.vmafScoreSum / vmafHistogram.vmafScoreNum;
         }
-        obj.average_encoder_vmaf_score = result2;
+        obj3.average_encoder_vmaf_score = result2;
         let tmp64 = null;
         if (report.count > 0) {
           tmp64 = report.percentiles[1];
         }
-        obj.encoder_vmaf_score_percentile1 = tmp64;
+        obj3.encoder_vmaf_score_percentile1 = tmp64;
         let tmp65 = null;
         if (report.count > 0) {
           tmp65 = report.percentiles[5];
         }
-        obj.encoder_vmaf_score_percentile5 = tmp65;
+        obj3.encoder_vmaf_score_percentile5 = tmp65;
         let tmp66 = null;
         if (report.count > 0) {
           tmp66 = report.percentiles[10];
         }
-        obj.encoder_vmaf_score_percentile10 = tmp66;
+        obj3.encoder_vmaf_score_percentile10 = tmp66;
         let tmp67 = null;
         if (report.count > 0) {
           tmp67 = report.percentiles[25];
         }
-        obj.encoder_vmaf_score_percentile25 = tmp67;
+        obj3.encoder_vmaf_score_percentile25 = tmp67;
         let tmp68 = null;
         if (report.count > 0) {
           tmp68 = report.percentiles[50];
         }
-        obj.encoder_vmaf_score_percentile50 = tmp68;
+        obj3.encoder_vmaf_score_percentile50 = tmp68;
         let tmp69 = null;
         if (report.count > 0) {
           tmp69 = report.percentiles[75];
         }
-        obj.encoder_vmaf_score_percentile75 = tmp69;
+        obj3.encoder_vmaf_score_percentile75 = tmp69;
         let result3 = null;
         if (vmafHistogram.psnrDbNum > 0) {
           result3 = vmafHistogram.psnrDbSum / vmafHistogram.psnrDbNum;
         }
-        obj.average_encoder_psnr_db = result3;
+        obj3.average_encoder_psnr_db = result3;
         let tmp71 = null;
         if (report1.count > 0) {
           tmp71 = report1.percentiles[1];
         }
-        obj.encoder_psnr_db_percentile1 = tmp71;
+        obj3.encoder_psnr_db_percentile1 = tmp71;
         let tmp72 = null;
         if (report1.count > 0) {
           tmp72 = report1.percentiles[5];
         }
-        obj.encoder_psnr_db_percentile5 = tmp72;
+        obj3.encoder_psnr_db_percentile5 = tmp72;
         let tmp73 = null;
         if (report1.count > 0) {
           tmp73 = report1.percentiles[10];
         }
-        obj.encoder_psnr_db_percentile10 = tmp73;
+        obj3.encoder_psnr_db_percentile10 = tmp73;
         let tmp74 = null;
         if (report1.count > 0) {
           tmp74 = report1.percentiles[25];
         }
-        obj.encoder_psnr_db_percentile25 = tmp74;
+        obj3.encoder_psnr_db_percentile25 = tmp74;
         let tmp75 = null;
         if (report1.count > 0) {
           tmp75 = report1.percentiles[50];
         }
-        obj.encoder_psnr_db_percentile50 = tmp75;
+        obj3.encoder_psnr_db_percentile50 = tmp75;
         let tmp76 = null;
         if (report1.count > 0) {
           tmp76 = report1.percentiles[75];
         }
-        obj.encoder_psnr_db_percentile75 = tmp76;
+        obj3.encoder_psnr_db_percentile75 = tmp76;
         let result4 = null;
         if (vmafHistogram.outboundSinkWantNum > 0) {
           result4 = vmafHistogram.outboundSinkWantSum / vmafHistogram.outboundSinkWantNum;
         }
-        obj.average_outbound_want = result4;
+        obj3.average_outbound_want = result4;
         ({ framesDroppedRateLimiter: obj5.frames_dropped_rate_limiter, framesDroppedEncoderQueue: obj5.frames_dropped_encoder_queue, framesDroppedCongestionWindow: obj5.frames_dropped_congestion_window, framesDroppedEncoder: obj5.frames_dropped_encoder } = vmafHistogram);
-        const hqSimulcastStreamEncoded = obj.hqSimulcastStreamEncoded;
+        const hqSimulcastStreamEncoded = self.hqSimulcastStreamEncoded;
         const totalDurationSecondsResult = hqSimulcastStreamEncoded.totalDurationSeconds();
         let num27 = 0;
         if (null != totalDurationSecondsResult) {
           const _Math15 = Math;
           num27 = Math.round(totalDurationSecondsResult);
         }
-        obj.duration_hq_simulcast_stream_encoded = num27;
-        const lqSimulcastStreamEncoded = obj.lqSimulcastStreamEncoded;
+        obj3.duration_hq_simulcast_stream_encoded = num27;
+        const lqSimulcastStreamEncoded = self.lqSimulcastStreamEncoded;
         const totalDurationSecondsResult1 = lqSimulcastStreamEncoded.totalDurationSeconds();
         let num28 = 0;
         if (null != totalDurationSecondsResult1) {
           const _Math16 = Math;
           num28 = Math.round(totalDurationSecondsResult1);
         }
-        obj.duration_lq_simulcast_stream_encoded = num28;
-        const bothSimulcastStreamsEncoded = obj.bothSimulcastStreamsEncoded;
+        obj3.duration_lq_simulcast_stream_encoded = num28;
+        const bothSimulcastStreamsEncoded = self.bothSimulcastStreamsEncoded;
         const totalDurationSecondsResult2 = bothSimulcastStreamsEncoded.totalDurationSeconds();
         let num29 = 0;
         if (null != totalDurationSecondsResult2) {
           const _Math17 = Math;
           num29 = Math.round(totalDurationSecondsResult2);
         }
-        obj.duration_both_simulcast_streams_encoded = num29;
-        const bandwidthLimitedFramerate = obj.bandwidthLimitedFramerate;
+        obj3.duration_both_simulcast_streams_encoded = num29;
+        const bandwidthLimitedFramerate = self.bandwidthLimitedFramerate;
         const totalDurationSecondsResult3 = bandwidthLimitedFramerate.totalDurationSeconds();
         let num30 = 0;
         if (null != totalDurationSecondsResult3) {
           const _Math18 = Math;
           num30 = Math.round(totalDurationSecondsResult3);
         }
-        obj.duration_fps_bandwidth_limited = num30;
-        const bandwidthLimitedResolution = obj.bandwidthLimitedResolution;
+        obj3.duration_fps_bandwidth_limited = num30;
+        const bandwidthLimitedResolution = self.bandwidthLimitedResolution;
         const totalDurationSecondsResult4 = bandwidthLimitedResolution.totalDurationSeconds();
         let num31 = 0;
         if (null != totalDurationSecondsResult4) {
           const _Math19 = Math;
           num31 = Math.round(totalDurationSecondsResult4);
         }
-        obj.duration_resolution_bandwidth_limited = num31;
+        obj3.duration_resolution_bandwidth_limited = num31;
         let tmp88 = null;
         if (report4.count > 0) {
           tmp88 = report4.percentiles[1];
         }
-        obj.video_entropy_percentile1 = tmp88;
+        obj3.video_entropy_percentile1 = tmp88;
         let tmp89 = null;
         if (report4.count > 0) {
           tmp89 = report4.percentiles[5];
         }
-        obj.video_entropy_percentile5 = tmp89;
+        obj3.video_entropy_percentile5 = tmp89;
         let tmp90 = null;
         if (report4.count > 0) {
           tmp90 = report4.percentiles[10];
         }
-        obj.video_entropy_percentile10 = tmp90;
+        obj3.video_entropy_percentile10 = tmp90;
         let tmp91 = null;
         if (report4.count > 0) {
           tmp91 = report4.percentiles[25];
         }
-        obj.video_entropy_percentile25 = tmp91;
+        obj3.video_entropy_percentile25 = tmp91;
         let tmp92 = null;
         if (report4.count > 0) {
           tmp92 = report4.percentiles[50];
         }
-        obj.video_entropy_percentile50 = tmp92;
+        obj3.video_entropy_percentile50 = tmp92;
         let tmp93 = null;
         if (report4.count > 0) {
           tmp93 = report4.percentiles[75];
         }
-        obj.video_entropy_percentile75 = tmp93;
+        obj3.video_entropy_percentile75 = tmp93;
         let tmp94 = null;
         if (report4.count > 0) {
           tmp94 = report4.percentiles[99];
         }
-        obj.video_entropy_percentile99 = tmp94;
+        obj3.video_entropy_percentile99 = tmp94;
         const tmp95 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.EXYNOS];
         let num32 = 0;
         if (null != tmp95) {
           const _Math20 = Math;
           num32 = Math.round(tmp95);
         }
-        obj.duration_encoder_exynos = num32;
+        obj3.duration_encoder_exynos = num32;
         const tmp97 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.QUALCOMM];
         let num33 = 0;
         if (null != tmp97) {
           const _Math21 = Math;
           num33 = Math.round(tmp97);
         }
-        obj.duration_encoder_qualcomm = num33;
+        obj3.duration_encoder_qualcomm = num33;
         const tmp99 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.MEDIATEK];
         let num34 = 0;
         if (null != tmp99) {
           const _Math22 = Math;
           num34 = Math.round(tmp99);
         }
-        obj.duration_encoder_mediatek = num34;
+        obj3.duration_encoder_mediatek = num34;
         const tmp101 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.WMF_SW];
         let num35 = 0;
         if (null != tmp101) {
           const _Math23 = Math;
           num35 = Math.round(tmp101);
         }
-        obj.duration_encoder_wmf_sw = num35;
+        obj3.duration_encoder_wmf_sw = num35;
         const tmp103 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.WMF_HW];
         let num36 = 0;
         if (null != tmp103) {
           const _Math24 = Math;
           num36 = Math.round(tmp103);
         }
-        obj.duration_encoder_wmf_hw = num36;
+        obj3.duration_encoder_wmf_hw = num36;
         const tmp105 = vmafHistogram.encoderBuckets[VideoQualityStats.Encoders.WMF_DIRECT_3D];
         let num37 = 0;
         if (null != tmp105) {
           const _Math25 = Math;
           num37 = Math.round(tmp105);
         }
-        obj.duration_encoder_wmf_direct3d = num37;
-        items.push(obj);
+        obj3.duration_encoder_wmf_direct3d = num37;
+        items.push(obj3);
+        tmp9Result2 = PlatformUtils;
       }
+      tmp9Result = PlatformUtils;
     }
     framesCodec = vmafHistogram.aggregatedProperties.framesCodec;
     obj2 = PlatformUtils;
@@ -861,7 +860,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const report4 = localWantHistogram.getReport([1, 5, 10, 25, 50, 75, 90, 95]);
     const systemResources = aggregationDuration.systemResources;
     const stats = systemResources.getStats();
-    let obj = { duration: null, duration_aggregation: null, duration_stopped_receiving: null, duration_stream_under_8mbps: null, duration_stream_under_7mbps: null, duration_stream_under_6mbps: null, duration_stream_under_5mbps: null, duration_stream_under_4mbps: null, duration_stream_under_3mbps: null, duration_stream_under_2mbps: null, duration_stream_under_1_5mbps: null, duration_stream_under_1mbps: null, duration_stream_under_0_5mbps: null, duration_stream_at_0mbps: null, duration_fps_under_60: null, duration_fps_under_55: null, duration_fps_under_50: null, duration_fps_under_45: null, duration_fps_under_40: null, duration_fps_under_35: null, duration_fps_under_30: null, duration_fps_under_25: null, duration_fps_under_20: null, duration_fps_under_15: null, duration_fps_under_10: null, duration_fps_under_5: null, duration_fps_at_0: null, avg_resolution: null, avg_minor_resolution: null, avg_major_resolution: null, min_resolution_width: null, min_resolution_height: null, duration_resolution_under_720: null, duration_resolution_under_480: null, duration_resolution_under_360: null, num_pauses: null, duration_paused: null, duration_zero_receivers: null, duration_video_stopped: null, duration_hq_simulcast_stream_watched: null, duration_lq_simulcast_stream_watched: null, duration_hq_simulcast_stream_eligible: null, duration_lq_simulcast_stream_eligible: null, num_quality_changes: null, duration_window_occluded: null, duration_incoming_video_stopped_for_occlusion: null, num_window_occlusion_changes: null, fps_percentile1: null, fps_percentile5: null, fps_percentile10: null, fps_percentile25: null, fps_percentile50: null, fps_percentile75: null, bitrate_percentile1: null, bitrate_percentile5: null, bitrate_percentile10: null, bitrate_percentile25: null, bitrate_percentile50: null, bitrate_percentile75: null, bitrate_percentile99: null, resolution_percentile1: null, resolution_percentile5: null, resolution_percentile10: null, resolution_percentile25: null, resolution_percentile50: null, resolution_percentile75: null, inbound_bitrate_estimate_percentile1: null, inbound_bitrate_estimate_percentile5: null, inbound_bitrate_estimate_percentile10: null, inbound_bitrate_estimate_percentile25: null, inbound_bitrate_estimate_percentile50: null, inbound_bitrate_estimate_percentile75: null, inbound_bitrate_estimate_percentile99: null, local_want_percentile1: null, local_want_percentile5: null, local_want_percentile10: null, local_want_percentile25: null, local_want_percentile50: null, local_want_percentile75: null, local_want_percentile90: null, local_want_percentile95: null, average_local_want: null, duration_video_effect: null, cryptor_max_attempts: null, duration_decoder_ffmpeg: null, duration_decoder_dav1d: null, duration_decoder_vp8_libvpx: null, duration_decoder_electron: null, duration_decoder_videotoolbox: null, duration_decoder_uncategorized: null, duration_decoder_unknown: null, duration_decoder_exynos: null, duration_decoder_webrtc: null, duration_decoder_qualcomm: null, duration_decoder_mediatek: null, duration_decoder_d3d11videodecoder: null, duration_decoder_android: null };
+    const obj = { duration: null, duration_aggregation: null, duration_stopped_receiving: null, duration_stream_under_8mbps: null, duration_stream_under_7mbps: null, duration_stream_under_6mbps: null, duration_stream_under_5mbps: null, duration_stream_under_4mbps: null, duration_stream_under_3mbps: null, duration_stream_under_2mbps: null, duration_stream_under_1_5mbps: null, duration_stream_under_1mbps: null, duration_stream_under_0_5mbps: null, duration_stream_at_0mbps: null, duration_fps_under_60: null, duration_fps_under_55: null, duration_fps_under_50: null, duration_fps_under_45: null, duration_fps_under_40: null, duration_fps_under_35: null, duration_fps_under_30: null, duration_fps_under_25: null, duration_fps_under_20: null, duration_fps_under_15: null, duration_fps_under_10: null, duration_fps_under_5: null, duration_fps_at_0: null, avg_resolution: null, avg_minor_resolution: null, avg_major_resolution: null, min_resolution_width: null, min_resolution_height: null, duration_resolution_under_720: null, duration_resolution_under_480: null, duration_resolution_under_360: null, num_pauses: null, duration_paused: null, duration_zero_receivers: null, duration_video_stopped: null, duration_hq_simulcast_stream_watched: null, duration_lq_simulcast_stream_watched: null, duration_hq_simulcast_stream_eligible: null, duration_lq_simulcast_stream_eligible: null, num_quality_changes: null, duration_window_occluded: null, duration_incoming_video_stopped_for_occlusion: null, num_window_occlusion_changes: null, fps_percentile1: null, fps_percentile5: null, fps_percentile10: null, fps_percentile25: null, fps_percentile50: null, fps_percentile75: null, bitrate_percentile1: null, bitrate_percentile5: null, bitrate_percentile10: null, bitrate_percentile25: null, bitrate_percentile50: null, bitrate_percentile75: null, bitrate_percentile99: null, resolution_percentile1: null, resolution_percentile5: null, resolution_percentile10: null, resolution_percentile25: null, resolution_percentile50: null, resolution_percentile75: null, inbound_bitrate_estimate_percentile1: null, inbound_bitrate_estimate_percentile5: null, inbound_bitrate_estimate_percentile10: null, inbound_bitrate_estimate_percentile25: null, inbound_bitrate_estimate_percentile50: null, inbound_bitrate_estimate_percentile75: null, inbound_bitrate_estimate_percentile99: null, local_want_percentile1: null, local_want_percentile5: null, local_want_percentile10: null, local_want_percentile25: null, local_want_percentile50: null, local_want_percentile75: null, local_want_percentile90: null, local_want_percentile95: null, average_local_want: null, duration_video_effect: null, cryptor_max_attempts: null, duration_decoder_ffmpeg: null, duration_decoder_dav1d: null, duration_decoder_vp8_libvpx: null, duration_decoder_electron: null, duration_decoder_videotoolbox: null, duration_decoder_uncategorized: null, duration_decoder_unknown: null, duration_decoder_exynos: null, duration_decoder_webrtc: null, duration_decoder_qualcomm: null, duration_decoder_mediatek: null, duration_decoder_d3d11videodecoder: null, duration_decoder_android: null };
     const _Math2 = Math;
     obj.duration = Math.floor(diff / 1000);
     const _Math3 = Math;
@@ -1285,7 +1284,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       }
       tmp45Result = PlatformUtils;
     }
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(obj);
     let num68 = 0;
     if (0 < result) {
@@ -1295,7 +1294,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       }
       num68 = Math.round(8 * num69 / result);
     }
-    obj.avg_bitrate = num68;
+    obj2.avg_bitrate = num68;
     let num71 = 0;
     if (0 < result) {
       if (framesCodec == null) {
@@ -1303,32 +1302,32 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       }
       num71 = Math.round(framesCodec / result);
     }
-    obj.avg_fps = num71;
-    obj.num_bytes = bytes;
-    obj.num_packets_lost = packetsLost;
-    obj.num_packets = packets;
-    obj.num_frames = framesNetwork;
-    obj.num_frames_codec_error = framesCodecError;
-    obj.time_to_first_frame_ms = aggregationDuration.timeToFirstFrame;
-    obj.num_frames_dropped = framesDropped + networkFramesDropped;
-    obj.num_nacks = nackCount;
-    obj.num_plis = pliCount;
-    obj.qp_sum = qpSum;
-    obj.num_keyframes = keyframes;
-    obj.cryptor_passthrough_count = passthroughCount;
-    obj.cryptor_success_count = cryptorSuccessCount;
-    obj.cryptor_failure_count = cryptorFailureCount;
-    obj.cryptor_duration = cryptorDuration;
-    obj.cryptor_attempts = cryptorAttempts;
-    obj.cryptor_missing_key_count = cryptorMissingKeyCount;
-    obj.cryptor_invalid_nonce_count = cryptorInvalidNonceCount;
-    obj.cryptor_failure_after_success_count = diff1;
-    obj.encoder_quality_decode_errors = qualityDecodeErrors;
-    obj.encoder_quality_decoder_reboots = qualityDecoderReboots;
-    obj.encoder_quality_score_errors = qualityScoreErrors;
-    obj.encoder_quality_frame_drops = qualityFrameDrops;
-    obj.encoder_quality_size_mismatches = qualitySizeMismatches;
-    return obj;
+    obj2.avg_fps = num71;
+    obj2.num_bytes = bytes;
+    obj2.num_packets_lost = packetsLost;
+    obj2.num_packets = packets;
+    obj2.num_frames = framesNetwork;
+    obj2.num_frames_codec_error = framesCodecError;
+    obj2.time_to_first_frame_ms = aggregationDuration.timeToFirstFrame;
+    obj2.num_frames_dropped = framesDropped + networkFramesDropped;
+    obj2.num_nacks = nackCount;
+    obj2.num_plis = pliCount;
+    obj2.qp_sum = qpSum;
+    obj2.num_keyframes = keyframes;
+    obj2.cryptor_passthrough_count = passthroughCount;
+    obj2.cryptor_success_count = cryptorSuccessCount;
+    obj2.cryptor_failure_count = cryptorFailureCount;
+    obj2.cryptor_duration = cryptorDuration;
+    obj2.cryptor_attempts = cryptorAttempts;
+    obj2.cryptor_missing_key_count = cryptorMissingKeyCount;
+    obj2.cryptor_invalid_nonce_count = cryptorInvalidNonceCount;
+    obj2.cryptor_failure_after_success_count = diff1;
+    obj2.encoder_quality_decode_errors = qualityDecodeErrors;
+    obj2.encoder_quality_decoder_reboots = qualityDecoderReboots;
+    obj2.encoder_quality_score_errors = qualityScoreErrors;
+    obj2.encoder_quality_frame_drops = qualityFrameDrops;
+    obj2.encoder_quality_size_mismatches = qualitySizeMismatches;
+    return obj2;
   }
 };
 prototype["receivedStats"] = function receivedStats(nowResult, transport, streamParameters) {
@@ -1375,7 +1374,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp13) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  obj = videoEntropy(1150);
+  obj = videoEntropy(1363);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;

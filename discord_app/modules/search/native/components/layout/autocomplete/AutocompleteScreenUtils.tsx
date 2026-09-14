@@ -1,6 +1,6 @@
-// === Module 16837: AutocompleteScreenUtils ===
+// === Module 16839: AutocompleteScreenUtils ===
 
-// Module 16837 (AutocompleteScreenUtils)
+// Module 16839 (AutocompleteScreenUtils)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import LinkIcon from "LinkIcon" /* 4579 */;
@@ -10,16 +10,16 @@ import RobotIcon from "RobotIcon" /* 9565 */;
 import VideoIcon from "VideoIcon" /* 10238 */;
 import AttachmentIcon from "AttachmentIcon" /* 10240 */;
 import StickerIcon from "StickerIcon" /* 10242 */;
-import PollsIcon from "PollsIcon" /* 10766 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11817 */;
-import UserIcon from "UserIcon" /* 11955 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import SoundboardIcon from "SoundboardIcon" /* 12657 */;
-import WebhookIcon from "WebhookIcon" /* 16838 */;
+import PollsIcon from "PollsIcon" /* 10767 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11818 */;
+import UserIcon from "UserIcon" /* 11956 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import SoundboardIcon from "SoundboardIcon" /* 12658 */;
+import WebhookIcon from "WebhookIcon" /* 16840 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const SearchListItemTypes = fn(7982).SearchListItemTypes;
@@ -105,8 +105,7 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
   }
 };
 export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  let obj = SearchUtils;
-  const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(items);
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(items);
   if (null == user) {
     return null;
   } else {
@@ -121,8 +120,8 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
       nickname = UserUtilsDefault.getName(user);
     }
     const element = { type: SearchListItemTypes.DM, props: null };
-    obj = { type: RelationshipTypes.NONE, user, nickname, onPress: callback2, guildId: guildIdFromSearchContext };
-    element.props = obj;
+    const obj3 = { type: RelationshipTypes.NONE, user, nickname, onPress: callback2, guildId: guildIdFromSearchContext };
+    element.props = obj3;
     return element;
   }
 };
@@ -135,7 +134,7 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     let tmp5 = null;
     if (null != user) {
       const element = { type: SearchListItemTypes.DM, props: null };
-      let obj = { type: RelationshipTypes.NONE, user, nickname: null, onPress: null };
+      const obj = { type: RelationshipTypes.NONE, user, nickname: null, onPress: null };
       let nickname = RelationshipStore.getNickname(user.id);
       if (nickname == null) {
         nickname = UserUtilsDefault.getName(user);
@@ -152,13 +151,13 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     const element1 = { type: null, props: null };
     if (channel.isGroupDM()) {
       element1.type = SearchListItemTypes.GROUP_DM;
-      obj = { channel, onPress: callback3 };
-      element1.props = obj;
+      const obj2 = { channel, onPress: callback3 };
+      element1.props = obj2;
       let tmp2 = element1;
     } else {
       element1.type = SearchListItemTypes.GUILD_TEXT_CHANNEL;
-      const obj1 = { channel, onPress: callback3 };
-      element1.props = obj1;
+      const obj3 = { channel, onPress: callback3 };
+      element1.props = obj3;
       tmp2 = element1;
     }
     return tmp2;

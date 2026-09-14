@@ -1,11 +1,11 @@
-// === Module 17433: background_sync/BackgroundSync ===
+// === Module 17435: background_sync/BackgroundSync ===
 
-// Module 17433 (background_sync/BackgroundSync)
+// Module 17435 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
 import modules_Messages from "modules/Messages" /* 7580 */;
 import GuildVersionsDefault from "GuildVersions" /* 7755 */;
@@ -32,8 +32,8 @@ let closure_17 = async function _backgroundSync(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,8 +46,8 @@ let closure_17 = async function _backgroundSync(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp8;
@@ -84,8 +84,8 @@ let closure_17 = async function _backgroundSync(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_131_14.verbose("Starting Background Sync");
             if (!closure_130_0) {
@@ -103,15 +103,15 @@ let closure_17 = async function _backgroundSync(arg0) {
                 const _Date4 = Date;
                 const result = Storage2.set(closure_131_16, Date.now());
                 c7 = 3;
-                let obj2 = { value: undefined, done: true };
-                return obj2;
+                const obj11 = { value: undefined, done: true };
+                return obj11;
               } else {
                 const _Date3 = Date;
                 if (Date.now() - closure_130_3 < closure_131_15) {
                   closure_131_14.log("Skipping Background Sync because it has been too soon");
                   c7 = 3;
-                  let obj3 = { value: undefined, done: true };
-                  return obj3;
+                  const obj18 = { value: undefined, done: true };
+                  return obj18;
                 }
               }
             }
@@ -120,8 +120,8 @@ let closure_17 = async function _backgroundSync(arg0) {
             const result1 = Storage3.set(closure_131_16, Date.now());
             c6 = 2;
             c7 = 1;
-            const obj4 = { value: closure_131_10.refresh(), done: false };
-            return obj4;
+            const obj19 = { value: closure_131_10.refresh(), done: false };
+            return obj19;
           }
         } else {
           if (2 === tmp8) {
@@ -130,8 +130,8 @@ let closure_17 = async function _backgroundSync(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              let obj5 = { value, done: true };
-              return obj5;
+              const obj20 = { value, done: true };
+              return obj20;
             } else if (closure_131_10.isLowDisk) {
               closure_131_14.log("Skipping Background Sync because disk is low");
               c7 = 3;
@@ -145,8 +145,8 @@ let closure_17 = async function _backgroundSync(arg0) {
               c5 = 2;
               c6 = 5;
               c7 = 1;
-              let obj6 = { value: closure_131_1(closure_131_2[14]).startBackgroundTask(), done: false };
-              return obj6;
+              const obj21 = { value: closure_131_1(closure_131_2[14]).startBackgroundTask(), done: false };
+              return obj21;
             }
           } else if (3 !== tmp8) {
             if (4 === tmp8) {
@@ -169,28 +169,26 @@ let closure_17 = async function _backgroundSync(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 0;
-                let obj8 = closure_131_1(closure_131_2[18]);
-                obj8.track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
+                closure_131_1(closure_131_2[18]).track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
                 closure_131_14.verbose("Finished Background Sync", closure_130_4);
-                let obj9 = closure_131_1(closure_131_2[14]);
-                obj9.endBackgroundTask(closure_130_7);
+                const obj9 = closure_131_1(closure_131_2[18]);
+                closure_131_1(closure_131_2[14]).endBackgroundTask(closure_130_7);
                 c7 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
+                const obj22 = { value, done: true };
+                return obj22;
               } else {
                 closure_130_7 = value;
                 if (obj26.isIOS()) {
                   if (closure_130_7 === closure_131_1(closure_131_2[14]).backgroundTaskIdentifierInvalid) {
                     closure_131_14.verbose("Background sync skipped because background task could not be started");
                     c5 = 0;
-                    obj5 = closure_131_1(closure_131_2[18]);
-                    obj5.track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
+                    closure_131_1(closure_131_2[18]).track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
                     closure_131_14.verbose("Finished Background Sync", closure_130_4);
-                    obj6 = closure_131_1(closure_131_2[14]);
-                    obj6.endBackgroundTask(closure_130_7);
+                    const obj6 = closure_131_1(closure_131_2[18]);
+                    closure_131_1(closure_131_2[14]).endBackgroundTask(closure_130_7);
                     c7 = 3;
-                    obj8 = { value: undefined, done: true };
-                    return obj8;
+                    const obj23 = { value: undefined, done: true };
+                    return obj23;
                   }
                 }
                 const items = [closure_131_19(closure_130_6, closure_130_4, closure_130_5), closure_131_23(closure_130_6, closure_130_4, closure_130_5, closure_130_2), ];
@@ -210,19 +208,18 @@ let closure_17 = async function _backgroundSync(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 0;
-              obj2 = closure_131_1(closure_131_2[18]);
-              obj2.track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
+              closure_131_1(closure_131_2[18]).track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
               closure_131_14.verbose("Finished Background Sync", closure_130_4);
-              obj3 = closure_131_1(closure_131_2[14]);
-              obj3.endBackgroundTask(closure_130_7);
+              const obj3 = closure_131_1(closure_131_2[18]);
+              closure_131_1(closure_131_2[14]).endBackgroundTask(closure_130_7);
               c7 = 3;
-              obj9 = { value, done: true };
-              return obj9;
+              const obj24 = { value, done: true };
+              return obj24;
             } else {
-              obj = closure_131_1(closure_131_2[16]);
-              const obj10 = { type: "BACKGROUND_SYNC_FINISHED", messagesOnly: closure_130_1 };
-              obj.dispatch(obj10);
+              const obj25 = { type: "BACKGROUND_SYNC_FINISHED", messagesOnly: closure_130_1 };
+              closure_131_1(closure_131_2[16]).dispatch(obj25);
               c5 = 1;
+              const obj = closure_131_1(closure_131_2[16]);
             }
             c5 = 0;
             closure_131_1(closure_131_2[18]).track(closure_131_11.BACKGROUND_SYNC_COMPLETED, closure_130_4);
@@ -272,8 +269,8 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -286,8 +283,8 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp2;
           closure_3 = tmp5;
@@ -302,14 +299,14 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
           if (null != messagesResult) {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.MESSAGE_LOG_PRIVATE_CHANNELS, body: null, timeout: 5000, rejectWithError: false };
-            let obj1 = { per_channel_limit, last_synced_message_id: null };
+            const obj5 = { per_channel_limit, last_synced_message_id: null };
             const Storage2 = Storage4.Storage;
-            obj1.last_synced_message_id = Storage2.get(lastSyncedPrivateChannelsMessageId);
-            request.body = obj1;
+            obj5.last_synced_message_id = Storage2.get(lastSyncedPrivateChannelsMessageId);
+            request.body = obj5;
             c5 = 1;
             c6 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj7 = { value: HTTP.post(request), done: false };
+            return obj7;
           } else {
             logger.log("Aborting BG sync because there is no database");
             c6 = 3;
@@ -321,8 +318,8 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           body = value.body;
           const _Date2 = Date;
@@ -335,12 +332,11 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
             const result = Storage.set(closure_132_18, body.latest_message_id);
           }
           closure_131_5 = {};
-          let obj5 = closure_132_1(closure_132_2[21]);
-          const keys = obj5.keys(body.changes_by_channel_id);
+          const keys = closure_132_1(closure_132_2[21]).keys(body.changes_by_channel_id);
           c5 = 2;
           c6 = 1;
-          const obj4 = { value: Promise.all(keys.map((item) => closure_2_25(closure_1_3, closure_1_5, null, item, closure_1_4.changes_by_channel_id[item]))), done: false };
-          return obj4;
+          const obj9 = { value: Promise.all(keys.map((item) => closure_2_25(closure_1_3, closure_1_5, null, item, closure_1_4.changes_by_channel_id[item]))), done: false };
+          return obj9;
         }
       } else if (2 === tmp5) {
         if (arg0 === 1) {
@@ -348,17 +344,16 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           if (!obj14.isEmpty(closure_131_5)) {
-            obj1 = closure_132_1(closure_132_2[16]);
-            const obj6 = { type: "BACKGROUND_SYNC_CHANNEL_MESSAGES", changesByChannelId: body.changes_by_channel_id };
-            obj1.dispatch(obj6);
+            const obj11 = { type: "BACKGROUND_SYNC_CHANNEL_MESSAGES", changesByChannelId: body.changes_by_channel_id };
+            closure_132_1(closure_132_2[16]).dispatch(obj11);
             c5 = 3;
             c6 = 1;
-            const obj7 = { value: closure_132_27(closure_131_3, closure_131_5, closure_131_0, closure_131_1, undefined), done: false };
-            return obj7;
+            const obj12 = { value: closure_132_27(closure_131_3, closure_131_5, closure_131_0, closure_131_1, undefined), done: false };
+            return obj12;
           }
           obj14 = closure_132_1(closure_132_2[22]);
         }
@@ -370,7 +365,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
         closure_131_1.time_save_private_channel_messages = Date.now() - closure_131_2;
       }
       c6 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp42) {
       c6 = tmp;
@@ -396,8 +391,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -410,8 +405,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp2;
           closure_3 = tmp5;
@@ -432,8 +427,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
           items[2] = KvCacheVersionDefault.canUseGuildVersions();
           c5 = 1;
           c6 = 1;
-          const obj1 = { value: Promise.all(items), done: false };
-          return obj1;
+          const obj5 = { value: Promise.all(items), done: false };
+          return obj5;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -441,8 +436,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          let obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_131_3 = value;
           closure_131_4 = closure_132_3(closure_131_3, 3);
@@ -452,15 +447,14 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
           const HTTP = closure_132_0(closure_132_2[20]).HTTP;
           let request = { url: closure_132_12.BACKGROUND_SYNC, body: null, timeout: 5000, rejectWithError: false };
           if (closure_131_7) {
-            const obj3 = { guild_versions: closure_131_5, highest_last_message_id: closure_131_6.highest_last_message_id, api_code_version: closure_131_6.api_code_version, channel_privacy: closure_132_0(closure_132_2[26]).isChannelMetadataObfuscationEnabled("background-sync") };
-            let obj4 = obj3;
+            const obj7 = { guild_versions: closure_131_5, highest_last_message_id: closure_131_6.highest_last_message_id, api_code_version: closure_131_6.api_code_version, channel_privacy: closure_132_0(closure_132_2[26]).isChannelMetadataObfuscationEnabled("background-sync") };
+            let obj8 = obj7;
             const obj12 = closure_132_0(closure_132_2[26]);
           } else {
-            obj4 = { channel_privacy: null };
-            let obj9 = closure_132_0(closure_132_2[26]);
-            obj4.channel_privacy = obj9.isChannelMetadataObfuscationEnabled("background-sync");
+            obj8 = { channel_privacy: closure_132_0(closure_132_2[26]).isChannelMetadataObfuscationEnabled("background-sync") };
+            const obj10 = closure_132_0(closure_132_2[26]);
           }
-          request.body = obj4;
+          request.body = obj8;
           request = HTTP.post(request);
           c5 = 2;
           c6 = 1;
@@ -472,8 +466,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             body = value.body;
             guilds = body.guilds;
@@ -497,8 +491,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               const promise = new Promise((arg0) => setTimeout(arg0, 0));
               c5 = 3;
               c6 = 1;
-              const obj6 = { value: promise, done: false };
-              return obj6;
+              const obj11 = { value: promise, done: false };
+              return obj11;
             } else {
               c6 = 3;
             }
@@ -509,8 +503,8 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             if (!closure_131_2) {
               if ("active" === closure_132_9.getState()) {
@@ -518,25 +512,26 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               }
             }
             closure_131_11 = [];
-            obj2 = closure_132_1(closure_132_2[16]);
-            const obj8 = {
+            const obj14 = {
               type: "BACKGROUND_SYNC",
               guilds,
               emojis: guilds.map((data_mode) => {
                           if ("unavailable" === data_mode.data_mode) {
-                            let obj = { guildId: data_mode.id, dataMode: "unavailable" };
+                            const obj2 = { guildId: data_mode.id, dataMode: "unavailable" };
+                            let obj = obj2;
                           } else if ("partial" === data_mode.data_mode) {
-                            obj = { dataMode: "partial", guildId: data_mode.id, updatedEntities: null, deletedEntityIds: null };
+                            const obj3 = { dataMode: "partial", guildId: data_mode.id, updatedEntities: null, deletedEntityIds: null };
                             let emojis = data_mode.partial_updates.emojis;
                             if (emojis == null) {
                               emojis = [];
                             }
-                            obj.updatedEntities = emojis;
+                            obj3.updatedEntities = emojis;
                             let deleted_emoji_ids = data_mode.partial_updates.deleted_emoji_ids;
                             if (deleted_emoji_ids == null) {
                               deleted_emoji_ids = [];
                             }
-                            obj.deletedEntityIds = deleted_emoji_ids;
+                            obj3.deletedEntityIds = deleted_emoji_ids;
+                            obj = obj3;
                           } else {
                             obj = { dataMode: "full", guildId: null, entities: null };
                             ({ id: obj.guildId, emojis: obj.entities } = data_mode);
@@ -545,19 +540,21 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
                         }),
               stickers: guilds.map((data_mode) => {
                           if ("unavailable" === data_mode.data_mode) {
-                            let obj = { guildId: data_mode.id, dataMode: "unavailable" };
+                            const obj2 = { guildId: data_mode.id, dataMode: "unavailable" };
+                            let obj = obj2;
                           } else if ("partial" === data_mode.data_mode) {
-                            obj = { dataMode: "partial", guildId: data_mode.id, updatedEntities: null, deletedEntityIds: null };
+                            const obj3 = { dataMode: "partial", guildId: data_mode.id, updatedEntities: null, deletedEntityIds: null };
                             let stickers = data_mode.partial_updates.stickers;
                             if (stickers == null) {
                               stickers = [];
                             }
-                            obj.updatedEntities = stickers;
+                            obj3.updatedEntities = stickers;
                             let deleted_sticker_ids = data_mode.partial_updates.deleted_sticker_ids;
                             if (deleted_sticker_ids == null) {
                               deleted_sticker_ids = [];
                             }
-                            obj.deletedEntityIds = deleted_sticker_ids;
+                            obj3.deletedEntityIds = deleted_sticker_ids;
+                            obj = obj3;
                           } else {
                             obj = { dataMode: "full", guildId: null, entities: null };
                             ({ id: obj.guildId, stickers: obj.entities } = data_mode);
@@ -567,24 +564,24 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
               apiCodeVersion: api_code_version,
               promisesForBackgroundSyncToWaitOn: closure_131_11
             };
-            obj2.dispatch(obj8);
+            closure_132_1(closure_132_2[16]).dispatch(obj14);
             c5 = 4;
             c6 = 1;
-            obj9 = { value: Promise.all(closure_131_11), done: false };
-            return obj9;
+            const obj15 = { value: Promise.all(closure_131_11), done: false };
+            return obj15;
           }
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          obj = closure_132_0(closure_132_2[27]);
-          obj.writeCaches(true);
+          closure_132_0(closure_132_2[27]).writeCaches(true);
           const _Date = Date;
           closure_131_0.time_save_guild_data = Date.now() - closure_131_1;
+          let obj = closure_132_0(closure_132_2[27]);
         }
         c6 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+        const obj16 = { value, done: true };
+        return obj16;
       }
     } catch (tmp47) {
       c6 = tmp;
@@ -610,8 +607,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -625,8 +622,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c22 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_18 = tmp;
           closure_17 = tmp4;
@@ -684,8 +681,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               let _Promise = Promise;
               c21 = 1;
               c22 = 1;
-              let obj1 = { value: Promise.all(valueResult.map((guildId) => closure_1_4.withoutLogging().getLatest(guildId.guildId, guildId.channelId, 1))), done: false };
-              return obj1;
+              let obj6 = { value: Promise.all(valueResult.map((guildId) => closure_1_4.withoutLogging().getLatest(guildId.guildId, guildId.channelId, 1))), done: false };
+              return obj6;
             }
           } else {
             let logResult = value.log("Aborting BG sync because there is no database");
@@ -698,8 +695,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c22 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            let obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_145_6 = value;
             closure_145_7 = {};
@@ -719,8 +716,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
                 closure_145_10 = closure_145_5[closure_145_8];
                 let tmp81 = closure_145_3;
                 if (closure_145_3) {
-                  let obj8 = closure_146_1(closure_146_2[21]);
-                  tmp81 = obj8.compare(closure_145_9, closure_145_10.lastMessageId) >= 0;
+                  let obj9 = closure_146_1(closure_146_2[21]);
+                  tmp81 = obj9.compare(closure_145_9, closure_145_10.lastMessageId) >= 0;
                 }
                 if (!tmp81) {
                   closure_145_7[closure_145_10.channelId] = closure_145_9;
@@ -728,8 +725,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
                 closure_145_8 = closure_145_8 + 1;
               } while (closure_145_8 < closure_145_5.length);
             }
-            let obj9 = closure_146_1(closure_146_2[22]);
-            if (!obj9.isEmpty(closure_145_7)) {
+            let obj10 = closure_146_1(closure_146_2[22]);
+            if (!obj10.isEmpty(closure_145_7)) {
               closure_145_11 = {};
               closure_6 = closure_145_6;
               closure_5 = closure_145_6[Symbol.iterator]();
@@ -749,13 +746,13 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               }
               let HTTP = closure_146_0(closure_146_2[20]).HTTP;
               let request = { url: closure_146_12.MESSAGE_LOG_GUILD_CHANNELS, body: null, timeout: 5000, rejectWithError: false };
-              let obj3 = { per_channel_limit: closure_146_13, last_synced_message_id_by_channel_id: null };
-              obj3.last_synced_message_id_by_channel_id = closure_145_7;
-              request.body = obj3;
+              let obj8 = { per_channel_limit: closure_146_13, last_synced_message_id_by_channel_id: null };
+              obj8.last_synced_message_id_by_channel_id = closure_145_7;
+              request.body = obj8;
               c21 = 3;
               c22 = 1;
-              let obj4 = { value: HTTP.post(request), done: false };
-              return obj4;
+              let obj11 = { value: HTTP.post(request), done: false };
+              return obj11;
             }
           }
         } else if (2 === tmp4) {
@@ -769,8 +766,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c22 = 3;
-              let obj5 = { value, done: true };
-              return obj5;
+              let obj12 = { value, done: true };
+              return obj12;
             } else {
               body = value.body;
               let _Date2 = Date;
@@ -806,16 +803,16 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
                 closure_12 = tmp24;
                 closure_11 = keys;
               }
-              obj3 = closure_146_1(closure_146_2[22]);
-              if (!obj3.isEmpty(closure_145_17)) {
-                obj4 = closure_146_1(closure_146_2[16]);
-                let obj6 = { type: "BACKGROUND_SYNC_CHANNEL_MESSAGES", changesByChannelId: null };
-                obj6.changesByChannelId = closure_145_18;
-                let dispatchResult = obj4.dispatch(obj6);
+              let obj4 = closure_146_1(closure_146_2[22]);
+              if (!obj4.isEmpty(closure_145_17)) {
+                let obj5 = closure_146_1(closure_146_2[16]);
+                let obj13 = { type: "BACKGROUND_SYNC_CHANNEL_MESSAGES", changesByChannelId: null };
+                obj13.changesByChannelId = closure_145_18;
+                let dispatchResult = obj5.dispatch(obj13);
                 c21 = 7;
                 c22 = 1;
-                let obj7 = { value: closure_146_27(closure_145_4, closure_145_17, closure_145_0, closure_145_1, closure_145_15), done: false };
-                return obj7;
+                let obj14 = { value: closure_146_27(closure_145_4, closure_145_17, closure_145_0, closure_145_1, closure_145_15), done: false };
+                return obj14;
               }
             }
           } else if (4 === tmp4) {
@@ -832,8 +829,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c22 = 3;
-              obj8 = { value, done: true };
-              return obj8;
+              let obj15 = { value, done: true };
+              return obj15;
             }
           } else if (arg0 === 1) {
             c22 = 3;
@@ -868,8 +865,8 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               }
               c21 = 6;
               c22 = 1;
-              obj9 = { value: closure_146_25(tmp40, tmp41, c16, closure_145_19, body.change_logs_by_channel_id[closure_145_19].changes), done: false };
-              return obj9;
+              let obj16 = { value: closure_146_25(tmp40, tmp41, c16, closure_145_19, body.change_logs_by_channel_id[closure_145_19].changes), done: false };
+              return obj16;
             }
           }
           closure_15 = tmp33;
@@ -879,7 +876,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
           closure_11 = tmp28;
         }
         c22 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
       c22 = 3;
@@ -904,8 +901,8 @@ let closure_26 = async function _processChannelChanges(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -919,8 +916,8 @@ let closure_26 = async function _processChannelChanges(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c12 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_8 = tmp;
           closure_7 = tmp4;
@@ -949,8 +946,8 @@ let closure_26 = async function _processChannelChanges(arg0) {
               deleted_message_ids = [];
             }
             closure_135_5 = deleted_message_ids;
-            let obj2 = _modDef12;
-            let tmp26 = _slicedToArray(obj2.partition(modified_messages, modules_Messages.isLikelyNotDelta), 2);
+            let obj3 = _modDef12;
+            let tmp26 = _slicedToArray(obj3.partition(modified_messages, modules_Messages.isLikelyNotDelta), 2);
             let arr4 = tmp26[1];
             closure_135_6 = arr4;
             let push = new_messages.push;
@@ -961,8 +958,8 @@ let closure_26 = async function _processChannelChanges(arg0) {
               let _Promise = Promise;
               c11 = 1;
               c12 = 1;
-              let obj1 = { value: Promise.all(arr4.map((channel_id) => closure_1_0.withoutLogging().get(closure_1_2, channel_id.channel_id, channel_id.id))), done: false };
-              return obj1;
+              let obj5 = { value: Promise.all(arr4.map((channel_id) => closure_1_0.withoutLogging().get(closure_1_2, channel_id.channel_id, channel_id.id))), done: false };
+              return obj5;
             }
           }
           c12 = 3;
@@ -974,8 +971,8 @@ let closure_26 = async function _processChannelChanges(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c12 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          let obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_135_7 = value.filter(closure_136_0(closure_136_2[29]).isNotNullish);
           let _HermesInternal = HermesInternal;
@@ -988,7 +985,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             c10 = 1;
             closure_135_9 = tmp10;
             if (closure_135_9.id in closure_135_8) {
-              obj = {};
+              let obj = {};
               let merged = Object.assign(closure_135_8[closure_135_9.id].message);
               let merged1 = Object.assign(closure_135_9);
               let arr = closure_135_4.push(obj);

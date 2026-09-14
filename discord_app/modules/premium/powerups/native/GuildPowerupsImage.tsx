@@ -1,8 +1,8 @@
-// === Module 12652: GuildPowerupsImage ===
+// === Module 12653: GuildPowerupsImage ===
 
-// Module 12652 (GuildPowerupsImage)
+// Module 12653 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8936 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -21,24 +21,23 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = closure_5();
-  let obj = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
     if (isAnimated) {
       if (!stateFromStores) {
-        obj = { style: null, url: null };
+        const obj3 = { style: null, url: null };
         const items1 = [tmp.image, style];
-        obj.style = items1;
-        obj.url = imageUrl;
+        obj3.style = items1;
+        obj3.url = imageUrl;
         let tmp6 = jsx(APNGDecorationNativeComponentDefault, { style: null, url: null });
       }
       return tmp6;
     }
   }
-  obj = { style: null, source: { uri: imageUrl } };
+  const obj4 = { style: null, source: { uri: imageUrl } };
   const items2 = [tmp.image, style];
-  obj.style = items2;
+  obj4.style = items2;
   tmp6 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
   obj2 = utils_PlatformUtils;
 };

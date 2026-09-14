@@ -3,7 +3,7 @@
 // Module 9767 (DiscordEnvironment)
 import UserSettings from "UserSettings" /* 1935 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 const UIDensityConstants = fn(9768);
@@ -38,7 +38,7 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
       } else {
         const _window2 = window;
         const computedStyle = window.getComputedStyle(documentElement);
-        let obj = {};
+        const obj = {};
         for (let num = 0; num < computedStyle.length; num = num + 1) {
           let itemResult = computedStyle.item(num);
           if (itemResult.startsWith("--custom-")) {
@@ -46,9 +46,8 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
             obj[itemResult] = str.trim();
           }
         }
-        obj = { classNames: found, variables: null };
-        obj.variables = obj;
-        return obj;
+        const obj2 = { classNames: found, variables: obj };
+        return obj2;
       }
     }
   }
@@ -92,7 +91,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
     }
   }
-  let obj = { baseTheme: str, customTheme: null, uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
+  const obj = { baseTheme: str, customTheme: null, uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
   let tmp = null;
   if (typeof document !== "undefined") {
     const _window2 = window;
@@ -107,17 +106,16 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       if (0 !== found.length) {
         const _window3 = window;
         const computedStyle = window.getComputedStyle(documentElement);
-        obj = {};
+        const obj2 = {};
         for (let num = 0; num < computedStyle.length; num = num + 1) {
           let itemResult = computedStyle.item(num);
           if (itemResult.startsWith("--custom-")) {
             let str4 = computedStyle.getPropertyValue(itemResult);
-            obj[itemResult] = str4.trim();
+            obj2[itemResult] = str4.trim();
           }
         }
-        obj = { classNames: found, variables: null };
-        obj.variables = obj;
-        tmp = obj;
+        const obj3 = { classNames: found, variables: obj2 };
+        tmp = obj3;
       }
     }
   }

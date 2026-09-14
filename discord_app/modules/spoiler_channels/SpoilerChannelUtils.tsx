@@ -4,6 +4,8 @@
 import ChannelStore from "ChannelStore" /* 1957 */;
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore" /* 7433 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function isChannelSpoilerGated(channel) {
   let obj = ChannelSpoilerAgreeStore;

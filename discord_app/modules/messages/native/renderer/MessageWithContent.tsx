@@ -26,9 +26,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  let obj = { type: RowType.MESSAGE, message: null, canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
-  obj = { options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
-  obj.message = createMessageContentDefault(obj);
+  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
   const intl = util.intl;
   obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
   obj.reactionsTheme = reactionsTheme;
@@ -40,17 +38,16 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj.truncation = truncation;
   obj.alwaysShowAddReaction = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = RowGeneratorUtilsDefault;
-    obj = { message, theme, isEditing, isAutomodBlockedMessage: null != GuildAutomodMessageStore.getMessage(message.id) };
-    overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
+    const obj3 = { message, theme, isEditing, isAutomodBlockedMessage: null != GuildAutomodMessageStore.getMessage(message.id) };
+    overrideBackgroundHighlight = RowGeneratorUtilsDefault.createBackgroundHighlight(obj3);
+    const tmp4Result = RowGeneratorUtilsDefault;
   }
   obj.backgroundHighlight = overrideBackgroundHighlight;
-  tmp4Result = RowGeneratorUtilsDefault;
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;
   }
-  obj.swipeActions = tmp4Result.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
+  obj.swipeActions = RowGeneratorUtilsDefault.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
   const intl3 = util.intl;
   obj.replyAccessibilityLabel = intl3.string(util.t["5IEsGx"]);
   const intl4 = util.intl;

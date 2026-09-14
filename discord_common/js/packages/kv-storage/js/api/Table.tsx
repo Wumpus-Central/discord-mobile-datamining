@@ -13,10 +13,10 @@ class TableTransaction {
     closure_0 = obj;
     obj.messages = {
       trimOrphans(arg0) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_orphans", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0] };
                 transaction.add(obj);
               }
             }
@@ -24,15 +24,18 @@ class TableTransaction {
             throw error;
           },
       trimChannel(key, limit) {
-            const transaction = obj.transaction;
-            obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+            const transaction = obj2.transaction;
+            const obj = { type: "messages.trim_channel", table: obj2.tableId, key: null, limit: null };
+            obj2 = obj2(self[1]);
+            obj.key = obj2.combineKey(obj2.prefix, key);
+            obj.limit = limit;
             transaction.add(obj);
           },
       trimChannelsIn(arg0, limit) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_channels_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
                 transaction.add(obj);
               }
             }
@@ -40,10 +43,10 @@ class TableTransaction {
             throw error;
           },
       trimChannelsNotIn(arg0, limit) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_channels_not_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
                 transaction.add(obj);
               }
             }
@@ -60,13 +63,13 @@ class TableTransaction {
 const prototype = TableTransaction.prototype;
 TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   if (typeof TableTransaction === "function") {
-    Object.create(tmp.prototype);
-    const messages = {
+    const obj2 = Object.create(tmp.prototype);
+    const obj = {
       trimOrphans(arg0) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_orphans", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0] };
               transaction.add(obj);
             }
           }
@@ -74,15 +77,18 @@ TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(p
           throw error;
         },
       trimChannel(key, limit) {
-          const transaction = obj.transaction;
-          obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+          const transaction = obj2.transaction;
+          const obj = { type: "messages.trim_channel", table: obj2.tableId, key: null, limit: null };
+          obj2 = obj2(self[1]);
+          obj.key = obj2.combineKey(obj2.prefix, key);
+          obj.limit = limit;
           transaction.add(obj);
         },
       trimChannelsIn(arg0, limit) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_channels_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
               transaction.add(obj);
             }
           }
@@ -90,10 +96,10 @@ TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(p
           throw error;
         },
       trimChannelsNotIn(arg0, limit) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_channels_not_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
               transaction.add(obj);
             }
           }
@@ -101,11 +107,11 @@ TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(p
           throw error;
         }
     };
-    messages.messages = messages;
-    messages.prefix = prefix;
-    messages.tableId = tableId;
-    messages.transaction = transaction;
-    return messages;
+    obj2.messages = obj;
+    obj2.prefix = prefix;
+    obj2.tableId = tableId;
+    obj2.transaction = transaction;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -116,13 +122,13 @@ prototype["put"] = function put(key) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  let obj = { type: "kv.put_one", table: this.tableId, cell: null, overwrite: null };
+  const obj = { type: "kv.put_one", table: this.tableId, cell: null, overwrite: null };
   const prefix = this.prefix;
   let tmp3 = key;
   if (0 !== prefix.length) {
-    obj = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
+    const obj4 = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
     ({ data: obj2.data, generation: obj2.generation } = key);
-    tmp3 = obj;
+    tmp3 = obj4;
   }
   obj.cell = tmp3;
   obj.overwrite = Replace === TableId.ConflictOptions.Replace;
@@ -161,13 +167,12 @@ prototype["delete"] = function delete() {
   transaction.add(obj);
 };
 prototype["deleteRange"] = function deleteRange(key, key) {
-  let obj = Key;
-  const combineKeyResult = obj.combineKey(this.prefix, key);
+  const combineKeyResult = Key.combineKey(this.prefix, key);
   const transaction = this.transaction;
-  obj = { type: "kv.delete_range", table: this.tableId, range: null };
+  const obj3 = { type: "kv.delete_range", table: this.tableId, range: null };
   const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
-  obj.range = items;
-  transaction.add(obj);
+  obj3.range = items;
+  transaction.add(obj3);
 };
 prototype["deleteAllExcept"] = function deleteAllExcept() {
   if (items === undefined) {
@@ -243,23 +248,22 @@ prototype2["getMany"] = function getMany() {
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getRange"] = function getRange(key, key, ordering) {
-  let obj = Key;
-  const combineKeyResult = obj.combineKey(this.prefix, key);
+  const combineKeyResult = Key.combineKey(this.prefix, key);
   const database = this.database;
-  obj = { type: "kv.get_range", table: this.tableId, range: null, ordering: null, limit: null };
+  const obj3 = { type: "kv.get_range", table: this.tableId, range: null, ordering: null, limit: null };
   const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
-  obj.range = items;
+  obj3.range = items;
   ordering = undefined;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
-  obj.ordering = ordering;
+  obj3.ordering = ordering;
   let limit;
   if (ordering != null) {
     limit = ordering.limit;
   }
-  obj.limit = limit;
-  return database.execute(obj, this.defaultDebugTag);
+  obj3.limit = limit;
+  return database.execute(obj3, this.defaultDebugTag);
 };
 prototype2["getKvEntries"] = function getKvEntries() {
   if (items === undefined) {
@@ -300,13 +304,13 @@ prototype2["put"] = function put(key) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const database = this.database;
-  let obj = { type: "kv.put_one", table: this.tableId, cell: null, overwrite: null };
+  const obj = { type: "kv.put_one", table: this.tableId, cell: null, overwrite: null };
   const prefix = this.prefix;
   let tmp3 = key;
   if (0 !== prefix.length) {
-    obj = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
+    const obj4 = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
     ({ data: obj2.data, generation: obj2.generation } = key);
-    tmp3 = obj;
+    tmp3 = obj4;
   }
   obj.cell = tmp3;
   obj.overwrite = Replace === TableId.ConflictOptions.Replace;
@@ -352,13 +356,12 @@ prototype2["delete"] = function delete() {
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["deleteRange"] = function deleteRange(key, key) {
-  let obj = Key;
-  const combineKeyResult = obj.combineKey(this.prefix, key);
+  const combineKeyResult = Key.combineKey(this.prefix, key);
   const database = this.database;
-  obj = { type: "kv.delete_range", table: this.tableId, range: null };
+  const obj3 = { type: "kv.delete_range", table: this.tableId, range: null };
   const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
-  obj.range = items;
-  return database.execute(obj, this.defaultDebugTag);
+  obj3.range = items;
+  return database.execute(obj3, this.defaultDebugTag);
 };
 prototype2["deleteGeneration"] = function deleteGeneration() {
   if (items === undefined) {
@@ -374,13 +377,13 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
   const database = this.database;
   return database.transaction((transaction) => {
     if (typeof TableTransaction === "function") {
-      Object.create(tmp2.prototype);
-      const messages = {
+      let obj2 = Object.create(tmp2.prototype);
+      let obj = {
         trimOrphans(arg0) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_orphans", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0] };
                 transaction.add(obj);
               }
             }
@@ -388,15 +391,18 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
             throw error;
           },
         trimChannel(key, limit) {
-            const transaction = obj.transaction;
-            obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+            const transaction = obj2.transaction;
+            const obj = { type: "messages.trim_channel", table: obj2.tableId, key: null, limit: null };
+            obj2 = obj2(self[1]);
+            obj.key = obj2.combineKey(obj2.prefix, key);
+            obj.limit = limit;
             transaction.add(obj);
           },
         trimChannelsIn(arg0, limit) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_channels_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
                 transaction.add(obj);
               }
             }
@@ -404,10 +410,10 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
             throw error;
           },
         trimChannelsNotIn(arg0, limit) {
-            if (1 === obj.prefix.length) {
+            if (1 === obj2.prefix.length) {
               if (1 === arg0.length) {
-                const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                const transaction = obj2.transaction;
+                const obj = { type: "messages.trim_channels_not_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
                 transaction.add(obj);
               }
             }
@@ -415,11 +421,11 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
             throw error;
           }
       };
-      messages.messages = messages;
-      messages.prefix = tmp3;
-      messages.tableId = tmp4;
-      messages.transaction = transaction;
-      return tmp(messages);
+      obj2.messages = obj;
+      obj2.prefix = tmp3;
+      obj2.tableId = tmp4;
+      obj2.transaction = transaction;
+      return tmp(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -427,13 +433,13 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
 };
 prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
   if (typeof TableTransaction === "function") {
-    Object.create(tmp.prototype);
-    const messages = {
+    const obj2 = Object.create(tmp.prototype);
+    const obj = {
       trimOrphans(arg0) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_orphans", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0] };
               transaction.add(obj);
             }
           }
@@ -441,15 +447,18 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
           throw error;
         },
       trimChannel(key, limit) {
-          const transaction = obj.transaction;
-          obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+          const transaction = obj2.transaction;
+          const obj = { type: "messages.trim_channel", table: obj2.tableId, key: null, limit: null };
+          obj2 = obj2(self[1]);
+          obj.key = obj2.combineKey(obj2.prefix, key);
+          obj.limit = limit;
           transaction.add(obj);
         },
       trimChannelsIn(arg0, limit) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_channels_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
               transaction.add(obj);
             }
           }
@@ -457,10 +466,10 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
           throw error;
         },
       trimChannelsNotIn(arg0, limit) {
-          if (1 === obj.prefix.length) {
+          if (1 === obj2.prefix.length) {
             if (1 === arg0.length) {
-              const transaction = tmp.transaction;
-              obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              const transaction = obj2.transaction;
+              const obj = { type: "messages.trim_channels_not_in", table: obj2.tableId, channelKey: arg0[0], messageKey: obj2.prefix[0], limit };
               transaction.add(obj);
             }
           }
@@ -468,11 +477,11 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
           throw error;
         }
     };
-    messages.messages = messages;
-    messages.prefix = tmp2;
-    messages.tableId = tmp3;
-    messages.transaction = transaction;
-    return messages;
+    obj2.messages = obj;
+    obj2.prefix = tmp2;
+    obj2.tableId = tmp3;
+    obj2.transaction = transaction;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

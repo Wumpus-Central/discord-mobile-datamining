@@ -1,19 +1,18 @@
-// === Module 11099: useInappropriateConversationsTiers ===
+// === Module 11100: useInappropriateConversationsTiers ===
 
-// Module 11099 (useInappropriateConversationsTiers)
+// Module 11100 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11100 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11101 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11101 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11102 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
-  let obj = SelfModInappropriateConversationExperiment;
-  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
+  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
@@ -31,13 +30,13 @@ export const useInappropriateConversationsTiers = function useInappropriateConve
         if (inappropriateConversationBannerForChannel != null) {
           type = inappropriateConversationBannerForChannel.type;
         }
-        obj = { isTier1: type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1, isTier2: null };
+        const obj3 = { isTier1: type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1, isTier2: null };
         let type1;
         if (inappropriateConversationBannerForChannel != null) {
           type1 = inappropriateConversationBannerForChannel.type;
         }
-        obj.isTier2 = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
-        tmp4 = obj;
+        obj3.isTier2 = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
+        tmp4 = obj3;
       }
     }
   }

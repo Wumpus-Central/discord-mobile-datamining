@@ -1,10 +1,10 @@
-// === Module 11826: MosaicMediaType ===
+// === Module 11827: MosaicMediaType ===
 
-// Module 11826 (MosaicMediaType)
+// Module 11827 (MosaicMediaType)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11827 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11828 */;
 import size from "module_2" /* 2 */;
 
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
@@ -33,24 +33,24 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = MediaFormatTesters;
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = FlagUtils;
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;
                   }
                   let str6 = "VIDEO";
-                  if (tmp5Result.hasFlag(num2, MessageAttachmentFlags.IS_CLIP)) {
+                  if (tmp5Result2.hasFlag(num2, MessageAttachmentFlags.IS_CLIP)) {
                     str6 = "CLIP";
                   }
                   str5 = str6;
+                  tmp5Result2 = FlagUtils;
                 }
               }
               str3 = str5;
+              tmp5Result = MediaFormatTesters;
             }
             let str = str3;
             obj2 = MediaFormatTesters;

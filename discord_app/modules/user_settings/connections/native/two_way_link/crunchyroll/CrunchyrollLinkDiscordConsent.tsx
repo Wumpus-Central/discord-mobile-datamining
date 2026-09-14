@@ -15,8 +15,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;
   ({ callbackCode, callbackState } = arg0);
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
@@ -25,6 +24,5 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 };
   return jsx(navigation(9363).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
 };

@@ -23,25 +23,25 @@ export default function FormSliderRow(arg0) {
   const context = noop.useContext(RedesignCompat.RedesignCompatContext);
   const tmp5 = closure_8();
   if (context) {
-    let obj = { children: null };
-    obj = { style: tmp5.labels, children: null };
-    const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: label };
-    const items = [hasOwnProperty(Text_Text.Text, obj1), trailing];
-    obj.children = items;
-    const items1 = [timestampProducer(View, obj), ];
-    const obj2 = {};
+    const obj2 = { children: null };
+    const obj3 = { style: tmp5.labels, children: null };
+    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: label };
+    const items = [hasOwnProperty(Text_Text.Text, obj4), trailing];
+    obj3.children = items;
+    const items1 = [timestampProducer(View, obj3), ];
+    const obj5 = {};
     const merged1 = Object.assign(merged);
-    obj2.style = tmp5.slider;
-    items1[1] = hasOwnProperty(_modDef8396, obj2);
-    obj.children = items1;
-    let tmp6Result = timestampProducer(Card.Card, obj);
+    obj5.style = tmp5.slider;
+    items1[1] = hasOwnProperty(_modDef8396, obj5);
+    obj2.children = items1;
+    let tmp6Result = timestampProducer(Card.Card, obj2);
   } else {
-    obj = { children: null };
-    const obj3 = { label, trailing };
-    const items2 = [hasOwnProperty(FormRowDefault, obj3), ];
-    const obj4 = {};
+    const obj = { children: null };
+    const obj6 = { label, trailing };
+    const items2 = [hasOwnProperty(FormRowDefault, obj6), ];
+    const obj7 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = hasOwnProperty(_modDef8396, obj4);
+    items2[1] = hasOwnProperty(_modDef8396, obj7);
     obj.children = items2;
     tmp6Result = timestampProducer(React5, obj);
   }

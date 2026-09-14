@@ -7,9 +7,9 @@ import SessionsStore from "SessionsStore" /* 4654 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
 let c2 = null;
+let obj = null;
 const set = new Set();
 const dependencyMap = {};
-let obj = {};
 const set1 = new Set();
 let closure_8 = Object.freeze({});
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -20,8 +20,7 @@ prototype["initialize"] = function initialize(lastSelectedDeviceByPlatform) {
   this.waitFor(SessionsStore, VoiceStateStore);
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  obj = { lastSelectedDeviceByPlatform: obj };
-  return obj;
+  return { lastSelectedDeviceByPlatform: obj2 };
 };
 prototype["getDevicesForPlatform"] = function getDevicesForPlatform(require) {
   let tmp = dependencyMap[require];
@@ -31,7 +30,7 @@ prototype["getDevicesForPlatform"] = function getDevicesForPlatform(require) {
   return tmp;
 };
 prototype["getLastSelectedDeviceByPlatform"] = function getLastSelectedDeviceByPlatform(require) {
-  return obj[require];
+  return obj2[require];
 };
 prototype["getDevice"] = function getDevice(arg0, arg1) {
   let tmp2;
@@ -73,11 +72,11 @@ obj = {
     set1.delete(platform);
     obj = {};
     closure_5[platform] = obj;
-    obj = {};
+    obj2 = {};
     for (const item10014 of devices) {
       obj[item10014.id] = item10014;
-      if (obj[platform] === item10014.id) {
-        obj[platform] = tmp2.id;
+      if (obj2[platform] === item10014.id) {
+        obj2[platform] = tmp2.id;
       }
       continue;
     }
@@ -86,7 +85,7 @@ obj = {
     set1.delete(platform.platform);
   },
   GAME_CONSOLE_SELECT_DEVICE: function handleSelectDevice(platform) {
-    obj[platform.platform] = platform.deviceId;
+    obj2[platform.platform] = platform.deviceId;
   }
 };
 const gameConsoleStore = new GameConsoleStore(DispatcherDefault, obj);

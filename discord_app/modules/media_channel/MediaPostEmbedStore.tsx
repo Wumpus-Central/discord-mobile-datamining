@@ -1,10 +1,10 @@
-// === Module 11559: MediaPostEmbedStore ===
+// === Module 11560: MediaPostEmbedStore ===
 
-// Module 11559 (MediaPostEmbedStore)
+// Module 11560 (MediaPostEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
@@ -27,7 +27,7 @@ prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
   return closure_1;
 };
 MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
-FetchState = {
+const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
     closure_2 = {};
@@ -52,8 +52,7 @@ FetchState = {
       closure_2 = {};
     }
   }
-};
-const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 

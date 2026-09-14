@@ -10,7 +10,7 @@ const prototype = function StorefrontProductRecord(arg0) {
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_ids) {
   ({ options, created_at, updated_at, skus, tenant_metadata } = sku_ids);
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(Object.assign(sku_ids, Object.assign({ sku_ids: 0, options: 0, created_at: 0, updated_at: 0, skus: 0, tenant_metadata: 0 })));
   obj.skuIds = sku_ids.sku_ids;
   obj.options = options.map((name) => ({ name: name.name, optionValues: name.option_values }));
@@ -73,9 +73,8 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   obj.hideBadge = hide_badge;
   if (typeof prototype === "function") {
-    obj = Object.create(prototype.prototype);
     ({ id: tmp17.id, skuIds: tmp17.skuIds, name: tmp17.name, summary: tmp17.summary, options: tmp17.options, createdAt: tmp17.createdAt, updatedAt: tmp17.updatedAt, skus: tmp17.skus, primaryCollectionId: tmp17.primaryCollectionId, primaryCollectionStyles: tmp17.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt, gameApplicationId: tmp17.gameApplicationId, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge } = obj);
-    return obj;
+    return Object.create(prototype.prototype);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

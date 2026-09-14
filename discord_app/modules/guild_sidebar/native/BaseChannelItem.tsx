@@ -1,9 +1,9 @@
-// === Module 12508: BaseChannelItem ===
+// === Module 12509: BaseChannelItem ===
 
-// Module 12508 (BaseChannelItem)
+// Module 12509 (BaseChannelItem)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,19 +31,19 @@ class BaseChannelSubtitle {
           if (!isAndroidResult) {
             tmp8 = typeof subtitle === "string";
           }
-          obj = { experimental_useNativeText: null, lineClamp: 1 };
-          obj.experimental_useNativeText = tmp8;
-          tmp9 = obj;
+          obj1 = { experimental_useNativeText: null, lineClamp: 1 };
+          obj1.experimental_useNativeText = tmp8;
+          tmp9 = obj1;
           tmp10 = obj;
           merged = Object.assign(obj);
-          obj.children = subtitle;
-          tmp4Result = tmp4(closure_0(closure_2[7]).Text, obj);
+          obj1.children = subtitle;
+          tmp4Result = tmp4(closure_0(closure_2[7]).Text, obj1);
         }
         return tmp4Result;
       }
     }
-    obj1 = { variant: closure_5, color: "redesign-channel-name-text" };
-    obj = obj1;
+    obj5 = { variant: closure_5, color: "redesign-channel-name-text" };
+    obj = obj5;
     return;
   }
 }
@@ -53,40 +53,40 @@ const RedesignChannelListConstants = fn(10246);
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles((arg0) => {
-  let obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
-  obj = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
-  obj.rowSelected = obj;
-  obj = { left: -nativeDefault.space.PX_8 };
-  obj.unreadIndicator = obj;
+  const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
+  obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  obj.rowSelected = obj2;
+  obj.unreadIndicator = { left: -nativeDefault.space.PX_8 };
   let num = 1;
   let num2 = 1;
-  if (arg0 === createStyles.MUTED) {
+  if (arg0 === obj2.MUTED) {
     num2 = 0.5;
   }
   obj.channelIcon = { width: 16, height: 16, marginRight: 8, opacity: num2 };
   let num3 = num;
-  if (arg0 === createStyles.MUTED) {
+  if (arg0 === obj2.MUTED) {
     num3 = 0.5;
   }
   obj.redesignedChannelIcon = { marginRight: 8, opacity: num3 };
+  const obj3 = { left: -nativeDefault.space.PX_8 };
   obj.channelIconNormal = { tintColor: nativeDefault.colors.CHANNEL_ICON };
-  const obj1 = { tintColor: nativeDefault.colors.CHANNEL_ICON };
+  const obj4 = { tintColor: nativeDefault.colors.CHANNEL_ICON };
   obj.channelIconUnread = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-  const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+  const obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
   obj.channelIconMuted = { tintColor: nativeDefault.colors.ICON_MUTED };
   obj.channel = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
   obj.channelNameContainer = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
-  const obj4 = { flexGrow: 1, textAlign: "left", lineHeight, opacity: null };
-  if (arg0 === createStyles.MUTED) {
+  const obj7 = { flexGrow: 1, textAlign: "left", lineHeight, opacity: null };
+  if (arg0 === obj2.MUTED) {
     num = 0.5;
   }
-  obj4.opacity = num;
-  obj.channelName = obj4;
+  obj7.opacity = num;
+  obj.channelName = obj7;
   return obj;
 });
-createStyles = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
+let obj2 = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
 
@@ -106,7 +106,7 @@ export default function BaseChannelItem(mode) {
   const tmp2 = closure_10(mode);
   dependencyMap = tmp2;
   let items = [hideIcon, mode, tmp2];
-  let obj = {
+  const obj = {
     style: noop.useMemo(() => {
       const items = [channel.channel, , ];
       let rowPaddingNoIcon = hideIcon;
@@ -114,7 +114,7 @@ export default function BaseChannelItem(mode) {
         rowPaddingNoIcon = channel.rowPaddingNoIcon;
       }
       items[1] = rowPaddingNoIcon;
-      items[2] = mode === createStyles.SELECTED && channel.rowSelected;
+      items[2] = mode === obj2.SELECTED && channel.rowSelected;
       return items;
     }, items),
     children: null
@@ -130,28 +130,28 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12509);
+      let AnimatedPressableHighlight = hideIcon(12510);
     } else {
       AnimatedPressableHighlight = mode(9031).AnimatedPressableHighlight;
     }
-    obj = {};
+    obj2 = {};
     const merged1 = Object.assign(merged);
     const items2 = [closure_9(tmp4, obj), children];
-    obj.children = items2;
-    return closure_9(AnimatedPressableHighlight, obj);
+    obj2.children = items2;
+    return closure_9(AnimatedPressableHighlight, obj2);
   } else {
-    obj = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
-    if (mode === createStyles.UNREAD_LESS_IMPORTANT) {
+    const obj3 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
+    if (mode === obj2.UNREAD_LESS_IMPORTANT) {
       let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
     } else {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
-    obj.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(10293), obj);
+    obj3.resolvedUnreadSetting = ALL_MESSAGES;
+    closure_8(hideIcon(10293), obj3);
     const tmp9 = hideIcon(10293);
   }
 };
-export const ChannelModes = createStyles;
+export const ChannelModes = obj2;
 export { BaseChannelSubtitle };
 export const BaseChannelIcon = function BaseChannelIcon(arg0) {
   ({ disableColor, mode, IconComponent, style } = arg0);
@@ -163,7 +163,7 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
       items.push(style);
     }
     if (null != IconComponent) {
-      let obj = { size: "sm", style: tmp.redesignedChannelIcon, color: null };
+      obj2 = { size: "sm", style: tmp.redesignedChannelIcon, color: null };
       let str = "status-positive";
       if (!isChannelLive) {
         let str2 = "icon-muted";
@@ -177,10 +177,10 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
         }
         str = str2;
       }
-      obj.color = str;
-      let tmp12Result = React6(IconComponent, obj);
+      obj2.color = str;
+      let tmp12Result = React6(IconComponent, obj2);
     } else {
-      obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
+      const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
       tmp12Result = React6(native.Icon, obj);
     }
     return tmp12Result;
@@ -197,51 +197,52 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
     }
     items.push(channelIconUnread);
   }
-  tmp4 = mode === createStyles.SELECTED;
+  tmp4 = mode === obj2.SELECTED;
 };
 export const useChannelNameTextProps = function useChannelNameTextProps(channelMode) {
-  if (channelMode !== createStyles.UNREAD_IMPORTANT) {
+  if (channelMode !== obj2.UNREAD_IMPORTANT) {
     return { variant: "text-md/semibold", color: "redesign-channel-name-text" };
   }
 };
 export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(channelMode) {
-  if (channelMode !== createStyles.UNREAD_IMPORTANT) {
-    if (channelMode !== createStyles.RELEVANT) {
-      if (channelMode !== createStyles.SELECTED) {
-        const MUTED = createStyles.MUTED;
+  if (channelMode !== obj2.UNREAD_IMPORTANT) {
+    if (channelMode !== tmp.RELEVANT) {
+      if (channelMode !== tmp.SELECTED) {
+        const MUTED = tmp.MUTED;
         let obj = { variant, color: "text-muted" };
       }
       return obj;
     }
   }
-  obj = { variant, color: "redesign-channel-name-text" };
+  obj2 = { variant, color: "redesign-channel-name-text" };
+  obj = obj2;
 };
 export const BaseChannelName = function BaseChannelName(mode) {
   mode = mode.mode;
   ({ name, subtitle, textStyle } = mode);
   const tmp = closure_10(mode);
-  let obj = { style: tmp.channelNameContainer, children: null };
-  if (mode !== createStyles.UNREAD_IMPORTANT) {
-    if (mode !== createStyles.RELEVANT) {
-      if (mode === createStyles.UNREAD_LESS_IMPORTANT) {
-        obj = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (mode === createStyles.MUTED) {
-        obj = { variant: "text-md/medium", color: "text-muted" };
+  const obj = { style: tmp.channelNameContainer, children: null };
+  if (mode !== obj2.UNREAD_IMPORTANT) {
+    if (mode !== tmp6.RELEVANT) {
+      if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
+        obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+      } else if (mode === tmp6.MUTED) {
+        obj2 = { variant: "text-md/medium", color: "text-muted" };
       } else {
-        obj = mode === createStyles.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+        obj2 = mode === tmp6.SELECTED ? { variant: "text-md/medium", color: "redesign-channel-name-text" } : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
       }
     }
-    obj = { experimental_useNativeText: true };
-    const merged = Object.assign(obj);
-    obj.lineClamp = 1;
+    const obj3 = { experimental_useNativeText: true };
+    const merged = Object.assign(obj2);
+    obj3.lineClamp = 1;
     const items = [tmp.channelName, textStyle];
-    obj.style = items;
-    obj.children = name;
-    const items1 = [React6(tmp5, obj), ];
-    const obj1 = { mode, subtitle };
-    items1[1] = React6(BaseChannelSubtitle, obj1);
+    obj3.style = items;
+    obj3.children = name;
+    const items1 = [React6(tmp5, obj3), ];
+    const obj4 = { mode, subtitle };
+    items1[1] = React6(BaseChannelSubtitle, obj4);
     obj.children = items1;
     return React7(View, obj);
   }
-  obj = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
+  obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
 };

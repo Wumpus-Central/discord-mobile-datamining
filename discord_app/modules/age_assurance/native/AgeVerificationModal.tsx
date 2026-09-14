@@ -11,8 +11,7 @@ function AgeVerifyScreen(uri) {
   const onClose = uri.onClose;
   let isSuspendedUser;
   let callback;
-  let obj = onComplete(isSuspendedUser[3]);
-  isSuspendedUser = obj.useIsSuspendedUser();
+  isSuspendedUser = onComplete(isSuspendedUser[3]).useIsSuspendedUser();
   const items = [onComplete, onClose];
   callback = callback.useCallback(() => {
     onComplete();
@@ -25,6 +24,7 @@ function AgeVerifyScreen(uri) {
     }
     obj = NavigationRouteUtils;
   }, items1);
+  let obj = onComplete(isSuspendedUser[3]);
   const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(callback1);
   const items2 = [callback, isSuspendedUser];
   const callback2 = callback.useCallback((nativeEvent) => {
@@ -51,17 +51,14 @@ function AgeVerifyScreen(uri) {
       }
     }
   }, items2);
-  obj = { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage: callback2, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" };
   return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage: callback2, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
 }
 let closure_4 = fn(8530).AGE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-fn(4636);
-let createStyles = { headerStyle: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles.headerStyle = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
@@ -79,8 +76,7 @@ export default function AgeVerificationModal(webviewUrl) {
     closure_2 = onClose;
     function handleClose() {
       closure_2();
-      let arr = onComplete(onClose[9]);
-      arr = arr.pop();
+      onComplete(onClose[9]).pop();
     }
     return {
       [closure_2_6.VERIFY_AGE]: {

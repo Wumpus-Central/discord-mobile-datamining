@@ -1,9 +1,9 @@
-// === Module 16018: NotifSettingsActionCreators ===
+// === Module 16020: NotifSettingsActionCreators ===
 
-// Module 16018 (NotifSettingsActionCreators)
+// Module 16020 (NotifSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import notification_settings from "notification_settings" /* 13770 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13769 */;
+import notification_settings from "notification_settings" /* 13771 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13770 */;
 
 require = fn;
 function updateNotifSettingValue(GAMING_DEFAULT, createNew) {
@@ -26,8 +26,8 @@ function updateNotifSettingValue(GAMING_DEFAULT, createNew) {
     const DeclarativeSettings = notification_settings.DeclarativeSettings;
     const cloneResult1 = DeclarativeSettings.clone(settings);
     cloneResult1.values[GAMING_DEFAULT] = cloneResult;
-    const obj = { type: "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE", declarativeSettings: cloneResult1 };
-    obj.dispatch(obj);
+    const obj2 = { type: "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE", declarativeSettings: cloneResult1 };
+    DispatcherDefault.dispatch(obj2);
   }
 }
 const size = fn(2);

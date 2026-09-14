@@ -1,8 +1,8 @@
-// === Module 12084: PrivateChannelRecipientActionCreators ===
+// === Module 12085: PrivateChannelRecipientActionCreators ===
 
-// Module 12084 (PrivateChannelRecipientActionCreators)
+// Module 12085 (PrivateChannelRecipientActionCreators)
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

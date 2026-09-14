@@ -1,8 +1,8 @@
-// === Module 10347: useNativeForumPostHandlers ===
+// === Module 10348: useNativeForumPostHandlers ===
 
-// Module 10347 (useNativeForumPostHandlers)
+// Module 10348 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ChatInputUtils from "ChatInputUtils" /* 4502 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
@@ -12,9 +12,9 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
 import tracking_Tracking from "tracking/Tracking" /* 7869 */;
 import openMediaModal from "openMediaModal" /* 8377 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10348 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11387 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10349 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11388 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -45,12 +45,11 @@ export default function useNativeForumPostHandlers(threadId) {
     }
     const channel = ChannelStore.getChannel(threadId);
     _modDef38(null != channel, "[Forum Post Handlers] Thread cannot be null.");
-    let obj = useChannelName;
-    const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore, false);
+    const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore, false);
     const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
     const mapped = mediaItems.map((src) => {
       src = src.src;
-      let str = NORMAL(1365).toURLSafe(src);
+      const str = NORMAL(1365).toURLSafe(src);
       let tmp = null != str;
       if (src.srcIsAnimated) {
         if (tmp) {
@@ -78,7 +77,7 @@ export default function useNativeForumPostHandlers(threadId) {
           }
           tmp = isAttachmentPathUrlResult;
         }
-        str = src;
+        let str1 = src;
         if (tmp) {
           const searchParams2 = str.searchParams;
           const result1 = searchParams2.set("animated", "true");
@@ -87,7 +86,7 @@ export default function useNativeForumPostHandlers(threadId) {
             const searchParams3 = str.searchParams;
             const result2 = searchParams3.set("format", "webp");
           }
-          str = str.toString();
+          str1 = str.toString();
         }
       } else {
         let endsWithResult1 = tmp;
@@ -95,14 +94,14 @@ export default function useNativeForumPostHandlers(threadId) {
           const formatted3 = str.pathname.toLowerCase();
           endsWithResult1 = formatted3.endsWith(".avif");
         }
-        str = src;
+        str1 = src;
         if (endsWithResult1) {
           const searchParams = str.searchParams;
           const result3 = searchParams.set("format", "webp");
-          str = str.toString();
+          str1 = str.toString();
         }
       }
-      const size = { uri: str, guildId: channel.guild_id, messageId: null, channelId: null, mediaIndex: null, width: null, height: null, accessoryType: null, attachmentId: null };
+      const size = { uri: str1, guildId: channel.guild_id, messageId: null, channelId: null, mediaIndex: null, width: null, height: null, accessoryType: null, attachmentId: null };
       let tmp18 = closure_1_0;
       if (closure_1_0 == null) {
         tmp18 = closure_2_14;
@@ -112,27 +111,25 @@ export default function useNativeForumPostHandlers(threadId) {
       ({ mediaIndex: obj8.mediaIndex, width: obj8.width, height: obj8.height, type: obj8.accessoryType, attachmentId: obj8.attachmentId } = src);
       return size;
     });
-    obj = { initialIndex, initialSources: mapped, channelId: channel.id, contextName: channelName, contextIcon: channelIcon, originViewOrOriginLayout: containerRef.containerRef.current };
-    openMediaModal.openMediaModal(obj);
+    openMediaModal.openMediaModal({ initialIndex, initialSources: mapped, channelId: channel.id, contextName: channelName, contextIcon: channelIcon, originViewOrOriginLayout: containerRef.containerRef.current });
   }, items);
   const callback1 = noop.useCallback(() => {
-    let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let tmpResult = HapticUtils;
-      const result = tmpResult.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      const tmpResult = HapticUtils;
     }
     const channel = ChannelStore.getChannel(threadId);
     _modDef38(null != channel, "[Forum Post Handlers] Thread cannot be null.");
     const channel1 = ChannelStore.getChannel(channel.parent_id);
     _modDef38(null != channel1, "[Forum Post Handlers] Parent channel cannot be null.");
-    tmpResult = tracking_Tracking;
-    obj = { guildId: channel1.guild_id, channelId: channel1.id, postId: threadId, location: null };
-    obj = { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST };
-    obj.location = obj;
-    const result1 = tmpResult.trackForumPostClicked(obj);
+    obj = PlatformUtils;
+    const obj2 = { guildId: channel1.guild_id, channelId: channel1.id, postId: threadId, location: { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST } };
+    const result1 = tracking_Tracking.trackForumPostClicked(obj2);
+    const obj3 = { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST };
+    const tmpResult3 = tracking_Tracking;
     transitionToChannel.transitionToThread(channel, { source: constants.FORUM, navigationReplace: false });
-    const obj1 = { source: constants.FORUM, navigationReplace: false };
-    const tmpResult1 = transitionToChannel;
+    const obj4 = { source: constants.FORUM, navigationReplace: false };
+    const tmpResult4 = transitionToChannel;
   }, items1);
   const items2 = [callback1, threadId];
   const items3 = [threadId];
@@ -145,14 +142,14 @@ export default function useNativeForumPostHandlers(threadId) {
     const message = messageState.message;
     if (messageState.loaded) {
       if (null != message) {
-        let obj = { guildId: null, channelId: null, postId: null, location: null };
+        const obj3 = { guildId: null, channelId: null, postId: null, location: null };
         ({ guild_id: obj2.guildId, id: obj2.channelId } = channel1);
-        obj.postId = threadId;
-        obj = { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST };
-        obj.location = obj;
-        const result = obj.trackForumPostClicked(obj);
-        const obj1 = { source: constants.FORUM, navigationReplace: false };
-        const result1 = transitionToChannel.transitionToThreadMessage(channel, message.id, obj1);
+        obj3.postId = threadId;
+        const obj5 = { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST };
+        obj3.location = obj5;
+        const result = tracking_Tracking.trackForumPostClicked(obj3);
+        const obj8 = { source: constants.FORUM, navigationReplace: false };
+        const result1 = transitionToChannel.transitionToThreadMessage(channel, message.id, obj8);
       }
     }
     callback1();
@@ -183,32 +180,29 @@ export default function useNativeForumPostHandlers(threadId) {
     _modDef38(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
     if (disableReactionCreates) {
       if (disableReactionUpdates) {
-        let obj = { messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions, location: null };
-        obj = { object: locationAnalyticsObject, objectType: constants.CANT_ADD_OR_REMOVE };
-        obj.location = obj;
-        reactions_ReactionUtils.handleViewReactions(obj);
+        const obj3 = { messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions, location: null };
+        const obj4 = { object: locationAnalyticsObject, objectType: constants.CANT_ADD_OR_REMOVE };
+        obj3.location = obj4;
+        reactions_ReactionUtils.handleViewReactions(obj3);
       }
     }
     let tmp6 = null != reaction;
     if (tmp6) {
       tmp6 = reaction.burst_count > 0;
     }
-    obj = messages_MessagesUtils;
-    const result = obj.handleAddOrRemoveReaction(firstMessage.id, channel, reaction, tmp6, reactionLocation);
+    const result = messages_MessagesUtils.handleAddOrRemoveReaction(firstMessage.id, channel, reaction, tmp6, reactionLocation);
   }, items4);
   const items6 = [threadId];
   const callback5 = noop.useCallback((emoji) => {
     const firstMessage = ForumPostMessagesStore.getMessage(threadId).firstMessage;
     _modDef38(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
-    const obj = { messageId: firstMessage.id, channelId: threadId, emoji: emoji.emoji, reactions: firstMessage.reactions };
-    obj.handleViewReactions(obj);
+    reactions_ReactionUtils.handleViewReactions({ messageId: firstMessage.id, channelId: threadId, emoji: emoji.emoji, reactions: firstMessage.reactions });
   }, items5);
   const items7 = [threadId, NORMAL];
   const callback6 = noop.useCallback(() => {
     const firstMessage = ForumPostMessagesStore.getMessage(threadId).firstMessage;
     _modDef38(null != firstMessage, "[Forum Post Handlers] Message cannot be null.");
-    const obj = { messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions };
-    obj.handleViewReactions(obj);
+    reactions_ReactionUtils.handleViewReactions({ messageId: firstMessage.id, channelId: threadId, reactions: firstMessage.reactions });
   }, items6);
   return {
     onTapMedia: callback,

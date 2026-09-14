@@ -1,6 +1,6 @@
-// === Module 11802: LongPressMessageChatItemPreview ===
+// === Module 11803: LongPressMessageChatItemPreview ===
 
-// Module 11802 (LongPressMessageChatItemPreview)
+// Module 11803 (LongPressMessageChatItemPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import RowGeneratorDefault from "RowGenerator" /* 8036 */;
@@ -9,10 +9,9 @@ import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-let obj = { chatItem: null };
-obj = { maxHeight: 2 * nativeDefault.space.PX_80 };
-obj.chatItem = obj;
+let obj = { chatItem: { maxHeight: 2 * nativeDefault.space.PX_80 } };
 let closure_3 = createStyles.createStyles(obj);
+const obj2 = { maxHeight: 2 * nativeDefault.space.PX_80 };
 const rowGenerator = new RowGeneratorDefault();
 const result = size.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
 

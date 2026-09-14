@@ -21,9 +21,8 @@ const result = createStyles.experimental_createToken((theme) => {
   }
   return str;
 });
-fn(4636);
-createStyles = { timestampColor: nativeDefault.colors.TEXT_MUTED, highlightColor: result };
-let closure_4 = createStyles.createNativeStyleProperties(createStyles);
+createStyles = fn(4636);
+let closure_4 = createStyles.createNativeStyleProperties({ timestampColor: nativeDefault.colors.TEXT_MUTED, highlightColor: result });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
 

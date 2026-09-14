@@ -1,6 +1,6 @@
-// === Module 10549: HorizontalAutocompleteWrapper ===
+// === Module 10550: HorizontalAutocompleteWrapper ===
 
-// Module 10549 (HorizontalAutocompleteWrapper)
+// Module 10550 (HorizontalAutocompleteWrapper)
 import timing from "timing" /* 4637 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,8 +17,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
   const onPressAutocompleteItem = channel.onPressAutocompleteItem;
   autocompleteSelectionStart = undefined;
   ({ style, text, selection } = channel);
-  let obj = channel(autocompleteSelectionStart[4]);
-  const horizontalAutocompleteResults = obj.useHorizontalAutocompleteResults({ channel, text, selection });
+  const horizontalAutocompleteResults = channel(autocompleteSelectionStart[4]).useHorizontalAutocompleteResults({ channel, text, selection });
   ({ results, autocompleteSelectionStart } = horizontalAutocompleteResults);
   const query = horizontalAutocompleteResults.query;
   const items = [onPressAutocompleteItem, autocompleteSelectionStart, query];
@@ -40,30 +39,30 @@ export default function HorizontalAutocompleteWrapper(channel) {
     item = item.item;
     const type = item.type;
     if (num.USER === type) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(item);
-      obj.guildId = item.guild_id;
-      obj.onPress = function onPress(arg0) {
+      obj2.guildId = item.guild_id;
+      obj2.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).User, {});
     } else if (num.ROLE === type) {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(item);
-      obj.guildId = item.guild_id;
-      obj.onPress = function onPress(arg0) {
+      obj3.guildId = item.guild_id;
+      obj3.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Role, {});
     } else if (num.CHANNEL === type) {
-      const obj1 = {};
+      const obj4 = {};
       const merged2 = Object.assign(item);
-      obj1.onPress = function onPress(arg0) {
+      obj4.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Channel, {});
     } else if (num.EMOJI === type) {
-      obj = {};
+      const obj = {};
       const merged3 = Object.assign(item);
       obj.onPress = function onPress(arg0) {
         return callback(arg0, item);
@@ -76,23 +75,24 @@ export default function HorizontalAutocompleteWrapper(channel) {
   if (results.length > 0) {
     num = 1;
   }
+  let obj = channel(autocompleteSelectionStart[4]);
   const fn = function _() {
     const obj = { opacity: timing.withTiming(num) };
     return obj;
   };
-  obj = { withTiming: tmp(tmp2[7]).withTiming, toValue: num };
-  fn.__closure = obj;
+  const tmpResult = channel(autocompleteSelectionStart[6]);
+  fn.__closure = { withTiming: channel(autocompleteSelectionStart[7]).withTiming, toValue: num };
   fn.__workletHash = 7895652904738;
   fn.__initData = __initData;
-  const animatedStyle = channel(autocompleteSelectionStart[6]).useAnimatedStyle(fn);
-  obj = {
+  const animatedStyle = tmpResult.useAnimatedStyle(fn);
+  let obj3 = {
     style: null,
     children: <callback keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(arg0, arg1) {
       return String(arg1);
     }} data={results} renderItem={callback1} />
   };
   const items2 = [style, animatedStyle];
-  obj.style = items2;
+  obj3.style = items2;
   return jsx(onPressAutocompleteItem(autocompleteSelectionStart[6]).View, {
     style: null,
     children: <callback keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(arg0, arg1) {

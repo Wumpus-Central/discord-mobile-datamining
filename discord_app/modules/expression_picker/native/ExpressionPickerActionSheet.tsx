@@ -1,8 +1,8 @@
-// === Module 10400: ExpressionPickerActionSheet ===
+// === Module 10401: ExpressionPickerActionSheet ===
 
-// Module 10400 (ExpressionPickerActionSheet)
+// Module 10401 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -11,15 +11,15 @@ import useKeyboardType from "useKeyboardType" /* 4504 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import NavigatorConstants from "NavigatorConstants" /* 5763 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import KeyboardUtils from "KeyboardUtils" /* 10402 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 10403 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10404 */;
+import KeyboardUtils from "KeyboardUtils" /* 10403 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 10404 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10405 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 let closure_5 = fn(7254).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10401).STICKER_FORMATS;
+const STICKER_FORMATS = fn(10402).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -28,26 +28,24 @@ const result = size.fileFinishedImporting("modules/expression_picker/native/Expr
 export default function ExpressionPickerActionSheet(arg0) {
   ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: noop } = arg0);
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(-1);
-  let obj1 = useKeyboardType;
-  const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes.KeyboardTypes.EXPRESSION);
-  let obj2 = initialize;
+  const ref = noop.useRef(null);
+  const sharedValue = ReanimatedRexport.useSharedValue(-1);
+  const keyboardContextForType = useKeyboardType.useKeyboardContextForType(KeyboardTypes.KeyboardTypes.EXPRESSION);
   const items = [ChannelStore];
-  const stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(require));
+  const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(require));
   const height = useWindowDimensionsDefault({ ignoreKeyboard: true }).height;
   const diff = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
     let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
-      obj = { animatedSheetIndex: sharedValue, followSystemKeyboard: true };
-      isIOSResult = closure_7(PortalKeyboardFooterIOSDefault, obj);
+      const obj4 = { animatedSheetIndex: sharedValue, followSystemKeyboard: true };
+      isIOSResult = closure_7(PortalKeyboardFooterIOSDefault, obj4);
     }
-    obj = { children: null };
+    const obj5 = { children: null };
     const items1 = [isIOSResult, ];
-    obj1 = { scrollable: true, animatedIndex: sharedValue, startHeight: height * closure_5, containerHeight: diff, onDismiss, children: null };
-    obj2 = {
+    const obj6 = { scrollable: true, animatedIndex: sharedValue, startHeight: height * closure_5, containerHeight: diff, onDismiss, children: null };
+    const obj7 = {
       bottomSheetRef: ref,
       bottomSheetIndex: sharedValue,
       channel: stateFromStores,
@@ -73,10 +71,10 @@ export default function ExpressionPickerActionSheet(arg0) {
       stickerFormats: STICKER_FORMATS,
       height: diff
     };
-    obj1.children = closure_7(ExpressionPickerDefault, obj2);
-    items1[1] = closure_7(Sheet_BottomSheet.BottomSheet, obj1);
-    obj.children = items1;
-    tmp15Result = closure_9(closure_8, obj);
+    obj6.children = closure_7(ExpressionPickerDefault, obj7);
+    items1[1] = closure_7(Sheet_BottomSheet.BottomSheet, obj6);
+    obj5.children = items1;
+    tmp15Result = closure_9(closure_8, obj5);
     const tmp2Result = PlatformUtils;
   }
   return tmp15Result;

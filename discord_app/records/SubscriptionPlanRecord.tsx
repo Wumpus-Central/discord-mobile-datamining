@@ -22,11 +22,11 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
       if (null == prices.prices) {
         return acc;
       } else {
-        let obj = { countryPrices: null, paymentSourcePrices: null };
-        obj = { countryCode: tmp.prices[item].country_prices.country_code, prices: null };
+        const obj = { countryPrices: null, paymentSourcePrices: null };
+        const obj2 = { countryCode: tmp.prices[item].country_prices.country_code, prices: null };
         prices = tmp3.country_prices.prices;
-        obj.prices = prices.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
-        obj.countryPrices = obj;
+        obj2.prices = prices.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
+        obj.countryPrices = obj2;
         const _Object = Object;
         const entries = Object.entries(tmp3.payment_source_prices);
         obj.paymentSourcePrices = entries.reduce((acc, item) => {
@@ -76,14 +76,13 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 prototype["toServerData"] = function toServerData() {
   const self = this;
-  let prices = {};
+  const prices = {};
   const keys = Object.keys(this.prices);
   const item = keys.forEach((item) => {
     const obj = { country_prices: { country_code: self.prices[item].countryPrices.countryCode, prices: self.prices[item].countryPrices.prices }, payment_source_prices: self.prices[item].paymentSourcePrices };
     obj[item] = obj;
   });
-  prices = { id: this.id, name: this.name, sku_id: this.skuId, interval: this.interval, interval_count: this.intervalCount, tax_inclusive: this.taxInclusive, currency: this.currency, price: this.price, prices, price_tier: this.price };
-  return prices;
+  return { id: this.id, name: this.name, sku_id: this.skuId, interval: this.interval, interval_count: this.intervalCount, tax_inclusive: this.taxInclusive, currency: this.currency, price: this.price, prices, price_tier: this.price };
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("records/SubscriptionPlanRecord.tsx");

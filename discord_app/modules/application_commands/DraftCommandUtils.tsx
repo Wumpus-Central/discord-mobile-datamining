@@ -1,6 +1,6 @@
-// === Module 12123: DraftCommandUtils ===
+// === Module 12124: DraftCommandUtils ===
 
-// Module 12123 (DraftCommandUtils)
+// Module 12124 (DraftCommandUtils)
 import DraftCommand from "DraftCommand" /* 4979 */;
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5081 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9546 */;
@@ -41,17 +41,17 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
 export const resolveDraftCommand = function resolveDraftCommand(channel, text, draftCommand) {
   if (null != draftCommand) {
     if (obj4.isDraftCommandValidForText(draftCommand, text)) {
-      let obj = { channel, type: "channel" };
-      const cachedCommand = obj.getCachedCommand(obj, draftCommand.commandId, draftCommand.applicationId);
+      const obj2 = { channel, type: "channel" };
+      const cachedCommand = ApplicationCommandQueryApiAll.getCachedCommand(obj2, draftCommand.commandId, draftCommand.applicationId);
       ({ command, section } = cachedCommand);
       let tmp4 = null;
       if (null != command) {
-        obj = { command, section: null };
+        const obj3 = { command, section: null };
         if (section == null) {
           section = null;
         }
-        obj.section = section;
-        tmp4 = obj;
+        obj3.section = section;
+        tmp4 = obj3;
       }
       return tmp4;
     }

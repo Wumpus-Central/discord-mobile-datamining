@@ -11,30 +11,33 @@ import isSystemMessageDefault from "isSystemMessage" /* 7373 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function useCanManageGuildOfficialMessages(guild_id, channel, location) {
   _require = channel;
   closure_129_0 = guild_id;
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }
     return guild;
   }, items1);
-  obj = { guildId: guild_id, location };
+  const obj = require("initialize");
+  const tmp = guild_id;
   let enabled = null != stateFromStores;
   if (enabled) {
     const features = stateFromStores.features;
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    enabled = obj2.useExperiment(obj).enabled;
+    enabled = obj2.useExperiment(obj3).enabled;
   }
   obj2 = GuildOfficialMessagesExperimentDefault;
+  obj3 = { guildId: tmp, location };
   const items2 = [PermissionStore];
   const items3 = [channel];
   if (enabled) {
@@ -57,8 +60,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
   if (arg3 === undefined) {
     tmp = closure_5;
   }
-  let obj = utils_ColorUtils;
-  const int2hexResult = obj.int2hex(officialMessageColor);
+  const int2hexResult = utils_ColorUtils.int2hex(officialMessageColor);
   let tmp5 = _modDef672(semanticColor);
   const tmp6 = _modDef672(int2hexResult);
   const mixResult = _modDef672.mix(tmp5, int2hexResult, tmp, "rgb");
@@ -67,8 +69,8 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = _modDef672;
-  obj = { foreground: tmp6, background: tmp5, ratio: shared.WCAGContrastRatios.Text, saturationFactor: num };
-  return ColorUtils.getAccessibleForegroundColor(obj);
+  const tmp2Result = ColorUtils;
+  return tmp2Result.getAccessibleForegroundColor({ foreground: tmp6, background: tmp5, ratio: shared.WCAGContrastRatios.Text, saturationFactor: num });
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {
   let tmp = "no_gradient" !== officialMessageStyle;
@@ -91,31 +93,30 @@ export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEn
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    const obj = { guildId: guild.id, location: GuildSettingsModalLanding };
-    enabled = obj.getCurrentConfig(obj).enabled;
+    const obj2 = { guildId: guild.id, location: GuildSettingsModalLanding };
+    enabled = GuildOfficialMessagesExperimentDefault.getCurrentConfig(obj2).enabled;
   }
   return enabled;
 };
 export const useIsGuildOfficialMessagesEnabled = function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   _require = id;
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let guild = null;
     if (null != closure_0) {
       guild = GuildStore.getGuild(tmp);
     }
     return guild;
   }, items1);
-  obj = { guildId: id, location: useGuildActionRows };
+  const obj = require("initialize");
   let enabled = null != stateFromStores;
   if (enabled) {
     const features = stateFromStores.features;
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    enabled = obj2.useExperiment(obj).enabled;
+    enabled = obj2.useExperiment(obj3).enabled;
   }
   return enabled;
 };
@@ -126,8 +127,8 @@ export const canManageGuildOfficialMessages = function canManageGuildOfficialMes
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    const obj = { guildId: features.id, location };
-    enabled = obj.getCurrentConfig(obj).enabled;
+    const obj2 = { guildId: features.id, location };
+    enabled = GuildOfficialMessagesExperimentDefault.getCurrentConfig(obj2).enabled;
   }
   if (enabled) {
     enabled = PermissionStore.can(constants4.MANAGE_OFFICIAL_MESSAGES, arg1);
@@ -166,8 +167,8 @@ export const canSendGuildOfficialMessages = function canSendGuildOfficialMessage
     enabled = features.has(constants2.VERIFIED);
   }
   if (enabled) {
-    const obj = { guildId: guild.id, location: _sendMessage };
-    enabled = obj.getCurrentConfig(obj).enabled;
+    const obj2 = { guildId: guild.id, location: _sendMessage };
+    enabled = GuildOfficialMessagesExperimentDefault.getCurrentConfig(obj2).enabled;
   }
   if (enabled) {
     enabled = PermissionStore.can(constants4.MANAGE_OFFICIAL_MESSAGES, channel);

@@ -1,10 +1,12 @@
-// === Module 12378: PremiumAnimatedGiftButton ===
+// === Module 12379: PremiumAnimatedGiftButton ===
 
-// Module 12378 (PremiumAnimatedGiftButton)
+// Module 12379 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const useRef = fn(19).useRef;
@@ -23,16 +25,17 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0) {
   ({ active, disabled, accessibilityState } = arg0);
   ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
+  const token = require("useToken").useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   let obj = require("useToken");
-  const token = obj.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj1 = require("useToken");
-  const token1 = obj1.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  let obj2 = require("useToken");
-  const token2 = obj2.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const tmp3 = stateFromStores;
+  const token1 = require("useToken").useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const obj2 = require("useToken");
+  const token2 = require("useToken").useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = closure_7(token, token1);
   const bound = Math.max(0, (token2 - token) / 2);
   const tmp9 = useRef(null);
   _require = tmp9;
+  const obj3 = require("useToken");
   const items = [AccessibilityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [channelId, stateFromStores];
@@ -59,7 +62,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   if (!stateFromStores) {
     FadeOut = tmp(4373).FadeOut;
   }
-  obj = { exiting: FadeOut, children: null };
+  const obj5 = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style, ];
   if (active) {
     active = !disabled;
@@ -67,19 +70,17 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   if (active) {
     active = activeStyle;
   }
-  obj = { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null };
+  const obj6 = { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null };
   items2[2] = active;
   let tmp14;
   if (bound > 0) {
     tmp14 = bound;
   }
-  obj.hitSlop = tmp14;
-  obj1 = { disabled };
+  obj6.hitSlop = tmp14;
   const merged = Object.assign(accessibilityState);
-  obj.accessibilityState = obj1;
+  obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj2 = { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
-  obj.children = jsx(stateFromStores(5610), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
-  obj.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4373).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  obj6.children = jsx(tmp3(5610), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj5.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  return jsx(stateFromStores(4373).View, { exiting: FadeOut, children: null });
 };

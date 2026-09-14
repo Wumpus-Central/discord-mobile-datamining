@@ -1,13 +1,13 @@
-// === Module 13293: UnlockWithNitroButton ===
+// === Module 13294: UnlockWithNitroButton ===
 
-// Module 13293 (UnlockWithNitroButton)
+// Module 13294 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BaseTextButton from "BaseTextButton" /* 5057 */;
 import ProductIds from "ProductIds" /* 7343 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13280 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13281 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7340 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
@@ -24,9 +24,8 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  let obj = initialize;
   const items = [CollectiblesPurchaseStore, IAPStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
       isPurchasingProductResult = purchasingProduct.isPurchasingProduct(ProductIds.ProductIds.GENERIC_CONSUMABLE);
@@ -40,28 +39,28 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   }
   let tmp4Result;
   if (flag) {
-    obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
+    const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
     tmp4Result = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text });
   }
-  obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
+  const obj3 = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;
   if (!flag) {
     tmp6 = text;
   }
-  obj.text = tmp6;
-  obj.accessibilityLabel = text;
+  obj3.text = tmp6;
+  obj3.accessibilityLabel = text;
   let str = "md";
   if (flag) {
     str = "sm";
   }
-  obj.size = str;
-  obj.icon = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
-  obj.onPress = function onPress() {
+  obj3.size = str;
+  obj3.icon = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
+  obj3.onPress = function onPress() {
     if (require != null) {
       tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
     }
     closure_1();
   };
-  obj.disabled = stateFromStores;
+  obj3.disabled = stateFromStores;
   return jsx(BaseTextButton.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
 };

@@ -2,12 +2,14 @@
 
 // Module 8799 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import utils from "utils" /* 5193 */;
 import GameFlags from "GameFlags" /* 8800 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1916 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -28,9 +30,9 @@ export default function useShouldOpenGameProfileModal(applicationId) {
   let gameRecord;
   let isLoading;
   importAll = isLoading.useRef(false);
-  gameId = trackEntryPointImpression(gameRecord[7])({ applicationId: str, gameId });
-  gameRecord = gameId.gameRecord;
-  isLoading = gameId.isLoading;
+  const gameId2 = trackEntryPointImpression(gameRecord[7])({ applicationId: str, gameId });
+  gameRecord = gameId2.gameRecord;
+  isLoading = gameId2.isLoading;
   let shouldOpenGameProfile = null != gameRecord;
   if (shouldOpenGameProfile) {
     shouldOpenGameProfile = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED);
@@ -69,24 +71,23 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         }
         tmp19Result = utils;
       }
-      track = track(1242).track;
+      track = track(1240).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1242);
+      const trackResult = track(1240);
     }
   }, items);
-  return { shouldOpenGameProfile, gameId: gameId.gameId };
+  return { shouldOpenGameProfile, gameId: gameId2.gameId };
 };
 export { RejectionReason };
 export const trackEntryPoint = function trackEntryPoint(game_profile_available, id) {
   if (items === undefined) {
     items = [];
   }
-  const obj = { game_profile_available, application_id: id, rejection_reason: items, source: CallTile };
-  obj.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, { game_profile_available, application_id: id, rejection_reason: items, source: CallTile });
 };
 export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {
@@ -95,7 +96,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
   } else {
     const items1 = [];
     if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
-      arr = items1.push(obj.Disabled);
+      items1.push(obj.Disabled);
     }
     obj2 = FlagUtilsAll;
     arr = items1;
@@ -115,7 +116,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
   } else {
     const items1 = [];
     if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
-      arr = items1.push(obj.Disabled);
+      items1.push(obj.Disabled);
     }
     obj2 = FlagUtilsAll;
     arr = items1;

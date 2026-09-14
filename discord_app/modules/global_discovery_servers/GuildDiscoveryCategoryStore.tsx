@@ -1,6 +1,6 @@
-// === Module 16565: GuildDiscoveryCategoryStore ===
+// === Module 16567: GuildDiscoveryCategoryStore ===
 
-// Module 16565 (GuildDiscoveryCategoryStore)
+// Module 16567 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -79,11 +79,11 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDe
       if (id !== React3) {
         if (id !== React4) {
           if (true === tmp) {
-            obj = { categoryId: id, name };
-            items.push(obj);
+            const obj2 = { categoryId: id, name };
+            items.push(obj2);
           }
-          obj = { categoryId: id, name };
-          items1.push(obj);
+          const obj3 = { categoryId: id, name };
+          items1.push(obj3);
           closure_10[id] = name;
         } else {
           obj = { categoryId: id, name };

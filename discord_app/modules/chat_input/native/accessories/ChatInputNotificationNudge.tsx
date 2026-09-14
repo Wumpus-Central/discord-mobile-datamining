@@ -1,16 +1,16 @@
-// === Module 12537: ChatInputNotificationNudge ===
+// === Module 12538: ChatInputNotificationNudge ===
 
-// Module 12537 (ChatInputNotificationNudge)
+// Module 12538 (ChatInputNotificationNudge)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12274 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12540 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12541 */;
-import PostReactionPermissionNudgeExperimentDefault from "PostReactionPermissionNudgeExperiment" /* 12549 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12275 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12541 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
+const PostReactionPermissionNudgeExperimentDefault = tmp4(12550);
 require = fn;
 function ChatInputNotificationNudgeImpl(children) {
   ({ promptType: require, location: importDefault, surface } = children);
@@ -18,44 +18,37 @@ function ChatInputNotificationNudgeImpl(children) {
   const tmp = closure_19();
   const items = [surface];
   closure_5(() => {
-    const obj = { action: constants4.IMPRESSION, prompt_type: surface };
-    obj.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
+    AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.IMPRESSION, prompt_type: surface });
   }, items);
   let obj = { style: null, children: null };
   const items1 = [, ];
   ({ container: arr2[0], containerRefreshShadow: arr2[1] } = tmp);
   obj.style = items1;
-  obj = { style: tmp.iconContainer, children: null };
-  obj = { size: "sm", color: require("native").colors.ICON_STRONG };
-  obj.children = closure_17(require("BellSlashIcon").BellSlashIcon, obj);
-  const items2 = [closure_17(View, obj), , ];
-  const obj1 = { style: tmp.contentContainer, children: null };
+  const obj2 = { style: tmp.iconContainer, children: closure_17(require("BellSlashIcon").BellSlashIcon, { size: "sm", color: require("native").colors.ICON_STRONG }) };
+  const items2 = [closure_17(View, obj2), , ];
+  const obj4 = { style: tmp.contentContainer, children: null };
   const items3 = [closure_17(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-default", children: children.body }), ];
-  const obj2 = {
+  const obj5 = {
     hitSlop: 8,
     onPress() {
-      let obj = NotificationPermissionUtil;
-      const pushNotificationPermission = obj.requestPushNotificationPermission(constants3.ALLOW_TO_REQUEST, closure_1_1, closure_2_11);
-      obj = { action: constants4.ACCEPT, prompt_type: surface };
-      AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
+      const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(constants3.ALLOW_TO_REQUEST, closure_1_1, closure_2_11);
+      AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: surface });
     },
     style: tmp.ctaButton,
     accessibilityRole: "button",
     children: null
   };
-  const obj3 = { variant: "text-xs/medium", color: "text-brand", children: null };
+  const obj6 = { variant: "text-xs/medium", color: "text-brand", children: null };
   const intl = require("util").intl;
-  obj3.children = intl.string(require("util").t["+7MDbQ"]);
-  obj2.children = closure_17(require("Text/Text").Text, obj3);
-  items3[1] = closure_17(require("Pressables").PressableOpacity, obj2);
-  obj1.children = items3;
-  items2[1] = closure_18(View, obj1);
-  const obj4 = {
+  obj6.children = intl.string(require("util").t["+7MDbQ"]);
+  obj5.children = closure_17(require("Text/Text").Text, obj6);
+  items3[1] = closure_17(require("Pressables").PressableOpacity, obj5);
+  obj4.children = items3;
+  items2[1] = closure_18(View, obj4);
+  const obj7 = {
     onPress() {
-      let obj = PushNotificationActionCreators;
-      const result = obj.setPushPermissionReactivationSeen(closure_1_0);
-      obj = { action: constants4.DISMISS, prompt_type: surface, dismiss_logic: "relaxed" };
-      AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
+      const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(closure_1_0);
+      AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.DISMISS, prompt_type: surface, dismiss_logic: "relaxed" });
       onDismiss();
     },
     hitSlop: 8,
@@ -64,31 +57,30 @@ function ChatInputNotificationNudgeImpl(children) {
     children: null
   };
   const intl2 = require("util").intl;
-  obj4.accessibilityLabel = intl2.string(require("util").t.WAI6xu);
-  obj4.children = closure_17(require("XSmallIcon").XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = closure_17(require("Pressables").PressableHighlight, obj4);
+  obj7.accessibilityLabel = intl2.string(require("util").t.WAI6xu);
+  obj7.children = closure_17(require("XSmallIcon").XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = closure_17(require("Pressables").PressableHighlight, obj7);
   obj.children = items2;
   return closure_18(View, obj);
 }
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12538).PermissionPromptType;
+const PermissionPromptType = fn(12539).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12539);
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionLocation: map1, EventActionType: closure_14, NotificationNudgeAnalyticsAction: closure_15, NotificationNudgeSurface: closure_16 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4636);
 let closure_19 = createStyles.createStyles(() => {
-  let obj = { container: null, containerRefreshShadow: null, iconContainer: null, contentContainer: null, ctaButton: null };
-  obj = { display: "flex", flexDirection: "row", padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: 12 };
-  obj.container = obj;
-  obj = {};
+  const obj = { container: { display: "flex", flexDirection: "row", padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: 12 }, containerRefreshShadow: null, iconContainer: null, contentContainer: null, ctaButton: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
-  obj.containerRefreshShadow = obj;
+  obj.containerRefreshShadow = {};
+  const obj2 = { display: "flex", flexDirection: "row", padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: 12 };
+  const obj3 = {};
   obj.iconContainer = { backgroundColor: "transparent", borderRadius: nativeDefault.radii.round };
   obj.contentContainer = { flex: 1 };
   obj.ctaButton = { alignSelf: "flex-start" };
@@ -102,9 +94,8 @@ export default function ChatInputNotificationNudge(channel) {
   channel = channel.channel;
   importDefault = undefined;
   dependencyMap = undefined;
-  let obj = channel(504);
   const items = [JoinedThreadsStore, UserGuildSettingsStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channel(504).useStateFromStores(items, () => {
     const guildId = channel.getGuildId();
     if (channel.isThread()) {
       let isMutedResult = JoinedThreadsStore.isMuted(channel.id);
@@ -117,11 +108,12 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12540);
-  const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  tmpResult = tmp(12540);
-  const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
+  const obj = channel(504);
+  const shouldShowPushNotificationNudgeByPromptType = channel(12541).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
+  const tmpResult = channel(12541);
   const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
+  const shouldShowPushNotificationNudgeByPromptType1 = channel(12541).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
+  const tmpResult4 = channel(12541);
   let prop = null;
   if (tmp5) {
     prop = null;
@@ -129,11 +121,11 @@ export default function ChatInputNotificationNudge(channel) {
       prop = tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER;
     }
   }
-  obj = { cooldownDurationMs };
-  const tmpResult1 = channel(7491);
-  [tmp13, tmp14] = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const obj2 = { cooldownDurationMs };
+  const tmpResult5 = channel(7491);
+  [tmp13, tmp14] = channel(7491).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true);
   importDefault = tmp14;
-  const tmp12 = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmp12 = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -147,27 +139,27 @@ export default function ChatInputNotificationNudge(channel) {
       }
     }
   }
-  obj = { cooldownDurationMs };
-  const tmp11Result = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
+  const tmp11Result = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop1, { cooldownDurationMs }, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
-  const tmpResult2 = channel(7491);
+  const obj3 = { cooldownDurationMs };
+  const tmpResult6 = channel(7491);
   const tmp18 = closure_4(() => _undefined(ContentDismissActionType.USER_DISMISS), items1);
   if (tmp13 === channel(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
-    const obj1 = { promptType: PermissionPromptType.CHANNEL_BANNER, location: constants2.CHANNEL_BANNER, surface: constants5.CHANNEL_BANNER, body: null, onDismiss: null };
+    const obj4 = { promptType: PermissionPromptType.CHANNEL_BANNER, location: constants2.CHANNEL_BANNER, surface: constants5.CHANNEL_BANNER, body: null, onDismiss: null };
     const intl2 = tmp(1114).intl;
-    obj1.body = intl2.string(tmp(1114).t["/6SnPw"]);
-    obj1.onDismiss = tmp18;
-    let tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj1);
+    obj4.body = intl2.string(tmp(1114).t["/6SnPw"]);
+    obj4.onDismiss = tmp18;
+    let tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj4);
   } else {
     tmp24 = null;
     if (tmp11Result[0] === tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
-      const obj2 = { promptType: PermissionPromptType.POST_REACTION_BANNER, location: constants2.POST_REACTION, surface: constants5.POST_REACTION_BANNER, body: null, onDismiss: null };
+      const obj5 = { promptType: PermissionPromptType.POST_REACTION_BANNER, location: constants2.POST_REACTION, surface: constants5.POST_REACTION_BANNER, body: null, onDismiss: null };
       const intl = tmp(1114).intl;
-      obj2.body = intl.string(tmp(1114).t.VS6ey0);
-      obj2.onDismiss = tmp19;
-      tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj2);
+      obj5.body = intl.string(tmp(1114).t.VS6ey0);
+      obj5.onDismiss = tmp19;
+      tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj5);
     }
   }
   return tmp24;

@@ -1,6 +1,6 @@
-// === Module 13910: dispatchAutoDisableVideo ===
+// === Module 13911: dispatchAutoDisableVideo ===
 
-// Module 13910 (dispatchAutoDisableVideo)
+// Module 13911 (dispatchAutoDisableVideo)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 4661 */;
 import size from "module_2" /* 2 */;
@@ -12,7 +12,6 @@ export default function dispatchAutoDisableVideo(userId, videoToggleState) {
   importDefault = userId;
   dependencyMap = videoToggleState;
   DispatcherDefault.wait(() => {
-    const obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: MediaEngineContextTypes.DEFAULT, userId, videoToggleState, persist: false, isAutomatic: true };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: MediaEngineContextTypes.DEFAULT, userId, videoToggleState, persist: false, isAutomatic: true });
   });
 };

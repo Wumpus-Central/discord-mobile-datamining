@@ -1,7 +1,9 @@
-// === Module 16124: ? ===
+// === Module 16126: ? ===
 
-// Module 16124
+// Module 16126
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");
 for (const key10018 in require("MessagesTabLottie")) {

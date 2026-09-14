@@ -17,10 +17,9 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
     USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = PerceptualVolumeUtils;
-  const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = PerceptualVolumeUtils;
-  if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
+  const result = PerceptualVolumeUtils.amplitudeToPerceptual(USER);
+  const tmpResult = PerceptualVolumeUtils;
+  if (Math.abs(result - tmpResult2.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }
   return tmp3;

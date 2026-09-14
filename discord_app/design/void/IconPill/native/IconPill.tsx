@@ -1,6 +1,6 @@
-// === Module 14179: IconPill ===
+// === Module 14180: IconPill ===
 
-// Module 14179 (IconPill)
+// Module 14180 (IconPill)
 import nativeDefault from "native" /* 576 */;
 import IconDefault from "Icon" /* 5058 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8735 */;
@@ -9,14 +9,13 @@ import noop from "module_19" /* 19 */;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { pillContainer: null, pillIcon: null, pillText: null };
-createStyles = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 };
-createStyles.pillContainer = createStyles;
-createStyles.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
-let obj1 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
-createStyles.pillText = { fontFamily: fn(1085).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { pillContainer: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 }, pillIcon: null, pillText: null };
+let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 };
+obj2.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
+let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
+obj2.pillText = { fontFamily: fn(1085).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18 };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/IconPill/native/IconPill.tsx");
 
@@ -24,23 +23,23 @@ export default function IconPill(IconComponent) {
   IconComponent = IconComponent.IconComponent;
   ({ text, source, style, textStyle, accessibilityLabel } = IconComponent);
   const tmp = closure_5();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.pillContainer, style];
   obj.style = items;
   if (null != IconComponent) {
-    obj = { size: "xxs", style: tmp.pillIcon };
-    let tmp9 = React3(IconComponent, obj);
+    const obj2 = { size: "xxs", style: tmp.pillIcon };
+    let tmp9 = React3(IconComponent, obj2);
     let tmp8 = React3;
   } else {
-    obj = { source, size: IconDefault.Sizes.EXTRA_SMALL, style: tmp.pillIcon };
+    const obj3 = { source, size: IconDefault.Sizes.EXTRA_SMALL, style: tmp.pillIcon };
     tmp8 = React3;
-    tmp9 = React3(IconDefault, obj);
+    tmp9 = React3(IconDefault, obj3);
   }
   const items1 = [tmp9, ];
-  const obj1 = { style: null, numberOfLines: 1, accessibilityLabel, children: text };
+  const obj4 = { style: null, numberOfLines: 1, accessibilityLabel, children: text };
   const items2 = [tmp.pillText, textStyle];
-  obj1.style = items2;
-  items1[1] = tmp8(LegacyText_LegacyTextDefault, obj1);
+  obj4.style = items2;
+  items1[1] = tmp8(LegacyText_LegacyTextDefault, obj4);
   obj.children = items1;
   return React4(View, obj);
 };

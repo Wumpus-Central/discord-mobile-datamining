@@ -1,25 +1,27 @@
-// === Module 10827: NativeGiftContext ===
+// === Module 10828: NativeGiftContext ===
 
-// Module 10827 (NativeGiftContext)
+// Module 10828 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import BillingUtils from "BillingUtils" /* 4309 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import ContextUtilsDefault from "ContextUtils" /* 7531 */;
 import BadgeId from "BadgeId" /* 8301 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8314 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10791 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10872 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10792 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10873 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
-import PromotionsStore from "PromotionsStore" /* 10793 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10828 */;
+import PromotionsStore from "PromotionsStore" /* 10794 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10829 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -30,7 +32,7 @@ const PaymentGateways = fn(1085).PaymentGateways;
 const jsx = fn(21).jsx;
 let closure_17 = new LoggerDefault("NativeGiftContext");
 const tmp4 = new LoggerDefault("NativeGiftContext");
-[closure_18, tmp6, tmp7] = _slicedToArray(ContextUtilsDefault(), 3);
+[closure_18, tmp6, tmp7] = ContextUtilsDefault();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
 
@@ -78,7 +80,6 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   let callback1;
   let callback2;
   let callback3;
-  let obj = noop;
   ({ initialOrder, children } = basePurchaseAnalytics);
   if (premiumType == null) {
     premiumType = first4.TIER_2;
@@ -89,38 +90,38 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   if (planInterval == null) {
     planInterval = constants.YEAR;
   }
-  let tmp2Result = tmp2(obj.useState(planInterval), 2);
+  const tmp2Result = premiumType(noop.useState(planInterval), 2);
   first1 = tmp2Result[0];
   setPlanInterval = tmp9;
-  let obj1 = require("useGiftStyles");
-  tmp2Result = tmp2(obj.useState(obj1.useGiftStyles()[0]), 2);
-  first2 = tmp2Result[0];
-  closure_9 = tmp2Result[1];
+  const tmp2Result11 = premiumType(noop.useState(require("useGiftStyles").useGiftStyles()[0]), 2);
+  first2 = tmp2Result11[0];
+  closure_9 = tmp2Result11[1];
   let intl = require("util").intl;
-  const tmp2Result1 = premiumType(obj.useState(intl.string(require("util").t.ZkOo1U)), 2);
-  first3 = tmp2Result1[0];
-  setCustomGiftMessage = tmp2Result1[1];
-  const tmp2Result2 = premiumType(obj.useState(undefined), 2);
-  first4 = tmp2Result2[0];
-  constants = tmp2Result2[1];
-  const tmp2Result3 = premiumType(obj.useState(undefined), 2);
-  first5 = tmp2Result3[0];
-  setEmojiConfetti = tmp2Result3[1];
-  const tmp2Result4 = premiumType(obj.useState(undefined), 2);
-  first6 = tmp2Result4[0];
-  closure_17 = tmp2Result4[1];
-  const tmp2Result5 = premiumType(obj.useState(false), 2);
-  first7 = tmp2Result5[0];
-  closure_19 = tmp2Result5[1];
-  const tmp2Result6 = premiumType(obj.useState(null), 2);
-  first8 = tmp2Result6[0];
+  const tmp2Result12 = premiumType(noop.useState(intl.string(require("util").t.ZkOo1U)), 2);
+  first3 = tmp2Result12[0];
+  setCustomGiftMessage = tmp2Result12[1];
+  const tmp2Result13 = premiumType(noop.useState(undefined), 2);
+  first4 = tmp2Result13[0];
+  constants = tmp2Result13[1];
+  const tmp2Result14 = premiumType(noop.useState(undefined), 2);
+  first5 = tmp2Result14[0];
+  setEmojiConfetti = tmp2Result14[1];
+  const tmp2Result15 = premiumType(noop.useState(undefined), 2);
+  first6 = tmp2Result15[0];
+  closure_17 = tmp2Result15[1];
+  const tmp2Result16 = premiumType(noop.useState(false), 2);
+  first7 = tmp2Result16[0];
+  closure_19 = tmp2Result16[1];
+  const tmp2Result17 = premiumType(noop.useState(null), 2);
+  first8 = tmp2Result17[0];
   closure_21 = tmp26;
-  const tmp2Result7 = premiumType(obj.useState(), 2);
-  first9 = tmp2Result7[0];
+  const tmp2Result18 = premiumType(noop.useState(), 2);
+  first9 = tmp2Result18[0];
   setSelectedGiftingPromotionReward = tmp29;
-  const tmp2Result8 = premiumType(obj.useState(null), 2);
-  first10 = tmp2Result8[0];
-  closure_25 = tmp2Result8[1];
+  const tmp2Result19 = premiumType(noop.useState(null), 2);
+  first10 = tmp2Result19[0];
+  closure_25 = tmp2Result19[1];
+  let obj2 = require("useGiftStyles");
   orderContext = require("useOrderContext").useOrderContext(initialOrder, "NativeGiftContext");
   let obj3 = require("useOrderContext");
   planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, first1);
@@ -145,26 +146,26 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     const memo = obj.useMemo(() => {
       let tmp;
       if (payment_gateway === PaymentGateways.GOOGLE) {
-        let obj = { line_items: null };
-        obj = { external_product_id: productIdForGift };
-        const items = [obj];
+        const obj = { line_items: null };
+        const obj2 = { external_product_id: productIdForGift };
+        const items = [obj2];
         obj.line_items = items;
         tmp = obj;
       }
       return tmp;
     }, items);
-    let tmp10Result = tmp10(tmp11[21]);
-    handlePremiumPurchase = tmp10Result.useHandlePremiumPurchase();
-    tmp10Result = tmp10(tmp11[22]);
+    handlePremiumPurchase = tmp10(tmp11[21]).useHandlePremiumPurchase();
+    const tmp10Result = tmp10(tmp11[21]);
     const items1 = [setPlanInterval];
-    stateFromStoresArray = tmp10Result.useStateFromStoresArray(items1, () => setPlanInterval.getGiftPromotionRewardSkuIds());
+    stateFromStoresArray = tmp10(tmp11[22]).useStateFromStoresArray(items1, () => setPlanInterval.getGiftPromotionRewardSkuIds());
+    const tmp10Result4 = tmp10(tmp11[22]);
     fetchClaimableGiftingPromotionRewardSkuIds = tmp10(tmp11[23]).useFetchClaimableGiftingPromotionRewardSkuIds();
     let tmp41 = null != fetchClaimableGiftingPromotionRewardSkuIds;
     if (tmp41) {
       tmp41 = fetchClaimableGiftingPromotionRewardSkuIds.length > 0;
     }
     closure_34 = tmp41;
-    const tmp10Result1 = tmp10(tmp11[23]);
+    const tmp10Result5 = tmp10(tmp11[23]);
     enabled = recipientUserId(tmp11[24]).useConfig({ location: "NativeGiftContext" }).enabled;
     const items2 = [enabled];
     const effect = obj.useEffect(() => {
@@ -234,12 +235,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     const items5 = [first8];
     const effect1 = obj.useEffect(() => {
       if (null != first8) {
-        const obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.R0RpRX);
+        obj2.title = intl.string(util.t.R0RpRX);
         const intl2 = util.intl;
-        obj.body = intl2.string(util.t.CKsXk3);
-        obj.show(obj);
+        obj2.body = intl2.string(util.t.CKsXk3);
+        actions_AlertActionCreatorsDefault.show(obj2);
         closure_21(null);
       }
     }, items5);
@@ -247,13 +248,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     const effect2 = obj.useEffect(() => {
       if (closure_34) {
         const currentUser = UserStore.getCurrentUser();
-        let obj = AnalyticsUtilsDefault;
         let id;
         if (currentUser != null) {
           id = currentUser.id;
         }
-        obj = { user_id: id, reward_sku_id: first9 };
-        obj.track(AnalyticEvents.GIFT_PROMOTION_REWARD_SELECTED, obj);
+        const obj2 = { user_id: id, reward_sku_id: first9 };
+        AnalyticsUtilsDefault.track(AnalyticEvents.GIFT_PROMOTION_REWARD_SELECTED, obj2);
       }
     }, items6);
     ({ order, revision, setRevision, setOrder } = orderContext);
@@ -270,14 +270,14 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    obj = { orderId: "a", planId: "c\u0103ldur\u0103", planSelection: "cu limba scoas\u0103", giftInfo: "fa\u021B\u0103" };
-    obj = { premiumType, planInterval: first1 };
-    obj.planSelection = obj;
-    closure_130_13 = obj.useRef(obj);
+    let obj6 = { orderId: "a", planId: "center", planSelection: "hidden", giftInfo: null };
+    let obj7 = { premiumType, planInterval: first1 };
+    obj6.planSelection = obj7;
+    closure_130_13 = obj.useRef(obj6);
     closure_130_14 = obj.useRef(false);
-    const tmp2Result9 = tmp2(obj.useState(0), 2);
-    closure_130_15 = tmp2Result9[1];
-    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder, tmp26, tmp2Result9[0]];
+    const tmp2Result20 = tmp2(obj.useState(0), 2);
+    closure_130_15 = tmp2Result20[1];
+    const items7 = [order, revision, planIdForPremiumType, memo, memo1, first7, premiumType, first1, tmp5, tmp9, setRevision, setOrder, tmp26, tmp2Result20[0]];
     const effect3 = obj.useEffect(() => {
       let id;
       if (id != null) {
@@ -349,8 +349,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -363,8 +363,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             throw value;
                           } else if (arg0 === 2) {
                             c5 = 3;
-                            obj = { value, done: true };
-                            return obj;
+                            const obj3 = { value, done: true };
+                            return obj3;
                           } else {
                             closure_1 = tmp3;
                             closure_0 = tmp7;
@@ -372,36 +372,33 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             if (closure_3) {
                               let v0 = 1;
                               if (null != c5) {
-                                let obj11 = id(id1[14]);
-                                const obj1 = { orderId: id, expectedRevision, orderLineItems: null, externalGatewayFacet: null };
-                                const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
+                                const obj4 = { orderId: id, expectedRevision, orderLineItems: null, externalGatewayFacet: null };
+                                const obj6 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
                                 ({ sku_id: obj14.sku_id, quantity: obj14.quantity, purchase_type: obj14.purchase_type } = first);
-                                obj2.subscription_plan_id = planId;
-                                const items = [obj2];
-                                obj1.orderLineItems = items;
-                                obj1.externalGatewayFacet = tmp55;
+                                obj6.subscription_plan_id = planId;
+                                const items = [obj6];
+                                obj4.orderLineItems = items;
+                                obj4.externalGatewayFacet = tmp55;
                                 planId = 2;
                                 c5 = 1;
-                                const obj3 = { value: obj11.patchOrder(obj1), done: false };
-                                return obj3;
+                                const obj7 = { value: id(id1[14]).patchOrder(obj4), done: false };
+                                return obj7;
                               } else {
-                                let obj8 = id(id1[14]);
-                                let obj4 = { orderId: id, orderLineItemId: id1, subscriptionPlanId: planId, expectedRevision };
+                                const obj8 = { orderId: id, orderLineItemId: id1, subscriptionPlanId: planId, expectedRevision };
                                 planId = 3;
                                 c5 = 1;
-                                const obj5 = { value: obj8.patchOrderLineItem(obj4), done: false };
-                                return obj5;
+                                const obj10 = { value: id(id1[14]).patchOrderLineItem(obj8), done: false };
+                                return obj10;
                               }
                             } else if (closure_129_4) {
-                              obj4 = id(id1[14]);
-                              const obj6 = { orderId: closure_129_0, giftInfo: null, expectedRevision: null };
-                              const obj7 = { recipient_id: giftInfo.recipient_id, gift_style: giftInfo.gift_style, emoji_id: giftInfo.emoji_id, emoji_name: giftInfo.emoji_name, sound_id: giftInfo.sound_id, reward_sku_ids: giftInfo.reward_sku_ids, custom_message_contents: giftInfo.custom_message };
-                              obj6.giftInfo = obj7;
-                              obj6.expectedRevision = revision;
+                              const obj11 = { orderId: closure_129_0, giftInfo: null, expectedRevision: null };
+                              const obj13 = { recipient_id: giftInfo.recipient_id, gift_style: giftInfo.gift_style, emoji_id: giftInfo.emoji_id, emoji_name: giftInfo.emoji_name, sound_id: giftInfo.sound_id, reward_sku_ids: giftInfo.reward_sku_ids, custom_message_contents: giftInfo.custom_message };
+                              obj11.giftInfo = obj13;
+                              obj11.expectedRevision = revision;
                               planId = 4;
                               c5 = 1;
-                              obj8 = { value: obj4.updateOrder(obj6), done: false };
-                              return obj8;
+                              const obj15 = { value: id(id1[14]).updateOrder(obj11), done: false };
+                              return obj15;
                             } else {
                               c5 = 3;
                             }
@@ -422,8 +419,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             } else if (arg0 === 2) {
                               v0 = 0;
                               c5 = 3;
-                              const obj9 = { value, done: true };
-                              return obj9;
+                              const obj16 = { value, done: true };
+                              return obj16;
                             } else {
                               closure_128_0 = value;
                               if (ref.current.orderId !== closure_129_6) {
@@ -442,8 +439,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             } else if (arg0 === 2) {
                               v0 = 0;
                               c5 = 3;
-                              const obj10 = { value, done: true };
-                              return obj10;
+                              const obj17 = { value, done: true };
+                              return obj17;
                             } else {
                               revision = value;
                               if (ref.current.orderId !== closure_129_6) {
@@ -457,7 +454,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             throw value;
                           } else if (arg0 === 2) {
                             c5 = 3;
-                            obj = { value, done: true };
+                            const obj = { value, done: true };
                             return obj;
                           } else {
                             revision = value;
@@ -467,8 +464,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             }
                           }
                           ref.current.planId = planId;
-                          obj11 = { premiumType, planInterval };
-                          ref.current.planSelection = obj11;
+                          const obj30 = { premiumType, planInterval };
+                          ref.current.planSelection = obj30;
                           tmp68(revision);
                           v0 = 0;
                         }
@@ -493,8 +490,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -507,8 +504,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             throw value;
                           } else if (arg0 === 2) {
                             c5 = 3;
-                            obj = { value, done: true };
-                            return obj;
+                            const obj3 = { value, done: true };
+                            return obj3;
                           } else {
                             closure_1 = tmp3;
                             closure_0 = tmp7;
@@ -516,36 +513,33 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             if (closure_3) {
                               let v0 = 1;
                               if (null != c5) {
-                                let obj11 = id(id1[14]);
-                                const obj1 = { orderId: id, expectedRevision, orderLineItems: null, externalGatewayFacet: null };
-                                const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
+                                const obj4 = { orderId: id, expectedRevision, orderLineItems: null, externalGatewayFacet: null };
+                                const obj6 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
                                 ({ sku_id: obj14.sku_id, quantity: obj14.quantity, purchase_type: obj14.purchase_type } = first);
-                                obj2.subscription_plan_id = planId;
-                                const items = [obj2];
-                                obj1.orderLineItems = items;
-                                obj1.externalGatewayFacet = tmp55;
+                                obj6.subscription_plan_id = planId;
+                                const items = [obj6];
+                                obj4.orderLineItems = items;
+                                obj4.externalGatewayFacet = tmp55;
                                 planId = 2;
                                 c5 = 1;
-                                const obj3 = { value: obj11.patchOrder(obj1), done: false };
-                                return obj3;
+                                const obj7 = { value: id(id1[14]).patchOrder(obj4), done: false };
+                                return obj7;
                               } else {
-                                let obj8 = id(id1[14]);
-                                let obj4 = { orderId: id, orderLineItemId: id1, subscriptionPlanId: planId, expectedRevision };
+                                const obj8 = { orderId: id, orderLineItemId: id1, subscriptionPlanId: planId, expectedRevision };
                                 planId = 3;
                                 c5 = 1;
-                                const obj5 = { value: obj8.patchOrderLineItem(obj4), done: false };
-                                return obj5;
+                                const obj10 = { value: id(id1[14]).patchOrderLineItem(obj8), done: false };
+                                return obj10;
                               }
                             } else if (closure_129_4) {
-                              obj4 = id(id1[14]);
-                              const obj6 = { orderId: closure_129_0, giftInfo: null, expectedRevision: null };
-                              const obj7 = { recipient_id: giftInfo.recipient_id, gift_style: giftInfo.gift_style, emoji_id: giftInfo.emoji_id, emoji_name: giftInfo.emoji_name, sound_id: giftInfo.sound_id, reward_sku_ids: giftInfo.reward_sku_ids, custom_message_contents: giftInfo.custom_message };
-                              obj6.giftInfo = obj7;
-                              obj6.expectedRevision = revision;
+                              const obj11 = { orderId: closure_129_0, giftInfo: null, expectedRevision: null };
+                              const obj13 = { recipient_id: giftInfo.recipient_id, gift_style: giftInfo.gift_style, emoji_id: giftInfo.emoji_id, emoji_name: giftInfo.emoji_name, sound_id: giftInfo.sound_id, reward_sku_ids: giftInfo.reward_sku_ids, custom_message_contents: giftInfo.custom_message };
+                              obj11.giftInfo = obj13;
+                              obj11.expectedRevision = revision;
                               planId = 4;
                               c5 = 1;
-                              obj8 = { value: obj4.updateOrder(obj6), done: false };
-                              return obj8;
+                              const obj15 = { value: id(id1[14]).updateOrder(obj11), done: false };
+                              return obj15;
                             } else {
                               c5 = 3;
                             }
@@ -566,8 +560,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             } else if (arg0 === 2) {
                               v0 = 0;
                               c5 = 3;
-                              const obj9 = { value, done: true };
-                              return obj9;
+                              const obj16 = { value, done: true };
+                              return obj16;
                             } else {
                               closure_128_0 = value;
                               if (ref.current.orderId !== closure_129_6) {
@@ -586,8 +580,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             } else if (arg0 === 2) {
                               v0 = 0;
                               c5 = 3;
-                              const obj10 = { value, done: true };
-                              return obj10;
+                              const obj17 = { value, done: true };
+                              return obj17;
                             } else {
                               revision = value;
                               if (ref.current.orderId !== closure_129_6) {
@@ -601,7 +595,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             throw value;
                           } else if (arg0 === 2) {
                             c5 = 3;
-                            obj = { value, done: true };
+                            const obj = { value, done: true };
                             return obj;
                           } else {
                             revision = value;
@@ -611,8 +605,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             }
                           }
                           ref.current.planId = planId;
-                          obj11 = { premiumType, planInterval };
-                          ref.current.planSelection = obj11;
+                          const obj30 = { premiumType, planInterval };
+                          ref.current.planSelection = obj30;
                           tmp68(revision);
                           v0 = 0;
                         }
@@ -628,15 +622,14 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       }
                     }
                   })().catch((error) => {
-                    let obj = { tags: { source: "NativeGiftContext_syncOrder" }, extra: null };
-                    obj = { orderId: id, planId, needsPlanSync, needsGiftSync };
-                    obj.extra = obj;
-                    const result = obj.captureBillingException(error, obj);
+                    const obj2 = { tags: { source: "NativeGiftContext_syncOrder" }, extra: { orderId: id, planId, needsPlanSync, needsGiftSync } };
+                    const result = BillingUtils.captureBillingException(error, obj2);
                     logger.error("Failed to sync order", { error, orderId: id });
                     if (!c5) {
                       first4(error);
                     }
-                    const obj1 = { error, orderId: id };
+                    const obj3 = { orderId: id, planId, needsPlanSync, needsGiftSync };
+                    const obj4 = { error, orderId: id };
                   }).finally(() => {
                     first5.current = false;
                     if (ref.current.orderId !== id2) {
@@ -689,8 +682,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -703,8 +696,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_2 = tmp3;
               closure_1 = tmp7;
@@ -713,12 +706,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
               if (!obj12.isAndroid()) {
                 if (null != orderContext.orderId) {
                   c4 = 1;
-                  let obj1 = { orderId: orderContext.orderId, skuId };
-                  logger.info("Starting order signing with pre-created order", obj1);
+                  const obj5 = { orderId: orderContext.orderId, skuId };
+                  logger.info("Starting order signing with pre-created order", obj5);
                   c5 = 2;
                   c6 = 1;
-                  const obj2 = { value: closure_0(onClose[14]).markOrderAsSigningInProgress(orderContext.orderId), done: false };
-                  return obj2;
+                  const obj6 = { value: closure_0(onClose[14]).markOrderAsSigningInProgress(orderContext.orderId), done: false };
+                  return obj6;
                 }
               }
               obj12 = closure_0(onClose[32]);
@@ -727,13 +720,13 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             if (1 === tmp7) {
               c4 = 0;
               closure_129_0 = closure_3;
-              obj1 = closure_0(onClose[15]);
-              const obj3 = { tags: { source: "NativeGiftContext_handlePurchaseComplete_sign" }, extra: null };
-              const obj4 = { skuId, orderId: orderContext.orderId };
-              obj3.extra = obj4;
-              const result = obj1.captureBillingException(closure_129_0, obj3);
-              const obj5 = { error: closure_129_0, skuId, orderId: orderContext.orderId };
-              logger.error("Failed to sign order in purchase completion", obj5);
+              const obj8 = { tags: { source: "NativeGiftContext_handlePurchaseComplete_sign" }, extra: null };
+              const obj9 = { skuId, orderId: orderContext.orderId };
+              obj8.extra = obj9;
+              const result = closure_0(onClose[15]).captureBillingException(closure_129_0, obj8);
+              const obj10 = { error: closure_129_0, skuId, orderId: orderContext.orderId };
+              logger.error("Failed to sign order in purchase completion", obj10);
+              const obj2 = closure_0(onClose[15]);
             } else if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -742,7 +735,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             }
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c6 = 3;
@@ -776,9 +769,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     }, items10);
     const items11 = [callback, setCurrentAnalyticsStep, memo1, handlePremiumPurchase, productIdForGift, basePurchaseAnalytics, callback1, callback2, orderContext.orderId, first3];
     callback3 = obj.useCallback((arg0) => {
-      let obj = first1;
       if (null != first1.getNextTier(closure_0(onClose[26]).BadgeId.GIFTING)) {
-        const singleRequirementProgress = obj.getSingleRequirementProgress(tmp(onClose[26]).BadgeId.GIFTING);
+        const singleRequirementProgress = first1.getSingleRequirementProgress(tmp(onClose[26]).BadgeId.GIFTING);
         let current;
         if (singleRequirementProgress != null) {
           current = singleRequirementProgress.current;
@@ -805,12 +797,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         const obj3 = recipientUserId(onClose[31]);
       }
       setCurrentAnalyticsStep(closure_0(onClose[33]).PaymentFlowStep.REVIEW);
-      obj = { productId: productIdForGift, isGift: true, analyticsLoadId: closure_0.load_id, analyticsLocation: closure_0.location, analyticsLocations: closure_0.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
+      const obj2 = { productId: productIdForGift, isGift: true, analyticsLoadId: closure_0.load_id, analyticsLocation: closure_0.location, analyticsLocations: closure_0.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
       closure_0 = setCurrentAnalyticsStep(function*() {
         yield closure_1_39(closure_1);
         return value;
       });
-      obj.onPurchaseComplete = function() {
+      obj2.onPurchaseComplete = function() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -820,21 +812,21 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         }
         return applyArgumentsResult;
       };
-      obj.onPurchaseError = function onPurchaseError() {
+      obj2.onPurchaseError = function onPurchaseError() {
         return callback2(closure_1);
       };
-      obj.orderId = orderContext.orderId;
-      obj = { load_id: closure_0.load_id, succeededOnlyFields: null };
-      const obj1 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
+      obj2.orderId = orderContext.orderId;
+      const obj4 = { load_id: closure_0.load_id, succeededOnlyFields: null };
+      const obj5 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
       const intl = tmp(onClose[17]).intl;
-      obj1.is_custom_message_edited = first3 !== intl.string(closure_0(onClose[17]).t.ZkOo1U);
-      obj.succeededOnlyFields = obj1;
-      obj.analyticsData = obj;
-      handlePremiumPurchase(obj);
+      obj5.is_custom_message_edited = first3 !== intl.string(closure_0(onClose[17]).t.ZkOo1U);
+      obj4.succeededOnlyFields = obj5;
+      obj2.analyticsData = obj4;
+      handlePremiumPurchase(obj2);
       tmpResult = closure_0(onClose[32]);
     }, items11);
     const items12 = [orderContext, recipientUserId, stateFromStores, first2, premiumType, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback3, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
-    obj1 = {
+    let obj8 = {
       value: obj.useMemo(() => {
           const obj = {};
           const merged = Object.assign(orderContext);
@@ -868,7 +860,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         }, items12),
       children
     };
-    return first6(first7.Provider, obj1);
+    return first6(first7.Provider, obj8);
   }
   let obj5 = require("ProductIds");
 };

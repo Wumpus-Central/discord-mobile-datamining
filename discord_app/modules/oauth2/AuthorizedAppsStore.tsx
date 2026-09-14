@@ -29,7 +29,7 @@ function updateFetchStates(FETCHED, applicationIds) {
     closure_12 = closure_12 + 1;
   }
 }
-let FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
+const FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let map = new Map();
 let closure_8 = [];
 let closure_9 = [];
@@ -79,7 +79,7 @@ prototype["getApplicationFetchStateVersion"] = function getApplicationFetchState
   return closure_12;
 };
 AuthorizedAppsStore.displayName = "AuthorizedAppsStore";
-FetchState = {
+const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, {
   USER_AUTHORIZED_APPS_REQUEST: function handleUserAuthorizedAppsRequest(request) {
     if ("full" === request.request.type) {
       updateFetchStates(obj.FETCHING);
@@ -163,8 +163,7 @@ FetchState = {
     map1.clear();
     closure_12 = closure_12 + 1;
   }
-};
-const authorizedAppsStore = new AuthorizedAppsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/oauth2/AuthorizedAppsStore.tsx");
 

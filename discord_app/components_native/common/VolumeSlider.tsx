@@ -3,7 +3,7 @@
 // Module 10115 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import useToken from "useToken" /* 4338 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5096 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
@@ -16,14 +16,13 @@ const View = fn(17).View;
 let closure_4 = fn(4661).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
 const createStyles = fn(4636);
-PlatformUtils = { volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } };
-let closure_7 = createStyles.createStyles(PlatformUtils);
+let closure_7 = createStyles.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
 
@@ -39,41 +38,41 @@ export default function VolumeSlider(maxTrackTintColor) {
   ({ onValueChange: require, onResponderGrant, accessibilityLabel } = maxTrackTintColor);
   const merged = Object.assign(maxTrackTintColor, Object.assign({ style: 0, maxTrackTintColor: 0, value: 0, maxVolume: 0, onValueChange: 0, onResponderGrant: 0, accessibilityLabel: 0 }));
   const tmp4 = closure_7();
-  let obj = useToken;
   let minTrackColor = merged.minTrackColor;
   if (minTrackColor == null) {
     minTrackColor = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp4.volumerSlider, maxTrackTintColor.style];
-  obj.style = items;
-  obj = { style: tmp4.leftIcon };
-  const items1 = [closure_5(VoiceXIcon.VoiceXIcon, obj), , ];
-  const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = PerceptualVolumeUtils;
-  obj1.value = tmp5Result.amplitudeToPerceptual(value);
-  obj1.maximumValue = maxVolume;
-  obj1.minimumTrackTintColor = minTrackColor;
-  obj1.maximumTrackTintColor = PRIMARY_400;
+  obj2.style = items;
+  const items1 = [closure_5(VoiceXIcon.VoiceXIcon, { style: tmp4.leftIcon }), , ];
+  const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
+  obj = useToken;
+  const obj3 = { style: tmp4.leftIcon };
+  const tmp7Result = _modDef8396;
+  obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
+  obj4.maximumValue = maxVolume;
+  obj4.minimumTrackTintColor = minTrackColor;
+  obj4.maximumTrackTintColor = PRIMARY_400;
   if (accessibilityLabel == null) {
     const intl = util.intl;
     accessibilityLabel = intl.string(util.t.xPHVBs);
   }
-  obj1.accessibilityLabel = accessibilityLabel;
-  obj1.onValueChange = function onValueChange(arg0) {
+  obj4.accessibilityLabel = accessibilityLabel;
+  obj4.onValueChange = function onValueChange(arg0) {
     return closure_1_0(PerceptualVolumeUtils.perceptualToAmplitude(arg0));
   };
   if (onResponderGrant == null) {
-    tmp5Result = PlatformUtils2;
     let fn;
-    if (tmp5Result.isAndroid()) {
+    if (tmp5Result2.isAndroid()) {
       fn = () => true;
     }
     onResponderGrant = fn;
+    tmp5Result2 = PlatformUtils2;
   }
-  obj1.onResponderGrant = onResponderGrant;
-  items1[1] = closure_5(_modDef8396, obj1);
+  obj4.onResponderGrant = onResponderGrant;
+  items1[1] = closure_5(tmp7Result, obj4);
   items1[2] = closure_5(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
-  obj.children = items1;
-  return closure_6(View, obj);
+  obj2.children = items1;
+  return closure_6(View, obj2);
 };

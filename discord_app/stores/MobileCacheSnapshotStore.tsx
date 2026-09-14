@@ -23,15 +23,15 @@ class MobileCacheSnapshotStore extends Store {
       closure_0.save();
       return false;
     };
-    tmp2 = new tmp2(tmp3, obj, fn, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
-    closure_0 = tmp2;
+    tmp21 = new tmp2(tmp3, obj, fn, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
+    closure_0 = tmp21;
     tmp5 = closure_1(closure_2[2]);
-    tmp5Result = tmp5(null != tmp2.getClass().displayName, "Snapshot stores need a display name");
+    tmp5Result = tmp5(null != tmp21.getClass().displayName, "Snapshot stores need a display name");
     tmp7 = closure_1(closure_2[2])(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
     tmp8 = closure_1(closure_2[2])(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
     allStores = MobileCacheSnapshotStore.allStores;
-    arr = allStores.push(tmp2);
-    return tmp2;
+    arr1 = allStores.push(tmp21);
+    return tmp21;
   }
 }
 const prototype = MobileCacheSnapshotStore.prototype;

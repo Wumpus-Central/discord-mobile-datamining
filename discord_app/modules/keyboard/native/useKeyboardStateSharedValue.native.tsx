@@ -1,32 +1,32 @@
-// === Module 12161: useKeyboardStateSharedValue ===
+// === Module 12162: useKeyboardStateSharedValue ===
 
-// Module 12161 (useKeyboardStateSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
+// Module 12162 (useKeyboardStateSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
-fn(4373);
-let ReanimatedRexport = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
+const ReanimatedRexport = fn(4373);
+const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
 const useCustomKeyboardHeight = fn(5660);
-ReanimatedRexport.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
+obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
 const useSystemKeyboardHeight = fn(1877);
-ReanimatedRexport.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
+obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
 const useKeyboardType = fn(4504);
-ReanimatedRexport.keyboardType = useKeyboardType.getKeyboardType();
-ReanimatedRexport = ReanimatedRexport.makeMutable(ReanimatedRexport);
+obj2.keyboardType = useKeyboardType.getKeyboardType();
+const mutable = ReanimatedRexport.makeMutable(obj2);
 subscribeToKeyboardUIStore((arg0) => {
   ({ customKeyboardHeight, keyboardHeight, keyboardType } = arg0);
-  updateSharedValueIfChangedDefault(ReanimatedRexport, { customKeyboardHeight, keyboardHeight, keyboardType });
+  updateSharedValueIfChangedDefault(mutable, { customKeyboardHeight, keyboardHeight, keyboardType });
 });
 function getKeyboardStateWorklet() {
-  return ReanimatedRexport.get();
+  return mutable.get();
 }
-getKeyboardStateWorklet.__closure = { keyboardStateSharedValue: ReanimatedRexport };
+getKeyboardStateWorklet.__closure = { keyboardStateSharedValue: mutable };
 getKeyboardStateWorklet.__workletHash = 1081829024717;
 getKeyboardStateWorklet.__initData = { code: "function getKeyboardStateWorklet_useKeyboardStateSharedValueNativeTsx1(){const{keyboardStateSharedValue}=this.__closure;return keyboardStateSharedValue.get();}" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardStateSharedValue.native.tsx");
 
 export default function useKeyboardStateSharedValue() {
-  return ReanimatedRexport;
+  return mutable;
 };
 export { getKeyboardStateWorklet };

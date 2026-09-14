@@ -8,12 +8,13 @@ import QuestTypes from "QuestTypes" /* 5528 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
 import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5534 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils_mod from "HTTPUtils" /* 1270 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
 const items = [QuestVariants.QuestVariants.NITRO_2_POINT_0_CTA, QuestVariants.QuestVariants.ORBS_MULTIPLIER_QUEST, QuestVariants.QuestVariants.XBOX_GAME_PASS_QUEST];
 const result = DurationsDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
+let HTTPUtils = HTTPUtils_mod;
 HTTPUtils = HTTPUtils.getAPIBaseURL();
 if (-1 !== HTTPUtils.indexOf("localhost")) {
   const _HermesInternal = HermesInternal;
@@ -32,9 +33,9 @@ const items4 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESK
 const set3 = new Set(items3);
 const items5 = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set4 = new Set(items4);
-let obj = { VIDEO: "task_video", PLAY: "task_play" };
-obj = { VIRTUAL_CURRENCY: "reward_virtual_currency", COLLECTIBLE: "reward_collectible", IN_GAME: "reward_in_game" };
-const items6 = [{ group: "task", filter: obj.PLAY }, { group: "task", filter: obj.VIDEO }, { group: "reward", filter: obj.VIRTUAL_CURRENCY }, { group: "reward", filter: obj.COLLECTIBLE }, { group: "reward", filter: obj.IN_GAME }];
+const TaskFilterTypes = { VIDEO: "task_video", PLAY: "task_play" };
+let obj2 = { VIRTUAL_CURRENCY: "reward_virtual_currency", COLLECTIBLE: "reward_collectible", IN_GAME: "reward_in_game" };
+const items6 = [{ group: "task", filter: TaskFilterTypes.PLAY }, { group: "task", filter: TaskFilterTypes.VIDEO }, { group: "reward", filter: obj2.VIRTUAL_CURRENCY }, { group: "reward", filter: obj2.COLLECTIBLE }, { group: "reward", filter: obj2.IN_GAME }];
 let closure_2 = ["reward", "task"];
 const entries = Object.entries(apply.groupBy(items6, "group"));
 const sorted = entries.sort((arg0, arg1) => {
@@ -93,20 +94,20 @@ export const CHANNEL_HEADER_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = set4;
 export const MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES = new Set(items5);
 export const EMPTY_AD_DECISION_DATA = { is_targeted: false };
 export const QuestHomeSortMethods = { SUGGESTED: "suggested", MOST_RECENT: "most_recent", EXPIRING_SOON: "expiring_soon", RECENTLY_ENROLLED: "recently_enrolled" };
-export const TaskFilterTypes = obj;
-export const RewardFilterTypes = obj;
+export { TaskFilterTypes };
+export const RewardFilterTypes = obj2;
 export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionItem(filter) {
-  let values = Object.values(obj);
+  const values = Object.values(obj);
   if (values.includes(filter)) {
     obj = { group: "task", filter };
     let tmp2 = obj;
   } else {
     const _Object = Object;
-    values = Object.values(obj);
+    const values2 = Object.values(obj2);
     tmp2 = null;
-    if (values.includes(filter)) {
-      obj = { group: "reward", filter };
-      tmp2 = obj;
+    if (values2.includes(filter)) {
+      obj2 = { group: "reward", filter };
+      tmp2 = obj2;
     }
   }
   return tmp2;

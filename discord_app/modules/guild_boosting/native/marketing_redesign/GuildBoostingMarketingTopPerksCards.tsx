@@ -1,31 +1,31 @@
-// === Module 13689: GuildBoostingMarketingTopPerksCards ===
+// === Module 13690: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13689 (GuildBoostingMarketingTopPerksCards)
+// Module 13690 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5610 */;
-import _modDef13690 from "module_13690" /* 13690 */;
-import _mod13691 from "module_13691" /* 13691 */;
-import _modDef13692 from "module_13692" /* 13692 */;
+import _modDef13691 from "module_13691" /* 13691 */;
+import _mod13692 from "module_13692" /* 13692 */;
+import _modDef13693 from "module_13693" /* 13693 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: null, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
-createStyles = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 };
-createStyles.card = createStyles;
+const createStyles = fn(4636);
+let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
-createStyles.cardGraphic = size;
-createStyles.cardLast = { marginRight: 0 };
-createStyles.cardHeading = { marginBottom: 4, textAlign: "center" };
-createStyles.cardBody = { textAlign: "center" };
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.cardGraphic = size;
+obj2.cardLast = { marginRight: 0 };
+obj2.cardHeading = { marginBottom: 4, textAlign: "center" };
+obj2.cardBody = { textAlign: "center" };
+let closure_8 = createStyles.createStyles(obj2);
 let items = [
   {
     getHeadingCopy() {
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13690 });
+      return timestampProducer(React3, { style, source: _modDef13691 });
     }
   },
   {
@@ -50,7 +50,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13691, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13692, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     }
   },
@@ -64,7 +64,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13692 });
+      return timestampProducer(React3, { style, source: _modDef13693 });
     }
   }
 ];
@@ -75,11 +75,11 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const tmp = closure_8();
   _require = tmp;
   let obj = { style: tmp.wrapper, children: null };
-  obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj2 = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require("util").intl;
-  obj.children = intl.string(require("util").t.aGdB3E);
-  items = [closure_6(require("Text/Text").Heading, obj), ];
-  obj = {
+  obj2.children = intl.string(require("util").t.aGdB3E);
+  items = [closure_6(require("Text/Text").Heading, obj2), ];
+  items[1] = closure_6(require("MarketingCardsScroller").MarketingCardsScroller, {
     itemCount: items.length,
     cardWidth: 324,
     cardMarginRight: 16,
@@ -90,18 +90,15 @@ export default function GuildBoostingMarketingTopPerksCards() {
       if (cardLast) {
         cardLast = card.cardLast;
       }
-      let obj = { style: items, children: null };
+      const obj = { style: items, children: null };
       items[1] = cardLast;
-      const items1 = [getGraphic.getGraphic(card.cardGraphic), , ];
-      obj = { style: card.cardHeading, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() };
-      items1[1] = timestampProducer(Text_Text.Heading, obj);
-      obj = { style: card.cardBody, variant: "text-sm/normal", color: "text-default", children: getGraphic.getBodyCopy() };
-      items1[2] = timestampProducer(Text_Text.Text, obj);
+      const items1 = [getGraphic.getGraphic(card.cardGraphic), timestampProducer(Text_Text.Heading, { style: card.cardHeading, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() }), ];
+      const obj2 = { style: card.cardHeading, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() };
+      items1[2] = timestampProducer(Text_Text.Text, { style: card.cardBody, variant: "text-sm/normal", color: "text-default", children: getGraphic.getBodyCopy() });
       obj.children = items1;
       return React5(React4, obj, index);
     })
-  };
-  items[1] = closure_6(require("MarketingCardsScroller").MarketingCardsScroller, obj);
+  });
   obj.children = items;
   return closure_7(closure_4, obj);
 };

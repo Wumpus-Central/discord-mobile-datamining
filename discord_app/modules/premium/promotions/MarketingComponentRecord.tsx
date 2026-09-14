@@ -1,10 +1,10 @@
-// === Module 10795: MarketingComponentRecord ===
+// === Module 10796: MarketingComponentRecord ===
 
-// Module 10795 (MarketingComponentRecord)
+// Module 10796 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1090 */;
-import ProtoUtils from "ProtoUtils" /* 1224 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10796 */;
+import ProtoUtils from "ProtoUtils" /* 1222 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10797 */;
 import Record from "Record" /* 1386 */;
 
 require = fn;

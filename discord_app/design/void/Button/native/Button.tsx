@@ -1,28 +1,21 @@
-// === Module 1181: Button/Button ===
+// === Module 1179: Button/Button ===
 
-// Module 1181 (Button/Button)
+// Module 1179 (Button/Button)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import shared from "shared" /* 4488 */;
 import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8735 */;
-import StylesheetUtils from "StylesheetUtils" /* 12789 */;
+import StylesheetUtils from "StylesheetUtils" /* 12790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function getTextStyles(disabled, styles) {
+function getTextStyles(disabled, text) {
   let flag = disabled.disabled;
   ({ color, look, size } = disabled);
   if (flag === undefined) {
     flag = false;
   }
-  const items = [styles.text, , , , ];
-  let obj = { [closure_1_13.BRAND]: styles.textBrand, [closure_1_13.RED]: styles.textRed, [closure_1_13.GREEN]: styles.textGreen, [closure_1_13.PRIMARY]: styles.textPrimary, [closure_1_13.TRANSPARENT]: styles.textTransparent, [closure_1_13.GREY]: styles.textGrey, [closure_1_13.LIGHTGREY]: styles.textLightgrey, [closure_1_13.WHITE]: styles.textWhite, [closure_1_13.LINK]: styles.textLink };
-  items[1] = obj[color];
-  obj = { [closure_1_12.FILLED]: styles.textFilled, [closure_1_12.LINK]: styles.textLink, [closure_1_12.OUTLINED]: styles.textOutlined };
-  items[2] = obj[look];
-  items[3] = flag ? styles.textDisabled : styles.textDefault;
-  obj = { [closure_1_15.XSMALL]: styles.textXsmall, [closure_1_15.SMALL]: styles.textSmall, [closure_1_15.MEDIUM]: styles.textMedium, [closure_1_15.LARGE]: styles.textLarge };
-  items[4] = obj[size];
+  const items = [text.text, { [closure_1_13.BRAND]: text.textBrand, [closure_1_13.RED]: text.textRed, [closure_1_13.GREEN]: text.textGreen, [closure_1_13.PRIMARY]: text.textPrimary, [closure_1_13.TRANSPARENT]: text.textTransparent, [closure_1_13.GREY]: text.textGrey, [closure_1_13.LIGHTGREY]: text.textLightgrey, [closure_1_13.WHITE]: text.textWhite, [closure_1_13.LINK]: text.textLink }[color], { [closure_1_12.FILLED]: text.textFilled, [closure_1_12.LINK]: text.textLink, [closure_1_12.OUTLINED]: text.textOutlined }[look], flag ? text.textDisabled : text.textDefault, { [closure_1_15.XSMALL]: text.textXsmall, [closure_1_15.SMALL]: text.textSmall, [closure_1_15.MEDIUM]: text.textMedium, [closure_1_15.LARGE]: text.textLarge }[size]];
   return items;
 }
 function getButtonStyles(shrink, button) {
@@ -85,15 +78,15 @@ class ButtonText {
       tmp4 = closure_2;
       obj = { maxFontSizeMultiplier: 2, numberOfLines: 1, style: null, children: null };
       tmp6 = getTextStyles;
-      obj = { color: null, look: null, size: null, disabled: null };
-      obj.color = color;
-      obj.look = look;
-      obj.size = size;
-      obj.disabled = disabled;
+      obj1 = { color: null, look: null, size: null, disabled: null };
+      obj1.color = color;
+      obj1.look = look;
+      obj1.size = size;
+      obj1.disabled = disabled;
       num = 0;
       tmp5 = closure_1(closure_2[11]);
       items = [, ];
-      items[0] = getTextStyles(obj, tmp);
+      items[0] = getTextStyles(obj1, tmp);
       items[1] = style;
       obj.style = items;
       obj.children = children;
@@ -101,21 +94,21 @@ class ButtonText {
     } else {
       tmp8 = jsx;
       tmp9 = Fragment;
-      obj1 = { children: null };
-      obj2 = { style: null };
+      obj6 = { children: null };
+      obj7 = { style: null };
       tmp10 = getTextStyles;
-      obj3 = { color: null, look: null, size: null, disabled: null };
-      obj3.color = color;
-      obj3.look = look;
-      obj3.size = size;
-      obj3.disabled = disabled;
+      obj8 = { color: null, look: null, size: null, disabled: null };
+      obj8.color = color;
+      obj8.look = look;
+      obj8.size = size;
+      obj8.disabled = disabled;
       num2 = 0;
       items1 = [, ];
-      items1[0] = getTextStyles(obj3, tmp);
+      items1[0] = getTextStyles(obj8, tmp);
       items1[1] = style;
-      obj2.style = items1;
-      obj1.children = children(obj2);
-      tmp7 = jsx(Fragment, obj1);
+      obj7.style = items1;
+      obj6.children = children(obj7);
+      tmp7 = jsx(Fragment, obj6);
     }
     return tmp7;
   }
@@ -200,10 +193,10 @@ class Button {
     items1[1] = accessibilityState;
     memo = text.useMemo(() => {
       if (flag3) {
-        let obj = { color: shared.isThemeDark(theme) ? WHITE : PRIMARY_500 };
-        React6(React4, obj);
+        const obj3 = { color: shared.isThemeDark(theme) ? WHITE : PRIMARY_500 };
+        React6(React4, obj3);
       } else {
-        obj = { color: BRAND, look: FILLED, size: MEDIUM, disabled: flag2, style: textStyle, children: text };
+        const obj = { color: BRAND, look: FILLED, size: MEDIUM, disabled: flag2, style: textStyle, children: text };
         return React6(ButtonText, obj);
       }
     }, items);
@@ -239,11 +232,11 @@ class Button {
       tmp15 = darkenOnPress;
       if (FILLED !== darkenOnPress.LINK) {
         tmp24 = PRIMARY_500;
-        obj = { style: null, children: null };
-        obj.style = style;
+        obj1 = { style: null, children: null };
+        obj1.style = style;
         tmp25 = c6;
-        obj1 = { text: null, variant: null, size: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onPressIn: null, onPressOut: null, onTouchStart: null, disabled: null, icon: null, iconPosition: null, grow: null };
-        obj1.text = text;
+        obj5 = { text: null, variant: null, size: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onPressIn: null, onPressOut: null, onTouchStart: null, disabled: null, icon: null, iconPosition: null, grow: null };
+        obj5.text = text;
         tmp26 = foregroundRipple;
         str2 = "active";
         if (foregroundRipple.GREEN !== BRAND) {
@@ -265,7 +258,7 @@ class Button {
             }
           }
         }
-        obj1.variant = str2;
+        obj5.variant = str2;
         tmp27 = closure_15;
         str4 = "lg";
         if (closure_15.LARGE !== MEDIUM) {
@@ -276,19 +269,19 @@ class Button {
             }
           }
         }
-        obj1.size = str4;
-        obj1.accessibilityLabel = accessibilityLabel;
-        obj1.accessibilityHint = accessibilityHint;
-        obj1.accessibilityActions = accessibilityActions;
-        obj1.onAccessibilityAction = onAccessibilityAction;
-        obj1.onPress = onPress;
-        obj1.onPressIn = onPressIn;
-        obj1.onPressOut = onPressOut;
-        obj1.onTouchStart = onTouchStart;
+        obj5.size = str4;
+        obj5.accessibilityLabel = accessibilityLabel;
+        obj5.accessibilityHint = accessibilityHint;
+        obj5.accessibilityActions = accessibilityActions;
+        obj5.onAccessibilityAction = onAccessibilityAction;
+        obj5.onPress = onPress;
+        obj5.onPressIn = onPressIn;
+        obj5.onPressOut = onPressOut;
+        obj5.onTouchStart = onTouchStart;
         if (!flag2) {
           flag2 = flag3;
         }
-        obj1.disabled = flag2;
+        obj5.disabled = flag2;
         tmp28 = null;
         renderIconResult = undefined;
         if (renderIcon != null) {
@@ -304,7 +297,7 @@ class Button {
         if (renderIconResult == null) {
           renderIconResult = null;
         }
-        obj1.icon = renderIconResult;
+        obj5.icon = renderIconResult;
         str5 = "start";
         if (null == renderIcon) {
           str6 = undefined;
@@ -313,24 +306,24 @@ class Button {
           }
           str5 = str6;
         }
-        obj1.iconPosition = str5;
-        obj1.grow = !flag;
-        obj.children = tmp24(tmp9(tmp10[14]).Button, obj1);
-        tmp24Result = tmp24(tmp25, obj);
+        obj5.iconPosition = str5;
+        obj5.grow = !flag;
+        obj1.children = tmp24(tmp9(tmp10[14]).Button, obj5);
+        tmp24Result = tmp24(tmp25, obj1);
       }
       return tmp24Result;
     }
-    obj2 = { accessibilityRole: str, accessibilityState: memo1, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityValue, onPress, onPressIn, onPressOut, onTouchStart, onTouchEnd, onLongPress, disabled: null, android_ripple: null, testID: null, style: null, children: null };
+    obj6 = { accessibilityRole: str, accessibilityState: memo1, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, accessibilityValue, onPress, onPressIn, onPressOut, onTouchStart, onTouchEnd, onLongPress, disabled: null, android_ripple: null, testID: null, style: null, children: null };
     tmp18 = flag2;
     tmp16 = style;
     tmp17 = c5;
     if (!flag2) {
       tmp18 = flag3;
     }
-    obj2.disabled = tmp18;
-    obj2.android_ripple = memo2;
-    obj2.testID = testID;
-    obj2.style = callback;
+    obj6.disabled = tmp18;
+    obj6.android_ripple = memo2;
+    obj6.testID = testID;
+    obj6.style = callback;
     renderLinearGradientResult = undefined;
     if (renderLinearGradient != null) {
       renderLinearGradientResult = renderLinearGradient();
@@ -365,163 +358,162 @@ class Button {
       renderShineResult = null;
     }
     items4[4] = renderShineResult;
-    obj2.children = items4;
-    tmp24Result = tmp16(tmp17, obj2);
+    obj6.children = items4;
+    tmp24Result = tmp16(tmp17, obj6);
     return;
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
+const getThemedRippleConfig = fn(1180).getThemedRippleConfig;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { button: { flexDirection: "row", flexGrow: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch", borderRadius: 3 }, buttonShrink: { flexGrow: 0, alignSelf: "flex-start", paddingHorizontal: 10 }, buttonBrandDefault: null, buttonBrandDarkDefault: null, buttonRedDefault: null, buttonRedDarkDefault: null, buttonGreenDefault: null, buttonGreenDarkDefault: null, buttonGreyDarkDefault: null, buttonLightgreyDefault: null, buttonLightgreyDarkDefault: null, buttonBrandDisabled: null, buttonBrandDarkDisabled: null, buttonRedDisabled: null, buttonRedDarkDisabled: null, buttonGreenDisabled: null, buttonGreenDarkDisabled: null, buttonGreyDarkDisabled: null, buttonLightgreyDisabled: null, buttonLightgreyDarkDisabled: null, buttonTransparentDefault: null, buttonTransparentDarkDefault: null, buttonTransparentDisabled: null, buttonTransparentDarkDisabled: null, buttonWhiteDefault: null, buttonWhiteDisabled: null, buttonFilled: null, buttonLink: null, buttonLinkDefault: null, buttonOutlined: null, buttonXsmall: null, buttonSmall: null, buttonMedium: null, buttonLarge: null, text: null, textXsmall: null, textSmall: null, textMedium: null, textLarge: null, textDisabled: null, textDefault: null, textBrand: null, textRed: null, textGreen: null, textGrey: null, textLightgrey: null, textWhite: null, textFilled: null, textOutlined: null, faded: null, buttonWhiteDarkDefault: null, textLink: null, buttonPrimaryDefault: null, buttonPrimaryDarkDefault: null, buttonGreyDefault: null, textPrimary: null, textTransparent: null, buttonPrimaryDisabled: null, buttonPrimaryDarkDisabled: null, buttonGreyDisabled: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-createStyles.buttonBrandDefault = createStyles;
-createStyles.buttonBrandDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_600 };
-let obj1 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_600 };
-createStyles.buttonRedDefault = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400 };
-let obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400 };
-createStyles.buttonRedDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.RED_500 };
-let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_500 };
-createStyles.buttonGreenDefault = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
-const obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
-createStyles.buttonGreenDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_500 };
-const obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_500 };
-createStyles.buttonGreyDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-const obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-createStyles.buttonLightgreyDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-const obj7 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-createStyles.buttonLightgreyDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-const obj9 = { backgroundColor: null };
+const createStyles = fn(4636);
+let obj2 = { button: { flexDirection: "row", flexGrow: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch", borderRadius: 3 }, buttonShrink: { flexGrow: 0, alignSelf: "flex-start", paddingHorizontal: 10 }, buttonBrandDefault: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, buttonBrandDarkDefault: null, buttonRedDefault: null, buttonRedDarkDefault: null, buttonGreenDefault: null, buttonGreenDarkDefault: null, buttonGreyDarkDefault: null, buttonLightgreyDefault: null, buttonLightgreyDarkDefault: null, buttonBrandDisabled: null, buttonBrandDarkDisabled: null, buttonRedDisabled: null, buttonRedDarkDisabled: null, buttonGreenDisabled: null, buttonGreenDarkDisabled: null, buttonGreyDarkDisabled: null, buttonLightgreyDisabled: null, buttonLightgreyDarkDisabled: null, buttonTransparentDefault: null, buttonTransparentDarkDefault: null, buttonTransparentDisabled: null, buttonTransparentDarkDisabled: null, buttonWhiteDefault: null, buttonWhiteDisabled: null, buttonFilled: null, buttonLink: null, buttonLinkDefault: null, buttonOutlined: null, buttonXsmall: null, buttonSmall: null, buttonMedium: null, buttonLarge: null, text: null, textXsmall: null, textSmall: null, textMedium: null, textLarge: null, textDisabled: null, textDefault: null, textBrand: null, textRed: null, textGreen: null, textGrey: null, textLightgrey: null, textWhite: null, textFilled: null, textOutlined: null, faded: null, buttonWhiteDarkDefault: null, textLink: null, buttonPrimaryDefault: null, buttonPrimaryDarkDefault: null, buttonGreyDefault: null, textPrimary: null, textTransparent: null, buttonPrimaryDisabled: null, buttonPrimaryDarkDisabled: null, buttonGreyDisabled: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.buttonBrandDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_600 };
+let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_600 };
+obj2.buttonRedDefault = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400 };
+let obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400 };
+obj2.buttonRedDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.RED_500 };
+const obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_500 };
+obj2.buttonGreenDefault = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
+const obj7 = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
+obj2.buttonGreenDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_500 };
+const obj8 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_500 };
+obj2.buttonGreyDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+const obj9 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+obj2.buttonLightgreyDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+const obj10 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+obj2.buttonLightgreyDarkDefault = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+const obj12 = { backgroundColor: null };
 let ColorUtils = fn(4486);
-obj9.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.5);
-createStyles.buttonBrandDisabled = obj9;
-const obj10 = { backgroundColor: null };
+obj12.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.5);
+obj2.buttonBrandDisabled = obj12;
+const obj14 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj10.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_600, 0.5);
-createStyles.buttonBrandDarkDisabled = obj10;
-const obj11 = { backgroundColor: null };
+obj14.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_600, 0.5);
+obj2.buttonBrandDarkDisabled = obj14;
+const obj16 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj11.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.5);
-createStyles.buttonRedDisabled = obj11;
-ColorUtils = { backgroundColor: null };
+obj16.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.5);
+obj2.buttonRedDisabled = obj16;
+const obj18 = { backgroundColor: null };
 ColorUtils = fn(4486);
-ColorUtils.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_500, 0.5);
-createStyles.buttonRedDarkDisabled = ColorUtils;
-const obj13 = { backgroundColor: null };
+obj18.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_500, 0.5);
+obj2.buttonRedDarkDisabled = obj18;
+const obj20 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj13.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.GREEN_360, 0.5);
-createStyles.buttonGreenDisabled = obj13;
-ColorUtils = { backgroundColor: null };
+obj20.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.GREEN_360, 0.5);
+obj2.buttonGreenDisabled = obj20;
+const obj22 = { backgroundColor: null };
 ColorUtils = fn(4486);
-ColorUtils.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.GREEN_500, 0.5);
-createStyles.buttonGreenDarkDisabled = ColorUtils;
-const obj15 = { backgroundColor: null };
+obj22.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.GREEN_500, 0.5);
+obj2.buttonGreenDarkDisabled = obj22;
+const obj24 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj15.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
-createStyles.buttonGreyDarkDisabled = obj15;
-ColorUtils = { backgroundColor: null };
+obj24.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
+obj2.buttonGreyDarkDisabled = obj24;
+const obj26 = { backgroundColor: null };
 ColorUtils = fn(4486);
-ColorUtils.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
-createStyles.buttonLightgreyDisabled = ColorUtils;
-const obj17 = { backgroundColor: null };
+obj26.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
+obj2.buttonLightgreyDisabled = obj26;
+const obj28 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj17.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
-createStyles.buttonLightgreyDarkDisabled = obj17;
-createStyles.buttonTransparentDefault = { backgroundColor: "transparent" };
-createStyles.buttonTransparentDarkDefault = { backgroundColor: "transparent" };
-createStyles.buttonTransparentDisabled = { backgroundColor: "transparent" };
-createStyles.buttonTransparentDarkDisabled = { backgroundColor: "transparent" };
-ColorUtils = { backgroundColor: nativeDefault.colors.WHITE };
-createStyles.buttonWhiteDefault = ColorUtils;
-const obj19 = { backgroundColor: null };
+obj28.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_500, 0.5);
+obj2.buttonLightgreyDarkDisabled = obj28;
+obj2.buttonTransparentDefault = { backgroundColor: "transparent" };
+obj2.buttonTransparentDarkDefault = { backgroundColor: "transparent" };
+obj2.buttonTransparentDisabled = { backgroundColor: "transparent" };
+obj2.buttonTransparentDarkDisabled = { backgroundColor: "transparent" };
+const obj11 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
+obj2.buttonWhiteDefault = { backgroundColor: nativeDefault.colors.WHITE };
+const obj31 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj19.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.5);
-createStyles.buttonWhiteDisabled = obj19;
-createStyles.buttonFilled = {};
-createStyles.buttonLink = {};
-createStyles.buttonLinkDefault = {};
-ColorUtils = { backgroundColor: "transparent", borderWidth: 1, borderStyle: "solid", borderColor: fn(5522).BUTTON_OUTLINED_BORDER };
-createStyles.buttonOutlined = ColorUtils;
-createStyles.buttonXsmall = { minHeight: 24 };
-createStyles.buttonSmall = { minHeight: 32 };
-createStyles.buttonMedium = { minHeight: 40 };
-createStyles.buttonLarge = { minHeight: 46 };
-const obj8 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500 };
-createStyles.text = { color: nativeDefault.colors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
-createStyles.textXsmall = { fontSize: 12 };
-createStyles.textSmall = { fontSize: 14 };
-createStyles.textMedium = { fontSize: 14 };
-createStyles.textLarge = { fontSize: 20 };
-createStyles.textDisabled = { opacity: 0.6 };
-createStyles.textDefault = { opacity: 1 };
-ColorUtils = { color: nativeDefault.colors.WHITE };
-createStyles.textBrand = ColorUtils;
-const obj21 = { color: nativeDefault.colors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
-createStyles.textRed = { color: nativeDefault.colors.WHITE };
-ColorUtils = { color: nativeDefault.colors.WHITE };
-createStyles.textGreen = ColorUtils;
-const obj23 = { color: nativeDefault.colors.WHITE };
-createStyles.textGrey = { color: nativeDefault.colors.WHITE };
-ColorUtils = { color: nativeDefault.colors.WHITE };
-createStyles.textLightgrey = ColorUtils;
-const obj25 = { color: nativeDefault.colors.WHITE };
-createStyles.textWhite = { color: nativeDefault.colors.WHITE };
-createStyles.textFilled = {};
-ColorUtils = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-createStyles.textOutlined = ColorUtils;
-createStyles.faded = { opacity: 0.5 };
-const obj27 = { color: nativeDefault.colors.WHITE };
-createStyles.buttonWhiteDarkDefault = { backgroundColor: nativeDefault.colors.WHITE };
-const obj29 = { backgroundColor: nativeDefault.colors.WHITE };
-createStyles.textLink = { color: nativeDefault.colors.TEXT_LINK };
-ColorUtils = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-createStyles.buttonPrimaryDefault = ColorUtils;
-const obj30 = { color: nativeDefault.colors.TEXT_LINK };
-createStyles.buttonPrimaryDarkDefault = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-const obj32 = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-createStyles.buttonGreyDefault = { backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
-const obj33 = { backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
-createStyles.textPrimary = { color: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
-const obj34 = { color: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
-createStyles.textTransparent = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-const obj35 = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-createStyles.buttonPrimaryDisabled = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-const obj36 = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-createStyles.buttonPrimaryDarkDisabled = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-const obj37 = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-createStyles.buttonGreyDisabled = { backgroundColor: fn(5522).BUTTON_GREY_DISABLED_BACKGROUND };
-createStyles = createStyles.createStyles(createStyles);
-const obj39 = { FILLED: "filled", LINK: "link", OUTLINED: "outlined" };
-const obj40 = { BRAND: "brand", RED: "red", GREEN: "green", PRIMARY: "primary", TRANSPARENT: "transparent", GREY: "grey", LIGHTGREY: "lightgrey", WHITE: "white", LINK: "link" };
+obj31.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.5);
+obj2.buttonWhiteDisabled = obj31;
+obj2.buttonFilled = {};
+obj2.buttonLink = {};
+obj2.buttonLinkDefault = {};
+const obj30 = { backgroundColor: nativeDefault.colors.WHITE };
+obj2.buttonOutlined = { backgroundColor: "transparent", borderWidth: 1, borderStyle: "solid", borderColor: fn(5522).BUTTON_OUTLINED_BORDER };
+obj2.buttonXsmall = { minHeight: 24 };
+obj2.buttonSmall = { minHeight: 32 };
+obj2.buttonMedium = { minHeight: 40 };
+obj2.buttonLarge = { minHeight: 46 };
+const obj33 = { backgroundColor: "transparent", borderWidth: 1, borderStyle: "solid", borderColor: fn(5522).BUTTON_OUTLINED_BORDER };
+obj2.text = { color: nativeDefault.colors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
+obj2.textXsmall = { fontSize: 12 };
+obj2.textSmall = { fontSize: 14 };
+obj2.textMedium = { fontSize: 14 };
+obj2.textLarge = { fontSize: 20 };
+obj2.textDisabled = { opacity: 0.6 };
+obj2.textDefault = { opacity: 1 };
+const obj34 = { color: nativeDefault.colors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
+obj2.textBrand = { color: nativeDefault.colors.WHITE };
+const obj35 = { color: nativeDefault.colors.WHITE };
+obj2.textRed = { color: nativeDefault.colors.WHITE };
+const obj36 = { color: nativeDefault.colors.WHITE };
+obj2.textGreen = { color: nativeDefault.colors.WHITE };
+const obj37 = { color: nativeDefault.colors.WHITE };
+obj2.textGrey = { color: nativeDefault.colors.WHITE };
+const obj38 = { color: nativeDefault.colors.WHITE };
+obj2.textLightgrey = { color: nativeDefault.colors.WHITE };
+const obj39 = { color: nativeDefault.colors.WHITE };
+obj2.textWhite = { color: nativeDefault.colors.WHITE };
+obj2.textFilled = {};
+const obj40 = { color: nativeDefault.colors.WHITE };
+obj2.textOutlined = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.faded = { opacity: 0.5 };
+const obj41 = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonWhiteDarkDefault = { backgroundColor: nativeDefault.colors.WHITE };
+const obj42 = { backgroundColor: nativeDefault.colors.WHITE };
+obj2.textLink = { color: nativeDefault.colors.TEXT_LINK };
+const obj43 = { color: nativeDefault.colors.TEXT_LINK };
+obj2.buttonPrimaryDefault = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj44 = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonPrimaryDarkDefault = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj45 = { backgroundColor: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonGreyDefault = { backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
+const obj46 = { backgroundColor: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
+obj2.textPrimary = { color: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
+const obj47 = { color: fn(5522).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
+obj2.textTransparent = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj48 = { color: fn(5522).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonPrimaryDisabled = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+const obj49 = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+obj2.buttonPrimaryDarkDisabled = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+const obj50 = { backgroundColor: fn(5522).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+obj2.buttonGreyDisabled = { backgroundColor: fn(5522).BUTTON_GREY_DISABLED_BACKGROUND };
+const styles = createStyles.createStyles(obj2);
+const obj52 = { FILLED: "filled", LINK: "link", OUTLINED: "outlined" };
+const obj53 = { BRAND: "brand", RED: "red", GREEN: "green", PRIMARY: "primary", TRANSPARENT: "transparent", GREY: "grey", LIGHTGREY: "lightgrey", WHITE: "white", LINK: "link" };
 const constants = { DEFAULT: "Default", DISABLED: "Disabled" };
-let obj41 = { XSMALL: "xsmall", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
-Button.Looks = obj39;
-Button.Colors = obj40;
-Button.Sizes = obj41;
+let obj54 = { XSMALL: "xsmall", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
+Button.Looks = obj52;
+Button.Colors = obj53;
+Button.Sizes = obj54;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Button/native/Button.tsx");
 
 export default Button;
 export const BUTTON_CORNER_RADIUS = 3;
-export const useButtonStyles = createStyles;
-export const ButtonLooks = obj39;
-export const ButtonColors = obj40;
-export const ButtonSizes = obj41;
+export const useButtonStyles = styles;
+export const ButtonLooks = obj52;
+export const ButtonColors = obj53;
+export const ButtonSizes = obj54;
 export { getButtonStyles };
 export { ButtonText };
 export const getRedesignVariant = function getRedesignVariant(color) {
-  if (obj40.GREEN === color) {
+  if (obj53.GREEN === color) {
     return "active";
-  } else if (obj40.RED === color) {
+  } else if (obj53.RED === color) {
     return "destructive";
   } else {
-    if (obj40.GREY !== color) {
-      if (obj40.LIGHTGREY !== color) {
-        if (obj40.TRANSPARENT !== color) {
-          if (obj40.WHITE === color) {
+    if (obj53.GREY !== color) {
+      if (obj53.LIGHTGREY !== color) {
+        if (obj53.TRANSPARENT !== color) {
+          if (obj53.WHITE === color) {
             return "primary-overlay";
           } else {
             return "primary";
@@ -533,9 +525,9 @@ export const getRedesignVariant = function getRedesignVariant(color) {
   }
 };
 export const getRedesignSize = function getRedesignSize(arg0) {
-  if (obj41.LARGE === arg0) {
+  if (obj54.LARGE === arg0) {
     return "lg";
-  } else if (obj41.MEDIUM === arg0) {
+  } else if (obj54.MEDIUM === arg0) {
     return "md";
   } else {
     return "sm";

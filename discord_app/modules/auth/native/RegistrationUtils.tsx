@@ -1,10 +1,12 @@
-// === Module 16049: RegistrationUtils ===
+// === Module 16051: RegistrationUtils ===
 
-// Module 16049 (RegistrationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 16051 (RegistrationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import InviteStore from "InviteStore" /* 4620 */;
 import DisplayedInviteStore from "DisplayedInviteStore" /* 8865 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 function trackRegTransition(overrideRegistrationOptions) {
@@ -37,12 +39,12 @@ function trackRegTransition(overrideRegistrationOptions) {
       str2 = "phone";
     }
   }
-  const obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
+  const obj2 = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
   let code;
   if (invite != null) {
     code = invite.code;
   }
-  obj.invite_code = code;
+  obj2.invite_code = code;
   let id;
   if (invite != null) {
     const channel = invite.channel;
@@ -50,7 +52,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       id = channel.id;
     }
   }
-  obj.invite_channel_id = id;
+  obj2.invite_channel_id = id;
   let type;
   if (invite != null) {
     const channel2 = invite.channel;
@@ -58,7 +60,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       type = channel2.type;
     }
   }
-  obj.invite_channel_type = type;
+  obj2.invite_channel_type = type;
   let id1;
   if (invite != null) {
     const guild = invite.guild;
@@ -66,7 +68,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       id1 = guild.id;
     }
   }
-  obj.invite_guild_id = id1;
+  obj2.invite_guild_id = id1;
   let id2;
   if (invite != null) {
     const inviter = invite.inviter;
@@ -74,14 +76,14 @@ function trackRegTransition(overrideRegistrationOptions) {
       id2 = inviter.id;
     }
   }
-  obj.invite_inviter_id = id2;
-  obj.from_step = fromStep;
-  obj.to_step = toStep;
-  obj.track(AnalyticEvents.REGISTER_TRANSITION, obj);
+  obj2.invite_inviter_id = id2;
+  obj2.from_step = fromStep;
+  obj2.to_step = toStep;
+  AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(16042);
+const RegistrationConstants = fn(16044);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -122,19 +124,19 @@ export function getTrackRegTransition(arg0) {
     ({ step, actionType, toStep, details, overrideRegistrationOptions } = arg0);
     if (actionType === constants2.VIEWED) {
       if (step === constants.CAPTCHA) {
-        let obj = { step, fromStep: ref.current, actionType };
+        const obj = { step, fromStep: ref.current, actionType };
         trackRegTransition(obj);
       }
     }
     if (actionType === constants2.VIEWED) {
       if (null != step) {
-        obj = { step, fromStep: ref.current, actionType };
-        trackRegTransition(obj);
+        const obj2 = { step, fromStep: ref.current, actionType };
+        trackRegTransition(obj2);
       }
       ref.current = step;
     } else if (null != step) {
-      obj = { step, toStep, actionType, details, overrideRegistrationOptions };
-      trackRegTransition(obj);
+      const obj3 = { step, toStep, actionType, details, overrideRegistrationOptions };
+      trackRegTransition(obj3);
     }
     return tmp9;
   };

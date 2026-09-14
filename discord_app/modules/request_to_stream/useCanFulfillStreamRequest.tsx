@@ -1,6 +1,6 @@
-// === Module 11895: useCanFulfillStreamRequest ===
+// === Module 11896: useCanFulfillStreamRequest ===
 
-// Module 11895 (useCanFulfillStreamRequest)
+// Module 11896 (useCanFulfillStreamRequest)
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -9,6 +9,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 function canFulfillStreamRequest(channel_id) {

@@ -1,52 +1,51 @@
-// === Module 17142: QuestActivityUnenrolledModal ===
+// === Module 17144: QuestActivityUnenrolledModal ===
 
-// Module 17142 (QuestActivityUnenrolledModal)
+// Module 17144 (QuestActivityUnenrolledModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
 import _modDef7095 from "module_7095" /* 7095 */;
 import HeaderActionButton from "HeaderActionButton" /* 7480 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11907 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11908 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15199 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7805 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17141 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17143 */;
 
 require = fn;
 function QuestActivityUnenrolledModalInner(quest) {
   quest = quest.quest;
   let trackQuestContentClickedWithImpression;
+  const theme = quest(4571).useTheme();
   let obj = quest(4571);
-  const theme = obj.useTheme();
-  let obj1 = quest(4345);
-  const tmp4 = closure_14(obj1.isThemeDark(theme));
-  let obj2 = quest(504);
+  const tmp4 = closure_14(quest(4345).isThemeDark(theme));
+  let obj2 = quest(4345);
   const items = [UnenrolledActivityQuestStore];
-  const tmp5 = trackQuestContentClickedWithImpression(noop.useState(obj2.useStateFromStores(items, () => state.getState().autoEnroll)), 2);
+  const tmp5 = trackQuestContentClickedWithImpression(noop.useState(quest(504).useStateFromStores(items, () => state.getState().autoEnroll)), 2);
   const checked = tmp5[0];
   dependencyMap = tmp5[1];
-  let obj3 = quest(7271);
-  let obj4 = quest(7826);
-  const getOrFetchApplication = obj3.useGetOrFetchApplication(obj4.getActivityApplicationId(quest));
-  let obj5 = quest(11616);
-  const questTaskDetails = obj5.useQuestTaskDetails(quest);
-  let obj6 = quest(11904);
-  obj = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+  let obj3 = quest(504);
+  let obj4 = quest(7271);
+  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(7826).getActivityApplicationId(quest));
+  const obj5 = quest(7826);
+  const questTaskDetails = quest(11617).useQuestTaskDetails(quest);
+  let obj6 = quest(11617);
+  const obj7 = quest(11905);
   const items1 = [getOrFetchApplication];
-  const questsInstructionsToWinReward = obj6.useQuestsInstructionsToWinReward(obj);
+  const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({ quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
   const memo = noop.useMemo(() => {
     let applicationIconURL = null;
     if (null != getOrFetchApplication) {
-      const obj = { id: null, icon: null, size: 87 };
       ({ id: obj2.id, icon: obj2.icon } = getOrFetchApplication);
-      applicationIconURL = obj.getApplicationIconURL(obj);
+      applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id: null, icon: null, size: 87 });
+      const obj3 = { id: null, icon: null, size: 87 };
     }
     return applicationIconURL;
   }, items1);
@@ -59,8 +58,8 @@ function QuestActivityUnenrolledModalInner(quest) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -73,25 +72,24 @@ function QuestActivityUnenrolledModalInner(quest) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const obj1 = { questContent: tmp4(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7830).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+            const obj4 = { questContent: tmp4(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: tmp4(7830).QuestContentCTA.START_QUEST, sourceQuestContent: tmp4(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
             v1 = 1;
             dependencyMap = 1;
-            const obj2 = { value: tmp4(11409).enrollInQuest(quest.id, obj1), done: false };
-            return obj2;
+            const obj6 = { value: tmp4(11410).enrollInQuest(quest.id, obj4), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
-          let arr = v1(4839);
-          arr = arr.pop();
+          v1(4839).pop();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -101,98 +99,97 @@ function QuestActivityUnenrolledModalInner(quest) {
       }
     }
   }), items2);
-  let obj8 = quest(4355);
-  const checkboxA11yNative = obj8.useCheckboxA11yNative({ checked });
+  const obj8 = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL, sourceQuestContent: quest(5528).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL };
+  const checkboxA11yNative = quest(4355).useCheckboxA11yNative({ checked });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  let obj9 = quest(11616);
-  const isQuestAccessSuspended = obj9.useIsQuestAccessSuspended();
-  let obj10 = quest(11903);
-  trackQuestContentClickedWithImpression = obj10.useTrackQuestContentClickedWithImpression();
+  const obj9 = quest(4355);
+  const isQuestAccessSuspended = quest(11617).useIsQuestAccessSuspended();
+  const obj10 = quest(11617);
+  trackQuestContentClickedWithImpression = quest(11904).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({ questId: quest.id, questContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL, questContentCTA: AnalyticsTypes.QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: QuestTypes.QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL });
     openQuestAccessSuspendedBottomSheetDefault();
   }, items3);
-  obj = { direction: "vertical", align: "center", justify: "center", style: tmp4.container, children: null };
-  obj1 = { style: tmp4.content, children: null };
-  obj2 = { style: tmp4.baseShadow, children: null };
-  obj3 = { style: tmp4.imagesContainer, children: null };
+  const obj12 = { direction: "vertical", align: "center", justify: "center", style: tmp4.container, children: null };
+  const obj13 = { style: tmp4.content, children: null };
+  const obj14 = { style: tmp4.baseShadow, children: null };
+  const obj15 = { style: tmp4.imagesContainer, children: null };
   let tmp18Result = null != memo;
   if (tmp18Result) {
-    obj4 = { style: tmp4.appIconContainer, children: null };
-    obj5 = { source: null, style: null };
-    obj6 = { uri: memo };
-    obj5.source = obj6;
-    obj5.style = tmp4.appIcon;
-    obj4.children = closure_11(checked(5668), obj5);
-    tmp18Result = closure_11(closure_7, obj4);
+    const obj16 = { style: tmp4.appIconContainer, children: null };
+    const obj17 = { source: null, style: null };
+    const obj18 = { uri: memo };
+    obj17.source = obj18;
+    obj17.style = tmp4.appIcon;
+    obj16.children = closure_11(checked(5668), obj17);
+    tmp18Result = closure_11(closure_7, obj16);
   }
   const items4 = [tmp18Result, ];
-  const obj7 = { style: tmp4.rewardTileContainer, children: null };
+  const obj19 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj7.children = closure_11(checked(11899), size);
-  items4[1] = closure_11(closure_7, obj7);
-  obj3.children = items4;
-  obj2.children = closure_12(closure_7, obj3);
-  const items5 = [closure_11(closure_7, obj2), ];
-  obj8 = { style: tmp4.textContainer, children: null };
-  obj9 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: { textAlign: "center" }, children: null };
+  obj19.children = closure_11(checked(11900), size);
+  items4[1] = closure_11(closure_7, obj19);
+  obj15.children = items4;
+  obj14.children = closure_12(closure_7, obj15);
+  const items5 = [closure_11(closure_7, obj14), ];
+  const obj20 = { style: tmp4.textContainer, children: null };
+  const obj21 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: { textAlign: "center" }, children: null };
   const intl = tmp(1114).intl;
-  obj9.children = intl.string(quest(1114).t.IrNgN4);
-  const items6 = [closure_11(quest(4632).Text, obj9), ];
-  obj10 = { variant: "text-sm/normal", color: "text-subtle", style: { textAlign: "center" }, children: null };
+  obj21.children = intl.string(quest(1114).t.IrNgN4);
+  const items6 = [closure_11(quest(4632).Text, obj21), ];
+  const obj22 = { variant: "text-sm/normal", color: "text-subtle", style: { textAlign: "center" }, children: null };
   const intl2 = tmp(1114).intl;
   const items7 = [intl2.format(quest(1114).t.V3NSJx, { questName: quest.config.messages.questName }), "\u00A0", questsInstructionsToWinReward];
-  obj10.children = items7;
-  items6[1] = closure_12(quest(4632).Text, obj10);
-  obj8.children = items6;
-  items5[1] = closure_12(closure_7, obj8);
-  obj1.children = items5;
-  const items8 = [closure_12(closure_7, obj1), ];
-  const obj12 = { style: tmp4.footer, children: null };
-  const obj13 = { style: tmp4.buttonsContainer, children: null };
-  const obj14 = { size: "lg", text: null, onPress: null, disabled: null, onPressDisabled: null };
+  obj22.children = items7;
+  items6[1] = closure_12(quest(4632).Text, obj22);
+  obj20.children = items6;
+  items5[1] = closure_12(closure_7, obj20);
+  obj13.children = items5;
+  const items8 = [closure_12(closure_7, obj13), ];
+  const obj24 = { style: tmp4.footer, children: null };
+  const obj25 = { style: tmp4.buttonsContainer, children: null };
+  const obj26 = { size: "lg", text: null, onPress: null, disabled: null, onPressDisabled: null };
   const intl3 = tmp(1114).intl;
-  obj14.text = intl3.string(quest(1114).t.l7E81v);
-  obj14.onPress = callback;
-  obj14.disabled = isQuestAccessSuspended;
+  obj26.text = intl3.string(quest(1114).t.l7E81v);
+  obj26.onPress = callback;
+  obj26.disabled = isQuestAccessSuspended;
   let tmp21;
   if (isQuestAccessSuspended) {
     tmp21 = callback1;
   }
-  obj14.onPressDisabled = tmp21;
-  const items9 = [closure_11(quest(5056).Button, obj14), ];
-  const obj15 = { size: "lg", text: null, onPress: null, variant: "secondary" };
+  obj26.onPressDisabled = tmp21;
+  const items9 = [closure_11(quest(5056).Button, obj26), ];
+  const obj27 = { size: "lg", text: null, onPress: null, variant: "secondary" };
   const intl4 = tmp(1114).intl;
-  obj15.text = intl4.string(quest(1114).t.fyT2ol);
-  obj15.onPress = function onPress() {
+  obj27.text = intl4.string(quest(1114).t.fyT2ol);
+  obj27.onPress = function onPress() {
     const result = QuestActionCreators.dismissQuestActivityModal(quest.id);
-    let arr = ModalActionCreatorsDefault;
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
   };
-  items9[1] = closure_11(quest(5056).Button, obj15);
-  obj13.children = items9;
-  const items10 = [closure_12(closure_7, obj13), ];
-  const obj16 = { accessibilityRole, accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
+  items9[1] = closure_11(quest(5056).Button, obj27);
+  obj25.children = items9;
+  const items10 = [closure_12(closure_7, obj25), ];
+  const obj28 = { accessibilityRole, accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
   const intl5 = tmp(1114).intl;
-  obj16.accessibilityLabel = intl5.string(quest(1114).t["931n1T"]);
-  obj16.accessibilityState = accessibilityState;
-  obj16.onPress = function onPress() {
+  obj28.accessibilityLabel = intl5.string(quest(1114).t["931n1T"]);
+  obj28.accessibilityState = accessibilityState;
+  obj28.onPress = function onPress() {
     closure_2(!first);
     QuestActionCreators.setAutoEnroll(!first);
   };
-  obj16.style = { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: 8 };
+  obj28.style = { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: 8 };
   const items11 = [closure_11(quest(5698).FormCheckbox, { checked }), ];
-  const obj17 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+  const obj29 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   const intl6 = tmp(1114).intl;
-  obj17.children = intl6.string(quest(1114).t["931n1T"]);
-  items11[1] = closure_11(quest(4632).Text, obj17);
-  obj16.children = items11;
-  items10[1] = closure_12(closure_6, obj16);
-  obj12.children = items10;
-  items8[1] = closure_12(closure_7, obj12);
-  obj.children = items8;
-  return closure_12(quest(5054).Stack, obj);
+  obj29.children = intl6.string(quest(1114).t["931n1T"]);
+  items11[1] = closure_11(quest(4632).Text, obj29);
+  obj28.children = items11;
+  items10[1] = closure_12(closure_6, obj28);
+  obj24.children = items10;
+  items8[1] = closure_12(closure_7, obj24);
+  obj12.children = items8;
+  return closure_12(quest(5054).Stack, obj12);
 }
 function CloseButton() {
   const obj = {
@@ -214,77 +211,74 @@ const jsxProd = fn(21);
 const constants = { MAIN: "main" };
 const createStyles = fn(4636);
 let closure_14 = createStyles.createStyles((arg0) => {
-  let obj = { container: null, content: null, imagesContainer: null, baseShadow: null, appIconContainer: null, appIcon: null, rewardTileContainer: null, questRewardTile: null, textContainer: null, buttonsContainer: null, footer: null };
-  obj = { flex: 1, paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
-  obj.container = obj;
-  obj.content = { marginTop: "auto" };
-  obj = { flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom: nativeDefault.space.PX_32 };
-  let obj3 = utils_PlatformUtils;
-  if (obj3.isIOS()) {
+  const obj = { container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 }, content: { marginTop: "auto" }, imagesContainer: null, baseShadow: null, appIconContainer: null, appIcon: null, rewardTileContainer: null, questRewardTile: null, textContainer: null, buttonsContainer: null, footer: null };
+  const obj3 = { flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom: nativeDefault.space.PX_32 };
+  const obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
+  if (obj4.isIOS()) {
     if (arg0) {
-      const obj1 = { shadowColor: "rgb(144, 144, 251)", shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.6, shadowRadius: 85 };
+      const obj5 = { shadowColor: "rgb(144, 144, 251)", shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.6, shadowRadius: 85 };
     } else {
-      const obj2 = {};
+      const obj6 = {};
     }
   } else {
     if (arg0) {
-      obj3 = { dropShadow: { standardDeviation: "85px", color: "rgba(144, 144, 251, 0.65)", offsetX: 0, offsetY: 0 } };
-      const items = [obj3, ];
-      const obj4 = { dropShadow: { standardDeviation: "85px", color: "rgba(144, 144, 250, 0.41)", offsetX: 0, offsetY: 0 } };
-      items[1] = obj4;
+      const obj7 = { dropShadow: { standardDeviation: "85px", color: "rgba(144, 144, 251, 0.65)", offsetX: 0, offsetY: 0 } };
+      const items = [obj7, ];
+      const obj8 = { dropShadow: { standardDeviation: "85px", color: "rgba(144, 144, 250, 0.41)", offsetX: 0, offsetY: 0 } };
+      items[1] = obj8;
       let items1 = items;
     } else {
       items1 = [];
     }
-    const obj5 = { filter: items1 };
-    const merged = Object.assign(obj5);
-    obj.imagesContainer = obj;
-    const obj6 = {};
+    const obj9 = { filter: items1 };
+    const merged = Object.assign(obj9);
+    obj.imagesContainer = obj3;
+    const obj10 = {};
     if (tmp3Result.isIOS()) {
       if (arg0) {
-        const obj7 = { shadowColor: "rgb(144, 144, 250)", shadowOffset: { width: 0, height: 16 }, shadowOpacity: 0.4, shadowRadius: 85 };
-        let obj8 = obj7;
+        const obj11 = { shadowColor: "rgb(144, 144, 250)", shadowOffset: { width: 0, height: 16 }, shadowOpacity: 0.4, shadowRadius: 85 };
+        let obj12 = obj11;
       } else {
-        obj8 = {};
+        obj12 = {};
       }
-      const merged1 = Object.assign(obj8);
+      const merged1 = Object.assign(obj12);
     } else {
-      obj.baseShadow = obj6;
-      const obj9 = { borderRadius: nativeDefault.radii.xl, borderWidth: 2.18, borderColor: "rgba(151, 151, 159, 0.24)", borderStyle: "solid", transform: null, overflow: "hidden" };
+      obj.baseShadow = obj10;
+      const obj13 = { borderRadius: nativeDefault.radii.xl, borderWidth: 2.18, borderColor: "rgba(151, 151, 159, 0.24)", borderStyle: "solid", transform: null, overflow: "hidden" };
       const items2 = [{ rotate: "-12.41deg" }];
-      obj9.transform = items2;
-      obj.appIconContainer = obj9;
+      obj13.transform = items2;
+      obj.appIconContainer = obj13;
       const size = { width: 87, height: 87, borderRadius: nativeDefault.radii.xl - 2.18 };
       obj.appIcon = size;
-      const obj10 = { borderWidth: 2.18, borderColor: "rgba(151, 151, 159, 0.24)", borderRadius: nativeDefault.radii.xl, borderStyle: "solid", transform: null, overflow: "hidden" };
+      const obj14 = { borderWidth: 2.18, borderColor: "rgba(151, 151, 159, 0.24)", borderRadius: nativeDefault.radii.xl, borderStyle: "solid", transform: null, overflow: "hidden" };
       const items3 = [{ translateX: -10 }, { rotate: "7.81deg" }];
-      obj10.transform = items3;
-      obj.rewardTileContainer = obj10;
-      const obj11 = { borderRadius: nativeDefault.radii.xl - 2.18 };
-      obj.questRewardTile = obj11;
-      const obj12 = { alignItems: "center", gap: nativeDefault.space.PX_8 };
-      obj.textContainer = obj12;
-      const obj13 = { flexDirection: "column", gap: nativeDefault.space.PX_8, marginBottom: 20 };
-      obj.buttonsContainer = obj13;
+      obj14.transform = items3;
+      obj.rewardTileContainer = obj14;
+      const obj15 = { borderRadius: nativeDefault.radii.xl - 2.18 };
+      obj.questRewardTile = obj15;
+      const obj16 = { alignItems: "center", gap: nativeDefault.space.PX_8 };
+      obj.textContainer = obj16;
+      const obj17 = { flexDirection: "column", gap: nativeDefault.space.PX_8, marginBottom: 20 };
+      obj.buttonsContainer = obj17;
       obj.footer = { flexDirection: "column", width: "100%", marginTop: "auto" };
       return obj;
     }
     tmp3Result = utils_PlatformUtils;
   }
+  obj4 = utils_PlatformUtils;
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestActivityUnenrolledModal.tsx");
 
 export default function QuestActivityUnenrolledModal(questId) {
   questId = questId.questId;
-  let obj = questId(504);
   const items = [QuestStore];
-  const stateFromStores = obj.useStateFromStores(items, () => QuestStore.getQuest(questId));
+  const stateFromStores = questId(504).useStateFromStores(items, () => QuestStore.getQuest(questId));
   if (null == stateFromStores) {
     return null;
   } else {
-    obj = {};
-    obj = {
+    const obj2 = {};
+    const obj3 = {
       headerLeft: CloseButton,
       headerRight() {
           return null;
@@ -306,9 +300,10 @@ export default function QuestActivityUnenrolledModal(questId) {
           });
         }
     };
-    obj[constants.MAIN] = obj;
-    const obj1 = { screens: obj, initialRouteName: constants.MAIN };
-    return closure_11(tmp(12058).Modal, obj1);
+    obj2[constants.MAIN] = obj3;
+    const obj4 = { screens: obj2, initialRouteName: constants.MAIN };
+    return closure_11(tmp(12059).Modal, obj4);
   }
+  let obj = questId(504);
   tmp = questId;
 };

@@ -2,7 +2,7 @@
 
 // Module 8909 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import StorefrontUtils from "StorefrontUtils" /* 7334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -32,16 +32,15 @@ function maybeDispatchAdditionalActions(wishlist_items) {
   wishlist_items = wishlist_items.wishlist_items;
   const mapped = wishlist_items.map((sku) => sku.sku);
   const found = mapped.filter(GlobalUtils.isNotNullish);
-  let obj = DispatcherDefault;
-  obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
+  DispatcherDefault.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
   const storefront_pricing = wishlist_items.storefront_pricing;
   if (null != storefront_pricing) {
-    obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
-    obj = { type: "skus", skuIds: found.map((id) => id.id) };
-    obj.priceId = obj;
+    const obj2 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
+    const obj3 = { type: "skus", skuIds: found.map((id) => id.id) };
+    obj2.priceId = obj3;
     const tmp3Result = DispatcherDefault;
-    obj.data = StorefrontUtils.transformStorefrontPricesServer(storefront_pricing);
-    tmp3Result.dispatch(obj);
+    obj2.data = StorefrontUtils.transformStorefrontPricesServer(storefront_pricing);
+    tmp3Result.dispatch(obj2);
     const tmpResult = StorefrontUtils;
   }
 }
@@ -56,8 +55,7 @@ export default {
     closure_0 = wishlistId;
     closure_2 = USER_PROFILE;
     return (async () => {
-      let obj1 = { type: "WISHLIST_FETCH_START", wishlistId };
-      stateFromStores(tmp3[9]).dispatch(obj1);
+      stateFromStores(tmp3[9]).dispatch({ type: "WISHLIST_FETCH_START", wishlistId });
       const HTTP = USER_PROFILE(tmp3[11]).HTTP;
       const request = { url: closure_1_11.USER_WISHLIST(wishlistId), query: null, rejectWithError: true };
       USER_PROFILE = tmp3;
@@ -70,11 +68,11 @@ export default {
       if (1 === tmp7) {
         c4 = 0;
         closure_129_3 = closure_3;
-        stateFromStores(tmp3[9]);
-        const obj4 = { type: "WISHLIST_FETCH_FAILURE", wishlistId: closure_130_0, error: null };
+        const obj10 = { type: "WISHLIST_FETCH_FAILURE", wishlistId: closure_130_0, error: null };
         const aPIError = new USER_PROFILE(tmp3[14]).APIError(closure_129_3);
-        obj4.error = aPIError;
-        obj4.dispatch(obj4);
+        obj10.error = aPIError;
+        stateFromStores(tmp3[9]).dispatch(obj10);
+        stateFromStores(tmp3[9]);
         stateFromStores(tmp3[13]).captureException(closure_129_3);
         c6 = 3;
         stateFromStores(tmp3[13]);
@@ -95,9 +93,9 @@ export default {
         const body2 = closure_129_0.body;
         maybeDispatchAdditionalActions(body2);
         closure_129_2 = WishlistRecord.fromServer(body2);
-        obj1 = stateFromStores(tmp3[9]);
-        obj1.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: closure_130_0, wishlistData: closure_129_2, updatedAt: closure_130_1 });
+        stateFromStores(tmp3[9]).dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: closure_130_0, wishlistData: closure_129_2, updatedAt: closure_130_1 });
         c4 = 0;
+        stateFromStores(tmp3[9]);
       }
       return value;
     })();
@@ -113,8 +111,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -127,8 +125,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               currentUser = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const sku_id = tmp9;
               let body;
@@ -139,22 +137,21 @@ export default {
               c3 = 1;
               const HTTP = sku_id(tmp42[11]).HTTP;
               const request = { url: constants2.USER_WISHLIST_ITEMS, body: null, rejectWithError: true };
-              let obj1 = { sku_id };
+              const obj6 = { sku_id };
               const merged = Object.assign(extraWishlistParams());
-              request.body = obj1;
+              request.body = obj6;
               firstWishlistId = 2;
               currentUser = 1;
-              const obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj7 = { value: HTTP.post(request), done: false };
+              return obj7;
             }
           } else if (1 === tmp9) {
             c3 = 0;
             closure_128_5 = tmp42;
-            let obj4 = tmp4(tmp42[9]);
-            const obj3 = { type: "WISHLIST_ADD_SKU_FAILURE", skuId: closure_129_0, error: null };
+            const obj8 = { type: "WISHLIST_ADD_SKU_FAILURE", skuId: closure_129_0, error: null };
             const aPIError = new sku_id(tmp42[14]).APIError(closure_128_5);
-            obj3.error = aPIError;
-            obj4.dispatch(obj3);
+            obj8.error = aPIError;
+            tmp4(tmp42[9]).dispatch(obj8);
             throw closure_128_5;
           } else {
             if (2 === tmp9) {
@@ -164,20 +161,20 @@ export default {
               } else if (arg0 === 2) {
                 c3 = 0;
                 currentUser = 3;
-                obj4 = { value, done: true };
-                return obj4;
+                const obj9 = { value, done: true };
+                return obj9;
               } else {
                 closure_128_0 = value;
                 body = value.body;
                 maybeDispatchAdditionalActions(body);
                 closure_128_2 = WishlistRecord.fromServer(body);
-                const obj5 = { type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: closure_128_2.id, skuId: closure_129_0, wishlistData: closure_128_2 };
-                tmp4(tmp42[9]).dispatch(obj5);
+                const obj11 = { type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: closure_128_2.id, skuId: closure_129_0, wishlistData: closure_128_2 };
+                tmp4(tmp42[9]).dispatch(obj11);
                 if (null != closure_129_1) {
                   c3 = 2;
                   closure_128_3 = getWishlistSkuIds(closure_128_2);
-                  const obj6 = { wishlist_id: closure_128_2.id, action_type: "ADD", sku_id: closure_129_0, sku_ids: closure_128_3, location_stack: closure_129_1 };
-                  tmp4(tmp42[15]).track(constants.WISHLIST_UPDATED, obj6);
+                  const obj13 = { wishlist_id: closure_128_2.id, action_type: "ADD", sku_id: closure_129_0, sku_ids: closure_128_3, location_stack: closure_129_1 };
+                  tmp4(tmp42[15]).track(constants.WISHLIST_UPDATED, obj13);
                   c3 = 1;
                   const obj12 = tmp4(tmp42[15]);
                 }
@@ -197,7 +194,7 @@ export default {
                 }
                 c3 = 0;
                 currentUser = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               currentUser = 3;
@@ -208,11 +205,10 @@ export default {
               if (null != currentUser2) {
                 if (null == firstWishlistId.getFirstWishlistId(currentUser2.id)) {
                   c3 = 3;
-                  obj1 = sku_id(tmp42[16]);
                   firstWishlistId = 5;
                   currentUser = 1;
-                  const obj7 = { value: obj1.fetchProfile(currentUser2.id), done: false };
-                  return obj7;
+                  const obj14 = { value: sku_id(tmp42[16]).fetchProfile(currentUser2.id), done: false };
+                  return obj14;
                 }
               }
             }
@@ -244,8 +240,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -258,35 +254,34 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               skuId = tmp3;
               wishlistId = tmp7;
               let body;
               closure_128_1 = undefined;
               closure_128_2 = undefined;
-              let obj1 = { type: "WISHLIST_REMOVE_SKU_START", wishlistId, skuId };
-              skuId(tmp26[9]).dispatch(obj1);
+              const obj5 = { type: "WISHLIST_REMOVE_SKU_START", wishlistId, skuId };
+              skuId(tmp26[9]).dispatch(obj5);
               c3 = 1;
               const HTTP = wishlistId(tmp26[11]).HTTP;
               const request = { url: closure_1_11.USER_WISHLIST_ITEM(wishlistId, skuId), query: null, rejectWithError: true };
-              const obj2 = {};
+              const obj6 = {};
               const merged = Object.assign(extraWishlistParams());
-              request.query = obj2;
+              request.query = obj6;
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: HTTP.del(request), done: false };
-              return obj3;
+              const obj8 = { value: HTTP.del(request), done: false };
+              return obj8;
             }
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_3 = tmp26;
-            obj1 = skuId(tmp26[9]);
-            const obj4 = { type: "WISHLIST_REMOVE_SKU_FAILURE", wishlistId: closure_129_0, skuId: closure_129_1, error: null };
+            const obj10 = { type: "WISHLIST_REMOVE_SKU_FAILURE", wishlistId: closure_129_0, skuId: closure_129_1, error: null };
             const aPIError = new wishlistId(tmp26[14]).APIError(closure_128_3);
-            obj4.error = aPIError;
-            obj1.dispatch(obj4);
+            obj10.error = aPIError;
+            skuId(tmp26[9]).dispatch(obj10);
             throw closure_128_3;
           } else {
             if (2 === tmp7) {
@@ -296,23 +291,23 @@ export default {
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 body = value.body;
                 maybeDispatchAdditionalActions(body);
                 closure_128_1 = WishlistRecord.fromServer(body);
-                let obj6 = skuId(tmp26[9]);
-                const obj5 = { type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: closure_129_0, skuId: closure_129_1, wishlistData: closure_128_1 };
-                obj6.dispatch(obj5);
+                const obj12 = { type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: closure_129_0, skuId: closure_129_1, wishlistData: closure_128_1 };
+                skuId(tmp26[9]).dispatch(obj12);
                 if (null != closure_129_2) {
                   c3 = 2;
                   closure_128_2 = getWishlistSkuIds(closure_128_1);
-                  obj6 = { wishlist_id: closure_128_1.id, action_type: "REMOVE", sku_id: closure_129_1, sku_ids: closure_128_2, location_stack: closure_129_2 };
-                  skuId(tmp26[15]).track(constants.WISHLIST_UPDATED, obj6);
+                  const obj13 = { wishlist_id: closure_128_1.id, action_type: "REMOVE", sku_id: closure_129_1, sku_ids: closure_128_2, location_stack: closure_129_2 };
+                  skuId(tmp26[15]).track(constants.WISHLIST_UPDATED, obj13);
                   c3 = 1;
                   const obj9 = skuId(tmp26[15]);
                 }
+                const obj7 = skuId(tmp26[9]);
               }
             } else {
               c3 = 1;
@@ -343,8 +338,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -357,8 +352,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               const visibility = tmp5;
               closure_129_0 = undefined;
@@ -369,13 +364,13 @@ export default {
                 wishlistId = maybeDispatchAdditionalActions;
                 const HTTP = wishlistId(tmp3[11]).HTTP;
                 const request = { url: closure_1_11.USER_WISHLIST_PATCH(wishlistId), body: null, rejectWithError: true };
-                const obj1 = { visibility };
+                const obj5 = { visibility };
                 const merged = Object.assign(extraWishlistParams());
-                request.body = obj1;
+                request.body = obj5;
                 currentUser = 2;
                 c6 = 1;
-                const obj2 = { value: HTTP.patch(request), done: false };
-                return obj2;
+                const obj6 = { value: HTTP.patch(request), done: false };
+                return obj6;
               } else {
                 c6 = 3;
               }
@@ -383,11 +378,10 @@ export default {
           } else if (1 === tmp8) {
             c3 = 0;
             closure_129_1 = closure_4;
-            let obj3 = visibility(tmp3[9]);
-            obj3 = { type: "WISHLIST_UPDATE_VISIBILITY_FAILURE", wishlistId: closure_130_0, error: null };
+            const obj7 = { type: "WISHLIST_UPDATE_VISIBILITY_FAILURE", wishlistId: closure_130_0, error: null };
             const aPIError = new wishlistId(tmp3[14]).APIError(closure_129_1);
-            obj3.error = aPIError;
-            obj3.dispatch(obj3);
+            obj7.error = aPIError;
+            visibility(tmp3[9]).dispatch(obj7);
             throw closure_129_1;
           } else if (2 !== tmp8) {
             if (3 === tmp8) {
@@ -398,7 +392,7 @@ export default {
             } else if (arg0 === 2) {
               c3 = 0;
               c6 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               c3 = 1;
@@ -411,18 +405,18 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             wishlistId(value.body);
-            const obj5 = { type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: closure_130_0, visibility: closure_130_1 };
-            visibility(tmp3[9]).dispatch(obj5);
+            const obj9 = { type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: closure_130_0, visibility: closure_130_1 };
+            visibility(tmp3[9]).dispatch(obj9);
             c3 = 2;
             const obj11 = visibility(tmp3[9]);
             currentUser = 4;
             c6 = 1;
-            const obj6 = { value: wishlistId(tmp3[16]).fetchProfile(closure_129_0.id), done: false };
-            return obj6;
+            const obj10 = { value: wishlistId(tmp3[16]).fetchProfile(closure_129_0.id), done: false };
+            return obj10;
           }
         } catch (tmp34) {
           closure_4 = tmp34;
@@ -453,14 +447,14 @@ export default {
       if (1 === tmp7) {
         c3 = 0;
         closure_128_3 = tmp41;
-        const obj4 = { type: "WISHLIST_REORDER_FAILURE", wishlistId: closure_129_0, skuId: closure_129_1, error: null };
+        const obj9 = { type: "WISHLIST_REORDER_FAILURE", wishlistId: closure_129_0, skuId: closure_129_1, error: null };
         const aPIError = new wishlistId(tmp41[14]).APIError(closure_128_3);
-        obj4.error = aPIError;
-        skuId(tmp41[9]).dispatch(obj4);
-        let obj5 = skuId(tmp41[13]);
-        obj5.captureException(closure_128_3);
-        c5 = 3;
+        obj9.error = aPIError;
+        skuId(tmp41[9]).dispatch(obj9);
         skuId(tmp41[9]);
+        skuId(tmp41[13]).captureException(closure_128_3);
+        c5 = 3;
+        skuId(tmp41[13]);
       } else {
         if (2 === tmp7) {
           if (arg0 === 1) {
@@ -470,8 +464,7 @@ export default {
             const body = value.body;
             maybeDispatchAdditionalActions(body);
             closure_128_1 = WishlistRecord.fromServer(body);
-            obj5 = { type: "WISHLIST_REORDER_SUCCESS", wishlistId: closure_129_0, wishlistData: closure_128_1 };
-            skuId(tmp41[9]).dispatch(obj5);
+            skuId(tmp41[9]).dispatch({ type: "WISHLIST_REORDER_SUCCESS", wishlistId: closure_129_0, wishlistData: closure_128_1 });
             if (null != closure_129_5) {
               closure_128_2 = getWishlistSkuIds(closure_128_1);
               skuId(tmp41[15]).track(constants.WISHLIST_UPDATED, { wishlist_id: closure_129_0, action_type: "REORDER", sku_id: closure_129_1, sku_ids: closure_128_2, location_stack: closure_129_5 });
@@ -496,40 +489,38 @@ export default {
       flag = true;
     }
     return flag(function*() {
-      let obj1 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: tmp3, applicationIds: application_ids };
-      tmp3(tmp21[9]).dispatch(obj1);
+      tmp3(tmp21[9]).dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: tmp3, applicationIds: application_ids });
       const HTTP = application_ids(tmp21[11]).HTTP;
       const request = { url: constants.USER_WISHLIST_RECOMMENDATIONS, query: null, rejectWithError: true };
-      let obj2 = { application_ids, user_ids: tmp3, max_recommendations: num, localize: flag };
       const merged = Object.assign(extraWishlistParams());
-      request.query = obj2;
+      request.query = { application_ids, user_ids: tmp3, max_recommendations: num, localize: flag };
       yield HTTP.get(request);
       if (1 === tmp7) {
         c3 = 0;
         closure_128_2 = tmp21;
-        obj1 = tmp3(tmp21[13]);
-        obj1.captureException(closure_128_2);
-        obj2 = tmp3(tmp21[9]);
-        obj2.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: closure_129_1, applicationIds: closure_129_0 });
+        tmp3(tmp21[13]).captureException(closure_128_2);
+        tmp3(tmp21[13]);
+        tmp3(tmp21[9]).dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: closure_129_1, applicationIds: closure_129_0 });
         c5 = 3;
+        tmp3(tmp21[9]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 !== 2) {
         const body = value.body;
         (function maybeDispatchAdditionalActionsForRecommendation(skus) {
-          let obj = closure_1_1(dependencyMap[9]);
-          obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: skus.skus });
+          closure_1_1(dependencyMap[9]).dispatch({ type: "SKUS_FETCH_SUCCESS", skus: skus.skus });
           ({ storefront_pricing, skus } = skus);
           if (null != storefront_pricing) {
-            obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
-            obj = { type: "skus", skuIds: skus.map((id) => id.id) };
-            obj.priceId = obj;
+            const obj2 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
+            const obj3 = { type: "skus", skuIds: skus.map((id) => id.id) };
+            obj2.priceId = obj3;
             const tmpResult = closure_1_1(dependencyMap[9]);
-            obj.data = closure_1_0(dependencyMap[10]).transformStorefrontPricesServer(storefront_pricing);
-            tmpResult.dispatch(obj);
+            obj2.data = closure_1_0(dependencyMap[10]).transformStorefrontPricesServer(storefront_pricing);
+            tmpResult.dispatch(obj2);
             const obj5 = closure_1_0(dependencyMap[10]);
           }
+          const obj = closure_1_1(dependencyMap[9]);
         })(body);
         closure_128_1 = WishlistRecommendationRecord.fromServer(body);
         tmp3(tmp21[9]).dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: closure_129_1, applicationIds: closure_129_0, data: closure_128_1 });

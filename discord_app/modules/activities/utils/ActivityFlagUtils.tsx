@@ -1,6 +1,6 @@
-// === Module 11595: ActivityFlagUtils ===
+// === Module 11596: ActivityFlagUtils ===
 
-// Module 11595 (ActivityFlagUtils)
+// Module 11596 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;

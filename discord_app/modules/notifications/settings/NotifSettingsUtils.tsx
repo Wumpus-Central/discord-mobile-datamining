@@ -1,9 +1,11 @@
-// === Module 13768: settings/NotifSettingsUtils ===
+// === Module 13769: settings/NotifSettingsUtils ===
 
-// Module 13768 (settings/NotifSettingsUtils)
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
-import notification_settings from "notification_settings" /* 13770 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13769 */;
+// Module 13769 (settings/NotifSettingsUtils)
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
+import notification_settings from "notification_settings" /* 13771 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13770 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

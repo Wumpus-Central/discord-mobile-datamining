@@ -1,10 +1,10 @@
-// === Module 16028: ScreenRecordingUtils ===
+// === Module 16030: ScreenRecordingUtils ===
 
-// Module 16028 (ScreenRecordingUtils)
+// Module 16030 (ScreenRecordingUtils)
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10315 */;
-import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16029 */;
-import StudyConfig from "StudyConfig" /* 16030 */;
+import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16031 */;
+import StudyConfig from "StudyConfig" /* 16032 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,8 +16,8 @@ let closure_7 = async function _getLatestVideo() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,27 +30,26 @@ let closure_7 = async function _getLatestVideo() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           closure_128_0 = undefined;
           c3 = 1;
-          const obj1 = { first: 1, groupTypes: "Recents", assetType: "Videos", include: ["filename", "fileSize", "playableDuration", "imageSize"] };
+          const obj5 = { first: 1, groupTypes: "Recents", assetType: "Videos", include: ["filename", "fileSize", "playableDuration", "imageSize"] };
           c4 = 2;
           c5 = 1;
-          let obj2 = { value: photos.getPhotos(obj1), done: false };
-          return obj2;
+          const obj6 = { value: photos.getPhotos(obj5), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        obj2 = closure_129_1(closure_129_2[3]);
-        const obj3 = { title: "Error", body: null };
+        const obj7 = { title: "Error", body: null };
         const _HermesInternal = HermesInternal;
-        obj3.body = "Failed to get latest video from photo gallery, error: " + closure_128_1;
-        obj2.show(obj3);
+        obj7.body = "Failed to get latest video from photo gallery, error: " + closure_128_1;
+        closure_129_1(closure_129_2[3]).show(obj7);
         c5 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -59,8 +58,8 @@ let closure_7 = async function _getLatestVideo() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_128_0 = value;
         let first = null;
@@ -75,7 +74,7 @@ let closure_7 = async function _getLatestVideo() {
         }
         c3 = 0;
         c5 = 3;
-        obj = { value: first, done: true };
+        const obj = { value: first, done: true };
         return obj;
       }
     } catch (tmp25) {
@@ -97,8 +96,8 @@ let closure_8 = async function _checkAndRequestPermissions() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -111,8 +110,8 @@ let closure_8 = async function _checkAndRequestPermissions() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -120,17 +119,16 @@ let closure_8 = async function _checkAndRequestPermissions() {
           c3 = 1;
           c4 = 2;
           c5 = 1;
-          let obj1 = { value: ScreenRecordingManagerDefault.requestPermissions(), done: false };
-          return obj1;
+          const obj7 = { value: ScreenRecordingManagerDefault.requestPermissions(), done: false };
+          return obj7;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        let obj3 = closure_129_1(closure_129_2[3]);
-        const obj2 = { title: "Error", body: null };
+        const obj8 = { title: "Error", body: null };
         const _HermesInternal = HermesInternal;
-        obj2.body = "Failed to check permissions, error: " + closure_128_1;
-        obj3.show(obj2);
+        obj8.body = "Failed to check permissions, error: " + closure_128_1;
+        closure_129_1(closure_129_2[3]).show(obj8);
         c5 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
@@ -139,20 +137,20 @@ let closure_8 = async function _checkAndRequestPermissions() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_128_0 = value;
         if (closure_128_0.photosGranted) {
           let flag2 = closure_128_0.microphoneGranted;
           if (!flag2) {
-            obj1 = closure_129_1(closure_129_2[3]);
-            obj1.show({ title: "Error", body: "Microphone permission is required to record audio" });
+            closure_129_1(closure_129_2[3]).show({ title: "Error", body: "Microphone permission is required to record audio" });
             flag2 = false;
+            const obj2 = closure_129_1(closure_129_2[3]);
           }
         } else {
-          obj = closure_129_1(closure_129_2[3]);
-          obj.show({ title: "Error", body: "Photos permission is required to save recordings" });
+          closure_129_1(closure_129_2[3]).show({ title: "Error", body: "Photos permission is required to save recordings" });
+          const obj = closure_129_1(closure_129_2[3]);
         }
         c3 = 0;
         c5 = 3;
@@ -176,8 +174,8 @@ let closure_9 = async function _startRecordingProcess(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -190,8 +188,8 @@ let closure_9 = async function _startRecordingProcess(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -201,56 +199,54 @@ let closure_9 = async function _startRecordingProcess(arg0) {
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: ScreenRecordingManagerDefault.startRecording(), done: false };
-          return obj1;
+          const obj5 = { value: ScreenRecordingManagerDefault.startRecording(), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_3 = closure_3;
-        let obj2 = { title: "Error", body: null };
+        const obj7 = { title: "Error", body: null };
         const _HermesInternal = HermesInternal;
-        obj2.body = "Failed to start screen recording, error: " + closure_129_3;
-        closure_130_1(closure_130_2[3]).show(obj2);
+        obj7.body = "Failed to start screen recording, error: " + closure_129_3;
+        closure_130_1(closure_130_2[3]).show(obj7);
         const state = closure_130_4.getState();
         state.stopRecording();
         c6 = 3;
-        const obj3 = { value: { success: false }, done: true };
-        return obj3;
+        const obj8 = { value: { success: false }, done: true };
+        return obj8;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_129_1 = value;
         if (closure_129_1.success) {
           let surveyConfig = null;
           if (undefined !== closure_129_0) {
-            obj2 = closure_130_0(closure_130_2[5]);
-            surveyConfig = obj2.getSurveyConfig(closure_129_0);
+            surveyConfig = closure_130_0(closure_130_2[5]).getSurveyConfig(closure_129_0);
+            const obj3 = closure_130_0(closure_130_2[5]);
           }
           closure_129_2 = surveyConfig;
           const state1 = closure_130_4.getState();
           state1.startRecording(closure_129_1.microphoneEnabled, closure_129_0, closure_129_2);
           const state2 = closure_130_4.getState();
           state2.resetActionSheet();
-          let obj5 = closure_130_1(closure_130_2[6]);
-          obj5.openLazy(closure_130_0(closure_130_2[8])(closure_130_2[7], closure_130_2.paths), "ScreenRecordingActionSheet");
-          obj5 = { success: true, microphoneEnabled: closure_129_1.microphoneEnabled };
+          closure_130_1(closure_130_2[6]).openLazy(closure_130_0(closure_130_2[8])(closure_130_2[7], closure_130_2.paths), "ScreenRecordingActionSheet");
+          const obj11 = { success: true, microphoneEnabled: closure_129_1.microphoneEnabled };
           c4 = 0;
           c6 = 3;
-          const obj6 = { value: obj5, done: true };
-          return obj6;
+          const obj12 = { value: obj11, done: true };
+          return obj12;
         } else {
-          obj = closure_130_1(closure_130_2[3]);
-          obj.show({ title: "Error", body: "Failed to start screen recording" });
+          closure_130_1(closure_130_2[3]).show({ title: "Error", body: "Failed to start screen recording" });
           c4 = 0;
           c6 = 3;
-          const obj7 = { value: { success: false }, done: true };
-          return obj7;
+          const obj13 = { value: { success: false }, done: true };
+          return obj13;
         }
       }
     } catch (tmp49) {
@@ -272,8 +268,8 @@ let closure_10 = async function _stopRecordingProcess() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -286,25 +282,24 @@ let closure_10 = async function _stopRecordingProcess() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           c3 = 1;
           c4 = 2;
           c5 = 1;
-          const obj1 = { value: ScreenRecordingManagerDefault.stopRecording(), done: false };
-          return obj1;
+          const obj5 = { value: ScreenRecordingManagerDefault.stopRecording(), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_0 = closure_2;
-        let obj3 = closure_129_1(closure_129_2[3]);
-        const obj2 = { title: "Error", body: null };
+        const obj6 = { title: "Error", body: null };
         const _HermesInternal = HermesInternal;
-        obj2.body = "Failed to stop screen recording, error: " + closure_128_0;
-        obj3.show(obj2);
+        obj6.body = "Failed to stop screen recording, error: " + closure_128_0;
+        closure_129_1(closure_129_2[3]).show(obj6);
         const state = closure_129_4.getState();
         state.stopRecording();
         c5 = 3;
@@ -315,19 +310,19 @@ let closure_10 = async function _stopRecordingProcess() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         let flag = value.success;
         if (!flag) {
-          obj = closure_129_1(closure_129_2[3]);
-          obj.show({ title: "Error", body: "Failed to stop screen recording, but not error" });
+          closure_129_1(closure_129_2[3]).show({ title: "Error", body: "Failed to stop screen recording, but not error" });
           flag = false;
+          const obj = closure_129_1(closure_129_2[3]);
         }
         c3 = 0;
         c5 = 3;
-        const obj4 = { value: flag, done: true };
-        return obj4;
+        const obj9 = { value: flag, done: true };
+        return obj9;
       }
     } catch (tmp24) {
       closure_2 = tmp24;
@@ -348,8 +343,8 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -362,8 +357,8 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_6 = tmp3;
           closure_5 = tmp5;
@@ -392,21 +387,21 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
                 AlertActionCreatorsDefault.show({ title: "Submission Failed", body: "Survey configuration not found" });
                 c8 = 0;
                 c10 = 3;
-                let obj1 = { value: undefined, done: true };
-                return obj1;
+                const obj5 = { value: undefined, done: true };
+                return obj5;
               } else {
                 c9 = 2;
                 c10 = 1;
-                const obj2 = { value: bug_reporter_BugReportUtils.fetchBugReportConfig(), done: false };
-                return obj2;
+                const obj7 = { value: bug_reporter_BugReportUtils.fetchBugReportConfig(), done: false };
+                return obj7;
               }
             }
           }
           AlertActionCreatorsDefault.show({ title: "Submission Failed", body: "No survey selected" });
           c8 = 0;
           c10 = 3;
-          const obj3 = { value: undefined, done: true };
-          return obj3;
+          const obj9 = { value: undefined, done: true };
+          return obj9;
         }
       } else {
         if (1 === tmp8) {
@@ -421,8 +416,8 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
           } else if (arg0 === 2) {
             c8 = 0;
             c10 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             const features = value.features;
             closure_133_3 = features.find((name) => {
@@ -444,7 +439,7 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
             closure_133_4 = [];
             c9 = 3;
             c10 = 1;
-            let obj5 = {
+            const obj11 = {
               value: (function getLatestVideo() {
                           const self = this;
                           const apply = closure_1_7.apply;
@@ -457,7 +452,7 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
                         })(),
               done: false
             };
-            return obj5;
+            return obj11;
           }
         } else {
           if (3 === tmp8) {
@@ -467,47 +462,47 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
             } else if (arg0 === 2) {
               c8 = 0;
               c10 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj12 = { value, done: true };
+              return obj12;
             } else {
               closure_133_5 = value;
               if (null != closure_133_5) {
                 const id = closure_133_5.node.id;
                 let uri = id;
-                let tmp151 = closure_134_1(closure_134_2[10]);
                 if (id == null) {
                   uri = closure_133_5.node.image.uri;
                 }
                 const size = { id: uri, uri: closure_133_5.node.image.uri, originalUri: closure_133_5.node.image.uri, mimeType: closure_133_5.node.image.mimeType, width: closure_133_5.node.image.width, height: closure_133_5.node.image.height, filename: closure_133_5.node.image.filename, playableDuration: closure_133_5.node.image.playableDuration, platform: closure_134_0(closure_134_2[10]).UploadPlatform.REACT_NATIVE };
-                tmp151 = new tmp151(size);
-                closure_133_6 = tmp151;
-                let arr = closure_133_4.push(closure_133_6);
+                const tmp1512 = new closure_134_1(closure_134_2[10])(size);
+                closure_133_6 = tmp1512;
+                closure_133_4.push(closure_133_6);
+                const tmp151 = closure_134_1(closure_134_2[10]);
               }
               if (null != closure_133_1) {
                 if ("" !== closure_133_1) {
                   const parts = closure_133_1.split("/");
-                  arr = parts.pop();
-                  closure_3 = arr;
-                  if (arr == null) {
+                  const arr2 = parts.pop();
+                  closure_3 = arr2;
+                  if (arr2 == null) {
                     const _Date = Date;
                     const _HermesInternal = HermesInternal;
                     closure_3 = "audio_" + Date.now() + ".wav";
                   }
                   closure_133_7 = closure_3;
-                  let obj7 = { id: null, uri: null, originalUri: null, mimeType: "audio/wav", filename: null, platform: null };
+                  const obj13 = { id: null, uri: null, originalUri: null, mimeType: "audio/wav", filename: null, platform: null };
                   const _Date2 = Date;
-                  let tmp63 = closure_134_1(closure_134_2[10]);
                   const _HermesInternal2 = HermesInternal;
-                  obj7.id = "audio_" + Date.now();
+                  obj13.id = "audio_" + Date.now();
                   const _HermesInternal3 = HermesInternal;
-                  obj7.uri = "file://" + closure_133_1;
+                  obj13.uri = "file://" + closure_133_1;
                   const _HermesInternal4 = HermesInternal;
-                  obj7.originalUri = "file://" + closure_133_1;
-                  obj7.filename = closure_133_7;
-                  obj7.platform = closure_134_0(closure_134_2[10]).UploadPlatform.REACT_NATIVE;
-                  tmp63 = new tmp63(obj7);
-                  closure_133_8 = tmp63;
+                  obj13.originalUri = "file://" + closure_133_1;
+                  obj13.filename = closure_133_7;
+                  obj13.platform = closure_134_0(closure_134_2[10]).UploadPlatform.REACT_NATIVE;
+                  const tmp632 = new closure_134_1(closure_134_2[10])(obj13);
+                  closure_133_8 = tmp632;
                   closure_133_4.push(closure_133_8);
+                  const tmp63 = closure_134_1(closure_134_2[10]);
                 }
               }
               if (undefined !== closure_133_0) {
@@ -519,17 +514,17 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
                   const _Date3 = Date;
                   const _HermesInternal5 = HermesInternal;
                   closure_133_10 = "transcription_" + Date.now() + ".json";
-                  let obj14 = closure_134_0(closure_134_2[11]);
+                  const obj15 = closure_134_0(closure_134_2[11]);
                   c9 = 4;
                   c10 = 1;
-                  const obj8 = { value: obj14.writeFile("cache", closure_133_10, closure_133_9, "utf8"), done: false };
-                  return obj8;
+                  const obj16 = { value: obj15.writeFile("cache", closure_133_10, closure_133_9, "utf8"), done: false };
+                  return obj16;
                 }
               }
-              let obj13 = closure_134_0(closure_134_2[12]);
-              const attachments = obj13.getAttachments(closure_133_4);
+              const attachments = closure_134_0(closure_134_2[12]).getAttachments(closure_133_4);
               c9 = 5;
               c10 = 1;
+              const obj14 = closure_134_0(closure_134_2[12]);
             }
           } else if (4 === tmp8) {
             if (arg0 === 1) {
@@ -539,18 +534,18 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
               closure_133_11 = value;
               if (null != closure_133_11) {
                 if ("" !== closure_133_11) {
-                  const obj9 = { id: null, uri: null, originalUri: null, mimeType: "application/json", filename: null, platform: null };
+                  const obj17 = { id: null, uri: null, originalUri: null, mimeType: "application/json", filename: null, platform: null };
                   const _Date4 = Date;
-                  let tmp131 = closure_134_1(closure_134_2[10]);
                   const _HermesInternal6 = HermesInternal;
-                  obj9.id = "transcription_" + Date.now();
-                  obj9.uri = closure_133_11;
-                  obj9.originalUri = closure_133_11;
-                  obj9.filename = closure_133_10;
-                  obj9.platform = closure_134_0(closure_134_2[10]).UploadPlatform.REACT_NATIVE;
-                  tmp131 = new tmp131(obj9);
-                  closure_133_12 = tmp131;
+                  obj17.id = "transcription_" + Date.now();
+                  obj17.uri = closure_133_11;
+                  obj17.originalUri = closure_133_11;
+                  obj17.filename = closure_133_10;
+                  obj17.platform = closure_134_0(closure_134_2[10]).UploadPlatform.REACT_NATIVE;
+                  const tmp1312 = new closure_134_1(closure_134_2[10])(obj17);
+                  closure_133_12 = tmp1312;
                   closure_133_4.push(closure_133_12);
+                  const tmp131 = closure_134_1(closure_134_2[10]);
                 }
               }
             }
@@ -561,30 +556,28 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
             } else if (arg0 === 2) {
               c8 = 0;
               c10 = 3;
-              const obj10 = { value, done: true };
-              return obj10;
+              const obj18 = { value, done: true };
+              return obj18;
             } else {
               closure_133_13 = value;
               if (null == closure_133_13) {
-                obj7 = closure_134_1(closure_134_2[3]);
-                obj7.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+                closure_134_1(closure_134_2[3]).show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
                 c8 = 0;
                 c10 = 3;
-                const obj11 = { value: undefined, done: true };
-                return obj11;
+                const obj19 = { value: undefined, done: true };
+                return obj19;
               } else {
-                const obj12 = { name: closure_133_2.uploadConfig.reportTitle, description: closure_133_2.uploadConfig.reportDescription, priority: closure_133_2.uploadConfig.priority, feature: null, url: "" };
-                obj13 = closure_133_3;
+                const obj22 = { name: closure_133_2.uploadConfig.reportTitle, description: closure_133_2.uploadConfig.reportDescription, priority: closure_133_2.uploadConfig.priority, feature: null, url: "" };
+                let obj24 = closure_133_3;
                 if (closure_133_3 == null) {
-                  obj13 = { name: closure_133_2.uploadConfig.featureName, squad: closure_133_2.uploadConfig.squadName, asana_inbox_id: "Array" };
+                  obj24 = { name: closure_133_2.uploadConfig.featureName, squad: closure_133_2.uploadConfig.squadName, asana_inbox_id: "Array" };
                 }
-                obj12.feature = obj13;
-                closure_133_14 = obj12;
-                obj5 = closure_134_0(closure_134_2[9]);
+                obj22.feature = obj24;
+                closure_133_14 = obj22;
                 c9 = 6;
                 c10 = 1;
-                obj14 = { value: obj5.submitReport(closure_133_14, { overridePlatformInformation: false }, closure_133_13), done: false };
-                return obj14;
+                const obj26 = { value: closure_134_0(closure_134_2[9]).submitReport(closure_133_14, { overridePlatformInformation: false }, closure_133_13), done: false };
+                return obj26;
               }
             }
           } else if (arg0 === 1) {
@@ -592,24 +585,24 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
             throw value;
           } else if (arg0 !== 2) {
             if (value.ok) {
-              obj1 = closure_134_1(closure_134_2[3]);
-              const obj15 = { title: closure_133_2.uploadConfig.successTitle, body: closure_133_2.uploadConfig.successMessage };
-              obj1.show(obj15);
+              const obj27 = { title: closure_133_2.uploadConfig.successTitle, body: closure_133_2.uploadConfig.successMessage };
+              closure_134_1(closure_134_2[3]).show(obj27);
+              const obj2 = closure_134_1(closure_134_2[3]);
             } else {
-              obj = closure_134_1(closure_134_2[3]);
-              obj.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+              closure_134_1(closure_134_2[3]).show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+              let obj = closure_134_1(closure_134_2[3]);
             }
             c8 = 0;
           }
           c8 = 0;
           c10 = 3;
-          const obj16 = { value, done: true };
-          return obj16;
+          const obj28 = { value, done: true };
+          return obj28;
         }
         c8 = 0;
         c10 = 3;
-        const obj17 = { value, done: true };
-        return obj17;
+        const obj29 = { value, done: true };
+        return obj29;
       }
     } catch (tmp108) {
       closure_7 = tmp108;
@@ -630,8 +623,8 @@ let closure_12 = async function _handleStopAndSend(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -644,8 +637,8 @@ let closure_12 = async function _handleStopAndSend(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = nativeEventEmitter.addListener("ScreenRecordingPreviewFinished", (saved) => {
             closure_0 = saved;
@@ -660,7 +653,7 @@ let closure_12 = async function _handleStopAndSend(arg0) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     return { value: "HermesInternal", done: null };
@@ -674,15 +667,15 @@ let closure_12 = async function _handleStopAndSend(arg0) {
                         throw value;
                       } else if (arg0 === 2) {
                         c2 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         if (tmp4 != null) {
                           tmp9();
                         }
                         c1 = 1;
                         c2 = 1;
-                        const obj1 = {
+                        const obj3 = {
                           value: (function submitBugReportWithScreenRecording() {
                                     const self = this;
                                     const apply = closure_1_11.apply;
@@ -695,15 +688,15 @@ let closure_12 = async function _handleStopAndSend(arg0) {
                                   })(tmp4.timestampedTranscription, tmp4.audioFilePath),
                           done: false
                         };
-                        return obj1;
+                        return obj3;
                       }
                     } else if (arg0 === 1) {
                       c2 = 3;
                       throw value;
                     } else if (arg0 === 2) {
                       c2 = 3;
-                      const obj2 = { value, done: true };
-                      return obj2;
+                      const obj4 = { value, done: true };
+                      return obj4;
                     } else {
                       state = closure_2_4.getState();
                       state.setIsUploading(false);
@@ -719,20 +712,20 @@ let closure_12 = async function _handleStopAndSend(arg0) {
                 }
               }), 1000);
             } else {
-              let obj = closure_1(closure_1_2[3]);
               let str = "Recording was shared but not saved to Photos, so it cannot be sent.";
               if ("cancelled" === saved.action) {
                 str = "Recording was cancelled and not saved.";
               }
-              obj = { title: "Recording Not Sent", body: str };
-              obj.show(obj);
+              let obj2 = { title: "Recording Not Sent", body: str };
+              closure_1(dependencyMap[3]).show(obj2);
+              let obj = closure_1(dependencyMap[3]);
             }
           });
           state = state.getState();
           state.setIsUploading(true);
           c2 = 1;
           c1 = 1;
-          let obj1 = {
+          let obj4 = {
             value: (function stopRecordingProcess() {
                       const self = this;
                       const apply = closure_1_10.apply;
@@ -745,14 +738,14 @@ let closure_12 = async function _handleStopAndSend(arg0) {
                     })(),
             done: false
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -787,16 +780,14 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
     } else {
       closure_129_1 = value;
       if (closure_129_1) {
-        let obj3 = closure_130_0(closure_130_2[13]);
-        const windowDimensions = obj3.getWindowDimensions();
+        const windowDimensions = closure_130_0(closure_130_2[13]).getWindowDimensions();
         const width = windowDimensions.width;
         const height = windowDimensions.height;
-        let obj4 = closure_130_1(closure_130_2[4]);
+        closure_130_0(closure_130_2[13]);
         const size = { width, height, bitrate: 50000, frameRate: 15 };
         c3 = 2;
         c4 = 1;
-        obj3 = { value: obj4.setRecordingQuality(size), done: false };
-        return obj3;
+        return { value: closure_130_1(closure_130_2[4]).setRecordingQuality(size), done: false };
       } else {
         c4 = 3;
       }
@@ -807,8 +798,7 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
       throw value;
     } else if (arg0 === 2) {
       c4 = 3;
-      obj4 = { value, done: true };
-      return obj4;
+      return { value, done: true };
     } else {
       c3 = 3;
       c4 = 1;
@@ -837,7 +827,7 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16029).useScreenRecordingStore;
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
 let size = fn(2);

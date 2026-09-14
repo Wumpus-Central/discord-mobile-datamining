@@ -1,11 +1,11 @@
-// === Module 12421: components/ChannelBadge ===
+// === Module 12422: components/ChannelBadge ===
 
-// Module 12421 (components/ChannelBadge)
+// Module 12422 (components/ChannelBadge)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import renderChannelBadge from "renderChannelBadge" /* 12420 */;
+import renderChannelBadge from "renderChannelBadge" /* 12421 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
   ({ postsWithUnreadsCount, newPostCount, eventsMentionCount } = newChannel);
   if (null != num) {
     if (num > 0) {
-      let obj = { value: num, isMentionLowImportance: tmp };
+      const obj2 = { value: num, isMentionLowImportance: tmp };
       let tmp2 = jsx(native.Badge, { value: num, isMentionLowImportance: tmp });
     }
     return tmp2;
@@ -35,16 +35,16 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
-        obj = { variant: "text-xs/bold", color: "text-brand", children: null };
+        const obj3 = { variant: "text-xs/bold", color: "text-brand", children: null };
         const intl = util.intl;
-        const obj1 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
-        obj.children = intl.format(util.t.GkAbqY, obj1);
+        const obj4 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
+        obj3.children = intl.format(util.t.GkAbqY, obj4);
         tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
-        const obj2 = { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount };
+        const obj6 = { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount };
         tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount });
       }
     }
@@ -52,7 +52,7 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
     if (null != eventsMentionCount) {
       tmp2 = null;
       if (eventsMentionCount > 0) {
-        obj = { value: eventsMentionCount, eventsMentionBadge: true };
+        const obj = { value: eventsMentionCount, eventsMentionBadge: true };
         tmp2 = jsx(native.Badge, { value: eventsMentionCount, eventsMentionBadge: true });
       }
     }

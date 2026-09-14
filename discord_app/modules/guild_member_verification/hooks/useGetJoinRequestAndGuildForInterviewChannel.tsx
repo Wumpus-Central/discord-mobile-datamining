@@ -1,6 +1,6 @@
-// === Module 12761: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 12762: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 12761 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 12762 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 504 */;
 import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5622 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,16 +10,16 @@ import PermissionStore from "PermissionStore" /* 4275 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
-  [tmp2, require] = _slicedToArray(joinRequest.useState(false), 2);
-  const tmp3 = _slicedToArray(joinRequest.useState(false), 2);
-  const first = tmp3[0];
-  dependencyMap = tmp3[1];
+  [tmp2, require] = joinRequest.useState(false);
+  [first, dependencyMap] = joinRequest.useState(false);
   let tmp = _slicedToArray(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
   _slicedToArray = castResult;

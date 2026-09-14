@@ -1,8 +1,8 @@
-// === Module 13118: BotUserProfileOverflowMenu ===
+// === Module 13119: BotUserProfileOverflowMenu ===
 
-// Module 13118 (BotUserProfileOverflowMenu)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+// Module 13119 (BotUserProfileOverflowMenu)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -11,10 +11,10 @@ import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12261 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12749 */;
-import BotReportChooser from "BotReportChooser" /* 13121 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13122 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12262 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12750 */;
+import BotReportChooser from "BotReportChooser" /* 13122 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13123 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -24,7 +24,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ApplicationFlags: closure_9, ChannelTypesSets: c10, RelationshipTypes: closure_11 } = Constants);
-const RestrictionConfirmationConstants = fn(11515);
+const RestrictionConfirmationConstants = fn(11516);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } = RestrictionConfirmationConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -41,21 +41,21 @@ export default function BotUserProfileOverflowMenu(application) {
   let guildId;
   closure_12 = undefined;
   let installAppPropsFromProfileApplication;
-  let obj = application(channel[8]);
   const items = [trackUserProfileAction];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ relationshipType: RelationshipStore.getRelationshipType(user.id), isIgnored: RelationshipStore.isIgnored(user.id) }));
+  const stateFromStoresObject = application(channel[8]).useStateFromStoresObject(items, () => ({ relationshipType: RelationshipStore.getRelationshipType(user.id), isIgnored: RelationshipStore.isIgnored(user.id) }));
   ({ relationshipType, isIgnored } = stateFromStoresObject);
-  let obj1 = application(channel[8]);
+  let obj = application(channel[8]);
   const items1 = [analyticsLocations, context];
-  const stateFromStores = obj1.useStateFromStores(items1, () => context.getChannel(analyticsLocations.getChannelId()));
-  let obj2 = application(channel[9]);
-  let result = obj2.isIarUserReportingEnabled("User Profile Options - Mobile");
-  let obj3 = application(channel[11]);
-  const userProfileAnalyticsContext = obj3.useUserProfileAnalyticsContext();
-  context = userProfileAnalyticsContext.context;
-  trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
+  const stateFromStores = application(channel[8]).useStateFromStores(items1, () => context.getChannel(analyticsLocations.getChannelId()));
+  let obj2 = application(channel[8]);
+  let result = application(channel[9]).isIarUserReportingEnabled("User Profile Options - Mobile");
+  let obj3 = application(channel[9]);
   const tmp6 = user;
   const tmp7 = user(channel[10])();
+  const userProfileAnalyticsContext = application(channel[11]).useUserProfileAnalyticsContext();
+  context = userProfileAnalyticsContext.context;
+  trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
+  let obj4 = application(channel[11]);
   const tmp9Result = user(channel[12])(user(channel[13]).USER_PROFILE_OVERFLOW_MENU);
   analyticsLocations = tmp9Result.analyticsLocations;
   const newestAnalyticsLocation = tmp9Result.newestAnalyticsLocation;
@@ -90,10 +90,10 @@ export default function BotUserProfileOverflowMenu(application) {
   const items3 = [];
   if (isIgnored) {
     if (!tmp14) {
-      obj = { label: null, action: null };
+      let obj5 = { label: null, action: null };
       let intl = tmp(tmp2[15]).intl;
-      obj.label = intl.string(tmp(tmp2[15]).t["8wXU9B"]);
-      obj.action = function action() {
+      obj5.label = intl.string(tmp(tmp2[15]).t["8wXU9B"]);
+      obj5.action = function action() {
         trackUserProfileAction({ action: "UNIGNORE", analyticsLocations });
         id = undefined;
         if (channel != null) {
@@ -103,17 +103,17 @@ export default function BotUserProfileOverflowMenu(application) {
         showUserProfile();
         const obj = { action: "UNIGNORE", analyticsLocations };
       };
-      items3.push(obj);
+      items3.push(obj5);
     }
     if (tmp14) {
-      obj = { label: null, action: null };
+      let obj6 = { label: null, action: null };
       const intl3 = tmp(tmp2[15]).intl;
-      obj.label = intl3.string(tmp(tmp2[15]).t.XyHpKH);
-      obj.action = function action() {
-        let obj = { action: "UNBLOCK", analyticsLocations };
-        trackUserProfileAction(obj);
-        obj = { location: newestAnalyticsLocation };
-        RelationshipActionCreatorsDefault.unblockUser(id, obj);
+      obj6.label = intl3.string(tmp(tmp2[15]).t.XyHpKH);
+      obj6.action = function action() {
+        trackUserProfileAction({ action: "UNBLOCK", analyticsLocations });
+        RelationshipActionCreatorsDefault.unblockUser(id, { location: newestAnalyticsLocation });
+        const obj = { action: "UNBLOCK", analyticsLocations };
+        const obj3 = { location: newestAnalyticsLocation };
         const tmp2 = id;
         id = undefined;
         if (channel != null) {
@@ -122,76 +122,75 @@ export default function BotUserProfileOverflowMenu(application) {
         const result = SafetyToastsActionCreatorsDefault.showUnblockSuccessToast(tmp2, id);
         showUserProfile();
       };
-      items3.push(obj);
+      items3.push(obj6);
     }
     if (!tmp14) {
-      obj1 = { label: null, variant: "destructive", action: null };
+      const obj7 = { label: null, variant: "destructive", action: null };
       const intl4 = tmp(tmp2[15]).intl;
-      obj1.label = intl4.string(tmp(tmp2[15]).t.l4Emac);
-      obj1.action = function action() {
-        let obj = { action: "BLOCK", analyticsLocations };
-        trackUserProfileAction(obj);
+      obj7.label = intl4.string(tmp(tmp2[15]).t.l4Emac);
+      obj7.action = function action() {
+        trackUserProfileAction({ action: "BLOCK", analyticsLocations });
+        const obj = { action: "BLOCK", analyticsLocations };
         const obj2 = ActionSheetActionCreatorsDefault;
-        obj = { userId: id, channelId: null, onSuccess: null, impressionName: null };
+        const obj3 = { userId: id, channelId: null, onSuccess: null, impressionName: null };
         id = undefined;
         if (channel != null) {
           id = channel.id;
         }
-        obj.channelId = id;
-        obj.onSuccess = function onSuccess() {
+        obj3.channelId = id;
+        obj3.onSuccess = function onSuccess() {
           showUserProfile();
         };
-        obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj2.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_2_12, obj, "stack");
-        const tmp4 = asyncRequireImpl(11516, dependencyMap.paths);
+        obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
+        obj2.openLazy(asyncRequireImpl(11517, dependencyMap.paths), closure_2_12, obj3, "stack");
+        const tmp4 = asyncRequireImpl(11517, dependencyMap.paths);
       };
-      items3.push(obj1);
+      items3.push(obj7);
       if (result) {
-        obj2 = { label: null, variant: "destructive", action: null };
+        const obj8 = { label: null, variant: "destructive", action: null };
         const intl6 = tmp(tmp2[15]).intl;
-        obj2.label = intl6.string(tmp(tmp2[15]).t.jhJzez);
-        obj2.action = function action() {
-          let obj = { action: "REPORT", analyticsLocations };
-          trackUserProfileAction(obj);
+        obj8.label = intl6.string(tmp(tmp2[15]).t.jhJzez);
+        obj8.action = function action() {
+          trackUserProfileAction({ action: "REPORT", analyticsLocations });
           let tmp3;
           if ("@me" !== guildId) {
             if (null !== guildId) {
               tmp3 = guildId;
             }
           }
+          const obj = { action: "REPORT", analyticsLocations };
           const obj2 = ActionSheetActionCreatorsDefault;
-          obj = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: tmp3, contextualChannelId: null };
+          const obj3 = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: tmp3, contextualChannelId: null };
           id = undefined;
           if (channel != null) {
             id = channel.id;
           }
-          obj.contextualChannelId = id;
-          obj2.openLazy(asyncRequireImpl(13121, dependencyMap.paths), BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj, "replaceAll");
-          const tmp5 = asyncRequireImpl(13121, dependencyMap.paths);
+          obj3.contextualChannelId = id;
+          obj2.openLazy(asyncRequireImpl(13122, dependencyMap.paths), BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj3, "replaceAll");
+          const tmp5 = asyncRequireImpl(13122, dependencyMap.paths);
         };
-        items3.push(obj2);
+        items3.push(obj8);
       } else {
-        let tmpResult = tmp(tmp2[25]);
         if (tmpResult.isAndroid()) {
-          obj3 = { label: null, variant: "destructive", action: null };
+          const obj9 = { label: null, variant: "destructive", action: null };
           const intl5 = tmp(tmp2[15]).intl;
-          obj3.label = intl5.string(tmp(tmp2[15]).t.TbHyMG);
-          obj3.action = function action() {
-            let obj = { action: "REPORT", analyticsLocations };
-            trackUserProfileAction(obj);
+          obj9.label = intl5.string(tmp(tmp2[15]).t.TbHyMG);
+          obj9.action = function action() {
+            trackUserProfileAction({ action: "REPORT", analyticsLocations });
             UserProfileAlertUtils.alertUserReported();
-            obj = { reported_user_id: id };
-            AnalyticsUtilsDefault.track(constants.TNS_USER_REPORT_SUBMITTED, obj);
+            const obj = { action: "REPORT", analyticsLocations };
+            AnalyticsUtilsDefault.track(constants.TNS_USER_REPORT_SUBMITTED, { reported_user_id: id });
           };
-          items3.push(obj3);
+          items3.push(obj9);
         }
+        tmpResult = tmp(tmp2[25]);
       }
     }
     const items4 = [];
-    const obj4 = { label: null, action: null };
+    const obj10 = { label: null, action: null };
     const intl7 = tmp(tmp2[15]).intl;
-    obj4.label = intl7.string(tmp(tmp2[15]).t.y5MwJy);
-    obj4.action = function action() {
+    obj10.label = intl7.string(tmp(tmp2[15]).t.y5MwJy);
+    obj10.action = function action() {
       trackUserProfileAction({ action: "COPY_USERNAME", analyticsLocations });
       const obj = { action: "COPY_USERNAME", analyticsLocations };
       const obj2 = ClipboardUtils;
@@ -199,50 +198,50 @@ export default function BotUserProfileOverflowMenu(application) {
       const result = ToastUtils.presentUsernameCopied();
       showUserProfile();
     };
-    items4.push(obj4);
+    items4.push(obj10);
     if (null != application) {
-      tmpResult = tmp(tmp2[31]);
-      closure_12 = tmpResult.hasApplicationFlag(application, constants2.EMBEDDED);
+      closure_12 = tmp(tmp2[31]).hasApplicationFlag(application, constants2.EMBEDDED);
+      const tmpResult3 = tmp(tmp2[31]);
       installAppPropsFromProfileApplication = tmp(tmp2[32]).getInstallAppPropsFromProfileApplication(application);
-      let obj5 = { label: null, action: null };
+      const obj11 = { label: null, action: null };
       const intl10 = tmp(tmp2[15]).intl;
-      obj5.label = intl10.string(tmp(tmp2[15]).t.WqhZss);
-      obj5.action = function action() {
-        let obj = { action: "COPY_APP_LINK", analyticsLocations };
-        trackUserProfileAction(obj);
+      obj11.label = intl10.string(tmp(tmp2[15]).t.WqhZss);
+      obj11.action = function action() {
+        trackUserProfileAction({ action: "COPY_APP_LINK", analyticsLocations });
         const obj2 = getApplicationInstallURL;
         if (closure_12) {
-          obj = { applicationId: application.id, referrerId: null };
+          const obj3 = { applicationId: application.id, referrerId: null };
           id = undefined;
           if (id != null) {
             id = id.id;
           }
-          obj.referrerId = id;
-          let activityLaunchURL = obj2.getActivityLaunchURL(obj);
+          obj3.referrerId = id;
+          let activityLaunchURL = obj2.getActivityLaunchURL(obj3);
         } else {
-          obj = { id: application.id };
+          const obj4 = { id: application.id };
           const merged = Object.assign(closure_13);
-          activityLaunchURL = obj2.getApplicationInstallURL(obj);
+          activityLaunchURL = obj2.getApplicationInstallURL(obj4);
         }
         ClipboardUtils.copy(activityLaunchURL);
+        const obj = { action: "COPY_APP_LINK", analyticsLocations };
         ToastUtils.presentLinkCopied();
       };
-      items4.push(obj5);
-      const tmpResult1 = tmp(tmp2[32]);
+      items4.push(obj11);
+      const tmpResult4 = tmp(tmp2[32]);
     }
     const DeveloperMode = tmp(tmp2[34]).DeveloperMode;
     if (DeveloperMode.getSetting()) {
-      let obj6 = { label: null, action: null };
+      const obj12 = { label: null, action: null };
       const intl8 = tmp(tmp2[15]).intl;
-      obj6.label = intl8.string(tmp(tmp2[15]).t["/AXYnE"]);
-      obj6.action = function action() {
+      obj12.label = intl8.string(tmp(tmp2[15]).t["/AXYnE"]);
+      obj12.action = function action() {
         trackUserProfileAction({ action: "COPY_USER_ID", analyticsLocations });
         ClipboardUtils.copy(id);
         const obj = { action: "COPY_USER_ID", analyticsLocations };
         ToastUtils.presentIdCopied();
         showUserProfile();
       };
-      items4.push(obj6);
+      items4.push(obj12);
     }
     let hasItem = null != channel && null != stateFromStores;
     if (hasItem) {
@@ -250,34 +249,33 @@ export default function BotUserProfileOverflowMenu(application) {
       hasItem = TEXTUAL.has(stateFromStores.type);
     }
     if (hasItem) {
-      const obj7 = { label: null, action: null };
+      const obj13 = { label: null, action: null };
       const intl9 = tmp(tmp2[15]).intl;
-      obj7.label = intl9.string(tmp(tmp2[15]).t.PHjkRE);
-      obj7.action = function action() {
+      obj13.label = intl9.string(tmp(tmp2[15]).t.PHjkRE);
+      obj13.action = function action() {
         return openUserContextMenuCommandsDefault({ userId: id, selectedChannel: stateFromStores, showUserProfile, analyticsLocations });
       };
-      items4.push(obj7);
+      items4.push(obj13);
     }
     if (0 !== items4.length) {
-      const obj8 = { value: analyticsLocations, children: null };
-      const obj9 = { style: tmp7, children: null };
-      const obj10 = { items: null, children: null };
+      const obj14 = { value: analyticsLocations, children: null };
+      const obj15 = { style: tmp7, children: null };
+      const obj16 = { items: null, children: null };
       const items5 = [items4, items3];
-      obj10.items = items5;
-      obj10.children = function children(ref) {
+      obj16.items = items5;
+      obj16.children = function children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        let obj = { ref: ref.ref };
+        const obj = { ref: ref.ref };
         const merged1 = Object.assign(merged);
         obj.size = "sm";
         obj.variant = "secondary-overlay";
         const intl = application(channel[15]).intl;
         obj.accessibilityLabel = intl.string(application(channel[15]).t["+zofAD"]);
-        obj = { size: "sm", color: user(channel[40]).colors.WHITE };
         obj.icon = jsx(application(channel[39]).MoreHorizontalIcon, { size: "sm", color: user(channel[40]).colors.WHITE });
-        return jsx(application(channel[38]).IconButton, { size: "sm", color: user(channel[40]).colors.WHITE });
+        return jsx(application(channel[38]).IconButton, { ref: ref.ref });
       };
-      obj9.children = jsx(tmp(tmp2[37]).ContextMenu, { items: null, children: null });
-      obj8.children = jsx(tmp6(tmp2[36]).View, { style: tmp7, children: null });
+      obj15.children = jsx(tmp(tmp2[37]).ContextMenu, { items: null, children: null });
+      obj14.children = jsx(tmp6(tmp2[36]).View, { style: tmp7, children: null });
       let tmp26 = jsx(tmp(tmp2[12]).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
     } else {
       tmp26 = null;
@@ -285,23 +283,23 @@ export default function BotUserProfileOverflowMenu(application) {
     return tmp26;
   }
   if (relationshipType !== guildId.BLOCKED) {
-    const obj11 = { label: null, action: null };
+    const obj17 = { label: null, action: null };
     const intl2 = tmp(tmp2[15]).intl;
-    obj11.label = intl2.string(tmp(tmp2[15]).t.ytCpKs);
-    obj11.action = function action() {
-      let obj = { action: "IGNORE", analyticsLocations };
-      trackUserProfileAction(obj);
+    obj17.label = intl2.string(tmp(tmp2[15]).t.ytCpKs);
+    obj17.action = function action() {
+      trackUserProfileAction({ action: "IGNORE", analyticsLocations });
+      const obj = { action: "IGNORE", analyticsLocations };
       const obj2 = ActionSheetActionCreatorsDefault;
-      obj = {
+      const tmp2 = asyncRequireImpl(11518, dependencyMap.paths);
+      obj2.openLazy(tmp2, map1, {
         userId: id,
         onSuccess() {
           showUserProfile();
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION
-      };
-      obj2.openLazy(asyncRequireImpl(11517, dependencyMap.paths), map1, obj, "stack");
+      }, "stack");
     };
-    items3.push(obj11);
+    items3.push(obj17);
   }
   const tmp9 = user(channel[12]);
 };

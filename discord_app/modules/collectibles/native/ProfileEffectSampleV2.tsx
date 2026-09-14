@@ -9,17 +9,15 @@ import _modDef8927 from "module_8927" /* 8927 */;
 import ProfileEffectDefault from "ProfileEffect" /* 8928 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let obj = { profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" }, profileBackground: null, sampleProfileImage: null, profileBorder: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj.profileBackground = obj;
-obj.sampleProfileImage = { aspectRatio: CollectiblesPreviewConstants.SAMPLE_PROFILE_ASPECT_RATIO };
+let obj = { profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" }, profileBackground: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, sampleProfileImage: { aspectRatio: CollectiblesPreviewConstants.SAMPLE_PROFILE_ASPECT_RATIO }, profileBorder: null };
 let size = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 obj.profileBorder = size;
 let closure_5 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default function ProfileEffectSample(hideBackground) {
@@ -33,18 +31,18 @@ export default function ProfileEffectSample(hideBackground) {
   if (!flag) {
     profileBackground = tmp.profileBackground;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = profileBackground;
-  obj = { style: null, source: null, accessible: false, resizeMode: "cover" };
+  const obj2 = { style: null, source: null, accessible: false, resizeMode: "cover" };
   const items1 = [tmp.sampleProfileImage];
-  obj.style = items1;
-  obj = { uri: _modDef8927 };
-  obj.source = obj;
-  const items2 = [React3(FastImageDefault, obj), , ];
+  obj2.style = items1;
+  const obj3 = { uri: _modDef8927 };
+  obj2.source = obj3;
+  const items2 = [React3(FastImageDefault, obj2), , ];
   let tmp4Result = !flag;
   if (!flag) {
-    const obj1 = { style: tmp.profileBorder };
-    tmp4Result = React3(View, obj1);
+    const obj4 = { style: tmp.profileBorder };
+    tmp4Result = React3(View, obj4);
   }
   items2[1] = tmp4Result;
   items2[2] = React3(ProfileEffectDefault, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });

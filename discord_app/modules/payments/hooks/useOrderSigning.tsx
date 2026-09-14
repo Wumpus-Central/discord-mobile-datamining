@@ -37,18 +37,17 @@ export const useOrderSigning = function useOrderSigning(order) {
     if (!(error instanceof BillingErrorDefault)) {
       tmp3 = new BillingErrorDefault(error);
     }
-    let obj = BillingUtils;
     if (!obj.isExpectedHttpClientError(error)) {
       const _Error = Error;
       let tmp9 = tmp3;
       if (error instanceof Error) {
         tmp9 = error;
       }
-      obj = { tags: null, extra: null };
-      obj = { source: errorSource };
-      obj.tags = obj;
-      obj.extra = extra;
-      const result = BillingUtils.captureBillingException(tmp9, obj);
+      const obj2 = { tags: null, extra: null };
+      const obj3 = { source: errorSource };
+      obj2.tags = obj3;
+      obj2.extra = extra;
+      const result = BillingUtils.captureBillingException(tmp9, obj2);
       const tmp7Result = BillingUtils;
     }
     closure_5(tmp3);
@@ -65,8 +64,8 @@ export const useOrderSigning = function useOrderSigning(order) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -79,17 +78,17 @@ export const useOrderSigning = function useOrderSigning(order) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             errorSource = tmp7;
             closure_129_0 = undefined;
             closure_129_1 = undefined;
-            let obj1 = order;
+            let obj4 = order;
             if (order === undefined) {
-              obj1 = {};
+              obj4 = {};
             }
-            ({ loadId: closure_129_0, errorExtra: closure_129_1 } = obj1);
+            ({ loadId: closure_129_0, errorExtra: closure_129_1 } = obj4);
             closure_129_2 = undefined;
             c5 = 1;
             c6 = 1;
@@ -101,23 +100,22 @@ export const useOrderSigning = function useOrderSigning(order) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else if (null == closure_130_0) {
             const tmp67 = new errorSource(tmp3[4])("Order not created yet");
             closure_130_5(tmp67);
             c6 = 3;
-            const obj3 = { value: { type: "failed" }, done: true };
-            return obj3;
+            const obj6 = { value: { type: "failed" }, done: true };
+            return obj6;
           } else {
             closure_130_4(null);
             c4 = 1;
-            let obj6 = order(tmp3[6]);
-            const obj4 = { orderId: closure_130_0.id, loadId: closure_129_0 };
+            const obj8 = { orderId: closure_130_0.id, loadId: closure_129_0 };
             c5 = 3;
             c6 = 1;
-            const obj5 = { value: obj6.signOrder(obj4), done: false };
-            return obj5;
+            const obj9 = { value: order(tmp3[6]).signOrder(obj8), done: false };
+            return obj9;
           }
         } else if (2 === tmp7) {
           c4 = 0;
@@ -127,12 +125,11 @@ export const useOrderSigning = function useOrderSigning(order) {
               tmp43(closure_129_3.order);
             }
             closure_130_5(closure_129_3);
-            obj6 = { type: "failed" };
           } else {
-            const obj7 = {};
+            const obj11 = {};
             const merged = Object.assign(closure_129_1);
-            obj7.orderId = closure_130_0.id;
-            closure_130_6(closure_129_3, obj7);
+            obj11.orderId = closure_130_0.id;
+            closure_130_6(closure_129_3, obj11);
           }
           c6 = 3;
         } else if (arg0 === 1) {
@@ -141,8 +138,8 @@ export const useOrderSigning = function useOrderSigning(order) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           closure_129_2 = value;
           if (closure_129_2.status !== constants.SIGNED) {
@@ -160,11 +157,11 @@ export const useOrderSigning = function useOrderSigning(order) {
             const error1 = new Error("Unexpected order status: " + closure_129_2.status);
             throw error1;
           } else {
-            obj = { type: "signed", order: closure_129_2 };
+            const obj = { type: "signed", order: closure_129_2 };
             c4 = 0;
             c6 = 3;
-            const obj10 = { value: obj, done: true };
-            return obj10;
+            const obj14 = { value: obj, done: true };
+            return obj14;
           }
         }
       } catch (tmp70) {

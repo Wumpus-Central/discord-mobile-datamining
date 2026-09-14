@@ -1,13 +1,13 @@
-// === Module 17214: VoicePanelHeaderUserState ===
+// === Module 17216: VoicePanelHeaderUserState ===
 
-// Module 17214 (VoicePanelHeaderUserState)
+// Module 17216 (VoicePanelHeaderUserState)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import native from "native" /* 9031 */;
 import VoiceStateIcons from "VoiceStateIcons" /* 9248 */;
-import useStableParticipant from "useStableParticipant" /* 17213 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17215 */;
+import useStableParticipant from "useStableParticipant" /* 17215 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17217 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -21,22 +21,23 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   if (participant != null) {
     type = participant.type;
   }
-  let obj = useStableParticipant;
+  const tmp4 = useVoicePanelCardUserStateIconsDefault;
   let id;
   if (obj.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
+  obj = useStableParticipant;
   const items = [];
-  const iter = useVoicePanelCardUserStateIconsDefault(type, id, guildId)[Symbol.iterator]();
+  const iter = tmp4(type, id, guildId)[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp9 = nextResult;
     if (nextResult.type === useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
-      obj = { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null };
-      obj = { style: tmp.floatingIcon, state: null };
-      obj.state = tmp9.videoIconState;
-      obj.children = jsx(VoiceStateIcons.VideoIcon, { style: tmp.floatingIcon, state: null });
-      let arr = items.push(jsx(native.BackgroundBlurView, { style: tmp.floatingIcon, state: null }, "video"));
+      let obj2 = { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null };
+      let obj3 = { style: tmp.floatingIcon, state: null };
+      obj3.state = tmp9.videoIconState;
+      obj2.children = jsx(VoiceStateIcons.VideoIcon, { style: tmp.floatingIcon, state: null });
+      let arr = items.push(jsx(native.BackgroundBlurView, { blurTheme: "dark", style: tmp.floatingIconWrapper, children: null }, "video"));
     }
     if (tmp9.type === useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
       let items1 = [tmp.floatingIconWrapper, ];
@@ -44,24 +45,24 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       if (tmp9.withLeftMargin) {
         leftMargin = tmp.leftMargin;
       }
-      let obj1 = { blurTheme: "dark", style: null, children: null };
+      let obj4 = { blurTheme: "dark", style: null, children: null };
       items1[1] = leftMargin;
-      obj1.style = items1;
-      let obj2 = { style: tmp.floatingIcon, state: null };
-      obj2.state = tmp9.muteDeafenIconState;
-      obj1.children = jsx(VoiceStateIcons.MuteDeafenIcon, { style: tmp.floatingIcon, state: null });
-      arr = items.push(jsx(native.BackgroundBlurView, { blurTheme: "dark", style: null, children: null }, "mute-deafen"));
+      obj4.style = items1;
+      let obj5 = { style: tmp.floatingIcon, state: null };
+      obj5.state = tmp9.muteDeafenIconState;
+      obj4.children = jsx(VoiceStateIcons.MuteDeafenIcon, { style: tmp.floatingIcon, state: null });
+      let arr2 = items.push(jsx(native.BackgroundBlurView, { blurTheme: "dark", style: null, children: null }, "mute-deafen"));
     }
     continue;
   }
   if (0 !== items.length) {
-    const obj3 = { style: null, children: null };
+    const obj6 = { style: null, children: null };
     const items2 = [tmp.iconContainer, userIcons];
-    obj3.style = items2;
-    obj3.children = items;
+    obj6.style = items2;
+    obj6.children = items;
     return jsx(NativeViewDefault, { style: null, children: null });
   }
-  const tmp4Result = useVoicePanelCardUserStateIconsDefault(type, id, guildId);
+  const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(9031).BackgroundBlurView);
@@ -84,12 +85,12 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/header/Voi
 export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = noop.useContext(channelId(12401));
+  const context = noop.useContext(channelId(12402));
   channelId = context.channelId;
   const guildId = context.guildId;
-  let obj = isHeaderHidden(504);
+  const tmp2 = closure_8();
   const items = [ChannelRTCStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = isHeaderHidden(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channelId);
     let id;
     if (selectedParticipant != null) {
@@ -97,27 +98,25 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17213)(stateFromStores, channelId, guildId), guildId);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17215)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(4373);
   const fn = function h() {
-    let obj = timing;
     let num = 0;
     if (isHeaderHidden.get()) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, closure_7) };
-    return obj;
+    return { opacity: timing.withTiming(num, closure_7) };
   };
-  obj = { withTiming: isHeaderHidden(4637).withTiming, isHeaderHidden, OPACITY_TIMING };
-  fn.__closure = obj;
+  let obj = isHeaderHidden(504);
+  fn.__closure = { withTiming: isHeaderHidden(4637).withTiming, isHeaderHidden, OPACITY_TIMING };
   fn.__workletHash = 7032221979181;
   fn.__initData = __initData;
   let tmp7 = null;
   if (null != tmp4) {
-    obj = { blurTheme: "dark", style: null, pointerEvents: "none", children: null };
+    const obj3 = { blurTheme: "dark", style: null, pointerEvents: "none", children: null };
     const items1 = [tmp2.container, tmp6];
-    obj.style = items1;
-    obj.children = tmp4;
+    obj3.style = items1;
+    obj3.children = tmp4;
     tmp7 = <closure_6 blurTheme="dark" style={null} pointerEvents="none">{null}</closure_6>;
   }
   return tmp7;

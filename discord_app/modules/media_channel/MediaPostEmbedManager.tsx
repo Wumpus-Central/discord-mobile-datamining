@@ -1,14 +1,14 @@
-// === Module 17917: MediaPostEmbedManager ===
+// === Module 17918: MediaPostEmbedManager ===
 
-// Module 17917 (MediaPostEmbedManager)
+// Module 17918 (MediaPostEmbedManager)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4784 */;
-import MediaChannelActionCreators from "MediaChannelActionCreators" /* 12005 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17537 */;
+import MediaChannelActionCreators from "MediaChannelActionCreators" /* 12006 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17538 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11559 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11560 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -47,13 +47,13 @@ function resolveMediaPostEmbeds(embeds) {
                     guildId = mediaPostEmbedChannelPath.guildId;
                   }
                   const isMemberResult = member.isMember(guildId, id);
-                  let tmp17Result = FlagUtils;
+                  const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
                   let num = first_message.flags;
                   if (num == null) {
                     num = 0;
                   }
                   let tmp14 = isMemberResult;
-                  const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
+                  const tmp17Result = FlagUtils;
                   if (isMemberResult) {
                     tmp14 = false === isChannelGatedResult;
                   }
@@ -65,10 +65,10 @@ function resolveMediaPostEmbeds(embeds) {
                     tmp14 = tmp15;
                   }
                   if (!tmp14) {
-                    tmp17Result = MediaChannelActionCreators;
-                    const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                    const mediaPostEmbed = MediaChannelActionCreators.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                    const tmp17Result2 = MediaChannelActionCreators;
                   }
-                  hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
+                  hasFlagResult = FlagUtils.hasFlag(num, constants2.IS_CROSSPOST);
                 }
               }
             }
@@ -78,7 +78,7 @@ function resolveMediaPostEmbeds(embeds) {
     });
   }
 }
-const FetchState = fn(11559).FetchState;
+const FetchState = fn(11560).FetchState;
 const MessageFlags = fn(1074).MessageFlags;
 const set = new Set();
 class MediaPostEmbedManager extends tmp7 {
@@ -137,13 +137,13 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                           guildId = mediaPostEmbedChannelPath.guildId;
                         }
                         const isMemberResult = member.isMember(guildId, id);
-                        let tmp17Result = FlagUtils;
+                        const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
                         let num = first_message.flags;
                         if (num == null) {
                           num = 0;
                         }
                         let tmp14 = isMemberResult;
-                        const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
+                        const tmp17Result = FlagUtils;
                         if (isMemberResult) {
                           tmp14 = false === isChannelGatedResult;
                         }
@@ -155,10 +155,10 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                           tmp14 = tmp15;
                         }
                         if (!tmp14) {
-                          tmp17Result = MediaChannelActionCreators;
-                          const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                          const mediaPostEmbed = MediaChannelActionCreators.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                          const tmp17Result2 = MediaChannelActionCreators;
                         }
-                        hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
+                        hasFlagResult = FlagUtils.hasFlag(num, constants2.IS_CROSSPOST);
                       }
                     }
                   }
@@ -210,13 +210,13 @@ function handleLoadForumPosts(threads) {
                         guildId = mediaPostEmbedChannelPath.guildId;
                       }
                       const isMemberResult = member.isMember(guildId, id);
-                      let tmp17Result = FlagUtils;
+                      const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
                       let num = first_message.flags;
                       if (num == null) {
                         num = 0;
                       }
                       let tmp14 = isMemberResult;
-                      const isChannelGatedResult = channelGated.isChannelGated(mediaPostEmbedChannelPath.guildId, mediaPostEmbedChannelPath.channelId);
+                      const tmp17Result = FlagUtils;
                       if (isMemberResult) {
                         tmp14 = false === isChannelGatedResult;
                       }
@@ -228,10 +228,10 @@ function handleLoadForumPosts(threads) {
                         tmp14 = tmp15;
                       }
                       if (!tmp14) {
-                        tmp17Result = MediaChannelActionCreators;
-                        const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                        const mediaPostEmbed = MediaChannelActionCreators.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
+                        const tmp17Result2 = MediaChannelActionCreators;
                       }
-                      hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
+                      hasFlagResult = FlagUtils.hasFlag(num, constants2.IS_CROSSPOST);
                     }
                   }
                 }
@@ -245,9 +245,9 @@ function handleLoadForumPosts(threads) {
   });
 }
 prototype["handleLoadForumPosts"] = handleLoadForumPosts;
-handleLoadForumPosts = new handleLoadForumPosts(tmp4, tmp3, tmp2, Object, prototype, MediaPostEmbedManager, tmp, resolveMediaPostEmbeds);
-handleLoadForumPosts.actions = { LOAD_THREADS_SUCCESS: handleLoadForumPosts.handleLoadThreadsSuccess, LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadForumPosts.handleLoadThreadsSuccess, LOAD_FORUM_POSTS: handleLoadForumPosts.handleLoadForumPosts };
-setupLoadFromMessageManagerHandlersDefault(handleLoadForumPosts, resolveMediaPostEmbeds, {
+const handleLoadForumPosts1 = new handleLoadForumPosts(tmp4, tmp3, tmp2, Object, prototype, MediaPostEmbedManager, tmp, resolveMediaPostEmbeds);
+handleLoadForumPosts1.actions = { LOAD_THREADS_SUCCESS: handleLoadForumPosts1.handleLoadThreadsSuccess, LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadForumPosts1.handleLoadThreadsSuccess, LOAD_FORUM_POSTS: handleLoadForumPosts1.handleLoadForumPosts };
+setupLoadFromMessageManagerHandlersDefault(handleLoadForumPosts1, resolveMediaPostEmbeds, {
   onBeforeBatch() {
     return set.clear();
   }
@@ -255,4 +255,4 @@ setupLoadFromMessageManagerHandlersDefault(handleLoadForumPosts, resolveMediaPos
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedManager.tsx");
 
-export default handleLoadForumPosts;
+export default handleLoadForumPosts1;

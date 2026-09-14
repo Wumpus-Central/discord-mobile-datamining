@@ -1,11 +1,13 @@
-// === Module 16753: usePlaceholderStyles ===
+// === Module 16755: usePlaceholderStyles ===
 
-// Module 16753 (usePlaceholderStyles)
-import native from "native" /* 1178 */;
+// Module 16755 (usePlaceholderStyles)
+import native from "native" /* 1176 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const duration = fn(7982).FADE_LAYOUT_ANIMATION_DURATION;
@@ -19,9 +21,9 @@ export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCo
 };
 export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
   _require = visible;
-  let obj = require("initialize");
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let obj = require("initialize");
   class A {
     constructor() {
       obj = { opacity: null };
@@ -49,38 +51,38 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
           tmp12 = closure_2;
           withTimingResult = obj6.withTiming(0.5, { duration: 0 });
           obj7 = closure_0(closure_2[5]);
-          obj = { duration: 1300, easing: null };
+          obj1 = { duration: 1300, easing: null };
           tmp13 = closure_0;
           tmp14 = closure_2;
-          obj.easing = closure_0(closure_2[6]).STANDARD_EASING;
+          obj1.easing = closure_0(closure_2[6]).STANDARD_EASING;
           num3 = 1;
           tmp16 = closure_0;
           tmp17 = closure_2;
-          withTimingResult1 = obj7.withTiming(1, obj);
+          withTimingResult1 = obj7.withTiming(1, obj1);
           obj9 = closure_0(closure_2[5]);
-          obj1 = { duration: 1300, easing: null };
+          obj11 = { duration: 1300, easing: null };
           tmp18 = closure_0;
           tmp19 = closure_2;
-          obj1.easing = closure_0(closure_2[6]).STANDARD_EASING;
+          obj11.easing = closure_0(closure_2[6]).STANDARD_EASING;
           num4 = -1;
-          obj.opacity = tmp2Result.withRepeat(obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj1)), -1);
+          obj.opacity = tmp2Result.withRepeat(obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj11)), -1);
           tmp5 = obj;
         } else {
           tmp2Result1 = tmp2(tmp3[5]);
-          obj2 = { duration: null };
+          obj12 = { duration: null };
           tmp4 = closure_4;
-          obj2.duration = closure_4;
+          obj12.duration = closure_4;
           num = 0;
-          obj.opacity = tmp2Result1.withTiming(0, obj2);
+          obj.opacity = tmp2Result1.withTiming(0, obj12);
           tmp5 = obj;
         }
       }
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: require("ReanimatedRexport").withRepeat, withSequence: require("ReanimatedRexport").withSequence, withTiming: require("timing").withTiming, STANDARD_EASING: require("native").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: duration };
-  A.__closure = obj;
+  let obj2 = require("ReanimatedRexport");
+  A.__closure = { useReducedMotion: stateFromStores, visible, withRepeat: require("ReanimatedRexport").withRepeat, withSequence: require("ReanimatedRexport").withSequence, withTiming: require("timing").withTiming, STANDARD_EASING: require("native").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: duration };
   A.__workletHash = 9750536800906;
   A.__initData = __initData;
-  return require("ReanimatedRexport").useAnimatedStyle(A);
+  return obj2.useAnimatedStyle(A);
 };

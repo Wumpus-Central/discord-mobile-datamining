@@ -2,7 +2,7 @@
 
 // Module 7568 (Clickstream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ClickstreamExperiment from "ClickstreamExperiment" /* 7569 */;
 import ClickstreamEvents from "ClickstreamEvents" /* 7570 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -49,8 +49,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
-  let obj = SnowflakeUtilsDefault;
-  const extractTimestampResult = obj.extractTimestamp(AuthenticationStore.getId());
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
@@ -62,13 +61,13 @@ export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGE
     }
     value = map.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
     if (value != null) {
-      obj = { timestamp: null, rtc_state: null };
+      const obj4 = { timestamp: null, rtc_state: null };
       const _Date = Date;
       const date = new Date();
-      obj.timestamp = date;
-      obj.rtc_state = RTCConnectionStore.getState();
+      obj4.timestamp = date;
+      obj4.rtc_state = RTCConnectionStore.getState();
       const merged = Object.assign(arg1);
-      value.push(obj);
+      value.push(obj4);
     }
   }
 };

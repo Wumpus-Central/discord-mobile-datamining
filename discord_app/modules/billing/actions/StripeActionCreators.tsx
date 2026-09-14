@@ -12,8 +12,8 @@ let closure_4 = async function _createStripeSetupIntent() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,17 +26,17 @@ let closure_4 = async function _createStripeSetupIntent() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = undefined;
-          let obj1 = closure_0;
+          let obj4 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          closure_129_0 = obj1;
+          closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
           return { value: "PX_16", done: true };
@@ -47,27 +47,27 @@ let closure_4 = async function _createStripeSetupIntent() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           const HTTP = closure_130_0(closure_130_1[2]).HTTP;
-          const obj3 = { url: closure_130_3.BILLING_STRIPE_SETUP_INTENT_SECRET, oldFormErrors: true, rejectWithError: true };
+          const obj6 = { url: closure_130_3.BILLING_STRIPE_SETUP_INTENT_SECRET, oldFormErrors: true, rejectWithError: true };
           const merged = Object.assign(closure_129_0);
           c3 = 2;
           c4 = 1;
-          const obj4 = { value: HTTP.post(obj3), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.post(obj6), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c4 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp14) {
@@ -84,8 +84,8 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -98,17 +98,17 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = undefined;
-          let obj1 = closure_0;
+          let obj4 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          closure_129_0 = obj1;
+          closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
           return { value: "PX_16", done: true };
@@ -119,27 +119,27 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           const HTTP = closure_130_0(closure_130_1[2]).HTTP;
-          const obj3 = { url: closure_130_3.BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+          const obj6 = { url: closure_130_3.BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
           const merged = Object.assign(closure_129_0);
           c3 = 2;
           c4 = 1;
-          const obj4 = { value: HTTP.post(obj3), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.post(obj6), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c4 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp14) {

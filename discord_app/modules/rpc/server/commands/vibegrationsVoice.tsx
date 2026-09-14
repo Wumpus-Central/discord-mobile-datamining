@@ -1,61 +1,66 @@
-// === Module 14596: vibegrationsVoice ===
+// === Module 14597: vibegrationsVoice ===
 
-// Module 14596 (vibegrationsVoice)
+// Module 14597 (vibegrationsVoice)
 import Constants2 from "Constants" /* 1074 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14547 */;
+import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14548 */;
 import Constants from "Constants" /* 4541 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14564 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 14565 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = Constants2.RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
-obj = {};
-obj = {
+let obj2 = {};
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.GET_VOICE_CAPABILITIES] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_VOICE_CAPABILITIES, {
   scope: obj,
   handler(socket) {
     return VibegrationsVoiceSessionCoordinatorDefault.getCapabilitiesForSocket(socket.socket);
   }
-};
-obj[RPCCommands.GET_VOICE_CAPABILITIES] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_VOICE_CAPABILITIES, obj);
-obj[RPCCommands.GET_VOICE_SESSION_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_VOICE_SESSION_PARTICIPANTS, {
+});
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.GET_VOICE_SESSION_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_VOICE_SESSION_PARTICIPANTS, {
   scope: obj,
   handler(socket) {
     const obj = { participants: VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForSession(socket.socket, socket.args.session_id) };
     return obj;
   }
 });
-obj[RPCCommands.START_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.START_VOICE_SESSION, {
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.START_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.START_VOICE_SESSION, {
   scope: obj,
   handler(socket) {
     socket = socket.socket;
-    let obj = VibegrationsVoiceSessionCoordinatorDefault;
-    const startResult = obj.start(socket);
-    obj = { session_id: startResult.id, channel_id: startResult.channelId, capabilities: VibegrationsVoiceSessionCoordinatorDefault.getCapabilities(), participants: null };
+    const startResult = VibegrationsVoiceSessionCoordinatorDefault.start(socket);
+    const obj2 = { session_id: startResult.id, channel_id: startResult.channelId, capabilities: null, participants: null };
+    obj2.capabilities = VibegrationsVoiceSessionCoordinatorDefault.getCapabilities();
     let participantsForEventSubscription = VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, startResult.id);
     if (participantsForEventSubscription == null) {
       participantsForEventSubscription = [];
     }
-    obj.participants = participantsForEventSubscription;
-    return obj;
+    obj2.participants = participantsForEventSubscription;
+    return obj2;
   }
 });
-obj[RPCCommands.ENABLE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.ENABLE_VOICE_SPATIAL, {
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.ENABLE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.ENABLE_VOICE_SPATIAL, {
   scope: obj,
   handler(socket) {
     VibegrationsVoiceSessionCoordinatorDefault.enableSpatial(socket.socket, socket.args.session_id);
     return { success: true };
   }
 });
-obj[RPCCommands.DISABLE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.DISABLE_VOICE_SPATIAL, {
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.DISABLE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.DISABLE_VOICE_SPATIAL, {
   scope: obj,
   handler(socket) {
     VibegrationsVoiceSessionCoordinatorDefault.disableSpatial(socket.socket, socket.args.session_id);
     return { success: true };
   }
 });
-obj[RPCCommands.UPDATE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.UPDATE_VOICE_SPATIAL, {
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.UPDATE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.UPDATE_VOICE_SPATIAL, {
   scope: obj,
   handler(arg0) {
     ({ socket, args } = arg0);
@@ -71,7 +76,8 @@ obj[RPCCommands.UPDATE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand
     return { success: true };
   }
 });
-obj[RPCCommands.STOP_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.STOP_VOICE_SESSION, {
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.STOP_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.STOP_VOICE_SESSION, {
   scope: obj,
   handler(socket) {
     VibegrationsVoiceSessionCoordinatorDefault.stop(socket.socket, socket.args.session_id);
@@ -80,4 +86,4 @@ obj[RPCCommands.STOP_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(R
 });
 const result = size.fileFinishedImporting("modules/rpc/server/commands/vibegrationsVoice.tsx");
 
-export default obj;
+export default obj2;

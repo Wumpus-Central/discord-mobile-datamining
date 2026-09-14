@@ -1,6 +1,6 @@
-// === Module 16543: ForYouEmptyState ===
+// === Module 16545: ForYouEmptyState ===
 
-// Module 16543 (ForYouEmptyState)
+// Module 16545 (ForYouEmptyState)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import native from "native" /* 5773 */;
@@ -17,22 +17,21 @@ const result = size.fileFinishedImporting("modules/notification_center/native/Fo
 
 export const ForYouEmptyState = function ForYouEmptyState(height) {
   const tmp = closure_5();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.container, { height: height.height }];
   obj.style = items;
-  obj = { style: tmp.image, children: React3(native.MailboxSpotIllustration, { scale: 0.75 }) };
-  const items1 = [React3(View, obj), , ];
-  obj = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
+  const items1 = [React3(View, { style: tmp.image, children: React3(native.MailboxSpotIllustration, { scale: 0.75 }) }), , ];
+  const obj3 = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items2 = [, ];
   ({ text: arr3[0], headerText: arr3[1] } = tmp);
-  obj.style = items2;
+  obj3.style = items2;
   const intl = util.intl;
-  obj.children = intl.string(util.t.MwjTvn);
-  items1[1] = React3(Text_Text.Text, obj);
-  const obj1 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  obj3.children = intl.string(util.t.MwjTvn);
+  items1[1] = React3(Text_Text.Text, obj3);
+  const obj4 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.AKBgPy);
-  items1[2] = React3(Text_Text.Text, obj1);
+  obj4.children = intl2.string(util.t.AKBgPy);
+  items1[2] = React3(Text_Text.Text, obj4);
   obj.children = items1;
   return React4(View, obj);
 };

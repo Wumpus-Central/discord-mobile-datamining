@@ -1,7 +1,7 @@
-// === Module 17728: GuildSettingsRolesUtils ===
+// === Module 17729: GuildSettingsRolesUtils ===
 
-// Module 17728 (GuildSettingsRolesUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 17729 (GuildSettingsRolesUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
@@ -11,8 +11,10 @@ import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const constants = fn(17719).GuildSettingsRoleEditSections;
+const constants = fn(17720).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
@@ -57,17 +59,17 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
           let obj2 = UserUtilsDefault;
           nick = obj2.getName(obj);
         }
-        obj = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        let obj5 = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
         let obj4 = UserUtilsDefault;
-        obj.userTag = obj4.getUserTag(obj);
-        obj.id = tmp3.userId;
-        obj.avatarSource = obj.getAvatarSource(closure_0);
-        obj.avatarURL = obj.getAvatarURL(closure_0, 80);
-        obj.bot = obj.bot;
-        obj.verifiedBot = obj.isVerifiedBot();
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
         ({ roles: obj3.roles, userId: obj3.key } = tmp3);
-        obj.user = obj;
-        let arr = items.push(obj);
+        obj5.user = obj;
+        let arr = items.push(obj5);
       }
       continue;
     }
@@ -131,17 +133,17 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
           let obj2 = UserUtilsDefault;
           nick = obj2.getName(obj);
         }
-        obj = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
+        let obj5 = { name: nick, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
         let obj4 = UserUtilsDefault;
-        obj.userTag = obj4.getUserTag(obj);
-        obj.id = tmp3.userId;
-        obj.avatarSource = obj.getAvatarSource(closure_0);
-        obj.avatarURL = obj.getAvatarURL(closure_0, 80);
-        obj.bot = obj.bot;
-        obj.verifiedBot = obj.isVerifiedBot();
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
         ({ roles: obj3.roles, userId: obj3.key } = tmp3);
-        obj.user = obj;
-        let arr = items.push(obj);
+        obj5.user = obj;
+        let arr = items.push(obj5);
       }
       continue;
     }

@@ -1,9 +1,11 @@
-// === Module 17180: useSoundboardSoundPlayer ===
+// === Module 17182: useSoundboardSoundPlayer ===
 
-// Module 17180 (useSoundboardSoundPlayer)
+// Module 17182 (useSoundboardSoundPlayer)
 import SoundboardUtils from "SoundboardUtils" /* 7447 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SoundOutputChannel = fn(9220).SoundOutputChannel;
@@ -26,13 +28,12 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
   }
   audioRef = undefined;
   audioRef = noop.useContext(require("SoundPlayerContext")).audioRef;
-  require("initialize");
   const items = [SoundboardStore];
   const items1 = [arg0];
-  let obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
+  const obj2 = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
   const items2 = [arg0, audioRef, arg1];
-  const stateFromStores = obj.useStateFromStores(items, () => SoundboardStore.isPlayingSound(soundId.soundId), items1);
-  obj.playSoundboardSound = noop.useCallback((items) => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => SoundboardStore.isPlayingSound(soundId.soundId), items1);
+  obj2.playSoundboardSound = noop.useCallback((items) => {
     if (null != audioRef.current) {
       const current = audioRef.current;
       current.pause();
@@ -41,9 +42,9 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
       SoundboardUtils.playSound(closure_0, tmp2, items);
     }
   }, items2);
-  obj.isPlayingSound = stateFromStores;
-  obj.previewSound = function previewSound() {
+  obj2.isPlayingSound = stateFromStores;
+  obj2.previewSound = function previewSound() {
     return Promise.resolve();
   };
-  return obj;
+  return obj2;
 };

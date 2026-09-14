@@ -1,9 +1,9 @@
-// === Module 17802: EligibilityActionSheet ===
+// === Module 17803: EligibilityActionSheet ===
 
-// Module 17802 (EligibilityActionSheet)
+// Module 17803 (EligibilityActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17803 */;
-import EligibilityChecklistDefault from "EligibilityChecklist" /* 17807 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17804 */;
+import EligibilityChecklistDefault from "EligibilityChecklist" /* 17808 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,12 +23,11 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const memo = noop.useMemo(() => ({
     actions: {
       onEnableMFAClick() {
-        let obj = closure_1_1(4603);
-        obj.hideActionSheet(closure_1_7);
+        closure_1_1(4603).hideActionSheet(closure_1_7);
+        const obj = closure_1_1(4603);
         closure_1_1(9192).close();
         const obj2 = closure_1_1(9192);
-        obj = { screen: constants.ACCOUNT };
-        onRequireModeratorMFAClick(7485).openUserSettings(obj);
+        onRequireModeratorMFAClick(7485).openUserSettings({ screen: constants.ACCOUNT });
       },
       onRequireModeratorMFAClick() {
         ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -38,12 +37,12 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
     sortedByIneligible: true
   }), items);
   let obj = { startExpanded: true, children: null };
-  obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj2 = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1114).intl;
-  obj.children = intl.string(onRequireModeratorMFAClick(1114).t["3s47iN"]);
-  const items1 = [closure_5(onRequireModeratorMFAClick(4632).Heading, obj), ];
-  obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) };
-  items1[1] = closure_5(EligibilityChecklistDefault, obj);
+  obj2.children = intl.string(onRequireModeratorMFAClick(1114).t["3s47iN"]);
+  const items1 = [closure_5(onRequireModeratorMFAClick(4632).Heading, obj2), ];
+  const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
+  items1[1] = closure_5(EligibilityChecklistDefault, { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) });
   obj.children = items1;
   return closure_6(onRequireModeratorMFAClick(7253).BottomSheet, obj);
 };

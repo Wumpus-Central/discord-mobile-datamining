@@ -2,7 +2,7 @@
 
 // Module 8543 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -22,8 +22,8 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -60,8 +60,8 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
             c4 = 1;
             c5 = 2;
             c6 = 1;
-            const obj1 = { value: BrowserManager.openAuthSessionURL(closure_0, true), done: false };
-            return obj1;
+            const obj4 = { value: BrowserManager.openAuthSessionURL(closure_0, true), done: false };
+            return obj4;
           } else {
             c6 = 3;
             return { value: false, done: true };
@@ -71,8 +71,8 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const obj2 = { error: closure_129_1 };
-        closure_130_5.warn("Failed to open the verification auth session", obj2);
+        const obj5 = { error: closure_129_1 };
+        closure_130_5.warn("Failed to open the verification auth session", obj5);
         closure_130_9();
         c6 = 3;
         return { value: false, done: true };
@@ -82,8 +82,8 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_129_0 = value;
         if (!closure_129_0) {
@@ -91,7 +91,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value: closure_129_0, done: true };
+        const obj = { value: closure_129_0, done: true };
         return obj;
       }
     } catch (tmp27) {

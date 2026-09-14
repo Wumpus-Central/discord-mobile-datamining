@@ -98,7 +98,7 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
   if (items1.length + items.length === 0) {
     return unsafeMutableRoles;
   } else {
-    let obj = {};
+    const obj2 = {};
     const merged = Object.assign(unsafeMutableRoles);
     if (null != items1) {
       for (const item10012 of items1) {
@@ -107,10 +107,10 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
       }
     }
     for (const item10018 of items) {
-      obj = GuildRoleRecordUtilsAll;
-      obj[item10018.id] = obj.fromServer(arg0, item10018);
+      let obj = GuildRoleRecordUtilsAll;
+      obj2[item10018.id] = obj.fromServer(arg0, item10018);
       continue;
     }
-    return obj;
+    return obj2;
   }
 };

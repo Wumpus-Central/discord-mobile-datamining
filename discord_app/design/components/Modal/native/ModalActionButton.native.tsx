@@ -1,6 +1,6 @@
-// === Module 11128: ModalActionButton ===
+// === Module 11129: ModalActionButton ===
 
-// Module 11128 (ModalActionButton)
+// Module 11129 (ModalActionButton)
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,16 +18,16 @@ export const ModalActionButton = function ModalActionButton(variant) {
   const merged = Object.assign(variant, Object.assign({ variant: 0 }));
   let tmp5 = "secondary" === variant;
   if (tmp5) {
-    let obj = { style: tmp2.spacer };
+    const obj = { style: tmp2.spacer };
     tmp5 = React3(View, obj);
   }
-  obj = { children: null };
+  const obj2 = { children: null };
   const items = [tmp5, ];
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.variant = variant;
-  obj.size = "lg";
-  items[1] = React3(components_Button_Button.Button, obj);
-  obj.children = items;
-  return hasOwnProperty(React4, obj);
+  obj3.variant = variant;
+  obj3.size = "lg";
+  items[1] = React3(components_Button_Button.Button, obj3);
+  obj2.children = items;
+  return hasOwnProperty(React4, obj2);
 };

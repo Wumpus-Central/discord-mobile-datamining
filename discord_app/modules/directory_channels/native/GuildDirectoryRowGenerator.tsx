@@ -1,13 +1,12 @@
-// === Module 12799: GuildDirectoryRowGenerator ===
+// === Module 12800: GuildDirectoryRowGenerator ===
 
-// Module 12799 (GuildDirectoryRowGenerator)
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12434 */;
+// Module 12800 (GuildDirectoryRowGenerator)
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12435 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
-let RowType = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };
-RowType = { type: RowType.PLACEHOLDER };
-let closure_4 = Array(20).fill(RowType);
+const RowType = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };
+let closure_4 = Array(20).fill({ type: RowType.PLACEHOLDER });
 let result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryRowGenerator.tsx");
 
 export { RowType };
@@ -20,16 +19,16 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
   if (0 === arr.length) {
     return [];
   } else if (currentCategoryId !== DirectoryEntryCategories.ALL) {
-    const obj4 = set(12433);
-    return set(12433).rankGuildEntries(arr).map((entry) => ({ type: constants.ENTRY, entry }));
+    const obj4 = set(12434);
+    return set(12434).rankGuildEntries(arr).map((entry) => ({ type: constants.ENTRY, entry }));
   } else {
     const items = [];
-    const rankByDateAddedResult = set(12433).rankByDateAdded(arr);
+    const rankByDateAddedResult = set(12434).rankByDateAdded(arr);
     const _Set = Set;
     set = new Set(rankByDateAddedResult.map((guildId) => guildId.guildId));
     let combined = items;
     if (rankByDateAddedResult.length > 0) {
-      let obj = { type: null, header: null };
+      const obj = { type: null, header: null };
       obj.type = obj.HEADER;
       const intl = tmp12(1114).intl;
       obj.header = intl.string(tmp12(1114).t.CbaapP);
@@ -37,15 +36,14 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
       combined = items.concat(rankByDateAddedResult.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     const found = arr.filter((guildId) => !set.has(guildId.guildId));
-    const obj5 = set(12433);
-    const result = set(12433).orderByTotalMemberCount(found);
+    const obj5 = set(12434);
+    const result = set(12434).orderByTotalMemberCount(found);
     let combined1 = combined;
     if (result.length > 0) {
-      obj = { type: null, header: null };
-      obj.type = obj.HEADER;
+      const obj2 = { type: obj.HEADER, header: null };
       const intl2 = tmp12(1114).intl;
-      obj.header = intl2.string(tmp12(1114).t.wxbhEe);
-      arr = combined.push(obj);
+      obj2.header = intl2.string(tmp12(1114).t.wxbhEe);
+      combined.push(obj2);
       combined1 = combined.concat(result.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     return combined1;

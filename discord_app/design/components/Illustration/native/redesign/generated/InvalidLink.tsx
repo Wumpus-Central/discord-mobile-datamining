@@ -1,9 +1,11 @@
-// === Module 11926: InvalidLink ===
+// === Module 11927: InvalidLink ===
 
-// Module 11926 (InvalidLink)
+// Module 11927 (InvalidLink)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Image = fn(17).Image;
@@ -12,48 +14,47 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/InvalidLink.tsx");
 
 export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
-  const obj = {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_11587");
+      return require("module_11588");
     },
     darker() {
-      return require("module_11927");
+      return require("module_11928");
     },
     light() {
-      return require("module_11588");
+      return require("module_11589");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useInvalidLinkSource = function useInvalidLinkSource() {
-  const obj = {
+  const obj = shared;
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11587");
+      return require("module_11588");
     },
     darker() {
-      return require("module_11927");
+      return require("module_11928");
     },
     light() {
-      return require("module_11588");
+      return require("module_11589");
     }
-  };
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const InvalidLink = function InvalidLink(arg0) {
-  let obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11587");
+      return require("module_11588");
     },
     darker() {
-      return require("module_11927");
+      return require("module_11928");
     },
     light() {
-      return require("module_11588");
+      return require("module_11589");
     }
-  };
-  obj = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

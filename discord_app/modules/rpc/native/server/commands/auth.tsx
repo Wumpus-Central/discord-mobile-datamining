@@ -1,10 +1,10 @@
-// === Module 14602: auth ===
+// === Module 14603: auth ===
 
-// Module 14602 (auth)
+// Module 14603 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8981 */;
 import RPCErrorDefault from "RPCError" /* 9684 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 14603 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 14604 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 
 require = fn;
@@ -20,10 +20,9 @@ export default AuthCommandsFactoryDefault((arg0) => {
     closure_1 = arg1;
     let tmp2;
     if (null != integrationType) {
-      let obj = importDefault;
       value = undefined;
       if (importDefault != null) {
-        value = obj.get(integrationType);
+        value = importDefault.get(integrationType);
       }
       tmp2 = value;
     }
@@ -34,27 +33,27 @@ export default AuthCommandsFactoryDefault((arg0) => {
     if (application == null) {
       application = ApplicationStore.getApplication(clientId);
     }
-    obj = { clientId, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, guildId: null, channelId: null, permissions: null, prompt: null, disableGuildSelect: null, showLogout: false, callback: null, isEmbeddedFlow: null, disclosures: null, integrationType: null };
+    const obj2 = { clientId, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, guildId: null, channelId: null, permissions: null, prompt: null, disableGuildSelect: null, showLogout: false, callback: null, isEmbeddedFlow: null, disclosures: null, integrationType: null };
     let items = dependencyMap;
     if (dependencyMap == null) {
       items = [];
     }
-    obj.scopes = items;
-    obj.responseType = responseType;
-    obj.redirectUri = redirectUri;
-    obj.codeChallenge = codeChallenge;
-    obj.codeChallengeMethod = codeChallengeMethod;
-    obj.state = state;
-    obj.guildId = guildId;
-    obj.channelId = channelId;
-    obj.permissions = permissions;
-    obj.prompt = _prompt;
+    obj2.scopes = items;
+    obj2.responseType = responseType;
+    obj2.redirectUri = redirectUri;
+    obj2.codeChallenge = codeChallenge;
+    obj2.codeChallengeMethod = codeChallengeMethod;
+    obj2.state = state;
+    obj2.guildId = guildId;
+    obj2.channelId = channelId;
+    obj2.permissions = permissions;
+    obj2.prompt = _prompt;
     let tmp8 = closure_1_12;
     if (typeof closure_1_12 !== "boolean") {
       tmp8 = "true" === tmp7;
     }
-    obj.disableGuildSelect = tmp8;
-    obj.callback = function callback(location) {
+    obj2.disableGuildSelect = tmp8;
+    obj2.callback = function callback(location) {
       if (null != location.location) {
         closure_0(location.location);
       } else {
@@ -63,11 +62,11 @@ export default AuthCommandsFactoryDefault((arg0) => {
         closure_1(tmp8);
       }
     };
-    obj.isEmbeddedFlow = ApplicationFlagUtils.hasApplicationFlag(application, constants.EMBEDDED);
-    obj.disclosures = disclosures;
-    obj.integrationType = integrationType;
+    obj2.isEmbeddedFlow = ApplicationFlagUtils.hasApplicationFlag(application, constants.EMBEDDED);
+    obj2.disclosures = disclosures;
+    obj2.integrationType = integrationType;
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    ComponentDispatch.dispatch(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, obj);
+    ComponentDispatch.dispatch(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, obj2);
   });
 }, function onAuthorizeValidationPassed() {
 

@@ -1,24 +1,22 @@
-// === Module 16440: GuildsBarSeparator ===
+// === Module 16442: GuildsBarSeparator ===
 
-// Module 16440 (GuildsBarSeparator)
+// Module 16442 (GuildsBarSeparator)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16115 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
-  let obj = useHomeDrawerGesture;
-  const panelTranslateX = obj.useHomeDrawerState().panelTranslateX;
   const tmp = closure_4(guildItemSize);
+  const panelTranslateX = useHomeDrawerGesture.useHomeDrawerState().panelTranslateX;
   const fn = function n() {
-    let obj = { transform: null };
-    obj = { scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) };
-    const items = [obj];
+    const obj = { transform: null };
+    const items = [{ scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) }];
     obj.transform = items;
     return obj;
   };
@@ -26,9 +24,9 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   fn.__workletHash = 7666765056610;
   fn.__initData = __initData;
   const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  obj = { style: null };
+  const obj3 = { style: null };
   let items = [tmp.separator, animatedStyle];
-  obj.style = items;
+  obj3.style = items;
   return jsx(ReanimatedNativeViewDefault, { style: null });
 }
 const jsx = fn(21).jsx;
@@ -44,14 +42,13 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");
 
 export default noop.memo(function GuildsBarSeparator() {
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp4 = closure_4(token);
   if (obj2.useIsHomeDrawerEnabled()) {
-    obj = { guildItemSize: token };
+    const obj3 = { guildItemSize: token };
     let tmp5Result = <GuildsBarHomeDrawerSeparator guildItemSize={token} />;
   } else {
-    obj = { style: tmp4.separator };
+    const obj4 = { style: tmp4.separator };
     tmp5Result = jsx(NativeViewDefault, { style: tmp4.separator });
   }
   return tmp5Result;

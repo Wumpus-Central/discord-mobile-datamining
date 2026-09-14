@@ -1,6 +1,6 @@
-// === Module 11024: ActionButton ===
+// === Module 11025: ActionButton ===
 
-// Module 11024 (ActionButton)
+// Module 11025 (ActionButton)
 import ButtonHooks from "ButtonHooks" /* 5062 */;
 import IconButton from "IconButton" /* 8202 */;
 import noop from "module_19" /* 19 */;
@@ -16,9 +16,8 @@ export default function ActionButton(style) {
   if ("positive" === style.type) {
     str = "active";
   }
-  let obj = { style: style.styles, children: null };
-  obj = { icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" };
+  const obj2 = { style: style.styles, children: null };
   ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
-  obj.children = jsx(IconButton.IconButton, { icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
-  return <View icon={<style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />} onPress={null} accessibilityLabel={null} variant={str} size="sm" />;
+  obj2.children = jsx(IconButton.IconButton, { icon: <style.IconComponent color={ButtonHooks.useButtonTextColorStyles(str).color} size="sm" />, onPress: null, accessibilityLabel: null, variant: str, size: "sm" });
+  return <View style={style.styles}>{null}</View>;
 };

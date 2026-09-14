@@ -1,21 +1,21 @@
-// === Module 14883: AccountViewBackupCodesSetting ===
+// === Module 14884: AccountViewBackupCodesSetting ===
 
-// Module 14883 (AccountViewBackupCodesSetting)
+// Module 14884 (AccountViewBackupCodesSetting)
 import util from "util" /* 1114 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14766 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
   parent: fn(8079).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14767).useIs2FAEnabled,
+  usePredicate: fn(14768).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -46,8 +46,8 @@ let SettingBuilders = {
             obj.onSuccess = onSuccess;
             const intl4 = onSuccess(1114).intl;
             obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
-            obj.confirmColor = onSuccess(1178).ButtonColors.BRAND;
-            closure_2_1(14884)(obj);
+            obj.confirmColor = onSuccess(1176).ButtonColors.BRAND;
+            closure_2_1(14885)(obj);
           });
         },
         onSuccess,
@@ -64,8 +64,8 @@ let SettingBuilders = {
       obj.inputLabel = intl2.string(closure_0(1114).t["CIGa+7"]);
       let intl3 = closure_0(1114).intl;
       obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
-      obj.confirmColor = closure_0(1178).ButtonColors.BRAND;
-      closure_1(14884)(obj);
+      obj.confirmColor = closure_0(1176).ButtonColors.BRAND;
+      closure_1(14885)(obj);
       return false;
     }, []);
   },
@@ -75,9 +75,8 @@ let SettingBuilders = {
       return require("UserSettingsAccountBackupCodes").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
-export default SettingBuilders;
+export default route;

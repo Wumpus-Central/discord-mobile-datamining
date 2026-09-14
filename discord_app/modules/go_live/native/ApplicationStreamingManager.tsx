@@ -1,24 +1,24 @@
-// === Module 17968: ApplicationStreamingManager ===
+// === Module 17969: ApplicationStreamingManager ===
 
-// Module 17968 (ApplicationStreamingManager)
+// Module 17969 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10088 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17969 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17970 */;
 
 const require = fn;
 const ApplicationStreamPresets = fn(4683).ApplicationStreamPresets;
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
-let desktopSettings = new LoggerDefault("ApplicationStreamingManager");
-desktopSettings.enableNativeLogger(true);
+let obj = new LoggerDefault("ApplicationStreamingManager");
+obj.enableNativeLogger(true);
 class ApplicationStreamingManager extends tmp4 {
 }
 const prototype = ApplicationStreamingManager.prototype;
 prototype["platformShowStreamFull"] = function platformShowStreamFull() {
-  const obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
       return require("asyncRequireImpl")(paths[8], paths.paths).then((result) => {
         closure_0 = result.default;
@@ -28,32 +28,31 @@ prototype["platformShowStreamFull"] = function platformShowStreamFull() {
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };
 prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sourceId) {
   sourceId = sourceId.sourceId;
   if (null != sourceId) {
     let setGoLiveSource = importDefault;
-    desktopSettings = MobileGoLiveUpsellExperimentDefault;
-    if (desktopSettings.getConfig({ location: "platformHandleStreamStart" }).showMobileGoLiveUpsell) {
+    obj = MobileGoLiveUpsellExperimentDefault;
+    if (obj.getConfig({ location: "platformHandleStreamStart" }).showMobileGoLiveUpsell) {
       let state = ApplicationStreamingSettingsStore.getState();
     } else {
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
     setGoLiveSource = setGoLiveSource(9218).setGoLiveSource;
-    desktopSettings = { desktopSettings: null, qualityOptions: null, context: null };
-    desktopSettings = { sourceId, sound: soundshareEnabled };
-    desktopSettings.desktopSettings = desktopSettings;
-    const obj1 = { preset, resolution, frameRate: fps };
-    desktopSettings.qualityOptions = obj1;
-    desktopSettings.context = MediaEngineContextTypes.STREAM;
-    setGoLiveSource(desktopSettings);
+    const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
+    const obj3 = { sourceId, sound: soundshareEnabled };
+    obj2.desktopSettings = obj3;
+    const obj4 = { preset, resolution, frameRate: fps };
+    obj2.qualityOptions = obj4;
+    obj2.context = MediaEngineContextTypes.STREAM;
+    setGoLiveSource(obj2);
     const setGoLiveSourceResult = setGoLiveSource(9218);
   } else {
     const _HermesInternal = HermesInternal;
-    desktopSettings.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
+    obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
   }
 };
 prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate() {

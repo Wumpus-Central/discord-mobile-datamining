@@ -4,7 +4,7 @@
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import StoreUtils from "StoreUtils" /* 4878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -47,8 +47,8 @@ let closure_9 = async function _fetchSimilarGames(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -61,27 +61,27 @@ let closure_9 = async function _fetchSimilarGames(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp2;
           closure_2 = tmp5;
           closure_130_0 = closure_0;
           closure_130_1 = undefined;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.SIMILAR_GAMES(closure_0), rejectWithError: true };
+          const obj4 = { url: Endpoints.SIMILAR_GAMES(closure_0), rejectWithError: true };
           c4 = 1;
           c5 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         const similar_games = value.body.similar_games;
         importDefault = similar_games;
@@ -95,9 +95,8 @@ let closure_9 = async function _fetchSimilarGames(arg0) {
           }
           return tmp;
         });
-        obj = closure_131_1(closure_131_2[5]);
-        const obj4 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
-        obj.dispatch(obj4);
+        const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
+        closure_131_1(closure_131_2[5]).dispatch(obj7);
         c5 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -116,43 +115,42 @@ let closure_10 = async function _getGameAnnouncements() {
     closure_5 = tmp3;
     closure_4 = tmp5;
     closure_132_0 = gameId;
-    let obj1 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_START", gameId };
-    DispatcherDefault.dispatch(obj1);
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_START", gameId });
     if (closure_1 != null) {
       const limit = closure_1.limit;
     }
-    const obj2 = {};
+    const obj6 = {};
     if (null != limit) {
-      obj2.limit = closure_1.limit;
+      obj6.limit = closure_1.limit;
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.GAME_ANNOUNCEMENTS(gameId), query: obj2, rejectWithError: false };
+    const request = { url: Endpoints.GAME_ANNOUNCEMENTS(gameId), query: obj6, rejectWithError: false };
     await HTTP.get(request);
     if (1 === tmp8) {
       c7 = 0;
-      obj1 = closure_133_1(closure_133_2[5]);
-      obj1.dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR", gameId: closure_132_0 });
+      closure_133_1(closure_133_2[5]).dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR", gameId: closure_132_0 });
       c9 = 3;
+      closure_133_1(closure_133_2[5]);
     } else if (arg0 === 1) {
       c9 = 3;
       throw value;
     } else if (arg0 !== 2) {
       const body = value.body;
-      const obj5 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: closure_132_0, messages: null, channelId: null, guildId: null };
-      obj5.messages = closure_133_0(closure_133_2[11]).toAnnouncementMessages(body.messages);
+      const obj10 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: closure_132_0, messages: null, channelId: null, guildId: null };
+      obj10.messages = closure_133_0(closure_133_2[11]).toAnnouncementMessages(body.messages);
       const channel_id = body.channel_id;
       channelId = channel_id;
       if (channel_id == null) {
         channelId = undefined;
       }
-      obj5.channelId = channelId;
+      obj10.channelId = channelId;
       const guild_id = body.guild_id;
       guildId = guild_id;
       if (guild_id == null) {
         guildId = undefined;
       }
-      obj5.guildId = guildId;
-      closure_133_1(closure_133_2[5]).dispatch(obj5);
+      obj10.guildId = guildId;
+      closure_133_1(closure_133_2[5]).dispatch(obj10);
       c7 = 0;
       closure_133_0(closure_133_2[11]);
       closure_133_1(closure_133_2[5]);
@@ -162,8 +160,8 @@ let closure_10 = async function _getGameAnnouncements() {
 };
 const Endpoints = fn(1074).Endpoints;
 let closure_7 = fn(8887).SIMILAR_GAMES_BLOCKED_GAME_IDS;
-fn(504);
-const initialize = {
+const initialize = fn(504);
+const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {
     let combined = null;
     if (arg1) {
@@ -193,15 +191,12 @@ const initialize = {
   },
   retryConfig: {
     backoff() {
-      let tmp = BackoffDefault;
       const result = 5 * DurationsDefault.Millis.SECOND;
-      tmp = new tmp(result, 5 * DurationsDefault.Millis.MINUTE);
-      return tmp;
+      return new BackoffDefault(result, 5 * DurationsDefault.Millis.MINUTE);
     }
   },
   failureStaleAfter: DurationsDefault.Seconds.MINUTE
-};
-const fetchStore = initialize.createFetchStore(GameProfileStore, initialize);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/GameProfileHttpUtils.tsx");
 

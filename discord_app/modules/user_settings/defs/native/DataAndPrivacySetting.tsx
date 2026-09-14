@@ -1,14 +1,14 @@
-// === Module 15955: DataAndPrivacySetting ===
+// === Module 15957: DataAndPrivacySetting ===
 
-// Module 15955 (DataAndPrivacySetting)
+// Module 15957 (DataAndPrivacySetting)
 import util from "util" /* 1114 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14944 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14947 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14945 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAuOHD);
@@ -28,9 +28,8 @@ let SettingBuilders = {
       return true;
     }, []);
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
-export default SettingBuilders;
+export default route;

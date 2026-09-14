@@ -1,6 +1,6 @@
-// === Module 11046: ChannelSafetyWarningsStore ===
+// === Module 11047: ChannelSafetyWarningsStore ===
 
-// Module 11046 (ChannelSafetyWarningsStore)
+// Module 11047 (ChannelSafetyWarningsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -42,7 +42,7 @@ function handleConnectionOpen() {
   });
 }
 let closure_1 = 5 * DurationsDefault.Millis.SECOND;
-let SafetyWarningTypes = { STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", INAPPROPRIATE_CONVERSATION_TIER_1: 2, [2]: "INAPPROPRIATE_CONVERSATION_TIER_1", INAPPROPRIATE_CONVERSATION_TIER_2: 3, [3]: "INAPPROPRIATE_CONVERSATION_TIER_2", LIKELY_ATO: 4, [4]: "LIKELY_ATO" };
+const SafetyWarningTypes = { STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", INAPPROPRIATE_CONVERSATION_TIER_1: 2, [2]: "INAPPROPRIATE_CONVERSATION_TIER_1", INAPPROPRIATE_CONVERSATION_TIER_2: 3, [3]: "INAPPROPRIATE_CONVERSATION_TIER_2", LIKELY_ATO: 4, [4]: "LIKELY_ATO" };
 let closure_3 = [];
 const dependencyMap = {};
 const set = new Set();
@@ -71,7 +71,7 @@ prototype["getChannelSafetyWarnings"] = function getChannelSafetyWarnings(channe
 prototype["hasShownInitialTooltipForChannel"] = function hasShownInitialTooltipForChannel(arg0) {
   return set.has(arg0);
 };
-SafetyWarningTypes = {
+const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, {
   CHANNEL_CREATE: function handleChannelCreate(channel) {
     channel = channel.channel;
     const safetyWarnings = channel.safetyWarnings;
@@ -197,8 +197,7 @@ SafetyWarningTypes = {
   ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function handleAcknowledgeChannelSafetyWarningTooltip(channelId) {
     set.add(channelId.channelId);
   }
-};
-const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, SafetyWarningTypes);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsStore.tsx");
 

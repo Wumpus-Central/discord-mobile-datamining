@@ -2,14 +2,17 @@
 
 // Module 5061 (ButtonConstants)
 import nativeDefault from "native" /* 576 */;
-import Icon from "Icon" /* 5058 */;
+import Icon_mod from "Icon" /* 5058 */;
 import size from "module_2" /* 2 */;
 
 const SMALL = Icon.IconSizes.SMALL;
 const SMALL_20 = Icon.IconSizes.SMALL_20;
 const MEDIUM = Icon.IconSizes.MEDIUM;
+let Icon = Icon_mod;
 const diff = 32 - Icon.getIconSize(SMALL);
+let Icon = Icon_mod;
 const diff1 = 40 - Icon.getIconSize(SMALL_20);
+let Icon = Icon_mod;
 const diff2 = 48 - Icon.getIconSize(MEDIUM);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonConstants.native.tsx");
 

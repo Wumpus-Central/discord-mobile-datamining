@@ -1,13 +1,13 @@
-// === Module 15130: BountiesScrollEndCard ===
+// === Module 15131: BountiesScrollEndCard ===
 
-// Module 15130 (BountiesScrollEndCard)
+// Module 15131 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10098 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15097 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15098 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15098 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15099 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -18,7 +18,6 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
   ({ visible, opacityStyle } = isScrollingInBoundsSharedValue);
   const tmp = closure_10();
-  let obj = isActive(4373);
   class S {
     constructor() {
       obj = closure_1;
@@ -36,27 +35,27 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
           num = 1;
         }
       }
-      obj = { opacity: obj2.withTiming(num, tmp2(tmp3[8]).timingStandard) };
-      return obj;
+      obj1 = { opacity: obj2.withTiming(num, tmp2(tmp3[8]).timingStandard) };
+      return obj1;
     }
   }
-  obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4637).withTiming, isActive, timingStandard: isActive(4640).timingStandard };
-  S.__closure = obj;
+  const obj = isActive(4373);
+  S.__closure = { isScrollingInBoundsSharedValue, withTiming: isActive(4637).withTiming, isActive, timingStandard: isActive(4640).timingStandard };
   S.__workletHash = 4903386092677;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
-  obj = { style: null, pointerEvents: "box-none", children: null };
-  const items = [tmp.container, opacityStyle];
-  obj.style = items;
-  const items1 = [closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }), closure_8(isScrollingInBoundsSharedValue(5068), { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" }), ];
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
+  const items = [tmp.container, opacityStyle];
+  obj3.style = items;
+  const items1 = [closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }), closure_8(isScrollingInBoundsSharedValue(5068), { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" }), ];
+  const obj6 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.overlayContent, animatedStyle];
-  obj3.style = items2;
-  const items3 = [closure_8(isScrollingInBoundsSharedValue(15131), { bounty, sourceQuestContent, disabled: !isActive }), ];
-  const obj5 = {
+  obj6.style = items2;
+  const items3 = [closure_8(isScrollingInBoundsSharedValue(15132), { bounty, sourceQuestContent, disabled: !isActive }), ];
+  const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(15133), {
+    children: closure_8(isScrollingInBoundsSharedValue(15134), {
       bounty,
       visible,
       sourceQuestContent,
@@ -67,34 +66,33 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       disabled: !isActive
     })
   };
-  items3[1] = closure_8(closure_5, obj5);
-  obj3.children = items3;
-  items1[2] = closure_9(isScrollingInBoundsSharedValue(4373).View, obj3);
-  obj.children = items1;
-  return closure_9(isScrollingInBoundsSharedValue(4373).View, obj);
+  items3[1] = closure_8(closure_5, obj8);
+  obj6.children = items3;
+  items1[2] = closure_9(isScrollingInBoundsSharedValue(4373).View, obj6);
+  obj3.children = items1;
+  return closure_9(isScrollingInBoundsSharedValue(4373).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const QuestsExperimentLocations = fn(5525).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles(() => {
-  let obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, endedCtaButtonsContainer: null };
-  obj = {};
+  const obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, endedCtaButtonsContainer: null };
   const merged = Object.assign(React4.absoluteFillObject);
-  obj.container = obj;
-  obj = {};
+  obj.container = {};
+  const obj3 = {};
   const merged1 = Object.assign(React4.absoluteFillObject);
-  obj.backgroundColor = "rgba(0, 0, 0, 0.6)";
-  obj.backdropTint = obj;
+  obj3.backgroundColor = "rgba(0, 0, 0, 0.6)";
+  obj.backdropTint = obj3;
   const merged2 = Object.assign(React4.absoluteFillObject);
   obj.backdropGradient = {};
-  const obj2 = {};
+  const obj5 = {};
   const merged3 = Object.assign(React4.absoluteFillObject);
-  obj2.justifyContent = "center";
-  obj2.alignItems = "center";
-  obj.overlayContent = obj2;
+  obj5.justifyContent = "center";
+  obj5.alignItems = "center";
+  obj.overlayContent = obj5;
   const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
   obj.endedCtaButtonsContainer = rect;
   return obj;
@@ -103,16 +101,15 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
-entering.__closure = createStyles;
+entering.__closure = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 entering.__workletHash = 12127714049951;
 entering.__initData = { code: "function BountiesScrollEndCardTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-createStyles = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
-fn2.__closure = createStyles;
+let obj2 = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
+fn2.__closure = { withTiming: fn(4637).withTiming, timingStandard: fn(4640).timingStandard };
 fn2.__workletHash = 7470211880124;
 fn2.__initData = { code: "function BountiesScrollEndCardTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };
 const __initData = { code: "function BountiesScrollEndCardTsx3(){const{isScrollingInBoundsSharedValue,withTiming,isActive,timingStandard}=this.__closure;var _isScrollingInBoundsS;const isScrollingInBounds=((_isScrollingInBoundsS=isScrollingInBoundsSharedValue)===null||_isScrollingInBoundsS===void 0?void 0:_isScrollingInBoundsS.get())===true;return{opacity:withTiming(isActive&&!isScrollingInBounds?1:0,timingStandard)};}" };
@@ -121,36 +118,34 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export default function BountiesScrollEndCard(visible) {
   visible = visible.visible;
-  let obj = BountiesModalTransitionsRefactorExperiment;
-  const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj1 = initialize;
+  const isBountiesModalTransitionsRefactorEnabled = BountiesModalTransitionsRefactorExperiment.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
   const items = [AccessibilityStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const callback = noop.useCallback((arg0, opacityStyle) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.opacityStyle = opacityStyle;
     return closure_1_8(BountiesScrollEndCardContent, obj);
   }, []);
-  obj = { visible, entranceTiming: timingPresets.timingStandard, exitTiming: timingPresets.timingStandard };
-  const visibilityTransition = useVisibilityTransition.useVisibilityTransition(obj);
+  const obj3 = useVisibilityTransition;
+  const visibilityTransition = obj3.useVisibilityTransition({ visible, entranceTiming: timingPresets.timingStandard, exitTiming: timingPresets.timingStandard });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {
-    obj = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };
+    const obj5 = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };
     let tmp15;
     if (visible) {
       tmp15 = visible;
     }
-    obj.item = tmp15;
-    obj.entering = entering;
-    obj.exiting = fn2;
-    obj.renderItem = callback;
-    shouldRender = React6(AnimatedEnterExitItemDefault, obj);
+    obj5.item = tmp15;
+    obj5.entering = entering;
+    obj5.exiting = fn2;
+    obj5.renderItem = callback;
+    shouldRender = React6(AnimatedEnterExitItemDefault, obj5);
   } else if (shouldRender) {
-    obj1 = {};
+    const obj6 = {};
     let merged = Object.assign(visible);
-    obj1.opacityStyle = tmp6;
-    shouldRender = React6(BountiesScrollEndCardContent, obj1);
+    obj6.opacityStyle = tmp6;
+    shouldRender = React6(BountiesScrollEndCardContent, obj6);
   }
   return shouldRender;
 };

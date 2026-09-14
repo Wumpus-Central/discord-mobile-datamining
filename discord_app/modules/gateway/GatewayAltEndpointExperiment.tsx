@@ -1,14 +1,14 @@
-// === Module 14640: GatewayAltEndpointExperiment ===
+// === Module 14641: GatewayAltEndpointExperiment ===
 
-// Module 14640 (GatewayAltEndpointExperiment)
-import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14641 */;
+// Module 14641 (GatewayAltEndpointExperiment)
+import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14642 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-07-aws-gateway", kind: "user", defaultConfig: { enableAltGateway: false }, variations: null };
-obj = { 1: null, 2: { enableAltGateway: false } };
-obj[2] = { enableAltGateway: true };
-obj.variations = obj;
+const obj = { name: "2026-07-aws-gateway", kind: "user", defaultConfig: { enableAltGateway: false }, variations: null };
+const obj2 = { 1: null, 2: { enableAltGateway: false } };
+obj2[2] = { enableAltGateway: true };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/GatewayAltEndpointExperiment.tsx");
 

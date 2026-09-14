@@ -1,9 +1,11 @@
-// === Module 12662: useGuildPowerupCardFooterConfig ===
+// === Module 12663: useGuildPowerupCardFooterConfig ===
 
-// Module 12662 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12625 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12628 */;
+// Module 12663 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12626 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
 import GuildStore from "GuildStore" /* 1979 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const GuildPowerupsConstants = fn(4526);
@@ -15,10 +17,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -39,12 +40,12 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   if (tmp8) {
     tmp8 = tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED;
   }
-  obj = { showToggleButton: tmp8, showConfigureButton: null, isPowerupActive: null };
+  const obj2 = { showToggleButton: tmp8, showConfigureButton: null, isPowerupActive: null };
   let hasItem = tmp6;
   if (tmp6) {
     hasItem = set.has(skuId.skuId);
   }
-  obj.showConfigureButton = hasItem;
-  obj.isPowerupActive = tmp6;
-  return obj;
+  obj2.showConfigureButton = hasItem;
+  obj2.isPowerupActive = tmp6;
+  return obj2;
 };

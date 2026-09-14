@@ -13,38 +13,32 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { fill: { flex: 1 }, scrollView: null, scrollViewContentLandscape: null, scrollViewContentPortrait: null, header: null, bodyContainer: null, bodyContainerBackground: null, footerPortrait: null, separator: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
-createStyles.scrollView = createStyles;
-createStyles.scrollViewContentLandscape = { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 };
-createStyles.scrollViewContentPortrait = { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 };
-createStyles.header = { paddingTop: 24 };
-createStyles.bodyContainer = { flexDirection: "column", gap: 16, padding: 16 };
-createStyles.bodyContainerBackground = { marginHorizontal: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg };
-createStyles.footerPortrait = { flexDirection: "column", padding: 16, gap: 16 };
-let obj1 = { marginHorizontal: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg };
-createStyles.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { fill: { flex: 1 }, scrollView: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 }, scrollViewContentLandscape: { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 }, scrollViewContentPortrait: { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 }, header: { paddingTop: 24 }, bodyContainer: { flexDirection: "column", gap: 16, padding: 16 }, bodyContainerBackground: null, footerPortrait: null, separator: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+obj2.bodyContainerBackground = { marginHorizontal: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg };
+obj2.footerPortrait = { flexDirection: "column", padding: 16, gap: 16 };
+let obj4 = { marginHorizontal: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg };
+obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
 
 export default function OAuth2AuthorizeContent(onScroll) {
   ({ header, footer, appDetails, setAllContentSeen } = onScroll);
   onScroll = onScroll.onScroll;
+  height = undefined;
+  closure_4 = undefined;
+  first1 = undefined;
+  closure_6 = undefined;
   closure_8 = undefined;
   ({ body, centerContent, hasContentBackground, obscured } = onScroll);
   const tmp = closure_9();
-  let obj = noop;
   const ref = noop.useRef(null);
   const size = useWindowDimensionsDefault();
   ({ left, right, bottom } = useSafeAreaInsetsDefault());
-  const tmp7 = _slicedToArray(noop.useState(-1), 2);
-  const height = tmp7[0];
-  closure_4 = tmp7[1];
-  const tmp9 = _slicedToArray(noop.useState(-1), 2);
-  const first1 = tmp9[0];
-  closure_6 = tmp9[1];
+  [height, closure_4] = noop.useState(-1);
+  [first1, closure_6] = noop.useState(-1);
   const tmp11 = _slicedToArray(noop.useState(-1), 2);
   closure_7 = tmp11[1];
   let tmp12 = height >= 0;
@@ -57,13 +51,13 @@ export default function OAuth2AuthorizeContent(onScroll) {
   }
   closure_8 = tmp12;
   const items = [height, tmp12, first1, setAllContentSeen];
-  const layoutEffect = obj.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (closure_8) {
-      let obj = { layoutMeasurement: null, contentSize: null };
-      obj = { height: first1 };
-      obj.layoutMeasurement = obj;
-      obj = { height };
-      obj.contentSize = obj;
+      const obj = { layoutMeasurement: null, contentSize: null };
+      const obj2 = { height: first1 };
+      obj.layoutMeasurement = obj2;
+      const obj3 = { height };
+      obj.contentSize = obj3;
       let contentOffset = obj.contentOffset;
       if (contentOffset === undefined) {
         contentOffset = { y: 0 };
@@ -77,10 +71,10 @@ export default function OAuth2AuthorizeContent(onScroll) {
       }
     }
   }, items);
-  obj = { style: null, children: null };
+  let obj2 = { style: null, children: null };
   const items1 = [tmp.fill, { marginBottom: bottom }];
-  obj.style = items1;
-  obj = {
+  obj2.style = items1;
+  let obj3 = {
     style: null,
     contentContainerStyle: null,
     ref,
@@ -114,15 +108,16 @@ export default function OAuth2AuthorizeContent(onScroll) {
     children: null
   };
   const items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
-  obj.style = items2;
+  obj3.style = items2;
   const items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
-  obj.contentContainerStyle = items3;
-  const obj1 = { obscured, children: null };
+  obj3.contentContainerStyle = items3;
+  const tmp6 = useSafeAreaInsetsDefault();
+  const obj4 = { obscured, children: null };
   let tmp17Result = null;
-  const tmp3Result = ObscuredSurfaceDefault;
+  const tmp3Result = KeyboardAwareViewDefault;
   if (null != header) {
-    const obj2 = { style: tmp.header, children: header };
-    tmp17Result = timestampProducer(React4, obj2);
+    const obj5 = { style: tmp.header, children: header };
+    tmp17Result = timestampProducer(React4, obj5);
   }
   const items4 = [tmp17Result, ];
   const items5 = [tmp.bodyContainer, , ];
@@ -131,37 +126,37 @@ export default function OAuth2AuthorizeContent(onScroll) {
     prop = tmp.bodyContainerBackground;
   }
   items5[1] = prop;
-  const obj3 = { style: items5, children: null };
+  const obj6 = { style: items5, children: null };
   items5[2] = size.width > size.height ? { flex: 1 } : {};
   const items6 = [body, ];
   let tmp15Result = null;
   if (null != appDetails) {
-    const obj4 = { children: null };
-    const obj5 = { style: tmp.separator };
-    const items7 = [timestampProducer(React4, obj5), ];
-    const obj6 = { children: appDetails };
-    items7[1] = timestampProducer(React4, obj6);
-    obj4.children = items7;
-    tmp15Result = React6(React5, obj4);
+    const obj7 = { children: null };
+    const obj8 = { style: tmp.separator };
+    const items7 = [timestampProducer(React4, obj8), ];
+    const obj9 = { children: appDetails };
+    items7[1] = timestampProducer(React4, obj9);
+    obj7.children = items7;
+    tmp15Result = React6(React5, obj7);
   }
   items6[1] = tmp15Result;
-  obj3.children = items6;
-  items4[1] = React6(React4, obj3);
-  obj1.children = items4;
-  obj.children = React6(tmp3Result, obj1);
-  const items8 = [timestampProducer(hasOwnProperty, obj), ];
-  tmp17Result = null;
+  obj6.children = items6;
+  items4[1] = React6(React4, obj6);
+  obj4.children = items4;
+  obj3.children = React6(ObscuredSurfaceDefault, obj4);
+  const items8 = [timestampProducer(hasOwnProperty, obj3), ];
+  let tmp17Result2 = null;
   if (null != footer) {
-    const obj7 = {
+    const obj10 = {
       onLayout(nativeEvent) {
           closure_7(nativeEvent.nativeEvent.layout.height);
         },
       style: tmp.footerPortrait,
       children: footer
     };
-    tmp17Result = timestampProducer(React4, obj7);
+    tmp17Result2 = timestampProducer(React4, obj10);
   }
-  items8[1] = tmp17Result;
-  obj.children = items8;
-  return React6(tmp3Result, obj);
+  items8[1] = tmp17Result2;
+  obj2.children = items8;
+  return React6(tmp3Result, obj2);
 };

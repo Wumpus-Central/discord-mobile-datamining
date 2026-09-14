@@ -1,9 +1,9 @@
-// === Module 11626: IosAttributionImpressionRegistry ===
+// === Module 11627: IosAttributionImpressionRegistry ===
 
-// Module 11626 (IosAttributionImpressionRegistry)
+// Module 11627 (IosAttributionImpressionRegistry)
 import LoggerDefault from "Logger" /* 3 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 11624 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 11625 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 11625 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 11626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -31,8 +31,8 @@ let closure_9 = async function _startNativeImpression(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -45,8 +45,8 @@ let closure_9 = async function _startNativeImpression(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -69,10 +69,10 @@ let closure_9 = async function _startNativeImpression(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          viewThroughSpec = undefined;
+          let viewThroughSpec;
           if (closure_130_3[closure_129_2] != null) {
             viewThroughSpec = tmp104.viewThroughSpec;
           }
@@ -85,14 +85,14 @@ let closure_9 = async function _startNativeImpression(arg0) {
             c4 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            const obj2 = { metadataSealed: closure_129_1, impressionId: closure_129_0, specs: null, signal: null };
+            const obj8 = { metadataSealed: closure_129_1, impressionId: closure_129_0, specs: null, signal: null };
             const items = [closure_129_4];
-            obj2.specs = items;
-            obj2.signal = closure_129_3.signAbort.signal;
+            obj8.specs = items;
+            obj8.signal = closure_129_3.signAbort.signal;
             c3 = 2;
             c4 = 1;
-            const obj3 = { value: closure_130_0(closure_130_1[5]).fetchIosAttributionSignedPayloads(obj2), done: false };
-            return obj3;
+            const obj9 = { value: closure_130_0(closure_130_1[5]).fetchIosAttributionSignedPayloads(obj8), done: false };
+            return obj9;
           }
         }
       } else {
@@ -102,8 +102,8 @@ let closure_9 = async function _startNativeImpression(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_129_5 = value;
             if (closure_130_6(closure_129_0, closure_129_3)) {
@@ -123,19 +123,17 @@ let closure_9 = async function _startNativeImpression(arg0) {
               }
               closure_129_6 = tmp38;
               if (null == closure_129_6) {
-                let obj6 = closure_130_0(closure_130_1[4]);
-                const result1 = obj6.trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.SIGN_FAILED, closure_129_2, closure_129_0);
+                const result1 = closure_130_0(closure_130_1[4]).trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.SIGN_FAILED, closure_129_2, closure_129_0);
                 closure_130_5.delete(closure_129_0);
                 c4 = 3;
-                const obj5 = { value: undefined, done: true };
-                return obj5;
+                const obj12 = { value: undefined, done: true };
+                return obj12;
               } else {
-                obj4 = closure_130_0(closure_130_1[3]);
                 const _JSON = JSON;
                 c3 = 3;
                 c4 = 1;
-                obj6 = { value: obj4.startImpression(closure_129_0, closure_129_2, JSON.stringify(closure_129_6)), done: false };
-                return obj6;
+                const obj13 = { value: closure_130_0(closure_130_1[3]).startImpression(closure_129_0, closure_129_2, JSON.stringify(closure_129_6)), done: false };
+                return obj13;
               }
             } else {
               c4 = 3;
@@ -146,8 +144,8 @@ let closure_9 = async function _startNativeImpression(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           closure_129_7 = value;
           if (!closure_130_6(closure_129_0, closure_129_3)) {
@@ -155,16 +153,15 @@ let closure_9 = async function _startNativeImpression(arg0) {
           }
         }
         if (null == closure_129_7) {
-          obj1 = closure_130_0(closure_130_1[4]);
-          const result2 = obj1.trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.NO_TOKEN, closure_129_2, closure_129_0);
+          const result2 = closure_130_0(closure_130_1[4]).trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.NO_TOKEN, closure_129_2, closure_129_0);
           closure_130_5.delete(closure_129_0);
           c4 = 3;
-          const obj8 = { value: undefined, done: true };
-          return obj8;
+          const obj16 = { value: undefined, done: true };
+          return obj16;
         } else {
-          obj = closure_130_0(closure_130_1[4]);
-          const result3 = obj.trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.REGISTERED, closure_129_2, closure_129_0);
+          const result3 = closure_130_0(closure_130_1[4]).trackIosAttributionImpression(closure_130_0(closure_130_1[4]).IosAttributionImpressionResult.REGISTERED, closure_129_2, closure_129_0);
           closure_129_3.token = closure_129_7;
+          obj = closure_130_0(closure_130_1[4]);
         }
       }
     } catch (tmp84) {
@@ -181,8 +178,8 @@ let closure_10 = async function _getImpressionToken(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj4 = { value, done: true };
+      return obj4;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -195,8 +192,8 @@ let closure_10 = async function _getImpressionToken(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
@@ -212,8 +209,8 @@ let closure_10 = async function _getImpressionToken(arg0) {
             c4 = 3;
           }
           c4 = num6;
-          let obj1 = { value: value.registration, done: false };
-          return obj1;
+          const obj8 = { value: value.registration, done: false };
+          return obj8;
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -232,8 +229,8 @@ let closure_10 = async function _getImpressionToken(arg0) {
       }
       const _HermesInternal = HermesInternal;
       closure_130_4.warn("Impression " + closure_129_0 + " not registered natively in time; store sheet will be unattributed");
-      obj1 = closure_130_0(closure_130_1[4]);
-      const result2 = obj1.trackIosAttributionClick(closure_130_0(closure_130_1[4]).IosAttributionClickResult.NOT_READY, closure_129_1.framework, closure_129_0);
+      const result2 = closure_130_0(closure_130_1[4]).trackIosAttributionClick(closure_130_0(closure_130_1[4]).IosAttributionClickResult.NOT_READY, closure_129_1.framework, closure_129_0);
+      const obj2 = closure_130_0(closure_130_1[4]);
     } catch (tmp51) {
       c4 = tmp;
       throw tmp51;
@@ -252,8 +249,8 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -266,8 +263,8 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -285,15 +282,15 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             activeIosAttributionFramework = closure_130_0(closure_130_1[3]).getActiveIosAttributionFramework();
             if (null != activeIosAttributionFramework) {
               if (null != closure_130_3[activeIosAttributionFramework]) {
                 c3 = 2;
                 c4 = 1;
-                const obj2 = {
+                const obj5 = {
                   value: (function getImpressionToken() {
                                 const self = this;
                                 const apply = closure_1_10.apply;
@@ -306,7 +303,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
                               })(impressionId2),
                   done: false
                 };
-                return obj2;
+                return obj5;
               }
             }
             c4 = 3;
@@ -317,8 +314,8 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_2 = value;
           let tmp9;
@@ -327,8 +324,8 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
             tmp9 = obj;
           }
           c4 = 3;
-          const obj4 = { value: tmp9, done: true };
-          return obj4;
+          const obj7 = { value: tmp9, done: true };
+          return obj7;
         }
       } catch (tmp19) {
         c4 = tmp;
@@ -339,11 +336,10 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   iter.next();
   return iter;
 };
-let viewThroughSpec = {};
-viewThroughSpec = { viewThroughSpec: null };
-viewThroughSpec = { kind: fn(11627).IosAttributionFramework.AD_ATTRIBUTION_KIT };
-viewThroughSpec.viewThroughSpec = viewThroughSpec;
-viewThroughSpec[fn(11627).IosAttributionFramework.AD_ATTRIBUTION_KIT] = viewThroughSpec;
+let obj = {};
+let obj2 = { viewThroughSpec: { kind: fn(11628).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(11628).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(11628).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 11715: contentHandlers ===
+// === Module 11716: contentHandlers ===
 
-// Module 11715 (contentHandlers)
+// Module 11716 (contentHandlers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
@@ -9,7 +9,7 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11713 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11714 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -44,8 +44,8 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -58,8 +58,8 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -77,16 +77,15 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              let obj1 = { value, done: true };
-              return obj1;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj3 = closure_130_2(closure_130_3[2]);
                   c3 = 2;
                   c4 = 1;
-                  const obj2 = { value: obj3.maybeRefreshAttachmentUrl(attachmentUrl), done: false };
-                  return obj2;
+                  const obj7 = { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
+                  return obj7;
                 }
               }
               c4 = 3;
@@ -96,14 +95,14 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
             throw value;
           } else if (arg0 !== 2) {
             closure_129_1 = value;
-            obj = closure_130_1(closure_130_3[3]);
-            obj.trackLinkClicked(closure_129_1);
-            obj1 = closure_130_1(closure_130_3[4]);
-            obj1.openURL(closure_129_1);
+            closure_130_1(closure_130_3[3]).trackLinkClicked(closure_129_1);
+            const obj = closure_130_1(closure_130_3[3]);
+            closure_130_1(closure_130_3[4]).openURL(closure_129_1);
+            const obj2 = closure_130_1(closure_130_3[4]);
           }
           c4 = 3;
-          obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         }
       } catch (tmp25) {
         c4 = tmp;
@@ -136,8 +135,8 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -150,8 +149,8 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -169,17 +168,15 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj2 = closure_130_2(closure_130_3[2]);
                   c3 = 2;
                   c4 = 1;
-                  obj2 = { value: null, done: false };
-                  obj2.value = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
-                  return obj2;
+                  const obj6 = { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
+                  return obj6;
                 }
               }
               c4 = 3;
@@ -189,12 +186,12 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
             throw value;
           } else if (arg0 !== 2) {
             closure_129_1 = value;
-            obj = { urlString: closure_129_1 };
+            const obj = { urlString: closure_129_1 };
             closure_130_1(closure_130_3[1])(obj);
           }
           c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj7 = { value, done: true };
+          return obj7;
         }
       } catch (tmp22) {
         c4 = tmp;
@@ -216,58 +213,58 @@ obj.onLongPressAttachmentLink = function() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  let obj = parsedUserId(11676);
-  const nativeSyntheticEventData = obj.getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(11677).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
-    obj = { userId, channelId, sourceAnalyticsLocations: null };
+    const obj2 = { userId, channelId, sourceAnalyticsLocations: null };
     const items = [AnalyticsLocationDefault.USER_MENTION];
-    obj.sourceAnalyticsLocations = items;
-    showUserProfileActionSheetDefault(obj);
+    obj2.sourceAnalyticsLocations = items;
+    showUserProfileActionSheetDefault(obj2);
   } else {
     if (null != roleId) {
       if (null != guildId) {
-        obj = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1896)(11716, dependencyMap.paths), "RoleMembersActionSheet", obj);
+        const obj3 = { guildId, roleId, channelId };
+        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1896)(11717, dependencyMap.paths), "RoleMembersActionSheet", obj3);
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
-        const obj1 = { guildId, roleId: null, channelId: null };
+        const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1896)(11716, dependencyMap.paths);
-        obj1.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
-        obj1.channelId = channelId;
-        obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
+        const tmp10 = parsedUserId(1896)(11717, dependencyMap.paths);
+        obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
+        obj5.channelId = channelId;
+        obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
       }
     }
     if (null == roleName) {
       const DeveloperMode = parsedUserId(1935).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
-          const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
+          const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
           const intl = parsedUserId(1114).intl;
-          obj2.secondaryConfirmText = intl.string(parsedUserId(1114).t["/AXYnE"]);
-          obj2.onConfirmSecondary = function onConfirmSecondary() {
+          obj7.secondaryConfirmText = intl.string(parsedUserId(1114).t["/AXYnE"]);
+          obj7.onConfirmSecondary = function onConfirmSecondary() {
             ClipboardUtils.copy(parsedUserId);
             const result = ToastUtils.presentCopiedToClipboard();
           };
-          let obj4 = obj2;
+          let obj11 = obj7;
         }
-        const obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
+        const obj10 = { title: null, body: null, confirmText: null, isDismissable: true };
         const intl2 = parsedUserId(1114).intl;
-        obj3.title = intl2.string(parsedUserId(1114).t.r0DLNm);
+        obj10.title = intl2.string(parsedUserId(1114).t.r0DLNm);
         const intl3 = parsedUserId(1114).intl;
-        obj3.body = intl3.string(parsedUserId(1114).t.Fqqbhg);
+        obj10.body = intl3.string(parsedUserId(1114).t.Fqqbhg);
         const intl4 = parsedUserId(1114).intl;
-        obj3.confirmText = intl4.string(parsedUserId(1114).t.BddRzS);
-        const merged = Object.assign(obj4);
-        obj3.show(obj3);
+        obj10.confirmText = intl4.string(parsedUserId(1114).t.BddRzS);
+        const merged = Object.assign(obj11);
+        AlertActionCreatorsDefault.show(obj10);
       }
-      obj4 = {};
+      obj11 = {};
     }
   }
+  let obj = parsedUserId(11677);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
@@ -281,7 +278,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10457, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10458, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/chat/contentHandlers.tsx");

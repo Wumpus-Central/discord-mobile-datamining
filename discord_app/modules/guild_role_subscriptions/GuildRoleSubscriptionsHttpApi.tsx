@@ -1,7 +1,7 @@
 // === Module 7359: GuildRoleSubscriptionsHttpApi ===
 
 // Module 7359 (GuildRoleSubscriptionsHttpApi)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,8 +19,8 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -33,8 +33,8 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -43,8 +43,8 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
             const request = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_0, closure_1), body, rejectWithError: HTTPUtils.rejectWithMigratedError() };
             c7 = 2;
             c8 = 1;
-            const obj1 = { value: HTTP.patch(request), done: false };
-            return obj1;
+            const obj4 = { value: HTTP.patch(request), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c6 = 0;
@@ -57,12 +57,12 @@ let closure_5 = async function _updateGuildRoleSubscriptionGroupListing(arg0, ar
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 0;
           c8 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp19) {
@@ -90,8 +90,8 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -104,8 +104,8 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -114,8 +114,8 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
             const request = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_0), body, rejectWithError: HTTPUtils.rejectWithMigratedError() };
             c6 = 2;
             c7 = 1;
-            const obj1 = { value: HTTP.post(request), done: false };
-            return obj1;
+            const obj4 = { value: HTTP.post(request), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c5 = 0;
@@ -128,12 +128,12 @@ let closure_6 = async function _createGuildRoleSubscriptionGroupListing(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c5 = 0;
           c7 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp19) {
@@ -156,8 +156,8 @@ let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -170,18 +170,18 @@ let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
           c5 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c6 = 2;
           c7 = 1;
-          const obj2 = { value: HTTP.del(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c5 = 0;
@@ -194,7 +194,7 @@ let closure_7 = async function _deleteGuildRoleSubscriptionGroupListing(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c5 = 0;
@@ -227,8 +227,8 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -241,8 +241,8 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp5;
@@ -262,21 +262,21 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             c6 = 1;
             const HTTP = closure_132_0(closure_132_1[3]).HTTP;
             const request = { url: closure_132_3.GUILD_ROLE_SUBSCRIPTION_LISTINGS(closure_131_0, closure_131_1), body: null, rejectWithError: null };
-            const obj3 = {};
+            const obj6 = {};
             const merged = Object.assign(closure_131_3);
-            obj3.price_tier = priceTier2;
-            request.body = obj3;
+            obj6.price_tier = priceTier2;
+            request.body = obj6;
             request.rejectWithError = closure_132_0(closure_132_1[3]).rejectWithMigratedError();
             c7 = 3;
             c8 = 1;
-            const obj4 = { value: HTTP.post(request), done: false };
-            return obj4;
+            const obj7 = { value: HTTP.post(request), done: false };
+            return obj7;
           }
         } else if (2 === tmp8) {
           c6 = 0;
@@ -289,12 +289,12 @@ let closure_8 = async function _createGuildRoleSubscriptionListing(arg0, arg1, a
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c6 = 0;
           c8 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp24) {
@@ -327,8 +327,8 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -341,8 +341,8 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp3;
             closure_4 = tmp5;
@@ -363,21 +363,21 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             c7 = 1;
             const HTTP = closure_133_0(closure_133_1[3]).HTTP;
             const request = { url: closure_133_3.GUILD_ROLE_SUBSCRIPTION_LISTINGS(closure_132_0, closure_132_1, closure_132_2), body: null, rejectWithError: null };
-            const obj3 = {};
+            const obj6 = {};
             const merged = Object.assign(closure_132_4);
-            obj3.price_tier = priceTier2;
-            request.body = obj3;
+            obj6.price_tier = priceTier2;
+            request.body = obj6;
             request.rejectWithError = closure_133_0(closure_133_1[3]).rejectWithMigratedError();
             c8 = 3;
             c9 = 1;
-            const obj4 = { value: HTTP.patch(request), done: false };
-            return obj4;
+            const obj7 = { value: HTTP.patch(request), done: false };
+            return obj7;
           }
         } else if (2 === tmp8) {
           c7 = 0;
@@ -390,12 +390,12 @@ let closure_9 = async function _updateGuildRoleSubscriptionListing(arg0, arg1, a
         } else if (arg0 === 2) {
           c7 = 0;
           c9 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c7 = 0;
           c9 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp25) {
@@ -420,8 +420,8 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -434,18 +434,18 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
           closure_130_1 = undefined;
           closure_130_0 = closure_0;
-          let obj1 = closure_1;
+          let obj4 = closure_1;
           if (closure_1 === undefined) {
-            obj1 = { includeSoftDeleted: false };
+            obj4 = { includeSoftDeleted: false };
           }
-          closure_130_1 = obj1;
+          closure_130_1 = obj4;
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
@@ -457,18 +457,18 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          const obj3 = { include_soft_deleted: closure_130_1.includeSoftDeleted, country_code: closure_130_1.countryCode };
-          closure_130_2 = obj3;
+          const obj6 = { include_soft_deleted: closure_130_1.includeSoftDeleted, country_code: closure_130_1.countryCode };
+          closure_130_2 = obj6;
           c5 = 1;
           const HTTP = closure_131_0(closure_131_1[3]).HTTP;
           const request = { url: closure_131_3.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_130_0), query: closure_130_2, rejectWithError: closure_131_0(closure_131_1[3]).rejectWithMigratedError() };
           c6 = 3;
           c7 = 1;
-          const obj4 = { value: HTTP.get(request), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.get(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c5 = 0;
@@ -481,12 +481,12 @@ let closure_10 = async function _getGuildRoleSubscriptionGroupListingsForGuild(a
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c5 = 0;
         c7 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp20) {
@@ -518,8 +518,8 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -532,8 +532,8 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -542,8 +542,8 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
             const request = { url: Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(closure_0), body, rejectWithError: HTTPUtils.rejectWithMigratedError() };
             c6 = 2;
             c7 = 1;
-            const obj1 = { value: HTTP.patch(request), done: false };
-            return obj1;
+            const obj4 = { value: HTTP.patch(request), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c5 = 0;
@@ -556,12 +556,12 @@ let closure_12 = async function _updateGuildRoleSubscriptionsSettings(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c5 = 0;
           c7 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp19) {
@@ -588,8 +588,8 @@ let closure_13 = async function _getPriceTiers() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -602,21 +602,21 @@ let closure_13 = async function _getPriceTiers() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.PRICE_TIERS, query: null, rejectWithError: null };
-            const obj1 = { price_tier_type: constants2.GUILD_ROLE_SUBSCRIPTIONS, guild_id };
-            request.query = obj1;
+            const obj4 = { price_tier_type: constants2.GUILD_ROLE_SUBSCRIPTIONS, guild_id };
+            request.query = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c5 = 2;
             c6 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c4 = 0;
@@ -629,12 +629,12 @@ let closure_13 = async function _getPriceTiers() {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp19) {
@@ -657,8 +657,8 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -671,19 +671,19 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
           closure_131_2 = undefined;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
-          let obj1 = closure_2;
+          let obj4 = closure_2;
           if (closure_2 === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          closure_131_2 = obj1;
+          closure_131_2 = obj4;
           c7 = 1;
           c8 = 1;
           return { value: "PX_16", done: true };
@@ -694,19 +694,19 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 1;
           const HTTP = closure_132_0(closure_132_1[3]).HTTP;
           const request = { url: closure_132_3.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(closure_131_0, closure_131_1), query: null, rejectWithError: null };
-          const obj3 = { include_draft_listings: closure_131_2.includeDraftListings, include_archived_listings: closure_131_2.includeArchivedListings };
-          request.query = obj3;
+          const obj6 = { include_draft_listings: closure_131_2.includeDraftListings, include_archived_listings: closure_131_2.includeArchivedListings };
+          request.query = obj6;
           request.rejectWithError = closure_132_0(closure_132_1[3]).rejectWithMigratedError();
           c7 = 3;
           c8 = 1;
-          const obj4 = { value: HTTP.get(request), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.get(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp8) {
         c6 = 0;
@@ -719,12 +719,12 @@ let closure_14 = async function _getGuildRoleSubscriptionGroupListing(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c6 = 0;
         c8 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp22) {
@@ -746,8 +746,8 @@ let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPla
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -760,18 +760,18 @@ let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPla
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -784,12 +784,12 @@ let closure_15 = async function _getGuildRoleSubscriptionGroupForSubscriptionPla
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp19) {
@@ -811,8 +811,8 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -825,18 +825,18 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
           c6 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c7 = 2;
           c8 = 1;
-          const obj2 = { value: HTTP.del(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c6 = 0;
@@ -849,7 +849,7 @@ let closure_16 = async function _deleteGuildRoleSubscriptionListing(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c6 = 0;
@@ -875,8 +875,8 @@ let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -889,18 +889,18 @@ let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
           c6 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c7 = 2;
           c8 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c6 = 0;
@@ -913,12 +913,12 @@ let closure_17 = async function _archiveGuildRoleSubscriptionListing(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c6 = 0;
         c8 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp19) {
@@ -940,8 +940,8 @@ let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -954,18 +954,18 @@ let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -978,12 +978,12 @@ let closure_18 = async function _getGuildRoleSubscriptionTrials(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp19) {
@@ -1011,8 +1011,8 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1025,8 +1025,8 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -1035,8 +1035,8 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
             const request = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(closure_0, closure_1), body, rejectWithError: HTTPUtils.rejectWithMigratedError() };
             c7 = 2;
             c8 = 1;
-            const obj1 = { value: HTTP.patch(request), done: false };
-            return obj1;
+            const obj4 = { value: HTTP.patch(request), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c6 = 0;
@@ -1049,12 +1049,12 @@ let closure_19 = async function _updateGuildRoleSubscriptionsTrial(arg0, arg1) {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 0;
           c8 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp19) {
@@ -1077,8 +1077,8 @@ let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0) 
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1091,18 +1091,18 @@ let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0) 
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
           c6 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(closure_0, closure_1, closure_2), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c7 = 2;
           c8 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c6 = 0;
@@ -1115,12 +1115,12 @@ let closure_20 = async function _getGuildRoleSubscriptionTrialEligibility(arg0) 
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c6 = 0;
         c8 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp19) {
@@ -1142,8 +1142,8 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1156,18 +1156,18 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
           let signal;
           closure_130_0 = closure_0;
-          let obj1 = closure_1;
+          let obj4 = closure_1;
           if (closure_1 === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          signal = obj1.signal;
+          signal = obj4.signal;
           c6 = 1;
           c7 = 1;
           return { value: "PX_16", done: true };
@@ -1178,16 +1178,16 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c5 = 1;
           const HTTP = closure_131_0(closure_131_1[3]).HTTP;
-          const obj3 = { url: closure_131_3.CREATOR_MONETIZATION_RESTRICTIONS(closure_130_0), signal, rejectWithError: closure_131_0(closure_131_1[3]).rejectWithMigratedError() };
+          const obj6 = { url: closure_131_3.CREATOR_MONETIZATION_RESTRICTIONS(closure_130_0), signal, rejectWithError: closure_131_0(closure_131_1[3]).rejectWithMigratedError() };
           c6 = 3;
           c7 = 1;
-          const obj4 = { value: HTTP.get(obj3), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.get(obj6), done: false };
+          return obj7;
         }
       } else if (2 === tmp8) {
         c5 = 0;
@@ -1200,12 +1200,12 @@ let closure_21 = async function _getGuildMonetizationRestrictions(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c5 = 0;
         c7 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp21) {
@@ -1227,8 +1227,8 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1241,19 +1241,19 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
           closure_130_0 = undefined;
           c5 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.GUILD_DISCOVERY_SLUG(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          const obj4 = { url: Endpoints.GUILD_DISCOVERY_SLUG(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c6 = 2;
           c7 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c5 = 0;
@@ -1266,8 +1266,8 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_130_0 = value;
         const body = closure_130_0.body;
@@ -1278,7 +1278,7 @@ let closure_22 = async function _fetchHighlightedCreatorGuildDetails(arg0) {
         }
         c5 = 0;
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp23) {

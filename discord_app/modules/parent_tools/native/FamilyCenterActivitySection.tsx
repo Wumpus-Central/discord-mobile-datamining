@@ -1,11 +1,11 @@
-// === Module 14988: FamilyCenterActivitySection ===
+// === Module 14989: FamilyCenterActivitySection ===
 
-// Module 14988 (FamilyCenterActivitySection)
+// Module 14989 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14983 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14984 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,7 @@ function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
   const tmp = closure_11();
   let flag = useIsInAdultAgeGroupDefault();
-  let obj = FamilyCenterUtils;
-  const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
+  const activityTypeTextConfigs = FamilyCenterUtils.getActivityTypeTextConfigs();
   value = activityTypeTextConfigs.get(displayType);
   const actionsForDisplayType = useFamilyCenterActivities.useActionsForDisplayType(displayType);
   const formattedTotalForDisplayType = useFamilyCenterActivities.useFormattedTotalForDisplayType(displayType);
@@ -40,17 +39,17 @@ function FamilyCenterActivitySectionHeader(displayType) {
       }
       tmp10 = sectionDescriptionResult;
     }
-    obj = { variant: "text-sm/semibold", style: tmp.header, children: sectionHeaderResult };
-    const items = [React7(Text_Text.Text, obj), ];
+    const obj2 = { variant: "text-sm/semibold", style: tmp.header, children: sectionHeaderResult };
+    const items = [React7(Text_Text.Text, obj2), ];
     let tmp14Result = null;
     if (null !== tmp10) {
-      obj = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
-      tmp14Result = React7(Text_Text.Text, obj);
+      const obj3 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: tmp10 };
+      tmp14Result = React7(Text_Text.Text, obj3);
     }
-    const obj1 = { children: null };
+    const obj6 = { children: null };
     items[1] = tmp14Result;
-    obj1.children = items;
-    return closure_1_10(timestampProducer, obj1);
+    obj6.children = items;
+    return closure_1_10(timestampProducer, obj6);
   }
   length = actionsForDisplayType.length;
 }
@@ -60,30 +59,28 @@ const FamilyCenterConstants = fn(7641);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { header: null, description: null };
-createStyles = { marginBottom: nativeDefault.space.PX_4 };
-createStyles.header = createStyles;
-createStyles.description = { marginBottom: nativeDefault.space.PX_8 };
-let closure_11 = createStyles.createStyles(createStyles);
+let createStyles = fn(4636);
+let obj2 = { header: { marginBottom: nativeDefault.space.PX_4 }, description: null };
+let obj3 = { marginBottom: nativeDefault.space.PX_4 };
+obj2.description = { marginBottom: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
-let obj2 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
-let obj1 = { marginBottom: nativeDefault.space.PX_8 };
-obj2.loadMore = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
-obj2.loadMoreButton = { paddingVertical: 4 };
-let closure_13 = createStyles.createStyles(obj2);
+let obj6 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
+let obj4 = { marginBottom: nativeDefault.space.PX_8 };
+obj6.loadMore = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+obj6.loadMoreButton = { paddingVertical: 4 };
+let closure_13 = createStyles.createStyles(obj6);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
 
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  let obj = displayType(14983);
-  const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14983);
-  const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(12046);
-  const familyCenterActions = obj2.useFamilyCenterActions({});
+  const actionsForDisplayType = displayType(14984).useActionsForDisplayType(displayType);
+  const obj = displayType(14984);
+  const actionTotalsForDisplayType = displayType(14984).useActionTotalsForDisplayType(displayType);
+  const obj2 = displayType(14984);
+  const familyCenterActions = displayType(12047).useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp6[1];
@@ -93,34 +90,35 @@ export default function FamilyCenterActivitySection(displayType) {
     return null;
   } else {
     const intl = tmp(1114).intl;
-    obj = { pageSize: null };
+    const obj4 = { pageSize: null };
     const _Math = Math;
-    obj.pageSize = Math.min(actionTotalsForDisplayType - substr.length, closure_7);
-    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2396)["7dMmJY"], obj);
-    obj = { style: loadMoreButton.container, children: null };
-    obj1 = { displayType };
-    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => closure_1_9(loadMore(14989), { action }, action.event_id)), ];
+    obj4.pageSize = Math.min(actionTotalsForDisplayType - substr.length, closure_7);
+    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2396)["7dMmJY"], obj4);
+    const obj5 = { style: loadMoreButton.container, children: null };
+    const obj6 = { displayType };
+    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj6), substr.map((action) => closure_1_9(loadMore(14990), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
-      obj.children = items1;
-      return closure_10(closure_6, obj);
+      obj5.children = items1;
+      return closure_10(closure_6, obj5);
     } else {
-      obj2 = { style: loadMoreButton.loadMoreContainer, children: null };
+      const obj7 = { style: loadMoreButton.loadMoreContainer, children: null };
       if (familyCenterActions.isMoreLoading) {
-        const obj3 = { style: loadMoreButton.loadMore, children: null };
-        const obj4 = { style: null, animating: true, color: "#fff", size: "small" };
+        const obj8 = { style: loadMoreButton.loadMore, children: null };
+        const obj9 = { style: null, animating: true, color: "#fff", size: "small" };
         loadMoreButton = loadMoreButton.loadMoreButton;
-        obj4.style = loadMoreButton;
-        obj3.children = closure_9(closure_5, obj4);
-        let tmp17Result = closure_9(closure_6, obj3);
+        obj9.style = loadMoreButton;
+        obj8.children = closure_9(closure_5, obj9);
+        let tmp17Result = closure_9(closure_6, obj8);
       } else {
-        const obj5 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
-        const obj6 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-        obj5.children = closure_9(tmp(4632).Text, obj6);
-        tmp17Result = closure_9(tmp(5204).PressableOpacity, obj5);
+        const obj10 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
+        const obj11 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
+        obj10.children = closure_9(tmp(4632).Text, obj11);
+        tmp17Result = closure_9(tmp(5204).PressableOpacity, obj10);
       }
-      obj2.children = tmp17Result;
-      tmp17Result = closure_9(closure_6, obj2);
+      obj7.children = tmp17Result;
+      closure_9(closure_6, obj7);
     }
   }
+  const obj3 = displayType(12047);
 };

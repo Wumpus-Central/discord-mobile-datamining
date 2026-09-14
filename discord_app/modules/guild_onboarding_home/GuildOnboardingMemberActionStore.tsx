@@ -37,7 +37,7 @@ prototype["getState"] = function getState(arg0) {
   return obj;
 };
 GuildOnboardingMemberActionStore.displayName = "GuildOnboardingMemberActionStore";
-obj = {
+const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(DispatcherDefault, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function handleMemberActionsFetchStart(guildId) {
     set.add(guildId.guildId);
   },
@@ -64,10 +64,10 @@ obj = {
     guildId = guildId.guildId;
     obj = {};
     const merged = Object.assign(obj);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(obj[guildId]);
-    obj[guildId.channelId] = true;
-    obj[guildId] = obj;
+    obj2[guildId.channelId] = true;
+    obj[guildId] = obj2;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
@@ -78,8 +78,7 @@ obj = {
       delete tmp2[tmp];
     }
   }
-};
-const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");
 

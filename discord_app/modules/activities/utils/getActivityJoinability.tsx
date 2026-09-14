@@ -1,15 +1,15 @@
-// === Module 13164: getActivityJoinability ===
+// === Module 13165: getActivityJoinability ===
 
-// Module 13164 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 13165 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import hasFlagDefault from "hasFlag" /* 7416 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9632 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9661 */;
-import getPartySize from "getPartySize" /* 11884 */;
-import isPartyFull from "isPartyFull" /* 11886 */;
-import getIsInParty from "getIsInParty" /* 11887 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13165 */;
+import getPartySize from "getPartySize" /* 11885 */;
+import isPartyFull from "isPartyFull" /* 11887 */;
+import getIsInParty from "getIsInParty" /* 11888 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11891 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13166 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -36,12 +36,12 @@ export default function getActivityJoinability(arg0) {
     } else {
       if (isEmbedded) {
         if (null != channelId) {
-          obj = { userId: user.id, activity, channelId, currentUser: tmp2, application: tmp, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
-          obj.isActivitiesEnabledForCurrentPlatform = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
-          obj.ChannelStore = ChannelStore;
-          obj.VoiceStateStore = VoiceStateStore;
-          obj.PermissionStore = tmp3;
-          obj.GuildStore = GuildStore;
+          const obj5 = { userId: user.id, activity, channelId, currentUser: tmp2, application: tmp, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+          obj5.isActivitiesEnabledForCurrentPlatform = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
+          obj5.ChannelStore = ChannelStore;
+          obj5.VoiceStateStore = VoiceStateStore;
+          obj5.PermissionStore = tmp3;
+          obj5.GuildStore = GuildStore;
           if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {

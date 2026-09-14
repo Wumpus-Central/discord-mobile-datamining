@@ -1,15 +1,15 @@
-// === Module 11514: StrangerDangerWarningBanner ===
+// === Module 11515: StrangerDangerWarningBanner ===
 
-// Module 11514 (StrangerDangerWarningBanner)
+// Module 11515 (StrangerDangerWarningBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11504 */;
-import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11518 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11505 */;
+import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 11519 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
@@ -37,8 +37,7 @@ class StrangerDangerWarningBanner {
     items2[2] = senderId;
     stateFromStores = obj.useStateFromStores(items, () => RelationshipStore.isBlocked(senderId), items1);
     effect = closure_3.useEffect(() => {
-      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER };
-      obj.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_VIEWED, obj);
+      SafetyWarningUtils.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_VIEWED, { channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER });
     }, items2);
     items3 = [, ];
     items3[0] = channelId;
@@ -56,8 +55,7 @@ class StrangerDangerWarningBanner {
     items4[3] = senderId;
     callback1 = closure_3.useCallback((cta) => () => {
       callback();
-      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER, cta };
-      obj.trackCtaEvent(obj);
+      SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER, cta });
     }, items4);
     closure_5 = callback1;
     items5 = [, , , , ];
@@ -69,78 +67,74 @@ class StrangerDangerWarningBanner {
     callback2 = closure_3.useCallback((arg0) => {
       closure_0 = arg0;
       return () => {
-        let obj = {
-          userId: senderId,
-          channelId,
-          onBlock: callback1(channelId),
-          onSuccess() {
-            return warningId(senderId[13]).hideActionSheet();
-          },
-          onIgnore() {
-            closure_1_4();
-            channelId(11503);
-            const obj = { channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11503).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM };
-            obj.trackCtaEvent(obj);
-          },
-          impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION
+        const obj2 = { userId: senderId, channelId, onBlock: null, onSuccess: null, onIgnore: null, impressionName: null };
+        let obj = ActionSheetActionCreatorsDefault;
+        obj2.onBlock = callback1(channelId);
+        obj2.onSuccess = function onSuccess() {
+          return warningId(senderId[13]).hideActionSheet();
         };
-        obj.openLazy(asyncRequireImpl(11516, dependencyMap.paths), closure_9, obj);
+        obj2.onIgnore = function onIgnore() {
+          closure_1_4();
+          const obj = channelId(11504);
+          obj.trackCtaEvent({ channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(11504).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM });
+        };
+        obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
+        obj.openLazy(asyncRequireImpl(11517, dependencyMap.paths), closure_9, obj2);
       };
     }, items5);
     closure_6 = callback2;
     tmp8 = jsx;
-    obj = { channelId, warningId, senderId, warningType: closure_5.STRANGER_DANGER, header: null, description: null, onDismiss: null, buttons: null };
+    obj1 = { channelId, warningId, senderId, warningType: closure_5.STRANGER_DANGER, header: null, description: null, onDismiss: null, buttons: null };
     tmp9 = warningId(senderId[17]);
     intl = channelId(senderId[18]).intl;
-    obj.header = intl.string(channelId(senderId[18]).t.iOkDpM);
+    obj1.header = intl.string(channelId(senderId[18]).t.iOkDpM);
     intl2 = channelId(senderId[18]).intl;
-    obj.description = intl2.string(channelId(senderId[18]).t.ISUbcM);
-    obj.onDismiss = callback;
-    obj1 = { text: null, variant: "primary", onpress: null };
+    obj1.description = intl2.string(channelId(senderId[18]).t.ISUbcM);
+    obj1.onDismiss = callback;
+    obj5 = { text: null, variant: "primary", onpress: null };
     intl3 = channelId(senderId[18]).intl;
-    obj1.text = intl3.string(channelId(senderId[18]).t["Qk/c48"]);
-    obj1.onpress = function onpress() {
-      let obj = { modalKey, headerStyle: moreTipsHeader.moreTipsHeader, channelId, warningId, senderId, description: null, safetyTips: null, actionItems: null };
+    obj5.text = intl3.string(channelId(senderId[18]).t["Qk/c48"]);
+    obj5.onpress = function onpress() {
+      const obj2 = { modalKey, headerStyle: moreTipsHeader.moreTipsHeader, channelId, warningId, senderId, description: null, safetyTips: null, actionItems: null };
+      const obj = ModalActionCreatorsDefault;
       const intl = util.intl;
-      obj.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(11508, dependencyMap.paths);
-      obj.safetyTips = React5().map((children, index) => closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index));
-      obj = { channelId, warningId, senderId, onBlockPressed: null };
+      obj2.description = intl.string(util.t.DJMZX6);
+      const tmp = asyncRequireImpl(11509, dependencyMap.paths);
+      obj2.safetyTips = React5().map((children, index) => closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index));
+      const obj3 = { channelId, warningId, senderId, onBlockPressed: null };
       const arr = React5();
-      obj.onBlockPressed = callback2(SafetyWarningUtils.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM);
-      obj.actionItems = jsx(StrangerDangerMoreTipsModalActionItemsDefault, { channelId, warningId, senderId, onBlockPressed: null });
-      obj.pushLazy(tmp, obj, modalKey);
+      obj3.onBlockPressed = callback2(SafetyWarningUtils.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM);
+      obj2.actionItems = jsx(StrangerDangerMoreTipsModalActionItemsDefault, { channelId, warningId, senderId, onBlockPressed: null });
+      obj.pushLazy(tmp, obj2, modalKey);
       const obj4 = SafetyWarningUtils;
       obj4.trackCtaEvent({ channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER, cta: SafetyWarningUtils.CtaEventTypes.OPEN_MORE_TIPS });
     };
     items6 = [];
-    items6[0] = obj1;
+    items6[0] = obj5;
     if (stateFromStores) {
       items7 = [];
     } else {
-      obj2 = { text: null, variant: "destructive", onpress: null };
+      obj6 = { text: null, variant: "destructive", onpress: null };
       intl4 = tmp(tmp2[18]).intl;
-      obj2.text = intl4.string(tmp(tmp2[18]).t.ie0QdN);
-      obj2.onpress = callback2(tmp(tmp2[10]).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM);
+      obj6.text = intl4.string(tmp(tmp2[18]).t.ie0QdN);
+      obj6.onpress = callback2(tmp(tmp2[10]).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM);
       items7 = [];
-      items7[0] = obj2;
+      items7[0] = obj6;
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items7, 1);
-    obj.buttons = items6;
-    return tmp8(tmp9, obj);
+    obj1.buttons = items6;
+    return tmp8(tmp9, obj1);
   }
 }
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
-const Constants = fn(11496);
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
+const Constants = fn(11497);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: metroRequire, getStrangerDangerSafetyTips: closure_7 } = Constants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_9 = fn(11515).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_9 = fn(11516).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { moreTipsHeader: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-createStyles.moreTipsHeader = createStyles;
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx");
 

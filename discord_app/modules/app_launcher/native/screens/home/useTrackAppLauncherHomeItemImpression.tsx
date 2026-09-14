@@ -1,6 +1,6 @@
-// === Module 12229: useTrackAppLauncherHomeItemImpression ===
+// === Module 12230: useTrackAppLauncherHomeItemImpression ===
 
-// Module 12229 (useTrackAppLauncherHomeItemImpression)
+// Module 12230 (useTrackAppLauncherHomeItemImpression)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,24 +9,23 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
-  let obj = trackAppLauncherItemImpressionOnFirstView(12230);
-  trackAppLauncherItemImpressionOnFirstView = obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
-  obj = { trackAppLauncherHomeItemImpression: null };
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12231).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  let obj2 = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];
-  obj.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {
+  obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {
       item = item.item;
       if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
         shelfItem1SectionPosition = item.sectionPosition;
         applicationId = item.application.id;
-        let tmpResult = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
-        let flags = tmpResult.getApplicationFlags(item.application);
+        let flags = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]).getApplicationFlags(item.application);
+        const tmpResult = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
       } else if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
         shelfItem1SectionPosition = item.sectionPosition;
         applicationId = item.item.application.id;
-        tmpResult = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
-        flags = tmpResult.getApplicationFlags(item.item.application);
+        flags = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]).getApplicationFlags(item.item.application);
+        const tmpResult2 = trackAppLauncherItemImpressionOnFirstView(dependencyMap[3]);
       } else if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
         ({ sectionPosition: shelfItem1SectionPosition, applicationId } = item);
         flags = item.section.application.flags;
@@ -43,26 +42,26 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
           const flags2 = shelfItem22.application.flags;
         }
       }
-      let obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: BigFlagUtilsAll.asUintN(32, flags) };
+      const obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: BigFlagUtilsAll.asUintN(32, flags) };
       closure_1_0(obj);
       if (tmp7) {
-        obj = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
+        const obj2 = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
         const _HermesInternal = HermesInternal;
-        obj.itemKey = "sectionName:" + item.sectionName + " applicationId:" + id;
-        obj.sectionName = item.sectionName;
-        obj.sectionPosition = shelfItem2SectionPosition;
-        obj.sectionOverallPosition = item.sectionOverallPosition;
-        obj.applicationId = id;
+        obj2.itemKey = "sectionName:" + item.sectionName + " applicationId:" + id;
+        obj2.sectionName = item.sectionName;
+        obj2.sectionPosition = shelfItem2SectionPosition;
+        obj2.sectionOverallPosition = item.sectionOverallPosition;
+        obj2.applicationId = id;
         let asUintNResult;
         if (null != flags2) {
           asUintNResult = BigFlagUtilsAll.asUintN(32, flags2);
           const tmp5Result = BigFlagUtilsAll;
         }
-        obj.applicationFlags = asUintNResult;
-        closure_1_0(obj);
+        obj2.applicationFlags = asUintNResult;
+        closure_1_0(obj2);
       }
       tmp7 = null != id && null != shelfItem2SectionPosition;
     });
   }, items);
-  return obj;
+  return obj2;
 };

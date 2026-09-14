@@ -87,18 +87,18 @@ class GameRecord extends tmp2 {
         obj.localizedRatingCount = reviews.steam.localized_rating_count;
         tmp9 = obj;
       }
-      obj = { steam: null, opencritic: null };
-      obj.steam = tmp9;
+      obj1 = { steam: null, opencritic: null };
+      obj1.steam = tmp9;
       tmp10 = undefined;
       if (null != reviews.opencritic) {
-        obj1 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
-        obj1.topCriticRating = reviews.opencritic.top_critic_rating;
-        obj1.topCriticRatingCount = reviews.opencritic.top_critic_rating_count;
-        obj1.tier = reviews.opencritic.tier;
-        tmp10 = obj1;
+        obj4 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
+        obj4.topCriticRating = reviews.opencritic.top_critic_rating;
+        obj4.topCriticRatingCount = reviews.opencritic.top_critic_rating_count;
+        obj4.tier = reviews.opencritic.tier;
+        tmp10 = obj4;
       }
-      obj.opencritic = tmp10;
-      tmp8 = obj;
+      obj1.opencritic = tmp10;
+      tmp8 = obj1;
     } else {
       opencritic = undefined;
       if (reviews != null) {

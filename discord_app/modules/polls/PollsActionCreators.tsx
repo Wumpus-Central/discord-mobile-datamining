@@ -1,10 +1,10 @@
-// === Module 11843: PollsActionCreators ===
+// === Module 11844: PollsActionCreators ===
 
-// Module 11843 (PollsActionCreators)
+// Module 11844 (PollsActionCreators)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 11844 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 11845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
@@ -51,16 +51,15 @@ function getPollVoteEventProperties(answers, set) {
 function showLurkingAlert(guildId) {
   guildId = guildId.guildId;
   ({ title, body } = guildId);
-  const obj = { title, body, confirmText: null, cancelText: null, onConfirm: null };
+  const obj2 = { title, body, confirmText: null, cancelText: null, onConfirm: null };
   const intl = guildId(1114).intl;
-  obj.confirmText = intl.string(guildId(1114).t["9VLmlZ"]);
+  obj2.confirmText = intl.string(guildId(1114).t["9VLmlZ"]);
   const intl2 = guildId(1114).intl;
-  obj.cancelText = intl2.string(guildId(1114).t["2m+Sqk"]);
-  obj.onConfirm = function onConfirm() {
-    const obj = { source: constants2.POLL_ALERT };
-    obj.joinGuild(guild_id, obj);
+  obj2.cancelText = intl2.string(guildId(1114).t["2m+Sqk"]);
+  obj2.onConfirm = function onConfirm() {
+    GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT });
   };
-  obj.show(obj);
+  AlertActionCreatorsDefault.show(obj2);
 }
 function handleShowVotesForAnswer(messageId) {
   ({ channelId, answerId } = messageId);
@@ -72,16 +71,15 @@ function handleShowVotesForAnswer(messageId) {
       guild_id = channel.guild_id;
       const stringResult = intl.string(guild_id(1114).t["7LpysO"]);
       const stringResult1 = intl2.string(guild_id(1114).t["5sHHoy"]);
-      let obj = { title: stringResult, body: stringResult1, confirmText: null, cancelText: null, onConfirm: null };
+      const obj2 = { title: stringResult, body: stringResult1, confirmText: null, cancelText: null, onConfirm: null };
       const intl3 = guild_id(1114).intl;
-      obj.confirmText = intl3.string(guild_id(1114).t["9VLmlZ"]);
+      obj2.confirmText = intl3.string(guild_id(1114).t["9VLmlZ"]);
       const intl4 = guild_id(1114).intl;
-      obj.cancelText = intl4.string(guild_id(1114).t["2m+Sqk"]);
-      obj.onConfirm = function onConfirm() {
-        const obj = { source: constants2.POLL_ALERT };
-        obj.joinGuild(guild_id, obj);
+      obj2.cancelText = intl4.string(guild_id(1114).t["2m+Sqk"]);
+      obj2.onConfirm = function onConfirm() {
+        GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT });
       };
-      AlertActionCreatorsDefault.show(obj);
+      AlertActionCreatorsDefault.show(obj2);
     } else {
       const message = MessageStore.getMessage(channelId, messageId.messageId);
       if (null != message) {
@@ -91,8 +89,8 @@ function handleShowVotesForAnswer(messageId) {
               const _String = String;
               answerId = String(message.poll.answers[0].answer_id);
             }
-            obj = { message, initialAnswerId: answerId };
-            obj.showVotesForAnswer(obj);
+            const obj4 = { message, initialAnswerId: answerId };
+            PollInteractionUtilsAll.showVotesForAnswer(obj4);
           }
         }
       }
@@ -167,12 +165,12 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
         for (const item10006 of closure_1_7) {
           let id = item10006.id;
           let obj = messageId(573);
-          obj = { type: item10006.type, channelId, messageId, emoji: null, userId: null, optimistic: true, reactionType: null };
-          obj = { id, name: id };
-          obj.emoji = obj;
-          obj.userId = userId;
-          obj.reactionType = channelId(7865).ReactionTypes.VOTE;
-          dispatchResult = obj.dispatch(obj);
+          let obj2 = { type: item10006.type, channelId, messageId, emoji: null, userId: null, optimistic: true, reactionType: null };
+          let obj3 = { id, name: id };
+          obj2.emoji = obj3;
+          obj2.userId = userId;
+          obj2.reactionType = channelId(7865).ReactionTypes.VOTE;
+          dispatchResult = obj.dispatch(obj2);
           continue;
         }
         return dispatchResult;
@@ -214,8 +212,8 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -228,8 +226,8 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
@@ -251,23 +249,23 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             channel = closure_133_8.getChannel(closure_132_0);
             if (null != channel) {
               if (closure_133_5.isLurking(channel.guild_id)) {
-                let obj2 = { guildId: channel.guild_id, title: null, body: null };
+                const obj6 = { guildId: channel.guild_id, title: null, body: null };
                 const intl7 = closure_133_0(closure_133_3[13]).intl;
-                obj2.title = intl7.string(closure_133_0(closure_133_3[13]).t.Qic1FD);
+                obj6.title = intl7.string(closure_133_0(closure_133_3[13]).t.Qic1FD);
                 const intl8 = closure_133_0(closure_133_3[13]).intl;
-                obj2.body = intl8.string(closure_133_0(closure_133_3[13]).t["5sHHoy"]);
-                closure_133_18(obj2);
+                obj6.body = intl8.string(closure_133_0(closure_133_3[13]).t["5sHHoy"]);
+                closure_133_18(obj6);
               } else if (closure_133_10.canChatInGuild(channel.guild_id)) {
                 closure_132_3 = closure_133_13(closure_132_0, closure_132_1);
                 closure_133_1(closure_133_3[11])(null != closure_132_3, "Must not be able to vote without existing state!");
-                const obj3 = { channelId: closure_132_0, messageId: closure_132_1 };
-                closure_132_4 = closure_133_21(obj3);
+                const obj8 = { channelId: closure_132_0, messageId: closure_132_1 };
+                closure_132_4 = closure_133_21(obj8);
                 c7 = 1;
                 closure_3 = 0;
                 const selectedAnswerIds = closure_132_3.selectedAnswerIds;
@@ -282,19 +280,19 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
                   obj.editing = false;
                   return obj;
                 });
-                const obj4 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
+                const obj9 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
                 c8 = 3;
                 c9 = 1;
-                const obj5 = { value: closure_133_22(obj4), done: false };
-                return obj5;
+                const obj10 = { value: closure_133_22(obj9), done: false };
+                return obj10;
               } else {
-                let obj10 = closure_133_1(closure_133_3[12]);
-                let obj6 = { title: null, body: null };
+                const obj12 = { title: null, body: null };
                 const intl5 = closure_133_0(closure_133_3[13]).intl;
-                obj6.title = intl5.string(closure_133_0(closure_133_3[13]).t.p245wu);
+                obj12.title = intl5.string(closure_133_0(closure_133_3[13]).t.p245wu);
                 const intl6 = closure_133_0(closure_133_3[13]).intl;
-                obj6.body = intl6.string(closure_133_0(closure_133_3[13]).t["U/uodt"]);
-                obj10.show(obj6);
+                obj12.body = intl6.string(closure_133_0(closure_133_3[13]).t["U/uodt"]);
+                closure_133_1(closure_133_3[12]).show(obj12);
+                const obj11 = closure_133_1(closure_133_3[12]);
               }
             }
             c9 = 3;
@@ -302,10 +300,9 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
         } else if (2 === tmp7) {
           c7 = 0;
           closure_132_6 = closure_6;
-          obj6 = closure_133_1(closure_133_3[12]);
-          const obj7 = { title: null, body: null };
+          const obj13 = { title: null, body: null };
           const intl3 = closure_133_0(closure_133_3[13]).intl;
-          obj7.title = intl3.string(closure_133_0(closure_133_3[13]).t.iufib1);
+          obj13.title = intl3.string(closure_133_0(closure_133_3[13]).t.iufib1);
           const getAnyErrorMessage = closure_132_6.getAnyErrorMessage;
           let anyErrorMessage;
           if (getAnyErrorMessage != null) {
@@ -320,13 +317,13 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
             const intl4 = closure_133_0(closure_133_3[13]).intl;
             body = intl4.string(closure_133_0(closure_133_3[13]).t.eAn6z2);
           }
-          obj7.body = body;
-          obj6.show(obj7);
-          const obj8 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_4 };
+          obj13.body = body;
+          closure_133_1(closure_133_3[12]).show(obj13);
+          const obj14 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_4 };
           c8 = 5;
           c9 = 1;
-          const obj9 = { value: closure_133_22(obj8), done: false };
-          return obj9;
+          const obj15 = { value: closure_133_22(obj14), done: false };
+          return obj15;
         } else if (3 === tmp7) {
           if (arg0 === 1) {
             c9 = 3;
@@ -334,15 +331,14 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           } else if (arg0 === 2) {
             c7 = 0;
             c9 = 3;
-            obj10 = { value, done: true };
-            return obj10;
+            const obj16 = { value, done: true };
+            return obj16;
           } else {
-            obj2 = closure_133_2(closure_133_3[22]);
-            const obj11 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
+            const obj17 = { channelId: closure_132_0, messageId: closure_132_1, answerIds: closure_132_5 };
             c8 = 4;
             c9 = 1;
-            const obj12 = { value: obj2.submitPollVote(obj11), done: false };
-            return obj12;
+            const obj18 = { value: closure_133_2(closure_133_3[22]).submitPollVote(obj17), done: false };
+            return obj18;
           }
         } else if (4 === tmp7) {
           if (arg0 === 1) {
@@ -351,8 +347,8 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           } else if (arg0 === 2) {
             c7 = 0;
             c9 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj19 = { value, done: true };
+            return obj19;
           } else {
             closure_133_14(closure_132_0, closure_132_1, () => {
 
@@ -383,7 +379,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           });
         }
         c9 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp111) {
@@ -405,8 +401,8 @@ let closure_26 = async function _handleClearPollVote(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -419,8 +415,8 @@ let closure_26 = async function _handleClearPollVote(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp4;
           c1 = 0;
@@ -438,18 +434,18 @@ let closure_26 = async function _handleClearPollVote(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           channel = closure_130_8.getChannel(closure_129_0);
           if (null != channel) {
             if (closure_130_5.isLurking(channel.guild_id)) {
-              const obj2 = { guildId: channel.guild_id, title: null, body: null };
+              const obj5 = { guildId: channel.guild_id, title: null, body: null };
               const intl = closure_130_0(closure_130_3[13]).intl;
-              obj2.title = intl.string(closure_130_0(closure_130_3[13]).t.B9QnBp);
+              obj5.title = intl.string(closure_130_0(closure_130_3[13]).t.B9QnBp);
               const intl2 = closure_130_0(closure_130_3[13]).intl;
-              obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.BVZCTn);
-              closure_130_18(obj2);
+              obj5.body = intl2.string(closure_130_0(closure_130_3[13]).t.BVZCTn);
+              closure_130_18(obj5);
             } else {
               closure_130_14(closure_129_0, closure_129_1, (showResults) => {
                 const obj = { channelId, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: null };
@@ -463,11 +459,11 @@ let closure_26 = async function _handleClearPollVote(arg0) {
                 obj.showResults = flag;
                 return obj;
               });
-              const obj3 = { channelId: closure_129_0, messageId: closure_129_1 };
+              const obj6 = { channelId: closure_129_0, messageId: closure_129_1 };
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: closure_130_24(obj3), done: false };
-              return obj4;
+              const obj7 = { value: closure_130_24(obj6), done: false };
+              return obj7;
             }
           }
           c4 = 3;
@@ -478,11 +474,11 @@ let closure_26 = async function _handleClearPollVote(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c4 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp18) {
@@ -499,8 +495,8 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -513,8 +509,8 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -533,19 +529,19 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if ("submit" === closure_129_2) {
-            const obj2 = { channelId: closure_129_0, messageId: closure_129_1 };
+            const obj5 = { channelId: closure_129_0, messageId: closure_129_1 };
             c3 = 2;
             c4 = 1;
-            const obj3 = { value: closure_130_24(obj2), done: false };
-            return obj3;
+            const obj6 = { value: closure_130_24(obj5), done: false };
+            return obj6;
           } else if ("remove" === tmp39) {
-            const obj4 = { channelId: closure_129_0, messageId: closure_129_1 };
+            const obj7 = { channelId: closure_129_0, messageId: closure_129_1 };
             c3 = 3;
             c4 = 1;
-            const obj5 = {
+            const obj8 = {
               value: (function handleClearPollVote() {
                           const self = this;
                           const apply = closure_1_26.apply;
@@ -555,16 +551,16 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
                             applyArgumentsResult = apply(self, arguments);
                           }
                           return applyArgumentsResult;
-                        })(obj4),
+                        })(obj7),
               done: false
             };
-            return obj5;
+            return obj8;
           } else if ("cancel" === tmp39) {
-            const obj6 = { channelId: closure_129_0, messageId: closure_129_1, isEditing: false };
-            closure_130_20(obj6);
+            const obj9 = { channelId: closure_129_0, messageId: closure_129_1, isEditing: false };
+            closure_130_20(obj9);
           } else {
             if ("showVotes" === tmp39) {
-              const obj7 = { channelId: closure_129_0, messageId: closure_129_1 };
+              const obj10 = { channelId: closure_129_0, messageId: closure_129_1 };
               (function handleShowVotes(channelId) {
                 channelId = channelId.channelId;
                 const messageId = channelId.messageId;
@@ -585,9 +581,10 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
                       return acc + num;
                     }, 0);
                   }
-                  let obj = closure_2_1(closure_2_3[17]);
-                  obj.trackWithMetadata(constants.POLL_SHOW_RESULTS_CLICKED, { channel_id: channelId, message_id: messageId, show_results: null == showResults || !showResults.showResults, votes_count: num });
-                  obj = { channelId, selectedAnswerIds: new Set(), submitting: null, editing: null, showResults: null };
+                  closure_2_1(dependencyMap[17]).trackWithMetadata(constants.POLL_SHOW_RESULTS_CLICKED, { channel_id: channelId, message_id: messageId, show_results: null == showResults || !showResults.showResults, votes_count: num });
+                  const obj2 = { channelId, selectedAnswerIds: null, submitting: null, editing: null, showResults: null };
+                  const obj = closure_2_1(dependencyMap[17]);
+                  obj2.selectedAnswerIds = new Set();
                   let flag;
                   if (showResults != null) {
                     flag = showResults.submitting;
@@ -595,7 +592,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
                   if (flag == null) {
                     flag = false;
                   }
-                  obj.submitting = flag;
+                  obj2.submitting = flag;
                   let flag2;
                   if (showResults != null) {
                     flag2 = showResults.submitting;
@@ -603,18 +600,18 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
                   if (flag2 == null) {
                     flag2 = false;
                   }
-                  obj.editing = flag2;
-                  obj.showResults = null == showResults || !showResults.showResults;
-                  return obj;
+                  obj2.editing = flag2;
+                  obj2.showResults = null == showResults || !showResults.showResults;
+                  return obj2;
                 });
-              })(obj7);
+              })(obj10);
             } else if ("showVoterDetails" !== tmp39) {
               const _HermesInternal = HermesInternal;
               closure_130_1(closure_130_3[11])(false, "Unknown poll action type: " + closure_129_2);
               const tmp9 = closure_130_1(closure_130_3[11]);
             }
-            const obj8 = { channelId: closure_129_0, messageId: closure_129_1 };
-            closure_130_19(obj8);
+            const obj11 = { channelId: closure_129_0, messageId: closure_129_1 };
+            closure_130_19(obj11);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -622,15 +619,15 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
+            const obj12 = { value, done: true };
+            return obj12;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         c4 = 3;
@@ -649,8 +646,8 @@ let closure_28 = async function _createPoll(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -663,8 +660,8 @@ let closure_28 = async function _createPoll(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -690,16 +687,15 @@ let closure_28 = async function _createPoll(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           uploads = closure_130_12.getUploads(closure_129_0.id, closure_130_9.Poll);
           closure_129_9 = closure_129_2.map((text) => {
             guildId = text;
-            let poll_media = closure_1_8;
             let findIndexResult;
             if (closure_1_8 != null) {
-              findIndexResult = poll_media.findIndex((id) => id.id === text.localCreationAnswerId);
+              findIndexResult = closure_1_8.findIndex((id) => id.id === text.localCreationAnswerId);
             }
             let tmp2;
             if (-1 !== findIndexResult) {
@@ -707,13 +703,13 @@ let closure_28 = async function _createPoll(arg0) {
               const items = ["" + findIndexResult];
               tmp2 = items;
             }
-            poll_media = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11849).PollLayoutTypes.DEFAULT) {
+            const obj2 = { attachment_ids: tmp2 };
+            if (closure_1_5 === guildId(11850).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
               }
-              poll_media.text = trimmed;
+              obj2.text = trimmed;
             }
             const image = text.image;
             let emoji;
@@ -722,37 +718,36 @@ let closure_28 = async function _createPoll(arg0) {
             }
             if (null != emoji) {
               if (null != emoji.id) {
-                const obj = { id: emoji.id, name: "" };
-                poll_media.emoji = obj;
+                const obj3 = { id: emoji.id, name: "" };
+                obj2.emoji = obj3;
               } else if (null != emoji.optionallyDiverseSequence) {
-                const obj1 = { name: emoji.optionallyDiverseSequence };
-                poll_media.emoji = obj1;
+                const obj4 = { name: emoji.optionallyDiverseSequence };
+                obj2.emoji = obj4;
               }
             }
-            return { poll_media };
+            return { poll_media: obj2 };
           });
-          const obj2 = { question: null, answers: null, allow_multiselect: null, duration: null, layout_type: null };
-          const obj3 = { text: closure_129_1.trim() };
-          obj2.question = obj3;
-          obj2.answers = closure_129_9;
-          obj2.allow_multiselect = closure_129_3;
-          obj2.duration = closure_129_4;
-          obj2.layout_type = closure_129_5;
-          closure_129_10 = obj2;
+          const obj5 = { question: null, answers: null, allow_multiselect: null, duration: null, layout_type: null };
+          const obj6 = { text: closure_129_1.trim() };
+          obj5.question = obj6;
+          obj5.answers = closure_129_9;
+          obj5.allow_multiselect = closure_129_3;
+          obj5.duration = closure_129_4;
+          obj5.layout_type = closure_129_5;
+          closure_129_10 = obj5;
           c4 = 1;
-          const obj4 = {
+          const obj7 = {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-                      guildId(9439);
-                      const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
-                      const result = obj.handleUploadMessageAttachmentsErrors(obj);
+                      const obj = guildId(9439);
+                      const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
                     }
           };
           c5 = 3;
           c6 = 1;
-          const obj5 = { value: closure_130_1(closure_130_3[25]).sendPollMessage(closure_129_0.id, closure_129_10, obj4), done: false };
-          return obj5;
+          const obj8 = { value: closure_130_1(closure_130_3[25]).sendPollMessage(closure_129_0.id, closure_129_10, obj7), done: false };
+          return obj8;
         }
       } else {
         if (2 === tmp7) {
@@ -765,11 +760,11 @@ let closure_28 = async function _createPoll(arg0) {
           }
           if ("poll" === aPIError.getAnyErrorMessage()) {
             if (null != closure_129_11.text) {
-              const obj6 = {};
+              const obj9 = {};
               const merged = Object.assign(closure_129_11);
               const _JSON = JSON;
-              obj6.body = JSON.parse(closure_129_11.text);
-              throw obj6;
+              obj9.body = JSON.parse(closure_129_11.text);
+              throw obj9;
             }
           }
           if (null == closure_129_7) {
@@ -788,7 +783,7 @@ let closure_28 = async function _createPoll(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp38) {
@@ -803,12 +798,12 @@ let closure_28 = async function _createPoll(arg0) {
   }
 };
 let closure_29 = async function _endPollEarly(arg0) {
-  const obj2 = { title: null, body: null };
+  const obj6 = { title: null, body: null };
   const intl = closure_130_0(closure_130_3[13]).intl;
-  obj2.title = intl.string(closure_130_0(closure_130_3[13]).t["+rfkTK"]);
+  obj6.title = intl.string(closure_130_0(closure_130_3[13]).t["+rfkTK"]);
   const intl2 = closure_130_0(closure_130_3[13]).intl;
-  obj2.body = intl2.string(closure_130_0(closure_130_3[13]).t.H2I1gL);
-  await closure_130_1(closure_130_3[12]).confirm(obj2);
+  obj6.body = intl2.string(closure_130_0(closure_130_3[13]).t.H2I1gL);
+  await closure_130_1(closure_130_3[12]).confirm(obj6);
   if (2 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;
@@ -819,7 +814,6 @@ let closure_29 = async function _endPollEarly(arg0) {
     } else if (value) {
       c3 = 3;
       c4 = 1;
-      closure_130_2(closure_130_3[22]);
       return { value: closure_130_2(closure_130_3[22]).endPollEarly({ channelId: closure_129_0, messageId: closure_129_1 }), done: false };
     }
   } else if (arg0 === 1) {
@@ -835,7 +829,7 @@ let closure_29 = async function _endPollEarly(arg0) {
   return "PX_16";
 };
 const DraftType = fn(4977).DraftType;
-const PollsInteractionStore = fn(11560);
+const PollsInteractionStore = fn(11561);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);
@@ -848,17 +842,19 @@ export default {
     let merged = Object.assign(answerId, Object.assign({ answerId: 0 }));
     let channelId2;
     let messageId2;
+    let message;
     let allow_multiselect;
     ({ channelId, messageId } = merged);
-    let message = MessageStore.getMessage(channelId, messageId);
-    if (null != message) {
-      let obj = { message, channelId, messageId };
+    const message1 = MessageStore.getMessage(channelId, messageId);
+    if (null != message1) {
+      let obj2 = { message: message1, channelId, messageId };
+      let obj = obj2;
     } else {
-      const message1 = ReferencedMessageStore.getMessage(channelId, messageId);
-      if (null != message1.message) {
-        obj = { channelId, messageId, message: message1.message };
+      const message2 = ReferencedMessageStore.getMessage(channelId, messageId);
+      if (null != message2.message) {
+        obj = { channelId, messageId, message: message2.message };
       } else {
-        channelId2(message[11])(null != message, "Tapped on a non-existent poll message");
+        channelId2(message[11])(null != message1, "Tapped on a non-existent poll message");
         const _Error = Error;
         const error = new Error();
         throw error;
@@ -888,17 +884,17 @@ export default {
             answers = poll2.answers;
           }
           ({ analyticsSelectedAnswerIds: analyticsSelectedAnswerIds2, selectedTextAnswersCount: selectedTextAnswersCount2, selectedEmojiAnswersCount: selectedEmojiAnswersCount2 } = getPollVoteEventProperties(answers, set));
-          let obj2 = AppAnalyticsUtilsDefault;
-          let obj = { channel_id: channelId2, message_id: messageId2, selected_answer_ids: analyticsSelectedAnswerIds2, selected_text_answers_count: selectedTextAnswersCount2, selected_emoji_answers_count: selectedEmojiAnswersCount2 };
-          obj2.trackWithMetadata(constants.POLL_VOTE_SELECTED, obj);
-          obj = { channelId: channelId2, selectedAnswerIds: set, submitting: false, editing: false, showResults: false };
-          return obj;
+          const tmp24Result = getPollVoteEventProperties(answers, set);
+          const obj2 = { channel_id: channelId2, message_id: messageId2, selected_answer_ids: analyticsSelectedAnswerIds2, selected_text_answers_count: selectedTextAnswersCount2, selected_emoji_answers_count: selectedEmojiAnswersCount2 };
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants.POLL_VOTE_SELECTED, obj2);
+          const obj4 = { channelId: channelId2, selectedAnswerIds: set, submitting: false, editing: false, showResults: false };
+          return obj4;
         } else {
-          const obj1 = {};
+          const obj5 = {};
           const merged = Object.assign(arg0);
           const _Set2 = Set;
-          const set1 = new Set(obj1.selectedAnswerIds);
-          obj1.selectedAnswerIds = set1;
+          const set1 = new Set(obj5.selectedAnswerIds);
+          obj5.selectedAnswerIds = set1;
           if (set1.has(answerId)) {
             set1.delete(answerId);
           } else {
@@ -916,15 +912,15 @@ export default {
             answers1 = poll.answers;
           }
           ({ analyticsSelectedAnswerIds, selectedTextAnswersCount, selectedEmojiAnswersCount } = getPollVoteEventProperties(answers1, set1));
-          obj = AppAnalyticsUtilsDefault;
-          obj2 = { channel_id: channelId2, message_id: messageId2, selected_answer_ids: analyticsSelectedAnswerIds, selected_text_answers_count: selectedTextAnswersCount, selected_emoji_answers_count: selectedEmojiAnswersCount };
-          obj.trackWithMetadata(constants.POLL_VOTE_SELECTED, obj2);
-          return obj1;
+          const tmp8Result = getPollVoteEventProperties(answers1, set1);
+          const obj6 = { channel_id: channelId2, message_id: messageId2, selected_answer_ids: analyticsSelectedAnswerIds, selected_text_answers_count: selectedTextAnswersCount, selected_emoji_answers_count: selectedEmojiAnswersCount };
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants.POLL_VOTE_SELECTED, obj6);
+          return obj5;
         }
       });
     } else {
-      obj = { channelId: channelId2, messageId: messageId2, answerId };
-      handleShowVotesForAnswer(obj);
+      let obj4 = { channelId: channelId2, messageId: messageId2, answerId };
+      handleShowVotesForAnswer(obj4);
     }
     const obj3 = answerId(message[16]);
   },

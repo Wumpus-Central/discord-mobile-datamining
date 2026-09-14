@@ -1,13 +1,13 @@
-// === Module 16129: MessagesItemChannelAvatar ===
+// === Module 16131: MessagesItemChannelAvatar ===
 
-// Module 16129 (MessagesItemChannelAvatar)
+// Module 16131 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 576 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11041 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
-import TypingStore from "TypingStore" /* 12094 */;
+import TypingStore from "TypingStore" /* 12095 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
@@ -42,11 +42,10 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1178).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1176).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
-  let obj = channel(504);
   const items = [TypingStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = channel(504).useStateFromStores(items, () => {
     const typingUsers = TypingStore.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
       if (key10007 === closure_2) {
@@ -58,6 +57,8 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     }
     return false;
   });
+  const obj = channel(504);
+  const tmp3 = channel;
   const items1 = [stateFromStores];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => {
     const useReducedMotion = AccessibilityStore.useReducedMotion;
@@ -72,7 +73,6 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     return tmp;
   });
   const obj2 = channel(504);
-  const tmp3 = channel;
   const items2 = [UserStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     let recipientId;
@@ -100,23 +100,23 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     return isVROnlineResult;
   });
   if (channel.isGroupDM()) {
-    obj = { status, size: REFRESH_MEDIUM_32, channel, animate: stateFromStores1, style: tmpResult.avatar };
+    const obj4 = { status, size: REFRESH_MEDIUM_32, channel, animate: stateFromStores1, style: tmpResult.avatar };
     let tmp11Result = jsx(GroupDMAvatarDefault, { status, size: REFRESH_MEDIUM_32, channel, animate: stateFromStores1, style: tmpResult.avatar });
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null };
+      const obj7 = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "danger", size: null, animate: null, typing: null, autoStatusCutout: "redux.action" };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
       }
-      obj.status = tmp12;
-      obj.streaming = isStreaming;
-      obj.style = tmpResult.avatar;
-      obj.size = REFRESH_MEDIUM_32;
-      obj.animate = stateFromStores1;
-      obj.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1178).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null });
+      obj7.status = tmp12;
+      obj7.streaming = isStreaming;
+      obj7.style = tmpResult.avatar;
+      obj7.size = REFRESH_MEDIUM_32;
+      obj7.animate = stateFromStores1;
+      obj7.typing = stateFromStores;
+      tmp11Result = jsx(tmp3(1176).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "danger", size: null, animate: null, typing: null, autoStatusCutout: "redux.action" });
     }
   }
   return tmp11Result;

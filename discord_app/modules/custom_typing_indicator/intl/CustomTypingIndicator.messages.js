@@ -33,10 +33,11 @@ import _mod3620 from "module_3620" /* 3620 */;
 import _mod3621 from "module_3621" /* 3621 */;
 import _mod3622 from "module_3622" /* 3622 */;
 import _mod3623 from "module_3623" /* 3623 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3593);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/intl/CustomTypingIndicator.messages.js");
 
 export default messagesProxy;

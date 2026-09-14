@@ -1,8 +1,8 @@
-// === Module 11953: MentionableSelectComponentActionSheet ===
+// === Module 11954: MentionableSelectComponentActionSheet ===
 
-// Module 11953 (MentionableSelectComponentActionSheet)
+// Module 11954 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4868 */;
 import RoleIconUtils from "RoleIconUtils" /* 7290 */;
@@ -10,7 +10,7 @@ import RoleIconDefault from "RoleIcon" /* 7308 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8237 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 9882 */;
 import DiscordTagDefault from "DiscordTag" /* 9933 */;
-import UserIcon from "UserIcon" /* 11955 */;
+import UserIcon from "UserIcon" /* 11956 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -23,14 +23,13 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
-createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
-createStyles.name = createStyles;
-createStyles.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-createStyles.roleCountContainer = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
-createStyles.roleCountText = { paddingRight: 4 };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
+obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+obj2.roleCountContainer = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
+obj2.roleCountText = { paddingRight: 4 };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
 
@@ -61,7 +60,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       } else {
         const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
         const status = PresenceStore.getStatus(user.id);
-        let obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: native.AvatarSizes.XSMALL };
+        const obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: native.AvatarSizes.XSMALL };
         return closure_2_10(native.Avatar, obj);
       }
     } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
@@ -70,16 +69,15 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = RoleIconUtils;
           if (tmpResult.canGuildUseRoleIcons(guild, role)) {
-            tmpResult = RoleIconUtils;
-            const roleIconData = tmpResult.getRoleIconData(role);
+            const roleIconData = RoleIconUtils.getRoleIconData(role);
             if (null != roleIconData) {
-              obj = { src: null, unicodeEmoji: null, size: 24, name: null };
+              const obj2 = { src: null, unicodeEmoji: null, size: 24, name: null };
               ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
-              obj.name = role.name;
-              return closure_2_10(RoleIconDefault, obj);
+              obj2.name = role.name;
+              return closure_2_10(RoleIconDefault, obj2);
             }
+            const tmpResult2 = RoleIconUtils;
           }
           let colorString;
           if (role != null) {
@@ -88,8 +86,8 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           if (colorString == null) {
             colorString = React7;
           }
-          const obj1 = { color: colorString };
-          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj1);
+          const obj4 = { color: colorString };
+          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj4);
         }
       }
       return null;
@@ -121,9 +119,9 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           tmp7 = tmp9;
         }
         if (null != tmp7) {
-          let obj = { style: closure_3.roleCountContainer, children: null };
-          obj = { style: closure_3.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: tmp7 };
-          const items = [closure_2_10(Text_Text.Text, obj), closure_2_10(UserIcon.UserIcon, { size: "xs" })];
+          const obj = { style: closure_3.roleCountContainer, children: null };
+          const obj2 = { style: closure_3.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: tmp7 };
+          const items = [closure_2_10(Text_Text.Text, obj2), closure_2_10(UserIcon.UserIcon, { size: "xs" })];
           obj.children = items;
           return closure_2_11(View, obj);
         }
@@ -148,26 +146,26 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         const formatToPlainString = intl2.formatToPlainString;
         const t = selectionActionComponent(guildId[22]).t;
         if (bot) {
-          let obj = { username: type.label, discriminator: null };
+          const obj2 = { username: type.label, discriminator: null };
           let discriminator;
           if (user != null) {
             discriminator = user.discriminator;
           }
-          obj.discriminator = discriminator;
-          let formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj);
+          obj2.discriminator = discriminator;
+          let formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj2);
         } else {
-          obj = { username: type.label, discriminator: null };
+          const obj3 = { username: type.label, discriminator: null };
           let discriminator1;
           if (user != null) {
             discriminator1 = user.discriminator;
           }
-          obj.discriminator = discriminator1;
-          formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj);
+          obj3.discriminator = discriminator1;
+          formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj3);
         }
         return formatToPlainStringResult;
       } else if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
         const intl = selectionActionComponent(guildId[22]).intl;
-        obj = { roleName: type.label };
+        const obj = { roleName: type.label };
         return intl.formatToPlainString(selectionActionComponent(guildId[22]).t.F6ejkk, obj);
       }
     },

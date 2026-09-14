@@ -34,30 +34,30 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
   if (tmp) {
     let tmp3 = null != deny;
     if (tmp3) {
-      let hasItem = BigFlagUtilsAll.has(deny.deny, Permissions.VIEW_CHANNEL);
-      if (!hasItem) {
+      let hasItem1 = BigFlagUtilsAll.has(deny.deny, Permissions.VIEW_CHANNEL);
+      if (!hasItem1) {
         let isGuildVocalResult = isGuildVocal.isGuildVocal();
         if (isGuildVocalResult) {
           isGuildVocalResult = BigFlagUtilsAll.has(deny.deny, Permissions.CONNECT);
           const tmp4Result = BigFlagUtilsAll;
         }
-        hasItem = isGuildVocalResult;
+        hasItem1 = isGuildVocalResult;
       }
-      tmp3 = hasItem;
+      tmp3 = hasItem1;
     }
     let tmp9 = !tmp3;
     if (!tmp3) {
-      let hasItem1 = BigFlagUtilsAll.has(deny.allow, Permissions.VIEW_CHANNEL);
-      if (hasItem1) {
+      let hasItem2 = BigFlagUtilsAll.has(deny.allow, Permissions.VIEW_CHANNEL);
+      if (hasItem2) {
         const isGuildVocalResult1 = isGuildVocal.isGuildVocal();
-        hasItem = !isGuildVocalResult1;
+        let hasItem = !isGuildVocalResult1;
         if (isGuildVocalResult1) {
           hasItem = BigFlagUtilsAll.has(deny.allow, Permissions.CONNECT);
           const tmp10Result = BigFlagUtilsAll;
         }
-        hasItem1 = hasItem;
+        hasItem2 = hasItem;
       }
-      tmp9 = hasItem1;
+      tmp9 = hasItem2;
     }
     tmp = tmp9;
   }

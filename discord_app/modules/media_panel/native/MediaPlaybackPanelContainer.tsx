@@ -1,9 +1,9 @@
-// === Module 17330: MediaPlaybackPanelContainer ===
+// === Module 17332: MediaPlaybackPanelContainer ===
 
-// Module 17330 (MediaPlaybackPanelContainer)
-import MediaPlayerManager from "MediaPlayerManager" /* 14624 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17331 */;
-import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17333 */;
+// Module 17332 (MediaPlaybackPanelContainer)
+import MediaPlayerManager from "MediaPlayerManager" /* 14625 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17333 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
 
 export default noop.memo(function MediaPlaybackPanelContainer() {
-  let obj = MediaPlayerManager;
+  const obj = MediaPlayerManager;
   let tmp2 = null;
   if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {
     showPip = showPip.showPip;
@@ -57,7 +57,7 @@ export default noop.memo(function MediaPlaybackPanelContainer() {
     }
     return tmp3;
   }))) {
-    obj = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
+    const obj3 = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
     tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: jsx(MediaPlaybackPanelUIDefault, {}) });
   }
   return tmp2;

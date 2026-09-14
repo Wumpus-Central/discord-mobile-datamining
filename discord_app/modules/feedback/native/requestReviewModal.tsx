@@ -1,8 +1,8 @@
-// === Module 13786: requestReviewModal ===
+// === Module 13787: requestReviewModal ===
 
-// Module 13786 (requestReviewModal)
+// Module 13787 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 13787 */;
+import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 13788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -14,8 +14,8 @@ let closure_6 = async function _showAndroidRatingRequest() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,8 +28,8 @@ let closure_6 = async function _showAndroidRatingRequest() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -43,33 +43,33 @@ let closure_6 = async function _showAndroidRatingRequest() {
           }
           c4 = 2;
           c5 = 1;
-          const obj1 = { value: rating, done: false };
-          return obj1;
+          const obj4 = { value: rating, done: false };
+          return obj4;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_0 = closure_2;
         const _HermesInternal = HermesInternal;
         closure_129_5.error("Failed to show Android rating request: " + closure_128_0);
-        const obj2 = { ok: false, error: null };
+        const obj5 = { ok: false, error: null };
         const _String = String;
-        obj2.error = String(closure_128_0);
+        obj5.error = String(closure_128_0);
         c5 = 3;
-        const obj3 = { value: obj2, done: true };
-        return obj3;
+        const obj6 = { value: obj5, done: true };
+        return obj6;
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_5.info("Android rating request dispatched");
         c3 = 0;
         c5 = 3;
-        obj = { value: { ok: true }, done: true };
+        const obj = { value: { ok: true }, done: true };
         return obj;
       }
     } catch (tmp20) {

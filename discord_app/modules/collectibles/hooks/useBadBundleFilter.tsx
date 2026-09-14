@@ -1,6 +1,6 @@
-// === Module 15156: useBadBundleFilter ===
+// === Module 15157: useBadBundleFilter ===
 
-// Module 15156 (useBadBundleFilter)
+// Module 15157 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
@@ -23,18 +23,16 @@ export const useBadBundleFilter = function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          let obj = canUseShopDiscountsResult(8967);
+          const obj = canUseShopDiscountsResult(8967);
           if (obj2.isBundleProduct(product)) {
-            let tmpResult = canUseShopDiscountsResult(7657);
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
-                tmpResult = canUseShopDiscountsResult(7656);
-                if (tmpResult.isOrbsExclusiveProduct(product)) {
-                  obj = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7656).getProductOrbPrice(obj);
+                if (tmpResult5.isOrbsExclusiveProduct(product)) {
+                  const obj3 = { product, hasShopDiscount };
+                  return null != canUseShopDiscountsResult(7656).getProductOrbPrice(obj3);
                 } else {
                   const defaultPriceSetAssignmentPurchaseType = canUseShopDiscountsResult(7657).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult2 = canUseShopDiscountsResult(7657);
+                  const tmpResult7 = canUseShopDiscountsResult(7657);
                   let result = canUseShopDiscountsResult(7657).extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
                   if (null != result) {
                     if (0 !== result.amount) {
@@ -58,8 +56,10 @@ export const useBadBundleFilter = function useBadBundleFilter() {
                   }
                   return true;
                 }
+                tmpResult5 = canUseShopDiscountsResult(7656);
               }
             }
+            tmpResult = canUseShopDiscountsResult(7657);
           }
           return true;
         });

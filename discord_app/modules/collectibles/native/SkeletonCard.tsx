@@ -31,14 +31,14 @@ export default function _default(width) {
   if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
     COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8890).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(0.3);
+  const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
+  sharedValue = sharedValue(4373).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
+  let obj = sharedValue(4373);
   class C {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -49,8 +49,8 @@ export default function _default(width) {
   C.__workletHash = 5620456625640;
   C.__initData = __initData;
   const animatedStyle = sharedValue(4373).useAnimatedStyle(C);
-  obj = { style: null };
+  const obj3 = { style: null };
   const items1 = [tmp3Result.skeletonCard, width.style, animatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   return jsx(ReanimatedRexportDefault.View, { style: null });
 };

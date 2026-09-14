@@ -1,11 +1,11 @@
-// === Module 13110: MediaViewer ===
+// === Module 13111: MediaViewer ===
 
-// Module 13110 (MediaViewer)
+// Module 13111 (MediaViewer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import useVideoControls from "useVideoControls" /* 8380 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8411 */;
-import MediaViewerItem from "MediaViewerItem" /* 13112 */;
+import MediaViewerItem from "MediaViewerItem" /* 13113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,28 +26,29 @@ function MediaViewer(arg0) {
   const tmp3 = height(7265);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   const _require = tmp6;
-  let obj = require("MediaViewerDimensionsContext");
-  const mediaViewerDimensions = obj.useMediaViewerDimensions();
+  const tmp4 = sharedValue(sharedValue1.useState(true), 2);
+  const tmp7 = _require;
+  const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13116)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13117)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
-  let obj1 = require("ReanimatedRexport");
-  sharedValue = obj1.useSharedValue(0);
+  let obj = require("MediaViewerDimensionsContext");
+  sharedValue = require("ReanimatedRexport").useSharedValue(0);
   let obj2 = require("ReanimatedRexport");
-  sharedValue1 = obj2.useSharedValue(false);
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
   let obj3 = require("ReanimatedRexport");
-  const animatedRef = obj3.useAnimatedRef();
+  const animatedRef = require("ReanimatedRexport").useAnimatedRef();
   closure_6 = tmp13;
   const viewerProps = useViewerProps();
   ({ ref, onScroll, onContentSizeChange, useItemVisible } = viewerProps);
-  let obj4 = require("useMediaViewerPanGesture");
-  const mediaViewerPanGestureConfig = obj4.useMediaViewerPanGestureConfig(tmp9, swipeVelocityThreshold, onClose);
+  let obj4 = require("ReanimatedRexport");
+  const mediaViewerPanGestureConfig = require("useMediaViewerPanGesture").useMediaViewerPanGestureConfig(tmp9, swipeVelocityThreshold, onClose);
   ({ dismiss, translatePos } = mediaViewerPanGestureConfig);
   const isClosing = mediaViewerPanGestureConfig.isClosing;
   const isInteracting = mediaViewerPanGestureConfig.isInteracting;
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const absoluteFillObject = closure_6.absoluteFillObject;
-  let obj5 = require("ReanimatedRexport");
+  let obj5 = require("useMediaViewerPanGesture");
   class M {
     constructor() {
       obj = {};
@@ -64,16 +65,15 @@ function MediaViewer(arg0) {
       return obj;
     }
   }
-  obj = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("ReanimatedRexport").interpolate, translatePos, closePosition: tmp9 };
-  M.__closure = obj;
+  const obj6 = require("ReanimatedRexport");
+  M.__closure = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("ReanimatedRexport").interpolate, translatePos, closePosition: tmp9 };
   M.__workletHash = 10332062530694;
   M.__initData = __initData;
-  obj = {};
-  const animatedStyle = obj5.useAnimatedStyle(M);
+  const obj8 = {};
+  const animatedStyle = obj6.useAnimatedStyle(M);
   let merged = Object.assign(closure_6.absoluteFillObject);
-  obj.backgroundColor = "transparent";
-  const tmp4 = sharedValue(sharedValue1.useState(true), 2);
-  const tmp7 = _require;
+  obj8.backgroundColor = "transparent";
+  const obj7 = { absoluteFillObject, windowHeight: height, entranceAnimationDriver: sharedValue, interpolate: require("ReanimatedRexport").interpolate, translatePos, closePosition: tmp9 };
   class P {
     constructor() {
       opacity = 0;
@@ -88,32 +88,32 @@ function MediaViewer(arg0) {
               tmp4 = closure_0;
               tmp5 = closure_2;
               obj = closure_0(closure_2[15]);
-              obj = { easing: null, duration: 150 };
+              obj1 = { easing: null, duration: 150 };
               tmp6 = closure_0;
               tmp7 = closure_2;
-              obj.easing = closure_0(closure_2[5]).Easing.linear;
+              obj1.easing = closure_0(closure_2[5]).Easing.linear;
               num2 = 1;
-              withTimingResult = obj.withTiming(1, obj);
+              withTimingResult = obj.withTiming(1, obj1);
             }
             tmp20 = withTimingResult;
           }
           tmp9 = closure_0;
           tmp10 = closure_2;
           obj3 = closure_0(closure_2[15]);
-          obj1 = { easing: null, duration: 75 };
+          obj6 = { easing: null, duration: 75 };
           tmp11 = closure_0;
           tmp12 = closure_2;
-          obj1.easing = closure_0(closure_2[5]).Easing.linear;
+          obj6.easing = closure_0(closure_2[5]).Easing.linear;
           fn = function n() {
             c0(closure_2[5]).runOnJS(setShowHeader)(false);
           };
-          obj2 = { runOnJS: null, setShowHeader: null };
+          obj7 = { runOnJS: null, setShowHeader: null };
           tmp13 = closure_0;
           tmp14 = closure_2;
-          obj2.runOnJS = closure_0(closure_2[5]).runOnJS;
+          obj7.runOnJS = closure_0(closure_2[5]).runOnJS;
           tmp15 = closure_0;
-          obj2.setShowHeader = closure_0;
-          fn.__closure = obj2;
+          obj7.setShowHeader = closure_0;
+          fn.__closure = obj7;
           num3 = 11572173694016;
           fn.__workletHash = 11572173694016;
           tmp16 = closure_15;
@@ -121,20 +121,20 @@ function MediaViewer(arg0) {
           str = "respect-motion-settings";
           tmp17 = obj3;
           num4 = 0;
-          tmp18 = obj1;
+          tmp18 = obj6;
           tmp19 = fn;
-          withTimingResult = obj3.withTiming(0, obj1, "respect-motion-settings", fn);
+          withTimingResult = obj3.withTiming(0, obj6, "respect-motion-settings", fn);
         }
       }
       return { opacity };
     }
   }
-  obj1 = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
-  P.__closure = obj1;
+  const obj9 = require("ReanimatedRexport");
+  P.__closure = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
   P.__workletHash = 14874736878670;
   P.__initData = __initData;
-  const animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(P);
-  const obj9 = require("ReanimatedRexport");
+  const animatedStyle1 = obj9.useAnimatedStyle(P);
+  const obj10 = { isClosing, hideRelayoutSharedValue: sharedValue1, overlayEnabled, isInteracting, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
   let fn = function x() {
     value = overlayEnabled.get();
     if (value) {
@@ -144,33 +144,32 @@ function MediaViewer(arg0) {
       ReanimatedRexport.runOnJS(c0)(true);
     }
   };
-  obj2 = { overlayEnabled, isInteracting, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
-  fn.__closure = obj2;
+  const obj11 = require("ReanimatedRexport");
+  fn.__closure = { overlayEnabled, isInteracting, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
   fn.__workletHash = 2199049578465;
   fn.__initData = __initData3;
-  const derivedValue = require("ReanimatedRexport").useDerivedValue(fn);
-  const obj11 = require("ReanimatedRexport");
+  const derivedValue = obj11.useDerivedValue(fn);
+  const obj12 = { overlayEnabled, isInteracting, runOnJS: require("ReanimatedRexport").runOnJS, setShowHeader: tmp6 };
   function le() {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(absoluteFillObject);
     obj.alignItems = "center";
     obj.justifyContent = "center";
-    obj = { translateY: translatePos.get() };
-    const items = [obj];
+    const items = [{ translateY: translatePos.get() }];
     obj.transform = items;
     let num = 0;
     if (!sharedValue1.get()) {
-      obj = { easing: ReanimatedRexport.Easing.linear, duration: 75 };
-      num = timing.withTiming(1, obj);
+      const obj4 = { easing: ReanimatedRexport.Easing.linear, duration: 75 };
+      num = timing.withTiming(1, obj4);
     }
     obj.opacity = num;
     return obj;
   }
-  obj3 = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
-  le.__closure = obj3;
+  const obj13 = require("ReanimatedRexport");
+  le.__closure = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
   le.__workletHash = 8244409104374;
   le.__initData = __initData4;
-  const animatedStyle2 = require("ReanimatedRexport").useAnimatedStyle(le);
+  const animatedStyle2 = obj13.useAnimatedStyle(le);
   ref = sharedValue1.useRef(null);
   const items1 = [sources.length > 1, animatedRef, sharedValue1];
   sharedValue1.useCallback(() => {
@@ -210,35 +209,35 @@ function MediaViewer(arg0) {
       const result = useVideoControls.unpauseCurrentVideoIfNeeded();
     }
   }, items4);
-  const obj13 = require("ReanimatedRexport");
+  const obj14 = { absoluteFillObject, translatePos, hideRelayoutSharedValue: sharedValue1, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
   const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
-  obj4 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
+  const obj16 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = require("DeviceOrientation");
-  obj5 = { barStyle: "light-content", hidden: !tmp5 };
-  const items5 = [translatePos(height(9611), obj5), translatePos(height(4373).View, { style: animatedStyle }), translatePos(height(4374), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
-  const obj6 = { style: null, pointerEvents: null, children: null };
-  const items6 = [sharedValue(sharedValue1.useState(obj), 1)[0], animatedStyle1];
-  obj6.style = items6;
+  const items5 = [translatePos(height(9611), { barStyle: "light-content", hidden: !tmp5 }), translatePos(height(4373).View, { style: animatedStyle }), translatePos(height(4374), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
+  const obj18 = { style: null, pointerEvents: null, children: null };
+  const items6 = [sharedValue(sharedValue1.useState(obj8), 1)[0], animatedStyle1];
+  obj18.style = items6;
   let str = "none";
+  const obj17 = { barStyle: "light-content", hidden: !tmp5 };
   const tmp27 = translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
   const tmp28 = isClosing;
   const tmp29 = animatedRef;
   if (tmp5) {
     str = "box-none";
   }
-  obj6.pointerEvents = str;
-  obj6.children = renderOverlay(dismiss, overlayEnabled);
-  items5[3] = translatePos(height(4374), obj6);
+  obj18.pointerEvents = str;
+  obj18.children = renderOverlay(dismiss, overlayEnabled);
+  items5[3] = translatePos(height(4374), obj18);
   items5[4] = translatePos(tmp(9613), {});
-  obj4.children = items5;
-  const children = tmp28(tmp29, obj4);
+  obj16.children = items5;
+  const children = tmp28(tmp29, obj16);
   return translatePos(tmp7(7265).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
 let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
@@ -256,8 +255,8 @@ let closure_12 = noop.memo((entranceAnimationDriver) => {
   let derivedValue;
   let panGestureGenerator;
   ({ onContentSizeChange, onScroll, ref, index } = entranceAnimationDriver);
-  let obj = entranceAnimationDriver(originLayout[5]);
-  const sharedValue = obj.useSharedValue(false);
+  const sharedValue = entranceAnimationDriver(originLayout[5]).useSharedValue(false);
+  const obj = entranceAnimationDriver(originLayout[5]);
   class T {
     constructor() {
       value = zoomed.get();
@@ -294,12 +293,12 @@ let closure_12 = noop.memo((entranceAnimationDriver) => {
   H.__initData = derivedValue;
   const animatedProps = entranceAnimationDriver(originLayout[5]).useAnimatedProps(H);
   const obj4 = entranceAnimationDriver(originLayout[5]);
-  obj = { gesture: mediaViewerPanGesture.nativeGesture, children: null };
-  obj = { ref, style: useItemVisible.absoluteFill, sections: null, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: onLongPress(originLayout[8])(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
+  const obj5 = { gesture: mediaViewerPanGesture.nativeGesture, children: null };
+  const obj6 = { ref, style: useItemVisible.absoluteFill, sections: null, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: onLongPress(originLayout[8])(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
   const items3 = [sources.length];
-  obj.sections = items3;
-  obj.children = windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj);
-  return windowWidth(entranceAnimationDriver(originLayout[9]).GestureDetector, obj);
+  obj6.sections = items3;
+  obj5.children = windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj6);
+  return windowWidth(entranceAnimationDriver(originLayout[9]).GestureDetector, obj5);
 });
 let closure_13 = { code: "function MediaViewerTsx3(){const{absoluteFillObject,windowHeight,entranceAnimationDriver,interpolate,translatePos,closePosition}=this.__closure;return{...absoluteFillObject,height:windowHeight,backgroundColor:'black',opacity:Math.min(entranceAnimationDriver.get(),interpolate(translatePos.get(),[-closePosition,0,closePosition],[0,1,0]))};}" };
 let __initData = { code: "function MediaViewerTsx4(){const{isClosing,hideRelayoutSharedValue,overlayEnabled,isInteracting,withTiming,Easing,runOnJS,setShowHeader}=this.__closure;return{opacity:isClosing.get()||hideRelayoutSharedValue.get()?0:overlayEnabled.get()&&!isInteracting.get()?withTiming(1,{easing:Easing.linear,duration:150}):withTiming(0,{easing:Easing.linear,duration:75},'respect-motion-settings',function(){runOnJS(setShowHeader)(false);})};}" };
@@ -310,9 +309,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewer.tsx");
 
 export default noop.memo((arg0) => {
-  let obj = { children: null };
-  obj = {};
+  const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj.children = React5(MediaViewer, obj);
+  obj.children = React5(MediaViewer, {});
   return React5(MediaViewerDimensionsContext.MediaViewerDimensionsProvider, obj);
 });

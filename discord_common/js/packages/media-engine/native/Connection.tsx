@@ -23,71 +23,71 @@ let c28 = 0;
 let Connection;
 class Connection extends tmp4 {
   constructor(arg0, arg1, arg2) {
-    tmp = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, global, tmp2, new.target);
-    closure_0 = tmp;
+    tmp1 = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, global, tmp2, new.target);
+    closure_0 = tmp1;
     tmp8 = +closure_28;
     closure_28 = tmp8 + 1;
-    tmp.mediaEngineConnectionId = `Native-${tmp8}`;
-    tmp.selfVideo = false;
-    tmp.codecs = [];
-    tmp.initialCodecs = [];
-    tmp.videoEncoderFallbackPending = false;
+    tmp1.mediaEngineConnectionId = `Native-${tmp8}`;
+    tmp1.selfVideo = false;
+    tmp1.codecs = [];
+    tmp1.initialCodecs = [];
+    tmp1.videoEncoderFallbackPending = false;
     set = new Set();
-    tmp.videoDecoderFallbackSent = set;
-    tmp.lastOverrideCodecDenylist = "";
-    tmp.lastOverrideEncoderDenylist = "";
-    tmp.lastCaptureOverrides = "";
-    tmp.overrideCodecResetAt = 0;
+    tmp1.videoDecoderFallbackSent = set;
+    tmp1.lastOverrideCodecDenylist = "";
+    tmp1.lastOverrideEncoderDenylist = "";
+    tmp1.lastCaptureOverrides = "";
+    tmp1.overrideCodecResetAt = 0;
     obj = closure_0(closure_2[4]);
-    tmp.desktopDegradationPreference = obj.getVoiceEngine().DegradationPreference.MAINTAIN_FRAMERATE;
+    tmp1.desktopDegradationPreference = obj.getVoiceEngine().DegradationPreference.MAINTAIN_FRAMERATE;
     obj2 = closure_0(closure_2[4]);
-    tmp.sourceDesktopDegradationPreference = obj2.getVoiceEngine().DegradationPreference.DISABLED;
+    tmp1.sourceDesktopDegradationPreference = obj2.getVoiceEngine().DegradationPreference.DISABLED;
     obj3 = closure_0(closure_2[4]);
-    tmp.videoDegradationPreference = obj3.getVoiceEngine().DegradationPreference.BALANCED;
-    tmp.localPans = {};
-    tmp.remoteAudioSSRCs = {};
-    tmp.remoteVideoSSRCs = {};
-    tmp.inputMode = InputModes.VOICE_ACTIVITY;
-    tmp.vadThreshold = -40;
-    tmp.vadAutoThreshold = true;
-    tmp.vadKrispActivationThreshold = 0.5;
-    tmp.vadUseKrisp = true;
-    tmp.vadLeading = 5;
-    tmp.vadTrailing = 25;
-    tmp.pttReleaseDelay = 20;
-    tmp.soundshareActive = false;
-    tmp.soundshareId = null;
-    tmp.soundshareSentSpeakingEvent = false;
-    tmp.echoCancellation = true;
-    tmp.noiseSuppression = true;
-    tmp.automaticGainControl = { enabled: true };
-    tmp.noiseCancellation = false;
-    tmp.noiseCancellationDuringProcessing = false;
-    tmp.echoReferenceMode = "mix";
-    tmp.attenuationFactor = 0.5;
-    tmp.attenuateWhileSpeakingSelf = false;
-    tmp.attenuateWhileSpeakingOthers = true;
-    tmp.qos = true;
-    tmp.minimumJitterBufferLevel = 0;
-    tmp.postponeDecodeLevel = 100;
-    tmp.reconnectInterval = 60000;
-    tmp.keyframeInterval = 0;
-    tmp.videoQualityMeasurement = "";
-    tmp.videoEncoderExperiments = "";
-    tmp.numFastUdpReconnects = 0;
-    tmp.lastPreparedTransitionId = -1;
-    tmp.lastExecutedTransitionId = -1;
-    tmp.currentVideoCodec = null;
-    tmp.lastDesktopEncodingOptions = null;
-    tmp.handleSpeakingNative = function handleSpeakingNative(id, flag, arg2) {
+    tmp1.videoDegradationPreference = obj3.getVoiceEngine().DegradationPreference.BALANCED;
+    tmp1.localPans = {};
+    tmp1.remoteAudioSSRCs = {};
+    tmp1.remoteVideoSSRCs = {};
+    tmp1.inputMode = InputModes.VOICE_ACTIVITY;
+    tmp1.vadThreshold = -40;
+    tmp1.vadAutoThreshold = true;
+    tmp1.vadKrispActivationThreshold = 0.5;
+    tmp1.vadUseKrisp = true;
+    tmp1.vadLeading = 5;
+    tmp1.vadTrailing = 25;
+    tmp1.pttReleaseDelay = 20;
+    tmp1.soundshareActive = false;
+    tmp1.soundshareId = null;
+    tmp1.soundshareSentSpeakingEvent = false;
+    tmp1.echoCancellation = true;
+    tmp1.noiseSuppression = true;
+    tmp1.automaticGainControl = { enabled: true };
+    tmp1.noiseCancellation = false;
+    tmp1.noiseCancellationDuringProcessing = false;
+    tmp1.echoReferenceMode = "mix";
+    tmp1.attenuationFactor = 0.5;
+    tmp1.attenuateWhileSpeakingSelf = false;
+    tmp1.attenuateWhileSpeakingOthers = true;
+    tmp1.qos = true;
+    tmp1.minimumJitterBufferLevel = 0;
+    tmp1.postponeDecodeLevel = 100;
+    tmp1.reconnectInterval = 60000;
+    tmp1.keyframeInterval = 0;
+    tmp1.videoQualityMeasurement = "";
+    tmp1.videoEncoderExperiments = "";
+    tmp1.numFastUdpReconnects = 0;
+    tmp1.lastPreparedTransitionId = -1;
+    tmp1.lastExecutedTransitionId = -1;
+    tmp1.currentVideoCodec = null;
+    tmp1.lastDesktopEncodingOptions = null;
+    tmp1.handleSpeakingNative = function handleSpeakingNative(id, flag, arg2) {
       if (typeof flag !== "boolean") {
         closure_0.handleSpeakingFlags(id, flag, arg2);
       }
     };
-    tmp.handleNativeMuteChanged = function handleNativeMuteChanged(arg0) {
+    tmp1.handleNativeMuteChanged = function handleNativeMuteChanged(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.NativeMuteChanged, arg0);
     };
-    tmp.handleSpeakingFlags = function handleSpeakingFlags(id, flag, arg2) {
+    tmp1.handleSpeakingFlags = function handleSpeakingFlags(id, flag, arg2) {
       let NONE = closure_0.localSpeakingFlags[id];
       if (NONE == null) {
         NONE = constants6.NONE;
@@ -111,27 +111,27 @@ class Connection extends tmp4 {
         }
       }
     };
-    tmp.handleSpeakingWhileMuted = function handleSpeakingWhileMuted() {
+    tmp1.handleSpeakingWhileMuted = function handleSpeakingWhileMuted() {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SpeakingWhileMuted);
     };
-    tmp.handlePing = function handlePing(arg0) {
+    tmp1.handlePing = function handlePing(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Ping, arg0);
     };
-    tmp.handlePingTimeout = function handlePingTimeout(arg0, arg1, arg2, arg3) {
+    tmp1.handlePingTimeout = function handlePingTimeout(arg0, arg1, arg2, arg3) {
       let num = 4000;
       if (arg3 > 0) {
         num = arg3;
       }
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.PingTimeout, arg2, num);
     };
-    tmp.handleConnectionFailed = function handleConnectionFailed(arg0) {
+    tmp1.handleConnectionFailed = function handleConnectionFailed(arg0) {
       if (!closure_0.destroyed) {
         closure_0.setConnectionState(constants4.NO_ROUTE);
         const _HermesInternal = HermesInternal;
         closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Error, "UDP endpoint retarget failed: " + arg0);
       }
     };
-    tmp.handleVideoEncoderFallback = function handleVideoEncoderFallback(arg0) {
+    tmp1.handleVideoEncoderFallback = function handleVideoEncoderFallback(arg0) {
       closure_0 = arg0;
       if (!closure_0.videoEncoderFallbackPending) {
         if (obj.overrideCodecResetAt > 0) {
@@ -174,7 +174,7 @@ class Connection extends tmp4 {
         obj.videoEncoderFallbackPending = true;
       }
     };
-    tmp.handleVideoDecoderFallback = function handleVideoDecoderFallback(arg0) {
+    tmp1.handleVideoDecoderFallback = function handleVideoDecoderFallback(arg0) {
       closure_0 = arg0;
       const videoDecoderFallbackSent = closure_0.videoDecoderFallbackSent;
       if (!videoDecoderFallbackSent.has(arg0)) {
@@ -211,10 +211,10 @@ class Connection extends tmp4 {
         obj.emit(BaseConnectionEvent.BaseConnectionEvent.VideoDecoderFallback, obj.codecs);
       }
     };
-    tmp.handleVideoCodecError = function handleVideoCodecError(arg0) {
+    tmp1.handleVideoCodecError = function handleVideoCodecError(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
-    tmp.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
+    tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
       const tmp2 = cloneDeepDefault(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
@@ -285,22 +285,22 @@ class Connection extends tmp4 {
       }
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Video, arg0, tmp8, audioSSRC, ssrc, num7, closure_0.videoStreamParameters);
     };
-    tmp.handleFirstFrame = function handleFirstFrame(arg0, arg1, arg2) {
+    tmp1.handleFirstFrame = function handleFirstFrame(arg0, arg1, arg2) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrame, arg0, arg1, arg2);
     };
-    tmp.handleFirstFrameStats = function handleFirstFrameStats(arg0) {
+    tmp1.handleFirstFrameStats = function handleFirstFrameStats(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrameStats, arg0);
     };
-    tmp.handleFirstFrameEncryptedStats = function handleFirstFrameEncryptedStats(arg0) {
+    tmp1.handleFirstFrameEncryptedStats = function handleFirstFrameEncryptedStats(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrameEncryptedStats, arg0);
     };
-    tmp.handleNoInput = function handleNoInput(arg0) {
+    tmp1.handleNoInput = function handleNoInput(arg0) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Silence, !arg0);
     };
-    tmp.handleDesktopSourceEnded = function handleDesktopSourceEnded(arg0, arg1) {
+    tmp1.handleDesktopSourceEnded = function handleDesktopSourceEnded(arg0, arg1) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.DesktopSourceEnd, arg0, arg1);
     };
-    tmp.handleSoundshare = function handleSoundshare(arg0) {
+    tmp1.handleSoundshare = function handleSoundshare(arg0) {
       if (arg0) {
         closure_0.soundshareActive = true;
         const conn = closure_0.conn;
@@ -311,10 +311,10 @@ class Connection extends tmp4 {
         closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached);
       }
     };
-    tmp.handleSoundshareFailed = function handleSoundshareFailed(failureCode, failureReason, willRetry) {
+    tmp1.handleSoundshareFailed = function handleSoundshareFailed(failureCode, failureReason, willRetry) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareFailed, { failureCode, failureReason, willRetry });
     };
-    tmp.handleSoundshareEnded = function handleSoundshareEnded() {
+    tmp1.handleSoundshareEnded = function handleSoundshareEnded() {
       closure_0.soundshareActive = false;
       if (!closure_0.destroyed) {
         const conn = closure_0.conn;
@@ -322,12 +322,12 @@ class Connection extends tmp4 {
         conn.setTransportOptions(obj);
       }
     };
-    tmp.handleNewListenerNative = function handleNewListenerNative(arg0) {
+    tmp1.handleNewListenerNative = function handleNewListenerNative(arg0) {
       if (arg0 === BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange) {
         closure_0.emit(arg0, closure_0.connectionState);
       }
     };
-    tmp.handleStats = function handleStats(rtp) {
+    tmp1.handleStats = function handleStats(rtp) {
       if (closure_0.connectionState !== constants4.DISCONNECTED) {
         if (null != rtp) {
           if (null != closure_0.stats) {
@@ -427,15 +427,15 @@ class Connection extends tmp4 {
         closure_0.off(BaseConnectionEvent.BaseConnectionEvent.Stats, closure_0.handleStats);
       }
     };
-    tmp.handleMLSFailure = function handleMLSFailure(arg0, arg1) {
+    tmp1.handleMLSFailure = function handleMLSFailure(arg0, arg1) {
       closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.MLSFailure, arg0, arg1);
     };
-    tmp.videoSupported = importDefault;
-    logger = new closure_0(closure_2[5]).Logger("Connection(" + global + ")");
-    tmp.logger = logger;
-    logger = tmp.logger;
+    tmp1.videoSupported = importDefault;
+    logger1 = new closure_0(closure_2[5]).Logger("Connection(" + global + ")");
+    tmp1.logger = logger1;
+    logger = tmp1.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
-    return tmp;
+    return tmp1;
   }
   destroy() {
     self = this;
@@ -462,10 +462,9 @@ Connection["create"] = function create(arg0, _0, arg2, videoSupported) {
 };
 Connection["createReplay"] = function createReplay(arg0, arg1) {
   _require = arg0;
-  new Connection(arg0, "0", true);
+  const obj = new Connection(arg0, "0", true);
   voiceEngine = require("inject").getVoiceEngine();
-  let obj = { type: constants2.VIDEO, rid: "100", ssrc: 0, rtxSsrc: 0, quality: 100, active: false };
-  let items = [obj];
+  let items = [{ type: constants2.VIDEO, rid: "100", ssrc: 0, rtxSsrc: 0, quality: 100, active: false }];
   const result = obj.initializeStreamParameters(items);
   const replayConnection = voiceEngine.createReplayConnection("default", () => {
     obj.on(BaseConnectionEvent.BaseConnectionEvent.Stats, obj.handleStats);
@@ -473,8 +472,7 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
     conn.setOnVideoCallback(obj.handleVideo);
     const codecCapabilities = voiceEngine.getCodecCapabilities((arg0) => {
       closure_0(voiceEngine[7]);
-      obj = { type: "audio", name: constants.OPUS, priority: 1, payloadType: 120 };
-      const items = [obj];
+      const items = [{ type: "audio", name: constants.OPUS, priority: 1, payloadType: 120 }];
       if (videoSupported.videoSupported) {
         const tmpResult = closure_0(voiceEngine[7]);
         let mapped = closure_0(voiceEngine[7]).filterVideoCodecs(arg0, tmp4).map((name, index) => {
@@ -486,10 +484,11 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
         mapped = [];
       }
       HermesBuiltin.arraySpread(mapped, 1);
-      obj.codecs = items;
-      obj.setCodecs(constants.OPUS, constants.H264, closure_1_0);
-      const conn = obj.conn;
+      videoSupported.codecs = items;
+      videoSupported.setCodecs(constants.OPUS, constants.H264, closure_1_0);
+      const conn = videoSupported.conn;
       conn.startReplay();
+      const obj2 = { type: "audio", name: constants.OPUS, priority: 1, payloadType: 120 };
     });
   }, arg1);
   let tmp3 = null;
@@ -559,13 +558,12 @@ prototype["initialize"] = function initialize(address) {
             connectionTransportOptions.onVideoCodecsCallbackAt = performance.now();
             let logger = connectionTransportOptions.logger;
             logger.info("Available engine codecs: " + JSON.stringify(arg0));
-            let obj = createVoiceConnection(fnResult[7]);
-            const experimentCodecs = obj.getExperimentCodecs(connectionTransportOptions.experimentFlags);
+            const experimentCodecs = createVoiceConnection(fnResult[7]).getExperimentCodecs(connectionTransportOptions.experimentFlags);
             const logger2 = connectionTransportOptions.logger;
             logger2.info("Experimental codecs: " + JSON.stringify(experimentCodecs));
+            let obj = createVoiceConnection(fnResult[7]);
             const parseNativeCodecsResult = createVoiceConnection(fnResult[7]).parseNativeCodecs(arg0);
-            obj = { type: "audio", name: constants2.OPUS, priority: 1, payloadType: 120 };
-            let items = [obj];
+            let items = [{ type: "audio", name: constants2.OPUS, priority: 1, payloadType: 120 }];
             if (connectionTransportOptions.videoSupported) {
               let result = createVoiceConnection(fnResult[7]).filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, tmp7);
               let mapped = result.map((name, index) => {
@@ -583,8 +581,8 @@ prototype["initialize"] = function initialize(address) {
               ({ name: arr[0], encode: arr[1] } = item);
               return items;
             }));
-            codecs = connectionTransportOptions.codecs;
-            connectionTransportOptions.initialCodecs = codecs.map((type) => {
+            const codecs1 = connectionTransportOptions.codecs;
+            connectionTransportOptions.initialCodecs = codecs1.map((type) => {
               const obj = {};
               const merged = Object.assign(type);
               if ("video" === type.type) {
@@ -606,81 +604,78 @@ prototype["initialize"] = function initialize(address) {
             const found1 = codecs2.filter((type) => "video" === type.type);
             logger4.info("Video codecs: " + found1.map((name) => name.name + "[encode: " + name.encode + ", decode: " + name.decode + "]"));
             const encryptionModes = port.getEncryptionModes((arg0) => {
-              let obj = connectionTransportOptions;
               connectionTransportOptions.onEncryptionModesCallbackAt = performance.now();
               let logger = connectionTransportOptions.logger;
               logger.info("Encryption modes: " + arg0);
               port.setTransportOptions(connectionTransportOptions.getConnectionTransportOptions());
               let selfMute = connectionTransportOptions.selfMute;
               if (!selfMute) {
-                selfMute = obj.context === constants3.STREAM;
+                selfMute = connectionTransportOptions.context === constants3.STREAM;
               }
               port.setSelfMute(selfMute);
-              port.setSelfDeafen(obj.selfDeaf);
-              const result = port.setOnSpeakingCallback(obj.handleSpeakingNative);
+              port.setSelfDeafen(connectionTransportOptions.selfDeaf);
+              const result = port.setOnSpeakingCallback(connectionTransportOptions.handleSpeakingNative);
               if (port.setOnNativeMuteChangedCallback != null) {
-                const result1 = setOnNativeMuteChangedCallback(obj.handleNativeMuteChanged);
+                const result1 = setOnNativeMuteChangedCallback(connectionTransportOptions.handleNativeMuteChanged);
               }
               if (port.setOnSpeakingWhileMutedCallback != null) {
-                const result2 = setOnSpeakingWhileMutedCallback(obj.handleSpeakingWhileMuted);
+                const result2 = setOnSpeakingWhileMutedCallback(connectionTransportOptions.handleSpeakingWhileMuted);
               }
               const setPingInterval = port.setPingInterval;
               if (setPingInterval != null) {
                 setPingInterval(closure_3_27);
               }
-              port.setPingCallback(obj.handlePing);
+              port.setPingCallback(connectionTransportOptions.handlePing);
               if (port.setPingTimeoutCallback != null) {
-                const result3 = setPingTimeoutCallback(obj.handlePingTimeout);
+                const result3 = setPingTimeoutCallback(connectionTransportOptions.handlePingTimeout);
               }
               if (port.setOnVideoEncoderFallbackCallback != null) {
-                const result4 = setOnVideoEncoderFallbackCallback(obj.handleVideoEncoderFallback);
+                const result4 = setOnVideoEncoderFallbackCallback(connectionTransportOptions.handleVideoEncoderFallback);
               }
               if (port.setOnVideoDecoderFallbackCallback != null) {
-                const result5 = setOnVideoDecoderFallbackCallback(obj.handleVideoDecoderFallback);
+                const result5 = setOnVideoDecoderFallbackCallback(connectionTransportOptions.handleVideoDecoderFallback);
               }
               if (port.setVideoCodecErrorCallback != null) {
-                const result6 = setVideoCodecErrorCallback(obj.handleVideoCodecError);
+                const result6 = setVideoCodecErrorCallback(connectionTransportOptions.handleVideoCodecError);
               }
-              obj = { builtInEchoCancellation: true, echoCancellation: obj.echoCancellation, noiseSuppression: obj.noiseSuppression, automaticGainControl: obj.automaticGainControl.enabled, automaticGainControlConfig: obj.automaticGainControl, noiseCancellation: obj.noiseCancellation, noiseCancellationDuringProcessing: obj.noiseCancellationDuringProcessing };
-              voiceEngine.setTransportOptions(obj);
+              voiceEngine.setTransportOptions({ builtInEchoCancellation: true, echoCancellation: connectionTransportOptions.echoCancellation, noiseSuppression: connectionTransportOptions.noiseSuppression, automaticGainControl: connectionTransportOptions.automaticGainControl.enabled, automaticGainControlConfig: connectionTransportOptions.automaticGainControl, noiseCancellation: connectionTransportOptions.noiseCancellation, noiseCancellationDuringProcessing: connectionTransportOptions.noiseCancellationDuringProcessing });
               voiceEngine.setNoInputThreshold(-100);
-              voiceEngine.setNoInputCallback(obj.handleNoInput);
-              if (obj.videoSupported) {
-                port.setOnVideoCallback(obj.handleVideo);
+              voiceEngine.setNoInputCallback(connectionTransportOptions.handleNoInput);
+              if (connectionTransportOptions.videoSupported) {
+                port.setOnVideoCallback(connectionTransportOptions.handleVideo);
                 if (port.setOnFirstFrameCallback != null) {
-                  const result7 = setOnFirstFrameCallback(obj.handleFirstFrame);
+                  const result7 = setOnFirstFrameCallback(connectionTransportOptions.handleFirstFrame);
                 }
                 if (port.setOnFirstFrameDeliveredStatsCallback != null) {
-                  const result8 = setOnFirstFrameDeliveredStatsCallback(obj.handleFirstFrameStats);
+                  const result8 = setOnFirstFrameDeliveredStatsCallback(connectionTransportOptions.handleFirstFrameStats);
                 }
                 if (port.setOnFirstFrameEncryptedStatsCallback != null) {
-                  const result9 = setOnFirstFrameEncryptedStatsCallback(obj.handleFirstFrameEncryptedStats);
+                  const result9 = setOnFirstFrameEncryptedStatsCallback(connectionTransportOptions.handleFirstFrameEncryptedStats);
                 }
                 const setOnDesktopSourceEnded = port.setOnDesktopSourceEnded;
                 if (setOnDesktopSourceEnded != null) {
-                  const result10 = setOnDesktopSourceEnded(obj.handleDesktopSourceEnded);
+                  const result10 = setOnDesktopSourceEnded(connectionTransportOptions.handleDesktopSourceEnded);
                 }
                 const setOnSoundshare = port.setOnSoundshare;
                 if (setOnSoundshare != null) {
-                  setOnSoundshare(obj.handleSoundshare);
+                  setOnSoundshare(connectionTransportOptions.handleSoundshare);
                 }
                 const setOnSoundshareEnded = port.setOnSoundshareEnded;
                 if (setOnSoundshareEnded != null) {
-                  setOnSoundshareEnded(obj.handleSoundshareEnded);
+                  setOnSoundshareEnded(connectionTransportOptions.handleSoundshareEnded);
                 }
                 const setOnSoundshareFailed = port.setOnSoundshareFailed;
                 if (setOnSoundshareFailed != null) {
-                  const result11 = setOnSoundshareFailed(obj.handleSoundshareFailed);
+                  const result11 = setOnSoundshareFailed(connectionTransportOptions.handleSoundshareFailed);
                 }
               }
               if (port.setOnMLSFailureCallback != null) {
-                const result12 = setOnMLSFailureCallback(obj.handleMLSFailure);
+                const result12 = setOnMLSFailureCallback(connectionTransportOptions.handleMLSFailure);
               }
-              obj.setConnectionState(constants.CONNECTED);
-              obj = { address, port, mode: obj.chooseEncryptionMode(address.modes, arg0), codecs: obj.codecs };
-              obj.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Connected, map, obj);
-              obj.on(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Stats, obj.handleStats);
-              const userOptions = obj.getUserOptions();
+              connectionTransportOptions.setConnectionState(constants.CONNECTED);
+              connectionTransportOptions.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Connected, map, { address, port, mode: connectionTransportOptions.chooseEncryptionMode(address.modes, arg0), codecs: connectionTransportOptions.codecs });
+              connectionTransportOptions.on(createVoiceConnection(fnResult[6]).BaseConnectionEvent.Stats, connectionTransportOptions.handleStats);
+              const userOptions = connectionTransportOptions.getUserOptions();
               const item = userOptions.forEach((item) => {
                 logger = logger.logger;
                 ({ id, ssrc, videoSsrcs } = item);
@@ -693,17 +688,20 @@ prototype["initialize"] = function initialize(address) {
                 }
                 return logger.info("Creating user: " + id + " with audio SSRC: " + ssrc + " and video SSRCs: " + num);
               });
-              obj.mergeUsers(userOptions);
-              obj.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.RemoteStreamsReady, userOptions.length);
-              const keys = Object.keys(obj.localSpeakingFlags);
+              connectionTransportOptions.mergeUsers(userOptions);
+              connectionTransportOptions.emit(createVoiceConnection(fnResult[6]).BaseConnectionEvent.RemoteStreamsReady, userOptions.length);
+              const keys = Object.keys(connectionTransportOptions.localSpeakingFlags);
               for (const item10172 of keys) {
                 if (item10172 !== connectionTransportOptions.userId) {
                   let setSpeakingFlagsResult = connectionTransportOptions.setSpeakingFlags(item10172, connectionTransportOptions.localSpeakingFlags[item10172]);
                 }
                 continue;
               }
+              const obj3 = { builtInEchoCancellation: true, echoCancellation: connectionTransportOptions.echoCancellation, noiseSuppression: connectionTransportOptions.noiseSuppression, automaticGainControl: connectionTransportOptions.automaticGainControl.enabled, automaticGainControlConfig: connectionTransportOptions.automaticGainControl, noiseCancellation: connectionTransportOptions.noiseCancellation, noiseCancellationDuringProcessing: connectionTransportOptions.noiseCancellationDuringProcessing };
+              const obj4 = { address, port, mode: connectionTransportOptions.chooseEncryptionMode(address.modes, arg0), codecs: connectionTransportOptions.codecs };
             });
             const obj2 = createVoiceConnection(fnResult[7]);
+            let obj3 = { type: "audio", name: constants2.OPUS, priority: 1, payloadType: 120 };
           });
         }
       }
@@ -1090,8 +1088,8 @@ prototype["setCameraBitRate"] = function setCameraBitRate(encodingVideoBitRate, 
     }
     if (!self.hasDesktopSource()) {
       const conn = self.conn;
-      let obj = { encodingVideoBitRate, encodingVideoMinBitRate, encodingVideoMaxBitRate: bitrateMax };
-      conn.setTransportOptions(obj);
+      const obj2 = { encodingVideoBitRate, encodingVideoMinBitRate, encodingVideoMaxBitRate: bitrateMax };
+      conn.setTransportOptions(obj2);
     }
   }
   const videoQualityManager2 = self.videoQualityManager;
@@ -1102,56 +1100,41 @@ prototype["setCameraBitRate"] = function setCameraBitRate(encodingVideoBitRate, 
       tmp2 = encodingVideoMinBitRate;
     }
   }
-  obj = { bitrateMin: tmp2, bitrateMax };
-  videoQualityManager2.setQualityOverwrite(obj);
+  videoQualityManager2.setQualityOverwrite({ bitrateMin: tmp2, bitrateMax });
 };
 prototype["setEchoCancellation"] = function setEchoCancellation(echoCancellation) {
   this.echoCancellation = echoCancellation;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { echoCancellation: this.echoCancellation };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ echoCancellation: this.echoCancellation });
 };
 prototype["setNoiseSuppression"] = function setNoiseSuppression(noiseSuppression) {
   this.noiseSuppression = noiseSuppression;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { noiseSuppression: this.noiseSuppression };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ noiseSuppression: this.noiseSuppression });
 };
 prototype["setAutomaticGainControl"] = function setAutomaticGainControl(automaticGainControl) {
   this.automaticGainControl = automaticGainControl;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { automaticGainControl: this.automaticGainControl.enabled, automaticGainControlConfig: this.automaticGainControl };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ automaticGainControl: this.automaticGainControl.enabled, automaticGainControlConfig: this.automaticGainControl });
 };
 prototype["setNoiseCancellation"] = function setNoiseCancellation(noiseCancellation) {
   this.noiseCancellation = noiseCancellation;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { noiseCancellation: this.noiseCancellation };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ noiseCancellation: this.noiseCancellation });
 };
 prototype["setNoiseCancellationDuringProcessing"] = function setNoiseCancellationDuringProcessing(noiseCancellationDuringProcessing) {
   this.noiseCancellationDuringProcessing = noiseCancellationDuringProcessing;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing });
 };
 prototype["setSkipNoiseCancellationIfMuted"] = function setSkipNoiseCancellationIfMuted(enabled) {
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { skipNoiseCancellationIfMuted: enabled };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ skipNoiseCancellationIfMuted: enabled });
 };
 prototype["setEchoReferenceMode"] = function setEchoReferenceMode(echoReferenceMode) {
   this.echoReferenceMode = echoReferenceMode;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { echoReferenceMode: this.echoReferenceMode };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ echoReferenceMode: this.echoReferenceMode });
 };
 prototype["getNoiseCancellation"] = function getNoiseCancellation() {
   return this.noiseCancellation;
@@ -1214,9 +1197,7 @@ prototype["setEncryption"] = function setEncryption(mode, secretKey) {
   const logger = this.logger;
   logger.info("Selected encryption mode: " + mode);
   const conn = this.conn;
-  let obj = { encryptionSettings: null };
-  obj = { mode, secretKey };
-  obj.encryptionSettings = obj;
+  const obj = { encryptionSettings: { mode, secretKey } };
   conn.setTransportOptions(obj);
 };
 prototype["setReconnectInterval"] = function setReconnectInterval(reconnectInterval) {
@@ -1346,48 +1327,45 @@ prototype["setGoLiveSource"] = function setGoLiveSource(quality) {
     result = resolution / 9 * 16;
   }
   if (null != result3.desktopDescription) {
-    id = result3.desktopDescription.id;
+    let id1 = result3.desktopDescription.id;
   } else {
-    id = null;
+    id1 = null;
     if (null != result3.cameraDescription) {
       const _HermesInternal = HermesInternal;
-      let str = ":";
-      let str2 = "";
-      id = "" + result3.cameraDescription.videoDeviceGuid + ":" + result3.cameraDescription.audioDeviceGuid;
+      id1 = "" + result3.cameraDescription.videoDeviceGuid + ":" + result3.cameraDescription.audioDeviceGuid;
     }
   }
   const self = this;
-  if (this.goLiveSourceIdentifier !== id) {
-    self.goLiveSourceIdentifier = id;
+  if (this.goLiveSourceIdentifier !== id1) {
+    self.goLiveSourceIdentifier = id1;
     if (null != self.conn.setDesktopSource) {
       if (null != result3.desktopDescription) {
         const desktopDescription = result3.desktopDescription;
         ({ id, useVideoHook, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useGraphicsCapture, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight } = desktopDescription);
         self.setSoundshareSource(desktopDescription.soundshareId, desktopDescription.useLoopback);
         if (null != id) {
-          let str3 = ":";
           let parts = id.split(":");
         } else {
           parts = ["", ""];
         }
-        [tmp9, tmp10] = _slicedToArray(parts, 2);
+        [tmp9, tmp10] = parts;
         if (null != id) {
           const logger2 = self.logger;
-          str = useVideoHook.toString();
-          let str1;
+          const str1 = useVideoHook.toString();
+          let str13;
           if (useGraphicsCapture != null) {
-            str1 = useGraphicsCapture.toString();
+            str13 = useGraphicsCapture.toString();
           }
-          str2 = undefined;
+          let str14;
           if (useGraphicsCaptureApiLevel != null) {
-            str2 = useGraphicsCaptureApiLevel.toString();
+            str14 = useGraphicsCaptureApiLevel.toString();
           }
-          str3 = undefined;
+          let str15;
           if (useCaptureDeviceForEncode != null) {
-            str3 = useCaptureDeviceForEncode.toString();
+            str15 = useCaptureDeviceForEncode.toString();
           }
           const _HermesInternal2 = HermesInternal;
-          logger2.info("capturing desktop (type: " + tmp9 + ", handle: " + tmp10 + ", use-video-hook: " + str + ", use-graphics-capture: " + str1 + ", use-graphics-capture-api-level: " + str2 + ", use-capture-device-for-encode: " + str3 + ").");
+          logger2.info("capturing desktop (type: " + tmp9 + ", handle: " + tmp10 + ", use-video-hook: " + str1 + ", use-graphics-capture: " + str13 + ", use-graphics-capture-api-level: " + str14 + ", use-capture-device-for-encode: " + str15 + ").");
         } else {
           const logger = self.logger;
           logger.info("capturing desktop (type: <stop>).");
@@ -1396,7 +1374,7 @@ prototype["setGoLiveSource"] = function setGoLiveSource(quality) {
           if (null != id) {
             const result1 = self.setDesktopEncodingOptions(result, resolution, frameRate);
             const conn3 = self.conn;
-            let obj = { type: tmp9, sourceId: tmp10, useVideoHook, useHookFramePacer: false, useGraphicsCapture, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight };
+            const obj = { type: tmp9, sourceId: tmp10, useVideoHook, useHookFramePacer: false, useGraphicsCapture, useGraphicsCaptureApiLevel, useCaptureDeviceForEncode, useQuartzCapturer, allowScreenCaptureKit, videoHookStaleFrameTimeoutMs, graphicsCaptureStaleFrameTimeoutMs, hdrCaptureMode, enableGlobalFramePoolLock, useGraphicsCaptureDirtyRegions, videoHookAllowDx12, minCaptureWidth, minCaptureHeight };
             const result2 = conn3.setDesktopSourceWithOptions(obj);
           } else {
             const conn2 = self.conn;
@@ -1410,9 +1388,9 @@ prototype["setGoLiveSource"] = function setGoLiveSource(quality) {
         const tmp8 = _slicedToArray(parts, 2);
       } else if (null != result3.cameraDescription) {
         const conn4 = self.conn;
-        obj = { videoInputDeviceId: null, audioInputDeviceId: null };
         ({ videoDeviceGuid: obj2.videoInputDeviceId, audioDeviceGuid: obj2.audioInputDeviceId } = result3.cameraDescription);
-        conn4.setGoLiveDevices(obj);
+        conn4.setGoLiveDevices({ videoInputDeviceId: null, audioInputDeviceId: null });
+        const obj3 = { videoInputDeviceId: null, audioInputDeviceId: null };
       }
       result3 = self.setDesktopEncodingOptions(result, resolution, frameRate);
     }
@@ -1624,16 +1602,16 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
       } else {
         const items = [];
         if (!_modDef4755(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(closure_1[findIndexResult]);
-          items.push(obj);
+          items.push(obj2);
         }
         const conn = self.conn;
-        obj = { streamParameters: items };
-        conn.setTransportOptions(obj);
+        const obj3 = { streamParameters: items };
+        conn.setTransportOptions(obj3);
       }
     }
     const iter = self.videoStreamParameters[Symbol.iterator]();
@@ -1693,15 +1671,14 @@ prototype["getUserOptions"] = function getUserOptions() {
   const self = this;
   const keys = Object.keys(this.remoteAudioSSRCs);
   return keys.map((id) => {
-    let obj = self;
     let num = 0;
     if (undefined !== self.remoteVideoSSRCs[id]) {
       num = 0;
-      if (obj.remoteVideoSSRCs[id].length > 0) {
-        num = obj.remoteVideoSSRCs[id][0];
+      if (self.remoteVideoSSRCs[id].length > 0) {
+        num = self.remoteVideoSSRCs[id][0];
       }
     }
-    obj = { id, ssrc: obj.remoteAudioSSRCs[id], videoSsrc: num, videoSsrcs: obj.remoteVideoSSRCs[id], rtxSsrc: null, mute: null, volume: null };
+    const obj2 = { id, ssrc: self.remoteAudioSSRCs[id], videoSsrc: num, videoSsrcs: self.remoteVideoSSRCs[id], rtxSsrc: null, mute: null, volume: null };
     let num2 = 0;
     if (null != num) {
       num2 = 0;
@@ -1709,23 +1686,23 @@ prototype["getUserOptions"] = function getUserOptions() {
         num2 = num + 1;
       }
     }
-    obj.rtxSsrc = num2;
-    obj.mute = obj.getLocalMute(id);
-    obj.volume = obj.getLocalVolume(id);
-    return obj;
+    obj2.rtxSsrc = num2;
+    obj2.mute = self.getLocalMute(id);
+    obj2.volume = self.getLocalVolume(id);
+    return obj2;
   });
 };
 prototype["createInputModeOptions"] = function createInputModeOptions() {
   const self = this;
   const inputMode = this.inputMode;
   if (constants3.VOICE_ACTIVITY === inputMode) {
-    let obj = { vadThreshold: self.vadThreshold, vadAutoThreshold: null, vadUseKrisp: null, vadLeading: null, vadTrailing: null, vadKrispActivationThreshold: null };
+    const obj3 = { vadThreshold: self.vadThreshold, vadAutoThreshold: null, vadUseKrisp: null, vadLeading: null, vadTrailing: null, vadKrispActivationThreshold: null };
     const VADAggressiveness = discord_common_VoiceEngine.VADAggressiveness;
-    obj.vadAutoThreshold = self.vadAutoThreshold ? VADAggressiveness.VERY_AGGRESSIVE : VADAggressiveness.DISABLED;
+    obj3.vadAutoThreshold = self.vadAutoThreshold ? VADAggressiveness.VERY_AGGRESSIVE : VADAggressiveness.DISABLED;
     ({ vadUseKrisp: obj2.vadUseKrisp, vadLeading: obj2.vadLeading, vadTrailing: obj2.vadTrailing, vadKrispActivationThreshold: obj2.vadKrispActivationThreshold } = self);
-    return obj;
+    return obj3;
   } else if (tmp.PUSH_TO_TALK === inputMode) {
-    obj = { pttReleaseDelay: self.pttReleaseDelay };
+    const obj = { pttReleaseDelay: self.pttReleaseDelay };
     return obj;
   } else {
     const _Error = Error;
@@ -1739,18 +1716,18 @@ prototype["getAttenuationOptions"] = function getAttenuationOptions() {
 };
 prototype["getCodecParams"] = function getCodecParams(name, arg1) {
   if (name !== H264.H264) {
-    let obj = {};
+    let obj2 = {};
   } else if (arg1) {
-    obj = { "level-asymmetry-allowed": "1", "packetization-mode": "1", "profile-level-id": "42e034" };
+    obj2 = { "level-asymmetry-allowed": "1", "packetization-mode": "1", "profile-level-id": "42e034" };
   } else {
-    obj = inject;
     let str = "4d0033";
     if ("android" === obj.getVoiceEngine().platform) {
       str = "42e01f";
     }
-    obj = { "level-asymmetry-allowed": "1", "packetization-mode": "1", "profile-level-id": str };
+    obj2 = { "level-asymmetry-allowed": "1", "packetization-mode": "1", "profile-level-id": str };
+    obj = inject;
   }
-  return obj;
+  return obj2;
 };
 prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
   const self = this;
@@ -1781,15 +1758,15 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
     audioEncoder.channels = 2;
   }
   const videoDecoders = [];
-  let videoEncoder = { name: "", type: 0, rtxType: 0, params: {} };
+  let obj = { name: "", type: 0, rtxType: 0, params: {} };
   const iter = self.codecs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
     if (nextResult.name !== name) {
-      let obj = { name: null, type: null, rtxType: null, params: null };
+      let obj2 = { name: null, type: null, rtxType: null, params: null };
       let obj5 = VideoCodecUtils;
-      obj.name = obj5.codecNameToPayloadName(tmp4.name);
+      obj2.name = obj5.codecNameToPayloadName(tmp4.name);
       let num3;
       if (tmp4 != null) {
         num3 = tmp4.payloadType;
@@ -1797,7 +1774,7 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
       if (num3 == null) {
         num3 = 0;
       }
-      obj.type = num3;
+      obj2.type = num3;
       let num4;
       if (tmp4 != null) {
         num4 = tmp4.rtxPayloadType;
@@ -1805,9 +1782,9 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
       if (num4 == null) {
         num4 = 0;
       }
-      obj.rtxType = num4;
-      obj.params = self.getCodecParams(tmp4.name, true);
-      let tmp7 = obj;
+      obj2.rtxType = num4;
+      obj2.params = self.getCodecParams(tmp4.name, true);
+      let tmp7 = obj2;
       let experimentFlags = self.experimentFlags;
       if (experimentFlags.has(constants.RESET_DECODER_ON_ERRORS)) {
         tmp7.params["reset-on-errors"] = "1";
@@ -1837,31 +1814,31 @@ prototype["getCodecOptions"] = function getCodecOptions(name, H264, context) {
       }
       let arr = videoDecoders.push(tmp7);
       if (tmp4.name === H264) {
-        let obj1 = {};
+        let obj3 = {};
         let merged = Object.assign(tmp7);
-        obj1.params = self.getCodecParams(tmp4.name, false);
-        videoEncoder = obj1;
+        obj3.params = self.getCodecParams(tmp4.name, false);
+        obj = obj3;
         let experimentFlags9 = self.experimentFlags;
         if (experimentFlags9.has(constants.VIDEOTOOLBOX_RATE_CONTROL)) {
-          videoEncoder.params["fixed-rate-presentation-timestamps"] = "1";
+          obj.params["fixed-rate-presentation-timestamps"] = "1";
         }
         let experimentFlags6 = self.experimentFlags;
         if (experimentFlags6.has(constants.LOW_LATENCY_RATE_CONTROL)) {
-          videoEncoder.params["low-latency-rate-control"] = "1";
+          obj.params["low-latency-rate-control"] = "1";
         }
         let experimentFlags7 = self.experimentFlags;
         if (experimentFlags7.has(constants.WMF_GPU_ENCODE)) {
-          videoEncoder.params["wmf-gpu"] = "1";
+          obj.params["wmf-gpu"] = "1";
         }
         let experimentFlags8 = self.experimentFlags;
         if (experimentFlags8.has(constants.INTEL_GPU_DISABLE)) {
-          videoEncoder.params["intel-gpu"] = "0";
+          obj.params["intel-gpu"] = "0";
         }
       }
     }
     continue;
   }
-  return { videoEncoder, videoDecoders, audioEncoder, audioDecoders };
+  return { videoEncoder: obj, videoDecoders, audioEncoder, audioDecoders };
 };
 prototype["getConnectionTransportOptions"] = function getConnectionTransportOptions() {
   const obj = { selfMute: this.selfMute, inputMode: dependencyMap[this.inputMode], inputModeOptions: this.createInputModeOptions(), minimumJitterBufferLevel: this.minimumJitterBufferLevel, postponeDecodeLevel: this.postponeDecodeLevel };

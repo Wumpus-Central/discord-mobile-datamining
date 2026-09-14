@@ -2,11 +2,13 @@
 
 // Module 8139 (PublicGuildsUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import isCrosspostDefault from "isCrosspost" /* 8141 */;
 import PublicGuildsConstants from "PublicGuildsConstants" /* 8140 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: closure_4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: hasOwnProperty } = PublicGuildsConstants);
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -30,7 +32,8 @@ export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvata
   return require("module_8142");
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
-  const obj = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(fromStep.guildId));
-  obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj);
+  obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj2);
 };

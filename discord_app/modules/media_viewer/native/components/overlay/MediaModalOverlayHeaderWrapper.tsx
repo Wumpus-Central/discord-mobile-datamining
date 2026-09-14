@@ -10,9 +10,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((paddingTop, arg1, arg2) => {
-  let obj = { bar: null };
-  obj = { flexDirection: "row", alignItems: "center", height: NavigatorConstants.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
-  obj.bar = obj;
+  const obj = { bar: { flexDirection: "row", alignItems: "center", height: NavigatorConstants.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 } };
   return obj;
 });
 const size = fn(2);

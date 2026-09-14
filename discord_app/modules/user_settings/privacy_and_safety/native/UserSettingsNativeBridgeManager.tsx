@@ -1,14 +1,14 @@
-// === Module 17938: UserSettingsNativeBridgeManager ===
+// === Module 17939: UserSettingsNativeBridgeManager ===
 
-// Module 17938 (UserSettingsNativeBridgeManager)
+// Module 17939 (UserSettingsNativeBridgeManager)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
-let prototype = function UserSettingsNativeBridgeManager() {
+const prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.saveExplicitContentSettingsToDisk = PlatformUtils.isIOS() ? (() => {
     settings = settings.settings;
@@ -31,7 +31,7 @@ let prototype = function UserSettingsNativeBridgeManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx");
 
-export default prototype;
+export default prototype1;

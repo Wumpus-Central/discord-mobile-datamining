@@ -1,21 +1,21 @@
-// === Module 15966: SafetyGuildSettingDirectMessages ===
+// === Module 15968: SafetyGuildSettingDirectMessages ===
 
-// Module 15966 (SafetyGuildSettingDirectMessages)
+// Module 15968 (SafetyGuildSettingDirectMessages)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15967 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15968 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15969 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15970 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15960);
+const UserSettingsSafetySelectedGuildStore = fn(15962);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11602).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11601);
-let SettingBuilders = {
+let closure_6 = fn(11603).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     const intl = util.intl;
@@ -67,17 +67,17 @@ let SettingBuilders = {
     const tmp = closure_4();
     if (tmp === closure_6) {
       _require = !arg0;
-      let obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
       const intl = require("util").intl;
-      obj.title = intl.string(require("util").t.Hq4ApA);
+      obj2.title = intl.string(require("util").t.Hq4ApA);
       const intl2 = require("util").intl;
-      obj.body = intl2.string(require("util").t.qTCYun);
+      obj2.body = intl2.string(require("util").t.qTCYun);
       const intl3 = require("util").intl;
-      obj.confirmText = intl3.string(require("util").t.p89ACt);
+      obj2.confirmText = intl3.string(require("util").t.p89ACt);
       const intl4 = require("util").intl;
-      obj.cancelText = intl4.string(require("util").t.gm1Vej);
-      obj.confirmColor = common_AlertDefault.Colors.RED;
-      obj.onConfirm = function onConfirm() {
+      obj2.cancelText = intl4.string(require("util").t.gm1Vej);
+      obj2.confirmColor = common_AlertDefault.Colors.RED;
+      obj2.onConfirm = function onConfirm() {
         const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(closure_0);
         const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
@@ -88,14 +88,13 @@ let SettingBuilders = {
         }
         RestrictedGuildIds.updateSetting(guildIds);
       };
-      obj.onCancel = function onCancel() {
+      obj2.onCancel = function onCancel() {
         const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(closure_0);
       };
-      AlertActionCreatorsDefault.show(obj);
+      AlertActionCreatorsDefault.show(obj2);
     } else {
-      obj = require("UserSettingsUtils");
-      const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
+      const sanitizedRestrictedGuilds = require("UserSettingsUtils").getSanitizedRestrictedGuilds();
       if (arg0) {
         sanitizedRestrictedGuilds.delete(tmp);
       } else {
@@ -104,6 +103,7 @@ let SettingBuilders = {
       let RestrictedGuildIds = require("UserSettings").RestrictedGuildIds;
       const _Array = Array;
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
+      const obj = require("UserSettingsUtils");
     }
   },
   useIsDisabled() {
@@ -113,9 +113,8 @@ let SettingBuilders = {
     }
     return isParentallyControlled;
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
 
-export default SettingBuilders;
+export default toggle;

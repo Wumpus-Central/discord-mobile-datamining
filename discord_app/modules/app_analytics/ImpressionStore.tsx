@@ -1,9 +1,11 @@
-// === Module 1243: ImpressionStore ===
+// === Module 1241: ImpressionStore ===
 
-// Module 1243 (ImpressionStore)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import identity from "module_1244" /* 1244 */;
+// Module 1241 (ImpressionStore)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
@@ -37,10 +39,9 @@ export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState(() => {
-      let obj = { debugTrackedData: null };
-      obj = { name };
+      const obj = { debugTrackedData: null };
       const merged = Object.assign(closure_1_1);
-      obj.debugTrackedData = obj;
+      obj.debugTrackedData = { name };
       return obj;
     });
   });

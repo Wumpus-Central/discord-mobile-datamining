@@ -15,13 +15,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SplitTextInput/native/SplitTextInput.native.tsx");
 
 export const SplitTextInput = noop.forwardRef((required, ref) => {
-  let obj = useFieldLabelA11yNative;
-  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(required);
+  const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(required);
   const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(required);
-  obj.labelId = fieldLabelA11yNative.labelId;
-  obj = { ref };
+  obj2.labelId = fieldLabelA11yNative.labelId;
+  const obj3 = { ref };
   const merged1 = Object.assign(required);
   const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
   const tmp2 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
@@ -29,7 +28,7 @@ export const SplitTextInput = noop.forwardRef((required, ref) => {
   if (requiredFieldA11yName == null) {
     requiredFieldA11yName = accessibilityLabel;
   }
-  obj.accessibilityLabel = requiredFieldA11yName;
-  obj.children = jsx(SplitTextField.SplitTextField, { ref });
-  return jsx(Input.Input, { ref });
+  obj3.accessibilityLabel = requiredFieldA11yName;
+  obj2.children = jsx(SplitTextField.SplitTextField, { ref });
+  return jsx(Input.Input, {});
 });

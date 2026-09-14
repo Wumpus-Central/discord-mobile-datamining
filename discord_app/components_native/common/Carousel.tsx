@@ -2,7 +2,7 @@
 
 // Module 9491 (Carousel)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,12 +10,11 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: null, inactiveIndicator: null };
-createStyles = { color: nativeDefault.colors.ICON_STRONG };
-createStyles.activeIndicator = createStyles;
-createStyles.inactiveIndicator = { color: nativeDefault.colors.ICON_SUBTLE };
-let closure_6 = createStyles.createLegacyClassComponentStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: { color: nativeDefault.colors.ICON_STRONG }, inactiveIndicator: null };
+let obj3 = { color: nativeDefault.colors.ICON_STRONG };
+obj2.inactiveIndicator = { color: nativeDefault.colors.ICON_SUBTLE };
+let closure_6 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
 class PageIndicator extends Component {
 }
@@ -30,17 +29,17 @@ PageIndicator.prototype["render"] = function render() {
     do {
       let obj = { fontSize: tmp3 };
       let items1 = [obj, ];
-      obj = { style: null, children: "\u2022" };
+      let obj2 = { style: null, children: "\u2022" };
       items1[1] = num === tmp2 ? tmp.activeIndicator : tmp.inactiveIndicator;
-      obj.style = items1;
-      let arr = items.push(React4(native.LegacyText, obj, num));
+      obj2.style = items1;
+      let arr = items.push(React4(native.LegacyText, obj2, num));
       num = num + 1;
     } while (num < count);
   }
-  obj = { style: null, children: items };
+  const obj3 = { style: null, children: items };
   const items2 = [tmp.pageIndicator, { width: count * indicatorSpace }, pageIndicatorStyle];
-  obj.style = items2;
-  return React4(React2, obj);
+  obj3.style = items2;
+  return React4(React2, obj3);
 };
 PageIndicator.contextType = fn(4347).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
@@ -71,28 +70,28 @@ Carousel.prototype["render"] = function render() {
   }
   let tmp3;
   if (tmp2) {
-    let obj = { count: length, activeIndex: self.state.activeIndex, pageIndicatorStyle: this.props.pageIndicatorStyle };
+    const obj = { count: length, activeIndex: self.state.activeIndex, pageIndicatorStyle: this.props.pageIndicatorStyle };
     tmp3 = React4(PageIndicator, obj);
   }
   let scrollViewProps = self.props.scrollViewProps;
   if (scrollViewProps == null) {
     scrollViewProps = {};
   }
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp.container, self.props.style];
-  obj.style = items;
-  obj = { automaticallyAdjustContentInsets: false, horizontal: true, pagingEnabled: true, scrollEnabled: length > 1, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, onMomentumScrollEnd: self.onAnimationEnd };
+  obj2.style = items;
+  const obj3 = { automaticallyAdjustContentInsets: false, horizontal: true, pagingEnabled: true, scrollEnabled: this.props.children.length > 1, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, onMomentumScrollEnd: self.onAnimationEnd };
   const merged = Object.assign(scrollViewProps);
-  obj.children = React4(React2, {
+  obj3.children = React4(React2, {
     style: tmp.carouselContentWrapper,
     onStartShouldSetResponder() {
       return true;
     },
     children: self.props.children
   });
-  const items1 = [React4(React3, obj), tmp3];
-  obj.children = items1;
-  return hasOwnProperty(React2, obj);
+  const items1 = [React4(React3, obj3), tmp3];
+  obj2.children = items1;
+  return hasOwnProperty(React2, obj2);
 };
 Carousel.contextType = fn(4347).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };

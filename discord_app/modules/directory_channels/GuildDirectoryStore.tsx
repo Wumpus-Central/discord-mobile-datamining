@@ -1,10 +1,10 @@
-// === Module 12441: GuildDirectoryStore ===
+// === Module 12442: GuildDirectoryStore ===
 
-// Module 12441 (GuildDirectoryStore)
+// Module 12442 (GuildDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12433 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12434 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12434 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12435 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
@@ -74,54 +74,53 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
     ({ channelId, entries } = arg0);
     c4 = false;
     let obj = {};
-    obj = {};
+    let obj2 = {};
     const item = entries.forEach((item) => {
       obj = GuildDirectoryUtils;
       const result = obj.guildDirectoryEntryFromServer(item);
       obj[result.guildId] = result;
-      if (null != obj[result.primaryCategoryId]) {
+      if (null != obj2[result.primaryCategoryId]) {
         tmp2[result.primaryCategoryId][result.guildId] = result;
       } else {
-        obj = {};
-        obj[result.guildId] = result;
-        tmp2[result.primaryCategoryId] = obj;
+        obj2 = {};
+        obj2[result.guildId] = result;
+        tmp2[result.primaryCategoryId] = obj2;
       }
     });
     closure_5[channelId] = obj;
-    closure_7[channelId] = obj;
+    closure_7[channelId] = obj2;
   },
   GUILD_DIRECTORY_FETCH_FAILURE: function handleFetchFailure() {
     c4 = false;
   },
   GUILD_DIRECTORY_ENTRY_CREATE: function handleCreateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = GuildDirectoryUtils;
-    const result = obj.guildDirectoryEntryFromServer(channelId.entry);
+    const result = GuildDirectoryUtils.guildDirectoryEntryFromServer(channelId.entry);
     if (null != result) {
       let tmp2;
       if (dependencyMap[channelId] != null) {
         tmp2 = tmp17[result.guildId];
       }
       if (null == tmp2) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(dependencyMap[channelId]);
-        obj[result.guildId] = result;
-        dependencyMap[channelId] = obj;
+        obj2[result.guildId] = result;
+        dependencyMap[channelId] = obj2;
         let UNCATEGORIZED = result.primaryCategoryId;
         if (UNCATEGORIZED == null) {
           UNCATEGORIZED = DirectoryEntryCategories.UNCATEGORIZED;
         }
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(dependencyMap2[channelId]);
         let tmp8;
         if (dependencyMap2[channelId] != null) {
           tmp8 = tmp7[UNCATEGORIZED];
         }
-        const obj1 = {};
+        const obj4 = {};
         const merged2 = Object.assign(tmp8);
-        obj1[result.guildId] = result;
-        obj[UNCATEGORIZED] = obj1;
-        dependencyMap2[channelId] = obj;
+        obj4[result.guildId] = result;
+        obj3[UNCATEGORIZED] = obj4;
+        dependencyMap2[channelId] = obj3;
         if (null != dependencyMap3[channelId]) {
           let num;
           if (dependencyMap3[channelId] != null) {
@@ -130,10 +129,10 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
           if (num == null) {
             num = 0;
           }
-          const obj2 = {};
+          const obj5 = {};
           const merged3 = Object.assign(dependencyMap3[channelId]);
-          obj2[UNCATEGORIZED] = num + 1;
-          dependencyMap3[channelId] = obj2;
+          obj5[UNCATEGORIZED] = num + 1;
+          dependencyMap3[channelId] = obj5;
         }
       }
     }
@@ -159,38 +158,36 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
       const _Object = Object;
       const merged1 = Object.assign({}, dependencyMap2[channelId][primaryCategoryId]);
       delete tmp2[tmp];
-      let obj = {};
+      const obj = {};
       const merged2 = Object.assign(dependencyMap2[channelId]);
       obj[primaryCategoryId] = merged1;
       dependencyMap2[channelId] = obj;
       if (null != dependencyMap3[channelId]) {
         const diff = dependencyMap3[channelId][primaryCategoryId] - 1;
-        obj = {};
+        const obj2 = {};
         const merged3 = Object.assign(dependencyMap3[channelId]);
         let num2 = 0;
         if (0 <= diff) {
           num2 = diff;
         }
-        obj[primaryCategoryId] = num2;
-        dependencyMap3[channelId] = obj;
+        obj2[primaryCategoryId] = num2;
+        dependencyMap3[channelId] = obj2;
       }
     }
   },
   GUILD_DIRECTORY_ENTRY_UPDATE: function handleUpdateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = GuildDirectoryUtils;
-    const result = obj.guildDirectoryEntryFromServer(channelId.entry);
+    const result = GuildDirectoryUtils.guildDirectoryEntryFromServer(channelId.entry);
     let tmp6;
     if (dependencyMap[channelId] != null) {
       tmp6 = tmp5[result.guildId];
     }
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(dependencyMap[channelId]);
-    obj = {};
     const merged1 = Object.assign(tmp6);
     const merged2 = Object.assign(result);
-    obj[result.guildId] = obj;
-    dependencyMap[channelId] = obj;
+    obj2[result.guildId] = {};
+    dependencyMap[channelId] = obj2;
     let primaryCategoryId;
     if (tmp6 != null) {
       primaryCategoryId = tmp6.primaryCategoryId;
@@ -215,26 +212,26 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
       const guildId = result.guildId;
       delete tmp2[tmp];
     }
-    const obj1 = {};
+    const obj4 = {};
     const merged4 = Object.assign(dependencyMap2[channelId]);
-    obj1[primaryCategoryId] = merged3;
+    obj4[primaryCategoryId] = merged3;
     let tmp21;
     if (dependencyMap2[channelId] != null) {
       tmp21 = tmp20[UNCATEGORIZED];
     }
-    const obj2 = {};
+    const obj5 = {};
     const merged5 = Object.assign(tmp21);
     const merged6 = Object.assign(tmp6);
     const merged7 = Object.assign(result);
-    obj2[result.guildId] = {};
-    obj1[UNCATEGORIZED] = obj2;
-    dependencyMap2[channelId] = obj1;
+    obj5[result.guildId] = {};
+    obj4[UNCATEGORIZED] = obj5;
+    dependencyMap2[channelId] = obj4;
     let tmp25 = UNCATEGORIZED !== primaryCategoryId;
     if (tmp25) {
       tmp25 = null != dependencyMap3[channelId];
     }
     if (tmp25) {
-      const obj4 = {};
+      const obj7 = {};
       const merged8 = Object.assign(dependencyMap3[channelId]);
       let tmp31;
       if (dependencyMap3[channelId] != null) {
@@ -248,7 +245,7 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
         }
         num2 = tmp33 - 1;
       }
-      obj4[primaryCategoryId] = num2;
+      obj7[primaryCategoryId] = num2;
       let num4;
       if (dependencyMap3[channelId] != null) {
         num4 = tmp34[UNCATEGORIZED];
@@ -256,10 +253,11 @@ const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
       if (num4 == null) {
         num4 = 0;
       }
-      obj4[UNCATEGORIZED] = num4 + 1;
-      dependencyMap3[channelId] = obj4;
+      obj7[UNCATEGORIZED] = num4 + 1;
+      dependencyMap3[channelId] = obj7;
     }
     const obj3 = {};
+    const obj6 = {};
   },
   GUILD_DIRECTORY_CATEGORY_SELECT: function handleSelectCategory(channelId) {
     closure_6[channelId.channelId] = channelId.categoryId;

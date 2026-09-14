@@ -6,6 +6,8 @@ import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 9
 import noop from "module_19" /* 19 */;
 import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9155 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const FetchState = fn(9155).FetchState;
 const size = fn(2);

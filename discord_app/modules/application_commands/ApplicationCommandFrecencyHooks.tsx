@@ -2,11 +2,14 @@
 
 // Module 9428 (ApplicationCommandFrecencyHooks)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9421 */;
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 9421 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 let ApplicationCommandFrecencyStore = fn(9421);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
+let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");

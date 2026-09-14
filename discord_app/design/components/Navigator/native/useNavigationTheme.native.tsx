@@ -5,6 +5,8 @@ import Link from "Link" /* 1484 */;
 import shared from "shared" /* 4488 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigationTheme.native.tsx");
@@ -22,10 +24,7 @@ export const useNavigationTheme = function useNavigationTheme(DARK) {
   const token4 = require("useToken").useToken(token(token1[2]).colors.BACKGROUND_FEEDBACK_NOTIFICATION, DARK);
   const items = [token1, token2, token4, token, token3, DARK];
   return token2.useMemo(() => {
-    let obj = { dark: shared.isThemeDark(closure_0), colors: null, fonts: null };
-    obj = { primary: token, background: "transparent", border: token1, card: token2, text: token3, notification: token4 };
-    obj.colors = obj;
-    obj.fonts = Link.DefaultTheme.fonts;
+    const obj = { dark: shared.isThemeDark(closure_0), colors: { primary: token, background: "transparent", border: token1, card: token2, text: token3, notification: token4 }, fonts: Link.DefaultTheme.fonts };
     return obj;
   }, items);
 };

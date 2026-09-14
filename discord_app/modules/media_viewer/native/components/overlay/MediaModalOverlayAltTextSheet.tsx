@@ -1,39 +1,36 @@
-// === Module 11665: MediaModalOverlayAltTextSheet ===
+// === Module 11666: MediaModalOverlayAltTextSheet ===
 
-// Module 11665 (MediaModalOverlayAltTextSheet)
+// Module 11666 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11666 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { padding: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
 export default function MediaViewerAltTextSheet(children) {
-  let obj = useMessagePreviewHeight;
-  const messagePreviewCollapsedheight = obj.useMessagePreviewCollapsedheight();
   const tmp = closure_3();
+  const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
   let num = 70;
   if (!obj2.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;
   }
-  obj = { header: null, contentStyles: null, children: null };
-  obj = { title: null };
+  const obj3 = { header: null, contentStyles: null, children: null };
+  const obj4 = { title: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.J3IOO1);
-  obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
+  obj4.title = intl.string(util.t.J3IOO1);
+  obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];
-  obj.contentStyles = items;
-  obj.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
-  return jsx(Sheet_BottomSheet.BottomSheet, { title: null });
+  obj3.contentStyles = items;
+  obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
+  return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });
 };

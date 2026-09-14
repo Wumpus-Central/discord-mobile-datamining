@@ -2,19 +2,19 @@
 
 // Module 7075 (AuthHeader)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5605 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { header: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { header: null };
+const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1074).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-createStyles.textAlign = "center";
-createStyles.header = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+obj3.textAlign = "center";
+obj2.header = obj3;
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthHeader.tsx");
 

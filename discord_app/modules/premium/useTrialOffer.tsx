@@ -6,6 +6,8 @@ import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import UserOfferStore from "UserOfferStore" /* 7553 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/useTrialOffer.tsx");

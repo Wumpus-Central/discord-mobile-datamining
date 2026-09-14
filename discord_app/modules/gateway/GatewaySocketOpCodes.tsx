@@ -1,6 +1,6 @@
-// === Module 13723: GatewaySocketOpCodes ===
+// === Module 13724: GatewaySocketOpCodes ===
 
-// Module 13723 (GatewaySocketOpCodes)
+// Module 13724 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1906 */;
 import RTCRegionStore from "RTCRegionStore" /* 4686 */;
@@ -93,8 +93,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   importDefault = subscriptions;
   dependencyMap = {};
   _require = 0;
-  let obj = SnowflakeUtilsDefault;
-  const keys = obj.keys(subscriptions);
+  const keys = SnowflakeUtilsDefault.keys(subscriptions);
   const item = keys.forEach((item) => {
     const items = [item, subscriptions[item]];
     const length = JSON.stringify(items).length;
@@ -108,8 +107,8 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
     closure_0 = closure_0 + length;
   });
   if (_require > 0) {
-    obj = { subscriptions: dependencyMap };
-    self.send(require("GatewaySocketOpcode").Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+    const obj2 = { subscriptions: dependencyMap };
+    self.send(require("GatewaySocketOpcode").Opcode.GUILD_SUBSCRIPTIONS_BULK, obj2);
   }
 };
 prototype["callConnect"] = function callConnect(channel_id) {

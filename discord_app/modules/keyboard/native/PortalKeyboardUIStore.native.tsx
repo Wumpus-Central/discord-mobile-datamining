@@ -1,7 +1,7 @@
 // === Module 4505: PortalKeyboardUIStore ===
 
 // Module 4505 (PortalKeyboardUIStore)
-import v1 from "v1" /* 1256 */;
+import v1 from "v1" /* 1254 */;
 import ZustandStore from "ZustandStore" /* 4506 */;
 import PortalKeyboard from "PortalKeyboard" /* 4508 */;
 import size from "module_2" /* 2 */;
@@ -11,8 +11,8 @@ const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboar
 
 export const PortalKeyboardUIStore = { getField: zustandStore.getField, useField: zustandStore.useField };
 export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForChannel(arg0) {
-  state = zustandStore.getState();
-  ({ state, keyboard } = state);
+  const state1 = zustandStore.getState();
+  ({ state, keyboard } = state1);
   let channelId;
   if (keyboard != null) {
     channelId = keyboard.channelId;
@@ -25,9 +25,8 @@ export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForCh
   return tmp3;
 };
 export const openPortalKeyboard = function openPortalKeyboard(type, channelId, chatInputRef) {
-  let obj = zustandStore;
-  state = zustandStore.getState();
-  ({ state, keyboard } = state);
+  const state1 = zustandStore.getState();
+  ({ state, keyboard } = state1);
   type = undefined;
   if (keyboard != null) {
     type = keyboard.type;
@@ -44,11 +43,11 @@ export const openPortalKeyboard = function openPortalKeyboard(type, channelId, c
     tmp3 = tmp7;
   }
   if (!tmp3) {
-    obj = { keyboard: null, state: null };
-    obj = { id: v1.v4(), type, channelId, chatInputRef };
-    obj.keyboard = obj;
-    obj.state = PortalKeyboard.PortalKeyboardState.REQUEST_OPEN;
-    obj.setState(obj);
+    const obj2 = { keyboard: null, state: null };
+    const obj3 = { id: v1.v4(), type, channelId, chatInputRef };
+    obj2.keyboard = obj3;
+    obj2.state = PortalKeyboard.PortalKeyboardState.REQUEST_OPEN;
+    zustandStore.setState(obj2);
     const tmp5Result = v1;
   }
   tmp7 = state === PortalKeyboard.PortalKeyboardState.REQUEST_OPEN || state === PortalKeyboard.PortalKeyboardState.OPENING || state === PortalKeyboard.PortalKeyboardState.OPEN;
@@ -83,11 +82,11 @@ export const handlePortalKeyboardOpen = function handlePortalKeyboardOpen(id) {
     if (null != keyboard.keyboard) {
       tmp = keyboard;
       if (keyboard.keyboard.handlerId !== closure_0) {
-        let obj = { keyboard: null, state: null };
-        obj = {};
+        const obj = { keyboard: null, state: null };
+        const obj2 = {};
         const merged = Object.assign(keyboard.keyboard);
-        obj.handlerId = tmp2;
-        obj.keyboard = obj;
+        obj2.handlerId = tmp2;
+        obj.keyboard = obj2;
         obj.state = PortalKeyboard.PortalKeyboardState.OPEN;
         tmp = obj;
       }
@@ -99,7 +98,6 @@ export const closePortalKeyboard = function closePortalKeyboard() {
   zustandStore.setState({ state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null });
 };
 export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnhandled() {
-  let obj = zustandStore;
   const state = zustandStore.getState();
   const keyboard = state.keyboard;
   let tmp3 = null == keyboard;
@@ -112,17 +110,16 @@ export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnha
       handlerId = keyboard.handlerId;
     }
     if (null == handlerId) {
-      obj = { state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null };
-      obj.setState(obj);
+      const obj2 = { state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null };
+      zustandStore.setState(obj2);
     }
   }
 };
 export const closePortalKeyboardRequest = function closePortalKeyboardRequest() {
-  let obj = zustandStore;
   const field = zustandStore.getField("state");
   if (tmp4) {
-    obj = { state: PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE };
-    obj.setState(obj);
+    const obj2 = { state: PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE };
+    zustandStore.setState(obj2);
   }
   tmp4 = field !== PortalKeyboard.PortalKeyboardState.CLOSED && field !== PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE;
 };

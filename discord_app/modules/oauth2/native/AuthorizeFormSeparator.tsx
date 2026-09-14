@@ -9,9 +9,7 @@ import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let obj = { separator: null };
-obj = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.separator = obj;
+const obj = { separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_2 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/oauth2/native/AuthorizeFormSeparator.tsx");
 

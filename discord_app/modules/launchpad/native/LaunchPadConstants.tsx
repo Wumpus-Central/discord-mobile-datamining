@@ -1,10 +1,10 @@
-// === Module 11597: LaunchPadConstants ===
+// === Module 11598: LaunchPadConstants ===
 
-// Module 11597 (LaunchPadConstants)
+// Module 11598 (LaunchPadConstants)
 import _mod17 from "module_17" /* 17 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import size from "module_2" /* 2 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
+import size_mod from "module_2" /* 2 */;
 
 const Dimensions = _mod17.Dimensions;
 let size = Dimensions.get("screen");
@@ -18,6 +18,7 @@ if (!PlatformUtils.isAndroid()) {
   }
   num = num2;
 }
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = { damping: 20, stiffness: 280, mass: 0.5, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };

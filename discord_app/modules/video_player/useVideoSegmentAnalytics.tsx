@@ -1,6 +1,6 @@
-// === Module 15215: useVideoSegmentAnalytics ===
+// === Module 15216: useVideoSegmentAnalytics ===
 
-// Module 15215 (useVideoSegmentAnalytics)
+// Module 15216 (useVideoSegmentAnalytics)
 import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
@@ -71,13 +71,13 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
           tmp3 = tmp - first.segmentStartSec < minSegmentDurationMs / 1000;
         }
         if (!tmp3) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(first);
           obj.endTimeMs = timestamp;
           obj.segmentEndSec = tmp;
           closure_15(obj);
-          obj = { startTimeMs: timestamp, endTimeMs: timestamp, segmentStartSec: tmp, segmentEndSec: tmp };
-          closure_5(obj);
+          const obj2 = { startTimeMs: timestamp, endTimeMs: timestamp, segmentStartSec: tmp, segmentEndSec: tmp };
+          closure_5(obj2);
           ref2.current = timestamp;
         }
       }

@@ -1,13 +1,15 @@
-// === Module 15389: useSyncedModeThemeName ===
+// === Module 15390: useSyncedModeThemeName ===
 
-// Module 15389 (useSyncedModeThemeName)
+// Module 15390 (useSyncedModeThemeName)
 import util from "util" /* 1114 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import _modDef2626 from "module_2626" /* 2626 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+
+const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
+let closure_4 = fn(1228).BACKGROUND_GRADIENT_PRESETS_MAP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 

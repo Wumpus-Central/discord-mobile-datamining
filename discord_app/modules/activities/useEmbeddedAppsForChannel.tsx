@@ -1,11 +1,13 @@
-// === Module 12188: useEmbeddedAppsForChannel ===
+// === Module 12189: useEmbeddedAppsForChannel ===
 
-// Module 12188 (useEmbeddedAppsForChannel)
+// Module 12189 (useEmbeddedAppsForChannel)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7271 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import UserStore from "UserStore" /* 1371 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 function useEmbeddedApps(arr, arg1) {
@@ -70,8 +72,8 @@ const NO_ACTIVITIES = fn(1956).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 
-export default function useEmbeddedAppsForChannel(arg0, arg1) {
-  _require = arg0;
+export default function useEmbeddedAppsForChannel(channel, arg1) {
+  _require = channel;
   const items = [EmbeddedActivitiesStore];
   return useEmbeddedApps(require("initialize").useStateFromStoresArray(items, () => {
     if (null != user) {

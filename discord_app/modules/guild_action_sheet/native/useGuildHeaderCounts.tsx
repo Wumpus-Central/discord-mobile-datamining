@@ -1,11 +1,13 @@
-// === Module 14057: useGuildHeaderCounts ===
+// === Module 14058: useGuildHeaderCounts ===
 
-// Module 14057 (useGuildHeaderCounts)
+// Module 14058 (useGuildHeaderCounts)
 import _mod12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 14058 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 14059 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -14,9 +16,8 @@ const result = size.fileFinishedImporting("modules/guild_action_sheet/native/use
 export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   _require = id;
   closure_129_0 = id;
-  let obj = require("initialize");
   const items = [GuildMemberCountStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let num = GuildMemberCountStore.getMemberCount(closure_0);
     if (num == null) {
       num = 0;
@@ -28,8 +29,7 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   closure_130_2 = stateFromStores;
   const items1 = ["GUILD_HEADER_MEMBER_COUNT", id];
   const memo = noop.useMemo(() => _mod12.throttle((count) => {
-    const obj = { type, count, guildId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type, count, guildId });
   }, 3000), items1);
   closure_130_3 = memo;
   const items2 = [memo];
@@ -40,6 +40,7 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
       noop(tmp);
     }
   }, items3);
+  const obj = require("initialize");
   const items4 = [GuildHeaderCountsStore];
   closure_131_0 = id;
   const stateFromStores1 = require("initialize").useStateFromStores(items4, () => GuildHeaderCountsStore.getMemberCount(closure_0));
@@ -57,8 +58,7 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   closure_132_2 = stateFromStores2;
   const items6 = ["GUILD_HEADER_ONLINE_COUNT", id];
   const memo1 = noop.useMemo(() => _mod12.throttle((count) => {
-    const obj = { type, count, guildId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type, count, guildId });
   }, 3000), items6);
   closure_132_3 = memo1;
   const items7 = [memo1];
@@ -71,9 +71,9 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   }, items8);
   const obj3 = require("initialize");
   const items9 = [GuildHeaderCountsStore];
-  obj = { memberCount: stateFromStores1, onlineCount: require("initialize").useStateFromStores(items9, () => GuildHeaderCountsStore.getOnlineCount(closure_0)), activeChannelsCount: null };
+  const obj5 = { memberCount: stateFromStores1, onlineCount: require("initialize").useStateFromStores(items9, () => GuildHeaderCountsStore.getOnlineCount(closure_0)), activeChannelsCount: null };
   const obj4 = require("initialize");
   const items10 = [GuildHeaderCountsStore];
-  obj.activeChannelsCount = require("initialize").useStateFromStores(items10, () => GuildHeaderCountsStore.getActiveChannelsCount(closure_0));
-  return obj;
+  obj5.activeChannelsCount = require("initialize").useStateFromStores(items10, () => GuildHeaderCountsStore.getActiveChannelsCount(closure_0));
+  return obj5;
 };

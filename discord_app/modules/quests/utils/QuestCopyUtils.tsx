@@ -1,13 +1,13 @@
-// === Module 11428: QuestCopyUtils ===
+// === Module 11429: QuestCopyUtils ===
 
-// Module 11428 (QuestCopyUtils)
+// Module 11429 (QuestCopyUtils)
 import util from "util" /* 1114 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11325 */;
-import captureAdUserAction from "captureAdUserAction" /* 11326 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11330 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
+import captureAdUserAction from "captureAdUserAction" /* 11327 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11331 */;
 import QuestConstants from "QuestConstants" /* 5525 */;
 import size from "module_2" /* 2 */;
 
@@ -75,12 +75,12 @@ export const getDisclosureText = function getDisclosureText(arg0) {
     } else {
       if (null == cosponsorName) {
         const intl4 = util.intl;
-        let obj = { gamePublisher };
+        const obj = { gamePublisher };
         let formatToPlainStringResult = intl4.formatToPlainString(util.t.Piihy1, obj);
       } else {
         const intl3 = util.intl;
-        obj = { gamePublisher, cosponsorName };
-        formatToPlainStringResult = intl3.formatToPlainString(util.t.DV47Gy, obj);
+        const obj2 = { gamePublisher, cosponsorName };
+        formatToPlainStringResult = intl3.formatToPlainString(util.t.DV47Gy, obj2);
       }
       const _HermesInternal = HermesInternal;
       stringResult1 = "" + formatToPlainStringResult + " " + stringResult;
@@ -95,12 +95,12 @@ export const getDisclosureText = function getDisclosureText(arg0) {
       t = { gamePublisher };
       let formatToPlainStringResult1 = formatToPlainString(t.rctMRl, t);
     } else {
-      const obj1 = { gamePublisher, gameTitle: null };
+      const obj3 = { gamePublisher, gameTitle: null };
       if (gameTitle == null) {
         gameTitle = "";
       }
-      obj1.gameTitle = gameTitle;
-      formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj1);
+      obj3.gameTitle = gameTitle;
+      formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj3);
     }
   }
 };
@@ -157,20 +157,20 @@ export const getCtaLink = function getCtaLink(config) {
 };
 export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
-  let obj = AdAnalyticsInterfaceExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    let tmpResult = captureAdUserAction;
-    obj = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: id, questContentCTA: ctaContent, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+    const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: id, questContentCTA: ctaContent, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
     ({ content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, position: obj5.questContentPosition, impressionId: obj5.impressionId } = ctaContent);
-    tmpResult.captureAdUserAction(obj);
+    captureAdUserAction.captureAdUserAction(obj2);
+    const tmpResult = captureAdUserAction;
   } else {
-    tmpResult = AnalyticsActions;
-    obj = { questId: id, questContent: ctaContent.content, questContentCTA: ctaContent, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+    const obj4 = { questId: id, questContent: ctaContent.content, questContentCTA: ctaContent, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ position: obj3.questContentPosition, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = ctaContent);
-    const result = tmpResult.trackQuestContentClicked(obj);
+    const result = AnalyticsActions.trackQuestContentClicked(obj4);
+    const tmpResult3 = AnalyticsActions;
   }
+  obj = AdAnalyticsInterfaceExperiment;
   ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
-  const tmpResult1 = ClipboardUtils;
+  const tmpResult4 = ClipboardUtils;
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

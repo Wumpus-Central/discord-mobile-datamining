@@ -1,6 +1,6 @@
-// === Module 12185: EntityBorderAppIcon ===
+// === Module 12186: EntityBorderAppIcon ===
 
-// Module 12185 (EntityBorderAppIcon)
+// Module 12186 (EntityBorderAppIcon)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
@@ -12,9 +12,7 @@ const View = _mod17.View;
 const jsx = jsxProd.jsx;
 const sm = nativeDefault.radii.sm;
 let closure_5 = createStyles.createStyles((width, borderRadius) => {
-  let obj = { appIcon: { width, height: width, borderRadius }, entityWrapper: null };
-  obj = { padding: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
-  obj.entityWrapper = obj;
+  const obj = { appIcon: { width, height: width, borderRadius }, entityWrapper: { padding: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 } };
   return obj;
 });
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
@@ -30,12 +28,12 @@ export default function EntityBorderAppIcon(iconSize) {
     iconBorderRadius = sm;
   }
   const tmp = closure_5(num, iconBorderRadius);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.entityWrapper, wrapperStyle];
   obj.style = items;
-  obj = { style: null, source: iconSource };
+  const obj2 = { style: null, source: iconSource };
   const items1 = [tmp.appIcon, iconStyle];
-  obj.style = items1;
+  obj2.style = items1;
   obj.children = jsx(FastImageDefault, { style: null, source: iconSource });
-  return <View style={null} source={iconSource} />;
+  return <View style={null}>{null}</View>;
 };

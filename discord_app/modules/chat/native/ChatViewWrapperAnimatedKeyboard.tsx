@@ -1,9 +1,9 @@
-// === Module 11484: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11485: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 11484 (ChatViewWrapperAnimatedKeyboard)
+// Module 11485 (ChatViewWrapperAnimatedKeyboard)
 import timing from "timing" /* 4637 */;
 import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5660 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11490 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,16 +39,16 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ({ children, stickyHeader } = arg0);
   let sharedValue;
   let sharedValue1;
-  let __closure = sharedValue(sharedValue1[5])();
-  let obj1 = __closure(sharedValue1[3]);
-  sharedValue = obj1.useSharedValue(__closure.get());
-  let obj2 = __closure(sharedValue1[3]);
-  sharedValue1 = obj2.useSharedValue(-1);
+  const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[5])();
   let tmp = sharedValue(sharedValue1[9])(channelId);
+  sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
+  let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+  sharedValue1 = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(-1);
+  const obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
   let fn = function n() {
     return obj.get();
   };
-  fn.__closure = { animatedHeight: __closure };
+  fn.__closure = { animatedHeight: INSET_ANIMATION_CONFIG2 };
   fn.__workletHash = 9219066704490;
   fn.__initData = __initData;
   const fn2 = function t(arg0, arg1) {
@@ -64,11 +64,11 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   fn2.__closure = { animatedAdjustedMargin: sharedValue, animatedAdjustedMarginPending: sharedValue1 };
   fn2.__workletHash = 15141457454312;
   fn2.__initData = __initData2;
-  const animatedReaction = __closure(sharedValue1[3]).useAnimatedReaction(fn, fn2);
-  const obj4 = __closure(sharedValue1[3]);
+  const animatedReaction = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useAnimatedReaction(fn, fn2);
+  const obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
   const fn3 = function s() {
-    let __closure = { flex: 1, marginTop: sharedValue.get(), transform: null };
-    __closure = { translateY: null };
+    obj = { flex: 1, marginTop: sharedValue.get(), transform: null };
+    const obj2 = { translateY: null };
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
@@ -79,26 +79,25 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
         const result1 = sharedValue1.set(-1);
       }
     };
-    __closure = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
-    fn.__closure = __closure;
+    fn.__closure = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
     fn.__workletHash = 16224255032954;
     fn.__initData = __initData;
-    __closure.translateY = timing.withTiming(-__closure.get(), __closure, "respect-motion-settings", fn);
-    const items = [__closure];
-    __closure.transform = items;
-    return __closure;
+    obj2.translateY = timing.withTiming(-obj.get(), obj, "respect-motion-settings", fn);
+    const items = [obj2];
+    obj.transform = items;
+    return obj;
   };
-  __closure = { animatedAdjustedMargin: sharedValue, withTiming: __closure(sharedValue1[6]).withTiming, animatedHeight: __closure, INSET_ANIMATION_CONFIG2: __closure, animatedAdjustedMarginPending: sharedValue1 };
-  fn3.__closure = __closure;
+  const obj5 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+  fn3.__closure = { animatedAdjustedMargin: sharedValue, withTiming: INSET_ANIMATION_CONFIG2(sharedValue1[6]).withTiming, animatedHeight: INSET_ANIMATION_CONFIG2, INSET_ANIMATION_CONFIG2, animatedAdjustedMarginPending: sharedValue1 };
   fn3.__workletHash = 7205645695043;
   fn3.__initData = __initData3;
-  const animatedStyle = __closure(sharedValue1[3]).useAnimatedStyle(fn3);
-  __closure = { children: null };
-  obj1 = { header: stickyHeader, style, pointerEvents: tmp, children: null };
-  obj2 = { style: animatedStyle, children: null };
+  const animatedStyle = obj5.useAnimatedStyle(fn3);
+  const obj7 = { children: null };
+  const obj8 = { header: stickyHeader, style, pointerEvents: tmp, children: null };
+  const obj9 = { style: animatedStyle, children: null };
   let items = [closure_5(View, { style, children }), closure_5(closure_12, { channelId })];
-  obj2.children = items;
-  obj1.children = closure_6(sharedValue(sharedValue1[3]).View, obj2);
-  __closure.children = closure_5(__closure(sharedValue1[11]).StickyWrapper, obj1);
-  return closure_5(__closure(sharedValue1[10]).LayerScope, __closure);
+  obj9.children = items;
+  obj8.children = closure_6(sharedValue(sharedValue1[3]).View, obj9);
+  obj7.children = closure_5(INSET_ANIMATION_CONFIG2(sharedValue1[11]).StickyWrapper, obj8);
+  return closure_5(INSET_ANIMATION_CONFIG2(sharedValue1[10]).LayerScope, obj7);
 };

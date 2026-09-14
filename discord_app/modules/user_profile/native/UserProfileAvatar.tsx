@@ -19,19 +19,19 @@ const forwardRefResult = noop.forwardRef((backgroundColor, ref) => {
   }
   const merged = Object.assign(backgroundColor, Object.assign({ backgroundColor: 0, size: 0 }));
   const tmp2 = UserProfileSharedStylesDefault();
-  let obj = { children: null };
-  obj = { style: null };
+  const obj = { children: null };
+  const obj2 = { style: null };
   const items = [, , ];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
   items[2] = { backgroundColor: backgroundColor.backgroundColor };
-  obj.style = items;
-  const items1 = [React5(View, obj), ];
-  obj = { ref, style: null, size };
+  obj2.style = items;
+  const items1 = [React5(View, obj2), ];
+  const obj3 = { ref, style: null, size };
   const items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
-  obj.style = items2;
+  obj3.style = items2;
   const merged1 = Object.assign(merged);
-  items1[1] = React5(HeaderAvatarDefault, obj);
+  items1[1] = React5(HeaderAvatarDefault, obj3);
   obj.children = items1;
   return React7(React6, obj);
 });
@@ -53,28 +53,26 @@ export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(anim
   const trackUserProfileAction = flag(guildId[7]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp5 = null != user.avatar || user.hasAvatarForGuild(guildId);
   const items = [flag, guildId, trackUserProfileAction, user];
-  let obj = { ref };
-  const callback = obj.useCallback(() => {
-    let obj = { action: TrackUserProfileActions.VIEW_AVATAR };
-    trackUserProfileAction(obj);
-    obj = { user, guildId, animate: flag, originViewOrOriginLayout: ref.current };
-    openUserProfileAvatarMediaViewerDefault(obj);
+  const obj3 = { ref };
+  const callback = ref.useCallback(() => {
+    trackUserProfileAction({ action: TrackUserProfileActions.VIEW_AVATAR });
+    openUserProfileAvatarMediaViewerDefault({ user, guildId, animate: flag, originViewOrOriginLayout: ref.current });
   }, items);
   const merged1 = Object.assign(merged);
-  obj.animate = flag;
-  obj.user = user;
-  obj.guildId = guildId;
+  obj3.animate = flag;
+  obj3.user = user;
+  obj3.guildId = guildId;
   let tmp10;
   if (tmp5) {
     tmp10 = callback;
   }
-  obj.onPress = tmp10;
+  obj3.onPress = tmp10;
   if (tmp5) {
     const intl = tmp3(tmp4[9]).intl;
     let accessibilityLabel = intl.string(tmp3(tmp4[9]).t.xB7MI3);
   } else {
     accessibilityLabel = merged.accessibilityLabel;
   }
-  obj.accessibilityLabel = accessibilityLabel;
-  return closure_7(closure_10, obj);
+  obj3.accessibilityLabel = accessibilityLabel;
+  return closure_7(closure_10, obj3);
 };

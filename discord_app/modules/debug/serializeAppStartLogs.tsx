@@ -39,19 +39,18 @@ export default function serializeAppStartLogs(arg0) {
     ({ index, timestamp, logs, nativeLogs, serverTrace } = item);
     let tmp = timestamp;
     if (0 === index) {
-      let arr = _modDef12;
-      const found = arr.find(logs, (log) => {
+      const found = _modDef12.find(logs, (log) => {
         log = log.log;
         return log.indexOf("Logger loaded") >= 0;
       });
-      timestamp = undefined;
+      let timestamp1;
       if (found != null) {
-        timestamp = found.timestamp;
+        timestamp1 = found.timestamp;
       }
-      if (timestamp == null) {
-        timestamp = closure_0;
+      if (timestamp1 == null) {
+        timestamp1 = closure_0;
       }
-      tmp = timestamp;
+      tmp = timestamp1;
     }
     const substr = logs.slice();
     new Set(nativeLogs.map(getDisplayName));
@@ -93,7 +92,7 @@ export default function serializeAppStartLogs(arg0) {
           num = 0;
           if (set.has(str7.replace("Finish ", "Start "))) {
             prefix = prefix.substring(2);
-            let arr = closure_5.pop();
+            const arr = closure_5.pop();
             tmp5 = tmp2;
             num = 0;
             if (null != arr) {
@@ -125,13 +124,13 @@ export default function serializeAppStartLogs(arg0) {
       obj.shouldKeep = tmp5;
       let num4 = 0;
       let num5 = 0;
-      if (0 < timestamp.length) {
+      if (0 < timestamp1.length) {
         while (true) {
-          timestamp = arr2[num4].timestamp;
+          let timestamp = timestamp1[num4].timestamp;
           if (null == timestamp) {
             num4 = num4 + 1;
             num5 = num4;
-            if (num4 >= arr2.length) {
+            if (num4 >= timestamp1.length) {
               break;
             }
           } else {
@@ -143,10 +142,10 @@ export default function serializeAppStartLogs(arg0) {
           break;
         }
       }
-      timestamp.splice(num5, 0, obj);
+      timestamp1.splice(num5, 0, obj);
       if (startsWithResult) {
         prefix = `${closure_4}| `;
-        arr = closure_5.push(obj);
+        closure_5.push(obj);
       }
     });
     closure_6 = false;
@@ -169,7 +168,7 @@ export default function serializeAppStartLogs(arg0) {
       }
       return tmp;
     });
-    timestamp = tmp;
+    timestamp1 = tmp;
     let num2;
     let num3;
     let items = [];
@@ -185,7 +184,7 @@ export default function serializeAppStartLogs(arg0) {
           if (tmp11.log === str.replace("Start ", "Finish ")) {
             let str2 = tmp11.log;
             tmp11.log = str2.replace("Finish ", "");
-            arr = items.push(tmp11);
+            let arr2 = items.push(tmp11);
             tmp12 = sum;
             num = tmp12 + 1;
             if (num >= found1.length) {
@@ -193,13 +192,13 @@ export default function serializeAppStartLogs(arg0) {
             }
           }
         }
-        arr = items.push(tmp9);
+        let arr3 = items.push(tmp9);
       }
     }
     const mapped = items.map((timestamp) => {
       let str = "";
       if (null != timestamp.timestamp) {
-        const result = (timestamp.timestamp - timestamp) / 1000;
+        const result = (timestamp.timestamp - timestamp1) / 1000;
         str = result.toFixed(3);
       }
       const obj = { totalTime: str, deltaTime: null, log: null };

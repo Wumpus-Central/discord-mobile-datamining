@@ -1,10 +1,10 @@
-// === Module 12112: SlowModeIndicator ===
+// === Module 12113: SlowModeIndicator ===
 
-// Module 12112 (SlowModeIndicator)
+// Module 12113 (SlowModeIndicator)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7790 */;
-import TimerIcon from "TimerIcon" /* 11734 */;
+import TimerIcon from "TimerIcon" /* 11735 */;
 import noop from "module_19" /* 19 */;
 import SlowmodeStore from "SlowmodeStore" /* 7789 */;
 
@@ -12,10 +12,9 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: null };
-obj = { marginLeft: nativeDefault.space.PX_4 };
-obj.icon = obj;
+let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
+let obj3 = { marginLeft: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
 
@@ -25,9 +24,9 @@ export default noop.memo(function SlowModeIndicator(channel) {
   const slowmodeType = channel.slowmodeType;
   let canBypassSlowmode;
   const tmp = closure_7();
-  let obj = channel(slowmodeType[5]);
   const items = [canBypassSlowmode];
-  const stateFromStores = obj.useStateFromStores(items, () => SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType));
+  const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () => SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType));
+  let obj = channel(slowmodeType[5]);
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
   const items2 = [channel.rateLimitPerUser];
@@ -41,13 +40,13 @@ export default noop.memo(function SlowModeIndicator(channel) {
     slowmodeIndicatorText = SlowmodeUtils.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
   }, items1);
   const callback = stateFromStores.useCallback(() => {
-    const obj = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: TimerIcon.TimerIcon, content: SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser) };
-    obj.open(obj);
+    const obj2 = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: TimerIcon.TimerIcon, content: null };
+    const obj = ToastActionCreatorsDefault;
+    obj2.content = SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser);
+    obj.open(obj2);
   }, items2);
-  obj = { onPress: callback, style: tmp.container, children: null };
-  const items3 = [closure_5(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), ];
-  obj = { style: tmp.icon, size: "xxs" };
-  items3[1] = closure_5(channel(slowmodeType[8]).TimerIcon, obj);
-  obj.children = items3;
-  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj);
+  const obj3 = { onPress: callback, style: tmp.container, children: null };
+  const items3 = [closure_5(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" })];
+  obj3.children = items3;
+  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj3);
 });

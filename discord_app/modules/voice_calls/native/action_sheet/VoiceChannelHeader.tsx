@@ -1,9 +1,9 @@
-// === Module 13882: VoiceChannelHeader ===
+// === Module 13883: VoiceChannelHeader ===
 
-// Module 13882 (VoiceChannelHeader)
+// Module 13883 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5143 */;
@@ -11,10 +11,10 @@ import Pressables from "Pressables" /* 5204 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10067 */;
 import _modDef10160 from "module_10160" /* 10160 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11719 */;
-import CallStateHooks from "CallStateHooks" /* 13883 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13884 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13885 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11720 */;
+import CallStateHooks from "CallStateHooks" /* 13884 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13885 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13886 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -27,21 +27,20 @@ function PrivateChannelSubtitle(channel) {
   channel = channel.channel;
   const tmp = closure_12();
   const state = CallStateHooksDefault(channel.id).state;
-  let obj = { style: tmp.subtitleWrapper, children: null };
-  obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
-  const items = [closure_1_10(OngoingCallStatusLabelDefault, obj), , ];
+  const obj = { style: tmp.subtitleWrapper, children: null };
+  const items = [closure_1_10(OngoingCallStatusLabelDefault, { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle }), , ];
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
-    obj = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = closure_1_10(Text_Text.Text, obj);
+    const obj3 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
+    tmp6Result = closure_1_10(Text_Text.Text, obj3);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
-  if (tmp6Result) {
-    const obj1 = { channelId: channel.id, style: tmp.subtitle };
-    tmp6Result = closure_1_10(OngoingCallTimerDefault, obj1);
+  let tmp6Result2 = state === CallStateHooks.CallStates.CONNECTED;
+  if (tmp6Result2) {
+    const obj4 = { channelId: channel.id, style: tmp.subtitle };
+    tmp6Result2 = closure_1_10(OngoingCallTimerDefault, obj4);
   }
-  items[2] = tmp6Result;
+  items[2] = tmp6Result2;
   obj.children = items;
   return closure_1_11(View, obj);
 }
@@ -74,28 +73,28 @@ class VoiceChannelHeader {
       E = null;
       if (!tmp6) {
         E = () => {
-          const obj = { source: constants3.VOICE_CHANNEL, targetApplicationId: null };
+          const obj2 = { source: constants3.VOICE_CHANNEL, targetApplicationId: null };
           applicationId = undefined;
           if (applicationId != null) {
             applicationId = applicationId.applicationId;
           }
-          obj.targetApplicationId = applicationId;
-          return obj.showInstantInviteActionSheet(channel, obj);
+          obj2.targetApplicationId = applicationId;
+          return instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         };
       }
     }
     formatToPlainStringResult = tmp7;
     if (channel.isPrivate()) {
       intl = tmp2(tmp3[17]).intl;
-      obj = { count: null };
+      obj1 = { count: null };
       num = 1;
-      obj.count = channel.recipients.length + 1;
-      formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[17]).t["8bn8Br"], obj);
+      obj1.count = channel.recipients.length + 1;
+      formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[17]).t["8bn8Br"], obj1);
       tmp10 = jsx;
       tmp11 = PrivateChannelSubtitle;
-      obj1 = { channel: null };
-      obj1.channel = channel;
-      name = jsx(PrivateChannelSubtitle, obj1);
+      obj12 = { channel: null };
+      obj12.channel = channel;
+      name = jsx(PrivateChannelSubtitle, obj12);
       class E {
         constructor() {
           return closure_1(closure_2[18])(channel.id, AnalyticsPages.CHANNEL_CALL);
@@ -104,48 +103,48 @@ class VoiceChannelHeader {
     }
     tmp12 = jsxs;
     tmp13 = View;
-    obj2 = { style: tmp.container, children: null };
+    obj13 = { style: tmp.container, children: null };
     tmp14 = jsx;
-    obj3 = { size: tmp2(tmp3[19]).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
+    obj14 = { size: tmp2(tmp3[19]).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
     if (tmp5(tmp3[20])(channel)) {
       tmp5Result = tmp5(tmp3[21]);
     } else {
       tmp5Result = tmp5(tmp3[22]);
     }
-    obj3.source = tmp5Result;
-    obj3.style = tmp.icons;
+    obj14.source = tmp5Result;
+    obj14.style = tmp.icons;
     items3 = [, , ];
-    items3[0] = tmp14(tmp2(tmp3[19]).Icon, obj3);
-    obj4 = { style: tmp.middle, children: null };
+    items3[0] = tmp14(tmp2(tmp3[19]).Icon, obj14);
+    obj15 = { style: tmp.middle, children: null };
     tmp14Result = formatToPlainStringResult;
     if (typeof formatToPlainStringResult === "string") {
-      obj5 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: null };
-      obj5.children = formatToPlainStringResult;
-      tmp14Result = tmp14(tmp2(tmp3[11]).Text, obj5);
+      obj16 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: null };
+      obj16.children = formatToPlainStringResult;
+      tmp14Result = tmp14(tmp2(tmp3[11]).Text, obj16);
     }
     items4 = [, ];
     items4[0] = tmp14Result;
     tmp14Result1 = name;
     if (typeof name === "string") {
-      obj6 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: null };
-      obj6.children = name;
-      tmp14Result1 = tmp14(tmp2(tmp3[11]).Text, obj6);
+      obj17 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: null };
+      obj17.children = name;
+      tmp14Result1 = tmp14(tmp2(tmp3[11]).Text, obj17);
     }
     items4[1] = tmp14Result1;
-    obj4.children = items4;
-    items3[1] = tmp12(tmp13, obj4);
-    obj7 = { style: tmp.icons, children: null };
+    obj15.children = items4;
+    items3[1] = tmp12(tmp13, obj15);
+    obj18 = { style: tmp.icons, children: null };
     tmp14Result2 = null != E;
     if (tmp14Result2) {
       tmp19 = AddMemberButton;
-      obj8 = { onPress: null };
-      obj8.onPress = E;
-      tmp14Result2 = tmp14(AddMemberButton, obj8);
+      obj19 = { onPress: null };
+      obj19.onPress = E;
+      tmp14Result2 = tmp14(AddMemberButton, obj19);
     }
-    obj7.children = tmp14Result2;
-    items3[2] = tmp14(tmp13, obj7);
-    obj2.children = items3;
-    return tmp12(tmp13, obj2);
+    obj18.children = tmp14Result2;
+    items3[2] = tmp14(tmp13, obj18);
+    obj13.children = items3;
+    return tmp12(tmp13, obj13);
   }
 }
 function AddMemberButton(onPress) {
@@ -166,13 +165,12 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: null, subtitle: null, subtitleWrapper: null };
-createStyles = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
-createStyles.icons = createStyles;
-createStyles.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };
-createStyles.subtitleWrapper = { flexDirection: "row" };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: { flexDirection: "row", tintColor: nativeDefault.colors.WHITE }, subtitle: null, subtitleWrapper: null };
+let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
+obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };
+obj2.subtitleWrapper = { flexDirection: "row" };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx");
 

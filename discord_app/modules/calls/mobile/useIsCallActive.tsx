@@ -4,6 +4,8 @@
 import CallStore from "CallStore" /* 5359 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);

@@ -32,8 +32,7 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  const obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
-  return obj.getGuildIconURL(obj);
+  return AvatarUtilsDefault.getGuildIconURL({ id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 });
 };
 export const getGuildIconSource = function getGuildIconSource(arg0, size) {
   closure_0 = arg0;
@@ -41,10 +40,7 @@ export const getGuildIconSource = function getGuildIconSource(arg0, size) {
   if (flag === undefined) {
     flag = false;
   }
-  return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    const obj = { id: closure_0.id, size, icon: closure_0.icon, canAnimate };
-    return obj.getGuildIconSource(obj);
-  });
+  return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: closure_0.id, size, icon: closure_0.icon, canAnimate }));
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
   return StringUtils.getAcronym(guild.name);

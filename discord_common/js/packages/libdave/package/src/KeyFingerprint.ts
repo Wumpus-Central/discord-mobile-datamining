@@ -11,8 +11,8 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else if (0 !== closure_0) {
         const _Error4 = Error;
         const error = new Error("unsupported fingerprint format version");
@@ -54,7 +54,7 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
             dataView.setUint16(0, tmp28);
             dataView.setBigUint64(2 + closure_1.byteLength, BigIntResult);
             c3 = 3;
-            obj = { value: uint8Array, done: true };
+            const obj = { value: uint8Array, done: true };
             return obj;
           }
         }

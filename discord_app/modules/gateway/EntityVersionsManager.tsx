@@ -1,6 +1,6 @@
-// === Module 17459: EntityVersionsManager ===
+// === Module 17461: EntityVersionsManager ===
 
-// Module 17459 (EntityVersionsManager)
+// Module 17461 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -31,15 +31,15 @@ function handleDeletedEntityIds(guild_id) {
       let set3 = guild_id2;
       let set1 = set;
       const keys = SnowflakeUtilsDefault.keys(ChannelStore.getMutableBasicGuildChannelsForGuild(guild_id2));
-      let obj = { channelIdsInMemory: keys, channelIdsFromServer: set };
-      closure_8.fileOnly("syncChannels", obj);
+      let obj3 = { channelIdsInMemory: keys, channelIdsFromServer: set };
+      closure_8.fileOnly("syncChannels", obj3);
       const item = keys.forEach((id) => {
         if (!set1.has(id)) {
-          set3(573);
-          let obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { guild_id: set3, id, parent_id: "Array" };
-          obj.channel = obj;
-          obj.dispatch(obj);
+          const obj2 = { type: "CHANNEL_DELETE", channel: null };
+          const obj3 = { guild_id: set3, id, parent_id: "Array" };
+          obj2.channel = obj3;
+          set3(573).dispatch(obj2);
+          const obj = set3(573);
         }
       });
     }
@@ -48,13 +48,12 @@ function handleDeletedEntityIds(guild_id) {
       const _Set = Set;
       set1 = new Set(tmp.roles);
       set3 = guild_id;
-      obj = SnowflakeUtilsDefault;
-      const keys1 = obj.keys(GuildRoleStore.getUnsafeMutableRoles(guild_id));
+      const keys1 = SnowflakeUtilsDefault.keys(GuildRoleStore.getUnsafeMutableRoles(guild_id));
       const item1 = keys1.forEach((roleId) => {
         if (!set1.has(roleId)) {
-          set3(573);
-          const obj = { type: "GUILD_ROLE_DELETE", guildId: set3, roleId };
-          obj.dispatch(obj);
+          const obj2 = { type: "GUILD_ROLE_DELETE", guildId: set3, roleId };
+          set3(573).dispatch(obj2);
+          const obj = set3(573);
         }
       });
     }
@@ -66,9 +65,8 @@ function handleDeletedEntityIds(guild_id) {
       const guildEmoji = EmojiStore.getGuildEmoji(guild_id3);
       const found = guildEmoji.filter((id) => set3.has(id.id));
       if (guildEmoji.length !== found.length) {
-        let obj1 = DispatcherDefault;
-        obj = { type: "GUILD_EMOJIS_UPDATE", guildId: guild_id3, emojis: found };
-        obj1.dispatch(obj);
+        const obj5 = { type: "GUILD_EMOJIS_UPDATE", guildId: guild_id3, emojis: found };
+        DispatcherDefault.dispatch(obj5);
       }
     }
     if (null != guild_id.stickers) {
@@ -81,8 +79,8 @@ function handleDeletedEntityIds(guild_id) {
       }
       const found1 = stickersByGuildId.filter((id) => set3.has(id.id));
       if (stickersByGuildId.length !== found1.length) {
-        obj1 = { type: "GUILD_STICKERS_UPDATE", guildId: guild_id4, stickers: found1 };
-        DispatcherDefault.dispatch(obj1);
+        const obj7 = { type: "GUILD_STICKERS_UPDATE", guildId: guild_id4, stickers: found1 };
+        DispatcherDefault.dispatch(obj7);
       }
     }
   });
@@ -101,20 +99,20 @@ function handleConnectionOpen() {
         closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
         const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
         const sorted = keys.sort();
-        let str = closure_2_0(1241).v3(sorted.join(","));
-        str = str.toString();
+        const obj2 = closure_2_0(1239);
+        const str = closure_2_0(1239).v3(sorted.join(","));
         sortedRoles = sortedRoles.getSortedRoles(closure_0);
         const mapped = sortedRoles.map((id) => id.id);
-        const obj2 = closure_2_0(1241);
+        const str1 = closure_2_0(1239).v3(sorted.join(",")).toString();
         const sorted1 = mapped.sort();
-        let str2 = closure_2_0(1241).v3(sorted1.join(","));
-        const obj5 = closure_2_0(1241);
+        const obj5 = closure_2_0(1239);
+        const str2 = closure_2_0(1239).v3(sorted1.join(","));
         guildEmoji = guildEmoji.getGuildEmoji(closure_0);
         const mapped1 = guildEmoji.map((id) => id.id);
-        const str1 = str2.toString();
+        const str5 = closure_2_0(1239).v3(sorted1.join(",")).toString();
         const sorted2 = mapped1.sort();
-        let str3 = closure_2_0(1241).v3(sorted2.join(","));
-        str2 = str3.toString();
+        const obj8 = closure_2_0(1239);
+        const str3 = closure_2_0(1239).v3(sorted2.join(","));
         stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
         let mapped2;
         if (stickersByGuildId != null) {
@@ -123,13 +121,13 @@ function handleConnectionOpen() {
         if (mapped2 == null) {
           mapped2 = [];
         }
-        const obj8 = closure_2_0(1241);
+        const str6 = closure_2_0(1239).v3(sorted2.join(",")).toString();
         const sorted3 = mapped2.sort();
-        const tmp5Result = closure_2_0(1241);
-        str3 = closure_2_0(1241).v3(sorted3.join(",")).toString();
+        const tmp5Result = closure_2_0(1239);
+        const str4 = closure_2_0(1239).v3(sorted3.join(","));
         socket = socket.getSocket();
-        const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str, str1, str2, str3);
-        const str4 = closure_2_0(1241).v3(sorted3.join(","));
+        const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1239).v3(sorted3.join(",")).toString());
+        const str7 = closure_2_0(1239).v3(sorted3.join(",")).toString();
       }, Math.ceil(2000 * Math.random()));
     });
   });
@@ -150,20 +148,20 @@ function handleGuildCreate(guild) {
       closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
       const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
       const sorted = keys.sort();
-      let str = closure_2_0(1241).v3(sorted.join(","));
-      str = str.toString();
+      const obj2 = closure_2_0(1239);
+      const str = closure_2_0(1239).v3(sorted.join(","));
       sortedRoles = sortedRoles.getSortedRoles(closure_0);
       const mapped = sortedRoles.map((id) => id.id);
-      const obj2 = closure_2_0(1241);
+      const str1 = closure_2_0(1239).v3(sorted.join(",")).toString();
       const sorted1 = mapped.sort();
-      let str2 = closure_2_0(1241).v3(sorted1.join(","));
-      const obj5 = closure_2_0(1241);
+      const obj5 = closure_2_0(1239);
+      const str2 = closure_2_0(1239).v3(sorted1.join(","));
       guildEmoji = guildEmoji.getGuildEmoji(closure_0);
       const mapped1 = guildEmoji.map((id) => id.id);
-      const str1 = str2.toString();
+      const str5 = closure_2_0(1239).v3(sorted1.join(",")).toString();
       const sorted2 = mapped1.sort();
-      let str3 = closure_2_0(1241).v3(sorted2.join(","));
-      str2 = str3.toString();
+      const obj8 = closure_2_0(1239);
+      const str3 = closure_2_0(1239).v3(sorted2.join(","));
       stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
       let mapped2;
       if (stickersByGuildId != null) {
@@ -172,13 +170,13 @@ function handleGuildCreate(guild) {
       if (mapped2 == null) {
         mapped2 = [];
       }
-      const obj8 = closure_2_0(1241);
+      const str6 = closure_2_0(1239).v3(sorted2.join(",")).toString();
       const sorted3 = mapped2.sort();
-      const tmp5Result = closure_2_0(1241);
-      str3 = closure_2_0(1241).v3(sorted3.join(",")).toString();
+      const tmp5Result = closure_2_0(1239);
+      const str4 = closure_2_0(1239).v3(sorted3.join(","));
       socket = socket.getSocket();
-      const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str, str1, str2, str3);
-      const str4 = closure_2_0(1241).v3(sorted3.join(","));
+      const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1239).v3(sorted3.join(",")).toString());
+      const str7 = closure_2_0(1239).v3(sorted3.join(",")).toString();
     }, Math.ceil(2000 * Math.random()));
   }
 }

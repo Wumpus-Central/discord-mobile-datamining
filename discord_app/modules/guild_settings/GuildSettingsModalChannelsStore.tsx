@@ -1,11 +1,11 @@
-// === Module 16238: GuildSettingsModalChannelsStore ===
+// === Module 16240: GuildSettingsModalChannelsStore ===
 
-// Module 16238 (GuildSettingsModalChannelsStore)
+// Module 16240 (GuildSettingsModalChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 7215 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import apply from "module_12" /* 12 */;
 
@@ -36,14 +36,12 @@ function buildSortedChannels() {
   _null = { _categories: [], null: [] };
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    let obj = dependencyMap[item];
-    if (null != obj) {
+    if (null != dependencyMap[item]) {
       if (null != _categories) {
         if (obj.type === constants.GUILD_CATEGORY) {
           _categories = _categories._categories;
-          obj = { channel: null, index: -1 };
-          obj.channel = obj;
-          arr = _categories.push(obj);
+          const obj2 = { channel: obj, index: -1 };
+          _categories.push(obj2);
           if (null == _categories[obj.id]) {
             _categories[obj.id] = [];
           }
@@ -61,10 +59,10 @@ function buildSortedChannels() {
           }
           let tmp5 = obj;
           if (tmp) {
-            obj = {};
+            const obj3 = {};
             const merged = Object.assign(obj.toJS());
-            obj.parent_id = null;
-            const tmp9 = hasOwnProperty(obj);
+            obj3.parent_id = null;
+            const tmp9 = hasOwnProperty(obj3);
             dependencyMap[item] = tmp9;
             tmp5 = tmp9;
           }
@@ -76,17 +74,16 @@ function buildSortedChannels() {
           if (null == _categories[StringResult]) {
             _categories[StringResult] = [];
           }
-          arr = _categories[StringResult];
-          const obj1 = { channel: tmp5, index: -1 };
-          arr = arr.push(obj1);
+          const obj4 = { channel: tmp5, index: -1 };
+          _categories[StringResult].push(obj4);
         }
       }
     }
   });
   let _categories = _null._categories;
   let sorted = _categories.sort(sortCategoryList);
-  _categories = _null._categories;
-  const item1 = _categories.forEach((channel) => {
+  const _categories1 = _null._categories;
+  const item1 = _categories1.forEach((channel) => {
     channel = channel.channel;
     if (null != _categories) {
       if (null != channel) {
@@ -96,7 +93,7 @@ function buildSortedChannels() {
       }
     }
   });
-  let obj = require("FavoritesUtils");
+  const obj = require("FavoritesUtils");
   const item2 = getFlattedChannelListDefault(_null._categories, _null).forEach(setIndex);
   if (null != _null) {
     closure_15 = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
@@ -131,6 +128,7 @@ const ChannelRecord = fn(1961);
 ({ castChannelRecord: hasOwnProperty, isGuildSelectableChannelType: metroRequire, isGuildVocalChannelType: closure_7 } = ChannelRecord);
 let GuildChannelStore = fn(2012);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, Permissions: map1 } = Constants);
 let c14 = null;

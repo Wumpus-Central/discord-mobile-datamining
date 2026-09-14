@@ -1,10 +1,10 @@
-// === Module 17618: VoiceProcessingErrorManager ===
+// === Module 17619: VoiceProcessingErrorManager ===
 
-// Module 17618 (VoiceProcessingErrorManager)
+// Module 17619 (VoiceProcessingErrorManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
-let prototype = function VoiceProcessingErrorManager() {
+const prototype = function VoiceProcessingErrorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -25,8 +25,8 @@ let prototype = function VoiceProcessingErrorManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_engine/native/VoiceProcessingErrorManager.tsx");
 
-export default prototype;
+export default prototype1;

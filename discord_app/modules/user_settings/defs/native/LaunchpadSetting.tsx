@@ -1,13 +1,13 @@
-// === Module 15617: LaunchpadSetting ===
+// === Module 15618: LaunchpadSetting ===
 
-// Module 15617 (LaunchpadSetting)
+// Module 15618 (LaunchpadSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11597 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11598 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11598 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11599 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
@@ -34,34 +34,34 @@ const radio = SettingBuilders.createRadio({
     }
   },
   useOptions: function useLaunchpadSettingOptions() {
-    let obj = { label: null, subLabel: null, value: null };
+    const obj = { label: null, subLabel: null, value: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.Q3abNB);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t["/gdTGA"]);
     obj.value = LaunchPadTypes.GESTURE_FULL;
     const items = [obj, , , ];
-    obj = { label: null, subLabel: null, value: null };
+    const obj2 = { label: null, subLabel: null, value: null };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t.dQN6qS);
+    obj2.label = intl3.string(util.t.dQN6qS);
     const intl4 = util.intl;
-    obj.subLabel = intl4.string(util.t["W+cPjG"]);
-    obj.value = LaunchPadTypes.GESTURE_EDGE;
-    items[1] = obj;
-    obj = { label: null, subLabel: null, value: null };
+    obj2.subLabel = intl4.string(util.t["W+cPjG"]);
+    obj2.value = LaunchPadTypes.GESTURE_EDGE;
+    items[1] = obj2;
+    const obj3 = { label: null, subLabel: null, value: null };
     const intl5 = util.intl;
-    obj.label = intl5.string(util.t["PgDGl+"]);
+    obj3.label = intl5.string(util.t["PgDGl+"]);
     const intl6 = util.intl;
-    obj.subLabel = intl6.string(util.t.uVc5MG);
-    obj.value = LaunchPadTypes.PULL_TAB;
-    items[2] = obj;
-    const obj1 = { label: null, subLabel: null, value: null };
+    obj3.subLabel = intl6.string(util.t.uVc5MG);
+    obj3.value = LaunchPadTypes.PULL_TAB;
+    items[2] = obj3;
+    const obj4 = { label: null, subLabel: null, value: null };
     const intl7 = util.intl;
-    obj1.label = intl7.string(util.t.HnzBCZ);
+    obj4.label = intl7.string(util.t.HnzBCZ);
     const intl8 = util.intl;
-    obj1.subLabel = intl8.string(util.t.It18o2);
-    obj1.value = LaunchPadTypes.DISABLED;
-    items[3] = obj1;
+    obj4.subLabel = intl8.string(util.t.It18o2);
+    obj4.value = LaunchPadTypes.DISABLED;
+    items[3] = obj4;
     return items;
   }
 });

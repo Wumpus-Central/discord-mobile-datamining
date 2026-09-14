@@ -1,11 +1,11 @@
-// === Module 17920: MidjourneyOnboardingManager ===
+// === Module 17921: MidjourneyOnboardingManager ===
 
-// Module 17920 (MidjourneyOnboardingManager)
+// Module 17921 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(13948).MIDJOURNEY_GUILD_ID;
+const MIDJOURNEY_GUILD_ID = fn(13949).MIDJOURNEY_GUILD_ID;
 const Routes = fn(1074).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -24,8 +24,8 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -38,18 +38,18 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: tmp2(13947).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
-              return obj1;
+              const obj4 = { value: tmp2(13948).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(13947);
+            obj6 = tmp2(13948);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -59,7 +59,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
           const tmp9 = v1(7350);
         }
         dependencyMap = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp16) {
         dependencyMap = tmp;

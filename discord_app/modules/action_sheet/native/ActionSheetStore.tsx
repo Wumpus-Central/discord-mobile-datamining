@@ -111,7 +111,7 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
     }
   },
   SHOW_ACTION_SHEET_QUICK_SWITCHER: function handleShowActionSheetQuickSwitcher(arg0) {
-    let obj = { key: QuickSwitcher };
+    const obj = { key: QuickSwitcher };
     const merged = Object.assign(arg0);
     if (typeof setContent === "function") {
       let str = obj.stackingBehavior;
@@ -123,20 +123,20 @@ const actionSheetStore = new ActionSheetStore(DispatcherDefault, {
       if (str2 === undefined) {
         str2 = "main";
       }
-      obj = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
+      const obj2 = { content, key, impressionName, impressionProperties, backdropKind, appEntryKey: str2, zIndex };
       if ("replaceAll" === str) {
-        const items = [obj];
+        const items = [obj2];
         let combined = items;
       } else {
         if ("stack" === str) {
           if (tmp4) {
             const items1 = [];
-            items1[HermesBuiltin.arraySpread(found, 0)] = obj;
+            items1[HermesBuiltin.arraySpread(found, 0)] = obj2;
             combined = items1;
           }
         }
         const substr = found.slice(0, -1);
-        combined = substr.concat(obj);
+        combined = substr.concat(obj2);
       }
       found = combined;
     } else {

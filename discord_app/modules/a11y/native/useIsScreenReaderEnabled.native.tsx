@@ -5,6 +5,8 @@ import _mod17 from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const AccessibilityInfo = _mod17.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
   return screenReaderEnabled.screenReaderEnabled;
@@ -14,7 +16,7 @@ let closure_5 = module_560.create((arg0) => {
   _require = arg0;
   function updateScreenReaderEnabled(event) {
     closure_0 = event;
-    closure_0(1249).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+    closure_0(1247).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
         const Storage = screenReaderEnabled(510).Storage;
@@ -28,7 +30,7 @@ let closure_5 = module_560.create((arg0) => {
   let result = AccessibilityInfo.isScreenReaderEnabled();
   result.then(updateScreenReaderEnabled).catch(() => {
     c0 = false;
-    closure_0(1249).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
+    closure_0(1247).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
         const Storage = screenReaderEnabled(510).Storage;

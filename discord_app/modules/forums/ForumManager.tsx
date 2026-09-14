@@ -1,6 +1,6 @@
-// === Module 17479: ForumManager ===
+// === Module 17481: ForumManager ===
 
-// Module 17479 (ForumManager)
+// Module 17481 (ForumManager)
 import ForumPostDataLoader from "ForumPostDataLoader" /* 7407 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;

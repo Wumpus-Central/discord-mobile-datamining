@@ -1,38 +1,42 @@
-// === Module 15703: toggleDismissibleContentDismissState ===
+// === Module 15705: toggleDismissibleContentDismissState ===
 
-// Module 15703 (toggleDismissibleContentDismissState)
+// Module 15705 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const UserSettingsProtoActionCreators = obj(1940);
 const DismissibleContentTypes = obj(1944);
 const DismissibleContentUtils = obj(1945);
 const VersionedDismissibleContentUtils = obj(1955);
-const DismissibleContentFrameworkActionCreators = obj(10365);
+const DismissibleContentFrameworkActionCreators = obj(10366);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = require("initialize");
   const items = [SelectedGuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
-  obj = { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores };
-  let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
+  let obj = require("initialize");
+  let obj2 = require("DismissibleContentUnsafeUtils");
+  let result = obj2.useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores });
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
-  obj = {
+  const obj3 = { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores };
+  return {
     isDismissed: result,
     handleToggleDismissState: useCallback(() => {
       let obj = require;
       let result1 = dependencyMap;
       if (obj2.isVersionedDismissibleContent(closure_0)) {
-        let objResult = VersionedDismissibleContentUtils;
-        const versionedDismissibleContentCurrentVersion = objResult.getVersionedDismissibleContentCurrentVersion(closure_0);
-        objResult = DismissibleContentUtils;
-        const nextNumTimesDismissed = objResult.getNextNumTimesDismissed(closure_0, {});
+        const versionedDismissibleContentCurrentVersion = VersionedDismissibleContentUtils.getVersionedDismissibleContentCurrentVersion(closure_0);
+        const objResult = VersionedDismissibleContentUtils;
+        const tmp55 = result;
+        const nextNumTimesDismissed = DismissibleContentUtils.getNextNumTimesDismissed(closure_0, {});
+        const objResult28 = DismissibleContentUtils;
         let tmp58 = null;
         if (!result) {
           tmp58 = closure_0;
@@ -45,14 +49,13 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
         } else {
           const result2 = DismissibleContentUtils.addVersionedDismissedContent(closure_0, versionedDismissibleContentCurrentVersion, nextNumTimesDismissed);
           flag10 = true;
-          const objResult2 = DismissibleContentUtils;
+          const objResult30 = DismissibleContentUtils;
         }
-        const objResult1 = DismissibleContentFrameworkActionCreators;
-        tmp55 = result;
+        const objResult29 = DismissibleContentFrameworkActionCreators;
       } else {
-        if (objResult3.isSnowflakeBoundDismissibleContent(closure_0)) {
+        if (objResult31.isSnowflakeBoundDismissibleContent(closure_0)) {
           const nextNumTimesDismissed1 = DismissibleContentUtils.getNextNumTimesDismissed(closure_0, {});
-          const objResult4 = DismissibleContentUtils;
+          const objResult32 = DismissibleContentUtils;
           const tmp45 = result;
           let tmp47 = null;
           if (!result) {
@@ -62,17 +65,17 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
           if (tmp45) {
             const result4 = UserSettingsProtoActionCreators.removeDismissedRecurringContent(closure_0);
             let flag9 = false;
-            const objResult6 = UserSettingsProtoActionCreators;
+            const objResult34 = UserSettingsProtoActionCreators;
           } else {
-            const objResult7 = DismissibleContentUtils;
+            const objResult35 = DismissibleContentUtils;
             const _Date2 = Date;
             const timestamp = Date.now();
-            const result5 = objResult7.addSnowflakeBoundDismissedContent(closure_0, SnowflakeUtilsDefault.fromTimestamp(timestamp + DismissibleContentUtils.SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), nextNumTimesDismissed1);
+            const result5 = objResult35.addSnowflakeBoundDismissedContent(closure_0, SnowflakeUtilsDefault.fromTimestamp(timestamp + DismissibleContentUtils.SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), nextNumTimesDismissed1);
             flag9 = true;
           }
-          const objResult5 = DismissibleContentFrameworkActionCreators;
+          const objResult33 = DismissibleContentFrameworkActionCreators;
         } else {
-          if (objResult8.isTimeRecurringDismissibleContent(closure_0)) {
+          if (objResult36.isTimeRecurringDismissibleContent(closure_0)) {
             let tmp40 = null;
             if (!result) {
               tmp40 = closure_0;
@@ -81,17 +84,17 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
             if (tmp39) {
               const result7 = UserSettingsProtoActionCreators.removeDismissedRecurringContent(closure_0);
               let flag8 = false;
-              const objResult10 = UserSettingsProtoActionCreators;
+              const objResult38 = UserSettingsProtoActionCreators;
             } else {
-              const objResult11 = DismissibleContentUtils;
-              const result8 = objResult11.addTimeRecurringDismissedContent(closure_0, DismissibleContentUtils.getNextNumTimesDismissed(closure_0, {}));
+              const objResult39 = DismissibleContentUtils;
+              const result8 = objResult39.addTimeRecurringDismissedContent(closure_0, DismissibleContentUtils.getNextNumTimesDismissed(closure_0, {}));
               flag8 = true;
-              const objResult12 = DismissibleContentUtils;
+              const objResult40 = DismissibleContentUtils;
             }
-            const objResult9 = DismissibleContentFrameworkActionCreators;
+            const objResult37 = DismissibleContentFrameworkActionCreators;
             tmp39 = result;
           } else {
-            if (objResult13.isSingleUseGuildDismissibleContent(closure_0)) {
+            if (objResult41.isSingleUseGuildDismissibleContent(closure_0)) {
               if (null == stateFromStores) {
                 let flag = false;
               } else {
@@ -99,26 +102,26 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
                 let num6 = 1;
                 if (null != stateFromStores) {
                   num6 = DismissibleContentUtils.getGuildNextNumTimesDismissed(closure_0, stateFromStores);
-                  const objResult14 = DismissibleContentUtils;
+                  const objResult42 = DismissibleContentUtils;
                 }
                 let tmp34 = null;
                 if (!tmp32) {
                   tmp34 = closure_0;
                 }
                 const result9 = DismissibleContentFrameworkActionCreators.overrideDCFLastDCDismissed(tmp34, stateFromStores);
-                const objResult16 = DismissibleContentUtils;
+                const objResult44 = DismissibleContentUtils;
                 if (tmp32) {
                   num5 = num6 - num5;
-                  const result10 = objResult16.UNSAFE_removeGuildDismissedContent(closure_0, stateFromStores, num5);
+                  const result10 = objResult44.UNSAFE_removeGuildDismissedContent(closure_0, stateFromStores, num5);
                   let flag7 = false;
                 } else {
-                  const result11 = objResult16.UNSAFE_addGuildDismissedContent(closure_0, stateFromStores, num6);
+                  const result11 = objResult44.UNSAFE_addGuildDismissedContent(closure_0, stateFromStores, num6);
                   flag7 = true;
                 }
-                const objResult15 = DismissibleContentFrameworkActionCreators;
+                const objResult43 = DismissibleContentFrameworkActionCreators;
               }
             } else {
-              if (objResult17.isTimeRecurringGuildDismissibleContent(closure_0)) {
+              if (objResult45.isTimeRecurringGuildDismissibleContent(closure_0)) {
                 if (null == stateFromStores) {
                   flag = false;
                 } else {
@@ -126,26 +129,26 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
                   let num4 = 1;
                   if (null != stateFromStores) {
                     num4 = DismissibleContentUtils.getGuildNextNumTimesDismissed(closure_0, stateFromStores);
-                    const objResult18 = DismissibleContentUtils;
+                    const objResult46 = DismissibleContentUtils;
                   }
                   let tmp26 = null;
                   if (!tmp24) {
                     tmp26 = closure_0;
                   }
                   const result12 = DismissibleContentFrameworkActionCreators.overrideDCFLastDCDismissed(tmp26, stateFromStores);
-                  const objResult20 = DismissibleContentUtils;
+                  const objResult48 = DismissibleContentUtils;
                   if (tmp24) {
                     num3 = num4 - num3;
-                    const result13 = objResult20.UNSAFE_removeTimeRecurringGuildDismissedContent(closure_0, stateFromStores, num3);
+                    const result13 = objResult48.UNSAFE_removeTimeRecurringGuildDismissedContent(closure_0, stateFromStores, num3);
                     let flag5 = false;
                   } else {
-                    const result14 = objResult20.UNSAFE_addTimeRecurringGuildDismissedContent(closure_0, stateFromStores, num4);
+                    const result14 = objResult48.UNSAFE_addTimeRecurringGuildDismissedContent(closure_0, stateFromStores, num4);
                     flag5 = true;
                   }
-                  const objResult19 = DismissibleContentFrameworkActionCreators;
+                  const objResult47 = DismissibleContentFrameworkActionCreators;
                 }
               } else {
-                if (objResult21.isSnowflakeBoundGuildDismissibleContent(closure_0)) {
+                if (objResult49.isSnowflakeBoundGuildDismissibleContent(closure_0)) {
                   if (null == stateFromStores) {
                     flag = false;
                   } else {
@@ -153,25 +156,25 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
                     let num2 = 1;
                     if (null != stateFromStores) {
                       num2 = DismissibleContentUtils.getGuildNextNumTimesDismissed(closure_0, stateFromStores);
-                      const objResult22 = DismissibleContentUtils;
+                      const objResult50 = DismissibleContentUtils;
                     }
                     let tmp11 = null;
                     if (!tmp9) {
                       tmp11 = closure_0;
                     }
                     const result15 = DismissibleContentFrameworkActionCreators.overrideDCFLastDCDismissed(tmp11, stateFromStores);
-                    const objResult24 = DismissibleContentUtils;
+                    const objResult52 = DismissibleContentUtils;
                     if (tmp9) {
                       num = num2 - num;
-                      const result16 = objResult24.UNSAFE_removeSnowflakeBoundGuildDismissedContent(closure_0, stateFromStores, num);
+                      const result16 = objResult52.UNSAFE_removeSnowflakeBoundGuildDismissedContent(closure_0, stateFromStores, num);
                       let flag3 = false;
                     } else {
                       const _Date = Date;
                       const timestamp1 = Date.now();
-                      const result17 = objResult24.UNSAFE_addSnowflakeBoundGuildDismissedContent(closure_0, SnowflakeUtilsDefault.fromTimestamp(timestamp1 + DismissibleContentUtils.SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), stateFromStores, num2);
+                      const result17 = objResult52.UNSAFE_addSnowflakeBoundGuildDismissedContent(closure_0, SnowflakeUtilsDefault.fromTimestamp(timestamp1 + DismissibleContentUtils.SNOWFLAKE_BOUND_DISMISSIBLE_CONTENT_DURATION_MS), stateFromStores, num2);
                       flag3 = true;
                     }
-                    const objResult23 = DismissibleContentFrameworkActionCreators;
+                    const objResult51 = DismissibleContentFrameworkActionCreators;
                   }
                 } else {
                   let tmp4 = null;
@@ -179,29 +182,28 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
                     tmp4 = closure_0;
                   }
                   const result18 = DismissibleContentFrameworkActionCreators.overrideDCFLastDCDismissed(tmp4, undefined);
-                  const objResult26 = UserSettingsProtoActionCreators;
+                  const objResult54 = UserSettingsProtoActionCreators;
                   if (tmp3) {
-                    const result19 = objResult26.removeDismissedContent(closure_0);
+                    const result19 = objResult54.removeDismissedContent(closure_0);
                     flag = false;
                   } else {
-                    objResult26.addDismissedContent(closure_0);
+                    objResult54.addDismissedContent(closure_0);
                     flag = true;
                   }
-                  const objResult25 = DismissibleContentFrameworkActionCreators;
+                  const objResult53 = DismissibleContentFrameworkActionCreators;
                   tmp3 = result;
                 }
-                objResult21 = DismissibleContentTypes;
+                objResult49 = DismissibleContentTypes;
               }
-              objResult17 = DismissibleContentTypes;
+              objResult45 = DismissibleContentTypes;
             }
             return flag;
           }
-          objResult8 = DismissibleContentTypes;
+          objResult36 = DismissibleContentTypes;
         }
-        objResult3 = DismissibleContentTypes;
+        objResult31 = DismissibleContentTypes;
       }
       obj2 = DismissibleContentTypes;
     }, items1)
   };
-  return obj;
 };

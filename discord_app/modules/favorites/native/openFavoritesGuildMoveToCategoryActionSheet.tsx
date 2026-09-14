@@ -1,15 +1,18 @@
-// === Module 11084: openFavoritesGuildMoveToCategoryActionSheet ===
+// === Module 11085: openFavoritesGuildMoveToCategoryActionSheet ===
 
-// Module 11084 (openFavoritesGuildMoveToCategoryActionSheet)
+// Module 11085 (openFavoritesGuildMoveToCategoryActionSheet)
 import FolderIcon2 from "FolderIcon" /* 5155 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7298 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildMoveToCategoryActionSheet.tsx");
 
 export default function openFavoritesGuildMoveToCategoryActionSheet(arg0, title) {
   ({ destinations, perform: require } = title);
-  let obj = {
+  let obj = Sheet_showSimpleActionSheet;
+  const result = obj.showSimpleActionSheet({
     key: "FavoritesGuildMoveToCategory-" + arg0,
     header: { title: title.label },
     hasIcons: true,
@@ -25,6 +28,5 @@ export default function openFavoritesGuildMoveToCategoryActionSheet(arg0, title)
       };
       return obj;
     })
-  };
-  const result = obj.showSimpleActionSheet(obj);
+  });
 };

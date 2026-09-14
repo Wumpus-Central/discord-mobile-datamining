@@ -25,7 +25,7 @@ export const sortEffectLayers = function sortEffectLayers(effects) {
 export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRandomizedProfileEffect(arg0) {
   closure_0 = undefined;
   let tmp6 = arg0;
-  [tmp4, tmp5] = _slicedToArray(noop.useState(arg0), 2);
+  [tmp4, tmp5] = noop.useState(arg0);
   if (null != arg0) {
     const cloneDeepResult = _mod12.cloneDeep(arg0);
     const effects = cloneDeepResult.effects;
@@ -66,7 +66,7 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
     tmp6 = cloneDeepResult;
   }
   const tmp3 = _slicedToArray(noop.useState(arg0), 2);
-  [tmp8, tmp9] = _slicedToArray(noop.useState(tmp6), 2);
+  [tmp8, tmp9] = noop.useState(tmp6);
   const tmp2Result = _slicedToArray(noop.useState(tmp6), 2);
   if (!obj.isEqual(tmp4, arg0)) {
     tmp5(arg0);

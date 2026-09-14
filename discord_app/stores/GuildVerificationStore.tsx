@@ -13,6 +13,8 @@ import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
@@ -155,12 +157,9 @@ function recomputeGuild(guildId) {
               const items1 = [];
               HermesBuiltin.arraySpread(items, 0);
               const _Math2 = Math;
-              timerId = setTimeout(() => {
-                const obj = { type: "GUILD_VERIFICATION_CHECK", guildId };
-                return obj.dispatch(obj);
-              }, HermesBuiltin.apply(items1, Math));
+              timerId = setTimeout(() => DispatcherDefault.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId }), HermesBuiltin.apply(items1, Math));
             }
-            let obj = { notClaimed: flag6, notEmailVerified: flag5, notPhoneVerified: flag4, newAccount: flag3, newMember: flag2, missingVerificationRole: flag, verificationRole: role, canChat: null, accountDeadline: null, memberDeadline: null, timeoutRef: null };
+            const obj = { notClaimed: flag6, notEmailVerified: flag5, notPhoneVerified: flag4, newAccount: flag3, newMember: flag2, missingVerificationRole: flag, verificationRole: role, canChat: null, accountDeadline: null, memberDeadline: null, timeoutRef: null };
             if (!flag6) {
               flag6 = flag5;
             }

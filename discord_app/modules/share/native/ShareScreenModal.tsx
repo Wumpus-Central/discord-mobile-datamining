@@ -1,6 +1,6 @@
-// === Module 13986: ShareScreenModal ===
+// === Module 13987: ShareScreenModal ===
 
-// Module 13986 (ShareScreenModal)
+// Module 13987 (ShareScreenModal)
 import LoggerDefault from "Logger" /* 3 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
@@ -13,7 +13,7 @@ require = fn;
 function onClose() {
   ModalActionCreatorsDefault.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
-const SHARE_SCREEN_MODAL_KEY = fn(13939).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13940).SHARE_SCREEN_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_9 = new LoggerDefault("ShareScreenModal");
 const size = fn(2);
@@ -28,7 +28,6 @@ export default function ShareScreenModal(text) {
   let first;
   noop = undefined;
   let stateFromStores;
-  let obj = noop;
   const tmp = first(noop.useState(null), 2);
   first = tmp[0];
   noop = tmp[1];
@@ -42,8 +41,8 @@ export default function ShareScreenModal(text) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -56,8 +55,8 @@ export default function ShareScreenModal(text) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_1 = tmp3;
               closure_0 = tmp7;
@@ -65,12 +64,10 @@ export default function ShareScreenModal(text) {
               if (undefined !== closure_2) {
                 if (undefined !== c3) {
                   c3 = 1;
-                  let obj1 = channelId(shareId[8]);
                   c4 = 2;
                   v3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1.value = obj1.sharedAttachments(tmp20, tmp21);
-                  return obj1;
+                  const obj5 = { value: channelId(shareId[8]).sharedAttachments(tmp20, tmp21), done: false };
+                  return obj5;
                 }
               }
             }
@@ -89,7 +86,7 @@ export default function ShareScreenModal(text) {
             }
             c3 = 0;
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           v3 = 3;
@@ -129,8 +126,8 @@ export default function ShareScreenModal(text) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -143,8 +140,8 @@ export default function ShareScreenModal(text) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_1 = tmp3;
               closure_0 = tmp7;
@@ -152,12 +149,10 @@ export default function ShareScreenModal(text) {
               if (null != closure_1) {
                 if (null == stateFromStores) {
                   c3 = 1;
-                  let obj1 = channelId(shareId[10]);
                   c4 = 2;
                   c5 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1.value = obj1.fetchChannel(tmp20);
-                  return obj1;
+                  const obj5 = { value: channelId(shareId[10]).fetchChannel(tmp20), done: false };
+                  return obj5;
                 }
               }
             }
@@ -176,7 +171,7 @@ export default function ShareScreenModal(text) {
             }
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c5 = 3;
@@ -207,7 +202,7 @@ export default function ShareScreenModal(text) {
     first1 = tmp6[0];
   }
   const items3 = [text, first, channelId, first1];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { text, attachments: null };
     let items = first;
     if (first == null) {
@@ -249,6 +244,5 @@ export default function ShareScreenModal(text) {
     }
     return obj;
   }, items3);
-  obj = { sharedContent: memo, onClose };
-  return first1(channelId(shareId[12]), obj);
+  return first1(channelId(shareId[12]), { sharedContent: memo, onClose });
 };

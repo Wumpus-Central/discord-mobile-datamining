@@ -1,10 +1,10 @@
-// === Module 17153: FramePanelFocusedView ===
+// === Module 17155: FramePanelFocusedView ===
 
-// Module 17153 (FramePanelFocusedView)
+// Module 17155 (FramePanelFocusedView)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
-import FrameViewDefault from "FrameView" /* 16718 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17132 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17150 */;
+import FrameViewDefault from "FrameView" /* 16720 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17134 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17152 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;
 
@@ -21,9 +21,8 @@ export default noop.memo((transitionState) => {
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
   let landscapeSafeAreasConfig;
-  let obj = transitionState(stateFromStores[5]);
   const items = [landscapeSafeAreasConfig];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () => {
     const tmp = memo(landscapeSafeAreasConfig.getMainFrame());
     let id;
     if (tmp != null) {
@@ -31,8 +30,9 @@ export default noop.memo((transitionState) => {
     }
     return id;
   });
-  obj = { context: transitionCleanUp(stateFromStores[7]) };
-  const baseActivityPanelFocusedView = transitionState(stateFromStores[6]).useBaseActivityPanelFocusedView(obj);
+  let obj = transitionState(stateFromStores[5]);
+  const obj2 = transitionState(stateFromStores[6]);
+  const baseActivityPanelFocusedView = obj2.useBaseActivityPanelFocusedView({ context: transitionCleanUp(stateFromStores[7]) });
   const portraitSafeAreasConfig = baseActivityPanelFocusedView.portraitSafeAreasConfig;
   landscapeSafeAreasConfig = baseActivityPanelFocusedView.landscapeSafeAreasConfig;
   const memo = portraitSafeAreasConfig.useMemo(() => jsx(transitionCleanUp(stateFromStores[8]), {}), []);
@@ -44,9 +44,7 @@ export default noop.memo((transitionState) => {
   }, items1);
   const items2 = [stateFromStores, memo, landscapeSafeAreasConfig, portraitSafeAreasConfig, transitionCleanUp, transitionState, updateActivityPanelModeToPIP];
   return portraitSafeAreasConfig.useMemo(() => {
-    let obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: null };
-    obj = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
-    obj.children = jsx(FrameViewDefault, { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig });
-    return jsx(ActivityPanelFocusedView.BaseActivityPanelFocusedView, { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig });
+    const obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: jsx(FrameViewDefault, { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig }) };
+    return jsx(ActivityPanelFocusedView.BaseActivityPanelFocusedView, { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: jsx(FrameViewDefault, { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig }) });
   }, items2);
 });

@@ -1,6 +1,6 @@
-// === Module 16096: useOrientationLock ===
+// === Module 16098: useOrientationLock ===
 
-// Module 16096 (useOrientationLock)
+// Module 16098 (useOrientationLock)
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7045 */;
@@ -19,16 +19,16 @@ export default function usePortraitOrientationOnly() {
     const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
-      let tmpResult = MetaQuestUtils;
-      tmp4 = !tmpResult.isMetaQuest();
+      tmp4 = !MetaQuestUtils.isMetaQuest();
+      const tmpResult = MetaQuestUtils;
     }
     if (tmp4) {
       tmp4 = !closure_0;
     }
     closure_0 = tmp4;
     if (tmp4) {
-      tmpResult = DeviceOrientation;
-      tmpResult.lockOrientation("PORTRAIT", false);
+      DeviceOrientation.lockOrientation("PORTRAIT", false);
+      const tmpResult2 = DeviceOrientation;
     }
     return () => {
       if (closure_0) {

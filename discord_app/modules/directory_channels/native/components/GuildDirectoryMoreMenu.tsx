@@ -1,14 +1,14 @@
-// === Module 12442: GuildDirectoryMoreMenu ===
+// === Module 12443: GuildDirectoryMoreMenu ===
 
-// Module 12442 (GuildDirectoryMoreMenu)
+// Module 12443 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import ReportModals from "ReportModals" /* 8752 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12436 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12443 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12445 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12437 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12444 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,80 +25,76 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1114).intl;
     obj.label = intl.string(entry(1114).t.XnuOvN);
-    obj.IconComponent = entry(10378).PencilIcon;
+    obj.IconComponent = entry(10379).PencilIcon;
     obj.action = function handleEdit() {
-      const obj = { entry };
-      obj.open(obj);
+      GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
     items.push(obj);
   }
   if (canRemove) {
-    obj = { label: null, IconComponent: null, variant: "destructive", action: null };
+    let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1114).intl;
-    obj.label = intl2.string(entry(1114).t.KUxYWH);
-    obj.IconComponent = entry(4594).TrashIcon;
-    obj.action = function handleRemove() {
-      let obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
+    obj2.label = intl2.string(entry(1114).t.KUxYWH);
+    obj2.IconComponent = entry(4594).TrashIcon;
+    obj2.action = function handleRemove() {
+      const obj2 = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
       const intl = util.intl;
-      obj.title = intl.string(util.t.KUxYWH);
+      obj2.title = intl.string(util.t.KUxYWH);
       const intl2 = util.intl;
-      obj = { guildName: entry.name };
-      obj.body = intl2.formatToPlainString(util.t["/5y0uV"], obj);
-      obj.onConfirm = function onConfirm() {
+      obj2.body = intl2.formatToPlainString(util.t["/5y0uV"], { guildName: entry.name });
+      obj2.onConfirm = function onConfirm() {
         const result = GuildDirectoryActionCreatorsAll.removeDirectoryGuildEntry(entry.channelId, entry.guildId);
       };
-      obj.confirmColor = native.ButtonColors.RED;
+      obj2.confirmColor = native.ButtonColors.RED;
       const intl3 = util.intl;
-      obj.confirmText = intl3.string(util.t.N86XcP);
+      obj2.confirmText = intl3.string(util.t.N86XcP);
       const intl4 = util.intl;
-      obj.cancelText = intl4.string(util.t["ETE/oC"]);
-      obj.onCancel = function onCancel() {
+      obj2.cancelText = intl4.string(util.t["ETE/oC"]);
+      obj2.onCancel = function onCancel() {
         closure_1_1(dependencyMap[4]).close();
       };
-      obj.show(obj);
+      actions_AlertActionCreatorsDefault.show(obj2);
     };
-    items.push(obj);
+    items.push(obj2);
   }
   if (!isEntryAdmin) {
-    obj = { label: null, IconComponent: null, variant: "destructive", action: null };
+    const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1114).intl;
-    obj.label = intl3.string(entry(1114).t.Aen9eh);
-    obj.IconComponent = entry(8787).FlagIcon;
-    obj.action = function handleReport() {
+    obj3.label = intl3.string(entry(1114).t.Aen9eh);
+    obj3.IconComponent = entry(8787).FlagIcon;
+    obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
-    items.push(obj);
+    items.push(obj3);
   }
   let tmp9 = null;
   if (0 !== items.length) {
-    const obj1 = {
+    const obj4 = {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          let obj = { ref: ref.ref };
+          const obj = { ref: ref.ref };
           const merged1 = Object.assign(merged);
           obj.size = "sm";
           obj.variant = "secondary";
           const intl = entry(1114).intl;
           obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
-          obj = { size: "sm", color: nativeDefault.colors.WHITE };
           obj.icon = jsx(entry(8795).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(8202).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8202).IconButton, { ref: ref.ref });
         }
     };
     tmp9 = jsx(entry(8789).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-          let obj = { ref: ref.ref };
+          const obj = { ref: ref.ref };
           const merged1 = Object.assign(merged);
           obj.size = "sm";
           obj.variant = "secondary";
           const intl = entry(1114).intl;
           obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
-          obj = { size: "sm", color: nativeDefault.colors.WHITE };
           obj.icon = jsx(entry(8795).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-          return jsx(entry(8202).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8202).IconButton, { ref: ref.ref });
         }
     });
   }

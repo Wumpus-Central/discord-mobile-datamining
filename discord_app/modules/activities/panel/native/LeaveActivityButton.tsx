@@ -1,6 +1,6 @@
-// === Module 17145: LeaveActivityButton ===
+// === Module 17147: LeaveActivityButton ===
 
-// Module 17145 (LeaveActivityButton)
+// Module 17147 (LeaveActivityButton)
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import _modDef9203 from "module_9203" /* 9203 */;
@@ -28,18 +28,17 @@ export default noop.memo(function LeaveActivityButton(arg0) {
   return <BaseLeaveActivityButton onPress={function onPress() {
     importDefault(ActivityPanelModes.DISCONNECTED);
     const timerId = setTimeout(() => {
-      let obj = EmbeddedActivitiesNativeManagerDefault;
       let _location;
       if (closure_1_0 != null) {
         _location = closure_1_0.location;
       }
-      obj = { location: _location, applicationId: null };
+      const obj2 = { location: _location, applicationId: null };
       let applicationId;
       if (closure_1_0 != null) {
         applicationId = closure_1_0.applicationId;
       }
-      obj.applicationId = applicationId;
-      obj.leaveActivity(obj);
+      obj2.applicationId = applicationId;
+      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
     }, 400);
   }} />;
 });

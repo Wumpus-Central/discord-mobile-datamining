@@ -1,15 +1,15 @@
-// === Module 1183: ThemeStore ===
+// === Module 1181: ThemeStore ===
 
-// Module 1183 (ThemeStore)
+// Module 1181 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
-import resolveThemeDefault from "resolveTheme" /* 1227 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1218 */;
+import resolveThemeDefault from "resolveTheme" /* 1225 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14170 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14171 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 require = fn;
 function handleThemeChange() {
@@ -22,7 +22,7 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
 const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const ThemeTypes = fn(1074).ThemeTypes;
@@ -101,10 +101,10 @@ const items = [
       if (preferences.preferences[constants.DARK] === ThemeTypes.ASH) {
         obj = {};
         const merged = Object.assign(preferences);
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(preferences.preferences);
-        obj[tmp2.DARK] = tmp3.DARK;
-        obj.preferences = obj;
+        obj2[tmp2.DARK] = tmp3.DARK;
+        obj.preferences = obj2;
         tmp = obj;
       }
     }
@@ -112,7 +112,7 @@ const items = [
   }
 ];
 ThemeStore.migrations = items;
-obj = {
+const themeStore = new ThemeStore(DispatcherDefault, {
   CACHE_LOADED: handleThemeChange,
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (UnsyncedUserSettingsStore.darkSidebar) {
@@ -253,8 +253,7 @@ obj = {
     }
     return flag;
   }
-};
-const themeStore = new ThemeStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
 

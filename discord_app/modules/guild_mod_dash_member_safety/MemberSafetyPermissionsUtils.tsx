@@ -7,6 +7,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
 let closure_8 = fn(4279).MemberSafetyPagePermissions;
@@ -21,7 +23,7 @@ export const getContextForPermission = function getContextForPermission(arg0) {
     items = [UserStore, closure_8];
     tmp = items;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
   const tmp4 = _slicedToArray(tmp, 2);
@@ -36,7 +38,7 @@ export const canAccessMemberSafetyPage = function canAccessMemberSafetyPage(arg0
     const items1 = [UserStore, closure_8];
     tmp = items1;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
   return false;
@@ -51,7 +53,7 @@ export const hasBulkBanningPermissions = function hasBulkBanningPermissions(arg0
     const items1 = [UserStore, closure_8];
     tmp = items1;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
   return false;
@@ -79,7 +81,7 @@ export const useCanAccessMemberSafetyPage = function useCanAccessMemberSafetyPag
   const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const items = [GuildStore, UserStore];
-    [obj, obj2] = _slicedToArray(items, 2);
+    [obj, obj2] = items;
     const guild = obj.getGuild(closure_0);
     const currentUser = obj2.getCurrentUser();
     return false;
@@ -92,7 +94,7 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
   const items1 = [arg0];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     const items = [GuildStore, UserStore];
-    [obj, obj2] = _slicedToArray(items, 2);
+    [obj, obj2] = items;
     const guild = obj.getGuild(closure_0);
     const currentUser = obj2.getCurrentUser();
     return false;
@@ -103,7 +105,7 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
   if (stateFromStores) {
     stateFromStores = obj2.useStateFromStores(items2, () => {
       const items = [GuildStore, UserStore];
-      [obj, obj2] = _slicedToArray(items, 2);
+      [obj, obj2] = items;
       const guild = obj.getGuild(closure_0);
       const currentUser = obj2.getCurrentUser();
       return false;

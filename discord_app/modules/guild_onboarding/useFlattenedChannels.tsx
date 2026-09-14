@@ -5,6 +5,8 @@ import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function getFlattenedChannels(guildId, set, found) {
   _require = set;

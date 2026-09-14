@@ -36,8 +36,7 @@ export const BottomSheetBackdrop = noop.memo((animatedIndex) => {
   let animatedStyle;
   const tmp = str();
   const container = tmp;
-  let obj = animatedIndex(num[3]);
-  const bottomSheet = obj.useBottomSheet();
+  const bottomSheet = animatedIndex(num[3]).useBottomSheet();
   const snapToIndex = bottomSheet.snapToIndex;
   const close = bottomSheet.close;
   let items = [snapToIndex, close, num3, str, onPress];
@@ -54,6 +53,9 @@ export const BottomSheetBackdrop = noop.memo((animatedIndex) => {
     }
   }, items);
   const Gesture = animatedIndex(num[4]).Gesture;
+  let obj = animatedIndex(num[3]);
+  const tmp2 = animatedIndex;
+  const tmp3 = num;
   class I {
     constructor() {
       obj = closure_0(closure_1[5]);
@@ -61,14 +63,12 @@ export const BottomSheetBackdrop = noop.memo((animatedIndex) => {
       return;
     }
   }
-  obj = { runOnJS: animatedIndex(num[5]).runOnJS, handleOnPress: onDismiss };
-  I.__closure = obj;
+  const TapResult = Gesture.Tap();
+  I.__closure = { runOnJS: animatedIndex(num[5]).runOnJS, handleOnPress: onDismiss };
   I.__workletHash = 3995467602852;
   I.__initData = onPress;
-  const TapResult = Gesture.Tap();
-  const tmp2 = animatedIndex;
-  const tmp3 = num;
-  const onEndResult = Gesture.Tap().onEnd(I);
+  const obj2 = { runOnJS: animatedIndex(num[5]).runOnJS, handleOnPress: onDismiss };
+  const onEndResult = TapResult.onEnd(I);
   class S {
     constructor() {
       obj = { opacity: null };
@@ -82,11 +82,11 @@ export const BottomSheetBackdrop = noop.memo((animatedIndex) => {
       return obj;
     }
   }
-  obj = { interpolate: animatedIndex(num[5]).interpolate, animatedIndex, disappearsOnIndex: num3, appearsOnIndex: num2, opacity: num };
-  S.__closure = obj;
+  const obj4 = animatedIndex(num[5]);
+  S.__closure = { interpolate: animatedIndex(num[5]).interpolate, animatedIndex, disappearsOnIndex: num3, appearsOnIndex: num2, opacity: num };
   S.__workletHash = 1140766381376;
   S.__initData = style;
-  animatedStyle = animatedIndex(num[5]).useAnimatedStyle(S);
+  animatedStyle = obj4.useAnimatedStyle(S);
   let items1 = [tmp.container, style, animatedStyle];
   const memo = num2.useMemo(() => {
     const items = [container.container, style, animatedStyle];
@@ -95,8 +95,8 @@ export const BottomSheetBackdrop = noop.memo((animatedIndex) => {
   const tmp10 = num3(animatedIndex(num[6]).Backdrop, { blur: "none", style: memo, onDismiss, "aria-hidden": true });
   let tmp9Result = tmp10;
   if ("none" !== str) {
-    const obj1 = { gesture: onEndResult, children: tmp10 };
-    tmp9Result = num3(tmp2(tmp3[4]).GestureDetector, obj1);
+    const obj5 = { gesture: onEndResult, children: tmp10 };
+    tmp9Result = num3(tmp2(tmp3[4]).GestureDetector, obj5);
   }
   return tmp9Result;
 });

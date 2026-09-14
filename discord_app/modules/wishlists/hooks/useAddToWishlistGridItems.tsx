@@ -1,7 +1,7 @@
-// === Module 13229: useAddToWishlistGridItems ===
+// === Module 13230: useAddToWishlistGridItems ===
 
-// Module 13229 (useAddToWishlistGridItems)
-import WishlistUtils from "WishlistUtils" /* 13204 */;
+// Module 13230 (useAddToWishlistGridItems)
+import WishlistUtils from "WishlistUtils" /* 13205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,8 +16,7 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     maxWishlistItemsToShow = numWishlistItemsToRecommend;
   }
   closure_4 = undefined;
-  let obj = wishlist(maxWishlistItemsToShow[2]);
-  const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
+  const recommendationsForSingleUser = wishlist(maxWishlistItemsToShow[2]).useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
   const recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
   let items = [wishlist];
@@ -37,9 +36,9 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     tmp2 = !memo.has(memo.TIER_2);
   }
   closure_4 = tmp2;
-  obj = { items: null, status };
+  const obj3 = { items: null, status };
   const items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
-  obj.items = recommendations.useMemo(() => {
+  obj3.items = recommendations.useMemo(() => {
     const found = recommendations.filter((id) => !set.has(id.id));
     const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
     if (closure_4) {
@@ -48,5 +47,5 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     }
     return mapped.slice(0, maxWishlistItemsToShow);
   }, items1);
-  return obj;
+  return obj3;
 };

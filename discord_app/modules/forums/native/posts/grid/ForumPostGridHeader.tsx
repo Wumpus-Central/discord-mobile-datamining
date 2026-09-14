@@ -1,11 +1,11 @@
-// === Module 12131: ForumPostGridHeader ===
+// === Module 12132: ForumPostGridHeader ===
 
-// Module 12131 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12132 */;
-import ForumPostUsername from "ForumPostUsername" /* 12134 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12143 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 12144 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12145 */;
+// Module 12132 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12133 */;
+import ForumPostUsername from "ForumPostUsername" /* 12135 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12144 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12145 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,19 +23,19 @@ export default function ForumPostGridHeader(arg0) {
   ({ thread, hasUnreads, isNew } = arg0);
   const tmp = closure_8();
   let hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.details, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.details, children: null };
   if (hasFlagResult) {
-    obj = { containerStyle: tmp.pinIcon };
-    hasFlagResult = timestampProducer(ForumPostPinIconDefault, obj);
+    const obj3 = { containerStyle: tmp.pinIcon };
+    hasFlagResult = timestampProducer(ForumPostPinIconDefault, obj3);
   }
   const items = [hasFlagResult, timestampProducer(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), timestampProducer(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
     isNew = timestampProducer(ForumPostNewTagDefault, {});
   }
   items[3] = isNew;
-  obj.children = items;
-  const items1 = [React5(View, obj), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
+  obj2.children = items;
+  const items1 = [React5(View, obj2), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
   obj.children = items1;
   return React5(View, obj);
 };

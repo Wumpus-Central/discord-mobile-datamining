@@ -1,6 +1,6 @@
-// === Module 11644: AppStoreOverlayAboutSection ===
+// === Module 11645: AppStoreOverlayAboutSection ===
 
-// Module 11644 (AppStoreOverlayAboutSection)
+// Module 11645 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -14,20 +14,18 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
 const createStyles = fn(4636);
-let obj = { aboutSection: null };
-obj = { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-obj.aboutSection = obj;
+let obj = { aboutSection: { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
 export default function AppStoreOverlayAboutSection(children) {
   c0 = undefined;
+  first = undefined;
+  closure_2 = undefined;
   const tmp = closure_9();
-  [tmp3, c0] = _slicedToArray(noop.useState(false), 2);
-  const tmp4 = _slicedToArray(noop.useState(null), 2);
-  const first = tmp4[0];
-  closure_2 = tmp4[1];
+  [tmp3, c0] = noop.useState(false);
+  [first, closure_2] = noop.useState(null);
   const items = [first];
   const callback = noop.useCallback((nativeEvent) => {
     if (null == first) {
@@ -40,20 +38,20 @@ export default function AppStoreOverlayAboutSection(children) {
   const intl = util.intl;
   const t = util.t;
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
-  let obj = { style: tmp.aboutSection, children: null };
-  obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: tmp.aboutSection, children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.CI0vSJ);
-  const items1 = [timestampProducer(Text_Text.Text, obj), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
+  obj2.children = intl2.string(util.t.CI0vSJ);
+  const items1 = [timestampProducer(Text_Text.Text, obj2), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
   let tmp13Result = true === first;
   if (tmp13Result) {
-    obj = { hitSlop: rect, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, children: null };
-    const obj1 = { expanded: tmp3 };
-    obj.accessibilityState = obj1;
-    obj.onPress = callback1;
-    const obj2 = { variant: "text-sm/medium", color: "text-link", children: stringResult };
-    obj.children = timestampProducer(Text_Text.Text, obj2);
-    tmp13Result = timestampProducer(React4, obj);
+    const obj3 = { hitSlop: rect, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, children: null };
+    const obj4 = { expanded: tmp3 };
+    obj3.accessibilityState = obj4;
+    obj3.onPress = callback1;
+    const obj5 = { variant: "text-sm/medium", color: "text-link", children: stringResult };
+    obj3.children = timestampProducer(Text_Text.Text, obj5);
+    tmp13Result = timestampProducer(React4, obj3);
   }
   items1[2] = tmp13Result;
   obj.children = items1;

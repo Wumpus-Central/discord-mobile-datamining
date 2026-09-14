@@ -1,13 +1,13 @@
-// === Module 16342: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 16344: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 16342 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16344 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import _modDef16343 from "module_16343" /* 16343 */;
+import _modDef16345 from "module_16345" /* 16345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,25 +24,25 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = closure_8();
-  let obj = {
+  const obj = {
     startExpanded: true,
     onDismiss() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
     children: null
   };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["v+Jm6X"]);
-  const items = [closure_6(Text_Text.Text, obj), , , , ];
-  const obj1 = { style: tmp.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: null };
+  obj3.children = intl.string(util.t["v+Jm6X"]);
+  const items = [closure_6(Text_Text.Text, obj3), , , , ];
+  const obj4 = { style: tmp.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.kUUFbG);
-  items[1] = closure_6(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16343 };
-  items[2] = closure_6(FastImageDefault, obj2);
-  const obj3 = {
+  obj4.children = intl2.string(util.t.kUUFbG);
+  items[1] = closure_6(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16345 };
+  items[2] = closure_6(FastImageDefault, obj5);
+  const obj6 = {
     onPress() {
       closure_1_1(ContentDismissActionType.UNKNOWN);
       GuildSettingsActionCreatorsDefault.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
@@ -50,10 +50,10 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     text: null
   };
   const intl3 = util.intl;
-  obj3.text = intl3.string(util.t.OgQQbG);
-  items[3] = closure_6(components_Button_Button.Button, obj3);
-  const obj4 = { style: tmp.dismissButton, children: null };
-  const obj5 = {
+  obj6.text = intl3.string(util.t.OgQQbG);
+  items[3] = closure_6(components_Button_Button.Button, obj6);
+  const obj7 = { style: tmp.dismissButton, children: null };
+  const obj8 = {
     onPress() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
@@ -61,10 +61,10 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     variant: "secondary"
   };
   const intl4 = util.intl;
-  obj5.text = intl4.string(util.t.WAI6xu);
-  obj4.children = closure_6(components_Button_Button.Button, obj5);
-  items[4] = closure_6(View, obj4);
-  obj.children = items;
-  obj.children = closure_7(View, obj);
+  obj8.text = intl4.string(util.t.WAI6xu);
+  obj7.children = closure_6(components_Button_Button.Button, obj8);
+  items[4] = closure_6(View, obj7);
+  obj2.children = items;
+  obj.children = closure_7(View, obj2);
   return closure_6(Sheet_BottomSheet.BottomSheet, obj);
 };

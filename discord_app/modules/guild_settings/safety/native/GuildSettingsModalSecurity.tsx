@@ -1,6 +1,6 @@
-// === Module 17716: GuildSettingsModalSecurity ===
+// === Module 17717: GuildSettingsModalSecurity ===
 
-// Module 17716 (GuildSettingsModalSecurity)
+// Module 17717 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 576 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import noop from "module_19" /* 19 */;
@@ -16,27 +16,20 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
-createStyles = { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-createStyles.center = createStyles;
-createStyles.label = { textAlign: "center", marginBottom: 8 };
-createStyles.image = { width: 295, height: 142, marginHorizontal: 35 };
-createStyles.infoWrapper = { marginBottom: 40 };
-createStyles.button = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
-let closure_15 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, label: { textAlign: "center", marginBottom: 8 }, image: { width: 295, height: 142, marginHorizontal: 35 }, infoWrapper: { marginBottom: 40 }, button: { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 } };
+let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
 export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_15();
-  let obj = guildId(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  let obj1 = guildId(504);
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  let obj = guildId(504);
   const items1 = [GuildSettingsStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => props.getProps().mfaLevel);
+  const stateFromStores1 = guildId(504).useStateFromStores(items1, () => props.getProps().mfaLevel);
   const currentUser = UserStore.getCurrentUser();
   dependencyMap = tmp7;
   let mfaEnabled;
@@ -56,21 +49,21 @@ export default function GuildSettingsModalSecurity(guildId) {
     tmp9 = tmp11;
   }
   const items2 = [stateFromStores, stateFromStores1 === constants2.ELEVATED];
-  obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items3 = [tmp.wrapper, guildId.contentContainerStyle];
-  obj.style = items3;
-  obj = { style: tmp.center, children: null };
+  obj3.style = items3;
+  const obj4 = { style: tmp.center, children: null };
   const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
-      let updateMFALevelResult = { guildId: tmp.id, level: closure_2 ? constants2.NONE : constants2.ELEVATED };
-      updateMFALevelResult = updateMFALevelResult.updateMFALevel(updateMFALevelResult);
+      let obj2 = { guildId: tmp.id, level: closure_2 ? constants2.NONE : constants2.ELEVATED };
+      obj2 = GuildSettingsActionCreatorsDefault.updateMFALevel(obj2);
     }
   }, items2);
-  obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
-  obj1.children = intl.string(guildId(1114).t.Wi9LEV);
-  const items4 = [closure_12(guildId(4632).Text, obj1), , ];
-  const obj2 = { style: tmp.button, children: null };
+  obj5.children = intl.string(guildId(1114).t.Wi9LEV);
+  const items4 = [closure_12(guildId(4632).Text, obj5), , ];
+  const obj6 = { style: tmp.button, children: null };
   const intl2 = tmp2(1114).intl;
   const string = intl2.string;
   const t = tmp2(1114).t;
@@ -79,15 +72,15 @@ export default function GuildSettingsModalSecurity(guildId) {
   } else {
     stringResult = string(t.yZcYGa);
   }
-  const obj3 = { text: stringResult, disabled: !tmp9, variant: null, onPress: null, shrink: true };
+  const obj7 = { text: stringResult, disabled: !tmp9, variant: null, onPress: null, shrink: true };
   let str = "primary";
   if (stateFromStores1 === constants2.ELEVATED) {
     str = "destructive";
   }
-  obj3.variant = str;
-  obj3.onPress = callback;
-  obj2.children = closure_12(guildId(5056).Button, obj3);
-  items4[1] = closure_12(closure_4, obj2);
+  obj7.variant = str;
+  obj7.onPress = callback;
+  obj6.children = closure_12(guildId(5056).Button, obj7);
+  items4[1] = closure_12(closure_4, obj6);
   let hasItem;
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -95,27 +88,28 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   let tmp17Result = null;
   if (hasItem) {
-    const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+    const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
-    obj4.children = intl3.string(tmp2(1114).t["KG1V/E"]);
-    tmp17Result = closure_12(tmp2(4632).Text, obj4);
+    obj8.children = intl3.string(tmp2(1114).t["KG1V/E"]);
+    tmp17Result = closure_12(tmp2(4632).Text, obj8);
   }
-  const obj5 = { children: null };
+  const obj9 = { children: null };
   items4[2] = tmp17Result;
-  obj.children = items4;
-  const items5 = [closure_13(closure_4, obj), ];
-  const obj6 = { style: tmp.center, children: null };
-  const items6 = [closure_12(closure_5, { source: stateFromStores(14880), style: tmp.image, resizeMode: "contain" }), ];
-  const obj8 = { style: tmp.infoWrapper, children: null };
-  const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
+  obj4.children = items4;
+  const items5 = [closure_13(closure_4, obj4), ];
+  const obj10 = { style: tmp.center, children: null };
+  let obj2 = guildId(504);
+  const items6 = [closure_12(closure_5, { source: stateFromStores(14881), style: tmp.image, resizeMode: "contain" }), ];
+  const obj12 = { style: tmp.infoWrapper, children: null };
+  const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1114).intl;
-  obj9.children = intl4.format(guildId(1114).t["FK0+iX"], {});
-  obj8.children = closure_12(guildId(4632).Text, obj9);
-  items6[1] = closure_12(closure_4, obj8);
-  obj6.children = items6;
-  items5[1] = closure_13(closure_4, obj6);
-  obj.children = items5;
-  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7143).NavScrim, {})];
-  obj5.children = items7;
-  return closure_13(closure_14, obj5);
+  obj13.children = intl4.format(guildId(1114).t["FK0+iX"], {});
+  obj12.children = closure_12(guildId(4632).Text, obj13);
+  items6[1] = closure_12(closure_4, obj12);
+  obj10.children = items6;
+  items5[1] = closure_13(closure_4, obj10);
+  obj3.children = items5;
+  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(7143).NavScrim, {})];
+  obj9.children = items7;
+  return closure_13(closure_14, obj9);
 };

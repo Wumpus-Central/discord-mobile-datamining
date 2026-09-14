@@ -45,8 +45,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -60,8 +60,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c22 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_18 = tmp;
           closure_17 = tmp4;
@@ -106,8 +106,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c22 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_145_3 = [];
           let _Set = Set;
@@ -141,13 +141,13 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
             continue;
           }
           closure_145_9 = {};
-          let obj7 = closure_146_0(closure_146_2[12]);
+          let obj8 = closure_146_0(closure_146_2[12]);
           let items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(closure_145_4, 0);
           c21 = 3;
           c22 = 1;
-          let obj2 = { value: obj7.fetchSubscriptionPlansBySKUs(items), done: false };
-          return obj2;
+          let obj5 = { value: obj8.fetchSubscriptionPlansBySKUs(items), done: false };
+          return obj5;
         }
       } else if (2 === tmp4) {
         c20 = 0;
@@ -159,8 +159,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c22 = 3;
-          let obj3 = { value, done: true };
-          return obj3;
+          let obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_145_10 = value;
           closure_6 = closure_145_10;
@@ -218,18 +218,18 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
                   closure_145_18 = usd;
                   amount = closure_145_17.amount;
                   closure_145_20 = closure_146_19[closure_145_14];
-                  let obj4 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: null, downloadable: false, description: null, title: null, type: null, subscriptionOffers: null };
-                  obj4.identifier = closure_145_13;
-                  obj4.price = amount;
-                  obj4.currencySymbol = closure_145_17.currency;
-                  obj4.currencyCode = closure_145_18;
+                  let obj7 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: null, downloadable: false, description: null, title: null, type: null, subscriptionOffers: null };
+                  obj7.identifier = closure_145_13;
+                  obj7.price = amount;
+                  obj7.currencySymbol = closure_145_17.currency;
+                  obj7.currencyCode = closure_145_18;
                   let str2 = "";
                   if (null != closure_145_17.currency) {
                     let result = amount / 100;
                     let _HermesInternal = HermesInternal;
                     str2 = "" + closure_145_17.currency + " " + result.toFixed(2);
                   }
-                  obj4.priceString = str2;
+                  obj7.priceString = str2;
                   let country_code;
                   if (closure_145_16 != null) {
                     country_code = closure_145_16.country_code;
@@ -238,7 +238,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
                   if (country_code == null) {
                     US = closure_146_0(closure_146_2[13]).CountryCodes.US;
                   }
-                  obj4.countryCode = US;
+                  obj7.countryCode = US;
                   let name;
                   if (closure_145_20 != null) {
                     name = closure_145_20.name;
@@ -250,7 +250,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
                   if (name == null) {
                     description = "";
                   }
-                  obj4.description = description;
+                  obj7.description = description;
                   let name1;
                   if (closure_145_20 != null) {
                     name1 = closure_145_20.name;
@@ -263,29 +263,29 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
                   if (name == null) {
                     title = "";
                   }
-                  obj4.title = title;
+                  obj7.title = title;
                   let str3 = "subs";
                   if (closure_145_2) {
                     str3 = "inapp";
                   }
-                  obj4.type = str3;
-                  obj4.subscriptionOffers = [];
-                  let arr = closure_145_3.push(obj4);
+                  obj7.type = str3;
+                  obj7.subscriptionOffers = [];
+                  let arr = closure_145_3.push(obj7);
                 } else {
-                  let obj5 = { productId: null, planId: null, priceSetAssignmentType: null };
-                  obj5.productId = closure_145_13;
-                  obj5.planId = closure_145_14;
-                  obj5.priceSetAssignmentType = closure_145_1;
-                  let warnResult = closure_146_22.warn("[fetchDesktopSubscriptionSkus] No price info found", obj5);
+                  let obj9 = { productId: null, planId: null, priceSetAssignmentType: null };
+                  obj9.productId = closure_145_13;
+                  obj9.planId = closure_145_14;
+                  obj9.priceSetAssignmentType = closure_145_1;
+                  let warnResult = closure_146_22.warn("[fetchDesktopSubscriptionSkus] No price info found", obj9);
                 }
               } else {
-                let obj6 = { productId: null, planId: null };
-                obj6.productId = closure_145_13;
-                obj6.planId = closure_145_14;
-                let warnResult1 = closure_146_22.warn("[fetchDesktopSubscriptionSkus] Plan not found", obj6);
+                let obj10 = { productId: null, planId: null };
+                obj10.productId = closure_145_13;
+                obj10.planId = closure_145_14;
+                let warnResult1 = closure_146_22.warn("[fetchDesktopSubscriptionSkus] Plan not found", obj10);
               }
             } else {
-              obj = { productId: null };
+              let obj = { productId: null };
               obj.productId = closure_145_13;
               let warnResult2 = closure_146_22.warn("[fetchDesktopSubscriptionSkus] No plan ID found", obj);
             }
@@ -293,8 +293,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
             continue;
           }
           c22 = 3;
-          obj7 = { value: closure_145_3, done: true };
-          return obj7;
+          let obj11 = { value: closure_145_3, done: true };
+          return obj11;
         }
       } else if (4 === tmp4) {
         c20 = 0;
@@ -320,8 +320,8 @@ let closure_32 = async function _loadUserCountry() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -334,29 +334,28 @@ let closure_32 = async function _loadUserCountry() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: importDefaultResultResult3(), done: false };
-          return obj1;
+          const obj4 = { value: importDefaultResultResult3(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_128_0 = value;
-        obj = closure_129_1(closure_129_2[14]);
-        const obj3 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
-        obj.dispatch(obj3);
+        const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
+        closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -375,26 +374,26 @@ let closure_33 = async function _subscribe(arg0) {
   if (1 === tmp7) {
     c9 = 0;
     closure_134_3 = closure_8;
-    const obj2 = { productId: closure_134_0, oldProductId: null };
+    const obj8 = { productId: closure_134_0, oldProductId: null };
     let oldProductId = closure_134_1;
     if (closure_134_1 == null) {
       oldProductId = "";
     }
-    const obj3 = { tags: null };
-    obj2.oldProductId = oldProductId;
-    obj3.tags = obj2;
-    const result = closure_135_0(closure_135_2[19]).captureBillingException(closure_134_3, obj3);
-    closure_135_1(closure_135_2[21]);
-    const obj4 = { title: null, body: null };
+    const obj9 = { tags: null };
+    obj8.oldProductId = oldProductId;
+    obj9.tags = obj8;
+    const result = closure_135_0(closure_135_2[19]).captureBillingException(closure_134_3, obj9);
+    closure_135_0(closure_135_2[19]);
+    const obj10 = { title: null, body: null };
     const intl = closure_135_0(closure_135_2[22]).intl;
-    obj4.title = intl.string(closure_135_0(closure_135_2[22]).t["U+H+kd"]);
+    obj10.title = intl.string(closure_135_0(closure_135_2[22]).t["U+H+kd"]);
     const intl2 = closure_135_0(closure_135_2[22]).intl;
-    obj4.body = intl2.string(closure_135_0(closure_135_2[22]).t.LFFx5G);
-    obj4.show(obj4);
+    obj10.body = intl2.string(closure_135_0(closure_135_2[22]).t.LFFx5G);
+    closure_135_1(closure_135_2[21]).show(obj10);
+    closure_135_1(closure_135_2[21]);
     closure_135_1(closure_135_2[20]).track(closure_135_13.GPLAY_PURCHASE_FAILED, { location: "subscribe", product_id: closure_134_0, offer_id: closure_134_2, error: closure_134_3.message });
     c11 = 3;
     closure_135_1(closure_135_2[20]);
-    closure_135_0(closure_135_2[19]);
   } else if (arg0 === 1) {
     c11 = 3;
     throw value;
@@ -416,8 +415,8 @@ let closure_34 = async function _verifyPurchase(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -430,8 +429,8 @@ let closure_34 = async function _verifyPurchase(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp5;
@@ -463,14 +462,14 @@ let closure_34 = async function _verifyPurchase(arg0) {
               tmp54 = null == gift_info_options.gift_style;
             }
             if (tmp54) {
-              let obj8 = _true(1242);
-              const obj1 = { source: "verifyPurchase", sku_id: closure_0.productId };
-              obj8.track(constants.GIFT_INFO_OPTIONS_MISSING, obj1);
+              const obj5 = { source: "verifyPurchase", sku_id: closure_0.productId };
+              _true(1240).track(constants.GIFT_INFO_OPTIONS_MISSING, obj5);
+              const obj9 = _true(1240);
             }
             c6 = 1;
-            const HTTP = closure_2_0(1272).HTTP;
+            const HTTP = closure_2_0(1270).HTTP;
             const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
-            const obj2 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
+            const obj6 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
             load_id = undefined;
             if (tmp77 != null) {
               load_id = tmp77.load_id;
@@ -478,29 +477,28 @@ let closure_34 = async function _verifyPurchase(arg0) {
             if (load_id == null) {
               load_id = null;
             }
-            obj2.load_id = load_id;
-            request.body = obj2;
+            obj6.load_id = load_id;
+            request.body = obj6;
             c7 = 2;
             c8 = 1;
-            let obj3 = { value: HTTP.post(request), done: false };
-            return obj3;
+            const obj8 = { value: HTTP.post(request), done: false };
+            return obj8;
           }
         } else if (1 === tmp8) {
           c6 = 0;
           closure_131_6 = closure_5;
-          obj3 = closure_132_0(closure_132_2[19]);
-          const obj4 = { tags: null };
-          const obj5 = { productId: closure_131_0.productId };
-          obj4.tags = obj5;
-          const result = obj3.captureBillingException(closure_131_6, obj4);
+          const obj10 = { tags: null };
+          const obj11 = { productId: closure_131_0.productId };
+          obj10.tags = obj11;
+          const result = closure_132_0(closure_132_2[19]).captureBillingException(closure_131_6, obj10);
           if (null != closure_131_1) {
             const succeededOnlyFields2 = closure_131_1.succeededOnlyFields;
             closure_131_5 = closure_132_7(closure_131_1, closure_132_6);
-            let obj6 = closure_132_1(closure_132_2[20]);
-            obj6 = {};
+            const obj12 = {};
             const merged = Object.assign(closure_131_5);
-            obj6.payment_gateway = closure_132_20.GOOGLE;
-            obj6.track(closure_132_13.PAYMENT_FLOW_FAILED, obj6);
+            obj12.payment_gateway = closure_132_20.GOOGLE;
+            closure_132_1(closure_132_2[20]).track(closure_132_13.PAYMENT_FLOW_FAILED, obj12);
+            const obj7 = closure_132_1(closure_132_2[20]);
           }
           throw closure_131_6;
         } else if (arg0 === 1) {
@@ -509,23 +507,23 @@ let closure_34 = async function _verifyPurchase(arg0) {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           closure_131_3 = value;
           if (null != closure_131_1) {
             if (!closure_131_2) {
               const succeededOnlyFields = closure_131_1.succeededOnlyFields;
               closure_131_4 = closure_132_7(closure_131_1, closure_132_5);
-              obj = closure_132_1(closure_132_2[20]);
-              obj.track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
+              closure_132_1(closure_132_2[20]).track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
               closure_132_9(closure_131_0.productId);
+              const obj = closure_132_1(closure_132_2[20]);
             }
           }
           c6 = 0;
           c8 = 3;
-          obj8 = { value: closure_131_3.body, done: true };
-          return obj8;
+          const obj14 = { value: closure_131_3.body, done: true };
+          return obj14;
         }
       } catch (tmp64) {
         closure_5 = tmp64;
@@ -562,8 +560,8 @@ asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -576,8 +574,8 @@ asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -598,8 +596,8 @@ asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           if (null != closure_129_0) {
             if (0 !== closure_129_0.length) {
@@ -609,26 +607,25 @@ asyncGeneratorStep(async () => {
               if (obj14.isGooglePlayBillingSupported()) {
                 c5 = 4;
                 c6 = 1;
-                const obj2 = { value: closure_130_21.getSubscriptionSkus(closure_129_0), done: false };
-                return obj2;
+                const obj7 = { value: closure_130_21.getSubscriptionSkus(closure_129_0), done: false };
+                return obj7;
               } else {
                 c5 = 3;
                 c6 = 1;
-                const obj3 = { value: closure_130_24(closure_129_0), done: false };
-                return obj3;
+                const obj8 = { value: closure_130_24(closure_129_0), done: false };
+                return obj8;
               }
               obj14 = closure_130_0(closure_130_2[15]);
             }
           }
           c6 = 3;
-          const obj4 = { value: [], done: true };
-          return obj4;
+          const obj9 = { value: [], done: true };
+          return obj9;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_2 = closure_3;
-        let obj5 = closure_130_1(closure_130_2[14]);
-        obj5.dispatch({ type: "GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED" });
+        closure_130_1(closure_130_2[14]).dispatch({ type: "GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED" });
         throw closure_129_2;
       } else {
         if (3 === tmp7) {
@@ -638,8 +635,8 @@ asyncGeneratorStep(async () => {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -647,21 +644,20 @@ asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         closure_129_1 = value;
-        obj1 = closure_130_1(closure_130_2[14]);
-        const obj6 = { type: "GPLAY_SUBSCRIPTION_SKUS_LOADED", skus: null, skusType: null };
+        const obj11 = { type: "GPLAY_SUBSCRIPTION_SKUS_LOADED", skus: null, skusType: null };
         const items = [];
         HermesBuiltin.arraySpread(closure_129_1, 0);
-        obj6.skus = items;
-        obj6.skusType = closure_130_17.SUBSCRIPTION;
-        obj1.dispatch(obj6);
+        obj11.skus = items;
+        obj11.skusType = closure_130_17.SUBSCRIPTION;
+        closure_130_1(closure_130_2[14]).dispatch(obj11);
         c4 = 0;
         c6 = 3;
-        const obj7 = { value: closure_129_1, done: true };
-        return obj7;
+        const obj12 = { value: closure_129_1, done: true };
+        return obj12;
       }
     } catch (tmp31) {
       closure_3 = tmp31;
@@ -688,8 +684,8 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -702,8 +698,8 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp7;
             closure_129_0 = closure_0;
@@ -721,16 +717,16 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj2;
+            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj6;
           }
         } else if (2 === tmp7) {
           c4 = 0;
@@ -762,16 +758,16 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
           closure_129_3 = true === hasItem1;
           let tmp21;
           if (null != closure_130_2) {
-            const obj3 = { source: tmp20 };
-            tmp21 = obj3;
+            const obj8 = { source: tmp20 };
+            tmp21 = obj8;
           }
           closure_129_4 = tmp21;
           if (!closure_129_1) {
             if (!closure_129_2) {
               if (!closure_129_3) {
-                let obj4 = closure_0(tmp3[19]);
-                obj4 = { tags: closure_129_4 };
-                const result = obj4.captureBillingException(closure_129_5, obj4);
+                const obj9 = { tags: closure_129_4 };
+                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
+                const obj5 = closure_0(tmp3[19]);
               }
               if (closure_130_1) {
                 throw closure_129_5;
@@ -783,9 +779,9 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            let obj6 = closure_0(tmp3[19]);
-            const obj5 = { tags: closure_129_4 };
-            const result1 = obj6.captureBillingException(closure_129_5, obj5);
+            const obj10 = { tags: closure_129_4 };
+            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
+            const obj7 = closure_0(tmp3[19]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -793,12 +789,12 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp50) {
@@ -823,8 +819,8 @@ asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -837,8 +833,8 @@ asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -859,8 +855,8 @@ asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           if (null != closure_129_0) {
             if (0 !== closure_129_0.length) {
@@ -870,12 +866,12 @@ asyncGeneratorStep(async () => {
               if (obj14.isGooglePlayBillingSupported()) {
                 c5 = 4;
                 c6 = 1;
-                const obj2 = { value: closure_130_21.getIAPSkus(closure_129_0), done: false };
-                return obj2;
+                const obj7 = { value: closure_130_21.getIAPSkus(closure_129_0), done: false };
+                return obj7;
               } else {
                 c5 = 3;
                 c6 = 1;
-                const obj3 = {
+                const obj8 = {
                   value: (function fetchDesktopInAppSkus(arg0) {
                                   const items = [];
                                   const iter = arg0[Symbol.iterator]();
@@ -898,20 +894,19 @@ asyncGeneratorStep(async () => {
                                 })(closure_129_0),
                   done: false
                 };
-                return obj3;
+                return obj8;
               }
               obj14 = closure_130_0(closure_130_2[15]);
             }
           }
           c6 = 3;
-          const obj4 = { value: [], done: true };
-          return obj4;
+          const obj9 = { value: [], done: true };
+          return obj9;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_2 = closure_3;
-        let obj5 = closure_130_1(closure_130_2[14]);
-        obj5.dispatch({ type: "GPLAY_FETCH_IN_APP_SKUS_FAILED" });
+        closure_130_1(closure_130_2[14]).dispatch({ type: "GPLAY_FETCH_IN_APP_SKUS_FAILED" });
         throw closure_129_2;
       } else {
         if (3 === tmp7) {
@@ -921,8 +916,8 @@ asyncGeneratorStep(async () => {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -930,21 +925,20 @@ asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         closure_129_1 = value;
-        obj1 = closure_130_1(closure_130_2[14]);
-        const obj6 = { type: "GPLAY_IN_APP_SKUS_LOADED", skus: null, skusType: null };
+        const obj11 = { type: "GPLAY_IN_APP_SKUS_LOADED", skus: null, skusType: null };
         let items = [];
         HermesBuiltin.arraySpread(closure_129_1, 0);
-        obj6.skus = items;
-        obj6.skusType = closure_130_17.IN_APP;
-        obj1.dispatch(obj6);
+        obj11.skus = items;
+        obj11.skusType = closure_130_17.IN_APP;
+        closure_130_1(closure_130_2[14]).dispatch(obj11);
         c4 = 0;
         c6 = 3;
-        const obj7 = { value: closure_129_1, done: true };
-        return obj7;
+        const obj12 = { value: closure_129_1, done: true };
+        return obj12;
       }
     } catch (tmp31) {
       closure_3 = tmp31;
@@ -971,8 +965,8 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -985,8 +979,8 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp7;
             closure_129_0 = closure_0;
@@ -1004,16 +998,16 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj2;
+            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj6;
           }
         } else if (2 === tmp7) {
           c4 = 0;
@@ -1045,16 +1039,16 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
           closure_129_3 = true === hasItem1;
           let tmp21;
           if (null != closure_130_2) {
-            const obj3 = { source: tmp20 };
-            tmp21 = obj3;
+            const obj8 = { source: tmp20 };
+            tmp21 = obj8;
           }
           closure_129_4 = tmp21;
           if (!closure_129_1) {
             if (!closure_129_2) {
               if (!closure_129_3) {
-                let obj4 = closure_0(tmp3[19]);
-                obj4 = { tags: closure_129_4 };
-                const result = obj4.captureBillingException(closure_129_5, obj4);
+                const obj9 = { tags: closure_129_4 };
+                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
+                const obj5 = closure_0(tmp3[19]);
               }
               if (closure_130_1) {
                 throw closure_129_5;
@@ -1066,9 +1060,9 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            let obj6 = closure_0(tmp3[19]);
-            const obj5 = { tags: closure_129_4 };
-            const result1 = obj6.captureBillingException(closure_129_5, obj5);
+            const obj10 = { tags: closure_129_4 };
+            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
+            const obj7 = closure_0(tmp3[19]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1076,12 +1070,12 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp50) {
@@ -1106,8 +1100,8 @@ asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1120,21 +1114,21 @@ asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const items = [importDefaultResultResult(), importDefaultResultResult1()];
           c1 = 1;
           c0 = 1;
-          const obj1 = { value: Promise.all(items), done: false };
-          return obj1;
+          const obj4 = { value: Promise.all(items), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -1160,8 +1154,8 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1174,8 +1168,8 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp7;
             closure_129_0 = closure_0;
@@ -1193,16 +1187,16 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj2;
+            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj6;
           }
         } else if (2 === tmp7) {
           c4 = 0;
@@ -1234,16 +1228,16 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
           closure_129_3 = true === hasItem1;
           let tmp21;
           if (null != closure_130_2) {
-            const obj3 = { source: tmp20 };
-            tmp21 = obj3;
+            const obj8 = { source: tmp20 };
+            tmp21 = obj8;
           }
           closure_129_4 = tmp21;
           if (!closure_129_1) {
             if (!closure_129_2) {
               if (!closure_129_3) {
-                let obj4 = closure_0(tmp3[19]);
-                obj4 = { tags: closure_129_4 };
-                const result = obj4.captureBillingException(closure_129_5, obj4);
+                const obj9 = { tags: closure_129_4 };
+                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
+                const obj5 = closure_0(tmp3[19]);
               }
               if (closure_130_1) {
                 throw closure_129_5;
@@ -1255,9 +1249,9 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            let obj6 = closure_0(tmp3[19]);
-            const obj5 = { tags: closure_129_4 };
-            const result1 = obj6.captureBillingException(closure_129_5, obj5);
+            const obj10 = { tags: closure_129_4 };
+            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
+            const obj7 = closure_0(tmp3[19]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1265,12 +1259,12 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp50) {
@@ -1299,8 +1293,8 @@ asyncGeneratorStep(async (arg0, arg1) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1313,8 +1307,8 @@ asyncGeneratorStep(async (arg0, arg1) => {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -1326,17 +1320,16 @@ asyncGeneratorStep(async (arg0, arg1) => {
           c6 = 1;
           v2 = 2;
           c8 = 1;
-          let obj1 = { value: BillingManager.purchase(closure_0, _true), done: false };
-          return obj1;
+          const obj6 = { value: BillingManager.purchase(closure_0, _true), done: false };
+          return obj6;
         }
       } else if (1 === tmp8) {
         c6 = 0;
         closure_131_4 = closure_5;
-        obj1 = closure_0(4309);
-        const obj2 = { tags: null };
-        const obj3 = { productId: closure_131_0 };
-        obj2.tags = obj3;
-        const result = obj1.captureBillingException(closure_131_4, obj2);
+        const obj7 = { tags: null };
+        const obj8 = { productId: closure_131_0 };
+        obj7.tags = obj8;
+        const result = closure_0(4309).captureBillingException(closure_131_4, obj7);
         dependencyMap = closure_131_1;
         if (closure_131_1 == null) {
           dependencyMap = {};
@@ -1344,13 +1337,13 @@ asyncGeneratorStep(async (arg0, arg1) => {
         closure_131_2 = dependencyMap;
         const succeededOnlyFields = closure_131_2.succeededOnlyFields;
         closure_131_3 = v2(closure_131_2, closure_3);
-        let obj4 = _true(1242);
-        obj4 = {};
+        const obj2 = closure_0(4309);
+        const obj9 = {};
         const merged = Object.assign(closure_131_3);
-        obj4.location = "purchase";
-        obj4.product_id = closure_131_0;
-        obj4.error = closure_131_4.message;
-        obj4.track(constants.GPLAY_PURCHASE_FAILED, obj4);
+        obj9.location = "purchase";
+        obj9.product_id = closure_131_0;
+        obj9.error = closure_131_4.message;
+        _true(1240).track(constants.GPLAY_PURCHASE_FAILED, obj9);
         throw closure_131_4;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -1358,7 +1351,7 @@ asyncGeneratorStep(async (arg0, arg1) => {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c6 = 0;
@@ -1384,8 +1377,8 @@ let closure_0 = asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1398,8 +1391,8 @@ let closure_0 = asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -1407,8 +1400,8 @@ let closure_0 = asyncGeneratorStep(async () => {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: BillingManager.getUserCountry(), done: false };
-            return obj1;
+            const obj5 = { value: BillingManager.getUserCountry(), done: false };
+            return obj5;
           } else {
             logger.info("[getUserCountry] Quest: Skipping Google Play country lookup");
             c5 = 3;
@@ -1427,7 +1420,7 @@ let closure_0 = asyncGeneratorStep(async () => {
         if (code !== String(closure_129_16.BILLING_CLIENT_NOT_READY)) {
           let hasItem;
           if (closure_128_0 != null) {
-            let message = closure_128_0.message;
+            const message = closure_128_0.message;
             if (message != null) {
               hasItem = message.includes("max attempts exceeded");
             }
@@ -1441,31 +1434,31 @@ let closure_0 = asyncGeneratorStep(async () => {
               }
             }
             if (true !== hasItem1) {
-              let obj2 = closure_129_0(closure_129_2[19]);
-              obj2 = { tags: { source: "getUserCountry" } };
-              const result = obj2.captureBillingException(closure_128_0, obj2);
+              const obj6 = { tags: { source: "getUserCountry" } };
+              const result = closure_129_0(closure_129_2[19]).captureBillingException(closure_128_0, obj6);
+              const obj3 = closure_129_0(closure_129_2[19]);
             }
             c5 = 3;
           }
         }
-        message = undefined;
+        let message1;
         if (closure_128_0 != null) {
-          message = closure_128_0.message;
+          message1 = closure_128_0.message;
         }
-        const obj3 = { error: message };
-        closure_129_22.warn("[getUserCountry] Failed to get user country from Google Play Billing", obj3);
+        const obj7 = { error: message1 };
+        closure_129_22.warn("[getUserCountry] Failed to get user country from Google Play Billing", obj7);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c3 = 0;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp31) {
@@ -1494,8 +1487,8 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1508,8 +1501,8 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp7;
             closure_129_0 = closure_0;
@@ -1527,16 +1520,16 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj2;
+            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj6;
           }
         } else if (2 === tmp7) {
           c4 = 0;
@@ -1568,16 +1561,16 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
           closure_129_3 = true === hasItem1;
           let tmp21;
           if (null != closure_130_2) {
-            const obj3 = { source: tmp20 };
-            tmp21 = obj3;
+            const obj8 = { source: tmp20 };
+            tmp21 = obj8;
           }
           closure_129_4 = tmp21;
           if (!closure_129_1) {
             if (!closure_129_2) {
               if (!closure_129_3) {
-                let obj4 = closure_0(tmp3[19]);
-                obj4 = { tags: closure_129_4 };
-                const result = obj4.captureBillingException(closure_129_5, obj4);
+                const obj9 = { tags: closure_129_4 };
+                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
+                const obj5 = closure_0(tmp3[19]);
               }
               if (closure_130_1) {
                 throw closure_129_5;
@@ -1589,9 +1582,9 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            let obj6 = closure_0(tmp3[19]);
-            const obj5 = { tags: closure_129_4 };
-            const result1 = obj6.captureBillingException(closure_129_5, obj5);
+            const obj10 = { tags: closure_129_4 };
+            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
+            const obj7 = closure_0(tmp3[19]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1599,12 +1592,12 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp50) {
@@ -1655,8 +1648,8 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1669,15 +1662,15 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_1 = tmp3;
                     closure_0 = tmp3;
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    obj = { value: importDefaultResultResult2(), done: false };
+                    const obj = { value: importDefaultResultResult2(), done: false };
                     return obj;
                   }
                 } else if (1 === tmp7) {
@@ -1789,12 +1782,12 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = _objectWithoutProperties(tmp, closure_4);
-    let obj = _true(getUserCountry[20]);
-    obj.track(constants.PAYMENT_FLOW_COMPLETED, tmp4);
-    obj = {};
+    _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_COMPLETED, tmp4);
+    const obj = _true(getUserCountry[20]);
+    const obj3 = {};
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
-    _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj);
+    _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj3);
     React7(productId.productId);
     const obj2 = _true(getUserCountry[20]);
   }
@@ -1808,15 +1801,15 @@ export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, 
         if (null != tmp) {
           if (null != tmp2.billingPeriod) {
             if (null != tmp.billingPeriod) {
-              let obj = closure_0(getUserCountry[19]);
+              closure_0(getUserCountry[19]);
             }
           }
         }
       }
-      obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
-      obj = { purchaseToken, subscriptionId, newSubscriptionSkuId: tmp.identifier };
-      obj.pendingDowngrade = obj;
-      _true(getUserCountry[14]).dispatch(obj);
+      const obj3 = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
+      const obj4 = { purchaseToken, subscriptionId, newSubscriptionSkuId: tmp.identifier };
+      obj3.pendingDowngrade = obj4;
+      _true(getUserCountry[14]).dispatch(obj3);
       const obj2 = _true(getUserCountry[14]);
     }
   }

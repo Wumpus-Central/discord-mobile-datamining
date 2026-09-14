@@ -3,6 +3,8 @@
 // Module 4281 (AutomodPermissionUtils)
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 let items = [, , ];

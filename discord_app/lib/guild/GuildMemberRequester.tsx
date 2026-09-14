@@ -32,8 +32,8 @@ prototype["flushRequests"] = function flushRequests(fn) {
   const self = this;
   if (0 !== this._pendingRequests.size) {
     const items = [];
-    let _pendingRequests = self._pendingRequests;
-    const item = _pendingRequests.forEach((item) => {
+    const _pendingRequests1 = self._pendingRequests;
+    const item = _pendingRequests1.forEach((item) => {
       if (!self._guildMemberExists(item)) {
         const _unacknowledgedRequests = self._unacknowledgedRequests;
         _unacknowledgedRequests.add(item);
@@ -45,7 +45,7 @@ prototype["flushRequests"] = function flushRequests(fn) {
     if (items.length > 0) {
       fn(self._guildId, items);
     }
-    _pendingRequests = self._pendingRequests;
+    const _pendingRequests = self._pendingRequests;
     _pendingRequests.clear();
   }
 };

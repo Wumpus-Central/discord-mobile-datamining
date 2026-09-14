@@ -1,15 +1,15 @@
-// === Module 17340: NativeAppStartup ===
+// === Module 17342: NativeAppStartup ===
 
-// Module 17340 (NativeAppStartup)
+// Module 17342 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import Storage4 from "Storage" /* 510 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2003 */;
 import timeRequireDefault from "timeRequire" /* 7595 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13726 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13727 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -103,12 +103,13 @@ function sharedInit() {
       closure_2.push(getData);
     }
   }
-  obj = require("BundleUpdater");
-  let result = obj.setupOTAAssetFallback();
+  let result = require("BundleUpdater").setupOTAAssetFallback();
   const Emitter = require("initialize").Emitter;
   const result1 = Emitter.injectBatchEmitChanges(require("ReactBatchUpdates").batchUpdates);
   const TelemetryRingLifecycle = require("TelemetryRingLifecycle").TelemetryRingLifecycle;
   TelemetryRingLifecycle.initialize();
+  obj = require("BundleUpdater");
+  const tmp4 = _require;
   const result2 = require("websocketTelemetryHook").installWebsocketTelemetryHook((arg0) => {
     closure_1(handleNotification[22]).append(constants.WEBSOCKET_MESSAGE_RECEIVED, arg0);
   });
@@ -121,20 +122,19 @@ function sharedInit() {
     if (!isAndroidResult) {
       promise.then(() => {
         closure_2_20.log("Handling URL: " + url);
+        closure_1(handleNotification[24]).mark("\u2757", "Handle URL " + url);
+        const obj2 = { url, source: null };
         obj = closure_1(handleNotification[24]);
-        obj.mark("\u2757", "Handle URL " + url);
-        obj = { url, source: null };
         const DeeplinkSource = url(handleNotification[14]).DeeplinkSource;
-        obj.source = linkFromAppsFlyer(url) ? DeeplinkSource.AppsFlyer : DeeplinkSource.OS;
-        closure_1(handleNotification[15])("handleURL", () => closure_1_0(paths[16])).default(obj, false);
+        obj2.source = linkFromAppsFlyer(url) ? DeeplinkSource.AppsFlyer : DeeplinkSource.OS;
+        closure_1(handleNotification[15])("handleURL", () => closure_1_0(paths[16])).default(obj2, false);
         const tmp5 = linkFromAppsFlyer(url);
       });
     }
     obj = url(handleNotification[23]);
   });
   closure_9.ignoreLogs(["Non-serializable values were found in the navigation state", "Overriding previous layout animation with new one before the first began", "Check the render method of `SceneView`", "Open debugger to view warnings."]);
-  const obj2 = require("websocketTelemetryHook");
-  const tmp4 = _require;
+  let obj2 = require("websocketTelemetryHook");
   const initialBundleDownloaded = require("BundleUpdater").getInitialBundleDownloaded();
   initialBundleDownloaded.then((versionRequired) => {
     if (tmp) {
@@ -192,10 +192,10 @@ function sharedInit() {
   const listener3 = currentState.addEventListener("change", (event) => {
     const appStateChangeStart = closure_1(handleNotification[12]).imports.appStateChangeStart;
     appStateChangeStart.record();
+    closure_1(handleNotification[24]).resumeTracing();
     obj = closure_1(handleNotification[24]);
-    obj.resumeTracing();
-    obj = { message: "App state changed to " + event, category: "appState" };
-    closure_1(handleNotification[30]).addBreadcrumb(obj);
+    const obj2 = closure_1(handleNotification[30]);
+    obj2.addBreadcrumb({ message: "App state changed to " + event, category: "appState" });
     closure_1(handleNotification[15])("handleAppStateChange", () => _true(handleNotification[28])).default(event);
     const appStateChangeEnd = closure_1(handleNotification[12]).imports.appStateChangeEnd;
     appStateChangeEnd.record();
@@ -214,8 +214,8 @@ function sharedInit() {
   _require = false;
   importDefault = [];
   closure_2 = [];
-  let tmpResult = tmp(tmp2[33]);
-  const result3 = tmpResult.addNotificationEventListener("notification", (arg0) => {
+  const obj7 = new closure_7(require("NativeAppLifecycleModule"));
+  const result3 = require("PushNotification").addNotificationEventListener("notification", (arg0) => {
     const state = AppStateStore.getState();
     closure_20.log("Push notification received, the app state is " + state);
     if (state !== constants.ACTIVE) {
@@ -227,9 +227,9 @@ function sharedInit() {
       }
     }
   });
-  tmpResult = tmp(tmp2[33]);
-  const result4 = tmpResult.addNotificationEventListener("localNotification", handleLocalNotification);
-  obj = {
+  const tmpResult = require("PushNotification");
+  const result4 = require("PushNotification").addNotificationEventListener("localNotification", handleLocalNotification);
+  return {
     onStorageInitialize() {
       c0 = true;
       const item = closure_1.forEach(handleNotification);
@@ -238,7 +238,6 @@ function sharedInit() {
       closure_2.length = 0;
     }
   };
-  return obj;
 }
 let closure_27 = async function _trackFirstLaunched() {
   if (c6 === 2) {
@@ -248,8 +247,8 @@ let closure_27 = async function _trackFirstLaunched() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -262,8 +261,8 @@ let closure_27 = async function _trackFirstLaunched() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           const Storage2 = require("Storage").Storage;
@@ -272,14 +271,13 @@ let closure_27 = async function _trackFirstLaunched() {
             closure_3 = tmp18;
             const track = tmp18.track;
             const APP_FIRST_LAUNCHED = constants.APP_FIRST_LAUNCHED;
-            const obj1 = {};
-            let obj2 = require("PlatformUtils");
-            if (obj2.isAndroid()) {
+            const obj5 = {};
+            if (obj3.isAndroid()) {
               let IOS = constants.ANDROID;
             } else {
               IOS = constants.IOS;
             }
-            obj1.platform = IOS;
+            obj5.platform = IOS;
             InstallReferrer = InstallReferrer.InstallReferrer;
             value = undefined;
             if (InstallReferrer != null) {
@@ -287,8 +285,8 @@ let closure_27 = async function _trackFirstLaunched() {
             }
             c5 = 1;
             c6 = 1;
-            obj2 = { value, done: false };
-            return obj2;
+            const obj6 = { value, done: false };
+            return obj6;
           } else {
             c6 = 3;
           }
@@ -297,8 +295,8 @@ let closure_27 = async function _trackFirstLaunched() {
         c6 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        obj1.referrer = value;
-        track(APP_FIRST_LAUNCHED, obj1);
+        obj5.referrer = value;
+        track(APP_FIRST_LAUNCHED, obj5);
         const Storage = closure_130_0(closure_130_3[34]).Storage;
         const result = Storage.set(closure_130_15.APP_FIRST_LAUNCHED, false);
       }
@@ -398,8 +396,8 @@ let closure_38 = async function _init(_payload) {
     if (_payload === 1) {
       throw value;
     } else if (_payload === 2) {
-      obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -413,8 +411,8 @@ let closure_38 = async function _init(_payload) {
           throw value;
         } else if (_payload === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp2;
@@ -483,8 +481,8 @@ let closure_38 = async function _init(_payload) {
             throw value;
           } else if (_payload === 2) {
             c3 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_128_2 = value;
             closure_128_3 = closure_129_4(closure_128_2, 2);
@@ -497,8 +495,8 @@ let closure_38 = async function _init(_payload) {
                 closure_128_6 = closure_129_0(closure_129_3[46]).default;
                 c2 = 2;
                 c3 = 1;
-                let obj2 = { value: closure_128_6.yieldConfig(), done: false };
-                return obj2;
+                const obj11 = { value: closure_128_6.yieldConfig(), done: false };
+                return obj11;
               }
             }
             obj18 = closure_129_0(closure_129_3[23]);
@@ -509,8 +507,8 @@ let closure_38 = async function _init(_payload) {
             throw value;
           } else if (_payload === 2) {
             c3 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
+            const obj12 = { value, done: true };
+            return obj12;
           }
         } else if (_payload === 1) {
           c3 = 3;
@@ -533,8 +531,8 @@ let closure_38 = async function _init(_payload) {
             closure_128_19.init();
           }
           closure_129_0(closure_129_3[66]);
+          const sessionHeartbeatScheduler = closure_129_0(closure_129_3[67]).initSessionHeartbeatScheduler();
           obj = closure_129_0(closure_129_3[67]);
-          const sessionHeartbeatScheduler = obj.initSessionHeartbeatScheduler();
         }
         if (closure_128_0) {
           let resolved = Promise.resolve();
@@ -542,8 +540,7 @@ let closure_38 = async function _init(_payload) {
           resolved = closure_129_35({ log: true });
         }
         closure_128_7 = resolved;
-        obj3 = closure_129_1(closure_129_3[24]);
-        obj3.markAndLog(closure_129_20, "\u{1F3C3}", "The initial promise has resolved");
+        closure_129_1(closure_129_3[24]).markAndLog(closure_129_20, "\u{1F3C3}", "The initial promise has resolved");
         let tmp34 = null != closure_128_4;
         if (tmp34) {
           tmp34 = closure_128_4.length > num2;
@@ -580,16 +577,17 @@ let closure_38 = async function _init(_payload) {
           closure_1_0(paths[47]);
         });
         if (closure_128_0) {
-          let obj5 = closure_129_1(closure_129_3[24]);
-          obj5.markAndLog(closure_129_20, "\u{1F3C3}", "Flux already initialized.");
+          closure_129_1(closure_129_3[24]).markAndLog(closure_129_20, "\u{1F3C3}", "Flux already initialized.");
+          const obj6 = closure_129_1(closure_129_3[24]);
         } else {
-          let obj4 = closure_129_1(closure_129_3[24]);
-          obj4.time("\u{1F3C3}", "Flux.initialize()", () => {
+          closure_129_1(closure_129_3[24]).time("\u{1F3C3}", "Flux.initialize()", () => {
             closure_1_1(paths[18]).initialize();
             closure_1_20.verbose("Flux has initialized");
           });
+          const obj5 = closure_129_1(closure_129_3[24]);
         }
         closure_129_1(closure_129_3[48])();
+        const obj4 = closure_129_1(closure_129_3[24]);
         const result3 = closure_129_0(closure_129_3[49]).setupLibdiscoreTimersMonitor();
         const item = closure_128_4.forEach((url) => {
           url = url.url;
@@ -604,8 +602,8 @@ let closure_38 = async function _init(_payload) {
         if (!closure_128_8) {
           channelId = closure_129_12.getChannelId();
           if (null != channelId) {
-            obj4 = { channelId, isPreload: true, skipLocalFetch: true, fetchKey: closure_129_0(closure_129_3[51]).INITIAL_MESSAGE_FETCH_KEY };
-            const messages = closure_129_1(closure_129_3[50]).fetchMessages(obj4);
+            const obj16 = { channelId, isPreload: true, skipLocalFetch: true, fetchKey: closure_129_0(closure_129_3[51]).INITIAL_MESSAGE_FETCH_KEY };
+            const messages = closure_129_1(closure_129_3[50]).fetchMessages(obj16);
             const obj8 = closure_129_1(closure_129_3[50]);
           }
         }
@@ -615,11 +613,11 @@ let closure_38 = async function _init(_payload) {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[42])(paths[52], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[53]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(14526).updateSaturation(closure_0(4628).default.saturation);
-            obj = closure_0(14526);
-            closure_0(17073).updateVisualRefresh(true);
-            const obj2 = closure_0(17073);
-            closure_0(17074).updateTheme(closure_0(1183).default.theme);
+            closure_0(14527).updateSaturation(closure_0(4628).default.saturation);
+            obj = closure_0(14527);
+            closure_0(17075).updateVisualRefresh(true);
+            const obj2 = closure_0(17075);
+            closure_0(17076).updateTheme(closure_0(1181).default.theme);
             closure_1_0();
           }));
         });
@@ -648,8 +646,8 @@ let closure_38 = async function _init(_payload) {
         const allResult = items2.Promise.all(items1);
       }
       c3 = 3;
-      obj5 = { value, done: true };
-      return obj5;
+      const obj17 = { value, done: true };
+      return obj17;
     } catch (tmp198) {
       c3 = tmp;
       throw tmp198;
@@ -678,8 +676,8 @@ let closure_39 = async function _initHeadlessTask() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp2;
@@ -691,8 +689,8 @@ let closure_39 = async function _initHeadlessTask() {
             const items = [loadStorage(), loadKvStorage(), initializeIntl({ log: false })];
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: Promise.all(items), done: false };
-            return obj1;
+            const obj3 = { value: Promise.all(items), done: false };
+            return obj3;
           } else {
             c3 = 3;
           }
@@ -703,8 +701,8 @@ let closure_39 = async function _initHeadlessTask() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_129_40();
           onStorageInitialize();
@@ -720,8 +718,8 @@ let closure_39 = async function _initHeadlessTask() {
           const items1 = [closure_129_0(closure_129_3[42])(closure_129_3[65], closure_129_3.paths)];
           c2 = 2;
           c3 = 1;
-          const obj3 = { value: Promise.all(items1), done: false };
-          return obj3;
+          const obj5 = { value: Promise.all(items1), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -733,8 +731,8 @@ let closure_39 = async function _initHeadlessTask() {
         closure_129_1(closure_129_3[48])();
       }
       c3 = 3;
-      const obj4 = { value, done: true };
-      return obj4;
+      const obj6 = { value, done: true };
+      return obj6;
     } catch (tmp20) {
       c3 = tmp;
       throw tmp20;
@@ -760,19 +758,19 @@ function initializeTokenStorage() {
   }
   TokenManagerAll.init();
   const Storage3 = Storage4.Storage;
-  obj = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
-  obj.verbose("Token manager has initialized", obj);
-  global();
   const tmp12 = null != TokenManagerAll.getToken();
+  obj.verbose("Token manager has initialized", { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() });
+  global();
+  const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_17341 = fn(17341);
-const superagentPatch = fn(17391);
+const module_17343 = fn(17343);
+const superagentPatch = fn(17393);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(17411);
+const logThirdPartyImportsDone = fn(17413);
 let closure_11 = fn(2026).subscribeToIntlLoadingSuccess;
 const AnalyticsTrackingStore = fn(7563);
-const ManagerRegistry = fn(17412);
+const ManagerRegistry = fn(17414);
 const Constants = fn(1074);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;

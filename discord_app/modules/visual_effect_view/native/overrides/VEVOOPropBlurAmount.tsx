@@ -1,10 +1,12 @@
-// === Module 16022: VEVOOPropBlurAmount ===
+// === Module 16024: VEVOOPropBlurAmount ===
 
-// Module 16022 (VEVOOPropBlurAmount)
+// Module 16024 (VEVOOPropBlurAmount)
 import FormSwitch from "FormSwitch" /* 7304 */;
 import Form from "Form" /* 8716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const VEVOOStore = fn(5047);
@@ -38,8 +40,24 @@ export default noop.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  let obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: null, subLabel: null, disabled: !tmp3 };
-  obj = {
+  let obj = {
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
+      }
+    }),
+    subLabel: null,
+    disabled: !tmp3
+  };
+  const obj2 = {
     value: tmp3,
     onValueChange(arg0) {
       require(arg0);
@@ -50,28 +68,23 @@ export default noop.memo(function VEVOOPropBlurAmount() {
       callback(tmp3);
     }
   };
-  obj.leading = jsx(FormSwitch.FormSwitch, {
-    value: tmp3,
-    onValueChange(arg0) {
-      require(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first;
-      }
-      callback(tmp3);
-    }
-  });
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(16023), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(16025), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
-    value: tmp3,
-    onValueChange(arg0) {
-      require(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first;
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
       }
-      callback(tmp3);
-    }
+    }),
+    subLabel: null,
+    disabled: !tmp3
   });
 });

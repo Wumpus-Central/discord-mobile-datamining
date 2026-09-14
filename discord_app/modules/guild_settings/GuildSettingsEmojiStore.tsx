@@ -1,19 +1,19 @@
-// === Module 17676: GuildSettingsEmojiStore ===
+// === Module 17677: GuildSettingsEmojiStore ===
 
-// Module 17676 (GuildSettingsEmojiStore)
+// Module 17677 (GuildSettingsEmojiStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import EmojiRecord from "EmojiRecord" /* 17677 */;
+import EmojiRecord from "EmojiRecord" /* 17678 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import priv from "priv" /* 1437 */;
 
 const dependencyMap = {};
 const dependencyMap2 = {};
 let closure_4 = 0;
-let obj = { max: 5, maxAge: null };
+const obj = { max: 5, maxAge: null };
 obj.maxAge = DurationsDefault.Millis.HOUR;
-priv = new priv(obj);
+const importDefaultResult1 = new priv(obj);
 const Store = initializeDefault.Store;
 class GuildSettingsEmojiStore extends Store {
 }
@@ -35,10 +35,10 @@ prototype["getEmojis"] = function getEmojis(id) {
   return dependencyMap2[id];
 };
 prototype["getEmojiRawAsset"] = function getEmojiRawAsset(arg0) {
-  return priv.get(arg0);
+  return importDefaultResult1.get(arg0);
 };
 GuildSettingsEmojiStore.displayName = "GuildSettingsEmojiStore";
-obj = {
+const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, {
   EMOJI_DELETE: function handleEmojiDelete(arg0) {
     ({ guildId, emojiId: EmojiRecord } = arg0);
     dependencyMap2[guildId] = dependencyMap2[guildId].filter((id) => id.id !== EmojiRecord);
@@ -57,7 +57,7 @@ obj = {
     closure_4 = closure_4 - 1;
   },
   EMOJI_CACHE_RAW_EMOJI_ASSET: function handleCacheRawEmojiAsset(emojiId) {
-    const result = priv.set(emojiId.emojiId, emojiId.userImage);
+    const result = importDefaultResult1.set(emojiId.emojiId, emojiId.userImage);
   },
   GUILD_EMOJIS_UPDATE: function handleGuildEmojiUpdate(guildId) {
     guildId = guildId.guildId;
@@ -67,8 +67,7 @@ obj = {
     }
     dependencyMap[guildId] = num + 1;
   }
-};
-const guildSettingsEmojiStore = new GuildSettingsEmojiStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");
 

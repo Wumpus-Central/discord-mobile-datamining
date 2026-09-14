@@ -1,6 +1,6 @@
-// === Module 16869: PortalKeyboardRendererComponent ===
+// === Module 16871: PortalKeyboardRendererComponent ===
 
-// Module 16869 (PortalKeyboardRendererComponent)
+// Module 16871 (PortalKeyboardRendererComponent)
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7324 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -37,13 +37,13 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
   if (null != memo) {
     if (undefined !== memo1) {
       if (channelId(memo[4]).KeyboardTypes.APP_LAUNCHER === type) {
-        let obj = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp11(tmp12[6]).AppLauncherEntrypoint.TEXT };
+        const obj2 = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp11(tmp12[6]).AppLauncherEntrypoint.TEXT };
         return jsx(channel(tmp12[5]), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp11(tmp12[6]).AppLauncherEntrypoint.TEXT });
       } else if (tmp11(tmp12[4]).KeyboardTypes.MEDIA === type) {
-        obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
+        const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
         return jsx(channel(tmp12[7]), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else if (tmp11(tmp12[4]).KeyboardTypes.EXPRESSION === type) {
-        obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
+        let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
         return jsx(channel(tmp12[8]), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else {
         return null;

@@ -1,18 +1,20 @@
-// === Module 16041: RegistrationUIStore ===
+// === Module 16043: RegistrationUIStore ===
 
-// Module 16041 (RegistrationUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 16043 (RegistrationUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "call" }));
+const require = globalThis.__r;
+
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "HermesInternal" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };
 export const setRegistrationErrors = function setRegistrationErrors(errors) {
   _require = errors;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj = { errors };
+    const obj = { errors };
     obj.setState(obj);
   });
 };
@@ -20,22 +22,21 @@ export const clearRegistrationErrorMessage = function clearRegistrationErrorMess
   let errors = {};
   const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  errors(1249).batchUpdates(() => {
+  errors(1247).batchUpdates(() => {
     errors = { errors };
     errors.setState(errors);
   });
 };
 export const updateRegistrationOptions = function updateRegistrationOptions(arg0) {
   _require = arg0;
-  let registrationOptions = obj.getState().registrationOptions;
+  const registrationOptions = obj.getState().registrationOptions;
   obj = require("ReactBatchUpdates");
   obj.batchUpdates(() => {
-    registrationOptions = { registrationOptions: null };
-    registrationOptions = {};
+    const obj = { registrationOptions: null };
     const merged = Object.assign(registrationOptions);
     const merged1 = Object.assign(closure_0);
-    registrationOptions.registrationOptions = registrationOptions;
-    registrationOptions.setState(registrationOptions);
+    obj.registrationOptions = {};
+    obj.setState(obj);
   });
 };
 export const resetRegistration = function resetRegistration() {
@@ -46,7 +47,7 @@ export const resetRegistration = function resetRegistration() {
 export const setSubmitting = function setSubmitting(submitting) {
   _require = submitting;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj = { errors: {}, submitting };
+    const obj = { errors: {}, submitting };
     obj.setState(obj);
   });
 };

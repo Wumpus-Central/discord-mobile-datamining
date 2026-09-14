@@ -1,7 +1,7 @@
-// === Module 12552: TransitionGroup ===
+// === Module 12553: TransitionGroup ===
 
-// Module 12552 (TransitionGroup)
-import TransitionChildMapping from "TransitionChildMapping" /* 12553 */;
+// Module 12553 (TransitionGroup)
+import TransitionChildMapping from "TransitionChildMapping" /* 12554 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,12 +63,12 @@ const prototype = TransitionGroup.prototype;
 TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children, arg1) {
   ({ children, firstRender } = arg1);
   const childMapping = TransitionChildMapping.getChildMapping(children.children);
-  children = childMapping;
+  let children1 = childMapping;
   if (!firstRender) {
-    children = TransitionChildMapping.mergeChildMappings(children, childMapping);
+    children1 = TransitionChildMapping.mergeChildMappings(children, childMapping);
     const tmpResult = TransitionChildMapping;
   }
-  return { children, firstRender: false };
+  return { children: children1, firstRender: false };
 };
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
@@ -105,8 +105,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       const item1 = _keysToLeave.forEach(self.performLeave, self);
     }
   }
-  let obj = TransitionChildMapping;
-  const childMapping = obj.getChildMapping(self.props.children);
+  const childMapping = TransitionChildMapping.getChildMapping(self.props.children);
   children = children2.children;
   if (self.props.transitionEnter) {
     self._enqueueTransitions(childMapping, children, self._keysToEnter);
@@ -128,8 +127,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       } while (num4 < length);
     }
     if (self._isMounted) {
-      obj = { children: mergeChildMappingsResult };
-      self.setState(obj);
+      const obj2 = { children: mergeChildMappingsResult };
+      self.setState(obj2);
     }
     if (self._keysToLeave.length > 0) {
       self._keysToLeave = [];
@@ -248,7 +247,6 @@ prototype["render"] = function render() {
     }
     continue;
   }
-  obj = {};
   const merged = Object.assign(this.props);
   const keys = Object.keys(TransitionGroup.defaultProps);
   const item = keys.forEach((item) => {

@@ -1,14 +1,14 @@
-// === Module 11477: SummaryActionCreators ===
+// === Module 11478: SummaryActionCreators ===
 
-// Module 11477 (SummaryActionCreators)
+// Module 11478 (SummaryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SummaryStore from "SummaryStore" /* 11478 */;
+import SummaryStore from "SummaryStore" /* 11479 */;
 
 require = fn;
 function fetchSummary() {
@@ -33,8 +33,8 @@ let closure_13 = async function _fetchSummary() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -48,8 +48,8 @@ let closure_13 = async function _fetchSummary() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_3 = tmp3;
             closure_130_0 = channelId;
@@ -61,18 +61,17 @@ let closure_13 = async function _fetchSummary() {
               const _Date2 = Date;
               const timestamp = Date.now();
               closure_130_1 = timestamp;
-              let obj3 = DispatcherDefault;
-              let obj1 = { type: "REQUEST_CHANNEL_SUMMARY", channelId, summaryId, requestedAt: timestamp };
-              obj3.dispatch(obj1);
+              const obj6 = { type: "REQUEST_CHANNEL_SUMMARY", channelId, summaryId, requestedAt: timestamp };
+              DispatcherDefault.dispatch(obj6);
               closure_130_2 = undefined;
               closure_130_3 = undefined;
               c5 = 1;
               const HTTP = HTTPUtils.HTTP;
-              const obj2 = { url: Routes.CHANNEL_SUMMARY(channelId, summaryId), rejectWithError: false };
+              const obj7 = { url: Routes.CHANNEL_SUMMARY(channelId, summaryId), rejectWithError: false };
               c6 = 2;
               c7 = 1;
-              obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
+              const obj8 = { value: HTTP.get(obj7), done: false };
+              return obj8;
             }
           }
         } else {
@@ -87,7 +86,7 @@ let closure_13 = async function _fetchSummary() {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_130_4 = value;
@@ -98,11 +97,11 @@ let closure_13 = async function _fetchSummary() {
             closure_130_3 = body;
             c5 = 0;
           }
-          obj1 = closure_131_1(closure_131_2[7]);
-          const obj4 = { type: "RECEIVE_CHANNEL_SUMMARY", channelId: closure_130_0, summary: closure_130_3, error: closure_130_2, requestedAt: closure_130_1, receivedAt: null };
+          const obj9 = { type: "RECEIVE_CHANNEL_SUMMARY", channelId: closure_130_0, summary: closure_130_3, error: closure_130_2, requestedAt: closure_130_1, receivedAt: null };
           const _Date = Date;
-          obj4.receivedAt = Date.now();
-          dispatchResult1 = obj1.dispatch(obj4);
+          obj9.receivedAt = Date.now();
+          dispatchResult1 = closure_131_1(closure_131_2[7]).dispatch(obj9);
+          const obj2 = closure_131_1(closure_131_2[7]);
         }
         c7 = 3;
       } catch (tmp37) {
@@ -139,8 +138,8 @@ let closure_14 = async function _fetchSummaries() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -154,8 +153,8 @@ let closure_14 = async function _fetchSummaries() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_4 = tmp3;
             closure_131_0 = channelId;
@@ -167,18 +166,17 @@ let closure_14 = async function _fetchSummaries() {
               const _Date2 = Date;
               const timestamp = Date.now();
               closure_131_1 = timestamp;
-              let obj4 = DispatcherDefault;
-              let obj1 = { type: "REQUEST_CHANNEL_SUMMARIES", channelId, requestedAt: timestamp };
-              obj4.dispatch(obj1);
+              const obj7 = { type: "REQUEST_CHANNEL_SUMMARIES", channelId, requestedAt: timestamp };
+              DispatcherDefault.dispatch(obj7);
               closure_131_2 = undefined;
               closure_131_3 = undefined;
               c6 = 1;
               const HTTP = HTTPUtils.HTTP;
-              let obj2 = { url: Routes.CHANNEL_SUMMARIES(channelId), rejectWithError: false };
+              const obj8 = { url: Routes.CHANNEL_SUMMARIES(channelId), rejectWithError: false };
               c7 = 2;
               c8 = 1;
-              const obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
+              const obj9 = { value: HTTP.get(obj8), done: false };
+              return obj9;
             }
           }
         } else {
@@ -193,47 +191,47 @@ let closure_14 = async function _fetchSummaries() {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_131_3 = value;
             c6 = 0;
           }
-          let summaries;
+          let summaries1;
           if (closure_131_3 != null) {
-            let body = closure_131_3.body;
+            const body = closure_131_3.body;
             if (body != null) {
-              summaries = body.summaries;
+              summaries1 = body.summaries;
             }
           }
           const _Array = Array;
-          if (summaries instanceof Array) {
-            summaries = tmp23.body.summaries;
+          if (summaries1 instanceof Array) {
+            let summaries = tmp23.body.summaries;
           } else {
-            body = undefined;
+            let body1;
             if (tmp23 != null) {
-              body = tmp23.body;
+              body1 = tmp23.body;
             }
-            closure_1 = body;
-            if (body == null) {
+            closure_1 = body1;
+            if (body1 == null) {
               closure_1 = [];
             }
             summaries = closure_1;
           }
           closure_131_4 = summaries;
-          obj1 = closure_132_1(closure_132_2[10]);
-          closure_131_4 = obj1.takeRight(closure_131_4, 75);
-          obj2 = closure_132_1(closure_132_2[7]);
-          obj4 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: closure_131_0, summaries: closure_131_4, error: null, requestedAt: null, receivedAt: null };
+          closure_131_4 = closure_132_1(closure_132_2[10]).takeRight(closure_131_4, 75);
+          const obj2 = closure_132_1(closure_132_2[10]);
+          const obj10 = { type: "RECEIVE_CHANNEL_SUMMARIES", channelId: closure_131_0, summaries: closure_131_4, error: null, requestedAt: null, receivedAt: null };
           error = closure_131_2;
           if (closure_131_2 == null) {
             error = undefined;
           }
-          obj4.error = error;
-          obj4.requestedAt = closure_131_1;
+          obj10.error = error;
+          obj10.requestedAt = closure_131_1;
           const _Date = Date;
-          obj4.receivedAt = Date.now();
-          dispatchResult1 = obj2.dispatch(obj4);
+          obj10.receivedAt = Date.now();
+          dispatchResult1 = closure_132_1(closure_132_2[7]).dispatch(obj10);
+          const obj3 = closure_132_1(closure_132_2[7]);
         }
         c8 = 3;
       } catch (tmp45) {
@@ -250,43 +248,41 @@ let closure_14 = async function _fetchSummaries() {
 };
 function setHighlightedSummary(channelId, arg1) {
   let tmp = arg1;
-  const obj = { type: "SET_HIGHLIGHTED_SUMMARY", channelId, summaryId: null };
+  const obj2 = { type: "SET_HIGHLIGHTED_SUMMARY", channelId, summaryId: null };
   if (arg1 == null) {
     tmp = null;
   }
-  obj.summaryId = tmp;
-  obj.dispatch(obj);
+  obj2.summaryId = tmp;
+  DispatcherDefault.dispatch(obj2);
 }
 function setSelectedSummary(channelId, summaryId) {
   let tmp = summaryId;
   if (tmp2) {
     fetchSummary(channelId, tmp);
   }
-  const obj = { type: "SET_SELECTED_SUMMARY", channelId, summaryId: null };
+  const obj2 = { type: "SET_SELECTED_SUMMARY", channelId, summaryId: null };
   if (tmp == null) {
     tmp = null;
   }
-  obj.summaryId = tmp;
-  obj.dispatch(obj);
+  obj2.summaryId = tmp;
+  DispatcherDefault.dispatch(obj2);
   tmp2 = null != channelId && null != tmp;
 }
 function updateVisibleMessages(arg0, arg1) {
   let tmp = arg0;
-  let obj = DispatcherDefault;
   if (arg0 == null) {
     tmp = null;
   }
   let tmp2 = arg1;
-  obj = { type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: tmp, bottomVisibleMessage: null };
+  const obj2 = { type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: tmp, bottomVisibleMessage: null };
   if (arg1 == null) {
     tmp2 = null;
   }
-  obj.bottomVisibleMessage = tmp2;
-  obj.dispatch(obj);
+  obj2.bottomVisibleMessage = tmp2;
+  DispatcherDefault.dispatch(obj2);
 }
 function setSummaryFeedback(summary, rating) {
-  const obj = { type: "SET_SUMMARY_FEEDBACK", summary, rating };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary, rating });
 }
 function fetchChannelAffinities() {
   const self = this;
@@ -306,8 +302,8 @@ let closure_16 = async function _fetchChannelAffinities() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -320,8 +316,8 @@ let closure_16 = async function _fetchChannelAffinities() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -333,21 +329,20 @@ let closure_16 = async function _fetchChannelAffinities() {
             const _Date2 = Date;
             const timestamp = Date.now();
             closure_129_0 = timestamp;
-            let obj4 = DispatcherDefault;
-            let obj1 = { type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: timestamp };
-            obj4.dispatch(obj1);
+            const obj6 = { type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: timestamp };
+            DispatcherDefault.dispatch(obj6);
             closure_129_1 = undefined;
             closure_129_2 = undefined;
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
             c5 = 2;
             c6 = 1;
-            const obj2 = { value: HTTP.get({ url: "/users/@me/affinities/channels", rejectWithError: false }), done: false };
-            return obj2;
+            const obj7 = { value: HTTP.get({ url: "/users/@me/affinities/channels", rejectWithError: false }), done: false };
+            return obj7;
           } else {
             c6 = 3;
-            const obj3 = { value: Promise.resolve(null), done: true };
-            return obj3;
+            const obj8 = { value: Promise.resolve(null), done: true };
+            return obj8;
           }
         }
       } else {
@@ -362,7 +357,7 @@ let closure_16 = async function _fetchChannelAffinities() {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_129_2 = value;
@@ -376,17 +371,16 @@ let closure_16 = async function _fetchChannelAffinities() {
           }
         }
         closure_129_3 = channel_affinities;
-        obj1 = closure_130_1(closure_130_2[7]);
-        obj4 = { type: "RECEIVE_CHANNEL_AFFINITIES", affinities: closure_129_3, error: null, requestedAt: null, receivedAt: null };
+        const obj9 = { type: "RECEIVE_CHANNEL_AFFINITIES", affinities: closure_129_3, error: null, requestedAt: null, receivedAt: null };
         let error = closure_129_1;
         if (closure_129_1 == null) {
           error = undefined;
         }
-        obj4.error = error;
-        obj4.requestedAt = closure_129_0;
+        obj9.error = error;
+        obj9.requestedAt = closure_129_0;
         const _Date = Date;
-        obj4.receivedAt = Date.now();
-        obj1.dispatch(obj4);
+        obj9.receivedAt = Date.now();
+        closure_130_1(closure_130_2[7]).dispatch(obj9);
         c6 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -474,22 +468,21 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     const summaries = closure_131_5.body.summaries;
   }
   closure_131_6 = summaries;
-  let obj1 = closure_132_1(closure_132_2[7]);
   const _Date = Date;
-  obj1.dispatch({ type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: closure_131_3, receivedAt: Date.now(), summaries: closure_131_6, requestArgs: { channelIds: closure_131_0 }, error: closure_131_4 });
+  closure_132_1(closure_132_2[7]).dispatch({ type: "RECEIVE_CHANNEL_SUMMARIES_BULK", requestedAt: closure_131_3, receivedAt: Date.now(), summaries: closure_131_6, requestArgs: { channelIds: closure_131_0 }, error: closure_131_4 });
   await "HermesInternal";
   closure_4 = tmp3;
   closure_131_0 = closure_0;
-  obj1 = closure_1;
+  let obj5 = closure_1;
   if (closure_1 === undefined) {
-    obj1 = {};
+    obj5 = {};
   }
-  let flag = obj1.useQuickSwitcher;
+  let flag = obj5.useQuickSwitcher;
   if (flag === undefined) {
     flag = true;
   }
   closure_131_1 = flag;
-  let flag2 = obj1.useChannelAffinities;
+  let flag2 = obj5.useChannelAffinities;
   if (flag2 === undefined) {
     flag2 = true;
   }
@@ -573,8 +566,8 @@ let closure_19 = async function _deleteSummary(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -587,19 +580,19 @@ let closure_19 = async function _deleteSummary(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           closure_129_0 = _require;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Routes.CHANNEL_SUMMARY(_require.channelId, _require.id), rejectWithError: false };
+          const obj4 = { url: Routes.CHANNEL_SUMMARY(_require.channelId, _require.id), rejectWithError: false };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.del(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -612,12 +605,11 @@ let closure_19 = async function _deleteSummary(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        obj = closure_130_1(closure_130_2[7]);
-        const obj4 = { type: "DELETE_SUMMARY", summary: closure_129_0 };
-        obj.dispatch(obj4);
+        const obj7 = { type: "DELETE_SUMMARY", summary: closure_129_0 };
+        closure_130_1(closure_130_2[7]).dispatch(obj7);
         c4 = 0;
         c6 = 3;
         return { value: "HermesInternal", done: null };

@@ -1,6 +1,6 @@
-// === Module 17221: getChannelInfoSubtitle ===
+// === Module 17223: getChannelInfoSubtitle ===
 
-// Module 17221 (getChannelInfoSubtitle)
+// Module 17223 (getChannelInfoSubtitle)
 import util from "util" /* 1114 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import size from "module_2" /* 2 */;
@@ -18,14 +18,14 @@ export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
     return NicknameUtilsDefault.getName(arg0, arg1, arg2[0]);
   } else if (2 === length) {
     const intl = util.intl;
-    let obj = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null };
+    const obj = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null };
     obj.user2 = NicknameUtilsDefault.getName(arg0, arg1, arg2[1]);
     return intl.formatToPlainString(util.t["lRD/ru"], obj);
   } else {
     const intl2 = util.intl;
-    obj = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null, numPeople: null };
-    obj.user2 = NicknameUtilsDefault.getName(arg0, arg1, arg2[1]);
-    obj.numPeople = arg2.length - 2 + num;
-    return intl2.formatToPlainString(util.t.RFCI3S, obj);
+    const obj5 = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null, numPeople: null };
+    obj5.user2 = NicknameUtilsDefault.getName(arg0, arg1, arg2[1]);
+    obj5.numPeople = arg2.length - 2 + num;
+    return intl2.formatToPlainString(util.t.RFCI3S, obj5);
   }
 };

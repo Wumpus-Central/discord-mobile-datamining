@@ -1,7 +1,7 @@
 // === Module 4321: SystemDateFormatter ===
 
 // Module 4321 (SystemDateFormatter)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativeDateFormatUtilsModuleDefault from "NativeDateFormatUtilsModule" /* 4322 */;
 import size from "module_2" /* 2 */;
 

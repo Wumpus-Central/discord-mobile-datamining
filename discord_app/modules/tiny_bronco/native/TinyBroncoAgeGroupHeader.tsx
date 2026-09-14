@@ -1,14 +1,14 @@
-// === Module 14807: TinyBroncoAgeGroupHeader ===
+// === Module 14808: TinyBroncoAgeGroupHeader ===
 
-// Module 14807 (TinyBroncoAgeGroupHeader)
+// Module 14808 (TinyBroncoAgeGroupHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14802 */;
-import _modDef14808 from "module_14808" /* 14808 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14840 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14803 */;
+import _modDef14809 from "module_14809" /* 14809 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,32 +19,31 @@ function handleOpenBlog() {
 function AccountStatusNotice(arg0) {
   _require = undefined;
   const tmp = closure_10();
-  let obj = require("TinyBroncoLazy");
-  const shouldShowAgeNotice = obj.useShouldShowAgeNotice();
-  let obj1 = require("useSelectedDismissibleContent");
-  const tmp5 = _slicedToArray(obj1.useSelectedDismissibleContent(shouldShowAgeNotice ? items : closure_12), 2);
+  const shouldShowAgeNotice = require("TinyBroncoLazy").useShouldShowAgeNotice();
+  const obj = require("TinyBroncoLazy");
+  const tmp5 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(shouldShowAgeNotice ? items : closure_12), 2);
   _require = tmp6;
   [][0] = tmp5[1];
   let tmp8 = null;
   if (shouldShowAgeNotice) {
     tmp8 = null;
     if (null != tmp5[0]) {
-      obj = { style: tmp.notice, children: null };
-      obj = { style: tmp.noticeIcon, children: closure_8(tmp2(4591).CircleInformationIcon, { size: "xs", color: "text-link" }) };
-      items = [closure_8(View, obj), , ];
-      obj1 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: null };
+      const obj3 = { style: tmp.notice, children: null };
+      const obj4 = { style: tmp.noticeIcon, children: closure_8(tmp2(4591).CircleInformationIcon, { size: "xs", color: "text-link" }) };
+      items = [closure_8(View, obj4), , ];
+      const obj5 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
-      const obj2 = { handleOnBlogHook: handleOpenBlog };
-      obj1.children = intl.format(obj3[arg0.ageGroup], obj2);
-      items[1] = closure_8(tmp2(4632).Text, obj1);
-      obj3 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
+      obj6 = { handleOnBlogHook: handleOpenBlog };
+      obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
+      items[1] = closure_8(tmp2(4632).Text, obj5);
+      obj7 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
       const intl2 = tmp2(1114).intl;
-      obj3.accessibilityLabel = intl2.string(tmp2(1114).t.WAI6xu);
-      obj3.onPress = tmp7;
-      obj3.children = closure_8(tmp2(5761).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(5204).PressableOpacity, obj3);
-      obj.children = items;
-      tmp8 = closure_9(View, obj);
+      obj7.accessibilityLabel = intl2.string(tmp2(1114).t.WAI6xu);
+      obj7.onPress = tmp7;
+      obj7.children = closure_8(tmp2(5761).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(5204).PressableOpacity, obj7);
+      obj3.children = items;
+      tmp8 = closure_9(View, obj3);
     }
   }
   return tmp8;
@@ -52,22 +51,22 @@ function AccountStatusNotice(arg0) {
 function AgeGroupDescription(ageGroup) {
   ageGroup = ageGroup.ageGroup;
   if (useAgeGroupPresentation.AgeGroupState.ADULT === ageGroup) {
-    let obj = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = util.intl;
-    obj = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
-    obj.children = intl3.format(_modDef14808.gi4ulu, obj);
-    return React6(Text_Text.Text, obj);
+    const obj3 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
+    obj2.children = intl3.format(_modDef14809.gi4ulu, obj3);
+    return React6(Text_Text.Text, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
-    const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = util.intl;
-    const obj2 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-    obj1.children = intl2.format(_modDef14808["221iML"], obj2);
-    return React6(Text_Text.Text, obj1);
+    const obj5 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
+    obj4.children = intl2.format(_modDef14809["221iML"], obj5);
+    return React6(Text_Text.Text, obj4);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
-    obj = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl = util.intl;
-    obj3 = { handleOnAgeGatedContentHook: handleOpenUnconfirmedAgeGroupSupportArticle.handleOpenUnconfirmedAgeGroupSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-    obj.children = intl.format(_modDef14808["W0/7DD"], obj3);
+    obj6 = { handleOnAgeGatedContentHook: handleOpenUnconfirmedAgeGroupSupportArticle.handleOpenUnconfirmedAgeGroupSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
+    obj.children = intl.format(_modDef14809["W0/7DD"], obj6);
     return React6(Text_Text.Text, obj);
   }
 }
@@ -76,62 +75,60 @@ function AgeGroupCallToAction(ageGroup) {
   if (useAgeGroupPresentation.AgeGroupState.ADULT === ageGroup) {
     return null;
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
-    let obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
+    const obj2 = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl2 = util.intl;
-    obj.text = intl2.string(_modDef14808["+7NlgO"]);
-    obj.onPress = useAgeGroupPresentation.handleOpenAgeGatedContentArticle;
-    return React6(components_Button_Button.Button, obj);
+    obj2.text = intl2.string(_modDef14809["+7NlgO"]);
+    obj2.onPress = useAgeGroupPresentation.handleOpenAgeGatedContentArticle;
+    return React6(components_Button_Button.Button, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
-    obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
+    const obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl = util.intl;
-    obj.text = intl.string(_modDef14808["cI+bc/"]);
+    obj.text = intl.string(_modDef14809["cI+bc/"]);
     obj.onPress = useAgeGroupPresentation.handleShowAgeVerification;
     return React6(components_Button_Button.Button, obj);
   }
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(14769).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(14770).TINY_BRONCO_BLOG_URL;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { header: null, notice: null, noticeIcon: null, noticeBody: null, noticeDismiss: null, description: null };
-createStyles = { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 };
-createStyles.header = createStyles;
-createStyles.notice = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
-createStyles.noticeIcon = { flexShrink: 0 };
-createStyles.noticeBody = { flex: 1 };
-createStyles.noticeDismiss = { flexShrink: 0 };
-let obj1 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
-createStyles.description = { gap: nativeDefault.space.PX_8 };
-let closure_10 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 }, notice: null, noticeIcon: null, noticeBody: null, noticeDismiss: null, description: null };
+let obj3 = { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 };
+obj2.notice = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+obj2.noticeIcon = { flexShrink: 0 };
+obj2.noticeBody = { flex: 1 };
+obj2.noticeDismiss = { flexShrink: 0 };
+let obj4 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+obj2.description = { gap: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
 let items = [fn(1943).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
-let obj3 = {};
-obj3[fn(14802).AgeGroupState.ADULT] = _modDef14808["8TWztV"];
-obj3[fn(14802).AgeGroupState.TEEN] = _modDef14808.qSkhZH;
-obj3[fn(14802).AgeGroupState.UNVERIFIED] = _modDef14808.vGxRDB;
-const obj4 = {};
-obj4[fn(14802).AgeGroupState.ADULT] = _modDef14808.t5QjmQ;
-obj4[fn(14802).AgeGroupState.TEEN] = _modDef14808["41MDhK"];
-obj4[fn(14802).AgeGroupState.UNVERIFIED] = _modDef14808.m95jW8;
+let obj6 = {};
+obj6[fn(14803).AgeGroupState.ADULT] = _modDef14809["8TWztV"];
+obj6[fn(14803).AgeGroupState.TEEN] = _modDef14809.qSkhZH;
+obj6[fn(14803).AgeGroupState.UNVERIFIED] = _modDef14809.vGxRDB;
+let obj7 = {};
+obj7[fn(14803).AgeGroupState.ADULT] = _modDef14809.t5QjmQ;
+obj7[fn(14803).AgeGroupState.TEEN] = _modDef14809["41MDhK"];
+obj7[fn(14803).AgeGroupState.UNVERIFIED] = _modDef14809.m95jW8;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoAgeGroupHeader.tsx");
 
 export const TinyBroncoAgeGroupHeader = function TinyBroncoAgeGroupHeader() {
   const tmp = closure_10();
-  let obj = useAgeGroupPresentation;
-  const ageGroupState = obj.useAgeGroupState();
-  obj = { style: tmp.header, children: null };
+  const ageGroupState = useAgeGroupPresentation.useAgeGroupState();
+  const obj2 = { style: tmp.header, children: null };
   items = [React6(AccountStatusNotice, { ageGroup: ageGroupState }), , ];
-  obj = { style: tmp.description, children: null };
-  const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { style: tmp.description, children: null };
+  const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj1.children = intl.string(obj4[ageGroupState]);
-  const items1 = [React6(Text_Text.Heading, obj1), React6(AgeGroupDescription, { ageGroup: ageGroupState })];
-  obj.children = items1;
-  items[1] = React7(View, obj);
+  obj4.children = intl.string(obj7[ageGroupState]);
+  const items1 = [React6(Text_Text.Heading, obj4), React6(AgeGroupDescription, { ageGroup: ageGroupState })];
+  obj3.children = items1;
+  items[1] = React7(View, obj3);
   items[2] = React6(AgeGroupCallToAction, { ageGroup: ageGroupState });
-  obj.children = items;
-  return React7(View, obj);
+  obj2.children = items;
+  return React7(View, obj2);
 };

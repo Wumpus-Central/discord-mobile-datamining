@@ -10,13 +10,12 @@ export const useConnectRetry = function useConnectRetry(navigation, PRE_CONNECT)
   closure_1 = PRE_CONNECT;
   const items = [navigation, PRE_CONNECT];
   return noop.useCallback(() => {
-    let arr = navigation;
     const routes = navigation.getState().routes;
     const findIndexResult = routes.findIndex((name) => name.name === PRE_CONNECT);
     if (findIndexResult >= 0) {
-      arr = arr.pop(routes.length - findIndexResult - 1);
+      navigation.pop(routes.length - findIndexResult - 1);
     } else {
-      arr.popToTop();
+      navigation.popToTop();
     }
   }, items);
 };

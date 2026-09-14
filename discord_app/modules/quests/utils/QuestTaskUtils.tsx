@@ -55,7 +55,7 @@ function isQuestProgressingOnConsole(quest) {
     if (null != expiresAt) {
       const _Date = Date;
       const date = new Date(expiresAt);
-      let valueOfResult = date.valueOf();
+      const valueOfResult = date.valueOf();
       const _isNaN = isNaN;
       const isNaNResult = isNaN(valueOfResult);
       let tmp14 = !isNaNResult;
@@ -80,13 +80,13 @@ function isQuestProgressingOnConsole(quest) {
       if (null != expiresAt1) {
         const _Date3 = Date;
         const date1 = new Date(expiresAt1);
-        valueOfResult = date1.valueOf();
+        const valueOfResult2 = date1.valueOf();
         const _isNaN2 = isNaN;
-        const isNaNResult1 = isNaN(valueOfResult);
+        const isNaNResult1 = isNaN(valueOfResult2);
         let tmp25 = !isNaNResult1;
         if (!isNaNResult1) {
           const _Date4 = Date;
-          tmp25 = valueOfResult > Date.now();
+          tmp25 = valueOfResult2 > Date.now();
         }
         flag2 = tmp25;
       }
@@ -113,7 +113,7 @@ function _getTaskDetailsForType(arg0) {
   let tmp3 = taskType;
   if (taskType == null) {
     const _Object = Object;
-    let values = Object.values(taskConfigV2.tasks);
+    const values = Object.values(taskConfigV2.tasks);
     const first = values.filter((type) => quest.has(type.type))[0];
     let type;
     if (first != null) {
@@ -129,13 +129,13 @@ function _getTaskDetailsForType(arg0) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
     const error = new Error("Quest " + quest.id + " has no task matching the include filters");
-    let obj = { tags: { source: "_getTaskDetailsForType" }, extra: null };
-    obj = { questId: quest.id, taskType, includeTaskTypes: null };
+    const obj = { tags: { source: "_getTaskDetailsForType" }, extra: null };
+    const obj4 = { questId: quest.id, taskType, includeTaskTypes: null };
     if (includeTaskTypes == null) {
       includeTaskTypes = [];
     }
-    obj.includeTaskTypes = Array.from(includeTaskTypes);
-    obj.extra = obj;
+    obj4.includeTaskTypes = Array.from(includeTaskTypes);
+    obj.extra = obj4;
     const result = QuestDataUtils.captureQuestsException(error, obj);
     return null;
   } else {
@@ -147,8 +147,8 @@ function _getTaskDetailsForType(arg0) {
     }
     if (null != completedAt) {
       const _Object2 = Object;
-      values = Object.values(taskConfigV2.tasks);
-      const found = values.find(_isPlayOnDesktopTaskType);
+      const values2 = Object.values(taskConfigV2.tasks);
+      const found = values2.find(_isPlayOnDesktopTaskType);
       let mapped;
       if (found != null) {
         const applications = found.applications;
@@ -156,18 +156,18 @@ function _getTaskDetailsForType(arg0) {
           mapped = applications.map((id) => id.id);
         }
       }
-      let obj1 = { progressSeconds: target, targetSeconds: target2, targetMinutes: null, percentComplete: null, taskType: null, applications: null };
+      const obj7 = { progressSeconds: target, targetSeconds: target2, targetMinutes: null, percentComplete: null, taskType: null, applications: null };
       const _Math3 = Math;
-      obj1.targetMinutes = Math.ceil(target2 / DurationsDefault.Seconds.MINUTE);
+      obj7.targetMinutes = Math.ceil(target2 / DurationsDefault.Seconds.MINUTE);
       let num7 = 0;
       if (target2 > 0) {
         const _Math4 = Math;
         num7 = _mod12.floor(Math.min(target / target2, 1), 4);
       }
-      obj1.percentComplete = num7;
-      obj1.taskType = tmp3;
-      obj1.applications = mapped;
-      return obj1;
+      obj7.percentComplete = num7;
+      obj7.taskType = tmp3;
+      obj7.applications = mapped;
+      return obj7;
     } else {
       const userStatus4 = quest.userStatus;
       let tmp12;
@@ -226,8 +226,7 @@ function _getTaskDetailsForType(arg0) {
               const timestamp = Date.now();
               const date = new Date(lastBeatAt);
               const diff = timestamp - date.valueOf();
-              obj1 = _mod12;
-              num2 = obj1.floor(diff / DurationsDefault.Millis.SECOND, 2);
+              num2 = _mod12.floor(diff / DurationsDefault.Millis.SECOND, 2);
             }
           }
           sum = num + num2;
@@ -253,13 +252,13 @@ function _parseFirstPartyTaskType(eventName) {
   return tmp;
 }
 function formatWatchTaskTimeFromSeconds(arg0, arg1) {
-  let truncate;
+  let truncate1;
   if (arg1 != null) {
-    truncate = arg1.truncate;
+    truncate1 = arg1.truncate;
   }
-  if (null != truncate) {
+  if (null != truncate1) {
     if (arg0 > arg1.truncate) {
-      truncate = arg1.truncate;
+      const truncate = arg1.truncate;
       const _Math = Math;
       const _Math2 = Math;
       const _Math3 = Math;
@@ -477,9 +476,9 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
     let tmp13Result = obj;
   } else if (typeof fn === "function") {
     if (closure_133_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
-      obj = { quest: value, includeTaskTypes: null };
+      const obj2 = { quest: value, includeTaskTypes: null };
       if (DESKTOP != null) {
-        obj.includeTaskTypes = DESKTOP;
+        obj2.includeTaskTypes = DESKTOP;
         tmp13Result = (function _getLatestTaskDetails(arg0) {
           ({ quest, includeTaskTypes } = arg0);
           if (includeTaskTypes === undefined) {
@@ -495,35 +494,35 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
           }
           const values = Object.values(progress);
           const sorted = values.sort((heartbeat, heartbeat2) => {
-            let lastBeatAt;
+            let lastBeatAt1;
             if (heartbeat != null) {
               heartbeat = heartbeat.heartbeat;
               if (heartbeat != null) {
-                lastBeatAt = heartbeat.lastBeatAt;
+                lastBeatAt1 = heartbeat.lastBeatAt;
               }
             }
             if (heartbeat2 != null) {
               heartbeat2 = heartbeat2.heartbeat;
               if (heartbeat2 != null) {
-                lastBeatAt = heartbeat2.lastBeatAt;
+                const lastBeatAt = heartbeat2.lastBeatAt;
               }
             }
-            if (null != lastBeatAt) {
+            if (null != lastBeatAt1) {
               if (null != lastBeatAt) {
                 const _Date3 = Date;
-                const date = new Date(lastBeatAt);
+                const date = new Date(lastBeatAt1);
                 const _Date4 = Date;
-                let valueOfResult = date.valueOf();
                 const date1 = new Date(lastBeatAt);
                 let num3 = 1;
                 if (valueOfResult > date1.valueOf()) {
                   num3 = -1;
                 }
                 let num = num3;
+                valueOfResult = date.valueOf();
               }
               return num;
             }
-            if (null == lastBeatAt) {
+            if (null == lastBeatAt1) {
               if (null == lastBeatAt) {
                 let updatedAt;
                 if (heartbeat != null) {
@@ -538,19 +537,19 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
                     const _Date = Date;
                     const date2 = new Date(heartbeat.updatedAt);
                     const _Date2 = Date;
-                    valueOfResult = date2.valueOf();
                     const date3 = new Date(heartbeat2.updatedAt);
                     let num2 = 1;
-                    if (valueOfResult > date3.valueOf()) {
+                    if (valueOfResult2 > date3.valueOf()) {
                       num2 = -1;
                     }
                     num = num2;
+                    valueOfResult2 = date2.valueOf();
                   }
                 }
               }
             }
             num = 1;
-            if (null != lastBeatAt) {
+            if (null != lastBeatAt1) {
               num = 1;
               if (null == lastBeatAt) {
                 num = -1;
@@ -581,14 +580,14 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
             continue;
           }
           return _getTaskDetailsForType({ quest, includeTaskTypes });
-        })(obj);
+        })(obj2);
       } else {
         const FirstPartyQuestTaskTypesSets = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets;
         const tmp23 = isQuestProgressingOnConsole(value);
       }
     } else if (typeof fn4 === "function") {
       if (closure_136_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
-        const obj1 = { quest: value, taskType: null };
+        let obj3 = { quest: value, taskType: null };
         const config = value.config;
         let tmp14 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO];
         const tmp15 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
@@ -608,22 +607,22 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
         if (tmp17 != null) {
           type = tmp17.type;
         }
-        obj1.taskType = type;
-        tmp13Result = _getTaskDetailsForType(obj1);
+        obj3.taskType = type;
+        tmp13Result = _getTaskDetailsForType(obj3);
       } else {
         let tmp8 = null != value;
         if (tmp8) {
           tmp8 = null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         }
         if (tmp8) {
-          const obj2 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
-          tmp13Result = _getTaskDetailsForType(obj2);
-        } else if (null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY]) {
-          let obj3 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
-          tmp13Result = _getTaskDetailsForType(obj3);
-        } else {
-          const obj4 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+          const obj4 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
           tmp13Result = _getTaskDetailsForType(obj4);
+        } else if (null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY]) {
+          const obj5 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
+          tmp13Result = _getTaskDetailsForType(obj5);
+        } else {
+          const obj6 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+          tmp13Result = _getTaskDetailsForType(obj6);
         }
       }
     } else {
@@ -635,11 +634,11 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
   if (null != tmp13Result) {
     return tmp13Result;
   } else {
-    const obj5 = { quest: value };
-    let tmp26 = _getTaskDetailsForType(obj5);
+    const obj7 = { quest: value };
+    let tmp26 = _getTaskDetailsForType(obj7);
     if (null == tmp26) {
-      const obj6 = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
-      tmp26 = obj6;
+      const obj8 = { progressSeconds: 0, targetSeconds: 1, targetMinutes: 1, percentComplete: 0, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+      tmp26 = obj8;
     }
     return tmp26;
   }

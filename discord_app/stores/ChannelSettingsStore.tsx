@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 1966 */;
 import ForumLayout from "ForumLayout" /* 1967 */;
@@ -55,22 +55,22 @@ function normalizeChannelPropertyForCompare(item, toJSResult, type) {
         if ("defaultReactionEmoji" === item) {
           let tmp2 = null;
           if (null != str) {
-            let obj = ReactionUtils;
             if (obj.isCustomReactionEmojiId(str.emojiId)) {
-              obj = { emojiId: str.emojiId };
-              tmp2 = obj;
+              const obj2 = { emojiId: str.emojiId };
+              tmp2 = obj2;
             } else {
               const emojiName = str.emojiName;
               let tmp5 = null;
               if (null != emojiName) {
                 tmp5 = null;
                 if ("" !== emojiName) {
-                  obj = { emojiName: UnicodeEmojisDefault.translateInlineEmojiToSurrogates(emojiName) };
-                  tmp5 = obj;
+                  const obj4 = { emojiName: UnicodeEmojisDefault.translateInlineEmojiToSurrogates(emojiName) };
+                  tmp5 = obj4;
                 }
               }
               tmp2 = tmp5;
             }
+            obj = ReactionUtils;
           }
           return tmp2;
         } else {
@@ -88,7 +88,6 @@ function normalizeChannelPropertyForCompare(item, toJSResult, type) {
 function _createInvite(code) {
   const obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: null, channel: null, guild: null, uses: null, maxUses: null, maxAge: null, createdAt: null, type: null, roles: null };
   let tmp2 = null;
-  let tmp = InviteRecord;
   if (null != code.inviter) {
     tmp2 = new UserRecord(code.inviter);
   }
@@ -102,8 +101,7 @@ function _createInvite(code) {
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   obj.createdAt = _modDef4228(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
-  tmp = new tmp(obj);
-  return tmp;
+  return new InviteRecord(obj);
 }
 function _syncChannelUpdate(id) {
   let flag = false;
@@ -277,12 +275,11 @@ invites = {
       if (tmp15) {
         c21 = true;
         const HTTP = HTTPUtils.HTTP;
-        obj = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
-        value = HTTP.get(obj);
+        const obj2 = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        value = HTTP.get(obj2);
         value.then((body) => {
           c21 = false;
-          const obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body });
         }, () => {
           c21 = false;
           return false;
@@ -358,22 +355,22 @@ invites = {
         channel = channel.set("defaultThreadRateLimitPerUser", defaultThreadRateLimitPerUser);
       }
       if (null != autoArchiveDuration) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(channel.threadMetadata);
         obj.autoArchiveDuration = autoArchiveDuration;
         channel = channel.set("threadMetadata", obj);
       }
       if (null != locked) {
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(channel.threadMetadata);
-        obj.locked = locked;
-        channel = channel.set("threadMetadata", obj);
+        obj2.locked = locked;
+        channel = channel.set("threadMetadata", obj2);
       }
       if (null != invitable) {
-        obj = {};
+        const obj3 = {};
         const merged2 = Object.assign(channel.threadMetadata);
-        obj.invitable = invitable;
-        channel = channel.set("threadMetadata", obj);
+        obj3.invitable = invitable;
+        channel = channel.set("threadMetadata", obj3);
       }
       if (null != defaultAutoArchiveDuration) {
         channel = channel.set("defaultAutoArchiveDuration", defaultAutoArchiveDuration);
@@ -430,8 +427,7 @@ invites = {
       value = HTTP.get(obj);
       value.then((body) => {
         c21 = false;
-        const obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body });
       }, () => {
         c21 = false;
         return false;

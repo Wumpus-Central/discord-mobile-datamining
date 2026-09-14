@@ -3,8 +3,8 @@
 // Module 4569 (SavedCustomThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import ThemeConstants from "ThemeConstants" /* 1186 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import ThemeConstants from "ThemeConstants" /* 1184 */;
 import size from "module_2" /* 2 */;
 
 function validateSavedTheme(colors) {
@@ -21,14 +21,13 @@ function validateSavedTheme(colors) {
     }
     return tmp5;
   } catch (tmp8) {
-    let obj = SentryUtilsDefault;
-    obj = { tags: { app_context: "SavedCustomThemeStore" } };
-    obj.captureMessage("Invalid saved custom theme: " + tmp8, obj);
+    const obj2 = { tags: { app_context: "SavedCustomThemeStore" } };
+    SentryUtilsDefault.captureMessage("Invalid saved custom theme: " + tmp8, obj2);
     return false;
   }
 }
 ({ PROTO_THEME_MAP_MOBILE_REFRESH: c2, PROTO_THEME_MAP_WEB_REFRESH } = ThemeConstants);
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", IS_FETCHING: 1, [1]: "IS_FETCHING", HAS_FETCHED: 2, [2]: "HAS_FETCHED", ERROR: 3, [3]: "ERROR" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", IS_FETCHING: 1, [1]: "IS_FETCHING", HAS_FETCHED: 2, [2]: "HAS_FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_4 = [];
 let ERROR = FetchState.NOT_FETCHED;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -83,7 +82,7 @@ prototype["hasError"] = function hasError() {
 };
 SavedCustomThemeStore.displayName = "SavedCustomThemeStore";
 SavedCustomThemeStore.persistKey = "SavedCustomThemeStore";
-FetchState = {
+const savedCustomThemeStore = new SavedCustomThemeStore(DispatcherDefault, {
   SAVED_CUSTOM_THEMES_FETCH_START: function handleCustomThemesFetchStart() {
     ERROR = obj.IS_FETCHING;
   },
@@ -98,8 +97,7 @@ FetchState = {
     obj = SentryUtilsDefault;
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
   }
-};
-const savedCustomThemeStore = new SavedCustomThemeStore(DispatcherDefault, FetchState);
+});
 const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
 
 export default savedCustomThemeStore;

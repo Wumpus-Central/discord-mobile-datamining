@@ -4,7 +4,7 @@
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9226 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

@@ -1,8 +1,8 @@
-// === Module 17499: SoundpackActions ===
+// === Module 17501: SoundpackActions ===
 
-// Module 17499 (SoundpackActions)
+// Module 17501 (SoundpackActions)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import SoundpackStore from "SoundpackStore" /* 10033 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -10,8 +10,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 
 export const setSoundpack = function setSoundpack(CLASSIC, name) {
-  let obj = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
-  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, obj);
-  obj = { type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name };
-  DispatcherDefault.dispatch(obj);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() });
+  const obj2 = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
+  DispatcherDefault.dispatch({ type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name });
 };

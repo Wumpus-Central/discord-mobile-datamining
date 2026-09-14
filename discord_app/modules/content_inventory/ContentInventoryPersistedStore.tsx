@@ -1,6 +1,6 @@
-// === Module 12066: ContentInventoryPersistedStore ===
+// === Module 12067: ContentInventoryPersistedStore ===
 
-// Module 12066 (ContentInventoryPersistedStore)
+// Module 12067 (ContentInventoryPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -29,12 +29,12 @@ function updateImpressionCaches() {
       }
     }
     if (0 < num7) {
-      let itemImpressions = closure_2.itemImpressions;
-      closure_2.itemImpressions = itemImpressions.slice(num7);
+      const itemImpressions1 = closure_2.itemImpressions;
+      closure_2.itemImpressions = itemImpressions1.slice(num7);
     }
     if (closure_2.itemImpressions.length > 2048) {
-      const itemImpressions1 = closure_2.itemImpressions;
-      closure_2.itemImpressions = itemImpressions1.slice(-2048);
+      const itemImpressions2 = closure_2.itemImpressions;
+      closure_2.itemImpressions = itemImpressions2.slice(-2048);
     }
     let num10 = 1000;
     if (!closure_7) {
@@ -46,7 +46,7 @@ function updateImpressionCaches() {
     set1 = new Set();
     const _Date3 = Date;
     num11 = null;
-    itemImpressions = closure_2.itemImpressions;
+    const itemImpressions = closure_2.itemImpressions;
     for (const item10073 of itemImpressions) {
       let tmp28 = _slicedToArray(item10073, 2);
       [tmp29, tmp30] = tmp28;
@@ -77,13 +77,13 @@ class ContentInventoryPersistedStore extends PersistedStore {
 }
 const prototype = ContentInventoryPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = {};
+  let obj = arg0;
   const merged = Object.assign(closure_2);
   if (arg0 == null) {
     obj = {};
   }
   const merged1 = Object.assign(obj);
-  closure_2 = obj;
+  closure_2 = {};
 };
 prototype["getState"] = function getState() {
   return closure_2;

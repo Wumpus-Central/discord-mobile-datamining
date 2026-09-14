@@ -5,6 +5,8 @@ import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function getHighestHoistedRole(arg0, arg1) {
   let tmp = arg2;

@@ -94,7 +94,7 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
         let tmp16 = _slicedToArray(item10029, 2);
         let tmp17 = tmp16[1];
         if (!map1.has(tmp16[0])) {
-          arr = items1.push(tmp17);
+          let arr2 = items1.push(tmp17);
         }
         continue;
       }
@@ -125,8 +125,8 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
           }
         }
       }
-      obj = { changedWidgets: items, removedWidgets: items1, hasOrderChanges: flag };
-      return obj;
+      const obj2 = { changedWidgets: items, removedWidgets: items1, hasOrderChanges: flag };
+      return obj2;
     }
   }
   if (changedWidgets == null) {

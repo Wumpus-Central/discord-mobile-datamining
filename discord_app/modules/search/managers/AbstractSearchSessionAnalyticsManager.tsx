@@ -1,8 +1,8 @@
-// === Module 12489: AbstractSearchSessionAnalyticsManager ===
+// === Module 12490: AbstractSearchSessionAnalyticsManager ===
 
-// Module 12489 (AbstractSearchSessionAnalyticsManager)
-import v1 from "v1" /* 1256 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
+// Module 12490 (AbstractSearchSessionAnalyticsManager)
+import v1 from "v1" /* 1254 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
@@ -24,20 +24,19 @@ prototype["getSession"] = function getSession(searchContext) {
   return value;
 };
 prototype["setSession"] = function setSession(searchContext, arg1) {
-  let obj = SearchUtils;
-  const searchContextId = obj.getSearchContextId(searchContext);
+  const searchContextId = SearchUtils.getSearchContextId(searchContext);
   const sessions = this.sessions;
   value = sessions.get(searchContextId);
   if (value == null) {
-    obj = { sessionId: v1.v4(), searchQueryId: null };
-    value = obj;
+    const obj2 = { sessionId: v1.v4(), searchQueryId: null };
+    value = obj2;
     const tmpResult = v1;
   }
   const sessions2 = this.sessions;
-  obj = {};
   const merged = Object.assign(value);
   const merged1 = Object.assign(arg1);
-  const result = sessions2.set(searchContextId, obj);
+  const result = sessions2.set(searchContextId, {});
+  const obj3 = {};
 };
 prototype["deleteSession"] = function deleteSession(searchContext) {
   const sessions = this.sessions;
@@ -84,11 +83,10 @@ prototype["transferSession"] = function transferSession(arg0, searchContext) {
   this._transferSession(arg0, searchContext);
   let session = this.getSession(arg0);
   const sessions = this.sessions;
-  let obj = SearchUtils;
-  const searchContextId = obj.getSearchContextId(searchContext);
+  const searchContextId = SearchUtils.getSearchContextId(searchContext);
   if (session == null) {
-    obj = { sessionId: v1.v4(), searchQueryId: null };
-    session = obj;
+    const obj2 = { sessionId: v1.v4(), searchQueryId: null };
+    session = obj2;
     const tmp3Result = v1;
   }
   const result = sessions.set(searchContextId, session);

@@ -2,7 +2,7 @@
 
 // Module 5204 (Pressables)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5205 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,24 +29,23 @@ function PressableBase(androidRippleConfig) {
       if (underlayColor == null) {
         tmp2 = closure_1_5;
       }
-      let obj = { backgroundColor: tmp2 };
+      const obj2 = { backgroundColor: tmp2 };
     } else {
       let num = activeOpacity;
       if (activeOpacity == null) {
         num = 0.2;
       }
-      obj = { opacity: num };
+      const obj = { opacity: num };
     }
   }), items);
   let obj = {
     android_ripple: activeOpacity.useMemo(() => {
-      let obj = PlatformUtils;
       if (obj.isAndroid()) {
-        obj = androidRippleConfig;
+        let obj2 = androidRippleConfig;
         if (androidRippleConfig == null) {
-          obj = {};
+          obj2 = {};
         }
-        const cornerRadius = obj.cornerRadius;
+        const cornerRadius = obj2.cornerRadius;
         let tmp4 = cornerRadius;
         if (null == cornerRadius) {
           const styleProp = StyleSheetUtilsDefault.getStyleProp(style, "borderRadius");
@@ -55,11 +54,12 @@ function PressableBase(androidRippleConfig) {
             tmp4 = styleProp;
           }
         }
-        obj = {};
+        const obj4 = {};
         const merged = Object.assign(androidRippleConfig);
-        obj.cornerRadius = tmp4;
-        return getThemedRippleConfig(obj);
+        obj4.cornerRadius = tmp4;
+        return getThemedRippleConfig(obj4);
       }
+      obj = PlatformUtils;
     }, items1),
     style: memo,
     ref: innerRef
@@ -67,13 +67,12 @@ function PressableBase(androidRippleConfig) {
   const merged1 = Object.assign(merged);
   obj.children = children;
   return <underlayColor android_ripple={activeOpacity.useMemo(() => {
-    let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      obj = androidRippleConfig;
+      let obj2 = androidRippleConfig;
       if (androidRippleConfig == null) {
-        obj = {};
+        obj2 = {};
       }
-      const cornerRadius = obj.cornerRadius;
+      const cornerRadius = obj2.cornerRadius;
       let tmp4 = cornerRadius;
       if (null == cornerRadius) {
         const styleProp = StyleSheetUtilsDefault.getStyleProp(style, "borderRadius");
@@ -82,22 +81,22 @@ function PressableBase(androidRippleConfig) {
           tmp4 = styleProp;
         }
       }
-      obj = {};
+      const obj4 = {};
       const merged = Object.assign(androidRippleConfig);
-      obj.cornerRadius = tmp4;
-      return getThemedRippleConfig(obj);
+      obj4.cornerRadius = tmp4;
+      return getThemedRippleConfig(obj4);
     }
+    obj = PlatformUtils;
   }, items1)} style={memo} ref={innerRef} />;
 }
 const Pressable = fn(17).Pressable;
 const IOS_POINTER_STYLE = fn(5065).IOS_POINTER_STYLE;
-const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
+const getThemedRippleConfig = fn(1180).getThemedRippleConfig;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { pressedHighlight: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-obj.pressedHighlight = obj;
+let obj = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
 let closure_8 = createStyles.createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const forwardRefResult = noop.forwardRef((activeOpacity, innerRef) => {
   let num = activeOpacity.activeOpacity;
   if (num === undefined) {

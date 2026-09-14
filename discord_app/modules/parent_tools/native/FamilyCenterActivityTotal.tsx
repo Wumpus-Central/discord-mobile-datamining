@@ -1,30 +1,28 @@
-// === Module 14984: FamilyCenterActivityTotal ===
+// === Module 14985: FamilyCenterActivityTotal ===
 
-// Module 14984 (FamilyCenterActivityTotal)
+// Module 14985 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7695 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14983 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { container: null };
-createStyles = { display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
+const createStyles = fn(4636);
+let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
-createStyles.container = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.container = { display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityTotal.tsx");
 
 export default function FamilyCenterActivityTotal(displayType) {
   displayType = displayType.displayType;
-  let obj = useFamilyCenterActivities;
-  const actionTotalsForDisplayType = obj.useActionTotalsForDisplayType(displayType);
   const tmp = closure_5();
+  const actionTotalsForDisplayType = useFamilyCenterActivities.useActionTotalsForDisplayType(displayType);
   let num = useFamilyCenterActivities.useFormattedTotalForDisplayType(displayType);
   let str = "text-muted";
   if (actionTotalsForDisplayType > 0) {
@@ -36,13 +34,13 @@ export default function FamilyCenterActivityTotal(displayType) {
   if (value != null) {
     tooltipHeaderResult = value.tooltipHeader();
   }
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-xxl/medium", color: str, children: null };
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { variant: "heading-xxl/medium", color: str, children: null };
   if (num == null) {
     num = 0;
   }
-  obj.children = num;
-  const items = [React3(Text_Text.Text, obj), React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
-  obj.children = items;
-  return React4(View, obj);
+  obj4.children = num;
+  const items = [React3(Text_Text.Text, obj4), React3(Text_Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  obj3.children = items;
+  return React4(View, obj3);
 };

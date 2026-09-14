@@ -1,11 +1,11 @@
-// === Module 15618: ChannelListLayoutSetting ===
+// === Module 15619: ChannelListLayoutSetting ===
 
-// Module 15618 (ChannelListLayoutSetting)
+// Module 15619 (ChannelListLayoutSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useChannelListLayoutPredicate() {
@@ -23,16 +23,16 @@ const radio = SettingBuilders.createRadio({
     ChannelListLayoutSetting.updateSetting(arg0);
   },
   useOptions: function useChannelListLayoutOptions() {
-    let obj = { label: null, value: null };
+    const obj = { label: null, value: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.T7G4Y0);
     obj.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
     const items = [obj, ];
-    obj = { label: null, value: null };
+    const obj2 = { label: null, value: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t["7iegX4"]);
-    obj.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
-    items[1] = obj;
+    obj2.label = intl2.string(util.t["7iegX4"]);
+    obj2.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
+    items[1] = obj2;
     return items;
   },
   usePredicate: useChannelListLayoutPredicate

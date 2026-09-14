@@ -5,6 +5,8 @@ import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 let items = [2 * DurationsDefault.Seconds.MINUTE, DurationsDefault.Seconds.SECOND];
 const items1 = [items, , , ];

@@ -1,6 +1,6 @@
-// === Module 17302: CircleWithCutout ===
+// === Module 17304: CircleWithCutout ===
 
-// Module 17302 (CircleWithCutout)
+// Module 17304 (CircleWithCutout)
 import inlineStyles from "inlineStyles" /* 8574 */;
 import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9629 */;
 import noop from "module_19" /* 19 */;
@@ -34,10 +34,8 @@ export default noop.memo(function CircleWithCutout(arg0) {
     const result1 = badgeRadius * num;
   }
   const result2 = 2 * result;
-  let obj = CircleWithCutoutUtils;
-  const cutoutCenterX = obj.getCutoutCenterX(result, cutoutPositionInDegrees);
-  let obj1 = CircleWithCutoutUtils;
-  const cutoutCenterY = obj1.getCutoutCenterY(result, cutoutPositionInDegrees);
+  const cutoutCenterX = CircleWithCutoutUtils.getCutoutCenterX(result, cutoutPositionInDegrees);
+  const cutoutCenterY = CircleWithCutoutUtils.getCutoutCenterY(result, cutoutPositionInDegrees);
   if (alignBadgeEdgeWithCircleEdge) {
     alignBadgeEdgeWithCircleEdge = null != result1;
   }
@@ -48,24 +46,24 @@ export default noop.memo(function CircleWithCutout(arg0) {
     tmp8 = result1;
   }
   const size = { height: result2, width: result2, style: null, children: null };
-  obj = { transform: null };
-  obj = { scale: 1 / num };
-  const items = [obj];
-  obj.transform = items;
-  size.style = obj;
-  obj1 = { children: null };
-  const obj2 = { id: "mask", children: null };
+  const obj3 = { transform: null };
+  const items = [{ scale: 1 / num }];
+  obj3.transform = items;
+  size.style = obj3;
+  const obj4 = { scale: 1 / num };
+  const obj5 = { children: null };
+  const obj6 = { id: "mask", children: null };
   const items1 = [React3(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }), React3(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" })];
-  obj2.children = items1;
-  obj1.children = React4(inlineStyles.Mask, obj2);
-  const items2 = [React3(inlineStyles.Defs, obj1), ];
-  const obj4 = { cx: result, cy: result, r: result, fill, mask: null };
+  obj6.children = items1;
+  obj5.children = React4(inlineStyles.Mask, obj6);
+  const items2 = [React3(inlineStyles.Defs, obj5), ];
+  const obj8 = { cx: result, cy: result, r: result, fill, mask: null };
   let str;
   if (enableCutout) {
     str = "url(#mask)";
   }
-  obj4.mask = str;
-  items2[1] = React3(inlineStyles.Circle, obj4);
+  obj8.mask = str;
+  items2[1] = React3(inlineStyles.Circle, obj8);
   size.children = items2;
   return React4(inlineStylesDefault, size);
 });

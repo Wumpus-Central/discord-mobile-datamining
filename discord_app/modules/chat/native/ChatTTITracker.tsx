@@ -1,8 +1,8 @@
-// === Module 12086: ChatTTITracker ===
+// === Module 12087: ChatTTITracker ===
 
-// Module 12086 (ChatTTITracker)
+// Module 12087 (ChatTTITracker)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import TTIMeasurementView from "TTIMeasurementView" /* 12027 */;
+import TTIMeasurementView from "TTIMeasurementView" /* 12028 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
   messages = messages.messages;
   let tmp3 = null;
   if (messages.length > 0) {
-    let obj = {
+    const obj = {
       nativeID: "cached_messages_tti",
       onMeasurement(nativeEvent) {
           const displayMessagesWithCache = TTITrackerDefault.displayMessagesWithCache;
@@ -24,14 +24,14 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
   }
   const children = [tmp3, ];
   if (messages.hasFetched) {
-    obj = {
+    const obj2 = {
       nativeID: "latest_messages_tti",
       onMeasurement(nativeEvent) {
           const displayLatestMessages = TTITrackerDefault.displayLatestMessages;
           displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
         }
     };
-    let tmp7 = React3(TTIMeasurementView.TTIMeasurementView, obj, "latest_messages_tti");
+    let tmp7 = React3(TTIMeasurementView.TTIMeasurementView, obj2, "latest_messages_tti");
   } else {
     tmp7 = null;
     if (messages.ready) {

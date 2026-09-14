@@ -1,16 +1,19 @@
-// === Module 10366: FavoritesGuildIntroPopover ===
+// === Module 10367: FavoritesGuildIntroPopover ===
 
-// Module 10366 (FavoritesGuildIntroPopover)
+// Module 10367 (FavoritesGuildIntroPopover)
 import dismissible_content from "dismissible_content" /* 1943 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10367 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10368 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 1949 */;
+import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 1949 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let DismissibleContentShownStateStore = fn(1949);
 ({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
+let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
 const NOOP = fn(1074).NOOP;
 const module_560 = fn(560);
 let closure_10 = module_560.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));

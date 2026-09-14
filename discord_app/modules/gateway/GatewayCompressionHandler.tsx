@@ -1,13 +1,13 @@
-// === Module 13736: GatewayCompressionHandler ===
+// === Module 13737: GatewayCompressionHandler ===
 
-// Module 13736 (GatewayCompressionHandler)
+// Module 13737 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ProcessArgs2 from "ProcessArgs" /* 5222 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 13737 */;
-import NativeCompressionModule from "NativeCompressionModule" /* 13738 */;
-import _mod13739 from "module_13739" /* 13739 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 13738 */;
+import NativeCompressionModule from "NativeCompressionModule" /* 13739 */;
+import _mod13740 from "module_13740" /* 13740 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -34,18 +34,18 @@ prototype["dataReady"] = function dataReady(_onDataReady) {
   this._onDataReady = _onDataReady;
 };
 const fn = (arg0) => {
-  tmp = new tmp(arg0, new.target, tmp, new.target);
-  tmp._decoder = null;
-  const _gatewayEncoding = tmp._gatewayEncoding;
+  const tmp2 = new tmp(arg0, new.target, tmp, new.target);
+  tmp2._decoder = null;
+  const _gatewayEncoding = tmp2._gatewayEncoding;
   if (_gatewayEncoding.wantsString()) {
     const _TextDecoder = TextDecoder;
     const textDecoder = new TextDecoder("utf-8");
-    tmp._decoder = textDecoder;
+    tmp2._decoder = textDecoder;
   } else {
-    tmp._decoder = null;
+    tmp2._decoder = null;
   }
-  tmp._stream = GatewayZstdUtils.createZstdContextWeb();
-  return tmp;
+  tmp2._stream = GatewayZstdUtils.createZstdContextWeb();
+  return tmp2;
 };
 const prototype2 = fn.prototype;
 class fn extends BaseGatewayCompressionHandler {
@@ -90,21 +90,21 @@ prototype2["close"] = function close() {
 };
 items.push(fn);
 const fn2 = (arg0) => {
-  tmp = new tmp(arg0, new.target, tmp, new.target);
-  tmp._pako = _mod13739;
-  tmp._usesZstd = false;
-  tmp._zstdDecoder = null;
-  tmp._zstdStream = null;
-  const _gatewayEncoding = tmp._gatewayEncoding;
+  const tmp2 = new tmp(arg0, new.target, tmp, new.target);
+  tmp2._pako = _mod13740;
+  tmp2._usesZstd = false;
+  tmp2._zstdDecoder = null;
+  tmp2._zstdStream = null;
+  const _gatewayEncoding = tmp2._gatewayEncoding;
   let str = "";
   if (_gatewayEncoding.wantsString()) {
     str = "string";
   }
-  const inflate = new tmp._pako.Inflate({ chunkSize: 65536, to: str });
-  tmp._inflate = inflate;
-  ({ handleFlushEnd, _inflate } = tmp);
-  _inflate.onEnd = handleFlushEnd.bind(tmp);
-  return tmp;
+  const inflate = new tmp2._pako.Inflate({ chunkSize: 65536, to: str });
+  tmp2._inflate = inflate;
+  ({ handleFlushEnd, _inflate } = tmp2);
+  _inflate.onEnd = handleFlushEnd.bind(tmp2);
+  return tmp2;
 };
 const prototype3 = fn2.prototype;
 class fn2 extends BaseGatewayCompressionHandler {
@@ -219,7 +219,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod13739;
+  applyArgumentsResult._pako = _mod13740;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
@@ -259,9 +259,9 @@ prototype4["close"] = function close() {
 };
 items.push(fn3);
 const fn4 = (arg0) => {
-  tmp = new tmp(arg0, new.target, tmp);
-  tmp._socketId = null;
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target, tmp);
+  tmp2._socketId = null;
+  return tmp2;
 };
 const prototype5 = fn4.prototype;
 class fn4 extends BaseGatewayCompressionHandler {
@@ -374,9 +374,9 @@ export const getCompressionHandler = function getCompressionHandler(arg0) {
       if (item10014.canUse()) {
         let tmp4 = new.target;
         let tmp5 = new.target;
-        let item10014 = new item10014(arg0);
+        let item100141 = new item10014(arg0);
         obj.return();
-        return item10014;
+        return item100141;
       }
     }
     return new NullGatewayCompressionHandler(arg0);

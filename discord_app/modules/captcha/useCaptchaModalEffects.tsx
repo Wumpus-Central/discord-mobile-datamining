@@ -1,8 +1,10 @@
-// === Module 17400: useCaptchaModalEffects ===
+// === Module 17402: useCaptchaModalEffects ===
 
-// Module 17400 (useCaptchaModalEffects)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 17402 (useCaptchaModalEffects)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -24,13 +26,12 @@ export default function useCaptchaModalEffects(arg0) {
   });
   const items = [analyticsType];
   const effect = noop.useEffect(() => {
-    let obj = { type: analyticsType };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: analyticsType });
     return () => {
       if (ref.current) {
-        analyticsType(ref[4]);
-        const obj = { type };
-        obj.track(constants.MODAL_DISMISSED, obj);
+        const obj2 = { type };
+        analyticsType(ref[4]).track(constants.MODAL_DISMISSED, obj2);
+        const obj = analyticsType(ref[4]);
       }
     };
   }, items);

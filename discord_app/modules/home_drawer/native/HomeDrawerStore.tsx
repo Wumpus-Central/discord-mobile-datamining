@@ -1,12 +1,14 @@
-// === Module 16116: HomeDrawerStore ===
+// === Module 16118: HomeDrawerStore ===
 
-// Module 16116 (HomeDrawerStore)
+// Module 16118 (HomeDrawerStore)
 import Constants from "Constants" /* 1074 */;
 import _mod4259 from "module_4259" /* 4259 */;
 import timing from "timing" /* 4637 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16117 */;
-import identity from "module_1244" /* 1244 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16119 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const DM_WIDTH = Constants.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {

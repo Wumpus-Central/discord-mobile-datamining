@@ -1,8 +1,8 @@
-// === Module 13198: ContentInventoryHttpApi ===
+// === Module 13199: ContentInventoryHttpApi ===
 
-// Module 13198 (ContentInventoryHttpApi)
+// Module 13199 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -14,8 +14,8 @@ let closure_6 = async function _getMyContentInventory(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,8 +28,8 @@ let closure_6 = async function _getMyContentInventory(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -50,19 +50,19 @@ let closure_6 = async function _getMyContentInventory(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           const HTTP = closure_130_0(closure_130_2[3]).HTTP;
           const request = { url: closure_130_5.MY_CONTENT_INVENTORY(closure_129_0), query: null, rejectWithError: null };
-          const obj2 = { for_game_profile: closure_129_1 === closure_130_4.GAME_PROFILE_FEED, feature: closure_129_2 };
-          request.query = obj2;
+          const obj5 = { for_game_profile: closure_129_1 === closure_130_4.GAME_PROFILE_FEED, feature: closure_129_2 };
+          request.query = obj5;
           request.rejectWithError = closure_130_0(closure_130_2[3]).rejectWithMigratedError();
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.get(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.get(request), done: false };
+          return obj6;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -75,8 +75,8 @@ let closure_6 = async function _getMyContentInventory(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         body = value.body;
         closure_129_4 = body.wait_ms_until_next_fetch;
@@ -89,7 +89,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp29) {
@@ -115,8 +115,8 @@ let closure_7 = async function _getContentInventoryOutbox() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -129,30 +129,29 @@ let closure_7 = async function _getContentInventoryOutbox() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             closure_130_0 = userId;
             let body;
             c5 = 1;
-            const obj1 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_START", userId };
-            DispatcherDefault.dispatch(obj1);
+            const obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_START", userId };
+            DispatcherDefault.dispatch(obj4);
             const HTTP = HTTPUtils.HTTP;
-            const obj2 = { url: Endpoints.CONTENT_INVENTORY_OUTBOX(userId), signal, rejectWithError: null };
-            obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            const obj6 = { url: Endpoints.CONTENT_INVENTORY_OUTBOX(userId), signal, rejectWithError: null };
+            obj6.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c6 = 2;
             c7 = 1;
-            const obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
+            const obj7 = { value: HTTP.get(obj6), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_2 = closure_4;
-          let obj4 = closure_131_1(closure_131_2[5]);
-          obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: closure_130_0 };
-          obj4.dispatch(obj4);
+          const obj8 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: closure_130_0 };
+          closure_131_1(closure_131_2[5]).dispatch(obj8);
           const aPIError = new closure_131_0(closure_131_2[4]).APIError(closure_130_2);
           throw aPIError;
         } else if (arg0 === 1) {
@@ -161,17 +160,16 @@ let closure_7 = async function _getContentInventoryOutbox() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           body = value.body;
-          obj = closure_131_1(closure_131_2[5]);
-          const obj6 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS", outbox: body, userId: closure_130_0 };
-          obj.dispatch(obj6);
+          const obj11 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS", outbox: body, userId: closure_130_0 };
+          closure_131_1(closure_131_2[5]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          const obj7 = { value: body, done: true };
-          return obj7;
+          const obj12 = { value: body, done: true };
+          return obj12;
         }
       } catch (tmp30) {
         closure_4 = tmp30;
@@ -199,9 +197,9 @@ let closure_8 = async function _deleteContentInventoryEntryHistory(arg0, arg1, a
     closure_132_2 = closure_2;
     DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
     const HTTP = HTTPUtils.HTTP;
-    const obj1 = { url: Endpoints.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(id.id), rejectWithError: null };
-    obj1.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    await HTTP.del(obj1);
+    const obj5 = { url: Endpoints.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(id.id), rejectWithError: null };
+    obj5.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    await HTTP.del(obj5);
     if (1 === tmp7) {
       c7 = 0;
       let message;
@@ -217,10 +215,9 @@ let closure_8 = async function _deleteContentInventoryEntryHistory(arg0, arg1, a
         closure_3 = intl.string(closure_133_0(closure_133_2[6]).t.FMbL3s);
       }
       closure_132_3 = closure_3;
-      closure_133_1(closure_133_2[5]);
-      const obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: closure_132_3 };
-      obj3.dispatch(obj3);
+      closure_133_1(closure_133_2[5]).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: closure_132_3 });
       c9 = 3;
+      closure_133_1(closure_133_2[5]);
     } else if (arg0 === 1) {
       c9 = 3;
       throw value;
@@ -248,8 +245,8 @@ let closure_9 = async function _postTrackToContentInventory() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -262,23 +259,23 @@ let closure_9 = async function _postTrackToContentInventory() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.MY_SPOTIFY_CONTENT_INVENTORY, body: null, rejectWithError: null };
-            const obj1 = { connection_id, tracks: null };
+            const obj4 = { connection_id, tracks: null };
             const items = [closure_1];
-            obj1.tracks = items;
-            request.body = obj1;
+            obj4.tracks = items;
+            request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c6 = 2;
             c7 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c5 = 0;
@@ -291,7 +288,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c5 = 0;

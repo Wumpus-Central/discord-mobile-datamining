@@ -19,6 +19,8 @@ import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function getRoleRowData(colorString, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -573,47 +575,44 @@ export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
 export const flipEveryonePermission = function flipEveryonePermission(guild_id, accessPermissions, result) {
   let everyoneOverwrite = guild_id.permissionOverwrites[guild_id.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = PermissionUtilsAll;
-    everyoneOverwrite = obj.makeEveryoneOverwrite(guild_id.guild_id);
+    everyoneOverwrite = PermissionUtilsAll.makeEveryoneOverwrite(guild_id.guild_id);
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(everyoneOverwrite);
-  obj.deny = BigFlagUtilsAll.remove(obj.deny, accessPermissions);
-  obj.allow = BigFlagUtilsAll.remove(obj.allow, accessPermissions);
+  obj2.deny = BigFlagUtilsAll.remove(obj2.deny, accessPermissions);
+  obj2.allow = BigFlagUtilsAll.remove(obj2.allow, accessPermissions);
   if (!result) {
-    obj.deny = BigFlagUtilsAll.add(obj.deny, accessPermissions);
+    obj2.deny = BigFlagUtilsAll.add(obj2.deny, accessPermissions);
     const tmp5Result = BigFlagUtilsAll;
   }
-  return obj;
+  return obj2;
 };
 export const toggleChannelEveryonePermission = function toggleChannelEveryonePermission(guild_id, MODERATE_STAGE_CHANNEL_PERMISSIONS, arg2) {
   let everyoneOverwrite = guild_id.permissionOverwrites[guild_id.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = PermissionUtilsAll;
-    everyoneOverwrite = obj.makeEveryoneOverwrite(guild_id.guild_id);
+    everyoneOverwrite = PermissionUtilsAll.makeEveryoneOverwrite(guild_id.guild_id);
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(everyoneOverwrite);
-  obj.deny = BigFlagUtilsAll.remove(obj.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
-  obj.allow = BigFlagUtilsAll.remove(obj.allow, MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj2.deny = BigFlagUtilsAll.remove(obj2.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
+  obj2.allow = BigFlagUtilsAll.remove(obj2.allow, MODERATE_STAGE_CHANNEL_PERMISSIONS);
   if (!arg2) {
-    obj.deny = BigFlagUtilsAll.add(obj.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
+    obj2.deny = BigFlagUtilsAll.add(obj2.deny, MODERATE_STAGE_CHANNEL_PERMISSIONS);
     const tmp5Result = BigFlagUtilsAll;
   }
-  ChannelSettingsPermissionsActionCreators.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
+  ChannelSettingsPermissionsActionCreators.updatePermission(guild_id, obj2.id, obj2.allow, obj2.deny);
 };
 export const grantUserChannelAccess = function grantUserChannelAccess(id, accessPermissions) {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (null == id.permissionOverwrites[currentUser.id]) {
-      let obj = { id: currentUser.id, type: Server.PermissionOverwriteType.MEMBER, allow: BigFlagUtilsAll.add(PermissionUtilsAll.NONE, accessPermissions), deny: PermissionUtilsAll.NONE };
-      const items = [obj];
+      const obj3 = { id: currentUser.id, type: Server.PermissionOverwriteType.MEMBER, allow: BigFlagUtilsAll.add(PermissionUtilsAll.NONE, accessPermissions), deny: PermissionUtilsAll.NONE };
+      const items = [obj3];
       return ChannelSettingsPermissionsActionCreators.savePermissionUpdates(id.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
-      obj = BigFlagUtilsAll;
       const obj2 = ChannelSettingsPermissionsActionCreators;
-      return obj2.updatePermission(id, tmp4.id, obj.add(allow, accessPermissions), deny);
+      return obj2.updatePermission(id, tmp4.id, BigFlagUtilsAll.add(allow, accessPermissions), deny);
     }
   }
 };

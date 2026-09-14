@@ -1,6 +1,6 @@
-// === Module 11951: StringSelectComponentActionSheet ===
+// === Module 11952: StringSelectComponentActionSheet ===
 
-// Module 11951 (StringSelectComponentActionSheet)
+// Module 11952 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1894 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -11,13 +11,9 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: null, textEmoji: null, fastImageEmoji: null };
-createStyles = { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
-createStyles.emojiWrapper = createStyles;
-createStyles.textEmoji = { fontSize: 16, color: "#000000" };
-createStyles.fastImageEmoji = { width: 24, height: 24 };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, textEmoji: { fontSize: 16, color: "#000000" }, fastImageEmoji: { width: 24, height: 24 } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/StringSelectComponentActionSheet.tsx");
 
@@ -31,7 +27,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   let tmp = callback();
   dependencyMap = tmp;
   let obj = selectionActionComponent(8236);
-  let tmp3 = first(noop.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8236).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   let items = [selectionActionComponent];
@@ -81,7 +77,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     const options = selectionActionComponent.options;
     return options.some((emoji) => null != emoji.emoji);
   }, items4);
-  obj = {
+  const obj2 = {
     onPressOptionItem: callback1,
     renderIcon(emoji) {
       let tmp = null;
@@ -115,22 +111,22 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     channelId: null,
     allowEmpty: null
   };
-  let set = new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId));
+  let set = new Set(selectionActionComponent(8236).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
   }
   const items5 = [selectionOptionItemWithDescription];
-  obj.itemStyle = items5;
-  obj.selectedCount = first.size;
-  obj.isSelected = function isSelected(value) {
+  obj2.itemStyle = items5;
+  obj2.selectedCount = first.size;
+  obj2.isSelected = function isSelected(value) {
     return first.has(value.value);
   };
-  obj.submitSelection = function submitSelection() {
+  obj2.submitSelection = function submitSelection() {
     const items = [...first];
     return callback(items);
   };
-  obj.itemAccessibilityLabel = function itemAccessibilityLabel(emoji) {
+  obj2.itemAccessibilityLabel = function itemAccessibilityLabel(emoji) {
     const intl = selectionActionComponent(closure_2[11]).intl;
     emoji = emoji.emoji;
     let name;
@@ -139,7 +135,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
     }
     return intl.formatToPlainString(selectionActionComponent(closure_2[11]).t.ZbrH2f, { emojiName: name, optionName: emoji.label, optionDescription: emoji.description });
   };
-  obj.channelId = channelId;
-  obj.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11952), obj);
+  obj2.channelId = channelId;
+  obj2.allowEmpty = allowEmpty;
+  return tmp9(onSubmit(11953), obj2);
 };

@@ -8,11 +8,9 @@ import noop from "module_19" /* 19 */;
 const ChannelCallStore = fn(9597);
 ({ resetFocus: c2, toggleFocus: c3 } = ChannelCallStore);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { stageStreamContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BLACK };
-createStyles.stageStreamContainer = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { stageStreamContainer: { backgroundColor: nativeDefault.colors.BLACK } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleScreenshare.tsx");
 

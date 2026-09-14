@@ -1,14 +1,14 @@
-// === Module 14844: AccountAgeGroupNonAdultSetting ===
+// === Module 14845: AccountAgeGroupNonAdultSetting ===
 
-// Module 14844 (AccountAgeGroupNonAdultSetting)
+// Module 14845 (AccountAgeGroupNonAdultSetting)
 import util from "util" /* 1114 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14768 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14769 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -28,8 +28,8 @@ const pressable = SettingBuilders.createPressable({
     return stringResult;
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
   },
   withArrow: true,
   usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {

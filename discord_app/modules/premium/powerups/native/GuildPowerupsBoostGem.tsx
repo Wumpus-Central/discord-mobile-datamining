@@ -1,12 +1,12 @@
-// === Module 12650: GuildPowerupsBoostGem ===
+// === Module 12651: GuildPowerupsBoostGem ===
 
-// Module 12650 (GuildPowerupsBoostGem)
+// Module 12651 (GuildPowerupsBoostGem)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import BoostGemDefault from "BoostGem" /* 12651 */;
+import BoostGemDefault from "BoostGem" /* 12652 */;
 import createStyles from "createStyles" /* 4636 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
@@ -14,6 +14,7 @@ let obj = { boostGemContainer: null };
 let size = { width: 100, height: 100, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, alignItems: "center", justifyContent: "center", alignSelf: "center" };
 obj.boostGemContainer = size;
 let closure_4 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
 export default function GuildPowerupsBoostGem(arg0) {

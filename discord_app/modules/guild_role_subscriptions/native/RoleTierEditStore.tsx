@@ -1,9 +1,9 @@
-// === Module 17845: RoleTierEditStore ===
+// === Module 17846: RoleTierEditStore ===
 
-// Module 17845 (RoleTierEditStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 17846 (RoleTierEditStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import _mod4259 from "module_4259" /* 4259 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15295 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,31 +44,31 @@ function usePriceTiers(guildId) {
 }
 const LoadingState = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
-const identity = fn(1244);
+const identity = fn(1242);
 const withEqualityFn = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_7);
   obj.setScene = function setScene(currentScene) {
-    currentScene(1249).batchUpdates(() => currentScene({ currentScene }));
+    currentScene(1247).batchUpdates(() => currentScene({ currentScene }));
   };
   closure_129_0 = arg0;
   closure_129_1 = "groupCover";
   obj.setGroupCover = (arg0) => {
     closure_0 = arg0;
-    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
+    closure_0(1247).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
   closure_130_0 = arg0;
   closure_130_1 = "groupDescription";
   obj.setGroupDescription = (arg0) => {
     closure_0 = arg0;
-    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
+    closure_0(1247).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
   closure_131_0 = arg0;
   closure_131_1 = "groupIsFullGate";
   obj.setGroupIsFullGate = (arg0) => {
     closure_0 = arg0;
-    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
+    closure_0(1247).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
   obj.priceTiers = null;
   obj.priceTierState = obj.IDLE;
@@ -76,21 +76,21 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     closure_0 = arg0;
     return (async () => {
       closure_1 = tmp3;
-      priceTiers(1249).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
+      priceTiers(1247).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
       await closure_2_2(7359).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
-        priceTiers(1249).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
+        priceTiers(1247).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
         c4 = 3;
-        priceTiers(1249);
+        priceTiers(1247);
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 !== 2) {
         closure_128_0 = value;
-        priceTiers(1249).batchUpdates(() => priceTiers({ priceTiers, priceTierState: constants.IDLE }));
+        priceTiers(1247).batchUpdates(() => priceTiers({ priceTiers, priceTierState: constants.IDLE }));
         c2 = 0;
-        priceTiers(1249);
+        priceTiers(1247);
       }
       return value;
     })();
@@ -119,7 +119,7 @@ export const useResetTierEditState = function useResetTierEditState() {
 export { usePriceTiers };
 export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGuild(guildId) {
   const tmp = usePriceTiers(guildId);
-  let tiers = tmp.tiers;
+  const tiers = tmp.tiers;
   ({ state, onRefresh } = tmp);
   const subscriptionListingsForGuild = GuildRoleSubscriptionsHooks.useSubscriptionListingsForGuild(guildId);
   const set = new Set();
@@ -127,11 +127,11 @@ export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGu
     let addResult = set.add(item10022.subscription_plans[0].price);
     continue;
   }
-  tiers = undefined;
+  let tiers1;
   if (tiers != null) {
-    tiers = tiers.filter((item) => !set.has(item));
+    tiers1 = tiers.filter((item) => !set.has(item));
   }
-  return { tiers, state, onRefresh };
+  return { tiers: tiers1, state, onRefresh };
 };
 export const useGroupCoverState = function useGroupCoverState() {
   return withEqualityFn((arg0) => {

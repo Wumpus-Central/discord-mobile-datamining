@@ -1,6 +1,6 @@
-// === Module 10465: useEmojiAndSource ===
+// === Module 10466: useEmojiAndSource ===
 
-// Module 10465 (useEmojiAndSource)
+// Module 10466 (useEmojiAndSource)
 import EmojiTypes from "EmojiTypes" /* 4292 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,26 +26,26 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   let ref;
   const items = [c6, c5];
   const emoji = emojiId(refreshPositionKey[8]).useStateFromStoresObject(items, () => {
-    let obj = EmojiStore;
     let customEmojiById = null;
     if (null != emojiId) {
-      customEmojiById = obj.getCustomEmojiById(tmp);
+      customEmojiById = EmojiStore.getCustomEmojiById(tmp);
     }
     let type;
     if (customEmojiById != null) {
       type = customEmojiById.type;
     }
     if (type === EmojiTypes.EmojiTypes.GUILD) {
-      obj = { emoji: customEmojiById, joinedEmojiSourceGuildRecord: null };
+      const obj3 = { emoji: customEmojiById, joinedEmojiSourceGuildRecord: null };
       let guildId;
       if (customEmojiById != null) {
         guildId = customEmojiById.guildId;
       }
-      obj.joinedEmojiSourceGuildRecord = GuildStore.getGuild(guildId);
+      obj3.joinedEmojiSourceGuildRecord = GuildStore.getGuild(guildId);
+      let obj4 = obj3;
     } else {
-      obj = { emoji: null, joinedEmojiSourceGuildRecord: null };
+      obj4 = { emoji: null, joinedEmojiSourceGuildRecord: null };
     }
-    return obj;
+    return obj4;
   });
   const joinedEmojiSourceGuildRecord = emoji.joinedEmojiSourceGuildRecord;
   const hasJoinedEmojiSourceGuild = null != joinedEmojiSourceGuildRecord;
@@ -63,17 +63,17 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   }
   closure_2 = tmp5;
   let obj = emojiId(refreshPositionKey[8]);
-  [tmp8, c3] = _slicedToArray(noop.useState(tmp5), 2);
+  [tmp8, c3] = noop.useState(tmp5);
   const sourceType = _slicedToArray(noop.useState(null), 2);
   noop = sourceType[1];
   let fromGuildRecord = null;
   if (null != joinedEmojiSourceGuildRecord) {
     fromGuildRecord = ref.createFromGuildRecord(joinedEmojiSourceGuildRecord);
   }
-  let tmp6Result = tmp6(obj2.useState(fromGuildRecord), 2);
-  [tmp13, c5] = tmp6Result;
-  tmp6Result = tmp6(obj2.useState(null), 2);
-  [tmp15, c6] = tmp6Result;
+  const tmp7 = _slicedToArray(noop.useState(tmp5), 2);
+  [tmp13, c5] = noop.useState(fromGuildRecord);
+  const tmp6Result = _slicedToArray(noop.useState(fromGuildRecord), 2);
+  [tmp15, c6] = noop.useState(null);
   ref = obj2.useRef(refreshPositionKey);
   const effect = obj2.useEffect(() => {
     closure_7.current = refreshPositionKey;
@@ -88,8 +88,8 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -102,8 +102,8 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_0 = tmp2;
@@ -112,8 +112,8 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
               if (null != closure_0) {
                 c2 = 1;
                 v3 = 1;
-                const obj1 = { value: closure_2_9(tmp32), done: false };
-                return obj1;
+                const obj4 = { value: closure_2_9(tmp32), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -123,7 +123,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
             tmp6 = value;
             if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
           }

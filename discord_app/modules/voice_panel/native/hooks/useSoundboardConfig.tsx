@@ -1,12 +1,14 @@
-// === Module 17308: useSoundboardConfig ===
+// === Module 17310: useSoundboardConfig ===
 
-// Module 17308 (useSoundboardConfig)
+// Module 17310 (useSoundboardConfig)
 import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7478 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17146 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17168 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17148 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17170 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SoundboardButtonLocation = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
@@ -20,7 +22,7 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   let obj = require("initialize");
   const items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
-  const obj2 = require("DismissibleContentUnsafeUtils");
+  let obj2 = require("DismissibleContentUnsafeUtils");
   if (tmp2) {
     if (obj.VOICE_CONTROLS === analyticsSource) {
       let flag = true;
@@ -34,23 +36,23 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   const callback = noop.useCallback(() => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {
-      const obj = { channel, analyticsSource };
-      const result = obj.showSoundboardSoundPickerActionSheet(obj);
+      const obj2 = { channel, analyticsSource };
+      const result = soundboard_SoundboardActionCreators.showSoundboardSoundPickerActionSheet(obj2);
     }
   }, items1);
-  obj = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null, showIndicator: null };
+  const obj3 = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null, showIndicator: null };
   let tmp8 = stateFromStores;
   if (!stateFromStores) {
     tmp8 = !noop.useMemo(() => canChannelUseSoundboardDefault(ChannelStore.getChannel(closure_0)), items2);
   }
-  obj.disabled = tmp8;
+  obj3.disabled = tmp8;
   let stringResult;
   if (stateFromStores) {
     const intl = tmp3(1114).intl;
     stringResult = intl.string(tmp3(1114).t.X1lQli);
   }
-  obj.disabledAccessibilityHint = stringResult;
-  obj.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  return obj;
+  obj3.disabledAccessibilityHint = stringResult;
+  obj3.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  return obj3;
 };
 export { SoundboardButtonLocation };

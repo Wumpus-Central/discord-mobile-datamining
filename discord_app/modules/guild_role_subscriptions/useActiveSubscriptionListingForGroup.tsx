@@ -1,12 +1,14 @@
-// === Module 16638: useActiveSubscriptionListingForGroup ===
+// === Module 16640: useActiveSubscriptionListingForGroup ===
 
-// Module 16638 (useActiveSubscriptionListingForGroup)
+// Module 16640 (useActiveSubscriptionListingForGroup)
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
-import subscriptionUtils from "subscriptionUtils" /* 15297 */;
+import subscriptionUtils from "subscriptionUtils" /* 15298 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4269 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SubscriptionTypes = fn(1074).SubscriptionTypes;
@@ -67,8 +69,8 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
           obj.return();
           break;
         }
-        let obj = { activeSubscription: tmp2, activeSubscriptionListing: tmp };
-        return obj;
+        let obj2 = { activeSubscription: tmp2, activeSubscriptionListing: tmp };
+        return obj2;
       }
       continue;
     }

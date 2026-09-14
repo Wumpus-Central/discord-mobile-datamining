@@ -1,19 +1,21 @@
 // === Module 9306: DisplayNameStylesFlywheelExperiment ===
 
 // Module 9306 (DisplayNameStylesFlywheelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", name: "2026-06-gummy-bears", defaultConfig: { enabled: false }, variations: null };
-obj = { 1: null };
-obj[1] = { enabled: true };
-obj.variations = obj;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const obj1 = { kind: "user", name: "2026-06-gummy-viewers", defaultConfig: { enabled: false }, variations: null };
+let ApexExperiment = ApexExperiment_mod;
+const obj = { kind: "user", name: "2026-06-gummy-bears", defaultConfig: { enabled: false }, variations: null };
 const obj2 = { 1: null };
 obj2[1] = { enabled: true };
-obj1.variations = obj2;
-const apexExperiment1 = ApexExperiment.createApexExperiment(obj1);
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+let ApexExperiment = ApexExperiment_mod;
+const obj3 = { kind: "user", name: "2026-06-gummy-viewers", defaultConfig: { enabled: false }, variations: null };
+const obj4 = { 1: null };
+obj4[1] = { enabled: true };
+obj3.variations = obj4;
+const apexExperiment1 = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFlywheelExperiment.tsx");
 
 export const DisplayNameStylesFlywheelSettersExperiment = apexExperiment;

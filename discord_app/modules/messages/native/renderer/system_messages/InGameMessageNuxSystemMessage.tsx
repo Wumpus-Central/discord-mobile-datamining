@@ -25,19 +25,20 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (null == application) {
     return null;
   } else {
-    let obj = useAuthorWithProcessedColor;
-    const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, gameName: null, urlOnClick: null };
-    obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj.usernameOnClick = formatUsernameOnClickDefault(obj);
-    obj.gameName = application.name;
-    const obj1 = { action: "bindOpenUrl", url: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS), linkColor: tmp3.linkColor, medium: true };
-    obj.urlOnClick = obj1;
-    const obj2 = { content: null };
+    const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, gameName: null, urlOnClick: null };
+    const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj2.usernameOnClick = formatUsernameOnClickDefault(obj3);
+    obj2.gameName = application.name;
+    const obj4 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
+    obj4.url = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj4.linkColor = tmp3.linkColor;
+    obj2.urlOnClick = obj4;
+    const obj5 = { content: null };
     const intl = util.intl;
-    obj2.content = intl.formatToParts(util.t["92erOB"], obj);
+    obj5.content = intl.formatToParts(util.t["92erOB"], obj2);
     const merged = Object.assign(createCommonMessageDefault(message));
-    return obj2;
+    return obj5;
   }
   tmp3 = resolveMessageContentColorsDefault(theme);
 };

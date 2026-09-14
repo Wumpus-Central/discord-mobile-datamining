@@ -1,6 +1,6 @@
-// === Module 13793: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 13794: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 13793 (GlobalDiscoveryServersSearchResultsStore)
+// Module 13794 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
@@ -210,24 +210,23 @@ export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
   },
   GUILD_PROFILE_FETCH_SUCCESS: function handleGuildProfileFetchSuccess(arg0) {
     ({ guildId, profile } = arg0);
-    let obj = map1;
     value = map1.get(guildId);
     if (null == value) {
       return false;
     } else {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
       let memberCount = profile.memberCount;
       if (memberCount == null) {
         memberCount = value.memberCount;
       }
-      obj.memberCount = memberCount;
+      obj2.memberCount = memberCount;
       let presenceCount = profile.onlineCount;
       if (presenceCount == null) {
         presenceCount = value.presenceCount;
       }
-      obj.presenceCount = presenceCount;
-      const result = obj.set(guildId, obj);
+      obj2.presenceCount = presenceCount;
+      const result = map1.set(guildId, obj2);
     }
   }
 });

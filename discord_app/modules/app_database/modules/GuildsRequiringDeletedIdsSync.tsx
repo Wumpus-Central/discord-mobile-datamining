@@ -35,8 +35,8 @@ prototype["getAll"] = function getAll() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -49,8 +49,8 @@ prototype["getAll"] = function getAll() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp2;
             closure_128_0 = undefined;
@@ -59,13 +59,13 @@ prototype["getAll"] = function getAll() {
               const _Set2 = Set;
               const set = new Set();
               c2 = 3;
-              const obj1 = { value: set, done: true };
-              return obj1;
+              const obj4 = { value: set, done: true };
+              return obj4;
             } else {
               c1 = 1;
               c2 = 1;
-              const obj2 = { value: result.getMany(), done: false };
-              return obj2;
+              const obj5 = { value: result.getMany(), done: false };
+              return obj5;
             }
           }
         } else if (arg0 === 1) {
@@ -73,14 +73,14 @@ prototype["getAll"] = function getAll() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_128_0 = value;
           const _Set = Set;
           const set1 = new Set(closure_128_0.map((id) => id.id));
           c2 = 3;
-          obj = { value: set1, done: true };
+          const obj = { value: set1, done: true };
           return obj;
         }
       } catch (tmp18) {
@@ -111,10 +111,9 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, databa
 prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   guild = guild.guild;
   if (guild.unableToSyncDeletes) {
-    let obj = DatabaseDaosDefault;
-    const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
-    obj = { id: guild.id };
-    result.put(obj);
+    const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSyncTransaction(database);
+    const obj2 = { id: guild.id };
+    result.put(obj2);
   }
 };
 prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, database) {
@@ -124,9 +123,9 @@ prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, 
 prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
-let size = Object.create(GuildsRequiringDeletedIdsSync.prototype);
-let closure_129_0 = size;
-size.actions = {
+let obj2 = Object.create(GuildsRequiringDeletedIdsSync.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -140,7 +139,7 @@ size.actions = {
     return obj.handleDeletedEntityIds(arg0, arg1);
   }
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
 
-export default size;
+export default obj2;

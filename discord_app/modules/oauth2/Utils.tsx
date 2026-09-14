@@ -11,37 +11,36 @@ const MarketingURLs = Constants.MarketingURLs;
 let result = size.fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
-  let obj = useIsSocialLayerParentApplication;
-  const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
+  const isSocialLayerParentApplication = useIsSocialLayerParentApplication.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
       const t4 = util.t;
       const intl4 = util.intl;
-      obj = { application: null, privacyPolicyURL: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
+      const obj2 = { application: null, privacyPolicyURL: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
       ({ name: obj5.application, privacy_policy_url: obj5.privacyPolicyURL, terms_of_service_url: obj5.termsOfServiceURL } = application);
-      obj.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-      return intl4.format(isSocialLayerParentApplication ? t4.yVfotv : t4.rxlyKL, obj);
+      obj2.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
+      return intl4.format(isSocialLayerParentApplication ? t4.yVfotv : t4.rxlyKL, obj2);
     }
   }
   if (null != application.privacy_policy_url) {
     const t3 = util.t;
     const intl3 = util.intl;
-    obj = { application: null, privacyPolicyURL: null, discordPrivacyPolicyURL: null };
+    const obj9 = { application: null, privacyPolicyURL: null, discordPrivacyPolicyURL: null };
     ({ name: obj4.application, privacy_policy_url: obj4.privacyPolicyURL } = application);
-    obj.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-    return intl3.format(isSocialLayerParentApplication ? t3.pYVSah : t3.TBvmM2, obj);
+    obj9.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
+    return intl3.format(isSocialLayerParentApplication ? t3.pYVSah : t3.TBvmM2, obj9);
   } else if (null != application.terms_of_service_url) {
     const t2 = util.t;
     const intl2 = util.intl;
-    const obj1 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
+    const obj10 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
     ({ name: obj3.application, terms_of_service_url: obj3.termsOfServiceURL } = application);
-    obj1.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
-    return intl2.format(isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"], obj1);
+    obj10.discordPrivacyPolicyURL = MarketingURLs.PRIVACY;
+    return intl2.format(isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"], obj10);
   } else {
     const t = util.t;
     const intl = util.intl;
-    const obj2 = { application: application.name, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
-    return intl.format(isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"], obj2);
+    const obj11 = { application: application.name, discordPrivacyPolicyURL: MarketingURLs.PRIVACY };
+    return intl.format(isSocialLayerParentApplication ? t["8LemYv"] : t["3Ywek3"], obj11);
   }
 };
 export const isContentClassificationRestricted = function isContentClassificationRestricted(content_classification, nsfwAllowed) {

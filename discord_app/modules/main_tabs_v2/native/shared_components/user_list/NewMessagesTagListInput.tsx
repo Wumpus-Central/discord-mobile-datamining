@@ -1,32 +1,33 @@
-// === Module 12496: NewMessagesTagListInput ===
+// === Module 12497: NewMessagesTagListInput ===
 
-// Module 12496 (NewMessagesTagListInput)
+// Module 12497 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10991 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10992 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { searchBarContainer: null, header: null, showSearchButton: null };
-obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj.searchBarContainer = obj;
-const createStyles = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, header: null, showSearchButton: null };
+let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
 }
-createStyles.marginBottom = num;
-obj.header = createStyles;
+obj4.marginBottom = num;
+obj.header = obj4;
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.showSearchButton = { marginHorizontal: nativeDefault.space.PX_12 };
 let closure_7 = createStyles.createStyles(obj);
-const obj2 = { marginHorizontal: nativeDefault.space.PX_12 };
+const obj5 = { marginHorizontal: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx");
 
@@ -45,7 +46,7 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
     return found.map(makeUserListPillDataDefault);
   }, items);
   let obj = { style: tmp.searchBarContainer, children: null };
-  obj = { autoFocus, focusOnAdd: true, footer: null, icon: null, onChangeText: null, onFocus: null, onRemove: null, placeholder: null, tags: null, ref: null };
+  const obj2 = { autoFocus, focusOnAdd: true, footer: null, icon: null, onChangeText: null, onFocus: null, onRemove: null, placeholder: null, tags: null, ref: null };
   let tmp6 = null;
   if (!hasQuery) {
     tmp6 = null;
@@ -58,24 +59,24 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
       } else {
         stringResult = string(t.fTcQm2);
       }
-      obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress: onForceSearchResults, style: tmp.showSearchButton, children: null };
+      const obj3 = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress: onForceSearchResults, style: tmp.showSearchButton, children: null };
       if (forceSearchResults) {
         let CirclePlusIcon = require("ChevronLargeRightIcon").ChevronLargeRightIcon;
       } else {
         CirclePlusIcon = require("CirclePlusIcon").CirclePlusIcon;
       }
-      obj.children = <CirclePlusIcon size="xs" />;
+      obj3.children = <CirclePlusIcon size="xs" />;
       jsx(require("Pressables").PressableOpacity, { accessibilityRole: "button", accessibilityLabel: stringResult, onPress: onForceSearchResults, style: tmp.showSearchButton, children: null });
     }
   }
-  obj.footer = tmp6;
-  const obj1 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
+  obj2.footer = tmp6;
+  const obj4 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
   const intl2 = require("util").intl;
-  obj1.children = intl2.string(require("util").t.kHyiXs);
-  obj.icon = jsx(require("Text/Text").Text, { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null });
-  obj.onChangeText = onChangeText;
-  obj.onFocus = onFocus;
-  obj.onRemove = function onRemove(arg0) {
+  obj4.children = intl2.string(require("util").t.kHyiXs);
+  obj2.icon = jsx(require("Text/Text").Text, { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null });
+  obj2.onChangeText = onChangeText;
+  obj2.onFocus = onFocus;
+  obj2.onRemove = function onRemove(arg0) {
     const user = UserStore.getUser(tmp.id);
     if (null != user) {
       closure_1_0(user);
@@ -86,9 +87,9 @@ export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
     }
   };
   const intl3 = require("util").intl;
-  obj.placeholder = intl3.string(require("util").t.CaEER6);
-  obj.tags = memo;
-  obj.ref = tagListInputRef;
+  obj2.placeholder = intl3.string(require("util").t.CaEER6);
+  obj2.tags = memo;
+  obj2.ref = tagListInputRef;
   obj.children = jsx(selectedUserIds(memo[9]), { autoFocus, focusOnAdd: true, footer: null, icon: null, onChangeText: null, onFocus: null, onRemove: null, placeholder: null, tags: null, ref: null });
-  return <View autoFocus={autoFocus} focusOnAdd footer={null} icon={null} onChangeText={null} onFocus={null} onRemove={null} placeholder={null} tags={null} ref={null} />;
+  return <View style={tmp.searchBarContainer}>{null}</View>;
 });

@@ -1,13 +1,13 @@
-// === Module 13803: GameCommunityUpsellExperiment ===
+// === Module 13804: GameCommunityUpsellExperiment ===
 
-// Module 13803 (GameCommunityUpsellExperiment)
+// Module 13804 (GameCommunityUpsellExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-08-game-community-add-server-entry", kind: "user", defaultConfig: { enabled: false, cardAction: "join" }, variations: null };
-obj = { 1: null, 2: { enabled: true, cardAction: "join" } };
-obj[2] = { enabled: true, cardAction: "preview" };
-obj.variations = obj;
+const obj = { name: "2026-08-game-community-add-server-entry", kind: "user", defaultConfig: { enabled: false, cardAction: "join" }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true, cardAction: "join" } };
+obj2[2] = { enabled: true, cardAction: "preview" };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityUpsellExperiment.tsx");
 

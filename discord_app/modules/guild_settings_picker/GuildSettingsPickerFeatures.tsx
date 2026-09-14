@@ -1,10 +1,10 @@
-// === Module 13977: GuildSettingsPickerFeatures ===
+// === Module 13978: GuildSettingsPickerFeatures ===
 
-// Module 13977 (GuildSettingsPickerFeatures)
+// Module 13978 (GuildSettingsPickerFeatures)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 13978 */;
-import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 13979 */;
+import RoleSubscriptionsOnboardingGuildPickerFeatureSpecDefault from "RoleSubscriptionsOnboardingGuildPickerFeatureSpec" /* 13979 */;
+import RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpecDefault from "RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec" /* 13980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
@@ -61,7 +61,7 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
     first = {};
   }
   const merged1 = Object.assign(first);
-  obj = {
+  return {
     title: obj.title(),
     description: obj.description(),
     selectGuildCta: obj.selectGuildCta(),
@@ -80,5 +80,4 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
       return tmp;
     }
   };
-  return obj;
 };

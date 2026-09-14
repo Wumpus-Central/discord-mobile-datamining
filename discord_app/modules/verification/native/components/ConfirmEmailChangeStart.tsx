@@ -7,6 +7,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -20,11 +22,10 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function ConfirmEmailChangeStart() {
   const tmp = closure_12();
   _require = tmp;
+  const navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
-  const navigation = obj.useNavigation();
-  let obj1 = require("initialize");
   const items = [UserStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   [][0] = navigation;
@@ -32,26 +33,27 @@ export default function ConfirmEmailChangeStart() {
     return null;
   } else {
     const intl = tmp2(1114).intl;
-    obj = { oldEmail: stateFromStores.email };
-    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-    obj1 = { style: tmp.container, children: null };
-    let obj2 = { style: tmp.image, source: navigation(6703) };
-    const items1 = [closure_10(closure_7, obj2), , , ];
-    const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    let obj3 = { oldEmail: stateFromStores.email };
+    let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+    const obj5 = { style: tmp.container, children: null };
+    let obj6 = { style: tmp.image, source: navigation(6703) };
+    const items1 = [closure_10(closure_7, obj6), , , ];
+    let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1114).intl;
-    obj3.children = intl2.string(tmp2(1114).t.dQ71Wa);
-    items1[1] = closure_10(tmp2(4632).Text, obj3);
-    items1[2] = intl.format(tmp2(1114).t.oMFSgi, obj).map((children, index) => closure_2_10(Text_Text.Text, { style: body.body, variant: "text-sm/medium", color: "text-default", children }, index));
-    const obj4 = { style: tmp.button, children: null };
-    const obj5 = { text: null, onPress: null, loading: null, grow: true };
+    obj7.children = intl2.string(tmp2(1114).t.dQ71Wa);
+    items1[1] = closure_10(tmp2(4632).Text, obj7);
+    items1[2] = intl.format(tmp2(1114).t.oMFSgi, obj3).map((children, index) => closure_2_10(Text_Text.Text, { style: body.body, variant: "text-sm/medium", color: "text-default", children }, index));
+    let obj8 = { style: tmp.button, children: null };
+    const obj9 = { text: null, onPress: null, loading: null, grow: true };
     const intl3 = tmp2(1114).intl;
-    obj5.text = intl3.string(tmp2(1114).t.rXV81H);
-    obj5.onPress = tmp7;
-    obj5.loading = tmp6[0];
-    obj4.children = closure_10(tmp2(5056).Button, obj5);
-    items1[3] = closure_10(closure_6, obj4);
-    obj1.children = items1;
-    obj.children = closure_11(closure_6, obj1);
-    return closure_10(closure_8, obj);
+    obj9.text = intl3.string(tmp2(1114).t.rXV81H);
+    obj9.onPress = tmp7;
+    obj9.loading = tmp6[0];
+    obj8.children = closure_10(tmp2(5056).Button, obj9);
+    items1[3] = closure_10(closure_6, obj8);
+    obj5.children = items1;
+    obj4.children = closure_11(closure_6, obj5);
+    return closure_10(closure_8, obj4);
   }
+  let obj2 = require("initialize");
 };

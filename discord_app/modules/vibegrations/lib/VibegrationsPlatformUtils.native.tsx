@@ -1,10 +1,10 @@
-// === Module 16689: VibegrationsPlatformUtils ===
+// === Module 16691: VibegrationsPlatformUtils ===
 
-// Module 16689 (VibegrationsPlatformUtils)
+// Module 16691 (VibegrationsPlatformUtils)
 import PushNotificationDefault from "PushNotification" /* 9817 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
-const LocalNotificationTypes = fn(13805).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13806).LocalNotificationTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 
@@ -21,17 +21,16 @@ export default {
   presentTurnNotification(arg0) {
     ({ projectId, guildId } = arg0);
     ({ title, body } = arg0);
-    let obj = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
-    obj = { type: LocalNotificationTypes.VIBEGRATIONS, projectId, channel_id: projectId };
+    const obj2 = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
     if (null != guildId) {
-      const obj1 = { guildId };
-      let obj2 = obj1;
+      const obj4 = { guildId };
+      let obj5 = obj4;
     } else {
-      obj2 = {};
+      obj5 = {};
     }
-    const merged = Object.assign(obj2);
-    obj.userInfo = obj;
-    const result = obj.presentLocalNotification(obj);
+    const merged = Object.assign(obj5);
+    obj2.userInfo = { type: LocalNotificationTypes.VIBEGRATIONS, projectId, channel_id: projectId };
+    const result = PushNotificationDefault.presentLocalNotification(obj2);
   },
   relayPreviewCapture() {
     return Promise.resolve({ status: "unavailable" });

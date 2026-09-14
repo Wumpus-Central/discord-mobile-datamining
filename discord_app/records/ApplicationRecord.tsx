@@ -26,7 +26,7 @@ function createExecutable(os) {
 }
 const Constants = fn(1920);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1350).ApplicationTypes;
+const ApplicationTypes = fn(1348).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
@@ -118,43 +118,43 @@ Object.defineProperty(prototype, "connectionEntrypointUrl", {
 prototype["getIconURL"] = function getIconURL(size, format) {
   let gameAssetURL = null;
   if (null != this.icon) {
-    const obj = { id: null, hash: null, size: null, format: null };
+    const obj3 = { id: null, hash: null, size: null, format: null };
     ({ id: obj2.id, icon: obj2.hash } = this);
-    obj.size = size;
-    obj.format = format;
-    gameAssetURL = obj.getGameAssetURL(obj);
+    obj3.size = size;
+    obj3.format = format;
+    gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj3);
   }
   return gameAssetURL;
 };
 prototype["getIconSource"] = function getIconSource(size, format) {
   let gameAssetSource = null;
   if (null != this.icon) {
-    const obj = { id: null, hash: null, size: null, format: null };
+    const obj3 = { id: null, hash: null, size: null, format: null };
     ({ id: obj2.id, icon: obj2.hash } = this);
-    obj.size = size;
-    obj.format = format;
-    gameAssetSource = obj.getGameAssetSource(obj);
+    obj3.size = size;
+    obj3.format = format;
+    gameAssetSource = AvatarUtilsDefault.getGameAssetSource(obj3);
   }
   return gameAssetSource;
 };
 prototype["getSplashURL"] = function getSplashURL(size, format) {
   let gameAssetURL = null;
   if (null != this.splash) {
-    const obj = { id: null, hash: null, size: null, keepAspectRatio: true, format: null };
+    const obj3 = { id: null, hash: null, size: null, keepAspectRatio: true, format: null };
     ({ id: obj2.id, splash: obj2.hash } = this);
-    obj.size = size;
-    obj.format = format;
-    gameAssetURL = obj.getGameAssetURL(obj);
+    obj3.size = size;
+    obj3.format = format;
+    gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj3);
   }
   return gameAssetURL;
 };
 prototype["getCoverImageURL"] = function getCoverImageURL(size) {
   let applicationIconURL = null;
   if (null != this.coverImage) {
-    const obj = { id: null, icon: null, size: null, keepAspectRatio: true };
+    const obj3 = { id: null, icon: null, size: null, keepAspectRatio: true };
     ({ id: obj2.id, coverImage: obj2.icon } = this);
-    obj.size = size;
-    applicationIconURL = obj.getApplicationIconURL(obj);
+    obj3.size = size;
+    applicationIconURL = AvatarUtilsDefault.getApplicationIconURL(obj3);
   }
   return applicationIconURL;
 };
@@ -527,9 +527,9 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
   if (embeddedActivityConfig == null) {
     let tmp2;
     if (null != self.embeddedActivityConfig) {
-      obj = {};
+      const obj2 = {};
       let merged = Object.assign(self.embeddedActivityConfig);
-      tmp2 = obj;
+      tmp2 = obj2;
     }
     embeddedActivityConfig = tmp2;
   }
@@ -609,12 +609,13 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     categories = self.categories;
   }
   obj.categories = categories;
+  const linkedGames1 = id.linkedGames;
   const linkedGames = self.linkedGames;
   let tmp5 = linkedGames;
-  if (null != linkedGames) {
-    let mapped = linkedGames;
+  if (null != linkedGames1) {
+    let mapped = linkedGames1;
     if (null != linkedGames) {
-      mapped = linkedGames.map((application) => {
+      mapped = linkedGames1.map((application) => {
         if (null != application.application) {
           return application;
         } else {

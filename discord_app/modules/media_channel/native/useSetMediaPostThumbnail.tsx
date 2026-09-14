@@ -1,10 +1,12 @@
-// === Module 11369: useSetMediaPostThumbnail ===
+// === Module 11370: useSetMediaPostThumbnail ===
 
-// Module 11369 (useSetMediaPostThumbnail)
+// Module 11370 (useSetMediaPostThumbnail)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const DraftType = fn(4977).DraftType;
@@ -52,7 +54,7 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
         tmp4 = stateFromStores.id !== id1;
       }
       if (tmp4) {
-        let obj = UploadAttachmentActionCreatorsDefault;
+        const obj = UploadAttachmentActionCreatorsDefault;
         obj.update(closure_0, stateFromStores.id, DraftType.ChannelMessage, { thumbnail: false });
       }
       let flag;
@@ -67,8 +69,8 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
       if (user != null) {
         id2 = user.id;
       }
-      obj = { thumbnail: !flag, spoiler: false };
-      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj);
+      const obj3 = { thumbnail: !flag, spoiler: false };
+      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj3);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items1);

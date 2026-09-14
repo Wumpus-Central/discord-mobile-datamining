@@ -3,7 +3,7 @@
 // Module 5221 (NativePermissionManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativePermissionConstants from "NativePermissionConstants" /* 4846 */;
 import NativePermissionUtils from "NativePermissionUtils" /* 5220 */;
 import ProcessArgs2 from "ProcessArgs" /* 5222 */;

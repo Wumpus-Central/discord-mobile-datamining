@@ -1,13 +1,15 @@
-// === Module 16803: ChannelsScreen ===
+// === Module 16805: ChannelsScreen ===
 
-// Module 16803 (ChannelsScreen)
+// Module 16805 (ChannelsScreen)
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12492 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12493 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SearchConstants = fn(7982);
@@ -22,20 +24,20 @@ export default noop.memo(function ChannelsScreen(searchContext) {
   let stateFromStores;
   let stateFromStores2;
   closure_5 = undefined;
+  importDefault = searchContext(stateFromStores[7]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[7]);
-  importDefault = obj.getSearchContextId(searchContext);
-  let obj1 = searchContext(stateFromStores[8]);
   let items = [closure_5];
-  stateFromStores = obj1.useStateFromStores(items, () => SearchGuildChannelTabStore.getTextChannels(closure_1));
+  stateFromStores = searchContext(stateFromStores[8]).useStateFromStores(items, () => SearchGuildChannelTabStore.getTextChannels(closure_1));
+  let obj2 = searchContext(stateFromStores[8]);
   const items1 = [closure_5];
   const stateFromStores1 = searchContext(stateFromStores[8]).useStateFromStores(items1, () => SearchGuildChannelTabStore.getVoiceChannels(closure_1));
-  const obj3 = searchContext(stateFromStores[8]);
+  let obj3 = searchContext(stateFromStores[8]);
   const items2 = [stateFromStores2];
   const items3 = [searchContext.guildId];
   stateFromStores2 = searchContext(stateFromStores[8]).useStateFromStores(items2, () => SortedVoiceStateStore.getVoiceStates(searchContext.guildId), items3);
   const tmp6 = require("useStageChannelSpeakerVoiceStates")(searchContext.guildId);
   closure_5 = tmp6;
-  const obj4 = searchContext(stateFromStores[8]);
+  let obj4 = searchContext(stateFromStores[8]);
   const onPressGuildTextChannel = searchContext(stateFromStores[10]).useOnPressGuildTextChannel({ searchContext });
   const obj5 = searchContext(stateFromStores[10]);
   const onPressGuildVoiceChannel = searchContext(stateFromStores[10]).useOnPressGuildVoiceChannel({ searchContext });
@@ -63,34 +65,30 @@ export default noop.memo(function ChannelsScreen(searchContext) {
     }
   }, items7);
   const obj8 = searchContext(stateFromStores[8]);
-  obj = { placeholderHeight: stateFromStores4, numColumns: 1 };
-  const fullscreenPlaceholderCount = searchContext(stateFromStores[13]).useFullscreenPlaceholderCount(obj);
+  const fullscreenPlaceholderCount = searchContext(stateFromStores[13]).useFullscreenPlaceholderCount({ placeholderHeight: stateFromStores4, numColumns: 1 });
   const items8 = [onPressGuildTextChannel, searchContext];
   const callback = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildTextChannel(channelId);
-    const obj = { searchContext, channelId, index, entityType: constants.CHANNEL };
-    const result = obj.trackSearchResultClicked(obj);
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items8);
   const items9 = [onPressGuildVoiceChannel, searchContext];
   const callback1 = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildVoiceChannel(channelId);
-    const obj = { searchContext, channelId, index, entityType: constants.CHANNEL };
-    const result = obj.trackSearchResultClicked(obj);
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items9);
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {
     const items = [];
     closure_0 = items;
     closure_1 = 0;
-    let arr1 = stateFromStores;
     if (stateFromStores.length > 0) {
       let element = { type: stateFromStores3.SECTION, props: null };
-      let obj = { title: null };
+      const obj2 = { title: null };
       const intl = searchContext(stateFromStores[11]).intl;
-      obj.title = intl.string(searchContext(stateFromStores[11]).t.nIfr0Y);
-      element.props = obj;
+      obj2.title = intl.string(searchContext(stateFromStores[11]).t.nIfr0Y);
+      element.props = obj2;
       items.push(element);
-      const item = arr1.forEach((channel, index) => {
+      const item = stateFromStores.forEach((channel, index) => {
         closure_0 = closure_1 + index;
         const element = {
           type: constants.GUILD_TEXT_CHANNEL,
@@ -104,19 +102,18 @@ export default noop.memo(function ChannelsScreen(searchContext) {
         };
         closure_0.push(element);
       });
-      closure_1 = arr1.length;
+      closure_1 = stateFromStores.length;
     }
-    obj = stateFromStores1;
     if (stateFromStores1.length > 0) {
       const element1 = { type: stateFromStores3.SECTION, props: null };
-      obj = { title: null };
+      const obj3 = { title: null };
       const intl2 = searchContext(stateFromStores[11]).intl;
-      obj.title = intl2.string(searchContext(stateFromStores[11]).t.CYnO4s);
-      element1.props = obj;
+      obj3.title = intl2.string(searchContext(stateFromStores[11]).t.CYnO4s);
+      element1.props = obj3;
       items.push(element1);
       closure_0 = stateFromStores2;
       closure_1 = closure_5;
-      const sorted = obj.sort((channel, channel2) => {
+      const sorted = stateFromStores1.sort((channel, channel2) => {
         channel = channel.channel;
         let tmp = closure_0;
         let tmp3 = closure_0;
@@ -169,23 +166,24 @@ export default noop.memo(function ChannelsScreen(searchContext) {
     if (!stateFromStores3) {
       if (0 === items.length) {
         for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
-          let obj1 = { type: stateFromStores3.MESSAGE_PLACEHOLDER, key: null };
+          let obj4 = { type: stateFromStores3.MESSAGE_PLACEHOLDER, key: null };
           let _HermesInternal = HermesInternal;
-          obj1.key = "message-placeholder-" + num2;
-          arr1 = items.push(obj1);
+          obj4.key = "message-placeholder-" + num2;
+          let arr6 = items.push(obj4);
         }
       }
     }
     return items;
   }, items10);
+  const obj10 = { placeholderHeight: stateFromStores4, numColumns: 1 };
   const obj9 = searchContext(stateFromStores[13]);
   const messageTabCountsErrorText = searchContext(stateFromStores[15]).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
-    obj = { text: messageTabCountsErrorText };
-    let tmp18 = callback(tmp5(tmp[16]), obj);
+    const obj12 = { text: messageTabCountsErrorText };
+    let tmp18 = callback(tmp5(tmp[16]), obj12);
   } else {
-    obj1 = { data: memo };
-    tmp18 = callback(tmp5(tmp[17]), obj1);
+    const obj13 = { data: memo };
+    tmp18 = callback(tmp5(tmp[17]), obj13);
   }
   return tmp18;
 });

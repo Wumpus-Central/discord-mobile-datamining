@@ -5,6 +5,8 @@ import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useState: hasOwnProperty, useEffect: metroRequire, useCallback: closure_7 } = noop);
@@ -12,12 +14,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useRedeemVirtualCurrency.tsx");
 
 export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order) {
-  [tmp2, closure_0] = _slicedToArray(enabled(""), 2);
-  const tmp3 = _slicedToArray(enabled([]), 2);
-  const entitlements = tmp3[0];
-  dependencyMap = tmp3[1];
+  [tmp2, closure_0] = enabled("");
+  [entitlements, dependencyMap] = enabled([]);
   const tmp = _slicedToArray(enabled(""), 2);
-  [error, asyncGeneratorStep] = _slicedToArray(enabled(null), 2);
+  [error, asyncGeneratorStep] = enabled(null);
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
@@ -53,8 +53,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -67,8 +67,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_3 = tmp8;
               closure_131_0 = skuId;
@@ -77,13 +77,13 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
               closure_131_3 = undefined;
               closure_131_4 = undefined;
               tmp4(true);
-              const obj1 = { loadId, errorExtra: null };
-              let obj2 = { skuId, loadId };
-              obj1.errorExtra = obj2;
+              const obj5 = { loadId, errorExtra: null };
+              const obj6 = { skuId, loadId };
+              obj5.errorExtra = obj6;
               v4 = 1;
               c8 = 1;
-              const obj3 = { value: v0(obj1), done: false };
-              return obj3;
+              const obj7 = { value: v0(obj5), done: false };
+              return obj7;
             }
           } else {
             if (1 === tmp8) {
@@ -92,17 +92,16 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
                 throw value;
               } else if (arg0 === 2) {
                 c8 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
+                const obj8 = { value, done: true };
+                return obj8;
               } else {
                 closure_131_3 = value;
                 if ("signed" === closure_131_3.type) {
                   v0 = 2;
-                  obj2 = skuId(7346);
                   v4 = 4;
                   c8 = 1;
-                  const obj5 = { value: obj2.fetchOrderEntitlementsWithRetry(closure_131_3.order.id), done: false };
-                  return obj5;
+                  const obj9 = { value: skuId(7346).fetchOrderEntitlementsWithRetry(closure_131_3.order.id), done: false };
+                  return obj9;
                 } else {
                   tmp4(false);
                   c8 = 3;
@@ -111,8 +110,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
             } else if (2 !== tmp8) {
               if (3 === tmp8) {
                 v0 = 1;
-                const obj6 = { skuId: closure_131_0, loadId: closure_131_1, orderId: closure_131_3.order.id };
-                v4(closure_5, obj6);
+                const obj10 = { skuId: closure_131_0, loadId: closure_131_1, orderId: closure_131_3.order.id };
+                v4(closure_5, obj10);
               } else if (arg0 === 1) {
                 c8 = 3;
                 throw value;
@@ -120,7 +119,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
                 v0 = 0;
                 tmp4(false);
                 c8 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 closure_131_4 = value;
@@ -170,8 +169,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   closure_9 = tmp11;
   const tmp12 = _reportError((skuId, loadId, arg2) => {
     closure_0 = arg2;
-    closure_0(closure_2[6]);
-    const obj = {
+    return closure_0(closure_2[6]).redeemVirtualCurrencyForSKU({
       skuId,
       loadId,
       onRedeemStart() {
@@ -189,8 +187,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
         closure_1_3(arg0);
         closure_1_4(false);
       }
-    };
-    return obj.redeemVirtualCurrencyForSKU(obj);
+    });
   }, []);
   closure_10 = tmp12;
   const items1 = [enabled, tmp11, tmp12];
@@ -224,17 +221,17 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
           if (1 === entitlements.length) {
             str4 = "ID";
           }
-          let obj = { amountDescription: "1 orb", redeemedItemDescription: null };
+          const obj2 = { amountDescription: "1 orb", redeemedItemDescription: null };
           const mapped1 = entitlements.map((id) => id.id);
           const _HermesInternal = HermesInternal;
-          obj.redeemedItemDescription = "" + str2 + ": " + joined + ". Entitlement " + str4 + ": " + mapped1.join(", ");
-          closure_0(intl2.format(util.t.JxNFav, obj));
+          obj2.redeemedItemDescription = "" + str2 + ": " + joined + ". Entitlement " + str4 + ": " + mapped1.join(", ");
+          closure_0(intl2.format(util.t.JxNFav, obj2));
         }
       }
       closure_0("");
     } else {
       const intl = util.intl;
-      obj = { amount: "1 orb", errorMessage: tmp.message };
+      const obj = { amount: "1 orb", errorMessage: tmp.message };
       closure_0(intl.format(util.t["7gHWrd"], obj));
     }
   }, items2);

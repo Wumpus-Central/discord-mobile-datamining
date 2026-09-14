@@ -1,11 +1,11 @@
-// === Module 17135: InviteActivityButton ===
+// === Module 17137: InviteActivityButton ===
 
-// Module 17135 (InviteActivityButton)
+// Module 17137 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11890 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11891 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11590 */;
+import LocalActivityStore from "LocalActivityStore" /* 11591 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 
 require = fn;
@@ -15,16 +15,15 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/Invit
 
 export default noop.memo(function InviteActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
-  let obj = applicationId(504);
   const items = [LocalActivityStore, SelfPresenceStore];
   const items1 = [applicationId];
-  const stateFromStores = obj.useStateFromStores(items, () => getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, applicationId), items1);
+  const stateFromStores = applicationId(504).useStateFromStores(items, () => getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, applicationId), items1);
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = {
+    const obj2 = {
       onPress() {
-          const obj = { activity: stateFromStores };
-          obj.openLazy(asyncRequireImpl(17136, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.openLazy(asyncRequireImpl(17138, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10160),
       text: null,
@@ -35,13 +34,13 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       maxFontSizeMultiplier: 1
     };
     const intl = tmp(1114).intl;
-    obj.text = intl.string(tmp(1114).t["OzOM/q"]);
+    obj2.text = intl.string(tmp(1114).t["OzOM/q"]);
     const intl2 = tmp(1114).intl;
-    obj.accessibilityLabel = intl2.string(tmp(1114).t["OzOM/q"]);
+    obj2.accessibilityLabel = intl2.string(tmp(1114).t["OzOM/q"]);
     tmp4 = jsx(tmp(5056).Button, {
       onPress() {
-          const obj = { activity: stateFromStores };
-          obj.openLazy(asyncRequireImpl(17136, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.openLazy(asyncRequireImpl(17138, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
       icon: stateFromStores(10160),
       text: null,

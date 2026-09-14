@@ -4,8 +4,8 @@
 import LoggerDefault from "Logger" /* 3 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
@@ -118,28 +118,28 @@ class BaseActivityWebView {
     tmp10 = hadInvalidUrlError(applicationId.useState(null), 2);
     [str, closure_20] = tmp10;
     tmp11 = getOrCreateIframeId;
-    obj = { onIframeMount, onIframeUnmount, isNewIframe: null, isIframeRetiring: null };
+    obj1 = { onIframeMount, onIframeUnmount, isNewIframe: null, isIframeRetiring: null };
     tmp13 = !first;
     tmp12 = getOrCreateIframeId(hasInvalidUrlError[15]);
     if (first) {
       tmp13 = null == webViewKey;
     }
-    obj.isNewIframe = tmp13;
-    obj.isIframeRetiring = null == webViewKey;
-    tmp12Result = tmp12(first1, obj);
+    obj1.isNewIframe = tmp13;
+    obj1.isIframeRetiring = null == webViewKey;
+    tmp12Result = tmp12(first1, obj1);
     rect = tmp11(tmp3[16])();
     closure_21 = rect;
     obj4 = releaseIframeId(tmp3[17]);
-    obj1 = {};
+    obj13 = {};
     constants = obj4.getConstants();
     merged = Object.assign(queryParams);
     merged1 = Object.assign(deepLinkQueryParams);
-    obj1.frame_id = first1;
-    obj1.platform = referrerPolicy.MOBILE;
-    obj1.mobile_app_version = constants.Version;
+    obj13.frame_id = first1;
+    obj13.platform = referrerPolicy.MOBILE;
+    obj13.mobile_app_version = constants.Version;
     tmp18 = tmp11(tmp3[18])({ allowPopups });
     closure_22 = tmp18;
-    uRLSearchParams = new URLSearchParams(obj1);
+    uRLSearchParams = new URLSearchParams(obj13);
     combined = "" + activityUrl + "?" + uRLSearchParams;
     closure_23 = combined;
     closure_24 = obj2.useRef(safeAreasConfig);
@@ -157,8 +157,8 @@ class BaseActivityWebView {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -171,8 +171,8 @@ class BaseActivityWebView {
                 throw value;
               } else if (arg0 === 2) {
                 c7 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_5 = tmp3;
                 closure_4 = tmp2;
@@ -191,7 +191,7 @@ class BaseActivityWebView {
                 if (left1 == null) {
                   c0 = 0;
                 }
-                rect = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
+                const rect1 = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
                 let right;
                 if (current != null) {
                   right = current.right;
@@ -204,7 +204,7 @@ class BaseActivityWebView {
                 if (right1 == null) {
                   c1 = 0;
                 }
-                rect.right = closure_2_18(right, c1);
+                rect1.right = closure_2_18(right, c1);
                 let top;
                 if (current != null) {
                   top = current.top;
@@ -217,7 +217,7 @@ class BaseActivityWebView {
                 if (top1 == null) {
                   c2 = 0;
                 }
-                rect.top = closure_2_18(top, c2);
+                rect1.top = closure_2_18(top, c2);
                 let bottom;
                 if (current != null) {
                   bottom = current.bottom;
@@ -230,24 +230,24 @@ class BaseActivityWebView {
                 if (bottom1 == null) {
                   c3 = 0;
                 }
-                rect.bottom = closure_2_18(bottom, c3);
-                const obj1 = { iFrameUri, iFrameSandboxAttributes, referrerPolicy, insets: rect, messageForDisallowedNavigationError: null };
+                rect1.bottom = closure_2_18(bottom, c3);
+                const obj4 = { iFrameUri, iFrameSandboxAttributes, referrerPolicy, insets: rect1, messageForDisallowedNavigationError: null };
                 let tmp36;
                 if (!url) {
                   tmp36 = isPipOrGridMode;
                 }
-                obj1.messageForDisallowedNavigationError = tmp36;
+                obj4.messageForDisallowedNavigationError = tmp36;
                 c6 = 1;
                 c7 = 1;
-                const obj2 = { value: createWebviewHtmlFileDefault(obj1), done: false };
-                return obj2;
+                const obj5 = { value: createWebviewHtmlFileDefault(obj4), done: false };
+                return obj5;
               }
             } else if (arg0 === 1) {
               c7 = 3;
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               closure_132_0 = value;
@@ -296,16 +296,16 @@ class BaseActivityWebView {
     }, items3);
     callback2 = obj2.useCallback(() => {
       logger.warn("activity WebView content process terminated for appId " + applicationId);
-      let obj = { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId };
-      obj.track(constants2.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED, obj);
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED, { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId });
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      obj = { id: first1 };
-      ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
+      ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, { id: first1 });
       releaseIframeId();
       if (null != memo) {
         memo.releaseWebView();
       }
       onActivityCrash();
+      const obj2 = { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId };
+      const obj3 = { id: first1 };
     }, items4);
     tmp2Result = tmp2(tmp3[22]);
     items5 = [];
@@ -338,14 +338,14 @@ class BaseActivityWebView {
         tmp = hasInvalidUrlError;
       }
       if (tmp) {
-        const obj = { title: null, body: null, confirmText: null };
+        const obj2 = { title: null, body: null, confirmText: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.PtobXW);
+        obj2.title = intl.string(util.t.PtobXW);
         const intl2 = util.intl;
-        obj.body = intl2.string(util.t["55iAUT"]);
+        obj2.body = intl2.string(util.t["55iAUT"]);
         const intl3 = util.intl;
-        obj.confirmText = intl3.string(util.t.BddRzS);
-        obj.show(obj);
+        obj2.confirmText = intl3.string(util.t.BddRzS);
+        AlertActionCreatorsDefault.show(obj2);
       }
     }, items7);
     closure_26 = null;
@@ -382,8 +382,8 @@ class BaseActivityWebView {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -396,8 +396,8 @@ class BaseActivityWebView {
                     throw value;
                   } else if (arg0 === 2) {
                     c4 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_2 = tmp3;
                     closure_1 = tmp2;
@@ -408,20 +408,20 @@ class BaseActivityWebView {
                     combined = "https://" + applicationId + ".discordsays.com";
                     closure_129_0 = combined;
                     const HTTP = require("HTTPUtils").HTTP;
-                    const obj1 = { url: null, rejectWithError: false };
+                    const obj4 = { url: null, rejectWithError: false };
                     const _HermesInternal2 = HermesInternal;
-                    obj1.url = "" + combined + "/.discord/csp";
+                    obj4.url = "" + combined + "/.discord/csp";
                     c3 = 1;
                     c4 = 1;
-                    const obj2 = { value: HTTP.get(obj1), done: false };
-                    return obj2;
+                    const obj5 = { value: HTTP.get(obj4), done: false };
+                    return obj5;
                   }
                 } else if (arg0 === 1) {
                   c4 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 } else {
                   closure_129_1 = value.headers["content-security-policy"];
@@ -533,8 +533,8 @@ class BaseActivityWebView {
             tmp = null != origin;
           }
           if (tmp) {
-            const obj = { type: TransportTypes.POST_MESSAGE, origin, iframeId: first1 };
-            obj.handleMessage(parsed, obj, callback4);
+            const obj2 = { type: TransportTypes.POST_MESSAGE, origin, iframeId: first1 };
+            WebViewPostMessageTransportDefault.handleMessage(parsed, obj2, callback4);
           }
         }
       }, items10);
@@ -549,8 +549,8 @@ class BaseActivityWebView {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -563,8 +563,8 @@ class BaseActivityWebView {
                       throw value;
                     } else if (arg0 === 2) {
                       c9 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       closure_5 = tmp3;
                       closure_4 = tmp5;
@@ -588,7 +588,7 @@ class BaseActivityWebView {
                         if (left1 == null) {
                           c0 = 0;
                         }
-                        rect = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
+                        const rect1 = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
                         let right;
                         if (rect2 != null) {
                           right = rect2.right;
@@ -601,7 +601,7 @@ class BaseActivityWebView {
                         if (right1 == null) {
                           c1 = 0;
                         }
-                        rect.right = closure_2_18(right, c1);
+                        rect1.right = closure_2_18(right, c1);
                         let top;
                         if (rect2 != null) {
                           top = rect2.top;
@@ -614,7 +614,7 @@ class BaseActivityWebView {
                         if (top1 == null) {
                           c2 = 0;
                         }
-                        rect.top = closure_2_18(top, c2);
+                        rect1.top = closure_2_18(top, c2);
                         let bottom;
                         if (rect2 != null) {
                           bottom = rect2.bottom;
@@ -627,17 +627,17 @@ class BaseActivityWebView {
                         if (bottom1 == null) {
                           c3 = 0;
                         }
-                        const obj1 = { type: "safeAreaUpdateEvent", data: null };
-                        const obj2 = { insets: null };
-                        rect.bottom = closure_2_18(bottom, c3);
-                        obj2.insets = rect;
-                        obj1.data = obj2;
-                        closure_132_0 = obj1;
+                        const obj4 = { type: "safeAreaUpdateEvent", data: null };
+                        const obj5 = { insets: null };
+                        rect1.bottom = closure_2_18(bottom, c3);
+                        obj5.insets = rect1;
+                        obj4.data = obj5;
+                        closure_132_0 = obj4;
                         c7 = 1;
                         c8 = 2;
                         c9 = 1;
-                        const obj3 = { value: memo.injectJavaScript(getPostMessageJavaScriptDefault(obj1)), done: false };
-                        return obj3;
+                        const obj6 = { value: memo.injectJavaScript(getPostMessageJavaScriptDefault(obj4)), done: false };
+                        return obj6;
                       }
                     }
                   } else {
@@ -654,7 +654,7 @@ class BaseActivityWebView {
                     }
                     c7 = 0;
                     c9 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   }
                   c9 = 3;
@@ -718,8 +718,8 @@ class BaseActivityWebView {
               tmp47 = bound;
             }
           }
-          rect = { left: null, right: null, top: null, bottom: null };
-          rect.left = num2;
+          rect1 = { left: null, right: null, top: null, bottom: null };
+          rect1.left = num2;
           right = undefined;
           if (safeAreasConfig != null) {
             right = safeAreasConfig.right;
@@ -752,7 +752,7 @@ class BaseActivityWebView {
               tmp50 = bound1;
             }
           }
-          rect.right = num6;
+          rect1.right = num6;
           top = undefined;
           if (safeAreasConfig != null) {
             top = safeAreasConfig.top;
@@ -785,7 +785,7 @@ class BaseActivityWebView {
               tmp53 = bound2;
             }
           }
-          rect.top = num10;
+          rect1.top = num10;
           bottom = undefined;
           if (safeAreasConfig != null) {
             bottom = safeAreasConfig.bottom;
@@ -818,20 +818,20 @@ class BaseActivityWebView {
               tmp56 = bound3;
             }
           }
-          rect.bottom = num14;
+          rect1.bottom = num14;
           if (tmp32) {
             tmp2Result1 = tmp2(tmp3[19]);
-            injectedJavascriptForIOS = tmp2Result1.createInjectedJavascriptForIOS(rect);
+            injectedJavascriptForIOS = tmp2Result1.createInjectedJavascriptForIOS(rect1);
           }
           tmp59Result = null;
           if (null != str) {
             tmp59 = guildId;
-            obj2 = { style: null, ref: null, source: null, androidAssetLoaderConfig: null, originWhitelist: null, overScrollMode: "never", scrollEnabled: false, cacheEnabled: true, onError: null, onContentProcessDidTerminate: null, onRenderProcessGone: null, webViewKey: null, temporaryParentNodeTag: null, messagingWithWebViewKeyEnabled: null, onMessage: null, allowFileAccess: null, injectedJavaScript: null, injectedJavaScriptForMainFrameOnly: false, onShouldStartLoadWithRequest: null, mediaPlaybackRequiresUserAction: false, ignoreSilentHardwareSwitch: null, allowsInlineMediaPlayback: true, minimumFontSize: 1, bounces: false, allowsProtectedMedia: true };
-            obj2.style = tmp.webView;
-            obj2.ref = ref;
-            obj3 = { uri: null };
-            obj3.uri = null;
-            obj2.source = obj3;
+            obj14 = { style: null, ref: null, source: null, androidAssetLoaderConfig: null, originWhitelist: null, overScrollMode: "never", scrollEnabled: false, cacheEnabled: true, onError: null, onContentProcessDidTerminate: null, onRenderProcessGone: null, webViewKey: null, temporaryParentNodeTag: null, messagingWithWebViewKeyEnabled: null, onMessage: null, allowFileAccess: null, injectedJavaScript: null, injectedJavaScriptForMainFrameOnly: false, onShouldStartLoadWithRequest: null, mediaPlaybackRequiresUserAction: false, ignoreSilentHardwareSwitch: null, allowsInlineMediaPlayback: true, minimumFontSize: 1, bounces: false, allowsProtectedMedia: true };
+            obj14.style = tmp.webView;
+            obj14.ref = ref;
+            obj15 = { uri: null };
+            obj15.uri = null;
+            obj14.source = obj15;
             if ("" === url.port) {
               host = url.host;
             } else {
@@ -839,37 +839,37 @@ class BaseActivityWebView {
               str6 = ":";
               host = "" + url.hostname + ":" + url.port;
             }
-            obj4 = { domain: null, httpAllowed: null, pathHandlers: null };
-            obj4.domain = host;
+            obj16 = { domain: null, httpAllowed: null, pathHandlers: null };
+            obj16.domain = host;
             str7 = "http:";
-            obj4.httpAllowed = "http:" === url.protocol;
-            obj5 = { type: "internal", path: null, directory: null };
+            obj16.httpAllowed = "http:" === url.protocol;
+            obj17 = { type: "internal", path: null, directory: null };
             _HermesInternal4 = HermesInternal;
             str8 = "/";
-            obj5.path = "/" + first1 + "/";
+            obj17.path = "/" + first1 + "/";
             num17 = 0;
-            obj5.directory = str.substring(0, str.lastIndexOf("/"));
+            obj17.directory = str.substring(0, str.lastIndexOf("/"));
             items12 = [];
-            items12[0] = obj5;
-            obj4.pathHandlers = items12;
-            obj2.androidAssetLoaderConfig = obj4;
-            obj2.originWhitelist = ["*"];
-            obj2.onError = callback;
-            obj2.onContentProcessDidTerminate = callback2;
-            obj2.onRenderProcessGone = callback1;
-            obj2.webViewKey = webViewKey;
-            obj2.temporaryParentNodeTag = context;
-            obj2.messagingWithWebViewKeyEnabled = null != webViewKey;
-            obj2.onMessage = callback5;
-            obj2.allowFileAccess = tmp32;
-            obj2.injectedJavaScript = injectedJavascriptForIOS;
+            items12[0] = obj17;
+            obj16.pathHandlers = items12;
+            obj14.androidAssetLoaderConfig = obj16;
+            obj14.originWhitelist = ["*"];
+            obj14.onError = callback;
+            obj14.onContentProcessDidTerminate = callback2;
+            obj14.onRenderProcessGone = callback1;
+            obj14.webViewKey = webViewKey;
+            obj14.temporaryParentNodeTag = context;
+            obj14.messagingWithWebViewKeyEnabled = null != webViewKey;
+            obj14.onMessage = callback5;
+            obj14.allowFileAccess = tmp32;
+            obj14.injectedJavaScript = injectedJavascriptForIOS;
             tmp60 = undefined;
             if (tmp32) {
               tmp60 = callback3;
             }
-            obj2.onShouldStartLoadWithRequest = tmp60;
-            obj2.ignoreSilentHardwareSwitch = ignoreSilentHardwareSwitch;
-            tmp59Result = tmp59(tmp2(tmp3[14]).WebView, obj2);
+            obj14.onShouldStartLoadWithRequest = tmp60;
+            obj14.ignoreSilentHardwareSwitch = ignoreSilentHardwareSwitch;
+            tmp59Result = tmp59(tmp2(tmp3[14]).WebView, obj14);
           }
           return tmp59Result;
         }
@@ -905,7 +905,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_16 = new LoggerDefault("EmbeddedActivityWebView");
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_17 = PlatformUtils.isIOS();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityWebView.tsx");
@@ -919,51 +919,33 @@ export default function EmbeddedActivityWebView(channelId) {
   const hasInvalidUrlError = tmp2[0];
   const tmp4 = currentEmbeddedActivity(hasInvalidUrlError[30])(hasInvalidUrlError);
   closure_4 = tmp4;
-  let obj = {};
+  let obj2 = {};
   if (null != currentEmbeddedActivity) {
     if (null != currentEmbeddedActivity.customId) {
-      obj.custom_id = currentEmbeddedActivity.customId;
+      obj2.custom_id = currentEmbeddedActivity.customId;
     }
     if (null != currentEmbeddedActivity.referrerId) {
-      obj.referrer_id = currentEmbeddedActivity.referrerId;
+      obj2.referrer_id = currentEmbeddedActivity.referrerId;
     }
   }
   const items = [hasInvalidUrlError, tmp4, channelId, applicationId, currentEmbeddedActivity];
-  const effect = obj.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = !closure_4;
     if (!closure_4) {
       tmp = first;
     }
     if (tmp) {
       if (null != channelId) {
-        let obj = ChannelRTCActionCreatorsDefault;
-        const participant = obj.selectParticipant(tmp2, null);
+        const participant = ChannelRTCActionCreatorsDefault.selectParticipant(tmp2, null);
       }
       let _location;
       if (currentEmbeddedActivity != null) {
         _location = currentEmbeddedActivity.location;
       }
-      obj = { location: _location, applicationId, showFeedback: false };
-      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj);
+      const obj3 = { location: _location, applicationId, showFeedback: false };
+      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj3);
     }
   }, items);
-  obj = {
-    hasIframeId() {
-      return currentEmbeddedActivity(first[32]).hasIframeId();
-    },
-    getOrCreateIframeId() {
-      return currentEmbeddedActivity(first[32]).getOrCreateIframeId();
-    },
-    releaseIframeId() {
-      return currentEmbeddedActivity(first[32]).releaseIframeId();
-    },
-    hasInvalidUrlError,
-    setHasInvalidUrlError: tmp2[1],
-    hadInvalidUrlError: tmp4,
-    deepLinkQueryParams: obj,
-    applicationId,
-    channelId
-  };
   const merged1 = Object.assign(merged);
   return <BaseActivityWebView hasIframeId={function hasIframeId() {
     return currentEmbeddedActivity(first[32]).hasIframeId();
@@ -971,7 +953,7 @@ export default function EmbeddedActivityWebView(channelId) {
     return currentEmbeddedActivity(first[32]).getOrCreateIframeId();
   }} releaseIframeId={function releaseIframeId() {
     return currentEmbeddedActivity(first[32]).releaseIframeId();
-  }} hasInvalidUrlError={hasInvalidUrlError} setHasInvalidUrlError={tmp2[1]} hadInvalidUrlError={tmp4} deepLinkQueryParams={obj} applicationId={applicationId} channelId={channelId} />;
+  }} hasInvalidUrlError={hasInvalidUrlError} setHasInvalidUrlError={tmp2[1]} hadInvalidUrlError={tmp4} deepLinkQueryParams={obj2} applicationId={applicationId} channelId={channelId} />;
 };
 export { BaseActivityWebView };
 export const useHasInvalidUrlErrorState = function useHasInvalidUrlErrorState() {

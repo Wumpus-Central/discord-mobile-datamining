@@ -2,7 +2,7 @@
 
 // Module 9881 (ChannelOverwritesItem)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AlertModal from "AlertModal" /* 4986 */;
@@ -31,31 +31,31 @@ function RemoveIcon(item) {
       } else {
         ({ id, name } = item);
         closure_2 = channelId;
-        let obj = { key: null, title: null, content: null, confirmText: null, onConfirm: null };
+        const obj2 = { key: null, title: null, content: null, confirmText: null, onConfirm: null };
         const _HermesInternal = HermesInternal;
-        obj.key = "remove-channel-overwrite-" + id;
+        obj2.key = "remove-channel-overwrite-" + id;
         const intl = util.intl;
-        obj.title = intl.string(util.t.GuPYQB);
+        obj2.title = intl.string(util.t.GuPYQB);
         const intl2 = util.intl;
-        obj = { name };
-        obj.content = intl2.format(util.t.xERCnZ, obj);
+        const obj3 = { name };
+        obj2.content = intl2.format(util.t.xERCnZ, obj3);
         const intl3 = util.intl;
-        obj.confirmText = intl3.string(util.t.fKxYb0);
-        obj.onConfirm = function onConfirm() {
+        obj2.confirmText = intl3.string(util.t.fKxYb0);
+        obj2.onConfirm = function onConfirm() {
           let result = channelId(dependencyMap[8]).clearPermissionOverwrite(closure_2, id);
           result.then(() => {
             const result = id(closure_2_3[9]).memberOrRoleRemovedToast(name);
           });
         };
-        obj.showConfirmModal(obj);
+        AlertModal.showConfirmModal(obj2);
       }
     };
     let prop;
     if (item.disabled) {
       prop = tmp.rowRemoveIconDisabled;
     }
-    obj = { style: prop };
-    obj.children = closure_7(item(6717).CircleXIcon, obj);
+    let obj2 = { style: prop };
+    obj.children = closure_7(item(6717).CircleXIcon, obj2);
     tmp3Result = closure_7(item(5204).PressableOpacity, obj);
   }
   return tmp3Result;
@@ -63,10 +63,7 @@ function RemoveIcon(item) {
 function RoleItem(arg0) {
   ({ item, subLabel, trailing } = arg0);
   ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
-  let obj = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
-  obj = { size: "lg", color: item.colorString };
-  obj.icon = React5(ShieldUserIcon.ShieldUserIcon, obj);
-  obj.label = item.name;
+  const obj = { icon: React5(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   if (showType) {
     subLabel = ChannelPermissionsUtilsAll.getRowTypeLabel(item.rowType);
   }
@@ -74,8 +71,8 @@ function RoleItem(arg0) {
   obj.start = start;
   obj.end = end;
   if (showRemove) {
-    obj = { item, channelId };
-    trailing = React5(RemoveIcon, obj);
+    const obj4 = { item, channelId };
+    trailing = React5(RemoveIcon, obj4);
   }
   obj.trailing = trailing;
   obj.onPress = onPress;
@@ -89,16 +86,16 @@ function MemberItem(arg0) {
   ({ item, trailing } = arg0);
   ({ channelId, showRemove, onRemove, guildId, start, end, onPress, disabled, accessibilityRole, accessibilityState, accessible } = arg0);
   const tmp = closure_9();
-  let obj = { style: tmp.nameWrapper, children: null };
-  obj = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
+  const obj = { style: tmp.nameWrapper, children: null };
+  const obj2 = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
   const items = [, ];
   ({ name: arr[0], memberName: arr[1] } = tmp);
-  obj.style = items;
-  const items1 = [React5(Text_Text.Text, obj), ];
+  obj2.style = items;
+  const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true, style: tmp.ownerIcon };
-    tmp4Result = React5(native.Icon, obj);
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = React5(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
   obj.children = items1;
@@ -107,30 +104,30 @@ function MemberItem(arg0) {
   if (user != null) {
     avatarSource = user.getAvatarSource(guildId);
   }
-  const obj1 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  const obj4 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   const tmp2Result = React6(View, obj);
-  obj1.icon = React5(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
-  obj1.label = tmp2Result;
-  obj1.subLabel = item.username;
-  obj1.start = start;
-  obj1.end = end;
+  obj4.icon = React5(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
+  obj4.label = tmp2Result;
+  obj4.subLabel = item.username;
+  obj4.start = start;
+  obj4.end = end;
   if (showRemove) {
-    const obj3 = { item, channelId, onRemove };
-    trailing = React5(RemoveIcon, obj3);
+    const obj6 = { item, channelId, onRemove };
+    trailing = React5(RemoveIcon, obj6);
   }
-  obj1.trailing = trailing;
-  obj1.onPress = onPress;
-  obj1.disabled = disabled;
-  obj1.accessibilityRole = accessibilityRole;
-  obj1.accessibilityState = accessibilityState;
-  obj1.accessible = accessible;
-  return React5(TableRow.TableRow, obj1);
+  obj4.trailing = trailing;
+  obj4.onPress = onPress;
+  obj4.disabled = disabled;
+  obj4.accessibilityRole = accessibilityRole;
+  obj4.accessibilityState = accessibilityState;
+  obj4.accessible = accessible;
+  return React5(TableRow.TableRow, obj4);
 }
 function EmptyRoleItem(item) {
   item = item.item;
-  let obj = { icon: null, label: null };
-  obj = { source: _modDef9884, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon };
-  obj.icon = React5(native.Icon, obj);
+  const obj = { icon: null, label: null };
+  const tmp = closure_9();
+  obj.icon = React5(native.Icon, { source: _modDef9884, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
   return React5(TableRow.TableRow, obj);
 }
@@ -162,17 +159,17 @@ class ChannelOverwritesItem {
         }
         tmp8 = jsx;
         tmp9 = MemberItem;
-        obj = { item: null };
-        obj.item = item;
-        tmp10 = obj;
+        obj1 = { item: null };
+        obj1.item = item;
+        tmp10 = obj1;
         tmp11 = merged;
         merged2 = Object.assign(merged);
-        return jsx(MemberItem, obj);
+        return jsx(MemberItem, obj1);
       }
     }
-    obj1 = { item };
+    obj4 = { item };
     merged3 = Object.assign(merged);
-    return jsx(RoleItem, obj1);
+    return jsx(RoleItem, obj4);
   }
 }
 const View = fn(17).View;
@@ -188,14 +185,13 @@ export default ChannelOverwritesItem;
 export const ChannelOverwritesCheckboxItem = function ChannelOverwritesCheckboxItem(checked) {
   checked = checked.checked;
   const merged = Object.assign(checked, Object.assign({ checked: 0 }));
-  let obj = useA11yRolesNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked });
-  obj = {};
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked });
+  const obj2 = {};
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const merged1 = Object.assign(merged);
-  obj.accessible = true;
-  obj.accessibilityRole = accessibilityRole;
-  obj.accessibilityState = accessibilityState;
-  obj.trailing = React5(FormCheckbox.FormCheckbox, { checked });
-  return React5(ChannelOverwritesItem, obj);
+  obj2.accessible = true;
+  obj2.accessibilityRole = accessibilityRole;
+  obj2.accessibilityState = accessibilityState;
+  obj2.trailing = React5(FormCheckbox.FormCheckbox, { checked });
+  return React5(ChannelOverwritesItem, obj2);
 };

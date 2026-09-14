@@ -1,7 +1,9 @@
-// === Module 14048: GuildActionSheetUtils ===
+// === Module 14049: GuildActionSheetUtils ===
 
-// Module 14048 (GuildActionSheetUtils)
+// Module 14049 (GuildActionSheetUtils)
 import PermissionStore from "PermissionStore" /* 4275 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;

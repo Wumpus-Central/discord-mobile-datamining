@@ -1,13 +1,13 @@
-// === Module 16123: MessageRequestsButton ===
+// === Module 16125: MessageRequestsButton ===
 
-// Module 16123 (MessageRequestsButton)
+// Module 16125 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import IconButton from "IconButton" /* 8202 */;
 import _modDef10013 from "module_10013" /* 10013 */;
-import IconActionButton from "IconActionButton" /* 13383 */;
-import _mod16124 from "module_16124" /* 16124 */;
+import IconActionButton from "IconActionButton" /* 13384 */;
+import _mod16126 from "module_16126" /* 16126 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 7322 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7323 */;
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16124.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16126.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -48,52 +48,51 @@ export default function MessageRequestsButton(alternateVariant) {
     flag = false;
   }
   const merged = Object.assign(alternateVariant, Object.assign({ alternateVariant: 0 }));
-  let obj = initialize;
+  const tmp2 = closure_9();
   const items = [MessageRequestStore];
-  let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  let obj1 = initialize;
+  const str = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
   const items1 = [SpamMessageRequestStore];
   if (0 === str) {
-    if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
+    if (0 === obj2.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
       return null;
     }
   }
   if (flag) {
-    str = undefined;
-    if (str > 0) {
-      str = str.toString();
-    }
-    obj = { style: tmp2.buttonContainer, collapsable: false, children: null };
-    if (null != str) {
-      obj = { icon: React5(MessageRequestAnimation, {}), variant: "secondary", text: str, size: "sm", accessibilityLabel: null };
-      const intl3 = util.intl;
-      obj.accessibilityLabel = intl3.string(util.t.e7GWjQ);
-      const merged1 = Object.assign(merged);
-      let tmp21 = React5(components_Button_Button.Button, obj);
-      let tmp16 = React5;
-    } else {
-      tmp16 = React5;
-      obj1 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
-      const intl2 = util.intl;
-      obj1.accessibilityLabel = intl2.string(util.t.e7GWjQ);
-      const merged2 = Object.assign(merged);
-      tmp21 = React5(IconButton.IconButton, obj1);
-    }
-    const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
-    obj.children = items2;
-    return React6(View, obj);
-  } else {
-    const obj2 = { source: _modDef10013, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
-    const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str1;
     if (str > 0) {
       str1 = str.toString();
     }
-    obj2.buttonText = str1;
-    obj2.badge = str > 0;
+    const obj3 = { style: tmp2.buttonContainer, collapsable: false, children: null };
+    if (null != str1) {
+      const obj4 = { icon: React5(MessageRequestAnimation, {}), variant: "secondary", text: str1, size: "sm", accessibilityLabel: null };
+      const intl3 = util.intl;
+      obj4.accessibilityLabel = intl3.string(util.t.e7GWjQ);
+      const merged1 = Object.assign(merged);
+      let tmp21 = React5(components_Button_Button.Button, obj4);
+      let tmp16 = React5;
+    } else {
+      tmp16 = React5;
+      const obj5 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
+      const intl2 = util.intl;
+      obj5.accessibilityLabel = intl2.string(util.t.e7GWjQ);
+      const merged2 = Object.assign(merged);
+      tmp21 = React5(IconButton.IconButton, obj5);
+    }
+    const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
+    obj3.children = items2;
+    return React6(View, obj3);
+  } else {
+    const obj6 = { source: _modDef10013, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const intl = util.intl;
+    obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
+    let str2;
+    if (str > 0) {
+      str2 = str.toString();
+    }
+    obj6.buttonText = str2;
+    obj6.badge = str > 0;
     const merged3 = Object.assign(merged);
-    return React5(IconActionButtonDefault, obj2);
+    return React5(IconActionButtonDefault, obj6);
   }
-  tmp2 = closure_9();
+  obj2 = initialize;
 };

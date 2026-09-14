@@ -1,11 +1,11 @@
-// === Module 17946: AVErrorManager ===
+// === Module 17947: AVErrorManager ===
 
-// Module 17946 (AVErrorManager)
+// Module 17947 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AVError from "AVError" /* 9239 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 17947 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 17967 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 17948 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 17968 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -95,9 +95,9 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         const tmp47 = setDifference(set1, set);
         const tmp49 = tmp47[Symbol.iterator]();
         while (tmp49 !== undefined) {
-          value = activeErrors1.get(tmp34);
-          let tmp37 = value;
-          if (null != value) {
+          value2 = activeErrors1.get(tmp34);
+          let tmp37 = value2;
+          if (null != value2) {
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
             let infoResult = logger.info("Error resolved: " + tmp37.type + " " + JSON.stringify(_objectWithoutProperties(tmp37, closure_3)));
@@ -105,8 +105,8 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           continue;
         }
       }
-      obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
-      DispatcherDefault.dispatch(obj);
+      const obj2 = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
+      DispatcherDefault.dispatch(obj2);
     }
   } else {
     const _Object = Object;

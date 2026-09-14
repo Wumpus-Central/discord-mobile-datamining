@@ -1,6 +1,6 @@
-// === Module 12379: GiftIconTrinketsAnimation ===
+// === Module 12380: GiftIconTrinketsAnimation ===
 
-// Module 12379 (GiftIconTrinketsAnimation)
+// Module 12380 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import StringUtils from "StringUtils" /* 1925 */;
@@ -9,7 +9,7 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
-const PlatformUtils = APNGPlayer(1150);
+const PlatformUtils = APNGPlayer(1363);
 const APNGPlayer2 = APNGPlayer(8935);
 require = fn;
 const View = fn(17).View;
@@ -22,30 +22,28 @@ const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTri
 export const GiftIconTrinketsAnimation = noop.memo((trinketsAnimationUrl) => {
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
-  let obj = dependencyMap;
-  let obj1 = useToken;
-  const tmp2 = closure_6(obj1.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
+  const tmp2 = closure_6(useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
   const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const trinketsRefresh = tmp2.trinketsRefresh;
   if (obj4.isNullOrEmpty(trinketsAnimationUrl)) {
     return null;
   } else {
-    obj = { style: tmp2.containerRefresh, pointerEvents: "none", children: null };
+    const obj5 = { style: tmp2.containerRefresh, pointerEvents: "none", children: null };
     if (APNGPlayerResult.isAndroid()) {
       APNGPlayer = APNGPlayer2.APNGPlayer;
-      obj = { url: trinketsAnimationUrl, autoplay: !stateFromStores, style: trinketsRefresh };
+      const obj = { url: trinketsAnimationUrl, autoplay: !stateFromStores, style: trinketsRefresh };
       let tmp4Result = <APNGPlayer url={trinketsAnimationUrl} autoplay={!stateFromStores} style={trinketsRefresh} />;
     } else {
-      obj = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      obj1 = { uri: trinketsAnimationUrl };
-      obj.source = obj1;
-      obj.style = trinketsRefresh;
-      obj.enableAnimation = !stateFromStores;
+      const obj6 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
+      const obj7 = { uri: trinketsAnimationUrl };
+      obj6.source = obj7;
+      obj6.style = trinketsRefresh;
+      obj6.enableAnimation = !stateFromStores;
       tmp4Result = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
     }
-    obj.children = tmp4Result;
-    tmp4Result = <View style={tmp2.containerRefresh} pointerEvents="none">{null}</View>;
+    obj5.children = tmp4Result;
+    <View style={tmp2.containerRefresh} pointerEvents="none">{null}</View>;
     APNGPlayerResult = PlatformUtils;
   }
   obj4 = StringUtils;

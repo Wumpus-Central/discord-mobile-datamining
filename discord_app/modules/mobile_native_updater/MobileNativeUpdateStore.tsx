@@ -1,10 +1,10 @@
-// === Module 14482: MobileNativeUpdateStore ===
+// === Module 14483: MobileNativeUpdateStore ===
 
-// Module 14482 (MobileNativeUpdateStore)
+// Module 14483 (MobileNativeUpdateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 13993 */;
+import MobileNativeUpdateUtils from "MobileNativeUpdateUtils" /* 13994 */;
 import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4617 */;
 import size from "module_2" /* 2 */;
 
@@ -26,8 +26,7 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
     obj = DispatcherDefault;
     obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
     MobileNativeUpdateUtils.checkForNewerBuild().then((newBuild) => {
-      obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild });
     }, () => {
       DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });

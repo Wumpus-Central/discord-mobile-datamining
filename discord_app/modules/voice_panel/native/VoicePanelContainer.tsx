@@ -1,10 +1,10 @@
-// === Module 17157: VoicePanelContainer ===
+// === Module 17159: VoicePanelContainer ===
 
-// Module 17157 (VoicePanelContainer)
+// Module 17159 (VoicePanelContainer)
 import _mod4259 from "module_4259" /* 4259 */;
 import native from "native" /* 4347 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 17158 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 17202 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 17160 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 17204 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import VoicePanelStore from "VoicePanelStore" /* 4844 */;
@@ -12,9 +12,8 @@ import VoicePanelStore from "VoicePanelStore" /* 4844 */;
 require = fn;
 function VoicePanel(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
@@ -22,10 +21,11 @@ function VoicePanel(arg0) {
     }
     return guild_id;
   });
-  obj = {};
+  const obj2 = {};
+  const obj = require("initialize");
   const merged = Object.assign(arg0);
-  obj.guildId = stateFromStores;
-  obj.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
+  obj2.guildId = stateFromStores;
+  obj2.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
   return jsx(VoicePanelControllerDefault, {});
 }
 function getChannelKey(arg0) {

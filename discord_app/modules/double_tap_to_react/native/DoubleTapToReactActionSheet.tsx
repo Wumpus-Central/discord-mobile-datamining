@@ -1,6 +1,6 @@
-// === Module 12510: DoubleTapToReactActionSheet ===
+// === Module 12511: DoubleTapToReactActionSheet ===
 
-// Module 12510 (DoubleTapToReactActionSheet)
+// Module 12511 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;
@@ -14,6 +14,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function EmojiConfetti(children) {
@@ -29,7 +31,6 @@ function EmojiConfetti(children) {
   const sharedValue3 = top(4373).useSharedValue(0);
   let obj4 = top(4373);
   const mountLayoutEffect = top(5073).useMountLayoutEffect(() => {
-    let obj = sharedValue;
     let num = 0;
     if (!dependencyMap) {
       const _Math = Math;
@@ -37,17 +38,17 @@ function EmojiConfetti(children) {
     }
     const obj5 = ReanimatedRexport;
     const withTimingResult = timing.withTiming(0, { duration: num });
-    obj = { duration: 600, easing: null };
+    const obj8 = { duration: 600, easing: null };
     const result = 10 * Math.random();
     const Easing = ReanimatedRexport.Easing;
-    obj.easing = Easing.out(ReanimatedRexport.Easing.ease);
-    const result1 = obj.set(obj5.withSequence(withTimingResult, timing.withTiming(result + 35, obj)));
+    obj8.easing = Easing.out(ReanimatedRexport.Easing.ease);
+    const result1 = sharedValue.set(obj5.withSequence(withTimingResult, timing.withTiming(result + 35, obj8)));
     const obj9 = ReanimatedRexport;
     const withTimingResult1 = timing.withTiming(0, { duration: num });
-    obj = { duration: 600, easing: null };
+    const obj12 = { duration: 600, easing: null };
     const result2 = 40 * Math.random();
-    obj.easing = ReanimatedRexport.Easing.ease;
-    const result3 = sharedValue1.set(obj9.withSequence(withTimingResult1, timing.withTiming(result2 + 20, obj)));
+    obj12.easing = ReanimatedRexport.Easing.ease;
+    const result3 = sharedValue1.set(obj9.withSequence(withTimingResult1, timing.withTiming(result2 + 20, obj12)));
     const obj13 = ReanimatedRexport;
     const withTimingResult2 = timing.withTiming(0, { duration: num });
     const withTimingResult3 = timing.withTiming(0.3 * Math.random() + 0.5, { duration: 240 });
@@ -59,15 +60,14 @@ function EmojiConfetti(children) {
   });
   let obj5 = top(5073);
   const fn = function f() {
-    let obj = { scale: sharedValue2.get() };
-    const items = [obj, ];
+    const items = [{ scale: sharedValue2.get() }, ];
     let num = 1;
     if (true === left) {
       num = -1;
     }
     const rect = { position: "absolute", transform: null, top: null, left: null, opacity: null };
-    obj = { rotate: `${num * sharedValue1.get()}deg` };
-    items[1] = obj;
+    const obj = { scale: sharedValue2.get() };
+    items[1] = { rotate: `${num * sharedValue1.get()}deg` };
     rect.transform = items;
     if (true === top) {
       value = -sharedValue.get();
@@ -77,11 +77,11 @@ function EmojiConfetti(children) {
       value = sharedValue.get();
     }
     rect.top = value;
-    value = obj4.get();
+    value2 = obj4.get();
     if (true === left) {
-      let result = 1.5 * -value;
+      let result = 1.5 * -value2;
     } else {
-      result = 1.5 * value;
+      result = 1.5 * value2;
     }
     rect.left = result;
     rect.opacity = sharedValue3.get();
@@ -105,42 +105,42 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
+let PlatformUtils = fn(1363);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
-createStyles = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1150);
+let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
 }
-createStyles.lineHeight = num2;
-createStyles.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
-createStyles.selectedTextEmoji = createStyles;
-let obj1 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1150);
+obj4.lineHeight = num2;
+obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
+obj2.selectedTextEmoji = obj4;
+let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
+PlatformUtils = fn(1363);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
 }
-obj1.lineHeight = num3;
-createStyles.selectedEmojiText = obj1;
-PlatformUtils = { flexDirection: "column", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_12 };
-createStyles.content = PlatformUtils;
-createStyles.emojiContainer = { flexDirection: "row", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xl, justifyContent: "center", alignItems: "center" };
-createStyles.alignCenter = { textAlign: "center" };
-PlatformUtils = { marginVertical: nativeDefault.space.PX_24 };
-createStyles.emojiSelectRow = PlatformUtils;
-let obj3 = { flexDirection: "row", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xl, justifyContent: "center", alignItems: "center" };
-createStyles.header = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-PlatformUtils = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24 };
-createStyles.emojiName = PlatformUtils;
-createStyles.burstContainer = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, zIndex: 0 };
-let closure_13 = createStyles.createStyles(createStyles);
+obj6.lineHeight = num3;
+obj2.selectedEmojiText = obj6;
+obj2.content = { flexDirection: "column", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_12 };
+let obj8 = { flexDirection: "column", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_4, paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_12 };
+obj2.emojiContainer = { flexDirection: "row", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xl, justifyContent: "center", alignItems: "center" };
+obj2.alignCenter = { textAlign: "center" };
+let obj9 = { flexDirection: "row", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 4, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xl, justifyContent: "center", alignItems: "center" };
+obj2.emojiSelectRow = { marginVertical: nativeDefault.space.PX_24 };
+let obj10 = { marginVertical: nativeDefault.space.PX_24 };
+obj2.header = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj11 = { marginBottom: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.emojiName = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24 };
+obj2.burstContainer = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, zIndex: 0 };
+let closure_13 = createStyles.createStyles(obj2);
 const __initData = { code: "function DoubleTapToReactActionSheetTsx1(){const{sizeValue,left,rotationValue,top,positionValue,opacityValue}=this.__closure;return{position:'absolute',transform:[{scale:sizeValue.get()},{rotate:(left===true?-1:1)*rotationValue.get()+\"deg\"}],top:top===true?-positionValue.get():positionValue.get(),left:left===true?-positionValue.get()*1.5:positionValue.get()*1.5,opacity:opacityValue.get()};}" };
 const __initData2 = { code: "function DoubleTapToReactActionSheetTsx2(){const{interpolate,sharedSaveValue}=this.__closure;return{transform:[{scale:interpolate(sharedSaveValue.get(),[0,1],[1,1.3])},{translateY:interpolate(sharedSaveValue.get(),[0,1],[0,-20])}]};}" };
 const __initData3 = { code: "function DoubleTapToReactActionSheetTsx3(){const{scaleChangeValue,opacityChangeValue}=this.__closure;return{transform:[{scale:scaleChangeValue.get()}],opacity:opacityChangeValue.get()};}" };
@@ -150,64 +150,60 @@ let result = size.fileFinishedImporting("modules/double_tap_to_react/native/Doub
 
 export default function DoubleTapToReactActionSheet(emoji) {
   emoji = emoji.emoji;
-  let selectedEmoji;
+  selectedEmoji = undefined;
+  asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
-  let first1;
+  first1 = undefined;
+  closure_6 = undefined;
   let ref;
   let sharedValue1;
   let sharedValue2;
   let memo;
   let callback1;
   const tmp = closure_13();
-  let obj = first1;
   const tmp2 = _slicedToArray(first1.useState(false), 2);
   _require = tmp2[1];
-  let obj1 = require("initialize");
   let items = [ref];
-  const stateFromStores = obj1.useStateFromStores(items, () => ref.useReducedMotion);
-  const tmp6 = _slicedToArray(first1.useState(emoji), 2);
-  selectedEmoji = tmp6[0];
-  asyncGeneratorStep = tmp6[1];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ref.useReducedMotion);
+  [selectedEmoji, asyncGeneratorStep] = first1.useState(emoji);
   _slicedToArray = first1.useRef(true);
-  const tmp8 = _slicedToArray(first1.useState(false), 2);
-  first1 = tmp8[0];
-  closure_6 = tmp8[1];
+  [first1, closure_6] = first1.useState(false);
   ref = first1.useRef(null);
-  let obj2 = require("ReanimatedRexport");
-  const sharedValue = obj2.useSharedValue(0);
+  let obj2 = require("initialize");
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
   let obj3 = require("ReanimatedRexport");
   class S {
     constructor() {
       obj = { transform: null };
-      obj = { scale: null };
+      obj1 = { scale: null };
       obj3 = closure_0(closure_2[12]);
-      obj.scale = obj3.interpolate(closure_8.get(), [0, 1], [1, 1.3]);
+      obj1.scale = obj3.interpolate(closure_8.get(), [0, 1], [1, 1.3]);
       items = [, ];
-      items[0] = obj;
-      obj1 = { translateY: null };
+      items[0] = obj1;
+      obj6 = { translateY: null };
       obj5 = closure_0(closure_2[12]);
-      obj1.translateY = obj5.interpolate(closure_8.get(), [0, 1], [0, -20]);
-      items[1] = obj1;
+      obj6.translateY = obj5.interpolate(closure_8.get(), [0, 1], [0, -20]);
+      items[1] = obj6;
       obj.transform = items;
       return obj;
     }
   }
-  obj = { interpolate: require("ReanimatedRexport").interpolate, sharedSaveValue: sharedValue };
-  S.__closure = obj;
+  let obj4 = require("ReanimatedRexport");
+  S.__closure = { interpolate: require("ReanimatedRexport").interpolate, sharedSaveValue: sharedValue };
   S.__workletHash = 14159749218638;
   S.__initData = __initData2;
-  const animatedStyle = obj3.useAnimatedStyle(S);
-  let obj5 = require("ReanimatedRexport");
-  sharedValue1 = obj5.useSharedValue(1);
+  const animatedStyle = obj4.useAnimatedStyle(S);
+  let obj5 = { interpolate: require("ReanimatedRexport").interpolate, sharedSaveValue: sharedValue };
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(1);
   let obj6 = require("ReanimatedRexport");
-  sharedValue2 = obj6.useSharedValue(1);
+  sharedValue2 = require("ReanimatedRexport").useSharedValue(1);
   let obj7 = require("ReanimatedRexport");
   class C {
     constructor() {
       obj = { transform: null, opacity: null };
-      obj = { scale: closure_9.get() };
+      obj1 = { scale: closure_9.get() };
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       obj.opacity = closure_10.get();
       return obj;
@@ -217,7 +213,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   C.__workletHash = 17229591239241;
   C.__initData = __initData3;
   const items1 = [sharedValue1, sharedValue2, stateFromStores, first1];
-  const animatedStyle1 = obj7.useAnimatedStyle(C);
+  const animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(C);
   const items2 = [selectedEmoji];
   const callback = first1.useCallback((arg0, current) => {
     setAnimateConfetti = arg0;
@@ -268,27 +264,28 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const items3 = [selectedEmoji, stateFromStores];
   const memo1 = first1.useMemo(() => {
     if (null != first.id) {
-      const obj = { id: first.id, animated: null, size: null };
+      const obj2 = { id: first.id, animated: null, size: null };
       let animated = !stateFromStores;
       if (!stateFromStores) {
         animated = first.animated;
       }
-      obj.animated = animated;
-      obj.size = EMOJI_URL_BASE_SIZE;
-      let url = obj.getEmojiURL(obj);
+      obj2.animated = animated;
+      obj2.size = EMOJI_URL_BASE_SIZE;
+      let url = AvatarUtilsDefault.getEmojiURL(obj2);
     } else {
       url = first.url;
     }
     return url;
   }, items3);
-  obj = { style: tmp.emoji, fastImageStyle: tmp.selectedCustomEmoji, textEmojiStyle: tmp.selectedTextEmoji, name: null, src: null };
+  const obj9 = { style: tmp.emoji, fastImageStyle: tmp.selectedCustomEmoji, textEmojiStyle: tmp.selectedTextEmoji, name: null, src: null };
   let str = "";
+  const obj8 = require("ReanimatedRexport");
   if (null == selectedEmoji.id) {
     str = selectedEmoji.surrogates;
   }
-  obj.name = str;
-  obj.src = memo1;
-  let tmp18Result = tmp18(stateFromStores(selectedEmoji[21]), obj);
+  obj9.name = str;
+  obj9.src = memo1;
+  const tmp18Result = memo(stateFromStores(selectedEmoji[21]), obj9);
   const items4 = [memo, selectedEmoji];
   callback1 = obj.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
@@ -298,8 +295,8 @@ export default function DoubleTapToReactActionSheet(emoji) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -312,20 +309,20 @@ export default function DoubleTapToReactActionSheet(emoji) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             let tmp22 = tmp2;
             if (memo) {
               const DoubleTapReactionEmoji = tmp2(1935).DoubleTapReactionEmoji;
-              let obj1 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
+              const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
               tmp22 = first;
-              obj1.emojiName = first.name;
-              obj1.animated = first.animated;
+              obj5.emojiName = first.name;
+              obj5.animated = first.animated;
               dependencyMap = 1;
               c3 = 1;
-              const obj2 = { value: DoubleTapReactionEmoji.updateSetting(obj1), done: false };
-              return obj2;
+              const obj6 = { value: DoubleTapReactionEmoji.updateSetting(obj5), done: false };
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
@@ -333,18 +330,13 @@ export default function DoubleTapToReactActionSheet(emoji) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
-        obj1 = tmp22(1242);
-        const obj3 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7285).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
-        obj1.track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj3);
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7285).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        tmp22(1240).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(() => {
-          closure_0(emoji[24]);
-          const obj = { emoji };
-          return obj.showDoubleTapEmojiUpdatedToast(obj);
-        }, 500);
+        const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp24) {
@@ -360,17 +352,18 @@ export default function DoubleTapToReactActionSheet(emoji) {
     if (stateFromStores) {
       const result = set(0);
     } else {
+      const obj = ReanimatedRexport;
       const withTimingResult = timing.withTiming(0, { duration: 0 });
-      let obj = { duration: 100, easing: null };
+      const obj4 = { duration: 100, easing: null };
       const Easing = ReanimatedRexport.Easing;
-      obj.easing = Easing.out(ReanimatedRexport.Easing.quad);
-      const withTimingResult1 = timing.withTiming(1, obj);
+      obj4.easing = Easing.out(ReanimatedRexport.Easing.quad);
+      const withTimingResult1 = timing.withTiming(1, obj4);
       const obj5 = timing;
       const fn = function t() {
         return closure_0(first[12]).runOnJS(setAnimateConfetti)(true);
       };
-      obj = { runOnJS: ReanimatedRexport.runOnJS, setAnimateConfetti };
-      fn.__closure = obj;
+      const obj6 = { runOnJS: ReanimatedRexport.runOnJS, setAnimateConfetti };
+      fn.__closure = obj6;
       fn.__workletHash = 13953384401061;
       fn.__initData = __initData;
       const withTimingResult2 = obj5.withTiming(1, { duration: 100 }, undefined, fn);
@@ -398,44 +391,43 @@ export default function DoubleTapToReactActionSheet(emoji) {
     }
     callback1();
   }, items6);
-  obj1 = { onDismiss: callback3, children: null };
-  obj2 = { style: tmp.content, children: null };
-  obj3 = { style: tmp.emojiContainer, children: null };
-  let obj4 = { style: null, children: null };
+  const obj10 = { onDismiss: callback3, children: null };
+  const obj11 = { style: tmp.content, children: null };
+  const obj12 = { style: tmp.emojiContainer, children: null };
+  const obj13 = { style: null, children: null };
   const items7 = [animatedStyle, animatedStyle1];
-  obj4.style = items7;
+  obj13.style = items7;
   const items8 = [tmp18Result, ];
-  tmp18Result = null;
+  let tmp18Result2 = null;
   if (!stateFromStores) {
-    tmp18Result = null;
+    tmp18Result2 = null;
     if (tmp2[0]) {
-      obj5 = { emojiComponent: tmp18Result };
-      tmp18Result = tmp18(EmojiBurstAnimation, obj5);
+      const obj14 = { emojiComponent: tmp18Result };
+      tmp18Result2 = tmp18(EmojiBurstAnimation, obj14);
     }
   }
-  items8[1] = tmp18Result;
-  obj4.children = items8;
-  const items9 = [callback1(stateFromStores(selectedEmoji[12]).View, obj4), ];
-  obj6 = { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };
-  items9[1] = memo(require("Text/Text").Text, obj6);
-  obj3.children = items9;
-  const items10 = [callback1(closure_6, obj3), , , , , ];
-  obj7 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" };
-  items10[1] = memo(require("Text/Text").Text, obj7);
-  const obj8 = { style: tmp.header, children: null };
-  const obj9 = { style: tmp.alignCenter, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp3(tmp4[28]).intl;
-  obj9.children = intl.string(require("util").t.F6lRAI);
-  const items11 = [memo(require("Text/Text").Text, obj9), memo(require("renderChannelBadge").NewBadge, {})];
-  obj8.children = items11;
-  items10[2] = callback1(closure_6, obj8);
-  const obj10 = { style: tmp.alignCenter, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = tmp3(tmp4[28]).intl;
-  obj10.children = intl2.string(require("util").t.yIax8g);
-  items10[3] = memo(require("Text/Text").Text, obj10);
-  items10[4] = memo(stateFromStores(selectedEmoji[30]), { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback });
-  const obj11 = { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback };
+  items8[1] = tmp18Result2;
+  obj13.children = items8;
+  const items9 = [callback1(stateFromStores(selectedEmoji[12]).View, obj13), memo(require("Text/Text").Text, { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" })];
+  obj12.children = items9;
+  const items10 = [callback1(closure_6, obj12), , , , , ];
+  const obj15 = { variant: "text-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };
   const tmp20 = stateFromStores(selectedEmoji[21]);
+  items10[1] = memo(require("Text/Text").Text, { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" });
+  const obj17 = { style: tmp.header, children: null };
+  const obj18 = { style: tmp.alignCenter, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const intl = tmp3(tmp4[28]).intl;
+  obj18.children = intl.string(require("util").t.F6lRAI);
+  const items11 = [memo(require("Text/Text").Text, obj18), memo(require("renderChannelBadge").NewBadge, {})];
+  obj17.children = items11;
+  items10[2] = callback1(closure_6, obj17);
+  const obj19 = { style: tmp.alignCenter, variant: "text-md/medium", color: "text-default", children: null };
+  const intl2 = tmp3(tmp4[28]).intl;
+  obj19.children = intl2.string(require("util").t.yIax8g);
+  items10[3] = memo(require("Text/Text").Text, obj19);
+  items10[4] = memo(stateFromStores(selectedEmoji[30]), { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback });
+  const obj16 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.emojiName, children: ":" + selectedEmoji.name + ":" };
+  const obj20 = { style: tmp.emojiSelectRow, selectedEmoji, onPressEmoji: callback };
   const tmp3Result = require("DoubleTapToReactUtils");
   const intl3 = tmp3(tmp4[28]).intl;
   const string = intl3.string;
@@ -446,7 +438,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
     stringResult = string(t.tdsiO9);
   }
   items10[5] = memo(require("components/Button/Button").Button, { grow: true, size: "lg", text: stringResult, variant: "primary", onPress: callback2, disabled: first1 });
-  obj2.children = items10;
-  obj1.children = callback1(closure_6, obj2);
-  return memo(require("ActionSheet").ActionSheet, obj1);
+  obj11.children = items10;
+  obj10.children = callback1(closure_6, obj11);
+  return memo(require("ActionSheet").ActionSheet, obj10);
 };

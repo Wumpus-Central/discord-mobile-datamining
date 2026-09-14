@@ -1,12 +1,12 @@
-// === Module 17955: AVErrorStreamSendLowFPS ===
+// === Module 17956: AVErrorStreamSendLowFPS ===
 
-// Module 17955 (AVErrorStreamSendLowFPS)
+// Module 17956 (AVErrorStreamSendLowFPS)
 import DurationsDefault from "Durations" /* 1090 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import StreamQualityUtils from "StreamQualityUtils" /* 9238 */;
 import AVError from "AVError" /* 9239 */;
-import AVErrorContext from "AVErrorContext" /* 17949 */;
-import AVErrorUtils from "AVErrorUtils" /* 17952 */;
+import AVErrorContext from "AVErrorContext" /* 17950 */;
+import AVErrorUtils from "AVErrorUtils" /* 17953 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
@@ -19,11 +19,10 @@ const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/
 
 export const AVErrorStreamSendLowFPSDefinition = {
   getActiveErrors() {
-    let obj = ApplicationStreamingStore;
     const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
     if (null != currentUserActiveStream) {
       if (currentUserActiveStream.state !== ApplicationStreamStates.PAUSED) {
-        if (0 === obj.getViewerIds(currentUserActiveStream).length) {
+        if (0 === ApplicationStreamingStore.getViewerIds(currentUserActiveStream).length) {
           return null;
         } else {
           const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(currentUserActiveStream);
@@ -43,36 +42,36 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 }
               }
               if (rTCConnection.hasActiveRemoteWants()) {
-                let tmp11Result = StreamKeyUtils;
-                const participant = ChannelRTCStore.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
+                const participant = ChannelRTCStore.getParticipant(currentUserActiveStream.channelId, StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
                 if (null == participant) {
                   return null;
                 } else {
-                  tmp11Result = AVErrorUtils;
-                  const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
+                  const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
                     const maxQuality = StreamQualityUtils.getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
-                      if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)) {
-                        obj = { type: AVError.AVError.STREAM_SEND_LOW_FPS };
-                        const tmp11Result3 = AVErrorContext;
-                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
-                        const items = [obj];
+                      if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result9.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                        const obj2 = { type: AVError.AVError.STREAM_SEND_LOW_FPS };
+                        const tmp11Result10 = AVErrorContext;
+                        const merged = Object.assign(tmp11Result10.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
+                        const items = [obj2];
                         let tmp6 = items;
-                        const tmp11Result4 = StreamKeyUtils;
+                        const tmp11Result11 = StreamKeyUtils;
                       } else {
                         AVErrorUtils;
                         tmp6 = null;
                       }
                       tmp9 = tmp6;
-                      tmp11Result2 = AVErrorUtils;
+                      tmp11Result9 = AVErrorUtils;
                     }
                     return tmp9;
                   }
+                  const tmp11Result7 = AVErrorUtils;
                 }
+                const tmp11Result = StreamKeyUtils;
               } else {
                 return null;
               }

@@ -17,15 +17,15 @@ export const getCardProductName = function getCardProductName(product) {
         str2 = "";
         if (product.items.length > 0) {
           const intl2 = util.intl;
-          let obj = { count: product.items.length, productName: "" };
-          str2 = intl2.format(util.t.UTc0ny, obj);
+          const obj2 = { count: product.items.length, productName: "" };
+          str2 = intl2.format(util.t.UTc0ny, obj2);
         }
       }
     }
     return str2;
   } else {
     let BZN5k2 = require;
-    obj = dependencyMap;
+    let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
       const intl = BZN5k2(1114).intl;
@@ -75,30 +75,29 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
 };
 export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(product) {
   if (null == product) {
-    let obj1 = CollectiblesProductUtils;
-    const productType = obj1.getProductType(product);
+    const productType = CollectiblesProductUtils.getProductType(product);
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === productType) {
       const intl5 = util.intl;
-      let obj = { product: "" };
-      return intl5.formatToPlainString(util.t.lvBzLi, obj);
+      const obj3 = { product: "" };
+      return intl5.formatToPlainString(util.t.lvBzLi, obj3);
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === productType) {
       const intl4 = util.intl;
-      obj = { product: "" };
-      return intl4.formatToPlainString(util.t.eR7moP, obj);
+      const obj4 = { product: "" };
+      return intl4.formatToPlainString(util.t.eR7moP, obj4);
     } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === productType) {
       const intl3 = util.intl;
-      obj1 = { product: "" };
-      return intl3.formatToPlainString(util.t.YFOwHj, obj1);
+      const obj5 = { product: "" };
+      return intl3.formatToPlainString(util.t.YFOwHj, obj5);
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === productType) {
       const intl2 = util.intl;
-      const obj2 = { product: "" };
-      return intl2.formatToPlainString(util.t.vov8LX, obj2);
+      const obj6 = { product: "" };
+      return intl2.formatToPlainString(util.t.vov8LX, obj6);
     } else {
       return "";
     }
   } else {
     let BZN5k2 = require;
-    obj = dependencyMap;
+    let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
       const intl = BZN5k2(1114).intl;

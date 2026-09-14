@@ -4,9 +4,9 @@
 import Server from "Server" /* 1894 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import TypeUtils from "TypeUtils" /* 1969 */;
-import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 14073 */;
-import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14074 */;
-import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 14075 */;
+import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 14074 */;
+import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14075 */;
+import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 14076 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7687 */;
 
@@ -26,15 +26,13 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
     }
     return num5;
   } else if (dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE === id) {
-    let tmpResult = AppLauncherBadgeUtils;
     const obj = { storeState: EmbeddedActivitiesStore.getState(), surface: Server.EmbeddedActivitySurfaces.VOICE_LAUNCHER };
-    return tmpResult.getNewestBadgeableVersion(obj);
+    return AppLauncherBadgeUtils.getNewestBadgeableVersion(obj);
   } else {
     if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK !== id) {
       if (dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE !== id) {
         if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER === id) {
-          tmpResult = WideBannerDismissibleContentVersion;
-          return tmpResult.getWideBannerDismissibleContentVersion();
+          return WideBannerDismissibleContentVersion.getWideBannerDismissibleContentVersion();
         } else {
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {

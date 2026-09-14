@@ -1,6 +1,6 @@
-// === Module 13661: useFetchGuildBoostSlots ===
+// === Module 13662: useFetchGuildBoostSlots ===
 
-// Module 13661 (useFetchGuildBoostSlots)
+// Module 13662 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,9 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
 
 export default function useFetchGuildBoostSlots() {
-  const tmp = _slicedToArray(noop.useState(true), 2);
-  const first = tmp[0];
-  closure_1 = tmp[1];
+  [first, closure_1] = noop.useState(true);
   let items = [GuildBoostSlotStore];
   stateFromStores = first(stateFromStores[5]).useStateFromStores(items, () => hasFetched.hasFetched);
   let obj = first(stateFromStores[5]);
@@ -32,8 +30,8 @@ export default function useFetchGuildBoostSlots() {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -46,8 +44,8 @@ export default function useFetchGuildBoostSlots() {
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
                 closure_0 = tmp2;
                 let resolve = globalThis;
@@ -75,7 +73,7 @@ export default function useFetchGuildBoostSlots() {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               v1(false);

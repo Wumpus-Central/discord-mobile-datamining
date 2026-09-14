@@ -1,8 +1,8 @@
-// === Module 12176: AppLauncherOnboardingLayer ===
+// === Module 12177: AppLauncherOnboardingLayer ===
 
-// Module 12176 (AppLauncherOnboardingLayer)
+// Module 12177 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 576 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12177 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12178 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -21,14 +21,14 @@ export default noop.memo((visibleContent) => {
   ({ context, bottomOffset } = visibleContent);
   let tmp3 = null;
   if (null != visibleContent) {
-    let obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items = [tmp.container, ];
-    obj = { bottom: tmp2 + bottomOffset };
-    items[1] = obj;
+    const obj2 = { bottom: tmp2 + bottomOffset };
+    items[1] = obj2;
     obj.style = items;
-    obj = { context, visibleContent };
+    const obj3 = { context, visibleContent };
     obj.children = jsx(AppLauncherOnboardingBannerDefault, { context, visibleContent });
-    tmp3 = <View context={context} visibleContent={visibleContent} />;
+    tmp3 = <View style={null}>{null}</View>;
   }
   return tmp3;
 });

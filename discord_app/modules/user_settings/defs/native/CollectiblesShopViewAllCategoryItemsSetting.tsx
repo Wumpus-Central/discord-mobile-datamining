@@ -1,10 +1,12 @@
-// === Module 15934: CollectiblesShopViewAllCategoryItemsSetting ===
+// === Module 15936: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 15934 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 15936 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1074 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14931 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14932 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

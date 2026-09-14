@@ -1,15 +1,17 @@
-// === Module 12709: useMaybeGetSortedBoosts ===
+// === Module 12710: useMaybeGetSortedBoosts ===
 
-// Module 12709 (useMaybeGetSortedBoosts)
+// Module 12710 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 4534 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12691 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12692 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5507 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -31,15 +33,16 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items2 = [stateFromStoresArray, arg1, first];
   memo = memo.useMemo(() => {
     const mapped = stateFromStoresArray.map((boost) => {
-      let obj = closure_0(stateFromStoresArray[7]);
-      const boostLifecycleInfo = obj.getBoostLifecycleInfo(boost, first);
+      const boostLifecycleInfo = closure_0(stateFromStoresArray[7]).getBoostLifecycleInfo(boost, first);
+      const obj = closure_0(stateFromStoresArray[7]);
       const boostLifecycleTimestamp = closure_0(stateFromStoresArray[7]).getBoostLifecycleTimestamp(boost, boostLifecycleInfo);
       if ("expiring" === boostLifecycleInfo.phase) {
-        obj = { boost, phase: "expiring", sortKey: boostLifecycleTimestamp, endsAt: boostLifecycleInfo.endsAt };
+        const obj3 = { boost, phase: "expiring", sortKey: boostLifecycleTimestamp, endsAt: boostLifecycleInfo.endsAt };
+        let obj4 = obj3;
       } else {
-        obj = { boost, phase: boostLifecycleInfo.phase, sortKey: boostLifecycleTimestamp };
+        obj4 = { boost, phase: boostLifecycleInfo.phase, sortKey: boostLifecycleTimestamp };
       }
-      return obj;
+      return obj4;
     });
     const sorted = mapped.sort((sortKey, sortKey2) => sortKey2.sortKey - sortKey.sortKey);
     return sorted.slice(0, closure_1);
@@ -75,7 +78,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   });
   const items7 = [stateFromStoresArray];
   memo1 = memo.useMemo(() => stateFromStoresArray.filter((ended) => !ended.ended).length, items7);
-  const obj3 = require("initialize");
+  let obj3 = require("initialize");
   const items8 = [stateFromStoresArray1];
   const items9 = [arg0];
   stateFromStores1 = require("initialize").useStateFromStores(items8, () => null != AppliedGuildBoostStore.getLastFetchedAtForGuild(closure_0), items9);
@@ -90,8 +93,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
 };
 export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
   _require = boost;
-  let obj = SnowflakeUtilsDefault;
-  const date = new Date(obj.extractTimestamp(boost.id));
+  const date = new Date(SnowflakeUtilsDefault.extractTimestamp(boost.id));
   const items = [GuildMemberStore];
   const items1 = [boost];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
@@ -128,6 +130,5 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
     obj.roleColorStrings = colorStrings;
     return obj;
   }, items1);
-  obj = { timestamp: date, username: stateFromStoresObject.username, roleColor: stateFromStoresObject.roleColor, roleColorStrings: stateFromStoresObject.roleColorStrings };
-  return obj;
+  return { timestamp: date, username: stateFromStoresObject.username, roleColor: stateFromStoresObject.roleColor, roleColorStrings: stateFromStoresObject.roleColorStrings };
 };

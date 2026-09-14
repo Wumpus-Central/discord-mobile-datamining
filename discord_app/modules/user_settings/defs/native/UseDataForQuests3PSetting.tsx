@@ -1,13 +1,13 @@
-// === Module 15949: UseDataForQuests3PSetting ===
+// === Module 15951: UseDataForQuests3PSetting ===
 
-// Module 15949 (UseDataForQuests3PSetting)
+// Module 15951 (UseDataForQuests3PSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14913 */;
-import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15947 */;
-import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15948 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15949 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15950 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useDataToSupportQuests3PSettingValue() {
@@ -32,7 +32,8 @@ function onDataToSupportQuests3PSettingValueChange(arg0) {
   Quests3PDataOptedOut.updateSetting(!arg0);
 }
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let obj = {
+let SettingBuilders = SettingBuilders_mod;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
@@ -44,9 +45,9 @@ let obj = {
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
-};
-const toggle = SettingBuilders.createToggle(obj);
-obj = {
+});
+let SettingBuilders = SettingBuilders_mod;
+const toggle1 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
@@ -56,8 +57,7 @@ obj = {
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
-};
-const toggle1 = SettingBuilders.createToggle(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;

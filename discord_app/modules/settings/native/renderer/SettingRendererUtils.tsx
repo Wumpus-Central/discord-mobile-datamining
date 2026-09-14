@@ -1,18 +1,18 @@
-// === Module 14779: SettingRendererUtils ===
+// === Module 14780: SettingRendererUtils ===
 
-// Module 14779 (SettingRendererUtils)
+// Module 14780 (SettingRendererUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6726 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7093 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingHookHarness from "SettingHookHarness" /* 14669 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14671 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14780 */;
-import SettingRendererConstants from "SettingRendererConstants" /* 11602 */;
+import SettingHookHarness from "SettingHookHarness" /* 14670 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14672 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14781 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11603 */;
 import size from "module_2" /* 2 */;
 
 ({ ListItemType: c3, NodeType: closure_4, SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: hasOwnProperty } = SettingRendererConstants);
@@ -23,31 +23,27 @@ let result = size.fileFinishedImporting("modules/settings/native/renderer/Settin
 export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   ({ navigation: require, screen: importDefault, preNavigationAction } = arg0);
   function goToScreen() {
-    let obj = useKeyboardIsOpen;
     if (obj.getKeyboardIsOpen()) {
-      let tmpResult = PlatformUtils;
       if (tmpResult.isIOS()) {
-        tmpResult = KeyboardManagerUtils;
-        let result = tmpResult.dismissGlobalKeyboard();
+        let result = KeyboardManagerUtils.dismissGlobalKeyboard();
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          let obj = UserSettingsModalActionCreatorsDefault;
-          obj.setSection(closure_1_1.route);
-          obj = { destinationPane: closure_1_1.route, source: null };
-          obj = { page: constants.USER_SETTINGS };
-          obj.source = obj;
-          const result = navigation(7098).trackUserSettingsPaneViewed(obj);
+          UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
+          const obj3 = { destinationPane: closure_1_1.route, source: { page: constants.USER_SETTINGS } };
+          const result = navigation(7098).trackUserSettingsPaneViewed(obj3);
           navigation.navigate(closure_1_1.route);
         }, 100);
+        const tmpResult3 = KeyboardManagerUtils;
       }
+      tmpResult = PlatformUtils;
     }
+    obj = useKeyboardIsOpen;
     UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
-    obj = { destinationPane: closure_1_1.route, source: null };
-    obj = { page: AnalyticsPages.USER_SETTINGS };
-    obj.source = obj;
-    const result1 = UserSettingsUtils.trackUserSettingsPaneViewed(obj);
+    const obj2 = { destinationPane: closure_1_1.route, source: { page: AnalyticsPages.USER_SETTINGS } };
+    const result1 = UserSettingsUtils.trackUserSettingsPaneViewed(obj2);
     navigation.navigate(closure_1_1.route);
-    const tmpResult1 = UserSettingsUtils;
+    const obj4 = { page: AnalyticsPages.USER_SETTINGS };
+    const tmpResult4 = UserSettingsUtils;
   }
   let preNavigationActionResult;
   if (preNavigationAction != null) {
@@ -63,7 +59,7 @@ export const getSettingTitle = function getSettingTitle(id) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14672).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -84,7 +80,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14672).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -99,7 +95,7 @@ export const getSettingScreens = function getSettingScreens() {
 };
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(14671).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14672).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;
@@ -121,14 +117,14 @@ export const toSettingListItems = function toSettingListItems(node, field) {
     settings = settings.settings;
     const found = settings.filter((item) => !items(dependencyMap[11]).isBlocked(item, found));
     if (0 !== found.length) {
-      let obj = { type: constants.SECTION_HEADER, label: settings.label };
+      const obj = { type: constants.SECTION_HEADER, label: settings.label };
       items.push(obj);
       const item = found.forEach((setting, index) => {
         items.push({ type: constants.SECTION_ROW, setting, settingData: SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting], start: 0 === index, end: index === found.length - 1 });
       });
       if (null != settings.subLabel) {
-        obj = { type: constants.SECTION_FOOTER, label: settings.subLabel };
-        items.push(obj);
+        const obj2 = { type: constants.SECTION_FOOTER, label: settings.subLabel };
+        items.push(obj2);
       }
     }
   });
@@ -140,10 +136,10 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
     const tmp2 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting];
     if (null != tmp2.parent) {
       const highestLevelAncestor = SettingTreeManagerDefault.getHighestLevelAncestor(setting);
-      let obj = { category: highestLevelAncestor, setting, data: SettingTreeManagerDefault.getNearestRouteAncestorDataOrSelf(setting) };
-      items.push(obj);
+      const obj4 = { category: highestLevelAncestor, setting, data: SettingTreeManagerDefault.getNearestRouteAncestorDataOrSelf(setting) };
+      items.push(obj4);
     } else if (set.has(tmp2.type)) {
-      obj = { category: setting, setting, data: tmp2 };
+      const obj = { category: setting, setting, data: tmp2 };
       items.push(obj);
     }
   });
@@ -153,14 +149,13 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
   set = new Set();
   const item1 = sortByResult.forEach((data, index) => {
     ({ category, setting } = data);
-    let obj = SettingHookHarness;
-    const cachedSettingTitle = obj.getCachedSettingTitle(setting);
+    const cachedSettingTitle = SettingHookHarness.getCachedSettingTitle(setting);
     _modDef38(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
     const tmp5 = null != cachedSettingTitle;
     const breadcrumbs = SettingTreeManagerDefault.getBreadcrumbs(setting);
     const hasItem = set.has(category);
     set.add(category);
-    obj = { type: constants.SETTING_SEARCH_RESULT, settingData: data.data, title: cachedSettingTitle, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
+    const obj3 = { type: constants.SETTING_SEARCH_RESULT, settingData: data.data, title: cachedSettingTitle, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
     let tmp11;
     if (!hasItem) {
       const tmp12 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[category];
@@ -177,12 +172,12 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
       }
       tmp11 = IconComponent;
     }
-    obj.IconComponent = tmp11;
-    obj.breadcrumbs = breadcrumbs;
-    obj.setting = setting;
-    obj.index = index;
-    obj.total = sortByResult.length;
-    items1.push(obj);
+    obj3.IconComponent = tmp11;
+    obj3.breadcrumbs = breadcrumbs;
+    obj3.setting = setting;
+    obj3.index = index;
+    obj3.total = sortByResult.length;
+    items1.push(obj3);
   });
   return items1;
 };
@@ -231,8 +226,7 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
       const result1 = map.set(highestLevelAncestor, items);
     });
     const _Array = Array;
-    arr = Array.from(map1.entries());
-    let sorted = arr.sort((arg0, arg1) => arg1[1] - arg0[1]);
+    let sorted = Array.from(map1.entries()).sort((arg0, arg1) => arg1[1] - arg0[1]);
     const mapped = sorted.map((item) => {
       [tmp] = item;
       return tmp;
@@ -256,18 +250,18 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           setting = setting.setting;
           let nearestRouteAncestorDataOrSelf = items(map1[10]).SETTING_RENDERER_CONFIG[setting];
           if (null != nearestRouteAncestorDataOrSelf.parent) {
-            let obj = map(map1[11]);
-            let highestLevelAncestor = obj.getHighestLevelAncestor(setting);
+            let highestLevelAncestor = map(map1[11]).getHighestLevelAncestor(setting);
+            const obj = map(map1[11]);
             nearestRouteAncestorDataOrSelf = map(map1[11]).getNearestRouteAncestorDataOrSelf(setting);
             const obj2 = map(map1[11]);
           } else {
             highestLevelAncestor = setting;
           }
-          obj = { type: total.SETTING_SEARCH_RESULT, settingData: nearestRouteAncestorDataOrSelf, title: null, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
+          const obj3 = { type: total.SETTING_SEARCH_RESULT, settingData: nearestRouteAncestorDataOrSelf, title: null, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
           const cachedSettingTitle = items(map1[8]).getCachedSettingTitle(setting);
           const tmpResult = items(map1[8]);
           map(map1[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
-          obj.title = cachedSettingTitle;
+          obj3.title = cachedSettingTitle;
           let tmp12;
           if (0 === index) {
             const tmp13 = items(map1[10]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
@@ -284,15 +278,15 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
             }
             tmp12 = IconComponent;
           }
-          obj.IconComponent = tmp12;
+          obj3.IconComponent = tmp12;
           const tmp10 = null != cachedSettingTitle;
           const tmp9 = map(map1[9]);
-          obj.breadcrumbs = map(map1[11]).getBreadcrumbs(setting);
-          obj.setting = setting;
-          obj.index = index;
-          obj.total = total;
+          obj3.breadcrumbs = map(map1[11]).getBreadcrumbs(setting);
+          obj3.setting = setting;
+          obj3.index = index;
+          obj3.total = total;
           index = index + 1;
-          item.push(obj);
+          item.push(obj3);
           const tmp8Result = map(map1[11]);
         });
       }

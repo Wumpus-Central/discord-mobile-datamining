@@ -1,6 +1,6 @@
-// === Module 10476: EmojiPickerCategoriesItem ===
+// === Module 10477: EmojiPickerCategoriesItem ===
 
-// Module 10476 (EmojiPickerCategoriesItem)
+// Module 10477 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
@@ -15,14 +15,12 @@ const Constants = fn(1074);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let obj = { itemInner: null, fadedItem: null, activeItem: null, guildItem: null, lockContainer: null, lock: null };
+const createStyles = fn(4636);
+let obj = { itemInner: null, fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT }, activeItem: null, guildItem: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;
-obj = { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT };
-obj.fadedItem = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.activeItem = createStyles;
+let obj3 = { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT };
+obj.activeItem = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj.guildItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 const size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj.lockContainer = size1;
@@ -32,6 +30,7 @@ let closure_10 = createStyles.createStyles(obj);
 const __initData = { code: "function EmojiPickerCategoriesItemTsx1(){const{withTiming,categoryIndexActive,index,timingStandard,styleColorActive,styleColorTransparent}=this.__closure;return{opacity:withTiming(categoryIndexActive.get()===index?1:0.5,timingStandard),backgroundColor:categoryIndexActive.get()===index?styleColorActive:styleColorTransparent};}" };
 const __initData2 = { code: "function EmojiPickerCategoriesItemTsx2(){const{categoryIndexActive,index}=this.__closure;return categoryIndexActive.get()===index;}" };
 const __initData3 = { code: "function EmojiPickerCategoriesItemTsx3(active,prev){const{runOnJS,setIsSelected}=this.__closure;if(active!==prev){runOnJS(setIsSelected)(active);}}" };
+const obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx");
 
@@ -46,7 +45,6 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   const tmp = closure_10();
   const backgroundColor = tmp.activeItem.backgroundColor;
   const backgroundColor2 = tmp.fadedItem.backgroundColor;
-  let obj = category(handlePressCategory[8]);
   class T {
     constructor() {
       tmp = closure_0;
@@ -58,18 +56,18 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
       if (categoryIndexActive.get() === index) {
         num = 1;
       }
-      obj = { opacity: obj.withTiming(num, tmp(tmp2[10]).timingStandard), backgroundColor: obj2.get() === tmp3 ? backgroundColor : backgroundColor };
-      return obj;
+      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[10]).timingStandard), backgroundColor: obj2.get() === tmp3 ? backgroundColor : backgroundColor };
+      return obj1;
     }
   }
-  obj = { withTiming: category(handlePressCategory[9]).withTiming, categoryIndexActive, index, timingStandard: category(handlePressCategory[10]).timingStandard, styleColorActive: backgroundColor, styleColorTransparent: backgroundColor2 };
-  T.__closure = obj;
+  let obj = category(handlePressCategory[8]);
+  T.__closure = { withTiming: category(handlePressCategory[9]).withTiming, categoryIndexActive, index, timingStandard: category(handlePressCategory[10]).timingStandard, styleColorActive: backgroundColor, styleColorTransparent: backgroundColor2 };
   T.__workletHash = 3335518235623;
   T.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(T);
   const tmp5 = index(backgroundColor.useState(() => categoryIndexActive.get() === index), 2);
   EmojiCategoryTypes = tmp6;
-  let obj2 = category(handlePressCategory[8]);
+  const obj2 = { withTiming: category(handlePressCategory[9]).withTiming, categoryIndexActive, index, timingStandard: category(handlePressCategory[10]).timingStandard, styleColorActive: backgroundColor, styleColorTransparent: backgroundColor2 };
   const fn = function p() {
     return categoryIndexActive.get() === index;
   };
@@ -88,41 +86,41 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
       return;
     }
   }
-  obj = { runOnJS: category(handlePressCategory[8]).runOnJS, setIsSelected: tmp6 };
-  E.__closure = obj;
+  const obj3 = category(handlePressCategory[8]);
+  E.__closure = { runOnJS: category(handlePressCategory[8]).runOnJS, setIsSelected: tmp5[1] };
   E.__workletHash = 6056273557261;
   E.__initData = __initData3;
-  const animatedReaction = obj2.useAnimatedReaction(fn, E);
+  const animatedReaction = obj3.useAnimatedReaction(fn, E);
   const items = [handlePressCategory, index, category];
   const callback = backgroundColor.useCallback(() => handlePressCategory(index, category), items);
-  const obj1 = { androidRippleConfig, style, onPress: callback, accessibilityRole: "tab", accessibilityLabel: null, accessibilityState: null, children: null };
+  const obj5 = { androidRippleConfig, style, onPress: callback, accessibilityRole: "tab", accessibilityLabel: null, accessibilityState: null, children: null };
   if (category.type === EmojiCategoryTypes.GUILD) {
     let name = category.guild.name;
   } else {
     name = category.name;
   }
-  obj1.accessibilityLabel = name;
-  obj1.accessibilityState = { selected: tmp5[0] };
-  obj2 = { style: null, children: null };
+  obj5.accessibilityLabel = name;
+  obj5.accessibilityState = { selected: tmp5[0] };
+  const obj6 = { style: null, children: null };
   const items1 = [tmp.itemInner, animatedStyle];
-  obj2.style = items1;
+  obj6.style = items1;
   if (category.type === EmojiCategoryTypes.GUILD) {
-    const obj3 = { guild: category.guild, loadingStyle, size: tmp2(tmp3[12]).GuildIconSizes.XSMALL, style: tmp.guildItem };
-    let tmp9Result = closure_8(tmp12(tmp3[12]), obj3);
+    const obj7 = { guild: category.guild, loadingStyle, size: tmp2(tmp3[12]).GuildIconSizes.XSMALL, style: tmp.guildItem };
+    let tmp9Result = closure_8(tmp12(tmp3[12]), obj7);
     const tmp12Result = tmp12(tmp3[12]);
   } else {
-    const obj4 = { id: category.id };
-    tmp9Result = closure_8(tmp12(tmp3[13]), obj4);
+    const obj8 = { id: category.id };
+    tmp9Result = closure_8(tmp12(tmp3[13]), obj8);
   }
   const items2 = [tmp9Result, ];
   if (locked) {
-    const obj5 = { style: tmp.lockContainer, children: null };
-    const obj6 = { style: tmp.lock };
-    obj5.children = closure_8(tmp2(tmp3[14]).LockIcon, obj6);
-    locked = closure_8(backgroundColor2, obj5);
+    const obj9 = { style: tmp.lockContainer, children: null };
+    const obj10 = { style: tmp.lock };
+    obj9.children = closure_8(tmp2(tmp3[14]).LockIcon, obj10);
+    locked = closure_8(backgroundColor2, obj9);
   }
   items2[1] = locked;
-  obj2.children = items2;
-  obj1.children = closure_9(categoryIndexActive(handlePressCategory[8]).View, obj2);
-  return closure_8(category(handlePressCategory[11]).PressableOpacity, obj1);
+  obj6.children = items2;
+  obj5.children = closure_9(categoryIndexActive(handlePressCategory[8]).View, obj6);
+  return closure_8(category(handlePressCategory[11]).PressableOpacity, obj5);
 });

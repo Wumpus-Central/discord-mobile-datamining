@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = PortalViewNativeComponentDefault;
 } else {
@@ -75,16 +75,16 @@ export default noop.memo((paused) => {
         }
       }
     }, items3);
-    paused(onLoad[4]);
-    let obj = {};
+    let obj2 = {};
+    let obj = paused(onLoad[4]);
     const merged1 = Object.assign(merged);
     const items4 = [tmp2.base, style];
-    obj.style = items4;
+    obj2.style = items4;
     if (isAndroidResult) {
-      obj.onPortalViewLoaded = callback;
-      let tmp17Result = <closure_6 {...obj} />;
+      obj2.onPortalViewLoaded = callback;
+      let tmp17Result = <closure_6 {...obj2} />;
     } else {
-      tmp17Result = <closure_6 {...obj} />;
+      tmp17Result = <closure_6 {...obj2} />;
     }
     return tmp17Result;
   }

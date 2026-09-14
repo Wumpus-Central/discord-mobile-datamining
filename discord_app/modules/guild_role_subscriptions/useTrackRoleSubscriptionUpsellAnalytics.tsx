@@ -1,7 +1,7 @@
-// === Module 16637: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 16639: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 16637 (useTrackRoleSubscriptionUpsellAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 16639 (useTrackRoleSubscriptionUpsellAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4269 */;
@@ -37,7 +37,7 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
       return true === published;
     });
   }, items1);
-  const obj2 = guildId(_location[5]);
+  let obj2 = guildId(_location[5]);
   const tmp4 = groupListingId(_location[6]);
   let lastRouteChangeSourceLocationStack = guildId(_location[7]).getLastRouteChangeSourceLocationStack();
   if (lastRouteChangeSourceLocationStack == null) {
@@ -59,9 +59,10 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
     }
     if (tmp) {
       ref.current = true;
-      const obj = { role_subscription_group_listing_id: groupListingId, role_subscription_listing_ids: stateFromStoresArray, is_premium_member, location_stack: analyticsLocations, location: _location };
+      const obj2 = { role_subscription_group_listing_id: groupListingId, role_subscription_listing_ids: stateFromStoresArray, is_premium_member, location_stack: analyticsLocations, location: _location };
+      const obj = AnalyticsUtilsDefault;
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-      obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj);
+      obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj2);
     }
   }, items2);
 };

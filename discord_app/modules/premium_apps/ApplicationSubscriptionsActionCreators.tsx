@@ -1,6 +1,6 @@
-// === Module 14583: ApplicationSubscriptionsActionCreators ===
+// === Module 14584: ApplicationSubscriptionsActionCreators ===
 
-// Module 14583 (ApplicationSubscriptionsActionCreators)
+// Module 14584 (ApplicationSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ApplicationSubscriptionsHttpApiAll from "ApplicationSubscriptionsHttpApi" /* 9668 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,9 +9,7 @@ function transformSubscriptionListingToSku(id) {
   return { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
 }
 function transformSubscriptionListingToStoreListing(id) {
-  let obj = { id: id.id, sku: null, summary: id.description, description: id.description, benefits: null, thumbnail: null, published: null };
-  obj = { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
-  obj.sku = obj;
+  const obj = { id: id.id, sku: { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false }, summary: id.description, description: id.description, benefits: null, thumbnail: null, published: null };
   let prop = id.store_listing_benefits;
   if (prop == null) {
     prop = [];
@@ -21,16 +19,18 @@ function transformSubscriptionListingToStoreListing(id) {
   return obj;
 }
 function dispatchCompat(arr) {
-  let obj = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
-  obj.dispatch(obj);
-  obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) };
-  DispatcherDefault.dispatch(obj);
+  const obj = DispatcherDefault;
+  obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) });
+  const obj2 = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
+  const obj3 = DispatcherDefault;
+  obj3.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) });
   const iter = arr[Symbol.iterator]();
+  const obj4 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) };
   while (iter !== undefined) {
     let obj5 = DispatcherDefault;
-    let obj1 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
+    let obj9 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
     ({ id: obj6.skuId, subscription_plans: obj6.subscriptionPlans } = nextResult);
-    let dispatchResult2 = obj5.dispatch(obj1);
+    let dispatchResult2 = obj5.dispatch(obj9);
     continue;
   }
   nextResult = iter.next();
@@ -68,10 +68,9 @@ let closure_10 = async function _fetchEntitlementsForGuild() {
     await ApplicationSubscriptionsHttpApiAll.getEntitlementsForGuild(guildId);
     if (1 === tmp7) {
       c4 = 0;
-      closure_130_0(closure_130_2[2]);
-      const obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: closure_129_0 };
-      obj3.dispatch(obj3);
+      closure_130_0(closure_130_2[2]).dispatch({ type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: closure_129_0 });
       c6 = 3;
+      closure_130_0(closure_130_2[2]);
     } else if (arg0 === 1) {
       c6 = 3;
       throw value;
@@ -102,8 +101,8 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -116,8 +115,8 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -140,17 +139,17 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: closure_131_0 };
-          closure_132_0(closure_132_2[2]).dispatch(obj2);
+          const obj5 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: closure_131_0 };
+          closure_132_0(closure_132_2[2]).dispatch(obj5);
           c6 = 1;
           const obj12 = closure_132_0(closure_132_2[2]);
           c7 = 3;
           c8 = 1;
-          const obj3 = { value: closure_132_1(closure_132_2[3]).getSubscriptionGroupForSubscriptionPlan(closure_131_0), done: false };
-          return obj3;
+          const obj6 = { value: closure_132_1(closure_132_2[3]).getSubscriptionGroupForSubscriptionPlan(closure_131_0), done: false };
+          return obj6;
         }
       } else if (2 === tmp7) {
         c6 = 0;
@@ -162,8 +161,8 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
               closure_131_1 = sum;
               c7 = 5;
               c8 = 1;
-              const obj4 = { value: closure_132_11(closure_131_0, sum), done: false };
-              return obj4;
+              const obj7 = { value: closure_132_11(closure_131_0, sum), done: false };
+              return obj7;
             }
           }
         }
@@ -175,12 +174,12 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_131_2 = value;
-          const obj6 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS", groupListing: closure_131_2 };
-          closure_132_0(closure_132_2[2]).dispatch(obj6);
+          const obj9 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS", groupListing: closure_131_2 };
+          closure_132_0(closure_132_2[2]).dispatch(obj9);
           const subscription_listings = closure_131_2.subscription_listings;
           closure_2 = subscription_listings;
           if (subscription_listings == null) {
@@ -189,7 +188,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           closure_131_3 = closure_2;
           c7 = 4;
           c8 = 1;
-          const obj7 = {
+          const obj11 = {
             value: Promise.all(closure_131_3.map((id) => {
                       if (id.subscription_plans[0].id === closure_1_0) {
                         const obj = closure_1(closure_2[4]);
@@ -198,7 +197,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
                     })),
             done: false
           };
-          return obj7;
+          return obj11;
         }
       } else {
         if (4 === tmp7) {
@@ -208,8 +207,8 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             closure_132_8(closure_131_3);
             c6 = 0;
@@ -219,7 +218,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         c8 = 3;
@@ -262,7 +261,6 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
   return applyArgumentsResult;
 };
 export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(guildId) {
-  const obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId });
 };
 export { fetchSubscriptionListingForPlan };

@@ -1,6 +1,6 @@
-// === Module 11044: openChannelLongPressActionSheet ===
+// === Module 11045: openChannelLongPressActionSheet ===
 
-// Module 11044 (openChannelLongPressActionSheet)
+// Module 11045 (openChannelLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import size from "module_2" /* 2 */;
 
@@ -8,11 +8,10 @@ const result = size.fileFinishedImporting("modules/channel/native/openChannelLon
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  const obj = {
+  ActionSheetActionCreatorsDefault.openLazy(combined(1896)(11046, dependencyMap.paths), combined, {
     channelId: id,
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
-  };
-  obj.openLazy(combined(1896)(11045, dependencyMap.paths), combined, obj);
+  });
 };

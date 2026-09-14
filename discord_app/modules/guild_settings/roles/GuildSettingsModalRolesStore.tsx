@@ -1,12 +1,12 @@
-// === Module 17718: GuildSettingsModalRolesStore ===
+// === Module 17719: GuildSettingsModalRolesStore ===
 
-// Module 17718 (GuildSettingsModalRolesStore)
+// Module 17719 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4488 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12545 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12546 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -44,7 +44,7 @@ Object.defineProperty(prototype, "submitting", {
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
     if (null != _null2) {
-      const obj = {
+      const obj2 = {
         oldOrdering: GuildRoleStore.getSortedRoles(_null2.id),
         newOrdering: GuildRoleStore.getManyRoles(_null2.id, c9),
         idGetter(id) {
@@ -55,7 +55,7 @@ prototype["getUpdates"] = function getUpdates() {
             },
         ascending: false
       };
-      const result = obj.calculatePositionDeltas(obj);
+      const result = DragAndDropUtilsDefault.calculatePositionDeltas(obj2);
     }
     return [];
   }

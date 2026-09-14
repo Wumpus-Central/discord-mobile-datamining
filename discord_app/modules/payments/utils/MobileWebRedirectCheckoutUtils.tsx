@@ -1,7 +1,7 @@
 // === Module 7509: MobileWebRedirectCheckoutUtils ===
 
 // Module 7509 (MobileWebRedirectCheckoutUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import _mod4464 from "module_4464" /* 4464 */;
 import PaymentConstants from "PaymentConstants" /* 4618 */;
@@ -16,12 +16,11 @@ const result = size.fileFinishedImporting("modules/payments/utils/MobileWebRedir
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
 export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
-  let obj = { tags: null, extra: null };
-  obj = { app_context: mobile_web_redirect_checkout, source };
+  const obj2 = { tags: null, extra: null };
   const merged = Object.assign(tags.tags);
-  obj.tags = obj;
-  obj.extra = tags.extra;
-  obj.captureException(error, obj);
+  obj2.tags = { app_context: mobile_web_redirect_checkout, source };
+  obj2.extra = tags.extra;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
   return MetaQuestUtils.isMetaQuest();

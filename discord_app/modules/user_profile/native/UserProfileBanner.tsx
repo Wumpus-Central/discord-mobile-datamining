@@ -5,6 +5,8 @@ import BannerDefault from "Banner" /* 8370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const BANNER_HEIGHT = fn(1074).BANNER_HEIGHT;
@@ -41,7 +43,6 @@ export default function UserProfileBanner(displayProfile) {
   if (!setting) {
     tmp7 = backgroundColor;
   }
-  let tmp2Result = tmp2(tmp3[7]);
   let obj = { user: displayProfile.user, guildId: null, pendingAvatarSrc: null, displayProfile: null };
   let guildId;
   if (displayProfile != null) {
@@ -50,7 +51,7 @@ export default function UserProfileBanner(displayProfile) {
   obj.guildId = guildId;
   obj.pendingAvatarSrc = pendingAvatarSrc;
   obj.displayProfile = displayProfile;
-  closure_8 = tmp2Result.useUserProfileBannerBackgroundColor(obj);
+  closure_8 = displayProfile(bannerSafeArea[7]).useUserProfileBannerBackgroundColor(obj);
   if (undefined !== pendingBanner) {
     let previewBanner;
     if (displayProfile != null) {
@@ -58,13 +59,13 @@ export default function UserProfileBanner(displayProfile) {
     }
     let bannerURL = previewBanner;
   } else if (displayProfile != null) {
-    obj = { canAnimate: tmp7, size: 600 };
-    bannerURL = displayProfile.getBannerURL(obj);
+    const obj2 = { canAnimate: tmp7, size: 600 };
+    bannerURL = displayProfile.getBannerURL(obj2);
   }
   source = null;
   if (null != bannerURL) {
-    tmp2Result = tmp2(tmp3[8]);
-    source = tmp2Result.makeSource(bannerURL);
+    source = tmp2(tmp3[8]).makeSource(bannerURL);
+    const tmp2Result3 = tmp2(tmp3[8]);
   }
   function renderBanner() {
     const obj = { style, bannerSource: source, backgroundColor: null, bannerSafeArea: null, bannerHeight: null };
@@ -94,11 +95,12 @@ export default function UserProfileBanner(displayProfile) {
     }
     return React5(BannerDefault, obj, banner);
   }
-  const obj1 = { style: tmp.bannerContainer, children: null };
-  if (tmp2Result1.isAnimatedImageURL(bannerURL)) {
+  const tmp2Result = displayProfile(bannerSafeArea[7]);
+  const obj3 = { style: tmp.bannerContainer, children: null };
+  if (tmp2Result4.isAnimatedImageURL(bannerURL)) {
     if (!setting) {
       if (!disableInteraction) {
-        const obj2 = {
+        const obj4 = {
           onPress() {
                   closure_7(!first);
                 },
@@ -107,21 +109,21 @@ export default function UserProfileBanner(displayProfile) {
           children: null
         };
         const intl = tmp2(tmp3[11]).intl;
-        obj2.accessibilityLabel = intl.string(tmp2(tmp3[11]).t["3fzj/l"]);
+        obj4.accessibilityLabel = intl.string(tmp2(tmp3[11]).t["3fzj/l"]);
         const items = [renderBanner(), ];
         let tmp12Result = null;
         if (!tmp7) {
-          const obj3 = { style: tmp.gifTag };
-          tmp12Result = tmp12(require("GifTag"), obj3);
+          const obj5 = { style: tmp.gifTag };
+          tmp12Result = tmp12(require("GifTag"), obj5);
         }
         items[1] = tmp12Result;
-        obj2.children = items;
-        let renderBannerResult = closure_8(tmp2(tmp3[10]).PressableOpacity, obj2);
+        obj4.children = items;
+        let renderBannerResult = closure_8(tmp2(tmp3[10]).PressableOpacity, obj4);
       }
-      obj1.children = renderBannerResult;
-      return tmp12(tmp13, obj1);
+      obj3.children = renderBannerResult;
+      return tmp12(tmp13, obj3);
     }
   }
   renderBannerResult = renderBanner();
-  tmp2Result1 = displayProfile(bannerSafeArea[8]);
+  tmp2Result4 = displayProfile(bannerSafeArea[8]);
 };

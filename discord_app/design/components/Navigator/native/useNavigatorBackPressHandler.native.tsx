@@ -3,6 +3,8 @@
 // Module 5711 (useNavigatorBackPressHandler)
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 fn(17).BackHandler;
 const size = fn(2);

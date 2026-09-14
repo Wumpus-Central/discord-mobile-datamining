@@ -1,7 +1,7 @@
-// === Module 10550: useHorizontalAutocompleteResults ===
+// === Module 10551: useHorizontalAutocompleteResults ===
 
-// Module 10550 (useHorizontalAutocompleteResults)
-import AutocompleteOptions from "AutocompleteOptions" /* 10551 */;
+// Module 10551 (useHorizontalAutocompleteResults)
+import AutocompleteOptions from "AutocompleteOptions" /* 10552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,19 +16,16 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   const selection = channel.selection;
   const text = channel.text;
   _slicedToArray = text;
-  let first;
-  let tmp = _slicedToArray(first.useState([]), 2);
-  first = tmp[0];
-  closure_4 = tmp[1];
+  first = undefined;
+  closure_4 = undefined;
+  closure_9 = undefined;
+  [first, closure_4] = first.useState([]);
   let items = [channel];
   const memo = first.useMemo(() => AutocompleteOptions.getAutocompleteOptions(channel, false, false), items);
-  let obj = { text, selectionStart: selection.start, selectionEnd: selection.end };
-  let tmp4 = _slicedToArray(first.useState(obj), 2);
-  const first1 = tmp4[0];
+  [first1, closure_9] = first.useState({ text, selectionStart: selection.start, selectionEnd: selection.end });
   const text2 = first1.text;
   const selectionStart = first1.selectionStart;
   const selectionEnd = first1.selectionEnd;
-  closure_9 = tmp4[1];
   const items1 = [text, selection];
   const effect = first.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -89,13 +86,13 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
               break;
             }
           }
-          obj = { query: tmp11, autocompleteType: tmp12, autocompleteSelectionStart: tmp10, queryOptions: null };
-          obj = { includeEmojiPremiumUpsell: false, channelTypes: null };
+          let obj2 = { query: tmp11, autocompleteType: tmp12, autocompleteSelectionStart: tmp10, queryOptions: null };
+          let obj3 = { includeEmojiPremiumUpsell: false, channelTypes: null };
           let items = [, , , ];
           ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
-          obj.channelTypes = items;
-          obj.queryOptions = obj;
-          return obj;
+          obj3.channelTypes = items;
+          obj2.queryOptions = obj3;
+          return obj2;
         }
       }
     }
@@ -133,11 +130,11 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   const effect2 = first.useEffect(() => {
     callback(true);
   }, items5);
-  obj = { results: null, autocompleteSelectionStart: memo1.autocompleteSelectionStart, query };
+  let obj2 = { results: null, autocompleteSelectionStart: memo1.autocompleteSelectionStart, query };
   const items6 = [first];
-  obj.results = first.useMemo(() => first.filter((type) => {
+  obj2.results = first.useMemo(() => first.filter((type) => {
     type = type.type;
     return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
   }), items6);
-  return obj;
+  return obj2;
 };

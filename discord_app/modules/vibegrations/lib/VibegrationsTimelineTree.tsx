@@ -1,6 +1,6 @@
-// === Module 16706: VibegrationsTimelineTree ===
+// === Module 16708: VibegrationsTimelineTree ===
 
-// Module 16706 (VibegrationsTimelineTree)
+// Module 16708 (VibegrationsTimelineTree)
 import util from "util" /* 1114 */;
 import _modDef3590 from "module_3590" /* 3590 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -27,47 +27,45 @@ function buildTimelineTree(steps, arg1) {
         }
         const _HermesInternal = HermesInternal;
         const combined = "" + str + " " + id;
-        obj = map1;
         value = map1.get(combined);
         if (null != value) {
           return value;
         } else {
-          obj = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
-          const result = obj.set(combined, obj);
+          const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+          const result = map1.set(combined, obj3);
           if (null != taskId) {
-            let obj1 = map;
-            value = map.get(taskId);
-            if (null == value) {
-              obj = { taskId, task: null, steps: null };
-              obj1 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
-              obj.task = obj1;
-              obj.steps = [];
-              const result1 = obj1.set(taskId, obj);
-              value = obj;
+            let value3 = map.get(taskId);
+            if (null == value3) {
+              const obj4 = { taskId, task: null, steps: null };
+              const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+              obj4.task = obj5;
+              obj4.steps = [];
+              const result1 = map.set(taskId, obj4);
+              value3 = obj4;
             }
-            const steps = value.steps;
-            steps.push(obj);
+            const steps = value3.steps;
+            steps.push(obj3);
           } else {
-            items.push(obj);
+            items.push(obj3);
           }
-          return obj;
+          return obj3;
         }
       }
     }
     if (null != taskId) {
-      let value1 = map.get(taskId);
-      if (null == value1) {
-        const obj2 = { taskId, task: null, steps: null };
-        const obj3 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
-        obj2.task = obj3;
-        obj2.steps = [];
-        const result2 = map.set(taskId, obj2);
-        value1 = obj2;
+      let value4 = map.get(taskId);
+      if (null == value4) {
+        const obj7 = { taskId, task: null, steps: null };
+        const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+        obj7.task = obj8;
+        obj7.steps = [];
+        const result2 = map.set(taskId, obj7);
+        value4 = obj7;
       }
-      task = value1.task;
+      task = value4.task;
     } else if (task == null) {
-      const obj4 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
-      task = obj4;
+      const obj9 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+      task = obj9;
     }
     return task;
   }
@@ -174,9 +172,9 @@ function buildTimelineTree(steps, arg1) {
             tmp14Result.detail = items;
             const items1 = [];
             const append_detail = node.append_detail;
-            const arraySpreadResult = HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0);
-            HermesBuiltin.arraySpread(append_detail.map(() => driven_by), arraySpreadResult);
+            HermesBuiltin.arraySpread(append_detail.map(() => driven_by), HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0));
             tmp14Result.detailDrivenBy = items1;
+            const arraySpreadResult3 = HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0);
           }
           if (null != node.status) {
             tmp14Result.status = node.status;
@@ -229,15 +227,14 @@ function buildTimelineTree(steps, arg1) {
     }
     continue;
   }
-  obj = { steps: items, tasks: items1 };
   if (null != task) {
-    obj = { turn: task };
-    let obj1 = obj;
+    let obj3 = { turn: task };
+    let obj4 = obj3;
   } else {
-    obj1 = {};
+    obj4 = {};
   }
-  const merged = Object.assign(obj1);
-  return obj;
+  const merged = Object.assign(obj4);
+  return { steps: items, tasks: items1 };
 }
 function scanTurnColumn(arr) {
   const items = [];
@@ -273,13 +270,13 @@ function scanTurnColumn(arr) {
                     tmp33 = num;
                   }
                   segmentOf[tmp8] = tmp33;
-                  obj = { type: "message", key: null, segment: null, content: null };
+                  let obj2 = { type: "message", key: null, segment: null, content: null };
                   let _HermesInternal2 = HermesInternal;
-                  obj.key = "message-" + tmp8;
-                  obj.segment = tmp33;
-                  obj.content = tmp28;
-                  tmp = obj;
-                  arr = items.push(obj);
+                  obj2.key = "message-" + tmp8;
+                  obj2.segment = tmp33;
+                  obj2.content = tmp28;
+                  tmp = obj2;
+                  let arr2 = items.push(obj2);
                 } else {
                   tmp.content = tmp28;
                 }
@@ -310,7 +307,7 @@ function scanTurnColumn(arr) {
             obj.segment = tmp20;
             obj.todos = tmp17;
             tmp2 = obj;
-            let arr1 = items.push(obj);
+            let arr3 = items.push(obj);
           }
         }
         continue;
@@ -434,16 +431,17 @@ export { segmentDurations };
 export const turnSegments = function turnSegments(arr) {
   let hasItem;
   let tmp19;
-  if (arr === undefined) {
-    arr = {};
+  obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  let flag = arr.turnActive;
+  let flag = obj.turnActive;
   if (flag === undefined) {
     flag = true;
   }
   const items = scanTurnColumn(arr).items;
   buildTimelineTree(arr, { turnActive: flag });
-  let obj1 = segmentDurations(arr);
+  const obj2 = segmentDurations(arr);
   const map = new Map();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -469,14 +467,13 @@ export const turnSegments = function turnSegments(arr) {
     segment = found.segment;
   }
   const items1 = [0];
-  let arraySpreadResult = HermesBuiltin.arraySpread(set, HermesBuiltin.arraySpread(map.keys(), 1));
   if (null != segment) {
     const items2 = [segment];
     let items3 = items2;
   } else {
     items3 = [];
   }
-  arraySpreadResult = HermesBuiltin.arraySpread(items3, arraySpreadResult);
+  HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(set, HermesBuiltin.arraySpread(map.keys(), 1)));
   const applyResult = Math.max.apply(items1);
   const items4 = [];
   let num = 0;
@@ -506,59 +503,60 @@ export const turnSegments = function turnSegments(arr) {
       const _HermesInternal = HermesInternal;
       key = "work-" + num;
     }
-    arr = { key, index: num };
+    let obj3 = { key, index: num };
     if (null != value) {
-      obj = { prose: value };
-      obj1 = obj;
+      const obj4 = { prose: value };
+      let obj5 = obj4;
     } else {
-      obj1 = {};
+      obj5 = {};
     }
-    const merged = Object.assign(obj1);
-    arr.hasWork = hasItem;
-    arr.hasTodos = tmp19;
-    if (obj1.has(num)) {
-      const obj2 = { durationMs: obj1.get(num) };
-      let obj3 = obj2;
+    const merged = Object.assign(obj5);
+    obj3.hasWork = hasItem;
+    obj3.hasTodos = tmp19;
+    if (obj2.has(num)) {
+      const obj6 = { durationMs: obj2.get(num) };
+      let obj7 = obj6;
     } else {
-      obj3 = {};
+      obj7 = {};
     }
-    const merged1 = Object.assign(obj3);
-    arr = items4.push(arr);
+    const merged1 = Object.assign(obj7);
+    obj3 = items4.push(obj3);
   }
   return items4;
 };
 export const turnLifecycle = function turnLifecycle(arr, turnActive) {
   const found = arr.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
   const atResult = found.at(-1);
-  let index;
+  let index1;
   if (atResult != null) {
-    index = atResult.index;
+    index1 = atResult.index;
   }
   const atResult1 = arr.at(-1);
   if (atResult1 != null) {
-    index = atResult1.index;
+    const index = atResult1.index;
   }
   let tmp4;
   if (turnActive.turnActive) {
-    if (null != index) {
-      if (index === index) {
-        tmp4 = index;
+    if (null != index1) {
+      if (index1 === index) {
+        tmp4 = index1;
       }
     }
   }
-  if (null != index) {
-    obj = { lastWork: index };
+  if (null != index1) {
+    obj = { lastWork: index1 };
+    let obj2 = obj;
   } else {
-    obj = {};
+    obj2 = {};
   }
-  const merged = Object.assign(obj);
+  const merged = Object.assign(obj2);
   if (null != tmp4) {
-    const obj2 = { open: tmp4 };
-    let obj3 = obj2;
+    const obj4 = { open: tmp4 };
+    let obj5 = obj4;
   } else {
-    obj3 = {};
+    obj5 = {};
   }
-  const merged1 = Object.assign(obj3);
+  const merged1 = Object.assign(obj5);
   return {};
 };
 export const streamedMessages = function streamedMessages(steps) {

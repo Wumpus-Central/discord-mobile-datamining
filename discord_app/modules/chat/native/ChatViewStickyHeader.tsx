@@ -1,43 +1,41 @@
-// === Module 11495: ChatViewStickyHeader ===
+// === Module 11496: ChatViewStickyHeader ===
 
-// Module 11495 (ChatViewStickyHeader)
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11101 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11497 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11500 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11501 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11514 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11520 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11544 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 11546 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11550 */;
-import ChatBannerDefault from "ChatBanner" /* 11553 */;
+// Module 11496 (ChatViewStickyHeader)
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11102 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11498 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11501 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11502 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11515 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11521 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11545 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11547 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11551 */;
+import ChatBannerDefault from "ChatBanner" /* 11554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   ({ channelId, senderId } = arg0);
-  let obj = useStrangerDangerWarning;
-  const strangerDangerWarning = obj.useStrangerDangerWarning(channelId);
-  let obj1 = useInappropriateConversationBannerForChannel;
-  const inappropriateConversationBannerForChannel = obj1.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
+  const strangerDangerWarning = useStrangerDangerWarning.useStrangerDangerWarning(channelId);
+  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
   const likelyAtoWarning = useLikelyAtoWarning.useLikelyAtoWarning(channelId);
   if (null != likelyAtoWarning) {
-    obj = { channelId, warningId: likelyAtoWarning.id, senderId };
-    let tmp5 = timestampProducer(LikelyAtoWarningBannerDefault, obj);
+    const obj4 = { channelId, warningId: likelyAtoWarning.id, senderId };
+    let tmp5 = timestampProducer(LikelyAtoWarningBannerDefault, obj4);
   } else if (null != strangerDangerWarning) {
-    obj = { channelId, warningId: strangerDangerWarning.id, senderId };
-    tmp5 = timestampProducer(StrangerDangerWarningBannerDefault, obj);
+    const obj5 = { channelId, warningId: strangerDangerWarning.id, senderId };
+    tmp5 = timestampProducer(StrangerDangerWarningBannerDefault, obj5);
   } else {
     tmp5 = null;
     if (null != inappropriateConversationBannerForChannel) {
-      obj1 = { channelId, warningId: inappropriateConversationBannerForChannel.id, senderId };
-      tmp5 = timestampProducer(InappropriateConversationWarningBannerDefault, obj1);
+      const obj6 = { channelId, warningId: inappropriateConversationBannerForChannel.id, senderId };
+      tmp5 = timestampProducer(InappropriateConversationWarningBannerDefault, obj6);
     }
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11496).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11497).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -59,25 +57,25 @@ export default noop.memo(noop.forwardRef((handleScrollToNewMessages, arg1) => {
   if (channel.isForumPost()) {
     tmp8 = null;
     if (tmp[0]) {
-      let obj = { channel };
+      const obj = { channel };
       tmp8 = timestampProducer(ForumPostActionBarDefault, obj);
     }
   }
   const items = [tmp8, , , ];
   let tmp10 = null;
   if (channel.isDM()) {
-    obj = { channelId: channel.id, senderId: channel.getRecipientId() };
-    tmp10 = timestampProducer(ChatViewStickyHeaderAccountSafetyWarnings, obj);
+    const obj2 = { channelId: channel.id, senderId: channel.getRecipientId() };
+    tmp10 = timestampProducer(ChatViewStickyHeaderAccountSafetyWarnings, obj2);
   }
   items[1] = tmp10;
   let tmp13 = null;
   if (showUnreadsNotice) {
-    obj = { channel, clearUnreadsNotice };
-    tmp13 = timestampProducer(UnreadSettingNoticeDefault, obj);
+    const obj3 = { channel, clearUnreadsNotice };
+    tmp13 = timestampProducer(UnreadSettingNoticeDefault, obj3);
   }
-  const obj1 = { children: null };
+  const obj4 = { children: null };
   items[2] = tmp13;
   items[3] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
-  obj1.children = items;
-  return React6(React5, obj1);
+  obj4.children = items;
+  return React6(React5, obj4);
 }));

@@ -1,14 +1,14 @@
-// === Module 17540: MultiAccountManagerNative ===
+// === Module 17541: MultiAccountManagerNative ===
 
-// Module 17540 (MultiAccountManagerNative)
+// Module 17541 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import Constants2 from "Constants" /* 12543 */;
-import _modDef17543 from "module_17543" /* 17543 */;
+import Constants2 from "Constants" /* 12544 */;
+import _modDef17544 from "module_17544" /* 17544 */;
 import Constants from "Constants" /* 1074 */;
-import MultiAccountManager from "MultiAccountManager" /* 17542 */;
+import MultiAccountManager from "MultiAccountManager" /* 17543 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -22,29 +22,28 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(1896)(17542, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
     }
   };
   obj.enqueue = function enqueue() {
-    let arr = obj;
     obj.cancelled = false;
     obj = obj(4495);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
-        arr = arr.push();
+        arr.push();
       }
     }
     const ComponentDispatch = obj(1109).ComponentDispatch;
     ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
-      let arr = cancelled;
       if (!cancelled.cancelled) {
-        arr = arr.push();
+        cancelled.push();
       }
     });
+    arr = obj;
   };
   obj.pop = function pop() {
     obj.cancelled = true;
@@ -56,29 +55,28 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1896)(17542, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
   }
 };
 obj.enqueue = function enqueue() {
-  let arr = obj;
   obj.cancelled = false;
   obj = obj(4495);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
-      arr = arr.push();
+      arr.push();
     }
   }
   const ComponentDispatch = obj(1109).ComponentDispatch;
   ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
-    let arr = cancelled;
     if (!cancelled.cancelled) {
-      arr = arr.push();
+      cancelled.push();
     }
   });
+  arr = obj;
 };
 obj.pop = function pop() {
   obj.cancelled = true;
@@ -116,20 +114,21 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     tmp = user;
   }
   const timerId = setTimeout(() => {
-    obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
+    obj = ToastActionCreatorsDefault;
+    const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
     const intl = obj(1114).intl;
-    obj = { username: user.username };
-    obj.content = intl.formatToPlainString(obj(1114).t.wx7O3L, obj);
-    obj.icon = _modDef17543;
-    obj.open(obj);
+    obj2.content = intl.formatToPlainString(obj(1114).t.wx7O3L, { username: user.username });
+    obj2.icon = _modDef17544;
+    obj.open(obj2);
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError() {
-  obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
+  obj = ToastActionCreatorsDefault;
+  const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1114).intl;
-  obj.content = intl.string(obj(1114).t.pqvKWA);
-  obj.icon = _modDef17543;
-  obj.open(obj);
+  obj2.content = intl.string(obj(1114).t.pqvKWA);
+  obj2.icon = _modDef17544;
+  obj.open(obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
   obj = ModalActionCreatorsDefault;

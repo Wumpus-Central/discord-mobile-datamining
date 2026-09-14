@@ -1,6 +1,6 @@
-// === Module 10769: MediaKeyboardBottomSheetHandle ===
+// === Module 10770: MediaKeyboardBottomSheetHandle ===
 
-// Module 10769 (MediaKeyboardBottomSheetHandle)
+// Module 10770 (MediaKeyboardBottomSheetHandle)
 import util from "util" /* 1114 */;
 import useStateFromSharedValue from "useStateFromSharedValue" /* 8385 */;
 import native from "native" /* 9031 */;
@@ -13,8 +13,7 @@ const result = size.fileFinishedImporting("modules/media_keyboard/native/compone
 
 export default noop.memo(function MediaKeyboardBottomSheetHandle(onPress) {
   onPress = onPress.onPress;
-  let obj = useStateFromSharedValue;
-  const derivedStateFromSharedValue = obj.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
+  const derivedStateFromSharedValue = useStateFromSharedValue.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -23,6 +22,5 @@ export default noop.memo(function MediaKeyboardBottomSheetHandle(onPress) {
   } else {
     stringResult = string(t.dcl9MQ);
   }
-  obj = { onPress, accessibilityLabel: stringResult, "aria-hidden": null == onPress };
   return jsx(native.ActionSheetDragHandle, { onPress, accessibilityLabel: stringResult, "aria-hidden": null == onPress });
 });

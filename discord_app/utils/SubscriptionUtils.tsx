@@ -1,15 +1,17 @@
-// === Module 11574: SubscriptionUtils ===
+// === Module 11575: SubscriptionUtils ===
 
-// Module 11574 (SubscriptionUtils)
+// Module 11575 (SubscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7360 */;
-import CheckoutError from "CheckoutError" /* 11575 */;
-import PauseDuration from "PauseDuration" /* 11577 */;
+import CheckoutError from "CheckoutError" /* 11576 */;
+import PauseDuration from "PauseDuration" /* 11578 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
@@ -43,18 +45,16 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
       return true;
     }
   }
-  let obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
+  const obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
   if (null == currentSubscriptionPlanIdForGroup) {
-    obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
-    obj.extraSentryInformation = obj;
-    const checkoutError = new CheckoutError.CheckoutError(obj);
+    const obj2 = { message: "Current subscription has no plan in group", extraSentryInformation: obj };
+    const checkoutError = new CheckoutError.CheckoutError(obj2);
     throw checkoutError;
   } else {
     if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
       if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
-        obj = { message: "Unexpected plan switch", extraSentryInformation: null };
-        obj.extraSentryInformation = obj;
-        const checkoutError1 = new CheckoutError.CheckoutError(obj);
+        const obj3 = { message: "Unexpected plan switch", extraSentryInformation: obj };
+        const checkoutError1 = new CheckoutError.CheckoutError(obj3);
         throw checkoutError1;
       }
     }
@@ -65,18 +65,16 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
 export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
   const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
   if (getCurrentSubscriptionPlanIdForGroup.type !== constants2.PREMIUM) {
-    let obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
+    const obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
     if (null == currentSubscriptionPlanIdForGroup) {
-      obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
-      obj.extraSentryInformation = obj;
-      const checkoutError = new CheckoutError.CheckoutError(obj);
+      const obj2 = { message: "Current subscription has no plan in group", extraSentryInformation: obj };
+      const checkoutError = new CheckoutError.CheckoutError(obj2);
       throw checkoutError;
     } else {
       if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
         if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
-          obj = { message: "Unexpected plan switch", extraSentryInformation: null };
-          obj.extraSentryInformation = obj;
-          const checkoutError1 = new CheckoutError.CheckoutError(obj);
+          const obj3 = { message: "Unexpected plan switch", extraSentryInformation: obj };
+          const checkoutError1 = new CheckoutError.CheckoutError(obj3);
           throw checkoutError1;
         }
       }
@@ -141,8 +139,8 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
   const keys = Object.keys(PauseDuration.PauseDuration);
   const found = keys.filter((item) => isNaN(Number(item)));
   if (status.status !== constants.PAUSED) {
-    let obj = { durations: found, currentDaysPaused: 0 };
-    return obj;
+    const obj3 = { durations: found, currentDaysPaused: 0 };
+    return obj3;
   } else if (null != status.pauseEndsAt) {
     const tmp6 = _modDef4228(status.currentPeriodStart);
     const _Math = Math;
@@ -154,10 +152,10 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
       }
       continue;
     }
-    obj = { durations: items, currentDaysPaused: rounded };
-    return obj;
+    const obj4 = { durations: items, currentDaysPaused: rounded };
+    return obj4;
   } else {
-    obj = { durations: [], currentDaysPaused: 0 };
+    const obj = { durations: [], currentDaysPaused: 0 };
     return obj;
   }
 };

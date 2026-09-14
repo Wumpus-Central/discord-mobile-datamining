@@ -1,26 +1,25 @@
-// === Module 12409: VoicePanelControlsDrawerTitle ===
+// === Module 12410: VoicePanelControlsDrawerTitle ===
 
-// Module 12409 (VoicePanelControlsDrawerTitle)
+// Module 12410 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7176 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 12410 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 12411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(12400).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: null, titlePillBG: null };
-obj = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
-obj.titlePill = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj.titlePillBG = createStyles;
+const createStyles = fn(4636);
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(12401).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
+obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);
 const __initData = { code: "function VoicePanelControlsDrawerTitleTsx1(){const{shown,_shown,disablePill,backgroundColor}=this.__closure;const showBGColor=shown!=null?shown.get():_shown.get();return{backgroundColor:showBGColor&&!disablePill?backgroundColor:'transparent'};}" };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx");
 
@@ -32,10 +31,8 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   }
   ({ style, blurStyle } = children);
   const tmp = closure_6();
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(true);
+  const sharedValue = ReanimatedRexport.useSharedValue(true);
   let backgroundColor = tmp.titlePillBG.backgroundColor;
-  let obj1 = ReanimatedRexport;
   const fn = function p() {
     if (null != shown) {
       value = shown.get();
@@ -51,21 +48,21 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   fn.__closure = { shown, _shown: sharedValue, disablePill: flag, backgroundColor };
   fn.__workletHash = 14837285839887;
   fn.__initData = __initData;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: null, children: null };
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj3 = { style: null, children: null };
   const items = [tmp.titleWrapper, style];
-  obj.style = items;
+  obj3.style = items;
   const tmp8 = NativeViewDefault;
   if (shown == null) {
     shown = sharedValue;
   }
-  obj = { shown, style: StyleSheet.absoluteFillObject, blurStyle };
-  const items1 = [React4(VoicePanelHeaderGlassBlurDefault, obj), ];
-  obj1 = { style: null, children: null };
+  const items1 = [React4(VoicePanelHeaderGlassBlurDefault, { shown, style: StyleSheet.absoluteFillObject, blurStyle }), ];
+  const obj5 = { style: null, children: null };
   const items2 = [tmp.titlePill, animatedStyle];
-  obj1.style = items2;
-  obj1.children = React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title });
-  items1[1] = React4(ReanimatedNativeViewDefault, obj1);
-  obj.children = items1;
-  return hasOwnProperty(tmp8, obj);
+  obj5.style = items2;
+  const obj4 = { shown, style: StyleSheet.absoluteFillObject, blurStyle };
+  obj5.children = React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: children.title });
+  items1[1] = React4(ReanimatedNativeViewDefault, obj5);
+  obj3.children = items1;
+  return hasOwnProperty(tmp8, obj3);
 });

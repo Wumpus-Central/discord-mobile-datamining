@@ -1,6 +1,6 @@
-// === Module 11893: startAuthorizationNoHook ===
+// === Module 11894: startAuthorizationNoHook ===
 
-// Module 11893 (startAuthorizationNoHook)
+// Module 11894 (startAuthorizationNoHook)
 import LinkingDefault from "Linking" /* 4331 */;
 import useAuthorizationApp from "useAuthorizationApp" /* 7270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -14,8 +14,8 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,16 +28,15 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
           closure_130_0 = closure_1;
           closure_130_1 = undefined;
           if (null != closure_0) {
-            let obj3 = useAuthorizationApp;
-            const authorizationApp = obj3.getAuthorizationApp(tmp32);
+            const authorizationApp = useAuthorizationApp.getAuthorizationApp(tmp32);
             closure_130_1 = authorizationApp;
             let prop;
             if (authorizationApp != null) {
@@ -47,8 +46,8 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
               c5 = 1;
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: LinkingDefault.openURL(authorizationApp.connectionEntrypointUrl), done: false };
-              return obj1;
+              const obj6 = { value: LinkingDefault.openURL(authorizationApp.connectionEntrypointUrl), done: false };
+              return obj6;
             }
           }
         }
@@ -59,15 +58,15 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
           c7 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          obj = closure_131_1(closure_131_2[4]);
-          const obj2 = { location_stack: closure_130_0, application_id: closure_130_1.id, flow_type: "web" };
-          obj.track(closure_131_4.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj2);
+          const obj7 = { location_stack: closure_130_0, application_id: closure_130_1.id, flow_type: "web" };
+          closure_131_1(closure_131_2[4]).track(closure_131_4.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj7);
           c5 = 0;
+          const obj = closure_131_1(closure_131_2[4]);
         }
         c5 = 0;
         c7 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       }
       c7 = 3;
     } catch (tmp24) {

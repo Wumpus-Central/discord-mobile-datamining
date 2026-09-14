@@ -19,8 +19,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,8 +33,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -58,14 +58,13 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
             if (setting) {
               c5 = 1;
               c6 = 1;
-              let obj1 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
-              return obj1;
+              const obj6 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
+              return obj6;
             }
           } else if (_require instanceof InteractionCallbackErrorDefault) {
             ClientError2 = ClientError.CallbackError;
             reason2 = _require.reason;
-            obj1 = InteractionUtils;
-            const result = obj1.interactionCallbackErrorReason(_require.reason, closure_1);
+            const result = InteractionUtils.interactionCallbackErrorReason(_require.reason, closure_1);
             closure_2 = result;
             if (result == null) {
               closure_2 = closure_131_5;
@@ -100,7 +99,7 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
               closure_131_5 = intl.string(util.t.RvkXdb);
             }
           }
-          const obj2 = { message: closure_131_5, errorType: ClientError2, errorStatus: detailCode, errorCode: reason2 };
+          const obj7 = { message: closure_131_5, errorType: ClientError2, errorStatus: detailCode, errorCode: reason2 };
           c6 = 3;
         }
       } else if (arg0 === 1) {
@@ -108,7 +107,7 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       const reason = closure_131_0.reason;

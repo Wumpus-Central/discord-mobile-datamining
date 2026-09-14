@@ -1,6 +1,6 @@
-// === Module 11043: ChannelRow ===
+// === Module 11044: ChannelRow ===
 
-// Module 11043 (ChannelRow)
+// Module 11044 (ChannelRow)
 import nativeDefault from "native" /* 576 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import DateUtils from "DateUtils" /* 4318 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 4632 */;
 import useChannelName from "useChannelName" /* 4789 */;
 import TextIcon2 from "TextIcon" /* 5161 */;
 import ForumIcon from "ForumIcon" /* 5169 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11044 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11133 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11045 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11134 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -19,16 +19,14 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const ReadStateTypes = fn(4818).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: null, threadName: null };
-obj = { marginHorizontal: nativeDefault.space.PX_4 };
-obj.subLabelSeparator = obj;
-obj.threadName = { flexShrink: 1 };
+let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: { marginHorizontal: nativeDefault.space.PX_4 }, threadName: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
+let obj3 = { marginHorizontal: nativeDefault.space.PX_4 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx");
 
@@ -54,14 +52,13 @@ export default noop.memo(function ChannelRow(channel) {
   const merged = Object.assign(channel, Object.assign({ channel: 0, mode: 0, selected: 0, disabled: 0, onPress: 0, onLongPress: 0, trailing: 0, subLabel: 0, label: 0 }));
   let tmp3 = closure_15();
   closure_7 = tmp3;
-  let obj = channel(onPress[12]);
   let items = [label];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
+  const stateFromStores = channel(onPress[12]).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp7 = flag2(onPress[13])(channel);
   closure_9 = tmp7;
-  let obj1 = channel(onPress[12]);
+  let obj = channel(onPress[12]);
   let items1 = [subLabel, closure_9, stateFromStores];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  stateFromStores1 = channel(onPress[12]).useStateFromStores(items1, () => {
     channel = ChannelStore.getChannel(channel.parent_id);
     let channelName = null;
     if (null != channel) {
@@ -70,6 +67,7 @@ export default noop.memo(function ChannelRow(channel) {
     }
     return channelName;
   });
+  let obj2 = channel(onPress[12]);
   const items2 = [closure_7];
   const stateFromStores2 = channel(onPress[12]).useStateFromStores(items2, () => ReadStateStore.lastMessageTimestamp(channel.id, ReadStateTypes.CHANNEL));
   const items3 = [channel, onPress];
@@ -132,20 +130,20 @@ export default noop.memo(function ChannelRow(channel) {
       } else {
         TextIcon = TextIcon2.TextIcon;
       }
-      let obj = { style: closure_7.subLabel, children: null };
-      obj = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
-      const items = [closure_2_12(TextIcon, obj), , ];
-      obj = { style: closure_7.threadName, variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, ellipsizeMode: "tail", children: stateFromStores1 };
-      items[1] = closure_2_12(Text_Text.Text, obj);
+      const obj = { style: closure_7.subLabel, children: null };
+      const obj2 = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
+      const items = [closure_2_12(TextIcon, obj2), , ];
+      const obj3 = { style: closure_7.threadName, variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, ellipsizeMode: "tail", children: stateFromStores1 };
+      items[1] = closure_2_12(Text_Text.Text, obj3);
       let tmp5Result = null;
       if (null != stateFromStores2) {
-        const obj1 = { children: null };
-        const obj2 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
-        const items1 = [closure_2_12(Text_Text.Text, obj2), ];
-        const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4228(tmp14)) };
-        items1[1] = closure_2_12(Text_Text.Text, obj3);
-        obj1.children = items1;
-        tmp5Result = closure_2_14(map1, obj1);
+        const obj4 = { children: null };
+        const obj5 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
+        const items1 = [closure_2_12(Text_Text.Text, obj5), ];
+        const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4228(tmp14)) };
+        items1[1] = closure_2_12(Text_Text.Text, obj6);
+        obj4.children = items1;
+        tmp5Result = closure_2_14(map1, obj4);
       }
       items[2] = tmp5Result;
       obj.children = items;
@@ -163,27 +161,27 @@ export default noop.memo(function ChannelRow(channel) {
     }
     return tmp;
   }, items8);
-  obj = {};
+  let obj5 = {};
   let obj3 = channel(onPress[12]);
   const merged1 = Object.assign(merged);
-  obj.disabled = flag2;
-  obj.icon = memo;
-  obj.onPress = callback;
-  obj.onLongPress = callback1;
-  obj.label = closure_12(channel(onPress[18]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo1 });
-  obj.subLabel = memo2;
+  obj5.disabled = flag2;
+  obj5.icon = memo;
+  obj5.onPress = callback;
+  obj5.onLongPress = callback1;
+  obj5.label = closure_12(channel(onPress[18]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: memo1 });
+  obj5.subLabel = memo2;
   if (NONE === stateFromStores1.TOGGLE) {
-    obj = {};
-    const merged2 = Object.assign(obj);
-    obj.height = "100%";
-    obj.checked = flag;
-    let tmp17Result = closure_12(tmp4(tmp5[21]).TableCheckboxRow, obj);
+    let obj6 = {};
+    const merged2 = Object.assign(obj5);
+    obj6.height = "100%";
+    obj6.checked = flag;
+    let tmp17Result = closure_12(tmp4(tmp5[21]).TableCheckboxRow, obj6);
   } else {
-    obj1 = {};
-    const merged3 = Object.assign(obj);
-    obj1.height = "100%";
-    obj1.trailing = memo3;
-    tmp17Result = closure_12(tmp4(tmp5[22]).TableRow, obj1);
+    let obj7 = {};
+    const merged3 = Object.assign(obj5);
+    obj7.height = "100%";
+    obj7.trailing = memo3;
+    tmp17Result = closure_12(tmp4(tmp5[22]).TableRow, obj7);
   }
   return tmp17Result;
 });

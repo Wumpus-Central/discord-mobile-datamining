@@ -1,6 +1,6 @@
-// === Module 15162: BountiesBannerBackground ===
+// === Module 15163: BountiesBannerBackground ===
 
-// Module 15162 (BountiesBannerBackground)
+// Module 15163 (BountiesBannerBackground)
 import initialize from "initialize" /* 504 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import common_Video from "common/Video" /* 8425 */;
@@ -20,10 +20,9 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesBannerB
 export default noop.memo(function BountiesBannerBackground(arg0) {
   ({ children, style, uri } = arg0);
   const items = [AccessibilityStore];
-  let obj = { style, children: null };
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { source: { uri }, style: React3.absoluteFillObject, resizeMode: "cover", muted: true, disableFocus: true, paused: stateFromStores, importantForAccessibility: "no-hide-descendants" };
-  const items1 = [timestampProducer(common_Video.VideoComponent, obj), timestampProducer(LinearGradientDefault, { colors, locations, style: React3.absoluteFillObject }), children];
-  obj.children = items1;
-  return React5(React4, obj);
+  const obj2 = { style, children: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const items1 = [timestampProducer(common_Video.VideoComponent, { source: { uri }, style: React3.absoluteFillObject, resizeMode: "cover", muted: true, disableFocus: true, paused: stateFromStores, importantForAccessibility: "no-hide-descendants" }), timestampProducer(LinearGradientDefault, { colors, locations, style: React3.absoluteFillObject }), children];
+  obj2.children = items1;
+  return React5(React4, obj2);
 });

@@ -1,10 +1,9 @@
-// === Module 16329: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16331: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16329 (FavoritesGuildCoachmarkMenuItem)
+// Module 16331 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
 import LayerScope from "LayerScope" /* 7259 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10368 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
@@ -31,7 +30,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 2V1H9v1H3v5H1v5h12V7h2V2Z", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z", onButtonPress: "#fff" };
     const intl = util.intl;
     const tmp4 = _modDef3236;
     if (stateFromStores) {
@@ -63,14 +62,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
 export default function FavoritesGuildCoachmarkMenuItem(arg0) {
-  let obj = FavoritesDismissibleContent;
   let tmp3 = null;
   if (obj.useShouldRenderFavoritesMenuItemPopover()) {
-    obj = { zIndex: 1, children: null };
-    obj = {};
+    const obj2 = { zIndex: 1, children: null };
+    const obj3 = {};
     const merged = Object.assign(arg0);
-    obj.children = <FavoritesGuildCoachmarkMenuItemContent />;
-    tmp3 = jsx(LayerScope.LayerScope, {});
+    obj2.children = <FavoritesGuildCoachmarkMenuItemContent />;
+    tmp3 = jsx(LayerScope.LayerScope, { zIndex: 1, children: null });
   }
   return tmp3;
 };

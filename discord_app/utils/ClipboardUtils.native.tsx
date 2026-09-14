@@ -12,8 +12,8 @@ let closure_3 = async function _copy(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,25 +26,24 @@ let closure_3 = async function _copy(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj1 = _modDef7293;
-          obj1.setString(closure_0);
+          _modDef7293.setString(closure_0);
           if (dependencyMap != null) {
             dependencyMap();
           }
           c3 = 1;
           c2 = 1;
-          obj1 = { value: Promise.resolve(), done: false };
-          return obj1;
+          const obj5 = { value: Promise.resolve(), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c2 = 3;

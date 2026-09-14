@@ -3,6 +3,8 @@
 // Module 7349 (VibegrationsGuildExperiment)
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function isVibegrationsGuildEnabled(guildId) {
   guildId = guildId.guildId;
@@ -14,10 +16,10 @@ function isVibegrationsGuildEnabled(guildId) {
   return enabled;
 }
 function hasVibegrationsGuild(arg0, location) {
-  let obj = arg0[Symbol.iterator]();
+  const obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
-    obj = { guildId: tmp.id, location };
-    if (isVibegrationsGuildEnabled(obj)) {
+    let obj2 = { guildId: tmp.id, location };
+    if (isVibegrationsGuildEnabled(obj2)) {
       obj.return();
       let flag = true;
       return true;
@@ -26,9 +28,8 @@ function hasVibegrationsGuild(arg0, location) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
-fn(1433);
-const ApexExperiment = { name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
-let closure_4 = ApexExperiment.createApexExperiment(ApexExperiment);
+const ApexExperiment = fn(1433);
+let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
 

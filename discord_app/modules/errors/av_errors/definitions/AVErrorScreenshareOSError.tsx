@@ -1,10 +1,10 @@
-// === Module 17960: AVErrorScreenshareOSError ===
+// === Module 17961: AVErrorScreenshareOSError ===
 
-// Module 17960 (AVErrorScreenshareOSError)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 17961 (AVErrorScreenshareOSError)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import AVError from "AVError" /* 9239 */;
-import AVErrorContext from "AVErrorContext" /* 17949 */;
+import AVErrorContext from "AVErrorContext" /* 17950 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = BigInt(-3821);
@@ -22,8 +22,8 @@ export const AVErrorScreenshareOSErrorDefinition = {
           let combined = "" + str + " - your Mac may be low on disk space";
         }
         obj.errorMessage = combined;
-        const tmpResult = StreamKeyUtils;
-        const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(errorCode)));
+        const tmpResult = AVErrorContext;
+        const merged = Object.assign(tmpResult.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(errorCode)));
         return obj;
       }
       combined = str.toString();

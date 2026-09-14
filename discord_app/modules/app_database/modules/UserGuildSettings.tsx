@@ -65,17 +65,16 @@ prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpd
   }
 };
 prototype["write"] = function write(arg0, version, database) {
-  let obj = DatabaseDaosDefault;
-  const result = obj.userGuildSettingsTransaction(database);
+  const result = DatabaseDaosDefault.userGuildSettingsTransaction(database);
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    obj = {};
+    let obj2 = {};
     let merged = Object.assign(React4(nextResult.guild_id));
     let merged1 = Object.assign(nextResult);
-    obj.channel_overrides = React3(nextResult.channel_overrides);
+    obj2.channel_overrides = React3(nextResult.channel_overrides);
     let str = nextResult.guild_id;
-    let tmp9 = obj;
+    let tmp9 = obj2;
     if (str == null) {
       str = "dm-sentinel";
     }
@@ -83,12 +82,12 @@ prototype["write"] = function write(arg0, version, database) {
     continue;
   }
   const result1 = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
-  obj = { id: "user_guild_settings_version", version };
-  result1.put(obj);
+  result1.put({ id: "user_guild_settings_version", version });
+  const obj3 = { id: "user_guild_settings_version", version };
 };
-let size = Object.create(UserGuildSettings.prototype);
-let closure_129_0 = size;
-size.actions = {
+let obj2 = Object.create(UserGuildSettings.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
   CONNECTION_OPEN(arg0, arg1) {
     return obj.handleConnectionOpen(arg0, arg1);
   },
@@ -96,7 +95,7 @@ size.actions = {
     return obj.handleUserGuildSettingsUpdate(arg0, arg1);
   }
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/UserGuildSettings.tsx");
 
-export default size;
+export default obj2;

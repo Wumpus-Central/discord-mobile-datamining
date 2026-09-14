@@ -2,16 +2,18 @@
 
 // Module 5211 (NitroFileUploadExperiments)
 import PremiumConstants from "PremiumConstants" /* 1373 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);
 const NitroFileUploadRollout = "NitroFileUploadRollout";
+let ApexExperiment = ApexExperiment_mod;
 let obj = { name: "2026-09-nitro-file-upload-rollout", kind: "user", defaultConfig: { enabled: false }, variations: null };
-obj = { 1: null };
-obj[1] = { enabled: true };
-obj.variations = obj;
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
 let closure_3 = ApexExperiment.createApexExperiment(obj);
+let ApexExperiment = ApexExperiment_mod;
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-09-non-nitro-file-upload-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/premium/experiments/NitroFileUploadExperiments.tsx");
 
@@ -20,8 +22,7 @@ export const getNitroFileUploadLimitBytes = function getNitroFileUploadLimitByte
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = { location: obj.location };
-  let _location = obj.location;
+  let _location = { location: obj.location }.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }

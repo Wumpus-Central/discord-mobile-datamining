@@ -15,7 +15,8 @@ export default function useBottomSheetKeyboardHandling(onFocus) {
   const items = [bottomSheetInternal, onBlur, onFocus];
   return noop.useMemo(() => {
     if (null == bottomSheetInternal) {
-      let obj = { onFocus, onBlur };
+      const obj2 = { onFocus, onBlur };
+      let obj = obj2;
     } else {
       obj = {
         onFocus(arg0) {

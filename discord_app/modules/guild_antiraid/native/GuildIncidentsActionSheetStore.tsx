@@ -1,10 +1,12 @@
-// === Module 11960: GuildIncidentsActionSheetStore ===
+// === Module 11961: GuildIncidentsActionSheetStore ===
 
-// Module 11960 (GuildIncidentsActionSheetStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+// Module 11961 (GuildIncidentsActionSheetStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8120 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const DEFAULT_LOCKDOWN_DURATION = GuildAntiRaidConstants.DEFAULT_LOCKDOWN_DURATION;
 const useGuildIncidentsActionSheetStore = module_560.create(() => ({ time: DEFAULT_LOCKDOWN_DURATION, pauseInvites: true, pauseDms: true, hasTimeChanges: false }));

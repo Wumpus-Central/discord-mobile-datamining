@@ -2,19 +2,19 @@
 
 // Module 9946 (FormHeader)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5605 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { fieldHeader: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { fieldHeader: null };
+const obj3 = {};
 let merged = Object.assign(TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }));
-createStyles.paddingBottom = 8;
-createStyles.fieldHeader = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+obj3.paddingBottom = 8;
+obj2.fieldHeader = obj3;
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormHeader.tsx");
 

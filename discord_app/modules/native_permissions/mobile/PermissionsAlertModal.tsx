@@ -13,17 +13,17 @@ const result = size.fileFinishedImporting("modules/native_permissions/mobile/Per
 
 export default function PermissionsAlertModal(arg0) {
   ({ title, body, onConfirm } = arg0);
-  let obj = { title, content: body, actions: null };
-  obj = { children: null };
-  obj = { onPress: onConfirm, text: null };
+  const obj = { title, content: body, actions: null };
+  const obj2 = { children: null };
+  const obj3 = { onPress: onConfirm, text: null };
   const intl = util.intl;
-  obj.text = intl.string(util.t.jVcuVY);
-  const items = [React2(AlertModal.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj3.text = intl.string(util.t.jVcuVY);
+  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  const obj4 = { variant: "secondary", text: null };
   const intl2 = util.intl;
-  obj1.text = intl2.string(util.t.cpT0Cq);
-  items[1] = React2(AlertModal.AlertActionButton, obj1, "close");
-  obj.children = items;
-  obj.actions = React3(AlertModal.AlertActions, obj);
+  obj4.text = intl2.string(util.t.cpT0Cq);
+  items[1] = React2(AlertModal.AlertActionButton, obj4, "close");
+  obj2.children = items;
+  obj.actions = React3(AlertModal.AlertActions, obj2);
   return React2(AlertModal.AlertModal, obj);
 };

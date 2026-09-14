@@ -1,6 +1,6 @@
-// === Module 12141: MessageAttachmentUtils ===
+// === Module 12142: MessageAttachmentUtils ===
 
-// Module 12141 (MessageAttachmentUtils)
+// Module 12142 (MessageAttachmentUtils)
 import util from "util" /* 1114 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 7399 */;
@@ -17,25 +17,24 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
   } else {
     const type = media.type;
     if (ForumPostMediaUtils.ForumPostMediaTypes.EMBED === type) {
-      let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media };
-      let tmp = obj;
+      const obj2 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media };
+      let tmp = obj2;
     } else if (ForumPostMediaUtils.ForumPostMediaTypes.ATTACHMENT === type) {
-      obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media };
+      const obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media };
       tmp = obj;
     } else {
       tmp = null;
       if (ForumPostMediaUtils.ForumPostMediaTypes.COMPONENT === type) {
-        obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: media.srcUnfurledMediaItem };
-        tmp = obj;
+        const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: media.srcUnfurledMediaItem };
+        tmp = obj3;
       }
     }
     if (null == tmp) {
       const items1 = [false, undefined];
       return items1;
     } else {
-      let tmp4Result = ObscuredMediaUtils;
-      const mediaObscuredReasonFromBitmask = tmp4Result.getMediaObscuredReasonFromBitmask(tmp, enabledHarmTypesBitmaskForChannelType);
-      tmp4Result = ObscuredMediaUtils;
+      const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(tmp, enabledHarmTypesBitmaskForChannelType);
+      ObscuredMediaUtils;
       if (mediaObscuredReasonFromBitmask.length > 0) {
         const items2 = [true, mediaObscuredReasonFromBitmask[0]];
         let tmp2 = items2;
@@ -68,10 +67,10 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
   if (c2 === undefined) {
     flag = false;
   }
-  let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: attachment };
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledHarmTypesBitmaskForChannelAndAuthorId);
+  const obj = ObscuredMediaUtils;
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: attachment }, enabledHarmTypesBitmaskForChannelAndAuthorId);
   ObscuredMediaUtils;
-  obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: attachment };
+  { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: attachment };
   if (mediaObscuredReasonFromBitmask.length > 0) {
     let first = mediaObscuredReasonFromBitmask[0];
   } else if (tmp4) {
@@ -85,13 +84,13 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
   return first;
 };
 export const getObscureReasonForEmbed = function getObscureReasonForEmbed(embed, message, flag2, enabledContentHarmTypeFlags) {
-  let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed };
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
+  const obj = ObscuredMediaUtils;
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed }, enabledContentHarmTypeFlags);
   const bot = message.author.bot;
   let isMediaScanPendingResult = !bot;
   if (!bot) {
-    obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed };
-    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj, enabledContentHarmTypeFlags);
+    const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed };
+    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj3, enabledContentHarmTypeFlags);
     const tmpResult = ObscuredMediaUtils;
   }
   if (mediaObscuredReasonFromBitmask.length > 0) {
@@ -115,12 +114,12 @@ export const getObscureReasonForUnfurledMediaItem = function getObscureReasonFor
   if (isBot === undefined) {
     flag2 = false;
   }
-  let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem };
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledHarmTypesBitmaskForChannelAndAuthorId);
+  const obj = ObscuredMediaUtils;
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem }, enabledHarmTypesBitmaskForChannelAndAuthorId);
   let isMediaScanPendingResult = !flag2;
   if (!flag2) {
-    obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem };
-    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj, enabledHarmTypesBitmaskForChannelAndAuthorId);
+    const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem };
+    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj3, enabledHarmTypesBitmaskForChannelAndAuthorId);
     const tmpResult = ObscuredMediaUtils;
   }
   if (mediaObscuredReasonFromBitmask.includes(ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT)) {

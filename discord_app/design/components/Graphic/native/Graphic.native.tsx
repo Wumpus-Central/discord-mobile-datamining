@@ -1,7 +1,6 @@
-// === Module 10360: Graphic ===
+// === Module 10361: Graphic ===
 
-// Module 10360 (Graphic)
-import native from "native" /* 4347 */;
+// Module 10361 (Graphic)
 import GraphicTypes from "GraphicTypes" /* 4454 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +16,12 @@ function RiveGraphic(riveProps) {
     riveProps = {};
   }
   const tmp = closure_7();
-  let obj = { style: tmp.image, children: null };
-  obj = {};
+  const obj = { style: tmp.image, children: null };
+  const obj2 = {};
   const merged = Object.assign(riveProps);
-  obj.style = tmp.image;
+  obj2.style = tmp.image;
   obj.children = <riveProps.rive />;
-  return <View />;
+  return <View style={tmp.image}>{null}</View>;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -39,18 +38,17 @@ export const Graphic = function Graphic(aspectRatio) {
   }
   let merged = Object.assign(aspectRatio, Object.assign({ aspectRatio: 0, style: 0 }));
   const items = [merged];
-  let obj = {
+  const obj = {
     style: null,
     children: noop.useMemo(() => {
-      let obj = native;
       if (obj.isImage(merged)) {
-        obj = {};
+        const obj2 = {};
         merged = Object.assign(tmp3);
         let tmp4 = <ImageGraphic />;
       } else {
         tmp4 = null;
         if (tmpResult.isRive(tmp3)) {
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(tmp3);
           tmp4 = <RiveGraphic />;
         }
@@ -59,10 +57,22 @@ export const Graphic = function Graphic(aspectRatio) {
       return tmp4;
     }, items)
   };
-  const items1 = [closure_7().container, , ];
-  obj = { aspectRatio: closure_6[str] };
-  items1[1] = obj;
-  items1[2] = aspectRatio.style;
+  const items1 = [closure_7().container, { aspectRatio: closure_6[str] }, aspectRatio.style];
   obj.style = items1;
-  return <View aspectRatio={closure_6[str]} />;
+  return <View style={null}>{noop.useMemo(() => {
+    if (obj.isImage(merged)) {
+      const obj2 = {};
+      merged = Object.assign(tmp3);
+      let tmp4 = <ImageGraphic />;
+    } else {
+      tmp4 = null;
+      if (tmpResult.isRive(tmp3)) {
+        const obj3 = {};
+        const merged1 = Object.assign(tmp3);
+        tmp4 = <RiveGraphic />;
+      }
+      tmpResult = GraphicTypes;
+    }
+    return tmp4;
+  }, items)}</View>;
 };

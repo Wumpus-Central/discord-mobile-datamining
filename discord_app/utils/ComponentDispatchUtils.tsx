@@ -25,8 +25,7 @@ const componentDispatcher = new utils_ComponentDispatchUtils.ComponentDispatcher
     if (found == null) {
       found = fullActionName;
     }
-    const obj = { type: "ComponentDispatch", description: found, data: { actionData, fullActionName }, durationMs };
-    obj.reportEvent(obj);
+    DevtoolsExtensionAll.reportEvent({ type: "ComponentDispatch", description: found, data: { actionData, fullActionName }, durationMs });
   }
 });
 const result = size.fileFinishedImporting("utils/ComponentDispatchUtils.tsx");

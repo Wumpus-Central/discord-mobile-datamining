@@ -2,7 +2,7 @@
 
 // Module 9238 (StreamQualityUtils)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4772 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
@@ -10,6 +10,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -113,15 +115,15 @@ export const useMaxQuality = function useMaxQuality(participant) {
   let obj = require("initialize");
   const items1 = [AuthenticationStore];
   stateFromStores = require("initialize").useStateFromStores(items1, () => id.getId());
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const items2 = [RTCConnectionStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => guildId.getGuildId());
   const items3 = [stateFromStores, stateFromStores1, participant, stateFromStoresObject];
   return stateFromStores1.useMemo(() => {
     if (stateFromStores === participant.user.id) {
-      let obj = { maxFrameRate: null, maxResolution: null };
+      const obj2 = { maxFrameRate: null, maxResolution: null };
       let tmp7Result = stateFromStoresObject;
-      obj.maxFrameRate = stateFromStoresObject.fps;
+      obj2.maxFrameRate = stateFromStoresObject.fps;
       const size = { height: stateFromStoresObject.resolution, width: 0, type: null };
       if (0 === stateFromStoresObject.resolution) {
         let FIXED = ResolutionTypes.SOURCE;
@@ -130,13 +132,13 @@ export const useMaxQuality = function useMaxQuality(participant) {
       }
       size.type = FIXED;
       tmp7Result = getReportedStreamResolutionDefault("useMaxQuality", stateFromStores1, size, tmp7Result.fps);
-      obj.maxResolution = tmp7Result;
+      obj2.maxResolution = tmp7Result;
     } else {
       let tmp3 = null;
       if (null != participant.maxResolution) {
         tmp3 = null;
         if (null != participant.maxFrameRate) {
-          obj = { maxFrameRate: null, maxResolution: null };
+          const obj = { maxFrameRate: null, maxResolution: null };
           ({ maxFrameRate: obj.maxFrameRate, maxResolution: obj.maxResolution } = participant);
           tmp3 = obj;
         }
@@ -168,17 +170,16 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
-  let obj = AnalyticsUtilsDefault;
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
-  obj = { user_premium_tier: premiumType, guild_premium_tier: null, stream_quality_user_premium_tier: null, stream_quality_guild_premium_tier: null, stream_quality_preset: null, stream_quality_resolution: null, stream_quality_frame_rate: null, soundshare_enabled: null };
+  const obj2 = { user_premium_tier: premiumType, guild_premium_tier: null, stream_quality_user_premium_tier: null, stream_quality_guild_premium_tier: null, stream_quality_preset: null, stream_quality_resolution: null, stream_quality_frame_rate: null, soundshare_enabled: null };
   let premiumTier;
   if (guild != null) {
     premiumTier = guild.premiumTier;
   }
-  obj.guild_premium_tier = premiumTier;
+  obj2.guild_premium_tier = premiumTier;
   let quality;
   if (found != null) {
     quality = found.quality;
@@ -187,15 +188,15 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (null != quality) {
     tmp9 = closure_15[found.quality];
   }
-  obj.stream_quality_user_premium_tier = tmp9;
+  obj2.stream_quality_user_premium_tier = tmp9;
   let guildPremiumTier;
   if (found != null) {
     guildPremiumTier = found.guildPremiumTier;
   }
-  obj.stream_quality_guild_premium_tier = guildPremiumTier;
-  obj.stream_quality_preset = preset;
-  obj.stream_quality_resolution = resolution;
-  obj.stream_quality_frame_rate = frameRate;
-  obj.soundshare_enabled = sound;
-  obj.track(AnalyticEvents.STREAM_SETTINGS_UPDATE, obj);
+  obj2.stream_quality_guild_premium_tier = guildPremiumTier;
+  obj2.stream_quality_preset = preset;
+  obj2.stream_quality_resolution = resolution;
+  obj2.stream_quality_frame_rate = frameRate;
+  obj2.soundshare_enabled = sound;
+  AnalyticsUtilsDefault.track(AnalyticEvents.STREAM_SETTINGS_UPDATE, obj2);
 };

@@ -1,15 +1,16 @@
 // === Module 9003: ? ===
 
 // Module 9003
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import _mod6953 from "module_6953" /* 6953 */;
-import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import noop_mod from "module_19" /* 19 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
 
 require = fn;
+let noop = noop_mod;
 const RefreshControl = fn(17).RefreshControl;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let defaultMVCPConfig;
 if (PlatformUtils.isAndroid()) {
   defaultMVCPConfig = { disabled: true };
@@ -17,6 +18,7 @@ if (PlatformUtils.isAndroid()) {
 noop = function noop() {
 
 };
+let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6953).FlashList);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
@@ -28,6 +30,7 @@ const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 });
+let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6953).FlashList);
 const forwardRefResult2 = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
@@ -44,12 +47,12 @@ const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
     if (null == refreshControl) {
       tmp2 = refreshControl;
       if (true === preventNativeModalDismiss) {
-        obj = PlatformUtils2;
         tmp2 = refreshControl;
         if (obj.isIOS()) {
-          obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
+          const obj2 = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
         }
+        obj = PlatformUtils2;
       }
     }
     return tmp2;
@@ -75,12 +78,12 @@ const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
     if (null == refreshControl) {
       tmp2 = refreshControl;
       if (true === preventNativeModalDismiss) {
-        obj = PlatformUtils2;
         tmp2 = refreshControl;
         if (obj.isIOS()) {
-          obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
+          const obj2 = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
         }
+        obj = PlatformUtils2;
       }
     }
     return tmp2;
@@ -106,12 +109,12 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
     if (null == refreshControl) {
       tmp2 = refreshControl;
       if (true === preventNativeModalDismiss) {
-        obj = PlatformUtils2;
         tmp2 = refreshControl;
         if (obj.isIOS()) {
-          obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
+          const obj2 = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
         }
+        obj = PlatformUtils2;
       }
     }
     return tmp2;

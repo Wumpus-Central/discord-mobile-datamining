@@ -1,26 +1,25 @@
-// === Module 17617: VoiceChannelSettingsManager ===
+// === Module 17618: VoiceChannelSettingsManager ===
 
-// Module 17617 (VoiceChannelSettingsManager)
+// Module 17618 (VoiceChannelSettingsManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import BitRateStore from "BitRateStore" /* 14082 */;
+import BitRateStore from "BitRateStore" /* 14083 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import VideoQualityModeStore from "VideoQualityModeStore" /* 14083 */;
+import VideoQualityModeStore from "VideoQualityModeStore" /* 14084 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 function updateVoiceSettings() {
-  let obj = SelectedChannelStore;
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (null != voiceChannelId) {
     const channel = ChannelStore.getChannel(voiceChannelId);
     if (tmp5) {
-      obj = { type: "SET_CHANNEL_BITRATE", bitrate: channel.bitrate };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "SET_CHANNEL_BITRATE", bitrate: channel.bitrate };
+      DispatcherDefault.dispatch(obj3);
     }
     tmp5 = null != channel && tmp2 !== channel.bitrate;
   }
-  const voiceChannelId1 = obj.getVoiceChannelId();
+  const voiceChannelId1 = SelectedChannelStore.getVoiceChannelId();
   if (null != voiceChannelId1) {
     const channel1 = ChannelStore.getChannel(voiceChannelId1);
     if (null != channel1) {
@@ -29,8 +28,8 @@ function updateVoiceSettings() {
         AUTO = VideoQualityMode.AUTO;
       }
       if (tmp10 !== AUTO) {
-        obj = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: AUTO };
-        DispatcherDefault.dispatch(obj);
+        const obj5 = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: AUTO };
+        DispatcherDefault.dispatch(obj5);
       }
     }
   }
@@ -53,15 +52,15 @@ function handleVoiceStateUpdates(voiceStates) {
   });
 }
 const VideoQualityMode = fn(1074).VideoQualityMode;
-let prototype = function VoiceChannelSettingsManager() {
+const prototype = function VoiceChannelSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_UPDATES: handleChannelUpdates, VOICE_STATE_UPDATES: handleVoiceStateUpdates };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -19,9 +19,9 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-function resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds) {
-  let obj = forceIncludeExternalGuilds;
-  if (forceIncludeExternalGuilds == null) {
+function resolvePlaintextInlineVoid(text, id, id2, arg3) {
+  let obj = arg3;
+  if (arg3 == null) {
     obj = {};
   }
   const allowUsers = obj.allowUsers;
@@ -115,29 +115,29 @@ function resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds) {
     if (null != match) {
       const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(id);
       const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
-      let obj1 = customEmoji.get(match[1]);
+      let obj4 = customEmoji.get(match[1]);
       let channel = null;
       if (null != id2) {
         channel = ChannelStore.getChannel(id2);
       }
       tmp7 = null;
-      if (null != obj1) {
-        obj = { emoji: obj1, channel, intention: EmojiIntention.CHAT };
+      if (null != obj4) {
+        let obj2 = { emoji: obj4, channel, intention: EmojiIntention.CHAT };
         tmp7 = null;
-        if (!tmp4Result.isEmojiFiltered(obj)) {
-          obj = { emojiId: obj1.id, name: null, animated: null, jumboable: false };
-          if (!("require_colons" in obj1)) {
+        if (!tmp4Result.isEmojiFiltered(obj2)) {
+          let obj3 = { emojiId: obj4.id, name: null, animated: null, jumboable: false };
+          if (!("require_colons" in obj4)) {
             let element = { type: "customEmoji", emoji: null, children: null };
-            obj.name = obj1.name;
-            obj.animated = true === obj1.animated;
-            element.emoji = obj;
-            obj = [];
-            obj1 = { text: "" };
-            obj[0] = obj1;
-            element.children = obj;
+            obj3.name = obj4.name;
+            obj3.animated = true === obj4.animated;
+            element.emoji = obj3;
+            obj3 = [];
+            obj4 = { text: "" };
+            obj3[0] = obj4;
+            element.children = obj3;
           }
           const _HermesInternal = HermesInternal;
-          const combined = ":" + obj1.name + ":";
+          const combined = ":" + obj4.name + ":";
         }
         tmp4Result = EmojiUtilsDefault;
       }
@@ -194,8 +194,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, id, id2, forceIncludeExternalGuilds) {
-  const tmp = resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds);
+export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, id, id2, arg3) {
+  const tmp = resolvePlaintextInlineVoid(text, id, id2, arg3);
   let voidToOptionValueResult = null;
   if (null != tmp) {
     voidToOptionValueResult = SlateUtils.voidToOptionValue(tmp);

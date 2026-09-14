@@ -1,6 +1,6 @@
-// === Module 11258: DoubleTapEmojiUpdatedToast ===
+// === Module 11259: DoubleTapEmojiUpdatedToast ===
 
-// Module 11258 (DoubleTapEmojiUpdatedToast)
+// Module 11259 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -25,75 +25,71 @@ class ToastEmoji {
     items1[1] = stateFromStores;
     memo = closure_3.useMemo(() => {
       if (null != emoji.id) {
-        const obj = { id: emoji.id, animated: null, size: null };
+        const obj2 = { id: emoji.id, animated: null, size: null };
         let animated = !stateFromStores;
         if (!stateFromStores) {
           animated = emoji.animated;
         }
-        obj.animated = animated;
-        obj.size = EMOJI_URL_BASE_SIZE;
-        let url = obj.getEmojiURL(obj);
+        obj2.animated = animated;
+        obj2.size = EMOJI_URL_BASE_SIZE;
+        let url = AvatarUtilsDefault.getEmojiURL(obj2);
       } else {
         url = emoji.url;
       }
       return url;
     }, items1);
     tmp4 = jsx;
-    obj = { style: tmp2.toastEmoji, fastImageStyle: tmp2.toastEmojiCustom, textEmojiStyle: tmp2.toastEmojiText, name: null, src: null };
+    obj1 = { style: tmp2.toastEmoji, fastImageStyle: tmp2.toastEmojiCustom, textEmojiStyle: tmp2.toastEmojiText, name: null, src: null };
     str = "";
     tmp5 = closure_1(closure_2[9]);
     if (null == emoji.id) {
       str = emoji.surrogates;
     }
-    obj.name = str;
-    obj.src = memo;
-    return tmp4(tmp5, obj);
+    obj1.name = str;
+    obj1.src = memo;
+    return tmp4(tmp5, obj1);
   }
 }
 function ToastText(emoji) {
-  let obj = { variant: "text-sm/normal", style: closure_7().toastText, children: null };
+  const obj = { variant: "text-sm/normal", style: closure_7().toastText, children: null };
   const intl = util.intl;
-  obj = { emojiName: emoji.emoji.name };
-  obj.children = intl.format(util.t.nKY0Fl, obj);
-  return jsx(Text_Text.Text, { emojiName: emoji.emoji.name });
+  obj.children = intl.format(util.t.nKY0Fl, { emojiName: emoji.emoji.name });
+  return jsx(Text_Text.Text, { variant: "text-sm/normal", style: closure_7().toastText, children: null });
 }
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
-createStyles = { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 };
-createStyles.toastEmoji = createStyles;
-createStyles.toastEmojiCustom = { width: 24, height: 24 };
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = { toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 }, toastEmojiCustom: { width: 24, height: 24 }, toastEmojiText: null, toastText: null };
+let PlatformUtils = fn(1363);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
-const obj1 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1150);
+const obj5 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
 }
-obj1.lineHeight = num2;
-obj1.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
-createStyles.toastEmojiText = obj1;
-createStyles.toastText = { marginRight: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_8 };
-const React5 = createStyles.createStyles(createStyles);
+obj5.lineHeight = num2;
+obj5.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
+obj2.toastEmojiText = obj5;
+let obj3 = { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 };
+obj2.toastText = { marginRight: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_8 };
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(5043);
   if (obj.getIsScreenReaderEnabled()) {
     const AccessibilityAnnouncer = tmp(4348).AccessibilityAnnouncer;
     const intl = tmp(1114).intl;
-    obj = { emojiName: emoji.name };
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1114).t.nKY0Fl, obj));
+    const obj3 = { emojiName: emoji.name };
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1114).t.nKY0Fl, obj3));
   } else {
-    obj = {
+    const obj4 = {
       key: "DEFAULT_REACTION_EMOJI_UPDATED",
       icon() {
           return <ToastEmoji emoji={emoji} />;
@@ -103,6 +99,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
         },
       toastDurationMs: 3000
     };
-    ToastActionCreatorsDefault.open(obj);
+    ToastActionCreatorsDefault.open(obj4);
   }
+  obj = emoji(5043);
 };

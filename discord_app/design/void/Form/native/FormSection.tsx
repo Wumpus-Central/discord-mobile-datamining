@@ -2,7 +2,7 @@
 
 // Module 8725 (FormSection)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import RedesignCompat from "RedesignCompat" /* 5767 */;
 import TableRowGroup from "TableRowGroup" /* 5768 */;
 import FormRowDefault from "FormRow" /* 7240 */;
@@ -13,19 +13,12 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
-const TitleStyleType = fn(1182).TitleStyleType;
+const TitleStyleType = fn(1180).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { titledSectionHeader: null, titledSectionNoBorder: null, titledSectionNoBorderOrMargin: null, emptySectionHeader: null, sectionBody: null, sectionBodyIOSBorder: null };
-createStyles = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 };
-createStyles.titledSectionHeader = createStyles;
-createStyles.titledSectionNoBorder = { marginTop: 24 };
-createStyles.titledSectionNoBorderOrMargin = {};
-createStyles.emptySectionHeader = { marginTop: 24 };
-createStyles.sectionBody = {};
-createStyles.sectionBodyIOSBorder = {};
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSection.tsx");
 
@@ -42,9 +35,8 @@ export default function FormSection(arg0) {
   ({ error, hint, hasIcons } = arg0);
   ({ titleViewStyle, titleTextStyle, sectionBodyStyle, wrapperStyle } = arg0);
   const tmp2 = closure_8();
-  let obj = noop;
   if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
-    const Children = obj.Children;
+    const Children = noop.Children;
     const toArrayResult = Children.toArray(children);
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = noop.isValidElement(type);
@@ -53,16 +45,16 @@ export default function FormSection(arg0) {
       }
       return isValidElementResult;
     });
-    obj = { style: { marginBottom: 24 }, children: null };
-    obj = { style: { paddingHorizontal: 12 }, children: null };
-    const obj1 = { title, hasIcons: null, hasTrailingText: null, children: null };
+    const obj2 = { style: { marginBottom: 24 }, children: null };
+    const obj3 = { style: { paddingHorizontal: 12 }, children: null };
+    const obj4 = { title, hasIcons: null, hasTrailingText: null, children: null };
     if (hasIcons == null) {
       hasIcons = tmp17;
     }
-    obj1.hasIcons = hasIcons;
+    obj4.hasIcons = hasIcons;
     const element = found[found.length - 1];
     let flag = false;
-    if (obj.isValidElement(element)) {
+    if (noop.isValidElement(element)) {
       flag = false;
       if (element.type !== FormDividerDefault) {
         flag = false;
@@ -73,18 +65,18 @@ export default function FormSection(arg0) {
         }
       }
     }
-    obj1.hasTrailingText = flag;
-    obj1.children = found;
-    obj.children = timestampProducer(TableRowGroup.TableRowGroup, obj1);
-    const items = [timestampProducer(React4, obj), ];
+    obj4.hasTrailingText = flag;
+    obj4.children = found;
+    obj3.children = timestampProducer(TableRowGroup.TableRowGroup, obj4);
+    const items = [timestampProducer(React4, obj3), ];
     let tmp20Result = null;
     if (null != hint) {
-      const obj2 = { style: { marginTop: 8 }, children: hint };
-      tmp20Result = timestampProducer(React4, obj2);
+      const obj5 = { style: { marginTop: 8 }, children: hint };
+      tmp20Result = timestampProducer(React4, obj5);
     }
     items[1] = tmp20Result;
-    obj.children = items;
-    return React5(React4, obj);
+    obj2.children = items;
+    return React5(React4, obj2);
   } else {
     let tmp6;
     if (null != title) {
@@ -93,15 +85,15 @@ export default function FormSection(arg0) {
         const _HermesInternal = HermesInternal;
         str2 = "(" + error + ")";
       }
-      const obj3 = { textStyle: titleTextStyle, viewStyle: titleViewStyle, title: null, icon: null, error: null, thinTitle: null, uppercaseTitle: null, inset: null };
+      const obj6 = { textStyle: titleTextStyle, viewStyle: titleViewStyle, title: null, icon: null, error: null, thinTitle: null, uppercaseTitle: null, inset: null };
       const _HermesInternal2 = HermesInternal;
-      obj3.title = "" + title + " " + str2;
-      obj3.icon = icon;
-      obj3.error = null != error;
-      obj3.thinTitle = thinTitle;
-      obj3.uppercaseTitle = uppercaseTitle;
-      obj3.inset = inset;
-      tmp6 = timestampProducer(FormTitleDefault, obj3);
+      obj6.title = "" + title + " " + str2;
+      obj6.icon = icon;
+      obj6.error = null != error;
+      obj6.thinTitle = thinTitle;
+      obj6.uppercaseTitle = uppercaseTitle;
+      obj6.inset = inset;
+      tmp6 = timestampProducer(FormTitleDefault, obj6);
     }
     const emptySectionHeader = tmp2.emptySectionHeader;
     let titledSectionNoBorderOrMargin = emptySectionHeader;
@@ -118,31 +110,31 @@ export default function FormSection(arg0) {
         }
       }
     }
-    const obj4 = { style: null, accessibilityRole: null, accessibilityLabel: null, children: null };
+    const obj7 = { style: null, accessibilityRole: null, accessibilityLabel: null, children: null };
     const items1 = [titledSectionNoBorderOrMargin, wrapperStyle];
-    obj4.style = items1;
+    obj7.style = items1;
     if (accessibilityRole == null) {
       accessibilityRole = "list";
     }
-    obj4.accessibilityRole = accessibilityRole;
+    obj7.accessibilityRole = accessibilityRole;
     if (accessibilityLabel == null) {
       accessibilityLabel = title;
     }
-    obj4.accessibilityLabel = accessibilityLabel;
+    obj7.accessibilityLabel = accessibilityLabel;
     const items2 = [tmp6, description, , ];
     const items3 = [tmp2.sectionBody, , ];
     let sectionBodyIOSBorder = !inset;
     if (!inset) {
       sectionBodyIOSBorder = tmp2.sectionBodyIOSBorder;
     }
-    const obj5 = { style: null, children: null };
+    const obj8 = { style: null, children: null };
     items3[1] = sectionBodyIOSBorder;
     items3[2] = sectionBodyStyle;
-    obj5.style = items3;
-    obj5.children = children;
-    items2[2] = timestampProducer(React4, obj5);
+    obj8.style = items3;
+    obj8.children = children;
+    items2[2] = timestampProducer(React4, obj8);
     items2[3] = hint;
-    obj4.children = items2;
-    return React5(React4, obj4);
+    obj7.children = items2;
+    return React5(React4, obj7);
   }
 };

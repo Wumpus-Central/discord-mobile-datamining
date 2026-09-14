@@ -1,7 +1,7 @@
-// === Module 11970: GuildDisableCommunicationModal ===
+// === Module 11971: GuildDisableCommunicationModal ===
 
-// Module 11970 (GuildDisableCommunicationModal)
-import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11971 */;
+// Module 11971 (GuildDisableCommunicationModal)
+import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11972 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,14 +14,14 @@ export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   const user = onBeforeGoBack.user;
   let onGoBack;
   onGoBack = user(onGoBack[2])({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;
-  let obj = { screenKey: "disableCommunication", title: null, render: null };
+  const obj = { screenKey: "disableCommunication", title: null, render: null };
   const intl = guildId(onGoBack[4]).intl;
-  obj = { user: null };
+  const obj2 = { user: null };
   const tmp = user(onGoBack[3]);
-  obj.user = user(onGoBack[5]).getName(guildId, null, user);
-  obj.title = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj);
+  obj2.user = user(onGoBack[5]).getName(guildId, null, user);
+  obj.title = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj2);
   obj.render = function render() {
     return jsx(GuildDisableCommunicationDefault, { user, guildId, onClose: onGoBack });
   };
-  return <tmp user={null} />;
+  return <tmp screenKey="disableCommunication" title={null} render={null} />;
 };

@@ -13,15 +13,14 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0) => {
-  let obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
+  const obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: null, paddingTop: null, paddingBottom: null, flex: 1 };
   const space = nativeDefault.space;
   obj.paddingHorizontal = arg0 ? space.PX_24 : space.PX_12;
   obj.paddingTop = nativeDefault.space.PX_16;
   const space2 = nativeDefault.space;
-  obj = { container: obj, searchFieldContainer: null, paddingBottom: arg0 ? space2.PX_24 : space2.PX_16 };
-  obj = { paddingBottom: nativeDefault.space.PX_16 };
-  obj.searchFieldContainer = obj;
-  return obj;
+  const obj2 = { container: obj, searchFieldContainer: { paddingBottom: nativeDefault.space.PX_16 } };
+  obj.paddingBottom = arg0 ? space2.PX_24 : space2.PX_16;
+  return obj2;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/native/CountryCallingCodeSelect.tsx");
@@ -41,9 +40,7 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
     closure_2 = index;
     const translatedName = closure_1_6(alpha2);
     return phoneCountryCodes.map((code) => {
-      let obj = { translatedName, key: "" + closure_2 + "-" + code, country: null };
-      obj = { code, alpha2, name };
-      obj.country = obj;
+      const obj = { translatedName, key: "" + closure_2 + "-" + code, country: { code, alpha2, name } };
       return obj;
     });
   }), []);
@@ -85,28 +82,31 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
   rows = memo1.rows;
   let items1 = [onClose, onCountrySelected, rows];
   let obj = { style: tmp3.container, children: null };
-  obj = { style: tmp3.searchFieldContainer, children: null };
+  const obj2 = { style: tmp3.searchFieldContainer, children: null };
   const callback = rows.useCallback((arg0, arg1) => {
     const country = tmp.country;
-    let obj = { start: 0 === arg1, end: arg1 === rows.length - 1, label: tmp.translatedName, trailing: null, onPress: null };
-    obj = { variant: "text-md/semibold", children: country.code };
-    obj.trailing = closure_1_7(onCountrySelected(first[12]).Text, obj);
-    obj.onPress = function onPress() {
-      onCountrySelected(country);
-      if (onClose != null) {
-        onClose();
+    const obj = {
+      start: 0 === arg1,
+      end: arg1 === rows.length - 1,
+      label: rows[arg1].translatedName,
+      trailing: closure_1_7(onCountrySelected(first[12]).Text, { variant: "text-md/semibold", children: country.code }),
+      onPress() {
+        onCountrySelected(country);
+        if (onClose != null) {
+          onClose();
+        }
       }
     };
     return closure_1_7(onCountrySelected(first[11]).TableRow, obj);
   }, items1);
-  obj.children = closure_7(onCountrySelected(first[13]).SearchField, { size: "md", onChange: tmp4[1] });
-  const items2 = [closure_7(View, obj), ];
+  obj2.children = closure_7(onCountrySelected(first[13]).SearchField, { size: "md", onChange: tmp4[1] });
+  const items2 = [closure_7(View, obj2), ];
   if ("" !== first) {
     if (0 === rows.length) {
-      obj = { source: tmp(tmp2[15]), text: null };
+      const obj3 = { source: tmp(tmp2[15]), text: null };
       const intl = tmp13(tmp2[16]).intl;
-      obj.text = intl.string(tmp13(tmp2[16]).t.wEHnxW);
-      let tmp12Result = closure_7(tmp(tmp2[14]), obj);
+      obj3.text = intl.string(tmp13(tmp2[16]).t.wEHnxW);
+      let tmp12Result = closure_7(tmp(tmp2[14]), obj3);
       const tmpResult = tmp(tmp2[14]);
     }
     items2[1] = tmp12Result;

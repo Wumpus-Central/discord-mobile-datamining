@@ -1,14 +1,14 @@
-// === Module 13832: ActivityTrackingStore ===
+// === Module 13833: ActivityTrackingStore ===
 
-// Module 13832 (ActivityTrackingStore)
+// Module 13833 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4765 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11605 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11606 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
@@ -51,22 +51,22 @@ function updateActivity(applicationId) {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   const sessionId = AuthenticationStore.getSessionId();
   const mediaSessionId = RTCConnectionStore.getMediaSessionId();
-  obj = { applicationId: applicationId.applicationId, distributor: null, shareActivity: null, token: null, duration: null, closed: null, exePath: null, voiceChannelId: null, sessionId: null, mediaSessionId: null };
+  const obj3 = { applicationId: applicationId.applicationId, distributor: null, shareActivity: null, token: null, duration: null, closed: null, exePath: null, voiceChannelId: null, sessionId: null, mediaSessionId: null };
   if (applicationId.isDiscordApplication) {
     let distributor = Distributors.DISCORD;
   } else {
     distributor = applicationId.distributor;
   }
-  obj.distributor = distributor;
-  obj.shareActivity = result;
-  obj.token = applicationId.token;
-  obj.duration = Math.floor(num / 1000);
-  obj.closed = flag;
-  obj.exePath = applicationId.exePath;
-  obj.voiceChannelId = voiceChannelId;
-  obj.sessionId = sessionId;
-  obj.mediaSessionId = mediaSessionId;
-  ActivitiesActionCreatorsDefault.updateActivity(obj);
+  obj3.distributor = distributor;
+  obj3.shareActivity = result;
+  obj3.token = applicationId.token;
+  obj3.duration = Math.floor(num / 1000);
+  obj3.closed = flag;
+  obj3.exePath = applicationId.exePath;
+  obj3.voiceChannelId = voiceChannelId;
+  obj3.sessionId = sessionId;
+  obj3.mediaSessionId = mediaSessionId;
+  ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
     const interval = new tmp3(1952).Interval();
@@ -153,7 +153,7 @@ prototype["getActivities"] = function getActivities() {
   return obj;
 };
 ActivityTrackingStore.displayName = "ActivityTrackingStore";
-obj = {
+const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, {
   RUNNING_GAMES_CHANGE() {
     handleRunningGamesChange();
   },
@@ -197,8 +197,7 @@ obj = {
       const result = Storage.set(ActivityTrackingStore, tmp);
     }
   }
-};
-const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/ActivityTrackingStore.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 13296: useHandleBuyNow ===
+// === Module 13297: useHandleBuyNow ===
 
-// Module 13296 (useHandleBuyNow)
+// Module 13297 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -23,8 +23,8 @@ function useHandleBuyNow(product) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,28 +37,27 @@ function useHandleBuyNow(product) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             v1 = 1;
             dependencyMap = 1;
-            let obj1 = { value: tmp4(7644).fetchCollectiblesPurchases(), done: false };
-            return obj1;
+            const obj6 = { value: tmp4(7644).fetchCollectiblesPurchases(), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_128_5(false);
-          obj = v1(4603);
-          obj.hideAllActionSheets();
-          obj1 = v1(11211);
-          const obj3 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
-          obj1.open(obj3);
+          v1(4603).hideAllActionSheets();
+          const obj = v1(4603);
+          const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
+          v1(11212).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -72,7 +71,7 @@ function useHandleBuyNow(product) {
   const tmp = isBuying(noop.useState(false), 2);
   isBuying = tmp[0];
   noop = tmp[1];
-  let obj = {
+  const tmp3 = onBuy(onBuySettled[5])({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -95,12 +94,11 @@ function useHandleBuyNow(product) {
 
     },
     orderId
-  };
-  const tmp3 = onBuy(onBuySettled[5])(obj);
+  });
   closure_6 = tmp3;
-  obj = { handleBuyNow: null, isBuying };
+  let obj2 = { handleBuyNow: null, isBuying };
   const items = [tmp3, isBuying, onBuy, product.skuId, onBuySettled];
-  obj.handleBuyNow = noop.useCallback(asyncGeneratorStep(async () => {
+  obj2.handleBuyNow = noop.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -108,8 +106,8 @@ function useHandleBuyNow(product) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -122,8 +120,8 @@ function useHandleBuyNow(product) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             product = tmp8;
             if (obj17.isMetaQuest()) {
@@ -132,8 +130,8 @@ function useHandleBuyNow(product) {
               const combined = "" + closure_1_6.COLLECTIBLES_SHOP + "#itemSkuId=" + product.skuId;
               c4 = 3;
               c5 = 1;
-              let obj1 = { value: tmp4(tmp61[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true }), done: false };
-              return obj1;
+              const obj6 = { value: tmp4(tmp61[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true }), done: false };
+              return obj6;
             } else {
               c3 = 2;
               if (first) {
@@ -142,8 +140,8 @@ function useHandleBuyNow(product) {
                 v3(true);
                 c4 = 4;
                 c5 = 1;
-                const obj2 = { value: closure_6(), done: false };
-                return obj2;
+                const obj8 = { value: closure_6(), done: false };
+                return obj8;
               }
             }
             obj17 = product(tmp61[9]);
@@ -155,15 +153,15 @@ function useHandleBuyNow(product) {
             const _JSON2 = JSON;
             const _HermesInternal2 = HermesInternal;
             logger.error("Error performing web handoff: " + JSON.stringify(closure_128_0));
-            let obj6 = product(tmp61[11]);
-            let obj3 = { tags: null };
-            const obj4 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
-            obj3.tags = obj4;
-            const result = obj6.captureBillingException(closure_128_0, obj3);
-            const obj5 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
+            const obj9 = { tags: null };
+            const obj11 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
+            obj9.tags = obj11;
+            const result = product(tmp61[11]).captureBillingException(closure_128_0, obj9);
+            const obj7 = product(tmp61[11]);
+            const obj12 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
             const intl = product(tmp61[13]).intl;
-            obj5.content = intl.string(product(tmp61[13]).t["rTU7/z"]);
-            tmp4(tmp61[12]).open(obj5);
+            obj12.content = intl.string(product(tmp61[13]).t["rTU7/z"]);
+            tmp4(tmp61[12]).open(obj12);
             if (closure_129_2 != null) {
               closure_129_2();
             }
@@ -179,22 +177,22 @@ function useHandleBuyNow(product) {
               const _JSON = JSON;
               const _HermesInternal = HermesInternal;
               logger.error("Error running purchase: " + JSON.stringify(closure_128_1));
-              obj3 = product(tmp61[11]);
-              obj6 = { tags: null };
-              const obj7 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
-              obj6.tags = obj7;
-              const result1 = obj3.captureBillingException(closure_128_1, obj6);
+              const obj14 = { tags: null };
+              const obj15 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
+              obj14.tags = obj15;
+              const result1 = product(tmp61[11]).captureBillingException(closure_128_1, obj14);
+              const obj4 = product(tmp61[11]);
             } else if (3 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 !== 2) {
-                obj1 = tmp4(tmp61[7]);
-                obj1.hideActionSheet();
+                tmp4(tmp61[7]).hideActionSheet();
                 if (closure_129_2 != null) {
                   closure_129_2();
                 }
                 c3 = 0;
+                const obj2 = tmp4(tmp61[7]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -206,14 +204,14 @@ function useHandleBuyNow(product) {
             }
             c3 = 0;
             c5 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj16 = { value, done: true };
+            return obj16;
           }
           c5 = 3;
         }
         c3 = 0;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp61) {
         if (tmp5 === c3) {
@@ -227,7 +225,7 @@ function useHandleBuyNow(product) {
       }
     }
   }), items);
-  return obj;
+  return obj2;
 }
 const Routes = fn(1074).Routes;
 let closure_7 = new LoggerDefault("useHandleBuyNow");

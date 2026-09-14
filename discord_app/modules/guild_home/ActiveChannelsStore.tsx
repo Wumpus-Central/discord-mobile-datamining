@@ -1,6 +1,6 @@
-// === Module 13794: ActiveChannelsStore ===
+// === Module 13795: ActiveChannelsStore ===
 
-// Module 13794 (ActiveChannelsStore)
+// Module 13795 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -132,8 +132,7 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
               if (author != null) {
                 id = author.id;
               }
-              let obj = dependencyMap[guild_id];
-              obj.add(channelId);
+              dependencyMap[guild_id].add(channelId);
               let tmp11 = null == tmp10;
               if (!tmp11) {
                 const _Date = Date;
@@ -146,9 +145,8 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
               if (null == dependencyMap2[channelId]) {
                 dependencyMap2[channelId] = [];
               }
-              let arr = dependencyMap2[channelId];
-              obj = { id: message.id, userId: id };
-              arr = arr.push(obj);
+              const obj2 = { id: message.id, userId: id };
+              dependencyMap2[channelId].push(obj2);
             }
             tmp20 = tmp5;
           }
@@ -189,8 +187,7 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
         if (null == dependencyMap[closure_1_0]) {
           dependencyMap[closure_1_0] = [];
         }
-        let arr = dependencyMap[closure_1_0];
-        arr = arr.push({ id: message_id, userId: user_id });
+        dependencyMap[closure_1_0].push({ id: message_id, userId: user_id });
       });
     });
   },
@@ -226,15 +223,15 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
         num = 0;
       }
       if (timestamp - num < c5) {
-        let obj = {};
+        const obj = {};
         obj[guildId] = tmp3;
         dependencyMap3 = obj;
-        obj = {};
-        obj[guildId] = tmp5;
-        dependencyMap = obj;
-        obj = {};
+        const obj2 = {};
+        obj2[guildId] = tmp5;
+        dependencyMap = obj2;
+        const obj3 = {};
         const merged = Object.assign(reduced);
-        closure_7 = obj;
+        closure_7 = obj3;
       }
       const arr = Array.from(items);
     } else {

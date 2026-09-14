@@ -1,6 +1,6 @@
-// === Module 15916: useCardLayout ===
+// === Module 15918: useCardLayout ===
 
-// Module 15916 (useCardLayout)
+// Module 15918 (useCardLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8890 */;
 import size from "module_2" /* 2 */;
@@ -14,8 +14,8 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    let obj = { columns: num, cardWidth: "Array", rowWidth: "accessible" };
-    return obj;
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "isArray" };
+    return obj2;
   } else {
     let num2 = 2;
     if (width >= 768) {
@@ -68,7 +68,7 @@ export const useCardLayout = function useCardLayout() {
     const diff2 = tmp12 - 1;
     if (result3 + (bound + tmp10(8890).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
-        obj = { columns: 1, cardWidth: "Array", rowWidth: "padding" };
+        let obj = { columns: 1, cardWidth: "Array", rowWidth: "padding" };
       }
       return obj;
     }

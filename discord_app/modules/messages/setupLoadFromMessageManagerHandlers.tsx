@@ -1,6 +1,6 @@
-// === Module 17537: setupLoadFromMessageManagerHandlers ===
+// === Module 17538: setupLoadFromMessageManagerHandlers ===
 
-// Module 17537 (setupLoadFromMessageManagerHandlers)
+// Module 17538 (setupLoadFromMessageManagerHandlers)
 import DurationsDefault from "Durations" /* 1090 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7383 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -25,14 +25,14 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
         clearTimeout(value);
         map1.delete(channelId);
       }
-      value = map.get(channelId);
-      if (null != value) {
+      value2 = map.get(channelId);
+      if (null != value2) {
         map.delete(channelId);
         if (set.has(channelId)) {
           if (onBeforeBatch != null) {
             tmp5();
           }
-          const item = value.forEach((item) => channel_id(item));
+          const item = value2.forEach((item) => channel_id(item));
         }
       }
     }
@@ -78,14 +78,14 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
                   clearTimeout(value);
                   map1.delete(channel_id);
                 }
-                value = map.get(channel_id);
-                if (null != value) {
+                value2 = map.get(channel_id);
+                if (null != value2) {
                   map.delete(channel_id);
                   if (set.has(channel_id)) {
                     if (onBeforeBatch != null) {
                       tmp9();
                     }
-                    const item = value.forEach((item) => channel_id(item));
+                    const item = value2.forEach((item) => channel_id(item));
                   }
                 }
               }, Math.floor(Math.random() * set)));
@@ -128,35 +128,35 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
   const set = new Set();
   let map = new Map();
   map1 = new Map();
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(actions.actions);
-  obj.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
+  obj2.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
     set.clear();
     const item = map1.forEach((item) => clearTimeout(item));
     map1.clear();
     map.clear();
   };
-  obj.MESSAGE_CREATE = { callback: handleMessage, autoSubscribe: false };
-  obj.MESSAGE_UPDATE = handleMessage;
-  obj.LOAD_MESSAGES_SUCCESS = handleLoadMessages;
-  obj.LOAD_MESSAGES_AROUND_SUCCESS = handleLoadMessages;
-  obj.LOAD_RECENT_MENTIONS_SUCCESS = function LOAD_RECENT_MENTIONS_SUCCESS(messages) {
+  obj2.MESSAGE_CREATE = { callback: handleMessage, autoSubscribe: false };
+  obj2.MESSAGE_UPDATE = handleMessage;
+  obj2.LOAD_MESSAGES_SUCCESS = handleLoadMessages;
+  obj2.LOAD_MESSAGES_AROUND_SUCCESS = handleLoadMessages;
+  obj2.LOAD_RECENT_MENTIONS_SUCCESS = function LOAD_RECENT_MENTIONS_SUCCESS(messages) {
     messages = messages.messages;
     if (onBeforeBatch != null) {
       tmp();
     }
     const item = messages.forEach((item) => currentSidebarChannelId(item));
   };
-  obj.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
+  obj2.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
     pins = pins.pins;
     if (onBeforeBatch != null) {
       tmp();
     }
     const item = pins.forEach((message) => currentSidebarChannelId(message.message));
   };
-  obj.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
-  obj.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
-  obj.CHANNEL_SELECT = { callback: handleChannelSelect, autoSubscribe: false };
-  obj.SIDEBAR_VIEW_CHANNEL = { callback: handleChannelSelect, autoSubscribe: false };
-  actions.actions = obj;
+  obj2.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.CHANNEL_SELECT = { callback: handleChannelSelect, autoSubscribe: false };
+  obj2.SIDEBAR_VIEW_CHANNEL = { callback: handleChannelSelect, autoSubscribe: false };
+  actions.actions = obj2;
 };

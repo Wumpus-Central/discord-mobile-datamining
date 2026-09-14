@@ -2,7 +2,7 @@
 
 // Module 9412 (FederatedSocialModal)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import PlatformsDefault from "Platforms" /* 5364 */;
@@ -12,6 +12,8 @@ import FederatedSocialUtils from "FederatedSocialUtils" /* 9413 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const WebBrowserType = fn(1074).WebBrowserType;
@@ -24,8 +26,7 @@ const result = size.fileFinishedImporting("modules/connections/native/FederatedS
 
 export default function FederatedSocialModal(platformType) {
   _require = platformType;
-  let screens = PlatformsDefault;
-  value = screens.get(platformType.platformType);
+  value = PlatformsDefault.get(platformType.platformType);
   let name;
   if (value != null) {
     name = value.name;
@@ -34,14 +35,15 @@ export default function FederatedSocialModal(platformType) {
     let intl = require("util").intl;
     name = intl.string(require("util").t["bU/GZm"]);
   }
-  screens = { root: null };
-  let obj = { headerTitle: null, headerLeft: null, render: null };
+  let obj2 = { root: null };
+  let obj3 = { headerTitle: null, headerLeft: null, render: null };
   let intl2 = require("util").intl;
-  obj.headerTitle = intl2.formatToPlainString(require("util").t["ImMhq+"], { serviceName: name });
-  obj.headerLeft = require("NavigatorHeader").getHeaderBackButton(platformType.onClose);
-  obj.render = function render() {
+  obj3.headerTitle = intl2.formatToPlainString(require("util").t["ImMhq+"], { serviceName: name });
+  obj3.headerLeft = require("NavigatorHeader").getHeaderBackButton(platformType.onClose);
+  obj3.render = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
+    first = undefined;
     closure_7 = async function _tryHandle() {
       if (c5 === 2) {
         c5 = 3;
@@ -50,8 +52,8 @@ export default function FederatedSocialModal(platformType) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -64,19 +66,19 @@ export default function FederatedSocialModal(platformType) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp7;
               let body;
               WebBrowserType(true);
               noop(null);
               c3 = 1;
-              const obj1 = { location: _location, successRedirect, handle };
+              const obj4 = { location: _location, successRedirect, handle };
               c4 = 2;
               c5 = 1;
-              const obj2 = { value: tmp3(tmp31[8]).authorize(platformType, obj1), done: false };
-              return obj2;
+              const obj5 = { value: tmp3(tmp31[8]).authorize(platformType, obj4), done: false };
+              return obj5;
             }
           } else {
             if (1 === tmp7) {
@@ -91,8 +93,8 @@ export default function FederatedSocialModal(platformType) {
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               body = value.body;
               let url;
@@ -100,10 +102,10 @@ export default function FederatedSocialModal(platformType) {
                 url = body.url;
               }
               if (null != url) {
-                obj = tmp3(tmp31[9]);
-                obj.openURLExternally(body.url, constants.SAFARI);
+                tmp3(tmp31[9]).openURLExternally(body.url, constants.SAFARI);
                 closure_129_3();
                 c3 = 0;
+                const obj = tmp3(tmp31[9]);
               }
             }
             const _Error = Error;
@@ -121,14 +123,12 @@ export default function FederatedSocialModal(platformType) {
       }
     };
     const tmp = closure_9();
-    const tmp2 = _slicedToArray(noop.useState(""), 2);
-    const first = tmp2[0];
+    [first, obj6.onChangeText] = noop.useState("");
     const tmp4 = _slicedToArray(noop.useState(null), 2);
     closure_5 = tmp4[1];
     const tmp5 = _slicedToArray(noop.useState(false), 2);
     closure_6 = tmp5[1];
-    let obj = PlatformsDefault;
-    value = obj.get(platformType);
+    value = PlatformsDefault.get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -147,32 +147,29 @@ export default function FederatedSocialModal(platformType) {
       }
       return applyArgumentsResult;
     }
-    let obj1 = FederatedSocialUtils;
-    const exampleHandle = obj1.getExampleHandle(platformType);
-    let obj2 = FederatedSocialUtils;
-    obj = { bottom: true, style: tmp.container, children: null };
-    obj = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
+    const exampleHandle = FederatedSocialUtils.getExampleHandle(platformType);
+    let obj4 = { bottom: true, style: tmp.container, children: null };
+    let obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
     const intl2 = util.intl;
-    obj.children = intl2.formatToPlainString(util.t["7TByKh"], { serviceName: name });
-    const items = [React5(Text_Text.Text, obj), , ];
-    obj1 = { autoFocus: true, style: tmp.input, label: null, placeholder: null, error: null, returnKeyType: "done", onChangeText: null, onSubmitEditing: null, clearButtonVisibility: null, autoCapitalize: "none", autoComplete: "off", autoCorrect: false };
-    const validateHandleResult = obj2.validateHandle(first, platformType);
+    obj5.children = intl2.formatToPlainString(util.t["7TByKh"], { serviceName: name });
+    const items = [React5(Text_Text.Text, obj5), , ];
+    const obj6 = { autoFocus: true, style: tmp.input, label: null, placeholder: null, error: null, returnKeyType: "done", onChangeText: null, onSubmitEditing: null, clearButtonVisibility: null, autoCapitalize: "none", autoComplete: "off", autoCorrect: false };
+    const validateHandleResult = FederatedSocialUtils.validateHandle(first, platformType);
     const intl3 = util.intl;
-    obj1.label = intl3.string(util.t.tZ9QFR);
-    obj1.placeholder = exampleHandle;
-    obj1.error = tmp4[0];
-    obj1.onChangeText = tmp2[1];
-    obj1.onSubmitEditing = tryHandle;
-    obj1.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
-    items[1] = React5(FreeFormInputGroupDefault, obj1);
-    obj2 = { loading: tmp5[0], disabled: !validateHandleResult, text: null, onPress: null };
+    obj6.label = intl3.string(util.t.tZ9QFR);
+    obj6.placeholder = exampleHandle;
+    obj6.error = tmp4[0];
+    obj6.onSubmitEditing = tryHandle;
+    obj6.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
+    items[1] = React5(FreeFormInputGroupDefault, obj6);
+    let obj7 = { loading: tmp5[0], disabled: !validateHandleResult, text: null, onPress: null };
     const intl4 = util.intl;
-    obj2.text = intl4.string(util.t.PDTjLN);
-    obj2.onPress = tryHandle;
-    items[2] = React5(components_Button_Button.Button, obj2);
-    obj.children = items;
-    return React6(common_SafeAreaView.SafeAreaPaddingView, obj);
+    obj7.text = intl4.string(util.t.PDTjLN);
+    obj7.onPress = tryHandle;
+    items[2] = React5(components_Button_Button.Button, obj7);
+    obj4.children = items;
+    return React6(common_SafeAreaView.SafeAreaPaddingView, obj4);
   };
-  screens.root = obj;
-  return closure_7(require("Navigator").Navigator, { initialRouteName: "root", screens });
+  obj2.root = obj3;
+  return closure_7(require("Navigator").Navigator, { initialRouteName: "root", screens: obj2 });
 };

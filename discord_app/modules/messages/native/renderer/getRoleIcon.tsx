@@ -10,21 +10,21 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/getR
 export const getRoleIcon = function getRoleIcon(size) {
   size = size.size;
   ({ guildId, roleId } = size);
-  let obj = useRoleIconProps;
+  const obj = useRoleIconProps;
   const roleIconProps = obj.getRoleIconProps(useRoleIconProps.computeRoleIconRole({ guildId, roleId }), size);
   if (null != roleIconProps) {
-    obj = { source: null, name: null, size: null, unicodeEmoji: null, alt: null };
+    const obj4 = { source: null, name: null, size: null, unicodeEmoji: null, alt: null };
     ({ src: obj3.source, name: obj3.name } = roleIconProps);
-    obj.size = size;
+    obj4.size = size;
     const unicodeEmoji = roleIconProps.unicodeEmoji;
     let surrogates;
     if (unicodeEmoji != null) {
       surrogates = unicodeEmoji.surrogates;
     }
-    obj.unicodeEmoji = surrogates;
+    obj4.unicodeEmoji = surrogates;
     const intl = util.intl;
-    obj = { name: roleIconProps.name };
-    obj.alt = intl.formatToPlainString(util.t["9+YWrE"], obj);
-    return obj;
+    const obj6 = { name: roleIconProps.name };
+    obj4.alt = intl.formatToPlainString(util.t["9+YWrE"], obj6);
+    return obj4;
   }
 };

@@ -1,12 +1,12 @@
-// === Module 16219: VoiceUserNameItem ===
+// === Module 16221: VoiceUserNameItem ===
 
-// Module 16219 (VoiceUserNameItem)
+// Module 16221 (VoiceUserNameItem)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4870 */;
 import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9305 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 16220 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 16222 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,24 +27,23 @@ export default function VoiceUserNameItem(arg0) {
   c3 = undefined;
   ({ guildId, color, variant } = arg0);
   const tmp = closure_8();
-  let obj = { userId: user.id, guildId };
-  let obj1 = useDisplayNameStylesFont;
-  const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStylesDefault(obj) });
-  const tmp4 = useDisplayNameStylesDefault(obj);
-  [tmp8, c0] = _slicedToArray(noop.useState(0), 2);
+  const obj = { userId: user.id, guildId };
+  const tmp4 = useDisplayNameStylesDefault({ userId: user.id, guildId });
+  const displayNameStylesFont = useDisplayNameStylesFont.useDisplayNameStylesFont({ displayNameStyles: tmp4 });
+  [tmp8, c0] = noop.useState(0);
   const tmp7 = _slicedToArray(noop.useState(0), 2);
-  [tmp10, c1] = _slicedToArray(noop.useState(0), 2);
+  [tmp10, c1] = noop.useState(0);
   const tmp9 = _slicedToArray(noop.useState(0), 2);
-  [tmp12, c2] = _slicedToArray(noop.useState(true), 2);
+  [tmp12, c2] = noop.useState(true);
   const tmp11 = _slicedToArray(noop.useState(true), 2);
-  [tmp14, c3] = _slicedToArray(noop.useState(0), 2);
+  [tmp14, c3] = noop.useState(0);
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
   const callback1 = noop.useCallback((nativeEvent) => {
     _undefined2(nativeEvent.nativeEvent.layout.width);
   }, []);
-  obj = { onLayout: callback, style: null, children: null };
+  const obj3 = { onLayout: callback, style: null, children: null };
   const items = [tmp.container, ];
   let measuringTag = tmp12;
   const callback2 = noop.useCallback((nativeEvent) => {
@@ -55,14 +54,14 @@ export default function VoiceUserNameItem(arg0) {
     measuringTag = tmp.measuringTag;
   }
   items[1] = measuringTag;
-  obj.style = items;
-  obj = { variant, color, lineClamp: 1, onLayout: callback1, style: null, children: null };
+  obj3.style = items;
+  const obj4 = { variant, color, lineClamp: 1, onLayout: callback1, style: null, children: null };
   let tmp20 = null != displayNameStylesFont;
   if (tmp20) {
-    obj1 = { fontFamily: displayNameStylesFont };
-    tmp20 = obj1;
+    const obj5 = { fontFamily: displayNameStylesFont };
+    tmp20 = obj5;
   }
-  obj.style = tmp20;
+  obj4.style = tmp20;
   let nick;
   if (member != null) {
     nick = member.nick;
@@ -73,26 +72,26 @@ export default function VoiceUserNameItem(arg0) {
   }
   const items1 = [nick, ];
   if (isGuest) {
-    const obj2 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
+    const obj6 = { variant: "text-sm/normal", lineClamp: 1, color: "status-positive", children: null };
     const intl = util.intl;
     const items2 = ["\u00A0", intl.string(util.t["pFO/Ph"])];
-    obj2.children = items2;
-    isGuest = timestampProducer(Text_Text.Text, obj2);
+    obj6.children = items2;
+    isGuest = timestampProducer(Text_Text.Text, obj6);
   }
   items1[1] = isGuest;
-  obj.children = items1;
-  const items3 = [timestampProducer(Text_Text.Text, obj), ];
+  obj4.children = items1;
+  const items3 = [timestampProducer(Text_Text.Text, obj4), ];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
     const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
   }
   if (tmp12) {
-    const obj3 = { onLayout: callback2, style: tmp.tag, children: null };
-    const obj4 = { userId: user.id };
-    obj3.children = React5(VoiceGuildTagDefault, obj4);
-    tmp12 = React5(View, obj3);
+    const obj7 = { onLayout: callback2, style: tmp.tag, children: null };
+    const obj8 = { userId: user.id };
+    obj7.children = React5(VoiceGuildTagDefault, obj8);
+    tmp12 = React5(View, obj7);
   }
   items3[1] = tmp12;
-  obj.children = items3;
-  return timestampProducer(View, obj);
+  obj3.children = items3;
+  return timestampProducer(View, obj3);
 };

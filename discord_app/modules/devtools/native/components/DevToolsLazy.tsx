@@ -1,7 +1,7 @@
-// === Module 14665: DevToolsLazy ===
+// === Module 14666: DevToolsLazy ===
 
-// Module 14665 (DevToolsLazy)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 14666 (DevToolsLazy)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7822 */;
@@ -13,7 +13,7 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(14666).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(14667).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
@@ -25,8 +25,8 @@ let items = [
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -39,20 +39,20 @@ let items = [
                 throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 c1 = 1;
                 c0 = 1;
-                const obj1 = { value: require("asyncRequireImpl")(paths[7], paths.paths), done: false };
-                return obj1;
+                const obj4 = { value: require("asyncRequireImpl")(paths[7], paths.paths), done: false };
+                return obj4;
               }
             } else if (arg0 === 1) {
               c0 = 3;
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               value.navigateToDevTools();
@@ -90,10 +90,10 @@ export default function DevToolsLazy() {
     obj = PlatformUtils;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14666).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14667).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16020).default, {});
+      return jsx(tmp(16022).default, {});
     }
   }
   return null;

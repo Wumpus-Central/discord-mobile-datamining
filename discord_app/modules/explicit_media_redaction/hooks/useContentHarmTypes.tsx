@@ -3,7 +3,7 @@
 // Module 10303 (useContentHarmTypes)
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -71,10 +71,9 @@ const result = size.fileFinishedImporting("modules/explicit_media_redaction/hook
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {
   if (null == stateFromStores) {
-    let channelIdAndAuthorIdFromMessage = {};
+    let obj2 = {};
   } else {
-    channelIdAndAuthorIdFromMessage = ObscuredMediaUtils;
-    channelIdAndAuthorIdFromMessage = channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
+    obj2 = ObscuredMediaUtils.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
-  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelIdAndAuthorIdFromMessage.channelId, channelIdAndAuthorIdFromMessage.authorId);
+  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(obj2.channelId, obj2.authorId);
 };

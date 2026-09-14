@@ -1,6 +1,6 @@
-// === Module 15242: QuestBottomSheetTaskSelect ===
+// === Module 15243: QuestBottomSheetTaskSelect ===
 
-// Module 15242 (QuestBottomSheetTaskSelect)
+// Module 15243 (QuestBottomSheetTaskSelect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,29 +12,29 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
-  let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: closure_3(onTaskSelect(9008).ScreenIcon, {}), label: null, onPress: null };
+  const obj = { hasIcons: true, children: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9008).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1114).intl;
-  obj.label = intl.string(onTaskSelect(1114).t["QXc01+"]);
-  obj.onPress = function onPress() {
+  obj2.label = intl.string(onTaskSelect(1114).t["QXc01+"]);
+  obj2.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
       tmpResult = tmp(QuestTaskPlatform.DESKTOP);
     }
     return tmpResult;
   };
-  const items = [closure_3(onTaskSelect(5686).TableRow, obj), ];
-  obj = { arrow: true, icon: closure_3(onTaskSelect(9352).GameControllerIcon, {}), label: null, onPress: null };
+  const items = [closure_3(onTaskSelect(5686).TableRow, obj2), ];
+  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9352).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1114).intl;
-  obj.label = intl2.string(onTaskSelect(1114).t["8lAfuB"]);
-  obj.onPress = function onPress() {
+  obj3.label = intl2.string(onTaskSelect(1114).t["8lAfuB"]);
+  obj3.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
       tmpResult = tmp(QuestTaskPlatform.CONSOLE);
     }
     return tmpResult;
   };
-  items[1] = closure_3(onTaskSelect(5686).TableRow, obj);
+  items[1] = closure_3(onTaskSelect(5686).TableRow, obj3);
   obj.children = items;
   return closure_4(onTaskSelect(5768).TableRowGroup, obj);
 };

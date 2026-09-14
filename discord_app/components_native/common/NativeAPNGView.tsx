@@ -3,7 +3,7 @@
 // Module 10305 (NativeAPNGView)
 import _mod17 from "module_17" /* 17 */;
 import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10306 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isAndroid()) {

@@ -10,8 +10,8 @@ let result = size.fileFinishedImporting("modules/content_classification/utils.ts
 export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {
   let tmp = null != contentClassification;
   if (tmp) {
-    const obj = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
-    const result = obj.contentClassificationToAgeRestriction(obj);
+    const obj2 = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
+    const result = ContentClassificationToAgeRestriction.contentClassificationToAgeRestriction(obj2);
     tmp = result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT;
   }
   return tmp;

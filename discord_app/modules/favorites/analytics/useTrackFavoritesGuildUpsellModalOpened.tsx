@@ -1,7 +1,7 @@
-// === Module 10357: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10358: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10357 (useTrackFavoritesGuildUpsellModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 10358 (useTrackFavoritesGuildUpsellModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
 import noop from "module_19" /* 19 */;
@@ -14,8 +14,7 @@ export default function useTrackFavoritesGuildUpsellModalOpened(source) {
   importDefault = source;
   const items = [source];
   const effect = noop.useEffect(() => {
-    const obj = { source };
-    obj.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source });
   }, items);
   return { analyticsLocations: useAnalyticsLocationsDefault(AnalyticsLocationDefault.FAVORITES_GUILD_UPSELL_MODAL).analyticsLocations };
 };

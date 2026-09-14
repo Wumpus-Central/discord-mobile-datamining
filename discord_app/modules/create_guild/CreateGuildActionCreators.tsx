@@ -1,7 +1,7 @@
-// === Module 12449: create_guild/CreateGuildActionCreators ===
+// === Module 12450: create_guild/CreateGuildActionCreators ===
 
-// Module 12449 (create_guild/CreateGuildActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+// Module 12450 (create_guild/CreateGuildActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -19,8 +19,8 @@ let closure_5 = async function _createGuildFromTemplate() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -33,25 +33,25 @@ let closure_5 = async function _createGuildFromTemplate() {
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_6 = tmp3;
             closure_5 = tmp7;
             c8 = 1;
             const request = { url: constants.GUILDS, body: null, trackedActionData: null, rejectWithError: false };
-            const obj1 = { name, icon, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
+            const obj4 = { name, icon, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
             ({ channels: obj10.channels, system_channel_id: obj10.system_channel_id, roles: obj10.roles, code: obj10.guild_template_code } = id);
-            obj1.staff_only = staff_only;
-            request.body = obj1;
-            const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_CREATE, properties: null };
-            const obj3 = { template_name: id.id, is_community_intent };
-            obj2.properties = obj3;
-            request.trackedActionData = obj2;
+            obj4.staff_only = staff_only;
+            request.body = obj4;
+            const obj5 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_CREATE, properties: null };
+            const obj6 = { template_name: id.id, is_community_intent };
+            obj5.properties = obj6;
+            request.trackedActionData = obj5;
             c9 = 2;
             c10 = 1;
-            const obj4 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
-            return obj4;
+            const obj7 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c8 = 0;
@@ -64,12 +64,12 @@ let closure_5 = async function _createGuildFromTemplate() {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           c8 = 0;
           c10 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp22) {

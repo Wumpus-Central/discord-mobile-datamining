@@ -1,11 +1,11 @@
-// === Module 11432: QuestBarRenderDelayTracker ===
+// === Module 11433: QuestBarRenderDelayTracker ===
 
-// Module 11432 (QuestBarRenderDelayTracker)
+// Module 11433 (QuestBarRenderDelayTracker)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -26,15 +26,15 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(quest_id, timeout, duration) {
   if (Math.random() <= 0.1) {
-    let obj = { name: MetricEvents.MetricEvents.QUEST_BAR_RENDER_DELAY, tags: null };
+    const obj2 = { name: MetricEvents.MetricEvents.QUEST_BAR_RENDER_DELAY, tags: null };
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + quest_id, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
-    obj.tags = items;
-    obj.distribution(obj, duration);
-    obj = { quest_id, timeout, duration };
-    AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
+    obj2.tags = items;
+    MonitoringAgentDefault.distribution(obj2, duration);
+    const obj4 = { quest_id, timeout, duration };
+    AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj4);
   }
 };
 prototype["startTracking"] = function startTracking(questId) {

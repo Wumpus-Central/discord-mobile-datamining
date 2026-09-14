@@ -1,8 +1,8 @@
-// === Module 11490: useChannelSafeAreaBottomStyles ===
+// === Module 11491: useChannelSafeAreaBottomStyles ===
 
-// Module 11490 (useChannelSafeAreaBottomStyles)
+// Module 11491 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
@@ -11,33 +11,30 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const InputModes = fn(1074).InputModes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
 const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
-  let obj = { lurker: null, chat: null, voice: null, expressionPickerBackground: null };
-  obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-  obj.lurker = obj;
-  obj.chat = { backgroundColor };
-  obj.voice = { backgroundColor };
-  obj.expressionPickerBackground = { backgroundColor };
+  const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
-  gradientBottom(stateFromStores[16]).useToken(require("native").colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let backgroundColor = gradientBottom(stateFromStores[16]).useToken(require("native").colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
   let obj = gradientBottom(stateFromStores[16]);
   const tmp = gradientBottom;
   gradientBottom = gradientBottom(stateFromStores[17]).useGradientBottom();
-  let backgroundColor;
+  let backgroundColor1;
   if (gradientBottom != null) {
-    backgroundColor = gradientBottom.backgroundColor;
+    backgroundColor1 = gradientBottom.backgroundColor;
   }
-  if (null != backgroundColor) {
+  if (null != backgroundColor1) {
     backgroundColor = gradientBottom.backgroundColor;
   }
   const tmp6 = closure_12(backgroundColor);
@@ -46,7 +43,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   closure_129_1 = null != tmp3(tmp2[10])(arg0);
   closure_129_2 = tmp3(tmp2[11])(arg0).needSubscriptionToAccess;
   closure_129_3 = tmp3(tmp2[12])();
-  const obj2 = gradientBottom(stateFromStores[17]);
+  let obj2 = gradientBottom(stateFromStores[17]);
   const items = [GatewayConnectionStore, ChannelStore, LurkingStore, MediaEngineStore, RTCConnectionStore];
   stateFromStores = tmp(stateFromStores[13]).useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(gradientBottom);
@@ -59,22 +56,22 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
           if (GatewayConnectionStore.isConnected()) {
             if (MediaEngineStore.getMode() !== InputModes.PUSH_TO_TALK) {
               if (noop === KeyboardTypes.KeyboardTypes.EXPRESSION) {
-                let tmp10Result = PlatformUtils;
                 if (tmp10Result.isAndroid()) {
                   let VOICE = constants.EXPRESSION_PICKER;
                 }
+                tmp10Result = PlatformUtils;
               }
               if (noop === KeyboardTypes.KeyboardTypes.MEDIA) {
-                tmp10Result = PlatformUtils;
-                if (tmp10Result.isAndroid()) {
+                if (tmp10Result3.isAndroid()) {
                   VOICE = constants.MEDIA;
                 }
+                tmp10Result3 = PlatformUtils;
               }
               if (noop === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
-                if (tmp10Result1.isAndroid()) {
+                if (tmp10Result4.isAndroid()) {
                   VOICE = constants.APPS;
                 }
-                tmp10Result1 = PlatformUtils;
+                tmp10Result4 = PlatformUtils;
               }
               let isDirectoryResult;
               if (channel != null) {
@@ -124,15 +121,15 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
           if (stateFromStores !== constants.MEDIA) {
             if (stateFromStores !== constants.APPS) {
               if (stateFromStores === constants.CHAT) {
-                let obj = {};
+                const obj = {};
                 const merged = Object.assign(closure_1.chat);
                 const merged1 = Object.assign(gradientBottom);
                 let prop = obj;
               } else if (stateFromStores === constants.VOICE) {
-                obj = {};
+                const obj2 = {};
                 const merged2 = Object.assign(closure_1.voice);
                 const merged3 = Object.assign(gradientBottom);
-                prop = obj;
+                prop = obj2;
               } else {
                 prop = {};
                 const merged4 = Object.assign(closure_1[stateFromStores]);

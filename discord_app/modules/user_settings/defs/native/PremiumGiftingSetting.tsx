@@ -1,24 +1,24 @@
-// === Module 15081: PremiumGiftingSetting ===
+// === Module 15082: PremiumGiftingSetting ===
 
-// Module 15081 (PremiumGiftingSetting)
+// Module 15082 (PremiumGiftingSetting)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4307 */;
 import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11566 */;
-import PromotionsHooks from "PromotionsHooks" /* 13549 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11567 */;
+import PromotionsHooks from "PromotionsHooks" /* 13550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(11164).GiftIcon,
+  IconComponent: fn(11165).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
@@ -34,9 +34,7 @@ let SettingBuilders = {
     }, []);
   },
   useTrailing: function usePremiumGiftingSettingTrailing() {
-    let obj = PromotionsHooks;
-    const unseenOutboundPromotions = obj.useUnseenOutboundPromotions();
-    obj = { value: unseenOutboundPromotions.length };
+    const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
     return jsx(native.Badge, { value: unseenOutboundPromotions.length });
   },
   unsearchable: true,
@@ -46,9 +44,8 @@ let SettingBuilders = {
       return require("UserSettingsPremiumGifting").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
 
-export default SettingBuilders;
+export default route;

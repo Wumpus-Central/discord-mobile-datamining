@@ -1,9 +1,9 @@
-// === Module 11091: MessageRequestActionCreators ===
+// === Module 11092: MessageRequestActionCreators ===
 
-// Module 11091 (MessageRequestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 11092 (MessageRequestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6694 */;
-import MessageRequestTypes from "MessageRequestTypes" /* 11092 */;
+import MessageRequestTypes from "MessageRequestTypes" /* 11093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -15,8 +15,8 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,33 +29,32 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
           closure_129_0 = closure_0;
           const HTTP = HTTPUtils.HTTP;
           const request = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), body: null, rejectWithError: null };
-          const obj1 = { consent_status: MessageRequestTypes.MessageRequestConsentStatusTypes.ACCEPTED };
-          request.body = obj1;
+          const obj4 = { consent_status: MessageRequestTypes.MessageRequestConsentStatusTypes.ACCEPTED };
+          request.body = obj4;
           request.rejectWithError = HTTPUtils.rejectWithMigratedError();
           c3 = 1;
           c4 = 1;
-          const obj2 = { value: HTTP.put(request), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.put(request), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        obj = closure_130_1(closure_130_2[4]);
-        const obj4 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
-        obj.dispatch(obj4);
+        const obj7 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
+        closure_130_1(closure_130_2[4]).dispatch(obj7);
         c4 = 3;
         return { value: "HermesInternal", done: null };
       }

@@ -1,10 +1,12 @@
-// === Module 16501: NotificationCenterActionButton ===
+// === Module 16503: NotificationCenterActionButton ===
 
-// Module 16501 (NotificationCenterActionButton)
+// Module 16503 (NotificationCenterActionButton)
 import util from "util" /* 1114 */;
 import IconButton from "IconButton" /* 8202 */;
 import _modDef8796 from "module_8796" /* 8796 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;

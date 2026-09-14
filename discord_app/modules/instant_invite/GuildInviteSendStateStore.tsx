@@ -1,8 +1,10 @@
-// === Module 13236: GuildInviteSendStateStore ===
+// === Module 13237: GuildInviteSendStateStore ===
 
-// Module 13236 (GuildInviteSendStateStore)
+// Module 13237 (GuildInviteSendStateStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useGuildInviteSendStates = module_560.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
@@ -13,12 +15,12 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
   closure_2 = arg2;
   require("ReactBatchUpdates").batchUpdates(() => {
     obj.setState((arg0) => {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(arg0[closure_1_0]);
-      obj[closure_1_1] = closure_1_2;
-      obj[closure_1_0] = obj;
+      obj2[closure_1_1] = closure_1_2;
+      obj[closure_1_0] = obj2;
       return obj;
     });
   });

@@ -1,12 +1,12 @@
-// === Module 12248: useAppLauncherFrecents ===
+// === Module 12249: useAppLauncherFrecents ===
 
-// Module 12248 (useAppLauncherFrecents)
+// Module 12249 (useAppLauncherFrecents)
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7273 */;
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9546 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
 import UserStore from "UserStore" /* 1371 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12249 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12250 */;
 
 const require = fn;
 function useFrecentApps(onlyActivityApps) {
@@ -114,8 +114,7 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
   filterSection = undefined;
   let stateFromStores;
   filters = commandsByActiveSection(filterSection[7]);
-  filters = { context, filters, options, allowFetch: true };
-  const discovery = filters.useDiscovery(filters);
+  const discovery = filters.useDiscovery({ context, filters, options, allowFetch: true });
   const commands = discovery.commands;
   commandsByActiveSection = discovery.commandsByActiveSection;
   ({ sectionDescriptors, filterSection } = discovery);
@@ -125,9 +124,9 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
   }, items);
   const items1 = [AppLauncherLastUsedCommandStore];
   stateFromStores = onlyActivityApps(filterSection[8]).useStateFromStores(items1, () => lastUsedCommandId.getLastUsedCommandId());
-  filters = { loading: discovery.loading, frecencyCommands: null, frecentApps: useFrecentApps({ sectionDescriptors, context, onlyActivityApps, includeAuthorizedAppsAndFetch: true }), sectionDescriptors };
+  const obj4 = { loading: discovery.loading, frecencyCommands: null, frecentApps: useFrecentApps({ sectionDescriptors, context, onlyActivityApps, includeAuthorizedAppsAndFetch: true }), sectionDescriptors };
   const items2 = [commands, commandsByActiveSection, stateFromStores, onlyActivityApps];
-  filters.frecencyCommands = stateFromStores.useMemo(() => {
+  obj4.frecencyCommands = stateFromStores.useMemo(() => {
     if (onlyActivityApps) {
       return [];
     } else {
@@ -149,14 +148,13 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
       return tmp6;
     }
   }, items2);
-  return filters;
+  return obj4;
 };
 export const useAppLauncherFrecentApps = function useAppLauncherFrecentApps(context) {
   context = context.context;
   ({ onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = context);
   filters = ApplicationCommandQueryApiAll;
-  filters = { context, filters, options, allowFetch: allowCommandFetch };
-  const discovery = filters.useDiscovery(filters);
-  filters = { loading: discovery.loading, frecentApps: useFrecentApps({ sectionDescriptors: discovery.sectionDescriptors, context, onlyActivityApps, includeAuthorizedAppsAndFetch }) };
-  return filters;
+  const discovery = filters.useDiscovery({ context, filters, options, allowFetch: allowCommandFetch });
+  const obj3 = { loading: discovery.loading, frecentApps: useFrecentApps({ sectionDescriptors: discovery.sectionDescriptors, context, onlyActivityApps, includeAuthorizedAppsAndFetch }) };
+  return obj3;
 };

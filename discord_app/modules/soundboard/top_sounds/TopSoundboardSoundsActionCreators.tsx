@@ -1,10 +1,12 @@
-// === Module 17176: TopSoundboardSoundsActionCreators ===
+// === Module 17178: TopSoundboardSoundsActionCreators ===
 
-// Module 17176 (TopSoundboardSoundsActionCreators)
+// Module 17178 (TopSoundboardSoundsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserStore from "UserStore" /* 1371 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
 import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5094 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const Endpoints = fn(1074).Endpoints;
@@ -26,21 +28,18 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
         if (!TopSoundboardSoundStore.getIsFetching(id)) {
           _require = id;
           if (!tmp9Result.isPseudoGuildId(id)) {
-            let obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
+            const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
             DispatcherDefault.dispatch(obj);
-            const HTTP = tmp9(1272).HTTP;
-            obj = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id), oldFormErrors: true, rejectWithError: true };
-            value = HTTP.get(obj);
+            const HTTP = tmp9(1270).HTTP;
+            const obj3 = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id), oldFormErrors: true, rejectWithError: true };
+            value = HTTP.get(obj3);
             value.then((body) => {
-              const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
+              const obj2 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
               const items = body.body.items;
               const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
-              obj.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
-              return obj.dispatch(obj);
-            }, () => {
-              const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId };
-              return obj.dispatch(obj);
-            });
+              obj2.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+              return DispatcherDefault.dispatch(obj2);
+            }, () => DispatcherDefault.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId }));
           }
           tmp9Result = tmp9(4476);
         }
@@ -50,23 +49,20 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
 };
 export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildId) {
   _require = guildId;
-  let obj = require("RouteUtils");
   if (!obj.isPseudoGuildId(guildId)) {
-    obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
-    DispatcherDefault.dispatch(obj);
-    const HTTP = tmp(1272).HTTP;
-    obj = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
-    value = HTTP.get(obj);
+    const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
+    DispatcherDefault.dispatch(obj3);
+    const HTTP = tmp(1270).HTTP;
+    const obj4 = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(obj4);
     value.then((body) => {
-      const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
+      const obj2 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
       const items = body.body.items;
       const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
-      obj.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
-      return obj.dispatch(obj);
-    }, () => {
-      const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId };
-      return obj.dispatch(obj);
-    });
+      obj2.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+      return DispatcherDefault.dispatch(obj2);
+    }, () => DispatcherDefault.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId }));
   }
+  obj = require("RouteUtils");
   tmp = _require;
 };

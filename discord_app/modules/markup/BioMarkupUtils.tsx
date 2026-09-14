@@ -5,29 +5,41 @@ import privDefault from "priv" /* 1437 */;
 import _modDef4333 from "module_4333" /* 4333 */;
 import MarkupReactRulesDefault from "MarkupReactRules" /* 4627 */;
 import MarkupRulesDefault from "MarkupRules" /* 5079 */;
-import combineMarkupRules from "combineMarkupRules" /* 5078 */;
-import MarkupParser from "MarkupParser" /* 8091 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5078 */;
+import MarkupParser_mod from "MarkupParser" /* 8091 */;
 import MarkupUtils from "MarkupUtils" /* 4626 */;
 import apply from "module_12" /* 12 */;
 
+let combineMarkupRules = combineMarkupRules_mod;
 const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-let MarkupReactRules = fn(4627);
+const MarkupReactRules = fn(4627);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
 let closure_3 = new privDefault({ max: 2000 });
 let closure_4 = { allowGameMentions: true };
+let MarkupParser = MarkupParser_mod;
 let closure_5 = MarkupParser.reactParserFor(importDefaultResultResult);
 let closure_6 = MarkupUtils.astParserFor(importDefaultResultResult);
-const items1 = [apply.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), ];
-MarkupReactRules = {
+let MarkupParser = MarkupParser_mod;
+let combineMarkupRules = combineMarkupRules_mod;
+const items1 = [
+  apply.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+  {
+    emoji: {
+      react() {
+        return null;
+      }
+    }
+  }
+];
+let obj2 = {
   emoji: {
     react() {
       return null;
     }
   }
 };
-items1[1] = MarkupReactRules;
 let tmp4 = new privDefault({ max: 2000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");

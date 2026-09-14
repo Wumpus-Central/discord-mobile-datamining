@@ -16,8 +16,8 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,8 +30,8 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -55,8 +55,8 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_129_2 = closure_129_0.filter((item) => {
               if (Boolean(item)) {
@@ -79,44 +79,43 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
             });
             if (0 !== closure_129_2.length) {
               c4 = 1;
-              let obj5 = closure_130_1(closure_130_2[6]);
-              const obj2 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH", productIds: closure_129_2 };
-              obj5.dispatch(obj2);
-              let obj7 = closure_130_0(closure_130_2[7]);
+              const obj7 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH", productIds: closure_129_2 };
+              closure_130_1(closure_130_2[6]).dispatch(obj7);
+              const obj6 = closure_130_1(closure_130_2[6]);
               const request = { url: closure_130_7.STOREFRONT_PRODUCTS_WITH_SKUS, query: null, rejectWithError: true };
-              let obj3 = { product_ids: closure_129_2, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: closure_129_1 };
-              request.query = obj3;
+              const obj9 = { product_ids: closure_129_2, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: closure_129_1 };
+              request.query = obj9;
               c5 = 3;
               c6 = 1;
-              const obj4 = { value: obj7.httpGetWithCountryCodeQuery(request), done: false };
-              return obj4;
+              const obj10 = { value: closure_130_0(closure_130_2[7]).httpGetWithCountryCodeQuery(request), done: false };
+              return obj10;
             }
           }
         } else {
           if (2 === tmp7) {
             c4 = 0;
             closure_129_4 = closure_3;
-            obj3 = closure_130_1(closure_130_2[6]);
-            obj5 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE", productIds: closure_129_2, apiError: null };
+            const obj11 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE", productIds: closure_129_2, apiError: null };
             const tmp28 = new closure_130_1(closure_130_2[8])(closure_129_4);
-            obj5.apiError = tmp28;
-            obj3.dispatch(obj5);
+            obj11.apiError = tmp28;
+            closure_130_1(closure_130_2[6]).dispatch(obj11);
+            const obj4 = closure_130_1(closure_130_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_3 = value;
-            obj = closure_130_1(closure_130_2[6]);
-            const obj6 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS", productIds: closure_129_2, products: null };
+            const obj12 = { type: "STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS", productIds: closure_129_2, products: null };
             const products = closure_129_3.body.products;
-            obj6.products = products.map(closure_130_6.fromServer);
-            obj.dispatch(obj6);
+            obj12.products = products.map(closure_130_6.fromServer);
+            closure_130_1(closure_130_2[6]).dispatch(obj12);
             c4 = 0;
+            let obj = closure_130_1(closure_130_2[6]);
           }
           c4 = 0;
           c6 = 3;
-          obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         }
         c6 = 3;
       }
@@ -157,8 +156,8 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -171,8 +170,8 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -196,50 +195,49 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_129_2 = closure_129_0.filter(closure_130_11);
             if (0 !== closure_129_2.length) {
               c4 = 1;
-              let obj5 = closure_130_1(closure_130_2[6]);
-              const obj2 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH", skuIds: closure_129_2 };
-              obj5.dispatch(obj2);
-              let obj7 = closure_130_0(closure_130_2[7]);
+              const obj7 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH", skuIds: closure_129_2 };
+              closure_130_1(closure_130_2[6]).dispatch(obj7);
+              const obj6 = closure_130_1(closure_130_2[6]);
               const request = { url: closure_130_7.STOREFRONT_PRODUCTS_BY_SKU_IDS, query: null, rejectWithError: true };
-              let obj3 = { sku_ids: closure_129_2, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: closure_129_1 };
-              request.query = obj3;
+              const obj9 = { sku_ids: closure_129_2, locale: closure_130_4.locale, with_bundled_skus: true, include_google_sku_ids: true, ignore_cache: closure_129_1 };
+              request.query = obj9;
               c5 = 3;
               c6 = 1;
-              const obj4 = { value: obj7.httpGetWithCountryCodeQuery(request), done: false };
-              return obj4;
+              const obj10 = { value: closure_130_0(closure_130_2[7]).httpGetWithCountryCodeQuery(request), done: false };
+              return obj10;
             }
           }
         } else {
           if (2 === tmp7) {
             c4 = 0;
             closure_129_4 = closure_3;
-            obj3 = closure_130_1(closure_130_2[6]);
-            obj5 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE", skuIds: closure_129_2, apiError: null };
+            const obj11 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE", skuIds: closure_129_2, apiError: null };
             const tmp28 = new closure_130_1(closure_130_2[8])(closure_129_4);
-            obj5.apiError = tmp28;
-            obj3.dispatch(obj5);
+            obj11.apiError = tmp28;
+            closure_130_1(closure_130_2[6]).dispatch(obj11);
+            const obj4 = closure_130_1(closure_130_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_3 = value;
-            obj = closure_130_1(closure_130_2[6]);
-            const obj6 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS", skuIds: closure_129_2, products: null };
+            const obj12 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS", skuIds: closure_129_2, products: null };
             const products = closure_129_3.body.products;
-            obj6.products = products.map(closure_130_6.fromServer);
-            obj.dispatch(obj6);
+            obj12.products = products.map(closure_130_6.fromServer);
+            closure_130_1(closure_130_2[6]).dispatch(obj12);
             c4 = 0;
+            const obj = closure_130_1(closure_130_2[6]);
           }
           c4 = 0;
           c6 = 3;
-          obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         }
         c6 = 3;
       }

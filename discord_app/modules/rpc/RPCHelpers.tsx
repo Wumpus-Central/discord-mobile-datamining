@@ -3,7 +3,7 @@
 // Module 9689 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import UrlDefault from "Url" /* 1367 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
@@ -63,8 +63,8 @@ function validateOrigin(arg0) {
   return items.indexOf(arg0) > -1;
 }
 function transformInternalTextMessage(message) {
-  obj = { channelId: message.channel_id };
-  const mapped = obj.parseToAST(message.content, true, obj).map(recurseReplaceContentTree);
+  const obj2 = { channelId: message.channel_id };
+  const mapped = MarkupUtilsDefault.parseToAST(message.content, true, { channelId: message.channel_id }).map(recurseReplaceContentTree);
   let tmp4;
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != message.author) {
@@ -74,34 +74,34 @@ function transformInternalTextMessage(message) {
   if (null != message.author) {
     userAuthor = useMessageAuthor.getUserAuthor(tmp4, channel);
   }
-  obj = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
+  const obj6 = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
   let tmp10;
   if (mapped.length) {
     tmp10 = mapped;
   }
-  obj.content_parsed = tmp10;
+  obj6.content_parsed = tmp10;
   let nick;
   if (userAuthor != null) {
     nick = userAuthor.nick;
   }
-  obj.nick = nick;
+  obj6.nick = nick;
   let colorString;
   if (userAuthor != null) {
     colorString = userAuthor.colorString;
   }
-  obj.author_color = colorString;
-  obj.edited_timestamp = message.edited_timestamp || message.editedTimestamp;
+  obj6.author_color = colorString;
+  obj6.edited_timestamp = message.edited_timestamp || message.editedTimestamp;
   ({ timestamp: obj4.timestamp, tts: obj4.tts, mentions: obj4.mentions } = message);
-  obj.mention_everyone = message.mention_everyone || message.mentionEveryone;
-  obj.mention_roles = message.mention_roles || message.mentionRoles;
+  obj6.mention_everyone = message.mention_everyone || message.mentionEveryone;
+  obj6.mention_roles = message.mention_roles || message.mentionRoles;
   ({ embeds: obj4.embeds, attachments: obj4.attachments } = message);
   let tmp13;
   if (null != tmp4) {
     tmp13 = transformUserDefault(tmp4);
   }
-  obj.author = tmp13;
+  obj6.author = tmp13;
   ({ pinned: obj4.pinned, type: obj4.type } = message);
-  return obj;
+  return obj6;
 }
 function fetchApplicationRPC(arg0) {
   const HTTP = HTTPUtils.HTTP;
@@ -124,8 +124,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -138,8 +138,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp4;
             closure_6 = tmp2;
@@ -162,14 +162,14 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
                 if (null != tmp21) {
                   const items = [tmp21];
                 }
-                const obj1 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp52 = new RPCErrorDefault(obj1, "Invalid Origin");
+                const obj4 = { closeCode: constants2.INVALID_ORIGIN };
+                const tmp52 = new RPCErrorDefault(obj4, "Invalid Origin");
                 throw tmp52;
               } else {
                 c7 = 1;
                 c8 = 1;
-                const obj2 = { value: fetchApplicationRPC(closure_1), done: false };
-                return obj2;
+                const obj5 = { value: fetchApplicationRPC(closure_1), done: false };
+                return obj5;
               }
             }
             if (null == application2) {
@@ -177,8 +177,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
               createFromServer = closure_133_5.createFromServer;
               c7 = 2;
               c8 = 1;
-              const obj3 = { value: closure_133_30(closure_134_1), done: false };
-              return obj3;
+              const obj6 = { value: closure_133_30(closure_134_1), done: false };
+              return obj6;
             } else {
               closure_134_5 = application2;
               id = closure_134_5.id;
@@ -187,8 +187,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
               coverImage = closure_134_5.coverImage;
               flags = closure_134_5.flags;
               parentId = closure_134_5.parentId;
-              const obj4 = { id, parentId, name, icon, coverImage, flags };
-              closure_134_0.application = obj4;
+              const obj7 = { id, parentId, name, icon, coverImage, flags };
+              closure_134_0.application = obj7;
               c8 = 3;
             }
           }
@@ -198,14 +198,14 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_134_4 = value;
             application2 = closure_133_5.createFromServer(closure_134_4);
             if (!closure_133_28(closure_134_2, closure_134_4.rpc_origins)) {
-              const obj6 = { closeCode: closure_133_21.INVALID_ORIGIN };
-              const tmp16 = new closure_133_1(closure_133_2[26])(obj6, "Invalid Origin");
+              const obj9 = { closeCode: closure_133_21.INVALID_ORIGIN };
+              const tmp16 = new closure_133_1(closure_133_2[26])(obj9, "Invalid Origin");
               throw tmp16;
             }
           }
@@ -216,7 +216,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
           application2 = createFromServer(value);
         }
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp54) {
         c8 = tmp;
@@ -233,8 +233,8 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -247,30 +247,30 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
-          let obj2 = dependencyMap[closure_0];
-          if (null == obj2) {
+          let obj3 = VALIDATE_SOCKET_THROTTLERS[closure_0];
+          if (null == obj3) {
             let num5 = 60;
             if (tmp35) {
               num5 = 2;
             }
             const tmp24 = new LeakyBucketDefault(num5, MINUTE);
             tmp37[tmp34] = tmp24;
-            obj2 = tmp24;
+            obj3 = tmp24;
           }
           c6 = 1;
           c4 = 2;
           c7 = 1;
-          const obj1 = { value: obj2.process(closure_2), done: false };
-          return obj1;
+          const obj5 = { value: obj3.process(closure_2), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c6 = 0;
-        obj2 = { closeCode: closure_131_21.CLOSE_ABNORMAL };
-        const tmp16 = new closure_131_1(closure_131_2[26])(obj2, "Socket closed during throttle");
+        const obj6 = { closeCode: closure_131_21.CLOSE_ABNORMAL };
+        const tmp16 = new closure_131_1(closure_131_2[26])(obj6, "Socket closed during throttle");
         throw tmp16;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -278,7 +278,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c6 = 0;
@@ -344,11 +344,11 @@ function transformVoiceState(arg0, id, userId) {
     const error = new Error("Invalid user id: " + userId);
     throw error;
   } else {
-    let voice_state = { nick: NicknameUtilsDefault.getName(arg0, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
-    voice_state = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
-    voice_state.voice_state = voice_state;
-    voice_state.user = transformUserDefault(user);
-    return voice_state;
+    const obj = { nick: NicknameUtilsDefault.getName(arg0, id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+    const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
+    obj.voice_state = obj3;
+    obj.user = transformUserDefault(user);
+    return obj;
   }
 }
 const regExp = new RegExp("^" + RegexUtils.escape("https://") + "(?:[a-z]+\\.)?(" + RegexUtils.escape(tmp5) + "|discordapp.com|discord.com)$");
@@ -363,7 +363,7 @@ export const VALIDATE_SOCKET_PERIOD_MS = MINUTE;
 export { VALIDATE_SOCKET_THROTTLERS };
 export { getRemoteIconURL };
 export const containsSameValues = function containsSameValues(arg0, arg1) {
-  obj = _modDef12;
+  const obj = _modDef12;
   return obj.isEqual(arg0, _modDef12.pick(arg1, Object.keys(arg0)));
 };
 export { validateOrigin };
@@ -377,8 +377,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
     const promise = new Promise((arg0) => {
       nSFW = arg0;
       MessageStore.whenReady(nSFW.id, () => closure_0());
-      obj = { channelId: nSFW.id, limit };
-      const messages = obj.fetchMessages(obj);
+      const messages = MessageActionCreatorsDefault.fetchMessages({ channelId: nSFW.id, limit });
     });
     items.push(promise);
   }
@@ -391,7 +390,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
       }
       const _Object = Object;
       const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(nSFW.id));
-      obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
+      let obj = { id: null, name: null, type: null, topic: null, bitrate: null, user_limit: null, guild_id: null, position: null, messages: null, voice_states: null };
       ({ id: obj2.id, name: obj2.name, type: obj2.type, topic: obj2.topic, bitrate: obj2.bitrate, userLimit: obj2.user_limit } = nSFW);
       obj.guild_id = guild_id;
       obj.position = nSFW.position;
@@ -406,11 +405,11 @@ export const transformChannel = function transformChannel(channel, arg1) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          let voice_state = { nick: closure_1(4788).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
-          voice_state = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
-          voice_state.voice_state = voice_state;
-          voice_state.user = closure_1(9690)(user);
-          return voice_state;
+          const obj = { nick: closure_1(4788).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
+          obj.voice_state = obj3;
+          obj.user = closure_1(9690)(user);
+          return obj;
         }
       });
       return obj;
@@ -426,25 +425,23 @@ export const transformChannel = function transformChannel(channel, arg1) {
 export { transformInternalTextMessage };
 export { transformVoiceState };
 export const transformBaseRelationship = function transformBaseRelationship(relationshipType, user) {
-  let presence = { type: relationshipType, user: transformUserDefault(user), presence: null };
-  presence = { status: PresenceStore.getStatus(user.id, null), activity: null };
-  presence.presence = presence;
-  return presence;
+  const obj = { type: relationshipType, user: transformUserDefault(user), presence: { status: PresenceStore.getStatus(user.id, null), activity: null } };
+  return obj;
 };
 export const transformApplicationRelationship = function transformApplicationRelationship(presence, id) {
   let tmp = presence;
   if (null != id) {
-    presence = {};
+    const obj = {};
     const merged = Object.assign(presence);
-    presence = {};
+    const obj2 = {};
     const merged1 = Object.assign(presence.presence);
     let applicationActivity = PresenceStore.getApplicationActivity(presence.user.id, id);
     if (applicationActivity == null) {
       applicationActivity = null;
     }
-    presence.activity = applicationActivity;
-    presence.presence = presence;
-    tmp = presence;
+    obj2.activity = applicationActivity;
+    obj.presence = obj2;
+    tmp = obj;
   }
   return tmp;
 };
@@ -544,44 +541,40 @@ export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSoc
 };
 export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoiceSettingsWithShortcut(fn) {
   const settings = MediaEngineStore.getSettings();
-  let output = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
-  output = { available_devices: null, device_id: null, volume: null };
-  let values = Object.values(MediaEngineStore.getInputDevices());
+  const obj = { input: null, output: null, mode: null, automatic_gain_control: null, echo_cancellation: null, noise_suppression: null, qos: null, silence_warning: null, deaf: null, mute: null };
+  const obj3 = { available_devices: null, device_id: null, volume: null };
+  const values = Object.values(MediaEngineStore.getInputDevices());
   const sorted = values.sort((index, index2) => index.index - index2.index);
-  output.available_devices = sorted.map((id) => ({ id: id.id, name: id.name }));
+  obj3.available_devices = sorted.map((id) => ({ id: id.id, name: id.name }));
   ({ inputDeviceId: obj2.device_id, inputVolume: obj2.volume } = settings);
-  output.input = output;
-  output = { available_devices: null, device_id: null, volume: null };
-  values = Object.values(MediaEngineStore.getOutputDevices());
-  const sorted1 = values.sort((index, index2) => index.index - index2.index);
-  output.available_devices = sorted1.map((id) => ({ id: id.id, name: id.name }));
+  obj.input = obj3;
+  const obj5 = { available_devices: null, device_id: null, volume: null };
+  const values2 = Object.values(MediaEngineStore.getOutputDevices());
+  const sorted1 = values2.sort((index, index2) => index.index - index2.index);
+  obj5.available_devices = sorted1.map((id) => ({ id: id.id, name: id.name }));
   ({ outputDeviceId: obj4.device_id, outputVolume: obj4.volume } = settings);
-  output.output = output;
-  output.mode = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
+  obj.output = obj5;
+  obj.mode = { type: settings.mode, auto_threshold: settings.modeOptions.autoThreshold, threshold: settings.modeOptions.threshold, shortcut: fn(settings), delay: settings.modeOptions.delay };
   ({ automaticGainControl: obj.automatic_gain_control, echoCancellation: obj.echo_cancellation, noiseSuppression: obj.noise_suppression, qos: obj.qos, silenceWarning: obj.silence_warning, deaf: obj.deaf, mute: obj.mute } = settings);
-  return output;
+  return obj;
 };
 export const getVoiceSettingsWithShortcut = function getVoiceSettingsWithShortcut(arg0, fn) {
   const settings = MediaEngineStore.getSettings(arg0);
-  let input_mode = { input_mode: null, local_mutes: null, local_volumes: null, self_mute: null, self_deaf: null };
-  input_mode = { type: settings.mode, shortcut: fn(settings) };
-  input_mode.input_mode = input_mode;
-  input_mode.local_mutes = Object.keys(settings.localMutes);
+  const obj = { input_mode: { type: settings.mode, shortcut: fn(settings) }, local_mutes: Object.keys(settings.localMutes), local_volumes: null, self_mute: null, self_deaf: null };
   ({ localVolumes: obj.local_volumes, mute: obj.self_mute, deaf: obj.self_deaf } = settings);
-  return input_mode;
+  return obj;
 };
 export const validatePostMessageTransport = function validatePostMessageTransport(transport) {
   if (transport !== constants.POST_MESSAGE) {
-    obj = { errorCode: constants4.INVALID_COMMAND };
+    const obj = { errorCode: constants4.INVALID_COMMAND };
     const _HermesInternal = HermesInternal;
-    let tmp3 = RPCErrorDefault;
-    tmp3 = new tmp3(obj, "command not available from \"" + transport + " transport");
-    throw tmp3;
+    const tmp32 = new RPCErrorDefault(obj, "command not available from \"" + transport + " transport");
+    throw tmp32;
   }
 };
 export const validateApplication = function validateApplication(application) {
   if (null == application.id) {
-    obj = { errorCode: constants4.INVALID_COMMAND };
+    const obj = { errorCode: constants4.INVALID_COMMAND };
     const tmp7 = new RPCErrorDefault(obj, "Invalid application");
     throw tmp7;
   } else {

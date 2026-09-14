@@ -1,7 +1,7 @@
-// === Module 17498: HolidayEventsUtils ===
+// === Module 17500: HolidayEventsUtils ===
 
-// Module 17498 (HolidayEventsUtils)
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17494 */;
+// Module 17500 (HolidayEventsUtils)
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17496 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
@@ -13,8 +13,7 @@ export default {
     return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
-    let obj = HolidayEventsConfigDefault;
-    const isExperimentEligible = obj.useIsExperimentEligible();
+    const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
     if (tmp5) {
@@ -22,8 +21,8 @@ export default {
       if (null != HolidayEventsConfigDefault.soundpack) {
         tmp6 = null;
         if (null != HolidayEventsConfigDefault.soundpackLabel) {
-          obj = { soundpack: HolidayEventsConfigDefault.soundpack, soundpackLabel: HolidayEventsConfigDefault.soundpackLabel };
-          tmp6 = obj;
+          const obj2 = { soundpack: HolidayEventsConfigDefault.soundpack, soundpackLabel: HolidayEventsConfigDefault.soundpackLabel };
+          tmp6 = obj2;
         }
       }
     }

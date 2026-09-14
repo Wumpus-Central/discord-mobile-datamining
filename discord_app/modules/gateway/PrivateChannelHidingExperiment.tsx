@@ -1,14 +1,14 @@
-// === Module 13757: PrivateChannelHidingExperiment ===
+// === Module 13758: PrivateChannelHidingExperiment ===
 
-// Module 13757 (PrivateChannelHidingExperiment)
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13758 */;
+// Module 13758 (PrivateChannelHidingExperiment)
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13759 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-02-private-channel-hiding", kind: "user", defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false }, variations: null };
-obj = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };
-obj[3] = { enableObfuscation: false, enableIntegrityCheck: false };
-obj.variations = obj;
+const obj = { name: "2026-02-private-channel-hiding", kind: "user", defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false }, variations: null };
+const obj2 = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };
+obj2[3] = { enableObfuscation: false, enableIntegrityCheck: false };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperiment.tsx");
 

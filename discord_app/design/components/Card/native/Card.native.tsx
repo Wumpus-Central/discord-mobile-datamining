@@ -56,35 +56,33 @@ class Card {
         if (str4 == null) {
           str4 = "button";
         }
-        obj = { accessibilityRole: null };
-        obj.accessibilityRole = str4;
-        tmp9 = obj;
+        obj1 = { accessibilityRole: null };
+        obj1.accessibilityRole = str4;
+        tmp9 = obj1;
         tmp10 = tmp6;
         merged1 = Object.assign(tmp6);
-        obj.start = flag;
-        obj.end = flag2;
-        obj.style = items;
-        obj.variant = str3;
-        obj.radius = radius;
-        return tmp7(tmp8, obj);
+        obj1.start = flag;
+        obj1.end = flag2;
+        obj1.style = items;
+        obj1.variant = str3;
+        obj1.radius = radius;
+        return tmp7(tmp8, obj1);
       }
     }
-    obj1 = {};
+    obj4 = {};
     merged2 = Object.assign(merged);
-    obj1.style = items;
-    return jsx(View, obj1);
+    obj4.style = items;
+    return jsx(View, obj4);
   }
 }
 function PressableCard(start) {
-  let obj = onPressIn(sharedValue[9]);
   if (obj.isAndroid()) {
     const start2 = start.start;
-    onPressIn = start2;
+    let onPressIn = start2;
     const end2 = start.end;
     let onPressOut = end2;
     const radius2 = start.radius;
-    sharedValue = radius2;
-    obj = {};
+    let sharedValue = radius2;
     const merged = Object.assign(start, Object.assign({ children: 0, start: 0, end: 0, radius: 0 }));
     let items = [start2, end2, radius2];
     const memo = noop.useMemo(() => {
@@ -95,9 +93,9 @@ function PressableCard(start) {
       }
       return { cornerRadius };
     }, items);
-    obj = { androidRippleConfig: memo };
+    let obj3 = { androidRippleConfig: memo };
     const merged1 = Object.assign(merged);
-    obj.children = start.children;
+    obj3.children = start.children;
     let tmp19 = jsx(tmp(tmp2[12]).AnimatedPressableHighlight, { androidRippleConfig: memo });
   } else {
     onPressIn = start.onPressIn;
@@ -105,8 +103,7 @@ function PressableCard(start) {
     ({ radius, start, end } = start);
     ({ children, style, variant } = start);
     const merged2 = Object.assign(start, Object.assign({ children: 0, style: 0, variant: 0, onPressIn: 0, onPressOut: 0, radius: 0, start: 0, end: 0 }));
-    let tmpResult = tmp(tmp2[4]);
-    sharedValue = tmpResult.useSharedValue(0);
+    sharedValue = tmp(tmp2[4]).useSharedValue(0);
     const items1 = [sharedValue, onPressIn];
     const items2 = [sharedValue, onPressOut];
     const callback = noop.useCallback((arg0) => {
@@ -124,7 +121,7 @@ function PressableCard(start) {
     const tmp11 = closure_9(variant);
     const backgroundColor = tmp11.backgroundColor;
     const backgroundColorPressed = tmp11.backgroundColorPressed;
-    tmpResult = tmp(tmp2[4]);
+    const tmpResult = tmp(tmp2[4]);
     class B {
       constructor() {
         obj = { backgroundColor: null };
@@ -138,20 +135,21 @@ function PressableCard(start) {
         return obj;
       }
     }
-    let obj2 = { withSpring: tmp(tmp2[10]).withSpring, interpolateColor: tmp(tmp2[4]).interpolateColor, pressed: sharedValue, backgroundColor, backgroundColorPressed, ON_PRESS_SPRING: tmp(tmp2[11]).ON_PRESS_SPRING };
-    B.__closure = obj2;
+    const obj5 = { withSpring: tmp(tmp2[10]).withSpring, interpolateColor: tmp(tmp2[4]).interpolateColor, pressed: sharedValue, backgroundColor, backgroundColorPressed, ON_PRESS_SPRING: tmp(tmp2[11]).ON_PRESS_SPRING };
+    B.__closure = obj5;
     B.__workletHash = 14943431549291;
     B.__initData = __initData;
-    let obj3 = {};
-    const animatedStyle = tmpResult.useAnimatedStyle(B);
+    const obj6 = {};
+    const animatedStyle = tmp(tmp2[4]).useAnimatedStyle(B);
     const merged3 = Object.assign(merged2);
-    obj3.onPressIn = callback;
-    obj3.onPressOut = callback1;
+    obj6.onPressIn = callback;
+    obj6.onPressOut = callback1;
     const items3 = [style, animatedStyle];
-    obj3.style = items3;
-    obj3.unstable_pressDelay = 130;
-    obj3.children = children;
+    obj6.style = items3;
+    obj6.unstable_pressDelay = 130;
+    obj6.children = children;
     tmp19 = <closure_8 />;
+    const tmpResult2 = tmp(tmp2[4]);
   }
   return tmp19;
 }

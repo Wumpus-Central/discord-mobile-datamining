@@ -61,14 +61,14 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult1 = stringResult1;
                 } else if (num3 < minValues2) {
                   const intl6 = util.intl;
-                  let obj = { minValues: minValues2 };
-                  formatToPlainStringResult1 = intl6.formatToPlainString(util.t.pmAt62, obj);
+                  const obj2 = { minValues: minValues2 };
+                  formatToPlainStringResult1 = intl6.formatToPlainString(util.t.pmAt62, obj2);
                 } else {
                   formatToPlainStringResult1 = null;
                   if (num3 > maxValues2) {
                     const intl5 = util.intl;
-                    obj = { maxValues: maxValues2 };
-                    formatToPlainStringResult1 = intl5.formatToPlainString(util.t.dy6viJ, obj);
+                    const obj3 = { maxValues: maxValues2 };
+                    formatToPlainStringResult1 = intl5.formatToPlainString(util.t.dy6viJ, obj3);
                   }
                 }
                 return formatToPlainStringResult1;
@@ -101,13 +101,13 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult2 = stringResult3;
                 } else if (num < minValues) {
                   const intl2 = util.intl;
-                  const obj1 = { count: minValues };
-                  formatToPlainStringResult2 = intl2.formatToPlainString(util.t.Jmwzdx, obj1);
+                  const obj4 = { count: minValues };
+                  formatToPlainStringResult2 = intl2.formatToPlainString(util.t.Jmwzdx, obj4);
                 } else {
                   formatToPlainStringResult2 = null;
                   if (num > maxValues) {
                     const intl = util.intl;
-                    obj = { count: maxValues };
+                    const obj = { count: maxValues };
                     formatToPlainStringResult2 = intl.formatToPlainString(util.t.LDvfRP, obj);
                   }
                 }
@@ -125,9 +125,9 @@ export default function validateComponent(type, arg1, modal) {
     ({ minValues: minValues3, maxValues: maxValues3 } = type);
     if (null == values) {
       {
-        const obj2 = { minValues: minValues3, required: tmp16 };
+        const obj5 = { minValues: minValues3, required: tmp16 };
         let stringResult4 = null;
-        if (!tmp4Result.canSelectBeEmpty(obj2, modal)) {
+        if (!tmp4Result.canSelectBeEmpty(obj5, modal)) {
           const intl10 = util.intl;
           stringResult4 = intl10.string(util.t.eJEUvD);
         }

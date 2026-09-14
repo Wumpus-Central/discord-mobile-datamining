@@ -1,11 +1,13 @@
-// === Module 14783: useAutoScrollToSetting ===
+// === Module 14784: useAutoScrollToSetting ===
 
-// Module 14783 (useAutoScrollToSetting)
+// Module 14784 (useAutoScrollToSetting)
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14778 */;
+
+const require = globalThis.__r;
 
 const require = fn;
-const NodeType = fn(11602).NodeType;
+const NodeType = fn(11603).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -21,31 +23,31 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14671).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14779).getInitialScrollIndex(current, memo);
+    if (tmp(14672).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14780).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14779);
+      const tmpResult = tmp(14780);
     }
   }
   const items = [memo, flag, ref, navigation, current];
   const effect = navigation.useEffect(() => {
     navigation.addListener("transitionEnd", () => {
       if (flag) {
-        let obj = ref(closure_1[4]);
-        const initialScrollIndex = obj.getInitialScrollIndex(closure_1_4, memo);
+        const initialScrollIndex = ref(dependencyMap[4]).getInitialScrollIndex(closure_1_4, memo);
         if (null != initialScrollIndex) {
           if (ref != null) {
             current = ref.current;
             if (current != null) {
-              obj = { index: initialScrollIndex, animated: false, viewOffset: 300 };
-              current.scrollToIndex(obj);
+              const obj2 = { index: initialScrollIndex, animated: false, viewOffset: 300 };
+              current.scrollToIndex(obj2);
             }
           }
         }
+        const obj = ref(dependencyMap[4]);
       }
       closure_1_3.current = undefined;
     });

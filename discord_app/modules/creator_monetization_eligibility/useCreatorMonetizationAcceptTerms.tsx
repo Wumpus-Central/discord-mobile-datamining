@@ -1,11 +1,13 @@
-// === Module 17800: useCreatorMonetizationAcceptTerms ===
+// === Module 17801: useCreatorMonetizationAcceptTerms ===
 
-// Module 17800 (useCreatorMonetizationAcceptTerms)
+// Module 17801 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
@@ -15,29 +17,29 @@ const result = size.fileFinishedImporting("modules/creator_monetization_eligibil
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let obj = require("initialize");
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   const tmp2 = isExpeditedOnboardingGuild(noop.useState(), 2);
   dependencyMap = tmp2[1];
+  let obj = require("initialize");
   [tmp4, asyncGeneratorStep] = isExpeditedOnboardingGuild(noop.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(noop.useState(false), 2);
   isExpeditedOnboardingGuild = require("CreatorMonetizationEligibilityExperimentUtils").useIsExpeditedOnboardingGuild(stateFromStores);
-  obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
+  const obj3 = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
   let obj2 = require("CreatorMonetizationEligibilityExperimentUtils");
   const items1 = [UserStore];
   const items2 = [stateFromStores];
-  obj.canSubmitAcceptance = require("initialize").useStateFromStores(items1, () => {
+  obj3.canSubmitAcceptance = require("initialize").useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
       tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   }, items2);
-  obj.error = tmp2[0];
-  obj.loading = tmp4;
+  obj3.error = tmp2[0];
+  obj3.loading = tmp4;
   const items3 = [arg0, arg1, isExpeditedOnboardingGuild];
-  obj.submitAcceptTermsRequest = noop.useCallback(asyncGeneratorStep(async () => {
+  obj3.submitAcceptTermsRequest = noop.useCallback(asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -45,8 +47,8 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -59,8 +61,8 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp8;
             if (null != closure_0) {
@@ -70,15 +72,13 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj1 = { value: tmp47(17801).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
-                return obj1;
+                const obj6 = { value: tmp47(17802).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                return obj6;
               } else {
-                let obj2 = tmp47(17801);
                 c4 = 3;
                 c5 = 1;
-                obj2 = { value: null, done: false };
-                obj2.value = obj2.acceptCreatorMonetizationTermsV2(tmp55);
-                return obj2;
+                const obj7 = { value: tmp47(17802).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                return obj7;
               }
             }
             c5 = 3;
@@ -98,8 +98,8 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 dependencyMap = 0;
                 closure_129_4(false);
                 c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -108,7 +108,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               dependencyMap = 0;
               closure_129_4(false);
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             dependencyMap = 1;
@@ -131,5 +131,5 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
       }
     }
   }), items3);
-  return obj;
+  return obj3;
 };

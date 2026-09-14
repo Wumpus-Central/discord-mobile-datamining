@@ -10,7 +10,6 @@ let c3 = 52428800;
 const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" }, { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai", supports_fast: true }, { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: true }, { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: true }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [{ id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" }, { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" }, { id: "workers-ai/@cf/nvidia/nemotron-3-120b-a12b", label: "Nemotron 3 Super 120B", provider: "workers-ai" }, { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" }, { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" }, { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" }];
-obj = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
@@ -77,4 +76,4 @@ export const formatVibegrationsAttachmentLimit = function formatVibegrationsAtta
   return "" + Math.round(arg0 / 1048576) + " MB";
 };
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
-export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = obj;
+export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };

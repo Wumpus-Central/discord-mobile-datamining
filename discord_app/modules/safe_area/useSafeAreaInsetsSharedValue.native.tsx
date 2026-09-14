@@ -1,21 +1,23 @@
-// === Module 11486: useSafeAreaInsetsSharedValue ===
+// === Module 11487: useSafeAreaInsetsSharedValue ===
 
-// Module 11486 (useSafeAreaInsetsSharedValue)
+// Module 11487 (useSafeAreaInsetsSharedValue)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import AppEntryKey from "AppEntryKey" /* 1624 */;
 import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9776 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
+import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1611 */;
 import size from "module_2" /* 2 */;
 
 let obj = { main: null, share: null };
-obj = {};
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj.main = ReanimatedRexport.makeMutable(obj);
-obj = {};
+obj.main = ReanimatedRexport.makeMutable({});
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj.share = ReanimatedRexport.makeMutable(obj);
+obj.share = ReanimatedRexport.makeMutable({});
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {

@@ -1,6 +1,6 @@
-// === Module 16684: useSortedMemberApplications ===
+// === Module 16686: useSortedMemberApplications ===
 
-// Module 16684 (useSortedMemberApplications)
+// Module 16686 (useSortedMemberApplications)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
 import noop from "module_19" /* 19 */;
 import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5623 */;
@@ -14,13 +14,12 @@ export const useSortedMemberApplications = function useSortedMemberApplications(
   const applicationStatus = guildId.applicationStatus;
   const sortOrder = guildId.sortOrder;
   let stateFromStores;
-  let obj = guildId(applicationStatus[2]);
   let items = [stateFromStores];
   const items1 = [applicationStatus, guildId];
-  stateFromStores = obj.useStateFromStores(items, () => GuildJoinRequestStore.getRequests(guildId, applicationStatus), items1);
-  obj = { guildJoinRequests: null };
+  stateFromStores = guildId(applicationStatus[2]).useStateFromStores(items, () => GuildJoinRequestStore.getRequests(guildId, applicationStatus), items1);
+  const obj2 = { guildJoinRequests: null };
   const items2 = [sortOrder, stateFromStores];
-  obj.guildJoinRequests = sortOrder.useMemo(() => {
+  obj2.guildJoinRequests = sortOrder.useMemo(() => {
     if (sortOrder === MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
       const items = [];
       HermesBuiltin.arraySpread(stateFromStores, 0);
@@ -30,5 +29,5 @@ export const useSortedMemberApplications = function useSortedMemberApplications(
     }
     return reversed;
   }, items2);
-  return obj;
+  return obj2;
 };

@@ -1,6 +1,6 @@
-// === Module 11032: PerLetterEffect ===
+// === Module 11033: PerLetterEffect ===
 
-// Module 11032 (PerLetterEffect)
+// Module 11033 (PerLetterEffect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -21,10 +21,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(11033)();
+    const regex = colors(11034)();
     closure_1 = 0;
-    let obj = name(11034);
-    return name(11034).splitGraphemes(regex).map((children, index) => {
+    let obj = name(11035);
+    return name(11035).splitGraphemes(regex).map((children, index) => {
       regex.lastIndex = 0;
       const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
@@ -40,24 +40,23 @@ export default function PerLetterEffect(name) {
       }
       let tmp7;
       if (null != tmp2) {
-        let obj = { color: tmp2 };
+        const obj = { color: tmp2 };
         tmp7 = obj;
       }
-      obj = { style: tmp7, children };
       return <hasOwnProperty key={index} style={tmp7}>{children}</hasOwnProperty>;
     });
   }, items);
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(textProps);
-  obj.textBreakStrategy = "simple";
+  obj2.textBreakStrategy = "simple";
   let accessibilityLabel = textProps.accessibilityLabel;
   if (accessibilityLabel == null) {
     accessibilityLabel = name;
   }
-  obj.accessibilityLabel = accessibilityLabel;
+  obj2.accessibilityLabel = accessibilityLabel;
   const items2 = [textStyle, { lineHeight: "r" }];
-  obj.style = items2;
-  obj.children = memo;
+  obj2.style = items2;
+  obj2.children = memo;
   obj.children = jsx(name(4632).Text, {});
-  return <closure_4 />;
+  return <closure_4 style={null}>{null}</closure_4>;
 };

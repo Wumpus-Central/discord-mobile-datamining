@@ -5,6 +5,8 @@ import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9824 */;
 import noop from "module_19" /* 19 */;
 import TooltipStore from "TooltipStore" /* 9823 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");

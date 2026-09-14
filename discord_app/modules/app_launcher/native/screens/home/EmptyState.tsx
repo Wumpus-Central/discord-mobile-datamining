@@ -1,37 +1,33 @@
-// === Module 12240: home/EmptyState ===
+// === Module 12241: home/EmptyState ===
 
-// Module 12240 (home/EmptyState)
+// Module 12241 (home/EmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12180 */;
-import HomeEmptyStateDefault from "HomeEmptyState" /* 12241 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 12242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, textContainer: null };
-createStyles = { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" };
-createStyles.container = createStyles;
-createStyles.textContainer = { textAlign: "center" };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/EmptyState.tsx");
 
 export default function EmptyState() {
   const tmp = closure_6();
-  let obj = AppLauncherNativeUtils;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
-  obj = { style: tmp.container, children: null };
+  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
+  const obj2 = { style: tmp.container, children: null };
   const items = [React4(HomeEmptyStateDefault, {}), ];
-  obj = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
+  const obj3 = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["V7+xhH"]);
-  items[1] = React4(Text_Text.Text, obj);
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj3.children = intl.string(util.t["V7+xhH"]);
+  items[1] = React4(Text_Text.Text, obj3);
+  obj2.children = items;
+  return hasOwnProperty(View, obj2);
 };

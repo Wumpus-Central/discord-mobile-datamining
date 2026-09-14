@@ -1,27 +1,28 @@
-// === Module 16062: RegisterDisplayName ===
+// === Module 16064: RegisterDisplayName ===
 
-// Module 16062 (RegisterDisplayName)
+// Module 16064 (RegisterDisplayName)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14795 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14796 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(16042);
+const RegistrationConstants = fn(16044);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = { globalName: null, button: null, page: null };
-createStyles = { marginTop: nativeDefault.space.PX_24 };
-createStyles.globalName = createStyles;
-createStyles.button = { marginTop: nativeDefault.space.PX_24 };
-createStyles.page = { flex: 1 };
-let closure_14 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { globalName: { marginTop: nativeDefault.space.PX_24 }, button: null, page: null };
+let obj3 = { marginTop: nativeDefault.space.PX_24 };
+obj2.button = { marginTop: nativeDefault.space.PX_24 };
+obj2.page = { flex: 1 };
+let closure_14 = createStyles.createStyles(obj2);
 let closure_15 = ["discord", "hypesquad", "snowsgiving", "system message", "system mesage", "sustem mesage", "sustem message"];
 let closure_16 = ["everyone", "here"];
 const size = fn(2);
@@ -29,12 +30,12 @@ let result = size.fileFinishedImporting("modules/auth/native/components/Register
 
 export default function RegisterDisplayName() {
   const tmp = closure_14();
-  let obj = require("useNavigation");
-  const navigation = obj.useNavigation();
+  const tmp4 = require("useWideAuthView")();
+  const navigation = require("useNavigation").useNavigation();
   _require = navigation;
   const tmp7 = context(callback.useState(false), 2);
   importDefault = tmp7[1];
-  const tmp4 = require("useWideAuthView")();
+  let obj = require("useNavigation");
   const tmp9 = context(callback.useState(() => {
     str = closure_1_9.getState().registrationOptions.globalName;
     if (str == null) {
@@ -61,9 +62,9 @@ export default function RegisterDisplayName() {
   })(tmp9[0]);
   context = callback.useContext(require("Auth").TrackRegistrationContext);
   const tmp8 = closure_9((errors) => errors.errors);
-  let obj1 = require("RegistrationStepsUtils");
-  require("useAuthFlowBackHandler")(obj1.getPreviousRegistrationTransitionStep(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME));
   const tmp12 = require("useAuthFlowBackHandler");
+  tmp12(require("RegistrationStepsUtils").getPreviousRegistrationTransitionStep(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME));
+  const obj2 = require("RegistrationStepsUtils");
   require("useInitialRegistrationStep")(require("ConstantsIOS").AuthStates.REGISTER_DISPLAY_NAME);
   const items = [context];
   const effect = callback.useEffect(() => {
@@ -82,8 +83,8 @@ export default function RegisterDisplayName() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -96,14 +97,14 @@ export default function RegisterDisplayName() {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
-              let obj1 = { globalName };
-              closure_2_8(obj1);
+              const obj6 = { globalName };
+              closure_2_8(obj6);
               const registrationOptions = closure_2_9.getState().registrationOptions;
-              const obj2 = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.SUBMITTED };
-              context(obj2);
+              const obj7 = { step: constants.ACCOUNT_DISPLAY_NAME, actionType: constants2.SUBMITTED };
+              context(obj7);
               let tmp6 = null != registrationOptions.username;
               if (tmp6) {
                 tmp6 = "" !== registrationOptions.username;
@@ -111,15 +112,13 @@ export default function RegisterDisplayName() {
               if (!tmp6) {
                 tmp2(true);
                 if (!UniqueUsernamesStore.wasRegistrationSuggestionFetched(globalName)) {
-                  obj1 = tmp2(str[19]);
                   c2 = 1;
                   c3 = 1;
-                  let obj3 = { value: obj1.fetchSuggestionsRegistration(globalName), done: false };
-                  return obj3;
+                  const obj8 = { value: tmp2(str[19]).fetchSuggestionsRegistration(globalName), done: false };
+                  return obj8;
                 }
               }
-              obj3 = globalName(str[15]);
-              const result = obj3.handleNextOrSubmitRegistration(globalName(str[16]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
+              const result = globalName(str[15]).handleNextOrSubmitRegistration(globalName(str[16]).AuthStates.REGISTER_DISPLAY_NAME, globalName, context);
               c3 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -128,7 +127,7 @@ export default function RegisterDisplayName() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           tmp2(false);
@@ -168,14 +167,14 @@ export default function RegisterDisplayName() {
   if (tmp21 == null) {
     tmp21 = tmp10;
   }
-  obj = { headerText: null, children: null };
+  let obj3 = { headerText: null, children: null };
   const tmp14 = require("useInitialRegistrationStep");
   let intl = tmp5(tmp3[10]).intl;
-  obj.headerText = intl.string(require("util").t.LYIh7j);
-  obj = { style: tmp.globalName, children: null };
-  obj1 = {
+  obj3.headerText = intl.string(require("util").t.LYIh7j);
+  const obj4 = { style: tmp.globalName, children: null };
+  let obj5 = {
     ref,
-    value: str,
+    value: tmp9[0],
     onChange(str) {
       str = "";
       closure_3(str);
@@ -191,35 +190,35 @@ export default function RegisterDisplayName() {
     isClearable: true
   };
   let intl2 = tmp5(tmp3[10]).intl;
-  obj1.label = intl2.string(require("util").t["9AjdkD"]);
+  obj5.label = intl2.string(require("util").t["9AjdkD"]);
   let stringResult;
   if (null == tmp21) {
     const intl3 = tmp5(tmp3[10]).intl;
     stringResult = intl3.string(tmp5(tmp3[10]).t.fbKwSs);
   }
-  obj1.description = stringResult;
-  obj.children = closure_12(require("TextInput").TextInput, obj1);
-  const items3 = [closure_12(View, obj), ];
-  let obj2 = { style: tmp.button, children: null };
-  let obj3 = { size: "lg", loading: tmp7[0], text: null, onPress: null, disabled: null };
+  obj5.description = stringResult;
+  obj4.children = closure_12(require("TextInput").TextInput, obj5);
+  const items3 = [closure_12(View, obj4), ];
+  let obj6 = { style: tmp.button, children: null };
+  let obj7 = { size: "lg", loading: tmp7[0], text: null, onPress: null, disabled: null };
   const intl4 = tmp5(tmp3[10]).intl;
-  obj3.text = intl4.string(require("util").t.PDTjLN);
-  obj3.onPress = function onPress() {
+  obj7.text = intl4.string(require("util").t.PDTjLN);
+  obj7.onPress = function onPress() {
     return callback(str);
   };
   let tmp27 = null != tmp10;
   if (!tmp27) {
     tmp27 = "" === str.trim();
   }
-  obj3.disabled = tmp27;
-  obj2.children = closure_12(require("components/Button/Button").Button, obj3);
-  items3[1] = closure_12(View, obj2);
-  obj.children = items3;
-  const tmp22Result = closure_13(require("AuthFormView"), obj);
+  obj7.disabled = tmp27;
+  obj6.children = closure_12(require("components/Button/Button").Button, obj7);
+  items3[1] = closure_12(View, obj6);
+  obj3.children = items3;
+  const tmp22Result = closure_13(require("AuthFormView"), obj3);
   let tmp24Result = tmp22Result;
   if (!tmp4) {
-    const obj4 = { style: tmp.page, children: tmp22Result };
-    tmp24Result = closure_12(tmp2(tmp3[25]), obj4);
+    let obj8 = { style: tmp.page, children: tmp22Result };
+    tmp24Result = closure_12(tmp2(tmp3[25]), obj8);
   }
   return tmp24Result;
 };

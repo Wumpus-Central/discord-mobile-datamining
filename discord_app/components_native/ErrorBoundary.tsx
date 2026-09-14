@@ -1,17 +1,17 @@
-// === Module 14660: ErrorBoundary ===
+// === Module 14661: ErrorBoundary ===
 
-// Module 14660 (ErrorBoundary)
+// Module 14661 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import native from "native" /* 1176 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import AppCrash from "AppCrash" /* 9979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 function MaybeClearBuildOverride() {
@@ -32,7 +32,6 @@ function MaybeClearBuildOverride() {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _require = tmp[1];
-  let obj = require("initialize");
   const items = [BuildOverrideStore];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -47,10 +46,10 @@ function MaybeClearBuildOverride() {
   })) {
     return null;
   } else {
-    obj = { variant: "secondary", loading: tmp[0], text: null, onPress: null };
+    const obj2 = { variant: "secondary", loading: tmp[0], text: null, onPress: null };
     const intl = tmp2(1114).intl;
-    obj.text = intl.string(tmp2(1114).t["/Nz9rY"]);
-    obj.onPress = function clearOverride() {
+    obj2.text = intl.string(tmp2(1114).t["/Nz9rY"]);
+    obj2.onPress = function clearOverride() {
       const self = this;
       const apply = closure_1.apply;
       if (typeof apply === "unknown") {
@@ -60,8 +59,9 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5056).Button, obj);
+    return closure_9(tmp2(5056).Button, obj2);
   }
+  obj = require("initialize");
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -83,10 +83,10 @@ prototype["componentDidCatch"] = function componentDidCatch(error, info) {
   this.triggerSoftCrash(error, info);
 };
 prototype["triggerSoftCrash"] = function triggerSoftCrash(error, info) {
-  let obj = { error, info };
-  this.setState(obj);
-  obj = { extra: info };
-  SentryUtilsDefault.captureCrash(error, obj);
+  this.setState({ error, info });
+  SentryUtilsDefault.captureCrash(error, { extra: info });
+  const obj = { error, info };
+  const obj3 = { extra: info };
   DispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
@@ -118,13 +118,13 @@ prototype["render"] = function render() {
   const tmp = closure_11(this.context);
   const error = this.state.error;
   if (null !== error) {
-    let obj = { Illustration: AppCrash.AppCrash, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
+    const obj = { Illustration: AppCrash.AppCrash, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.tx8CkI);
     const intl2 = util.intl;
     obj.body = intl2.string(util.t.CvQlAH);
     ({ text: obj.titleStyle, text: obj.bodyStyle } = tmp);
-    obj = { style: tmp.error, variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj2 = { style: tmp.error, variant: "text-sm/medium", color: "text-muted", children: null };
     let str;
     if (error != null) {
       str = error.message;
@@ -139,17 +139,17 @@ prototype["render"] = function render() {
     if (str == null) {
       str = "Unknown Error";
     }
-    obj.children = str;
-    const items = [React7(Text_Text.Text, obj), , ];
-    obj = { style: tmp.buttons, children: null };
+    obj2.children = str;
+    const items = [React7(Text_Text.Text, obj2), , ];
+    const obj3 = { style: tmp.buttons, children: null };
     const items1 = [React7(MaybeClearBuildOverride, {}), ];
-    const obj1 = { text: null, onPress: null };
+    const obj4 = { text: null, onPress: null };
     const intl3 = util.intl;
-    obj1.text = intl3.string(util.t["4n8OJn"]);
-    obj1.onPress = self.handleReload;
-    items1[1] = React7(components_Button_Button.Button, obj1);
-    obj.children = items1;
-    items[1] = closure_1_10(React5, obj);
+    obj4.text = intl3.string(util.t["4n8OJn"]);
+    obj4.onPress = self.handleReload;
+    items1[1] = React7(components_Button_Button.Button, obj4);
+    obj3.children = items1;
+    items[1] = closure_1_10(React5, obj3);
     items[2] = null;
     obj.children = items;
     let children = closure_1_10(native.EmptyState, obj);

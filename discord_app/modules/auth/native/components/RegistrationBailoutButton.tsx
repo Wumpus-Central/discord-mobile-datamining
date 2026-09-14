@@ -1,8 +1,8 @@
-// === Module 16070: RegistrationBailoutButton ===
+// === Module 16072: RegistrationBailoutButton ===
 
-// Module 16070 (RegistrationBailoutButton)
+// Module 16072 (RegistrationBailoutButton)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

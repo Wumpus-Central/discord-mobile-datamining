@@ -1,13 +1,13 @@
-// === Module 17183: SoundboardSoundPreviewMenuExperiment ===
+// === Module 17185: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 17183 (SoundboardSoundPreviewMenuExperiment)
+// Module 17185 (SoundboardSoundPreviewMenuExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", name: "2026-08-mobile-soundboard-sound-preview-menu", defaultConfig: { enabled: false, returnOnUpsellDismiss: false }, variations: null };
-obj = { 1: null };
-obj[1] = { enabled: true, returnOnUpsellDismiss: true };
-obj.variations = obj;
+const obj = { kind: "user", name: "2026-08-mobile-soundboard-sound-preview-menu", defaultConfig: { enabled: false, returnOnUpsellDismiss: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true, returnOnUpsellDismiss: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/soundboard/experiments/SoundboardSoundPreviewMenuExperiment.tsx");
 

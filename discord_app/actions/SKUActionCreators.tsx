@@ -1,8 +1,8 @@
-// === Module 10944: SKUActionCreators ===
+// === Module 10945: SKUActionCreators ===
 
-// Module 10944 (SKUActionCreators)
+// Module 10945 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import BillingUtils from "BillingUtils" /* 4309 */;
 import StoreUtils from "StoreUtils" /* 4878 */;
 import PurchaseTokenUtils from "PurchaseTokenUtils" /* 4969 */;
@@ -25,8 +25,8 @@ let closure_8 = async function _fetchSKU() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -39,52 +39,50 @@ let closure_8 = async function _fetchSKU() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = skuId;
             closure_129_1 = undefined;
             if (null == SKUStore.get(skuId)) {
-              let obj5 = DispatcherDefault;
-              const obj1 = { type: "SKU_FETCH_START", skuId };
-              obj5.dispatch(obj1);
+              const obj5 = { type: "SKU_FETCH_START", skuId };
+              DispatcherDefault.dispatch(obj5);
               c4 = 1;
-              const obj2 = { url: closure_2_7.STORE_SKU(skuId), rejectWithError: null };
+              const obj7 = { url: closure_2_7.STORE_SKU(skuId), rejectWithError: null };
               const obj8 = StoreUtils;
-              obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+              obj7.rejectWithError = HTTPUtils.rejectWithMigratedError();
               c5 = 2;
               c6 = 1;
-              let obj3 = { value: obj8.httpGetWithCountryCodeQuery(obj2), done: false };
-              return obj3;
+              const obj9 = { value: obj8.httpGetWithCountryCodeQuery(obj7), done: false };
+              return obj9;
             } else {
               c6 = 3;
             }
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          obj3 = closure_130_1(closure_130_2[4]);
-          const obj4 = { type: "SKU_FETCH_FAIL", skuId: closure_129_0 };
-          obj3.dispatch(obj4);
+          const obj11 = { type: "SKU_FETCH_FAIL", skuId: closure_129_0 };
+          closure_130_1(closure_130_2[4]).dispatch(obj11);
           const _HermesInternal = HermesInternal;
-          let tmp23 = closure_130_1(closure_130_2[7]);
-          tmp23 = new tmp23("Failed to fetch SKU " + closure_129_0);
-          throw tmp23;
+          const obj4 = closure_130_1(closure_130_2[4]);
+          const tmp232 = new closure_130_1(closure_130_2[7])("Failed to fetch SKU " + closure_129_0);
+          throw tmp232;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_129_1 = value;
-          obj = closure_130_1(closure_130_2[4]);
-          obj5 = { type: "SKU_FETCH_SUCCESS", sku: closure_129_1.body };
-          obj.dispatch(obj5);
+          const obj12 = { type: "SKU_FETCH_SUCCESS", sku: closure_129_1.body };
+          closure_130_1(closure_130_2[4]).dispatch(obj12);
           c4 = 0;
+          const obj = closure_130_1(closure_130_2[4]);
         }
         c4 = 0;
         c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj13 = { value, done: true };
+        return obj13;
       } catch (tmp36) {
         closure_3 = tmp36;
         if (tmp4 === c4) {
@@ -111,8 +109,8 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -125,8 +123,8 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_5 = tmp3;
             closure_4 = tmp5;
@@ -134,9 +132,8 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
             closure_132_1 = undefined;
             closure_132_2 = undefined;
             if (null == SKUStore.get(skuId)) {
-              let obj6 = DispatcherDefault;
-              let obj1 = { type: "SKU_FETCH_START", skuId };
-              obj6.dispatch(obj1);
+              const obj6 = { type: "SKU_FETCH_START", skuId };
+              DispatcherDefault.dispatch(obj6);
               c7 = 1;
               const result = TestModeUtils.isTestModeForApplication(closure_0);
               closure_132_1 = result;
@@ -145,38 +142,36 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
               } else {
                 STORE_SKUResult = closure_2_7.STORE_PUBLISHED_LISTINGS_SKU(skuId);
               }
-              const obj2 = { url: STORE_SKUResult, rejectWithError: null };
-              let tmp36Result = HTTPUtils;
-              obj2.rejectWithError = tmp36Result.rejectWithMigratedError();
-              const obj3 = {};
+              const obj8 = { url: STORE_SKUResult, rejectWithError: null };
+              obj8.rejectWithError = HTTPUtils.rejectWithMigratedError();
+              const obj11 = {};
               if (variants_return_style === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
-                obj3.variants_return_style = variants_return_style;
+                obj11.variants_return_style = variants_return_style;
               }
               if (closure_3) {
-                obj3.include_unpublished = true;
+                obj11.include_unpublished = true;
               }
               const _Object = Object;
-              if (Object.keys(obj3).length > 0) {
-                obj2.query = obj3;
+              if (Object.keys(obj11).length > 0) {
+                obj8.query = obj11;
               }
-              tmp36Result = StoreUtils;
+              const tmp36Result = HTTPUtils;
               c8 = 2;
               c9 = 1;
-              let obj4 = { value: tmp36Result.httpGetWithCountryCodeQuery(obj2), done: false };
-              return obj4;
+              const obj12 = { value: StoreUtils.httpGetWithCountryCodeQuery(obj8), done: false };
+              return obj12;
             } else {
               c9 = 3;
             }
           }
         } else if (1 === tmp8) {
           c7 = 0;
-          obj4 = closure_133_1(closure_133_2[4]);
-          const obj5 = { type: "SKU_FETCH_FAIL", skuId: closure_132_0 };
-          obj4.dispatch(obj5);
+          const obj13 = { type: "SKU_FETCH_FAIL", skuId: closure_132_0 };
+          closure_133_1(closure_133_2[4]).dispatch(obj13);
           const _HermesInternal = HermesInternal;
-          let tmp27 = closure_133_1(closure_133_2[7]);
-          tmp27 = new tmp27("Failed to fetch SKU " + closure_132_0);
-          throw tmp27;
+          const obj5 = closure_133_1(closure_133_2[4]);
+          const tmp272 = new closure_133_1(closure_133_2[7])("Failed to fetch SKU " + closure_132_0);
+          throw tmp272;
         } else if (arg0 === 1) {
           c9 = 3;
           throw value;
@@ -188,20 +183,20 @@ let closure_9 = async function _fetchPublishedSKU(arg0) {
           } else {
             sku = body.sku;
           }
-          obj = { type: "SKU_FETCH_SUCCESS", sku };
+          const obj = { type: "SKU_FETCH_SUCCESS", sku };
           closure_133_1(closure_133_2[4]).dispatch(obj);
           if (!closure_132_1) {
-            obj1 = closure_133_1(closure_133_2[4]);
-            obj6 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: closure_132_2.body };
-            obj1.dispatch(obj6);
+            const obj14 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: closure_132_2.body };
+            closure_133_1(closure_133_2[4]).dispatch(obj14);
+            const obj2 = closure_133_1(closure_133_2[4]);
           }
           c7 = 0;
           const obj18 = closure_133_1(closure_133_2[4]);
         }
         c7 = 0;
         c9 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj15 = { value, done: true };
+        return obj15;
       } catch (tmp43) {
         closure_6 = tmp43;
         if (tmp4 === c7) {
@@ -222,8 +217,8 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -236,8 +231,8 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -259,8 +254,8 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           if (!obj12.isTestModeForApplication(closure_130_0)) {
             if (closure_130_1) {
@@ -269,30 +264,29 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
               throw error;
             }
           }
-          let obj4 = closure_131_0(closure_131_2[5]);
-          const obj2 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
-          let obj6 = closure_131_0(closure_131_2[6]);
-          obj2.rejectWithError = obj6.rejectWithMigratedError();
+          obj12 = closure_131_0(closure_131_2[8]);
+          const obj6 = { url: closure_131_7.APPLICATION_SKUS(closure_130_0), rejectWithError: null };
+          const obj5 = closure_131_0(closure_131_2[5]);
+          obj6.rejectWithError = closure_131_0(closure_131_2[6]).rejectWithMigratedError();
           c4 = 2;
           c5 = 1;
-          const obj3 = { value: obj4.httpGetWithCountryCodeQuery(obj2), done: false };
-          return obj3;
+          const obj8 = { value: obj5.httpGetWithCountryCodeQuery(obj6), done: false };
+          return obj8;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         body = value.body;
-        obj = closure_131_1(closure_131_2[4]);
-        const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: body };
-        obj.dispatch(obj5);
+        const obj10 = { type: "SKUS_FETCH_SUCCESS", skus: body };
+        closure_131_1(closure_131_2[4]).dispatch(obj10);
         c5 = 3;
-        obj6 = { value: body, done: true };
-        return obj6;
+        const obj11 = { value: body, done: true };
+        return obj11;
       }
     } catch (tmp28) {
       c5 = tmp;
@@ -308,8 +302,8 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -322,8 +316,8 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -346,11 +340,11 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          let obj2 = { payment_source_id: closure_129_2, gift: closure_129_3, currency: closure_129_4 };
-          closure_129_5 = obj2;
+          const obj7 = { payment_source_id: closure_129_2, gift: closure_129_3, currency: closure_129_4 };
+          closure_129_5 = obj7;
           if (obj11.isTestModeForApplication(closure_129_0)) {
             closure_129_5.test_mode = true;
           }
@@ -359,14 +353,14 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
             closure_129_5.promotion_id_override = promotionIdOverride;
           }
           c4 = 1;
-          obj2 = closure_130_0(closure_130_2[5]);
+          obj11 = closure_130_0(closure_130_2[8]);
           const request = { url: closure_130_7.STORE_SKU_PURCHASE(closure_129_1), query: closure_129_5, oldFormErrors: true, rejectWithError: null };
-          let obj4 = closure_130_0(closure_130_2[6]);
-          request.rejectWithError = obj4.rejectWithMigratedError();
+          const obj3 = closure_130_0(closure_130_2[5]);
+          request.rejectWithError = closure_130_0(closure_130_2[6]).rejectWithMigratedError();
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: obj2.httpGetWithCountryCodeQuery(request), done: false };
-          return obj3;
+          const obj8 = { value: obj3.httpGetWithCountryCodeQuery(request), done: false };
+          return obj8;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -392,12 +386,12 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp58) {
@@ -424,8 +418,8 @@ let closure_12 = async function _grantChannelBranchEntitlement() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -438,8 +432,8 @@ let closure_12 = async function _grantChannelBranchEntitlement() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -447,25 +441,24 @@ let closure_12 = async function _grantChannelBranchEntitlement() {
             closure_131_1 = skuId;
             closure_131_2 = undefined;
             closure_131_3 = undefined;
-            const obj1 = { type: "SKU_PURCHASE_START", applicationId, skuId };
-            DispatcherDefault.dispatch(obj1);
+            const obj4 = { type: "SKU_PURCHASE_START", applicationId, skuId };
+            DispatcherDefault.dispatch(obj4);
             c6 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj2 = { url: closure_2_7.CHANNEL_ENTITLEMENT_GRANT(closure_1), oldFormErrors: true, rejectWithError: null };
-            obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            const obj6 = { url: closure_2_7.CHANNEL_ENTITLEMENT_GRANT(closure_1), oldFormErrors: true, rejectWithError: null };
+            obj6.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c7 = 2;
             c8 = 1;
-            const obj3 = { value: HTTP.post(obj2), done: false };
-            return obj3;
+            const obj7 = { value: HTTP.post(obj6), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c6 = 0;
           closure_131_4 = closure_5;
           const billingError = new closure_132_0(closure_132_2[10]).BillingError(closure_131_4);
           closure_131_3 = billingError;
-          let obj4 = closure_132_1(closure_132_2[4]);
-          obj4 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_131_0, skuId: closure_131_1, error: closure_131_3 };
-          obj4.dispatch(obj4);
+          const obj8 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_131_0, skuId: closure_131_1, error: closure_131_3 };
+          closure_132_1(closure_132_2[4]).dispatch(obj8);
           throw closure_131_3;
         } else if (arg0 === 1) {
           c8 = 3;
@@ -473,17 +466,16 @@ let closure_12 = async function _grantChannelBranchEntitlement() {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_131_2 = value;
-          obj = closure_132_1(closure_132_2[4]);
-          const obj6 = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_131_1, entitlements: closure_131_2.body, libraryApplications: [] };
-          obj.dispatch(obj6);
+          const obj11 = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_131_1, entitlements: closure_131_2.body, libraryApplications: [] };
+          closure_132_1(closure_132_2[4]).dispatch(obj11);
           c6 = 0;
           c8 = 3;
-          const obj7 = { value: closure_131_2.body, done: true };
-          return obj7;
+          const obj12 = { value: closure_131_2.body, done: true };
+          return obj12;
         }
       } catch (tmp34) {
         closure_5 = tmp34;
@@ -511,8 +503,8 @@ let closure_14 = async function _orderSKU() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -525,8 +517,8 @@ let closure_14 = async function _orderSKU() {
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_6 = tmp3;
             closure_5 = tmp5;
@@ -534,35 +526,33 @@ let closure_14 = async function _orderSKU() {
             let id;
             DispatcherDefault.dispatch({ type: "ORDER_CREATE_START" });
             c8 = 1;
-            const obj1 = { order_line_items: null, billing_facet: null, location_facet: null };
-            const obj2 = { sku_id, quantity: 1, purchase_type: 1 };
-            const items = [obj2];
-            obj1.order_line_items = items;
-            const obj3 = { payment_source_id };
-            obj1.billing_facet = obj3;
-            let obj4 = { request_gateway_country_code };
-            obj1.location_facet = obj4;
+            const obj4 = { order_line_items: null, billing_facet: null, location_facet: null };
+            const obj6 = { sku_id, quantity: 1, purchase_type: 1 };
+            const items = [obj6];
+            obj4.order_line_items = items;
+            const obj8 = { payment_source_id };
+            obj4.billing_facet = obj8;
+            const obj10 = { request_gateway_country_code };
+            obj4.location_facet = obj10;
             if (closure_3) {
-              const obj5 = { is_gift: true, gift_customization: null };
+              const obj11 = { is_gift: true, gift_customization: null };
               ({ recipient_id: obj7.recipient_id, gift_style: obj7.gift_style, emoji_id: obj7.emoji_id, emoji_name: obj7.emoji_name, sound_id: obj7.sound_id, reward_sku_ids: obj7.reward_sku_ids, custom_message: obj7.custom_message_contents } = closure_4);
-              obj5.gift_customization = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-              obj1.gifting_facet = obj5;
-              const obj6 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+              obj11.gift_customization = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+              obj4.gifting_facet = obj11;
+              const obj12 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
             }
             const HTTP = HTTPUtils.HTTP;
-            const request = { url: constants.ORDER_CREATE, body: obj1, rejectWithError: null };
-            let obj8 = HTTPUtils;
-            request.rejectWithError = obj8.rejectWithMigratedError();
+            const request = { url: constants.ORDER_CREATE, body: obj4, rejectWithError: null };
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c9 = 2;
             c10 = 1;
-            const obj7 = { value: HTTP.post(request), done: false };
-            return obj7;
+            const obj14 = { value: HTTP.post(request), done: false };
+            return obj14;
           }
         } else if (1 === tmp8) {
           c8 = 0;
           closure_133_2 = closure_7;
-          obj4 = closure_134_1(closure_134_2[4]);
-          obj4.dispatch({ type: "ORDER_CREATE_FAIL" });
+          closure_134_1(closure_134_2[4]).dispatch({ type: "ORDER_CREATE_FAIL" });
           const _HermesInternal = HermesInternal;
           const billingError = new closure_134_0(closure_134_2[10]).BillingError("Failed to create order: " + closure_133_2);
           throw billingError;
@@ -572,18 +562,17 @@ let closure_14 = async function _orderSKU() {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          obj8 = { value, done: true };
-          return obj8;
+          const obj15 = { value, done: true };
+          return obj15;
         } else {
           body = value.body;
           id = body.id;
-          obj = closure_134_1(closure_134_2[4]);
-          const obj9 = { type: "ORDER_CREATE_SUCCESS", orderId: id, order: body };
-          obj.dispatch(obj9);
+          const obj16 = { type: "ORDER_CREATE_SUCCESS", orderId: id, order: body };
+          closure_134_1(closure_134_2[4]).dispatch(obj16);
           c8 = 0;
           c10 = 3;
-          const obj10 = { value: id, done: true };
-          return obj10;
+          const obj17 = { value: id, done: true };
+          return obj17;
         }
       } catch (tmp36) {
         closure_7 = tmp36;
@@ -605,8 +594,8 @@ let closure_15 = async function _purchaseSKU(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -619,8 +608,8 @@ let closure_15 = async function _purchaseSKU(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c11 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_7 = tmp3;
           isGift = tmp5;
@@ -641,26 +630,24 @@ let closure_15 = async function _purchaseSKU(arg0) {
           closure_134_14 = undefined;
           closure_134_15 = undefined;
           closure_134_16 = undefined;
-          const obj1 = {};
+          const obj5 = {};
           const merged = Object.assign(map1);
           const merged1 = Object.assign(closure_2);
-          const paymentSource = obj1.paymentSource;
+          const paymentSource = obj5.paymentSource;
           closure_134_2 = paymentSource;
-          ({ expectedAmount: closure_134_3, expectedCurrency: closure_134_4, analyticsLoadId: closure_134_5, isGift } = obj1);
+          ({ expectedAmount: closure_134_3, expectedCurrency: closure_134_4, analyticsLoadId: closure_134_5, isGift } = obj5);
           closure_134_6 = isGift;
-          ({ giftInfoOptions: closure_134_7, loadId: closure_134_8, countryCode: closure_134_9, quantity: closure_134_10 } = obj1);
+          ({ giftInfoOptions: closure_134_7, loadId: closure_134_8, countryCode: closure_134_9, quantity: closure_134_10 } = obj5);
           DispatcherDefault.wait(() => {
-            skuId(closure_2[4]);
-            const obj = { type: "SKU_PURCHASE_START", applicationId, skuId, isGift, loadId };
-            obj.dispatch(obj);
+            skuId(closure_2[4]).dispatch({ type: "SKU_PURCHASE_START", applicationId, skuId, isGift, loadId });
           });
           closure_134_11 = TestModeUtils.isTestModeForApplication(applicationId);
           c8 = 1;
-          let obj2 = { gift: isGift, sku_subscription_plan_id: obj1.subscriptionPlanId };
+          const obj7 = { gift: isGift, sku_subscription_plan_id: obj5.subscriptionPlanId };
           c10 = 2;
           c11 = 1;
-          const obj3 = { value: BillingUtils.createGatewayCheckoutContext(paymentSource), done: false };
-          return obj3;
+          const obj9 = { value: BillingUtils.createGatewayCheckoutContext(paymentSource), done: false };
+          return obj9;
         }
       } else if (1 === tmp8) {
         c8 = 0;
@@ -676,18 +663,18 @@ let closure_15 = async function _purchaseSKU(arg0) {
           tmp108 = closure_134_16.code !== closure_135_0(closure_135_2[11]).ErrorCodes.AUTHENTICATION_REQUIRED;
         }
         if (!tmp108) {
-          const obj4 = { type: "SKU_PURCHASE_AWAIT_CONFIRMATION", skuId: closure_134_1, isGift: closure_134_6 };
-          closure_135_1(closure_135_2[4]).dispatch(obj4);
+          const obj11 = { type: "SKU_PURCHASE_AWAIT_CONFIRMATION", skuId: closure_134_1, isGift: closure_134_6 };
+          closure_135_1(closure_135_2[4]).dispatch(obj11);
           const obj16 = closure_135_1(closure_135_2[4]);
         }
-        let obj5 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_134_0, skuId: closure_134_1, error: closure_134_16 };
-        closure_135_1(closure_135_2[4]).dispatch(obj5);
+        const obj12 = { type: "SKU_PURCHASE_FAIL", applicationId: closure_134_0, skuId: closure_134_1, error: closure_134_16 };
+        closure_135_1(closure_135_2[4]).dispatch(obj12);
         if (closure_134_16.code !== closure_135_0(closure_135_2[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
           throw closure_134_16;
         } else if (closure_134_17.body.payment_id) {
           c11 = 3;
-          const obj6 = { value: closure_135_0(closure_135_2[13]).handlePaymentConfirmation(closure_134_17.body, closure_134_2), done: true };
-          return obj6;
+          const obj14 = { value: closure_135_0(closure_135_2[13]).handlePaymentConfirmation(closure_134_17.body, closure_134_2), done: true };
+          return obj14;
         } else {
           throw closure_135_0(closure_135_2[13]).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
         }
@@ -700,13 +687,13 @@ let closure_15 = async function _purchaseSKU(arg0) {
           } else if (arg0 === 2) {
             c8 = 0;
             c11 = 3;
-            let obj7 = { value, done: true };
-            return obj7;
+            const obj15 = { value, done: true };
+            return obj15;
           } else {
-            obj2.gateway_checkout_context = value;
-            obj2.load_id = closure_134_8;
-            obj2.gift_info_options = closure_134_7;
-            closure_134_12 = obj2;
+            obj7.gateway_checkout_context = value;
+            obj7.load_id = closure_134_8;
+            obj7.gift_info_options = closure_134_7;
+            closure_134_12 = obj7;
             promotionIdOverride = closure_135_4.getPromotionIdOverride();
             if (null != promotionIdOverride) {
               closure_134_12.promotion_id_override = promotionIdOverride;
@@ -716,11 +703,10 @@ let closure_15 = async function _purchaseSKU(arg0) {
             } else if (null != closure_134_2) {
               closure_134_12.payment_source_id = closure_134_2.id;
               closure_4 = closure_134_12;
-              obj7 = closure_135_0(closure_135_2[13]);
               c10 = 4;
               c11 = 1;
-              const obj8 = { value: obj7.createPaymentSourceToken(closure_134_2), done: false };
-              return obj8;
+              const obj17 = { value: closure_135_0(closure_135_2[13]).createPaymentSourceToken(closure_134_2), done: false };
+              return obj17;
             }
             if (null != closure_134_3) {
               closure_134_12.expected_amount = closure_134_3;
@@ -728,21 +714,20 @@ let closure_15 = async function _purchaseSKU(arg0) {
             if (null != closure_134_4) {
               closure_134_12.expected_currency = closure_134_4;
             }
-            let obj9 = closure_135_0(closure_135_2[14]);
-            closure_134_12.purchase_token = obj9.getPurchaseToken();
+            closure_134_12.purchase_token = closure_135_0(closure_135_2[14]).getPurchaseToken();
             if (null != closure_134_10) {
               closure_134_12.quantity = closure_134_10;
             }
             const HTTP = closure_135_0(closure_135_2[6]).HTTP;
             const request = { url: closure_135_7.STORE_SKU_PURCHASE(closure_134_1), body: closure_134_12, context: null, oldFormErrors: true, rejectWithError: null };
-            obj9 = { load_id: closure_134_5 };
-            request.context = obj9;
-            let obj12 = closure_135_0(closure_135_2[6]);
-            request.rejectWithError = obj12.rejectWithMigratedError();
+            const obj19 = { load_id: closure_134_5 };
+            request.context = obj19;
+            const obj10 = closure_135_0(closure_135_2[14]);
+            request.rejectWithError = closure_135_0(closure_135_2[6]).rejectWithMigratedError();
             c10 = 5;
             c11 = 1;
-            const obj10 = { value: HTTP.post(request), done: false };
-            return obj10;
+            const obj22 = { value: HTTP.post(request), done: false };
+            return obj22;
           }
         } else if (3 === tmp8) {
           if (arg0 === 1) {
@@ -751,17 +736,17 @@ let closure_15 = async function _purchaseSKU(arg0) {
           } else if (arg0 === 2) {
             c8 = 0;
             c11 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj23 = { value, done: true };
+            return obj23;
           } else {
             closure_134_14 = value;
-            obj5 = closure_135_0(closure_135_2[6]);
             c3 = closure_134_14;
-            const aPIBaseURL = obj5.getAPIBaseURL();
+            const aPIBaseURL = closure_135_0(closure_135_2[6]).getAPIBaseURL();
             if (closure_134_14 == null) {
               c3 = "";
             }
             closure_134_12.return_url = aPIBaseURL + closure_135_7.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_134_2.type, c3, "success");
+            const obj6 = closure_135_0(closure_135_2[6]);
           }
         } else if (4 === tmp8) {
           if (arg0 === 1) {
@@ -770,16 +755,15 @@ let closure_15 = async function _purchaseSKU(arg0) {
           } else if (arg0 === 2) {
             c8 = 0;
             c11 = 3;
-            obj12 = { value, done: true };
-            return obj12;
+            const obj24 = { value, done: true };
+            return obj24;
           } else {
             closure_4.payment_source_token = value;
             if (closure_135_6.has(closure_134_2.type)) {
-              obj2 = closure_135_0(closure_135_2[13]);
               c10 = 3;
               c11 = 1;
-              const obj13 = { value: obj2.popupBridgeState(closure_134_2.type), done: false };
-              return obj13;
+              const obj25 = { value: closure_135_0(closure_135_2[13]).popupBridgeState(closure_134_2.type), done: false };
+              return obj25;
             }
           }
         } else if (arg0 === 1) {
@@ -788,12 +772,12 @@ let closure_15 = async function _purchaseSKU(arg0) {
         } else if (arg0 === 2) {
           c8 = 0;
           c11 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
+          const obj26 = { value, done: true };
+          return obj26;
         } else {
           closure_134_15 = value;
           let dispatch = closure_135_1(closure_135_2[4]).dispatch;
-          obj = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_134_1, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
+          let obj = { type: "SKU_PURCHASE_SUCCESS", skuId: closure_134_1, libraryApplications: null, entitlements: null, giftCode: null, loadId: null };
           if (null != closure_134_15.body.library_applications) {
             const library_applications = closure_134_15.body.library_applications;
             let found = library_applications.filter(closure_135_0(closure_135_2[15]).isNotNullish);
@@ -836,8 +820,8 @@ let closure_16 = async function _resendPaymentVerificationEmail() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -850,21 +834,21 @@ let closure_16 = async function _resendPaymentVerificationEmail() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           c3 = 1;
-          const obj1 = { purchase_token: PurchaseTokenUtils.getPurchaseToken() };
+          const obj4 = { purchase_token: PurchaseTokenUtils.getPurchaseToken() };
           value = {};
           const HTTP = HTTPUtils.HTTP;
-          const request = { url: constants.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION, body: obj1, oldFormErrors: true, rejectWithError: null };
+          const request = { url: constants.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION, body: obj4, oldFormErrors: true, rejectWithError: null };
           request.rejectWithError = HTTPUtils.rejectWithMigratedError();
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.post(request), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(request), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c3 = 0;
@@ -881,13 +865,13 @@ let closure_16 = async function _resendPaymentVerificationEmail() {
       } else if (arg0 === 2) {
         c3 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         const merged = Object.assign(value.body);
         c3 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp26) {
@@ -994,6 +978,5 @@ export const showPurchaseConfirmationStep = function showPurchaseConfirmationSte
   DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" }));
 };
 export const updateSKUPaymentIsGift = function updateSKUPaymentIsGift(isGift) {
-  const obj = { type: "SKU_PURCHASE_UPDATE_IS_GIFT", isGift };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SKU_PURCHASE_UPDATE_IS_GIFT", isGift });
 };

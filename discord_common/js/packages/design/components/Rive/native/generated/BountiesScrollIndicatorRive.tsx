@@ -23,7 +23,6 @@ let closure_9 = {
       startAnimation1 = onDataBindingChange.startAnimation;
     }
     const triggerBinding = BaseRive.useTriggerBinding("startAnimation", instance, startAnimation, startAnimation1, playIfNeeded);
-    let tmpResult = BaseRive;
     let looping;
     if (dataBinding != null) {
       looping = dataBinding.looping;
@@ -32,8 +31,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       looping1 = onDataBindingChange.looping;
     }
-    const booleanBinding = tmpResult.useBooleanBinding("looping", instance, looping, looping1, playIfNeeded);
-    tmpResult = BaseRive;
+    const booleanBinding = BaseRive.useBooleanBinding("looping", instance, looping, looping1, playIfNeeded);
+    const tmpResult = BaseRive;
     let color;
     if (dataBinding != null) {
       color = dataBinding.color;
@@ -42,7 +41,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       color1 = onDataBindingChange.color;
     }
-    const colorBinding = tmpResult.useColorBinding("color", instance, color, color1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("color", instance, color, color1, playIfNeeded);
     return null;
   }
 };
@@ -79,9 +78,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx");
 
 export const BountiesScrollIndicatorRive = noop.forwardRef(function BountiesScrollIndicatorRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { fallback: fallback.fallback, children: null };
   const merged = Object.assign(fallback);
   obj.children = <closure_10 ref={ref} />;
-  return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
 });

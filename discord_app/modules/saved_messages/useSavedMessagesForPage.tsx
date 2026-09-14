@@ -1,12 +1,12 @@
-// === Module 13414: useSavedMessagesForPage ===
+// === Module 13415: useSavedMessagesForPage ===
 
-// Module 13414 (useSavedMessagesForPage)
+// Module 13415 (useSavedMessagesForPage)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13415 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13416 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11789 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11790 */;
 
 require = fn;
 function getSavedMessagesForType(arg0) {
@@ -28,8 +28,7 @@ export default function useSavedMessagesForPage() {
   }
   importDefault = undefined;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
-  [c1, c2] = _slicedToArray(noop.useState(() => {
+  [c1, c2] = noop.useState(() => {
     if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
       let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
     } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
@@ -38,7 +37,7 @@ export default function useSavedMessagesForPage() {
       messageBookmarks = SavedMessagesStore.getSavedMessages();
     }
     return messageBookmarks.map((saveData) => saveData.saveData);
-  }), 2);
+  });
   _slicedToArray = noop.useRef(SavedMessagesStore.getIsStale());
   let items = [ALL];
   const effect = noop.useEffect(() => {

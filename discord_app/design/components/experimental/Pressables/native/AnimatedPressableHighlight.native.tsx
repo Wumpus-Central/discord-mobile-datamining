@@ -11,14 +11,13 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5204).PressableHighlight);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 
 export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+  const token = useToken.useToken(nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
   const items = [token, ];
   let androidRippleConfig = merged.androidRippleConfig;
   let cornerRadius;
@@ -26,7 +25,7 @@ export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function 
     cornerRadius = androidRippleConfig.cornerRadius;
   }
   items[1] = cornerRadius;
-  obj = {
+  const obj2 = {
     android_ripple: noop.useMemo(() => {
       const obj = { color: token, cornerRadius: null };
       const androidRippleConfig = merged.androidRippleConfig;
@@ -42,7 +41,7 @@ export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function 
     }, items)
   };
   const merged1 = Object.assign(merged);
-  obj.children = children.children;
+  obj2.children = children.children;
   return <Pressable android_ripple={noop.useMemo(() => {
     const obj = { color: token, cornerRadius: null };
     const androidRippleConfig = merged.androidRippleConfig;
@@ -58,12 +57,11 @@ export const AnimatedPressableHighlight = PlatformUtils.isAndroid() ? (function 
   }, items)} />;
 }) : (function AnimatedPressableHighlightiOS(children) {
   const merged = Object.assign(children, Object.assign({ children: 0 }));
-  let obj = useIOSPressEffects;
-  const iOSPressEffects = obj.useIOSPressEffects(4);
-  obj = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
+  const iOSPressEffects = useIOSPressEffects.useIOSPressEffects(4);
+  const obj2 = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
   const merged1 = Object.assign(merged);
   const items = [iOSPressEffects.pressableStyles, merged.style];
-  obj.style = items;
-  obj.children = children.children;
+  obj2.style = items;
+  obj2.children = children.children;
   return <closure_6 accessibilityRole="button" onPressIn={iOSPressEffects.onPressIn} onPressOut={iOSPressEffects.onPressOut} />;
 });

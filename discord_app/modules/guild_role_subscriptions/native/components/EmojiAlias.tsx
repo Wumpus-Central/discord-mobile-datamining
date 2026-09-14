@@ -1,6 +1,6 @@
-// === Module 17862: EmojiAlias ===
+// === Module 17863: EmojiAlias ===
 
-// Module 17862 (EmojiAlias)
+// Module 17863 (EmojiAlias)
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,10 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 export default function EmojiAlias(arg0) {
   ({ name, style } = arg0);
   const tmp = closure_5();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.emojiAlias, style];
   obj.style = items;
-  obj = { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items1 = [React3(Text_Text.Text, obj), React3(Text_Text.Text, { lineClamp: 1, variant: "text-md/bold", color: "interactive-text-active", children: name }), ];
-  obj = { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" };
-  items1[2] = React3(Text_Text.Text, obj);
+  const items1 = [React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" }), React3(Text_Text.Text, { lineClamp: 1, variant: "text-md/bold", color: "interactive-text-active", children: name }), React3(Text_Text.Text, { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" })];
   obj.children = items1;
   return React4(View, obj);
 };

@@ -2,9 +2,10 @@
 
 // Module 8791 (ContextMenuConstants)
 import HapticUtils from "HapticUtils" /* 4604 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isIOS();
 const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
 const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");

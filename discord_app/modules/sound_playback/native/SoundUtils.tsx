@@ -2,7 +2,7 @@
 
 // Module 10036 (sound_playback/SoundUtils)
 import _mod17 from "module_17" /* 17 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import MetaQuestUtils_mod from "MetaQuestUtils" /* 1608 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -106,15 +106,17 @@ Object.defineProperty(prototype, "numberOfLoops", {
   }
 });
 let obj = { NOTIFICATION: "notification", VOICE: "voice", RING_TONE: "ring_tone", MEDIA: "media", NOTIFICATION_NO_VIBRATION: "notification_no_vibration" };
-obj = { call_calling: obj.VOICE, call_ringing: null, call_ringing_halloween: null, camera_on: null, camera_off: null, deafen: null, disconnect: null, mention1: null, mention2: null, mention3: null, message1: null, message2: null, message3: null, mute: null, ptt_start: null, ptt_stop: null, reconnect: null, stage_waiting: null, stream_ended: null, stream_started: null, stream_user_joined: null, stream_user_left: null, soundboard_sound: null, undeafen: null, unmute: null, user_join: null, user_leave: null, user_moved: null, vibing_wumpus: null, activity_end: null, activity_launch: null, activity_user_join: null, activity_user_left: null };
-obj.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+const obj3 = { call_calling: obj.VOICE, call_ringing: null, call_ringing_halloween: null, camera_on: null, camera_off: null, deafen: null, disconnect: null, mention1: null, mention2: null, mention3: null, message1: null, message2: null, message3: null, mute: null, ptt_start: null, ptt_stop: null, reconnect: null, stage_waiting: null, stream_ended: null, stream_started: null, stream_user_joined: null, stream_user_left: null, soundboard_sound: null, undeafen: null, unmute: null, user_join: null, user_leave: null, user_moved: null, vibing_wumpus: null, activity_end: null, activity_launch: null, activity_user_join: null, activity_user_left: null };
+let MetaQuestUtils = MetaQuestUtils_mod;
+obj3.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+let MetaQuestUtils = MetaQuestUtils_mod;
+obj3.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({ VOICE: obj2.camera_on, VOICE: obj2.camera_off, VOICE: obj2.deafen, VOICE: obj2.disconnect, NOTIFICATION: obj2.mention1, NOTIFICATION: obj2.mention2, NOTIFICATION: obj2.mention3, NOTIFICATION: obj2.message1, NOTIFICATION: obj2.message2, NOTIFICATION: obj2.message3, VOICE: obj2.mute, VOICE: obj2.ptt_start, VOICE: obj2.ptt_stop, VOICE: obj2.reconnect, VOICE: obj2.stage_waiting, VOICE: obj2.stream_ended, VOICE: obj2.stream_started, VOICE: obj2.stream_user_joined, VOICE: obj2.stream_user_left, VOICE: obj2.soundboard_sound, VOICE: obj2.undeafen, VOICE: obj2.unmute, VOICE: obj2.user_join, VOICE: obj2.user_leave, VOICE: obj2.user_moved, MEDIA: obj2.vibing_wumpus, NOTIFICATION_NO_VIBRATION: obj2.activity_end, NOTIFICATION_NO_VIBRATION: obj2.activity_launch, NOTIFICATION_NO_VIBRATION: obj2.activity_user_join, NOTIFICATION_NO_VIBRATION: obj2.activity_user_left } = obj);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 let fn = (name, call_calling, _volume, DEFAULT) => {
-  obj = Object.create(new.target.prototype);
+  const obj = Object.create(new.target.prototype);
   obj.name = name;
-  obj.usage = obj[call_calling];
+  obj.usage = obj3[call_calling];
   obj._volume = _volume;
   obj.outputChannel = DEFAULT;
   return obj;
@@ -211,7 +213,7 @@ prototype2["ensureSound"] = function ensureSound() {
           }
           closure_0(obj);
         };
-        obj = Object.create(tmp.prototype);
+        const obj = Object.create(tmp.prototype);
         obj._volume = tmp4;
         obj._loaded = false;
         closure_3 = tmp6 + 1;

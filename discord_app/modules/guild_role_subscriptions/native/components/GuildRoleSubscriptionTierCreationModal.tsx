@@ -1,16 +1,16 @@
-// === Module 17856: GuildRoleSubscriptionTierCreationModal ===
+// === Module 17857: GuildRoleSubscriptionTierCreationModal ===
 
-// Module 17856 (GuildRoleSubscriptionTierCreationModal)
+// Module 17857 (GuildRoleSubscriptionTierCreationModal)
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17845 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17846 */;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(15288);
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,6 +20,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   guildId = guildId.guildId;
   const groupListingId = guildId.groupListingId;
   ({ onClose: importAll, onAfterTierCreation: dependencyMap } = guildId);
+  editStateId = undefined;
   _slicedToArray = undefined;
   noop = undefined;
   error = undefined;
@@ -31,8 +32,8 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -45,11 +46,11 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp4;
-            const obj1 = {
+            const obj4 = {
               guildId,
               editStateId,
               groupListingId,
@@ -59,15 +60,15 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
             };
             c1 = 1;
             c2 = 1;
-            const obj2 = { value: noop(obj1), done: false };
-            return obj2;
+            const obj5 = { value: noop(obj4), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           if (value) {
@@ -84,11 +85,8 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       }
     }
   };
-  const tmp = _slicedToArray(noop.useState(guildId.editStateId), 2);
-  const editStateId = tmp[0];
-  _slicedToArray = tmp[1];
-  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const createOrUpdateListingFromEditState = obj.useCreateOrUpdateListingFromEditState();
+  [editStateId, _slicedToArray] = noop.useState(guildId.editStateId);
+  const createOrUpdateListingFromEditState = GuildRoleSubscriptionListingEditStateUtilsAll.useCreateOrUpdateListingFromEditState();
   ({ handleCreateOrUpdateFromEditState: c6, error } = createOrUpdateListingFromEditState);
   let items = [error];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -106,10 +104,10 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     ({ DETAILS: arr[0], CHANNEL_BENEFITS: arr[1], INTANGIBLE_BENEFITS: arr[2], DESIGN: arr[3], CONFIRMATION: arr[4] } = closure_8);
     return items;
   }, []);
-  obj = { guildId, editStateId, groupListingId, children: null };
-  obj = {
+  let obj2 = { guildId, editStateId, groupListingId, children: null };
+  let obj3 = {
     guildId,
-    children: jsx(groupListingId(17858), {
+    children: jsx(groupListingId(17859), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -125,9 +123,9 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       steps: memo
     })
   };
-  obj.children = jsx(guildId(17840).RoleSubscriptionSettingsDisabledContextProvider, {
+  obj2.children = jsx(guildId(17841).RoleSubscriptionSettingsDisabledContextProvider, {
     guildId,
-    children: jsx(groupListingId(17858), {
+    children: jsx(groupListingId(17859), {
       guildId,
       modalKey,
       onDone: function handleCreate() {
@@ -143,22 +141,5 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
       steps: memo
     })
   });
-  return jsx(guildId(17857).EditStateContextProvider, {
-    guildId,
-    children: jsx(groupListingId(17858), {
-      guildId,
-      modalKey,
-      onDone: function handleCreate() {
-        const self = this;
-        const apply = closure_8.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      steps: memo
-    })
-  });
+  return jsx(guildId(17858).EditStateContextProvider, { guildId, editStateId, groupListingId, children: null });
 };

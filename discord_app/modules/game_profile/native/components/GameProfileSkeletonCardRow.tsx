@@ -8,9 +8,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles((gap) => {
-  let obj = { viewport: { overflow: "hidden" }, row: null };
-  obj = { flexDirection: "row", gap };
-  obj.row = obj;
+  const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;
 });
 const size = fn(2);
@@ -23,12 +21,12 @@ export default function GameProfileSkeletonCardRow(gap) {
     PX_12 = nativeDefault.space.PX_12;
   }
   const tmp3 = closure_4(PX_12);
-  let obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const items = [tmp3.viewport, gap.style];
   obj.style = items;
-  obj = { style: null, children };
+  const obj2 = { style: null, children };
   const items1 = [tmp3.row, contentContainerStyle];
-  obj.style = items1;
+  obj2.style = items1;
   obj.children = <View style={null}>{children}</View>;
-  return <View style={null}>{children}</View>;
+  return <View style={null} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;
 };

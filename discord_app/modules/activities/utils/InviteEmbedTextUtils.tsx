@@ -1,14 +1,14 @@
-// === Module 13362: InviteEmbedTextUtils ===
+// === Module 13363: InviteEmbedTextUtils ===
 
-// Module 13362 (InviteEmbedTextUtils)
+// Module 13363 (InviteEmbedTextUtils)
 import util from "util" /* 1114 */;
 import _modDef2882 from "module_2882" /* 2882 */;
 import NicknameUtils from "NicknameUtils" /* 4788 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-function getAskToJoinText(author, appName, isPrivate, id1, arg4) {
-  if (author.author.id === id1) {
+function getAskToJoinText(author, appName, isPrivate, id2, arg4) {
+  if (author.author.id === id2) {
     if (isPrivate.isPrivate()) {
       const user = UserStore.getUser(isPrivate.getRecipientId());
       if (null != user) {
@@ -16,11 +16,11 @@ function getAskToJoinText(author, appName, isPrivate, id1, arg4) {
         const formatToPlainString2 = intl2.formatToPlainString;
         const t2 = util.t;
         if (arg4) {
-          let obj = { username: user.globalName, appName };
-          let formatToPlainString2Result = formatToPlainString2(t2.JddpN2, obj);
+          const obj2 = { username: user.globalName, appName };
+          let formatToPlainString2Result = formatToPlainString2(t2.JddpN2, obj2);
         } else {
-          obj = { username: user.globalName, appName };
-          formatToPlainString2Result = formatToPlainString2(t2.gYVkSW, obj);
+          const obj3 = { username: user.globalName, appName };
+          formatToPlainString2Result = formatToPlainString2(t2.gYVkSW, obj3);
         }
         return formatToPlainString2Result;
       }
@@ -29,11 +29,11 @@ function getAskToJoinText(author, appName, isPrivate, id1, arg4) {
     const formatToPlainString = intl.formatToPlainString;
     const t = util.t;
     if (arg4) {
-      const obj1 = { appName };
-      let formatToPlainStringResult = formatToPlainString(t["2N1kNS"], obj1);
+      const obj4 = { appName };
+      let formatToPlainStringResult = formatToPlainString(t["2N1kNS"], obj4);
     } else {
-      const obj2 = { appName };
-      formatToPlainStringResult = formatToPlainString(t.IA6uDV, obj2);
+      const obj5 = { appName };
+      formatToPlainStringResult = formatToPlainString(t.IA6uDV, obj5);
     }
     return formatToPlainStringResult;
   } else {
@@ -41,10 +41,10 @@ function getAskToJoinText(author, appName, isPrivate, id1, arg4) {
     const formatToPlainString3 = intl3.formatToPlainString;
     const t3 = util.t;
     if (arg4) {
-      const obj3 = { username: author.author.globalName, appName };
-      let formatToPlainString3Result = formatToPlainString3(t3.XE8axA, obj3);
+      const obj6 = { username: author.author.globalName, appName };
+      let formatToPlainString3Result = formatToPlainString3(t3.XE8axA, obj6);
     } else {
-      obj = { username: author.author.globalName, appName };
+      const obj = { username: author.author.globalName, appName };
       formatToPlainString3Result = formatToPlainString3(t3.hgcjOn, obj);
     }
     return formatToPlainString3Result;
@@ -57,11 +57,11 @@ const result = size.fileFinishedImporting("modules/activities/utils/InviteEmbedT
 export const getHeaderText = function getHeaderText(name, type5, arg2) {
   if (ActivityActionTypes.LISTEN === type5) {
     const intl5 = util.intl;
-    let obj = { name };
-    return intl5.formatToPlainString(util.t["/8czH4"], obj);
+    const obj2 = { name };
+    return intl5.formatToPlainString(util.t["/8czH4"], obj2);
   } else if (ActivityActionTypes.WATCH === type5) {
     const intl4 = util.intl;
-    obj = { name };
+    const obj = { name };
     return intl4.formatToPlainString(util.t.BBJXVk, obj);
   } else if (ActivityActionTypes.JOIN === type5) {
     let stringResult;
@@ -91,7 +91,7 @@ export const getRequestToStreamText = function getRequestToStreamText(author, gu
   return stringResult;
 };
 export { getAskToJoinText };
-export const getDeadGameInviteText = function getDeadGameInviteText(activity, name_override, guild_id, id1, arg4) {
+export const getDeadGameInviteText = function getDeadGameInviteText(activity, name_override, guild_id, id2, arg4) {
   activity = activity.activity;
   let type;
   if (activity != null) {
@@ -101,7 +101,7 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
     if (ActivityActionTypes.WATCH !== type) {
       if (ActivityActionTypes.JOIN !== type) {
         if (ActivityActionTypes.STREAM_REQUEST === type) {
-          if (activity.author.id === id1) {
+          if (activity.author.id === id2) {
             const intl2 = util.intl;
             let stringResult = intl2.string(_modDef2882["8B3U5O"]);
           } else {
@@ -112,7 +112,7 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
           return stringResult;
         } else {
           const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
-          return getAskToJoinText(activity, name_override, guild_id, id1, true);
+          return getAskToJoinText(activity, name_override, guild_id, id2, true);
         }
       }
     }
@@ -129,22 +129,22 @@ export const getPartyText = function getPartyText(arg0) {
     if (activityActionType !== tmp.LISTEN) {
       if (maxPartySize > 0) {
         const intl2 = util.intl;
-        let obj = { partySize, maxPartySize };
-        let formatToPlainStringResult = intl2.formatToPlainString(util.t.gLu7NU, obj);
+        const obj2 = { partySize, maxPartySize };
+        let formatToPlainStringResult = intl2.formatToPlainString(util.t.gLu7NU, obj2);
       } else {
         const intl = util.intl;
-        obj = { partySize };
+        const obj = { partySize };
         formatToPlainStringResult = intl.formatToPlainString(util.t["65JnWC"], obj);
       }
     }
     if (maxPartySize > 0) {
       const intl4 = util.intl;
-      obj = { partySize, maxPartySize };
-      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t.Zogoou, obj);
+      const obj3 = { partySize, maxPartySize };
+      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t.Zogoou, obj3);
     } else {
       const intl3 = util.intl;
-      const obj1 = { partySize };
-      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.UGei0j, obj1);
+      const obj4 = { partySize };
+      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.UGei0j, obj4);
     }
   }
 };

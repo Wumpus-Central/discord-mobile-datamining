@@ -1,8 +1,10 @@
-// === Module 12831: ContactSyncBackToLanding ===
+// === Module 12832: ContactSyncBackToLanding ===
 
-// Module 12831 (ContactSyncBackToLanding)
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12805 */;
+// Module 12832 (ContactSyncBackToLanding)
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12806 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 

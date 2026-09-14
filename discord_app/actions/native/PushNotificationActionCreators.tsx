@@ -1,16 +1,16 @@
-// === Module 12541: PushNotificationActionCreators ===
+// === Module 12542: PushNotificationActionCreators ===
 
-// Module 12541 (PushNotificationActionCreators)
+// Module 12542 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TokenManagerAll from "TokenManager" /* 1099 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12542 */;
+import MultiAccountStore from "MultiAccountStore" /* 12543 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -37,8 +37,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -51,41 +51,39 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp5;
             closure_129_0 = pushSyncToken;
             let token2;
             if (null == pushSyncToken.pushSyncToken) {
-              let obj5 = TokenManagerAll;
-              const token = obj5.getToken(pushSyncToken.id);
+              const token = TokenManagerAll.getToken(pushSyncToken.id);
               if (null == token) {
                 c6 = 3;
                 return { value: null, done: true };
               } else {
                 c4 = 1;
                 const HTTP = HTTPUtils.HTTP;
-                const obj1 = { url: constants.DEVICES_SYNC_TOKEN, headers: null, rejectWithError: false };
-                const obj2 = { authorization: token };
-                obj1.headers = obj2;
+                const obj5 = { url: constants.DEVICES_SYNC_TOKEN, headers: null, rejectWithError: false };
+                const obj7 = { authorization: token };
+                obj5.headers = obj7;
                 c5 = 2;
                 c6 = 1;
-                let obj3 = { value: HTTP.get(obj1), done: false };
-                return obj3;
+                const obj8 = { value: HTTP.get(obj5), done: false };
+                return obj8;
               }
             } else {
               c6 = 3;
-              const obj4 = { value: pushSyncToken.pushSyncToken, done: true };
-              return obj4;
+              const obj9 = { value: pushSyncToken.pushSyncToken, done: true };
+              return obj9;
             }
           }
         } else if (1 === tmp8) {
           c4 = 0;
           closure_129_2 = closure_3;
-          obj3 = closure_130_1(closure_130_3[9]);
-          obj3.captureException(closure_129_2);
+          closure_130_1(closure_130_3[9]).captureException(closure_129_2);
           c6 = 3;
           return { value: null, done: true };
         } else if (arg0 === 1) {
@@ -94,16 +92,15 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           token2 = value.body.token;
           c4 = 0;
-          obj = closure_130_2(closure_130_3[10]);
-          obj.updatePushSyncToken(closure_129_0.id, token2);
+          closure_130_2(closure_130_3[10]).updatePushSyncToken(closure_129_0.id, token2);
           c6 = 3;
-          const obj6 = { value: token2, done: true };
-          return obj6;
+          const obj11 = { value: token2, done: true };
+          return obj11;
         }
       } catch (tmp31) {
         closure_3 = tmp31;
@@ -119,7 +116,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12543).MAX_PUSH_SYNC_ACCOUNTS;
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12544).MAX_PUSH_SYNC_ACCOUNTS;
 const PushNotificationConstants = fn(6697);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
@@ -139,23 +136,23 @@ export default {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      let obj = TrackedHTTPUtilsDefault;
       const request = { url: constants.DEVICES, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       if (flag) {
         let tmp8 = closure_1_12;
       } else {
         tmp8 = map1();
       }
-      obj = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
+      const obj2 = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
+      const obj = TrackedHTTPUtilsDefault;
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = !closure_1_14;
       }
-      obj.bypass_server_throttling_supported = isAndroidResult;
-      obj.bundle_id = bundle_id;
-      request.body = obj;
-      obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
-      request.trackedActionData = obj;
+      obj2.bypass_server_throttling_supported = isAndroidResult;
+      obj2.bundle_id = bundle_id;
+      request.body = obj2;
+      const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
+      request.trackedActionData = obj3;
       syncDeviceResult = obj.post(request);
       const tmp2Result = PlatformUtils;
     }
@@ -188,28 +185,26 @@ export default {
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          let obj2 = { value, done: true };
-          return obj2;
+          return { value, done: true };
         } else {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1272).HTTP;
+              const HTTP = tmp2(1270).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
               } else {
                 tmp9 = closure_1_13();
               }
-              const obj3 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1369).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
-              obj2 = tmp2(1150);
-              let isAndroidResult = obj2.isAndroid();
+              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1369).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
+              let isAndroidResult = tmp2(1363).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
-              obj3.bypass_server_throttling_supported = isAndroidResult;
-              obj3.bundle_id = bundle_id;
-              request.body = obj3;
+              obj7.bypass_server_throttling_supported = isAndroidResult;
+              obj7.bundle_id = bundle_id;
+              request.body = obj7;
               const v2 = 2;
               dependencyMap = 1;
               return { value: HTTP.put(request), done: false };
@@ -223,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12546).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12546);
+          const result = v2(12547).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12547);
         }
       }
       return value;
@@ -233,29 +228,25 @@ export default {
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
     const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
-    let obj = { provider: map1(), token };
-    request.body = obj;
-    obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
-    request.trackedActionData = obj;
+    const obj = TrackedHTTPUtilsDefault;
+    request.body = { provider: map1(), token };
+    const obj2 = { provider: map1(), token };
+    request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     return obj.delete(request);
   }
 };
 export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
   const permissionState = PROMPT_SEEN;
   DispatcherDefault.wait(() => {
-    const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState });
   });
 };
 export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
-  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType });
 };
 export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
-  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER });
 };
 export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(authorizationStatus) {
-  const obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus });
 };

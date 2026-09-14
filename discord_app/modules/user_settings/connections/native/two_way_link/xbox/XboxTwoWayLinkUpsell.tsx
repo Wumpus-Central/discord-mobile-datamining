@@ -1,13 +1,13 @@
-// === Module 15054: XboxTwoWayLinkUpsell ===
+// === Module 15055: XboxTwoWayLinkUpsell ===
 
-// Module 15054 (XboxTwoWayLinkUpsell)
+// Module 15055 (XboxTwoWayLinkUpsell)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9346 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15055 */;
-import _modDef15056 from "module_15056" /* 15056 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15056 */;
+import _modDef15057 from "module_15057" /* 15057 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,21 +20,20 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
 
 export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
-  let obj = HelpdeskUtilsDefault;
-  const articleURL = obj.getArticleURL(constants.XBOX_CONNECTION);
-  obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
-  const intl = util.intl;
-  obj.title = intl.string(util.t["2okkZV"]);
-  const intl2 = util.intl;
-  obj.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
-  obj = { style: closure_6().upsellImage, source: null, resizeMode: "contain" };
   const tmp = closure_6();
-  obj.source = _modDef15056;
-  obj.img = jsx(FastImageDefault, { style: closure_6().upsellImage, source: null, resizeMode: "contain" });
-  obj.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
-  obj.onPress = function onPress() {
+  const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
+  const obj2 = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["2okkZV"]);
+  const intl2 = util.intl;
+  obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
+  const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
+  obj3.source = _modDef15057;
+  obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
+  obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
+  obj2.onPress = function onPress() {
     const items = [constants.RELINK_UPSELL];
     return XboxLinkModalActionCreatorsDefault.showModal(items);
   };
-  return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, { style: closure_6().upsellImage, source: null, resizeMode: "contain" });
+  return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null });
 };

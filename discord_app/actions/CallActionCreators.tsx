@@ -3,14 +3,16 @@
 // Module 9311 (CallActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
 import useCanRing from "useCanRing" /* 9303 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
@@ -30,8 +32,8 @@ export default {
       if (!RelationshipStore.isBlocked(arg3)) {
         _require = UserStore.getUser(arg3);
         const HTTP = require("HTTPUtils").HTTP;
-        let obj = { url: self.CALL(id), oldFormErrors: true, rejectWithError: true };
-        value = HTTP.get(obj);
+        let obj2 = { url: self.CALL(id), oldFormErrors: true, rejectWithError: true };
+        value = HTTP.get(obj2);
         value.then((body) => {
           let ringable = closure_3;
           if (closure_3) {
@@ -45,32 +47,28 @@ export default {
             closure_5(closure_1);
           }
         }, () => {
-          let obj = AnalyticsUtilsDefault;
-          obj.track(constants.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
-          obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+          AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
+          const obj3 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
           const intl = util.intl;
-          obj.title = intl.string(util.t.My50nf);
+          obj3.title = intl.string(util.t.My50nf);
           const intl2 = util.intl;
           let str = "";
           if (null != user) {
             str = user.username;
           }
-          obj.body = intl2.format(util.t.IdKo2z, { username: str });
+          obj3.body = intl2.format(util.t.IdKo2z, { username: str });
           const intl3 = util.intl;
-          obj.confirmText = intl3.string(util.t["PMsq/b"]);
+          obj3.confirmText = intl3.string(util.t["PMsq/b"]);
           const intl4 = util.intl;
-          obj.cancelText = intl4.string(util.t.BddRzS);
-          obj.onConfirm = function onConfirm() {
-            closure_1(closure_2[9]);
-            const obj = { userId, context: { location: "Call" } };
-            obj.addRelationship(obj);
+          obj3.cancelText = intl4.string(util.t.BddRzS);
+          obj3.onConfirm = function onConfirm() {
+            closure_1(closure_2[9]).addRelationship({ userId, context: { location: "Call" } });
           };
-          AlertActionCreatorsDefault.show(obj);
+          AlertActionCreatorsDefault.show(obj3);
         });
       }
     } else {
-      obj = SelectedChannelActionCreatorsDefault;
-      let voiceChannel = obj.selectVoiceChannel(id, MediaEngineStore);
+      let voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(id, MediaEngineStore);
       if (arg2) {
         self.ring(id);
       }
@@ -82,23 +80,22 @@ export default {
   ring(channelId, items, gdm_invite) {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      let obj = useCanRing;
       const CALLABLE = constants2.CALLABLE;
-      const result = obj.canRingUsersInChannel(channel);
+      const result = useCanRing.canRingUsersInChannel(channel);
       if (result) {
         const HTTP = HTTPUtils.HTTP;
         const request = { url: timestampProducer.CALL_RING(channelId), body: null, oldFormErrors: true, rejectWithError: true };
-        obj = { recipients: items, analytics_location: gdm_invite };
-        request.body = obj;
+        const obj3 = { recipients: items, analytics_location: gdm_invite };
+        request.body = obj3;
         HTTP.post(request);
         if (tmp14) {
-          obj = { type: "GUILD_LOCAL_RING_START", ringing: items, guildId: channel.guild_id };
-          DispatcherDefault.dispatch(obj);
+          const obj4 = { type: "GUILD_LOCAL_RING_START", ringing: items, guildId: channel.guild_id };
+          DispatcherDefault.dispatch(obj4);
         }
         tmp14 = channel.type === constants3.GUILD_VOICE && null != items;
       } else if (tmp7) {
-        const obj1 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
-        obj1.dispatch(obj1);
+        const obj5 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
+        DispatcherDefault.dispatch(obj5);
       }
     }
   },

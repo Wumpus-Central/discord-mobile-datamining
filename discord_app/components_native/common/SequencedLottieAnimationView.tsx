@@ -1,6 +1,6 @@
-// === Module 13711: SequencedLottieAnimationView ===
+// === Module 13712: SequencedLottieAnimationView ===
 
-// Module 13711 (SequencedLottieAnimationView)
+// Module 13712 (SequencedLottieAnimationView)
 import _modDef5611 from "module_5611" /* 5611 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -65,20 +65,20 @@ prototype["render"] = function render() {
   }
   let tmp4;
   if (undefined !== json) {
-    let obj = { aspectRatio: source.w / source.h };
+    const obj = { aspectRatio: source.w / source.h };
     tmp4 = obj;
   }
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp4, style];
-  obj.style = items;
-  obj = { source, style: null };
+  obj2.style = items;
+  const obj5 = { source, style: null };
   const items1 = [tmp4, style];
-  obj.style = items1;
+  obj5.style = items1;
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj.children = jsx(_modDef5611, { source, style: null });
-  return <View source={source} style={null} />;
+  obj2.children = jsx(_modDef5611, { source, style: null });
+  return <View style={null}>{null}</View>;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };
 const size = fn(2);

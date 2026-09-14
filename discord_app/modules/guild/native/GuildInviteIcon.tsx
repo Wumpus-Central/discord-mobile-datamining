@@ -1,13 +1,13 @@
-// === Module 12788: GuildInviteIcon ===
+// === Module 12789: GuildInviteIcon ===
 
-// Module 12788 (GuildInviteIcon)
+// Module 12789 (GuildInviteIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import StringUtils from "StringUtils" /* 1925 */;
 import FastImageDefault from "FastImage" /* 5668 */;
-import StylesheetUtils from "StylesheetUtils" /* 12789 */;
+import StylesheetUtils from "StylesheetUtils" /* 12790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,15 +15,14 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let obj = { SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 let closure_5 = [16, 16, 14, 14, 12];
-fn(4636);
-obj = { icon: { justifyContent: "center", alignItems: "center", overflow: "hidden" }, iconSmall: { width: 40, height: 40, borderRadius: 20 }, iconMedium: { width: 80, height: 80, borderRadius: 40 }, iconLarge: null, textContainer: null, acronym: null };
+const createStyles = fn(4636);
+const obj3 = { icon: { justifyContent: "center", alignItems: "center", overflow: "hidden" }, iconSmall: { width: 40, height: 40, borderRadius: 20 }, iconMedium: { width: 80, height: 80, borderRadius: 40 }, iconLarge: null, textContainer: null, acronym: null };
 let size = { width: 128, height: 128, borderRadius: nativeDefault.radii.round };
-obj.iconLarge = size;
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj.textContainer = obj;
-const createStyles = { color: nativeDefault.unsafe_rawColors.WHITE };
-obj.acronym = createStyles;
-let closure_6 = createStyles.createLegacyClassComponentStyles(obj);
+obj3.iconLarge = size;
+obj3.textContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj3.acronym = { color: nativeDefault.unsafe_rawColors.WHITE };
+let closure_6 = createStyles.createLegacyClassComponentStyles(obj3);
 const PureComponent = noop.PureComponent;
 class GuildInviteIcon extends PureComponent {
 }
@@ -32,19 +31,16 @@ GuildInviteIcon.prototype["render"] = function render() {
   const props = this.props;
   ({ style, guild } = props);
   ({ size, textScale } = props);
-  let obj = StylesheetUtils;
-  const getClassResult = obj.getClass(tmp, "icon", size);
+  const getClassResult = StylesheetUtils.getClass(tmp, "icon", size);
   const intl = util.intl;
-  obj = { guildName: guild.name };
-  const formatToPlainStringResult = intl.formatToPlainString(util.t.xm6W9D, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(util.t.xm6W9D, { guildName: guild.name });
   if (null != guild.icon) {
-    obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj7.id, icon: obj7.icon } = guild);
-    const guildIconSource = AvatarUtilsDefault.getGuildIconSource(obj);
-    const obj1 = { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null };
+    const guildIconSource = AvatarUtilsDefault.getGuildIconSource({ id: null, icon: null, canAnimate: true, size: 128 });
+    const obj4 = { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null };
     const items = [tmp.icon, getClassResult, style];
-    obj1.style = items;
-    obj1.source = guildIconSource;
+    obj4.style = items;
+    obj4.source = guildIconSource;
     return jsx(FastImageDefault, { accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, source: null });
   } else {
     const acronym = StringUtils.getAcronym(guild.name);
@@ -52,22 +48,23 @@ GuildInviteIcon.prototype["render"] = function render() {
     if (num == null) {
       num = 10;
     }
-    const obj2 = { accessible: true, accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, children: null };
+    const obj5 = { accessible: true, accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, style: null, children: null };
     const items1 = [, , , ];
     ({ textContainer: arr[0], icon: arr[1] } = tmp);
     items1[2] = getClassResult;
     items1[3] = style;
-    obj2.style = items1;
+    obj5.style = items1;
     const result = num * textScale;
-    const obj3 = { numberOfLines: 1, style: null, children: null };
+    const obj8 = { numberOfLines: 1, style: null, children: null };
     const items2 = [tmp.acronym, ];
-    const obj4 = { fontSize: result };
-    items2[1] = obj4;
-    obj3.style = items2;
-    obj3.children = acronym;
-    obj2.children = jsx(native.LegacyText, { numberOfLines: 1, style: null, children: null });
+    const obj9 = { fontSize: result };
+    items2[1] = obj9;
+    obj8.style = items2;
+    obj8.children = acronym;
+    obj5.children = jsx(native.LegacyText, { numberOfLines: 1, style: null, children: null });
     return <View accessible accessibilityRole="image" accessibilityLabel={formatToPlainStringResult} style={null}>{null}</View>;
   }
+  const obj2 = { guildName: guild.name };
 };
 GuildInviteIcon.defaultProps = { size: obj.SMALL, textScale: 1 };
 GuildInviteIcon.Sizes = obj;

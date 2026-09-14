@@ -1,6 +1,6 @@
-// === Module 16919: UserProfileYourFriendsCard ===
+// === Module 16921: UserProfileYourFriendsCard ===
 
-// Module 16919 (UserProfileYourFriendsCard)
+// Module 16921 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
@@ -10,21 +10,22 @@ import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -4 };
-let closure_12 = Object.freeze(obj);
+let closure_12 = Object.freeze({ direction: fn(1176).CutoutDirection.RIGHT, inset: -4 });
 const createStyles = fn(4636);
-obj = { pressable: null, label: null, facepile: null, avatars: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
-obj.pressable = obj;
-obj.label = { flex: 1 };
-obj.facepile = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
-obj.avatars = { flexDirection: "row" };
-let closure_13 = createStyles.createStyles(obj);
+const obj3 = { pressable: null, label: null, facepile: null, avatars: null };
+let obj = { direction: fn(1176).CutoutDirection.RIGHT, inset: -4 };
+obj3.pressable = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
+obj3.label = { flex: 1 };
+obj3.facepile = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
+obj3.avatars = { flexDirection: "row" };
+let closure_13 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
@@ -37,15 +38,15 @@ export default function UserProfileYourFriendsCard(arg0) {
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = require("initialize");
   let items = [UserAffinitiesV2Store];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
+  let obj = require("initialize");
   const items1 = [RelationshipStore];
   stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
     const userAffinitiesV2 = closure_0(9978).fetchUserAffinitiesV2();
@@ -56,7 +57,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     const chainResult = _modDef12.chain(stateFromStoresArray);
     const mapped = found.take(5).map(UserStore.getUser);
     const takeResult = found.take(5);
-    let valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
+    const valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
@@ -66,9 +67,9 @@ export default function UserProfileYourFriendsCard(arg0) {
       const uniqResult = mapped1.uniq();
       const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(UserStore.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      valueResult = mapped2.filter(GlobalUtils.isNotNullish).value();
+      const valueResult2 = mapped2.filter(GlobalUtils.isNotNullish).value();
       const items = [];
-      HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(valueResult, 0));
+      HermesBuiltin.arraySpread(valueResult2, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
       const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
     }
@@ -77,39 +78,39 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items3 = [first, , ];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);
   const memo = stateFromStoresArray1.useMemo(() => {
-    let obj = { style: closure_0.facepile, children: null };
-    obj = {
-      style: closure_0.avatars,
-      children: first.map((user, index) => {
-        let obj = { style: null, children: null };
-        obj = { transform: null };
-        obj = { translateX: 4 * (first.length - 1 - index) };
-        const items = [obj];
-        obj.transform = items;
-        obj.style = obj;
-        const obj1 = { user, guildId: "r", size: closure_0(1178).AvatarSizes.XSMALL, cutout: null };
-        let tmp3;
-        if (index < first.length - 1) {
-          tmp3 = closure_2_12;
-        }
-        obj1.cutout = tmp3;
-        obj.children = closure_2_10(closure_0(1178).CutoutableAvatarImage, obj1);
-        return closure_2_10(gameRelationshipsByType, obj, user.id);
+    let obj = {
+      style: closure_0.facepile,
+      children: closure_2_10(View, {
+        style: closure_0.avatars,
+        children: first.map((user, index) => {
+          const obj = { style: null, children: null };
+          const obj2 = { transform: null };
+          const items = [{ translateX: 4 * (first.length - 1 - index) }];
+          obj2.transform = items;
+          obj.style = obj2;
+          const obj4 = { user, guildId: "r", size: closure_0(1176).AvatarSizes.XSMALL, cutout: null };
+          let tmp3;
+          if (index < first.length - 1) {
+            tmp3 = closure_2_12;
+          }
+          obj4.cutout = tmp3;
+          obj.children = closure_2_10(closure_0(1176).CutoutableAvatarImage, obj4);
+          return closure_2_10(gameRelationshipsByType, obj, user.id);
+        })
       })
     };
-    obj.children = closure_2_10(View, obj);
     return closure_2_10(View, obj);
   }, items3);
-  obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
+  let obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
   const intl = require("util").intl;
-  obj.accessibilityLabel = intl.string(require("util").t.TdEu5X);
-  obj.onPress = navigateToFriends;
+  obj4.accessibilityLabel = intl.string(require("util").t.TdEu5X);
+  obj4.onPress = navigateToFriends;
   const items4 = [style, tmp.pressable];
-  obj.style = items4;
-  obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
+  obj4.style = items4;
+  const obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl2 = require("util").intl;
-  obj.children = intl2.string(require("util").t.TdEu5X);
-  const items5 = [closure_10(require("Text/Text").Text, obj), memo, closure_10(require("ChevronSmallRightIcon").ChevronSmallRightIcon, { size: "sm" })];
-  obj.children = items5;
-  return closure_11(require("Pressables").PressableOpacity, obj);
+  obj5.children = intl2.string(require("util").t.TdEu5X);
+  const items5 = [closure_10(require("Text/Text").Text, obj5), memo, closure_10(require("ChevronSmallRightIcon").ChevronSmallRightIcon, { size: "sm" })];
+  obj4.children = items5;
+  return closure_11(require("Pressables").PressableOpacity, obj4);
 };

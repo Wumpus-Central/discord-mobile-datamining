@@ -4,7 +4,7 @@
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Form from "Form" /* 8716 */;
 import CallsUtils from "CallsUtils" /* 9211 */;
 import showAudioOutputSelector from "showAudioOutputSelector" /* 9243 */;
@@ -26,16 +26,16 @@ function ExpandedControlItemIcon(iconSource) {
   if (null == iconSource) {
     return null;
   } else {
-    let obj = { size: native.Icon.Sizes.MEDIUM, source: iconSource, style: tmp.formTintColor, disableColor: true };
-    const tmp10 = React6(native.Icon, obj);
+    const obj2 = { size: native.Icon.Sizes.MEDIUM, source: iconSource, style: tmp.formTintColor, disableColor: true };
+    const tmp10 = React6(native.Icon, obj2);
     let tmp6 = tmp10;
     if (iconSource.showIconSparkle) {
-      obj = { children: null };
+      const obj = { children: null };
       const items = [tmp10, , ];
-      obj = { style: tmp.sparkle2, source: _modDef10144 };
-      items[1] = React6(React4, obj);
-      const obj1 = { style: tmp.sparkle, source: _modDef10145 };
-      items[2] = React6(React4, obj1);
+      const obj3 = { style: tmp.sparkle2, source: _modDef10144 };
+      items[1] = React6(React4, obj3);
+      const obj4 = { style: tmp.sparkle, source: _modDef10145 };
+      items[2] = React6(React4, obj4);
       obj.children = items;
       tmp6 = React7(React3, obj);
     }
@@ -54,34 +54,33 @@ function ExpandedControlItem(iconSource) {
     tmp2 = null != switchValue;
   }
   if (tmp2) {
-    let obj = { tintColor: nativeDefault.unsafe_rawColors.BRAND_500, renderIosBackground: true, value: switchValue, disabled, onValueChange: onSwitchValueChange };
+    const obj = { tintColor: nativeDefault.unsafe_rawColors.BRAND_500, renderIosBackground: true, value: switchValue, disabled, onValueChange: onSwitchValueChange };
     trailing = React6(Form.FormSwitch, obj);
   }
-  obj = { disabled, leading: React6(ExpandedControlItemIcon, { iconSource: iconSource.iconSource, showIconSparkle }), label: null, onPress, trailing };
-  obj = { text: label, style: closure_11().formColor };
-  obj.label = React6(Form.FormLabel, obj);
-  return React6(Form.FormRow, obj);
+  const obj2 = { disabled, leading: React6(ExpandedControlItemIcon, { iconSource: iconSource.iconSource, showIconSparkle }), label: null, onPress, trailing };
+  const tmp = closure_11();
+  obj2.label = React6(Form.FormLabel, { text: label, style: closure_11().formColor });
+  return React6(Form.FormRow, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-fn(4636);
-let createStyles = { formTintColor: null, formColor: null, sparkle: null, sparkle2: null };
-createStyles = { tintColor: nativeDefault.colors.ICON_STRONG };
-createStyles.formTintColor = createStyles;
-createStyles.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles.sparkle = { position: "absolute", bottom: -4, right: "70%" };
-createStyles.sparkle2 = { position: "absolute", right: -5, height: 10, width: 10 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { formTintColor: { tintColor: nativeDefault.colors.ICON_STRONG }, formColor: null, sparkle: null, sparkle2: null };
+let obj3 = { tintColor: nativeDefault.colors.ICON_STRONG };
+obj2.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.sparkle = { position: "absolute", bottom: -4, right: "70%" };
+obj2.sparkle2 = { position: "absolute", right: -5, height: 10, width: 10 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/FocusedExpandedControls.tsx");
 
 export const StreamVolumeItem = function StreamVolumeItem() {
-  let obj = initialize;
+  const tmp = closure_11();
   const items = [ApplicationStreamingStore, AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
     let tmp2 = null;
     if (null != lastActiveStream) {
@@ -93,66 +92,67 @@ export const StreamVolumeItem = function StreamVolumeItem() {
     return tmp2;
   });
   let ownerId;
-  const tmp = closure_11();
   if (stateFromStores != null) {
     ownerId = stateFromStores.ownerId;
   }
   ({ effectiveVolume, handleVolumeChange } = useMuteAwareLocalVolumeDefault(ownerId, MediaEngineContextTypes.STREAM));
-  obj = { text: null, style: null };
+  const obj2 = { text: null, style: null };
   const intl = util.intl;
-  obj.text = intl.string(util.t.pEAl4b);
+  obj2.text = intl.string(util.t.pEAl4b);
   const items1 = [tmp.formColor, { marginBottom: 16 }];
-  obj.style = items1;
-  const items2 = [React6(Form.FormLabel, obj), ];
+  obj2.style = items1;
+  const items2 = [React6(Form.FormLabel, obj2), ];
   const tmp6Result = useMuteAwareLocalVolumeDefault(ownerId, MediaEngineContextTypes.STREAM);
   const tmp5Result = VolumeSliderDefault;
   let fn;
   if (tmp2Result.isAndroid()) {
     fn = () => true;
   }
-  obj = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: nativeDefault.unsafe_rawColors.WHITE, maxTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_300, accessibilityLabel: null };
+  const obj3 = { onResponderGrant: fn, value: effectiveVolume, onValueChange: handleVolumeChange, color: nativeDefault.unsafe_rawColors.WHITE, maxTrackTintColor: nativeDefault.unsafe_rawColors.PRIMARY_300, accessibilityLabel: null };
   const intl2 = util.intl;
-  obj.accessibilityLabel = intl2.string(util.t.pEAl4b);
-  items2[1] = React6(tmp5Result, obj);
+  obj3.accessibilityLabel = intl2.string(util.t.pEAl4b);
+  items2[1] = React6(tmp5Result, obj3);
   { children: null }.children = items2;
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj1 = { label: tmp11 };
-    tmp9Result = React6(Form.FormRow, obj1);
+    const obj4 = { label: tmp11 };
+    tmp9Result = React6(Form.FormRow, obj4);
   }
   return tmp9Result;
 };
 export const AudioRouteButton = function AudioRouteButton(arg0) {
   ({ channelId: require, isConnectedToVoiceChannel: importDefault } = arg0);
-  let obj = CallsUtils;
-  obj = {
+  const obj2 = {
     onPress() {
       const result = showAudioOutputSelector.showAudioOutputSelector(closure_1_0, importDefault);
     },
-    iconSource: obj.useMaskedSpeakerStates().routeSource,
+    iconSource: CallsUtils.useMaskedSpeakerStates().routeSource,
     label: null
   };
   const intl = util.intl;
-  obj.label = intl.string(util.t["A/Ly/2"]);
-  return closure_8(ExpandedControlItem, obj);
+  obj2.label = intl.string(util.t["A/Ly/2"]);
+  return closure_8(ExpandedControlItem, obj2);
 };
 export const ScreenshareButton = function ScreenshareButton(arg0) {
   ({ channel, disabled } = arg0);
   const tmp = useScreenshareUtilsDefault(channel);
   const isFeatureEnabled = tmp.isFeatureEnabled;
-  disabled = !isFeatureEnabled;
+  let disabled2 = !isFeatureEnabled;
   ({ onPress, imgSource, text } = tmp);
-  return React6(ExpandedControlItem, { disabled, onPress, iconSource, label });
+  if (isFeatureEnabled) {
+    disabled2 = disabled;
+  }
+  return React6(ExpandedControlItem, { disabled: disabled2, onPress, iconSource, label });
 };
 export const DeafenButton = function DeafenButton(disabled) {
   let flag = disabled.disabled;
   if (flag === undefined) {
     flag = false;
   }
-  let obj = VoiceActionUtils;
-  const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10148 : 10149), label: null };
+  const tmp3 = useDeafStatesDefault(disabled.channel);
+  const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10148 : 10149), label: null };
   const intl = util.intl;
-  obj.label = intl.string(util.t.wjcRFX);
-  return React6(ExpandedControlItem, obj);
+  obj2.label = intl.string(util.t.wjcRFX);
+  return React6(ExpandedControlItem, obj2);
 };

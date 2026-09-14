@@ -1,6 +1,6 @@
-// === Module 17908: NotificationSettingChannelOverrides ===
+// === Module 17909: NotificationSettingChannelOverrides ===
 
-// Module 17908 (NotificationSettingChannelOverrides)
+// Module 17909 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
@@ -11,6 +11,8 @@ import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const isGuildReadableType = fn(1961).isGuildReadableType;
@@ -18,13 +20,12 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let obj = { container: null, searchContainer: null };
-obj = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
-obj.container = obj;
-const createStyles = { paddingVertical: nativeDefault.space.PX_16 };
-obj.searchContainer = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
+obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };
 let closure_14 = createStyles.createStyles(obj);
+let obj4 = { paddingVertical: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx");
 
@@ -34,9 +35,8 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
   let first;
   let channels;
   let tmp = closure_14();
-  let obj = require("initialize");
   let items = [GuildCategoryStore];
-  stateFromStores = obj.useStateFromStores(items, () => GuildCategoryStore.getCategories(require));
+  stateFromStores = require("initialize").useStateFromStores(items, () => GuildCategoryStore.getCategories(require));
   const tmp6 = first(channels.useState(""), 2);
   first = tmp6[0];
   const items1 = [stateFromStores, first];
@@ -92,11 +92,12 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
     }
   }, items2);
   const items3 = [channels, navigation];
+  let obj = require("initialize");
   const callback = channels.useCallback((arg0, arg1) => {
     const id = tmp;
-    let obj = { icon: null, start: null, end: null, label: null, labelLineClamp: 1, arrow: true, onPress: null };
-    obj = { IconComponent: require("utils/ChannelUtils").getChannelIconComponent(channels[arg1]) };
-    obj.icon = closure_1_12(require("TableRowIcon").TableRowIcon, obj);
+    const obj = { icon: null, start: null, end: null, label: null, labelLineClamp: 1, arrow: true, onPress: null };
+    const obj2 = { IconComponent: require("utils/ChannelUtils").getChannelIconComponent(channels[arg1]) };
+    obj.icon = closure_1_12(require("TableRowIcon").TableRowIcon, obj2);
     obj.start = 0 === arg1;
     obj.end = arg1 === channels.length - 1;
     const obj3 = require("utils/ChannelUtils");
@@ -106,27 +107,27 @@ export default noop.memo(function NotificationSettingChannelOverrides(arg0) {
     };
     return closure_1_12(require("TableRow").TableRow, obj);
   }, items3);
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.searchContainer, children: null };
+  let obj2 = { style: tmp.container, children: null };
+  let obj3 = { style: tmp.searchContainer, children: null };
   const tmp10 = navigation(stateFromStores[18])();
-  const obj1 = { placeholder: null, onChange: null };
+  const obj4 = { placeholder: null, onChange: null };
   let intl = require("util").intl;
-  obj1.placeholder = intl.string(require("util").t["5h0QOP"]);
-  obj1.onChange = tmp6[1];
-  obj.children = closure_12(require("SearchField").SearchField, obj1);
-  const items4 = [closure_12(View, obj), ];
+  obj4.placeholder = intl.string(require("util").t["5h0QOP"]);
+  obj4.onChange = tmp6[1];
+  obj3.children = closure_12(require("SearchField").SearchField, obj4);
+  const items4 = [closure_12(View, obj3), ];
   if (0 === channels.length) {
-    const obj2 = { Illustration: require("generated/NoResults").NoResults, title: null, body: null };
+    const obj5 = { Illustration: require("generated/NoResults").NoResults, title: null, body: null };
     let intl2 = require("util").intl;
-    obj2.title = intl2.string(require("util").t.wM7uRI);
+    obj5.title = intl2.string(require("util").t.wM7uRI);
     const intl3 = require("util").intl;
-    obj2.body = intl3.string(require("util").t.f5cMAg);
-    let tmp15Result = closure_12(require("native").EmptyState, obj2);
+    obj5.body = intl3.string(require("util").t.f5cMAg);
+    let tmp15Result = closure_12(require("native").EmptyState, obj5);
   } else {
-    let obj3 = { sections: memo.sections, renderItem: callback, itemSize: tmp10, insetEnd: navigation(stateFromStores[12])().insets.bottom, estimatedListSize: "windowSize", placeholderConfig: tmp12, wrapChildren: true };
-    tmp15Result = closure_12(navigation(tmp3[26]), obj3);
+    const obj6 = { sections: memo.sections, renderItem: callback, itemSize: tmp10, insetEnd: navigation(stateFromStores[12])().insets.bottom, estimatedListSize: "windowSize", placeholderConfig: tmp12, wrapChildren: true };
+    tmp15Result = closure_12(navigation(tmp3[26]), obj6);
   }
   items4[1] = tmp15Result;
-  obj.children = items4;
-  return closure_13(View, obj);
+  obj2.children = items4;
+  return closure_13(View, obj2);
 });

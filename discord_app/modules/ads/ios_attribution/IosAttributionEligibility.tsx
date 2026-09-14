@@ -1,10 +1,10 @@
-// === Module 11621: IosAttributionEligibility ===
+// === Module 11622: IosAttributionEligibility ===
 
-// Module 11621 (IosAttributionEligibility)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 11622 (IosAttributionEligibility)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import QuestDataUtils from "QuestDataUtils" /* 7801 */;
-import apexExperiment from "apexExperiment" /* 11622 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 11624 */;
+import apexExperiment from "apexExperiment" /* 11623 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 11625 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
@@ -30,15 +30,14 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    let tmpResult = PlatformUtils;
-    enabled = tmpResult.isIOS();
+    enabled = PlatformUtils.isIOS();
+    const tmpResult = PlatformUtils;
   }
   let activeIosAttributionFramework = null;
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = QuestDataUtils;
-      const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
+      const adContext = QuestDataUtils.getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
         prop = adContext.is_campaign_ios_attribution_enabled;
@@ -46,8 +45,9 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
       activeIosAttributionFramework = null;
       if (true === prop) {
         activeIosAttributionFramework = IosAttributionNativeModule.getActiveIosAttributionFramework();
-        const tmpResult1 = IosAttributionNativeModule;
+        const tmpResult4 = IosAttributionNativeModule;
       }
+      const tmpResult3 = QuestDataUtils;
     }
   }
   return activeIosAttributionFramework;

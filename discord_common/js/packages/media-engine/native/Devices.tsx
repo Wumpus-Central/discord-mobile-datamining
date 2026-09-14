@@ -1,7 +1,7 @@
 // === Module 4762: Devices ===
 
 // Module 4762 (Devices)
-import formatDefault from "format" /* 1341 */;
+import formatDefault from "format" /* 1339 */;
 import Constants from "Constants" /* 4693 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,6 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
   const mapped = items.map((item, index) => {
     ({ guid, name, index } = item);
     if (VIDEO_INPUT === constants.VIDEO_INPUT) {
-      let obj = /^front/i;
       if (obj.test(name)) {
         let tmp12 = id;
         let str2 = "Default";
@@ -23,8 +22,8 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
       if (null != index) {
         tmp13 = index;
       }
-      obj = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
-      return obj;
+      const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+      return obj3;
     }
     if (obj2.test(name)) {
       c1 = true;
@@ -57,12 +56,12 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     isMatch = null != family;
   }
   if (isMatch) {
-    let obj = /^win/i;
-    isMatch = obj.test(formatDefault.os.family);
+    isMatch = /^win/i.test(formatDefault.os.family);
+    const obj = /^win/i;
   }
   if (isMatch) {
-    obj = { id, type: AUDIO_INPUT, index: -1, name: "Default" };
-    mapped.unshift(obj);
+    const obj2 = { id, type: AUDIO_INPUT, index: -1, name: "Default" };
+    mapped.unshift(obj2);
   }
   return mapped;
 };
@@ -76,7 +75,6 @@ export const getAudioInputDevices = function getAudioInputDevices() {
       const mapped = arr.map((item, index) => {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
-          let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = id;
             let str2 = "Default";
@@ -85,8 +83,8 @@ export const getAudioInputDevices = function getAudioInputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
-          return obj;
+          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
@@ -119,12 +117,12 @@ export const getAudioInputDevices = function getAudioInputDevices() {
         isMatch = null != family;
       }
       if (isMatch) {
-        let obj = /^win/i;
-        isMatch = obj.test(formatDefault.os.family);
+        isMatch = /^win/i.test(formatDefault.os.family);
+        const obj = /^win/i;
       }
       if (isMatch) {
-        obj = { id, type: AUDIO_INPUT, index: -1, name: "Default" };
-        arr = mapped.unshift(obj);
+        const obj2 = { id, type: AUDIO_INPUT, index: -1, name: "Default" };
+        arr = mapped.unshift(obj2);
       }
       return closure_0(mapped);
     });
@@ -140,7 +138,6 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
       const mapped = arr.map((item, index) => {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
-          let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = id;
             let str2 = "Default";
@@ -149,8 +146,8 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
-          return obj;
+          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
@@ -183,12 +180,12 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
         isMatch = null != family;
       }
       if (isMatch) {
-        let obj = /^win/i;
-        isMatch = obj.test(formatDefault.os.family);
+        isMatch = /^win/i.test(formatDefault.os.family);
+        const obj = /^win/i;
       }
       if (isMatch) {
-        obj = { id, type: AUDIO_OUTPUT, index: -1, name: "Default" };
-        arr = mapped.unshift(obj);
+        const obj2 = { id, type: AUDIO_OUTPUT, index: -1, name: "Default" };
+        arr = mapped.unshift(obj2);
       }
       return closure_0(mapped);
     });
@@ -204,7 +201,6 @@ export const getVideoInputDevices = function getVideoInputDevices() {
       const mapped = arr.map((item, index) => {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
-          let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = id;
             let str2 = "Default";
@@ -213,8 +209,8 @@ export const getVideoInputDevices = function getVideoInputDevices() {
           if (null != index) {
             tmp13 = index;
           }
-          obj = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
-          return obj;
+          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
@@ -247,12 +243,12 @@ export const getVideoInputDevices = function getVideoInputDevices() {
         isMatch = null != family;
       }
       if (isMatch) {
-        let obj = /^win/i;
-        isMatch = obj.test(formatDefault.os.family);
+        isMatch = /^win/i.test(formatDefault.os.family);
+        const obj = /^win/i;
       }
       if (isMatch) {
-        obj = { id, type: VIDEO_INPUT, index: -1, name: "Default" };
-        arr = mapped.unshift(obj);
+        const obj2 = { id, type: VIDEO_INPUT, index: -1, name: "Default" };
+        arr = mapped.unshift(obj2);
       }
       return closure_0(mapped);
     });

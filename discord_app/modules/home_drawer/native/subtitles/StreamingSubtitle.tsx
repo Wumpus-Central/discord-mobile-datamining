@@ -1,6 +1,6 @@
-// === Module 16417: StreamingSubtitle ===
+// === Module 16419: StreamingSubtitle ===
 
-// Module 16417 (StreamingSubtitle)
+// Module 16419 (StreamingSubtitle)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 
 export default function StreamingSubtitle(arg0) {
   ({ guildId, streamingUser } = arg0);
-  let obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
+  const obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
   const intl = util.intl;
-  obj = { username: NicknameUtilsDefault.getName(guildId, null, streamingUser) };
-  obj.children = intl.format(util.t.k5IKep, obj);
-  return jsx(Text_Text.Text, { username: NicknameUtilsDefault.getName(guildId, null, streamingUser) });
+  const obj2 = { username: NicknameUtilsDefault.getName(guildId, null, streamingUser) };
+  obj.children = intl.format(util.t.k5IKep, obj2);
+  return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null });
 };

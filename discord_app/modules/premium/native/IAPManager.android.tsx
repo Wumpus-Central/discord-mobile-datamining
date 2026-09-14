@@ -1,9 +1,9 @@
-// === Module 17501: IAPManager ===
+// === Module 17503: IAPManager ===
 
-// Module 17501 (IAPManager)
+// Module 17503 (IAPManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
-let prototype = function IAPManager() {
+const prototype = function IAPManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -17,8 +17,8 @@ let prototype = function IAPManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
 
-export default prototype;
+export default prototype1;

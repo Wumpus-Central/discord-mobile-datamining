@@ -1,22 +1,22 @@
-// === Module 12219: PlaceholderAppRow ===
+// === Module 12220: PlaceholderAppRow ===
 
-// Module 12219 (PlaceholderAppRow)
+// Module 12220 (PlaceholderAppRow)
 import nativeDefault from "native" /* 576 */;
 import TableRow from "TableRow" /* 5686 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12183 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
+const createStyles = fn(4636);
+let obj2 = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-createStyles.loadingAppIcon = size;
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
-createStyles.loadingTextPlaceholder = createStyles;
-createStyles.loadingTextPlaceholderSmall = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
-let closure_4 = createStyles.createStyles(createStyles);
+obj2.loadingAppIcon = size;
+obj2.loadingTextPlaceholder = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+obj2.loadingTextPlaceholderSmall = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+let closure_4 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
 
@@ -30,27 +30,25 @@ export default function PlaceholderAppRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = closure_4();
-  let obj = usePlaceholderSize;
-  const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderSize;
-  const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
-  obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
-  obj = { style: tmp.loadingAppIcon };
-  obj.icon = <View style={tmp.loadingAppIcon} />;
-  obj1 = { style: null };
-  const items = [tmp.loadingTextPlaceholder, { width: "" + placeholderWidth + "%" }];
-  obj1.style = items;
-  obj.label = <View style={null} />;
-  const obj3 = { style: null };
+  const placeholderWidth = usePlaceholderSize.usePlaceholderWidth(10, 50);
+  const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
+  const obj3 = { icon: <View style={tmp.loadingAppIcon} />, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
+  const obj5 = { style: null };
+  const items = [tmp.loadingTextPlaceholder, ];
+  const obj4 = { style: tmp.loadingAppIcon };
+  items[1] = { width: "" + placeholderWidth + "%" };
+  obj5.style = items;
+  obj3.label = <View style={null} />;
+  const obj7 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall, ];
-  const obj2 = { width: "" + placeholderWidth + "%" };
+  const obj6 = { width: "" + placeholderWidth + "%" };
   items1[1] = { width: "" + placeholderWidth1 + "%" };
-  obj3.style = items1;
-  obj.subLabel = <View style={null} />;
-  obj.start = flag;
-  obj.end = flag2;
-  obj.onPress = function onPress() {
+  obj7.style = items1;
+  obj3.subLabel = <View style={null} />;
+  obj3.start = flag;
+  obj3.end = flag2;
+  obj3.onPress = function onPress() {
 
   };
-  return jsx(TableRow.TableRow, { style: tmp.loadingAppIcon });
+  return jsx(TableRow.TableRow, { icon: <View style={tmp.loadingAppIcon} />, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null });
 };

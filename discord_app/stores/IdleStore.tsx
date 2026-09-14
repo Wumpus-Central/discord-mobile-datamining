@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import DiscordNativeDefault from "DiscordNative" /* 4257 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
@@ -19,9 +19,8 @@ function checkIdleAFK() {
       tmp2 = c12;
     }
     if (!tmp2) {
-      let obj = PlatformUtils;
-      tmp2 = obj.isAndroid() && closure_13;
-      const tmp5 = obj.isAndroid() && closure_13;
+      tmp2 = PlatformUtils.isAndroid() && closure_13;
+      const tmp5 = PlatformUtils.isAndroid() && closure_13;
     }
     if (!tmp2) {
       if (idle) {
@@ -59,8 +58,8 @@ function checkIdleAFK() {
     }
   }
   if (!idle) {
-    obj = { type: "IDLE", idle: true, idleSince };
-    DispatcherDefault.dispatch(obj);
+    const obj4 = { type: "IDLE", idle: true, idleSince };
+    DispatcherDefault.dispatch(obj4);
   }
 }
 const Constants = fn(1074);
@@ -72,13 +71,13 @@ let afk = false;
 let c11 = false;
 let c12 = false;
 let closure_13 = false;
-if (fn(1150).isPlatformEmbedded) {
+if (fn(1363).isPlatformEmbedded) {
   const importDefaultResult = DiscordNativeDefault;
-  let powerMonitor;
+  let powerMonitor1;
   if (importDefaultResult != null) {
-    powerMonitor = importDefaultResult.powerMonitor;
+    powerMonitor1 = importDefaultResult.powerMonitor;
   }
-  if (null != powerMonitor) {
+  if (null != powerMonitor1) {
     function checkNativeIdle() {
       const tmp3 = DiscordNativeDefault;
       let getSystemIdleTimeMs;
@@ -125,7 +124,7 @@ if (fn(1150).isPlatformEmbedded) {
       }
     }
     checkNativeIdle();
-    powerMonitor = DiscordNativeDefault.powerMonitor;
+    let powerMonitor = DiscordNativeDefault.powerMonitor;
     powerMonitor.on("resume", () => {
       c11 = false;
       checkIdleAFK();
@@ -225,7 +224,7 @@ if (fn(1150).isPlatformEmbedded) {
     return c12;
   };
   IdleStore.displayName = "IdleStore";
-  obj = {
+  let obj2 = {
     IDLE: function handleIdle(idle) {
         idle = idle.idle;
       },
@@ -277,7 +276,7 @@ if (fn(1150).isPlatformEmbedded) {
     OVERLAY_INITIALIZE: handleGenericAction,
     OVERLAY_SET_INPUT_LOCKED: handleGenericAction
   };
-  const idleStore = new IdleStore(DispatcherDefault, obj);
+  const idleStore = new IdleStore(DispatcherDefault, obj2);
   const result = fn(2).fileFinishedImporting("stores/IdleStore.tsx");
   exports.default = idleStore;
 }

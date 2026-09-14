@@ -1,7 +1,7 @@
-// === Module 10474: LayoutUtils ===
+// === Module 10475: LayoutUtils ===
 
-// Module 10474 (LayoutUtils)
-import native from "native" /* 1178 */;
+// Module 10475 (LayoutUtils)
+import native from "native" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,21 +17,21 @@ export const GappedList = function GappedList(gap) {
   }
   const renderGap = gap.renderGap;
   let found;
-  let Children = found.Children;
+  const Children = found.Children;
   found = Children.toArray(gap.children).filter((item) => null != item);
   let obj = { children: null };
-  Children = found.Children;
-  obj.children = Children.map(found, (arg0, arg1) => {
+  const Children1 = found.Children;
+  obj.children = Children1.map(found, (arg0, arg1) => {
     const items = [arg0, ];
     if (arg1 === found.length - 1) {
-      let obj = { children: null };
+      const obj2 = { children: null };
       items[1] = tmp3;
-      obj.children = items;
-      return tmp(tmp2, obj);
+      obj2.children = items;
+      return tmp(tmp2, obj2);
     } else if (null != renderGap) {
       let tmp4Result = tmp4();
     } else {
-      obj = { size: num };
+      const obj = { size: num };
       tmp4Result = React3(native.Spacer, obj);
     }
   });

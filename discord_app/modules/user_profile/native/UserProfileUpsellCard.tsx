@@ -1,10 +1,12 @@
-// === Module 14709: UserProfileUpsellCard ===
+// === Module 14710: UserProfileUpsellCard ===
 
-// Module 14709 (UserProfileUpsellCard)
+// Module 14710 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -12,17 +14,14 @@ get_ActivityIndicator = fn(17);
 const Gradients = fn(7535).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { upsellButton: null, titleContainer: null, linearGradient: null, outer: null, scroll: null, inner: null };
-createStyles = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
-createStyles.upsellButton = createStyles;
-createStyles.titleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
-createStyles.linearGradient = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
-createStyles.outer = { marginHorizontal: fn(7311).PROFILE_SIDE_PADDING - 1 };
-let obj1 = { marginHorizontal: fn(7311).PROFILE_SIDE_PADDING - 1 };
-createStyles.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.inner = { paddingVertical: 12, paddingHorizontal: 14 };
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { upsellButton: { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 }, titleContainer: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, outer: null, scroll: null, inner: null };
+let obj3 = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
+obj2.outer = { marginHorizontal: fn(7311).PROFILE_SIDE_PADDING - 1 };
+let obj4 = { marginHorizontal: fn(7311).PROFILE_SIDE_PADDING - 1 };
+obj2.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.inner = { paddingVertical: 12, paddingHorizontal: 14 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
 
@@ -34,23 +33,23 @@ export default function UserProfileUpsellCard(headerText) {
   let obj = { borderWidth: 1, style: null, direction: require("native").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.lg, children: null };
   let items = [tmp.outer, style];
   obj.style = items;
-  obj = { bounces: false, style: null, contentContainerStyle: null, children: null };
+  const obj2 = { bounces: false, style: null, contentContainerStyle: null, children: null };
   const items1 = [tmp.scroll, cardStyle];
-  obj.style = items1;
+  obj2.style = items1;
   const items2 = [tmp.inner, contentStyle];
-  obj.contentContainerStyle = items2;
+  obj2.contentContainerStyle = items2;
   let tmp6Result = null;
   if (null != headerText) {
-    obj = { style: tmp.titleContainer, children: null };
-    const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(8785).NitroWheelIcon, obj1), ];
-    const obj2 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = closure_6(tmp3(4632).Text, obj2);
-    obj.children = items3;
-    tmp6Result = closure_7(closure_3, obj);
+    const obj3 = { style: tmp.titleContainer, children: null };
+    const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
+    const items3 = [closure_6(tmp3(8785).NitroWheelIcon, obj4), ];
+    const obj5 = { variant: "heading-sm/bold", children: headerText };
+    items3[1] = closure_6(tmp3(4632).Text, obj5);
+    obj3.children = items3;
+    tmp6Result = closure_7(closure_3, obj3);
   }
   const items4 = [tmp6Result, children, ];
-  const obj3 = {
+  const obj6 = {
     style: null,
     onPress,
     text: ctaText,
@@ -61,7 +60,7 @@ export default function UserProfileUpsellCard(headerText) {
     renderLinearGradient: null
   };
   const items5 = [tmp.upsellButton, ctaStyle];
-  obj3.style = items5;
+  obj6.style = items5;
   let fn;
   if (showLinearGradient) {
     fn = () => {
@@ -71,9 +70,9 @@ export default function UserProfileUpsellCard(headerText) {
       return timestampProducer(LinearGradientDefault, obj);
     };
   }
-  obj3.renderLinearGradient = fn;
-  items4[2] = closure_6(require("native").ShinyButton, obj3);
-  obj.children = items4;
-  obj.children = closure_7(closure_4, obj);
+  obj6.renderLinearGradient = fn;
+  items4[2] = closure_6(require("native").ShinyButton, obj6);
+  obj2.children = items4;
+  obj.children = closure_7(closure_4, obj2);
   return closure_6(require("native").GradientBorder, obj);
 };

@@ -17,19 +17,19 @@ class WindowProxySocket extends tmp2 {
     if (-1 === items.indexOf(encoding)) {
       tmp13 = closure_0;
       tmp14 = closure_1;
-      obj = { closeCode: null };
+      obj1 = { closeCode: null };
       tmp16 = RPCCloseCodes;
-      obj.closeCode = RPCCloseCodes.INVALID_ENCODING;
+      obj1.closeCode = RPCCloseCodes.INVALID_ENCODING;
       tmp17 = globalThis;
       _HermesInternal = HermesInternal;
       str3 = "Invalid Encoding: ";
       tmp15 = closure_0(closure_1[2]);
       tmp18 = new.target;
       tmp19 = new.target;
-      tmp20 = obj;
-      tmp15 = new tmp15(obj, "Invalid Encoding: " + encoding);
-      tmp22 = tmp15;
-      throw tmp15;
+      tmp20 = obj1;
+      tmp151 = new tmp15(obj1, "Invalid Encoding: " + encoding);
+      tmp22 = tmp151;
+      throw tmp151;
     } else {
       str = "etf";
       if ("etf" === encoding) {

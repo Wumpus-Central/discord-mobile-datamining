@@ -1,6 +1,6 @@
-// === Module 17041: SlayerStorefrontTimeUtils ===
+// === Module 17043: SlayerStorefrontTimeUtils ===
 
-// Module 17041 (SlayerStorefrontTimeUtils)
+// Module 17043 (SlayerStorefrontTimeUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import _modDef3460 from "module_3460" /* 3460 */;
@@ -40,15 +40,15 @@ function formatLimitedOfferTimeLeft(arg0) {
     ({ days, hours } = tmp);
     if (days > 0) {
       const intl3 = util.intl;
-      let obj = { days };
-      let formatToPlainStringResult = intl3.formatToPlainString(util.t.BXpdIg, obj);
+      const obj2 = { days };
+      let formatToPlainStringResult = intl3.formatToPlainString(util.t.BXpdIg, obj2);
     } else if (hours > 0) {
       const intl2 = util.intl;
-      obj = { hours };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3460.PPaJSw, obj);
+      const obj3 = { hours };
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3460.PPaJSw, obj3);
     } else {
       const intl = util.intl;
-      obj = { minutes: null };
+      const obj = { minutes: null };
       const _Math = Math;
       obj.minutes = Math.max(tmp12, 1);
       formatToPlainStringResult = intl.formatToPlainString(_modDef3460["7Z+aIf"], obj);

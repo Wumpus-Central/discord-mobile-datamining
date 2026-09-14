@@ -1,33 +1,34 @@
-// === Module 16642: Elements ===
+// === Module 16644: Elements ===
 
-// Module 16642 (Elements)
+// Module 16644 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Pressables from "Pressables" /* 5204 */;
 import NativePaymentHooksDefault from "NativePaymentHooks" /* 9496 */;
 import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9499 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15310 */;
-import _modDef16643 from "module_16643" /* 16643 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
+import _modDef16645 from "module_16645" /* 16645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { toggleTruncateButton: null, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
-createStyles = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
-createStyles.toggleTruncateButton = createStyles;
-createStyles.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-createStyles.arrowButtonText = { flexGrow: 1, flexShrink: 1 };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-createStyles.arrowButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
+let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
+obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.arrowButtonText = { flexGrow: 1, flexShrink: 1 };
+let obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.arrowButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
 
@@ -38,14 +39,14 @@ export const TruncatedText = function TruncatedText(lineClamp) {
   }
   const merged = Object.assign(lineClamp, Object.assign({ lineClamp: 0 }));
   c1 = undefined;
+  first = undefined;
+  closure_3 = undefined;
   const tmp2 = closure_11();
-  [tmp4, c1] = _slicedToArray(noop.useState(false), 2);
-  const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const first = tmp5[0];
-  closure_3 = tmp5[1];
+  [tmp4, c1] = noop.useState(false);
+  [first, closure_3] = noop.useState(false);
   noop.useRef(false);
   if (!first) {
-    let obj = {
+    const obj2 = {
       onPress() {
           let tmp = first;
           if (first) {
@@ -61,8 +62,8 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     if (first) {
       num2 = 0.8;
     }
-    obj.activeOpacity = num2;
-    obj = {};
+    obj2.activeOpacity = num2;
+    const obj3 = {};
     const merged1 = Object.assign(merged);
     let tmp21;
     if (first) {
@@ -70,18 +71,18 @@ export const TruncatedText = function TruncatedText(lineClamp) {
         tmp21 = num;
       }
     }
-    obj.lineClamp = tmp21;
-    obj.onTextLayout = function onTextLayout(nativeEvent) {
+    obj3.lineClamp = tmp21;
+    obj3.onTextLayout = function onTextLayout(nativeEvent) {
       if (!ref.current) {
         tmp.current = true;
         closure_3(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [React7(Text_Text.Text, obj), first];
-    obj.children = items;
-    return closure_1_10(timestampProducer, obj);
+    const items = [React7(Text_Text.Text, obj3), first];
+    obj2.children = items;
+    return closure_1_10(timestampProducer, obj2);
   } else {
-    obj = { style: tmp2.toggleTruncateButton, children: null };
+    const obj = { style: tmp2.toggleTruncateButton, children: null };
     const intl = util.intl;
     const string = intl.string;
     let t = util.t;
@@ -90,8 +91,8 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     } else {
       stringResult = string(t.Fbrd8J);
     }
-    const obj1 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-    t = React7(Text_Text.Text, obj1);
+    const obj4 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
+    t = React7(Text_Text.Text, obj4);
     obj.children = t;
     React7(React5, obj);
   }
@@ -100,11 +101,8 @@ export const TruncatedText = function TruncatedText(lineClamp) {
 export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
-  let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-  const items = [React7(Text_Text.Text, obj), ];
-  obj = { size: native.Icon.Sizes.SMALL, source: _modDef16643, style: tmp.arrowButtonIcon };
-  items[1] = React7(native.Icon, obj);
+  const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
+  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16645, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 };

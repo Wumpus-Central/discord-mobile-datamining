@@ -8,8 +8,7 @@ const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["setPermission"] = function setPermission(permissionType, state) {
-  const obj = { type: "SET_NATIVE_PERMISSION", permissionType, state };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_NATIVE_PERMISSION", permissionType, state });
 };
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionActionCreators.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16571: ICYMITopicsScreen ===
+// === Module 16573: ICYMITopicsScreen ===
 
-// Module 16571 (ICYMITopicsScreen)
+// Module 16573 (ICYMITopicsScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
@@ -11,19 +11,19 @@ import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8477 */;
 import GameControllerIcon from "GameControllerIcon" /* 9352 */;
 import RobotIcon from "RobotIcon" /* 9565 */;
 import MusicIcon from "MusicIcon" /* 10041 */;
-import FoodIcon from "FoodIcon" /* 10480 */;
-import BicycleIcon from "BicycleIcon" /* 10482 */;
-import TvIcon from "TvIcon" /* 11011 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 11376 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 12054 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15345 */;
-import ScienceIcon from "ScienceIcon" /* 16573 */;
-import MedalIcon from "MedalIcon" /* 16574 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16576 */;
+import FoodIcon from "FoodIcon" /* 10481 */;
+import BicycleIcon from "BicycleIcon" /* 10483 */;
+import TvIcon from "TvIcon" /* 11012 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 11377 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12055 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15346 */;
+import ScienceIcon from "ScienceIcon" /* 16575 */;
+import MedalIcon from "MedalIcon" /* 16576 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16578 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16565 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16567 */;
 
 require = fn;
 function WordTopic(categoryid) {
@@ -58,59 +58,55 @@ function WordTopic(categoryid) {
   } else if (16 === categoryid) {
     tmp2 = closure_1_10(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
-  let obj = useA11yRolesNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
   let tmp48Result = null;
   if (null != tmp2) {
-    obj = { accessibilityRole: tmp45, accessibilityState: tmp46, variant: null, text: null, onPress: null, icon: null };
+    const obj2 = { accessibilityRole: tmp45, accessibilityState: tmp46, variant: null, text: null, onPress: null, icon: null };
     let str = "tertiary";
     if (selected) {
       str = "primary";
     }
-    obj.variant = str;
-    obj.text = categoryid.topic;
-    obj.onPress = function onPress() {
+    obj2.variant = str;
+    obj2.text = categoryid.topic;
+    obj2.onPress = function onPress() {
       return importDefault(categoryid);
     };
-    obj.icon = tmp2;
-    tmp48Result = closure_1_10(components_Button_Button.Button, obj);
+    obj2.icon = tmp2;
+    tmp48Result = closure_1_10(components_Button_Button.Button, obj2);
   }
   return tmp48Result;
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16572).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16574).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
-createStyles.container = createStyles;
+const createStyles = fn(4636);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
-createStyles.footer = rect;
-createStyles.title = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
-let obj1 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
-createStyles.subtitle = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+obj2.footer = rect;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+obj2.title = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+let obj4 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+obj2.subtitle = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
 let size = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.separator = size;
-let obj2 = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
-createStyles.topicsContainer = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
-let obj3 = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
-createStyles.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.separator = size;
+let obj5 = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+obj2.topicsContainer = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let obj6 = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
+obj2.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
+let closure_13 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
   const tmp = closure_13();
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const tmp4 = _slicedToArray(noop.useState(new Set()), 2);
-  const first = tmp4[0];
-  importDefault = tmp4[1];
+  [first, importDefault] = noop.useState(new Set());
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
-  let obj = first(1483);
-  const navigation = obj.useNavigation();
+  const set = new Set();
+  const navigation = first(1483).useNavigation();
   const items = [navigation, first];
   const callback = noop.useCallback(navigation(function*() {
     if (c3 === 2) {
@@ -120,8 +116,8 @@ export default function ICYMITopicsScreen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -134,16 +130,16 @@ export default function ICYMITopicsScreen() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp4;
             closure_0 = tmp4;
             v2(true);
             v2 = 1;
             c3 = 1;
-            const obj1 = { value: closure_0(v2[28])(v2[27], v2.paths), done: false };
-            return obj1;
+            const obj5 = { value: closure_0(v2[28])(v2[27], v2.paths), done: false };
+            return obj5;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -151,33 +147,31 @@ export default function ICYMITopicsScreen() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            let obj3 = closure_1(v2[29]);
             const _Array = Array;
             v2 = 2;
             c3 = 1;
-            obj3 = { value: null, done: false };
-            obj3.value = obj3.fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0);
-            return obj3;
+            const obj7 = { value: closure_1(v2[29]).fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0), done: false };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           if (value) {
             closure_129_3.push("join_guilds");
           } else {
-            obj = closure_1(v2[30]);
-            const obj5 = { key: "ICYMIInfoModal", content: null };
+            const obj9 = { key: "ICYMIInfoModal", content: null };
             const intl = closure_0(v2[31]).intl;
-            obj5.content = intl.string(closure_0(v2[31]).t.CG4Hks);
-            obj.open(obj5);
+            obj9.content = intl.string(closure_0(v2[31]).t.CG4Hks);
+            closure_1(v2[30]).open(obj9);
+            const obj = closure_1(v2[30]);
           }
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => v2(false), 500);
@@ -189,9 +183,9 @@ export default function ICYMITopicsScreen() {
       }
     }
   }), items);
-  let obj1 = first(504);
+  let obj = first(1483);
   const items1 = [GuildDiscoveryCategoryStore];
-  const stateFromStoresArray = obj1.useStateFromStoresArray(items1, () => allCategories.getAllCategories());
+  const stateFromStoresArray = first(504).useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
   _slicedToArray = noop.useCallback((categoryId) => {
     closure_0 = categoryId;
@@ -210,33 +204,33 @@ export default function ICYMITopicsScreen() {
     }
     const obj = { categoryId, toggled: !first.has(categoryId) };
   }, items2);
-  obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1114).intl;
-  obj.children = intl.string(first(1114).t.Y5d99L);
-  const children = [closure_10(first(4632).Text, obj), , , , ];
-  obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
+  obj3.children = intl.string(first(1114).t.Y5d99L);
+  const children = [closure_10(first(4632).Text, obj3), , , , ];
+  const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1114).intl;
-  obj.children = intl2.string(first(1114).t.MGZsfv);
-  children[1] = closure_10(first(4632).Text, obj);
-  obj1 = { style: tmp.separator };
-  children[2] = closure_10(closure_6, obj1);
-  let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
-  let obj3 = { bottom: 72 + bottom };
-  const set = new Set();
-  obj2.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_2_10(WordTopic, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
-  children[3] = closure_10(closure_7, obj2);
+  obj4.children = intl2.string(first(1114).t.MGZsfv);
+  children[1] = closure_10(first(4632).Text, obj4);
+  children[2] = closure_10(closure_6, { style: tmp.separator });
+  let obj6 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
+  let obj2 = first(504);
+  let obj5 = { style: tmp.separator };
+  let obj7 = { bottom: 72 + bottom };
+  obj6.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_2_10(WordTopic, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
+  children[3] = closure_10(closure_7, obj6);
   let tmp12Result = first.size > 0;
   if (tmp12Result) {
-    let obj5 = { style: null, children: null };
-    const obj6 = { marginBottom: bottom };
-    const items4 = [obj6, tmp.footer];
-    obj5.style = items4;
-    const obj7 = { loading: tmp6[0], size: "lg", text: null, onPress: null };
+    let obj9 = { style: null, children: null };
+    const obj10 = { marginBottom: bottom };
+    const items4 = [obj10, tmp.footer];
+    obj9.style = items4;
+    const obj11 = { loading: tmp6[0], size: "lg", text: null, onPress: null };
     const intl3 = tmp7(1114).intl;
-    obj7.text = intl3.string(tmp7(1114).t.PDTjLN);
-    obj7.onPress = callback;
-    obj5.children = closure_10(tmp7(5056).Button, obj7);
-    tmp12Result = closure_10(closure_6, obj5);
+    obj11.text = intl3.string(tmp7(1114).t.PDTjLN);
+    obj11.onPress = callback;
+    obj9.children = closure_10(tmp7(5056).Button, obj11);
+    tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;
   return closure_12(closure_11, { children });

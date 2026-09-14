@@ -1,7 +1,7 @@
-// === Module 17434: BlockedDomainManager ===
+// === Module 17436: BlockedDomainManager ===
 
-// Module 17434 (BlockedDomainManager)
-import js_shim_shim from "js_shim/shim" /* 1351 */;
+// Module 17436 (BlockedDomainManager)
+import js_shim_shim from "js_shim/shim" /* 1349 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;

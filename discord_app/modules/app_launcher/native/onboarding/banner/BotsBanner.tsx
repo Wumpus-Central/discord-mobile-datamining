@@ -1,9 +1,9 @@
-// === Module 12194: BotsBanner ===
+// === Module 12195: BotsBanner ===
 
-// Module 12194 (BotsBanner)
+// Module 12195 (BotsBanner)
 import util from "util" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12190 */;
-import useBannerBots from "useBannerBots" /* 12195 */;
+import BannerBaseDefault from "BannerBase" /* 12191 */;
+import useBannerBots from "useBannerBots" /* 12196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,18 +12,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
 
 export default function BotsBanner(context) {
-  let obj = useBannerBots;
-  const bannerBots = obj.useBannerBots({ context: context.context });
+  const bannerBots = useBannerBots.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;
   if (null != firstBotApplication) {
     tmp4Result = null;
     if (null != secondBotApplication) {
-      obj = { image: tmp6, text: null };
+      const obj2 = { image: tmp6, text: null };
       const intl = util.intl;
-      obj = { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name };
-      obj.text = intl.formatToPlainString(util.t["9SN0xw"], obj);
-      tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name });
+      const obj3 = { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name };
+      obj2.text = intl.formatToPlainString(util.t["9SN0xw"], obj3);
+      tmp4Result = jsx(BannerBaseDefault, { image: tmp6, text: null });
       const tmp5Result = BannerBaseDefault;
     }
   }

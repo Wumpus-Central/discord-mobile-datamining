@@ -7,6 +7,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5653 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 let closure_8 = fn(5653).NO_MEMBER_VERIFICATION_FORM;
@@ -35,8 +37,8 @@ export default function MemberVerificationForm(guild) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -49,8 +51,8 @@ export default function MemberVerificationForm(guild) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             phone = tmp7;
             closure_129_0 = undefined;
@@ -58,12 +60,11 @@ export default function MemberVerificationForm(guild) {
             if (null != first) {
               if (memo1) {
                 (function showIncompleteToast() {
-                  closure_1_1(4335);
-                  const obj = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
+                  const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1114).intl;
-                  obj.content = intl.string(closure_1_0(1114).t.StC497);
-                  obj.icon = closure_1_1(5678);
-                  obj.open(obj);
+                  obj2.content = intl.string(closure_1_0(1114).t.StC497);
+                  obj2.icon = closure_1_1(5678);
+                  closure_1_1(4335).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };
@@ -74,15 +75,15 @@ export default function MemberVerificationForm(guild) {
                 if (View == null) {
                   guild = closure_1_8;
                 }
-                const obj1 = {};
+                const obj6 = {};
                 const merged = Object.assign(guild);
-                let obj2 = guild(tmp3[15]);
-                obj1.formFields = obj2.removeInternalFields(tmp60);
+                obj6.formFields = guild(tmp3[15]).removeInternalFields(tmp60);
                 c4 = 1;
+                const obj3 = guild(tmp3[15]);
                 c5 = 2;
                 c6 = 1;
-                obj2 = { value: phone(tmp3[16]).submitVerificationForm(id.id, obj1), done: false };
-                return obj2;
+                const obj7 = { value: phone(tmp3[16]).submitVerificationForm(id.id, obj6), done: false };
+                return obj7;
               }
             } else {
               c6 = 3;
@@ -136,7 +137,7 @@ export default function MemberVerificationForm(guild) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp52) {
         if (tmp4 === c4) {
@@ -149,8 +150,7 @@ export default function MemberVerificationForm(guild) {
     }
   };
   const tmp = closure_12();
-  let obj = guild(onClose[11]);
-  const userVerificationState = obj.useUserVerificationState();
+  const userVerificationState = guild(onClose[11]).useUserVerificationState();
   closure_129_3 = undefined;
   closure_129_5 = undefined;
   closure_129_6 = undefined;
@@ -181,8 +181,8 @@ export default function MemberVerificationForm(guild) {
   const id = guild.id;
   closure_129_0 = id;
   closure_130_0 = guild;
-  let obj1 = guild(onClose[11]);
-  closure_130_1 = obj1.useInitialVerification(guild.id);
+  let obj = guild(onClose[11]);
+  closure_130_1 = guild(onClose[11]).useInitialVerification(guild.id);
   const tmp6 = require("useInitialValue")(() => {
     if (guild.verificationLevel === VerificationLevels.VERY_HIGH) {
       phone = undefined;
@@ -191,22 +191,21 @@ export default function MemberVerificationForm(guild) {
       }
       let tmp5 = null;
       if (!phone) {
-        let obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE };
-        tmp5 = obj;
+        const obj2 = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE };
+        tmp5 = obj2;
       }
-      obj = tmp5;
+      let obj = tmp5;
     } else {
       obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
     }
     return obj;
   });
   closure_129_1 = tmp6;
-  let obj2 = guild(onClose[14]);
+  let obj2 = guild(onClose[11]);
   let items = [closure_7];
   const items1 = [id];
-  const stateFromStores = obj2.useStateFromStores(items, () => MemberVerificationFormStore.get(guild), items1);
+  const stateFromStores = guild(onClose[14]).useStateFromStores(items, () => MemberVerificationFormStore.get(guild), items1);
   closure_129_2 = stateFromStores;
-  let obj3 = noop;
   let formFields;
   if (stateFromStores != null) {
     formFields = stateFromStores.formFields;
@@ -223,8 +222,8 @@ export default function MemberVerificationForm(guild) {
     return someResult;
   }, items2);
   closure_129_3 = memo;
-  closure_129_5 = obj3.useRef(getFormFields);
-  const effect = obj3.useEffect(() => {
+  closure_129_5 = obj4.useRef(getFormFields);
+  const effect = obj4.useEffect(() => {
     closure_5.current = current;
   });
   if (!memo) {
@@ -242,7 +241,7 @@ export default function MemberVerificationForm(guild) {
     const tmp16 = formFields(tmp11(items3), 2);
     closure_129_6 = tmp17;
     const items4 = [stateFromStores];
-    const effect1 = obj3.useEffect(() => {
+    const effect1 = obj4.useEffect(() => {
       if (null != onClose) {
         closure_6(ref.current());
       }
@@ -253,11 +252,11 @@ export default function MemberVerificationForm(guild) {
     noop = tmp19[1];
     closure_6 = tmp21;
     closure_7 = tmp22;
-    [tmp24, c8] = formFields(obj3.useState(false), 2);
-    const tmp23 = formFields(obj3.useState(false), 2);
-    [tmp26, c9] = formFields(obj3.useState(null), 2);
+    [tmp24, c8] = formFields(obj4.useState(false), 2);
+    const tmp23 = formFields(obj4.useState(false), 2);
+    [tmp26, c9] = formFields(obj4.useState(null), 2);
     const items6 = [onClose, tmp19[2]];
-    const effect2 = obj3.useEffect(() => {
+    const effect2 = obj4.useEffect(() => {
       if (closure_6 === closure_8) {
         if (onClose != null) {
           tmp(false);
@@ -265,7 +264,7 @@ export default function MemberVerificationForm(guild) {
       }
     }, items6);
     const items7 = [guild.verificationLevel, tmp19[3], userVerificationState, formFields];
-    memo1 = obj3.useMemo(() => {
+    memo1 = obj4.useMemo(() => {
       let someResult;
       if (first != null) {
         someResult = first.some((item) => !guild(onClose[15]).isValidFormResponse(item));
@@ -299,38 +298,38 @@ export default function MemberVerificationForm(guild) {
     if (null == formFields) {
       return null;
     } else {
-      obj = { style: tmp.container, children: null };
-      obj = {
+      let obj5 = { style: tmp.container, children: null };
+      let obj6 = {
         rulesChannelId: guild.rulesChannelId,
         formFields,
         onChange: function handleFormChange(arg0, response) {
               if (null != first) {
                 const items = [];
-                let arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
+                const arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
                 const obj = {};
                 const merged = Object.assign(tmp3);
                 obj.response = response;
                 items[arraySpreadResult] = obj;
-                arraySpreadResult = HermesBuiltin.arraySpread(first.slice(arg0 + 1), arraySpreadResult + 1);
+                HermesBuiltin.arraySpread(first.slice(arg0 + 1), arraySpreadResult + 1);
                 ref(items);
               }
             },
         verification: userVerificationState
       };
-      const items8 = [memo1(require("MemberVerificationFormRenderer"), obj), , ];
+      const items8 = [memo1(require("MemberVerificationFormRenderer"), obj6), , ];
       let tmp32Result = null;
       if (null != tmp26) {
-        obj1 = { style: tmp.error, children: tmp26 };
-        tmp32Result = tmp32(require("FreeFormErrorLabel"), obj1);
+        let obj7 = { style: tmp.error, children: tmp26 };
+        tmp32Result = tmp32(require("FreeFormErrorLabel"), obj7);
       }
       items8[1] = tmp32Result;
-      obj2 = { style: tmp.submitButton, children: null };
-      obj3 = { variant: "primary", size: "md", grow: true, text: null, loading: null, disabled: null, onPress: null };
+      const obj8 = { style: tmp.submitButton, children: null };
+      const obj9 = { variant: "primary", size: "md", grow: true, text: null, loading: null, disabled: null, onPress: null };
       let intl = tmp2(onClose[9]).intl;
-      obj3.text = intl.string(tmp2(onClose[9]).t["r8/DT+"]);
-      obj3.loading = tmp24;
-      obj3.disabled = tmp24;
-      obj3.onPress = function handleSubmit() {
+      obj9.text = intl.string(tmp2(onClose[9]).t["r8/DT+"]);
+      obj9.loading = tmp24;
+      obj9.disabled = tmp24;
+      obj9.onPress = function handleSubmit() {
         const self = this;
         const apply = closure_11.apply;
         if (typeof apply === "unknown") {
@@ -340,12 +339,12 @@ export default function MemberVerificationForm(guild) {
         }
         return applyArgumentsResult;
       };
-      obj2.children = memo1(tmp2(onClose[19]).Button, obj3);
-      items8[2] = memo1(closure_6, obj2);
-      obj.children = items8;
-      return closure_11(closure_6, obj);
+      obj8.children = memo1(tmp2(onClose[19]).Button, obj9);
+      items8[2] = memo1(closure_6, obj8);
+      obj5.children = items8;
+      return closure_11(closure_6, obj5);
     }
-    const tmp25 = formFields(obj3.useState(null), 2);
+    const tmp25 = formFields(obj4.useState(null), 2);
   }
   let formFields2;
   if (stateFromStores != null) {
@@ -354,4 +353,5 @@ export default function MemberVerificationForm(guild) {
   if (formFields2 == null) {
     formFields2 = [];
   }
+  let obj3 = guild(onClose[14]);
 };

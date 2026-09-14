@@ -1,6 +1,6 @@
-// === Module 14634: CollectiblesMarketingManager ===
+// === Module 14635: CollectiblesMarketingManager ===
 
-// Module 14634 (CollectiblesMarketingManager)
+// Module 14635 (CollectiblesMarketingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7693 */;
@@ -14,8 +14,7 @@ class CollectiblesMarketingManager extends tmp2 {
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       value = DevSettingsStore.get("shop_include_unpublished");
       const CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
-      const obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
-      const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
+      const collectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings({ release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD });
     };
     return applyArgumentsResult;
   }

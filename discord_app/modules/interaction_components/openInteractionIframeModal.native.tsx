@@ -1,6 +1,6 @@
-// === Module 17514: openInteractionIframeModal ===
+// === Module 17516: openInteractionIframeModal ===
 
-// Module 17514 (openInteractionIframeModal)
+// Module 17516 (openInteractionIframeModal)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -12,8 +12,8 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,11 +25,10 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        obj = require("ModalActionCreators");
-        obj.pushLazy(require("asyncRequireImpl")(paths[3], paths.paths), closure_0, React4);
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[3], paths.paths), closure_0, React4);
         c1 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -39,7 +38,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
     }
   }
 };
-let closure_4 = fn(17515).INTERACTION_IFRAME_MODAL_KEY;
+let closure_4 = fn(17517).INTERACTION_IFRAME_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 

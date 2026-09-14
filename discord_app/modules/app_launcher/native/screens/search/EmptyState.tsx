@@ -1,6 +1,6 @@
-// === Module 12238: search/EmptyState ===
+// === Module 12239: search/EmptyState ===
 
-// Module 12238 (search/EmptyState)
+// Module 12239 (search/EmptyState)
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import noop from "module_19" /* 19 */;
@@ -19,8 +19,7 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  let obj = flag(12180);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9539).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(12181).useLogAppLauncherEmptyStateView(flag(9539).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;
@@ -34,9 +33,9 @@ export default function EmptyState(showsGenericMessage) {
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(stringResult, "polite");
   }, items);
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.textContainer, children: null };
-  const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.textContainer, children: null };
+  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   let intl = flag(1114).intl;
   let string = intl.string;
   let t = flag(1114).t;
@@ -45,8 +44,8 @@ export default function EmptyState(showsGenericMessage) {
   } else {
     stringResult = string(t.LSNOYf);
   }
-  obj1.children = stringResult;
-  obj.children = jsx(flag(4632).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
-  obj.children = <View style={tmp.textContainer}>{null}</View>;
-  return <View style={tmp.textContainer}>{null}</View>;
+  obj4.children = stringResult;
+  obj3.children = jsx(flag(4632).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj2.children = <View style={tmp.textContainer}>{null}</View>;
+  return <View style={tmp.container}>{null}</View>;
 };

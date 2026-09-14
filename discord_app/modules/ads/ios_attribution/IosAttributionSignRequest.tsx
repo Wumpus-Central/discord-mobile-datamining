@@ -1,6 +1,6 @@
-// === Module 11628: IosAttributionSignRequest ===
+// === Module 11629: IosAttributionSignRequest ===
 
-// Module 11628 (IosAttributionSignRequest)
+// Module 11629 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -12,8 +12,8 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
@@ -46,26 +46,25 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c5 = 1;
           const HTTP = closure_131_0(closure_131_2[2]).HTTP;
           const request = { url: closure_131_4.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD, body: null, failImmediatelyWhenRateLimited: true, rejectWithError: true, timeout: 5000, signal: null };
-          let obj2 = { metadata_sealed: closure_130_0, impression_id: closure_130_1, specs: closure_130_2 };
-          request.body = obj2;
+          const obj6 = { metadata_sealed: closure_130_0, impression_id: closure_130_1, specs: closure_130_2 };
+          request.body = obj6;
           request.signal = closure_130_3;
           c6 = 3;
           c7 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj7 = { value: HTTP.post(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp8) {
         c5 = 0;
         closure_130_4 = closure_4;
-        obj2 = closure_131_1(closure_131_2[3]);
-        const obj4 = { tags: { app_context: "ios_attribution" } };
-        obj2.captureException(closure_130_4, obj4);
+        const obj8 = { tags: { app_context: "ios_attribution" } };
+        closure_131_1(closure_131_2[3]).captureException(closure_130_4, obj8);
         c7 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -74,8 +73,8 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         const payloads = value.body.payloads;
         value = payloads;
@@ -84,7 +83,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
         }
         c5 = 0;
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp18) {

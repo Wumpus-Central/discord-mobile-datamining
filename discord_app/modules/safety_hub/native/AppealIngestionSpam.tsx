@@ -1,9 +1,9 @@
-// === Module 12038: AppealIngestionSpam ===
+// === Module 12039: AppealIngestionSpam ===
 
-// Module 12038 (AppealIngestionSpam)
-import native from "native" /* 1178 */;
+// Module 12039 (AppealIngestionSpam)
+import native from "native" /* 1176 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12016 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,10 +16,8 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 
 export default function AppealIngestionSpam() {
   const tmp = closure_4();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) };
-  obj.children = jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) });
-  obj.children = <View bottom style={tmp.container}>{jsx(native.LegacyText, { children: "TODO - SPAM" })}</View>;
-  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) });
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) }) };
+  obj.children = <View style={tmp.container}>{jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) })}</View>;
+  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { children: null });
 };

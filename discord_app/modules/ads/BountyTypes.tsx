@@ -1,49 +1,47 @@
-// === Module 11417: BountyTypes ===
+// === Module 11418: BountyTypes ===
 
-// Module 11417 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 11418 */;
+// Module 11418 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 11419 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
-  let obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
+  const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
-    obj = { androidAppId: url.android.android_app_id };
-    tmp = obj;
+    const obj2 = { androidAppId: url.android.android_app_id };
+    tmp = obj2;
   }
   obj.android = tmp;
   let tmp2;
   if (null != url.ios) {
-    obj = { iosAppId: url.ios.ios_app_id };
-    tmp2 = obj;
+    const obj3 = { iosAppId: url.ios.ios_app_id };
+    tmp2 = obj3;
   }
   obj.ios = tmp2;
   return obj;
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
-  let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
-  let obj1 = AssetUtils;
-  obj.productIcon = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
+  const obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
   obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
   obj.videoHls = AssetUtils.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
-  obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
+  const obj6 = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
-    obj = { androidAppId: cta.android.android_app_id };
-    tmp = obj;
+    const obj7 = { androidAppId: cta.android.android_app_id };
+    tmp = obj7;
   }
-  obj.android = tmp;
+  obj6.android = tmp;
   let tmp2;
   if (null != cta.ios) {
-    obj1 = { iosAppId: cta.ios.ios_app_id };
-    tmp2 = obj1;
+    const obj8 = { iosAppId: cta.ios.ios_app_id };
+    tmp2 = obj8;
   }
-  obj.ios = tmp2;
-  obj.cta = obj;
+  obj6.ios = tmp2;
+  obj.cta = obj6;
   let num = creative_content.reward_timer_seconds;
   if (num == null) {
     num = 15;

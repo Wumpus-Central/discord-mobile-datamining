@@ -16,6 +16,8 @@ import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 import UserStore from "UserStore" /* 1371 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7882 */;
 
+const MessageQueueDefault = MessageQueue;
+
 require = fn;
 let closure_16 = async function _executeCommand(arg0) {
   let source = arg0;
@@ -30,8 +32,8 @@ let closure_16 = async function _executeCommand(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -45,8 +47,8 @@ let closure_16 = async function _executeCommand(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c16 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_12 = tmp;
             closure_11 = tmp4;
@@ -104,8 +106,8 @@ let closure_16 = async function _executeCommand(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c16 = 3;
-              let obj1 = { value, done: true };
-              return obj1;
+              let obj16 = { value, done: true };
+              return obj16;
             } else if (null != closure_139_2.channel) {
               source = closure_140_10.getSource(closure_139_2.channel.id);
               closure_1 = source;
@@ -113,25 +115,25 @@ let closure_16 = async function _executeCommand(arg0) {
                 closure_1 = source2;
               }
               closure_139_9 = closure_1;
-              commandOrigin = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
-              closure_2 = commandOrigin;
-              if (commandOrigin == null) {
+              let commandOrigin1 = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
+              closure_2 = commandOrigin1;
+              if (commandOrigin1 == null) {
                 closure_2 = closure_139_5;
               }
               closure_139_10 = closure_2;
               if (null == closure_139_2.autocomplete) {
                 let obj24 = closure_140_1(closure_140_3[10]);
-                let obj2 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
-                obj2.context = closure_139_2;
-                obj2.command = closure_139_0;
-                obj2.commandOrigin = closure_139_10;
-                let dispatchResult = obj24.dispatch(obj2);
+                let obj17 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
+                obj17.context = closure_139_2;
+                obj17.command = closure_139_0;
+                obj17.commandOrigin = closure_139_10;
+                let dispatchResult = obj24.dispatch(obj17);
               }
               let obj26 = closure_140_1(closure_140_3[11]);
               c15 = 2;
               c16 = 1;
-              let obj3 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
-              return obj3;
+              let obj18 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
+              return obj18;
             } else {
               c16 = 3;
             }
@@ -141,8 +143,8 @@ let closure_16 = async function _executeCommand(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c16 = 3;
-              let obj4 = { value, done: true };
-              return obj4;
+              let obj21 = { value, done: true };
+              return obj21;
             } else {
               closure_139_11 = [];
               closure_139_12 = [];
@@ -167,8 +169,8 @@ let closure_16 = async function _executeCommand(arg0) {
                         channelId = undefined;
                         if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING) {
                           if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT) {
-                            let obj5 = closure_140_2(closure_140_3[14]);
-                            closure_139_17 = obj5.filterEmpty(closure_139_1[closure_139_14.name]);
+                            let obj6 = closure_140_2(closure_140_3[14]);
+                            closure_139_17 = obj6.filterEmpty(closure_139_1[closure_139_14.name]);
                             let tmp102 = null != closure_139_2.autocomplete;
                             let tmp100 = closure_140_1(closure_140_3[16]);
                             if (!tmp102) {
@@ -200,13 +202,13 @@ let closure_16 = async function _executeCommand(arg0) {
                                       id = guild7.id;
                                     }
                                     closure_139_19 = obj15.resolveApplicationCommandOption(closure_139_18.text, id, closure_139_2.channel.id);
-                                    type = undefined;
+                                    let type1;
                                     let tmp297 = closure_140_1(closure_140_3[16]);
                                     if (closure_139_19 != null) {
-                                      type = closure_139_19.type;
+                                      type1 = closure_139_19.type;
                                     }
                                     let _HermesInternal7 = HermesInternal;
-                                    let tmp297Result = tmp297("channelMention" === type, "Failed to resolve " + closure_139_18.text);
+                                    let tmp297Result = tmp297("channelMention" === type1, "Failed to resolve " + closure_139_18.text);
                                     channelId = closure_139_19.channelId;
                                   }
                                 }
@@ -214,26 +216,26 @@ let closure_16 = async function _executeCommand(arg0) {
                                 if ("roleMention" === closure_139_18.type) {
                                   channelId = closure_139_18.roleId;
                                 } else if ("text" === closure_139_18.type) {
-                                  obj12 = closure_140_0(closure_140_3[12]);
-                                  if (obj12.isSnowflake(closure_139_18.text)) {
+                                  let obj13 = closure_140_0(closure_140_3[12]);
+                                  if (obj13.isSnowflake(closure_139_18.text)) {
                                     let str3 = closure_139_18.text;
                                     channelId = str3.trim();
                                   } else {
-                                    let obj13 = closure_140_0(closure_140_3[17]);
+                                    let obj14 = closure_140_0(closure_140_3[17]);
                                     let text2 = closure_139_18.text;
                                     let guild6 = closure_139_2.guild;
                                     let id1;
                                     if (guild6 != null) {
                                       id1 = guild6.id;
                                     }
-                                    closure_139_20 = obj13.resolveApplicationCommandOption(text2, id1, closure_139_2.channel.id, { allowUsers: false });
-                                    let type1;
+                                    closure_139_20 = obj14.resolveApplicationCommandOption(text2, id1, closure_139_2.channel.id, { allowUsers: false });
+                                    let type2;
                                     let tmp275 = closure_140_1(closure_140_3[16]);
                                     if (closure_139_20 != null) {
-                                      type1 = closure_139_20.type;
+                                      type2 = closure_139_20.type;
                                     }
                                     let _HermesInternal6 = HermesInternal;
-                                    let tmp275Result = tmp275("roleMention" === type1, "Failed to resolve " + closure_139_18.text);
+                                    let tmp275Result = tmp275("roleMention" === type2, "Failed to resolve " + closure_139_18.text);
                                     channelId = closure_139_20.roleId;
                                   }
                                 } else {
@@ -259,21 +261,21 @@ let closure_16 = async function _executeCommand(arg0) {
                                     let str2 = closure_139_18.text;
                                     channelId = str2.trim();
                                   } else {
-                                    let obj11 = closure_140_0(closure_140_3[17]);
+                                    let obj12 = closure_140_0(closure_140_3[17]);
                                     let text = closure_139_18.text;
                                     let guild4 = closure_139_2.guild;
                                     let id3;
                                     if (guild4 != null) {
                                       id3 = guild4.id;
                                     }
-                                    closure_139_21 = obj11.resolveApplicationCommandOption(text, id3, closure_139_2.channel.id, { allowRoles: false });
-                                    let type2;
+                                    closure_139_21 = obj12.resolveApplicationCommandOption(text, id3, closure_139_2.channel.id, { allowRoles: false });
+                                    let type3;
                                     let tmp235 = closure_140_1(closure_140_3[16]);
                                     if (closure_139_21 != null) {
-                                      type2 = closure_139_21.type;
+                                      type3 = closure_139_21.type;
                                     }
                                     let _HermesInternal5 = HermesInternal;
-                                    let tmp235Result = tmp235("userMention" === type2, "Failed to resolve " + closure_139_18.text);
+                                    let tmp235Result = tmp235("userMention" === type3, "Failed to resolve " + closure_139_18.text);
                                     channelId = closure_139_21.userId;
                                   }
                                 }
@@ -299,32 +301,32 @@ let closure_16 = async function _executeCommand(arg0) {
                                       let str = closure_139_18.text;
                                       channelId = str.trim();
                                     } else {
-                                      let obj10 = closure_140_0(closure_140_3[17]);
+                                      let obj11 = closure_140_0(closure_140_3[17]);
                                       let guild = closure_139_2.guild;
                                       let id5;
                                       if (guild != null) {
                                         id5 = guild.id;
                                       }
-                                      closure_139_22 = obj10.resolveApplicationCommandOption(closure_139_18.text, id5, closure_139_2.channel.id);
-                                      let type3;
+                                      closure_139_22 = obj11.resolveApplicationCommandOption(closure_139_18.text, id5, closure_139_2.channel.id);
+                                      let type4;
                                       if (closure_139_22 != null) {
-                                        type3 = closure_139_22.type;
+                                        type4 = closure_139_22.type;
                                       }
-                                      if ("userMention" === type3) {
+                                      if ("userMention" === type4) {
                                         channelId = closure_139_22.userId;
                                       } else {
-                                        let type4;
+                                        let type5;
                                         if (closure_139_22 != null) {
-                                          type4 = closure_139_22.type;
+                                          type5 = closure_139_22.type;
                                         }
-                                        if ("roleMention" === type4) {
+                                        if ("roleMention" === type5) {
                                           channelId = closure_139_22.roleId;
                                         } else {
-                                          let type5;
+                                          let type6;
                                           if (closure_139_22 != null) {
-                                            type5 = closure_139_22.type;
+                                            type6 = closure_139_22.type;
                                           }
-                                          if ("textMention" === type5) {
+                                          if ("textMention" === type6) {
                                             if ("@everyone" === closure_139_22.text) {
                                               let guild2 = closure_139_2.guild;
                                               let id6;
@@ -353,16 +355,16 @@ let closure_16 = async function _executeCommand(arg0) {
                                   let str22 = closure_139_18.text;
                                   closure_139_23 = str22.trim();
                                   if (null != closure_139_14.choices) {
-                                    let obj9 = closure_140_0(closure_140_3[15]);
-                                    channelId = obj9.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
+                                    let obj10 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj10.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
                                   } else if (closure_139_14.autocomplete) {
                                     if (null != closure_139_2.autocomplete) {
                                       if (closure_139_15) {
                                         channelId = closure_139_2.autocomplete.query;
                                       }
                                     }
-                                    let obj8 = closure_140_0(closure_140_3[15]);
-                                    let result = obj8.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_23);
+                                    let obj9 = closure_140_0(closure_140_3[15]);
+                                    let result = obj9.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_23);
                                   }
                                   if (null == channelId) {
                                     let _Number2 = Number;
@@ -375,16 +377,16 @@ let closure_16 = async function _executeCommand(arg0) {
                                   let str21 = closure_139_18.text;
                                   closure_139_24 = str21.trim();
                                   if (null != closure_139_14.choices) {
-                                    let obj7 = closure_140_0(closure_140_3[15]);
-                                    channelId = obj7.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
+                                    let obj8 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj8.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
                                   } else if (closure_139_14.autocomplete) {
                                     if (null != closure_139_2.autocomplete) {
                                       if (closure_139_15) {
                                         channelId = closure_139_2.autocomplete.query;
                                       }
                                     }
-                                    let obj6 = closure_140_0(closure_140_3[15]);
-                                    let result1 = obj6.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_24);
+                                    let obj7 = closure_140_0(closure_140_3[15]);
+                                    let result1 = obj7.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_24);
                                   }
                                   if (null == channelId) {
                                     let _Number = Number;
@@ -416,12 +418,12 @@ let closure_16 = async function _executeCommand(arg0) {
                                 let _HermesInternal8 = HermesInternal;
                                 let tmp315Result = tmp315(tmp317, "Unexpected value for option \"" + closure_139_14.name + "\"");
                                 if (null != channelId) {
-                                  obj5 = { type: null, name: null, value: null, focused: null };
-                                  obj5.type = closure_139_14.type;
-                                  obj5.name = closure_139_14.name;
-                                  obj5.value = channelId;
-                                  obj5.focused = closure_139_15;
-                                  let arr = closure_139_11.push(obj5);
+                                  let obj22 = { type: null, name: null, value: null, focused: null };
+                                  obj22.type = closure_139_14.type;
+                                  obj22.name = closure_139_14.name;
+                                  obj22.value = channelId;
+                                  obj22.focused = closure_139_15;
+                                  let arr = closure_139_11.push(obj22);
                                 }
                               }
                             }
@@ -436,13 +438,13 @@ let closure_16 = async function _executeCommand(arg0) {
                                 continue;
                               } else {
                                 closure_139_26 = closure_139_12.length;
-                                arr = closure_139_12.push(upload);
-                                obj6 = { type: null, name: null, value: null, focused: null };
-                                obj6.type = closure_139_14.type;
-                                obj6.name = closure_139_14.name;
-                                obj6.value = closure_139_26;
-                                obj6.focused = closure_139_15;
-                                let arr1 = closure_139_11.push(obj6);
+                                let arr5 = closure_139_12.push(upload);
+                                let obj23 = { type: null, name: null, value: null, focused: null };
+                                obj23.type = closure_139_14.type;
+                                obj23.name = closure_139_14.name;
+                                obj23.value = closure_139_26;
+                                obj23.focused = closure_139_15;
+                                let arr6 = closure_139_11.push(obj23);
                               }
                             }
                             continue;
@@ -461,16 +463,16 @@ let closure_16 = async function _executeCommand(arg0) {
                           }
                           closure_139_27 = c5;
                           if (null != closure_139_14.choices) {
-                            obj2 = closure_140_0(closure_140_3[15]);
-                            channelId = obj2.findChoiceStringValue(closure_139_14.choices, closure_139_27);
+                            let obj3 = closure_140_0(closure_140_3[15]);
+                            channelId = obj3.findChoiceStringValue(closure_139_14.choices, closure_139_27);
                           } else if (closure_139_14.autocomplete) {
                             if (null != closure_139_2.autocomplete) {
                               if (closure_139_15) {
                                 channelId = closure_139_2.autocomplete.query;
                               }
                             }
-                            obj1 = closure_140_0(closure_140_3[15]);
-                            let result2 = obj1.findAutocompleteChoiceStringValue(closure_139_2.channel.id, closure_139_14.name, closure_139_27);
+                            let obj2 = closure_140_0(closure_140_3[15]);
+                            let result2 = obj2.findAutocompleteChoiceStringValue(closure_139_2.channel.id, closure_139_14.name, closure_139_27);
                           }
                           if (null == channelId) {
                             channelId = closure_139_27;
@@ -491,12 +493,12 @@ let closure_16 = async function _executeCommand(arg0) {
                           }
                           let _HermesInternal = HermesInternal;
                           let tmp62Result = tmp62(tmp64, "Option \"" + closure_139_14.name + "\" expects a value");
-                          obj7 = { type: null, name: null, value: null, focused: null };
-                          obj7.type = closure_139_14.type;
-                          obj7.name = closure_139_14.name;
-                          obj7.value = channelId;
-                          obj7.focused = closure_139_15;
-                          let arr2 = closure_139_11.push(obj7);
+                          let obj25 = { type: null, name: null, value: null, focused: null };
+                          obj25.type = closure_139_14.type;
+                          obj25.name = closure_139_14.name;
+                          obj25.value = channelId;
+                          obj25.focused = closure_139_15;
+                          let arr7 = closure_139_11.push(obj25);
                         }
                       }
                       continue;
@@ -512,11 +514,11 @@ let closure_16 = async function _executeCommand(arg0) {
                   do {
                     closure_139_29 = closure_139_0.subCommandPath[closure_139_28];
                     name2 = closure_139_29.name;
-                    obj8 = { type: null, name: null, options: null };
-                    obj8.type = closure_139_29.type;
-                    obj8.name = name2;
-                    obj8.options = closure_139_11;
-                    let items = [obj8];
+                    let obj27 = { type: null, name: null, options: null };
+                    obj27.type = closure_139_29.type;
+                    obj27.name = name2;
+                    obj27.options = closure_139_11;
+                    let items = [obj27];
                     closure_139_11 = items;
                     closure_139_28 = closure_139_28 - 1;
                   } while (closure_139_28 >= 0);
@@ -524,21 +526,21 @@ let closure_16 = async function _executeCommand(arg0) {
               }
               if (null != closure_139_0.execute) {
                 let obj20 = closure_140_1(closure_140_3[18]);
-                obj9 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
-                obj9.command_id = closure_139_0.id;
-                obj9.application_id = closure_139_0.applicationId;
-                obj9.command_type = closure_139_0.type;
-                obj9.location = closure_140_21(closure_139_10);
-                obj9.source = closure_139_9;
-                let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj9);
+                let obj28 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
+                obj28.command_id = closure_139_0.id;
+                obj28.application_id = closure_139_0.applicationId;
+                obj28.command_type = closure_139_0.type;
+                obj28.location = closure_140_21(closure_139_10);
+                obj28.source = closure_139_9;
+                let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj28);
                 c16 = 3;
-                obj10 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
-                return obj10;
+                let obj29 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
+                return obj29;
               } else if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN) {
                 if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT) {
                   if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION) {
-                    obj11 = { version: null, id: null, guild_id: null, name: null, type: null, options: null, application_command: null };
-                    obj11.version = closure_139_0.version;
+                    let obj30 = { version: null, id: null, guild_id: null, name: null, type: null, options: null, application_command: null };
+                    obj30.version = closure_139_0.version;
                     let rootCommand2 = closure_139_0.rootCommand;
                     let id7;
                     if (rootCommand2 != null) {
@@ -548,8 +550,8 @@ let closure_16 = async function _executeCommand(arg0) {
                     if (id7 == null) {
                       id = closure_139_0.id;
                     }
-                    obj11.id = id;
-                    obj11.guild_id = closure_139_0.guildId;
+                    obj30.id = id;
+                    obj30.guild_id = closure_139_0.guildId;
                     let rootCommand = closure_139_0.rootCommand;
                     let name1;
                     if (rootCommand != null) {
@@ -559,11 +561,11 @@ let closure_16 = async function _executeCommand(arg0) {
                     if (name1 == null) {
                       untranslatedName = closure_139_0.untranslatedName;
                     }
-                    obj11.name = untranslatedName;
-                    obj11.type = closure_139_0.type;
-                    obj11.options = closure_139_11;
-                    obj11.application_command = closure_139_0.rootCommand;
-                    closure_139_31 = obj11;
+                    obj30.name = untranslatedName;
+                    obj30.type = closure_139_0.type;
+                    obj30.options = closure_139_11;
+                    obj30.application_command = closure_139_0.rootCommand;
+                    closure_139_31 = obj30;
                     if (null != closure_139_3) {
                       closure_139_31.target_id = closure_139_3;
                     }
@@ -574,13 +576,13 @@ let closure_16 = async function _executeCommand(arg0) {
                       let obj40 = closure_140_1(closure_140_3[20]);
                       let clearAllResult = obj40.clearAll(closure_139_2.channel.id, commandAttachmentDraftType);
                       closure_10 = closure_140_18;
-                      obj12 = {};
-                      obj12.applicationId = closure_139_0.applicationId;
-                      obj12.data = closure_139_31;
-                      obj12.context = closure_139_2;
-                      obj12.attachments = closure_139_12;
-                      obj12.maxSizeCallback = closure_139_4;
-                      obj12.onMessageSuccess = function onMessageSuccess() {
+                      obj39 = {};
+                      obj39.applicationId = closure_139_0.applicationId;
+                      obj39.data = closure_139_31;
+                      obj39.context = closure_139_2;
+                      obj39.attachments = closure_139_12;
+                      obj39.maxSizeCallback = closure_139_4;
+                      obj39.onMessageSuccess = function onMessageSuccess() {
                         const values = Object.values(closure_1_1);
                         const flatMapResult = values.flatMap((arr) => {
                           const mapped = arr.map((type) => {
@@ -606,13 +608,13 @@ let closure_16 = async function _executeCommand(arg0) {
                           const obj2 = closure_1(dependencyMap[10]);
                         }
                       };
-                      obj12.analytics_location = closure_140_21(closure_139_10);
-                      obj12.sectionName = closure_139_6;
-                      obj12.source = closure_139_9;
+                      obj39.analytics_location = closure_140_21(closure_139_10);
+                      obj39.sectionName = closure_139_6;
+                      obj39.source = closure_139_9;
                       c15 = 4;
                       c16 = 1;
-                      obj13 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
-                      return obj13;
+                      let obj41 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
+                      return obj41;
                     }
                   }
                 }
@@ -626,11 +628,11 @@ let closure_16 = async function _executeCommand(arg0) {
             c16 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            obj12.interactionLifecycleOptions = value;
-            let tmp7 = closure_10(obj12);
+            obj39.interactionLifecycleOptions = value;
+            let tmp7 = closure_10(obj39);
           }
           c16 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
       }
@@ -652,8 +654,8 @@ let closure_17 = async function _retryCommandMessage(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -666,24 +668,24 @@ let closure_17 = async function _retryCommandMessage(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             if (commandType.isCommandType()) {
               if (null != commandType.interactionData) {
                 if (null != closure_2.command) {
-                  const obj1 = { channel, guild: null };
+                  const obj4 = { channel, guild: null };
                   guild = null;
                   if (null != channel.guild_id) {
                     guild = guild.getGuild(channel.guild_id);
                   }
-                  obj1.guild = guild;
+                  obj4.guild = guild;
                   closure_4 = enqueueCommandInteraction;
-                  obj2 = { applicationId: closure_2.command.applicationId, data: commandType.interactionData, context: obj1 };
+                  obj5 = { applicationId: closure_2.command.applicationId, data: commandType.interactionData, context: obj4 };
                   c5 = 1;
                   c6 = 1;
-                  const obj3 = { value: displayInteractionLifecycleInChat(closure_2.command, obj1, commandType.interactionData), done: false };
-                  return obj3;
+                  const obj6 = { value: displayInteractionLifecycleInChat(closure_2.command, obj4, commandType.interactionData), done: false };
+                  return obj6;
                 }
               }
             }
@@ -693,11 +695,11 @@ let closure_17 = async function _retryCommandMessage(arg0) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          obj2.interactionLifecycleOptions = value;
-          closure_4(obj2);
+          obj5.interactionLifecycleOptions = value;
+          closure_4(obj5);
         }
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp13) {
         c6 = tmp;
@@ -712,15 +714,16 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
   let message;
   if (null != context.channel) {
     const guild = context.guild;
-    let id;
+    const id = context.channel.id;
+    let id1;
     if (guild != null) {
-      id = guild.id;
+      id1 = guild.id;
     }
-    message = { applicationId, channelId: id, guildId: id, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
+    message = { applicationId, channelId: id, guildId: id1, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      let obj1 = onMessageSuccess(7855);
-      nonce = obj1.createNonce();
+      nonce = onMessageSuccess(7855).createNonce();
+      let obj2 = onMessageSuccess(7855);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -728,11 +731,11 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     message.analytics_location = tmp2;
     message.sectionName = tmp3;
     message.source = tmp4;
-    message = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
+    const obj5 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({ messageId: obj4.messageId, onCreate: obj4.onCreate, onSuccess: obj4.onSuccess, onFailure: obj4.onFailure } = interactionLifecycleOptions);
-    message = { interactionType: onMessageSuccess(1894).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
-    message.data = message;
-    InteractionActionCreatorsAll.addQueued(message.nonce, message);
+    const obj7 = { interactionType: onMessageSuccess(1894).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
+    obj5.data = obj7;
+    InteractionActionCreatorsAll.addQueued(message.nonce, obj5);
     if (null != attachments) {
       if (attachments.length > 0) {
         (function stageAttachments() {
@@ -744,13 +747,13 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(attachments, message.nonce, id, maxSizeCallback).then((result) => {
+        })(attachments, message.nonce, id1, maxSizeCallback).then((result) => {
           if (result) {
             closure_0 = message;
             closure_1 = onMessageSuccess;
-            message = { type: MessageQueue.MessageDataType.COMMAND, message: null };
-            message.message = message;
-            message.enqueue(message, (ok) => {
+            message = MessageQueueDefault;
+            const obj2 = { type: MessageQueue.MessageDataType.COMMAND, message };
+            message.enqueue(obj2, (ok) => {
               ({ nonce, applicationId, channelId, guildId } = closure_0);
               if (guildId == null) {
                 guildId = null;
@@ -763,7 +766,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
               if (ok) {
                 closure_1();
               }
-              obj = onMessageSuccess(dependencyMap[26]);
+              const obj = onMessageSuccess(dependencyMap[26]);
             });
           }
         });
@@ -776,13 +779,13 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(attachments, message.nonce, id, maxSizeCallback);
+        })(attachments, message.nonce, id1, maxSizeCallback);
       }
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    obj1 = { type: onMessageSuccess(7936).MessageDataType.COMMAND, message };
-    message(7936).enqueue(obj1, (ok) => {
+    const obj10 = { type: onMessageSuccess(7936).MessageDataType.COMMAND, message };
+    message(7936).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -795,7 +798,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       if (ok) {
         closure_1();
       }
-      obj = onMessageSuccess(dependencyMap[26]);
+      const obj = onMessageSuccess(dependencyMap[26]);
     });
     const obj6 = message(7936);
   }
@@ -825,8 +828,8 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -839,8 +842,8 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             const user = tmp3;
             closure_4 = tmp5;
@@ -852,16 +855,16 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
             closure_132_5 = undefined;
             if (null == channel.channel) {
               c8 = 3;
-              const obj1 = { value: {}, done: true };
-              return obj1;
+              let obj4 = { value: {}, done: true };
+              return obj4;
             } else {
-              let obj2 = { channel: tmp63.channel, type: "channel" };
-              const cachedApplicationSection = ApplicationCommandQueryApiAll.getCachedApplicationSection(obj2, tmp64.type, tmp62.applicationId);
+              const obj5 = { channel: tmp63.channel, type: "channel" };
+              const cachedApplicationSection = ApplicationCommandQueryApiAll.getCachedApplicationSection(obj5, tmp64.type, tmp62.applicationId);
               closure_132_3 = cachedApplicationSection;
               if (null == cachedApplicationSection) {
                 c8 = 3;
-                let obj3 = { value: {}, done: true };
-                return obj3;
+                const obj8 = { value: {}, done: true };
+                return obj8;
               } else {
                 const application = cachedApplicationSection.application;
                 let bot;
@@ -874,8 +877,8 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
                     c6 = 1;
                     c7 = 2;
                     c8 = 1;
-                    const obj4 = { value: UserActionCreatorsAll.getUser(cachedApplicationSection.botId), done: false };
-                    return obj4;
+                    const obj9 = { value: UserActionCreatorsAll.getUser(cachedApplicationSection.botId), done: false };
+                    return obj9;
                   }
                 }
               }
@@ -889,67 +892,67 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c6 = 0;
         }
-        let obj5 = { channelId: closure_132_1.channel.id, content: "", type: null, author: null };
+        const obj10 = { channelId: closure_132_1.channel.id, content: "", type: null, author: null };
         if (closure_132_2.type === closure_133_0(closure_133_3[13]).ApplicationCommandType.CHAT) {
           let CONTEXT_MENU_COMMAND = closure_133_13.CHAT_INPUT_COMMAND;
         } else {
           CONTEXT_MENU_COMMAND = closure_133_13.CONTEXT_MENU_COMMAND;
         }
-        obj5.type = CONTEXT_MENU_COMMAND;
-        obj6 = closure_132_4;
+        obj10.type = CONTEXT_MENU_COMMAND;
+        obj11 = closure_132_4;
         if (closure_132_4 == null) {
-          obj6 = { id: closure_132_3.id, username: closure_132_3.name, discriminator: closure_133_14, avatar: null, bot: true };
+          obj11 = { id: closure_132_3.id, username: closure_132_3.name, discriminator: closure_133_14, avatar: null, bot: true };
         }
-        const obj7 = {};
-        obj5.author = obj6;
-        const merged = Object.assign(closure_133_1(closure_133_3[29])(obj5));
-        obj7.application = closure_132_3.application;
-        const obj8 = { id: closure_132_2.id, name: closure_132_2.name, name_localized: closure_132_0.displayName, type: closure_133_0(closure_133_3[13]).InteractionTypes.APPLICATION_COMMAND, user: null };
-        obj5 = closure_133_0(closure_133_3[29]);
-        obj8.user = obj5.userRecordToServer(closure_133_9.getCurrentUser());
-        obj7.interaction = obj8;
-        obj7.interaction_data = closure_132_2;
-        closure_132_5 = obj7;
-        obj6 = closure_133_1(closure_133_3[30]);
-        const obj9 = { applicationId: closure_132_0.applicationId, command: closure_132_0 };
-        obj6.receiveMessage(closure_132_1.channel.id, closure_132_5, true, obj9);
-        const obj10 = {};
-        Object.defineProperty(obj10, "messageId", { get: () => user.id, set: undefined });
-        Object.defineProperty(obj10, "nonce", { get: () => user.id, set: undefined });
-        obj10.onCreate = function onCreate(id) {
+        const obj12 = {};
+        obj10.author = obj11;
+        const merged = Object.assign(closure_133_1(closure_133_3[29])(obj10));
+        obj12.application = closure_132_3.application;
+        const obj13 = { id: closure_132_2.id, name: closure_132_2.name, name_localized: closure_132_0.displayName, type: closure_133_0(closure_133_3[13]).InteractionTypes.APPLICATION_COMMAND, user: null };
+        const tmp14 = closure_133_1(closure_133_3[29]);
+        obj13.user = closure_133_0(closure_133_3[29]).userRecordToServer(closure_133_9.getCurrentUser());
+        obj12.interaction = obj13;
+        obj12.interaction_data = closure_132_2;
+        closure_132_5 = obj12;
+        const obj7 = closure_133_1(closure_133_3[30]);
+        const obj14 = { applicationId: closure_132_0.applicationId, command: closure_132_0 };
+        obj7.receiveMessage(closure_132_1.channel.id, closure_132_5, true, obj14);
+        const obj15 = {};
+        Object.defineProperty(obj15, "messageId", { get: () => user.id, set: undefined });
+        Object.defineProperty(obj15, "nonce", { get: () => user.id, set: undefined });
+        obj15.onCreate = function onCreate(id) {
           if (null != user.interaction) {
             user.interaction.id = id;
           }
         };
-        obj10.onSuccess = function onSuccess() {
+        obj15.onSuccess = function onSuccess() {
 
         };
-        obj10.onFailure = function onFailure(code, arg1, arg2, reason) {
+        obj15.onFailure = function onFailure(code, arg1, arg2, reason) {
           if (null != channel.channel) {
             let result = arg1;
             if (tmp2) {
-              let obj = closure_1(obj6[30]);
-              obj.sendClydeError(channel.channel.id, code);
+              closure_1(obj11[30]).sendClydeError(channel.channel.id, code);
+              const obj = closure_1(obj11[30]);
             }
             if (tmp7) {
-              result = closure_0(obj6[26]).interactionCallbackErrorReason(reason, closure_1_0.applicationId);
-              const obj2 = closure_0(obj6[26]);
+              result = closure_0(obj11[26]).interactionCallbackErrorReason(reason, closure_1_0.applicationId);
+              const obj2 = closure_0(obj11[26]);
             }
-            obj = { type: "MESSAGE_SEND_FAILED", messageId: user.id, channelId: channel.channel.id, reason: result };
-            closure_1(obj6[10]).dispatch(obj);
-            const obj3 = closure_1(obj6[10]);
+            const obj4 = { type: "MESSAGE_SEND_FAILED", messageId: user.id, channelId: channel.channel.id, reason: result };
+            closure_1(obj11[10]).dispatch(obj4);
+            const obj3 = closure_1(obj11[10]);
             tmp2 = null == arg1 && null != code;
             tmp7 = null == result && null != reason;
           }
         };
         c8 = 3;
-        const obj11 = { value: obj10, done: true };
-        return obj11;
+        const obj16 = { value: obj15, done: true };
+        return obj16;
       } catch (tmp55) {
         if (tmp4 === c6) {
           c8 = tmp2;
@@ -1008,8 +1011,8 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1022,8 +1025,8 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp;
             closure_133_0 = closure_1;
@@ -1034,12 +1037,12 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
             closure_3 = dependencyMap;
             closure_2 = dependencyMap[Symbol.iterator]();
             if (closure_2 === undefined) {
-              let obj1 = { totalSize: null, largestUploadedFileSize: null };
-              obj1.totalSize = closure_133_1;
-              obj1.largestUploadedFileSize = closure_133_2;
+              let obj4 = { totalSize: null, largestUploadedFileSize: null };
+              obj4.totalSize = closure_133_1;
+              obj4.largestUploadedFileSize = closure_133_2;
               c10 = 3;
-              let obj2 = { value: obj1, done: true };
-              return obj2;
+              let obj5 = { value: obj4, done: true };
+              return obj5;
             } else {
               c8 = 1;
               closure_133_3 = tmp11;
@@ -1054,8 +1057,8 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
               } else {
                 c9 = 2;
                 c10 = 1;
-                let obj3 = { value: obj7.getSize(), done: false };
-                return obj3;
+                let obj6 = { value: obj7.getSize(), done: false };
+                return obj6;
               }
             }
           }
@@ -1070,7 +1073,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
           c8 = 0;
           closure_2.return();
           c10 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           closure_6 = value;
@@ -1093,8 +1096,8 @@ let closure_24 = async function _stageAttachments(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1107,8 +1110,8 @@ let closure_24 = async function _stageAttachments(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp5;
@@ -1125,18 +1128,19 @@ let closure_24 = async function _stageAttachments(arg0) {
             if (closure_1_2 != null) {
               tmp(dependencyMap, arg0);
             }
-            closure_2(8234);
             const intl = closure_0(1114).intl;
-            const obj = { maxSize: closure_0(5215).sizeString(dependencyMap) };
-            obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1114).t.fxEKdS, obj));
+            const obj2 = { maxSize: null };
+            const obj = closure_2(8234);
+            obj2.maxSize = closure_0(5215).sizeString(dependencyMap);
+            obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1114).t.fxEKdS, obj2));
             const obj3 = closure_0(5215);
           };
           closure_132_3 = FileUtils.maxFileSize(closure_2);
           maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({ location: "executeCommand.stageAttachments" });
           c7 = 1;
           c8 = 1;
-          const obj1 = { value: getMaxAndTotalFileSize(closure_0, false), done: false };
-          return obj1;
+          const obj5 = { value: getMaxAndTotalFileSize(closure_0, false), done: false };
+          return obj5;
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -1144,8 +1148,8 @@ let closure_24 = async function _stageAttachments(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_132_6 = value;
           totalSize = closure_132_6.totalSize;
@@ -1156,8 +1160,8 @@ let closure_24 = async function _stageAttachments(arg0) {
               c6 = 1;
               c7 = 4;
               c8 = 1;
-              let obj3 = { value: closure_133_1(closure_133_3[34])(closure_132_0), done: false };
-              return obj3;
+              const obj7 = { value: closure_133_1(closure_133_3[34])(closure_132_0), done: false };
+              return obj7;
             }
           }
           closure_132_5(closure_132_8);
@@ -1167,21 +1171,21 @@ let closure_24 = async function _stageAttachments(arg0) {
       } else {
         if (2 === tmp8) {
           c6 = 0;
-          obj3 = closure_133_2(closure_133_3[24]);
           let intl = closure_133_0(closure_133_3[33]).intl;
-          const obj4 = { count: closure_132_0.length };
-          obj3.setFailed(closure_132_1, undefined, intl.formatToPlainString(closure_133_0(closure_133_3[33]).t["9h1/1p"], obj4));
+          const obj8 = { count: closure_132_0.length };
+          closure_133_2(closure_133_3[24]).setFailed(closure_132_1, undefined, intl.formatToPlainString(closure_133_0(closure_133_3[33]).t["9h1/1p"], obj8));
           closure_133_22(closure_132_0, true);
           c7 = 3;
           c8 = 1;
+          const obj4 = closure_133_2(closure_133_3[24]);
         } else if (3 === tmp8) {
           if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_132_9 = value;
             totalSize = closure_132_9.totalSize;
@@ -1196,8 +1200,8 @@ let closure_24 = async function _stageAttachments(arg0) {
               flag = false;
             }
             c8 = 3;
-            const obj6 = { value: flag, done: true };
-            return obj6;
+            const obj10 = { value: flag, done: true };
+            return obj10;
           }
         } else if (arg0 === 1) {
           c8 = 3;
@@ -1207,7 +1211,7 @@ let closure_24 = async function _stageAttachments(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp45) {

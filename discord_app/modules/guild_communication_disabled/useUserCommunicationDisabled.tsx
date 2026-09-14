@@ -5,6 +5,8 @@ import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
@@ -44,10 +46,10 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     id = stateFromStores.id;
   }
   dependencyMap = guild_id;
-  let tmpResult = tmp(504);
+  const obj = id(504);
   const items1 = [GuildMemberStore];
   const items2 = [guild_id, id];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
+  const stateFromStores1 = id(504).useStateFromStores(items1, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -65,8 +67,8 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     prop = null;
   }
   const items3 = [prop, ];
-  tmpResult = tmp(4263);
-  items3[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores1);
+  const tmpResult = id(504);
+  items3[1] = id(4263).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };
 export const userCommunicationDisabled = function userCommunicationDisabled(id, guildId) {

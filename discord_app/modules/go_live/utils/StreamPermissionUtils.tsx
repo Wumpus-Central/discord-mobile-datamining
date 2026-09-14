@@ -9,6 +9,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function canStreamInChannel(channel, GuildStore, PermissionStore, arg3) {
   let flag = arg3;

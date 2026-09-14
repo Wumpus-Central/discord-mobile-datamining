@@ -4,8 +4,8 @@
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -55,7 +55,7 @@ const Constants = fn(1074);
 const TransportTypes = fn(4541).TransportTypes;
 const WebView = fn(8416);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -89,15 +89,14 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
     if (closure_12 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
-        let obj = EmbeddedActivitiesStore;
         connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
         let selfEmbeddedActivityForLocation = null;
         if (null != connectedActivityLocation) {
-          selfEmbeddedActivityForLocation = obj.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+          selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
         }
         if (tmp3) {
-          obj = { location: connectedActivityLocation, applicationId: selfEmbeddedActivityForLocation.applicationId };
-          self.leaveActivity(obj);
+          const obj2 = { location: connectedActivityLocation, applicationId: selfEmbeddedActivityForLocation.applicationId };
+          self.leaveActivity(obj2);
         }
         tmp3 = null != selfEmbeddedActivityForLocation && null != connectedActivityLocation;
       });
@@ -128,9 +127,8 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           tmp14 = null != iframeId;
         }
         if (tmp14) {
-          let obj = WebViewPostMessageTransportDefault;
-          obj = { type: TransportTypes.POST_MESSAGE, origin: url, iframeId };
-          obj.handleMessage(parsed, obj, postMessageToWebView);
+          const obj2 = { type: TransportTypes.POST_MESSAGE, origin: url, iframeId };
+          WebViewPostMessageTransportDefault.handleMessage(parsed, obj2, postMessageToWebView);
         }
       } catch (tmp22) {
         const _SyntaxError = SyntaxError;
@@ -149,14 +147,14 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
               tmp29 = null != tmp28;
             }
             if (tmp29) {
-              obj = { location: connectedActivityLocation1, applicationId: tmp28, showFeedback: false };
-              self.leaveActivity(obj);
-              const obj1 = { body: null, confirmText: null };
+              const obj3 = { location: connectedActivityLocation1, applicationId: tmp28, showFeedback: false };
+              self.leaveActivity(obj3);
+              const obj5 = { body: null, confirmText: null };
               const intl = util.intl;
-              obj1.body = intl.string(util.t.tYBBWz);
+              obj5.body = intl.string(util.t.tYBBWz);
               const intl2 = util.intl;
-              obj1.confirmText = intl2.string(util.t.BddRzS);
-              actions_AlertActionCreatorsDefault.show(obj1);
+              obj5.confirmText = intl2.string(util.t.BddRzS);
+              actions_AlertActionCreatorsDefault.show(obj5);
             }
           }
         } else {
@@ -170,7 +168,6 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
     }
     obj2 = closure_1(closure_2[17]);
     self.thermalStateSubscription = obj2.addListener((rawThermalState) => {
-      let obj = connectedActivityLocation;
       connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
       let selfEmbeddedActivityForLocation = null;
       if (null != connectedActivityLocation) {
@@ -186,19 +183,20 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
       if (selfEmbeddedActivityForLocation != null) {
         applicationId = selfEmbeddedActivityForLocation.applicationId;
       }
+      obj = connectedActivityLocation;
       const obj2 = self(dependencyMap[18]);
-      obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
+      const obj4 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
       let guild_id;
       if (basicChannel != null) {
         guild_id = basicChannel.guild_id;
       }
-      obj.guild_id = guild_id;
-      obj.media_session_id = mediaSessionId.getMediaSessionId();
-      AnalyticsUtilsDefault.track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj);
+      obj4.guild_id = guild_id;
+      obj4.media_session_id = mediaSessionId.getMediaSessionId();
+      AnalyticsUtilsDefault.track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj4);
       DispatcherDefault.dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
-      let tmp3Result = self(dependencyMap[21]);
+      const tmp9Result = DispatcherDefault;
       let tmp14 = null != compositeInstanceId;
-      const thermalState = tmp3Result.getThermalState();
+      const thermalState = self(dependencyMap[21]).getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
@@ -206,10 +204,10 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
         tmp14 = thermalState >= self(dependencyMap[21]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        tmp3Result = self(dependencyMap[22]);
-        const respondToSeriousThermalState = tmp3Result.requestRespondToSeriousThermalState();
+        const respondToSeriousThermalState = self(dependencyMap[22]).requestRespondToSeriousThermalState();
+        const tmp3Result2 = self(dependencyMap[22]);
       }
-      const tmp9Result = DispatcherDefault;
+      const tmp3Result = self(dependencyMap[21]);
     });
     return;
   }
@@ -234,25 +232,25 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
 const prototype = EmbeddedActivitiesNativeManager.prototype;
 prototype["showErrorModal"] = function showErrorModal(reason) {
   ({ code, message } = reason);
-  const obj = { title: null, body: null };
+  const obj2 = { title: null, body: null };
   const intl = util.intl;
-  obj.title = intl.formatToPlainString(util.t.hbiAO6, { code });
-  obj.body = message;
-  obj.show(obj);
+  obj2.title = intl.formatToPlainString(util.t.hbiAO6, { code });
+  obj2.body = message;
+  actions_AlertActionCreatorsDefault.show(obj2);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  const obj = { title: null, body: null };
+  const obj2 = { title: null, body: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.PtobXW);
-  obj.body = message;
-  obj.show(obj);
+  obj2.title = intl.string(util.t.PtobXW);
+  obj2.body = message;
+  actions_AlertActionCreatorsDefault.show(obj2);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  const obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
+  const obj2 = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
-  obj.content = intl.string(util.t.JfA7IK);
-  obj.icon = _modDef9696;
-  obj.open(obj);
+  obj2.content = intl.string(util.t.JfA7IK);
+  obj2.icon = _modDef9696;
+  ToastActionCreatorsDefault.open(obj2);
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
@@ -286,10 +284,9 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = { location: _location, applicationId, showFeedback };
-  obj.stopEmbeddedActivity(obj);
-  obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null, gridLockState: null };
-  DispatcherDefault.dispatch(obj);
+  EmbeddedActivitiesActionCreators.stopEmbeddedActivity({ location: _location, applicationId, showFeedback });
+  const obj2 = { location: _location, applicationId, showFeedback };
+  DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null, gridLockState: null });
 };
 prototype["releaseIframeId"] = function releaseIframeId() {
   this.iframeId = undefined;

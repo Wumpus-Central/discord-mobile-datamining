@@ -4,6 +4,8 @@
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");
 

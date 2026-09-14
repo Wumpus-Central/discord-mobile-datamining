@@ -1,6 +1,6 @@
-// === Module 16748: SearchHistoryStore ===
+// === Module 16750: SearchHistoryStore ===
 
-// Module 16748 (SearchHistoryStore)
+// Module 16750 (SearchHistoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

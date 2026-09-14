@@ -3,7 +3,7 @@
 // Module 5633 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ImpersonateTypes from "ImpersonateTypes" /* 2020 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -19,18 +19,19 @@ require = fn;
 function updateImpersonating(guildId, type) {
   const data = ImpersonateStore.getData(guildId);
   if (tmp2) {
-    let obj = { num_roles: null };
+    const obj2 = { num_roles: null };
     const _Object = Object;
-    obj.num_roles = Object.keys(data.roles).length;
+    obj2.num_roles = Object.keys(data.roles).length;
+    const obj = AnalyticsUtilsDefault;
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-    obj.is_viewing_as_member = data.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
-    obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-    obj = { type: "IMPERSONATE_UPDATE", guildId, data: null };
-    const obj1 = {};
+    obj2.is_viewing_as_member = data.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
+    obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj2);
+    const obj5 = { type: "IMPERSONATE_UPDATE", guildId, data: null };
+    const obj6 = {};
     const merged1 = Object.assign(data);
     const merged2 = Object.assign(type);
-    obj.data = obj1;
-    DispatcherDefault.dispatch(obj);
+    obj5.data = obj6;
+    DispatcherDefault.dispatch(obj5);
     const channelId = SelectedChannelStore.getChannelId(guildId);
     if (null == channelId) {
       if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp21)) {
@@ -51,12 +52,12 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
 export const startImpersonating = function startImpersonating(guildId, data) {
-  let obj = { num_roles: Object.keys(data.roles).length };
+  const obj2 = { num_roles: Object.keys(data.roles).length };
+  const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-  obj.is_viewing_as_member = data.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
-  obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-  obj = { type: "IMPERSONATE_UPDATE", guildId, data };
-  DispatcherDefault.dispatch(obj);
+  obj2.is_viewing_as_member = data.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
+  obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj2);
+  DispatcherDefault.dispatch({ type: "IMPERSONATE_UPDATE", guildId, data });
   const channelId = SelectedChannelStore.getChannelId(guildId);
   if (null == channelId) {
     if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp7)) {
@@ -67,11 +68,11 @@ export const startImpersonating = function startImpersonating(guildId, data) {
       }
     }
   }
+  const obj5 = { type: "IMPERSONATE_UPDATE", guildId, data };
 };
 export { updateImpersonating };
 export const stopImpersonating = function stopImpersonating(guildId) {
-  const obj = { type: "IMPERSONATE_STOP", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "IMPERSONATE_STOP", guildId });
 };
 export const updateImpersonatedChannels = function updateImpersonatedChannels(guildId, items1, items2) {
   const set = new Set(UserGuildSettingsStore.getOptedInChannels(guildId));
@@ -95,8 +96,7 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
         return true;
       } else {
         items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_4.getSelectableChannelIds(tmp), 0);
-        arraySpreadResult = HermesBuiltin.arraySpread(closure_1_4.getVocalChannelIds(tmp), arraySpreadResult);
+        HermesBuiltin.arraySpread(closure_1_4.getVocalChannelIds(tmp), HermesBuiltin.arraySpread(closure_1_4.getSelectableChannelIds(tmp), 0));
         const found = items.filter((item) => !items.includes(item));
         if (found.length > 0) {
           const items1 = [];
@@ -117,8 +117,7 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
     obj[item10013.id] = item10013;
     continue;
   }
-  obj = { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, roles: obj };
-  updateImpersonating(guildId, obj);
+  updateImpersonating(guildId, { type: ImpersonateTypes.ImpersonateType.NEW_MEMBER, roles: obj });
 };
 export const updateImpersonatedData = function updateImpersonatedData(guildId, arg1) {
   const merged = Object.assign(arg1);

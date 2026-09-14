@@ -1,17 +1,17 @@
-// === Module 17395: trackHttpRequest ===
+// === Module 17397: trackHttpRequest ===
 
-// Module 17395 (trackHttpRequest)
+// Module 17397 (trackHttpRequest)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HttpRequestSampleExperiment from "HttpRequestSampleExperiment" /* 17396 */;
-import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17397 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HttpRequestSampleExperiment from "HttpRequestSampleExperiment" /* 17398 */;
+import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17399 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(url);
   let replaced = str;
   if (null != url.url) {
@@ -22,10 +22,10 @@ export default function trackHttpRequest(url) {
   trackZoomedInHttpRequestDefault(obj);
   const random = Math.random();
   if (random < obj2.getHttpRequestSampleRate()) {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj.source = "sample";
-    AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
+    obj3.source = "sample";
+    AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj3);
     const tmp3Result = AnalyticsUtilsDefault;
   }
   obj2 = HttpRequestSampleExperiment;

@@ -1,6 +1,6 @@
-// === Module 14632: ICYMIManager ===
+// === Module 14633: ICYMIManager ===
 
-// Module 14632 (ICYMIManager)
+// Module 14633 (ICYMIManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
@@ -19,10 +19,9 @@ prototype["_terminate"] = function _terminate() {
   DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  let obj = ICYMIExperiment;
   if (obj.getICYMIEnabled("ICYMIManager")) {
-    obj = { isInitialLoad: true };
-    const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated(obj);
+    const obj3 = { isInitialLoad: true };
+    const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated(obj3);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -61,11 +60,12 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
       let obj = closure_1_1(closure_1_2[0]);
     }, 15 * DurationsDefault.Millis.MINUTE);
-    let tmp2Result = ICYMIActionCreatorsDefault;
-    const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = ICYMIActionCreatorsDefault;
-    const recommendedGuilds = tmp2Result.getRecommendedGuilds();
+    const guildChannelScores = ICYMIActionCreatorsDefault.getGuildChannelScores();
+    const tmp2Result = ICYMIActionCreatorsDefault;
+    const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();
+    const tmp2Result2 = ICYMIActionCreatorsDefault;
   }
+  obj = ICYMIExperiment;
 };
 const iCYMIManager = new ICYMIManager();
 const size = fn(2);

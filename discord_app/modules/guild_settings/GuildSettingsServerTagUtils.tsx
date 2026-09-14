@@ -19,8 +19,8 @@ export const canUseMobileServerTagSettings = function canUseMobileServerTagSetti
     enabled = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
   }
   if (enabled) {
-    const obj = { location: GuildSettingsServerTag };
-    enabled = obj.getConfig(obj).enabled;
+    const obj2 = { location: GuildSettingsServerTag };
+    enabled = MobileServerTagExperimentDefault.getConfig(obj2).enabled;
   }
   return enabled;
 };
@@ -28,15 +28,14 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
   const guild = GuildStore.getGuild(id);
   let enabled = null != guild;
   if (enabled) {
-    let obj = GuildTagUtils;
-    enabled = obj.guildSupportsTags(guild);
+    enabled = GuildTagUtils.guildSupportsTags(guild);
   }
   if (enabled) {
     enabled = GuildTagUtils.guildHasTag(guild);
   }
   if (enabled) {
-    obj = { location: GuildSettingsServerTag };
-    enabled = MobileServerTagExperimentDefault.getConfig(obj).enabled;
+    const obj4 = { location: GuildSettingsServerTag };
+    enabled = MobileServerTagExperimentDefault.getConfig(obj4).enabled;
   }
   return enabled;
 };

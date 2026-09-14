@@ -1,7 +1,9 @@
-// === Module 12042: useShouldRenderReportFalsePositiveButton ===
+// === Module 12043: useShouldRenderReportFalsePositiveButton ===
 
-// Module 12042 (useShouldRenderReportFalsePositiveButton)
+// Module 12043 (useShouldRenderReportFalsePositiveButton)
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7396 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

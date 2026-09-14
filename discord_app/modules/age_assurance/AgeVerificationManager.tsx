@@ -1,6 +1,6 @@
-// === Module 17424: AgeVerificationManager ===
+// === Module 17426: AgeVerificationManager ===
 
-// Module 17424 (AgeVerificationManager)
+// Module 17426 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
 import Server from "Server" /* 1894 */;
@@ -24,7 +24,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
 const SafetyToastType = fn(8517).SafetyToastType;
 let closure_10 = new LoggerDefault("AgeVerificationManager");
-let prototype = function AgeVerificationManager() {
+const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._previousAgeVerificationStatus = null;
@@ -80,9 +80,7 @@ let prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            _true(7559);
-            const obj = { channelId, limit };
-            const messages = obj.fetchMessages(obj);
+            const messages = _true(7559).fetchMessages({ channelId, limit });
           })(tmp16);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
@@ -116,8 +114,8 @@ let prototype = function AgeVerificationManager() {
 }.prototype;
 class prototype extends tmp4 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationManager.tsx");
 
-export default prototype;
+export default prototype1;

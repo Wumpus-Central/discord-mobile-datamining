@@ -16,11 +16,11 @@ export default function OpenCriticRatingCircle(size) {
   const result1 = (size - 4) / 2;
   const result2 = 2 * Math.PI * result1;
   const result3 = Math.min(Math.max(size.rating, 0), 100) / 100;
-  size = { width: size, height: size, children: null };
+  const size1 = { width: size, height: size, children: null };
   const obj = { transform: null, cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: null };
   const diff = 1 - result3;
   obj.transform = "rotate(" + 360 * diff / 2 + " " + result + " " + result + ")";
   obj.strokeDashoffset = result2 * diff;
-  size.children = jsx(inlineStyles.Circle, { transform: null, cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: null });
+  size1.children = jsx(inlineStyles.Circle, { transform: null, cx: result, cy: result, r: result1, stroke: size.strokeColor, strokeWidth: 2, fill: "none", strokeDasharray: result2, strokeDashoffset: null });
   return jsx(inlineStylesDefault, { width: size, height: size, children: null });
 };

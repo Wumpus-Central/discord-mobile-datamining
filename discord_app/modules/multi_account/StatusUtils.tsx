@@ -34,22 +34,22 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const data = util.intl.data;
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
-    let obj = { kind: "today", dateString: null, timeString: null };
+    const obj = { kind: "today", dateString: null, timeString: null };
     const data4 = util.intl.data;
     obj.dateString = data4.formatRelativeTime(0, "day", { numeric: "auto" });
     obj.timeString = formatTimeResult;
-    let obj1 = obj;
+    let obj3 = obj;
   } else if (tmp7) {
-    obj = { kind: "tomorrow", dateString: null, timeString: null };
+    const obj2 = { kind: "tomorrow", dateString: null, timeString: null };
     const data3 = util.intl.data;
-    obj.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
-    obj.timeString = formatTimeResult;
-    obj1 = obj;
+    obj2.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
+    obj2.timeString = formatTimeResult;
+    obj3 = obj2;
   } else {
-    obj1 = { kind: "date", dateString: null, timeString: null };
+    obj3 = { kind: "date", dateString: null, timeString: null };
     const data2 = util.intl.data;
-    obj1.dateString = data2.formatDate(date, { dateStyle: "short" });
-    obj1.timeString = formatTimeResult;
+    obj3.dateString = data2.formatDate(date, { dateStyle: "short" });
+    obj3.timeString = formatTimeResult;
   }
-  return obj1;
+  return obj3;
 };

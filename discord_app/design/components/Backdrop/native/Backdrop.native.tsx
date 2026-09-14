@@ -14,13 +14,12 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-fn(4636);
-let createStyles = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
-createStyles.backdrop = createStyles;
-createStyles.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
-createStyles.accessibilityDismiss = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
+obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
+obj2.accessibilityDismiss = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
 
@@ -44,45 +43,46 @@ export const Backdrop = function Backdrop(animatedProps) {
     accessibilityLabel = intl.string(util.t.WAI6xu);
   }
   let backgroundColor = closure_7();
-  let obj = { onPress: onDismiss, "aria-hidden": true };
-  obj = { style: null, pointerEvents: "box-none", animatedProps, children: null };
+  const obj2 = { onPress: onDismiss, "aria-hidden": true };
+  const obj3 = { style: null, pointerEvents: "box-none", animatedProps, children: null };
   const items = [backgroundColor.fill, style];
-  obj.style = items;
+  obj3.style = items;
   let tmp4 = null != onDismiss;
   if (tmp4) {
-    const obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
+    const obj4 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
     const items1 = [backgroundColor.accessibilityDismiss, , ];
-    const obj2 = { top: useSafeAreaInsetsDefault().top };
-    items1[1] = obj2;
+    const obj5 = { top: useSafeAreaInsetsDefault().top };
+    items1[1] = obj5;
     items1[2] = accessibleDismissStyle;
-    obj1.style = items1;
-    obj1.onPress = onDismiss;
-    obj1.accessibilityLabel = accessibilityLabel;
-    obj1["aria-hidden"] = animatedProps["aria-hidden"];
-    tmp4 = React4(React3, obj1);
+    obj4.style = items1;
+    obj4.onPress = onDismiss;
+    obj4.accessibilityLabel = accessibilityLabel;
+    obj4["aria-hidden"] = animatedProps["aria-hidden"];
+    tmp4 = React4(React3, obj4);
   }
   const items2 = [tmp4, ];
   if ("none" !== str) {
-    const obj3 = {};
-    const merged = Object.assign(obj);
-    obj3.style = backgroundColor.fill;
+    const obj6 = {};
+    const merged = Object.assign(obj2);
+    obj6.style = backgroundColor.fill;
     if ("none" === str) {
       let num = 0;
-      const obj4 = { blurAmount: num, style: backgroundColor.fill, blurTheme: obj.useThemeContext().theme, tintColor: backgroundColor.backdrop.backgroundColor, android_fallbackColor: null };
+      const obj7 = { blurAmount: num, style: backgroundColor.fill, blurTheme: obj.useThemeContext().theme, tintColor: backgroundColor.backdrop.backgroundColor, android_fallbackColor: null };
       backgroundColor = backgroundColor.backdrop.backgroundColor;
-      obj4.android_fallbackColor = backgroundColor;
-      obj3.children = React4(tmp15, obj4);
+      obj7.android_fallbackColor = backgroundColor;
+      obj6.children = React4(tmp15, obj7);
     } else if ("subtle" !== str) {
       num = 0.25;
     }
     num = 0.05;
   } else {
-    const obj5 = {};
-    const merged1 = Object.assign(obj);
+    const obj8 = {};
+    const merged1 = Object.assign(obj2);
     const items3 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
-    obj5.style = items3;
-    items2[1] = React4(tmp8, obj5);
-    obj.children = items2;
-    return hasOwnProperty(ReanimatedRexportDefault.View, obj);
+    obj8.style = items3;
+    items2[1] = React4(tmp8, obj8);
+    obj3.children = items2;
+    return hasOwnProperty(ReanimatedRexportDefault.View, obj3);
   }
+  obj = native;
 };

@@ -1,10 +1,10 @@
-// === Module 18051: SelectVoiceChannel ===
+// === Module 18052: SelectVoiceChannel ===
 
-// Module 18051 (SelectVoiceChannel)
+// Module 18052 (SelectVoiceChannel)
 import transitionToChannel from "transitionToChannel" /* 4647 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18044 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18045 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 

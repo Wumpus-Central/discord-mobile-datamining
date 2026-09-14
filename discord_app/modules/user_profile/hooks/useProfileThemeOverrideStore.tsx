@@ -53,8 +53,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       if (null != first) {
         tmp8 = tmp3;
         if (null != tmp7) {
-          let obj = UserProfileGradientUtils;
-          let profileTheme = obj.getProfileTheme(first);
+          let profileTheme = UserProfileGradientUtils.getProfileTheme(first);
           if (profileTheme == null) {
             profileTheme = tmp3;
           }
@@ -85,8 +84,8 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       shared;
       DARK = tmp3;
     }
-    obj = { theme: DARK, primaryColor: tmp5, secondaryColor: tmp4 };
-    return obj;
+    const obj4 = { theme: DARK, primaryColor: tmp5, secondaryColor: tmp4 };
+    return obj4;
   }
 };
 export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverride() {

@@ -3,13 +3,15 @@
 // Module 8057 (resolveMessageContentColors)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4488 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles_mod from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
+let createStyles = createStyles_mod;
 const result = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
+let createStyles = createStyles_mod;
 let obj = { textColor: null, linkColor: null, timestampColor: null, highlightColor: null, unsupportedColor: null, embedProviderColor: null, embedBorderLeftColor: null, embedBodyTextColor: null, embedHeaderTextColor: null, opTagTextColor: null, opTagBackgroundColor: null, failedMessageBodyTextColor: null, automodBlockedBodyTextColor: null, aiBotTagColor: null, editedColor: null, defaultUsernameColor: null, feedbackColor: null, reportFpTextColor: null, reportFpBackgroundColor: null, retryTextColor: null, retryBackgroundColor: null, clipTagBackgroundColor: null, clipTagTextColor: null };
 const result1 = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
@@ -38,6 +40,7 @@ obj.retryTextColor = nativeDefault.colors.WHITE;
 obj.retryBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
 obj.clipTagBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
 obj.clipTagTextColor = nativeDefault.unsafe_rawColors.WHITE;
+let createStyles = createStyles_mod;
 let closure_4 = createStyles.createNativeStyleProperties((arg0) => {
   const colors = nativeDefault.colors;
   obj = { embedBackgroundColor: arg0 ? colors.EMBED_BACKGROUND_ALTERNATE : colors.EMBED_BACKGROUND };

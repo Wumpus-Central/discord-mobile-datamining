@@ -1,14 +1,14 @@
-// === Module 17560: RedesignNewUserManager ===
+// === Module 17561: RedesignNewUserManager ===
 
-// Module 17560 (RedesignNewUserManager)
+// Module 17561 (RedesignNewUserManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12806 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 12807 */;
 import NewUserStore from "NewUserStore" /* 5640 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 
 ({ initialize: c3, ContactSyncModes: closure_4 } = ContactSyncModalStore);
-let prototype = function RedesignNewUserManager() {
+const prototype = function RedesignNewUserManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
@@ -27,21 +27,21 @@ let prototype = function RedesignNewUserManager() {
     const nextOnboardingStep = applyArgumentsResult(dependencyMap[4]).getNextOnboardingStep(false, -1, -1);
     nextOnboardingStep.then((result) => {
       ({ lastShownStepIndex, onboardingStepIndex } = result);
-      let obj = closure_1_0(paths[4]);
-      const keyForOnboardingStep = obj.getKeyForOnboardingStep(onboardingStepIndex);
+      const keyForOnboardingStep = closure_1_0(paths[4]).getKeyForOnboardingStep(onboardingStepIndex);
       if (null != keyForOnboardingStep) {
         const obj3 = closure_1_1(paths[5]);
         const tmp11 = closure_1_0(paths[7])(paths[6], paths.paths);
-        obj = { initialRouteName: keyForOnboardingStep, initialOnboardingStepIndex: onboardingStepIndex };
+        const obj2 = { initialRouteName: keyForOnboardingStep, initialOnboardingStepIndex: onboardingStepIndex };
         const NEW_USER_MODAL_KEY = closure_1_0(paths[8]).NEW_USER_MODAL_KEY;
         let str = "card";
         if (tmpResult.isAndroid()) {
           str = "transparentModal";
         }
-        obj = { fullScreenGestureEnabled: false, presentation: str, animation: "slide_from_bottom" };
-        obj3.pushLazy(tmp11, obj, NEW_USER_MODAL_KEY, obj);
+        const obj4 = { fullScreenGestureEnabled: false, presentation: str, animation: "slide_from_bottom" };
+        obj3.pushLazy(tmp11, obj2, NEW_USER_MODAL_KEY, obj4);
         tmpResult = closure_1_0(paths[9]);
       }
+      const obj = closure_1_0(paths[4]);
     });
     let tmpResult = applyArgumentsResult(dependencyMap[4]);
   };
@@ -60,7 +60,7 @@ let prototype = function RedesignNewUserManager() {
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const result = size.fileFinishedImporting("modules/nuf/native/RedesignNewUserManager.tsx");
 
-export default prototype;
+export default prototype1;

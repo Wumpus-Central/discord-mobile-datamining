@@ -1,9 +1,9 @@
-// === Module 13856: NUFChannelsActionSheet ===
+// === Module 13857: NUFChannelsActionSheet ===
 
-// Module 13856 (NUFChannelsActionSheet)
+// Module 13857 (NUFChannelsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import NUFTemplateV2Default from "NUFTemplateV2" /* 13857 */;
-import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13858 */;
+import NUFTemplateV2Default from "NUFTemplateV2" /* 13858 */;
+import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13859 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -32,14 +32,24 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     startExpanded: true,
     children: null
   };
-  obj = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
+  const obj2 = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
   const intl = markAsDismissed(1114).intl;
-  obj.title = intl.string(markAsDismissed(1114).t.Ay9424);
+  obj2.title = intl.string(markAsDismissed(1114).t.Ay9424);
   const intl2 = markAsDismissed(1114).intl;
-  obj.description = intl2.string(markAsDismissed(1114).t.mufH2P);
+  obj2.description = intl2.string(markAsDismissed(1114).t.mufH2P);
   const intl3 = markAsDismissed(1114).intl;
-  obj.CTALabel = intl3.string(markAsDismissed(1114).t.BddRzS);
-  obj.onCTAPress = callback;
+  obj2.CTALabel = intl3.string(markAsDismissed(1114).t.BddRzS);
+  obj2.onCTAPress = callback;
   obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(7253).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  return jsx(markAsDismissed(7253).BottomSheet, {
+    onDismiss() {
+      let tmpResult;
+      if (markAsDismissed != null) {
+        tmpResult = tmp(ContentDismissActionType.UNKNOWN);
+      }
+      return tmpResult;
+    },
+    startExpanded: true,
+    children: null
+  });
 };

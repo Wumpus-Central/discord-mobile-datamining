@@ -1,12 +1,14 @@
-// === Module 16799: ThreadMemberListHooks ===
+// === Module 16801: ThreadMemberListHooks ===
 
-// Module 16799 (ThreadMemberListHooks)
+// Module 16801 (ThreadMemberListHooks)
 import util from "util" /* 1114 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7389 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7415 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import ThreadMemberListStore from "ThreadMemberListStore" /* 9967 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const StatusTypes = fn(1085).StatusTypes;
@@ -50,10 +52,10 @@ export const useThreadMemberListSections = function useThreadMemberListSections(
       let obj = { id: StatusTypes.ONLINE, label: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.WbGtnH);
-      obj = { id: StatusTypes.OFFLINE, label: null };
+      const obj2 = { id: StatusTypes.OFFLINE, label: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.Vv0abJ);
-      mapped.push(obj, obj);
+      obj2.label = intl2.string(util.t.Vv0abJ);
+      mapped.push(obj, obj2);
       return mapped.map((id) => {
         id = id.id;
         const obj = { label: id.label, userIds: null, id: null, roleId: null };

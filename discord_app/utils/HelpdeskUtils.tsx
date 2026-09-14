@@ -1,7 +1,7 @@
 // === Module 2024: HelpdeskUtils ===
 
 // Module 2024 (HelpdeskUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import getLocalizedLinkDefault from "getLocalizedLink" /* 4258 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 

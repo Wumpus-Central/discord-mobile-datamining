@@ -8,11 +8,9 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { timestamp: null };
-createStyles = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.timestamp = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
@@ -24,11 +22,10 @@ export default function Timestamp(node) {
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  return jsx(node(1178).LegacyText, {
+  return jsx(node(1176).LegacyText, {
     style,
     onPress() {
-      const obj = { key: "TIMESTAMP", content: node.full };
-      obj.open(obj);
+      ToastActionCreatorsDefault.open({ key: "TIMESTAMP", content: node.full });
     },
     children: useFormattedTimestampDefault(node)
   });

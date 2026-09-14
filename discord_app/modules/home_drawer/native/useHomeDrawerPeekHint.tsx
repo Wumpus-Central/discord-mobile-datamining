@@ -1,14 +1,16 @@
-// === Module 16119: useHomeDrawerPeekHint ===
+// === Module 16121: useHomeDrawerPeekHint ===
 
-// Module 16119 (useHomeDrawerPeekHint)
+// Module 16121 (useHomeDrawerPeekHint)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import spring from "spring" /* 5055 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16115 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16116 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16118 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ME = fn(1074).ME;
@@ -33,10 +35,10 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
   const lastInteractionAt = tmp2.lastInteractionAt;
   const isPanelTouchActive = tmp2.isPanelTouchActive;
   noteInteraction = tmp2.noteInteraction;
+  const isFocused = require("Link").useIsFocused();
   let obj = require("Link");
-  const isFocused = obj.useIsFocused();
   const drawerOpen = require("useDrawerState").useDrawerOpen(enablePeekHint);
-  const obj2 = require("useDrawerState");
+  let obj2 = require("useDrawerState");
   items = [isPanelTouchActive];
   const stateFromStores = require("initialize").useStateFromStores(items, () => isPanelTouchActive.useReducedMotion);
   const obj3 = require("initialize");
@@ -63,7 +65,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
   }
   closure_7 = tmp;
   lastInteractionAt.useRef(false);
-  let tmp8Result = tmp8(lastInteractionAt.useState(false), 2);
+  const tmp8Result = gestureState(lastInteractionAt.useState(false), 2);
   const first1 = tmp8Result[0];
   closure_10 = tmp15;
   let tmp16 = first1;
@@ -73,12 +75,12 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
   if (tmp16) {
     tmp15(false);
   }
-  let tmp3Result = tmp3(tmp4[13]);
+  require("useSelectedDismissibleContent");
   if (first1) {
     if (tmp) {
       let tmp20 = current;
     }
-    tmp8Result = tmp8(tmp19(tmp20, undefined, true), 2);
+    const tmp8Result2 = tmp8(tmp19(tmp20, undefined, true), 2);
     current = tmp22;
     __initData = obj6.useRef(null);
     __initData2 = obj6.useRef(null);
@@ -92,8 +94,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         ref2.current = null;
       }
       closure_14.current = true;
-      let obj = { duration: 1500, easing };
-      let result = sharedValue7.set(obj.withTiming(40, obj));
+      let result = sharedValue7.set(timing.withTiming(40, { duration: 1500, easing }));
       closure_13.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
@@ -105,10 +106,11 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         closure_1_10(false);
         const obj = closure_0(panelX[15]);
       }, 2500);
+      const obj2 = { duration: 1500, easing };
     }, items1);
-    const tmp25 = tmp8Result[0] === tmp3(tmp4[7]).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
+    const tmp25 = tmp8Result2[0] === tmp3(tmp4[7]).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
     closure_17 = tmp25;
-    const items2 = [tmp25, callback, tmp8Result[1]];
+    const items2 = [tmp25, callback, tmp8Result2[1]];
     const effect = obj6.useEffect(() => {
       let tmp = closure_17;
       if (closure_17) {
@@ -198,7 +200,6 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
       }
       closure_10(false);
     }, items7);
-    tmp3Result = tmp3(tmp4[6]);
     class V {
       constructor() {
         active = gestureState.get().active;
@@ -210,8 +211,8 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         return active;
       }
     }
-    obj = { gestureState, panelX, PEEK_HINT_DRAWER_DRAG_THRESHOLD: 8 };
-    V.__closure = obj;
+    const obj7 = { gestureState, panelX, PEEK_HINT_DRAWER_DRAG_THRESHOLD: 8 };
+    V.__closure = obj7;
     V.__workletHash = 15765003051494;
     V.__initData = __initData;
     class Q {
@@ -237,11 +238,11 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
         return;
       }
     }
-    obj = { isPeekGranted: tmp25, runOnJS: tmp3(tmp4[6]).runOnJS, handleDrawerDragged: callback2 };
-    Q.__closure = obj;
+    const obj8 = { isPeekGranted: tmp25, runOnJS: tmp3(tmp4[6]).runOnJS, handleDrawerDragged: callback2 };
+    Q.__closure = obj8;
     Q.__workletHash = 10054961085184;
     Q.__initData = __initData2;
-    const animatedReaction = tmp3Result.useAnimatedReaction(V, Q);
+    const animatedReaction = tmp3(tmp4[6]).useAnimatedReaction(V, Q);
   }
   tmp20 = closure_10;
 };

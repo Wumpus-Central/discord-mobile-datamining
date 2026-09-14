@@ -1,15 +1,15 @@
-// === Module 12360: application_commands/ApplicationCommandUtils ===
+// === Module 12361: application_commands/ApplicationCommandUtils ===
 
-// Module 12360 (application_commands/ApplicationCommandUtils)
+// Module 12361 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef1884 from "module_1884" /* 1884 */;
 import DraftStore from "DraftStore" /* 4977 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5080 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9436 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10761 */;
-import _modDef12361 from "module_12361" /* 12361 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10762 */;
 import _modDef12362 from "module_12362" /* 12362 */;
+import _modDef12363 from "module_12363" /* 12363 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 import size from "module_2" /* 2 */;
 
@@ -23,20 +23,20 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12361);
-    } else if (tmp10.FRECENCY === id) {
       return AvatarUtilsDefault.makeSource(_modDef12362);
+    } else if (tmp10.FRECENCY === id) {
+      return AvatarUtilsDefault.makeSource(_modDef12363);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
-        const obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
+        const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2.id, icon: obj2.icon, application } = section);
         let bot;
         if (application != null) {
           bot = application.bot;
         }
-        obj.bot = bot;
-        obj.guildMember = stateFromStores;
-        let applicationIconSource = obj.getApplicationIconSource(obj);
+        obj5.bot = bot;
+        obj5.guildMember = stateFromStores;
+        let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
       } else {
         applicationIconSource = _modDef1884;
       }

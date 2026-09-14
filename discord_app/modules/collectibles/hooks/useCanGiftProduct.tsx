@@ -1,6 +1,6 @@
-// === Module 13292: useCanGiftProduct ===
+// === Module 13293: useCanGiftProduct ===
 
-// Module 13292 (useCanGiftProduct)
+// Module 13293 (useCanGiftProduct)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4307 */;
@@ -29,16 +29,16 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = product.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = CollectiblesUtils;
     let currency;
     if (result3 != null) {
       currency = result3.currency;
     }
-    result = tmpResult.shouldHideGiftingForCurrency(currency);
+    result = CollectiblesUtils.shouldHideGiftingForCurrency(currency);
+    const tmpResult = CollectiblesUtils;
   }
   if (!result) {
-    tmpResult = BillingPlatformUtils;
-    result = !tmpResult.isCollectibleGiftingSupported();
+    result = !BillingPlatformUtils.isCollectibleGiftingSupported();
+    const tmpResult2 = BillingPlatformUtils;
   }
   return !result;
 };

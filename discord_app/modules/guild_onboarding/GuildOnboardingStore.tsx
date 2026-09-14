@@ -8,7 +8,7 @@ import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;
-let GuildOnboardingStatus = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
+const GuildOnboardingStatus = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
 const dependencyMap = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
@@ -47,7 +47,7 @@ prototype["getCurrentOnboardingStep"] = function getCurrentOnboardingStep(arg0) 
   return str;
 };
 GuildOnboardingStore.displayName = "GuildOnboardingStore";
-GuildOnboardingStatus = {
+const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_4 = {};
     closure_5 = {};
@@ -80,8 +80,7 @@ GuildOnboardingStatus = {
   CONNECTION_OPEN: function handleResetOnboardingStep() {
     closure_5 = {};
   }
-};
-const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, GuildOnboardingStatus);
+});
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;

@@ -1,8 +1,8 @@
-// === Module 15589: FriendOnlineNotificationUtils ===
+// === Module 15590: FriendOnlineNotificationUtils ===
 
-// Module 15589 (FriendOnlineNotificationUtils)
+// Module 15590 (FriendOnlineNotificationUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import NotificationConstants from "NotificationConstants" /* 4288 */;
 import size from "module_2" /* 2 */;
@@ -14,12 +14,10 @@ const result = size.fileFinishedImporting("modules/notifications/friend_online/F
 export const onFriendOnlineNotificationSettingsChanged = function onFriendOnlineNotificationSettingsChanged(friend_online_notifications) {
   const EnableFriendOnlineNotifications = UserSettings.EnableFriendOnlineNotifications;
   EnableFriendOnlineNotifications.updateSetting(friend_online_notifications);
-  const obj = { update_type: constants.ACCOUNT, friend_online_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, friend_online_notifications });
 };
 export const onNotifyFriendsOnComeOnlineSettingsChanged = function onNotifyFriendsOnComeOnlineSettingsChanged(notify_friends_on_come_online) {
   const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
   NotifyFriendsOnComeOnline.updateSetting(notify_friends_on_come_online);
-  const obj = { update_type: constants.ACCOUNT, notify_friends_on_come_online };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, notify_friends_on_come_online });
 };

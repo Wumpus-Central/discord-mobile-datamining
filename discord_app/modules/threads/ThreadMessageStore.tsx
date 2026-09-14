@@ -342,7 +342,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(threadMessages) {
     threadMessages = threadMessages.threadMessages;
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(threadMessages);
     closure_12 = obj;
     for (const key10009 in obj) {
@@ -350,15 +350,15 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
       if (null == mostRecentMessage) {
         continue;
       } else {
-        obj = {};
+        let obj2 = {};
         let merged1 = Object.assign(mostRecentMessage);
         let tmp7 = new.target;
         let tmp8 = new.target;
         let tmp9 = new UserRecord(mostRecentMessage.author);
-        obj.author = tmp9;
+        obj2.author = tmp9;
         let tmp11 = new.target;
         let tmp12 = new.target;
-        let tmp14 = new MessageRecord(obj);
+        let tmp14 = new MessageRecord(obj2);
         threadMessages[key10009].mostRecentMessage = tmp14;
         continue;
       }
@@ -456,21 +456,20 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
               const isForumPostResult = channel.isForumPost();
               let tmp9 = !isForumPostResult;
               if (isForumPostResult) {
-                let obj = SnowflakeUtilsDefault;
-                tmp9 = message.id !== obj.castChannelIdAsMessageId(channel.id);
+                tmp9 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
               }
               tmp7 = tmp9;
             }
             if (tmp7) {
               if (set.has(channel.type)) {
                 if (!(channel.id in dependencyMap)) {
-                  obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
+                  const obj3 = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
                   ({ guild_id: obj2.guildId, parent_id: obj2.parentId, messageCount } = channel);
                   if (messageCount == null) {
                     messageCount = 0;
                   }
-                  obj.count = messageCount;
-                  dependencyMap[channel.id] = obj;
+                  obj3.count = messageCount;
+                  dependencyMap[channel.id] = obj3;
                 }
                 let num = dependencyMap2[tmp17.parentId];
                 if (num == null) {

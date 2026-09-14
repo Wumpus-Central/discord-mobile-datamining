@@ -2,7 +2,7 @@
 
 // Module 9369 (disclosures)
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import applications from "applications" /* 9370 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -27,8 +27,8 @@ let closure_5 = async function _ackDisclosures(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -41,26 +41,26 @@ let closure_5 = async function _ackDisclosures(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
             const HTTP = HTTPUtils.HTTP;
             const request = { url: result, body: null, rejectWithError: null };
-            const obj1 = { disclosures };
-            request.body = obj1;
+            const obj4 = { disclosures };
+            request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;

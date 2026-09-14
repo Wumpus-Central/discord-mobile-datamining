@@ -1,6 +1,6 @@
-// === Module 13601: BoostingUnavailablePill ===
+// === Module 13602: BoostingUnavailablePill ===
 
-// Module 13601 (BoostingUnavailablePill)
+// Module 13602 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,35 +14,32 @@ import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
-  let obj = { aboutText: null };
+  const obj2 = { aboutText: null };
+  const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  obj = { premiumGroupProductName: closure_5() };
-  obj.aboutText = intl.formatToPlainString(_modDef3074["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(13602, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  const tmp = asyncRequireImpl(13603, dependencyMap.paths);
+  obj2.aboutText = intl.formatToPlainString(_modDef3074["5xN/C1"], { premiumGroupProductName: closure_5() });
+  obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = PremiumGroupConstants.getPremiumGroupProductName;
 const jsx = jsxProd.jsx;
-let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
-obj.premiumGroupBanner = obj;
-obj.pgUnavailable = { flex: 1, justifyContent: "center" };
-obj.pgUnavailableText = { textAlign: "center" };
+let obj = { premiumGroupBanner: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: nativeDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: nativeDefault.radii.lg, marginBottom: 12 }, pgUnavailable: { flex: 1, justifyContent: "center" }, pgUnavailableText: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/premium_group/native/BoostingUnavailablePill.tsx");
 
 export default function BoostingUnavailablePill(style) {
   const tmp = closure_7();
-  let obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
-  obj = { style: null, children: null };
+  const obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp.premiumGroupBanner, style.style];
-  obj.style = items;
-  obj = { style: tmp.pgUnavailable, children: null };
-  const obj1 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
+  obj2.style = items;
+  const obj3 = { style: tmp.pgUnavailable, children: null };
+  const obj4 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
   const intl = util.intl;
-  obj1.children = intl.string(util.t["5nrJDO"]);
-  obj.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
-  obj.children = <React4 style={tmp.pgUnavailable}>{null}</React4>;
-  obj.children = <React4 style={tmp.pgUnavailable}>{null}</React4>;
-  return <React3 style={tmp.pgUnavailable}>{null}</React3>;
+  obj4.children = intl.string(util.t["5nrJDO"]);
+  obj3.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
+  obj2.children = <React4 style={tmp.pgUnavailable}>{null}</React4>;
+  obj.children = <React4 style={null}>{null}</React4>;
+  return <React3 activeOpacity={0.7} onPress={handlePress}>{null}</React3>;
 };

@@ -1,13 +1,13 @@
-// === Module 11600: ChatGestureSettings ===
+// === Module 11601: ChatGestureSettings ===
 
-// Module 11600 (ChatGestureSettings)
+// Module 11601 (ChatGestureSettings)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import Constants from "Constants" /* 1074 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useSwipeToReplySettingValue() {
@@ -33,24 +33,22 @@ const radio = SettingBuilders.createRadio({
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
-    let obj = { enabled: NumberResult === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: null };
-    obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
-    obj.location = obj;
-    obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
+    const obj2 = { enabled: NumberResult === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: { section: constants2.SETTINGS_TEXT_AND_IMAGES } };
+    AnalyticsUtilsDefault.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj2);
     const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
     SwipeRightToLeftModeSetting.updateSetting(NumberResult);
   },
   useOptions: function useHasSwipeToReplySettingOptions() {
-    let obj = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
+    const obj = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["6eXLcJ"]);
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.ohhhDK);
     const items = [obj, ];
-    obj = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
+    const obj2 = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t["3tYNDS"]);
-    items[1] = obj;
+    obj2.label = intl3.string(util.t["3tYNDS"]);
+    items[1] = obj2;
     return items;
   }
 });

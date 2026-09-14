@@ -8,5 +8,4 @@ const result = 2 * _mod17.StyleSheet.hairlineWidth;
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MainTabsV2Constants.tsx");
 
 export const MIN_HEADER_HEIGHT = 56;
-export const HEADER_CORNER_RADIUS = 8;
 export const ONYX_BORDER_WIDTH = result;

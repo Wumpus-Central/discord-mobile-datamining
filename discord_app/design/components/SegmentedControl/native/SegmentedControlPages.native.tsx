@@ -1,10 +1,10 @@
-// === Module 12745: SegmentedControlPages ===
+// === Module 12746: SegmentedControlPages ===
 
-// Module 12745 (SegmentedControlPages)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 12746 (SegmentedControlPages)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4373 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5052 */;
-import MathUtils from "MathUtils" /* 12746 */;
+import MathUtils from "MathUtils" /* 12747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,6 @@ function SegmentedControlPage(children) {
   closure_8 = undefined;
   let ref;
   closure_11 = undefined;
-  let obj = reportedPageIndex(scrollTargetPageIndex[4]);
   const fn = function v() {
     let tmp2 = Math.floor(pageIndex.get()) === index;
     if (!tmp2) {
@@ -38,8 +37,9 @@ function SegmentedControlPage(children) {
   fn.__closure = { pageIndex, index, scrollTargetPageIndex };
   fn.__workletHash = 6181538518841;
   fn.__initData = __initData3;
-  const derivedValue = obj.useDerivedValue(fn);
-  let obj1 = reportedPageIndex(scrollTargetPageIndex[4]);
+  const derivedValue = reportedPageIndex(scrollTargetPageIndex[4]).useDerivedValue(fn);
+  let obj = reportedPageIndex(scrollTargetPageIndex[4]);
+  let tmp2 = reportedPageIndex;
   class S {
     constructor() {
       pointerEvents = "box-none";
@@ -52,7 +52,7 @@ function SegmentedControlPage(children) {
   S.__closure = { reportedPageIndex, index };
   S.__workletHash = 13786543795395;
   S.__initData = __initData4;
-  const animatedProps = obj1.useAnimatedProps(S);
+  const animatedProps = reportedPageIndex(scrollTargetPageIndex[4]).useAnimatedProps(S);
   const tmp6 = index(activePageRangeStart.useState(() => reportedPageIndex.get() !== index), 2);
   accessibilityElementsHidden = tmp6[0];
   closure_8 = tmp8;
@@ -70,11 +70,11 @@ function SegmentedControlPage(children) {
       return;
     }
   }
-  obj = { runOnJS: reportedPageIndex(scrollTargetPageIndex[4]).runOnJS, setIsAccessibilityHidden: tmp8 };
-  I.__closure = obj;
+  let obj3 = reportedPageIndex(scrollTargetPageIndex[4]);
+  I.__closure = { runOnJS: reportedPageIndex(scrollTargetPageIndex[4]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
   I.__workletHash = 1716421879381;
   I.__initData = __initData6;
-  const animatedReaction = obj2.useAnimatedReaction(fn2, I);
+  const animatedReaction = obj3.useAnimatedReaction(fn2, I);
   activePageRangeStart.useRef(null);
   ref = activePageRangeStart.useRef(accessibilityElementsHidden);
   let items = [accessibilityElementsHidden];
@@ -85,14 +85,14 @@ function SegmentedControlPage(children) {
     }
     ref.current = current;
     if (current) {
-      let obj = PlatformUtils;
-      current = obj.isIOS();
+      current = PlatformUtils.isIOS();
     }
     if (current) {
-      obj = { ref, delay: 100 };
-      const result = setAccessibilityFocus.setAccessibilityFocus(obj);
+      const obj3 = { ref, delay: 100 };
+      const result = setAccessibilityFocus.setAccessibilityFocus(obj3);
     }
   }, items);
+  const obj4 = { runOnJS: reportedPageIndex(scrollTargetPageIndex[4]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
   class A {
     constructor() {
       display = "none";
@@ -115,7 +115,6 @@ function SegmentedControlPage(children) {
   }), 2);
   closure_11 = tmp14;
   const obj5 = reportedPageIndex(scrollTargetPageIndex[4]);
-  let tmp2 = reportedPageIndex;
   const fn3 = function y() {
     const items = [activePageRangeStart.get(), activePageRangeEnd.get()];
     return items;
@@ -136,23 +135,23 @@ function SegmentedControlPage(children) {
       return;
     }
   }
-  obj = { index, runOnJS: reportedPageIndex(scrollTargetPageIndex[4]).runOnJS, setFreeze: tmp14 };
-  N.__closure = obj;
+  const obj6 = reportedPageIndex(scrollTargetPageIndex[4]);
+  N.__closure = { index, runOnJS: reportedPageIndex(scrollTargetPageIndex[4]).runOnJS, setFreeze: tmp13[1] };
   N.__workletHash = 16675026816258;
   N.__initData = __initData9;
-  const animatedReaction1 = reportedPageIndex(scrollTargetPageIndex[4]).useAnimatedReaction(fn3, N);
-  obj1 = { ref };
+  const animatedReaction1 = obj6.useAnimatedReaction(fn3, N);
+  const obj8 = { ref };
   const merged1 = Object.assign(merged);
-  obj1.animatedProps = animatedProps;
+  obj8.animatedProps = animatedProps;
   let str = "auto";
   if (accessibilityElementsHidden) {
     str = "no-hide-descendants";
   }
-  obj1.importantForAccessibility = str;
-  obj1.accessibilityElementsHidden = accessibilityElementsHidden;
-  obj2 = { freeze: tmp13[0], children: activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, { style: animatedStyle, children: children.item.page }) };
-  obj1.children = activePageRangeEnd(tmp2(scrollTargetPageIndex[9]).Freeze, obj2);
-  return activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, obj1, index);
+  obj8.importantForAccessibility = str;
+  obj8.accessibilityElementsHidden = accessibilityElementsHidden;
+  const obj9 = { freeze: tmp13[0], children: activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, { style: animatedStyle, children: children.item.page }) };
+  obj8.children = activePageRangeEnd(tmp2(scrollTargetPageIndex[9]).Freeze, obj9);
+  return activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, obj8, index);
 }
 const jsx = fn(21).jsx;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
@@ -206,13 +205,12 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   ({ pressedIndex, onPageChangeRef } = state);
   const pageWidth = state.pageWidth;
   ({ style, bounces } = onEndDragWorklet);
+  const sharedValue = activeIndex(sharedValue3[4]).useSharedValue(activeIndex.get());
   let obj = activeIndex(sharedValue3[4]);
-  const sharedValue = obj.useSharedValue(activeIndex.get());
-  let obj1 = activeIndex(sharedValue3[4]);
-  const sharedValue1 = obj1.useSharedValue(activeIndex.get());
+  const sharedValue1 = activeIndex(sharedValue3[4]).useSharedValue(activeIndex.get());
   const length = items.length;
   let obj2 = activeIndex(sharedValue3[4]);
-  const sharedValue2 = obj2.useSharedValue(undefined);
+  const sharedValue2 = activeIndex(sharedValue3[4]).useSharedValue(undefined);
   callback4.useRef(false);
   __initData2 = callback4.useRef(activeIndex.get());
   __initData = callback4.useCallback((current) => {
@@ -234,12 +232,12 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       return;
     }
   }
-  obj = { runOnJS: activeIndex(sharedValue3[4]).runOnJS, updateCurrentActiveIndex: __initData };
-  W.__closure = obj;
+  let obj4 = activeIndex(sharedValue3[4]);
+  W.__closure = { runOnJS: activeIndex(sharedValue3[4]).runOnJS, updateCurrentActiveIndex: __initData };
   W.__workletHash = 1219187007872;
   W.__initData = onPageChangeRef;
-  const animatedReaction = obj3.useAnimatedReaction(J, W);
-  let obj5 = activeIndex(sharedValue3[4]);
+  const animatedReaction = obj4.useAnimatedReaction(J, W);
+  const obj5 = { runOnJS: activeIndex(sharedValue3[4]).runOnJS, updateCurrentActiveIndex: __initData };
   const fn = function z() {
     return sharedValue.get();
   };
@@ -255,8 +253,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   E.__closure = { activeIndex };
   E.__workletHash = 10225590895783;
   E.__initData = sharedValue;
-  const animatedReaction1 = obj5.useAnimatedReaction(fn, E);
-  items = [onPageChangeRef];
+  const animatedReaction1 = activeIndex(sharedValue3[4]).useAnimatedReaction(fn, E);
+  const items1 = [onPageChangeRef];
   callback1 = callback4.useCallback((AUTO_DISMISS) => {
     if (onPageChangeRef != null) {
       const current = onPageChangeRef.current;
@@ -264,8 +262,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
         current(AUTO_DISMISS);
       }
     }
-  }, items);
-  const items1 = [pagerRef, scrollTarget];
+  }, items1);
+  const items2 = [pagerRef, scrollTarget];
   callback2 = callback4.useCallback((x) => {
     const result = scrollTarget.set(x);
     if (pagerRef != null) {
@@ -275,8 +273,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
         current.scrollTo(obj);
       }
     }
-  }, items1);
-  const items2 = [pageWidth, callback2];
+  }, items2);
+  const items3 = [pageWidth, callback2];
   const effect = callback4.useEffect(() => {
     if (pageWidth > 0) {
       if (!ref.current) {
@@ -286,7 +284,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
         }
       }
     }
-  }, items2);
+  }, items3);
   function te(arg0, width) {
     if (0 !== pageWidth) {
       const _Math = Math;
@@ -307,13 +305,14 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       }
     }
   }
-  obj = { pageWidth, pageIndex: sharedValue, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, reportedPageIndex: sharedValue1, runOnJS: activeIndex(sharedValue3[4]).runOnJS, onPageChanged: callback1 };
-  te.__closure = obj;
+  const obj6 = activeIndex(sharedValue3[4]);
+  te.__closure = { pageWidth, pageIndex: sharedValue, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, reportedPageIndex: sharedValue1, runOnJS: activeIndex(sharedValue3[4]).runOnJS, onPageChanged: callback1 };
   te.__workletHash = 11872880107296;
   te.__initData = sharedValue1;
-  const items3 = [callback1, sharedValue, pageWidth, sharedValue1];
-  callback3 = callback4.useCallback(te, items3);
-  obj1 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
+  const items4 = [callback1, sharedValue, pageWidth, sharedValue1];
+  callback3 = callback4.useCallback(te, items4);
+  const obj7 = { pageWidth, pageIndex: sharedValue, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, reportedPageIndex: sharedValue1, runOnJS: activeIndex(sharedValue3[4]).runOnJS, onPageChanged: callback1 };
+  const obj9 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
   function oe(arg0) {
     const result = scrollTarget.set(-1);
     if (activeIndex != null) {
@@ -323,7 +322,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   oe.__closure = { scrollTarget, onBeginDragWorklet };
   oe.__workletHash = 3327779393906;
   oe.__initData = length;
-  obj1.onBeginDrag = oe;
+  obj9.onBeginDrag = oe;
   function ae(arg0) {
     if (pressedIndex != null) {
       tmp(arg0);
@@ -332,7 +331,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   ae.__closure = { onEndDragWorklet };
   ae.__workletHash = 14857102500821;
   ae.__initData = sharedValue2;
-  obj1.onEndDrag = ae;
+  obj9.onEndDrag = ae;
   function re(contentOffset) {
     contentOffset = contentOffset.contentOffset;
     if (-1 !== scrollTarget.get()) {
@@ -347,11 +346,11 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     }
     callback3(contentOffset, contentOffset.contentSize);
   }
-  obj2 = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, resolvePageIndex: callback3 };
-  re.__closure = obj2;
+  const obj8 = activeIndex(sharedValue3[4]);
+  re.__closure = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, resolvePageIndex: callback3 };
   re.__workletHash = 10636475595563;
   re.__initData = __initData;
-  obj1.onMomentumEnd = re;
+  obj9.onMomentumEnd = re;
   function ne(arg0) {
     ({ contentOffset, contentSize } = arg0);
     if (0 !== contentSize.width) {
@@ -385,15 +384,15 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       }
     }
   }
-  obj3 = { lastScrollOffsetX: sharedValue2, onScrollWorklet, itemCount: length, pageWidth, activeIndex, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, scrollOverflow, scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, resolvePageIndex: callback3 };
-  ne.__closure = obj3;
+  const obj10 = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, resolvePageIndex: callback3 };
+  ne.__closure = { lastScrollOffsetX: sharedValue2, onScrollWorklet, itemCount: length, pageWidth, activeIndex, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, scrollOverflow, scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, resolvePageIndex: callback3 };
   ne.__workletHash = 9933659944135;
   ne.__initData = __initData2;
-  obj1.onScroll = ne;
-  const items4 = [pageWidth];
-  const obj8 = activeIndex(sharedValue3[4]);
-  memo = callback4.useMemo(() => ({ flex: 1, width: pageWidth }), items4);
-  const items5 = [sharedValue, pageWidth];
+  obj9.onScroll = ne;
+  const items5 = [pageWidth];
+  const obj11 = { lastScrollOffsetX: sharedValue2, onScrollWorklet, itemCount: length, pageWidth, activeIndex, runOnJS: activeIndex(sharedValue3[4]).runOnJS, refreshScrollOffset: callback2, scrollOverflow, scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, resolvePageIndex: callback3 };
+  memo = callback4.useMemo(() => ({ flex: 1, width: pageWidth }), items5);
+  const items6 = [sharedValue, pageWidth];
   sharedValue3 = undefined;
   callback4 = undefined;
   const memo1 = callback4.useMemo(() => {
@@ -403,8 +402,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     }
     const point = { x: num * pageWidth, y: 0 };
     return point;
-  }, items5);
-  const animatedScrollHandler = activeIndex(sharedValue3[4]).useAnimatedScrollHandler(obj1);
+  }, items6);
+  const animatedScrollHandler = obj8.useAnimatedScrollHandler(obj9);
   sharedValue3 = activeIndex(sharedValue3[4]).useSharedValue(activeIndex.get());
   const obj12 = activeIndex(sharedValue3[4]);
   sharedValue4 = activeIndex(sharedValue3[4]).useSharedValue(activeIndex.get());
@@ -415,8 +414,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   fn2.__closure = { activePageRangeStart: sharedValue3, activePageRangeEnd: sharedValue4 };
   fn2.__workletHash = 2682934677750;
   fn2.__initData = __initData10;
-  const items6 = [sharedValue4, sharedValue3];
-  callback4 = callback4.useCallback(fn2, items6);
+  const items7 = [sharedValue4, sharedValue3];
+  callback4 = callback4.useCallback(fn2, items7);
   const obj13 = activeIndex(sharedValue3[4]);
   class SegmentedControlPagesNativeTsx21 {
     constructor() {
@@ -448,10 +447,10 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   SegmentedControlPagesNativeTsx22.__workletHash = 4886047206415;
   SegmentedControlPagesNativeTsx22.__initData = __initData12;
   const animatedReaction2 = activeIndex(sharedValue3[4]).useAnimatedReaction(SegmentedControlPagesNativeTsx21, SegmentedControlPagesNativeTsx22);
-  const items7 = [sharedValue3, sharedValue4];
+  const items8 = [sharedValue3, sharedValue4];
   const obj14 = activeIndex(sharedValue3[4]);
-  [c21, c22] = sharedValue4(items7, 2);
-  const tmp20 = sharedValue4(items7, 2);
+  [c21, c22] = sharedValue4(items8, 2);
+  const tmp20 = sharedValue4(items8, 2);
   function se() {
     let num = -1;
     if (-1 !== scrollTarget.get()) {
@@ -464,19 +463,19 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   se.__workletHash = 7742060999778;
   se.__initData = __initData;
   derivedValue = obj15.useDerivedValue(se);
-  let obj4 = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, pageWidth };
+  const obj16 = { scrollTarget, roundIfClose: activeIndex(sharedValue3[5]).roundIfClose, pageWidth };
   function le() {
     value = sharedValue.get();
     const rounded = Math.floor(value);
     const rounded1 = Math.ceil(value);
-    value = derivedValue.get();
+    value2 = derivedValue.get();
     let bound1 = rounded1;
     let bound = rounded;
-    if (-1 !== value) {
+    if (-1 !== value2) {
       const _Math = Math;
-      bound = Math.min(rounded, value);
+      bound = Math.min(rounded, value2);
       const _Math2 = Math;
-      bound1 = Math.max(rounded1, value);
+      bound1 = Math.max(rounded1, value2);
     }
     const items = [bound, bound1];
     return items;
@@ -497,25 +496,26 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   if (0 === pageWidth) {
     return null;
   } else {
-    obj5 = { ref: pagerRef, style: null, contentOffset: null, keyboardShouldPersistTaps: "handled", showsHorizontalScrollIndicator: false, pagingEnabled: true, snapToInterval: null, snapToAlignment: "center", decelerationRate: "fast", centerContent: true, bounces: null, horizontal: true, accessibilityRole: "none", onScroll: null, disableIntervalMomentum: true, scrollEventThrottle: null, children: null };
-    const items8 = [memo, style];
-    obj5.style = items8;
-    obj5.contentOffset = memo1;
-    obj5.snapToInterval = pageWidth;
-    obj5.bounces = bounces;
-    obj5.onScroll = animatedScrollHandler;
+    const obj18 = { ref: pagerRef, style: null, contentOffset: null, keyboardShouldPersistTaps: "handled", showsHorizontalScrollIndicator: false, pagingEnabled: true, snapToInterval: null, snapToAlignment: "center", decelerationRate: "fast", centerContent: true, bounces: null, horizontal: true, accessibilityRole: "none", onScroll: null, disableIntervalMomentum: true, scrollEventThrottle: null, children: null };
+    const items9 = [memo, style];
+    obj18.style = items9;
+    obj18.contentOffset = memo1;
+    obj18.snapToInterval = pageWidth;
+    obj18.bounces = bounces;
+    obj18.onScroll = animatedScrollHandler;
     let num;
     if (tmpResult.isIOS()) {
       num = 32;
     }
-    obj5.scrollEventThrottle = num;
-    obj5.children = items.map((item, index) => <SegmentedControlPage key={index} index={index} activePageRangeStart={activePageRangeStart} activePageRangeEnd={activePageRangeEnd} reportedPageIndex={sharedValue1} pageIndex={sharedValue} scrollTargetPageIndex={derivedValue} style={memo} item={item} />);
-    let tmp27Result = tmp27(scrollTarget, obj5);
+    obj18.scrollEventThrottle = num;
+    obj18.children = items.map((item, index) => <SegmentedControlPage key={index} index={index} activePageRangeStart={activePageRangeStart} activePageRangeEnd={activePageRangeEnd} reportedPageIndex={sharedValue1} pageIndex={sharedValue} scrollTargetPageIndex={derivedValue} style={memo} item={item} />);
+    const tmp27Result = pagerRef(scrollTarget, obj18);
+    let tmp27Result2 = tmp27Result;
     if (null != nativeGesture) {
-      const obj6 = { gesture: nativeGesture, children: tmp27Result };
-      tmp27Result = tmp27(tmp(tmp2[7]).GestureDetector, obj6);
+      const obj19 = { gesture: nativeGesture, children: tmp27Result };
+      tmp27Result2 = tmp27(tmp(tmp2[7]).GestureDetector, obj19);
     }
-    return tmp27Result;
+    return tmp27Result2;
   }
   const obj17 = activeIndex(sharedValue3[4]);
 };

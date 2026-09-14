@@ -1,11 +1,13 @@
-// === Module 16347: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 16349: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 16347 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16349 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1074 */;
 import GuildRecord from "GuildRecord" /* 1975 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const isGuildOwner = GuildRecord.isGuildOwner;
 const GuildFeatures = Constants.GuildFeatures;

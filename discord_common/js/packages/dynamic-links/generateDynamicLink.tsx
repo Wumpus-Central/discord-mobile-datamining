@@ -1,9 +1,9 @@
-// === Module 13067: generateDynamicLink ===
+// === Module 13068: generateDynamicLink ===
 
-// Module 13067 (generateDynamicLink)
-import v1 from "v1" /* 1256 */;
-import formatDefault from "format" /* 1341 */;
-import getDescriptionDefault from "getDescription" /* 13068 */;
+// Module 13068 (generateDynamicLink)
+import v1 from "v1" /* 1254 */;
+import formatDefault from "format" /* 1339 */;
+import getDescriptionDefault from "getDescription" /* 13069 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -39,15 +39,15 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
       match = str2.match(regExp);
     }
   }
-  let tmp5Result = formatDefault;
+  const tmp5Result = formatDefault;
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  tmp5Result = formatDefault;
+  const tmp5Result2 = formatDefault;
   let family;
-  if (tmp5Result != null) {
-    const os = tmp5Result.os;
+  if (tmp5Result2 != null) {
+    const os = tmp5Result2.os;
     if (os != null) {
       family = os.family;
     }
@@ -88,7 +88,6 @@ export const parseDynamicLink = function parseDynamicLink(str) {
       const _URL = URL;
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
-      let obj = searchParams;
       value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
@@ -97,17 +96,17 @@ export const parseDynamicLink = function parseDynamicLink(str) {
         const _URL2 = URL;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        value = obj.get("pid");
-        obj = { utmSource: value };
+        value2 = obj.get("pid");
+        const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();
         while (tmp16 !== undefined) {
-          let tmp21 = _slicedToArray(tmp18, 2);
-          obj[tmp21[0]] = tmp21[1];
+          [, obj2[tmp21[0]]] = tmp18;
           continue;
         }
-        return obj;
+        return obj2;
       }
+      obj = searchParams;
     } catch (err) {
       return null;
     }

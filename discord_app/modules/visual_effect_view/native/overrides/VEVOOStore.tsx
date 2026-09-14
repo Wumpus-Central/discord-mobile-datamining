@@ -1,9 +1,11 @@
 // === Module 5047: VEVOOStore ===
 
 // Module 5047 (VEVOOStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_2 = {};
 const state = module_560.create(() => closure_2);

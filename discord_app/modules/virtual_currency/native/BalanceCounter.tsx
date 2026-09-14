@@ -1,16 +1,17 @@
-// === Module 11232: BalanceCounter ===
+// === Module 11233: BalanceCounter ===
 
-// Module 11232 (BalanceCounter)
+// Module 11233 (BalanceCounter)
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4357 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import Text_Text from "Text/Text" /* 4632 */;
 import spring from "spring" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
+const Text_Text = tmp(4632);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
+let noop = noop_mod;
 let jsx = fn(21).jsx;
 let closure_10 = { code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}" };
 let closure_11 = { code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
@@ -57,15 +58,15 @@ class BalanceCounter {
     closure_9 = tmp8[1];
     tmp10 = closure_7((set, value, duration) => {
       setIsAnimating(true);
-      let obj = { duration, damping: 15, stiffness: 150, mass: 1 };
       const fn = function l() {
         value(closure_2[3]).runOnJS(setIsAnimating)(false);
       };
-      obj = { runOnJS: ReanimatedRexport.runOnJS, setIsAnimating };
-      fn.__closure = obj;
+      const obj = spring;
+      const obj2 = { duration, damping: 15, stiffness: 150, mass: 1 };
+      fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setIsAnimating };
       fn.__workletHash = 16153226572520;
       fn.__initData = __initData;
-      const result = set.set(obj.withSpring(value, obj, "respect-motion-settings", fn));
+      const result = set.set(obj.withSpring(value, obj2, "respect-motion-settings", fn));
     }, []);
     closure_10 = tmp10;
     items = [, , , , , ];
@@ -83,9 +84,8 @@ class BalanceCounter {
               const diff = tmp - ref.current;
               onValueChange(diff);
               ref.current = tmp;
-              value(ref[6]);
-              const obj = { targetTime: value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS };
-              const orbBalanceCounterAnimationConfigs = obj.getOrbBalanceCounterAnimationConfigs(diff, obj);
+              const obj2 = { targetTime: value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS };
+              const orbBalanceCounterAnimationConfigs = value(ref[6]).getOrbBalanceCounterAnimationConfigs(diff, obj2);
               duration = orbBalanceCounterAnimationConfigs.duration;
               if (null != ref2.current) {
                 const _clearTimeout = clearTimeout;
@@ -130,27 +130,27 @@ class BalanceCounter {
         return {};
       }
     }
-    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: closure_0(closure_2[3]).runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
-    F.__closure = obj;
+    obj1 = { isAnimating: first, animatedValue: sharedValue, runOnJS: closure_0(closure_2[3]).runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
+    F.__closure = obj1;
     F.__workletHash = 4408542396979;
     F.__initData = clearAnimationTimeout;
     tmp14 = null;
     if (null !== value) {
       tmp15 = closure_9;
       tmp16 = onValueChange;
-      obj1 = { style: null, children: null };
+      obj7 = { style: null, children: null };
       items1 = [, ];
       items1[0] = tmp13;
-      obj2 = { minWidth: null };
+      obj8 = { minWidth: null };
       num = 7;
-      obj2.minWidth = 7 * tmp6[0];
-      items1[1] = obj2;
-      obj1.style = items1;
-      obj3 = { variant: "text-sm/semibold", style: null, maxFontSizeMultiplier: 2, children: null };
-      obj3.style = style;
-      obj3.children = obj2.toFixed(0);
-      obj1.children = closure_9(tmp(tmp2[7]).Text, obj3);
-      tmp14 = closure_9(onValueChange(tmp2[3]).View, obj1);
+      obj8.minWidth = 7 * tmp6[0];
+      items1[1] = obj8;
+      obj7.style = items1;
+      obj9 = { variant: "text-sm/semibold", style: null, maxFontSizeMultiplier: 2, children: null };
+      obj9.style = style;
+      obj9.children = obj2.toFixed(0);
+      obj7.children = closure_9(tmp(tmp2[7]).Text, obj9);
+      tmp14 = closure_9(onValueChange(tmp2[3]).View, obj7);
     }
     return tmp14;
   }

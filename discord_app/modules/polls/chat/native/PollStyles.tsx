@@ -1,9 +1,9 @@
-// === Module 11848: PollStyles ===
+// === Module 11849: PollStyles ===
 
-// Module 11848 (PollStyles)
+// Module 11849 (PollStyles)
 import _mod4821 from "module_4821" /* 4821 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11849 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11850 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11850 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11851 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, config) {
@@ -20,16 +20,16 @@ function normal(border, config) {
 }
 function normalVote(colors, config) {
   if (typeof normal === "function") {
-    let obj = {};
-    obj = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
+    const obj = {};
+    const obj2 = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
     const match = _mod4821.match(config);
-    obj.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
-    obj.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
-    obj.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;
-    obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.HOLLOW;
-    obj.radioBackground = colors.colors.INTERACTIVE_TEXT_ACTIVE;
-    obj.radioForeground = colors.colors.WHITE;
-    const merged = Object.assign(obj);
+    obj2.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
+    obj2.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
+    obj2.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;
+    obj2.radioStyle = PollMessageChatDataTypes.PollRadioStyle.HOLLOW;
+    obj2.radioBackground = colors.colors.INTERACTIVE_TEXT_ACTIVE;
+    obj2.radioForeground = colors.colors.WHITE;
+    const merged = Object.assign(obj2);
     obj.borderWidth = 0;
     return obj;
   } else {
@@ -57,12 +57,12 @@ const result = size.fileFinishedImporting("modules/polls/chat/native/PollStyles.
 export const pollStyleSets = {
   loserSelected(colors, config) {
     if (typeof notVoted === "function") {
-      let obj = {};
-      obj = {};
+      const obj = {};
+      const obj2 = {};
       const merged = Object.assign(normalVote(colors, config));
-      obj.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
-      obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
-      const merged1 = Object.assign(obj);
+      obj2.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
+      obj2.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
+      const merged1 = Object.assign(obj2);
       obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.CHECKMARK;
       obj.radioBackground = colors.colors.INTERACTIVE_TEXT_ACTIVE;
       obj.radioForeground = colors.colors.BACKGROUND_BASE_LOW;
@@ -86,14 +86,14 @@ export const pollStyleSets = {
   victorNotSelected,
   victorSelected(colors, config) {
     if (typeof victorNotSelected === "function") {
-      let obj = {};
-      obj = {};
+      const obj = {};
+      const obj2 = {};
       const merged = Object.assign(normalVote(colors, config));
-      obj.border = colors.colors.STATUS_POSITIVE;
-      obj.borderWidth = 1;
-      obj.answerFill = colors.colors.POLLS_VICTOR_FILL;
-      obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
-      const merged1 = Object.assign(obj);
+      obj2.border = colors.colors.STATUS_POSITIVE;
+      obj2.borderWidth = 1;
+      obj2.answerFill = colors.colors.POLLS_VICTOR_FILL;
+      obj2.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
+      const merged1 = Object.assign(obj2);
       obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.CHECKMARK;
       obj.radioBackground = colors.colors.STATUS_POSITIVE;
       obj.radioForeground = colors.colors.STATUS_POSITIVE_TEXT;

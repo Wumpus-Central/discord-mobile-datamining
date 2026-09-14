@@ -104,15 +104,15 @@ function processHydratedMessages(channelId, conversationId, messages, fullyHydra
           let tmp11 = messageRecord;
           let arr = items1.push(messageRecord);
           let messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-          value = messageMetadataByMessageId.get(messageRecord.id);
-          let tmp14 = value;
-          if (null != value) {
+          value2 = messageMetadataByMessageId.get(messageRecord.id);
+          let tmp14 = value2;
+          if (null != value2) {
             tmp14.conversationId = conversationId;
             tmp14.message = tmp11;
           } else {
             let messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
-            obj = { conversationId, moderationLabel: null, message: tmp11 };
-            let result = messageMetadataByMessageId2.set(tmp11.id, obj);
+            let obj2 = { conversationId, moderationLabel: null, message: tmp11 };
+            let result = messageMetadataByMessageId2.set(tmp11.id, obj2);
           }
           continue;
         }
@@ -122,10 +122,10 @@ function processHydratedMessages(channelId, conversationId, messages, fullyHydra
           let messageMetadataByMessageId3 = peekResult.messageMetadataByMessageId;
           if (null == messageMetadataByMessageId3.get(item10044.id)) {
             let messageMetadataByMessageId4 = peekResult.messageMetadataByMessageId;
-            obj = { conversationId: null, moderationLabel: null, message: null };
+            let obj3 = { conversationId: null, moderationLabel: null, message: null };
             let obj4 = MessageRecordUtils;
-            obj.message = obj4.createMessageRecord(item10044);
-            let result1 = messageMetadataByMessageId4.set(item10044.id, obj);
+            obj3.message = obj4.createMessageRecord(item10044);
+            let result1 = messageMetadataByMessageId4.set(item10044.id, obj3);
           }
           continue;
         }
@@ -142,11 +142,11 @@ function handleReaction(channelId) {
   } else {
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
     value = messageMetadataByMessageId.get(messageId);
-    let message;
+    let message1;
     if (value != null) {
-      message = value.message;
+      message1 = value.message;
     }
-    if (null == message) {
+    if (null == message1) {
       return false;
     } else {
       if (obj2.shouldApplyReaction(channelId)) {
@@ -156,27 +156,27 @@ function handleReaction(channelId) {
           const obj = { colors: channelId.colors, reactionType };
           let addReactionResult = message2.addReaction(emoji, tmp4, obj);
         } else {
-          message = value.message;
+          const message = value.message;
           addReactionResult = message.removeReaction(emoji, tmp4, reactionType);
         }
         value.message = addReactionResult;
-        value = null;
+        value2 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value = conversationMetadataById.get(value.conversationId);
+          value2 = conversationMetadataById.get(value.conversationId);
         }
-        let hydratedMessages;
-        if (value != null) {
-          hydratedMessages = value.hydratedMessages;
+        let hydratedMessages1;
+        if (value2 != null) {
+          hydratedMessages1 = value2.hydratedMessages;
         }
-        if (null != hydratedMessages) {
-          hydratedMessages = value.hydratedMessages;
+        if (null != hydratedMessages1) {
+          const hydratedMessages = value2.hydratedMessages;
           const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
           if (-1 !== findIndexResult) {
-            const hydratedMessages1 = value.hydratedMessages;
-            const substr = hydratedMessages1.slice();
+            const hydratedMessages2 = value2.hydratedMessages;
+            const substr = hydratedMessages2.slice();
             substr[findIndexResult] = addReactionResult;
-            value.hydratedMessages = substr;
+            value2.hydratedMessages = substr;
           }
         }
         return true;
@@ -206,16 +206,16 @@ function handleRelationshipUpdate() {
             const conversationMetadataById = messageMetadataByMessageId.conversationMetadataById;
             value = conversationMetadataById.get(message.conversationId);
           }
-          let hydratedMessages;
+          let hydratedMessages1;
           if (value != null) {
-            hydratedMessages = value.hydratedMessages;
+            hydratedMessages1 = value.hydratedMessages;
           }
-          if (null != hydratedMessages) {
-            hydratedMessages = value.hydratedMessages;
+          if (null != hydratedMessages1) {
+            const hydratedMessages = value.hydratedMessages;
             const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
             if (-1 !== findIndexResult) {
-              const hydratedMessages1 = value.hydratedMessages;
-              const substr = hydratedMessages1.slice();
+              const hydratedMessages2 = value.hydratedMessages;
+              const substr = hydratedMessages2.slice();
               substr[findIndexResult] = result1;
               value.hydratedMessages = substr;
             }
@@ -236,18 +236,18 @@ function removeHydratedMessage(arg0, arg1) {
     const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
     value = messageMetadataByMessageId2.get(arg1);
     if (null != value) {
-      value = null;
+      value2 = null;
       if (null != value.conversationId) {
         const conversationMetadataById = peekResult.conversationMetadataById;
-        value = conversationMetadataById.get(value.conversationId);
+        value2 = conversationMetadataById.get(value.conversationId);
       }
       let hydratedMessages;
-      if (value != null) {
-        hydratedMessages = value.hydratedMessages;
+      if (value2 != null) {
+        hydratedMessages = value2.hydratedMessages;
       }
       if (null != hydratedMessages) {
-        const hydratedMessages1 = value.hydratedMessages;
-        value.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
+        const hydratedMessages1 = value2.hydratedMessages;
+        value2.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
       }
     }
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
@@ -264,13 +264,12 @@ function evictChannel(arg0) {
 }
 const ConversationConstants = fn(7700);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
-let obj = {
+const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
   dispose: function cleanupChannelSideState(arg0) {
     return map.delete(arg0);
   }
-};
-const navigation = new privDefault(obj);
+});
 let map = new Map();
 let map1 = new Map();
 const Store = initializeDefault.Store;
@@ -470,7 +469,7 @@ prototype["getConversationFeedbackRating"] = function getConversationFeedbackRat
   return value;
 };
 ConversationsStore.displayName = "ConversationsStore";
-obj = {
+const conversationsStore = new ConversationsStore(DispatcherDefault, {
   CONVERSATION_FETCH_START: function handleConversationFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
     let str = "preview";
@@ -745,10 +744,10 @@ obj = {
                 map2 = new Map();
                 let flaggedMessageDetails = tmp10.moderation.flaggedMessageDetails;
                 for (const item10083 of flaggedMessageDetails) {
-                  value = map2.get(item10083.messageId);
-                  let arr = value;
-                  if (null != value) {
-                    arr = arr.push(item10083);
+                  let value5 = map2.get(item10083.messageId);
+                  let arr = value5;
+                  if (null != value5) {
+                    let arr2 = arr.push(item10083);
                   } else {
                     let items = [item10083];
                     let result1 = map2.set(item10083.messageId, items);
@@ -758,16 +757,16 @@ obj = {
               }
               let messageIds = tmp10.messageIds;
               for (const item10107 of messageIds) {
-                let value1;
+                let value6;
                 if (arg2 != null) {
                   let messageMetadataByMessageId = arg2.messageMetadataByMessageId;
-                  value1 = messageMetadataByMessageId.get(item10107);
+                  value6 = messageMetadataByMessageId.get(item10107);
                 }
-                let tmp46 = value1;
+                let tmp46 = value6;
                 let tmp54Result = null;
                 let moderationLabel;
-                if (value1 != null) {
-                  moderationLabel = value1.moderationLabel;
+                if (value6 != null) {
+                  moderationLabel = value6.moderationLabel;
                 }
                 let hasItem = null == moderationLabel;
                 if (hasItem) {
@@ -781,14 +780,14 @@ obj = {
                   hasItem = null != map2;
                 }
                 if (hasItem) {
-                  value2 = map2.get(item10107);
-                  if (value2 == null) {
-                    value2 = [];
+                  let value7 = map2.get(item10107);
+                  if (value7 == null) {
+                    value7 = [];
                   }
-                  tmp54Result = buildModerationLabel(value2);
+                  tmp54Result = buildModerationLabel(value7);
                 }
-                obj = { conversationId: null, moderationLabel: null, message: null };
-                obj.conversationId = tmp10.id;
+                let obj2 = { conversationId: null, moderationLabel: null, message: null };
+                obj2.conversationId = tmp10.id;
                 let moderationLabel1;
                 if (tmp46 != null) {
                   moderationLabel1 = tmp46.moderationLabel;
@@ -796,19 +795,19 @@ obj = {
                 if (moderationLabel1 == null) {
                   moderationLabel1 = tmp54Result;
                 }
-                obj.moderationLabel = moderationLabel1;
-                let message;
+                obj2.moderationLabel = moderationLabel1;
+                let message1;
                 if (tmp46 != null) {
-                  message = tmp46.message;
+                  message1 = tmp46.message;
                 }
-                if (message == null) {
-                  message = null;
+                if (message1 == null) {
+                  message1 = null;
                 }
-                obj.message = message;
-                let result2 = map1.set(item10107, obj);
+                obj2.message = message1;
+                let result2 = map1.set(item10107, obj2);
                 let message_id;
                 if (tmp46 != null) {
-                  message = tmp46.message;
+                  let message = tmp46.message;
                   if (message != null) {
                     let messageReference = message.messageReference;
                     if (messageReference != null) {
@@ -818,17 +817,17 @@ obj = {
                 }
                 let tmp66 = message_id;
                 if (null != message_id) {
-                  let value3;
+                  let value8;
                   if (arg2 != null) {
                     let messageMetadataByMessageId2 = arg2.messageMetadataByMessageId;
-                    value3 = messageMetadataByMessageId2.get(tmp66);
+                    value8 = messageMetadataByMessageId2.get(tmp66);
                   }
-                  let message1;
-                  let tmp69 = value3;
-                  if (value3 != null) {
-                    message1 = value3.message;
+                  let message2;
+                  let tmp69 = value8;
+                  if (value8 != null) {
+                    message2 = value8.message;
                   }
-                  let hasItem1 = null == message1;
+                  let hasItem1 = null == message2;
                   if (!hasItem1) {
                     hasItem1 = map1.has(tmp66);
                   }
@@ -845,8 +844,8 @@ obj = {
               prop = peekResult.recentFeedbackRatingsByConversationId;
             }
             if (prop == null) {
-              const obj1 = { max };
-              prop = new privDefault(obj1);
+              const obj3 = { max };
+              prop = new privDefault(obj3);
             }
             let prop1;
             if (peekResult != null) {
@@ -862,7 +861,7 @@ obj = {
                 tmp84 = prop1;
               }
             }
-            const obj2 = { guildId, conversations: substr, conversationMetadataById: map, messageMetadataByMessageId: map1, recentFeedbackRatingsByConversationId: prop, reachedOldest: null, reachedNewest: null, selectedConversationId: null, colorIndex: null };
+            const obj4 = { guildId, conversations: substr, conversationMetadataById: map, messageMetadataByMessageId: map1, recentFeedbackRatingsByConversationId: prop, reachedOldest: null, reachedNewest: null, selectedConversationId: null, colorIndex: null };
             let reachedOldest;
             if (peekResult != null) {
               reachedOldest = peekResult.reachedOldest;
@@ -870,7 +869,7 @@ obj = {
             if (reachedOldest == null) {
               reachedOldest = null;
             }
-            obj2.reachedOldest = reachedOldest;
+            obj4.reachedOldest = reachedOldest;
             let reachedNewest;
             if (peekResult != null) {
               reachedNewest = peekResult.reachedNewest;
@@ -878,10 +877,10 @@ obj = {
             if (reachedNewest == null) {
               reachedNewest = null;
             }
-            obj2.reachedNewest = reachedNewest;
-            obj2.selectedConversationId = tmp84;
-            obj2.colorIndex = sum;
-            return obj2;
+            obj4.reachedNewest = reachedNewest;
+            obj4.selectedConversationId = tmp84;
+            obj4.colorIndex = sum;
+            return obj4;
           })(channelId, substr, peekResult);
           tmp35.reachedOldest = tmp30;
           tmp35.reachedNewest = tmp29;
@@ -1045,33 +1044,33 @@ obj = {
         } else {
           const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
           value = messageMetadataByMessageId.get(id);
-          message = undefined;
+          let message1;
           if (value != null) {
-            message = value.message;
+            message1 = value.message;
           }
-          let flag = null != message;
+          let flag = null != message1;
           if (flag) {
             const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
-            value = null;
+            value2 = null;
             if (null != value.conversationId) {
               const conversationMetadataById = peekResult.conversationMetadataById;
-              value = conversationMetadataById.get(value.conversationId);
+              value2 = conversationMetadataById.get(value.conversationId);
             }
-            let hydratedMessages;
-            if (value != null) {
-              hydratedMessages = value.hydratedMessages;
+            let hydratedMessages1;
+            if (value2 != null) {
+              hydratedMessages1 = value2.hydratedMessages;
             }
             flag = true;
-            if (null != hydratedMessages) {
-              hydratedMessages = value.hydratedMessages;
+            if (null != hydratedMessages1) {
+              const hydratedMessages = value2.hydratedMessages;
               const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
               flag = true;
               if (-1 !== findIndexResult) {
-                const hydratedMessages1 = value.hydratedMessages;
-                const substr = hydratedMessages1.slice();
+                const hydratedMessages2 = value2.hydratedMessages;
+                const substr = hydratedMessages2.slice();
                 substr[findIndexResult] = updateMessageRecordResult;
-                value.hydratedMessages = substr;
+                value2.hydratedMessages = substr;
                 flag = true;
               }
             }
@@ -1092,33 +1091,33 @@ obj = {
     } else {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
-      let message;
+      let message1;
       if (value != null) {
-        message = value.message;
+        message1 = value.message;
       }
-      if (null == message) {
+      if (null == message1) {
         return false;
       } else {
-        message = value.message;
+        const message = value.message;
         const addReactionBatchResult = message.addReactionBatch(messageId.reactions, AuthenticationStore.getId());
         value.message = addReactionBatchResult;
-        value = null;
+        value2 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value = conversationMetadataById.get(value.conversationId);
+          value2 = conversationMetadataById.get(value.conversationId);
         }
-        let hydratedMessages;
-        if (value != null) {
-          hydratedMessages = value.hydratedMessages;
+        let hydratedMessages1;
+        if (value2 != null) {
+          hydratedMessages1 = value2.hydratedMessages;
         }
-        if (null != hydratedMessages) {
-          hydratedMessages = value.hydratedMessages;
+        if (null != hydratedMessages1) {
+          const hydratedMessages = value2.hydratedMessages;
           const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
           if (-1 !== findIndexResult) {
-            const hydratedMessages1 = value.hydratedMessages;
-            const substr = hydratedMessages1.slice();
+            const hydratedMessages2 = value2.hydratedMessages;
+            const substr = hydratedMessages2.slice();
             substr[findIndexResult] = addReactionBatchResult;
-            value.hydratedMessages = substr;
+            value2.hydratedMessages = substr;
           }
         }
         return true;
@@ -1133,33 +1132,33 @@ obj = {
     } else {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
-      let message;
+      let message1;
       if (value != null) {
-        message = value.message;
+        message1 = value.message;
       }
-      if (null == message) {
+      if (null == message1) {
         return false;
       } else {
-        message = value.message;
+        const message = value.message;
         const result = message.set("reactions", []);
         value.message = result;
-        value = null;
+        value2 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value = conversationMetadataById.get(value.conversationId);
+          value2 = conversationMetadataById.get(value.conversationId);
         }
-        let hydratedMessages;
-        if (value != null) {
-          hydratedMessages = value.hydratedMessages;
+        let hydratedMessages1;
+        if (value2 != null) {
+          hydratedMessages1 = value2.hydratedMessages;
         }
-        if (null != hydratedMessages) {
-          hydratedMessages = value.hydratedMessages;
+        if (null != hydratedMessages1) {
+          const hydratedMessages = value2.hydratedMessages;
           const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
           if (-1 !== findIndexResult) {
-            const hydratedMessages1 = value.hydratedMessages;
-            const substr = hydratedMessages1.slice();
+            const hydratedMessages2 = value2.hydratedMessages;
+            const substr = hydratedMessages2.slice();
             substr[findIndexResult] = result;
-            value.hydratedMessages = substr;
+            value2.hydratedMessages = substr;
           }
         }
         return true;
@@ -1174,33 +1173,33 @@ obj = {
     } else {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
-      let message;
+      let message1;
       if (value != null) {
-        message = value.message;
+        message1 = value.message;
       }
-      if (null == message) {
+      if (null == message1) {
         return false;
       } else {
-        message = value.message;
+        const message = value.message;
         const result = message.removeReactionsForEmoji(messageId.emoji);
         value.message = result;
-        value = null;
+        value2 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value = conversationMetadataById.get(value.conversationId);
+          value2 = conversationMetadataById.get(value.conversationId);
         }
-        let hydratedMessages;
-        if (value != null) {
-          hydratedMessages = value.hydratedMessages;
+        let hydratedMessages1;
+        if (value2 != null) {
+          hydratedMessages1 = value2.hydratedMessages;
         }
-        if (null != hydratedMessages) {
-          hydratedMessages = value.hydratedMessages;
+        if (null != hydratedMessages1) {
+          const hydratedMessages = value2.hydratedMessages;
           const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
           if (-1 !== findIndexResult) {
-            const hydratedMessages1 = value.hydratedMessages;
-            const substr = hydratedMessages1.slice();
+            const hydratedMessages2 = value2.hydratedMessages;
+            const substr = hydratedMessages2.slice();
             substr[findIndexResult] = result;
-            value.hydratedMessages = substr;
+            value2.hydratedMessages = substr;
           }
         }
         return true;
@@ -1215,18 +1214,18 @@ obj = {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(id);
       if (null != value) {
-        value = null;
+        value2 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value = conversationMetadataById.get(value.conversationId);
+          value2 = conversationMetadataById.get(value.conversationId);
         }
         let hydratedMessages;
-        if (value != null) {
-          hydratedMessages = value.hydratedMessages;
+        if (value2 != null) {
+          hydratedMessages = value2.hydratedMessages;
         }
         if (null != hydratedMessages) {
-          const hydratedMessages1 = value.hydratedMessages;
-          value.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
+          const hydratedMessages1 = value2.hydratedMessages;
+          value2.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
         }
       }
       const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
@@ -1252,8 +1251,7 @@ obj = {
     map.clear();
     map1.clear();
   }
-};
-const conversationsStore = new ConversationsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsStore.tsx");
 

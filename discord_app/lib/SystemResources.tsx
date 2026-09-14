@@ -1,7 +1,7 @@
 // === Module 7850: SystemResources ===
 
 // Module 7850 (SystemResources)
-import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1357 */;
 import Histogram from "Histogram" /* 7844 */;
 import DeviceState from "DeviceState" /* 7851 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -30,26 +30,25 @@ prototype["getStats"] = function getStats() {
   const report = cpuHistogram.getReport();
   const memoryHistogram = this.memoryHistogram;
   const report1 = memoryHistogram.getReport();
-  let obj = ProcessUtilsDefault;
-  const cumulativeCPUUsage = obj.getCumulativeCPUUsage();
+  const cumulativeCPUUsage = ProcessUtilsDefault.getCumulativeCPUUsage();
   let result;
   if (null != this.startCPU) {
     if (null != cumulativeCPUUsage) {
       result = 100 * (cumulativeCPUUsage.usage - self.startCPU.usage) / ((cumulativeCPUUsage.sampleTime - self.startCPU.sampleTime) / 1000);
     }
   }
-  obj = { client_performance_cpu_percentile25: report.percentiles[25], client_performance_cpu_percentile50: report.percentiles[50], client_performance_cpu_percentile75: report.percentiles[75], client_performance_cpu_percentile90: report.percentiles[90], client_performance_cpu_percentile95: report.percentiles[95], client_performance_cpu_mean: null, client_performance_memory_percentile25: null, client_performance_memory_percentile50: null, client_performance_memory_percentile75: null, client_performance_memory_percentile90: null, client_performance_memory_percentile95: null, client_performance_memory_min: null, client_performance_memory_max: null, client_performance_memory_mean: null };
+  const obj3 = { client_performance_cpu_percentile25: report.percentiles[25], client_performance_cpu_percentile50: report.percentiles[50], client_performance_cpu_percentile75: report.percentiles[75], client_performance_cpu_percentile90: report.percentiles[90], client_performance_cpu_percentile95: report.percentiles[95], client_performance_cpu_mean: null, client_performance_memory_percentile25: null, client_performance_memory_percentile50: null, client_performance_memory_percentile75: null, client_performance_memory_percentile90: null, client_performance_memory_percentile95: null, client_performance_memory_min: null, client_performance_memory_max: null, client_performance_memory_mean: null };
   if (null == result) {
     result = report.mean;
   }
-  obj.client_performance_cpu_mean = result;
-  obj.client_performance_memory_percentile25 = report1.percentiles[25];
-  obj.client_performance_memory_percentile50 = report1.percentiles[50];
-  obj.client_performance_memory_percentile75 = report1.percentiles[75];
-  obj.client_performance_memory_percentile90 = report1.percentiles[90];
-  obj.client_performance_memory_percentile95 = report1.percentiles[95];
+  obj3.client_performance_cpu_mean = result;
+  obj3.client_performance_memory_percentile25 = report1.percentiles[25];
+  obj3.client_performance_memory_percentile50 = report1.percentiles[50];
+  obj3.client_performance_memory_percentile75 = report1.percentiles[75];
+  obj3.client_performance_memory_percentile90 = report1.percentiles[90];
+  obj3.client_performance_memory_percentile95 = report1.percentiles[95];
   ({ min: obj2.client_performance_memory_min, max: obj2.client_performance_memory_max, mean: obj2.client_performance_memory_mean } = report1);
-  return obj;
+  return obj3;
 };
 prototype["takeSample"] = function takeSample() {
   const self = this;
@@ -91,8 +90,8 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -105,15 +104,14 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c3 = 1;
-            let obj2 = DeviceState;
             c1 = 2;
             c0 = 1;
-            const obj1 = { value: obj2.getDeviceState({ fallback: false }), done: false };
-            return obj1;
+            const obj5 = { value: DeviceState.getDeviceState({ fallback: false }), done: false };
+            return obj5;
           }
         } else if (1 === tmp6) {
           c3 = 0;
@@ -125,12 +123,12 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         } else if (arg0 === 2) {
           c3 = 0;
           c0 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c3 = 0;
           c0 = 3;
-          obj = { value: value.batteryLevel, done: true };
+          const obj = { value: value.batteryLevel, done: true };
           return obj;
         }
       } catch (tmp10) {
@@ -155,8 +153,8 @@ prototype["setLastBattery"] = function setLastBattery() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -169,21 +167,21 @@ prototype["setLastBattery"] = function setLastBattery() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = self;
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: self.getCurrentBattery(), done: false };
-            return obj1;
+            const obj4 = { value: self.getCurrentBattery(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_0.lastBattery = value;
@@ -207,8 +205,8 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -221,35 +219,35 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             closure_0 = tmp2;
             closure_128_0 = undefined;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: self.getCurrentBattery(), done: false };
-            return obj1;
+            const obj4 = { value: self.getCurrentBattery(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           if (null != closure_129_0.lastBattery) {
             if (null != closure_128_0) {
-              obj = { startBattery: closure_129_0.lastBattery, currentBattery: closure_128_0, batteryUsageRounded: null };
+              const obj = { startBattery: closure_129_0.lastBattery, currentBattery: closure_128_0, batteryUsageRounded: null };
               const _Math = Math;
               obj.batteryUsageRounded = Math.round(1000 * (closure_128_0 - closure_129_0.lastBattery)) / 1000;
             }
             c3 = 3;
           }
-          const obj3 = { startBattery: closure_129_0.lastBattery, currentBattery: closure_128_0, batteryUsageRounded: null };
+          const obj6 = { startBattery: closure_129_0.lastBattery, currentBattery: closure_128_0, batteryUsageRounded: null };
         }
       } catch (tmp21) {
         c3 = tmp;

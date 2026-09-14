@@ -12,14 +12,13 @@ const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
-createStyles.select = createStyles;
-createStyles.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-const obj1 = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-createStyles.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
-createStyles = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs }, label: null, error: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
+obj2.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+const obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
+const styles = createStyles.createStyles(obj2);
 const GuildSelector = "GuildSelector";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/GuildSelector.tsx");
@@ -28,34 +27,35 @@ export default function GuildSelector(disabled) {
   ({ error, selectedGuildId } = disabled);
   const onGuildChange = disabled.onGuildChange;
   const guilds = disabled.guilds;
-  let tmp = createStyles();
+  let tmp = styles();
   const items = [guilds, onGuildChange, selectedGuildId];
   const callback = noop.useCallback(() => {
-    const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj.title = intl.string(util.t.oM4E1A);
+    obj2.title = intl.string(util.t.oM4E1A);
     const found = guilds.filter((permissions) => guilds(closure_1_3[10]).has(permissions.permissions, constants.MANAGE_GUILD));
-    obj.items = found.map((label) => ({ label: label.name, value: label.id }));
-    obj.onItemSelect = function onItemSelect(arg0) {
+    obj2.items = found.map((label) => ({ label: label.name, value: label.id }));
+    obj2.onItemSelect = function onItemSelect(arg0) {
       closure_1_1(arg0);
       onGuildChange(dependencyMap[6]).hideActionSheet(GuildSelector);
     };
-    obj.selectedItem = selectedGuildId;
-    obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), GuildSelector, obj);
+    obj2.selectedItem = selectedGuildId;
+    obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), GuildSelector, obj2);
     const tmp = asyncRequireImpl(9556, dependencyMap.paths);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };
-  obj = { variant: "eyebrow", color: "text-default", children: null };
+  let obj2 = { variant: "eyebrow", color: "text-default", children: null };
   let intl = selectedGuildId(1114).intl;
-  obj.children = intl.string(selectedGuildId(1114).t["1DXFFd"]);
-  const items1 = [closure_7(selectedGuildId(4632).Text, obj), , , ];
+  obj2.children = intl.string(selectedGuildId(1114).t["1DXFFd"]);
+  const items1 = [closure_7(selectedGuildId(4632).Text, obj2), , , ];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;
     if ("" !== error) {
-      obj = { style: tmp.error, children: error };
-      tmp6Result = closure_7(selectedGuildId(1178).LegacyText, obj);
+      const obj3 = { style: tmp.error, children: error };
+      tmp6Result = closure_7(selectedGuildId(1176).LegacyText, obj3);
     }
   }
   items1[1] = tmp6Result;
@@ -68,11 +68,11 @@ export default function GuildSelector(disabled) {
     name = intl2.string(selectedGuildId(1114).t.oM4E1A);
   }
   items1[2] = closure_7(selectedGuildId(8716).FormRow, { label: name, disabled: disabled.disabled, trailing: closure_7(selectedGuildId(8716).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
-  const obj2 = { style: tmp.label, children: null };
+  const obj5 = { style: tmp.label, children: null };
   const intl3 = selectedGuildId(1114).intl;
-  obj2.children = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
-  items1[3] = closure_7(selectedGuildId(1178).LegacyText, obj2);
+  obj5.children = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
+  items1[3] = closure_7(selectedGuildId(1176).LegacyText, obj5);
   obj.children = items1;
   return closure_8(View, obj);
 };
-export const useStyles = createStyles;
+export const useStyles = styles;

@@ -1,15 +1,15 @@
-// === Module 15388: LightModeThemeSetting ===
+// === Module 15389: LightModeThemeSetting ===
 
-// Module 15388 (LightModeThemeSetting)
+// Module 15389 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15389 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15390 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
-const SystemTheme = fn(1186).SystemTheme;
-fn(11601);
-let SettingBuilders = {
+const SystemTheme = fn(1184).SystemTheme;
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.NoFvjZ);
@@ -28,9 +28,8 @@ let SettingBuilders = {
       return require("SettingsAppearanceLightModeThemePickerScreen").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
-export default SettingBuilders;
+export default route;

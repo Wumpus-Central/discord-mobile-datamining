@@ -60,19 +60,19 @@ const prototype = MessageCache.prototype;
 prototype["clone"] = function clone() {
   const self = this;
   if (typeof MessageCache === "function") {
-    let obj = Object.create(MessageCache.prototype);
-    obj._messages = [];
-    obj._map = {};
-    obj._wasAtEdge = false;
-    obj._isCacheBefore = tmp;
-    obj = {};
+    const obj2 = Object.create(MessageCache.prototype);
+    obj2._messages = [];
+    obj2._map = {};
+    obj2._wasAtEdge = false;
+    obj2._isCacheBefore = tmp;
+    const obj = {};
     const merged = Object.assign(self._map);
-    obj._map = obj;
+    obj2._map = obj;
     const items = [];
     HermesBuiltin.arraySpread(self._messages, 0);
-    obj._messages = items;
-    obj._wasAtEdge = self._wasAtEdge;
-    return obj;
+    obj2._messages = items;
+    obj2._wasAtEdge = self._wasAtEdge;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -278,19 +278,19 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
       merged[2] = Client.JumpType.ANIMATED;
       merged[21] = [];
       if (typeof MessageCache === "function") {
-        let obj = Object.create(MessageCache.prototype);
+        const obj = Object.create(MessageCache.prototype);
         obj._messages = [];
         obj._map = {};
         obj._wasAtEdge = false;
         obj._isCacheBefore = true;
         merged[22] = obj;
         if (typeof MessageCache === "function") {
-          obj = Object.create(MessageCache.prototype);
-          obj._messages = [];
-          obj._map = {};
-          obj._wasAtEdge = false;
-          obj._isCacheBefore = false;
-          merged[23] = obj;
+          const obj2 = Object.create(MessageCache.prototype);
+          obj2._messages = [];
+          obj2._map = {};
+          obj2._wasAtEdge = false;
+          obj2._isCacheBefore = false;
+          merged[23] = obj2;
           merged[24] = {};
           merged.channelId = channelId;
           ChannelMessages._channelMessages[channelId] = merged;
@@ -333,19 +333,19 @@ prototype2["mutate"] = function mutate(ready) {
     merged[2] = Client.JumpType.ANIMATED;
     merged[21] = [];
     if (typeof MessageCache === "function") {
-      let obj = Object.create(MessageCache.prototype);
-      obj._messages = [];
-      obj._map = {};
-      obj._wasAtEdge = false;
-      obj._isCacheBefore = true;
-      merged[22] = obj;
+      const obj3 = Object.create(MessageCache.prototype);
+      obj3._messages = [];
+      obj3._map = {};
+      obj3._wasAtEdge = false;
+      obj3._isCacheBefore = true;
+      merged[22] = obj3;
       if (typeof MessageCache === "function") {
-        obj = Object.create(MessageCache.prototype);
-        obj._messages = [];
-        obj._map = {};
-        obj._wasAtEdge = false;
-        obj._isCacheBefore = false;
-        merged[23] = obj;
+        const obj4 = Object.create(MessageCache.prototype);
+        obj4._messages = [];
+        obj4._map = {};
+        obj4._wasAtEdge = false;
+        obj4._isCacheBefore = false;
+        merged[23] = obj4;
         merged[24] = {};
         merged.channelId = tmp;
         const _array = self._array;
@@ -359,7 +359,7 @@ prototype2["mutate"] = function mutate(ready) {
         merged._array = tmp10;
         const _map = self._map;
         if (flag) {
-          obj = {};
+          const obj = {};
           const merged1 = Object.assign(_map);
           let tmp14 = obj;
         } else {
@@ -508,12 +508,12 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
   let found = _modDef12.find(this._before._messages, isTermsFormField);
   if (found == null) {
-    let tmpResult = _modDef12;
-    found = tmpResult.find(self._array, isTermsFormField);
+    found = _modDef12.find(self._array, isTermsFormField);
+    const tmpResult = _modDef12;
   }
   if (found == null) {
-    tmpResult = _modDef12;
-    found = tmpResult.find(self._after._messages, isTermsFormField);
+    found = _modDef12.find(self._after._messages, isTermsFormField);
+    const tmpResult2 = _modDef12;
   }
   return found;
 };
@@ -521,12 +521,12 @@ prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
   let findLastResult = _modDef12.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
-    let tmpResult = _modDef12;
-    findLastResult = tmpResult.findLast(self._array, arg0);
+    findLastResult = _modDef12.findLast(self._array, arg0);
+    const tmpResult = _modDef12;
   }
   if (findLastResult == null) {
-    tmpResult = _modDef12;
-    findLastResult = tmpResult.findLast(self._before._messages, arg0);
+    findLastResult = _modDef12.findLast(self._before._messages, arg0);
+    const tmpResult2 = _modDef12;
   }
   return findLastResult;
 };
@@ -990,8 +990,8 @@ prototype2["truncateTop"] = function truncateTop(React5) {
       }
       ({ _before, _array } = _map);
       _before.cache(_array.slice(0, tmp3), !_map.hasMoreBefore);
-      _array = _map._array;
-      _map._array = _array.slice(tmp3);
+      const _array1 = _map._array;
+      _map._array = _array1.slice(tmp3);
       _map.hasMoreBefore = true;
     }, flag);
   }
@@ -1187,14 +1187,13 @@ prototype2["receivePushNotification"] = function receivePushNotification(message
   } else if (null != self.get(message.id, true)) {
     return self;
   } else {
-    let obj = IOSPushNotificationRawPayloadFixExperiment;
-    const result = obj.isIOSPushNotificationRawPayloadFixExperimentEnabled();
+    const result = IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled();
     let tmp5 = !result;
     if (result) {
       tmp5 = !isConnectedResult;
     }
-    obj = { ready: true, cached: tmp5 };
-    const mutation = self.mutate(obj);
+    const obj2 = { ready: true, cached: tmp5 };
+    const mutation = self.mutate(obj2);
     const items = [mergeMessage(self, message)];
     return mutation.merge(items);
   }
@@ -1290,8 +1289,8 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     flag6 = false;
   }
   const self = this;
+  const reversed = requestStartTime(12)(items).reverse();
   let obj = requestStartTime(12)(items);
-  const reversed = obj.reverse();
   const valueResult = reversed.map((item) => id(dependencyMap[2]).createMessageRecord(item)).value();
   if (flag) {
     if (null == jump) {
@@ -1312,7 +1311,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (jumpType == null) {
         jumpType = id(4567).JumpType.ANIMATED;
       }
-      obj = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
+      let obj2 = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
       if (jump != null) {
         flag8 = jump.flash;
@@ -1320,8 +1319,8 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (flag8 == null) {
         flag8 = false;
       }
-      obj.jumpFlash = flag8;
-      obj.jumped = null != jump;
+      obj2.jumpFlash = flag8;
+      obj2.jumped = null != jump;
       let flag9;
       if (jump != null) {
         flag9 = jump.present;
@@ -1329,7 +1328,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (flag9 == null) {
         flag9 = false;
       }
-      obj.jumpedToPresent = flag9;
+      obj2.jumpedToPresent = flag9;
       let messageId;
       if (jump != null) {
         messageId = jump.messageId;
@@ -1337,7 +1336,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (messageId == null) {
         messageId = null;
       }
-      obj.jumpTargetId = messageId;
+      obj2.jumpTargetId = messageId;
       let num = 0;
       if (null != jump) {
         num = 0;
@@ -1348,12 +1347,12 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
           }
         }
       }
-      obj.jumpTargetOffset = num;
+      obj2.jumpTargetOffset = num;
       if (null != jump) {
         if (!flag5) {
           let jumpSequenceId = mergeResult.jumpSequenceId + 1;
         }
-        obj.jumpSequenceId = jumpSequenceId;
+        obj2.jumpSequenceId = jumpSequenceId;
         let returnMessageId;
         if (jump != null) {
           returnMessageId = jump.returnMessageId;
@@ -1361,7 +1360,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         if (returnMessageId == null) {
           returnMessageId = null;
         }
-        obj.jumpReturnTargetId = returnMessageId;
+        obj2.jumpReturnTargetId = returnMessageId;
         let onJumpComplete;
         if (jump != null) {
           onJumpComplete = jump.onJumpComplete;
@@ -1369,7 +1368,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         if (onJumpComplete == null) {
           onJumpComplete = null;
         }
-        obj.onJumpComplete = onJumpComplete;
+        obj2.onJumpComplete = onJumpComplete;
         let hasMoreBefore = flag3;
         if (null == jump) {
           hasMoreBefore = flag3;
@@ -1377,7 +1376,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
             hasMoreBefore = mergeResult.hasMoreBefore;
           }
         }
-        obj.hasMoreBefore = hasMoreBefore;
+        obj2.hasMoreBefore = hasMoreBefore;
         let hasMoreAfter = flag4;
         if (null == jump) {
           hasMoreAfter = flag4;
@@ -1385,24 +1384,24 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
             hasMoreAfter = mergeResult.hasMoreAfter;
           }
         }
-        obj.hasMoreAfter = hasMoreAfter;
-        obj.cached = flag6;
-        obj.hasFetched = newMessages.hasFetched;
+        obj2.hasMoreAfter = hasMoreAfter;
+        obj2.cached = flag6;
+        obj2.hasFetched = newMessages.hasFetched;
         const initialScrollSequenceId = mergeResult.initialScrollSequenceId;
         if (cached) {
           let sum = initialScrollSequenceId + 1;
         } else {
           sum = initialScrollSequenceId;
         }
-        obj.initialScrollSequenceId = sum;
+        obj2.initialScrollSequenceId = sum;
         const suppressRowAnimationSequenceId = mergeResult.suppressRowAnimationSequenceId;
         if (cached) {
           let sum1 = suppressRowAnimationSequenceId + 1;
         } else {
           sum1 = suppressRowAnimationSequenceId;
         }
-        obj.suppressRowAnimationSequenceId = sum1;
-        return mergeResult.mutate(obj);
+        obj2.suppressRowAnimationSequenceId = sum1;
+        return mergeResult.mutate(obj2);
       }
       jumpSequenceId = mergeResult.jumpSequenceId;
     }
@@ -1477,8 +1476,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  let obj = reversed(5357);
-  const result = obj.requireSortedDescending(messages);
+  const result = reversed(5357).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1488,15 +1486,16 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  obj = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
+  const obj = reversed(5357);
+  const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {
     let sum = initialScrollSequenceId + 1;
   } else {
     sum = initialScrollSequenceId;
   }
-  obj.initialScrollSequenceId = sum;
-  return self.reset(reversed).mutate(obj);
+  obj2.initialScrollSequenceId = sum;
+  return self.reset(reversed).mutate(obj2);
 };
 ChannelMessages._channelMessages = {};
 let result = size.fileFinishedImporting("lib/ChannelMessages.tsx");

@@ -1,14 +1,16 @@
-// === Module 15196: useQuestForPlacement ===
+// === Module 15197: useQuestForPlacement ===
 
-// Module 15196 (useQuestForPlacement)
+// Module 15197 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1090 */;
-import QuestActionCreators from "QuestActionCreators" /* 11409 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11433 */;
-import QuestsEligibility from "QuestsEligibility" /* 11617 */;
+import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import QuestsEligibility from "QuestsEligibility" /* 11618 */;
 import noop from "module_19" /* 19 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7802 */;
 import QuestStore from "QuestStore" /* 7805 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
@@ -25,15 +27,15 @@ function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
     if ("active" === obj2.getState()) {
       if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
         if (AdDeliveryStore.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
-          let tmpResult = QuestActionCreators;
-          const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = QuestActionCreators;
-          const questToDeliver = tmpResult.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
+          const currentQuests = QuestActionCreators.fetchCurrentQuests();
+          const tmpResult = QuestActionCreators;
+          const questToDeliver = QuestActionCreators.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
+          const tmpResult3 = QuestActionCreators;
         }
       }
     } else if (null != fetchedAt) {
       QuestActionCreators.clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
-      const tmpResult1 = QuestActionCreators;
+      const tmpResult4 = QuestActionCreators;
     }
     obj2 = DiscordAppStateDefault;
   }
@@ -100,9 +102,9 @@ export default function useFetchQuestForAdPlacement(arg0) {
     creative = stateFromStores1.creative;
   }
   const deliveredQuestId = require("AdDecisionUtils").getDeliveredQuestId(creative);
-  let tmpResult = tmp(tmp2[7]);
+  const obj4 = require("AdDecisionUtils");
   const items5 = [QuestStore];
-  const stateFromStores2 = tmpResult.useStateFromStores(items5, () => {
+  const stateFromStores2 = require("initialize").useStateFromStores(items5, () => {
     let tmp2 = null;
     if (null != closure_0) {
       const quests = QuestStore.quests;
@@ -116,11 +118,11 @@ export default function useFetchQuestForAdPlacement(arg0) {
   });
   let tmp8 = null;
   if (null != stateFromStores2) {
-    tmpResult = tmp(tmp2[10]);
     tmp8 = null;
-    if (!tmpResult.isQuestExpired(stateFromStores2)) {
+    if (!tmpResult2.isQuestExpired(stateFromStores2)) {
       tmp8 = stateFromStores2;
     }
+    tmpResult2 = tmp(tmp2[10]);
   }
   return tmp8;
 };

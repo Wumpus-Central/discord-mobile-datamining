@@ -3,7 +3,7 @@
 // Module 10232 (InAppMessageSoundsStore)
 import Storage2 from "Storage" /* 510 */;
 import _mod4259 from "module_4259" /* 4259 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";

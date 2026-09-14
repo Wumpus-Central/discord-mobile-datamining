@@ -1,7 +1,9 @@
-// === Module 12729: getApplicationFromBotUserId ===
+// === Module 12730: getApplicationFromBotUserId ===
 
-// Module 12729 (getApplicationFromBotUserId)
+// Module 12730 (getApplicationFromBotUserId)
 import UserProfileStore from "UserProfileStore" /* 7723 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;

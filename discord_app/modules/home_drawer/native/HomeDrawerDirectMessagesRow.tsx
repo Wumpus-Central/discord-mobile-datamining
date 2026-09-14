@@ -1,12 +1,12 @@
-// === Module 16405: HomeDrawerDirectMessagesRow ===
+// === Module 16407: HomeDrawerDirectMessagesRow ===
 
-// Module 16405 (HomeDrawerDirectMessagesRow)
+// Module 16407 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16401 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16403 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
@@ -14,42 +14,41 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 require = fn;
 function HomeDrawerDMsRow() {
   const tmp = closure_9();
-  let obj = initialize;
   const items = [RelationshipStore, PresenceStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
     return friendIDs.filter((item) => status.getStatus(item) !== constants.OFFLINE).length;
   });
   let tmp5 = null;
   if (stateFromStores > 0) {
-    obj = { style: tmp.subtitle, children: null };
-    obj = { style: tmp.onlineDot };
-    const items1 = [React5(View, obj), ];
-    const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+    const obj2 = { style: tmp.subtitle, children: null };
+    const obj3 = { style: tmp.onlineDot };
+    const items1 = [React5(View, obj3), ];
+    const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     const intl = util.intl;
-    const obj2 = { numFriends: stateFromStores };
-    obj1.children = intl.format(util.t.N5UIKr, obj2);
-    items1[1] = React5(Text_Text.Text, obj1);
-    obj.children = items1;
-    tmp5 = React6(View, obj);
+    const obj5 = { numFriends: stateFromStores };
+    obj4.children = intl.format(util.t.N5UIKr, obj5);
+    items1[1] = React5(Text_Text.Text, obj4);
+    obj2.children = items1;
+    tmp5 = React6(View, obj2);
   }
-  const obj3 = { title: null, subtitle: null };
-  const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  const obj6 = { title: null, subtitle: null };
+  const obj7 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(util.t.YUU0RF);
-  obj3.title = React5(Text_Text.Text, obj4);
-  obj3.subtitle = tmp5;
-  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj3);
+  obj7.children = intl2.string(util.t.YUU0RF);
+  obj6.title = React5(Text_Text.Text, obj7);
+  obj6.subtitle = tmp5;
+  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj6);
 }
 const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-const createStyles = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
+const createStyles = fn(4636);
+let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
-createStyles.onlineDot = size;
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.onlineDot = size;
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 

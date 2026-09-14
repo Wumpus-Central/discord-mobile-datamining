@@ -64,10 +64,10 @@ function handleLoadSearchResults(arg0) {
   }
 }
 const navigation = new GuildMemberRequesterDefault(GuildMemberStore.isMember, (arg0, userIds) => {
-  const obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: null, userIds };
+  const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: null, userIds };
   const items = [arg0];
-  obj.guildIds = items;
-  obj.dispatch(obj);
+  obj2.guildIds = items;
+  DispatcherDefault.dispatch(obj2);
 });
 const Store = initializeDefault.Store;
 class GuildMemberRequesterStore extends Store {

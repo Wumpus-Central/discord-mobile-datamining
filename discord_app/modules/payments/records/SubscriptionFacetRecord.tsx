@@ -39,7 +39,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
     const subscription_preview = subscription_id.subscription_preview;
     let tmp5 = null;
     if (null != subscription_preview) {
-      let obj = { currency: null, countryCode: null, subscriptionTrialId: null, renewalInfo: null, subscriptionType: null };
+      const obj = { currency: null, countryCode: null, subscriptionTrialId: null, renewalInfo: null, subscriptionType: null };
       ({ currency: obj.currency, country_code: obj.countryCode, subscription_trial_id } = subscription_preview);
       if (subscription_trial_id == null) {
         subscription_trial_id = null;
@@ -48,14 +48,14 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
       let renewal_info = subscription_preview.renewal_info;
       let tmp6 = null;
       if (null != renewal_info) {
-        obj = { price: null, currency: null, renewalLineItems: null };
+        const obj3 = { price: null, currency: null, renewalLineItems: null };
         ({ price: obj2.price, currency: obj2.currency, renewal_line_items } = renewal_info);
         if (renewal_line_items == null) {
           renewal_line_items = [];
         }
         renewal_info = renewal_line_items.map((refOrderLineItemId) => ({ refOrderLineItemId: refOrderLineItemId.ref_order_line_item_id, price: refOrderLineItemId.price }));
-        obj.renewalLineItems = renewal_info;
-        tmp6 = obj;
+        obj3.renewalLineItems = renewal_info;
+        tmp6 = obj3;
       }
       obj.renewalInfo = tmp6;
       let subscription_type = subscription_preview.subscription_type;
@@ -74,7 +74,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
       flag = false;
     }
     if (typeof prototype === "function") {
-      const tmp14 = new prototype(tmp, renewal_line_items, tmp7, renewal_info, obj, tmp6, prototype, new.target);
+      const tmp14 = new prototype(tmp, renewal_line_items, tmp7, renewal_info, obj3, tmp6, prototype, new.target);
       if (subscription_id == null) {
         subscription_id = null;
       }

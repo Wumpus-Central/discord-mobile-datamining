@@ -1,9 +1,9 @@
-// === Module 17546: NewUserManager ===
+// === Module 17547: NewUserManager ===
 
-// Module 17546 (NewUserManager)
+// Module 17547 (NewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import NUFActionCreators from "NUFActionCreators" /* 12833 */;
+import NUFActionCreators from "NUFActionCreators" /* 12834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PhoneStore from "PhoneStore" /* 7044 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
@@ -12,11 +12,11 @@ import NewUserStore from "NewUserStore" /* 5640 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
-const NewUserTypes = fn(12834).NewUserTypes;
+const NewUserTypes = fn(12835).NewUserTypes;
 const PlatformTypes = fn(1074).PlatformTypes;
-let closure_10 = fn(12848).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(12849).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
-obj = {
+let obj2 = {
   key: obj.ADD_AVATAR,
   shouldShowStep() {
     const currentUser = UserStore.getCurrentUser();
@@ -26,9 +26,10 @@ obj = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17547).openAddAvatarModal
+  transitionToStep: fn(17548).openAddAvatarModal
 };
-obj = {
+const items = [obj2, , , , , ];
+let obj3 = {
   key: obj.CONTACT_SYNC,
   shouldShowStep() {
     const localAccount = ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
@@ -47,53 +48,49 @@ obj = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12805).openContactSyncModalOnboarding
+  transitionToStep: fn(12806).openContactSyncModalOnboarding
 };
-const items = [
-  obj,
-  {
-    key: obj.DISCOVERABILITY,
-    shouldShowStep() {
-      return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
-    },
-    transitionToStep: fn(12833).openDiscoverabilityModal
-  },
-  obj,
-  {
-    key: obj.STUDENT_HUB,
-    shouldShowStep() {
-      if (NewUserStore.getType() !== NewUserTypes.ORGANIC_REGISTERED) {
-        return false;
-      } else {
-        const countryCode = PhoneStore.getCountryCode();
-        let alpha2;
-        if (countryCode != null) {
-          alpha2 = countryCode.alpha2;
-        }
-        return closure_10.includes(alpha2);
-      }
-    },
-    transitionToStep() {
-      const result = NUFActionCreators.transitionToHubEmailConnectionModal(ConstantsIOS.ModalAnimation.SLIDE_IN, true);
-    }
-  },
-  {
-    key: obj.GUILD_TEMPLATE,
-    shouldShowStep() {
-      return NewUserStore.getType() === NewUserTypes.ORGANIC_REGISTERED;
-    },
-    transitionToStep() {
-      return NUFActionCreators.transitionToNUFGuildTemplatesModal(ConstantsIOS.ModalAnimation.SLIDE_IN);
-    }
-  },
-
-];
-let obj1 = {
+items[1] = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12833).openDiscoverabilityModal
+  transitionToStep: fn(12834).openDiscoverabilityModal
+};
+items[2] = obj3;
+items[3] = {
+  key: obj.STUDENT_HUB,
+  shouldShowStep() {
+    if (NewUserStore.getType() !== NewUserTypes.ORGANIC_REGISTERED) {
+      return false;
+    } else {
+      const countryCode = PhoneStore.getCountryCode();
+      let alpha2;
+      if (countryCode != null) {
+        alpha2 = countryCode.alpha2;
+      }
+      return closure_10.includes(alpha2);
+    }
+  },
+  transitionToStep() {
+    const result = NUFActionCreators.transitionToHubEmailConnectionModal(ConstantsIOS.ModalAnimation.SLIDE_IN, true);
+  }
+};
+items[4] = {
+  key: obj.GUILD_TEMPLATE,
+  shouldShowStep() {
+    return NewUserStore.getType() === NewUserTypes.ORGANIC_REGISTERED;
+  },
+  transitionToStep() {
+    return NUFActionCreators.transitionToNUFGuildTemplatesModal(ConstantsIOS.ModalAnimation.SLIDE_IN);
+  }
+};
+let obj4 = {
+  key: obj.DISCOVERABILITY,
+  shouldShowStep() {
+    return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
+  },
+  transitionToStep: fn(12834).openDiscoverabilityModal
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
@@ -102,7 +99,7 @@ items[5] = {
     DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
-let prototype = function NewUserManager() {
+const prototype = function NewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
@@ -121,8 +118,8 @@ let prototype = function NewUserManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -135,8 +132,8 @@ let prototype = function NewUserManager() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 0;
             closure_3 = tmp2;
@@ -176,8 +173,8 @@ let prototype = function NewUserManager() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             _onboardingStepIndex = closure_132_1._onboardingStepIndex;
             if (closure_131_2) {
@@ -197,19 +194,18 @@ let prototype = function NewUserManager() {
               applyArgumentsResult(_lastStep2[15]).trackNUFStep(closure_132_1._lastStep, key2, { back: true });
               transitionToStep();
               c6 = 3;
-              const obj2 = { value: undefined, done: true };
-              return obj2;
+              const obj7 = { value: undefined, done: true };
+              return obj7;
             } else {
               closure_132_1._onboardingStepIndex = closure_132_1._onboardingStepIndex + 1;
               if (closure_132_1._onboardingStepIndex >= length.length) {
-                let obj5 = applyArgumentsResult(_lastStep2[15]);
-                const obj3 = { skip_attempt: closure_131_1 };
-                obj5.trackNUFStep(closure_132_1._lastStep, "NUF Complete", obj3);
-                let obj7 = applyArgumentsResult(_lastStep2[16]);
-                const result = obj7.setNewUserFlowCompleted();
+                const obj9 = { skip_attempt: closure_131_1 };
+                applyArgumentsResult(_lastStep2[15]).trackNUFStep(closure_132_1._lastStep, "NUF Complete", obj9);
+                const obj6 = applyArgumentsResult(_lastStep2[15]);
+                const result = applyArgumentsResult(_lastStep2[16]).setNewUserFlowCompleted();
                 c6 = 3;
-                const obj4 = { value: undefined, done: true };
-                return obj4;
+                const obj11 = { value: undefined, done: true };
+                return obj11;
               } else {
                 closure_131_7 = length[closure_132_1._onboardingStepIndex];
                 key3 = closure_131_7.key;
@@ -217,8 +213,8 @@ let prototype = function NewUserManager() {
                 transitionToStep2 = closure_131_7.transitionToStep;
                 c5 = 2;
                 c6 = 1;
-                obj5 = { value: shouldShowStep(), done: false };
-                return obj5;
+                const obj12 = { value: shouldShowStep(), done: false };
+                return obj12;
               }
             }
           }
@@ -227,13 +223,12 @@ let prototype = function NewUserManager() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           if (value) {
-            obj1 = applyArgumentsResult(_lastStep2[15]);
-            obj7 = { skip: closure_131_0, skip_attempt: closure_131_1 };
-            obj1.trackNUFStep(closure_132_1._lastStep, key3, obj7);
+            const obj14 = { skip: closure_131_0, skip_attempt: closure_131_1 };
+            applyArgumentsResult(_lastStep2[15]).trackNUFStep(closure_132_1._lastStep, key3, obj14);
             let key1;
             if (length[_onboardingStepIndex] != null) {
               key1 = tmp19.key;
@@ -244,8 +239,9 @@ let prototype = function NewUserManager() {
             }
             closure_132_1._lastStep = _lastStep2;
             transitionToStep2();
+            const obj2 = applyArgumentsResult(_lastStep2[15]);
           } else {
-            obj = { skip: closure_131_0 };
+            const obj = { skip: closure_131_0 };
             closure_132_1.handleOnboardingStep(obj);
           }
           c6 = 3;
@@ -270,8 +266,8 @@ let prototype = function NewUserManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
 
-export default prototype;
+export default prototype1;

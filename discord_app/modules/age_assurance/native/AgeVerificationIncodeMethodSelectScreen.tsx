@@ -4,7 +4,9 @@
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const VerificationMethod = fn(8530).VerificationMethod;
@@ -22,9 +24,9 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   dependencyMap = undefined;
   asyncGeneratorStep = undefined;
   _slicedToArray = undefined;
-  [tmp2, c2] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, c2] = noop.useState(false);
   const tmp = _slicedToArray(noop.useState(false), 2);
-  [tmp4, c3] = _slicedToArray(noop.useState(false), 2);
+  [tmp4, c3] = noop.useState(false);
   const tmp5 = closure_11();
   _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
@@ -34,8 +36,8 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -48,8 +50,8 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp8;
             closure_129_0 = closure_0;
@@ -58,11 +60,10 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
             tmp4(true);
             tmp36(false);
             c4 = 2;
-            let obj2 = closure_0(tmp4[8]);
             c5 = 3;
             c6 = 1;
-            const obj1 = { value: obj2.requestIncodeMethodSession(closure_0), done: false };
-            return obj1;
+            const obj5 = { value: closure_0(tmp4[8]).requestIncodeMethodSession(closure_0), done: false };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c4 = 0;
@@ -82,13 +83,13 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
             c4 = 0;
             tmp4(false);
             c6 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_1 = value;
             if (null != closure_129_1) {
-              const obj3 = { apiUrl: closure_129_1.apiUrl, sessionToken: closure_129_1.sessionToken, consentId: closure_129_1.consentId, interviewId: closure_129_1.interviewId, theme: theme.theme, method: closure_129_0 };
-              closure_129_2 = closure_2_8(obj3, closure_1);
+              const obj7 = { apiUrl: closure_129_1.apiUrl, sessionToken: closure_129_1.sessionToken, consentId: closure_129_1.consentId, interviewId: closure_129_1.interviewId, theme: theme.theme, method: closure_129_0 };
+              closure_129_2 = closure_2_8(obj7, closure_1);
               closure_0(closure_129_2);
               c4 = 1;
             }
@@ -97,7 +98,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
           c4 = 0;
           tmp4(false);
           c6 = 3;
-          obj = { value: undefined, done: true };
+          const obj = { value: undefined, done: true };
           return obj;
         }
       } catch (tmp36) {
@@ -125,60 +126,60 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   }, items);
   let obj = { children: null };
   const ModalContent = require("ModalContent").ModalContent;
-  obj = { children: null };
+  let obj2 = { children: null };
   if (tmp2) {
-    obj = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(5658).ActivityIndicator, { size: "large" }) };
-    obj.children = closure_9(tmp7(5054).Stack, obj);
-    obj.children = closure_9(ModalContent, obj);
+    const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(5658).ActivityIndicator, { size: "large" }) };
+    obj2.children = closure_9(tmp7(5054).Stack, obj3);
+    obj.children = closure_9(ModalContent, obj2);
     let tmp11 = obj;
   } else {
-    let obj1 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
-    let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
+    let obj4 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
+    let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
     const items1 = [closure_9(tmp7(5773).ShieldSpotIllustration, { height: 100, width: 177 }), ];
-    let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
-    const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.header, children: null };
+    let obj6 = { align: "center", justify: "center", spacing: 8, children: null };
+    let obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.header, children: null };
     const intl = tmp7(1114).intl;
-    obj4.children = intl.string(trustedOrigin(2946).eZvwAe);
-    const items2 = [closure_9(tmp7(4632).Text, obj4), ];
-    const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp5.header, children: null };
+    obj7.children = intl.string(trustedOrigin(2946).eZvwAe);
+    const items2 = [closure_9(tmp7(4632).Text, obj7), ];
+    const obj8 = { variant: "text-md/medium", color: "text-strong", style: tmp5.header, children: null };
     const intl2 = tmp7(1114).intl;
-    obj5.children = intl2.string(trustedOrigin(2946)["5yWXmT"]);
-    items2[1] = closure_9(tmp7(4632).Text, obj5);
-    obj3.children = items2;
-    items1[1] = closure_10(tmp7(5054).Stack, obj3);
-    obj2.children = items1;
-    const items3 = [closure_10(tmp7(5054).Stack, obj2), , ];
+    obj8.children = intl2.string(trustedOrigin(2946)["5yWXmT"]);
+    items2[1] = closure_9(tmp7(4632).Text, obj8);
+    obj6.children = items2;
+    items1[1] = closure_10(tmp7(5054).Stack, obj6);
+    obj5.children = items1;
+    const items3 = [closure_10(tmp7(5054).Stack, obj5), , ];
     if (tmp6Result) {
-      const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
+      const obj9 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
       const intl3 = tmp7(1114).intl;
-      obj6.children = intl3.string(tmp7(1114).t.c6kn6F);
-      tmp6Result = closure_9(tmp7(4632).Text, obj6);
+      obj9.children = intl3.string(tmp7(1114).t.c6kn6F);
+      tmp6Result = closure_9(tmp7(4632).Text, obj9);
     }
     items3[1] = tmp6Result;
-    const obj7 = { hasIcons: false, children: null };
-    const obj8 = { arrow: true, label: null, subLabel: null, onPress: null };
+    const obj10 = { hasIcons: false, children: null };
+    const obj11 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl4 = tmp7(1114).intl;
-    obj8.label = intl4.string(trustedOrigin(2946).rgXXcW);
+    obj11.label = intl4.string(trustedOrigin(2946).rgXXcW);
     const intl5 = tmp7(1114).intl;
-    obj8.subLabel = intl5.string(trustedOrigin(2946).fm7qBC);
-    obj8.onPress = function onPress() {
+    obj11.subLabel = intl5.string(trustedOrigin(2946).fm7qBC);
+    obj11.onPress = function onPress() {
       closure_4(VerificationMethod.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [closure_9(tmp7(5686).TableRow, obj8), ];
-    const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
+    const items4 = [closure_9(tmp7(5686).TableRow, obj11), ];
+    const obj12 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1114).intl;
-    obj9.label = intl6.string(trustedOrigin(2946)["NeVlw/"]);
+    obj12.label = intl6.string(trustedOrigin(2946)["NeVlw/"]);
     const intl7 = tmp7(1114).intl;
-    obj9.subLabel = intl7.string(trustedOrigin(2946).ARmJ0M);
-    obj9.onPress = function onPress() {
+    obj12.subLabel = intl7.string(trustedOrigin(2946).ARmJ0M);
+    obj12.onPress = function onPress() {
       closure_4(VerificationMethod.ID_VERIFICATION);
     };
-    items4[1] = closure_9(tmp7(5686).TableRow, obj9);
-    obj7.children = items4;
-    items3[2] = closure_10(tmp7(5768).TableRowGroup, obj7);
-    obj1.children = items3;
-    obj.children = closure_10(tmp7(5054).Stack, obj1);
-    obj.children = closure_9(ModalContent, obj);
+    items4[1] = closure_9(tmp7(5686).TableRow, obj12);
+    obj10.children = items4;
+    items3[2] = closure_10(tmp7(5768).TableRowGroup, obj10);
+    obj4.children = items3;
+    obj2.children = closure_10(tmp7(5054).Stack, obj4);
+    obj.children = closure_9(ModalContent, obj2);
     tmp11 = obj;
   }
   return closure_9(require("ModalScreen").ModalScreen, tmp11);

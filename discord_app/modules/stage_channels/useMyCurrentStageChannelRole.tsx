@@ -5,6 +5,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5502 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");

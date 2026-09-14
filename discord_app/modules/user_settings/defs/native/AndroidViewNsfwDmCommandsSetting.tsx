@@ -1,17 +1,16 @@
-// === Module 14929: AndroidViewNsfwDmCommandsSetting ===
+// === Module 14930: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 14929 (AndroidViewNsfwDmCommandsSetting)
+// Module 14930 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9425 */;
 import useNSFWAllowed from "useNSFWAllowed" /* 9426 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
@@ -28,15 +27,15 @@ const toggle = SettingBuilders.createToggle({
     return AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = AgeGateUtils;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
-        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+        const obj3 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
+        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       }
     }
     const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
+    obj = AgeGateUtils;
   },
   usePredicate() {
     let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
@@ -44,7 +43,6 @@ const toggle = SettingBuilders.createToggle({
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = AgeVerificationUtils;
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -52,8 +50,8 @@ const toggle = SettingBuilders.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = PlatformUtils;
-      shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
+      shouldAgeVerifyForSettingsToggles = PlatformUtils.isAndroid();
+      const tmpResult2 = PlatformUtils;
     }
     return shouldAgeVerifyForSettingsToggles;
   }

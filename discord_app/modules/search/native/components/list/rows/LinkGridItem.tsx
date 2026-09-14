@@ -1,6 +1,6 @@
-// === Module 16786: LinkGridItem ===
+// === Module 16788: LinkGridItem ===
 
-// Module 16786 (LinkGridItem)
+// Module 16788 (LinkGridItem)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import LinkIcon from "LinkIcon" /* 4579 */;
@@ -8,10 +8,10 @@ import Text_Text from "Text/Text" /* 4632 */;
 import ChatIcon from "ChatIcon" /* 5152 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 7992 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8488 */;
-import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11743 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import SearchMediaImage from "SearchMediaImage" /* 16777 */;
-import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 16787 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11744 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import SearchMediaImage from "SearchMediaImage" /* 16779 */;
+import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 16789 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -2331,13 +2331,11 @@ function LinkParsedGridItem(author) {
   ({ imageStyle, containerStyle } = author);
   const tmp = closure_13();
   const tapToSee = tmp;
-  let obj = author(channelId[8]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
-  let obj1 = author(channelId[8]);
+  stateFromStores = author(channelId[8]).useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
+  let obj = author(channelId[8]);
   const items1 = [tapToSee];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
-  let obj2 = onPressSearchLink;
+  const stateFromStores1 = author(channelId[8]).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const tmp6 = messageId(onPressSearchLink.useState(null), 2);
   const first = tmp6[0];
   closure_11 = tmp6[1];
@@ -4631,11 +4629,11 @@ function LinkParsedGridItem(author) {
       const intl = util.intl;
       return intl.string(util.t.mE3KJN);
     } else {
-      let obj = { postProcessor };
-      obj = { pointerEvents: "none", children: null };
-      const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: obj.renderMessageMarkupWithParser(SearchResultLinkPreviewMarkup.NativeSearchResultLinkPreviewParser, tmp, obj).content };
-      obj.children = closure_2_11(Text_Text.Text, obj1);
-      return closure_2_11(hasOwnProperty, obj);
+      const obj2 = { postProcessor };
+      const obj3 = { pointerEvents: "none", children: null };
+      const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: renderMessageMarkup.renderMessageMarkupWithParser(SearchResultLinkPreviewMarkup.NativeSearchResultLinkPreviewParser, tmp, obj2).content };
+      obj3.children = closure_2_11(Text_Text.Text, obj4);
+      return closure_2_11(hasOwnProperty, obj3);
     }
   }, items3);
   let target;
@@ -4644,8 +4642,8 @@ function LinkParsedGridItem(author) {
       if ("link" === first.type) {
         if (null != first.target) {
           if ("" !== first.target) {
-            let obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.target };
-            return closure_2_11(Text_Text.Text, obj);
+            const obj2 = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.target };
+            return closure_2_11(Text_Text.Text, obj2);
           }
         }
       }
@@ -4656,11 +4654,11 @@ function LinkParsedGridItem(author) {
         type = first.type;
       }
       if ("channelMention" === type) {
-        obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.originalLink };
-        return closure_2_11(Text_Text.Text, obj);
+        const obj3 = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: first.originalLink };
+        return closure_2_11(Text_Text.Text, obj3);
       }
     }
-    obj = { variant: "text-xs/normal", color: "interactive-text-default", lineClamp: 1, style: tapToSee.tapToSee, children: null };
+    const obj = { variant: "text-xs/normal", color: "interactive-text-default", lineClamp: 1, style: tapToSee.tapToSee, children: null };
     const intl = util.intl;
     obj.children = intl.string(util.t.q2IIoP);
     return closure_2_11(Text_Text.Text, obj);
@@ -4690,13 +4688,13 @@ function LinkParsedGridItem(author) {
   }, items5);
   const items7 = [author, ];
   let guild_id;
-  const callback1 = obj2.useCallback(() => {
+  const callback1 = obj3.useCallback(() => {
     if (null == first) {
-      let obj = { channelId, messageId };
-      onPress(obj);
+      const obj2 = { channelId, messageId };
+      onPress(obj2);
     } else if ("link" === first.type) {
-      obj = { url: first.target, trusted: MarkupReactLinkUtils.isLinkTrusted(first), messageId, channelId };
-      onPressSearchLink(obj);
+      const obj3 = { url: first.target, trusted: MarkupReactLinkUtils.isLinkTrusted(first), messageId, channelId };
+      onPressSearchLink(obj3);
     } else if ("channelMention" === first.type) {
       channelId = first.channelId;
       const channel = ChannelStore.getChannel(channelId);
@@ -4705,10 +4703,10 @@ function LinkParsedGridItem(author) {
         isGuildVocalResult = channel.isGuildVocal();
       }
       if (isGuildVocalResult) {
-        const obj1 = { channelId, messageId, mentionedChannelId: channelId };
-        onPressGuildVoiceChannelMention(obj1);
+        const obj5 = { channelId, messageId, mentionedChannelId: channelId };
+        onPressGuildVoiceChannelMention(obj5);
       } else {
-        obj = { url: first.originalLink, trusted: true, messageId, channelId };
+        const obj = { url: first.originalLink, trusted: true, messageId, channelId };
         onPressSearchLink(obj);
       }
     }
@@ -4718,27 +4716,27 @@ function LinkParsedGridItem(author) {
   }
   items7[1] = guild_id;
   const items8 = [channelId, messageId, onPress];
-  const memo3 = obj2.useMemo(() => {
+  const memo3 = obj3.useMemo(() => {
     let guild_id;
     if (stateFromStores1 != null) {
       guild_id = stateFromStores1.guild_id;
     }
     return author.getAvatarSource(guild_id);
   }, items7);
-  const callback2 = obj2.useCallback(() => {
+  const callback2 = obj3.useCallback(() => {
     onPress({ channelId, messageId });
   }, items8);
-  obj = { containerStyle, onPress: callback1, children: null };
-  obj = { thumbnail: null };
-  obj1 = { style: null, children: memo2 };
+  let obj4 = { containerStyle, onPress: callback1, children: null };
+  let obj5 = { thumbnail: null };
+  const obj6 = { style: null, children: memo2 };
   const items9 = [tmp.iconContainer, imageStyle];
-  obj1.style = items9;
-  obj.thumbnail = closure_11(onPressGuildVoiceChannelMention, obj1);
-  const items10 = [closure_11(author(channelId[17]).SearchListCardThumbnail, obj), closure_11(author(channelId[17]).SearchListCardContent, { label: memo, subLabel: memo1 }), ];
-  obj2 = { onPress: callback2, children: closure_11(tmp2(tmp3[17]).SearchListCardFooter, { author, avatarSource: memo3, channel: stateFromStores1 }) };
-  items10[2] = closure_11(author(channelId[18]).PressableHighlight, obj2);
-  obj.children = items10;
-  return postProcessor(author(channelId[17]).SearchListCardContainer, obj);
+  obj6.style = items9;
+  obj5.thumbnail = closure_11(onPressGuildVoiceChannelMention, obj6);
+  const items10 = [closure_11(author(channelId[17]).SearchListCardThumbnail, obj5), closure_11(author(channelId[17]).SearchListCardContent, { label: memo, subLabel: memo1 }), ];
+  let obj2 = author(channelId[8]);
+  items10[2] = closure_11(author(channelId[18]).PressableHighlight, { onPress: callback2, children: closure_11(author(channelId[17]).SearchListCardFooter, { author, avatarSource: memo3, channel: stateFromStores1 }) });
+  obj4.children = items10;
+  return postProcessor(author(channelId[17]).SearchListCardContainer, obj4);
 }
 function LinkEmbedGridItem(containerStyle) {
   const embed = containerStyle.embed;
@@ -4751,12 +4749,11 @@ function LinkEmbedGridItem(containerStyle) {
   const imageStyle = containerStyle.imageStyle;
   const tmp = closure_13();
   closure_8 = tmp;
-  let obj = embed(author[8]);
   let items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
-  let obj1 = embed(author[8]);
+  const stateFromStores = embed(author[8]).useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
+  let obj = embed(author[8]);
   const items1 = [imageStyle];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+  const stateFromStores1 = embed(author[8]).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const scale = onPress().scale;
   let url = embed.url;
   let url2 = embed.rawTitle;
@@ -4812,23 +4809,24 @@ function LinkEmbedGridItem(containerStyle) {
   const callback1 = obj3.useCallback(() => {
     onPress({ channelId, messageId });
   }, items5);
-  obj = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
+  const obj4 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
   const items6 = [url(embed(author[17]).SearchListCardThumbnail, { thumbnail: memo }), , ];
   if (null == stateFromStores) {
     const intl = tmp2(tmp3[9]).intl;
     url2 = intl.string(tmp2(tmp3[9]).t.mE3KJN);
   }
-  obj = { label: url2, subLabel: null };
+  const obj5 = { label: url2, subLabel: null };
   if (url == null) {
     const intl2 = tmp2(tmp3[9]).intl;
     url = intl2.string(tmp2(tmp3[9]).t.q2IIoP);
   }
-  obj.subLabel = url(embed(author[12]).Text, { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: url });
-  items6[1] = url(embed(author[17]).SearchListCardContent, obj);
-  obj1 = { onPress: callback1, children: tmp13(tmp2(tmp3[17]).SearchListCardFooter, { author, avatarSource: memo1, channel: stateFromStores1 }) };
-  items6[2] = url(embed(author[18]).PressableHighlight, obj1);
-  obj.children = items6;
-  return url2(embed(author[17]).SearchListCardContainer, obj);
+  obj5.subLabel = url(embed(author[12]).Text, { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: url });
+  items6[1] = url(embed(author[17]).SearchListCardContent, obj5);
+  const obj2 = embed(author[8]);
+  const tmp12 = url2;
+  items6[2] = url(embed(author[18]).PressableHighlight, { onPress: callback1, children: url(embed(author[17]).SearchListCardFooter, { author, avatarSource: memo1, channel: stateFromStores1 }) });
+  obj4.children = items6;
+  return tmp12(embed(author[17]).SearchListCardContainer, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
@@ -4845,15 +4843,15 @@ export default noop.memo(function LinkGridItem(arg0) {
   ({ data, onPressSearchLink, onPress, imageStyle, containerStyle } = arg0);
   const type = data.type;
   if (constants.EMBED === type) {
-    let obj = { embed: null, sources: null, messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPress: null, imageStyle: null, containerStyle: null };
+    const obj3 = { embed: null, sources: null, messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPress: null, imageStyle: null, containerStyle: null };
     ({ embed: obj2.embed, sources: obj2.sources, messageId: obj2.messageId, channelId: obj2.channelId, author: obj2.author, linkIndex: obj2.linkIndex } = data);
-    obj.onPressSearchLink = onPressSearchLink;
-    obj.onPress = onPress;
-    obj.imageStyle = imageStyle;
-    obj.containerStyle = containerStyle;
-    return closure_1_11(LinkEmbedGridItem, obj);
+    obj3.onPressSearchLink = onPressSearchLink;
+    obj3.onPress = onPress;
+    obj3.imageStyle = imageStyle;
+    obj3.containerStyle = containerStyle;
+    return closure_1_11(LinkEmbedGridItem, obj3);
   } else if (tmp2.TEXT === type) {
-    obj = { messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPressGuildVoiceChannelMention: null, onPress: null, imageStyle: null, containerStyle: null };
+    const obj = { messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPressGuildVoiceChannelMention: null, onPress: null, imageStyle: null, containerStyle: null };
     ({ messageId: obj.messageId, channelId: obj.channelId, author: obj.author, linkIndex: obj.linkIndex } = data);
     obj.onPressSearchLink = onPressSearchLink;
     obj.onPressGuildVoiceChannelMention = tmp;

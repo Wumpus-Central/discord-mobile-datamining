@@ -1,17 +1,15 @@
-// === Module 16258: GuildThemeNuxPreviewGraphic ===
+// === Module 16260: GuildThemeNuxPreviewGraphic ===
 
-// Module 16258 (GuildThemeNuxPreviewGraphic)
+// Module 16260 (GuildThemeNuxPreviewGraphic)
 import nativeDefault from "native" /* 576 */;
-import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16259 */;
+import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16261 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { width: "100%", aspectRatio: 1.7777777777777777, alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_24 };
-createStyles.container = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { width: "100%", aspectRatio: 1.7777777777777777, alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_24 } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
 

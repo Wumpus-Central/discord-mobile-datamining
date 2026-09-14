@@ -1,6 +1,6 @@
-// === Module 17841: CreatorMonetizationSettingsDisabledContext ===
+// === Module 17842: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 17841 (CreatorMonetizationSettingsDisabledContext)
+// Module 17842 (CreatorMonetizationSettingsDisabledContext)
 import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7356 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,5 @@ export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetiz
 };
 export const CreatorMonetizationSettingsDisabledContextProvider = function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
   ({ guildId, children } = arg0);
-  let obj = CreatorMonetizationRestrictionsHooks;
-  obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };
-  return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
+  return <context.Provider value={CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 };

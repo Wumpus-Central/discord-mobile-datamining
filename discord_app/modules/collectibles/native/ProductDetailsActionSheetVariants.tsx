@@ -1,6 +1,6 @@
-// === Module 13282: ProductDetailsActionSheetVariants ===
+// === Module 13283: ProductDetailsActionSheetVariants ===
 
-// Module 13282 (ProductDetailsActionSheetVariants)
+// Module 13283 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5204 */;
@@ -13,26 +13,25 @@ require = fn;
 function VariantOption(onPress) {
   ({ variant, isSelected, disabled } = onPress);
   const tmp = closure_7(isSelected);
-  let obj = useProductPurchaseState;
-  let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
+  let isPurchased = useProductPurchaseState.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
     const intl = util.intl;
-    obj = { variantLabel: variant.name };
-    let name = intl.formatToPlainString(util.t["SfQB4+"], obj);
+    const obj2 = { variantLabel: variant.name };
+    let name = intl.formatToPlainString(util.t["SfQB4+"], obj2);
   } else {
     name = variant.name;
   }
-  obj = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected, disabled }, disabled, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
-  const obj1 = { style: null, children: null };
+  const obj3 = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected, disabled }, disabled, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
+  const obj4 = { style: null, children: null };
   const items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
-  obj1.style = items;
+  obj4.style = items;
   if (isPurchased) {
-    const obj2 = { variant };
-    isPurchased = React4(VariantCheckmark, obj2);
+    const obj5 = { variant };
+    isPurchased = React4(VariantCheckmark, obj5);
   }
-  obj1.children = isPurchased;
-  obj.children = React4(View, obj1);
-  return React4(Pressables.PressableOpacity, obj);
+  obj4.children = isPurchased;
+  obj3.children = React4(View, obj4);
+  return React4(Pressables.PressableOpacity, obj3);
 }
 function VariantCheckmark(variant) {
   const colors = nativeDefault.colors;
@@ -42,15 +41,14 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, headerRow: null, variantsContainer: null, text: null };
-createStyles = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-createStyles.container = createStyles;
-createStyles.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
-createStyles.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
-createStyles.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
-let closure_6 = createStyles.createStyles(createStyles);
+let createStyles = fn(4636);
+let obj2 = { container: { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, headerRow: null, variantsContainer: null, text: null };
+let obj3 = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
+let closure_6 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
@@ -72,26 +70,25 @@ export default function ProductDetailsActionSheetVariants(disabled) {
   }
   const onVariantSelect = disabled.onVariantSelect;
   const tmp = closure_6();
-  let obj = selectedVariantIndex(onVariantSelect[10]);
   let tmp5Result = null;
   if (obj.getIsVariantProduct(product)) {
-    obj = { style: tmp.container, children: null };
-    obj = { style: tmp.headerRow, children: null };
-    const obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.headerRow, children: null };
+    const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = selectedVariantIndex(tmp3[7]).intl;
-    obj1.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
-    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj1), ];
+    obj4.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
+    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj4), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
-      const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };
-      tmp7Result = closure_4(selectedVariantIndex(tmp3[11]).Text, obj2);
+      const obj5 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp.text, children: product.variants[selectedVariantIndex].variantLabel };
+      tmp7Result = closure_4(selectedVariantIndex(tmp3[11]).Text, obj5);
     }
     items[1] = tmp7Result;
-    obj.children = items;
-    const items1 = [closure_5(View, obj), ];
-    const obj3 = { style: tmp.variantsContainer, children: null };
+    obj3.children = items;
+    const items1 = [closure_5(View, obj3), ];
+    const obj6 = { style: tmp.variantsContainer, children: null };
     const variants = product.variants;
-    obj3.children = variants.map((variant, index) => {
+    obj6.children = variants.map((variant, index) => {
       closure_0 = index;
       return closure_1_4(VariantOption, {
         variant,
@@ -102,9 +99,9 @@ export default function ProductDetailsActionSheetVariants(disabled) {
         }
       }, variant.variantValue);
     });
-    items1[1] = closure_4(View, obj3);
-    obj.children = items1;
-    tmp5Result = closure_5(View, obj);
+    items1[1] = closure_4(View, obj6);
+    obj2.children = items1;
+    tmp5Result = closure_5(View, obj2);
   }
   return tmp5Result;
 };

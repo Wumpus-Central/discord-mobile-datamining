@@ -1,14 +1,16 @@
-// === Module 16508: useNotificationCenterItemsLoader ===
+// === Module 16510: useNotificationCenterItemsLoader ===
 
-// Module 16508 (useNotificationCenterItemsLoader)
+// Module 16510 (useNotificationCenterItemsLoader)
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16509 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16511 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RecentMentionsStore from "RecentMentionsStore" /* 7739 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7741 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16507 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16509 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ReadStateTypes = fn(4818).ReadStateTypes;
@@ -29,29 +31,29 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   const initialPageSize = isFocused.initialPageSize;
   c7 = undefined;
   let initialized;
-  let obj = require("initialize");
-  let items = [initialized];
-  const stateFromStores = obj.useStateFromStores(items, () => initialized.shouldReload());
+  const items1 = [initialized];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => initialized.shouldReload());
   closure_6 = stateFromStores.useRef(false);
+  let obj = require("initialize");
   [tmp3, c7] = initialPageSize(stateFromStores.useState(false), 2);
   let tmp2 = initialPageSize(stateFromStores.useState(false), 2);
-  const items1 = [c7];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ initialized: _undefined.initialized, loading: _undefined.loading, items: _undefined.items, hasMore: _undefined.hasMore, cursor: _undefined.cursor, errored: _undefined.errored }));
+  const items2 = [c7];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => ({ initialized: _undefined.initialized, loading: _undefined.loading, items: _undefined.items, hasMore: _undefined.hasMore, cursor: _undefined.cursor, errored: _undefined.errored }));
   initialized = stateFromStoresObject.initialized;
-  items = stateFromStoresObject.items;
+  const items = stateFromStoresObject.items;
   const hasMore = stateFromStoresObject.hasMore;
   const cursor = stateFromStoresObject.cursor;
   const errored = stateFromStoresObject.errored;
   let obj2 = require("initialize");
-  const items2 = [closure_6];
-  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items2, () => ({ everyoneFilter: closure_6.everyoneFilter, roleFilter: closure_6.roleFilter }));
+  const items3 = [closure_6];
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items3, () => ({ everyoneFilter: closure_6.everyoneFilter, roleFilter: closure_6.roleFilter }));
   const roleFilter = stateFromStoresObject1.roleFilter;
   const everyoneFilter = stateFromStoresObject1.everyoneFilter;
   const effect = stateFromStores.useEffect(() => {
     const result = closure_0(isDesktop[8]).setNotificationCenterActive(true);
     return () => closure_1_0(isDesktop[8]).setNotificationCenterActive(false);
   }, []);
-  const items3 = [isFocused, initialized];
+  const items4 = [isFocused, initialized];
   const effect1 = stateFromStores.useEffect(() => {
     let tmp = initialized;
     if (initialized) {
@@ -60,10 +62,10 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     if (tmp) {
       ReadStateActionCreators.ackUserFeature(ReadStateTypes.NOTIFICATION_CENTER);
     }
-  }, items3);
+  }, items4);
   let tmp8 = navigatedAway(isDesktop[10])();
   closure_15 = tmp8;
-  const items4 = [navigatedAway, items, isDesktop, tmp8, errored];
+  const items5 = [navigatedAway, items, isDesktop, tmp8, errored];
   const effect2 = stateFromStores.useEffect(() => () => {
     if (closure_1_2) {
       const tmp7 = closure_1_15();
@@ -89,8 +91,8 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
         const obj = closure_0(isDesktop[8]);
       }
     }
-  }, items4);
-  const items5 = [initialized, stateFromStores, isFocused, flag, roleFilter, everyoneFilter, initialPageSize];
+  }, items5);
+  const items6 = [initialized, stateFromStores, isFocused, flag, roleFilter, everyoneFilter, initialPageSize];
   const effect3 = stateFromStores.useEffect(() => {
     let tmp = !initialized;
     if (initialized) {
@@ -101,7 +103,6 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
       tmp = tmp2;
     }
     if (tmp) {
-      let obj = NotificationCenterItemsActions;
       let tmp5 = initialPageSize;
       if (initialPageSize == null) {
         let num = 20;
@@ -110,10 +111,10 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
         }
         tmp5 = num;
       }
-      obj = { limit: tmp5, with_mentions: flag, roles_filter: roleFilter, everyone_filter: everyoneFilter };
-      const notificationCenterItems = obj.fetchNotificationCenterItems(obj);
+      const obj2 = { limit: tmp5, with_mentions: flag, roles_filter: roleFilter, everyone_filter: everyoneFilter };
+      const notificationCenterItems = NotificationCenterItemsActions.fetchNotificationCenterItems(obj2);
     }
-  }, items5);
+  }, items6);
   _require = flag(function*(arg0) {
     if (with_mentions === 2) {
       with_mentions = 3;
@@ -122,8 +123,8 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -136,8 +137,8 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
             throw value;
           } else if (arg0 === 2) {
             with_mentions = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp2;
             let current = ref.current;
@@ -162,22 +163,21 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
             } else {
               ref.current = true;
               _undefined(true);
-              let obj1 = closure_0(isDesktop[8]);
-              obj1 = { after, with_mentions, roles_filter, everyone_filter, limit: null };
+              const obj5 = { after, with_mentions, roles_filter, everyone_filter, limit: null };
               let num7 = 20;
               if (with_mentions) {
                 num7 = 8;
               }
-              obj1.limit = num7;
+              obj5.limit = num7;
               c2 = 1;
               with_mentions = 1;
-              const obj2 = {
-                value: obj1.fetchNotificationCenterItems(obj1, () => {
+              const obj6 = {
+                value: closure_0(isDesktop[8]).fetchNotificationCenterItems(obj5, () => {
                             ref.current = false;
                           }),
                 done: false
               };
-              return obj2;
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
@@ -187,7 +187,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
           _undefined(false);
         }
         with_mentions = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp22) {
         with_mentions = tmp;
@@ -195,8 +195,9 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
       }
     }
   });
-  const items6 = [initialized, hasMore, cursor, errored, flag, roleFilter, everyoneFilter];
-  obj = {
+  const items7 = [initialized, hasMore, cursor, errored, flag, roleFilter, everyoneFilter];
+  let obj3 = require("initialize");
+  return {
     initialized,
     loading: stateFromStoresObject.loading,
     items,
@@ -210,7 +211,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    }, items6),
+    }, items7),
     loadingMore: tmp3,
     setReadNotifItemToAcked(addResult) {
       if (!addResult.acked) {
@@ -219,5 +220,4 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     },
     errored
   };
-  return obj;
 };

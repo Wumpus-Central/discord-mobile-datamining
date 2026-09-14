@@ -1,11 +1,11 @@
-// === Module 17902: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 17903: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 17902 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 17903 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import FastImageDefault from "FastImage" /* 5668 */;
@@ -17,14 +17,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, avatar: null, content: null, contextRow: null };
-createStyles = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.avatar = { width: 40, height: 40, borderRadius: 20 };
-createStyles.content = { marginStart: 16 };
-createStyles.contextRow = { flexDirection: "row", alignItems: "center" };
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
 
@@ -37,27 +32,26 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   const roleImage = content.roleImage;
   ({ style, textStyle, roleColor, roleName, guildId } = content);
   const tmp3 = closure_8();
-  let obj = useStateFromStores;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = NicknameUtilsDefault;
-  obj = { style: null, children: null };
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj3 = { style: null, children: null };
   const items1 = [tmp3.container, style];
-  obj.style = items1;
-  const name = obj1.useName(guildId, null, stateFromStores);
-  obj = { style: tmp3.avatar, source: { uri: roleImage } };
-  const items2 = [timestampProducer(FastImageDefault, obj), ];
-  obj1 = { style: tmp3.content, children: null };
-  const obj2 = { style: tmp3.contextRow, children: null };
-  const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
-  const obj4 = { color: utils_ColorUtilsAll.int2hex(roleColor) };
-  obj3.style = obj4;
-  obj3.children = name;
-  const items3 = [timestampProducer(Text_Text.Text, obj3), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
-  obj2.children = items3;
-  const items4 = [React5(View, obj2), timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
-  obj1.children = items4;
-  items2[1] = React5(View, obj1);
-  obj.children = items2;
-  return React5(View, obj);
+  obj3.style = items1;
+  const name = NicknameUtilsDefault.useName(guildId, null, stateFromStores);
+  const items2 = [timestampProducer(FastImageDefault, { style: tmp3.avatar, source: { uri: roleImage } }), ];
+  const obj5 = { style: tmp3.content, children: null };
+  const obj6 = { style: tmp3.contextRow, children: null };
+  const obj7 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+  const obj8 = { color: null };
+  const obj4 = { style: tmp3.avatar, source: { uri: roleImage } };
+  obj8.color = utils_ColorUtilsAll.int2hex(roleColor);
+  obj7.style = obj8;
+  obj7.children = name;
+  const items3 = [timestampProducer(Text_Text.Text, obj7), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  obj6.children = items3;
+  const items4 = [React5(View, obj6), timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
+  obj5.children = items4;
+  items2[1] = React5(View, obj5);
+  obj3.children = items2;
+  return React5(View, obj3);
 };

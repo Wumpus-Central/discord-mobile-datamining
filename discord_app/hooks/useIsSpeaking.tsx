@@ -6,6 +6,8 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SpeakingStore from "SpeakingStore" /* 5500 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useIsSpeaking.tsx");
@@ -48,22 +50,22 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     }
     flag2 = mute;
   }
-  let tmpResult = require("initialize");
+  const obj = require("initialize");
   const items1 = [flag2];
-  let stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
+  let stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     let isSpeakingResult = SpeakingStore.isSpeaking(require, context);
     if (isSpeakingResult) {
       isSpeakingResult = !flag2;
     }
     return isSpeakingResult;
   });
-  tmpResult = require("initialize");
+  const tmpResult = require("initialize");
   const items2 = [flag2];
-  const stateFromStores2 = tmpResult.useStateFromStores(items2, () => SpeakingStore.isSoundSharing(require) && checkSoundSharing);
-  const obj = require("initialize");
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => SpeakingStore.isSoundSharing(require) && checkSoundSharing);
+  const tmpResult3 = require("initialize");
   const items3 = [flag];
   if (!stateFromStores1) {
-    stateFromStores1 = tmpResult1.useStateFromStores(items3, () => SoundboardStore.isUserPlayingSounds(require) && flag);
+    stateFromStores1 = tmpResult4.useStateFromStores(items3, () => SoundboardStore.isUserPlayingSounds(require) && flag);
   }
   if (!stateFromStores1) {
     stateFromStores1 = stateFromStores2;

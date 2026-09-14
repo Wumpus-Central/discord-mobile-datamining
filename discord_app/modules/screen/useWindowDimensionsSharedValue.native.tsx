@@ -1,18 +1,20 @@
-// === Module 12162: useWindowDimensionsSharedValue ===
+// === Module 12163: useWindowDimensionsSharedValue ===
 
-// Module 12162 (useWindowDimensionsSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11487 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12163 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import useWindowDimensions from "useWindowDimensions" /* 1477 */;
+// Module 12163 (useWindowDimensionsSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12164 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
+import useWindowDimensions_mod from "useWindowDimensions" /* 1477 */;
 import size from "module_2" /* 2 */;
 
-let obj = {};
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useWindowDimensions = useWindowDimensions_mod;
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = ReanimatedRexport.makeMutable(obj);
-obj = {};
+const mutable = ReanimatedRexport.makeMutable({});
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useWindowDimensions = useWindowDimensions_mod;
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = ReanimatedRexport.makeMutable(obj);
+const mutable1 = ReanimatedRexport.makeMutable({});
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
   updateSharedValueIfChangedDefault(mutable, arg0);
   updateSharedValueIfChangedDefault(mutable1, arg1);

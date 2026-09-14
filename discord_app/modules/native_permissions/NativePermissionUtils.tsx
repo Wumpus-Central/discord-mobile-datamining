@@ -1,8 +1,9 @@
 // === Module 5220: NativePermissionUtils ===
 
 // Module 5220 (NativePermissionUtils)
-import NativePermissionManager from "NativePermissionManager" /* 5221 */;
+import NativePermissionManager_mod from "NativePermissionManager" /* 5221 */;
 
+let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
 const ProcessArgs = fn(5222).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {

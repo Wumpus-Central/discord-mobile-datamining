@@ -1,10 +1,10 @@
-// === Module 17953: AVErrorStreamViewHighPacketLoss ===
+// === Module 17954: AVErrorStreamViewHighPacketLoss ===
 
-// Module 17953 (AVErrorStreamViewHighPacketLoss)
+// Module 17954 (AVErrorStreamViewHighPacketLoss)
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import AVError from "AVError" /* 9239 */;
-import AVErrorContext from "AVErrorContext" /* 17949 */;
-import AVErrorUtils from "AVErrorUtils" /* 17952 */;
+import AVErrorContext from "AVErrorContext" /* 17950 */;
+import AVErrorUtils from "AVErrorUtils" /* 17953 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
@@ -19,8 +19,7 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
     if (obj.getReportInboundErrors()) {
       const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = StreamKeyUtils;
-        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
+        rTCConnection = rTCConnection.getRTCConnection(StreamKeyUtils.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
           mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -30,15 +29,14 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
         } else if (ownerId.ownerId === id.getId()) {
           return arr;
         } else {
-          let tmpResult = AVErrorUtils;
-          const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+          const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-              obj = { type: AVError.AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
-              tmpResult = AVErrorContext;
-              const merged = Object.assign(tmpResult.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
-              arr = arr.push(obj);
-              const tmpResult1 = StreamKeyUtils;
+              const obj2 = { type: AVError.AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
+              const tmpResult3 = AVErrorContext;
+              const merged = Object.assign(tmpResult3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
+              arr = arr.push(obj2);
+              const tmpResult4 = StreamKeyUtils;
             }
           }
           return arr;

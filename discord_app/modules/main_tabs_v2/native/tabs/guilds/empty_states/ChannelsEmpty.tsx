@@ -1,11 +1,11 @@
-// === Module 16349: ChannelsEmpty ===
+// === Module 16351: ChannelsEmpty ===
 
-// Module 16349 (ChannelsEmpty)
+// Module 16351 (ChannelsEmpty)
 import nativeDefault from "native" /* 576 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9867 */;
-import _modDef16350 from "module_16350" /* 16350 */;
-import _modDef16351 from "module_16351" /* 16351 */;
+import _modDef16352 from "module_16352" /* 16352 */;
+import _modDef16353 from "module_16353" /* 16353 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
@@ -15,30 +15,29 @@ get_ActivityIndicator = fn(17);
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: null, text: null, buttonWrapper: null, buttonPill: null, personalizeButtonWrapper: null };
-obj = {};
+let obj3 = {};
 const merged = Object.assign(fn(4632).TextStyleSheet["heading-md/bold"]);
-obj.fontSize = 18;
-obj.marginTop = 16;
-obj.marginBottom = 8;
-obj.headerText = obj;
+obj3.fontSize = 18;
+obj3.marginTop = 16;
+obj3.marginBottom = 8;
+obj.headerText = obj3;
 obj.text = { textAlign: "center" };
 obj.buttonWrapper = { marginTop: 24 };
-const createStyles = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
-obj.buttonPill = createStyles;
+obj.buttonPill = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
 obj.personalizeButtonWrapper = { marginHorizontal: 12, marginBottom: 12 };
 let closure_10 = createStyles.createStyles(obj);
+let obj4 = { borderRadius: nativeDefault.radii.xl, height: 44, paddingHorizontal: 20 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx");
 
 export default noop.memo(function ChannelsEmpty(guild) {
   guild = guild.guild;
   const tmp = closure_10();
-  let obj = guild(563);
   const items = [PermissionStore];
   const items1 = [guild];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) }), items1);
+  const stateFromStoresObject = guild(563).useStateFromStoresObject(items, () => ({ canCustomizeGuild: PermissionStore.can(Permissions.MANAGE_GUILD, guild), canCreateChannel: PermissionStore.can(Permissions.MANAGE_CHANNELS, guild) }), items1);
   ({ canCustomizeGuild, canCreateChannel } = stateFromStoresObject);
   const items2 = [guild.id];
   const items3 = [guild.id];
@@ -48,49 +47,50 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const callback1 = noop.useCallback(() => {
     CreateChannelModalActionCreatorsDefault.open(null, guild.id, null, null);
   }, items3);
-  let obj1 = guild(15180);
-  obj = { style: null, children: null };
+  const obj = guild(563);
+  const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
-  items4[1] = obj;
-  obj.style = items4;
+  const obj2 = guild(15181);
+  items4[1] = { paddingBottom: guild(15181).useYouBarTotalHeight(16) };
+  obj3.style = items4;
   if (canCustomizeGuild) {
-    obj1 = { style: tmp.personalizeButtonWrapper, children: null };
-    const obj2 = { icon: null, label: null, onPress: null };
-    const obj3 = { source: _modDef16350, disableColor: true };
-    obj2.icon = closure_8(tmp2(1178).Icon, obj3);
+    const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
+    const obj6 = { icon: null, label: null, onPress: null };
+    const obj7 = { source: _modDef16352, disableColor: true };
+    obj6.icon = closure_8(tmp2(1176).Icon, obj7);
     const intl = tmp2(1114).intl;
-    obj2.label = intl.string(tmp2(1114).t["Yhi9/N"]);
-    obj2.onPress = callback;
-    obj1.children = closure_8(tmp2(8718).RowButton, obj2);
-    canCustomizeGuild = closure_8(closure_4, obj1);
+    obj6.label = intl.string(tmp2(1114).t["Yhi9/N"]);
+    obj6.onPress = callback;
+    obj5.children = closure_8(tmp2(8718).RowButton, obj6);
+    canCustomizeGuild = closure_8(closure_4, obj5);
   }
   const items5 = [canCustomizeGuild, ];
-  const obj4 = { style: tmp.content, children: null };
-  const items6 = [closure_8(closure_5, { source: _modDef16351 }), , , ];
-  const obj6 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
+  const obj8 = { style: tmp.content, children: null };
+  const obj4 = { paddingBottom: guild(15181).useYouBarTotalHeight(16) };
+  const items6 = [closure_8(closure_5, { source: _modDef16353 }), , , ];
+  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
-  obj6.style = items7;
+  obj10.style = items7;
   const intl2 = tmp2(1114).intl;
-  obj6.children = intl2.string(guild(1114).t.o4s29v);
-  items6[1] = closure_8(guild(4632).Text, obj6);
-  const obj7 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
+  obj10.children = intl2.string(guild(1114).t.o4s29v);
+  items6[1] = closure_8(guild(4632).Text, obj10);
+  const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
   const intl3 = tmp2(1114).intl;
-  obj7.children = intl3.string(guild(1114).t.iypvFu);
-  items6[2] = closure_8(guild(4632).Text, obj7);
+  obj11.children = intl3.string(guild(1114).t.iypvFu);
+  items6[2] = closure_8(guild(4632).Text, obj11);
   if (canCreateChannel) {
-    const obj8 = { style: tmp.buttonWrapper, children: null };
-    const obj9 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
+    const obj12 = { style: tmp.buttonWrapper, children: null };
+    const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
     const intl4 = tmp2(1114).intl;
-    obj9.text = intl4.string(tmp2(1114).t["63PyJQ"]);
-    obj9.onPress = callback1;
-    obj8.children = closure_8(tmp2(5057).BaseTextButton, obj9);
-    canCreateChannel = closure_8(closure_4, obj8);
+    obj13.text = intl4.string(tmp2(1114).t["63PyJQ"]);
+    obj13.onPress = callback1;
+    obj12.children = closure_8(tmp2(5057).BaseTextButton, obj13);
+    canCreateChannel = closure_8(closure_4, obj12);
   }
   items6[3] = canCreateChannel;
-  obj4.children = items6;
-  items5[1] = closure_9(closure_4, obj4);
-  obj.children = items5;
-  return closure_9(closure_4, obj);
+  obj8.children = items6;
+  items5[1] = closure_9(closure_4, obj8);
+  obj3.children = items5;
+  return closure_9(closure_4, obj3);
 });

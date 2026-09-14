@@ -1,6 +1,6 @@
-// === Module 17520: DiskUsageManager ===
+// === Module 15661: DiskUsageManager ===
 
-// Module 17520 (DiskUsageManager)
+// Module 15661 (DiskUsageManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 class DiskUsageManager extends tmp2 {
@@ -16,6 +16,9 @@ class DiskUsageManager extends tmp2 {
   }
 }
 const prototype = DiskUsageManager.prototype;
+prototype["clearCaches"] = function clearCaches() {
+
+};
 prototype["_initialize"] = function _initialize() {
 
 };

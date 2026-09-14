@@ -1,22 +1,20 @@
-// === Module 15133: BountiesModalEndedCtaButtons ===
+// === Module 15134: BountiesModalEndedCtaButtons ===
 
-// Module 15133 (BountiesModalEndedCtaButtons)
+// Module 15134 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4637 */;
 import timingPresets from "timingPresets" /* 4640 */;
 import QuestContent from "QuestContent" /* 5530 */;
 import AdCreativeType from "AdCreativeType" /* 5532 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11629 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let closure_5 = createStyles.createStyles(() => {
-  let obj = { container: null };
-  obj = { gap: nativeDefault.space.PX_8 };
-  obj.container = obj;
+  const obj = { container: { gap: nativeDefault.space.PX_8 } };
   return obj;
 });
 const __initData = { code: "function BountiesModalEndedCtaButtonsTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
@@ -33,52 +31,50 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = bounty(11619);
-  closure_3 = obj.useGetQuestImpressionId();
-  let obj1 = bounty(4373);
+  const tmp = closure_5();
+  closure_3 = bounty(11620).useGetQuestImpressionId();
+  let obj = bounty(11620);
   const fn = function y() {
-    let obj = timing;
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, timingPresets.timingStandard) };
-    return obj;
+    return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  obj = { withTiming: bounty(4637).withTiming, visible, timingStandard: bounty(4640).timingStandard };
-  fn.__closure = obj;
+  let obj2 = bounty(4373);
+  fn.__closure = { withTiming: bounty(4637).withTiming, visible, timingStandard: bounty(4640).timingStandard };
   fn.__workletHash = 11417131685254;
   fn.__initData = __initData;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(15128);
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  bounty(15129);
   if (visible) {
-    obj = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
-    obj.style = items;
-    obj1 = {
+    obj4.style = items;
+    const obj5 = {
       variant: "primary-overlay",
       text: tmp6.buttonLabel,
       size: "lg",
       disabled: flag,
       onPress() {
-          let obj = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
-          obj = { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: closure_3(), sourceQuestContent };
-          const result = obj.openAdGameLinkDirectly(obj, obj);
+          const obj = QuestPlatformUtils;
+          const obj2 = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
+          const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: closure_3(), sourceQuestContent });
         }
     };
-    const items1 = [closure_3(tmp2(5056).Button, obj1), ];
+    const items1 = [closure_3(tmp2(5056).Button, obj5), ];
     let tmp9Result = null;
     if (showCloseButton) {
-      const obj2 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
+      const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
       const intl = tmp2(1114).intl;
-      obj2.text = intl.string(tmp2(1114).t.cpT0Cq);
-      obj2.disabled = flag;
-      obj2.onPress = bounty.onClose;
-      tmp9Result = tmp9(tmp2(5056).Button, obj2);
+      obj6.text = intl.string(tmp2(1114).t.cpT0Cq);
+      obj6.disabled = flag;
+      obj6.onPress = bounty.onClose;
+      tmp9Result = tmp9(tmp2(5056).Button, obj6);
     }
     items1[1] = tmp9Result;
-    obj.children = items1;
-    visible = closure_4(visible(4373).View, obj);
+    obj4.children = items1;
+    visible = closure_4(visible(4373).View, obj4);
     tmp9 = closure_3;
   }
   return visible;

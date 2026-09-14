@@ -1,18 +1,19 @@
-// === Module 17295: VoicePanelConnectButton ===
+// === Module 17297: VoicePanelConnectButton ===
 
-// Module 17295 (VoicePanelConnectButton)
+// Module 17297 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useAlertStore from "useAlertStore" /* 4982 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13063 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17296 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17299 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17300 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13064 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17298 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17301 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17302 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
+const require = globalThis.__r;
 const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
 const VoicePanelNoJoinPermissionsAlertDefault = VoicePanelNoJoinPermissionsAlert;
 const VoicePanelMaxCapacityAlertDefault = VoicePanelMaxCapacityAlert;
@@ -20,12 +21,9 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { connectButton: null, connectText: null };
-createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 };
-createStyles.connectButton = createStyles;
-createStyles.connectText = { textAlign: "center" };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { connectButton: { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 }, connectText: { textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
 
@@ -44,7 +42,7 @@ export default function ConnectButton(props) {
   const isAtMaxCapacity = tmp5.isAtMaxCapacity;
   const items = [isAtMaxCapacity];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const tmp2 = channelId;
   let isChannelContentGated = require("AgeGateUtils").useIsChannelContentGated(stateFromStores);
   if (isChannelContentGated) {
@@ -67,26 +65,24 @@ export default function ConnectButton(props) {
       if (!isAtMaxCapacity) {
         if (!isChannelContentGated) {
           if (!isChannelSpoilerGated) {
-            let obj = SelectedChannelActionCreatorsDefault;
-            const voiceChannel = obj.selectVoiceChannel(channelId);
+            const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channelId);
           }
         }
       }
     }
     if (canConnect) {
       if (isAtMaxCapacity) {
-        obj = { channelId };
+        const obj4 = { channelId };
         useAlertStore.openAlert(VoicePanelMaxCapacityAlert.VOICE_PANEL_MAX_CAPACITY_KEY, jsx(VoicePanelMaxCapacityAlertDefault, { channelId }));
       } else if (isChannelContentGated) {
-        obj = { guildId, channelId };
+        const obj6 = { guildId, channelId };
         useAlertStore.openAlert(VoicePanelNsfwAlert.VOICE_PANEL_NSFW_KEY, jsx(VoicePanelNsfwAlertDefault, { guildId, channelId }));
       } else if (isChannelSpoilerGated) {
-        let obj1 = { channelId };
+        const obj8 = { channelId };
         useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId }));
       }
     } else {
-      obj1 = useAlertStore;
-      obj1.openAlert(VoicePanelNoJoinPermissionsAlert.VOICE_PANEL_NO_JOIN_PERMS_KEY, jsx(VoicePanelNoJoinPermissionsAlertDefault, {}));
+      useAlertStore.openAlert(VoicePanelNoJoinPermissionsAlert.VOICE_PANEL_NO_JOIN_PERMS_KEY, jsx(VoicePanelNoJoinPermissionsAlertDefault, {}));
     }
   }, items1);
   const element = { onPress: callback, props: props.props, accessibilityLabel: null, style: null, children: null };

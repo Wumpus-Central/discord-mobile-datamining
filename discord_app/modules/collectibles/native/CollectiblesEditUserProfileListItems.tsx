@@ -1,10 +1,10 @@
-// === Module 13301: CollectiblesEditUserProfileListItems ===
+// === Module 13302: CollectiblesEditUserProfileListItems ===
 
-// Module 13301 (CollectiblesEditUserProfileListItems)
+// Module 13302 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
@@ -15,7 +15,7 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8290 */;
 import CollectiblesBadges from "CollectiblesBadges" /* 8957 */;
-import _modDef13302 from "module_13302" /* 13302 */;
+import _modDef13303 from "module_13303" /* 13303 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -60,29 +60,27 @@ const View = fn(17).View;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { pressable: null, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
-createStyles = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
-createStyles.pressable = createStyles;
-createStyles.item = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
-let obj1 = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
-createStyles.selected = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE };
-createStyles.optionCell = { justifyContent: "center", alignItems: "center" };
-createStyles.optionCellText = { marginTop: 4 };
-createStyles.newIcon = { position: "absolute", top: -12, right: 5 };
-createStyles.lockIcon = { position: "absolute", top: -12, right: -10 };
-const React7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm }, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
+let obj3 = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
+obj2.item = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+let obj4 = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+obj2.selected = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE };
+obj2.optionCell = { justifyContent: "center", alignItems: "center" };
+obj2.optionCellText = { marginTop: 4 };
+obj2.newIcon = { position: "absolute", top: -12, right: 5 };
+obj2.lockIcon = { position: "absolute", top: -12, right: -10 };
+const React7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx");
 
 export { EditCollectibleListItem };
 export const EditCollectiblesListItemNone = function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
-  let obj = { style: tmp.optionCell };
+  const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  obj = { source: _modDef13302, size: native.IconSizes.LARGE };
-  const items = [React5(native.Icon, obj), ];
-  obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
+  const items = [React5(native.Icon, { source: _modDef13303, size: native.IconSizes.LARGE }), ];
+  const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -91,8 +89,8 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   } else {
     stringResult = string(t.PoWNfe);
   }
-  obj.children = stringResult;
-  items[1] = React5(Text_Text.Text, obj);
+  obj3.children = stringResult;
+  items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
   return React6(EditCollectibleListItem, obj);
 };
@@ -107,18 +105,17 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
     style: tmp2.optionCell,
     isSelected: false,
     onPress: noop.useCallback(() => {
-      const obj = { analyticsLocations, analyticsSource, screen: constants.FEATURED_PAGE };
-      const result = obj.openCollectiblesShopMobile(obj);
+      const result = CollectiblesActionCreators.openCollectiblesShopMobile({ analyticsLocations, analyticsSource, screen: constants.FEATURED_PAGE });
+      const obj2 = { analyticsLocations, analyticsSource, screen: constants.FEATURED_PAGE };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }, items)
   };
   const merged1 = Object.assign(merged);
-  obj = { source: analyticsLocations(13303), size: analyticsSource(1178).IconSizes.LARGE };
-  const items1 = [closure_7(analyticsSource(1178).Icon, obj), , ];
-  obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
+  const items1 = [closure_7(analyticsSource(1176).Icon, { source: analyticsLocations(13304), size: analyticsSource(1176).IconSizes.LARGE }), , ];
+  const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1114).intl;
-  obj.children = intl.string(analyticsSource(1114).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(4632).Text, obj);
+  obj3.children = intl.string(analyticsSource(1114).t.pWG4ze);
+  items1[1] = closure_7(analyticsSource(4632).Text, obj3);
   items1[2] = closure_7(analyticsSource(8957).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
@@ -128,11 +125,9 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   ({ isSelected, isTryItOut, children } = skuId);
   const merged = Object.assign(skuId, Object.assign({ isSelected: 0, isTryItOut: 0, skuId: 0, children: 0 }));
   const tmp2 = closure_9();
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = PremiumUtilsDefault;
-  obj1.canUseCollectibles(stateFromStores);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  PremiumUtilsDefault.canUseCollectibles(stateFromStores);
   ({ purchase, product } = useCollectiblesDataDefault(skuId));
   const tmp7 = useCollectiblesDataDefault(skuId);
   const isProductNewResult = CollectiblesUtils.isProductNew(skuId);
@@ -141,25 +136,25 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
     result = CollectiblesUtils.isPremiumCollectiblesPurchase(purchase);
     const tmp3Result = CollectiblesUtils;
   }
-  obj = { isSelected };
+  const obj5 = { isSelected };
   const merged1 = Object.assign(merged);
   const items1 = [children, ];
   if (null == purchase) {
     if (!result) {
-      obj = { style: tmp2.lockIcon, isNew: isProductNewResult };
-      let tmp14 = React5(CollectiblesBadges.LockBadge, obj);
+      const obj6 = { style: tmp2.lockIcon, isNew: isProductNewResult };
+      let tmp14 = React5(CollectiblesBadges.LockBadge, obj6);
     }
     items1[1] = tmp14;
-    obj.children = items1;
-    return React6(EditCollectibleListItem, obj);
+    obj5.children = items1;
+    return React6(EditCollectibleListItem, obj5);
   }
   let tmp15 = null;
   if (result) {
     tmp15 = null;
     if (!isTryItOut) {
       if (null == purchase) {
-        obj1 = { style: tmp2.lockIcon, isNew: isProductNewResult };
-        tmp15 = React5(CollectiblesBadges.PremiumBadge, obj1);
+        const obj7 = { style: tmp2.lockIcon, isNew: isProductNewResult };
+        tmp15 = React5(CollectiblesBadges.PremiumBadge, obj7);
       } else {
         tmp15 = null;
       }

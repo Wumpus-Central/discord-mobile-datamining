@@ -15,34 +15,33 @@ export default function formatUsernameOnClick(arg0) {
   if (userId == null) {
     userId = message.author.id;
   }
-  let obj = enhanced_role_colors_EnhancedRoleColorUtils;
-  const result = obj.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
+  const result = enhanced_role_colors_EnhancedRoleColorUtils.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
   let user = UserStore.getUser(userId);
   if (user == null) {
-    author = null;
+    let author1 = null;
     if (userId === message.author.id) {
-      author = message.author;
+      author1 = message.author;
     }
-    user = author;
+    user = author1;
   }
-  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
+  const obj2 = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
   let tmp7 = null;
   const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
   if ("username" === roleStyle) {
     tmp7 = colorString;
   }
-  obj.linkColor = tmp7;
-  obj.roleColor = colorString;
+  obj2.linkColor = tmp7;
+  obj2.roleColor = colorString;
   let colorStrings = null;
   if (result) {
     colorStrings = author.colorStrings;
   }
-  obj.roleColors = colorStrings;
-  obj.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
+  obj2.roleColors = colorStrings;
+  obj2.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
   if (messageChannelId == null) {
     messageChannelId = message.channel_id;
   }
-  obj.messageChannelId = messageChannelId;
-  obj.fontId = displayNameFontIdForMobileUser;
-  return obj;
+  obj2.messageChannelId = messageChannelId;
+  obj2.fontId = displayNameFontIdForMobileUser;
+  return obj2;
 };

@@ -1,7 +1,7 @@
-// === Module 16235: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16237: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 16235 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
+// Module 16237 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -11,8 +11,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10352);
-  hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  hasAccess = hasAccess(10353).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(10353);
   const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {
@@ -31,16 +31,16 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
   const items1 = [FavoriteStore];
   const stateFromStores = hasAccess(504).useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
   const items2 = [hasAccess, stateFromStores];
-  obj = { isAvailable: hasAccess, isEnabled: stateFromStores, label: null, subLabel: null, toggle: null };
+  const obj3 = { isAvailable: hasAccess, isEnabled: stateFromStores, label: null, subLabel: null, toggle: null };
   const callback = noop.useCallback(() => {
     if (hasAccess) {
       const result = FavoritesActionCreators.setFavoritesAutoAddJoinedThreads(!stateFromStores);
     }
   }, items2);
   const intl = tmp(1114).intl;
-  obj.label = intl.string(stateFromStores(3236).DIyQIF);
+  obj3.label = intl.string(stateFromStores(3236).DIyQIF);
   const intl2 = tmp(1114).intl;
-  obj.subLabel = intl2.string(stateFromStores(3236).g2vHYJ);
-  obj.toggle = callback;
-  return obj;
+  obj3.subLabel = intl2.string(stateFromStores(3236).g2vHYJ);
+  obj3.toggle = callback;
+  return obj3;
 };

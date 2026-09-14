@@ -1,9 +1,9 @@
-// === Module 17748: GuildSettingsRoleEditPermissions ===
+// === Module 17749: GuildSettingsRoleEditPermissions ===
 
-// Module 17748 (GuildSettingsRoleEditPermissions)
+// Module 17749 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -11,6 +11,8 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,13 +22,12 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4636);
-let createStyles = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: null, emptyStateText: null, subLabel: null };
-createStyles = { height: nativeDefault.space.PX_24 };
-createStyles.sectionSeparator = createStyles;
-createStyles.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
-createStyles.subLabel = { includeFontPadding: true };
-let closure_17 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: { height: nativeDefault.space.PX_24 }, emptyStateText: null, subLabel: null };
+let obj3 = { height: nativeDefault.space.PX_24 };
+obj2.emptyStateText = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.subLabel = { includeFontPadding: true };
+let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx");
 
@@ -35,7 +36,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const role = guild.role;
   ({ permissions: importAll, onPermissionsChanged: dependencyMap } = guild);
   closure_6 = undefined;
-  let query;
+  query = undefined;
   closure_8 = undefined;
   isGuildOwner = undefined;
   c10 = undefined;
@@ -45,24 +46,20 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const currentUser = UserStore.getCurrentUser();
   let highestRole;
   if (null != currentUser) {
-    let obj = PermissionUtilsAll;
-    highestRole = obj.getHighestRole(guild, currentUser.id);
+    highestRole = PermissionUtilsAll.getHighestRole(guild, currentUser.id);
   }
-  let obj1 = PermissionUtilsAll;
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const isRoleHigherResult = obj1.isRoleHigher(guild, id, highestRole, role);
+  const isRoleHigherResult = PermissionUtilsAll.isRoleHigher(guild, id, highestRole, role);
   closure_6 = tmp10;
-  const tmp11 = _slicedToArray(highestRole.useState(""), 2);
-  query = tmp11[0];
-  closure_8 = tmp11[1];
-  [c9, c10] = _slicedToArray(highestRole.useState(false), 2);
+  [query, closure_8] = highestRole.useState("");
+  [c9, c10] = highestRole.useState(false);
   role(38)(null != guild, "Guild cannot be null");
   const tmp16 = isGuildOwner(guild, currentUser);
   const tmp13 = _slicedToArray(highestRole.useState(false), 2);
-  obj = { permission: constants2.ADMINISTRATOR, user: currentUser, context: guild };
+  let obj3 = { permission: constants2.ADMINISTRATOR, user: currentUser, context: guild };
   const tmp6Result = PermissionUtilsAll;
   UserStore = highestRole.useRef(false);
   let tmp18Result = tmp16;
@@ -74,24 +71,24 @@ export default function GuildSettingsRoleEditPermission(guild) {
     tmp18Result = tmp21;
   }
   if (tmp18Result) {
-    obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+    let obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl = guild(1114).intl;
-    obj1 = { onTemplateOpen: null };
-    const obj2 = {
+    let obj5 = { onTemplateOpen: null };
+    let obj6 = {
       onClick() {
           React5.dismiss();
-          const obj = { permissionsEdited, onPermissionsChanged, guildId: guild.id };
-          obj.openLazy(asyncRequireImpl(17749, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
+          const obj = ActionSheetActionCreatorsDefault;
+          obj.openLazy(asyncRequireImpl(17750, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
-    obj1.onTemplateOpen = obj2;
-    obj.children = intl.format(guild(1114).t.ZhSOBy, obj1);
-    tmp18Result = closure_14(guild(4632).Text, obj);
+    obj5.onTemplateOpen = obj6;
+    obj4.children = intl.format(guild(1114).t.ZhSOBy, obj5);
+    tmp18Result = closure_14(guild(4632).Text, obj4);
   }
-  tmp18Result = closure_14(tmp19, { children: tmp18Result });
-  canResult = PermissionUtilsAll.can(obj);
-  const guildPermissionSpec = role(16943).generateGuildPermissionSpec(guild);
+  canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
+  const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
+  const guildPermissionSpec = role(16945).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -104,8 +101,8 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17746), { role }), , , ];
-  let obj3 = {
+  const children = [closure_14(role(17747), { role }), , , ];
+  const obj7 = {
     children: closure_14(guild(7153).SearchField, {
       size: "md",
       onChange(str) {
@@ -121,10 +118,10 @@ export default function GuildSettingsRoleEditPermission(guild) {
       }
     })
   };
-  children[1] = closure_14(closure_6, obj3);
-  children[2] = tmp18Result;
+  children[1] = closure_14(closure_6, obj7);
+  children[2] = tmp18Result3;
   if (tmp24) {
-    let obj5 = {
+    const obj9 = {
       sections: mapped1,
       stickySectionHeadersEnabled: false,
       renderItem(section) {
@@ -143,20 +140,20 @@ export default function GuildSettingsRoleEditPermission(guild) {
           }
           if (!tmp2) {
             let obj = {};
-            obj = {};
+            const obj2 = {};
             const merged = Object.assign(role);
-            obj.permissions = require("BigFlagUtils").remove(closure_2, flag);
-            obj[role.id] = obj;
+            obj2.permissions = require("BigFlagUtils").remove(closure_2, flag);
+            obj[role.id] = obj2;
             tmp2 = !_undefined.can(flag, flag, null, obj);
             const obj3 = require("BigFlagUtils");
           }
-          obj = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: guild(onPermissionsChanged[22]).renderDescription(description) };
+          const obj4 = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: guild(onPermissionsChanged[22]).renderDescription(description) };
           const obj5 = guild(onPermissionsChanged[22]);
-          const obj1 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
-          const tmp21 = closure_1_14(guild(onPermissionsChanged[12]).Text, obj);
-          obj1.value = require("BigFlagUtils").has(closure_2, flag);
-          obj1.disabled = tmp2;
-          obj1.onValueChange = function onValueChange(arg0) {
+          const obj6 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
+          const tmp21 = closure_1_14(guild(onPermissionsChanged[12]).Text, obj4);
+          obj6.value = require("BigFlagUtils").has(closure_2, flag);
+          obj6.disabled = tmp2;
+          obj6.onValueChange = function onValueChange(arg0) {
             const obj = BigFlagUtilsAll;
             if (arg0) {
               let addResult = obj.add(closure_2_2, flag);
@@ -166,9 +163,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
             onPermissionsChanged(addResult);
             c10(true);
           };
-          obj1.label = title;
-          obj1.subLabel = tmp21;
-          return closure_1_14(guild(onPermissionsChanged[23]).TableSwitchRow, obj1);
+          obj6.label = title;
+          obj6.subLabel = tmp21;
+          return closure_1_14(guild(onPermissionsChanged[23]).TableSwitchRow, obj6);
         },
       renderSectionHeader(section) {
           const title = section.section.title;
@@ -191,15 +188,15 @@ export default function GuildSettingsRoleEditPermission(guild) {
       keyboardDismissMode: "on-drag",
       contentContainerStyle: guild.contentContainerStyle
     };
-    let tmp18Result1 = closure_14(closure_8, obj5);
+    let tmp18Result4 = closure_14(closure_8, obj9);
   } else {
-    const obj6 = { Illustration: tmp27(9890).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(9890).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1114).intl;
-    const obj7 = { query };
-    obj6.body = intl2.format(tmp27(1114).t.Psh5OO, obj7);
-    tmp18Result1 = closure_14(tmp27(1178).EmptyState, obj6);
+    const obj12 = { query };
+    obj10.body = intl2.format(tmp27(1114).t.Psh5OO, obj12);
+    tmp18Result4 = closure_14(tmp27(1176).EmptyState, obj10);
   }
-  children[3] = tmp18Result1;
+  children[3] = tmp18Result4;
   return closure_16(closure_15, { children });
 };

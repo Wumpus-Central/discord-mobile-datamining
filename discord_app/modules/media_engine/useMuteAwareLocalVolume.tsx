@@ -5,6 +5,8 @@ import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");

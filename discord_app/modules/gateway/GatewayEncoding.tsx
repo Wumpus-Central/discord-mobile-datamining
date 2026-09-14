@@ -1,10 +1,11 @@
-// === Module 13720: GatewayEncoding ===
+// === Module 13721: GatewayEncoding ===
 
-// Module 13720 (GatewayEncoding)
+// Module 13721 (GatewayEncoding)
 import ProcessArgs2 from "ProcessArgs" /* 5222 */;
-import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding" /* 13721 */;
+import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding" /* 13722 */;
 import size from "module_2" /* 2 */;
 
+let GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding_mod;
 GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {
 }

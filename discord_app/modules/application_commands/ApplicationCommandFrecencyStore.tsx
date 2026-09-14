@@ -5,7 +5,7 @@ import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FrecencyDefault from "Frecency" /* 4673 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 
 function handleUserSettingsProtoStoreChange() {
   const applicationCommandFrecency = UserSettingsProtoStore.frecencyWithoutFetchingLatest.applicationCommandFrecency;
@@ -39,9 +39,20 @@ let obj = {
   afterCompute() {
 
   },
-  numFrequentlyItems: fn(1350).FREQUENCY_ITEM_LIMIT
+  numFrequentlyItems: fn(1348).FREQUENCY_ITEM_LIMIT
 };
-let closure_7 = new FrecencyDefault(obj);
+let closure_7 = new FrecencyDefault({
+  computeBonus() {
+    return 1;
+  },
+  lookupKey(arg0) {
+    return arg0;
+  },
+  afterCompute() {
+
+  },
+  numFrequentlyItems: fn(1348).FREQUENCY_ITEM_LIMIT
+});
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {
 }
@@ -89,7 +100,7 @@ prototype["getTopCommandsWithoutLoadingLatest"] = function getTopCommandsWithout
 };
 ApplicationCommandFrecencyStore.displayName = "ApplicationCommandFrecencyStore";
 ApplicationCommandFrecencyStore.persistKey = "ApplicationCommandFrecencyV2";
-obj = {
+const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(DispatcherDefault, {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(arg0) {
     ({ command, context } = arg0);
     if (Number(command.id) < 0) {
@@ -120,8 +131,7 @@ obj = {
     }
     return false;
   }
-};
-const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 

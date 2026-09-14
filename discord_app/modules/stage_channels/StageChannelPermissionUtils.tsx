@@ -11,6 +11,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
 const Constants = fn(1074);
@@ -128,16 +130,16 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    let canResult = PermissionStore.can(constants2.ADMINISTRATOR, GuildStore.getGuild(guildId));
+    const canResult = PermissionStore.can(constants2.ADMINISTRATOR, GuildStore.getGuild(guildId));
     let tmp5 = !canResult;
     if (!canResult) {
       tmp5 = !PermissionStore.can(constants2.MANAGE_ROLES, channel, undefined, undefined, true);
     }
-    canResult = !tmp5;
+    let canResult1 = !tmp5;
     if (tmp5) {
-      canResult = PermissionStore.can(StageChannelPermissions.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
+      canResult1 = PermissionStore.can(StageChannelPermissions.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
     }
-    return canResult;
+    return canResult1;
   }, items1);
 };
 export const useCanModerateRequestToSpeak = function useCanModerateRequestToSpeak(id) {

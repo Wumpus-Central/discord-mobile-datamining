@@ -1,7 +1,7 @@
 // === Module 4787: WebViewWebmSupportTest ===
 
 // Module 4787 (WebViewWebmSupportTest)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import DeviceUtils from "DeviceUtils" /* 4615 */;
 import size from "module_2" /* 2 */;
 

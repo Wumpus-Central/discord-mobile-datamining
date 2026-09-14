@@ -7,9 +7,9 @@ import DurationsDefault from "Durations" /* 1090 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 7828 */;
-import canSpectateDefault from "canSpectate" /* 13889 */;
-import windowSourceMatchesDefault from "windowSourceMatches" /* 13916 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13917 */;
+import canSpectateDefault from "canSpectate" /* 13890 */;
+import windowSourceMatchesDefault from "windowSourceMatches" /* 13917 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13918 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -94,12 +94,12 @@ prototype["getLastActiveStream"] = function getLastActiveStream() {
   let tmp = null;
   if (canSpectateDefault(MediaEngineStore)) {
     const _Array = Array;
-    let arr = Array.from(map.values());
-    arr = arr.pop();
-    if (arr == null) {
-      arr = null;
+    let arr2 = Array.from(map.values()).pop();
+    if (arr2 == null) {
+      arr2 = null;
     }
-    tmp = arr;
+    tmp = arr2;
+    const arr = Array.from(map.values());
   }
   return tmp;
 };
@@ -562,10 +562,10 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
             if (!startsWithResult) {
               continue;
             } else {
-              obj = {};
+              let obj2 = {};
               let merged = Object.assign(streamerActiveStreamMetadatas[tmp12]);
               let merged1 = Object.assign(obj);
-              streamerActiveStreamMetadatas[tmp12] = obj;
+              streamerActiveStreamMetadatas[tmp12] = obj2;
               flag2 = true;
               continue;
             }
@@ -660,13 +660,12 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   },
   STREAM_WATCH: function handleStreamWatch(streamKey) {
     streamKey = streamKey.streamKey;
-    let obj = StreamKeyUtils;
-    const decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
+    const decodeStreamKeyResult = StreamKeyUtils.decodeStreamKey(streamKey);
     map.delete(streamKey);
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(decodeStreamKeyResult);
-    obj.state = constants.CONNECTING;
-    const result = map.set(streamKey, obj);
+    obj2.state = constants.CONNECTING;
+    const result = map.set(streamKey, obj2);
     if (decodeStreamKeyResult.ownerId === AuthenticationStore.getId()) {
       closure_25[decodeStreamKeyResult.channelId] = false;
     }
@@ -674,9 +673,8 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    sourceId(4688);
-    let obj = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
-    const encodeStreamKeyResult = obj.encodeStreamKey(obj);
+    const obj = sourceId(4688);
+    const encodeStreamKeyResult = obj.encodeStreamKey({ streamType, guildId, channelId, ownerId: AuthenticationStore.getId() });
     let startsWithResult;
     if (sourceId != null) {
       startsWithResult = sourceId.startsWith("prepicked:");
@@ -699,11 +697,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       if (gameForPID != null) {
         id = gameForPID.id;
       }
-      obj = { id, pid, sourceName, previewDisabled, sourceIcon, sourceId };
-      closure_6[encodeStreamKeyResult] = obj;
+      const obj4 = { id, pid, sourceName, previewDisabled, sourceIcon, sourceId };
+      closure_6[encodeStreamKeyResult] = obj4;
       map.delete(encodeStreamKeyResult);
-      const obj1 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId(), state: constants.CONNECTING };
-      const result = map.set(encodeStreamKeyResult, obj1);
+      const obj5 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId(), state: constants.CONNECTING };
+      const result = map.set(encodeStreamKeyResult, obj5);
     }
     if (null != pid) {
       gameForPID = RunningGameStore.getGameForPID(pid);
@@ -714,6 +712,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         gameForPID = runningGames.find((windowHandle) => windowSourceMatchesDefault(sourceId, windowHandle.windowHandle));
       }
     }
+    const obj2 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
   },
   STREAM_STOP: function handleStreamStop(streamKey) {
     closure_6[streamKey.streamKey] = null;
@@ -752,23 +751,22 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       } else if (reason === constants3.UNAUTHORIZED) {
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
-        let obj = StreamKeyUtils;
-        guildId = obj.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13918, dependencyMap.paths).then((result) => {
+        guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
+        asyncRequireImpl(13919, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(13918, dependencyMap.paths);
+        const promise = asyncRequireImpl(13919, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;
         }
         tmp9 = value.state === constants.FAILED && reason === constants3.USER_REQUESTED;
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
-      obj.state = FAILED;
-      const result1 = map.set(streamKey, obj);
+      obj2.state = FAILED;
+      const result1 = map.set(streamKey, obj2);
       let tmp18 = FAILED === constants.ENDED;
       if (tmp18) {
         tmp18 = id !== streamKey;

@@ -1,13 +1,13 @@
-// === Module 15374: SettingsAppearanceChannelList ===
+// === Module 15375: SettingsAppearanceChannelList ===
 
-// Module 15374 (SettingsAppearanceChannelList)
+// Module 15375 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15375 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15376 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15377 */;
-import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 15383 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15386 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15376 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15377 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15378 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 15384 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15387 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,18 +15,18 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { channelPreviewGradient: null, channelPreviewCardContainer: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.borderRadius = nativeDefault.radii.xl;
-createStyles.overflow = "hidden";
-createStyles.channelPreviewGradient = createStyles;
-let obj1 = { flex: 1, marginTop: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xl, width: "100%", borderWidth: 1 };
+obj3.borderRadius = nativeDefault.radii.xl;
+obj3.overflow = "hidden";
+obj2.channelPreviewGradient = obj3;
+let obj4 = { flex: 1, marginTop: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xl, width: "100%", borderWidth: 1 };
 let merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj1.shadowColor = "#000000";
-createStyles.channelPreviewCardContainer = obj1;
-let closure_7 = createStyles.createStyles(createStyles);
+obj4.shadowColor = "#000000";
+obj2.channelPreviewCardContainer = obj4;
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx");
 
@@ -40,17 +40,17 @@ export default function ChannelListPreview(useGradientBackground) {
     item = item.item;
     const kind = item.kind;
     if ("channel-row" === kind) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(item);
-      obj.animatedStyles = animatedStyles;
-      return hasOwnProperty(SettingsAppearanceChannelRowItemDefault, obj);
+      obj2.animatedStyles = animatedStyles;
+      return hasOwnProperty(SettingsAppearanceChannelRowItemDefault, obj2);
     } else if ("messages-header" === kind) {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(item);
-      obj.animatedStyles = animatedStyles;
-      return hasOwnProperty(SettingsAppearanceMessagesHeaderItemDefault, obj);
+      obj3.animatedStyles = animatedStyles;
+      return hasOwnProperty(SettingsAppearanceMessagesHeaderItemDefault, obj3);
     } else if ("activity-cards" === kind) {
-      obj = {};
+      const obj = {};
       const merged2 = Object.assign(item);
       obj.animatedStyles = animatedStyles;
       return hasOwnProperty(SettingsAppearanceActivityCardsItemDefault, obj);
@@ -69,14 +69,14 @@ export default function ChannelListPreview(useGradientBackground) {
   obj.accessibilityLabel = intl.string(animatedStyles(1114).t.iGxm3x);
   let tmp7 = null;
   if (useGradientBackground) {
-    obj = { style: tmp.channelPreviewGradient, children: null };
-    obj = { themes, themeIndex, isDimmed: false, backgroundToken: nativeDefault.colors.BACKGROUND_BASE_LOW };
-    obj.children = closure_5(SettingsAppearanceGradientBackgroundDefault, obj);
-    tmp7 = closure_5(closure_4, obj);
+    let obj2 = { style: tmp.channelPreviewGradient, children: null };
+    let obj3 = { themes, themeIndex, isDimmed: false, backgroundToken: nativeDefault.colors.BACKGROUND_BASE_LOW };
+    obj2.children = closure_5(SettingsAppearanceGradientBackgroundDefault, obj3);
+    tmp7 = closure_5(closure_4, obj2);
     const tmp4Result = SettingsAppearanceGradientBackgroundDefault;
   }
   const items2 = [tmp7, , ];
-  const obj1 = {
+  const obj4 = {
     contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16 },
     data,
     renderItem: callback,
@@ -86,7 +86,7 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(9003).FlashList, obj1);
+  items2[1] = closure_5(animatedStyles(9003).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

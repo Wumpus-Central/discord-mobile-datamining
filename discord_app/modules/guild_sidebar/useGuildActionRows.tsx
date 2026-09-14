@@ -1,12 +1,14 @@
-// === Module 16352: useGuildActionRows ===
+// === Module 16354: useGuildActionRows ===
 
-// Module 16352 (useGuildActionRows)
+// Module 16354 (useGuildActionRows)
 import useIsNewMemberDefault from "useIsNewMember" /* 7326 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12501 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12642 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16317 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12502 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12643 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16319 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const ChannelListGuildActionRow = fn(7637).ChannelListGuildActionRow;

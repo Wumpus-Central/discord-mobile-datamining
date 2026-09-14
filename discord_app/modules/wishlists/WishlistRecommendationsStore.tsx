@@ -1,6 +1,6 @@
-// === Module 10921: WishlistRecommendationsStore ===
+// === Module 10922: WishlistRecommendationsStore ===
 
-// Module 10921 (WishlistRecommendationsStore)
+// Module 10922 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -76,10 +76,10 @@ obj = {
           obj = {};
           const joined = items.join(",");
           const merged = Object.assign(obj);
-          obj = { state: "success", data: tmp, fetchedAt: null };
+          const obj2 = { state: "success", data: tmp, fetchedAt: null };
           const _Date = Date;
-          obj.fetchedAt = Date.now();
-          obj[joined] = obj;
+          obj2.fetchedAt = Date.now();
+          obj[joined] = obj2;
         }
       }
     }
@@ -106,10 +106,10 @@ obj = {
           } else {
             obj = {};
             const merged = Object.assign(obj);
-            obj = { state: "error", fetchedAt: null };
+            const obj2 = { state: "error", fetchedAt: null };
             const _Date = Date;
-            obj.fetchedAt = Date.now();
-            obj[joined] = obj;
+            obj2.fetchedAt = Date.now();
+            obj[joined] = obj2;
           }
         }
       }

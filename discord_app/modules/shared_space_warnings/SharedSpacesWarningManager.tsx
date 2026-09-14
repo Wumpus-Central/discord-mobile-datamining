@@ -1,14 +1,14 @@
-// === Module 13822: SharedSpacesWarningManager ===
+// === Module 13823: SharedSpacesWarningManager ===
 
-// Module 13822 (SharedSpacesWarningManager)
+// Module 13823 (SharedSpacesWarningManager)
 import DurationsDefault from "Durations" /* 1090 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13824 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13828 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13825 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13829 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13821 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13822 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -33,8 +33,8 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            const obj = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
-            const result = obj.showGdmBlockedUserModal(obj);
+            const obj2 = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
+            const result = showGdmBlockedUserModal.showGdmBlockedUserModal(obj2);
           }
         }
         tmp = found.length > 0 || found1.length > 0;
@@ -90,7 +90,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(13823);
+const SharedSpacesWarningStore = fn(13824);
 ({ getChannelDismissTimestamp: hasOwnProperty, getUserDismissTimestamp: metroRequire, getGlobalDismissTimestamp: closure_7, isBlockedWarningQueued: closure_8, dequeueBlockWarning: closure_9 } = SharedSpacesWarningStore);
 let closure_11 = 3 * DurationsDefault.Millis.DAY;
 let closure_12 = 2 * DurationsDefault.Millis.DAY;

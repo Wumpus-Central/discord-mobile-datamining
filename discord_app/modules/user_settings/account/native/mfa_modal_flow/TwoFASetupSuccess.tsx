@@ -1,13 +1,13 @@
-// === Module 14879: TwoFASetupSuccess ===
+// === Module 14880: TwoFASetupSuccess ===
 
-// Module 14879 (TwoFASetupSuccess)
+// Module 14880 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14870 */;
-import _mod14880 from "module_14880" /* 14880 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14871 */;
+import _mod14881 from "module_14881" /* 14881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,25 +17,24 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: null, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
-createStyles = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG };
-createStyles.successBody = createStyles;
+const createStyles = fn(4636);
+let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
-createStyles.divider = size;
-createStyles.buttonWrapper = { alignSelf: "stretch", margin: 16, marginTop: 0 };
-createStyles.ctaDescription = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
-let obj1 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
-createStyles.errorText = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.divider = size;
+obj2.buttonWrapper = { alignSelf: "stretch", margin: 16, marginTop: 0 };
+let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG };
+obj2.ctaDescription = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
+let obj4 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
+obj2.errorText = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let closure_10 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
 export default function TwoFASetupSuccess() {
   const tmp = closure_10();
-  [tmp3, require] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, require] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  [tmp5, importDefault] = _slicedToArray(noop.useState(""), 2);
+  [tmp5, importDefault] = noop.useState("");
   const callback = noop.useCallback(() => {
     setRegistering = async function _onRegisterSuccess(arg0) {
       if (c6 === 2) {
@@ -45,8 +44,8 @@ export default function TwoFASetupSuccess() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -59,8 +58,8 @@ export default function TwoFASetupSuccess() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp3;
               closure_129_0 = undefined;
@@ -76,15 +75,15 @@ export default function TwoFASetupSuccess() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               c4 = 1;
               const intl = setRegistering(1114).intl;
               c5 = 3;
               c6 = 1;
-              const obj2 = { value: setRegistering(6698).finishRegisterWebAuthnCredential(intl.string(setRegistering(1114).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
-              return obj2;
+              const obj5 = { value: setRegistering(6698).finishRegisterWebAuthnCredential(intl.string(setRegistering(1114).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              return obj5;
             }
           } else {
             if (2 === tmp8) {
@@ -95,14 +94,14 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              obj = setError(14869);
-              obj.close();
+              setError(14870).close();
               c4 = 0;
+              const obj = setError(14870);
             }
             c4 = 0;
             c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           }
         } catch (tmp19) {
           if (tmp4 === c4) {
@@ -115,8 +114,7 @@ export default function TwoFASetupSuccess() {
       }
     };
     setError("");
-    setError(dependencyMap[10]);
-    let obj = {
+    setError(dependencyMap[10]).registerPasskey({
       setRegistering,
       setError,
       onRegisterSuccess(arg0) {
@@ -129,28 +127,27 @@ export default function TwoFASetupSuccess() {
         }
         return applyArgumentsResult;
       }
-    };
-    obj.registerPasskey(obj);
+    });
   }, []);
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.flex };
-  const items = [closure_8(closure_6, obj), , , , , , , ];
-  obj = { source: _mod14880, style: tmp.image };
-  items[1] = closure_8(closure_7, obj);
-  let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
+  let obj2 = { style: tmp.flex };
+  const tmp4 = _slicedToArray(noop.useState(""), 2);
+  items[1] = closure_8(closure_7, { source: _mod14881, style: tmp.image });
+  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
-  obj1.children = intl.string(util.t.Awk3Gw);
-  items[2] = closure_8(Text_Text.Text, obj1);
-  let obj2 = { style: tmp.successBody, children: null };
+  obj4.children = intl.string(util.t.Awk3Gw);
+  items[2] = closure_8(Text_Text.Text, obj4);
+  let obj5 = { style: tmp.successBody, children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(util.t["0d1bXM"]);
-  items[3] = closure_8(native.LegacyText, obj2);
+  obj5.children = intl2.string(util.t["0d1bXM"]);
+  items[3] = closure_8(native.LegacyText, obj5);
   items[4] = closure_8(closure_6, { style: tmp.divider });
-  const obj4 = { style: tmp.ctaDescription, children: null };
+  const obj7 = { style: tmp.ctaDescription, children: null };
   const intl3 = util.intl;
-  obj4.children = intl3.string(util.t.okgGTu);
-  items[5] = closure_8(native.LegacyText, obj4);
-  const obj5 = { style: tmp.buttonWrapper, children: null };
+  obj7.children = intl3.string(util.t.okgGTu);
+  items[5] = closure_8(native.LegacyText, obj7);
+  const obj8 = { style: tmp.buttonWrapper, children: null };
   const intl4 = util.intl;
   const string = intl4.string;
   const t = util.t;
@@ -162,15 +159,15 @@ export default function TwoFASetupSuccess() {
   const items1 = [closure_8(components_Button_Button.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
   let tmp7Result = "" !== tmp5;
   if (tmp7Result) {
-    const obj6 = { style: tmp.errorText, children: tmp5 };
-    tmp7Result = closure_8(native.LegacyText, obj6);
+    const obj9 = { style: tmp.errorText, children: tmp5 };
+    tmp7Result = closure_8(native.LegacyText, obj9);
   }
-  const obj7 = { children: null };
+  const obj10 = { children: null };
   items1[1] = tmp7Result;
-  obj5.children = items1;
-  items[6] = closure_9(closure_6, obj5);
+  obj8.children = items1;
+  items[6] = closure_9(closure_6, obj8);
   items[7] = closure_8(closure_6, { style: tmp.flex });
   obj.children = items;
-  obj7.children = closure_9(closure_6, obj);
-  return closure_8(TwoFASetupModal.TwoFASetupModalScreen, obj7);
+  obj10.children = closure_9(closure_6, obj);
+  return closure_8(TwoFASetupModal.TwoFASetupModalScreen, obj10);
 };

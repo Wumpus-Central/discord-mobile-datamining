@@ -1,6 +1,6 @@
-// === Module 12228: AppLauncherOnboardingActionCreators ===
+// === Module 12229: AppLauncherOnboardingActionCreators ===
 
-// Module 12228 (AppLauncherOnboardingActionCreators)
+// Module 12229 (AppLauncherOnboardingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -10,6 +10,5 @@ export const setLastSeenTimeMs = function setLastSeenTimeMs() {
   DispatcherDefault.dispatch({ type: "APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS" });
 };
 export const setTriggeredOnboardingContentMetadata = function setTriggeredOnboardingContentMetadata(triggeredOnboardingContentMetadata) {
-  const obj = { type: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA", triggeredOnboardingContentMetadata };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA", triggeredOnboardingContentMetadata });
 };

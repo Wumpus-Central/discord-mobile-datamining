@@ -1,11 +1,11 @@
-// === Module 11097: ChannelVoiceChatModal ===
+// === Module 11098: ChannelVoiceChatModal ===
 
-// Module 11097 (ChannelVoiceChatModal)
+// Module 11098 (ChannelVoiceChatModal)
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4520 */;
 import useChannelNameDefault from "useChannelName" /* 4789 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
 import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10205 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11055 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11056 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

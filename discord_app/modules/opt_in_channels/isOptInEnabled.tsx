@@ -6,6 +6,8 @@ import PermissionStore from "PermissionStore" /* 4275 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);

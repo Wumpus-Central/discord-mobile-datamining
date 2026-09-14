@@ -1,10 +1,10 @@
-// === Module 12419: DoubleTapToReactChatInputBanner ===
+// === Module 12420: DoubleTapToReactChatInputBanner ===
 
-// Module 12419 (DoubleTapToReactChatInputBanner)
+// Module 12420 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
@@ -16,7 +16,7 @@ import Pressables from "Pressables" /* 5204 */;
 import XSmallIcon from "XSmallIcon" /* 5761 */;
 import EmojiDefault from "Emoji" /* 7233 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 8075 */;
-import renderChannelBadge from "renderChannelBadge" /* 12420 */;
+import renderChannelBadge from "renderChannelBadge" /* 12421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -25,45 +25,44 @@ require = fn;
 function DoubleTapToReactChatInputBannerInner(emoji) {
   emoji = emoji.emoji;
   const tmp = closure_13();
-  let obj = useStateFromStores;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.emojiContainer, children: null };
-  const obj1 = { style: tmp.emoji, fastImageStyle: tmp.emoji, textEmojiStyle: tmp.textEmoji, name: null, src: null };
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.emojiContainer, children: null };
+  const obj4 = { style: tmp.emoji, fastImageStyle: tmp.emoji, textEmojiStyle: tmp.textEmoji, name: null, src: null };
   let str = "";
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
-  obj1.name = str;
+  obj4.name = str;
   if (null != emoji.id) {
-    const obj2 = { id: emoji.id, animated: null, size: null };
+    const obj5 = { id: emoji.id, animated: null, size: null };
     let animated = !stateFromStores;
     if (!stateFromStores) {
       animated = emoji.animated;
     }
-    obj2.animated = animated;
-    obj2.size = EMOJI_URL_BASE_SIZE;
-    let url = AvatarUtilsDefault.getEmojiURL(obj2);
+    obj5.animated = animated;
+    obj5.size = EMOJI_URL_BASE_SIZE;
+    let url = AvatarUtilsDefault.getEmojiURL(obj5);
     const tmp8Result = AvatarUtilsDefault;
   } else {
     url = emoji.url;
   }
-  obj1.src = url;
-  const items1 = [React7(EmojiDefault, obj1), React7(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
-  obj.children = items1;
-  const items2 = [closure_1_10(View, obj), , ];
-  const obj3 = { style: tmp.text, children: null };
-  const obj4 = { style: tmp.header, children: null };
-  const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  obj4.src = url;
+  const items1 = [React7(EmojiDefault, obj4), React7(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
+  obj3.children = items1;
+  const items2 = [closure_1_10(View, obj3), , ];
+  const obj6 = { style: tmp.text, children: null };
+  const obj7 = { style: tmp.header, children: null };
+  const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj5.children = intl.string(util.t["6RUX7d"]);
-  const items3 = [React7(Text_Text.Text, obj5), React7(renderChannelBadge.NewBadge, {})];
-  obj4.children = items3;
-  const items4 = [closure_1_10(View, obj4), ];
-  const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
+  obj8.children = intl.string(util.t["6RUX7d"]);
+  const items3 = [React7(Text_Text.Text, obj8), React7(renderChannelBadge.NewBadge, {})];
+  obj7.children = items3;
+  const items4 = [closure_1_10(View, obj7), ];
+  const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj6.children = intl2.format(util.t["5/l2rR"], {
+  obj9.children = intl2.format(util.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children, arg1) {
       return closure_1_9(Text_Text.Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
@@ -72,18 +71,18 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
       return closure_1_9(Text_Text.Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
-  items4[1] = React7(Text_Text.Text, obj6);
-  obj3.children = items4;
-  items2[1] = closure_1_10(View, obj3);
-  const obj8 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  items4[1] = React7(Text_Text.Text, obj9);
+  obj6.children = items4;
+  items2[1] = closure_1_10(View, obj6);
+  const obj11 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl3 = util.intl;
-  obj8.accessibilityLabel = intl3.string(util.t.cpT0Cq);
-  obj8.onPress = emoji.handleDismissBanner;
-  obj8.style = tmp.closeButton;
-  obj8.children = React7(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = React7(Pressables.PressableOpacity, obj8);
-  obj.children = items2;
-  return closure_1_10(View, obj);
+  obj11.accessibilityLabel = intl3.string(util.t.cpT0Cq);
+  obj11.onPress = emoji.handleDismissBanner;
+  obj11.style = tmp.closeButton;
+  obj11.children = React7(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = React7(Pressables.PressableOpacity, obj11);
+  obj2.children = items2;
+  return closure_1_10(View, obj2);
 }
 function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   channel = channel.channel;
@@ -96,16 +95,18 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   let tmp2 = first(noop.useState(82), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  let obj = channel(markAsDismissed[10]);
   const items = [first1];
-  const stateFromStores = obj.useStateFromStores(items, () => first1.useReducedMotion);
+  const stateFromStores = channel(markAsDismissed[10]).useStateFromStores(items, () => first1.useReducedMotion);
   let tmp5 = first(noop.useState(false), 2);
   first1 = tmp5[0];
   closure_7 = tmp5[1];
-  obj = { type: channel(markAsDismissed[19]).ImpressionTypes.VIEW, name: channel(markAsDismissed[19]).ImpressionNames.DOUBLE_TAP_REACT_UPSELL };
-  emoji(markAsDismissed[18])(obj);
-  let obj2 = channel(markAsDismissed[20]);
-  const sharedValue = obj2.useSharedValue(0);
+  let obj2 = { type: null, name: null };
+  let obj = channel(markAsDismissed[10]);
+  obj2.type = channel(markAsDismissed[19]).ImpressionTypes.VIEW;
+  obj2.name = channel(markAsDismissed[19]).ImpressionNames.DOUBLE_TAP_REACT_UPSELL;
+  emoji(markAsDismissed[18])(obj2);
+  const tmp7 = emoji(markAsDismissed[18]);
+  const sharedValue = channel(markAsDismissed[20]).useSharedValue(0);
   const items1 = [sharedValue, first, first1];
   const effect = noop.useEffect(() => {
     if (first1) {
@@ -116,33 +117,32 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, items1);
   let obj3 = channel(markAsDismissed[20]);
   const fn = function v() {
-    let obj = { height: null };
+    const obj = { height: null };
     if (stateFromStores) {
       obj.height = sharedValue.get();
       let tmp5 = obj;
     } else {
       const obj2 = ReanimatedRexport;
-      obj = { duration: 300, easing: null };
+      const obj4 = { duration: 300, easing: null };
       value = sharedValue.get();
-      obj.easing = native.DECELERATED_EASING;
-      obj.height = obj2.withDelay(200, timing.withTiming(value, obj));
+      obj4.easing = native.DECELERATED_EASING;
+      obj.height = obj2.withDelay(200, timing.withTiming(value, obj4));
       tmp5 = obj;
     }
     return tmp5;
   };
-  obj = { useReducedMotion: stateFromStores, height: sharedValue, withDelay: channel(markAsDismissed[20]).withDelay, withTiming: channel(markAsDismissed[21]).withTiming, DECELERATED_EASING: channel(markAsDismissed[22]).DECELERATED_EASING };
-  fn.__closure = obj;
+  let obj4 = channel(markAsDismissed[20]);
+  fn.__closure = { useReducedMotion: stateFromStores, height: sharedValue, withDelay: channel(markAsDismissed[20]).withDelay, withTiming: channel(markAsDismissed[21]).withTiming, DECELERATED_EASING: channel(markAsDismissed[22]).DECELERATED_EASING };
   fn.__workletHash = 14971794499123;
   fn.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const animatedStyle = obj4.useAnimatedStyle(fn);
   const items2 = [emoji, markAsDismissed];
   const callback = noop.useCallback((nativeEvent) => {
     closure_4(nativeEvent.nativeEvent.layout.height);
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    const obj = { emoji };
-    obj.openLazy(asyncRequireImpl(12510, dependencyMap.paths), "DoubleTapToReactActionSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12511, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -163,21 +163,21 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items4);
-  const tmp7 = emoji(markAsDismissed[18]);
+  const obj5 = { useReducedMotion: stateFromStores, height: sharedValue, withDelay: channel(markAsDismissed[20]).withDelay, withTiming: channel(markAsDismissed[21]).withTiming, DECELERATED_EASING: channel(markAsDismissed[22]).DECELERATED_EASING };
   const unmountEffect = channel(markAsDismissed[27]).useUnmountEffect(() => {
     markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
   });
-  const obj1 = { children: null };
-  obj2 = { style: tmp.measurement, onLayout: callback, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) };
-  const items5 = [closure_9(stateFromStores, obj2), ];
-  obj3 = { style: null, children: null };
-  const items6 = [animatedStyle, tmp.animatedContainer];
-  obj3.style = items6;
+  const obj7 = { children: null };
   const obj6 = channel(markAsDismissed[27]);
-  obj3.children = closure_9(channel(markAsDismissed[28]).AnimatedPressableHighlight, { onPress: callback1, style: tmp.highlight, androidRippleConfig, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) });
-  items5[1] = closure_9(emoji(markAsDismissed[20]).View, obj3);
-  obj1.children = items5;
-  return closure_10(closure_11, obj1);
+  const items5 = [closure_9(stateFromStores, { style: tmp.measurement, onLayout: callback, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) }), ];
+  const obj9 = { style: null, children: null };
+  const items6 = [animatedStyle, tmp.animatedContainer];
+  obj9.style = items6;
+  const obj8 = { style: tmp.measurement, onLayout: callback, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) };
+  obj9.children = closure_9(channel(markAsDismissed[28]).AnimatedPressableHighlight, { onPress: callback1, style: tmp.highlight, androidRippleConfig, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) });
+  items5[1] = closure_9(emoji(markAsDismissed[20]).View, obj9);
+  obj7.children = items5;
+  return closure_10(closure_11, obj7);
 }
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -185,34 +185,31 @@ const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-fn(4636);
-let createStyles = { animatedContainer: null, measurement: null, container: null, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
-createStyles = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.animatedContainer = createStyles;
-createStyles.measurement = { opacity: 0, position: "absolute" };
-createStyles.container = { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 };
-createStyles.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.text = { marginHorizontal: 12, flex: 1 };
-let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.emojiContainer = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "center", padding: 12 };
-createStyles.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = { animatedContainer: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 }, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
+let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.text = { marginHorizontal: 12, flex: 1 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.emojiContainer = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "center", padding: 12 };
+obj2.emoji = { width: 28, height: 28 };
+let PlatformUtils = fn(1363);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
-let obj3 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1150);
+let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
+PlatformUtils = fn(1363);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
 }
-obj3.lineHeight = num2;
-obj3.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
-createStyles.textEmoji = obj3;
-createStyles.header = { flexDirection: "row", alignItems: "center", gap: 6 };
-createStyles.closeButton = { alignSelf: "flex-start" };
-let closure_13 = createStyles.createStyles(createStyles);
+obj7.lineHeight = num2;
+obj7.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
+obj2.textEmoji = obj7;
+obj2.header = { flexDirection: "row", alignItems: "center", gap: 6 };
+obj2.closeButton = { alignSelf: "flex-start" };
+let closure_13 = createStyles.createStyles(obj2);
 const __initData = { code: "function DoubleTapToReactChatInputBannerTsx1(){const{useReducedMotion,height,withDelay,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get()};}return{height:withDelay(200,withTiming(height.get(),{duration:300,easing:DECELERATED_EASING}))};}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapToReactChatInputBanner.tsx");

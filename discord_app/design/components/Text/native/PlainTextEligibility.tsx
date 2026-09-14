@@ -55,9 +55,9 @@ export const getPlainTextEligibility = function getPlainTextEligibility(element)
           delete tmp[tmp2];
           for (const item10016 of closure_1_2) {
             if (null != flattenResult[item10016]) {
-              let obj = { eligible: false, reason: "unsupported-style", unsupportedName: item10016 };
+              let obj2 = { eligible: false, reason: "unsupported-style", unsupportedName: item10016 };
               obj.return();
-              return obj;
+              return obj2;
             } else {
               delete tmp[tmp3];
               continue;

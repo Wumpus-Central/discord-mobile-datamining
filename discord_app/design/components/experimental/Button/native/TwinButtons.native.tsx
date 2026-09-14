@@ -5,6 +5,8 @@ import nativeDefault from "native" /* 576 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -24,12 +26,11 @@ const result = size.fileFinishedImporting("design/components/experimental/Button
 
 export const TwinButtons = function TwinButtons(children) {
   _require = undefined;
-  let obj = require("useFontScale");
-  let tmp = closure_6(obj.useFontScale() > 1.2);
+  let tmp = closure_6(require("useFontScale").useFontScale() > 1.2);
   _require = tmp;
-  obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.container, children: null };
   const Children = noop.Children;
-  obj.children = Children.map(children.children, (type) => {
+  obj2.children = Children.map(children.children, (type) => {
     let tmp = null;
     if (noop.isValidElement(type)) {
       tmp = null;

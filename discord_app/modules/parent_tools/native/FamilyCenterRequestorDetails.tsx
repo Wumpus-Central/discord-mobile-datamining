@@ -1,37 +1,36 @@
-// === Module 15009: FamilyCenterRequestorDetails ===
+// === Module 15010: FamilyCenterRequestorDetails ===
 
-// Module 15009 (FamilyCenterRequestorDetails)
+// Module 15010 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14981 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14982 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: null, detailsContainer: null };
-createStyles = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.avatar = createStyles;
-createStyles.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
+let obj3 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestorDetails.tsx");
 
 export default function FamilyCenterRequestorDetails(otherUser) {
   otherUser = otherUser.otherUser;
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  const linkTimestampText = obj.useLinkTimestampText(otherUser.id, otherUser.status);
-  obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: otherUser.avatarDecoration };
-  const items = [React4(native.Avatar, obj), ];
-  const obj1 = { style: tmp.detailsContainer, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const linkTimestampText = useUserLinks.useLinkTimestampText(otherUser.id, otherUser.status);
+  const obj3 = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: otherUser.avatarDecoration };
+  const items = [React4(native.Avatar, obj3), ];
+  const obj4 = { style: tmp.detailsContainer, children: null };
   const items1 = [React4(FamilyCenterUsernameHeaderDefault, { user: otherUser }), React4(Text_Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
-  obj1.children = items1;
-  items[1] = hasOwnProperty(View, obj1);
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj4.children = items1;
+  items[1] = hasOwnProperty(View, obj4);
+  obj2.children = items;
+  return hasOwnProperty(View, obj2);
 };

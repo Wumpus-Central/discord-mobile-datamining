@@ -18,10 +18,7 @@ let closure_6 = createStyles.createStyles((arg0) => {
     WHITE = tmp3.colors.WHITE;
     tmp5 = importDefault;
   }
-  let obj = { pillContainer: null, discountPillText: null };
-  obj = { backgroundColor: WHITE, borderRadius: tmp5(576).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 };
-  obj.pillContainer = obj;
-  obj.discountPillText = { textAlign: "center" };
+  const obj = { pillContainer: { backgroundColor: WHITE, borderRadius: tmp5(576).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 }, discountPillText: { textAlign: "center" } };
   return obj;
 });
 const size = fn(2);
@@ -61,13 +58,13 @@ export const PremiumPill = (discountOffer) => {
   const tmp6 = days(tmp5);
   const items = [trialOffer];
   const memo = premiumType.useMemo(() => {
-    let expiresAt;
+    let expiresAt1;
     if (trialOffer != null) {
-      expiresAt = trialOffer.expiresAt;
+      expiresAt1 = trialOffer.expiresAt;
     }
     let num = NaN;
-    if (null != expiresAt) {
-      expiresAt = trialOffer.expiresAt;
+    if (null != expiresAt1) {
+      const expiresAt = trialOffer.expiresAt;
       num = expiresAt.getTime();
     }
     return num;
@@ -85,8 +82,8 @@ export const PremiumPill = (discountOffer) => {
       if (null != discountOffer) {
         if (flag) {
           const intl3 = util.intl;
-          let obj = { percent: tmp.discount.amount };
-          stringResult = intl3.formatToPlainString(util.t.iiLbvu, obj);
+          const obj2 = { percent: tmp.discount.amount };
+          stringResult = intl3.formatToPlainString(util.t.iiLbvu, obj2);
         }
       }
       stringResult = null;
@@ -97,7 +94,7 @@ export const PremiumPill = (discountOffer) => {
             const _Number = Number;
             if (!Number.isNaN(days.days)) {
               const intl = util.intl;
-              obj = { days: null };
+              const obj = { days: null };
               const _Math = Math;
               obj.days = Math.max(days.days, 1);
               let formatToPlainStringResult = intl.formatToPlainString(util.t["+FgdjP"], obj);
@@ -115,8 +112,8 @@ export const PremiumPill = (discountOffer) => {
     let obj = { style: null, children: null };
     const items2 = [tmp6.pillContainer, style];
     obj.style = items2;
-    obj = { variant: "text-xs/bold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
-    obj.children = flag3(tmp(tmp2[9]).Text, obj);
+    let obj2 = { variant: "text-xs/bold", color: str2, style: tmp6.discountPillText, children: str3.toUpperCase() };
+    obj.children = flag3(tmp(tmp2[9]).Text, obj2);
     tmp11 = flag3(trialOffer, obj);
   }
   return tmp11;

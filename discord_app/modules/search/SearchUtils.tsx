@@ -1,15 +1,15 @@
-// === Module 12469: SearchUtils ===
+// === Module 12470: SearchUtils ===
 
-// Module 12469 (SearchUtils)
+// Module 12470 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import SearchTokens from "SearchTokens" /* 12470 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12475 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12476 */;
+import SearchTokens from "SearchTokens" /* 12471 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 12476 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -86,26 +86,25 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, M
   return "" + channelId + "-" + MEDIA + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  let obj = _modDef4228();
-  const diffResult = obj.diff(_modDef4228(arg0), "s");
+  const diffResult = _modDef4228().diff(_modDef4228(arg0), "s");
   if (diffResult > c17) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
     const intl7 = util.intl;
-    obj = { count: rounded };
-    return intl7.formatToPlainString(util.t["7th+Mf"], obj);
+    const obj2 = { count: rounded };
+    return intl7.formatToPlainString(util.t["7th+Mf"], obj2);
   } else if (diffResult > c16) {
     const _Math4 = Math;
     const rounded1 = Math.round(diffResult / tmp21);
     const intl6 = util.intl;
-    obj = { count: rounded1 };
-    return intl6.formatToPlainString(util.t.g2uHTD, obj);
+    const obj3 = { count: rounded1 };
+    return intl6.formatToPlainString(util.t.g2uHTD, obj3);
   } else if (diffResult > 172800) {
     const _Math3 = Math;
     const rounded2 = Math.round(diffResult / 86400);
     const intl5 = util.intl;
-    const obj1 = { count: rounded2 };
-    return intl5.formatToPlainString(util.t.HNgi95, obj1);
+    const obj4 = { count: rounded2 };
+    return intl5.formatToPlainString(util.t.HNgi95, obj4);
   } else if (diffResult > 86400) {
     const intl4 = util.intl;
     return intl4.string(util.t.uNkIhT);
@@ -113,18 +112,19 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const _Math2 = Math;
     const rounded3 = Math.round(diffResult / 3600);
     const intl3 = util.intl;
-    const obj2 = { count: rounded3 };
-    return intl3.formatToPlainString(util.t.WJBWP1, obj2);
+    const obj5 = { count: rounded3 };
+    return intl3.formatToPlainString(util.t.WJBWP1, obj5);
   } else if (diffResult > 60) {
     const _Math = Math;
     const rounded4 = Math.round(diffResult / 60);
     const intl2 = util.intl;
-    const obj3 = { count: rounded4 };
-    return intl2.formatToPlainString(util.t.CbRfwg, obj3);
+    const obj6 = { count: rounded4 };
+    return intl2.formatToPlainString(util.t.CbRfwg, obj6);
   } else {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
+  const obj = _modDef4228();
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -447,40 +447,40 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
   }
   ({ currentToken, nextToken, previousToken } = obj);
   if (0 === tokens.length) {
-    obj = { type: constants2.EMPTY, filter: null, token: null };
-    return obj;
+    const obj2 = { type: constants2.EMPTY, filter: null, token: null };
+    return obj2;
   } else if (null == currentToken) {
-    obj = { type: constants2.FILTER_ALL, filter: null, token: null };
-    return obj;
+    const obj3 = { type: constants2.FILTER_ALL, filter: null, token: null };
+    return obj3;
   } else {
     if (obj9.isSearchFilterTokenType(currentToken.type)) {
       if (null != nextToken) {
         if (nextToken.type !== QueryTokenizerDefault.NON_TOKEN_TYPE) {
           if (null != nextToken) {
             if (!regex.test(nextToken.type)) {
-              const obj1 = { type: constants2.FILTER, filter: currentToken.type, token: null };
-              return obj1;
+              const obj4 = { type: constants2.FILTER, filter: currentToken.type, token: null };
+              return obj4;
             }
           }
         }
       }
-      const obj2 = { type: constants2.FILTER, filter: currentToken.type, token: nextToken };
-      return obj2;
+      const obj5 = { type: constants2.FILTER, filter: currentToken.type, token: nextToken };
+      return obj5;
     }
     if (currentToken.type === QueryTokenizerDefault.NON_TOKEN_TYPE) {
       if (null != previousToken) {
         if (tmp10Result.isSearchFilterTokenType(previousToken.type)) {
-          const obj3 = { type: constants2.FILTER, filter: previousToken.type, token: currentToken };
-          let obj4 = obj3;
+          const obj6 = { type: constants2.FILTER, filter: previousToken.type, token: currentToken };
+          let obj7 = obj6;
         }
-        return obj4;
+        return obj7;
       }
     }
     let tmp4;
     if (currentToken.type === QueryTokenizerDefault.NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
-    obj4 = { type: constants2.FILTER_ALL, filter: null, token: tmp4 };
+    obj7 = { type: constants2.FILTER_ALL, filter: null, token: tmp4 };
     obj9 = SearchTokens;
   }
 };

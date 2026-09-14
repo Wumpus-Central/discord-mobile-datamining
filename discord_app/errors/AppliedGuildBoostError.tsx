@@ -9,11 +9,11 @@ import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4317 */;
 require = fn;
 class AppliedGuildBoostError extends tmp2 {
   constructor(arg0, arg1) {
-    tmp = new tmp(global, fn, new.target, tmp);
-    if (429 === tmp.status) {
-      tmp.message = tmp._getMessageFromRateLimit(global);
+    tmp1 = new tmp(global, fn, new.target, tmp);
+    if (429 === tmp1.status) {
+      tmp1.message = tmp1._getMessageFromRateLimit(global);
     }
-    return tmp;
+    return tmp1;
   }
 }
 AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {

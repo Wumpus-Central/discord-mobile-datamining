@@ -1,8 +1,10 @@
-// === Module 11342: useFriendsSinceDate ===
+// === Module 11343: useFriendsSinceDate ===
 
-// Module 11342 (useFriendsSinceDate)
+// Module 11343 (useFriendsSinceDate)
 import LocaleStore from "LocaleStore" /* 2025 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;

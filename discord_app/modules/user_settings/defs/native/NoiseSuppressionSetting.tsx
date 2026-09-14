@@ -1,14 +1,14 @@
-// === Module 15339: NoiseSuppressionSetting ===
+// === Module 15340: NoiseSuppressionSetting ===
 
-// Module 15339 (NoiseSuppressionSetting)
+// Module 15340 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10122 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
@@ -26,9 +26,8 @@ let SettingBuilders = {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

@@ -2,7 +2,7 @@
 
 // Module 9699 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import FramesStore from "FramesStore" /* 9640 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
@@ -74,10 +74,10 @@ class FramesManager extends tmp3 {
           if (null != frameByIframeId) {
             applyArgumentsResult.leaveFrame(frameByIframeId.id);
             if (reason.code !== constants2.CLOSE_NORMAL) {
-              const obj = { rpc_close_code: null, rpc_message: null, application_id: null };
+              const obj4 = { rpc_close_code: null, rpc_message: null, application_id: null };
               ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
-              obj.application_id = frameByIframeId.applicationId;
-              obj.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj);
+              obj4.application_id = frameByIframeId.applicationId;
+              AnalyticsUtilsDefault.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj4);
               const result = applyArgumentsResult.showRPCDisconnectErrorUI(reason);
             }
           }
@@ -90,9 +90,9 @@ class FramesManager extends tmp3 {
 FramesManager.prototype["leaveFrame"] = function leaveFrame(frameId) {
   const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    const obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
     ({ applicationId: obj2.applicationId, id: obj2.frameId } = frame);
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRAME_STOP", applicationId: null, frameId: null });
+    const obj3 = { type: "FRAME_STOP", applicationId: null, frameId: null };
   }
 };
 FramesManager.displayName = "FramesManager";

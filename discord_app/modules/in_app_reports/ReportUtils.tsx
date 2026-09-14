@@ -3,7 +3,7 @@
 // Module 8756 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8522 */;
 import MenuTypes from "MenuTypes" /* 8753 */;
@@ -94,8 +94,8 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -108,8 +108,8 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -119,8 +119,8 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
           closure_130_1 = getReportNameSafely(closure_0);
           c4 = 1;
           c5 = 1;
-          const obj1 = { value: getReportMenu(closure_0, closure_1), done: false };
-          return obj1;
+          const obj4 = { value: getReportMenu(closure_0, closure_1), done: false };
+          return obj4;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -128,28 +128,28 @@ let closure_13 = async function _submitHeadlessReport(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_130_2 = value;
           const HTTP = closure_131_0(closure_131_2[5]).HTTP;
           const request = { url: closure_131_7.SUBMIT_REPORT_MENU(closure_130_1), body: null, rejectWithError: false };
-          const obj3 = { nodeRef: closure_130_2.root_node_id, destination: null };
+          const obj6 = { nodeRef: closure_130_2.root_node_id, destination: null };
           const items = ["", closure_130_2.success_node_id];
-          obj3.destination = items;
-          const items1 = [obj3];
+          obj6.destination = items;
+          const items1 = [obj6];
           request.body = closure_131_21(closure_130_2, closure_130_0, items1);
           c4 = 2;
           c5 = 1;
-          const obj4 = { value: HTTP.post(request), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.post(request), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c5 = 3;
@@ -213,159 +213,147 @@ function getModeratorReportNameSafely(name) {
   return name;
 }
 function genSubmitData(version, name, arr, email_token) {
-  let obj = { version: version.version, variant: version.variant, language: null, breadcrumbs: null, elements: null };
+  const obj = { version: version.version, variant: version.variant, language: null, breadcrumbs: null, elements: null };
   let str = version.language;
   if (str == null) {
     str = "en";
   }
-  obj = {
-    channel_id: "Array",
-    message_id: "call",
-    stage_instance_id: "split",
-    guild_id: "useMemo",
-    guild_scheduled_event_id: "disabled",
-    user_id: "o",
-    email_token: "isArray",
-    application_id: "isArray",
-    entrypoint: "isArray",
-    widget_id: "accessibilityRole",
-    language: str,
-    breadcrumbs: arr.map((nodeRef) => nodeRef.nodeRef),
-    elements: arr.reduce((acc, item) => {
-      ({ multiSelect, textInput } = item);
-      let obj = {};
-      const merged = Object.assign(acc);
-      let tmp2 = null != multiSelect;
-      if (tmp2) {
-        obj = {};
-        const _Object = Object;
-        obj[multiSelect.name] = Object.keys(multiSelect.state);
-        tmp2 = obj;
-      }
-      const merged1 = Object.assign(tmp2);
-      if (textInput == null) {
-        textInput = {};
-      }
-      const entries = Object.entries(textInput);
-      const merged2 = Object.assign(Object.fromEntries(entries.map((item) => {
-        [tmp, ] = item;
-        const items = [tmp, tmp2];
-        return items;
-      })));
-      return obj;
-    }, {})
-  };
+  let obj2 = { channel_id: "min", message_id: "call", stage_instance_id: "right", guild_id: "w", guild_scheduled_event_id: "substring_i", user_id: "enabled", email_token: "c", application_id: "memo", entrypoint: "applicationId", widget_id: "substring_i" };
+  obj.language = str;
+  obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
+  obj.elements = arr.reduce((acc, item) => {
+    ({ multiSelect, textInput } = item);
+    const merged = Object.assign(acc);
+    let tmp2 = null != multiSelect;
+    if (tmp2) {
+      const obj2 = {};
+      const _Object = Object;
+      obj2[multiSelect.name] = Object.keys(multiSelect.state);
+      tmp2 = obj2;
+    }
+    const merged1 = Object.assign(tmp2);
+    if (textInput == null) {
+      textInput = {};
+    }
+    const entries = Object.entries(textInput);
+    const merged2 = Object.assign(Object.fromEntries(entries.map((item) => {
+      [tmp, ] = item;
+      const items = [tmp, tmp2];
+      return items;
+    })));
+    return {};
+  }, {});
   if (name.name !== MenuTypes.ReportNames.MESSAGE) {
     if (name.name !== MenuTypes.ReportNames.FIRST_DM) {
       if (name.name !== MenuTypes.ReportNames.GUILD) {
         if (name.name !== MenuTypes.ReportNames.GUILD_DISCOVERY) {
           if (name.name === MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY) {
-            obj = {};
+            const obj3 = {};
             ({ guildId, channelId } = name.record);
             let merged = Object.assign(obj);
-            let merged1 = Object.assign(obj);
-            obj.name = name.name;
-            obj.channel_id = channelId;
-            obj.guild_id = guildId;
-            return obj;
+            let merged1 = Object.assign(obj2);
+            obj3.name = name.name;
+            obj3.channel_id = channelId;
+            obj3.guild_id = guildId;
+            return obj3;
           } else if (name.name === MenuTypes.ReportNames.STAGE_CHANNEL) {
-            const obj1 = {};
+            const obj6 = {};
             ({ id: id2, guild_id: guild_id2, channel_id } = name.record);
             let merged2 = Object.assign(obj);
-            const merged3 = Object.assign(obj);
-            obj1.name = name.name;
-            obj1.channel_id = channel_id;
-            obj1.guild_id = guild_id2;
-            obj1.stage_instance_id = id2;
-            return obj1;
+            const merged3 = Object.assign(obj2);
+            obj6.name = name.name;
+            obj6.channel_id = channel_id;
+            obj6.guild_id = guild_id2;
+            obj6.stage_instance_id = id2;
+            return obj6;
           } else if (name.name === MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT) {
-            const obj2 = {};
+            const obj7 = {};
             ({ id, guild_id } = name.record);
             const merged4 = Object.assign(obj);
-            const merged5 = Object.assign(obj);
-            obj2.name = name.name;
-            obj2.guild_id = guild_id;
-            obj2.guild_scheduled_event_id = id;
-            return obj2;
+            const merged5 = Object.assign(obj2);
+            obj7.name = name.name;
+            obj7.guild_id = guild_id;
+            obj7.guild_scheduled_event_id = id;
+            return obj7;
           } else {
             if (name.name === MenuTypes.ReportNames.USER) {
-              const obj3 = {};
-              const merged6 = Object.assign(obj);
-              const merged7 = Object.assign(obj);
-              obj3.name = name.name;
-              obj3.user_id = name.record.id;
-              obj3.guild_id = name.contextualGuildId;
-              let tmp3 = obj3;
-            } else if (name.name === MenuTypes.UnauthenticatedReportNames.USER) {
-              const obj4 = {};
-              const merged8 = Object.assign(obj);
-              const merged9 = Object.assign(obj);
-              obj4.name = name.name;
-              obj4.user_id = name.record.id;
-              obj4.guild_id = name.contextualGuildId;
-              obj4.email_token = email_token;
-              tmp3 = obj4;
-            } else if (name.name === MenuTypes.UnauthenticatedReportNames.MESSAGE) {
-              const obj5 = {};
-              const merged10 = Object.assign(obj);
-              const merged11 = Object.assign(obj);
-              obj5.name = name.name;
-              obj5.message_id = name.record.id;
-              obj5.email_token = email_token;
-              tmp3 = obj5;
-            } else if (name.name === MenuTypes.UnauthenticatedReportNames.GUILD) {
-              const obj6 = {};
-              const merged12 = Object.assign(obj);
-              const merged13 = Object.assign(obj);
-              obj6.name = name.name;
-              obj6.guild_id = name.record.id;
-              obj6.email_token = email_token;
-              tmp3 = obj6;
-            } else if (name.name === MenuTypes.ReportNames.APPLICATION) {
-              const obj7 = {};
-              const merged14 = Object.assign(obj);
-              const merged15 = Object.assign(obj);
-              obj7.name = name.name;
-              obj7.application_id = name.record.id;
-              ({ contextualGuildId: obj5.guild_id, contextualChannelId: obj5.channel_id, entrypoint: obj5.entrypoint } = name);
-              tmp3 = obj7;
-            } else if (name.name === MenuTypes.ReportNames.WIDGET) {
               const obj8 = {};
+              const merged6 = Object.assign(obj);
+              const merged7 = Object.assign(obj2);
+              obj8.name = name.name;
+              obj8.user_id = name.record.id;
+              obj8.guild_id = name.contextualGuildId;
+              let tmp3 = obj8;
+            } else if (name.name === MenuTypes.UnauthenticatedReportNames.USER) {
+              const obj9 = {};
+              const merged8 = Object.assign(obj);
+              const merged9 = Object.assign(obj2);
+              obj9.name = name.name;
+              obj9.user_id = name.record.id;
+              obj9.guild_id = name.contextualGuildId;
+              obj9.email_token = email_token;
+              tmp3 = obj9;
+            } else if (name.name === MenuTypes.UnauthenticatedReportNames.MESSAGE) {
+              const obj10 = {};
+              const merged10 = Object.assign(obj);
+              const merged11 = Object.assign(obj2);
+              obj10.name = name.name;
+              obj10.message_id = name.record.id;
+              obj10.email_token = email_token;
+              tmp3 = obj10;
+            } else if (name.name === MenuTypes.UnauthenticatedReportNames.GUILD) {
+              const obj11 = {};
+              const merged12 = Object.assign(obj);
+              const merged13 = Object.assign(obj2);
+              obj11.name = name.name;
+              obj11.guild_id = name.record.id;
+              obj11.email_token = email_token;
+              tmp3 = obj11;
+            } else if (name.name === MenuTypes.ReportNames.APPLICATION) {
+              const obj12 = {};
+              const merged14 = Object.assign(obj);
+              const merged15 = Object.assign(obj2);
+              obj12.name = name.name;
+              obj12.application_id = name.record.id;
+              ({ contextualGuildId: obj5.guild_id, contextualChannelId: obj5.channel_id, entrypoint: obj5.entrypoint } = name);
+              tmp3 = obj12;
+            } else if (name.name === MenuTypes.ReportNames.WIDGET) {
+              const obj13 = {};
               const merged16 = Object.assign(obj);
-              const merged17 = Object.assign(obj);
+              const merged17 = Object.assign(obj2);
               ({ name: obj4.name, user_id: obj4.user_id, widget_id: obj4.widget_id } = name);
-              tmp3 = obj8;
+              tmp3 = obj13;
             } else {
               tmp3 = null;
               if (name.name === MenuTypes.UnauthenticatedReportNames.MEDIA_TAKEDOWN) {
-                const obj9 = {};
+                const obj14 = {};
                 const merged18 = Object.assign(obj);
-                const merged19 = Object.assign(obj);
-                obj9.name = name.name;
-                obj9.email_token = email_token;
-                tmp3 = obj9;
+                const merged19 = Object.assign(obj2);
+                obj14.name = name.name;
+                obj14.email_token = email_token;
+                tmp3 = obj14;
               }
             }
             return tmp3;
           }
         }
       }
-      const obj10 = {};
+      const obj27 = {};
       const merged20 = Object.assign(obj);
-      const merged21 = Object.assign(obj);
-      obj10.name = name.name;
-      obj10.guild_id = name.record.id;
-      return obj10;
+      const merged21 = Object.assign(obj2);
+      obj27.name = name.name;
+      obj27.guild_id = name.record.id;
+      return obj27;
     }
   }
-  const obj11 = {};
+  const obj28 = {};
   ({ channel_id: channel_id2, id: id3 } = name.record);
   const merged22 = Object.assign(obj);
-  const merged23 = Object.assign(obj);
-  obj11.name = name.name;
-  obj11.channel_id = channel_id2;
-  obj11.message_id = id3;
-  return obj11;
+  const merged23 = Object.assign(obj2);
+  obj28.name = name.name;
+  obj28.channel_id = channel_id2;
+  obj28.message_id = id3;
+  return obj28;
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
@@ -408,10 +396,10 @@ export const submitReport = function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj1(8755).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8755).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
-      let obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
+      const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
       ({ version: obj3.version, variant: obj3.variant } = language);
       if (str2 == null) {
         str2 = "en";
@@ -420,14 +408,13 @@ export const submitReport = function submitReport(language, name, arr) {
       obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
       obj.elements = arr.reduce((acc, item) => {
         ({ multiSelect, textInput } = item);
-        let obj = {};
         const merged = Object.assign(acc);
         let tmp2 = null != multiSelect;
         if (tmp2) {
-          obj = {};
+          const obj2 = {};
           const _Object = Object;
-          obj[multiSelect.name] = Object.keys(multiSelect.state);
-          tmp2 = obj;
+          obj2[multiSelect.name] = Object.keys(multiSelect.state);
+          tmp2 = obj2;
         }
         const merged1 = Object.assign(tmp2);
         if (textInput == null) {
@@ -439,22 +426,22 @@ export const submitReport = function submitReport(language, name, arr) {
           const items = [tmp, tmp2];
           return items;
         })));
-        return obj;
+        return {};
       }, {});
       let tmp15 = null;
       if (name.name === tmp4(8753).ModeratorReportNames.MESSAGE) {
-        obj = { channel_id: "justifyContent", message_id: "call", guild_id: "window" };
-        obj1 = {};
+        let obj2 = { channel_id: "test", message_id: "call", guild_id: "intl" };
+        obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
-        let merged1 = Object.assign(obj);
-        obj1.name = name.name;
-        obj1.channel_id = channel_id;
-        obj1.message_id = id;
-        tmp15 = obj1;
+        let merged1 = Object.assign(obj2);
+        obj4.name = name.name;
+        obj4.channel_id = channel_id;
+        obj4.message_id = id;
+        tmp15 = obj4;
       }
-      obj1 = tmp15;
-      const HTTP2 = tmp4(1272).HTTP;
+      obj4 = tmp15;
+      const HTTP2 = tmp4(1270).HTTP;
       const REPORT_TO_MOD2 = tmp4(8755).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
@@ -462,24 +449,23 @@ export const submitReport = function submitReport(language, name, arr) {
       if (name.name === tmp4(8753).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
-          let obj = SafetyToastsActionCreatorsDefault;
-          obj.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
+          SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
           let channel_id;
-          if (obj1 != null) {
-            channel_id = obj1.channel_id;
+          if (obj4 != null) {
+            channel_id = obj4.channel_id;
           }
           let tmp6 = null != channel_id;
           if (tmp6) {
             let message_id;
-            if (obj1 != null) {
-              message_id = obj1.message_id;
+            if (obj4 != null) {
+              message_id = obj4.message_id;
             }
             tmp6 = null != message_id;
           }
           if (tmp6) {
-            obj = { type: "REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS", channelId: null, messageId: null };
-            ({ channel_id: obj3.channelId, message_id: obj3.messageId } = obj1);
-            DispatcherDefault.dispatch(obj);
+            ({ channel_id: obj3.channelId, message_id: obj3.messageId } = obj4);
+            DispatcherDefault.dispatch({ type: "REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS", channelId: null, messageId: null });
+            const obj2 = { type: "REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS", channelId: null, messageId: null };
             const tmpResult = DispatcherDefault;
           }
           return result;
@@ -492,7 +478,7 @@ export const submitReport = function submitReport(language, name, arr) {
         throw error;
       }
     } else {
-      const HTTP = tmp4(1272).HTTP;
+      const HTTP = tmp4(1270).HTTP;
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
@@ -597,21 +583,21 @@ export const getModeratorReportEndpointSafely = function getModeratorReportEndpo
   }
 };
 export const trackCloseReportModalAnalytics = function trackCloseReportModalAnalytics(name, c12, onSubmit) {
-  const obj = { report_type: name.name, report_id: onSubmit, navigation_history, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
+  const obj2 = { report_type: name.name, report_id: onSubmit, navigation_history, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
   if (name.name === MenuTypes.ReportNames.MESSAGE) {
-    let id = name.record.id;
+    const id = name.record.id;
   }
-  obj.message_id = id;
-  id = undefined;
-  if (name.name === MenuTypes.ReportNames.STAGE_CHANNEL) {
-    id = name.record.id;
-  }
-  obj.stage_instance_id = id;
+  obj2.message_id = id;
   let id1;
-  if (name.name === MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT) {
+  if (name.name === MenuTypes.ReportNames.STAGE_CHANNEL) {
     id1 = name.record.id;
   }
-  obj.guild_scheduled_event_id = id1;
+  obj2.stage_instance_id = id1;
+  let id3;
+  if (name.name === MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT) {
+    id3 = name.record.id;
+  }
+  obj2.guild_scheduled_event_id = id3;
   if (name.name !== MenuTypes.ReportNames.GUILD) {
     if (name.name !== MenuTypes.ReportNames.GUILD_DISCOVERY) {
       if (name.name === MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY) {
@@ -620,25 +606,25 @@ export const trackCloseReportModalAnalytics = function trackCloseReportModalAnal
         id2 = name.record.guild_id;
       }
     }
-    obj.guild_id = id2;
+    obj2.guild_id = id2;
     if (name.name === MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT) {
       let channelId = name.record.channel_id;
     } else if (name.name === MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY) {
       channelId = name.record.channelId;
     }
-    obj.channel_id = channelId;
-    id2 = undefined;
+    obj2.channel_id = channelId;
+    let id4;
     if (name.name === MenuTypes.ReportNames.APPLICATION) {
-      id2 = name.record.id;
+      id4 = name.record.id;
     }
-    obj.application_id = id2;
-    obj.trackWithMetadata(constants.IAR_MODAL_CLOSE, obj);
+    obj2.application_id = id4;
+    obj.trackWithMetadata(constants.IAR_MODAL_CLOSE, obj2);
   }
   id2 = name.record.id;
+  obj = AppAnalyticsUtilsDefault;
 };
 export const showInAppReportsFeedbackModal = function showInAppReportsFeedbackModal(name, onSubmit) {
-  const obj = { type: "IN_APP_REPORTS_SHOW_FEEDBACK", reportId: onSubmit, reportType: name.name };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "IN_APP_REPORTS_SHOW_FEEDBACK", reportId: onSubmit, reportType: name.name });
 };
 export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(arg0, textInput) {
   ({ freeTextElements, dropdownElements, countrySelectElement, radioGroupElements, multiSelectElement, contentUrlInputElement } = arg0);
@@ -763,11 +749,11 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
       }
       let tmp17 = null == tmp16;
       if (!tmp17) {
-        value = undefined;
+        value2 = undefined;
         if (textInput != null) {
-          value = textInput[contentUrlInputElement.name].value;
+          value2 = textInput[contentUrlInputElement.name].value;
         }
-        tmp17 = "" === value;
+        tmp17 = "" === value2;
       }
       if (!tmp17) {
         let isValid;
@@ -791,7 +777,6 @@ export const useTrackSettingsUpsellsAction = function useTrackSettingsUpsellsAct
   closure_2 = reportId;
   const items = [reportId, reportType, reportSubType];
   return noop.useCallback((settings_upsells_type) => (action) => {
-    const obj = { report_id, report_type: settings_upsells_type.name, report_subtype, settings_upsells_type, action };
-    obj.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, obj);
+    AppAnalyticsUtilsDefault.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, { report_id, report_type: settings_upsells_type.name, report_subtype, settings_upsells_type, action });
   }, items);
 };

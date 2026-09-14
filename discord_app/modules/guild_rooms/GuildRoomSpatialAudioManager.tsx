@@ -1,12 +1,12 @@
-// === Module 17488: GuildRoomSpatialAudioManager ===
+// === Module 17490: GuildRoomSpatialAudioManager ===
 
-// Module 17488 (GuildRoomSpatialAudioManager)
+// Module 17490 (GuildRoomSpatialAudioManager)
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4836 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
-import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17489 */;
+import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -78,7 +78,6 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   }
 };
 prototype["apply"] = function apply() {
-  let obj = MediaEngineStore;
   if (MediaEngineStore.getAudioMixerSettings().enabled) {
     const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
@@ -90,9 +89,9 @@ prototype["apply"] = function apply() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (!isGuildStageVoiceResult) {
-          obj = { users: GuildRoomStore.getRoomUsers(channelId), currentUserId: AuthenticationStore.getId(), channelId };
-          _require = require("GuildRoomSpatialAudio").computeLivingRoomWorldPoints(obj);
-          const mediaEngine = obj.getMediaEngine();
+          const obj2 = { users: GuildRoomStore.getRoomUsers(channelId), currentUserId: AuthenticationStore.getId(), channelId };
+          _require = require("GuildRoomSpatialAudio").computeLivingRoomWorldPoints(obj2);
+          const mediaEngine = MediaEngineStore.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(closure_0);
             while (tmp2 !== undefined) {

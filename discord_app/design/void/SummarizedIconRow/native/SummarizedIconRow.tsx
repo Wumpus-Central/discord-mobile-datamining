@@ -1,6 +1,6 @@
-// === Module 14183: SummarizedIconRow ===
+// === Module 14184: SummarizedIconRow ===
 
-// Module 14183 (SummarizedIconRow)
+// Module 14184 (SummarizedIconRow)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import noop from "module_19" /* 19 */;
@@ -9,29 +9,26 @@ require = fn;
 function OverflowSquircle(arg0) {
   ({ overflow, style } = arg0);
   const tmp = closure_4();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.overflowSquircleWrap, style];
   obj.style = items;
-  obj = { style: tmp.overflowSquircle, children: null };
-  obj = { variant: "text-xs/medium", children: "+" + overflow };
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
-  obj.children = <View variant="text-xs/medium">{"+" + overflow}</View>;
-  return <View variant="text-xs/medium">{"+" + overflow}</View>;
+  const obj2 = { style: tmp.overflowSquircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
+  obj.children = <View style={tmp.overflowSquircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;
+  return <View style={null}>{null}</View>;
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: null, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
-createStyles.overflowSquircleWrap = createStyles;
-createStyles.overflowSquircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
-let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
-createStyles.overflowTextOnly = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj2 = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.overflowCircleWrap = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
-const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
-createStyles.overflowCircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 2, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 15 };
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
+obj2.overflowSquircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
+obj2.overflowTextOnly = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj5 = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.overflowCircleWrap = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
+const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
+obj2.overflowCircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 2, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 15 };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/SummarizedIconRow/native/SummarizedIconRow.tsx");
 
@@ -53,12 +50,12 @@ export default function SummarizedIconRow(max) {
       if (index < num) {
         if (index === tmp - 1) {
           if (closure_8 > 0) {
-            let obj = { style: null, overflow: null };
-            obj = { marginLeft };
-            items = [obj, OverflowSquircle];
-            obj.style = items;
-            obj.overflow = tmp2 + 1;
-            let tmp7 = <overflowComponent key={index} marginLeft={marginLeft} />;
+            const obj2 = { style: null, overflow: null };
+            const obj3 = { marginLeft };
+            items = [obj3, OverflowSquircle];
+            obj2.style = items;
+            obj2.overflow = tmp2 + 1;
+            let tmp7 = <overflowComponent key={index} style={null} overflow={null} />;
           }
           return tmp7;
         }
@@ -67,16 +64,16 @@ export default function SummarizedIconRow(max) {
         if (item) {
           let items1 = [iconWrapper.iconWrapper, closure_1_4, ];
           if (0 !== index) {
-            const obj1 = { marginLeft };
-            obj = obj1;
+            const obj4 = { marginLeft };
+            let obj = obj4;
           } else {
             obj = {};
           }
-          const obj2 = { style: null, children: null };
+          const obj5 = { style: null, children: null };
           items1[2] = obj;
-          obj2.style = items1;
+          obj5.style = items1;
           items1 = View(item, index === tmp6);
-          obj2.children = items1;
+          obj5.children = items1;
           <View key={index} style={null}>{null}</View>;
         }
       }
@@ -89,12 +86,12 @@ export default function SummarizedIconRow(max) {
     if (index < num) {
       if (index === tmp - 1) {
         if (closure_8 > 0) {
-          let obj = { style: null, overflow: null };
-          obj = { marginLeft };
-          items = [obj, OverflowSquircle];
-          obj.style = items;
-          obj.overflow = tmp2 + 1;
-          let tmp7 = <overflowComponent key={index} marginLeft={marginLeft} />;
+          const obj2 = { style: null, overflow: null };
+          const obj3 = { marginLeft };
+          items = [obj3, OverflowSquircle];
+          obj2.style = items;
+          obj2.overflow = tmp2 + 1;
+          let tmp7 = <overflowComponent key={index} style={null} overflow={null} />;
         }
         return tmp7;
       }
@@ -103,16 +100,16 @@ export default function SummarizedIconRow(max) {
       if (item) {
         let items1 = [iconWrapper.iconWrapper, closure_1_4, ];
         if (0 !== index) {
-          const obj1 = { marginLeft };
-          obj = obj1;
+          const obj4 = { marginLeft };
+          let obj = obj4;
         } else {
           obj = {};
         }
-        const obj2 = { style: null, children: null };
+        const obj5 = { style: null, children: null };
         items1[2] = obj;
-        obj2.style = items1;
+        obj5.style = items1;
         items1 = View(item, index === tmp6);
-        obj2.children = items1;
+        obj5.children = items1;
         <View key={index} style={null}>{null}</View>;
       }
     }
@@ -121,31 +118,27 @@ export default function SummarizedIconRow(max) {
 };
 export const OverflowText = function OverflowText(arg0) {
   ({ overflow, style } = arg0);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj = { variant: "text-xs/medium", children: "+" + overflow };
   obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
-  return <View variant="text-xs/medium">{"+" + overflow}</View>;
+  return <View style={null}>{null}</View>;
 };
 export const OverflowTextSmall = function OverflowTextSmall(arg0) {
   ({ overflow, style } = arg0);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_4().overflowTextOnly, style];
   obj.style = items;
-  obj = { variant: "text-xxs/medium", children: "+" + overflow };
   obj.children = jsx(Text_Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
-  return <View variant="text-xxs/medium">{"+" + overflow}</View>;
+  return <View style={null}>{null}</View>;
 };
 export const OverflowCircle = function OverflowCircle(arg0) {
   ({ overflow, style } = arg0);
   const tmp = closure_4();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.overflowCircleWrap, style];
   obj.style = items;
-  obj = { style: tmp.overflowCircle, children: null };
-  obj = { variant: "text-xs/medium", children: "+" + overflow };
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
-  obj.children = <View variant="text-xs/medium">{"+" + overflow}</View>;
-  return <View variant="text-xs/medium">{"+" + overflow}</View>;
+  const obj2 = { style: tmp.overflowCircle, children: jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow }) };
+  obj.children = <View style={tmp.overflowCircle}>{jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow })}</View>;
+  return <View style={null}>{null}</View>;
 };

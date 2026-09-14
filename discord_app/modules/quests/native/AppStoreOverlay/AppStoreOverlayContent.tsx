@@ -1,6 +1,6 @@
-// === Module 11631: AppStoreOverlayContent ===
+// === Module 11632: AppStoreOverlayContent ===
 
-// Module 11631 (AppStoreOverlayContent)
+// Module 11632 (AppStoreOverlayContent)
 import openURL from "openURL" /* 4325 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -14,8 +14,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,19 +28,18 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           dependencyMap = tmp6;
           closure_130_0 = closure_0;
           closure_130_1 = closure_1;
           closure_130_2 = undefined;
           c4 = 1;
-          let obj2 = require("AppStoreMetadataActionCreators");
           c3 = 2;
           c5 = 1;
-          let obj1 = { value: obj2.fetchAppStoreMetadata(closure_0), done: false };
-          return obj1;
+          const obj5 = { value: require("AppStoreMetadataActionCreators").fetchAppStoreMetadata(closure_0), done: false };
+          return obj5;
         }
       } else if (1 === tmp6) {
         c4 = 0;
@@ -52,8 +51,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c5 = 3;
-        obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_130_2 = value;
         let tmp9 = null;
@@ -65,7 +64,7 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
             }
             const items = [];
             if (tmp) {
-              let obj = { type: "rating", label: null, rating: null, ratingCount: null };
+              const obj = { type: "rating", label: null, rating: null, ratingCount: null };
               const intl = closure_1_0(1114).intl;
               obj.label = intl.string(closure_1_0(1114).t["9bEWZJ"]);
               ({ rating: obj.rating, rating_count } = rating);
@@ -77,21 +76,21 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               tmp5 = "" !== rating.age_rating;
             }
             if (tmp5) {
-              obj = { type: "age", label: null, ageRating: null, ageRatingLabel: null };
+              const obj2 = { type: "age", label: null, ageRating: null, ageRatingLabel: null };
               const intl2 = closure_1_0(1114).intl;
-              obj.label = intl2.string(closure_1_0(1114).t.ncrlHJ);
-              obj.ageRating = rating.age_rating;
+              obj2.label = intl2.string(closure_1_0(1114).t.ncrlHJ);
+              obj2.ageRating = rating.age_rating;
               const intl3 = closure_1_0(1114).intl;
-              obj.ageRatingLabel = intl3.string(closure_1_0(1114).t.wK1svU);
-              items.push(obj);
+              obj2.ageRatingLabel = intl3.string(closure_1_0(1114).t.wK1svU);
+              items.push(obj2);
             }
             if (null != rating.chart_rank) {
-              obj = { type: "chart", label: null, rank: null, category: null };
+              const obj7 = { type: "chart", label: null, rank: null, category: null };
               const intl4 = closure_1_0(1114).intl;
-              obj.label = intl4.string(closure_1_0(1114).t["x/ERbV"]);
+              obj7.label = intl4.string(closure_1_0(1114).t["x/ERbV"]);
               ({ chart_rank: obj3.rank, category } = rating);
-              obj.category = category;
-              items.push(obj);
+              obj7.category = category;
+              items.push(obj7);
             }
             const screenshots = rating.screenshots;
             const found = screenshots.filter((item) => "" !== item);
@@ -99,30 +98,30 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if ("" !== rating.app_id) {
                 let storeAppId = rating.app_id;
               }
-              const obj1 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: null, stats: null, media: null, storeUrl: null, appId: null, platform: null };
+              const obj8 = { title: null, subtitle: null, description: null, iconUrl: null, headerUrl: null, stats: null, media: null, storeUrl: null, appId: null, platform: null };
               ({ name: obj4.title, category: obj4.subtitle, description: obj4.description, icon: obj4.iconUrl, header_image } = rating);
-              obj1.headerUrl = header_image;
+              obj8.headerUrl = header_image;
               let tmp12;
               if (items.length > 0) {
                 tmp12 = items;
               }
-              obj1.stats = tmp12;
+              obj8.stats = tmp12;
               let mapped;
               if (found.length > 0) {
                 mapped = found.map((url) => ({ type: "screenshot", url }));
               }
-              obj1.media = mapped;
-              obj1.storeUrl = storeUrl;
-              obj1.appId = storeAppId;
-              obj1.platform = os.os;
-              return obj1;
+              obj8.media = mapped;
+              obj8.storeUrl = storeUrl;
+              obj8.appId = storeAppId;
+              obj8.platform = os.os;
+              return obj8;
             }
             storeAppId = os.storeAppId;
           })(closure_130_2, closure_130_0, closure_130_1);
         }
         c4 = 0;
         c5 = 3;
-        obj = { value: tmp9, done: true };
+        let obj = { value: tmp9, done: true };
         return obj;
       }
     } catch (tmp18) {

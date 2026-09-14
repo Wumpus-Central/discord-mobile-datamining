@@ -7,6 +7,8 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function getMuteStates(voiceStateStore) {
   ({ channel, authenticationStore } = voiceStateStore);

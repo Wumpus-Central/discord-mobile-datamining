@@ -3,6 +3,8 @@
 // Module 4503 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const set = new Set();
 const set1 = new Set();

@@ -1,7 +1,6 @@
 // === Module 1476: utils/ImageUtils ===
 
 // Module 1476 (utils/ImageUtils)
-import _modDef12 from "module_12" /* 12 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1431 */;
@@ -22,10 +21,8 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], ];
-  let obj = _modDef1471;
-  items[1] = obj.parse(tmp[1]);
-  [tmp5, tmp6] = _slicedToArray(items, 2);
+  const items = [tmp[0], _modDef1471.parse(tmp[1])];
+  [tmp5, tmp6] = items;
   if (re8.test(tmp5)) {
     tmp6.format = "webp";
   } else if (null != format) {
@@ -53,10 +50,10 @@ function getSrcWithWidthAndHeight(animated) {
     })("native/ImageUtils.getSrcWithWidthAndHeight");
     let size = { width: targetWidth, height: targetHeight };
     if (null != tmp9) {
-      obj = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
+      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
       const obj2 = AttachmentImageLadder;
-      obj.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
-      size = obj2.snapAttachmentDimensions(obj);
+      obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
+      size = obj2.snapAttachmentDimensions(obj3);
     }
     if (!tmp12) {
       tmp6.width = size.width | 0;
@@ -67,10 +64,10 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag) {
     tmp6.animated = true;
   }
-  let tmp2Result = _modDef12;
+  const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = _modDef1471;
+    _modDef1471;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
@@ -84,8 +81,7 @@ function getMobileOptimizedSrc(proxy_url, width, height) {
   if (re7.test(proxy_url)) {
     num = 0.3;
   }
-  let obj = useWindowDimensions;
-  const size = obj.getWindowDimensions();
+  const size = useWindowDimensions.getWindowDimensions();
   const result = hasOwnProperty.getPixelSizeForLayoutSize(size.width) * num;
   const bound = Math.min(width > height ? result / width : hasOwnProperty.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
   let rounded1 = height;
@@ -96,8 +92,7 @@ function getMobileOptimizedSrc(proxy_url, width, height) {
     const _Math2 = Math;
     rounded1 = Math.ceil(height * bound);
   }
-  obj = { src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp };
-  return getSrcWithWidthAndHeight(obj);
+  return getSrcWithWidthAndHeight({ src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp });
 }
 function getPaletteForAvatarMobile(automodAvatarURL) {
   const obj = utils_AvatarUtils;
@@ -109,7 +104,7 @@ get_ActivityIndicator = fn(17);
 let closure_6 = fn(1074).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp3 = /\.(gif)$/i;
 const re7 = tmp3;
-const tmp4 = /\.(avif)$/i;
+let tmp4 = /\.(avif)$/i;
 const re8 = tmp4;
 let size = fn(2);
 let result = size.fileFinishedImporting("utils/native/ImageUtils.tsx");

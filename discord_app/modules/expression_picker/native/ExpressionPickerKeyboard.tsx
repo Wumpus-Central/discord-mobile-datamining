@@ -1,15 +1,15 @@
-// === Module 16876: ExpressionPickerKeyboard ===
+// === Module 16878: ExpressionPickerKeyboard ===
 
-// Module 16876 (ExpressionPickerKeyboard)
+// Module 16878 (ExpressionPickerKeyboard)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import native from "native" /* 4347 */;
-import getEmojiTextDefault from "getEmojiText" /* 12557 */;
+import getEmojiTextDefault from "getEmojiText" /* 12558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12166).KEYBOARD_ANIMATION_CONFIG;
 const jsx = fn(21).jsx;
 let __initData = { code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}" };
 let closure_8 = { code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}" };
@@ -21,8 +21,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const onClose = channel.onClose;
   const transitionState = channel.transitionState;
   let ref;
+  const sharedValue = chatInputRef(transitionState[4]).useSharedValue(-1);
   let obj = chatInputRef(transitionState[4]);
-  const sharedValue = obj.useSharedValue(-1);
   const sharedValue1 = chatInputRef(transitionState[4]).useSharedValue(0);
   ref = ref.useRef(null);
   const obj2 = chatInputRef(transitionState[4]);
@@ -35,11 +35,9 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const callback = ref.useCallback((arg0) => {
     const current = chatInputRef.current;
     current.insertText(getEmojiTextDefault(arg0), null, true);
-    let obj = KeyboardManagerUtils;
-    const result = obj.dismissGlobalKeyboard();
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const current2 = chatInputRef.current;
-    obj = { type: KeyboardTypes.KeyboardTypes.EXPRESSION };
-    current2.openCustomKeyboard(obj);
+    current2.openCustomKeyboard({ type: KeyboardTypes.KeyboardTypes.EXPRESSION });
     const current3 = ref.current;
     if (current3 != null) {
       current3.snapToIndex(0);
@@ -109,9 +107,9 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
       }
     }
   }, items5);
-  obj = { ref, animatedIndex: sharedValue, animatedPosition: sharedValue1, forceMaxHeight: isScreenReaderEnabled, chatInputRef, animationConfigs: isScreenReaderEnabled, onClose: callback4, renderExpressionFooter: true, transitionState, children: null };
+  const obj7 = { ref, animatedIndex: sharedValue, animatedPosition: sharedValue1, forceMaxHeight: isScreenReaderEnabled, chatInputRef, animationConfigs: isScreenReaderEnabled, onClose: callback4, renderExpressionFooter: true, transitionState, children: null };
   const obj6 = chatInputRef(transitionState[4]);
-  obj = { nativeID: "expression-picker-sheet", style: animatedStyle, children: first(onClose(transitionState[13]), { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: keyboardContextForType, inPortalKeyboard: true }) };
-  obj.children = first(onClose(transitionState[4]).View, obj);
-  return first(onClose(transitionState[12]), obj, "expression-picker-" + isScreenReaderEnabled);
+  const tmp17 = onClose(transitionState[12]);
+  obj7.children = first(onClose(transitionState[4]).View, { nativeID: "expression-picker-sheet", style: animatedStyle, children: first(onClose(transitionState[13]), { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: keyboardContextForType, inPortalKeyboard: true }) });
+  return first(tmp17, obj7, "expression-picker-" + isScreenReaderEnabled);
 });

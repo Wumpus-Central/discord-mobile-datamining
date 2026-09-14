@@ -1,9 +1,9 @@
-// === Module 15052: ConnectedAccount ===
+// === Module 15053: ConnectedAccount ===
 
-// Module 15052 (ConnectedAccount)
+// Module 15053 (ConnectedAccount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native2 from "native" /* 1178 */;
+import native2 from "native" /* 1176 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import _modDef3010 from "module_3010" /* 3010 */;
 import shared from "shared" /* 4488 */;
@@ -20,9 +20,9 @@ import TableRowGroup from "TableRowGroup" /* 5768 */;
 import _modDef7095 from "module_7095" /* 7095 */;
 import TableSwitchRow from "TableSwitchRow" /* 7303 */;
 import InfoBoxDefault from "InfoBox" /* 9589 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 15053 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 15054 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 15057 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 15054 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 15055 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 15058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,32 +34,32 @@ require = fn;
 function Integration(integration) {
   integration = integration.integration;
   importDefault = undefined;
-  let obj = integration(4636);
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createStyles);
-  [tmp5, c1] = _slicedToArray(noop.useState(), 2);
-  let obj1 = integration(504);
+  legacyClassComponentStyles = integration(4636).useLegacyClassComponentStyles(legacyClassComponentStyles);
+  const obj = integration(4636);
+  [tmp5, c1] = noop.useState();
+  const tmp4 = _slicedToArray(noop.useState(), 2);
   const items = [ConnectedAccountsStore];
   const items1 = [integration.id];
-  const stateFromStores = obj1.useStateFromStores(items, () => ConnectedAccountsStore.isJoining(integration.id), items1);
-  let obj2 = integration(504);
+  const stateFromStores = integration(504).useStateFromStores(items, () => ConnectedAccountsStore.isJoining(integration.id), items1);
+  const obj2 = integration(504);
   const items2 = [GuildStore];
   const items3 = [integration.guild.id];
-  const tmp7 = null == obj2.useStateFromStores(items2, () => GuildStore.getGuild(integration.guild.id), items3);
+  const tmp7 = null == integration(504).useStateFromStores(items2, () => GuildStore.getGuild(integration.guild.id), items3);
   if (!tmp7) {
     let tmp12 = tmp5 === integration.id;
     if (tmp12) {
-      obj = { style: legacyClassComponentStyles.integrationErrorText, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
+      const obj4 = { style: legacyClassComponentStyles.integrationErrorText, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
       const intl2 = tmp(1114).intl;
-      obj.children = intl2.string(tmp(1114).t.fEptJP);
-      tmp12 = closure_14(tmp(4632).Text, obj);
+      obj4.children = intl2.string(tmp(1114).t.fEptJP);
+      tmp12 = closure_14(tmp(4632).Text, obj4);
     }
-    obj = { style: legacyClassComponentStyles.integrationContainer, children: null };
-    obj1 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
-    obj2 = { guild: integration.guild, size: tmp(5665).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
-    const items4 = [closure_14(GuildIconDefault, obj2), , ];
-    const obj3 = { style: legacyClassComponentStyles.integrationTextRowContainer, children: null };
-    const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
-    const items5 = [closure_14(tmp(4632).Text, obj4), ];
+    const obj5 = { style: legacyClassComponentStyles.integrationContainer, children: null };
+    const obj6 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
+    const obj7 = { guild: integration.guild, size: tmp(5665).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
+    const items4 = [closure_14(GuildIconDefault, obj7), , ];
+    const obj8 = { style: legacyClassComponentStyles.integrationTextRowContainer, children: null };
+    const obj9 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
+    const items5 = [closure_14(tmp(4632).Text, obj9), ];
     value = PlatformsDefault.get(integration.type);
     let platformUserUrl;
     if (value != null) {
@@ -68,18 +68,18 @@ function Integration(integration) {
         platformUserUrl = getPlatformUserUrl(integration.account);
       }
     }
-    const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: platformUserUrl };
-    items5[1] = closure_14(tmp(4632).Text, obj5);
-    obj3.children = items5;
-    items4[1] = closure_15(View, obj3);
+    const obj10 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: platformUserUrl };
+    items5[1] = closure_14(tmp(4632).Text, obj10);
+    obj8.children = items5;
+    items4[1] = closure_15(View, obj8);
     items4[2] = tmp7;
-    obj1.children = items4;
-    const items6 = [closure_15(View, obj1), tmp12];
-    obj.children = items6;
-    return closure_15(View, obj);
+    obj6.children = items4;
+    const items6 = [closure_15(View, obj6), tmp12];
+    obj5.children = items6;
+    return closure_15(View, obj5);
   } else {
-    const obj6 = { style: legacyClassComponentStyles.integrationJoinButton, children: null };
-    let obj7 = {
+    const obj11 = { style: legacyClassComponentStyles.integrationJoinButton, children: null };
+    let obj13 = {
       size: "sm",
       variant: "secondary",
       onPress() {
@@ -99,12 +99,12 @@ function Integration(integration) {
     } else {
       stringResult = string(RXvQQu.XpeFYr);
     }
-    obj7.text = stringResult;
-    obj7 = closure_14(tmp(5056).Button, obj7);
-    obj6.children = obj7;
-    closure_14(View, obj6);
+    obj13.text = stringResult;
+    obj13 = closure_14(tmp(5056).Button, obj13);
+    obj11.children = obj13;
+    closure_14(View, obj11);
   }
-  const tmp4 = _slicedToArray(noop.useState(), 2);
+  const obj3 = integration(504);
 }
 function RowSwitch(label) {
   const merged = Object.assign(label, Object.assign({ label: 0 }));
@@ -117,48 +117,48 @@ const Constants = fn(1074);
 const MetadataFields = fn(5489).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, deleteConnectionIcon: null, container: null, connectedAccountItem: null, connectedAccountTopContainer: null, connectedAccountContentContainer: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, divider: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, metadataRefreshButton: null, metadataRefreshButtonDisabled: null, metadataRefreshIcon: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
-createStyles = { borderRadius: null, marginRight: 4 };
-let native = fn(1178);
-createStyles.borderRadius = native.getIconSize(fn(1178).Icon.Sizes.LARGE);
-createStyles.connectedApplicationIdentityIcon = createStyles;
-createStyles.deleteConnectionIcon = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createStyles.container = { marginHorizontal: 8, marginVertical: 4 };
-let obj1 = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createStyles.connectedAccountItem = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-native = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
-createStyles.connectedAccountTopContainer = native;
-createStyles.connectedAccountContentContainer = { marginTop: 8, gap: 8 };
-let obj2 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-createStyles.integrationContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
-createStyles.integrationContainerInternal = { alignItems: "center", flexDirection: "row" };
-createStyles.integrationTextRowContainer = { alignItems: "flex-start", flexDirection: "column", flex: 1 };
-createStyles.integrationErrorText = { alignItems: "center", marginTop: 4, marginBottom: 8 };
-createStyles.integrationCategoryLabel = { marginVertical: 0 };
-createStyles.integrationGuildIcon = { margin: 8 };
-createStyles.integrationJoinButton = { alignSelf: "center", marginEnd: 8, marginStart: 8 };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
-createStyles.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
-createStyles.alertInfoBox = { marginTop: 8 };
+const createStyles = fn(4636);
+let obj2 = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, deleteConnectionIcon: null, container: null, connectedAccountItem: null, connectedAccountTopContainer: null, connectedAccountContentContainer: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, divider: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, metadataRefreshButton: null, metadataRefreshButtonDisabled: null, metadataRefreshIcon: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
+let obj3 = { borderRadius: null, marginRight: 4 };
+const native = fn(1176);
+obj3.borderRadius = native.getIconSize(fn(1176).Icon.Sizes.LARGE);
+obj2.connectedApplicationIdentityIcon = obj3;
+obj2.deleteConnectionIcon = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.container = { marginHorizontal: 8, marginVertical: 4 };
+let obj5 = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.connectedAccountItem = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+let obj6 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+obj2.connectedAccountTopContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+obj2.connectedAccountContentContainer = { marginTop: 8, gap: 8 };
+let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+obj2.integrationContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+obj2.integrationContainerInternal = { alignItems: "center", flexDirection: "row" };
+obj2.integrationTextRowContainer = { alignItems: "flex-start", flexDirection: "column", flex: 1 };
+obj2.integrationErrorText = { alignItems: "center", marginTop: 4, marginBottom: 8 };
+obj2.integrationCategoryLabel = { marginVertical: 0 };
+obj2.integrationGuildIcon = { margin: 8 };
+obj2.integrationJoinButton = { alignSelf: "center", marginEnd: 8, marginStart: 8 };
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
+obj2.alertInfoBox = { marginTop: 8 };
 let merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 16));
-createStyles.alertBodyText = { marginTop: 16 };
-let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
-let obj6 = { marginTop: 16 };
-createStyles.metadataContainer = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
-createStyles.metadataItemsContainer = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", paddingRight: 8, flexShrink: 1 };
-createStyles.metadataRefreshButton = { alignSelf: "center", marginLeft: "auto" };
-createStyles.metadataRefreshButtonDisabled = { opacity: 0.5 };
-createStyles.metadataRefreshIcon = { height: 16, width: 16 };
-createStyles.metadataBannerContainer = { justifyContent: "center", flexWrap: "wrap", alignItems: "center", paddingHorizontal: 16, paddingVertical: 14 };
-createStyles.newBadge = { marginRight: 4 };
-createStyles.rowDivider = { flexBasis: "100%", height: 12 };
-createStyles.addDetailsButton = { paddingHorizontal: 16, flexGrow: 0, marginRight: 12 };
-createStyles.learnMoreButton = { paddingHorizontal: 16, flexGrow: 0 };
-let obj7 = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
-createStyles.relinkButton = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: nativeDefault.radii.round };
-createStyles.relinkText = { marginTop: 8 };
-createStyles = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.alertBodyText = { marginTop: 16 };
+let obj10 = { marginTop: 16 };
+let obj9 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
+obj2.metadataContainer = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+obj2.metadataItemsContainer = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", paddingRight: 8, flexShrink: 1 };
+obj2.metadataRefreshButton = { alignSelf: "center", marginLeft: "auto" };
+obj2.metadataRefreshButtonDisabled = { opacity: 0.5 };
+obj2.metadataRefreshIcon = { height: 16, width: 16 };
+obj2.metadataBannerContainer = { justifyContent: "center", flexWrap: "wrap", alignItems: "center", paddingHorizontal: 16, paddingVertical: 14 };
+obj2.newBadge = { marginRight: 4 };
+obj2.rowDivider = { flexBasis: "100%", height: 12 };
+obj2.addDetailsButton = { paddingHorizontal: 16, flexGrow: 0, marginRight: 12 };
+obj2.learnMoreButton = { paddingHorizontal: 16, flexGrow: 0 };
+let obj11 = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+obj2.relinkButton = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: nativeDefault.radii.round };
+obj2.relinkText = { marginTop: 8 };
+let legacyClassComponentStyles = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
@@ -167,41 +167,40 @@ class ConnectedAccount extends PureComponent {
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
-      const tmp2 = createStyles(applyArgumentsResult.context);
+      const tmp2 = legacyClassComponentStyles(applyArgumentsResult.context);
       const account = applyArgumentsResult.props.account;
-      let obj = PlatformsDefault;
-      value = obj.get(account.type);
+      value = PlatformsDefault.get(account.type);
       const intl = util.intl;
-      obj = { provider: value.name };
-      const formatResult = intl.format(util.t.VgqIPj, obj);
+      const formatResult = intl.format(util.t.VgqIPj, { provider: value.name });
       let tmp8;
       if (shouldWarnConnectedAccountTwoWayDefault(account)) {
-        obj = { children: null };
-        const obj1 = { style: tmp2.alertBodyText, variant: "text-md/medium", children: formatResult };
-        const items = [closure_2_14(Text_Text.Text, obj1), ];
-        const obj2 = { style: tmp2.alertInfoBox, children: null };
-        let tmp3Result = InfoBoxDefault;
+        const obj3 = { children: null };
+        const obj4 = { style: tmp2.alertBodyText, variant: "text-md/medium", children: formatResult };
+        const items = [closure_2_14(Text_Text.Text, obj4), ];
+        const obj5 = { style: tmp2.alertInfoBox, children: null };
         const intl2 = util.intl;
-        const obj3 = { platformName: value.name };
-        obj2.children = intl2.format(util.t.COW3Xn, obj3);
-        items[1] = closure_2_14(tmp3Result, obj2);
-        obj.children = items;
-        tmp8 = __initData(View, obj);
+        const obj6 = { platformName: value.name };
+        obj5.children = intl2.format(util.t.COW3Xn, obj6);
+        items[1] = closure_2_14(InfoBoxDefault, obj5);
+        obj3.children = items;
+        tmp8 = __initData(View, obj3);
+        const tmp3Result = InfoBoxDefault;
       }
-      tmp3Result = AlertActionCreatorsDefault;
-      const obj4 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
+      const obj2 = { provider: value.name };
+      const obj7 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
       const intl3 = util.intl;
-      obj4.title = intl3.formatToPlainString(util.t.U5x12f, { name: value.name });
-      obj4.body = formatResult;
+      obj7.title = intl3.formatToPlainString(util.t.U5x12f, { name: value.name });
+      obj7.body = formatResult;
       const intl4 = util.intl;
-      obj4.cancelText = intl4.string(util.t["ETE/oC"]);
-      obj4.children = tmp8;
+      obj7.cancelText = intl4.string(util.t["ETE/oC"]);
+      obj7.children = tmp8;
       const intl5 = util.intl;
-      obj4.confirmText = intl5.string(util.t.ppppRJ);
-      obj4.onConfirm = applyArgumentsResult.handleConfirmDisconnectAccount;
-      obj4.confirmColor = common_AlertDefault.Colors.RED;
-      tmp3Result.show(obj4);
-      const obj5 = { name: value.name };
+      obj7.confirmText = intl5.string(util.t.ppppRJ);
+      obj7.onConfirm = applyArgumentsResult.handleConfirmDisconnectAccount;
+      obj7.confirmColor = common_AlertDefault.Colors.RED;
+      AlertActionCreatorsDefault.show(obj7);
+      const obj8 = { name: value.name };
+      const tmp3Result2 = AlertActionCreatorsDefault;
     };
     applyArgumentsResult.handleConfirmDisconnectAccount = function handleConfirmDisconnectAccount() {
       const account = applyArgumentsResult.props.account;
@@ -229,12 +228,10 @@ class ConnectedAccount extends PureComponent {
           }
         }
         importDefault.setState({ isVisible });
-        let obj6 = closure_1(tmp3[13]);
-        await obj6.setVisibility(account.type, account.id, num5);
+        await closure_1(tmp3[13]).setVisibility(account.type, account.id, num5);
         if (1 === tmp7) {
           c3 = 0;
-          obj6 = { isVisible: !closure_129_0 };
-          closure_130_1.setState(obj6);
+          closure_130_1.setState({ isVisible: !closure_129_0 });
           c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
@@ -277,12 +274,10 @@ class ConnectedAccount extends PureComponent {
           }
         }
         importDefault.setState({ isMetadataVisible });
-        let obj6 = closure_1(tmp3[13]);
-        await obj6.setMetadataVisibility(account.type, account.id, num5);
+        await closure_1(tmp3[13]).setMetadataVisibility(account.type, account.id, num5);
         if (1 === tmp7) {
           c3 = 0;
-          obj6 = { isMetadataVisible: !closure_129_0 };
-          closure_130_1.setState(obj6);
+          closure_130_1.setState({ isMetadataVisible: !closure_129_0 });
           c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
@@ -379,26 +374,25 @@ prototype["componentDidUpdate"] = function componentDidUpdate(account) {
   const self = this;
   account = this.props.account;
   if (account.account !== account) {
-    let obj = {};
+    const obj4 = {};
     const merged = Object.assign(self.state);
-    obj.isVisible = 1 === account.visibility;
-    obj.isMetadataVisible = 1 === account.metadataVisibility;
+    obj4.isVisible = 1 === account.visibility;
+    obj4.isMetadataVisible = 1 === account.metadataVisibility;
     ({ showActivity: obj3.showActivity, friendSync: obj3.friendSync } = account);
     if (account.verified) {
       ({ inProgressVisibility, inProgressMetadataVisibility } = self.state);
       if (null != inProgressVisibility) {
-        obj.isVisible = 1 === inProgressVisibility;
-        obj.inProgressVisibility = null;
-        obj = ConnectedAccountsActionCreatorsDefault;
-        obj.setVisibility(account.type, account.id, inProgressVisibility);
+        obj4.isVisible = 1 === inProgressVisibility;
+        obj4.inProgressVisibility = null;
+        ConnectedAccountsActionCreatorsDefault.setVisibility(account.type, account.id, inProgressVisibility);
       }
       if (null != inProgressMetadataVisibility) {
-        obj.isMetadataVisible = 1 === inProgressMetadataVisibility;
-        obj.inProgressMetadataVisibility = null;
+        obj4.isMetadataVisible = 1 === inProgressMetadataVisibility;
+        obj4.inProgressMetadataVisibility = null;
         const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
       }
     }
-    self.setState(obj);
+    self.setState(obj4);
   }
 };
 prototype["renderUpsell"] = function renderUpsell() {
@@ -421,8 +415,7 @@ prototype["renderVisibilityCheckRow"] = function renderVisibilityCheckRow() {
 };
 prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilityCheckRow() {
   const self = this;
-  let obj = PlatformsDefault;
-  value = obj.get(this.props.account.type);
+  value = PlatformsDefault.get(this.props.account.type);
   let hasMetadata;
   if (value != null) {
     hasMetadata = value.hasMetadata;
@@ -430,19 +423,19 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   if (true !== hasMetadata) {
     return null;
   } else {
-    obj = { label: null, value: null, disabled: null, onValueChange: null };
+    const obj2 = { label: null, value: null, disabled: null, onValueChange: null };
     ({ isMetadataVisible, isVisible } = self.state);
     const intl = util.intl;
-    obj.label = intl.string(util.t.FYKGsL);
-    obj.value = isMetadataVisible;
-    obj.disabled = !isVisible;
-    obj.onValueChange = self.handleMetadataVisibilityChange;
-    return closure_1_14(RowSwitch, obj);
+    obj2.label = intl.string(util.t.FYKGsL);
+    obj2.value = isMetadataVisible;
+    obj2.disabled = !isVisible;
+    obj2.onValueChange = self.handleMetadataVisibilityChange;
+    return closure_1_14(RowSwitch, obj2);
   }
 };
 prototype["renderMetadata"] = function renderMetadata() {
   const self = this;
-  let tmp = createStyles(this.context);
+  let tmp = legacyClassComponentStyles(this.context);
   const props = this.props;
   const account = props.account;
   let metadata = account.metadata;
@@ -450,43 +443,42 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  let obj1 = account(5488);
-  const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
+  const createdAtDate = account(5488).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11704);
-    let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
+    let redditMetadataItems = tmp2(11705).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11705);
   } else if (constants.STEAM === type) {
-    tmp2Result = tmp2(11704);
-    redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
+    redditMetadataItems = tmp2(11705).generateSteamMetadataItems(metadata);
+    const tmp2Result6 = tmp2(11705);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11704).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11704);
+            redditMetadataItems = tmp2(11705).generateEbayMetadataItems(metadata);
+            const tmp2Result7 = tmp2(11705);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11704).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11704);
+            redditMetadataItems = tmp2(11705).generatePaypalMetadataItems(metadata);
+            const tmp2Result8 = tmp2(11705);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11704).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11704);
+              redditMetadataItems = tmp2(11705).generateTikTokMetadataItems(metadata);
+              const tmp2Result9 = tmp2(11705);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11704).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11704);
+    redditMetadataItems = tmp2(11705).generateTwitterMetadataItems(metadata);
+    const tmp2Result10 = tmp2(11705);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
     const intl = tmp2(1114).intl;
-    obj = { date: createdAtDate };
-    obj.children = intl.format(tmp2(1114).t["9rfonh"], obj);
+    const obj3 = { date: createdAtDate };
+    obj.children = intl.format(tmp2(1114).t["9rfonh"], obj3);
     redditMetadataItems.push(closure_14(tmp2(4632).Text, obj, MetadataFields.CREATED_AT));
   }
   let intl2 = self.state.metadataRefreshing || self.state.metadataAlreadyRefreshed;
@@ -499,8 +491,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    let obj12 = self(5364);
-    value = obj12.get(account.type);
+    value = self(5364).get(account.type);
     let hasMetadata;
     if (value != null) {
       hasMetadata = value.hasMetadata;
@@ -508,22 +499,22 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (true !== hasMetadata) {
       return null;
     } else {
-      obj1 = { style: null, children: null };
+      const obj4 = { style: null, children: null };
       const items = [, ];
       ({ metadataContainer: arr4[0], metadataBannerContainer: arr4[1] } = tmp);
-      obj1.style = items;
-      const obj2 = { text: null, style: null };
+      obj4.style = items;
+      const obj5 = { text: null, style: null };
       const intl4 = tmp2(1114).intl;
-      obj2.text = intl4.string(tmp2(1114).t.y2b7CA);
-      obj2.style = tmp.newBadge;
-      const items1 = [closure_14(tmp2(1178).TextBadge, obj2), , , , ];
-      const obj3 = { variant: "text-xs/normal", children: null };
+      obj5.text = intl4.string(tmp2(1114).t.y2b7CA);
+      obj5.style = tmp.newBadge;
+      const items1 = [closure_14(tmp2(1176).TextBadge, obj5), , , , ];
+      const obj6 = { variant: "text-xs/normal", children: null };
       const intl5 = tmp2(1114).intl;
-      obj3.children = intl5.string(tmp2(1114).t.eH16Gn);
-      items1[1] = closure_14(tmp2(4632).Text, obj3);
-      const obj4 = { style: tmp.rowDivider };
-      items1[2] = closure_14(View, obj4);
-      let obj5 = { style: tmp.addDetailsButton, children: null };
+      obj6.children = intl5.string(tmp2(1114).t.eH16Gn);
+      items1[1] = closure_14(tmp2(4632).Text, obj6);
+      const obj7 = { style: tmp.rowDivider };
+      items1[2] = closure_14(View, obj7);
+      let obj8 = { style: tmp.addDetailsButton, children: null };
       let string = tmp2(5056).Button;
       const intl6 = tmp2(1114).intl;
       const string2 = intl6.string;
@@ -533,103 +524,103 @@ prototype["renderMetadata"] = function renderMetadata() {
       } else {
         string2Result = string2(Button["LVh3/5"]);
       }
-      const obj6 = { text: string2Result, size: "sm", onPress: handleRefresh, disabled: intl2 };
-      obj5.children = closure_14(string, obj6);
-      items1[3] = closure_14(View, obj5);
-      const obj7 = { style: tmp.learnMoreButton, children: null };
+      const obj9 = { text: string2Result, size: "sm", onPress: handleRefresh, disabled: intl2 };
+      obj8.children = closure_14(string, obj9);
+      items1[3] = closure_14(View, obj8);
+      const obj10 = { style: tmp.learnMoreButton, children: null };
       Button = tmp2(5056).Button;
-      const obj8 = { text: null, variant: "secondary", size: "sm", onPress: null };
+      const obj11 = { text: null, variant: "secondary", size: "sm", onPress: null };
       intl2 = tmp2(1114).intl;
       string = intl2.string;
       stringResult = string(tmp2(1114).t["8O0mlf"]);
-      obj8.text = stringResult;
-      obj8.onPress = function onPress() {
+      obj11.text = stringResult;
+      obj11.onPress = function onPress() {
         const obj = self(4331);
         return obj.openURL(self(2024).getArticleURL(constants.CONNECTION_DETAILS));
       };
-      tmp = closure_14(Button, obj8);
-      obj7.children = tmp;
-      obj5 = closure_14(View, obj7);
-      items1[4] = obj5;
-      obj1.children = items1;
-      closure_15(View, obj1);
+      tmp = closure_14(Button, obj11);
+      obj10.children = tmp;
+      obj8 = closure_14(View, obj10);
+      items1[4] = obj8;
+      obj4.children = items1;
+      closure_15(View, obj4);
     }
+    const obj13 = self(5364);
   } else {
-    const obj9 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, disabled: null, style: null, children: null };
+    const obj12 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, disabled: null, style: null, children: null };
     const intl3 = tmp2(1114).intl;
-    obj9.accessibilityLabel = intl3.string(tmp2(1114).t.wzzjk9);
-    obj9.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
-    obj9.onPress = handleRefresh;
-    obj9.disabled = intl2;
+    obj12.accessibilityLabel = intl3.string(tmp2(1114).t.wzzjk9);
+    obj12.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
+    obj12.onPress = handleRefresh;
+    obj12.disabled = intl2;
     const items2 = [tmp.metadataRefreshButton, ];
     let metadataRefreshButtonDisabled = intl2;
     if (intl2) {
       metadataRefreshButtonDisabled = tmp.metadataRefreshButtonDisabled;
     }
     items2[1] = metadataRefreshButtonDisabled;
-    obj9.style = items2;
-    const obj10 = { style: tmp.metadataRefreshIcon, size: tmp2(1178).Icon.Sizes.SMALL, source: null };
+    obj12.style = items2;
+    const obj14 = { style: tmp.metadataRefreshIcon, size: tmp2(1176).Icon.Sizes.SMALL, source: null };
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10780);
+      let tmp9Result = tmp9(10781);
     } else {
-      tmp9Result = tmp9(15059);
+      tmp9Result = tmp9(15060);
     }
-    obj10.source = tmp9Result;
-    obj9.children = closure_14(tmp2(1178).Icon, obj10);
-    const obj11 = { style: tmp.metadataContainer, children: null };
-    obj12 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
-    const items3 = [closure_14(View, obj12), closure_14(tmp2(5204).PressableOpacity, obj9)];
-    obj11.children = items3;
-    return closure_15(View, obj11);
+    obj14.source = tmp9Result;
+    obj12.children = closure_14(tmp2(1176).Icon, obj14);
+    const obj15 = { style: tmp.metadataContainer, children: null };
+    const obj16 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
+    const items3 = [closure_14(View, obj16), closure_14(tmp2(5204).PressableOpacity, obj12)];
+    obj15.children = items3;
+    return closure_15(View, obj15);
   }
+  const obj2 = account(5488);
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
-  let obj = PlatformsDefault;
   let tmp2 = null;
   if (set.has(obj.get(this.props.account.type).type)) {
-    obj = { label: null, value: null, onValueChange: null };
+    const obj2 = { label: null, value: null, onValueChange: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t["+KCMSi"]);
-    obj.value = this.state.friendSync;
-    obj.onValueChange = this.handleFriendSyncChange;
-    tmp2 = closure_1_14(RowSwitch, obj);
+    obj2.label = intl.string(util.t["+KCMSi"]);
+    obj2.value = this.state.friendSync;
+    obj2.onValueChange = this.handleFriendSyncChange;
+    tmp2 = closure_1_14(RowSwitch, obj2);
   }
   return tmp2;
 };
 prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
-  let obj = PlatformsDefault;
-  value = obj.get(this.props.account.type);
+  value = PlatformsDefault.get(this.props.account.type);
   let tmp3 = null;
   if (set2.has(value.type)) {
-    obj = { label: null, value: null, onValueChange: null };
+    const obj2 = { label: null, value: null, onValueChange: null };
     const intl = util.intl;
-    obj = { platform: value.name };
-    obj.label = intl.formatToPlainString(util.t["6u6J0q"], obj);
-    obj.value = this.state.showActivity;
-    obj.onValueChange = this.handleShowActivityChange;
-    tmp3 = closure_1_14(RowSwitch, obj);
+    const obj3 = { platform: value.name };
+    obj2.label = intl.formatToPlainString(util.t["6u6J0q"], obj3);
+    obj2.value = this.state.showActivity;
+    obj2.onValueChange = this.handleShowActivityChange;
+    tmp3 = closure_1_14(RowSwitch, obj2);
   }
   return tmp3;
 };
 prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
-  const tmp = createStyles(this.context);
+  const tmp = legacyClassComponentStyles(this.context);
   const account = this.props.account;
   let tmp2 = null;
   if (account.integrations.length > 0) {
     tmp2 = null;
     if (!account.revoked) {
-      let obj = { children: null };
-      obj = { style: tmp.divider };
-      const items = [closure_1_14(View, obj), ];
-      obj = { style: { paddingHorizontal: 16, paddingVertical: 8 }, children: null };
-      const obj1 = { style: tmp.integrationCategoryLabel, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
+      const obj = { children: null };
+      const obj2 = { style: tmp.divider };
+      const items = [closure_1_14(View, obj2), ];
+      const obj3 = { style: { paddingHorizontal: 16, paddingVertical: 8 }, children: null };
+      const obj4 = { style: tmp.integrationCategoryLabel, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj1.children = intl.string(util.t.fOe3fZ);
-      const items1 = [closure_1_14(Text_Text.Text, obj1), ];
+      obj4.children = intl.string(util.t.fOe3fZ);
+      const items1 = [closure_1_14(Text_Text.Text, obj4), ];
       const integrations = account.integrations;
       items1[1] = integrations.map((integration) => closure_1_14(Integration, { integration }, integration.id));
-      obj.children = items1;
-      items[1] = __initData(View, obj);
+      obj3.children = items1;
+      items[1] = __initData(View, obj3);
       obj.children = items;
       tmp2 = __initData(View, obj);
     }
@@ -638,11 +629,10 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = createStyles(this.context);
+  const tmp = legacyClassComponentStyles(this.context);
   const props = this.props;
   const account = props.account;
-  let obj = PlatformsDefault;
-  value = obj.get(account.type);
+  value = PlatformsDefault.get(account.type);
   const migrationData = value.migrationData;
   let migrationExperimentEnabled;
   if (migrationData != null) {
@@ -650,53 +640,51 @@ prototype["render"] = function render() {
   }
   if (migrationExperimentEnabled) {
     const intl = util.intl;
-    obj = { platformName: account.name };
-    let name = intl.format(_modDef3010.Glhokn, obj);
+    const obj2 = { platformName: account.name };
+    let name = intl.format(_modDef3010.Glhokn, obj2);
   } else {
     name = account.name;
   }
-  obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: native2.Icon.Sizes.LARGE, source: null, disableColor: true };
-  let obj3 = AvatarUtils;
-  let obj4 = shared;
+  const obj3 = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: native2.Icon.Sizes.LARGE, source: null, disableColor: true };
+  const obj4 = AvatarUtils;
   const icon = value.icon;
-  obj.source = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  closure_1_14(native2.Icon, obj);
-  const obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
-  const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  obj3.source = obj4.makeSource(shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+  const obj6 = { spacing: 8, direction: "horizontal", align: "center", children: null };
+  const obj7 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl2 = util.intl;
-  obj2.accessibilityLabel = intl2.string(util.t["DT39A+"]);
-  obj2.onPress = self.handleDisconnect;
-  obj2.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-  obj3 = { style: tmp.deleteConnectionIcon, source: _modDef7095 };
-  obj2.children = closure_1_14(native2.Icon, obj3);
-  obj1.children = closure_1_14(Pressables.PressableOpacity, obj2);
-  const tmp7Result = closure_1_14(Stack_Stack.Stack, obj1);
+  obj7.accessibilityLabel = intl2.string(util.t["DT39A+"]);
+  obj7.onPress = self.handleDisconnect;
+  obj7.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
+  const tmp7Result = closure_1_14(native2.Icon, obj3);
+  obj7.children = closure_1_14(native2.Icon, { style: tmp.deleteConnectionIcon, source: _modDef7095 });
+  obj6.children = closure_1_14(Pressables.PressableOpacity, obj7);
+  const obj8 = { style: tmp.deleteConnectionIcon, source: _modDef7095 };
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();
   const result3 = self.renderMetadataVisibilityCheckRow();
-  obj4 = { style: tmp.container, children: null };
-  const obj5 = { style: tmp.connectedAccountItem, children: null };
-  const obj6 = { style: tmp.connectedAccountTopContainer, children: null };
+  const obj9 = { style: tmp.container, children: null };
+  const obj10 = { style: tmp.connectedAccountItem, children: null };
+  const obj11 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
-  obj6.children = closure_1_14(TableRow.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
-  const items = [closure_1_14(View, obj6), ];
-  const obj7 = { style: tmp.connectedAccountContentContainer, children: null };
+  obj11.children = closure_1_14(TableRow.TableRow, { label: name, icon: tmp7Result, trailing: closure_1_14(Stack_Stack.Stack, obj6) });
+  const items = [closure_1_14(View, obj11), ];
+  const obj12 = { style: tmp.connectedAccountContentContainer, children: null };
   const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
-  const obj8 = { hasIcons: false, children: null };
+  const obj13 = { hasIcons: false, children: null };
   const items2 = [result4, result3, result2, result1];
-  obj8.children = items2;
-  items1[2] = __initData(TableRowGroup.TableRowGroup, obj8);
+  obj13.children = items2;
+  items1[2] = __initData(TableRowGroup.TableRowGroup, obj13);
   items1[3] = result;
-  obj7.children = items1;
-  items[1] = __initData(View, obj7);
-  obj5.children = items;
-  obj4.children = __initData(View, obj5);
-  return closure_1_14(View, obj4);
+  obj12.children = items1;
+  items[1] = __initData(View, obj12);
+  obj10.children = items;
+  obj9.children = __initData(View, obj10);
+  return closure_1_14(View, obj9);
 };
 ConnectedAccount.contextType = fn(4347).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedAccount.tsx");
 
 export default ConnectedAccount;
-export const readStyles = createStyles;
+export const readStyles = legacyClassComponentStyles;

@@ -1,21 +1,21 @@
-// === Module 17859: GuildRoleSubscriptionGroupGatingModal ===
+// === Module 17860: GuildRoleSubscriptionGroupGatingModal ===
 
-// Module 17859 (GuildRoleSubscriptionGroupGatingModal)
+// Module 17860 (GuildRoleSubscriptionGroupGatingModal)
 import util from "util" /* 1114 */;
-import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17839 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17849 */;
+import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17840 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17845 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17846 */;
 
 require = fn;
-const constants = fn(15288).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15289).GuildRoleSubscriptionsTierScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
-  [tmp2, tmp3] = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
+  [tmp2, tmp3] = RoleTierEditStore.useGroupIsFullGateState();
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
   const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
   const intl = util.intl;

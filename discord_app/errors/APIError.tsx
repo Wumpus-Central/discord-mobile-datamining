@@ -3,7 +3,7 @@
 // Module 4538 (APIError)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import size from "module_2" /* 2 */;
 
 const Links = Constants.Links;
@@ -11,17 +11,16 @@ const V8APIError = HTTPUtils.V8APIError;
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
     const intl2 = util.intl;
-    let obj = { statusPageURL: Links.STATUS, details: null };
+    const obj2 = { statusPageURL: Links.STATUS, details: null };
     const _HermesInternal = HermesInternal;
-    obj.details = "" + arg1;
-    intl2.formatToPlainString(util.t.aKRa0Q, obj);
+    obj2.details = "" + arg1;
+    intl2.formatToPlainString(util.t.aKRa0Q, obj2);
   } else {
     const intl = util.intl;
-    obj = { statusPageURL: Links.STATUS };
+    const obj = { statusPageURL: Links.STATUS };
     intl.formatToPlainString(util.t.aTVNes, obj);
   }
-  tmp = new tmp();
-  return tmp;
+  return new tmp();
 }.prototype;
 class prototype extends V8APIError {
 }

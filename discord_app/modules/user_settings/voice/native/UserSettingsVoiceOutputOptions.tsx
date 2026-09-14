@@ -21,12 +21,11 @@ const result = size.fileFinishedImporting("modules/user_settings/voice/native/Us
 
 export default function UserSettingsVoiceOutputOptions() {
   const tmp = closure_11();
-  let obj = stateFromStores1(504);
   const items = [MediaEngineStore];
-  const stateFromStores = obj.useStateFromStores(items, () => outputVolume.getOutputVolume());
-  let obj1 = stateFromStores1(504);
+  const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => outputVolume.getOutputVolume());
+  const obj = stateFromStores1(504);
   const items1 = [ApplicationStreamingStore, AuthenticationStore];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  stateFromStores1 = stateFromStores1(504).useStateFromStores(items1, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
     let tmp2 = null;
     if (null != lastActiveStream) {
@@ -37,10 +36,10 @@ export default function UserSettingsVoiceOutputOptions() {
     }
     return tmp2;
   });
-  let obj2 = stateFromStores1(504);
+  const obj2 = stateFromStores1(504);
   const items2 = [MediaEngineStore];
   const items3 = [stateFromStores1];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => {
+  const stateFromStores2 = stateFromStores1(504).useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores1) {
       num = MediaEngineStore.getLocalVolume(tmp.ownerId, MediaEngineContextTypes.STREAM);
@@ -51,14 +50,14 @@ export default function UserSettingsVoiceOutputOptions() {
     _modDef38(null != stateFromStores1, "Can not set stream volume without active stream");
     AudioActionCreatorsDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
   }, items3);
-  obj = { title: null, hasIcons: false, children: null };
+  const obj4 = { title: null, hasIcons: false, children: null };
   const intl = stateFromStores1(1114).intl;
-  obj.title = intl.string(stateFromStores1(1114).t.UXxPGB);
-  obj = { label: null, subLabel: null };
+  obj4.title = intl.string(stateFromStores1(1114).t.UXxPGB);
+  const obj5 = { label: null, subLabel: null };
   const intl2 = stateFromStores1(1114).intl;
-  obj.label = intl2.string(stateFromStores1(1114).t.xPHVBs);
-  obj1 = { style: tmp.slider, children: null };
-  obj2 = {
+  obj5.label = intl2.string(stateFromStores1(1114).t.xPHVBs);
+  const obj6 = { style: tmp.slider, children: null };
+  const obj7 = {
     style: tmp.slider,
     value: stateFromStores,
     onValueChange(arg0) {
@@ -66,26 +65,27 @@ export default function UserSettingsVoiceOutputOptions() {
     },
     accessibilityLabel: null
   };
+  const obj3 = stateFromStores1(504);
   const intl3 = stateFromStores1(1114).intl;
-  obj2.accessibilityLabel = intl3.string(stateFromStores1(1114).t.xPHVBs);
-  obj1.children = closure_9(VolumeSliderDefault, obj2);
-  obj.subLabel = closure_9(View, obj1);
-  const items4 = [closure_9(stateFromStores1(5686).TableRow, obj), ];
+  obj7.accessibilityLabel = intl3.string(stateFromStores1(1114).t.xPHVBs);
+  obj6.children = closure_9(VolumeSliderDefault, obj7);
+  obj5.subLabel = closure_9(View, obj6);
+  const items4 = [closure_9(stateFromStores1(5686).TableRow, obj5), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
-    const obj3 = { label: null, subLabel: null };
+    const obj8 = { label: null, subLabel: null };
     const intl4 = tmp2(1114).intl;
-    obj3.label = intl4.string(tmp2(1114).t.pEAl4b);
-    const obj4 = { style: tmp.slider, children: null };
-    const obj5 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
+    obj8.label = intl4.string(tmp2(1114).t.pEAl4b);
+    const obj9 = { style: tmp.slider, children: null };
+    const obj10 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
     const intl5 = tmp2(1114).intl;
-    obj5.accessibilityLabel = intl5.string(tmp2(1114).t.pEAl4b);
-    obj4.children = closure_9(VolumeSliderDefault, obj5);
-    obj3.subLabel = closure_9(View, obj4);
-    tmp9Result = closure_9(tmp2(5686).TableRow, obj3);
+    obj10.accessibilityLabel = intl5.string(tmp2(1114).t.pEAl4b);
+    obj9.children = closure_9(VolumeSliderDefault, obj10);
+    obj8.subLabel = closure_9(View, obj9);
+    tmp9Result = closure_9(tmp2(5686).TableRow, obj8);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
-  obj.children = items4;
-  return closure_10(stateFromStores1(10108).UserSettingsTableRowGroup, obj);
+  obj4.children = items4;
+  return closure_10(stateFromStores1(10108).UserSettingsTableRowGroup, obj4);
 };

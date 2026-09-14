@@ -1,11 +1,11 @@
-// === Module 17054: AccountLinkManager ===
+// === Module 17056: AccountLinkManager ===
 
-// Module 17054 (AccountLinkManager)
+// Module 17056 (AccountLinkManager)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
-import AccountLinkStore from "AccountLinkStore" /* 17055 */;
+import AccountLinkStore from "AccountLinkStore" /* 17057 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 let require = fn;
@@ -17,8 +17,8 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -31,8 +31,8 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -50,18 +50,18 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           const HTTP = closure_130_0(closure_130_1[6]).HTTP;
           const request = { url: closure_130_7.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT, body: null, rejectWithError: true };
-          const obj2 = { application_id: closure_129_0 };
-          request.body = obj2;
+          const obj5 = { application_id: closure_129_0 };
+          request.body = obj5;
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
         }
       } else {
         if (2 === tmp8) {
@@ -82,7 +82,7 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp25) {

@@ -21,14 +21,13 @@ class ApplicationStreamPreviewStore extends Store {
 }
 const prototype = ApplicationStreamPreviewStore.prototype;
 prototype["getPreviewURL"] = function getPreviewURL(guildId, channelId, ownerId) {
-  let obj = StreamKeyUtils;
+  const obj = StreamKeyUtils;
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
     CALL = StreamTypes.CALL;
   }
-  obj = { streamType: CALL, guildId, channelId, ownerId };
-  const tmp3 = dependencyMap[obj.encodeStreamKey(obj, obj)];
+  const tmp3 = dependencyMap[obj.encodeStreamKey(obj, { streamType: CALL, guildId, channelId, ownerId })];
   let url;
   if (tmp3 != null) {
     url = tmp3.url;
@@ -36,14 +35,12 @@ prototype["getPreviewURL"] = function getPreviewURL(guildId, channelId, ownerId)
   return url;
 };
 prototype["shouldFetchPreview"] = function shouldFetchPreview(guildId, channelId, ownerId) {
-  let obj = StreamKeyUtils;
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
     CALL = StreamTypes.CALL;
   }
-  obj = { streamType: CALL, guildId, channelId, ownerId };
-  const encodeStreamKeyResult = obj.encodeStreamKey(obj);
+  const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey({ streamType: CALL, guildId, channelId, ownerId });
   let num = dependencyMap2[encodeStreamKeyResult];
   if (num == null) {
     num = 0;
@@ -70,14 +67,12 @@ prototype["getPreviewURLForStreamKey"] = function getPreviewURLForStreamKey(stre
   return this.getPreviewURL(decodeStreamKeyResult.guildId, decodeStreamKeyResult.channelId, decodeStreamKeyResult.ownerId);
 };
 prototype["getIsPreviewLoading"] = function getIsPreviewLoading(guildId, channelId, ownerId) {
-  let obj = StreamKeyUtils;
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
     CALL = StreamTypes.CALL;
   }
-  obj = { streamType: CALL, guildId, channelId, ownerId };
-  return set.has(obj.encodeStreamKey(obj));
+  return set.has(StreamKeyUtils.encodeStreamKey({ streamType: CALL, guildId, channelId, ownerId }));
 };
 ApplicationStreamPreviewStore.displayName = "ApplicationStreamPreviewStore";
 const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(DispatcherDefault, {
@@ -121,14 +116,13 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(Dispatch
         if (guildId.selfStream) {
           return acc;
         } else {
-          let obj = StreamKeyUtils;
           if (null != guildId) {
             let CALL = constants.GUILD;
           } else {
             CALL = constants.CALL;
           }
-          obj = { streamType: CALL, guildId, channelId: tmp5, ownerId: tmp4 };
-          obj.encodeStreamKey(obj);
+          const obj2 = { streamType: CALL, guildId, channelId: tmp5, ownerId: tmp4 };
+          StreamKeyUtils.encodeStreamKey(obj2);
           delete tmp3[tmp2];
           delete tmp[tmp2];
           return true;

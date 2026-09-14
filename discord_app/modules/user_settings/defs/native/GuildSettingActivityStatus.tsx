@@ -1,12 +1,12 @@
-// === Module 15971: GuildSettingActivityStatus ===
+// === Module 15973: GuildSettingActivityStatus ===
 
-// Module 15971 (GuildSettingActivityStatus)
+// Module 15973 (GuildSettingActivityStatus)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15960 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15962 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);

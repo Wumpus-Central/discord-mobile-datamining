@@ -8,8 +8,8 @@ import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1916 */;
 
 require = fn;
-fn(504);
-const initialize = {
+const initialize = fn(504);
+const obj2 = {
   getQueryId: fn(1074).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(gameId) {
@@ -36,8 +36,8 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -50,23 +50,21 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if (null != closure_0) {
-          let obj1 = GameActionCreators;
           const items = [tmp5];
           c2 = 1;
           c1 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.fetchGamesWithSupplementalData(items);
-          return obj1;
+          const obj5 = { value: GameActionCreators.fetchGamesWithSupplementalData(items), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -77,7 +75,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-initialize.load = function() {
+obj2.load = function() {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -87,14 +85,14 @@ initialize.load = function() {
   }
   return applyArgumentsResult;
 };
-initialize.getIsLoading = function getIsLoading(arg0) {
+obj2.getIsLoading = function getIsLoading(arg0) {
   let isFetchingResult = null != arg0;
   if (isFetchingResult) {
     isFetchingResult = GameStore.isFetching(arg0);
   }
   return isFetchingResult;
 };
-initialize.getError = function getError(item) {
+obj2.getError = function getError(item) {
   let error = null;
   if (null != item) {
     error = null;
@@ -105,7 +103,7 @@ initialize.getError = function getError(item) {
   }
   return error;
 };
-const fetchStore = initialize.createFetchStore(GameStore, initialize);
+const fetchStore = initialize.createFetchStore(GameStore, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
 

@@ -1,10 +1,12 @@
-// === Module 12635: useFeaturedExpiringPowerup ===
+// === Module 12636: useFeaturedExpiringPowerup ===
 
-// Module 12635 (useFeaturedExpiringPowerup)
+// Module 12636 (useFeaturedExpiringPowerup)
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 4546 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -30,7 +32,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
         unlockedPowerups = {};
       }
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
       let entitlements;
       if (stateFromStores1 != null) {
         entitlements = stateFromStores1.entitlements;
@@ -38,7 +40,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
       if (entitlements == null) {
         entitlements = {};
       }
-      arraySpreadResult = HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
+      HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
       const found = items.filter((ends_at) => {
         let tmp = null != ends_at.ends_at;
         if (tmp) {

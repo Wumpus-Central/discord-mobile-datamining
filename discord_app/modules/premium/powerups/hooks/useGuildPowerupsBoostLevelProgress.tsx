@@ -4,6 +4,7 @@
 import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4545 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
 
 require = fn;

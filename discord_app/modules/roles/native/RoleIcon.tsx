@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
@@ -16,21 +16,21 @@ export default function RoleIcon(arg0) {
   if (size === undefined) {
     size = 20;
   }
-  size = { height: size, width: size };
-  let obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: null, width: size, marginBottom: null };
+  const size1 = { height: size, width: size };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: -52614058942851790000000000000000000000000000000000, width: size, marginBottom: -222060963226195500000000000000000000000000000000000000000000 };
   if (null != src) {
-    obj = { resizeMode: "contain", source: null, style: null };
-    const obj1 = { uri: src };
-    obj.source = obj1;
-    obj.style = size;
+    const obj2 = { resizeMode: "contain", source: null, style: null };
+    const obj3 = { uri: src };
+    obj2.source = obj3;
+    obj2.style = size1;
     let tmp = <Image resizeMode="contain" source={null} style={null} />;
   } else {
     tmp = null;
     if (null != unicodeEmoji) {
-      const obj2 = { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null };
-      const items = [size, obj];
-      obj2.style = items;
-      obj2.children = unicodeEmoji.surrogates;
+      const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null };
+      const items = [size1, obj];
+      obj4.style = items;
+      obj4.children = unicodeEmoji.surrogates;
       tmp = jsx(Text_Text.Text, { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null });
     }
   }

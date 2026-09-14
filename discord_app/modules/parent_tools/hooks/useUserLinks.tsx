@@ -6,6 +6,8 @@ import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const FamilyCenterConstants = fn(7641);
 ({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: metroRequire, FAMILY_CENTER_REQUEST_QR_CODE_URL: closure_7, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: closure_9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: closure_11, UserLinkType: closure_12 } = FamilyCenterConstants);

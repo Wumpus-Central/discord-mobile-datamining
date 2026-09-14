@@ -1,6 +1,6 @@
-// === Module 14184: ThemedIcon ===
+// === Module 14185: ThemedIcon ===
 
-// Module 14184 (ThemedIcon)
+// Module 14185 (ThemedIcon)
 import useToken from "useToken" /* 4338 */;
 import IconDefault from "Icon" /* 5058 */;
 import noop from "module_19" /* 19 */;
@@ -12,9 +12,8 @@ const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedI
 
 export default function ThemedIcon(themedColor) {
   const merged = Object.assign(themedColor, Object.assign({ themedColor: 0 }));
-  let obj = useToken;
-  const token = obj.useToken(themedColor.themedColor);
-  obj = { color: token };
+  const token = useToken.useToken(themedColor.themedColor);
+  const obj2 = { color: token };
   const merged1 = Object.assign(merged);
   return jsx(IconDefault, { color: token });
 };

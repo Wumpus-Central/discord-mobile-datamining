@@ -1,6 +1,6 @@
-// === Module 16535: ChannelPressableWrapper ===
+// === Module 16537: ChannelPressableWrapper ===
 
-// Module 16535 (ChannelPressableWrapper)
+// Module 16537 (ChannelPressableWrapper)
 import ChannelListLayout from "ChannelListLayout" /* 10249 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,15 +16,14 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   if (flag === undefined) {
     flag = false;
   }
-  let obj = ChannelListLayout;
-  const layout2 = obj.getLayoutStyles(layout, launchpad).layout;
+  const layout2 = ChannelListLayout.getLayoutStyles(layout, launchpad).layout;
   if (isThread) {
     let marginThread = layout2.marginThread;
   } else {
     marginThread = flag ? layout2.marginPanels : layout2.margin;
   }
-  obj = { style: null, children };
+  const obj2 = { style: null, children };
   const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
-  obj.style = items;
+  obj2.style = items;
   return <View style={null}>{children}</View>;
 };

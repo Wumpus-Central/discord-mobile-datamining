@@ -2,17 +2,15 @@
 
 // Module 10195 (ParticipantTitle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import getParticipantTitleDefault from "getParticipantTitle" /* 10177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { usernameText: null };
-createStyles = { fontSize: 14, color: nativeDefault.colors.WHITE };
-createStyles.usernameText = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ParticipantTitle.tsx");
 

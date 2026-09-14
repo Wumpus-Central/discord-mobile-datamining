@@ -1,7 +1,7 @@
-// === Module 11957: ChannelSelectComponentActionSheet ===
+// === Module 11958: ChannelSelectComponentActionSheet ===
 
-// Module 11957 (ChannelSelectComponentActionSheet)
-import native from "native" /* 1178 */;
+// Module 11958 (ChannelSelectComponentActionSheet)
+import native from "native" /* 1176 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8237 */;
 import NativeSearchableSelectActionComponentUtils from "NativeSearchableSelectActionComponentUtils" /* 8239 */;
 import noop from "module_19" /* 19 */;
@@ -32,11 +32,10 @@ export default function ChannelSelectComponentActionSheet(guildId) {
         return null;
       } else {
         const guild = GuildStore.getGuild(guildId);
-        let obj = NativeSearchableSelectActionComponentUtils;
-        const channelIconData = obj.getChannelIconData(channel, guild);
+        const channelIconData = NativeSearchableSelectActionComponentUtils.getChannelIconData(channel, guild);
         let tmp8 = null != channelIconData;
         if (tmp8) {
-          obj = { source: channelIconData };
+          const obj2 = { source: channelIconData };
           tmp8 = jsx(native.Icon, { source: channelIconData });
         }
         return tmp8;

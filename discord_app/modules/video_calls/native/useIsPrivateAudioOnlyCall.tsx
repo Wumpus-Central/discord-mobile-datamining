@@ -8,6 +8,8 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function areParticipantStatesEqual(arg0, arg1) {
   [, tmp] = arg0;

@@ -1,15 +1,15 @@
-// === Module 10818: billing_settings_banner ===
+// === Module 10819: billing_settings_banner ===
 
-// Module 10818 (billing_settings_banner)
-import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10798 */;
-import help_article from "help_article" /* 10799 */;
-import cta_button from "cta_button" /* 10800 */;
-import theme_aware_asset from "theme_aware_asset" /* 10808 */;
+// Module 10819 (billing_settings_banner)
+import _mod1186 from "module_1186" /* 1186 */;
+import localized_string from "localized_string" /* 10799 */;
+import help_article from "help_article" /* 10800 */;
+import cta_button from "cta_button" /* 10801 */;
+import theme_aware_asset from "theme_aware_asset" /* 10809 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class BillingSettingsBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , ];
@@ -55,19 +55,18 @@ class BillingSettingsBanner$Type extends MessageType {
             return require("help_article").HelpArticle;
           }
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
+    return tmp1;
   }
 }
-let prototype = BillingSettingsBanner$Type.prototype;
+const prototype = BillingSettingsBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { header: "", body: "" };
+  const obj = { header: "", body: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -118,7 +117,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -130,47 +129,47 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
   if ("" !== header.header) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    tag.tag(1, _mod1186.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== header.body) {
-    tag.tag(2, _mod1188.WireType.LengthDelimited).string(header.body);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    tag.tag(2, _mod1186.WireType.LengthDelimited).string(header.body);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
   }
   if (header.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
+    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.button) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
-    const joined2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
+    const joined2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
-    const joined3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1186.WireType.LengthDelimited);
+    const joined3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
-    const joined4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1186.WireType.LengthDelimited);
+    const joined4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);
@@ -223,8 +222,8 @@ items[6] = {
     return require("help_article").HelpArticle;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);
+const prototype1 = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_banner.tsx");
 
-export const BillingSettingsBanner = prototype;
+export const BillingSettingsBanner = prototype1;

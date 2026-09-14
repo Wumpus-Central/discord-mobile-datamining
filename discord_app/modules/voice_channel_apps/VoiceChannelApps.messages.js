@@ -33,10 +33,11 @@ import _mod3716 from "module_3716" /* 3716 */;
 import _mod3717 from "module_3717" /* 3717 */;
 import _mod3718 from "module_3718" /* 3718 */;
 import _mod3719 from "module_3719" /* 3719 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3689);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/voice_channel_apps/VoiceChannelApps.messages.js");
 
 export default messagesProxy;

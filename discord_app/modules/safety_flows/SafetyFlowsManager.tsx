@@ -1,7 +1,7 @@
-// === Module 17977: SafetyFlowsManager ===
+// === Module 17978: SafetyFlowsManager ===
 
-// Module 17977 (SafetyFlowsManager)
-import openSafetyFlow from "openSafetyFlow" /* 17978 */;
+// Module 17978 (SafetyFlowsManager)
+import openSafetyFlow from "openSafetyFlow" /* 17979 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -14,15 +14,15 @@ function handleSafetyFlowsModalOpen() {
 function handleUserRequiredActionUpdate(requiredAction) {
   openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
-let prototype = function SafetyFlowsManager() {
+const prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental, SAFETY_FLOWS_MODAL_OPEN: handleSafetyFlowsModalOpen, USER_REQUIRED_ACTION_UPDATE: handleUserRequiredActionUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
-export default prototype;
+export default prototype1;

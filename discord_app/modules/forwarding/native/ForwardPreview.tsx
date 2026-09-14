@@ -1,6 +1,6 @@
-// === Module 11823: ForwardPreview ===
+// === Module 11824: ForwardPreview ===
 
-// Module 11823 (ForwardPreview)
+// Module 11824 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -17,10 +17,10 @@ import ChatItemDefault from "ChatItem" /* 8775 */;
 import ClipView from "ClipView" /* 8940 */;
 import AttachmentIcon2 from "AttachmentIcon" /* 10240 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 10260 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11824 */;
-import CheckpointColors from "CheckpointColors" /* 11825 */;
-import MosaicMediaType from "MosaicMediaType" /* 11826 */;
-import ImagesIcon2 from "ImagesIcon" /* 11828 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11825 */;
+import CheckpointColors from "CheckpointColors" /* 11826 */;
+import MosaicMediaType from "MosaicMediaType" /* 11827 */;
+import ImagesIcon2 from "ImagesIcon" /* 11829 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -34,8 +34,8 @@ function MessagePreview(content) {
   } else {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
-  let obj = attachmentCount(4636);
-  const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(useThemeDefault());
+  const tmp3 = useThemeDefault();
+  const tmp4 = attachmentCount(4636).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -52,35 +52,34 @@ function MessagePreview(content) {
     obj.setOptions({ renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false });
     return obj;
   }, []);
-  obj = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  obj = { messageSnapshots: [], content: content.contentMessage.content };
-  const tmp3 = useThemeDefault();
-  obj.message = message.merge(obj);
-  obj.rowGenerator = memo;
-  return closure_5(ChatItemDefault, obj);
+  const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
+  let obj = attachmentCount(4636);
+  const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
+  obj2.message = message.merge(obj3);
+  obj2.rowGenerator = memo;
+  return closure_5(ChatItemDefault, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-fn(4636);
-let createStyles = { forwardPreview: null, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
-createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
-createStyles.forwardPreview = createStyles;
+const createStyles = fn(4636);
+let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
-createStyles.quote = size;
-createStyles.contentWrapper = { flexDirection: "column", flex: 1, paddingVertical: 4, gap: 6 };
+obj2.quote = size;
+obj2.contentWrapper = { flexDirection: "column", flex: 1, paddingVertical: 4, gap: 6 };
 let size1 = { position: "relative", width: 56, height: 56, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-createStyles.attachmentPreview = size1;
-createStyles.attachmentPreviewVideo = { backgroundColor: nativeDefault.colors.BLACK };
-createStyles.videoThumbnail = { position: "absolute", top: 0, left: 0, opacity: 0.6 };
-createStyles.playIcon = { position: "absolute", top: 0, left: 0, margin: 16, zIndex: 100 };
-createStyles.attachmentPreviewOverflow = { position: "relative" };
+obj2.attachmentPreview = size1;
+let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
+obj2.attachmentPreviewVideo = { backgroundColor: nativeDefault.colors.BLACK };
+obj2.videoThumbnail = { position: "absolute", top: 0, left: 0, opacity: 0.6 };
+obj2.playIcon = { position: "absolute", top: 0, left: 0, margin: 16, zIndex: 100 };
+obj2.attachmentPreviewOverflow = { position: "relative" };
 let size2 = { position: "absolute", bottom: 0, right: 0, alignItems: "center", justifyContent: "center", textAlign: "center", width: 24, height: 24, lineHeight: 24, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-createStyles.overflowCount = size2;
-createStyles.attachmentRow = { flexDirection: "row", alignItems: "center", gap: 6 };
-createStyles.largeIcon = { width: 20, height: 20 };
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.overflowCount = size2;
+obj2.attachmentRow = { flexDirection: "row", alignItems: "center", gap: 6 };
+obj2.largeIcon = { width: 20, height: 20 };
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardPreview.tsx");
 
@@ -88,8 +87,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   message = message.message;
   ({ channel, forwardOptions } = message);
   const tmp = closure_8();
-  let obj = ForwardPreviewUtils;
-  const forwardPreviewContent = obj.useForwardPreviewContent({ message, channel, forwardOptions });
+  const forwardPreviewContent = ForwardPreviewUtils.useForwardPreviewContent({ message, channel, forwardOptions });
   ({ attachments, embeds, hasContent, contentMessage } = forwardPreviewContent);
   let checkpointData = null;
   if (contentMessage.components.length > 0) {
@@ -110,8 +108,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     const primaryColor = tmp6.primaryColor;
   }
   if (attachments.length > 0) {
-    let tmp2Result = _mod12;
-    const countByResult = tmp2Result.countBy(attachments, (proxy_url) => MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true));
+    const countByResult = _mod12.countBy(attachments, (proxy_url) => MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true));
     let num2 = countByResult.IMAGE;
     if (num2 == null) {
       num2 = 0;
@@ -123,43 +120,43 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num2 > 0) {
       if (num3 > 0) {
         const intl4 = util.intl;
-        obj = { image_count: num2, video_count: num3 };
-        let formatToPlainStringResult = intl4.formatToPlainString(util.t.Lr0Top, obj);
+        const obj2 = { image_count: num2, video_count: num3 };
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.Lr0Top, obj2);
         let AttachmentIcon = ImagesIcon2.ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
-          obj = { style: null, children: null };
+          const obj3 = { style: null, children: null };
           const items = [, ];
           ({ attachmentPreview: arr[0], attachmentPreviewVideo: arr[1] } = tmp);
-          obj.style = items;
+          obj3.style = items;
           const size = { style: tmp.videoThumbnail, source: null, width: null, height: null };
-          const obj1 = { uri: null };
-          let obj17 = utils_ImageUtilsDefault;
-          obj1.uri = obj17.getMobileOptimizedSrc(attachments[0].proxy_url, v56, v56, "png");
-          size.source = obj1;
+          const obj4 = { uri: null };
+          const obj18 = utils_ImageUtilsDefault;
+          obj4.uri = obj18.getMobileOptimizedSrc(attachments[0].proxy_url, v56, v56, "png");
+          size.source = obj4;
           size.width = v56;
           size.height = v56;
           const items1 = [hasOwnProperty(FastImageDefault, size), ];
-          const obj2 = { style: tmp.playIcon, size: "md", color: "white" };
-          items1[1] = hasOwnProperty(CirclePlayIcon.CirclePlayIcon, obj2);
-          obj.children = items1;
-          let tmp7 = timestampProducer(View, obj);
+          const obj5 = { style: tmp.playIcon, size: "md", color: "white" };
+          items1[1] = hasOwnProperty(CirclePlayIcon.CirclePlayIcon, obj5);
+          obj3.children = items1;
+          let tmp7 = timestampProducer(View, obj3);
           let tmp8 = AttachmentIcon;
           let tmp9 = formatToPlainStringResult;
         }
       }
       if (length > 0) {
-        const obj3 = { style: tmp.attachmentPreview, children: null };
+        const obj6 = { style: tmp.attachmentPreview, children: null };
         const size1 = { source: null, width: null, height: null };
-        const obj4 = { uri: null };
-        let obj13 = utils_ImageUtilsDefault;
-        obj4.uri = obj13.getMobileOptimizedSrc(attachments[0].proxy_url, v56, v56);
-        size1.source = obj4;
+        const obj7 = { uri: null };
+        const tmp22 = FastImageDefault;
+        obj7.uri = utils_ImageUtilsDefault.getMobileOptimizedSrc(attachments[0].proxy_url, v56, v56);
+        size1.source = obj7;
         size1.width = v56;
         size1.height = v56;
-        obj3.children = hasOwnProperty(FastImageDefault, size1);
-        tmp7 = hasOwnProperty(View, obj3);
+        obj6.children = hasOwnProperty(tmp22, size1);
+        tmp7 = hasOwnProperty(View, obj6);
         tmp8 = AttachmentIcon;
         tmp9 = formatToPlainStringResult;
       } else {
@@ -175,16 +172,16 @@ export const ForwardPreview = function ForwardPreview(message) {
         tmp8 = AttachmentIcon;
         tmp9 = formatToPlainStringResult;
         if (null != proxyURL) {
-          const obj5 = { style: tmp.attachmentPreview, children: null };
+          const obj8 = { style: tmp.attachmentPreview, children: null };
           const size2 = { source: null, width: null, height: null };
-          const obj6 = { uri: null };
-          let obj9 = utils_ImageUtilsDefault;
-          obj6.uri = obj9.getMobileOptimizedSrc(embeds[0].thumbnail.proxyURL, v56, v56);
-          size2.source = obj6;
+          const obj9 = { uri: null };
+          const tmp17 = FastImageDefault;
+          obj9.uri = utils_ImageUtilsDefault.getMobileOptimizedSrc(embeds[0].thumbnail.proxyURL, v56, v56);
+          size2.source = obj9;
           size2.width = v56;
           size2.height = v56;
-          obj5.children = hasOwnProperty(FastImageDefault, size2);
-          tmp7 = hasOwnProperty(View, obj5);
+          obj8.children = hasOwnProperty(tmp17, size2);
+          tmp7 = hasOwnProperty(View, obj8);
           tmp8 = AttachmentIcon;
           tmp9 = formatToPlainStringResult;
         }
@@ -192,26 +189,27 @@ export const ForwardPreview = function ForwardPreview(message) {
     }
     if (num3 > 0) {
       const intl3 = util.intl;
-      const obj7 = { count: num3 };
-      formatToPlainStringResult = intl3.formatToPlainString(util.t.SJ6pPX, obj7);
+      const obj11 = { count: num3 };
+      formatToPlainStringResult = intl3.formatToPlainString(util.t.SJ6pPX, obj11);
       AttachmentIcon = CirclePlayIcon.CirclePlayIcon;
     } else if (num2 > 0) {
       const intl2 = util.intl;
-      const obj8 = { count: num2 };
+      const obj12 = { count: num2 };
       if (1 === num2) {
         let ImagesIcon = ImageIcon.ImageIcon;
       } else {
         ImagesIcon = ImagesIcon2.ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
-      formatToPlainStringResult = intl2.formatToPlainString(util.t.h4pFfU, obj8);
-      const formatToPlainStringResult1 = intl2.formatToPlainString(util.t.h4pFfU, obj8);
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.h4pFfU, obj12);
+      const formatToPlainStringResult1 = intl2.formatToPlainString(util.t.h4pFfU, obj12);
     } else {
       const intl = util.intl;
-      obj9 = { count: length };
-      formatToPlainStringResult = intl.formatToPlainString(util.t["89ihS8"], obj9);
+      const obj13 = { count: length };
+      formatToPlainStringResult = intl.formatToPlainString(util.t["89ihS8"], obj13);
       AttachmentIcon = AttachmentIcon2.AttachmentIcon;
     }
+    const tmp2Result = _mod12;
   } else {
     tmp7 = null;
     tmp8 = null;
@@ -222,91 +220,92 @@ export const ForwardPreview = function ForwardPreview(message) {
     tmp33 = tmp7;
     if (null != tmp7) {
       const size3 = { shape: ClipView.CutoutShape.RoundedRect, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
-      const obj10 = { style: tmp.attachmentPreviewOverflow, children: null };
-      const obj11 = { cutouts: null, children: null };
+      const obj15 = { style: tmp.attachmentPreviewOverflow, children: null };
+      const obj16 = { cutouts: null, children: null };
       const items2 = [size3];
-      obj11.cutouts = items2;
-      obj11.children = tmp7;
-      const items3 = [hasOwnProperty(ClipViewDefault, obj11), ];
-      const obj12 = { style: tmp.overflowCount, variant: "text-xs/semibold", color: "text-default", children: null };
+      obj16.cutouts = items2;
+      obj16.children = tmp7;
+      const items3 = [hasOwnProperty(ClipViewDefault, obj16), ];
+      const obj17 = { style: tmp.overflowCount, variant: "text-xs/semibold", color: "text-default", children: null };
       const items4 = ["+", length - 1];
-      obj12.children = items4;
-      items3[1] = timestampProducer(Text_Text.Text, obj12);
-      obj10.children = items3;
-      tmp33 = timestampProducer(View, obj10);
+      obj17.children = items4;
+      items3[1] = timestampProducer(Text_Text.Text, obj17);
+      obj15.children = items3;
+      tmp33 = timestampProducer(View, obj15);
     }
   }
-  obj13 = { style: tmp.forwardPreview, children: null };
+  const obj19 = { style: tmp.forwardPreview, children: null };
   const items5 = [hasOwnProperty(View, { style: tmp.quote }), , , ];
-  const obj15 = { style: tmp.contentWrapper, children: null };
+  const obj21 = { style: tmp.contentWrapper, children: null };
   let tmp36Result = null != checkpointData;
   if (tmp36Result) {
-    const obj16 = { variant: "text-md/medium", children: null };
+    const obj22 = { variant: "text-md/medium", children: null };
     const intl5 = util.intl;
-    obj16.children = intl5.string(_modDef2914.goiR2u);
-    tmp36Result = hasOwnProperty(Text_Text.Text, obj16);
+    obj22.children = intl5.string(_modDef2914.goiR2u);
+    tmp36Result = hasOwnProperty(Text_Text.Text, obj22);
   }
   const items6 = [tmp36Result, , ];
-  tmp36Result = hasContent;
+  let tmp36Result5 = hasContent;
   if (hasContent) {
-    obj17 = { message, contentMessage, attachmentCount: length };
-    tmp36Result = hasOwnProperty(MessagePreview, obj17);
+    const obj23 = { message, contentMessage, attachmentCount: length };
+    tmp36Result5 = hasOwnProperty(MessagePreview, obj23);
   }
-  items6[1] = tmp36Result;
+  items6[1] = tmp36Result5;
   let tmp34Result = length > 0;
   if (tmp34Result) {
-    const obj18 = { style: tmp.attachmentRow, children: null };
-    let tmp36Result1 = null != tmp8;
-    if (tmp36Result1) {
+    const obj24 = { style: tmp.attachmentRow, children: null };
+    let tmp36Result6 = null != tmp8;
+    if (tmp36Result6) {
       let str2 = "custom";
       if (hasContent) {
         str2 = "sm";
       }
-      const obj19 = { size: str2, style: null, color: "text-muted" };
+      const obj25 = { size: str2, style: null, color: "text-muted" };
       let largeIcon = !hasContent;
       if (!hasContent) {
         largeIcon = tmp.largeIcon;
       }
-      obj19.style = largeIcon;
-      tmp36Result1 = hasOwnProperty(tmp8, obj19);
+      obj25.style = largeIcon;
+      tmp36Result6 = hasOwnProperty(tmp8, obj25);
     }
-    const items7 = [tmp36Result1, ];
-    let tmp36Result2 = null != tmp9;
-    if (tmp36Result2) {
+    const items7 = [tmp36Result6, ];
+    let tmp36Result7 = null != tmp9;
+    if (tmp36Result7) {
       let str3 = "text-md/medium";
       if (hasContent) {
         str3 = "text-sm/medium";
       }
-      const obj20 = { variant: str3, color: "text-muted", children: tmp9 };
-      tmp36Result2 = hasOwnProperty(Text_Text.Text, obj20);
+      const obj26 = { variant: str3, color: "text-muted", children: tmp9 };
+      tmp36Result7 = hasOwnProperty(Text_Text.Text, obj26);
     }
-    items7[1] = tmp36Result2;
-    obj18.children = items7;
-    tmp34Result = timestampProducer(View, obj18);
+    items7[1] = tmp36Result7;
+    obj24.children = items7;
+    tmp34Result = timestampProducer(View, obj24);
   }
   items6[2] = tmp34Result;
-  obj15.children = items6;
-  items5[1] = timestampProducer(View, obj15);
+  obj21.children = items6;
+  items5[1] = timestampProducer(View, obj21);
   items5[2] = tmp33;
-  let tmp36Result3 = null != checkpointData;
-  if (tmp36Result3) {
-    const obj21 = { style: tmp.attachmentPreview, children: null };
+  let tmp36Result8 = null != checkpointData;
+  if (tmp36Result8) {
+    const obj27 = { style: tmp.attachmentPreview, children: null };
     const size4 = { style: null, width: null, height: null, source: null };
-    const obj22 = { backgroundColor: primaryColor };
-    size4.style = obj22;
+    const obj28 = { backgroundColor: primaryColor };
+    size4.style = obj28;
     size4.width = v56;
     size4.height = v56;
-    tmp2Result = CheckpointUtils;
+    const tmp46 = FastImageDefault;
     let num5 = checkpointData.cardId;
     if (num5 == null) {
       num5 = 0;
     }
-    const obj23 = { uri: tmp2Result.getCardAssetUrl(num5) };
-    size4.source = obj23;
-    obj21.children = hasOwnProperty(FastImageDefault, size4);
-    tmp36Result3 = hasOwnProperty(View, obj21);
+    const obj29 = { uri: CheckpointUtils.getCardAssetUrl(num5) };
+    size4.source = obj29;
+    obj27.children = hasOwnProperty(tmp46, size4);
+    tmp36Result8 = hasOwnProperty(View, obj27);
+    const tmp2Result2 = CheckpointUtils;
   }
-  items5[3] = tmp36Result3;
-  obj13.children = items5;
-  return timestampProducer(View, obj13);
+  items5[3] = tmp36Result8;
+  obj19.children = items5;
+  return timestampProducer(View, obj19);
 };

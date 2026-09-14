@@ -13,8 +13,8 @@ let closure_5 = async function _getDeviceState() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,17 +27,17 @@ let closure_5 = async function _getDeviceState() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
           let fallback;
-          let obj1 = closure_0;
+          let obj4 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = { fallback: true };
+            obj4 = { fallback: true };
           }
-          fallback = obj1.fallback;
+          fallback = obj4.fallback;
           c5 = 1;
           c6 = 1;
           return { value: "PX_16", done: true };
@@ -48,15 +48,15 @@ let closure_5 = async function _getDeviceState() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c4 = 1;
           const MediaManager = closure_130_3.MediaManager;
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: MediaManager.getDeviceStateInfo(), done: false };
-          return obj3;
+          const obj6 = { value: MediaManager.getDeviceStateInfo(), done: false };
+          return obj6;
         }
       } else if (2 === tmp8) {
         c4 = 0;
@@ -72,12 +72,12 @@ let closure_5 = async function _getDeviceState() {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp24) {

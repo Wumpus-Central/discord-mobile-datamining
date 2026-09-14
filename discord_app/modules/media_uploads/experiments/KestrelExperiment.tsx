@@ -1,13 +1,13 @@
 // === Module 5260: KestrelExperiment ===
 
 // Module 5260 (KestrelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } };
-let config = ApexExperiment.createApexExperiment(obj);
-obj = { name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
-const config2 = ApexExperiment.createApexExperiment(obj);
+let ApexExperiment = ApexExperiment_mod;
+let config = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
+let ApexExperiment = ApexExperiment_mod;
+const config2 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
 
 export const KESTREL_GA_UPLOAD_LIMIT_MB = 20;
@@ -16,11 +16,10 @@ export const getKestrelConfig = function getKestrelConfig(location) {
   if (config2.getConfig({ location: _location }).enabled) {
     return { enabled: true, threshold: 20, isGA: true };
   } else {
-    let obj = { location: _location };
+    const obj = { location: _location };
     config = config.getConfig(obj);
-    obj = { enabled: null, threshold: null, isGA: false };
     ({ enabled: obj2.enabled, threshold: obj2.threshold } = config);
-    return obj;
+    return { enabled: null, threshold: null, isGA: false };
   }
 };
 export const getEffectiveKestrelLimit = function getEffectiveKestrelLimit(kestrelConfig, maxFileSize) {

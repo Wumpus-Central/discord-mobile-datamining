@@ -1,6 +1,6 @@
-// === Module 16263: BoostProgressBarCoachmark ===
+// === Module 16265: BoostProgressBarCoachmark ===
 
-// Module 16263 (BoostProgressBarCoachmark)
+// Module 16265 (BoostProgressBarCoachmark)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
@@ -46,6 +46,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11261).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11262).useCoachmark(guild.targetRef, memo);
   return null;
 };

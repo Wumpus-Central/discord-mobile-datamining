@@ -1,6 +1,6 @@
-// === Module 12853: InviteErrorUtils ===
+// === Module 12854: InviteErrorUtils ===
 
-// Module 12853 (InviteErrorUtils)
+// Module 12854 (InviteErrorUtils)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
@@ -23,32 +23,32 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
       if (!isStaffResult) {
         let tmp14 = timestampProducer;
       }
-      let obj = { title: null, description: null };
+      const obj2 = { title: null, description: null };
       const intl7 = util.intl;
-      obj = { quantity: tmp14 };
-      obj.title = intl7.formatToPlainString(util.t["ttJ/hj"], obj);
+      const obj3 = { quantity: tmp14 };
+      obj2.title = intl7.formatToPlainString(util.t["ttJ/hj"], obj3);
       const intl8 = util.intl;
-      obj.description = intl8.string(util.t.iLyuDO);
-      return obj;
+      obj2.description = intl8.string(util.t.iLyuDO);
+      return obj2;
     }
     tmp14 = React5;
     obj5 = PremiumUtilsDefault;
   } else if (constants.GUILD_AT_CAPACITY === code) {
-    const obj1 = { title: null, description: null };
+    const obj4 = { title: null, description: null };
     const intl5 = util.intl;
-    obj1.title = intl5.string(util.t.ZZlox4);
+    obj4.title = intl5.string(util.t.ZZlox4);
     const intl6 = util.intl;
-    obj1.description = intl6.string(util.t.ZUEGFn);
-    return obj1;
+    obj4.description = intl6.string(util.t.ZUEGFn);
+    return obj4;
   } else if (constants.GUILD_JOIN_INVITE_LIMITED_ACCESS === code) {
-    const obj2 = { title: null, description: null };
+    const obj6 = { title: null, description: null };
     const intl3 = util.intl;
-    obj2.title = intl3.string(util.t.kJwpBW);
+    obj6.title = intl3.string(util.t.kJwpBW);
     const intl4 = util.intl;
-    obj2.description = intl4.string(util.t.ZUEGFn);
-    return obj2;
+    obj6.description = intl4.string(util.t.ZUEGFn);
+    return obj6;
   } else if (constants.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED === code) {
-    obj = { title: null, description: null };
+    const obj = { title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["u/xsK9"]);
     const intl2 = util.intl;

@@ -13,7 +13,7 @@ require = fn;
 function updateCombo(userId) {
   const flag = true;
   const iter = secondaryIndexMap.get("" + userId.userId + "-" + userId.channelId);
-  let obj = {};
+  let obj2 = {};
   let merged = Object.assign(iter);
   let merged1 = Object.assign(userId);
   let num = userId.value;
@@ -27,7 +27,7 @@ function updateCombo(userId) {
   if (num == null) {
     num = 0;
   }
-  obj.value = num;
+  obj2.value = num;
   let num2 = userId.multiplier;
   if (num2 == null) {
     let multiplier;
@@ -39,25 +39,25 @@ function updateCombo(userId) {
   if (num2 == null) {
     num2 = 1;
   }
-  obj.multiplier = Math.min(num2, 7);
-  let decayInterval;
+  obj2.multiplier = Math.min(num2, 7);
+  let decayInterval1;
   if (iter != null) {
-    decayInterval = iter.decayInterval;
+    decayInterval1 = iter.decayInterval;
   }
-  if (decayInterval == null) {
-    decayInterval = new obj(1952).Interval();
+  if (decayInterval1 == null) {
+    decayInterval1 = new obj2(1952).Interval();
   }
-  obj.decayInterval = decayInterval;
-  const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
+  obj2.decayInterval = decayInterval1;
+  const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
   if (flag) {
-    decayInterval = obj.decayInterval;
+    let decayInterval = obj2.decayInterval;
     if (decayInterval != null) {
       decayInterval.start(1000, () => {
-        const iter2 = secondaryIndexMap.get("" + obj.userId + "-" + obj.channelId);
+        const iter2 = secondaryIndexMap.get("" + obj2.userId + "-" + obj2.channelId);
         if (null != iter2) {
           if (iter2.value > 0) {
             if (!tmp) {
-              obj = {};
+              const obj = {};
               const merged = Object.assign(iter2);
               obj.value = iter2.value - 1;
               updateCombo(obj);
@@ -69,11 +69,11 @@ function updateCombo(userId) {
             decayInterval.stop();
           }
           if (iter2.value <= 0) {
-            obj = {};
+            obj2 = {};
             const merged1 = Object.assign(iter2);
-            obj.value = 0;
-            obj.multiplier = 1;
-            updateCombo(obj);
+            obj2.value = 0;
+            obj2.multiplier = 1;
+            updateCombo(obj2);
             poggermodeStore.emitChange();
           }
           tmp = iter.multiplier !== iter2.multiplier && iter.value !== iter2.value;
@@ -185,12 +185,11 @@ const poggermodeStore = new PoggermodeStore(DispatcherDefault, {
       if (author != null) {
         id1 = author.id;
       }
-      let obj = set;
       let tmp6 = id1 === id;
       if (tmp6) {
-        let flag2 = null != nonce && !obj.has(nonce);
+        let flag2 = null != nonce && !set.has(nonce);
         if (flag2) {
-          obj.add(nonce);
+          set.add(nonce);
           flag2 = true;
         }
         tmp6 = flag2;
@@ -220,8 +219,8 @@ const poggermodeStore = new PoggermodeStore(DispatcherDefault, {
                   result = 4 * Math.random();
                 }
                 const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-                obj = { duration: 1000, intensity: result };
-                ComponentDispatch.dispatch(ComponentActions.SHAKE_APP, obj);
+                const obj3 = { duration: 1000, intensity: result };
+                ComponentDispatch.dispatch(ComponentActions.SHAKE_APP, obj3);
                 return true;
               }
             }

@@ -2,7 +2,7 @@
 
 // Module 8320 (FramePreviewOverrideStore)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1152 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1150 */;
 import FileManagerUtils from "FileManagerUtils" /* 8322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -51,8 +51,8 @@ let closure_11 = async function _buildOverride(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -65,8 +65,8 @@ let closure_11 = async function _buildOverride(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp;
             closure_3 = tmp2;
@@ -91,9 +91,9 @@ let closure_11 = async function _buildOverride(arg0) {
             let _Array = Array;
             let tmp75 = layers;
             if (Array.isArray(layers.layers)) {
-              let obj2 = NativeFileModuleDefault;
+              let obj3 = NativeFileModuleDefault;
               let _HermesInternal = HermesInternal;
-              closure_131_1 = "file://" + obj2.getConstants().DocumentsDirPath + "/" + closure_2_6;
+              closure_131_1 = "file://" + obj3.getConstants().DocumentsDirPath + "/" + closure_2_6;
               closure_131_2 = [];
               closure_131_3 = {};
               closure_131_4 = [];
@@ -119,29 +119,29 @@ let closure_11 = async function _buildOverride(arg0) {
           c6 = 0;
           closure_1.return();
           c8 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_131_16 = value;
-          obj2 = { layer: null, order: null, index: null };
-          obj2.layer = closure_131_15;
-          obj2.order = closure_131_12;
-          obj2.index = parsed.index;
-          let arr = closure_131_2.push(obj2);
-          let obj3 = { uri: null, ratio: null };
-          obj3.uri = closure_131_14;
+          let obj6 = { layer: null, order: null, index: null };
+          obj6.layer = closure_131_15;
+          obj6.order = closure_131_12;
+          obj6.index = parsed.index;
+          let arr = closure_131_2.push(obj6);
+          let obj7 = { uri: null, ratio: null };
+          obj7.uri = closure_131_14;
           let num2 = 0;
           let tmp71 = closure_131_3;
           let tmp72 = closure_131_13;
           if (closure_131_16.width > 0) {
             num2 = closure_131_16.height / closure_131_16.width;
           }
-          obj3.ratio = num2;
-          tmp71[tmp72] = obj3;
-          obj = { layer: null, dims: null };
+          obj7.ratio = num2;
+          tmp71[tmp72] = obj7;
+          let obj = { layer: null, dims: null };
           obj.layer = closure_131_15;
           obj.dims = closure_131_16;
-          arr = closure_131_4.push(obj);
+          let arr2 = closure_131_4.push(obj);
           c6 = 0;
         }
         if (closure_1 === undefined) {
@@ -156,20 +156,20 @@ let closure_11 = async function _buildOverride(arg0) {
             let sorted = closure_131_2.sort(closure_132_0(closure_132_2[6]).compareLayerFiles);
             let obj12 = closure_132_0(closure_132_2[7]);
             closure_131_17 = obj12.computeProfileFrameDimensions(closure_131_4);
-            let obj4 = { frameKey: null, previewUri: null, layers: null, layerAssetById: null };
-            obj4.frameKey = closure_131_0.frameKey;
+            let obj8 = { frameKey: null, previewUri: null, layers: null, layerAssetById: null };
+            obj8.frameKey = closure_131_0.frameKey;
             let combined = null;
             if (null != closure_131_0.preview) {
               let _HermesInternal3 = HermesInternal;
               combined = "" + closure_131_1 + "/" + closure_131_0.preview;
             }
-            obj4.previewUri = combined;
-            obj4.layers = closure_131_2.map((layer) => layer.layer);
-            obj4.layerAssetById = closure_131_3;
+            obj8.previewUri = combined;
+            obj8.layers = closure_131_2.map((layer) => layer.layer);
+            obj8.layerAssetById = closure_131_3;
             let merged = Object.assign(closure_131_17);
             c8 = 3;
-            let obj5 = { value: obj4, done: true };
-            return obj5;
+            let obj9 = { value: obj8, done: true };
+            return obj9;
           }
         } else {
           c6 = 1;
@@ -204,17 +204,17 @@ let closure_11 = async function _buildOverride(arg0) {
             let str19 = "/";
             let str20 = "/";
             closure_131_14 = "" + closure_131_1 + "/" + folder + "/" + filename;
-            let obj6 = { id: null, type: null, order: null, anchor: null, responsive: null };
-            obj6.id = closure_131_13;
-            obj6.type = parsed.type;
-            obj6.order = closure_131_12;
-            obj6.anchor = parsed.anchor;
-            obj6.responsive = parsed.responsive;
-            closure_131_15 = obj6;
+            let obj11 = { id: null, type: null, order: null, anchor: null, responsive: null };
+            obj11.id = closure_131_13;
+            obj11.type = parsed.type;
+            obj11.order = closure_131_12;
+            obj11.anchor = parsed.anchor;
+            obj11.responsive = parsed.responsive;
+            closure_131_15 = obj11;
             c7 = 2;
             c8 = 1;
-            let obj7 = { value: closure_132_9(closure_131_14), done: false };
-            return obj7;
+            let obj13 = { value: closure_132_9(closure_131_14), done: false };
+            return obj13;
           }
         }
       }
@@ -226,8 +226,12 @@ const FrameOverrideConstants = fn(8321);
 ({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
 let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
 let closure_8 = 0;
-let module_560 = fn(560);
-module_560 = module_560.create((arg0) => {
+const module_560 = fn(560);
+const tmp3 = new LoggerDefault("FramePreviewOverrideStore");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx");
+
+export const useFramePreviewOverrideStore = module_560.create((arg0) => {
   closure_0 = arg0;
   let obj = { override: null, status: "idle", error: null, loadFromDevice: null, clear: null };
   closure_1 = asyncGeneratorStep(async () => {
@@ -238,8 +242,8 @@ module_560 = module_560.create((arg0) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -252,8 +256,8 @@ module_560 = module_560.create((arg0) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp3;
             closure_128_2 = undefined;
@@ -268,7 +272,7 @@ module_560 = module_560.create((arg0) => {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = {
+            const obj4 = {
               value: (function readManifest() {
                         const self = this;
                         const apply = closure_1_10.apply;
@@ -281,7 +285,7 @@ module_560 = module_560.create((arg0) => {
                       })(),
               done: false
             };
-            return obj1;
+            return obj4;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -299,8 +303,8 @@ module_560 = module_560.create((arg0) => {
             }
             closure_128_4 = message;
             logger.error("Failed to load frame override", closure_128_5);
-            const obj2 = { status: "error", error: closure_128_4 };
-            closure_129_0(obj2);
+            const obj5 = { status: "error", error: closure_128_4 };
+            closure_129_0(obj5);
           }
         } else if (2 === tmp8) {
           if (arg0 === 1) {
@@ -309,8 +313,8 @@ module_560 = module_560.create((arg0) => {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_2 = value;
             if (closure_128_1()) {
@@ -321,12 +325,12 @@ module_560 = module_560.create((arg0) => {
               closure_129_0({ status: "error", error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs)." });
               c3 = 0;
               c5 = 3;
-              const obj4 = { value: undefined, done: true };
-              return obj4;
+              const obj7 = { value: undefined, done: true };
+              return obj7;
             } else {
               c4 = 3;
               c5 = 1;
-              const obj5 = {
+              const obj8 = {
                 value: (function buildOverride() {
                             const self = this;
                             const apply = closure_1_11.apply;
@@ -339,7 +343,7 @@ module_560 = module_560.create((arg0) => {
                           })(closure_128_2),
                 done: false
               };
-              return obj5;
+              return obj8;
             }
           }
         } else if (arg0 === 1) {
@@ -348,12 +352,12 @@ module_560 = module_560.create((arg0) => {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_128_3 = value;
           if (!closure_128_1()) {
-            obj = { override: closure_128_3, status: "idle", error: null };
+            const obj = { override: closure_128_3, status: "idle", error: null };
             closure_129_0(obj);
             c3 = 0;
             c5 = 3;
@@ -389,7 +393,3 @@ module_560 = module_560.create((arg0) => {
   };
   return obj;
 });
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx");
-
-export const useFramePreviewOverrideStore = module_560;

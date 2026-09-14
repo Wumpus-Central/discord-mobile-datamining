@@ -1,10 +1,10 @@
-// === Module 17219: VoicePanelSettingsActionSheet ===
+// === Module 17221: VoicePanelSettingsActionSheet ===
 
-// Module 17219 (VoicePanelSettingsActionSheet)
+// Module 17221 (VoicePanelSettingsActionSheet)
 import BottomSheetModal from "BottomSheetModal" /* 6728 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
-import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview" /* 17220 */;
+import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview" /* 17222 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,10 +16,10 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/header/Voi
 
 export default noop.memo(function VoicePanelSettingsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
-  let obj = { startExpanded: true, scrollable: true, children: null };
-  obj = { children: null };
-  obj = { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) };
-  obj.children = jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) });
-  obj.children = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) });
-  return jsx(Sheet_BottomSheet.BottomSheet, { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) });
+  const obj = { startExpanded: true, scrollable: true, children: null };
+  const obj2 = { children: null };
+  const tmp = closure_4();
+  obj2.children = jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) });
+  obj.children = jsx(BottomSheetModal.BottomSheetScrollView, { children: null });
+  return jsx(Sheet_BottomSheet.BottomSheet, { startExpanded: true, scrollable: true, children: null });
 });

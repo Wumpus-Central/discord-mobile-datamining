@@ -27,25 +27,22 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
     } else {
       const tmp13 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
       const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
-      let obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
+      const obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
       const tmp16 = formatUsernameOnClickDefault(obj);
       if (tmp13 > 1) {
         const intl2 = util.intl;
-        obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: null, numSubscriptions: null };
-        let tmp14Result = GuildBoostingUtils;
-        obj.newTierName = tmp14Result.getTierName(TIER_1);
-        obj.numSubscriptions = tmp13;
-        let formatToPartsResult = intl2.formatToParts(util.t.GjNvr7, obj);
+        const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: GuildBoostingUtils.getTierName(TIER_1), numSubscriptions: tmp13 };
+        let formatToPartsResult = intl2.formatToParts(util.t.GjNvr7, obj2);
+        const tmp14Result = GuildBoostingUtils;
       } else {
         const intl = util.intl;
-        const obj1 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: null };
-        tmp14Result = GuildBoostingUtils;
-        obj1.newTierName = tmp14Result.getTierName(TIER_1);
-        formatToPartsResult = intl.formatToParts(util.t.oAYAP7, obj1);
+        const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp16, guildName: guild.name, newTierName: GuildBoostingUtils.getTierName(TIER_1) };
+        formatToPartsResult = intl.formatToParts(util.t.oAYAP7, obj3);
+        const tmp14Result2 = GuildBoostingUtils;
       }
-      const obj2 = { content: formatToPartsResult };
+      const obj4 = { content: formatToPartsResult };
       const merged = Object.assign(createCommonMessageDefault(message));
-      return obj2;
+      return obj4;
     }
   }
 };

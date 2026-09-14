@@ -1,10 +1,10 @@
-// === Module 13891: RTCConnectionStats ===
+// === Module 13892: RTCConnectionStats ===
 
-// Module 13891 (RTCConnectionStats)
+// Module 13892 (RTCConnectionStats)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1074 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
-import zipWithNextDefault from "zipWithNext" /* 13892 */;
+import zipWithNextDefault from "zipWithNext" /* 13893 */;
 import size from "module_2" /* 2 */;
 
 const RTCConnectionStates = Constants.RTCConnectionStates;
@@ -32,24 +32,22 @@ prototype["reset"] = function reset(arg0) {
 prototype["update"] = function update(current) {
   let nowResult = arg1;
   if (arg1 === undefined) {
-    let obj = TimeUtils;
-    nowResult = obj.now();
+    nowResult = TimeUtils.now();
   }
   const self = this;
   if (this.current !== current) {
     self.current = current;
     const history = self.history;
-    obj = { state: current, startTime: nowResult };
-    history.push(obj);
+    const obj2 = { state: current, startTime: nowResult };
+    history.push(obj2);
   }
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats() {
   if (nowResult === undefined) {
-    let obj = TimeUtils;
-    nowResult = obj.now();
+    nowResult = TimeUtils.now();
   }
   const stateDurations = this.getStateDurations(nowResult);
-  obj = {
+  const obj2 = {
     state_awaiting_endpoint_ms: _modDef12.sumBy(stateDurations, (state) => {
       let num = 0;
       if (state.state === RTC_DISCONNECTED) {
@@ -65,42 +63,42 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     state_rtc_connecting_ms: null,
     state_rtc_disconnected_ms: null
   };
-  obj.state_authenticating_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_authenticating_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj.state_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj.state_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj.state_ice_checking_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_ice_checking_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj.state_no_route_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_no_route_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  obj.state_rtc_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_rtc_connecting_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -108,25 +106,24 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   const RTC_DISCONNECTED = RTCConnectionStates.RTC_DISCONNECTED;
-  obj.state_rtc_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
+  obj2.state_rtc_disconnected_ms = _modDef12.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
     }
     return num;
   });
-  return obj;
+  return obj2;
 };
 prototype["getStateDurations"] = function getStateDurations(nowResult) {
   const self = this;
   if (0 === this.history.length) {
     return [];
   } else {
-    let arr = zipWithNextDefault(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
-    let obj = _modDef12;
-    const lastResult = obj.last(self.history);
-    obj = { state: lastResult.state, durationMs: nowResult - lastResult.startTime };
-    arr = arr.push(obj);
+    const arr = zipWithNextDefault(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
+    const lastResult = _modDef12.last(self.history);
+    const obj2 = { state: lastResult.state, durationMs: nowResult - lastResult.startTime };
+    arr.push(obj2);
     return arr;
   }
 };

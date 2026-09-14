@@ -1,6 +1,6 @@
-// === Module 17288: VoicePanelConsoleStatus ===
+// === Module 17290: VoicePanelConsoleStatus ===
 
-// Module 17288 (VoicePanelConsoleStatus)
+// Module 17290 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
@@ -40,7 +40,6 @@ class VoicePanelConsoleStatus {
     obj2 = state(windowDimensions[9]);
     fn = function v() {
       const size = { backgroundColor: color, width: windowDimensions.get().width - 2 * EDGE_GUTTER, height: CONTROLS_HEIGHT + 36, borderRadius: 32, transform: null };
-      obj2 = spring;
       let num = 100;
       if (sharedValue.get()) {
         num = 0;
@@ -56,17 +55,17 @@ class VoicePanelConsoleStatus {
           const obj = state(windowDimensions[9]);
         }
       };
-      obj = { shouldShow: sharedValue, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-      fn.__closure = obj;
+      const obj2 = spring;
+      fn.__closure = { shouldShow: sharedValue, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
       fn.__workletHash = 9820708059867;
       fn.__initData = __initData;
-      obj.translateY = obj2.withSpring(num, obj2, "respect-motion-settings", fn);
+      obj.translateY = obj2.withSpring(num, obj5, "respect-motion-settings", fn);
       const items = [obj];
       size.transform = items;
       return size;
     };
-    obj = { color, windowDimensions, EDGE_GUTTER: closure_4, CONTROLS_HEIGHT, CONSOLE_STATUS_HEIGHT: 36, withSpring: state(windowDimensions[13]).withSpring, shouldShow: sharedValue, FADE_IN_MODE_PHYSICS: closure_9, runOnJS: state(windowDimensions[9]).runOnJS, cleanUp };
-    fn.__closure = obj;
+    obj1 = { color, windowDimensions, EDGE_GUTTER: closure_4, CONTROLS_HEIGHT, CONSOLE_STATUS_HEIGHT: 36, withSpring: state(windowDimensions[13]).withSpring, shouldShow: sharedValue, FADE_IN_MODE_PHYSICS: closure_9, runOnJS: state(windowDimensions[9]).runOnJS, cleanUp };
+    fn.__closure = obj1;
     fn.__workletHash = 14156265059426;
     fn.__initData = closure_10;
     animatedStyle = obj2.useAnimatedStyle(fn);
@@ -82,67 +81,64 @@ class VoicePanelConsoleStatus {
     V.__initData = closure_12;
     tmp13 = jsxs;
     animatedStyle1 = obj4.useAnimatedStyle(V);
-    obj1 = { style: null, animatedProps: hiddenProps, children: null };
+    obj14 = { style: null, animatedProps: hiddenProps, children: null };
     items1 = [, , ];
     items1[0] = tmp.consoleParentContainer;
     items1[1] = tmp9;
     items1[2] = hiddenStyles;
-    obj1.style = items1;
+    obj14.style = items1;
     tmp14 = jsx;
-    obj2 = { style: null, children: null };
+    obj15 = { style: null, children: null };
     items2 = [];
     items2[0] = tmp.consoleContainer;
-    obj2.style = items2;
+    obj15.style = items2;
     tmp15 = cleanUp(windowDimensions[14]);
-    obj3 = { style: animatedStyle, children: null };
-    obj4 = { style: tmp.consoleItemContainer, children: null };
+    obj16 = { style: animatedStyle, children: null };
+    obj17 = { style: tmp.consoleItemContainer, children: null };
     tmp16 = cleanUp(windowDimensions[14]);
-    obj5 = { source: icon, color: cleanUp(windowDimensions[6]).unsafe_rawColors.WHITE, size: state(windowDimensions[15]).IconSizes.SMALL };
+    obj18 = { source: icon, color: cleanUp(windowDimensions[6]).unsafe_rawColors.WHITE, size: state(windowDimensions[15]).IconSizes.SMALL };
     items3 = [, , ];
-    items3[0] = jsx(state(windowDimensions[15]).Icon, obj5);
-    obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.consoleText, children: text };
-    items3[1] = jsx(state(windowDimensions[16]).Text, obj6);
+    items3[0] = jsx(state(windowDimensions[15]).Icon, obj18);
+    obj19 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.consoleText, children: text };
+    items3[1] = jsx(state(windowDimensions[16]).Text, obj19);
     tmp14Result = null;
     if (displayCancel) {
-      obj7 = { hitSlop: 4, onPress: null, children: null };
-      obj7.onPress = tmp6(tmp3[18]).disconnectRemote;
-      obj8 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
+      obj20 = { hitSlop: 4, onPress: null, children: null };
+      obj20.onPress = tmp6(tmp3[18]).disconnectRemote;
+      obj21 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
       intl = tmp6(tmp3[19]).intl;
-      obj8.children = intl.string(tmp6(tmp3[19]).t["ETE/oC"]);
-      obj7.children = tmp14(tmp6(tmp3[16]).Text, obj8);
-      tmp14Result = tmp14(tmp6(tmp3[17]).PressableOpacity, obj7);
+      obj21.children = intl.string(tmp6(tmp3[19]).t["ETE/oC"]);
+      obj20.children = tmp14(tmp6(tmp3[16]).Text, obj21);
+      tmp14Result = tmp14(tmp6(tmp3[17]).PressableOpacity, obj20);
     }
     items3[2] = tmp14Result;
-    obj4.children = items3;
-    obj3.children = tmp13(tmp16, obj4);
-    obj2.children = tmp14(cleanUp(windowDimensions[9]).View, obj3);
+    obj17.children = items3;
+    obj16.children = tmp13(tmp16, obj17);
+    obj15.children = tmp14(cleanUp(windowDimensions[9]).View, obj16);
     items4 = [, ];
-    items4[0] = tmp14(tmp15, obj2);
-    obj9 = { style: null, children: tmp14(tmp6(tmp3[20]).VoicePanelVisualEffectView, {}) };
+    items4[0] = tmp14(tmp15, obj15);
+    obj22 = { style: null, children: tmp14(tmp6(tmp3[20]).VoicePanelVisualEffectView, {}) };
     items5 = [, ];
     items5[0] = tmp.blockingControlCover;
     items5[1] = animatedStyle1;
-    obj9.style = items5;
-    items4[1] = tmp14(tmp2(tmp3[9]).View, obj9);
-    obj1.children = items4;
-    return tmp13(cleanUp(windowDimensions[9]).View, obj1);
+    obj22.style = items5;
+    items4[1] = tmp14(tmp2(tmp3[9]).View, obj22);
+    obj14.children = items4;
+    return tmp13(cleanUp(windowDimensions[9]).View, obj14);
   }
 }
-const EDGE_GUTTER = fn(12405).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(12400).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(12406).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(12401).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { consoleParentContainer: { zIndex: 1, position: "absolute", bottom: 0, overflow: "hidden", left: -0.5, right: 0, alignItems: "center" }, consoleContainer: null, consoleItemContainer: null, consoleText: null, blockingControlCover: null };
-createStyles = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" };
-createStyles.consoleContainer = createStyles;
-createStyles.consoleItemContainer = { flexDirection: "row", alignItems: "center", height: 36, marginHorizontal: 18 };
-createStyles.consoleText = { textAlign: "left", marginStart: 4, flex: 1 };
-createStyles.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
-const React6 = createStyles.createStyles(createStyles);
-let obj2 = {};
-let merged = Object.assign(fn(12402).MODE_CHANGE_PHYSICS);
-obj2.overshootClamping = true;
+const createStyles = fn(4636);
+let obj2 = { consoleParentContainer: { zIndex: 1, position: "absolute", bottom: 0, overflow: "hidden", left: -0.5, right: 0, alignItems: "center" }, consoleContainer: { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" }, consoleItemContainer: { flexDirection: "row", alignItems: "center", height: 36, marginHorizontal: 18 }, consoleText: { textAlign: "left", marginStart: 4, flex: 1 }, blockingControlCover: null };
+let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" };
+obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
+const React6 = createStyles.createStyles(obj2);
+let obj5 = {};
+let merged = Object.assign(fn(12403).MODE_CHANGE_PHYSICS);
+obj5.overshootClamping = true;
 const __initData = { code: "function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,'respect-motion-settings',function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}" };
 let closure_11 = { code: "function VoicePanelConsoleStatusTsx2(finished){const{shouldShow,runOnJS,cleanUp}=this.__closure;if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}}" };
 const __initData2 = { code: "function VoicePanelConsoleStatusTsx3(){const{windowDimensions,EDGE_GUTTER}=this.__closure;return{width:windowDimensions.get().width-EDGE_GUTTER*2};}" };

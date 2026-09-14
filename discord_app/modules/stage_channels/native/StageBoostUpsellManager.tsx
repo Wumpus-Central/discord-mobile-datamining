@@ -1,6 +1,6 @@
-// === Module 17599: StageBoostUpsellManager ===
+// === Module 17600: StageBoostUpsellManager ===
 
-// Module 17599 (StageBoostUpsellManager)
+// Module 17600 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -43,17 +43,17 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          let obj = StageMediaHooks;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
-                obj = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5511, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                const obj2 = { channel };
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5511, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }
             tmp5Result = useChannelVideoLimit;
           }
+          obj = StageMediaHooks;
         }
       }
     }

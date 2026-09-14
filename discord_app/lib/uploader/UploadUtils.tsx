@@ -1,8 +1,8 @@
 // === Module 5217: uploader/UploadUtils ===
 
 // Module 5217 (uploader/UploadUtils)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
-import js_shim_shim from "js_shim/shim" /* 1351 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import js_shim_shim from "js_shim/shim" /* 1349 */;
 import Upload from "Upload" /* 5209 */;
 import AttachmentFile from "AttachmentFile" /* 5218 */;
 import size from "module_2" /* 2 */;
@@ -56,9 +56,9 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
     throw error;
   } else {
     body = body.body;
-    let uri;
+    let uri1;
     if (body != null) {
-      uri = body.uri;
+      uri1 = body.uri;
     }
     if (!tmp3) {
       // // eliminated: always false
@@ -66,15 +66,15 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
       let error1 = new Error("No file path found in request body");
       throw error1;
     } else {
-      uri = body.body.uri;
-      const uri1 = body.body.uri;
+      const uri = body.body.uri;
+      const uri2 = body.body.uri;
       if (uri.startsWith("file://")) {
-        let substr = uri1.slice(7);
+        let substr = uri2.slice(7);
       } else {
-        substr = uri1;
+        substr = uri2;
       }
     }
-    tmp3 = undefined !== uri && typeof body.body.uri === "string";
+    tmp3 = undefined !== uri1 && typeof body.body.uri === "string";
   }
 };
 
@@ -119,12 +119,12 @@ export const canUploadNatively = function canUploadNatively(platform) {
     fileIsInAppDirResult = null != platform.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = AttachmentFile;
-    fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
+    fileIsInAppDirResult = AttachmentFile.fileIsInAppDir(platform.uri);
+    const tmpResult = AttachmentFile;
   }
   if (fileIsInAppDirResult) {
-    tmpResult = js_shim_shim;
-    fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
+    fileIsInAppDirResult = js_shim_shim.isLibdiscoreInitialized();
+    const tmpResult2 = js_shim_shim;
   }
   return fileIsInAppDirResult;
 };

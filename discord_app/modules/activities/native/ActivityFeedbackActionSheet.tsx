@@ -1,18 +1,18 @@
-// === Module 17470: ActivityFeedbackActionSheet ===
+// === Module 17472: ActivityFeedbackActionSheet ===
 
-// Module 17470 (ActivityFeedbackActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 17472 (ActivityFeedbackActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ToastUtils from "ToastUtils" /* 4334 */;
-import FeedbackUtils from "FeedbackUtils" /* 11758 */;
-import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11776 */;
-import getActivityReportOptionsDefault from "getActivityReportOptions" /* 17471 */;
-import trackActivityProblemDefault from "trackActivityProblem" /* 17472 */;
+import FeedbackUtils from "FeedbackUtils" /* 11759 */;
+import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11777 */;
+import getActivityReportOptionsDefault from "getActivityReportOptions" /* 17473 */;
+import trackActivityProblemDefault from "trackActivityProblem" /* 17474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityFeedbackReasons = fn(1920).ActivityFeedbackReasons;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const FeedbackType = fn(11755).FeedbackType;
+const FeedbackType = fn(11756).FeedbackType;
 const jsx = fn(21).jsx;
 const items = [, , ];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
@@ -30,8 +30,7 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
   let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
   const intl = activityApplication(1114).intl;
-  obj = { applicationName: activityApplication.name };
-  obj.headerLabel = intl.formatToPlainString(activityApplication(1114).t.QXYwoD, obj);
+  obj.headerLabel = intl.formatToPlainString(activityApplication(1114).t.QXYwoD, { applicationName: activityApplication.name });
   const intl2 = activityApplication(1114).intl;
   obj.ratingsBodyLabel = intl2.string(activityApplication(1114).t["9hk2KF"]);
   const intl3 = activityApplication(1114).intl;
@@ -40,8 +39,7 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
   obj.feedbackReasons = items;
   obj.otherKey = ActivityFeedbackReasons.OTHER;
   obj.trackOpen = function trackOpen() {
-    const obj = { type: "Activity Feedback Sheet", application_id: activityApplication.id, application_name: activityApplication.name, game_id: activityApplication.id, source: "Activity End" };
-    obj.track(AnalyticEvents.OPEN_POPOUT, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Activity Feedback Sheet", application_id: activityApplication.id, application_name: activityApplication.name, game_id: activityApplication.id, source: "Activity End" });
   };
   obj.trackReport = function trackReport(dontShowAgain) {
     ({ rating, reason, feedback } = dontShowAgain);
@@ -50,23 +48,23 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
       value = reason.value;
     }
     if (dontShowAgain.dontShowAgain) {
-      let obj = { application_id: activityApplication.id, rating };
-      obj.track(AnalyticEvents.ACTIVITY_REPORT_DONT_SHOW, obj);
-      obj = { feedbackType: FeedbackType.ACTIVITY, location: "ActivityFeedbackActionSheet" };
-      FeedbackUtils.processOptOut(obj);
+      const obj2 = { application_id: activityApplication.id, rating };
+      AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_REPORT_DONT_SHOW, obj2);
+      const obj4 = { feedbackType: FeedbackType.ACTIVITY, location: "ActivityFeedbackActionSheet" };
+      FeedbackUtils.processOptOut(obj4);
     }
     if (null != rating) {
       ToastUtils.presentFeedbackSent();
-      const obj1 = { problem: value, channel, embeddedActivityLocation, feedback: null, activityApplication: null, analyticsData: null, location: "Activity End", rating: null };
+      const obj6 = { problem: value, channel, embeddedActivityLocation, feedback: null, activityApplication: null, analyticsData: null, location: "Activity End", rating: null };
       if (feedback == null) {
         feedback = "";
       }
-      obj1.feedback = feedback;
-      obj1.activityApplication = activityApplication;
-      obj1.analyticsData = analyticsData;
-      obj1.rating = rating;
-      trackActivityProblemDefault(obj1);
+      obj6.feedback = feedback;
+      obj6.activityApplication = activityApplication;
+      obj6.analyticsData = analyticsData;
+      obj6.rating = rating;
+      trackActivityProblemDefault(obj6);
     }
   };
-  return jsx(FeedbackActionSheetDefault, { applicationName: activityApplication.name });
+  return jsx(FeedbackActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

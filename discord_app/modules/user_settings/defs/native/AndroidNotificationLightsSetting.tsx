@@ -1,14 +1,13 @@
-// === Module 15579: AndroidNotificationLightsSetting ===
+// === Module 15580: AndroidNotificationLightsSetting ===
 
-// Module 15579 (AndroidNotificationLightsSetting)
+// Module 15580 (AndroidNotificationLightsSetting)
 import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14538 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15568 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15572 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15566 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15569 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15573 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15567 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
@@ -26,48 +25,48 @@ let obj = {
   },
   onValueChange: setAndroidNotificationLightsEnabled
 };
-obj = {};
+let SettingBuilders = SettingBuilders_mod;
+const obj2 = {};
 const merged = Object.assign(obj);
-obj.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
-obj.usePredicate = function usePredicate() {
+obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj2.usePredicate = function usePredicate() {
   const tmp = React2();
   const isIOSResult = PlatformUtils.isIOS();
   let tmp5 = !isIOSResult;
   if (!isIOSResult) {
-    let tmp2Result = SettingsNotificationUtils;
-    tmp5 = !tmp2Result.hasAndroidNotificationChannels();
+    tmp5 = !SettingsNotificationUtils.hasAndroidNotificationChannels();
+    const tmp2Result = SettingsNotificationUtils;
   }
   if (tmp5) {
     tmp5 = null != tmp;
   }
-  tmp2Result = notifications_NotificationSettingsUtils;
   if (tmp5) {
-    tmp5 = !tmp2Result.useIsDeclarativeSettingsUIAvailable("AndroidNotificationLightsSetting");
+    tmp5 = !tmp2Result2.useIsDeclarativeSettingsUIAvailable("AndroidNotificationLightsSetting");
   }
   return tmp5;
 };
-const toggle = SettingBuilders.createToggle(obj);
-obj = {};
+const toggle = SettingBuilders.createToggle(obj2);
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
 const merged1 = Object.assign(obj);
-obj.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
-obj.usePredicate = function usePredicate() {
+obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj3.usePredicate = function usePredicate() {
   const tmp = React2();
   const isIOSResult = PlatformUtils.isIOS();
   let isDeclarativeSettingsUIAvailable = !isIOSResult;
   if (!isIOSResult) {
-    let tmp2Result = SettingsNotificationUtils;
-    isDeclarativeSettingsUIAvailable = !tmp2Result.hasAndroidNotificationChannels();
+    isDeclarativeSettingsUIAvailable = !SettingsNotificationUtils.hasAndroidNotificationChannels();
+    const tmp2Result = SettingsNotificationUtils;
   }
   if (isDeclarativeSettingsUIAvailable) {
     isDeclarativeSettingsUIAvailable = null != tmp;
   }
-  tmp2Result = notifications_NotificationSettingsUtils;
   if (isDeclarativeSettingsUIAvailable) {
-    isDeclarativeSettingsUIAvailable = tmp2Result.useIsDeclarativeSettingsUIAvailable("RedesignAndroidNotificationLightsSetting");
+    isDeclarativeSettingsUIAvailable = tmp2Result2.useIsDeclarativeSettingsUIAvailable("RedesignAndroidNotificationLightsSetting");
   }
   return isDeclarativeSettingsUIAvailable;
 };
-const toggle1 = SettingBuilders.createToggle(obj);
+const toggle1 = SettingBuilders.createToggle(obj3);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationLightsSetting.tsx");
 
 export default toggle;

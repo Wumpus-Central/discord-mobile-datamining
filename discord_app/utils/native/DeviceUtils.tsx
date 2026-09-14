@@ -2,7 +2,7 @@
 
 // Module 4615 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1343 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1341 */;
 
 require = fn;
 const constants = NativeDeviceModule.getConstants();

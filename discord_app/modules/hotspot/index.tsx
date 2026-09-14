@@ -3,6 +3,8 @@
 // Module 7316 (HotspotStore)
 import HotspotStore from "hotspot/HotspotStore" /* 7317 */;
 
+const require = globalThis.__r;
+
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
 const Constants = fn(7318);

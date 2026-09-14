@@ -1,8 +1,8 @@
-// === Module 17166: useInviteMembersCallback ===
+// === Module 17168: useInviteMembersCallback ===
 
-// Module 17166 (useInviteMembersCallback)
+// Module 17168 (useInviteMembersCallback)
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11719 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11720 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -23,8 +23,8 @@ export const useInviteMembersCallback = function useInviteMembersCallback(channe
       id = id.id;
       let result = openGroupDMAddMembersDefault(id, constants.CHANNEL_CALL);
     } else {
-      const obj = { source: constants2.VOICE_CHANNEL };
-      result = obj.showInstantInviteActionSheet(id, obj);
+      const obj2 = { source: constants2.VOICE_CHANNEL };
+      result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(id, obj2);
     }
   }, items);
 };

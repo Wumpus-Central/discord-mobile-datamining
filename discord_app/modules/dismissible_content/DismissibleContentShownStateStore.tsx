@@ -3,11 +3,13 @@
 // Module 1949 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
 import isActionRequiredDefault from "isActionRequired" /* 1953 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function withContent(currentlyShown, content) {
@@ -53,8 +55,8 @@ function withContent(currentlyShown, content) {
 }
 function withUpdateWinner(candidates, content) {
   if (0 === candidates.candidates.size) {
-    let obj = { state: candidates, arbitration: { type: "settled" } };
-    return obj;
+    const obj2 = { state: candidates, arbitration: { type: "settled" } };
+    return obj2;
   } else {
     const _Date2 = Date;
     const date = new Date();
@@ -69,18 +71,18 @@ function withUpdateWinner(candidates, content) {
     }
     if (hasItem) {
       if (!tmp3) {
-        obj = { state: null, arbitration: null };
+        const obj = { state: null, arbitration: null };
         if (batchInvocationManager.isInvoking()) {
           obj.state = candidates;
           if (null != content) {
-            obj = { type: "request", candidates: null };
+            const obj3 = { type: "request", candidates: null };
             const items = [content];
-            obj.candidates = items;
-            let obj1 = obj;
+            obj3.candidates = items;
+            let obj4 = obj3;
           } else {
-            obj1 = { type: "unchanged" };
+            obj4 = { type: "unchanged" };
           }
-          obj.arbitration = obj1;
+          obj.arbitration = obj4;
         } else {
           value = undefined;
           if (null != candidates.prevFatigableCandidate) {
@@ -126,7 +128,7 @@ function withUpdateWinner(candidates, content) {
     }
     if (null != candidates.shownFatigableCandidate) {
       if (!tmp3) {
-        const obj2 = { state: candidates, arbitration: { type: "settled" } };
+        const obj5 = { state: candidates, arbitration: { type: "settled" } };
       }
     }
     if (!batchInvocationManager.isPending()) {
@@ -135,33 +137,33 @@ function withUpdateWinner(candidates, content) {
       if (tmp22) {
         tmp22 = tmp21 - candidates.lastWinnerTime < 3600000;
       }
-      const obj3 = { state: candidates, arbitration: null };
+      const obj6 = { state: candidates, arbitration: null };
       if (tmp22) {
-        obj3.arbitration = { type: "unchanged" };
+        obj6.arbitration = { type: "unchanged" };
       } else {
-        const obj4 = { type: "request", candidates: null };
+        const obj7 = { type: "request", candidates: null };
         const candidates4 = candidates.candidates;
         const items2 = [];
         HermesBuiltin.arraySpread(candidates4.keys(), 0);
-        obj4.candidates = items2;
-        obj3.arbitration = obj4;
+        obj7.candidates = items2;
+        obj6.arbitration = obj7;
       }
       const date1 = new Date();
     }
-    const obj5 = { state: candidates, arbitration: null };
+    const obj8 = { state: candidates, arbitration: null };
     if (null != content) {
-      const obj6 = { type: "request", candidates: null };
+      const obj9 = { type: "request", candidates: null };
       const items3 = [content];
-      obj6.candidates = items3;
-      let obj7 = obj6;
+      obj9.candidates = items3;
+      let obj10 = obj9;
     } else {
-      obj7 = { type: "unchanged" };
+      obj10 = { type: "unchanged" };
     }
-    obj5.arbitration = obj7;
+    obj8.arbitration = obj10;
   }
 }
 const NOOP = fn(1074).NOOP;
-let identity = fn(1244);
+const identity = fn(1242);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
@@ -271,7 +273,7 @@ prototype["setHasRequiredAction"] = function setHasRequiredAction() {
   closure_7 = isActionRequiredDefault(LoginRequiredActionStore, UserRequiredActionStore);
 };
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
-identity = {
+const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(DispatcherDefault, {
   CONNECTION_OPEN() {
     ReactBatchUpdates.batchUpdates(() => {
       state.setState(() => {
@@ -300,8 +302,7 @@ identity = {
     });
     batchInvocationManager.reset();
   }
-};
-const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(DispatcherDefault, identity);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
 

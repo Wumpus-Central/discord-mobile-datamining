@@ -10,35 +10,33 @@ import size from "module_2" /* 2 */;
 
 function handleUpdateStart(guildId) {
   guildId = guildId.guildId;
-  obj = map;
   value = map.get(guildId);
   if (null == value) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(closure_7);
-    obj.isUpdating = true;
-    const result = obj.set(guildId, obj);
+    obj2.isUpdating = true;
+    const result = map.set(guildId, obj2);
   } else {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(value);
-    obj.isUpdating = true;
-    const result1 = obj.set(guildId, obj);
+    obj3.isUpdating = true;
+    const result1 = map.set(guildId, obj3);
   }
 }
 function handleUpdateFailure(arg0) {
   ({ guildId, error } = arg0);
-  obj = map;
   value = map.get(guildId);
   if (null == value) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(closure_7);
-    obj.error = error;
-    const result = obj.set(guildId, obj);
+    obj2.error = error;
+    const result = map.set(guildId, obj2);
   } else {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(value);
-    obj.error = error;
-    obj.isUpdating = false;
-    const result1 = obj.set(guildId, obj);
+    obj3.error = error;
+    obj3.isUpdating = false;
+    const result1 = map.set(guildId, obj3);
   }
 }
 function handleInviteResolveOrCreate(invite) {
@@ -47,13 +45,13 @@ function handleInviteResolveOrCreate(invite) {
     value = map.get(profile.id);
     const guildProfileFromServer = GuildProfileBuilders.buildGuildProfileFromServer(profile);
     if (null == value) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_7);
-      obj.profile = guildProfileFromServer;
+      obj2.profile = guildProfileFromServer;
       const _Date2 = Date;
-      obj.lastSyncTimestamp = Date.now();
-      obj.fetchStatus = obj.FETCHED;
-      const result = map.set(profile.id, obj);
+      obj2.lastSyncTimestamp = Date.now();
+      obj2.fetchStatus = obj.FETCHED;
+      const result = map.set(profile.id, obj2);
     } else {
       obj = {};
       const merged1 = Object.assign(value);
@@ -66,7 +64,7 @@ function handleInviteResolveOrCreate(invite) {
   }
 }
 const ChannelTypes = Constants.ChannelTypes;
-let GuildProfileFetchStatus = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
+const GuildProfileFetchStatus = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 const map = new Map();
 const map1 = new Map();
 let closure_7 = { profile: null, lastSyncTimestamp: null, fetchStatus: GuildProfileFetchStatus.NOT_FETCHED, isUpdating: false, error: null, nextFetchAllowedAt: null };
@@ -168,96 +166,92 @@ prototype["getErrorCode"] = function getErrorCode(guildId) {
   return tmp;
 };
 GuildProfileStore.displayName = "GuildProfileStore";
-GuildProfileFetchStatus = {
+const guildProfileStore = new GuildProfileStore(DispatcherDefault, {
   GUILD_PROFILE_FETCH: function handleFetchStart(guildId) {
     guildId = guildId.guildId;
-    obj = map;
     value = map.get(guildId);
     if (null == value) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_7);
-      obj.fetchStatus = obj.FETCHING;
-      const result = obj.set(guildId, obj);
+      obj2.fetchStatus = map.FETCHING;
+      const result = map.set(guildId, obj2);
     } else {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(value);
-      obj.fetchStatus = obj.FETCHING;
-      const result1 = obj.set(guildId, obj);
+      obj3.fetchStatus = map.FETCHING;
+      const result1 = map.set(guildId, obj3);
     }
   },
   GUILD_PROFILE_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ guildId, profile } = arg0);
-    obj = map1;
     value = map1.get(guildId);
     if (value != null) {
       value.succeed();
     }
-    obj.delete(guildId);
-    value = map.get(guildId);
-    if (null == value) {
-      obj = {};
+    map1.delete(guildId);
+    value2 = map.get(guildId);
+    if (null == value2) {
+      const obj2 = {};
       const merged = Object.assign(closure_7);
-      obj.profile = profile;
+      obj2.profile = profile;
       const _Date2 = Date;
-      obj.lastSyncTimestamp = Date.now();
-      obj.fetchStatus = obj.FETCHED;
-      const result = map.set(guildId, obj);
+      obj2.lastSyncTimestamp = Date.now();
+      obj2.fetchStatus = map1.FETCHED;
+      const result = map.set(guildId, obj2);
     } else {
-      obj = {};
-      const merged1 = Object.assign(value);
-      obj.profile = profile;
+      const obj4 = {};
+      const merged1 = Object.assign(value2);
+      obj4.profile = profile;
       const _Date = Date;
-      obj.lastSyncTimestamp = Date.now();
-      obj.fetchStatus = obj.FETCHED;
-      obj.error = null;
-      obj.nextFetchAllowedAt = null;
-      const result1 = map.set(guildId, obj);
+      obj4.lastSyncTimestamp = Date.now();
+      obj4.fetchStatus = map1.FETCHED;
+      obj4.error = null;
+      obj4.nextFetchAllowedAt = null;
+      const result1 = map.set(guildId, obj4);
     }
   },
   GUILD_PROFILE_FETCH_FAILURE: function handleFetchFailure(arg0) {
     ({ guildId, error } = arg0);
-    obj = map1;
     value = map1.get(guildId);
     if (null == value) {
       const tmp5 = new BackoffDefault(5000, 300000);
-      const result = obj.set(guildId, tmp5);
+      const result = map1.set(guildId, tmp5);
       value = tmp5;
     }
     const sum = Date.now() + value.fail();
-    value = map.get(guildId);
-    if (null == value) {
-      obj = {};
+    value2 = map.get(guildId);
+    if (null == value2) {
+      const obj2 = {};
       const merged = Object.assign(closure_7);
-      obj.error = error;
-      obj.fetchStatus = obj.FETCHED;
-      obj.nextFetchAllowedAt = sum;
-      const result1 = map.set(guildId, obj);
+      obj2.error = error;
+      obj2.fetchStatus = map1.FETCHED;
+      obj2.nextFetchAllowedAt = sum;
+      const result1 = map.set(guildId, obj2);
     } else {
-      obj = {};
-      const merged1 = Object.assign(value);
-      obj.error = error;
-      obj.fetchStatus = obj.FETCHED;
-      obj.nextFetchAllowedAt = sum;
-      const result2 = map.set(guildId, obj);
+      const obj4 = {};
+      const merged1 = Object.assign(value2);
+      obj4.error = error;
+      obj4.fetchStatus = map1.FETCHED;
+      obj4.nextFetchAllowedAt = sum;
+      const result2 = map.set(guildId, obj4);
     }
     const failResult = value.fail();
   },
   GUILD_PROFILE_UPDATE: handleUpdateStart,
   GUILD_PROFILE_UPDATE_SUCCESS: function handleUpdateSuccess(arg0) {
     ({ guildId, profile } = arg0);
-    obj = map;
     value = map.get(guildId);
     if (null == value) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_7);
-      obj.profile = profile;
-      const result = obj.set(guildId, obj);
+      obj2.profile = profile;
+      const result = map.set(guildId, obj2);
     } else {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(value);
-      obj.profile = profile;
-      obj.isUpdating = false;
-      const result1 = obj.set(guildId, obj);
+      obj3.profile = profile;
+      obj3.isUpdating = false;
+      const result1 = map.set(guildId, obj3);
     }
   },
   GUILD_PROFILE_UPDATE_FAILURE: handleUpdateFailure,
@@ -270,13 +264,13 @@ GuildProfileFetchStatus = {
     if (null != profile) {
       value = map.get(guildId);
       if (null == value) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(closure_7);
-        obj.profile = profile;
+        obj2.profile = profile;
         const _Date2 = Date;
-        obj.lastSyncTimestamp = Date.now();
-        obj.fetchStatus = obj.FETCHED;
-        const result = map.set(guildId, obj);
+        obj2.lastSyncTimestamp = Date.now();
+        obj2.fetchStatus = obj.FETCHED;
+        const result = map.set(guildId, obj2);
       } else {
         obj = {};
         const merged1 = Object.assign(value);
@@ -311,31 +305,30 @@ GuildProfileFetchStatus = {
   },
   GUILD_UPDATE: function handleGuildUpdate(guild) {
     guild = guild.guild;
-    let profile = map;
     value = map.get(guild.id);
     if (null != value) {
       if (null != value.profile) {
-        profile = {};
+        const obj3 = {};
         const merged = Object.assign(value.profile);
         ({ name: obj2.name, icon } = guild);
         if (icon == null) {
           icon = null;
         }
-        profile.icon = icon;
+        obj3.icon = icon;
         let str = guild.description;
         if (str == null) {
           str = "";
         }
-        profile.description = str;
+        obj3.description = str;
         let discovery_splash = guild.discovery_splash;
         if (discovery_splash == null) {
           discovery_splash = null;
         }
-        profile.customBanner = discovery_splash;
-        profile = {};
+        obj3.customBanner = discovery_splash;
+        const obj5 = {};
         const merged1 = Object.assign(value);
-        profile.profile = profile;
-        const result = profile.set(guild.id, profile);
+        obj5.profile = obj3;
+        const result = map.set(guild.id, obj5);
       }
     }
     return false;
@@ -349,19 +342,19 @@ GuildProfileFetchStatus = {
       profile = value.profile;
     }
     if (tmp3) {
-      profile = {};
+      const obj2 = {};
       const merged = Object.assign(value);
-      profile.isUpdating = false;
-      profile = {};
+      obj2.isUpdating = false;
+      const obj3 = {};
       const merged1 = Object.assign(profile);
-      profile.visibility = guildId.visibility;
-      profile.profile = profile;
-      const result = profile.set(guildId, profile);
+      obj3.visibility = guildId.visibility;
+      obj2.profile = obj3;
+      const result = map.set(guildId, obj2);
     }
+    tmp3 = null != value && null != profile;
   },
   GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: handleUpdateFailure
-};
-const guildProfileStore = new GuildProfileStore(DispatcherDefault, GuildProfileFetchStatus);
+});
 let result = size.fileFinishedImporting("modules/guild_profile/GuildProfileStore.tsx");
 
 export default guildProfileStore;

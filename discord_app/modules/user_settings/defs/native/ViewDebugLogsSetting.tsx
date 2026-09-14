@@ -1,6 +1,6 @@
-// === Module 15648: ViewDebugLogsSetting ===
+// === Module 15649: ViewDebugLogsSetting ===
 
-// Module 15648 (ViewDebugLogsSetting)
+// Module 15649 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1114 */;
@@ -11,15 +11,15 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import ActionSheet from "ActionSheet" /* 7300 */;
 import ActionSheetRow from "ActionSheetRow" /* 7302 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11055 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 11093 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13931 */;
-import WrenchIcon from "WrenchIcon" /* 15649 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15651 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15654 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15655 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11056 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 11094 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13932 */;
+import WrenchIcon from "WrenchIcon" /* 15650 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15652 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15655 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15656 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function ViewDebugLogsActionSheetRow(icon) {
@@ -29,46 +29,44 @@ function ViewDebugLogsActionSheetRow(icon) {
     icon: icon.icon,
     label: title,
     onPress() {
-      let obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet(ViewDebugLogsActionSheet);
-      obj = {
+      ActionSheetActionCreatorsDefault.hideActionSheet(ViewDebugLogsActionSheet);
+      ModalActionCreatorsDefault.pushLazy(Promise.resolve({
         default() {
           return closure_2_5(ModalStackNavigatorDefault, { title, render, screenKey });
         }
-      };
-      ModalActionCreatorsDefault.pushLazy(Promise.resolve(obj));
+      }));
     }
   });
 }
 function ViewDebugLogsActionSheet() {
-  let obj = { header: null, children: null };
-  obj = { title: null };
+  const obj = { header: null, children: null };
+  const obj2 = { title: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.BUOCPi);
-  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
-  obj = { icon: hasOwnProperty(WrenchIcon.WrenchIcon, {}), title: null, screenKey: "debugLogs", render: null };
+  obj2.title = intl.string(util.t.BUOCPi);
+  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  const obj3 = { icon: hasOwnProperty(WrenchIcon.WrenchIcon, {}), title: null, screenKey: "debugLogs", render: null };
   const intl2 = util.intl;
-  obj.title = intl2.string(util.t.XpPGhL);
-  obj.render = function render() {
+  obj3.title = intl2.string(util.t.XpPGhL);
+  obj3.render = function render() {
     return closure_1_5(UserSettingsDebugLogsDefault, {});
   };
-  const items = [hasOwnProperty(ViewDebugLogsActionSheetRow, obj), , ];
-  const obj1 = { icon: hasOwnProperty(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
+  const items = [hasOwnProperty(ViewDebugLogsActionSheetRow, obj3), , ];
+  const obj4 = { icon: hasOwnProperty(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = util.intl;
-  obj1.title = intl3.string(util.t.b0nJvk);
-  obj1.render = function render() {
+  obj4.title = intl3.string(util.t.b0nJvk);
+  obj4.render = function render() {
     return closure_1_5(Suspense, { children: closure_1_5(UserSettingsStartupTimingsDefault, {}) });
   };
-  items[1] = hasOwnProperty(ViewDebugLogsActionSheetRow, obj1);
+  items[1] = hasOwnProperty(ViewDebugLogsActionSheetRow, obj4);
   let tmpResult = null;
   if (obj5.isAndroid()) {
-    const obj2 = { icon: hasOwnProperty(ChannelNotificationIcon.ChannelNotificationIcon, {}), title: null, screenKey: "pushNotificationLogs", render: null };
+    const obj6 = { icon: hasOwnProperty(ChannelNotificationIcon.ChannelNotificationIcon, {}), title: null, screenKey: "pushNotificationLogs", render: null };
     const intl4 = util.intl;
-    obj2.title = intl4.string(util.t.Ljj0ps);
-    obj2.render = function render() {
+    obj6.title = intl4.string(util.t.Ljj0ps);
+    obj6.render = function render() {
       return closure_1_5(UserSettingsPushNotificationLogsDefault, {});
     };
-    tmpResult = hasOwnProperty(ViewDebugLogsActionSheetRow, obj2);
+    tmpResult = hasOwnProperty(ViewDebugLogsActionSheetRow, obj6);
   }
   items[2] = tmpResult;
   obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: items });
@@ -88,8 +86,7 @@ const pressable = SettingBuilders.createPressable({
   usePredicate: UserSettings.DeveloperMode.useSetting,
   onPress: function handleViewDebugLogsSettingPress() {
     Keyboard.dismiss();
-    const obj = { default: ViewDebugLogsActionSheet };
-    obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ViewDebugLogsActionSheet }), ViewDebugLogsActionSheet);
   },
   withArrow: true
 });

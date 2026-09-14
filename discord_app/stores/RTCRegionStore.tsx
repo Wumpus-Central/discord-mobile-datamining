@@ -80,7 +80,7 @@ let items = [
   }
 ];
 RTCRegionStore.migrations = items;
-obj = {
+const rTCRegionStore = new RTCRegionStore(DispatcherDefault, {
   RTC_LATENCY_TEST_COMPLETE: function handleCompletedRTCLatencyTest(latencyRankedRegions) {
     if (latencyRankedRegions.latencyRankedRegions.length > 0) {
       closure_3.lastGeoRankedOrder = latencyRankedRegions.geoRankedRegions;
@@ -88,8 +88,7 @@ obj = {
     }
     closure_3.lastTestTimestamp = Date.now();
   }
-};
-const rTCRegionStore = new RTCRegionStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/RTCRegionStore.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 13157: AvatarPile ===
+// === Module 13158: AvatarPile ===
 
-// Module 13157 (AvatarPile)
+// Module 13158 (AvatarPile)
 import ClipView from "ClipView" /* 8940 */;
-import Pile from "Pile" /* 11134 */;
-import PileOverflow from "PileOverflow" /* 11135 */;
-import ListUtils from "ListUtils" /* 12748 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13158 */;
+import Pile from "Pile" /* 11135 */;
+import PileOverflow from "PileOverflow" /* 11136 */;
+import ListUtils from "ListUtils" /* 12749 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export const AvatarPile = function AvatarPile(arg0) {
   ({ size, names } = arg0);
   const countResult = Children.count(children);
   const tmp4 = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
-  let obj = { "aria-label": ListUtils.getListSummaryLabel(names, totalCount), shape: ClipView.CutoutShape.Circle, size: tmp4, gap: null, depthX: 0.4, children: null };
+  const obj = { "aria-label": ListUtils.getListSummaryLabel(names, totalCount), shape: ClipView.CutoutShape.Circle, size: tmp4, gap: null, depthX: 0.4, children: null };
   let num = 3;
   if (tmp4 <= 40) {
     num = 2;
@@ -29,8 +29,8 @@ export const AvatarPile = function AvatarPile(arg0) {
   const items = [children, ];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
-    obj = { size: tmp4, borderRadius: tmp4 / 2, value: totalCount - countResult };
-    tmp6 = React3(PileOverflow.PileOverflow, obj);
+    const obj3 = { size: tmp4, borderRadius: tmp4 / 2, value: totalCount - countResult };
+    tmp6 = React3(PileOverflow.PileOverflow, obj3);
   }
   items[1] = tmp6;
   obj.children = items;

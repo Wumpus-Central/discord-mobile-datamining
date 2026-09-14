@@ -13,17 +13,17 @@ require = fn;
 function RedesignBottomSheetTitleHeaderBase(children) {
   const subtitle = children.subtitle;
   const tmp = closure_8();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.titles, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.titles, children: null };
   const items = [timestampProducer(Title, { lineClamp: 2, children: children.title }), ];
   let tmp2Result = null;
   if (null != subtitle) {
-    obj = { children: subtitle };
-    tmp2Result = timestampProducer(Subtitle, obj);
+    const obj3 = { children: subtitle };
+    tmp2Result = timestampProducer(Subtitle, obj3);
   }
   items[1] = tmp2Result;
-  obj.children = items;
-  obj.children = React5(View, obj);
+  obj2.children = items;
+  obj.children = React5(View, obj2);
   return timestampProducer(View, obj);
 }
 function RedesignBottomSheetTitleHeaderStacked(subtitle) {
@@ -31,24 +31,23 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   ({ title, leading, trailing } = subtitle);
   const tmp = closure_8();
   const tmp2 = closure_10();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.container, tmp2.container];
   obj.style = items;
-  obj = { style: tmp2.accessories, children: null };
-  obj = { style: tmp2.item, children: leading };
-  const items1 = [timestampProducer(View, obj), timestampProducer(View, { style: tmp2.item, children: trailing })];
-  obj.children = items1;
-  const items2 = [React5(View, obj), ];
-  const obj2 = { style: tmp.titles, children: null };
+  const obj2 = { style: tmp2.accessories, children: null };
+  const items1 = [timestampProducer(View, { style: tmp2.item, children: leading }), timestampProducer(View, { style: tmp2.item, children: trailing })];
+  obj2.children = items1;
+  const items2 = [React5(View, obj2), ];
+  const obj5 = { style: tmp.titles, children: null };
   const items3 = [timestampProducer(Title, { children: title }), ];
   let tmp5Result = null;
   if (null != subtitle) {
-    const obj3 = { children: subtitle };
-    tmp5Result = timestampProducer(Subtitle, obj3);
+    const obj6 = { children: subtitle };
+    tmp5Result = timestampProducer(Subtitle, obj6);
   }
   items3[1] = tmp5Result;
-  obj2.children = items3;
-  items2[1] = React5(View, obj2);
+  obj5.children = items3;
+  items2[1] = React5(View, obj5);
   obj.children = items2;
   return React5(View, obj);
 }
@@ -58,9 +57,8 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
   const tmp = closure_8();
   const tmp2 = closure_12();
-  let obj = useToken;
-  const diff = useWindowDimensionsDefault().width - 2 * obj.useToken(nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
-  [tmp5, c0] = _slicedToArray(noop.useState(undefined), 2);
+  const diff = useWindowDimensionsDefault().width - 2 * useToken.useToken(nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
+  [tmp5, c0] = noop.useState(undefined);
   const callback = noop.useCallback((nativeEvent) => {
     const width = nativeEvent.nativeEvent.layout.width;
     _undefined((arg0) => {
@@ -71,35 +69,34 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
       return Math.max(num, width);
     });
   }, []);
-  obj = { style: tmp.container, children: null };
-  obj = { style: { width: tmp5 } };
-  const items = [timestampProducer(View, obj), , , , ];
-  const obj1 = { style: tmp.titles, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const items = [timestampProducer(View, { style: { width: tmp5 } }), , , , ];
+  const obj4 = { style: tmp.titles, children: null };
   const items1 = [timestampProducer(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title }), ];
   let tmp9Result = null;
   if (null != subtitle) {
-    const obj2 = { children: subtitle };
-    tmp9Result = timestampProducer(Subtitle, obj2);
+    const obj5 = { children: subtitle };
+    tmp9Result = timestampProducer(Subtitle, obj5);
   }
   const result = diff / 4;
   items1[1] = tmp9Result;
-  obj1.children = items1;
-  items[1] = React5(View, obj1);
+  obj4.children = items1;
+  items[1] = React5(View, obj4);
   items[2] = timestampProducer(View, { style: { width: tmp5 } });
-  const obj4 = { onLayout: callback, style: null, children: leading };
+  const obj7 = { onLayout: callback, style: null, children: leading };
   const items2 = [, , ];
   ({ accessory: arr3[0], leading: arr3[1] } = tmp2);
   items2[2] = { maxWidth: result };
-  obj4.style = items2;
-  items[3] = timestampProducer(View, obj4);
-  const obj5 = { onLayout: callback, style: null, children: trailing };
+  obj7.style = items2;
+  items[3] = timestampProducer(View, obj7);
+  const obj8 = { onLayout: callback, style: null, children: trailing };
   const items3 = [, , ];
   ({ accessory: arr4[0], trailing: arr4[1] } = tmp2);
   items3[2] = { maxWidth: result };
-  obj5.style = items3;
-  items[4] = timestampProducer(View, obj5);
-  obj.children = items;
-  return React5(View, obj);
+  obj8.style = items3;
+  items[4] = timestampProducer(View, obj8);
+  obj2.children = items;
+  return React5(View, obj2);
 }
 function Title(arg0) {
   const tmp = closure_8();
@@ -115,23 +112,16 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let createStyles = fn(4636);
 let closure_8 = createStyles.createStyles(() => {
-  let obj = { container: null, titles: null, subtitle: null, title: null };
-  obj = { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
-  obj.container = obj;
-  obj.titles = { flexGrow: 1, flexShrink: 1, gap: 2 };
-  obj.subtitle = { textAlign: "center" };
-  obj.title = { textAlign: "center" };
+  const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
   return obj;
 });
 createStyles = fn(4636);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
 createStyles = fn(4636);
 let closure_12 = createStyles.createStyles(() => {
-  let obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: null, trailing: null };
-  obj = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };
-  obj.leading = obj;
-  obj = { right: nativeDefault.space.PX_16, justifyContent: "flex-end" };
-  obj.trailing = obj;
+  const obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: { left: nativeDefault.space.PX_16, justifyContent: "flex-start" }, trailing: null };
+  const obj2 = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };
+  obj.trailing = { right: nativeDefault.space.PX_16, justifyContent: "flex-end" };
   return obj;
 });
 const size = fn(2);
@@ -145,27 +135,26 @@ export const BottomSheetTitleHeader = function BottomSheetTitleHeader(arg0) {
   const tmp3 = HeaderDebugOverlayDefault("sheet");
   if (null != leading) {
     if (tmp2[0]) {
-      let obj = {};
+      const obj2 = {};
       merged = Object.assign(merged);
-      let tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderStacked, obj);
+      let tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderStacked, obj2);
     } else {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(merged);
-      obj.onTitleTextLayout = function onTitleTextLayout(nativeEvent) {
+      obj3.onTitleTextLayout = function onTitleTextLayout(nativeEvent) {
         closure_0(nativeEvent.nativeEvent.lines.length > 2);
       };
-      tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderComplex, obj);
+      tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderComplex, obj3);
     }
   }
-  obj = {};
   const merged2 = Object.assign(merged);
-  const tmp5 = timestampProducer(RedesignBottomSheetTitleHeaderBase, obj);
+  const tmp5 = timestampProducer(RedesignBottomSheetTitleHeaderBase, {});
   let tmp16 = tmp5;
   if (null != tmp3) {
-    const obj1 = { style: { position: "relative" }, children: null };
+    const obj4 = { style: { position: "relative" }, children: null };
     const items = [tmp5, tmp3];
-    obj1.children = items;
-    tmp16 = React5(View, obj1);
+    obj4.children = items;
+    tmp16 = React5(View, obj4);
   }
   return tmp16;
 };

@@ -1,6 +1,6 @@
-// === Module 12234: CommandRowButton ===
+// === Module 12235: CommandRowButton ===
 
-// Module 12234 (CommandRowButton)
+// Module 12235 (CommandRowButton)
 import util from "util" /* 1114 */;
 import SendMessageIcon from "SendMessageIcon" /* 4581 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
@@ -43,8 +43,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   }
   const tmp2 = tryExecuteCommand(sectionName.useState(false), 2);
   closure_5 = tmp2[1];
-  let obj = command(beforeExecuteCommand[4]);
-  commandContext = obj.useCommandContext(command.context);
+  commandContext = command(beforeExecuteCommand[4]).useCommandContext(command.context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
   callback = sectionName.useCallback(onExecuteCommand(function*() {
     if (c4 === 2) {
@@ -54,8 +53,8 @@ export const useCommandRowSend = function useCommandRowSend(command) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -68,20 +67,24 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_5(true);
             if (beforeExecuteCommand != null) {
               beforeExecuteCommand();
             }
             c3 = 1;
-            let obj1 = tmp3(9418);
-            obj1 = { command, optionValues: tmp3(12122).parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp3(7626).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
+            const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
+            const obj2 = tmp3(9418);
+            obj6.optionValues = tmp3(12123).parseOptionValuesForSend(commandContext.channel, command, {});
+            obj6.context = commandContext;
+            obj6.sectionName = sectionName;
+            obj6.commandOrigin = tmp3(7626).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
-            const obj2 = { value: obj1.executeAppLauncherCommand(obj1), done: false };
-            return obj2;
+            const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -94,7 +97,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           if (closure_128_2 != null) {
@@ -116,14 +119,14 @@ export const useCommandRowSend = function useCommandRowSend(command) {
       }
     }
   }), items);
-  obj = { hasOptions: options.length > 0, sending: tmp2[0], onPressSend: null };
+  let obj2 = { hasOptions: options.length > 0, sending: tmp2[0], onPressSend: null };
   const items1 = [tryExecuteCommand, callback];
-  obj.onPressSend = sectionName.useCallback(() => {
+  obj2.onPressSend = sectionName.useCallback(() => {
     if (null != tryExecuteCommand) {
       tmp(callback);
     } else {
       callback();
     }
   }, items1);
-  return obj;
+  return obj2;
 };

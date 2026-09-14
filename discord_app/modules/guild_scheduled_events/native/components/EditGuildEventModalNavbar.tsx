@@ -24,8 +24,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 export default function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
   const tmp = closure_7();
-  let obj = useTypeConsolidationTextTransform;
-  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
+  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
@@ -36,25 +35,24 @@ export default function EditGuildEventModalNavbar(screen) {
     GlobalUtils.assertNever(screen);
     const tmp2Result = GlobalUtils;
   }
-  [tmp7, tmp8] = _slicedToArray(items, 2);
-  obj = { top: true, style: tmp.header, children: null };
-  obj = { style: tmp.buttonContainer };
-  const items1 = [hasOwnProperty(View, obj), , ];
-  const obj1 = { style: null, variant: typeConsolidationEyebrow.variant, color: "text-default", children: null };
+  [tmp7, tmp8] = items;
+  const obj2 = { top: true, style: tmp.header, children: null };
+  const items1 = [hasOwnProperty(View, { style: tmp.buttonContainer }), , ];
+  const obj4 = { style: null, variant: typeConsolidationEyebrow.variant, color: "text-default", children: null };
   const items2 = [tmp.headerTitle, typeConsolidationEyebrow.style];
-  obj1.style = items2;
+  obj4.style = items2;
   const intl = util.intl;
-  obj1.children = intl.format(util.t["42HaFY"], { step: tmp7, total: tmp8 });
-  items1[1] = hasOwnProperty(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.buttonContainer, children: null };
-  const obj3 = { accessibilityLabel: null, onPress: null, source: null, style: null };
+  obj4.children = intl.format(util.t["42HaFY"], { step: tmp7, total: tmp8 });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.buttonContainer, children: null };
+  const obj6 = { accessibilityLabel: null, onPress: null, source: null, style: null };
   const intl2 = util.intl;
-  obj3.accessibilityLabel = intl2.string(util.t.cpT0Cq);
-  obj3.onPress = screen.onClose;
-  obj3.source = _modDef7095;
-  obj3.style = tmp.rightButton;
-  obj2.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj3);
-  items1[2] = hasOwnProperty(View, obj2);
-  obj.children = items1;
-  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj);
+  obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
+  obj6.onPress = screen.onClose;
+  obj6.source = _modDef7095;
+  obj6.style = tmp.rightButton;
+  obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
+  items1[2] = hasOwnProperty(View, obj5);
+  obj2.children = items1;
+  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj2);
 };

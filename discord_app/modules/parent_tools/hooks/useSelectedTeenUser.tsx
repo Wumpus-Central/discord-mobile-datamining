@@ -1,10 +1,12 @@
-// === Module 14982: useSelectedTeenUser ===
+// === Module 14983: useSelectedTeenUser ===
 
-// Module 14982 (useSelectedTeenUser)
+// Module 14983 (useSelectedTeenUser)
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
 import UserStore from "UserStore" /* 1371 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7643 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

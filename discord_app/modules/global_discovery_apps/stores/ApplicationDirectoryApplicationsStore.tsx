@@ -9,7 +9,6 @@ let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, 
 obj = {};
 obj = {};
 let set = new Set();
-obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectoryApplicationsStore extends Store {
 }
@@ -52,11 +51,11 @@ prototype["isFetching"] = function isFetching(applicationId) {
 };
 prototype["getApplicationLastFetchTime"] = function getApplicationLastFetchTime(arg0) {
   if (null != arg0) {
-    return obj[arg0];
+    return obj3[arg0];
   }
 };
 ApplicationDirectoryApplicationsStore.displayName = "ApplicationDirectoryApplicationsStore";
-obj = {
+const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(DispatcherDefault, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function handleFetchAppDirectoryApplication(applicationId) {
     obj = {};
     const merged = Object.assign(obj);
@@ -67,13 +66,14 @@ obj = {
     obj = {};
     const merged = Object.assign(obj);
     obj[application.id] = application;
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(obj);
-    obj[application.id] = obj.FETCHED;
-    obj = {};
+    obj2[application.id] = obj.FETCHED;
+    obj = obj2;
+    obj3 = {};
     const timestamp = Date.now();
-    const merged2 = Object.assign(obj);
-    obj[application.id] = timestamp;
+    const merged2 = Object.assign(obj3);
+    obj3[application.id] = timestamp;
     if (set.has(application.id)) {
       set.delete(application.id);
       const _Set = Set;
@@ -91,8 +91,7 @@ obj = {
       set = new Set(set);
     }
   }
-};
-const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx");
 

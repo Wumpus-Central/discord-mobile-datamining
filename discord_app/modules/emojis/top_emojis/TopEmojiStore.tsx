@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { topEmojisByGuildId: {} };
+const obj = { topEmojisByGuildId: {} };
 let closure_1 = obj;
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -29,7 +29,7 @@ prototype["getIsFetching"] = function getIsFetching(arg0) {
 };
 TopEmojiStore.displayName = "TopEmojiStore";
 TopEmojiStore.persistKey = "TopEmojiStore";
-obj = {
+const topEmojiStore = new TopEmojiStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_1 = obj;
     closure_2 = {};
@@ -42,8 +42,7 @@ obj = {
     closure_1.topEmojisByGuildId[guildId] = topEmojisMetadata.map((emojiId) => emojiId.emojiId);
     closure_2[guildId] = false;
   }
-};
-const topEmojiStore = new TopEmojiStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");
 

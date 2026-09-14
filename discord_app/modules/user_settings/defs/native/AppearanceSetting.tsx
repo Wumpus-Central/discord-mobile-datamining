@@ -1,9 +1,9 @@
-// === Module 15344: AppearanceSetting ===
+// === Module 15345: AppearanceSetting ===
 
-// Module 15344 (AppearanceSetting)
+// Module 15345 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1227 */;
 import _modDef2626 from "module_2626" /* 2626 */;
 import useThemeDefault from "useTheme" /* 4571 */;
 import useActiveTheme from "useActiveTheme" /* 7977 */;
@@ -38,15 +38,15 @@ function useAppearanceSettingTrailing() {
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 }
-const ActiveThemeType = fn(1186).ActiveThemeType;
-fn(11601);
-let SettingBuilders = {
+const ActiveThemeType = fn(1184).ActiveThemeType;
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15345).PaintPaletteIcon,
+  IconComponent: fn(15346).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE,
@@ -54,10 +54,9 @@ let SettingBuilders = {
       return require("SettingsAppearanceScreen").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
 
-export default SettingBuilders;
+export default route;
 export { useAppearanceSettingTrailing };

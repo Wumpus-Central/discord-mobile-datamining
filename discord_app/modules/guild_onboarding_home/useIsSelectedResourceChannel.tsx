@@ -1,11 +1,13 @@
-// === Module 11475: useIsSelectedResourceChannel ===
+// === Module 11476: useIsSelectedResourceChannel ===
 
-// Module 11475 (useIsSelectedResourceChannel)
+// Module 11476 (useIsSelectedResourceChannel)
 import FlagUtils from "FlagUtils" /* 1384 */;
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11476 */;
+import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 11477 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 7383 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;

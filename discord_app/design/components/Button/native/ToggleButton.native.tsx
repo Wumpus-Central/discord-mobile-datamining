@@ -1,26 +1,25 @@
-// === Module 14251: ToggleButton ===
+// === Module 14252: ToggleButton ===
 
-// Module 14251 (ToggleButton)
+// Module 14252 (ToggleButton)
 import BaseTextButton from "BaseTextButton" /* 5057 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 14252 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 14253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { Icon: fn(5057).BaseTextButton.Icon };
+const obj = { Icon: fn(5057).BaseTextButton.Icon };
 let merged = Object.assign(noop.forwardRef((pressed, ref) => {
   pressed = pressed.pressed;
   const merged = Object.assign(pressed, Object.assign({ pressed: 0 }));
-  let obj = useToggleButtonProps;
-  const toggleButtonProps = obj.useToggleButtonProps({ on: merged, off: merged }, pressed);
-  obj = {};
+  const toggleButtonProps = useToggleButtonProps.useToggleButtonProps({ on: merged, off: merged }, pressed);
+  const obj2 = {};
   const merged1 = Object.assign(toggleButtonProps);
-  obj.ref = ref;
+  obj2.ref = ref;
   let str = "toggle-off";
   if (pressed) {
     str = "toggle-on";
   }
-  obj.variant = str;
+  obj2.variant = str;
   return jsx(BaseTextButton.BaseTextButton, {});
 }), obj);
 const size = fn(2);

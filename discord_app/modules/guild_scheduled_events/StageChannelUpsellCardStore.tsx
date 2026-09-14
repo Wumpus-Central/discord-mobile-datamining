@@ -2,11 +2,13 @@
 
 // Module 9860 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
 import _mod4259 from "module_4259" /* 4259 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_2 = GuildScheduledEventsConstants.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
 let closure_3 = identity.createWithEqualityFn((arg0) => {

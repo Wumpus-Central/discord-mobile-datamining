@@ -1,37 +1,35 @@
-// === Module 11968: GuildSettingsModalMembersActionCreators ===
+// === Module 11969: GuildSettingsModalMembersActionCreators ===
 
-// Module 11968 (GuildSettingsModalMembersActionCreators)
+// Module 11969 (GuildSettingsModalMembersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ Endpoints: c3, ME: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
 
 export default {
   startEditingRoles(id, id2) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 });
   },
   stopEditingRoles() {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
   },
   toggleRole(roleId, state) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state });
   },
   updateMemberRoles(guildId, userId, roles) {
     function onEnd() {
       return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
     }
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: React3.GUILD_MEMBER(guildId, userId), body: null, oldFormErrors: true, rejectWithError: true };
-    obj = { roles };
-    request.body = obj;
+    const request = { url: React3.GUILD_MEMBER(guildId, userId), body: { roles }, oldFormErrors: true, rejectWithError: true };
+    const obj2 = { roles };
     HTTP.patch(request).then(onEnd, onEnd);
   },
   startEditingNickname() {

@@ -1,11 +1,13 @@
-// === Module 12114: RefreshChatInputCoachmark ===
+// === Module 12115: RefreshChatInputCoachmark ===
 
-// Module 12114 (RefreshChatInputCoachmark)
+// Module 12115 (RefreshChatInputCoachmark)
 import util from "util" /* 1114 */;
 import native from "native" /* 4347 */;
-import useCoachmark from "useCoachmark" /* 11261 */;
+import useCoachmark from "useCoachmark" /* 11262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -33,7 +35,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   let memo = null;
   if (tmp5) {
     memo = noop.useMemo(() => {
-      let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
+      const obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.eqI1WA);
       const intl2 = util.intl;
@@ -42,8 +44,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
       obj.onDismiss = function onDismiss() {
         closure_1_0(constants.USER_DISMISS);
       };
-      obj = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
-      obj.graphic = obj;
+      obj.graphic = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       return obj;
     }, items1);
   }

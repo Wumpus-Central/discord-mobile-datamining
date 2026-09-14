@@ -81,8 +81,8 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
   if (null == fields) {
     let tmp4 = null;
     if (flag) {
-      let obj = { value: { status: "skeleton" }, label: { status: "skeleton" } };
-      tmp4 = obj;
+      const obj2 = { value: { status: "skeleton" }, label: { status: "skeleton" } };
+      tmp4 = obj2;
     }
     return tmp4;
   } else {
@@ -93,7 +93,7 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     const items2 = [resolvedValues.ResolvedValueType.MEDIA];
     const tmp8 = fn(fields.fields.icon, items2);
     if (null == iter) {
-      obj = { status: "skeleton" };
+      let obj = { status: "skeleton" };
     } else {
       if (iter.type === resolvedValues.ResolvedValueType.STRING) {
         let formatResult = iter.value;
@@ -112,17 +112,16 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
       }
       obj.icon = media;
     }
-    obj = { value: null, label: null };
-    obj.value = obj;
+    const obj3 = { value: obj, label: null };
     if (null == fields.fields.label) {
-      let obj1 = { status: "hidden" };
+      let obj4 = { status: "hidden" };
     } else if (null == iter2) {
-      obj1 = { status: "skeleton" };
+      obj4 = { status: "skeleton" };
     } else {
-      obj1 = { status: "value", text: iter2.value };
+      obj4 = { status: "value", text: iter2.value };
     }
-    obj.label = obj1;
-    return obj;
+    obj3.label = obj4;
+    return obj3;
   }
 };
 export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkeleton(componentConfig, description, resolveFieldValue) {

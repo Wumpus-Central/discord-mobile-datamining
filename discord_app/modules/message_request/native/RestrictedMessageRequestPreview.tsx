@@ -1,6 +1,6 @@
-// === Module 17008: RestrictedMessageRequestPreview ===
+// === Module 17010: RestrictedMessageRequestPreview ===
 
-// Module 17008 (RestrictedMessageRequestPreview)
+// Module 17010 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,16 +13,13 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, scroll: null, hidden: null, scrollContent: null, footer: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.scroll = { flex: 1 };
-createStyles.hidden = { opacity: 0 };
-createStyles.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
-createStyles.footer = { paddingHorizontal: nativeDefault.space.PX_12 };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, footer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
+obj2.footer = { paddingHorizontal: nativeDefault.space.PX_12 };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
 
@@ -31,20 +28,20 @@ export default function RestrictedMessageRequestPreview(channelId) {
   let first;
   noop = undefined;
   const tmp = closure_12();
-  let obj = noop;
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
   const tmp5 = first(noop.useState(false), 2);
   first = tmp5[0];
   noop = tmp5[1];
-  let obj1 = channelId(504);
   const items = [MessageStore];
   const items1 = [channelId];
-  closure_5 = obj1.useStateFromStores(items, () => MessageStore.getMessages(channelId).length > 0, items1);
-  let obj2 = channelId(504);
+  closure_5 = channelId(504).useStateFromStores(items, () => MessageStore.getMessages(channelId).length > 0, items1);
+  const obj = noop;
+  const obj2 = channelId(504);
+  const tmp7 = channelId;
   const items2 = [ChannelStore];
   const items3 = [channelId];
-  const stateFromStores = obj2.useStateFromStores(items2, () => ChannelStore.getChannel(channelId), items3);
+  const stateFromStores = channelId(504).useStateFromStores(items2, () => ChannelStore.getChannel(channelId), items3);
   let first1;
   if (stateFromStores != null) {
     const recipients = stateFromStores.recipients;
@@ -52,9 +49,10 @@ export default function RestrictedMessageRequestPreview(channelId) {
       first1 = recipients[0];
     }
   }
+  const obj3 = channelId(504);
   const items4 = [UserStore];
   const items5 = [first1];
-  const stateFromStores1 = channelId(504).useStateFromStores(items4, () => {
+  const stateFromStores1 = tmp7(504).useStateFromStores(items4, () => {
     let user;
     if (null != first1) {
       user = UserStore.getUser(tmp);
@@ -73,20 +71,20 @@ export default function RestrictedMessageRequestPreview(channelId) {
   if (null != stateFromStores) {
     tmp13Result = null;
     if (null != stateFromStores1) {
-      obj = { style: tmp.container, children: null };
-      obj = { ref, style: null, contentContainerStyle: null, onScrollBeginDrag: null, onContentSizeChange: null, children: null };
+      const obj4 = { style: tmp.container, children: null };
+      const obj5 = { ref, style: null, contentContainerStyle: null, onScrollBeginDrag: null, onContentSizeChange: null, children: null };
       const items7 = [tmp.scroll, ];
       let hidden = null;
       if (!first) {
         hidden = tmp.hidden;
       }
       items7[1] = hidden;
-      obj.style = items7;
-      obj.contentContainerStyle = tmp.scrollContent;
-      obj.onScrollBeginDrag = function onScrollBeginDrag() {
+      obj5.style = items7;
+      obj5.contentContainerStyle = tmp.scrollContent;
+      obj5.onScrollBeginDrag = function onScrollBeginDrag() {
         closure_2.current = true;
       };
-      obj.onContentSizeChange = function onContentSizeChange() {
+      obj5.onContentSizeChange = function onContentSizeChange() {
         if (!ref.current) {
           const current = ref.current;
           if (current != null) {
@@ -102,22 +100,22 @@ export default function RestrictedMessageRequestPreview(channelId) {
           const animationFrame = requestAnimationFrame(() => closure_1_4(true));
         }
       };
-      obj1 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(17009), obj1), ];
-      obj2 = { channelId };
-      items8[1] = closure_10(tmp2(17011), obj2);
-      obj.children = items8;
-      const items9 = [closure_11(closure_5, obj), ];
-      const obj3 = { style: null, children: null };
+      const obj6 = { channel: stateFromStores, user: stateFromStores1 };
+      const items8 = [closure_10(tmp2(17011), obj6), ];
+      const obj7 = { channelId };
+      items8[1] = closure_10(tmp2(17013), obj7);
+      obj5.children = items8;
+      const items9 = [closure_11(closure_5, obj5), ];
+      const obj8 = { style: null, children: null };
       const items10 = [tmp.footer, ];
-      const obj4 = { paddingBottom: tmp2(576).space.PX_8 + ref(1611)().bottom };
-      items10[1] = obj4;
-      obj3.style = items10;
-      const obj5 = { channel: stateFromStores };
-      obj3.children = closure_10(tmp2(12568), obj5);
-      items9[1] = closure_10(first1, obj3);
-      obj.children = items9;
-      tmp13Result = closure_11(tmp14, obj);
+      const obj9 = { paddingBottom: tmp2(576).space.PX_8 + ref(1611)().bottom };
+      items10[1] = obj9;
+      obj8.style = items10;
+      const obj10 = { channel: stateFromStores };
+      obj8.children = closure_10(tmp2(12569), obj10);
+      items9[1] = closure_10(first1, obj8);
+      obj4.children = items9;
+      tmp13Result = closure_11(tmp14, obj4);
     }
   }
   return tmp13Result;

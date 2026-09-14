@@ -76,8 +76,8 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
     if (!obj4.isChannelAccessDeniedBy(channel, channel.permissionOverwrites[guild.id])) {
       const sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
       for (const item10077 of sortedRoles) {
-        obj = { guildId: arg1.id, role: item10077, isPreviewingRoles: isViewingServerShopResult };
-        if (isSubscriptionGated(obj)) {
+        let obj6 = { guildId: arg1.id, role: item10077, isPreviewingRoles: isViewingServerShopResult };
+        if (isSubscriptionGated(obj6)) {
           let obj7 = RolePermissionUtils;
           if (obj7.hasViewChannelPermission(item10077)) {
             obj5.return();
@@ -137,14 +137,14 @@ function handleChannelUpdate(channel) {
     const id = channel.id;
     let flag = false;
     if (null != dependencyMap[channel.guild_id]) {
-      channel = ChannelStore.getChannel(id);
+      const channel1 = ChannelStore.getChannel(id);
       flag = false;
-      if (null != channel) {
-        const guild = GuildStore.getGuild(channel.getGuildId());
+      if (null != channel1) {
+        const guild = GuildStore.getGuild(channel1.getGuildId());
         flag = false;
         if (null != guild) {
           const hasItem = obj.has(id);
-          const tmp8 = isChannelSubscriptionGatedInGuild(channel, guild);
+          const tmp8 = isChannelSubscriptionGatedInGuild(channel1, guild);
           let flag2 = hasItem !== tmp8;
           if (flag2) {
             if (!tmp8) {

@@ -2,7 +2,7 @@
 
 // Module 7556 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7557 */;
 import UserRecord from "UserRecord" /* 1385 */;
@@ -23,14 +23,14 @@ let closure_11 = async function _fetchReferralEligibleUsers() {
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: constants.GET_REFERRAL_ELIGIBLE_USERS, body: null, oldFormErrors: true, rejectWithError: false };
-    const obj3 = { index, limit: null, search_query: null };
+    const obj6 = { index, limit: null, search_query: null };
     limit = closure_2;
     if (closure_2 == null) {
       limit = 10;
     }
-    obj3.limit = limit;
-    obj3.search_query = searchQuery;
-    request.body = obj3;
+    obj6.limit = limit;
+    obj6.search_query = searchQuery;
+    request.body = obj6;
     await HTTP.post(request);
     const body = value.body;
     const users = body.users;
@@ -53,8 +53,8 @@ let closure_12 = async function _createReferralTrials(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -68,8 +68,8 @@ let closure_12 = async function _createReferralTrials(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp;
             closure_3 = tmp2;
@@ -93,8 +93,8 @@ let closure_12 = async function _createReferralTrials(arg0) {
           if (2 === tmp5) {
             c6 = 1;
             closure_131_5 = closure_1_5;
-            let obj1 = closure_132_1(closure_132_2[7]);
-            let captureExceptionResult = obj1.captureException(closure_131_5);
+            let obj2 = closure_132_1(closure_132_2[7]);
+            let captureExceptionResult = obj2.captureException(closure_131_5);
             let result = closure_131_1.set(closure_131_2, closure_132_9.FAIL);
           } else if (arg0 === 1) {
             c8 = 3;
@@ -103,7 +103,7 @@ let closure_12 = async function _createReferralTrials(arg0) {
             c6 = 0;
             closure_1.return();
             c8 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
             closure_131_3 = value;
@@ -121,23 +121,23 @@ let closure_12 = async function _createReferralTrials(arg0) {
           c6 = 0;
         }
         if (closure_1 === undefined) {
-          let obj4 = closure_132_1(closure_132_2[6]);
-          obj1 = { type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: null };
-          obj1.userTrialOffers = closure_131_0;
-          let dispatchResult = obj4.dispatch(obj1);
+          let obj5 = closure_132_1(closure_132_2[6]);
+          let obj6 = { type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: null };
+          obj6.userTrialOffers = closure_131_0;
+          let dispatchResult = obj5.dispatch(obj6);
           c8 = 3;
-          let obj2 = { value: closure_131_1, done: true };
-          return obj2;
+          let obj7 = { value: closure_131_1, done: true };
+          return obj7;
         } else {
           closure_131_2 = tmp41;
           c6 = 2;
           let HTTP = closure_132_0(closure_132_2[5]).HTTP;
-          let obj3 = { url: null, oldFormErrors: true, rejectWithError: true };
-          obj3.url = closure_132_8.CREATE_REFERRAL(closure_131_2);
+          let obj8 = { url: null, oldFormErrors: true, rejectWithError: true };
+          obj8.url = closure_132_8.CREATE_REFERRAL(closure_131_2);
           c7 = 3;
           c8 = 1;
-          obj4 = { value: HTTP.post(obj3), done: false };
-          return obj4;
+          let obj9 = { value: HTTP.post(obj8), done: false };
+          return obj9;
         }
       }
     }
@@ -148,8 +148,7 @@ let closure_13 = async function _createReferralTrial() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: constants.CREATE_REFERRAL(closure_0), oldFormErrors: true, rejectWithError: false });
   closure_129_3 = closure_3;
-  let obj5 = closure_130_1(closure_130_2[6]);
-  obj5.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
+  closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
   if (closure_129_3.body.code === closure_130_7.INVALID_MESSAGE_SEND_USER) {
     const currentlySelectedChannelId = closure_130_6.getCurrentlySelectedChannelId();
     if (null != currentlySelectedChannelId) {
@@ -168,16 +167,14 @@ let closure_13 = async function _createReferralTrial() {
     closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: closure_129_1 });
     closure_130_1(closure_130_2[6]);
   }
-  obj5 = { userTrialOffer: closure_129_1 };
-  return obj5;
+  return { userTrialOffer: closure_129_1 };
 };
 let closure_14 = async function _resolveReferralTrialOffer() {
   closure_3 = tmp3;
   closure_130_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.REFERRAL_OFFER_ID_RESOLVE(closure_0), oldFormErrors: true, rejectWithError: false });
-  let obj5 = closure_131_1(closure_131_2[6]);
-  obj5.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: closure_130_0 });
+  closure_131_1(closure_131_2[6]).dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: closure_130_0 });
   await "HermesInternal";
   closure_130_1 = value;
   let fromServer = null;
@@ -185,18 +182,16 @@ let closure_14 = async function _resolveReferralTrialOffer() {
     fromServer = closure_131_4.createFromServer(closure_130_1.body);
   }
   closure_130_2 = fromServer;
-  { url: constants.REFERRAL_OFFER_ID_RESOLVE(closure_0), oldFormErrors: true, rejectWithError: false };
   let userTrialOffer = closure_130_2;
   if (closure_130_2 == null) {
     userTrialOffer = undefined;
   }
-  obj5 = { type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer };
-  closure_131_1(closure_131_2[6]).dispatch(obj5);
+  closure_131_1(closure_131_2[6]).dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer });
   return { userTrialOffer: closure_130_2 };
 };
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
-let obj = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
+const CreateReferralStatus = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
 class EligibleUserCache {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -227,14 +222,14 @@ prototype["_checkExpiration"] = function _checkExpiration() {
     cache.clear();
   }
 };
-obj = Object.create(EligibleUserCache.prototype);
-obj.cache = new Map();
-obj.expiration = Date.now() + 600000;
+let obj3 = Object.create(EligibleUserCache.prototype);
+obj3.cache = new Map();
+obj3.expiration = Date.now() + 600000;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
 
 export const ReferralOfferStatus = { REDEEMED: 1, [1]: "REDEEMED", PENDING: 2, [2]: "PENDING", CONVERTED: 3, [3]: "CONVERTED", REFERRER_REWARD_GRANTED: 4, [4]: "REFERRER_REWARD_GRANTED" };
-export const CreateReferralStatus = obj;
+export { CreateReferralStatus };
 export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers() {
   const self = this;
   const apply = closure_11.apply;
@@ -246,11 +241,9 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers() 
   return applyArgumentsResult;
 };
 export const fetchReferralsRemaining = function fetchReferralsRemaining() {
-  obj = DispatcherDefault;
-  obj.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
+  DispatcherDefault.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
   const HTTP = HTTPUtils.HTTP;
-  obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
-  value = HTTP.get(obj);
+  value = HTTP.get({ url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false });
   return value.then((body) => {
     const map = new Map();
     if (null != body.body) {
@@ -268,7 +261,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
         num = body.body.referrals_remaining;
       }
     }
-    obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
+    const obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
     if (null != body.body) {
       if (null != body.body.sent_user_ids) {
         const sent_user_ids = body.body.sent_user_ids;

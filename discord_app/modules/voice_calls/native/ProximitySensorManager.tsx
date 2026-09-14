@@ -1,9 +1,9 @@
-// === Module 17584: ProximitySensorManager ===
+// === Module 17585: ProximitySensorManager ===
 
-// Module 17584 (ProximitySensorManager)
-import PlatformUtils2 from "PlatformUtils" /* 1150 */;
+// Module 17585 (ProximitySensorManager)
+import PlatformUtils2 from "PlatformUtils" /* 1363 */;
 import VoiceCallTypes from "VoiceCallTypes" /* 9213 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17585 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17586 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
@@ -31,13 +31,13 @@ function handleChange() {
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
   tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
 }
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isIOS()) {
   let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
 } else {
   ProximitySensorManager = NativeProximitySensorManagerModuleDefault;
 }
-let prototype = function ProximitySensorManager() {
+const prototype = function ProximitySensorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const result = new Map().set(AudioRouteStore, handleChange);
   applyArgumentsResult.stores = result.set(RTCConnectionStore, handleChange);
@@ -45,8 +45,8 @@ let prototype = function ProximitySensorManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
-export default prototype;
+export default prototype1;

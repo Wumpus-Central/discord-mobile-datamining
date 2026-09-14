@@ -39,9 +39,9 @@ prototype["getActiveErrorsOfType"] = function getActiveErrorsOfType(CAMERA_SEND_
   } else {
     const tmp3 = value[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      value = activeErrors.get(tmp5);
-      let tmp9 = value;
-      let tmp10 = null != value;
+      value2 = activeErrors.get(tmp5);
+      let tmp9 = value2;
+      let tmp10 = null != value2;
       if (tmp10) {
         tmp10 = isAVErrorContextOfType(tmp9, CAMERA_SEND_LOW_FPS);
       }

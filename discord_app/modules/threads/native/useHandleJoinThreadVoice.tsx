@@ -14,12 +14,12 @@ export default function useHandleJoinThreadVoice(arg0) {
     guildId = guildId.getGuildId();
     closure_128_0 = guildId;
     if (null != guildId) {
-      if (obj8.shouldShowMembershipVerificationGate(guildId)) {
+      if (obj9.shouldShowMembershipVerificationGate(guildId)) {
         c2 = 1;
         c3 = 1;
         return { value: guildId(c2[4])(c2[3], c2.paths), done: false };
       }
-      obj8 = guildId(c2[2]);
+      obj9 = guildId(c2[2]);
     }
     await tmp2(c2[5]).unarchiveThreadIfNecessary(guildId.id);
     if (2 === tmp5) {
@@ -32,7 +32,6 @@ export default function useHandleJoinThreadVoice(arg0) {
       } else if (!JoinedThreadsStore.hasJoined(closure_129_0.id)) {
         c2 = 3;
         c3 = 1;
-        tmp2(c2[5]);
         return { value: tmp2(c2[5]).joinThread(closure_129_0, "Join Voice"), done: false };
       }
     } else if (3 === tmp5) {

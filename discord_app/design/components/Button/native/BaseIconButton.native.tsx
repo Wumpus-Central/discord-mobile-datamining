@@ -16,20 +16,22 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
-    let obj = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
+    const obj2 = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
+    let obj = obj2;
   } else if ("md" === arg1) {
-    obj = { paddingHorizontal: ButtonConstants.MEDIUM_BUTTON_PADDING, paddingVertical: ButtonConstants.MEDIUM_BUTTON_PADDING };
+    const obj3 = { paddingHorizontal: ButtonConstants.MEDIUM_BUTTON_PADDING, paddingVertical: ButtonConstants.MEDIUM_BUTTON_PADDING };
+    obj = obj3;
   } else {
     obj = {};
     if ("lg" === arg1) {
-      const obj1 = { paddingHorizontal: ButtonConstants.LARGE_BUTTON_PADDING, paddingVertical: ButtonConstants.LARGE_BUTTON_PADDING };
-      obj = obj1;
+      const obj4 = { paddingHorizontal: ButtonConstants.LARGE_BUTTON_PADDING, paddingVertical: ButtonConstants.LARGE_BUTTON_PADDING };
+      obj = obj4;
     }
   }
-  const obj2 = { button: { flexShrink: 0, flexGrow: 0, alignSelf: "center" }, pill: null };
+  const obj5 = { button: { flexShrink: 0, flexGrow: 0, alignSelf: "center" }, pill: null };
   const merged = Object.assign(obj);
-  obj2.pill = {};
-  return obj2;
+  obj5.pill = {};
+  return obj5;
 });
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
 const size = fn(2);
@@ -53,10 +55,8 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
     num = scaleAmountInPx;
   }
   const tmp3 = closure_4(str, DEFAULT_BUTTON_SIZE);
-  let obj = ReanimatedRexport2;
-  const sharedValue = obj.useSharedValue(0);
-  let obj1 = ButtonHooks;
-  const iconTintStyles = obj1.useIconTintStyles(str, sharedValue);
+  const sharedValue = ReanimatedRexport2.useSharedValue(0);
+  const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
@@ -65,31 +65,31 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
     MEDIUM_BUTTON_HEIGHT = ButtonConstants.MEDIUM_BUTTON_HEIGHT;
   }
   const bound = Math.max((ButtonConstants.MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
-  obj = {};
+  const obj4 = {};
   const merged = Object.assign(variant);
-  obj.ref = ref;
+  obj4.ref = ref;
   const items = [tmp3.button, style];
-  obj.style = items;
-  obj.pressed = sharedValue;
-  obj.scaleAmountInPx = num;
-  obj.hitSlop = bound;
-  obj = { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null };
+  obj4.style = items;
+  obj4.pressed = sharedValue;
+  obj4.scaleAmountInPx = num;
+  obj4.hitSlop = bound;
+  const obj5 = { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null };
   const items1 = [tmp3.pill, pillStyle];
-  obj.style = items1;
+  obj5.style = items1;
   let str3 = "xs";
   if ("lg" === DEFAULT_BUTTON_SIZE) {
     str3 = "sm";
   }
-  obj.loaderSize = str3;
-  obj.pressed = sharedValue;
+  obj5.loaderSize = str3;
+  obj5.pressed = sharedValue;
   let tmp10Result = icon;
   if (!noop.isValidElement(icon)) {
-    obj1 = { source: icon, style: null };
+    const obj6 = { source: icon, style: null };
     const items2 = [iconTintStyles, iconSizeStyles];
-    obj1.style = items2;
+    obj6.style = items2;
     tmp10Result = <Icon source={icon} style={null} />;
   }
-  obj.children = tmp10Result;
-  obj.children = jsx(ButtonPill.ButtonPill, { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
-  return jsx(Button_BaseButton.BaseButton, { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
+  obj5.children = tmp10Result;
+  obj4.children = jsx(ButtonPill.ButtonPill, { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
+  return jsx(Button_BaseButton.BaseButton, {});
 });

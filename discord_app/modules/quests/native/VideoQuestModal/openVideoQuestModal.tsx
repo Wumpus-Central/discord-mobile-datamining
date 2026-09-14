@@ -1,8 +1,8 @@
-// === Module 15204: openVideoQuestModal ===
+// === Module 15205: openVideoQuestModal ===
 
-// Module 15204 (openVideoQuestModal)
-import v1All from "v1" /* 1256 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11645 */;
+// Module 15205 (openVideoQuestModal)
+import v1All from "v1" /* 1254 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11646 */;
 import QuestStore from "QuestStore" /* 7805 */;
 
 require = fn;
@@ -12,10 +12,9 @@ const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal
 export default function openVideoQuestModal(questId) {
   questId = questId.questId;
   const sourceQuestContent = questId.sourceQuestContent;
-  let obj = QuestStore;
   ({ questContentPosition, initialStep } = questId);
   if (QuestStore.isQuestAccessSuspended) {
-    const quest = obj.getQuest(questId);
+    const quest = QuestStore.getQuest(questId);
     let completedAt;
     if (quest != null) {
       const userStatus = quest.userStatus;
@@ -24,23 +23,22 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(15198)();
+      sourceQuestContent(15199)();
     }
   }
   const v4Result = v1All.v4();
   importAll = v4Result;
-  obj = {
+  const obj3 = sourceQuestContent(4839);
+  const obj4 = {
     questId,
     questContentPosition,
     videoSessionId: v4Result,
     initialStep,
     onClose() {
-      const obj = { questId, sourceQuestContent, videoSessionId: v4Result };
-      return obj.handleVideoQuestModalClose(obj);
+      return VideoQuestUtils.handleVideoQuestModalClose({ questId, sourceQuestContent, videoSessionId: v4Result });
     },
     sourceQuestContent
   };
-  const obj3 = sourceQuestContent(4839);
-  const tmp8 = questId(1896)(15205, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj, questId(11645).getVideoQuestModalKey(questId));
+  const tmp8 = questId(1896)(15206, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj4, questId(11646).getVideoQuestModalKey(questId));
 };

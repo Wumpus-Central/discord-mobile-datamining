@@ -1,10 +1,10 @@
-// === Module 12590: ChatInputGuardGuildCommunicationDisabled ===
+// === Module 12591: ChatInputGuardGuildCommunicationDisabled ===
 
-// Module 12590 (ChatInputGuardGuildCommunicationDisabled)
+// Module 12591 (ChatInputGuardGuildCommunicationDisabled)
 import util from "util" /* 1114 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11983 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12577 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12591 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11984 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12578 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,7 @@ const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatI
 
 export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMember) {
   guildMember = guildMember.guildMember;
-  let obj = useCommunicationDisabledCountdownCleanup;
-  const communicationDisabledCountdownCleanup = obj.useCommunicationDisabledCountdownCleanup(guildMember);
+  const communicationDisabledCountdownCleanup = useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
   const communicationDisabledUntil = guildMember.communicationDisabledUntil;
   if (null == communicationDisabledUntil) {
     const _Date2 = Date;
@@ -25,12 +24,12 @@ export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMembe
     const _Date = Date;
     date = new Date(communicationDisabledUntil);
   }
-  obj = { type: "simple-action", icon: jsx(ClockWarningIcon.ClockWarningIcon, {}), message: null, subtext: null, countdown: null };
+  const obj2 = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
+  obj2.icon = jsx(ClockWarningIcon.ClockWarningIcon, {});
   const intl = util.intl;
-  obj.message = intl.string(util.t.VSpdzK);
+  obj2.message = intl.string(util.t.VSpdzK);
   const intl2 = util.intl;
-  obj = { link };
-  obj.subtext = intl2.format(util.t["4ZwD5G"], obj);
-  obj.countdown = date;
-  return jsx(ChatInputGuardDefault, { link });
+  obj2.subtext = intl2.format(util.t["4ZwD5G"], { link });
+  obj2.countdown = date;
+  return jsx(ChatInputGuardDefault, { type: "simple-action", icon: null, message: null, subtext: null, countdown: null });
 });

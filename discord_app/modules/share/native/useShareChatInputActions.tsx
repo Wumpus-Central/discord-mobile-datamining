@@ -1,7 +1,7 @@
-// === Module 11821: useShareChatInputActions ===
+// === Module 11822: useShareChatInputActions ===
 
-// Module 11821 (useShareChatInputActions)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11255 */;
+// Module 11822 (useShareChatInputActions)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export const useShareChatInputActions = function useShareChatInputActions(setTex
   _slicedToArray = appEntryKey;
   ref = ref.useRef(null);
   closure_4 = ref.useRef({ start: 0, end: 0 });
-  [tmp3, closure_5] = _slicedToArray(ref.useState(false), 2);
+  [tmp3, closure_5] = ref.useState(false);
   const callback = ref.useCallback((nativeEvent) => {
     const merged = Object.assign(nativeEvent.nativeEvent.selection);
     closure_4.current = {};
@@ -70,13 +70,13 @@ export const useShareChatInputActions = function useShareChatInputActions(setTex
       if (current != null) {
         current.blur();
       }
-      const obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: EmojiIntention.CHAT, autoFocus: false, startExpanded: false, channel, appEntryKey, guildId: null };
+      const obj2 = { onPressEmoji: callback3, onClose: callback4, pickerIntention: EmojiIntention.CHAT, autoFocus: false, startExpanded: false, channel, appEntryKey, guildId: null };
       let guildId;
       if (channel != null) {
         guildId = channel.getGuildId();
       }
-      obj.guildId = guildId;
-      const result = obj.openEmojiPickerActionSheet(obj);
+      obj2.guildId = guildId;
+      const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj2);
     }, items1)
   };
 };

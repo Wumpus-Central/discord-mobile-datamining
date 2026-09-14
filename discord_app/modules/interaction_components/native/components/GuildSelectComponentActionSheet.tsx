@@ -1,17 +1,19 @@
-// === Module 14737: GuildSelectComponentActionSheet ===
+// === Module 14738: GuildSelectComponentActionSheet ===
 
-// Module 14737 (GuildSelectComponentActionSheet)
+// Module 14738 (GuildSelectComponentActionSheet)
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4868 */;
-import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11952 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 11953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
@@ -31,8 +33,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   dependencyMap = tmp;
   const tmp2 = first(first1.useState(""), 2);
   first = tmp2[0];
-  let obj = { type: InteractionComponentTypes.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild };
-  const tmp6 = first(first1.useState(obj), 2);
+  const tmp6 = first(first1.useState({ type: InteractionComponentTypes.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild }), 2);
   first1 = tmp6[0];
   closure_5 = tmp6[1];
   if (null != first1) {
@@ -41,12 +42,12 @@ export default function GuildSelectComponentActionSheet(arg0) {
   } else {
     items1 = [];
   }
-  obj = { maxValues: 1, minValues: 1, placeholder: null };
+  let obj3 = { maxValues: 1, minValues: 1, placeholder: null };
   function submitSelection() {
     return require("ActionSheetActionCreators").hideActionSheet();
   }
   const intl = util.intl;
-  obj.placeholder = intl.string(util.t["ZImm/x"]);
+  obj3.placeholder = intl.string(util.t["ZImm/x"]);
   callback = obj.useCallback((query) => {
     if (0 === query.length) {
       flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
@@ -63,13 +64,13 @@ export default function GuildSelectComponentActionSheet(arg0) {
         return arr;
       }, array);
     } else {
-      require("AutocompleteUtils");
-      let obj = { query };
-      reduced = obj.queryGuilds(obj).map((record) => {
+      const obj2 = { query };
+      let obj = require("AutocompleteUtils");
+      reduced = require("AutocompleteUtils").queryGuilds(obj2).map((record) => {
         record = record.record;
         return { type: closure_1_0(4868).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
-      const queryGuildsResult = obj.queryGuilds(obj);
+      const queryGuildsResult = require("AutocompleteUtils").queryGuilds(obj2);
     }
     return reduced;
   }, []);
@@ -94,23 +95,22 @@ export default function GuildSelectComponentActionSheet(arg0) {
     iconContainerStyle: tmp.iconContainer,
     renderDescription(guild) {
       const hasAvatarForGuildResult = user.hasAvatarForGuild(guild.guild.id);
-      let obj = NicknameUtilsDefault;
-      let username = obj.getNickname(guild.guild.id, undefined, user);
-      obj = { style: guildIdentity.guildIdentity, children: null };
+      let username = NicknameUtilsDefault.getNickname(guild.guild.id, undefined, user);
+      const obj2 = { style: guildIdentity.guildIdentity, children: null };
       let tmp8 = hasAvatarForGuildResult;
       if (hasAvatarForGuildResult) {
-        obj = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user, guildId: guild.guild.id, animate: true };
-        tmp8 = React6(native.Avatar, obj);
+        const obj3 = { size: native.AvatarSizes.SIZE_16, style: tmp7.avatar, user, guildId: guild.guild.id, animate: true };
+        tmp8 = React6(native.Avatar, obj3);
       }
       const items = [tmp8, ];
       if (username == null) {
         username = user.username;
       }
       items[1] = React6(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: username });
-      obj.children = items;
-      return React7(View, obj);
+      obj2.children = items;
+      return React7(View, obj2);
     },
-    selectionActionComponent: obj,
+    selectionActionComponent: obj3,
     options: memo,
     selectedCount: items1.length,
     selectedOptions: items1,

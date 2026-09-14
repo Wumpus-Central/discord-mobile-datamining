@@ -1,6 +1,6 @@
-// === Module 17745: useGuildSettingsRoleExampleMessage ===
+// === Module 17746: useGuildSettingsRoleExampleMessage ===
 
-// Module 17745 (useGuildSettingsRoleExampleMessage)
+// Module 17746 (useGuildSettingsRoleExampleMessage)
 import util from "util" /* 1114 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
 import createMessageDefault from "createMessage" /* 7854 */;
@@ -17,17 +17,17 @@ export const useGuildSettingsRoleExampleMessage = function useGuildSettingsRoleE
   const content = intl;
   const items = [intl];
   return noop.useMemo(() => {
-    let obj = {};
-    obj = { channelId: "1337", content };
-    const merged = Object.assign(createMessageDefault(obj));
-    obj.state = MessageStates.SENT;
-    obj.id = "31337";
-    const messageRecord = obj.createMessageRecord(obj);
-    const obj1 = { id: "313337", username: null, discriminator: "0000", bot: false };
+    const obj2 = {};
+    const merged = Object.assign(createMessageDefault({ channelId: "1337", content }));
+    obj2.state = MessageStates.SENT;
+    obj2.id = "31337";
+    const messageRecord = MessageRecordUtils.createMessageRecord(obj2);
+    const obj4 = { id: "313337", username: null, discriminator: "0000", bot: false };
     const intl = util.intl;
-    obj1.username = intl.string(util.t.cqpybK);
-    const tmp3 = new UserRecord(obj1);
+    obj4.username = intl.string(util.t.cqpybK);
+    const tmp3 = new UserRecord(obj4);
     messageRecord.author = tmp3;
+    const obj3 = { channelId: "1337", content };
     const insertStaticUserResult = UserActionCreatorsAll.insertStaticUser(tmp3);
     if (null != insertStaticUserResult) {
       messageRecord.author = insertStaticUserResult;

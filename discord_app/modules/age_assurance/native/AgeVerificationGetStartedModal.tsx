@@ -8,12 +8,10 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { headerStyle: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-createStyles.headerStyle = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
-let obj1 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
+const createStyles = fn(4636);
+let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
+let closure_5 = createStyles.createStyles(obj2);
+let obj4 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
@@ -39,39 +37,24 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
       return entryPoint(classificationId[4]).pop();
     }
     function closeModalWithOnComplete() {
-      let arr = isRetry(flag[4]);
-      arr = arr.pop();
+      isRetry(flag[4]).pop();
       if (closure_3 != null) {
         closure_3();
       }
     }
-    let obj = {};
-    obj = {
-      headerStyle: closure_5.headerStyle,
-      headerTitle() {
-        return null;
-      },
-      headerLeft: null,
-      render: null
-    };
-    let obj2 = NavigatorHeader;
-    obj.headerLeft = obj2.getHeaderCloseButton(closeModal);
-    obj.render = function render() {
-      return onComplete(isRetry(flag[6]), { onClose: closeModal, modalSessionId, entryPoint });
-    };
-    obj[obj1.INTRO] = obj;
-    obj = {
+    const obj = {};
+    const obj2 = {
       headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeModal),
       render() {
-        return onComplete(isRetry(flag[7]), { onClose: closeModal, modalSessionId });
+        return onComplete(isRetry(flag[6]), { onClose: closeModal, modalSessionId, entryPoint });
       }
     };
-    obj[obj1.RETRY] = obj;
-    obj1 = {
+    obj[obj4.INTRO] = obj2;
+    obj4 = {
       headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
@@ -79,12 +62,25 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
       headerLeft: null,
       render: null
     };
-    obj1.headerLeft = NavigatorHeader.getHeaderCloseButton(closeModal);
-    obj1.render = function render(arg0, navigation) {
+    obj4.headerLeft = NavigatorHeader.getHeaderCloseButton(closeModal);
+    obj4.render = function render() {
+      return onComplete(isRetry(flag[7]), { onClose: closeModal, modalSessionId });
+    };
+    obj[obj4.RETRY] = obj4;
+    const obj6 = {
+      headerStyle: closure_5.headerStyle,
+      headerTitle() {
+        return null;
+      },
+      headerLeft: null,
+      render: null
+    };
+    obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(closeModal);
+    obj6.render = function render(arg0, navigation) {
       return onComplete(isRetry(flag[8]), { onClose: closeModalWithOnComplete, modalSessionId, classificationId, entryPoint, navigation });
     };
-    obj[obj1.EXPRESSIVE_INTRO] = obj1;
-    obj2 = {
+    obj[obj4.EXPRESSIVE_INTRO] = obj6;
+    const obj8 = {
       headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
@@ -92,11 +88,11 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
       headerLeft: null,
       render: null
     };
-    obj2.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj2.render = function render() {
+    obj8.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj8.render = function render() {
       return onComplete(isRetry(flag[9]), { onClose: closeModalWithOnComplete, modalSessionId });
     };
-    obj[obj1.GOOGLE_WALLET_VERIFICATION] = obj2;
+    obj[obj4.GOOGLE_WALLET_VERIFICATION] = obj8;
     return obj;
   }, items);
   const memo2 = classificationId.useMemo(() => {
@@ -123,4 +119,4 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   obj.headerBackTitle = intl.string(entryPoint(flag[13]).t["13/7kX"]);
   return onComplete(entryPoint(flag[12]).Navigator, obj);
 };
-export const AgeVerificationGetStartedModalScenes = obj1;
+export const AgeVerificationGetStartedModalScenes = obj4;

@@ -22,7 +22,6 @@ export default function BackgroundImage(backgroundImageSource) {
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
-  obj = {};
   const merged = Object.assign(noop.useMemo(() => {
     const items = [timestampProducer.absoluteFill, ];
     const obj = { style: items, source: null };
@@ -42,5 +41,5 @@ export default function BackgroundImage(backgroundImageSource) {
     }
   }, items));
   obj.children = <closure_4 />;
-  return <closure_5 />;
+  return <closure_5 style={absoluteFill.absoluteFill}>{null}</closure_5>;
 };

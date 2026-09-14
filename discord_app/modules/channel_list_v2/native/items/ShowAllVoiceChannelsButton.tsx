@@ -1,7 +1,7 @@
-// === Module 16290: ShowAllVoiceChannelsButton ===
+// === Module 16292: ShowAllVoiceChannelsButton ===
 
-// Module 16290 (ShowAllVoiceChannelsButton)
-import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 16291 */;
+// Module 16292 (ShowAllVoiceChannelsButton)
+import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 16293 */;
 import noop from "module_19" /* 19 */;
 import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7636 */;
 
@@ -15,9 +15,8 @@ export default noop.memo((guildId) => {
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
-  let obj = guildId(section[3]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId));
+  stateFromStores = guildId(section[3]).useStateFromStores(items, () => ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId));
   const items1 = [stateFromStores, guildId, section, listRef];
   const callback = listRef.useCallback(() => {
     let obj = VoiceCategoryActionCreators;
@@ -50,6 +49,6 @@ export default noop.memo((guildId) => {
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  obj = { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" };
+  let obj = guildId(section[3]);
   return jsx(guildId(section[6]).Button, { text: stringResult, icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }), onPress: callback, variant: "secondary", size: "sm" });
 });

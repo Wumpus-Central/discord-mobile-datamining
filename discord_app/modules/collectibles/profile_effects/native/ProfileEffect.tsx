@@ -25,17 +25,17 @@ function StaticEffect(useThumbnail) {
   const tmp = closure_10();
   let reducedMotionSrc = profileEffect.reducedMotionSrc;
   c0 = undefined;
-  let obj = thumbnailUrlOverride;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
-  [tmp3, c0] = _slicedToArray(thumbnailUrlOverride.useState(0), 2);
+  [tmp3, c0] = thumbnailUrlOverride.useState(0);
   const height = reducedMotionSrc(1477)().height;
   const callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
   dependencyMap = tmp3;
+  const obj = thumbnailUrlOverride;
   const tmp2 = _slicedToArray(thumbnailUrlOverride.useState(0), 2);
   const tmp4 = reducedMotionSrc;
-  [tmp8, c3] = _slicedToArray(thumbnailUrlOverride.useState(0), 2);
+  [tmp8, c3] = thumbnailUrlOverride.useState(0);
   if (thumbnailUrlOverride == null) {
     thumbnailUrlOverride = thumbnailPreviewSrc;
   }
@@ -50,15 +50,16 @@ function StaticEffect(useThumbnail) {
     }
   }, items);
   if (0 === tmp8) {
-    obj = { style: tmp.profileEffects, pointerEvents: "none", onLayout: callback };
+    const obj2 = { style: tmp.profileEffects, pointerEvents: "none", onLayout: callback };
+    let obj3 = obj2;
   } else {
-    obj = { style: tmp.profileEffects, pointerEvents: "none", onLayout: callback, children: null };
+    obj3 = { style: tmp.profileEffects, pointerEvents: "none", onLayout: callback, children: null };
     if (useThumbnail) {
       reducedMotionSrc = thumbnailUrlOverride;
     }
     size = { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null };
-    const obj1 = { uri: reducedMotionSrc };
-    size.source = obj1;
+    const obj4 = { uri: reducedMotionSrc };
+    size.source = obj4;
     size.alt = accessibilityLabel;
     size.height = tmp8;
     size.width = tmp3;
@@ -66,10 +67,10 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj.children = jsx(tmp4(5668), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
+    obj3.children = jsx(tmp4(5668), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
     const tmp4Result = tmp4(5668);
   }
-  return <closure_5 {...obj} />;
+  return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
@@ -155,9 +156,9 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  let obj = memo(504);
+  const tmp9 = memo1(8933);
   const items5 = [onLoad];
-  const stateFromStores = obj.useStateFromStores(items5, () => onLoad.getState());
+  const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);
   const items6 = [stateFromStores, stop, reset];
   const effect2 = noop.useEffect(() => {
@@ -183,22 +184,7 @@ function ProfileEffect(profileEffect) {
     }
   }, items7);
   const items8 = [tmp, style];
-  obj = {
-    style: noop.useMemo(() => {
-      const items = [ref.profileEffects, memo1];
-      return items;
-    }, items8),
-    pointerEvents: "none",
-    onLayout: callback,
-    children: memo.map((layerConfig, index) => {
-      let flag = _undefined[index];
-      const sum = layerConfig.src + index;
-      if (flag == null) {
-        flag = false;
-      }
-      return jsx(ProfileEffectLayerDefault, { layerConfig, animate: flag, paused, width, accessibilityLabel, onLoad, loaded: ref.current }, sum);
-    })
-  };
+  const obj = memo(504);
   return <accessibilityLabel style={noop.useMemo(() => {
     const items = [ref.profileEffects, memo1];
     return items;
@@ -216,26 +202,25 @@ const result = size.fileFinishedImporting("modules/collectibles/profile_effects/
 
 export default function WrappedProfileEffect(skuId) {
   let thumbnailUrlOverride = skuId;
-  let obj = initialize;
-  const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp = useProfileEffectDefault(skuId.skuId);
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   useThumbnail = utils.usePotentiallyRandomizedProfileEffect(tmp);
   if (null == useThumbnail) {
     return null;
   } else {
     if (!stateFromStores) {
       if (!thumbnailUrlOverride.useThumbnail) {
-        obj = { profileEffect: useThumbnail };
+        const obj3 = { profileEffect: useThumbnail };
         const merged = Object.assign(thumbnailUrlOverride);
         let tmp8 = <ProfileEffect profileEffect={useThumbnail} />;
       }
     }
-    obj = { profileEffect: useThumbnail, bannerAdjustment: null, useThumbnail: null, thumbnailUrlOverride: null };
+    const obj6 = { profileEffect: useThumbnail, bannerAdjustment: null, useThumbnail: null, thumbnailUrlOverride: null };
     ({ bannerAdjustment: obj4.bannerAdjustment, useThumbnail } = thumbnailUrlOverride);
-    obj.useThumbnail = useThumbnail;
+    obj6.useThumbnail = useThumbnail;
     thumbnailUrlOverride = thumbnailUrlOverride.thumbnailUrlOverride;
-    obj.thumbnailUrlOverride = thumbnailUrlOverride;
+    obj6.thumbnailUrlOverride = thumbnailUrlOverride;
     tmp8 = <StaticEffect profileEffect={useThumbnail} bannerAdjustment={null} useThumbnail={null} thumbnailUrlOverride={null} />;
   }
 };

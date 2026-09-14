@@ -1,15 +1,17 @@
-// === Module 12833: NUFActionCreators ===
+// === Module 12834: NUFActionCreators ===
 
-// Module 12833 (NUFActionCreators)
+// Module 12834 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12813 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12872 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12875 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12814 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12873 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let closure_13 = async function _startContactSyncForDiscoverability() {
@@ -23,8 +25,8 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,8 +39,8 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp4;
             currentUser = currentUser.getCurrentUser();
@@ -54,12 +56,11 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
               throw error;
             } else {
               closure_2_6(name);
-              let obj4 = ContactSyncActionCreatorsDefault;
-              let obj1 = { enabled: tmp15, name };
+              const obj6 = { enabled: tmp15, name };
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: obj4.updateContactSyncEnabled(obj1), done: false };
-              return obj2;
+              const obj7 = { value: ContactSyncActionCreatorsDefault.updateContactSyncEnabled(obj6), done: false };
+              return obj7;
             }
           }
         } else if (1 === tmp4) {
@@ -68,21 +69,20 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
-            obj1 = closure_129_0(closure_129_2[15]);
             c2 = 2;
             c3 = 1;
-            obj4 = { value: obj1.uploadContacts("[]", true), done: false };
-            return obj4;
+            const obj9 = { value: closure_129_0(closure_129_2[15]).uploadContacts("[]", true), done: false };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c3 = 3;
@@ -95,9 +95,9 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(12806);
+const ContactSyncModalStore = fn(12807);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(12834).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(12835).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1074).PlatformTypes;
 let closure_12 = fn(7081).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
@@ -135,7 +135,7 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = {
+  HubEmailConnectionModalActionCreatorsDefault.open({
     onCloseExtra(arg0) {
       if (arg0) {
         const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
@@ -144,8 +144,7 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
       }
     },
     displayStudentPrompt: flag
-  };
-  obj.open(obj, SLIDE_IN);
+  }, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
@@ -158,10 +157,8 @@ export const openDiscoverabilityModal = function openDiscoverabilityModal() {
   }), {}, closure_10);
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
-  let obj = ModalActionCreatorsDefault;
-  obj.popWithKey(closure_10);
-  obj = { type: "ONBOARDING_STEP", skip };
-  DispatcherDefault.dispatch(obj);
+  ModalActionCreatorsDefault.popWithKey(closure_10);
+  DispatcherDefault.dispatch({ type: "ONBOARDING_STEP", skip });
 };
 export const startContactSyncForDiscoverability = function startContactSyncForDiscoverability() {
   const self = this;

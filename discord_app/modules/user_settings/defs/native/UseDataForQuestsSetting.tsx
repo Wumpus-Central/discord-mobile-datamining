@@ -1,12 +1,12 @@
-// === Module 15946: UseDataForQuestsSetting ===
+// === Module 15948: UseDataForQuestsSetting ===
 
-// Module 15946 (UseDataForQuestsSetting)
+// Module 15948 (UseDataForQuestsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15947 */;
-import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15948 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15949 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15950 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 function useIsDisabled() {
@@ -25,7 +25,8 @@ function onDataToSupportQuestsSettingValueChange(arg0) {
   DropsOptedOut.updateSetting(!arg0);
 }
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let obj = {
+let SettingBuilders = SettingBuilders_mod;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.sJYh5t);
@@ -37,9 +38,9 @@ let obj = {
   useValue: useDataToSupportQuestsSettingValue,
   onValueChange: onDataToSupportQuestsSettingValueChange,
   useIsDisabled
-};
-const toggle = SettingBuilders.createToggle(obj);
-obj = {
+});
+let SettingBuilders = SettingBuilders_mod;
+const toggle1 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.sJYh5t);
@@ -49,8 +50,7 @@ obj = {
   useValue: useDataToSupportQuestsSettingValue,
   onValueChange: onDataToSupportQuestsSettingValueChange,
   useIsDisabled
-};
-const toggle1 = SettingBuilders.createToggle(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
 
 export default toggle;

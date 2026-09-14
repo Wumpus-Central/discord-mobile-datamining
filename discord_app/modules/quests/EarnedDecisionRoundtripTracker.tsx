@@ -1,7 +1,7 @@
-// === Module 11434: EarnedDecisionRoundtripTracker ===
+// === Module 11435: EarnedDecisionRoundtripTracker ===
 
-// Module 11434 (EarnedDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 11435 (EarnedDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import NetStats from "NetStats" /* 7562 */;
 import SessionForegroundUtils from "SessionForegroundUtils" /* 7565 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
@@ -14,23 +14,22 @@ function trackRoundtrip(apiResponseTimestamp) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = NetStats;
-    const signalStrength = obj.getSignalStrength();
-    obj = {};
+    const signalStrength = NetStats.getSignalStrength();
+    const obj4 = {};
     const merged = Object.assign(getDeviceMetadataDefault());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
-    obj.api_latency_ms = diff;
-    obj.mobile_network_type = NetworkStore.getType();
+    obj4.api_latency_ms = diff;
+    obj4.mobile_network_type = NetworkStore.getType();
     let tmp10 = null != signalStrength;
     if (tmp10) {
-      obj = { mobile_signal_strength_level: signalStrength };
-      tmp10 = obj;
+      const obj5 = { mobile_signal_strength_level: signalStrength };
+      tmp10 = obj5;
     }
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
     const obj2 = AnalyticsUtilsDefault;
-    obj.is_foregrounded = SessionForegroundUtils.isForegrounded();
-    obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj);
+    obj4.is_foregrounded = SessionForegroundUtils.isForegrounded();
+    obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj4);
     const tmp2Result = SessionForegroundUtils;
   }
 }

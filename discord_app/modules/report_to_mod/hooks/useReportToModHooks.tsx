@@ -1,6 +1,6 @@
-// === Module 11795: useReportToModHooks ===
+// === Module 11796: useReportToModHooks ===
 
-// Module 11795 (useReportToModHooks)
+// Module 11796 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7369 */;
 import ReportToModUtils from "ReportToModUtils" /* 7379 */;
@@ -10,6 +10,8 @@ import UserActionCreators from "UserActionCreators" /* 8298 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MessageStore from "MessageStore" /* 4857 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
@@ -73,10 +75,10 @@ export const useLoadReportedMessage = function useLoadReportedMessage(messageRef
       tmp = null != messageReference;
     }
     if (tmp) {
-      let obj = { channelId: messageReference.channel_id, jump: null, limit: 10 };
-      obj = { messageId: messageReference.message_id };
-      obj.jump = obj;
-      const messages = obj.fetchMessages(obj);
+      const obj2 = { channelId: messageReference.channel_id, jump: null, limit: 10 };
+      const obj3 = { messageId: messageReference.message_id };
+      obj2.jump = obj3;
+      const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
     }
   }, items1);
 };

@@ -1,6 +1,6 @@
-// === Module 11565: actions/GiftCodeActionCreators ===
+// === Module 11566: actions/GiftCodeActionCreators ===
 
-// Module 11565 (actions/GiftCodeActionCreators)
+// Module 11566 (actions/GiftCodeActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -24,8 +24,8 @@ let closure_7 = async function _redeemGiftCode(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +38,8 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -69,8 +69,8 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           if (obj18.getIsPaymentsBlocked()) {
             closure_130_1(closure_130_2[3])();
@@ -89,23 +89,22 @@ let closure_7 = async function _redeemGiftCode(arg0) {
               tmp46 = paymentSource;
             }
             closure_129_7 = tmp46;
-            let obj6 = closure_130_1(closure_130_2[4]);
-            const obj2 = { type: "GIFT_CODE_REDEEM", code: closure_129_0 };
-            obj6.dispatch(obj2);
+            const obj8 = { type: "GIFT_CODE_REDEEM", code: closure_129_0 };
+            closure_130_1(closure_130_2[4]).dispatch(obj8);
             c4 = 1;
             const HTTP = closure_130_0(closure_130_2[5]).HTTP;
             const request = { url: closure_130_4.GIFT_CODE_REDEEM(closure_129_0), body: null, oldFormErrors: true, rejectWithError: false };
-            let obj3 = { channel_id: closure_129_5, payment_source_id: null };
+            const obj9 = { channel_id: closure_129_5, payment_source_id: null };
             let id;
             if (closure_129_7 != null) {
               id = closure_129_7.id;
             }
-            obj3.payment_source_id = id;
-            request.body = obj3;
+            obj9.payment_source_id = id;
+            request.body = obj9;
             c5 = 3;
             c6 = 1;
-            const obj4 = { value: HTTP.post(request), done: false };
-            return obj4;
+            const obj10 = { value: HTTP.post(request), done: false };
+            return obj10;
           }
           obj18 = closure_130_0(closure_130_2[2]);
         }
@@ -114,11 +113,10 @@ let closure_7 = async function _redeemGiftCode(arg0) {
         closure_129_10 = closure_3;
         const billingError = new closure_130_0(closure_130_2[7]).BillingError(closure_129_10);
         closure_129_9 = billingError;
-        obj3 = closure_130_1(closure_130_2[4]);
-        let obj5 = { type: "GIFT_CODE_REDEEM_FAILURE", code: closure_129_0, error: closure_129_9 };
-        obj3.dispatch(obj5);
-        obj5 = closure_130_1(closure_130_2[6]);
-        obj5.track(closure_130_5.OPEN_MODAL, { type: "gift_accept", location: null });
+        const obj11 = { type: "GIFT_CODE_REDEEM_FAILURE", code: closure_129_0, error: closure_129_9 };
+        closure_130_1(closure_130_2[4]).dispatch(obj11);
+        const obj4 = closure_130_1(closure_130_2[4]);
+        closure_130_1(closure_130_2[6]).track(closure_130_5.OPEN_MODAL, { type: "gift_accept", location: null });
         if (closure_129_3 != null) {
           tmp32(closure_129_9);
         }
@@ -129,22 +127,22 @@ let closure_7 = async function _redeemGiftCode(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj6 = { value, done: true };
-        return obj6;
+        const obj12 = { value, done: true };
+        return obj12;
       } else {
         closure_129_8 = value;
-        const obj7 = { type: "GIFT_CODE_REDEEM_SUCCESS", code: closure_129_0 };
-        closure_130_1(closure_130_2[4]).dispatch(obj7);
+        const obj13 = { type: "GIFT_CODE_REDEEM_SUCCESS", code: closure_129_0 };
+        closure_130_1(closure_130_2[4]).dispatch(obj13);
         const obj15 = closure_130_1(closure_130_2[4]);
         closure_130_1(closure_130_2[6]).track(closure_130_5.OPEN_MODAL, { type: "gift_accept" });
         if (closure_129_2 != null) {
           closure_129_2();
         }
-        obj = { code: closure_129_0, entitlement: closure_129_8 };
+        const obj = { code: closure_129_0, entitlement: closure_129_8 };
         c4 = 0;
         c6 = 3;
-        const obj8 = { value: obj, done: true };
-        return obj8;
+        const obj14 = { value: obj, done: true };
+        return obj14;
       }
     } catch (tmp66) {
       closure_3 = tmp66;
@@ -158,8 +156,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
   }
 };
 function openGiftCodeRedeemModal(code) {
-  const obj = { code };
-  obj.pushLazy(asyncRequireImpl(11571, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11572, dependencyMap.paths), { code }, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 const Constants = fn(1074);
 ({ Endpoints: closure_4, AnalyticEvents: hasOwnProperty } = Constants);

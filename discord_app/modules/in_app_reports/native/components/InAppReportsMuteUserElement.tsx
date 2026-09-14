@@ -22,10 +22,9 @@ export default function MuteUserElement(user) {
   const reportId = user.reportId;
   ChannelStore = undefined;
   const dMFromUserId = ChannelStore.getDMFromUserId(user.id);
-  let obj = user(reportId[6]);
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const stateFromStores = user(reportId[6]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
@@ -48,19 +47,19 @@ export default function MuteUserElement(user) {
   const items4 = [dMFromUserId, channelId, user, reportId];
   let tmp9 = null;
   if (null != user) {
-    obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
+    let obj2 = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp2(tmp3[12]).intl;
-    obj = { username: memo };
-    obj.title = intl.formatToPlainString(tmp2(tmp3[12]).t.TRp5wR, obj);
+    let obj3 = { username: memo };
+    obj2.title = intl.formatToPlainString(tmp2(tmp3[12]).t.TRp5wR, obj3);
     const intl2 = tmp2(tmp3[12]).intl;
-    const obj1 = { username: memo };
-    obj.disabledTitle = intl2.formatToPlainString(tmp2(tmp3[12]).t.raALhx, obj1);
+    let obj4 = { username: memo };
+    obj2.disabledTitle = intl2.formatToPlainString(tmp2(tmp3[12]).t.raALhx, obj4);
     const intl3 = tmp2(tmp3[12]).intl;
-    obj.description = intl3.string(tmp2(tmp3[12]).t["yM/+AJ"]);
-    obj.disabled = tmp7[0];
-    obj.onPress = tmp8;
-    obj.icon = jsx(tmp2(tmp3[13]).BellSlashIcon, {});
-    tmp9 = jsx(channelId(tmp3[11]), { username: memo });
+    obj2.description = intl3.string(tmp2(tmp3[12]).t["yM/+AJ"]);
+    obj2.disabled = tmp7[0];
+    obj2.onPress = tmp8;
+    obj2.icon = jsx(tmp2(tmp3[13]).BellSlashIcon, {});
+    tmp9 = jsx(channelId(tmp3[11]), { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null });
     const tmp12 = channelId(tmp3[11]);
   }
   return tmp9;

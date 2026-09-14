@@ -1,17 +1,17 @@
-// === Module 12809: ContactSyncUtils ===
+// === Module 12810: ContactSyncUtils ===
 
-// Module 12809 (ContactSyncUtils)
+// Module 12810 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import ContactSyncManager from "ContactSyncManager" /* 12810 */;
+import ContactSyncManager from "ContactSyncManager" /* 12811 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 
@@ -24,8 +24,8 @@ let closure_18 = async function _uploadContacts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +38,8 @@ let closure_18 = async function _uploadContacts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const friend_suggestions = tmp5;
           closure_2 = tmp2;
@@ -62,39 +62,34 @@ let closure_18 = async function _uploadContacts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const _JSON = JSON;
           closure_130_2 = JSON.parse(closure_130_0);
           const request = { url: closure_131_12.CONNECTION_SYNC_CONTACTS, body: null, trackedActionData: null, rejectWithError: false };
-          const obj2 = { friend_list_entries: closure_130_2, background: closure_130_1, allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO, include_mutual_friends_count: false };
-          request.body = obj2;
-          const obj3 = { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
-          request.trackedActionData = obj3;
+          const obj5 = { friend_list_entries: closure_130_2, background: closure_130_1, allowed_in_suggestions: closure_131_11.ANYONE_WITH_CONTACT_INFO, include_mutual_friends_count: false };
+          request.body = obj5;
+          const obj6 = { event: closure_131_0(closure_131_2[8]).NetworkActionNames.USER_CONTACTS_SYNC };
+          request.trackedActionData = obj6;
           c4 = 2;
           c5 = 1;
-          const obj4 = { value: closure_131_1(closure_131_2[7]).put(request), done: false };
-          return obj4;
+          const obj7 = { value: closure_131_1(closure_131_2[7]).put(request), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         body = value.body;
-        obj = closure_131_1(closure_131_2[9]);
-        obj.wait(() => {
-          closure_1(closure_2[9]);
-          const obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: friend_suggestions.friend_suggestions };
-          return obj.dispatch(obj);
-        });
+        closure_131_1(closure_131_2[9]).wait(() => closure_1(closure_2[9]).dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: friend_suggestions.friend_suggestions }));
         c5 = 3;
-        const obj6 = { value: body, done: true };
-        return obj6;
+        const obj10 = { value: body, done: true };
+        return obj10;
       }
     } catch (tmp12) {
       c5 = tmp;
@@ -103,9 +98,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12808);
+const ContactSyncPersistedStore = fn(12809);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12807);
+const ContactSyncConstants = fn(12808);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1074);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);
@@ -165,24 +160,23 @@ export const uploadContacts = function uploadContacts() {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  const request = { url: closure_1_12.USER_BULK_RELATIONSHIPS, body: null, trackedActionData: null, rejectWithError: false };
-  let obj = { user_ids, token: bulkAddToken };
-  request.body = obj;
-  obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  request.trackedActionData = obj;
+  const request = { url: closure_1_12.USER_BULK_RELATIONSHIPS, body: { user_ids, token: bulkAddToken }, trackedActionData: null, rejectWithError: false };
+  const obj = TrackedHTTPUtilsDefault;
+  const obj2 = { user_ids, token: bulkAddToken };
+  request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(request).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   React5();
   React6();
-  let obj = ContactSyncManager;
-  const result = obj.removeLastUserContactsUpload();
+  const result = ContactSyncManager.removeLastUserContactsUpload();
   const ContactSyncEnabled = UserSettings.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
-  obj = { url: closure_1_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
-  obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE };
-  obj.trackedActionData = obj;
-  return TrackedHTTPUtilsDefault.delete(obj);
+  const obj3 = { url: closure_1_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
+  const obj2 = TrackedHTTPUtilsDefault;
+  obj3.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE };
+  return obj2.delete(obj3);
 };
 export const getImageForContactId = function getImageForContactId(arg0) {
   closure_0 = arg0;
@@ -259,15 +253,14 @@ export const useContactSyncEnabled = function useContactSyncEnabled() {
 export const useContactSyncUserIsDiscoverable = function useContactSyncUserIsDiscoverable() {
   const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  let obj = FlagUtils;
-  let hasFlagResult = obj.hasFlag(setting, constants3.FIND_BY_PHONE);
+  let hasFlagResult = FlagUtils.hasFlag(setting, constants3.FIND_BY_PHONE);
   const hasFlagResult1 = FlagUtils.hasFlag(setting, constants3.FIND_BY_EMAIL);
-  obj = { phone: hasFlagResult, email: hasFlagResult1, any: null };
+  const obj3 = { phone: hasFlagResult, email: hasFlagResult1, any: null };
   if (!hasFlagResult) {
     hasFlagResult = hasFlagResult1;
   }
-  obj.any = hasFlagResult;
-  return obj;
+  obj3.any = hasFlagResult;
+  return obj3;
 };
 export const isContactSyncEnabled = function isContactSyncEnabled(contactSyncAccount) {
   let tmp = null != contactSyncAccount && contactSyncAccount.friendSync;

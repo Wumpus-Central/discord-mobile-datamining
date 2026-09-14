@@ -1,6 +1,6 @@
-// === Module 13392: useAppDMChatInputState ===
+// === Module 13393: useAppDMChatInputState ===
 
-// Module 13392 (useAppDMChatInputState)
+// Module 13393 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,6 @@ export default function useAppDMChatInputState(context) {
   let stateFromStores;
   let application;
   const channel = context.context.channel;
-  let obj = application;
   items = [channel];
   const memo = application.useMemo(() => {
     if (null != channel) {
@@ -38,15 +37,15 @@ export default function useAppDMChatInputState(context) {
     }
     return null;
   }, items);
-  let obj1 = channel(stateFromStores[8]);
   const items1 = [ApplicationStore];
-  stateFromStores = obj1.useStateFromStores(items1, () => {
+  stateFromStores = channel(stateFromStores[8]).useStateFromStores(items1, () => {
     let id;
     if (memo != null) {
       id = memo.id;
     }
     return ApplicationStore.getAppIdForBotUserId(id);
   });
+  let obj2 = channel(stateFromStores[8]);
   const items2 = [UserProfileStore];
   const stateFromStores1 = channel(stateFromStores[8]).useStateFromStores(items2, () => {
     let tmp2;
@@ -95,18 +94,17 @@ export default function useAppDMChatInputState(context) {
       id = memo.id;
     }
     if (null != id) {
-      const obj = { type: "APP_DM_OPEN", botUserId: memo.id };
-      obj.dispatch(obj);
+      const obj2 = { type: "APP_DM_OPEN", botUserId: memo.id };
+      DispatcherDefault.dispatch(obj2);
     }
   }, items4);
-  obj = { commandTypes: items };
-  obj = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
+  const obj5 = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
   let id2;
   if (memo != null) {
     id2 = memo.id;
   }
-  obj.allowFetch = null != id2;
-  const descriptors = useQueryState({ channel, type: "channel" }, obj, obj).descriptors;
+  obj5.allowFetch = null != id2;
+  const descriptors = useQueryState({ channel, type: "channel" }, { commandTypes: items }, obj5).descriptors;
   const found = descriptors.find((application) => {
     application = application.application;
     let id;
@@ -128,13 +126,14 @@ export default function useAppDMChatInputState(context) {
     return fromServer;
   }, items5);
   const obj3 = channel(stateFromStores[8]);
+  const obj4 = { commandTypes: items };
   if (null == memo1) {
     const tmp15 = stateFromStores;
   }
   if (memo1 == null) {
     memo1 = tmp2Result.useGetOrFetchApplication(tmp15);
   }
-  obj1 = { application: memo1, isAppDM: null };
+  const obj6 = { application: memo1, isAppDM: null };
   let flag;
   if (memo != null) {
     flag = memo.bot;
@@ -142,6 +141,6 @@ export default function useAppDMChatInputState(context) {
   if (flag == null) {
     flag = false;
   }
-  obj1.isAppDM = flag;
-  return obj1;
+  obj6.isAppDM = flag;
+  return obj6;
 };

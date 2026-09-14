@@ -21,74 +21,72 @@ function getInitialGuildState(guildId, channelId, flag) {
   if (channelId == null) {
     channelId = SelectedChannelStore.getChannelId(guildId);
   }
-  let obj = useChatLayout;
-  const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
+  const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   if (flag) {
     if (null != channelId) {
       if (!isChatLockedOpen) {
         if (!flag) {
           let items = [true, ];
-          obj = { index: 0, routes: null };
-          obj = { name: "tabs", state: null };
-          const obj1 = { routes: null, index: 0 };
-          const obj2 = { name: "guilds", params: null };
-          const obj3 = { guildId, channelId };
-          obj2.params = obj3;
-          const items1 = [obj2];
-          obj1.routes = items1;
-          obj.state = obj1;
-          const items2 = [obj, ];
-          const obj4 = { name: "channel", params: null };
-          const obj5 = { guildId, channelId };
-          obj4.params = obj5;
-          items2[1] = obj4;
-          const obj6 = { name: "main", state: null };
-          const obj7 = { routes: items2, index: items2.length - 1 };
-          obj6.state = obj7;
-          const items3 = [obj6];
-          obj.routes = items3;
-          items[1] = obj;
+          const obj2 = { index: 0, routes: null };
+          const obj3 = { name: "tabs", state: null };
+          const obj4 = { routes: null, index: 0 };
+          const obj5 = { name: "guilds", params: null };
+          const obj6 = { guildId, channelId };
+          obj5.params = obj6;
+          const items1 = [obj5];
+          obj4.routes = items1;
+          obj3.state = obj4;
+          const items2 = [obj3, ];
+          const obj7 = { name: "channel", params: null };
+          const obj8 = { guildId, channelId };
+          obj7.params = obj8;
+          items2[1] = obj7;
+          const obj9 = { name: "main", state: null };
+          const obj10 = { routes: items2, index: items2.length - 1 };
+          obj9.state = obj10;
+          const items3 = [obj9];
+          obj2.routes = items3;
+          items[1] = obj2;
         }
         return items;
       }
     }
   }
   const items4 = [isChatLockedOpen && null != channelId, ];
-  const obj8 = { index: 0, routes: null };
-  const obj9 = { name: "tabs", state: null };
-  const obj10 = { routes: null, index: 0 };
+  const obj11 = { index: 0, routes: null };
+  const obj12 = { name: "tabs", state: null };
+  const obj13 = { routes: null, index: 0 };
   const items5 = [{ name: "guilds", params: { guildId, channelId, drawerOpen: flag } }];
-  obj10.routes = items5;
-  obj9.state = obj10;
-  const items6 = [obj9];
-  const obj12 = { name: "main", state: { routes: items6, index: items6.length - 1 } };
-  const items7 = [obj12];
-  obj8.routes = items7;
-  items4[1] = obj8;
+  obj13.routes = items5;
+  obj12.state = obj13;
+  const items6 = [obj12];
+  const obj15 = { name: "main", state: { routes: items6, index: items6.length - 1 } };
+  const items7 = [obj15];
+  obj11.routes = items7;
+  items4[1] = obj11;
   items = items4;
-  const obj11 = { name: "guilds", params: { guildId, channelId, drawerOpen: flag } };
-  const obj13 = { routes: items6, index: items6.length - 1 };
+  const obj14 = { name: "guilds", params: { guildId, channelId, drawerOpen: flag } };
+  const obj16 = { routes: items6, index: items6.length - 1 };
   const tmp3 = isChatLockedOpen && null != channelId;
 }
 function computeInitialNavigationStateWithoutLogging() {
   if (null != AuthenticationStore.getToken()) {
-    let obj1 = router_utils;
-    const _location = obj1.getHistory().location;
-    let obj2 = matchPathCompat;
-    let obj = { path: null };
+    const _location = router_utils.getHistory().location;
+    const obj4 = { path: null };
     const RouteParam = RouteUtils.RouteParam;
+    const obj3 = matchPathCompat;
     const RouteParam2 = RouteUtils.RouteParam;
-    obj.path = React5.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-    const matchPathResult = obj2.matchPath(_location.pathname, obj);
+    obj4.path = React5.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
+    const matchPathResult = obj3.matchPath(_location.pathname, obj4);
     const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
-      obj = { path: null };
+      const obj6 = { path: null };
       const RouteParam3 = RouteUtils.RouteParam;
       const tmpResult = matchPathCompat;
       const RouteParam4 = RouteUtils.RouteParam;
-      obj.path = React5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
-      let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj);
+      obj6.path = React5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
+      let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj6);
       let flag = false;
       const guildIdResult1 = RouteParam3.guildId();
     } else {
@@ -128,19 +126,19 @@ function computeInitialNavigationStateWithoutLogging() {
         str2 = str3;
       }
       if ("private-channels" === str2) {
-        obj1 = { page: str2 };
-        const items1 = [obj1, tmp17];
+        const obj7 = { page: str2 };
+        const items1 = [obj7, tmp17];
         let items2 = items1;
       } else {
-        obj2 = { page: str2, guildId };
-        items2 = [obj2, tmp17];
+        const obj8 = { page: str2, guildId };
+        items2 = [obj8, tmp17];
       }
       return items2;
     }
     const guildIdResult = RouteParam.guildId();
   } else {
     const items3 = [{ page: "other" }, ];
-    obj = { routes: null, index: 0 };
+    const obj = { routes: null, index: 0 };
     const items4 = [{ name: "auth" }];
     obj.routes = items4;
     items3[1] = obj;
@@ -165,9 +163,7 @@ export default function getInitialNavigationState(arr) {
   return tmp;
 };
 export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
-  let obj = { name: "main", state: null };
-  obj = { routes: items, index: items.length - 1 };
-  obj.state = obj;
+  const obj = { name: "main", state: { routes: items, index: items.length - 1 } };
   items = [obj];
   return items;
 };

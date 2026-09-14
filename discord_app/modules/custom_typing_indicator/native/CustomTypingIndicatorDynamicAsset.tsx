@@ -1,8 +1,10 @@
-// === Module 12099: CustomTypingIndicatorDynamicAsset ===
+// === Module 12100: CustomTypingIndicatorDynamicAsset ===
 
-// Module 12099 (CustomTypingIndicatorDynamicAsset)
+// Module 12100 (CustomTypingIndicatorDynamicAsset)
 import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
@@ -10,10 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((width, gap) => {
-  let obj = { emojiRow: null, emoji: null, text: { flexShrink: 1 } };
-  obj = { flexDirection: "row", gap };
-  obj.emojiRow = obj;
-  obj.emoji = { width, height: width };
+  const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
   return obj;
 });
 const size = fn(2);
@@ -29,22 +28,29 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
   const tmpResult = closure_6(emojiSize, emojiGap);
   _require = tmpResult;
   let obj = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
-  obj = {
+  const items = [
+    closure_4(View, {
+      style: tmpResult.emojiRow,
+      children: emojiSource.map((uri, index) => {
+        const obj = { fadeDuration: 0, source: { uri }, style: emoji.emoji };
+        return React4(FastImageDefault, obj, index);
+      })
+    }),
+
+  ];
+  const obj3 = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: null, children: null };
+  const items1 = [tmpResult.text, textStyle];
+  obj3.style = items1;
+  const intl = require("util").intl;
+  const obj2 = {
     style: tmpResult.emojiRow,
     children: emojiSource.map((uri, index) => {
-      let obj = { fadeDuration: 0, source: null, style: emoji.emoji };
-      obj = { uri };
-      obj.source = obj;
+      const obj = { fadeDuration: 0, source: { uri }, style: emoji.emoji };
       return React4(FastImageDefault, obj, index);
     })
   };
-  const items = [closure_4(View, obj), ];
-  obj = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: null, children: null };
-  const items1 = [tmpResult.text, textStyle];
-  obj.style = items1;
-  const intl = require("util").intl;
-  obj.children = intl.format(require("CustomTypingIndicatorUtils").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
-  items[1] = closure_4(require("Text/Text").Text, obj);
+  obj3.children = intl.format(require("CustomTypingIndicatorUtils").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  items[1] = closure_4(require("Text/Text").Text, obj3);
   obj.children = items;
   return closure_5(require("Stack/Stack").Stack, obj);
 };

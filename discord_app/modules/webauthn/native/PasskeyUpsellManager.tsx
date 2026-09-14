@@ -1,15 +1,15 @@
-// === Module 14749: PasskeyUpsellManager ===
+// === Module 14750: PasskeyUpsellManager ===
 
-// Module 14749 (PasskeyUpsellManager)
+// Module 14750 (PasskeyUpsellManager)
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6698 */;
 import MFAUtils from "MFAUtils" /* 7052 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14750 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14751 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1371 */;
-import WebAuthnStore from "WebAuthnStore" /* 14743 */;
+import WebAuthnStore from "WebAuthnStore" /* 14744 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;
@@ -33,11 +33,9 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (MFAUtils.hasWebAuthn) {
       if (AuthenticationStore.getLoginStatus() === LoginStates.NONE) {
         if (AuthenticationStore.attemptedPasswordLogin()) {
-          let tmpResult = DismissibleContentUnsafeUtils;
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!WebAuthnStore.hasFetchedCredentials()) {
-              tmpResult = NavigationRouteUtils;
-              if (!tmpResult.isModalOpen()) {
+              if (!tmpResult3.isModalOpen()) {
                 const currentUser = UserStore.getCurrentUser();
                 if (tmp6) {
                   if (WebAuthnStore.hasFetchedCredentials()) {
@@ -45,13 +43,15 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
-                    const tmpResult1 = WebAuthnActionCreators;
+                    const tmpResult4 = WebAuthnActionCreators;
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;
               }
+              tmpResult3 = NavigationRouteUtils;
             }
           }
+          tmpResult = DismissibleContentUnsafeUtils;
         }
       }
     }
@@ -65,8 +65,7 @@ prototype["handleLogout"] = function handleLogout() {
   c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  const obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  return DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL, { dismissAction: USER_DISMISS, forceTrack: true });
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
 const size = fn(2);

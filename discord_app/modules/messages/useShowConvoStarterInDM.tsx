@@ -1,6 +1,6 @@
-// === Module 12395: useShowConvoStarterInDM ===
+// === Module 12396: useShowConvoStarterInDM ===
 
-// Module 12395 (useShowConvoStarterInDM)
+// Module 12396 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import MessageRequestStore from "MessageRequestStore" /* 7322 */;
@@ -9,6 +9,8 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let useRef = _mod19.useRef;
 ({ RelationshipTypes: closure_7, UserFlags: closure_8 } = Constants);

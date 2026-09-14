@@ -1,11 +1,11 @@
-// === Module 1236: ApexExperimentStore ===
+// === Module 1234: ApexExperimentStore ===
 
-// Module 1236 (ApexExperimentStore)
+// Module 1234 (ApexExperimentStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1362 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1360 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseApexExperimentStore from "BaseApexExperimentStore" /* 1237 */;
+import BaseApexExperimentStore from "BaseApexExperimentStore" /* 1235 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -58,16 +58,16 @@ class ApexExperimentStore extends tmp2 {
             return closure_0.handleLogout(isSwitchingAccount.isSwitchingAccount);
           }
     };
-    tmp = new tmp(tmp2, obj, closure_0(closure_2[4]).DispatchBand.Early, new.target, tmp, tmp2, obj, new.target);
-    closure_0 = tmp;
-    tmp.track = () => {
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[4]).DispatchBand.Early, new.target, tmp, tmp2, obj, new.target);
+    closure_0 = tmp1;
+    tmp1.track = () => {
       const items = [...arguments];
       const items1 = [...items];
       return AnalyticsUtilsDefault.track.apply(items1);
     };
-    tmp.surface = "discord_app";
-    addChangeListenerResult = tmp.addChangeListener(() => closure_0.maybeEmitDebugExperimentEvent());
-    return tmp;
+    tmp1.surface = "discord_app";
+    addChangeListenerResult = tmp1.addChangeListener(() => closure_0.maybeEmitDebugExperimentEvent());
+    return tmp1;
   }
 }
 const prototype = ApexExperimentStore.prototype;
@@ -86,8 +86,8 @@ prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEv
     if (0 !== variantId) {
       if (variantId !== self.lastEmittedDebugVariantId) {
         self.lastEmittedDebugVariantId = variantId;
-        const obj = { experiment: "2026-03-debug-experiment", apex_debug_variant: variantId, experiment_location: "apex_assignments_received" };
-        obj.track(AnalyticEvents.EXPERIMENT_APEX_DEBUGGING_EVENT, obj);
+        const obj2 = { experiment: "2026-03-debug-experiment", apex_debug_variant: variantId, experiment_location: "apex_assignments_received" };
+        AnalyticsUtilsDefault.track(AnalyticEvents.EXPERIMENT_APEX_DEBUGGING_EVENT, obj2);
       }
     }
   }
@@ -118,4 +118,4 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
-export const ExperimentAssignment = fn(1237).ExperimentAssignment;
+export const ExperimentAssignment = fn(1235).ExperimentAssignment;

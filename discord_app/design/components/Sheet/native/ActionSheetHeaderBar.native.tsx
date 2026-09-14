@@ -15,33 +15,32 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
-  let obj = { marginBottom };
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };
   }
-  obj = { header: null, indicator: null, accessibleDismiss: null };
+  const obj2 = { header: null, indicator: null, accessibleDismiss: null };
   const merged = Object.assign(rect);
-  obj.header = obj;
+  obj2.header = { marginBottom };
   const size = { alignSelf: "center", width: nativeDefault.modules.mobile.SHEET_HANDLE_WIDTH, height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: nativeDefault.radii.sm, top: nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP };
   if ("default" === arg0) {
-    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-    let tmp4 = obj;
+    const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+    let tmp4 = obj3;
   } else if ("floating" === arg0) {
-    const obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-    tmp4 = obj1;
+    const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+    tmp4 = obj4;
   } else if ("overlay" === arg0) {
-    const obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.WHITE };
+    const obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.WHITE };
     const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-    tmp4 = obj2;
+    tmp4 = obj5;
   }
   const merged2 = Object.assign(tmp4);
-  obj.indicator = size;
-  const obj3 = {};
+  obj2.indicator = size;
+  const obj6 = {};
   const merged3 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj3.height = height;
-  obj3.marginTop = -height + marginBottom;
-  obj.accessibleDismiss = obj3;
-  return obj;
+  obj6.height = height;
+  obj6.marginTop = -height + marginBottom;
+  obj2.accessibleDismiss = obj6;
+  return obj2;
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
@@ -56,26 +55,25 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   if (variant === undefined) {
     variant = "default";
   }
-  let obj = useToken;
-  const tmp3 = closure_10(variant, useWindowDimensionsDefault().height, obj.useToken(nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
-  obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
-  obj = { style: null, children: null };
+  const tmp3 = closure_10(variant, useWindowDimensionsDefault().height, useToken.useToken(nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
+  const obj3 = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
+  const obj4 = { style: null, children: null };
   const items = [tmp3.header, style];
-  obj.style = items;
-  const obj1 = { style: null };
+  obj4.style = items;
+  const obj5 = { style: null };
   const items1 = [tmp3.indicator, tabStyle];
-  obj1.style = items1;
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  obj.children = React5(timestampProducer, obj1);
-  obj.children = React5(timestampProducer, obj);
-  const tmp6 = React5(hasOwnProperty, obj);
+  obj5.style = items1;
+  const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
+  obj4.children = React5(timestampProducer, obj5);
+  obj3.children = React5(timestampProducer, obj4);
+  const tmp6 = React5(hasOwnProperty, obj3);
   let tmp7 = tmp6;
   if (isScreenReaderEnabled) {
-    const obj2 = { children: null };
-    const obj3 = { style: tmp3.accessibleDismiss, accessible: true, accessibilityLabel, accessibilityRole: "button", onPress };
-    const items2 = [React5(React3, obj3), tmp6];
-    obj2.children = items2;
-    tmp7 = React7(React6, obj2);
+    const obj6 = { children: null };
+    const obj7 = { style: tmp3.accessibleDismiss, accessible: true, accessibilityLabel, accessibilityRole: "button", onPress };
+    const items2 = [React5(React3, obj7), tmp6];
+    obj6.children = items2;
+    tmp7 = React7(React6, obj6);
   }
   return tmp7;
 };

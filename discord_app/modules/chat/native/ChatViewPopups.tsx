@@ -1,9 +1,9 @@
-// === Module 12777: ChatViewPopups ===
+// === Module 12778: ChatViewPopups ===
 
-// Module 12777 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12778 */;
-import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12782 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12790 */;
+// Module 12778 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12779 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12783 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,24 +26,24 @@ class ChatViewPopups {
     effect = closure_3.useEffect(() => {
       if (!ref.current) {
         if (closure_2) {
-          let obj = {
+          const obj2 = {
             guildId,
             onHide() {
                   ref.current = false;
                   return false;
                 }
           };
-          GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj);
+          GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
           ref.current = true;
         } else if (showWelcomeModal) {
-          obj = {
+          const obj4 = {
             guildId,
             onHide() {
                   ref.current = false;
                   return false;
                 }
           };
-          const result = obj.openWelcomeActionSheet(obj);
+          const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
           ref.current = true;
         }
       }

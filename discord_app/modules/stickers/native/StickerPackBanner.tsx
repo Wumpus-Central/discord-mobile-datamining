@@ -1,6 +1,6 @@
-// === Module 10527: StickerPackBanner ===
+// === Module 10528: StickerPackBanner ===
 
-// Module 10527 (StickerPackBanner)
+// Module 10528 (StickerPackBanner)
 import StickersUtils from "StickersUtils" /* 4975 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,17 +13,16 @@ const result = size.fileFinishedImporting("modules/stickers/native/StickerPackBa
 
 export default function StickerPackBanner(arg0) {
   ({ containerStyle, style, stickerPack } = arg0);
-  let obj = StickersUtils;
-  const stickerPackBannerAssetUrl = obj.getStickerPackBannerAssetUrl(stickerPack, 1024);
+  const stickerPackBannerAssetUrl = StickersUtils.getStickerPackBannerAssetUrl(stickerPack, 1024);
   let tmp2 = null;
   if (null != stickerPackBannerAssetUrl) {
-    obj = { style: containerStyle, children: null };
-    obj = { source: null, style: null, resizeMode: "contain" };
-    const obj1 = { uri: stickerPackBannerAssetUrl };
-    obj.source = obj1;
-    obj.style = style;
-    obj.children = <React2 source={null} style={null} resizeMode="contain" />;
-    tmp2 = <React3 source={null} style={null} resizeMode="contain" />;
+    const obj2 = { style: containerStyle, children: null };
+    const obj3 = { source: null, style: null, resizeMode: "contain" };
+    const obj4 = { uri: stickerPackBannerAssetUrl };
+    obj3.source = obj4;
+    obj3.style = style;
+    obj2.children = <React2 source={null} style={null} resizeMode="contain" />;
+    tmp2 = <React3 style={containerStyle}>{null}</React3>;
   }
   return tmp2;
 };

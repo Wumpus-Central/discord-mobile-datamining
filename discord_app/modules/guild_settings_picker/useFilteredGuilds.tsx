@@ -1,6 +1,6 @@
-// === Module 13982: useFilteredGuilds ===
+// === Module 13983: useFilteredGuilds ===
 
-// Module 13982 (useFilteredGuilds)
+// Module 13983 (useFilteredGuilds)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5519 */;
@@ -14,17 +14,17 @@ export default function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
   let stateFromStores1;
-  let obj = isGuildIncluded(stateFromStores1[4]);
   let items = [SortedGuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  const stateFromStores = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  const obj = isGuildIncluded(stateFromStores1[4]);
   const items1 = [GuildStore];
   stateFromStores1 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items1, () => guilds.getGuilds());
   const obj2 = isGuildIncluded(stateFromStores1[4]);
   const items2 = [UserStore];
   const stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () => currentUser.getCurrentUser());
-  obj = { options: null, selectedGuild: null };
+  const obj4 = { options: null, selectedGuild: null };
   const items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
-  obj.options = stateFromStores2.useMemo(() => {
+  obj4.options = stateFromStores2.useMemo(() => {
     if (null == stateFromStores2) {
       let items = [];
     } else {
@@ -47,6 +47,6 @@ export default function useFilteredGuilds(isGuildIncluded) {
   if (null != selectedGuildId) {
     tmp4 = stateFromStores1[selectedGuildId];
   }
-  obj.selectedGuild = tmp4;
-  return obj;
+  obj4.selectedGuild = tmp4;
+  return obj4;
 };

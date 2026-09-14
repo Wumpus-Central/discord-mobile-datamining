@@ -10,8 +10,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7563 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import NetworkUtils from "utils/NetworkUtils" /* 1462 */;
-import Dispatcher from "Dispatcher" /* 573 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1462 */;
+import Dispatcher_mod from "Dispatcher" /* 573 */;
 
 require = fn;
 function receiveNetworkInfoformation(result) {
@@ -60,7 +60,9 @@ let closure_15 = 0;
 let closure_16 = 0;
 let closure_17 = 0;
 let closure_18 = 0;
+let NetworkUtils = NetworkUtils_mod;
 NetworkUtils.addChangeCallback(receiveNetworkInfoformation);
+let NetworkUtils = NetworkUtils_mod;
 NetworkUtils = NetworkUtils.getNetworkInformation();
 NetworkUtils.then(receiveNetworkInfoformation);
 class EventTracker {
@@ -153,8 +155,8 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -167,8 +169,8 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             closure_128_0 = undefined;
@@ -177,8 +179,8 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
               if (closure_1_14) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj1 = { value: self.getQueuedEvent(), done: false };
-                return obj1;
+                const obj4 = { value: self.getQueuedEvent(), done: false };
+                return obj4;
               }
             }
             let items = [];
@@ -188,7 +190,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           items = [value];
@@ -221,8 +223,8 @@ prototype["track"] = function track() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -235,8 +237,8 @@ prototype["track"] = function track() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             closure_0 = tmp2;
@@ -251,8 +253,8 @@ prototype["track"] = function track() {
               clearInterval(self.flushStorageInterval);
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: self.getQueuedEvent(), done: false };
-              return obj1;
+              const obj4 = { value: self.getQueuedEvent(), done: false };
+              return obj4;
             }
           }
         } else if (arg0 === 1) {
@@ -280,7 +282,7 @@ prototype["track"] = function track() {
           });
         }
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp14) {
         c3 = tmp;
@@ -295,40 +297,39 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     updateNetworkUsage();
     await NativeTTIManagerModuleDefault.getAppFirstVisibleTimestamp();
     closure_132_0 = value;
-    NativeTTIManagerModuleDefault;
     await closure_133_0(closure_133_2[14]).getSession();
     closure_132_1 = value;
-    const obj5 = { type: closure_133_8.APP_NETWORK_USAGE, properties: null };
-    const obj6 = {};
+    const obj11 = { type: closure_133_8.APP_NETWORK_USAGE, properties: null };
+    const obj12 = {};
     const merged = Object.assign(closure_133_0(closure_133_2[15]).getDeviceMetadata());
     const _Date = Date;
-    obj6.client_track_timestamp = Date.now();
+    obj12.client_track_timestamp = Date.now();
     if (closure_132_1 != null) {
       const uuid = closure_132_1.uuid;
     }
-    obj6.client_heartbeat_session_id = uuid;
-    closure_133_0(closure_133_2[14]);
-    obj6.load_id = closure_133_0(closure_133_2[15]).currentLoadId();
-    obj6.num_guilds = closure_133_7.getGuildCount();
-    obj6.was_authenticated = closure_133_1(closure_133_2[16]).wasAuthenticated;
-    obj6.did_background_app = closure_133_1(closure_133_2[16]).didBackgroundApp;
-    obj6.headless_task_ran = closure_133_1(closure_133_2[16]).extraProperties.headless_task_ran;
+    obj12.client_heartbeat_session_id = uuid;
+    closure_133_0(closure_133_2[15]);
+    obj12.load_id = closure_133_0(closure_133_2[15]).currentLoadId();
+    obj12.num_guilds = closure_133_7.getGuildCount();
+    obj12.was_authenticated = closure_133_1(closure_133_2[16]).wasAuthenticated;
+    obj12.did_background_app = closure_133_1(closure_133_2[16]).didBackgroundApp;
+    obj12.headless_task_ran = closure_133_1(closure_133_2[16]).extraProperties.headless_task_ran;
     const ready = closure_133_1(closure_133_2[16]).ready;
-    obj6.ready_payload_duration_ms = ready.serializeEnd(closure_132_0);
+    obj12.ready_payload_duration_ms = ready.serializeEnd(closure_132_0);
     if (closure_133_11 != null) {
-      let signalStrengthLevel = closure_133_11.signalStrengthLevel;
+      const signalStrengthLevel1 = closure_133_11.signalStrengthLevel;
     }
-    let initial_signal_strength_level = signalStrengthLevel;
-    if (signalStrengthLevel == null) {
+    let initial_signal_strength_level = signalStrengthLevel1;
+    if (signalStrengthLevel1 == null) {
       initial_signal_strength_level = undefined;
     }
-    obj6.initial_signal_strength_level = initial_signal_strength_level;
-    signalStrengthLevel = closure_133_10.signalStrengthLevel;
+    obj12.initial_signal_strength_level = initial_signal_strength_level;
+    const signalStrengthLevel = closure_133_10.signalStrengthLevel;
     let final_signal_strength_level = signalStrengthLevel;
     if (signalStrengthLevel == null) {
       final_signal_strength_level = undefined;
     }
-    obj6.final_signal_strength_level = final_signal_strength_level;
+    obj12.final_signal_strength_level = final_signal_strength_level;
     if (closure_133_13 != null) {
       const type = closure_133_13.type;
     }
@@ -336,8 +337,8 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     if (type == null) {
       initial_network_type = undefined;
     }
-    obj6.initial_network_type = initial_network_type;
-    obj6.final_network_type = closure_133_12.type;
+    obj12.initial_network_type = initial_network_type;
+    obj12.final_network_type = closure_133_12.type;
     if (closure_133_13 != null) {
       const effectiveSpeed = closure_133_13.effectiveSpeed;
     }
@@ -345,48 +346,50 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     if (effectiveSpeed == null) {
       initial_cellular_generation = undefined;
     }
-    obj6.initial_cellular_generation = initial_cellular_generation;
-    obj6.final_cellular_generation = closure_133_12.effectiveSpeed;
-    obj6.is_network_roaming = closure_133_10.isNetworkRoaming;
-    obj6.cellular_receive_bytes = closure_133_10.cellularReceiveBytes;
-    obj6.cellular_send_bytes = closure_133_10.cellularSendBytes;
-    obj6.total_receive_bytes = closure_133_10.totalReceiveBytes;
-    obj6.total_send_bytes = closure_133_10.totalSendBytes;
-    obj6.uid_receive_bytes = closure_133_10.uidReceiveBytes;
-    obj6.uid_send_bytes = closure_133_10.uidSendBytes;
-    obj6.socket_bytes_received = closure_133_10.socketBytesReceived;
-    obj6.ota_bytes_received = closure_133_10.otaBytesReceived;
-    obj6.ota_num_requests = closure_133_10.otaNumRequests;
-    obj6.xhr_bytes_received = closure_133_10.xhrBytesReceived;
-    obj6.xhr_num_requests = closure_133_10.xhrNumRequests;
-    obj6.fresco_bytes_received = closure_133_10.frescoBytesReceived;
-    obj6.fresco_num_requests = closure_133_10.frescoNumRequests;
-    obj6.download_bytes_received = closure_133_10.downloadBytesReceived;
-    obj6.download_num_requests = closure_133_10.downloadNumRequests;
-    obj6.media_player_bytes_received = closure_133_10.mediaPlayerBytesReceived;
+    obj12.initial_cellular_generation = initial_cellular_generation;
+    obj12.final_cellular_generation = closure_133_12.effectiveSpeed;
+    obj12.is_network_roaming = closure_133_10.isNetworkRoaming;
+    obj12.cellular_receive_bytes = closure_133_10.cellularReceiveBytes;
+    obj12.cellular_send_bytes = closure_133_10.cellularSendBytes;
+    obj12.total_receive_bytes = closure_133_10.totalReceiveBytes;
+    obj12.total_send_bytes = closure_133_10.totalSendBytes;
+    obj12.uid_receive_bytes = closure_133_10.uidReceiveBytes;
+    obj12.uid_send_bytes = closure_133_10.uidSendBytes;
+    obj12.socket_bytes_received = closure_133_10.socketBytesReceived;
+    obj12.ota_bytes_received = closure_133_10.otaBytesReceived;
+    obj12.ota_num_requests = closure_133_10.otaNumRequests;
+    obj12.xhr_bytes_received = closure_133_10.xhrBytesReceived;
+    obj12.xhr_num_requests = closure_133_10.xhrNumRequests;
+    obj12.fresco_bytes_received = closure_133_10.frescoBytesReceived;
+    obj12.fresco_num_requests = closure_133_10.frescoNumRequests;
+    obj12.download_bytes_received = closure_133_10.downloadBytesReceived;
+    obj12.download_num_requests = closure_133_10.downloadNumRequests;
+    obj12.media_player_bytes_received = closure_133_10.mediaPlayerBytesReceived;
     closure_133_0(closure_133_2[15]);
-    obj6.rtc_bytes = closure_133_0(closure_133_2[9]).getRTCTotalBytes();
-    obj6.num_message_sends = closure_133_15;
+    obj12.rtc_bytes = closure_133_0(closure_133_2[9]).getRTCTotalBytes();
+    obj12.num_message_sends = closure_133_15;
     if (0 !== closure_133_15) {
       const tmp56 = closure_133_16;
     }
-    obj6.max_message_send_duration = tmp56;
+    obj12.max_message_send_duration = tmp56;
     if (0 !== closure_133_15) {
       const tmp60 = closure_133_17;
     }
-    obj6.max_message_queue_length = tmp60;
-    obj6.num_message_send_fails = closure_133_18;
-    obj6.num_identifies = closure_133_5.getSocket().identifyCount;
+    obj12.max_message_queue_length = tmp60;
+    obj12.num_message_send_fails = closure_133_18;
+    obj12.num_identifies = closure_133_5.getSocket().identifyCount;
     const renderLatestMessages = closure_133_1(closure_133_2[16]).renderLatestMessages;
-    obj6.render_latest_messages_duration_ms = renderLatestMessages.serialize(closure_132_0);
-    obj5.properties = obj6;
-    return obj5;
+    obj12.render_latest_messages_duration_ms = renderLatestMessages.serialize(closure_132_0);
+    obj11.properties = obj12;
+    return obj11;
   })();
 };
 let closure_20 = new EventTracker();
+let Dispatcher = Dispatcher_mod;
 let subscription = Dispatcher.subscribe("APP_STATE_UPDATE", (state) => {
   closure_20.handleAppStateChange("active" === state.state);
 });
+let Dispatcher = Dispatcher_mod;
 const subscription1 = Dispatcher.subscribe("MESSAGE_CREATE", (sendMessageOptions) => {
   sendMessageOptions = sendMessageOptions.sendMessageOptions;
   let sendAnalytics;
@@ -401,6 +404,7 @@ const subscription1 = Dispatcher.subscribe("MESSAGE_CREATE", (sendMessageOptions
     closure_17 = Math.max(closure_17, sendMessageOptions.sendMessageOptions.sendAnalytics.queueSize);
   }
 });
+let Dispatcher = Dispatcher_mod;
 const subscription2 = Dispatcher.subscribe("MESSAGE_SEND_FAILED", (arg0) => {
   closure_18 = closure_18 + 1;
 });

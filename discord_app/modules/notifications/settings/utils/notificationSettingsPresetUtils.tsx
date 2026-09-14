@@ -27,8 +27,8 @@ export const presetFromSettings = function presetFromSettings(unreadSetting, Use
   const withResult3 = match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING);
   return match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING).with(items5, () => constants.NOTHING).otherwise(() => constants.CUSTOM);
 };
-export const presetName = function presetName(tmp4Result) {
-  const match = _mod4821.match(tmp4Result);
+export const presetName = function presetName(tmp4Result5) {
+  const match = _mod4821.match(tmp4Result5);
   const withResult = match.with(obj.ALL_MESSAGES, () => {
     const intl = util.intl;
     return intl.string(util.t.hZrr6k);

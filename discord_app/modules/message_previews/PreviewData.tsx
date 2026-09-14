@@ -1,6 +1,6 @@
-// === Module 13808: PreviewData ===
+// === Module 13809: PreviewData ===
 
-// Module 13808 (PreviewData)
+// Module 13809 (PreviewData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
 import MessageRecord from "MessageRecord" /* 4286 */;
@@ -127,17 +127,17 @@ prototype["update"] = function update(id) {
         }
       }
       if (id === id.id) {
-        let obj = MessageRecordUtils;
+        const obj = MessageRecordUtils;
         if (tmp3) {
           let updateMessageRecordResult = obj.updateMessageRecord(merged.message, id);
         } else {
           updateMessageRecordResult = obj.updateServerMessage(merged.message, id);
         }
         const messages = self.messages;
-        obj = {};
+        const obj2 = {};
         merged = Object.assign(merged);
-        obj.message = updateMessageRecordResult;
-        self = messages.set(channel_id, obj);
+        obj2.message = updateMessageRecordResult;
+        self = messages.set(channel_id, obj2);
         tmp3 = merged.message instanceof MessageRecord;
       }
     }

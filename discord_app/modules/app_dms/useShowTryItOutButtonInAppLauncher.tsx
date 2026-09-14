@@ -1,18 +1,18 @@
-// === Module 12273: useShowTryItOutButtonInAppLauncher ===
+// === Module 12274: useShowTryItOutButtonInAppLauncher ===
 
-// Module 12273 (useShowTryItOutButtonInAppLauncher)
+// Module 12274 (useShowTryItOutButtonInAppLauncher)
 import canLaunchFrame from "canLaunchFrame" /* 9636 */;
 import getPrimaryAppCommand from "getPrimaryAppCommand" /* 9701 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12274 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12275 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {
   ({ context, application, botUserId } = arg0);
-  const obj = { context, applicationId: application.id, botUserId };
-  let isPrimaryAppCommandUsableInAppDM = obj.useIsPrimaryAppCommandUsableInAppDM(obj);
+  let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM({ context, applicationId: application.id, botUserId });
   let channel;
+  const obj2 = { context, applicationId: application.id, botUserId };
   if ("channel" === context.type) {
     channel = context.channel;
   }

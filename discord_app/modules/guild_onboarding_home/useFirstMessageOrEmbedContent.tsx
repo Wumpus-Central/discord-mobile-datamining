@@ -1,6 +1,6 @@
-// === Module 16667: useFirstMessageOrEmbedContent ===
+// === Module 16669: useFirstMessageOrEmbedContent ===
 
-// Module 16667 (useFirstMessageOrEmbedContent)
+// Module 16669 (useFirstMessageOrEmbedContent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
@@ -17,13 +17,13 @@ export default function useFirstMessageOrEmbedContent(content) {
     if (length > 0) {
       return content.content;
     } else {
-      let embeds = content.embeds;
+      const embeds1 = content.embeds;
       let length1;
-      if (embeds != null) {
-        length1 = embeds.length;
+      if (embeds1 != null) {
+        length1 = embeds1.length;
       }
       if (length1 > 0) {
-        embeds = content.embeds;
+        const embeds = content.embeds;
         for (const item10013 of embeds) {
           if (null != item10013.rawDescription) {
             if (tmp5.rawDescription.length > 0) {

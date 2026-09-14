@@ -7,16 +7,18 @@ import useStateFromStores from "useStateFromStores" /* 563 */;
 import BatchedStoreListener from "BatchedStoreListener" /* 564 */;
 import connectStoresDefault from "connectStores" /* 565 */;
 import flux_Dispatcher from "flux/Dispatcher" /* 566 */;
-import PersistedStore from "PersistedStore" /* 505 */;
-import createFetchStore from "createFetchStore" /* 557 */;
+import PersistedStore_mod from "PersistedStore" /* 505 */;
+import createFetchStore_mod from "createFetchStore" /* 557 */;
 import size from "module_2" /* 2 */;
 
 function initialize() {
   Store.initialize();
 }
+let PersistedStore = PersistedStore_mod;
 PersistedStore = PersistedStore.PersistedStore;
 ({ DeviceSettingsStore, OfflineCacheStore } = PersistedStore);
 const Store = Store2.Store;
+let createFetchStore = createFetchStore_mod;
 const obj = { Emitter: flux_EmitterDefault, Store, PersistedStore, DeviceSettingsStore, OfflineCacheStore, connectStores: connectStoresDefault, initialize };
 ({ createFetchStore, NO_DATA } = createFetchStore);
 Object.defineProperty(obj, "initialized", { get: () => Store.initialized, set: undefined });

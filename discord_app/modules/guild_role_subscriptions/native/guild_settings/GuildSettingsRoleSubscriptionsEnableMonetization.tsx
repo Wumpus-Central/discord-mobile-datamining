@@ -1,8 +1,8 @@
-// === Module 17834: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 17835: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 17834 (GuildSettingsRoleSubscriptionsEnableMonetization)
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16635 */;
-import PlaceholderDefault from "Placeholder" /* 17796 */;
+// Module 17835 (GuildSettingsRoleSubscriptionsEnableMonetization)
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16637 */;
+import PlaceholderDefault from "Placeholder" /* 17797 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -13,16 +13,15 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(504);
   const items = [GuildStore];
   if (null == obj.useStateFromStores(items, () => GuildStore.getGuild(guildId))) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {
-    obj = { brightTitle: true, title: null, description: null };
+    const obj2 = { brightTitle: true, title: null, description: null };
     const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t.KeeWp0);
+    obj2.title = intl.string(tmp(1114).t.KeeWp0);
     const intl2 = tmp(1114).intl;
-    obj.description = intl2.string(tmp(1114).t["tJLG+L"]);
+    obj2.description = intl2.string(tmp(1114).t["tJLG+L"]);
     tmp5 = jsx(UnavailableNoticeDefault, { brightTitle: true, title: null, description: null });
   }
   return tmp5;

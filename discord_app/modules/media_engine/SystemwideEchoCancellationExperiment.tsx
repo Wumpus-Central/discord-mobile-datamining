@@ -1,13 +1,13 @@
-// === Module 14098: SystemwideEchoCancellationExperiment ===
+// === Module 14099: SystemwideEchoCancellationExperiment ===
 
-// Module 14098 (SystemwideEchoCancellationExperiment)
+// Module 14099 (SystemwideEchoCancellationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { kind: "user", name: "2026-06-systemwide-echo-cancellation-for-people-who-refuse-to-wear-headphones", defaultConfig: { echoReferenceMode: "mix" }, variations: null };
-obj = { 1: null };
-obj[1] = { echoReferenceMode: "auto" };
-obj.variations = obj;
+const obj = { kind: "user", name: "2026-06-systemwide-echo-cancellation-for-people-who-refuse-to-wear-headphones", defaultConfig: { echoReferenceMode: "mix" }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { echoReferenceMode: "auto" };
+obj.variations = obj2;
 const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/SystemwideEchoCancellationExperiment.tsx");
 

@@ -20,8 +20,8 @@ export default function useLazyAPIPromise(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -34,8 +34,8 @@ export default function useLazyAPIPromise(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp7;
             closure_128_0 = undefined;
@@ -45,8 +45,8 @@ export default function useLazyAPIPromise(arg0, arg1) {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: _require(), done: false };
-            return obj1;
+            const obj4 = { value: _require(), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -66,15 +66,15 @@ export default function useLazyAPIPromise(arg0, arg1) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           closure_129_2(false);
           closure_129_3(null);
           c3 = 0;
           c5 = 3;
-          obj = { value: closure_128_0, done: true };
+          const obj = { value: closure_128_0, done: true };
           return obj;
         }
       } catch (tmp41) {

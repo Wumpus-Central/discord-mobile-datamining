@@ -1,8 +1,10 @@
-// === Module 14983: useFamilyCenterActivities ===
+// === Module 14984: useFamilyCenterActivities ===
 
-// Module 14983 (useFamilyCenterActivities)
+// Module 14984 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const TeenActionDisplayType = fn(7641).TeenActionDisplayType;
@@ -34,8 +36,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    let tmpResult = tmp(7695);
-    return tmpResult.formatTotalTime(num);
+    return tmp(7695).formatTotalTime(num);
   } else if (displayType === TeenActionDisplayType.PURCHASES) {
     const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
     const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();
@@ -43,8 +44,8 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     if (null != totalSpendAmount) {
       result = num;
       if (null != totalSpendCurrency) {
-        tmpResult = tmp(7337);
-        result = tmpResult.shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
+        result = tmp(7337).shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
+        const tmpResult3 = tmp(7337);
       }
     }
     return result;
@@ -53,7 +54,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     let result1 = num;
     if (null != totalGiftValue) {
       result1 = tmp(7337).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
-      const tmpResult1 = tmp(7337);
+      const tmpResult4 = tmp(7337);
     }
     return result1;
   } else {

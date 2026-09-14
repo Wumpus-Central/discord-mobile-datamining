@@ -11,9 +11,8 @@ import ReferralTrialStore from "ReferralTrialStore" /* 7555 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-fn(4636);
-const createStyles = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };
-let closure_5 = createStyles.createNativeStyleProperties(createStyles);
+const createStyles = fn(4636);
+let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
 
@@ -35,13 +34,13 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       if (null == referralTrialEmbedRedeemable) {
         return null;
       } else {
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(createCommonMessageDefault(message));
-        obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
+        obj2.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
+        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
-        return obj;
+        return obj2;
       }
     } else {
       const obj6 = ReferralTrialEmbedRedesign;
@@ -49,7 +48,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       if (null == referralTrialEmbedRedesign) {
         return null;
       } else {
-        obj = {};
+        const obj = {};
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);

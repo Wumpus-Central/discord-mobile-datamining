@@ -2,7 +2,7 @@
 
 // Module 8765 (IarSettingsUpsellsConfigScFiltersSexualMedia)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7401 */;
 import MenuTypes from "MenuTypes" /* 8753 */;
 import size from "module_2" /* 2 */;
@@ -27,19 +27,20 @@ let obj = {
 const items = [MenuTypes.ReportSubType.SUB_CSAM, MenuTypes.ReportSubType.SUB_LOLI, MenuTypes.ReportSubType.SUB_NCP, MenuTypes.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, MenuTypes.ReportSubType.SUB_UNSOLICITED_PORN];
 obj.eligibleReportSubtypes = items;
 obj.onApply = function onApply() {
+  const obj = SensitiveMediaExplicitRedactionSettingsUtils;
   const explicitContentSettingOrDefault = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
-  const obj = {};
+  const obj3 = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
-  return obj.updateExplicitContentSetting(obj);
+  return obj.updateExplicitContentSetting(obj3);
 };
 obj.predicate = function predicate() {
   const explicitContentSettingOrDefault = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();

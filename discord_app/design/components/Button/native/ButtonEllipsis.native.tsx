@@ -13,25 +13,26 @@ function EllipsisCircle(offset) {
   offset = offset.offset;
   let sharedValue1;
   ({ variant, size } = offset);
-  obj = offset(sharedValue1[6]);
-  const tmp = closure_6(size, offset, obj.useForegroundColor(variant));
+  let obj = offset(sharedValue1[6]);
+  const tmp = closure_6(size, offset, offset(sharedValue1[6]).useForegroundColor(variant));
   const sharedValue = offset(sharedValue1[2]).useSharedValue(0.4);
   let obj2 = offset(sharedValue1[2]);
   sharedValue1 = offset(sharedValue1[2]).useSharedValue(0.75);
   let obj3 = offset(sharedValue1[2]);
   const mountLayoutEffect = offset(sharedValue1[7]).useMountLayoutEffect(() => {
     if (typeof withEllipsisAnimation === "function") {
-      obj = ReanimatedRexport;
+      let obj = ReanimatedRexport;
       const result = 166.66666666666666 * offset;
       const obj2 = ReanimatedRexport;
       tmp2(obj.withDelay(result, obj2.withRepeat(timing.withTiming(1, obj, "animate-always"), -1, true)));
       if (typeof tmp3 === "function") {
         const result1 = 166.66666666666666 * offset;
         const tmp5Result = ReanimatedRexport;
-        tmp11(tmp5Result.withDelay(result1, tmp5Result.withRepeat(timing.withTiming(1, tmp8, "animate-always"), -1, true)));
+        const tmp5Result3 = ReanimatedRexport;
+        tmp11(tmp5Result.withDelay(result1, tmp5Result3.withRepeat(timing.withTiming(1, tmp8, "animate-always"), -1, true)));
         return () => {
           offset(sharedValue1[2]).cancelAnimation(sharedValue);
-          obj = offset(sharedValue1[2]);
+          const obj = offset(sharedValue1[2]);
           offset(sharedValue1[2]).cancelAnimation(closure_1_2);
         };
       } else {
@@ -44,9 +45,8 @@ function EllipsisCircle(offset) {
   });
   const obj4 = offset(sharedValue1[7]);
   const fn = function w() {
-    obj = { opacity: sharedValue.get(), transform: null };
-    obj = { scale: sharedValue1.get() };
-    const items = [obj];
+    const obj = { opacity: sharedValue.get(), transform: null };
+    const items = [{ scale: sharedValue1.get() }];
     obj.transform = items;
     return obj;
   };
@@ -54,16 +54,16 @@ function EllipsisCircle(offset) {
   fn.__workletHash = 13371762734705;
   fn.__initData = __initData;
   const animatedStyle = offset(sharedValue1[2]).useAnimatedStyle(fn);
-  obj = { style: null };
+  const obj6 = { style: null };
   let items = [tmp.circle, animatedStyle];
-  obj.style = items;
-  return closure_3(sharedValue(sharedValue1[2]).View, obj);
+  obj6.style = items;
+  return closure_3(sharedValue(sharedValue1[2]).View, obj6);
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let __closure = { duration: 500, easing: null };
+const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
 const Easing = fn(4373).Easing;
-__closure.easing = Easing.inOut(fn(4373).Easing.quad);
+ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4373).Easing.quad);
 const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
@@ -92,13 +92,12 @@ let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   return { circle };
 });
 function withEllipsisAnimation(arg0, value) {
-  obj = ReanimatedRexport;
+  const obj = ReanimatedRexport;
   const result = 166.66666666666666 * arg0;
   const obj2 = ReanimatedRexport;
   return obj.withDelay(result, obj2.withRepeat(timing.withTiming(value, obj, "animate-always"), -1, true));
 }
-__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4373).withDelay, withRepeat: fn(4373).withRepeat, withTiming: fn(4637).withTiming, ELLIPSIS_APPEAR_TIMING: __closure };
-withEllipsisAnimation.__closure = __closure;
+withEllipsisAnimation.__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4373).withDelay, withRepeat: fn(4373).withRepeat, withTiming: fn(4637).withTiming, ELLIPSIS_APPEAR_TIMING };
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 const __initData = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
@@ -106,13 +105,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = function Ellipsis(arg0) {
-  obj = { style: { flexDirection: "row" }, children: null };
-  obj = { offset: 0 };
+  const obj = { style: { flexDirection: "row" }, children: null };
   const merged = Object.assign(arg0);
-  const items = [React3(EllipsisCircle, obj), , ];
-  obj = { offset: 1 };
+  const items = [React3(EllipsisCircle, { offset: 0 }), , ];
   const merged1 = Object.assign(arg0);
-  items[1] = React3(EllipsisCircle, obj);
+  items[1] = React3(EllipsisCircle, { offset: 1 });
   const merged2 = Object.assign(arg0);
   items[2] = React3(EllipsisCircle, { offset: 2 });
   obj.children = items;

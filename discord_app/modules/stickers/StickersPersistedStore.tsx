@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import FrecencyDefault from "Frecency" /* 4673 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import StickersStore from "StickersStore" /* 5583 */;
 
 function handleStickersStoreUpdate() {
@@ -35,7 +35,7 @@ function handleUserSettingsProtoStoreChange() {
 }
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let global = { pendingUsages: [] };
-let obj = {
+let closure_6 = new FrecencyDefault({
   computeBonus() {
     return 100;
   },
@@ -46,8 +46,7 @@ let obj = {
 
   },
   numFrequentlyItems: 20
-};
-let closure_6 = new FrecencyDefault(obj);
+});
 const PersistedStore = initializeDefault.PersistedStore;
 class StickersPersistedStore extends PersistedStore {
 }
@@ -77,7 +76,7 @@ Object.defineProperty(prototype, "stickerFrecencyWithoutFetchingLatest", {
 });
 StickersPersistedStore.displayName = "StickersPersistedStore";
 StickersPersistedStore.persistKey = "StickersPersistedStoreV2";
-obj = {
+const stickersPersistedStore = new StickersPersistedStore(DispatcherDefault, {
   STICKER_TRACK_USAGE: function handleStickersUsage(stickerIds) {
     stickerIds = stickerIds.stickerIds;
     if (stickerIds != null) {
@@ -99,8 +98,7 @@ obj = {
     }
     return false;
   }
-};
-const stickersPersistedStore = new StickersPersistedStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
 

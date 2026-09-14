@@ -1,12 +1,12 @@
-// === Module 16868: PortalKeyboardRenderer ===
+// === Module 16870: PortalKeyboardRenderer ===
 
-// Module 16868 (PortalKeyboardRenderer)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 16870 (PortalKeyboardRenderer)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import native from "native" /* 4347 */;
 import useKeyboardType from "useKeyboardType" /* 4504 */;
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4505 */;
-import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16869 */;
+import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16871 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
@@ -19,13 +19,13 @@ let closure_6 = [];
 function transitionGroupRenderItem(key, item, state, cleanUp) {
   let isAndroidResult = state === native.TransitionStates.YEETED;
   if (isAndroidResult) {
-    let tmpResult = useKeyboardType;
-    const keyboardType = tmpResult.getKeyboardType();
+    const keyboardType = useKeyboardType.getKeyboardType();
     isAndroidResult = keyboardType === KeyboardTypes.KeyboardTypes.SYSTEM;
+    const tmpResult = useKeyboardType;
   }
   if (isAndroidResult) {
-    tmpResult = PlatformUtils;
-    isAndroidResult = tmpResult.isAndroid();
+    isAndroidResult = PlatformUtils.isAndroid();
+    const tmpResult2 = PlatformUtils;
   }
   let tmp5 = null;
   if (!isAndroidResult) {
@@ -43,7 +43,6 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     flag = true;
   }
   dependencyMap = undefined;
-  let obj = noop;
   const id = noop.useId();
   let items = [id];
   const layoutEffect = noop.useLayoutEffect(() => PortalKeyboardUIStore3.registerPortalKeyboardRenderer(id), items);
@@ -72,19 +71,19 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
         tmp4 = field.channelId !== rootNavigationRef(dependencyMap[10]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       }
       if (tmp4) {
-        let tmpResult = rootNavigationRef(dependencyMap[11]);
-        tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
+        tmp4 = rootNavigationRef(dependencyMap[11]).getFocusedChannelId() !== field.channelId;
+        const tmpResult = rootNavigationRef(dependencyMap[11]);
       }
       if (tmp4) {
-        tmpResult = rootNavigationRef(dependencyMap[4]);
-        const keyboardType = tmpResult.getKeyboardType();
+        const keyboardType = rootNavigationRef(dependencyMap[4]).getKeyboardType();
         if (keyboardType !== rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM) {
           const obj = { type: rootNavigationRef(dependencyMap[5]).KeyboardTypes.SYSTEM };
           rootNavigationRef(dependencyMap[12]).setKeyboardType(obj);
-          const tmpResult1 = rootNavigationRef(dependencyMap[12]);
+          const tmpResult5 = rootNavigationRef(dependencyMap[12]);
         }
+        const tmpResult4 = rootNavigationRef(dependencyMap[4]);
         const result = rootNavigationRef(dependencyMap[8]).closePortalKeyboardIfUnhandled();
-        const tmpResult2 = rootNavigationRef(dependencyMap[8]);
+        const tmpResult6 = rootNavigationRef(dependencyMap[8]);
       }
     }
     if (obj.isAndroid()) {
@@ -110,7 +109,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   }
   dependencyMap = tmp8;
   const items1 = [tmp8, field];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != field) {
       if (closure_2) {
         const items = [tmp];
@@ -120,14 +119,13 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     }
     tmp3 = closure_6;
   }, items1);
-  obj = { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem };
   const tmp11 = jsx(id(4347).TransitionGroup, { items: memo, getItemKey: transitionGroupGetItemKey, renderItem: transitionGroupRenderItem });
   if (flag) {
-    obj = { children: tmp11 };
+    const obj3 = { children: tmp11 };
     let tmp10Result = jsx(tmp5(4508).PortalKeyboard, { children: tmp11 });
   } else {
-    const obj1 = { value: true, children: tmp11 };
-    tmp10Result = jsx(tmp5(10450).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
+    const obj4 = { value: true, children: tmp11 };
+    tmp10Result = jsx(tmp5(10451).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
   }
   return tmp10Result;
 };

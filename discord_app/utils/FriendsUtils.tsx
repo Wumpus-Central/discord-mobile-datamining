@@ -3,7 +3,7 @@
 // Module 9175 (FriendsUtils)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import ValidationUtilsDefault from "ValidationUtils" /* 8494 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -14,20 +14,21 @@ function validateDiscordTag(substr) {
     if (!substr.includes("#")) {
       const tmp4 = _slicedToArray(substr.split("#"), 2);
       let str2 = tmp4[1];
-      const obj = { reason: "Invalid Username", query: substr, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
+      const obj2 = { reason: "Invalid Username", query: substr, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
       if (str2 == null) {
         str2 = "";
       }
-      obj.discrim_len = str2.length;
-      obj.username_len = tmp4[0].length;
-      let tmp5Result = ValidationUtilsDefault;
-      obj.is_email_like = tmp5Result.isEmail(substr);
-      tmp5Result = ValidationUtilsDefault;
-      obj.is_invite_like = tmp5Result.isInvite(substr);
-      obj.is_num_only = re6.test(substr);
-      obj.track(constants2.FRIEND_REQUEST_FAILED, obj);
+      obj2.discrim_len = str2.length;
+      obj2.username_len = tmp4[0].length;
+      const obj = AnalyticsUtilsDefault;
+      obj2.is_email_like = ValidationUtilsDefault.isEmail(substr);
+      const tmp5Result = ValidationUtilsDefault;
+      obj2.is_invite_like = ValidationUtilsDefault.isInvite(substr);
+      obj2.is_num_only = re6.test(substr);
+      obj.track(constants2.FRIEND_REQUEST_FAILED, obj2);
       const intl = util.intl;
       stringResult = intl.string(util.t.paDJBM);
+      const tmp5Result2 = ValidationUtilsDefault;
     } else {
       stringResult = null;
     }

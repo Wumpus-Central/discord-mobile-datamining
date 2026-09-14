@@ -6,6 +6,8 @@ import _mod568 from "module_568" /* 568 */;
 import u from "u" /* 569 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const logger = new logger_Logger.Logger("Flux");
 const EventEmitter = _mod568.EventEmitter;
 class ActionLogger extends EventEmitter {
@@ -148,14 +150,14 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
     tmp11 = closure_2 < 20;
   }
   if (!tmp11) {
-    let _HermesInternal;
+    let _HermesInternal1;
     if (global != null) {
-      _HermesInternal = global.HermesInternal;
+      _HermesInternal1 = global.HermesInternal;
     }
-    logger.log("Using Hermes:", undefined !== _HermesInternal);
+    logger.log("Using Hermes:", undefined !== _HermesInternal1);
     let str3 = "";
     if (null != arg0) {
-      _HermesInternal = HermesInternal;
+      let _HermesInternal = HermesInternal;
       str3 = "\n\n=== " + arg0 + " ===";
     }
     const _HermesInternal2 = HermesInternal;
@@ -206,13 +208,13 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
     tmp8 = closure_1 < 8;
   }
   if (!tmp8) {
-    let _HermesInternal;
+    let _HermesInternal1;
     if (global != null) {
-      _HermesInternal = global.HermesInternal;
+      _HermesInternal1 = global.HermesInternal;
     }
-    _HermesInternal = HermesInternal;
+    const _HermesInternal = HermesInternal;
     const _HermesInternal2 = HermesInternal;
-    const combined = "\nUsing Hermes: " + undefined !== _HermesInternal;
+    const combined = "\nUsing Hermes: " + undefined !== _HermesInternal1;
     const _HermesInternal3 = HermesInternal;
     const combined1 = "\n\n=== " + arg0 + " ===\n" + joined;
     logger.log(combined, combined1, "\nTotal Time: " + closure_1 + "ms\n\n");

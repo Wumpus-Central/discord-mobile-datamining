@@ -37,41 +37,41 @@ export default {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f71036 = (shadowOffset, arg1) => {
+    let f71039 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    f71036 = (shadowColorAndroid, arg1) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    f71036 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f71036 = (shadowRadius) => shadowRadius.shadowRadius;
-    f71036 = (elevation) => elevation.elevation;
+    f71039 = (shadowColorAndroid, arg1) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f71039 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f71039 = (shadowRadius) => shadowRadius.shadowRadius;
+    f71039 = (elevation) => elevation.elevation;
     return {
       shadowOffset: {
         resolve(isAndroid) {
-          return f71036(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f71039(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowColor: {
         resolve(isAndroid) {
-          return f71036(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f71039(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowOpacity: {
         resolve(isAndroid) {
-          return f71036(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f71039(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f71036(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f71039(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       elevation: {
         resolve(isAndroid) {
-          return f71036(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f71039(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       }
     };
@@ -114,14 +114,14 @@ export default {
       const category = tmp3.category;
       let result = RawColors[tmp4.raw];
       let opacity = tmp4.opacity;
-      let enabledExperiments;
+      let enabledExperiments1;
       if (semanticColorContextFromThemeContext != null) {
-        enabledExperiments = semanticColorContextFromThemeContext.enabledExperiments;
+        enabledExperiments1 = semanticColorContextFromThemeContext.enabledExperiments;
       }
-      if (null != enabledExperiments) {
+      if (null != enabledExperiments1) {
         if (semanticColorContextFromThemeContext.enabledExperiments.length > 0) {
           if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
-            enabledExperiments = semanticColorContextFromThemeContext.enabledExperiments;
+            const enabledExperiments = semanticColorContextFromThemeContext.enabledExperiments;
             for (const item10035 of enabledExperiments) {
               let tmp12;
               if (tmp8 != null) {
@@ -149,7 +149,7 @@ export default {
         if ("userProfileThemes" in tmp3) {
           theme = undefined;
           if (semanticColorContextFromThemeContext != null) {
-            let gradient = semanticColorContextFromThemeContext.gradient;
+            const gradient = semanticColorContextFromThemeContext.gradient;
             if (gradient != null) {
               theme = gradient.theme;
             }
@@ -193,34 +193,34 @@ export default {
         }
         return hexResult;
       }
-      gradient = undefined;
+      let gradient1;
       if (semanticColorContextFromThemeContext != null) {
-        gradient = semanticColorContextFromThemeContext.gradient;
+        gradient1 = semanticColorContextFromThemeContext.gradient;
       }
-      if (null != gradient) {
-        let gradient1 = null;
+      if (null != gradient1) {
+        let gradient2 = null;
         if ("gradient" in tmp3) {
-          gradient1 = tmp3.gradient;
+          gradient2 = tmp3.gradient;
         }
-        let tmp22 = gradient1;
-        let enabledExperiments1;
+        let tmp22 = gradient2;
+        let enabledExperiments3;
         if (semanticColorContextFromThemeContext != null) {
-          enabledExperiments1 = semanticColorContextFromThemeContext.enabledExperiments;
+          enabledExperiments3 = semanticColorContextFromThemeContext.enabledExperiments;
         }
-        if (null != enabledExperiments1) {
+        if (null != enabledExperiments3) {
           if (semanticColorContextFromThemeContext.enabledExperiments.length > 0) {
             if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
               const enabledExperiments2 = semanticColorContextFromThemeContext.enabledExperiments;
               for (const item10067 of enabledExperiments2) {
-                let gradient2;
+                let gradient3;
                 if (tmp26 != null) {
                   let tmp32 = tmp26[tmp29];
                   if (tmp32 != null) {
-                    gradient2 = tmp32.gradient;
+                    gradient3 = tmp32.gradient;
                   }
                 }
-                if (null != gradient2) {
-                  tmp22 = gradient2;
+                if (null != gradient3) {
+                  tmp22 = gradient3;
                   obj2.return();
                   break;
                 }

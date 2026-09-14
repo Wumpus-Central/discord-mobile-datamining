@@ -25,65 +25,65 @@ class prototype extends tmp2 {
 }
 prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconComponent) {
   if (obj.SHOP === arg0) {
-    obj = { path: Routes.COLLECTIBLES_SHOP, type: tmp8.SHOP };
+    const obj2 = { path: Routes.COLLECTIBLES_SHOP, type: tmp8.SHOP };
     if (typeof prototype === "function") {
       const tmp97 = new prototype(tmp7, tmp6, tmp5);
-      if (null != obj.collectionId) {
+      if (null != obj2.collectionId) {
         const _HermesInternal9 = HermesInternal;
-        let type7 = "" + obj.type + "_" + obj.collectionId;
+        let type7 = "" + obj2.type + "_" + obj2.collectionId;
       } else {
-        type7 = obj.type;
+        type7 = obj2.type;
       }
       tmp97.id = type7;
-      ({ path: tmp97.path, type: tmp97.type, label: tmp97.label, collectionId: tmp97.collectionId, IconComponent: tmp97.IconComponent } = obj);
+      ({ path: tmp97.path, type: tmp97.type, label: tmp97.label, collectionId: tmp97.collectionId, IconComponent: tmp97.IconComponent } = obj2);
       return tmp97;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else if (tmp8.NITRO_HOME === arg0) {
-    obj = { path: Routes.NITRO_HOME, type: tmp8.NITRO_HOME };
+    const obj4 = { path: Routes.NITRO_HOME, type: tmp8.NITRO_HOME };
     if (typeof prototype === "function") {
       const tmp87 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
-      if (null != obj.collectionId) {
+      if (null != obj4.collectionId) {
         const _HermesInternal8 = HermesInternal;
-        let type6 = "" + obj.type + "_" + obj.collectionId;
+        let type6 = "" + obj4.type + "_" + obj4.collectionId;
       } else {
-        type6 = obj.type;
+        type6 = obj4.type;
       }
       tmp87.id = type6;
-      ({ path: tmp87.path, type: tmp87.type, label: tmp87.label, collectionId: tmp87.collectionId, IconComponent: tmp87.IconComponent } = obj);
+      ({ path: tmp87.path, type: tmp87.type, label: tmp87.label, collectionId: tmp87.collectionId, IconComponent: tmp87.IconComponent } = obj4);
       return tmp87;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else if (tmp8.QUEST_HOME === arg0) {
-    const obj1 = { path: Routes.QUEST_HOME, type: tmp8.QUEST_HOME };
+    const obj5 = { path: Routes.QUEST_HOME, type: tmp8.QUEST_HOME };
     if (typeof prototype === "function") {
       const tmp77 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
-      if (null != obj1.collectionId) {
+      if (null != obj5.collectionId) {
         const _HermesInternal7 = HermesInternal;
-        let type5 = "" + obj1.type + "_" + obj1.collectionId;
+        let type5 = "" + obj5.type + "_" + obj5.collectionId;
       } else {
-        type5 = obj1.type;
+        type5 = obj5.type;
       }
       tmp77.id = type5;
-      ({ path: tmp77.path, type: tmp77.type, label: tmp77.label, collectionId: tmp77.collectionId, IconComponent: tmp77.IconComponent } = obj1);
+      ({ path: tmp77.path, type: tmp77.type, label: tmp77.label, collectionId: tmp77.collectionId, IconComponent: tmp77.IconComponent } = obj5);
       return tmp77;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else if (tmp8.APPS_HOME === arg0) {
-    let obj2 = { path: Routes.GLOBAL_DISCOVERY_APPS, type: tmp8.APPS_HOME };
+    const obj6 = { path: Routes.GLOBAL_DISCOVERY_APPS, type: tmp8.APPS_HOME };
     if (typeof prototype === "function") {
       const tmp67 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
-      if (null != obj2.collectionId) {
+      if (null != obj6.collectionId) {
         const _HermesInternal6 = HermesInternal;
-        let type4 = "" + obj2.type + "_" + obj2.collectionId;
+        let type4 = "" + obj6.type + "_" + obj6.collectionId;
       } else {
-        type4 = obj2.type;
+        type4 = obj6.type;
       }
       tmp67.id = type4;
-      ({ path: tmp67.path, type: tmp67.type, label: tmp67.label, collectionId: tmp67.collectionId, IconComponent: tmp67.IconComponent } = obj2);
+      ({ path: tmp67.path, type: tmp67.type, label: tmp67.label, collectionId: tmp67.collectionId, IconComponent: tmp67.IconComponent } = obj6);
       return tmp67;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -92,20 +92,19 @@ prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconC
     let settingsPathToRouteResult = arg1;
     if (tmp8.SETTINGS === arg0) {
       if (settingsPathToRouteResult == null) {
-        obj2 = UserSettingsURLUtils;
-        settingsPathToRouteResult = obj2.settingsPathToRoute(UserSettingsPath.ACCOUNT);
+        settingsPathToRouteResult = UserSettingsURLUtils.settingsPathToRoute(UserSettingsPath.ACCOUNT);
       }
-      const obj3 = { path: settingsPathToRouteResult, label, type: tmp8.SETTINGS };
+      const obj7 = { path: settingsPathToRouteResult, label, type: tmp8.SETTINGS };
       if (typeof prototype === "function") {
         const tmp58 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
-        if (null != obj3.collectionId) {
+        if (null != obj7.collectionId) {
           const _HermesInternal5 = HermesInternal;
-          let type3 = "" + obj3.type + "_" + obj3.collectionId;
+          let type3 = "" + obj7.type + "_" + obj7.collectionId;
         } else {
-          type3 = obj3.type;
+          type3 = obj7.type;
         }
         tmp58.id = type3;
-        ({ path: tmp58.path, type: tmp58.type, label: tmp58.label, collectionId: tmp58.collectionId, IconComponent: tmp58.IconComponent } = obj3);
+        ({ path: tmp58.path, type: tmp58.type, label: tmp58.label, collectionId: tmp58.collectionId, IconComponent: tmp58.IconComponent } = obj7);
         return tmp58;
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -134,17 +133,17 @@ prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconC
         throw new TypeError("Trying to call a non-function");
       }
     } else if (tmp8.SHOP_ORBS_TAB === arg0) {
-      const obj4 = { path: Routes.COLLECTIBLES_SHOP, type: tmp8.SHOP_ORBS_TAB };
+      const obj8 = { path: Routes.COLLECTIBLES_SHOP, type: tmp8.SHOP_ORBS_TAB };
       if (typeof prototype === "function") {
         const tmp31 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-        if (null != obj4.collectionId) {
+        if (null != obj8.collectionId) {
           const _HermesInternal3 = HermesInternal;
-          let type2 = "" + obj4.type + "_" + obj4.collectionId;
+          let type2 = "" + obj8.type + "_" + obj8.collectionId;
         } else {
-          type2 = obj4.type;
+          type2 = obj8.type;
         }
         tmp31.id = type2;
-        ({ path: tmp31.path, type: tmp31.type, label: tmp31.label, collectionId: tmp31.collectionId, IconComponent: tmp31.IconComponent } = obj4);
+        ({ path: tmp31.path, type: tmp31.type, label: tmp31.label, collectionId: tmp31.collectionId, IconComponent: tmp31.IconComponent } = obj8);
         return tmp31;
       } else {
         throw new TypeError("Trying to call a non-function");

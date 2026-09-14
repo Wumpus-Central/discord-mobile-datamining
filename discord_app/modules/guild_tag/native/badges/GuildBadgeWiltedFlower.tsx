@@ -1,8 +1,8 @@
-// === Module 14040: GuildBadgeWiltedFlower ===
+// === Module 14041: GuildBadgeWiltedFlower ===
 
-// Module 14040 (GuildBadgeWiltedFlower)
+// Module 14041 (GuildBadgeWiltedFlower)
 import inlineStyles from "inlineStyles" /* 8574 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14004 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,15 +28,14 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }));
-  let obj = { primaryBaseColors, primaryTintColor, primaryTintLuminances, primaryLuminanceWeights: items, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights: items1 };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({ primaryBaseColors, primaryTintColor, primaryTintLuminances, primaryLuminanceWeights: items, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights: items1 });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   let tmp9;
   if (secondaryColorsTransformed != null) {
     tmp9 = secondaryColorsTransformed[1];
@@ -55,6 +54,6 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
   items[5] = React2(inlineStyles.Path, { d: "M5 14h-1v-1h1v1ZM4 13h-1v-1h1v1ZM3 12H2v-1h1v1ZM12 3H9V2h3v1Z", fill: first });
   items[6] = React2(inlineStyles.Path, { d: "M2 14h1v1h4v-1h1v2H2v-1H1v-2h1v1Z", fill: "black" });
   items[7] = React2(inlineStyles.Path, { d: "M7 14h-1v-1h1v1ZM3 11H2v-2H1v4H0V7h1v1h1V3h1v8ZM6 13h-1v-1h1v1ZM5 12h-1V4h1v8ZM11 12H7v-1h4v1ZM15 12H12v-1h3v1ZM7 11h-1v-2h1v2ZM12 11h-1v-1h1v1ZM16 11h-1v-2h1v2ZM8 9h-1V4h1v5ZM15 9h-1V4h1v5ZM6 4h-1v-1h1v1ZM9 4h-1v-1h-2V2h3v2ZM14 4h-1v-1h1v1ZM4 3h-1V2h1v1ZM13 3h-1V2h1v1ZM5 2h-1V1h1v1ZM12 2h-1V1h1v1ZM11 1H5V0h6v1Z", fill: "black" });
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

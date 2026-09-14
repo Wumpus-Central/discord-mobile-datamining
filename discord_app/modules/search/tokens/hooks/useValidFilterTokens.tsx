@@ -1,8 +1,10 @@
-// === Module 16741: useValidFilterTokens ===
+// === Module 16743: useValidFilterTokens ===
 
-// Module 16741 (useValidFilterTokens)
-import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12474 */;
+// Module 16743 (useValidFilterTokens)
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12475 */;
 import StreamerModeStore from "StreamerModeStore" /* 4482 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

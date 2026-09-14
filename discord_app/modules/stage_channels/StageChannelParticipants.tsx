@@ -27,7 +27,7 @@ function sortKey(speaker) {
     str2 = "\0";
   }
   let str3 = str;
-  if (type === obj.STREAM) {
+  if (type === obj2.STREAM) {
     str3 = "\0";
   }
   let str4 = "\0";
@@ -92,8 +92,8 @@ function getParticipantIndex(arg0) {
   return items;
 }
 const getComparator = fn(4660).getComparator;
-let obj = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
-obj = { VOICE: "VOICE", STREAM: "STREAM" };
+const StageChannelParticipantNamedIndex = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
+let obj2 = { VOICE: "VOICE", STREAM: "STREAM" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
@@ -146,16 +146,15 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
         nick = member1.nick;
       }
       if (nick == null) {
-        obj = NicknameUtilsDefault;
-        nick = obj.getName(self.guildId, self.channelId, user);
+        nick = NicknameUtilsDefault.getName(self.guildId, self.channelId, user);
       }
-      obj = { user, userNick: NicknameUtilsDefault.getName(self.guildId, self.channelId, user), nick, comparator: getComparator(voiceStateForChannel, nick), voiceState: voiceStateForChannel, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
-      obj.role = useGuildMemberDisplayRole.getHighestHoistedRole(self.guildId, userId);
-      obj.speaker = StageChannelRoleStore.isSpeaker(userId, self.channelId);
-      obj.member = member1;
-      obj.blocked = RelationshipStore.isBlocked(user.id);
-      obj.ignored = RelationshipStore.isIgnored(user.id);
-      obj.isFriend = RelationshipStore.isFriend(user.id);
+      obj2 = { user, userNick: NicknameUtilsDefault.getName(self.guildId, self.channelId, user), nick, comparator: getComparator(voiceStateForChannel, nick), voiceState: voiceStateForChannel, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
+      obj2.role = useGuildMemberDisplayRole.getHighestHoistedRole(self.guildId, userId);
+      obj2.speaker = StageChannelRoleStore.isSpeaker(userId, self.channelId);
+      obj2.member = member1;
+      obj2.blocked = RelationshipStore.isBlocked(user.id);
+      obj2.ignored = RelationshipStore.isIgnored(user.id);
+      obj2.isFriend = RelationshipStore.isFriend(user.id);
       let connectedOn;
       if (first != null) {
         connectedOn = first.connectedOn;
@@ -164,28 +163,28 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
         const _Date = Date;
         connectedOn = Date.now();
       }
-      obj.connectedOn = connectedOn;
-      obj = {};
-      const merged = Object.assign(obj);
-      obj.type = obj.VOICE;
-      obj.id = user.id;
-      let tmp11Result = useAudienceRequestToSpeakState;
-      obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
-      items.push(obj);
+      obj2.connectedOn = connectedOn;
+      const obj5 = {};
+      const merged = Object.assign(obj2);
+      obj5.type = obj2.VOICE;
+      obj5.id = user.id;
+      const tmp19 = obj2;
+      obj5.rtsState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+      items.push(obj5);
       let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, self.guildId);
       if (streamForUser == null) {
         streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, self.guildId);
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
-          tmp11Result = StreamKeyUtils;
-          const obj1 = {};
-          const merged1 = Object.assign(obj);
-          obj1.id = tmp11Result.encodeStreamKey(streamForUser);
-          obj1.type = obj.STREAM;
-          obj1.rtsState = useAudienceRequestToSpeakState.RequestToSpeakStates.NONE;
-          items.push(obj1);
-          const encodeStreamKeyResult = tmp11Result.encodeStreamKey(streamForUser);
+          const obj6 = {};
+          const tmp11Result2 = StreamKeyUtils;
+          const merged1 = Object.assign(obj2);
+          obj6.id = StreamKeyUtils.encodeStreamKey(streamForUser);
+          obj6.type = tmp19.STREAM;
+          obj6.rtsState = useAudienceRequestToSpeakState.RequestToSpeakStates.NONE;
+          items.push(obj6);
+          const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(streamForUser);
         }
       }
       return items;
@@ -281,8 +280,8 @@ prototype["getRequestToSpeakParticipants"] = function getRequestToSpeakParticipa
 };
 
 export default StageChannelParticipants;
-export const StageChannelParticipantNamedIndex = obj;
-export const StageChannelParticipantTypes = obj;
+export { StageChannelParticipantNamedIndex };
+export const StageChannelParticipantTypes = obj2;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
   return rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

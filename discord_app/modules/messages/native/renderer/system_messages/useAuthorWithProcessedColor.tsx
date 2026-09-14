@@ -10,32 +10,30 @@ const processColor = _mod17.processColor;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
 
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
-  let obj = useMessageAuthor;
-  const messageAuthor = obj.getMessageAuthor(message);
+  const messageAuthor = useMessageAuthor.getMessageAuthor(message);
   const colorString = messageAuthor.colorString;
-  obj = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
+  const obj2 = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
   let tmp4;
   ({ colorStrings, guildId } = messageAuthor);
   if (null != colorString) {
     tmp4 = processColor(colorString);
   }
-  obj.colorString = tmp4;
-  obj.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
-  obj.guildId = guildId;
-  return obj;
+  obj2.colorString = tmp4;
+  obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
+  obj2.guildId = guildId;
+  return obj2;
 };
 export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcessedColor(user, channel) {
-  let obj = useMessageAuthor;
-  const userAuthor = obj.getUserAuthor(user, channel);
+  const userAuthor = useMessageAuthor.getUserAuthor(user, channel);
   const colorString = userAuthor.colorString;
-  obj = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
+  const obj2 = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
   let tmp4;
   ({ colorStrings, guildId } = userAuthor);
   if (null != colorString) {
     tmp4 = processColor(colorString);
   }
-  obj.colorString = tmp4;
-  obj.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
-  obj.guildId = guildId;
-  return obj;
+  obj2.colorString = tmp4;
+  obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
+  obj2.guildId = guildId;
+  return obj2;
 };

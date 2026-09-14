@@ -6,6 +6,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);

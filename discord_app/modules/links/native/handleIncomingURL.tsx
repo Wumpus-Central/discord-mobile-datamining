@@ -1,12 +1,12 @@
-// === Module 18008: handleIncomingURL ===
+// === Module 18009: handleIncomingURL ===
 
-// Module 18008 (handleIncomingURL)
+// Module 18009 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4843 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7578 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13938 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 18007 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13939 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 18008 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
@@ -21,8 +21,8 @@ let closure_11 = async function _handleIncomingURL(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -35,8 +35,8 @@ let closure_11 = async function _handleIncomingURL(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -61,12 +61,11 @@ let closure_11 = async function _handleIncomingURL(arg0) {
           const _HermesInternal = HermesInternal;
           logger.log("Opening url: " + url + " [" + AppsFlyer + "]");
           if (state.getState() !== constants.ACTIVE) {
-            let obj3 = TTIAnalyticsUtils;
             let str = "deeplink";
             if (null == url) {
               str = "launcher";
             }
-            obj3.trackAppOpened(str);
+            TTIAnalyticsUtils.trackAppOpened(str);
           }
           if (null == url) {
             c8 = 3;
@@ -105,14 +104,14 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     c6 = 0;
                   }
                 }
-                const obj1 = { originalUrl: url };
-                logger.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj1);
+                const obj5 = { originalUrl: url };
+                logger.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj5);
                 c8 = 3;
-                const obj2 = { value: undefined, done: true };
-                return obj2;
+                const obj8 = { value: undefined, done: true };
+                return obj8;
               } else {
-                obj3 = { originalUrl: url };
-                logger.warn("No hash mark found in AppsFlyer legacy URL", obj3);
+                const obj9 = { originalUrl: url };
+                logger.warn("No hash mark found in AppsFlyer legacy URL", obj9);
               }
             }
             if (url.startsWith("discordwidget:///")) {
@@ -136,8 +135,8 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     tmp168 = "dynamicIsland" !== value;
                   }
                   if (!tmp168) {
-                    const obj4 = { action: "Open Voice Panel", channel_id: channel.id, surface: value };
-                    AnalyticsUtilsDefault.track(constants2.LIVE_ACTIVITY_INTERACTED, obj4);
+                    const obj10 = { action: "Open Voice Panel", channel_id: channel.id, surface: value };
+                    AnalyticsUtilsDefault.track(constants2.LIVE_ACTIVITY_INTERACTED, obj10);
                   }
                 }
                 c8 = 3;
@@ -154,29 +153,29 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                     return { value: "HermesInternal", done: null };
                   } else if ("user" !== parts1[0]) {
                     if ("invite" === parts1[0]) {
-                      let obj5 = { payload: null };
-                      let obj6 = { type: constants3.CREATE_VOICE_INVITE, guildId: parts1[1], channelId: parts1[2] };
-                      obj5.payload = obj6;
-                      handleSupportedURLDefault(obj5);
+                      const obj14 = { payload: null };
+                      const obj15 = { type: constants3.CREATE_VOICE_INVITE, guildId: parts1[1], channelId: parts1[2] };
+                      obj14.payload = obj15;
+                      handleSupportedURLDefault(obj14);
                     } else if ("wave" === parts1[0]) {
-                      const obj7 = { payload: null };
-                      const obj8 = { type: constants3.SEND_VOICE_HANGOUT_WAVE, guildId: parts1[1], channelId: parts1[2] };
-                      obj7.payload = obj8;
-                      handleSupportedURLDefault(obj7);
+                      const obj16 = { payload: null };
+                      const obj17 = { type: constants3.SEND_VOICE_HANGOUT_WAVE, guildId: parts1[1], channelId: parts1[2] };
+                      obj16.payload = obj17;
+                      handleSupportedURLDefault(obj16);
                     } else if ("join" === parts1[0]) {
-                      const obj9 = { payload: null };
-                      let obj10 = { type: constants3.CHANNEL, guildId: parts1[1], channelId: parts1[2] };
-                      obj9.payload = obj10;
-                      handleSupportedURLDefault(obj9);
+                      const obj18 = { payload: null };
+                      const obj19 = { type: constants3.CHANNEL, guildId: parts1[1], channelId: parts1[2] };
+                      obj18.payload = obj19;
+                      handleSupportedURLDefault(obj18);
                     } else if (2 === parts1.length) {
                       [tmp206, tmp207] = parts1;
-                      let obj11 = { payload: null };
-                      let obj12 = { type: constants3.CHANNEL, guildId: tmp206, channelId: tmp207 };
-                      obj11.payload = obj12;
-                      handleSupportedURLDefault(obj11);
+                      const obj20 = { payload: null };
+                      const obj21 = { type: constants3.CHANNEL, guildId: tmp206, channelId: tmp207 };
+                      obj20.payload = obj21;
+                      handleSupportedURLDefault(obj20);
                       c8 = 3;
-                      const obj13 = { value: undefined, done: true };
-                      return obj13;
+                      const obj22 = { value: undefined, done: true };
+                      return obj22;
                     }
                   }
                 }
@@ -189,23 +188,23 @@ let closure_11 = async function _handleIncomingURL(arg0) {
           const _fetch = fetch;
           c7 = 2;
           c8 = 1;
-          const obj14 = { value: fetch(url, { method: "HEAD", redirect: "follow" }), done: false };
-          return obj14;
+          const obj23 = { value: fetch(url, { method: "HEAD", redirect: "follow" }), done: false };
+          return obj23;
         }
       } else if (1 === tmp8) {
         c6 = 0;
         closure_131_17 = searchParams;
-        const obj15 = { originalUrl: closure_131_0.url, extractedUrlString: closure_131_4, error: closure_131_17.message };
-        closure_132_10.warn("Failed to parse URL from AppsFlyer legacy URL", obj15);
+        const obj25 = { originalUrl: closure_131_0.url, extractedUrlString: closure_131_4, error: closure_131_17.message };
+        closure_132_10.warn("Failed to parse URL from AppsFlyer legacy URL", obj25);
         c8 = 3;
-        const obj16 = { value: undefined, done: true };
-        return obj16;
+        const obj26 = { value: undefined, done: true };
+        return obj26;
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
       } else if (arg0 === 2) {
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         url = value.url;
@@ -223,8 +222,8 @@ let closure_11 = async function _handleIncomingURL(arg0) {
       authToken = payload.authToken;
       let result1 = null;
       if (null != inviteCode) {
-        obj5 = closure_132_0(closure_132_2[12]);
-        result1 = obj5.parseInviteCodeFromInviteKey(inviteCode);
+        result1 = closure_132_0(closure_132_2[12]).parseInviteCodeFromInviteKey(inviteCode);
+        const obj6 = closure_132_0(closure_132_2[12]);
       }
       closure_131_16 = result1;
       let tmp64 = null == fingerprint;
@@ -247,53 +246,52 @@ let closure_11 = async function _handleIncomingURL(arg0) {
         tmp64 = null == installationId;
       }
       if (!tmp64) {
-        obj6 = closure_132_1(closure_132_2[9]);
-        const obj17 = { invite_code: closure_131_16, guild_template_code: guildTemplateCode, has_auth_token: null, is_backgrounded: null, attempt_id: null, deeplink_source: null, link_type: null, is_cold_start: null, received_installation_id: null };
+        const obj27 = { invite_code: closure_131_16, guild_template_code: guildTemplateCode, has_auth_token: null, is_backgrounded: null, attempt_id: null, deeplink_source: null, link_type: null, is_cold_start: null, received_installation_id: null };
         let tmp85 = null != authToken;
         if (tmp85) {
           tmp85 = 0 === authToken.length;
         }
-        obj17.has_auth_token = tmp85;
-        obj17.is_backgrounded = closure_132_6.getState() === closure_132_7.BACKGROUND;
-        obj17.attempt_id = attemptId;
-        obj17.deeplink_source = AppsFlyer;
-        obj17.link_type = payload.type;
-        obj17.is_cold_start = closure_131_1;
-        obj17.received_installation_id = installationId;
-        let obj18 = null;
+        obj27.has_auth_token = tmp85;
+        obj27.is_backgrounded = closure_132_6.getState() === closure_132_7.BACKGROUND;
+        obj27.attempt_id = attemptId;
+        obj27.deeplink_source = AppsFlyer;
+        obj27.link_type = payload.type;
+        obj27.is_cold_start = closure_131_1;
+        obj27.received_installation_id = installationId;
+        let obj28 = null;
         if (didRegister) {
-          obj18 = { did_register: true };
+          obj28 = { did_register: true };
         }
-        const merged = Object.assign(obj18);
+        const merged = Object.assign(obj28);
         let tmp103 = null;
         if (null != fingerprint) {
-          const obj19 = { fingerprint: null };
-          obj10 = closure_132_0(closure_132_2[13]);
-          obj19.fingerprint = obj10.extractId(fingerprint);
-          tmp103 = obj19;
+          const obj29 = { fingerprint: closure_132_0(closure_132_2[13]).extractId(fingerprint) };
+          tmp103 = obj29;
+          const obj11 = closure_132_0(closure_132_2[13]);
         }
         const merged1 = Object.assign(tmp103);
-        obj6.track(closure_132_8.EXTERNAL_DYNAMIC_LINK_RECEIVED, obj17);
+        closure_132_1(closure_132_2[9]).track(closure_132_8.EXTERNAL_DYNAMIC_LINK_RECEIVED, obj27);
+        const obj7 = closure_132_1(closure_132_2[9]);
       }
       let tmp115 = null != closure_131_16;
       if (tmp115) {
         tmp115 = null != installationId;
       }
       if (tmp115) {
-        obj11 = closure_132_1(closure_132_2[14]);
-        const result2 = obj11.setReceivedInstallationIdForInviteCode(closure_131_16, installationId);
+        const result2 = closure_132_1(closure_132_2[14]).setReceivedInstallationIdForInviteCode(closure_131_16, installationId);
+        const obj12 = closure_132_1(closure_132_2[14]);
       }
       let tmp127 = null != closure_131_16;
       if (tmp127) {
         tmp127 = didRegister;
       }
       if (tmp127) {
-        obj12 = closure_132_0(closure_132_2[15]);
-        const result3 = obj12.setRegistrationHandoff();
+        const result3 = closure_132_0(closure_132_2[15]).setRegistrationHandoff();
+        const obj13 = closure_132_0(closure_132_2[15]);
       }
       closure_132_1(closure_132_2[16])(url);
-      const obj20 = { payload };
-      closure_132_1(closure_132_2[10])(obj20);
+      const obj30 = { payload };
+      closure_132_1(closure_132_2[10])(obj30);
     } catch (tmp176) {
       searchParams = tmp176;
       if (tmp4 === c6) {

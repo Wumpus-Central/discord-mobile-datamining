@@ -1,10 +1,10 @@
-// === Module 11563: GiftCodeActionCreators ===
+// === Module 11564: GiftCodeActionCreators ===
 
-// Module 11563 (GiftCodeActionCreators)
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 11564 (GiftCodeActionCreators)
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4317 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11564 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
@@ -28,8 +28,8 @@ let closure_11 = async function _resolveGiftCode(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -42,8 +42,8 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp4;
           closure_3 = tmp9;
@@ -72,24 +72,23 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          let obj2 = { type: "GIFT_CODE_RESOLVE", code: closure_131_0 };
-          closure_132_1(closure_132_2[6]).dispatch(obj2);
+          const obj6 = { type: "GIFT_CODE_RESOLVE", code: closure_131_0 };
+          closure_132_1(closure_132_2[6]).dispatch(obj6);
           c6 = 1;
           const obj18 = closure_132_1(closure_132_2[6]);
           c7 = 3;
           c8 = 1;
-          const obj3 = { value: closure_132_0(closure_132_2[7]).resolveGiftCode(closure_131_0, closure_131_1, closure_131_2), done: false };
-          return obj3;
+          const obj8 = { value: closure_132_0(closure_132_2[7]).resolveGiftCode(closure_131_0, closure_131_1, closure_131_2), done: false };
+          return obj8;
         }
       } else if (2 === tmp9) {
         c6 = 0;
         closure_131_5 = closure_5;
-        let obj11 = closure_132_1(closure_132_2[6]);
-        const obj4 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: closure_131_0, error: closure_131_5 };
-        obj11.dispatch(obj4);
+        const obj10 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: closure_131_0, error: closure_131_5 };
+        closure_132_1(closure_132_2[6]).dispatch(obj10);
         throw closure_131_5;
       } else {
         if (3 === tmp9) {
@@ -99,19 +98,18 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
             closure_131_3 = value;
             if (null != closure_131_3.application_id) {
               if (closure_131_3.application_id !== closure_132_10) {
                 if (null == closure_132_4.getApplication(closure_131_3.application_id)) {
                   c6 = 2;
-                  let obj8 = closure_132_1(closure_132_2[8]);
                   c7 = 5;
                   c8 = 1;
-                  let obj6 = { value: obj8.fetchApplication(closure_131_3.application_id), done: false };
-                  return obj6;
+                  const obj13 = { value: closure_132_1(closure_132_2[8]).fetchApplication(closure_131_3.application_id), done: false };
+                  return obj13;
                 }
               }
             }
@@ -126,8 +124,8 @@ let closure_11 = async function _resolveGiftCode(arg0) {
             } else if (arg0 === 2) {
               c6 = 0;
               c8 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj14 = { value, done: true };
+              return obj14;
             } else {
               c6 = 1;
             }
@@ -137,7 +135,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             product = closure_132_5.getProduct(closure_131_3.sku_id);
@@ -151,21 +149,19 @@ let closure_11 = async function _resolveGiftCode(arg0) {
               throw clientOutdatedAcceptGiftError;
             }
           }
-          obj2 = closure_132_1(closure_132_2[6]);
-          obj8 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: closure_131_3 };
-          obj2.dispatch(obj8);
-          const obj9 = { giftCode: closure_131_3 };
+          const obj15 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: closure_131_3 };
+          closure_132_1(closure_132_2[6]).dispatch(obj15);
+          const obj16 = { giftCode: closure_131_3 };
           c6 = 0;
           c8 = 3;
-          const obj10 = { value: obj9, done: true };
-          return obj10;
+          const obj17 = { value: obj16, done: true };
+          return obj17;
         }
         if (closure_131_3.application_id === closure_132_7) {
-          obj6 = closure_132_0(closure_132_2[9]);
           c7 = 6;
           c8 = 1;
-          obj11 = { value: obj6.fetchCollectiblesProduct(closure_131_3.sku_id), done: false };
-          return obj11;
+          const obj19 = { value: closure_132_0(closure_132_2[9]).fetchCollectiblesProduct(closure_131_3.sku_id), done: false };
+          return obj19;
         }
       }
     } catch (tmp54) {
@@ -184,21 +180,21 @@ let closure_11 = async function _resolveGiftCode(arg0) {
 function reportUnexpectedGiftCodeError(status) {
   if (status instanceof errors_V6OrEarlierAPIErrorDefault) {
     if (404 !== status.status) {
-      let tmpResult = SentryUtilsDefault;
       let str = status.status;
       if (str == null) {
         str = "unknown";
       }
-      let obj = { tags: null };
-      obj = { gift_code_resolve_status: String(str) };
-      obj.tags = obj;
-      tmpResult.captureException(status.error, obj);
+      const obj = { tags: null };
+      const obj2 = { gift_code_resolve_status: String(str) };
+      obj.tags = obj2;
+      SentryUtilsDefault.captureException(status.error, obj);
+      const tmpResult = SentryUtilsDefault;
     }
   } else {
     const _Error = Error;
     if (status instanceof Error) {
-      tmpResult = SentryUtilsDefault;
-      tmpResult.captureException(status);
+      SentryUtilsDefault.captureException(status);
+      const tmpResult2 = SentryUtilsDefault;
     }
   }
   return null;
@@ -217,7 +213,7 @@ let closure_6 = fn(7653).isUnknownCollectiblesItemRecord;
 const Constants = fn(1074);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11565).default);
+const merged = Object.assign(fn(11566).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
@@ -270,9 +266,7 @@ export default {
       const HTTP = sku_id(gift_style[13]).HTTP;
       const request = { url: constants.USER_GIFT_CODE_CREATE, body: { sku_id, subscription_plan_id: tmp3, gift_style }, oldFormErrors: true, rejectWithError: true };
       await HTTP.post(request);
-      tmp3(gift_style[6]);
-      const obj4 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: closure_129_0, subscriptionPlanId: closure_129_1 };
-      obj4.dispatch(obj4);
+      tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_FAILURE", skuId: closure_129_0, subscriptionPlanId: closure_129_1 });
       await "HermesInternal";
       closure_128_0 = value;
       tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: closure_128_0.body });

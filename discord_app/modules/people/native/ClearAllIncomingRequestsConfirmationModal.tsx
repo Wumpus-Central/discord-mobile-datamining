@@ -8,6 +8,5 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
-  const obj = { incomingPendingRequestCount };
-  obj.pushLazy(asyncRequireImpl(9178, dependencyMap.paths), obj);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9178, dependencyMap.paths), { incomingPendingRequestCount });
 };

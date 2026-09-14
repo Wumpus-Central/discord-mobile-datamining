@@ -19,37 +19,37 @@ function Scope(arg0) {
     stringResult = string(t["0lpCFG"]);
     tmp6 = require;
   }
-  let obj = { style: tmp.scopeContainer, accessible: true, accessibilityLabel: null, children: null };
+  const obj = { style: tmp.scopeContainer, accessible: true, accessibilityLabel: null, children: null };
   let str = "";
   if (null != error) {
     const _HermesInternal = HermesInternal;
     str = ". " + error;
   }
   obj.accessibilityLabel = "" + stringResult + ": " + text + str;
-  obj = { style: tmp.iconWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj2 = { style: tmp.iconWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
   if (isFake) {
-    obj = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = React4(tmp6(6717).CircleXIcon, obj);
+    const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
+    let tmp10Result = React4(tmp6(6717).CircleXIcon, obj3);
   } else {
-    const obj1 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    tmp10Result = React4(tmp6(4596).CircleCheckIcon, obj1);
+    const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
+    tmp10Result = React4(tmp6(4596).CircleCheckIcon, obj4);
   }
-  obj.children = tmp10Result;
-  const items = [React4(View, obj), ];
-  const obj2 = { style: tmp.scope, children: null };
+  obj2.children = tmp10Result;
+  const items = [React4(View, obj2), ];
+  const obj5 = { style: tmp.scope, children: null };
   let str3;
   if (isFake) {
     str3 = "text-muted";
   }
   const items1 = [React4(tmp6(4632).Text, { variant: "text-md/normal", color: str3, children: text }), ];
-  tmp10Result = null;
+  let tmp10Result2 = null;
   if (null != error) {
-    const obj3 = { variant: "text-xs/normal", children: error };
-    tmp10Result = React4(tmp6(4632).Text, obj3);
+    const obj6 = { variant: "text-xs/normal", children: error };
+    tmp10Result2 = React4(tmp6(4632).Text, obj6);
   }
-  items1[1] = tmp10Result;
-  obj2.children = items1;
-  items[1] = hasOwnProperty(View, obj2);
+  items1[1] = tmp10Result2;
+  obj5.children = items1;
+  items[1] = hasOwnProperty(View, obj5);
   obj.children = items;
   return hasOwnProperty(View, obj);
 }
@@ -85,12 +85,12 @@ export default function AuthorizeScopes(accountScopes) {
       hasItem = requestedScopes.includes(tmp5(8457).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: tmp.scopesContainer, children: null };
-    obj = { variant: "heading-sm/normal", color: "text-default", children: null };
+    const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
     const intl = tmp5(1114).intl;
-    obj = { application: application.name };
-    obj.children = intl.format(PZpY9c, obj);
-    const items = [closure_4(tmp5(4632).Text, obj), ];
-    const obj1 = { style: tmp.scopes, children: null };
+    const obj3 = { application: application.name };
+    obj2.children = intl.format(PZpY9c, obj3);
+    const items = [closure_4(tmp5(4632).Text, obj2), ];
+    const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
       const scopeNames = accountScopes(9367).getScopeNames(item, closure_0);
@@ -112,16 +112,16 @@ export default function AuthorizeScopes(accountScopes) {
     });
     const items1 = [mapped.flat(), , ];
     if (hasItem) {
-      const obj2 = { text: null };
+      const obj5 = { text: null };
       const intl2 = tmp5(1114).intl;
-      obj2.text = intl2.string(tmp5(1114).t.Ls2XRq);
-      hasItem = closure_4(Scope, obj2);
+      obj5.text = intl2.string(tmp5(1114).t.Ls2XRq);
+      hasItem = closure_4(Scope, obj5);
     }
     items1[1] = hasItem;
-    const obj3 = { text: tmp3(), isFake: true };
-    items1[2] = closure_4(Scope, obj3);
-    obj1.children = items1;
-    items[1] = closure_5(View, obj1);
+    const obj6 = { text: tmp3(), isFake: true };
+    items1[2] = closure_4(Scope, obj6);
+    obj4.children = items1;
+    items[1] = closure_5(View, obj4);
     obj.children = items;
     return closure_5(View, obj);
   }

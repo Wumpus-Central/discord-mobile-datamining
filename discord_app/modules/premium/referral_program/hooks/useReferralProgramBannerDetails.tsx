@@ -1,6 +1,6 @@
-// === Module 13521: useReferralProgramBannerDetails ===
+// === Module 13522: useReferralProgramBannerDetails ===
 
-// Module 13521 (useReferralProgramBannerDetails)
+// Module 13522 (useReferralProgramBannerDetails)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7555 */;
@@ -11,9 +11,9 @@ const result = size.fileFinishedImporting("modules/premium/referral_program/hook
 
 export const MAX_REFERRALS_SENT = 3;
 export const useReferralProgramBannerDetails = function useReferralProgramBannerDetails() {
-  let obj = stateFromStoresArray(504);
   const items = [ReferralTrialStore];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => authStore.getSentUserIds());
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => authStore.getSentUserIds());
+  const obj = stateFromStoresArray(504);
   const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
   const stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(items1, () => {
@@ -25,9 +25,9 @@ export const useReferralProgramBannerDetails = function useReferralProgramBanner
       const user = stateFromStoresArray(closure_1_1[4]).getUser(item);
     });
   }, items2);
-  obj = { referralSentUsers: stateFromStoresArray1, hasSentAllReferrals: 3 === stateFromStoresArray.length, refreshAt: null };
+  const obj3 = { referralSentUsers: stateFromStoresArray1, hasSentAllReferrals: 3 === stateFromStoresArray.length, refreshAt: null };
   const obj2 = stateFromStoresArray(504);
   const items3 = [ReferralTrialStore];
-  obj.refreshAt = stateFromStoresArray(504).useStateFromStores(items3, () => authStore.getRefreshAt());
-  return obj;
+  obj3.refreshAt = stateFromStoresArray(504).useStateFromStores(items3, () => authStore.getRefreshAt());
+  return obj3;
 };

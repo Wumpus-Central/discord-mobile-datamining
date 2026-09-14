@@ -1,9 +1,9 @@
-// === Module 15322: GuildRoleSubscriptionEmojiGallery ===
+// === Module 15323: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 15322 (GuildRoleSubscriptionEmojiGallery)
-import chunkDefault from "chunk" /* 10472 */;
-import LayoutUtils from "LayoutUtils" /* 10474 */;
-import EmojiIconDefault from "EmojiIcon" /* 15323 */;
+// Module 15323 (GuildRoleSubscriptionEmojiGallery)
+import chunkDefault from "chunk" /* 10473 */;
+import LayoutUtils from "LayoutUtils" /* 10475 */;
+import EmojiIconDefault from "EmojiIcon" /* 15324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,28 +18,13 @@ export default function EmojiGallery(emojiIds) {
     maxPerRow = 9;
   }
   let obj = { children: null };
-  obj = {
-    gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
-      let obj = { style: { flexDirection: "row" }, children: null };
-      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
-      obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
-      return <View key={index} gap={16}>{arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
-    })
-  };
+  const arr = chunkDefault(emojiIds.emojiIds, maxPerRow);
   obj.children = jsx(LayoutUtils.GappedList, {
     gap: 8,
     children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
-      let obj = { style: { flexDirection: "row" }, children: null };
-      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
-      obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
-      return <View key={index} gap={16}>{arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
+      const obj = { style: { flexDirection: "row" }, children: jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) }) };
+      return <View key={index} style={{ flexDirection: "row" }}>{jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) })}</View>;
     })
   });
-  return <View gap={8}>{chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
-    let obj = { style: { flexDirection: "row" }, children: null };
-    obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
-    obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
-    return <View key={index} gap={16}>{arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
-  })}</View>;
+  return <View>{null}</View>;
 };

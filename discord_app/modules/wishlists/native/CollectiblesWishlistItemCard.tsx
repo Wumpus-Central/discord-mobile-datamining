@@ -1,9 +1,9 @@
-// === Module 11168: CollectiblesWishlistItemCard ===
+// === Module 11169: CollectiblesWishlistItemCard ===
 
-// Module 11168 (CollectiblesWishlistItemCard)
+// Module 11169 (CollectiblesWishlistItemCard)
 import SKUPreview from "SKUPreview" /* 8898 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 11169 */;
+import SentGiftsStore from "SentGiftsStore" /* 11170 */;
 
 require = fn;
 let closure_4 = fn(7649).transformSKUToCollectiblesItem;
@@ -21,16 +21,18 @@ export default function CollectiblesWishlistItemCard(sku) {
   const size = sku.size;
   const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let memo;
-  let obj = sku(size[4]);
   const items = [SentGiftsStore];
   const items1 = [sku.id, wishlistOwnerId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = sku(size[4]).useStateFromStores(items, () => {
     let hasSentGiftResult = null != wishlistOwnerId;
     if (hasSentGiftResult) {
       hasSentGiftResult = SentGiftsStore.hasSentGift(sku.id, tmp);
     }
     return hasSentGiftResult;
   }, items1);
+  let obj = sku(size[4]);
+  let tmp2 = sku;
+  const tmp3 = size;
   const items2 = [sku];
   const productNameAndTypeFromSku = sku(size[5]).getProductNameAndTypeFromSku(sku);
   memo = memo.useMemo(() => closure_4(sku), items2);
@@ -43,17 +45,15 @@ export default function CollectiblesWishlistItemCard(sku) {
     }
     return tmp2;
   }, items3);
-  obj = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, size };
+  const obj3 = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, size };
   const obj2 = sku(size[5]);
-  let tmp2 = sku;
-  const tmp3 = size;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {
       let OWNED = merged.overlay;
     }
-    obj.overlay = OWNED;
-    return <tmp9 {...obj} />;
+    obj3.overlay = OWNED;
+    return <tmp9 {...obj3} />;
   }
   OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
   const tmp9 = wishlistOwnerId(size[7]);

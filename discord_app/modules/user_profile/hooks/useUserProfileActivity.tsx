@@ -1,13 +1,15 @@
-// === Module 13170: useUserProfileActivity ===
+// === Module 13171: useUserProfileActivity ===
 
-// Module 13170 (useUserProfileActivity)
+// Module 13171 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 4661 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13171 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13172 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8918 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useMemo = _mod19.useMemo;
 const Features = Constants.Features;
@@ -17,19 +19,18 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfi
 
 export default function useUserProfileActivity(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [MediaEngineStore];
-  const stateFromStores = obj.useStateFromStores(items, () => MediaEngineStore.supports(constants.VIDEO));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => MediaEngineStore.supports(constants.VIDEO));
   let tmp4 = null;
   if (stateFromStores) {
     tmp4 = stateFromStores1(stateFromStores2[6])(arg0);
   }
-  let tmpResult = tmp(tmp2[5]);
+  let obj = require("initialize");
   const items1 = [PresenceStore];
-  stateFromStores1 = tmpResult.useStateFromStores(items1, () => PresenceStore.getActivities(closure_0));
-  tmpResult = tmp(tmp2[5]);
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => PresenceStore.getActivities(closure_0));
+  let tmpResult = require("initialize");
   const items2 = [ContentInventoryOutboxStore];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => ContentInventoryOutboxStore.getUserOutbox(closure_0));
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () => ContentInventoryOutboxStore.getUserOutbox(closure_0));
   const items3 = [stateFromStores1, ];
   let entries;
   if (stateFromStores2 != null) {
@@ -37,8 +38,7 @@ export default function useUserProfileActivity(arg0) {
   }
   items3[1] = entries;
   const tmp7Result = useMemo(() => {
-    let obj = UserProfileStackedActivityCardUtils;
-    let userProfileLiveActivities = obj.getUserProfileLiveActivities(stateFromStores1);
+    let userProfileLiveActivities = UserProfileStackedActivityCardUtils.getUserProfileLiveActivities(stateFromStores1);
     let found;
     if (stateFromStores2 != null) {
       const entries = stateFromStores2.entries;
@@ -49,7 +49,6 @@ export default function useUserProfileActivity(arg0) {
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
-          let tmpResult = tmp(stateFromStores2[9]);
           if (tmpResult.isListenedSessionEntry(length)) {
             length = length.extra.entries.length;
             let tmp6 = length > 0;
@@ -66,8 +65,7 @@ export default function useUserProfileActivity(arg0) {
             }
             let result = tmp6;
           } else {
-            tmpResult = tmp(stateFromStores2[9]);
-            if (tmpResult.isWatchedMediaEntry(length)) {
+            if (tmpResult3.isWatchedMediaEntry(length)) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
@@ -78,9 +76,11 @@ export default function useUserProfileActivity(arg0) {
               });
             } else {
               result = tmp(stateFromStores2[9]).isRecentActivityEntry(length);
-              const tmpResult1 = tmp(stateFromStores2[9]);
+              const tmpResult4 = tmp(stateFromStores2[9]);
             }
+            tmpResult3 = tmp(stateFromStores2[9]);
           }
+          tmpResult = tmp(stateFromStores2[9]);
         }
         let obj = userProfileLiveActivities(stateFromStores2[8]);
       });
@@ -88,13 +88,12 @@ export default function useUserProfileActivity(arg0) {
     if (0 === userProfileLiveActivities.length) {
       userProfileLiveActivities = closure_8;
     }
-    obj = { live: userProfileLiveActivities, recent: null };
+    const obj2 = { live: userProfileLiveActivities, recent: null };
     if (null == found) {
       found = closure_9;
     }
-    obj.recent = found;
-    return obj;
+    obj2.recent = found;
+    return obj2;
   }, items3);
-  obj = { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
-  return obj;
+  return { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
 };

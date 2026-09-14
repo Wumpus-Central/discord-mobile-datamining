@@ -1,10 +1,10 @@
-// === Module 16362: OneColumnGuildUpsellList ===
+// === Module 16364: OneColumnGuildUpsellList ===
 
-// Module 16362 (OneColumnGuildUpsellList)
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16363 */;
+// Module 16364 (OneColumnGuildUpsellList)
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16365 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15707 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15709 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -58,10 +58,10 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  let obj = cardAction(ref[8]);
-  const items2 = [stateFromStoresObject];
-  stateFromStoresObject = obj.useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
   let tmp = closure_9();
+  const items2 = [stateFromStoresObject];
+  stateFromStoresObject = cardAction(ref[8]).useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
+  let obj = cardAction(ref[8]);
   const analyticsLocations = onDismiss(ref[9])(onDismiss(ref[10]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations;
   const items3 = [onDismiss, stateFromStoresObject, cardAction];
   closure_129_0 = stateFromStoresObject;
@@ -97,29 +97,29 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
         if (!hasItem) {
           const current2 = ref.current;
           current2.add(item.id);
-          cardAction(ref[5]);
-          let obj = { type: cardAction(ref[6]).ImpressionTypes.PANE, name: cardAction(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: null };
-          obj = { game_id: closure_1_0[item.id], guild_id: item.id, location_stack };
-          obj.properties = obj;
-          obj.trackImpression(obj);
+          const obj2 = { type: cardAction(ref[6]).ImpressionTypes.PANE, name: cardAction(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD, properties: null };
+          const obj3 = { game_id: closure_1_0[item.id], guild_id: item.id, location_stack };
+          obj2.properties = obj3;
+          cardAction(ref[5]).trackImpression(obj2);
+          const obj = cardAction(ref[5]);
         }
       }
     });
   }, items4);
-  obj = { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null };
+  let obj3 = { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null };
   let hidden;
   if (first) {
     hidden = tmp.hidden;
   }
-  obj.style = hidden;
-  obj.onViewableItemsChanged = callback4;
-  obj.viewabilityConfig = viewabilityConfig;
-  obj.contentContainerStyle = contentContainerStyle;
-  obj.keyExtractor = callback;
-  obj.data = suggestedGuilds;
-  obj.ListHeaderComponent = subheader;
-  obj.renderItem = callback3;
-  obj.onScroll = callback1;
-  obj.onLoad = callback2;
+  obj3.style = hidden;
+  obj3.onViewableItemsChanged = callback4;
+  obj3.viewabilityConfig = viewabilityConfig;
+  obj3.contentContainerStyle = contentContainerStyle;
+  obj3.keyExtractor = callback;
+  obj3.data = suggestedGuilds;
+  obj3.ListHeaderComponent = subheader;
+  obj3.renderItem = callback3;
+  obj3.onScroll = callback1;
+  obj3.onLoad = callback2;
   return jsx(cardAction(ref[12]).FlashList, { ref, style: null, onViewableItemsChanged: null, viewabilityConfig: null, contentContainerStyle: null, keyExtractor: null, data: null, ListHeaderComponent: null, renderItem: null, drawDistance: 3000, onScroll: null, scrollEventThrottle: 16, onLoad: null });
 };

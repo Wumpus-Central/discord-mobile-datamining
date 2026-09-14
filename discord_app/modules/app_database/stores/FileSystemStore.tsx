@@ -22,13 +22,13 @@ class FileSystemStore extends Store {
             return closure_0.handlePostConnectionOpen();
           }
     };
-    tmp3 = new tmp3(closure_0(closure_1[4]), obj, new.target, tmp3, tmp2, new.target, closure_0, undefined, tmp, closure_1);
-    closure_0 = tmp3;
-    tmp3.isLowDisk = false;
-    refreshResult = tmp3.refresh();
-    waitForResult = tmp3.waitFor(closure_0(closure_1[5]));
+    tmp31 = new tmp3(closure_0(closure_1[4]), obj, new.target, tmp3, tmp2, new.target, closure_0, undefined, tmp, closure_1);
+    closure_0 = tmp31;
+    tmp31.isLowDisk = false;
+    refreshResult = tmp31.refresh();
+    waitForResult = tmp31.waitFor(closure_0(closure_1[5]));
     timerId = setInterval(() => closure_0.refresh(), closure_4);
-    return tmp3;
+    return tmp31;
   }
 }
 const prototype = FileSystemStore.prototype;
@@ -53,8 +53,8 @@ function refresh() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -67,8 +67,8 @@ function refresh() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp4;
             _self = tmp4;
@@ -86,15 +86,15 @@ function refresh() {
             }
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: catchPromise, done: false };
-            return obj1;
+            const obj4 = { value: catchPromise, done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_128_0 = value;
@@ -144,7 +144,7 @@ function refresh() {
   })();
 }
 prototype["refresh"] = refresh;
-tmp = new tmp(DispatcherDefault, {
+const tmp3 = new tmp(DispatcherDefault, {
   APP_STATE_UPDATE(arg0) {
     return closure_0.handleAppStateUpdate(arg0);
   },
@@ -152,12 +152,12 @@ tmp = new tmp(DispatcherDefault, {
     return closure_0.handlePostConnectionOpen();
   }
 }, tmp2, FileSystemStore, tmp, Object, importDefault, new.target, undefined, globalThis, refresh, dependencyMap);
-let closure_129_0 = tmp;
-tmp.isLowDisk = false;
-tmp.refresh();
-const DatabaseDaos = tmp.waitFor(DatabaseDaosDefault);
+let closure_129_0 = tmp3;
+tmp3.isLowDisk = false;
+tmp3.refresh();
+const DatabaseDaos = tmp3.waitFor(DatabaseDaosDefault);
 let timerId = setInterval(() => closure_0.refresh(), result);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
 
-export default tmp;
+export default tmp3;

@@ -1,6 +1,6 @@
-// === Module 11029: useDisplayNameStylesAccessibleColors ===
+// === Module 11030: useDisplayNameStylesAccessibleColors ===
 
-// Module 11029 (useDisplayNameStylesAccessibleColors)
+// Module 11030 (useDisplayNameStylesAccessibleColors)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
@@ -28,7 +28,7 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
   if (effectId == null) {
     effectId = tmp(tmp2[3]).DisplayNameEffect.SOLID;
   }
-  let obj = displayNameStyles(stateFromStores[2]);
+  const obj = displayNameStyles(stateFromStores[2]);
   displayNameStylesEffectConfig = displayNameStyles(stateFromStores[4]).useDisplayNameStylesEffectConfig(effectId);
   const items1 = [displayNameStyles, effectId, displayNameStylesEffectConfig.minContrastRatio, stateFromStores, backgroundColor];
   return effectId.useMemo(() => {
@@ -37,17 +37,16 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
     } else {
       const colors = tmp.colors;
       items = colors.map((item) => {
-        displayNameStyles(stateFromStores[5]);
-        const obj = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
+        const obj2 = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
         if (effectId === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {
           let tmp4 = backgroundColor(stateFromStores[6])("#333");
         } else {
           tmp4 = backgroundColor(stateFromStores[6])(closure_1_1);
         }
-        obj.background = tmp4;
-        obj.ratio = minContrastRatio.minContrastRatio;
-        obj.saturationFactor = saturationFactor;
-        const accessibleForegroundColor = obj.getAccessibleForegroundColor(obj);
+        obj2.background = tmp4;
+        obj2.ratio = minContrastRatio.minContrastRatio;
+        obj2.saturationFactor = saturationFactor;
+        const accessibleForegroundColor = displayNameStyles(stateFromStores[5]).getAccessibleForegroundColor(obj2);
         return accessibleForegroundColor.hex();
       });
     }

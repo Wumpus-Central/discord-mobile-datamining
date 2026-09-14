@@ -8,8 +8,8 @@ import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 
 const require = fn;
-fn(504);
-const initialize = {
+const initialize = fn(504);
+const obj2 = {
   getQueryId: fn(1074).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
@@ -39,8 +39,8 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -53,22 +53,20 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if (null != closure_1) {
-          let obj1 = ApplicationActionCreatorsDefault;
           c4 = 1;
           c3 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.getEmbeddedApplicationsForGuild(tmp6, tmp5, tmp7);
-          return obj1;
+          const obj5 = { value: ApplicationActionCreatorsDefault.getEmbeddedApplicationsForGuild(tmp6, tmp5, tmp7), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c3 = 3;
@@ -79,7 +77,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     }
   }
 });
-initialize.load = function() {
+obj2.load = function() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -89,7 +87,7 @@ initialize.load = function() {
   }
   return applyArgumentsResult;
 };
-let closure_6 = initialize.createFetchStore(ApplicationStore, initialize);
+let closure_6 = initialize.createFetchStore(ApplicationStore, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 

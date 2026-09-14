@@ -14,6 +14,8 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8230 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
@@ -26,25 +28,24 @@ export const queryMentionables = function queryMentionables(type, query, channel
     return [];
   } else {
     const tmp2 = type === require("Server").ComponentType.USER_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    channel(5523);
-    let obj = { query, channel, canMentionEveryone: false, canMentionHere: false, canMentionUsers: tmp2, canMentionRoles: type === require("Server").ComponentType.ROLE_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     const tmp3 = type === require("Server").ComponentType.ROLE_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    ({ users, roles } = obj.queryMentionResults(obj));
+    let obj2 = { query, channel, canMentionEveryone: false, canMentionHere: false, canMentionUsers: tmp2, canMentionRoles: tmp3, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
+    const obj = channel(5523);
+    ({ users, roles } = channel(5523).queryMentionResults(obj2));
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
-      let obj = NicknameUtilsDefault;
-      let username = obj.getNickname(channel.getGuildId(), closure_0, user.user);
-      obj = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.user.id, label: null };
+    const queryMentionResultsResult = channel(5523).queryMentionResults(obj2);
+    HermesBuiltin.arraySpread(roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })), HermesBuiltin.arraySpread(users.map((user) => {
+      let username = NicknameUtilsDefault.getNickname(channel.getGuildId(), closure_0, user.user);
+      const obj2 = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.user.id, label: null };
       if (username == null) {
         username = user.user.globalName;
       }
       if (username == null) {
         username = user.user.username;
       }
-      obj.label = username;
-      return obj;
-    }), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })), arraySpreadResult);
+      obj2.label = username;
+      return obj2;
+    }), 0));
     return items;
   }
 };
@@ -53,8 +54,8 @@ export const queryChannels = function queryChannels(query, channelId, channelTyp
   if (null == channel) {
     let items = [];
   } else {
-    let obj = { query, channel, channelTypes, limit: 15 };
-    const channels = obj.queryApplicationCommandChannelResults(obj).channels;
+    const obj2 = { query, channel, channelTypes, limit: 15 };
+    const channels = AutocompleteUtilsDefault.queryApplicationCommandChannelResults(obj2).channels;
     items = channels.map((id) => {
       const obj = { type: require("InteractionComponentTypes").SelectOptionType.CHANNEL, value: id.id, label: require("useChannelName").computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
@@ -86,15 +87,15 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
           if (null != closure_1) {
             nick = GuildMemberStore.getNick(tmp16.id, user.id);
           }
-          let obj = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.id, label: null };
+          const obj2 = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.id, label: null };
           if (nick == null) {
             nick = user.globalName;
           }
           if (nick == null) {
             nick = user.username;
           }
-          obj.label = nick;
-          return obj;
+          obj2.label = nick;
+          return obj2;
         }
       } else if (SnowflakeSelectDefaultValueTypes.SnowflakeSelectDefaultValueTypes.ROLE === type) {
         if (null == closure_1) {
@@ -103,9 +104,9 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
           const role = GuildRoleStore.getRole(tmp8.id, type.id);
           let tmp12 = null;
           if (null != role) {
-            obj = { type: InteractionComponentTypes.SelectOptionType.ROLE, value: null, label: null };
+            const obj3 = { type: InteractionComponentTypes.SelectOptionType.ROLE, value: null, label: null };
             ({ id: obj4.value, name: obj4.label } = role);
-            tmp12 = obj;
+            tmp12 = obj3;
           }
           return tmp12;
         }
@@ -118,10 +119,9 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
           if (null != channel) {
             tmp5 = null;
             if (channel.guild_id === tmp3.id) {
-              obj = channelTypes;
               if (channelTypes.length <= 0) {
-                const obj1 = { type: InteractionComponentTypes.SelectOptionType.CHANNEL, value: channel.id, label: useChannelName.computeChannelName(channel, UserStore, RelationshipStore) };
-                tmp5 = obj1;
+                const obj5 = { type: InteractionComponentTypes.SelectOptionType.CHANNEL, value: channel.id, label: useChannelName.computeChannelName(channel, UserStore, RelationshipStore) };
+                tmp5 = obj5;
                 const tmpResult = useChannelName;
               } else {
                 tmp5 = null;
@@ -181,15 +181,15 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
           if (null != closure_1) {
             nick = GuildMemberStore.getNick(tmp16.id, user.id);
           }
-          let obj = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.id, label: null };
+          const obj2 = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.id, label: null };
           if (nick == null) {
             nick = user.globalName;
           }
           if (nick == null) {
             nick = user.username;
           }
-          obj.label = nick;
-          return obj;
+          obj2.label = nick;
+          return obj2;
         }
       } else if (SnowflakeSelectDefaultValueTypes.SnowflakeSelectDefaultValueTypes.ROLE === type) {
         if (null == closure_1) {
@@ -198,9 +198,9 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
           const role = GuildRoleStore.getRole(tmp8.id, type.id);
           let tmp12 = null;
           if (null != role) {
-            obj = { type: InteractionComponentTypes.SelectOptionType.ROLE, value: null, label: null };
+            const obj3 = { type: InteractionComponentTypes.SelectOptionType.ROLE, value: null, label: null };
             ({ id: obj4.value, name: obj4.label } = role);
-            tmp12 = obj;
+            tmp12 = obj3;
           }
           return tmp12;
         }
@@ -213,10 +213,9 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
           if (null != channel) {
             tmp5 = null;
             if (channel.guild_id === tmp3.id) {
-              obj = channelTypes;
               if (channelTypes.length <= 0) {
-                const obj1 = { type: InteractionComponentTypes.SelectOptionType.CHANNEL, value: channel.id, label: useChannelName.computeChannelName(channel, UserStore, RelationshipStore) };
-                tmp5 = obj1;
+                const obj5 = { type: InteractionComponentTypes.SelectOptionType.CHANNEL, value: channel.id, label: useChannelName.computeChannelName(channel, UserStore, RelationshipStore) };
+                tmp5 = obj5;
                 const tmpResult = useChannelName;
               } else {
                 tmp5 = null;

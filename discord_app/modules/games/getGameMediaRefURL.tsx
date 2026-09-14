@@ -15,9 +15,9 @@ export default function getGameMediaRefURL(id, type, size) {
     if ("hash" === type) {
       let tmp8 = null;
       if (!obj3.isNullOrEmpty(type.value)) {
-        let obj = { id, hash: type.value };
+        const obj2 = { id, hash: type.value };
         const merged = Object.assign(size);
-        let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj);
+        let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj2);
         if (gameAssetURL == null) {
           gameAssetURL = null;
         }
@@ -25,23 +25,22 @@ export default function getGameMediaRefURL(id, type, size) {
       }
       return tmp8;
     } else if ("url" === type) {
-      obj = ImageProxyUtils;
       size = undefined;
       if (size != null) {
         size = size.size;
       }
-      obj = { size, keepAspectRatio: null, format: null };
+      const obj5 = { size, keepAspectRatio: null, format: null };
       let keepAspectRatio;
       if (size != null) {
         keepAspectRatio = size.keepAspectRatio;
       }
-      obj.keepAspectRatio = keepAspectRatio;
+      obj5.keepAspectRatio = keepAspectRatio;
       let format;
       if (size != null) {
         format = size.format;
       }
-      obj.format = format;
-      return obj.getSizedImageAssetURL(type.value, obj);
+      obj5.format = format;
+      return ImageProxyUtils.getSizedImageAssetURL(type.value, obj5);
     } else {
       return null;
     }

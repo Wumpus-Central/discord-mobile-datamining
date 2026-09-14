@@ -1,8 +1,9 @@
 // === Module 1912: VoiceEngineModule ===
 
 // Module 1912 (VoiceEngineModule)
-import NativeMediaEngineModule from "NativeMediaEngineModule" /* 1913 */;
+import NativeMediaEngineModule_mod from "NativeMediaEngineModule" /* 1913 */;
 
+let NativeMediaEngineModule = NativeMediaEngineModule_mod;
 NativeMediaEngineModule = NativeMediaEngineModule.getConstants();
 let closure_3 = ["getConstants", "setInputDevice", "setInputDeviceById", "setOutputDevice", "setOutputDeviceById", "setVideoInputDevice", "setVideoInputDeviceById", "addListener", "removeListeners"];
 let obj = {};

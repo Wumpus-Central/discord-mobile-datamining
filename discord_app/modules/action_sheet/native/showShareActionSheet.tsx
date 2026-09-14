@@ -2,11 +2,13 @@
 
 // Module 8479 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8480 */;
 import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8481 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 if (PlatformUtils.isAndroid()) {
   const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeShareManagerModuleDefault);
@@ -89,13 +91,11 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
       const result = ShowShareActionSheetUtils.trackAppClickInNativeShareSheet(method, closure_1);
     }
   }).catch((error) => {
-    let obj = SentryUtilsDefault;
     let str = closure_1;
     if (closure_1 == null) {
       str = "";
     }
-    obj = { tags: { location: str } };
-    obj.captureException(error, obj);
+    SentryUtilsDefault.captureException(error, { tags: { location: str } });
     if (source.iOSOnlyShareCallback != null) {
       iOSOnlyShareCallback(false, null);
     }

@@ -2,7 +2,7 @@
 
 // Module 7223 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5633 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 
@@ -17,12 +17,12 @@ export const updateGuildSelfMember = function updateGuildSelfMember(guildId, mem
     flag = false;
   }
   if (ImpersonateStore.isFullServerPreview(guildId)) {
-    let obj = { memberOptions };
-    const result = ImpersonateActionCreators.updateImpersonatedData(guildId, obj);
+    const obj3 = { memberOptions };
+    const result = ImpersonateActionCreators.updateImpersonatedData(guildId, obj3);
   } else {
-    obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId, roles: null, flags: null };
+    const obj5 = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId, roles: null, flags: null };
     ({ roles: obj2.roles, flags: obj2.flags } = memberOptions);
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch(obj5);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.SET_GUILD_MEMBER(guildId), body: memberOptions, oldFormErrors: flag || undefined, rejectWithError: false };
     return HTTP.patch(request);

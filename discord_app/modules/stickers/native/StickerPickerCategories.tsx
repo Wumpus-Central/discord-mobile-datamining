@@ -1,8 +1,8 @@
-// === Module 10547: StickerPickerCategories ===
+// === Module 10548: StickerPickerCategories ===
 
-// Module 10547 (StickerPickerCategories)
+// Module 10548 (StickerPickerCategories)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
 import StickersTypes from "StickersTypes" /* 5349 */;
@@ -12,23 +12,20 @@ import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10518).useStickerPickerStore;
+let useStickerPickerStore = fn(10519).useStickerPickerStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9, CATEGORY_ICON_RIPPLE_CONFIG: c10, CATEGORY_ICON_SIZE } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = Constants.NODE_SIZE;
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, itemInner: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildIcon: null, guildItemPlaceholder: null, lockContainer: null, lock: null };
+const createStyles = fn(4636);
+let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, itemInner: null, fadedItem: { opacity: 0.5 }, activeItem: { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE }, guildIcon: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 }, guildItemPlaceholder: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;
-obj = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.activeItem = obj;
-obj.guildIcon = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
-const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-obj.guildItemPlaceholder = createStyles;
+let obj3 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj.guildItemPlaceholder = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj.lockContainer = size1;
 const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
@@ -42,8 +39,7 @@ let closure_17 = noop.memo((category) => {
   const tmp = closure_16();
   const AnimateStickers = category(index[10]).AnimateStickers;
   const setting = AnimateStickers.useSetting();
-  let obj = category(index[11]);
-  let shouldAnimateStickerResult = obj.shouldAnimateSticker(setting, false);
+  let shouldAnimateStickerResult = category(index[11]).shouldAnimateSticker(setting, false);
   let guild = null;
   if (category.type === category(index[12]).StickerCategoryTypes.GUILD) {
     guild = GuildStore.getGuild(category.id);
@@ -55,17 +51,17 @@ let closure_17 = noop.memo((category) => {
       tmp4 = category.type !== StickersTypes.StickerCategoryTypes.GUILD;
     }
     if (!tmp4) {
-      let obj = { location: null, tab: null, sticker_pack_id: null, guild_id: null };
-      obj = { page: constants2.EXPRESSION_PICKER };
-      obj.location = obj;
-      obj.tab = ExpressionPickerViewType.STICKER;
-      obj.sticker_pack_id = category.id;
+      const obj2 = { location: null, tab: null, sticker_pack_id: null, guild_id: null };
+      const obj3 = { page: constants2.EXPRESSION_PICKER };
+      obj2.location = obj3;
+      obj2.tab = ExpressionPickerViewType.STICKER;
+      obj2.sticker_pack_id = category.id;
       let id;
       if (guild != null) {
         id = guild.id;
       }
-      obj.guild_id = id;
-      obj.track(constants.EXPRESSION_PICKER_CATEGORY_SELECTED, obj);
+      obj2.guild_id = id;
+      AnalyticsUtilsDefault.track(constants.EXPRESSION_PICKER_CATEGORY_SELECTED, obj2);
     }
     let tmp12Result;
     if (onPressCategory != null) {
@@ -73,50 +69,50 @@ let closure_17 = noop.memo((category) => {
     }
     return tmp12Result;
   }, items);
-  obj = { androidRippleConfig, accessibilityRole: "tab", accessibilityLabel: category.name, accessibilityState: { selected: isActive }, disabled: 0 === category.stickers.length, onPress: null, style: null, children: null };
+  let obj2 = { androidRippleConfig, accessibilityRole: "tab", accessibilityLabel: category.name, accessibilityState: { selected: isActive }, disabled: 0 === category.stickers.length, onPress: null, style: null, children: null };
   let tmp10;
   if (category.stickers.length > 0) {
     tmp10 = callback;
   }
-  obj.onPress = tmp10;
-  obj.style = tmp.item;
+  obj2.onPress = tmp10;
+  obj2.style = tmp.item;
   const items1 = [tmp.itemInner, ];
-  obj = { style: items1, children: null };
+  let obj3 = { style: items1, children: null };
   items1[1] = isActive ? tmp.activeItem : tmp.fadedItem;
   if (null != category.icon) {
-    const obj1 = { style: tmp.guildIcon, disableColor: category.type === tmp2(tmp3[12]).StickerCategoryTypes.PACK, source: tmp2(tmp3[16]).makeSource(category.icon) };
-    let tmp9Result = closure_14(tmp2(tmp3[15]).Icon, obj1);
+    const obj4 = { style: tmp.guildIcon, disableColor: category.type === tmp2(tmp3[12]).StickerCategoryTypes.PACK, source: tmp2(tmp3[16]).makeSource(category.icon) };
+    let tmp9Result = closure_14(tmp2(tmp3[15]).Icon, obj4);
     const tmp2Result = tmp2(tmp3[16]);
   } else if (category.type === tmp2(tmp3[12]).StickerCategoryTypes.GUILD) {
-    const obj2 = { guild, loadingStyle: tmp.guildItemPlaceholder, size: tmp2(tmp3[17]).GuildIconSizes.XSMALL, style: tmp.guildIcon };
-    tmp9Result = closure_14(onPressCategory(tmp3[17]), obj2);
+    const obj5 = { guild, loadingStyle: tmp.guildItemPlaceholder, size: tmp2(tmp3[17]).GuildIconSizes.XSMALL, style: tmp.guildIcon };
+    tmp9Result = closure_14(onPressCategory(tmp3[17]), obj5);
     const tmp18 = onPressCategory(tmp3[17]);
   } else {
     if ("previewSticker" in category) {
       if (null != category.previewSticker) {
         let previewSticker = category.previewSticker;
       }
-      const obj3 = { sticker: previewSticker, animated: null, size: null };
+      const obj6 = { sticker: previewSticker, animated: null, size: null };
       if (shouldAnimateStickerResult) {
         shouldAnimateStickerResult = isActive;
       }
-      obj3.animated = shouldAnimateStickerResult;
-      obj3.size = CATEGORY_ICON_SIZE;
-      tmp9Result = closure_14(tmp14, obj3);
+      obj6.animated = shouldAnimateStickerResult;
+      obj6.size = CATEGORY_ICON_SIZE;
+      tmp9Result = closure_14(tmp14, obj6);
     }
     previewSticker = category.stickers[0];
   }
   const items2 = [tmp9Result, ];
   if (locked) {
-    const obj4 = { style: tmp.lockContainer, children: null };
-    const obj5 = { style: tmp.lock };
-    obj4.children = closure_14(tmp2(tmp3[19]).LockIcon, obj5);
-    locked = closure_14(View, obj4);
+    const obj7 = { style: tmp.lockContainer, children: null };
+    const obj8 = { style: tmp.lock };
+    obj7.children = closure_14(tmp2(tmp3[19]).LockIcon, obj8);
+    locked = closure_14(View, obj7);
   }
   items2[1] = locked;
-  obj.children = items2;
-  obj.children = closure_15(View, obj);
-  return closure_14(category(index[14]).PressableOpacity, obj);
+  obj3.children = items2;
+  obj2.children = closure_15(View, obj3);
+  return closure_14(category(index[14]).PressableOpacity, obj2);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerCategories.tsx");
@@ -209,24 +205,23 @@ export default function _default(categories) {
   const callback5 = first.useCallback((arg0, index) => closure_2_14(closure_17, { category: categories[index], index, isActive: index === categoryIndex, locked: categories[index].isNitroLocked, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10486)();
-  obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
-  const items9 = [closure_14(categoryIndex(7158), obj), ];
+  const tmp19 = categoryIndex(10487)();
+  const items9 = [closure_14(categoryIndex(7158), { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list }), ];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
-    obj = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const obj3 = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = categories(1114).intl;
-    obj.accessibilityLabel = intl.string(categories(1114).t.rzCcjK);
-    const obj1 = { style: null, children: null };
+    obj3.accessibilityLabel = intl.string(categories(1114).t.rzCcjK);
+    const obj4 = { style: null, children: null };
     const items10 = [, ];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
-    obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10548) };
-    obj1.children = closure_14(categories(1178).Icon, obj2);
-    obj.children = closure_14(closure_5, obj1);
-    tmp22Result = closure_14(categories(5204).PressableOpacity, obj);
+    obj4.style = items10;
+    const obj5 = { style: tmp.guildIcon, source: tmp17(10549) };
+    obj4.children = closure_14(categories(1176).Icon, obj5);
+    obj3.children = closure_14(closure_5, obj4);
+    tmp22Result = closure_14(categories(5204).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10487), obj);
+  return closure_15(categoryIndex(10488), obj);
 };

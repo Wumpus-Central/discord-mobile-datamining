@@ -4,6 +4,8 @@
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const HUB_PROGRESS_STEP_ORDER = fn(9961).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1074).GuildFeatures;

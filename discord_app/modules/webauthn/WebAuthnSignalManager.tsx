@@ -1,6 +1,6 @@
-// === Module 17941: WebAuthnSignalManager ===
+// === Module 17942: WebAuthnSignalManager ===
 
-// Module 17941 (WebAuthnSignalManager)
+// Module 17942 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -23,8 +23,8 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,22 +37,20 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = v3(c1[3]);
             c1 = 1;
             v3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.signalUnknownCredential(credential);
-            return obj1;
+            const obj5 = { value: v3(c1[3]).signalUnknownCredential(credential), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;
@@ -75,8 +73,8 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -89,23 +87,21 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             id = id.getId();
-            let obj1 = v3(c1[3]);
             c1 = 1;
             v3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.signalAllAcceptedCredentials(credentials, id);
-            return obj1;
+            const obj5 = { value: v3(c1[3]).signalAllAcceptedCredentials(credentials, id), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;
@@ -128,8 +124,8 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -142,22 +138,20 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = v3(c1[3]);
             c1 = 1;
             v3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.signalCurrentUserDetails(user);
-            return obj1;
+            const obj5 = { value: v3(c1[3]).signalCurrentUserDetails(user), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;

@@ -1,6 +1,6 @@
-// === Module 15794: UserSettingsSurveyChangelogOverride ===
+// === Module 15796: UserSettingsSurveyChangelogOverride ===
 
-// Module 15794 (UserSettingsSurveyChangelogOverride)
+// Module 15796 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -21,9 +21,9 @@ import SurveyStore from "SurveyStore" /* 4827 */;
 require = fn;
 function SurveyOverrideInfoActionSheet(survey) {
   let obj = { header: React7(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Last Survey Data" }), children: null };
-  obj = { hasIcons: true, children: null };
+  const obj2 = { hasIcons: true, children: null };
   const entries = Object.entries(survey.survey);
-  obj.children = entries.map((item) => {
+  obj2.children = entries.map((item) => {
     [tmp, tmp2] = item;
     const obj = { label: tmp, subLabel: null, icon: null, onPress: null };
     let str = "null";
@@ -43,7 +43,7 @@ function SurveyOverrideInfoActionSheet(survey) {
     };
     return closure_9(closure_0(7302).ActionSheetRow, obj, tmp);
   });
-  obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj);
+  obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
 }
 function SurveyOverrideActionSheet() {
@@ -61,7 +61,7 @@ function SurveyOverrideActionSheet() {
   if ("" === first) {
     str = "Reset Survey Override";
   }
-  obj = { text: str, variant: null, onPress: null };
+  let obj2 = { text: str, variant: null, onPress: null };
   let str2 = "destructive";
   if ("" !== first) {
     let str3 = "primary";
@@ -70,8 +70,8 @@ function SurveyOverrideActionSheet() {
     }
     str2 = str3;
   }
-  obj.variant = str2;
-  obj.onPress = function onPress() {
+  obj2.variant = str2;
+  obj2.onPress = function onPress() {
     if ("" === first) {
       SurveyActionCreatorsAll.overrideSurvey(null);
     } else {
@@ -79,49 +79,45 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5056).Button, obj);
+  items[1] = closure_9(first(5056).Button, obj2);
   obj.children = items;
   return closure_10(first(7300).ActionSheet, obj);
 }
 function SurveyInfo() {
-  let obj = require("initialize");
   const items = [SurveyStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const tmp2 = usePreviousDefault(stateFromStores);
   _require = tmp2;
-  obj = {
-    label: "Survey override",
-    subLabel: "Force a survey to be shown.",
-    arrow: true,
-    onPress() {
-      const obj = { default: SurveyOverrideActionSheet };
-      obj.openLazy(Promise.resolve(obj), "SurveyOverrideActionSheet");
-    }
-  };
-  const items1 = [closure_9(require("TableRow").TableRow, obj), ];
+  const items1 = [
+    closure_9(require("TableRow").TableRow, {
+      label: "Survey override",
+      subLabel: "Force a survey to be shown.",
+      arrow: true,
+      onPress() {
+        ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: SurveyOverrideActionSheet }), "SurveyOverrideActionSheet");
+      }
+    }),
+
+  ];
   let str;
   if (null == tmp2) {
     str = "No survey data";
   }
-  obj = { label: "Previous survey data", subLabel: str, arrow: null != tmp2, onPress: null };
+  const obj3 = { label: "Previous survey data", subLabel: str, arrow: null != tmp2, onPress: null };
   let fn;
   if (null != tmp2) {
     fn = () => {
-      let obj = { default: SurveyOverrideInfoActionSheet };
-      obj = { survey };
-      obj.openLazy(Promise.resolve(obj), "SurveyOverrideInfoActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: SurveyOverrideInfoActionSheet }), "SurveyOverrideInfoActionSheet", { survey });
     };
   }
-  const obj1 = { title: "Surveys", hasIcons: false, children: null };
-  obj.onPress = fn;
-  items1[1] = closure_9(require("TableRow").TableRow, obj);
-  obj1.children = items1;
-  return closure_10(require("TableRowGroup").TableRowGroup, obj1);
+  const obj4 = { title: "Surveys", hasIcons: false, children: null };
+  obj3.onPress = fn;
+  items1[1] = closure_9(require("TableRow").TableRow, obj3);
+  obj4.children = items1;
+  return closure_10(require("TableRowGroup").TableRowGroup, obj4);
 }
 function ChangelogOverrideDebuggingActionSheet() {
-  let obj = { header: React7(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Changelog Debugging" }), children: null };
-  obj = { variant: "text-md/semibold", children: "" + JSON.stringify(ChangelogStore.getStateForDebugging(), undefined, "\t") };
-  obj.children = React7(Text_Text.Text, obj);
+  const obj = { header: React7(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Changelog Debugging" }), children: React7(Text_Text.Text, { variant: "text-md/semibold", children: "" + JSON.stringify(ChangelogStore.getStateForDebugging(), undefined, "\t") }) };
   return React7(ActionSheet.ActionSheet, obj);
 }
 function ChangelogOverrideActionSheet() {
@@ -133,7 +129,7 @@ function ChangelogOverrideActionSheet() {
   if ("" === first) {
     str = "Reset Changelog Override";
   }
-  obj = { text: str, variant: null, onPress: null };
+  let obj2 = { text: str, variant: null, onPress: null };
   let str2 = "destructive";
   if ("" !== first) {
     let str3 = "primary";
@@ -142,8 +138,8 @@ function ChangelogOverrideActionSheet() {
     }
     str2 = str3;
   }
-  obj.variant = str2;
-  obj.onPress = function onPress() {
+  obj2.variant = str2;
+  obj2.onPress = function onPress() {
     if ("" === first) {
       ChangeLogActionCreatorsDefault.setChangelogOverride(null);
     } else {
@@ -151,31 +147,29 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5056).Button, obj);
+  items[1] = closure_9(first(5056).Button, obj2);
   obj.children = items;
   return closure_10(first(7300).ActionSheet, obj);
 }
 function ChangelogInfo() {
-  let obj = { title: "Changelog", hasIcons: false, children: null };
-  obj = {
-    label: "Changelog override",
-    subLabel: "Force a changelog to be shown.",
-    arrow: true,
-    onPress() {
-      const obj = { default: ChangelogOverrideActionSheet };
-      obj.openLazy(Promise.resolve(obj), "ChangelogOverrideActionSheet");
-    }
-  };
-  const items = [React7(TableRow.TableRow, obj), ];
-  obj = {
-    label: "Changelog debugging",
-    arrow: true,
-    onPress() {
-      const obj = { default: ChangelogOverrideDebuggingActionSheet };
-      obj.openLazy(Promise.resolve(obj), "ChangelogOverrideDebuggingActionSheet");
-    }
-  };
-  items[1] = React7(TableRow.TableRow, obj);
+  const obj = { title: "Changelog", hasIcons: false, children: null };
+  const items = [
+    React7(TableRow.TableRow, {
+      label: "Changelog override",
+      subLabel: "Force a changelog to be shown.",
+      arrow: true,
+      onPress() {
+        ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ChangelogOverrideActionSheet }), "ChangelogOverrideActionSheet");
+      }
+    }),
+    React7(TableRow.TableRow, {
+      label: "Changelog debugging",
+      arrow: true,
+      onPress() {
+        ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ChangelogOverrideDebuggingActionSheet }), "ChangelogOverrideDebuggingActionSheet");
+      }
+    })
+  ];
   obj.children = items;
   return closure_1_10(TableRowGroup.TableRowGroup, obj);
 }
@@ -183,18 +177,17 @@ const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { scrollView: null };
-obj = { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.scrollView = obj;
+let obj = { scrollView: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_11 = createStyles.createStyles(obj);
+let obj3 = { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx");
 
 export default noop.memo(function UserSettingsSurveyChangelogOverride() {
-  let obj = { style: closure_11().scrollView, children: null };
-  obj = { spacing: 16, children: null };
+  const obj = { style: closure_11().scrollView, children: null };
+  const obj2 = { spacing: 16, children: null };
   const items = [React7(SurveyInfo, {}), React7(ChangelogInfo, {})];
-  obj.children = items;
-  obj.children = closure_1_10(Stack_Stack.Stack, obj);
+  obj2.children = items;
+  obj.children = closure_1_10(Stack_Stack.Stack, obj2);
   return React7(ScrollView, obj);
 });

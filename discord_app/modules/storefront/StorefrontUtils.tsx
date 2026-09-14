@@ -2,7 +2,7 @@
 
 // Module 7334 (StorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
@@ -13,6 +13,8 @@ import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
 import SKUPricesStore from "SKUPricesStore" /* 7335 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function useSKUPrice(sku) {
@@ -71,18 +73,18 @@ function useSKUPrice(sku) {
             });
           }
         }
-        let obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
+        const obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
-    return obj;
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    return obj2;
   }, items1);
   userPrice = memo.userPrice;
   pricesForPurchaseType = memo.pricesForPurchaseType;
   const purchaseType = memo.purchaseType;
   const storeHasPrice = memo.storeHasPrice;
-  let obj = sku(userPrice[10]);
+  const obj = sku(userPrice[10]);
   const items2 = [stateFromStoresArray];
   stateFromStoresArray = sku(userPrice[10]).useStateFromStoresArray(items2, () => {
     let id;
@@ -110,7 +112,6 @@ function useSKUPrice(sku) {
   items4[6] = purchaseType;
   items4[7] = stateFromStoresArray;
   return pricesForPurchaseType.useMemo(() => {
-    let obj = sku;
     if (null == sku) {
       return { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else if (storeHasPrice) {
@@ -167,28 +168,28 @@ function useSKUPrice(sku) {
       if (tmp13 == null) {
         tmp13 = null;
       }
-      obj = { normalPrice: tmp13, discountedPrice: tmp11, discountPercent: amount, userPrice: null };
+      const obj3 = { normalPrice: tmp13, discountedPrice: tmp11, discountPercent: amount, userPrice: null };
       let tmp19 = userPrice;
       if (userPrice == null) {
         tmp19 = null;
       }
-      obj.userPrice = tmp19;
-      return obj;
+      obj3.userPrice = tmp19;
+      return obj3;
     } else {
-      if (obj.productLine === constants4.SOCIAL_LAYER_GAME_ITEM) {
-        let price = SlayerStorefrontUtils.getPrice(obj, DEFAULT);
+      if (sku.productLine === constants4.SOCIAL_LAYER_GAME_ITEM) {
+        let price = SlayerStorefrontUtils.getPrice(sku, DEFAULT);
       } else {
         let premiumType;
         if (stateFromStores1 != null) {
           premiumType = stateFromStores1.premiumType;
         }
-        price = obj.getPrice(premiumType);
+        price = sku.getPrice(premiumType);
       }
       if (price == null) {
         price = null;
       }
-      obj = { normalPrice: price, discountedPrice: null, discountPercent: null, userPrice: price };
-      return obj;
+      const obj4 = { normalPrice: price, discountedPrice: null, discountPercent: null, userPrice: price };
+      return obj4;
     }
   }, items4);
 }
@@ -196,26 +197,25 @@ function formatSKUPrice(arg0, stateFromStores) {
   ({ normalPrice, discountedPrice, discountPercent, userPrice } = arg0);
   let formatPriceResult = null;
   if (null != normalPrice) {
-    let obj = PriceUtils;
-    formatPriceResult = obj.formatPrice(normalPrice.amount, normalPrice.currency);
+    formatPriceResult = PriceUtils.formatPrice(normalPrice.amount, normalPrice.currency);
   }
-  obj = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
+  const obj2 = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
   let formatPriceResult1 = null;
   if (null != discountedPrice) {
     formatPriceResult1 = PriceUtils.formatPrice(discountedPrice.amount, discountedPrice.currency);
   }
-  obj.discountedPrice = formatPriceResult1;
+  obj2.discountedPrice = formatPriceResult1;
   let formatPercentResult = null;
   if (null != discountPercent) {
     formatPercentResult = PriceUtils.formatPercent(stateFromStores, -discountPercent / 100);
   }
-  obj.discountPercent = formatPercentResult;
+  obj2.discountPercent = formatPercentResult;
   let formatPriceResult2 = null;
   if (null != userPrice) {
     formatPriceResult2 = PriceUtils.formatPrice(userPrice.amount, userPrice.currency);
   }
-  obj.userPrice = formatPriceResult2;
-  return obj;
+  obj2.userPrice = formatPriceResult2;
+  return obj2;
 }
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_7, PriceSetAssignmentPurchaseTypes: closure_8, PriceTypes: closure_9, SKUFlags: c10, SKUProductLines: closure_11 } = Constants);
@@ -257,16 +257,16 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         num = 0;
       }
       if (obj.isIOS()) {
-        let tmpResult = FlagUtils;
-        let hasFlagResult = tmpResult.hasFlag(num, constants3.AVAILABLE_ON_IOS);
+        let hasFlagResult = FlagUtils.hasFlag(num, constants3.AVAILABLE_ON_IOS);
+        const tmpResult = FlagUtils;
       } else {
-        tmpResult = utils_PlatformUtils;
-        const isAndroidResult = tmpResult.isAndroid();
+        const isAndroidResult = utils_PlatformUtils.isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
           hasFlagResult = FlagUtils.hasFlag(num, constants3.AVAILABLE_ON_ANDROID);
-          const tmpResult1 = FlagUtils;
+          const tmpResult4 = FlagUtils;
         }
+        const tmpResult3 = utils_PlatformUtils;
       }
       return hasFlagResult;
     }
@@ -349,12 +349,12 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
             });
           }
         }
-        let obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
+        const obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
-    return obj;
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    return obj2;
   }, items1);
   let userPrice = memo.userPrice;
   storeHasPrice = memo.storeHasPrice;
@@ -374,13 +374,12 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
       }
       return tmp8;
     } else {
-      let obj = OrbCheckoutUtils;
-      const orbPriceFromPrices = obj.getOrbPriceFromPrices(tmp.prices, memo1);
+      const orbPriceFromPrices = OrbCheckoutUtils.getOrbPriceFromPrices(tmp.prices, memo1);
       let tmp7 = null;
       if (null != orbPriceFromPrices) {
-        obj = { amount: null, currency: null };
         ({ amount: obj2.amount, currency: obj2.currency } = orbPriceFromPrices);
-        tmp7 = obj;
+        tmp7 = { amount: null, currency: null };
+        const obj3 = { amount: null, currency: null };
       }
       return tmp7;
     }

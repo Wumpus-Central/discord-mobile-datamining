@@ -1,10 +1,10 @@
-// === Module 11634: AppStoreOverlayBottomSheet ===
+// === Module 11635: AppStoreOverlayBottomSheet ===
 
-// Module 11634 (AppStoreOverlayBottomSheet)
+// Module 11635 (AppStoreOverlayBottomSheet)
 import openURLDefault from "openURL" /* 4325 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11631 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11635 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11632 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11636 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,9 +27,8 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   const tmp2 = onInstallPress(first.useState(0), 2);
   first = tmp2[0];
   closure_5 = tmp2[1];
-  let obj = metadata(onDismiss[5]);
-  bottomSheetRef = obj.useBottomSheetRef();
-  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
+  const bottomSheetRef1 = metadata(onDismiss[5]).useBottomSheetRef();
+  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const ref = first.useRef(null);
   const items = [onOpen];
   const effect = first.useEffect(() => {
@@ -50,8 +49,8 @@ export default function AppStoreOverlayBottomSheet(metadata) {
       onDismiss(num);
     }
   }, items1);
-  let obj1 = metadata(onDismiss[6]);
-  const unmountEffect = obj1.useUnmountEffect(callback);
+  const obj = metadata(onDismiss[5]);
+  const unmountEffect = metadata(onDismiss[6]).useUnmountEffect(callback);
   const items2 = [metadata.storeUrl, onInstallPress];
   const callback1 = first.useCallback(() => {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
@@ -69,11 +68,11 @@ export default function AppStoreOverlayBottomSheet(metadata) {
     closure_5(nativeEvent.nativeEvent.layout.height);
   }, []);
   const memo = first.useMemo(() => ({ paddingBottom: first + AppStoreOverlayBody.APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT }), items4);
-  obj = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, startHeight: onOpen(onDismiss[4])().height * metadata(onDismiss[10]).APP_STORE_OVERLAY_HEIGHT_RATIO, onDismiss: callback, footer: closure_5(metadata(onDismiss[10]).AppStoreOverlayFooter, { onInstallPress: callback1, onLayout: callback3 }), children: null };
-  obj = { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose };
-  const items5 = [closure_5(metadata(onDismiss[12]).ActionSheetHeaderBar, obj), ];
-  obj1 = { style: tmp.bodyContainer, contentContainerStyle: memo, children: closure_5(metadata(onDismiss[10]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1 }) };
-  items5[1] = closure_5(metadata(onDismiss[13]).BottomSheetScrollView, obj1);
-  obj.children = items5;
-  return ref(metadata(onDismiss[11]).BottomSheet, obj);
+  const obj3 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, startHeight: onOpen(onDismiss[4])().height * metadata(onDismiss[10]).APP_STORE_OVERLAY_HEIGHT_RATIO, onDismiss: callback, footer: closure_5(metadata(onDismiss[10]).AppStoreOverlayFooter, { onInstallPress: callback1, onLayout: callback3 }), children: null };
+  const items5 = [closure_5(metadata(onDismiss[12]).ActionSheetHeaderBar, { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose }), ];
+  const obj2 = metadata(onDismiss[6]);
+  const obj4 = { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose };
+  items5[1] = closure_5(metadata(onDismiss[13]).BottomSheetScrollView, { style: tmp.bodyContainer, contentContainerStyle: memo, children: closure_5(metadata(onDismiss[10]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1 }) });
+  obj3.children = items5;
+  return ref(metadata(onDismiss[11]).BottomSheet, obj3);
 };

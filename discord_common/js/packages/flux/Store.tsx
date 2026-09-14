@@ -12,16 +12,16 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Stor
 class Store {
   constructor(arg0, arg1, arg2) {
     obj = require;
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
     changeListeners = new closure_0(closure_2[0]).ChangeListeners();
-    obj._changeCallbacks = changeListeners;
+    obj1._changeCallbacks = changeListeners;
     changeListeners1 = new closure_0(closure_2[0]).ChangeListeners();
-    obj._reactChangeCallbacks = changeListeners1;
-    obj._syncWiths = [];
-    obj._isInitialized = false;
-    obj.doEmitChanges = function doEmitChanges(arg0) {
-      let hasAnyResult = obj._changeCallbacks.hasAny();
+    obj1._reactChangeCallbacks = changeListeners1;
+    obj1._syncWiths = [];
+    obj1._isInitialized = false;
+    obj1.doEmitChanges = function doEmitChanges(arg0) {
+      let hasAnyResult = obj2._changeCallbacks.hasAny();
       if (!hasAnyResult) {
         hasAnyResult = obj._reactChangeCallbacks.hasAny();
         const _reactChangeCallbacks = obj._reactChangeCallbacks;
@@ -30,7 +30,8 @@ class Store {
         hasAnyResult = obj._syncWiths.length > 0;
       }
       if (hasAnyResult) {
-        flux_EmitterDefault.markChanged(obj);
+        obj2 = flux_EmitterDefault;
+        obj2.markChanged(obj);
         let isPaused = flux_EmitterDefault.getIsPaused();
         if (isPaused) {
           isPaused = null != obj._mustEmitChanges;
@@ -43,26 +44,26 @@ class Store {
           const tmp2Result = flux_EmitterDefault;
         }
       }
-      const _changeCallbacks = obj._changeCallbacks;
+      const _changeCallbacks = obj2._changeCallbacks;
     };
-    obj.addChangeListener = obj._changeCallbacks.add;
-    obj.removeChangeListener = obj._changeCallbacks.remove;
-    obj.addConditionalChangeListener = obj._changeCallbacks.addConditional;
-    obj.removeAllConditionalChangeListeners = obj._changeCallbacks.removeAllConditional;
-    obj.addReactChangeListener = obj._reactChangeCallbacks.add;
-    obj.removeReactChangeListener = obj._reactChangeCallbacks.remove;
-    obj._dispatcher = global;
-    _dispatcher = obj._dispatcher;
-    obj._dispatchToken = _dispatcher.createToken();
+    obj1.addChangeListener = obj1._changeCallbacks.add;
+    obj1.removeChangeListener = obj1._changeCallbacks.remove;
+    obj1.addConditionalChangeListener = obj1._changeCallbacks.addConditional;
+    obj1.removeAllConditionalChangeListeners = obj1._changeCallbacks.removeAllConditional;
+    obj1.addReactChangeListener = obj1._reactChangeCallbacks.add;
+    obj1.removeReactChangeListener = obj1._reactChangeCallbacks.remove;
+    obj1._dispatcher = global;
+    _dispatcher = obj1._dispatcher;
+    obj1._dispatchToken = _dispatcher.createToken();
     if (require == null) {
       obj = {};
     }
-    result = obj.registerActionHandlers(obj, importDefault);
-    arr = closure_4.push(obj);
+    result = obj1.registerActionHandlers(obj, importDefault);
+    arr = closure_4.push(obj1);
     if (c5) {
-      initializeIfNeededResult = obj.initializeIfNeeded();
+      initializeIfNeededResult = obj1.initializeIfNeeded();
     }
-    return obj;
+    return obj1;
   }
 }
 const prototype = Store.prototype;

@@ -3,7 +3,7 @@
 // Module 9987 (icons/Share)
 import _modDef9988 from "module_9988" /* 9988 */;
 import _modDef9989 from "module_9989" /* 9989 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isIOS()) {

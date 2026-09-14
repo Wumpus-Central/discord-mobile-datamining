@@ -1,14 +1,14 @@
-// === Module 17179: SoundboardHooks ===
+// === Module 17181: SoundboardHooks ===
 
-// Module 17179 (SoundboardHooks)
+// Module 17181 (SoundboardHooks)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 const require = fn;
-const SoundboardStyleConstants = fn(17171);
+const SoundboardStyleConstants = fn(17173);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const size = fn(2);
@@ -33,8 +33,8 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -47,24 +47,22 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else if (c0) {
               const FrecencyUserSettingsActionCreators = shouldFetch(1940).FrecencyUserSettingsActionCreators;
               const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-              let obj1 = shouldFetch(7441);
               c1 = 1;
               c0 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.maybeFetchSoundboardSounds();
-              return obj1;
+              const obj5 = { value: shouldFetch(7441).maybeFetchSoundboardSounds(), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c0 = 3;

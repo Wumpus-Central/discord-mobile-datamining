@@ -14,7 +14,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import apply from "module_12" /* 12 */;
+import apply_mod from "module_12" /* 12 */;
 
 require = fn;
 function maybeRebuildState() {
@@ -196,7 +196,9 @@ let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
 let closure_19 = [];
+let apply = apply_mod;
 let closure_20 = apply.chain(items);
+let apply = apply_mod;
 let closure_21 = apply.chain(items);
 const set1 = new Set();
 const set2 = new Set();

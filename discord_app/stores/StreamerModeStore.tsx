@@ -3,7 +3,7 @@
 // Module 4482 (StreamerModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import OverlayV3Experiment from "OverlayV3Experiment" /* 4483 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
 let closure_6 = {};
-obj = {};
+let obj2 = {};
 let merged = Object.assign(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class StreamerModeStore extends PersistedStore {
@@ -25,15 +25,15 @@ prototype["initialize"] = function initialize(arg0) {
     if (null != id) {
       let tmp6 = closure_1_6[id];
       if (null == tmp6) {
-        obj = {};
-        const merged = Object.assign(closure_1_5);
-        closure_1_6[id] = obj;
-        tmp6 = obj;
+        obj2 = {};
+        const merged = Object.assign(obj);
+        closure_1_6[id] = obj2;
+        tmp6 = obj2;
       }
       obj = tmp6;
     } else {
       obj = {};
-      const merged1 = Object.assign(closure_1_5);
+      const merged1 = Object.assign(obj);
     }
   });
 };
@@ -41,17 +41,17 @@ prototype["getState"] = function getState() {
   return closure_6;
 };
 prototype["getSettings"] = function getSettings() {
-  return obj;
+  return obj2;
 };
 Object.defineProperty(prototype, "enabled", {
   get: function enabled() {
-    return obj.enabled;
+    return obj2.enabled;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "autoToggle", {
   get: function autoToggle() {
-    return obj.autoToggle;
+    return obj2.autoToggle;
   },
   set: undefined
 });
@@ -59,7 +59,7 @@ Object.defineProperty(prototype, "hideInstantInvites", {
   get: function hideInstantInvites() {
     let hideInstantInvites = this.enabled;
     if (hideInstantInvites) {
-      hideInstantInvites = obj.hideInstantInvites;
+      hideInstantInvites = obj2.hideInstantInvites;
     }
     return hideInstantInvites;
   },
@@ -69,7 +69,7 @@ Object.defineProperty(prototype, "hidePersonalInformation", {
   get: function hidePersonalInformation() {
     let hidePersonalInformation = this.enabled;
     if (hidePersonalInformation) {
-      hidePersonalInformation = obj.hidePersonalInformation;
+      hidePersonalInformation = obj2.hidePersonalInformation;
     }
     return hidePersonalInformation;
   },
@@ -79,7 +79,7 @@ Object.defineProperty(prototype, "disableSounds", {
   get: function disableSounds() {
     let disableSounds = this.enabled;
     if (disableSounds) {
-      disableSounds = obj.disableSounds;
+      disableSounds = obj2.disableSounds;
     }
     return disableSounds;
   },
@@ -89,7 +89,7 @@ Object.defineProperty(prototype, "disableNotifications", {
   get: function disableNotifications() {
     let disableNotifications = this.enabled;
     if (disableNotifications) {
-      disableNotifications = obj.disableNotifications;
+      disableNotifications = obj2.disableNotifications;
     }
     return disableNotifications;
   },
@@ -99,28 +99,28 @@ Object.defineProperty(prototype, "enableContentProtection", {
   get: function enableContentProtection() {
     let enableContentProtection = this.enabled;
     if (enableContentProtection) {
-      enableContentProtection = obj.enableContentProtection;
+      enableContentProtection = obj2.enableContentProtection;
     }
     return enableContentProtection;
   },
   set: undefined
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  obj = OverlayV3Experiment;
-  let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
-  if (enabled) {
+  let enabled1 = OverlayV3Experiment.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
+  if (enabled1) {
     const self = this;
-    enabled = this.enabled;
+    let enabled = this.enabled;
     if (enabled) {
-      const disabledOverlayWidgets = obj.disabledOverlayWidgets;
+      const disabledOverlayWidgets = obj2.disabledOverlayWidgets;
       let hasItem;
       if (disabledOverlayWidgets != null) {
         hasItem = disabledOverlayWidgets.includes(arg0);
       }
       enabled = true === hasItem;
     }
+    enabled1 = enabled;
   }
-  return enabled;
+  return enabled1;
 };
 StreamerModeStore.displayName = "StreamerModeStore";
 StreamerModeStore.persistKey = "StreamerModeStore";
@@ -130,9 +130,9 @@ let items = [
     if (null != arg0) {
       if (null != id) {
         obj = {};
-        obj = {};
+        obj2 = {};
         const merged = Object.assign(arg0);
-        obj[id] = obj;
+        obj[id] = obj2;
       }
       return obj;
     }
@@ -140,7 +140,7 @@ let items = [
   }
 ];
 StreamerModeStore.migrations = items;
-obj = {
+const streamerModeStore = new StreamerModeStore(DispatcherDefault, {
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (!isSwitchingAccount.isSwitchingAccount) {
       closure_6 = {};
@@ -153,19 +153,18 @@ obj = {
     }
   },
   STREAMER_MODE_UPDATE: function handleStreamerModeUpdate(value) {
-    obj = {};
-    const merged = Object.assign(obj);
-    obj = { [value.key]: value.value };
-    const merged1 = Object.assign(obj, obj);
+    const merged = Object.assign(obj2);
+    obj2 = { [value.key]: value.value };
+    const merged1 = Object.assign(obj2, obj2);
     if ("enabled" === value.key) {
       if (typeof value.value === "boolean") {
-        obj = { enabled: value.value, automatic: false };
-        AnalyticsUtilsDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
+        const obj6 = { enabled: value.value, automatic: false };
+        AnalyticsUtilsDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj6);
       }
       return true;
     }
-    const obj1 = { enabled: obj.enabled, automatic: obj.autoToggle, disable_notifications: obj.disableNotifications, disable_sounds: obj.disableSounds, hide_instant_invites: obj.hideInstantInvites, hide_personal_info: obj.hidePersonalInformation, enable_content_protection: obj.enableContentProtection, disabled_overlay_widgets: null, old_enabled: null, old_automatic: null, old_disable_notifications: null, old_disable_sounds: null, old_hide_instant_invites: null, old_hide_personal_info: null, old_enable_content_protection: null, old_disabled_overlay_widgets: null };
-    const disabledOverlayWidgets = obj.disabledOverlayWidgets;
+    const obj9 = { enabled: obj2.enabled, automatic: obj2.autoToggle, disable_notifications: obj2.disableNotifications, disable_sounds: obj2.disableSounds, hide_instant_invites: obj2.hideInstantInvites, hide_personal_info: obj2.hidePersonalInformation, enable_content_protection: obj2.enableContentProtection, disabled_overlay_widgets: null, old_enabled: null, old_automatic: null, old_disable_notifications: null, old_disable_sounds: null, old_hide_instant_invites: null, old_hide_personal_info: null, old_enable_content_protection: null, old_disabled_overlay_widgets: null };
+    const disabledOverlayWidgets = obj2.disabledOverlayWidgets;
     let str;
     if (disabledOverlayWidgets != null) {
       str = disabledOverlayWidgets.join(",");
@@ -173,8 +172,8 @@ obj = {
     if (str == null) {
       str = "";
     }
-    obj1.disabled_overlay_widgets = str;
-    ({ enabled: obj4.old_enabled, autoToggle: obj4.old_automatic, disableNotifications: obj4.old_disable_notifications, disableSounds: obj4.old_disable_sounds, hideInstantInvites: obj4.old_hide_instant_invites, hidePersonalInformation: obj4.old_hide_personal_info, enableContentProtection: obj4.old_enable_content_protection, disabledOverlayWidgets: disabledOverlayWidgets2 } = obj);
+    obj9.disabled_overlay_widgets = str;
+    ({ enabled: obj4.old_enabled, autoToggle: obj4.old_automatic, disableNotifications: obj4.old_disable_notifications, disableSounds: obj4.old_disable_sounds, hideInstantInvites: obj4.old_hide_instant_invites, hidePersonalInformation: obj4.old_hide_personal_info, enableContentProtection: obj4.old_enable_content_protection, disabledOverlayWidgets: disabledOverlayWidgets2 } = {});
     let str3;
     if (disabledOverlayWidgets2 != null) {
       str3 = disabledOverlayWidgets2.join(",");
@@ -182,21 +181,21 @@ obj = {
     if (str3 == null) {
       str3 = "";
     }
-    obj1.old_disabled_overlay_widgets = str3;
-    AnalyticsUtilsDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
+    obj9.old_disabled_overlay_widgets = str3;
+    AnalyticsUtilsDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj9);
+    obj = {};
   },
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
-    if (obj.autoToggle) {
-      obj.enabled = count.count > 0;
-      obj = { enabled: count.count > 0, automatic: true };
-      obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
+    if (obj2.autoToggle) {
+      obj2.enabled = count.count > 0;
+      obj2 = { enabled: count.count > 0, automatic: true };
+      AnalyticsUtilsDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj2);
       return true;
     } else {
       return false;
     }
   }
-};
-const streamerModeStore = new StreamerModeStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/StreamerModeStore.tsx");
 

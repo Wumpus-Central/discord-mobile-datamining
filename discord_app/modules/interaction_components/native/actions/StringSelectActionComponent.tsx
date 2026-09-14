@@ -1,10 +1,12 @@
-// === Module 15800: StringSelectActionComponent ===
+// === Module 15802: StringSelectActionComponent ===
 
-// Module 15800 (StringSelectActionComponent)
+// Module 15802 (StringSelectActionComponent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 4861 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -15,18 +17,18 @@ export default function StringSelectActionComponent(type) {
   _require = type;
   type = type.type;
   const options = type.options;
-  let obj = require("InteractionComponentUtils");
-  let obj1 = componentStateContext;
   const items = [options];
-  const selectPlaceholder = obj.getSelectPlaceholder(type);
+  const selectPlaceholder = require("InteractionComponentUtils").getSelectPlaceholder(type);
   const memo = componentStateContext.useMemo(() => {
     const found = options.filter((item) => item.default);
     return found.map((value) => value.value);
   }, items);
+  let obj = require("InteractionComponentUtils");
+  let obj2 = componentStateContext;
+  let tmp = _require;
   componentStateContext = require("ComponentStateContext").useComponentStateContext();
   let modal;
   const obj3 = require("ComponentStateContext");
-  let tmp = _require;
   const tmp4 = type;
   if (componentStateContext != null) {
     modal = componentStateContext.modal;
@@ -34,15 +36,15 @@ export default function StringSelectActionComponent(type) {
   type(options[4])(null != modal, "StringSelectActionComponent must be rendered inside a modal ComponentStateContext");
   let tmp8;
   if (memo.length > 0) {
-    obj = { type, values: memo };
-    tmp8 = obj;
+    const obj4 = { type, values: memo };
+    tmp8 = obj4;
   }
   const componentState = componentStateContext.useComponentState(type, tmp8);
   const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [options, type, state];
   const customId = componentStateContext.modal.customId;
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = state.type;
@@ -58,29 +60,30 @@ export default function StringSelectActionComponent(type) {
   if (parents != null) {
     labelComponent = parents[0];
   }
-  type = undefined;
+  let type1;
   if (labelComponent != null) {
-    type = labelComponent.type;
+    type1 = labelComponent.type;
   }
   let tmp14;
-  if (type === tmp(options[5]).ComponentType.LABEL) {
+  if (type1 === tmp(options[5]).ComponentType.LABEL) {
     tmp14 = labelComponent;
   }
   labelComponent = tmp14;
-  obj = { model: null, onTap: null };
-  obj1 = {};
+  const obj5 = { model: null, onTap: null };
+  const obj6 = {};
   const tmp5 = type(options[4]);
   const merged = Object.assign(type);
-  obj1.placeholder = selectPlaceholder;
-  obj1.state = componentState.visualState;
-  obj1.selectedOptions = memo1;
-  obj.model = obj1;
-  obj.onTap = function onTap() {
-    const obj = { selectionActionComponent, labelComponent, channelId: componentStateContext.channelId, containerId: customId, onSubmit: executeStateUpdate, allowEmpty: null };
+  obj6.placeholder = selectPlaceholder;
+  obj6.state = componentState.visualState;
+  obj6.selectedOptions = memo1;
+  obj5.model = obj6;
+  obj5.onTap = function onTap() {
+    const obj = ActionSheetActionCreatorsDefault;
+    const obj2 = { selectionActionComponent, labelComponent, channelId: componentStateContext.channelId, containerId: customId, onSubmit: executeStateUpdate, allowEmpty: null };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(11951, dependencyMap.paths);
-    obj.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
-    obj.openLazy(tmp, combined, obj);
+    const tmp = asyncRequireImpl(11952, dependencyMap.paths);
+    obj2.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
+    obj.openLazy(tmp, combined, obj2);
   };
-  return state(tmp4(options[6]), obj);
+  return state(tmp4(options[6]), obj5);
 };

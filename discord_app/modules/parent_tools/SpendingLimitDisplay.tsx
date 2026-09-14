@@ -1,13 +1,13 @@
-// === Module 14998: SpendingLimitDisplay ===
+// === Module 14999: SpendingLimitDisplay ===
 
-// Module 14998 (SpendingLimitDisplay)
+// Module 14999 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
 import PriceUtils from "PriceUtils" /* 7337 */;
 import utils_PriceUtils from "utils/PriceUtils" /* 7338 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14916 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14917 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
 
 require = fn;
@@ -21,8 +21,8 @@ function getSpendingLimitDisplayState(amount, arg1) {
     const obj6 = PriceUtils;
     const formatRateResult = obj6.formatRate(PriceUtils.formatPrice(amount.amount, currency), SubscriptionIntervalTypes.MONTH, 1);
     if (arg1 >= amount.amount) {
-      let obj = { kind: "spent", monthlyText: formatRateResult };
-      return obj;
+      const obj2 = { kind: "spent", monthlyText: formatRateResult };
+      return obj2;
     } else {
       let num = utils_PriceUtils.CurrencyExponents[amount.currency];
       if (num == null) {
@@ -30,10 +30,11 @@ function getSpendingLimitDisplayState(amount, arg1) {
       }
       const diff = amount.amount - arg1;
       if (diff <= 10 * 10 ** num) {
-        obj = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
+        const obj3 = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = util.intl;
-        const obj1 = { amount: PriceUtils.formatPrice(diff, currency) };
-        obj.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj1);
+        const obj4 = { amount: PriceUtils.formatPrice(diff, currency) };
+        obj3.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj4);
+        let obj = obj3;
         const tmp5Result = PriceUtils;
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };

@@ -24,10 +24,10 @@ function addSubscriptionPlan(fromServer) {
     const _Set2 = Set;
     const items = [];
     const _Array = Array;
-    let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set1), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set), arraySpreadResult);
+    HermesBuiltin.arraySpread(Array.from(set), HermesBuiltin.arraySpread(Array.from(set1), 0));
     const set2 = new Set(items);
     dependencyMap2[fromServer.skuId] = set2;
+    const arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set1), 0);
   }
   if (null != dependencyMap[skuId]) {
     obj.add(fromServer.id);
@@ -133,16 +133,16 @@ prototype["isFetchingForSKUs"] = function isFetchingForSKUs(skuIDs) {
   return skuIDs.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
-  let hasItem = set1.has(TIER_2);
-  if (!hasItem) {
-    hasItem = set.has(TIER_2);
+  let hasItem1 = set1.has(TIER_2);
+  if (!hasItem1) {
+    const hasItem = set.has(TIER_2);
     let tmp4 = !hasItem;
     if (!hasItem) {
       tmp4 = null != dependencyMap[TIER_2];
     }
-    hasItem = tmp4;
+    hasItem1 = tmp4;
   }
-  return hasItem;
+  return hasItem1;
 };
 prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
   const self = this;

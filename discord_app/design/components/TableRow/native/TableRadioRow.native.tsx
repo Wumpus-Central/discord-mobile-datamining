@@ -1,6 +1,7 @@
 // === Module 5769: TableRadioRow ===
 
 // Module 5769 (TableRadioRow)
+import native from "native" /* 4340 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import TableRow from "TableRow" /* 5686 */;
 import TableRadioGroup from "TableRadioGroup" /* 5766 */;
@@ -26,10 +27,10 @@ export const TableRadioRow = function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4340);
-  const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4340);
-  const nodeText1 = tmp2Result.getNodeText(subLabel);
+  const nodeText = native.getNodeText(label);
+  const tmp2Result = native;
+  const nodeText1 = native.getNodeText(subLabel);
+  const tmp2Result3 = native;
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};

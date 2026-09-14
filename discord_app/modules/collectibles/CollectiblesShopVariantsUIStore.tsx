@@ -3,8 +3,10 @@
 // Module 8955 (CollectiblesShopVariantsUIStore)
 import _mod4259 from "module_4259" /* 4259 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7656 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
@@ -50,11 +52,11 @@ export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, ar
     }
     let tmp5 = selectionStates;
     if (selectedVariantIndex !== closure_1) {
-      let obj = { selectionStates: null };
+      const obj = { selectionStates: null };
       const _Map = Map;
       const map = new Map(selectionStates.selectionStates);
-      obj = { selectedVariantIndex: tmp4 };
-      obj.selectionStates = map.set(storeListingId.storeListingId, obj);
+      const obj2 = { selectedVariantIndex: tmp4 };
+      obj.selectionStates = map.set(storeListingId.storeListingId, obj2);
       tmp5 = obj;
     }
     return tmp5;

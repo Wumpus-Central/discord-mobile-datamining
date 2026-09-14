@@ -1,18 +1,18 @@
-// === Module 17561: NewUserUtils ===
+// === Module 17562: NewUserUtils ===
 
-// Module 17561 (NewUserUtils)
+// Module 17562 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import Link from "Link" /* 1484 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12809 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12812 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12875 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17562 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12810 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12813 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12876 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 16053 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 16055 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -25,8 +25,8 @@ let closure_12 = async function _shouldSkipContactSyncStep() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,17 +39,16 @@ let closure_12 = async function _shouldSkipContactSyncStep() {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_0 = tmp4;
-          let obj2 = ContactSyncUtils;
-          const result = obj2.isContactSyncAvailable();
+          const result = ContactSyncUtils.isContactSyncAvailable();
           if (result) {
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: ContactSyncUtils.checkContactPermissions(), done: false };
-            return obj1;
+            const obj6 = { value: ContactSyncUtils.checkContactPermissions(), done: false };
+            return obj6;
           } else {
             c2 = 3;
           }
@@ -59,13 +58,13 @@ let closure_12 = async function _shouldSkipContactSyncStep() {
         throw value;
       } else if (arg0 !== 2) {
         if (value === closure_128_10.UNAUTHORIZED) {
-          obj = closure_128_0(closure_128_2[9]);
-          obj.isIOS();
+          closure_128_0(closure_128_2[9]).isIOS();
+          const obj = closure_128_0(closure_128_2[9]);
         }
       }
       c2 = 3;
-      obj2 = { value, done: true };
-      return obj2;
+      const obj7 = { value, done: true };
+      return obj7;
     } catch (tmp17) {
       c2 = tmp;
       throw tmp17;
@@ -77,11 +76,11 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   if (obj2.isModalOpen(NewUserModalTypes.NEW_USER_MODAL_KEY)) {
     ModalActionCreatorsDefault.popWithKey(NewUserModalTypes.NEW_USER_MODAL_KEY);
   }
-  let tmpResult = router_utils;
-  tmpResult.transitionTo(constants2.ME, { navigationReplace: true });
-  tmpResult = nuf_NUFActionCreators;
-  const result = tmpResult.setNewUserFlowCompleted();
   obj2 = NavigationRouteUtils;
+  router_utils.transitionTo(constants2.ME, { navigationReplace: true });
+  const tmpResult = router_utils;
+  const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
+  const tmpResult2 = nuf_NUFActionCreators;
 }
 function getNextOnboardingStep() {
   const self = this;
@@ -101,8 +100,8 @@ let closure_18 = async function _getNextOnboardingStep() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -115,8 +114,8 @@ let closure_18 = async function _getNextOnboardingStep() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_5 = tmp5;
           closure_4 = tmp2;
@@ -145,8 +144,8 @@ let closure_18 = async function _getNextOnboardingStep() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           let key;
           if (closure_133_15[closure_132_1] != null) {
@@ -161,10 +160,10 @@ let closure_18 = async function _getNextOnboardingStep() {
           closure_132_2 = sum;
           if (sum >= closure_133_15.length) {
             closure_133_16(closure_132_3);
-            let obj2 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
+            const obj7 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
             c7 = 3;
-            let obj3 = { value: obj2, done: true };
-            return obj3;
+            const obj8 = { value: obj7, done: true };
+            return obj8;
           } else {
             closure_132_4 = closure_133_15[closure_132_2];
             key2 = closure_132_4.key;
@@ -172,8 +171,8 @@ let closure_18 = async function _getNextOnboardingStep() {
             transitionStep2 = closure_132_4.transitionStep;
             c6 = 2;
             c7 = 1;
-            const obj4 = { value: shouldShowStep(), done: false };
-            return obj4;
+            const obj9 = { value: shouldShowStep(), done: false };
+            return obj9;
           }
         }
       } else if (2 === tmp5) {
@@ -182,43 +181,43 @@ let closure_18 = async function _getNextOnboardingStep() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         } else if (value) {
           closure_132_1 = closure_132_2;
-          obj3 = closure_133_0(closure_133_2[13]);
-          const obj6 = { skip: closure_132_0 };
-          obj3.trackNUFStep(closure_132_3, key2, obj6);
+          const obj11 = { skip: closure_132_0 };
+          closure_133_0(closure_133_2[13]).trackNUFStep(closure_132_3, key2, obj11);
           if (null != transitionStep2) {
             closure_133_16(key2);
-            obj2 = closure_133_1(closure_133_2[11]);
-            obj2.wait(transitionStep2);
-            const obj7 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
-            let obj8 = obj7;
+            closure_133_1(closure_133_2[11]).wait(transitionStep2);
+            const obj12 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
+            let obj13 = obj12;
+            const obj3 = closure_133_1(closure_133_2[11]);
           } else {
-            obj8 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: null };
+            obj13 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: null };
             let transitionStep;
             if (closure_133_15[closure_132_2] != null) {
               transitionStep = tmp26.transitionStep;
             }
-            obj8.continueNavigation = null == transitionStep;
+            obj13.continueNavigation = null == transitionStep;
           }
+          const obj4 = closure_133_0(closure_133_2[13]);
         } else {
           c6 = 3;
           c7 = 1;
-          const obj9 = { value: closure_133_17(closure_132_0, closure_132_1, closure_132_2), done: false };
-          return obj9;
+          const obj14 = { value: closure_133_17(closure_132_0, closure_132_1, closure_132_2), done: false };
+          return obj14;
         }
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 !== 2) {
         c7 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+        const obj15 = { value, done: true };
+        return obj15;
       } else {
         c7 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp64) {
@@ -230,20 +229,9 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12807).ContactPermissions;
+const ContactPermissions = fn(12808).ContactPermissions;
 let closure_11 = fn(4846).NotificationAuthorizationStatus;
-let obj = {
-  key: "choose-avatar",
-  shouldShowStep() {
-    const currentUser = UserStore.getCurrentUser();
-    let avatar;
-    if (currentUser != null) {
-      avatar = currentUser.avatar;
-    }
-    return null == avatar;
-  }
-};
-obj = { key: "enable-notification", shouldShowStep: null };
+let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
     c2 = 3;
@@ -252,8 +240,8 @@ let closure_13 = asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -266,27 +254,27 @@ let closure_13 = asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_0 = tmp4;
-          let obj1 = PlatformUtils;
-          if (obj1.isIOS()) {
+          if (obj2.isIOS()) {
             const NativePermissionManager = NativeModules.NativePermissionManager;
             c1 = 1;
             c2 = 1;
-            obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
-            return obj1;
+            const obj5 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+            return obj5;
           } else {
             c2 = 3;
           }
+          obj2 = PlatformUtils;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
       }
       c2 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp11) {
       c2 = tmp;
@@ -294,7 +282,7 @@ let closure_13 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj.shouldShowStep = function() {
+obj2.shouldShowStep = function() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -304,7 +292,7 @@ obj.shouldShowStep = function() {
   }
   return applyArgumentsResult;
 };
-obj = { key: "contact-sync", shouldShowStep: null };
+let obj3 = { key: "contact-sync", shouldShowStep: null };
 let closure_14 = asyncGeneratorStep(async () => {
   if (c0 === 2) {
     c0 = 3;
@@ -313,8 +301,8 @@ let closure_14 = asyncGeneratorStep(async () => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -327,8 +315,8 @@ let closure_14 = asyncGeneratorStep(async () => {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const localAccount = ConnectedAccountsStore.getLocalAccount(constants.CONTACTS);
           let friendSync;
@@ -340,7 +328,7 @@ let closure_14 = asyncGeneratorStep(async () => {
           } else {
             c1 = 1;
             c0 = 1;
-            const obj1 = {
+            const obj4 = {
               value: (function shouldSkipContactSyncStep() {
                           const self = this;
                           const apply = closure_1_12.apply;
@@ -353,7 +341,7 @@ let closure_14 = asyncGeneratorStep(async () => {
                         })(),
               done: false
             };
-            return obj1;
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -361,7 +349,7 @@ let closure_14 = asyncGeneratorStep(async () => {
         throw value;
       }
       c0 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp12) {
       c0 = tmp;
@@ -369,7 +357,7 @@ let closure_14 = asyncGeneratorStep(async () => {
     }
   }
 });
-obj.shouldShowStep = function() {
+obj3.shouldShowStep = function() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -380,15 +368,25 @@ obj.shouldShowStep = function() {
   return applyArgumentsResult;
 };
 let items = [
-  obj,
-  obj,
+  obj2,
+  obj3,
   {
     key: "discoverability",
     shouldShowStep() {
       return true;
     }
   },
-  obj,
+  {
+    key: "choose-avatar",
+    shouldShowStep() {
+      const currentUser = UserStore.getCurrentUser();
+      let avatar;
+      if (currentUser != null) {
+        avatar = currentUser.avatar;
+      }
+      return null == avatar;
+    }
+  },
   {
     key: "connect-guardian",
     shouldShowStep() {
@@ -423,18 +421,18 @@ export const continueToNextStep = function continueToNextStep(onboardingStepInde
     current.navigate(key, {});
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      let obj = state;
       state = state.getState();
       const routes = state.routes;
       if (2 === routes.length) {
         items = [routes[1]];
         const CommonActions = Link.CommonActions;
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(state);
-        obj.routes = items;
-        obj.index = 0;
-        obj.dispatch(CommonActions.reset(obj));
+        obj2.routes = items;
+        obj2.index = 0;
+        obj.dispatch(CommonActions.reset(obj2));
       }
+      obj = state;
     }, 500);
   }
 };

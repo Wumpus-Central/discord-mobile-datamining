@@ -1,17 +1,15 @@
-// === Module 15008: FamilyCenterLinkWrapper ===
+// === Module 15009: FamilyCenterLinkWrapper ===
 
-// Module 15008 (FamilyCenterLinkWrapper)
+// Module 15009 (FamilyCenterLinkWrapper)
 import nativeDefault from "native" /* 576 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 14, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles.container = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 14, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkWrapper.tsx");
 

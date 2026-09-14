@@ -1,9 +1,9 @@
-// === Module 13836: NowPlayingStore ===
+// === Module 13837: NowPlayingStore ===
 
-// Module 13836 (NowPlayingStore)
+// Module 13837 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13837 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13838 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
 import PresenceStore from "PresenceStore" /* 4676 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -18,7 +18,7 @@ function _handlePresenceUpdate(user) {
     const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
     if (0 === found.length) {
       let flag2 = false;
-      if (null != obj[user.id]) {
+      if (null != obj2[user.id]) {
         let gameId = tmp7.gameId;
         if (null != obj[gameId]) {
           obj = {};
@@ -29,8 +29,8 @@ function _handlePresenceUpdate(user) {
             delete tmp[tmp3];
           }
         }
-        obj = {};
-        let merged1 = Object.assign(obj);
+        obj2 = {};
+        let merged1 = Object.assign(obj2);
         delete tmp[tmp2];
         flag2 = true;
       }
@@ -41,42 +41,42 @@ function _handlePresenceUpdate(user) {
         const tmp7 = getApplicationIdForActivityDefault(timestamps);
         if (null == tmp7) {
           let flag2 = false;
-          if (null != obj5[user.id]) {
+          if (null != obj8[user.id]) {
             const gameId2 = tmp34.gameId;
-            if (null != obj3[gameId2]) {
-              obj = {};
-              const merged = Object.assign(obj3);
-              obj3 = obj;
+            if (null != obj6[gameId2]) {
+              obj2 = {};
+              const merged = Object.assign(obj6);
+              obj6 = obj2;
               delete tmp[tmp2];
               const _Object2 = Object;
-              if (0 === Object.values(obj3[gameId2]).length) {
+              if (0 === Object.values(obj6[gameId2]).length) {
                 delete tmp[tmp3];
               }
             }
-            obj = {};
-            const merged1 = Object.assign(obj5);
-            obj5 = obj;
+            const obj3 = {};
+            const merged1 = Object.assign(obj8);
+            obj8 = obj3;
             delete tmp[tmp2];
             flag2 = true;
           }
           let flag = flag2;
         } else {
           if (tmp8) {
-            if (null != obj5[user.id]) {
+            if (null != obj8[user.id]) {
               const gameId = tmp10.gameId;
-              if (null != obj3[gameId]) {
+              if (null != obj6[gameId]) {
                 obj = {};
-                const merged2 = Object.assign(obj3);
-                obj3 = obj;
+                const merged2 = Object.assign(obj6);
+                obj6 = obj;
                 delete tmp2[tmp4];
                 const _Object = Object;
-                if (0 === Object.values(obj3[gameId]).length) {
+                if (0 === Object.values(obj6[gameId]).length) {
                   delete tmp2[tmp5];
                 }
               }
-              const obj1 = {};
-              const merged3 = Object.assign(obj5);
-              obj5 = obj1;
+              const obj4 = {};
+              const merged3 = Object.assign(obj8);
+              obj8 = obj4;
               delete tmp2[tmp4];
             }
           }
@@ -89,19 +89,19 @@ function _handlePresenceUpdate(user) {
             const _Date = Date;
             start = Date.now();
           }
-          const obj2 = { userId: user.id, activity: timestamps, startedPlaying: start };
-          obj3 = {};
-          const merged4 = Object.assign(obj3);
-          const obj4 = {};
-          const merged5 = Object.assign(obj3[tmp7]);
-          obj4[obj2.userId] = obj2;
-          obj3[tmp7] = obj4;
-          obj5 = {};
-          const merged6 = Object.assign(obj5);
-          const obj6 = { gameId: tmp7, startedPlaying: obj2.startedPlaying };
-          obj5[obj2.userId] = obj6;
+          const obj5 = { userId: user.id, activity: timestamps, startedPlaying: start };
+          obj6 = {};
+          const merged4 = Object.assign(obj6);
+          const obj7 = {};
+          const merged5 = Object.assign(obj6[tmp7]);
+          obj7[obj5.userId] = obj5;
+          obj6[tmp7] = obj7;
+          obj8 = {};
+          const merged6 = Object.assign(obj8);
+          const obj9 = { gameId: tmp7, startedPlaying: obj5.startedPlaying };
+          obj8[obj5.userId] = obj9;
           flag = true;
-          tmp8 = null != obj5[user.id] && obj5[user.id].gameId !== tmp7;
+          tmp8 = null != obj8[user.id] && obj8[user.id].gameId !== tmp7;
         }
         if (flag) {
           c1 = true;
@@ -144,27 +144,27 @@ prototype["initialize"] = function initialize() {
 };
 Object.defineProperty(prototype, "games", {
   get: function games() {
-    return obj3;
+    return obj6;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "usersPlaying", {
   get: function usersPlaying() {
-    return obj5;
+    return obj8;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "gameIds", {
   get: function gameIds() {
-    return Object.keys(obj3);
+    return Object.keys(obj6);
   },
   set: undefined
 });
 prototype["getNowPlaying"] = function getNowPlaying(arg0) {
-  return obj3[arg0];
+  return obj6[arg0];
 };
 prototype["getUserGame"] = function getUserGame(arg0) {
-  return obj5[arg0];
+  return obj8[arg0];
 };
 NowPlayingStore.displayName = "NowPlayingStore";
 const nowPlayingStore = new NowPlayingStore(DispatcherDefault, {

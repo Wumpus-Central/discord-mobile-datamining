@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("modules/user_profile/utils/parseUserP
 export default function parseUserProfileCollectibles(collectibles) {
   let tmp;
   let tmp2;
-  collectibles = undefined;
+  let collectibles1;
   if (collectibles != null) {
-    collectibles = collectibles.collectibles;
+    collectibles1 = collectibles.collectibles;
   }
-  if (null == collectibles) {
-    return { collectibles: "justifyContent", profileEffect: "call", profileFrame: "window" };
+  if (null == collectibles1) {
+    return { collectibles: "test", profileEffect: "call", profileFrame: "intl" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;
@@ -34,8 +34,8 @@ export default function parseUserProfileCollectibles(collectibles) {
       obj.expiresAt = date;
       let arr = items.push(obj);
       if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-        obj = { skuId: null, expiresAt: null };
-        obj.skuId = tmp7.sku_id;
+        let obj2 = { skuId: null, expiresAt: null };
+        obj2.skuId = tmp7.sku_id;
         let rounded;
         if (null != tmp7.expires_at) {
           let _Math = Math;
@@ -45,12 +45,12 @@ export default function parseUserProfileCollectibles(collectibles) {
           let date1 = new Date(tmp7.expires_at);
           rounded = Math.floor(date1.getTime() / 1000);
         }
-        obj.expiresAt = rounded;
-        tmp = obj;
+        obj2.expiresAt = rounded;
+        tmp = obj2;
       } else if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-        obj = { skuId: null, type: null, expiresAt: null };
-        obj.skuId = tmp7.sku_id;
-        obj.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
+        let obj3 = { skuId: null, type: null, expiresAt: null };
+        obj3.skuId = tmp7.sku_id;
+        obj3.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
         let date2;
         if (null != tmp7.expires_at) {
           let _Date2 = Date;
@@ -58,12 +58,12 @@ export default function parseUserProfileCollectibles(collectibles) {
           let tmp18 = new.target;
           date2 = new Date(tmp7.expires_at);
         }
-        obj.expiresAt = date2;
-        tmp2 = obj;
+        obj3.expiresAt = date2;
+        tmp2 = obj3;
       }
       continue;
     }
-    const obj1 = { collectibles: items, profileEffect: tmp, profileFrame: tmp2 };
-    return obj1;
+    const obj4 = { collectibles: items, profileEffect: tmp, profileFrame: tmp2 };
+    return obj4;
   }
 };

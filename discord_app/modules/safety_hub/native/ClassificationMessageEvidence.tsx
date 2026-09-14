@@ -1,11 +1,11 @@
-// === Module 12021: ClassificationMessageEvidence ===
+// === Module 12022: ClassificationMessageEvidence ===
 
-// Module 12021 (ClassificationMessageEvidence)
+// Module 12022 (ClassificationMessageEvidence)
 import RowGeneratorDefault from "RowGenerator" /* 8036 */;
 import openMediaModal from "openMediaModal" /* 8377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import UserStore from "UserStore" /* 1371 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
 
@@ -25,10 +25,8 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/Classificat
 
 export default function ClassificationEvidence(arg0) {
   let attachments = closure_21();
-  let obj = ref(504);
   const items = [memo];
-  const stateFromStores = obj.useStateFromStores(items, () => memo.getCurrentUser());
-  let obj1 = noop;
+  const stateFromStores = ref(504).useStateFromStores(items, () => memo.getCurrentUser());
   ref = noop.useRef(null);
   const tmp6 = first1(noop.useState(null), 2);
   const reactTag = tmp6[0];
@@ -36,29 +34,30 @@ export default function ClassificationEvidence(arg0) {
   const tmp8 = first1(noop.useState({}), 2);
   first1 = tmp8[0];
   noop = tmp8[1];
-  let obj2 = ref(504);
+  let obj = ref(504);
+  let tmp5 = first1;
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj2.useStateFromStores(items1, () => ref(4488).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(12022));
+  if (obj3.useStateFromStores(items1, () => ref(4488).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(12023));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(12023));
+    assetSource = resolveAssetSource(tmp11(12024));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
-  const tmp5Result = first1(obj1.useState(first2.attachments.length), 2);
+  const tmp5Result = tmp5(noop.useState(first2.attachments.length), 2);
   first3 = tmp5Result[0];
   closure_8 = tmp5Result[1];
-  let tmpResult = tmp(504);
+  obj3 = ref(504);
   const items2 = [SafetyHubStore];
   id = first2.id;
   const items3 = [first2.attachments, first1, assetSource];
-  const stateFromStores1 = tmpResult.useStateFromStores(items2, () => username.getUsername());
-  memo = obj1.useMemo(() => {
+  const stateFromStores1 = ref(504).useStateFromStores(items2, () => username.getUsername());
+  memo = obj2.useMemo(() => {
     const attachments = first2.attachments;
     return attachments.map((filename) => {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(filename);
       let str = filename.filename;
       if (str == null) {
@@ -70,7 +69,7 @@ export default function ClassificationEvidence(arg0) {
       obj.proxy_url = filename.url;
       const obj2 = ref(8536);
       if (obj3.isImageFile(filename.filename)) {
-        obj = {};
+        const obj4 = {};
         const merged1 = Object.assign(obj);
         width = undefined;
         if (first1[filename.id] != null) {
@@ -79,7 +78,7 @@ export default function ClassificationEvidence(arg0) {
         if (width == null) {
           width = closure_2_12;
         }
-        obj.width = width;
+        obj4.width = width;
         height = undefined;
         if (first1[filename.id] != null) {
           height = tmp18.height;
@@ -87,18 +86,18 @@ export default function ClassificationEvidence(arg0) {
         if (height == null) {
           height = closure_2_13;
         }
-        obj.height = height;
-        let tmp4 = obj;
+        obj4.height = height;
+        let tmp4 = obj4;
       } else {
         tmp4 = obj;
         if (tmp2Result.isVideoFile(filename.filename)) {
-          obj = {};
+          const obj5 = {};
           const merged2 = Object.assign(obj);
-          obj.width = width;
-          obj.height = height;
-          obj.proxy_url = uri.uri;
-          obj.filename = filename;
-          tmp4 = obj;
+          obj5.width = width;
+          obj5.height = height;
+          obj5.proxy_url = uri.uri;
+          obj5.filename = filename;
+          tmp4 = obj5;
         }
         tmp2Result = ref(4786);
       }
@@ -107,7 +106,7 @@ export default function ClassificationEvidence(arg0) {
   }, items3);
   const items4 = [memo, first2.attachments, id, first1, assetSource];
   const items5 = [reactTag];
-  const callback = obj1.useCallback((nativeEvent) => {
+  const callback = obj2.useCallback((nativeEvent) => {
     ({ index, layout } = nativeEvent.nativeEvent);
     const mapped = memo.map((uri, mediaIndex) => {
       const size = { uri: uri.url, videoURI: null, thumbnail: null, mediaIndex: null, channelId: "1", messageId: null, width: null, height: null, accessoryType: "attachment", attachmentId: null };
@@ -147,10 +146,10 @@ export default function ClassificationEvidence(arg0) {
     openMediaModal.openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
   }, items4);
   const items6 = [first2.attachments];
-  const callback1 = obj1.useCallback((arg0) => {
+  const callback1 = obj2.useCallback((arg0) => {
     arg0.reactTag = reactTag;
   }, items5);
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     const attachments = first2.attachments;
     const found = attachments.filter((filename) => ref(dependencyMap[16]).isImageFile(filename.filename));
     const mapped = found.map((item) => {
@@ -179,7 +178,7 @@ export default function ClassificationEvidence(arg0) {
     });
   }, items6);
   const items7 = [first3];
-  const effect1 = obj1.useEffect(() => {
+  const effect1 = obj2.useEffect(() => {
     if (0 === first3) {
       dependencyMap(timestampProducer(ref.current));
     }
@@ -190,12 +189,12 @@ export default function ClassificationEvidence(arg0) {
     }
   }
   if (first3 > 0) {
-    obj = { children: null };
+    let obj4 = { children: null };
     const items8 = [closure_18(closure_8, {}), ];
-    obj = { style: attachments.dummyVideoAttachments, children: null };
+    let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
     first2 = attachments.filter((filename) => ref(4786).isVideoFile(filename.filename));
-    obj.children = first2.map((uri, index) => {
+    obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
       return closure_1_18(first(8426), {
         source: { uri: uri.url },
@@ -215,34 +214,35 @@ export default function ClassificationEvidence(arg0) {
         }
       }, index);
     });
-    items8[1] = closure_18(tmp24, obj);
-    obj.children = items8;
-    let obj5 = obj;
+    items8[1] = closure_18(tmp24, obj5);
+    obj4.children = items8;
+    let obj10 = obj4;
   } else {
-    obj1 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(12024), obj1), ];
-    obj2 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    tmp13(8775);
-    tmpResult = tmp(4859);
-    const obj3 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
+    const obj6 = { ref, onTapImage: callback, inverted: false };
+    const items9 = [closure_18(tmp13(12025), obj6), ];
+    const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
+    const tmp13Result = tmp13(8775);
+    const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmp13Result = tmp13(11);
-    const date = new Date(tmp13Result.extractTimestamp(first2.id));
-    obj3.timestamp = date.toUTCString();
-    obj3.type = MessageTypes.DEFAULT;
+    const tmpResult2 = tmp(4859);
+    const date = new Date(tmp13(11).extractTimestamp(first2.id));
+    obj8.timestamp = date.toUTCString();
+    obj8.type = MessageTypes.DEFAULT;
     let tmp25 = stateFromStores;
     if (stateFromStores == null) {
-      const obj4 = { id: "0", avatar: null, discriminator: "0000", username: stateFromStores1 };
-      tmp25 = obj4;
+      const obj9 = { id: "0", avatar: null, discriminator: "0000", username: stateFromStores1 };
+      tmp25 = obj9;
     }
-    obj5 = { children: null };
-    obj3.author = tmp25;
-    obj3.content = first2.content;
-    obj3.attachments = memo;
-    obj2.message = tmpResult.createMessageRecord(obj3);
-    obj2.modifyRow = callback1;
-    items9[1] = closure_18(tmp13Result, obj2);
-    obj5.children = items9;
+    obj10 = { children: null };
+    obj8.author = tmp25;
+    obj8.content = first2.content;
+    obj8.attachments = memo;
+    obj7.message = tmpResult2.createMessageRecord(obj8);
+    obj7.modifyRow = callback1;
+    items9[1] = closure_18(tmp13Result, obj7);
+    obj10.children = items9;
+    const tmp13Result2 = tmp13(11);
   }
-  closure_19(assetSource, obj5);
+  closure_19(assetSource, obj10);
+  const tmpResult = ref(504);
 };

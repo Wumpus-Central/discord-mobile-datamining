@@ -1,10 +1,10 @@
-// === Module 12468: SearchQueryStore ===
+// === Module 12469: SearchQueryStore ===
 
-// Module 12468 (SearchQueryStore)
+// Module 12469 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12469 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 12481 */;
+import SearchUtils from "SearchUtils" /* 12470 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 12482 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -16,7 +16,7 @@ const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
-  let obj = Object.create(new.target.prototype);
+  const obj = Object.create(new.target.prototype);
   obj.isExplicitSearchSubmitted = false;
   obj.getQueryString = function getQueryString() {
     let flag = arg0;
@@ -179,21 +179,21 @@ const prototype = function SearchQueryStateManager(type) {
     if (null == channelName) {
       let items1 = [];
     } else {
-      obj = { type: constants.COMPLETE, searchTokenType: constants2.FILTER_IN, text: null, channelId: null, location: null };
+      const obj3 = { type: constants.COMPLETE, searchTokenType: constants2.FILTER_IN, text: null, channelId: null, location: null };
       const intl = obj(1114).intl;
       const stringResult = intl.string(obj(1114).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj.text = "" + stringResult + ": " + obj(12469).quoteChannelName(channelName);
-      obj.channelId = type.channelId;
-      obj.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
-      items1 = [obj];
-      const obj4 = obj(12469);
+      obj3.text = "" + stringResult + ": " + obj(12470).quoteChannelName(channelName);
+      obj3.channelId = type.channelId;
+      obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
+      items1 = [obj3];
+      const obj4 = obj(12470);
     }
     items = items1;
   }
 }.prototype;
 const map = new Map();
-let FunctionUtils = fn(1933);
+const FunctionUtils = fn(1933);
 let closure_13 = FunctionUtils.cachedFunction((arg0) => new prototype(arg0));
 const Store = initializeDefault.Store;
 class NativeSearchQueryStore extends Store {
@@ -312,7 +312,7 @@ prototype2["isTagsEmpty"] = function isTagsEmpty(searchContext) {
   return value.isTagsEmpty();
 };
 NativeSearchQueryStore.displayName = "NativeSearchQueryStore";
-FunctionUtils = {
+const nativeSearchQueryStore = new NativeSearchQueryStore(DispatcherDefault, {
   SEARCH_QUERY_NATIVE_UPDATE: function handleSearchQueryNativeUpdate(searchContext) {
     searchContext = searchContext.searchContext;
     const searchContextId = SearchUtils.getSearchContextId(searchContext);
@@ -327,8 +327,7 @@ FunctionUtils = {
   SEARCH_QUERY_NATIVE_DELETE: function handleSearchQueryNativeDelete(id) {
     map.delete(id.id);
   }
-};
-const nativeSearchQueryStore = new NativeSearchQueryStore(DispatcherDefault, FunctionUtils);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");
 

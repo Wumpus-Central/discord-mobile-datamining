@@ -1,11 +1,11 @@
-// === Module 12276: FrecencyCommandsSection ===
+// === Module 12277: FrecencyCommandsSection ===
 
-// Module 12276 (FrecencyCommandsSection)
+// Module 12277 (FrecencyCommandsSection)
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import AppDetailContent from "AppDetailContent" /* 12258 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12277 */;
+import AppDetailContent from "AppDetailContent" /* 12259 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,12 +13,9 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, header: null };
-createStyles = { marginBottom: fn(12258).BETWEEN_SECTIONS_MARGIN };
-createStyles.container = createStyles;
-createStyles.header = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { marginBottom: fn(12259).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
 
@@ -30,19 +27,19 @@ export default function FrecencyCommandsSection(commands) {
   const items = [arr.length, sectionName];
   const effect = noop.useEffect(() => {
     if (0 !== arr.length) {
-      const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
-      obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj);
+      const obj2 = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj2);
     }
   }, items);
   let tmp4 = null;
   if (0 !== arr.length) {
     let obj = { style: tmp.container, children: null };
-    obj = { style: tmp.header, children: null };
-    obj = { variant: "text-md/medium", color: "text-default", children: null };
+    let obj2 = { style: tmp.header, children: null };
+    const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = context(1114).intl;
-    obj.children = intl.string(context(1114).t.acSE0h);
-    obj.children = arr(context(4632).Heading, obj);
-    const items1 = [arr(View, obj), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
+    obj3.children = intl.string(context(1114).t.acSE0h);
+    obj2.children = arr(context(4632).Heading, obj3);
+    const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
     obj.children = items1;
     tmp4 = closure_7(View, obj);
   }

@@ -1,7 +1,9 @@
-// === Module 13217: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 13218: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 13217 (useVisibleUserProfileConnectionsAndAppIdentities)
+// Module 13218 (useVisibleUserProfileConnectionsAndAppIdentities)
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

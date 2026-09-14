@@ -15,11 +15,9 @@ const INVALID_ACCESS_ERROR_CODE = fn(9315).INVALID_ACCESS_ERROR_CODE;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.scrollView = createStyles;
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
@@ -29,23 +27,22 @@ export default function GuildProfileActionSheet(guildId) {
   let analyticsLocations;
   ({ context, inviteKey } = guildId);
   const tmp = closure_12();
-  let obj = guildId(analyticsLocations[9]);
-  guildProfile = obj.useGuildProfile(guildId);
-  ({ guildProfile, fetchGuildProfile } = guildProfile);
-  const fetchStatus = guildProfile.fetchStatus;
-  let obj1 = guildId(analyticsLocations[10]);
-  let items = [GuildProfileStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => GuildProfileStore.getErrorCode(guildId));
-  let obj2 = guildId(analyticsLocations[11]);
-  const token = obj2.useToken(fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER, fetchGuildProfile(analyticsLocations[8])());
-  let obj3 = guildId(analyticsLocations[12]);
-  bottomSheetRef = obj3.useBottomSheetRef();
-  ({ bottomSheetClose, bottomSheetRef } = bottomSheetRef);
   const tmp4 = fetchGuildProfile(analyticsLocations[8])();
+  const guildProfile1 = guildId(analyticsLocations[9]).useGuildProfile(guildId);
+  ({ guildProfile, fetchGuildProfile } = guildProfile1);
+  const fetchStatus = guildProfile1.fetchStatus;
+  let obj = guildId(analyticsLocations[9]);
+  let items = [GuildProfileStore];
+  const stateFromStores = guildId(analyticsLocations[10]).useStateFromStores(items, () => GuildProfileStore.getErrorCode(guildId));
+  const obj2 = guildId(analyticsLocations[10]);
+  const token = guildId(analyticsLocations[11]).useToken(fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER, tmp4);
+  const obj3 = guildId(analyticsLocations[11]);
+  const bottomSheetRef1 = guildId(analyticsLocations[12]).useBottomSheetRef();
+  ({ bottomSheetClose, bottomSheetRef } = bottomSheetRef1);
+  const obj4 = guildId(analyticsLocations[12]);
   analyticsLocations = fetchGuildProfile(analyticsLocations[13])(fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE).analyticsLocations;
-  let obj4 = guildId(analyticsLocations[11]);
-  const token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
-  let obj5 = token1;
+  const tmp10 = fetchGuildProfile(analyticsLocations[13]);
+  const token1 = guildId(analyticsLocations[11]).useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
   const items1 = [guildId, analyticsLocations];
   const effect = token1.useEffect(() => {
     const result = GuildProfileActionCreators.trackGuildProfileViewed(guildId, analyticsLocations);
@@ -63,54 +60,55 @@ export default function GuildProfileActionSheet(guildId) {
       if (null == guildProfile) {
         if (stateFromStores === INVALID_ACCESS_ERROR_CODE) {
           let tmp19 = closure_10(tmp2(tmp3[16]), {});
-          obj = { size: "lg", text: null, onPress: null };
+          const obj7 = { size: "lg", text: null, onPress: null };
           const intl2 = tmp5(tmp3[18]).intl;
-          obj.text = intl2.string(tmp5(tmp3[18]).t.cpT0Cq);
-          obj.onPress = bottomSheetClose;
-          let tmp18 = closure_10(tmp5(tmp3[17]).Button, obj);
+          obj7.text = intl2.string(tmp5(tmp3[18]).t.cpT0Cq);
+          obj7.onPress = bottomSheetClose;
+          let tmp18 = closure_10(tmp5(tmp3[17]).Button, obj7);
           let tmp20 = closure_10;
         }
       }
       if (null == guildProfile) {
-        obj = { onRetry: callback };
-        tmp19 = closure_10(tmp2(tmp3[19]), obj);
-        obj1 = { size: "lg", text: null, onPress: null };
+        const obj8 = { onRetry: callback };
+        tmp19 = closure_10(tmp2(tmp3[19]), obj8);
+        const obj9 = { size: "lg", text: null, onPress: null };
         const intl = tmp5(tmp3[18]).intl;
-        obj1.text = intl.string(tmp5(tmp3[18]).t.cpT0Cq);
-        obj1.onPress = bottomSheetClose;
-        tmp18 = closure_10(tmp5(tmp3[17]).Button, obj1);
+        obj9.text = intl.string(tmp5(tmp3[18]).t.cpT0Cq);
+        obj9.onPress = bottomSheetClose;
+        tmp18 = closure_10(tmp5(tmp3[17]).Button, obj9);
         tmp20 = closure_10;
       } else {
-        obj2 = { guildProfile };
-        obj3 = { profile: guildProfile, context, inviteKey };
-        tmp18 = closure_10(tmp2(tmp3[21]), obj3);
-        tmp19 = closure_10(tmp2(tmp3[20]), obj2);
+        const obj10 = { guildProfile };
+        const obj11 = { profile: guildProfile, context, inviteKey };
+        tmp18 = closure_10(tmp2(tmp3[21]), obj11);
+        tmp19 = closure_10(tmp2(tmp3[20]), obj10);
         tmp20 = closure_10;
-        const tmp17 = closure_10(tmp2(tmp3[20]), obj2);
+        const tmp17 = closure_10(tmp2(tmp3[20]), obj10);
       }
     }
     const items4 = [token1];
-    const memo = obj5.useMemo(() => {
+    const memo = obj6.useMemo(() => {
       const obj = _modDef672(token1);
       const items = [_modDef672(token1).alpha(0).hex(), token1];
       return items;
     }, items4);
-    obj4 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, footer: null, children: null };
-    obj5 = { start: VerticalGradient.START, end: { x: 0, y: 0.5 }, style: tmp.footerContainer, colors: memo, children: tmp18 };
-    obj4.footer = tmp20(tmp2(tmp3[24]), obj5);
-    const obj6 = { enableFooterMarginAdjustment: true, style: tmp.scrollView, children: tmp19 };
-    const items5 = [tmp20(tmp5(tmp3[25]).BottomSheetScrollView, obj6), ];
-    const obj7 = { variant: "floating", tabStyle: null, onPress: null };
-    const obj8 = { backgroundColor: token };
-    obj7.tabStyle = obj8;
-    obj7.onPress = bottomSheetClose;
-    items5[1] = tmp20(tmp5(tmp3[26]).ActionSheetHeaderBar, obj7);
-    obj4.children = items5;
-    return closure_11(tmp5(tmp3[23]).BottomSheet, obj4);
+    const obj12 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, footer: null, children: null };
+    const obj13 = { start: VerticalGradient.START, end: { x: 0, y: 0.5 }, style: tmp.footerContainer, colors: memo, children: tmp18 };
+    obj12.footer = tmp20(tmp2(tmp3[24]), obj13);
+    const obj14 = { enableFooterMarginAdjustment: true, style: tmp.scrollView, children: tmp19 };
+    const items5 = [tmp20(tmp5(tmp3[25]).BottomSheetScrollView, obj14), ];
+    const obj15 = { variant: "floating", tabStyle: null, onPress: null };
+    const obj16 = { backgroundColor: token };
+    obj15.tabStyle = obj16;
+    obj15.onPress = bottomSheetClose;
+    items5[1] = tmp20(tmp5(tmp3[26]).ActionSheetHeaderBar, obj15);
+    obj12.children = items5;
+    return closure_11(tmp5(tmp3[23]).BottomSheet, obj12);
   }
-  const tmp10 = fetchGuildProfile(analyticsLocations[13]);
+  const obj5 = guildId(analyticsLocations[11]);
+  obj6 = token1;
   tmp19 = closure_10(closure_4, { style: tmp.loadingContainer, children: closure_10(closure_5, { animating: true, size: "large" }) });
   tmp18 = null;
   tmp20 = closure_10;
-  const obj9 = { style: tmp.loadingContainer, children: closure_10(closure_5, { animating: true, size: "large" }) };
+  const obj17 = { style: tmp.loadingContainer, children: closure_10(closure_5, { animating: true, size: "large" }) };
 };

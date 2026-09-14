@@ -1,13 +1,13 @@
-// === Module 13430: AndroidTwoWeekTrialsExperiment ===
+// === Module 13431: AndroidTwoWeekTrialsExperiment ===
 
-// Module 13430 (AndroidTwoWeekTrialsExperiment)
+// Module 13431 (AndroidTwoWeekTrialsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };
-obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
-obj[2] = { enabled: true, trialCTAEnabled: false };
-obj.variations = obj;
+const obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
+obj2[2] = { enabled: true, trialCTAEnabled: false };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 

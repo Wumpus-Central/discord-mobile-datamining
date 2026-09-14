@@ -1,6 +1,6 @@
-// === Module 14680: ProfilePendingImageUtils ===
+// === Module 14681: ProfilePendingImageUtils ===
 
-// Module 14680 (ProfilePendingImageUtils)
+// Module 14681 (ProfilePendingImageUtils)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7092 */;
 import size from "module_2" /* 2 */;
@@ -14,14 +14,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
   if (ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset: "Array", originalMd5 };
+    const obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset: "Array", originalMd5 };
     return obj;
   } else if (ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
-    obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset, originalMd5 };
-    return obj;
+    const obj2 = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset, originalMd5 };
+    return obj2;
   } else if (ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    const obj1 = { assetOrigin: NEW_ASSET, imageUri, description: "Array", originalAsset };
-    return obj1;
+    const obj3 = { assetOrigin: NEW_ASSET, imageUri, description: "Array", originalAsset };
+    return obj3;
   } else {
     GlobalUtils.assertNever(NEW_ASSET);
     const tmp3Result = GlobalUtils;

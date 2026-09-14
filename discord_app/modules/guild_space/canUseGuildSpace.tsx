@@ -4,6 +4,8 @@
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -34,15 +36,15 @@ export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
 export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActionRows) {
   _require = id;
   const guildSpaceExperimentEnabled = require("GuildSpaceExperiment").useGuildSpaceExperimentEnabled(id, useGuildActionRows);
-  let tmpResult = tmp(504);
+  const obj = require("GuildSpaceExperiment");
   const items = [GuildStore];
   const items1 = [id];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;
-  tmpResult = tmp(504);
+  const tmpResult = require("initialize");
   const items2 = [PermissionStore];
   const items3 = [stateFromStores];
-  const stateFromStores1 = tmpResult.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = PermissionStore.can(Permissions.MANAGE_GUILD, tmp);

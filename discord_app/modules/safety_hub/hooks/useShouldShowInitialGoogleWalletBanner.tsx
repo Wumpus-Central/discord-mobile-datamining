@@ -1,10 +1,12 @@
-// === Module 14856: useShouldShowInitialGoogleWalletBanner ===
+// === Module 14857: useShouldShowInitialGoogleWalletBanner ===
 
-// Module 14856 (useShouldShowInitialGoogleWalletBanner)
+// Module 14857 (useShouldShowInitialGoogleWalletBanner)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const AgeCheckStatus = fn(8537).AgeCheckStatus;
@@ -17,18 +19,18 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
   let obj = require("initialize");
   const items1 = [SafetyHubStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => SafetyHubStore.getIsManualReviewFallbackEnabled());
-  let obj2 = require("initialize");
-  [tmp6, require] = _slicedToArray(noop.useState(false), 2);
+  const obj2 = require("initialize");
+  [tmp6, require] = noop.useState(false);
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }
   if (stateFromStores) {
-    let tmpResult = require("PlatformUtils");
-    stateFromStores = tmpResult.isAndroid();
+    stateFromStores = require("PlatformUtils").isAndroid();
+    const tmpResult = require("PlatformUtils");
   }
   if (stateFromStores) {
-    tmpResult = require("SafetyHubUtils");
-    stateFromStores = tmpResult.isCurrentUserSuspended();
+    stateFromStores = require("SafetyHubUtils").isCurrentUserSuspended();
+    const tmpResult2 = require("SafetyHubUtils");
   }
   const items2 = [stateFromStores];
   const effect = noop.useEffect(() => {
@@ -42,8 +44,8 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -56,8 +58,8 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_1 = tmp3;
                 closure_0 = tmp7;
@@ -66,8 +68,8 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                let obj1 = { value: _true(8555).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-                return obj1;
+                const obj6 = { value: _true(8555).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                return obj6;
               }
             } else {
               if (1 === tmp7) {
@@ -84,8 +86,8 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                   } else if (arg0 === 2) {
                     c2 = 0;
                     c4 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
+                    const obj7 = { value, done: true };
+                    return obj7;
                   } else {
                     methods = value.methods;
                     let everyResult = methods.length > 0;
@@ -102,7 +104,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                   if (arg0 === 2) {
                     c2 = 0;
                     c4 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   }
                 }
@@ -112,11 +114,10 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 }
                 c2 = 0;
               }
-              obj1 = _true(8558);
               c3 = 3;
               c4 = 1;
-              const obj3 = { value: obj1.checkGoogleWalletAvailable(), done: false };
-              return obj3;
+              const obj8 = { value: _true(8558).checkGoogleWalletAvailable(), done: false };
+              return obj8;
             }
           } catch (tmp27) {
             if (tmp4 === c2) {

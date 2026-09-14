@@ -1,11 +1,11 @@
-// === Module 15323: EmojiIcon ===
+// === Module 15324: EmojiIcon ===
 
-// Module 15323 (EmojiIcon)
+// Module 15324 (EmojiIcon)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5668 */;
 import EmojiDefault from "Emoji" /* 7233 */;
-import _modDef10430 from "module_10430" /* 10430 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15324 */;
+import _modDef10431 from "module_10431" /* 10431 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15325 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,27 +27,26 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = useEmojiByIdOrName;
-  const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
+  const emojiByIdOrName = useEmojiByIdOrName.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
     if (flag) {
-      obj = { resizeMode: "contain", style: null, source: null };
+      const obj2 = { resizeMode: "contain", style: null, source: null };
       size = { width: num, height: num };
-      obj.style = size;
-      obj.source = _modDef10430;
+      obj2.style = size;
+      obj2.source = _modDef10431;
       tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
     }
     let tmp8Result = tmp4;
   } else {
-    obj = { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+    const obj3 = { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
     const size1 = { width: num, height: num };
-    obj.fastImageStyle = size1;
+    obj3.fastImageStyle = size1;
     if (fontSize == null) {
       fontSize = num;
     }
-    const obj1 = { fontSize, lineHeight };
-    obj.textEmojiStyle = obj1;
+    const obj5 = { fontSize, lineHeight };
+    obj3.textEmojiStyle = obj5;
     if (null != emojiByIdOrName.id) {
       let str = emojiByIdOrName.name;
     } else {
@@ -59,17 +58,17 @@ export default function EmojiIcon(size) {
         str = "";
       }
     }
-    obj.name = str;
+    obj3.name = str;
     if (null != emojiByIdOrName.id) {
-      const obj2 = { id: null, animated: null, size: null };
+      const obj6 = { id: null, animated: null, size: null };
       ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
-      obj2.size = num;
-      let url = AvatarUtilsDefault.getEmojiURL(obj2);
+      obj6.size = num;
+      let url = AvatarUtilsDefault.getEmojiURL(obj6);
       const tmp9Result = AvatarUtilsDefault;
     } else {
       url = emojiByIdOrName.url;
     }
-    obj.src = url;
+    obj3.src = url;
     tmp8Result = jsx(EmojiDefault, { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
   }
   return tmp8Result;

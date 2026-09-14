@@ -1,6 +1,6 @@
-// === Module 12604: GuildProgressStore ===
+// === Module 12605: GuildProgressStore ===
 
-// Module 12604 (GuildProgressStore)
+// Module 12605 (GuildProgressStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -23,7 +23,7 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-const Steps = fn(12598).Steps;
+const Steps = fn(12599).Steps;
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {
@@ -132,20 +132,20 @@ const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    guild = GuildStore.getGuild(guild.id);
-    if (null == guild) {
+    const guild1 = GuildStore.getGuild(guild.id);
+    if (null == guild1) {
       return false;
     } else {
-      let tmp3 = guild.ownerId === AuthenticationStore.getId();
+      let tmp3 = guild1.ownerId === AuthenticationStore.getId();
       if (tmp3) {
-        tmp3 = null != dependencyMap[guild.id];
+        tmp3 = null != dependencyMap[guild1.id];
       }
       if (tmp3) {
-        if (null != guild.icon) {
-          dependencyMap[guild.id].add(Steps.AVATAR);
+        if (null != guild1.icon) {
+          dependencyMap[guild1.id].add(Steps.AVATAR);
         }
         if (guild.member_count > 1) {
-          dependencyMap[guild.id].add(Steps.INVITE);
+          dependencyMap[guild1.id].add(Steps.INVITE);
         }
       }
     }

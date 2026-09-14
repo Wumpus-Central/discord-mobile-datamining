@@ -22,19 +22,20 @@ let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = ButtonConstants.getButtonBorderRadius(arg0);
-  let obj = { paddingBottom: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+  const obj = { paddingBottom: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg2) {
     num = 1;
   }
-  obj = { labelPressable: obj, pill: null, imageWrapper: null, image: null, imageDim: null, flexGrow: num };
+  const obj2 = { labelPressable: obj, pill: null, imageWrapper: null, image: null, imageDim: null };
+  obj.flexGrow = num;
   const tmpResult = ButtonConstants;
-  obj.pill = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: ButtonConstants.BUTTON_BORDER_WIDTH, outlineColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
-  obj.imageWrapper = { width: sum, height: sum, position: "relative" };
-  obj.image = { width: sum, height: sum };
+  obj2.pill = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: ButtonConstants.BUTTON_BORDER_WIDTH, outlineColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  obj2.imageWrapper = { width: sum, height: sum, position: "relative" };
+  obj2.image = { width: sum, height: sum };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND, borderRadius: buttonBorderRadius };
-  obj.imageDim = rect;
-  return obj;
+  obj2.imageDim = rect;
+  return obj2;
 });
 const __initData = { code: "function ImageButtonNativeTsx1(){const{withSpring,pressed,ON_PRESS_SPRING}=this.__closure;return{opacity:withSpring(pressed.get()===1?1:0,ON_PRESS_SPRING,'animate-always')};}" };
 const size = fn(2);
@@ -50,10 +51,9 @@ export const ImageButton = noop.forwardRef((size, ref) => {
   ({ grow, image } = size);
   const merged = Object.assign(size, Object.assign({ size: 0, label: 0, grow: 0, image: 0, accessibilityLabel: 0, maxFontSizeMultiplier: 0, onPressIn: 0, onPressOut: 0 }));
   let sharedValue;
+  const tmp4 = closure_8(str, onPressIn(sharedValue[6]).useIconSizeStyles(str, true, maxFontSizeMultiplier).width, grow);
   let obj = onPressIn(sharedValue[6]);
-  const tmp4 = closure_8(str, obj.useIconSizeStyles(str, true, maxFontSizeMultiplier).width, grow);
-  let obj1 = onPressIn(sharedValue[7]);
-  sharedValue = obj1.useSharedValue(0);
+  sharedValue = onPressIn(sharedValue[7]).useSharedValue(0);
   const items = [sharedValue, onPressIn];
   const callback = noop.useCallback((arg0) => {
     const result = sharedValue.set(1);
@@ -68,7 +68,7 @@ export const ImageButton = noop.forwardRef((size, ref) => {
       tmp2(arg0);
     }
   }, items1);
-  let obj2 = onPressIn(sharedValue[7]);
+  const obj2 = onPressIn(sharedValue[7]);
   class B {
     constructor() {
       tmp = closure_0;
@@ -78,56 +78,55 @@ export const ImageButton = noop.forwardRef((size, ref) => {
       if (1 === closure_2.get()) {
         num = 1;
       }
-      obj = { opacity: obj.withSpring(num, tmp(tmp2[9]).ON_PRESS_SPRING, "animate-always") };
-      return obj;
+      obj1 = { opacity: obj.withSpring(num, tmp(tmp2[9]).ON_PRESS_SPRING, "animate-always") };
+      return obj1;
     }
   }
-  obj = { withSpring: onPressIn(sharedValue[8]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: onPressIn(sharedValue[9]).ON_PRESS_SPRING };
-  B.__closure = obj;
+  const obj3 = onPressIn(sharedValue[7]);
+  B.__closure = { withSpring: onPressIn(sharedValue[8]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: onPressIn(sharedValue[9]).ON_PRESS_SPRING };
   B.__workletHash = 17257158773379;
   B.__initData = __initData;
-  obj = { style: tmp4.imageWrapper, children: null };
-  obj1 = { source: image, style: tmp4.image };
-  const animatedStyle = obj2.useAnimatedStyle(B);
-  const items2 = [closure_6(closure_5, obj1), ];
-  obj2 = { style: null };
+  const obj5 = { style: tmp4.imageWrapper, children: null };
+  const animatedStyle = obj3.useAnimatedStyle(B);
+  const items2 = [closure_6(closure_5, { source: image, style: tmp4.image }), ];
+  const obj7 = { style: null };
   const items3 = [tmp4.imageDim, animatedStyle];
-  obj2.style = items3;
-  items2[1] = closure_6(onPressOut(sharedValue[7]).View, obj2);
-  obj.children = items2;
-  const tmp11 = closure_7(closure_4, obj);
+  obj7.style = items3;
+  items2[1] = closure_6(onPressOut(sharedValue[7]).View, obj7);
+  obj5.children = items2;
+  const tmp11 = closure_7(closure_4, obj5);
   if (null != label) {
-    const obj3 = { style: tmp4.labelPressable };
+    const obj8 = { style: tmp4.labelPressable };
     const merged1 = Object.assign(merged);
-    obj3.variant = "none";
-    obj3.accessibilityLabel = accessibilityLabel;
-    const obj4 = { ref };
+    obj8.variant = "none";
+    obj8.accessibilityLabel = accessibilityLabel;
+    const obj9 = { ref };
     const merged2 = Object.assign(merged);
-    obj4.icon = tmp11;
-    obj4.accessibilityRole = "none";
-    obj4.accessibilityLabel = "";
-    obj4.size = "lg";
-    obj4.pillStyle = tmp4.pill;
-    obj4.variant = "secondary";
-    obj4.onPressIn = callback;
-    obj4.onPressOut = callback1;
-    obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items4 = [closure_6(onPressIn(tmp3[11]).BaseIconButton, obj4), ];
-    const obj5 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
-    items4[1] = closure_6(onPressIn(tmp3[12]).Text, obj5);
-    obj3.children = items4;
-    let tmp10Result = closure_7(onPressIn(tmp3[10]).BaseButton, obj3);
+    obj9.icon = tmp11;
+    obj9.accessibilityRole = "none";
+    obj9.accessibilityLabel = "";
+    obj9.size = "lg";
+    obj9.pillStyle = tmp4.pill;
+    obj9.variant = "secondary";
+    obj9.onPressIn = callback;
+    obj9.onPressOut = callback1;
+    obj9.maxFontSizeMultiplier = maxFontSizeMultiplier;
+    const items4 = [closure_6(onPressIn(tmp3[11]).BaseIconButton, obj9), ];
+    const obj10 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
+    items4[1] = closure_6(onPressIn(tmp3[12]).Text, obj10);
+    obj8.children = items4;
+    let tmp10Result = closure_7(onPressIn(tmp3[10]).BaseButton, obj8);
   } else {
-    const obj6 = { ref };
+    const obj11 = { ref };
     const merged3 = Object.assign(merged);
-    obj6.size = str;
-    obj6.icon = tmp11;
-    obj6.accessibilityLabel = accessibilityLabel;
-    obj6.pillStyle = tmp4.pill;
-    obj6.variant = "secondary";
-    obj6.onPressIn = callback;
-    obj6.onPressOut = callback1;
-    tmp10Result = closure_6(onPressIn(tmp3[11]).BaseIconButton, obj6);
+    obj11.size = str;
+    obj11.icon = tmp11;
+    obj11.accessibilityLabel = accessibilityLabel;
+    obj11.pillStyle = tmp4.pill;
+    obj11.variant = "secondary";
+    obj11.onPressIn = callback;
+    obj11.onPressOut = callback1;
+    tmp10Result = closure_6(onPressIn(tmp3[11]).BaseIconButton, obj11);
   }
   return tmp10Result;
 });

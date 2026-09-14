@@ -1,9 +1,9 @@
-// === Module 12621: GuildPowerupsNotificationStore ===
+// === Module 12622: GuildPowerupsNotificationStore ===
 
-// Module 12621 (GuildPowerupsNotificationStore)
+// Module 12622 (GuildPowerupsNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12622 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12623 */;
 import GameServerStore from "GameServerStore" /* 4546 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
@@ -53,7 +53,6 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(Dispat
     }
     const stateForGuild = GuildPowerupsStore.getStateForGuild(guildId);
     const stateForGuild1 = GameServerStore.getStateForGuild(guildId);
-    let obj = getExpiringGuildEntitlements;
     let unlockedPowerups;
     if (stateForGuild != null) {
       unlockedPowerups = stateForGuild.unlockedPowerups;
@@ -70,8 +69,8 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(Dispat
       entitlements = {};
     }
     HermesBuiltin.arraySpread(Object.values(entitlements), tmp4);
-    const expiringGuildEntitlements = obj.getExpiringGuildEntitlements(items);
-    obj = {};
+    const expiringGuildEntitlements = getExpiringGuildEntitlements.getExpiringGuildEntitlements(items);
+    const obj2 = {};
     const merged = Object.assign(closure_5);
     let ends_at;
     if (expiringGuildEntitlements[expiringGuildEntitlements.length - 1] != null) {
@@ -81,9 +80,11 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(Dispat
       const _Date = Date;
       ends_at = Date.now();
     }
-    obj = { lastSeenWarningNotification: new Date(ends_at).getTime(), lastBoostCount: num };
-    obj[guildId] = obj;
-    closure_5 = obj;
+    const obj3 = { lastSeenWarningNotification: null, lastBoostCount: null };
+    obj3.lastSeenWarningNotification = new Date(ends_at).getTime();
+    obj3.lastBoostCount = num;
+    obj2[guildId] = obj3;
+    closure_5 = obj2;
   },
   GUILD_POWERUPS_RESET_NOTIFICATIONS: function handleResetNotifications() {
     closure_5 = {};

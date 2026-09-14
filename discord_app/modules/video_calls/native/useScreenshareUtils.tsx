@@ -16,6 +16,7 @@ import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
+const require = globalThis.__r;
 const useHasVideoPermissionDefault = useHasVideoPermission;
 
 require = fn;
@@ -24,8 +25,9 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const tmpResult = StreamKeyUtils;
-    tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
+    const tmpResult = StreamActionCreators;
+    tmpResult.stopStream(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
+    const tmpResult2 = StreamKeyUtils;
   }
   AudioActionCreatorsDefault.setGoLiveSource(null);
 }
@@ -33,12 +35,12 @@ function startStream() {
   if ("android" === obj.getVoiceEngine().platform) {
     const result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
       if (arg0) {
-        let tmpResult = require("inject");
-        const voiceEngine = tmpResult.getVoiceEngine();
+        const voiceEngine = require("inject").getVoiceEngine();
         voiceEngine.startBroadcast();
+        const tmpResult = require("inject");
       } else {
-        tmpResult = require("CallsUtils");
-        const result = tmpResult.showScreenshareDisabledAlert();
+        const result = require("CallsUtils").showScreenshareDisabledAlert();
+        const tmpResult2 = require("CallsUtils");
       }
     });
   } else {
@@ -108,9 +110,9 @@ export default function useScreenshareUtils(arg0) {
         }
       } else {
         fn = function l() {
-          closure_0(9239);
-          const obj = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-          obj.reportAVError(obj);
+          const obj = closure_0(9239);
+          obj.reportAVError({ type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+          const obj2 = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
           const result = closure_0(9211).showMinOSScreenshareRequirementAlert();
         };
       }
@@ -170,9 +172,9 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     }
   } else {
     fn = function l() {
-      closure_0(9239);
-      const obj = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-      obj.reportAVError(obj);
+      const obj = closure_0(9239);
+      obj.reportAVError({ type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+      const obj2 = { type: closure_0(9239).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
       const result = closure_0(9211).showMinOSScreenshareRequirementAlert();
     };
   }
@@ -187,12 +189,12 @@ export const tryStartScreenShare = function tryStartScreenShare(channel) {
     if ("android" === obj2.getVoiceEngine().platform) {
       let result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
         if (arg0) {
-          let tmpResult = require("inject");
-          const voiceEngine = tmpResult.getVoiceEngine();
+          const voiceEngine = require("inject").getVoiceEngine();
           voiceEngine.startBroadcast();
+          const tmpResult = require("inject");
         } else {
-          tmpResult = require("CallsUtils");
-          const result = tmpResult.showScreenshareDisabledAlert();
+          const result = require("CallsUtils").showScreenshareDisabledAlert();
+          const tmpResult2 = require("CallsUtils");
         }
       });
     } else {

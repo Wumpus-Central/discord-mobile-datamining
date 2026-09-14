@@ -56,8 +56,7 @@ function createChannelRecord(type) {
     type.flags_ = type.flags;
     delete tmp2[tmp];
   }
-  tmp5 = new tmp5(type);
-  return tmp5;
+  return new tmp5(type);
 }
 const Constants = fn(1074);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
@@ -630,7 +629,7 @@ class UnknownChannelRecord extends ChannelRecordBase {
   }
 }
 UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
-  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "fill", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: true, template: "/assets/design/components/Icon/native/redesign/generated/images", themeColor: 24, threadMetadata: 24, topic_: null, totalMessageSent: "4c483b0c9e54993ee793f71f5dfd0dd4", type: "SendMessageIcon", userLimit_: "png", version: "__closure", videoQualityMode: "marginTop", linkedLobby: "Icon", hdStreamingUntil: "Icon", hdStreamingBuyerId: "withTiming", voiceHangout: "then" };
+  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "fill", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: "years", template: "months", themeColor: "weeks", threadMetadata: "days", topic_: "hours", totalMessageSent: "minutes", type: "seconds", userLimit_: false, version: false, videoQualityMode: false, linkedLobby: false, hdStreamingUntil: false, hdStreamingBuyerId: false, voiceHangout: false };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
     ({ bitrate: obj.bitrate_, default_auto_archive_duration: obj.defaultAutoArchiveDuration, default_forum_layout: obj.defaultForumLayout } = application_id);
@@ -640,8 +639,8 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       if (0 !== application_id.default_reaction_emoji.emoji_id) {
         emoji_id = application_id.default_reaction_emoji.emoji_id;
       }
-      obj = { emojiId: emoji_id, emojiName: application_id.default_reaction_emoji.emoji_name };
-      tmp2 = obj;
+      const obj2 = { emojiId: emoji_id, emojiName: application_id.default_reaction_emoji.emoji_name };
+      tmp2 = obj2;
     }
     let guild_id = arg1;
     obj.defaultReactionEmoji = tmp2;
@@ -656,16 +655,16 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     ({ icon: obj.icon, icon_emoji } = application_id);
     let tmp5;
     if (null != icon_emoji) {
-      obj = { id: null, name: null };
       ({ id: obj3.id, name: obj3.name } = icon_emoji);
-      tmp5 = obj;
+      tmp5 = { id: null, name: null };
+      obj4 = { id: null, name: null };
     }
     obj.iconEmoji = tmp5;
     ({ id: obj.id, is_message_request: obj.isMessageRequest, is_message_request_timestamp: obj.isMessageRequestTimestamp, is_spam: obj.isSpam, last_message_id: obj.lastMessageId, last_non_message_activity_timestamp: obj.lastNonMessageActivityTimestamp, last_pin_timestamp: obj.lastPinTimestamp } = application_id);
     let tmp6;
     if (null != application_id.member) {
-      const obj1 = { flags: application_id.member.flags, muted: application_id.member.muted, muteConfig: application_id.member.mute_config, joinTimestamp: application_id.member.join_timestamp };
-      tmp6 = obj1;
+      const obj5 = { flags: application_id.member.flags, muted: application_id.member.muted, muteConfig: application_id.member.mute_config, joinTimestamp: application_id.member.join_timestamp };
+      tmp6 = obj5;
     }
     obj.member = tmp6;
     ({ member_count: obj.memberCount, member_ids_preview: obj.memberIdsPreview, member_list_id: obj.memberListId, message_count: obj.messageCount, name } = application_id);
@@ -675,16 +674,16 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     obj.name = name;
     const nicks = application_id.nicks;
     if (null == nicks) {
-      let obj2 = {};
+      let obj6 = {};
     } else {
-      obj2 = _modDef12.reduce(nicks, (arg0, id) => {
+      obj6 = _modDef12.reduce(nicks, (arg0, id) => {
         arg0[id.id] = id.nick;
         return arg0;
       }, {});
     }
-    obj.nicks = obj2;
+    obj.nicks = obj6;
     ({ nsfw: obj.nsfw_, origin_channel_id: obj.originChannelId, owner_id: obj.ownerId, parent_id: obj.parent_id, permission_overwrites } = application_id);
-    const obj3 = {};
+    const obj7 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
         obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -692,10 +691,10 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
         obj.allow = deserializer.deserialize(id.allow);
         const deserializer2 = BigFlagUtils;
         obj.deny = deserializer2.deserialize(id.deny);
-        obj1[id.id] = obj;
+        obj8[id.id] = obj;
       });
     }
-    obj.permissionOverwrites_ = obj3;
+    obj.permissionOverwrites_ = obj7;
     ({ position: obj.position_, rate_limit_per_user: obj.rateLimitPerUser_ } = application_id);
     obj.rawRecipients = null != application_id.recipients ? application_id.recipients : [];
     if (null != application_id.recipients) {
@@ -708,13 +707,13 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     ({ recipient_flags: obj.recipientFlags, rtc_region: obj.rtcRegion, safety_warnings: obj.safetyWarnings, blocked_user_warning_dismissed: obj.blockedUserWarningDismissed, template: obj.template, theme_color: obj.themeColor } = application_id);
     let tmp10;
     if (null != application_id.thread_metadata) {
-      const obj4 = { archived: application_id.thread_metadata.archived, autoArchiveDuration: application_id.thread_metadata.auto_archive_duration, archiveTimestamp: application_id.thread_metadata.archive_timestamp, createTimestamp: application_id.thread_metadata.create_timestamp, locked: application_id.thread_metadata.locked, invitable: null };
+      const obj14 = { archived: application_id.thread_metadata.archived, autoArchiveDuration: application_id.thread_metadata.auto_archive_duration, archiveTimestamp: application_id.thread_metadata.archive_timestamp, createTimestamp: application_id.thread_metadata.create_timestamp, locked: application_id.thread_metadata.locked, invitable: null };
       let flag = application_id.thread_metadata.invitable;
       if (flag == null) {
         flag = true;
       }
-      obj4.invitable = flag;
-      tmp10 = obj4;
+      obj14.invitable = flag;
+      tmp10 = obj14;
     }
     obj.threadMetadata = tmp10;
     ({ topic: obj.topic_, total_message_sent: obj.totalMessageSent } = application_id);
@@ -725,7 +724,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     }
     obj.type = UNKNOWN;
     ({ user_limit: obj.userLimit_, version: obj.version, video_quality_mode: obj.videoQualityMode, linked_lobby: obj.linkedLobby, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, voice_hangout: obj.voiceHangout } = application_id);
-    return obj3(1969).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(1969).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -758,34 +757,34 @@ class GuildVocalChannelRecord extends ChannelRecordBase {
 }
 GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
   let guild_id = arg1;
-  let permissionOverwrites_ = { application_id: application_id.application_id, bitrate_: application_id.bitrate, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, originChannelId: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, rtcRegion: null, themeColor: null, topic_: null, type: null, userLimit_: null, version: null, videoQualityMode: null, hdStreamingUntil: null, hdStreamingBuyerId: null, voiceHangout: null };
+  obj = { application_id: application_id.application_id, bitrate_: application_id.bitrate, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, originChannelId: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, rtcRegion: null, themeColor: null, topic_: null, type: null, userLimit_: null, version: null, videoQualityMode: null, hdStreamingUntil: null, hdStreamingBuyerId: null, voiceHangout: null };
   if (arg1 == null) {
     guild_id = application_id.guild_id;
   }
   if (guild_id == null) {
     guild_id = null;
   }
-  permissionOverwrites_.guild_id = guild_id;
+  obj.guild_id = guild_id;
   const icon_emoji = application_id.icon_emoji;
   let tmp2;
   if (null != icon_emoji) {
-    permissionOverwrites_ = { id: null, name: null };
     ({ id: obj2.id, name: obj2.name } = icon_emoji);
-    tmp2 = permissionOverwrites_;
+    tmp2 = { id: null, name: null };
+    const obj3 = { id: null, name: null };
   }
-  permissionOverwrites_.iconEmoji = tmp2;
+  obj.iconEmoji = tmp2;
   ({ id: obj.id, last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp, member_list_id: obj.memberListId, name } = application_id);
   if (name == null) {
     name = "";
   }
-  permissionOverwrites_.name = name;
+  obj.name = name;
   let flag = application_id.nsfw;
   if (flag == null) {
     flag = false;
   }
-  permissionOverwrites_.nsfw_ = flag;
+  obj.nsfw_ = flag;
   ({ origin_channel_id: obj.originChannelId, parent_id: obj.parent_id, permission_overwrites } = application_id);
-  permissionOverwrites_ = {};
+  const obj6 = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
       obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -793,24 +792,24 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
       obj.allow = deserializer.deserialize(id.allow);
       const deserializer2 = BigFlagUtils;
       obj.deny = deserializer2.deserialize(id.deny);
-      obj1[id.id] = obj;
+      obj8[id.id] = obj;
     });
   }
-  permissionOverwrites_.permissionOverwrites_ = permissionOverwrites_;
+  obj.permissionOverwrites_ = obj6;
   ({ position: obj.position_, rate_limit_per_user } = application_id);
   if (rate_limit_per_user == null) {
     rate_limit_per_user = 0;
   }
-  permissionOverwrites_.rateLimitPerUser_ = rate_limit_per_user;
+  obj.rateLimitPerUser_ = rate_limit_per_user;
   ({ rtc_region: obj.rtcRegion, theme_color: obj.themeColor, topic: obj.topic_ } = application_id);
   if (null != application_id.type) {
     let GUILD_VOICE = application_id.type;
   } else {
     GUILD_VOICE = ChannelTypes.GUILD_VOICE;
   }
-  permissionOverwrites_.type = GUILD_VOICE;
+  obj.type = GUILD_VOICE;
   ({ user_limit: obj.userLimit_, version: obj.version, video_quality_mode: obj.videoQualityMode, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, voice_hangout: obj.voiceHangout } = application_id);
-  let GUILD_TEXT = permissionOverwrites_.type;
+  let GUILD_TEXT = obj.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
@@ -818,7 +817,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return permissionOverwrites_(1969).dangerouslyCast(permissionOverwrites_, tmp7);
+  return obj6(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -834,34 +833,34 @@ class GuildTextualChannelRecord extends ChannelRecordBase {
 }
 GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
   let guild_id = arg1;
-  let permissionOverwrites_ = { application_id: application_id.application_id, defaultAutoArchiveDuration: application_id.default_auto_archive_duration, defaultThreadRateLimitPerUser: application_id.default_thread_rate_limit_per_user, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, themeColor: null, topic_: null, type: null, linkedLobby: null, hdStreamingUntil: null, hdStreamingBuyerId: null, version: null };
+  obj = { application_id: application_id.application_id, defaultAutoArchiveDuration: application_id.default_auto_archive_duration, defaultThreadRateLimitPerUser: application_id.default_thread_rate_limit_per_user, flags_: application_id.flags, guild_id: null, iconEmoji: null, id: null, lastMessageId: null, lastPinTimestamp: null, memberListId: null, name: null, nsfw_: null, parent_id: null, permissionOverwrites_: null, position_: null, rateLimitPerUser_: null, themeColor: null, topic_: null, type: null, linkedLobby: null, hdStreamingUntil: null, hdStreamingBuyerId: null, version: null };
   if (arg1 == null) {
     guild_id = application_id.guild_id;
   }
   if (guild_id == null) {
     guild_id = null;
   }
-  permissionOverwrites_.guild_id = guild_id;
+  obj.guild_id = guild_id;
   const icon_emoji = application_id.icon_emoji;
   let tmp2;
   if (null != icon_emoji) {
-    permissionOverwrites_ = { id: null, name: null };
     ({ id: obj2.id, name: obj2.name } = icon_emoji);
-    tmp2 = permissionOverwrites_;
+    tmp2 = { id: null, name: null };
+    const obj3 = { id: null, name: null };
   }
-  permissionOverwrites_.iconEmoji = tmp2;
+  obj.iconEmoji = tmp2;
   ({ id: obj.id, last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp, member_list_id: obj.memberListId, name } = application_id);
   if (name == null) {
     name = "";
   }
-  permissionOverwrites_.name = name;
+  obj.name = name;
   let flag = application_id.nsfw;
   if (flag == null) {
     flag = false;
   }
-  permissionOverwrites_.nsfw_ = flag;
+  obj.nsfw_ = flag;
   ({ parent_id: obj.parent_id, permission_overwrites } = application_id);
-  permissionOverwrites_ = {};
+  const obj6 = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
       obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -869,24 +868,24 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
       obj.allow = deserializer.deserialize(id.allow);
       const deserializer2 = BigFlagUtils;
       obj.deny = deserializer2.deserialize(id.deny);
-      obj1[id.id] = obj;
+      obj8[id.id] = obj;
     });
   }
-  permissionOverwrites_.permissionOverwrites_ = permissionOverwrites_;
+  obj.permissionOverwrites_ = obj6;
   ({ position: obj.position_, rate_limit_per_user } = application_id);
   if (rate_limit_per_user == null) {
     rate_limit_per_user = 0;
   }
-  permissionOverwrites_.rateLimitPerUser_ = rate_limit_per_user;
+  obj.rateLimitPerUser_ = rate_limit_per_user;
   ({ theme_color: obj.themeColor, topic: obj.topic_ } = application_id);
   if (null != application_id.type) {
     let GUILD_TEXT = application_id.type;
   } else {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  permissionOverwrites_.type = GUILD_TEXT;
+  obj.type = GUILD_TEXT;
   ({ linked_lobby: obj.linkedLobby, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, version: obj.version } = application_id);
-  let GUILD_TEXT2 = permissionOverwrites_.type;
+  let GUILD_TEXT2 = obj.type;
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
   }
@@ -894,7 +893,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return permissionOverwrites_(1969).dangerouslyCast(permissionOverwrites_, tmp7);
+  return obj6(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {
 }
@@ -958,8 +957,8 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
       if (0 !== available_tags.default_reaction_emoji.emoji_id) {
         emoji_id = available_tags.default_reaction_emoji.emoji_id;
       }
-      obj = { emojiId: emoji_id, emojiName: available_tags.default_reaction_emoji.emoji_name };
-      tmp2 = obj;
+      const obj2 = { emojiId: emoji_id, emojiName: available_tags.default_reaction_emoji.emoji_name };
+      tmp2 = obj2;
     }
     let guild_id = arg1;
     obj.defaultReactionEmoji = tmp2;
@@ -974,9 +973,9 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     const icon_emoji = available_tags.icon_emoji;
     let tmp5;
     if (null != icon_emoji) {
-      obj = { id: null, name: null };
       ({ id: obj3.id, name: obj3.name } = icon_emoji);
-      tmp5 = obj;
+      tmp5 = { id: null, name: null };
+      obj4 = { id: null, name: null };
     }
     obj.iconEmoji = tmp5;
     ({ id: obj.id, last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp, member_list_id: obj.memberListId, name } = available_tags);
@@ -990,7 +989,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.nsfw_ = flag;
     ({ parent_id: obj.parent_id, permission_overwrites } = available_tags);
-    const obj1 = {};
+    const obj8 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
         obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -998,10 +997,10 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
         obj.allow = deserializer.deserialize(id.allow);
         const deserializer2 = BigFlagUtils;
         obj.deny = deserializer2.deserialize(id.deny);
-        obj1[id.id] = obj;
+        obj8[id.id] = obj;
       });
     }
-    obj.permissionOverwrites_ = obj1;
+    obj.permissionOverwrites_ = obj8;
     ({ position: obj.position_, rate_limit_per_user } = available_tags);
     if (rate_limit_per_user == null) {
       rate_limit_per_user = 0;
@@ -1015,7 +1014,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj1(1969).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(1969).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1046,9 +1045,9 @@ IdAsNumberCache.prototype["getOrCompute"] = function getOrCompute(id) {
 let obj = Object.create(IdAsNumberCache.prototype);
 const set27 = new Set(items27);
 obj.cache = new privDefault(100);
-obj = Object.create(IdAsNumberCache.prototype);
+let obj4 = Object.create(IdAsNumberCache.prototype);
 const tmp35 = new privDefault(100);
-obj.cache = new privDefault(100);
+obj4.cache = new privDefault(100);
 let PrivateChannelRecord;
 class PrivateChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1079,44 +1078,44 @@ PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, 
   }
   const items1 = [...items];
   return items1.sort((id, id2) => {
-    const orCompute = obj.getOrCompute(id.id);
-    return (orCompute ^ closure_0) - (obj.getOrCompute(id2.id) ^ closure_0);
+    const orCompute = obj4.getOrCompute(id.id);
+    return (orCompute ^ closure_0) - (obj4.getOrCompute(id2.id) ^ closure_0);
   });
 };
 PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   const sortRecipientsResult = PrivateChannelRecord.sortRecipients(application_id.recipients, application_id.id);
-  let reduced = { application_id: application_id.application_id, flags_: application_id.flags, guild_id: null, icon: application_id.icon, id: application_id.id, isMessageRequest: application_id.is_message_request, isMessageRequestTimestamp: application_id.is_message_request_timestamp, isSpam: null, lastMessageId: null, lastPinTimestamp: null, name: null, nicks: null, ownerId: null, rawRecipients: null, recipients: null, recipientFlags: null, safetyWarnings: null, blockedUserWarningDismissed: null, type: null };
+  obj = { application_id: application_id.application_id, flags_: application_id.flags, guild_id: null, icon: application_id.icon, id: application_id.id, isMessageRequest: application_id.is_message_request, isMessageRequestTimestamp: application_id.is_message_request_timestamp, isSpam: null, lastMessageId: null, lastPinTimestamp: null, name: null, nicks: null, ownerId: null, rawRecipients: null, recipients: null, recipientFlags: null, safetyWarnings: null, blockedUserWarningDismissed: null, type: null };
   let flag = application_id.is_spam;
   if (flag == null) {
     flag = false;
   }
-  reduced.isSpam = flag;
+  obj.isSpam = flag;
   ({ last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp, name } = application_id);
   if (name == null) {
     name = "";
   }
-  reduced.name = name;
+  obj.name = name;
   const nicks = application_id.nicks;
   if (null == nicks) {
-    reduced = {};
+    let obj2 = {};
   } else {
-    reduced = _modDef12.reduce(nicks, (arg0, id) => {
+    obj2 = _modDef12.reduce(nicks, (arg0, id) => {
       arg0[id.id] = id.nick;
       return arg0;
     }, {});
   }
-  reduced.nicks = reduced;
-  reduced.ownerId = application_id.owner_id;
-  reduced.rawRecipients = sortRecipientsResult;
-  reduced.recipients = sortRecipientsResult.map((id) => id.id);
+  obj.nicks = obj2;
+  obj.ownerId = application_id.owner_id;
+  obj.rawRecipients = sortRecipientsResult;
+  obj.recipients = sortRecipientsResult.map((id) => id.id);
   ({ recipient_flags: obj.recipientFlags, safety_warnings: obj.safetyWarnings, blocked_user_warning_dismissed: obj.blockedUserWarningDismissed } = application_id);
   if (null != application_id.type) {
     let DM = application_id.type;
   } else {
     DM = ChannelTypes.DM;
   }
-  reduced.type = DM;
-  return TypeUtils.dangerouslyCast(reduced, PrivateChannelRecord);
+  obj.type = DM;
+  return TypeUtils.dangerouslyCast(obj, PrivateChannelRecord);
 };
 prototype2["isSystemDM"] = function isSystemDM() {
   const first = this.rawRecipients[0];
@@ -1135,20 +1134,19 @@ prototype2["getRecipientId"] = function getRecipientId() {
 prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
   const self = this;
   if (arg0 !== arg2) {
-    obj = _modDef12;
     let recipients = self.recipients;
     if (recipients == null) {
       recipients = [];
     }
     const items = [];
     items[HermesBuiltin.arraySpread(recipients, 0)] = arg0;
-    const result = self.set("recipients", obj.uniq(items).sort(SnowflakeUtilsDefault.compare));
+    const result = self.set("recipients", _modDef12.uniq(items).sort(SnowflakeUtilsDefault.compare));
     let result1 = result;
     if (null != arg1) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(result.nicks);
-      obj[arg0] = arg1;
-      result1 = result.set("nicks", obj);
+      obj2[arg0] = arg1;
+      result1 = result.set("nicks", obj2);
     }
     return result1;
   } else {
@@ -1191,8 +1189,8 @@ prototype3["fromServer"] = function fromServer(applied_tags, arg1) {
   ({ id: obj.id, last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp } = applied_tags);
   let tmp2;
   if (null != applied_tags.member) {
-    obj = { flags: applied_tags.member.flags, muted: applied_tags.member.muted, muteConfig: applied_tags.member.mute_config, joinTimestamp: applied_tags.member.join_timestamp };
-    tmp2 = obj;
+    const obj2 = { flags: applied_tags.member.flags, muted: applied_tags.member.muted, muteConfig: applied_tags.member.mute_config, joinTimestamp: applied_tags.member.join_timestamp };
+    tmp2 = obj2;
   }
   obj.member = tmp2;
   ({ member_count: obj.memberCount, member_ids_preview: obj.memberIdsPreview, message_count: obj.messageCount, name } = applied_tags);
@@ -1208,13 +1206,13 @@ prototype3["fromServer"] = function fromServer(applied_tags, arg1) {
   ({ owner_id: obj.ownerId, parent_id: obj.parent_id, parentChannelThreadType: obj.parentChannelThreadType, rate_limit_per_user: obj.rateLimitPerUser_, rtc_region: obj.rtcRegion } = applied_tags);
   let tmp3;
   if (null != applied_tags.thread_metadata) {
-    obj = { archived: applied_tags.thread_metadata.archived, autoArchiveDuration: applied_tags.thread_metadata.auto_archive_duration, archiveTimestamp: applied_tags.thread_metadata.archive_timestamp, createTimestamp: applied_tags.thread_metadata.create_timestamp, locked: applied_tags.thread_metadata.locked, invitable: null };
+    const obj3 = { archived: applied_tags.thread_metadata.archived, autoArchiveDuration: applied_tags.thread_metadata.auto_archive_duration, archiveTimestamp: applied_tags.thread_metadata.archive_timestamp, createTimestamp: applied_tags.thread_metadata.create_timestamp, locked: applied_tags.thread_metadata.locked, invitable: null };
     let flag2 = applied_tags.thread_metadata.invitable;
     if (flag2 == null) {
       flag2 = true;
     }
-    obj.invitable = flag2;
-    tmp3 = obj;
+    obj3.invitable = flag2;
+    tmp3 = obj3;
   }
   obj.threadMetadata = tmp3;
   obj.totalMessageSent = applied_tags.total_message_sent;

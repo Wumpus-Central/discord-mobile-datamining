@@ -1,6 +1,6 @@
-// === Module 16727: ThreadParentMessage ===
+// === Module 16729: ThreadParentMessage ===
 
-// Module 16727 (ThreadParentMessage)
+// Module 16729 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1100 */;
 import Pressables from "Pressables" /* 5204 */;
@@ -29,18 +29,22 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
   }
   let tmp5 = null;
   if (state === ReferencedMessageState.LOADED) {
-    rowGenerator = {
+    const obj2 = {
       accessibilityRole: "button",
       onPress() {
           router_utils.transitionToGuild(closure_1_0, dependencyMap, importDefault);
         },
       children: null
     };
-    rowGenerator = { rowGenerator: null, message: null, pointerEvents: "none" };
-    rowGenerator.rowGenerator = rowGenerator;
-    rowGenerator.message = stateFromStores.message;
-    rowGenerator.children = jsx(ChatItemDefault, { rowGenerator: null, message: null, pointerEvents: "none" });
-    tmp5 = jsx(Pressables.PressableOpacity, { rowGenerator: null, message: null, pointerEvents: "none" });
+    const obj3 = { rowGenerator, message: stateFromStores.message, pointerEvents: "none" };
+    obj2.children = jsx(ChatItemDefault, { rowGenerator, message: stateFromStores.message, pointerEvents: "none" });
+    tmp5 = jsx(Pressables.PressableOpacity, {
+      accessibilityRole: "button",
+      onPress() {
+          router_utils.transitionToGuild(closure_1_0, dependencyMap, importDefault);
+        },
+      children: null
+    });
   }
   return tmp5;
 };
@@ -51,11 +55,8 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
   const stateFromStores = rowGenerator.useStateFromStores(items, () => MessageStore.getMessage(importDefault, require));
   let tmp3 = null;
   if (null != stateFromStores) {
-    rowGenerator = { rowGenerator: null, message: null, style: null, pointerEvents: "none" };
-    rowGenerator.rowGenerator = rowGenerator;
-    rowGenerator.message = stateFromStores;
-    rowGenerator.style = { overflow: "visible" };
-    tmp3 = jsx(ChatItemDefault, { rowGenerator: null, message: null, style: null, pointerEvents: "none" });
+    const obj2 = { rowGenerator, message: stateFromStores, style: { overflow: "visible" }, pointerEvents: "none" };
+    tmp3 = jsx(ChatItemDefault, { rowGenerator, message: stateFromStores, style: { overflow: "visible" }, pointerEvents: "none" });
   }
   return tmp3;
 };

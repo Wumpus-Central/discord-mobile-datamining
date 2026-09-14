@@ -20,11 +20,11 @@ class BaseGameWidget {
 }
 const prototype = BaseGameWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  let obj = { id: this.id, data: null };
-  obj = { type: this.type, games: null };
+  const obj = { id: this.id, data: null };
+  const obj2 = { type: this.type, games: null };
   const games = this.games;
-  obj.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
-  obj.data = obj;
+  obj2.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
+  obj.data = obj2;
   return obj;
 };
 prototype["isUpdatable"] = function isUpdatable() {

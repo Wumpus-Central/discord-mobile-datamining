@@ -1,9 +1,9 @@
-// === Module 13341: GroupDMInvite ===
+// === Module 13342: GroupDMInvite ===
 
-// Module 13341 (GroupDMInvite)
+// Module 13342 (GroupDMInvite)
 import util from "util" /* 1114 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11443 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11444 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -21,10 +21,11 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   if (channel != null) {
     id = channel.id;
   }
-  channel = ChannelStore.getChannel(id);
+  const channel1 = ChannelStore.getChannel(id);
   let flag = false;
-  if (null != channel) {
+  if (null != channel1) {
     flag = true;
+    channel = channel1;
   }
   const intl = util.intl;
   const string = intl.string;
@@ -47,25 +48,25 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   let formatToPlainStringResult;
   if (recipients_.length > 0) {
     const intl3 = tmp8(1114).intl;
-    let obj = { count: recipients_.length };
+    const obj = { count: recipients_.length };
     formatToPlainStringResult = intl3.formatToPlainString(tmp8(1114).t.zRl6XR, obj);
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(13160);
-    channelIconSource = tmp8Result.getChannelIconSource(channel);
+    channelIconSource = tmp8(13161).getChannelIconSource(channel);
+    const tmp8Result = tmp8(13161);
   }
   let uri = null;
   if (null != channelIconSource) {
-    tmp8Result = tmp8(1399);
-    uri = tmp8Result.ensureAvatarSource(channelIconSource).uri;
+    uri = tmp8(1399).ensureAvatarSource(channelIconSource).uri;
+    const tmp8Result4 = tmp8(1399);
   }
   let channelName = null;
   if (flag) {
     channelName = null;
     if (null != channel) {
       channelName = tmp8(4789).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result1 = tmp8(4789);
+      const tmp8Result5 = tmp8(4789);
     }
   }
   if (!channelName) {
@@ -93,46 +94,46 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
     const intl5 = tmp8(1114).intl;
     stringResult = intl5.string(tmp8(1114).t.XpeFYr);
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(baseColors);
   let formatted;
   if (null != str) {
     formatted = str.toUpperCase();
   }
-  obj.headerText = formatted;
-  obj.headerColor = colors.headerColor;
-  obj.acceptLabelText = stringResult;
-  obj.onlineText = undefined;
-  obj.memberText = formatToPlainStringResult;
-  obj.channelIcon = undefined;
-  obj.titleText = channelName;
-  obj.titleColor = colors.titleColor;
+  obj2.headerText = formatted;
+  obj2.headerColor = colors.headerColor;
+  obj2.acceptLabelText = stringResult;
+  obj2.onlineText = undefined;
+  obj2.memberText = formatToPlainStringResult;
+  obj2.channelIcon = undefined;
+  obj2.titleText = channelName;
+  obj2.titleColor = colors.titleColor;
   let tmp21;
   if (null != uri) {
     tmp21 = uri;
   }
-  obj.thumbnailUrl = tmp21;
-  obj.thumbnailText = undefined;
-  obj.subtitle = "";
-  obj.subtitleColor = undefined;
-  obj.acceptLabelBackgroundColor = acceptLabelGreenBackgroundColor;
-  obj.acceptLabelBorderColor = undefined;
-  obj.acceptLabelColor = acceptLabelGreenColor;
-  obj.embedCanBeTapped = true;
-  obj.canBeAccepted = !flag;
+  obj2.thumbnailUrl = tmp21;
+  obj2.thumbnailText = undefined;
+  obj2.subtitle = "";
+  obj2.subtitleColor = undefined;
+  obj2.acceptLabelBackgroundColor = acceptLabelGreenBackgroundColor;
+  obj2.acceptLabelBorderColor = undefined;
+  obj2.acceptLabelColor = acceptLabelGreenColor;
+  obj2.embedCanBeTapped = true;
+  obj2.canBeAccepted = !flag;
   let channelName1 = channelName;
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
       channelName1 = tmp8(4789).computeChannelName(channel, UserStore, RelationshipStore);
-      const tmp8Result2 = tmp8(4789);
+      const tmp8Result6 = tmp8(4789);
     }
   }
-  obj.channelName = channelName1;
+  obj2.channelName = channelName1;
   let GROUP_DM = invite.type;
   if (GROUP_DM == null) {
     GROUP_DM = InviteTypes.GROUP_DM;
   }
-  obj.type = GROUP_DM;
-  return obj;
+  obj2.type = GROUP_DM;
+  return obj2;
 };

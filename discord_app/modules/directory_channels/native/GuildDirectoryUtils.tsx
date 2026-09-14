@@ -1,6 +1,6 @@
-// === Module 12450: directory_channels/GuildDirectoryUtils ===
+// === Module 12451: directory_channels/GuildDirectoryUtils ===
 
-// Module 12450 (directory_channels/GuildDirectoryUtils)
+// Module 12451 (directory_channels/GuildDirectoryUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,6 @@ const require = fn;
 let closure_6 = async function _onAddDirectoryGuildEntry() {
   await closure_130_2(closure_130_3[3]).addDirectoryGuildEntry(closure_129_0, closure_129_2.id, closure_129_3, closure_129_4);
   closure_129_5();
-  closure_130_2(closure_130_3[3]);
   closure_130_1(closure_130_3[4]).openLazy({
     importer() {
       return closure_0(paths[6])(paths[5], paths.paths).then((result) => {

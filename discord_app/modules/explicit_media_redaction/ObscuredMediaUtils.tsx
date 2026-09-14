@@ -1,7 +1,7 @@
 // === Module 7395: ObscuredMediaUtils ===
 
 // Module 7395 (ObscuredMediaUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7398 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7400 */;
@@ -14,6 +14,7 @@ import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7396 */;
 
+const require = globalThis.__r;
 const isForwardMessageDefault = isForwardMessage;
 
 require = fn;
@@ -383,19 +384,17 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
     }
     type = type.type;
     if (ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed === type) {
-      let tmp3Result = FlagUtils;
       let num3 = type.media.flags;
       if (num3 == null) {
         num3 = 0;
       }
-      return tmp3Result.hasFlag(num3, tmp5.embedFlag);
+      return FlagUtils.hasFlag(num3, tmp5.embedFlag);
     } else if (ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment === type) {
-      tmp3Result = FlagUtils;
       let num2 = type.media.flags;
       if (num2 == null) {
         num2 = 0;
       }
-      return tmp3Result.hasFlag(num2, tmp5.attachmentFlag);
+      return FlagUtils.hasFlag(num2, tmp5.attachmentFlag);
     } else if (ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia === type) {
       const contentScanMetadata = type.media.contentScanMetadata;
       let num;
@@ -451,7 +450,7 @@ function getChannelTypeById(channelId, id) {
     items[1] = globalThis.p;
     tmp = items;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   const channel = obj.getChannel(channelId);
   const currentUser = UserStore.getCurrentUser();
   let tmp6 = null;
@@ -488,9 +487,7 @@ function getChannelIdAndAuthorIdFromMessage(message) {
       const items = [message.messageReference, isForwardMessageDefault(message)];
       let items2 = items;
     } else if ("message_reference" in message) {
-      const items1 = [message.message_reference, ];
-      let obj = isForwardMessage;
-      items1[1] = obj.isForwardServerMessage(message);
+      const items1 = [message.message_reference, isForwardMessage.isForwardServerMessage(message)];
       items2 = items1;
     } else {
       items2 = [];
@@ -500,8 +497,8 @@ function getChannelIdAndAuthorIdFromMessage(message) {
     if (null != first) {
       if (tmp7[1]) {
         if (null == first.message_id) {
-          obj = { channelId: channel_id, authorId: null };
-          return obj;
+          const obj2 = { channelId: channel_id, authorId: null };
+          return obj2;
         } else {
           message = MessageStore.getMessage(first.channel_id, first.message_id);
           let author_id = null;
@@ -515,8 +512,8 @@ function getChannelIdAndAuthorIdFromMessage(message) {
           }
         }
       }
-      obj = { channelId: channel_id, authorId: author_id };
-      return obj;
+      const obj3 = { channelId: channel_id, authorId: author_id };
+      return obj3;
     }
     if ("author" in message) {
       const author = message.author;
@@ -713,8 +710,8 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       let NONE = getEnabledHarmTypesForChannelAndAuthorId(channelId, tmp2);
     }
     if (NONE === NONE(7398).ContentHarmTypeBitMask.NONE) {
-      let obj = { attachmentIds: [], embedIds: [] };
-      return obj;
+      const obj2 = { attachmentIds: [], embedIds: [] };
+      return obj2;
     } else {
       const attachments = message.attachments;
       let found;
@@ -735,7 +732,7 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       if (found2 == null) {
         found2 = [];
       }
-      obj = { attachmentIds: found2, embedIds: null };
+      const obj = { attachmentIds: found2, embedIds: null };
       let found3;
       if (found1 != null) {
         const mapped1 = found1.map((item, index) => "embed_" + index);

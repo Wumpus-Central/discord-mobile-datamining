@@ -1,6 +1,6 @@
-// === Module 17780: SafetyCheckScreen ===
+// === Module 17781: SafetyCheckScreen ===
 
-// Module 17780 (SafetyCheckScreen)
+// Module 17781 (SafetyCheckScreen)
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,16 +17,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
 
 export default function SafetyCheckScreen() {
-  let obj = noop;
   const ref = noop.useRef(null);
-  let obj1 = guild(first1[6]);
-  const token = obj1.useToken(verificationLevel(first1[7]).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(first1[8]);
-  const enableCommunitySharedStyles = obj2.useEnableCommunitySharedStyles();
-  let obj3 = guild(first1[9]);
+  const token = guild(first1[6]).useToken(verificationLevel(first1[7]).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(first1[6]);
+  const enableCommunitySharedStyles = guild(first1[8]).useEnableCommunitySharedStyles();
+  let obj3 = guild(first1[8]);
   const items = [GuildSettingsStore];
-  guild = obj3.useStateFromStoresObject(items, () => props.getProps()).guild;
+  guild = guild(first1[9]).useStateFromStoresObject(items, () => props.getProps()).guild;
   verificationLevel = undefined;
+  let obj4 = guild(first1[9]);
   if (guild != null) {
     verificationLevel = guild.verificationLevel;
   }
@@ -41,89 +40,89 @@ export default function SafetyCheckScreen() {
   if (prop == null) {
     prop = constants2.ALL_MEMBERS;
   }
-  first1 = _slicedToArray(obj.useState(prop), 1)[0];
+  first1 = _slicedToArray(noop.useState(prop), 1)[0];
   let tmp20Result = null;
   if (null != guild) {
-    obj = { headerRef: ref, currentStep: tmp2(tmp3[11]).EnableCommunityModalSteps.STEP_1, disableNextStep: guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE, children: null };
-    obj = { style: enableCommunitySharedStyles.content, children: null };
-    obj1 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
+    const obj5 = { headerRef: ref, currentStep: tmp2(tmp3[11]).EnableCommunityModalSteps.STEP_1, disableNextStep: guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE, children: null };
+    const obj6 = { style: enableCommunitySharedStyles.content, children: null };
+    const obj7 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
     const intl = tmp2(tmp3[13]).intl;
-    obj1.children = intl.formatToPlainString(tmp2(tmp3[13]).t.tInpJj, { number: 1, total: 3 });
-    const items1 = [closure_10(tmp2(tmp3[12]).Text, obj1), , , ];
-    obj2 = { resizeMode: "contain", source: tmp7.safetyCheck };
-    items1[1] = closure_10(closure_5, obj2);
-    obj3 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj7.children = intl.formatToPlainString(tmp2(tmp3[13]).t.tInpJj, { number: 1, total: 3 });
+    const items1 = [closure_10(tmp2(tmp3[12]).Text, obj7), , , ];
+    const obj8 = { resizeMode: "contain", source: tmp7.safetyCheck };
+    items1[1] = closure_10(closure_5, obj8);
+    const obj9 = { style: enableCommunitySharedStyles.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(tmp3[13]).intl;
-    obj3.children = intl2.string(tmp2(tmp3[13]).t.QrjLYl);
-    items1[2] = closure_10(tmp2(tmp3[12]).Heading, obj3);
-    const obj4 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
+    obj9.children = intl2.string(tmp2(tmp3[13]).t.QrjLYl);
+    items1[2] = closure_10(tmp2(tmp3[12]).Heading, obj9);
+    const obj10 = { style: enableCommunitySharedStyles.description, variant: "text-md/medium", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[13]).intl;
-    obj4.children = intl3.string(tmp2(tmp3[13]).t.i1STwu);
-    items1[3] = closure_10(tmp2(tmp3[12]).Text, obj4);
-    obj.children = items1;
-    const items2 = [closure_11(closure_6, obj), ];
-    const obj5 = { spacing: 24, style: null, children: null };
-    const obj6 = { paddingHorizontal: token };
-    obj5.style = obj6;
-    const obj7 = { helperText: null, hasIcons: false, children: null };
+    obj10.children = intl3.string(tmp2(tmp3[13]).t.i1STwu);
+    items1[3] = closure_10(tmp2(tmp3[12]).Text, obj10);
+    obj6.children = items1;
+    const items2 = [closure_11(closure_6, obj6), ];
+    const obj11 = { spacing: 24, style: null, children: null };
+    const obj12 = { paddingHorizontal: token };
+    obj11.style = obj12;
+    const obj13 = { helperText: null, hasIcons: false, children: null };
     const intl4 = tmp2(tmp3[13]).intl;
-    obj7.helperText = intl4.string(tmp2(tmp3[13]).t.fHiGA0);
-    const obj8 = { formSwitchDisabled: verificationLevel !== tmp16, children: null };
-    let tmp4Result = tmp4(tmp3[16]);
-    const obj9 = { label: null, value: null, disabled: null, onValueChange: null };
+    obj13.helperText = intl4.string(tmp2(tmp3[13]).t.fHiGA0);
+    const obj14 = { formSwitchDisabled: verificationLevel !== tmp16, children: null };
+    const obj15 = { label: null, value: null, disabled: null, onValueChange: null };
     const intl5 = tmp2(tmp3[13]).intl;
-    obj9.label = intl5.string(tmp2(tmp3[13]).t["rkA56+"]);
-    obj9.value = guild.verificationLevel !== constants.NONE;
-    obj9.disabled = verificationLevel !== tmp16;
-    obj9.onValueChange = function onValueChange(arg0) {
+    obj15.label = intl5.string(tmp2(tmp3[13]).t["rkA56+"]);
+    obj15.value = guild.verificationLevel !== constants.NONE;
+    obj15.disabled = verificationLevel !== tmp16;
+    obj15.onValueChange = function onValueChange(arg0) {
       if (null != guild) {
         if (arg0) {
           if (tmp.verificationLevel < constants.LOW) {
-            let obj = { verificationLevel: tmp2.LOW };
-            GuildSettingsActionCreatorsDefault.updateGuild(obj);
+            const obj2 = { verificationLevel: tmp2.LOW };
+            GuildSettingsActionCreatorsDefault.updateGuild(obj2);
           }
         }
         if (!arg0) {
-          obj = { verificationLevel };
-          obj.updateGuild(obj);
+          const obj4 = { verificationLevel };
+          GuildSettingsActionCreatorsDefault.updateGuild(obj4);
         }
       }
     };
-    obj8.children = closure_10(tmp2(tmp3[17]).TableSwitchRow, obj9);
-    obj7.children = closure_10(tmp4Result, obj8);
-    const items3 = [closure_10(tmp2(tmp3[15]).TableRowGroup, obj7), ];
-    const obj10 = { helperText: null, hasIcons: false, children: null };
+    obj14.children = closure_10(tmp2(tmp3[17]).TableSwitchRow, obj15);
+    obj13.children = closure_10(tmp4(tmp3[16]), obj14);
+    const items3 = [closure_10(tmp2(tmp3[15]).TableRowGroup, obj13), ];
+    const obj16 = { helperText: null, hasIcons: false, children: null };
     const intl6 = tmp2(tmp3[13]).intl;
-    obj10.helperText = intl6.string(tmp2(tmp3[13]).t.b0MaDV);
-    const obj11 = { formSwitchDisabled: first1 === tmp18, children: null };
-    tmp4Result = tmp4(tmp3[16]);
-    const obj12 = { label: null, value: null, disabled: null, onValueChange: null };
+    obj16.helperText = intl6.string(tmp2(tmp3[13]).t.b0MaDV);
+    const obj17 = { formSwitchDisabled: first1 === tmp18, children: null };
+    const tmp21 = guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE;
+    const tmp4Result = tmp4(tmp3[16]);
+    const obj18 = { label: null, value: null, disabled: null, onValueChange: null };
     const intl7 = tmp2(tmp3[13]).intl;
-    obj12.label = intl7.string(tmp2(tmp3[13]).t.zOuzl7);
-    obj12.value = guild.explicitContentFilter === constants2.ALL_MEMBERS;
-    obj12.disabled = first1 === tmp18;
-    obj12.onValueChange = function onValueChange(arg0) {
+    obj18.label = intl7.string(tmp2(tmp3[13]).t.zOuzl7);
+    obj18.value = guild.explicitContentFilter === constants2.ALL_MEMBERS;
+    obj18.disabled = first1 === tmp18;
+    obj18.onValueChange = function onValueChange(arg0) {
       if (null != guild) {
         if (arg0) {
           if (tmp.explicitContentFilter < constants2.ALL_MEMBERS) {
-            let obj = { explicitContentFilter: tmp2.ALL_MEMBERS };
-            GuildSettingsActionCreatorsDefault.updateGuild(obj);
+            const obj2 = { explicitContentFilter: tmp2.ALL_MEMBERS };
+            GuildSettingsActionCreatorsDefault.updateGuild(obj2);
           }
         }
         if (!arg0) {
-          obj = { explicitContentFilter: first1 };
-          obj.updateGuild(obj);
+          const obj4 = { explicitContentFilter: first1 };
+          GuildSettingsActionCreatorsDefault.updateGuild(obj4);
         }
       }
     };
-    obj11.children = closure_10(tmp2(tmp3[17]).TableSwitchRow, obj12);
-    obj10.children = closure_10(tmp4Result, obj11);
-    items3[1] = closure_10(tmp2(tmp3[15]).TableRowGroup, obj10);
-    obj5.children = items3;
-    items2[1] = closure_11(tmp2(tmp3[14]).Stack, obj5);
-    obj.children = items2;
-    tmp20Result = closure_11(tmp2(tmp3[11]).EnableCommunityModalScreen, obj);
-    const tmp21 = guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE;
+    obj17.children = closure_10(tmp2(tmp3[17]).TableSwitchRow, obj18);
+    obj16.children = closure_10(tmp4(tmp3[16]), obj17);
+    items3[1] = closure_10(tmp2(tmp3[15]).TableRowGroup, obj16);
+    obj11.children = items3;
+    items2[1] = closure_11(tmp2(tmp3[14]).Stack, obj11);
+    obj5.children = items2;
+    tmp20Result = closure_11(tmp2(tmp3[11]).EnableCommunityModalScreen, obj5);
+    const tmp4Result2 = tmp4(tmp3[16]);
   }
   return tmp20Result;
 };

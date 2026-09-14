@@ -1,6 +1,6 @@
-// === Module 16723: getFrameSurfaceQueryParams ===
+// === Module 16725: getFrameSurfaceQueryParams ===
 
-// Module 16723 (getFrameSurfaceQueryParams)
+// Module 16725 (getFrameSurfaceQueryParams)
 import FramesConstants from "FramesConstants" /* 9641 */;
 import size from "module_2" /* 2 */;
 

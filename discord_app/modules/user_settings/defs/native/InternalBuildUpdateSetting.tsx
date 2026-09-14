@@ -1,18 +1,18 @@
-// === Module 15830: InternalBuildUpdateSetting ===
+// === Module 15832: InternalBuildUpdateSetting ===
 
-// Module 15830 (InternalBuildUpdateSetting)
+// Module 15832 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import DownloadIcon from "DownloadIcon" /* 4585 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13993 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14931 */;
-import RefreshIcon2 from "RefreshIcon" /* 15238 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14482 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13994 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14932 */;
+import RefreshIcon2 from "RefreshIcon" /* 15239 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14483 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";
   },
@@ -63,9 +63,8 @@ let SettingBuilders = {
     }
   },
   withArrow: true
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

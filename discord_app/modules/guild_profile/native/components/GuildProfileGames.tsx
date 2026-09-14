@@ -33,23 +33,21 @@ function ClickableGameIcon(game) {
 }
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;
-  let obj = { style: createStyles().favoriteGame, children: null };
-  const items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), ];
-  obj = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
-  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  const obj = { style: styles().favoriteGame, children: null };
+  const items = [hasOwnProperty(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: game.name })];
   obj.children = items;
   return timestampProducer(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
+const createStyles = fn(4636);
+let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
-createStyles.lastItemOverlay = rect;
-createStyles.lastItemImage = { position: "absolute" };
-createStyles.lastItemText = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
-createStyles = createStyles.createStyles(createStyles);
+obj2.lastItemOverlay = rect;
+obj2.lastItemImage = { position: "absolute" };
+obj2.lastItemText = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
+const styles = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGames.tsx");
 
@@ -62,7 +60,7 @@ export default function GuildProfileGames(profile) {
   let tmp2 = lastGameToDisplay(remainingGames[9])(profile);
   ({ gamesToDisplay, lastGameToDisplay } = tmp2);
   remainingGames = tmp2.remainingGames;
-  let tmp3 = createStyles();
+  let tmp3 = styles();
   noop = tmp3;
   const gameActivity = profile.gameActivity;
   let iconURL;
@@ -78,32 +76,31 @@ export default function GuildProfileGames(profile) {
       if (!closure_5) {
         tmp2 = null;
       } else if (0 === remainingGames.length) {
-        let obj = { game: tmp, activityLevel: null };
+        const obj = { game: tmp, activityLevel: null };
         tmp = gameActivity[tmp.id];
         obj.activityLevel = tmp;
         let tmp8 = hasOwnProperty(ClickableGameIcon, obj);
       } else {
-        obj = { style: closure_3.lastItem, children: null };
-        obj = { style: closure_3.lastItemImage, game: tmp, activityLevel: gameActivity[tmp.id] };
-        const items = [hasOwnProperty(components_GameIconDefault, obj), , ];
-        const obj1 = { style: closure_3.lastItemOverlay };
-        items[1] = hasOwnProperty(View, obj1);
-        const obj2 = { style: closure_3.lastItemText, children: null };
-        const obj3 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
+        const obj2 = { style: closure_3.lastItem, children: null };
+        const obj3 = { style: closure_3.lastItemImage, game: tmp, activityLevel: gameActivity[tmp.id] };
+        const items = [hasOwnProperty(components_GameIconDefault, obj3), , ];
+        const obj4 = { style: closure_3.lastItemOverlay };
+        items[1] = hasOwnProperty(View, obj4);
+        const obj5 = { style: closure_3.lastItemText, children: null };
+        const obj6 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
         const _HermesInternal = HermesInternal;
-        obj3.children = "+" + arr.length;
-        obj2.children = hasOwnProperty(Text_Text.Text, obj3);
-        items[2] = hasOwnProperty(View, obj2);
-        obj.children = items;
-        tmp8 = timestampProducer(View, obj);
+        obj6.children = "+" + arr.length;
+        obj5.children = hasOwnProperty(Text_Text.Text, obj6);
+        items[2] = hasOwnProperty(View, obj5);
+        obj2.children = items;
+        tmp8 = timestampProducer(View, obj2);
       }
     }
     return tmp2;
   }, items);
   onPressFallback = noop.useCallback((content) => {
-    lastGameToDisplay(remainingGames[10]);
-    const obj = { key: "profile-game-" + content.id, content: content.name };
-    obj.open(obj);
+    const obj = lastGameToDisplay(remainingGames[10]);
+    obj.open({ key: "profile-game-" + content.id, content: content.name });
   }, []);
   [][0] = profile;
   let tmp9 = null;
@@ -111,20 +108,20 @@ export default function GuildProfileGames(profile) {
     tmp9 = null;
     if (0 !== gamesToDisplay.length) {
       if (1 === gamesToDisplay.length) {
-        let obj = { style: tmp3.container, children: null };
+        let obj2 = { style: tmp3.container, children: null };
         tmp3 = FavoriteGame;
-        obj = { game: gamesToDisplay[0], activityLevel: null };
+        let obj3 = { game: gamesToDisplay[0], activityLevel: null };
         gamesToDisplay = gameActivity[gamesToDisplay[0].id];
-        obj.activityLevel = gamesToDisplay;
-        obj.children = closure_5(FavoriteGame, obj);
-        let tmp16Result = closure_5(gameActivity, obj);
+        obj3.activityLevel = gamesToDisplay;
+        obj2.children = closure_5(FavoriteGame, obj3);
+        let tmp16Result = closure_5(gameActivity, obj2);
       } else if (tmp7) {
-        let obj1 = { style: tmp3.container, onPress: tmp8, children: null };
+        let obj4 = { style: tmp3.container, onPress: tmp8, children: null };
         const items1 = [gamesToDisplay.map((game) => hasOwnProperty(components_GameIconDefault, { game, activityLevel: gameActivity[game.id] }, game.id)), memo];
-        obj1.children = items1;
-        tmp16Result = tmp16(profile(remainingGames[14]).PressableHighlight, obj1);
+        obj4.children = items1;
+        tmp16Result = tmp16(profile(remainingGames[14]).PressableHighlight, obj4);
       } else {
-        obj = { style: tmp3.container, children: null };
+        let obj = { style: tmp3.container, children: null };
         const items2 = [gamesToDisplay.map((game) => hasOwnProperty(ClickableGameIcon, { game, activityLevel: gameActivity[game.id], onPressFallback }, game.id)), memo];
         obj.children = items2;
         tmp16Result = tmp16(gameActivity, obj);
@@ -133,4 +130,4 @@ export default function GuildProfileGames(profile) {
   }
   return tmp9;
 };
-export const useStyles = createStyles;
+export const useStyles = styles;

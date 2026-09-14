@@ -1,23 +1,23 @@
-// === Module 17597: SelfPresenceStoreManager ===
+// === Module 17598: SelfPresenceStoreManager ===
 
-// Module 17597 (SelfPresenceStoreManager)
+// Module 17598 (SelfPresenceStoreManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 function handleChange() {
-  const obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: SelfPresenceStore.getStatus(), activities: SelfPresenceStore.getActivities(true), hiddenActivities: SelfPresenceStore.getHiddenActivities() };
-  obj.dispatch(obj);
+  const obj = DispatcherDefault;
+  obj.dispatch({ type: "SELF_PRESENCE_STORE_UPDATE", status: SelfPresenceStore.getStatus(), activities: SelfPresenceStore.getActivities(true), hiddenActivities: SelfPresenceStore.getHiddenActivities() });
 }
-let prototype = function SelfPresenceStoreManager() {
+const prototype = function SelfPresenceStoreManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.stores = new Map().set(SelfPresenceStore, handleChange);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
 
-export default prototype;
+export default prototype1;

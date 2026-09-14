@@ -1,9 +1,9 @@
-// === Module 13915: trackVideoToggle ===
+// === Module 13916: trackVideoToggle ===
 
-// Module 13915 (trackVideoToggle)
+// Module 13916 (trackVideoToggle)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import VideoHealthManager from "VideoHealthManager" /* 13909 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import VideoHealthManager from "VideoHealthManager" /* 13910 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -13,39 +13,39 @@ export default function trackVideoToggle(toggled_user_id, video_toggle_reason, i
   const defaultConfig = VideoHealthManager.VideoHealthManager.defaultConfig;
   const featureEnabled = defaultConfig.featureEnabled;
   ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
-  const obj = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
+  const obj2 = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
   let tmp;
   if (global != null) {
     tmp = global();
   }
-  obj.rtc_connection_id = tmp;
+  obj2.rtc_connection_id = tmp;
   let tmp2;
   if (require != null) {
     tmp2 = require();
   }
-  obj.media_session_id = tmp2;
+  obj2.media_session_id = tmp2;
   let tmp3 = null;
   if (featureEnabled) {
     tmp3 = windowLength;
   }
-  obj.video_health_manager_window_length = tmp3;
+  obj2.video_health_manager_window_length = tmp3;
   let tmp4 = null;
   if (featureEnabled) {
     tmp4 = allowedPoorFpsRatio;
   }
-  obj.video_health_manager_poor_fps_ratio = tmp4;
+  obj2.video_health_manager_poor_fps_ratio = tmp4;
   let tmp5 = null;
   if (featureEnabled) {
     tmp5 = fpsThreshold;
   }
-  obj.video_health_manager_fps_threshold = tmp5;
-  obj.is_video_shown = is_video_shown;
+  obj2.video_health_manager_fps_threshold = tmp5;
+  obj2.is_video_shown = is_video_shown;
   let tmp6 = null;
   if (featureEnabled) {
     tmp6 = backoffTimeSec;
   }
-  obj.video_health_manager_backoff_time_seconds = tmp6;
-  obj.track(AnalyticEvents.VIDEO_TOGGLED, obj);
+  obj2.video_health_manager_backoff_time_seconds = tmp6;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_TOGGLED, obj2);
 };
 export function setVideoToggleAnalyticsParams(getRTCConnectionId, getMediaSessionId) {
   global = getRTCConnectionId;

@@ -1,9 +1,11 @@
-// === Module 15963: useAuthorizedSlayerApplications ===
+// === Module 15965: useAuthorizedSlayerApplications ===
 
-// Module 15963 (useAuthorizedSlayerApplications)
+// Module 15965 (useAuthorizedSlayerApplications)
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7273 */;
 import noop from "module_19" /* 19 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const FetchState = fn(7210).FetchState;

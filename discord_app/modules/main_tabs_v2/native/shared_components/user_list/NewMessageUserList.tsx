@@ -1,6 +1,6 @@
-// === Module 12495: NewMessageUserList ===
+// === Module 12496: NewMessageUserList ===
 
-// Module 12495 (NewMessageUserList)
+// Module 12496 (NewMessageUserList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
@@ -95,16 +95,15 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-fn(4636);
-let createStyles = { searchBarRowContainer: null, noResults: null };
-createStyles = { paddingTop: nativeDefault.space.PX_8 };
-createStyles.searchBarRowContainer = createStyles;
-createStyles.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_14 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_8 };
+obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx");
 
@@ -165,7 +164,6 @@ export default function NewMessageUserList(selectedUserIds) {
   c5 = undefined;
   ({ afterSearchContent, forceSearchResults, onForceSearchResults, onSearchFocus } = selectedUserIds);
   const tmp2 = closure_14();
-  let obj = rowMode;
   [str, c5] = onQueryChanged(rowMode.useState(""), 2);
   let items = [onQueryChanged];
   const callback = rowMode.useCallback((arg0) => {
@@ -181,6 +179,7 @@ export default function NewMessageUserList(selectedUserIds) {
   closure_129_1 = selectedUserIds;
   closure_129_2 = trimmed;
   closure_129_3 = undefined;
+  let obj = rowMode;
   let tmp3 = onQueryChanged(rowMode.useState(""), 2);
   [tmp10, closure_129_3] = onQueryChanged(rowMode.useState([]), 2);
   let items1 = [flag9, selectedUserIds, trimmed];
@@ -221,7 +220,6 @@ export default function NewMessageUserList(selectedUserIds) {
   c7 = tmp10;
   const items2 = [tmp10, tmp8];
   const memo = rowMode.useMemo(() => {
-    let obj = closure_6;
     const mapped = closure_6.map((title) => {
       const obj = { title: title.title, items: null };
       const items = title.items;
@@ -231,23 +229,23 @@ export default function NewMessageUserList(selectedUserIds) {
     if (0 === _undefined2.length) {
       return mapped;
     } else {
-      obj = { title: null, items: null };
+      const obj2 = { title: null, items: null };
       let intl = util.intl;
-      obj.title = intl.string(util.t.qGlQrW);
-      obj.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
-      const findIndexResult = obj.findIndex((title) => {
+      obj2.title = intl.string(util.t.qGlQrW);
+      obj2.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
+      const findIndexResult = closure_6.findIndex((title) => {
         const intl = selectedUserIds(1114).intl;
         return title.title === intl.string(selectedUserIds(1114).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];
-        items[HermesBuiltin.arraySpread(mapped, 0)] = obj;
+        items[HermesBuiltin.arraySpread(mapped, 0)] = obj2;
         let items1 = items;
       } else {
         items1 = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(mapped.slice(0, findIndexResult), 0);
-        items1[arraySpreadResult] = obj;
-        arraySpreadResult = HermesBuiltin.arraySpread(mapped.slice(findIndexResult), arraySpreadResult + 1);
+        const arraySpreadResult = HermesBuiltin.arraySpread(mapped.slice(0, findIndexResult), 0);
+        items1[arraySpreadResult] = obj2;
+        HermesBuiltin.arraySpread(mapped.slice(findIndexResult), arraySpreadResult + 1);
       }
       return items1;
     }
@@ -267,7 +265,7 @@ export default function NewMessageUserList(selectedUserIds) {
       const data = tmp.data;
       ({ user, firstMatch } = data);
       const hasItem = selectedUserIds.includes(user.id);
-      let obj = { type: data.type, user, nickname: null, onPress: null, disabled: null, selected: null, mode: null, subLabel: null, arrow: null, start: null, end: null };
+      const obj = { type: data.type, user, nickname: null, onPress: null, disabled: null, selected: null, mode: null, subLabel: null, arrow: null, start: null, end: null };
       let tmp8;
       if (null != firstMatch) {
         if (user.username !== firstMatch) {
@@ -291,8 +289,8 @@ export default function NewMessageUserList(selectedUserIds) {
         }
         const element = { type: "user", props: null };
         obj.mode = TOGGLE;
-        obj = { variant: "text-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
-        obj.subLabel = closure_2_10(Text_Text.Text, obj);
+        const obj2 = { variant: "text-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
+        obj.subLabel = closure_2_10(Text_Text.Text, obj2);
         obj.arrow = !RelationshipStore.isFriend(user.id);
         obj.start = tmp2;
         obj.end = tmp3;
@@ -302,8 +300,8 @@ export default function NewMessageUserList(selectedUserIds) {
       TOGGLE = rowMode;
     } else if ("GroupDMChannelRecord" === type) {
       const element1 = { type: "gdm", props: null };
-      const obj1 = { channel: tmp.data, onPress: onSelectUser, arrow: true, start: tmp2, end: tmp3 };
-      element1.props = obj1;
+      const obj3 = { channel: tmp.data, onPress: onSelectUser, arrow: true, start: tmp2, end: tmp3 };
+      element1.props = obj3;
       return element1;
     } else {
       return tmp;
@@ -311,20 +309,20 @@ export default function NewMessageUserList(selectedUserIds) {
   }, items5);
   ref = rowMode.useRef(null);
   let UsersFastList = selectedUserIds;
-  let obj2 = selectedUserIds(onSelectUser[17]);
+  const tmp9 = onQueryChanged(rowMode.useState([]), 2);
   let tmp16;
   if (trimmed.length <= 0) {
     tmp16 = actions;
   }
-  obj = { actions: tmp16, style: null };
+  let obj2 = { actions: tmp16, style: null };
   let prop;
   if (trimmed.length <= 0) {
     if (flag3) {
       prop = tmp2.searchBarRowContainer;
     }
   }
-  obj.style = prop;
-  const userListActionsProps = obj2.useUserListActionsProps(obj);
+  obj2.style = prop;
+  const userListActionsProps = selectedUserIds(onSelectUser[17]).useUserListActionsProps(obj2);
   const items6 = [str];
   ({ headerSize, renderHeader } = userListActionsProps);
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -335,21 +333,20 @@ export default function NewMessageUserList(selectedUserIds) {
   }, items6);
   const someResult = memo1.some((item) => item > 0);
   if (null != overrideResults) {
-    let tmp6Result = tmp6(tmp7[20]);
     if (autoFocusSearch) {
       autoFocusSearch = someResult;
     }
-    obj = { children: null };
-    let obj1 = { autoFocus: autoFocusSearch, hasQuery: tmp5, onChangeText: callback, onFocus: onSearchFocus, onForceSearchResults, onSelectUser, selectedUserIds, forceSearchResults, tagListInputRef };
-    const items7 = [closure_10(tmp6Result, obj1), afterSearchContent, overrideResults];
-    obj.children = items7;
-    return closure_12(closure_11, obj);
+    const obj4 = { children: null };
+    const obj5 = { autoFocus: autoFocusSearch, hasQuery: tmp5, onChangeText: callback, onFocus: onSearchFocus, onForceSearchResults, onSelectUser, selectedUserIds, forceSearchResults, tagListInputRef };
+    const items7 = [closure_10(tmp6(tmp7[20]), obj5), afterSearchContent, overrideResults];
+    obj4.children = items7;
+    return closure_12(closure_11, obj4);
   } else if (someResult) {
     UsersFastList = UsersFastList(tmp7[18]).UsersFastList;
-    obj2 = { ref, sections: memo1, getItemProps: callback2, getSectionProps: callback1, listHeaderSize: headerSize, renderListHeader: renderHeader, insetStart: 0, insetEnd: 12, disableThemedGradient: true };
-    let tmp32Result = closure_10(UsersFastList, obj2);
+    const obj6 = { ref, sections: memo1, getItemProps: callback2, getSectionProps: callback1, listHeaderSize: headerSize, renderListHeader: renderHeader, insetStart: 0, insetEnd: 12, disableThemedGradient: true };
+    let tmp32Result = closure_10(UsersFastList, obj6);
   } else {
-    const obj3 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     if (tmp21) {
       const items8 = [noResults, ];
       let prop1;
@@ -357,26 +354,26 @@ export default function NewMessageUserList(selectedUserIds) {
         prop1 = tmp2.searchBarRowContainer;
       }
       items8[1] = prop1;
-      obj3.style = items8;
-      obj3.children = defaultNoResultsFound;
-      let tmp24 = obj3;
+      obj7.style = items8;
+      obj7.children = defaultNoResultsFound;
+      let tmp24 = obj7;
     } else {
-      obj3.style = noResults;
-      const obj4 = { title: null, subtitle: null, children: null };
-      tmp6Result = tmp6(tmp7[19]);
+      obj7.style = noResults;
+      const obj8 = { title: null, subtitle: null, children: null };
       let intl = UsersFastList(tmp7[15]).intl;
-      obj4.title = intl.string(UsersFastList(tmp7[15]).t.sPAvXU);
+      obj8.title = intl.string(UsersFastList(tmp7[15]).t.sPAvXU);
       const intl2 = UsersFastList(tmp7[15]).intl;
-      obj4.subtitle = intl2.string(UsersFastList(tmp7[15]).t.nQ05z2);
-      const obj5 = { actions: noResultActions };
-      obj4.children = closure_10(UsersFastList(tmp7[17]).UserFlashListActions, obj5);
-      obj3.children = closure_10(tmp6Result, obj4);
-      tmp24 = obj3;
+      obj8.subtitle = intl2.string(UsersFastList(tmp7[15]).t.nQ05z2);
+      const obj9 = { actions: noResultActions };
+      obj8.children = closure_10(UsersFastList(tmp7[17]).UserFlashListActions, obj9);
+      obj7.children = closure_10(tmp6(tmp7[19]), obj8);
+      tmp24 = obj7;
+      const tmp6Result2 = tmp6(tmp7[19]);
     }
     tmp32Result = closure_10(c5, tmp24);
   }
+  let obj3 = selectedUserIds(onSelectUser[17]);
   tmp21 = 0 === str.length && null != defaultNoResultsFound;
-  const tmp9 = onQueryChanged(rowMode.useState([]), 2);
 };
 export { matchGroupDM };
 export { filterGroupDMs };

@@ -1,7 +1,7 @@
-// === Module 11493: StickyWrapper ===
+// === Module 11494: StickyWrapper ===
 
-// Module 11493 (StickyWrapper)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+// Module 11494 (StickyWrapper)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("design/components/Sticky/native/Stick
 
 export const StickyWrapper = function StickyWrapper(header) {
   header = header.header;
-  let obj = { style: null, pointerEvents: header.pointerEvents, children: null };
+  const obj = { style: null, pointerEvents: header.pointerEvents, children: null };
   const items = [header.style, wrapper.wrapper];
   obj.style = items;
   let tmp5Result = null;
@@ -25,11 +25,11 @@ export const StickyWrapper = function StickyWrapper(header) {
     if (obj2.isAndroid()) {
       androidHeader = wrapper.androidHeader;
     }
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     items1[1] = androidHeader;
-    obj.style = items1;
-    obj.children = header;
-    tmp5Result = React3(React2, obj);
+    obj3.style = items1;
+    obj3.children = header;
+    tmp5Result = React3(React2, obj3);
     obj2 = utils_PlatformUtils;
   }
   const items2 = [tmp5Result, header.children];

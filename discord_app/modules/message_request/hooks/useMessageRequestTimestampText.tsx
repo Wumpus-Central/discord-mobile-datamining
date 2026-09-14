@@ -1,9 +1,11 @@
-// === Module 16990: useMessageRequestTimestampText ===
+// === Module 16992: useMessageRequestTimestampText ===
 
-// Module 16990 (useMessageRequestTimestampText)
+// Module 16992 (useMessageRequestTimestampText)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef4228 from "module_4228" /* 4228 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);
@@ -11,14 +13,14 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useMess
 
 export const useMessageRequestTimestampText = function useMessageRequestTimestampText(channel) {
   _require = channel;
-  let obj = require("useMessageRequestPreview");
-  const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: null };
+  const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(channel);
+  const obj2 = { lastMessageId: null };
+  const obj = require("useMessageRequestPreview");
   const items = [ReadStateStore];
-  obj.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
+  obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
-  ({ lastMessageId, message } = obj);
-  if (obj.loaded) {
+  ({ lastMessageId, message } = obj2);
+  if (obj2.loaded) {
     if (null != message) {
       let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
     }
@@ -37,14 +39,15 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
   _require = channel;
-  let obj = require("useMessageRequestPreview");
-  const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: null };
+  const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(channel);
+  const obj2 = { lastMessageId: null };
+  const obj = require("useMessageRequestPreview");
+  const tmp = _require;
   const items = [ReadStateStore];
-  obj.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
+  obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
-  ({ lastMessageId, message } = obj);
-  if (obj.loaded) {
+  ({ lastMessageId, message } = obj2);
+  if (obj2.loaded) {
     if (null != message) {
       let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
     }
@@ -60,5 +63,4 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
   const obj3 = require("initialize");
-  tmp = _require;
 };

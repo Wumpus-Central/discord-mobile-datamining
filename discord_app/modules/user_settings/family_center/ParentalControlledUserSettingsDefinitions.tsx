@@ -1,6 +1,6 @@
-// === Module 14915: ParentalControlledUserSettingsDefinitions ===
+// === Module 14916: ParentalControlledUserSettingsDefinitions ===
 
-// Module 14915 (ParentalControlledUserSettingsDefinitions)
+// Module 14916 (ParentalControlledUserSettingsDefinitions)
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7643 */;
 
 const require = fn;
@@ -28,7 +28,10 @@ export const defineParentalControlledSetting = function defineParentalControlled
     }
     return explicitContentFromProto(tmp3);
   }
-  obj = {
+  function S(arg0, arg1) {
+
+  }
+  return {
     getControlledSetting,
     updateControlledSetting: (arg0, fn) => {
       let tmp = fn;
@@ -69,10 +72,6 @@ export const defineParentalControlledSetting = function defineParentalControlled
       }, items1, fn);
     }
   };
-  function S(arg0, arg1) {
-
-  }
-  return obj;
 };
 export const wrapParentalControlledSettingWithExperimentDefaults = function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
   ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: FamilyCenterControlledSettingsStore, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);

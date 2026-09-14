@@ -1,7 +1,7 @@
-// === Module 12043: FamilyCenterNativeUtils ===
+// === Module 12044: FamilyCenterNativeUtils ===
 
-// Module 12043 (FamilyCenterNativeUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12044 (FamilyCenterNativeUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7642 */;
@@ -21,23 +21,22 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
   if (null === match) {
     return null;
   } else {
-    let obj = { action: ScanQRCode.ScanQRCode, selected_teen_id: match[1], source: FamilyCenterQRCodeScan };
-    obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
+    const obj2 = { action: ScanQRCode.ScanQRCode, selected_teen_id: match[1], source: FamilyCenterQRCodeScan };
+    AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
     FamilyCenterActionCreatorsDefault.setPendingConnection(match[1], match[2]);
-    obj = { userId: match[1], linkCode: match[2] };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12044, dependencyMap.paths), obj, c7);
+    const obj5 = { userId: match[1], linkCode: match[2] };
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12045, dependencyMap.paths), obj5, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   const pendingConnection = FamilyCenterPendingConnectionStore.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = ModalActionCreatorsDefault;
-    obj.popWithKey(c7);
-    obj = { userId: null, linkCode: null };
+    ModalActionCreatorsDefault.popWithKey(c7);
     ({ teenId: obj3.userId, linkCode: obj3.linkCode } = pendingConnection);
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12044, dependencyMap.paths), obj, c7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12045, dependencyMap.paths), { userId: null, linkCode: null }, c7);
     flag = true;
+    const obj4 = { userId: null, linkCode: null };
   }
   return flag;
 };

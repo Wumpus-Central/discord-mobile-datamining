@@ -1,17 +1,17 @@
-// === Module 17125: ActivityPanelUI ===
+// === Module 17127: ActivityPanelUI ===
 
-// Module 17125 (ActivityPanelUI)
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17124 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17146 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17147 */;
+// Module 17127 (ActivityPanelUI)
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17126 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17148 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17149 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17126;
+    let tmp4 = 17128;
   } else {
-    tmp4 = 17132;
+    tmp4 = 17134;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -44,8 +44,8 @@ class BaseActivityPanelUI {
     obj = { children: null };
     items1 = [, ];
     items1[0] = renderActivityPanelSystemUIManager();
-    obj = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
-    items1[1] = jsx(mode(closure_2[8]).TransitionGroup, obj);
+    obj1 = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
+    items1[1] = jsx(mode(closure_2[8]).TransitionGroup, obj1);
     obj.children = items1;
     return jsxs(mode(closure_2[7]).LayerScope, obj);
   }

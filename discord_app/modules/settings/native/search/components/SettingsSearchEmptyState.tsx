@@ -1,6 +1,6 @@
-// === Module 14787: SettingsSearchEmptyState ===
+// === Module 14788: SettingsSearchEmptyState ===
 
-// Module 14787 (SettingsSearchEmptyState)
+// Module 14788 (SettingsSearchEmptyState)
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -24,19 +24,19 @@ export default noop.memo(function SettingsSearchEmptyState() {
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.string(util.t.zihbmv), "polite");
   }, []);
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" }), ];
-  obj = { style: tmp.textContainer, align: "center", justify: "center", children: null };
-  obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.textContainer, align: "center", justify: "center", children: null };
+  const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
-  obj.children = intl.string(util.t.zihbmv);
-  const items1 = [React4(Text_Text.Text, obj), ];
-  const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  obj3.children = intl.string(util.t.zihbmv);
+  const items1 = [React4(Text_Text.Text, obj3), ];
+  const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.XclvsB);
-  items1[1] = React4(Text_Text.Text, obj1);
-  obj.children = items1;
-  items[1] = hasOwnProperty(Stack_Stack.Stack, obj);
+  obj4.children = intl2.string(util.t.XclvsB);
+  items1[1] = React4(Text_Text.Text, obj4);
+  obj2.children = items1;
+  items[1] = hasOwnProperty(Stack_Stack.Stack, obj2);
   obj.children = items;
   return hasOwnProperty(View, obj);
 });

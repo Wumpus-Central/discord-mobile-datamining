@@ -468,7 +468,6 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       const tmp6 = new closure_8(guildId);
       dependencyMap[guildId] = tmp6;
     }
-    let obj = dependencyMap[guildId];
     const reduced = members.reduce((memberIds, member) => {
       const user = member.member.user;
       memberIds = memberIds.memberIds;
@@ -479,10 +478,8 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       return memberIds;
     }, { memberIds: [], memberSupplementals: [] });
     let memberIds = reduced.memberIds;
-    let obj1 = MemberSafetyStoreSupplemental;
-    let result = obj1.syncMemberSupplemental(guildId, reduced.memberSupplementals);
-    let obj2 = MemberSafetySupplementalUtils;
-    const result1 = obj2.registerFetchedSupplementals(guildId, memberIds);
+    let result = MemberSafetyStoreSupplemental.syncMemberSupplemental(guildId, reduced.memberSupplementals);
+    const result1 = MemberSafetySupplementalUtils.registerFetchedSupplementals(guildId, memberIds);
     let tmp14;
     let first;
     const result2 = obj.updateSearchedMembersByMemberIds(memberIds);
@@ -490,8 +487,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
       first = members[0];
       tmp14 = members[members.length - 1];
     }
-    obj = { totalResultsCount: totalResultsCount.total_result_count, elasticSearchCursor: null };
-    let tmp9Result = MemberSafetyElasticSearchQueryTypes;
+    const obj4 = { totalResultsCount: totalResultsCount.total_result_count, elasticSearchCursor: null };
     let joined_at;
     if (first != null) {
       const member = first.member;
@@ -499,7 +495,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
         joined_at = member.joined_at;
       }
     }
-    obj = { joinedAt: joined_at, userId: null };
+    const obj5 = { joinedAt: joined_at, userId: null };
     let id;
     if (first != null) {
       const member2 = first.member;
@@ -510,9 +506,9 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     if (id == null) {
       id = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    obj1 = { before: tmp9Result.createMemberSearchCursor(obj), after: null };
-    obj.userId = id;
-    tmp9Result = MemberSafetyElasticSearchQueryTypes;
+    const obj6 = { before: MemberSafetyElasticSearchQueryTypes.createMemberSearchCursor(obj5), after: null };
+    obj5.userId = id;
+    const tmp9Result = MemberSafetyElasticSearchQueryTypes;
     let joined_at1;
     if (tmp14 != null) {
       const member3 = tmp14.member;
@@ -520,7 +516,7 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
         joined_at1 = member3.joined_at;
       }
     }
-    obj2 = { joinedAt: joined_at1, userId: null };
+    const obj7 = { joinedAt: joined_at1, userId: null };
     let id1;
     if (tmp14 != null) {
       const member4 = tmp14.member;
@@ -531,14 +527,14 @@ const memberSafetyStore = new MemberSafetyStore(DispatcherDefault, {
     if (id1 == null) {
       id1 = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    obj2.userId = id1;
-    obj1.after = tmp9Result.createMemberSearchCursor(obj2);
-    obj.elasticSearchCursor = obj1;
+    obj7.userId = id1;
+    obj6.after = MemberSafetyElasticSearchQueryTypes.createMemberSearchCursor(obj7);
+    obj4.elasticSearchCursor = obj6;
     if (!result) {
       result = result2;
     }
     if (!result) {
-      result = _slicedToArray(obj.updatePaginationState(obj, false), 1)[0];
+      result = _slicedToArray(obj.updatePaginationState(obj4, false), 1)[0];
     }
     return result;
   },

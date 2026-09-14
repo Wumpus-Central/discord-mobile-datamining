@@ -5,6 +5,8 @@ import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import compactDefault from "compact" /* 8968 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
   let tmp = null != CollectiblesPurchaseStore.getPurchase(skuId.skuId);
@@ -22,8 +24,8 @@ function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
       tmp = items.length > 0 && tmp3Result.length === items.length;
       const tmp7 = items.length > 0 && tmp3Result.length === items.length;
     }
-    let obj = { isPurchased: tmp, isPartiallyOwnedBundle: tmp3Result.length > 0 && tmp3Result.length < items.length, isPartiallyOwnedVariantsGroup: false };
-    return obj;
+    const obj2 = { isPurchased: tmp, isPartiallyOwnedBundle: tmp3Result.length > 0 && tmp3Result.length < items.length, isPartiallyOwnedVariantsGroup: false };
+    return obj2;
   } else if (CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP === type) {
     const variants = skuId.variants;
     let everyResult;
@@ -34,7 +36,7 @@ function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
     if (everyResult == null) {
       flag = false;
     }
-    obj = { isPurchased: flag, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: null };
+    const obj3 = { isPurchased: flag, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: null };
     const variants2 = skuId.variants;
     let flag2;
     if (variants2 != null) {
@@ -46,10 +48,10 @@ function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
     if (flag2 == null) {
       flag2 = false;
     }
-    obj.isPartiallyOwnedVariantsGroup = flag2;
-    return obj;
+    obj3.isPartiallyOwnedVariantsGroup = flag2;
+    return obj3;
   } else {
-    obj = { isPurchased: tmp, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: false };
+    const obj = { isPurchased: tmp, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: false };
     return obj;
   }
 }

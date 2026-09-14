@@ -35,14 +35,14 @@ function buildStageChannelUserRoles(user, id2) {
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {
-        obj = {};
+        const obj = {};
         const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(id2, user);
         const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
         obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
         let canResult = null;
         if (flag) {
-          obj = { permission: StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, user, context: guild, overwrites: channel.permissionOverwrites, roles: GuildRoleStore.getUnsafeMutableRoles(guild.id) };
-          canResult = PermissionUtilsAll.can(obj);
+          obj2 = { permission: StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, user, context: guild, overwrites: channel.permissionOverwrites, roles: GuildRoleStore.getUnsafeMutableRoles(guild.id) };
+          canResult = PermissionUtilsAll.can(obj2);
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
@@ -51,7 +51,7 @@ function buildStageChannelUserRoles(user, id2) {
       return tmp4;
     }
   }
-  tmp4 = obj;
+  tmp4 = obj2;
 }
 function resetStageChannelRolesForGuild(guildId) {
   const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(guildId));
@@ -103,9 +103,9 @@ function handleGuildCreateOrDelete(arg0) {
     continue;
   }
 }
-let obj = { SPEAKER: "speaker", MODERATOR: "moderator" };
+const StagePermissionBuckets = { SPEAKER: "speaker", MODERATOR: "moderator" };
 const dependencyMap = {};
-obj = { [obj.SPEAKER]: false, [obj.MODERATOR]: false };
+let obj2 = { [StagePermissionBuckets.SPEAKER]: false, [StagePermissionBuckets.MODERATOR]: false };
 const Store = initializeDefault.Store;
 class StageChannelRoleStore extends Store {
 }
@@ -143,9 +143,9 @@ prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2) {
         id = currentUser.id;
       }
       if (id === id) {
-        obj = useStageSpeakingForCurrentUser;
+        const obj = useStageSpeakingForCurrentUser;
         if (obj.isStageSpeakingDisabledForCurrentUser()) {
-          return obj;
+          return obj2;
         }
       }
       let tmp6;
@@ -167,10 +167,10 @@ prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2) {
       return tmp8;
     }
   }
-  return obj;
+  return obj2;
 };
 StageChannelRoleStore.displayName = "StageChannelRoleStore";
-obj = {
+const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, {
   CHANNEL_UPDATES: function handleChannelUpdate(arg0) {
     for (const item10006 of tmp3) {
       let id = item10006.id;
@@ -219,11 +219,10 @@ obj = {
   },
   GUILD_CREATE: handleGuildCreateOrDelete,
   GUILD_DELETE: handleGuildCreateOrDelete
-};
-const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
 
 export default stageChannelRoleStore;
-export const StagePermissionBuckets = obj;
-export const NO_PERMISSIONS = obj;
+export { StagePermissionBuckets };
+export const NO_PERMISSIONS = obj2;

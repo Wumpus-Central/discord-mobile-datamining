@@ -49,7 +49,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
         let arr = items2.push(user);
       }
       if (null != trueMember) {
-        arr = items1.push(trueMember);
+        let arr2 = items1.push(trueMember);
       }
     }
     continue;

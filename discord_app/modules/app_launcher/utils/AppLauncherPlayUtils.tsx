@@ -1,6 +1,6 @@
-// === Module 11652: AppLauncherPlayUtils ===
+// === Module 11653: AppLauncherPlayUtils ===
 
-// Module 11652 (AppLauncherPlayUtils)
+// Module 11653 (AppLauncherPlayUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -12,8 +12,8 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -49,23 +49,22 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = { applicationId: closure_129_0, analyticsContext: null };
-          const obj3 = { isStart: true, analyticsLocations: closure_129_2 };
-          obj2.analyticsContext = obj3;
-          if (obj13.tryLaunchAsFrame(obj2)) {
+          const obj6 = { applicationId: closure_129_0, analyticsContext: null };
+          const obj7 = { isStart: true, analyticsLocations: closure_129_2 };
+          obj6.analyticsContext = obj7;
+          if (obj13.tryLaunchAsFrame(obj6)) {
             c4 = 3;
-            let obj4 = { value: Promise.resolve(true), done: true };
-            return obj4;
+            const obj8 = { value: Promise.resolve(true), done: true };
+            return obj8;
           } else {
-            obj4 = closure_130_1(closure_130_2[2]);
-            const obj5 = { recipientIds: closure_129_1 };
+            const obj9 = { recipientIds: closure_129_1 };
             c3 = 2;
             c4 = 1;
-            const obj6 = { value: obj4.openPrivateChannel(obj5), done: false };
-            return obj6;
+            const obj10 = { value: closure_130_1(closure_130_2[2]).openPrivateChannel(obj9), done: false };
+            return obj10;
           }
           obj13 = closure_130_0(closure_130_2[1]);
         }
@@ -75,26 +74,26 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_129_6 = value;
-          const obj8 = { targetApplicationId: closure_129_0, channelId: closure_129_6, analyticsLocations: closure_129_2, customId: closure_129_3, referrerId: closure_129_4, commandOrigin: closure_129_5 };
+          const obj12 = { targetApplicationId: closure_129_0, channelId: closure_129_6, analyticsLocations: closure_129_2, customId: closure_129_3, referrerId: closure_129_4, commandOrigin: closure_129_5 };
           c3 = 3;
           c4 = 1;
-          const obj9 = { value: closure_130_1(closure_130_2[3])(obj8), done: false };
-          return obj9;
+          const obj14 = { value: closure_130_1(closure_130_2[3])(obj12), done: false };
+          return obj14;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+        const obj15 = { value, done: true };
+        return obj15;
       } else {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp12) {

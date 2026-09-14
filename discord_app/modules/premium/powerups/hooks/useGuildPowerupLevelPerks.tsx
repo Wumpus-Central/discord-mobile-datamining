@@ -1,6 +1,6 @@
-// === Module 12655: useGuildPowerupLevelPerks ===
+// === Module 12656: useGuildPowerupLevelPerks ===
 
-// Module 12655 (useGuildPowerupLevelPerks)
+// Module 12656 (useGuildPowerupLevelPerks)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _modDef2428 from "module_2428" /* 2428 */;
@@ -26,25 +26,25 @@ export default function useGuildPowerupLevelPerks(arg0) {
     const items = [];
     closure_0 = GUILD_FEATURE_TO_PERK();
     if (includeEmojis) {
-      let obj = { perkIcon: GuildBoostingUtils.PerkIcons.EMOJI, description: null };
+      const obj = { perkIcon: GuildBoostingUtils.PerkIcons.EMOJI, description: null };
       const intl = util.intl;
-      obj = { totalEmojis: closure_0.features.total_emoji_slots, additionalEmojis: closure_0.features.additional_emoji_slots };
-      obj.description = intl.formatToPlainString(_modDef2428["NXvV0+"], obj);
+      const obj2 = { totalEmojis: closure_0.features.total_emoji_slots, additionalEmojis: closure_0.features.additional_emoji_slots };
+      obj.description = intl.formatToPlainString(_modDef2428["NXvV0+"], obj2);
       items.push(obj);
     }
     if (includeStickers) {
-      obj = { perkIcon: GuildBoostingUtils.PerkIcons.STICKER, description: null };
+      const obj3 = { perkIcon: GuildBoostingUtils.PerkIcons.STICKER, description: null };
       const intl2 = util.intl;
-      const obj1 = { totalStickers: closure_0.features.total_sticker_slots, additionalStickers: closure_0.features.additional_sticker_slots };
-      obj.description = intl2.formatToPlainString(_modDef2428.ZEvvPz, obj1);
-      items.push(obj);
+      const obj4 = { totalStickers: closure_0.features.total_sticker_slots, additionalStickers: closure_0.features.additional_sticker_slots };
+      obj3.description = intl2.formatToPlainString(_modDef2428.ZEvvPz, obj4);
+      items.push(obj3);
     }
     if (includeSoundboards) {
-      const obj2 = { perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD, description: null };
+      const obj5 = { perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD, description: null };
       const intl3 = util.intl;
-      const obj3 = { totalSoundboards: closure_0.features.total_sound_slots, additionalSoundboards: closure_0.features.additional_sound_slots };
-      obj2.description = intl3.formatToPlainString(_modDef2428["s9u/E7"], obj3);
-      items.push(obj2);
+      const obj6 = { totalSoundboards: closure_0.features.total_sound_slots, additionalSoundboards: closure_0.features.additional_sound_slots };
+      obj5.description = intl3.formatToPlainString(_modDef2428["s9u/E7"], obj6);
+      items.push(obj5);
     }
     const features = closure_0.features.features;
     const mapped = features.map((item) => closure_0[item]);

@@ -12,11 +12,11 @@ let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
 export default function useTruncatedGradientColors() {
-  let obj = token(4338);
-  token = obj.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
-  obj = { gradientColors: null, gradientStyles: closure_4().gradient };
+  const tmp = closure_4();
+  token = token(4338).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
   let items = [token];
-  obj.gradientColors = useMemo(() => {
+  obj2.gradientColors = useMemo(() => {
     const obj = _modDef672(token);
     const items = [_modDef672(token).alpha(0).hex(), ];
     const alphaResult = _modDef672(token).alpha(0);
@@ -24,5 +24,5 @@ export default function useTruncatedGradientColors() {
     items[1] = _modDef672(token).alpha(0.72).hex();
     return items;
   }, items);
-  return obj;
+  return obj2;
 };

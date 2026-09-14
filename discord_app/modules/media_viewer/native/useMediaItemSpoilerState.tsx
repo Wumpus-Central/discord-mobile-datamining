@@ -1,7 +1,7 @@
-// === Module 13094: useMediaItemSpoilerState ===
+// === Module 13095: useMediaItemSpoilerState ===
 
-// Module 13094 (useMediaItemSpoilerState)
-import native from "native" /* 1178 */;
+// Module 13095 (useMediaItemSpoilerState)
+import native from "native" /* 1176 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,23 +26,23 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
   sharedValue = mediaItemHasSpoiler(4373).useSharedValue(num);
   const items = [mediaItemHasSpoiler, sharedValue];
   const effect = noop.useEffect(() => {
-    let obj = timing;
     let num = 0;
     if (mediaItemHasSpoiler) {
       num = 1;
     }
-    obj = { duration: 200, easing: native.STANDARD_EASING };
+    const obj = timing;
     const fn = function t() {
       mediaItemHasSpoiler(setSpoilerActive[3]).runOnJS(closure_1_1)(closure_1_0);
     };
-    obj = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
-    fn.__closure = obj;
+    const obj2 = { duration: 200, easing: native.STANDARD_EASING };
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
     fn.__workletHash = 15930548853488;
     fn.__initData = __initData;
-    const result = sharedValue.set(obj.withTiming(num, obj, "respect-motion-settings", fn));
+    const result = sharedValue.set(obj.withTiming(num, obj2, "respect-motion-settings", fn));
+    const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
   }, items);
   const items1 = [tmp5, ];
-  const obj3 = mediaItemHasSpoiler(4373);
+  let obj3 = mediaItemHasSpoiler(4373);
   let fn = function l() {
     return { opacity: sharedValue.get() };
   };

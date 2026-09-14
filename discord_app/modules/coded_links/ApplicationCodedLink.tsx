@@ -26,24 +26,20 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
     if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
         if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = storefrontMessageEmbedCodedLink;
-          const result = tmpResult.parseStorefrontSkuCodedLink(code);
+          const result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
-            let obj = { type, applicationId: null, skuId: null };
+            const obj2 = { type, applicationId: null, skuId: null };
             ({ applicationId: obj4.applicationId, skuId: obj4.skuId } = result);
-            tmp5 = obj;
+            tmp5 = obj2;
           }
           return tmp5;
         } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
-          obj = { type, applicationId: code, params: null };
-          tmpResult = activityBookmarkUtils;
-          obj.params = tmpResult.extractActivityBookmarkParams(url);
+          const obj = { type, applicationId: code, params: activityBookmarkUtils.extractActivityBookmarkParams(url) };
           return obj;
         }
       }
     }
   }
-  obj = { type, applicationId: code };
-  return obj;
+  return { type, applicationId: code };
 };

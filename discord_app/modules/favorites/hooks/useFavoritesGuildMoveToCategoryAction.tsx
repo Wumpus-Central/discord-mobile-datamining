@@ -1,7 +1,7 @@
-// === Module 11130: useFavoritesGuildMoveToCategoryAction ===
+// === Module 11131: useFavoritesGuildMoveToCategoryAction ===
 
-// Module 11130 (useFavoritesGuildMoveToCategoryAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10351 */;
+// Module 11131 (useFavoritesGuildMoveToCategoryAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,10 +9,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildMoveToCategoryAction.tsx");
 
 export default function useFavoritesGuildMoveToCategoryAction(id) {
-  let obj = favorite(10352);
-  const isFavoritesGuildSelected = obj.useIsFavoritesGuildSelected();
-  favorite = favorite(10352).useFavorite(id.id);
-  const obj2 = favorite(10352);
+  const isFavoritesGuildSelected = favorite(10353).useIsFavoritesGuildSelected();
+  let obj = favorite(10353);
+  favorite = favorite(10353).useFavorite(id.id);
+  const obj2 = favorite(10353);
   id = undefined;
   if (favorite != null) {
     id = favorite.id;
@@ -29,21 +29,21 @@ export default function useFavoritesGuildMoveToCategoryAction(id) {
       });
       const mapped = found.map((id) => ({ id: id.id, label: id.name }));
       if (null != favorite.parentId) {
-        obj = { label: null, destinations: null, perform: null };
+        const obj3 = { label: null, destinations: null, perform: null };
         const intl = tmp(1114).intl;
-        obj.label = intl.string(tmp(1114).t.FAplms);
+        obj3.label = intl.string(tmp(1114).t.FAplms);
         let tmp8 = mapped;
         if (tmp12) {
-          obj = { id: null, label: null };
+          const obj4 = { id: null, label: null };
           const intl2 = tmp(1114).intl;
-          obj.label = intl2.string(tmp(1114).t.GSfOoo);
-          const items = [obj];
+          obj4.label = intl2.string(tmp(1114).t.GSfOoo);
+          const items = [obj4];
           HermesBuiltin.arraySpread(mapped, 1);
           tmp8 = items;
         }
-        obj.destinations = tmp8;
-        obj.perform = tmp6;
-        let tmp7 = obj;
+        obj3.destinations = tmp8;
+        obj3.perform = tmp6;
+        let tmp7 = obj3;
       } else {
         tmp7 = null;
       }

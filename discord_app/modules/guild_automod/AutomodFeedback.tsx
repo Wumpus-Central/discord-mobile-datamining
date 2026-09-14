@@ -4,33 +4,33 @@
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
-let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
-obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
+const Feedback = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
+let obj2 = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
 
-export const Feedback = obj;
+export { Feedback };
 export const generateFeedbackOptions = function generateFeedbackOptions() {
-  obj = { name: null, value: null };
+  const obj = { name: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["+MbOX4"]);
   obj.value = obj.BUG;
   const items = [obj, ];
-  obj = { name: null, value: null };
+  obj2 = { name: null, value: null };
   const intl2 = util.intl;
-  obj.name = intl2.string(util.t.CRsCRC);
-  obj.value = obj.ALLOWED;
-  items[1] = obj;
+  obj2.name = intl2.string(util.t.CRsCRC);
+  obj2.value = obj.ALLOWED;
+  items[1] = obj2;
   return items;
 };
 export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RAID" };
-export const RaidResolutionType = obj;
+export const RaidResolutionType = obj2;
 export const getMostImportantRaidResolutionType = function getMostImportantRaidResolutionType(c3) {
-  if (c3.includes(obj.LEGITIMATE_ACTIVITY)) {
-    let DM_SPAM = obj.LEGITIMATE_ACTIVITY;
-  } else if (c3.includes(obj.DM_SPAM)) {
-    DM_SPAM = obj.DM_SPAM;
+  if (obj2.includes(obj2.LEGITIMATE_ACTIVITY)) {
+    let DM_SPAM = obj2.LEGITIMATE_ACTIVITY;
+  } else if (obj2.includes(obj2.DM_SPAM)) {
+    DM_SPAM = obj2.DM_SPAM;
   } else {
-    DM_SPAM = c3.includes(obj.JOIN_RAID) ? obj.JOIN_RAID : obj.OTHER;
+    DM_SPAM = obj2.includes(obj2.JOIN_RAID) ? obj2.JOIN_RAID : obj2.OTHER;
   }
   return DM_SPAM;
 };

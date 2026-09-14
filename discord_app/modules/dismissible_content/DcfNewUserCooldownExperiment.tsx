@@ -5,15 +5,15 @@ import DurationsDefault from "Durations" /* 1090 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: null, variations: null };
-obj = { newUserCooldownMs: DurationsDefault.Millis.DAY };
-obj.defaultConfig = obj;
-const obj1 = { 1: null, 2: { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY }, 3: null };
-const obj2 = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
-obj1[2] = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
-const obj3 = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
-obj1[3] = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
-obj.variations = obj1;
+const obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: { newUserCooldownMs: DurationsDefault.Millis.DAY }, variations: null };
+const obj3 = { 1: null, 2: null, 3: null };
+const obj2 = { newUserCooldownMs: DurationsDefault.Millis.DAY };
+obj3[1] = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
+const obj4 = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
+obj3[2] = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
+const obj5 = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
+obj3[3] = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
+obj.variations = obj3;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
 

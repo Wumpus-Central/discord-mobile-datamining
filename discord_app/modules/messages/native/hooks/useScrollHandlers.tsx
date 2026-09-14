@@ -1,13 +1,13 @@
-// === Module 11671: useScrollHandlers ===
+// === Module 11672: useScrollHandlers ===
 
-// Module 11671 (useScrollHandlers)
+// Module 11672 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5043 */;
 import QuestTypes from "QuestTypes" /* 5528 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11119 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11404 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11406 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11120 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11405 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11407 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -63,8 +63,8 @@ export default function useScrollHandlers(arg0) {
               closure_1_4.current = true;
               closure_1_5();
             }
-            let obj = { isFirstMessageVisible: flag4 };
-            closure_1_13(obj);
+            const obj2 = { isFirstMessageVisible: flag4 };
+            closure_1_13(obj2);
             dependencyMap.tryFlush();
             return true;
           }
@@ -85,7 +85,7 @@ export default function useScrollHandlers(arg0) {
         current = ref1.current;
       }
       if (!current) {
-        obj = DimensionActionCreatorsDefault;
+        const obj = DimensionActionCreatorsDefault;
         const id = tmp.id;
         let num = 0;
         if (isAtBottom) {
@@ -203,8 +203,7 @@ export default function useScrollHandlers(arg0) {
       ({ timeStamp, nativeEvent } = arg0);
       ({ firstVisibleMessageIndex, lastVisibleMessageIndex, changesetUpdateId } = nativeEvent);
       ({ isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible } = nativeEvent);
-      let obj = ChatChangesetUpdateTracker;
-      const changesetIdForChat = obj.getChangesetIdForChat(ref.current);
+      const changesetIdForChat = ChatChangesetUpdateTracker.getChangesetIdForChat(ref.current);
       if (changesetUpdateId !== changesetIdForChat) {
         if (null == ref.current) {
           ref.current = timeStamp;
@@ -213,17 +212,17 @@ export default function useScrollHandlers(arg0) {
           logger.log("STAFF-ACK-LOG: Ignoring outdated scroll event.", closure_1_11, changesetUpdateId, changesetIdForChat, timeStamp);
         }
       } else {
-        obj = { firstVisibleMessageRowIndex: firstVisibleMessageIndex, lastVisibleMessageRowIndex: lastVisibleMessageIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestTypes.QuestsVisibleMessagesChangedSource.SCROLL };
-        closure_1_7(obj);
+        const obj2 = { firstVisibleMessageRowIndex: firstVisibleMessageIndex, lastVisibleMessageRowIndex: lastVisibleMessageIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestTypes.QuestsVisibleMessagesChangedSource.SCROLL };
+        closure_1_7(obj2);
         let current = ref.current;
         if (current == null) {
           current = timeStamp;
         }
         ref.current = undefined;
-        obj = { eventTimestamp: current, isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible };
-        handleScroll(obj);
-        const obj1 = { rows: previousRows._rows, firstVisibleMessageRowIndex: firstVisibleMessageIndex, lastVisibleMessageRowIndex: lastVisibleMessageIndex };
-        closure_1_16.handleScrollPosition(obj1);
+        const obj3 = { eventTimestamp: current, isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible };
+        handleScroll(obj3);
+        const obj4 = { rows: previousRows._rows, firstVisibleMessageRowIndex: firstVisibleMessageIndex, lastVisibleMessageRowIndex: lastVisibleMessageIndex };
+        closure_1_16.handleScrollPosition(obj4);
       }
     }
   };

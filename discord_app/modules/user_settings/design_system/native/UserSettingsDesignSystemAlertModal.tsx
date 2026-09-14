@@ -1,6 +1,6 @@
-// === Module 15860: UserSettingsDesignSystemAlertModal ===
+// === Module 15862: UserSettingsDesignSystemAlertModal ===
 
-// Module 15860 (UserSettingsDesignSystemAlertModal)
+// Module 15862 (UserSettingsDesignSystemAlertModal)
 import useAlertStore from "useAlertStore" /* 4982 */;
 import AlertModal from "AlertModal" /* 4986 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
@@ -17,8 +17,8 @@ function DemoModal() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -31,21 +31,21 @@ function DemoModal() {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const promise = new Promise((arg0) => setTimeout(arg0, 2000));
             c1 = 1;
             c0 = 1;
-            const obj1 = { value: promise, done: false };
-            return obj1;
+            const obj4 = { value: promise, done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c0 = 3;
@@ -74,9 +74,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
-  let obj = { children: null };
-  obj = { style: closure_9().container, children: <React4>{null}</React4> };
-  obj = { onPress: openDemoModal, text: "Show Alert" };
-  obj.children = jsx(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Alert" });
-  return <hasOwnProperty onPress={openDemoModal} text="Show Alert" />;
+  const obj = { children: null };
+  const obj2 = { style: closure_9().container, children: jsx(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Alert" }) };
+  obj.children = <React4 style={closure_9().container}>{jsx(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Alert" })}</React4>;
+  return <hasOwnProperty>{null}</hasOwnProperty>;
 };

@@ -3,12 +3,13 @@
 // Module 7174 (fastest_list/FastestList)
 import FastestListItemTypeDefault from "FastestListItemType" /* 7167 */;
 import FastList from "FastList" /* 7175 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 
 require = fn;
 function noop() {
 
 }
+let noop = noop_mod;
 const RefreshControl = fn(17).RefreshControl;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -45,8 +46,8 @@ export default noop.forwardRef((inActionSheet, ref) => {
   ({ sectionFooterSize, sections, showsHorizontalScrollIndicator, showsVerticalScrollIndicator, style } = inActionSheet);
   const merged = Object.assign(inActionSheet, Object.assign({ accessibilityLabel: 0, enabled: 0, estimatedListSize: 0, horizontal: 0, inActionSheet: 0, insetStart: 0, insetEnd: 0, itemSize: 0, keyboardDismissMode: 0, keyboardShouldPersistTaps: 0, keyExtractor: 0, listFooterSize: 0, listFooterAlwaysMounted: 0, listHeaderSize: 0, listHeaderAlwaysMounted: 0, onContentLengthChange: 0, onLayout: 0, preventNativeModalDismiss: 0, renderAhead: 0, renderItem: 0, renderListFooter: 0, renderListHeader: 0, renderSectionHeader: 0, renderSectionFooter: 0, scrollEventThrottle: 0, scrollIndicatorInsetEnd: 0, scrollIndicatorInsetStart: 0, sectionHeaderSize: 0, sectionHeaderIsSticky: 0, sectionFooterSize: 0, sections: 0, showsHorizontalScrollIndicator: 0, showsVerticalScrollIndicator: 0, style: 0 }));
   ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = inActionSheet(keyExtractor[3])(merged, horizontal));
-  let obj = onContentLengthChange;
   const items = [keyExtractor];
+  let obj = onContentLengthChange;
   let tmp2 = inActionSheet;
   const tmp4 = inActionSheet(keyExtractor[3])(merged, horizontal);
   const items1 = [horizontal, scrollIndicatorInsetEnd, scrollIndicatorInsetStart];
@@ -100,7 +101,7 @@ export default noop.forwardRef((inActionSheet, ref) => {
     AnimatedFastList = tmp2(tmp3[5]);
   }
   const items3 = [horizontal, onContentLengthChange];
-  obj = { accessibilityLabel, automaticallyAdjustsScrollIndicatorInsets: null == memo, batchesToRender: null, refreshControl: null, chunkBase: null, stickySectionsVariant: null, footerSize: null, getRecyclerKey: null, headerSize: null, horizontal: null, inActionSheet: null, insetStart: null, insetEnd: null, itemSize: null, keyboardDismissMode: null, keyboardShouldPersistTaps: null, onContentSizeChange: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, optimizeListItemRender: true, ref: null, renderItem: null, renderFooter: null, renderHeader: null, renderSection: null, renderSectionFooter: null, scrollEventThrottle: null, scrollIndicatorInsets: null, scrollPosValue: null, sections: null, sectionSize: null, sectionFooterSize: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, stickyHeaderFooter: null, style: null };
+  const obj2 = { accessibilityLabel, automaticallyAdjustsScrollIndicatorInsets: null == memo, batchesToRender: null, refreshControl: null, chunkBase: null, stickySectionsVariant: null, footerSize: null, getRecyclerKey: null, headerSize: null, horizontal: null, inActionSheet: null, insetStart: null, insetEnd: null, itemSize: null, keyboardDismissMode: null, keyboardShouldPersistTaps: null, onContentSizeChange: null, onLayout: null, onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null, optimizeListItemRender: true, ref: null, renderItem: null, renderFooter: null, renderHeader: null, renderSection: null, renderSectionFooter: null, scrollEventThrottle: null, scrollIndicatorInsets: null, scrollPosValue: null, sections: null, sectionSize: null, sectionFooterSize: null, showsHorizontalScrollIndicator: null, showsVerticalScrollIndicator: null, stickyHeaderFooter: null, style: null };
   const callback1 = obj.useCallback((arg0, arg1) => {
     if (onContentLengthChange != null) {
       let tmp2 = arg1;
@@ -117,59 +118,59 @@ export default noop.forwardRef((inActionSheet, ref) => {
       num = 16;
     }
   }
-  obj.batchesToRender = num;
-  obj.refreshControl = memo1;
-  obj.chunkBase = inActionSheet(keyExtractor[4])({ estimatedListSize, horizontal });
+  obj2.batchesToRender = num;
+  obj2.refreshControl = memo1;
+  obj2.chunkBase = inActionSheet(keyExtractor[4])({ estimatedListSize, horizontal });
   let str3 = "disabled";
   if (sectionHeaderIsSticky) {
     str3 = "default";
   }
-  obj.stickySectionsVariant = str3;
-  obj.footerSize = listFooterSize;
-  obj.getRecyclerKey = callback;
-  obj.headerSize = listHeaderSize;
-  obj.horizontal = horizontal;
-  obj.inActionSheet = inActionSheet;
-  obj.insetStart = insetStart;
-  obj.insetEnd = insetEnd;
-  obj.itemSize = itemSize;
-  obj.keyboardDismissMode = keyboardDismissMode;
-  obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
+  obj2.stickySectionsVariant = str3;
+  obj2.footerSize = listFooterSize;
+  obj2.getRecyclerKey = callback;
+  obj2.headerSize = listHeaderSize;
+  obj2.horizontal = horizontal;
+  obj2.inActionSheet = inActionSheet;
+  obj2.insetStart = insetStart;
+  obj2.insetEnd = insetEnd;
+  obj2.itemSize = itemSize;
+  obj2.keyboardDismissMode = keyboardDismissMode;
+  obj2.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
   let tmp12;
   if (null != onContentLengthChange) {
     tmp12 = callback1;
   }
-  obj.onContentSizeChange = tmp12;
-  obj.onLayout = onLayout;
+  obj2.onContentSizeChange = tmp12;
+  obj2.onLayout = onLayout;
   let tmp13;
   if ("animatedScrollPosition" !== merged.scrollReporting) {
     tmp13 = onScroll;
   }
-  obj.onScroll = tmp13;
-  obj.onScrollBeginDrag = onScrollBeginDrag;
-  obj.onScrollEndDrag = onScrollEndDrag;
-  obj.ref = ref;
-  obj.renderItem = renderItem;
-  obj.renderFooter = renderListFooter;
-  obj.renderHeader = renderListHeader;
-  obj.renderSection = renderSectionHeader;
-  obj.renderSectionFooter = renderSectionFooter;
-  obj.scrollEventThrottle = scrollEventThrottle;
-  obj.scrollIndicatorInsets = memo;
+  obj2.onScroll = tmp13;
+  obj2.onScrollBeginDrag = onScrollBeginDrag;
+  obj2.onScrollEndDrag = onScrollEndDrag;
+  obj2.ref = ref;
+  obj2.renderItem = renderItem;
+  obj2.renderFooter = renderListFooter;
+  obj2.renderHeader = renderListHeader;
+  obj2.renderSection = renderSectionHeader;
+  obj2.renderSectionFooter = renderSectionFooter;
+  obj2.scrollEventThrottle = scrollEventThrottle;
+  obj2.scrollIndicatorInsets = memo;
   let scrollPosition;
   if ("animatedScrollPosition" === merged.scrollReporting) {
     scrollPosition = merged.scrollPosition;
   }
-  obj.scrollPosValue = scrollPosition;
-  obj.sections = sections;
-  obj.sectionSize = sectionHeaderSize;
-  obj.sectionFooterSize = sectionFooterSize;
-  obj.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
-  obj.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
+  obj2.scrollPosValue = scrollPosition;
+  obj2.sections = sections;
+  obj2.sectionSize = sectionHeaderSize;
+  obj2.sectionFooterSize = sectionFooterSize;
+  obj2.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
+  obj2.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
   if (!listHeaderAlwaysMounted) {
     listHeaderAlwaysMounted = listFooterAlwaysMounted;
   }
-  obj.stickyHeaderFooter = listHeaderAlwaysMounted;
-  obj.style = style;
-  return scrollIndicatorInsetEnd(AnimatedFastList, obj);
+  obj2.stickyHeaderFooter = listHeaderAlwaysMounted;
+  obj2.style = style;
+  return scrollIndicatorInsetEnd(AnimatedFastList, obj2);
 });

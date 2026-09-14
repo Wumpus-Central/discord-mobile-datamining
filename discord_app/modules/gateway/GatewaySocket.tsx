@@ -1,6 +1,6 @@
-// === Module 13719: GatewaySocket ===
+// === Module 13720: GatewaySocket ===
 
-// Module 13719 (GatewaySocket)
+// Module 13720 (GatewaySocket)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -9,23 +9,23 @@ import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1339 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1337 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
-import GatewayEncodingDefault from "GatewayEncoding" /* 13720 */;
-import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 13723 */;
-import AltGatewayTrackerDefault from "AltGatewayTracker" /* 13724 */;
-import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 13727 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13732 */;
-import ConnectionStateDefault from "ConnectionState" /* 13734 */;
-import GatewayCompressionHandler from "GatewayCompressionHandler" /* 13736 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13755 */;
+import GatewayEncodingDefault from "GatewayEncoding" /* 13721 */;
+import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 13724 */;
+import AltGatewayTrackerDefault from "AltGatewayTracker" /* 13725 */;
+import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 13728 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13733 */;
+import ConnectionStateDefault from "ConnectionState" /* 13735 */;
+import GatewayCompressionHandler from "GatewayCompressionHandler" /* 13737 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13756 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1345 */;
 
 require = fn;
 function noop() {
@@ -193,11 +193,10 @@ prototype["_connect"] = function _connect() {
   const self = this;
   let identify = this;
   if (this.willReconnect()) {
-    let obj = PauseGatewaySocketAll;
     if (obj.getIsPaused()) {
       logger.info("Skipping _connect because socket is paused");
     } else {
-      self.connectionState = identify(13734).CONNECTING;
+      self.connectionState = identify(13735).CONNECTING;
       self.nextReconnectIsImmediate = false;
       const algorithm = self.compressionHandler.getAlgorithm();
       name = name.getName();
@@ -236,13 +235,12 @@ prototype["_connect"] = function _connect() {
         const searchParams3 = str11.searchParams;
         searchParams3.append("compress", algorithm);
       }
-      let str = str11.toString();
+      const str1 = str11.toString();
       ({ compressionHandler: compressionHandler2, _handleClose } = self);
       closure_129_0 = compressionHandler2;
       closure_129_1 = _handleClose.bind(self);
       closure_129_2 = (byteLength, compressed_byte_size) => {
         const timestamp = Date.now();
-        let obj = closure_10;
         ({ op, s, t, d } = closure_10.unpack(byteLength));
         if (op !== GatewaySocketOpCodes2.Opcode.DISPATCH) {
           const _HermesInternal = HermesInternal;
@@ -286,13 +284,13 @@ prototype["_connect"] = function _connect() {
         } else if (GatewaySocketOpCodes2.Opcode.DISPATCH === op) {
           let tmp29 = null;
           if (tmp18) {
-            obj = { compressed_byte_size, uncompressed_byte_size: null, compression_algorithm: null, packing_algorithm: null, unpack_duration_ms: null };
+            const obj4 = { compressed_byte_size, uncompressed_byte_size: null, compression_algorithm: null, packing_algorithm: null, unpack_duration_ms: null };
             if (null == byteLength) {
-              obj.uncompressed_byte_size = 0;
-              obj.compression_algorithm = identify.compressionHandler.getAlgorithm();
-              obj.packing_algorithm = obj.getName();
-              obj.unpack_duration_ms = diff;
-              tmp29 = obj;
+              obj4.uncompressed_byte_size = 0;
+              obj4.compression_algorithm = identify.compressionHandler.getAlgorithm();
+              obj4.packing_algorithm = closure_10.getName();
+              obj4.unpack_duration_ms = diff;
+              tmp29 = obj4;
               const compressionHandler = identify.compressionHandler;
             }
           }
@@ -337,9 +335,9 @@ prototype["_connect"] = function _connect() {
         if (tmp33) {
           tmp33 = userId !== global;
         }
-        if (_ws.state.gateway !== str) {
+        if (_ws.state.gateway !== str1) {
           const _HermesInternal3 = HermesInternal;
-          logger.verbose("[FAST CONNECT] gatewayURL mismatch: " + _ws.state.gateway + " !== " + str);
+          logger.verbose("[FAST CONNECT] gatewayURL mismatch: " + _ws.state.gateway + " !== " + str1);
           ws.close(1000);
           messages2 = null;
           flag3 = false;
@@ -354,11 +352,11 @@ prototype["_connect"] = function _connect() {
           flag4 = false;
           tmp32 = null;
         } else {
-          obj = {};
+          let obj4 = {};
           let merged = Object.assign(_ws.state);
-          if (null != obj.messages) {
-            const messages = obj.messages;
-            obj.messages = messages.map((data) => {
+          if (null != obj4.messages) {
+            const messages = obj4.messages;
+            obj4.messages = messages.map((data) => {
               let tmp = data;
               if (null != data.data) {
                 tmp = data;
@@ -372,15 +370,15 @@ prototype["_connect"] = function _connect() {
               return tmp;
             });
           }
-          obj = {};
-          const merged1 = Object.assign(obj);
-          const messages1 = obj.messages;
+          const obj5 = {};
+          const merged1 = Object.assign(obj4);
+          const messages1 = obj4.messages;
           let length;
           if (messages1 != null) {
             length = messages1.length;
           }
-          obj.messages = length;
-          logger.log("[FAST CONNECT] successfully took over websocket, state:", obj);
+          obj5.messages = length;
+          logger.log("[FAST CONNECT] successfully took over websocket, state:", obj5);
           flag4 = _ws.state.open;
           identify = _ws.state.identify;
           messages2 = _ws.state.messages;
@@ -390,7 +388,7 @@ prototype["_connect"] = function _connect() {
         }
       }
       if (null == tmp32) {
-        const tmp48 = tmp5(13722)(str);
+        const tmp48 = tmp5(13723)(str1);
         tmp48.binaryType = "arraybuffer";
         tmp32 = tmp48;
       }
@@ -457,8 +455,8 @@ prototype["_connect"] = function _connect() {
       const compressionHandler3 = self.compressionHandler;
       let obj2 = identify(10);
     }
+    obj = PauseGatewaySocketAll;
   } else {
-    str = "Skipping _connect because willReconnect is false";
     logger.verbose("Skipping _connect because willReconnect is false");
   }
 };
@@ -467,10 +465,9 @@ prototype["_handleHello"] = function _handleHello(d) {
   this.heartbeatInterval = heartbeat_interval;
   const timestamp = Date.now();
   const diff = timestamp - this.connectionStartTime;
-  let obj = GatewaySocketAnalytics;
-  closure_9.verbose("[HELLO] via " + obj.getConnectionPath(d) + ", heartbeat interval: " + heartbeat_interval + ", took " + diff + " ms");
-  obj = { socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: timestamp };
-  GatewaySocketAnalytics.logGatewayConnected(obj);
+  closure_9.verbose("[HELLO] via " + GatewaySocketAnalytics.getConnectionPath(d) + ", heartbeat interval: " + heartbeat_interval + ", took " + diff + " ms");
+  const obj2 = GatewaySocketAnalytics;
+  obj2.logGatewayConnected({ socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: timestamp });
   this.receivedHelloThisAttempt = true;
   this.failedConnectAttempts = 0;
   this.firstConnectAttemptStartTime = 0;
@@ -627,11 +624,10 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
       self._connect();
     } else {
       const gatewayBackoff = self.gatewayBackoff;
-      flag.toString();
+      const str1 = flag.toString();
       const result2 = gatewayBackoff.fail(() => self._connect()) / 1000;
       const _HermesInternal = HermesInternal;
-      const str = " seconds.";
-      closure_9.info("[WS CLOSED] (" + str + ", " + code + ", " + reason + ") retrying in " + result2.toFixed(2) + " seconds.");
+      closure_9.info("[WS CLOSED] (" + str1 + ", " + code + ", " + reason + ") retrying in " + result2.toFixed(2) + " seconds.");
       if (self.gatewayBackoff.fails > 4) {
         self._reset(flag, code, reason);
       }
@@ -643,8 +639,7 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
 prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13, reason, flag) {
   const self = this;
   _require = flag;
-  let obj = require("PlatformUtils");
-  let isIOSResult = obj.isIOS();
+  let isIOSResult = require("PlatformUtils").isIOS();
   if (isIOSResult) {
     isIOSResult = null != self.token;
   }
@@ -657,11 +652,11 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
   if (isIOSResult) {
     self.iosGoingAwayEventCount = self.iosGoingAwayEventCount + 1;
     if (3 === self.iosGoingAwayEventCount) {
-      const HTTP = tmp(1272).HTTP;
-      obj = { url: constants2.ME, headers: null, rejectWithError: false };
-      obj = { authorization: self.token };
-      obj.headers = obj;
-      value = HTTP.get(obj);
+      const HTTP = tmp(1270).HTTP;
+      const obj2 = { url: constants2.ME, headers: null, rejectWithError: false };
+      const obj3 = { authorization: self.token };
+      obj2.headers = obj3;
+      value = HTTP.get(obj2);
       value.then((api_status_code) => {
         self(dependencyMap[21]).track(constants.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: api_status_code.status });
       }, (status) => {
@@ -675,6 +670,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
       });
     }
   }
+  let obj = require("PlatformUtils");
   tmp = _require;
 };
 prototype["_reset"] = function _reset(wasClean, code, reason) {
@@ -781,15 +777,14 @@ prototype["_cleanup"] = function _cleanup(fn) {
 prototype["_doResume"] = function _doResume() {
   const self = this;
   this.connectionState = ConnectionStateDefault.RESUMING;
-  let obj = GatewaySocketAnalytics;
-  this.dispatcher.resumeAnalytics = obj.createResumeAnalytics(Date.now() - this.connectionStartTime);
+  this.dispatcher.resumeAnalytics = GatewaySocketAnalytics.createResumeAnalytics(Date.now() - this.connectionStartTime);
   let str = this.sessionId;
   if (str == null) {
     str = "";
   }
   closure_9.info("[RESUME] resuming session " + str + ", seq: " + self.seq);
-  obj = { token: self.token, session_id: self.sessionId, seq: self.seq };
-  self.send(GatewaySocketOpCodes2.Opcode.RESUME, obj, false);
+  self.send(GatewaySocketOpCodes2.Opcode.RESUME, { token: self.token, session_id: self.sessionId, seq: self.seq }, false);
+  const obj2 = { token: self.token, session_id: self.sessionId, seq: self.seq };
 };
 prototype["_doIdentify"] = function _doIdentify() {
   const self = this;
@@ -801,8 +796,8 @@ prototype["_doIdentify"] = function _doIdentify() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -815,8 +810,8 @@ prototype["_doIdentify"] = function _doIdentify() {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
@@ -838,7 +833,7 @@ prototype["_doIdentify"] = function _doIdentify() {
             const handleIdentifyResult = self.handleIdentify();
             closure_128_0 = handleIdentifyResult;
             if (null !== handleIdentifyResult) {
-              self.connectionState = tmp2(13734).IDENTIFYING;
+              self.connectionState = tmp2(13735).IDENTIFYING;
               const _Date = Date;
               const timestamp = Date.now();
               closure_128_1 = timestamp;
@@ -867,8 +862,8 @@ prototype["_doIdentify"] = function _doIdentify() {
               items[2] = canUseGuildVersionsResult;
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: Promise.all(items), done: false };
-              return obj1;
+              const obj4 = { value: Promise.all(items), done: false };
+              return obj4;
             } else {
               self._handleClose(true, code, "No connection info provided");
             }
@@ -880,8 +875,8 @@ prototype["_doIdentify"] = function _doIdentify() {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_2 = value;
             let tmp65;
@@ -891,50 +886,50 @@ prototype["_doIdentify"] = function _doIdentify() {
             closure_128_6 = closure_128_3[2];
             closure_128_7 = tmp3(500).buildQosToken(closure_128_0.userId, closure_129_0.getIsUserActive());
             if (closure_128_6) {
-              const obj3 = { guild_versions: closure_128_4, highest_last_message_id: closure_128_5.highest_last_message_id, read_state_version: closure_128_5.read_state_version, user_guild_settings_version: closure_128_5.user_guild_settings_version, user_settings_version: closure_128_5.user_settings_version, private_channels_version: closure_128_5.private_channels_version, api_code_version: closure_128_5.api_code_version, initial_guild_id: closure_128_5.initial_guild_id };
-              obj = obj3;
+              const obj9 = { guild_versions: closure_128_4, highest_last_message_id: closure_128_5.highest_last_message_id, read_state_version: closure_128_5.read_state_version, user_guild_settings_version: closure_128_5.user_guild_settings_version, user_settings_version: closure_128_5.user_settings_version, private_channels_version: closure_128_5.private_channels_version, api_code_version: closure_128_5.api_code_version, initial_guild_id: closure_128_5.initial_guild_id };
+              let obj = obj9;
             } else {
               obj = { guild_versions: {} };
             }
             closure_128_8 = obj;
-            if (closure_129_0.connectionState !== tmp2(13734).IDENTIFYING) {
+            if (closure_129_0.connectionState !== tmp2(13735).IDENTIFYING) {
               closure_1_9.warn("Skipping identify because connectionState or identifyStartTime has changed");
             }
             token = closure_128_0.token;
             properties = closure_128_0.properties;
             if (tmp65 === properties) {
-              let obj4 = {};
+              let obj11 = {};
             } else {
-              obj4 = properties;
+              obj11 = properties;
             }
-            closure_128_11 = obj4;
+            closure_128_11 = obj11;
             presence = closure_128_0.presence;
             closure_129_0.token = token;
             closure_1_9.verbose("[IDENTIFY]");
-            const obj5 = { token, capabilities: null, properties: null, presence: null, compress: null, client_state: null, qos_token: null };
-            obj4 = tmp3(13756);
-            let obj6 = { useChannelObfuscation: null };
-            obj6 = tmp3(13757);
-            obj6.useChannelObfuscation = obj6.isChannelMetadataObfuscationEnabled("GatewaySocket");
-            obj5.capabilities = obj4.getClientCapabilities(obj6);
-            obj5.properties = closure_128_11;
-            obj5.presence = presence;
-            obj5.compress = closure_129_0.compressionHandler.usesLegacyCompression();
-            obj5.client_state = closure_128_8;
-            obj5.qos_token = closure_128_7;
-            closure_128_13 = obj5;
+            const obj14 = { token, capabilities: null, properties: null, presence: null, compress: null, client_state: null, qos_token: null };
+            const obj21 = tmp3(500);
+            const obj18 = { useChannelObfuscation: null };
+            const obj5 = tmp3(13757);
+            obj18.useChannelObfuscation = tmp3(13758).isChannelMetadataObfuscationEnabled("GatewaySocket");
+            obj14.capabilities = obj5.getClientCapabilities(obj18);
+            obj14.properties = closure_128_11;
+            obj14.presence = presence;
+            obj14.compress = closure_129_0.compressionHandler.usesLegacyCompression();
+            obj14.client_state = closure_128_8;
+            obj14.qos_token = closure_128_7;
+            closure_128_13 = obj14;
             const _JSON = JSON;
             closure_128_14 = JSON.stringify(closure_128_13);
             closure_129_0.identifyUncompressedByteSize = closure_128_14.length;
             const compressionHandler = closure_129_0.compressionHandler;
-            const obj21 = tmp3(500);
-            closure_129_0.identifyCompressedByteSize = v1(13739).deflate(closure_128_14).length;
+            const obj7 = tmp3(13758);
+            closure_129_0.identifyCompressedByteSize = v1(13740).deflate(closure_128_14).length;
             closure_129_0.identifyCount = closure_129_0.identifyCount + num3;
             num3 = closure_129_0;
-            closure_129_0.send(tmp3(13723).Opcode.IDENTIFY, closure_128_13, false);
-            tmp65 = tmp2(1242);
+            closure_129_0.send(tmp3(13724).Opcode.IDENTIFY, closure_128_13, false);
+            tmp65 = tmp2(1240);
             tmp65.track(constants.SESSION_START_CLIENT, {});
-            const obj8 = v1(13739);
+            const obj8 = v1(13740);
           }
         }
         dependencyMap = 3;
@@ -1054,26 +1049,22 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   const self = this;
   ({ action, error, metricAction } = args);
   closure_9.error("resetSocketAndClearCacheOnError during " + action + ": " + error.message, error.stack);
-  let obj1 = ClientModDetectionUtils;
-  const usesClientModsResult = obj1.usesClientMods();
-  let obj2 = MonitoringAgentDefault;
-  let obj = { name: MetricEvents.MetricEvents.SOCKET_CRASHED, tags: null };
+  const usesClientModsResult = ClientModDetectionUtils.usesClientMods();
+  const obj4 = { name: MetricEvents.MetricEvents.SOCKET_CRASHED, tags: null };
   if (metricAction == null) {
     metricAction = action;
   }
   const items = ["action:" + metricAction, "modded_client:" + usesClientModsResult];
-  obj.tags = items;
-  obj2.increment(obj, true);
+  obj4.tags = items;
+  MonitoringAgentDefault.increment(obj4, true);
   if (false !== args.sentry) {
-    let tmp4Result = SentryUtilsDefault;
-    obj = { tags: null };
-    obj1 = { socketCrashedAction: action };
-    obj.tags = obj1;
-    tmp4Result.captureException(error, obj);
+    const obj5 = { tags: null };
+    const obj6 = { socketCrashedAction: action };
+    obj5.tags = obj6;
+    SentryUtilsDefault.captureException(error, obj5);
+    const tmp4Result = SentryUtilsDefault;
   }
-  tmp4Result = AnalyticsUtilsDefault;
-  obj2 = { error_message: error.message, error_stack: error.stack, has_client_mods: usesClientModsResult, action };
-  tmp4Result.track(constants.GATEWAY_SOCKET_RESET, obj2);
+  AnalyticsUtilsDefault.track(constants.GATEWAY_SOCKET_RESET, { error_message: error.message, error_stack: error.stack, has_client_mods: usesClientModsResult, action });
   self._cleanup((close) => close.close());
   self._reset(true, 1000, "Resetting socket due to error.");
   const dispatcher = self.dispatcher;
@@ -1082,7 +1073,7 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   let dispatchExceptionBackoff = self.dispatchExceptionBackoff;
   dispatchExceptionBackoff.cancel();
   if (0 === self.dispatchExceptionBackoff._fails) {
-    obj.verbose("Triggering fast reconnect");
+    closure_9.verbose("Triggering fast reconnect");
     const dispatchExceptionBackoff3 = self.dispatchExceptionBackoff;
     dispatchExceptionBackoff3.fail(() => {
 
@@ -1094,16 +1085,18 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
     dispatchExceptionBackoff2.fail(() => self._connect());
   }
   self.didForceClearGuildHashes = true;
-  const tmp4Result1 = DispatcherDefault;
-  tmp4Result1.dispatch({ type: "CLEAR_CACHES", reason: "Socket reset during " + action });
-  const obj3 = { type: "CLEAR_CACHES", reason: "Socket reset during " + action };
+  const obj7 = { error_message: error.message, error_stack: error.stack, has_client_mods: usesClientModsResult, action };
+  const tmp4Result4 = AnalyticsUtilsDefault;
+  const tmp4Result5 = DispatcherDefault;
+  tmp4Result5.dispatch({ type: "CLEAR_CACHES", reason: "Socket reset during " + action });
+  const obj8 = { type: "CLEAR_CACHES", reason: "Socket reset during " + action };
   DispatcherDefault.dispatch({ type: "LIBDISCORE_RESET" });
   clearTimeout(self.dispatchSuccessTimer);
   self.dispatchSuccessTimer = setTimeout(() => {
     const dispatchExceptionBackoff = self.dispatchExceptionBackoff;
     return dispatchExceptionBackoff.succeed();
   }, 2 * MINUTE);
-  const tmp4Result2 = DispatcherDefault;
+  const tmp4Result6 = DispatcherDefault;
 };
 prototype["resetSocketOnDispatchError"] = function resetSocketOnDispatchError(error) {
   let tmp = null != error.error.message;

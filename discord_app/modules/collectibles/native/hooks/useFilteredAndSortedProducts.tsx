@@ -1,6 +1,6 @@
-// === Module 15155: useFilteredAndSortedProducts ===
+// === Module 15156: useFilteredAndSortedProducts ===
 
-// Module 15155 (useFilteredAndSortedProducts)
+// Module 15156 (useFilteredAndSortedProducts)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -15,7 +15,7 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
   const bypassAndroidUnsyncedFilter = products.bypassAndroidUnsyncedFilter;
   let callback;
   const badBundleFilter = products(bypassAndroidUnsyncedFilter[3]).useBadBundleFilter();
-  let obj = products(bypassAndroidUnsyncedFilter[3]);
+  const obj = products(bypassAndroidUnsyncedFilter[3]);
   const androidUnsyncedFilter = products(bypassAndroidUnsyncedFilter[4]).useAndroidUnsyncedFilter();
   closure_129_0 = tmp3;
   const obj2 = products(bypassAndroidUnsyncedFilter[4]);
@@ -28,11 +28,7 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
   callback = badBundleFilter.useCallback((arr) => {
     let found = arr;
     if (products) {
-      found = arr.filter((product) => {
-        products(bypassAndroidUnsyncedFilter[8]);
-        const obj = { product, hasShopDiscount };
-        return null != obj.getProductOrbPrice(obj);
-      });
+      found = arr.filter((product) => null != products(bypassAndroidUnsyncedFilter[8]).getProductOrbPrice({ product, hasShopDiscount }));
     }
     return found;
   }, items1);

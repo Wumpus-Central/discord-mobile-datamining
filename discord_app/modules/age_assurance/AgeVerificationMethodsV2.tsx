@@ -1,7 +1,7 @@
 // === Module 8555: AgeVerificationMethodsV2 ===
 
 // Module 8555 (AgeVerificationMethodsV2)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -22,9 +22,9 @@ function mapMethodsV2Response(methods) {
     }
     let tmp3 = null;
     if (null != icon) {
-      obj = { paths: null };
+      const obj2 = { paths: null };
       const paths = icon.paths;
-      obj.paths = paths.map((d) => {
+      obj2.paths = paths.map((d) => {
         const obj = { d: d.d, fillRule: null };
         let str;
         if ("evenodd" === d.fill_rule) {
@@ -33,7 +33,7 @@ function mapMethodsV2Response(methods) {
         obj.fillRule = str;
         return obj;
       });
-      tmp3 = obj;
+      tmp3 = obj2;
     }
     obj.icon = tmp3;
     let external_window = method.external_window;

@@ -6,8 +6,8 @@ import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7565 */;
 import SessionRouteUtils2 from "SessionRouteUtils" /* 7566 */;
 import MonotonicClock from "MonotonicClock" /* 7567 */;
@@ -38,8 +38,8 @@ let closure_26 = async function _trackHeartbeat() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -53,8 +53,8 @@ let closure_26 = async function _trackHeartbeat() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -67,16 +67,16 @@ let closure_26 = async function _trackHeartbeat() {
           closure_129_0 = Date.now();
           c3 = 1;
           c4 = 1;
-          let obj1 = { value: getSession(), done: false };
-          return obj1;
+          const obj5 = { value: getSession(), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_1 = value;
         let tmp40 = globalThis;
@@ -84,37 +84,37 @@ let closure_26 = async function _trackHeartbeat() {
         closure_129_2 = Date.now();
         let track = null;
         if (null != closure_129_1) {
-          obj1 = closure_130_1(closure_130_2[11]);
-          const obj3 = { category: closure_130_14, message: "Tracking Heartbeat", data: null };
-          const obj4 = { initialized: closure_129_1.createdAtTimestamp };
-          obj3.data = obj4;
-          obj1.addBreadcrumb(obj3);
-          let obj5 = { client_heartbeat_initialization_timestamp: closure_129_1.createdAtTimestamp, client_heartbeat_version: 31 };
-          obj5 = closure_130_0(closure_130_2[13]);
-          const merged = Object.assign(obj5.getClientHeartbeatPiggybackProperties());
+          const obj10 = { category: closure_130_14, message: "Tracking Heartbeat", data: null };
+          const obj11 = { initialized: closure_129_1.createdAtTimestamp };
+          obj10.data = obj11;
+          closure_130_1(closure_130_2[11]).addBreadcrumb(obj10);
+          const obj12 = { client_heartbeat_initialization_timestamp: closure_129_1.createdAtTimestamp, client_heartbeat_version: 31 };
+          const obj2 = closure_130_1(closure_130_2[11]);
+          const merged = Object.assign(closure_130_0(closure_130_2[13]).getClientHeartbeatPiggybackProperties());
           const idleSince = closure_130_6.getIdleSince();
           num2 = idleSince;
           closure_129_3 = num2;
-          const obj6 = { is_idle: closure_130_6.isIdle(), idle_duration_ms: null, is_afk: null, is_system_suspended: null, is_system_locked: null };
+          const obj13 = { is_idle: closure_130_6.isIdle(), idle_duration_ms: null, is_afk: null, is_system_suspended: null, is_system_locked: null };
           const _Date = tmp40.Date;
-          obj6.idle_duration_ms = _Date.now() - closure_129_3;
-          obj6.is_afk = closure_130_6.isAFK();
-          obj6.is_system_suspended = closure_130_6.getSystemSuspended();
-          obj6.is_system_locked = closure_130_6.getSystemLocked();
-          const merged1 = Object.assign(obj6);
-          closure_129_4 = obj5;
+          obj13.idle_duration_ms = _Date.now() - closure_129_3;
+          obj13.is_afk = closure_130_6.isAFK();
+          obj13.is_system_suspended = closure_130_6.getSystemSuspended();
+          obj13.is_system_locked = closure_130_6.getSystemLocked();
+          const merged1 = Object.assign(obj13);
+          closure_129_4 = obj12;
           tmp40 = closure_130_1(closure_130_2[14]);
           track = tmp40.track;
           track(closure_130_8.CLIENT_HEARTBEAT, closure_129_4);
+          obj6 = closure_130_0(closure_130_2[13]);
           closure_130_19 = closure_130_0(closure_130_2[10]).monotonicNowMs();
           const obj8 = closure_130_0(closure_130_2[10]);
           num2 = closure_130_0(closure_130_2[12]).drainClickstream();
           const obj9 = closure_130_0(closure_130_2[12]);
         } else {
-          obj = closure_130_1(closure_130_2[11]);
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          obj.captureException(Error("Null session when tracking session heartbeat. Waited " + closure_129_2 - closure_129_0 + "ms"));
+          closure_130_1(closure_130_2[11]).captureException(Error("Null session when tracking session heartbeat. Waited " + closure_129_2 - closure_129_0 + "ms"));
+          const obj = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
       }
@@ -137,8 +137,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
-  obj.addBreadcrumb(obj);
+  SentryUtilsDefault.addBreadcrumb({ message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` });
   const items = [];
   if (tmp4) {
     if (closure_22) {
@@ -152,16 +151,15 @@ function scheduleHeartbeatTracking() {
     if (null == _null) {
       let num = 0;
       if (0 !== c19) {
-        let obj2 = MonotonicClock;
-        num = closure_11 - (obj2.monotonicNowMs() - c19);
+        num = closure_11 - (MonotonicClock.monotonicNowMs() - c19);
       }
-      obj = { message: null };
+      const obj4 = { message: null };
       const _HermesInternal = HermesInternal;
-      obj.message = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
-      SentryUtilsDefault.addBreadcrumb(obj);
-      const obj1 = { type: "timeout", id: null };
+      obj4.message = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
+      SentryUtilsDefault.addBreadcrumb(obj4);
+      const obj5 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
-      obj1.id = setTimeout(() => {
+      obj5.id = setTimeout(() => {
         trackHeartbeat();
         obj = {
           type: "interval",
@@ -170,7 +168,7 @@ function scheduleHeartbeatTracking() {
           }, closure_1_11)
         };
       }, num);
-      _null = obj1;
+      _null = obj5;
       const tmpResult = SentryUtilsDefault;
     }
   } else if (null == _null) {
@@ -202,9 +200,10 @@ function scheduleHeartbeatTracking() {
         items1.push("rtc_connected");
       }
     }
-    obj2 = { active: items1.length > 0, ver: 31, reasons: items1 };
-    const result = socket.handleActiveStateChange(obj2);
+    obj6 = { active: items1.length > 0, ver: 31, reasons: items1 };
+    const result = socket.handleActiveStateChange(obj6);
   }
+  const obj2 = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   tmp4 = null != token && closure_23;
 }
 function validateClientSession(version) {
@@ -238,7 +237,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } else {
       return { value: "HermesInternal", done: null };
@@ -252,24 +251,24 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: getSession(false), done: false };
-          return obj1;
+          const obj3 = { value: getSession(false), done: false };
+          return obj3;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         closure_128_0 = value;
         if (null != closure_128_0) {
@@ -363,8 +362,8 @@ let closure_39 = async function _getSession() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj5 = { value, done: true };
+      return obj5;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -377,8 +376,8 @@ let closure_39 = async function _getSession() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_3 = tmp3;
           dependencyMap = tmp7;
@@ -402,18 +401,18 @@ let closure_39 = async function _getSession() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             session2 = null;
             let tmp21 = null;
             if ("loaded" === closure_131_20.state) {
               const session = closure_131_20.session;
-              uuid = undefined;
+              let uuid1;
               if (session != null) {
-                uuid = session.uuid;
+                uuid1 = session.uuid;
               }
-              tmp21 = uuid;
+              tmp21 = uuid1;
             }
             closure_130_3 = tmp21;
             c4 = 1;
@@ -422,8 +421,8 @@ let closure_39 = async function _getSession() {
               let Storage = closure_131_0(closure_131_2[16]).Storage;
               c6 = 3;
               c7 = 1;
-              let obj2 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
-              return obj2;
+              const obj9 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
+              return obj9;
             } else {
               session2 = closure_131_20.session;
               c4 = 0;
@@ -432,25 +431,20 @@ let closure_39 = async function _getSession() {
         } else if (2 === tmp7) {
           c4 = 0;
           closure_130_4 = closure_5;
-          obj1 = closure_131_1(closure_131_2[11]);
-          obj1.captureException(closure_130_4);
+          closure_131_1(closure_131_2[11]).captureException(closure_130_4);
           const _Date = Date;
           closure_130_1 = Date.now();
           if (closure_131_27()) {
             let isSessionExpiredResult = null == tmp30;
             if (!isSessionExpiredResult) {
-              let obj3 = closure_131_0(closure_131_2[17]);
-              isSessionExpiredResult = obj3.isSessionExpired(session2);
+              isSessionExpiredResult = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+              const obj4 = closure_131_0(closure_131_2[17]);
             }
             if (isSessionExpiredResult) {
-              obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-              let obj5 = closure_131_0(closure_131_2[21]);
-              obj3.uuid = obj5.v4();
-              obj3.createdAtTimestamp = closure_130_1;
-              obj3.lastUsedTimestamp = closure_130_1;
-              obj3.version = closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION;
-              session2 = obj3;
+              const obj10 = { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
+              session2 = obj10;
               closure_131_18 = 0;
+              obj6 = closure_131_0(closure_131_2[21]);
             }
             session2.lastUsedTimestamp = closure_130_1;
             (function maybeFlushSessionToStorage(session2) {
@@ -464,20 +458,20 @@ let closure_39 = async function _getSession() {
                   const obj2 = closure_1_1(tmp2[11]);
                 }
               }
-              obj = closure_1_0(dependencyMap[10]);
+              const obj = closure_1_0(dependencyMap[10]);
             })(session2);
           } else {
             let isSessionExpiredResult1 = null != tmp30;
             if (isSessionExpiredResult1) {
-              obj2 = closure_131_0(closure_131_2[17]);
-              isSessionExpiredResult1 = obj2.isSessionExpired(session2);
+              isSessionExpiredResult1 = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+              const obj3 = closure_131_0(closure_131_2[17]);
             }
             if (isSessionExpiredResult1) {
               session2 = null;
             }
           }
-          const obj4 = { state: "loaded", session: session2 };
-          closure_131_20 = obj4;
+          const obj11 = { state: "loaded", session: session2 };
+          closure_131_20 = obj11;
           let tmp61 = null != session2;
           if (tmp61) {
             tmp61 = closure_130_3 !== session2.uuid;
@@ -493,8 +487,8 @@ let closure_39 = async function _getSession() {
             }
           }
           c7 = 3;
-          obj5 = { value: session2, done: true };
-          return obj5;
+          const obj12 = { value: session2, done: true };
+          return obj12;
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -503,7 +497,7 @@ let closure_39 = async function _getSession() {
         }
         c4 = 0;
         c7 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp81) {
@@ -538,8 +532,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
-  obj = SentryUtilsDefault;
-  obj.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
+  SentryUtilsDefault.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
   RTCConnectionStore.addChangeListener(handleRTCStateChange);
   AuthenticationStore.addChangeListener(handleAuthenticationChange);
   const subscription = DispatcherDefault.subscribe("WINDOW_FOCUS", handleWindowFocus);
@@ -547,10 +540,10 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
   const subscription2 = DispatcherDefault.subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
   let result = SessionRouteUtils2.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
-  if (null == obj) {
-    obj = { id: null, type: "interval" };
+  if (null == obj6) {
+    obj6 = { id: null, type: "interval" };
     const _setInterval = setInterval;
-    obj.id = setInterval(() => {
+    obj6.id = setInterval(() => {
       let result = null != token;
       if (result) {
         result = SkippedClientHeartbeatUtil.shouldLogClientHeartbeatSkipped();

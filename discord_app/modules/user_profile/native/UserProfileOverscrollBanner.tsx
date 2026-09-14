@@ -1,7 +1,7 @@
 // === Module 8360: UserProfileOverscrollBanner ===
 
 // Module 8360 (UserProfileOverscrollBanner)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8361 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8362 */;
 import noop from "module_19" /* 19 */;
@@ -18,20 +18,20 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileOverscrollBanner(arg0) {
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
   const merged = Object.assign(arg0, Object.assign({ bannerAnimatedStyle: 0, bannerImageAnimatedStyle: 0, blurAnimatedProps: 0, showBlur: 0, privateBanner: 0 }));
-  let obj = { style: bannerAnimatedStyle, children: null };
+  const obj = { style: bannerAnimatedStyle, children: null };
   const items = [privateBanner, ];
-  obj = { style: bannerImageAnimatedStyle, children: null };
-  obj = {};
+  const obj2 = { style: bannerImageAnimatedStyle, children: null };
   const merged1 = Object.assign(merged);
-  const items1 = [React4(UserProfileBannerDefault, obj), ];
+  const items1 = [React4(UserProfileBannerDefault, {}), ];
+  const obj3 = {};
   let tmp3Result = PlatformUtils.isIOS() && showBlur;
   if (tmp3Result) {
-    const obj1 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
-    tmp3Result = React4(VisualEffectViewThemed, obj1);
+    const obj5 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
+    tmp3Result = React4(VisualEffectViewThemed, obj5);
   }
   items1[1] = tmp3Result;
-  obj.children = items1;
-  items[1] = hasOwnProperty(ReanimatedRexport.View, obj);
+  obj2.children = items1;
+  items[1] = hasOwnProperty(ReanimatedRexport.View, obj2);
   obj.children = items;
   return hasOwnProperty(ReanimatedRexport.View, obj);
 };

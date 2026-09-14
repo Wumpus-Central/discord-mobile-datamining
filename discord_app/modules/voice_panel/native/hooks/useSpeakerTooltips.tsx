@@ -1,17 +1,17 @@
-// === Module 17231: useSpeakerTooltips ===
+// === Module 17233: useSpeakerTooltips ===
 
-// Module 17231 (useSpeakerTooltips)
+// Module 17233 (useSpeakerTooltips)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17234 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 17236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(17228);
+const ConsoleVoiceUpsellStore = fn(17230);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
+let VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let __initData = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
@@ -28,11 +28,13 @@ export default function useSpeakerTooltips(targetRef, memo) {
   callback1 = voiceUpsellDismissed;
   let tmp5 = first(callback1[7])(undefined);
   _slicedToArray = tmp5;
-  let obj = memo2(callback1[8]);
-  const isVoicePanelFullscreen = obj.useIsVoicePanelFullscreen();
+  const isVoicePanelFullscreen = memo2(callback1[8]).useIsVoicePanelFullscreen();
   controlsSpecs = controlsSpecs.useContext(first(callback1[9])).controlsSpecs;
   const tmp9 = _slicedToArray(controlsSpecs.useState(true), 2);
   closure_5 = tmp10;
+  let obj = memo2(callback1[8]);
+  const tmp2 = first;
+  const tmp8 = _slicedToArray;
   const fn = function v() {
     return controlsSpecs.get().mode;
   };
@@ -44,24 +46,25 @@ export default function useSpeakerTooltips(targetRef, memo) {
       ReanimatedRexport.runOnJS(closure_5)(arg0 === VoicePanelControlsModes.FLOATING_DEFAULT);
     }
   };
-  obj = { runOnJS: memo2(callback1[10]).runOnJS, setIsShowingControls: tmp10, VoicePanelControlsModes };
-  fn2.__closure = obj;
+  const obj3 = memo2(callback1[10]);
+  fn2.__closure = { runOnJS: memo2(callback1[10]).runOnJS, setIsShowingControls: tmp9[1], VoicePanelControlsModes };
   fn2.__workletHash = 5084069556209;
   fn2.__initData = __initData2;
-  const animatedReaction = memo2(callback1[10]).useAnimatedReaction(fn, fn2);
+  const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
   if (memo) {
     first = isVoicePanelFullscreen;
   }
   if (first) {
     first = tmp9[0];
   }
+  memo2 = first;
   const items = [first, tmp5];
   memo = obj2.useMemo(() => memo2 ? closure_3 : [], items);
-  let tmp6Result = tmp6(tmp3[11]);
-  const tmp8Result = _slicedToArray(tmp6Result.useSelectedDismissibleContent(memo), 2);
+  const obj4 = { runOnJS: memo2(callback1[10]).runOnJS, setIsShowingControls: tmp9[1], VoicePanelControlsModes };
+  const tmp8Result = tmp8(memo2(callback1[11]).useSelectedDismissibleContent(memo), 2);
   first1 = tmp8Result[0];
   VoicePanelControlsModes = tmp15;
-  const tmp16 = first(callback1[12])();
+  const tmp16 = tmp2(callback1[12])();
   closure_8 = tmp16;
   const items1 = [first, tmp8Result[1], first1];
   const memo1 = obj2.useMemo(() => {
@@ -87,8 +90,7 @@ export default function useSpeakerTooltips(targetRef, memo) {
   memo2 = obj2.useMemo(() => {
     let consoleInfo = null;
     if (null != first) {
-      let obj = VoicePanelConsoleFacepile;
-      consoleInfo = obj.getConsoleInfo(tmp);
+      consoleInfo = VoicePanelConsoleFacepile.getConsoleInfo(tmp);
     }
     let tmp5 = memo2;
     if (memo2) {
@@ -107,7 +109,7 @@ export default function useSpeakerTooltips(targetRef, memo) {
     if (str == null) {
       str = "";
     }
-    obj = { position: "bottom", title: str, description: null, visible: null, imgSource: null, withBlurBackground: true, onDismiss: null };
+    const obj2 = { position: "bottom", title: str, description: null, visible: null, imgSource: null, withBlurBackground: true, onDismiss: null };
     let str2;
     if (consoleInfo != null) {
       str2 = consoleInfo.connectSublabel;
@@ -115,17 +117,17 @@ export default function useSpeakerTooltips(targetRef, memo) {
     if (str2 == null) {
       str2 = "";
     }
-    obj.description = str2;
-    obj.visible = tmp5;
+    obj2.description = str2;
+    obj2.visible = tmp5;
     let icon;
     if (consoleInfo != null) {
       icon = consoleInfo.icon;
     }
-    obj.imgSource = icon;
-    obj.onDismiss = function onDismiss() {
+    obj2.imgSource = icon;
+    obj2.onDismiss = function onDismiss() {
       closure_1_5(true);
     };
-    return obj;
+    return obj2;
   }, items2);
   __initData = tmp19;
   const items3 = [memo1.visible || memo2.visible, tmp16];
@@ -143,14 +145,15 @@ export default function useSpeakerTooltips(targetRef, memo) {
       memo2.onDismiss();
     }
   }, items4);
+  callback1 = callback;
   const items5 = [first, callback];
   const effect1 = obj2.useEffect(() => {
     if (!first) {
       callback1();
     }
   }, items5);
-  tmp6Result = tmp6(tmp3[16]);
-  const coachmark = tmp6Result.useCoachmark(targetRef, memo1);
+  const tmp6Result = memo2(callback1[11]);
+  const coachmark = memo2(callback1[16]).useCoachmark(targetRef, memo1);
   const items6 = [memo2];
   callback1 = obj2.useCallback(() => {
     if (memo2.visible) {
@@ -163,6 +166,6 @@ export default function useSpeakerTooltips(targetRef, memo) {
       callback1();
     }
   }, items7);
-  const obj3 = memo2(callback1[10]);
+  const tmp6Result3 = memo2(callback1[16]);
   const coachmark1 = memo2(callback1[16]).useCoachmark(targetRef, memo2);
 };

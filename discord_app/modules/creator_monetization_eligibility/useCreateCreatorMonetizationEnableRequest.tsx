@@ -1,6 +1,6 @@
-// === Module 17827: useCreateCreatorMonetizationEnableRequest ===
+// === Module 17828: useCreateCreatorMonetizationEnableRequest ===
 
-// Module 17827 (useCreateCreatorMonetizationEnableRequest)
+// Module 17828 (useCreateCreatorMonetizationEnableRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(), 2);
   closure_1 = tmp[1];
-  [tmp3, dependencyMap] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, dependencyMap] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   asyncGeneratorStep = tmp4[1];
   let obj = { error: tmp[0], loading: tmp3, createEnableRequest: null, submittedRequest: tmp4[0] };
@@ -25,8 +25,8 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -39,8 +39,8 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp8;
             if (null != closure_0) {
@@ -48,12 +48,10 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
               tmp4(undefined);
               v0(false);
               c3 = 2;
-              let obj1 = tmp4(tmp44[3]);
               c4 = 3;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.createCreatorMonetizationEnableRequest(tmp52);
-              return obj1;
+              const obj5 = { value: tmp4(tmp44[3]).createCreatorMonetizationEnableRequest(tmp52), done: false };
+              return obj5;
             } else {
               c5 = 3;
             }
@@ -71,7 +69,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
             c3 = 0;
             closure_129_2(false);
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_3(true);

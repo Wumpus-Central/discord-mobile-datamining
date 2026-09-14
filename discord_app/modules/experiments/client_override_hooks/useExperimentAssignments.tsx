@@ -1,10 +1,12 @@
-// === Module 11940: useExperimentAssignments ===
+// === Module 11941: useExperimentAssignments ===
 
-// Module 11940 (useExperimentAssignments)
+// Module 11941 (useExperimentAssignments)
 import ExperimentManager from "ExperimentManager" /* 4557 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -37,7 +39,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
     const items = [ExperimentStore, ApexExperimentStore];
     tmp = items;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   if (null == name) {
     return null;
   } else if (name.system === ExperimentManager.ExperimentSystem.LEGACY) {
@@ -55,7 +57,7 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
   return require("initialize").useStateFromStores(items, () => {
     let name = closure_0;
     const items = [ExperimentStore, ApexExperimentStore];
-    [obj, obj2] = _slicedToArray(items, 2);
+    [obj, obj2] = items;
     if (null == closure_0) {
       return null;
     } else if (name.system === ExperimentManager.ExperimentSystem.LEGACY) {

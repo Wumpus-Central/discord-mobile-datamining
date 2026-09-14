@@ -1,11 +1,13 @@
-// === Module 11633: openAppStoreOverlayBottomSheet ===
+// === Module 11634: openAppStoreOverlayBottomSheet ===
 
-// Module 11633 (openAppStoreOverlayBottomSheet)
+// Module 11634 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11630 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11631 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
@@ -13,8 +15,7 @@ let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/o
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1) {
   _require = arg1;
   appId = appId.appId;
-  appId(4603);
-  const obj = {
+  appId(4603).openLazy(require("asyncRequireImpl")(11635, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", {
     metadata: appId,
     onOpen() {
       closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, appId, AnalyticsActions.AppStoreOverlayVariant.CUSTOM);
@@ -34,6 +35,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
         }
       });
     }
-  };
-  obj.openLazy(require("asyncRequireImpl")(11634, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  });
 };

@@ -20,29 +20,29 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
     flag = false;
   }
   let mute;
-  let obj = mute(504);
-  const items = [GameConsoleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const tmp3 = useMuteStatesDefault(channel);
+  const items = [GameConsoleStore];
+  const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj = mute(504);
   const muteHandler = mute(10132).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
-  obj = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
+  const obj3 = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
   const intl = mute(1114).intl;
-  obj.accessibilityLabel = intl.string(mute(1114).t.B3zz0G);
-  obj.onPress = muteHandler.onPress;
-  obj.source = importDefault(mute ? 10136 : 10137);
+  obj3.accessibilityLabel = intl.string(mute(1114).t.B3zz0G);
+  obj3.onPress = muteHandler.onPress;
+  obj3.source = importDefault(mute ? 10136 : 10137);
   if (!flag) {
     flag = mute;
   }
-  obj.isActive = flag;
-  obj.isSmallSize = isSmallSize;
-  obj.lottieComponent = memo;
+  obj3.isActive = flag;
+  obj3.isSmallSize = isSmallSize;
+  obj3.lottieComponent = memo;
   let RED_400;
   if (mute) {
     RED_400 = nativeDefault.unsafe_rawColors.RED_400;
   }
-  obj.tintColor = RED_400;
+  obj3.tintColor = RED_400;
   return jsx(CallBarActionAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
 };

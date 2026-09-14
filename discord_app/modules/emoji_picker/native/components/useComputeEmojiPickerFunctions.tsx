@@ -1,11 +1,11 @@
-// === Module 10421: useComputeEmojiPickerFunctions ===
+// === Module 10422: useComputeEmojiPickerFunctions ===
 
-// Module 10421 (useComputeEmojiPickerFunctions)
+// Module 10422 (useComputeEmojiPickerFunctions)
 import _modDef12 from "module_12" /* 12 */;
 import FunctionUtils from "FunctionUtils" /* 1933 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10413 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10422 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10414 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,69 +19,65 @@ function _computeCategories(arg0) {
     let tmp2 = nextResult;
     let type = nextResult.type;
     if (constants2.TOP_GUILD_EMOJI === type) {
-      emojis = tmp2.emojis;
-      let obj = { emojiSections: items, renderingData: null, rowSize: null };
-      obj = { type: constants3.EMOJI, emojis: emojis.slice(0, rowSize), emojisDisabled: null, label: null, footer: null };
+      let emojis1 = tmp2.emojis;
+      let obj2 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj3 = { type: constants3.EMOJI, emojis: emojis1.slice(0, rowSize), emojisDisabled: null, label: null, footer: null };
       ({ emojisDisabled: obj18.emojisDisabled, name: obj18.label } = tmp2);
-      obj.footer = constants2.TOP_GUILD_EMOJI;
-      obj.renderingData = obj;
-      obj.rowSize = rowSize;
-      let tmp59 = pushCategory(obj);
+      obj3.footer = constants2.TOP_GUILD_EMOJI;
+      obj2.renderingData = obj3;
+      obj2.rowSize = rowSize;
+      let tmp59 = pushCategory(obj2);
     } else if (constants2.FAVORITES === type) {
-      let obj1 = { emojiSections: items, renderingData: null, rowSize: null };
-      let obj2 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
+      let obj4 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj5 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
       ({ emojis: obj16.emojis, emojisDisabled: obj16.emojisDisabled, name: obj16.label } = tmp2);
-      obj2.footer = constants2.FAVORITES;
-      obj1.renderingData = obj2;
-      obj1.rowSize = rowSize;
-      let tmp55 = pushCategory(obj1);
+      obj5.footer = constants2.FAVORITES;
+      obj4.renderingData = obj5;
+      obj4.rowSize = rowSize;
+      let tmp55 = pushCategory(obj4);
     } else if (constants2.RECENT === type) {
-      let obj3 = { emojiSections: items, renderingData: null, rowSize: null };
-      let obj4 = { type: constants3.EMOJI, emojisDisabled: null, emojis: null, label: null, footer: null };
+      let obj6 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj8 = { type: constants3.EMOJI, emojisDisabled: null, emojis: null, label: null, footer: null };
       ({ emojisDisabled: obj14.emojisDisabled, emojis: obj14.emojis, name: obj14.label } = tmp2);
-      obj4.footer = constants2.RECENT;
-      obj3.renderingData = obj4;
-      obj3.rowSize = rowSize;
-      let tmp51 = pushCategory(obj3);
+      obj8.footer = constants2.RECENT;
+      obj6.renderingData = obj8;
+      obj6.rowSize = rowSize;
+      let tmp51 = pushCategory(obj6);
     } else if (constants2.GUILD === type) {
       ({ guild, emojis, emojisDisabled, emojisHidden } = tmp2);
       if (isNativeEmojiPickerEnabled) {
-        let obj5 = { emojiSections: items, renderingData: null };
-        let obj6 = { type: constants3.NATIVE_SECTION, label: null, guildId: null, emojiCount: null, emojisDisabled: null, emojisHidden: null, isSectionNitroLocked: null };
+        let obj9 = { emojiSections: items, renderingData: null };
+        let obj10 = { type: constants3.NATIVE_SECTION, label: null, guildId: null, emojiCount: null, emojisDisabled: null, emojisHidden: null, isSectionNitroLocked: null };
         ({ name: obj12.label, id: obj12.guildId } = guild);
-        obj6.emojiCount = emojis.length;
-        obj6.emojisDisabled = emojisDisabled;
-        obj6.emojisHidden = emojisHidden;
-        obj6.isSectionNitroLocked = tmp2.isNitroLocked;
-        obj5.renderingData = obj6;
-        let tmp47 = pushNativeCategory(obj5);
+        obj10.emojiCount = emojis.length;
+        obj10.emojisDisabled = emojisDisabled;
+        obj10.emojisHidden = emojisHidden;
+        obj10.isSectionNitroLocked = tmp2.isNitroLocked;
+        obj9.renderingData = obj10;
+        let tmp47 = pushNativeCategory(obj9);
       } else {
-        obj6 = age_gate_AgeGateUtils;
-        if (obj6.shouldNSFWGateGuild(guild.id)) {
-          let obj7 = { type: constants3.NSFW, label: guild.name, footer: constants2.GUILD, emojis: [], isSectionNitroLocked: null };
-          obj7.isSectionNitroLocked = tmp2.isNitroLocked;
-          let arr = items.push(obj7);
+        let obj7 = age_gate_AgeGateUtils;
+        if (obj7.shouldNSFWGateGuild(guild.id)) {
+          let obj11 = { type: constants3.NSFW, label: guild.name, footer: constants2.GUILD, emojis: [], isSectionNitroLocked: null };
+          obj11.isSectionNitroLocked = tmp2.isNitroLocked;
+          let arr = items.push(obj11);
         } else {
-          let obj8 = { emojiSections: items, renderingData: null, rowSize: null };
-          let obj9 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null, isSectionNitroLocked: null };
-          obj9.emojis = emojis;
-          obj9.emojisDisabled = emojisDisabled;
-          obj9.label = guild.name;
-          obj9.footer = constants2.GUILD;
-          obj9.isSectionNitroLocked = tmp2.isNitroLocked;
-          obj8.renderingData = obj9;
-          obj8.rowSize = rowSize;
-          let tmp35 = pushCategory(obj8);
+          let obj13 = { emojiSections: items, renderingData: null, rowSize: null };
+          let obj15 = { type: constants3.EMOJI, emojis, emojisDisabled, label: guild.name, footer: constants2.GUILD, isSectionNitroLocked: null };
+          obj15.isSectionNitroLocked = tmp2.isNitroLocked;
+          obj13.renderingData = obj15;
+          obj13.rowSize = rowSize;
+          let tmp35 = pushCategory(obj13);
         }
       }
     } else if (constants2.UNICODE === type) {
       let obj19 = UnicodeEmojisDefault;
       let byCategory = obj19.getByCategory(tmp2.name);
       if (isNativeEmojiPickerEnabled) {
-        let obj10 = { emojiSections: items, renderingData: null };
-        let obj11 = { type: constants3.NATIVE_SECTION, label: null, emojiCount: null, emojisDisabled: null, emojisHidden: null };
+        let obj17 = { emojiSections: items, renderingData: null };
+        let obj33 = { type: constants3.NATIVE_SECTION, label: null, emojiCount: null, emojisDisabled: null, emojisHidden: null };
         let tmp60Result = _modDef12;
-        obj11.label = tmp60Result.capitalize(tmp2.name);
+        obj33.label = tmp60Result.capitalize(tmp2.name);
         let num;
         if (byCategory != null) {
           num = byCategory.length;
@@ -89,36 +85,36 @@ function _computeCategories(arg0) {
         if (num == null) {
           num = 0;
         }
-        obj11.emojiCount = num;
+        obj33.emojiCount = num;
         let _Set2 = Set;
         let tmp16 = new.target;
         let tmp17 = new.target;
         let set = new Set();
-        obj11.emojisDisabled = set;
+        obj33.emojisDisabled = set;
         let _Set3 = Set;
         let tmp20 = new.target;
         let tmp21 = new.target;
         let set1 = new Set();
-        obj11.emojisHidden = set1;
-        obj10.renderingData = obj11;
-        let tmp12Result = pushNativeCategory(obj10);
+        obj33.emojisHidden = set1;
+        obj17.renderingData = obj33;
+        let tmp12Result = pushNativeCategory(obj17);
       } else {
-        obj = { emojiSections: items, renderingData: null, rowSize: null };
-        let obj12 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
+        let obj = { emojiSections: items, renderingData: null, rowSize: null };
+        let obj34 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
         let items1 = byCategory;
         if (byCategory == null) {
           items1 = [];
         }
-        obj12.emojis = items1;
+        obj34.emojis = items1;
         let _Set = Set;
         let tmp6 = new.target;
         let tmp7 = new.target;
         let set2 = new Set();
-        obj12.emojisDisabled = set2;
-        tmp60Result = _modDef12;
-        obj12.label = tmp60Result.capitalize(tmp2.name);
-        obj12.footer = constants2.UNICODE;
-        obj.renderingData = obj12;
+        obj34.emojisDisabled = set2;
+        let tmp60Result2 = _modDef12;
+        obj34.label = tmp60Result2.capitalize(tmp2.name);
+        obj34.footer = constants2.UNICODE;
+        obj.renderingData = obj34;
         obj.rowSize = rowSize;
         let tmp4Result = pushCategory(obj);
       }
@@ -135,16 +131,16 @@ function _computeSearchResults(emojis) {
     limit = Number.MAX_SAFE_INTEGER;
   }
   const items = [];
-  let obj = { emojiSections: items, renderingData: null, rowSize: null };
-  obj = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: "", footer: null };
+  const obj = { emojiSections: items, renderingData: null, rowSize: null };
+  const obj2 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: "", footer: null };
   let substr = unlocked;
   if (unlocked.length > limit) {
     substr = unlocked.slice(0, limit);
   }
-  obj.emojis = substr;
-  obj.emojisDisabled = new Set();
-  obj.footer = constants2.SEARCH_RESULTS;
-  obj.renderingData = obj;
+  obj2.emojis = substr;
+  obj2.emojisDisabled = new Set();
+  obj2.footer = constants2.SEARCH_RESULTS;
+  obj.renderingData = obj2;
   obj.rowSize = rowSize;
   pushCategory(obj);
   let substr1 = locked;
@@ -160,14 +156,14 @@ function _computeSearchResults(emojis) {
     }
     continue;
   }
-  obj = { emojiSections: items, renderingData: null, rowSize: null };
-  const obj1 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
+  const obj3 = { emojiSections: items, renderingData: null, rowSize: null };
+  const obj4 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
   const set = new Set();
-  obj1.label = EmojiPickerUtils.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
-  obj1.footer = constants2.PREMIUM_UPSELL;
-  obj.renderingData = obj1;
-  obj.rowSize = rowSize;
-  pushCategory(obj);
+  obj4.label = EmojiPickerUtils.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
+  obj4.footer = constants2.PREMIUM_UPSELL;
+  obj3.renderingData = obj4;
+  obj3.rowSize = rowSize;
+  pushCategory(obj3);
   return items;
 }
 function pushCategory(renderingData) {
@@ -187,7 +183,7 @@ function pushNativeCategory(emojiSections) {
 }
 const EmojiPickerConstants = fn(5544);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(10418).EmojiPickerRenderingDataType;
+const constants3 = fn(10419).EmojiPickerRenderingDataType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 

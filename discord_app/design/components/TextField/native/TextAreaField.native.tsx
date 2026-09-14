@@ -25,16 +25,14 @@ const result = size.fileFinishedImporting("design/components/TextField/native/Te
 
 export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
   let prop = require;
-  let obj1 = InputFieldContainer;
-  let obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
-  const inputStyles = obj1.useInputStyles(obj);
+  let obj = dependencyMap;
+  const inputStyles = InputFieldContainer.useInputStyles({ size: "lg", isRound: false, isDisabled: isDisabled.isDisabled });
   const tmp3 = closure_5();
   const maxLength = isDisabled.maxLength;
-  let obj3 = useTextField;
-  const textField = obj3.useTextField(isDisabled, arg1);
+  const obj3 = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
+  const textField = useTextField.useTextField(isDisabled, arg1);
   ({ state, inputProps, innerRef } = textField);
-  let obj4 = native;
-  const focus = obj4.useFocus();
+  const focus = native.useFocus();
   let diff;
   ({ focusProps, isFocused } = focus);
   if (null != maxLength) {
@@ -42,30 +40,30 @@ export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
   }
   const nodeText = native.getNodeText(isDisabled.label);
   const propResult = native;
-  obj = { currentLength: state.value.length, maxLength, message: null };
+  const obj6 = { currentLength: state.value.length, maxLength, message: null };
   const intl = util.intl;
-  obj.message = intl.string(util.t.c2Jqed);
-  const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj);
-  obj1 = {};
+  obj6.message = intl.string(util.t.c2Jqed);
+  const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj6);
+  const obj7 = {};
   const merged = Object.assign(isDisabled);
-  obj1.isFocused = isFocused;
-  const obj2 = {};
+  obj7.isFocused = isFocused;
+  const obj8 = {};
   const propResult1 = useCharacterLimitAnnouncement;
   const merged1 = Object.assign(native.mergeProps(inputProps, focusProps));
-  obj2.ref = innerRef;
+  obj8.ref = innerRef;
   const items = [, , ];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
   items[2] = tmp3.area;
-  obj2.style = items;
-  obj2.placeholderTextColor = inputStyles.placeholderText.color;
-  obj2.multiline = true;
-  const items1 = [React3(NativeTextInput.NativeTextInput, obj2), ];
+  obj8.style = items;
+  obj8.placeholderTextColor = inputStyles.placeholderText.color;
+  obj8.multiline = true;
+  const items1 = [React3(NativeTextInput.NativeTextInput, obj8), ];
   if (null == diff) {
     items1[1] = null;
-    obj1.children = items1;
-    return React4(InputFieldContainer.InputFieldContainer, obj1);
+    obj7.children = items1;
+    return React4(InputFieldContainer.InputFieldContainer, obj7);
   } else {
-    obj3 = { style: tmp3.maxLengthIndicator, children: null };
+    const obj9 = { style: tmp3.maxLengthIndicator, children: null };
     let str3 = "text-muted";
     let str = "text-muted";
     if (null != maxLength) {
@@ -81,7 +79,7 @@ export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
         str = str2;
       }
     }
-    obj4 = { variant: "text-xs/semibold", color: str, accessibilityLabel: null, children: null };
+    let obj10 = { variant: "text-xs/semibold", color: str, accessibilityLabel: null, children: null };
     if (null != nodeText) {
       const intl3 = util.intl;
       prop = util.t["8Q+k1s"];
@@ -89,14 +87,14 @@ export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
       let formatToPlainStringResult = intl3.formatToPlainString(prop, obj);
     } else {
       const intl2 = util.intl;
-      const obj5 = { remainingCharacters: diff };
-      formatToPlainStringResult = intl2.formatToPlainString(util.t.fR1cof, obj5);
+      const obj11 = { remainingCharacters: diff };
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.fR1cof, obj11);
     }
-    obj4.accessibilityLabel = formatToPlainStringResult;
-    obj4.children = diff;
-    obj4 = React3(Text_Text.Text, obj4);
-    obj3.children = obj4;
-    React3(View, obj3);
+    obj10.accessibilityLabel = formatToPlainStringResult;
+    obj10.children = diff;
+    obj10 = React3(Text_Text.Text, obj10);
+    obj9.children = obj10;
+    React3(View, obj9);
   }
   const propResult2 = native;
 });

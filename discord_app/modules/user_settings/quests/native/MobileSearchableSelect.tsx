@@ -1,6 +1,6 @@
-// === Module 15260: MobileSearchableSelect ===
+// === Module 15261: MobileSearchableSelect ===
 
-// Module 15260 (MobileSearchableSelect)
+// Module 15261 (MobileSearchableSelect)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -143,67 +143,64 @@ class MobileSearchableSelect {
       _undefined(tmp2);
     }, items5);
     tmp15 = c4;
-    obj = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
+    obj1 = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
     tmp16 = closure_7;
     callback3 = obj.useCallback(() => {
       _undefined(false);
       closure_10(false);
     }, []);
     tmp14 = closure_8;
-    obj1 = { placeholder, value: first, onChange: callback, onSubmitEditing: callback1, onFocus: callback2, onBlur: callback3, leadingIcon: options(closure_1[8]).MagnifyingGlassIcon, isClearable: true, returnKeyType: "search", accessibilityRole: "search", autoCorrect: false, autoCapitalize: "none", isDisabled: flag2 };
+    obj6 = { placeholder, value: first, onChange: callback, onSubmitEditing: callback1, onFocus: callback2, onBlur: callback3, leadingIcon: options(closure_1[8]).MagnifyingGlassIcon, isClearable: true, returnKeyType: "search", accessibilityRole: "search", autoCorrect: false, autoCapitalize: "none", isDisabled: flag2 };
     items6 = [, ];
-    items6[0] = closure_7(options(closure_1[7]).TextField, obj1);
+    items6[0] = closure_7(options(closure_1[7]).TextField, obj6);
     if (tmp16Result) {
       num = 0;
       tmp16Result = memo.length > 0;
     }
     if (tmp16Result) {
-      obj2 = { style: null, children: null };
-      obj2.style = tmp3.dropdownContainer;
+      obj7 = { style: null, children: null };
+      obj7.style = tmp3.dropdownContainer;
       tmp17 = closure_5;
-      obj3 = { nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: null };
-      obj3.children = memo.map((children, index) => {
+      obj8 = { nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: null };
+      obj8.children = memo.map((children, index) => {
         value = children;
         const items = [dropdownItem.dropdownItem, ];
         let dropdownItemLast = index === memo.length - 1;
         if (dropdownItemLast) {
           dropdownItemLast = dropdownItem.dropdownItemLast;
         }
-        let obj = {
+        const obj = {
           style: items,
           activeOpacity: 0.7,
           onPress() {
             closure_12(value.value);
           },
           disabled: flag2,
-          children: null
+          children: closure_7(options(value[9]).Text, { variant: "text-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: children.label })
         };
         items[1] = dropdownItemLast;
-        obj = { variant: "text-sm/medium", color: "text-default", style: dropdownItem.dropdownItemText, children: children.label };
-        obj.children = closure_7(options(value[9]).Text, obj);
         return closure_7(first, obj, "option-" + children.value + "-" + index);
       });
-      obj2.children = tmp16(closure_5, obj3);
-      tmp16Result = tmp16(tmp15, obj2);
+      obj7.children = tmp16(closure_5, obj8);
+      tmp16Result = tmp16(tmp15, obj7);
     }
     items6[1] = tmp16Result;
-    obj.children = items6;
-    return tmp14(tmp15, obj);
+    obj1.children = items6;
+    return tmp14(tmp15, obj1);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
+const createStyles = fn(4636);
+let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.md, marginTop: nativeDefault.space.PX_4, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, left: 0, right: 0, zIndex: 999999, elevation: 30, shadowColor: "#000", shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 8, maxHeight: 250 };
-createStyles.dropdownContainer = rect;
-createStyles = { padding: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_MUTED };
-createStyles.dropdownItem = createStyles;
-createStyles.dropdownItemLast = { borderBottomWidth: 0 };
-createStyles.dropdownItemText = { fontSize: 14 };
-const React7 = createStyles.createStyles(createStyles);
+obj2.dropdownContainer = rect;
+obj2.dropdownItem = { padding: nativeDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_MUTED };
+obj2.dropdownItemLast = { borderBottomWidth: 0 };
+obj2.dropdownItemText = { fontSize: 14 };
+const React7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 

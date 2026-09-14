@@ -1,9 +1,9 @@
-// === Module 17635: ChannelListIcon ===
+// === Module 17636: ChannelListIcon ===
 
-// Module 17635 (ChannelListIcon)
+// Module 17636 (ChannelListIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod17636 from "module_17636" /* 17636 */;
+import _mod17637 from "module_17637" /* 17637 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChannelListIcon = function ChannelListIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17636, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17637, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,7 +1,7 @@
-// === Module 14156: queryAudioEffects ===
+// === Module 14157: queryAudioEffects ===
 
-// Module 14156 (queryAudioEffects)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
+// Module 14157 (queryAudioEffects)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,8 +20,8 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -34,8 +34,8 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -45,14 +45,14 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
               c6 = 1;
               c7 = 2;
               c8 = 1;
-              const obj1 = { value: deviceAudioEffects.getDeviceAudioEffects(closure_0), done: false };
-              return obj1;
+              const obj5 = { value: deviceAudioEffects.getDeviceAudioEffects(closure_0), done: false };
+              return obj5;
             } else {
               const _Error = Error;
               const error = new Error("Audio effects querying not supported on non-Windows platforms");
               c8 = 3;
-              let obj2 = { value: Promise.reject(error), done: true };
-              return obj2;
+              const obj6 = { value: Promise.reject(error), done: true };
+              return obj6;
             }
             obj13 = utils_PlatformUtils;
           }
@@ -60,8 +60,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
           c6 = 0;
           closure_131_2 = closure_5;
           closure_132_5.error("Failed to probe audio effects for device", closure_131_2);
-          obj2 = closure_132_1(closure_132_2[5]);
-          obj2.track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
+          closure_132_1(closure_132_2[5]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
           c8 = 3;
           return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
@@ -70,19 +69,19 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_131_1 = value;
-          const obj4 = { type: "MEDIA_ENGINE_SET_DEVICE_AUDIO_EFFECTS", deviceId: closure_131_0 };
+          const obj9 = { type: "MEDIA_ENGINE_SET_DEVICE_AUDIO_EFFECTS", deviceId: closure_131_0 };
           const merged = Object.assign(closure_131_1);
-          closure_132_1(closure_132_2[4]).dispatch(obj4);
+          closure_132_1(closure_132_2[4]).dispatch(obj9);
           const obj8 = closure_132_1(closure_132_2[4]);
-          const obj5 = { succeeded: true, active_effects: closure_131_1.active, available_effects: closure_131_1.available };
-          closure_132_1(closure_132_2[5]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, obj5);
+          const obj11 = { succeeded: true, active_effects: closure_131_1.active, available_effects: closure_131_1.available };
+          closure_132_1(closure_132_2[5]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, obj11);
           c6 = 0;
           c8 = 3;
-          obj = { value: closure_131_1, done: true };
+          const obj = { value: closure_131_1, done: true };
           return obj;
         }
       } catch (tmp23) {

@@ -1,8 +1,8 @@
-// === Module 11625: IosAttributionMetrics ===
+// === Module 11626: IosAttributionMetrics ===
 
-// Module 11625 (IosAttributionMetrics)
+// Module 11626 (IosAttributionMetrics)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
 import MetricEvents from "MetricEvents" /* 7709 */;
 import size from "module_2" /* 2 */;
@@ -14,41 +14,41 @@ export const IosAttributionImpressionResult = { REGISTERED: "registered", NO_FRA
 export const IosAttributionClickResult = { ATTRIBUTED: "attributed", NO_IMPRESSION: "no_impression", NOT_READY: "not_ready" };
 export const trackIosAttributionImpression = function trackIosAttributionImpression(NO_FRAMEWORK, activeIosAttributionFramework, id) {
   let str = activeIosAttributionFramework;
-  let obj = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
+  const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_IMPRESSION, tags: null };
   const items = ["result:" + NO_FRAMEWORK, ];
   let str2 = activeIosAttributionFramework;
   if (activeIosAttributionFramework == null) {
     str2 = "none";
   }
   items[1] = "framework:" + str2;
-  obj.tags = items;
-  obj.increment(obj);
-  obj = { impression_id: id, attribution_framework: null, attribution_result: null };
+  obj2.tags = items;
+  MonitoringAgentDefault.increment(obj2);
+  const obj3 = { impression_id: id, attribution_framework: null, attribution_result: null };
   if (str == null) {
     str = "none";
   }
-  obj.attribution_framework = str;
-  obj.attribution_result = NO_FRAMEWORK;
-  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj);
+  obj3.attribution_framework = str;
+  obj3.attribution_result = NO_FRAMEWORK;
+  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_VIEW_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
 };
 export const trackIosAttributionClick = function trackIosAttributionClick(ATTRIBUTED, framework, impression_id) {
   let str = framework;
-  let obj = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
+  const obj2 = { name: MetricEvents.MetricEvents.IOS_ATTRIBUTION_CLICK, tags: null };
   const items = ["result:" + ATTRIBUTED, ];
   let str2 = framework;
   if (framework == null) {
     str2 = "none";
   }
   items[1] = "framework:" + str2;
-  obj.tags = items;
-  obj.increment(obj);
-  obj = { impression_id, attribution_framework: null, attribution_result: null };
+  obj2.tags = items;
+  MonitoringAgentDefault.increment(obj2);
+  const obj3 = { impression_id, attribution_framework: null, attribution_result: null };
   if (str == null) {
     str = "none";
   }
-  obj.attribution_framework = str;
-  obj.attribution_result = ATTRIBUTED;
-  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj);
+  obj3.attribution_framework = str;
+  obj3.attribution_result = ATTRIBUTED;
+  AnalyticsUtilsDefault.track(AnalyticEvents.IOS_ATTRIBUTION_CLICK_RESOLVED, obj3);
   const tmpResult = AnalyticsUtilsDefault;
 };

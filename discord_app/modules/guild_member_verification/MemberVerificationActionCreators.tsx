@@ -2,8 +2,8 @@
 
 // Module 5628 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4621 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
@@ -26,35 +26,33 @@ let closure_10 = async function _fetchVerificationForm() {
   }
   const HTTP = HTTPUtils.HTTP;
   const request = { url: React7.GUILD_MEMBER_VERIFICATION(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
-  const obj1 = { with_guild: !member.isMember(closure_0, id), invite_code: null };
+  const obj5 = { with_guild: !member.isMember(closure_0, id), invite_code: null };
   if (null != inviteKeyForGuildId2) {
     const result = InviteCodeUtils.parseInviteCodeFromInviteKey(tmp27);
     InviteCodeUtils;
   }
-  obj1.invite_code = result;
-  request.query = obj1;
+  obj5.invite_code = result;
+  request.query = obj5;
   !member.isMember(closure_0, id);
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   await HTTP.get(request);
-  closure_132_1(closure_132_2[8]);
-  const obj3 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: closure_131_0 };
-  obj3.dispatch(obj3);
+  closure_132_1(closure_132_2[8]).dispatch({ type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: closure_131_0 });
   await "HermesInternal";
   closure_131_1 = value;
   if (null == closure_131_1.body) {
     throw closure_131_1;
   }
   const body = closure_131_1.body;
-  const obj5 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_131_0, form: null };
-  const obj6 = { version: body.version, description: body.description, formFields: body.form_fields, guild: body.guild, profile: null };
+  const obj11 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_131_0, form: null };
+  const obj12 = { version: body.version, description: body.description, formFields: body.form_fields, guild: body.guild, profile: null };
   let guildProfileFromServer = null;
   if (null != body.profile) {
     guildProfileFromServer = closure_132_0(closure_132_2[9]).buildGuildProfileFromServer(body.profile);
     closure_132_0(closure_132_2[9]);
   }
-  obj6.profile = guildProfileFromServer;
-  obj5.form = obj6;
-  closure_132_1(closure_132_2[8]).dispatch(obj5);
+  obj12.profile = guildProfileFromServer;
+  obj11.form = obj12;
+  closure_132_1(closure_132_2[8]).dispatch(obj11);
   return body;
 };
 let closure_11 = async function _updateVerificationForm(arg0) {
@@ -69,8 +67,8 @@ let closure_11 = async function _updateVerificationForm(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -83,8 +81,8 @@ let closure_11 = async function _updateVerificationForm(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp2;
             closure_4 = tmp5;
@@ -92,28 +90,27 @@ let closure_11 = async function _updateVerificationForm(arg0) {
             let body;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0), body: null, oldFormErrors: true, rejectWithError: null };
-            const obj1 = { form_fields, enabled, bulk_action };
-            request.body = obj1;
+            const obj4 = { form_fields, enabled, bulk_action };
+            request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c6 = 1;
             c7 = 1;
-            const obj2 = { value: HTTP.patch(request), done: false };
-            return obj2;
+            const obj6 = { value: HTTP.patch(request), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           body = value.body;
-          let obj4 = closure_133_1(closure_133_2[8]);
-          const obj3 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_132_0, form: null };
-          obj4 = { version: body.version, description: body.description, formFields: body.form_fields };
-          obj3.form = obj4;
-          obj4.dispatch(obj3);
+          const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_132_0, form: null };
+          const obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
+          obj7.form = obj8;
+          closure_133_1(closure_133_2[8]).dispatch(obj7);
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -136,8 +133,8 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -150,8 +147,8 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp2;
             closure_2 = tmp5;
@@ -159,28 +156,27 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
             let body;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0), body: null, oldFormErrors: true, rejectWithError: null };
-            const obj1 = { description };
-            request.body = obj1;
+            const obj4 = { description };
+            request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c4 = 1;
             c5 = 1;
-            const obj2 = { value: HTTP.patch(request), done: false };
-            return obj2;
+            const obj6 = { value: HTTP.patch(request), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           body = value.body;
-          let obj4 = closure_131_1(closure_131_2[8]);
-          const obj3 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_130_0, form: null };
-          obj4 = { version: body.version, description: body.description, formFields: body.form_fields };
-          obj3.form = obj4;
-          obj4.dispatch(obj3);
+          const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_130_0, form: null };
+          const obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
+          obj7.form = obj8;
+          closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -203,8 +199,8 @@ let closure_13 = async function _enableVerificationForm(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -217,25 +213,25 @@ let closure_13 = async function _enableVerificationForm(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0), body: null, oldFormErrors: true, rejectWithError: null };
-            const obj1 = { enabled };
-            request.body = obj1;
+            const obj4 = { enabled };
+            request.body = obj4;
             request.rejectWithError = HTTPUtils.rejectWithMigratedError();
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: HTTP.patch(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.patch(request), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;
@@ -256,8 +252,8 @@ let closure_14 = async function _submitVerificationForm(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -270,8 +266,8 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
@@ -294,55 +290,53 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else if (closure_133_4.isFullServerPreview(closure_132_0)) {
-          const obj2 = { memberOptions: { isPending: false } };
-          const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj2);
+          const obj7 = { memberOptions: { isPending: false } };
+          const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj7);
           c9 = 3;
           return { value: "HermesInternal", done: null };
         } else {
           c7 = 1;
           const HTTP = closure_133_0(closure_133_2[6]).HTTP;
           const request = { url: closure_133_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_132_0), body: null, rejectWithError: null };
-          let obj3 = { version: closure_132_1.version, form_fields: closure_132_1.formFields };
-          request.body = obj3;
-          let obj9 = closure_133_0(closure_133_2[6]);
-          request.rejectWithError = obj9.rejectWithMigratedError();
+          const obj8 = { version: closure_132_1.version, form_fields: closure_132_1.formFields };
+          request.body = obj8;
+          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
           c8 = 3;
           c9 = 1;
-          let obj4 = { value: HTTP.put(request), done: false };
-          return obj4;
+          const obj9 = { value: HTTP.put(request), done: false };
+          return obj9;
         }
       } else if (2 === tmp7) {
         c7 = 0;
         closure_132_4 = closure_6;
         const status = closure_132_4.status;
         if (429 === status) {
-          obj3 = closure_133_0(closure_133_2[12]);
-          obj3.closeContextMenu();
-          obj4 = closure_133_1(closure_133_2[13]);
-          const obj5 = { title: null, body: null, confirmText: null };
+          closure_133_0(closure_133_2[12]).closeContextMenu();
+          const obj4 = closure_133_0(closure_133_2[12]);
+          const obj11 = { title: null, body: null, confirmText: null };
           const intl3 = closure_133_0(closure_133_2[14]).intl;
-          obj5.title = intl3.string(closure_133_0(closure_133_2[14]).t.MmIrpf);
+          obj11.title = intl3.string(closure_133_0(closure_133_2[14]).t.MmIrpf);
           const intl4 = closure_133_0(closure_133_2[14]).intl;
-          obj5.body = intl4.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
+          obj11.body = intl4.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
           const intl5 = closure_133_0(closure_133_2[14]).intl;
-          obj5.confirmText = intl5.string(closure_133_0(closure_133_2[14]).t.XNGT1O);
-          obj4.show(obj5);
-          const obj6 = {};
+          obj11.confirmText = intl5.string(closure_133_0(closure_133_2[14]).t.XNGT1O);
+          closure_133_1(closure_133_2[13]).show(obj11);
+          const obj13 = {};
           const merged = Object.assign(closure_132_4);
           const intl6 = closure_133_0(closure_133_2[14]).intl;
-          obj6.message = intl6.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
-          throw obj6;
+          obj13.message = intl6.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
+          throw obj13;
         } else if (403 === status) {
-          const obj7 = {};
+          const obj14 = {};
           const merged1 = Object.assign(closure_132_4);
           const intl2 = closure_133_0(closure_133_2[14]).intl;
-          obj7.message = intl2.string(closure_133_0(closure_133_2[14]).t["8T1rxN"]);
-          throw obj7;
+          obj14.message = intl2.string(closure_133_0(closure_133_2[14]).t["8T1rxN"]);
+          throw obj14;
         } else {
-          const obj8 = {};
+          const obj15 = {};
           const merged2 = Object.assign(closure_132_4);
           const aPIError = new closure_133_0(closure_133_2[15]).APIError(closure_132_4);
           const anyErrorMessage = aPIError.getAnyErrorMessage();
@@ -351,8 +345,8 @@ let closure_14 = async function _submitVerificationForm(arg0) {
             const intl = closure_133_0(closure_133_2[14]).intl;
             message = intl.string(closure_133_0(closure_133_2[14]).t.R0RpRX);
           }
-          obj8.message = message;
-          throw obj8;
+          obj15.message = message;
+          throw obj15;
         }
       } else if (arg0 === 1) {
         c9 = 3;
@@ -360,12 +354,12 @@ let closure_14 = async function _submitVerificationForm(arg0) {
       } else if (arg0 === 2) {
         c7 = 0;
         c9 = 3;
-        obj9 = { value, done: true };
-        return obj9;
+        const obj16 = { value, done: true };
+        return obj16;
       } else {
         body = value.body;
-        const obj10 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_132_0, request: body };
-        closure_133_1(closure_133_2[8]).dispatch(obj10);
+        const obj18 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_132_0, request: body };
+        closure_133_1(closure_133_2[8]).dispatch(obj18);
         const obj17 = closure_133_1(closure_133_2[8]);
         let hasNonTermsFormFieldResult = closure_133_0(closure_133_2[11]).hasNonTermsFormField(closure_132_1.formFields);
         if (hasNonTermsFormFieldResult) {
@@ -374,14 +368,12 @@ let closure_14 = async function _submitVerificationForm(arg0) {
         if (hasNonTermsFormFieldResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            closure_1(closure_2[8]);
-            const obj = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
-            obj.dispatch(obj);
+            closure_1(closure_2[8]).dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId });
           }, closure_132_2);
         }
         c7 = 0;
         c9 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp75) {
@@ -422,10 +414,8 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormFieldsLocal(guildId, formFields) {
-    let obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: null, isLocalUpdate: true };
-    obj = { formFields };
-    obj.form = obj;
-    obj.dispatch(obj);
+    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: { formFields }, isLocalUpdate: true };
+    DispatcherDefault.dispatch(obj2);
   },
   updateVerificationFormDescription() {
     const self = this;
@@ -438,10 +428,8 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormDescriptionLocal(guildId, description) {
-    let obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: null, isLocalUpdate: true };
-    obj = { description };
-    obj.form = obj;
-    obj.dispatch(obj);
+    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: { description }, isLocalUpdate: true };
+    DispatcherDefault.dispatch(obj2);
   },
   enableVerificationForm() {
     const self = this;
@@ -468,12 +456,10 @@ export default {
   },
   reportApplication(arg0) {
     ({ guild, guildJoinRequest, guildJoinRequestUser, reason, reasonOther, responses } = arg0);
-    const obj = { application_id: guildJoinRequest.joinRequestId, applicant_id: guildJoinRequestUser.id, guild_id: guild.id, reason, reason_other: reasonOther, responses };
-    obj.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, obj);
+    AnalyticsUtilsDefault.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, { application_id: guildJoinRequest.joinRequestId, applicant_id: guildJoinRequestUser.id, guild_id: guild.id, reason, reason_other: reasonOther, responses });
   }
 };
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
 export const showCoachmark = function showCoachmark(guildId) {
-  const obj = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId });
 };

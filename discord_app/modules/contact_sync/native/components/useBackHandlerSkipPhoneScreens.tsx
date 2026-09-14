@@ -1,10 +1,12 @@
-// === Module 12824: useBackHandlerSkipPhoneScreens ===
+// === Module 12825: useBackHandlerSkipPhoneScreens ===
 
-// Module 12824 (useBackHandlerSkipPhoneScreens)
+// Module 12825 (useBackHandlerSkipPhoneScreens)
 import _mod17 from "module_17" /* 17 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5711 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12807 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12808 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const NativeModules = _mod17.NativeModules;
 const ContactSyncScenes = ContactSyncConstants.ContactSyncScenes;
@@ -17,14 +19,13 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
     if (null != closure_1) {
       tmp();
     } else {
-      let arr = state;
       const items = [, , ];
       ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = ContactSyncScenes);
       const routes = state.getState().routes;
       if (routes.length <= 2) {
-        arr = arr.pop();
+        state.pop();
       } else if (items.includes(routes[routes.length - 2].name)) {
-        arr = arr.pop(routes.length - 1);
+        state.pop(routes.length - 1);
       }
     }
     return true;

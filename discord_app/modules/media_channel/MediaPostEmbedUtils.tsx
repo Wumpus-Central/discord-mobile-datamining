@@ -43,8 +43,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     }
     let name;
     if (null != user) {
-      let obj = NicknameUtilsDefault;
-      name = obj.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
+      name = NicknameUtilsDefault.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
     }
     let avatarURL;
     if (user != null) {
@@ -55,9 +54,9 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       avatarURL = user.getAvatarURL(id, 40);
     }
     if (!tmp6) {
-      obj = { id: null, icon: null, size: 40, canAnimate: false };
       ({ guild_id: obj3.id, guild_icon: obj3.icon } = mediaPostEmbedData);
-      avatarURL = AvatarUtilsDefault.getGuildIconURL(obj);
+      avatarURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 40, canAnimate: false });
+      const obj4 = { id: null, icon: null, size: 40, canAnimate: false };
     }
     const thumbnail = mediaPostEmbedData.thumbnail;
     let flag = false;
@@ -69,7 +68,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = FlagUtils;
+    tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -79,22 +78,22 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       num2 = 0;
     }
     let str = mediaPostEmbedData.title;
-    tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
+    const tmp17Result = FlagUtils;
     if (str == null) {
       str = "";
     }
-    obj = { title: str, subtitle: mediaPostEmbedData.description, ctaText: stringResult, coverImage: thumbnailImage, coverImageOverlayText: null, parentChannelId: null, threadId: null, postThread: null, messageId: null, canAccess: null, guildId: null, guildName: null, authorId: null, authorName: null, channelName: null, avatarUrl: null, shouldShowBlurredThumbnailImage: null, shouldContainMediaWithBackground: null, shouldSpoiler: null, obscureAwaitingScan: false, flags: null, contentScanVersion: null };
+    const obj6 = { title: str, subtitle: mediaPostEmbedData.description, ctaText: stringResult, coverImage: thumbnailImage, coverImageOverlayText: null, parentChannelId: null, threadId: null, postThread: null, messageId: null, canAccess: null, guildId: null, guildName: null, authorId: null, authorName: null, channelName: null, avatarUrl: null, shouldShowBlurredThumbnailImage: null, shouldContainMediaWithBackground: null, shouldSpoiler: null, obscureAwaitingScan: false, flags: null, contentScanVersion: null };
     let stringResult1;
     if (has_media_attachment) {
       const intl2 = util.intl;
       stringResult1 = intl2.string(util.t.Yonlia);
     }
-    obj.coverImageOverlayText = stringResult1;
+    obj6.coverImageOverlayText = stringResult1;
     ({ parent_channel_id: obj5.parentChannelId, channel_id: obj5.threadId } = mediaPostEmbedData);
-    obj.postThread = postThread;
-    obj.messageId = mediaPostEmbedData.message_id;
-    obj.canAccess = canAccess;
-    obj.guildId = mediaPostEmbedData.guild_id;
+    obj6.postThread = postThread;
+    obj6.messageId = mediaPostEmbedData.message_id;
+    obj6.canAccess = canAccess;
+    obj6.guildId = mediaPostEmbedData.guild_id;
     let name1;
     if (guild != null) {
       name1 = guild.name;
@@ -102,25 +101,25 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (name1 == null) {
       name1 = mediaPostEmbedData.guild_name;
     }
-    obj.guildName = name1;
+    obj6.guildName = name1;
     let author_id;
     if (mediaPostEmbedData != null) {
       author_id = mediaPostEmbedData.author_id;
     }
-    obj.authorId = author_id;
-    obj.authorName = name;
+    obj6.authorId = author_id;
+    obj6.authorName = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = useChannelName;
-      channelName = tmp17Result.computeChannelName(parentChannel, UserStore, RelationshipStore);
+      channelName = useChannelName.computeChannelName(parentChannel, UserStore, RelationshipStore);
+      const tmp17Result2 = useChannelName;
     }
-    obj.channelName = channelName;
-    obj.avatarUrl = avatarURL;
-    obj.shouldShowBlurredThumbnailImage = has_media_attachment;
-    obj.shouldContainMediaWithBackground = flag;
-    obj.shouldSpoiler = tmp17Result.hasFlag(num2, constants2.IS_SPOILER);
+    obj6.channelName = channelName;
+    obj6.avatarUrl = avatarURL;
+    obj6.shouldShowBlurredThumbnailImage = has_media_attachment;
+    obj6.shouldContainMediaWithBackground = flag;
+    obj6.shouldSpoiler = FlagUtils.hasFlag(num2, constants2.IS_SPOILER);
     ({ flags: obj5.flags, content_scan_version: obj5.contentScanVersion } = mediaPostEmbedData);
-    return obj;
+    return obj6;
   }
 };
 export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
@@ -128,12 +127,12 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = findCodedLinks;
-      const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
+      const result = findCodedLinks.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = LinkUtils;
-        tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
+        tryParseChannelPathResult = LinkUtils.tryParseChannelPath(result);
+        const tmp2Result2 = LinkUtils;
       }
+      const tmp2Result = findCodedLinks;
     }
   }
   if (null != tryParseChannelPathResult) {
@@ -150,12 +149,11 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   if (null != url) {
     const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = findCodedLinks;
-      const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
+      const result = findCodedLinks.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = LinkUtils;
-        return tmpResult.tryParseChannelPath(result);
+        return LinkUtils.tryParseChannelPath(result);
       }
+      const tmpResult = findCodedLinks;
     }
   }
 };

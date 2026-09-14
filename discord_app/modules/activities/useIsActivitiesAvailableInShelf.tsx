@@ -4,6 +4,8 @@
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9634 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
@@ -27,8 +29,8 @@ export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      const obj = { guildId };
-      const shelf = obj.fetchShelf(obj);
+      const obj2 = { guildId };
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
     }
   }, items);
   if (tmp3) {

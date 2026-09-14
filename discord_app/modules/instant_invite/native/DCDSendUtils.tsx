@@ -1,10 +1,12 @@
 // === Module 4769: DCDSendUtils ===
 
 // Module 4769 (DCDSendUtils)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4770 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ Linking: c3, NativeModules: closure_4 } = get_ActivityIndicator);
 const result = size.fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");

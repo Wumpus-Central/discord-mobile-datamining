@@ -61,57 +61,56 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   const joinedAtTimestamp = guild_mod_dash_member_safety_DateUtils.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
   ({ hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
-  obj = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
+  const obj3 = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
   const user = UserStore.getUser(trueMember.userId);
   const merged = Object.assign(trueMember);
-  obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
-  obj.isIncludedInSearchResults = false;
-  obj.user = user;
+  obj3.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
+  obj3.isIncludedInSearchResults = false;
+  obj3.user = user;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
     ORDER_BY_UNSPECIFIED = MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED;
   }
-  obj.sort = SortUtils.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
-  obj.joinedAtTimestamp = joinedAtTimestamp;
+  obj3.sort = SortUtils.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
+  obj3.joinedAtTimestamp = joinedAtTimestamp;
   const merged1 = Object.assign(obj);
-  return obj;
+  return obj3;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  let obj = MemberSafetyStoreSupplemental;
-  obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
-  if (obj == null) {
-    obj = {};
+  let obj2 = MemberSafetyStoreSupplemental.getMemberSupplementalByGuildId(this.guildId)[userId];
+  if (obj2 == null) {
+    obj2 = {};
   }
-  let sourceInviteCode = obj.sourceInviteCode;
+  let sourceInviteCode = obj2.sourceInviteCode;
   if (sourceInviteCode == null) {
     sourceInviteCode = null;
   }
-  obj = { sourceInviteCode, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null, hasUnusualDmActivity: null, hasUnusualAccountActivity: null };
-  let joinSourceType = obj.joinSourceType;
+  const obj3 = { sourceInviteCode, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null, hasUnusualDmActivity: null, hasUnusualAccountActivity: null };
+  let joinSourceType = obj2.joinSourceType;
   if (joinSourceType == null) {
     joinSourceType = null;
   }
-  obj.joinSourceType = joinSourceType;
-  let inviterId = obj.inviterId;
+  obj3.joinSourceType = joinSourceType;
+  let inviterId = obj2.inviterId;
   if (inviterId == null) {
     inviterId = null;
   }
-  obj.inviterId = inviterId;
-  let integrationType = obj.integrationType;
+  obj3.inviterId = inviterId;
+  let integrationType = obj2.integrationType;
   if (integrationType == null) {
     integrationType = null;
   }
-  obj.integrationType = integrationType;
-  let prop = obj.joinSourceApplicationId;
+  obj3.integrationType = integrationType;
+  let prop = obj2.joinSourceApplicationId;
   if (prop == null) {
     prop = null;
   }
-  obj.joinSourceApplicationId = prop;
-  let joinSourceChannelId = obj.joinSourceChannelId;
+  obj3.joinSourceApplicationId = prop;
+  let joinSourceChannelId = obj2.joinSourceChannelId;
   if (joinSourceChannelId == null) {
     joinSourceChannelId = null;
   }
-  obj.joinSourceChannelId = joinSourceChannelId;
+  obj3.joinSourceChannelId = joinSourceChannelId;
   let tmp9 = null != unusualDMActivityUntil;
   if (tmp9) {
     const _Date = Date;
@@ -119,9 +118,9 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const time = date.getTime();
     tmp9 = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
-  obj.hasUnusualDmActivity = tmp9;
-  obj.hasUnusualAccountActivity = isSpam.isSpammer(userId);
-  return obj;
+  obj3.hasUnusualDmActivity = tmp9;
+  obj3.hasUnusualAccountActivity = isSpam.isSpammer(userId);
+  return obj3;
 };
 prototype["createMember"] = function createMember(userId) {
   const _membersMap = this._membersMap;
@@ -133,39 +132,39 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
     const _membersMap2 = self._membersMap;
     return _membersMap2.set(userId.userId, userId);
   } else {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(userId);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(arg1);
-    let unusualDMActivityUntil = obj.unusualDMActivityUntil;
+    let unusualDMActivityUntil = obj2.unusualDMActivityUntil;
     if (unusualDMActivityUntil == null) {
       unusualDMActivityUntil = obj.unusualDMActivityUntil;
     }
     const result = self._computeMemberSupplementals(obj.userId, unusualDMActivityUntil);
     ({ sourceInviteCode, hasUnusualDmActivity, hasUnusualAccountActivity, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
     if (obj.sourceInviteCode !== sourceInviteCode) {
-      obj.sourceInviteCode = sourceInviteCode;
+      obj2.sourceInviteCode = sourceInviteCode;
     }
     if (obj.hasUnusualDmActivity !== hasUnusualDmActivity) {
-      obj.hasUnusualDmActivity = hasUnusualDmActivity;
+      obj2.hasUnusualDmActivity = hasUnusualDmActivity;
     }
     if (obj.hasUnusualAccountActivity !== hasUnusualAccountActivity) {
-      obj.hasUnusualAccountActivity = hasUnusualAccountActivity;
+      obj2.hasUnusualAccountActivity = hasUnusualAccountActivity;
     }
     if (obj.joinSourceType !== joinSourceType) {
-      obj.joinSourceType = joinSourceType;
+      obj2.joinSourceType = joinSourceType;
     }
     if (obj.joinSourceApplicationId !== joinSourceApplicationId) {
-      obj.joinSourceApplicationId = joinSourceApplicationId;
+      obj2.joinSourceApplicationId = joinSourceApplicationId;
     }
     if (obj.joinSourceChannelId !== joinSourceChannelId) {
-      obj.joinSourceChannelId = joinSourceChannelId;
+      obj2.joinSourceChannelId = joinSourceChannelId;
     }
     if (obj.inviterId !== inviterId) {
-      obj.inviterId = inviterId;
+      obj2.inviterId = inviterId;
     }
     if (obj.integrationType !== integrationType) {
-      obj.integrationType = integrationType;
+      obj2.integrationType = integrationType;
     }
     let flag = false;
     let flag2 = false;
@@ -173,7 +172,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp15 = obj[tmp6];
+        let tmp15 = obj2[tmp6];
         if (_modDef4755(tmp15, obj[tmp6])) {
           continue;
         } else {

@@ -7,6 +7,8 @@ import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
@@ -14,9 +16,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSel
 export default function useSelectStage() {
   const items = [SelectedChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
-  const tmp2 = _slicedToArray(noop.useState(stateFromStores), 2);
-  first = tmp2[0];
-  asyncGeneratorStep = tmp2[1];
+  [first, asyncGeneratorStep] = noop.useState(stateFromStores);
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -33,13 +33,11 @@ export default function useSelectStage() {
         closure_0(first[6]).navigateToStage(channel);
         c5 = 0;
         c6 = 3;
-        let obj1 = { value: undefined, done: true };
-        return obj1;
+        return { value: undefined, done: true };
       }
     }
     tmp3(closure_1);
-    obj1 = closure_0(first[6]);
-    await obj1.connectOrLurkStage(closure_0, closure_1);
+    await closure_0(first[6]).connectOrLurkStage(closure_0, closure_1);
     if (1 === tmp7) {
       c5 = 0;
       tmp3(null);

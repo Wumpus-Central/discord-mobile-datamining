@@ -1,6 +1,6 @@
-// === Module 17232: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 17234: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 17232 (useConsoleConnectedAccountForVoiceUpsell)
+// Module 17234 (useConsoleConnectedAccountForVoiceUpsell)
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
 import GameConsoleStore from "GameConsoleStore" /* 4653 */;

@@ -4,12 +4,14 @@
 import Constants from "Constants" /* 1074 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7432 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 7431 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7431 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import size from "module_2" /* 2 */;
 
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 ({ CHANNEL_PREFIX: c2, GUILD_PREFIX: c3, getIdFromHistoryItem: closure_4 } = NavigationHistoryStore);
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ME = Constants.ME;
 const result = size.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
 
@@ -33,8 +35,8 @@ export default function getPreviousSafeRouteForNsfwReturn() {
               if (guild_id == null) {
                 guild_id = ME;
               }
-              obj = { guildId: guild_id, channelId: tmp3 };
-              return obj;
+              let obj2 = { guildId: guild_id, channelId: tmp3 };
+              return obj2;
             }
           }
         }
@@ -52,8 +54,8 @@ export default function getPreviousSafeRouteForNsfwReturn() {
       }
       diff = diff - 1;
     }
-    obj = { guildId: tmp3, channelId: defaultChannel.id };
-    return obj;
+    const obj3 = { guildId: tmp3, channelId: defaultChannel.id };
+    return obj3;
   }
   return null;
 };

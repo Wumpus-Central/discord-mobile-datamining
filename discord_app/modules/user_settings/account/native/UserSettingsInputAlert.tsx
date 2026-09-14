@@ -1,7 +1,7 @@
-// === Module 14885: UserSettingsInputAlert ===
+// === Module 14886: UserSettingsInputAlert ===
 
-// Module 14885 (UserSettingsInputAlert)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 14886 (UserSettingsInputAlert)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import Stack_Stack from "Stack/Stack" /* 5054 */;
 import common_AlertDefault from "common/Alert" /* 5075 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "add" };
+const hasOwnProperty = { input: "", error: "assign" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -76,39 +76,36 @@ prototype["renderContent"] = function renderContent() {
     }
     let tmp7 = null != helpText;
     if (tmp7) {
-      let obj = { variant: "text-md/normal", children: helpText };
+      const obj = { variant: "text-md/normal", children: helpText };
       tmp7 = React3(Text_Text.Text, obj);
     }
     const items = [tmp7, ];
-    obj = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
+    const obj2 = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
     let str2 = "default";
     if (null != error) {
       str2 = "error";
     }
-    obj = {
-      spacing: 16,
-      children: null,
-      status: str2,
-      errorMessage: error,
-      onSubmitEditing: self.handleSubmit,
-      onChange(input) {
-          return self.setState({ input });
-        }
+    const obj3 = { spacing: 16, children: null };
+    obj2.status = str2;
+    obj2.errorMessage = error;
+    obj2.onSubmitEditing = self.handleSubmit;
+    obj2.onChange = function onChange(input) {
+      return self.setState({ input });
     };
-    items[1] = React3(TextInput.TextInput, obj);
-    obj.children = items;
-    return React4(Stack_Stack.Stack, obj);
+    items[1] = React3(TextInput.TextInput, obj2);
+    obj3.children = items;
+    return React4(Stack_Stack.Stack, obj3);
   }
   error = self.state.error;
 };
 prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
-  let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
+  const obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
   const tmp5 = React3(common_AlertDefault, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
-    obj = { children: tmp5 };
-    tmpResult = React3(KeyboardAwareViewDefault, obj);
+    const obj2 = { children: tmp5 };
+    tmpResult = React3(KeyboardAwareViewDefault, obj2);
   }
   return tmpResult;
 };

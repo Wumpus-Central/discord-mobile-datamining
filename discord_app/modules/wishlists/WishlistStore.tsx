@@ -3,12 +3,14 @@
 // Module 8903 (WishlistStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1230 */;
 import UserProfileStore from "UserProfileStore" /* 7723 */;
-import WishlistRecord from "WishlistRecord" /* 8904 */;
+import WishlistRecord_mod from "WishlistRecord" /* 8904 */;
 import size from "module_2" /* 2 */;
 
+let WishlistRecord = WishlistRecord_mod;
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: closure_4 } = WishlistRecord);
+let WishlistRecord = WishlistRecord_mod;
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class WishlistStore extends Store {
@@ -117,16 +119,16 @@ const wishlistStore = new WishlistStore(DispatcherDefault, {
     ({ wishlistId, skuId: require } = arg0);
     let tmp2 = dependencyMap[wishlistId];
     if (tmp2 == null) {
-      let obj = { data: null, status: "not_loaded" };
+      const obj = { data: null, status: "not_loaded" };
       tmp[wishlistId] = obj;
       tmp2 = obj;
     }
     if (null != tmp2.data) {
-      obj = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
+      const obj2 = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
       const items = tmp2.data.items;
-      obj.items = items.filter((skuId) => skuId.skuId !== require);
-      obj.applications = tmp2.data.applications;
-      const tmp7 = new WishlistRecord(obj);
+      obj2.items = items.filter((skuId) => skuId.skuId !== require);
+      obj2.applications = tmp2.data.applications;
+      const tmp7 = new WishlistRecord(obj2);
       tmp2.data = tmp7;
     }
   },

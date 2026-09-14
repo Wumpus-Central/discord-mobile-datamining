@@ -1,19 +1,18 @@
-// === Module 17065: useGiftingPromotionAssetsReady ===
+// === Module 17067: useGiftingPromotionAssetsReady ===
 
-// Module 17065 (useGiftingPromotionAssetsReady)
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10881 */;
-import usePreloadedAssetDefault from "usePreloadedAsset" /* 17066 */;
+// Module 17067 (useGiftingPromotionAssetsReady)
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10882 */;
+import usePreloadedAssetDefault from "usePreloadedAsset" /* 17068 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
-  let obj = MarketingComponentHooks;
   asset = undefined;
   if (asset != null) {
     asset = asset.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(asset);
+  const themeAndReducedMotionAwareAssetUrl = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(asset);
   const status = usePreloadedAssetDefault(themeAndReducedMotionAwareAssetUrl).status;
   let asset1;
   if (asset2 != null) {
@@ -25,11 +24,11 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (!tmp8) {
     tmp8 = "preloaded" === status;
   }
-  obj = { isGiftCoachmarkAssetReady: tmp8, isGiftReminderAssetReady: null };
+  const obj2 = { isGiftCoachmarkAssetReady: tmp8, isGiftReminderAssetReady: null };
   let tmp9 = "skipped" === status2;
   if (!tmp9) {
     tmp9 = "preloaded" === status2;
   }
-  obj.isGiftReminderAssetReady = tmp9;
-  return obj;
+  obj2.isGiftReminderAssetReady = tmp9;
+  return obj2;
 };

@@ -33,10 +33,11 @@ import _mod3586 from "module_3586" /* 3586 */;
 import _mod3587 from "module_3587" /* 3587 */;
 import _mod3588 from "module_3588" /* 3588 */;
 import _mod3589 from "module_3589" /* 3589 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3559);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/private_channels/clean_up_inactive_gdms/CleanUpInactiveGDMs.messages.js");
 
 export default messagesProxy;

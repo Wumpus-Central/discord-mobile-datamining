@@ -1,6 +1,6 @@
-// === Module 16459: useYouBarCoachmark ===
+// === Module 16461: useYouBarCoachmark ===
 
-// Module 16459 (useYouBarCoachmark)
+// Module 16461 (useYouBarCoachmark)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -20,17 +20,17 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   const animatedRef = isQuestRendered(isInPrivateProfilesExperiment[6]).useAnimatedRef();
   let obj = isQuestRendered(isInPrivateProfilesExperiment[6]);
   isInPrivateProfilesExperiment = isQuestRendered(isInPrivateProfilesExperiment[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
-  const obj2 = isQuestRendered(isInPrivateProfilesExperiment[7]);
+  let obj2 = isQuestRendered(isInPrivateProfilesExperiment[7]);
   const isTinyBroncoEligible = isQuestRendered(isInPrivateProfilesExperiment[8]).useIsTinyBroncoEligible();
   const obj3 = isQuestRendered(isInPrivateProfilesExperiment[8]);
   const isFocused = isQuestRendered(isInPrivateProfilesExperiment[9]).useIsFocused();
   const obj4 = isQuestRendered(isInPrivateProfilesExperiment[9]);
   let items = [stateFromStores];
   stateFromStores = isQuestRendered(isInPrivateProfilesExperiment[10]).useStateFromStores(items, () => {
-    isQuestRendered(isInPrivateProfilesExperiment[11]);
-    const obj = { from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS };
-    const tmp = obj.getFirstInstallTimeElapsed(obj) >= 10;
-    return null != stateFromStores.getGuildId() && obj.getFirstInstallTimeElapsed(obj) >= 10;
+    const obj = isQuestRendered(isInPrivateProfilesExperiment[11]);
+    const obj2 = { from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS };
+    const tmp = obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS }) >= 10;
+    return null != stateFromStores.getGuildId() && obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS }) >= 10;
   });
   const items1 = [isInPrivateProfilesExperiment, isQuestRendered, stateFromStores, isTinyBroncoEligible, isFocused];
   const memo = isFocused.useMemo(() => {

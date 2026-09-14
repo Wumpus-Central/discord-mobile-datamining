@@ -4,6 +4,8 @@
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function canRenderParticipantVideo(participant) {
   let obj = MediaEngineStore;

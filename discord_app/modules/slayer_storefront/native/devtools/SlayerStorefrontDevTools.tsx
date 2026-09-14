@@ -1,6 +1,6 @@
-// === Module 15809: SlayerStorefrontDevTools ===
+// === Module 15811: SlayerStorefrontDevTools ===
 
-// Module 15809 (SlayerStorefrontDevTools)
+// Module 15811 (SlayerStorefrontDevTools)
 import nativeDefault from "native" /* 576 */;
 import GPlayActionCreators from "GPlayActionCreators" /* 9497 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,6 +9,8 @@ import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SKUStore from "SKUStore" /* 5591 */;
 import IAPStore from "IAPStore" /* 7340 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
@@ -19,8 +21,8 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,8 +35,8 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
@@ -45,11 +47,11 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
           c7 = 1;
           const result = closure_2_11.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(closure_0, closure_1);
           const HTTP = require("HTTPUtils").HTTP;
-          let obj1 = { url: result, rejectWithError: false };
+          const obj5 = { url: result, rejectWithError: false };
           c8 = 2;
           c9 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj6 = { value: HTTP.get(obj5), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c7 = 0;
@@ -60,8 +62,7 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
         closure_132_0 = closure_2;
         status = closure_132_0.status;
         body = closure_132_0.body;
-        obj1 = closure_133_0(closure_133_2[11]);
-        closure_132_3 = obj1.stringifyErrors(body);
+        closure_132_3 = closure_133_0(closure_133_2[11]).stringifyErrors(body);
         c3 = status;
         if (status == null) {
           c3 = "?";
@@ -75,13 +76,14 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
         const _HermesInternal = HermesInternal;
         const combined = "HTTP " + c3 + " \u00B7 " + json;
         c9 = 3;
+        const obj2 = closure_133_0(closure_133_2[11]);
       } else if (arg0 === 1) {
         c9 = 3;
         throw value;
       } else if (arg0 === 2) {
         c7 = 0;
         c9 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c7 = 0;
@@ -105,18 +107,16 @@ const Constants = fn(1074);
 ({ Endpoints: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { wrap: null, inputRow: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.wrap = createStyles;
-createStyles.inputRow = { padding: nativeDefault.space.PX_12 };
-let closure_15 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, inputRow: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.inputRow = { padding: nativeDefault.space.PX_12 };
+let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx");
 
 export default function SlayerStorefrontDevTools() {
   const tmp = closure_15();
-  let obj = first1;
   [str, tmp6] = first(first1.useState(""), 2);
   const tmp4 = first;
   const tmp5 = first(first1.useState(""), 2);
@@ -124,9 +124,9 @@ export default function SlayerStorefrontDevTools() {
   const trimmed = str.trim();
   _require = trimmed;
   let trimmed1 = str2.trim();
-  let obj1 = require("initialize");
+  const tmp7 = first(first1.useState(""), 2);
   let items = [stateFromStores2];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     value = undefined;
     if (length.length > 0) {
       value = SKUStore.get(tmp);
@@ -141,7 +141,7 @@ export default function SlayerStorefrontDevTools() {
   closure_6 = tmp13[1];
   let obj2 = require("initialize");
   const items1 = [c8];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => _null.getCurrentUser());
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => _null.getCurrentUser());
   let tmp16;
   if (stateFromStores != null) {
     const googleSkuIds = stateFromStores.googleSkuIds;
@@ -153,19 +153,19 @@ export default function SlayerStorefrontDevTools() {
     tmp16 = null;
   }
   c8 = tmp16;
-  let tmp9Result = tmp9(tmp3[13]);
+  let obj3 = require("initialize");
   const items2 = [stateFromStores3];
   const items3 = [tmp16];
-  stateFromStores2 = tmp9Result.useStateFromStores(items2, () => {
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
     let product = null;
     if (null != c8) {
       product = IAPStore.getProduct(tmp);
     }
     return product;
   }, items3);
-  tmp9Result = tmp9(tmp3[13]);
+  const tmp9Result = require("initialize");
   const items4 = [stateFromStores3];
-  stateFromStores3 = tmp9Result.useStateFromStores(items4, () => stateFromStores3.isReady());
+  stateFromStores3 = require("initialize").useStateFromStores(items4, () => stateFromStores3.isReady());
   _require = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
@@ -174,8 +174,8 @@ export default function SlayerStorefrontDevTools() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -188,8 +188,8 @@ export default function SlayerStorefrontDevTools() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -201,12 +201,13 @@ export default function SlayerStorefrontDevTools() {
             if (tmp19) {
               closure_1_6(null);
               v2(true);
-              let obj3 = length(stateFromStores[14]);
-              const obj1 = { withGoogleSkuIds: length(stateFromStores[15]).isAndroid() };
+              const obj5 = { withGoogleSkuIds: null };
+              const obj4 = length(stateFromStores[14]);
+              obj5.withGoogleSkuIds = length(stateFromStores[15]).isAndroid();
               v2 = 1;
               c5 = 1;
-              const obj2 = { value: obj3.fetchSocialLayerStorefrontSkuForApplication(trimmed1, length, obj1), done: false };
-              return obj2;
+              const obj7 = { value: obj4.fetchSocialLayerStorefrontSkuForApplication(trimmed1, length, obj5), done: false };
+              return obj7;
             } else {
               c5 = 3;
             }
@@ -217,8 +218,8 @@ export default function SlayerStorefrontDevTools() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             v2(false);
             if (null != stateFromStores2.get(length)) {
@@ -227,7 +228,7 @@ export default function SlayerStorefrontDevTools() {
               trimmed1 = closure_1_6;
               v2 = 2;
               c5 = 1;
-              const obj4 = {
+              const obj9 = {
                 value: (function describeStorefrontSkuFailure() {
                             const self = this;
                             const apply = closure_1_16.apply;
@@ -240,7 +241,7 @@ export default function SlayerStorefrontDevTools() {
                           })(trimmed1, length),
                 done: false
               };
-              return obj4;
+              return obj9;
             }
           }
         } else if (arg0 === 1) {
@@ -250,7 +251,7 @@ export default function SlayerStorefrontDevTools() {
           trimmed1(value);
         }
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp29) {
         c5 = tmp;
@@ -273,28 +274,24 @@ export default function SlayerStorefrontDevTools() {
   const items7 = [callback];
   const callback1 = obj.useCallback(() => {
     callback((skuId) => {
-      length(stateFromStores[16]);
-      const obj = { skuId };
-      const result = obj.openSocialLayerStorefrontProductDetailsModal(obj);
+      const result = length(stateFromStores[16]).openSocialLayerStorefrontProductDetailsModal({ skuId });
     });
   }, items6);
   const items8 = [callback, stateFromStores1];
   const callback2 = obj.useCallback(() => {
     callback((skuId) => {
-      length(stateFromStores[16]);
-      const obj = { skuId };
-      const result = obj.openSocialLayerStorefrontProductSelfPurchaseSuccessModal(obj);
+      const result = length(stateFromStores[16]).openSocialLayerStorefrontProductSelfPurchaseSuccessModal({ skuId });
     });
   }, items7);
   const callback3 = obj.useCallback(() => {
     callback((skuId) => {
-      closure_0(stateFromStores[16]);
-      const obj = { skuId, recipient: stateFromStores1 };
-      const result = obj.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
+      const obj2 = { skuId, recipient: stateFromStores1 };
+      const result = closure_0(stateFromStores[16]).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
+      const obj = closure_0(stateFromStores[16]);
     });
   }, items8);
-  const tmp7 = first(first1.useState(""), 2);
-  [tmp25, closure_12] = tmp4(obj.useState(null), 2);
+  const tmp9Result3 = require("initialize");
+  [tmp25, closure_12] = tmp4(first1.useState(null), 2);
   const items9 = [tmp16];
   let tmp27 = trimmed.length > 0;
   const callback4 = obj.useCallback(() => {
@@ -349,8 +346,8 @@ export default function SlayerStorefrontDevTools() {
     tmp28 = first;
   }
   const items10 = [first1, first, stateFromStores, tmp27, tmp16, stateFromStores2, stateFromStores3];
-  obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
-  obj = { paddingVertical: null, paddingBottom: null };
+  let obj4 = { style: tmp.wrap, contentContainerStyle: null, children: null };
+  let obj5 = { paddingVertical: null, paddingBottom: null };
   const memo = obj.useMemo(() => {
     if (null != first1) {
       const _HermesInternal5 = HermesInternal;
@@ -388,29 +385,29 @@ export default function SlayerStorefrontDevTools() {
     }
     return str13;
   }, items10);
-  obj.paddingVertical = trimmed1(stateFromStores[10]).space.PX_16;
-  obj.paddingBottom = trimmed1(stateFromStores[10]).space.PX_16 + trimmed1(stateFromStores[12])({ includeKeyboardHeight: true }).insets.bottom;
-  obj.contentContainerStyle = obj;
-  obj1 = { title: "SKU", description: memo, hasIcons: false, children: null };
-  obj2 = { style: tmp.inputRow, children: closure_13(tmp9(tmp3[20]).TextInput, { label: "Application ID", value: str2, onChange: tmp8, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) };
-  const items11 = [closure_13(stateFromStores1, obj2), ];
+  obj5.paddingVertical = trimmed1(stateFromStores[10]).space.PX_16;
+  obj5.paddingBottom = trimmed1(stateFromStores[10]).space.PX_16 + trimmed1(stateFromStores[12])({ includeKeyboardHeight: true }).insets.bottom;
+  obj4.contentContainerStyle = obj5;
+  const obj6 = { title: "SKU", description: memo, hasIcons: false, children: null };
   const tmp31 = closure_6;
-  const tmp4Result = tmp4(obj.useState(null), 2);
+  const tmp4Result = tmp4(first1.useState(null), 2);
+  const items11 = [closure_13(stateFromStores1, { style: tmp.inputRow, children: closure_13(require("TextInput").TextInput, { label: "Application ID", value: str2, onChange: tmp8, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) }), ];
+  let obj7 = { style: tmp.inputRow, children: closure_13(require("TextInput").TextInput, { label: "Application ID", value: str2, onChange: tmp8, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) };
   items11[1] = closure_13(stateFromStores1, { style: tmp.inputRow, children: closure_13(require("TextInput").TextInput, { label: "SKU ID", value: str, onChange: tmp6, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) });
-  obj1.children = items11;
-  const items12 = [closure_14(require("TableRowGroup").TableRowGroup, obj1), , ];
-  let obj3 = { style: tmp.inputRow, children: closure_13(require("TextInput").TextInput, { label: "SKU ID", value: str, onChange: tmp6, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) };
+  obj6.children = items11;
+  const items12 = [closure_14(require("TableRowGroup").TableRowGroup, obj6), , ];
+  let obj8 = { style: tmp.inputRow, children: closure_13(require("TextInput").TextInput, { label: "SKU ID", value: str, onChange: tmp6, placeholder: "1234567890123456789", autoCapitalize: "none", autoCorrect: false, keyboardType: "number-pad" }) };
   let isAndroidResult = require("PlatformUtils").isAndroid();
   if (isAndroidResult) {
-    let obj4 = { title: "Pricing", description: tmp25, hasIcons: false, children: null };
+    let obj9 = { title: "Pricing", description: tmp25, hasIcons: false, children: null };
     let str3 = "needs a fetched SKU with a DEFAULT googleSkuId";
     if (null != tmp16) {
       let _HermesInternal = HermesInternal;
       str3 = "play id " + tmp16;
     }
-    const obj5 = { label: "Query Play for this SKU's price", subLabel: str3, onPress: callback4, disabled: null == tmp16, arrow: true };
-    obj4.children = tmp30(tmp9(tmp3[21]).TableRow, obj5);
-    isAndroidResult = tmp30(tmp9(tmp3[19]).TableRowGroup, obj4);
+    const obj10 = { label: "Query Play for this SKU's price", subLabel: str3, onPress: callback4, disabled: null == tmp16, arrow: true };
+    obj9.children = tmp30(tmp9(tmp3[21]).TableRow, obj10);
+    isAndroidResult = tmp30(tmp9(tmp3[19]).TableRowGroup, obj9);
   }
   items12[1] = isAndroidResult;
   const items13 = [closure_13(require("TableRow").TableRow, { label: "Product details", subLabel: "The PDP, as opened from a gift-code embed", onPress: callback1, disabled: tmp28, arrow: true }), closure_13(require("TableRow").TableRow, { label: "Purchase success (self)", subLabel: "Redeem / link-account screen shown after buying", onPress: callback2, disabled: tmp28, arrow: true }), ];
@@ -421,13 +418,13 @@ export default function SlayerStorefrontDevTools() {
   if (str5 == null) {
     str5 = "you";
   }
-  const obj6 = { spacing: 16, children: null };
-  const obj7 = { title: "Modals", hasIcons: false, children: null };
-  const tmp9Result1 = require("PlatformUtils");
+  const obj11 = { spacing: 16, children: null };
+  const obj12 = { title: "Modals", hasIcons: false, children: null };
+  const tmp9Result4 = require("PlatformUtils");
   items13[2] = closure_13(require("TableRow").TableRow, { label: "Purchase success (gift)", subLabel: "Recipient: " + str5 + " (self)", onPress: callback3, disabled: tmp28, arrow: true });
-  obj7.children = items13;
-  items12[2] = closure_14(require("TableRowGroup").TableRowGroup, obj7);
-  obj6.children = items12;
-  obj.children = closure_14(require("Stack/Stack").Stack, obj6);
-  return closure_13(tmp31, obj);
+  obj12.children = items13;
+  items12[2] = closure_14(require("TableRowGroup").TableRowGroup, obj12);
+  obj11.children = items12;
+  obj4.children = closure_14(require("Stack/Stack").Stack, obj11);
+  return closure_13(tmp31, obj4);
 };

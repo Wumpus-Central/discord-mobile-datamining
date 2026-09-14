@@ -1,12 +1,12 @@
-// === Module 16819: ThreadListEmpty ===
+// === Module 16821: ThreadListEmpty ===
 
-// Module 16819 (ThreadListEmpty)
+// Module 16821 (ThreadListEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import components_Button_Button from "components/Button/Button" /* 5056 */;
-import _modDef12367 from "module_12367" /* 12367 */;
+import _modDef12368 from "module_12368" /* 12368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,37 +14,32 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: null, title: null, subtext: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 };
-obj.iconWrapper = obj;
-obj.title = { textAlign: "center", marginTop: 16, marginHorizontal: 16 };
-obj.subtext = { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 };
+let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 16 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 } };
 let closure_6 = createStyles.createStyles(obj);
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListEmpty.tsx");
 
 export default noop.memo((onCreateThreadPress) => {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.iconWrapper, children: null };
-  obj = { source: _modDef12367, size: native.Icon.Sizes.MEDIUM };
-  obj.children = React4(native.Icon, obj);
-  const items = [React4(View, obj), , , ];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef12368, size: native.Icon.Sizes.MEDIUM }) };
+  const items = [React4(View, obj2), , , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj1.children = intl.string(util.t.HgTQ8p);
-  items[1] = React4(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.subtext, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(util.t.HgTQ8p);
+  items[1] = React4(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.subtext, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(util.t.jmq9GC);
-  items[2] = React4(Text_Text.Text, obj2);
+  obj5.children = intl2.string(util.t.jmq9GC);
+  items[2] = React4(Text_Text.Text, obj5);
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
-    const obj3 = { onPress: onCreateThreadPress, text: null };
+    const obj6 = { onPress: onCreateThreadPress, text: null };
     const intl3 = util.intl;
-    obj3.text = intl3.string(util.t.rBIGBL);
-    tmp4Result = React4(components_Button_Button.Button, obj3);
+    obj6.text = intl3.string(util.t.rBIGBL);
+    tmp4Result = React4(components_Button_Button.Button, obj6);
   }
   items[3] = tmp4Result;
   obj.children = items;

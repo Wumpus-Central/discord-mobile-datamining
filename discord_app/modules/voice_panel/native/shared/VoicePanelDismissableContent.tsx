@@ -1,6 +1,6 @@
-// === Module 17207: VoicePanelDismissableContent ===
+// === Module 17209: VoicePanelDismissableContent ===
 
-// Module 17207 (VoicePanelDismissableContent)
+// Module 17209 (VoicePanelDismissableContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,9 +9,9 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17208, dependencyMap.paths);
+  return asyncRequireImpl(17210, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12402).VoicePanelModes;
+const VoicePanelModes = fn(12403).VoicePanelModes;
 const isActivityParticipant = fn(4657).isActivityParticipant;
 const jsx = fn(21).jsx;
 const __initData = { code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}" };
@@ -34,7 +34,6 @@ export default noop.memo(function VoicePanelDismissibleContent() {
     }
     closure_3(tmp);
   }, items);
-  channelId(mode[9]);
   const fn = function h() {
     let tmp;
     if (mode.get() === VoicePanelModes.PANEL) {
@@ -47,8 +46,7 @@ export default noop.memo(function VoicePanelDismissibleContent() {
     }
     return tmp;
   };
-  let obj = { mode, VoicePanelModes, focused };
-  fn.__closure = obj;
+  fn.__closure = { mode, VoicePanelModes, focused };
   fn.__workletHash = 11330064461661;
   fn.__initData = __initData;
   const fn2 = function f(arg0, arg1) {
@@ -56,18 +54,21 @@ export default noop.memo(function VoicePanelDismissibleContent() {
       ReanimatedRexport.runOnJS(callback)(arg0);
     }
   };
-  obj = { runOnJS: channelId(mode[9]).runOnJS, handleFocusChange };
-  fn2.__closure = obj;
+  let obj = channelId(mode[9]);
+  const obj2 = { mode, VoicePanelModes, focused };
+  let tmp = focused;
+  const tmp6 = channelId;
+  fn2.__closure = { runOnJS: channelId(mode[9]).runOnJS, handleFocusChange };
   fn2.__workletHash = 15579591345007;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   if (tmp4[0]) {
-    const items1 = [channelId(tmp2[10]).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
+    const items1 = [tmp6(tmp2[10]).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
     let items2 = items1;
   } else {
     items2 = [];
   }
-  return jsx(focused(mode[11]), {
+  return jsx(tmp(mode[11]), {
     contentTypes: items2,
     children(arg0) {
       ({ visibleContent, markAsDismissed } = arg0);

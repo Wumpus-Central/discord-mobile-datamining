@@ -17,7 +17,6 @@ const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUti
 export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
   const user = UserStore.getUser(id);
   const channel = ChannelStore.getChannel(channelId);
-  let obj = NicknameUtilsDefault;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -26,39 +25,39 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   if (channel != null) {
     id = channel.id;
   }
-  let name = obj.getName(guild_id, id, user);
+  let name = NicknameUtilsDefault.getName(guild_id, id, user);
   if (name == null) {
     name = UserUtilsDefault.getGlobalName(user);
     const tmp3Result = UserUtilsDefault;
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl18 = util.intl;
-    obj = { username: name };
-    return intl18.formatToPlainString(util.t["+joqrP"], obj);
+    const obj2 = { username: name };
+    return intl18.formatToPlainString(util.t["+joqrP"], obj2);
   } else if (SafetyToastType.UNIGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl17 = util.intl;
-    obj = { username: name };
-    return intl17.formatToPlainString(util.t.THExKa, obj);
+    const obj3 = { username: name };
+    return intl17.formatToPlainString(util.t.THExKa, obj3);
   } else if (SafetyToastType.BLOCK_SUCCESS === BLOCK_SUCCESS) {
     const intl16 = util.intl;
-    const obj1 = { username: name };
-    return intl16.formatToPlainString(util.t.XXPrIs, obj1);
+    const obj4 = { username: name };
+    return intl16.formatToPlainString(util.t.XXPrIs, obj4);
   } else if (SafetyToastType.UNBLOCK_SUCCESS === BLOCK_SUCCESS) {
     const intl15 = util.intl;
-    const obj2 = { username: name };
-    return intl15.formatToPlainString(util.t.uExcGX, obj2);
+    const obj5 = { username: name };
+    return intl15.formatToPlainString(util.t.uExcGX, obj5);
   } else if (SafetyToastType.MUTE_SUCCESS === BLOCK_SUCCESS) {
     const intl14 = util.intl;
-    const obj3 = { username: name };
-    return intl14.formatToPlainString(util.t.X4NtYb, obj3);
+    const obj6 = { username: name };
+    return intl14.formatToPlainString(util.t.X4NtYb, obj6);
   } else if (SafetyToastType.UNMUTE_SUCCESS === BLOCK_SUCCESS) {
     const intl13 = util.intl;
-    const obj4 = { username: name };
-    return intl13.formatToPlainString(util.t.tRaBfY, obj4);
+    const obj7 = { username: name };
+    return intl13.formatToPlainString(util.t.tRaBfY, obj7);
   } else if (SafetyToastType.REPORT_SUCCESS === BLOCK_SUCCESS) {
     const intl12 = util.intl;
-    const obj5 = { username: name };
-    return intl12.formatToPlainString(util.t.FOptFU, obj5);
+    const obj8 = { username: name };
+    return intl12.formatToPlainString(util.t.FOptFU, obj8);
   } else if (SafetyToastType.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
     const intl11 = util.intl;
     return intl11.string(util.t.c6kn6F);

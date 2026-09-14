@@ -1,6 +1,6 @@
-// === Module 13804: LocalPushNotificationStore ===
+// === Module 13805: LocalPushNotificationStore ===
 
-// Module 13804 (LocalPushNotificationStore)
+// Module 13805 (LocalPushNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
@@ -10,7 +10,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5494 */;
 
 require = fn;
-const Constants = fn(13805);
+const Constants = fn(13806);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1074).VerificationLevels;
 const set = new Set();
@@ -68,15 +68,12 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
           }
           if (null != obj) {
             if (!obj.isSameOrBefore(_modDef4228(), "minute")) {
-              obj = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
-              set.add(obj);
-              obj = { userInfo: null, fireDate: null, alertTitle: null, alertBody: null, category: "local" };
-              obj.userInfo = obj;
-              obj.fireDate = obj.format(timestampProducer);
-              obj.alertTitle = guild.name;
+              const obj2 = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
+              set.add(obj2);
+              const obj3 = { userInfo: obj2, fireDate: obj.format(timestampProducer), alertTitle: guild.name, alertBody: null, category: "local" };
               const intl = util.intl;
-              obj.alertBody = intl.string(util.t["hrDBa+"]);
-              const result = PushNotificationDefault.scheduleLocalNotification(obj);
+              obj3.alertBody = intl.string(util.t["hrDBa+"]);
+              const result = PushNotificationDefault.scheduleLocalNotification(obj3);
               const tmp15Result = PushNotificationDefault;
             }
           }

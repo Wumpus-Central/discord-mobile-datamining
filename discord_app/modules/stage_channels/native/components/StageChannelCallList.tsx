@@ -3,7 +3,7 @@
 // Module 10173 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5506 */;
 import SpeakerTile from "SpeakerTile" /* 10175 */;
 import StageSectionHeaderDefault from "StageSectionHeader" /* 10182 */;
@@ -19,7 +19,7 @@ const StageChannelListStore = fn(10174);
 const MAX_AUDIENCE_ROW_LIMIT = fn(5495).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let cutout = { direction: fn(1178).CutoutDirection.RIGHT, radius: 13, inset: -6 };
+let cutout = { direction: fn(1176).CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
 let closure_12 = noop.memo((channel) => {
   channel = channel.channel;
@@ -135,39 +135,39 @@ let closure_12 = noop.memo((channel) => {
     } else if (stageParticipantsCount.AUDIENCE === arg0) {
       let tmp13 = null;
       if (0 !== stageParticipantsCount) {
-        cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null };
+        const obj2 = { label: null, count: null, onToggleCollapse: null, collapsed: null };
         const intl = util.intl;
-        cutout.label = intl.string(util.t["3foUu5"]);
-        cutout.count = tmp12;
-        cutout.onToggleCollapse = function onToggleCollapse() {
+        obj2.label = intl.string(util.t["3foUu5"]);
+        obj2.count = tmp12;
+        obj2.onToggleCollapse = function onToggleCollapse() {
           return closure_1_4(!collapsed);
         };
-        cutout.collapsed = collapsed;
-        tmp13 = React6(StageSectionHeaderDefault, cutout);
+        obj2.collapsed = collapsed;
+        tmp13 = React6(StageSectionHeaderDefault, obj2);
       }
       return tmp13;
     } else if (stageParticipantsCount.SPEAKER === arg0) {
-      let tmp21Result = null;
+      let tmp21Result2 = null;
       if (0 !== actualStageSpeakerCount) {
-        cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
+        const obj3 = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
         const intl2 = util.intl;
-        cutout.label = intl2.string(util.t.CduOkx);
-        cutout.count = tmp6;
-        cutout.onToggleCollapse = function onToggleCollapse() {
+        obj3.label = intl2.string(util.t.CduOkx);
+        obj3.count = tmp6;
+        obj3.onToggleCollapse = function onToggleCollapse() {
           return closure_1_6(!first1);
         };
-        cutout.collapsed = first1;
-        tmp21Result = undefined;
+        obj3.collapsed = first1;
+        let tmp21Result;
         if (first1) {
           cutout = { users: mapped, max: 10, avatarSize: native.AvatarSizes.XSMALL_20, cutout: null };
           cutout.cutout = cutout;
           tmp21Result = React6(UserSummaryItemDefault, cutout);
           const tmp22Result = UserSummaryItemDefault;
         }
-        cutout.children = tmp21Result;
-        tmp21Result = React6(StageSectionHeaderDefault, cutout);
+        obj3.children = tmp21Result;
+        tmp21Result2 = React6(StageSectionHeaderDefault, obj3);
       }
-      return tmp21Result;
+      return tmp21Result2;
     } else {
       _modDef38(null != arg0, "Section Not Found");
       return null;
@@ -202,35 +202,35 @@ let closure_12 = noop.memo((channel) => {
     if (null == rowsBySection[arg0][row]) {
       return tmp;
     } else if (stageParticipantsCount.STREAM === arg0) {
-      let obj = { children: null };
-      obj = { channel, participants: rowsBySection[arg0][row], row };
-      obj.children = React6(StageGridRowDefault, obj);
+      const obj2 = { children: null };
+      const obj3 = { channel, participants: rowsBySection[arg0][row], row };
+      obj2.children = React6(StageGridRowDefault, obj3);
       const _HermesInternal3 = HermesInternal;
-      return React6(noop.Fragment, obj, "stream-" + arg0 + "-" + row);
+      return React6(noop.Fragment, obj2, "stream-" + arg0 + "-" + row);
     } else if (stageParticipantsCount.SPEAKER === arg0) {
       const items = [tmp, ];
       let tmp19 = !first1;
       if (!first1) {
-        const obj1 = { channel, participants: rowsBySection[arg0][row], row };
-        tmp19 = React6(StageGridRowDefault, obj1);
+        const obj4 = { channel, participants: rowsBySection[arg0][row], row };
+        tmp19 = React6(StageGridRowDefault, obj4);
       }
-      const obj2 = { children: null };
+      const obj5 = { children: null };
       items[1] = tmp19;
-      obj2.children = items;
+      obj5.children = items;
       const _HermesInternal2 = HermesInternal;
-      return React7(noop.Fragment, obj2, "speaker-" + arg0 + "-" + row);
+      return React7(noop.Fragment, obj5, "speaker-" + arg0 + "-" + row);
     } else if (stageParticipantsCount.AUDIENCE === arg0) {
       const items1 = [tmp, ];
       let tmp10 = !first;
       if (!first) {
-        obj = { channel, participants: rowsBySection[arg0][row] };
+        const obj = { channel, participants: rowsBySection[arg0][row] };
         tmp10 = React6(AudienceGridRowDefault, obj);
       }
-      const obj3 = { children: null };
+      const obj6 = { children: null };
       items1[1] = tmp10;
-      obj3.children = items1;
+      obj6.children = items1;
       const _HermesInternal = HermesInternal;
-      return React7(noop.Fragment, obj3, "audience-" + arg0 + "-" + row);
+      return React7(noop.Fragment, obj6, "audience-" + arg0 + "-" + row);
     } else {
       _modDef38(null != arg0, "Section Not Found");
       return null;
@@ -285,9 +285,9 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  let obj = width(10200);
-  const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(10200).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1477)().width;
+  let obj = width(10200);
   isScreenLandscape = width(5207).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
@@ -304,6 +304,5 @@ export default function StageChannelCallList(channel) {
   }, items);
   const obj2 = width(5207);
   const tmp4 = _slicedToArray(width(10200).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
-  obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };
-  return closure_8(closure_12, obj);
+  return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

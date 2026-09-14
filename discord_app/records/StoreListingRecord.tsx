@@ -1,7 +1,7 @@
-// === Module 14587: StoreListingRecord ===
+// === Module 14588: StoreListingRecord ===
 
-// Module 14587 (StoreListingRecord)
-import GameStoreAsset from "GameStoreAsset" /* 14588 */;
+// Module 14588 (StoreListingRecord)
+import GameStoreAsset from "GameStoreAsset" /* 14589 */;
 import Record from "Record" /* 1386 */;
 import UserRecord from "UserRecord" /* 1385 */;
 
@@ -82,7 +82,7 @@ class StoreListingRecord extends tmp2 {
 }
 StoreListingRecord["createFromServer"] = function createFromServer(id) {
   const staff_notes = id.staff_notes;
-  let obj = { id: id.id, applicationId: id.sku.application_id, skuId: id.sku.id, skuFlags: id.sku.flags, summary: id.summary, tagline: id.tagline, flavorText: id.flavor_text, description: id.description, childSkuIds: null, alternativeSkuIds: null, carouselItems: null, assets: null, staffNotes: null, guild: null, thumbnail: null, previewVideo: null, headerBackground: null, headerLogoDarkTheme: null, headerLogoLightTheme: null, boxArt: null, heroBackground: null, heroVideo: null, entitlementBranchId: null, benefits: null, published: null };
+  const obj = { id: id.id, applicationId: id.sku.application_id, skuId: id.sku.id, skuFlags: id.sku.flags, summary: id.summary, tagline: id.tagline, flavorText: id.flavor_text, description: id.description, childSkuIds: null, alternativeSkuIds: null, carouselItems: null, assets: null, staffNotes: null, guild: null, thumbnail: null, previewVideo: null, headerBackground: null, headerLogoDarkTheme: null, headerLogoLightTheme: null, boxArt: null, heroBackground: null, heroVideo: null, entitlementBranchId: null, benefits: null, published: null };
   let mapped = null;
   if (null != id.child_skus) {
     const child_skus = id.child_skus;
@@ -109,19 +109,19 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   obj.assets = mapped3;
   let tmp8 = null;
   if (null != staff_notes) {
-    obj = { content: staff_notes.content, user: null };
+    const obj2 = { content: staff_notes.content, user: null };
     let tmp9 = null;
     if (null != staff_notes.user) {
       tmp9 = new UserRecord(staff_notes.user);
     }
-    obj.user = tmp9;
-    tmp8 = obj;
+    obj2.user = tmp9;
+    tmp8 = obj2;
   }
   obj.staffNotes = tmp8;
   let tmp13 = null;
   if (null != id.guild) {
-    obj = { id: id.guild.id, name: id.guild.name, icon: id.guild.icon, approximateMemberCount: id.guild.approximate_member_count, approximatePresenceCount: id.guild.approximate_presence_count };
-    tmp13 = obj;
+    const obj3 = { id: id.guild.id, name: id.guild.name, icon: id.guild.icon, approximateMemberCount: id.guild.approximate_member_count, approximatePresenceCount: id.guild.approximate_presence_count };
+    tmp13 = obj3;
   }
   obj.guild = tmp13;
   let result = null;

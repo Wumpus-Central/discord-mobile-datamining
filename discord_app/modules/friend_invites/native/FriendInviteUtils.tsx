@@ -1,6 +1,6 @@
-// === Module 17415: FriendInviteUtils ===
+// === Module 17417: FriendInviteUtils ===
 
-// Module 17415 (FriendInviteUtils)
+// Module 17417 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
@@ -17,11 +17,11 @@ export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
   InstantInviteActionCreatorsDefault.revokeFriendInvites().then(() => {
-    const obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
+    const obj2 = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = util.intl;
-    obj.content = intl.string(util.t.jSHEOQ);
-    obj.icon = _modDef9696;
-    obj.open(obj);
+    obj2.content = intl.string(util.t.jSHEOQ);
+    obj2.icon = _modDef9696;
+    ToastActionCreatorsDefault.open(obj2);
   });
 };
 export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
@@ -34,24 +34,24 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
       InstantInviteActionCreatorsDefault.transitionToInvite(invite, { forceTransition: true });
       DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
     } else {
-      let obj = {
+      let obj2 = {
         inviteKey: invite.code,
         context,
         callback() {
-              let obj = ToastActionCreatorsDefault;
               const intl = util.intl;
               const inviter = invite.inviter;
               let username;
               if (inviter != null) {
                 username = inviter.username;
               }
-              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9696 };
-              obj.open(obj);
+              const obj = ToastActionCreatorsDefault;
+              obj.open({ key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9696 });
+              const obj2 = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9696 };
               DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
               const tmpResult = DispatcherDefault;
             }
       };
-      const result = obj.acceptInviteAndTransitionToInviteChannel(obj);
+      const result = InstantInviteActionCreatorsDefault.acceptInviteAndTransitionToInviteChannel(obj2);
     }
   }
   tmp = null == invite.channel && null == invite.guild && null != invite.inviter;

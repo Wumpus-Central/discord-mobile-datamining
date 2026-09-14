@@ -1,7 +1,7 @@
-// === Module 12670: useGuildPowerupOnDeactivate ===
+// === Module 12671: useGuildPowerupOnDeactivate ===
 
-// Module 12670 (useGuildPowerupOnDeactivate)
-import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 12665 */;
+// Module 12671 (useGuildPowerupOnDeactivate)
+import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 12666 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,10 +1,12 @@
-// === Module 16629: useComponentRenderSpan ===
+// === Module 16631: useComponentRenderSpan ===
 
-// Module 16629 (useComponentRenderSpan)
+// Module 16631 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16630 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16631 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16632 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16633 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let closure_4 = new LoggerDefault("NavTTISurface");
@@ -13,8 +15,7 @@ let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation
 
 export const useComponentRenderSpan = function useComponentRenderSpan(spanComponent) {
   _require = spanComponent;
-  let obj = require("NavTTISurfaceContext");
-  const navTTISurface = obj.useNavTTISurface();
+  const navTTISurface = require("NavTTISurfaceContext").useNavTTISurface();
   let str;
   if (navTTISurface != null) {
     str = navTTISurface.navigationKey;
@@ -46,16 +47,15 @@ export const useComponentRenderSpan = function useComponentRenderSpan(spanCompon
           traceId = current.traceId;
         }
         if (traceId !== traceId) {
-          let obj = { spanComponent, endMonotonicMs, measurementSource };
-          if (obj2.recordComponentSpan(traceId, obj)) {
-            obj = { traceId, source: measurementSource };
-            logger.current = obj;
+          const obj3 = { spanComponent, endMonotonicMs, measurementSource };
+          if (obj2.recordComponentSpan(traceId, obj3)) {
+            const obj4 = { traceId, source: measurementSource };
+            logger.current = obj4;
           }
           obj2 = NavigationSpanTrackerDefault;
         } else {
           if (tmp7) {
-            obj = NavigationSpanTrackerDefault;
-            const result = obj.recordLateComponentLayout(traceId, spanComponent, endMonotonicMs);
+            const result = NavigationSpanTrackerDefault.recordLateComponentLayout(traceId, spanComponent, endMonotonicMs);
           }
           tmp7 = measurementSource === NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT && current.source !== measurementSource;
         }
@@ -117,8 +117,5 @@ export const useComponentRenderSpan = function useComponentRenderSpan(spanCompon
       logger.warn("" + closure_0 + " has no NavTTISurfaceProvider; measurement is disabled.");
     }
   }, items4);
-  if (null == navTTISurface) {
-    obj = {};
-  }
   return { onLayout };
 };

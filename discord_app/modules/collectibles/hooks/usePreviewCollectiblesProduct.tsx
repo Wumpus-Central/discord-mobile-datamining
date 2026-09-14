@@ -1,11 +1,13 @@
-// === Module 11223: usePreviewCollectiblesProduct ===
+// === Module 11224: usePreviewCollectiblesProduct ===
 
-// Module 11223 (usePreviewCollectiblesProduct)
+// Module 11224 (usePreviewCollectiblesProduct)
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11222 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11223 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8277 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const isAvatarDecorationRecord = fn(7650).isAvatarDecorationRecord;
@@ -27,58 +29,57 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    let obj1 = product(11222);
-    product = obj1.currentPreviewGeneration();
+    product = product(11223).currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };
     if (product.type === product(1889).CollectiblesItemType.BUNDLE) {
-      obj = {};
+      const obj3 = {};
       if (null != firstAvatarDecoration) {
-        obj.avatarDecoration = firstAvatarDecoration;
+        obj3.avatarDecoration = firstAvatarDecoration;
       }
       if (null != firstProfileEffect) {
-        obj.profileEffect = firstProfileEffect;
+        obj3.profileEffect = firstProfileEffect;
       }
       if (null != firstNameplate) {
-        obj.nameplate = firstNameplate;
+        obj3.nameplate = firstNameplate;
       }
       if (null != firstProfileFrame) {
-        obj.profileFrame = firstProfileFrame;
+        obj3.profileFrame = firstProfileFrame;
       }
       if (null != nameplate) {
         if (firstNameplate(nameplate)) {
-          obj.avatarDecoration = nameplate;
+          obj3.avatarDecoration = nameplate;
         } else {
           if (isProfileEffectRecord(nameplate)) {
-            obj.profileEffect = nameplate;
+            obj3.profileEffect = nameplate;
           } else if (!firstProfileFrame(nameplate)) {
             if (isProfileFrameRecord(nameplate)) {
-              obj.profileFrame = nameplate;
+              obj3.profileFrame = nameplate;
             }
           }
-          obj.nameplate = nameplate;
+          obj3.nameplate = nameplate;
         }
       }
       obj = obj(8281);
-      obj.setPendingChanges(obj);
+      obj.setPendingChanges(obj3);
     } else {
       const first = nameplate(tmp3.items, 1)[0];
       if (firstNameplate(first)) {
-        let objResult = obj(8281);
-        obj = { avatarDecoration: first };
-        objResult.setPendingChanges(obj);
+        const obj4 = { avatarDecoration: first };
+        obj(8281).setPendingChanges(obj4);
+        const objResult = obj(8281);
       } else if (isProfileEffectRecord(first)) {
-        objResult = obj(8281);
-        obj1 = { profileEffect: first };
-        objResult.setPendingChanges(obj1);
+        const obj5 = { profileEffect: first };
+        obj(8281).setPendingChanges(obj5);
+        const objResult4 = obj(8281);
       } else if (firstProfileFrame(first)) {
-        let obj2 = { nameplate: first };
-        obj(8281).setPendingChanges(obj2);
-        const objResult1 = obj(8281);
+        const obj6 = { nameplate: first };
+        obj(8281).setPendingChanges(obj6);
+        const objResult5 = obj(8281);
       } else if (isProfileFrameRecord(first)) {
-        const obj3 = { profileFrame: first };
-        obj(8281).setPendingChanges(obj3);
-        const objResult2 = obj(8281);
+        const obj7 = { profileFrame: first };
+        obj(8281).setPendingChanges(obj7);
+        const objResult6 = obj(8281);
       }
       return () => {
         let tmp = closure_1;
@@ -90,6 +91,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         }
       };
     }
+    let obj2 = product(11223);
     tmp3 = product;
   }, items);
 };

@@ -12,13 +12,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
 
 export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2() {
-  [tmp2, closure_0] = _slicedToArray(noop.useState(() => {
+  [tmp2, closure_0] = noop.useState(() => {
     let methodsV2 = callback.methodsV2;
     if (methodsV2 == null) {
       methodsV2 = [];
     }
     return methodsV2;
-  }), 2);
+  });
   const tmp = _slicedToArray(noop.useState(() => {
     let methodsV2 = callback.methodsV2;
     if (methodsV2 == null) {
@@ -26,9 +26,9 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
     }
     return methodsV2;
   }), 2);
-  [tmp4, importDefault] = _slicedToArray(noop.useState(() => callback.methodsV2FooterMessage), 2);
+  [tmp4, importDefault] = noop.useState(() => callback.methodsV2FooterMessage);
   const tmp3 = _slicedToArray(noop.useState(() => callback.methodsV2FooterMessage), 2);
-  [tmp6, dependencyMap] = _slicedToArray(noop.useState(() => callback.methodsV2OutageBannerMessage), 2);
+  [tmp6, dependencyMap] = noop.useState(() => callback.methodsV2OutageBannerMessage);
   const tmp7 = _slicedToArray(noop.useState(() => null == callback.methodsV2), 2);
   asyncGeneratorStep = tmp7[1];
   const tmp8 = _slicedToArray(noop.useState(false), 2);
@@ -42,8 +42,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -56,8 +56,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_129_0 = undefined;
             const methodsV2 = callback.methodsV2;
@@ -69,27 +69,27 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
                 tmp75(false);
                 v0(false);
                 c6 = 3;
-                let obj1 = { value: undefined, done: true };
-                return obj1;
+                const obj5 = { value: undefined, done: true };
+                return obj5;
               }
             }
             tmp75(true);
             v0(false);
             v0 = 2;
-            let obj5 = closure_0(8536);
-            const result = obj5.isCurrentUserSuspended();
+            const result = closure_0(8536).isCurrentUserSuspended();
             const obj7 = closure_0(8555);
             if (result) {
               c5 = 4;
               c6 = 1;
-              const obj2 = { value: obj7.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-              return obj2;
+              const obj8 = { value: obj7.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+              return obj8;
             } else {
               c5 = 3;
               c6 = 1;
-              const obj3 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
-              return obj3;
+              const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
+              return obj9;
             }
+            const obj6 = closure_0(8536);
           }
         } else if (1 === tmp9) {
           v0 = 0;
@@ -114,8 +114,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
                   tmp75(false);
                 }
                 c6 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
+                const obj10 = { value, done: true };
+                return obj10;
               }
             } else if (arg0 === 1) {
               c6 = 3;
@@ -126,13 +126,12 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
                 tmp75(false);
               }
               c6 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             closure_129_0 = value;
-            obj1 = DispatcherDefault;
-            obj5 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_129_0.methods, footerMessage: closure_129_0.footerMessage, outageBannerMessage: closure_129_0.outageBannerMessage };
-            obj1.dispatch(obj5);
+            const obj11 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: closure_129_0.methods, footerMessage: closure_129_0.footerMessage, outageBannerMessage: closure_129_0.outageBannerMessage };
+            DispatcherDefault.dispatch(obj11);
             if (c5.current) {
               closure_0(closure_129_0.methods);
               tmp6(closure_129_0.footerMessage);

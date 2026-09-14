@@ -1,15 +1,15 @@
-// === Module 14922: GoreMediaFiltersGuildsSetting ===
+// === Module 14923: GoreMediaFiltersGuildsSetting ===
 
-// Module 14922 (GoreMediaFiltersGuildsSetting)
+// Module 14923 (GoreMediaFiltersGuildsSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7404 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14909 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14910 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14910 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14911 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({
@@ -23,19 +23,19 @@ const pressable = SettingBuilders.createPressable({
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
   },
   onPress: function onGoreContentGuildsOnPress() {
-    let obj = { title: null, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    const obj = SensitiveMediaGoreRedactionSettingsUtils;
+    const obj3 = { title: null, subtitle: null, handlePress: null, excluded: null, currentValue: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["16/3Bi"]);
+    obj3.title = intl.string(util.t["16/3Bi"]);
     const intl2 = util.intl;
-    obj.subtitle = intl2.string(util.t["FP+a42"]);
-    obj.handlePress = function handlePress(goreContentGuilds) {
-      const obj = { goreContentGuilds };
-      return obj.updateGoreContentSetting(obj);
+    obj3.subtitle = intl2.string(util.t["FP+a42"]);
+    obj3.handlePress = function handlePress(goreContentGuilds) {
+      return SensitiveMediaGoreRedactionSettingsUtils.updateGoreContentSetting({ goreContentGuilds });
     };
     const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
-    obj.excluded = items;
-    obj.currentValue = obj.getGoreContentSettingOrDefault().goreContentGuilds;
-    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+    obj3.excluded = items;
+    obj3.currentValue = obj.getGoreContentSettingOrDefault().goreContentGuilds;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useIsDisabled() {
     let userIsTeen = useUserIsTeen.useUserIsTeen();

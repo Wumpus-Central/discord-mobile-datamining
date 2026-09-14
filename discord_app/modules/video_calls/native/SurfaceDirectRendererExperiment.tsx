@@ -3,13 +3,15 @@
 // Module 9735 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
+const require = globalThis.__r;
+
 const require = fn;
-fn(1433);
-let ApexExperiment = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { enableSurfaceDirectRenderer: true };
-ApexExperiment.variations = ApexExperiment;
-let closure_3 = ApexExperiment.createApexExperiment(ApexExperiment);
+const ApexExperiment = fn(1433);
+const obj2 = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { enableSurfaceDirectRenderer: true };
+obj2.variations = obj3;
+let closure_3 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
 

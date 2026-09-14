@@ -1,6 +1,6 @@
-// === Module 12070: ContentClassificationVisibility ===
+// === Module 12071: ContentClassificationVisibility ===
 
-// Module 12070 (ContentClassificationVisibility)
+// Module 12071 (ContentClassificationVisibility)
 import initialize from "initialize" /* 504 */;
 import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5194 */;
 import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5196 */;
@@ -14,8 +14,9 @@ let result = size.fileFinishedImporting("modules/content_classification/ContentC
 export { ContentClassificationVisibility };
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    const obj = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
-    const result = obj.contentClassificationToAgeRestriction(obj);
+    const obj = ContentClassificationToAgeRestriction;
+    const obj2 = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
+    const result = obj.contentClassificationToAgeRestriction(obj2);
     if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== nsfwAllowed) {
         let DISPLAY = obj.BLOCK_UNDERAGE;

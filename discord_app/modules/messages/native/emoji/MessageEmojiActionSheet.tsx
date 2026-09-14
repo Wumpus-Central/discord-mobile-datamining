@@ -1,84 +1,86 @@
-// === Module 10457: MessageEmojiActionSheet ===
+// === Module 10458: MessageEmojiActionSheet ===
 
-// Module 10457 (MessageEmojiActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 10458 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 10466 */;
+// Module 10458 (MessageEmojiActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 10459 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 10467 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 function MessageStandardEmojiActionSheet(emojiNode) {
   _require = undefined;
-  let obj = require("v1");
-  const v4Result = obj.v4();
+  const tmp = closure_6();
+  const v4Result = require("v1").v4();
   _require = v4Result;
-  obj = {
+  const obj2 = {
     startExpanded: true,
     onDismiss() {
-      const obj = { nonce };
-      obj.track(AnalyticEvents.CLOSE_POPOUT, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
     },
     children: null
   };
-  obj = { style: closure_6().contentWrapper, children: jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) };
-  obj.children = <View style={closure_6().contentWrapper}>{jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result })}</View>;
-  return jsx(require("Sheet/BottomSheet").BottomSheet, { style: closure_6().contentWrapper, children: jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
+  const obj = require("v1");
+  obj2.children = <View style={tmp.contentWrapper}>{jsx(StandardEmojiContentDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result })}</View>;
+  return jsx(require("Sheet/BottomSheet").BottomSheet, {
+    startExpanded: true,
+    onDismiss() {
+      AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
+    },
+    children: null
+  });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   _require = undefined;
-  require("useEmojiAndSource");
-  let obj = { emojiId: emojiNode.id };
-  const emojiAndSource = obj.useEmojiAndSource(obj);
+  const tmp = closure_6();
+  const emojiAndSource = require("useEmojiAndSource").useEmojiAndSource({ emojiId: emojiNode.id });
   if (emojiAndSource.isFetching) {
     return null;
   } else {
-    const v4Result = tmp2(1256).v4();
+    const v4Result = tmp2(1254).v4();
     _require = v4Result;
-    obj = {
+    const obj3 = {
       startExpanded: true,
       onDismiss() {
-          const obj = { nonce };
-          obj.track(AnalyticEvents.CLOSE_POPOUT, obj);
+          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
         },
       children: null
     };
-    const obj1 = { style: tmp.contentWrapper, children: null };
-    const obj2 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
-    obj1.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
-    obj.children = <View style={tmp.contentWrapper}>{null}</View>;
+    const obj4 = { style: tmp.contentWrapper, children: null };
+    const obj5 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
+    obj4.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
+    obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
     return jsx(tmp2(7253).BottomSheet, {
       startExpanded: true,
       onDismiss() {
-          const obj = { nonce };
-          obj.track(AnalyticEvents.CLOSE_POPOUT, obj);
+          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
         },
       children: null
     });
   }
-  tmp = closure_6();
+  const obj = require("useEmojiAndSource");
+  const obj2 = { emojiId: emojiNode.id };
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-createStyles = { contentWrapper: { paddingHorizontal: 16, paddingBottom: num } };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
 
 export default function MessageEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   if ("surrogate" in emojiNode) {
-    let obj = { emojiNode };
+    const obj2 = { emojiNode };
     let tmpResult = <MessageStandardEmojiActionSheet emojiNode={emojiNode} />;
   } else {
-    obj = { emojiNode };
+    const obj = { emojiNode };
     tmpResult = <MessageCustomEmojiActionSheet emojiNode={emojiNode} />;
   }
   return tmpResult;

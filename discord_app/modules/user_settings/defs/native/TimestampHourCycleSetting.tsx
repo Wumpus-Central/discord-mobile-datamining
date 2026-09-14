@@ -1,14 +1,14 @@
-// === Module 15558: TimestampHourCycleSetting ===
+// === Module 15559: TimestampHourCycleSetting ===
 
-// Module 15558 (TimestampHourCycleSetting)
+// Module 15559 (TimestampHourCycleSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
@@ -21,28 +21,27 @@ let SettingBuilders = {
   },
   useOptions: function useDMsMessagePreviewsOptions() {
     return noop.useMemo(() => {
-      let obj = { label: null, value: null };
+      const obj = { label: null, value: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.FMWYvb);
       obj.value = preloaded_user_settings.TimestampHourCycle.AUTO;
       const items = [obj, , ];
-      obj = { label: null, value: null };
+      const obj2 = { label: null, value: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.p8NOwi);
-      obj.value = preloaded_user_settings.TimestampHourCycle.H12;
-      items[1] = obj;
-      obj = { label: null, value: null };
+      obj2.label = intl2.string(util.t.p8NOwi);
+      obj2.value = preloaded_user_settings.TimestampHourCycle.H12;
+      items[1] = obj2;
+      const obj3 = { label: null, value: null };
       const intl3 = util.intl;
-      obj.label = intl3.string(util.t["+o/sOo"]);
-      obj.value = preloaded_user_settings.TimestampHourCycle.H23;
-      items[2] = obj;
+      obj3.label = intl3.string(util.t["+o/sOo"]);
+      obj3.value = preloaded_user_settings.TimestampHourCycle.H23;
+      items[2] = obj3;
       return items;
     }, []);
   },
   usePredicate: fn(4321).supportsSystemDateFormatter
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

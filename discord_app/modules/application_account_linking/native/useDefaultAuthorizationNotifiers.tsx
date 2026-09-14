@@ -1,11 +1,13 @@
-// === Module 16355: useDefaultAuthorizationNotifiers ===
+// === Module 16357: useDefaultAuthorizationNotifiers ===
 
-// Module 16355 (useDefaultAuthorizationNotifiers)
+// Module 16357 (useDefaultAuthorizationNotifiers)
 import util from "util" /* 1114 */;
 import _modDef3106 from "module_3106" /* 3106 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AppStates = fn(1074).AppStates;
@@ -15,8 +17,8 @@ const result = size.fileFinishedImporting("modules/application_account_linking/n
 export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked) {
   _require = startAuthorization;
   closure_1 = hasAlreadyLinked;
-  let obj = value;
-  if (value === undefined) {
+  let obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
   let flag = obj.showToastOnSuccess;
@@ -29,7 +31,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
   noop = noop.useRef(false);
   const items = [stateFromStores];
   stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
-  const obj2 = noop;
+  let obj2 = noop;
   const obj3 = require("initialize");
   const tmp = _require;
   const tmp2 = flag;
@@ -43,8 +45,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
     stateFromStores = !isInAppBrowserOpen;
   }
   const obj4 = require("BrowserManager");
-  obj = { value: hasAlreadyLinked, shouldUpdate: stateFromStores };
-  previousWhen = tmp(tmp2[5]).usePreviousWhen(obj);
+  previousWhen = tmp(tmp2[5]).usePreviousWhen({ value: hasAlreadyLinked, shouldUpdate: stateFromStores });
   const items2 = [hasAlreadyLinked, previousWhen, flag, stateFromStores];
   const effect = obj2.useEffect(() => {
     if (ref.current) {
@@ -53,10 +54,10 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
           if (stateFromStores) {
             tmp.current = false;
             if (flag) {
-              const obj = { content: null, key: "account-linked-toast" };
+              const obj2 = { content: null, key: "account-linked-toast" };
               const intl = util.intl;
-              obj.content = intl.string(_modDef3106.uG6teD);
-              obj.open(obj);
+              obj2.content = intl.string(_modDef3106.uG6teD);
+              ToastActionCreatorsDefault.open(obj2);
             }
           }
         }

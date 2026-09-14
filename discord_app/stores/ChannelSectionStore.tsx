@@ -417,13 +417,13 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (null == tmp) {
       return false;
     } else {
-      let obj = { type: sidebarType, channelId, details };
+      const obj = { type: sidebarType, channelId, details };
       let tmp9 = obj;
       if (sidebarType === SidebarActionTypes.SidebarType.VIEW_MOD_REPORT) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
-        obj.baseChannelId = baseChannelId;
-        tmp9 = obj;
+        obj2.baseChannelId = baseChannelId;
+        tmp9 = obj2;
       }
       sidebars[tmp] = tmp9;
       return true;
@@ -437,10 +437,10 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (null != baseChannelId) {
       tmp = baseChannelId;
       if (closure_1_14(baseChannelId)) {
-        guildId = SelectedGuildStore.getGuildId();
+        const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
-        if (null != guildId) {
-          tmp5 = __initData(baseChannelId, guildId);
+        if (null != guildId1) {
+          tmp5 = __initData(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -582,9 +582,9 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (null != channel) {
           flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
-            let obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: null };
-            obj = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
-            obj.details = obj;
+            const obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: null };
+            const obj2 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
+            obj.details = obj2;
             sidebars[channelId] = obj;
             flag2 = true;
           }
@@ -609,14 +609,13 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         tmp5 = tmp12.type === SidebarActionTypes.SidebarType.CREATE_THREAD;
       }
       if (tmp5) {
-        let obj = SnowflakeUtilsDefault;
-        tmp5 = tmp12.parentMessageId === obj.castChannelIdAsMessageId(channel.id);
+        tmp5 = tmp12.parentMessageId === SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
       }
       if (tmp5) {
-        obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId: channel.id, details: null };
-        obj = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
-        obj.details = obj;
-        sidebars[channel.parent_id] = obj;
+        const obj2 = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId: channel.id, details: null };
+        const obj3 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT };
+        obj2.details = obj3;
+        sidebars[channel.parent_id] = obj2;
       }
     }
   },

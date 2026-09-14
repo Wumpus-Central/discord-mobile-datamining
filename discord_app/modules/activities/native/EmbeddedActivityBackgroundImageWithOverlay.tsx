@@ -9,11 +9,9 @@ import noop from "module_19" /* 19 */;
 get_ActivityIndicator = fn(17);
 ({ ImageBackground: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { overlay: null };
-createStyles = { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK };
-createStyles.overlay = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
+let closure_8 = createStyles.createStyles(obj2);
 const names = ["embedded_background"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
@@ -33,33 +31,32 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
   if (str == null) {
     str = "";
   }
-  let obj = { applicationId: str, names, size: 1024 };
-  const url = useEmbeddedActivityBackgroundDefault(obj).url;
+  const url = useEmbeddedActivityBackgroundDefault({ applicationId: str, names, size: 1024 }).url;
   let tmp7Result = null;
   if (!tmp2[0]) {
     tmp7Result = null;
     if (null != url) {
       tmp7Result = null;
       if ("" !== url) {
-        obj = { resizeMode, source: null, style: null, imageStyle: null, onError: null, children: null };
-        obj = { uri: url };
-        obj.source = obj;
+        const obj2 = { resizeMode, source: null, style: null, imageStyle: null, onError: null, children: null };
+        const obj3 = { uri: url };
+        obj2.source = obj3;
         if (dimensionsStyle == null) {
           dimensionsStyle = absoluteFillObject.absoluteFillObject;
         }
-        obj.style = dimensionsStyle;
-        const obj1 = { borderRadius };
-        obj.imageStyle = obj1;
-        obj.onError = function onError() {
+        obj2.style = dimensionsStyle;
+        const obj4 = { borderRadius };
+        obj2.imageStyle = obj4;
+        obj2.onError = function onError() {
           return closure_0(true);
         };
-        const obj2 = { style: null };
+        const obj5 = { style: null };
         const items = [tmp.overlay, ];
-        const obj3 = { borderRadius };
-        items[1] = obj3;
-        obj2.style = items;
-        obj.children = <hasOwnProperty style={null} />;
-        tmp7Result = <React4 uri={url} />;
+        const obj6 = { borderRadius };
+        items[1] = obj6;
+        obj5.style = items;
+        obj2.children = <hasOwnProperty style={null} />;
+        tmp7Result = <React4 resizeMode={resizeMode} source={null} style={null} imageStyle={null} onError={null}>{null}</React4>;
       }
     }
   }

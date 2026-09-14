@@ -4,6 +4,8 @@
 import inject from "inject" /* 1910 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 inject.inject({
   supported() {
     return true;

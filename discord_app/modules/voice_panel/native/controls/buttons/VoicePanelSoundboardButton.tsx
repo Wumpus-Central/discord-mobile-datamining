@@ -1,14 +1,14 @@
-// === Module 17307: VoicePanelSoundboardButton ===
+// === Module 17309: VoicePanelSoundboardButton ===
 
-// Module 17307 (VoicePanelSoundboardButton)
+// Module 17309 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import NativeViewDefault from "NativeView" /* 5670 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12401 */;
-import SoundboardIcon from "SoundboardIcon" /* 12657 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17293 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17294 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17308 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12402 */;
+import SoundboardIcon from "SoundboardIcon" /* 12658 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17295 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17296 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17310 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -16,20 +16,19 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-const createStyles = { circle: null, iconContainer: null };
+const createStyles = fn(4636);
+let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
-createStyles.circle = size;
-createStyles.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.circle = size;
+obj2.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
 export default function SoundboardButton(arg0) {
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = closure_6();
-  let obj = VoicePanelStyles;
-  const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
+  const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);
   ({ disabled, handlePress, disabledAccessibilityHint, visible } = useSoundboardConfigDefault(noop.useContext(VoicePanelStateContextDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = nativeDefault.colors.ICON_MUTED;
@@ -42,19 +41,20 @@ export default function SoundboardButton(arg0) {
     const intl = util.intl;
     element.accessibilityLabel = intl.string(util.t["6EJvHt"]);
     element.accessibilityHint = disabledAccessibilityHint;
-    obj = { style: null };
+    const obj2 = { style: null };
     const items = [tmp3.circle, ];
-    obj = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
-    items[1] = obj;
-    obj.style = items;
-    const items1 = [React4(NativeViewDefault, obj), ];
-    const obj1 = { style: tmp3.iconContainer, children: null };
-    const tmpResult = NativeViewDefault;
-    const obj2 = { color };
-    obj1.children = React4(SoundboardIcon.SoundboardIcon, obj2);
-    items1[1] = React4(tmpResult, obj1);
+    const obj3 = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
+    items[1] = obj3;
+    obj2.style = items;
+    const items1 = [React4(NativeViewDefault, obj2), ];
+    const obj4 = { style: tmp3.iconContainer, children: null };
+    const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
+    const obj5 = { color };
+    obj4.children = React4(SoundboardIcon.SoundboardIcon, obj5);
+    items1[1] = React4(NativeViewDefault, obj4);
     element.children = items1;
     tmp8 = hasOwnProperty(tmpResult, element);
+    const tmpResult2 = NativeViewDefault;
   }
   return tmp8;
 };

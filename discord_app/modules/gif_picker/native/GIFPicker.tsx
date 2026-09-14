@@ -1,14 +1,14 @@
-// === Module 10492: GIFPicker ===
+// === Module 10493: GIFPicker ===
 
-// Module 10492 (GIFPicker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10494 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10497 */;
-import GifPickerUtils from "GifPickerUtils" /* 10500 */;
-import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10501 */;
+// Module 10493 (GIFPicker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10495 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10498 */;
+import GifPickerUtils from "GifPickerUtils" /* 10501 */;
+import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10493 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10494 */;
 
 require = fn;
 const View = fn(17).View;
@@ -37,15 +37,15 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   ({ selectedGifSrc, keyboardDismissMode } = bottomSheetRef);
   const items = [channelId, guildId];
   const effect = onPressGIF.useEffect(() => {
-    let obj = GIFPickerActionCreatorsAll;
-    obj.initializeSearch();
+    GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
     if (null != channelId) {
-      obj = { type: constants2.GIF, channel_id: tmp4, guild_id: guildId };
-      AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj);
+      const obj4 = { type: constants2.GIF, channel_id: tmp4, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
     }
   }, items);
   let tmp3 = channelId;
+  let obj = initialQuery;
   const tmp4 = channelId(initialQuery[9])();
   closure_6 = tmp4;
   const tmp5 = contentHorizontalPadding(onPressGIF.useState(0), 2);
@@ -96,14 +96,14 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
     }
   }, items2);
   const memo1 = onPressGIF.useMemo(() => bottomSheetRef(initialQuery[11]).debounce(guildId(initialQuery[7]).search, 200), []);
-  let obj1 = bottomSheetRef(initialQuery[10]);
-  const favoriteGIFsMobile = obj1.useFavoriteGIFsMobile();
+  const tmp11 = contentHorizontalPadding(onPressGIF.useState(false), 2);
+  const favoriteGIFsMobile = bottomSheetRef(initialQuery[10]).useFavoriteGIFsMobile();
   const favorites = favoriteGIFsMobile.favorites;
   const items3 = [favorites, first2];
   closure_20 = onPressGIF.useMemo(() => GifPickerUtils.filterFavoriteGIFsByQuery(favorites, first2), items3);
-  let obj2 = bottomSheetRef(initialQuery[13]);
+  let obj2 = bottomSheetRef(initialQuery[10]);
   const items4 = [first];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items4, () => {
+  const stateFromStoresObject = bottomSheetRef(initialQuery[13]).useStateFromStoresObject(items4, () => {
     if (first1 !== constants3.FAVORITES) {
       resultItems = GIFPickerViewStore.getResultItems();
     } else {
@@ -186,8 +186,7 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
   }), items8);
   const items10 = [bottomSheetRef, callback2];
   const callback3 = onPressGIF.useCallback((gifId, index) => {
-    const obj = { type: constants3.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id };
-    obj.trackSelectGIF(obj);
+    GIFPickerActionCreatorsAll.trackSelectGIF({ type: constants3.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id });
     onPressGIF(gifId);
   }, items9);
   const callback4 = onPressGIF.useCallback((arg0, arg1) => {
@@ -206,36 +205,36 @@ export default noop.memo(function GIFPicker(bottomSheetRef) {
       current.expandActionSheet();
     }
   }, items10);
-  let obj = { onLayout: callback, style: null, children: null };
+  let obj4 = { onLayout: callback, style: null, children: null };
   const items11 = [tmp.container, ];
   let tmp31 = null;
   if (null != contentHorizontalPadding) {
-    obj = { paddingHorizontal: contentHorizontalPadding };
-    tmp31 = obj;
+    const obj5 = { paddingHorizontal: contentHorizontalPadding };
+    tmp31 = obj5;
   }
   items11[1] = tmp31;
-  obj.style = items11;
+  obj4.style = items11;
   const items12 = [c13(tmp3(obj[16]), { categoryType: first1, columnWidth, onQueryClear: callback1, onQueryChange: callback2, onFavoritesQueryChange: tmp16[1], searchInputRef: ref }), ];
   if (resultItems.length <= 0) {
     if (!tmp10[0]) {
       if (first2.length <= 0) {
-        obj1 = { columns, onSelectCategory: callback4, favoritesCategory: null, inActionSheet: null };
+        const obj6 = { columns, onSelectCategory: callback4, favoritesCategory: null, inActionSheet: null };
         let favoritesCategory;
         if (true !== bottomSheetRef.hideFavorites) {
           favoritesCategory = favoriteGIFsMobile.favoritesCategory;
         }
-        obj1.favoritesCategory = favoritesCategory;
-        obj1.inActionSheet = flag;
-        items12[1] = tmp32(tmp3(obj[19]), obj1);
-        obj.children = items12;
-        return first1(closure_6, obj);
+        obj6.favoritesCategory = favoritesCategory;
+        obj6.inActionSheet = flag;
+        items12[1] = tmp32(tmp3(obj[19]), obj6);
+        obj4.children = items12;
+        return first1(closure_6, obj4);
       }
     }
   }
   if (0 === resultItems.length) {
     if (!tmp12) {
-      obj2 = { categoryType: first1, inActionSheet: flag };
-      let tmp32Result = tmp32(tmp3(obj[17]), obj2);
+      const obj7 = { categoryType: first1, inActionSheet: flag };
+      let tmp32Result = tmp32(tmp3(obj[17]), obj7);
     }
   }
   tmp3 = tmp3(obj[18]);

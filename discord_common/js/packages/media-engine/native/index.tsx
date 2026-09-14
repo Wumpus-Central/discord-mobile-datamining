@@ -1,8 +1,8 @@
 // === Module 4692: destroy ===
 
 // Module 4692 (destroy)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1151 */;
-import formatDefault from "format" /* 1341 */;
+import formatDefault from "format" /* 1339 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
 import inject from "inject" /* 1910 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
 import VideoDefault from "Video" /* 4695 */;
@@ -43,8 +43,8 @@ class MediaEngineNative extends tmp4 {
     obj.clipsRecordingEventContext = { id: "", soundshareId: 0, applicationName: "" };
     obj.clipsRecordingEventHandlerRegistered = false;
     tmp13 = closure_0;
-    logger = new closure_0(closure_2[7]).Logger("MediaEngineNative");
-    obj.logger = logger;
+    logger1 = new closure_0(closure_2[7]).Logger("MediaEngineNative");
+    obj.logger = logger1;
     obj.handleDeviceChange = function handleDeviceChange() {
       if (items === undefined) {
         items = [];
@@ -90,16 +90,16 @@ class MediaEngineNative extends tmp4 {
     };
     obj.handleNewListener = function handleNewListener(arg0) {
       if (obj(dependencyMap[9]).MediaEngineEvent.VoiceActivity === arg0) {
-        let tmpResult = obj(dependencyMap[8]);
         if (null != tmpResult.getVoiceEngine().setEmitVADLevel2) {
-          tmpResult = obj(dependencyMap[8]);
-          const voiceEngine = tmpResult.getVoiceEngine();
+          const voiceEngine = obj(dependencyMap[8]).getVoiceEngine();
           voiceEngine.setEmitVADLevel2(true);
+          const tmpResult3 = obj(dependencyMap[8]);
         } else {
           const voiceEngine1 = obj(dependencyMap[8]).getVoiceEngine();
           voiceEngine1.setEmitVADLevel(true, false, {});
-          const tmpResult1 = obj(dependencyMap[8]);
+          const tmpResult4 = obj(dependencyMap[8]);
         }
+        tmpResult = obj(dependencyMap[8]);
       } else if (obj(dependencyMap[9]).MediaEngineEvent.DeviceChange === arg0) {
         deviceChangeGeneration = deviceChangeGeneration.deviceChangeGeneration;
         const items = [deviceChangeGeneration.getAudioInputDevices(), deviceChangeGeneration.getAudioOutputDevices(), deviceChangeGeneration.getVideoInputDevices()];
@@ -114,16 +114,16 @@ class MediaEngineNative extends tmp4 {
     };
     obj.handleRemoveListener = function handleRemoveListener(arg0) {
       if (arg0 === BaseConnectionEvent.MediaEngineEvent.VoiceActivity) {
-        let tmpResult = inject;
         if (null != tmpResult.getVoiceEngine().setEmitVADLevel2) {
-          tmpResult = inject;
-          const voiceEngine = tmpResult.getVoiceEngine();
+          const voiceEngine = inject.getVoiceEngine();
           voiceEngine.setEmitVADLevel2(obj.listenerCount(BaseConnectionEvent.MediaEngineEvent.VoiceActivity) > 0);
+          const tmpResult3 = inject;
         } else {
           const voiceEngine1 = inject.getVoiceEngine();
           voiceEngine1.setEmitVADLevel(obj.listenerCount(BaseConnectionEvent.MediaEngineEvent.VoiceActivity) > 0, false, {});
-          const tmpResult1 = inject;
+          const tmpResult4 = inject;
         }
+        tmpResult = inject;
       }
     };
     obj.handleVideoInputInitialization = function handleVideoInputInitialization(arg0) {
@@ -266,8 +266,8 @@ class MediaEngineNative extends tmp4 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -280,8 +280,8 @@ class MediaEngineNative extends tmp4 {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_1 = tmp4;
               const v0 = 0;
@@ -290,8 +290,7 @@ class MediaEngineNative extends tmp4 {
               if (importDefault) {
                 c3 = 3;
               } else {
-                let obj1 = v0(1910);
-                voiceEngine = obj1.getVoiceEngine();
+                voiceEngine = v0(1910).getVoiceEngine();
                 const promise = new Promise((arg0) => {
                   closure_0 = arg0;
                   pollQueueMetrics = pollQueueMetrics.pollQueueMetrics;
@@ -303,8 +302,8 @@ class MediaEngineNative extends tmp4 {
                 });
                 dependencyMap = 1;
                 c3 = 1;
-                obj1 = { value: promise, done: false };
-                return obj1;
+                const obj5 = { value: promise, done: false };
+                return obj5;
               }
             }
           } else if (arg0 === 1) {
@@ -410,12 +409,12 @@ prototype["supports"] = function supports(arg0) {
         } else if (constants4.VIDEO_BACKGROUND_FILTER === arg0) {
           let isDesktopResult = utils_PlatformUtils.isDesktop();
           if (isDesktopResult) {
-            let tmp50Result = inject;
-            isDesktopResult = tmp50Result.supportsFeature(constants6.MEDIAPIPE);
+            isDesktopResult = inject.supportsFeature(constants6.MEDIAPIPE);
+            const tmp50Result = inject;
           }
           if (!isDesktopResult) {
-            tmp50Result = inject;
-            isDesktopResult = tmp50Result.supportsFeature(constants6.VIDEO_BACKGROUND_FILTER);
+            isDesktopResult = inject.supportsFeature(constants6.VIDEO_BACKGROUND_FILTER);
+            const tmp50Result2 = inject;
           }
           return isDesktopResult;
         } else if (constants4.FIXED_KEYFRAME_INTERVAL === arg0) {
@@ -512,10 +511,10 @@ prototype["supports"] = function supports(arg0) {
 };
 prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   const self = this;
-  obj = obj(1910);
   if (!obj.supportsFeature(constants6.EXPERIMENT_CONFIG)) {
     videoSupported.experiments = undefined;
   }
+  obj = obj3(1910);
   let flag = videoSupported.videoSupported;
   if (flag == null) {
     flag = true;
@@ -523,8 +522,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants4.VIDEO);
   }
-  obj = self(4702).create(arg0, arg1, videoSupported, flag);
-  obj.on(obj(4691).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(4702).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(4691).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -536,30 +535,30 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj.on(obj(4691).BaseConnectionEvent.Connected, () => {
-    obj.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj));
+  obj3.on(obj3(4691).BaseConnectionEvent.Connected, () => {
+    obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj.on(obj(4691).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(4691).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(BaseConnectionEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
-  connections.add(obj);
-  let tmpResult = tmp(1910);
+  connections.add(obj3);
+  let obj2 = self(4702);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
   }
-  tmpResult.setProcessPriority(HIGH);
+  obj3(1910).setProcessPriority(HIGH);
   if (null != videoSupported.threadPriorityConfiguration) {
-    tmpResult = tmp(1910);
-    let voiceEngine = tmpResult.getVoiceEngine();
+    let voiceEngine = tmp(1910).getVoiceEngine();
     let setNativeThreadsPriority = voiceEngine.setNativeThreadsPriority;
     if (setNativeThreadsPriority != null) {
       let result = setNativeThreadsPriority(videoSupported.threadPriorityConfiguration);
     }
+    const tmpResult2 = tmp(1910);
   }
-  self.emit(obj(4691).MediaEngineEvent.Connection, obj);
-  return obj;
+  self.emit(obj3(4691).MediaEngineEvent.Connection, obj3);
+  return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
   let hasDesktopSourceResult = context.context === constants5.DEFAULT;
@@ -587,19 +586,17 @@ prototype["enable"] = function enable() {
   return Promise.resolve();
 };
 prototype["setAudioMixerOptions"] = function setAudioMixerOptions(audioMixerOptions) {
-  let obj = inject;
   if (obj.supportsFeature(constants6.SPATIAL_AUDIO)) {
     const voiceEngine = inject.getVoiceEngine();
-    obj = { audioMixerOptions };
-    voiceEngine.setTransportOptions(obj);
+    const obj2 = { audioMixerOptions };
+    voiceEngine.setTransportOptions(obj2);
     const tmpResult = inject;
   }
+  obj = inject;
 };
 prototype["setAudioInputBypassSystemProcessing"] = function setAudioInputBypassSystemProcessing(bypassSystemProcessing) {
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
-  obj = { bypassSystemProcessing };
-  voiceEngine.setTransportOptions(obj);
+  const voiceEngine = inject.getVoiceEngine();
+  voiceEngine.setTransportOptions({ bypassSystemProcessing });
 };
 prototype["setInputVolume"] = function setInputVolume(arg0) {
   let tmp = arg0;
@@ -643,12 +640,11 @@ prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDevice
   _require = audioInputDeviceId;
   this.audioInputDeviceId = audioInputDeviceId;
   if (obj.supportsFeature(constants6.SET_AUDIO_DEVICE_BY_ID)) {
-    let tmpResult = tmp(1910);
-    let voiceEngine = tmpResult.getVoiceEngine();
+    let voiceEngine = tmp(1910).getVoiceEngine();
     voiceEngine.setInputDevice(audioInputDeviceId);
+    const tmpResult = tmp(1910);
   } else {
-    tmpResult = tmp(4762);
-    const audioInputDevices = tmpResult.getAudioInputDevices();
+    const audioInputDevices = tmp(4762).getAudioInputDevices();
     audioInputDevices.then((arr) => {
       let found = arr.find((id) => id.id === audioInputDeviceId);
       if (found == null) {
@@ -659,6 +655,7 @@ prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDevice
         voiceEngine.setInputDevice(found.index);
       }
     });
+    const tmpResult2 = tmp(4762);
   }
   self.emit(require("BaseConnectionEvent").MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_INPUT, this.audioInputDeviceId, audioInputDeviceId);
   obj = require("inject");
@@ -671,12 +668,11 @@ prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDev
   _require = audioOutputDeviceId;
   this.audioOutputDeviceId = audioOutputDeviceId;
   if (obj.supportsFeature(constants6.SET_AUDIO_DEVICE_BY_ID)) {
-    let tmpResult = tmp(1910);
-    let voiceEngine = tmpResult.getVoiceEngine();
+    let voiceEngine = tmp(1910).getVoiceEngine();
     voiceEngine.setOutputDevice(audioOutputDeviceId);
+    const tmpResult = tmp(1910);
   } else {
-    tmpResult = tmp(4762);
-    const audioOutputDevices = tmpResult.getAudioOutputDevices();
+    const audioOutputDevices = tmp(4762).getAudioOutputDevices();
     audioOutputDevices.then((arr) => {
       let found = arr.find((id) => id.id === audioOutputDeviceId);
       if (found == null) {
@@ -687,6 +683,7 @@ prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDev
         voiceEngine.setOutputDevice(found.index);
       }
     });
+    const tmpResult2 = tmp(4762);
   }
   self.emit(require("BaseConnectionEvent").MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_OUTPUT, this.audioOutputDeviceId, audioOutputDeviceId);
   obj = require("inject");
@@ -705,8 +702,8 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -719,8 +716,8 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp5;
             closure_128_0 = undefined;
@@ -728,16 +725,16 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
             closure_128_2 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: self.getVideoInputDevices(), done: false };
-            return obj1;
+            const obj5 = { value: self.getVideoInputDevices(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          let obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_128_0 = value.find((id) => id.id === closure_1_0);
           let forEach = null;
@@ -753,8 +750,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
           } else {
             closure_129_1.videoInputDeviceId = closure_128_1;
             if (!obj9.supportsFeature(constants.SET_VIDEO_DEVICE_BY_ID)) {
-              obj = tmp2(1910);
-              const voiceEngine = obj.getVoiceEngine();
+              const voiceEngine = tmp2(1910).getVoiceEngine();
               let num3 = -1;
               if (forEach != closure_128_0) {
                 num3 = closure_128_0.index;
@@ -763,12 +759,13 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
               const connections = closure_129_1.connections;
               forEach = connections.forEach;
               const item = forEach((setVideoBroadcast) => setVideoBroadcast.setVideoBroadcast(closure_1_1.shouldConnectionBroadcastVideo(setVideoBroadcast)));
+              const obj = tmp2(1910);
             }
             if (forEach == closure_128_0) {
               closure_128_2 = closure_1_15;
-              obj2 = tmp2(1910);
-              const voiceEngine1 = obj2.getVoiceEngine();
+              const voiceEngine1 = tmp2(1910).getVoiceEngine();
               voiceEngine1.setVideoInputDevice(closure_128_2);
+              const obj3 = tmp2(1910);
             }
             if (forEach == closure_128_0.originalId) {
               const id2 = closure_128_0.id;
@@ -826,8 +823,7 @@ prototype["setGoLiveSource"] = function setGoLiveSource(arg0, arg1) {
   }
 };
 prototype["setClipsSource"] = function setClipsSource(quality) {
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   if (null != voiceEngine.setClipsSource) {
     if (null != voiceEngine.setOnClipsRecordingEvent) {
       if (null != voiceEngine.applyClipsSettings) {
@@ -842,8 +838,8 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
           const self = this;
           const desktopDescription = quality.desktopDescription;
           ({ id, soundshareId } = desktopDescription);
-          obj = { id, soundshareId, applicationName: quality.applicationName };
-          this.clipsRecordingEventContext = obj;
+          const obj2 = { id, soundshareId, applicationName: quality.applicationName };
+          this.clipsRecordingEventContext = obj2;
           ({ useLoopback, useVideoHook, useGraphicsCapture, useQuartzCapturer, allowScreenCaptureKit, hdrCaptureMode, videoHookAllowDx12, minCaptureWidth, minCaptureHeight } = desktopDescription);
           const result1 = this.registerClipsRecordingEventHandler();
           const applyClipsSettings = voiceEngine.applyClipsSettings;
@@ -870,13 +866,13 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
           }
           const tmp8 = _slicedToArray(parts, 2);
           const first = tmp8[0];
-          obj = { id: tmp8[1], soundshareId: null };
+          const obj3 = { id: tmp8[1], soundshareId: null };
           let num10 = 0;
           if (null != soundshareId) {
             num10 = soundshareId;
           }
-          obj.soundshareId = num10;
-          voiceEngine.setClipsSource(obj);
+          obj3.soundshareId = num10;
+          voiceEngine.setClipsSource(obj3);
         } else {
           voiceEngine.setClipsSource({ id: "", soundshareId: 0 });
         }
@@ -885,8 +881,7 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
   }
 };
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings(arg0, arg1, arg2, arg3) {
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   if (null == voiceEngine.applyClipsQualitySettings) {
     return false;
   } else {
@@ -899,8 +894,8 @@ prototype["setClipsQualitySettings"] = function setClipsQualitySettings(arg0, ar
       rounded = Math.round(6000 * Math.min(100, Math.max(10, arg3)) / 100);
     }
     if (tmp3) {
-      obj = { bitrateKbps: rounded };
-      voiceEngine.applyClipsSettings(obj);
+      const obj2 = { bitrateKbps: rounded };
+      voiceEngine.applyClipsSettings(obj2);
     }
     return true;
   }
@@ -1292,8 +1287,8 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1306,35 +1301,34 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_128_0 = undefined;
             const voiceEngine = tmp2(dependencyMap[8]).getVoiceEngine();
             if (null != voiceEngine.setPreviewsUseWgc) {
               voiceEngine.setPreviewsUseWgc(closure_3);
             }
-            let tmp21Result = tmp2(tmp22[8]);
+            const obj9 = tmp2(dependencyMap[8]);
             if (null != tmp21Result.getVoiceEngine().getSingleWindowPreview) {
-              tmp21Result = tmp2(tmp22[8]);
-              const voiceEngine1 = tmp21Result.getVoiceEngine();
+              const voiceEngine1 = tmp2(tmp22[8]).getVoiceEngine();
               c1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: voiceEngine1.getSingleWindowPreview(tmp2, closure_1, closure_2), done: false };
-              return obj1;
+              const obj4 = { value: voiceEngine1.getSingleWindowPreview(tmp2, closure_1, closure_2), done: false };
+              return obj4;
             } else {
               dependencyMap = 3;
               return { value: null, done: true };
             }
-            const obj9 = tmp2(dependencyMap[8]);
+            tmp21Result = tmp2(dependencyMap[8]);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           let first = null;
@@ -1342,7 +1336,7 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
             first = closure_128_0[0];
           }
           dependencyMap = 3;
-          obj = { value: first, done: true };
+          const obj = { value: first, done: true };
           return obj;
         }
       } catch (tmp16) {
@@ -1354,13 +1348,13 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
 };
 prototype["setAudioSubsystem"] = function setAudioSubsystem(arg0) {
   if (null != obj.getVoiceEngine().setAudioSubsystem) {
-    let tmpResult = inject;
-    const voiceEngine = tmpResult.getVoiceEngine();
+    const voiceEngine = inject.getVoiceEngine();
     voiceEngine.setAudioSubsystem(arg0);
+    const tmpResult = inject;
   } else {
-    tmpResult = inject;
-    const voiceEngine1 = tmpResult.getVoiceEngine();
+    const voiceEngine1 = inject.getVoiceEngine();
     const result = voiceEngine1.setUseLegacyAudioDevice(arg0 === constants2.LEGACY);
+    const tmpResult2 = inject;
   }
   obj = inject;
 };
@@ -1408,46 +1402,46 @@ prototype["setDebugLogging"] = function setDebugLogging(arg0) {
 };
 prototype["setLoopback"] = function setLoopback(arg0, arg1) {
   let tmp = arg0;
-  let obj = inject;
   if (null != obj.getVoiceEngine().setLoopback) {
-    let tmp2Result = inject;
-    const voiceEngine = tmp2Result.getVoiceEngine();
-    obj = { echoCancellation: null, noiseSuppression: null, automaticGainControl: null, automaticGainControlConfig: null, noiseCancellation: null, noiseCancellationDuringProcessing: null };
+    const voiceEngine = inject.getVoiceEngine();
+    const obj2 = { echoCancellation: null, noiseSuppression: null, automaticGainControl: null, automaticGainControlConfig: null, noiseCancellation: null, noiseCancellationDuringProcessing: null };
     ({ echoCancellation: obj4.echoCancellation, noiseSuppression: obj4.noiseSuppression, automaticGainControlConfig } = arg1);
     let enabled;
     if (automaticGainControlConfig != null) {
       enabled = automaticGainControlConfig.enabled;
     }
-    obj.automaticGainControl = enabled;
+    obj2.automaticGainControl = enabled;
     ({ automaticGainControlConfig: obj4.automaticGainControlConfig, noiseCancellation: obj4.noiseCancellation, noiseCancellationDuringProcessing: obj4.noiseCancellationDuringProcessing } = arg1);
-    voiceEngine.setLoopback(tmp, obj);
+    voiceEngine.setLoopback(tmp, obj2);
+    const tmp2Result = inject;
   }
   const self = this;
-  tmp2Result = inject;
-  if (null != tmp2Result.getVoiceEngine().setEmitVADLevel2) {
+  obj = inject;
+  if (null != tmp2Result4.getVoiceEngine().setEmitVADLevel2) {
     const voiceEngine1 = inject.getVoiceEngine();
     if (!tmp) {
       tmp = self.listenerCount(BaseConnectionEvent.MediaEngineEvent.VoiceActivity) > 0;
     }
     voiceEngine1.setEmitVADLevel2(tmp);
-    const tmp2Result1 = inject;
+    const tmp2Result5 = inject;
   } else {
     const voiceEngine2 = inject.getVoiceEngine();
     let tmp6 = tmp;
     if (!tmp) {
       tmp6 = self.listenerCount(BaseConnectionEvent.MediaEngineEvent.VoiceActivity) > 0;
     }
-    obj = { echoCancellation: null, noiseSuppression: null, automaticGainControl: null, noiseCancellation: null, noiseCancellationDuringProcessing: null };
+    const obj3 = { echoCancellation: null, noiseSuppression: null, automaticGainControl: null, noiseCancellation: null, noiseCancellationDuringProcessing: null };
     ({ echoCancellation: obj6.echoCancellation, noiseSuppression: obj6.noiseSuppression, automaticGainControlConfig: automaticGainControlConfig2 } = arg1);
     let enabled1;
     if (automaticGainControlConfig2 != null) {
       enabled1 = automaticGainControlConfig2.enabled;
     }
-    obj.automaticGainControl = enabled1;
+    obj3.automaticGainControl = enabled1;
     ({ noiseCancellation: obj6.noiseCancellation, noiseCancellationDuringProcessing: obj6.noiseCancellationDuringProcessing } = arg1);
-    voiceEngine2.setEmitVADLevel(tmp6, tmp, obj);
-    const tmp2Result2 = inject;
+    voiceEngine2.setEmitVADLevel(tmp6, tmp, obj3);
+    const tmp2Result6 = inject;
   }
+  tmp2Result4 = inject;
 };
 prototype["getLoopback"] = function getLoopback() {
   return false;
@@ -1622,13 +1616,13 @@ prototype["stopLocalAudioRecording"] = function stopLocalAudioRecording(arg0) {
   }
   let tmp5 = this.listenerCount(BaseConnectionEvent.MediaEngineEvent.VoiceActivity) > 0;
   if (tmp5) {
-    let tmpResult = inject;
-    tmp5 = null != tmpResult.getVoiceEngine().setEmitVADLevel2;
+    tmp5 = null != inject.getVoiceEngine().setEmitVADLevel2;
+    const tmpResult = inject;
   }
   if (tmp5) {
-    tmpResult = inject;
-    const voiceEngine1 = tmpResult.getVoiceEngine();
+    const voiceEngine1 = inject.getVoiceEngine();
     voiceEngine1.setEmitVADLevel2(true);
+    const tmpResult2 = inject;
   }
 };
 prototype["setHasFullbandPerformance"] = function setHasFullbandPerformance(arg0) {
@@ -1685,12 +1679,11 @@ prototype["setSidechainCompressionStrength"] = function setSidechainCompressionS
   const diff = 100 - arg0;
   const sum = React7 + (React5 - React7) * diff / 100;
   const sum1 = React6 + (timestampProducer - React6) * diff / 100;
-  let obj = inject;
-  const voiceEngine = obj.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   const applySidechainCompressionSettings = voiceEngine.applySidechainCompressionSettings;
   if (applySidechainCompressionSettings != null) {
-    obj = { threshold: sum, ratio: sum1 };
-    const result = applySidechainCompressionSettings(obj);
+    const obj2 = { threshold: sum, ratio: sum1 };
+    const result = applySidechainCompressionSettings(obj2);
   }
 };
 prototype["setVoiceSampleRateCap"] = function setVoiceSampleRateCap(arg0) {

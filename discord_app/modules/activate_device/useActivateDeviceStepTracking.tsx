@@ -1,9 +1,9 @@
-// === Module 13963: useActivateDeviceStepTracking ===
+// === Module 13964: useActivateDeviceStepTracking ===
 
-// Module 13963 (useActivateDeviceStepTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 13964 (useActivateDeviceStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import usePreviousDefault from "usePrevious" /* 8390 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 13964 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 13965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,15 +24,14 @@ export const useActivateDeviceStepTracking = function useActivateDeviceStepTrack
       }
       let result = null;
       if (tmp3) {
-        let obj = ActivateDeviceUtils;
-        result = obj.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
+        result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
       }
       type = undefined;
       if (type != null) {
         type = type.type;
       }
-      obj = { previous_step: type, current_step: closure_0.type, platform_type: result };
-      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj);
+      const obj3 = { previous_step: type, current_step: closure_0.type, platform_type: result };
+      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
     }
   }, items);
 };

@@ -1,36 +1,37 @@
-// === Module 16451: UnreadBars ===
+// === Module 16453: UnreadBars ===
 
-// Module 16451 (UnreadBars)
+// Module 16453 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
-import TransitionGroup from "TransitionGroup" /* 12552 */;
+import TransitionGroup from "TransitionGroup" /* 12553 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import TextStyles from "TextStyles" /* 5605 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { unreadText: null, unread: null, mention: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { unreadText: null, unread: null, mention: null };
 let merged = Object.assign(TextStyles(fn(1074).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
-createStyles.unreadText = createStyles;
-let obj1 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
+obj2.unreadText = {};
+let obj4 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
 let ColorUtils = fn(4486);
-obj1.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
-createStyles.unread = obj1;
-const obj2 = { backgroundColor: null };
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
+obj2.unread = obj4;
+const obj6 = { backgroundColor: null };
 ColorUtils = fn(4486);
-obj2.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
-createStyles.mention = obj2;
-let closure_10 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
+obj2.mention = obj6;
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class UnreadBar extends PureComponent {
   constructor() {
@@ -98,14 +99,14 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
     }
   }
   rect[str] = num3;
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(rect);
   obj.opacity = self.animation;
   if (props.useReducedMotion) {
     let tmp2 = obj;
   } else {
     const animation = self.animation;
-    obj = { inputRange: [0, 1], outputRange: null };
+    const obj2 = { inputRange: [0, 1], outputRange: null };
     let num5 = -72;
     if (bottom) {
       num5 = 72;
@@ -115,11 +116,11 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
     if (this.state.active) {
       num6 = 1;
     }
-    const obj1 = { translateY: null };
+    const obj3 = { translateY: null };
     items[1] = num6;
-    obj.outputRange = items;
-    obj1.translateY = animation.interpolate(obj);
-    const items1 = [obj1];
+    obj2.outputRange = items;
+    obj3.translateY = animation.interpolate(obj2);
+    const items1 = [obj3];
     obj.transform = items1;
     tmp2 = obj;
   }
@@ -129,16 +130,16 @@ prototype["render"] = function render() {
   const tmp = closure_10(this.context);
   const props = this.props;
   ({ mention, section } = props.item);
-  let obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
-  obj = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
+  const obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
+  const obj2 = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
   const items = [tmp.unread, ];
-  mention = undefined;
+  let mention1;
   if (mention) {
-    mention = tmp.mention;
+    mention1 = tmp.mention;
   }
-  obj = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
-  items[1] = mention;
-  const obj1 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
+  const obj3 = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
+  items[1] = mention1;
+  const obj4 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -149,10 +150,10 @@ prototype["render"] = function render() {
   } else {
     stringResult = string(t.FCRiT3);
   }
-  obj1.children = stringResult;
-  obj.children = React6(native.LegacyText, obj1);
-  obj.children = React6(React4, obj);
-  obj.children = React6(RN.View, obj);
+  obj4.children = stringResult;
+  obj3.children = React6(native.LegacyText, obj4);
+  obj2.children = React6(React4, obj3);
+  obj.children = React6(RN.View, obj2);
   return React6(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
@@ -172,20 +173,19 @@ export default function UnreadBars(contentInset) {
   function handlePress(section) {
     require({ section: section.section, item: section.row, animated: true });
   }
-  let obj1 = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = { component: noop.Fragment, children: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj = { component: noop.Fragment, children: null };
   let tmp3 = null;
   if (null != beforeItem) {
-    obj = { compact, item: beforeItem, onPress: handlePress, contentInset, useReducedMotion: stateFromStores };
-    tmp3 = closure_8(UnreadBar, obj, "BEFORE");
+    const obj3 = { compact, item: beforeItem, onPress: handlePress, contentInset, useReducedMotion: stateFromStores };
+    tmp3 = closure_8(UnreadBar, obj3, "BEFORE");
   }
   const items1 = [tmp3, ];
   let tmp6 = null;
   if (null != afterItem) {
-    obj1 = { compact, item: afterItem, onPress: handlePress, contentInset, bottom: true, useReducedMotion: stateFromStores };
-    tmp6 = closure_8(UnreadBar, obj1, "AFTER");
+    const obj4 = { compact, item: afterItem, onPress: handlePress, contentInset, bottom: true, useReducedMotion: stateFromStores };
+    tmp6 = closure_8(UnreadBar, obj4, "AFTER");
   }
   items1[1] = tmp6;
   obj.children = items1;

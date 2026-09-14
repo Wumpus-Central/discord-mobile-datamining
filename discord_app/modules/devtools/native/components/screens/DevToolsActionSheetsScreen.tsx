@@ -1,6 +1,6 @@
-// === Module 15810: DevToolsActionSheetsScreen ===
+// === Module 15812: DevToolsActionSheetsScreen ===
 
-// Module 15810 (DevToolsActionSheetsScreen)
+// Module 15812 (DevToolsActionSheetsScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4587 */;
@@ -11,8 +11,8 @@ import TableRowGroup from "TableRowGroup" /* 5768 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
 import WarningIcon from "WarningIcon" /* 8711 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 13076 */;
-import BlockedDomainModalActionCreatorsDefault from "BlockedDomainModalActionCreators" /* 13078 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 13077 */;
+import BlockedDomainModalActionCreatorsDefault from "BlockedDomainModalActionCreators" /* 13079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,12 +25,12 @@ function ActionSheetSelector(arg0) {
     onSelect(type.type);
     type.show();
   }, items);
-  let obj = { header: null, children: null };
-  obj = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
-  obj.header = closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
-  obj = { style: { paddingHorizontal: onSelect(576).space.PX_12 }, children: null };
-  const obj1 = { paddingHorizontal: onSelect(576).space.PX_12 };
-  obj.children = closure_7(TableRowGroup.TableRowGroup, {
+  let obj = { header: closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Select Action Sheet", subtitle: "" + items.length + " options" }), children: null };
+  const obj3 = { style: null, children: null };
+  const obj2 = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
+  obj3.style = { paddingHorizontal: onSelect(576).space.PX_12 };
+  const obj4 = { paddingHorizontal: onSelect(576).space.PX_12 };
+  obj3.children = closure_7(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: items.map((type, index) => {
       closure_0 = type;
@@ -56,19 +56,18 @@ function ActionSheetSelector(arg0) {
       return closure_1_7(TableRow.TableRow, obj, type.type);
     })
   });
-  obj.children = closure_7(closure_5, obj);
+  obj.children = closure_7(closure_5, obj3);
   return closure_7(Sheet_BottomSheet.BottomSheet, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { wrap: null, contentContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles.wrap = createStyles;
-createStyles.contentContainer = { paddingVertical: nativeDefault.space.PX_16 };
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 }, contentContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.contentContainer = { paddingVertical: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
 let items = [
   {
     type: "blocked-domain",
@@ -91,7 +90,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15811, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15813, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -100,24 +99,20 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 
 export default function DevToolsActionSheetsScreen() {
   const tmp = closure_9();
-  const tmp2 = _slicedToArray(noop.useState("blocked-domain"), 2);
-  const selectedType = tmp2[0];
-  const onSelect = tmp2[1];
+  [selectedType, onSelect] = noop.useState("blocked-domain");
   const found = items.find((type) => type.type === first);
   items = [selectedType];
-  let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
+  const obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   const callback = noop.useCallback(() => {
-    let obj = { default: ActionSheetSelector };
-    obj = { selectedType, onSelect };
-    obj.openLazy(Promise.resolve(obj), "action-sheet-selector", obj);
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ActionSheetSelector }), "action-sheet-selector", { selectedType, onSelect });
   }, items);
-  obj = { spacing: 16, children: null };
-  obj = { children: null };
+  const obj2 = { spacing: 16, children: null };
+  const obj3 = { children: null };
   const items1 = [closure_7(selectedType(4632).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
-  const obj1 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: closure_7(selectedType(5686).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback }) };
-  items1[1] = closure_7(selectedType(5768).TableRowGroup, obj1);
-  obj.children = items1;
-  obj.children = closure_8(selectedType(5688).Card, obj);
-  obj.children = closure_7(selectedType(5054).Stack, obj);
+  const obj4 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: closure_7(selectedType(5686).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback }) };
+  items1[1] = closure_7(selectedType(5768).TableRowGroup, obj4);
+  obj3.children = items1;
+  obj2.children = closure_8(selectedType(5688).Card, obj3);
+  obj.children = closure_7(selectedType(5054).Stack, obj2);
   return closure_7(closure_6, obj);
 };

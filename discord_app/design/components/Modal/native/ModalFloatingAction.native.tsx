@@ -1,6 +1,6 @@
-// === Module 11127: ModalFloatingAction ===
+// === Module 11128: ModalFloatingAction ===
 
-// Module 11127 (ModalFloatingAction)
+// Module 11128 (ModalFloatingAction)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
@@ -23,15 +23,15 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   const merged = Object.assign(isVisible, Object.assign({ isVisible: 0, floatingBackgroundColor: 0 }));
   let sharedValue;
   let enabled;
-  let obj = isVisible(sharedValue[4]);
+  const tmp2 = closure_8();
   let num = 0;
   if (isVisible) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
+  sharedValue = isVisible(sharedValue[4]).useSharedValue(num);
   enabled = enabled.useContext(tmp3(tmp4[5]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let items = [isVisible, sharedValue];
-  const tmp2 = closure_8();
+  let obj = isVisible(sharedValue[4]);
   const effect = enabled.useEffect(() => {
     let num = 0;
     if (isVisible) {
@@ -41,47 +41,47 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   }, items);
   const tmp7 = floatingBackgroundColor(sharedValue[6])();
   const fn = function y() {
-    let obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]), borderBottomColor: floatingBackgroundColor, borderBottomWidth: 16, transform: null };
+    const obj = { opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]), borderBottomColor: floatingBackgroundColor, borderBottomWidth: 16, transform: null };
     let num = 0;
     value = sharedValue.get();
     if (enabled) {
       num = 0.999999;
     }
-    obj = { translateY: null };
+    const obj4 = { translateY: null };
     const items = [num, 1];
-    obj.translateY = ReanimatedRexport.interpolate(value, items, [32, 0]);
-    const items1 = [obj];
+    obj4.translateY = ReanimatedRexport.interpolate(value, items, [32, 0]);
+    const items1 = [obj4];
     obj.transform = items1;
     return obj;
   };
-  obj = { interpolate: tmp3(tmp4[4]).interpolate, sharedValue, floatingBackgroundColor, useReducedMotion: enabled };
-  fn.__closure = obj;
+  const tmp3Result = isVisible(sharedValue[4]);
+  fn.__closure = { interpolate: isVisible(sharedValue[4]).interpolate, sharedValue, floatingBackgroundColor, useReducedMotion: enabled };
   fn.__workletHash = 1679390676673;
   fn.__initData = __initData;
-  const animatedStyle = isVisible(sharedValue[4]).useAnimatedStyle(fn);
-  obj = { style: null, pointerEvents: null, children: null };
+  const animatedStyle = tmp3Result.useAnimatedStyle(fn);
+  const obj3 = { style: null, pointerEvents: null, children: null };
   let items1 = [animatedStyle, tmp2.floating, { paddingBottom: tmp7.bottom }];
-  obj.style = items1;
+  obj3.style = items1;
   let str = "none";
   if (isVisible) {
     str = "auto";
   }
-  obj.pointerEvents = str;
-  const obj1 = { colors: null, locations: null, style: null };
-  const tmp3Result = isVisible(sharedValue[4]);
+  obj3.pointerEvents = str;
+  let obj4 = { colors: null, locations: null, style: null };
+  let obj2 = { interpolate: isVisible(sharedValue[4]).interpolate, sharedValue, floatingBackgroundColor, useReducedMotion: enabled };
   const tmp6Result = floatingBackgroundColor(sharedValue[9]);
   const obj6 = floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor);
   const items2 = [floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor).alpha(0).hex(), floatingBackgroundColor];
-  obj1.colors = items2;
-  obj1.locations = [0, 0.5];
-  obj1.style = absoluteFill.absoluteFill;
-  const items3 = [closure_6(tmp6Result, obj1), ];
-  let obj2 = {};
+  obj4.colors = items2;
+  obj4.locations = [0, 0.5];
+  obj4.style = absoluteFill.absoluteFill;
+  const items3 = [closure_6(tmp6Result, obj4), ];
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj2.variant = "primary";
-  items3[1] = closure_6(isVisible(sharedValue[11]).ModalActionButton, obj2);
-  obj.children = items3;
-  return closure_7(floatingBackgroundColor(sharedValue[4]).View, obj);
+  obj5.variant = "primary";
+  items3[1] = closure_6(isVisible(sharedValue[11]).ModalActionButton, obj5);
+  obj3.children = items3;
+  return closure_7(floatingBackgroundColor(sharedValue[4]).View, obj3);
 };
 export const ModalFloatingActionSpacer = function ModalFloatingActionSpacer() {
   return timestampProducer(hasOwnProperty, { style: closure_8().spacer });

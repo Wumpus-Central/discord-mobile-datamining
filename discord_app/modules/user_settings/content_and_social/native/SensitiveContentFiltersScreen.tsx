@@ -1,10 +1,10 @@
-// === Module 14902: SensitiveContentFiltersScreen ===
+// === Module 14903: SensitiveContentFiltersScreen ===
 
-// Module 14902 (SensitiveContentFiltersScreen)
+// Module 14903 (SensitiveContentFiltersScreen)
 import util from "util" /* 1114 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 14903 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 14904 */;
 import noop from "module_19" /* 19 */;
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
@@ -21,28 +21,28 @@ const result = size.fileFinishedImporting("modules/user_settings/content_and_soc
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = noop.useMemo(() => {
-    let obj = { sections: null, ListHeaderComponent: null };
-    obj = { label: null, settings: null, subLabel: null };
+    const obj2 = { sections: null, ListHeaderComponent: null };
+    const obj3 = { label: null, settings: null, subLabel: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t.GYpoAq);
+    obj3.label = intl.string(util.t.GYpoAq);
     const items = [, , ];
     ({ EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0], EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1], EXPLICIT_MEDIA_FILTERS_GUILDS: arr[2] } = MobileUserSettings);
-    obj.settings = items;
+    obj3.settings = items;
     const intl2 = util.intl;
-    obj.subLabel = intl2.string(util.t.Wnojv1);
-    const items1 = [obj, ];
-    const obj1 = { label: null, settings: null, subLabel: null };
+    obj3.subLabel = intl2.string(util.t.Wnojv1);
+    const items1 = [obj3, ];
+    const obj4 = { label: null, settings: null, subLabel: null };
     const intl3 = util.intl;
-    obj1.label = intl3.string(util.t["16/3Bi"]);
+    obj4.label = intl3.string(util.t["16/3Bi"]);
     const items2 = [, , ];
     ({ GORE_MEDIA_FILTERS_FRIENDS_DMS: arr3[0], GORE_MEDIA_FILTERS_NON_FRIENDS_DMS: arr3[1], GORE_MEDIA_FILTERS_GUILDS: arr3[2] } = MobileUserSettings);
-    obj1.settings = items2;
+    obj4.settings = items2;
     const intl4 = util.intl;
-    obj1.subLabel = intl4.string(util.t.XgH9eh);
-    items1[1] = obj1;
-    obj.sections = items1;
-    obj.ListHeaderComponent = ListHeaderComponent;
-    return obj.createList(obj);
+    obj4.subLabel = intl4.string(util.t.XgH9eh);
+    items1[1] = obj4;
+    obj2.sections = items1;
+    obj2.ListHeaderComponent = ListHeaderComponent;
+    return SettingBuilders.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
 };

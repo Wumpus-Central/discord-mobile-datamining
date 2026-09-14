@@ -4,8 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 7500 */;
 
 require = fn;
@@ -117,7 +117,7 @@ prototype["whenInitialized"] = function whenInitialized(arg0) {
 };
 TestModeStore.displayName = "TestModeStore";
 TestModeStore.persistKey = "TestModeStore";
-obj = {
+const testModeStore = new TestModeStore(DispatcherDefault, {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function handleDeveloperTestModeAuthorizationStart(applicationId) {
     set.add(applicationId.applicationId);
     error = null;
@@ -142,8 +142,7 @@ obj = {
   },
   LOGOUT: reset,
   DEVELOPER_TEST_MODE_RESET: reset
-};
-const testModeStore = new TestModeStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 

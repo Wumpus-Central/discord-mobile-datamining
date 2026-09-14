@@ -11,7 +11,7 @@ export const add = function add(type) {
   closure_0.push(type);
   if (closure_0.length > 10) {
     do {
-      let arr = closure_0.shift();
+      let arr2 = closure_0.shift();
       length = closure_0.length;
     } while (length > 10);
   }

@@ -1,20 +1,20 @@
-// === Module 12445: GuildDirectoryActionCreators ===
+// === Module 12446: GuildDirectoryActionCreators ===
 
-// Module 12445 (GuildDirectoryActionCreators)
+// Module 12446 (GuildDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12432 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12433 */;
 import "debounce";
-import debounce from "debounce" /* 551 */;
+import debounce_mod from "debounce" /* 551 */;
+
+const require = globalThis.__r;
 
 let closure_7 = async function _addDirectoryGuildEntry() {
-  let obj7 = closure_133_1(closure_133_2[7]);
   const request = { url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1), body: { description: closure_132_2, primary_category_id: closure_132_3 }, trackedActionData: { event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE, properties: { directory_channel_id: closure_132_0, guild_id: closure_132_1, primary_category_id: closure_132_3 } }, rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError() };
-  await obj7.post(request);
+  await closure_133_1(closure_133_2[7]).post(request);
   closure_132_4 = value;
-  obj7 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
-  closure_133_1(closure_133_2[5]).dispatch(obj7);
+  closure_133_1(closure_133_2[5]).dispatch({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body });
   await "HermesInternal";
   closure_5 = tmp3;
   closure_4 = tmp2;
@@ -73,7 +73,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(12434).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(12435).DirectoryEntryCategories;
 let Endpoints = fn(1074).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -84,27 +84,27 @@ asyncGeneratorStep(async (arg0, category_id) => {
     closure_3 = tmp3;
     closure_130_0 = closure_0;
     category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = closure_0(1272).HTTP;
+    const HTTP = closure_0(1270).HTTP;
     const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
     await HTTP.get(request);
     if (1 === tmp7) {
       c5 = 0;
-      let obj3 = category_id(573);
-      obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+      category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
       c7 = 3;
+      category_id(573);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;
     } else if (arg0 !== 2) {
       closure_130_1 = value;
-      obj3 = { type: "GUILD_DIRECTORY_FETCH_SUCCESS", channelId: closure_130_0, entries: closure_130_1.body };
-      category_id(573).dispatch(obj3);
+      category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_SUCCESS", channelId: closure_130_0, entries: closure_130_1.body });
       c5 = 0;
       category_id(573);
     }
     return value;
   })();
 });
+let debounce = debounce_mod;
 asyncGeneratorStep(async (arg0) => {
   closure_129_0 = closure_0;
   const HTTP = closure_0(tmp3[6]).HTTP;
@@ -133,6 +133,7 @@ const importDefaultResult1Result = debounce(function() {
   }
   return applyArgumentsResult;
 }, 200);
+let debounce = debounce_mod;
 let closure_0 = asyncGeneratorStep(async (channelId, query) => {
   c6 = 0;
   c7 = 0;
@@ -145,8 +146,8 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -159,8 +160,8 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             dependencyMap = tmp7;
@@ -169,42 +170,41 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
             closure_130_2 = undefined;
             if (tmp30.shouldFetch(channelId, query)) {
               c5 = 1;
-              let obj6 = query(573);
-              const obj1 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
-              obj6.dispatch(obj1);
-              const HTTP = channelId(1272).HTTP;
+              const obj6 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
+              query(573).dispatch(obj6);
+              const HTTP = channelId(1270).HTTP;
               const request = { url: c6.DIRECTORY_ENTRIES_SEARCH(channelId), query: null, rejectWithError: true };
-              const obj2 = { query };
-              request.query = obj2;
+              const obj8 = { query };
+              request.query = obj8;
               c6 = 2;
               c7 = 1;
-              let obj3 = { value: HTTP.get(request), done: false };
-              return obj3;
+              const obj9 = { value: HTTP.get(request), done: false };
+              return obj9;
             } else {
-              let obj4 = query(573);
-              obj4 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId, query };
-              obj4.dispatch(obj4);
+              const obj10 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId, query };
+              query(573).dispatch(obj10);
+              const obj5 = query(573);
             }
           }
         } else {
           if (1 === tmp7) {
             c5 = 0;
-            obj3 = query(573);
-            obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+            query(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+            const obj4 = query(573);
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_130_2 = value;
-            obj = query(573);
-            const obj5 = { type: "GUILD_DIRECTORY_SEARCH_SUCCESS", channelId: closure_130_0, query: closure_130_1, results: closure_130_2.body };
-            obj.dispatch(obj5);
+            const obj11 = { type: "GUILD_DIRECTORY_SEARCH_SUCCESS", channelId: closure_130_0, query: closure_130_1, results: closure_130_2.body };
+            query(573).dispatch(obj11);
             c5 = 0;
+            const obj = query(573);
           }
           c5 = 0;
           c7 = 3;
-          obj6 = { value, done: true };
-          return obj6;
+          const obj12 = { value, done: true };
+          return obj12;
         }
         c7 = 3;
       } catch (tmp30) {
@@ -244,10 +244,11 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry() {
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
-  obj = { event: closure_0(1250).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
-  obj.trackedActionData = obj;
-  obj.delete(obj);
+  const obj2 = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
+  const obj = TrackedHTTPUtilsDefault;
+  obj2.trackedActionData = { event: closure_0(1248).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  obj.delete(obj2);
+  const obj3 = { event: closure_0(1248).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
 export const searchDirectoryEntries = debounce(function() {
@@ -261,8 +262,7 @@ export const searchDirectoryEntries = debounce(function() {
   return applyArgumentsResult;
 }, 200);
 export const clearDirectorySearch = function clearDirectorySearch(id) {
-  const obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id });
 };
 export const updateDirectoryEntry = function updateDirectoryEntry() {
   const self = this;
@@ -275,8 +275,7 @@ export const updateDirectoryEntry = function updateDirectoryEntry() {
   return applyArgumentsResult;
 };
 export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
-  const obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value });
 };
 export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds() {
   const self = this;

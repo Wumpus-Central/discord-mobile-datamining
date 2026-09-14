@@ -16,8 +16,7 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/syst
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
   let channel_id;
   if (messageReference != null) {
@@ -25,20 +24,20 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   }
   const channel = ChannelStore.getChannel(channel_id);
   const intl = util.intl;
-  obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
+  const obj2 = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
     let content = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
     const tmpResult = useChannelName;
   } else {
     content = message.content;
   }
-  obj.threadName = content;
+  obj2.threadName = content;
   const messageReference2 = message.messageReference;
   let channel_id1;
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(util.t.veX9jq, obj), threadOnClick: { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true } };
+  obj2.threadOnClick = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return { content: intl.formatToParts(util.t.veX9jq, obj2) };
 };

@@ -28,6 +28,8 @@ import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7380 */;
 import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 7990 */;
 import ForumSearchStore from "ForumSearchStore" /* 7870 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const ForumTimestampFormats = fn(7376).ForumTimestampFormats;
 const Constants = fn(1074);
@@ -61,10 +63,10 @@ export const useLoadForumUnreadCounts = function useLoadForumUnreadCounts(channe
       const substr = found.slice(0, 180);
       const mapped = substr.map((threadId) => ({ threadId, ackMessageId: trackedAckMessageId.getTrackedAckMessageId(threadId) }));
       if (mapped.length > 0) {
-        const obj = { type: "REQUEST_FORUM_UNREADS", guildId: null, channelId: null, threads: null };
+        const obj3 = { type: "REQUEST_FORUM_UNREADS", guildId: null, channelId: null, threads: null };
         ({ guild_id: obj2.guildId, id: obj2.channelId } = channel);
-        obj.threads = mapped;
-        obj.dispatch(obj);
+        obj3.threads = mapped;
+        DispatcherDefault.dispatch(obj3);
       }
     }
   }, items1);
@@ -116,11 +118,11 @@ export const useLastActiveTimestamp = function useLastActiveTimestamp(thread, so
   const items2 = [lastMessageTimestamp, sortOrder, memo, memo1];
   return lastMessageTimestamp.useMemo(() => {
     if (closure_1 === ThreadSortOrder.ThreadSortOrder.CREATION_DATE) {
-      let tmpResult = ThreadUtils;
-      let timestampString = tmpResult.getTimestampString(memo, memo1);
+      let timestampString = ThreadUtils.getTimestampString(memo, memo1);
+      const tmpResult = ThreadUtils;
     } else {
-      tmpResult = ThreadUtils;
-      timestampString = tmpResult.getTimestampString(lastMessageTimestamp, memo1);
+      timestampString = ThreadUtils.getTimestampString(lastMessageTimestamp, memo1);
+      const tmpResult2 = ThreadUtils;
     }
     return timestampString;
   }, items2);
@@ -150,9 +152,8 @@ export const useDefaultReactionEmoji = function useDefaultReactionEmoji(defaultR
   if (defaultReactionEmoji != null) {
     defaultReactionEmoji = defaultReactionEmoji.defaultReactionEmoji;
   }
-  let obj = defaultReactionEmoji(504);
   const items = [EmojiStore];
-  let animated = obj.useStateFromStores(items, () => {
+  let animated = defaultReactionEmoji(504).useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
       emojiId = message.emojiId;
@@ -168,15 +169,16 @@ export const useDefaultReactionEmoji = function useDefaultReactionEmoji(defaultR
   } else {
     if (null == defaultReactionEmoji.emojiId) {
       if (null != defaultReactionEmoji.emojiName) {
-        obj = { id: null, name: null, animated: false };
         ({ emojiId: obj2.id, emojiName: obj2.name } = defaultReactionEmoji);
+        const tmp2 = { id: null, name: null, animated: false };
+        const obj3 = { id: null, name: null, animated: false };
       }
     }
-    obj = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
+    const obj5 = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
     defaultReactionEmoji = animated.name;
-    obj.name = defaultReactionEmoji;
+    obj5.name = defaultReactionEmoji;
     animated = animated.animated;
-    obj.animated = animated;
+    obj5.animated = animated;
   }
 };
 export const useSomeForumPostReactions = function useSomeForumPostReactions(message) {
@@ -195,9 +197,8 @@ export const useSomeForumPostReactions = function useSomeForumPostReactions(mess
     defaultReactionEmoji = parentChannel.defaultReactionEmoji;
   }
   closure_129_0 = defaultReactionEmoji;
-  let obj = message(504);
   let items = [EmojiStore];
-  let animated = obj.useStateFromStores(items, () => {
+  let animated = message(504).useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
       emojiId = message.emojiId;
@@ -231,31 +232,32 @@ export const useSomeForumPostReactions = function useSomeForumPostReactions(mess
     }, items1);
     let items2 = [];
     if (null != null) {
-      obj = { emoji: null, me: false, count: 0, burst_count: 0, me_burst: false };
-      const items3 = [obj];
+      const obj3 = { emoji: null, me: false, count: 0, burst_count: 0, me_burst: false };
+      const items3 = [obj3];
       items2 = items3;
     }
     if (memo.length > 0) {
       items2 = memo;
     }
-    obj = { reactions: items2.slice(0, count), additionalNonUniqueReactionCount: null };
+    const obj4 = { reactions: items2.slice(0, count), additionalNonUniqueReactionCount: null };
     const substr = items2.slice(count, items2.length);
-    obj.additionalNonUniqueReactionCount = flag(12).sum(substr.map((count) => count.count + count.burst_count));
-    return obj;
+    obj4.additionalNonUniqueReactionCount = flag(12).sum(substr.map((count) => count.count + count.burst_count));
+    return obj4;
   } else {
     if (null == defaultReactionEmoji.emojiId) {
       if (null != defaultReactionEmoji.emojiName) {
         ({ emojiId: obj2.id, emojiName: obj2.name } = defaultReactionEmoji);
         const tmp3 = { id: null, name: null, animated: false };
-        const obj1 = { id: null, name: null, animated: false };
+        const obj5 = { id: null, name: null, animated: false };
       }
     }
-    const obj2 = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
+    const obj10 = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
     defaultReactionEmoji = animated.name;
-    obj2.name = defaultReactionEmoji;
+    obj10.name = defaultReactionEmoji;
     animated = animated.animated;
-    obj2.animated = animated;
+    obj10.animated = animated;
   }
+  let obj = message(504);
 };
 export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPostReactions(message) {
   message = message.message;
@@ -267,9 +269,8 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
     defaultReactionEmoji = parentChannel.defaultReactionEmoji;
   }
   closure_129_0 = defaultReactionEmoji;
-  let obj = message(504);
   let items = [EmojiStore];
-  let animated = obj.useStateFromStores(items, () => {
+  let animated = message(504).useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
       emojiId = message.emojiId;
@@ -299,8 +300,8 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
     }, items1);
     let items2 = [];
     if (null != null) {
-      obj = { emoji: null, me: false, count: 0, burst_count: 0, me_burst: false };
-      const items3 = [obj];
+      const obj3 = { emoji: null, me: false, count: 0, burst_count: 0, me_burst: false };
+      const items3 = [obj3];
       items2 = items3;
     }
     if (memo.length > 0) {
@@ -337,34 +338,35 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
       diff1 = num6 - 1;
       sum1 = diff + 1;
     }
-    obj = { reactions: items2.slice(0, diff1), additionalReactionCount: sum1 };
-    return obj;
+    const obj4 = { reactions: items2.slice(0, diff1), additionalReactionCount: sum1 };
+    return obj4;
   } else {
     if (null == defaultReactionEmoji.emojiId) {
       if (null != defaultReactionEmoji.emojiName) {
         ({ emojiId: obj2.id, emojiName: obj2.name } = defaultReactionEmoji);
         const tmp2 = { id: null, name: null, animated: false };
-        const obj1 = { id: null, name: null, animated: false };
+        const obj5 = { id: null, name: null, animated: false };
       }
     }
-    const obj2 = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
+    const obj9 = { id: defaultReactionEmoji.emojiId, name: null, animated: null };
     defaultReactionEmoji = animated.name;
-    obj2.name = defaultReactionEmoji;
+    obj9.name = defaultReactionEmoji;
     animated = animated.animated;
-    obj2.animated = animated;
+    obj9.animated = animated;
   }
+  const obj = message(504);
 };
 export const useMessageCount = function useMessageCount(thread) {
   _require = thread;
-  let obj = require("initialize");
   let items = [ThreadMessageStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let num = ThreadMessageStore.getCount(thread.id);
     if (num == null) {
       num = 0;
     }
     return num;
   });
+  const obj = require("initialize");
   const messageCountText = require("MessageCountUtils").getMessageCountText(stateFromStores, thread.id);
   const obj2 = require("MessageCountUtils");
   const items1 = [ReadStateStore];
@@ -374,7 +376,7 @@ export const useMessageCount = function useMessageCount(thread) {
   });
   const obj3 = require("initialize");
   const items2 = [ForumPostUnreadCountStore];
-  obj = { messageCount: stateFromStores, isMaxMessageCount: null, messageCountText: null, unreadCount: null };
+  const obj5 = { messageCount: stateFromStores, isMaxMessageCount: null, messageCountText: null, unreadCount: null };
   let tmp4 = null != stateFromStores;
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     if (closure_2) {
@@ -399,10 +401,10 @@ export const useMessageCount = function useMessageCount(thread) {
     let _HermesInternal = HermesInternal;
     tmp4 = "" + stateFromStores !== messageCountText;
   }
-  obj.isMaxMessageCount = tmp4;
-  obj.messageCountText = messageCountText;
-  obj.unreadCount = stateFromStores1;
-  return obj;
+  obj5.isMaxMessageCount = tmp4;
+  obj5.messageCountText = messageCountText;
+  obj5.unreadCount = stateFromStores1;
+  return obj5;
 };
 export const useForumPostMessageAuthor = function useForumPostMessageAuthor(message, thread) {
   let id;
@@ -413,9 +415,9 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
     }
   }
   const guildId = thread.getGuildId();
-  let obj = id(504);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(id));
+  const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
+  const obj = id(504);
   const nullableMessageAuthor = id(4869).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
@@ -438,7 +440,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
     }
     nick = username;
   }
-  obj = { authorName: nick, authorColor: null, authorColors: null, user: null };
+  const obj3 = { authorName: nick, authorColor: null, authorColors: null, user: null };
   let colorString;
   if (nullableMessageAuthor != null) {
     colorString = nullableMessageAuthor.colorString;
@@ -446,7 +448,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   if (colorString == null) {
     colorString = null;
   }
-  obj.authorColor = colorString;
+  obj3.authorColor = colorString;
   let colorStrings;
   if (nullableMessageAuthor != null) {
     colorStrings = nullableMessageAuthor.colorStrings;
@@ -454,9 +456,9 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   if (colorStrings == null) {
     colorStrings = null;
   }
-  obj.authorColors = colorStrings;
-  obj.user = stateFromStores;
-  return obj;
+  obj3.authorColors = colorStrings;
+  obj3.user = stateFromStores;
+  return obj3;
 };
 export const useForumPostAuthor = function useForumPostAuthor(thread) {
   _require = thread;
@@ -482,13 +484,13 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
   }
   const items2 = [, ];
   ({ guild_id: arr3[0], ownerId: arr3[1] } = thread);
-  author = require("useMessageAuthor").useNullableUserAuthor(author, thread);
+  const author1 = require("useMessageAuthor").useNullableUserAuthor(author, thread);
   const effect = noop.useEffect(() => {
     if (null != thread.ownerId) {
       const member = GuildMemberRequesterStore.requestMember(thread.guild_id, thread.ownerId);
     }
   }, items2);
-  return { user, author };
+  return { user, author: author1 };
 };
 export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
   const user = UserStore.getUser(ownerId.ownerId);
@@ -584,11 +586,9 @@ export const useChannelTemplate = function useChannelTemplate(parentChannel) {
 };
 export const useForumThreadsForChannelList = function useForumThreadsForChannelList(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [ActiveJoinedThreadsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeJoinedThreads: ActiveJoinedThreadsStore.getActiveJoinedThreadsForGuild(closure_0), activeUnjoinedThreads: ActiveJoinedThreadsStore.getActiveUnjoinedThreadsForGuild(closure_0), newThreadCounts: ActiveJoinedThreadsStore.getNewThreadCountsForGuild(closure_0) }));
-  obj = { activeJoinedThreads: stateFromStoresObject.activeJoinedThreads, activeUnjoinedThreads: stateFromStoresObject.activeUnjoinedThreads, newThreadCounts: stateFromStoresObject.newThreadCounts };
-  return obj;
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ activeJoinedThreads: ActiveJoinedThreadsStore.getActiveJoinedThreadsForGuild(closure_0), activeUnjoinedThreads: ActiveJoinedThreadsStore.getActiveUnjoinedThreadsForGuild(closure_0), newThreadCounts: ActiveJoinedThreadsStore.getNewThreadCountsForGuild(closure_0) }));
+  return { activeJoinedThreads: stateFromStoresObject.activeJoinedThreads, activeUnjoinedThreads: stateFromStoresObject.activeUnjoinedThreads, newThreadCounts: stateFromStoresObject.newThreadCounts };
 };
 export const useCanSearchForumPosts = function useCanSearchForumPosts(channel) {
   _require = channel;
@@ -811,7 +811,7 @@ export const useForumActiveThreadIds = function useForumActiveThreadIds(channel)
       return 0;
     }
   });
-  const obj2 = channel(504);
+  let obj2 = channel(504);
   const items2 = [ForumActivePostStore];
   const items3 = [shouldAutomaticallyAck, stateFromStores];
   stateFromStores1 = channel(504).useStateFromStores(items2, () => {
@@ -828,8 +828,8 @@ export const useForumActiveThreadIds = function useForumActiveThreadIds(channel)
   const items4 = [channel, stateFromStores1];
   const effect = shouldAutomaticallyAck.useEffect(() => {
     if (stateFromStores1) {
-      const obj = { object: constants2.ACK_FORUM_ACTIVE_THREADS, objectType: constants.ACK_AUTOMATIC };
-      obj.ackChannel(channel, obj);
+      const obj2 = { object: constants2.ACK_FORUM_ACTIVE_THREADS, objectType: constants.ACK_AUTOMATIC };
+      ReadStateActionCreators.ackChannel(channel, obj2);
     }
   }, items4);
   return stateFromStoresArray;

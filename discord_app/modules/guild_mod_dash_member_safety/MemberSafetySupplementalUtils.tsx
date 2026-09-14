@@ -2,7 +2,7 @@
 
 // Module 7605 (MemberSafetySupplementalUtils)
 import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import shared from "shared" /* 4488 */;
 import PlatformsDefault from "Platforms" /* 5364 */;
 import ConnectionsHooks from "ConnectionsHooks" /* 7606 */;
@@ -33,8 +33,8 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -47,8 +47,8 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
@@ -69,35 +69,35 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
           closure_130_2 = arr2;
           if (0 === arr2.length) {
             c7 = 3;
-            const obj1 = { value: [], done: true };
-            return obj1;
+            const obj4 = { value: [], done: true };
+            return obj4;
           } else {
             updateFetchRequests(tmp52, constants.PENDING);
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(closure_0), body: null, rejectWithError: true };
-            const obj2 = { user_ids: arr2 };
-            request.body = obj2;
+            const obj5 = { user_ids: arr2 };
+            request.body = obj5;
             c6 = 2;
             c7 = 1;
-            const obj3 = { value: HTTP.post(request), done: false };
-            return obj3;
+            const obj6 = { value: HTTP.post(request), done: false };
+            return obj6;
           }
         }
       } else if (1 === tmp7) {
         c5 = 0;
         closure_131_9(closure_130_1, closure_131_6.FAILED);
         c7 = 3;
-        const obj4 = { value: [], done: true };
-        return obj4;
+        const obj7 = { value: [], done: true };
+        return obj7;
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_130_3 = value;
         const _Array = Array;
@@ -112,13 +112,13 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
           closure_131_9(closure_130_7, closure_131_6.FAILED);
           c5 = 0;
           c7 = 3;
-          const obj6 = { value: closure_130_4, done: true };
-          return obj6;
+          const obj9 = { value: closure_130_4, done: true };
+          return obj9;
         } else {
           closure_131_9(closure_130_1, closure_131_6.FAILED);
           c5 = 0;
           c7 = 3;
-          obj = { value: [], done: true };
+          const obj = { value: [], done: true };
           return obj;
         }
       }
@@ -136,8 +136,8 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
 const Endpoints = fn(1074).Endpoints;
 let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
-let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
-obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
+const JoinSourceType = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
+let obj2 = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
@@ -147,7 +147,7 @@ export const registerFetchedSupplementals = function registerFetchedSupplemental
     closure_5[closure_0 + item] = constants.SUCCEEDED;
   });
 };
-export const JoinSourceType = obj;
+export { JoinSourceType };
 export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -194,9 +194,9 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     return intl.string(util.t.DvMBkS);
   }
 };
-export const IntegrationType = obj;
+export const IntegrationType = obj2;
 export const getIntegrationLabel = function getIntegrationLabel(arg0) {
-  if (obj.TWITCH === arg0) {
+  if (obj2.TWITCH === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.AVGAkw);
   } else if (tmp.YOUTUBE === arg0) {
@@ -208,12 +208,12 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   }
 };
 export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
-  obj = PlatformsDefault;
-  value = obj.get(ConnectionsHooks.useLegacyPlatformType(arg0));
+  obj2 = ConnectionsHooks;
+  value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
     const items = [, ];
-    ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj);
+    ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
     tmp5 = null;
     if (items.includes(arg0)) {
       const _HermesInternal = HermesInternal;

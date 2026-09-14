@@ -40,8 +40,7 @@ export default function getChannelA11yLabel(mentionCount) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = useChannelName;
-  const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore);
+  const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   if (isRoleRequiredDefault(channel)) {
     const intl = util.intl;
     const stringResult = intl.string(util.t["4qvAtn"]);
@@ -70,11 +69,11 @@ export default function getChannelA11yLabel(mentionCount) {
         Lo0dCa = unread ? t7["fxxUo/"] : t7.lts3Ld;
       }
       const intl11 = util.intl;
-      obj = { channelName, mentionCount: num };
-      const items = [intl11.formatToPlainString(Lo0dCa, obj), ];
+      const obj2 = { channelName, mentionCount: num };
+      const items = [intl11.formatToPlainString(Lo0dCa, obj2), ];
       const intl12 = util.intl;
-      obj = { members: channel.recipients.length + 1 };
-      items[1] = intl12.formatToPlainString(util.t.CxSA5N, obj);
+      const obj3 = { members: channel.recipients.length + 1 };
+      items[1] = intl12.formatToPlainString(util.t.CxSA5N, obj3);
       let joined = items.join(", ");
     } else if (constants.GUILD_STORE === type) {
       let g8ONM0 = util.t.Bo4msg;
@@ -114,12 +113,12 @@ export default function getChannelA11yLabel(mentionCount) {
       g8ONM0 = KqEUsJ;
     } else if (constants.GUILD_VOICE === type) {
       const intl4 = util.intl;
-      const obj1 = { channelName };
-      const items1 = [intl4.formatToPlainString(util.t.bkpadO, obj1)];
+      const obj4 = { channelName };
+      const items1 = [intl4.formatToPlainString(util.t.bkpadO, obj4)];
       if (num > 0) {
         const intl5 = util.intl;
-        const obj2 = { mentionCount: num };
-        items1.push(intl5.formatToPlainString(util.t["3l1GOx"], obj2));
+        const obj5 = { mentionCount: num };
+        items1.push(intl5.formatToPlainString(util.t["3l1GOx"], obj5));
       }
       if (unread) {
         const intl6 = util.intl;
@@ -140,30 +139,30 @@ export default function getChannelA11yLabel(mentionCount) {
           items1.push(mapped.join(", "));
           if (0 < diff) {
             const intl7 = util.intl;
-            const obj3 = { overflow: diff };
-            items1.push(intl7.formatToPlainString(util.t.sfgpgr, obj3));
+            const obj6 = { overflow: diff };
+            items1.push(intl7.formatToPlainString(util.t.sfgpgr, obj6));
           }
           if (tmp13) {
             const intl8 = util.intl;
-            const obj4 = { userCount: voiceStates.length, limit: userLimit };
-            items1.push(intl8.formatToPlainString(util.t["6qgTOF"], obj4));
+            const obj7 = { userCount: voiceStates.length, limit: userLimit };
+            items1.push(intl8.formatToPlainString(util.t["6qgTOF"], obj7));
           }
           tmp13 = null != userLimit && userLimit > 0;
         }
       }
       if (null != voiceChannelStartTime) {
         const intl9 = util.intl;
-        const obj5 = { duration: null };
-        const obj6 = { start: voiceChannelStartTime };
+        const obj8 = { duration: null };
+        const obj9 = { start: voiceChannelStartTime };
         const _Date = Date;
-        obj5.duration = utils.formatActiveA11yTimestamp(obj6, Date.now());
-        items1.push(intl9.formatToPlainString(util.t.JQtsGh, obj5));
+        obj8.duration = utils.formatActiveA11yTimestamp(obj9, Date.now());
+        items1.push(intl9.formatToPlainString(util.t.JQtsGh, obj8));
         const tmpResult = utils;
       }
       if (tmp17) {
         const intl10 = util.intl;
-        const obj7 = { activeActivities: activityNames.join(", ") };
-        items1.push(intl10.formatToPlainString(util.t.LmYuHT, obj7));
+        const obj10 = { activeActivities: activityNames.join(", ") };
+        items1.push(intl10.formatToPlainString(util.t.LmYuHT, obj10));
       }
       joined = items1.join(", ");
       tmp17 = null != activityNames && activityNames.length > 0;
@@ -184,7 +183,7 @@ export default function getChannelA11yLabel(mentionCount) {
               if (num > 0) {
                 g8ONM0 = util.t.g8ONM0;
               } else {
-                let t = util.t;
+                const t = util.t;
                 g8ONM0 = unread ? t.smf1CZ : t.s0JADj;
               }
             }
@@ -204,8 +203,8 @@ export default function getChannelA11yLabel(mentionCount) {
       let items4 = items2;
     } else if (null != g8ONM0) {
       const intl13 = util.intl;
-      const obj8 = { channelName, mentionCount: num };
-      const items3 = [intl13.formatToPlainString(g8ONM0, obj8)];
+      const obj11 = { channelName, mentionCount: num };
+      const items3 = [intl13.formatToPlainString(g8ONM0, obj11)];
       items4 = items3;
     } else {
       items4 = [];
@@ -226,8 +225,8 @@ export default function getChannelA11yLabel(mentionCount) {
     }
     if (tmp24) {
       const intl16 = util.intl;
-      const obj9 = { activitiesCount: embeddedActivitiesCount };
-      items4.push(intl16.formatToPlainString(util.t.O6PLYd, obj9));
+      const obj12 = { activitiesCount: embeddedActivitiesCount };
+      items4.push(intl16.formatToPlainString(util.t.O6PLYd, obj12));
     }
     if (!isSubscriptionGated) {
       if (null != undefined) {
@@ -240,12 +239,12 @@ export default function getChannelA11yLabel(mentionCount) {
     } else {
       const intl17 = util.intl;
       const string = intl17.string;
-      t = util.t;
+      let t1 = util.t;
       if (needSubscriptionToAccess) {
-        t = t["oj+HOs"];
-        let stringResult2 = string(t);
+        t1 = t1["oj+HOs"];
+        let stringResult2 = string(t1);
       } else {
-        stringResult2 = string(t.xI3TQQ);
+        stringResult2 = string(t1.xI3TQQ);
       }
     }
   }

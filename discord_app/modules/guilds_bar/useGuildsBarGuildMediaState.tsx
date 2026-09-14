@@ -1,9 +1,11 @@
-// === Module 16425: useGuildsBarGuildMediaState ===
+// === Module 16427: useGuildsBarGuildMediaState ===
 
-// Module 16425 (useGuildsBarGuildMediaState)
-import GuildMediaStateShadowCompare from "GuildMediaStateShadowCompare" /* 16427 */;
+// Module 16427 (useGuildsBarGuildMediaState)
+import GuildMediaStateShadowCompare from "GuildMediaStateShadowCompare" /* 16429 */;
 import noop from "module_19" /* 19 */;
-import GuildMediaStateStore from "GuildMediaStateStore" /* 13796 */;
+import GuildMediaStateStore from "GuildMediaStateStore" /* 13797 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -13,19 +15,17 @@ export default function useGuildsBarGuildMediaState(arg0) {
   const current = noop.useRef(require("GuildMediaStateStoreExperiment").useGuildMediaStateSource("GuildsBarGuild")).current;
   if (require("GuildMediaStateStoreExperiment").GuildMediaStateSource.STORE === current) {
     closure_130_0 = arg0;
-    let tmpResult = tmp(tmp2[2]);
     const items = [GuildMediaStateStore];
     const items1 = [arg0];
-    return tmpResult.useStateFromStores(items, () => GuildMediaStateStore.getGuildMediaState(closure_0), items1);
+    return tmp(tmp2[2]).useStateFromStores(items, () => GuildMediaStateStore.getGuildMediaState(closure_0), items1);
   } else if (tmp(tmp2[5]).GuildMediaStateSource.SHADOW === current) {
     _require = arg0;
     const tmp5 = require("useGuildMediaState")(arg0);
     importDefault = tmp5;
     closure_129_0 = arg0;
-    tmpResult = tmp(tmp2[2]);
     const items2 = [GuildMediaStateStore];
     const items3 = [arg0];
-    stateFromStores = tmpResult.useStateFromStores(items2, () => GuildMediaStateStore.getGuildMediaState(closure_0), items3);
+    stateFromStores = tmp(tmp2[2]).useStateFromStores(items2, () => GuildMediaStateStore.getGuildMediaState(closure_0), items3);
     const items4 = [arg0, tmp5, stateFromStores];
     const effect = noop.useEffect(() => {
       const result = GuildMediaStateShadowCompare.compareGuildMediaState(closure_0, closure_1, stateFromStores);

@@ -81,17 +81,16 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     tmp = React4;
   }
   if (null != emoji.id) {
-    let obj = { id: null, animated: null, size: null };
+    const obj3 = { id: null, animated: null, size: null };
     ({ id: obj5.id, animated } = emoji);
     if (animated == null) {
       animated = false;
     }
-    obj.animated = animated;
-    obj.size = tmp;
-    return AvatarUtilsDefault.getEmojiURL(obj);
+    obj3.animated = animated;
+    obj3.size = tmp;
+    return AvatarUtilsDefault.getEmojiURL(obj3);
   } else {
-    obj = UnicodeEmojisDefault;
-    const result = obj.convertSurrogateToName(emoji.name, false);
+    const result = UnicodeEmojisDefault.convertSurrogateToName(emoji.name, false);
     const byName = UnicodeEmojisDefault.getByName(result);
     let str = "";
     if (null != byName) {
@@ -116,7 +115,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(items) {
     });
     const found = mapped.filter((item) => null != item);
     const arr = apply(items);
-    let obj = found.uniq().value();
+    let obj3 = found.uniq().value();
     emojiName = "emojiName";
     const iter = found.uniq();
     const mapped1 = apply(items).map((item) => {
@@ -128,62 +127,62 @@ export const getEffectAnnouncement = function getEffectAnnouncement(items) {
     });
     const found1 = mapped1.filter((item) => null != item);
     const arr3 = apply(items);
-    const valueResult = found1.uniq().value();
-    if (valueResult.length < 2) {
+    const valueResult2 = found1.uniq().value();
+    if (valueResult2.length < 2) {
       let str2;
-      if (valueResult != null) {
-        str2 = valueResult[0];
+      if (valueResult2 != null) {
+        str2 = valueResult2[0];
       }
       if (str2 == null) {
         str2 = "";
       }
       let joined = str2;
     } else {
-      joined = valueResult.join(", ");
+      joined = valueResult2.join(", ");
     }
-    if (obj.length < 1) {
+    if (obj3.length < 1) {
       return "";
-    } else if (1 === obj.length) {
+    } else if (1 === obj3.length) {
       const intl2 = util.intl;
       yZYxzF = util.t.yZYxzF;
-      const user = UserStore.getUser(obj[0]);
+      const user = UserStore.getUser(obj3[0]);
       let username;
       if (user != null) {
         username = user.username;
       }
-      obj = { firstUsername: username, emojiNames: joined };
-      let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
-    } else if (2 === obj.length) {
+      obj3 = { firstUsername: username, emojiNames: joined };
+      let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj3);
+    } else if (2 === obj3.length) {
       const intl = util.intl;
-      const user1 = UserStore.getUser(obj[0]);
+      const user1 = UserStore.getUser(obj3[0]);
       let username1;
       if (user1 != null) {
         username1 = user1.username;
       }
-      obj = { firstUsername: username1, secondUsername: null, emojiNames: null };
-      const user2 = UserStore.getUser(obj[1]);
+      const obj4 = { firstUsername: username1, secondUsername: null, emojiNames: null };
+      const user2 = UserStore.getUser(obj3[1]);
       let username2;
       if (user2 != null) {
         username2 = user2.username;
       }
-      obj.secondUsername = username2;
-      obj.emojiNames = joined;
-      formatToPlainStringResult = intl.formatToPlainString(util.t["8rmtbd"], obj);
+      obj4.secondUsername = username2;
+      obj4.emojiNames = joined;
+      formatToPlainStringResult = intl.formatToPlainString(util.t["8rmtbd"], obj4);
     } else {
       const intl3 = util.intl;
-      const user3 = UserStore.getUser(obj[0]);
+      const user3 = UserStore.getUser(obj3[0]);
       let username3;
       if (user3 != null) {
         username3 = user3.username;
       }
-      obj = { firstUsername: username3, secondUsername: null, count: null, emojiNames: null };
-      const user4 = UserStore.getUser(obj[1]);
+      const obj = { firstUsername: username3, secondUsername: null, count: null, emojiNames: null };
+      const user4 = UserStore.getUser(obj3[1]);
       let username4;
       if (user4 != null) {
         username4 = user4.username;
       }
       obj.secondUsername = username4;
-      obj.count = obj.length - 2;
+      obj.count = obj3.length - 2;
       obj.emojiNames = joined;
       formatToPlainStringResult = intl3.formatToPlainString(util.t["/okjv0"], obj);
     }

@@ -326,9 +326,9 @@ const archivedThreadsStore = new ArchivedThreadsStore(DispatcherDefault, {
       if (null == value) {
         return false;
       } else {
-        let threads = tagFilter.threads;
-        const found = threads.filter((type) => set.has(type.type));
-        threads = value.threads;
+        const threads1 = tagFilter.threads;
+        const found = threads1.filter((type) => set.has(type.type));
+        const threads = value.threads;
         value.threads = threads.concat(found.map((id) => id.id));
         const channel = ChannelStore.getChannel(value.channelId);
         if (tmp9) {

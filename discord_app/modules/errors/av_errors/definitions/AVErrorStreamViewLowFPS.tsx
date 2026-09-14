@@ -1,11 +1,11 @@
-// === Module 17951: AVErrorStreamViewLowFPS ===
+// === Module 17952: AVErrorStreamViewLowFPS ===
 
-// Module 17951 (AVErrorStreamViewLowFPS)
+// Module 17952 (AVErrorStreamViewLowFPS)
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import StreamQualityUtils from "StreamQualityUtils" /* 9238 */;
 import AVError from "AVError" /* 9239 */;
-import AVErrorContext from "AVErrorContext" /* 17949 */;
-import AVErrorUtils from "AVErrorUtils" /* 17952 */;
+import AVErrorContext from "AVErrorContext" /* 17950 */;
+import AVErrorUtils from "AVErrorUtils" /* 17953 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -22,8 +22,7 @@ export const AVErrorStreamViewLowFPSDefinition = {
     if (obj.getReportInboundErrors()) {
       const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = StreamKeyUtils;
-        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
+        rTCConnection = rTCConnection.getRTCConnection(StreamKeyUtils.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
           mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -33,32 +32,32 @@ export const AVErrorStreamViewLowFPSDefinition = {
         } else {
           if (ownerId.ownerId !== id.getId()) {
             if (ownerId.state !== constants.PAUSED) {
-              let tmpResult = AVErrorUtils;
-              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+              const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
               if (null == accumulatedStatsWithMinDatapoints) {
                 return arr;
               } else {
-                tmpResult = StreamKeyUtils;
-                participant = participant.getParticipant(ownerId.channelId, tmpResult.encodeStreamKey(ownerId));
+                participant = participant.getParticipant(ownerId.channelId, StreamKeyUtils.encodeStreamKey(ownerId));
                 if (null == participant) {
                   return arr;
                 } else {
                   const maxQuality = StreamQualityUtils.getMaxQuality(participant);
                   if (null != maxQuality) {
-                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
-                      obj = { type: AVError.AVError.STREAM_VIEW_LOW_FPS };
-                      const tmpResult3 = AVErrorContext;
-                      const merged = Object.assign(tmpResult3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
-                      arr = arr.push(obj);
-                      const tmpResult4 = StreamKeyUtils;
+                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult9.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                      const obj2 = { type: AVError.AVError.STREAM_VIEW_LOW_FPS };
+                      const tmpResult10 = AVErrorContext;
+                      const merged = Object.assign(tmpResult10.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
+                      arr = arr.push(obj2);
+                      const tmpResult11 = StreamKeyUtils;
                     } else {
                       AVErrorUtils;
                     }
-                    tmpResult2 = AVErrorUtils;
+                    tmpResult9 = AVErrorUtils;
                   }
                   return arr;
                 }
+                const tmpResult7 = StreamKeyUtils;
               }
+              const tmpResult = AVErrorUtils;
             }
           }
           return arr;

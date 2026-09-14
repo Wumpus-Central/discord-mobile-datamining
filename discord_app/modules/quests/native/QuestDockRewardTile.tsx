@@ -1,8 +1,8 @@
-// === Module 11900: QuestDockRewardTile ===
+// === Module 11901: QuestDockRewardTile ===
 
-// Module 11900 (QuestDockRewardTile)
+// Module 11901 (QuestDockRewardTile)
 import nativeDefault from "native" /* 576 */;
-import AssetUtils from "AssetUtils" /* 11418 */;
+import AssetUtils from "AssetUtils" /* 11419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -13,11 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
-  let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
-  obj.container = obj;
-  obj.video = { overflow: "hidden", height: "100%", width: "100%" };
-  obj.image = { height: "100%", width: "100%" };
+  const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
   return obj;
 });
 let size = fn(2);
@@ -35,14 +31,15 @@ export default noop.memo(function QuestDockRewardTile(assetUrl) {
   }
   let withAnimation = assetUrl.withAnimation;
   if (withAnimation === undefined) {
-    let obj = assetUrl(height[7]);
-    withAnimation = obj.isIOS();
+    withAnimation = assetUrl(height[7]).isIOS();
+    const obj = assetUrl(height[7]);
   }
   noop = undefined;
-  let obj1 = assetUrl(height[8]);
   const items = [AccessibilityStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = assetUrl(height[8]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp6 = closure_9();
+  const obj2 = assetUrl(height[8]);
+  const tmp3 = assetUrl;
   [tmp8, c4] = width(noop.useState("active" === currentState.currentState), 2);
   const items1 = [isAnimatedAsset];
   const effect = noop.useEffect(() => {
@@ -60,15 +57,15 @@ export default noop.memo(function QuestDockRewardTile(assetUrl) {
     const size = { assetUrl, width, height };
     return AssetUtils.getScaledImageUrl(size);
   }, items2);
-  obj = { accessibilityLabel, style: null, children: null };
+  const obj3 = { accessibilityLabel, style: null, children: null };
   const items3 = [tmp6.container, { height, width }, style];
-  obj.style = items3;
+  obj3.style = items3;
   if (isAnimatedAsset) {
     if (withAnimation) {
-      obj = { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
-      obj1 = { uri: assetUrl };
-      obj.source = obj1;
-      obj.poster = memo;
+      const obj4 = { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
+      const obj5 = { uri: assetUrl };
+      obj4.source = obj5;
+      obj4.poster = memo;
       let tmp14 = !tmp8;
       if (tmp8) {
         tmp14 = flag;
@@ -76,14 +73,13 @@ export default noop.memo(function QuestDockRewardTile(assetUrl) {
       if (!tmp14) {
         tmp14 = stateFromStores;
       }
-      obj.paused = tmp14;
+      obj4.paused = tmp14;
       let tmp11Result = jsx(tmp3(tmp4[10]).VideoComponent, { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true });
     }
-    obj.children = tmp11Result;
-    return <tmp12 {...obj} />;
+    obj3.children = tmp11Result;
+    return <tmp12 {...obj3} />;
   }
   tmp11Result = jsx(isAnimatedAsset(tmp4[11]), { source: { uri: memo }, style: tmp6.image });
-  const obj2 = { source: { uri: memo }, style: tmp6.image };
-  tmp3 = assetUrl;
+  const obj6 = { source: { uri: memo }, style: tmp6.image };
   const tmp7 = width(noop.useState("active" === currentState.currentState), 2);
 });

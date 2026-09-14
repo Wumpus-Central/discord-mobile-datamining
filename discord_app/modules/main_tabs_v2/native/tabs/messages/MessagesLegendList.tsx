@@ -1,15 +1,15 @@
-// === Module 16150: MessagesLegendList ===
+// === Module 16152: MessagesLegendList ===
 
-// Module 16150 (MessagesLegendList)
-import MessagesItemChannel from "MessagesItemChannel" /* 16125 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16135 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16137 */;
-import useMessagesData from "useMessagesData" /* 16140 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16152 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16190 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16191 */;
-import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 16192 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16193 */;
+// Module 16152 (MessagesLegendList)
+import MessagesItemChannel from "MessagesItemChannel" /* 16127 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16137 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16139 */;
+import useMessagesData from "useMessagesData" /* 16142 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16154 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16192 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16193 */;
+import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 16194 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16195 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
@@ -35,10 +35,10 @@ export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHei
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
   const ref = listLeft.useRef(null);
-  data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
-  const friendsHeaderIndex = data.friendsHeaderIndex;
-  const friendsHeaderOffset = data.friendsHeaderOffset;
-  const estimatedHeaderSize = data.listHeaderHeight;
+  const data2 = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
+  const friendsHeaderIndex = data2.friendsHeaderIndex;
+  const friendsHeaderOffset = data2.friendsHeaderOffset;
+  const estimatedHeaderSize = data2.listHeaderHeight;
   let items = [estimatedHeaderSize];
   const imperativeHandle = listLeft.useImperativeHandle(arg1, () => ({
     scrollToTop() {
@@ -62,13 +62,13 @@ export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHei
         if ("separator" === kind) {
           return jsx(MessagesItemSeparatorDefault, {});
         } else if ("friendsHeader" === kind) {
-          let obj = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
+          const obj2 = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
           return jsx(MessagesItemSuggestedFriendsHeaderDefault, { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft });
         } else if ("suggestedFriend" === kind) {
-          obj = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
+          const obj3 = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
           return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendLegend, { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions });
         } else if ("placeholder" === kind) {
-          obj = { row: item.row, height: estimatedItemSize };
+          const obj = { row: item.row, height: estimatedItemSize };
           return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: estimatedItemSize });
         }
       }
@@ -154,5 +154,5 @@ export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHei
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listLeft.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listLeft.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data2.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));

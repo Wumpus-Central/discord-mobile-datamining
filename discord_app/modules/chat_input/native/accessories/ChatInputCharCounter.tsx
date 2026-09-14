@@ -1,6 +1,6 @@
-// === Module 12558: ChatInputCharCounter ===
+// === Module 12559: ChatInputCharCounter ===
 
-// Module 12558 (ChatInputCharCounter)
+// Module 12559 (ChatInputCharCounter)
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
@@ -18,12 +18,11 @@ let closure_10 = createStyles.createStyles({ container: { alignItems: "center", 
 const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
-  let obj = analyticsLocations(504);
-  const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = closure_10();
-  [tmp6, c2] = _slicedToArray(noop.useState(0), 2);
+  const items = [UserStore];
+  const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
+  let obj = analyticsLocations(504);
+  [tmp6, c2] = noop.useState(0);
   const tmp7 = stateFromStores(9433)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
@@ -34,13 +33,13 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   const items1 = [analyticsLocations, stateFromStores, tmp7];
   let tmp10 = null;
   if (tmp6 > 0) {
-    obj = { onPress: tmp9, style: tmp.container, children: null };
-    obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
+    let obj2 = { onPress: tmp9, style: tmp.container, children: null };
+    let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
-    obj.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4632).Text, obj), closure_8(tmp2(8785).NitroWheelIcon, { size: "sm" })];
-    obj.children = items2;
-    tmp10 = closure_9(tmp2(5204).PressableOpacity, obj);
+    obj3.children = "-" + tmp6;
+    const items2 = [closure_8(tmp2(4632).Text, obj3), closure_8(tmp2(8785).NitroWheelIcon, { size: "sm" })];
+    obj2.children = items2;
+    tmp10 = closure_9(tmp2(5204).PressableOpacity, obj2);
   }
   return tmp10;
 });

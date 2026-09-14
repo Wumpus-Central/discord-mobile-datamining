@@ -9,6 +9,8 @@ import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 function canToggleCommunicationDisableOnUser(id, id2) {
   let tmp = items;
   if (items === undefined) {
@@ -25,8 +27,8 @@ function canToggleCommunicationDisableOnUser(id, id2) {
     if (!isNonUserBotResult) {
       let canResult = isGuildOwner(guild, user);
       if (!canResult) {
-        obj = { permission: Permissions.ADMINISTRATOR, user, context: guild };
-        canResult = PermissionUtilsAll.can(obj);
+        const obj4 = { permission: Permissions.ADMINISTRATOR, user, context: guild };
+        canResult = PermissionUtilsAll.can(obj4);
       }
       let canManageUserResult = !canResult;
       if (!canResult) {

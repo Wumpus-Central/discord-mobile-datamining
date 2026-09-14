@@ -1,8 +1,8 @@
-// === Module 11457: AnnouncementChannelLurkerBar ===
+// === Module 11458: AnnouncementChannelLurkerBar ===
 
-// Module 11457 (AnnouncementChannelLurkerBar)
+// Module 11458 (AnnouncementChannelLurkerBar)
 import nativeDefault from "native" /* 576 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11458 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,12 +11,12 @@ class AnnouncementChannelLurkerBar {
     channel = global.channel;
     tmp = closure_5();
     obj = { style: tmp.wrapper, children: null };
-    obj = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
+    obj1 = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
     intl = channel(closure_1[6]).intl;
-    obj.children = intl.string(channel(closure_1[6]).t.Hl0Mqh);
+    obj1.children = intl.string(channel(closure_1[6]).t.Hl0Mqh);
     items = [, ];
-    items[0] = jsx(channel(closure_1[5]).Text, obj);
-    obj1 = {
+    items[0] = jsx(channel(closure_1[5]).Text, obj1);
+    obj4 = {
       onPress() {
             const guildId = channel.getGuildId();
             if (null != guildId) {
@@ -29,8 +29,8 @@ class AnnouncementChannelLurkerBar {
       grow: true
     };
     intl2 = channel(closure_1[6]).intl;
-    obj1.text = intl2.string(channel(closure_1[6]).t["4z5PU1"]);
-    items[1] = jsx(channel(closure_1[7]).Button, obj1);
+    obj4.text = intl2.string(channel(closure_1[6]).t["4z5PU1"]);
+    items[1] = jsx(channel(closure_1[7]).Button, obj4);
     obj.children = items;
     return jsxs(View, obj);
   }
@@ -38,12 +38,9 @@ class AnnouncementChannelLurkerBar {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: null, text: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
-createStyles.wrapper = createStyles;
-createStyles.text = { textAlign: "center", marginBottom: 8 };
-const hasOwnProperty = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 }, text: { textAlign: "center", marginBottom: 8 } };
+const hasOwnProperty = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16768: guild_channels/ChannelTitle ===
+// === Module 16770: guild_channels/ChannelTitle ===
 
-// Module 16768 (guild_channels/ChannelTitle)
+// Module 16770 (guild_channels/ChannelTitle)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ const UnreadSetting = fn(4818).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyleProperties({ muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
-let obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
+const obj = { muted: nativeDefault.colors.TEXT_MUTED, normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: nativeDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
 
@@ -18,8 +18,7 @@ export default noop.memo(function ChannelTitle(unread) {
   unread = unread.unread;
   const resolvedUnreadSetting = unread.resolvedUnreadSetting;
   const connected = unread.connected;
-  let obj = muted(unread[5]);
-  const layoutStyles = obj.getLayoutStyles(unread.layout);
+  const layoutStyles = muted(unread[5]).getLayoutStyles(unread.layout);
   let tmp2 = closure_5();
   const normal = tmp2;
   const items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
@@ -41,10 +40,10 @@ export default noop.memo(function ChannelTitle(unread) {
     }
     return { color, paddingRight: 4, flexShrink: 1 };
   }, items);
-  obj = { variant: layoutStyles.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null };
+  const obj2 = { variant: layoutStyles.channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null };
   if (title == null) {
     title = "";
   }
-  obj.children = title;
-  return normal(muted(unread[6]).Text, obj);
+  obj2.children = title;
+  return normal(muted(unread[6]).Text, obj2);
 });

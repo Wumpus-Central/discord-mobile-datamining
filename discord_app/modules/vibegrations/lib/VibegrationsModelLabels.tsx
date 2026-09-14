@@ -1,6 +1,6 @@
-// === Module 16703: VibegrationsModelLabels ===
+// === Module 16705: VibegrationsModelLabels ===
 
-// Module 16703 (VibegrationsModelLabels)
+// Module 16705 (VibegrationsModelLabels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsModelLabels.tsx");

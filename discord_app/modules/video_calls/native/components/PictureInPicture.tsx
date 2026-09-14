@@ -5,24 +5,26 @@ import spring from "spring" /* 5055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const toggleFocus = fn(9597).toggleFocus;
 const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
 const jsx = fn(21).jsx;
-fn(4636);
+const createStyles = fn(4636);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
-obj = {};
+const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.alignItems = "baseline";
-obj.pipOuterContainer = obj;
-const createStyles = {};
+obj3.alignItems = "baseline";
+obj.pipOuterContainer = obj3;
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.alignItems = "baseline";
-obj.pipInnerContainer = createStyles;
-const native = fn(1178);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+obj4.alignItems = "baseline";
+obj.pipInnerContainer = obj4;
+const native = fn(1176);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1176).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 let closure_9 = createStyles.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
   return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
@@ -44,49 +46,48 @@ export default noop.memo((preferredPosition) => {
   importDefault = undefined;
   let ref;
   const tmp2 = closure_9();
+  const shouldForcePipOrientation = insets(ref[8]).useShouldForcePipOrientation({ channel });
   let obj = insets(ref[8]);
-  const shouldForcePipOrientation = obj.useShouldForcePipOrientation({ channel });
   ({ width, height } = require("useWindowDimensions")());
   insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
-  obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  let size = require("usePipDimensions")(obj);
-  let obj2 = noop;
+  let size = require("usePipDimensions")({ channelId: channel.id, forcedOrientation: shouldForcePipOrientation });
+  let obj2 = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
   const tmp7 = require("useWindowDimensions")();
-  [size2, c1] = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  let obj3 = insets(ref[12]);
+  [size2, c1] = noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 });
+  const tmp8 = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
   const fn = function w() {
-    let obj = { marginTop: insets.top, marginBottom: null };
+    const obj = { marginTop: insets.top, marginBottom: null };
     spring;
     if (typeof getSpringAnimationConfig === "function") {
-      obj = { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined };
-      obj.marginBottom = tmp2(tmp3, obj);
+      const obj2 = { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined };
+      obj.marginBottom = tmp2(tmp3, obj2);
       return obj;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  obj = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
-  fn.__closure = obj;
+  const obj4 = insets(ref[12]);
+  fn.__closure = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
   fn.__workletHash = 16677290574613;
   fn.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj5 = insets(ref[14]);
-  const isViewingActivity = obj5.useIsViewingActivity({ channelId: channel.id });
-  const obj1 = { channelId: channel.id };
-  const tmp8 = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  size = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  const animatedStyle = obj4.useAnimatedStyle(fn);
+  const obj5 = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
+  const isViewingActivity = insets(ref[14]).useIsViewingActivity({ channelId: channel.id });
+  const obj6 = insets(ref[14]);
+  const obj7 = { channelId: channel.id };
+  const size1 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
   let tmp11;
   if (isViewingActivity) {
     tmp11 = toggleFocus;
   }
-  size.onPress = tmp11;
-  const draggablePip = insets(ref[15]).useDraggablePip(size);
+  size1.onPress = tmp11;
+  const draggablePip = insets(ref[15]).useDraggablePip(size1);
   ({ gesture, draggableGridItemStyles } = draggablePip);
-  ref = obj2.useRef(null);
-  obj2 = { style: null, pointerEvents: "box-none", children: null };
+  ref = noop.useRef(null);
+  const obj9 = { style: null, pointerEvents: "box-none", children: null };
   const items = [tmp2.pipOuterContainer, animatedStyle, style];
-  obj2.style = items;
-  obj3 = {
+  obj9.style = items;
+  const obj10 = {
     ref,
     style: tmp2.pipInnerContainer,
     pointerEvents: "box-none",
@@ -101,18 +102,18 @@ export default noop.memo((preferredPosition) => {
     },
     children: null
   };
-  const obj4 = { gesture, children: null };
+  const obj11 = { gesture, children: null };
   const items1 = [draggableGridItemStyles, ];
   const obj8 = insets(ref[15]);
   let elevationShadow;
   if (tmp3Result.isIOS()) {
     elevationShadow = tmp2.elevationShadow;
   }
-  obj5 = { style: items1, children: <closure_5>{children}</closure_5> };
+  tmp3Result = insets(ref[17]);
   items1[1] = elevationShadow;
-  obj4.children = jsx(require("ReanimatedRexport").View, { style: items1, children: <closure_5>{children}</closure_5> });
-  obj3.children = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
-  obj2.children = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
+  obj11.children = jsx(require("ReanimatedRexport").View, { style: items1, children: <closure_5>{children}</closure_5> });
+  obj10.children = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
+  obj9.children = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
     if (null != ref.current) {
       const current = ref.current;
       current.measure((x, y, width, height, pageX, pageY) => {

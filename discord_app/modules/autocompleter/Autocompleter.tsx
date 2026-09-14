@@ -430,8 +430,8 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
           const members = GuildUtilsDefault.requestMembers(arg1, query, 100);
         }
         userSearchContext.setLimit(limit);
-        let obj = { query, filters: userFilters, blacklist: self._userBlacklist, boosters: tmp2 };
-        userSearchContext.setQuery(obj);
+        const obj3 = { query, filters: userFilters, blacklist: self._userBlacklist, boosters: tmp2 };
+        userSearchContext.setQuery(obj3);
       } else {
         const memberListSections = ThreadMemberListStore.getMemberListSections(userFilters.thread);
         const items = [];
@@ -455,7 +455,7 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
               friends = hasItem;
             }
             if (!friends) {
-              obj = { userId: item10019, nick: null };
+              let obj = { userId: item10019, nick: null };
               let tmp14 = tmp30.usersById[item10019];
               let displayName;
               if (tmp14 != null) {
@@ -467,8 +467,8 @@ prototype["queryUsers"] = function queryUsers(query, arg1, limit) {
             continue;
           }
         }
-        obj = { query, users: items, limit, boosters: tmp2, allowSnowflake: options.allowSnowflake };
-        self._userResults = AutocompleteUtilsDefault.queryUsers(obj);
+        const obj5 = { query, users: items, limit, boosters: tmp2, allowSnowflake: options.allowSnowflake };
+        self._userResults = AutocompleteUtilsDefault.queryUsers(obj5);
       }
     }
   }
@@ -494,8 +494,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(query, limit) {
 };
 prototype["queryApplications"] = function queryApplications(query, limit) {
   if (this._include(AutocompleterResultTypes.APPLICATION)) {
-    const obj = { query, limit, fuzzy: true };
-    let queryApplicationsResult = obj.queryApplications(obj);
+    const obj2 = { query, limit, fuzzy: true };
+    let queryApplicationsResult = AutocompleteUtilsDefault.queryApplications(obj2);
   } else {
     queryApplicationsResult = [];
   }
@@ -535,17 +535,14 @@ prototype["refreshGameProfiles"] = function refreshGameProfiles() {
 };
 prototype["queryLink"] = function queryLink(query) {
   if (this._include(AutocompleterResultTypes.LINK)) {
-    let obj = findCodedLinks;
-    const findCodedLinkResult = obj.findCodedLink(query);
+    const findCodedLinkResult = findCodedLinks.findCodedLink(query);
     let type;
     if (findCodedLinkResult != null) {
       type = findCodedLinkResult.type;
     }
     if (type === CodedLink.CodedLinkType.INVITE) {
-      obj = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromInviteCode(findCodedLinkResult.code), score: null };
-      let tmp3Result = AutocompleteUtils;
-      obj.score = tmp3Result.calculateScore(11);
-      const items = [obj];
+      const obj2 = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromInviteCode(findCodedLinkResult.code), score: AutocompleteUtils.calculateScore(11) };
+      const items = [obj2];
       return items;
     } else {
       const sanitizeUrlResult = _modDef4333.sanitizeUrl(query);
@@ -557,26 +554,24 @@ prototype["queryLink"] = function queryLink(query) {
         if (undefined !== hostname) {
           str = hostname;
         }
-        let tmp17Result = URLUtilsDefault;
-        let isDiscordHostnameResult = tmp17Result.isDiscordHostname(str);
+        let isDiscordHostnameResult = URLUtilsDefault.isDiscordHostname(str);
         if (!isDiscordHostnameResult) {
           const _window = window;
           isDiscordHostnameResult = window.location.host === uRL.host;
         }
         if (null !== pathname) {
           if (isDiscordHostnameResult) {
-            tmp17Result = URLUtilsDefault;
-            if (tmp17Result.isAppRoute(pathname)) {
-              obj = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromPath(pathname), score: null };
-              tmp3Result = AutocompleteUtils;
-              obj.score = tmp3Result.calculateScore(11);
-              const items1 = [obj];
+            if (tmp17Result2.isAppRoute(pathname)) {
+              const obj3 = { type: AutocompleterResultTypes.LINK, record: LinkRecord.fromPath(pathname), score: AutocompleteUtils.calculateScore(11) };
+              const items1 = [obj3];
               let items2 = items1;
+              const tmp3Result2 = AutocompleteUtils;
             }
             return items2;
           }
         }
         items2 = [];
+        const tmp17Result = URLUtilsDefault;
       } catch (err) {
         return [];
       }
@@ -587,8 +582,8 @@ prototype["queryLink"] = function queryLink(query) {
 };
 prototype["queryInAppNavigations"] = function queryInAppNavigations(query, limit) {
   if (this._include(AutocompleterResultTypes.IN_APP_NAVIGATION)) {
-    const obj = { query, limit, fuzzy: true };
-    let result = obj.queryInAppNavigations(obj);
+    const obj2 = { query, limit, fuzzy: true };
+    let result = AutocompleteUtilsDefault.queryInAppNavigations(obj2);
   } else {
     result = [];
   }

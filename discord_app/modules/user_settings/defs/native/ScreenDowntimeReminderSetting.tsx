@@ -1,17 +1,17 @@
-// === Module 15601: ScreenDowntimeReminderSetting ===
+// === Module 15602: ScreenDowntimeReminderSetting ===
 
-// Module 15601 (ScreenDowntimeReminderSetting)
+// Module 15602 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7696 */;
 import useUserLinks from "useUserLinks" /* 8768 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15000 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15602 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15001 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15603 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.z6tZKH);
@@ -40,9 +40,8 @@ let SettingBuilders = {
     }
     return isFamilyCenterV3Enabled;
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

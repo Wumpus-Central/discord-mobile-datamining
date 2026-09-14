@@ -20,13 +20,11 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/syst
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let canResult = PermissionStore.can(constants4.MUTE_MEMBERS, ChannelStore.getChannel(message.channel_id));
   const participant = StageChannelParticipantStore.getParticipant(message.channel_id, message.author.id);
-  let obj1 = SnowflakeUtilsDefault;
   let num;
-  const date = new Date(obj1.extractTimestamp(message.id));
+  const date = new Date(SnowflakeUtilsDefault.extractTimestamp(message.id));
   if (participant != null) {
     const voiceState = participant.voiceState;
     if (voiceState != null) {
@@ -36,7 +34,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   if (num == null) {
     num = 0;
   }
-  const toISOStringResult = new Date(obj1.extractTimestamp(message.id)).toISOString();
+  const toISOStringResult = new Date(SnowflakeUtilsDefault.extractTimestamp(message.id)).toISOString();
   const date1 = new Date(num);
   if (canResult) {
     let rtsState;
@@ -48,30 +46,30 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
-  obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
+  const obj3 = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = util.intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj.content = intl.formatToParts(util.t.M87x7Y, obj);
-  obj.showInviteToSpeakButton = canResult;
+  toISOStringResult1 = new Date(num).toISOString();
+  obj3.content = intl.formatToParts(util.t.M87x7Y, { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) });
+  obj3.showInviteToSpeakButton = canResult;
   const intl2 = util.intl;
-  obj.buttonLabel = intl2.string(util.t.f0T7hI);
+  obj3.buttonLabel = intl2.string(util.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {
-      obj1 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
+      const obj5 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
       const intl3 = util.intl;
-      const obj2 = { handleDelete: null };
-      const obj3 = { action: "bindDismissMessage", message };
-      obj2.handleDelete = obj3;
-      obj1.content = intl3.formatToParts(util.t["qDAX++"], obj2);
-      obj1.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.EPHEMERAL_MESSAGES);
+      const obj6 = { handleDelete: null };
+      const obj7 = { action: "bindDismissMessage", message };
+      obj6.handleDelete = obj7;
+      obj5.content = intl3.formatToParts(util.t["qDAX++"], obj6);
+      obj5.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.EPHEMERAL_MESSAGES);
       const intl4 = util.intl;
-      obj1.helpButtonAccessibilityLabel = intl4.string(util.t.htHOrp);
-      tmp10 = obj1;
+      obj5.helpButtonAccessibilityLabel = intl4.string(util.t.htHOrp);
+      tmp10 = obj5;
       const tmp6Result = HelpdeskUtilsDefault;
     }
   }
-  obj.ephemeralIndication = tmp10;
+  obj3.ephemeralIndication = tmp10;
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return obj3;
 };

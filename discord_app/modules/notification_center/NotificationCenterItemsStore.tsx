@@ -97,11 +97,11 @@ function handleRelationshipAddOrUpdate(relationship) {
         if (null == since) {
           return null;
         } else if (null != user) {
-          user = UserStore.getUser(user.id);
-          if (null != user) {
+          const user1 = UserStore.getUser(user.id);
+          if (null != user1) {
             const items = [];
             obj = relationship(user[8]);
-            items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user, since, tmp);
+            items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user1, since, tmp);
             obj.notifCenterLocalItems = items;
             const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
           }
@@ -197,7 +197,7 @@ function handleRelationshipAddOrUpdate(relationship) {
 }
 const isGuildEventEnded = fn(7629).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "Content Location Name", notifCenterTabFocused: true };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -302,7 +302,7 @@ Object.defineProperty(prototype, "tabFocused", {
 });
 NotificationCenterItemsStore.displayName = "NotificationCenterItemsStore";
 NotificationCenterItemsStore.persistKey = "NotificationCenterItemsStore_v2";
-obj = {
+const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
     const items = [];
     const set = new Set();
@@ -369,7 +369,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "Content Location Name", notifCenterTabFocused: true };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -474,20 +474,20 @@ obj = {
         }
         obj.paginationCursor = tmp12;
       }
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterItems, 0);
+      const items1 = [];
       const mapped = items.map(toNotificationCenterItem);
-      arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((id) => {
+      HermesBuiltin.arraySpread(mapped.filter((id) => {
         const notifCenterIds = obj.notifCenterIds;
         return !notifCenterIds.has(id.id);
-      }), arraySpreadResult);
-      obj.notifCenterItems = items;
+      }), HermesBuiltin.arraySpread(obj.notifCenterItems, 0));
+      obj.notifCenterItems = items1;
       const notifCenterItems = obj.notifCenterItems;
       const sorted = notifCenterItems.sort((id, id2) => SnowflakeUtilsDefault.compare(id2.id, id.id));
       const item = items.forEach((id) => {
         const notifCenterIds = obj.notifCenterIds;
         return notifCenterIds.add(id.id);
       });
+      const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterItems, 0);
     }
   },
   RESET_NOTIFICATION_CENTER() {
@@ -495,7 +495,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "Content Location Name", notifCenterTabFocused: true };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -645,7 +645,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "Content Location Name", notifCenterTabFocused: true };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "none", notifCenterTabFocused: "URL" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -685,8 +685,7 @@ obj = {
       });
     }
   }
-};
-const notificationCenterItemsStore = new NotificationCenterItemsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");
 

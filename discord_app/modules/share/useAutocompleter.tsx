@@ -1,6 +1,6 @@
-// === Module 11124: useAutocompleter ===
+// === Module 11125: useAutocompleter ===
 
-// Module 11124 (useAutocompleter)
+// Module 11125 (useAutocompleter)
 import sortByMatchScoreDefault from "sortByMatchScore" /* 9965 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,8 +11,7 @@ const result = size.fileFinishedImporting("modules/share/useAutocompleter.tsx");
 export default function useAutocompleter(searchOptions) {
   searchOptions = searchOptions.searchOptions;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
-  [tmp2, c1] = _slicedToArray(noop.useState({ results: [], query: "" }), 2);
+  [tmp2, c1] = noop.useState({ results: [], query: "" });
   const tmp3 = searchOptions(5679)(() => {
     const obj = new sortByMatchScoreDefault((results, query) => {
       closure_1_1({ results, query });

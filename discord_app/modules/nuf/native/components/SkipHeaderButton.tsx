@@ -1,6 +1,6 @@
-// === Module 12825: SkipHeaderButton ===
+// === Module 12826: SkipHeaderButton ===
 
-// Module 12825 (SkipHeaderButton)
+// Module 12826 (SkipHeaderButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HeaderShared from "HeaderShared" /* 7966 */;
@@ -8,12 +8,9 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { button: null, insideNavigatorButton: null };
-createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createStyles.button = createStyles;
-createStyles.insideNavigatorButton = { paddingRight: 16 };
-let closure_3 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, insideNavigatorButton: { paddingRight: 16 } };
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
 

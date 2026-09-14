@@ -2,7 +2,7 @@
 
 // Module 8535 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -26,8 +26,8 @@ let closure_8 = async function _requestAgeVerification(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -40,8 +40,8 @@ let closure_8 = async function _requestAgeVerification(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -59,20 +59,20 @@ let closure_8 = async function _requestAgeVerification(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           if (obj10.isCurrentUserSuspended()) {
-            const obj2 = { classificationId: closure_129_1, method: closure_129_0 };
+            const obj5 = { classificationId: closure_129_1, method: closure_129_0 };
             c3 = 3;
             c4 = 1;
-            const obj3 = { value: closure_130_17(obj2), done: false };
-            return obj3;
+            const obj6 = { value: closure_130_17(obj5), done: false };
+            return obj6;
           } else {
             c3 = 2;
             c4 = 1;
-            const obj4 = { value: closure_130_10(closure_129_0, closure_129_2), done: false };
-            return obj4;
+            const obj7 = { value: closure_130_10(closure_129_0, closure_129_2), done: false };
+            return obj7;
           }
           obj10 = closure_130_0(closure_130_2[4]);
         }
@@ -83,20 +83,20 @@ let closure_8 = async function _requestAgeVerification(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj8 = { value, done: true };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c4 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj9 = { value, done: true };
+        return obj9;
       }
     } catch (tmp13) {
       c4 = tmp;
@@ -205,8 +205,8 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -219,21 +219,21 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          let obj3 = SafetyHubUtils;
-          if (obj3.isCurrentUserSuspended()) {
+          if (obj4.isCurrentUserSuspended()) {
             c3 = 2;
             c2 = 1;
-            const obj1 = { value: initiateSuspendedUserAgeVerificationV2(closure_0, closure_1), done: false };
-            return obj1;
+            const obj5 = { value: initiateSuspendedUserAgeVerificationV2(closure_0, closure_1), done: false };
+            return obj5;
           } else {
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: initiateAgeVerificationV2(closure_0, closure_1), done: false };
-            return obj2;
+            const obj6 = { value: initiateAgeVerificationV2(closure_0, closure_1), done: false };
+            return obj6;
           }
+          obj4 = SafetyHubUtils;
         }
       } else {
         if (1 === tmp4) {
@@ -242,20 +242,20 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c2 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       }
     } catch (tmp11) {
       c2 = tmp;
@@ -281,8 +281,8 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -295,8 +295,8 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -314,29 +314,29 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           suspendedUserToken = closure_130_4.getSuspendedUserToken();
           const HTTP = closure_130_0(closure_130_2[5]).HTTP;
           const request = { url: closure_130_6.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION, body: null, rejectWithError: true };
-          const obj2 = { token: suspendedUserToken, from_classification_id: closure_129_0, method: closure_129_1 };
-          request.body = obj2;
+          const obj5 = { token: suspendedUserToken, from_classification_id: closure_129_0, method: closure_129_1 };
+          request.body = obj5;
           c3 = 2;
           c4 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c4 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp7) {
@@ -356,8 +356,8 @@ let closure_19 = async function _registerIncodeInterview() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -370,24 +370,24 @@ let closure_19 = async function _registerIncodeInterview() {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.REGISTER_INCODE_INTERVIEW, body: null, rejectWithError: true };
-            const obj1 = { interview_id };
-            request.body = obj1;
+            const obj4 = { interview_id };
+            request.body = obj4;
             c2 = 1;
             c1 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c1 = 3;
@@ -408,8 +408,8 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -422,17 +422,17 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = undefined;
-          let obj1 = closure_0;
+          let obj4 = closure_0;
           if (closure_0 === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          closure_129_0 = obj1;
+          closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
           return { value: "PX_16", done: true };
@@ -443,32 +443,32 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           let tmp8;
           const HTTP = closure_130_0(closure_130_2[5]).HTTP;
           const request = { url: closure_130_6.CREATE_INCODE_SESSION, body: null, rejectWithError: true };
           if (null != closure_129_0.previousInterviewId) {
-            const obj3 = { previous_interview_id: closure_129_0.previousInterviewId };
-            tmp8 = obj3;
+            const obj6 = { previous_interview_id: closure_129_0.previousInterviewId };
+            tmp8 = obj6;
           }
           request.body = tmp8;
           c3 = 2;
           c4 = 1;
-          const obj4 = { value: HTTP.post(request), done: false };
-          return obj4;
+          const obj7 = { value: HTTP.post(request), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c4 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp9) {
@@ -486,14 +486,10 @@ let closure_21 = async function _getAgeVerificationMethods() {
   }
   if (promise != null) {
     promise.then((body) => {
-      closure_1_1(573);
-      const obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
-      obj.dispatch(obj);
+      closure_1_1(573).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods });
     });
     const catchPromise = promise.then((body) => {
-      closure_1_1(573);
-      const obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
-      obj.dispatch(obj);
+      closure_1_1(573).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods });
     }).catch(() => {
       closure_1_1(573).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
     });

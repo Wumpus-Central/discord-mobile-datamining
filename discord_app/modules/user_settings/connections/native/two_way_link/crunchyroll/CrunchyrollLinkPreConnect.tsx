@@ -15,8 +15,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx");
 
 export default function CrunchyrollLinkPreConnect() {
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_8();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -25,11 +25,11 @@ export default function CrunchyrollLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9405, imgStyle: closure_8().image, title: null, body: null, redirectDestination: null };
+  const obj2 = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9405, imgStyle: tmp.image, title: null, body: null, redirectDestination: null };
   const intl = navigation(1114).intl;
-  obj.title = intl.string(navigation(1114).t.siPkNp);
+  obj2.title = intl.string(navigation(1114).t.siPkNp);
   const intl2 = navigation(1114).intl;
-  obj.body = intl2.string(navigation(1114).t.oS4NEH);
-  obj.redirectDestination = redirectDestination;
-  return jsx(navigation(9359).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9405, imgStyle: closure_8().image, title: null, body: null, redirectDestination: null });
+  obj2.body = intl2.string(navigation(1114).t.oS4NEH);
+  obj2.redirectDestination = redirectDestination;
+  return jsx(navigation(9359).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: _modDef9405, imgStyle: tmp.image, title: null, body: null, redirectDestination: null });
 };

@@ -6,6 +6,8 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
 

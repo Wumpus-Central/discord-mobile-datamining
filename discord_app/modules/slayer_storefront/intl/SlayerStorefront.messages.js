@@ -33,10 +33,11 @@ import _mod3488 from "module_3488" /* 3488 */;
 import _mod3489 from "module_3489" /* 3489 */;
 import _mod3490 from "module_3490" /* 3490 */;
 import _mod3491 from "module_3491" /* 3491 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3461);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/slayer_storefront/intl/SlayerStorefront.messages.js");
 
 export default messagesProxy;

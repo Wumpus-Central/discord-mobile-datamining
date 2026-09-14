@@ -6,6 +6,8 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
   let tmp = stateFromStores;

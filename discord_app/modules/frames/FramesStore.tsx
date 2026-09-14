@@ -69,34 +69,33 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
   },
   FRAME_LAUNCH: function handleFrameLaunch(arg0) {
     ({ frameId, hostWindowKey } = arg0);
-    let obj = map;
     ({ proxyTicket, customId, referrerId } = arg0);
     value = map.get(frameId);
     if (null != value) {
       const tmp8 = getURLForApplicationDefault(value.applicationId);
       if (null == tmp8) {
-        obj.delete(frameId);
+        map.delete(frameId);
         if (frameId === frameId) {
           frameId = null;
         }
       } else {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(value);
-        obj.state = "launched";
-        obj = { url: tmp8, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, customId: null, referrerId: null };
+        obj2.state = "launched";
+        const obj3 = { url: tmp8, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, customId: null, referrerId: null };
         const _Date = Date;
-        obj.connectedSince = Date.now();
-        obj.layoutMode = constants2.FOCUSED;
-        obj.activityPanelMode = ActivityPanelModes.PANEL;
-        obj.proxyTicket = proxyTicket;
+        obj3.connectedSince = Date.now();
+        obj3.layoutMode = constants2.FOCUSED;
+        obj3.activityPanelMode = ActivityPanelModes.PANEL;
+        obj3.proxyTicket = proxyTicket;
         if (hostWindowKey == null) {
           hostWindowKey = null;
         }
-        obj.hostWindowKey = hostWindowKey;
-        obj.customId = customId;
-        obj.referrerId = referrerId;
-        obj.data = obj;
-        const result = obj.set(frameId, obj);
+        obj3.hostWindowKey = hostWindowKey;
+        obj3.customId = customId;
+        obj3.referrerId = referrerId;
+        obj2.data = obj3;
+        const result = map.set(frameId, obj2);
       }
     }
   },
@@ -131,19 +130,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.layoutMode = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.layoutMode = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -156,19 +154,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.activityPanelMode = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.activityPanelMode = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -181,27 +178,26 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     ({ frameId, lockState, pictureInPictureLockState } = arg0);
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
           const data = value.data;
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(data);
           if (lockState == null) {
             lockState = null;
           }
-          obj.orientationLock = lockState;
+          obj3.orientationLock = lockState;
           if (undefined === pictureInPictureLockState) {
             pictureInPictureLockState = data.pipOrientationLock;
           }
-          obj.pipOrientationLock = pictureInPictureLockState;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.pipOrientationLock = pictureInPictureLockState;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp4 = flag2;
@@ -214,19 +210,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.prefersPictureInPictureOnNavigateAway = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.prefersPictureInPictureOnNavigateAway = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -239,19 +234,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.proxyTicketRefreshing = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.proxyTicketRefreshing = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -264,19 +258,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.proxyTicket = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.proxyTicket = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -289,21 +282,20 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     ({ frameId, iframeId } = arg0);
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
           const data = value.data;
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(data);
-          obj.iframeId = iframeId;
-          obj.prefersPictureInPictureOnNavigateAway = data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.iframeId = iframeId;
+          obj3.prefersPictureInPictureOnNavigateAway = data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp4 = flag2;
@@ -316,20 +308,19 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = value.data.iframeId === tmp;
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.iframeId = null;
-          obj.prefersPictureInPictureOnNavigateAway = false;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.iframeId = null;
+          obj3.prefersPictureInPictureOnNavigateAway = false;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp4 = flag2;
@@ -342,19 +333,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.hostWindowKey = tmp;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.hostWindowKey = tmp;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -367,19 +357,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
     frameId = frameId.frameId;
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp4 = timestampProducer(value);
       if (tmp4) {
         let flag2 = value.data.hostWindowKey === tmp;
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.hostWindowKey = null;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.hostWindowKey = null;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp4 = flag2;
@@ -391,19 +380,18 @@ const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect() {
     let flag = false;
     if (null != frameId) {
-      let obj = map;
       value = map.get(frameId);
       let tmp5 = timestampProducer(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(value.data);
-          obj.layoutMode = constants2.PIP;
-          obj.data = obj;
-          const result = obj.set(frameId, obj);
+          obj3.layoutMode = constants2.PIP;
+          obj2.data = obj3;
+          const result = map.set(frameId, obj2);
           flag2 = true;
         }
         tmp5 = flag2;

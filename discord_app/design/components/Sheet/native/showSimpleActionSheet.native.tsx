@@ -9,10 +9,11 @@ const result = size.fileFinishedImporting("design/components/Sheet/native/showSi
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   key = key.key;
   const merged = Object.assign(key, Object.assign({ key: 0, stackingBehavior: 0 }));
-  const obj = {};
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.hideActionSheet = function hideActionSheet() {
+  obj2.hideActionSheet = function hideActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
-  obj.openLazy(key(1896)(7299, dependencyMap.paths), key, obj, key.stackingBehavior);
+  obj.openLazy(key(1896)(7299, dependencyMap.paths), key, obj2, key.stackingBehavior);
 };

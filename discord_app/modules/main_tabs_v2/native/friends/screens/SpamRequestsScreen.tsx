@@ -1,13 +1,13 @@
-// === Module 16892: SpamRequestsScreen ===
+// === Module 16894: SpamRequestsScreen ===
 
-// Module 16892 (SpamRequestsScreen)
+// Module 16894 (SpamRequestsScreen)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,15 +19,15 @@ export default function SpamRequestsScreen(navigation) {
   let stateFromStoresArray1;
   let onPress;
   const analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
-  let obj = analyticsLocations(stateFromStoresArray1[8]);
-  const items = [RelationshipStore];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
-  obj = { name: null };
   const tmp = stateFromStoresArray1;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1[6]);
   const tmp3 = analyticsLocations;
-  obj.name = analyticsLocations(stateFromStoresArray1[11]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX;
-  stateFromStoresArray(stateFromStoresArray1[10])(obj);
+  const items = [RelationshipStore];
+  stateFromStoresArray = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
+  const obj2 = { name: null };
+  const obj = analyticsLocations(stateFromStoresArray1[8]);
+  obj2.name = analyticsLocations(stateFromStoresArray1[11]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX;
+  stateFromStoresArray(stateFromStoresArray1[10])(obj2);
   const tmp5 = stateFromStoresArray(stateFromStoresArray1[10]);
   const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
@@ -44,9 +44,9 @@ export default function SpamRequestsScreen(navigation) {
 
   }, []);
   if (0 !== stateFromStoresArray1.length) {
-    obj = { getItemProps: tmp9, getSectionProps: callback1, sections: null };
+    const obj4 = { getItemProps: tmp9, getSectionProps: callback1, sections: null };
     const items5 = [stateFromStoresArray1.length];
-    obj.sections = items5;
+    obj4.sections = items5;
     return jsx(tmp3(tmp[13]).UsersFastList, { getItemProps: tmp9, getSectionProps: callback1, sections: null });
   } else {
     navigation.goBack();

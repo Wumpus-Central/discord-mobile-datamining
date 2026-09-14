@@ -1,6 +1,6 @@
-// === Module 17485: GuildOnboardingManager ===
+// === Module 17487: GuildOnboardingManager ===
 
-// Module 17485 (GuildOnboardingManager)
+// Module 17487 (GuildOnboardingManager)
 import doGuildOnboardingDefault from "doGuildOnboarding" /* 7198 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -12,7 +12,7 @@ const GuildFeatures = fn(1074).GuildFeatures;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 let guildId = null;
 const channelId = null;
-let prototype = function GuildOnboardingManager() {
+const prototype = function GuildOnboardingManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -66,12 +66,12 @@ let prototype = function GuildOnboardingManager() {
         selfMember = selfMember.getSelfMember(guildId);
         let hasFlagResult = null != selfMember;
         if (hasFlagResult) {
-          let obj = applyArgumentsResult(1384);
           let num = selfMember.flags;
           if (num == null) {
             num = 0;
           }
-          hasFlagResult = !obj.hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          hasFlagResult = !applyArgumentsResult(1384).hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          const obj = applyArgumentsResult(1384);
         }
         if (hasFlagResult) {
           let num2 = selfMember.flags;
@@ -82,8 +82,8 @@ let prototype = function GuildOnboardingManager() {
           const obj2 = applyArgumentsResult(1384);
         }
         if (hasFlagResult) {
-          obj = { guildId };
-          doGuildOnboardingDefault(obj);
+          const obj3 = { guildId };
+          doGuildOnboardingDefault(obj3);
         }
       }
     }
@@ -92,8 +92,8 @@ let prototype = function GuildOnboardingManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
-export default prototype;
+export default prototype1;

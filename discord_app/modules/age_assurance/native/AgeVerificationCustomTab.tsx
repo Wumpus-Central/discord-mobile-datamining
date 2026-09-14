@@ -2,7 +2,7 @@
 
 // Module 8542 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -49,8 +49,8 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -63,8 +63,8 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -72,14 +72,13 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
             if (obj9.isAndroid()) {
               subscribeToClose();
               c7 = true;
-              const obj1 = { isOpen: true, copy };
-              state.setState(obj1);
+              const obj4 = { isOpen: true, copy };
+              state.setState(obj4);
               c5 = 1;
-              let obj4 = NativeBrowserManagerModuleDefault;
               c6 = 2;
               c7 = 1;
-              const obj2 = { value: withTimeout(obj4.openTrackedCustomTab(closure_0)), done: false };
-              return obj2;
+              const obj6 = { value: withTimeout(NativeBrowserManagerModuleDefault.openTrackedCustomTab(closure_0)), done: false };
+              return obj6;
             } else {
               c7 = 3;
               return { value: false, done: true };
@@ -89,8 +88,8 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_1 = closure_4;
-          const obj3 = { error: closure_130_1 };
-          closure_131_4.warn("Failed to open the verification Custom Tab", obj3);
+          const obj7 = { error: closure_130_1 };
+          closure_131_4.warn("Failed to open the verification Custom Tab", obj7);
           closure_131_12();
           c7 = 3;
           return { value: false, done: true };
@@ -100,8 +99,8 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_130_0 = value;
           if (!closure_130_0) {
@@ -109,7 +108,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
           }
           c5 = 0;
           c7 = 3;
-          obj = { value: closure_130_0, done: true };
+          const obj = { value: closure_130_0, done: true };
           return obj;
         }
       } catch (tmp29) {
@@ -132,8 +131,8 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -146,19 +145,18 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           if (obj7.isAndroid()) {
             if (!getIsAgeVerificationCustomTabOpen()) {
               c3 = 1;
-              let obj2 = NativeBrowserManagerModuleDefault;
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: withTimeout(obj2.resumeTrackedCustomTab()), done: false };
-              return obj1;
+              const obj5 = { value: withTimeout(NativeBrowserManagerModuleDefault.resumeTrackedCustomTab()), done: false };
+              return obj5;
             }
           }
           obj7 = PlatformUtils;
@@ -167,8 +165,8 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
         if (1 === tmp7) {
           c3 = 0;
           closure_128_0 = closure_2;
-          obj2 = { error: closure_128_0 };
-          closure_129_4.warn("Failed to resume the verification Custom Tab", obj2);
+          const obj6 = { error: closure_128_0 };
+          closure_129_4.warn("Failed to resume the verification Custom Tab", obj6);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
@@ -186,7 +184,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
         }
         c3 = 0;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c5 = 3;
@@ -241,10 +239,9 @@ export const resumeAgeVerificationCustomTab = function resumeAgeVerificationCust
   return applyArgumentsResult;
 };
 export const setAgeVerificationCustomTabCopy = function setAgeVerificationCustomTabCopy(copy) {
-  let obj = closure_6;
   if (closure_6.getState().isOpen) {
-    obj = { copy };
-    obj.setState(obj);
+    const obj2 = { copy };
+    closure_6.setState(obj2);
   }
 };
 export { releaseAgeVerificationCustomTab };

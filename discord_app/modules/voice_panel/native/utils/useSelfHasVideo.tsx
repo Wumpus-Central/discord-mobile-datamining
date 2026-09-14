@@ -1,10 +1,12 @@
-// === Module 17194: useSelfHasVideo ===
+// === Module 17196: useSelfHasVideo ===
 
-// Module 17194 (useSelfHasVideo)
+// Module 17196 (useSelfHasVideo)
 import participantHasVideo from "participantHasVideo" /* 9752 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);

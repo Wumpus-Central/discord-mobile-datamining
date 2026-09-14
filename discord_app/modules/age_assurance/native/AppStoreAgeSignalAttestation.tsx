@@ -1,7 +1,7 @@
 // === Module 8689: AppStoreAgeSignalAttestation ===
 
 // Module 8689 (AppStoreAgeSignalAttestation)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8690 */;
 import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 8691 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -69,8 +69,8 @@ let closure_7 = async function _getAgeSignalChallenge() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -83,20 +83,20 @@ let closure_7 = async function _getAgeSignalChallenge() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj2 = PlatformUtils;
-          if (obj2.isAndroid()) {
+          if (obj3.isAndroid()) {
             c2 = 1;
             c1 = 2;
             c0 = 1;
-            const obj1 = { value: AppStoreAgeSignalActionCreators.requestAgeSignalChallenge(), done: false };
-            return obj1;
+            const obj5 = { value: AppStoreAgeSignalActionCreators.requestAgeSignalChallenge(), done: false };
+            return obj5;
           } else {
             c0 = 3;
             return { value: "HermesInternal", done: null };
           }
+          obj3 = PlatformUtils;
         }
       } else if (1 === tmp6) {
         c2 = 0;
@@ -108,12 +108,12 @@ let closure_7 = async function _getAgeSignalChallenge() {
       } else if (arg0 === 2) {
         c2 = 0;
         c0 = 3;
-        obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         c2 = 0;
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp9) {
@@ -134,8 +134,8 @@ let closure_8 = async function _getAgeSignalIntegrityToken(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -148,12 +148,12 @@ let closure_8 = async function _getAgeSignalIntegrityToken(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else if (null != closure_0) {
           c3 = 1;
           c2 = 1;
-          const obj1 = {
+          const obj4 = {
             value: (function requestPlayIntegrityToken() {
                       const self = this;
                       const apply = closure_1_6.apply;
@@ -166,7 +166,7 @@ let closure_8 = async function _getAgeSignalIntegrityToken(arg0) {
                     })(buildRequestHashPayload(tmp5, tmp6)),
             done: false
           };
-          return obj1;
+          return obj4;
         } else {
           c2 = 3;
           return { value: "HermesInternal", done: null };
@@ -176,11 +176,11 @@ let closure_8 = async function _getAgeSignalIntegrityToken(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         c2 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp9) {

@@ -1,14 +1,14 @@
-// === Module 15332: AutoVoiceSensitivitySetting ===
+// === Module 15333: AutoVoiceSensitivitySetting ===
 
-// Module 15332 (AutoVoiceSensitivitySetting)
+// Module 15333 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
@@ -20,17 +20,15 @@ let SettingBuilders = {
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     const mode = MediaEngineStore.getMode();
-    const obj = { autoThreshold };
-    obj.setMode(mode, obj);
+    AudioActionCreatorsDefault.setMode(mode, { autoThreshold });
   },
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

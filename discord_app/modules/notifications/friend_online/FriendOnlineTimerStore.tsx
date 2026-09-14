@@ -1,12 +1,12 @@
-// === Module 17924: FriendOnlineTimerStore ===
+// === Module 17925: FriendOnlineTimerStore ===
 
-// Module 17924 (FriendOnlineTimerStore)
+// Module 17925 (FriendOnlineTimerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 
 const HOUR = DurationsDefault.Millis.HOUR;
-let obj = { lastReportedAtMs: null };
+const obj = { lastReportedAtMs: null };
 let closure_2 = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class FriendOnlineTimerStore extends PersistedStore {
@@ -35,13 +35,12 @@ prototype["getState"] = function getState() {
 };
 FriendOnlineTimerStore.displayName = "FriendOnlineTimerStore";
 FriendOnlineTimerStore.persistKey = "FriendOnlineTimerStore";
-obj = {
+const friendOnlineTimerStore = new FriendOnlineTimerStore(DispatcherDefault, {
   FRIEND_ONLINE_TIMER_REPORTED: function setLastReportedAtMs(timestampMs) {
     closure_2.lastReportedAtMs = timestampMs.timestampMs;
     return true;
   }
-};
-const friendOnlineTimerStore = new FriendOnlineTimerStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 14055: GuildPopoutStore ===
+// === Module 14056: GuildPopoutStore ===
 
-// Module 14055 (GuildPopoutStore)
+// Module 14056 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7444 */;
@@ -48,12 +48,12 @@ const guildPopoutStore = new GuildPopoutStore(DispatcherDefault, {
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     guildId = guildId.guildId;
-    const obj = {};
-    const discoverableGuild = obj.makeDiscoverableGuild(guildId.guild);
+    const obj2 = {};
+    const discoverableGuild = GuildDiscoveryUtils.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);
-    obj.guild = discoverableGuild;
-    obj.fetchState = constants.SUCCEEDED;
-    closure_4.guilds[guildId] = obj;
+    obj2.guild = discoverableGuild;
+    obj2.fetchState = constants.SUCCEEDED;
+    closure_4.guilds[guildId] = obj2;
   },
   GUILD_POPOUT_FETCH_FAILURE: function handleFetchFailure(guildId) {
     guildId = guildId.guildId;

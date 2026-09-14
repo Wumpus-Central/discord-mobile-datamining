@@ -1,9 +1,11 @@
-// === Module 13594: Tier048Px ===
+// === Module 13595: Tier048Px ===
 
-// Module 13594 (Tier048Px)
+// Module 13595 (Tier048Px)
 import shared from "shared" /* 4488 */;
 import _mod8349 from "module_8349" /* 8349 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const Image = fn(17).Image;
@@ -12,48 +14,47 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
 
 export const getTier048PxSource = function getTier048PxSource(theme) {
-  const obj = {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("module_13595");
-    },
-    darker() {
       return require("module_13596");
     },
-    light() {
+    darker() {
       return require("module_13597");
+    },
+    light() {
+      return require("module_13598");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useTier048PxSource = function useTier048PxSource() {
-  const obj = {
+  const obj = shared;
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13595");
-    },
-    darker() {
       return require("module_13596");
     },
-    light() {
+    darker() {
       return require("module_13597");
+    },
+    light() {
+      return require("module_13598");
     }
-  };
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const Tier048Px = function Tier048Px(arg0) {
-  let obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13595");
-    },
-    darker() {
       return require("module_13596");
     },
-    light() {
+    darker() {
       return require("module_13597");
+    },
+    light() {
+      return require("module_13598");
     }
-  };
-  obj = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

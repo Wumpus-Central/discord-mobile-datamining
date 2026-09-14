@@ -10,13 +10,14 @@ require = fn;
 function openGuildEventDetails(arg0) {
   ({ event, recurrenceId } = arg0);
   ({ eventId, onClose } = arg0);
-  const obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
   if (recurrenceId == null) {
     recurrenceId = ScheduleUtils.getNextRecurrenceIdInEvent(event);
     const tmp2Result = ScheduleUtils;
   }
-  obj.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(9920, dependencyMap.paths), closure_5, obj, "stack");
+  obj2.recurrenceId = recurrenceId;
+  obj.openLazy(asyncRequireImpl(9920, dependencyMap.paths), closure_5, obj2, "stack");
   const tmp3 = asyncRequireImpl(9920, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
@@ -27,8 +28,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -41,8 +42,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -50,18 +51,18 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
           closure_130_1 = closure_1;
           c4 = 1;
           c5 = 1;
-          const obj1 = { value: Promise.resolve(), done: false };
-          return obj1;
+          const obj4 = { value: Promise.resolve(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        obj = { eventId: closure_130_0.id, event: closure_130_0, recurrenceId: null };
+        const obj = { eventId: closure_130_0.id, event: closure_130_0, recurrenceId: null };
         let recurrenceId;
         if (closure_130_1 != null) {
           recurrenceId = closure_130_1.recurrenceId;
@@ -94,6 +95,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  const obj = { channel };
-  obj.openLazy(asyncRequireImpl(9935, dependencyMap.paths), closure_4, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9935, dependencyMap.paths), closure_4, { channel });
 };

@@ -1,27 +1,29 @@
-// === Module 16991: MessageRequestPreview ===
+// === Module 16993: MessageRequestPreview ===
 
-// Module 16991 (MessageRequestPreview)
+// Module 16993 (MessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
-import TextStyles from "TextStyles" /* 5605 */;
+import TextStyles_mod from "TextStyles" /* 5605 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-fn(4636);
+const createStyles = fn(4636);
 let obj = { systemContent: null, messageContent: null };
-obj = { fontStyle: "italic" };
+let obj3 = { fontStyle: "italic" };
+let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 12));
-obj.lineHeight = 16;
-obj.systemContent = obj;
-const createStyles = {};
+obj3.lineHeight = 16;
+obj.systemContent = obj3;
+const obj4 = {};
+let TextStyles = TextStyles_mod;
 const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 12));
-createStyles.lineHeight = 16;
-obj.messageContent = createStyles;
+obj4.lineHeight = 16;
+obj.messageContent = obj4;
 let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
@@ -29,10 +31,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  let obj = channel(12723);
-  const messageRequestPreview = obj.useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(12724).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
+  let obj = channel(12724);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -52,10 +54,10 @@ export default noop.memo(function MessageRequestPreview(channel) {
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   const effect = noop.useEffect(() => {
     if (null != message) {
-      const obj = { is_spam: null, channel_id: null, other_user_id: null };
+      const obj3 = { is_spam: null, channel_id: null, other_user_id: null };
       ({ isSpam: obj2.is_spam, id: obj2.channel_id } = channel);
-      obj.other_user_id = tmp.author.id;
-      obj.track(constants.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+      obj3.other_user_id = tmp.author.id;
+      AnalyticsUtilsDefault.track(constants.MESSAGE_REQUEST_PREVIEW_VIEWED, obj3);
     }
   }, items2);
   if (error) {
@@ -128,6 +130,6 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
     }
   }
-  obj = { style: channel.style, children: jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={channel.style}>{jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={channel.style}>{jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });

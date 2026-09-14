@@ -1,10 +1,10 @@
-// === Module 16421: TypingSubtitle ===
+// === Module 16423: TypingSubtitle ===
 
-// Module 16421 (TypingSubtitle)
+// Module 16423 (TypingSubtitle)
 import Text_Text from "Text/Text" /* 4632 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
 import TextIcon from "TextIcon" /* 5161 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 16420 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 16422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,8 +17,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 export default function TypingSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
-  let obj = useSubtitleStyles;
-  const subtitleStyles = obj.useSubtitleStyles();
+  const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
     channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
@@ -27,24 +26,24 @@ export default function TypingSubtitle(arg0) {
   if (channelIconComponentWithGuild == null) {
     channelIconComponentWithGuild = TextIcon.TextIcon;
   }
-  obj = { style: subtitleStyles.subtitleRow, children: null };
+  const obj2 = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
   if (null != channelName) {
-    obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-    tmp7 = React3(channelIconComponentWithGuild, obj);
+    const obj3 = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
+    tmp7 = React3(channelIconComponentWithGuild, obj3);
   }
   const items = [tmp7, ];
-  const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   let tmp5Result = null;
   if (null != channelName) {
-    const obj2 = { variant: "text-xs/medium", children: null };
+    const obj5 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
-    obj2.children = items1;
-    tmp5Result = React4(Text_Text.Text, obj2);
+    obj5.children = items1;
+    tmp5Result = React4(Text_Text.Text, obj5);
   }
   const items2 = [tmp5Result, text];
-  obj1.children = items2;
-  items[1] = React4(Text_Text.Text, obj1);
-  obj.children = items;
-  return React4(View, obj);
+  obj4.children = items2;
+  items[1] = React4(Text_Text.Text, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 };

@@ -1,8 +1,10 @@
-// === Module 10436: getEmojiPickerDataRowItemSlimEmoji ===
+// === Module 10437: getEmojiPickerDataRowItemSlimEmoji ===
 
-// Module 10436 (getEmojiPickerDataRowItemSlimEmoji)
+// Module 10437 (getEmojiPickerDataRowItemSlimEmoji)
 import EmojiTypes from "EmojiTypes" /* 4292 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
 
@@ -12,27 +14,27 @@ export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked)
   const emojis = isSectionNitroLocked.emojis;
   obj.emojis = emojis.map((type) => {
     if (type.type === EmojiTypes.EmojiTypes.UNICODE) {
-      let obj = { name: null, surrogates: null };
       ({ name: obj5.name, surrogates: obj5.surrogates } = type);
-      return obj;
+      return { name: null, surrogates: null };
     } else {
       const emojisDisabled = isSectionNitroLocked.emojisDisabled;
       const hasItem = emojisDisabled.has(type.id);
       if (type.animated) {
         if (hasItem) {
-          obj = { id: null, name: null, animated: true, disabled: true };
           ({ id: obj4.id, name: obj4.name } = type);
+          let obj = { id: null, name: null, animated: true, disabled: true };
+          const obj10 = { id: null, name: null, animated: true, disabled: true };
         }
         return obj;
       }
       if (type.animated) {
         ({ id: obj3.id, name: obj3.name } = type);
         obj = { id: null, name: null, animated: true };
-        const obj1 = { id: null, name: null, animated: true };
+        const obj11 = { id: null, name: null, animated: true };
       } else if (hasItem) {
-        const obj2 = { id: null, name: null, disabled: true };
         ({ id: obj2.id, name: obj2.name } = type);
-        obj = obj2;
+        obj = { id: null, name: null, disabled: true };
+        const obj12 = { id: null, name: null, disabled: true };
       } else {
         obj = { id: null, name: null };
         ({ id: obj.id, name: obj.name } = type);

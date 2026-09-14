@@ -3,7 +3,7 @@
 // Module 7447 (SoundboardUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
@@ -15,10 +15,12 @@ import useMuteStates from "useMuteStates" /* 7448 */;
 import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7449 */;
 import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
 import SoundboardStore from "SoundboardStore" /* 5093 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function hasPermissionToPlaySound(guildId, guild_id) {
@@ -89,8 +91,7 @@ function canUseSoundboardSound(stateFromStores, guildId, guild_id) {
   return result;
 }
 function canMakeSound(channel) {
-  const obj = { channel };
-  const muteStates = obj.getMuteStates(obj);
+  const muteStates = useMuteStates.getMuteStates({ channel });
   const mute = muteStates.mute;
   let tmp2 = !mute;
   if (!mute) {
@@ -106,8 +107,8 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -120,8 +121,8 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           dependencyMap = tmp3;
           closure_1 = tmp2;
@@ -140,14 +141,13 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
             if (!set.has(tmp52.type)) {
               if (null != customJoinSound) {
                 if (tmp50Result.canUseCustomCallSounds(currentUser)) {
-                  let tmp53Result = require("canChannelUseSoundboard");
                   if (tmp53Result.canSelectedVoiceChannelUseSoundboard()) {
-                    tmp53Result = require("SoundboardActionCreators");
                     c3 = 1;
                     c4 = 1;
-                    const obj1 = { value: tmp53Result.maybeFetchSoundboardSounds(), done: false };
-                    return obj1;
+                    const obj4 = { value: require("SoundboardActionCreators").maybeFetchSoundboardSounds(), done: false };
+                    return obj4;
                   }
+                  tmp53Result = require("canChannelUseSoundboard");
                 }
                 tmp50Result = PremiumUtilsDefault;
               }
@@ -160,8 +160,8 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         if (closure_129_2.guildId === closure_130_9) {
           let guildId = closure_130_10;
@@ -186,7 +186,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
             }
           }
           c4 = 3;
-          obj = { value: tmp23, done: true };
+          let obj = { value: tmp23, done: true };
           return obj;
         }
       }
@@ -203,7 +203,7 @@ const SoundboardConstants = fn(5095);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
 const Constants = fn(1074);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
@@ -223,21 +223,20 @@ export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
 export const playSound = function playSound(soundId, id, items, arg3) {
-  let obj = SoundboardActionCreators;
-  obj.playSoundLocally(id, soundId);
+  SoundboardActionCreators.playSoundLocally(id, soundId);
   const result = VoiceChannelEffectsActionCreators.sendVoiceChannelSoundboardEffect(id, soundId, false, items, arg3);
-  obj = { type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId };
-  DispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId });
 };
 export const hasSetAnyCustomJoinSound = function hasSetAnyCustomJoinSound() {
-  let guilds;
+  const guilds = UserSettingsProtoStore.settings.guilds;
+  let guilds1;
   if (guilds != null) {
-    guilds = guilds.guilds;
+    guilds1 = guilds.guilds;
   }
-  if (guilds == null) {
-    guilds = {};
+  if (guilds1 == null) {
+    guilds1 = {};
   }
-  const values = Object.values(guilds);
+  const values = Object.values(guilds1);
   return values.some((joinSound) => null != joinSound.joinSound);
 };
 export const maybePlayCustomJoinSound = function maybePlayCustomJoinSound() {
@@ -259,15 +258,16 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
   const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [];
   if (!flag) {
-    let guilds;
+    const guilds = UserSettingsProtoStore.settings.guilds;
+    let guilds1;
     if (guilds != null) {
-      guilds = guilds.guilds;
+      guilds1 = guilds.guilds;
     }
-    if (guilds == null) {
-      guilds = {};
+    if (guilds1 == null) {
+      guilds1 = {};
     }
     const _Object = Object;
-    const values = Object.values(guilds);
+    const values = Object.values(guilds1);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
       const result = UserUtils.ageEligibleForPremiumUpsell(stateFromStores);
       const tmpResult = UserUtils;
@@ -283,20 +283,20 @@ export const removeCustomJoinSound = function removeCustomJoinSound(guildId, _lo
   _require = guildId;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(guildId, (arg0) => {
     arg0.joinSound = undefined;
-    let obj = { guildId, changeType: SoundboardTypes.AnalyticsChangeType.REMOVED, soundType: SoundboardTypes.AnalyticsSoundType.ENTRY, location: _location };
+    const obj = { guildId, changeType: SoundboardTypes.AnalyticsChangeType.REMOVED, soundType: SoundboardTypes.AnalyticsSoundType.ENTRY, location: _location };
     guildId = obj.guildId;
     ({ changeType, soundType, soundSource, location: _location } = obj);
-    obj = { location_stack: _location, guild_id: null, change_type: null, sound_type: null, sound_source: null };
+    const obj3 = { location_stack: _location, guild_id: null, change_type: null, sound_type: null, sound_source: null };
     let num = 0;
     if ("" !== guildId) {
       const _Number = Number;
       num = Number(guildId);
     }
-    obj.guild_id = num;
-    obj.change_type = changeType;
-    obj.sound_type = soundType;
-    obj.sound_source = soundSource;
-    AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
+    obj3.guild_id = num;
+    obj3.change_type = changeType;
+    obj3.sound_type = soundType;
+    obj3.sound_source = soundSource;
+    AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj3);
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateCustomJoinSound = function updateCustomJoinSound(guildId, guildId, location_stack) {
@@ -317,17 +317,17 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
       ADDED = tmp6(5101).AnalyticsChangeType.ADDED;
     }
     joinSound.joinSound = { soundId: guildId.soundId, guildId: guildId.guildId === closure_2_10 ? React7 : guildId.guildId };
-    const obj = { location_stack, guild_id: null, change_type: null, sound_type: null, sound_source: null };
+    const obj2 = { location_stack, guild_id: null, change_type: null, sound_type: null, sound_source: null };
     let num = 0;
     if ("" !== closure_0) {
       const _Number = Number;
       num = Number(closure_0);
     }
-    obj.guild_id = num;
-    obj.change_type = ADDED;
-    obj.sound_type = tmp6(5101).AnalyticsSoundType.ENTRY;
-    obj.sound_source = CUSTOM;
-    obj.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
+    obj2.guild_id = num;
+    obj2.change_type = ADDED;
+    obj2.sound_type = tmp6(5101).AnalyticsSoundType.ENTRY;
+    obj2.sound_source = CUSTOM;
+    AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
   }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSoundExternallyDeleted(location_stack) {
@@ -335,6 +335,5 @@ export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSou
 };
 export const trackSoundFavorited = function trackSoundFavorited(location) {
   const sound = location.sound;
-  const obj = { location: location.location, expression_type: ExpressionPickerViewType.SOUNDBOARD, expression_id: sound.soundId, expression_name: sound.name, expression_guild_id: sound.guildId };
-  obj.trackWithMetadata(constants2.EXPRESSION_FAVORITED, obj);
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants2.EXPRESSION_FAVORITED, { location: location.location, expression_type: ExpressionPickerViewType.SOUNDBOARD, expression_id: sound.soundId, expression_name: sound.name, expression_guild_id: sound.guildId });
 };

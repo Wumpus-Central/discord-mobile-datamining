@@ -1,10 +1,10 @@
-// === Module 12375: ChatInputActionButtonTransitionItem ===
+// === Module 12376: ChatInputActionButtonTransitionItem ===
 
-// Module 12375 (ChatInputActionButtonTransitionItem)
+// Module 12376 (ChatInputActionButtonTransitionItem)
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12376 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12377 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -15,16 +15,15 @@ function FadeTransitionItem(state) {
   const cleanup = state.cleanup;
   let sharedValue;
   const tmp3 = state === state(sharedValue[4]).TransitionStates.YEETED;
-  let obj = state(sharedValue[5]);
   let num = 1;
   if (tmp3) {
     num = 0;
   }
-  sharedValue = obj.useSharedValue(num);
+  sharedValue = state(sharedValue[5]).useSharedValue(num);
   const items = [state, sharedValue, cleanup];
   const effect = noop.useEffect(() => {
     if (state === native.TransitionStates.YEETED) {
-      let tmpResult = timing;
+      const tmpResult = timing;
       const fn = function t(arg0) {
         if (true === arg0) {
           state(sharedValue[5]).runOnJS(cleanup)();
@@ -37,10 +36,11 @@ function FadeTransitionItem(state) {
       fn.__initData = __initData;
       const result = sharedValue.set(tmpResult.withTiming(0, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings", fn));
     } else {
-      tmpResult = timing;
-      const result1 = sharedValue.set(tmpResult.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
+      const result1 = sharedValue.set(timing.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
+      const tmpResult2 = timing;
     }
   }, items);
+  let obj = state(sharedValue[5]);
   class T {
     constructor() {
       obj = { opacity: closure_2.get() };
@@ -51,47 +51,47 @@ function FadeTransitionItem(state) {
   T.__workletHash = 13386937038500;
   T.__initData = __initData;
   const animatedStyle = state(sharedValue[5]).useAnimatedStyle(T);
-  obj = { style: null };
+  const obj2 = { style: null };
   const items1 = [closure_6.transitionItem, animatedStyle];
-  obj.style = items1;
+  obj2.style = items1;
   let str = "none";
   if (!tmp3) {
     str = "auto";
   }
-  obj = { pointerEvents: str, accessibilityElementsHidden: !tmp8, importantForAccessibility: null };
+  const obj3 = { pointerEvents: str, accessibilityElementsHidden: !!tmp3, importantForAccessibility: null };
   let str2 = "no-hide-descendants";
   if (!tmp3) {
     str2 = "auto";
   }
-  obj.importantForAccessibility = str2;
-  const merged = Object.assign(obj);
-  obj.children = state.children;
-  return jsx(cleanup(sharedValue[5]).View, { pointerEvents: str, accessibilityElementsHidden: !tmp8, importantForAccessibility: null });
+  obj3.importantForAccessibility = str2;
+  const merged = Object.assign(obj3);
+  obj2.children = state.children;
+  return jsx(cleanup(sharedValue[5]).View, { style: null });
 }
 function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
-  let obj = { visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs: bounceEnterDelayMs, onExitComplete: cleanup, interactiveDuringEnter: true };
+  const obj = { visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs: bounceEnterDelayMs, onExitComplete: cleanup, interactiveDuringEnter: true };
   ({ isInteractive, animatedStyle } = useChatInputFloatingBounceDefault(obj));
-  obj = { style: null };
+  const obj2 = { style: null };
   const items = [closure_6.transitionItemCentered, animatedStyle];
-  obj.style = items;
+  obj2.style = items;
   let str = "none";
   if (isInteractive) {
     str = "auto";
   }
-  obj = { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null };
+  const obj3 = { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null };
   let str2 = "no-hide-descendants";
   if (isInteractive) {
     str2 = "auto";
   }
-  obj.importantForAccessibility = str2;
-  const merged = Object.assign(obj);
-  obj.children = children;
-  return jsx(ReanimatedRexportDefault.View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
+  obj3.importantForAccessibility = str2;
+  const merged = Object.assign(obj3);
+  obj2.children = children;
+  return jsx(ReanimatedRexportDefault.View, { style: null });
 }
 const StyleSheet = fn(17).StyleSheet;
-const CHAT_INPUT_TIMING_CONFIG = fn(12091).CHAT_INPUT_TIMING_CONFIG;
+const CHAT_INPUT_TIMING_CONFIG = fn(12092).CHAT_INPUT_TIMING_CONFIG;
 const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };
@@ -109,10 +109,10 @@ export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) 
     num = 0;
   }
   if (withBounce) {
-    let obj = { state, cleanup, bounceEnterDelayMs: num, children };
+    const obj2 = { state, cleanup, bounceEnterDelayMs: num, children };
     let tmpResult = <BounceTransitionItem state={state} cleanup={cleanup} bounceEnterDelayMs={num}>{children}</BounceTransitionItem>;
   } else {
-    obj = { state, cleanup, children };
+    const obj = { state, cleanup, children };
     tmpResult = <FadeTransitionItem state={state} cleanup={cleanup}>{children}</FadeTransitionItem>;
   }
   return tmpResult;

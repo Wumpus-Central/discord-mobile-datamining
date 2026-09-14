@@ -1,7 +1,7 @@
 // === Module 8866: GuildBadgeV2 ===
 
 // Module 8866 (GuildBadgeV2)
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import shared from "shared" /* 4488 */;
 import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8867 */;
 import BadgeCategory from "BadgeCategory" /* 8868 */;

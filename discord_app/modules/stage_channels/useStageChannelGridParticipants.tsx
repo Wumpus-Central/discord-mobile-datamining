@@ -9,6 +9,8 @@ import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5499 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const constants = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
 const size = fn(2);

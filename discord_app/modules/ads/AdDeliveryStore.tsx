@@ -134,7 +134,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
           decision_id = adDecisionData.decision_id;
         }
         if (null != decision_id) {
-          let obj = { decisionId: adDecisionData.decision_id, metadataSealed, trafficMetadataSealed, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
+          const obj = { decisionId: adDecisionData.decision_id, metadataSealed, trafficMetadataSealed, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
           const result1 = map.set(placement, obj);
         }
         value = map3.get(placement);
@@ -145,11 +145,11 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         if (creative == null) {
           creative = null;
         }
-        obj = { creative, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
+        const obj2 = { creative, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
         const _Map = Map;
         const map2 = new Map(map1);
         map1 = map2;
-        const result2 = map2.set(placement, obj);
+        const result2 = map2.set(placement, obj2);
       }
     }
     map.delete(placement);
@@ -192,13 +192,13 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map.set(fetchedAt.placement, false);
     let tmp2 = null;
     if (null != fetchedAt.questHomeHero) {
-      let obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
+      const obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
       tmp2 = obj;
     }
-    obj = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+    const obj2 = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
     ({ adDecisionData: obj3.adDecisionData, adContext: obj3.adContext, metadataSealed: obj3.metadataSealed, trafficMetadataSealed: obj3.trafficMetadataSealed, provenanceMetadataSealed: obj3.provenanceMetadataSealed } = fetchedAt);
     map1 = new Map(map1);
-    const result1 = map1.set(fetchedAt.placement, obj);
+    const result1 = map1.set(fetchedAt.placement, obj2);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
     c12 = false;

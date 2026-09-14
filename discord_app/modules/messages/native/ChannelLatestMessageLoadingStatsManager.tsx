@@ -1,6 +1,6 @@
-// === Module 11670: ChannelLatestMessageLoadingStatsManager ===
+// === Module 11671: ChannelLatestMessageLoadingStatsManager ===
 
-// Module 11670 (ChannelLatestMessageLoadingStatsManager)
+// Module 11671 (ChannelLatestMessageLoadingStatsManager)
 import Constants from "Constants" /* 1074 */;
 import Clickstream from "Clickstream" /* 7568 */;
 import size from "module_2" /* 2 */;
@@ -33,8 +33,8 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = ChannelLatestMessageLoadingStatsManager.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      const obj = { load_duration_ms: diff, were_messages_cached: channelId.areMessagesCached, is_first_load: !hasItem };
-      obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
+      const obj2 = { load_duration_ms: diff, were_messages_cached: channelId.areMessagesCached, is_first_load: !hasItem };
+      Clickstream.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj2);
       tmp.latestChannelMessagesLoad = undefined;
       const tmp12 = !hasItem;
     }

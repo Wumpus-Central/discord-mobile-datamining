@@ -1,30 +1,29 @@
-// === Module 11120: PlaygroundAccessExperiment ===
+// === Module 11121: PlaygroundAccessExperiment ===
 
-// Module 11120 (PlaygroundAccessExperiment)
+// Module 11121 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-fn(1433);
-let ApexExperiment = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { enabled: true };
-ApexExperiment.variations = ApexExperiment;
-ApexExperiment = ApexExperiment.createApexExperiment(ApexExperiment);
+const ApexExperiment = fn(1433);
+const obj2 = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { enabled: true };
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
-export default ApexExperiment;
+export default apexExperiment;
 export const usePlaygroundAccessExperiment = function usePlaygroundAccessExperiment(design_systems_settings) {
-  return ApexExperiment.useConfig({ location: design_systems_settings }).enabled;
+  return apexExperiment.useConfig({ location: design_systems_settings }).enabled;
 };
 export const getPlaygroundAccessExperiment = function getPlaygroundAccessExperiment(location) {
-  return ApexExperiment.getConfig({ location }).enabled;
+  return apexExperiment.getConfig({ location }).enabled;
 };
 export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) {
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
@@ -37,9 +36,8 @@ export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) 
     }
     enabled = true === isStaffPersonalResult;
   }
-  obj = { location };
   if (!enabled) {
-    enabled = ApexExperiment.useConfig(obj).enabled;
+    enabled = apexExperiment.useConfig(obj2).enabled;
   }
   return enabled;
 };
@@ -59,7 +57,7 @@ export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitc
   }
   if (!enabled) {
     const obj = { location: quickswitcher_action };
-    enabled = ApexExperiment.getConfig(obj).enabled;
+    enabled = apexExperiment.getConfig(obj).enabled;
   }
   return enabled;
 };

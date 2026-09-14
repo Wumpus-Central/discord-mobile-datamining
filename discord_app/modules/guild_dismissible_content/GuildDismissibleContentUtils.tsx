@@ -1,9 +1,11 @@
-// === Module 12623: GuildDismissibleContentUtils ===
+// === Module 12624: GuildDismissibleContentUtils ===
 
-// Module 12623 (GuildDismissibleContentUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 12624 (GuildDismissibleContentUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -37,8 +39,7 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   _require = true;
   importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
   dependencyMap = guildId;
-  let obj = require("UserSettingsProtoActionCreators");
-  const result = obj.updateUserGuildSettings(guildId, (dismissedGuildContent) => {
+  const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(guildId, (dismissedGuildContent) => {
     dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {
@@ -52,13 +53,14 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    obj = { type: tmp(1943).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(1943).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }
-    obj.action = UNKNOWN;
-    AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
+    obj3.action = UNKNOWN;
+    AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   }
+  const obj = require("UserSettingsProtoActionCreators");
   tmp = _require;
 };
 export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, guildId) {

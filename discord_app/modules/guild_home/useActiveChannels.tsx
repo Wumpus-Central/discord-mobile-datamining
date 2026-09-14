@@ -1,6 +1,6 @@
-// === Module 16161: useActiveChannels ===
+// === Module 16163: useActiveChannels ===
 
-// Module 16161 (useActiveChannels)
+// Module 16163 (useActiveChannels)
 import Constants from "Constants" /* 1074 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
@@ -8,7 +8,7 @@ import ChannelConstants from "ChannelConstants" /* 1964 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13794 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13795 */;
 import size from "module_2" /* 2 */;
 
 const isTextChannel = ChannelRecord.isTextChannel;
@@ -19,19 +19,19 @@ const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
+    const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;
   const activeChannelIds = obj.getActiveChannelIds(guildId);
   if (null != activeChannelIds) {
     const _Array = Array;
-    items = Array.from(activeChannelIds);
+    let arr = Array.from(activeChannelIds);
   } else {
-    items = [];
+    arr = [];
   }
   obj2.getMutedChannels(guildId);
-  const mapped = items.map((item) => require.getChannel(item));
+  const mapped = arr.map((item) => require.getChannel(item));
   const found = mapped.filter(GlobalUtils.isNotNullish);
   return found.filter((hasFlag) => {
     let hasFlagResult;

@@ -1,6 +1,6 @@
-// === Module 17134: BlurVisualEffectView ===
+// === Module 17136: BlurVisualEffectView ===
 
-// Module 17134 (BlurVisualEffectView)
+// Module 17136 (BlurVisualEffectView)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4338 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
@@ -16,8 +16,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");
 
 export default noop.memo(() => {
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK, ThemeTypes.DARK);
-  obj = { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" };
+  const token = useToken.useToken(nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK, ThemeTypes.DARK);
   return jsx(VisualEffectViewDefault, { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" });
 });

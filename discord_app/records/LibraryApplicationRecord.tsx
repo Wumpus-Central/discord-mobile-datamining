@@ -20,7 +20,7 @@ class LibraryApplicationRecord extends tmp2 {
 }
 const prototype = LibraryApplicationRecord.prototype;
 LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
-  let obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
+  const obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
   if (null != id.entitlements) {
     let entitlements = id.entitlements;
     let mapped = entitlements.map((item) => EntitlementRecord.createFromServer(item));
@@ -29,19 +29,19 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj.entitlements = mapped;
   ({ branch: obj.branch, flags: obj.flags, created_at: obj.createdAt } = id);
-  obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
+  const obj2 = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
     entitlements = _modDef4228;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
-  obj.preorderReleaseAt = entitlementsResult;
+  obj2.preorderReleaseAt = entitlementsResult;
   let prop = null;
   if (null != id.sku.preorder_approximate_release_date) {
     prop = id.sku.preorder_approximate_release_date;
   }
-  obj.preorderApproximateReleaseDate = prop;
-  obj.sku = obj;
+  obj2.preorderApproximateReleaseDate = prop;
+  obj.sku = obj2;
   if (typeof LibraryApplicationRecord === "function") {
     const tmp11 = new LibraryApplicationRecord(tmp, entitlements, tmp3);
     ({ id: tmp11.id, createdAt: tmp11.createdAt, flags: tmp11.flags, branchId: tmp11.branchId, entitlements: tmp11.entitlements, branch: tmp11.branch, sku: tmp11.sku } = obj);

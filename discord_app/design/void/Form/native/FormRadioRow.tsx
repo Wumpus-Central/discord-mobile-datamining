@@ -22,31 +22,30 @@ export default function FormRadioRow(arg0) {
   ({ value, style } = arg0);
   const merged = Object.assign(arg0, Object.assign({ selected: 0, align: 0, leading: 0, value: 0, onPress: 0, style: 0 }));
   const context = noop.useContext(RedesignCompat.RedesignCompatContext);
-  let obj = useA11yRolesNative;
-  const radioA11yNative = obj.useRadioA11yNative({ selected });
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   if (context) {
-    obj = { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress };
+    const obj2 = { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress };
     const merged1 = Object.assign(merged);
     let tmp8Result = jsx(TableRadioRow.TableRadioRow, { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress });
   } else {
-    obj = {};
+    const obj3 = {};
     const merged2 = Object.assign(merged);
-    obj.style = style;
-    obj.onPress = onPress;
-    obj.accessibilityRole = tmp6;
-    obj.accessibilityState = tmp7;
-    tmp8Result = null;
+    obj3.style = style;
+    obj3.onPress = onPress;
+    obj3.accessibilityRole = tmp6;
+    obj3.accessibilityState = tmp7;
+    let tmp8Result3 = null;
     if ("right" === align) {
-      const obj1 = { selected };
-      tmp8Result = jsx(Form_FormRadioDefault, { selected });
+      const obj4 = { selected };
+      tmp8Result3 = jsx(Form_FormRadioDefault, { selected });
     }
-    obj.trailing = tmp8Result;
-    let tmp8Result1 = leading;
+    obj3.trailing = tmp8Result3;
+    let tmp8Result4 = leading;
     if ("left" === align) {
-      const obj2 = { selected };
-      tmp8Result1 = jsx(Form_FormRadioDefault, { selected });
+      const obj5 = { selected };
+      tmp8Result4 = jsx(Form_FormRadioDefault, { selected });
     }
-    obj.leading = tmp8Result1;
+    obj3.leading = tmp8Result4;
     tmp8Result = jsx(FormRowDefault, {});
   }
   return tmp8Result;

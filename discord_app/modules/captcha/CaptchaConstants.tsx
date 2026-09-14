@@ -1,6 +1,6 @@
-// === Module 11412: CaptchaConstants ===
+// === Module 11413: CaptchaConstants ===
 
-// Module 11412 (CaptchaConstants)
+// Module 11413 (CaptchaConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/captcha/CaptchaConstants.tsx");

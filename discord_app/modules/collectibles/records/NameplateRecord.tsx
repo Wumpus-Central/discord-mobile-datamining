@@ -15,14 +15,13 @@ class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
-  let tmp = prototype;
   const merged = Object.assign(super.fromServer(arg0));
   const merged1 = Object.assign(arg0);
   if (typeof prototype === "function") {
-    tmp = new tmp(obj, arg0, this, merged);
-    tmp.type = CollectiblesItemType.CollectiblesItemType.NAMEPLATE;
+    const tmp2 = new prototype(obj, arg0, this, merged);
+    tmp2.type = CollectiblesItemType.CollectiblesItemType.NAMEPLATE;
     ({ asset: tmp7.asset, label: tmp7.label, palette: tmp7.palette } = obj);
-    return tmp;
+    return tmp2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

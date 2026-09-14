@@ -3,7 +3,7 @@
 // Module 5075 (common/Alert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import Timers from "Timers" /* 1952 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -19,19 +19,18 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4636);
-let obj = { alert: null, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
-obj = { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.alert = obj;
-const createStyles = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj.titleText = createStyles;
+const createStyles = fn(4636);
+let obj = { alert: { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, titleText: null, divider: null, body: null, buttons: null, cancelButton: null, secondaryConfirm: null, gradient: null };
+let obj3 = { borderRadius: nativeDefault.radii.sm, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.titleText = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj4 = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj.divider = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj2 = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj5 = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.body = { marginTop: 16, color: nativeDefault.colors.TEXT_STRONG };
 obj.buttons = { marginTop: 24 };
 obj.cancelButton = { marginTop: 8 };
 obj.secondaryConfirm = { marginTop: 16, alignSelf: "center" };
-let obj3 = { marginTop: 16, color: nativeDefault.colors.TEXT_STRONG };
+let obj6 = { marginTop: 16, color: nativeDefault.colors.TEXT_STRONG };
 obj.gradient = { borderRadius: nativeDefault.radii.sm };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj);
 const PureComponent = noop.PureComponent;
@@ -94,9 +93,7 @@ prototype["componentDidMount"] = function componentDidMount() {
     setImmediate(() => {
       const focusTimeout = self.focusTimeout;
       focusTimeout.start(300, () => {
-        self(dependencyMap[9]);
-        const obj = { ref: titleRef.titleRef };
-        const result = obj.setAccessibilityFocus(obj);
+        const result = self(dependencyMap[9]).setAccessibilityFocus({ ref: titleRef.titleRef });
       });
     });
   }
@@ -125,15 +122,16 @@ prototype["renderHeader"] = function renderHeader() {
   if (null != title) {
     tmp3Result = null;
     if ("" !== title) {
-      let obj = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: tmp.titleText, children: null };
+      const obj2 = { ref: self.titleRef, accessible: true, accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: tmp.titleText, children: null };
       let renderContentResult = title;
       if (typeof title === "string") {
         renderContentResult = self.renderContent(title);
       }
-      obj = { children: renderContentResult };
-      const items = [React5(Text_Text.Text, obj), ];
-      obj = { style: tmp.divider };
-      items[1] = React5(hasOwnProperty, obj);
+      const obj = { children: null };
+      obj2.children = renderContentResult;
+      const items = [React5(Text_Text.Text, obj2), ];
+      const obj3 = { style: tmp.divider };
+      items[1] = React5(hasOwnProperty, obj3);
       obj.children = items;
       tmp3Result = React6(hasOwnProperty, obj);
     }
@@ -146,22 +144,22 @@ prototype["renderBody"] = function renderBody() {
   const body = props.body;
   let tmp5Result = null;
   if (null != body) {
-    let obj = { style: null, children: null };
-    obj = { maxHeight: self.props.contentHeight };
-    obj.style = obj;
-    obj = { variant: "text-md/normal", style: tmp.body, children: null };
+    const obj = { style: null, children: null };
+    const obj2 = { maxHeight: self.props.contentHeight };
+    obj.style = obj2;
+    const obj3 = { variant: "text-md/normal", style: tmp.body, children: null };
     let renderContentResult = body;
     if (typeof body === "string") {
       renderContentResult = self.renderContent(body);
     }
-    obj.children = renderContentResult;
-    obj.children = React5(Text_Text.Text, obj);
+    obj3.children = renderContentResult;
+    obj.children = React5(Text_Text.Text, obj3);
     tmp5Result = React5(timestampProducer, obj);
   }
-  const obj1 = { children: null };
+  const obj4 = { children: null };
   const items = [tmp5Result, props.children];
-  obj1.children = items;
-  return React6(React7, obj1);
+  obj4.children = items;
+  return React6(React7, obj4);
 };
 prototype["renderButtons"] = function renderButtons() {
   const self = this;
@@ -177,19 +175,19 @@ prototype["renderButtons"] = function renderButtons() {
   if (!props.noDefaultButtons) {
     let tmp6;
     if (null != cancelText) {
-      let obj = { style: tmp.cancelButton, children: null };
-      obj = { variant: "secondary", onPress: self.handleCancel, text: cancelText };
-      obj.children = React5(components_Button_Button.Button, obj);
+      const obj = { style: tmp.cancelButton, children: null };
+      const obj2 = { variant: "secondary", onPress: self.handleCancel, text: cancelText };
+      obj.children = React5(components_Button_Button.Button, obj2);
       tmp6 = React5(hasOwnProperty, obj);
     }
     let tmp11;
     if (null != secondaryConfirmText) {
-      obj = { accessibilityRole: "button", style: tmp.secondaryConfirm, onPress: self.handleSecondaryConfirm, children: null };
-      const obj1 = { variant: "text-sm/semibold", color: "text-link", children: secondaryConfirmText };
-      obj.children = React5(Text_Text.Text, obj1);
-      tmp11 = React5(Pressables.PressableOpacity, obj);
+      const obj3 = { accessibilityRole: "button", style: tmp.secondaryConfirm, onPress: self.handleSecondaryConfirm, children: null };
+      const obj4 = { variant: "text-sm/semibold", color: "text-link", children: secondaryConfirmText };
+      obj3.children = React5(Text_Text.Text, obj4);
+      tmp11 = React5(Pressables.PressableOpacity, obj3);
     }
-    const obj2 = { style: tmp.buttons, children: null };
+    const obj5 = { style: tmp.buttons, children: null };
     let renderConfirmButtonResult;
     if (renderConfirmButton != null) {
       renderConfirmButtonResult = renderConfirmButton();
@@ -214,11 +212,11 @@ prototype["renderButtons"] = function renderButtons() {
           }
         }
       }
-      const obj3 = { variant: str, onPress: self.handleConfirm, text: confirmText, loading: tmp4, disabled: null, icon: null, iconPosition: null };
+      const obj6 = { variant: str, onPress: self.handleConfirm, text: confirmText, loading: tmp4, disabled: null, icon: null, iconPosition: null };
       if (isConfirmButtonDisabled == null) {
         isConfirmButtonDisabled = false;
       }
-      obj3.disabled = isConfirmButtonDisabled;
+      obj6.disabled = isConfirmButtonDisabled;
       let renderConfirmIconResult;
       if (renderConfirmIcon != null) {
         renderConfirmIconResult = renderConfirmIcon();
@@ -230,7 +228,7 @@ prototype["renderButtons"] = function renderButtons() {
         }
         renderConfirmIconResult = result;
       }
-      obj3.icon = renderConfirmIconResult;
+      obj6.icon = renderConfirmIconResult;
       let str2 = "start";
       if (null == renderConfirmIcon) {
         let str3;
@@ -239,12 +237,12 @@ prototype["renderButtons"] = function renderButtons() {
         }
         str2 = str3;
       }
-      obj3.iconPosition = str2;
-      renderConfirmButtonResult = React5(components_Button_Button.Button, obj3);
+      obj6.iconPosition = str2;
+      renderConfirmButtonResult = React5(components_Button_Button.Button, obj6);
     }
     const items = [renderConfirmButtonResult, tmp6, tmp11];
-    obj2.children = items;
-    tmp15Result = React6(hasOwnProperty, obj2);
+    obj5.children = items;
+    tmp15Result = React6(hasOwnProperty, obj5);
   }
   return tmp15Result;
 };
@@ -261,40 +259,37 @@ prototype["render"] = function render() {
   const tmp = closure_10(this.context);
   const props = this.props;
   const width = props.width;
-  let obj = { children: null };
+  const obj = { children: null };
   ({ style, isLandscape, onClose } = props);
-  obj = { absolute: true, componentStyles: tmp.gradient };
-  const items = [React5(ThemedGradientDefault, obj), ];
-  obj = { onAccessibilityEscape: onClose, style: null, children: null };
+  const items = [React5(ThemedGradientDefault, { absolute: true, componentStyles: tmp.gradient }), ];
+  const obj3 = { onAccessibilityEscape: onClose, style: null, children: null };
   const items1 = [tmp.alert, style, { width }];
-  obj.style = items1;
+  obj3.style = items1;
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
-  obj.children = items2;
-  items[1] = React6(hasOwnProperty, obj);
+  obj3.children = items2;
+  items[1] = React6(hasOwnProperty, obj3);
   obj.children = items;
   const tmp3 = React6(React7, obj);
   let tmp2Result = tmp3;
   if (isLandscape) {
-    const obj1 = { style: null, children: null };
-    const obj2 = { maxHeight: width };
-    obj1.style = obj2;
-    obj1.children = tmp3;
-    tmp2Result = React5(timestampProducer, obj1);
+    const obj4 = { style: null, children: null };
+    const obj5 = { maxHeight: width };
+    obj4.style = obj5;
+    obj4.children = tmp3;
+    tmp2Result = React5(timestampProducer, obj4);
   }
   return tmp2Result;
 };
 Alert.contextType = fn(4347).ThemeContext;
-const obj4 = { borderRadius: nativeDefault.radii.sm };
-Alert.defaultProps = { confirmColor: fn(1178).ButtonColors.BRAND, autoCloseOnConfirm: true };
+const obj7 = { borderRadius: nativeDefault.radii.sm };
+Alert.defaultProps = { confirmColor: fn(1176).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = noop.memo((arg0) => {
   const size = useWindowDimensionsDefault();
-  let obj = useIsScreenLandscape;
-  const isScreenLandscape = obj.useIsScreenLandscape();
-  obj = { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape };
+  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
   const merged = Object.assign(arg0);
-  return React5(Alert, obj);
+  return React5(Alert, { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape });
 });
-memoResult.Colors = fn(1178).ButtonColors;
+memoResult.Colors = fn(1176).ButtonColors;
 let size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alert.tsx");
 

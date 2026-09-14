@@ -220,16 +220,16 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f78740) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f78743) {
   const self = this;
-  const userId = f78740;
+  const userId = f78743;
   let flag;
-  if (this.participants[f78740] != null) {
+  if (this.participants[f78743] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
-        let obj = { userId, checkIsMuted: true };
-        const isSpeaking = obj.getIsSpeaking(obj);
+        const obj2 = { userId, checkIsMuted: true };
+        const isSpeaking = useIsSpeaking.getIsSpeaking(obj2);
         const participantByIndex = self.participantByIndex;
         value = participantByIndex.get(type.id);
         type = undefined;
@@ -244,12 +244,12 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f787
           self.lastSpoke[userId] = Date.now();
         }
         const participantByIndex2 = self.participantByIndex;
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(type);
-        obj.speaking = isSpeaking;
-        obj.lastSpoke = self.lastSpoke[userId];
-        obj.soundsharing = SpeakingStore.isSoundSharing(userId);
-        const result = participantByIndex2.set(type.id, obj);
+        obj3.speaking = isSpeaking;
+        obj3.lastSpoke = self.lastSpoke[userId];
+        obj3.soundsharing = SpeakingStore.isSoundSharing(userId);
+        const result = participantByIndex2.set(type.id, obj3);
         flag = true;
         const isSoundSharingResult = SpeakingStore.isSoundSharing(userId);
       } else {
@@ -262,10 +262,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f787
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f78747, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f78750, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f78747] != null) {
+  if (this.participants[f78750] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -390,15 +390,14 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       flag = false;
     }
     if (tmp3) {
-      let obj = { type: constants.USER };
+      const obj = { type: constants.USER };
       const merged = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId));
       obj.user = user;
       obj.id = user.id;
       obj.voiceState = voiceStateForChannel;
       obj.voicePlatform = voicePlatformForChannel;
-      let obj1 = useIsSpeaking;
-      obj = { userId, checkIsMuted: true };
-      obj.speaking = obj1.getIsSpeaking(obj);
+      const obj3 = { userId, checkIsMuted: true };
+      obj.speaking = useIsSpeaking.getIsSpeaking(obj3);
       let num = self.lastSpoke[userId];
       if (num == null) {
         num = 0;
@@ -431,18 +430,18 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           if (type === constants.STREAM) {
             let tmp21;
             if (null != participant.maxResolution) {
-              obj = {};
+              const obj5 = {};
               const merged1 = Object.assign(participant.maxResolution);
-              tmp21 = obj;
+              tmp21 = obj5;
             }
-            obj1 = { maxResolution: tmp21, maxFrameRate: participant.maxFrameRate };
-            tmp20 = obj1;
+            const obj7 = { maxResolution: tmp21, maxFrameRate: participant.maxFrameRate };
+            tmp20 = obj7;
           }
-          const obj2 = {};
+          const obj8 = {};
           const merged2 = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId, constants4.STREAM));
           const merged3 = Object.assign(tmp20);
-          obj2.type = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
-          obj2.id = encodeStreamKeyResult;
+          obj8.type = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId) ? constants.HIDDEN_STREAM : constants.STREAM;
+          obj8.id = encodeStreamKeyResult;
           let flag2;
           if (voiceStateForChannel != null) {
             flag2 = voiceStateForChannel.selfVideo;
@@ -450,14 +449,14 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           if (flag2 == null) {
             flag2 = false;
           }
-          obj2.userVideo = flag2;
-          obj2.user = user;
+          obj8.userVideo = flag2;
+          obj8.user = user;
           const tmp17 = streamForUser.ownerId === AuthenticationStore.getId() && ApplicationStreamingStore.isSelfStreamHidden(self.channelId);
-          obj2.userNick = NicknameUtilsDefault.getName(guildId, self.channelId, user);
-          obj2.stream = streamForUser;
+          obj8.userNick = NicknameUtilsDefault.getName(guildId, self.channelId, user);
+          obj8.stream = streamForUser;
           const poppedOutParticipants2 = self.poppedOutParticipants;
-          obj2.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
-          items.push(obj2);
+          obj8.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
+          items.push(obj8);
         }
       }
     }

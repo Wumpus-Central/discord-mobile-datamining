@@ -1,12 +1,12 @@
-// === Module 14669: SettingHookHarness ===
+// === Module 14670: SettingHookHarness ===
 
-// Module 14669 (SettingHookHarness)
+// Module 14670 (SettingHookHarness)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14670 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14671 */;
 
 const require = fn;
-const NodeType = fn(11602).NodeType;
+const NodeType = fn(11603).NodeType;
 let closure_6 = [];
 const map = new Map();
 const map1 = new Map();
@@ -55,7 +55,7 @@ export default noop.memo(function SettingHookHarness() {
         hasItem = field.has(tmp3);
       }
       if (hasItem) {
-        arr = items1.push(tmp3);
+        let arr2 = items1.push(tmp3);
       }
     }
   }

@@ -1,12 +1,12 @@
-// === Module 12013: AutomatedUnderageAppealModalActionCreators ===
+// === Module 12014: AutomatedUnderageAppealModalActionCreators ===
 
-// Module 12013 (AutomatedUnderageAppealModalActionCreators)
+// Module 12014 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+const ModalActionCreatorsDefault = tmp(4839);
 require = fn;
 const SafetyHubConstants = fn(8537);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_4, AGE_CHECK_POLL_DELAY_MS: hasOwnProperty } = SafetyHubConstants);
@@ -14,16 +14,13 @@ let closure_6 = fn(8530).AGE_VERIFICATION_GET_STARTED_MODAL_KEY;
 const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
-    obj = DispatcherDefault;
-    obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    obj = { classificationId, onClose };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12014, dependencyMap.paths), React4, obj);
+    DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12015, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
     importDefault = onClose;
-    obj = DispatcherDefault;
-    obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+    DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     if (obj2.isCurrentUserSuspended()) {
       if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8531).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
         const _Math = Math;
@@ -37,8 +34,8 @@ let obj = {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              obj = { value, done: true };
-              return obj;
+              let obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -51,31 +48,30 @@ let obj = {
                   throw value;
                 } else if (arg0 === 2) {
                   v3 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   onClose = tmp4;
                   classificationId = tmp4;
                   dependencyMap = 1;
                   v3 = 1;
-                  const obj1 = { value: classificationId(8553).shouldShowManualReviewFallback(classificationId(8531).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS), done: false };
-                  return obj1;
+                  const obj6 = { value: classificationId(8553).shouldShowManualReviewFallback(classificationId(8531).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS), done: false };
+                  return obj6;
                 }
               } else if (arg0 === 1) {
                 v3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 v3 = 3;
-                let obj2 = { value, done: true };
-                return obj2;
+                const obj7 = { value, done: true };
+                return obj7;
               } else {
                 if (value) {
-                  obj2 = onClose(8529);
-                  const result = obj2.showManualReviewFallbackModal(classificationId(8531).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS, closure_129_1);
+                  const result = onClose(8529).showManualReviewFallbackModal(classificationId(8531).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS, closure_129_1);
+                  const obj3 = onClose(8529);
                 } else {
-                  obj = onClose(4839);
-                  const obj3 = { onClose: closure_129_1 };
-                  obj.pushLazy(v3(async () => {
+                  const obj8 = { onClose: closure_129_1 };
+                  onClose(4839).pushLazy(v3(async () => {
                     await tmp2(paths[8])(paths[15], paths.paths);
                     closure_128_0 = value.default;
                     return () => closure_3_7(closure_1_0, {
@@ -89,15 +85,16 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(12011).resetAgeCheckStatus();
-                        obj = closure_2_0(12011);
+                        closure_2_0(12012).resetAgeCheckStatus();
+                        obj = closure_2_0(12012);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(573);
                         closure_2_1(573).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
                         const timerId = setTimeout(() => { ... }, closure_2_5);
                       }
                     });
-                  }), obj3, closure_1_6);
+                  }), obj8, closure_1_6);
+                  obj = onClose(4839);
                 }
                 v3 = 3;
               }
@@ -111,7 +108,6 @@ let obj = {
       tmp4Result = tmp4(8547);
     }
     obj2 = require("SafetyHubUtils");
-    obj = { onClose };
     ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
       await tmp2(paths[8])(paths[16], paths.paths);
       closure_128_0 = value.default;
@@ -122,7 +118,8 @@ let obj = {
         }
         const result = closure_2_8.start_verification_check();
       }} />;
-    }), obj, closure_6);
+    }), { onClose }, closure_6);
+    let obj3 = { onClose };
     const tmpResult = ModalActionCreatorsDefault;
   },
   close() {

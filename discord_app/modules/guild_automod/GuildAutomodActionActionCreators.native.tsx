@@ -1,13 +1,13 @@
-// === Module 11991: GuildAutomodActionActionCreators ===
+// === Module 11992: GuildAutomodActionActionCreators ===
 
-// Module 11991 (GuildAutomodActionActionCreators)
+// Module 11992 (GuildAutomodActionActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11992);
+const Constants = fn(11993);
 ({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: closure_4 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -17,15 +17,13 @@ export const getPromiseableActionHandlers = function getPromiseableActionHandler
   return { [closure_1_3.BLOCK_MESSAGE]: null, [closure_1_3.FLAG_TO_CHANNEL]: null, [closure_1_3.USER_COMMUNICATION_DISABLED]: null };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
-  let obj = {
+  const obj2 = {
     onCloseModal() {
       ModalActionCreatorsDefault.popWithKey(closure_1_4);
     },
-    automodDecision: null
+    automodDecision: { messageId, messageContent: content, decisionId, channel }
   };
-  obj = { messageId, messageContent: content, decisionId, channel };
-  obj.automodDecision = obj;
-  obj.pushLazy(asyncRequireImpl(11996, dependencyMap.paths), obj, React4);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11997, dependencyMap.paths), obj2, React4);
 };
 export function openRaidResolveModal() {
 
@@ -35,9 +33,9 @@ export function openConfirmRemoveMentionRaid() {
 }
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
   closure_0 = guildId;
-  let obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11999, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(12000, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -47,6 +45,5 @@ export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuar
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

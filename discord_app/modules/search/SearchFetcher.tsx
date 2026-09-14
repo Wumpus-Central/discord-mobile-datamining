@@ -1,7 +1,7 @@
-// === Module 12479: SearchFetcher ===
+// === Module 12480: SearchFetcher ===
 
-// Module 12479 (SearchFetcher)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 12480 (SearchFetcher)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import _modDef1471 from "module_1471" /* 1471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -32,8 +32,8 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,8 +46,8 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp7;
             closure_129_0 = undefined;
@@ -56,16 +56,16 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
               c4 = 1;
               c5 = 2;
               c6 = 1;
-              let obj1 = { value: self.makeRequest({ rejectWithError: false }), done: false };
-              return obj1;
+              const obj5 = { value: self.makeRequest({ rejectWithError: false }), done: false };
+              return obj5;
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
             closure_129_2 = closure_3;
-            obj1 = new closure_1(tmp3[4])("SearchFetcher");
-            obj1.error(closure_129_2);
+            const obj2 = new closure_1(tmp3[4])("SearchFetcher");
+            obj2.error(closure_129_2);
             closure_130_2(closure_129_2);
           } else if (arg0 === 1) {
             c6 = 3;
@@ -73,7 +73,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_0 = value;
@@ -199,9 +199,9 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
 };
 class SearchTabFetcherImpl extends SearchFetcher {
   constructor(arg0, arg1, arg2, arg3) {
-    tmp = new tmp(global, fn, importDefault, new.target);
-    tmp.payload = importAll;
-    return tmp;
+    tmp1 = new tmp(global, fn, importDefault, new.target);
+    tmp1.payload = importAll;
+    return tmp1;
   }
 }
 const prototype3 = SearchTabFetcherImpl.prototype;

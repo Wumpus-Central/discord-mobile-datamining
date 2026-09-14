@@ -1,6 +1,6 @@
-// === Module 14878: MFACodeInput ===
+// === Module 14879: MFACodeInput ===
 
-// Module 14878 (MFACodeInput)
+// Module 14879 (MFACodeInput)
 import nativeDefault from "native" /* 576 */;
 import ClipboardUtils from "ClipboardUtils" /* 7292 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,11 +14,9 @@ const AppStates = fn(1074).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: null, minHeightGuard: null };
-obj = { color: nativeDefault.unsafe_rawColors.RED_400 };
-obj.error = obj;
-obj.minHeightGuard = { minHeight: 20 };
+let obj = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
 let closure_12 = createStyles.createStyles(obj);
+let obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
 
@@ -33,7 +31,6 @@ export default noop.forwardRef((appState, arg1) => {
   value = undefined;
   noop = undefined;
   let tmp = closure_12();
-  appState(resetLoginOnClose[8]);
   const tmp4 = value(noop.useState(""), 2);
   value = tmp4[0];
   noop = tmp6;
@@ -119,37 +116,38 @@ export default noop.forwardRef((appState, arg1) => {
       closure_1_4("");
     }
   }), []);
-  let obj = { autoFocus: true, style: null, textStyle: tmp.input, value, autoCapitalize: "none", maxLength: 8, textContentType: "oneTimeCode", onChangeText: tmp6, accessibilityLabel: null };
+  let obj2 = { autoFocus: true, style: null, textStyle: tmp.input, value, autoCapitalize: "none", maxLength: 8, textContentType: "oneTimeCode", onChangeText: tmp4[1], accessibilityLabel: null };
   const items3 = [tmp.inputContainer, style];
-  obj.style = items3;
-  const intl = appState(resetLoginOnClose[13]).intl;
-  obj.accessibilityLabel = intl.string(appState(resetLoginOnClose[13]).t.yO4lAM);
-  const items4 = [closure_9(handleSubmit(resetLoginOnClose[12]), obj), ];
-  const items5 = [tmp.status, ];
+  obj2.style = items3;
+  let obj = appState(resetLoginOnClose[8]);
   const tmp10 = handleSubmit;
+  const intl = appState(resetLoginOnClose[13]).intl;
+  obj2.accessibilityLabel = intl.string(appState(resetLoginOnClose[13]).t.yO4lAM);
+  const items4 = [closure_9(handleSubmit(resetLoginOnClose[12]), obj2), ];
+  const items5 = [tmp.status, ];
   const tmp18 = handleSubmit(resetLoginOnClose[12]);
   const tmp19 = closure_6;
-  obj = { style: items5, children: null };
+  const obj3 = { style: items5, children: null };
   items5[1] = Boolean(error) && tmp.minHeightGuard;
   if (showActivityIndicator) {
     const tmp2Result = tmp2(tmp3[8]);
     tmp10(tmp3[7]).unsafe_rawColors;
     const isThemeDarkResult = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme);
     const unsafe_rawColors = first1;
-    const obj1 = { color: tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
-    let tmp17Result = closure_9(first1, obj1);
+    const obj4 = { color: tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
+    closure_9(first1, obj4);
     const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
   } else {
-    tmp17Result = null;
+    let tmp17Result2 = null;
     if (null != error) {
-      let obj2 = { style: tmp.error, variant: "text-md/medium", children: error };
-      tmp17Result = closure_9(tmp2(tmp3[14]).Text, obj2);
+      const obj5 = { style: tmp.error, variant: "text-md/medium", children: error };
+      tmp17Result2 = closure_9(tmp2(tmp3[14]).Text, obj5);
     }
-    const obj3 = { children: null };
-    obj.children = tmp17Result;
-    items4[1] = closure_9(tmp19, obj);
-    obj3.children = items4;
-    return closure_11(closure_10, obj3);
+    const obj6 = { children: null };
+    obj3.children = tmp17Result2;
+    items4[1] = closure_9(tmp19, obj3);
+    obj6.children = items4;
+    return closure_11(closure_10, obj6);
   }
   const tmp20 = Boolean(error) && tmp.minHeightGuard;
 });

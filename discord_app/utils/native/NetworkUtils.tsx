@@ -3,7 +3,7 @@
 // Module 1462 (utils/NetworkUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1074 */;
-import configure from "configure" /* 1463 */;
+import configure_mod from "configure" /* 1463 */;
 import size from "module_2" /* 2 */;
 
 function notifyListeners(isConnected) {
@@ -38,6 +38,7 @@ let closure_4 = [];
 let closure_5 = [];
 let closure_6 = [];
 let c7 = null;
+let configure = configure_mod;
 configure = configure.fetch();
 configure.then((isConnected) => {
   flag = isConnected.isConnected;
@@ -45,7 +46,9 @@ configure.then((isConnected) => {
     flag = false;
   }
 });
-obj = {
+const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
+
+export default {
   addOnlineCallback(_handleNetworkOnline) {
     closure_4.push(_handleNetworkOnline);
     if (null == c7) {
@@ -146,6 +149,3 @@ obj = {
     return flag;
   }
 };
-const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
-
-export default obj;

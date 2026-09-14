@@ -1,6 +1,6 @@
-// === Module 17423: AgeGateVerify ===
+// === Module 17425: AgeGateVerify ===
 
-// Module 17423 (AgeGateVerify)
+// Module 17425 (AgeGateVerify)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4632 */;
 import AgeGateUtils from "AgeGateUtils" /* 4847 */;
@@ -15,42 +15,33 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, header: null, body: null, buttonWrapper: null };
-createStyles = { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.header = { textAlign: "center" };
-createStyles.body = { textAlign: "center" };
-createStyles.buttonWrapper = { width: "100%" };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 }, header: { textAlign: "center" }, body: { textAlign: "center" }, buttonWrapper: { width: "100%" } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_gate/native/components/AgeGateVerify.tsx");
 
 export default function AgeGateVerify(source) {
   const tmp = closure_6();
-  let obj = AgeGateUtils;
-  const ageGateVerifyContent = obj.useAgeGateVerifyContent(source.source);
+  const ageGateVerifyContent = AgeGateUtils.useAgeGateVerifyContent(source.source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
-  obj = { top: true, style: tmp.container, children: null };
-  const items = [React4(native.ShieldSpotIllustration, {}), , , ];
-  obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle };
-  items[1] = React4(Text_Text.Text, obj);
-  items[2] = React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription });
+  const obj2 = { top: true, style: tmp.container, children: null };
+  const items = [React4(native.ShieldSpotIllustration, {}), React4(Text_Text.Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle }), React4(Text_Text.Text, { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription }), ];
   let tmp6Result = null != verifyAgreementButtonText;
   if (tmp6Result) {
-    const obj2 = { style: tmp.buttonWrapper, children: null };
-    const obj3 = {
+    const obj5 = { style: tmp.buttonWrapper, children: null };
+    const obj6 = {
       text: verifyAgreementButtonText,
       onPress() {
-          const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
-          const result = obj.showAgeVerificationGetStartedModal(obj);
+          const obj = AgeVerificationActionCreatorsDefault;
+          const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_AGE_GATE });
         },
       grow: true
     };
-    obj2.children = React4(components_Button_Button.Button, obj3);
-    tmp6Result = React4(View, obj2);
+    obj5.children = React4(components_Button_Button.Button, obj6);
+    tmp6Result = React4(View, obj5);
   }
   items[3] = tmp6Result;
-  obj.children = items;
-  return hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj);
+  obj2.children = items;
+  return hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj2);
 };

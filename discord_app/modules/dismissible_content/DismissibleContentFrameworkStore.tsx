@@ -5,7 +5,7 @@ import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
 import size from "module_2" /* 2 */;
@@ -118,9 +118,8 @@ prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, gui
   }
   if (tmp17) {
     c5 = true;
-    obj = { shown_dcs: null };
-    obj.shown_dcs = obj.numberOfDCsShownToday;
-    logger.info("Daily cap in effect, suppressing fatigable content until tomorrow", obj);
+    const obj2 = { shown_dcs: obj.numberOfDCsShownToday };
+    logger.info("Daily cap in effect, suppressing fatigable content until tomorrow", obj2);
   }
   return obj.numberOfDCsShownToday >= 3;
 };
@@ -133,7 +132,7 @@ const items = [
   }
 ];
 DismissibleContentFrameworkStore.migrations = items;
-obj = {
+const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c5 = false;
     obj = {};
@@ -190,14 +189,13 @@ obj = {
               logger.info("Daily cap reached", obj);
             }
             if (obj.numberOfDCsShownToday > 3) {
-              obj = { cap_type: "daily_cap", dismissible_content: dismissibleContent, shown_dcs: null };
-              obj.shown_dcs = obj.numberOfDCsShownToday;
-              AnalyticsUtilsDefault.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
+              const obj2 = { cap_type: "daily_cap", dismissible_content: dismissibleContent, shown_dcs: obj.numberOfDCsShownToday };
+              AnalyticsUtilsDefault.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj2);
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
-            value = seenForGuildId.get(guildId);
-            null != value && value.has(dismissibleContent);
+            value2 = seenForGuildId.get(guildId);
+            null != value2 && value2.has(dismissibleContent);
           }
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
@@ -231,8 +229,7 @@ obj = {
     obj.seenForGuildId = new Map();
     obj.lastDismissed = null;
   }
-};
-const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");
 
 export default dismissibleContentFrameworkStore;

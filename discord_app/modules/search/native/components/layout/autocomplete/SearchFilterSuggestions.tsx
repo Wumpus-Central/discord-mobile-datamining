@@ -1,13 +1,13 @@
-// === Module 16737: SearchFilterSuggestions ===
+// === Module 16739: SearchFilterSuggestions ===
 
-// Module 16737 (SearchFilterSuggestions)
+// Module 16739 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import spring from "spring" /* 5055 */;
 import springPresets from "springPresets" /* 5059 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 16738 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 16740 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,8 +44,8 @@ function AnimatedEnterExitContainer(children) {
   const state = children.state;
   const cleanUp = children.cleanUp;
   let sharedValue;
+  sharedValue = state(sharedValue[10]).useSharedValue(0);
   let obj = state(sharedValue[10]);
-  sharedValue = obj.useSharedValue(0);
   let fn = function l() {
     let obj = { opacity: null, transform: null };
     value = sharedValue.get();
@@ -59,26 +59,26 @@ function AnimatedEnterExitContainer(children) {
         const obj = state(sharedValue[10]);
       }
     };
-    obj = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    fn.__closure = obj;
+    const obj2 = spring;
+    fn.__closure = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     fn.__workletHash = 10696166249954;
     fn.__initData = __initData;
-    obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    const obj3 = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     let num = -15;
     if (1 === sharedValue.get()) {
       num = 0;
     }
-    obj = { translateY: spring.withSpring(num, springPresets.springStandard) };
-    const items = [obj];
+    const items = [{ translateY: spring.withSpring(num, springPresets.springStandard) }];
     obj.transform = items;
     return obj;
   };
-  obj = { withSpring: state(sharedValue[11]).withSpring, opacity: sharedValue, springStandard: state(sharedValue[12]).springStandard, state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
-  fn.__closure = obj;
+  let obj2 = state(sharedValue[10]);
+  fn.__closure = { withSpring: state(sharedValue[11]).withSpring, opacity: sharedValue, springStandard: state(sharedValue[12]).springStandard, state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
   fn.__workletHash = 334512108462;
   fn.__initData = __initData;
   let items = [sharedValue, state];
-  const style = state(sharedValue[10]).useAnimatedStyle(fn);
+  const style = obj2.useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (state === native.TransitionStates.YEETED) {
@@ -93,15 +93,15 @@ const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { card: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.card = obj;
+obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 let closure_8 = createStyles.createStyles(obj);
 const __initData = { code: "function SearchFilterSuggestionsTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateY:withSpring(opacity.get()===1?0:-15,springStandard)}]};}" };
 let closure_12 = { code: "function SearchFilterSuggestionsTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 const EMPTY_SEARCH_FILTER_ROWS = [];
 const __initData2 = { code: "function SearchFilterSuggestionsTsx3(){const{dismissed}=this.__closure;return dismissed.get();}" };
 const __initData3 = { code: "function SearchFilterSuggestionsTsx4(isDismissed){const{runOnJS,setSuggestions,EMPTY_SEARCH_FILTER_ROWS}=this.__closure;if(isDismissed){runOnJS(setSuggestions)(EMPTY_SEARCH_FILTER_ROWS);}}" };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
 
@@ -114,8 +114,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   let getItemKey;
   const tmp = memo();
   noop = tmp;
-  let obj = searchContext(containerStyle[14]);
-  const validFilterTokens = obj.useValidFilterTokens(searchContext);
+  const validFilterTokens = searchContext(containerStyle[14]).useValidFilterTokens(searchContext);
   const tmp3 = dismissed(noop.useState([]), 2);
   const first = tmp3[0];
   jsx = tmp5;
@@ -153,6 +152,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     }
     closure_7(closure_1_14);
   }), items);
+  let obj = searchContext(containerStyle[14]);
   const fn = function b() {
     return dismissed.get();
   };
@@ -172,11 +172,11 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       return;
     }
   }
-  obj = { runOnJS: searchContext(containerStyle[10]).runOnJS, setSuggestions: tmp5, EMPTY_SEARCH_FILTER_ROWS };
-  E.__closure = obj;
+  let obj2 = searchContext(containerStyle[10]);
+  E.__closure = { runOnJS: searchContext(containerStyle[10]).runOnJS, setSuggestions: tmp3[1], EMPTY_SEARCH_FILTER_ROWS };
   E.__workletHash = 8991360021943;
   E.__initData = __initData3;
-  const animatedReaction = searchContext(containerStyle[10]).useAnimatedReaction(fn, E);
+  const animatedReaction = obj2.useAnimatedReaction(fn, E);
   let items1 = [containerStyle, tmp.card];
   memo = noop.useMemo(() => {
     const items = [card.card, containerStyle];
@@ -207,26 +207,18 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     return items1;
   }, items3);
   const callback1 = noop.useCallback((key, arr, state, cleanUp) => {
-    let obj = { state, cleanUp, children: null };
-    obj = {
-      ref,
-      style: memo,
-      collapsable: false,
-      onLayout,
-      children: arr.map((text) => {
+    const obj = {
+      state,
+      cleanUp,
+      children: <View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>{arr.map((text) => {
         const merged = Object.assign(text);
         return closure_1_7(ref, {}, text.text);
-      })
+      })}</View>
     };
-    obj.children = <View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>{arr.map((text) => {
+    return <AnimatedEnterExitContainer key={key} state={state} cleanUp={cleanUp}><View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>{arr.map((text) => {
       const merged = Object.assign(text);
       return closure_1_7(ref, {}, text.text);
-    })}</View>;
-    return <AnimatedEnterExitContainer key={key} ref={ref} style={memo} collapsable={false} onLayout={onLayout}>{arr.map((text) => {
-      const merged = Object.assign(text);
-      return closure_1_7(ref, {}, text.text);
-    })}</AnimatedEnterExitContainer>;
+    })}</View></AnimatedEnterExitContainer>;
   }, items4);
-  obj = { items: memo1, renderItem: callback1, getItemKey };
   return jsx(searchContext(containerStyle[13]).TransitionGroup, { items: memo1, renderItem: callback1, getItemKey });
 });

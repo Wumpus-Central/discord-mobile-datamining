@@ -1,10 +1,10 @@
-// === Module 10460: useTrackOpenPopout ===
+// === Module 10461: useTrackOpenPopout ===
 
-// Module 10460 (useTrackOpenPopout)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 10461 (useTrackOpenPopout)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
 import useMountEffectDefault from "useMountEffect" /* 5073 */;
-import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 10461 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 10462 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -21,8 +21,7 @@ export const useTrackOpenPopout = (emojiId) => {
   let merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
   useMountEffectDefault(() => {
-    let obj = emojis_EmojiActionCreators;
-    const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
+    const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!dependencyMap) {
       let str;
       if (analyticsType != null) {
@@ -31,9 +30,9 @@ export const useTrackOpenPopout = (emojiId) => {
       if (str == null) {
         str = "Standard Emoji Popout";
       }
-      obj = { type: str, nonce };
+      const obj3 = { type: str, nonce };
       const merged = Object.assign(current);
-      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj3);
     }
   });
   return current;

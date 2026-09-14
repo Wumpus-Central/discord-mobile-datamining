@@ -1,7 +1,7 @@
-// === Module 15421: useDisplayNameStylesHandleApply ===
+// === Module 15422: useDisplayNameStylesHandleApply ===
 
-// Module 15421 (useDisplayNameStylesHandleApply)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+// Module 15422 (useDisplayNameStylesHandleApply)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
@@ -36,18 +36,17 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
       if (tmp4) {
         items = [];
       }
-      let obj = { fontId: selectedFontId, effectId: selectedEffectId, colors: items };
+      const obj = { fontId: selectedFontId, effectId: selectedEffectId, colors: items };
       if (isTryItOut) {
-        let tmp2Result = UserProfileActionCreators;
-        const result = tmp2Result.setTryItOutDisplayNameStyles(obj);
+        const result = UserProfileActionCreators.setTryItOutDisplayNameStyles(obj);
+        const tmp2Result = UserProfileActionCreators;
       } else {
-        tmp2Result = UserProfileSettingsActionCreators;
-        obj = { guildId, displayNameStyles: null };
-        obj.displayNameStyles = obj;
-        tmp2Result.setPendingChanges(obj);
+        const obj2 = { guildId, displayNameStyles: obj };
+        UserProfileSettingsActionCreators.setPendingChanges(obj2);
+        const tmp2Result2 = UserProfileSettingsActionCreators;
       }
-      obj = { font_name: DisplayNameFont.DisplayNameFont[selectedFontId], effect_name: DisplayNameEffect.DisplayNameEffect[selectedEffectId], colors: selectedColors };
-      AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_APPLIED, obj);
+      const obj3 = { font_name: DisplayNameFont.DisplayNameFont[selectedFontId], effect_name: DisplayNameEffect.DisplayNameEffect[selectedEffectId], colors: selectedColors };
+      AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_APPLIED, obj3);
       if (onClose != null) {
         onClose();
       }

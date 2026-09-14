@@ -1,6 +1,6 @@
-// === Module 16728: SwipeForMemberListWrapper ===
+// === Module 16730: SwipeForMemberListWrapper ===
 
-// Module 16728 (SwipeForMemberListWrapper)
+// Module 16730 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
@@ -25,17 +25,17 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-fn(4636);
+const createStyles = fn(4636);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
-obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.memberListPreview = obj;
-const createStyles = {};
-let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.overflow = "hidden";
-obj.content = createStyles;
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
+obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj4 = {};
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.overflow = "hidden";
+obj.content = obj4;
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.memberListContainer = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
-let obj2 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
+let obj5 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
 obj.onyxBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLeftWidth: ONYX_BORDER_WIDTH };
 obj.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
 let closure_17 = createStyles.createStyles(obj);
@@ -65,7 +65,6 @@ export default function _default(channelId) {
   let disallowGesture = tmp4;
   const isChatBesideChannelList = derivedValue(gesture2[12])().isChatBesideChannelList;
   let translateX2 = isChatBesideChannelList;
-  let obj = translateX2;
   const tmp5 = disallowGesture(translateX2.useState(channelId), 2);
   let gesture3 = tmp5[1];
   const items = [channelId];
@@ -108,7 +107,6 @@ export default function _default(channelId) {
   const movePanel = tmp11.movePanel;
   let isChatLockedOpen = movePanel;
   const maxWidth = tmp11.maxWidth;
-  let obj1 = gesture(gesture2[13]);
   class B {
     constructor() {
       return maxWidth - disallowGesture.get();
@@ -117,9 +115,9 @@ export default function _default(channelId) {
   B.__closure = { maxWidth, translateX };
   B.__workletHash = 10842481670591;
   B.__initData = __initData5;
-  derivedValue = obj1.useDerivedValue(B);
-  let obj2 = gesture(gesture2[21]);
-  derivedStateFromSharedValue = obj2.useDerivedStateFromSharedValue(derivedValue, (arg0) => arg0 > 0);
+  derivedValue = gesture(gesture2[13]).useDerivedValue(B);
+  let obj2 = gesture(gesture2[13]);
+  derivedStateFromSharedValue = gesture(gesture2[21]).useDerivedStateFromSharedValue(derivedValue, (arg0) => arg0 > 0);
   const items3 = [derivedStateFromSharedValue, channelId, screenIndex];
   const effect1 = translateX2.useEffect(() => {
     if (derivedStateFromSharedValue) {
@@ -128,7 +126,7 @@ export default function _default(channelId) {
       ComponentDispatch.dispatch(constants2.CHANNEL_DETAILS_SHOWN, obj);
     }
   }, items3);
-  let obj3 = gesture(gesture2[13]);
+  let obj3 = gesture(gesture2[21]);
   function te() {
     if (disallowGesture === constants3.ONYX) {
       if (!translateX2) {
@@ -138,11 +136,10 @@ export default function _default(channelId) {
     }
     diff = disallowGesture3.get();
   }
-  obj = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, ONYX_BORDER_WIDTH: isChatLockedOpen };
-  te.__closure = obj;
+  te.__closure = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, ONYX_BORDER_WIDTH: isChatLockedOpen };
   te.__workletHash = 2787360249959;
   te.__initData = __initData6;
-  const derivedValue1 = obj3.useDerivedValue(te);
+  const derivedValue1 = gesture(gesture2[13]).useDerivedValue(te);
   const items4 = [channelId, screenIndex, movePanel];
   callback2 = translateX2.useCallback((channelId) => {
     let tmp = channelId.channelId === gesture;
@@ -185,11 +182,9 @@ export default function _default(channelId) {
   }, items7);
   const items8 = [derivedValue, callback3, channelId];
   const callback4 = translateX2.useCallback(() => {
-    let obj = derivedValue;
     if (derivedValue.get() <= 0) {
-      obj = { shownPixels: null };
-      obj.shownPixels = obj.get();
-      navigation.verbose("handleBackPress", "shownPixels <= 0", obj);
+      const obj2 = { shownPixels: derivedValue.get() };
+      navigation.verbose("handleBackPress", "shownPixels <= 0", obj2);
       return false;
     } else {
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
@@ -197,24 +192,23 @@ export default function _default(channelId) {
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
-      let tmp23Result = useChatLayout;
-      isChatLockedOpen = tmp23Result.getChatLayout().isChatLockedOpen;
-      tmp23Result = NavigationRouteUtils;
-      let coerceChannelRouteResult = tmp23Result.coerceChannelRoute(currentRoute);
+      isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
+      const tmp23Result = useChatLayout;
+      let coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
       if (tmp3) {
         coerceChannelRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
-        const tmp23Result1 = NavigationRouteUtils;
+        const tmp23Result4 = NavigationRouteUtils;
       }
-      obj = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
-      let params;
+      const obj3 = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
+      let params1;
       if (coerceChannelRouteResult != null) {
-        params = coerceChannelRouteResult.params;
+        params1 = coerceChannelRouteResult.params;
       }
-      obj.routeParams = params;
-      navigation.verbose("handleBackPress", obj);
+      obj3.routeParams = params1;
+      navigation.verbose("handleBackPress", obj3);
       if (null == coerceChannelRouteResult) {
-        const obj1 = { currentRoute, isChatLockedOpen };
-        navigation.verbose("handleBackPress", "route is null", obj1);
+        const obj4 = { currentRoute, isChatLockedOpen };
+        navigation.verbose("handleBackPress", "route is null", obj4);
         let flag = false;
       } else {
         const params2 = coerceChannelRouteResult.params;
@@ -223,13 +217,13 @@ export default function _default(channelId) {
           channelId = params2.channelId;
         }
         if (channelId !== gesture) {
-          params = coerceChannelRouteResult.params;
+          const params = coerceChannelRouteResult.params;
           let channelId1;
           if (params != null) {
             channelId1 = params.channelId;
           }
-          const obj2 = { routeChannelId: channelId1, expectedChannelId: gesture };
-          navigation.verbose("handleBackPress", "route channelId mismatch", obj2);
+          const obj5 = { routeChannelId: channelId1, expectedChannelId: gesture };
+          navigation.verbose("handleBackPress", "route channelId mismatch", obj5);
           flag = false;
         } else if (React5(gesture)) {
           navigation.verbose("handleBackPress", "cancelling search before closing panel");
@@ -248,16 +242,17 @@ export default function _default(channelId) {
   const effect4 = translateX2.useEffect(() => {
     callback3();
   }, items9);
-  let obj5 = gesture(gesture2[26]);
-  navigation = obj5.useNavigation();
+  let obj4 = gesture(gesture2[13]);
+  let obj5 = { theme: tmp4, ThemeTypes: derivedStateFromSharedValue, isChatBesideChannelList, translateX, ONYX_BORDER_WIDTH: isChatLockedOpen };
+  navigation = gesture(gesture2[26]).useNavigation();
   closure_129_0 = channelId;
   closure_129_1 = screenIndex;
   closure_129_2 = isDragging;
   closure_129_3 = derivedStateFromSharedValue;
   const items10 = [channelId, screenIndex, derivedStateFromSharedValue];
   const effect5 = translateX2.useEffect(() => {
-    const obj = { channel_id: gesture, screen_index: String(derivedValue), member_list_open: disallowGesture };
-    obj.trackWithMetadata(constants.MEMBER_LIST_SWIPE_TOGGLED, obj);
+    const obj = AppAnalyticsUtilsDefault;
+    obj.trackWithMetadata(constants.MEMBER_LIST_SWIPE_TOGGLED, { channel_id: gesture, screen_index: String(derivedValue), member_list_open: disallowGesture });
   }, items10);
   const items11 = [derivedStateFromSharedValue, channelId, screenIndex, isDragging];
   const effect6 = translateX2.useEffect(() => {
@@ -266,10 +261,10 @@ export default function _default(channelId) {
       value = gesture2.get();
     }
     if (value) {
-      const obj = { channel_id: gesture, screen_index: null };
+      const obj2 = { channel_id: gesture, screen_index: null };
       const _String = String;
-      obj.screen_index = String(derivedValue);
-      obj.trackWithMetadata(constants.MEMBER_LIST_SWIPE_PEEK, obj);
+      obj2.screen_index = String(derivedValue);
+      AppAnalyticsUtilsDefault.trackWithMetadata(constants.MEMBER_LIST_SWIPE_PEEK, obj2);
     }
   }, items11);
   gesture2 = undefined;
@@ -301,7 +296,7 @@ export default function _default(channelId) {
     }
     return result;
   }, items12);
-  let tmp12Result = tmp12(tmp3[13]);
+  const obj6 = gesture(gesture2[26]);
   const fn = function c() {
     return derivedValue.get() > 0;
   };
@@ -322,8 +317,8 @@ export default function _default(channelId) {
   fn2.__closure = { mainDisallowGesture: disallowGesture, stackDisallowGesture: disallowGesture2, panelDisallowGesture: disallowGesture3 };
   fn2.__workletHash = 13681610289748;
   fn2.__initData = __initData2;
-  const animatedReaction = tmp12Result.useAnimatedReaction(fn, fn2);
-  tmp12Result = tmp12(tmp3[13]);
+  const animatedReaction = gesture(gesture2[13]).useAnimatedReaction(fn, fn2);
+  const tmp12Result = gesture(gesture2[13]);
   const fn3 = function h() {
     let tmp = !isChatLockedOpen;
     if (!isChatLockedOpen) {
@@ -349,7 +344,8 @@ export default function _default(channelId) {
   fn4.__closure = { panelDisallowGesture: disallowGesture3 };
   fn4.__workletHash = 3362957347102;
   fn4.__initData = __initData4;
-  const animatedReaction1 = tmp12Result.useAnimatedReaction(fn3, fn4);
+  const animatedReaction1 = gesture(gesture2[13]).useAnimatedReaction(fn3, fn4);
+  const tmp12Result5 = gesture(gesture2[13]);
   const unmountEffect = gesture(gesture2[14]).useUnmountEffect(() => {
     const result = disallowGesture3.set(false);
     const result1 = disallowGesture.set(false);
@@ -366,31 +362,30 @@ export default function _default(channelId) {
     obj.isPanelActive = derivedStateFromSharedValue;
     return obj;
   }, items13);
-  const tmp12Result1 = gesture(gesture2[14]);
+  const tmp12Result6 = gesture(gesture2[14]);
   const mainTabsChannelScreenStyles = gesture(gesture2[27]).useMainTabsChannelScreenStyles(isDragging, derivedValue1, maxWidth);
-  const tmp12Result2 = gesture(gesture2[27]);
+  const tmp12Result7 = gesture(gesture2[27]);
   function oe() {
-    let obj = derivedValue;
     const tmp = derivedValue.get() > 300;
     let str = "flex";
     if (tmp) {
       str = "none";
     }
-    obj = { display: str, opacity: null };
+    const obj2 = { display: str, opacity: null };
     let num = 0;
     if (!tmp) {
-      num = 1 - obj.get() / 150;
+      num = 1 - derivedValue.get() / 150;
     }
-    obj.opacity = num;
-    return obj;
+    obj2.opacity = num;
+    return obj2;
   }
   oe.__closure = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD: 150 };
   oe.__workletHash = 9468759128012;
   oe.__initData = __initData7;
-  obj = { value: memo2, children: null };
+  const obj7 = { value: memo2, children: null };
   const animatedStyle = gesture(gesture2[13]).useAnimatedStyle(oe);
-  obj1 = { gesture: memo1, children: null };
-  obj2 = {
+  const obj8 = { gesture: memo1, children: null };
+  let obj9 = {
     onAccessibilityEscape() {
       if (gesture2) {
         navigation.goBack();
@@ -399,16 +394,16 @@ export default function _default(channelId) {
     style,
     children: null
   };
-  obj3 = { navigationKey: channelId, definition: tmp12(tmp3[30]).CHANNEL_NAVIGATION_TTI, accessibilityElementsHidden: derivedStateFromSharedValue || undefined, importantForAccessibility: null, style: null, children: null };
+  const obj10 = { navigationKey: channelId, definition: gesture(gesture2[30]).CHANNEL_NAVIGATION_TTI, accessibilityElementsHidden: derivedStateFromSharedValue || undefined, importantForAccessibility: null, style: null, children: null };
   let str;
   if (derivedStateFromSharedValue) {
     str = "no-hide-descendants";
   }
-  obj3.importantForAccessibility = str;
-  obj3.style = tmp.content;
+  obj10.importantForAccessibility = str;
+  obj10.style = tmp.content;
   const items14 = [children, callback2(gesture(gesture2[31]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth })];
-  obj3.children = items14;
-  const items15 = [callback3(gesture(gesture2[29]).NavTTISurfaceProvider, obj3), ];
+  obj10.children = items14;
+  const items15 = [callback3(gesture(gesture2[29]).NavTTISurfaceProvider, obj10), ];
   const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, , ];
   let onyxBorder;
   if (tmp4 === derivedStateFromSharedValue.ONYX) {
@@ -421,20 +416,21 @@ export default function _default(channelId) {
       onyxRightOverflow = tmp.onyxRightOverflow;
     }
   }
-  const obj4 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj11 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
   items16[3] = onyxRightOverflow;
   const items17 = [callback2(derivedValue(gesture2[32]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
-  obj5 = { children: tmp35(tmp2(tmp3[34]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) };
-  items17[1] = callback2(gesture(gesture2[33]).LayerScope, obj5);
-  const obj6 = { style: null, children: callback2(disallowGesture2, { style: tmp.memberListPreview }) };
+  const tmp12Result8 = gesture(gesture2[13]);
+  const tmp40 = !derivedStateFromSharedValue;
+  items17[1] = callback2(gesture(gesture2[33]).LayerScope, { children: callback2(derivedValue(gesture2[34]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) });
+  const obj13 = { style: null, children: callback2(disallowGesture2, { style: tmp.memberListPreview }) };
   const items18 = [gesture3.absoluteFill, animatedStyle];
-  obj6.style = items18;
-  items17[2] = callback2(derivedValue(gesture2[13]).View, obj6);
-  obj4.children = items17;
-  items15[1] = callback3(derivedValue(gesture2[13]).View, obj4);
-  obj2.children = items15;
-  obj1.children = callback3(disallowGesture2, obj2);
-  obj.children = callback2(gesture(gesture2[28]).GestureDetector, obj1);
-  return callback2(context.Provider, obj);
+  obj13.style = items18;
+  items17[2] = callback2(derivedValue(gesture2[13]).View, obj13);
+  obj11.children = items17;
+  items15[1] = callback3(derivedValue(gesture2[13]).View, obj11);
+  obj9.children = items15;
+  obj8.children = callback3(disallowGesture2, obj9);
+  obj7.children = callback2(gesture(gesture2[28]).GestureDetector, obj8);
+  return callback2(context.Provider, obj7);
 };
 export const SwipeForMemberListContext = context;

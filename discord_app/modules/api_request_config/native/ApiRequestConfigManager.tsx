@@ -1,10 +1,10 @@
-// === Module 17937: ApiRequestConfigManager ===
+// === Module 17938: ApiRequestConfigManager ===
 
-// Module 17937 (ApiRequestConfigManager)
+// Module 17938 (ApiRequestConfigManager)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
@@ -13,17 +13,17 @@ function updateApiRequestConfig() {
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    let obj = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: null };
-    obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    obj["X-Super-Properties"] = AnalyticsUtilsDefault.getSuperPropertiesBase64();
-    obj["X-Fingerprint"] = AuthenticationStore.getFingerprint();
-    obj["X-Installation-ID"] = AuthenticationStore.getInstallationForTracking();
-    obj.headers = obj;
+    const obj = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: null };
+    const obj3 = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
+    obj3["X-Super-Properties"] = AnalyticsUtilsDefault.getSuperPropertiesBase64();
+    obj3["X-Fingerprint"] = AuthenticationStore.getFingerprint();
+    obj3["X-Installation-ID"] = AuthenticationStore.getInstallationForTracking();
+    obj.headers = obj3;
     const result = NativeCacheModule.setItem("discordApiRequestConfig", JSON.stringify(obj));
   }
 }
 const NativeModules = _mod17.NativeModules;
-let prototype = function ApiRequestConfigManager() {
+const prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.handleUpdate = PlatformUtils.isAndroid() ? updateApiRequestConfig : (() => {
 
@@ -33,7 +33,7 @@ let prototype = function ApiRequestConfigManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
 
-export default prototype;
+export default prototype1;

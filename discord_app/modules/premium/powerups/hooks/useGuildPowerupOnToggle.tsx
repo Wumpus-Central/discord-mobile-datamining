@@ -1,7 +1,7 @@
-// === Module 12665: useGuildPowerupOnToggle ===
+// === Module 12666: useGuildPowerupOnToggle ===
 
-// Module 12665 (useGuildPowerupOnToggle)
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12617 */;
+// Module 12666 (useGuildPowerupOnToggle)
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12618 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupOnToggle(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  [tmp2, _slicedToArray] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, _slicedToArray] = noop.useState(false);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   noop = tmp3[1];
   const obj = { isLoading: tmp2, error: tmp3[0], onToggle: null };

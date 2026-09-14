@@ -1,6 +1,6 @@
-// === Module 11688: OptInChannelsUtils ===
+// === Module 11689: OptInChannelsUtils ===
 
-// Module 11688 (OptInChannelsUtils)
+// Module 11689 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
@@ -9,13 +9,15 @@ import useChannelName from "useChannelName" /* 4789 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
 import ChannelListState from "ChannelListState" /* 7631 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11689 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11690 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function setIndex(arg0, index) {
@@ -136,8 +138,8 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   _require = guildId;
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
+  let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.CHANNEL_BROWSER_NUX);
   let obj = require("DismissibleContentUnsafeUtils");
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [ChannelStore];
   const items1 = [guildId];
   closure_3 = require("initialize").useStateFromStoresObject(items, () => {
@@ -178,8 +180,8 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
     result = null == rowHeight;
   }
   if (!result) {
-    obj = { rowCount: 1, rowHeight };
-    mapped.unshift(obj);
+    const obj3 = { rowCount: 1, rowHeight };
+    mapped.unshift(obj3);
   }
   return mapped;
 };
@@ -211,12 +213,12 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  let obj = SnowflakeUtilsDefault;
+  const tmp = _modDef4228;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;
   }
-  obj = { timeAgo: null };
-  obj.timeAgo = _modDef4228(obj.extractTimestamp(lastMessageIdResult)).fromNow();
-  return intl.formatToPlainString(util.t["8N0BHR"], obj);
+  const obj2 = { timeAgo: null };
+  obj2.timeAgo = tmp(SnowflakeUtilsDefault.extractTimestamp(lastMessageIdResult)).fromNow();
+  return intl.formatToPlainString(util.t["8N0BHR"], obj2);
 };

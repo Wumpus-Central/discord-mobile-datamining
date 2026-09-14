@@ -3,43 +3,41 @@
 // Module 8944 (NameplateDummyUserPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import themes from "themes" /* 4345 */;
 import NameplateDefault from "Nameplate" /* 8945 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.XSMALL_20] = NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG;
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1178).AvatarSizes.NORMAL] = NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG;
+const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL_20] = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
+let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.NORMAL] = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
 const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
-  let avatarContainer = { container: null, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
-  avatarContainer = { padding: tmp.padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm };
-  avatarContainer.container = avatarContainer;
-  avatarContainer = { borderRadius: nativeDefault.radii.round, marginRight: tmp.avatarMarginRight, backgroundColor: null };
+  obj = { container: { padding: obj[arg0].padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm }, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
+  const obj3 = { borderRadius: nativeDefault.radii.round, marginRight: obj[arg0].avatarMarginRight, backgroundColor: null };
   let str = "transparent";
   if (arg1) {
     str = nativeDefault.colors.BORDER_STRONG;
   }
-  avatarContainer.backgroundColor = str;
-  avatarContainer.avatarContainer = avatarContainer;
+  obj3.backgroundColor = str;
+  obj.avatarContainer = obj3;
   let num = 0.5;
   if (arg1) {
     num = 0;
   }
-  avatarContainer.avatar = { opacity: num };
-  avatarContainer.placeholderBar = { borderRadius: nativeDefault.radii.md, height: avatarContainer[arg0].placeholderBarHeight, backgroundColor: nativeDefault.colors.BORDER_STRONG };
-  const obj1 = { borderRadius: nativeDefault.radii.md, height: avatarContainer[arg0].placeholderBarHeight, backgroundColor: nativeDefault.colors.BORDER_STRONG };
-  avatarContainer.nameplate = { borderRadius: nativeDefault.radii.sm };
-  return avatarContainer;
+  obj.avatar = { opacity: num };
+  const obj2 = { padding: obj[arg0].padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm };
+  obj.placeholderBar = { borderRadius: nativeDefault.radii.md, height: obj[arg0].placeholderBarHeight, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+  const obj4 = { borderRadius: nativeDefault.radii.md, height: obj[arg0].placeholderBarHeight, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+  obj.nameplate = { borderRadius: nativeDefault.radii.sm };
+  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateDummyUserPreview.tsx");
@@ -60,18 +58,19 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   }
   const tmp3 = closure_8(NORMAL, flag);
   const items = [ThemeStore];
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items1 = [tmp3.container, style];
-  obj.style = items1;
-  const stateFromStores = obj.useStateFromStores(items, () => themes.isThemeDark(theme.theme));
-  obj = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  const items2 = [hasOwnProperty(NameplateDefault, obj), , ];
-  const obj1 = { style: tmp3.avatarContainer, children: hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8947 : 8948), size: NORMAL, "aria-hidden": true, style: tmp3.avatar }) };
-  items2[1] = hasOwnProperty(View, obj1);
-  const obj3 = { style: null };
+  obj2.style = items1;
+  const stateFromStores = initialize.useStateFromStores(items, () => themes.isThemeDark(theme.theme));
+  const items2 = [hasOwnProperty(NameplateDefault, { nameplate, fullOpacity: true, style: tmp3.nameplate, animate }), , ];
+  const obj4 = { style: tmp3.avatarContainer, children: null };
+  const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
+  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8947 : 8948), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
+  items2[1] = hasOwnProperty(View, obj4);
+  const obj6 = { style: null };
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];
-  obj3.style = items3;
-  items2[2] = hasOwnProperty(View, obj3);
-  obj.children = items2;
-  return timestampProducer(View, obj);
+  obj6.style = items3;
+  items2[2] = hasOwnProperty(View, obj6);
+  obj2.children = items2;
+  return timestampProducer(View, obj2);
 };

@@ -1,12 +1,12 @@
-// === Module 11719: openGroupDMAddMembers ===
+// === Module 11720: openGroupDMAddMembers ===
 
-// Module 11719 (openGroupDMAddMembers)
+// Module 11720 (openGroupDMAddMembers)
 import ToastUtils from "ToastUtils" /* 4334 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11720 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11721 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11723 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11724 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11721 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11722 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11724 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11725 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -24,7 +24,7 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       if (num == null) {
         num = 0;
       }
-      let obj = { memberCount: num + 1, recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }), audience: null, showUpsell: null };
+      const obj = { memberCount: num + 1, recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }), audience: null, showUpsell: null };
       const obj3 = GroupDMNitroUpsellModel;
       let premiumType;
       if (currentUser != null) {
@@ -39,8 +39,8 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       }
       obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
       const tmp2Result = GroupDMNitroUpsellModel;
-      obj = { location: CHANNEL_TEXT_AREA };
-      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj).enabled;
+      const obj2 = { location: CHANNEL_TEXT_AREA };
+      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj2).enabled;
       return obj3.getGroupDMAddMembersEntryAction(obj);
     }
   }

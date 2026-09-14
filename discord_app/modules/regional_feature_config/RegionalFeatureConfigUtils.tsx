@@ -4,6 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4851 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");

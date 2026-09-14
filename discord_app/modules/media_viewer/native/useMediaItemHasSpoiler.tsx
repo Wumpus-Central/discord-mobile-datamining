@@ -5,6 +5,8 @@ import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemHasSpoiler.tsx");
@@ -32,9 +34,8 @@ export const useMediaItemHasSpoiler = function useMediaItemHasSpoiler(index) {
   }
   let tmp7 = true === spoiler;
   closure_3 = tmp7;
-  let tmpResult = tmp(tmp2[4]);
   const items1 = [closure_3];
-  const stateFromStores = tmpResult.useStateFromStores(items1, () => {
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items1, () => {
     let channel = null;
     if (closure_3) {
       let channelId;
@@ -48,7 +49,7 @@ export const useMediaItemHasSpoiler = function useMediaItemHasSpoiler(index) {
     }
     return channel;
   });
-  tmpResult = tmp(tmp2[5]);
+  require("computeGlobalSpoilerDisplay");
   let tmp11 = !state1;
   if (!state1) {
     let obscure;

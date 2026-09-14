@@ -1,13 +1,15 @@
-// === Module 15914: VisibilitySensor ===
+// === Module 15916: VisibilitySensor ===
 
-// Module 15914 (VisibilitySensor)
+// Module 15916 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import noop from "module_19" /* 19 */;
+import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
+let noop = noop_mod;
 ({ useEffect: c2, useRef: c3 } = noop);
+let noop = noop_mod;
 const View = _mod17.View;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");

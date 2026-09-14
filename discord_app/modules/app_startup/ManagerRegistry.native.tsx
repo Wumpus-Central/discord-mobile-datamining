@@ -1,8 +1,10 @@
-// === Module 17412: ManagerRegistry ===
+// === Module 17414: ManagerRegistry ===
 
-// Module 17412 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18006 */;
+// Module 17414 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18007 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const obj = {
   AcceptInviteManager: {

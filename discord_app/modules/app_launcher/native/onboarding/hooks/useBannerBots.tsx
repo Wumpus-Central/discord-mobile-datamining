@@ -1,9 +1,9 @@
-// === Module 12195: useBannerBots ===
+// === Module 12196: useBannerBots ===
 
-// Module 12195 (useBannerBots)
+// Module 12196 (useBannerBots)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12174 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12175 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export const useBannerBots = function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    const apps = first1(12196).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    const apps = first1(12197).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
     const items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -24,11 +24,11 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(12196).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = first1(12196);
+  let apps = first1(12197).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  let obj2 = first1(12197);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    const commands = first1(12196).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    const commands = first1(12197).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
     const items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -41,11 +41,11 @@ export const useBannerBots = function useBannerBots(context) {
   })({ context });
   const tmp4 = (function useFrecencyCommandIds(context) {
     context = context.context;
-    let obj = context(504);
     const items = [closure_3];
-    obj = {
+    const obj = context(504);
+    const obj2 = {
       channel: context.channel,
-      guild: obj.useStateFromStores(items, () => {
+      guild: context(504).useStateFromStores(items, () => {
         const channel = context.channel;
         let guild_id;
         if (channel != null) {
@@ -54,15 +54,15 @@ export const useBannerBots = function useBannerBots(context) {
         return guild.getGuild(guild_id);
       })
     };
-    return context(9428).useTopCommands(obj);
+    return context(9428).useTopCommands(obj2);
   })({ context });
   let channel = context.channel;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12167).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12167);
+  const activityApplications = first1(12168).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12168);
   let items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;
@@ -72,11 +72,11 @@ export const useBannerBots = function useBannerBots(context) {
   let tmp9 = value;
   first1 = value;
   for (const item10049 of tmp4) {
-    value = obj3.get(item10049);
-    if (null != value) {
-      let value1 = obj.get(tmp11.applicationId);
-      let tmp14 = value1;
-      if (null != value1) {
+    let value3 = obj3.get(item10049);
+    if (null != value3) {
+      let value4 = obj.get(tmp11.applicationId);
+      let tmp14 = value4;
+      if (null != value4) {
         if (null == tmp9) {
           tmp9 = tmp14;
           first1 = tmp14;
@@ -86,7 +86,7 @@ export const useBannerBots = function useBannerBots(context) {
             id = tmp9.id;
           }
           if (tmp14.id !== id) {
-            let found = value1;
+            let found = value4;
             obj6.return();
             break;
           }
@@ -115,8 +115,8 @@ export const useBannerBots = function useBannerBots(context) {
           } else if (null == found) {
             found = activityApplications[0];
           }
-          obj = { firstBotApplication: tmp9, secondBotApplication: found };
-          return obj;
+          let obj5 = { firstBotApplication: tmp9, secondBotApplication: found };
+          return obj5;
         }
       }
     }

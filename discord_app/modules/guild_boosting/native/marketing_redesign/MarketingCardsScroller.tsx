@@ -1,6 +1,6 @@
-// === Module 12693: MarketingCardsScroller ===
+// === Module 12694: MarketingCardsScroller ===
 
-// Module 12693 (MarketingCardsScroller)
+// Module 12694 (MarketingCardsScroller)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -55,7 +55,6 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   const itemCount = initialIndex.itemCount;
   const onScrollingChange = initialIndex.onScrollingChange;
   const tmp = closure_12();
-  let obj = noop;
   noop.useRef(null);
   const sum = cardWidth + cardMarginRight;
   noop = sum;
@@ -66,13 +65,13 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   [tmp7, closure_8] = ref(noop.useState(0), 2);
   const tmp6 = ref(noop.useState(0), 2);
   [tmp9, closure_9] = ref(noop.useState(0), 2);
-  let obj1 = num(onScrollingChange[8]);
+  const tmp8 = ref(noop.useState(0), 2);
   let items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_7.useReducedMotion);
+  const stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => closure_7.useReducedMotion);
   noop.useRef(stateFromStores);
-  let obj2 = num(onScrollingChange[9]);
+  let obj2 = num(onScrollingChange[8]);
   let tmp14 = tmp9 > 0;
-  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = num(onScrollingChange[9]).useIsScreenReaderEnabled();
   if (tmp14) {
     const _Math = Math;
     const _Math2 = Math;
@@ -85,11 +84,11 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
     tmp25Result = first > 0;
   }
   closure_13 = tmp25Result;
-  tmp25Result = tmp14;
+  let tmp25Result2 = tmp14;
   if (tmp14) {
-    tmp25Result = first < itemCount - 1;
+    tmp25Result2 = first < itemCount - 1;
   }
-  closure_14 = tmp25Result;
+  closure_14 = tmp25Result2;
   const items1 = [itemCount, sum];
   const items2 = [stateFromStores];
   const memo = obj.useMemo(() => {
@@ -121,24 +120,24 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   }, items3);
   const items4 = [scrollToIndex];
   const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ scrollToIndex }), items4);
-  const items5 = [tmp25Result, tmp25Result];
-  obj = { style: null, children: null };
+  const items5 = [tmp25Result2, tmp25Result];
+  const obj4 = { style: null, children: null };
   const items6 = [initialIndex.style, tmp.wrapper];
-  obj.style = items6;
-  obj = {
-    accessibilityActions: obj.useMemo(() => {
+  obj4.style = items6;
+  const obj5 = {
+    accessibilityActions: noop.useMemo(() => {
       const items = [];
       if (closure_13) {
-        let obj = { name: previous, label: null };
+        const obj = { name: previous, label: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.vgfxaA);
         items.push(obj);
       }
       if (closure_14) {
-        obj = { name: next, label: null };
+        const obj2 = { name: next, label: null };
         const intl2 = util.intl;
-        obj.label = intl2.string(util.t.XiOHRX);
-        items.push(obj);
+        obj2.label = intl2.string(util.t.XiOHRX);
+        items.push(obj2);
       }
       return items;
     }, items5),
@@ -184,10 +183,10 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   if (tmp14) {
     tmp14 = !isScreenReaderEnabled;
   }
-  obj.scrollEnabled = tmp14;
-  obj.snapToOffsets = memo;
+  obj5.scrollEnabled = tmp14;
+  obj5.snapToOffsets = memo;
   const Children = obj.Children;
-  obj.children = Children.map(children, (children, arg1) => {
+  obj5.children = Children.map(children, (children, arg1) => {
     let tmp4 = closure_12;
     if (closure_12) {
       tmp4 = arg1 !== first;
@@ -203,43 +202,43 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
     obj.children = children;
     return React6(timestampProducer, obj);
   });
-  const items7 = [closure_8(ref, obj), , ];
+  const items7 = [closure_8(ref, obj5), , ];
   if (tmp25Result) {
     function handleNavigatePrevious() {
       if (closure_13) {
         callback(first - 1);
       }
     }
-    obj1 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+    const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
     let intl = tmp10(tmp11[10]).intl;
-    obj1.accessibilityLabel = intl.string(tmp10(tmp11[10]).t.vgfxaA);
-    obj1.onPress = handleNavigatePrevious;
+    obj6.accessibilityLabel = intl.string(tmp10(tmp11[10]).t.vgfxaA);
+    obj6.onPress = handleNavigatePrevious;
     const items8 = [, ];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
-    obj1.style = items8;
-    obj2 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj1.children = closure_8(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj2);
-    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj1);
+    obj6.style = items8;
+    const obj7 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
+    obj6.children = closure_8(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj7);
+    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj6);
   }
   items7[1] = tmp25Result;
-  if (tmp25Result) {
+  if (tmp25Result2) {
     function handleNavigateNext() {
       if (closure_14) {
         callback(first + 1);
       }
     }
-    const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+    const obj8 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
     let intl2 = tmp10(tmp11[10]).intl;
-    obj3.accessibilityLabel = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
-    obj3.onPress = handleNavigateNext;
+    obj8.accessibilityLabel = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
+    obj8.onPress = handleNavigateNext;
     const items9 = [, ];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
-    obj3.style = items9;
-    const obj4 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj3.children = closure_8(tmp10(tmp11[14]).ChevronLargeRightIcon, obj4);
-    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj3);
+    obj8.style = items9;
+    const obj9 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
+    obj8.children = closure_8(tmp10(tmp11[14]).ChevronLargeRightIcon, obj9);
+    tmp25Result2 = closure_8(tmp10(tmp11[12]).PressableOpacity, obj8);
   }
-  items7[2] = tmp25Result;
-  obj.children = items7;
-  return closure_9(first, obj);
+  items7[2] = tmp25Result2;
+  obj4.children = items7;
+  return closure_9(first, obj4);
 });

@@ -13,8 +13,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useSimilar
 
 export default function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  let obj = data(8886);
-  const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
+  const similarGameIds = data(8886).useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
     let tmp7 = closure_5;
@@ -22,20 +21,22 @@ export default function useSimilarGames(arg0) {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(7412);
-  const games = tmp3Result.useGames(tmp7);
-  tmp3Result = tmp3(504);
+  const obj = data(8886);
+  const tmp2 = !hasItem;
+  const games = data(7412).useGames(tmp7);
+  const tmp3Result = data(7412);
   const items = [GameStore];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);
+  const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);
   data(504);
   const items2 = [GameStore, UserStore];
   [][0] = tmp7;
   if (hasItem) {
-    obj = { isFetching: false, similarGames };
+    const obj2 = { isFetching: false, similarGames };
+    let obj3 = obj2;
   } else {
-    obj = { isFetching: null == error && null == data || isLoading || stateFromStores, similarGames: tmp11 };
+    obj3 = { isFetching: null == error && null == data || isLoading || stateFromStores, similarGames: tmp11 };
     const tmp13 = null == error && null == data || isLoading || stateFromStores;
   }
-  return obj;
+  return obj3;
 };

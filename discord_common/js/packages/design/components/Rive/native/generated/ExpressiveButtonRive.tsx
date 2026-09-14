@@ -23,7 +23,6 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = BaseRive;
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -32,8 +31,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posx1 = onDataBindingChange.posx;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = BaseRive;
+    const numberBinding1 = BaseRive.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
+    const tmpResult = BaseRive;
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -42,7 +41,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
-    const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const tmpResult4 = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -52,7 +52,7 @@ let closure_9 = {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
     const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive;
+    const tmpResult5 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -75,7 +75,6 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = BaseRive;
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -84,8 +83,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posx1 = onDataBindingChange.posx;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = BaseRive;
+    const numberBinding1 = BaseRive.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
+    const tmpResult = BaseRive;
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -94,7 +93,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
-    const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const tmpResult4 = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -104,7 +104,7 @@ let closure_9 = {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
     const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive;
+    const tmpResult5 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -127,7 +127,6 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = BaseRive;
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -136,8 +135,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posx1 = onDataBindingChange.posx;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = BaseRive;
+    const numberBinding1 = BaseRive.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
+    const tmpResult = BaseRive;
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -146,7 +145,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
-    const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const tmpResult4 = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -156,7 +156,7 @@ let closure_9 = {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
     const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive;
+    const tmpResult5 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -179,7 +179,6 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = BaseRive;
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -188,8 +187,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posx1 = onDataBindingChange.posx;
     }
-    const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = BaseRive;
+    const numberBinding1 = BaseRive.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
+    const tmpResult = BaseRive;
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -198,7 +197,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
-    const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
+    const tmpResult4 = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -208,7 +208,7 @@ let closure_9 = {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
     const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive;
+    const tmpResult5 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -254,9 +254,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx");
 
 export const ExpressiveButtonRive = noop.forwardRef(function ExpressiveButtonRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { fallback: fallback.fallback, children: null };
   const merged = Object.assign(fallback);
   obj.children = <closure_10 ref={ref} />;
-  return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
 });

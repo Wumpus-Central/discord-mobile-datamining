@@ -1,12 +1,14 @@
-// === Module 11965: GuildMemberUtils ===
+// === Module 11966: GuildMemberUtils ===
 
-// Module 11965 (GuildMemberUtils)
+// Module 11966 (GuildMemberUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function getGuildMemberAgeInRange(arg0, arg1, dependencyMap) {
@@ -118,9 +120,8 @@ export const useGuildMemberAgeInRange = function useGuildMemberAgeInRange(arg0, 
 export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  let obj = require("initialize");
   const items = [GuildMemberStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const member = GuildMemberStore.getMember(closure_0, closure_1);
     let num;
     if (member != null) {
@@ -131,6 +132,7 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
     }
     return FlagUtils.hasFlag(num, GuildMemberFlags.DID_REJOIN);
   });
+  let obj = require("initialize");
   const items1 = [GuildStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     const guild = GuildStore.getGuild(closure_0);
@@ -144,9 +146,9 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
   });
   const obj2 = require("initialize");
   const items2 = [UserStore];
-  obj = { maxDaysOld: 7 };
+  const obj4 = { maxDaysOld: 7 };
   closure_129_0 = arg0;
-  closure_129_1 = obj;
+  closure_129_1 = obj4;
   closure_129_2 = arg1;
   const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
     const user = UserStore.getUser(closure_1);
@@ -157,7 +159,7 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
     return bot;
   });
   const obj3 = require("initialize");
-  const items3 = [obj, arg0, arg1];
+  const items3 = [obj4, arg0, arg1];
   const obj5 = require("initialize");
   return require("initialize").useStateFromStores([], () => getGuildMemberAgeInRange(closure_0, closure_1, dependencyMap), items3) && !stateFromStores1 && !stateFromStores2 && !stateFromStores;
 };

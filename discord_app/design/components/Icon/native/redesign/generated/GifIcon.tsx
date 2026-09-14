@@ -1,6 +1,6 @@
-// === Module 10509: GifIcon ===
+// === Module 10510: GifIcon ===
 
-// Module 10509 (GifIcon)
+// Module 10510 (GifIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4337 */;
 import _mod8189 from "module_8189" /* 8189 */;

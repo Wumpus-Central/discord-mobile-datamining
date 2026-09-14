@@ -1,13 +1,13 @@
-// === Module 13771: mute ===
+// === Module 13772: mute ===
 
-// Module 13771 (mute)
-import _mod1188 from "module_1188" /* 1188 */;
-import timestamp from "timestamp" /* 1217 */;
-import wrappers from "wrappers" /* 1218 */;
+// Module 13772 (mute)
+import _mod1186 from "module_1186" /* 1186 */;
+import timestamp from "timestamp" /* 1215 */;
+import wrappers from "wrappers" /* 1216 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class MuteNotificationSettings$Type extends MessageType {
   constructor() {
     obj = {
@@ -28,19 +28,18 @@ class MuteNotificationSettings$Type extends MessageType {
             return wrappers.Int32Value;
           }
     };
-    tmp = new tmp("discord_protos.common.v1.MuteNotificationSettings", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.common.v1.MuteNotificationSettings", items, new.target);
+    return tmp1;
   }
 }
-let prototype = MuteNotificationSettings$Type.prototype;
+const prototype = MuteNotificationSettings$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = {};
+  const obj = {};
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -78,7 +77,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -91,20 +90,20 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, writeUnknownFields) {
   if (endTime.endTime) {
     const Timestamp = timestamp.Timestamp;
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    const joined = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (endTime.selectedTimeWindow) {
     const Int32Value = wrappers.Int32Value;
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
-    const joined1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    const joined1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, endTime, tag);
@@ -129,8 +128,8 @@ let items = [
     }
   }
 ];
-prototype = new prototype("discord_protos.common.v1.MuteNotificationSettings", items, tmp, MuteNotificationSettings$Type, prototype, items, fn);
+const prototype1 = new prototype("discord_protos.common.v1.MuteNotificationSettings", items, tmp, MuteNotificationSettings$Type, prototype, items, fn);
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx");
 
-export const MuteNotificationSettings = prototype;
+export const MuteNotificationSettings = prototype1;

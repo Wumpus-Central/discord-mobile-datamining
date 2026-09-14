@@ -1,7 +1,7 @@
 // === Module 9434: ThreadCreationHooks ===
 
 // Module 9434 (ThreadCreationHooks)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ThreadHooks from "ThreadHooks" /* 7372 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7377 */;
 import MessageParserDefault from "MessageParser" /* 7784 */;
@@ -90,8 +90,8 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
       if (null == match.index) {
         break;
       } else {
-        items.push(str7.substring(0, match.index));
-        let arr = items.push(match[0]);
+        let arr = items.push(str7.substring(0, match.index));
+        let arr3 = items.push(match[0]);
         str7 = str7.substring(match.index + match[0].length);
         continue;
       }
@@ -100,21 +100,21 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     const first1 = items[0];
     let num4 = 1;
     let tmp12 = first1;
-    let arr1 = first1;
+    let arr2 = first1;
     if (1 < items.length) {
       const sum = tmp12 + items[num4];
-      arr1 = tmp12;
+      arr2 = tmp12;
       while (sum.length <= 40) {
         num4 = num4 + 1;
         tmp12 = sum;
-        arr1 = sum;
+        arr2 = sum;
         if (num4 >= items.length) {
           break;
         }
       }
     }
-    let text2 = arr1;
-    if (arr1.length > 40) {
+    let text2 = arr2;
+    if (arr2.length > 40) {
       text2 = `${arr2.substring(0, 40)}...`;
     }
     return text2;
@@ -163,7 +163,7 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
         } else {
           string2Result = string2(t2["1KEdvB"]);
         }
-        let obj2 = { title: string2Result, body: null };
+        let obj7 = { title: string2Result, body: null };
         const intl10 = closure_135_0(closure_135_2[15]).intl;
         const string3 = intl10.string;
         let KGaiEK = closure_135_0(closure_135_2[15]).t;
@@ -173,8 +173,8 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
         } else {
           string3Result = string3(KGaiEK.P0wT5S);
         }
-        obj2.body = string3Result;
-        obj2 = closure_135_1(closure_135_2[28]).show(obj2);
+        obj7.body = string3Result;
+        obj7 = closure_135_1(closure_135_2[28]).show(obj7);
         closure_135_1(closure_135_2[28]);
       } else {
         const body7 = closure_134_8.body;
@@ -183,12 +183,12 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
           code1 = body7.code;
         }
         if (code1 === closure_135_15.TOO_MANY_ANNOUNCEMENT_THREADS) {
-          const obj3 = { title: null, body: null };
+          const obj8 = { title: null, body: null };
           const intl7 = closure_135_0(closure_135_2[15]).intl;
-          obj3.title = intl7.string(closure_135_0(closure_135_2[15]).t["1KEdvB"]);
+          obj8.title = intl7.string(closure_135_0(closure_135_2[15]).t["1KEdvB"]);
           const intl8 = closure_135_0(closure_135_2[15]).intl;
-          obj3.body = intl8.string(closure_135_0(closure_135_2[15]).t.jDMxz2);
-          closure_135_1(closure_135_2[28]).show(obj3);
+          obj8.body = intl8.string(closure_135_0(closure_135_2[15]).t.jDMxz2);
+          closure_135_1(closure_135_2[28]).show(obj8);
           closure_135_1(closure_135_2[28]);
         } else {
           const body8 = closure_134_8.body;
@@ -204,12 +204,11 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
             }
             closure_134_5 = c4;
             if (closure_134_5 > 0) {
-              let obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_12.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[31]).Millis.SECOND };
-              closure_135_1(closure_135_2[29]).dispatch(obj4);
+              closure_135_1(closure_135_2[29]).dispatch({ type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_12.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[31]).Millis.SECOND });
               closure_135_1(closure_135_2[29]);
+              { type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_12.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[31]).Millis.SECOND };
             }
           } else if (429 === closure_134_8.status) {
-            let obj13 = closure_135_1(closure_135_2[28]);
             const intl5 = closure_135_0(closure_135_2[15]).intl;
             const string = intl5.string;
             const t = closure_135_0(closure_135_2[15]).t;
@@ -218,10 +217,11 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
             } else {
               stringResult = string(t["1KEdvB"]);
             }
-            const obj5 = { title: stringResult, body: null };
+            const obj13 = { title: stringResult, body: null };
             const intl6 = closure_135_0(closure_135_2[15]).intl;
-            obj5.body = intl6.string(closure_135_0(closure_135_2[15]).t.Whhv4w);
-            obj13.show(obj5);
+            obj13.body = intl6.string(closure_135_0(closure_135_2[15]).t.Whhv4w);
+            closure_135_1(closure_135_2[28]).show(obj13);
+            closure_135_1(closure_135_2[28]);
           } else {
             const body9 = closure_134_8.body;
             let code3;
@@ -285,47 +285,47 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
                     code6 = body10.code;
                   }
                   if (code6 !== closure_135_15.EXPLICIT_CONTENT) {
-                    const obj6 = { file: closure_134_2, guildId: closure_134_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+                    const obj15 = { file: closure_134_2, guildId: closure_134_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
                     analyticsLocations = closure_134_1;
                     if (closure_134_1 == null) {
                       analyticsLocations = [];
                     }
-                    obj6.analyticsLocations = analyticsLocations;
+                    obj15.analyticsLocations = analyticsLocations;
                     const body5 = closure_134_8.body;
                     let code7;
                     if (body5 != null) {
                       code7 = body5.code;
                     }
-                    obj6.code = code7;
+                    obj15.code = code7;
                     const body6 = closure_134_8.body;
                     let reason;
                     if (body6 != null) {
                       reason = body6.reason;
                     }
-                    obj6.reason = reason;
-                    let result = closure_135_0(closure_135_2[24]).handleUploadMessageAttachmentsErrors(obj6);
+                    obj15.reason = reason;
+                    let result = closure_135_0(closure_135_2[24]).handleUploadMessageAttachmentsErrors(obj15);
                     closure_135_0(closure_135_2[24]);
                   }
                 }
-                let obj10 = closure_135_0(closure_135_2[32]);
-                closure_134_6 = obj10.createNonce();
+                closure_134_6 = closure_135_0(closure_135_2[32]).createNonce();
                 let tmp89 = null != closure_134_8.body.attachments;
                 if (tmp89) {
                   tmp89 = closure_134_8.body.attachments.length > 0;
                 }
                 if (tmp89) {
-                  let obj11 = closure_135_1(closure_135_2[29]);
-                  obj11.dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: closure_134_6, channelId: closure_134_0.id, attachments: closure_134_8.body.attachments });
+                  closure_135_1(closure_135_2[29]).dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: closure_134_6, channelId: closure_134_0.id, attachments: closure_134_8.body.attachments });
                   closure_135_1(closure_135_2[33])(closure_134_0.id, closure_134_6);
+                  closure_135_1(closure_135_2[29]);
                 }
+                closure_135_0(closure_135_2[32]);
               } else {
-                closure_135_1(closure_135_2[28]);
-                const obj8 = { title: null, body: null };
+                const obj19 = { title: null, body: null };
                 const intl3 = closure_135_0(closure_135_2[15]).intl;
-                obj8.title = intl3.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
+                obj19.title = intl3.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
                 const intl4 = closure_135_0(closure_135_2[15]).intl;
-                obj8.body = intl4.string(closure_135_0(closure_135_2[15]).t.fEptJP);
-                obj8.show(obj8);
+                obj19.body = intl4.string(closure_135_0(closure_135_2[15]).t.fEptJP);
+                closure_135_1(closure_135_2[28]).show(obj19);
+                closure_135_1(closure_135_2[28]);
               }
             }
           }
@@ -358,12 +358,9 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
       } else {
         closure_134_7 = value;
         c9 = 2;
-        obj4 = closure_135_1(closure_135_2[27]);
-        obj10 = { channelId: closure_134_7.id, limit: closure_135_20 };
         c10 = 5;
         c11 = 1;
-        obj11 = { value: obj4.fetchMessages(obj10), done: false };
-        return obj11;
+        return { value: closure_135_1(closure_135_2[27]).fetchMessages({ channelId: closure_134_7.id, limit: closure_135_20 }), done: false };
       }
     } else if (3 === tmp9) {
       if (arg0 === 1) {
@@ -372,16 +369,15 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
       } else if (arg0 !== 2) {
         closure_134_3 = value;
         if (null == value.body) {
-          const obj12 = { title: null, body: null };
+          const obj24 = { title: null, body: null };
           const intl = closure_135_0(closure_135_2[15]).intl;
-          obj12.title = intl.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
+          obj24.title = intl.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
           const intl2 = closure_135_0(closure_135_2[15]).intl;
-          obj12.body = intl2.string(closure_135_0(closure_135_2[15]).t.fEptJP);
-          closure_135_1(closure_135_2[28]).show(obj12);
+          obj24.body = intl2.string(closure_135_0(closure_135_2[15]).t.fEptJP);
+          closure_135_1(closure_135_2[28]).show(obj24);
           closure_135_1(closure_135_2[28]);
         } else {
-          obj13 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: closure_135_12.CreateThread, channelId: closure_134_0.id };
-          closure_135_1(closure_135_2[29]).dispatch(obj13);
+          closure_135_1(closure_135_2[29]).dispatch({ type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: closure_135_12.CreateThread, channelId: closure_134_0.id });
           closure_135_1(closure_135_2[29]);
           closure_135_1(closure_135_2[29]).dispatch({ type: "THREAD_CREATE_LOCAL", channelId: closure_134_3.body.id });
           const AccessibilityAnnouncer = closure_135_0(closure_135_2[30]).AccessibilityAnnouncer;
@@ -458,8 +454,8 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -472,8 +468,8 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj6 = { value, done: true };
+              return obj6;
             } else {
               const auto_archive_duration = tmp3;
               closure_4 = tmp2;
@@ -510,7 +506,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
               draft2 = draft.getDraft(closure_0.id, DraftType.FirstThreadMessage);
               c6 = 1;
               c7 = 1;
-              let obj1 = {
+              const obj7 = {
                 value: createThread_(closure_0, [], undefined, () => {
                           if (null != closure_1) {
                             let result = closure_3_18.CHANNEL_MESSAGE_THREADS(closure_0.id, tmp);
@@ -536,15 +532,15 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                         }),
                 done: false
               };
-              return obj1;
+              return obj7;
             }
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_132_8 = value;
             if (closure_132_8 !== channel2) {
@@ -557,8 +553,8 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 tmp10 = closure_132_9 !== closure_132_0.trim();
               }
               if (tmp10) {
+                parentMessageId(threadSettings[19]).saveDraft(closure_132_8.id, draft2, DraftType.ChannelMessage);
                 obj = parentMessageId(threadSettings[19]);
-                obj.saveDraft(closure_132_8.id, draft2, DraftType.ChannelMessage);
               }
               if (auto_archive_duration != null) {
                 tmp20(closure_132_8);
@@ -575,21 +571,20 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                   if (items1.length > 0) {
                     const obj4 = closure_1_1(7559);
                     id = id.id;
-                    obj = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7784).parse(id, arg1), obj);
+                    const obj3 = { location: constants.THREAD_CREATION };
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7784).parse(id, arg1), obj3);
                     const obj5 = closure_1_1(7784);
                   }
                   return sendStickersResult;
                 }
-                closure_1_1(7559);
-                obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7784).parse(id, arg1), undefined, obj);
+                obj = closure_1_1(7559);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7784).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
                 const obj2 = closure_1_1(7784);
+                const obj6 = { location: constants.THREAD_CREATION };
               })(closure_132_8, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }
-            obj1 = parentMessageId(threadSettings[20]);
-            obj1.clearAll(closure_0.id, DraftType.FirstThreadMessage);
+            parentMessageId(threadSettings[20]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -647,8 +642,8 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -661,8 +656,8 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_4 = tmp5;
               let uploaderFile;
@@ -677,22 +672,22 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               let num7 = 0;
               let tmp41 = closure_0;
               if (tmp111[0]) {
-                let obj5 = closure_0(appliedTags[22]);
-                num7 = obj5.addFlag(0, constants3.SUPPRESS_NOTIFICATIONS);
+                num7 = closure_0(appliedTags[22]).addFlag(0, constants3.SUPPRESS_NOTIFICATIONS);
                 tmp41 = tmp112;
+                const obj6 = closure_0(appliedTags[22]);
               }
-              let obj6 = closure_0(appliedTags[16]);
-              const autoArchiveDuration = obj6.getAutoArchiveDuration(closure_0, null);
+              tmp111 = analyticsLocations(name(appliedTags[21])(closure_0), 2);
+              const autoArchiveDuration = closure_0(appliedTags[16]).getAutoArchiveDuration(closure_0, null);
               closure_132_1 = closure_2_18.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
-              const obj1 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
-              const obj2 = { content: tmp41, sticker_ids: name, flags: null };
+              const obj5 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
+              const obj8 = { content: tmp41, sticker_ids: name, flags: null };
               let tmp50;
               if (0 !== num7) {
                 tmp50 = num7;
               }
-              obj2.flags = tmp50;
-              obj1.message = obj2;
-              closure_132_2 = obj1;
+              obj8.flags = tmp50;
+              obj5.message = obj8;
+              closure_132_2 = obj5;
               let tmp52 = null;
               if (null != closure_6) {
                 tmp52 = (function buildMessageActivity(activity) {
@@ -719,16 +714,16 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                 tmp53 = null != tmp51;
               }
               if (tmp53) {
-                obj1.message.application_id = tmp51.activity.application_id;
-                obj1.message.activity = tmp52;
+                obj5.message.application_id = tmp51.activity.application_id;
+                obj5.message.activity = tmp52;
               }
               if (null != applied_tags) {
                 if (applied_tags.length > 0) {
                   applicationId = 1;
                   voiceChatEnabled = 3;
                   c9 = 1;
-                  let obj3 = { value: tmp3(applied_tags), done: false };
-                  return obj3;
+                  const obj9 = { value: tmp3(applied_tags), done: false };
+                  return obj9;
                 }
               }
               createThread_(closure_0, analyticsLocations, uploaderFile, () => {
@@ -738,7 +733,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               });
               voiceChatEnabled = 2;
               c9 = 1;
-              tmp111 = analyticsLocations(name(appliedTags[21])(closure_0), 2);
+              const obj7 = closure_0(appliedTags[16]);
             }
           } else if (1 === tmp8) {
             applicationId = 0;
@@ -747,15 +742,14 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
             file = closure_132_4.file;
             code = closure_132_4.code;
             reason = closure_132_4.reason;
-            obj3 = closure_0(appliedTags[24]);
-            const obj4 = { file, guildId: closure_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+            const obj10 = { file, guildId: closure_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
             if (analyticsLocations == null) {
               analyticsLocations = [];
             }
-            obj4.analyticsLocations = analyticsLocations;
-            obj4.code = code;
-            obj4.reason = reason;
-            const result = obj3.handleUploadMessageAttachmentsErrors(obj4);
+            obj10.analyticsLocations = analyticsLocations;
+            obj10.code = code;
+            obj10.reason = reason;
+            const result = closure_0(appliedTags[24]).handleUploadMessageAttachmentsErrors(obj10);
             throw closure_132_9;
           } else if (2 === tmp8) {
             if (arg0 === 1) {
@@ -763,8 +757,8 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              obj5 = { value, done: true };
-              return obj5;
+              const obj11 = { value, done: true };
+              return obj11;
             } else {
               closure_132_8 = value;
               name(appliedTags[19]).clearDraft(closure_0.id, DraftType.ThreadSettings);
@@ -773,19 +767,19 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               const obj14 = name(appliedTags[19]);
               name(appliedTags[20]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
               const obj15 = name(appliedTags[20]);
-              obj6 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: closure_132_8.id, applicationId, voiceChatEnabled };
-              const result1 = closure_0(appliedTags[25]).trackForumPostCreated(obj6);
+              const obj12 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: closure_132_8.id, applicationId, voiceChatEnabled };
+              const result1 = closure_0(appliedTags[25]).trackForumPostCreated(obj12);
               if (null != closure_132_2.message.application_id) {
-                const obj7 = { location: constants4.THREAD_CREATION, invite_type: constants2.APPLICATION, application_id: closure_132_2.message.application_id, guild_id: closure_0.getGuildId(), channel_id: closure_132_8.id, message_id: closure_132_8.id };
-                name(appliedTags[26]).trackWithMetadata(constants.INVITE_SENT, obj7);
+                const obj17 = { location: constants4.THREAD_CREATION, invite_type: constants2.APPLICATION, application_id: closure_132_2.message.application_id, guild_id: closure_0.getGuildId(), channel_id: closure_132_8.id, message_id: closure_132_8.id };
+                name(appliedTags[26]).trackWithMetadata(constants.INVITE_SENT, obj17);
                 const obj18 = name(appliedTags[26]);
               }
               if (closure_4 != null) {
                 tmp14(closure_132_8);
               }
               c9 = 3;
-              const obj8 = { value: closure_132_8, done: true };
-              return obj8;
+              const obj19 = { value: closure_132_8, done: true };
+              return obj19;
             }
           } else if (arg0 === 1) {
             c9 = 3;

@@ -3,8 +3,8 @@
 // Module 9862 (CreateChannelModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import native from "native" /* 1176 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -25,6 +25,8 @@ import PermissionStore from "PermissionStore" /* 4275 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function ChannelTypeRow(selected) {
   selected = selected.selected;
@@ -32,73 +34,70 @@ function ChannelTypeRow(selected) {
   const onPress = selected.onPress;
   ({ isPrivate, isBeta } = selected);
   const tmp = closure_23();
-  let obj = useA11yRolesNative;
-  const radioA11yNative = obj.useRadioA11yNative({ selected });
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (ChannelTypes.GUILD_TEXT === channelType) {
-    obj = { label: null, description: null };
-    const intl11 = util.intl;
-    obj.label = intl11.string(util.t.pnuRXC);
-    const intl12 = util.intl;
-    obj.description = intl12.string(util.t.oG6WsM);
-    let tmp6 = obj;
-  } else if (ChannelTypes.GUILD_VOICE === channelType) {
-    obj = { label: null, description: null };
-    const intl9 = util.intl;
-    obj.label = intl9.string(util.t.Sx55Oh);
-    const intl10 = util.intl;
-    obj.description = intl10.string(util.t.pqfkoF);
-    tmp6 = obj;
-  } else if (ChannelTypes.GUILD_FORUM === channelType) {
-    obj1 = { label: null, description: null };
-    const intl7 = util.intl;
-    obj1.label = intl7.string(util.t.eAVID5);
-    const intl8 = util.intl;
-    obj1.description = intl8.string(util.t.iZ5pgg);
-    tmp6 = obj1;
-  } else if (ChannelTypes.GUILD_ANNOUNCEMENT === channelType) {
     const obj2 = { label: null, description: null };
-    const intl5 = util.intl;
-    obj2.label = intl5.string(util.t.qr9dEP);
-    const intl6 = util.intl;
-    obj2.description = intl6.string(util.t.gBkfzu);
-    tmp6 = obj2;
-  } else if (ChannelTypes.GUILD_STAGE_VOICE === channelType) {
+    const intl11 = util.intl;
+    obj2.label = intl11.string(util.t.pnuRXC);
+    const intl12 = util.intl;
+    obj2.description = intl12.string(util.t.oG6WsM);
+    let tmp6 = obj2;
+  } else if (ChannelTypes.GUILD_VOICE === channelType) {
     const obj3 = { label: null, description: null };
-    const intl3 = util.intl;
-    obj3.label = intl3.string(util.t.pNWst0);
-    const intl4 = util.intl;
-    obj3.description = intl4.string(util.t.VPAwgo);
+    const intl9 = util.intl;
+    obj3.label = intl9.string(util.t.Sx55Oh);
+    const intl10 = util.intl;
+    obj3.description = intl10.string(util.t.pqfkoF);
     tmp6 = obj3;
-  } else if (ChannelTypes.GUILD_APP === channelType) {
-    const obj4 = { label: null, description: null };
-    const intl = util.intl;
-    obj4.label = intl.string(util.t["A+8d6M"]);
-    const intl2 = util.intl;
-    obj4.description = intl2.string(util.t.LVQQ3Z);
+  } else if (ChannelTypes.GUILD_FORUM === channelType) {
+    obj4 = { label: null, description: null };
+    const intl7 = util.intl;
+    obj4.label = intl7.string(util.t.eAVID5);
+    const intl8 = util.intl;
+    obj4.description = intl8.string(util.t.iZ5pgg);
     tmp6 = obj4;
-  } else if (ChannelTypes.GUILD_MEDIA === channelType) {
+  } else if (ChannelTypes.GUILD_ANNOUNCEMENT === channelType) {
     const obj5 = { label: null, description: null };
-    const intl13 = util.intl;
-    obj5.label = intl13.string(util.t["6x6fVg"]);
-    const obj6 = { children: null };
-    const obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl14 = util.intl;
-    obj7.children = intl14.string(util.t.JyCrwS);
-    const items = [closure_1_20(Text_Text.Text, obj7), ];
-    const obj8 = { variant: "text-xs/normal", children: null };
-    const intl15 = util.intl;
-    obj9 = { hcArticleUrl: null };
-    let obj14 = HelpdeskUtilsDefault;
-    obj9.hcArticleUrl = obj14.getCreatorSupportArticleURL(constants3.MEDIA_CHANNEL);
-    obj8.children = intl15.format(util.t["2Sapx1"], obj9);
-    items[1] = closure_1_20(Text_Text.Text, obj8);
-    obj6.children = items;
-    obj5.description = __initData2(__initData, obj6);
+    const intl5 = util.intl;
+    obj5.label = intl5.string(util.t.qr9dEP);
+    const intl6 = util.intl;
+    obj5.description = intl6.string(util.t.gBkfzu);
     tmp6 = obj5;
+  } else if (ChannelTypes.GUILD_STAGE_VOICE === channelType) {
+    const obj6 = { label: null, description: null };
+    const intl3 = util.intl;
+    obj6.label = intl3.string(util.t.pNWst0);
+    const intl4 = util.intl;
+    obj6.description = intl4.string(util.t.VPAwgo);
+    tmp6 = obj6;
+  } else if (ChannelTypes.GUILD_APP === channelType) {
+    const obj7 = { label: null, description: null };
+    const intl = util.intl;
+    obj7.label = intl.string(util.t["A+8d6M"]);
+    const intl2 = util.intl;
+    obj7.description = intl2.string(util.t.LVQQ3Z);
+    tmp6 = obj7;
+  } else if (ChannelTypes.GUILD_MEDIA === channelType) {
+    const obj8 = { label: null, description: null };
+    const intl13 = util.intl;
+    obj8.label = intl13.string(util.t["6x6fVg"]);
+    const obj9 = { children: null };
+    const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    const intl14 = util.intl;
+    obj10.children = intl14.string(util.t.JyCrwS);
+    const items = [closure_1_20(Text_Text.Text, obj10), ];
+    const obj11 = { variant: "text-xs/normal", children: null };
+    const intl15 = util.intl;
+    obj12 = { hcArticleUrl: HelpdeskUtilsDefault.getCreatorSupportArticleURL(constants3.MEDIA_CHANNEL) };
+    obj11.children = intl15.format(util.t["2Sapx1"], obj12);
+    items[1] = closure_1_20(Text_Text.Text, obj11);
+    obj9.children = items;
+    obj8.description = __initData2(__initData, obj9);
+    tmp6 = obj8;
   }
   const label = tmp6.label;
-  const obj10 = {
+  const obj13 = {
     onPress() {
       if (!selected) {
         onPress(channelType);
@@ -106,24 +105,26 @@ function ChannelTypeRow(selected) {
     },
     accessibilityRole,
     accessibilityState,
-    icon: closure_1_20(timestampProducer, { style: tmp.flexRow, children: closure_1_20(isPrivate ? obj9 : obj1[channelType].IconComponent, {}) }),
-    trailing: closure_1_20(FormRadio.FormRadio, { selected }),
+    icon: null,
+    trailing: null,
     label: null,
     subLabel: null
   };
+  obj13.icon = closure_1_20(timestampProducer, { style: tmp.flexRow, children: closure_1_20(isPrivate ? obj12 : obj4[channelType].IconComponent, {}) });
+  obj13.trailing = closure_1_20(FormRadio.FormRadio, { selected });
   let tmp9 = label;
   if (true === isBeta) {
-    const obj12 = { style: tmp.horizontalContainer, children: null };
-    const obj13 = { text: label };
-    const items1 = [closure_1_20(Form.FormLabel, obj13), ];
-    obj14 = { size: native.BetaSizes.SMALL };
-    items1[1] = closure_1_20(native.BetaTag, obj14);
-    obj12.children = items1;
-    tmp9 = __initData2(timestampProducer, obj12);
+    const obj16 = { style: tmp.horizontalContainer, children: null };
+    const obj17 = { text: label };
+    const items1 = [closure_1_20(Form.FormLabel, obj17), ];
+    const obj18 = { size: native.BetaSizes.SMALL };
+    items1[1] = closure_1_20(native.BetaTag, obj18);
+    obj16.children = items1;
+    tmp9 = __initData2(timestampProducer, obj16);
   }
-  obj10.label = tmp9;
-  obj10.subLabel = tmp6.description;
-  return closure_1_20(TableRow.TableRow, obj10);
+  obj13.label = tmp9;
+  obj13.subLabel = tmp6.description;
+  return closure_1_20(TableRow.TableRow, obj13);
 }
 class CreateChannel {
   constructor(arg0) {
@@ -258,7 +259,7 @@ class CreateChannel {
               if (!tmp18) {
                 if (tmp5) {
                   tmp5 = !categoryId(createMode[50]).canCreatePrivateChannel(first1, closure_1_6, canResult1);
-                  const obj2 = categoryId(createMode[50]);
+                  let obj2 = categoryId(createMode[50]);
                 }
                 tmp18 = tmp5;
               }
@@ -272,36 +273,36 @@ class CreateChannel {
               obj.disabled = tmp18;
               obj.onPress = function onPress() {
                 if (null != closure_1_5) {
-                  let obj = closure_2_1(closure_2_2[51]);
-                  let items = obj.values(closure_1_5.permissionOverwrites);
+                  let items = closure_2_1(dependencyMap[51]).values(closure_1_5.permissionOverwrites);
+                  const obj = closure_2_1(dependencyMap[51]);
                 } else {
                   items = [];
                 }
-                obj = { overwrites: items, bitrate: null, userLimit: null, createMode: null, guildId: null, name: null, channelType: null, categoryId: null, applicationId: null, onChannelCreated: null };
+                const obj2 = { overwrites: items, bitrate: null, userLimit: null, createMode: null, guildId: null, name: null, channelType: null, categoryId: null, applicationId: null, onChannelCreated: null };
                 let bitrate;
                 if (closure_1_5 != null) {
                   bitrate = closure_1_5.bitrate;
                 }
-                obj.bitrate = bitrate;
+                obj2.bitrate = bitrate;
                 let userLimit;
                 if (closure_1_5 != null) {
                   userLimit = closure_1_5.userLimit;
                 }
-                obj.userLimit = userLimit;
-                obj.createMode = createMode;
-                obj.guildId = guildId;
-                obj.name = name;
-                obj.channelType = channelType;
-                obj.categoryId = categoryId;
-                obj.applicationId = applicationId;
-                obj.onChannelCreated = onChannelCreated;
+                obj2.userLimit = userLimit;
+                obj2.createMode = createMode;
+                obj2.guildId = guildId;
+                obj2.name = name;
+                obj2.channelType = channelType;
+                obj2.categoryId = categoryId;
+                obj2.applicationId = applicationId;
+                obj2.onChannelCreated = onChannelCreated;
                 if (closure_1_16) {
-                  obj = { guildId: tmp6, channelType, name: tmp7, categoryId: tmp9, applicationId: tmp10, onChannelCreated: tmp11 };
-                  closure_1_13.push(constants2.ADD_MEMBERS, obj);
+                  const obj3 = { guildId: tmp6, channelType, name: tmp7, categoryId: tmp9, applicationId: tmp10, onChannelCreated: tmp11 };
+                  closure_1_13.push(constants2.ADD_MEMBERS, obj3);
                 } else if (channelType === constants.GUILD_STAGE_VOICE) {
-                  closure_1_13.push(constants2.ADD_MODERATORS, obj);
+                  closure_1_13.push(constants2.ADD_MODERATORS, obj2);
                 } else {
-                  closure_1_15(obj);
+                  closure_1_15(obj2);
                 }
               };
               tmpResult = closure_2_20(tmp4, obj);
@@ -349,12 +350,12 @@ class CreateChannel {
       navigation.setOptions(obj);
     }, items2);
     tmp34 = jsx;
-    obj = { keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
-    obj1 = { padding: tmp2(tmp3[14]).space.PX_16, paddingBottom: tmp2(tmp3[14]).space.PX_16 + cloneChannelId(createMode[37])().insets.bottom };
+    obj1 = { keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
+    obj34 = { padding: tmp2(tmp3[14]).space.PX_16, paddingBottom: tmp2(tmp3[14]).space.PX_16 + cloneChannelId(createMode[37])().insets.bottom };
     tmp35 = closure_5;
-    obj.contentContainerStyle = obj1;
+    obj1.contentContainerStyle = obj34;
     tmp36 = jsxs;
-    obj2 = { spacing: tmp2(tmp3[14]).space.PX_16, children: null };
+    obj35 = { spacing: tmp2(tmp3[14]).space.PX_16, children: null };
     tmp37 = closure_14;
     if (first1 === closure_14.GUILD_CATEGORY) {
       intl2 = tmp4(tmp3[29]).intl;
@@ -363,31 +364,31 @@ class CreateChannel {
       intl = tmp4(tmp3[29]).intl;
       stringResult = intl.string(tmp4(tmp3[29]).t.PVbHDl);
     }
-    obj3 = { label: stringResult, errorMessage: null, description: null, autoFocus: true, enableAndroidSanitizedInputWorkaround: true, value: null, onChange: null, placeholder: null };
+    obj36 = { label: stringResult, errorMessage: null, description: null, autoFocus: true, enableAndroidSanitizedInputWorkaround: true, value: null, onChange: null, placeholder: null };
     name = tmp28.name;
     first5 = undefined;
     if (name != null) {
       first5 = name[0];
     }
-    obj3.errorMessage = first5;
+    obj36.errorMessage = first5;
     if (first1 === tmp37.GUILD_FORUM) {
       intl4 = tmp4(tmp3[29]).intl;
       stringResult1 = intl4.string(tmp4(tmp3[29]).t.qBvLY4);
     } else if (null != stateFromStores1) {
       intl3 = tmp4(tmp3[29]).intl;
-      obj4 = { name: null };
+      obj37 = { name: null };
       tmp4Result3 = tmp4(tmp3[40]);
       tmp41 = closure_12;
       flag = true;
       tmp42 = tmp4Result3;
       tmp43 = stateFromStores1;
       tmp44 = tmp11;
-      obj4.name = tmp4Result3.computeChannelName(stateFromStores1, tmp11, closure_12, true);
-      stringResult1 = intl3.format(tmp4(tmp3[29]).t.s2ZzZZ, obj4);
+      obj37.name = tmp4Result3.computeChannelName(stateFromStores1, tmp11, closure_12, true);
+      stringResult1 = intl3.format(tmp4(tmp3[29]).t.s2ZzZZ, obj37);
     }
-    obj3.description = stringResult1;
-    obj3.value = first;
-    obj3.onChange = function onChange(arg0) {
+    obj36.description = stringResult1;
+    obj36.value = first;
+    obj36.onChange = function onChange(arg0) {
       if (first !== arg0) {
         closure_9(sanitizeChannelNameDefault(arg0, first1));
       }
@@ -402,9 +403,9 @@ class CreateChannel {
       intl5 = tmp4(tmp3[29]).intl;
       stringResult2 = intl5.string(tmp4(tmp3[29]).t["bw/b8E"]);
     }
-    obj3.placeholder = stringResult2;
+    obj36.placeholder = stringResult2;
     items3 = [, , ];
-    items3[0] = tmp34(tmp4(tmp3[54]).TextInput, obj3);
+    items3[0] = tmp34(tmp4(tmp3[54]).TextInput, obj36);
     tmp36Result2 = null;
     if (null == stateFromStores1) {
       tmp47 = Fragment;
@@ -414,49 +415,49 @@ class CreateChannel {
           closure_11(arg0);
           closure_9(sanitizeChannelNameDefault(first, arg0));
         };
-        obj5 = { title: null, hasIcons: true, children: null };
+        obj38 = { title: null, hasIcons: true, children: null };
         intl12 = tmp4(tmp3[29]).intl;
-        obj5.title = intl12.string(tmp4(tmp3[29]).t["7ZcXG2"]);
+        obj38.title = intl12.string(tmp4(tmp3[29]).t["7ZcXG2"]);
         tmp63 = ChannelTypeRow;
-        obj6 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-        obj6.channelType = tmp37.GUILD_TEXT;
-        obj6.selected = first1 === tmp37.GUILD_TEXT;
-        obj6.isPrivate = first4;
-        obj6.onPress = handleTypeChange;
+        obj39 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+        obj39.channelType = tmp37.GUILD_TEXT;
+        obj39.selected = first1 === tmp37.GUILD_TEXT;
+        obj39.isPrivate = first4;
+        obj39.onPress = handleTypeChange;
         items4 = [, , , , , , ];
-        items4[0] = tmp34(ChannelTypeRow, obj6);
-        obj7 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-        obj7.channelType = tmp37.GUILD_VOICE;
-        obj7.selected = first1 === tmp37.GUILD_VOICE;
-        obj7.isPrivate = first4;
-        obj7.onPress = handleTypeChange;
-        items4[1] = tmp34(ChannelTypeRow, obj7);
-        obj8 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-        obj8.channelType = tmp37.GUILD_FORUM;
-        obj8.selected = first1 === tmp37.GUILD_FORUM;
-        obj8.isPrivate = first4;
-        obj8.onPress = handleTypeChange;
-        items4[2] = tmp34(ChannelTypeRow, obj8);
+        items4[0] = tmp34(ChannelTypeRow, obj39);
+        obj40 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+        obj40.channelType = tmp37.GUILD_VOICE;
+        obj40.selected = first1 === tmp37.GUILD_VOICE;
+        obj40.isPrivate = first4;
+        obj40.onPress = handleTypeChange;
+        items4[1] = tmp34(ChannelTypeRow, obj40);
+        obj41 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+        obj41.channelType = tmp37.GUILD_FORUM;
+        obj41.selected = first1 === tmp37.GUILD_FORUM;
+        obj41.isPrivate = first4;
+        obj41.onPress = handleTypeChange;
+        items4[2] = tmp34(ChannelTypeRow, obj41);
         tmp34Result = null;
         if (guildEligibleForMediaChannels) {
-          obj9 = { channelType: null, selected: null, isPrivate: null, isBeta: true, onPress: null };
-          obj9.channelType = tmp37.GUILD_MEDIA;
-          obj9.selected = first1 === tmp37.GUILD_MEDIA;
-          obj9.isPrivate = first4;
-          obj9.onPress = handleTypeChange;
-          tmp34Result = tmp34(tmp63, obj9);
+          obj42 = { channelType: null, selected: null, isPrivate: null, isBeta: true, onPress: null };
+          obj42.channelType = tmp37.GUILD_MEDIA;
+          obj42.selected = first1 === tmp37.GUILD_MEDIA;
+          obj42.isPrivate = first4;
+          obj42.onPress = handleTypeChange;
+          tmp34Result = tmp34(tmp63, obj42);
         }
         items4[3] = tmp34Result;
         tmp34Result1 = null;
         if (hasItem) {
           tmp34Result1 = null;
           if (createMode !== tmp4(tmp3[45]).CreateChannelMode.PREMIUM_CHANNEL) {
-            obj10 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-            obj10.channelType = tmp37.GUILD_ANNOUNCEMENT;
-            obj10.selected = first1 === tmp37.GUILD_ANNOUNCEMENT;
-            obj10.isPrivate = first4;
-            obj10.onPress = handleTypeChange;
-            tmp34Result1 = tmp34(tmp63, obj10);
+            obj43 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+            obj43.channelType = tmp37.GUILD_ANNOUNCEMENT;
+            obj43.selected = first1 === tmp37.GUILD_ANNOUNCEMENT;
+            obj43.isPrivate = first4;
+            obj43.onPress = handleTypeChange;
+            tmp34Result1 = tmp34(tmp63, obj43);
           }
         }
         items4[4] = tmp34Result1;
@@ -464,44 +465,44 @@ class CreateChannel {
         if (canCreateStageChannelByGuild) {
           tmp34Result2 = null;
           if (!first4) {
-            obj11 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-            obj11.channelType = tmp37.GUILD_STAGE_VOICE;
-            obj11.selected = first1 === tmp37.GUILD_STAGE_VOICE;
-            obj11.isPrivate = first4;
-            obj11.onPress = handleTypeChange;
-            tmp34Result2 = tmp34(tmp63, obj11);
+            obj44 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+            obj44.channelType = tmp37.GUILD_STAGE_VOICE;
+            obj44.selected = first1 === tmp37.GUILD_STAGE_VOICE;
+            obj44.isPrivate = first4;
+            obj44.onPress = handleTypeChange;
+            tmp34Result2 = tmp34(tmp63, obj44);
           }
         }
         items4[5] = tmp34Result2;
         tmp34Result3 = null;
         if (tmp2Result.useConfig({ guildId, location: "CreateChannel mobile" }).enabled) {
-          obj12 = { channelType: null, selected: null, isPrivate: null, onPress: null };
-          obj12.channelType = tmp37.GUILD_APP;
-          obj12.selected = first1 === tmp37.GUILD_APP;
-          obj12.isPrivate = first4;
-          obj12.onPress = handleTypeChange;
-          tmp34Result3 = tmp34(tmp63, obj12);
+          obj45 = { channelType: null, selected: null, isPrivate: null, onPress: null };
+          obj45.channelType = tmp37.GUILD_APP;
+          obj45.selected = first1 === tmp37.GUILD_APP;
+          obj45.isPrivate = first4;
+          obj45.onPress = handleTypeChange;
+          tmp34Result3 = tmp34(tmp63, obj45);
         }
         items4[6] = tmp34Result3;
-        obj5.children = items4;
-        tmp36Result = tmp36(tmp4(tmp3[55]).TableRowGroup, obj5);
+        obj38.children = items4;
+        tmp36Result = tmp36(tmp4(tmp3[55]).TableRowGroup, obj38);
       }
       items5 = [, , , ];
       items5[0] = tmp36Result;
       tmp34Result4 = null;
       if (first1 === tmp37.GUILD_APP) {
-        obj13 = { guildId: null, channelId: null, selectedApplicationId: null, onChange: null };
-        obj13.guildId = guildId;
-        obj13.channelId = categoryId;
-        obj13.selectedApplicationId = first2;
-        obj13.onChange = tmp14Result1[1];
-        tmp34Result4 = tmp34(tmp2(tmp3[56]), obj13);
+        obj46 = { guildId: null, channelId: null, selectedApplicationId: null, onChange: null };
+        obj46.guildId = guildId;
+        obj46.channelId = categoryId;
+        obj46.selectedApplicationId = first2;
+        obj46.onChange = tmp14Result1[1];
+        tmp34Result4 = tmp34(tmp2(tmp3[56]), obj46);
       }
       items5[1] = tmp34Result4;
-      obj14 = { guildId: null, channelType: null };
-      obj14.guildId = guildId;
-      obj14.channelType = first1;
-      items5[2] = tmp34(tmp2(tmp3[57]), obj14);
+      obj47 = { guildId: null, channelType: null };
+      obj47.guildId = guildId;
+      obj47.channelType = first1;
+      items5[2] = tmp34(tmp2(tmp3[57]), obj47);
       tmp36Result1 = null;
       if (first1 !== tmp37.GUILD_STAGE_VOICE) {
         tmp36Result1 = null;
@@ -521,8 +522,8 @@ class CreateChannel {
               stringResult3 = string(t.hfbjIH);
             }
           }
-          obj15 = { description: null, hasIcons: true, children: null };
-          obj15.description = stringResult3;
+          obj48 = { description: null, hasIcons: true, children: null };
+          obj48.description = stringResult3;
           if (first1 === tmp37.GUILD_CATEGORY) {
             intl11 = tmp4(tmp3[29]).intl;
             stringResult4 = intl11.string(tmp4(tmp3[29]).t.lEPAZ5);
@@ -530,67 +531,66 @@ class CreateChannel {
             intl10 = tmp4(tmp3[29]).intl;
             stringResult4 = intl10.string(tmp4(tmp3[29]).t.aUI70g);
           }
-          obj16 = { label: null, icon: null, value: null, onValueChange: null };
-          obj16.label = stringResult4;
-          obj16.icon = tmp34(tmp4(tmp3[59]).LockIcon, {});
-          obj16.value = first4;
-          obj16.onValueChange = function onValueChange(arg0) {
+          obj49 = { label: null, icon: null, value: null, onValueChange: null };
+          obj49.label = stringResult4;
+          obj49.icon = tmp34(tmp4(tmp3[59]).LockIcon, {});
+          obj49.value = first4;
+          obj49.onValueChange = function onValueChange(arg0) {
             closure_17(arg0);
           };
-          obj15.children = tmp34(tmp4(tmp3[58]).TableSwitchRow, obj16);
+          obj48.children = tmp34(tmp4(tmp3[58]).TableSwitchRow, obj49);
           items6 = [, ];
-          items6[0] = tmp34(tmp4(tmp3[55]).TableRowGroup, obj15);
+          items6[0] = tmp34(tmp4(tmp3[55]).TableRowGroup, obj48);
           tmp34Result5 = null;
           if (first4) {
             tmp4Result4 = tmp4(tmp3[50]);
             tmp34Result5 = null;
             if (!tmp4Result4.canCreatePrivateChannel(first1, canResult, canResult1)) {
               tmp60 = closure_6;
-              obj17 = { style: null, children: null };
-              obj17.style = tmp.errorMessage;
-              obj18 = { messageType: null, children: null };
-              obj18.messageType = tmp4(tmp3[36]).HelpMessageTypes.ERROR;
+              obj50 = { style: null, children: null };
+              obj50.style = tmp.errorMessage;
+              obj51 = { messageType: null, children: null };
+              obj51.messageType = tmp4(tmp3[36]).HelpMessageTypes.ERROR;
               tmp4Result5 = tmp4(tmp3[50]);
-              obj18.children = tmp4Result5.getPrivateChannelHintText(first1);
-              obj17.children = tmp34(tmp4(tmp3[36]).HelpMessage, obj18);
-              tmp34Result5 = tmp34(closure_6, obj17);
+              obj51.children = tmp4Result5.getPrivateChannelHintText(first1);
+              obj50.children = tmp34(tmp4(tmp3[36]).HelpMessage, obj51);
+              tmp34Result5 = tmp34(closure_6, obj50);
             }
           }
-          obj19 = { children: null };
+          obj52 = { children: null };
           items6[1] = tmp34Result5;
-          obj19.children = items6;
-          tmp36Result1 = tmp36(tmp47, obj19);
+          obj52.children = items6;
+          tmp36Result1 = tmp36(tmp47, obj52);
         }
       }
-      obj20 = { children: null };
+      obj53 = { children: null };
       items5[3] = tmp36Result1;
-      obj20.children = items5;
-      tmp36Result2 = tmp36(tmp47, obj20);
+      obj53.children = items5;
+      tmp36Result2 = tmp36(tmp47, obj53);
     }
     items3[1] = tmp36Result2;
     tmp34Result6 = null;
     if (null != tmp28.message) {
       tmp62 = closure_6;
-      obj21 = { style: null, children: null };
-      obj21.style = tmp.errorMessage;
-      obj22 = { messageType: null, children: null };
-      obj22.messageType = tmp4(tmp3[36]).HelpMessageTypes.ERROR;
-      obj22.children = tmp28.message;
-      obj21.children = tmp34(tmp4(tmp3[36]).HelpMessage, obj22);
-      tmp34Result6 = tmp34(closure_6, obj21);
+      obj54 = { style: null, children: null };
+      obj54.style = tmp.errorMessage;
+      obj55 = { messageType: null, children: null };
+      obj55.messageType = tmp4(tmp3[36]).HelpMessageTypes.ERROR;
+      obj55.children = tmp28.message;
+      obj54.children = tmp34(tmp4(tmp3[36]).HelpMessage, obj55);
+      tmp34Result6 = tmp34(closure_6, obj54);
     }
     items3[2] = tmp34Result6;
-    obj2.children = items3;
-    obj.children = tmp36(tmp4(tmp3[53]).Stack, obj2);
-    return tmp34(tmp35, obj);
+    obj35.children = items3;
+    obj1.children = tmp36(tmp4(tmp3[53]).Stack, obj35);
+    return tmp34(tmp35, obj1);
   }
 }
 function AddMembers(guildId) {
   _require = guildId;
   let tmp = closure_23();
   importDefault = noop.useRef(guildId);
-  let obj = require("useNavigation");
-  navigation = obj.useNavigation();
+  navigation = require("useNavigation").useNavigation();
   const guild = GuildStore.getGuild(guildId.guildId);
   require("module_38")(null != guild, "Guild must not be null");
   const currentUser = UserStore.getCurrentUser();
@@ -612,8 +612,7 @@ function AddMembers(guildId) {
     current = ref.current;
     ({ guildId, channelType } = current);
     ({ name, categoryId, applicationId, onChannelCreated, flags } = current);
-    let obj = ChannelUtils;
-    const result = obj.permissionOverwritesForRoles(guildId, channelType, [], true);
+    const result = ChannelUtils.permissionOverwritesForRoles(guildId, channelType, [], true);
     const values = Object.values(first);
     const item = values.forEach((row) => {
       row = row.row;
@@ -639,15 +638,15 @@ function AddMembers(guildId) {
       result.push(ChannelUtils.permissionOverwriteForUser(currentUser.id, channelType));
       const tmpResult = ChannelUtils;
     }
-    obj = { overwrites: result, guildId, channelType, name, categoryId, applicationId, flags };
+    let obj2 = { overwrites: result, guildId, channelType, name, categoryId, applicationId, flags };
     if (channelType === ChannelTypes.GUILD_STAGE_VOICE) {
-      obj = {};
-      const merged = Object.assign(obj);
-      obj.guildId = guildId;
-      obj.onChannelCreated = onChannelCreated;
-      navigation.push(constants3.ADD_MODERATORS, obj);
+      const obj3 = {};
+      const merged = Object.assign(obj2);
+      obj3.guildId = guildId;
+      obj3.onChannelCreated = onChannelCreated;
+      navigation.push(constants3.ADD_MODERATORS, obj3);
     } else {
-      closure_8(obj);
+      closure_8(obj2);
     }
     ref = result;
   }, items);
@@ -671,20 +670,20 @@ function AddMembers(guildId) {
       current = stringResult;
     }
   }, items1);
-  obj = { style: tmp.addMembersContainer, children: null };
+  let obj2 = { style: tmp.addMembersContainer, children: null };
   let tmp22 = null;
   if (null != tmp13[1].message) {
     tmp22 = null;
     if ("" !== tmp15.message) {
-      obj = { style: tmp.errorMessage, children: null };
-      obj1 = { messageType: tmp2(tmp3[36]).HelpMessageTypes.ERROR, children: tmp15.message };
-      obj.children = closure_20(tmp2(tmp3[36]).HelpMessage, obj1);
-      tmp22 = closure_20(tmp21, obj);
+      let obj3 = { style: tmp.errorMessage, children: null };
+      obj4 = { messageType: tmp2(tmp3[36]).HelpMessageTypes.ERROR, children: tmp15.message };
+      obj3.children = closure_20(tmp2(tmp3[36]).HelpMessage, obj4);
+      tmp22 = closure_20(tmp21, obj3);
     }
   }
   const items2 = [tmp22, closure_20(require("AddMembersActionSheet").AddMembersBody, { channel: null, guild, pendingAdditions, setPendingAdditions: tmp11[1] })];
-  obj.children = items2;
-  return closure_22(pendingAdditions, obj);
+  obj2.children = items2;
+  return closure_22(pendingAdditions, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -696,43 +695,39 @@ const ChannelTypes = Constants.ChannelTypes;
 const RowType = fn(8519).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-fn(4636);
-let createStyles = { addMembersContainer: null, errorMessage: null, flexRow: null, horizontalContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.addMembersContainer = createStyles;
-createStyles.errorMessage = { marginBottom: 0 };
-createStyles.flexRow = { flexDirection: "row", alignItems: "center" };
-createStyles.horizontalContainer = { flex: 1, flexDirection: "row" };
-const __initData3 = createStyles.createStyles(createStyles);
-let obj1 = {};
-obj1[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(5161).TextIcon };
-let obj2 = { IconComponent: fn(5161).TextIcon };
-obj1[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(5169).ForumIcon };
-let obj3 = { IconComponent: fn(5169).ForumIcon };
-obj1[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(5182).VoiceNormalIcon };
-let obj4 = { IconComponent: fn(5182).VoiceNormalIcon };
-obj1[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(5178).StageIcon };
-let obj5 = { IconComponent: fn(5178).StageIcon };
-obj1[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(5175).AnnouncementsIcon };
-let obj6 = { IconComponent: fn(5175).AnnouncementsIcon };
-obj1[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(5168).ImageIcon };
-let obj7 = { IconComponent: fn(5168).ImageIcon };
-obj1[ChannelTypes.GUILD_APP] = { IconComponent: fn(5187).AppsIcon };
-let obj9 = {};
-let obj8 = { IconComponent: fn(5187).AppsIcon };
-obj9[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(5159).TextLockIcon };
-let obj10 = { IconComponent: fn(5159).TextLockIcon };
-obj9[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(5167).ForumLockIcon };
-let obj11 = { IconComponent: fn(5167).ForumLockIcon };
-obj9[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(5179).VoiceLockIcon };
-let obj12 = { IconComponent: fn(5179).VoiceLockIcon };
-obj9[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(5177).StageLockIcon };
-let obj13 = { IconComponent: fn(5177).StageLockIcon };
-obj9[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(5174).AnnouncementsLockIcon };
-let obj14 = { IconComponent: fn(5174).AnnouncementsLockIcon };
-obj9[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(5166).ImageLockIcon };
-let obj15 = { IconComponent: fn(5166).ImageLockIcon };
-obj9[ChannelTypes.GUILD_APP] = { IconComponent: fn(5186).AppsLockIcon };
+const createStyles = fn(4636);
+let obj2 = { addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, errorMessage: { marginBottom: 0 }, flexRow: { flexDirection: "row", alignItems: "center" }, horizontalContainer: { flex: 1, flexDirection: "row" } };
+const __initData3 = createStyles.createStyles(obj2);
+let obj4 = {};
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj4[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(5161).TextIcon };
+let obj5 = { IconComponent: fn(5161).TextIcon };
+obj4[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(5169).ForumIcon };
+let obj6 = { IconComponent: fn(5169).ForumIcon };
+obj4[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(5182).VoiceNormalIcon };
+let obj7 = { IconComponent: fn(5182).VoiceNormalIcon };
+obj4[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(5178).StageIcon };
+let obj8 = { IconComponent: fn(5178).StageIcon };
+obj4[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(5175).AnnouncementsIcon };
+let obj9 = { IconComponent: fn(5175).AnnouncementsIcon };
+obj4[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(5168).ImageIcon };
+let obj10 = { IconComponent: fn(5168).ImageIcon };
+obj4[ChannelTypes.GUILD_APP] = { IconComponent: fn(5187).AppsIcon };
+let obj12 = {};
+let obj11 = { IconComponent: fn(5187).AppsIcon };
+obj12[ChannelTypes.GUILD_TEXT] = { IconComponent: fn(5159).TextLockIcon };
+let obj13 = { IconComponent: fn(5159).TextLockIcon };
+obj12[ChannelTypes.GUILD_FORUM] = { IconComponent: fn(5167).ForumLockIcon };
+let obj14 = { IconComponent: fn(5167).ForumLockIcon };
+obj12[ChannelTypes.GUILD_VOICE] = { IconComponent: fn(5179).VoiceLockIcon };
+let obj15 = { IconComponent: fn(5179).VoiceLockIcon };
+obj12[ChannelTypes.GUILD_STAGE_VOICE] = { IconComponent: fn(5177).StageLockIcon };
+let obj16 = { IconComponent: fn(5177).StageLockIcon };
+obj12[ChannelTypes.GUILD_ANNOUNCEMENT] = { IconComponent: fn(5174).AnnouncementsLockIcon };
+let obj17 = { IconComponent: fn(5174).AnnouncementsLockIcon };
+obj12[ChannelTypes.GUILD_MEDIA] = { IconComponent: fn(5166).ImageLockIcon };
+let obj18 = { IconComponent: fn(5166).ImageLockIcon };
+obj12[ChannelTypes.GUILD_APP] = { IconComponent: fn(5186).AppsLockIcon };
 let closure_29 = { CREATE_CHANNEL: "CREATE_CHANNEL", ADD_MEMBERS: "ADD_MEMBERS", ADD_MODERATORS: "ADD_MODERATORS" };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");
@@ -740,14 +735,13 @@ let result = size.fileFinishedImporting("components_native/CreateChannelModal.ts
 export default function CreateChannelModal(arg0) {
   _require = arg0;
   ({ screens, initialStack } = useInitialValueDefault(() => {
-    let obj = { name: constants.CREATE_CHANNEL, params: null };
-    obj = {};
+    const obj = { name: constants.CREATE_CHANNEL, params: null };
     let merged = Object.assign(closure_0);
-    obj.params = obj;
+    obj.params = {};
     const items = [obj];
-    obj = { screens: null, initialStack: null };
-    obj1 = {};
-    const obj2 = {
+    const obj3 = { screens: null, initialStack: null };
+    obj4 = {};
+    const obj5 = {
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.CHANNEL_ADD_INFO,
       impressionProperties: { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.CHANNEL_ADD_FLOW },
       render(arg0) {
@@ -755,29 +749,30 @@ export default function CreateChannelModal(arg0) {
         return closure_1_20(closure_1_27, {});
       }
     };
-    obj1[constants.CREATE_CHANNEL] = obj2;
-    const obj4 = { headerTitle: null, impressionName: null, impressionProperties: null, render: null };
+    obj4[constants.CREATE_CHANNEL] = obj5;
+    const obj7 = { headerTitle: null, impressionName: null, impressionProperties: null, render: null };
     const intl = util.intl;
-    obj4.headerTitle = intl.string(util.t.dMJ3Y6);
-    obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.CHANNEL_ADD_MEMBERS;
-    const obj3 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.CHANNEL_ADD_FLOW };
-    obj4.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.CHANNEL_ADD_FLOW };
-    obj4.render = function render(arg0) {
+    obj7.headerTitle = intl.string(util.t.dMJ3Y6);
+    obj7.impressionName = discord_common_AnalyticsUtils.ImpressionNames.CHANNEL_ADD_MEMBERS;
+    const obj2 = {};
+    const obj6 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.CHANNEL_ADD_FLOW };
+    obj7.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.CHANNEL_ADD_FLOW };
+    obj7.render = function render(arg0) {
       const merged = Object.assign(arg0);
       return closure_1_20(closure_1_28, {});
     };
-    obj1[constants.ADD_MEMBERS] = obj4;
-    const obj6 = { headerTitle: null, render: null };
+    obj4[constants.ADD_MEMBERS] = obj7;
+    const obj9 = { headerTitle: null, render: null };
     const intl2 = util.intl;
-    obj6.headerTitle = intl2.string(util.t.n3bcy8);
-    obj6.render = function render(arg0) {
+    obj9.headerTitle = intl2.string(util.t.n3bcy8);
+    obj9.render = function render(arg0) {
       const merged = Object.assign(arg0);
       return closure_1_20(closure_1_1(closure_1_2[63]), {});
     };
-    obj1[constants.ADD_MODERATORS] = obj6;
-    obj.screens = obj1;
-    obj.initialStack = items;
-    return obj;
+    obj4[constants.ADD_MODERATORS] = obj9;
+    obj3.screens = obj4;
+    obj3.initialStack = items;
+    return obj3;
   }));
   return closure_20(require("Navigator").Navigator, { screens, initialRouteStack });
 };

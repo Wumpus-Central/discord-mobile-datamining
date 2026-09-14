@@ -1,13 +1,13 @@
-// === Module 17969: go_live/ApplicationStreamingManager ===
+// === Module 17970: go_live/ApplicationStreamingManager ===
 
-// Module 17969 (go_live/ApplicationStreamingManager)
+// Module 17970 (go_live/ApplicationStreamingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import Timers from "Timers" /* 1952 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
 import StreamActionCreators from "StreamActionCreators" /* 4778 */;
 import AVError from "AVError" /* 9239 */;
-import AVErrorContext from "AVErrorContext" /* 17949 */;
+import AVErrorContext from "AVErrorContext" /* 17950 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -82,8 +82,7 @@ const prototype = function BaseApplicationStreamingManager() {
       }
       dependencyMap3[streamKey] = timeout;
       timeout.start(isGuildStageVoiceResult ? closure_16 : closure_15, () => {
-        const obj = { type: "STREAM_TIMED_OUT", streamKey: encodeStreamKeyResult };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "STREAM_TIMED_OUT", streamKey: encodeStreamKeyResult });
       });
     }
     let obj = streamKey(4688);
@@ -109,11 +108,10 @@ const prototype = function BaseApplicationStreamingManager() {
       }
       dependencyMap3[encodeStreamKeyResult] = timeout;
       timeout.start(isGuildStageVoiceResult ? closure_16 : closure_15, () => {
-        const obj = { type: "STREAM_TIMED_OUT", streamKey: encodeStreamKeyResult };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "STREAM_TIMED_OUT", streamKey: encodeStreamKeyResult });
       });
     }
-    let obj = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
+    const obj = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
   };
   applyArgumentsResult.handleStreamCreate = function handleStreamCreate(streamKey) {
     streamKey = streamKey.streamKey;
@@ -142,16 +140,15 @@ const prototype = function BaseApplicationStreamingManager() {
   };
   applyArgumentsResult.handleStreamDelete = function handleStreamDelete(streamKey) {
     streamKey = streamKey.streamKey;
-    let obj = dependencyMap3[streamKey];
-    if (obj != null) {
+    if (dependencyMap3[streamKey] != null) {
       obj.stop();
     }
     delete tmp[tmp2];
     if (streamKey.reason === constants.STREAM_FULL) {
-      obj = { type: AVError.AVError.STREAM_FULL };
+      const obj3 = { type: AVError.AVError.STREAM_FULL };
       const obj2 = AVError;
       const merged = Object.assign(AVErrorContext.getStreamErrorContext(streamKey));
-      obj2.reportAVError(obj);
+      obj2.reportAVError(obj3);
       if (!set.has(streamKey)) {
         set.add(streamKey);
         const result = applyArgumentsResult.platformShowStreamFull();
@@ -288,11 +285,11 @@ const prototype = function BaseApplicationStreamingManager() {
                   delete tmp[tmp2];
                   const streamForUser1 = authStore.getStreamForUser(userId, guildId);
                   if (null != streamForUser1) {
-                    let tmp34Result = applyArgumentsResult(4688);
                     if (!authStore.isStreamMarkedFull(tmp34Result.encodeStreamKey(streamForUser1))) {
-                      tmp34Result = applyArgumentsResult(4778);
-                      tmp34Result.watchStream(streamForUser1);
+                      applyArgumentsResult(4778).watchStream(streamForUser1);
+                      const tmp34Result2 = applyArgumentsResult(4778);
                     }
+                    tmp34Result = applyArgumentsResult(4688);
                   }
                 }
               }

@@ -8,6 +8,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ConversationsStore from "ConversationsStore" /* 7698 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const ConversationConstants = fn(7700);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: metroRequire, MOBILE_PREVIEW_MESSAGE_COUNT: closure_7 } = ConversationConstants);
@@ -20,9 +22,10 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   if (isTopicalNavEnabled) {
     isTopicalNavEnabled = channel.type === tmp(tmp2[5]).ChannelTypes.GUILD_TEXT;
   }
-  let tmpResult = tmp(tmp2[6]);
+  fetchPage = isTopicalNavEnabled;
+  let obj = require("ConversationExperiments");
   const items = [channel.id];
-  const conversationBackoffRef = tmpResult.useConversationBackoffRef(items);
+  const conversationBackoffRef = require("useConversationBackoffRef").useConversationBackoffRef(items);
   fetchPage = function fetchPage() {
     const self = this;
     const apply = closure_0.apply;
@@ -41,8 +44,8 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -55,20 +58,19 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else if (c1) {
             ref = 1;
-            let obj1 = tmp3(fetchPage[7]);
-            obj1 = { channelId: null, guildId: null, direction: "before", anchor: null, limit: null, isJump: true, throwOnError: true, hydrateMessages: null };
+            const obj6 = { channelId: null, guildId: null, direction: "before", anchor: null, limit: null, isJump: true, throwOnError: true, hydrateMessages: null };
             ({ id: obj3.channelId, guild_id: obj3.guildId } = tmp3);
-            obj1.limit = isTopicalNavEnabled;
-            const obj2 = { limit };
-            obj1.hydrateMessages = obj2;
+            obj6.limit = isTopicalNavEnabled;
+            const obj7 = { limit };
+            obj6.hydrateMessages = obj7;
             c1 = 2;
             c3 = 1;
-            const obj3 = { value: obj1.fetchChannelConversations(obj1), done: false };
-            return obj3;
+            const obj12 = { value: tmp3(fetchPage[7]).fetchChannelConversations(obj6), done: false };
+            return obj12;
           }
         } else {
           if (1 === tmp7) {
@@ -85,7 +87,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
           }
           ref = 0;
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c3 = 3;
@@ -120,10 +122,10 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
       callback();
     }
   }, items2);
-  tmpResult = tmp(tmp2[8]);
+  const tmpResult = require("useConversationBackoffRef");
   const items3 = [stateFromStores];
   const items4 = [channel.id];
-  stateFromStores = tmpResult.useStateFromStores(items3, () => ConversationsStore.getEdgeMarker(user.id, "after"), items4);
+  stateFromStores = require("initialize").useStateFromStores(items3, () => ConversationsStore.getEdgeMarker(user.id, "after"), items4);
   const items5 = [stateFromStores, isTopicalNavEnabled, callback];
   const effect1 = callback.useEffect(() => {
     if (fetchPage) {
@@ -141,7 +143,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
       }
     }
   }, items5);
-  let obj = require("ConversationExperiments");
+  const tmpResult3 = require("initialize");
   const items6 = [stateFromStores];
   const items7 = [channel.id];
   const stateFromStores1 = require("initialize").useStateFromStores(items6, () => {
@@ -175,17 +177,15 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   return callback.useMemo(() => {
     let tmp = null;
     if (isTopicalNavEnabled) {
-      let obj = {
+      const obj = {
         source: null,
         IconComponent: PaperIcon.PaperIcon,
         onPress() {
             const current = ref.current;
             current.cancel();
             const ConversationsAnalytics = closure_0(fetchPage[10]).ConversationsAnalytics;
-            let obj = { channelId: user.id, conversationIds: [], isFocusMode: false };
-            const result = ConversationsAnalytics.trackTopicsUnitImpression(obj);
-            obj = { channelId: user.id, guildId: user.guild_id };
-            const result1 = closure_0(fetchPage[11]).openConversationNavigator(obj);
+            const result = ConversationsAnalytics.trackTopicsUnitImpression({ channelId: user.id, conversationIds: [], isFocusMode: false });
+            const result1 = closure_0(fetchPage[11]).openConversationNavigator({ channelId: user.id, guildId: user.guild_id });
           },
         accessibilityLabel: null
       };

@@ -1,9 +1,9 @@
-// === Module 11102: useSafetyAlertsSettingOrDefault ===
+// === Module 11103: useSafetyAlertsSettingOrDefault ===
 
-// Module 11102 (useSafetyAlertsSettingOrDefault)
+// Module 11103 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

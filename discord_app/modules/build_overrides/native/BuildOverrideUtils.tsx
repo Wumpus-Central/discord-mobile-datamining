@@ -1,11 +1,11 @@
-// === Module 11919: build_overrides/BuildOverrideUtils ===
+// === Module 11920: build_overrides/BuildOverrideUtils ===
 
-// Module 11919 (build_overrides/BuildOverrideUtils)
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1362 */;
-import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11920 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 11921 */;
+// Module 11920 (build_overrides/BuildOverrideUtils)
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1360 */;
+import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11921 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 11922 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 function setBuildOverrideForBranch(id) {
@@ -29,8 +29,8 @@ let closure_8 = async function _setBuildOverride(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -43,36 +43,35 @@ let closure_8 = async function _setBuildOverride(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
           closure_129_0 = undefined;
-          let obj4 = ApplyBuildOverrideUtils;
-          const obj1 = {};
-          obj1[str] = closure_0;
+          const obj6 = {};
+          obj6[str] = closure_0;
           c3 = 1;
           c4 = 1;
-          let obj2 = { value: obj4.applyStaffBuildOverride(obj1), done: false };
-          return obj2;
+          const obj7 = { value: ApplyBuildOverrideUtils.applyStaffBuildOverride(obj6), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_129_0 = value;
         if (400 !== closure_129_0.status) {
-          obj2 = closure_130_1(closure_130_2[4]);
-          const result = obj2.checkForUpdateAndReload();
+          const result = closure_130_1(closure_130_2[4]).checkForUpdateAndReload();
+          const obj3 = closure_130_1(closure_130_2[4]);
         } else {
-          obj = closure_130_1(closure_130_2[5]);
-          obj4 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
-          obj.show(obj4);
+          const obj9 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
+          closure_130_1(closure_130_2[5]).show(obj9);
+          const obj = closure_130_1(closure_130_2[5]);
         }
         c4 = 3;
       }
@@ -100,8 +99,8 @@ let closure_10 = async function _clearBuildOverride() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -114,33 +113,33 @@ let closure_10 = async function _clearBuildOverride() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: ApplyBuildOverrideUtils.clearBuildOverride(), done: false };
-          return obj1;
+          const obj6 = { value: ApplyBuildOverrideUtils.clearBuildOverride(), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_128_0 = value;
         if (400 !== closure_128_0.status) {
-          obj2 = closure_129_1(closure_129_2[4]);
-          const result = obj2.checkForUpdateAndReload();
+          const result = closure_129_1(closure_129_2[4]).checkForUpdateAndReload();
+          const obj3 = closure_129_1(closure_129_2[4]);
         } else {
-          obj = closure_129_1(closure_129_2[5]);
-          const obj3 = { title: "Clear Override Error", body: closure_128_0.body, isDismissable: true };
-          obj.show(obj3);
+          const obj8 = { title: "Clear Override Error", body: closure_128_0.body, isDismissable: true };
+          closure_129_1(closure_129_2[5]).show(obj8);
+          const obj = closure_129_1(closure_129_2[5]);
         }
         c3 = 3;
       }
@@ -158,8 +157,8 @@ let closure_11 = async function _toggleOverride(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -172,8 +171,8 @@ let closure_11 = async function _toggleOverride(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c2 = 0;
           closure_1 = tmp2;
@@ -209,8 +208,8 @@ let closure_11 = async function _toggleOverride(arg0) {
             obj10 = BuildOverrideUtils;
             c3 = 1;
             c4 = 1;
-            const obj1 = { value: ApplyBuildOverrideUtils.applyPublicBuildOverride(buildOverride.payload), done: false };
-            return obj1;
+            const obj5 = { value: ApplyBuildOverrideUtils.applyPublicBuildOverride(buildOverride.payload), done: false };
+            return obj5;
           }
           c4 = 3;
         }
@@ -219,18 +218,18 @@ let closure_11 = async function _toggleOverride(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_129_0 = value;
         if (400 === closure_129_0.status) {
-          obj = closure_130_1(closure_130_2[5]);
-          const obj3 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
-          obj.show(obj3);
+          const obj7 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
+          closure_130_1(closure_130_2[5]).show(obj7);
+          const obj = closure_130_1(closure_130_2[5]);
         }
       }
-      obj2 = closure_130_1(closure_130_2[4]);
-      const result = obj2.checkForUpdateAndReload();
+      const result = closure_130_1(closure_130_2[4]).checkForUpdateAndReload();
+      const obj3 = closure_130_1(closure_130_2[4]);
     } catch (tmp29) {
       c4 = tmp;
       throw tmp29;
@@ -245,8 +244,8 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -259,8 +258,8 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
@@ -287,8 +286,8 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
             if (null != buildOverride.payload) {
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: ApplyBuildOverrideUtils.applyPublicBuildOverride(buildOverride.payload), done: false };
-              return obj1;
+              const obj6 = { value: ApplyBuildOverrideUtils.applyPublicBuildOverride(buildOverride.payload), done: false };
+              return obj6;
             }
           }
           c4 = 3;
@@ -298,25 +297,25 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_0 = value;
         if (400 === closure_129_0.status) {
-          obj = closure_130_1(closure_130_2[5]);
-          const obj3 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
-          obj.show(obj3);
+          const obj8 = { title: "Override Error", body: closure_129_0.body[closure_130_5], isDismissable: true };
+          closure_130_1(closure_130_2[5]).show(obj8);
+          const obj = closure_130_1(closure_130_2[5]);
         }
       }
-      obj2 = closure_130_1(closure_130_2[4]);
-      const result = obj2.checkForUpdateAndReload();
+      const result = closure_130_1(closure_130_2[4]).checkForUpdateAndReload();
+      const obj3 = closure_130_1(closure_130_2[4]);
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
     }
   }
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "discord_ios";
 if (PlatformUtils.isAndroid()) {
   str = "discord_android";

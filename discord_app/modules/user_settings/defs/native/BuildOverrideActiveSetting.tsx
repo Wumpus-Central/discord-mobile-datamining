@@ -1,26 +1,25 @@
-// === Module 15838: BuildOverrideActiveSetting ===
+// === Module 15840: BuildOverrideActiveSetting ===
 
-// Module 15838 (BuildOverrideActiveSetting)
+// Module 15840 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11919 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14668 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14931 */;
-import DevToolsContent from "DevToolsContent" /* 15832 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14669 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14932 */;
+import DevToolsContent from "DevToolsContent" /* 15834 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15238).RefreshIcon,
+  IconComponent: fn(15239).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
-    let obj = initialize;
     const items = [BuildOverrideStore];
-    const stateFromStores = obj.useStateFromStores(items, () => {
+    const stateFromStores = initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
@@ -33,7 +32,7 @@ let SettingBuilders = {
     });
     let tmp4;
     if (null != stateFromStores) {
-      obj = { label: "Build override: ", value: stateFromStores };
+      const obj2 = { label: "Build override: ", value: stateFromStores };
       tmp4 = jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Build override: ", value: stateFromStores });
     }
     return tmp4;
@@ -57,9 +56,8 @@ let SettingBuilders = {
     DevToolsNavigator.navigateToDevTools({ screenKey: "buildOverride" });
   },
   withArrow: true
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

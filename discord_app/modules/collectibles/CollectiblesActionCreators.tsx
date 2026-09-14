@@ -2,7 +2,7 @@
 
 // Module 7644 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import LayerActionCreators from "LayerActionCreators" /* 7689 */;
@@ -24,27 +24,27 @@ function openCollectiblesShop(arg0) {
   openCollectiblesShopMobile(Object.assign(arg0, Object.assign({ tab: 0 })));
 }
 function openCollectiblesShopMobile(screen) {
-  let obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_OPEN" });
+  const obj2 = { type: "COLLECTIBLES_SHOP_OPEN" };
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       screen = screen.screen;
       if (screen != null) {
         const currentRoute = rootNavigationRef.getCurrentRoute();
-        screen = undefined;
+        let screen1;
         if (currentRoute != null) {
           const params = currentRoute.params;
           if (params != null) {
-            screen = params.screen;
+            screen1 = params.screen;
           }
         }
-        if (screen !== screen) {
-          obj = { screen: constants2.COLLECTIBLES_SHOP, params: null };
-          const obj1 = { analyticsSource: screen.analyticsSource, screen, onNavigateAway: screen.onNavigateAway };
-          obj.params = obj1;
-          rootNavigationRef.navigate("settings", obj);
+        if (screen1 !== screen) {
+          const obj4 = { screen: constants2.COLLECTIBLES_SHOP, params: null };
+          const obj5 = { analyticsSource: screen.analyticsSource, screen, onNavigateAway: screen.onNavigateAway };
+          obj4.params = obj5;
+          rootNavigationRef.navigate("settings", obj4);
         }
       } else if (null != screen.initialProductSkuId) {
         let FEATURED_PAGE = constants.SHOP_ALL;
@@ -80,23 +80,23 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0) {
     if (dependencyMap != null) {
       sessionId = dependencyMap.sessionId;
     }
-    let obj2 = { sessionId, checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+    const obj8 = { sessionId, checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
     let tab;
     if (dependencyMap != null) {
       tab = dependencyMap.tab;
     }
-    obj2.tab = tab;
+    obj8.tab = tab;
     let includeUnpublished;
     if (_require != null) {
       includeUnpublished = _require.includeUnpublished;
     }
-    obj2.unpublishedCategoriesShown = includeUnpublished;
+    obj8.unpublishedCategoriesShown = includeUnpublished;
     let noCache;
     if (_require != null) {
       noCache = _require.noCache;
     }
-    obj2.cacheDisabled = noCache;
-    CollectiblesPerfLogging.trackShopPerf(obj2);
+    obj8.cacheDisabled = noCache;
+    CollectiblesPerfLogging.trackShopPerf(obj8);
     CollectiblesPerfLogging;
   }
   if (value) {
@@ -112,15 +112,15 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0) {
     closure_132_6 = closure_6;
     const aPIError = new closure_133_0(closure_133_2[22]).APIError(closure_132_6);
     closure_132_5 = aPIError;
-    let obj5 = closure_133_0(closure_133_2[23]);
-    const result = obj5.captureOrIgnoreApiError(closure_132_5);
-    let obj6 = closure_133_1(closure_133_2[17]);
-    obj6.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: closure_132_5 });
+    const result = closure_133_0(closure_133_2[23]).captureOrIgnoreApiError(closure_132_5);
+    closure_133_0(closure_133_2[23]);
+    closure_133_1(closure_133_2[17]).dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: closure_132_5 });
     if (closure_132_3) {
       const _HermesInternal2 = HermesInternal;
       closure_133_7("fetchCollectiblesCategories failed: " + closure_132_5.message);
     }
     c9 = 3;
+    closure_133_1(closure_133_2[17]);
   } else if (arg0 === 1) {
     c9 = 3;
     throw value;
@@ -135,33 +135,33 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0) {
       if (closure_132_2 != null) {
         sessionId1 = closure_132_2.sessionId;
       }
-      obj5 = { sessionId: sessionId1, checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+      const obj13 = { sessionId: sessionId1, checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
       let tab1;
       if (closure_132_2 != null) {
         tab1 = closure_132_2.tab;
       }
-      obj5.tab = tab1;
+      obj13.tab = tab1;
       let includeUnpublished1;
       if (closure_132_0 != null) {
         includeUnpublished1 = closure_132_0.includeUnpublished;
       }
-      obj5.unpublishedCategoriesShown = includeUnpublished1;
+      obj13.unpublishedCategoriesShown = includeUnpublished1;
       let noCache1;
       if (closure_132_0 != null) {
         noCache1 = closure_132_0.noCache;
       }
-      obj5.cacheDisabled = noCache1;
-      closure_133_0(closure_133_2[20]).trackShopPerf(obj5);
+      obj13.cacheDisabled = noCache1;
+      closure_133_0(closure_133_2[20]).trackShopPerf(obj13);
       closure_133_0(closure_133_2[20]);
     }
     if (closure_132_3) {
       const _HermesInternal = HermesInternal;
       closure_133_7("fetchCollectiblesCategories completed " + closure_132_4.body.categories.length + " categories");
     }
-    obj2 = closure_133_1(closure_133_2[17]);
-    obj6 = { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: closure_133_10.fromServer(closure_132_4.body), noOp: closure_132_1 };
-    obj2.dispatch(obj6);
+    closure_133_1(closure_133_2[17]).dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: closure_133_10.fromServer(closure_132_4.body), noOp: closure_132_1 });
     c7 = 0;
+    closure_133_1(closure_133_2[17]);
+    { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: closure_133_10.fromServer(closure_132_4.body), noOp: closure_132_1 };
   }
   return value;
 };
@@ -183,8 +183,8 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -197,8 +197,8 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp5;
@@ -216,8 +216,8 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
             }
             c3 = 1;
             const request = { url: constants.COLLECTIBLES_PURCHASES, rejectWithError: true, query: null };
-            const obj1 = { variants_return_style: ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP };
-            request.query = obj1;
+            const obj6 = { variants_return_style: ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP };
+            request.query = obj6;
             if (value) {
               const _JSON = JSON;
               const _HermesInternal3 = HermesInternal;
@@ -226,8 +226,8 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
             const HTTP = HTTPUtils.HTTP;
             c4 = 2;
             c5 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj8 = { value: HTTP.get(request), done: false };
+            return obj8;
           }
         }
       } else if (1 === tmp8) {
@@ -235,15 +235,14 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
         closure_128_3 = closure_2;
         const aPIError = new closure_129_0(closure_129_2[22]).APIError(closure_128_3);
         closure_128_2 = aPIError;
-        let obj3 = closure_129_0(closure_129_2[23]);
-        const result = obj3.captureOrIgnoreApiError(closure_128_2);
+        const result = closure_129_0(closure_129_2[23]).captureOrIgnoreApiError(closure_128_2);
         if (closure_128_0) {
           const _HermesInternal2 = HermesInternal;
           closure_129_7("fetchCollectiblesPurchases failed: " + closure_128_2.message);
         }
-        let obj4 = closure_129_1(closure_129_2[17]);
-        obj3 = { type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: closure_128_2 };
-        obj4.dispatch(obj3);
+        const obj4 = closure_129_0(closure_129_2[23]);
+        const obj9 = { type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: closure_128_2 };
+        closure_129_1(closure_129_2[17]).dispatch(obj9);
         throw closure_128_2;
       } else if (arg0 === 1) {
         c5 = 3;
@@ -254,17 +253,17 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
           const _HermesInternal = HermesInternal;
           closure_129_7("fetchCollectiblesPurchases completed with " + closure_128_1.body.length + " purchases");
         }
-        obj = closure_129_1(closure_129_2[17]);
-        obj4 = { type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: null };
+        const obj10 = { type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: null };
         const body = closure_128_1.body;
-        obj4.purchases = body.map(closure_129_13.fromServer);
-        obj.dispatch(obj4);
+        obj10.purchases = body.map(closure_129_13.fromServer);
+        closure_129_1(closure_129_2[17]).dispatch(obj10);
         c3 = 0;
+        const obj = closure_129_1(closure_129_2[17]);
       }
       c3 = 0;
       c5 = 3;
-      const obj5 = { value, done: true };
-      return obj5;
+      const obj11 = { value, done: true };
+      return obj11;
     } catch (tmp62) {
       closure_2 = tmp62;
       if (tmp4 === c3) {
@@ -296,7 +295,7 @@ let closure_22 = async function _fetchCollectiblesProduct() {
     closure_130_0 = skuId;
     const _Date3 = Date;
     DispatcherDefault.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId, startedAt: Date.now() });
-    const obj2 = { locale: locale.locale };
+    const obj7 = { locale: locale.locale };
     if (closure_1 != null) {
       const countryCode = closure_1.countryCode;
     }
@@ -305,7 +304,7 @@ let closure_22 = async function _fetchCollectiblesProduct() {
       if (closure_1 != null) {
         countryCode1 = closure_1.countryCode;
       }
-      obj2.country_code = countryCode1;
+      obj7.country_code = countryCode1;
     }
     if (closure_1 != null) {
       const paymentGateway = closure_1.paymentGateway;
@@ -315,7 +314,7 @@ let closure_22 = async function _fetchCollectiblesProduct() {
       if (closure_1 != null) {
         paymentGateway1 = closure_1.paymentGateway;
       }
-      obj2.payment_gateway = paymentGateway1;
+      obj7.payment_gateway = paymentGateway1;
     }
     if (closure_1 != null) {
       const includeBundles = closure_1.includeBundles;
@@ -325,10 +324,10 @@ let closure_22 = async function _fetchCollectiblesProduct() {
       if (closure_1 != null) {
         includeBundles1 = closure_1.includeBundles;
       }
-      obj2.include_bundles = includeBundles1;
+      obj7.include_bundles = includeBundles1;
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_2_16.COLLECTIBLES_PRODUCTS(skuId), rejectWithError: true, query: obj2 };
+    const request = { url: closure_2_16.COLLECTIBLES_PRODUCTS(skuId), rejectWithError: true, query: obj7 };
     await HTTP.get(request);
     if (1 === tmp7) {
       c5 = 0;
@@ -336,22 +335,22 @@ let closure_22 = async function _fetchCollectiblesProduct() {
       const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_3);
       closure_130_2 = aPIError;
       const result = closure_131_0(closure_131_2[23]).captureOrIgnoreApiError(closure_130_2);
-      closure_131_1(closure_131_2[17]);
-      const obj4 = { type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: closure_130_0, error: closure_130_2, endedAt: null };
-      const _Date2 = Date;
-      obj4.endedAt = Date.now();
-      obj4.dispatch(obj4);
-      c7 = 3;
       closure_131_0(closure_131_2[23]);
+      const obj9 = { type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: closure_130_0, error: closure_130_2, endedAt: null };
+      const _Date2 = Date;
+      obj9.endedAt = Date.now();
+      closure_131_1(closure_131_2[17]).dispatch(obj9);
+      c7 = 3;
+      closure_131_1(closure_131_2[17]);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;
     } else if (arg0 !== 2) {
       closure_130_1 = value;
-      const obj5 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: closure_130_0, product: closure_131_12.fromServer(closure_130_1.body), endedAt: null };
+      const obj10 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: closure_130_0, product: closure_131_12.fromServer(closure_130_1.body), endedAt: null };
       const _Date = Date;
-      obj5.endedAt = Date.now();
-      closure_131_1(closure_131_2[17]).dispatch(obj5);
+      obj10.endedAt = Date.now();
+      closure_131_1(closure_131_2[17]).dispatch(obj10);
       c5 = 0;
       closure_131_1(closure_131_2[17]);
     }
@@ -366,8 +365,8 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -380,19 +379,18 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj1 = fetchingProduct;
           let isFetchingProductResult = fetchingProduct.isFetchingProduct(closure_0);
           if (!isFetchingProductResult) {
-            isFetchingProductResult = obj1.isProductFetchBackedOff(closure_0);
+            isFetchingProductResult = fetchingProduct.isProductFetchBackedOff(closure_0);
           }
           if (!isFetchingProductResult) {
             c3 = 1;
             c2 = 1;
-            obj1 = { value: fetchCollectiblesProduct(closure_0, closure_1), done: false };
-            return obj1;
+            const obj5 = { value: fetchCollectiblesProduct(closure_0, closure_1), done: false };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -400,7 +398,7 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c2 = 3;
@@ -429,8 +427,8 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -443,34 +441,33 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           closure_129_0 = sku_id;
           closure_129_1 = undefined;
           closure_129_2 = undefined;
-          let obj1 = { type: "COLLECTIBLES_CLAIM", skuId: sku_id };
-          DispatcherDefault.dispatch(obj1);
+          const obj5 = { type: "COLLECTIBLES_CLAIM", skuId: sku_id };
+          DispatcherDefault.dispatch(obj5);
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.COLLECTIBLES_CLAIM, body: null, rejectWithError: true };
-          const obj2 = { sku_id };
-          request.body = obj2;
+          const obj6 = { sku_id };
+          request.body = obj6;
           c5 = 2;
           c6 = 1;
-          const obj3 = { value: HTTP.put(request), done: false };
-          return obj3;
+          const obj8 = { value: HTTP.put(request), done: false };
+          return obj8;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_3 = closure_3;
         const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
         closure_129_2 = aPIError;
-        obj1 = closure_130_1(closure_130_2[17]);
-        const obj4 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_129_0, error: closure_129_2 };
-        obj1.dispatch(obj4);
+        const obj10 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_129_0, error: closure_129_2 };
+        closure_130_1(closure_130_2[17]).dispatch(obj10);
         throw closure_129_2;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -478,18 +475,18 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_129_1 = value;
-        const obj5 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_129_0, purchases: null };
+        const obj11 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_129_0, purchases: null };
         const body = closure_129_1.body;
         let mapped;
         if (body != null) {
           mapped = body.map(closure_130_13.fromServer);
         }
-        obj5.purchases = mapped;
-        closure_130_1(closure_130_2[17]).dispatch(obj5);
+        obj11.purchases = mapped;
+        closure_130_1(closure_130_2[17]).dispatch(obj11);
         c4 = 0;
         c6 = 3;
         return { value: "HermesInternal", done: null };
@@ -517,8 +514,8 @@ let closure_25 = async function _validateCollectiblesRecipient() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -531,27 +528,26 @@ let closure_25 = async function _validateCollectiblesRecipient() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.COLLECTIBLES_VALID_GIFT_RECIPIENT, query: null, rejectWithError: true };
-            const obj1 = { sku_id, recipient_id };
-            request.query = obj1;
+            const obj5 = { sku_id, recipient_id };
+            request.query = obj5;
             c6 = 2;
             c7 = 1;
-            let obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj6 = { value: HTTP.get(request), done: false };
+            return obj6;
           }
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_0 = closure_4;
-          obj2 = closure_131_0(closure_131_2[23]);
           const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_0);
-          const result = obj2.captureOrIgnoreApiError(aPIError);
+          const result = closure_131_0(closure_131_2[23]).captureOrIgnoreApiError(aPIError);
           c7 = 3;
           return { value: false, done: true };
         } else if (arg0 === 1) {
@@ -560,12 +556,12 @@ let closure_25 = async function _validateCollectiblesRecipient() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           c5 = 0;
           c7 = 3;
-          obj = { value: value.body.valid, done: true };
+          const obj = { value: value.body.valid, done: true };
           return obj;
         }
       } catch (tmp22) {
@@ -592,8 +588,8 @@ let closure_26 = async function _validateCollectiblesRecipientsBatch() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -606,42 +602,41 @@ let closure_26 = async function _validateCollectiblesRecipientsBatch() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH, query: null, rejectWithError: true };
-            const obj1 = { sku_ids, recipient_id };
-            request.query = obj1;
+            const obj5 = { sku_ids, recipient_id };
+            request.query = obj5;
             c6 = 2;
             c7 = 1;
-            let obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj6 = { value: HTTP.get(request), done: false };
+            return obj6;
           }
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_0 = closure_4;
-          obj2 = closure_131_0(closure_131_2[23]);
           const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_0);
-          const result = obj2.captureOrIgnoreApiError(aPIError);
+          const result = closure_131_0(closure_131_2[23]).captureOrIgnoreApiError(aPIError);
           c7 = 3;
-          const obj3 = { value: {}, done: true };
-          return obj3;
+          const obj7 = { value: {}, done: true };
+          return obj7;
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c5 = 0;
           c7 = 3;
-          obj = { value: value.body, done: true };
+          const obj = { value: value.body, done: true };
           return obj;
         }
       } catch (tmp22) {
@@ -669,8 +664,8 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -683,8 +678,8 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -706,12 +701,12 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-            const obj2 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
-            closure_129_1 = obj2;
+            const obj7 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
+            closure_129_1 = obj7;
             if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
               closure_129_1.release = closure_129_0;
             }
@@ -720,33 +715,33 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
             const request = { url: closure_130_16.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
             c5 = 3;
             c6 = 1;
-            let obj3 = { value: HTTP.get(request), done: false };
-            return obj3;
+            const obj8 = { value: HTTP.get(request), done: false };
+            return obj8;
           }
         } else {
           if (2 === tmp7) {
             c4 = 0;
             closure_129_3 = closure_3;
-            obj3 = closure_130_0(closure_130_2[23]);
             const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
-            const result = obj3.captureOrIgnoreApiError(aPIError);
-            let obj4 = closure_130_1(closure_130_2[17]);
-            obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            const result = closure_130_0(closure_130_2[23]).captureOrIgnoreApiError(aPIError);
+            const obj4 = closure_130_0(closure_130_2[23]);
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
             c6 = 3;
+            const obj5 = closure_130_1(closure_130_2[17]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_129_2 = value;
-            obj = closure_130_1(closure_130_2[17]);
-            obj4 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
-            obj.dispatch(obj4);
+            const obj9 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
+            closure_130_1(closure_130_2[17]).dispatch(obj9);
             c4 = 0;
+            const obj = closure_130_1(closure_130_2[17]);
           }
           c4 = 0;
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj10 = { value, done: true };
+          return obj10;
         }
       } catch (tmp44) {
         closure_3 = tmp44;
@@ -773,13 +768,13 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
     closure_132_0 = tab;
     closure_132_1 = closure_1;
     closure_132_2 = closure_2;
-    const obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab, options: null };
+    const obj5 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab, options: null };
     options = closure_1;
     if (closure_1 == null) {
       options = {};
     }
-    obj1.options = options;
-    DispatcherDefault.dispatch(obj1);
+    obj5.options = options;
+    DispatcherDefault.dispatch(obj5);
     const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(closure_1, tab);
     if (closure_1 != null) {
       const logPerf = closure_1.logPerf;
@@ -789,23 +784,23 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
       if (closure_2 != null) {
         sessionId = closure_2.sessionId;
       }
-      let obj2 = { sessionId, checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+      const obj8 = { sessionId, checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
       tab = undefined;
       if (closure_2 != null) {
         tab = closure_2.tab;
       }
-      obj2.tab = tab;
+      obj8.tab = tab;
       let includeUnpublished;
       if (closure_1 != null) {
         includeUnpublished = closure_1.includeUnpublished;
       }
-      obj2.unpublishedCategoriesShown = includeUnpublished;
+      obj8.unpublishedCategoriesShown = includeUnpublished;
       let noCache;
       if (closure_1 != null) {
         noCache = closure_1.noCache;
       }
-      obj2.cacheDisabled = noCache;
-      CollectiblesPerfLogging.trackShopPerf(obj2);
+      obj8.cacheDisabled = noCache;
+      CollectiblesPerfLogging.trackShopPerf(obj8);
       CollectiblesPerfLogging;
     }
     const HTTP = HTTPUtils.HTTP;
@@ -816,11 +811,11 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
       closure_132_5 = closure_6;
       const aPIError = new closure_133_0(closure_133_2[22]).APIError(closure_132_5);
       closure_132_4 = aPIError;
-      let obj5 = closure_133_0(closure_133_2[23]);
-      const result = obj5.captureOrIgnoreApiError(closure_132_4);
-      let obj6 = closure_133_1(closure_133_2[17]);
-      obj6.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: closure_132_0, error: closure_132_4 });
+      const result = closure_133_0(closure_133_2[23]).captureOrIgnoreApiError(closure_132_4);
+      closure_133_0(closure_133_2[23]);
+      closure_133_1(closure_133_2[17]).dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: closure_132_0, error: closure_132_4 });
       c9 = 3;
+      closure_133_1(closure_133_2[17]);
     } else if (arg0 === 1) {
       c9 = 3;
       throw value;
@@ -835,29 +830,29 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
         if (closure_132_2 != null) {
           sessionId1 = closure_132_2.sessionId;
         }
-        obj5 = { sessionId: sessionId1, checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+        const obj13 = { sessionId: sessionId1, checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
         let tab1;
         if (closure_132_2 != null) {
           tab1 = closure_132_2.tab;
         }
-        obj5.tab = tab1;
+        obj13.tab = tab1;
         let includeUnpublished1;
         if (closure_132_1 != null) {
           includeUnpublished1 = closure_132_1.includeUnpublished;
         }
-        obj5.unpublishedCategoriesShown = includeUnpublished1;
+        obj13.unpublishedCategoriesShown = includeUnpublished1;
         let noCache1;
         if (closure_132_1 != null) {
           noCache1 = closure_132_1.noCache;
         }
-        obj5.cacheDisabled = noCache1;
-        closure_133_0(closure_133_2[20]).trackShopPerf(obj5);
+        obj13.cacheDisabled = noCache1;
+        closure_133_0(closure_133_2[20]).trackShopPerf(obj13);
         closure_133_0(closure_133_2[20]);
       }
-      obj2 = closure_133_1(closure_133_2[17]);
-      obj6 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: closure_132_0, shopHome: closure_133_14.fromServer(closure_132_3.body) };
-      obj2.dispatch(obj6);
+      closure_133_1(closure_133_2[17]).dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: closure_132_0, shopHome: closure_133_14.fromServer(closure_132_3.body) });
       c7 = 0;
+      closure_133_1(closure_133_2[17]);
+      { type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: closure_132_0, shopHome: closure_133_14.fromServer(closure_132_3.body) };
     }
     return value;
   })();
@@ -874,8 +869,8 @@ let closure_29 = async function _claimCollectiblesCategoryReward() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -888,34 +883,33 @@ let closure_29 = async function _claimCollectiblesCategoryReward() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             closure_130_0 = skuId;
             closure_130_1 = undefined;
             closure_130_2 = undefined;
-            let obj1 = { type: "COLLECTIBLES_CLAIM", skuId };
-            DispatcherDefault.dispatch(obj1);
+            const obj5 = { type: "COLLECTIBLES_CLAIM", skuId };
+            DispatcherDefault.dispatch(obj5);
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.COLLECTIBLES_CLAIM_CATEGORY_REWARD, body: null, rejectWithError: true };
-            const obj2 = { category_id };
-            request.body = obj2;
+            const obj6 = { category_id };
+            request.body = obj6;
             c6 = 2;
             c7 = 1;
-            const obj3 = { value: HTTP.put(request), done: false };
-            return obj3;
+            const obj8 = { value: HTTP.put(request), done: false };
+            return obj8;
           }
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_3 = closure_4;
           const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_3);
           closure_130_2 = aPIError;
-          obj1 = closure_131_1(closure_131_2[17]);
-          const obj4 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_130_0, error: closure_130_2 };
-          obj1.dispatch(obj4);
+          const obj10 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_130_0, error: closure_130_2 };
+          closure_131_1(closure_131_2[17]).dispatch(obj10);
           throw closure_130_2;
         } else if (arg0 === 1) {
           c7 = 3;
@@ -923,18 +917,18 @@ let closure_29 = async function _claimCollectiblesCategoryReward() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_130_1 = value;
-          const obj5 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_130_0, purchases: null };
+          const obj11 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_130_0, purchases: null };
           const body = closure_130_1.body;
           let mapped;
           if (body != null) {
             mapped = body.map(closure_131_13.fromServer);
           }
-          obj5.purchases = mapped;
-          closure_131_1(closure_131_2[17]).dispatch(obj5);
+          obj11.purchases = mapped;
+          closure_131_1(closure_131_2[17]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
           return { value: "HermesInternal", done: null };
@@ -959,8 +953,8 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -973,8 +967,8 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -995,8 +989,8 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             if (!closure_130_9.isFetchingLayout(closure_129_0)) {
               layoutFetchError = closure_130_9.getLayoutFetchError(closure_129_0);
@@ -1011,14 +1005,14 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
                 }
                 if (429 !== status1) {
                   c4 = 1;
-                  const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: closure_129_0 };
-                  closure_130_1(closure_130_2[17]).dispatch(obj2);
+                  const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: closure_129_0 };
+                  closure_130_1(closure_130_2[17]).dispatch(obj6);
                   const HTTP = closure_130_0(closure_130_2[21]).HTTP;
-                  let obj3 = { url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0), rejectWithError: true, signal: closure_129_1 };
+                  const obj7 = { url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0), rejectWithError: true, signal: closure_129_1 };
                   c5 = 3;
                   c6 = 1;
-                  const obj4 = { value: HTTP.get(obj3), done: false };
-                  return obj4;
+                  const obj8 = { value: HTTP.get(obj7), done: false };
+                  return obj8;
                 }
               }
             }
@@ -1029,24 +1023,23 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
           closure_129_5 = closure_3;
           const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_5);
           closure_129_4 = aPIError;
-          obj3 = closure_130_1(closure_130_2[17]);
-          const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: closure_129_0, apiError: closure_129_4 };
-          obj3.dispatch(obj5);
+          const obj9 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: closure_129_0, apiError: closure_129_4 };
+          closure_130_1(closure_130_2[17]).dispatch(obj9);
           throw closure_129_4;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_129_3 = value;
-          obj = closure_130_1(closure_130_2[17]);
-          const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: closure_129_0, layoutId: closure_129_3.body.layout_id };
-          obj.dispatch(obj6);
+          const obj11 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: closure_129_0, layoutId: closure_129_3.body.layout_id };
+          closure_130_1(closure_130_2[17]).dispatch(obj11);
           c4 = 0;
+          const obj = closure_130_1(closure_130_2[17]);
         }
         c4 = 0;
         c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj12 = { value, done: true };
+        return obj12;
       }
     } catch (tmp39) {
       closure_3 = tmp39;
@@ -1134,14 +1127,12 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   return tmp2;
 };
 export const dispatchOpenCollectiblesShop = function dispatchOpenCollectiblesShop(arg0) {
-  const obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(arg0);
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_OPEN" });
 };
 export { closeCollectiblesShop };
 export const productDetailsOpened = function productDetailsOpened(skuId) {
-  const obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId });
 };
 export const areRequestOptionsEqual = function areRequestOptionsEqual(noCache, noCache2) {
   noCache = undefined;
@@ -1265,20 +1256,19 @@ export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProd
 };
 export const seedCollectiblesProductFromStandaloneLoad = function seedCollectiblesProductFromStandaloneLoad(memo) {
   const timestamp = Date.now();
-  let obj = CollectiblesUtils;
   const items = [memo];
-  const result = obj.extendVariantsProducts(items);
+  const result = CollectiblesUtils.extendVariantsProducts(items);
   const iter = result[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
     if (null == CollectiblesCategoryStore.getProduct(nextResult.skuId)) {
       let obj2 = DispatcherDefault;
-      obj = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
-      obj.skuId = tmp4.skuId;
-      obj.product = tmp4;
-      obj.endedAt = timestamp;
-      let dispatchResult = obj2.dispatch(obj);
+      let obj3 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
+      obj3.skuId = tmp4.skuId;
+      obj3.product = tmp4;
+      obj3.endedAt = timestamp;
+      let dispatchResult = obj2.dispatch(obj3);
     }
     continue;
   }
@@ -1325,16 +1315,13 @@ export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome() {
   return applyArgumentsResult;
 };
 export const setShopHomeConfigOverride = function setShopHomeConfigOverride(shopHomeConfigOverride) {
-  const obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride });
 };
 export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLayoutUrlOverride) {
-  const obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride });
 };
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
-  const obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories });
 };
 export const claimCollectiblesCategoryReward = function claimCollectiblesCategoryReward() {
   const self = this;

@@ -55,24 +55,22 @@ prototype["process"] = function process(arg0) {
   closure_0 = arg0;
   return new Promise((resolve, fn) => {
     closure_0 = fn;
-    let signal = closure_0;
     let aborted;
     if (closure_0 != null) {
-      aborted = signal.aborted;
+      aborted = obj.aborted;
     }
     if (aborted) {
       const _Error = Error;
       let error = new Error("Already aborted");
       fn(error);
     } else {
-      signal = { resolve, signal: null };
-      signal.signal = signal;
-      let _queue = signal._queue;
-      _queue.push(signal);
-      if (signal) {
-        const listener = signal.addEventListener("abort", () => {
+      const obj2 = { resolve, signal: obj };
+      let _queue = obj2._queue;
+      _queue.push(obj2);
+      if (obj) {
+        const listener = obj.addEventListener("abort", () => {
           const _queue = self._queue;
-          const index = _queue.indexOf(obj);
+          const index = _queue.indexOf(obj2);
           if (index >= 0) {
             const _queue1 = self._queue;
             _queue1.splice(index, 1);
@@ -81,7 +79,7 @@ prototype["process"] = function process(arg0) {
           closure_0(error);
         }, { once: true });
       }
-      signal._processQueue();
+      obj2._processQueue();
     }
   });
 };

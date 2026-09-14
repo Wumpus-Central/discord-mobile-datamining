@@ -1,6 +1,6 @@
-// === Module 13814: NetworkTtlCache ===
+// === Module 13815: NetworkTtlCache ===
 
-// Module 13814 (NetworkTtlCache)
+// Module 13815 (NetworkTtlCache)
 import size from "module_2" /* 2 */;
 
 const React = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };

@@ -1,6 +1,6 @@
-// === Module 13206: useProfileSectionTabs ===
+// === Module 13207: useProfileSectionTabs ===
 
-// Module 13206 (useProfileSectionTabs)
+// Module 13207 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,8 +36,7 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   const activityTabIndex = boardTabIndex.activityTabIndex;
   const onTabChange = boardTabIndex.onTabChange;
   let num2;
-  let obj = wishlistTabIndex;
-  [tmp2, tmp3] = _slicedToArray(wishlistTabIndex.useState(() => {
+  [tmp2, tmp3] = wishlistTabIndex.useState(() => {
     if (UserProfileSections.WISHLIST === _slicedToArray) {
       return UserProfileSections.WISHLIST;
     } else if (UserProfileSections.WIDGETS === _slicedToArray) {
@@ -45,7 +44,7 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
     } else {
       return UserProfileSections.ACTIVITY === _slicedToArray ? UserProfileSections.ACTIVITY : UserProfileSections.MAIN;
     }
-  }), 2);
+  });
   c5 = tmp3;
   let num = wishlistTabIndex;
   if (boardTabIndex.WISHLIST !== tmp2) {
@@ -83,11 +82,20 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
       onTabChange(MAIN);
     }
   }, items);
-  obj = {
+  const tmp = _slicedToArray(wishlistTabIndex.useState(() => {
+    if (UserProfileSections.WISHLIST === _slicedToArray) {
+      return UserProfileSections.WISHLIST;
+    } else if (UserProfileSections.WIDGETS === _slicedToArray) {
+      return UserProfileSections.WIDGETS;
+    } else {
+      return UserProfileSections.ACTIVITY === _slicedToArray ? UserProfileSections.ACTIVITY : UserProfileSections.MAIN;
+    }
+  }), 2);
+  return {
     activeProfileTabSection: tmp2,
     setActiveProfileTabSection: tmp3,
     handleTabChange: callback,
-    restoreActiveIndex: obj.useCallback((activeIndex) => {
+    restoreActiveIndex: wishlistTabIndex.useCallback((activeIndex) => {
       activeIndex = activeIndex.activeIndex;
       if (activeIndex.get() !== num2) {
         activeIndex.setActiveIndex(tmp, false, true);
@@ -95,5 +103,4 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
     }, items1),
     activeProfileTabSectionIndex: num2
   };
-  return obj;
 };

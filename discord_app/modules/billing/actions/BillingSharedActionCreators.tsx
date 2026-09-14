@@ -3,8 +3,8 @@
 // Module 4961 (BillingSharedActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PaymentSourceRecord from "PaymentSourceRecord" /* 4298 */;
@@ -18,8 +18,8 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -32,8 +32,8 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -41,24 +41,22 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS, body: null, rejectWithError: false };
-          const obj1 = { billing_address: null };
-          let obj2 = { name: null, line_1: null, line_2: null, city: null, state: null, postal_code: null, country: null, email: null };
+          const obj6 = { billing_address: null };
           ({ name: obj11.name, line1: obj11.line_1, line2: obj11.line_2, city: obj11.city, state: obj11.state, postalCode: obj11.postal_code, country: obj11.country, email: obj11.email } = closure_0);
-          obj1.billing_address = obj2;
-          request.body = obj1;
+          obj6.billing_address = { name: null, line_1: null, line_2: null, city: null, state: null, postal_code: null, country: null, email: null };
+          request.body = obj6;
           c5 = 2;
           c6 = 1;
-          let obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj8 = { value: HTTP.post(request), done: false };
+          return obj8;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        obj2 = closure_130_0(closure_130_2[5]);
-        closure_129_0 = obj2.parseV8BillingAddressSkemaErrorToBillingError(closure_129_1);
-        obj3 = closure_130_1(closure_130_2[6]);
-        const obj4 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_129_0 };
-        obj3.dispatch(obj4);
+        closure_129_0 = closure_130_0(closure_130_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_129_1);
+        const obj3 = closure_130_0(closure_130_2[5]);
+        const obj9 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_129_0 };
+        closure_130_1(closure_130_2[6]).dispatch(obj9);
         throw closure_129_0;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -66,12 +64,12 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: value.body.token, done: true };
+        const obj = { value: value.body.token, done: true };
         return obj;
       }
     } catch (tmp20) {
@@ -92,7 +90,6 @@ let closure_9 = async function _popupBridgeState() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
   const state = value.body.state;
-  { url: React5.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true };
   closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state, paymentSourceType: closure_129_0 });
   return state;
 };
@@ -104,8 +101,8 @@ let closure_10 = async function _createPaymentSource(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -118,8 +115,8 @@ let closure_10 = async function _createPaymentSource(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_6 = tmp3;
           closure_5 = tmp7;
@@ -146,39 +143,38 @@ let closure_10 = async function _createPaymentSource(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_134_1(closure_134_2[6]).dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
           c8 = 1;
           const HTTP = closure_134_0(closure_134_2[4]).HTTP;
           const request = { url: closure_134_7.BILLING_PAYMENT_SOURCES, query: null, body: null, rejectWithError: false };
-          const obj2 = { location: closure_133_3.analyticsLocation };
-          request.query = obj2;
-          const obj3 = { payment_gateway: closure_133_0, token: closure_133_1, billing_address: null, billing_address_token: null, bank: null, pix: null, return_url: null, default: null };
-          let obj4 = { name: closure_133_2.name, line_1: closure_133_2.line1, line_2: closure_133_2.line2, city: closure_133_2.city, state: closure_133_2.state, postal_code: closure_133_2.postalCode, country: closure_133_2.country, email: closure_133_2.email };
-          obj3.billing_address = obj4;
-          obj3.billing_address_token = closure_133_3.billingAddressToken;
-          obj3.bank = closure_133_3.bank;
+          const obj7 = { location: closure_133_3.analyticsLocation };
+          request.query = obj7;
+          const obj8 = { payment_gateway: closure_133_0, token: closure_133_1, billing_address: null, billing_address_token: null, bank: null, pix: null, return_url: null, default: null };
+          const obj9 = { name: closure_133_2.name, line_1: closure_133_2.line1, line_2: closure_133_2.line2, city: closure_133_2.city, state: closure_133_2.state, postal_code: closure_133_2.postalCode, country: closure_133_2.country, email: closure_133_2.email };
+          obj8.billing_address = obj9;
+          obj8.billing_address_token = closure_133_3.billingAddressToken;
+          obj8.bank = closure_133_3.bank;
           let tmp39;
           if (null != closure_133_3.pix) {
-            let obj5 = { tax_id: closure_133_3.pix.taxId };
-            tmp39 = obj5;
+            const obj10 = { tax_id: closure_133_3.pix.taxId };
+            tmp39 = obj10;
           }
-          obj3.pix = tmp39;
-          obj3.return_url = closure_133_3.returnUrl;
-          obj3.default = closure_133_4;
-          request.body = obj3;
+          obj8.pix = tmp39;
+          obj8.return_url = closure_133_3.returnUrl;
+          obj8.default = closure_133_4;
+          request.body = obj8;
           c9 = 3;
           c10 = 1;
-          const obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
+          const obj11 = { value: HTTP.post(request), done: false };
+          return obj11;
         }
       } else if (2 === tmp7) {
         c8 = 0;
         closure_133_8 = closure_7;
-        obj4 = closure_134_0(closure_134_2[5]);
-        closure_133_7 = obj4.parseV8BillingAddressSkemaErrorToBillingError(closure_133_8);
+        closure_133_7 = closure_134_0(closure_134_2[5]).parseV8BillingAddressSkemaErrorToBillingError(closure_133_8);
         (function addFieldsToBillingError(fields, body) {
           let adyen_redirect_url;
           if (body != null) {
@@ -199,9 +195,9 @@ let closure_10 = async function _createPaymentSource(arg0) {
           }
         })(closure_133_7, closure_133_8);
         if (closure_133_7.code !== closure_134_0(closure_134_2[5]).ErrorCodes.CONFIRMATION_REQUIRED) {
-          obj5 = closure_134_1(closure_134_2[6]);
-          const obj7 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_133_7 };
-          obj5.dispatch(obj7);
+          const obj12 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: closure_133_7 };
+          closure_134_1(closure_134_2[6]).dispatch(obj12);
+          const obj6 = closure_134_1(closure_134_2[6]);
         }
         throw closure_133_7;
       } else if (arg0 === 1) {
@@ -210,18 +206,17 @@ let closure_10 = async function _createPaymentSource(arg0) {
       } else if (arg0 === 2) {
         c8 = 0;
         c10 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         closure_133_5 = value;
         closure_133_6 = closure_134_4.createFromServer(closure_133_5.body);
-        obj = closure_134_1(closure_134_2[6]);
-        const obj9 = { type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: closure_133_6 };
-        obj.dispatch(obj9);
+        const obj15 = { type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: closure_133_6 };
+        closure_134_1(closure_134_2[6]).dispatch(obj15);
         c8 = 0;
         c10 = 3;
-        const obj10 = { value: closure_133_6, done: true };
-        return obj10;
+        const obj16 = { value: closure_133_6, done: true };
+        return obj16;
       }
     } catch (tmp47) {
       closure_7 = tmp47;
@@ -269,42 +264,41 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
       const _HermesInternal = HermesInternal;
       combined = "" + stringResult + ": " + message.message;
     }
-    obj = { failure_message: combined, error_type: null, failure_code: null, failure_sub_code: null, payment_source_type: null };
+    const obj5 = { failure_message: combined, error_type: null, failure_code: null, failure_sub_code: null, payment_source_type: null };
     ({ type: obj3.error_type, code: obj3.failure_code, decline_code: obj3.failure_sub_code, payment_method } = message);
     type = undefined;
     if (payment_method != null) {
       type = payment_method.type;
     }
-    obj.payment_source_type = type;
+    obj5.payment_source_type = type;
     if ("card_error" === message.type) {
-      let obj3 = AnalyticsUtilsDefault;
-      obj = {};
-      const merged = Object.assign(obj);
+      const obj7 = {};
+      const merged = Object.assign(obj5);
       const _Error = Error;
       const error = new Error();
-      obj.stacktrace = error.stack;
-      obj3.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj);
+      obj7.stacktrace = error.stack;
+      AnalyticsUtilsDefault.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj7);
       flag = false;
     }
     let billingError = new V6OrEarlierAPIError.BillingError(combined);
     let flag2 = flag;
-    let tmp12 = obj;
+    let tmp12 = obj5;
     let tmp15 = require;
   } else {
     let tmp6 = message;
     if (typeof message === "string") {
       tmp6 = stringResult;
     }
-    const obj1 = { failure_message: null, status_code: null };
+    const obj8 = { failure_message: null, status_code: null };
     const billingError1 = new V6OrEarlierAPIError.BillingError(tmp6);
     ({ message: obj2.failure_message, code: obj2.status_code } = billingError1);
-    tmp12 = obj1;
+    tmp12 = obj8;
     billingError = billingError1;
     flag2 = flag;
     tmp15 = require;
     if (429 === billingError1.code) {
       flag2 = false;
-      tmp12 = obj1;
+      tmp12 = obj8;
       billingError = billingError1;
       tmp15 = require;
     }
@@ -315,13 +309,13 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
   }
   const error1 = new Error(message);
   if (flag2) {
-    const obj2 = {};
+    const obj9 = {};
     const merged1 = Object.assign(obj);
-    obj3 = {};
+    const obj14 = {};
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
-    obj2.extra = obj3;
-    const result = tmp15(4309).captureBillingException(error1, obj2);
+    obj9.extra = obj14;
+    const result = tmp15(4309).captureBillingException(error1, obj9);
     const tmp15Result = tmp15(4309);
   }
   return error1;

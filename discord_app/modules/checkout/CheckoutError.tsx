@@ -1,14 +1,14 @@
-// === Module 11575: CheckoutError ===
+// === Module 11576: CheckoutError ===
 
-// Module 11575 (CheckoutError)
-import RevenueError2 from "RevenueError" /* 11576 */;
+// Module 11576 (CheckoutError)
+import RevenueError2 from "RevenueError" /* 11577 */;
 import size from "module_2" /* 2 */;
 
 const RevenueError = RevenueError2.RevenueError;
 const prototype = function CheckoutError(arg0) {
-  tmp = new tmp(arg0, new.target);
-  tmp.name = "FatalCheckoutError";
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target);
+  tmp2.name = "FatalCheckoutError";
+  return tmp2;
 }.prototype;
 class prototype extends RevenueError {
 }

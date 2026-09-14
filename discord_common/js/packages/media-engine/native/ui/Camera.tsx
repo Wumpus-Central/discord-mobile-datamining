@@ -9,13 +9,13 @@ class Camera {
     ({ width, height } = global);
     tmp2 = jsx;
     if (global.disabled) {
-      obj = { className: "media-engine-video", style: null };
+      obj1 = { className: "media-engine-video", style: null };
       size = { width: null, height: null };
       size.width = width;
       size.height = height;
-      obj.style = size;
+      obj1.style = size;
       str = "div";
-      tmp2Result = tmp2("div", obj);
+      tmp2Result = tmp2("div", obj1);
     } else {
       tmp3 = closure_0;
       tmp4 = closure_1;

@@ -1,17 +1,17 @@
-// === Module 16155: useHappeningNowData ===
+// === Module 16157: useHappeningNowData ===
 
-// Module 16155 (useHappeningNowData)
+// Module 16157 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7389 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7415 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16156 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13794 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13795 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7629 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
@@ -27,12 +27,15 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 require = fn;
 let GuildScheduledEventStore = fn(7629);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
+let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const MemberListRowTypes = fn(7382).MemberListRowTypes;
 let closure_20 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15379).HappeningNowItem;
+const HappeningNowItem = fn(15380).HappeningNowItem;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];
@@ -104,7 +107,7 @@ export default function useHappeningNowData(has, guildId) {
     }
     return defaultChannel;
   });
-  let obj5 = require("initialize");
+  const obj5 = require("initialize");
   const firstGloballyViewbleGuildChannelId = require("useFirstGloballyViewbleGuildChannelId").useFirstGloballyViewbleGuildChannelId(guildId);
   let obj6 = require("useFirstGloballyViewbleGuildChannelId");
   const items6 = [callback2];
@@ -162,9 +165,9 @@ export default function useHappeningNowData(has, guildId) {
     tmp23 = !obj8.useIsVoicePanelFullscreen();
   }
   closure_20 = tmp23;
-  let tmp9Result = tmp9(tmp10[23]);
+  obj8 = require("VoicePanelUtils");
   const items11 = [firstGloballyViewbleGuildChannelId];
-  const stateFromStores5 = tmp9Result.useStateFromStores(items11, () => {
+  const stateFromStores5 = require("initialize").useStateFromStores(items11, () => {
     if (null != guildId) {
       if (null != stateFromStores3) {
         const props = ChannelMemberStore.getProps(tmp, tmp2.id);
@@ -181,10 +184,10 @@ export default function useHappeningNowData(has, guildId) {
     }
     return false;
   });
-  tmp9Result = tmp9(tmp10[23]);
+  const tmp9Result = require("initialize");
   const items12 = [hasItem2];
   const items13 = [guildId, has];
-  let stateFromStores6 = tmp9Result.useStateFromStores(items12, () => {
+  let stateFromStores6 = require("initialize").useStateFromStores(items12, () => {
     let tmp2 = null != guildId;
     if (tmp2) {
       hasItem = has.has(HappeningNowItem.ACTIVE_CHANNEL);
@@ -195,13 +198,13 @@ export default function useHappeningNowData(has, guildId) {
     }
     return tmp2;
   }, items13);
-  obj8 = require("VoicePanelUtils");
+  const tmp9Result8 = require("initialize");
   const items14 = [callback];
   stateFromStores7 = require("initialize").useStateFromStores(items14, () => callback.getUserAffinities());
-  const tmp9Result1 = require("initialize");
+  const tmp9Result9 = require("initialize");
   const items15 = [stateFromStores6];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items15, () => stateFromStores6.getFriendIDs());
-  const tmp9Result2 = require("initialize");
+  const tmp9Result10 = require("initialize");
   const items16 = [stateFromStoresArray];
   const items17 = [guildId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items16, () => {
@@ -213,7 +216,7 @@ export default function useHappeningNowData(has, guildId) {
     obj.permissionGuildVersion = guildVersion;
     return obj;
   }, items17);
-  const tmp9Result3 = require("initialize");
+  const tmp9Result11 = require("initialize");
   const items18 = [hasItem2];
   const items19 = [guildId];
   const stateFromStores8 = require("initialize").useStateFromStores(items18, () => {
@@ -223,11 +226,11 @@ export default function useHappeningNowData(has, guildId) {
     }
     return activeChannelIds;
   }, items19);
-  const tmp9Result4 = require("initialize");
+  const tmp9Result12 = require("initialize");
   const items20 = [stateFromStores];
   const items21 = [guildId];
   const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items20, () => GuildScheduledEventStore.getGuildScheduledEventsForGuild(guildId), items21);
-  const tmp9Result5 = require("initialize");
+  const tmp9Result13 = require("initialize");
   const items22 = [hasItem];
   const items23 = [guildId];
   let tmp32 = !stateFromStores1;
@@ -251,16 +254,13 @@ export default function useHappeningNowData(has, guildId) {
   const callback3 = obj.useCallback(() => AppStartPerformanceDefault.time("\u{1F3A8}", "computeHappeningNowState", () => {
     function addUser(userId, type, channelId) {
       const voiceState = channelId;
-      let obj = stateFromStores6;
       if (!stateFromStores6.isBlockedOrIgnored(userId)) {
-        let obj1 = callback1;
         channelId = undefined;
         if (channelId != null) {
           channelId = channelId.channelId;
         }
         const channel = callback1.getChannel(channelId);
-        let obj3 = set(withoutUserCards[32]);
-        if (!obj3.isChannelContentGated(channel)) {
+        if (!obj4.isChannelContentGated(channel)) {
           if (null != channel) {
             if (channel.isGroupDM()) {
               if (null != channelId) {
@@ -275,7 +275,7 @@ export default function useHappeningNowData(has, guildId) {
                 const streamForUser = stateFromStores2.getStreamForUser(userId, tmp34);
                 if (null != streamForUser) {
                   if (hasItem2) {
-                    obj = { userId, guildId: tmp33, kind: "activity", activity: tmp5, stream: null };
+                    const obj3 = { userId, guildId: tmp33, kind: "activity", activity: tmp5, stream: null };
                     if (null == tmp33) {
                       const tmp54 = streamForUser;
                     } else {
@@ -284,19 +284,19 @@ export default function useHappeningNowData(has, guildId) {
                         guildId1 = streamForUser.guildId;
                       }
                     }
-                    obj.stream = tmp54;
-                    closure_1_5[userId] = obj;
+                    obj3.stream = tmp54;
+                    closure_1_5[userId] = obj3;
                   }
                 }
                 if (null != channel) {
                   if (!set1.has(channel.id)) {
                     if (channel.isGuildStageVoice()) {
-                      if (obj.isFriend(userId)) {
+                      if (stateFromStores6.isFriend(userId)) {
                         const stageInstanceByChannel = stateFromStores1.getStageInstanceByChannel(channel.id);
                         if (null != stageInstanceByChannel) {
                           if (stateFromStoresArray.can(constants2.CONNECT, channel)) {
-                            obj = { kind: "live-guild-stage", stage: stageInstanceByChannel };
-                            closure_1_2[channel.id] = obj;
+                            const obj6 = { kind: "live-guild-stage", stage: stageInstanceByChannel };
+                            closure_1_2[channel.id] = obj6;
                           }
                         }
                       }
@@ -310,16 +310,16 @@ export default function useHappeningNowData(has, guildId) {
                           });
                           closure_1_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId, voiceState, guildId: set1, activity }));
                         } else {
-                          let tmp3Result = tmp3(withoutUserCards[33]);
-                          const result = tmp3Result.findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel);
+                          const result = tmp3(withoutUserCards[33]).findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel);
                           if (null !== result) {
-                            obj1 = { kind: "embedded-activity", userId, voiceState: channelId, guildId: tmp33, activity: result };
-                            items = [obj1];
+                            const obj7 = { kind: "embedded-activity", userId, voiceState: channelId, guildId: tmp33, activity: result };
+                            items = [obj7];
                             closure_1_4[channel.id] = items;
                           }
+                          const tmp3Result = tmp3(withoutUserCards[33]);
                         }
                       }
-                      const obj2 = { kind: "voice", userId, voiceState: channelId, guildId: null };
+                      const obj8 = { kind: "voice", userId, voiceState: channelId, guildId: null };
                       let tmp45 = tmp33;
                       if (tmp33 == null) {
                         let guildId2;
@@ -328,28 +328,25 @@ export default function useHappeningNowData(has, guildId) {
                         }
                         tmp45 = guildId2;
                       }
-                      obj2.guildId = tmp45;
-                      closure_1_3[channel.id] = obj2;
+                      obj8.guildId = tmp45;
+                      closure_1_3[channel.id] = obj8;
                     }
                   }
                 }
               }
-            } else {
-              let obj4 = stateFromStoresArray;
             }
           }
           if (null != type) {
-            tmp3Result = tmp3(withoutUserCards[34]);
-            if (tmp3Result.isActivityPermanentCustomStatus(tmp5)) {
+            if (tmp3Result3.isActivityPermanentCustomStatus(tmp5)) {
               if (hasItem3) {
-                obj3 = { kind: "activity", userId, guildId, activity: tmp5 };
-                closure_1_8.push(obj3);
+                const obj9 = { kind: "activity", userId, guildId, activity: tmp5 };
+                closure_1_8.push(obj9);
               }
             } else {
-              if (tmp3Result1.isActivityTemporaryCustomStatus(tmp5)) {
+              if (tmp3Result4.isActivityTemporaryCustomStatus(tmp5)) {
                 if (hasItem3) {
-                  obj4 = { userId, guildId, kind: "activity", activity: tmp5 };
-                  closure_1_7[userId] = obj4;
+                  const obj10 = { userId, guildId, kind: "activity", activity: tmp5 };
+                  closure_1_7[userId] = obj10;
                 }
               } else if (hasItem4) {
                 let tmp17 = guildId(withoutUserCards[36])(tmp5, constants.EMBEDDED);
@@ -359,7 +356,7 @@ export default function useHappeningNowData(has, guildId) {
                   if (voiceStateForSession != null) {
                     channelId1 = voiceStateForSession.channelId;
                   }
-                  const channel1 = obj1.getChannel(channelId1);
+                  const channel1 = callback1.getChannel(channelId1);
                   let guildId3;
                   if (channel1 != null) {
                     guildId3 = channel1.getGuildId();
@@ -367,25 +364,27 @@ export default function useHappeningNowData(has, guildId) {
                   tmp17 = guildId3 !== guildId;
                 }
                 if (!tmp17) {
-                  const obj5 = { userId, guildId, kind: "activity", activity: tmp5 };
-                  closure_1_6[userId] = obj5;
+                  const obj11 = { userId, guildId, kind: "activity", activity: tmp5 };
+                  closure_1_6[userId] = obj11;
                 }
               }
-              tmp3Result1 = tmp3(withoutUserCards[35]);
+              tmp3Result4 = tmp3(withoutUserCards[35]);
             }
+            tmp3Result3 = tmp3(withoutUserCards[34]);
           } else if (hasItem5) {
             const status = stateFromStoresArray1.getStatus(userId, guildId);
             if (null != status) {
               if (status === constants3.OFFLINE) {
-                const obj6 = { kind: "user", userId, guildId: tmp8 };
-                closure_1_9.push(obj6);
+                const obj12 = { kind: "user", userId, guildId: tmp8 };
+                closure_1_9.push(obj12);
               } else {
-                const obj7 = { kind: "user", userId, guildId: tmp8 };
-                closure_1_8.push(obj7);
+                const obj13 = { kind: "user", userId, guildId: tmp8 };
+                closure_1_8.push(obj13);
               }
             }
           }
         }
+        obj4 = set(withoutUserCards[32]);
       }
     }
     ref.current.guildId = set1;
@@ -434,7 +433,7 @@ export default function useHappeningNowData(has, guildId) {
     } else {
       const arr = callback3();
       if (null != guildId) {
-        const obj = {
+        const obj2 = {
           type: "GUILD_HEADER_ACTIVE_CHANNELS_COUNT",
           count: arr.filter((kind) => {
                 kind = kind.kind;
@@ -455,7 +454,7 @@ export default function useHappeningNowData(has, guildId) {
               }).length,
           guildId: tmp2
         };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch(obj2);
       }
       return arr;
     }
@@ -466,7 +465,7 @@ export default function useHappeningNowData(has, guildId) {
     const arr = callback3();
     closure_27(arr);
     if (null != guildId) {
-      const obj = {
+      const obj2 = {
         type: "GUILD_HEADER_ACTIVE_CHANNELS_COUNT",
         count: arr.filter((kind) => {
             kind = kind.kind;
@@ -487,7 +486,7 @@ export default function useHappeningNowData(has, guildId) {
           }).length,
         guildId: tmp2
       };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch(obj2);
     }
   }, items25);
   const items26 = [guildId, tmp32, tmp23, callback4];

@@ -1,11 +1,13 @@
-// === Module 12010: useSafetyHubClassifications ===
+// === Module 12011: useSafetyHubClassifications ===
 
-// Module 12010 (useSafetyHubClassifications)
+// Module 12011 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12011 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12012 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 8548 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const ViolationType = fn(8537).ViolationType;
@@ -22,13 +24,13 @@ export const useSafetyHubClassifications = function useSafetyHubClassifications(
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
   _require = classificationId;
-  let obj = require("initialize");
   const items = [SafetyHubStore];
-  const stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
+  let obj = require("initialize");
+  let tmp = _require;
   const items1 = [SafetyHubStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => SafetyHubStore.getClassificationRequestState(closure_0));
   const obj2 = require("initialize");
-  let tmp = _require;
   const items2 = [SafetyHubStore];
   const stateFromStores2 = require("initialize").useStateFromStores(items2, () => SafetyHubStore.getIsDsaEligible());
   const obj3 = require("initialize");
@@ -57,16 +59,16 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
         const safetyHubDataForClassification = SafetyHubActionCreatorsAll.getSafetyHubDataForClassification(closure_0);
       }
     }, items4);
-    obj = { classification: stateFromStores, classificationRequestState: stateFromStores1, isDsaEligible: stateFromStores2, isAppealEligible: null, violationType: null };
+    const obj6 = { classification: stateFromStores, classificationRequestState: stateFromStores1, isDsaEligible: stateFromStores2, isAppealEligible: null, violationType: null };
     if (stateFromStores3) {
       stateFromStores3 = null != stateFromStores;
     }
     if (stateFromStores3) {
       stateFromStores3 = null == stateFromStores.appeal_status;
     }
-    obj.isAppealEligible = stateFromStores3;
-    obj.violationType = ViolationType.USER;
-    return obj;
+    obj6.isAppealEligible = stateFromStores3;
+    obj6.violationType = ViolationType.USER;
+    return obj6;
   }
   obj5 = require("SafetyHubUtils");
 };

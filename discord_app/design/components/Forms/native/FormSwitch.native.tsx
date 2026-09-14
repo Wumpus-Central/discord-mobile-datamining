@@ -9,25 +9,29 @@ import IconDefault from "Icon" /* 5058 */;
 import springPresets from "springPresets" /* 5059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
+let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-fn(4636);
+const createStyles = fn(4636);
 let obj = { switch: null, unselectedBackground: null, unselectedIcon: null, selectedIcon: null, selected: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1 };
 obj.switch = size;
-obj = { tintColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
-obj.unselectedBackground = obj;
-const createStyles = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
-obj.unselectedIcon = createStyles;
+obj.unselectedBackground = { tintColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
+let obj3 = { tintColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
+obj.unselectedIcon = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
+let obj4 = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
 obj.selectedIcon = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
-let obj2 = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
+let obj5 = { tintColor: nativeDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
 obj.selected = { tintColor: nativeDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT };
 const size1 = { height: nativeDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: nativeDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round };
 obj.knob = size1;
 let closure_7 = createStyles.createStyles(obj);
+let ReanimatedRexport = ReanimatedRexport_mod;
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
 let closure_9 = { code: "function FormSwitchNativeTsx1(){const{withSpring,checked,selected,unselectedBackground,SUBTLE_SPRING}=this.__closure;return{backgroundColor:withSpring(checked?selected.tintColor:unselectedBackground.tintColor,SUBTLE_SPRING,'animate-always'),borderColor:withSpring(checked?selected.borderColor:unselectedBackground.borderColor,SUBTLE_SPRING,'animate-always')};}" };
 const __initData = { code: "function FormSwitchNativeTsx2(){const{withSpring,checked,knobCheckedLeft,SUBTLE_SPRING,knobSelectedBackgroundColor,knobBackgroundColor}=this.__closure;return{left:withSpring(checked?knobCheckedLeft:0,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?knobSelectedBackgroundColor:knobBackgroundColor,SUBTLE_SPRING,'animate-always')};}" };
@@ -52,7 +56,6 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   const tmp7 = token();
   const selected = tmp7.selected;
   const unselectedBackground = tmp7.unselectedBackground;
-  let obj = require("ReanimatedRexport");
   class G {
     constructor() {
       tmp = closure_0;
@@ -66,7 +69,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
         tmp4 = unselectedBackground;
         tintColor = unselectedBackground.tintColor;
       }
-      obj = { backgroundColor: obj.withSpring(tintColor, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always"), borderColor: null };
+      obj1 = { backgroundColor: obj.withSpring(tintColor, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always"), borderColor: null };
       tmpResult = tmp(tmp2[9]);
       if (tmp3) {
         tmp7 = selected;
@@ -75,79 +78,82 @@ export const FormSwitch = function FormSwitch(onValueChange) {
         tmp6 = unselectedBackground;
         borderColor = unselectedBackground.borderColor;
       }
-      obj.borderColor = tmpResult.withSpring(borderColor, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always");
-      return obj;
+      obj1.borderColor = tmpResult.withSpring(borderColor, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always");
+      return obj1;
     }
   }
-  obj = { withSpring: require("spring").withSpring, checked, selected, unselectedBackground, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
-  G.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  G.__closure = { withSpring: require("spring").withSpring, checked, selected, unselectedBackground, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
   G.__workletHash = 2232234503354;
   G.__initData = token2;
   const animatedStyle = obj.useAnimatedStyle(G);
-  let obj2 = require("useToken");
-  token = obj2.useToken(require("native").modules.mobile.CONTROL_SWITCH_KNOB_CHECKED_OFFSET);
+  let obj2 = { withSpring: require("spring").withSpring, checked, selected, unselectedBackground, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
+  token = require("useToken").useToken(require("native").modules.mobile.CONTROL_SWITCH_KNOB_CHECKED_OFFSET);
   let obj3 = require("useToken");
-  const token1 = obj3.useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_DEFAULT);
-  let obj4 = require("useToken");
-  token2 = obj4.useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT);
-  let obj5 = require("ReanimatedRexport");
+  const token1 = require("useToken").useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_DEFAULT);
+  const obj4 = require("useToken");
+  token2 = require("useToken").useToken(require("native").colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT);
+  const obj5 = require("useToken");
   const fn = function y() {
-    let obj = spring;
     let num = 0;
     if (first) {
       num = token;
     }
-    obj = { left: obj.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), backgroundColor: spring.withSpring(first ? token2 : token1, springPresets.SUBTLE_SPRING, "animate-always") };
-    return obj;
+    const obj2 = { left: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), backgroundColor: null };
+    obj2.backgroundColor = spring.withSpring(first ? token2 : token1, springPresets.SUBTLE_SPRING, "animate-always");
+    return obj2;
   };
-  obj = { withSpring: require("spring").withSpring, checked, knobCheckedLeft: token, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };
-  fn.__closure = obj;
+  const obj6 = require("ReanimatedRexport");
+  fn.__closure = { withSpring: require("spring").withSpring, checked, knobCheckedLeft: token, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };
   fn.__workletHash = 3687946563898;
   fn.__initData = __initData;
   _require = 1;
-  const animatedStyle1 = obj5.useAnimatedStyle(fn);
-  let obj7 = require("ReanimatedRexport");
+  const animatedStyle1 = obj6.useAnimatedStyle(fn);
+  const obj7 = { withSpring: require("spring").withSpring, checked, knobCheckedLeft: token, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };
   const fn2 = function n() {
     if (dependencyMap) {
-      v0(enabled[9]);
-      let obj = { opacity: null, transform: null };
-      obj.opacity = obj.withSpring(_slicedToArray ? c0 : c1, v0(enabled[10]).SUBTLE_SPRING, "animate-always");
-      obj = { scale: v0(enabled[9]).withSpring(1, v0(enabled[10]).SUBTLE_SPRING) };
-      const items = [obj];
-      obj.transform = items;
-      return obj;
+      const obj2 = { opacity: v0(enabled[9]).withSpring(_slicedToArray ? c0 : c1, v0(enabled[10]).SUBTLE_SPRING, "animate-always"), transform: null };
+      const obj3 = { scale: null };
+      const obj = v0(enabled[9]);
+      const tmp6 = _slicedToArray ? c0 : c1;
+      obj3.scale = v0(enabled[9]).withSpring(1, v0(enabled[10]).SUBTLE_SPRING);
+      const items = [obj3];
+      obj2.transform = items;
+      return obj2;
     }
   };
+  const obj8 = require("ReanimatedRexport");
   fn2.__closure = { useReducedMotion: enabled, checked, on: 1, off: 0, withSpring: require("spring").withSpring, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
   fn2.__workletHash = 14329332652102;
   fn2.__initData = __initData2;
   _require = 0;
   importDefault = 1;
-  const animatedStyle2 = obj7.useAnimatedStyle(fn2);
+  const animatedStyle2 = obj8.useAnimatedStyle(fn2);
   require("ReanimatedRexport");
   const fn3 = function n() {
     if (dependencyMap) {
-      v0(enabled[9]);
-      let obj = { opacity: null, transform: null };
-      obj.opacity = obj.withSpring(_slicedToArray ? c0 : c1, v0(enabled[10]).SUBTLE_SPRING, "animate-always");
-      obj = { scale: v0(enabled[9]).withSpring(1, v0(enabled[10]).SUBTLE_SPRING) };
-      const items = [obj];
-      obj.transform = items;
-      return obj;
+      const obj2 = { opacity: v0(enabled[9]).withSpring(_slicedToArray ? c0 : c1, v0(enabled[10]).SUBTLE_SPRING, "animate-always"), transform: null };
+      const obj3 = { scale: null };
+      const obj = v0(enabled[9]);
+      const tmp6 = _slicedToArray ? c0 : c1;
+      obj3.scale = v0(enabled[9]).withSpring(1, v0(enabled[10]).SUBTLE_SPRING);
+      const items = [obj3];
+      obj2.transform = items;
+      return obj2;
     }
   };
-  obj2 = { useReducedMotion: enabled, checked, on: 0, off: 1, withSpring: require("spring").withSpring, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
-  fn3.__closure = obj2;
+  const obj9 = { useReducedMotion: enabled, checked, on: 1, off: 0, withSpring: require("spring").withSpring, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
+  fn3.__closure = { useReducedMotion: enabled, checked, on: 0, off: 1, withSpring: require("spring").withSpring, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
   fn3.__workletHash = 14329332652102;
   fn3.__initData = __initData2;
   if (!context.switchIconsEnabled) {
     if (tmp) {
-      obj3 = { "aria-hidden": true, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+      let obj11 = { "aria-hidden": true, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     } else {
-      obj3 = { accessible: true, accessibilityRole: "switch", accessibilityLabel, accessibilityHint, accessibilityState: null, onAccessibilityTap: null };
-      obj4 = { disabled, checked };
-      obj3.accessibilityState = obj4;
-      obj3.onAccessibilityTap = function onAccessibilityTap() {
+      obj11 = { accessible: true, accessibilityRole: "switch", accessibilityLabel, accessibilityHint, accessibilityState: null, onAccessibilityTap: null };
+      const obj12 = { disabled, checked };
+      obj11.accessibilityState = obj12;
+      obj11.onAccessibilityTap = function onAccessibilityTap() {
         const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
         const tmp3 = haptics_HapticFeedbackTypesDefault;
         if (c0) {
@@ -163,10 +169,10 @@ export const FormSwitch = function FormSwitch(onValueChange) {
         });
       };
     }
-    obj5 = { style: null, onPress: null, disabled: null };
+    const obj13 = { style: null, onPress: null, disabled: null };
     const items1 = [tmp7.switch, animatedStyle];
-    obj5.style = items1;
-    obj5.onPress = function onPress() {
+    obj13.style = items1;
+    obj13.onPress = function onPress() {
       const triggerHapticFeedback = HapticUtils.triggerHapticFeedback;
       const tmp3 = haptics_HapticFeedbackTypesDefault;
       if (c0) {
@@ -178,28 +184,28 @@ export const FormSwitch = function FormSwitch(onValueChange) {
         tmp6(!c0);
       }
     };
-    obj5.disabled = disabled;
-    const merged = Object.assign(obj3);
-    const obj6 = { style: null, children: null };
+    obj13.disabled = disabled;
+    const merged = Object.assign(obj11);
+    const obj14 = { style: null, children: null };
     const items2 = [tmp7.knob, animatedStyle1];
-    obj6.style = items2;
-    obj6.children = null;
-    obj5.children = selected(tmp9(tmp2[4]).View, obj6);
-    return selected(unselectedBackground, obj5);
+    obj14.style = items2;
+    obj14.children = null;
+    obj13.children = selected(tmp9(tmp2[4]).View, obj14);
+    return selected(unselectedBackground, obj13);
   } else {
-    obj7 = { source: null, size: null, style: null };
+    const obj15 = { source: null, size: null, style: null };
     if (checked) {
-      obj7.source = tmp9(tmp2[12]);
-      obj7.size = tmp9(tmp2[7]).Sizes.SMALL_20;
+      obj15.source = tmp9(tmp2[12]);
+      obj15.size = tmp9(tmp2[7]).Sizes.SMALL_20;
       const items3 = [tmp7.selectedIcon, animatedStyle2];
-      obj7.style = items3;
-      let tmp19 = obj7;
+      obj15.style = items3;
+      let tmp19 = obj15;
     } else {
-      obj7.source = tmp9(tmp2[13]);
-      obj7.size = tmp9(tmp2[7]).Sizes.SMALL;
+      obj15.source = tmp9(tmp2[13]);
+      obj15.size = tmp9(tmp2[7]).Sizes.SMALL;
       const items4 = [tmp7.unselectedIcon, tmp16];
-      obj7.style = items4;
-      tmp19 = obj7;
+      obj15.style = items4;
+      tmp19 = obj15;
     }
     selected(token1, tmp19);
   }

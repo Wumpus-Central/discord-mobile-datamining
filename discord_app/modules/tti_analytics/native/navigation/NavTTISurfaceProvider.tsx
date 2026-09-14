@@ -1,7 +1,7 @@
-// === Module 16729: NavTTISurfaceProvider ===
+// === Module 16731: NavTTISurfaceProvider ===
 
-// Module 16729 (NavTTISurfaceProvider)
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16631 */;
+// Module 16731 (NavTTISurfaceProvider)
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16633 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,8 +15,7 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   const definition = navigationKey.definition;
   const merged = Object.assign(navigationKey, Object.assign({ navigationKey: 0, definition: 0, children: 0 }));
   let syncExternalStore;
-  let obj = navigationKey(16633);
-  const result = obj.isNavigationTTIEnabled();
+  const result = navigationKey(16635).isNavigationTTIEnabled();
   dependencyMap = result;
   const items = [definition, result, navigationKey];
   const items1 = [definition, result, navigationKey];
@@ -40,10 +39,10 @@ export const NavTTISurfaceProvider = function NavTTISurfaceProvider(navigationKe
   syncExternalStore = syncExternalStore.useSyncExternalStore(callback, callback1, callback1);
   const items2 = [syncExternalStore, definition, navigationKey];
   const memo = syncExternalStore.useMemo(() => ({ definition, navigationKey, activeTraceId: syncExternalStore }), items2);
-  obj = { value: memo, children: null };
-  obj = {};
+  const obj2 = { value: memo, children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.children = navigationKey.children;
-  obj.children = <View />;
-  return jsx(navigationKey(16632).NavTTISurfaceContext.Provider, {});
+  obj3.children = navigationKey.children;
+  obj2.children = <View />;
+  return jsx(navigationKey(16634).NavTTISurfaceContext.Provider, { value: memo, children: null });
 };

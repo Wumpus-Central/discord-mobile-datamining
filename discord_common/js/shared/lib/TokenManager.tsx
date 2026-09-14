@@ -166,44 +166,42 @@ export const init = function init() {
     closure_11 = Storage2.get(React2) || {};
     if (null != closure_8) {
       if (0 !== arr.length) {
-        let obj = safeStorage;
         let result;
         if (safeStorage != null) {
-          result = obj.isEncryptionAvailable();
+          result = safeStorage.isEncryptionAvailable();
         }
         if (result) {
           if (arr.startsWith(c4)) {
-            obj = { decryptedToken: null, wasEncrypted: true };
-            obj.decryptedToken = obj.decryptString(arr.substring(12));
+            let obj2 = { decryptedToken: safeStorage.decryptString(arr.substring(12)), wasEncrypted: true };
+            let obj3 = obj2;
           }
         }
-        obj = { decryptedToken: arr, wasEncrypted: false };
+        obj3 = { decryptedToken: arr, wasEncrypted: false };
       }
-      ({ wasEncrypted: c9, decryptedToken: global } = obj);
+      ({ wasEncrypted: c9, decryptedToken: global } = obj3);
       const _Object = Object;
       const entries = Object.entries(closure_11);
       const mapped = entries.map((item) => {
         [tmp, arr] = item;
         if (null != arr) {
           if (0 !== arr.length) {
-            let obj = safeStorage;
             let result;
             if (safeStorage != null) {
-              result = obj.isEncryptionAvailable();
+              result = safeStorage.isEncryptionAvailable();
             }
             if (result) {
               if (arr.startsWith(closure_1_4)) {
-                obj = { decryptedToken: null, wasEncrypted: true };
-                obj.decryptedToken = obj.decryptString(arr.substring(12));
+                const obj2 = { decryptedToken: safeStorage.decryptString(arr.substring(12)), wasEncrypted: true };
+                let obj3 = obj2;
               }
             }
-            obj = { decryptedToken: arr, wasEncrypted: false };
+            obj3 = { decryptedToken: arr, wasEncrypted: false };
           }
-          ({ wasEncrypted, decryptedToken } = obj);
+          ({ wasEncrypted, decryptedToken } = obj3);
           const items = [tmp, decryptedToken];
           return items;
         }
-        obj = { decryptedToken: null, wasEncrypted: false };
+        obj3 = { decryptedToken: null, wasEncrypted: false };
       });
       let items = [];
       HermesBuiltin.arraySpread(mapped.filter((item) => {
@@ -217,7 +215,7 @@ export const init = function init() {
       }, {});
       c13 = true;
     }
-    obj = { decryptedToken: null, wasEncrypted: false };
+    obj3 = { decryptedToken: null, wasEncrypted: false };
     const tmp5 = Storage2.get(React2) || {};
   }
 };

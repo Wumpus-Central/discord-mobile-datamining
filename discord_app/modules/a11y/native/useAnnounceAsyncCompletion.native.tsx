@@ -1,6 +1,6 @@
-// === Module 11058: useAnnounceAsyncCompletion ===
+// === Module 11059: useAnnounceAsyncCompletion ===
 
-// Module 11058 (useAnnounceAsyncCompletion)
+// Module 11059 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -58,6 +58,6 @@ export default function useAnnounceAsyncCompletion() {
       return resolved;
     }
     resolved = Promise.resolve();
-    obj = intl(1150);
+    obj = intl(1363);
   }, []);
 };

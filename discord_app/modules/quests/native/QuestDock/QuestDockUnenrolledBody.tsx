@@ -1,7 +1,7 @@
-// === Module 15279: QuestDockUnenrolledBody ===
+// === Module 15280: QuestDockUnenrolledBody ===
 
-// Module 15279 (QuestDockUnenrolledBody)
-import QuestUtils from "QuestUtils" /* 11896 */;
+// Module 15280 (QuestDockUnenrolledBody)
+import QuestUtils from "QuestUtils" /* 11897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7805 */;
@@ -14,18 +14,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx");
 
 export default noop.memo(function QuestDockUnenrolledBody() {
-  let obj = questDockQuest(isMobileActivityQuest[5]);
-  questDockQuest = obj.useQuestDockQuest();
-  let obj1 = setRestingQuestDockMode;
+  questDockQuest = questDockQuest(isMobileActivityQuest[5]).useQuestDockQuest();
   const isRendered = setRestingQuestDockMode.useContext(hasWatchVideoOnMobileTasks(isMobileActivityQuest[6])).isRendered;
-  let obj2 = questDockQuest(isMobileActivityQuest[7]);
-  let isQuestDockExpanded = obj2.useIsQuestDockExpanded();
-  let obj3 = questDockQuest(isMobileActivityQuest[8]);
+  const obj = questDockQuest(isMobileActivityQuest[5]);
+  const tmp4 = hasWatchVideoOnMobileTasks;
+  let isQuestDockExpanded = questDockQuest(isMobileActivityQuest[7]).useIsQuestDockExpanded();
+  const obj3 = questDockQuest(isMobileActivityQuest[7]);
   const items = [isQuestAccessSuspended];
-  const stateFromStores = obj3.useStateFromStores(items, () => QuestStore.isEnrolling(questDockQuest.id));
+  const stateFromStores = questDockQuest(isMobileActivityQuest[8]).useStateFromStores(items, () => QuestStore.isEnrolling(questDockQuest.id));
+  const obj4 = questDockQuest(isMobileActivityQuest[8]);
   hasWatchVideoOnMobileTasks = questDockQuest(isMobileActivityQuest[9]).useHasWatchVideoOnMobileTasks(questDockQuest.config);
   const obj5 = questDockQuest(isMobileActivityQuest[9]);
-  const tmp4 = hasWatchVideoOnMobileTasks;
   const questTaskDetails = questDockQuest(isMobileActivityQuest[10]).useQuestTaskDetails(questDockQuest);
   const obj6 = questDockQuest(isMobileActivityQuest[10]);
   const mobileActivityQuest = questDockQuest(isMobileActivityQuest[9]).useMobileActivityQuest(questDockQuest);
@@ -39,19 +38,19 @@ export default noop.memo(function QuestDockUnenrolledBody() {
   if (shouldShowBonusOrbsUX) {
     tmp12 = questOrbMultiplierEligibility === tmp(tmp2[12]).QuestOrbMultiplierEligibilityType.NITRO;
   }
-  setRestingQuestDockMode = obj1.useContext(tmp(tmp2[13]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  let tmpResult = tmp(tmp2[10]);
-  isQuestAccessSuspended = tmpResult.useIsQuestAccessSuspended();
-  tmpResult = tmp(tmp2[14]);
-  const trackQuestContentClickedWithImpression = tmpResult.useTrackQuestContentClickedWithImpression();
+  setRestingQuestDockMode = obj2.useContext(tmp(tmp2[13]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const obj9 = questDockQuest(isMobileActivityQuest[10]);
+  isQuestAccessSuspended = questDockQuest(isMobileActivityQuest[10]).useIsQuestAccessSuspended();
+  const tmpResult = questDockQuest(isMobileActivityQuest[10]);
+  const trackQuestContentClickedWithImpression = questDockQuest(isMobileActivityQuest[14]).useTrackQuestContentClickedWithImpression();
   const items1 = [questDockQuest.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity, isQuestAccessSuspended, trackQuestContentClickedWithImpression];
-  const callback = obj1.useCallback(launchMobileActivity(function*() {
+  const callback = obj2.useCallback(launchMobileActivity(function*() {
     const v0 = 0;
     if (isQuestAccessSuspended) {
       trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5528).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7830).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE });
-      v2(15198)();
+      v2(15199)();
     }
-    yield v0(11409).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7830).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5528).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE });
+    yield v0(11410).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7830).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5528).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
       if (arg0 === 1) {
         dependencyMap = 3;
@@ -65,9 +64,9 @@ export default noop.memo(function QuestDockUnenrolledBody() {
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(15204)({ questId: closure_128_0.id, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE });
+          v2(15205)({ questId: closure_128_0.id, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE });
           closure_128_4(constants.COLLAPSED);
-          v2(15204);
+          v2(15205);
           { questId: closure_128_0.id, sourceQuestContent: v0(5528).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;
@@ -80,38 +79,37 @@ export default noop.memo(function QuestDockUnenrolledBody() {
     }
     return value;
   }), items1);
-  const obj9 = questDockQuest(isMobileActivityQuest[10]);
+  const tmpResult4 = questDockQuest(isMobileActivityQuest[14]);
   const primaryCtaCopy = questDockQuest(isMobileActivityQuest[20]).usePrimaryCtaCopy({ quest: questDockQuest, application: mobileActivityQuest.questApplication, shortText: true });
-  const tmpResult1 = questDockQuest(isMobileActivityQuest[20]);
-  obj = { quest: questDockQuest, location: constants.QUESTS_BAR_MOBILE, taskDetails: questTaskDetails, sourceQuestContent: tmp(tmp2[15]).QuestContent.QUEST_BAR_MOBILE };
+  const tmpResult5 = questDockQuest(isMobileActivityQuest[20]);
+  const tmpResult6 = questDockQuest(isMobileActivityQuest[20]);
   const items2 = [questDockQuest];
-  const questsInstructionsToWinReward = questDockQuest(isMobileActivityQuest[20]).useQuestsInstructionsToWinReward(obj);
-  const callback1 = obj1.useCallback(() => QuestUtils.getPrimaryCtaIcon(questDockQuest, true), items2);
-  const tmpResult2 = questDockQuest(isMobileActivityQuest[20]);
+  const questsInstructionsToWinReward = tmpResult6.useQuestsInstructionsToWinReward({ quest: questDockQuest, location: constants.QUESTS_BAR_MOBILE, taskDetails: questTaskDetails, sourceQuestContent: questDockQuest(isMobileActivityQuest[15]).QuestContent.QUEST_BAR_MOBILE });
+  const callback1 = obj2.useCallback(() => QuestUtils.getPrimaryCtaIcon(questDockQuest, true), items2);
+  const obj10 = { quest: questDockQuest, location: constants.QUESTS_BAR_MOBILE, taskDetails: questTaskDetails, sourceQuestContent: questDockQuest(isMobileActivityQuest[15]).QuestContent.QUEST_BAR_MOBILE };
   let tmp21 = !isQuestDockExpanded;
   if (isQuestDockExpanded) {
     tmp21 = !isRendered;
   }
-  obj = { paused: tmp21, quest: questDockQuest, withAnimation: null };
+  const obj11 = { paused: tmp21, quest: questDockQuest, withAnimation: null };
   if (isQuestDockExpanded) {
     isQuestDockExpanded = isRendered;
   }
-  obj1 = { rewardTile: jsx(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null };
-  obj.withAnimation = isQuestDockExpanded;
+  const obj12 = { rewardTile: jsx(questDockQuest(isMobileActivityQuest[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null };
+  obj11.withAnimation = isQuestDockExpanded;
   let tmp19Result;
   if (shouldShowBonusOrbsUX) {
-    obj2 = { questId: questDockQuest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility };
+    const obj13 = { questId: questDockQuest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility };
     tmp19Result = jsx(tmp(tmp2[23]).QuestOrbMultiplierPerkPill, { questId: questDockQuest.config.id, orbMultiplierEligibility: questOrbMultiplierEligibility });
   }
-  obj1.premiumRewardPerkPill = tmp19Result;
+  obj12.premiumRewardPerkPill = tmp19Result;
   const intl = tmp(tmp2[24]).intl;
-  obj3 = { questName: questDockQuest.config.messages.questName };
-  obj1.title = intl.format(questDockQuest(isMobileActivityQuest[24]).t.EQa7os, obj3);
-  obj1.description = questsInstructionsToWinReward;
-  obj1.ctaText = primaryCtaCopy;
-  obj1.onCtaPress = callback;
-  obj1.renderCtaIcon = callback1;
-  obj1.ctaLoading = stateFromStores;
-  obj1.showBonusOrbsGradient = tmp12;
-  return jsx(tmp4(isMobileActivityQuest[22]), { rewardTile: jsx(tmp(tmp2[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null });
+  obj12.title = intl.format(questDockQuest(isMobileActivityQuest[24]).t.EQa7os, { questName: questDockQuest.config.messages.questName });
+  obj12.description = questsInstructionsToWinReward;
+  obj12.ctaText = primaryCtaCopy;
+  obj12.onCtaPress = callback;
+  obj12.renderCtaIcon = callback1;
+  obj12.ctaLoading = stateFromStores;
+  obj12.showBonusOrbsGradient = tmp12;
+  return jsx(tmp4(isMobileActivityQuest[22]), { rewardTile: jsx(questDockQuest(isMobileActivityQuest[22]).QuestDockBodyQuestRewardTile, { paused: tmp21, quest: questDockQuest, withAnimation: null }), premiumRewardPerkPill: null, title: null, description: null, ctaText: null, onCtaPress: null, renderCtaIcon: null, ctaLoading: null, showBonusOrbsGradient: null });
 });

@@ -1,6 +1,6 @@
-// === Module 17213: useStableParticipant ===
+// === Module 17215: useStableParticipant ===
 
-// Module 17213 (useStableParticipant)
+// Module 17215 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import NicknameUtils from "NicknameUtils" /* 4788 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 8333 */;
@@ -9,6 +9,8 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import UserStore from "UserStore" /* 1371 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function areStableParticipantsEqual(arg0, arg1) {
@@ -38,24 +40,24 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.833, isSelf: 0.709 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.959, isSelf: 0.978 };
           id = AuthenticationStore.getId();
-          obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
-          obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
-          obj.isSelf = user.id === id;
-          return obj;
+          obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
+          obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
+          obj3.isSelf = user.id === id;
+          return obj3;
         }
       } else {
         const tmp15 = participantHasVideoDefault(participant);
         const type = participant.type;
         if (ParticipantTypes.ACTIVITY === type) {
-          obj = { type: participant.type, id, applicationId: participant.applicationId };
-          return obj;
+          const obj4 = { type: participant.type, id, applicationId: participant.applicationId };
+          return obj4;
         } else {
           if (ParticipantTypes.STREAM !== type) {
             if (ParticipantTypes.HIDDEN_STREAM !== type) {
               if (ParticipantTypes.USER === type) {
-                obj = { type: participant.type, id, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
+                const obj = { type: participant.type, id, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
                 ({ user: obj.user, voiceState } = participant);
                 let flag;
                 const id1 = AuthenticationStore.getId();
@@ -80,15 +82,15 @@ export default function useStableParticipant(id, arg1, arg2) {
               }
             }
           }
-          const obj1 = { type: participant.type, id, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
+          const obj9 = { type: participant.type, id, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
           ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
           const id2 = AuthenticationStore.getId();
-          obj1.streamId = streamId2;
+          obj9.streamId = streamId2;
           const guildId = participant.stream.guildId;
-          obj1.streamGuildId = guildId;
-          obj1.hasVideo = tmp15;
-          obj1.isSelf = participant.user.id === id2;
-          return obj1;
+          obj9.streamGuildId = guildId;
+          obj9.hasVideo = tmp15;
+          obj9.isSelf = participant.user.id === id2;
+          return obj9;
         }
       }
     }

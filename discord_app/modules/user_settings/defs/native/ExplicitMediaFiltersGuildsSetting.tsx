@@ -1,15 +1,15 @@
-// === Module 14919: ExplicitMediaFiltersGuildsSetting ===
+// === Module 14920: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 14919 (ExplicitMediaFiltersGuildsSetting)
+// Module 14920 (ExplicitMediaFiltersGuildsSetting)
 import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7401 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
 import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14909 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14910 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14910 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14911 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
@@ -27,18 +27,18 @@ const pressable = SettingBuilders.createPressable({
   },
   onPress: function onObscuredContentGuildsOnPress() {
     const intl = util.intl;
+    const obj = SensitiveMediaExplicitRedactionSettingsUtils;
     const stringResult = intl.string(util.t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    const obj3 = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
     const intl2 = util.intl;
-    obj.subtitle = intl2.string(util.t["FP+a42"]);
-    obj.handlePress = function handlePress(explicitContentGuilds) {
-      const obj = { explicitContentGuilds };
-      return obj.updateExplicitContentSetting(obj);
+    obj3.subtitle = intl2.string(util.t["FP+a42"]);
+    obj3.handlePress = function handlePress(explicitContentGuilds) {
+      return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentGuilds });
     };
     const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
-    obj.excluded = items;
-    obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
-    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+    obj3.excluded = items;
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = util.intl;

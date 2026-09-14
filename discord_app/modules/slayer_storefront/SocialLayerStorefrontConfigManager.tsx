@@ -1,7 +1,7 @@
-// === Module 13830: SocialLayerStorefrontConfigManager ===
+// === Module 13831: SocialLayerStorefrontConfigManager ===
 
-// Module 13830 (SocialLayerStorefrontConfigManager)
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10926 */;
+// Module 13831 (SocialLayerStorefrontConfigManager)
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10927 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 
 require = fn;

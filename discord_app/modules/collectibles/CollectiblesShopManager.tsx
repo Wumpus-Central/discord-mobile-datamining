@@ -29,8 +29,8 @@ function flushProducts() {
   set.clear();
   for (const item10016 of tmp2) {
     let obj = StorefrontProductActionCreators;
-    obj = { skuIds: item10016 };
-    let result = obj.maybeFetchProductsBySkuIds(obj);
+    let obj2 = { skuIds: item10016 };
+    let result = obj.maybeFetchProductsBySkuIds(obj2);
     continue;
   }
   const tmp2 = chunk(items);
@@ -42,8 +42,8 @@ function flushCollections() {
   c8 = false;
   for (const item10018 of tmp3) {
     let obj = StorefrontCollectionActionCreators;
-    obj = { collectionIds: item10018, includeUnpublishedCollections: tmp, includeUnpublishedProducts: tmp };
-    let result = obj.maybeFetchCollectionsWithProducts(obj);
+    let obj2 = { collectionIds: item10018, includeUnpublishedCollections: tmp, includeUnpublishedProducts: tmp };
+    let result = obj.maybeFetchCollectionsWithProducts(obj2);
     continue;
   }
   const tmp3 = chunk(items);

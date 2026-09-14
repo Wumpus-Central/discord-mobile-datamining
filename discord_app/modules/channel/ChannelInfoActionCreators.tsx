@@ -1,6 +1,6 @@
-// === Module 11610: ChannelInfoActionCreators ===
+// === Module 11611: ChannelInfoActionCreators ===
 
-// Module 11610 (ChannelInfoActionCreators)
+// Module 11611 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5358 */;
 import ChannelStatusStore from "ChannelStatusStore" /* 7632 */;
@@ -10,8 +10,8 @@ const result = size.fileFinishedImporting("modules/channel/ChannelInfoActionCrea
 
 export const fetchChannelInfo = function fetchChannelInfo(guild_id) {
   if (!ChannelStatusStore.hasRequestedStatuses(guild_id)) {
-    const obj = { type: "FETCH_CHANNEL_INFO", guildId: guild_id };
-    obj.dispatch(obj);
+    const obj2 = { type: "FETCH_CHANNEL_INFO", guildId: guild_id };
+    DispatcherDefault.dispatch(obj2);
     const socket = GatewayConnectionStore.getSocket();
     const channelInfo = socket.requestChannelInfo(guild_id, ["status", "voice_start_time"]);
   }

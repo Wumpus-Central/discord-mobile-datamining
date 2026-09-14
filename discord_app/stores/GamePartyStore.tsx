@@ -1,6 +1,6 @@
-// === Module 13359: GamePartyStore ===
+// === Module 13360: GamePartyStore ===
 
-// Module 13359 (GamePartyStore)
+// Module 13360 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -34,11 +34,11 @@ function updateParty(id, id2, activities, status) {
         if (tmp8 === id) {
           return false;
         } else {
-          obj = dependencyMap[id2];
-          if (obj == null) {
-            obj = {};
+          let obj2 = dependencyMap[id2];
+          if (obj2 == null) {
+            obj2 = {};
           }
-          if (null != obj[id]) {
+          if (null != obj2[id]) {
             delete tmp5[tmp];
             if (obj3.isEmpty(dependencyMap[id2])) {
               delete tmp2[tmp3];
@@ -56,20 +56,20 @@ function updateParty(id, id2, activities, status) {
       }
       let tmp19 = dependencyMap[id2];
       if (null == tmp19) {
-        obj = {};
-        dependencyMap[id2] = obj;
-        tmp19 = obj;
+        const obj4 = {};
+        dependencyMap[id2] = obj4;
+        tmp19 = obj4;
       }
       tmp19[id] = id;
       if (!RelationshipStore.isBlocked(id2)) {
         if (!RelationshipStore.isIgnored(id2)) {
-          value = map.get(id);
-          if (value == null) {
+          let value3 = map.get(id);
+          if (value3 == null) {
             const _Set = Set;
-            value = new Set();
+            value3 = new Set();
           }
-          const result = map.set(id, value);
-          value.add(id2);
+          const result = map.set(id, value3);
+          value3.add(id2);
         }
       }
       return true;
@@ -77,22 +77,22 @@ function updateParty(id, id2, activities, status) {
   }
   let flag3 = null != tmp8;
   if (flag3) {
-    let obj1 = dependencyMap[id2];
-    if (obj1 == null) {
-      obj1 = {};
+    let obj5 = dependencyMap[id2];
+    if (obj5 == null) {
+      obj5 = {};
     }
     flag3 = true;
-    if (null != obj1[id]) {
+    if (null != obj5[id]) {
       delete tmp4[tmp];
       if (obj9.isEmpty(dependencyMap[id2])) {
         delete tmp[tmp3];
       }
-      const value1 = map.get(tmp29);
+      const value4 = map.get(tmp29);
       flag3 = true;
-      if (null != value1) {
-        value1.delete(id2);
+      if (null != value4) {
+        value4.delete(id2);
         flag3 = true;
-        if (0 === value1.size) {
+        if (0 === value4.size) {
           map.delete(tmp29);
           flag3 = true;
         }

@@ -1,9 +1,11 @@
-// === Module 12430: GuildDirectorySearchModal ===
+// === Module 12431: GuildDirectorySearchModal ===
 
-// Module 12430 (GuildDirectorySearchModal)
+// Module 12431 (GuildDirectorySearchModal)
 import useInitialValueDefault from "useInitialValue" /* 5679 */;
-import GuildDirectorySearchDefault from "GuildDirectorySearch" /* 12431 */;
+import GuildDirectorySearchDefault from "GuildDirectorySearch" /* 12432 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;

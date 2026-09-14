@@ -18,30 +18,31 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
   if (null != uploaderFile) {
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
-      let obj = { type: MessageEmbedTypes.TEXT, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null, iconURL: null };
+      const obj2 = { type: MessageEmbedTypes.TEXT, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null, iconURL: null };
       const intl3 = util.intl;
-      obj.messageSendError = intl3.string(util.t.lBLP4u);
-      obj.failureState = MessageFailureState.UNSPECIFIED;
-      obj.bodyTextColor = colors.failedMessageBodyTextColor;
+      obj2.messageSendError = intl3.string(util.t.lBLP4u);
+      obj2.failureState = MessageFailureState.UNSPECIFIED;
+      obj2.bodyTextColor = colors.failedMessageBodyTextColor;
       colors = renderer_EmbedUtils.getAssetUriForEmbed;
-      obj.iconURL = colors(_modDef8273);
+      obj2.iconURL = colors(_modDef8273);
+      let obj3 = obj2;
     } else {
-      obj = { type: MessageEmbedTypes.TEXT, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
+      obj3 = { type: MessageEmbedTypes.TEXT, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
       const intl2 = util.intl;
-      const obj1 = { count: uploaderFile.attachmentsCount };
-      obj.numAttachments = intl2.formatToPlainString(util.t.D0noUt, obj1);
-      obj.failureState = MessageFailureState.UPLOAD_FAILED;
+      const obj4 = { count: uploaderFile.attachmentsCount };
+      obj3.numAttachments = intl2.formatToPlainString(util.t.D0noUt, obj4);
+      obj3.failureState = MessageFailureState.UPLOAD_FAILED;
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
         str = " (" + FileUtils.sizeString(uploaderFile.currentSize) + ")";
         const tmp6Result = FileUtils;
       }
-      obj.attachmentsSize = "" + str;
-      obj.bodyTextColor = colors.embedBodyTextColor;
+      obj3.attachmentsSize = "" + str;
+      obj3.bodyTextColor = colors.embedBodyTextColor;
     }
   } else {
-    obj = { type: MessageEmbedTypes.TEXT, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };
+    const obj = { type: MessageEmbedTypes.TEXT, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };
     const intl = util.intl;
     obj.messageSendError = intl.string(util.t.lBLP4u);
     obj.failureState = MessageFailureState.UNSPECIFIED;

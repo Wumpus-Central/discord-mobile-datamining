@@ -1,6 +1,6 @@
-// === Module 10390: autocompleter/AutocompleteUtils ===
+// === Module 10391: autocompleter/AutocompleteUtils ===
 
-// Module 10390 (autocompleter/AutocompleteUtils)
+// Module 10391 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelName from "useChannelName" /* 4789 */;
@@ -19,17 +19,15 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(1961).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10391);
+const ApplicationCommandsConstants = fn(10392);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(5081);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-fn(4636);
-let createStyles = { itemDivider: null };
-createStyles = { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.itemDivider = createStyles;
-let closure_17 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_17 = createStyles.createStyles(obj2);
 const re19 = /[\r\n]/;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");

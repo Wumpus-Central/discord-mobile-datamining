@@ -1,13 +1,13 @@
-// === Module 15604: CommunityActivityAlertsSetting ===
+// === Module 15605: CommunityActivityAlertsSetting ===
 
-// Module 15604 (CommunityActivityAlertsSetting)
+// Module 15605 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10209 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
@@ -27,9 +27,8 @@ let SettingBuilders = {
       return require("UserSettingsCommunityNotifications").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
 
-export default SettingBuilders;
+export default route;

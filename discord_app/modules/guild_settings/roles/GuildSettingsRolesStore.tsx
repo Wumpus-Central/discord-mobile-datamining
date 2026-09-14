@@ -1,6 +1,6 @@
-// === Module 17724: GuildSettingsRolesStore ===
+// === Module 17725: GuildSettingsRolesStore ===
 
-// Module 17724 (GuildSettingsRolesStore)
+// Module 17725 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
@@ -11,13 +11,13 @@ import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5085 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12545 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 17719 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17725 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12546 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 17720 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17726 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
 import Constants from "Constants" /* 1074 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17726 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17727 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -54,44 +54,44 @@ function handleInit() {
     id = guild.id;
   }
   const item = items2.forEach((colors) => {
-    let GRADIENT = styleColors.SOLID;
-    styleColors = useHasEnhancedRoleColors;
+    let GRADIENT = obj.SOLID;
+    obj = useHasEnhancedRoleColors;
     if (!tmp2) {
-      styleColors = {};
-      styleColors = { primary_color, secondary_color: null, tertiary_color: null };
-      styleColors[tmp.SOLID] = styleColors;
+      const obj2 = {};
+      const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+      obj2[tmp.SOLID] = obj3;
       ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
-      styleColors[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+      obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
       ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
-      styleColors[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+      obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
       if (null != colors.colors) {
         primary_color = colors.colors.primary_color;
         if (primary_color == null) {
           primary_color = tmp4;
         }
-        const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+        const obj13 = { primary_color, secondary_color: null, tertiary_color: null };
         let secondary_color = colors.colors.secondary_color;
         if (secondary_color == null) {
           secondary_color = null;
         }
-        obj3.secondary_color = secondary_color;
+        obj13.secondary_color = secondary_color;
         let tertiary_color = colors.colors.tertiary_color;
         if (tertiary_color == null) {
           tertiary_color = null;
         }
-        obj3.tertiary_color = tertiary_color;
-        styleColors[GRADIENT] = obj3;
+        obj13.tertiary_color = tertiary_color;
+        obj2[GRADIENT] = obj13;
       }
-      const obj4 = { currentStyle: GRADIENT, styleColors };
-      const result = map2.set(colors.id, obj4);
-      const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
-      const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
+      const obj14 = { currentStyle: GRADIENT, styleColors: obj2 };
+      const result = map2.set(colors.id, obj14);
+      const obj6 = { primary_color: null, secondary_color: null, tertiary_color: null };
+      const obj7 = { primary_color: null, secondary_color: null, tertiary_color: null };
     } else if (null != colors.colors.tertiary_color) {
       GRADIENT = tmp.HOLOGRAPHIC;
     } else if (null != colors.colors.secondary_color) {
       GRADIENT = tmp.GRADIENT;
     }
-    tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
+    tmp2 = null != colors.colors && obj.getHasEnhancedRoleColorsForRole(id, colors);
   });
   c27 = false;
   if (flag) {
@@ -142,44 +142,44 @@ function syncGuildChanges(guildId) {
         map2.clear();
         closure_129_0 = guildId;
         const item2 = items.forEach((colors) => {
-          let GRADIENT = styleColors.SOLID;
-          styleColors = useHasEnhancedRoleColors;
+          let GRADIENT = obj.SOLID;
+          obj = useHasEnhancedRoleColors;
           if (!tmp2) {
-            styleColors = {};
-            styleColors = { primary_color, secondary_color: null, tertiary_color: null };
-            styleColors[tmp.SOLID] = styleColors;
+            const obj2 = {};
+            const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+            obj2[tmp.SOLID] = obj3;
             ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
-            styleColors[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
-            styleColors[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
             if (null != colors.colors) {
               primary_color = colors.colors.primary_color;
               if (primary_color == null) {
                 primary_color = tmp4;
               }
-              const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+              const obj13 = { primary_color, secondary_color: null, tertiary_color: null };
               let secondary_color = colors.colors.secondary_color;
               if (secondary_color == null) {
                 secondary_color = null;
               }
-              obj3.secondary_color = secondary_color;
+              obj13.secondary_color = secondary_color;
               let tertiary_color = colors.colors.tertiary_color;
               if (tertiary_color == null) {
                 tertiary_color = null;
               }
-              obj3.tertiary_color = tertiary_color;
-              styleColors[GRADIENT] = obj3;
+              obj13.tertiary_color = tertiary_color;
+              obj2[GRADIENT] = obj13;
             }
-            const obj4 = { currentStyle: GRADIENT, styleColors };
-            const result = map2.set(colors.id, obj4);
-            const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
-            const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj14 = { currentStyle: GRADIENT, styleColors: obj2 };
+            const result = map2.set(colors.id, obj14);
+            const obj6 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj7 = { primary_color: null, secondary_color: null, tertiary_color: null };
           } else if (null != colors.colors.tertiary_color) {
             GRADIENT = tmp.HOLOGRAPHIC;
           } else if (null != colors.colors.secondary_color) {
             GRADIENT = tmp.GRADIENT;
           }
-          tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
+          tmp2 = null != colors.colors && obj.getHasEnhancedRoleColorsForRole(id, colors);
         });
         const item3 = map.forEach((item, index) => {
           const result = map2.set(index, item);
@@ -197,7 +197,7 @@ const GuildSettingsRoleEditSections = GuildSettingsConstants.GuildSettingsRoleEd
 ({ GuildSettingsSections: map1, FormStates } = Constants);
 ({ DEFAULT_ROLE_COLOR: closure_15, GuildFeatures: closure_16 } = Constants);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: closure_17, HOLOGRAPHIC_ROLE_COLORS: closure_18 } = EnhancedRoleColorConstants);
-let RoleColorsStyle = { SOLID: "solid", GRADIENT: "gradient", HOLOGRAPHIC: "holographic" };
+const RoleColorsStyle = { SOLID: "solid", GRADIENT: "gradient", HOLOGRAPHIC: "holographic" };
 const dependencyMap = { [GuildSettingsRoleEditSections.DISPLAY]: ["name", "hoist", "mentionable", "color", "colors", "colorString", "colorStrings", "icon", "unicodeEmoji"], [GuildSettingsRoleEditSections.PERMISSIONS]: ["permissions"], [GuildSettingsRoleEditSections.MEMBERS]: [], [GuildSettingsRoleEditSections.VERIFICATIONS]: [] };
 new Set();
 let OPEN = FormStates.CLOSED;
@@ -215,7 +215,7 @@ let closure_33 = apply.debounce(() => {
   if (closure_24) {
     if (null != user) {
       if (null != items) {
-        obj = {
+        const obj2 = {
           oldOrdering: GuildRoleStore.getSortedRoles(user.id),
           newOrdering: items,
           idGetter(id) {
@@ -226,7 +226,7 @@ let closure_33 = apply.debounce(() => {
                 },
           ascending: false
         };
-        let result = obj.calculatePositionDeltas(obj);
+        let result = DragAndDropUtilsDefault.calculatePositionDeltas(obj2);
       }
       closure_24 = tmp9;
       if (result.length <= 0) {
@@ -295,7 +295,7 @@ prototype["hasSectionChanges"] = function hasSectionChanges(id, effectiveSection
         if (null != found) {
           tmp6 = null;
           if (null != found1) {
-            obj = { fields: arr, role: found, original: found1 };
+            const obj = { fields: arr, role: found, original: found1 };
             tmp6 = obj;
           }
         }
@@ -364,7 +364,7 @@ Object.defineProperty(prototype, "formState", {
 prototype["getSortDeltas"] = function getSortDeltas() {
   if (null != user) {
     if (null != items) {
-      obj = {
+      const obj2 = {
         oldOrdering: GuildRoleStore.getSortedRoles(user.id),
         newOrdering: items,
         idGetter(id) {
@@ -375,7 +375,7 @@ prototype["getSortDeltas"] = function getSortDeltas() {
             },
         ascending: false
       };
-      const result = obj.calculatePositionDeltas(obj);
+      const result = DragAndDropUtilsDefault.calculatePositionDeltas(obj2);
     }
     return [];
   }
@@ -394,7 +394,7 @@ prototype["getEditedRoleConnectionConfigurationsMap"] = function getEditedRoleCo
   return map1;
 };
 GuildSettingsRolesStore.displayName = "GuildSettingsRolesStore";
-RoleColorsStyle = {
+const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
   GUILD_SETTINGS_ROLES_INIT() {
     handleInit();
   },
@@ -428,17 +428,17 @@ RoleColorsStyle = {
       } else {
         addResult = obj3.remove(permissions, flag);
       }
-      obj = { permissions: addResult };
+      const obj = { permissions: addResult };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       return false;
@@ -449,17 +449,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { permissions: id.permissions };
+      const obj = { permissions: id.permissions };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -471,17 +471,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { permissions: PermissionUtilsAll.NONE };
+      const obj = { permissions: PermissionUtilsAll.NONE };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -493,17 +493,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { name: id.name };
+      const obj = { name: id.name };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -515,17 +515,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { description: id.description };
+      const obj = { description: id.description };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -536,7 +536,7 @@ RoleColorsStyle = {
     ({ id, color } = arg0);
     let int2hexResult = null;
     if (0 !== color) {
-      obj = utils_ColorUtils;
+      const obj = utils_ColorUtils;
       int2hexResult = obj.int2hex(color);
     }
     const found = items.find((id) => id.id === closure_0);
@@ -547,30 +547,30 @@ RoleColorsStyle = {
       let tmp26 = null != value;
       if (tmp26) {
         value.currentStyle = obj.SOLID;
-        obj = { primary_color: color, secondary_color: null, tertiary_color: null };
-        value.styleColors[obj.SOLID] = obj;
-        obj = {};
-        const merged = Object.assign(value);
-        const result = map2.set(id, obj);
-        const obj1 = { color, colorString: int2hexResult, colors: null, colorStrings: null };
         const obj2 = { primary_color: color, secondary_color: null, tertiary_color: null };
-        obj1.colors = obj2;
+        value.styleColors[obj.SOLID] = obj2;
+        const obj3 = {};
+        const merged = Object.assign(value);
+        const result = map2.set(id, obj3);
+        const obj4 = { color, colorString: int2hexResult, colors: null, colorStrings: null };
+        const obj5 = { primary_color: color, secondary_color: null, tertiary_color: null };
+        obj4.colors = obj5;
         let tmp10 = null;
         if (null != int2hexResult) {
-          const obj3 = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
-          tmp10 = obj3;
+          const obj6 = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
+          tmp10 = obj6;
         }
-        obj1.colorStrings = tmp10;
+        obj4.colorStrings = tmp10;
         const index = items.indexOf(found);
         if (index >= 0) {
-          const obj4 = {};
+          const obj7 = {};
           const merged1 = Object.assign(found);
-          const merged2 = Object.assign(obj1);
+          const merged2 = Object.assign(obj4);
           items = [];
           HermesBuiltin.arraySpread(items, 0);
-          items[index] = obj4;
+          items[index] = obj7;
           c23 = true;
-          set.add(obj4.id);
+          set.add(obj7.id);
           closure_33();
         }
         tmp26 = flag;
@@ -590,20 +590,20 @@ RoleColorsStyle = {
       if (tmp21) {
         value.styleColors[currentStyle] = colors;
         value.currentStyle = currentStyle;
-        obj = {};
+        const obj = {};
         const merged = Object.assign(value);
         const result1 = map2.set(id, obj);
-        obj = { color: colors.primary_color, colors, colorString: result.primaryColor, colorStrings: result };
+        const obj2 = { color: colors.primary_color, colors, colorString: result.primaryColor, colorStrings: result };
         const index = items.indexOf(found);
         if (index >= 0) {
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(found);
-          const merged2 = Object.assign(obj);
+          const merged2 = Object.assign(obj2);
           items = [];
           HermesBuiltin.arraySpread(items, 0);
-          items[index] = obj;
+          items[index] = obj3;
           c23 = true;
-          set.add(obj.id);
+          set.add(obj3.id);
           closure_33();
         }
         tmp21 = flag;
@@ -617,17 +617,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { hoist, mentionable };
+      const obj = { hoist, mentionable };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -640,17 +640,17 @@ RoleColorsStyle = {
     const found = items.find((id) => id.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
-      obj = { icon, unicodeEmoji };
+      const obj = { icon, unicodeEmoji };
       const index = items.indexOf(found);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(found);
         const merged1 = Object.assign(obj);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       tmp2 = flag;
@@ -664,12 +664,13 @@ RoleColorsStyle = {
       tmp = null;
       if (0 !== arr.length) {
         const found = items.find((id) => id.id === closure_0);
+        let id1 = id;
         const found1 = items.find((id) => id.id === closure_0);
         let tmp6 = null;
         if (null != found) {
           tmp6 = null;
           if (null != found1) {
-            obj = { fields: arr, role: found, original: found1 };
+            const obj = { fields: arr, role: found, original: found1 };
             tmp6 = obj;
           }
         }
@@ -683,14 +684,14 @@ RoleColorsStyle = {
       const pickResult = apply.pick(original, fields);
       const index = items.indexOf(role);
       if (index >= 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(role);
         const merged1 = Object.assign(pickResult);
         items = [];
         HermesBuiltin.arraySpread(items, 0);
-        items[index] = obj;
+        items[index] = obj2;
         c23 = true;
-        set.add(obj.id);
+        set.add(obj2.id);
         closure_33();
       }
       let hasItem = fields.includes("color");
@@ -698,50 +699,50 @@ RoleColorsStyle = {
         hasItem = fields.includes("colors");
       }
       if (hasItem) {
-        id = undefined;
+        id1 = undefined;
         if (user != null) {
-          id = user.id;
+          id1 = user.id;
         }
         const items1 = [original];
         const item = items1.forEach((colors) => {
-          let GRADIENT = styleColors.SOLID;
-          styleColors = useHasEnhancedRoleColors;
+          let GRADIENT = obj.SOLID;
+          obj = useHasEnhancedRoleColors;
           if (!tmp2) {
-            styleColors = {};
-            styleColors = { primary_color, secondary_color: null, tertiary_color: null };
-            styleColors[tmp.SOLID] = styleColors;
+            const obj2 = {};
+            const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+            obj2[tmp.SOLID] = obj3;
             ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
-            styleColors[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
-            styleColors[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
             if (null != colors.colors) {
               primary_color = colors.colors.primary_color;
               if (primary_color == null) {
                 primary_color = tmp4;
               }
-              const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+              const obj13 = { primary_color, secondary_color: null, tertiary_color: null };
               let secondary_color = colors.colors.secondary_color;
               if (secondary_color == null) {
                 secondary_color = null;
               }
-              obj3.secondary_color = secondary_color;
+              obj13.secondary_color = secondary_color;
               let tertiary_color = colors.colors.tertiary_color;
               if (tertiary_color == null) {
                 tertiary_color = null;
               }
-              obj3.tertiary_color = tertiary_color;
-              styleColors[GRADIENT] = obj3;
+              obj13.tertiary_color = tertiary_color;
+              obj2[GRADIENT] = obj13;
             }
-            const obj4 = { currentStyle: GRADIENT, styleColors };
-            const result = map2.set(colors.id, obj4);
-            const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
-            const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj14 = { currentStyle: GRADIENT, styleColors: obj2 };
+            const result = map2.set(colors.id, obj14);
+            const obj6 = { primary_color: null, secondary_color: null, tertiary_color: null };
+            const obj7 = { primary_color: null, secondary_color: null, tertiary_color: null };
           } else if (null != colors.colors.tertiary_color) {
             GRADIENT = tmp.HOLOGRAPHIC;
           } else if (null != colors.colors.secondary_color) {
             GRADIENT = tmp.GRADIENT;
           }
-          tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
+          tmp2 = null != colors.colors && obj.getHasEnhancedRoleColorsForRole(id, colors);
         });
       }
     }
@@ -763,7 +764,7 @@ RoleColorsStyle = {
   },
   GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES: function handleCommitSectionChanges(id) {
     id = id.id;
-    obj = undefined;
+    let obj2;
     let tmp = null;
     if (null != dependencyMap[id.section]) {
       tmp = null;
@@ -774,7 +775,7 @@ RoleColorsStyle = {
         if (null != found) {
           tmp6 = null;
           if (null != found1) {
-            obj = { fields: arr, role: found, original: found1 };
+            const obj = { fields: arr, role: found, original: found1 };
             tmp6 = obj;
           }
         }
@@ -785,17 +786,17 @@ RoleColorsStyle = {
       return false;
     } else {
       const role = tmp.role;
-      obj = {};
+      obj2 = {};
       const merged = Object.assign(tmp.original);
       const merged1 = Object.assign(apply.pick(role, tmp.fields));
       items = items.map((id) => {
         let tmp = id;
         if (id.id === id) {
-          tmp = obj;
+          tmp = obj2;
         }
         return tmp;
       });
-      if (isRoleEqual(role, obj)) {
+      if (isRoleEqual(role, obj2)) {
         set.delete(id);
         if (0 === set.size) {
           c23 = false;
@@ -814,7 +815,7 @@ RoleColorsStyle = {
       } else {
         const index = items.indexOf(role);
         if (index >= 0) {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(role);
           const merged1 = Object.assign(role);
           const items1 = [];
@@ -846,7 +847,7 @@ RoleColorsStyle = {
       }
     });
     items = found.map((item, index) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(item);
       obj.position = length - 1 - index;
       return obj;
@@ -868,7 +869,7 @@ RoleColorsStyle = {
     });
     length = found1.length;
     items2 = found1.map((item, index) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(item);
       obj.position = length - 1 - index;
       return obj;
@@ -879,44 +880,44 @@ RoleColorsStyle = {
     }
     items = [role];
     const item2 = items.forEach((colors) => {
-      let GRADIENT = styleColors.SOLID;
-      styleColors = useHasEnhancedRoleColors;
+      let GRADIENT = obj.SOLID;
+      obj = useHasEnhancedRoleColors;
       if (!tmp2) {
-        styleColors = {};
-        styleColors = { primary_color, secondary_color: null, tertiary_color: null };
-        styleColors[tmp.SOLID] = styleColors;
+        const obj2 = {};
+        const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+        obj2[tmp.SOLID] = obj3;
         ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
-        styleColors[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+        obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
         ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
-        styleColors[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+        obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
         if (null != colors.colors) {
           primary_color = colors.colors.primary_color;
           if (primary_color == null) {
             primary_color = tmp4;
           }
-          const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
+          const obj13 = { primary_color, secondary_color: null, tertiary_color: null };
           let secondary_color = colors.colors.secondary_color;
           if (secondary_color == null) {
             secondary_color = null;
           }
-          obj3.secondary_color = secondary_color;
+          obj13.secondary_color = secondary_color;
           let tertiary_color = colors.colors.tertiary_color;
           if (tertiary_color == null) {
             tertiary_color = null;
           }
-          obj3.tertiary_color = tertiary_color;
-          styleColors[GRADIENT] = obj3;
+          obj13.tertiary_color = tertiary_color;
+          obj2[GRADIENT] = obj13;
         }
-        const obj4 = { currentStyle: GRADIENT, styleColors };
-        const result = map2.set(colors.id, obj4);
-        const obj1 = { primary_color: null, secondary_color: null, tertiary_color: null };
-        const obj2 = { primary_color: null, secondary_color: null, tertiary_color: null };
+        const obj14 = { currentStyle: GRADIENT, styleColors: obj2 };
+        const result = map2.set(colors.id, obj14);
+        const obj6 = { primary_color: null, secondary_color: null, tertiary_color: null };
+        const obj7 = { primary_color: null, secondary_color: null, tertiary_color: null };
       } else if (null != colors.colors.tertiary_color) {
         GRADIENT = tmp.HOLOGRAPHIC;
       } else if (null != colors.colors.secondary_color) {
         GRADIENT = tmp.GRADIENT;
       }
-      tmp2 = null != colors.colors && styleColors.getHasEnhancedRoleColorsForRole(id, colors);
+      tmp2 = null != colors.colors && obj.getHasEnhancedRoleColorsForRole(id, colors);
     });
   },
   GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE: function handleRoleStyleUpdate(arg0) {
@@ -929,21 +930,21 @@ RoleColorsStyle = {
       if (null == value) {
         return false;
       } else {
-        obj = { currentStyle, styleColors: value.styleColors };
-        const result = map2.set(id, obj);
+        const obj2 = { currentStyle, styleColors: value.styleColors };
+        const result = map2.set(id, obj2);
         const result1 = EnhancedRoleColorUtils.extractColorStringsFromServerColors(tmp19);
         primary_color = tmp19.primary_color;
-        obj = { color: primary_color, colors: value.styleColors[currentStyle], colorString: result1.primaryColor, colorStrings: result1 };
+        const obj = { color: primary_color, colors: value.styleColors[currentStyle], colorString: result1.primaryColor, colorStrings: result1 };
         const index = items.indexOf(found);
         if (index >= 0) {
-          obj = {};
+          const obj4 = {};
           const merged = Object.assign(found);
           const merged1 = Object.assign(obj);
           items = [];
           HermesBuiltin.arraySpread(items, 0);
-          items[index] = obj;
+          items[index] = obj4;
           c23 = true;
-          set.add(obj.id);
+          set.add(obj4.id);
           closure_33();
         }
         return false;
@@ -1043,8 +1044,7 @@ RoleColorsStyle = {
     }
     return false;
   }
-};
-const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, RoleColorsStyle);
+});
 let result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesStore.tsx");
 
 export default guildSettingsRolesStore;

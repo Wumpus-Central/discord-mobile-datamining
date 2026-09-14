@@ -16,10 +16,10 @@ function nameFromUser(primary1) {
   if (tmp) {
     let globalName = primary1.global_name;
   } else {
-    globalName = primary1.globalName;
-    let tmp2 = null != globalName;
+    const globalName1 = primary1.globalName;
+    let tmp2 = null != globalName1;
     if (tmp2) {
-      tmp2 = globalName.length > 0;
+      tmp2 = globalName1.length > 0;
     }
     if (tmp2) {
       globalName = primary1.globalName;
@@ -93,10 +93,10 @@ function getGlobalName(user) {
     if (tmp) {
       let global_name = user.globalName;
     } else {
-      global_name = user.global_name;
-      let tmp2 = null != global_name;
+      const global_name1 = user.global_name;
+      let tmp2 = null != global_name1;
       if (tmp2) {
-        tmp2 = global_name.length > 0;
+        tmp2 = global_name1.length > 0;
       }
       if (tmp2) {
         global_name = user.global_name;
@@ -147,10 +147,10 @@ function getFormattedName(inviter, arg1) {
     if (tmp) {
       let global_name = inviter.globalName;
     } else {
-      global_name = inviter.global_name;
-      let tmp2 = null != global_name;
+      const global_name1 = inviter.global_name;
+      let tmp2 = null != global_name1;
       if (tmp2) {
-        tmp2 = global_name.length > 0;
+        tmp2 = global_name1.length > 0;
       }
       if (tmp2) {
         global_name = inviter.global_name;
@@ -204,10 +204,10 @@ function presentUserTag(username, identifiable, hidePersonalInformation) {
     const intl = util.intl;
     return intl.string(util.t.sKdZ6U);
   } else {
-    username = username.username;
-    let tmp = null != username;
+    const username1 = username.username;
+    let tmp = null != username1;
     if (tmp) {
-      tmp = username.length > 0;
+      tmp = username1.length > 0;
     }
     if (tmp) {
       let flag = false;

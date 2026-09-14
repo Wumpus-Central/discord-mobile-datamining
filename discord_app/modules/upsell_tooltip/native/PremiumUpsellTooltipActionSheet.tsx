@@ -1,8 +1,8 @@
-// === Module 11279: PremiumUpsellTooltipActionSheet ===
+// === Module 11280: PremiumUpsellTooltipActionSheet ===
 
-// Module 11279 (PremiumUpsellTooltipActionSheet)
+// Module 11280 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1178 */;
+import native from "native" /* 1176 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import Text_Text from "Text/Text" /* 4632 */;
@@ -16,20 +16,19 @@ get_ActivityIndicator = fn(17);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
-createStyles = { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
+const createStyles = fn(4636);
+let obj2 = { container: { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
 let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
-createStyles.img = size;
-createStyles.header = { flexDirection: "row", justifyContent: "center" };
-createStyles.title = { textAlign: "center", marginBottom: 8 };
-createStyles.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+obj2.img = size;
+obj2.header = { flexDirection: "row", justifyContent: "center" };
+obj2.title = { textAlign: "center", marginBottom: 8 };
+let obj3 = { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
 const size1 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
-createStyles.nitroWheel = size1;
-let obj1 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
-createStyles.buttonContainer = { gap: nativeDefault.space.PX_8 };
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.nitroWheel = size1;
+let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+obj2.buttonContainer = { gap: nativeDefault.space.PX_8 };
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
 
@@ -49,29 +48,29 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
         tmp3();
       }
     }
-    const obj = { forceTrack: true, dismissAction };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, obj);
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, { forceTrack: true, dismissAction });
+    const obj2 = { forceTrack: true, dismissAction };
   };
-  obj = { style: tmp.container, children: null };
+  let obj2 = { style: tmp.container, children: null };
   let tmp2Result = null;
   if (null != imageSource) {
-    obj = { style: null, source: null };
+    const obj3 = { style: null, source: null };
     const items = [tmp.img, imageStyle];
-    obj.style = items;
-    obj.source = imageSource;
-    tmp2Result = closure_6(closure_3, obj);
+    obj3.style = items;
+    obj3.source = imageSource;
+    tmp2Result = closure_6(closure_3, obj3);
   }
   const items1 = [tmp2Result, , , ];
-  const obj1 = { style: tmp.header, children: null };
+  const obj4 = { style: tmp.header, children: null };
   const items2 = [closure_6(native.NitroWheel, { style: tmp.nitroWheel }), closure_6(Text_Text.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
-  obj1.children = items2;
-  items1[1] = closure_7(closure_4, obj1);
-  const obj4 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
+  obj4.children = items2;
+  items1[1] = closure_7(closure_4, obj4);
+  const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
   const items3 = [tmp.description, descriptionStyle];
-  obj4.style = items3;
-  items1[2] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.buttonContainer, children: null };
-  const obj6 = {
+  obj7.style = items3;
+  items1[2] = closure_6(Text_Text.Text, obj7);
+  const obj8 = { style: tmp.buttonContainer, children: null };
+  const obj9 = {
     variant: "active",
     text: primaryButtonText,
     onPress() {
@@ -93,11 +92,11 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   if (primaryButtonIcon != null) {
     primaryButtonIconResult = primaryButtonIcon();
   }
-  obj6.icon = primaryButtonIconResult;
-  const items4 = [closure_6(components_Button_Button.Button, obj6), ];
-  tmp2Result = null;
+  obj9.icon = primaryButtonIconResult;
+  const items4 = [closure_6(components_Button_Button.Button, obj9), ];
+  let tmp2Result2 = null;
   if (null != secondaryButtonText) {
-    const obj7 = {
+    const obj10 = {
       variant: "secondary",
       text: secondaryButtonText,
       onPress() {
@@ -116,12 +115,12 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
         },
       size: "lg"
     };
-    tmp2Result = closure_6(components_Button_Button.Button, obj7);
+    tmp2Result2 = closure_6(components_Button_Button.Button, obj10);
   }
-  items4[1] = tmp2Result;
-  obj5.children = items4;
-  items1[3] = closure_7(closure_4, obj5);
-  obj.children = items1;
-  obj.children = closure_7(closure_4, obj);
+  items4[1] = tmp2Result2;
+  obj8.children = items4;
+  items1[3] = closure_7(closure_4, obj8);
+  obj2.children = items1;
+  obj.children = closure_7(closure_4, obj2);
   return closure_6(Sheet_BottomSheet.BottomSheet, obj);
 };

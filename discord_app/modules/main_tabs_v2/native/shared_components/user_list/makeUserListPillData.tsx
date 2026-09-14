@@ -1,7 +1,7 @@
-// === Module 10991: makeUserListPillData ===
+// === Module 10992: makeUserListPillData ===
 
-// Module 10991 (makeUserListPillData)
-import native from "native" /* 1178 */;
+// Module 10992 (makeUserListPillData)
+import native from "native" /* 1176 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,8 +11,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/makeUserListPillData.tsx");
 
 export default function makeUserListPillData(id) {
-  let obj = { id: id.id, text: UserUtilsDefault.getName(id), icon: null };
-  obj = { user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL };
+  const obj = { id: id.id, text: UserUtilsDefault.getName(id), icon: null };
+  const obj3 = { user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL };
   obj.icon = jsx(native.Avatar, { user: id, guildId: "Array", size: native.AvatarSizes.XXSMALL });
   return obj;
 };

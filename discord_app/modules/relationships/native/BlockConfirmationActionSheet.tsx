@@ -1,11 +1,11 @@
-// === Module 11516: BlockConfirmationActionSheet ===
+// === Module 11517: BlockConfirmationActionSheet ===
 
-// Module 11516 (BlockConfirmationActionSheet)
+// Module 11517 (BlockConfirmationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 1178 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import native from "native" /* 1176 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4593 from "module_4593" /* 4593 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
@@ -26,43 +26,37 @@ function BlockedInformationTable() {
   return closure_1_14(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
-      let obj = { start: 0 === index, end: length.length - 1 === index, icon: null, label: null, subLabel: null, accessible: true, accessibilityLabel: null };
-      obj = { size: native.Icon.Sizes.MEDIUM, source: icon.icon };
-      obj.icon = closure_1_14(native.Icon, obj);
-      obj.label = icon.text();
-      obj.subLabel = icon.subtext();
-      obj.accessibilityLabel = icon.a11yLabel();
+      const obj = { start: 0 === index, end: length.length - 1 === index, icon: closure_1_14(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text(), subLabel: icon.subtext(), accessible: true, accessibilityLabel: icon.a11yLabel() };
       return closure_1_14(TableRow.TableRow, obj, index);
     })
   });
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(9172).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11515);
+const RestrictionConfirmationConstants = fn(11516);
 ({ IGNORE_CONFIRMATION_ACTION_SHEET_KEY: c10, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_11 } = RestrictionConfirmationConstants);
 const Constants = fn(1074);
 ({ HelpdeskArticles: closure_12, AnalyticEvents: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let obj = { button: { alignContent: "center", textAlign: "center" }, tableContainer: null, otherOptions: null, headerText: null, container: null, header: null, avatarContainer: null, avatarIconContainer: null, avatar: null, footerText: null };
-obj = { marginBottom: nativeDefault.space.PX_16 };
-obj.tableContainer = obj;
-const createStyles = { marginBottom: nativeDefault.space.PX_24 };
-obj.otherOptions = createStyles;
-obj.headerText = { textAlign: "center" };
-obj.container = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
-let obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
-obj.header = { marginBottom: nativeDefault.space.PX_16 };
+const createStyles = fn(4636);
+let obj = { button: { alignContent: "center", textAlign: "center" }, tableContainer: { marginBottom: nativeDefault.space.PX_16 }, otherOptions: null, headerText: null, container: null, header: null, avatarContainer: null, avatarIconContainer: null, avatar: null, footerText: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
+obj.otherOptions = { marginBottom: nativeDefault.space.PX_24 };
+obj.headerText = { textAlign: "center" };
+let obj4 = { marginBottom: nativeDefault.space.PX_24 };
+obj.container = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
+let obj5 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
+obj.header = { marginBottom: nativeDefault.space.PX_16 };
+let obj6 = { marginBottom: nativeDefault.space.PX_16 };
 obj.avatarContainer = { position: "relative", alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
 const rect = { position: "absolute", bottom: -8, right: -8, padding: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round };
 obj.avatarIconContainer = rect;
 obj.avatar = { alignSelf: "center" };
-let obj4 = { position: "relative", alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj7 = { position: "relative", alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
 obj.footerText = { textAlign: "center", marginTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4 };
+let obj8 = { textAlign: "center", marginTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4 };
 let items = [
   {
     icon: _modDef8302,
@@ -82,7 +76,7 @@ let items = [
 ,
 
 ];
-let obj6 = {
+let obj9 = {
   icon: _modDef8302,
   text() {
     const intl = util.intl;
@@ -112,7 +106,7 @@ items[1] = {
     return intl.string(util.t.WR1Mbe);
   }
 };
-let obj7 = {
+let obj10 = {
   icon: _modDef8302,
   text() {
     const intl = util.intl;
@@ -142,7 +136,7 @@ items[2] = {
     return intl.string(util.t.lfrNw0);
   }
 };
-let obj8 = {
+let obj11 = {
   icon: _modDef4593,
   text() {
     const intl = util.intl;
@@ -169,20 +163,20 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
   const bottom = channelId(1611)().bottom;
   items = [channelId(7285).IGNORE_CONFIRMATION_ACTION_SHEET];
   const tmp4 = channelId(7265);
-  [tmp6, c5] = _slicedToArray(noop.useState(false), 2);
-  let obj = userId(504);
+  [tmp6, c5] = noop.useState(false);
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
   const items1 = [UserStore];
   const items2 = [userId];
-  const stateFromStores = obj.useStateFromStores(items1, () => UserStore.getUser(userId), items2);
-  let obj1 = userId(504);
+  const stateFromStores = userId(504).useStateFromStores(items1, () => UserStore.getUser(userId), items2);
+  let obj = userId(504);
   const items3 = [RelationshipStore];
   const items4 = [userId];
-  const stateFromStores1 = obj1.useStateFromStores(items3, () => RelationshipStore.isIgnored(userId), items4);
+  const stateFromStores1 = userId(504).useStateFromStores(items3, () => RelationshipStore.isIgnored(userId), items4);
   let obj2 = userId(504);
   const items5 = [stateFromStores];
   const items6 = [channelId];
   const items7 = [stateFromStores, userId];
-  const stateFromStores2 = obj2.useStateFromStores(items5, () => {
+  const stateFromStores2 = userId(504).useStateFromStores(items5, () => {
     const channel = ChannelStore.getChannel(channelId);
     let guild_id;
     if (channel != null) {
@@ -195,14 +189,12 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       const user = UserActionCreators.getUser(userId);
     }
   }, items7);
-  let tmp13Result = null;
+  let tmp13Result2 = null;
   if (null != stateFromStores) {
-    obj = { value: tmp4(items).analyticsLocations, children: null };
-    obj = {
+    const obj4 = { value: tmp4(items).analyticsLocations, children: null };
+    const obj5 = {
       onDismiss() {
-          channelId(1242);
-          const obj = { action: constants.DISMISS_BLOCK, location: "user-profile-context-menu" };
-          obj.track(constants3.USER_REMEDIATION_ACTION, obj);
+          channelId(1240).track(constants3.USER_REMEDIATION_ACTION, { action: constants.DISMISS_BLOCK, location: "user-profile-context-menu" });
         },
       scrollable: true,
       startHeight: null,
@@ -215,69 +207,70 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     }
     const sum = num + bottom;
     const sum1 = sum + tmp2(576).space.PX_24;
-    obj.startHeight = sum1 + tmp2(576).space.PX_24;
-    obj1 = { paddingBottom: tmp2(576).space.PX_24 + bottom };
+    obj5.startHeight = sum1 + tmp2(576).space.PX_24;
+    const obj6 = { paddingBottom: tmp2(576).space.PX_24 + bottom };
     const merged = Object.assign(tmp.container);
-    obj.bodyStyles = obj1;
-    obj2 = { style: tmp.header, children: null };
-    let obj3 = { style: tmp.avatarContainer, children: null };
-    const obj4 = { guildId: "Array", user: stateFromStores, animate: null, size: tmp7(1178).AvatarSizes.XLARGE, style: tmp.avatar };
-    const items8 = [closure_14(tmp7(1178).Avatar, obj4), ];
-    const obj5 = { style: tmp.avatarIconContainer, children: null };
-    const obj6 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp2(8034) };
-    obj5.children = closure_14(tmp7(1178).Icon, obj6);
-    items8[1] = closure_14(c5, obj5);
-    obj3.children = items8;
-    const items9 = [closure_15(c5, obj3), , ];
-    const obj7 = { style: tmp.headerText, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    obj5.bodyStyles = obj6;
+    const obj7 = { style: tmp.header, children: null };
+    const obj8 = { style: tmp.avatarContainer, children: null };
+    const obj9 = { guildId: "Array", user: stateFromStores, animate: null, size: tmp7(1176).AvatarSizes.XLARGE, style: tmp.avatar };
+    const items8 = [closure_14(tmp7(1176).Avatar, obj9), ];
+    const obj10 = { style: tmp.avatarIconContainer, children: null };
+    const obj11 = { size: tmp7(1176).Icon.Sizes.MEDIUM, source: tmp2(8034) };
+    obj10.children = closure_14(tmp7(1176).Icon, obj11);
+    items8[1] = closure_14(c5, obj10);
+    obj8.children = items8;
+    const items9 = [closure_15(c5, obj8), , ];
+    const obj12 = { style: tmp.headerText, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     const intl = tmp7(1114).intl;
-    const obj8 = { username: tmp2(4788).getName(stateFromStores2, channelId, stateFromStores) };
-    obj7.children = intl.format(tmp7(1114).t.CIbzHR, obj8);
-    items9[1] = closure_14(tmp7(4632).Text, obj7);
-    const obj9 = { style: tmp.headerText, variant: "heading-md/medium", color: "text-default", accessibilityRole: "header", children: null };
+    const obj13 = { username: tmp2(4788).getName(stateFromStores2, channelId, stateFromStores) };
+    obj12.children = intl.format(tmp7(1114).t.CIbzHR, obj13);
+    items9[1] = closure_14(tmp7(4632).Text, obj12);
+    const obj14 = { style: tmp.headerText, variant: "heading-md/medium", color: "text-default", accessibilityRole: "header", children: null };
     const intl2 = tmp7(1114).intl;
-    obj9.children = intl2.string(tmp7(1114).t.S70jou);
-    items9[2] = closure_14(tmp7(4632).Text, obj9);
-    obj2.children = items9;
-    const items10 = [closure_15(c5, obj2), , , ];
-    const obj10 = { style: tmp.tableContainer, children: closure_14(BlockedInformationTable, {}) };
-    items10[1] = closure_14(c5, obj10);
-    tmp13Result = !stateFromStores1;
+    obj14.children = intl2.string(tmp7(1114).t.S70jou);
+    items9[2] = closure_14(tmp7(4632).Text, obj14);
+    obj7.children = items9;
+    const items10 = [closure_15(c5, obj7), , , ];
+    const obj15 = { style: tmp.tableContainer, children: closure_14(BlockedInformationTable, {}) };
+    items10[1] = closure_14(c5, obj15);
+    let tmp13Result = !stateFromStores1;
     if (!stateFromStores1) {
-      const obj11 = { style: tmp.otherOptions, children: null };
-      const obj12 = { title: null, hasIcons: true, children: null };
+      const obj16 = { style: tmp.otherOptions, children: null };
+      const obj17 = { title: null, hasIcons: true, children: null };
       const intl3 = tmp7(1114).intl;
-      obj12.title = intl3.string(tmp7(1114).t["+BJTcB"]);
-      const obj13 = { icon: null, label: null, subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
-      const obj14 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp2(7070) };
-      obj13.icon = closure_14(tmp7(1178).Icon, obj14);
+      obj17.title = intl3.string(tmp7(1114).t["+BJTcB"]);
+      const obj18 = { icon: null, label: null, subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
+      const obj19 = { size: tmp7(1176).Icon.Sizes.MEDIUM, source: tmp2(7070) };
+      obj18.icon = closure_14(tmp7(1176).Icon, obj19);
       const intl4 = tmp7(1114).intl;
-      obj13.label = intl4.string(tmp7(1114).t.hC8tcc);
+      obj18.label = intl4.string(tmp7(1114).t.hC8tcc);
       const intl5 = tmp7(1114).intl;
-      obj13.subLabel = intl5.string(tmp7(1114).t.If89rE);
+      obj18.subLabel = intl5.string(tmp7(1114).t.If89rE);
       const intl6 = tmp7(1114).intl;
-      obj13.accessibilityLabel = intl6.string(tmp7(1114).t["8qGQsM"]);
-      obj13.onPress = function onPress() {
-        let obj = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
-        obj.track(constants.USER_REMEDIATION_ACTION, obj);
+      obj18.accessibilityLabel = intl6.string(tmp7(1114).t["8qGQsM"]);
+      obj18.onPress = function onPress() {
+        AnalyticsUtilsDefault.track(constants.USER_REMEDIATION_ACTION, { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" });
+        const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        obj = { userId, channelId, onSuccess, onIgnore, impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION };
-        obj3.openLazy(asyncRequireImpl(11517, dependencyMap.paths), closure_2_10, obj, "replaceTopSheet");
+        const tmp2 = asyncRequireImpl(11518, dependencyMap.paths);
+        obj3.openLazy(tmp2, closure_2_10, { userId, channelId, onSuccess, onIgnore, impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION }, "replaceTopSheet");
       };
-      obj12.children = closure_14(tmp7(5686).TableRow, obj13);
-      obj11.children = closure_14(tmp7(5768).TableRowGroup, obj12);
-      tmp13Result = closure_14(tmp19, obj11);
+      obj17.children = closure_14(tmp7(5686).TableRow, obj18);
+      obj16.children = closure_14(tmp7(5768).TableRowGroup, obj17);
+      tmp13Result = closure_14(tmp19, obj16);
     }
-    const obj15 = { children: null };
+    const obj20 = { children: null };
     items10[2] = tmp13Result;
-    const obj16 = { style: tmp.button, children: null };
-    const obj17 = { size: "lg", variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
+    const obj21 = { style: tmp.button, children: null };
+    const obj22 = { size: "lg", variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
     const intl7 = tmp7(1114).intl;
-    obj17.text = intl7.string(tmp7(1114).t.l4Emac);
-    obj17.onPress = function onPress() {
+    obj22.text = intl7.string(tmp7(1114).t.l4Emac);
+    obj22.onPress = function onPress() {
       _undefined(true);
-      let obj = { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET };
-      obj.blockUser(userId, obj).then(() => {
+      let obj = RelationshipActionCreatorsDefault;
+      const obj2 = { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET };
+      obj.blockUser(userId, { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET }).then(() => {
         const result = channelId(8522).showBlockSuccessToast(userId, closure_1_1);
         if (onSuccess != null) {
           onSuccess();
@@ -289,16 +282,16 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       if (dependencyMap != null) {
         dependencyMap();
       }
-      const blockUserResult = obj.blockUser(userId, obj);
+      const blockUserResult = obj.blockUser(userId, { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET });
       AnalyticsUtilsDefault.track(constants.BLOCK_USER_CONFIRMED);
       const tmp2Result = AnalyticsUtilsDefault;
     };
-    obj17.disabled = tmp6;
-    obj17.loading = tmp6;
-    const items11 = [closure_14(tmp7(5056).Button, obj17), ];
-    const obj18 = { style: tmp.footerText, variant: "text-sm/normal", color: "text-default", children: null };
+    obj22.disabled = tmp6;
+    obj22.loading = tmp6;
+    const items11 = [closure_14(tmp7(5056).Button, obj22), ];
+    const obj23 = { style: tmp.footerText, variant: "text-sm/normal", color: "text-default", children: null };
     const intl8 = tmp7(1114).intl;
-    const obj19 = {
+    const obj24 = {
       articleLink() {
           channelId(4603).hideActionSheet();
           const obj = channelId(4603);
@@ -307,15 +300,15 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
           channelId(4331).openURL(articleURL);
         }
     };
-    obj18.children = intl8.format(tmp7(1114).t.CpTgBn, obj19);
-    items11[1] = closure_14(tmp7(4632).Text, obj18);
-    obj16.children = items11;
-    items10[3] = closure_15(c5, obj16);
-    obj15.children = items10;
-    obj.children = closure_15(tmp7(6728).BottomSheetScrollView, obj15);
-    obj.children = closure_14(tmp7(7253).BottomSheet, obj);
-    tmp13Result = closure_14(tmp7(7265).AnalyticsLocationProvider, obj);
+    obj23.children = intl8.format(tmp7(1114).t.CpTgBn, obj24);
+    items11[1] = closure_14(tmp7(4632).Text, obj23);
+    obj21.children = items11;
+    items10[3] = closure_15(c5, obj21);
+    obj20.children = items10;
+    obj5.children = closure_15(tmp7(6728).BottomSheetScrollView, obj20);
+    obj4.children = closure_14(tmp7(7253).BottomSheet, obj5);
+    tmp13Result2 = closure_14(tmp7(7265).AnalyticsLocationProvider, obj4);
     let tmp2Result = tmp2(4788);
   }
-  return tmp13Result;
+  return tmp13Result2;
 });

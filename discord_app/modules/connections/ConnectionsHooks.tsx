@@ -9,6 +9,8 @@ import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
@@ -209,7 +211,7 @@ export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
       require(false);
     }
   }
-  [tmp2, require] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, require] = noop.useState(false);
   const effect = noop.useEffect(() => {
     const listener = window.addEventListener("keydown", handleKeyDown);
     const listener1 = window.addEventListener("keyup", handleKeyUp);

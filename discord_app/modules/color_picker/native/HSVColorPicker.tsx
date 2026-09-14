@@ -1,9 +1,9 @@
-// === Module 14686: HSVColorPicker ===
+// === Module 14687: HSVColorPicker ===
 
-// Module 14686 (HSVColorPicker)
+// Module 14687 (HSVColorPicker)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14687 */;
-import HuePickerDefault from "HuePicker" /* 14688 */;
+import SaturationValueColorPickerDefault from "SaturationValueColorPicker" /* 14688 */;
+import HuePickerDefault from "HuePicker" /* 14689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,36 +18,35 @@ const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorP
 export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(0);
   const tmp = closure_6();
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   const sharedValue1 = ReanimatedRexport.useSharedValue(1);
-  obj = { style: tmp.hsvColorPicker, children: null };
+  const obj4 = { style: tmp.hsvColorPicker, children: null };
   const sharedValue2 = ReanimatedRexport.useSharedValue(1);
   let tmp11 = hue;
   if (hue == null) {
     tmp11 = sharedValue;
   }
-  obj = { hue: tmp11, saturation: null, value: null, style: null, colorBoxStyle: null, colorBoxInnerStyle: null, selectorStyle: null, onPanUpdate: null, onPanFinalize: null };
+  const obj5 = { hue: tmp11, saturation: null, value: null, style: null, colorBoxStyle: null, colorBoxInnerStyle: null, selectorStyle: null, onPanUpdate: null, onPanFinalize: null };
   if (saturation == null) {
     saturation = sharedValue1;
   }
-  obj.saturation = saturation;
+  obj5.saturation = saturation;
   if (value == null) {
     value = sharedValue2;
   }
-  obj.value = value;
-  obj.style = saturationValuePickerStyle;
-  obj.colorBoxStyle = saturationValueColorBoxStyle;
-  obj.colorBoxInnerStyle = saturationValueColorBoxInnerStyle;
-  obj.selectorStyle = saturationValueSelectorStyle;
-  obj.onPanUpdate = onPanUpdate;
-  obj.onPanFinalize = onPanFinalize;
-  const items = [React4(SaturationValueColorPickerDefault, obj), ];
+  obj5.value = value;
+  obj5.style = saturationValuePickerStyle;
+  obj5.colorBoxStyle = saturationValueColorBoxStyle;
+  obj5.colorBoxInnerStyle = saturationValueColorBoxInnerStyle;
+  obj5.selectorStyle = saturationValueSelectorStyle;
+  obj5.onPanUpdate = onPanUpdate;
+  obj5.onPanFinalize = onPanFinalize;
+  const items = [React4(SaturationValueColorPickerDefault, obj5), ];
   if (hue == null) {
     hue = sharedValue;
   }
   items[1] = React4(HuePickerDefault, { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj4.children = items;
+  return hasOwnProperty(View, obj4);
 };

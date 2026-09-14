@@ -53,10 +53,11 @@ export const syncMemberSupplemental = function syncMemberSupplemental(guildId, m
       const obj = { userId: joinSourceType.userId, sourceInviteCode: null, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null };
       ({ sourceInviteCode, userId } = joinSourceType);
       if (sourceInviteCode == null) {
-        sourceInviteCode = undefined;
+        let sourceInviteCode1;
         if (tmp2 != null) {
-          sourceInviteCode = tmp2.sourceInviteCode;
+          sourceInviteCode1 = tmp2.sourceInviteCode;
         }
+        sourceInviteCode = sourceInviteCode1;
       }
       if (sourceInviteCode == null) {
         sourceInviteCode = null;

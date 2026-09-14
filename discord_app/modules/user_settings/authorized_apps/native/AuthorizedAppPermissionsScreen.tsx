@@ -1,8 +1,8 @@
-// === Module 15032: AuthorizedAppPermissionsScreen ===
+// === Module 15033: AuthorizedAppPermissionsScreen ===
 
-// Module 15032 (AuthorizedAppPermissionsScreen)
+// Module 15033 (AuthorizedAppPermissionsScreen)
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;
-import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15033 */;
+import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15034 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,8 +11,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");
 
 export default function AuthorizedAppPermissionsScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
-  obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   return jsx(UserSettingsAuthedAppPermissionsDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
 };

@@ -6,6 +6,8 @@ import _mod17 from "module_17" /* 17 */;
 import VoiceEngineModule from "VoiceEngineModule" /* 1912 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 let global = dependencyMap;
 const Platform = _mod17.Platform;
 const logger = new logger_Logger.Logger("VoiceEngine");
@@ -115,30 +117,26 @@ class VoiceConnection {
       });
     };
     obj.updateMLSExternalSender = function updateMLSExternalSender(arg0) {
-      let str = Buffer.from(arg0);
-      str = str.toString("base64");
-      logger.info("updateMLSExternalSender: " + str);
-      obj.boundConnectionMethod("updateMLSExternalSenderB64")(str);
+      const str1 = Buffer.from(arg0).toString("base64");
+      logger.info("updateMLSExternalSender: " + str1);
+      obj.boundConnectionMethod("updateMLSExternalSenderB64")(str1);
     };
     obj.processMLSProposals = function processMLSProposals(arg0, arg1) {
       closure_0 = arg1;
-      let str = Buffer.from(arg0);
-      str = str.toString("base64");
-      obj.boundConnectionMethod("processMLSProposalsB64")(str, (arg0) => {
+      const str = Buffer.from(arg0);
+      obj.boundConnectionMethod("processMLSProposalsB64")(Buffer.from(arg0).toString("base64"), (arg0) => {
         closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
     obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(g_v, arg1, arg2) {
-      let str = Buffer.from(arg1);
-      str = str.toString("base64");
+      const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("prepareMLSCommitTransitionB64");
-      result(g_v, str, obj.wrapRosterCallback(arg2));
+      result(g_v, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
     obj.processMLSWelcome = function processMLSWelcome(g_v, arg1, arg2) {
-      let str = Buffer.from(arg1);
-      str = str.toString("base64");
+      const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
-      result(g_v, str, obj.wrapRosterCallback(arg2));
+      result(g_v, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
     obj.getMLSPairwiseFingerprint = function getMLSPairwiseFingerprint(arg0, arg1, arg2) {
       closure_0 = arg2;

@@ -1,12 +1,12 @@
-// === Module 14843: AgeGroupScreenRowProps ===
+// === Module 14844: AgeGroupScreenRowProps ===
 
-// Module 14843 (AgeGroupScreenRowProps)
+// Module 14844 (AgeGroupScreenRowProps)
 import util from "util" /* 1114 */;
 import _modDef2946 from "module_2946" /* 2946 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4849 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14768 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14769 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
@@ -21,8 +21,8 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
     return intl.string(_modDef2946.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
-    const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
   },
   withArrow: true
 };

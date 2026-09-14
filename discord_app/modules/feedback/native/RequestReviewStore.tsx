@@ -1,20 +1,20 @@
-// === Module 13784: RequestReviewStore ===
+// === Module 13785: RequestReviewStore ===
 
-// Module 13784 (RequestReviewStore)
+// Module 13785 (RequestReviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import TimeUtils from "TimeUtils" /* 4665 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6726 */;
-import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 13785 */;
-import requestReviewModalDefault from "requestReviewModal" /* 13786 */;
-import InstallTime from "InstallTime" /* 13788 */;
+import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 13786 */;
+import requestReviewModalDefault from "requestReviewModal" /* 13787 */;
+import InstallTime from "InstallTime" /* 13789 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
@@ -23,11 +23,10 @@ function showReviewRequestModal() {
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = NavigationRouteUtils;
-    tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    tmp3 = null != NavigationRouteUtils.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    const tmpResult = NavigationRouteUtils;
   }
-  tmpResult = useKeyboardIsOpen;
-  const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
+  const keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen();
   const tmp5 = null != SelectedChannelStore.getVoiceChannelId();
   if (tmp3) {
     if (!keyboardIsOpen) {
@@ -41,6 +40,7 @@ function showReviewRequestModal() {
       }
     }
   }
+  const tmpResult2 = useKeyboardIsOpen;
   AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
@@ -92,12 +92,12 @@ RequestReviewStore.displayName = "RequestReviewStore";
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    obj = { from: "authed", unit: TimeUtils.TimeUnits.DAYS };
-    let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
+    obj = InstallTime;
+    let tmp3 = obj.getFirstInstallTimeElapsed({ from: "authed", unit: TimeUtils.TimeUnits.DAYS }) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (obj.revision < 1) {
-      obj = { is_hfu: true, is_install_old_enough: tmp3, is_in_large_enough_guild: someResult, is_account_verified: tmp5 };
-      AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
+      const obj4 = { is_hfu: true, is_install_old_enough: tmp3, is_in_large_enough_guild: someResult, is_account_verified: tmp5 };
+      AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj4);
     }
     if (tmp3) {
       tmp3 = tmp5;
@@ -131,6 +131,7 @@ obj = {
       const _setTimeout = setTimeout;
       timeout = setTimeout(showReviewRequestModal, TimeUtils.MS_PER_MINUTE);
     }
+    const obj2 = { from: "authed", unit: TimeUtils.TimeUnits.DAYS };
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
     if (-1 !== timeout) {

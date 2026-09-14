@@ -1,11 +1,11 @@
-// === Module 10998: PeopleUtils ===
+// === Module 10999: PeopleUtils ===
 
-// Module 10998 (PeopleUtils)
+// Module 10999 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9171 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10999 */;
-import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 11001 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 11000 */;
+import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 11002 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
@@ -17,21 +17,21 @@ export default {
   removeFriend(arg0) {
     ({ userId, applicationId } = arg0);
     if (null != applicationId) {
-      let obj = { userId, applicationId };
-      GameRelationshipActionCreatorsDefault.removeGameFriend(obj);
+      const obj2 = { userId, applicationId };
+      GameRelationshipActionCreatorsDefault.removeGameFriend(obj2);
     } else {
-      obj = { location: tmp };
-      obj.removeFriend(userId, obj);
+      const obj4 = { location: tmp };
+      RelationshipActionCreatorsDefault.removeFriend(userId, obj4);
     }
   },
   cancelFriendRequest(arg0) {
     ({ userId, applicationId } = arg0);
     if (null != applicationId) {
-      let obj = { userId, applicationId };
-      let result = GameRelationshipActionCreatorsDefault.cancelGameFriendRequest(obj);
+      const obj2 = { userId, applicationId };
+      let result = GameRelationshipActionCreatorsDefault.cancelGameFriendRequest(obj2);
     } else {
-      obj = { location: tmp };
-      result = obj.cancelFriendRequest(userId, obj);
+      const obj4 = { location: tmp };
+      result = RelationshipActionCreatorsDefault.cancelFriendRequest(userId, obj4);
     }
     return result;
   },
@@ -41,13 +41,13 @@ export default {
       confirmStrangerRequest = false;
     }
     if (null != applicationId) {
-      let obj = { userId, applicationId };
-      let result = GameRelationshipActionCreatorsDefault.acceptGameFriendRequest(obj);
+      const obj2 = { userId, applicationId };
+      let result = GameRelationshipActionCreatorsDefault.acceptGameFriendRequest(obj2);
     } else {
-      obj = { userId, confirmStrangerRequest, context: null };
-      const obj1 = { location: location.location };
-      obj.context = obj1;
-      result = obj.acceptFriendRequest(obj);
+      const obj3 = { userId, confirmStrangerRequest, context: null };
+      const obj5 = { location: location.location };
+      obj3.context = obj5;
+      result = RelationshipActionCreatorsDefault.acceptFriendRequest(obj3);
     }
     return result;
   },
@@ -56,25 +56,25 @@ export default {
     const applicationId = userId.applicationId;
     const _location = userId.location;
     ({ onConfirm: RelationshipStore, onCancel: AbortCodes, onFinally: closure_5 } = userId);
+    let result = userId(_location[4]).isSettingTeenByDefault(userId(_location[5]).SettingsDefaultFeature.FRIEND_REQUEST_STRANGER_CONFIRMATION);
     let obj = userId(_location[4]);
-    let result = obj.isSettingTeenByDefault(userId(_location[5]).SettingsDefaultFeature.FRIEND_REQUEST_STRANGER_CONFIRMATION);
-    let obj1 = userId(_location[6]);
-    const result1 = obj1.isFriendRequestAlertsV2Enabled("maybeConfirmFriendRequestAccept");
+    let tmp = userId;
+    const result1 = userId(_location[6]).isFriendRequestAlertsV2Enabled("maybeConfirmFriendRequestAccept");
     const isStrangerResult = RelationshipStore.isStranger(userId);
     if (null == applicationId) {
       if (result) {
         if (false !== isStrangerResult) {
           if (isStrangerResult) {
-            obj = {
+            let obj3 = {
               onConfirm() {
                         if (null != applicationId) {
-                          let obj = { userId, applicationId: tmp2 };
-                          const result = GameRelationshipActionCreatorsDefault.acceptGameFriendRequest(obj);
+                          const obj2 = { userId, applicationId: tmp2 };
+                          const result = GameRelationshipActionCreatorsDefault.acceptGameFriendRequest(obj2);
                         } else {
-                          obj = { userId, confirmStrangerRequest: true, context: null };
-                          const obj1 = { location: tmp3 };
-                          obj.context = obj1;
-                          obj.acceptFriendRequest(obj);
+                          const obj3 = { userId, confirmStrangerRequest: true, context: null };
+                          const obj5 = { location: tmp3 };
+                          obj3.context = obj5;
+                          RelationshipActionCreatorsDefault.acceptFriendRequest(obj3);
                         }
                         if (onConfirm != null) {
                           tmp10();
@@ -91,27 +91,27 @@ export default {
                         }
                       }
             };
-            const result2 = userId(tmp2[7]).openAcceptFriendRequestConfirmModal(obj);
-            const tmpResult = userId(tmp2[7]);
+            const result2 = tmp(tmp2[7]).openAcceptFriendRequestConfirmModal(obj3);
+            const tmpResult = tmp(tmp2[7]);
           } else {
-            obj = { userId, applicationId, location: _location };
-            ({ userId: userId2, applicationId: applicationId2, confirmStrangerRequest, location: _location2 } = obj);
+            let obj5 = { userId, applicationId, location: _location };
+            ({ userId: userId2, applicationId: applicationId2, confirmStrangerRequest, location: _location2 } = obj5);
             if (confirmStrangerRequest === undefined) {
               confirmStrangerRequest = false;
             }
             if (null != applicationId2) {
-              let obj6 = applicationId(tmp2[2]);
-              obj1 = { userId: userId2, applicationId: applicationId2 };
-              let result3 = obj6.acceptGameFriendRequest(obj1);
+              let obj6 = { userId: userId2, applicationId: applicationId2 };
+              let result3 = applicationId(tmp2[2]).acceptGameFriendRequest(obj6);
+              let obj7 = applicationId(tmp2[2]);
             } else {
-              applicationId(tmp2[3]);
-              const obj2 = { userId: userId2, confirmStrangerRequest, context: null };
-              const obj3 = { location: _location2 };
-              obj2.context = obj3;
-              result3 = obj3.acceptFriendRequest(obj2);
+              const obj8 = { userId: userId2, confirmStrangerRequest, context: null };
+              const obj9 = { location: _location2 };
+              obj8.context = obj9;
+              result3 = applicationId(tmp2[3]).acceptFriendRequest(obj8);
+              let obj4 = applicationId(tmp2[3]);
             }
             const nextPromise = result3.then((body) => {
-              let obj = { userId, applicationId, location: _location, onConfirm, onCancel };
+              const obj = { userId, applicationId, location: _location, onConfirm, onCancel };
               let code;
               if (body != null) {
                 body = body.body;
@@ -120,10 +120,9 @@ export default {
                 }
               }
               if (code === AbortCodes.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-                obj = { type: "UPDATE_STRANGER_STATUS", userId: null, isStranger: true };
-                obj.userId = obj.userId;
-                DispatcherDefault.dispatch(obj);
-                obj = {
+                const obj3 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: true };
+                DispatcherDefault.dispatch(obj3);
+                const obj5 = {
                   onConfirm() {
                       obj = {};
                       const merged = Object.assign(obj);
@@ -133,15 +132,15 @@ export default {
                         confirmStrangerRequest = false;
                       }
                       if (null != applicationId) {
-                        obj = { userId, applicationId };
-                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj);
+                        const obj3 = { userId, applicationId };
+                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj3);
                         const obj5 = applicationId(_location[2]);
                       } else {
-                        applicationId(_location[3]);
-                        obj = { userId, confirmStrangerRequest, context: null };
-                        const obj1 = { location: obj.location };
-                        obj.context = obj1;
-                        obj1.acceptFriendRequest(obj);
+                        const obj4 = { userId, confirmStrangerRequest, context: null };
+                        const obj6 = { location: obj.location };
+                        obj4.context = obj6;
+                        applicationId(_location[3]).acceptFriendRequest(obj4);
+                        const obj2 = applicationId(_location[3]);
                       }
                       onConfirm = obj.onConfirm;
                       if (onConfirm != null) {
@@ -155,7 +154,7 @@ export default {
                       }
                     }
                 };
-                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj);
+                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj5);
                 let flag = true;
               } else {
                 let ok;
@@ -164,8 +163,8 @@ export default {
                 }
                 flag = false;
                 if (ok) {
-                  const obj1 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
-                  obj1.dispatch(obj1);
+                  const obj7 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
+                  DispatcherDefault.dispatch(obj7);
                   flag = false;
                 }
               }
@@ -176,7 +175,7 @@ export default {
               }
             });
             result3.then((body) => {
-              let obj = { userId, applicationId, location: _location, onConfirm, onCancel };
+              const obj = { userId, applicationId, location: _location, onConfirm, onCancel };
               let code;
               if (body != null) {
                 body = body.body;
@@ -185,10 +184,9 @@ export default {
                 }
               }
               if (code === AbortCodes.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-                obj = { type: "UPDATE_STRANGER_STATUS", userId: null, isStranger: true };
-                obj.userId = obj.userId;
-                DispatcherDefault.dispatch(obj);
-                obj = {
+                const obj3 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: true };
+                DispatcherDefault.dispatch(obj3);
+                const obj5 = {
                   onConfirm() {
                       obj = {};
                       const merged = Object.assign(obj);
@@ -198,15 +196,15 @@ export default {
                         confirmStrangerRequest = false;
                       }
                       if (null != applicationId) {
-                        obj = { userId, applicationId };
-                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj);
+                        const obj3 = { userId, applicationId };
+                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj3);
                         const obj5 = applicationId(_location[2]);
                       } else {
-                        applicationId(_location[3]);
-                        obj = { userId, confirmStrangerRequest, context: null };
-                        const obj1 = { location: obj.location };
-                        obj.context = obj1;
-                        obj1.acceptFriendRequest(obj);
+                        const obj4 = { userId, confirmStrangerRequest, context: null };
+                        const obj6 = { location: obj.location };
+                        obj4.context = obj6;
+                        applicationId(_location[3]).acceptFriendRequest(obj4);
+                        const obj2 = applicationId(_location[3]);
                       }
                       onConfirm = obj.onConfirm;
                       if (onConfirm != null) {
@@ -220,7 +218,7 @@ export default {
                       }
                     }
                 };
-                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj);
+                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj5);
                 let flag = true;
               } else {
                 let ok;
@@ -229,8 +227,8 @@ export default {
                 }
                 flag = false;
                 if (ok) {
-                  const obj1 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
-                  obj1.dispatch(obj1);
+                  const obj7 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
+                  DispatcherDefault.dispatch(obj7);
                   flag = false;
                 }
               }
@@ -249,10 +247,9 @@ export default {
                 }
               }
               if (code === AbortCodes.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-                obj = { type: "UPDATE_STRANGER_STATUS", userId: null, isStranger: true };
-                obj.userId = obj.userId;
-                DispatcherDefault.dispatch(obj);
-                obj = {
+                let obj3 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: true };
+                DispatcherDefault.dispatch(obj3);
+                let obj5 = {
                   onConfirm() {
                       obj = {};
                       const merged = Object.assign(obj);
@@ -262,15 +259,15 @@ export default {
                         confirmStrangerRequest = false;
                       }
                       if (null != applicationId) {
-                        obj = { userId, applicationId };
-                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj);
+                        const obj3 = { userId, applicationId };
+                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj3);
                         const obj5 = applicationId(_location[2]);
                       } else {
-                        applicationId(_location[3]);
-                        obj = { userId, confirmStrangerRequest, context: null };
-                        const obj1 = { location: obj.location };
-                        obj.context = obj1;
-                        obj1.acceptFriendRequest(obj);
+                        const obj4 = { userId, confirmStrangerRequest, context: null };
+                        const obj6 = { location: obj.location };
+                        obj4.context = obj6;
+                        applicationId(_location[3]).acceptFriendRequest(obj4);
+                        const obj2 = applicationId(_location[3]);
                       }
                       onConfirm = obj.onConfirm;
                       if (onConfirm != null) {
@@ -284,15 +281,15 @@ export default {
                       }
                     }
                 };
-                let result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj);
+                let result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj5);
               } else {
                 let ok;
                 if (error != null) {
                   ok = error.ok;
                 }
                 if (ok) {
-                  let obj1 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
-                  obj1.dispatch(obj1);
+                  const obj7 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
+                  DispatcherDefault.dispatch(obj7);
                 }
               }
             }).finally(() => {
@@ -301,7 +298,7 @@ export default {
               }
             });
             const catchPromise = result3.then((body) => {
-              let obj = { userId, applicationId, location: _location, onConfirm, onCancel };
+              const obj = { userId, applicationId, location: _location, onConfirm, onCancel };
               let code;
               if (body != null) {
                 body = body.body;
@@ -310,10 +307,9 @@ export default {
                 }
               }
               if (code === AbortCodes.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-                obj = { type: "UPDATE_STRANGER_STATUS", userId: null, isStranger: true };
-                obj.userId = obj.userId;
-                DispatcherDefault.dispatch(obj);
-                obj = {
+                const obj3 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: true };
+                DispatcherDefault.dispatch(obj3);
+                const obj5 = {
                   onConfirm() {
                       obj = {};
                       const merged = Object.assign(obj);
@@ -323,15 +319,15 @@ export default {
                         confirmStrangerRequest = false;
                       }
                       if (null != applicationId) {
-                        obj = { userId, applicationId };
-                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj);
+                        const obj3 = { userId, applicationId };
+                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj3);
                         const obj5 = applicationId(_location[2]);
                       } else {
-                        applicationId(_location[3]);
-                        obj = { userId, confirmStrangerRequest, context: null };
-                        const obj1 = { location: obj.location };
-                        obj.context = obj1;
-                        obj1.acceptFriendRequest(obj);
+                        const obj4 = { userId, confirmStrangerRequest, context: null };
+                        const obj6 = { location: obj.location };
+                        obj4.context = obj6;
+                        applicationId(_location[3]).acceptFriendRequest(obj4);
+                        const obj2 = applicationId(_location[3]);
                       }
                       onConfirm = obj.onConfirm;
                       if (onConfirm != null) {
@@ -345,7 +341,7 @@ export default {
                       }
                     }
                 };
-                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj);
+                const result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj5);
                 let flag = true;
               } else {
                 let ok;
@@ -354,8 +350,8 @@ export default {
                 }
                 flag = false;
                 if (ok) {
-                  const obj1 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
-                  obj1.dispatch(obj1);
+                  const obj7 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
+                  DispatcherDefault.dispatch(obj7);
                   flag = false;
                 }
               }
@@ -374,10 +370,9 @@ export default {
                 }
               }
               if (code === AbortCodes.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-                obj = { type: "UPDATE_STRANGER_STATUS", userId: null, isStranger: true };
-                obj.userId = obj.userId;
-                DispatcherDefault.dispatch(obj);
-                obj = {
+                let obj3 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: true };
+                DispatcherDefault.dispatch(obj3);
+                let obj5 = {
                   onConfirm() {
                       obj = {};
                       const merged = Object.assign(obj);
@@ -387,15 +382,15 @@ export default {
                         confirmStrangerRequest = false;
                       }
                       if (null != applicationId) {
-                        obj = { userId, applicationId };
-                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj);
+                        const obj3 = { userId, applicationId };
+                        const result = applicationId(_location[2]).acceptGameFriendRequest(obj3);
                         const obj5 = applicationId(_location[2]);
                       } else {
-                        applicationId(_location[3]);
-                        obj = { userId, confirmStrangerRequest, context: null };
-                        const obj1 = { location: obj.location };
-                        obj.context = obj1;
-                        obj1.acceptFriendRequest(obj);
+                        const obj4 = { userId, confirmStrangerRequest, context: null };
+                        const obj6 = { location: obj.location };
+                        obj4.context = obj6;
+                        applicationId(_location[3]).acceptFriendRequest(obj4);
+                        const obj2 = applicationId(_location[3]);
                       }
                       onConfirm = obj.onConfirm;
                       if (onConfirm != null) {
@@ -409,15 +404,15 @@ export default {
                       }
                     }
                 };
-                let result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj);
+                let result = AcceptFriendRequestModalActionCreators.openAcceptFriendRequestConfirmModal(obj5);
               } else {
                 let ok;
                 if (error != null) {
                   ok = error.ok;
                 }
                 if (ok) {
-                  let obj1 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
-                  obj1.dispatch(obj1);
+                  const obj7 = { type: "UPDATE_STRANGER_STATUS", userId: obj.userId, isStranger: false };
+                  DispatcherDefault.dispatch(obj7);
                 }
               }
             });
@@ -426,14 +421,14 @@ export default {
       }
     }
     if (null != applicationId) {
-      let obj4 = { userId, applicationId };
-      let result4 = applicationId(tmp2[2]).acceptGameFriendRequest(obj4);
+      const obj10 = { userId, applicationId };
+      let result4 = applicationId(tmp2[2]).acceptGameFriendRequest(obj10);
       const obj14 = applicationId(tmp2[2]);
     } else {
-      let obj5 = { userId, confirmStrangerRequest: true, context: null };
-      obj6 = { location: _location };
-      obj5.context = obj6;
-      result4 = applicationId(tmp2[3]).acceptFriendRequest(obj5);
+      const obj12 = { userId, confirmStrangerRequest: true, context: null };
+      const obj13 = { location: _location };
+      obj12.context = obj13;
+      result4 = applicationId(tmp2[3]).acceptFriendRequest(obj12);
       const obj11 = applicationId(tmp2[3]);
     }
     return result4.then(() => {

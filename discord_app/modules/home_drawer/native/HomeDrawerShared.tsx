@@ -1,6 +1,6 @@
-// === Module 16401: HomeDrawerShared ===
+// === Module 16403: HomeDrawerShared ===
 
-// Module 16401 (HomeDrawerShared)
+// Module 16403 (HomeDrawerShared)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -15,15 +15,15 @@ export const HomeDrawerSharedItem = function HomeDrawerSharedItem(right) {
   right = right.right;
   ({ title, subtitle } = right);
   const tmp = closure_3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.titleContainer, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.titleContainer, children: null };
   const items = [title, subtitle];
-  obj.children = items;
-  const items1 = [framebus(View, obj), ];
+  obj2.children = items;
+  const items1 = [framebus(View, obj2), ];
   let tmp4 = null;
   if (null != right) {
-    obj = { style: tmp.rightContainer, children: right };
-    tmp4 = React2(View, obj);
+    const obj3 = { style: tmp.rightContainer, children: right };
+    tmp4 = React2(View, obj3);
   }
   items1[1] = tmp4;
   obj.children = items1;

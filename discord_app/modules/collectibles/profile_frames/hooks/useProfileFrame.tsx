@@ -4,6 +4,8 @@
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const isProfileFrameRecord = fn(7652).isProfileFrameRecord;
 const size = fn(2);

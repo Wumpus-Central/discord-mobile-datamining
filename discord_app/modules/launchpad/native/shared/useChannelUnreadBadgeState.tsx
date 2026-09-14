@@ -1,9 +1,11 @@
-// === Module 16439: useChannelUnreadBadgeState ===
+// === Module 16441: useChannelUnreadBadgeState ===
 
-// Module 16439 (useChannelUnreadBadgeState)
+// Module 16441 (useChannelUnreadBadgeState)
 import NewChannelsStore from "NewChannelsStore" /* 7635 */;
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);
@@ -13,9 +15,8 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
   _require = channel;
   closure_129_0 = channel;
   closure_129_1 = flag;
-  let obj = require("initialize");
   const items = [ReadStateStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { ackMessageId: ReadStateStore.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !dependencyMap;
     if (!dependencyMap) {
@@ -27,21 +28,22 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
     return obj;
   });
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
+  let obj = require("initialize");
   const items1 = [NewChannelsStore];
   const items2 = [, ];
   ({ guild_id: arr3[0], id: arr3[1] } = channel);
   const stateFromStores = require("initialize").useStateFromStores(items1, () => NewChannelsStore.shouldIndicateNewChannel(user.guild_id, user.id), items2);
   const obj2 = require("initialize");
-  obj = { unread, resolvedUnreadSetting: null, newChannel: null, optInEnabled: null, mentionCount: null, isMentionLowImportance: null };
+  const obj4 = { unread, resolvedUnreadSetting: null, newChannel: null, optInEnabled: null, mentionCount: null, isMentionLowImportance: null };
   const optInEnabledForGuild = require("isOptInEnabled").useOptInEnabledForGuild(channel.guild_id);
   const obj3 = require("isOptInEnabled");
   const items3 = [UserGuildSettingsStore];
-  obj.resolvedUnreadSetting = require("initialize").useStateFromStores(items3, () => UserGuildSettingsStore.resolveUnreadSetting(closure_0));
-  obj.newChannel = stateFromStores;
-  obj.optInEnabled = optInEnabledForGuild;
-  obj.mentionCount = mentionCount;
-  obj.isMentionLowImportance = isMentionLowImportance;
-  return obj;
+  obj4.resolvedUnreadSetting = require("initialize").useStateFromStores(items3, () => UserGuildSettingsStore.resolveUnreadSetting(closure_0));
+  obj4.newChannel = stateFromStores;
+  obj4.optInEnabled = optInEnabledForGuild;
+  obj4.mentionCount = mentionCount;
+  obj4.isMentionLowImportance = isMentionLowImportance;
+  return obj4;
 };
 export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadgeState(channel, muted) {
   _require = channel;

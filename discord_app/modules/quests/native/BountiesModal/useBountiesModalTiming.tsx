@@ -1,6 +1,6 @@
-// === Module 15106: useBountiesModalTiming ===
+// === Module 15107: useBountiesModalTiming ===
 
-// Module 15106 (useBountiesModalTiming)
+// Module 15107 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   c13 = undefined;
   c14 = undefined;
   c15 = undefined;
-  let obj = rewardDurationMs;
   let tmp = null != num3;
   if (tmp) {
     tmp = num >= num3 - 1;
@@ -50,33 +49,33 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   }
   [tmp5, c11] = endMode(rewardDurationMs.useState(tmp), 2);
   const tmp4 = endMode(rewardDurationMs.useState(tmp), 2);
-  [tmp7, c12] = endMode(obj.useState(() => {
+  [tmp7, c12] = endMode(rewardDurationMs.useState(() => {
     num = 0;
     if (null != num3) {
       num = num / tmp;
     }
     return num;
   }), 2);
-  const tmp6 = endMode(obj.useState(() => {
+  const tmp6 = endMode(rewardDurationMs.useState(() => {
     num = 0;
     if (null != num3) {
       num = num / tmp;
     }
     return num;
   }), 2);
-  [tmp9, c13] = endMode(obj.useState(null), 2);
-  let tmp8 = endMode(obj.useState(null), 2);
-  [tmp11, c14] = endMode(obj.useState(num2), 2);
-  const tmp10 = endMode(obj.useState(num2), 2);
-  [tmp13, c15] = endMode(obj.useState(num3), 2);
-  obj.useRef(isCompleted);
-  obj.useRef(num2);
+  [tmp9, c13] = endMode(rewardDurationMs.useState(null), 2);
+  let tmp8 = endMode(rewardDurationMs.useState(null), 2);
+  [tmp11, c14] = endMode(rewardDurationMs.useState(num2), 2);
+  const tmp10 = endMode(rewardDurationMs.useState(num2), 2);
+  [tmp13, c15] = endMode(rewardDurationMs.useState(num3), 2);
+  rewardDurationMs.useRef(isCompleted);
+  rewardDurationMs.useRef(num2);
   if (num3 == null) {
     num3 = 0;
   }
-  obj.useRef(num3);
-  obj.useRef(0);
-  obj.useRef(num);
+  rewardDurationMs.useRef(num3);
+  rewardDurationMs.useRef(0);
+  rewardDurationMs.useRef(num);
   const items = [onVideoProgress, onRewardEarned, rewardDurationMs];
   const items1 = [endMode, onVideoEnd, onVideoLooped, onRewardEarned];
   const callback = obj.useCallback((progress) => {
@@ -168,6 +167,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp23;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp7, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
-  return obj;
+  const obj2 = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp7, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
+  return obj2;
 };

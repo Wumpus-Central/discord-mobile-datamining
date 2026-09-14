@@ -1,6 +1,6 @@
-// === Module 16742: SearchFilterButton ===
+// === Module 16744: SearchFilterButton ===
 
-// Module 16742 (SearchFilterButton)
+// Module 16744 (SearchFilterButton)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,8 +13,7 @@ export default noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
-  let obj = searchContext(validOrderedFilterTokens[3]);
-  validOrderedFilterTokens = obj.useValidOrderedFilterTokens(searchContext);
+  validOrderedFilterTokens = searchContext(validOrderedFilterTokens[3]).useValidOrderedFilterTokens(searchContext);
   const items = [searchContext, validOrderedFilterTokens];
   const memo = noop.useMemo(() => validOrderedFilterTokens.map((item) => {
     const obj = { label: searchContext(validOrderedFilterTokens[4]).getSearchTokenLabel(closure_1_0, item), IconComponent: null, action: null };
@@ -24,12 +23,12 @@ export default noop.memo((searchContext) => {
     obj.action = searchContext(validOrderedFilterTokens[4]).getSearchTokenPressHandler(closure_1_0, item, constants.CONTEXT_MENU);
     return obj;
   }), items);
-  obj = { items: memo, align: "below", title: null, ignoreKeyboardHide: true, onOpen: null, onClose: null, children: null };
+  let obj2 = { items: memo, align: "below", title: null, ignoreKeyboardHide: true, onOpen: null, onClose: null, children: null };
   let intl = searchContext(validOrderedFilterTokens[6]).intl;
-  obj.title = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
-  obj.onOpen = onOpen;
-  obj.onClose = onClose;
-  obj.children = function children(ref) {
+  obj2.title = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
+  obj2.onOpen = onOpen;
+  obj2.onClose = onClose;
+  obj2.children = function children(ref) {
     const merged = Object.assign(ref, Object.assign({ ref: 0 }));
     const obj = { ref: ref.ref };
     const merged1 = Object.assign(merged);

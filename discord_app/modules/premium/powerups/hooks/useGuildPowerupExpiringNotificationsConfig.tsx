@@ -1,18 +1,18 @@
-// === Module 12686: useGuildPowerupExpiringNotificationsConfig ===
+// === Module 12687: useGuildPowerupExpiringNotificationsConfig ===
 
-// Module 12686 (useGuildPowerupExpiringNotificationsConfig)
+// Module 12687 (useGuildPowerupExpiringNotificationsConfig)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import _modDef2850 from "module_2850" /* 2850 */;
 import Powerups from "Powerups" /* 4529 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 12687 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12688 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 12688 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12689 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
-  let arr = useGetExpiringGuildPowerupsDefault(arg0);
+  const arr = useGetExpiringGuildPowerupsDefault(arg0);
   const arr2 = useGameServerGetExpiringEntitlementsDefault(arg0);
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
@@ -21,27 +21,27 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
       stringResult = intl.string(_modDef2850["B3OfL/"]);
     }
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
     if (null != stringResult) {
       const items1 = [stringResult];
       let items2 = items1;
     } else {
       items2 = [];
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult);
+    HermesBuiltin.arraySpread(items2, arraySpreadResult);
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      arr = items3.push(intl2.string(_modDef2428.Sfr0Jw));
+      items3.push(intl2.string(_modDef2428.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      arr = items3.push(intl3.string(_modDef2850.wiungr));
+      items3.push(intl3.string(_modDef2850.wiungr));
     }
-    let obj = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
-    return obj;
+    const obj2 = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
+    return obj2;
   } else {
-    obj = { shouldShow: false, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
+    const obj = { shouldShow: false, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
     return obj;
   }
 };

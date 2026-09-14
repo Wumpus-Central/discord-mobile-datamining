@@ -1,9 +1,9 @@
-// === Module 16014: RedesignSettingsCategorySocialScreen ===
+// === Module 16016: RedesignSettingsCategorySocialScreen ===
 
-// Module 16014 (RedesignSettingsCategorySocialScreen)
-import SettingBuilders from "SettingBuilders" /* 11601 */;
-import SettingLayoutDefault from "SettingLayout" /* 14775 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16008 */;
+// Module 16016 (RedesignSettingsCategorySocialScreen)
+import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingLayoutDefault from "SettingLayout" /* 14776 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 16010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,10 +13,11 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 
 export default noop.memo(() => {
   const node = noop.useMemo(() => {
-    const obj = { sections: null };
+    const obj2 = { sections: null };
+    const obj = SettingBuilders;
     const items = [MobileNotifSettingsRouteBuilders.buildCategorySocialSettingsSection()];
-    obj.sections = items;
-    return obj.createList(obj);
+    obj2.sections = items;
+    return obj.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
 });

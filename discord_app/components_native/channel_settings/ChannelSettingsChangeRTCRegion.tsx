@@ -1,6 +1,6 @@
-// === Module 16967: ChannelSettingsChangeRTCRegion ===
+// === Module 16969: ChannelSettingsChangeRTCRegion ===
 
-// Module 16967 (ChannelSettingsChangeRTCRegion)
+// Module 16969 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,16 +11,14 @@ import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators"
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RegionStore from "RegionStore" /* 16923 */;
+import RegionStore from "RegionStore" /* 16925 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-fn(4636);
-let createStyles = { form: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.form = createStyles;
-let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 } };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class ChannelSettingsChangeRTCRegion extends PureComponent {
   constructor() {
@@ -30,11 +28,11 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
     channel = applyArgumentsResult.props.channel;
     tmp3 = AUTOMATIC_RTC_REGION;
     regions = closure_5.getRegions(channel.getGuildId());
-    obj = { id: AUTOMATIC_RTC_REGION, name: null, sample_hostname: "", sample_port: 0, vip: false, deprecated: false, optimal: false, hidden: false };
+    obj1 = { id: AUTOMATIC_RTC_REGION, name: null, sample_hostname: "", sample_port: 0, vip: false, deprecated: false, optimal: false, hidden: false };
     intl = closure_0(closure_2[8]).intl;
-    obj.name = intl.string(closure_0(closure_2[8]).t.JEmsap);
+    obj1.name = intl.string(closure_0(closure_2[8]).t.JEmsap);
     items = [];
-    items[0] = obj;
+    items[0] = obj1;
     if (null != regions) {
       push = items.push;
       items1 = [];
@@ -83,8 +81,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
   }
   self(8748).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
-    const obj = { rtcRegion };
-    obj.saveChannel(self.props.channel.id, obj);
+    ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });
 };
 prototype["renderRegion"] = function renderRegion(label) {

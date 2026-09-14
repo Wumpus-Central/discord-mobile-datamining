@@ -4,8 +4,8 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import size from "module_2" /* 2 */;
 
@@ -43,8 +43,7 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(DispatcherDefault, {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    const obj = { enabled: enabled.enabled };
-    obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, { enabled: enabled.enabled });
     enabled = enabled.enabled;
   }
 });

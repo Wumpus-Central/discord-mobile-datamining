@@ -1,6 +1,6 @@
-// === Module 11047: ChannelDetailsConstants ===
+// === Module 11048: ChannelDetailsConstants ===
 
-// Module 11047 (ChannelDetailsConstants)
+// Module 11048 (ChannelDetailsConstants)
 import SearchConstants from "SearchConstants" /* 7982 */;
 import size from "module_2" /* 2 */;
 

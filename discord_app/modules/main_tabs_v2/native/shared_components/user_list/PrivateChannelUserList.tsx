@@ -1,12 +1,12 @@
-// === Module 12315: PrivateChannelUserList ===
+// === Module 12316: PrivateChannelUserList ===
 
-// Module 12315 (PrivateChannelUserList)
+// Module 12316 (PrivateChannelUserList)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12317 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -47,9 +47,9 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   let height;
   let callback2;
   const analyticsLocations = hideTitle(onUserPress[8])().analyticsLocations;
-  let obj = channelId(onUserPress[9]);
   let items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  stateFromStores = channelId(onUserPress[9]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj = channelId(onUserPress[9]);
   const items1 = [renderListHeader];
   const items2 = [stateFromStores];
   const stateFromStoresArray = channelId(onUserPress[9]).useStateFromStoresArray(items1, () => {
@@ -65,8 +65,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
     }
     return items;
   }, items2);
-  obj = { channel: stateFromStores, disable: !flag };
-  const tmp5 = hideTitle(onUserPress[12])(obj);
+  const tmp5 = hideTitle(onUserPress[12])({ channel: stateFromStores, disable: !flag });
   renderListHeader = tmp5.listActionRenderer;
   let listHeaderSize = tmp5.listActionHeight;
   let flag2;
@@ -90,7 +89,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   } else {
     tmp8 = flag2;
   }
-  let tmp3Result = tmp3(tmp2[14]);
+  channelId(onUserPress[14]);
   let tmp11 = flag2;
   if (flag2) {
     tmp11 = "entitled" === tmp10;
@@ -99,9 +98,10 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
     tmp11 = tmp8 > flag2;
   }
   closure_12 = tmp11;
-  tmp3Result = tmp3(tmp2[15]);
-  token = tmp3Result.useToken(tmp(tmp2[16]).colors.TEXT_SUBTLE);
-  const obj3 = channelId(onUserPress[9]);
+  let obj2 = { channel: stateFromStores, disable: !flag };
+  let obj3 = channelId(onUserPress[9]);
+  token = channelId(onUserPress[15]).useToken(tmp(tmp2[16]).colors.TEXT_SUBTLE);
+  const tmp3Result3 = channelId(onUserPress[15]);
   token1 = channelId(onUserPress[15]).useToken(tmp(tmp2[16]).colors.ICON_SUBTLE);
   const tmp15 = hideTitle(onUserPress[17])("PrivateChannelUserList");
   closure_15 = tmp15;
@@ -113,7 +113,7 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
   }, items3);
   const items5 = [stateFromStoresArray, flag2, tmp6, onUserPress, opensUserProfileOnUserPress, analyticsLocations, channelId];
   const getSectionProps = listHeaderContent.useCallback(() => {
-    let obj = { title: null, hideTitle: null };
+    const obj = { title: null, hideTitle: null };
     const intl = util.intl;
     obj.title = "" + intl.string(util.t["9Oq93m"]) + " \u2014 " + stateFromStoresArray.length;
     obj.hideTitle = hideTitle;
@@ -123,12 +123,12 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
       if (closure_15) {
         str = "xs";
       }
-      obj = { titleLeading: null, onTitlePress: null, colorOverride: null };
-      obj = { size: str, color: token1, accessible: false };
-      obj.titleLeading = closure_2_11(NitroWheelIcon.NitroWheelIcon, obj);
-      obj.onTitlePress = openGroupDMNitroCapInfoActionSheetDefault;
-      obj.colorOverride = token;
-      tmp3 = obj;
+      const obj2 = { titleLeading: null, onTitlePress: null, colorOverride: null };
+      const obj3 = { size: str, color: token1, accessible: false };
+      obj2.titleLeading = closure_2_11(NitroWheelIcon.NitroWheelIcon, obj3);
+      obj2.onTitlePress = openGroupDMNitroCapInfoActionSheetDefault;
+      obj2.colorOverride = token;
+      tmp3 = obj2;
     }
     const element = { type: "section", props: null };
     const merged = Object.assign(tmp3);
@@ -149,12 +149,12 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
         isNameplatedRow: true,
         onPress(user) {
             if (onUserPress != null) {
-              let obj = { user, index };
+              const obj = { user, index };
               tmp(obj);
             }
             if (opensUserProfileOnUserPress) {
-              obj = { userId: user.id, sourceAnalyticsLocations: analyticsLocations, channelId };
-              showUserProfileActionSheetDefault(obj);
+              const obj2 = { userId: user.id, sourceAnalyticsLocations: analyticsLocations, channelId };
+              showUserProfileActionSheetDefault(obj2);
             }
           },
         isOwner: tmp4,
@@ -166,19 +166,19 @@ export default noop.memo(function PrivateChannelUserList(channelId) {
       return element;
     } else {
       const element1 = { type: "placeholder", props: null };
-      obj = { start: tmp, end: tmp2 };
-      element1.props = obj;
+      let obj2 = { start: tmp, end: tmp2 };
+      element1.props = obj2;
       return element1;
     }
   }, items5);
-  const tmp3Result1 = channelId(onUserPress[15]);
+  const tmp3Result4 = channelId(onUserPress[15]);
   [tmp21, c16] = opensUserProfileOnUserPress(listHeaderContent.useState(), 2);
-  channelId = undefined;
+  let channelId1;
   if (tmp21 != null) {
-    channelId = tmp21.channelId;
+    channelId1 = tmp21.channelId;
   }
   height = undefined;
-  if (channelId === channelId) {
+  if (channelId1 === channelId) {
     height = tmp21.height;
   }
   const items6 = [channelId];

@@ -1,8 +1,10 @@
-// === Module 14924: updateDmSafetyAlertsSetting ===
+// === Module 14925: updateDmSafetyAlertsSetting ===
 
-// Module 14924 (updateDmSafetyAlertsSetting)
-import wrappers from "wrappers" /* 1218 */;
+// Module 14925 (updateDmSafetyAlertsSetting)
+import wrappers from "wrappers" /* 1216 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 

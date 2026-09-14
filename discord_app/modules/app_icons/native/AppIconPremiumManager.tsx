@@ -1,8 +1,8 @@
-// === Module 17426: AppIconPremiumManager ===
+// === Module 17428: AppIconPremiumManager ===
 
-// Module 17426 (AppIconPremiumManager)
+// Module 17428 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -48,8 +48,8 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -62,27 +62,26 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp5;
             let currentUser2;
             closure_130_1 = undefined;
             closure_130_2 = undefined;
             currentUser2 = currentUser.getCurrentUser();
-            let obj2 = _undefined(tmp2[8]);
             currentUser = 1;
             v3 = 1;
-            const obj1 = { value: obj2.fetchCurrentAppIcon(), done: false };
-            return obj1;
+            const obj5 = { value: _undefined(tmp2[8]).fetchCurrentAppIcon(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_130_1 = value;
           if (closure_130_1 !== DEFAULT) {
@@ -100,7 +99,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
               }
               closure_131_0.resetIcon(closure_130_1, _undefined, constants.ORPHANED);
               v3 = 3;
-              obj = { value: undefined, done: true };
+              const obj = { value: undefined, done: true };
               return obj;
             } else {
               const result = _undefined2(tmp2[9]).canUsePremiumAppIcons(currentUser2);
@@ -137,11 +136,10 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
 prototype["resetIcon"] = function resetIcon(previous_icon_id, c0, ORPHANED) {
   _require = previous_icon_id;
   const reset_reason = ORPHANED;
-  let obj = require("AppIconUtils");
+  const obj = require("AppIconUtils");
   const setAppIconResult = require("AppIconUtils").setAppIcon(DEFAULT, c0);
   require("AppIconUtils").setAppIcon(DEFAULT, c0).then(() => {
-    const obj = { previous_icon_id, reset_to_icon_id: DEFAULT, reset_reason };
-    obj.track(AnalyticEvents.APP_ICON_AUTO_RESET, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.APP_ICON_AUTO_RESET, { previous_icon_id, reset_to_icon_id: DEFAULT, reset_reason });
   }).catch((error) => {
     logger.error("Failed to reset app icon:", error);
   });

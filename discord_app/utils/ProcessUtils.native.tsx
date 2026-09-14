@@ -1,8 +1,8 @@
-// === Module 1359: ProcessUtils ===
+// === Module 1357: ProcessUtils ===
 
-// Module 1359 (ProcessUtils)
+// Module 1357 (ProcessUtils)
 import _mod17 from "module_17" /* 17 */;
-import ProcessUtilsBase from "ProcessUtilsBase" /* 1360 */;
+import ProcessUtilsBase from "ProcessUtilsBase" /* 1358 */;
 import size from "module_2" /* 2 */;
 
 let closure_1 = function getHermesInstrumentedStatsSummary() {
@@ -208,9 +208,9 @@ function getCpuUsageElectronProcessTypeDetails() {
   return null;
 }
 prototype["getCpuUsageElectronProcessTypeDetails"] = getCpuUsageElectronProcessTypeDetails;
-tmp = new tmp(tmp4, tmp3, tmp2, ProcessUtilsIOS, new.target, undefined, NativeModules, globalThis, getCpuUsageElectronProcessTypeDetails, require, dependencyMap, exports);
-closure_1 = tmp;
-tmp.shouldCollectHermesInstrumentedStats = false;
+let tmp5 = new tmp(tmp4, tmp3, tmp2, ProcessUtilsIOS, new.target, undefined, NativeModules, globalThis, getCpuUsageElectronProcessTypeDetails, require, dependencyMap, exports);
+closure_1 = tmp5;
+tmp5.shouldCollectHermesInstrumentedStats = false;
 prop = undefined;
 if (NativeModules != null) {
   prop = NativeModules.SystemResourceManager;
@@ -269,4 +269,4 @@ let timerId = setInterval(() => {
 }, 1000);
 const result = size.fileFinishedImporting("utils/ProcessUtils.native.tsx");
 
-export default tmp;
+export default tmp5;

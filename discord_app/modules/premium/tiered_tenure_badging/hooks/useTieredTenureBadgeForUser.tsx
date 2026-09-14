@@ -1,7 +1,9 @@
-// === Module 11319: useTieredTenureBadgeForUser ===
+// === Module 11320: useTieredTenureBadgeForUser ===
 
-// Module 11319 (useTieredTenureBadgeForUser)
+// Module 11320 (useTieredTenureBadgeForUser)
 import UserProfileStore from "UserProfileStore" /* 7723 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);

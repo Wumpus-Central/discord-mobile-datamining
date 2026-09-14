@@ -1,6 +1,6 @@
-// === Module 15911: WishlistButtonCoachmark ===
+// === Module 15913: WishlistButtonCoachmark ===
 
-// Module 15911 (WishlistButtonCoachmark)
+// Module 15913 (WishlistButtonCoachmark)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -32,7 +32,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
   const tmp5 = tmp3[0] === hasNeverWishlisted(1943).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   _slicedToArray = tmp5;
   const obj2 = hasNeverWishlisted(7491);
-  registerDismiss = hasNeverWishlisted(15908).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+  registerDismiss = hasNeverWishlisted(15910).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
     if (closure_2) {
@@ -52,7 +52,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
     };
     return obj;
   }, items2);
-  const obj3 = hasNeverWishlisted(15908);
-  const coachmark = hasNeverWishlisted(11261).useCoachmark(anchorRef.anchorRef, memo1);
+  const obj3 = hasNeverWishlisted(15910);
+  const coachmark = hasNeverWishlisted(11262).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
 };

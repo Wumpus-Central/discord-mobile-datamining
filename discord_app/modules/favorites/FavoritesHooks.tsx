@@ -1,16 +1,18 @@
-// === Module 10352: FavoritesHooks ===
+// === Module 10353: FavoritesHooks ===
 
-// Module 10352 (FavoritesHooks)
+// Module 10353 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1885 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import FavoritesLimits from "FavoritesLimits" /* 10353 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10354 */;
+import FavoritesLimits from "FavoritesLimits" /* 10354 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10355 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
 import UserStore from "UserStore" /* 1371 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function useFavoritesAccess() {
@@ -18,8 +20,7 @@ function useFavoritesAccess() {
   if (FavoritesGuildActionSheet === undefined) {
     str = "useFavoritesAccess";
   }
-  let obj = FavoritesGuildExperiment;
-  const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
+  const favoritesGuildConfig = FavoritesGuildExperiment.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -33,15 +34,15 @@ function useFavoritesAccess() {
     tmp6 = tmp7;
   }
   if (!tmp6) {
-    obj = { hasAccess: tmp6, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
+    const obj4 = { hasAccess: tmp6, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
     if (enabled) {
       enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj.canUpsellFavoriteLimit = enabled;
-    return obj;
+    obj4.canUpsellFavoriteLimit = enabled;
+    return obj4;
   } else if (isPremiumExactlyResult) {
   }
 }
@@ -52,8 +53,7 @@ let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
 export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
-  let obj = FavoritesGuildExperiment;
-  const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
+  const favoritesGuildConfig = FavoritesGuildExperiment.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(UserStore.getCurrentUser(), PremiumTypes.TIER_2);
   let tmp5 = enabled;
@@ -65,28 +65,27 @@ export const getFavoritesAccess = function getFavoritesAccess() {
     tmp5 = tmp6;
   }
   if (!tmp5) {
-    obj = { hasAccess: tmp5, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
+    const obj3 = { hasAccess: tmp5, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
     if (enabled) {
       enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj.canUpsellFavoriteLimit = enabled;
-    return obj;
+    obj3.canUpsellFavoriteLimit = enabled;
+    return obj3;
   } else if (isPremiumExactlyResult) {
   }
 };
 export const useFavoritesLimitUpsell = function useFavoritesLimitUpsell() {
   ({ canUpsellFavoriteLimit, favoriteLimit } = useFavoritesAccess("useFavoritesLimitUpsell"));
-  let obj = initialize;
+  const tmp = useFavoritesAccess("useFavoritesLimitUpsell");
   const items = [FavoriteStore];
-  const stateFromStores = obj.useStateFromStores(items, () => favoritesCountAgainstLimit.getFavoritesCountAgainstLimit());
+  const stateFromStores = initialize.useStateFromStores(items, () => favoritesCountAgainstLimit.getFavoritesCountAgainstLimit());
   if (canUpsellFavoriteLimit) {
     canUpsellFavoriteLimit = true;
   }
-  obj = { shouldShowUpsell: canUpsellFavoriteLimit, favoriteCount: stateFromStores, favoriteLimit, isAtLimit: favoriteLimit > 0 && stateFromStores >= favoriteLimit };
-  return obj;
+  return { shouldShowUpsell: canUpsellFavoriteLimit, favoriteCount: stateFromStores, favoriteLimit, isAtLimit: favoriteLimit > 0 && stateFromStores >= favoriteLimit };
 };
 export const useFavorites = function useFavorites() {
   const items = [FavoriteStore];

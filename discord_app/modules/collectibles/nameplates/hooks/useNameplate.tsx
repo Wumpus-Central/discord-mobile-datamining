@@ -26,14 +26,14 @@ export const useNameplate = function useNameplate(user) {
   const items1 = [stateFromStores, user];
   return stateFromStores.useMemo(() => {
     if (null != user) {
-      let nameplate;
+      let nameplate1;
       if (stateFromStores != null) {
         const collectibles = stateFromStores.collectibles;
         if (collectibles != null) {
-          nameplate = collectibles.nameplate;
+          nameplate1 = collectibles.nameplate;
         }
       }
-      nameplate = utils.getNameplateData(nameplate);
+      let nameplate = utils.getNameplateData(nameplate1);
       if (nameplate == null) {
         nameplate = tmp.nameplate;
       }

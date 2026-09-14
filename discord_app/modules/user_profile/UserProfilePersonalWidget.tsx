@@ -1,7 +1,7 @@
 // === Module 7732: UserProfilePersonalWidget ===
 
 // Module 7732 (UserProfilePersonalWidget)
-import _modDef1332 from "module_1332" /* 1332 */;
+import _modDef1330 from "module_1330" /* 1330 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
@@ -12,21 +12,21 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 function createDefaultFieldsSection() {
-  let obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS, fields: null };
-  obj = { key: null, title: "", description: "" };
+  const obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS, fields: null };
+  const obj2 = { key: null, title: "", description: "" };
   const sum = tmp + 1;
   closure_5 = sum;
-  obj.key = `field-${+closure_5}`;
-  const items = [obj, , , ];
-  obj = { key: `field-${+sum}`, title: "", description: "" };
+  obj2.key = `field-${+closure_5}`;
+  const items = [obj2, , , ];
+  const obj3 = { key: `field-${+sum}`, title: "", description: "" };
   const sum1 = tmp3 + 1;
-  items[1] = obj;
-  const obj1 = { key: `field-${+sum1}`, title: "", description: "" };
+  items[1] = obj3;
+  const obj4 = { key: `field-${+sum1}`, title: "", description: "" };
   const sum2 = tmp5 + 1;
-  items[2] = obj1;
-  const obj2 = { key: `field-${+sum2}`, title: "", description: "" };
+  items[2] = obj4;
+  const obj5 = { key: `field-${+sum2}`, title: "", description: "" };
   closure_5 = tmp7 + 1;
-  items[3] = obj2;
+  items[3] = obj5;
   obj.fields = items;
   return obj;
 }
@@ -70,36 +70,36 @@ function parseField(image) {
       tmp = size;
     }
   }
-  const obj = { key: null, title: null, description: null, image: null, hideImage: null };
+  const obj2 = { key: null, title: null, description: null, image: null, hideImage: null };
   closure_5 = tmp2 + 1;
-  obj.key = `field-${+closure_5}`;
+  obj2.key = `field-${+closure_5}`;
   let str2 = image.title;
   if (str2 == null) {
     str2 = "";
   }
-  obj.title = str2;
+  obj2.title = str2;
   let str3 = image.description;
   if (str3 == null) {
     str3 = "";
   }
-  obj.description = str3;
-  obj.image = tmp;
-  obj.hideImage = null == tmp || undefined;
-  return obj;
+  obj2.description = str3;
+  obj2.image = tmp;
+  obj2.hideImage = null == tmp || undefined;
+  return obj2;
 }
 function serializeSection(type) {
   type = type.type;
   if (PersonalWidgetSectionType.PersonalWidgetSectionType.COVER === type) {
-    let obj = { type: null, title: null, subtitle: null, image: null };
+    const obj6 = { type: null, title: null, subtitle: null, image: null };
     ({ type: obj2.type, title: obj2.title, subtitle: obj2.subtitle, image: originalHash } = type);
     if (null == originalHash) {
-      obj.image = undefined;
-      return obj;
+      obj6.image = undefined;
+      return obj6;
     } else if ("localDataUri" in originalHash) {
-      obj = { filename: null, original_hash: null };
+      const obj7 = { filename: null, original_hash: null };
       ({ filename: obj4.filename, originalHash } = originalHash);
-      obj.original_hash = originalHash;
-      let size = obj;
+      obj7.original_hash = originalHash;
+      let size = obj7;
     } else {
       size = { file_id: null, width: null, height: null, is_animated: null };
       ({ fileId: obj3.file_id, width: obj3.width, height: obj3.height, isAnimated: obj3.is_animated } = originalHash);
@@ -116,19 +116,19 @@ function serializeSection(type) {
       }
       return !tmp;
     });
-    obj = {
+    let obj = {
       type: type.type,
       fields: found.map((title) => {
-          let obj = { title: title.title, description: title.description, image: null };
+          const obj = { title: title.title, description: title.description, image: null };
           originalHash = title.image;
           if (null == originalHash) {
             obj.image = undefined;
             return obj;
           } else if ("localDataUri" in originalHash) {
-            obj = { filename: null, original_hash: null };
+            const obj4 = { filename: null, original_hash: null };
             ({ filename: obj3.filename, originalHash } = originalHash);
-            obj.original_hash = originalHash;
-            let size = obj;
+            obj4.original_hash = originalHash;
+            let size = obj4;
           } else {
             size = { file_id: null, width: null, height: null, is_animated: null };
             ({ fileId: obj2.file_id, width: obj2.width, height: obj2.height, isAnimated: obj2.is_animated } = originalHash);
@@ -160,8 +160,8 @@ class UserProfilePersonalWidget {
 }
 const prototype = UserProfilePersonalWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  let obj = { id: this.id, data: null };
-  obj = { type: this.type, header: this.header, sections: null };
+  const obj = { id: this.id, data: null };
+  const obj2 = { type: this.type, header: this.header, sections: null };
   const sections = this.sections;
   const found = sections.filter((type) => {
     type = type.type;
@@ -181,8 +181,8 @@ prototype["toSubmission"] = function toSubmission() {
     return !everyResult;
   });
   const mapped = found.map(serializeSection);
-  obj.sections = mapped.filter(GlobalUtils.isNotNullish);
-  obj.data = obj;
+  obj2.sections = mapped.filter(GlobalUtils.isNotNullish);
+  obj.data = obj2;
   return obj;
 };
 prototype["isDiscardable"] = function isDiscardable() {
@@ -239,7 +239,7 @@ prototype["isEqual"] = function isEqual(header) {
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = _modDef1332(image2, image);
+              tmp13 = _modDef1330(image2, image);
             }
             sum = sum + 1;
             num2 = sum;
@@ -259,7 +259,7 @@ prototype["isEqual"] = function isEqual(header) {
                 tmp8 = tmp6.description === tmp7.description;
               }
               if (tmp8) {
-                tmp8 = _modDef1332(tmp6.image, tmp7.image);
+                tmp8 = _modDef1330(tmp6.image, tmp7.image);
               }
               let flag2 = false;
               if (!tmp8) {
@@ -304,24 +304,24 @@ export const createDefaultField = function createDefaultField() {
 };
 export { createDefaultFieldsSection };
 export const createDefaultPersonalWidget = function createDefaultPersonalWidget() {
-  let obj = { header: "", sections: null };
-  obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
-  const items = [obj, createDefaultFieldsSection()];
+  const obj = { header: "", sections: null };
+  const items = [{ type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" }, createDefaultFieldsSection()];
   obj.sections = items;
   if (typeof UserProfilePersonalWidget === "function") {
     ({ sections, id, header } = obj);
-    obj = Object.create(UserProfilePersonalWidget.prototype);
-    obj.id = id;
-    obj.type = WidgetType.WidgetType.PERSONAL;
-    obj.header = header;
+    const obj4 = Object.create(UserProfilePersonalWidget.prototype);
+    obj4.id = id;
+    obj4.type = WidgetType.WidgetType.PERSONAL;
+    obj4.header = header;
     if (sections == null) {
       sections = [];
     }
-    obj.sections = sections;
-    return obj;
+    obj4.sections = sections;
+    return obj4;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+  const obj2 = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
 };
 export const isPersonalWidgetNew = function isPersonalWidgetNew() {
   return !DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE);
@@ -333,17 +333,17 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     const mapped = sections.map((type) => {
       type = type.type;
       if (PersonalWidgetSectionType.PersonalWidgetSectionType.COVER === type) {
-        let obj = { type: null, title: null, subtitle: null, image: null };
+        const obj4 = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2.type, title } = type);
         if (title == null) {
           title = "";
         }
-        obj.title = title;
+        obj4.title = title;
         let str = type.subtitle;
         if (str == null) {
           str = "";
         }
-        obj.subtitle = str;
+        obj4.subtitle = str;
         const image = type.image;
         let tmp5;
         if (null != image) {
@@ -357,10 +357,10 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
             tmp5 = size;
           }
         }
-        obj.image = tmp5;
-        return obj;
+        obj4.image = tmp5;
+        return obj4;
       } else if (PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS === type) {
-        obj = { type: null, fields: null };
+        const obj = { type: null, fields: null };
         ({ type: obj.type, fields } = type);
         obj.fields = fields.map(parseField);
         return obj;

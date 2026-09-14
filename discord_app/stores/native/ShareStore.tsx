@@ -1,10 +1,10 @@
-// === Module 14483: ShareStore ===
+// === Module 14484: ShareStore ===
 
-// Module 14483 (ShareStore)
+// Module 14484 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8480 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -59,7 +59,7 @@ const shareStore = new ShareStore(DispatcherDefault, {
         const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
         let json1 = null;
         if (null != channel) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(channel.toJS());
           let recipients = channel.recipients;
           if (recipients == null) {
@@ -75,8 +75,8 @@ const shareStore = new ShareStore(DispatcherDefault, {
       }
     }
     if (null != c5) {
-      obj = { client_app_state: state };
-      const result = discord_common_AnalyticsUtils.extendSuperProperties(obj);
+      const obj2 = { client_app_state: state };
+      const result = discord_common_AnalyticsUtils.extendSuperProperties(obj2);
       const obj6 = NativeShareManagerModuleDefault;
       const result1 = obj6.setAuthenticationToken(c5, AnalyticsUtilsDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {

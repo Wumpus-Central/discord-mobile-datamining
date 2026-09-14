@@ -1,19 +1,19 @@
-// === Module 16836: AutocompleteScreen ===
+// === Module 16838: AutocompleteScreen ===
 
-// Module 16836 (AutocompleteScreen)
+// Module 16838 (AutocompleteScreen)
 import UserUtilsDefault from "UserUtils" /* 4481 */;
 import useChannelName from "useChannelName" /* 4789 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12467 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12487 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16837 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16839 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12471 */;
-import SearchQueryStore from "SearchQueryStore" /* 12468 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12472 */;
+import SearchQueryStore from "SearchQueryStore" /* 12469 */;
 
 require = fn;
 const SearchConstants = fn(7982);
@@ -27,24 +27,20 @@ let result = size.fileFinishedImporting("modules/search/native/components/layout
 
 export default noop.memo(function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  let first;
+  first = undefined;
   _slicedToArray = undefined;
   let fullscreenPlaceholderCount;
   let callback3;
-  let obj = searchContext(first[10]);
   let items = [callback3];
   const items1 = [searchContext];
-  const stateFromStores = obj.useStateFromStores(items, () => SearchAutocompleteStore.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
-  const tmp4 = _slicedToArray(fullscreenPlaceholderCount.useState(false), 2);
-  first = tmp4[0];
-  _slicedToArray = tmp4[1];
-  let obj1 = searchContext(first[10]);
+  const stateFromStores = searchContext(first[10]).useStateFromStores(items, () => SearchAutocompleteStore.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
+  [first, _slicedToArray] = fullscreenPlaceholderCount.useState(false);
+  let obj = searchContext(first[10]);
   const items2 = [SearchQueryStore];
   const items3 = [searchContext];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => SearchQueryStore.isTextInputValueEmpty(searchContext), items3);
-  let obj2 = searchContext(first[11]);
-  obj = { placeholderHeight, numColumns: 1 };
-  fullscreenPlaceholderCount = obj2.useFullscreenPlaceholderCount(obj);
+  const stateFromStores1 = searchContext(first[10]).useStateFromStores(items2, () => SearchQueryStore.isTextInputValueEmpty(searchContext), items3);
+  let obj2 = searchContext(first[10]);
+  fullscreenPlaceholderCount = searchContext(first[11]).useFullscreenPlaceholderCount({ placeholderHeight, numColumns: 1 });
   const items4 = [searchContext];
   const callback = fullscreenPlaceholderCount.useCallback(() => {
     SearchPlatformUtilsDefault.syncAutocomplete(searchContext);
@@ -54,15 +50,14 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   const callback1 = fullscreenPlaceholderCount.useCallback((text) => {
     const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
     if (null != prefixTag) {
-      let obj = SearchPlatformActionCreatorsDefault;
-      obj.updateSearchQuery(searchContext, (setTextInputValue) => {
+      SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
         setTextInputValue.addTag({ type: constants2.ANSWER, text });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
-      obj = { searchContext, searchTokenType: null, location: null };
+      const obj4 = { searchContext, searchTokenType: null, location: null };
       ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-      search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
+      search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
       callback();
     }
   }, items5);
@@ -72,16 +67,15 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
     if (null != user) {
       const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
       if (null != prefixTag) {
-        let obj = SearchPlatformActionCreatorsDefault;
-        obj.updateSearchQuery(searchContext, (setTextInputValue) => {
+        SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
           const obj = { type: constants2.ANSWER, text: stateFromStores(first[15]).getUserTag(user), userId: user.id };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
-        obj = { searchContext, searchTokenType: null, location: null };
+        const obj4 = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-        search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
+        search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
         callback();
       }
     }
@@ -149,17 +143,17 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
     const items = [];
     if (set1) {
       for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
-        let obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
+        let obj2 = { type: constants.MESSAGE_PLACEHOLDER, key: null };
         let _HermesInternal = HermesInternal;
-        obj.key = "message-placeholder-" + num2;
-        let arr = items.push(obj);
+        obj2.key = "message-placeholder-" + num2;
+        let arr = items.push(obj2);
       }
       return items;
     } else {
       const _Set = Set;
-      obj = searchContext(first[18]);
-      const set = new Set(obj.getSearchQueryUserIds(items));
+      const set = new Set(searchContext(first[18]).getSearchQueryUserIds(items));
       const _Set2 = Set;
+      let obj = searchContext(first[18]);
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));
       ({ autocompletes, tokens, mode } = set);
       let item = autocompletes.forEach((item) => {
@@ -168,8 +162,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
           if (0 !== results.length) {
             item = results.forEach((item) => {
               ({ user, channel, text } = item);
-              let obj = AutocompleteScreenUtils;
-              const toSearchListUserItemResult = obj.toSearchListUserItem(searchContext, user, callback2);
+              const toSearchListUserItemResult = AutocompleteScreenUtils.toSearchListUserItem(searchContext, user, callback2);
               let id;
               if (user != null) {
                 id = user.id;
@@ -185,8 +178,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
                 set.add(id);
                 items.push(toSearchListUserItemResult);
               }
-              let tmpResult = AutocompleteScreenUtils;
-              const result = tmpResult.toSearchListChannelItem(channel, callback3);
+              const result = AutocompleteScreenUtils.toSearchListChannelItem(channel, callback3);
               let id1;
               if (channel != null) {
                 id1 = channel.id;
@@ -205,21 +197,20 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
               }
               if (tmp22) {
                 const element = { type: constants.GENERIC, props: null };
-                obj = { text, icon: null, onPress: null };
-                tmpResult = AutocompleteScreenUtils;
-                obj.icon = tmpResult.getSearchFilterHasIcon(text);
-                obj.onPress = callback1;
-                element.props = obj;
+                const obj2 = { text, icon: AutocompleteScreenUtils.getSearchFilterHasIcon(text), onPress: callback1 };
+                element.props = obj2;
                 items.push(element);
+                const tmpResult3 = AutocompleteScreenUtils;
               }
               if (tmp27) {
                 const element1 = { type: constants.GENERIC, props: null };
-                obj = { text, icon: AutocompleteScreenUtils.getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
-                element1.props = obj;
+                const obj3 = { text, icon: AutocompleteScreenUtils.getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
+                element1.props = obj3;
                 items.push(element1);
-                const tmpResult1 = AutocompleteScreenUtils;
+                const tmpResult4 = AutocompleteScreenUtils;
               }
               tmp27 = closure_1_0 === constants2.FILTER_AUTHOR_TYPE && null != text;
+              const tmpResult = AutocompleteScreenUtils;
             });
           }
         }
@@ -229,13 +220,11 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
           if (null != tokens[tokens.length - 1]) {
             const token = new searchContext(first[19]).Token(tmp32);
             if (token.type === constants4.ANSWER_USERNAME_FROM) {
-              let tmp2Result = searchContext(first[20]);
               if (tmp2Result.isValidUserAutocomplete(token)) {
                 const data = token.getData("userId");
                 if (null != data) {
                   const user = callback2.getUser(data);
-                  tmp2Result = searchContext(first[18]);
-                  let toSearchListUserItemResult = tmp2Result.toSearchListUserItem(tmp4, user, callback2);
+                  let toSearchListUserItemResult = searchContext(first[18]).toSearchListUserItem(tmp4, user, callback2);
                   let id;
                   if (user != null) {
                     id = user.id;
@@ -248,11 +237,13 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
                     set.add(id);
                     items.push(toSearchListUserItemResult);
                   }
+                  const tmp2Result3 = searchContext(first[18]);
                 }
               }
+              tmp2Result = searchContext(first[20]);
             }
             if (token.type === constants4.ANSWER_IN) {
-              if (tmp2Result1.isValidChannelAutocomplete(token, tmp4)) {
+              if (tmp2Result4.isValidChannelAutocomplete(token, tmp4)) {
                 const data1 = token.getData("channelIds");
                 if (null != data1) {
                   const item1 = data1.forEach((item) => {
@@ -273,7 +264,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
                   });
                 }
               }
-              tmp2Result1 = searchContext(first[20]);
+              tmp2Result4 = searchContext(first[20]);
             }
           }
         }
@@ -285,16 +276,18 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       return tmp25;
     }
   }, items10);
+  let obj3 = searchContext(first[11]);
+  let obj4 = { placeholderHeight, numColumns: 1 };
   const messageTabCountsErrorText = searchContext(first[21]).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
-    obj = { text: messageTabCountsErrorText };
+    const obj6 = { text: messageTabCountsErrorText };
     let tmp18 = jsx(stateFromStores(tmp2[22]), { text: messageTabCountsErrorText });
   } else {
     if (stateFromStores1) {
       if (0 === memo.length) {
-        obj1 = { text: null };
+        let obj7 = { text: null };
         const intl2 = tmp(tmp2[23]).intl;
-        obj1.text = intl2.string(tmp(tmp2[23]).t["E4HqQ+"]);
+        obj7.text = intl2.string(tmp(tmp2[23]).t["E4HqQ+"]);
         tmp18 = jsx(stateFromStores(tmp2[22]), { text: null });
         const tmp23 = stateFromStores(tmp2[22]);
       }
@@ -302,15 +295,15 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
     if (!stateFromStores1) {
       if (0 === memo.length) {
         if (!first) {
-          obj2 = { text: null };
+          const obj8 = { text: null };
           const intl = tmp(tmp2[23]).intl;
-          obj2.text = intl.string(tmp(tmp2[23]).t.Dr1vko);
+          obj8.text = intl.string(tmp(tmp2[23]).t.Dr1vko);
           tmp18 = jsx(stateFromStores(tmp2[22]), { text: null });
           const tmp17 = stateFromStores(tmp2[22]);
         }
       }
     }
-    let obj3 = { data: memo };
+    const obj9 = { data: memo };
     tmp18 = jsx(stateFromStores(tmp2[24]), { data: memo });
   }
   return tmp18;

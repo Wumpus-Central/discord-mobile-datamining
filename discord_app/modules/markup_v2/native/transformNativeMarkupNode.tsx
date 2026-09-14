@@ -11,31 +11,31 @@ function textNode(arg0) {
 function transformNode(type, channelId) {
   switch (type.type) {
     case "text":
-      let obj = { type: null, content: null };
+      const obj2 = { type: null, content: null };
       const result = require("MarkupInvisibleUnicode").stripLeadingInvisibleUnicode(type.value);
-      obj.type = require("MarkupTypes").AST_KEY.TEXT;
-      obj.content = result;
-      return obj;
+      obj2.type = require("MarkupTypes").AST_KEY.TEXT;
+      obj2.content = result;
+      return obj2;
     case "paragraph":
       return transformNativeInline(type.value, channelId);
     case "bold":
-      obj = { type: require("MarkupTypes").AST_KEY.STRONG, content: transformNativeInline(type.value, channelId) };
-      return obj;
+      const obj7 = { type: require("MarkupTypes").AST_KEY.STRONG, content: transformNativeInline(type.value, channelId) };
+      return obj7;
     case "italic":
-      const obj1 = { type: require("MarkupTypes").AST_KEY.ITALICS, content: transformNativeInline(type.value, channelId) };
-      return obj1;
+      const obj8 = { type: require("MarkupTypes").AST_KEY.ITALICS, content: transformNativeInline(type.value, channelId) };
+      return obj8;
     case "underline":
-      let obj2 = { type: require("MarkupTypes").AST_KEY.UNDERLINE, content: transformNativeInline(type.value, channelId) };
-      return obj2;
+      const obj9 = { type: require("MarkupTypes").AST_KEY.UNDERLINE, content: transformNativeInline(type.value, channelId) };
+      return obj9;
     case "strikethrough":
-      let obj3 = { type: require("MarkupTypes").AST_KEY.STRIKETHROUGH, content: transformNativeInline(type.value, channelId) };
-      return obj3;
+      const obj10 = { type: require("MarkupTypes").AST_KEY.STRIKETHROUGH, content: transformNativeInline(type.value, channelId) };
+      return obj10;
     case "spoiler":
-      let obj4 = { type: require("MarkupTypes").AST_KEY.SPOILER, content: transformNativeInline(type.value, channelId), channelId: channelId.channelId };
-      return obj4;
+      const obj12 = { type: require("MarkupTypes").AST_KEY.SPOILER, content: transformNativeInline(type.value, channelId), channelId: channelId.channelId };
+      return obj12;
     case "code":
-      let obj5 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: type.value };
-      return obj5;
+      const obj13 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: type.value };
+      return obj13;
     case "code_block":
       let str4 = type.value.language;
       if (str4 == null) {
@@ -47,73 +47,70 @@ function transformNode(type, channelId) {
         replaced1 = replaced.replaceAll(regExp, "");
       }
       if (true === channelId.formatInline) {
-        const obj6 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
-        let obj7 = obj6;
+        const obj14 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
+        let obj15 = obj14;
       } else {
-        obj7 = { type: require("MarkupTypes").AST_KEY.CODE_BLOCK, content: replaced1, lang: str4, inQuote: true === channelId.inQuote };
+        obj15 = { type: require("MarkupTypes").AST_KEY.CODE_BLOCK, content: replaced1, lang: str4, inQuote: true === channelId.inQuote };
       }
-      return obj7;
+      return obj15;
     case "heading":
-      const obj8 = { type: require("MarkupTypes").AST_KEY.HEADING, level: type.value.level, content: transformNativeInline(type.value.content, channelId) };
-      return obj8;
+      const obj16 = { type: require("MarkupTypes").AST_KEY.HEADING, level: type.value.level, content: transformNativeInline(type.value.content, channelId) };
+      return obj16;
     case "list":
       value = type.value;
       _require = channelId;
-      const obj9 = { type: require("MarkupTypes").AST_KEY.LIST, ordered: "ordered" === value.type, start: null, items: null };
+      const obj17 = { type: require("MarkupTypes").AST_KEY.LIST, ordered: "ordered" === value.type, start: null, items: null };
       ({ value: obj11.start, items } = value);
-      obj9.items = items.map((content) => transformNativeBlocks(content.content, closure_0, "listItem"));
-      return obj9;
+      obj17.items = items.map((content) => transformNativeBlocks(content.content, closure_0, "listItem"));
+      return obj17;
     case "quote":
       if (true === channelId.formatInline) {
-        let obj10 = transformNativeBlocks(type.value, channelId, "quote");
+        let obj18 = transformNativeBlocks(type.value, channelId, "quote");
       } else {
-        obj10 = { type: require("MarkupTypes").AST_KEY.BLOCK_QUOTE, content: null, channelId: null };
-        const obj11 = {};
+        obj18 = { type: require("MarkupTypes").AST_KEY.BLOCK_QUOTE, content: null, channelId: null };
+        const obj19 = {};
         const merged = Object.assign(channelId);
-        obj11.inQuote = true;
-        let arr2 = transformNativeBlocks(type.value, obj11, "quote");
+        obj19.inQuote = true;
+        let arr2 = transformNativeBlocks(type.value, obj19, "quote");
         if (arr2.length <= 0) {
-          const obj12 = { type: tmp55(5077).AST_KEY.TEXT, content: " " };
-          items = [obj12];
-          arr2 = items;
+          const obj20 = { type: tmp55(5077).AST_KEY.TEXT, content: " " };
+          const items1 = [obj20];
+          arr2 = items1;
         }
-        obj10.content = arr2;
-        obj10.channelId = channelId.channelId;
+        obj18.content = arr2;
+        obj18.channelId = channelId.channelId;
         tmp55 = _require;
       }
-      return obj10;
+      return obj18;
     case "small":
-      const obj13 = { type: require("MarkupTypes").AST_KEY.SUBTEXT, content: transformNativeInline(type.value.content, channelId) };
-      return obj13;
+      const obj21 = { type: require("MarkupTypes").AST_KEY.SUBTEXT, content: transformNativeInline(type.value.content, channelId) };
+      return obj21;
     case "empty":
-      const obj14 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "\n" };
-      return obj14;
+      const obj23 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "\n" };
+      return obj23;
     case "emoji":
-      obj5 = require("transformNativeMarkupEmoji");
-      return obj5.transformNativeEmoji(type.value, channelId);
+      return require("transformNativeMarkupEmoji").transformNativeEmoji(type.value, channelId);
     case "timestamp":
-      obj4 = require("transformNativeMarkupTimestamp");
-      return obj4.transformNativeTimestamp(type.value);
+      return require("transformNativeMarkupTimestamp").transformNativeTimestamp(type.value);
     case "mention":
-      obj3 = require("transformNativeMarkupMention");
-      return obj3.transformNativeMention(type.value, channelId);
+      return require("transformNativeMarkupMention").transformNativeMention(type.value, channelId);
     case "link":
       if ("mention" === type.value.type) {
-        obj2 = require("transformNativeMarkupMentionLink");
-        let result1 = obj2.transformNativeMentionLink(type.value.value, channelId);
+        let result1 = require("transformNativeMarkupMentionLink").transformNativeMentionLink(type.value.value, channelId);
+        const obj3 = require("transformNativeMarkupMentionLink");
       } else {
-        obj = require("transformNativeMarkupLink");
-        result1 = obj.transformNativeLink(type.value, channelId, transformNativeInline);
+        result1 = require("transformNativeMarkupLink").transformNativeLink(type.value, channelId, transformNativeInline);
         if (result1 == null) {
-          const obj15 = { type: tmp(5077).AST_KEY.TEXT, content: "" };
-          result1 = obj15;
+          const obj24 = { type: tmp(5077).AST_KEY.TEXT, content: "" };
+          result1 = obj24;
         }
+        const obj = require("transformNativeMarkupLink");
         tmp = _require;
       }
       return result1;
     default:
-      const obj16 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "" };
-      return obj16;
+      const obj25 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "" };
+      return obj25;
   }
 }
 function transformNativeInline(value, channelId) {

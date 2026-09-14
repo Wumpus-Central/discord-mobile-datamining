@@ -1,6 +1,6 @@
-// === Module 16860: useFriendRequestCounts ===
+// === Module 16862: useFriendRequestCounts ===
 
-// Module 16860 (useFriendRequestCounts)
+// Module 16862 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7760 */;
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
 
 export const getIncomingFriendRequestCount = function getIncomingFriendRequestCount(items) {
-  [obj, obj2] = _slicedToArray(items, 2);
+  [obj, obj2] = items;
   const pendingCount = obj.getPendingCount();
   return pendingCount + obj2.getPendingIncomingCount();
 };
@@ -19,7 +19,7 @@ export const useIncomingFriendRequestCount = function useIncomingFriendRequestCo
   let items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
     const items = [RelationshipStore, GameRelationshipStore];
-    [obj, obj2] = _slicedToArray(items, 2);
+    [obj, obj2] = items;
     const pendingCount = obj.getPendingCount();
     return pendingCount + obj2.getPendingIncomingCount();
   });
@@ -31,7 +31,7 @@ export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCo
     items[1] = globalThis.s;
     tmp = items;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   const outgoingCount = obj.getOutgoingCount();
   return outgoingCount + obj2.getPendingOutgoingCount();
 };

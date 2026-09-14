@@ -1,9 +1,9 @@
-// === Module 17045: GooglePlayPriceChangeStore ===
+// === Module 17047: GooglePlayPriceChangeStore ===
 
-// Module 17045 (GooglePlayPriceChangeStore)
+// Module 17047 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 
 require = fn;

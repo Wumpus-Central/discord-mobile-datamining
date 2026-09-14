@@ -1,6 +1,6 @@
-// === Module 12407: fitCardsInGrid ===
+// === Module 12408: fitCardsInGrid ===
 
-// Module 12407 (fitCardsInGrid)
+// Module 12408 (fitCardsInGrid)
 import size from "module_2" /* 2 */;
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
@@ -65,29 +65,29 @@ export default function fitCardsInGrid(arg0) {
       }
       let result1 = diff1 / num;
       let sum = rounded + num2;
-      obj = { unusedSpace: null, columns: null, overscroll: null, rows: null, cardSize: null };
+      let obj2 = { unusedSpace: null, columns: null, overscroll: null, rows: null, cardSize: null };
       let sum1 = result1 * sum + (sum - 1) * gutterSize;
-      obj.unusedSpace = availableWidth * availableHeight - (result1 * num + diff * gutterSize) * sum1;
-      obj.columns = num;
-      obj.overscroll = availableHeight - sum1;
-      obj.rows = sum;
-      obj.cardSize = result1;
+      obj2.unusedSpace = availableWidth * availableHeight - (result1 * num + diff * gutterSize) * sum1;
+      obj2.columns = num;
+      obj2.overscroll = availableHeight - sum1;
+      obj2.rows = sum;
+      obj2.cardSize = result1;
       let tmp12 = obj;
-      if (isNewLayoutBetter(obj, obj)) {
-        tmp12 = obj;
+      if (isNewLayoutBetter(obj2, obj)) {
+        tmp12 = obj2;
       }
       let tmp13 = tmp12;
-      if (obj.overscroll < 0) {
-        let result2 = (availableHeight - (obj.rows - 1) * gutterSize) / obj.rows;
-        let sum2 = result2 * obj.rows + (obj.rows - 1) * gutterSize;
-        obj = {};
-        let merged = Object.assign(obj);
-        obj.unusedSpace = availableWidth * availableHeight - (result2 * obj.columns + (obj.columns - 1) * gutterSize) * sum2;
-        obj.overscroll = availableHeight - sum2;
-        obj.cardSize = result2;
+      if (obj2.overscroll < 0) {
+        let result2 = (availableHeight - (obj2.rows - 1) * gutterSize) / obj2.rows;
+        let sum2 = result2 * obj2.rows + (obj2.rows - 1) * gutterSize;
+        let obj3 = {};
+        let merged = Object.assign(obj2);
+        obj3.unusedSpace = availableWidth * availableHeight - (result2 * obj2.columns + (obj2.columns - 1) * gutterSize) * sum2;
+        obj3.overscroll = availableHeight - sum2;
+        obj3.cardSize = result2;
         tmp13 = tmp12;
-        if (isNewLayoutBetter(obj, tmp12)) {
-          tmp13 = obj;
+        if (isNewLayoutBetter(obj3, tmp12)) {
+          tmp13 = obj3;
         }
       }
       num = num + 1;

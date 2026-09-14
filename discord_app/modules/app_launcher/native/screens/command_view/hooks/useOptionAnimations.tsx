@@ -1,6 +1,6 @@
-// === Module 12290: useOptionAnimations ===
+// === Module 12291: useOptionAnimations ===
 
-// Module 12290 (useOptionAnimations)
+// Module 12291 (useOptionAnimations)
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import timing from "timing" /* 4637 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,14 +12,13 @@ class LayoutAnimation {
   constructor(arg0) {
     obj = { originY: null };
     obj2 = closure_0(closure_1[2]);
-    obj = { duration: c4 };
-    obj.originY = obj2.withTiming(global.targetOriginY, obj);
-    obj1 = { initialValues: { originY: global.currentOriginY }, animations: obj };
-    return obj1;
+    obj1 = { duration: c4 };
+    obj.originY = obj2.withTiming(global.targetOriginY, obj1);
+    obj5 = { initialValues: { originY: global.currentOriginY }, animations: obj };
+    return obj5;
   }
 }
-let obj = { withTiming: fn(4637).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
-LayoutAnimation.__closure = obj;
+LayoutAnimation.__closure = { withTiming: fn(4637).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = { code: "function LayoutAnimation_useOptionAnimationsTsx1(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};}" };
 class ExitingAnimation {
@@ -27,17 +26,17 @@ class ExitingAnimation {
     obj = { opacity: null, originX: null };
     bound = Math.min(global.currentOriginX - global.windowWidth, -global.windowWidth);
     obj2 = closure_0(closure_1[2]);
-    obj = { duration: c4 };
-    obj.opacity = obj2.withTiming(0, obj);
-    obj4 = closure_0(closure_1[2]);
     obj1 = { duration: c4 };
-    obj.originX = obj4.withTiming(bound, obj1);
-    obj2 = { initialValues: { originX: global.currentOriginX, opacity: 1 }, animations: obj };
-    return obj2;
+    obj.opacity = obj2.withTiming(0, obj1);
+    obj4 = closure_0(closure_1[2]);
+    obj7 = { duration: c4 };
+    obj.originX = obj4.withTiming(bound, obj7);
+    obj8 = { initialValues: { originX: global.currentOriginX, opacity: 1 }, animations: obj };
+    return obj8;
   }
 }
-obj = { withTiming: fn(4637).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
-ExitingAnimation.__closure = obj;
+let obj = { withTiming: fn(4637).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+ExitingAnimation.__closure = { withTiming: fn(4637).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = { code: "function ExitingAnimation_useOptionAnimationsTsx2(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};}" };
 let closure_5 = { code: "function useOptionAnimationsTsx3(){const{withTiming,Easing,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION,withDelay,runOnJS,handleMountAnimationComplete}=this.__closure;const scaleAnimation=withTiming(1,{duration:250,easing:Easing.bezier(0.25,1.75,0.25,1.25)});const opacityAnimation=withTiming(1,{duration:200});const layoutShiftDelay=OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION-100;return{animations:{opacity:withDelay(layoutShiftDelay,opacityAnimation),transform:[{scale:withDelay(layoutShiftDelay,scaleAnimation)}]},initialValues:{opacity:0,transform:[{scale:0.92}]},callback:function(){runOnJS(handleMountAnimationComplete)();}};}" };
@@ -48,8 +47,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(false);
+  sharedValue = sharedValue(4373).useSharedValue(false);
   dependencyMap = noop.useRef([]);
   let items = [sharedValue];
   _slicedToArray = noop.useCallback(() => {
@@ -59,33 +57,34 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
     const current1 = closure_1.current;
     current1.splice(0, closure_1.current.length);
   }, items);
-  obj = {
+  let obj = sharedValue(4373);
+  return {
     EnteringAnimation: _slicedToArray(noop.useState(() => {
       const fn = function n() {
-        sharedValue(4637);
-        let obj = { duration: 250, easing: null };
+        const obj2 = { duration: 250, easing: null };
         const Easing = sharedValue(4373).Easing;
-        obj.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-        let obj2 = sharedValue(4637);
-        obj = { animations: null, initialValues: null, callback: null };
-        const obj1 = { opacity: null, transform: null };
-        const withTimingResult = obj.withTiming(1, obj);
-        const withTimingResult1 = obj2.withTiming(1, { duration: 200 });
-        obj1.opacity = sharedValue(4373).withDelay(200, withTimingResult1);
-        obj2 = { scale: null };
+        obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
+        const obj = sharedValue(4637);
+        const withTimingResult = sharedValue(4637).withTiming(1, obj2);
+        const obj4 = { animations: null, initialValues: null, callback: null };
+        const obj5 = { opacity: null, transform: null };
+        const obj3 = sharedValue(4637);
+        const withTimingResult1 = sharedValue(4637).withTiming(1, { duration: 200 });
+        obj5.opacity = sharedValue(4373).withDelay(200, withTimingResult1);
+        const obj7 = { scale: null };
         const obj6 = sharedValue(4373);
-        obj2.scale = sharedValue(4373).withDelay(200, withTimingResult);
-        const items = [obj2];
-        obj1.transform = items;
-        obj.animations = obj1;
-        const obj3 = { opacity: 0, transform: null };
+        obj7.scale = sharedValue(4373).withDelay(200, withTimingResult);
+        const items = [obj7];
+        obj5.transform = items;
+        obj4.animations = obj5;
+        const obj9 = { opacity: 0, transform: null };
         const items1 = [{ scale: 0.92 }];
-        obj3.transform = items1;
-        obj.initialValues = obj3;
-        obj.callback = function callback() {
+        obj9.transform = items1;
+        obj4.initialValues = obj9;
+        obj4.callback = function callback() {
           sharedValue(4373).runOnJS(closure_1_2)();
         };
-        return obj;
+        return obj4;
       };
       fn.__closure = { withTiming: timing.withTiming, Easing: ReanimatedRexport.Easing, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION, withDelay: ReanimatedRexport.withDelay, runOnJS: ReanimatedRexport.runOnJS, handleMountAnimationComplete };
       fn.__workletHash = 1048348699475;
@@ -101,5 +100,4 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
       }
     }
   };
-  return obj;
 };

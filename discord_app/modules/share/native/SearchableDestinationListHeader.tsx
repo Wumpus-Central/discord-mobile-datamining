@@ -1,6 +1,6 @@
-// === Module 11115: SearchableDestinationListHeader ===
+// === Module 11116: SearchableDestinationListHeader ===
 
-// Module 11115 (SearchableDestinationListHeader)
+// Module 11116 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import NavigatorHeader from "NavigatorHeader" /* 5705 */;
@@ -11,14 +11,13 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { headerLeftContainer: null, headerRightContainer: null, header: null };
-createStyles = { paddingLeft: nativeDefault.space.PX_16 };
-createStyles.headerLeftContainer = createStyles;
-createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-const obj1 = { paddingRight: nativeDefault.space.PX_16 };
-createStyles.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
+const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+const obj4 = { paddingRight: nativeDefault.space.PX_16 };
+obj2.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
 

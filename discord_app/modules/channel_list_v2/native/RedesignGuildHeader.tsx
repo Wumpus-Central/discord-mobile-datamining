@@ -1,6 +1,6 @@
-// === Module 16228: RedesignGuildHeader ===
+// === Module 16230: RedesignGuildHeader ===
 
-// Module 16228 (RedesignGuildHeader)
+// Module 16230 (RedesignGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
@@ -15,11 +15,11 @@ import useFontScale from "useFontScale" /* 5063 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7976 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11125 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13994 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16199 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16229 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16230 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11126 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13995 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16201 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16231 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16232 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
@@ -28,46 +28,39 @@ require = fn;
 function GuildInfoHeader(bannerHeight) {
   ({ guild, scrollPosition } = bannerHeight);
   bannerHeight = bannerHeight.bannerHeight;
-  let obj = ReanimatedRexport;
+  const tmp = closure_17();
   const fn = function s() {
-    let obj = { transform: null };
-    obj = { translateY: Math.max(0, scrollPosition.get() - bannerHeight) };
-    const items = [obj];
+    const obj = { transform: null };
+    const items = [{ translateY: Math.max(0, scrollPosition.get() - bannerHeight) }];
     obj.transform = items;
     return obj;
   };
   fn.__closure = { scrollPosition, bannerHeight };
   fn.__workletHash = 6302330113586;
   fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj1 = ReanimatedRexport;
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
   const fn2 = function u() {
-    let obj = { transform: null };
-    obj = { translateY: Math.min(0, scrollPosition.get() - bannerHeight) };
-    const items = [obj];
+    const obj = { transform: null };
+    const items = [{ translateY: Math.min(0, scrollPosition.get() - bannerHeight) }];
     obj.transform = items;
     return obj;
   };
   fn2.__closure = { scrollPosition, bannerHeight };
   fn2.__workletHash = 16710117141903;
   fn2.__initData = __initData2;
-  const animatedStyle1 = obj1.useAnimatedStyle(fn2);
-  let obj2 = FavoritesUtils;
-  const isFavoritesGuildIdResult = obj2.isFavoritesGuildId(guild.id);
-  obj = { style: null, children: null };
+  const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(fn2);
+  const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(guild.id);
+  const obj4 = { style: null, children: null };
   let items = [animatedStyle, { overflow: "hidden" }];
-  obj.style = items;
-  const tmp = closure_17();
-  obj = { style: animatedStyle1, children: null };
+  obj4.style = items;
+  const obj5 = { style: animatedStyle1, children: null };
   const tmp5 = REAWorkaroundViewDefault;
-  obj.children = map1(ThemedGradientDefault, { absolute: true, tall: true });
-  const items1 = [map1(REAWorkaroundViewDefault, obj), ];
-  obj1 = { style: tmp.headerWrapper, children: null };
-  obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
-  obj1.children = map1(ChannelListStickyHeaderDefault, obj2);
-  items1[1] = map1(hasOwnProperty, obj1);
-  obj.children = items1;
-  return closure_1_14(tmp5, obj);
+  obj5.children = map1(ThemedGradientDefault, { absolute: true, tall: true });
+  const items1 = [map1(REAWorkaroundViewDefault, obj5), ];
+  const obj6 = { style: tmp.headerWrapper, children: map1(ChannelListStickyHeaderDefault, { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult }) };
+  items1[1] = map1(hasOwnProperty, obj6);
+  obj4.children = items1;
+  return closure_1_14(tmp5, obj4);
 }
 function ReanimatedGuildBanner(guild) {
   guild = guild.guild;
@@ -78,15 +71,14 @@ function ReanimatedGuildBanner(guild) {
   let sharedValue;
   const tmp3 = closure_16(scrollPosition(bannerHeight[24])().height);
   const guildBanner = tmp3;
-  let obj = guild(bannerHeight[25]);
   let items = [ActionSheetStore, sharedValue];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ actionSheetOpen: null != key.getKey(), useReducedMotion: sharedValue.useReducedMotion }));
+  const stateFromStoresObject = guild(bannerHeight[25]).useStateFromStoresObject(items, () => ({ actionSheetOpen: null != key.getKey(), useReducedMotion: sharedValue.useReducedMotion }));
   ({ useReducedMotion, actionSheetOpen } = stateFromStoresObject);
   let tmp17Result = scrollPosition(bannerHeight[13])(guild.id);
-  let obj1 = guild(bannerHeight[26]);
-  const isFocused = obj1.useIsFocused();
-  let obj2 = guild(bannerHeight[20]);
-  sharedValue = obj2.useSharedValue(0);
+  let obj = guild(bannerHeight[25]);
+  const isFocused = guild(bannerHeight[26]).useIsFocused();
+  const obj2 = guild(bannerHeight[26]);
+  sharedValue = guild(bannerHeight[20]).useSharedValue(0);
   let items1 = [sharedValue];
   let items2 = [sharedValue];
   const callback = bannerWidth.useCallback(() => {
@@ -102,7 +94,7 @@ function ReanimatedGuildBanner(guild) {
     }
     openGuildActionSheetDefault(guild);
   }, items3);
-  let obj3 = guild(bannerHeight[20]);
+  const obj3 = guild(bannerHeight[20]);
   const fn = function p() {
     value = scrollPosition.get();
     const obj = { opacity: null, transform: null };
@@ -125,11 +117,12 @@ function ReanimatedGuildBanner(guild) {
     obj.transform = items3;
     return obj;
   };
-  obj = { scrollPosition, interpolate: guild(bannerHeight[20]).interpolate, maxScrollPosition: bannerHeight, bannerHeight };
-  fn.__closure = obj;
+  const obj4 = guild(bannerHeight[20]);
+  fn.__closure = { scrollPosition, interpolate: guild(bannerHeight[20]).interpolate, maxScrollPosition: bannerHeight, bannerHeight };
   fn.__workletHash = 16532496584630;
   fn.__initData = __initData3;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const animatedStyle = obj4.useAnimatedStyle(fn);
+  const obj5 = { scrollPosition, interpolate: guild(bannerHeight[20]).interpolate, maxScrollPosition: bannerHeight, bannerHeight };
   class H {
     constructor() {
       obj = { opacity: null };
@@ -138,12 +131,12 @@ function ReanimatedGuildBanner(guild) {
       return obj;
     }
   }
-  obj = { interpolate: guild(bannerHeight[20]).interpolate, pressed: sharedValue };
-  H.__closure = obj;
+  const obj6 = guild(bannerHeight[20]);
+  H.__closure = { interpolate: guild(bannerHeight[20]).interpolate, pressed: sharedValue };
   H.__workletHash = 13777976622560;
   H.__initData = __initData4;
   const items4 = [tmp3, bannerWidth, bannerHeight];
-  const animatedStyle1 = guild(bannerHeight[20]).useAnimatedStyle(H);
+  const animatedStyle1 = obj6.useAnimatedStyle(H);
   if (null == guild.banner) {
     return null;
   } else {
@@ -158,27 +151,24 @@ function ReanimatedGuildBanner(guild) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.ANIMATED_BANNER);
     }
-    const animatableSourceWithFallback = tmp(tmp2[30]).getAnimatableSourceWithFallback(hasItem, (hasItem) => {
-      const obj = { id: guild.id, banner: guild.banner };
-      return obj.getGuildBannerSource(obj, hasItem);
-    });
-    obj1 = { style: animatedStyle, children: null };
-    obj2 = { style: tmp3.bannerWrapper, onPress: callback2, onPressIn: callback, onPressOut: callback1, children: null };
-    obj3 = { style: tmp13, source: animatableSourceWithFallback };
-    const items5 = [closure_13(tmp(tmp2[31]), obj3), , ];
-    const obj4 = { style: null };
+    const animatableSourceWithFallback = tmp(tmp2[30]).getAnimatableSourceWithFallback(hasItem, (hasItem) => AvatarUtilsDefault.getGuildBannerSource({ id: guild.id, banner: guild.banner }, hasItem));
+    const obj8 = { style: animatedStyle, children: null };
+    const obj9 = { style: tmp3.bannerWrapper, onPress: callback2, onPressIn: callback, onPressOut: callback1, children: null };
+    const obj10 = { style: tmp13, source: animatableSourceWithFallback };
+    const items5 = [closure_13(tmp(tmp2[31]), obj10), , ];
+    const obj11 = { style: null };
     const items6 = [tmp3.bannerOverlay, animatedStyle1];
-    obj4.style = items6;
-    items5[1] = closure_13(tmp(tmp2[20]).View, obj4);
+    obj11.style = items6;
+    items5[1] = closure_13(tmp(tmp2[20]).View, obj11);
     if (tmp17Result) {
       tmp17Result = closure_13(tmp(tmp2[32]), {});
     }
     items5[2] = tmp17Result;
-    obj2.children = items5;
-    obj1.children = closure_14(bannerHeight, obj2);
-    return closure_13(tmp(tmp2[20]).View, obj1);
+    obj9.children = items5;
+    obj8.children = closure_14(bannerHeight, obj9);
+    return closure_13(tmp(tmp2[20]).View, obj8);
   }
-  const obj6 = guild(bannerHeight[20]);
+  const obj7 = { interpolate: guild(bannerHeight[20]).interpolate, pressed: sharedValue };
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
@@ -191,13 +181,11 @@ let createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
 createStyles = fn(4636);
 let closure_16 = createStyles.createStyles((arg0) => {
-  let obj = { bannerWrapper: null, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
-  obj = { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" };
-  obj.bannerWrapper = obj;
-  obj = {};
+  const obj = { bannerWrapper: { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" }, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
+  const obj3 = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.backgroundColor = nativeDefault.colors.BLACK;
-  obj.bannerOverlay = obj;
+  obj3.backgroundColor = nativeDefault.colors.BLACK;
+  obj.bannerOverlay = obj3;
   return obj;
 });
 createStyles = fn(4636);
@@ -220,15 +208,15 @@ const result1 = size.fileFinishedImporting("modules/channel_list_v2/native/Redes
 
 export default noop.memo(function RedesignGuildHeader(bannerWidth) {
   ({ guild, scrollPosition, bannerHeight } = bannerWidth);
-  let obj = { style: closure_15().guildHeaderWrapper, preventClipping: true, children: null };
+  const obj = { style: closure_15().guildHeaderWrapper, preventClipping: true, children: null };
   const items = [map1(ReanimatedGuildBanner, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }), ];
-  obj = { guild, scrollPosition, bannerHeight: null };
+  const obj2 = { guild, scrollPosition, bannerHeight: null };
   let num = 0;
   if (null != guild.banner) {
     num = bannerHeight;
   }
-  obj.bannerHeight = num;
-  items[1] = map1(GuildInfoHeader, obj);
+  obj2.bannerHeight = num;
+  items[1] = map1(GuildInfoHeader, obj2);
   obj.children = items;
   return closure_1_14(hasOwnProperty, obj);
 });
@@ -247,9 +235,8 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   if (isThemeDarkResult) {
     num = 1;
   }
-  let tmp7Result = useToken;
   let num2 = 0;
-  const token = tmp7Result.useToken(nativeDefault.modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
     num2 = ButtonConstants.SMALL_BUTTON_HEIGHT + closure_1_11;
   }
@@ -263,8 +250,8 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = useScaledTextLineHeight;
-    num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
+    num6 = useScaledTextLineHeight.scaleTextLineHeight(token, fontScale);
+    const tmp7Result2 = useScaledTextLineHeight;
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {

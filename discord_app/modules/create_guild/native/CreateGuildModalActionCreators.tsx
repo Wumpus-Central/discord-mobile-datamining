@@ -1,9 +1,9 @@
-// === Module 12837: CreateGuildModalActionCreators ===
+// === Module 12838: CreateGuildModalActionCreators ===
 
-// Module 12837 (CreateGuildModalActionCreators)
+// Module 12838 (CreateGuildModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import NUFActionCreators from "NUFActionCreators" /* 12833 */;
+import NUFActionCreators from "NUFActionCreators" /* 12834 */;
 import CreateGuildConstants from "CreateGuildConstants" /* 7081 */;
 import size from "module_2" /* 2 */;
 
@@ -12,8 +12,7 @@ const result = size.fileFinishedImporting("modules/create_guild/native/CreateGui
 
 export default {
   openCreateGuildModal(onSuccess) {
-    const obj = { onSuccess };
-    obj.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), obj, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12839, dependencyMap.paths), { onSuccess }, React4);
   },
   closeCreateGuildModal() {
     ModalActionCreatorsDefault.popWithKey(React4);
@@ -23,11 +22,9 @@ export default {
     NUFActionCreators.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    const obj = { channel };
-    obj.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), obj, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12839, dependencyMap.paths), { channel }, React4);
   },
   openGuildJoinServerScreen() {
-    const obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequireImpl(12838, dependencyMap.paths), obj, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12839, dependencyMap.paths), { initialState: constants.JOIN_SERVER }, React4);
   }
 };

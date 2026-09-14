@@ -11,23 +11,23 @@ require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {
   ({ guildId, request } = arg0);
   if (null != request) {
-    let obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
+    const obj3 = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
     ({ join_request_id: obj2.joinRequestId, guild_id: obj2.guildId, user_id: obj2.userId, user: obj2.user, created_at: obj2.createdAt, form_responses: obj2.formResponses, rejection_reason: obj2.rejectionReason, application_status: obj2.applicationStatus, actioned_at: obj2.actionedAt, actioned_by_user: obj2.actionedByUser, last_seen: obj2.lastSeen, interview_channel_id: obj2.interviewChannelId } = request);
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      if (obj.userId !== currentUser.id) {
+      if (obj3.userId !== currentUser.id) {
         return false;
       }
     }
-    obj = GuildJoinRequestUtils;
-    if (obj.isApprovedAndAcked(obj)) {
+    if (obj.isApprovedAndAcked(obj3)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
         c3 = null;
       }
     } else {
-      tmp5[guildId] = obj;
+      tmp5[guildId] = obj3;
     }
+    obj = GuildJoinRequestUtils;
   }
 }
 let c3 = null;
@@ -132,12 +132,12 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(form) {
     form = form.form;
-    let guild;
+    let guild1;
     if (form != null) {
-      guild = form.guild;
+      guild1 = form.guild;
     }
-    if (null != guild) {
-      guild = form.guild;
+    if (null != guild1) {
+      const guild = form.guild;
       let features = guild.features;
       const obj = { id: null, name: null, icon: null, features: null, splash: null };
       ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);
@@ -153,18 +153,18 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
     ({ guild, join_request } = invite.invite);
     if (null != guild) {
       if (null != join_request) {
-        let obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
+        const obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
         ({ join_request_id: obj.joinRequestId, guild_id: obj.guildId, user_id: obj.userId, user: obj.user, created_at: obj.createdAt, form_responses: obj.formResponses, rejection_reason: obj.rejectionReason, application_status: obj.applicationStatus, actioned_at: obj.actionedAt, actioned_by_user: obj.actionedByUser, last_seen: obj.lastSeen, interview_channel_id: obj.interviewChannelId } = join_request);
         closure_4[join_request.guild_id] = obj;
         ({ id, features } = guild);
-        obj = { id, name: null, icon: null, features: null, splash: null };
+        const obj3 = { id, name: null, icon: null, features: null, splash: null };
         ({ name: obj2.name, icon: obj2.icon, splash } = guild);
         if (features == null) {
           features = [];
         }
-        obj.features = features;
-        obj.splash = splash;
-        closure_6[id] = obj;
+        obj3.features = features;
+        obj3.splash = splash;
+        closure_6[id] = obj3;
       }
     }
   },

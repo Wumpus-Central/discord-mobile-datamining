@@ -1,6 +1,6 @@
-// === Module 10754: DismissibleActionSheet ===
+// === Module 10755: DismissibleActionSheet ===
 
-// Module 10754 (DismissibleActionSheet)
+// Module 10755 (DismissibleActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
 import useMountEffectDefault from "useMountEffect" /* 5073 */;
 import noop from "module_19" /* 19 */;
@@ -11,13 +11,14 @@ const result = size.fileFinishedImporting("modules/dismissible_content/native/Di
 export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   importDefault = arg0;
   useMountEffectDefault(() => {
-    const obj = {};
+    const obj2 = {};
+    const obj = ActionSheetActionCreatorsDefault;
     const merged = Object.assign(closure_0);
-    obj.markAsDismissed = function markAsDismissed(arg0) {
+    obj2.markAsDismissed = function markAsDismissed(arg0) {
       closure_0(4603).hideActionSheet(closure_1_0.actionSheetKey);
       closure_1_0.markAsDismissed(arg0);
     };
-    obj.openLazy(closure_0.importer(), closure_0.actionSheetKey, obj);
+    obj.openLazy(closure_0.importer(), closure_0.actionSheetKey, obj2);
   });
   const items = [, ];
   ({ actionSheetKey: arr[0], hideSheetOnUnmount: arr[1] } = arg0);

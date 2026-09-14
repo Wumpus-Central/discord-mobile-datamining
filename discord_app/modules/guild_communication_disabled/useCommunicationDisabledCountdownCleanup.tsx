@@ -1,8 +1,10 @@
-// === Module 12591: useCommunicationDisabledCountdownCleanup ===
+// === Module 12592: useCommunicationDisabledCountdownCleanup ===
 
-// Module 12591 (useCommunicationDisabledCountdownCleanup)
+// Module 12592 (useCommunicationDisabledCountdownCleanup)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ useEffect: c2, useRef: c3 } = noop);
 let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");

@@ -1,6 +1,6 @@
-// === Module 12302: components/BottomSheetTextInput ===
+// === Module 12303: components/BottomSheetTextInput ===
 
-// Module 12302 (components/BottomSheetTextInput)
+// Module 12303 (components/BottomSheetTextInput)
 import BottomSheetTextInput from "BottomSheetTextInput" /* 9886 */;
 import size from "module_2" /* 2 */;
 

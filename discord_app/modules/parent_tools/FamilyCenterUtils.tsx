@@ -45,9 +45,9 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  let obj = _modDef4228();
-  const diffResult = obj.diff(_modDef4228(time), "s");
+  const diffResult = _modDef4228().diff(_modDef4228(time), "s");
   const tmp3 = timestampFormatter();
+  const obj = _modDef4228();
   _modDef4228(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
@@ -61,42 +61,41 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
     if (arg2 == null) {
       num = 999;
     }
-    obj = { days: Math.min(rounded, num) };
-    yesterday = intl.formatToPlainString(tmp3.days, obj);
+    const obj3 = { days: Math.min(rounded, num) };
+    yesterday = intl.formatToPlainString(tmp3.days, obj3);
   }
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  let obj = _modDef4228();
-  const diffResult = obj.diff(_modDef4228(arg0), "s");
+  const diffResult = _modDef4228().diff(_modDef4228(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
   _modDef4228(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {
     const intl4 = util.intl;
-    obj = { count: null };
+    const obj2 = { count: null };
     const _Math3 = Math;
-    obj.count = Math.floor(diffResult / 60);
-    yesterday = intl4.formatToPlainString(time.minutes, obj);
+    obj2.count = Math.floor(diffResult / 60);
+    yesterday = intl4.formatToPlainString(time.minutes, obj2);
   } else if (diffResult < c10) {
     const intl3 = util.intl;
-    obj = { count: null };
+    const obj3 = { count: null };
     const _Math2 = Math;
-    obj.count = Math.floor(diffResult / 3600);
-    yesterday = intl3.formatToPlainString(time.hours, obj);
+    obj3.count = Math.floor(diffResult / 3600);
+    yesterday = intl3.formatToPlainString(time.hours, obj3);
   } else if (diffResult < c11) {
     yesterday = time.yesterday;
   } else if (diffResult < 604800) {
     const intl2 = util.intl;
-    const obj1 = { count: null };
+    const obj4 = { count: null };
     const _Math = Math;
-    obj1.count = Math.floor(diffResult / tmp12);
-    yesterday = intl2.formatToPlainString(time.days, obj1);
+    obj4.count = Math.floor(diffResult / tmp12);
+    yesterday = intl2.formatToPlainString(time.days, obj4);
   } else {
     const intl = util.intl;
-    const obj2 = { date: tmp4 };
-    yesterday = intl.formatToPlainString(time.date, obj2);
+    const obj5 = { date: tmp4 };
+    yesterday = intl.formatToPlainString(time.date, obj5);
   }
   return yesterday;
 };
@@ -185,19 +184,19 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
   if (call_count > 0) {
     if (0 === dms_sent) {
       const intl3 = util.intl;
-      let obj = { callCount: call_count };
-      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2396["L/Cj7S"], obj);
+      const obj2 = { callCount: call_count };
+      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2396["L/Cj7S"], obj2);
     }
     return formatToPlainStringResult;
   }
   if (dms_sent > 0) {
     if (0 === call_count) {
       const intl2 = util.intl;
-      obj = { messageCount: dms_sent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2396["6X1F0i"], obj);
+      const obj3 = { messageCount: dms_sent };
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2396["6X1F0i"], obj3);
     }
   }
   const intl = util.intl;
-  obj = { messageCount: dms_sent, callCount: call_count };
-  formatToPlainStringResult = intl.formatToPlainString(_modDef2396.IYqGMG, obj);
+  formatToPlainStringResult = intl.formatToPlainString(_modDef2396.IYqGMG, { messageCount: dms_sent, callCount: call_count });
+  const obj = { messageCount: dms_sent, callCount: call_count };
 };

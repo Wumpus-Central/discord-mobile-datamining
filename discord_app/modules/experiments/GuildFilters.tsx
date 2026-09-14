@@ -8,7 +8,9 @@ import _slicedToArray from "module_32" /* 32 */;
 import AuthInviteStore from "AuthInviteStore" /* 4555 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import MurmurHashV3 from "MurmurHashV3" /* 1241 */;
+import MurmurHashV3_mod from "MurmurHashV3" /* 1239 */;
+
+const require = globalThis.__r;
 
 function isInRange(memberCount, importDefault, dependencyMap) {
   try {
@@ -57,6 +59,7 @@ function getRangeData(arg0) {
   return { min, max };
 }
 let obj = {};
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_ids")] = (arg0) => {
   closure_0 = [];
   while (tmp !== undefined) {
@@ -70,14 +73,17 @@ obj[MurmurHashV3.v3("guild_ids")] = (arg0) => {
   }
   return (arg0) => closure_0.includes(arg0);
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_id_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (memberCount) => isInRange(memberCount, importDefault, dependencyMap);
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_age_range_days")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => isInRange(Math.floor(SnowflakeUtilsDefault.age(arg0) / DurationsDefault.Millis.DAY), closure_1_0, dependencyMap);
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_member_count_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => {
@@ -89,6 +95,7 @@ obj[MurmurHashV3.v3("guild_member_count_range")] = (arg0) => {
     return tmp2;
   };
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_has_feature")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
@@ -106,6 +113,7 @@ obj[MurmurHashV3.v3("guild_has_feature")] = (arg0) => {
     return someResult;
   };
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_hub_types")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
@@ -120,6 +128,7 @@ obj[MurmurHashV3.v3("guild_hub_types")] = (arg0) => {
     return someResult;
   };
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
   closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
@@ -134,6 +143,7 @@ obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
     }
   };
 };
+let MurmurHashV3 = MurmurHashV3_mod;
 obj[MurmurHashV3.v3("guild_in_range_by_hash")] = (arg0) => {
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);

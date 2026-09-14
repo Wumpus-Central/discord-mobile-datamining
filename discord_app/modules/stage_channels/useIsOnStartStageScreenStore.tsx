@@ -1,19 +1,21 @@
 // === Module 8513: useIsOnStartStageScreenStore ===
 
 // Module 8513 (useIsOnStartStageScreenStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
+const require = globalThis.__r;
+
 require = fn;
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ isOnStartStageScreen: true }));
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({ isOnStartStageScreen: true }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
 
-export default module_560;
+export default obj3;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isOnStartStageScreen }));

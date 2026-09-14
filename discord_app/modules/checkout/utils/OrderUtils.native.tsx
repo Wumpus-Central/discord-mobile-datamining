@@ -1,6 +1,6 @@
-// === Module 10940: OrderUtils ===
+// === Module 10941: OrderUtils ===
 
-// Module 10940 (OrderUtils)
+// Module 10941 (OrderUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -12,8 +12,8 @@ let closure_4 = async function _discardDraftOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_4 = async function _discardDraftOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -45,8 +45,8 @@ let closure_4 = async function _discardDraftOrder(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else if (!closure_129_0) {
             let id;
             if (closure_129_1 != null) {
@@ -55,11 +55,10 @@ let closure_4 = async function _discardDraftOrder(arg0) {
             if (null != id) {
               if (closure_129_1.status === closure_130_3.DRAFT) {
                 c4 = 1;
-                obj1 = closure_130_0(closure_130_1[2]);
                 c5 = 3;
                 c6 = 1;
-                const obj2 = { value: obj1.discardOrder(closure_129_1.id), done: false };
-                return obj2;
+                const obj6 = { value: closure_130_0(closure_130_1[2]).discardOrder(closure_129_1.id), done: false };
+                return obj6;
               }
             }
           }
@@ -74,7 +73,7 @@ let closure_4 = async function _discardDraftOrder(arg0) {
           }
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c6 = 3;

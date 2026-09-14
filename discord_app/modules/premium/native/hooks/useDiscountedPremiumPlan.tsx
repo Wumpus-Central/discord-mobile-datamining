@@ -4,6 +4,8 @@
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7340 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumPlan.tsx");
@@ -27,12 +29,12 @@ export const useDiscountedPremiumPlan = function useDiscountedPremiumPlan(premiu
       return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = require("initialize");
   const items1 = [IAPStore];
   const items2 = [memo];
-  obj = {
+  const obj = require("initialize");
+  return {
     discountedPlan: memo,
-    discountedProduct: obj.useStateFromStores(items1, () => {
+    discountedProduct: require("initialize").useStateFromStores(items1, () => {
       let product = null;
       if (null != memo) {
         product = IAPStore.getProduct(tmp.productId);
@@ -40,5 +42,4 @@ export const useDiscountedPremiumPlan = function useDiscountedPremiumPlan(premiu
       return product;
     }, items2)
   };
-  return obj;
 };

@@ -1,6 +1,6 @@
-// === Module 16144: useMessagesReconnectToCallsEffect ===
+// === Module 16146: useMessagesReconnectToCallsEffect ===
 
-// Module 16144 (useMessagesReconnectToCallsEffect)
+// Module 16146 (useMessagesReconnectToCallsEffect)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ export default function useMessagesReconnectToCallsEffect() {
       isConnectedResult = GatewayConnectionStore.isConnected();
       if (isConnectedResult !== isConnectedResult) {
         if (isConnectedResult) {
-          [r10011, arr] = _slicedToArray(sortedChannels.getSortedChannels(), 2);
+          [r10011, arr] = sortedChannels.getSortedChannels();
           const items = [];
           const _Math = Math;
           let num3 = 0;
@@ -29,7 +29,7 @@ export default function useMessagesReconnectToCallsEffect() {
                 isGroupDMResult = channel.isGroupDM();
               }
               if (isGroupDMResult) {
-                arr = items.push(arr[num3].channelId);
+                let arr2 = items.push(arr[num3].channelId);
               }
               num3 = num3 + 1;
               let _Math2 = Math;

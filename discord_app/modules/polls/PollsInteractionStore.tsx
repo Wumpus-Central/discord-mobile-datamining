@@ -1,10 +1,12 @@
-// === Module 11560: PollsInteractionStore ===
+// === Module 11561: PollsInteractionStore ===
 
-// Module 11560 (PollsInteractionStore)
+// Module 11561 (PollsInteractionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import identity from "module_1244" /* 1244 */;
+import identity from "module_1242" /* 1242 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {
@@ -23,18 +25,18 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
             tmp4 = tmp3[closure_1_1];
           }
           const tmpResult = closure_1_2(tmp4);
-          let obj = { pollsByChannelId: null, pollsByMessageId: null };
-          obj = {};
+          const obj = { pollsByChannelId: null, pollsByMessageId: null };
+          const obj2 = {};
           const merged = Object.assign(pollsByChannelId.pollsByChannelId);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[closure_1_0]);
-          obj[closure_1_1] = tmpResult;
-          obj[closure_1_0] = obj;
-          obj.pollsByChannelId = obj;
-          const obj1 = {};
+          obj3[closure_1_1] = tmpResult;
+          obj2[closure_1_0] = obj3;
+          obj.pollsByChannelId = obj2;
+          const obj4 = {};
           const merged2 = Object.assign(pollsByChannelId.pollsByMessageId);
-          obj1[closure_1_1] = tmpResult;
-          obj.pollsByMessageId = obj1;
+          obj4[closure_1_1] = tmpResult;
+          obj.pollsByMessageId = obj4;
           return obj;
         });
       });
@@ -71,21 +73,20 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
   require("ReactBatchUpdates").batchUpdates(() => {
     state.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
-      pollsByMessageId = undefined;
+      let obj2;
       let tmp3 = pollsByChannelId[closure_1_0];
       if (tmp3 == null) {
         tmp3 = closure_2_3;
       }
-      pollsByMessageId = SnowflakeUtilsDefault;
-      const keys = pollsByMessageId.keys(tmp3);
-      pollsByMessageId = {};
+      const keys = SnowflakeUtilsDefault.keys(tmp3);
+      obj2 = {};
       const merged = Object.assign(pollsByMessageId);
       const item = keys.forEach((item) => {
         delete tmp2[tmp];
       });
       const merged1 = Object.assign(pollsByChannelId);
       delete tmp2[tmp];
-      return { pollsByChannelId: {}, pollsByMessageId };
+      return { pollsByChannelId: {}, pollsByMessageId: obj2 };
     });
   });
 };
@@ -99,19 +100,17 @@ export const clearPollState = function clearPollState(arg0, arg1) {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
       const merged = Object.assign(obj);
       delete tmp3[tmp];
-      obj = {};
       const merged1 = Object.assign(pollsByMessageId);
       delete tmp2[tmp];
-      const obj1 = { pollsByChannelId: null, pollsByMessageId: null };
-      const obj2 = {};
+      const obj4 = { pollsByChannelId: null, pollsByMessageId: null };
+      const obj5 = {};
       const merged2 = Object.assign(pollsByChannelId);
-      obj2[closure_1_0] = obj;
-      obj1.pollsByChannelId = obj2;
-      obj1.pollsByMessageId = obj;
-      return obj1;
+      obj5[closure_1_0] = {};
+      obj4.pollsByChannelId = obj5;
+      obj4.pollsByMessageId = {};
+      return obj4;
     });
   });
 };

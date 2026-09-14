@@ -1,8 +1,10 @@
-// === Module 13629: PremiumPlanSelectStore ===
+// === Module 13630: PremiumPlanSelectStore ===
 
-// Module 13629 (PremiumPlanSelectStore)
+// Module 13630 (PremiumPlanSelectStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const usePremiumPlanSelectStore = module_560.create(() => ({ isPurchasing: false, purchasingProductId: null }));
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");

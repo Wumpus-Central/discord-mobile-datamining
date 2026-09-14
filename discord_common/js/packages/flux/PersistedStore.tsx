@@ -15,14 +15,14 @@ let PersistedStore;
 class PersistedStore extends r10016 {
   constructor(arg0, arg1, arg2) {
     closure_0 = undefined;
-    tmp3 = new tmp3(global, fn, importDefault, new.target, tmp3, tmp2, tmp, new.target);
-    closure_0 = tmp3;
+    tmp31 = new tmp3(global, fn, importDefault, new.target, tmp3, tmp2, tmp, new.target);
+    closure_0 = tmp31;
     num = 0;
-    if (null != tmp3.getClass().migrations) {
-      num = tmp3.getClass().migrations.length;
+    if (null != tmp31.getClass().migrations) {
+      num = tmp31.getClass().migrations.length;
     }
-    tmp3._version = num;
-    tmp3.callback = function callback(fn) {
+    tmp31._version = num;
+    tmp31.callback = function callback(fn) {
       const persistKey = closure_0.getClass().persistKey;
       closure_0.persist();
       PersistedStore._writePromises.delete(persistKey);
@@ -31,8 +31,8 @@ class PersistedStore extends r10016 {
       fn();
     };
     tmp4 = closure_1(closure_2[4]);
-    tmp3.throttledCallback = tmp4((arg0) => closure_0.callback(arg0), tmp3.getClass().throttleDelay, { leading: false });
-    if (typeof tmp3.getClass().persistKey !== "string") {
+    tmp31.throttledCallback = tmp4((arg0) => closure_0.callback(arg0), tmp31.getClass().throttleDelay, { leading: false });
+    if (typeof tmp31.getClass().persistKey !== "string") {
       tmp15 = globalThis;
       _Error3 = Error;
       _HermesInternal3 = HermesInternal;
@@ -40,10 +40,10 @@ class PersistedStore extends r10016 {
       str6 = "";
       tmp16 = new.target;
       tmp17 = new.target;
-      error = new Error("" + tmp3.getClass().name + " initialized without a `persistKey`. Add one so we know where to save your stuff!");
+      error = new Error("" + tmp31.getClass().name + " initialized without a `persistKey`. Add one so we know where to save your stuff!");
       tmp19 = error;
       throw error;
-    } else if (typeof tmp3.initialize !== "function") {
+    } else if (typeof tmp31.initialize !== "function") {
       tmp10 = globalThis;
       _Error2 = Error;
       _HermesInternal2 = HermesInternal;
@@ -51,10 +51,10 @@ class PersistedStore extends r10016 {
       str4 = "";
       tmp11 = new.target;
       tmp12 = new.target;
-      error1 = new Error("" + tmp3.getClass().name + " initialized without an `initialize` method. Add one that accepts the initial cached state.");
+      error1 = new Error("" + tmp31.getClass().name + " initialized without an `initialize` method. Add one that accepts the initial cached state.");
       tmp14 = error1;
       throw error1;
-    } else if (typeof tmp3.getState !== "function") {
+    } else if (typeof tmp31.getState !== "function") {
       tmp5 = globalThis;
       _Error = Error;
       _HermesInternal = HermesInternal;
@@ -62,12 +62,12 @@ class PersistedStore extends r10016 {
       str2 = "";
       tmp6 = new.target;
       tmp7 = new.target;
-      error2 = new Error("" + tmp3.getClass().name + " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.");
+      error2 = new Error("" + tmp31.getClass().name + " initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.");
       tmp9 = error2;
       throw error2;
     } else {
-      addChangeListenerResult = tmp3.addChangeListener(() => closure_0.asyncPersist());
-      return tmp3;
+      addChangeListenerResult = tmp31.addChangeListener(() => closure_0.asyncPersist());
+      return tmp31;
     }
   }
 }
@@ -132,8 +132,8 @@ PersistedStore["shouldClear"] = function shouldClear(c7, persistKey) {
 };
 PersistedStore["clearPersistQueue"] = function clearPersistQueue(arg0) {
   closure_0 = arg0;
-  let _writeResolvers = PersistedStore._writeResolvers;
-  const item = _writeResolvers.forEach((item, index) => {
+  const _writeResolvers1 = PersistedStore._writeResolvers;
+  const item = _writeResolvers1.forEach((item, index) => {
     [tmp, tmp2] = item;
     if (PersistedStore.shouldClear(closure_0, index)) {
       PersistedStore._writePromises.delete(index);
@@ -145,7 +145,7 @@ PersistedStore["clearPersistQueue"] = function clearPersistQueue(arg0) {
     }
   });
   PersistedStore._writePromises.clear();
-  _writeResolvers = PersistedStore._writeResolvers;
+  let _writeResolvers = PersistedStore._writeResolvers;
   _writeResolvers.clear();
 };
 PersistedStore["getAllStates"] = function getAllStates() {
@@ -260,13 +260,14 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
             tmp8 = tmp7;
           } while (num2 < num);
         }
-        let obj = { state: tmp8, requiresPersist: true };
-        return obj;
+        const obj2 = { state: tmp8, requiresPersist: true };
+        return obj2;
       }
     }
   }
   if (Object.values(tmp6).length > 0) {
-    obj = { state: tmp6, requiresPersist: true };
+    const obj3 = { state: tmp6, requiresPersist: true };
+    let obj = obj3;
   } else {
     obj = { state: _state, requiresPersist: false };
   }

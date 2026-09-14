@@ -1,6 +1,6 @@
-// === Module 17508: LabelLayoutComponent ===
+// === Module 17510: LabelLayoutComponent ===
 
-// Module 17508 (LabelLayoutComponent)
+// Module 17510 (LabelLayoutComponent)
 import Server from "Server" /* 1894 */;
 import Input from "Input" /* 6708 */;
 import ComponentStateContext from "ComponentStateContext" /* 8229 */;
@@ -15,15 +15,14 @@ const result = size.fileFinishedImporting("modules/interaction_components/native
 export default function LabelLayoutComponent(arg0) {
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
-  let obj = ComponentStateContext;
-  const componentError = obj.useComponentError(component);
+  const componentError = ComponentStateContext.useComponentError(component);
   if (component.type === Server.ComponentType.CHECKBOX) {
     let renderComponentResult = renderComponent(component, "label-child");
   } else {
-    obj = { label, description, required: component.required, errorMessage: componentError, children: null };
-    obj = { style: { width: "100%" }, children: renderComponent(component, "label-child") };
-    obj.children = <View style={{ width: "100%" }}>{renderComponent(component, "label-child")}</View>;
-    renderComponentResult = jsx(Input.Input, { style: { width: "100%" }, children: renderComponent(component, "label-child") });
+    const obj2 = { label, description, required: component.required, errorMessage: componentError, children: null };
+    const obj3 = { style: { width: "100%" }, children: renderComponent(component, "label-child") };
+    obj2.children = <View style={{ width: "100%" }}>{renderComponent(component, "label-child")}</View>;
+    renderComponentResult = jsx(Input.Input, { label, description, required: component.required, errorMessage: componentError, children: null });
   }
   return renderComponentResult;
 };

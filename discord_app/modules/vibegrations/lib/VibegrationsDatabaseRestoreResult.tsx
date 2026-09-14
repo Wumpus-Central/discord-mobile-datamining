@@ -1,13 +1,14 @@
-// === Module 16698: databaseRestoreResultFromStatus ===
+// === Module 16700: databaseRestoreResultFromStatus ===
 
-// Module 16698 (databaseRestoreResultFromStatus)
+// Module 16700 (databaseRestoreResultFromStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDatabaseRestoreResult.tsx");
 
 export const databaseRestoreResultFromStatus = function databaseRestoreResultFromStatus(status, message) {
   if (202 === status) {
-    let obj = { ok: false, code: "unconfirmed", message };
+    const obj2 = { ok: false, code: "unconfirmed", message };
+    let obj = obj2;
   } else {
     if (status >= 200) {
       if (status < 300) {

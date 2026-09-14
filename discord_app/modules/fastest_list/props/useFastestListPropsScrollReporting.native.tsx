@@ -26,13 +26,13 @@ export default function useFastestListPropsScrollReporting(scrollReporting, hori
   { onScroll: null }.onScroll = fn;
   scrollReporting = scrollReporting.scrollReporting;
   if ("animatedScrollPosition" === scrollReporting) {
-    let obj = { onScroll: tmp3 };
-    return obj;
+    const obj2 = { onScroll: tmp3 };
+    return obj2;
   } else if ("animatedCallbacks" === scrollReporting) {
-    obj = { onScroll: scrollReporting.scrollHandlerAnimated };
-    return obj;
+    const obj3 = { onScroll: scrollReporting.scrollHandlerAnimated };
+    return obj3;
   } else {
-    obj = { onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null };
+    const obj = { onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null };
     ({ onScroll: obj.onScroll, onScrollBeginDrag: obj.onScrollBeginDrag, onScrollEndDrag: obj.onScrollEndDrag } = scrollReporting);
     return obj;
   }

@@ -1,12 +1,14 @@
-// === Module 12365: useUploadDisabled ===
+// === Module 12366: useUploadDisabled ===
 
-// Module 12365 (useUploadDisabled)
+// Module 12366 (useUploadDisabled)
 import DraftStore from "DraftStore" /* 4977 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7324 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const DraftType = DraftStore.DraftType;
 ({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: metroRequire } = Constants);

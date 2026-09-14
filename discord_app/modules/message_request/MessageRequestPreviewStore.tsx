@@ -1,6 +1,6 @@
-// === Module 12724: MessageRequestPreviewStore ===
+// === Module 12725: MessageRequestPreviewStore ===
 
-// Module 12724 (MessageRequestPreviewStore)
+// Module 12725 (MessageRequestPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
@@ -25,11 +25,10 @@ function storeMessagePreview(id, arg1) {
     if (true) {
       let messageRecord = null;
       if (!flag2) {
-        let obj = MessageRecordUtils;
-        messageRecord = obj.createMessageRecord(null);
+        messageRecord = MessageRecordUtils.createMessageRecord(null);
       }
-      obj = { loaded: true, error: flag, message: messageRecord };
-      closure_5[id] = obj;
+      const obj2 = { loaded: true, error: flag, message: messageRecord };
+      closure_5[id] = obj2;
     } else {
       // // eliminated: always false
     }
@@ -91,7 +90,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
     if (isPushNotification.isPushNotification) {
       return false;
     } else {
-      let channel_id = isPushNotification.message.channel_id;
+      const channel_id = isPushNotification.message.channel_id;
       const message = isPushNotification.message;
       let isMessageRequestResult = MessageRequestStore.isMessageRequest(channel_id);
       if (!isMessageRequestResult) {
@@ -101,15 +100,14 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
         if (null == message) {
           let messageRecord = null;
           if (null != message) {
-            let obj = MessageRecordUtils;
-            messageRecord = obj.createMessageRecord(message);
+            messageRecord = MessageRecordUtils.createMessageRecord(message);
           }
-          obj = { loaded: true, error: false, message: messageRecord };
-          closure_5[channel_id] = obj;
+          const obj2 = { loaded: true, error: false, message: messageRecord };
+          closure_5[channel_id] = obj2;
         } else {
-          channel_id = undefined;
+          let channel_id1;
           if (message != null) {
-            channel_id = message.channel_id;
+            channel_id1 = message.channel_id;
           }
         }
       }
@@ -159,15 +157,14 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefa
         if (null == message_preview) {
           let messageRecord = null;
           if (null != message_preview) {
-            let obj = MessageRecordUtils;
-            messageRecord = obj.createMessageRecord(message_preview);
+            messageRecord = MessageRecordUtils.createMessageRecord(message_preview);
           }
-          obj = { loaded: true, error: false, message: messageRecord };
-          closure_5[channel_id] = obj;
+          const obj2 = { loaded: true, error: false, message: messageRecord };
+          closure_5[channel_id] = obj2;
         } else {
-          channel_id = undefined;
+          let channel_id1;
           if (message_preview != null) {
-            channel_id = message_preview.channel_id;
+            channel_id1 = message_preview.channel_id;
           }
         }
       }

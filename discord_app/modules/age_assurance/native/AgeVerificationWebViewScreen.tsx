@@ -18,15 +18,15 @@ const AgeVerificationIncodeWebViewConstants = fn(8532);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-fn(4636);
-let createStyles = { container: null, loadingOverlay: null, webView: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.container = createStyles;
-const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.loadingOverlay = rect;
+const createStyles = fn(4636);
+let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
-createStyles.webView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.loadingOverlay = rect;
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.webView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationWebViewScreen.tsx");
 
@@ -75,8 +75,10 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
       callback1();
     }
   }, items2);
-  let obj = webviewUrl(onClose[10]);
-  const watchAgeVerificationStatusChange = obj.useWatchAgeVerificationStatusChange(callback2);
+  const tmp2 = ref(noop.useState(true), 2);
+  const tmp8 = webviewUrl;
+  const tmp9 = onClose;
+  const watchAgeVerificationStatusChange = webviewUrl(onClose[10]).useWatchAgeVerificationStatusChange(callback2);
   const callback3 = noop.useCallback((arg0) => {
     const current = ref.current;
     if (current != null) {
@@ -121,9 +123,8 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
             }
           });
         } else if ("fallback_request" === tmp4.kind) {
-          let obj = AgeVerificationURLActionCreators;
-          obj = { previousInterviewId: tmp4.previousInterviewId };
-          const incodeSessionBootstrap = obj.requestIncodeSessionBootstrap(obj);
+          const obj2 = { previousInterviewId: tmp4.previousInterviewId };
+          const incodeSessionBootstrap = AgeVerificationURLActionCreators.requestIncodeSessionBootstrap(obj2);
           incodeSessionBootstrap.then((incode_parameters) => {
             incode_parameters = incode_parameters.incode_parameters;
             let session_token;
@@ -165,8 +166,8 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
         }
       }
     } catch (tmp20) {
-      obj = { error: tmp20 };
-      logger.warn("Failed to parse WebView message", obj);
+      const obj4 = { error: tmp20 };
+      logger.warn("Failed to parse WebView message", obj4);
     }
   }, items3);
   const memo = noop.useMemo(() => {
@@ -193,33 +194,31 @@ export default function AgeVerificationWebViewScreen(webviewUrl) {
     }
   }, items5);
   const tmp15 = closure_13();
-  obj = { style: tmp15.container, children: null };
-  obj = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
-  const tmp2 = ref(noop.useState(true), 2);
-  const tmp8 = webviewUrl;
-  const tmp9 = onClose;
+  let obj2 = { style: tmp15.container, children: null };
+  const obj5 = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
+  let obj = webviewUrl(onClose[10]);
   const tmp19 = onComplete(onClose[13]);
   let tmp20;
   if (obj4.isIOS()) {
     tmp20 = callback5;
   }
-  obj.onShouldStartLoadWithRequest = tmp20;
-  obj.onMessage = callback4;
-  obj.onError = function onError(code) {
+  obj5.onShouldStartLoadWithRequest = tmp20;
+  obj5.onMessage = callback4;
+  obj5.onError = function onError(code) {
     logger.warn("WebView load error", { code: code.nativeEvent.code });
     callback();
   };
-  obj.onLoadEnd = function onLoadEnd() {
+  obj5.onLoadEnd = function onLoadEnd() {
     callback();
   };
-  obj.injectedJavaScriptBeforeContentLoaded = webviewUrl.injectedJavaScriptBeforeContentLoaded;
+  obj5.injectedJavaScriptBeforeContentLoaded = webviewUrl.injectedJavaScriptBeforeContentLoaded;
   ({ webView: obj3.style, webView: obj3.containerStyle } = tmp15);
-  const items6 = [memo(tmp19, obj), ];
+  const items6 = [memo(tmp19, obj5), ];
   if (tmp18Result) {
-    const obj1 = { style: tmp15.loadingOverlay, children: tmp18(tmp8(tmp9[15]).ActivityIndicator, {}) };
-    tmp18Result = tmp18(tmp17, obj1);
+    const obj8 = { style: tmp15.loadingOverlay, children: tmp18(tmp8(tmp9[15]).ActivityIndicator, {}) };
+    tmp18Result = tmp18(tmp17, obj8);
   }
   items6[1] = tmp18Result;
-  obj.children = items6;
-  return closure_11(ref2, obj);
+  obj2.children = items6;
+  return closure_11(ref2, obj2);
 };

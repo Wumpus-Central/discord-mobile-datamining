@@ -1,6 +1,6 @@
-// === Module 15764: MFA ===
+// === Module 15766: MFA ===
 
-// Module 15764 (MFA)
+// Module 15766 (MFA)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -22,8 +22,8 @@ let closure_4 = async function _finishMFACheck(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_4 = async function _finishMFACheck(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
@@ -61,19 +61,19 @@ let closure_4 = async function _finishMFACheck(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c5 = 1;
           const HTTP = closure_131_0(closure_131_1[1]).HTTP;
           const request = { url: "/mfa/finish", body: null, retries: null, rejectWithError: false };
-          const obj2 = { ticket: closure_130_0, mfa_type: closure_130_1, data: closure_130_2 };
-          request.body = obj2;
+          const obj5 = { ticket: closure_130_0, mfa_type: closure_130_1, data: closure_130_2 };
+          request.body = obj5;
           request.retries = closure_130_3;
           c6 = 3;
           c7 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
         }
       } else if (2 === tmp8) {
         c5 = 0;
@@ -96,12 +96,12 @@ let closure_4 = async function _finishMFACheck(arg0) {
       } else if (arg0 === 2) {
         c5 = 0;
         c7 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c5 = 0;
         c7 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp22) {

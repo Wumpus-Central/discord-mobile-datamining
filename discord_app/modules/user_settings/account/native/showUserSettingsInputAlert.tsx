@@ -1,6 +1,6 @@
-// === Module 14884: showUserSettingsInputAlert ===
+// === Module 14885: showUserSettingsInputAlert ===
 
-// Module 14884 (showUserSettingsInputAlert)
+// Module 14885 (showUserSettingsInputAlert)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 export default function showUserSettingsInputAlert(arg0) {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
   closure_3 = Object.assign(arg0, Object.assign({ onSubmit: 0, onSuccess: 0, onError: 0 }));
-  let obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(14885, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(14886, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -40,6 +40,5 @@ export default function showUserSettingsInputAlert(arg0) {
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

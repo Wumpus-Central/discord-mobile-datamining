@@ -1,6 +1,6 @@
-// === Module 13428: BetaTag ===
+// === Module 13429: BetaTag ===
 
-// Module 13428 (BetaTag)
+// Module 13429 (BetaTag)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
@@ -12,20 +12,17 @@ require = fn;
 const View = fn(17).View;
 const Gradients = fn(7535).Gradients;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, text: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
-createStyles.container = createStyles;
-createStyles.text = { textTransform: "uppercase" };
-let closure_6 = createStyles.createStyles(createStyles);
-let obj1 = { SMALL: "small", MEDIUM: "medium" };
+const createStyles = fn(4636);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
+let closure_6 = createStyles.createStyles(obj2);
+let obj4 = { SMALL: "small", MEDIUM: "medium" };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
 
 export default function BetaTag(gradient) {
   ({ style, textStyle, size } = gradient);
   if (size === undefined) {
-    size = obj1.MEDIUM;
+    size = obj4.MEDIUM;
   }
   let flag = gradient.gradient;
   if (flag === undefined) {
@@ -33,37 +30,37 @@ export default function BetaTag(gradient) {
   }
   const tmp2 = closure_6();
   let str = "text-xs/bold";
-  if (obj1.SMALL !== size) {
-    if (obj1.MEDIUM === size) {
+  if (obj4.SMALL !== size) {
+    if (obj4.MEDIUM === size) {
       str = "text-sm/bold";
     }
   }
   if (flag) {
-    let obj = { style: null, start: null, end: null, colors: null, children: null };
+    const obj2 = { style: null, start: null, end: null, colors: null, children: null };
     const items = [tmp2.container, style];
-    obj.style = items;
-    obj.start = ConstantsIOS.HorizontalGradient.START;
-    obj.end = ConstantsIOS.HorizontalGradient.END;
-    obj.colors = Gradients.PREMIUM_TIER_2_TRI_COLOR;
-    obj = { variant: str, color: "text-overlay-light", style: null, children: null };
+    obj2.style = items;
+    obj2.start = ConstantsIOS.HorizontalGradient.START;
+    obj2.end = ConstantsIOS.HorizontalGradient.END;
+    obj2.colors = Gradients.PREMIUM_TIER_2_TRI_COLOR;
+    const obj3 = { variant: str, color: "text-overlay-light", style: null, children: null };
     const items1 = [tmp2.text, textStyle];
-    obj.style = items1;
+    obj3.style = items1;
     const intl2 = util.intl;
-    obj.children = intl2.string(util.t.oW0eUd);
-    obj.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
-    let tmp3Result = jsx(LinearGradientDefault, { variant: str, color: "text-overlay-light", style: null, children: null });
+    obj3.children = intl2.string(util.t.oW0eUd);
+    obj2.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
+    let tmp3Result = jsx(LinearGradientDefault, { style: null, start: null, end: null, colors: null, children: null });
   } else {
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
     obj.style = items2;
-    obj1 = { variant: str, color: "text-overlay-light", style: null, children: null };
+    obj4 = { variant: str, color: "text-overlay-light", style: null, children: null };
     const items3 = [tmp2.text, textStyle];
-    obj1.style = items3;
+    obj4.style = items3;
     const intl = util.intl;
-    obj1.children = intl.string(util.t.oW0eUd);
+    obj4.children = intl.string(util.t.oW0eUd);
     obj.children = jsx(Text_Text.Text, { variant: str, color: "text-overlay-light", style: null, children: null });
     tmp3Result = <View style={null}>{null}</View>;
   }
   return tmp3Result;
 };
-export const BetaSizes = obj1;
+export const BetaSizes = obj4;

@@ -1,6 +1,6 @@
-// === Module 13820: useHasXboxMonthlyOrbsPerk ===
+// === Module 13821: useHasXboxMonthlyOrbsPerk ===
 
-// Module 13820 (useHasXboxMonthlyOrbsPerk)
+// Module 13821 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
@@ -35,21 +35,21 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = PremiumUtils;
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
-      tmpResult = PerksStateUtils;
       let perks;
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      const perkSource = tmpResult.getPerkSource(perks, user.Perk.MONTHLY_ORBS);
+      const perkSource = PerksStateUtils.getPerkSource(perks, user.Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
         hasItem = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       flag = hasItem;
+      const tmpResult2 = PerksStateUtils;
     }
+    tmpResult = PremiumUtils;
   }
   return flag;
 };

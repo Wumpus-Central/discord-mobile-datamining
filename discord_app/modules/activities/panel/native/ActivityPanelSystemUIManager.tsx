@@ -1,10 +1,10 @@
-// === Module 17147: ActivityPanelSystemUIManager ===
+// === Module 17149: ActivityPanelSystemUIManager ===
 
-// Module 17147 (ActivityPanelSystemUIManager)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+// Module 17149 (ActivityPanelSystemUIManager)
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import StatusBarDefault from "StatusBar" /* 9611 */;
 import HomeIndicatorDefault from "HomeIndicator" /* 9613 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17124 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,9 +26,9 @@ class BaseActivityPanelSystemUIManager {
       if (isWindowLandscape) {
         tmp10 = !tmp;
       }
-      obj = { hidden: null, barStyle: "light-content" };
-      obj.hidden = !tmp10;
-      tmp7Result = tmp7(tmp9, obj);
+      obj1 = { hidden: null, barStyle: "light-content" };
+      obj1.hidden = !tmp10;
+      tmp7Result = tmp7(tmp9, obj1);
     }
     items = [, ];
     items[0] = tmp7Result;
@@ -37,10 +37,10 @@ class BaseActivityPanelSystemUIManager {
     if (tmp) {
       tmp = !tmp3;
     }
-    obj1 = { children: null };
+    obj4 = { children: null };
     items[1] = tmp11(tmp12, { prefersHidden: tmp, prefersDeferringSystemGestures: tmp3 });
-    obj1.children = items;
-    return tmp4(tmp5, obj1);
+    obj4.children = items;
+    return tmp4(tmp5, obj4);
   }
 }
 const ActivityPanelModes = fn(9635).ActivityPanelModes;

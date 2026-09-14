@@ -1,6 +1,6 @@
-// === Module 17925: InappropriateConversationsManager ===
+// === Module 17926: InappropriateConversationsManager ===
 
-// Module 17925 (InappropriateConversationsManager)
+// Module 17926 (InappropriateConversationsManager)
 import _modDef4760 from "module_4760" /* 4760 */;
 import SoundUtils from "SoundUtils" /* 10032 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -89,14 +89,14 @@ let closure_2 = SoundUtils.createSound("vibing_wumpus", "vibing_wumpus", 0);
 let closure_3 = 0;
 let c4 = 0;
 let c5 = null;
-let prototype = function InappropriateConversationsManager() {
+const prototype = function InappropriateConversationsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { VIBING_WUMPUS_PLAY_MUSIC: fadeIn, VIBING_WUMPUS_STOP_MUSIC: handleStopMusic, VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
 
-export default prototype;
+export default prototype1;

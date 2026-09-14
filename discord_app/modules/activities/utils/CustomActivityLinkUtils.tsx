@@ -1,10 +1,10 @@
-// === Module 13070: CustomActivityLinkUtils ===
+// === Module 13071: CustomActivityLinkUtils ===
 
-// Module 13070 (CustomActivityLinkUtils)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 13073 */;
+// Module 13071 (CustomActivityLinkUtils)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 13074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 13071 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 13072 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -25,8 +25,8 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,8 +39,8 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           if (null != closure_0) {
             if (null != closure_1) {
@@ -52,18 +52,18 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
                 const type2 = result.type;
                 if (utils_CustomActivityLinkUtils.CustomLinkType.MANAGED === type2) {
                   const HTTP2 = HTTPUtils.HTTP;
-                  const obj1 = { url: Endpoints.APPLICATION_MANAGED_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
+                  const obj4 = { url: Endpoints.APPLICATION_MANAGED_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
                   c3 = 1;
                   c2 = 1;
-                  const obj2 = { value: HTTP2.get(obj1), done: false };
-                  return obj2;
+                  const obj5 = { value: HTTP2.get(obj4), done: false };
+                  return obj5;
                 } else if (utils_CustomActivityLinkUtils.CustomLinkType.QUICK === type2) {
                   const HTTP = HTTPUtils.HTTP;
-                  const obj3 = { url: Endpoints.APPLICATION_QUICK_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
+                  const obj6 = { url: Endpoints.APPLICATION_QUICK_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
                   c3 = 2;
                   c2 = 1;
-                  const obj4 = { value: HTTP.get(obj3), done: false };
-                  return obj4;
+                  const obj7 = { value: HTTP.get(obj6), done: false };
+                  return obj7;
                 } else {
                   const type = result.type;
                   c2 = 3;
@@ -81,23 +81,23 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c2 = 3;
-          const obj6 = { value: value.body, done: true };
-          return obj6;
+          const obj9 = { value: value.body, done: true };
+          return obj9;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         c2 = 3;
-        obj = { value: value.body, done: true };
+        const obj = { value: value.body, done: true };
         return obj;
       }
     } catch (tmp7) {
@@ -114,8 +114,8 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -128,8 +128,8 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp14;
           closure_132_0 = undefined;
@@ -138,41 +138,39 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
             c3 = undefined;
           }
           if (null == closure_1) {
-            const obj1 = { customId: tmp11 };
+            const obj4 = { customId: tmp11 };
             c7 = 3;
-            const obj2 = { value: obj1, done: true };
-            return obj2;
+            const obj5 = { value: obj4, done: true };
+            return obj5;
           } else if (null != tmp11) {
-            const obj3 = { customId: tmp11 };
+            const obj6 = { customId: tmp11 };
             c7 = 3;
-            const obj4 = { value: obj3, done: true };
-            return obj4;
+            const obj7 = { value: obj6, done: true };
+            return obj7;
           } else {
             c6 = 1;
             c5 = 2;
             c7 = 1;
-            const obj5 = { value: fetchCustomActivityLink(closure_0, closure_1), done: false };
-            return obj5;
+            const obj8 = { value: fetchCustomActivityLink(closure_0, closure_1), done: false };
+            return obj8;
           }
         }
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj6 = { value: { customId: "r" }, done: true };
-        return obj6;
+        const obj9 = { value: { customId: "r" }, done: true };
+        return obj9;
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 0;
         c7 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         closure_132_0 = value;
-        if (null == closure_132_0) {
-          obj = { customId: "r" };
-        } else {
+        if (null != closure_132_0) {
           { customId: null }[0] = closure_132_0.custom_id;
         }
         c6 = 0;

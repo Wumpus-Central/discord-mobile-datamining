@@ -25,7 +25,6 @@ function getUncachedChannelPermissions(id, arg1) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = UserStore;
   const currentUser = UserStore.getCurrentUser();
   if (null == currentUser) {
     return PermissionUtilsAll.NONE;
@@ -54,7 +53,7 @@ function getUncachedChannelPermissions(id, arg1) {
             if (null != guildId) {
               let NONE2 = dependencyMap[guildId];
               if (null == NONE2) {
-                const currentUser1 = obj.getCurrentUser();
+                const currentUser1 = UserStore.getCurrentUser();
                 if (null == currentUser1) {
                   NONE2 = PermissionUtilsAll.NONE;
                 } else {
@@ -62,8 +61,8 @@ function getUncachedChannelPermissions(id, arg1) {
                   if (null == guild) {
                     let NONE = PermissionUtilsAll.NONE;
                   } else {
-                    obj = { user: currentUser1, context: guild, checkElevated: true };
-                    NONE = PermissionUtilsAll.computePermissions(obj);
+                    const obj4 = { user: currentUser1, context: guild, checkElevated: true };
+                    NONE = PermissionUtilsAll.computePermissions(obj4);
                     dependencyMap[guildId] = NONE;
                   }
                   NONE2 = NONE;
@@ -75,8 +74,8 @@ function getUncachedChannelPermissions(id, arg1) {
           obj2 = _modDef12;
         }
       }
-      obj = { user: currentUser, context: channel, checkElevated: flag };
-      NONE2 = PermissionUtilsAll.computePermissions(obj);
+      const obj6 = { user: currentUser, context: channel, checkElevated: flag };
+      NONE2 = PermissionUtilsAll.computePermissions(obj6);
     }
   }
 }
@@ -161,8 +160,8 @@ function handleStageInstancesChanged(instance) {
     return false;
   } else {
     const currentUser = UserStore.getCurrentUser();
-    const obj = { user: currentUser, context: channel };
-    const permissions = obj.computePermissions(obj);
+    const obj2 = { user: currentUser, context: channel };
+    const permissions = PermissionUtilsAll.computePermissions(obj2);
     if (permissions === dependencyMap2[channel.id]) {
       return false;
     } else {
@@ -195,7 +194,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == channel) {
         let NONE4 = PermissionUtilsAll.NONE;
       } else {
-        let tmpResult = PermissionUtilsAll;
+        const tmpResult = PermissionUtilsAll;
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
@@ -212,7 +211,6 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       NONE = tmp11;
     }
   } else {
-    let obj = GuildRecordUtils;
     if (obj.isGuildRecord(context)) {
       const id = context.id;
       let NONE2 = dependencyMap[id];
@@ -225,23 +223,24 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
           if (null == guild) {
             let NONE3 = PermissionUtilsAll.NONE;
           } else {
-            tmpResult = PermissionUtilsAll;
-            obj = { user: currentUser, context: guild, checkElevated: true };
-            NONE3 = tmpResult.computePermissions(obj);
+            const obj2 = { user: currentUser, context: guild, checkElevated: true };
+            NONE3 = PermissionUtilsAll.computePermissions(obj2);
             dependencyMap[id] = NONE3;
+            const tmpResult3 = PermissionUtilsAll;
           }
           NONE2 = NONE3;
         }
       }
       NONE = NONE2;
     }
+    obj = GuildRecordUtils;
   }
   if (undefined === overwrites) {
     return NONE;
   }
-  obj = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
-  NONE = PermissionUtilsAll.computePermissions(obj);
-  const tmpResult1 = PermissionUtilsAll;
+  const tmpResult4 = PermissionUtilsAll;
+  NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
+  const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
 const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
@@ -286,8 +285,8 @@ prototype["getGuildPermissions"] = function getGuildPermissions(guild) {
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {
-        const obj = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = obj.computePermissions(obj);
+        const obj2 = { user: currentUser, context: guild, checkElevated: true };
+        NONE2 = PermissionUtilsAll.computePermissions(obj2);
         dependencyMap[id] = NONE2;
       }
       NONE = NONE2;
@@ -313,7 +312,6 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   return obj;
 };
 prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) {
-  let obj = BigFlagUtilsAll;
   id = id.id;
   let NONE = dependencyMap[id];
   if (null == NONE) {
@@ -325,18 +323,17 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {
-        obj = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = PermissionUtilsAll.computePermissions(obj);
+        const obj2 = { user: currentUser, context: guild, checkElevated: true };
+        NONE2 = PermissionUtilsAll.computePermissions(obj2);
         dependencyMap[id] = NONE2;
         const tmpResult = PermissionUtilsAll;
       }
       NONE = NONE2;
     }
   }
-  return obj.hasAny(NONE, closure_18);
+  return BigFlagUtilsAll.hasAny(NONE, closure_18);
 };
 prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
-  let obj = BigFlagUtilsAll;
   const id = guild.id;
   let NONE = dependencyMap[id];
   if (null == NONE) {
@@ -348,15 +345,15 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {
-        obj = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = PermissionUtilsAll.computePermissions(obj);
+        const obj2 = { user: currentUser, context: guild, checkElevated: true };
+        NONE2 = PermissionUtilsAll.computePermissions(obj2);
         dependencyMap[id] = NONE2;
         const tmpResult = PermissionUtilsAll;
       }
       NONE = NONE2;
     }
   }
-  return obj.hasAny(NONE, PermissionUtilsAll.VIEW_GUILD_SETTINGS);
+  return BigFlagUtilsAll.hasAny(NONE, PermissionUtilsAll.VIEW_GUILD_SETTINGS);
 };
 prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSAGES, channelId) {
   const self = this;
@@ -529,9 +526,9 @@ const permissionStore = new PermissionStore(DispatcherDefault, {
         if (!obj.isPrivate()) {
           let currentUser = UserStore.getCurrentUser();
           let obj2 = PermissionUtilsAll;
-          obj = { user: currentUser, context: null };
-          obj.context = obj;
-          let permissions = obj2.computePermissions(obj);
+          let obj3 = { user: currentUser, context: null };
+          obj3.context = obj;
+          let permissions = obj2.computePermissions(obj3);
           if (dependencyMap2[obj.id] !== permissions) {
             dependencyMap2[obj.id] = tmp9;
             let tmp15 = updateGuildVersion(obj.getGuildId());

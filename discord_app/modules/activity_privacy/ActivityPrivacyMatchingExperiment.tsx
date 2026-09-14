@@ -1,7 +1,7 @@
-// === Module 15998: ActivityPrivacyMatchingExperiment ===
+// === Module 16000: ActivityPrivacyMatchingExperiment ===
 
-// Module 15998 (ActivityPrivacyMatchingExperiment)
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13212 */;
+// Module 16000 (ActivityPrivacyMatchingExperiment)
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13213 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
@@ -9,20 +9,17 @@ let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-pr
 const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
 
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = PrivateProfilesExperiment;
-  let copyChanges = obj.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  obj = { location: ActivityPrivacyDefaultSharingSetting };
+  let copyChanges = PrivateProfilesExperiment.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!copyChanges) {
-    copyChanges = closure_2.useConfig(obj).copyChanges;
+    copyChanges = closure_2.useConfig(obj2).copyChanges;
   }
   return copyChanges;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = PrivateProfilesExperiment;
-  let upsell = obj.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
+  let upsell = PrivateProfilesExperiment.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!upsell) {
-    obj = { location: ActivityPrivacyDefaultSharingSetting };
-    upsell = closure_2.getConfig(obj).upsell;
+    const obj2 = { location: ActivityPrivacyDefaultSharingSetting };
+    upsell = closure_2.getConfig(obj2).upsell;
   }
   return upsell;
 };

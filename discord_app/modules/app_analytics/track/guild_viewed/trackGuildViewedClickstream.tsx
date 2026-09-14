@@ -1,6 +1,6 @@
-// === Module 16850: trackGuildViewedClickstream ===
+// === Module 16852: trackGuildViewedClickstream ===
 
-// Module 16850 (trackGuildViewedClickstream)
+// Module 16852 (trackGuildViewedClickstream)
 import Constants from "Constants" /* 1074 */;
 import RouteUtils from "RouteUtils" /* 4476 */;
 import Clickstream from "Clickstream" /* 7568 */;
@@ -13,11 +13,10 @@ export default function trackGuildViewedClickstream(guildId) {
   guildId = guildId.guildId;
   let isPseudoGuildIdResult = null == guildId;
   if (!isPseudoGuildIdResult) {
-    let obj = RouteUtils;
-    isPseudoGuildIdResult = obj.isPseudoGuildId(guildId);
+    isPseudoGuildIdResult = RouteUtils.isPseudoGuildId(guildId);
   }
   if (!isPseudoGuildIdResult) {
-    obj = { guild_id: guildId };
-    Clickstream.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj);
+    const obj3 = { guild_id: guildId };
+    Clickstream.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj3);
   }
 };

@@ -41,12 +41,12 @@ class ChangeListeners {
       }
     };
     obj.removeAllConditional = function removeAllConditional() {
-      let conditionalListeners = obj.conditionalListeners;
-      const item = conditionalListeners.forEach((item) => {
+      const conditionalListeners1 = obj.conditionalListeners;
+      const item = conditionalListeners1.forEach((item) => {
         listeners = listeners.listeners;
         return listeners.delete(item);
       });
-      conditionalListeners = obj.conditionalListeners;
+      const conditionalListeners = obj.conditionalListeners;
       conditionalListeners.clear();
     };
     return obj;

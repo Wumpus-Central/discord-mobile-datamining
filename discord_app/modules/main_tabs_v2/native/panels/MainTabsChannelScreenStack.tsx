@@ -1,12 +1,12 @@
-// === Module 16624: MainTabsChannelScreenStack ===
+// === Module 16626: MainTabsChannelScreenStack ===
 
-// Module 16624 (MainTabsChannelScreenStack)
+// Module 16626 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import native from "native" /* 4347 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
 import useChatLayout from "useChatLayout" /* 4497 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16100 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 9640 */;
@@ -38,9 +38,10 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   ({ guildId, channelId, showCreateThread, frame, freeze, maxWidth, focusChatPressableComponent, parentFreezeValue } = cleanup);
   const tmp = highestFullyRenderedScreenIndex;
   const tmp3 = highestFullyRenderedScreenIndex(translateX[13])();
-  let obj = highestFullyRenderedScreenIndex(translateX[10]);
-  const enabled = obj.useConfig({ location: "MainTabsChannelScreenStack" }).enabled;
-  let obj1 = index(translateX[11]);
+  const tmp4 = closure_17();
+  const enabled = highestFullyRenderedScreenIndex(translateX[10]).useConfig({ location: "MainTabsChannelScreenStack" }).enabled;
+  const obj = highestFullyRenderedScreenIndex(translateX[10]);
+  const tmp5 = index;
   const fn = function c() {
     return translateX.get() > 0;
   };
@@ -62,14 +63,14 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   fn2.__closure = { highestFullyRenderedScreenIndex, index };
   fn2.__workletHash = 10137919010401;
   fn2.__initData = __initData2;
-  const animatedReaction = obj1.useAnimatedReaction(fn, fn2);
-  let obj2 = index(translateX[12]);
-  const unmountEffect = obj2.useUnmountEffect(() => {
+  const animatedReaction = index(translateX[11]).useAnimatedReaction(fn, fn2);
+  const obj2 = index(translateX[11]);
+  const unmountEffect = index(translateX[12]).useUnmountEffect(() => {
     if (highestFullyRenderedScreenIndex.get() >= index) {
       const result = highestFullyRenderedScreenIndex.set(tmp - 1);
     }
   });
-  let obj3 = index(translateX[11]);
+  const obj3 = index(translateX[12]);
   const fn3 = function o() {
     let tmp = enabled;
     if (enabled) {
@@ -80,9 +81,8 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   fn3.__closure = { enabled, highestFullyRenderedScreenIndex, index };
   fn3.__workletHash = 1648562234730;
   fn3.__initData = __initData3;
-  const derivedValue = obj3.useDerivedValue(fn3);
-  const tmp4 = closure_17();
-  const tmp5 = index;
+  const derivedValue = index(translateX[11]).useDerivedValue(fn3);
+  const obj4 = index(translateX[11]);
   const items = [cleanup, transitionState];
   const mainTabsChannelScreenStyles = index(translateX[15]).useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, derivedValue, parentFreezeValue);
   const effect = noop.useEffect(() => {
@@ -94,8 +94,8 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
   let tmp13 = null;
   const obj5 = index(translateX[15]);
   if (null != containerWidth) {
-    obj = { width: containerWidth };
-    tmp13 = obj;
+    const obj6 = { width: containerWidth };
+    tmp13 = obj6;
   }
   items1[1] = tmp13;
   let onyxContainerStyles;
@@ -104,23 +104,22 @@ let closure_21 = noop.memo(function FirstChannelScreen(cleanup) {
       onyxContainerStyles = tmp4.onyxContainerStyles;
     }
   }
-  obj = { style: items1, children: null };
+  const obj7 = { style: items1, children: null };
   items1[2] = onyxContainerStyles;
-  obj1 = { freeze, children: null };
-  obj2 = { collapsable: false, style: absoluteFill.absoluteFill, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const obj8 = { freeze, children: null };
+  const obj9 = { collapsable: false, style: absoluteFill.absoluteFill, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
   let str = "box-only";
   if (isActive) {
     str = "auto";
   }
-  obj2.pointerEvents = str;
-  obj2.accessibilityElementsHidden = !isActive;
-  obj2.importantForAccessibility = "no-hide-descendants";
-  obj3 = { guildId, channelId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-  obj2.children = closure_15(tmp(translateX[19]), obj3);
-  obj1.children = closure_15(closure_7, obj2);
-  const items2 = [closure_15(tmp5(translateX[18]).Freeze, obj1), focusChatPressableComponent];
-  obj.children = items2;
-  return closure_16(highestFullyRenderedScreenIndex(translateX[17]), obj);
+  obj9.pointerEvents = str;
+  obj9.accessibilityElementsHidden = !isActive;
+  obj9.importantForAccessibility = "no-hide-descendants";
+  obj9.children = closure_15(tmp(translateX[19]), { guildId, channelId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index });
+  obj8.children = closure_15(closure_7, obj9);
+  const items2 = [closure_15(tmp5(translateX[18]).Freeze, obj8), focusChatPressableComponent];
+  obj7.children = items2;
+  return closure_16(highestFullyRenderedScreenIndex(translateX[17]), obj7);
 });
 const __initData4 = { code: "function MainTabsChannelScreenStackTsx4(){const{translateX}=this.__closure;return translateX.get()===0;}" };
 const __initData5 = { code: "function MainTabsChannelScreenStackTsx5(isFullyOpen,prev){const{index,mainTabsDisallowGesture}=this.__closure;if(isFullyOpen===prev)return;if(index!==1)return;mainTabsDisallowGesture.set(isFullyOpen);}" };
@@ -132,11 +131,13 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   const highestFullyRenderedScreenIndex = transitionState.highestFullyRenderedScreenIndex;
   noop = undefined;
   translateX = undefined;
+  let obj8;
   ({ guildId, channelId, showCreateThread, freeze, parentFreezeValue } = transitionState);
   let tmp = highestFullyRenderedScreenIndex;
   const tmp3 = highestFullyRenderedScreenIndex(translateX[13])();
-  let current = index(translateX[20]);
-  const navigation = current.useNavigation();
+  const tmp4 = closure_17();
+  const tmp5 = index;
+  const navigation = index(translateX[20]).useNavigation();
   noop = noop.useRef(false);
   const items = [cleanup, navigation];
   const callback = noop.useCallback((arg0) => {
@@ -149,18 +150,17 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
       }
     }
   }, items);
-  current = { canDrag: null, onVisibilityChange: null, onDragStart: null, startShown: false };
-  const tmp4 = closure_17();
-  const tmp5 = index;
-  current.canDrag = transitionState !== index(translateX[16]).TransitionStates.YEETED;
-  current.onVisibilityChange = callback;
-  current.onDragStart = index(translateX[22]).dismissKeyboard;
-  const tmp8Result = highestFullyRenderedScreenIndex(translateX[21])(current);
+  const obj2 = { canDrag: null, onVisibilityChange: null, onDragStart: null, startShown: false };
+  const obj = index(translateX[20]);
+  obj2.canDrag = transitionState !== index(translateX[16]).TransitionStates.YEETED;
+  obj2.onVisibilityChange = callback;
+  obj2.onDragStart = index(translateX[22]).dismissKeyboard;
+  const tmp8Result = highestFullyRenderedScreenIndex(translateX[21])(obj2);
   ({ isDragging, translateX } = tmp8Result);
   ({ gesture, panelGestureContext, movePanel, maxWidth } = tmp8Result);
-  let obj2 = highestFullyRenderedScreenIndex(translateX[10]);
-  const enabled = obj2.useConfig({ location: "MainTabsChannelScreenStack" }).enabled;
-  let obj3 = index(translateX[11]);
+  const tmp8 = highestFullyRenderedScreenIndex(translateX[21]);
+  const enabled = highestFullyRenderedScreenIndex(translateX[10]).useConfig({ location: "MainTabsChannelScreenStack" }).enabled;
+  const obj3 = highestFullyRenderedScreenIndex(translateX[10]);
   const fn = function c() {
     return translateX.get() > 0;
   };
@@ -182,14 +182,14 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   fn2.__closure = { highestFullyRenderedScreenIndex, index };
   fn2.__workletHash = 10137919010401;
   fn2.__initData = __initData2;
-  const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
-  let obj4 = index(translateX[12]);
-  const unmountEffect = obj4.useUnmountEffect(() => {
+  const animatedReaction = index(translateX[11]).useAnimatedReaction(fn, fn2);
+  const obj4 = index(translateX[11]);
+  const unmountEffect = index(translateX[12]).useUnmountEffect(() => {
     if (highestFullyRenderedScreenIndex.get() >= index) {
       const result = highestFullyRenderedScreenIndex.set(tmp - 1);
     }
   });
-  const tmp8 = highestFullyRenderedScreenIndex(translateX[21]);
+  const obj5 = index(translateX[12]);
   const fn3 = function o() {
     let tmp = enabled;
     if (enabled) {
@@ -224,14 +224,14 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   fn4.__workletHash = 4369586160197;
   fn4.__initData = __initData5;
   const animatedReaction1 = index(translateX[11]).useAnimatedReaction(C, fn4);
-  current = { cleanup, movePanel };
-  noop.useRef(current);
+  obj8 = { cleanup, movePanel };
+  noop.useRef(obj8);
   const effect = noop.useEffect(() => {
-    closure_8.current = current;
+    closure_8.current = obj8;
   });
   const items1 = [transitionState];
   const effect1 = noop.useEffect(() => {
-    current = ref2.current;
+    const current = ref2.current;
     const movePanel = current.movePanel;
     if (index !== native.TransitionStates.MOUNTED) {
       if (index !== native.TransitionStates.ENTERED) {
@@ -247,8 +247,8 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
   }, items1);
   const obj7 = index(translateX[11]);
   const mainTabsChannelScreenStyles = index(translateX[15]).useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, derivedValue, parentFreezeValue);
-  const obj1 = { gesture, children: null };
-  obj2 = { value: panelGestureContext, children: null };
+  const obj10 = { gesture, children: null };
+  const obj11 = { value: panelGestureContext, children: null };
   const items2 = [mainTabsChannelScreenStyles, ];
   let onyxContainerStyles;
   const obj9 = index(translateX[15]);
@@ -257,13 +257,14 @@ let closure_24 = noop.memo(function ChannelScreen(transitionState) {
       onyxContainerStyles = tmp4.onyxContainerStyles;
     }
   }
-  obj3 = { style: items2, accessibilityElementsHidden: !isActive, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj12 = { style: items2, accessibilityElementsHidden: !isActive, importantForAccessibility: "no-hide-descendants", children: null };
   items2[1] = onyxContainerStyles;
-  obj4 = { freeze, children: closure_15(tmp(tmp2[19]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index }) };
-  obj3.children = closure_15(tmp5(translateX[18]).Freeze, obj4);
-  obj2.children = closure_15(highestFullyRenderedScreenIndex(translateX[17]), obj3);
-  obj1.children = closure_15(index(translateX[23]).MainTabsChannelScreenStackContext.Provider, obj2);
-  return closure_15(index(translateX[24]).GestureDetector, obj1);
+  const tmp18 = highestFullyRenderedScreenIndex(translateX[17]);
+  const tmp20 = !isActive;
+  obj12.children = closure_15(tmp5(translateX[18]).Freeze, { freeze, children: closure_15(tmp(translateX[19]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index }) });
+  obj11.children = closure_15(tmp18, obj12);
+  obj10.children = closure_15(index(translateX[23]).MainTabsChannelScreenStackContext.Provider, obj11);
+  return closure_15(index(translateX[24]).GestureDetector, obj10);
 });
 const __initData6 = { code: "function MainTabsChannelScreenStackTsx6(){const{translateX,maxWidth}=this.__closure;return translateX.get()===maxWidth;}" };
 const __initData7 = { code: "function MainTabsChannelScreenStackTsx7(value,prev){const{runOnJS,setIsHidden}=this.__closure;if(value===prev)return;runOnJS(setIsHidden)(value);}" };
@@ -283,10 +284,9 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   let memo;
   let first;
   let sharedValue;
-  let obj = maxWidth;
   let tmp3 = isDragging(maxWidth.useState(translateX.get() === maxWidth), 2);
   closure_9 = tmp4;
-  let obj1 = screens(translateX[11]);
+  const tmp2 = screenStackActive(translateX[25])();
   class R {
     constructor() {
       return translateX.get() === maxWidth;
@@ -307,11 +307,11 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
       return;
     }
   }
-  obj = { runOnJS: screens(translateX[11]).runOnJS, setIsHidden: tmp4 };
-  D.__closure = obj;
+  let obj2 = screens(translateX[11]);
+  D.__closure = { runOnJS: screens(translateX[11]).runOnJS, setIsHidden: tmp3[1] };
   D.__workletHash = 10167608718442;
   D.__initData = __initData7;
-  const animatedReaction = obj1.useAnimatedReaction(R, D);
+  const animatedReaction = obj2.useAnimatedReaction(R, D);
   const items = [screens];
   memo = maxWidth.useMemo(() => {
     const atResult = screens.at(-1);
@@ -367,8 +367,8 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
     }
     shouldFreeze = tmp12;
   }
-  let tmp5Result = tmp5(tmp[11]);
-  sharedValue = tmp5Result.useSharedValue(0);
+  let obj3 = { runOnJS: screens(translateX[11]).runOnJS, setIsHidden: tmp3[1] };
+  sharedValue = screens(translateX[11]).useSharedValue(0);
   const items3 = [shouldFreeze, sharedValue];
   const effect2 = obj.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -381,7 +381,7 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   const callback = obj.useCallback((arg0, arg1, transitionState, cleanup) => {
     const NumberResult = Number(arg0);
     if (0 === NumberResult) {
-      let obj = { guildId: null, channelId: null, showCreateThread: null, focusChatPressableComponent: null, index: null, transitionState: null, cleanup: null, isDragging: null, translateX: null, isActive: null, freeze: null, containerWidth: null, frame: null, parentFreezeValue: null, maxWidth: null, highestFullyRenderedScreenIndex: null };
+      const obj = { guildId: null, channelId: null, showCreateThread: null, focusChatPressableComponent: null, index: null, transitionState: null, cleanup: null, isDragging: null, translateX: null, isActive: null, freeze: null, containerWidth: null, frame: null, parentFreezeValue: null, maxWidth: null, highestFullyRenderedScreenIndex: null };
       ({ guildId: obj.guildId, channelId: obj.channelId, showCreateThread: showCreateThread2 } = arg1);
       if (showCreateThread2 == null) {
         showCreateThread2 = false;
@@ -406,20 +406,20 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
       obj.highestFullyRenderedScreenIndex = highestFullyRenderedScreenIndex;
       let tmp20Result = __initData(closure_21, obj, arg0);
     } else {
-      obj = { guildId: null, channelId: null, showCreateThread: null, index: null, transitionState: null, parentFreezeValue: null, cleanup: null, isActive: null, freeze: null, highestFullyRenderedScreenIndex: null };
+      const obj3 = { guildId: null, channelId: null, showCreateThread: null, index: null, transitionState: null, parentFreezeValue: null, cleanup: null, isActive: null, freeze: null, highestFullyRenderedScreenIndex: null };
       ({ guildId: obj2.guildId, channelId: obj2.channelId, showCreateThread } = arg1);
       if (showCreateThread == null) {
         showCreateThread = false;
       }
-      obj.showCreateThread = showCreateThread;
-      obj.index = NumberResult;
-      obj.transitionState = transitionState;
-      obj.parentFreezeValue = sharedValue;
-      obj.cleanup = cleanup;
-      obj.isActive = NumberResult === screens.length - 1;
-      obj.freeze = NumberResult < screens.length - 2;
-      obj.highestFullyRenderedScreenIndex = highestFullyRenderedScreenIndex;
-      tmp20Result = __initData(closure_24, obj, arg0);
+      obj3.showCreateThread = showCreateThread;
+      obj3.index = NumberResult;
+      obj3.transitionState = transitionState;
+      obj3.parentFreezeValue = sharedValue;
+      obj3.cleanup = cleanup;
+      obj3.isActive = NumberResult === screens.length - 1;
+      obj3.freeze = NumberResult < screens.length - 2;
+      obj3.highestFullyRenderedScreenIndex = highestFullyRenderedScreenIndex;
+      tmp20Result = __initData(closure_24, obj3, arg0);
     }
     return tmp20Result;
   }, items4);
@@ -429,8 +429,8 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
   if (channelId == null) {
     channelId = null;
   }
-  obj.useRef(channelId);
-  obj.useRef(null);
+  maxWidth.useRef(channelId);
+  maxWidth.useRef(null);
   let type;
   if (first != null) {
     type = first.type;
@@ -459,9 +459,9 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
           const tmp7Result = useChatLayout;
         }
         if (!isChatLockedOpen) {
-          let obj = { type: "TRY_ACK", location: null, channelId: null };
-          obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH, objectType: constants.ACK_AUTOMATIC };
-          obj.location = obj;
+          const obj = { type: "TRY_ACK", location: null, channelId: null };
+          const obj3 = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH, objectType: constants.ACK_AUTOMATIC };
+          obj.location = obj3;
           obj.channelId = first.channelId;
           DispatcherDefault.dispatch(obj);
         }
@@ -470,17 +470,17 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
       }
     }
   }, items5);
-  tmp5Result = tmp5(tmp[29]);
-  tmp5Result.freezeScreenIndex(shouldFreeze, 0);
+  const tmp5Result = screens(translateX[11]);
+  screens(translateX[29]).freezeScreenIndex(shouldFreeze, 0);
   if (!shouldFreeze) {
-    obj = { freeze: shouldFreeze, children: null };
-    obj1 = { collapsable: false, style: focusChatPressableComponent.absoluteFill, pointerEvents: "box-none", accessibilityElementsHidden: !screenStackActive, importantForAccessibility: "no-hide-descendants", children: null };
-    let obj2 = { gradient: tmp2, children: null };
-    const obj3 = { items: screens, renderItem: callback, getItemKey: getKey };
-    obj2.children = closure_15(tmp5(tmp[16]).TransitionGroup, obj3);
-    obj1.children = closure_15(tmp5(tmp[16]).ThemeContextProvider, obj2);
-    obj.children = closure_15(firstScreenWidth, obj1);
-    let tmp23Result = closure_15(tmp5(tmp[18]).Freeze, obj);
+    const obj4 = { freeze: shouldFreeze, children: null };
+    const obj5 = { collapsable: false, style: focusChatPressableComponent.absoluteFill, pointerEvents: "box-none", accessibilityElementsHidden: !screenStackActive, importantForAccessibility: "no-hide-descendants", children: null };
+    const obj6 = { gradient: tmp2, children: null };
+    const obj7 = { items: screens, renderItem: callback, getItemKey: getKey };
+    obj6.children = closure_15(tmp5(tmp[16]).TransitionGroup, obj7);
+    obj5.children = closure_15(tmp5(tmp[16]).ThemeContextProvider, obj6);
+    obj4.children = closure_15(firstScreenWidth, obj5);
+    let tmp23Result = closure_15(tmp5(tmp[18]).Freeze, obj4);
     const tmp26 = !screenStackActive;
   } else {
     let showCreateThread;

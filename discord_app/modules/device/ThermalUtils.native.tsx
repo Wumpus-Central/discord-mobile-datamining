@@ -6,6 +6,8 @@ import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModul
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeDeviceThermalStateModuleDefault);
 let closure_4 = module_560.create((arg0) => {
   _require = arg0;

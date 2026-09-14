@@ -1,13 +1,13 @@
-// === Module 14888: AccountBlockedUsersSetting ===
+// === Module 14889: AccountBlockedUsersSetting ===
 
-// Module 14888 (AccountBlockedUsersSetting)
+// Module 14889 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PFOUKW);
@@ -26,10 +26,9 @@ let SettingBuilders = {
       return require("BlockedUsersListV2").default;
     }
   }
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
 
-export default SettingBuilders;
-export const AccountBlockedUsersSettingV2 = SettingBuilders;
+export default route;
+export const AccountBlockedUsersSettingV2 = route;

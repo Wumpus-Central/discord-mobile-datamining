@@ -1,13 +1,13 @@
-// === Module 14937: DiscoveryByEmailSetting ===
+// === Module 14938: DiscoveryByEmailSetting ===
 
-// Module 14937 (DiscoveryByEmailSetting)
+// Module 14938 (DiscoveryByEmailSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12813 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12814 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
 
 const FriendDiscoveryFlags = Constants.FriendDiscoveryFlags;
@@ -29,10 +29,8 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: function onDiscoveryByEmailSettingValueChange(email) {
     const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.getSetting();
-    let obj = FlagUtils;
-    const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
-    obj = { phone: hasFlagResult, email };
-    const result = ContactSyncActionCreatorsDefault.updateDiscoverability(obj);
+    const hasFlagResult = FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
+    const result = ContactSyncActionCreatorsDefault.updateDiscoverability({ phone: hasFlagResult, email });
   }
 });
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx");

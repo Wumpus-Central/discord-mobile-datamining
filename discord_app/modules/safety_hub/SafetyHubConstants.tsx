@@ -2,21 +2,20 @@
 
 // Module 8537 (SafetyHubConstants)
 import Constants from "Constants" /* 1074 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsSections = Constants.AnalyticsSections;
-let obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };
+const obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };
 const items = [, , ];
 ({ SETTINGS: arr[0], ACCOUNT_STANDING: arr[1], ENCRYPTION: arr[2] } = obj);
-obj = { SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP, COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL, CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION, REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT, THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS, SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM };
-obj = { DIDNT_VIOLATE_POLICY: 0, [0]: "DIDNT_VIOLATE_POLICY", TOO_STRICT_UNFAIR: 1, [1]: "TOO_STRICT_UNFAIR", DONT_AGREE_PENALTY: 2, [2]: "DONT_AGREE_PENALTY", SOMETHING_ELSE: 3, [3]: "SOMETHING_ELSE" };
+const obj3 = { DIDNT_VIOLATE_POLICY: 0, [0]: "DIDNT_VIOLATE_POLICY", TOO_STRICT_UNFAIR: 1, [1]: "TOO_STRICT_UNFAIR", DONT_AGREE_PENALTY: 2, [2]: "DONT_AGREE_PENALTY", SOMETHING_ELSE: 3, [3]: "SOMETHING_ELSE" };
 const items1 = [, , , ];
-({ DIDNT_VIOLATE_POLICY: arr2[0], TOO_STRICT_UNFAIR: arr2[1], DONT_AGREE_PENALTY: arr2[2], SOMETHING_ELSE: arr2[3] } = obj);
-const obj1 = { impression_group: null };
-const frozen = Object.freeze(obj);
-obj1.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
-const obj2 = { SPEED_BUMP: "speed-bump", COLLECT_SIGNAL: "collect-signal", CONFIRM_SUBMISSION: "confirm-submission", REQUEST_SENT: "request-sent", THANKS: "thanks" };
+({ DIDNT_VIOLATE_POLICY: arr2[0], TOO_STRICT_UNFAIR: arr2[1], DONT_AGREE_PENALTY: arr2[2], SOMETHING_ELSE: arr2[3] } = obj3);
+const obj4 = { impression_group: null };
+const frozen = Object.freeze({ SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP, COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL, CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION, REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT, THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS, SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM });
+obj4.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
+const obj5 = { SPEED_BUMP: "speed-bump", COLLECT_SIGNAL: "collect-signal", CONFIRM_SUBMISSION: "confirm-submission", REQUEST_SENT: "request-sent", THANKS: "thanks" };
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
 const prototype = function SafetyHubLinks() {
   return Object.create(new.target.prototype);
@@ -56,16 +55,16 @@ export const SafetySystemNotificationEmbedKeys = prototype2;
 export const SafetyHubAnalyticsActions = { ViewViolationDetail: 0, [0]: "ViewViolationDetail", ViewViolationsDropdown: 1, [1]: "ViewViolationsDropdown", ClickLetUsKnow: 2, [2]: "ClickLetUsKnow", ClickAgeVerificationLink: 3, [3]: "ClickAgeVerificationLink", ClickSpamWebformLink: 4, [4]: "ClickSpamWebformLink", ClickLearnMoreLink: 5, [5]: "ClickLearnMoreLink", ClickCommunityGuidelinesLink: 6, [6]: "ClickCommunityGuidelinesLink", ClickWarningSystemHelpcenterLink: 7, [7]: "ClickWarningSystemHelpcenterLink", ClickAppAppealLink: 8, [8]: "ClickAppAppealLink" };
 export const SafetyHubAnalyticsActionSource = { SystemDM: 0, [0]: "SystemDM", StandingTab: 1, [1]: "StandingTab", AppealIngestion: 2, [2]: "AppealIngestion" };
 export const AppealIngestionSections = frozen;
-export const AppealIngestionSignal = obj;
+export const AppealIngestionSignal = obj3;
 export const AppealIngestionSignalOrder = items1;
 export const DEFAULT_MEDIA_MAX_WIDTH = 372;
 export const DEFAULT_MEDIA_MAX_HEIGHT = 279;
 export const VIDEO_PLACEHOLDER_WIDTH = 250;
 export const VIDEO_PLACEHOLDER_HEIGHT = 250;
 export const VIDEO_PLACEHOLDER_FILENAME = "video.png";
-export const APPEAL_INGESTION_IMPRESSION_PROPERTIES = obj1;
-export const AppealIngestionSlideTypes = obj2;
-export const AppealIngestionSlidesOrder = { [obj2.SPEED_BUMP]: { next: obj2.COLLECT_SIGNAL, prev: null }, [obj2.COLLECT_SIGNAL]: { next: obj2.CONFIRM_SUBMISSION, prev: obj2.SPEED_BUMP }, [obj2.CONFIRM_SUBMISSION]: { next: obj2.REQUEST_SENT, prev: obj2.COLLECT_SIGNAL }, [obj2.REQUEST_SENT]: { next: null, prev: null } };
+export const APPEAL_INGESTION_IMPRESSION_PROPERTIES = obj4;
+export const AppealIngestionSlideTypes = obj5;
+export const AppealIngestionSlidesOrder = { [obj5.SPEED_BUMP]: { next: obj5.COLLECT_SIGNAL, prev: null }, [obj5.COLLECT_SIGNAL]: { next: obj5.CONFIRM_SUBMISSION, prev: obj5.SPEED_BUMP }, [obj5.CONFIRM_SUBMISSION]: { next: obj5.REQUEST_SENT, prev: obj5.COLLECT_SIGNAL }, [obj5.REQUEST_SENT]: { next: null, prev: null } };
 export const ViolationType = { USER: 1, [1]: "USER", GUILD_OWNER: 2, [2]: "GUILD_OWNER", GUILD_MEMBER: 3, [3]: "GUILD_MEMBER" };
 export const SuspendedAgeCheckStatus = { PENDING: 1, [1]: "PENDING", UNBANNED: 2, [2]: "UNBANNED", VERIFIED_OTHER_VIOLATIONS_REMAIN: 3, [3]: "VERIFIED_OTHER_VIOLATIONS_REMAIN", UNDERAGE: 4, [4]: "UNDERAGE", UNDERAGE_MANUAL_REVIEW: 5, [5]: "UNDERAGE_MANUAL_REVIEW" };
 export const AgeCheckStatus = { LOADING: "loading", ERROR: "error", SUCCESS: "success", FAILURE: "failure", NONE: "none", VERIFIED: "verified", VERIFIED_OTHER_VIOLATIONS_REMAIN: "verified_other_violations_remain", UNDERAGE: "underage", UNDERAGE_MANUAL_REVIEW: "underage_manual_review" };

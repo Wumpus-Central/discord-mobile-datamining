@@ -64,11 +64,10 @@ let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProdu
 export { ItemsSortingHat };
 export const getProductItems = function getProductItems(arg0) {
   if (typeof ItemsSortingHat === "function") {
-    let obj = Object.create(ItemsSortingHat.prototype);
+    const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);
-    obj = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
     ({ firstProfileEffect: obj2.firstProfileEffect, firstAvatarDecoration: obj2.firstAvatarDecoration, firstNameplate: obj2.firstNameplate, firstProfileFrame: obj2.firstProfileFrame } = obj);
-    return obj;
+    return { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -77,11 +76,11 @@ export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecor
   let tmp;
   if (null != arg0) {
     if (typeof ItemsSortingHat === "function") {
-      let obj = Object.create(tmp2.prototype);
+      const obj = Object.create(tmp2.prototype);
       obj.itemsByTypes = obj.sortByTypes(tmp3);
-      obj = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
       ({ firstProfileEffect: obj2.firstProfileEffect, firstAvatarDecoration: obj2.firstAvatarDecoration, firstNameplate: obj2.firstNameplate, firstProfileFrame: obj2.firstProfileFrame } = obj);
-      tmp = obj[firstAvatarDecoration];
+      tmp = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null }[firstAvatarDecoration];
+      const obj3 = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -93,11 +92,10 @@ export const useShopProductItems = function useShopProductItems(product) {
   const items = [product];
   return noop.useMemo(() => {
     if (typeof ItemsSortingHat === "function") {
-      let obj = Object.create(ItemsSortingHat.prototype);
+      const obj = Object.create(ItemsSortingHat.prototype);
       obj.itemsByTypes = obj.sortByTypes(tmp);
-      obj = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
       ({ firstProfileEffect: obj2.firstProfileEffect, firstAvatarDecoration: obj2.firstAvatarDecoration, firstNameplate: obj2.firstNameplate, firstProfileFrame: obj2.firstProfileFrame } = obj);
-      return obj;
+      return { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
     } else {
       throw new TypeError("Trying to call a non-function");
     }

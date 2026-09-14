@@ -5,7 +5,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-let redux = noop.createContext({
+const redux = noop.createContext({
   isAnyFieldClipped: false,
   isExpanded: false,
   setAnyFieldClipped() {
@@ -19,12 +19,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/PersonalWidgetExpandCollapseContext.tsx");
 
 export const PersonalWidgetExpandCollapseProvider = function PersonalWidgetExpandCollapseProvider(children) {
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const isExpanded = tmp[0];
-  const setIsExpanded = tmp[1];
-  const tmp3 = _slicedToArray(noop.useState(false), 2);
-  const first1 = tmp3[0];
-  redux = tmp3[1];
+  isExpanded = undefined;
+  setIsExpanded = undefined;
+  first1 = undefined;
+  redux = undefined;
+  [isExpanded, setIsExpanded] = noop.useState(false);
+  [first1, redux] = noop.useState(false);
   const first2 = _slicedToArray(noop.useState(() => new Set()), 1)[0];
   const items = [first2];
   const setAnyFieldClipped = noop.useCallback((arg0, arg1) => {
@@ -49,9 +49,7 @@ export const usePersonalWidgetFieldClamp = function usePersonalWidgetFieldClamp(
   const context = noop.useContext(closure_3);
   const setAnyFieldClipped = context.setAnyFieldClipped;
   const id = noop.useId();
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const first = tmp3[0];
-  closure_5 = tmp3[1];
+  [first, closure_5] = noop.useState(null);
   const items = [first, children, id, maxLines, setAnyFieldClipped];
   const items1 = [id, setAnyFieldClipped];
   const callback = noop.useCallback((nativeEvent) => {

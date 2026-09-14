@@ -1,10 +1,12 @@
-// === Module 11143: useCollectiblesExternalGatewayFacet ===
+// === Module 11144: useCollectiblesExternalGatewayFacet ===
 
-// Module 11143 (useCollectiblesExternalGatewayFacet)
+// Module 11144 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8973 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
@@ -15,14 +17,13 @@ export default function useCollectiblesExternalGatewayFacet(arg0) {
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores, arg0];
   return useMemo(() => {
-    let obj = collectibles_CollectiblesUtils;
-    const collectibleGoogleSkuId = obj.getCollectibleGoogleSkuId(closure_0, stateFromStores);
+    const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(closure_0, stateFromStores);
     if (null != collectibleGoogleSkuId) {
-      obj = { line_items: null };
-      obj = { external_product_id: collectibleGoogleSkuId };
-      const items = [obj];
-      obj.line_items = items;
-      return obj;
+      const obj2 = { line_items: null };
+      const obj3 = { external_product_id: collectibleGoogleSkuId };
+      const items = [obj3];
+      obj2.line_items = items;
+      return obj2;
     }
   }, items1);
 };

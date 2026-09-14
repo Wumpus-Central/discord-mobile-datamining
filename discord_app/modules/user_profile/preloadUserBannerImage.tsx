@@ -27,10 +27,10 @@ export default function preloadUserBannerImage(user, guildId) {
         }
         let guildMemberBannerURL;
         if (tmp3) {
-          let obj = { id, guildId, banner: user.guild_member_profile.banner, canAnimate: null, size: 600 };
+          const obj2 = { id, guildId, banner: user.guild_member_profile.banner, canAnimate: null, size: 600 };
           const GifAutoPlay = UserSettings.GifAutoPlay;
-          obj.canAnimate = GifAutoPlay.getSetting();
-          guildMemberBannerURL = obj.getGuildMemberBannerURL(obj);
+          obj2.canAnimate = GifAutoPlay.getSetting();
+          guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
         }
         let banner1;
         if (user != null) {
@@ -40,10 +40,10 @@ export default function preloadUserBannerImage(user, guildId) {
           }
         }
         if (null != banner1) {
-          obj = { id, banner: user.user_profile.banner, canAnimate: null, size: 600 };
+          const obj4 = { id, banner: user.user_profile.banner, canAnimate: null, size: 600 };
           const GifAutoPlay2 = UserSettings.GifAutoPlay;
-          obj.canAnimate = GifAutoPlay2.getSetting();
-          guildMemberBannerURL = AvatarUtils.getUserBannerURL(obj);
+          obj4.canAnimate = GifAutoPlay2.getSetting();
+          guildMemberBannerURL = AvatarUtils.getUserBannerURL(obj4);
         }
         if (null != guildMemberBannerURL) {
           const image = new globalThis.Image();

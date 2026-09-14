@@ -5,6 +5,8 @@ import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
 import CodeSplittingUtils from "CodeSplittingUtils" /* 4313 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 CodeSplittingUtils.setAwaitOnline(NetworkUtilsDefault.awaitOnline);
 const result = size.fileFinishedImporting("modules/core/CodeSplittingUtils.tsx");
 for (const key10026 in require("CodeSplittingUtils")) {

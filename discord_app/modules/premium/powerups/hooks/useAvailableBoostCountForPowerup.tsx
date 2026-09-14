@@ -1,9 +1,11 @@
-// === Module 12666: useAvailableBoostCountForPowerup ===
+// === Module 12667: useAvailableBoostCountForPowerup ===
 
-// Module 12666 (useAvailableBoostCountForPowerup)
+// Module 12667 (useAvailableBoostCountForPowerup)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const GuildPowerupsConstants = fn(4526);

@@ -1,6 +1,6 @@
-// === Module 13473: PremiumSubscriptionInvoice ===
+// === Module 13474: PremiumSubscriptionInvoice ===
 
-// Module 13473 (PremiumSubscriptionInvoice)
+// Module 13474 (PremiumSubscriptionInvoice)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -25,8 +25,8 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,8 +39,8 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -72,34 +72,34 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
+          const obj5 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
           const result = closure_130_0(closure_130_2[6]).coerceExistingItemsToNewItemInterval(closure_129_0);
           closure_129_0 = result;
-          obj2.items = result.map((planId) => {
+          obj5.items = result.map((planId) => {
             const obj = {};
             const merged = Object.assign(Object.assign(planId, Object.assign({ planId: 0 })));
             obj.plan_id = planId.planId;
             return obj;
           });
-          obj2.payment_source_id = closure_129_1;
-          obj2.trial_id = closure_129_2;
-          obj2.code = closure_129_3;
-          obj2.apply_entitlements = closure_129_4;
-          obj2.currency = closure_129_5;
-          obj2.renewal = closure_129_6;
-          obj2.metadata = closure_129_7;
-          obj2.load_id = closure_129_8;
-          closure_129_9 = obj2;
+          obj5.payment_source_id = closure_129_1;
+          obj5.trial_id = closure_129_2;
+          obj5.code = closure_129_3;
+          obj5.apply_entitlements = closure_129_4;
+          obj5.currency = closure_129_5;
+          obj5.renewal = closure_129_6;
+          obj5.metadata = closure_129_7;
+          obj5.load_id = closure_129_8;
+          closure_129_9 = obj5;
           c4 = 1;
           const HTTP = closure_130_0(closure_130_2[7]).HTTP;
           const request = { url: closure_130_12.BILLING_SUBSCRIPTIONS_PREVIEW, body: closure_129_9, oldFormErrors: true, rejectWithError: false };
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -112,8 +112,8 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_10 = value;
         closure_129_11 = closure_130_11.createInvoiceFromServer(closure_129_10.body);
@@ -123,14 +123,14 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           payment_sources = checkoutContext.payment_sources;
         }
         if (null != payment_sources) {
-          obj = closure_130_1(closure_130_2[8]);
-          const obj5 = { type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", checkoutContext: closure_129_11.checkoutContext, paymentSourceId: closure_129_1 };
-          obj.dispatch(obj5);
+          const obj8 = { type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", checkoutContext: closure_129_11.checkoutContext, paymentSourceId: closure_129_1 };
+          closure_130_1(closure_130_2[8]).dispatch(obj8);
+          let obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 0;
         c6 = 3;
-        const obj6 = { value: closure_129_11, done: true };
-        return obj6;
+        const obj9 = { value: closure_129_11, done: true };
+        return obj9;
       }
     } catch (tmp28) {
       closure_3 = tmp28;
@@ -161,8 +161,8 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -175,8 +175,8 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -209,12 +209,12 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           if (null != closure_129_1) {
-            let obj4 = closure_130_0(closure_130_2[6]);
-            closure_129_1 = obj4.coerceExistingItemsToNewItemInterval(closure_129_1);
+            closure_129_1 = closure_130_0(closure_130_2[6]).coerceExistingItemsToNewItemInterval(closure_129_1);
+            const obj5 = closure_130_0(closure_130_2[6]);
           }
           let mapped;
           if (closure_129_1 != null) {
@@ -225,18 +225,18 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
               return obj;
             });
           }
-          const obj2 = { items: mapped, payment_source_id: closure_129_2, renewal: closure_129_3, apply_entitlements: closure_129_5, currency: closure_129_4, user_discount_offer_id: closure_129_8, load_id: closure_129_9 };
-          closure_129_10 = obj2;
+          const obj6 = { items: mapped, payment_source_id: closure_129_2, renewal: closure_129_3, apply_entitlements: closure_129_5, currency: closure_129_4, user_discount_offer_id: closure_129_8, load_id: closure_129_9 };
+          closure_129_10 = obj6;
           c4 = 1;
           const HTTP = closure_130_0(closure_130_2[7]).HTTP;
           const request = { url: closure_130_12.BILLING_SUBSCRIPTION_PREVIEW(closure_129_0), query: null, body: null, oldFormErrors: true, rejectWithError: false };
-          const obj3 = { location: closure_129_7, location_stack: closure_129_6 };
-          request.query = obj3;
+          const obj7 = { location: closure_129_7, location_stack: closure_129_6 };
+          request.query = obj7;
           request.body = closure_129_10;
           c5 = 3;
           c6 = 1;
-          obj4 = { value: HTTP.patch(request), done: false };
-          return obj4;
+          const obj8 = { value: HTTP.patch(request), done: false };
+          return obj8;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -249,8 +249,8 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_129_11 = value;
         closure_129_12 = closure_130_11.createInvoiceFromServer(closure_129_11.body);
@@ -264,14 +264,14 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           tmp11 = null != payment_sources;
         }
         if (tmp11) {
-          obj = closure_130_1(closure_130_2[8]);
-          const obj6 = { type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", checkoutContext: closure_129_12.checkoutContext, paymentSourceId: closure_129_2 };
-          obj.dispatch(obj6);
+          const obj10 = { type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", checkoutContext: closure_129_12.checkoutContext, paymentSourceId: closure_129_2 };
+          closure_130_1(closure_130_2[8]).dispatch(obj10);
+          let obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 0;
         c6 = 3;
-        const obj7 = { value: closure_129_12, done: true };
-        return obj7;
+        const obj11 = { value: closure_129_12, done: true };
+        return obj11;
       }
     } catch (tmp53) {
       closure_3 = tmp53;
@@ -302,8 +302,8 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -316,8 +316,8 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -340,27 +340,26 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           let tmp25 = null != closure_129_1;
           if (tmp25) {
             tmp25 = "" !== closure_129_1;
           }
           closure_130_1(closure_130_2[10])(tmp25, "SKU ID is missing for one time purchase gift invoice preview");
-          const obj2 = { gift: true, payment_source_id: closure_129_0, sku_subscription_plan_id: closure_129_2, currency: closure_129_3, load_id: closure_129_4 };
-          closure_129_6 = obj2;
+          const obj6 = { gift: true, payment_source_id: closure_129_0, sku_subscription_plan_id: closure_129_2, currency: closure_129_3, load_id: closure_129_4 };
+          closure_129_6 = obj6;
           if (null != closure_129_5) {
             closure_129_6.quantity = closure_129_5;
           }
           c4 = 1;
-          let obj3 = closure_130_0(closure_130_2[11]);
+          const tmp55 = closure_130_1(closure_130_2[10]);
           const request = { url: closure_130_12.STORE_SKU_PURCHASE(closure_129_1), query: closure_129_6, oldFormErrors: true, rejectWithError: false };
           c5 = 3;
           c6 = 1;
-          obj3 = { value: null, done: false };
-          obj3.value = obj3.httpGetWithCountryCodeQuery(request);
-          return obj3;
+          const obj7 = { value: closure_130_0(closure_130_2[11]).httpGetWithCountryCodeQuery(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -373,13 +372,13 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_129_7 = value;
         c4 = 0;
         c6 = 3;
-        obj = { value: closure_130_11.createInvoiceFromServer(closure_129_7.body), done: true };
+        const obj = { value: closure_130_11.createInvoiceFromServer(closure_129_7.body), done: true };
         return obj;
       }
     } catch (tmp43) {
@@ -411,8 +410,8 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -425,8 +424,8 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -444,30 +443,30 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if (closure_129_1) {
           c4 = 3;
           return { value: null, done: true };
         } else {
           const HTTP = closure_130_0(closure_130_2[7]).HTTP;
-          const obj2 = { url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0), oldFormErrors: true, rejectWithError: false };
+          const obj5 = { url: closure_130_12.BILLING_SUBSCRIPTION_INVOICE(closure_129_0), oldFormErrors: true, rejectWithError: false };
           c3 = 2;
           c4 = 1;
-          const obj3 = { value: HTTP.get(obj2), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.get(obj5), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_2 = value;
         c4 = 3;
-        obj = { value: closure_130_11.createInvoiceFromServer(closure_129_2.body), done: true };
+        const obj = { value: closure_130_11.createInvoiceFromServer(closure_129_2.body), done: true };
         return obj;
       }
     } catch (tmp16) {
@@ -494,7 +493,7 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
   }
   closure_1 = arg1;
   c2 = undefined;
-  [tmp2, c2] = _slicedToArray(closure_9(null), 2);
+  [tmp2, c2] = closure_9(null);
   const tmp3 = _slicedToArray(closure_9(null), 2);
   closure_3 = tmp3[1];
   const items = [flag, arg1, arg2];
@@ -573,7 +572,7 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
   closure_129_0 = flag;
   closure_129_1 = tmp3;
   closure_129_2 = undefined;
-  [tmp5, closure_129_2] = _slicedToArray(closure_9(null), 2);
+  [tmp5, closure_129_2] = closure_9(null);
   const tmp6 = _slicedToArray(closure_9(null), 2);
   closure_129_3 = tmp6[1];
   const items1 = [flag, tmp3, arg1];
@@ -699,10 +698,10 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     } else if ("items" in tmp2) {
       ref.current = true;
       const _JSON = JSON;
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(tmp2);
-      obj.paymentSourceId = "exclude_from_dedupe";
-      json = JSON.stringify(obj);
+      obj2.paymentSourceId = "exclude_from_dedupe";
+      json = JSON.stringify(obj2);
       const current2 = ref2.current;
       if (null != current2) {
         if (closure_4(tmp2, json)) {
@@ -728,7 +727,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
   closure_130_0 = flag;
   closure_130_1 = tmp12;
   closure_130_2 = undefined;
-  [tmp14, closure_130_2] = _slicedToArray(closure_9(null), 2);
+  [tmp14, closure_130_2] = closure_9(null);
   const tmp15 = _slicedToArray(closure_9(null), 2);
   closure_130_3 = tmp15[1];
   const items2 = [flag, tmp12, arg1];
@@ -795,7 +794,7 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
   closure_129_0 = flag;
   closure_129_1 = tmp3;
   closure_129_2 = undefined;
-  [tmp5, closure_129_2] = _slicedToArray(closure_9(null), 2);
+  [tmp5, closure_129_2] = closure_9(null);
   const tmp6 = _slicedToArray(closure_9(null), 2);
   closure_129_3 = tmp6[1];
   const items1 = [flag, tmp3, arg1];

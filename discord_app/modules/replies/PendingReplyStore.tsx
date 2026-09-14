@@ -16,20 +16,19 @@ class PendingReplyStore extends PersistedStore {
 }
 const prototype = PendingReplyStore.prototype;
 prototype["getState"] = function getState() {
-  let obj = {};
+  const obj = {};
   const entries = SnowflakeUtilsDefault.entries(closure_5);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { channelId: tmp6, messageId: tmp7.message.id, shouldMention: null, showMentionToggle: null };
+    let obj4 = { channelId: tmp6, messageId: tmp7.message.id, shouldMention: null, showMentionToggle: null };
     ({ shouldMention: obj3.shouldMention, showMentionToggle: obj3.showMentionToggle } = tmp7);
-    obj[tmp6] = obj;
+    obj[tmp6] = obj4;
     continue;
   }
-  obj = {};
   const merged = Object.assign(closure_6);
   const merged1 = Object.assign(obj);
-  return obj;
+  return {};
 };
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
@@ -84,16 +83,16 @@ const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
   SET_PENDING_REPLY_SHOULD_MENTION: function handleSetPendingReplyShouldMention(arg0) {
     ({ channelId, shouldMention } = arg0);
     if (channelId in dependencyMap) {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(dependencyMap[channelId]);
       obj.shouldMention = shouldMention;
       dependencyMap[channelId] = obj;
     }
     if (channelId in dependencyMap2) {
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(dependencyMap2[channelId]);
-      obj.shouldMention = shouldMention;
-      dependencyMap2[channelId] = obj;
+      obj2.shouldMention = shouldMention;
+      dependencyMap2[channelId] = obj2;
     }
   },
   DELETE_PENDING_REPLY: function handleDeletePendingReply(arg0) {
@@ -115,14 +114,14 @@ const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
     ({ id, channelId } = arg0);
-    id = undefined;
+    let id1;
     if (dependencyMap[channelId] != null) {
       const message = tmp4.message;
       if (message != null) {
-        id = message.id;
+        id1 = message.id;
       }
     }
-    if (id === id) {
+    if (id1 === id) {
       delete tmp3[tmp2];
       delete tmp[tmp2];
     } else {

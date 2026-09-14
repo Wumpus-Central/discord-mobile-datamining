@@ -1,6 +1,6 @@
-// === Module 17107: useIsOnMainSurface ===
+// === Module 17109: useIsOnMainSurface ===
 
-// Module 17107 (useIsOnMainSurface)
+// Module 17109 (useIsOnMainSurface)
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -54,7 +54,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
-  [tmp2, require] = _slicedToArray(noop.useState(getIsOnMainSurface), 2);
+  [tmp2, require] = noop.useState(getIsOnMainSurface);
   const effect = noop.useEffect(() => {
     function handleNavigationChange() {
       return rootNavigationRef(getIsOnMainSurface());

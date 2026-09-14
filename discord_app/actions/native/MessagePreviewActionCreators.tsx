@@ -1,9 +1,11 @@
-// === Module 16751: MessagePreviewActionCreators ===
+// === Module 16753: MessagePreviewActionCreators ===
 
-// Module 16751 (MessagePreviewActionCreators)
+// Module 16753 (MessagePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 ({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: closure_4 } = Constants);
 const result = size.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
@@ -15,8 +17,7 @@ export default {
     const request = { url: closure_3.MESSAGES(channelId), query: { limit, around }, retries: 2, oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(request);
     value.then((body) => {
-      const obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around });
     });
   },
   clearMessages() {

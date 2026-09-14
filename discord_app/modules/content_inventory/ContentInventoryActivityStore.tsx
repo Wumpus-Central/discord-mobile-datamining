@@ -1,6 +1,6 @@
-// === Module 13131: ContentInventoryActivityStore ===
+// === Module 13132: ContentInventoryActivityStore ===
 
-// Module 13131 (ContentInventoryActivityStore)
+// Module 13132 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -92,8 +92,8 @@ function handlePresenceUpdates() {
       let tmp8 = nextResult;
       let tmp9 = detectMatchingActivityForEntries;
       if (set.size > 0) {
-        let entries = tmp8.entries;
-        entries = entries.filter((content) => {
+        let entries1 = tmp8.entries;
+        let entries = entries1.filter((content) => {
           content = content.content;
           return !set.has("" + content.author_id + ":" + content.id);
         });

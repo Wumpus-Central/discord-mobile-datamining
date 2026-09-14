@@ -1,6 +1,6 @@
-// === Module 15661: DevToolsActionCreators ===
+// === Module 15663: DevToolsActionCreators ===
 
-// Module 15661 (DevToolsActionCreators)
+// Module 15663 (DevToolsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7821 */;
 
@@ -8,8 +8,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 
 export const updateDevToolsSettings = function updateDevToolsSettings(settings) {
-  const obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings });
 };
 export const toggleDisplayDevTools = function toggleDisplayDevTools() {
   DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: { displayTools: !DevToolsSettingsStore.displayTools } });

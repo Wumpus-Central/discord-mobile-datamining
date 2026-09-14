@@ -1,6 +1,6 @@
-// === Module 11711: UserProfileSection ===
+// === Module 11712: UserProfileSection ===
 
-// Module 11711 (UserProfileSection)
+// Module 11712 (UserProfileSection)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4347 */;
 import ColorUtils from "ColorUtils" /* 4486 */;
@@ -13,11 +13,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: null };
-createStyles = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.contentContainer = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
 
@@ -26,43 +24,41 @@ export default function UserProfileSection(title) {
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
   const merged = Object.assign(title, Object.assign({ title: 0, headerIcon: 0, trailingIcon: 0, showContainer: 0, children: 0, style: 0 }));
   const tmp2 = closure_5();
-  let obj = native;
-  const themeContext = obj.useThemeContext();
+  const themeContext = native.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  let obj1 = useProfileThemeValues;
-  const profileThemeValues = obj1.useProfileThemeValues(theme);
-  obj = {};
+  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
+  const obj3 = {};
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
       let borderColor = ColorUtils.hexOpacityToRgba(FormDivider.DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
       const tmp3Result = ColorUtils;
     }
-    obj.borderColor = borderColor;
-    obj = { style: null };
+    obj3.borderColor = borderColor;
+    const obj4 = { style: null };
     const items = [tmp2.section, style];
-    obj.style = items;
+    obj4.style = items;
     const merged2 = Object.assign(merged);
     let tmp8Result = null;
     if (null != title) {
-      obj1 = { style: tmp2.titleContainer, children: null };
-      const obj2 = { style: tmp2.title, children: null };
-      const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: title };
-      const items1 = [React3(Text_Text.Text, obj3), headerIcon];
-      obj2.children = items1;
-      const items2 = [React4(View, obj2), trailingIcon];
-      obj1.children = items2;
-      tmp8Result = React4(View, obj1);
+      const obj5 = { style: tmp2.titleContainer, children: null };
+      const obj6 = { style: tmp2.title, children: null };
+      const obj7 = { variant: "eyebrow", accessibilityRole: "header", children: title };
+      const items1 = [React3(Text_Text.Text, obj7), headerIcon];
+      obj6.children = items1;
+      const items2 = [React4(View, obj6), trailingIcon];
+      obj5.children = items2;
+      tmp8Result = React4(View, obj5);
     }
     const items3 = [tmp8Result, ];
     let tmp16 = null;
     if (showContainer) {
-      tmp16 = obj;
+      tmp16 = obj3;
     }
-    const obj4 = { style: tmp16, children };
-    items3[1] = React3(View, obj4);
-    obj.children = items3;
-    return React4(View, obj);
+    const obj8 = { style: tmp16, children };
+    items3[1] = React3(View, obj8);
+    obj4.children = items3;
+    return React4(View, obj4);
   }
   borderColor = tmp2.contentContainer.borderColor;
 };

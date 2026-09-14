@@ -1,6 +1,6 @@
-// === Module 13514: PromotionStringUtils ===
+// === Module 13515: PromotionStringUtils ===
 
-// Module 13514 (PromotionStringUtils)
+// Module 13515 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -31,12 +31,12 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
   return body.replace(/\{price\}/g, str);
 };
 export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
-  let id;
+  let id1;
   if (helpArticle != null) {
-    id = helpArticle.id;
+    id1 = helpArticle.id;
   }
-  id = helpArticleId;
-  if (null != id) {
+  let id = helpArticleId;
+  if (null != id1) {
     id = helpArticleId;
     if ("" !== helpArticle.id) {
       id = helpArticle.id;
@@ -45,13 +45,13 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
   if ("" === id) {
     return null;
   } else {
-    let linkText;
+    let linkText1;
     if (helpArticle != null) {
-      linkText = helpArticle.linkText;
+      linkText1 = helpArticle.linkText;
     }
-    if (null != linkText) {
+    if (null != linkText1) {
       if ("" !== helpArticle.linkText) {
-        linkText = helpArticle.linkText;
+        let linkText = helpArticle.linkText;
       }
       const obj = { url: HelpdeskUtilsDefault.getArticleURL(id), linkText };
       return obj;

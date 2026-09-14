@@ -4,6 +4,8 @@
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;
 import TestModeStore from "TestModeStore" /* 8982 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_store/TestModeUtils.tsx");

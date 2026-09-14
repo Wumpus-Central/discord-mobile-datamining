@@ -1,16 +1,16 @@
-// === Module 16607: SeparatorDot ===
+// === Module 16609: SeparatorDot ===
 
-// Module 16607 (SeparatorDot)
+// Module 16609 (SeparatorDot)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { separatorDot: null };
+const createStyles = fn(4636);
+const obj2 = { separatorDot: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-createStyles.separatorDot = size;
-let closure_2 = createStyles.createStyles(createStyles);
+obj2.separatorDot = size;
+let closure_2 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
 

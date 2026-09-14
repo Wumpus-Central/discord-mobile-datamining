@@ -1,8 +1,8 @@
-// === Module 10791: PremiumAnalyticsUtils ===
+// === Module 10792: PremiumAnalyticsUtils ===
 
-// Module 10791 (PremiumAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import v1 from "v1" /* 1256 */;
+// Module 10792 (PremiumAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import v1 from "v1" /* 1254 */;
 import PremiumUtils from "PremiumUtils" /* 4294 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -42,17 +42,16 @@ export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = { [obj.WHAT_YOU_LOSE]: "What You're Losing", [obj.DOWNGRADE_TO_TIER_0]: "Downgrade To Tier 0", [obj.CONFIRM]: "Confirm Cancellation", [obj.PREVIEW]: "Preview Updated Subscription", [obj.MOBILE_SUBSCRIPTION_MANAGE]: "Mobile Subscription Manage" };
 export const trackPremiumSubscriptionCancellationStarted = function trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations) {
-  let obj = { location_stack: analyticsLocations };
   let id;
   if (subscription != null) {
     id = subscription.id;
   }
-  obj = { subscription_id: id, subscription_type: null, subscription_plan_id: null, subscription_plan_gateway_plan_id: null, subscription_status: null };
+  const obj3 = { subscription_id: id, subscription_type: null, subscription_plan_id: null, subscription_plan_gateway_plan_id: null, subscription_status: null };
   let type;
   if (subscription != null) {
     type = subscription.type;
   }
-  obj.subscription_type = type;
+  obj3.subscription_type = type;
   let tmp4;
   if (null != subscription) {
     const premiumPlanItem = PremiumUtils.getPremiumPlanItem(subscription);
@@ -62,34 +61,34 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
     }
     tmp4 = id1;
   }
-  obj.subscription_plan_id = tmp4;
+  obj3.subscription_plan_id = tmp4;
   let paymentGatewayPlanId;
   if (subscription != null) {
     paymentGatewayPlanId = subscription.paymentGatewayPlanId;
   }
-  obj.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
+  obj3.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
   let status;
   if (subscription != null) {
     status = subscription.status;
   }
-  obj.subscription_status = status;
-  const merged = Object.assign(obj);
-  obj.track(constants3.CANCELLATION_FLOW_STARTED, obj);
+  obj3.subscription_status = status;
+  const merged = Object.assign(obj3);
+  AnalyticsUtilsDefault.track(constants3.CANCELLATION_FLOW_STARTED, { location_stack: analyticsLocations });
+  const obj2 = { location_stack: analyticsLocations };
 };
 export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiumSubscriptionCancellationFlowStep(subscription) {
   subscription = subscription.subscription;
   ({ fromStep, toStep, analyticsLocations } = subscription);
-  let obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
   let id;
   if (subscription != null) {
     id = subscription.id;
   }
-  obj = { subscription_id: id, subscription_type: null, subscription_plan_id: null, subscription_plan_gateway_plan_id: null, subscription_status: null };
+  const obj3 = { subscription_id: id, subscription_type: null, subscription_plan_id: null, subscription_plan_gateway_plan_id: null, subscription_status: null };
   let type;
   if (subscription != null) {
     type = subscription.type;
   }
-  obj.subscription_type = type;
+  obj3.subscription_type = type;
   let tmp4;
   if (null != subscription) {
     const premiumPlanItem = PremiumUtils.getPremiumPlanItem(subscription);
@@ -99,17 +98,18 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
     }
     tmp4 = id1;
   }
-  obj.subscription_plan_id = tmp4;
+  obj3.subscription_plan_id = tmp4;
   let paymentGatewayPlanId;
   if (subscription != null) {
     paymentGatewayPlanId = subscription.paymentGatewayPlanId;
   }
-  obj.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
+  obj3.subscription_plan_gateway_plan_id = paymentGatewayPlanId;
   let status;
   if (subscription != null) {
     status = subscription.status;
   }
-  obj.subscription_status = status;
-  const merged = Object.assign(obj);
-  obj.track(constants3.CANCELLATION_FLOW_STEP, obj);
+  obj3.subscription_status = status;
+  const merged = Object.assign(obj3);
+  AnalyticsUtilsDefault.track(constants3.CANCELLATION_FLOW_STEP, { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations });
+  const obj2 = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
 };

@@ -1,6 +1,6 @@
-// === Module 15293: useRestorePurchases ===
+// === Module 15294: useRestorePurchases ===
 
-// Module 15293 (useRestorePurchases)
+// Module 15294 (useRestorePurchases)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -27,8 +27,8 @@ export default function useRestorePurchases() {
       if (noop === 1) {
         throw value;
       } else if (noop === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -41,19 +41,17 @@ export default function useRestorePurchases() {
             throw value;
           } else if (noop === 2) {
             logger = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp8;
             asyncGeneratorStep(true);
             logger.log("isRestoring true");
             c3 = 2;
-            let obj1 = closure_0(tmp4[4]);
             c4 = 3;
             logger = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.restoreAndApplyPurchases();
-            return obj1;
+            const obj5 = { value: closure_0(tmp4[4]).restoreAndApplyPurchases(), done: false };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -81,7 +79,7 @@ export default function useRestorePurchases() {
           closure_129_2(false);
           logger.log("isRestoring false");
           logger = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp43) {

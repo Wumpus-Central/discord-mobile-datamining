@@ -1,6 +1,6 @@
-// === Module 13384: restartVibegrationsAppFrames ===
+// === Module 13385: restartVibegrationsAppFrames ===
 
-// Module 13384 (restartVibegrationsAppFrames)
+// Module 13385 (restartVibegrationsAppFrames)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 9637 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 9698 */;
 import FramesStore from "FramesStore" /* 9640 */;
@@ -18,8 +18,8 @@ export default function restartVibegrationsAppFrames(applicationId) {
       let obj = FramesNativeManagerDefault;
       let leaveFrameResult = obj.leaveFrame(item10003.id);
       let obj2 = FramesActionCreatorsDefault;
-      obj = { applicationId: arg0, surface: item10003.surface };
-      let launchFrameResult = obj2.launchFrame(obj);
+      let obj3 = { applicationId: arg0, surface: item10003.surface };
+      let launchFrameResult = obj2.launchFrame(obj3);
       let catchPromise = launchFrameResult.catch(() => {
 
       });

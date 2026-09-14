@@ -7,6 +7,8 @@ import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1085).Permissions;
 let closure_6 = [];

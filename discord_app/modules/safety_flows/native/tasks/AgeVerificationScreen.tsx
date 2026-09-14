@@ -1,9 +1,9 @@
-// === Module 17992: AgeVerificationScreen ===
+// === Module 17993: AgeVerificationScreen ===
 
-// Module 17992 (AgeVerificationScreen)
+// Module 17993 (AgeVerificationScreen)
 import Server from "Server" /* 1894 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8531 */;
-import types from "types" /* 17979 */;
+import types from "types" /* 17980 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -18,19 +18,23 @@ let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVe
 
 export default function AgeVerificationScreen() {
   const memo = noop.useMemo(() => memo(stateFromStores[6]).v4(), []);
+  const tmp2 = closure_8();
+  const onTaskComplete = memo(stateFromStores[7]).useOnTaskComplete();
   let obj = memo(stateFromStores[7]);
-  const onTaskComplete = obj.useOnTaskComplete();
-  let obj1 = memo(stateFromStores[8]);
   const items = [UserStore];
-  stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj = {
+  stateFromStores = memo(stateFromStores[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = memo(stateFromStores[8]);
+  const obj3 = {
     onClose() {
       return onTaskComplete({ type: types.TaskInputType.Empty });
     }
   };
-  const tmp2 = closure_8();
   const items1 = [onTaskComplete, stateFromStores];
-  ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[9])(obj));
+  ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[9])({
+    onClose() {
+      return onTaskComplete({ type: types.TaskInputType.Empty });
+    }
+  }));
   const effect = noop.useEffect(() => {
     let prop;
     if (stateFromStores != null) {
@@ -45,36 +49,39 @@ export default function AgeVerificationScreen() {
   const effect1 = noop.useEffect(() => {
     const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(memo, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS);
   }, items2);
-  obj = { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null };
-  const tmp5 = onTaskComplete(stateFromStores[9])(obj);
-  obj.ImageComponent = jsx(memo(stateFromStores[14]).ShieldSpotIllustration, {});
+  const obj4 = { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null };
+  const tmp5 = onTaskComplete(stateFromStores[9])({
+    onClose() {
+      return onTaskComplete({ type: types.TaskInputType.Empty });
+    }
+  });
+  obj4.ImageComponent = jsx(memo(stateFromStores[14]).ShieldSpotIllustration, {});
   const intl = memo(stateFromStores[15]).intl;
-  obj.title = intl.string(onTaskComplete(stateFromStores[16])["dSkE/A"]);
+  obj4.title = intl.string(onTaskComplete(stateFromStores[16])["dSkE/A"]);
   const intl2 = memo(stateFromStores[15]).intl;
-  obj1 = {
+  obj4.subtitle = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, {
     handleOnHelpUrlHook() {
       const obj = onTaskComplete(stateFromStores[18]);
       obj.openUrl(onTaskComplete(stateFromStores[19]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     }
-  };
-  obj.subtitle = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, obj1);
-  const obj2 = { children: null };
-  const obj3 = {
+  });
+  const obj6 = { children: null };
+  const obj7 = {
     accessibilityRole: "button",
     onPress() {
       onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
     },
     children: null
   };
-  const obj4 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
+  const obj8 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
   const intl3 = memo(stateFromStores[15]).intl;
-  obj4.children = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
-  obj3.children = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
-  obj2.children = <Pressable accessibilityRole="button" onPress={function onPress() {
+  obj8.children = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
+  obj7.children = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
+  obj6.children = <Pressable accessibilityRole="button" onPress={function onPress() {
     onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
   }}>{null}</Pressable>;
-  obj.footer = jsx(memo(stateFromStores[20]).ModalDisclaimer, { children: null });
-  obj.submitting = loading;
-  obj.children = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId: memo });
+  obj4.footer = jsx(memo(stateFromStores[20]).ModalDisclaimer, { children: null });
+  obj4.submitting = loading;
+  obj4.children = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId: memo });
   return jsx(onTaskComplete(stateFromStores[13]), { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null });
 };

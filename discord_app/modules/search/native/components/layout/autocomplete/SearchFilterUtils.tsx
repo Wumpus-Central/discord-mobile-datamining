@@ -1,19 +1,19 @@
-// === Module 16738: SearchFilterUtils ===
+// === Module 16740: SearchFilterUtils ===
 
-// Module 16738 (SearchFilterUtils)
+// Module 16740 (SearchFilterUtils)
 import util from "util" /* 1114 */;
 import AtIcon from "AtIcon" /* 5171 */;
 import TrackingConstants from "TrackingConstants" /* 7981 */;
 import RobotIcon from "RobotIcon" /* 9565 */;
 import CalendarIcon from "CalendarIcon" /* 9915 */;
 import AttachmentIcon from "AttachmentIcon" /* 10240 */;
-import UserIcon from "UserIcon" /* 11955 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12338 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12467 */;
-import SearchTokens from "SearchTokens" /* 12470 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12490 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13931 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 16739 */;
+import UserIcon from "UserIcon" /* 11956 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12339 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12468 */;
+import SearchTokens from "SearchTokens" /* 12471 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13932 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 16741 */;
 import SearchConstants from "SearchConstants" /* 7982 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -141,12 +141,10 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
             }
             return () => {
               let result = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
-                searchTokenType(paths[15]);
-                let obj = {
+                searchTokenType(paths[15]).openLazy(searchContext(paths[17])(paths[16], paths.paths), "DatePicker", {
                   onSubmit(format) {
                     searchContext = format.format(closure_1_6);
-                    let obj = searchTokenType(_location[13]);
-                    obj.updateSearchQuery(searchContext, (setTextInputValue) => {
+                    searchTokenType(_location[13]).updateSearchQuery(searchContext, (setTextInputValue) => {
                       if (_location === constants2.SEARCH_INPUT_DROPDOWN) {
                         setTextInputValue.setTextInputValue(closure_3_3);
                       }
@@ -170,13 +168,13 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
                       obj.location = _location;
                       setTextInputValue.addTag(obj);
                     });
-                    obj = { searchContext, searchTokenType, location: _location };
-                    searchTokenType(_location[18]).trackSearchFilterAdd(obj);
+                    let obj = searchTokenType(_location[13]);
+                    searchTokenType(_location[18]).trackSearchFilterAdd({ searchContext, searchTokenType, location: _location });
                     let obj2 = searchTokenType(_location[18]);
+                    const obj3 = { searchContext, searchTokenType, location: _location };
                     const initialMessages = searchTokenType(_location[14]).fetchInitialMessages(searchContext);
                   }
-                };
-                obj.openLazy(searchContext(paths[17])(paths[16], paths.paths), "DatePicker", obj);
+                });
               });
             };
           }
@@ -215,9 +213,8 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12470));
+  const keys = Object.keys(items(12471));
   const item = keys.forEach((token) => {
-    let obj = SearchTokens;
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;
       if (null != plainText) {
@@ -225,11 +222,12 @@ export const getSearchFilterSuggestions = function getSearchFilterSuggestions(te
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + plainText + "(?:: ?)?$", "i");
         if (regExp.test(closure_0)) {
-          obj = { token, text: plainText };
-          items.push(obj);
+          const obj2 = { token, text: plainText };
+          items.push(obj2);
         }
       }
     }
+    obj = SearchTokens;
   });
   return items;
 };

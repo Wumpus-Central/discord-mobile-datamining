@@ -1,16 +1,18 @@
-// === Module 10517: stickers/StickersUtils ===
+// === Module 10518: stickers/StickersUtils ===
 
-// Module 10517 (stickers/StickersUtils)
+// Module 10518 (stickers/StickersUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10518).useStickerPickerStore;
+const useStickerPickerStore = fn(10519).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
 
@@ -21,7 +23,7 @@ export const useStickerCategories = function useStickerCategories(channel) {
   const items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const guilds = GuildStore.getGuilds();
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const mobileStickerPickerUpsellRestyleEnabled = require("MobileStickerPickerUpsellRestyleExperiment").useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
   const items1 = [channel, guilds, stickerPackCategories, mobileStickerPickerUpsellRestyleEnabled, stateFromStores];
   return guilds.useMemo(() => {
@@ -66,7 +68,7 @@ export const useStickerCategories = function useStickerCategories(channel) {
         if (type.type !== closure_0(stateFromStores[7]).StickerCategoryTypes.RECENT) {
           let tmp9 = type;
           if (tmp) {
-            let obj = {};
+            const obj = {};
             const merged = Object.assign(type);
             obj.isNitroLocked = tmp;
             tmp9 = obj;
@@ -79,14 +81,14 @@ export const useStickerCategories = function useStickerCategories(channel) {
       } else {
         tmp15 = stickerPackCategories(stateFromStores[13]);
       }
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(type);
-      obj.icon = tmp15;
+      obj2.icon = tmp15;
       if (tmp) {
-        obj.isNitroLocked = tmp;
-        let tmp19 = obj;
+        obj2.isNitroLocked = tmp;
+        let tmp19 = obj2;
       } else {
-        tmp19 = obj;
+        tmp19 = obj2;
       }
       return tmp19;
     });

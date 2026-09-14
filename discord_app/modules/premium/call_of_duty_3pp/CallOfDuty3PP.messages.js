@@ -33,10 +33,11 @@ import _mod3296 from "module_3296" /* 3296 */;
 import _mod3297 from "module_3297" /* 3297 */;
 import _mod3298 from "module_3298" /* 3298 */;
 import _mod3299 from "module_3299" /* 3299 */;
-import module_1155 from "module_1155" /* 1155 */;
+import module_1153_mod from "module_1153" /* 1153 */;
 import size from "module_2" /* 2 */;
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3269);
     return jsonAsset.then((result) => ({ default: result }));
@@ -162,7 +163,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/premium/call_of_duty_3pp/CallOfDuty3PP.messages.js");
 
 export default messagesProxy;

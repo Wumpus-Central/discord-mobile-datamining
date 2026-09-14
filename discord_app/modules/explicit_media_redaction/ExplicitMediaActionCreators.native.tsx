@@ -15,23 +15,24 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
 
 export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, messageId) {
-  let obj = { action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId };
-  const result = obj.trackMediaRedactionAction(obj);
+  const obj = ExplicitMediaRedactionUtils;
+  const result = obj.trackMediaRedactionAction({ action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId });
   if (ExplicitMediaStore.canSubmitFpReport(messageId)) {
-    let tmp4Result = ActionSheetActionCreatorsDefault;
-    obj = { channelId, messageId };
-    tmp4Result.openLazy(asyncRequireImpl(9528, dependencyMap.paths), closure_4, obj);
+    const obj3 = { channelId, messageId };
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9528, dependencyMap.paths), closure_4, obj3);
+    const tmp4Result = ActionSheetActionCreatorsDefault;
   } else {
-    tmp4Result = actions_AlertActionCreatorsDefault;
-    const obj1 = { title: null, body: null, confirmText: null };
+    const obj4 = { title: null, body: null, confirmText: null };
     const intl = util.intl;
-    obj1.title = intl.string(util.t["iS/eFN"]);
+    obj4.title = intl.string(util.t["iS/eFN"]);
     const intl2 = util.intl;
-    obj1.body = intl2.string(util.t.YrjcgR);
+    obj4.body = intl2.string(util.t.YrjcgR);
     const intl3 = util.intl;
-    obj1.confirmText = intl3.string(util.t.BddRzS);
-    tmp4Result.show(obj1);
+    obj4.confirmText = intl3.string(util.t.BddRzS);
+    actions_AlertActionCreatorsDefault.show(obj4);
+    const tmp4Result3 = actions_AlertActionCreatorsDefault;
     const result1 = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
-    const tmp4Result1 = ExplicitMediaFalsePositiveActionCreatorsDefault;
+    const tmp4Result4 = ExplicitMediaFalsePositiveActionCreatorsDefault;
   }
+  const obj2 = { action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId };
 };

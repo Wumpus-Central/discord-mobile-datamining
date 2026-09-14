@@ -7,6 +7,8 @@ import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagU
 import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 10283 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function NotificationSettingsPresets(preset) {
   _require = preset;
@@ -23,7 +25,7 @@ function NotificationSettingsPresets(preset) {
     num = num2;
   }
   let tmp = closure_6();
-  let obj = {
+  const obj = {
     pageWidth: 0,
     onSetActiveIndex(arg0) {
       let tmp = 0 === arg0;
@@ -51,24 +53,24 @@ function NotificationSettingsPresets(preset) {
     items: null,
     defaultIndex: null
   };
-  obj = { label: null, id: null, icon: null, page: null };
-  const intl = tmp2(tmp3[3]).intl;
-  obj.label = intl.string(require("util").t.hZrr6k);
-  obj.id = require("notificationSettingsPresetUtils").Presets.ALL_MESSAGES;
-  obj.icon = closure_4(require("CircleCheckIcon").CircleCheckIcon, {});
-  const items = [obj, , ];
-  const obj1 = { label: null, id: null, icon: null, page: null };
-  const intl2 = tmp2(tmp3[3]).intl;
-  obj1.label = intl2.string(require("util").t.y59NJm);
-  obj1.id = require("notificationSettingsPresetUtils").Presets.MENTIONS;
-  obj1.icon = closure_4(require("MagicWandIcon").MagicWandIcon, {});
-  items[1] = obj1;
   const obj2 = { label: null, id: null, icon: null, page: null };
+  const intl = tmp2(tmp3[3]).intl;
+  obj2.label = intl.string(require("util").t.hZrr6k);
+  obj2.id = require("notificationSettingsPresetUtils").Presets.ALL_MESSAGES;
+  obj2.icon = closure_4(require("CircleCheckIcon").CircleCheckIcon, {});
+  const items = [obj2, , ];
+  const obj3 = { label: null, id: null, icon: null, page: null };
+  const intl2 = tmp2(tmp3[3]).intl;
+  obj3.label = intl2.string(require("util").t.y59NJm);
+  obj3.id = require("notificationSettingsPresetUtils").Presets.MENTIONS;
+  obj3.icon = closure_4(require("MagicWandIcon").MagicWandIcon, {});
+  items[1] = obj3;
+  const obj4 = { label: null, id: null, icon: null, page: null };
   const intl3 = tmp2(tmp3[3]).intl;
-  obj2.label = intl3.string(require("util").t["pGn/bJ"]);
-  obj2.id = require("notificationSettingsPresetUtils").Presets.NOTHING;
-  obj2.icon = closure_4(require("BellSlashIcon").BellSlashIcon, {});
-  items[2] = obj2;
+  obj4.label = intl3.string(require("util").t["pGn/bJ"]);
+  obj4.id = require("notificationSettingsPresetUtils").Presets.NOTHING;
+  obj4.icon = closure_4(require("BellSlashIcon").BellSlashIcon, {});
+  items[2] = obj4;
   obj.items = items;
   obj.defaultIndex = num;
   const segmentedControlState = require("SegmentedControlState").useSegmentedControlState(obj);
@@ -83,41 +85,39 @@ function NotificationSettingsPresets(preset) {
     }
   }, items1);
   if (preset.preset === require("notificationSettingsPresetUtils").Presets.CUSTOM) {
-    const obj3 = { style: tmp.customContainer, children: null };
-    const obj4 = { style: { flex: 1, marginRight: 8 }, children: null };
-    const obj5 = { variant: "text-sm/semibold", children: null };
+    const obj5 = { style: tmp.customContainer, children: null };
+    const obj6 = { style: { flex: 1, marginRight: 8 }, children: null };
+    const obj7 = { variant: "text-sm/semibold", children: null };
     const intl4 = tmp2(tmp3[3]).intl;
-    obj5.children = intl4.string(tmp2(tmp3[3]).t["32yow9"]);
-    const items2 = [closure_4(tmp2(tmp3[11]).Text, obj5), ];
-    const obj6 = { variant: "text-xs/medium", children: null };
+    obj7.children = intl4.string(tmp2(tmp3[3]).t["32yow9"]);
+    const items2 = [closure_4(tmp2(tmp3[11]).Text, obj7), ];
+    const obj8 = { variant: "text-xs/medium", children: null };
     const intl5 = tmp2(tmp3[3]).intl;
-    obj6.children = intl5.string(tmp2(tmp3[3]).t.l3doVX);
-    items2[1] = closure_4(tmp2(tmp3[11]).Text, obj6);
-    obj4.children = items2;
-    const items3 = [closure_5(View, obj4), ];
-    const obj7 = { variant: "secondary", text: null, onPress: null };
+    obj8.children = intl5.string(tmp2(tmp3[3]).t.l3doVX);
+    items2[1] = closure_4(tmp2(tmp3[11]).Text, obj8);
+    obj6.children = items2;
+    const items3 = [closure_5(View, obj6), ];
+    const obj9 = { variant: "secondary", text: null, onPress: null };
     const intl6 = tmp2(tmp3[3]).intl;
-    obj7.text = intl6.string(tmp2(tmp3[3]).t["ztO+l+"]);
-    obj7.onPress = function onPress() {
+    obj9.text = intl6.string(tmp2(tmp3[3]).t["ztO+l+"]);
+    obj9.onPress = function onPress() {
       preset.updatePreset(notificationSettingsPresetUtils.Presets.MENTIONS);
     };
-    items3[1] = closure_4(tmp2(tmp3[12]).Button, obj7);
-    obj3.children = items3;
-    let tmp4Result = closure_5(View, obj3);
+    items3[1] = closure_4(tmp2(tmp3[12]).Button, obj9);
+    obj5.children = items3;
+    let tmp4Result = closure_5(View, obj5);
   } else {
-    const obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    tmp4Result = closure_4(tmp2(tmp3[13]).SegmentedControl, obj8);
+    const obj10 = { variant: "experimental_Large", state: segmentedControlState };
+    tmp4Result = closure_4(tmp2(tmp3[13]).SegmentedControl, obj10);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { customContainer: null };
-createStyles = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
-createStyles.customContainer = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { customContainer: { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
 

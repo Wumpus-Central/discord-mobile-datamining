@@ -1,9 +1,9 @@
-// === Module 11630: AppStoreOverlayTelemetryManager ===
+// === Module 11631: AppStoreOverlayTelemetryManager ===
 
-// Module 11630 (AppStoreOverlayTelemetryManager)
+// Module 11631 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1074 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
 import size from "module_2" /* 2 */;
 

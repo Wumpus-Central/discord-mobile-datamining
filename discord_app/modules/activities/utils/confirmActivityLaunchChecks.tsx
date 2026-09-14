@@ -24,8 +24,8 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +38,8 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -58,14 +58,14 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 1;
           c7 = 3;
           c8 = 1;
-          let obj2 = { value: closure_132_1(closure_132_2[4])(closure_131_0, closure_131_1), done: false };
-          return obj2;
+          const obj6 = { value: closure_132_1(closure_132_2[4])(closure_131_0, closure_131_1), done: false };
+          return obj6;
         }
       } else if (2 === tmp7) {
         c6 = 0;
@@ -76,22 +76,21 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
         }
         closure_131_3 = PRIVATE_CHANNEL;
-        obj2 = closure_132_1(closure_132_2[6]);
-        const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: closure_131_0, channelId: null, guildId: null, error: null, locationKind: null };
+        const obj7 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: closure_131_0, channelId: null, guildId: null, error: null, locationKind: null };
         let channelId = closure_131_1;
         if (closure_131_1 == null) {
           channelId = null;
         }
-        obj3.channelId = channelId;
+        obj7.channelId = channelId;
         let guildId = closure_131_2;
         if (closure_131_2 == null) {
           guildId = null;
         }
-        obj3.guildId = guildId;
+        obj7.guildId = guildId;
         const aPIError = new closure_132_0(closure_132_2[7]).APIError(closure_131_4);
-        obj3.error = aPIError;
-        obj3.locationKind = closure_131_3;
-        obj2.dispatch(obj3);
+        obj7.error = aPIError;
+        obj7.locationKind = closure_131_3;
+        closure_132_1(closure_132_2[6]).dispatch(obj7);
         c8 = 3;
         return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
@@ -100,12 +99,12 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c6 = 0;
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp46) {
@@ -127,8 +126,8 @@ let closure_9 = async function _confirmActivityChange(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -141,8 +140,8 @@ let closure_9 = async function _confirmActivityChange(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const shouldClosePopout = tmp2;
           closure_129_0 = undefined;
@@ -160,8 +159,8 @@ let closure_9 = async function _confirmActivityChange(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if (null != closure_129_0) {
             const promise = new Promise((fn) => {
               closure_0 = fn;
@@ -178,9 +177,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                     dependencyMap();
                   }
                   shouldClosePopout(9670)(tmp, channel, () => {
-                    value(c2[10])();
-                    const obj = { location: value.location, applicationId: closure_2_0.id, shouldClosePopout };
-                    obj.leaveActivity(obj);
+                    value(c2[10])().leaveActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
                 }
@@ -190,15 +187,15 @@ let closure_9 = async function _confirmActivityChange(arg0) {
             });
             c2 = 2;
             c3 = 1;
-            let obj2 = { value: promise, done: false };
-            return obj2;
+            const obj5 = { value: promise, done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (!value) {
           c3 = 3;
@@ -221,8 +218,8 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -235,8 +232,8 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -258,31 +255,30 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             if (null == closure_131_3.nsfwAllowed) {
               closure_1 = closure_131_0;
               if (closure_131_0 == null) {
-                const obj2 = { applicationId: closure_131_1, channelId: null, guildId: null };
+                const obj6 = { applicationId: closure_131_1, channelId: null, guildId: null };
                 let id;
                 if (closure_131_2 != null) {
                   id = closure_131_2.id;
                 }
-                obj2.channelId = id;
-                let obj4 = closure_131_2;
+                obj6.channelId = id;
                 let guildId;
                 if (closure_131_2 != null) {
-                  guildId = obj4.getGuildId();
+                  guildId = closure_131_2.getGuildId();
                 }
                 if (guildId == null) {
                   guildId = undefined;
                 }
-                obj2.guildId = guildId;
+                obj6.guildId = guildId;
                 c5 = 2;
                 c6 = 1;
-                const obj3 = { value: closure_132_7(obj2), done: false };
-                return obj3;
+                const obj7 = { value: closure_132_7(obj6), done: false };
+                return obj7;
               }
             }
             c6 = 3;
@@ -294,8 +290,8 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_1 = value;
           }
@@ -304,7 +300,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (!value) {
           c6 = 3;
@@ -327,25 +323,24 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
                 if (closure_1_4 != null) {
                   tmp();
                 }
-                closure_0(id[11]);
-                const obj = { application, channelId: null, onAgree: null, onDisagree: null };
+                const obj2 = { application, channelId: null, onAgree: null, onDisagree: null };
                 id = undefined;
                 if (id != null) {
                   id = id.id;
                 }
-                obj.channelId = id;
-                obj.onAgree = function onAgree() {
+                obj2.channelId = id;
+                obj2.onAgree = function onAgree() {
                   return closure_0(true);
                 };
-                obj.onDisagree = function onDisagree() {
+                obj2.onDisagree = function onDisagree() {
                   return closure_0(false);
                 };
-                const result = obj.confirmActivityAgeGateAlert(obj);
+                const result = closure_0(id[11]).confirmActivityAgeGateAlert(obj2);
               });
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: promise, done: false };
-              return obj5;
+              const obj9 = { value: promise, done: false };
+              return obj9;
             }
           }
         }
@@ -364,8 +359,8 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -378,8 +373,8 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const application = tmp5;
           closure_3 = tmp2;
@@ -400,30 +395,29 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_1 = closure_131_0;
             if (closure_131_0 == null) {
-              const obj2 = { applicationId: closure_131_1, channelId: null, guildId: null };
+              const obj7 = { applicationId: closure_131_1, channelId: null, guildId: null };
               let id;
               if (closure_131_2 != null) {
                 id = closure_131_2.id;
               }
-              obj2.channelId = id;
-              let obj4 = closure_131_2;
+              obj7.channelId = id;
               let guildId;
               if (closure_131_2 != null) {
-                guildId = obj4.getGuildId();
+                guildId = closure_131_2.getGuildId();
               }
               if (guildId == null) {
                 guildId = undefined;
               }
-              obj2.guildId = guildId;
+              obj7.guildId = guildId;
               c5 = 2;
               c6 = 1;
-              const obj3 = { value: closure_132_7(obj2), done: false };
-              return obj3;
+              const obj8 = { value: closure_132_7(obj7), done: false };
+              return obj8;
             }
           }
         } else if (arg0 === 1) {
@@ -431,7 +425,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_1 = value;
@@ -439,8 +433,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
         closure_131_4 = closure_1;
         let tmp10 = null != closure_131_4;
         if (tmp10) {
-          obj1 = closure_132_0(closure_132_2[12]);
-          const hasApplicationFlagResult = obj1.hasApplicationFlag(closure_131_4, closure_132_6.EMBEDDED_RELEASED);
+          const hasApplicationFlagResult = closure_132_0(closure_132_2[12]).hasApplicationFlag(closure_131_4, closure_132_6.EMBEDDED_RELEASED);
           let tmp18 = !hasApplicationFlagResult;
           if (!hasApplicationFlagResult) {
             tmp18 = !closure_131_4.isVerified;
@@ -454,8 +447,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
                 if (closure_1_3 != null) {
                   tmp();
                 }
-                closure_0(c2[13]);
-                const obj = {
+                const result = closure_0(c2[13]).confirmExternalAppLaunchAlert({
                   application,
                   onConfirm() {
                     return closure_0(true);
@@ -463,17 +455,17 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
                   onCancel() {
                     return closure_0(false);
                   }
-                };
-                const result = obj.confirmExternalAppLaunchAlert(obj);
+                });
               });
             }
             tmp21 = result;
           }
           tmp10 = tmp21;
+          const obj2 = closure_132_0(closure_132_2[12]);
         }
         c6 = 3;
-        obj4 = { value: tmp10, done: true };
-        return obj4;
+        const obj9 = { value: tmp10, done: true };
+        return obj9;
       }
     } catch (tmp40) {
       c6 = tmp;

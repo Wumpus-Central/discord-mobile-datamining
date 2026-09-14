@@ -1,6 +1,6 @@
-// === Module 15490: FloatingApplyButton ===
+// === Module 15491: FloatingApplyButton ===
 
-// Module 15490 (FloatingApplyButton)
+// Module 15491 (FloatingApplyButton)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4604 */;
 import spring from "spring" /* 5055 */;
@@ -20,10 +20,11 @@ export default function FloatingApplyButton(visible) {
   ({ disabled, text, onPress } = visible);
   const renderButton = visible.renderButton;
   let stateFromStores;
-  let obj = visible(stateFromStores[4]);
   let items = [AccessibilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = visible(stateFromStores[6]);
+  stateFromStores = visible(stateFromStores[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj = visible(stateFromStores[4]);
+  const tmp = visible;
+  const tmp2 = stateFromStores;
   class I {
     constructor() {
       pointerEvents = "none";
@@ -36,7 +37,7 @@ export default function FloatingApplyButton(visible) {
   I.__closure = { visible };
   I.__workletHash = 8866673550486;
   I.__initData = __initData;
-  const animatedProps = obj1.useAnimatedProps(I);
+  const animatedProps = visible(stateFromStores[6]).useAnimatedProps(I);
   let obj2 = visible(stateFromStores[6]);
   class P {
     constructor() {
@@ -85,28 +86,28 @@ export default function FloatingApplyButton(visible) {
       return rect;
     }
   }
-  obj = { visible, tokens: onPress(stateFromStores[7]), reducedMotion: stateFromStores, withSpring: visible(stateFromStores[8]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING };
-  P.__closure = obj;
+  let obj3 = visible(stateFromStores[6]);
+  P.__closure = { visible, tokens: onPress(stateFromStores[7]), reducedMotion: stateFromStores, withSpring: visible(stateFromStores[8]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING };
   P.__workletHash = 17409059357308;
   P.__initData = __initData2;
   const items1 = [onPress];
-  const animatedStyle = obj2.useAnimatedStyle(P);
+  const animatedStyle = obj3.useAnimatedStyle(P);
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     onPress();
   }, items1);
-  obj = { style: animatedStyle, children: null };
-  obj1 = { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null };
+  const obj5 = { style: animatedStyle, children: null };
+  const obj6 = { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null };
   let renderButtonResult;
   if (renderButton != null) {
-    obj2 = { text, disabled, onPress: callback };
-    renderButtonResult = renderButton(obj2);
+    const obj7 = { text, disabled, onPress: callback };
+    renderButtonResult = renderButton(obj7);
   }
   if (renderButtonResult == null) {
-    let obj3 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading };
-    renderButtonResult = jsx(visible(stateFromStores[10]).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading });
+    const obj8 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading };
+    renderButtonResult = jsx(tmp(tmp2[10]).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading });
   }
-  obj1.children = renderButtonResult;
-  obj.children = jsx(onPress(stateFromStores[6]).View, { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null });
+  obj6.children = renderButtonResult;
+  obj5.children = jsx(onPress(stateFromStores[6]).View, { style: { marginBottom: onPress(stateFromStores[5])().bottom }, animatedProps, children: null });
   return jsx(onPress(stateFromStores[6]).View, { style: animatedStyle, children: null });
 };

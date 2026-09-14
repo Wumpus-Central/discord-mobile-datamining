@@ -5,11 +5,13 @@ import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
 import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8104 */;
-import noop from "module_19" /* 19 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import noop_mod from "module_19" /* 19 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import size from "module_2" /* 2 */;
 
+let noop = noop_mod;
 ({ useEffect: closure_0, useRef: closure_1 } = noop);
+let noop = noop_mod;
 let jsx = jsxProd.jsx;
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = LottieNodeNativeComponentDefault;

@@ -3,12 +3,14 @@
 // Module 8280 (useTrackCollectiblesItemTryOut)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7657 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 _mod19.useCallback;
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -24,13 +26,13 @@ export default function useTrackCollectiblesItemTryOut(location_stack) {
   return useCallback((skuId) => {
     value = stateFromStores.get(skuId.skuId);
     obj = AnalyticsUtilsDefault;
-    obj = { feature_name: obj[skuId.type], feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value) ? timestampProducer.FREE : timestampProducer.PREMIUM_STANDARD, feature_selection: null, location_stack: null };
+    const obj2 = { feature_name: obj[skuId.type], feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value) ? timestampProducer.FREE : timestampProducer.PREMIUM_STANDARD, feature_selection: null, location_stack: null };
     let name;
     if (value != null) {
       name = value.name;
     }
-    obj.feature_selection = name;
-    obj.location_stack = location_stack;
-    obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj);
+    obj2.feature_selection = name;
+    obj2.location_stack = location_stack;
+    obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj2);
   }, items1);
 };

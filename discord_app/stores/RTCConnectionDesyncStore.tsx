@@ -1,6 +1,6 @@
-// === Module 13844: RTCConnectionDesyncStore ===
+// === Module 13845: RTCConnectionDesyncStore ===
 
-// Module 13844 (RTCConnectionDesyncStore)
+// Module 13845 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 1932 */;
@@ -31,14 +31,14 @@ function retryFailedUsers() {
         if (null != user) {
           c2 = true;
           set.delete(item);
-          let obj = { userId: user.id, channelId };
-          const tmp23 = new VoiceStateRecord(obj);
+          const obj4 = { userId: user.id, channelId };
+          const tmp23 = new VoiceStateRecord(obj4);
           let tmp6 = guildId;
           if (guildId == null) {
             tmp6 = React7;
           }
           const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
-          obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp23, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(guildId, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+          const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp23, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(guildId, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
           obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
           const result1 = closure_13.set(user.id, obj);
         }
@@ -146,14 +146,14 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
             set.add(item);
             let flag = acc;
           } else {
-            let obj = { userId: user.id, channelId };
-            const tmp21 = new VoiceStateRecord(obj);
+            const obj4 = { userId: user.id, channelId };
+            const tmp21 = new VoiceStateRecord(obj4);
             let tmp2 = closure_1_0;
             if (closure_1_0 == null) {
               tmp2 = React7;
             }
             const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
-            obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp21, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(closure_1_0, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
+            const obj = { type: ParticipantTypes.USER, user, id: user.id, streamId: null, voiceState: tmp21, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: NicknameUtilsDefault.getName(closure_1_0, channelId, user), userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
             obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_1_0);
             const result1 = closure_13.set(user.id, obj);
             flag = true;

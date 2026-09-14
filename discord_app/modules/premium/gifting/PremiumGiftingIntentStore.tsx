@@ -8,9 +8,9 @@ import UserSettings from "UserSettings" /* 1935 */;
 import FriendAnniversaryUtils from "FriendAnniversaryUtils" /* 8184 */;
 import FriendAnniversaryGate from "FriendAnniversaryGate" /* 8185 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
 import ConsentStore from "ConsentStore" /* 6696 */;
 import RelationshipStore from "RelationshipStore" /* 4285 */;
 
@@ -60,9 +60,9 @@ function updateFriendAnniversaries() {
                   let obj = FriendAnniversaryUtils;
                   if (obj.isFriendAnniversary(date)) {
                     let arr = closure_11.push(tmp17);
-                    obj = { friendsSince: null };
-                    obj.friendsSince = tmp30;
-                    closure_14[tmp17] = obj;
+                    let obj2 = { friendsSince: null };
+                    obj2.friendsSince = tmp30;
+                    closure_14[tmp17] = obj2;
                   }
                 }
               }

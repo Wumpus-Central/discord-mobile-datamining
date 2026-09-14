@@ -1,7 +1,7 @@
-// === Module 15774: CaptchaTestActionCreators ===
+// === Module 15776: CaptchaTestActionCreators ===
 
-// Module 15774 (CaptchaTestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 15776 (CaptchaTestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,8 +16,8 @@ let closure_4 = async function _testCaptcha() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -30,24 +30,24 @@ let closure_4 = async function _testCaptcha() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.CAPTCHA_TEST, body: null, rejectWithError: false };
-            const obj1 = { decider, options };
-            request.body = obj1;
+            const obj4 = { decider, options };
+            request.body = obj4;
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;

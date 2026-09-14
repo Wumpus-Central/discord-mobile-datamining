@@ -410,13 +410,14 @@ function collectAst(content) {
 let ast = {};
 const prototype = function MarkupParserNodeTypeError(arg0) {
   let _Array;
+  let arr;
   let tmp8;
   let tmp9;
-  let set = new Set();
+  const set = new Set();
   const items = [arg0];
   if (items.length > 0) {
     do {
-      let arr = items.pop();
+      arr = items.pop();
       if (undefined !== arr) {
         let _Array2 = Array;
         if (Array.isArray(arr)) {
@@ -436,7 +437,7 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray) {
             let push = items.push;
             let items2 = [];
-            arraySpreadResult = HermesBuiltin.arraySpread(arr.content, 0);
+            let arraySpreadResult3 = HermesBuiltin.arraySpread(arr.content, 0);
             tmp8 = items2;
             tmp9 = items;
             let applyResult1 = HermesBuiltin.apply(items2, items);
@@ -449,7 +450,7 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray1) {
             let push2 = items.push;
             let items3 = [];
-            let arraySpreadResult1 = HermesBuiltin.arraySpread(arr.items, 0);
+            let arraySpreadResult4 = HermesBuiltin.arraySpread(arr.items, 0);
             tmp8 = items3;
             tmp9 = items;
             let applyResult2 = HermesBuiltin.apply(items3, items);
@@ -458,10 +459,10 @@ const prototype = function MarkupParserNodeTypeError(arg0) {
       }
     } while (items.length > 0);
   }
-  arr = Array.from(set);
-  set = new set(prototype.getMessage(arr), tmp8, tmp9, _Array, tmp4, arr);
-  set.nodeTypes = arr;
-  return set;
+  const arr2 = Array.from(set);
+  const set1 = new set(prototype.getMessage(arr2), tmp8, tmp9, _Array, tmp4, arr);
+  set1.nodeTypes = arr2;
+  return set1;
 }.prototype;
 class prototype extends Error {
 }
@@ -504,7 +505,7 @@ function reinsertConsumedListSeparators(content) {
     if (Array.isArray(tmp2.content)) {
       tmp2.content = reinsertConsumedListSeparators(tmp2.content);
     }
-    arr = items.push(tmp2);
+    let arr3 = items.push(tmp2);
     continue;
   }
   return items;
@@ -526,7 +527,7 @@ function flattenAst(isSlate, content) {
           let arr = items.push(arr3[num4]);
         }
       } else {
-        arr = items.push(arr3);
+        let arr2 = items.push(arr3);
       }
     }
     if (!isSlate.isSlate) {
@@ -606,8 +607,8 @@ function constrainAst(content, arg1) {
     obj.limit = obj.limit - 1;
     if (obj.limit <= 0) {
       obj.hasBailedAst = true;
-      obj = { ast, hasBailedAst: true };
-      return obj;
+      const obj2 = { ast, hasBailedAst: true };
+      return obj2;
     } else {
       const _Array = Array;
       if (Array.isArray(content.content)) {
@@ -619,8 +620,7 @@ function constrainAst(content, arg1) {
       }
     }
   }
-  obj = { ast: content, hasBailedAst: obj.hasBailedAst };
-  return obj;
+  return { ast: content, hasBailedAst: obj.hasBailedAst };
 }
 
 export const NUM_MAX_AST_NODES = 200;

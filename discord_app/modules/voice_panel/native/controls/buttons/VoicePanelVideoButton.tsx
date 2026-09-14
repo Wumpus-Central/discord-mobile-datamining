@@ -1,6 +1,6 @@
-// === Module 17305: VoicePanelVideoButton ===
+// === Module 17307: VoicePanelVideoButton ===
 
-// Module 17305 (VoicePanelVideoButton)
+// Module 17307 (VoicePanelVideoButton)
 import util from "util" /* 1114 */;
 import native from "native" /* 4347 */;
 import useAlertStore from "useAlertStore" /* 4982 */;
@@ -8,9 +8,9 @@ import StreamPermissionUtils from "StreamPermissionUtils" /* 7828 */;
 import CallsUtils from "CallsUtils" /* 9211 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9715 */;
 import VideoIcon from "VideoIcon" /* 10238 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 13176 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13393 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17306 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 13177 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13394 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17308 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9616 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -21,21 +21,21 @@ import PermissionStore from "PermissionStore" /* 4275 */;
 require = fn;
 function VideoButtonRive(arg0) {
   ({ isVideoEnabled, color } = arg0);
-  let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
-  obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
+  const obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
+  const obj2 = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
   let str = "CamOff";
   if (isVideoEnabled) {
     str = "CamOn";
   }
-  obj.defaultViewModelInstance = str;
+  obj2.defaultViewModelInstance = str;
   if (isVideoEnabled) {
     let VideoSlashIcon = VideoIcon.VideoIcon;
   } else {
     VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
   }
-  obj.fallback = <VideoSlashIcon color={color} />;
+  obj2.fallback = <VideoSlashIcon color={color} />;
   obj.children = jsx(native.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
-  return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
+  return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
 const Features = fn(4661).Features;
@@ -48,10 +48,10 @@ export default function VideoButton(arg0) {
   let stateFromStores1;
   let stateFromStores2;
   let color;
-  let obj = stateFromStores2;
   ({ props, wrapperSpecs } = arg0);
   const channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
   const voicePanelButtonStyles = channelId(stateFromStores1[10]).useVoicePanelButtonStyles(wrapperSpecs);
+  let obj = stateFromStores2;
   let obj2 = channelId(stateFromStores1[10]);
   let tmp = stateFromStores;
   const items = [GuildStore, PermissionStore, ChannelStore];
@@ -71,7 +71,7 @@ export default function VideoButton(arg0) {
   let obj3 = channelId(stateFromStores1[11]);
   const items1 = [MediaEngineStore];
   stateFromStores1 = channelId(stateFromStores1[11]).useStateFromStores(items1, () => MediaEngineStore.isVideoEnabled());
-  const obj4 = channelId(stateFromStores1[11]);
+  let obj4 = channelId(stateFromStores1[11]);
   const items2 = [MediaEngineStore];
   stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () => MediaEngineStore.supports(constants.VIDEO));
   const VideoGuardExperiment = channelId(stateFromStores1[13]).VideoGuardExperiment;
@@ -106,7 +106,7 @@ export default function VideoButton(arg0) {
     element.accessibilityLabel = stringResult;
     element.style = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (!videoEnabled) {
-      obj = { color: voicePanelButtonStyles.iconFill.color };
+      const obj6 = { color: voicePanelButtonStyles.iconFill.color };
       memo = jsx(tmp3(tmp2[21]).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;

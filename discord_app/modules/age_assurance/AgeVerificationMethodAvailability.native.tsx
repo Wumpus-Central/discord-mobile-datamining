@@ -1,7 +1,7 @@
 // === Module 8556: AgeVerificationMethodAvailability ===
 
 // Module 8556 (AgeVerificationMethodAvailability)
-import PlatformUtils from "PlatformUtils" /* 1150 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8557 */;
 import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 8558 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

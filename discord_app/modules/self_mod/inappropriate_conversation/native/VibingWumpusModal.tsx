@@ -1,10 +1,10 @@
-// === Module 11535: VibingWumpusModal ===
+// === Module 11536: VibingWumpusModal ===
 
-// Module 11535 (VibingWumpusModal)
+// Module 11536 (VibingWumpusModal)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import Navigator from "Navigator" /* 7103 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11088 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 11089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
@@ -28,67 +28,66 @@ class VibingWumpusScreen {
     closure_3 = stateFromStores;
     effect = closure_4.useEffect(() => {
       let date = new Date();
+      let result = date(ref[11]).playVibingWumpusMusic();
       let obj = date(ref[11]);
-      let result = obj.playVibingWumpusMusic();
-      obj = { source: constants2.INAPPROPRIATE_CONVERSATION };
-      closure_1(ref[12]).track(constants3.VIBING_WUMPUS_VIEWED, obj);
+      closure_1(ref[12]).track(constants3.VIBING_WUMPUS_VIEWED, { source: constants2.INAPPROPRIATE_CONVERSATION });
       return () => {
-        closure_1(ref[12]);
-        const obj = { duration_open_ms: null, source: null };
+        const obj2 = { duration_open_ms: null, source: null };
         date = new Date();
         const time = date.getTime();
-        obj.duration_open_ms = time - date.getTime();
-        obj.source = constants2.INAPPROPRIATE_CONVERSATION;
-        obj.track(constants3.VIBING_WUMPUS_CLOSED, obj);
+        obj2.duration_open_ms = time - date.getTime();
+        obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
+        closure_1(ref[12]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
+        const obj = closure_1(ref[12]);
         const result = first(ref[11]).stopVibingWumpusMusic();
       };
     }, []);
     tmp9 = jsxs;
     tmp11 = jsx;
-    obj = { source: closure_1(closure_2[13]), style: tmp.rings };
+    obj1 = { source: closure_1(closure_2[13]), style: tmp.rings };
     tmp10 = Fragment;
     tmp12 = closure_1;
     items1 = [, ];
-    items1[0] = jsx(Image, obj);
+    items1[0] = jsx(Image, obj1);
     tmp13 = View;
-    obj1 = { style: tmp.container, children: null };
-    obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
+    obj13 = { style: tmp.container, children: null };
+    obj14 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
     tmp14 = closure_1(closure_2[14]);
-    obj2.source = closure_0(closure_2[15]);
-    obj2.ref = ref;
-    obj2.autoPlay = !stateFromStores;
-    obj2.style = tmp.wumpus;
+    obj14.source = closure_0(closure_2[15]);
+    obj14.ref = ref;
+    obj14.autoPlay = !stateFromStores;
+    obj14.style = tmp.wumpus;
     num = undefined;
     if (stateFromStores) {
       num = 0.8;
     }
-    obj2.progress = num;
+    obj14.progress = num;
     items2 = [, , ];
-    items2[0] = tmp11(tmp14, obj2);
-    obj3 = { style: tmp.warningText, children: null };
-    obj4 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
+    items2[0] = tmp11(tmp14, obj14);
+    obj15 = { style: tmp.warningText, children: null };
+    obj16 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
     intl = tmp5(tmp6[17]).intl;
-    obj4.children = intl.string(tmp5(tmp6[17]).t.L4ifkZ);
+    obj16.children = intl.string(tmp5(tmp6[17]).t.L4ifkZ);
     items3 = [, ];
-    items3[0] = tmp11(tmp5(tmp6[16]).Text, obj4);
-    obj5 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+    items3[0] = tmp11(tmp5(tmp6[16]).Text, obj16);
+    obj17 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
     intl2 = tmp5(tmp6[17]).intl;
-    obj5.children = intl2.string(tmp5(tmp6[17]).t.R8LCMZ);
-    items3[1] = tmp11(tmp5(tmp6[16]).Text, obj5);
-    obj3.children = items3;
-    items2[1] = tmp9(tmp13, obj3);
-    obj6 = { style: tmp.ctaContainer, children: null };
-    obj7 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
+    obj17.children = intl2.string(tmp5(tmp6[17]).t.R8LCMZ);
+    items3[1] = tmp11(tmp5(tmp6[16]).Text, obj17);
+    obj15.children = items3;
+    items2[1] = tmp9(tmp13, obj15);
+    obj18 = { style: tmp.ctaContainer, children: null };
+    obj19 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
     intl3 = tmp5(tmp6[17]).intl;
-    obj7.text = intl3.string(tmp5(tmp6[17]).t["8eKkaf"]);
-    obj7.onPress = function onPress() {
-      closure_1(ref[12]);
-      const obj = { action: constants.BACK_TO_CONVERSATION };
-      obj.track(constants3.VIBING_WUMPUS_ACTION, obj);
+    obj19.text = intl3.string(tmp5(tmp6[17]).t["8eKkaf"]);
+    obj19.onPress = function onPress() {
+      closure_1(ref[12]).track(constants3.VIBING_WUMPUS_ACTION, { action: constants.BACK_TO_CONVERSATION });
+      const obj = closure_1(ref[12]);
+      const obj2 = { action: constants.BACK_TO_CONVERSATION };
       closure_1(ref[19]).popWithKey(VIBING_WUMPUS_MODAL_KEY);
     };
     items4 = [, ];
-    items4[0] = tmp11(tmp5(tmp6[18]).Button, obj7);
+    items4[0] = tmp11(tmp5(tmp6[18]).Button, obj19);
     intl4 = tmp5(tmp6[17]).intl;
     string = intl4.string;
     t = tmp5(tmp6[17]).t;
@@ -97,21 +96,21 @@ class VibingWumpusScreen {
     } else {
       stringResult = string(t.ZcgDJX);
     }
-    obj8 = {
+    obj20 = {
       variant: "tertiary",
       size: "lg",
       text: stringResult,
       grow: true,
       onPress() {
-            let obj = InappropriateConversationsActionCreators;
+            const obj = InappropriateConversationsActionCreators;
             if (first) {
               const result = obj.playVibingWumpusMusic();
-              obj = { action: constants.PLAY };
-              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj);
+              const obj3 = { action: constants.PLAY };
+              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj3);
             } else {
               const result1 = obj.pauseVibingWumpusMusic();
-              obj = { action: constants.PAUSE };
-              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj);
+              const obj5 = { action: constants.PAUSE };
+              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj5);
             }
             let tmp14 = stateFromStores;
             if (!stateFromStores) {
@@ -140,54 +139,54 @@ class VibingWumpusScreen {
     } else {
       PauseIcon = tmp5(tmp6[21]).PauseIcon;
     }
-    obj9 = { children: null };
-    obj10 = { size: "md", color: tmp12(tmp6[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-    obj8.icon = tmp11(PauseIcon, obj10);
-    items4[1] = tmp11(tmp5(tmp6[18]).Button, obj8);
-    obj6.children = items4;
-    items2[2] = tmp9(tmp13, obj6);
-    obj1.children = items2;
-    items1[1] = tmp9(tmp13, obj1);
-    obj9.children = items1;
-    return tmp9(tmp10, obj9);
+    obj21 = { children: null };
+    obj22 = { size: "md", color: tmp12(tmp6[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+    obj20.icon = tmp11(PauseIcon, obj22);
+    items4[1] = tmp11(tmp5(tmp6[18]).Button, obj20);
+    obj18.children = items4;
+    items2[2] = tmp9(tmp13, obj18);
+    obj13.children = items2;
+    items1[1] = tmp9(tmp13, obj13);
+    obj21.children = items1;
+    return tmp9(tmp10, obj21);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VIBING_WUMPUS_MODAL_KEY = fn(11496).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(11536);
+const VIBING_WUMPUS_MODAL_KEY = fn(11497).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(11537);
 ({ VibingWumpusAction: closure_9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
-createStyles = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
-createStyles.container = createStyles;
-createStyles.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
-let obj1 = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
-createStyles.ctaContainer = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
-createStyles.takeoverHeader = { textAlign: "center" };
-createStyles.takeoverDescription = { textAlign: "center" };
-createStyles.wumpus = { height: 187 };
-createStyles.rings = { position: "absolute", width: "100%", height: 440, top: 120 };
-const __initData = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" }, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
+obj2.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
+let obj4 = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
+obj2.ctaContainer = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
+obj2.takeoverHeader = { textAlign: "center" };
+obj2.takeoverDescription = { textAlign: "center" };
+obj2.wumpus = { height: 187 };
+obj2.rings = { position: "absolute", width: "100%", height: 440, top: 120 };
+const __initData = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
 
 export default function VibingWumpusModal() {
-  let obj = { screens: null, initialRouteName: "VIBING_WUMPUS" };
-  obj = {
-    VIBING_WUMPUS: {
-      title: "",
-      fullscreen: true,
-      headerShown: false,
-      render() {
-        return closure_1_12(VibingWumpusScreen, {});
+  const obj = {
+    screens: {
+      VIBING_WUMPUS: {
+        title: "",
+        fullscreen: true,
+        headerShown: false,
+        render() {
+          return closure_1_12(VibingWumpusScreen, {});
+        }
       }
-    }
+    },
+    initialRouteName: "VIBING_WUMPUS"
   };
-  obj.screens = obj;
   return closure_1_12(Navigator.Navigator, obj);
 };
 export { VibingWumpusScreen };

@@ -1,8 +1,8 @@
-// === Module 1252: discord_common/IdGenerator ===
+// === Module 1250: discord_common/IdGenerator ===
 
-// Module 1252 (discord_common/IdGenerator)
+// Module 1250 (discord_common/IdGenerator)
 import IntegerDefault from "Integer" /* 14 */;
-import Buffer from "Buffer" /* 1253 */;
+import Buffer from "Buffer" /* 1251 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");

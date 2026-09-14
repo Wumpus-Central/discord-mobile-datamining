@@ -1,6 +1,6 @@
-// === Module 10435: PremiumUpsellGradientBackground ===
+// === Module 10436: PremiumUpsellGradientBackground ===
 
-// Module 10435 (PremiumUpsellGradientBackground)
+// Module 10436 (PremiumUpsellGradientBackground)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 5068 */;
 import noop from "module_19" /* 19 */;
@@ -8,12 +8,11 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const Gradients = fn(7535).Gradients;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { gradient: null };
-createStyles = { opacity: 0.1 };
+const createStyles = fn(4636);
+const obj2 = { gradient: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
-createStyles.gradient = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.gradient = { opacity: 0.1 };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx");
 

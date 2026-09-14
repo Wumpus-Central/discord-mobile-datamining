@@ -91,21 +91,21 @@ const gameProfileStore = new GameProfileStore(DispatcherDefault, {
   },
   GAME_PROFILE_SET_PENDING_RETURN: function handleSetPendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);
-    gameId = undefined;
+    let gameId1;
     if (_null != null) {
-      gameId = _null.gameId;
+      gameId1 = _null.gameId;
     }
-    if (gameId === gameId) {
-      channelId = undefined;
+    if (gameId1 === gameId) {
+      let channelId1;
       if (_null != null) {
-        channelId = _null.channelId;
+        channelId1 = _null.channelId;
       }
-      if (channelId === channelId) {
-        initialScrollOffset = undefined;
+      if (channelId1 === channelId) {
+        let initialScrollOffset1;
         if (_null != null) {
-          initialScrollOffset = _null.initialScrollOffset;
+          initialScrollOffset1 = _null.initialScrollOffset;
         }
-        if (initialScrollOffset === initialScrollOffset) {
+        if (initialScrollOffset1 === initialScrollOffset) {
           return false;
         }
       }

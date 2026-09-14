@@ -16,6 +16,8 @@ import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4275 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function StreamPreviewContainer(disableTransition) {
   disableTransition = disableTransition.disableTransition;
@@ -24,13 +26,13 @@ function StreamPreviewContainer(disableTransition) {
   const channel = disableTransition.channel;
   const tmp = closure_14();
   let obj = disableTransition(stream[14]);
-  let obj1 = disableTransition(stream[15]);
+  const isChannelFullResult = disableTransition(stream[14]).isChannelFull(channel, VoiceStateStore, GuildStore);
   const items = [GameConsoleStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId());
+  const stateFromStores = disableTransition(stream[15]).useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId());
   let obj2 = disableTransition(stream[15]);
   const items1 = [PermissionStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => !PermissionStore.can(Permissions.CONNECT, channel));
-  const isChannelFullResult = obj.isChannelFull(channel, VoiceStateStore, GuildStore);
+  const stateFromStores1 = disableTransition(stream[15]).useStateFromStores(items1, () => !PermissionStore.can(Permissions.CONNECT, channel));
+  const obj3 = disableTransition(stream[15]);
   const items2 = [VoiceStateStore];
   let stateFromStores2 = disableTransition(stream[15]).useStateFromStores(items2, () => VoiceStateStore.isInChannel(channel.id));
   const obj4 = disableTransition(stream[15]);
@@ -77,13 +79,13 @@ function StreamPreviewContainer(disableTransition) {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
     StreamActionCreators.watchStream(stream);
     if (disableTransition) {
-      let tmpResult = ChannelRTCActionCreatorsDefault;
-      const result = tmpResult.rebuildRTCActiveChannels();
+      const result = ChannelRTCActionCreatorsDefault.rebuildRTCActiveChannels();
+      const tmpResult = ChannelRTCActionCreatorsDefault;
     } else {
       transitionToStreamDefault(stream);
     }
-    tmpResult = ChannelRTCActionCreatorsDefault;
-    const participant = tmpResult.selectParticipant(stream.channelId, StreamKeyUtils.encodeStreamKey(stream));
+    const tmpResult2 = ChannelRTCActionCreatorsDefault;
+    const participant = tmpResult2.selectParticipant(stream.channelId, StreamKeyUtils.encodeStreamKey(stream));
     if (onPress != null) {
       onPress();
     }
@@ -94,42 +96,41 @@ function StreamPreviewContainer(disableTransition) {
       StreamActionCreators.watchStream(stream, { noFocus: true });
     }
   });
-  obj = { stream, ctaText: stringResult1, style: null, onPress: callback, disabled: flag, children: null };
+  const obj6 = { stream, ctaText: stringResult1, style: null, onPress: callback, disabled: flag, children: null };
   const items6 = [tmp.touchable, disableTransition.style];
-  obj.style = items6;
-  obj = { style: tmp.ctaWrapper, children: null };
-  obj1 = { style: tmp.ctaBackground, children: null };
+  obj6.style = items6;
+  const obj7 = { style: tmp.ctaWrapper, children: null };
+  const obj8 = { style: tmp.ctaBackground, children: null };
   const obj5 = disableTransition(stream[15]);
-  obj2 = { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 };
-  obj1.children = jsx(disableTransition(stream[24]).Text, { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 });
-  obj.children = <closure_4 style={tmp.ctaBackground}>{null}</closure_4>;
-  obj.children = <closure_4 style={tmp.ctaWrapper}>{null}</closure_4>;
-  return jsx(onPress(stream[23]), { style: tmp.ctaWrapper, children: null });
+  obj8.children = jsx(disableTransition(stream[24]).Text, { style: tmp.ctaText, variant: "text-md/semibold", color: "text-overlay-light", children: stringResult1 });
+  obj7.children = <closure_4 style={tmp.ctaBackground}>{null}</closure_4>;
+  obj6.children = <closure_4 style={tmp.ctaWrapper}>{null}</closure_4>;
+  return jsx(onPress(stream[23]), { stream, ctaText: stringResult1, style: null, onPress: callback, disabled: flag, children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1074).Permissions;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.alignItems = "center";
-createStyles.justifyContent = "center";
+obj3.alignItems = "center";
+obj3.justifyContent = "center";
 const ColorUtils = fn(4486);
-createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
-createStyles.ctaWrapper = createStyles;
-createStyles.ctaBackground = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
-createStyles.ctaText = { lineHeight: 20 };
-let closure_14 = createStyles.createStyles(createStyles);
+obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
+obj2.ctaWrapper = obj3;
+obj2.ctaBackground = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
+obj2.ctaText = { lineHeight: 20 };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/TouchableStreamPreview.tsx");
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [ApplicationStreamingStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ApplicationStreamingStore.getStreamForUser(closure_0.userId, closure_0.guildId));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ApplicationStreamingStore.getStreamForUser(closure_0.userId, closure_0.guildId));
+  const obj = require("initialize");
   const items1 = [ChannelStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     let channel = null;
@@ -142,10 +143,10 @@ export default function VoiceChannelSettingsStreamPreview(arg0) {
   if (null != stateFromStores) {
     tmp3 = null;
     if (null != stateFromStores1) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(arg0);
-      obj.stream = stateFromStores;
-      obj.channel = stateFromStores1;
+      obj3.stream = stateFromStores;
+      obj3.channel = stateFromStores1;
       tmp3 = <StreamPreviewContainer />;
     }
   }

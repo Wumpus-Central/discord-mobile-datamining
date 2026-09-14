@@ -1,6 +1,6 @@
-// === Module 12171: useDeveloperActivityShelfItems ===
+// === Module 12172: useDeveloperActivityShelfItems ===
 
-// Module 12171 (useDeveloperActivityShelfItems)
+// Module 12172 (useDeveloperActivityShelfItems)
 import noop from "module_19" /* 19 */;
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;
 
@@ -21,12 +21,12 @@ export const useDeveloperActivityShelfItems = function useDeveloperActivityShelf
   return stateFromStoresArray.useMemo(() => {
     if (isEnabled) {
       const mapped = stateFromStoresArray.map((application) => {
-        let obj = { application, activity: null };
-        obj = {};
+        const obj = { application, activity: null };
+        const obj2 = {};
         const merged = Object.assign(closure_1_4);
         const merged1 = Object.assign(application.embeddedActivityConfig);
-        obj.application_id = application.id;
-        obj.activity = obj;
+        obj2.application_id = application.id;
+        obj.activity = obj2;
         return obj;
       });
       let sorted = mapped.sort((arg0, arg1) => {

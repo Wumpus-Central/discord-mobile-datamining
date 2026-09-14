@@ -13,7 +13,6 @@ prototype["toJS"] = function toJS() {
 };
 prototype["set"] = function set(arg0, getTime) {
   const self = this;
-  let obj = this[arg0];
   if (getTime instanceof Date) {
     const _Date = Date;
     if (obj instanceof Date) {
@@ -23,11 +22,11 @@ prototype["set"] = function set(arg0, getTime) {
     return tmp2;
   }
   let constructor = self;
-  if (obj !== getTime) {
-    obj = {};
+  if (this[arg0] !== getTime) {
+    const obj2 = {};
     const merged = Object.assign(self);
-    obj[arg0] = getTime;
-    constructor = new self.constructor(obj);
+    obj2[arg0] = getTime;
+    constructor = new self.constructor(obj2);
   }
   tmp2 = constructor;
 };
@@ -62,9 +61,9 @@ prototype["merge"] = function merge(arg0) {
           if (obj !== obj2) {
             let tmp10 = tmp5;
             if (null == tmp5) {
-              obj = {};
+              let obj3 = {};
               let merged = Object.assign(self);
-              tmp10 = obj;
+              tmp10 = obj3;
             }
             tmp10[tmp6] = arg0[tmp6];
             tmp9 = tmp10;

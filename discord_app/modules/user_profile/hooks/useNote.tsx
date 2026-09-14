@@ -1,10 +1,12 @@
-// === Module 13182: useNote ===
+// === Module 13183: useNote ===
 
-// Module 13182 (useNote)
+// Module 13183 (useNote)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NoteStore from "NoteStore" /* 13183 */;
+import NoteStore from "NoteStore" /* 13184 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 let closure_7 = async function _fetchNote() {
@@ -19,8 +21,8 @@ let closure_7 = async function _fetchNote() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -33,45 +35,45 @@ let closure_7 = async function _fetchNote() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = userId;
             let body;
-            const obj1 = { type: "USER_NOTE_LOAD_START", userId };
-            DispatcherDefault.dispatch(obj1);
+            const obj5 = { type: "USER_NOTE_LOAD_START", userId };
+            DispatcherDefault.dispatch(obj5);
             c4 = 1;
             const HTTP = require("HTTPUtils").HTTP;
-            const obj2 = { url: Endpoints.NOTE(userId), oldFormErrors: true, rejectWithError: true };
+            const obj6 = { url: Endpoints.NOTE(userId), oldFormErrors: true, rejectWithError: true };
             c5 = 2;
             c6 = 1;
-            let obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
+            const obj7 = { value: HTTP.get(obj6), done: false };
+            return obj7;
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            obj3 = closure_130_1(closure_130_2[5]);
-            const obj4 = { type: "USER_NOTE_UPDATE", id: closure_129_0 };
-            obj3.dispatch(obj4);
+            const obj8 = { type: "USER_NOTE_UPDATE", id: closure_129_0 };
+            closure_130_1(closure_130_2[5]).dispatch(obj8);
             c6 = 3;
+            const obj4 = closure_130_1(closure_130_2[5]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             body = value.body;
             if (body.note_user_id === closure_129_0) {
-              obj = closure_130_1(closure_130_2[5]);
-              const obj6 = { type: "USER_NOTE_UPDATE", id: closure_129_0, note: body.note };
-              obj.dispatch(obj6);
+              const obj11 = { type: "USER_NOTE_UPDATE", id: closure_129_0, note: body.note };
+              closure_130_1(closure_130_2[5]).dispatch(obj11);
               c4 = 0;
+              const obj = closure_130_1(closure_130_2[5]);
             }
           }
           const _Error = Error;

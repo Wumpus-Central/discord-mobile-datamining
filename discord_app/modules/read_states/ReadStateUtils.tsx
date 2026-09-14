@@ -4,6 +4,8 @@
 import ReadStateStore from "ReadStateStore" /* 4651 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const UnreadSetting = fn(4818).UnreadSetting;
 const size = fn(2);

@@ -1,9 +1,11 @@
-// === Module 12270: useLaunchingActivityButtonState ===
+// === Module 12271: useLaunchingActivityButtonState ===
 
-// Module 12270 (useLaunchingActivityButtonState)
+// Module 12271 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import FramesStore from "FramesStore" /* 9640 */;
+
+const require = globalThis.__r;
 
 const require = fn;
 const size = fn(2);
@@ -13,8 +15,9 @@ export default function useLaunchingActivityButtonState(applicationId) {
   applicationId = applicationId.applicationId;
   ({ context: importDefault, onSubmissionComplete } = applicationId);
   closure_4 = undefined;
-  let obj = applicationId(onSubmissionComplete[3]);
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
+  const getOrFetchApplication = applicationId(onSubmissionComplete[3]).useGetOrFetchApplication(applicationId);
+  const obj = applicationId(onSubmissionComplete[3]);
+  let tmp = applicationId;
   const items = [closure_4];
   const stateFromStores = applicationId(onSubmissionComplete[4]).useStateFromStores(items, () => {
     let id;
@@ -24,7 +27,6 @@ export default function useLaunchingActivityButtonState(applicationId) {
     return EmbeddedActivitiesStore.getLaunchState(applicationId, id);
   });
   const obj2 = applicationId(onSubmissionComplete[4]);
-  let tmp = applicationId;
   const items1 = [FramesStore];
   let stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
     const mainFrame = FramesStore.getMainFrame();
@@ -58,10 +60,10 @@ export default function useLaunchingActivityButtonState(applicationId) {
       }
     }
   }, items2);
-  obj = { submitting: stateFromStores1, wasSubmitting: null };
+  const obj4 = { submitting: stateFromStores1, wasSubmitting: null };
   if (tmp7 == null) {
     tmp7 = null;
   }
-  obj.wasSubmitting = tmp7;
-  return obj;
+  obj4.wasSubmitting = tmp7;
+  return obj4;
 };

@@ -1,6 +1,6 @@
-// === Module 11969: GuildDisableCommunicationActionCreators ===
+// === Module 11970: GuildDisableCommunicationActionCreators ===
 
-// Module 11969 (GuildDisableCommunicationActionCreators)
+// Module 11970 (GuildDisableCommunicationActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
@@ -16,15 +16,15 @@ export const openDisableCommunication = function openDisableCommunication(userId
   ({ guildId, cancelButtonCallback } = userId);
   const user = UserStore.getUser(userId.userId);
   if (null != user) {
-    const obj = { guildId, user, cancelButtonCallback };
-    obj.pushLazy(asyncRequireImpl(11970, dependencyMap.paths), obj);
+    const obj2 = { guildId, user, cancelButtonCallback };
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11971, dependencyMap.paths), obj2);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
-  let obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11973, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11974, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -36,6 +36,5 @@ export const openEnableCommunication = function openEnableCommunication(arg0) {
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

@@ -1,11 +1,11 @@
-// === Module 11166: GiftingBadgeLevelUpProgress ===
+// === Module 11167: GiftingBadgeLevelUpProgress ===
 
-// Module 11166 (GiftingBadgeLevelUpProgress)
+// Module 11167 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4632 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10877 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,17 +13,16 @@ const View = fn(17).View;
 let closure_4 = fn(8309).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
-createStyles = { gap: nativeDefault.space.PX_4, width: "100%" };
-createStyles.container = createStyles;
-createStyles.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-createStyles.progressBarTrack = { flex: 1, height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-let obj2 = { flex: 1, height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-createStyles.progressBarFill = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-createStyles.labels = { flexDirection: "row", justifyContent: "flex-end" };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
+let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
+obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.progressBarTrack = { flex: 1, height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+let obj5 = { flex: 1, height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+obj2.progressBarFill = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.labels = { flexDirection: "row", justifyContent: "flex-end" };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx");
 
@@ -37,40 +36,40 @@ export default function GiftingBadgeLevelUpProgress(style) {
     const _Math2 = Math;
     num = Math.min(Math.max(progress / tmp2 * 100, 0), 100);
   }
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { style: tmp.barRow, children: null };
+  const obj2 = { style: tmp.barRow, children: null };
   let simple_icon_url;
   if (currentTier != null) {
     simple_icon_url = currentTier.simple_icon_url;
   }
   let tmp7 = null != simple_icon_url;
   if (tmp7) {
-    obj = { icon: currentTier.simple_icon_url, size: 24 };
-    tmp7 = hasOwnProperty(GiftingBadgeIconDefault, obj);
+    const obj3 = { icon: currentTier.simple_icon_url, size: 24 };
+    tmp7 = hasOwnProperty(GiftingBadgeIconDefault, obj3);
   }
   const items1 = [tmp7, , ];
-  const obj1 = { style: tmp.progressBarTrack, children: null };
-  const obj2 = { style: null };
+  const obj4 = { style: tmp.progressBarTrack, children: null };
+  const obj5 = { style: null };
   const items2 = [tmp.progressBarFill, { width: "" + num + "%" }];
-  obj2.style = items2;
-  obj1.children = hasOwnProperty(View, obj2);
-  items1[1] = hasOwnProperty(View, obj1);
+  obj5.style = items2;
+  obj4.children = hasOwnProperty(View, obj5);
+  items1[1] = hasOwnProperty(View, obj4);
   let tmp11Result = null != newTier.simple_icon_url;
   if (tmp11Result) {
-    const obj4 = { icon: newTier.simple_icon_url, size: 24 };
-    tmp11Result = hasOwnProperty(GiftingBadgeIconDefault, obj4);
+    const obj7 = { icon: newTier.simple_icon_url, size: 24 };
+    tmp11Result = hasOwnProperty(GiftingBadgeIconDefault, obj7);
   }
   items1[2] = tmp11Result;
-  obj.children = items1;
-  const items3 = [timestampProducer(View, obj), ];
-  const obj5 = { style: tmp.labels, children: null };
-  const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  obj2.children = items1;
+  const items3 = [timestampProducer(View, obj2), ];
+  const obj8 = { style: tmp.labels, children: null };
+  const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj6.children = intl.format(_modDef2492.iIpfQe, { count: progress, threshold: tmp2 });
-  obj5.children = hasOwnProperty(Text_Text.Text, obj6);
-  items3[1] = hasOwnProperty(View, obj5);
+  obj9.children = intl.format(_modDef2492.iIpfQe, { count: progress, threshold: tmp2 });
+  obj8.children = hasOwnProperty(Text_Text.Text, obj9);
+  items3[1] = hasOwnProperty(View, obj8);
   obj.children = items3;
   return timestampProducer(View, obj);
 };

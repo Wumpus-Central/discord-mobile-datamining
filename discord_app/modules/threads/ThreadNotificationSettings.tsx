@@ -6,6 +6,8 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 
+const require = globalThis.__r;
+
 require = fn;
 function computeThreadNotificationSetting(channel) {
   let obj = arg1;
@@ -27,12 +29,10 @@ function computeThreadNotificationSetting(channel) {
     if (obj6.hasFlag(flagsResult, ThreadMemberFlags.ALL_MESSAGES)) {
       return ThreadMemberFlags.ALL_MESSAGES;
     } else {
-      let tmp6Result = FlagUtils;
       if (tmp6Result.hasFlag(flagsResult, ThreadMemberFlags.ONLY_MENTIONS)) {
         return ThreadMemberFlags.ONLY_MENTIONS;
       } else {
-        tmp6Result = FlagUtils;
-        if (tmp6Result.hasFlag(flagsResult, ThreadMemberFlags.NO_MESSAGES)) {
+        if (tmp6Result2.hasFlag(flagsResult, ThreadMemberFlags.NO_MESSAGES)) {
           return ThreadMemberFlags.NO_MESSAGES;
         } else {
           channel = obj3.getChannel(channel.parent_id);
@@ -50,7 +50,9 @@ function computeThreadNotificationSetting(channel) {
             return NO_MESSAGES;
           }
         }
+        tmp6Result2 = FlagUtils;
       }
+      tmp6Result = FlagUtils;
     }
     obj6 = FlagUtils;
   }

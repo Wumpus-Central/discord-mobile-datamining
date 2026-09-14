@@ -1,13 +1,15 @@
-// === Module 17398: captcha/CaptchaUtils ===
+// === Module 17400: captcha/CaptchaUtils ===
 
-// Module 17398 (captcha/CaptchaUtils)
+// Module 17400 (captcha/CaptchaUtils)
 import initialize from "initialize" /* 504 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11410 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11411 */;
 import ActionSheetStore from "ActionSheetStore" /* 4327 */;
 
+const require = globalThis.__r;
+
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(11412).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(11413).CAPTCHA_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
 
@@ -19,7 +21,8 @@ export default {
       obj = {};
     }
     ({ sitekey, captchaService } = options);
-    obj = {
+    const obj2 = ActionSheetActionCreatorsDefault;
+    const obj3 = {
       sitekey,
       captchaService,
       onCaptchaVerify(captcha_key, captcha_rqtoken) {
@@ -29,10 +32,9 @@ export default {
         return ActionSheetActionCreatorsDefault.hideActionSheet(CAPTCHA_MODAL_KEY);
       }
     };
-    const obj2 = ActionSheetActionCreatorsDefault;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(17399, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(require("asyncRequireImpl")(17401, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {
@@ -46,8 +48,10 @@ export default {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       sitekey = arg1;
-      sitekey(captchaService[3]);
-      obj = {
+      obj = sitekey(captchaService[3]);
+      const merged = Object.assign(closure_0);
+      const merged1 = Object.assign(c4);
+      obj.openLazy(obj(captchaService[5])(captchaService[4], captchaService.paths), c4, {
         sitekey,
         captchaService,
         onCaptchaVerify(captcha_key, captcha_rqtoken) {
@@ -67,10 +71,7 @@ export default {
         close() {
           return closure_1(captchaService[3]).hideActionSheet(closure_1_4);
         }
-      };
-      const merged = Object.assign(closure_0);
-      const merged1 = Object.assign(c4);
-      obj.openLazy(obj(captchaService[5])(captchaService[4], captchaService.paths), c4, obj, "stack");
+      }, "stack");
     });
   },
   useIsCaptchaModalOpen() {

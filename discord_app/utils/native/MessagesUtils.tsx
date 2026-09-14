@@ -1,6 +1,6 @@
-// === Module 12085: MessagesUtils ===
+// === Module 12086: MessagesUtils ===
 
-// Module 12085 (MessagesUtils)
+// Module 12086 (MessagesUtils)
 import CodedLink from "CodedLink" /* 4624 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4784 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7429 */;
@@ -92,22 +92,22 @@ export default {
                 return tmp48;
               } else if (CodedLink.CodedLinkType.INVITE === type) {
                 const invites3 = props.invites;
-                invites3.get(code);
+                value = invites3.get(code);
                 const invites4 = invites2.invites;
-                value = invites4.get(code);
+                const value6 = invites4.get(code);
                 let state;
                 if (value != null) {
                   state = value.state;
                 }
                 let state1;
-                if (value != null) {
-                  state1 = value.state;
+                if (value6 != null) {
+                  state1 = value6.state;
                 }
                 let tmp43 = state !== state1;
                 if (tmp43) {
                   let state2;
-                  if (value != null) {
-                    state2 = value.state;
+                  if (value6 != null) {
+                    state2 = value6.state;
                   }
                   tmp43 = state2 !== constants.RESOLVING;
                 }
@@ -117,22 +117,22 @@ export default {
                 return tmp43;
               } else if (CodedLink.CodedLinkType.TEMPLATE === type) {
                 const guildTemplates = props.guildTemplates;
-                const value1 = guildTemplates.get(code);
+                const value7 = guildTemplates.get(code);
                 const guildTemplates2 = invites2.guildTemplates;
-                value2 = guildTemplates2.get(code);
+                const value8 = guildTemplates2.get(code);
                 let state3;
-                if (value1 != null) {
-                  state3 = value1.state;
+                if (value7 != null) {
+                  state3 = value7.state;
                 }
                 let state4;
-                if (value2 != null) {
-                  state4 = value2.state;
+                if (value8 != null) {
+                  state4 = value8.state;
                 }
                 let tmp33 = state3 !== state4;
                 if (tmp33) {
                   let state5;
-                  if (value2 != null) {
-                    state5 = value2.state;
+                  if (value8 != null) {
+                    state5 = value8.state;
                   }
                   tmp33 = state5 !== GuildTemplateStates.RESOLVING;
                 }
@@ -156,24 +156,24 @@ export default {
                       return props.activityParticipants !== invites2.activityParticipants || props.invalidApplicationIds !== invites2.invalidApplicationIds || props.applicationAssetFetchingIds !== invites2.applicationAssetFetchingIds;
                     } else if (CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
                       const invites = props.invites;
-                      const value3 = invites.get(code);
+                      const value9 = invites.get(code);
                       invites2 = invites2.invites;
-                      const value4 = invites2.get(code);
+                      const value10 = invites2.get(code);
                       let tmp12 = props.activityParticipants !== invites2.activityParticipants || props.invalidApplicationIds !== tmp10.invalidApplicationIds || props.applicationAssetFetchingIds !== tmp10.applicationAssetFetchingIds;
                       if (!tmp12) {
                         let state6;
-                        if (value3 != null) {
-                          state6 = value3.state;
+                        if (value9 != null) {
+                          state6 = value9.state;
                         }
                         let state7;
-                        if (value4 != null) {
-                          state7 = value4.state;
+                        if (value10 != null) {
+                          state7 = value10.state;
                         }
                         let tmp16 = state6 !== state7;
                         if (tmp16) {
                           let state8;
-                          if (value4 != null) {
-                            state8 = value4.state;
+                          if (value10 != null) {
+                            state8 = value10.state;
                           }
                           tmp16 = state8 !== constants.RESOLVING;
                         }

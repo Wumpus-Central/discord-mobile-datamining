@@ -5,23 +5,24 @@ import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import createStyles from "createStyles" /* 4636 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 const StyleSheet = _mod17.StyleSheet;
-let obj = { highlight: null, overridden: null };
-obj = { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_POSITIVE };
-obj.highlight = obj;
+let obj = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_POSITIVE }, overridden: null };
+let obj2 = { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_POSITIVE };
 obj.overridden = { borderWidth: 1, borderStyle: "dashed", borderColor: nativeDefault.colors.STATUS_DANGER };
 let closure_5 = createStyles.createStyles(obj);
 let closure_6 = DevSettingsStore.get("highlight_mana_text");
-const obj2 = { borderWidth: 1, borderColor: null };
+const obj4 = { borderWidth: 1, borderColor: null };
 const internal = nativeDefault.internal;
-obj2.borderColor = internal.resolveSemanticColor(nativeDefault.themes.DARK, nativeDefault.colors.STATUS_WARNING);
-const obj3 = { borderWidth: 1, borderColor: null };
+obj4.borderColor = internal.resolveSemanticColor(nativeDefault.themes.DARK, nativeDefault.colors.STATUS_WARNING);
+const obj5 = { borderWidth: 1, borderColor: null };
 const internal2 = nativeDefault.internal;
-obj3.borderColor = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.STATUS_WARNING);
+obj5.borderColor = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.STATUS_WARNING);
 const result = size.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
 
 export const useManaTextMigrationHighlight = function useManaTextMigrationHighlight(fromEntriesResult, style) {
@@ -56,17 +57,16 @@ export const withManaTextMigrationHighlight = function withManaTextMigrationHigh
   let proxy = fromEntriesResult;
   if (closure_6) {
     const _Proxy = Proxy;
-    let obj = {
+    const obj = {
       get(arg0, str, arg2) {
           value = Reflect.get(arg0, str, arg2);
           if (typeof str === "string") {
             if (null != value) {
-              let obj = require("shared");
-              const tmp5 = obj.isThemeLight(theme.theme) ? obj3 : obj2;
-              obj = {};
+              const tmp5 = require("shared").isThemeLight(theme.theme) ? obj5 : obj4;
+              const obj2 = {};
               const merged = Object.assign(value);
               const merged1 = Object.assign(tmp5);
-              return obj;
+              return obj2;
             }
           }
           return value;

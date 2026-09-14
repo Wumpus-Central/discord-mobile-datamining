@@ -1,19 +1,18 @@
-// === Module 11746: openPinnedMessages ===
+// === Module 11747: openPinnedMessages ===
 
-// Module 11746 (openPinnedMessages)
+// Module 11747 (openPinnedMessages)
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11047 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11048 */;
 import size from "module_2" /* 2 */;
 
 const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;
 const result = size.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 
 export default function openPinnedMessages(channelId, source) {
-  let obj = RootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp) {
-    obj = { initialRouteName: constants.PINNED_MESSAGES, channelId, source };
-    rootNavigationRef.navigate("sidebar", obj);
+    const obj2 = { initialRouteName: constants.PINNED_MESSAGES, channelId, source };
+    rootNavigationRef.navigate("sidebar", obj2);
   }
   tmp = null != rootNavigationRef && rootNavigationRef.isReady();
 };

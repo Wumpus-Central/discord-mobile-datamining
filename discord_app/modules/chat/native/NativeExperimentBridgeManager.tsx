@@ -1,14 +1,14 @@
-// === Module 17932: NativeExperimentBridgeManager ===
+// === Module 17933: NativeExperimentBridgeManager ===
 
-// Module 17932 (NativeExperimentBridgeManager)
+// Module 17933 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1150 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
+import PlatformUtils from "PlatformUtils" /* 1363 */;
 import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5356 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 17933 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 17934 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 17935 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 17934 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 17935 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 17936 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
@@ -33,8 +33,8 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = YYTextReplacementExperiment;
-        const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const result = setShouldEnableYYTextReplacement(YYTextReplacementExperiment.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = YYTextReplacementExperiment;
       }
     }
   }
@@ -42,8 +42,8 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = IOSPushNotificationRawPayloadFixExperiment;
-      const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
+      const result1 = setShouldFixPushNotificationRawPayload(IOSPushNotificationRawPayloadFixExperiment.isIOSPushNotificationRawPayloadFixExperimentEnabled());
+      const tmpResult2 = IOSPushNotificationRawPayloadFixExperiment;
     }
   }
   obj = PlatformUtils;
@@ -60,27 +60,22 @@ function updateIOSExperiments() {
   obj4 = VideoStutterMitigationExperimentDefault;
 }
 function updateAndroidExperiments() {
-  let obj = { "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(), "X-Fingerprint": AuthenticationStore.getFingerprint(), "X-Installation-ID": AuthenticationStore.getInstallationForTracking(), "X-Discord-Locale": LocaleStore.locale };
+  const obj = { "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(), "X-Fingerprint": AuthenticationStore.getFingerprint(), "X-Installation-ID": AuthenticationStore.getInstallationForTracking(), "X-Discord-Locale": LocaleStore.locale };
   const config = NotificationLoadMessagesExperimentDefault.getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    obj = { headers: null, userId: null, enabled: null, apiBaseUrl: null, urlQueryParams: null, cooldownMs: null, debounceMs: null };
-    obj.headers = obj;
-    obj.userId = AuthenticationStore.getId();
-    obj.enabled = tmp3;
-    obj.apiBaseUrl = HTTPUtils.getAPIBaseURL();
+    const obj5 = { headers: obj, userId: AuthenticationStore.getId(), enabled: tmp3, apiBaseUrl: HTTPUtils.getAPIBaseURL(), urlQueryParams: null, cooldownMs: null, debounceMs: null };
     const _HermesInternal = HermesInternal;
-    obj.urlQueryParams = "?limit=" + tmp4;
-    obj.cooldownMs = tmp5;
-    obj.debounceMs = tmp6;
-    const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj));
+    obj5.urlQueryParams = "?limit=" + tmp4;
+    obj5.cooldownMs = tmp5;
+    obj5.debounceMs = tmp6;
+    const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj5));
   }
 }
 const NativeModules = _mod17.NativeModules;
-let prototype = function NativeExperimentBridgeManager() {
+const prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = PlatformUtils;
   if (obj.isIOS()) {
     let tmp5 = updateIOSExperiments;
   } else {
@@ -90,13 +85,12 @@ let prototype = function NativeExperimentBridgeManager() {
     const tmp3Result = PlatformUtils;
   }
   applyArgumentsResult.handleUpdate = tmp5;
-  obj = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
-  applyArgumentsResult.actions = obj;
+  applyArgumentsResult.actions = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
 
-export default prototype;
+export default prototype1;

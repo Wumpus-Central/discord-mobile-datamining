@@ -17,8 +17,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     initialVariantIndex = 0;
   }
   ({ analyticsLocations, shopAnalyticsContext } = arg0);
-  let obj = CollectiblesProductUtils;
-  const isVariantProduct = obj.getIsVariantProduct(product);
+  const isVariantProduct = CollectiblesProductUtils.getIsVariantProduct(product);
   let num = 0;
   if (isVariantProduct) {
     num = 0;
@@ -33,14 +32,12 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   }
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
-  obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
+  const obj2 = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = CollectiblesActionCreators;
-  obj.productDetailsOpened(skuId);
-  obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, obj, stack);
+  CollectiblesActionCreators.productDetailsOpened(skuId);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8294, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
 };

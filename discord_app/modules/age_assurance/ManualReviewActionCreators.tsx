@@ -2,7 +2,7 @@
 
 // Module 8710 (ManualReviewActionCreators)
 import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 8536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -28,8 +28,8 @@ let closure_14 = async function _handleManualReviewCta() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj5 = { value, done: true };
+      return obj5;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -42,8 +42,8 @@ let closure_14 = async function _handleManualReviewCta() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_1 = tmp4;
           closure_0 = tmp8;
@@ -96,8 +96,8 @@ let closure_14 = async function _handleManualReviewCta() {
           c3 = 0;
           closure_129_11 = false;
           c5 = 3;
-          let obj1 = { value: undefined, done: true };
-          return obj1;
+          const obj8 = { value: undefined, done: true };
+          return obj8;
         }
       } else if (1 === tmp8) {
         c3 = 0;
@@ -105,8 +105,8 @@ let closure_14 = async function _handleManualReviewCta() {
         throw closure_2;
       } else if (2 === tmp8) {
         c3 = 1;
-        obj1 = closure_129_1(closure_129_2[8]);
-        obj1.showFailedToast(closure_129_6.TIGGER_PAWTECT_ERROR);
+        closure_129_1(closure_129_2[8]).showFailedToast(closure_129_6.TIGGER_PAWTECT_ERROR);
+        const obj2 = closure_129_1(closure_129_2[8]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -114,7 +114,7 @@ let closure_14 = async function _handleManualReviewCta() {
         c3 = 0;
         closure_129_11 = false;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;

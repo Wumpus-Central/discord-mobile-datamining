@@ -1,14 +1,14 @@
-// === Module 14948: HarvesterUtils ===
+// === Module 14949: HarvesterUtils ===
 
-// Module 14948 (HarvesterUtils)
+// Module 14949 (HarvesterUtils)
 import initialize from "initialize" /* 504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import DataHarvestStore from "DataHarvestStore" /* 13799 */;
+import DataHarvestStore from "DataHarvestStore" /* 13800 */;
 
 require = fn;
-const REQUEST_DATA_LIMIT_MS = fn(14949).REQUEST_DATA_LIMIT_MS;
+const REQUEST_DATA_LIMIT_MS = fn(14950).REQUEST_DATA_LIMIT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
@@ -33,12 +33,11 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
   return tmp;
 };
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [DataHarvestStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
-  [tmp3, require] = _slicedToArray(noop.useState(() => Date.now()), 2);
+  [tmp3, require] = noop.useState(() => Date.now());
   let sum = tmp3;
   if (null != stateFromStores1) {
     const _Date = Date;
@@ -65,16 +64,16 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   }
   if (verified) {
     if (stateFromStores.isStaff()) {
-      obj = { allowed: false, reason: "staff" };
+      let obj2 = { allowed: false, reason: "staff" };
     } else if (null == stateFromStores1) {
-      obj = { allowed: true };
+      obj2 = { allowed: true };
     } else if (sum > tmp3) {
-      obj = { allowed: false, reason: "rate_limited", nextAllowed: null };
+      const obj5 = { allowed: false, reason: "rate_limited", nextAllowed: null };
       const _Date2 = Date;
       const date1 = new Date(sum);
-      obj.nextAllowed = date1;
+      obj5.nextAllowed = date1;
     } else {
-      obj = { allowed: true };
+      obj2 = { allowed: true };
     }
   } else {
     return { allowed: false, reason: "not_verified" };

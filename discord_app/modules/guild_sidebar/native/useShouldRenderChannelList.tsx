@@ -1,6 +1,6 @@
-// === Module 16358: useShouldRenderChannelList ===
+// === Module 16360: useShouldRenderChannelList ===
 
-// Module 16358 (useShouldRenderChannelList)
+// Module 16360 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import RootNavigationRef from "RootNavigationRef" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -15,9 +15,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
 
 export const useShouldRenderChannelList = function useShouldRenderChannelList() {
-  const tmp = _slicedToArray(noop.useState(c7), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
+  [first, dependencyMap] = noop.useState(c7);
   const items = [first];
   const effect = noop.useEffect(() => {
     function allowRender() {

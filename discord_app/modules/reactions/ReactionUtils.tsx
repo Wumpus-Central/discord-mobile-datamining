@@ -2,7 +2,7 @@
 
 // Module 4287 (ReactionUtils)
 import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
@@ -142,6 +142,5 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
   const ReactionNotifications = UserSettings.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  const obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
-  obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(constants2.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting });
 };

@@ -48,21 +48,21 @@ class Color {
 const prototype = Color.prototype;
 prototype["toHexString"] = function toHexString() {
   const self = this;
-  let str = Math.round(this.red);
-  str = str.toString(16);
-  let str2 = Math.round(this.green);
-  const str1 = str2.toString(16);
-  str2 = Math.round(this.blue).toString(16);
-  let text = str;
+  const str = Math.round(this.red);
+  const str1 = Math.round(this.red).toString(16);
+  const str2 = Math.round(this.green);
+  const str7 = Math.round(this.green).toString(16);
+  const str3 = Math.round(this.blue);
+  let text = str1;
   if (this.red <= 15.5) {
     text = `0${tmp}`;
   }
-  let text2 = str1;
+  let text2 = str7;
   const text1 = `#${tmp4}`;
   if (self.green <= 15.5) {
     text2 = `0${tmp2}`;
   }
-  let text3 = str2;
+  let text3 = Math.round(this.blue).toString(16);
   const sum = text1 + text2;
   if (self.blue <= 15.5) {
     text3 = `0${tmp3}`;
@@ -103,7 +103,7 @@ Color["parseHexString"] = function parseHexString(str) {
       const replaced = str.replace("#", "");
       let str3 = replaced;
       if (replaced.length < 6) {
-        [tmp3, tmp4, tmp5, tmp6] = _slicedToArray(replaced, 4);
+        [tmp3, tmp4, tmp5, tmp6] = replaced;
         const sum = tmp3 + tmp3 + tmp4 + tmp4 + tmp5 + tmp5;
         str3 = sum;
         if (null != tmp6) {
@@ -179,16 +179,16 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
         }
       });
       if ("hsl" === str.substr(0, 3)) {
-        let obj = { hue: null, saturation: null, lightness: null, alpha: null };
+        const obj = { hue: null, saturation: null, lightness: null, alpha: null };
         [obj.hue, obj.saturation, obj.lightness, obj.alpha] = mapped1;
         hslToRgb(obj);
         if (typeof Color === "function") {
-          obj = Object.create(Color.prototype);
-          obj.red = tmp11;
-          obj.green = tmp12;
-          obj.blue = tmp13;
-          obj.alpha = tmp14;
-          return obj;
+          let obj3 = Object.create(Color.prototype);
+          obj3.red = tmp11;
+          obj3.green = tmp12;
+          obj3.blue = tmp13;
+          obj3.alpha = tmp14;
+          return obj3;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -199,12 +199,12 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
           num2 = mapped1[3];
         }
         if (typeof Color === "function") {
-          obj = Object.create(Color.prototype);
-          obj.red = tmp4;
-          obj.green = tmp5;
-          obj.blue = tmp6;
-          obj.alpha = num2;
-          return obj;
+          const obj4 = Object.create(Color.prototype);
+          obj4.red = tmp4;
+          obj4.green = tmp5;
+          obj4.blue = tmp6;
+          obj4.alpha = num2;
+          return obj4;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -227,7 +227,8 @@ prototype["toHSL"] = function toHSL() {
     num = diff / (1 - Math.abs(2 * result3 - 1));
   }
   if (0 === diff) {
-    let obj = { hue: 0, saturation: num, lightness: result3, alpha };
+    const obj2 = { hue: 0, saturation: num, lightness: result3, alpha };
+    let obj = obj2;
   } else {
     if (result === bound) {
       let num3 = (result1 - result2) / diff % 6;

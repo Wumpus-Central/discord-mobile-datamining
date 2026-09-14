@@ -1,7 +1,7 @@
-// === Module 17390: updateRules ===
+// === Module 17392: updateRules ===
 
-// Module 17390 (updateRules)
-import native from "native" /* 1178 */;
+// Module 17392 (updateRules)
+import native from "native" /* 1176 */;
 import LinkingDefault from "Linking" /* 4331 */;
 import _modDef4333 from "module_4333" /* 4333 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ class I18nLink {
     items[0] = token;
     items[1] = alwaysShowLinkDecorations;
     memo = closure_3.useMemo(() => {
-      obj = { color: token, textDecorationLine: null };
+      const obj = { color: token, textDecorationLine: null };
       let str = "none";
       if (alwaysShowLinkDecorations) {
         str = "underline";
@@ -43,50 +43,50 @@ class I18nLink {
     }
     if (null == obj.onClick) {
       obj.onClick = () => {
-        obj = LinkingDefault;
+        const obj = LinkingDefault;
         return obj.openURL(_modDef4333.sanitizeUrl(node.target));
       };
     }
-    obj = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };
-    return jsx(tmp(tmp2[8]).LegacyText, obj);
+    obj1 = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };
+    return jsx(tmp(tmp2[8]).LegacyText, obj1);
   }
 }
 const jsx = fn(21).jsx;
-let obj = { strong: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
+let paragraph = { strong: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
 const size = fn(2);
 const result = size.fileFinishedImporting("i18n/native/updateRules.tsx");
 
 export default function updateRules(paragraph) {
-  let em = {};
+  paragraph = {};
   const merged = Object.assign(paragraph.paragraph);
-  em.react = function react(content, fn, key) {
+  paragraph.react = function react(content, fn, key) {
     return jsx(native.LegacyText, { children: fn(content.content, key) }, key.key);
   };
-  paragraph.paragraph = em;
-  em = {};
-  const merged1 = Object.assign(paragraph.strong);
-  em.react = function react(content, fn, key) {
-    return jsx(native.LegacyText, { style: obj.strong, children: fn(content.content, key) }, key.key);
-  };
-  paragraph.strong = em;
-  em = {};
-  const merged2 = Object.assign(paragraph.em);
-  em.react = function react(content, fn, key) {
-    return jsx(native.LegacyText, { style: obj.italic, children: fn(content.content, key) }, key.key);
-  };
-  paragraph.em = em;
-  const obj1 = {};
-  const merged3 = Object.assign(paragraph.u);
-  obj1.react = function react(content, fn, key) {
-    return jsx(native.LegacyText, { style: obj.underline, children: fn(content.content, key) }, key.key);
-  };
-  paragraph.u = obj1;
+  paragraph.paragraph = paragraph;
   const obj2 = {};
+  const merged1 = Object.assign(paragraph.strong);
+  obj2.react = function react(content, fn, key) {
+    return jsx(native.LegacyText, { style: paragraph.strong, children: fn(content.content, key) }, key.key);
+  };
+  paragraph.strong = obj2;
+  const obj3 = {};
+  const merged2 = Object.assign(paragraph.em);
+  obj3.react = function react(content, fn, key) {
+    return jsx(native.LegacyText, { style: paragraph.italic, children: fn(content.content, key) }, key.key);
+  };
+  paragraph.em = obj3;
+  const obj4 = {};
+  const merged3 = Object.assign(paragraph.u);
+  obj4.react = function react(content, fn, key) {
+    return jsx(native.LegacyText, { style: paragraph.underline, children: fn(content.content, key) }, key.key);
+  };
+  paragraph.u = obj4;
+  const obj5 = {};
   const merged4 = Object.assign(paragraph.link);
-  obj2.react = function react(node, output, state) {
+  obj5.react = function react(node, output, state) {
     return <I18nLink key={state.key} node={node} output={output} state={state} />;
   };
-  paragraph.link = obj2;
+  paragraph.link = obj5;
   return paragraph;
 };
 export { I18nLink };

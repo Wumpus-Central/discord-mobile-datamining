@@ -24,41 +24,40 @@ export default function authorizeCallback(arg0) {
     }
     ({ host, pathname, searchParams } = toURLSafeResult);
     if (null != host) {
-      let tmp8Result = URLUtilsDefault;
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
           if (null != pathname.match(re5)) {
-            tmp8Result = ModalActionCreatorsDefault;
-            let obj = { application: tmp, guild: tmp2 };
-            tmp8Result.pushLazy(asyncRequireImpl(9706, dependencyMap.paths), obj, React3);
+            const obj3 = { application: tmp, guild: tmp2 };
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9706, dependencyMap.paths), obj3, React3);
+            const tmp8Result4 = ModalActionCreatorsDefault;
           } else if (null != pathname.match(re6)) {
             if (!canceled) {
-              let str;
-              const tmp8Result1 = ModalActionCreatorsDefault;
+              let str1;
+              const tmp8Result5 = ModalActionCreatorsDefault;
               if (searchParams != null) {
-                str = "error_description";
                 const str2 = searchParams.get("error_description");
                 if (str2 != null) {
-                  str = str2.toString();
+                  str1 = str2.toString();
                 }
               }
-              if (str == null) {
-                let str1;
+              if (str1 == null) {
+                let str5;
                 if (searchParams != null) {
                   const str4 = searchParams.get("error");
                   if (str4 != null) {
-                    str1 = str4.toString();
+                    str5 = str4.toString();
                   }
                 }
-                str = str1;
+                str1 = str5;
               }
-              obj = { error: str };
-              tmp8Result1.pushLazy(asyncRequireImpl(9378, dependencyMap.paths), obj, React4);
+              const obj4 = { error: str1 };
+              tmp8Result5.pushLazy(asyncRequireImpl(9378, dependencyMap.paths), obj4, React4);
               const tmp17 = asyncRequireImpl(9378, dependencyMap.paths);
             }
           }
         }
       }
+      tmp8Result = URLUtilsDefault;
     }
     if (wasDeepLink) {
       const browserManagerSelectedBrowser = BrowserManager.getBrowserManagerSelectedBrowser();
@@ -69,9 +68,8 @@ export default function authorizeCallback(arg0) {
       SAFARI = ConstantsIOS.WebBrowserType.SAFARI;
     }
     LinkingDefault.openURL(_location, SAFARI);
-    const tmp8Result2 = LinkingDefault;
+    const tmp8Result6 = LinkingDefault;
   } else if (!canceled) {
-    obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequireImpl(9378, dependencyMap.paths), undefined, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9378, dependencyMap.paths), undefined, React4);
   }
 };

@@ -1,8 +1,8 @@
 // === Module 7444: GuildDiscoveryUtils ===
 
 // Module 7444 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import _modDef1471 from "module_1471" /* 1471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 4276 */;
@@ -29,12 +29,11 @@ let closure_11 = async function _startLurking(arg0) {
         tmp24 = shouldNavigate;
       }
       closure_133_9 = tmp24;
-      let obj6 = closure_134_0(closure_134_2[5]);
-      const history = obj6.getHistory();
+      const history = closure_134_0(closure_134_2[5]).getHistory();
       const guild = closure_134_6.getGuild(closure_133_0);
-      const obj3 = { sourceLocationStack: closure_133_3, state: null };
-      obj3.state = { analyticsSource: closure_133_1 };
-      closure_133_12 = obj3;
+      const obj8 = { sourceLocationStack: closure_133_3, state: null };
+      obj8.state = { analyticsSource: closure_133_1 };
+      closure_133_12 = obj8;
       if (null != guild) {
         if (null != guild.joinedAt) {
           if (closure_133_9) {
@@ -42,11 +41,11 @@ let closure_11 = async function _startLurking(arg0) {
               closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
               closure_134_0(closure_134_2[6]);
             } else {
-              const obj5 = {};
+              const obj11 = {};
               const merged = Object.assign(closure_133_12);
-              obj5.navigationReplace = true;
-              obj5.openChannel = true;
-              closure_134_1(closure_134_2[7])(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj5);
+              obj11.navigationReplace = true;
+              obj11.openChannel = true;
+              closure_134_1(closure_134_2[7])(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj11);
               closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
               closure_134_1(closure_134_2[7]);
             }
@@ -56,16 +55,16 @@ let closure_11 = async function _startLurking(arg0) {
       if (null != guild) {
         if (closure_134_4.isLurking(closure_133_0)) {
           if (closure_133_9) {
-            let obj12 = closure_134_1(closure_134_2[8]);
-            obj6 = {};
+            const obj12 = {};
             const merged1 = Object.assign(closure_133_12);
-            obj6.welcomeModalChannelId = channelId;
-            obj6.navigationReplace = null != channelId;
-            obj6.openChannel = null != channelId;
-            obj6.search = history.location.search;
+            obj12.welcomeModalChannelId = channelId;
+            obj12.navigationReplace = null != channelId;
+            obj12.openChannel = null != channelId;
+            obj12.search = history.location.search;
             c7 = 2;
             c8 = 1;
-            return { value: obj12.transitionToGuildSync(closure_133_0, obj6, channelId, closure_133_2.messageId), done: false };
+            closure_134_1(closure_134_2[8]);
+            return { value: closure_134_1(closure_134_2[8]).transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId), done: false };
           }
         }
       }
@@ -81,12 +80,10 @@ let closure_11 = async function _startLurking(arg0) {
         }
       }
       closure_133_13 = page;
-      closure_134_1(closure_134_2[8]);
+      closure_134_0(closure_134_2[5]);
       c7 = 3;
       c8 = 1;
-      const obj9 = { value: null, done: false };
-      obj9.value = obj9.joinGuild(closure_133_0, { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 });
-      return obj9;
+      return { value: closure_134_1(closure_134_2[8]).joinGuild(closure_133_0, { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 }), done: false };
     }
   } else if (2 === tmp5) {
     if (arg0 === 1) {
@@ -104,16 +101,16 @@ let closure_11 = async function _startLurking(arg0) {
       c8 = 3;
       return { value, done: true };
     } else if (closure_133_9) {
-      let obj1 = closure_134_1(closure_134_2[8]);
-      obj12 = {};
+      const obj20 = {};
       const merged2 = Object.assign(closure_133_12);
-      obj12.welcomeModalChannelId = channelId;
-      obj12.navigationReplace = null != channelId;
-      obj12.openChannel = null != channelId;
-      obj12.search = history.location.search;
+      obj20.welcomeModalChannelId = channelId;
+      obj20.navigationReplace = null != channelId;
+      obj20.openChannel = null != channelId;
+      obj20.search = history.location.search;
       c7 = 4;
       c8 = 1;
-      return { value: obj1.transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId), done: false };
+      closure_134_1(closure_134_2[8]);
+      return { value: closure_134_1(closure_134_2[8]).transitionToGuildSync(closure_133_0, obj20, channelId, closure_133_2.messageId), done: false };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -129,11 +126,11 @@ let closure_11 = async function _startLurking(arg0) {
   closure_5 = tmp2;
   closure_133_0 = closure_0;
   closure_133_1 = closure_1;
-  obj1 = closure_2;
+  let obj5 = closure_2;
   if (closure_2 === undefined) {
-    obj1 = {};
+    obj5 = {};
   }
-  closure_133_2 = obj1;
+  closure_133_2 = obj5;
   closure_133_3 = closure_3;
   return "PX_16";
 };
@@ -154,8 +151,8 @@ let closure_13 = async function _getDiscoverableGuild() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -168,8 +165,8 @@ let closure_13 = async function _getDiscoverableGuild() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -178,12 +175,12 @@ let closure_13 = async function _getDiscoverableGuild() {
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
-            const obj1 = { guild_ids };
-            request.query = _modDef1471.stringify(obj1);
+            const obj4 = { guild_ids };
+            request.query = _modDef1471.stringify(obj4);
             c5 = 2;
             c6 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c4 = 0;
@@ -195,7 +192,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_129_0 = value;
@@ -234,8 +231,8 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -248,20 +245,20 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp6;
           let body;
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+          const obj4 = { url: null, oldFormErrors: true, rejectWithError: true };
           const _String = String;
-          obj1.url = React7.GUILD_DISCOVERY_SLUG(String(closure_0));
+          obj4.url = React7.GUILD_DISCOVERY_SLUG(String(closure_0));
           c2 = 2;
           c4 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp6) {
         c3 = 0;
@@ -273,8 +270,8 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       } else if (arg0 === 2) {
         c3 = 0;
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         body = value.body;
         let guild;
@@ -289,14 +286,14 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
           }
           tmp8 = null;
           if (null != slug) {
-            obj = { guild: body.guild, slug: body.slug };
+            const obj = { guild: body.guild, slug: body.slug };
             tmp8 = obj;
           }
         }
         c3 = 0;
         c4 = 3;
-        const obj4 = { value: tmp8, done: true };
-        return obj4;
+        const obj7 = { value: tmp8, done: true };
+        return obj7;
       }
     } catch (tmp14) {
       if (tmp3 === c3) {
@@ -332,20 +329,17 @@ export const trackDiscoveryExited = function trackDiscoveryExited(load_id, guild
   if (arg2 === undefined) {
     tmp = null;
   }
-  const obj = { load_id, guild_ids_viewed, recommendations_source: tmp };
-  obj.track(constants.GUILD_DISCOVERY_EXITED, obj);
+  AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_EXITED, { load_id, guild_ids_viewed, recommendations_source: tmp });
 };
 export const trackSearchClosed = function trackSearchClosed(load_id) {
-  const obj = { load_id };
-  obj.track(constants.SEARCH_CLOSED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_CLOSED, { load_id });
 };
 export const trackSearchStarted = function trackSearchStarted(load_id, category_id) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  obj = { search_type: constants2.GUILD_DISCOVERY, load_id, location: obj.location, category_id };
-  AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, { search_type: constants2.GUILD_DISCOVERY, load_id, location: obj.location, category_id });
 };
 export const trackGuildDiscoverySearchStart = function trackGuildDiscoverySearchStart(arg0) {
   ({ withCounts, offset } = arg0);
@@ -354,34 +348,33 @@ export const trackGuildDiscoverySearchStart = function trackGuildDiscoverySearch
 export const trackSearchFailed = function trackSearchFailed(error) {
   error = error.error;
   ({ categoryId, willRequestRetry, isRequestRetry } = error);
-  const obj = { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry };
-  obj.track(constants.GUILD_DISCOVERY_SEARCH_FAILED, obj);
+  AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_SEARCH_FAILED, { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry });
 };
 export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDiscoveryGetFeaturedGuildsFailed(category_id) {
   AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
 };
 export const trackSearchResultsViewed = function trackSearchResultsViewed(guildResults) {
   ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults.guildResults);
-  const obj = { search_type: isTagSearch ? constants2.GUILD_DISCOVERY_TAG : constants2.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
+  const obj2 = { search_type: isTagSearch ? constants2.GUILD_DISCOVERY_TAG : constants2.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
   let length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;
   }
-  obj.total_results = length;
+  obj2.total_results = length;
   let mapped = null;
   if (undefined !== guildResults.guildResults) {
     mapped = guildResults.map((id) => id.id);
   }
-  obj.guild_ids = mapped;
-  obj.query = query;
-  obj.location = analyticsContext.location;
-  obj.category_id = categoryId;
-  obj.track(constants.SEARCH_RESULT_VIEWED, obj);
+  obj2.guild_ids = mapped;
+  obj2.query = query;
+  obj2.location = analyticsContext.location;
+  obj2.category_id = categoryId;
+  AnalyticsUtilsDefault.track(constants.SEARCH_RESULT_VIEWED, obj2);
 };
 export const trackGuildJoinClicked = function trackGuildJoinClicked(guildId) {
   const loadId = LurkingStore.getLoadId(guildId);
-  const obj = { guild_id: guildId, load_id: loadId, guild_size: GuildMemberCountStore.getMemberCount(guildId) };
-  obj.track(constants.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, obj);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(constants.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, { guild_id: guildId, load_id: loadId, guild_size: GuildMemberCountStore.getMemberCount(guildId) });
 };
 export const getDiscoverableGuild = function getDiscoverableGuild() {
   const self = this;

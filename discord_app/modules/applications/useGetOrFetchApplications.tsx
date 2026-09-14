@@ -8,6 +8,8 @@ import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7266
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");

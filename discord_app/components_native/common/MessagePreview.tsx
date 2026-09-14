@@ -1,6 +1,6 @@
-// === Module 16931: MessagePreview ===
+// === Module 16933: MessagePreview ===
 
-// Module 16931 (MessagePreview)
+// Module 16933 (MessagePreview)
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
 import MessagePreviewStore from "MessagePreviewStore" /* 8478 */;
@@ -15,9 +15,8 @@ const result = size.fileFinishedImporting("components_native/common/MessagePrevi
 
 export default function MessagePreview(channelId) {
   const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
-  let obj = onBeforeJumpToMessage(504);
   const items = [MessagePreviewStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ messages: MessagePreviewStore.messages, jumpTargetId: MessagePreviewStore.jumpTargetId }));
+  const stateFromStoresObject = onBeforeJumpToMessage(504).useStateFromStoresObject(items, () => ({ messages: MessagePreviewStore.messages, jumpTargetId: MessagePreviewStore.jumpTargetId }));
   const jumpTargetId = stateFromStoresObject.jumpTargetId;
   const items1 = [jumpTargetId, onBeforeJumpToMessage];
   const memo = noop.useMemo(() => {
@@ -31,6 +30,5 @@ export default function MessagePreview(channelId) {
   const effect = noop.useEffect(() => () => {
     jumpTargetId(closure_1_2[6]).clearMessages();
   }, []);
-  obj = { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation };
-  return jsx(onBeforeJumpToMessage(13382).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
+  return jsx(onBeforeJumpToMessage(13383).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
 };

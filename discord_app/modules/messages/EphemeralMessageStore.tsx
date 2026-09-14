@@ -84,11 +84,11 @@ const ephemeralMessageStore = new EphemeralMessageStore(DispatcherDefault, {
         if (null == value) {
           return false;
         } else {
-          value = value.get(id);
-          if (null == value) {
+          value2 = value.get(id);
+          if (null == value2) {
             return false;
           } else {
-            const result = value.set(id, MessageRecordUtils.updateMessageRecord(value, message));
+            const result = value.set(id, MessageRecordUtils.updateMessageRecord(value2, message));
           }
         }
       }

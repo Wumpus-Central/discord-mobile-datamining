@@ -1,6 +1,6 @@
-// === Module 15779: DevSettingsActions ===
+// === Module 15781: DevSettingsActions ===
 
-// Module 15779 (DevSettingsActions)
+// Module 15781 (DevSettingsActions)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DevSettingsStore from "DevSettingsStore" /* 4635 */;
 
@@ -12,8 +12,8 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !DevSettingsStore.get(toggle);
   }
-  const obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp });
+  const obj2 = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
 };
 export const clearAll = function clearAll() {
   for (const key10005 in DevSettingsStore.enabled()) {
@@ -22,8 +22,8 @@ export const clearAll = function clearAll() {
       flag = !DevSettingsStore.get(key10005);
     }
     let obj = DispatcherDefault;
-    obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle: key10005, value: flag };
-    let dispatchResult = obj.dispatch(obj);
+    let obj2 = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle: key10005, value: flag };
+    let dispatchResult = obj.dispatch(obj2);
     continue;
   }
 };

@@ -1,6 +1,6 @@
-// === Module 14058: GuildHeaderCountsStore ===
+// === Module 14059: GuildHeaderCountsStore ===
 
-// Module 14058 (GuildHeaderCountsStore)
+// Module 14059 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7382 */;
@@ -9,7 +9,7 @@ import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 
-let obj = {};
+const obj = {};
 const dependencyMap = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildHeaderCountsStore extends PersistedStore {
@@ -52,30 +52,29 @@ prototype["getMemberCount"] = function getMemberCount(arg0) {
 };
 GuildHeaderCountsStore.displayName = "GuildHeaderCountsStore";
 GuildHeaderCountsStore.persistKey = "GuildHeaderCountsStore";
-obj = {
+const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "justifyContent", onlineCount: "call", memberCount: "window" };
+      dependencyMap[guildId] = { activeChannelsCount: "test", onlineCount: "call", memberCount: "intl" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "justifyContent", onlineCount: "call", memberCount: "window" };
+      dependencyMap[guildId] = { activeChannelsCount: "test", onlineCount: "call", memberCount: "intl" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "justifyContent", onlineCount: "call", memberCount: "window" };
+      dependencyMap[guildId] = { activeChannelsCount: "test", onlineCount: "call", memberCount: "intl" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }
-};
-const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 

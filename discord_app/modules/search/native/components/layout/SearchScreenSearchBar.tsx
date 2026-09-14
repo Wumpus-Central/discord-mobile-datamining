@@ -1,12 +1,12 @@
-// === Module 16734: SearchScreenSearchBar ===
+// === Module 16736: SearchScreenSearchBar ===
 
-// Module 16734 (SearchScreenSearchBar)
+// Module 16736 (SearchScreenSearchBar)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import mergeProps from "mergeProps" /* 4343 */;
 import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6726 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 16735 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 16737 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 16742 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 16737 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 16739 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 16744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,21 +54,21 @@ export default noop.memo(noop.forwardRef((arg0, arg1) => {
   let obj = { style: items1, children: null };
   items1[1] = headerWithBackButton;
   const items2 = [backButton, , ];
-  obj = { style: tmp.headerSearch, children: null };
+  const obj2 = { style: tmp.headerSearch, children: null };
   const items3 = [closure_5(layout_SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed }), ];
-  obj = { style: tmp.suggestionsAnchor, children: null };
-  const obj1 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
+  const obj3 = { style: tmp.suggestionsAnchor, children: null };
+  const obj4 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
   const items4 = [tmp.suggestions, ];
   let suggestionsWithBackButton = null != backButton;
   if (suggestionsWithBackButton) {
     suggestionsWithBackButton = tmp.suggestionsWithBackButton;
   }
   items4[1] = suggestionsWithBackButton;
-  obj1.containerStyle = items4;
-  obj.children = closure_5(SearchFilterSuggestionsDefault, obj1);
-  items3[1] = closure_5(View, obj);
-  obj.children = items3;
-  items2[1] = closure_6(View, obj);
+  obj4.containerStyle = items4;
+  obj3.children = closure_5(SearchFilterSuggestionsDefault, obj4);
+  items3[1] = closure_5(View, obj3);
+  obj2.children = items3;
+  items2[1] = closure_6(View, obj2);
   items2[2] = closure_5(View, { style: tmp.headerControlsRight, children: closure_5(SearchFilterButtonDefault, { searchContext, onOpen: callback, onClose: callback1 }) });
   obj.children = items2;
   return closure_6(View, obj);

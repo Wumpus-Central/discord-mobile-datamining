@@ -1,29 +1,28 @@
-// === Module 10806: gradient ===
+// === Module 10807: gradient ===
 
-// Module 10806 (gradient)
-import _mod1188 from "module_1188" /* 1188 */;
+// Module 10807 (gradient)
+import _mod1186 from "module_1186" /* 1186 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class Gradient$Type extends MessageType {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 };
     items[1] = { no: 2, name: "angle", kind: "scalar", T: 2 };
-    tmp = new tmp("discord_protos.premium_marketing.v1.Gradient", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.Gradient", items, new.target);
+    return tmp1;
   }
 }
-let prototype = Gradient$Type.prototype;
+const prototype = Gradient$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { colors: [], angle: 0 };
+  const obj = { colors: [], angle: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -60,7 +59,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -75,20 +74,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
   let num = 0;
   if (0 < colors.colors.length) {
     do {
-      let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+      let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
       let stringResult = tagResult.string(colors.colors[num]);
       num = num + 1;
       length = colors.colors.length;
     } while (num < length);
   }
   if (0 !== colors.angle) {
-    tag.tag(2, _mod1188.WireType.Bit32).float(colors.angle);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.Bit32);
+    tag.tag(2, _mod1186.WireType.Bit32).float(colors.angle);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.Bit32);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, colors, tag);
@@ -96,8 +95,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
   return tag;
 };
 let items = [{ no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 }, { no: 2, name: "angle", kind: "scalar", T: 2 }];
-prototype = new prototype("discord_protos.premium_marketing.v1.Gradient", items, tmp, Gradient$Type, prototype, items, fn);
+const prototype1 = new prototype("discord_protos.premium_marketing.v1.Gradient", items, tmp, Gradient$Type, prototype, items, fn);
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx");
 
-export const Gradient = prototype;
+export const Gradient = prototype1;

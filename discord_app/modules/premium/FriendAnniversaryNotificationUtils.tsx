@@ -1,8 +1,8 @@
-// === Module 15586: FriendAnniversaryNotificationUtils ===
+// === Module 15587: FriendAnniversaryNotificationUtils ===
 
-// Module 15586 (FriendAnniversaryNotificationUtils)
+// Module 15587 (FriendAnniversaryNotificationUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import NotificationConstants from "NotificationConstants" /* 4288 */;
 import size from "module_2" /* 2 */;
@@ -14,6 +14,5 @@ const result = size.fileFinishedImporting("modules/premium/FriendAnniversaryNoti
 export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
   const EnableFriendAnniversaryNotifications = UserSettings.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
-  const obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, friend_anniversary_notifications });
 };

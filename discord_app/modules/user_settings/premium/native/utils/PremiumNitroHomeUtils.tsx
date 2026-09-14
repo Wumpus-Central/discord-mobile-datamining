@@ -1,8 +1,8 @@
-// === Module 13509: PremiumNitroHomeUtils ===
+// === Module 13510: PremiumNitroHomeUtils ===
 
-// Module 13509 (PremiumNitroHomeUtils)
+// Module 13510 (PremiumNitroHomeUtils)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -20,8 +20,8 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     current = sum < Math.floor(tmp3.height);
   }
   if (!current) {
-    const obj = { type: trackedType.trackedType };
-    obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
+    const obj2 = { type: trackedType.trackedType };
+    AnalyticsUtilsDefault.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj2);
     hasTrackedScrolledToBottom.current = true;
   }
 };

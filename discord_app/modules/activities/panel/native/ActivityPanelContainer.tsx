@@ -1,11 +1,10 @@
-// === Module 17115: ActivityPanelContainer ===
+// === Module 17117: ActivityPanelContainer ===
 
-// Module 17115 (ActivityPanelContainer)
-import initialize from "initialize" /* 504 */;
+// Module 17117 (ActivityPanelContainer)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4265 */;
-import ActivityPanelControllerDefault from "ActivityPanelController" /* 17116 */;
-import ActivityPanelUIDefault from "ActivityPanelUI" /* 17125 */;
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 17118 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 17127 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -17,7 +16,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
 
 export default noop.memo(function ActivityPanelContainer() {
-  let obj = initialize;
   const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {
@@ -50,7 +48,7 @@ export default noop.memo(function ActivityPanelContainer() {
       }
     }
   }, [])) {
-    obj = { children: jsx(ActivityPanelUIDefault, {}) };
+    let obj2 = { children: jsx(ActivityPanelUIDefault, {}) };
     tmp2 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
   }
   return tmp2;

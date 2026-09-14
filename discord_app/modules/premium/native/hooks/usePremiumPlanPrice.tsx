@@ -7,6 +7,8 @@ import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4299 */;
 import SubscriptionStore from "SubscriptionStore" /* 4300 */;
 import IAPStore from "IAPStore" /* 7340 */;
 
+const require = globalThis.__r;
+
 require = fn;
 const PaymentGateways = fn(1085).PaymentGateways;
 const PremiumPlanPriceSource = { IAP: "IAP", API: "API" };
@@ -108,24 +110,24 @@ export default function usePremiumPlanPrice(arg0) {
   } else if (isIOSResult) {
     if (priceState === formatPrice(amount[8]).PriceStates.PRICE_AVAILABLE) {
       if (tmp6 != price) {
-        obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
+        const obj4 = { price: null, currency: null, countryCode: null, priceString: null, source: null };
         ({ amount: obj7.price, currency: obj7.currency } = price);
         tmp6 = mobileStoreFront == tmp6;
         let country;
         if (!tmp6) {
           country = mobileStoreFront.country;
         }
-        obj.countryCode = country;
+        obj4.countryCode = country;
         priceState = formatPrice(amount[14]);
         formatPrice = priceState.formatPrice;
         amount = price.amount;
         price = formatPrice(amount, price.currency);
-        obj.priceString = price;
-        obj.source = obj.API;
+        obj4.priceString = price;
+        obj4.source = obj.API;
       }
     }
   } else if (tmp6 != stateFromStores2) {
-    obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
+    const obj5 = { price: null, currency: null, countryCode: null, priceString: null, source: null };
     ({ price: obj6.price, currencyCode: obj6.currency } = stateFromStores2);
     let country1;
     if (mobileStoreFront != tmp6) {
@@ -134,9 +136,9 @@ export default function usePremiumPlanPrice(arg0) {
     if (country1 == tmp6) {
       country1 = stateFromStores2.countryCode;
     }
-    obj.countryCode = country1;
-    obj.priceString = stateFromStores2.priceString;
-    obj.source = obj.IAP;
+    obj5.countryCode = country1;
+    obj5.priceString = stateFromStores2.priceString;
+    obj5.source = obj.IAP;
   }
 };
 export { PremiumPlanPriceSource };

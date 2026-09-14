@@ -1,12 +1,12 @@
-// === Module 17507: TextInputActionComponent ===
+// === Module 17509: TextInputActionComponent ===
 
-// Module 17507 (TextInputActionComponent)
+// Module 17509 (TextInputActionComponent)
 import Server from "Server" /* 1894 */;
 import Input from "Input" /* 6708 */;
 import TextField from "TextField" /* 6714 */;
 import TextAreaField from "TextAreaField" /* 7189 */;
 import ComponentStateContext from "ComponentStateContext" /* 8229 */;
-import InteractionModalUtils from "InteractionModalUtils" /* 17504 */;
+import InteractionModalUtils from "InteractionModalUtils" /* 17506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,18 +20,16 @@ export default noop.memo((type) => {
   ({ style, label, value } = type);
   dependencyMap = value;
   ({ placeholder, required, maxLength } = type);
-  let obj = ComponentStateContext;
   let tmp3;
   if (null != value) {
-    obj = { type, value };
-    tmp3 = obj;
+    const obj2 = { type, value };
+    tmp3 = obj2;
   }
-  const componentState = obj.useComponentState(type, tmp3);
+  const componentState = ComponentStateContext.useComponentState(type, tmp3);
   ({ state: _slicedToArray, executeStateUpdate } = componentState);
   const error = componentState.error;
-  let obj3 = noop;
   const isFirstTextInputInModal = InteractionModalUtils.useIsFirstTextInputInModal(type.id);
-  obj = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, isClearable: true };
+  const obj3 = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, isClearable: true };
   let str = "default";
   const state = noop.useState(() => {
     type = undefined;
@@ -43,23 +41,23 @@ export default noop.memo((type) => {
   if (null != error) {
     str = "error";
   }
-  obj.status = str;
-  obj.defaultValue = _slicedToArray(state, 1)[0];
+  obj3.status = str;
+  obj3.defaultValue = _slicedToArray(state, 1)[0];
   const items = [type, executeStateUpdate];
-  obj.onChange = obj3.useCallback((value) => executeStateUpdate({ type, value }), items);
-  obj.autoFocus = isFirstTextInputInModal;
+  obj3.onChange = noop.useCallback((value) => executeStateUpdate({ type, value }), items);
+  obj3.autoFocus = isFirstTextInputInModal;
   if (Server.TextInputComponentStyle.SMALL === style) {
-    const obj1 = {};
-    const merged = Object.assign(obj);
+    const obj5 = {};
+    const merged = Object.assign(obj3);
     let tmp7 = jsx(TextField.TextField, {});
   } else if (Server.TextInputComponentStyle.PARAGRAPH === style) {
-    const obj2 = {};
-    const merged1 = Object.assign(obj);
+    const obj6 = {};
+    const merged1 = Object.assign(obj3);
     tmp7 = jsx(TextAreaField.TextAreaField, {});
   }
   let tmp16 = tmp7;
   if (null != label) {
-    obj3 = { label, required, errorMessage: error, children: tmp7 };
+    const obj7 = { label, required, errorMessage: error, children: tmp7 };
     tmp16 = jsx(Input.Input, { label, required, errorMessage: error, children: tmp7 });
   }
   return tmp16;

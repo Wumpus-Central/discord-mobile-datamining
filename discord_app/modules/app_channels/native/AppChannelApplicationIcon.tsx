@@ -7,20 +7,19 @@ import FastImageDefault from "FastImage" /* 5668 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { icon: null };
+const createStyles = fn(4636);
+const obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.md };
-createStyles.icon = size;
-let closure_3 = createStyles.createStyles(createStyles);
+obj2.icon = size;
+let closure_3 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/native/AppChannelApplicationIcon.tsx");
 
 export default function AppChannelApplicationIcon(application) {
   application = application.application;
-  let obj = { source: null, style: null };
+  const obj = { source: null, style: null };
   const tmp = closure_3();
-  obj = { id: application.id, icon: application.icon, size: 32 };
-  obj.source = AvatarUtilsDefault.getApplicationIconSource(obj);
+  obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, size: 32 });
   obj.style = tmp.icon;
-  return <tmp2 id={application.id} icon={application.icon} size={32} />;
+  return <tmp2 source={null} style={null} />;
 };

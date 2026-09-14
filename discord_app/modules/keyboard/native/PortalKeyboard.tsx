@@ -16,15 +16,15 @@ export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {
-  let obj = NavigationRouteUtils;
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
     }
-    obj = { hostName: tmp3, children: children.children };
+    const obj2 = { hostName: tmp3, children: children.children };
     return jsx(Portal.Portal, { hostName: tmp3, children: children.children });
   }
   tmp3 = c3;
+  obj = NavigationRouteUtils;
 };
 export const PortalKeyboardHost = function PortalKeyboardHost(name) {
   name = name.name;

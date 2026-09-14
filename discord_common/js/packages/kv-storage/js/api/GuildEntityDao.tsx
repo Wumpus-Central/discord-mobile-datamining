@@ -5,6 +5,8 @@ import Table from "Table" /* 1991 */;
 import TableId from "TableId" /* 1993 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
 let GuildEntityDao;
 class GuildEntityDao {
   constructor(arg0, arg1, arg2) {

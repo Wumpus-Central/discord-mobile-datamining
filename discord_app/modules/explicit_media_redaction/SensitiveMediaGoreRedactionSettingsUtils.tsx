@@ -1,7 +1,7 @@
 // === Module 7404: SensitiveMediaGoreRedactionSettingsUtils ===
 
 // Module 7404 (SensitiveMediaGoreRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7402 */;
@@ -128,7 +128,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  const obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;
@@ -140,10 +140,10 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   }
   obj.goreContentFriendDm = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
   const GoreContentSettings2 = UserSettings.GoreContentSettings;
-  obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  GoreContentSettings2.updateSetting(obj);
+  GoreContentSettings2.updateSetting({});
+  const obj2 = {};
 };
 export const useSensitiveContentFilterHelpArticle = function useSensitiveContentFilterHelpArticle() {
   return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);

@@ -1,8 +1,10 @@
-// === Module 11666: useMessagePreviewHeight ===
+// === Module 11667: useMessagePreviewHeight ===
 
-// Module 11666 (useMessagePreviewHeight)
+// Module 11667 (useMessagePreviewHeight)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const useMessagePreviewHeightStore = module_560.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");

@@ -1,10 +1,12 @@
-// === Module 15883: DesignSystemsModalSetting ===
+// === Module 15885: DesignSystemsModalSetting ===
 
-// Module 15883 (DesignSystemsModalSetting)
+// Module 15885 (DesignSystemsModalSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11601 */;
+import SettingBuilders from "SettingBuilders" /* 11602 */;
 import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 const route = SettingBuilders.createRoute({
   useTitle() {

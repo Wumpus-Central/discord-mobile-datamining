@@ -3,6 +3,8 @@
 // Module 10062 (useCanRaiseHand)
 import PermissionStore from "PermissionStore" /* 4275 */;
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);

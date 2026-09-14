@@ -9,32 +9,33 @@ import GuildRoomStore from "GuildRoomStore" /* 4794 */;
 require = fn;
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomTypes.GuildRoomObjectTypes.PLANT) {
-    let obj = { objectType: GuildRoomTypes.GuildRoomObjectTypes.PLANT };
-    obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
+    const obj = { objectType: GuildRoomTypes.GuildRoomObjectTypes.PLANT };
+    const obj7 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2.objectId, created_by: obj2.createdBy } = object_type);
     let date;
     if (null != object_type.updated_at) {
       const _Date2 = Date;
       date = new Date(object_type.updated_at);
     }
-    obj.updatedAt = date;
-    obj.updatedBy = object_type.updated_by;
-    const merged = Object.assign(obj);
+    obj7.updatedAt = date;
+    obj7.updatedBy = object_type.updated_by;
+    const merged = Object.assign(obj7);
+    let obj8 = obj;
   } else {
-    obj = { objectType: GuildRoomTypes.GuildRoomObjectTypes.NOTE };
-    const obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
+    obj8 = { objectType: GuildRoomTypes.GuildRoomObjectTypes.NOTE };
+    const obj9 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4.objectId, created_by: obj4.createdBy } = object_type);
     let date1;
     if (null != object_type.updated_at) {
       const _Date = Date;
       date1 = new Date(object_type.updated_at);
     }
-    obj1.updatedAt = date1;
-    obj1.updatedBy = object_type.updated_by;
-    const merged1 = Object.assign(obj1);
+    obj9.updatedAt = date1;
+    obj9.updatedBy = object_type.updated_by;
+    const merged1 = Object.assign(obj9);
     ({ content: obj3.content, position: obj3.position } = object_type);
   }
-  return obj;
+  return obj8;
 }
 let closure_3 = fn(4798).GUILD_ROOM_BACKGROUND_CONFIG;
 const size = fn(2);

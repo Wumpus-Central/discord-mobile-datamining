@@ -1,6 +1,6 @@
-// === Module 17124: ActivityPanelStateContext ===
+// === Module 17126: ActivityPanelStateContext ===
 
-// Module 17124 (ActivityPanelStateContext)
+// Module 17126 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {

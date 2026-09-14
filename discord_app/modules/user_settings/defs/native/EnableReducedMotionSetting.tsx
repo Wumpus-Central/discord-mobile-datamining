@@ -1,14 +1,14 @@
-// === Module 15500: EnableReducedMotionSetting ===
+// === Module 15501: EnableReducedMotionSetting ===
 
-// Module 15500 (EnableReducedMotionSetting)
+// Module 15501 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14525 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14526 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.e3TR1b);
@@ -25,9 +25,8 @@ let SettingBuilders = {
     }
     const result = AccessibilityActionCreators.setPrefersReducedMotion(str);
   }
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/EnableReducedMotionSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

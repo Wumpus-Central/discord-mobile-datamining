@@ -1,8 +1,8 @@
-// === Module 14785: UserSettingSearchManager ===
+// === Module 14786: UserSettingSearchManager ===
 
-// Module 14785 (UserSettingSearchManager)
+// Module 14786 (UserSettingSearchManager)
 import fuzzysearchDefault from "fuzzysearch" /* 5598 */;
-import StringMatchUtils from "StringMatchUtils" /* 14786 */;
+import StringMatchUtils from "StringMatchUtils" /* 14787 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
@@ -36,6 +36,7 @@ class SettingSearchManager {
       });
       const preprocessed = obj.preprocessed;
       const items2 = [tmp, { normalizedSearchTerms: items, normalizedTokens: items1 }];
+      preprocessed.push(items2);
     });
     return obj;
   }
@@ -108,8 +109,8 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
           });
         }
         if (score > 0) {
-          obj = { setting: tmp, score };
-          arr = items.push(obj);
+          const obj2 = { setting: tmp, score };
+          items.push(obj2);
         }
       });
       const cacheScored2 = self.cacheScored;

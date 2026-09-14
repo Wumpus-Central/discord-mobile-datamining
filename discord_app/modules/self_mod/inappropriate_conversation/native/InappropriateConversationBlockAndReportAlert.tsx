@@ -1,7 +1,7 @@
-// === Module 11521: InappropriateConversationBlockAndReportAlert ===
+// === Module 11522: InappropriateConversationBlockAndReportAlert ===
 
-// Module 11521 (InappropriateConversationBlockAndReportAlert)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11503 */;
+// Module 11522 (InappropriateConversationBlockAndReportAlert)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,8 +23,7 @@ class InappropriateConversationBlockAndReportAlert {
     items[2] = senderId;
     items[3] = warningType;
     callback = senderId.useCallback((cta) => {
-      const obj = { channelId, warningId, senderId, warningType, cta };
-      obj.trackCtaEvent(obj);
+      SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType, cta });
     }, items);
     closure_8 = callback;
     items1 = [, ];

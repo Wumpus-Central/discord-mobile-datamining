@@ -20,8 +20,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -34,16 +34,15 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               guildId = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let obj1 = { guildId };
-              if (PermissionStore.canWithPartialContext(constants.MANAGE_GUILD, obj1)) {
-                obj1 = guildId(c1[3]);
+              const obj5 = { guildId };
+              if (PermissionStore.canWithPartialContext(constants.MANAGE_GUILD, obj5)) {
                 c1 = 1;
                 guildId = 1;
-                const obj2 = { value: obj1.loadTemplatesForGuild(tmp14), done: false };
-                return obj2;
+                const obj6 = { value: guildId(c1[3]).loadTemplatesForGuild(tmp14), done: false };
+                return obj6;
               }
               tmp14 = guildId;
             }
@@ -52,7 +51,7 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             guildId = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           guildId = 3;
@@ -65,8 +64,7 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    const obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId });
   },
   hideGuildTemplatePromotionTooltip() {
     DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });

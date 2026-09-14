@@ -68,10 +68,10 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value = map.get(arg0);
+  value2 = map.get(arg0);
   let num2;
-  if (value != null) {
-    num2 = value.communicationProbability;
+  if (value2 != null) {
+    num2 = value2.communicationProbability;
   }
   if (num2 == null) {
     num2 = 0;
@@ -87,10 +87,10 @@ prototype["compareByDmProbability"] = function compareByDmProbability(arg0, arg1
   if (num == null) {
     num = 0;
   }
-  value = map.get(arg0);
+  value2 = map.get(arg0);
   let num2;
-  if (value != null) {
-    num2 = value.dmProbability;
+  if (value2 != null) {
+    num2 = value2.dmProbability;
   }
   if (num2 == null) {
     num2 = 0;
@@ -116,7 +116,7 @@ prototype["isHighlyAffinedVCUser"] = function isHighlyAffinedVCUser(arg0) {
 };
 UserAffinitiesV2Store.displayName = "UserAffinitiesV2Store";
 UserAffinitiesV2Store.persistKey = "UserAffinitiesStoreV2";
-obj = {
+const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, {
   LOAD_USER_AFFINITIES_V2: function handleLoadUserAffinities() {
     c3 = true;
   },
@@ -140,8 +140,7 @@ obj = {
     map = new Map();
     c3 = false;
   }
-};
-const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
 

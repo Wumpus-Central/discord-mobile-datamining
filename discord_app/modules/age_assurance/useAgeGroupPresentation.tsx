@@ -1,6 +1,6 @@
-// === Module 14802: useAgeGroupPresentation ===
+// === Module 14803: useAgeGroupPresentation ===
 
-// Module 14802 (useAgeGroupPresentation)
+// Module 14803 (useAgeGroupPresentation)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -29,8 +29,8 @@ export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedConte
   obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
 };
 export const handleShowAgeVerification = function handleShowAgeVerification() {
-  const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-  const result = obj.showAgeVerificationGetStartedModal(obj);
+  const obj = AgeVerificationActionCreatorsDefault;
+  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
 };
 export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
   const obj = AgeVerificationUtils;

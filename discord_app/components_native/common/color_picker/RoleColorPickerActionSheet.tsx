@@ -1,10 +1,10 @@
-// === Module 16386: RoleColorPickerActionSheet ===
+// === Module 16388: RoleColorPickerActionSheet ===
 
-// Module 16386 (RoleColorPickerActionSheet)
+// Module 16388 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14682 */;
-import ColorBlockDefault from "ColorBlock" /* 14684 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
+import ColorBlockDefault from "ColorBlock" /* 14685 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,11 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
-fn(4636);
-let createStyles = { body: null, colorWrap: null };
-createStyles = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
-createStyles.body = createStyles;
-createStyles.colorWrap = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: nativeDefault.space.PX_16 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" }, colorWrap: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
+obj2.colorWrap = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
 
@@ -35,13 +34,12 @@ export default function RoleColorPickerActionSheet(color) {
   let first;
   onSelect = undefined;
   let tmp = closure_11();
-  let obj = color(defaultColor[7]);
-  const styles = obj.useStyles();
+  const styles = color(defaultColor[7]).useStyles();
   const tmp5 = styles(first.useState(color), 2);
   first = tmp5[0];
   closure_5 = tmp5[1];
-  let obj1 = color(defaultColor[8]);
-  const isWindowSmall = obj1.useIsWindowSmall();
+  let obj = color(defaultColor[7]);
+  const isWindowSmall = color(defaultColor[8]).useIsWindowSmall();
   items = [isWindowSmall, styles.colorBlock];
   memo = first.useMemo(() => {
     const colorBlock = styles.colorBlock;
@@ -68,39 +66,39 @@ export default function RoleColorPickerActionSheet(color) {
   const callback1 = first.useCallback(() => {
     showCustomColorPickerActionSheetDefault({ color, onSelect });
   }, items2);
-  obj = { title: null, trailing: null };
+  const obj3 = { title: null, trailing: null };
   const intl = color(defaultColor[13]).intl;
-  obj.title = intl.string(color(defaultColor[13]).t.WTqQ5e);
+  obj3.title = intl.string(color(defaultColor[13]).t.WTqQ5e);
   if (null != confirmLabel) {
-    obj = { size: "sm", variant: "secondary", text: confirmLabel, onPress: callback };
-    obj1 = obj;
+    const obj4 = { size: "sm", variant: "secondary", text: confirmLabel, onPress: callback };
+    let obj5 = obj4;
   } else {
-    obj1 = { size: "sm", text: null, onPress: null };
+    obj5 = { size: "sm", text: null, onPress: null };
     const intl2 = tmp2(tmp3[13]).intl;
-    obj1.text = intl2.string(tmp2(tmp3[13]).t["R3BPH+"]);
-    obj1.onPress = callback;
+    obj5.text = intl2.string(tmp2(tmp3[13]).t["R3BPH+"]);
+    obj5.onPress = callback;
   }
-  const obj2 = { header: null, children: null };
-  obj.trailing = onSelect(color(defaultColor[14]).Button, obj1);
-  obj2.header = onSelect(color(defaultColor[12]).BottomSheetTitleHeader, obj);
-  const obj3 = { style: tmp.body, children: null };
-  const obj4 = { style: tmp.colorWrap, children: null };
+  const obj6 = { header: null, children: null };
+  obj3.trailing = onSelect(color(defaultColor[14]).Button, obj5);
+  obj6.header = onSelect(color(defaultColor[12]).BottomSheetTitleHeader, obj3);
+  const obj7 = { style: tmp.body, children: null };
+  const obj8 = { style: tmp.colorWrap, children: null };
   const items3 = [items.map((color) => React6(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)), ];
-  const obj5 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
+  const obj9 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
   const intl3 = tmp2(tmp3[13]).intl;
-  obj5.accessibilityLabel = intl3.string(color(defaultColor[13]).t["/fkc8a"]);
-  obj5.children = onSelect(color(defaultColor[15]).EyeDropperIcon, { size: "lg" });
-  items3[1] = onSelect(isWindowSmall, obj5);
-  obj4.children = items3;
-  const items4 = [closure_9(closure_5, obj4), ];
-  const obj6 = { variant: "secondary", text: null, onPress: null };
+  obj9.accessibilityLabel = intl3.string(color(defaultColor[13]).t["/fkc8a"]);
+  obj9.children = onSelect(color(defaultColor[15]).EyeDropperIcon, { size: "lg" });
+  items3[1] = onSelect(isWindowSmall, obj9);
+  obj8.children = items3;
+  const items4 = [closure_9(closure_5, obj8), ];
+  const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(tmp3[13]).intl;
-  obj6.text = intl4.string(color(defaultColor[13]).t.yBZMsQ);
-  obj6.onPress = function onPress() {
+  obj10.text = intl4.string(color(defaultColor[13]).t.yBZMsQ);
+  obj10.onPress = function onPress() {
     closure_5(defaultColor);
   };
-  items4[1] = onSelect(color(defaultColor[14]).Button, obj6);
-  obj3.children = items4;
-  obj2.children = closure_9(closure_5, obj3);
-  return onSelect(color(defaultColor[11]).BottomSheet, obj2);
+  items4[1] = onSelect(color(defaultColor[14]).Button, obj10);
+  obj7.children = items4;
+  obj6.children = closure_9(closure_5, obj7);
+  return onSelect(color(defaultColor[11]).BottomSheet, obj6);
 };

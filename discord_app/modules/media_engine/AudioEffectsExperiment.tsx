@@ -1,18 +1,18 @@
-// === Module 14155: AudioEffectsExperiment ===
+// === Module 14156: AudioEffectsExperiment ===
 
-// Module 14155 (AudioEffectsExperiment)
+// Module 14156 (AudioEffectsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
-let obj = { probeAudioEffects: false };
-obj = { name: "2026-03-audio-effects-probe", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null };
-const obj1 = {};
+const obj = { probeAudioEffects: false };
+const obj2 = { name: "2026-03-audio-effects-probe", kind: "user", defaultConfig: obj, variations: null };
+const obj3 = { 1: null };
+const obj4 = {};
 const merged = Object.assign(obj);
-obj1.probeAudioEffects = true;
-obj[1] = obj1;
-obj.variations = obj;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+obj4.probeAudioEffects = true;
+obj3[1] = obj4;
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/media_engine/AudioEffectsExperiment.tsx");
 
 export default apexExperiment;

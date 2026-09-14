@@ -23,10 +23,9 @@ function GlobalStatusIndicatorWrapper(onPress) {
   closure_6 = undefined;
   const tmp3 = require("useVoiceStateForRemoteSession")();
   importDefault = tmp3;
-  let obj = onPress(stateFromStores[9]);
   const items = [RTCConnectionStore];
   const items1 = [tmp3];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = onPress(stateFromStores[9]).useStateFromStores(items, () => {
     channelId = undefined;
     if (channelId != null) {
       channelId = channelId.channelId;
@@ -36,11 +35,12 @@ function GlobalStatusIndicatorWrapper(onPress) {
     }
     return channelId;
   }, items1);
+  let obj = onPress(stateFromStores[9]);
+  const tmp = importDefault;
   const items2 = [ChannelStore];
   const items3 = [stateFromStores];
   const stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores), items3);
   const obj2 = onPress(stateFromStores[9]);
-  const tmp = importDefault;
   const voiceChatNavigationContext = onPress(stateFromStores[10]).useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
@@ -79,17 +79,18 @@ function GlobalStatusIndicatorWrapper(onPress) {
   if (null != stateFromStores1) {
     str = "button";
   }
-  obj = { accessibilityRole: str, accessibilityHint: null, onPress: null, children: null };
+  const obj4 = { accessibilityRole: str, accessibilityHint: null, onPress: null, children: null };
   let stringResult;
   if (null != stateFromStores1) {
     const intl = tmp4(tmp2[12]).intl;
     stringResult = intl.string(tmp4(tmp2[12]).t.GaCMgX);
   }
-  obj.accessibilityHint = stringResult;
-  obj.onPress = onPress;
-  obj = { children: closure_12(tmp(tmp2[13]), {}) };
-  obj.children = closure_12(openVoice, obj);
-  return closure_12(closure_6, obj);
+  obj4.accessibilityHint = stringResult;
+  obj4.onPress = onPress;
+  const obj3 = onPress(stateFromStores[10]);
+  const tmp13 = closure_6;
+  obj4.children = closure_12(openVoice, { children: closure_12(tmp(stateFromStores[13]), {}) });
+  return closure_12(tmp13, obj4);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
@@ -109,7 +110,7 @@ export default function GlobalStatusIndicator(children) {
   let obj = children(onPress[15]);
   let items = [ActionSheetStore];
   const stateFromStores = children(onPress[9]).useStateFromStores(items, () => null != content.getContent());
-  const obj2 = children(onPress[9]);
+  let obj2 = children(onPress[9]);
   const items1 = [NativeMenuStore];
   const height = globalStatusIndicatorState.height;
   let isVisible = globalStatusIndicatorState.isVisible;
@@ -128,7 +129,7 @@ export default function GlobalStatusIndicator(children) {
     if (stateFromStores1) {
       str = "no-hide-descendants";
     }
-    let obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
+    const obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
     const items = [absoluteFill.absoluteFill, ];
     let num = 0;
     if (!flag2) {
@@ -140,8 +141,8 @@ export default function GlobalStatusIndicator(children) {
     children = [closure_2_12(React4, obj), ];
     let tmp3Result = null;
     if (isVisible) {
-      obj = { onPress };
-      tmp3Result = closure_2_12(GlobalStatusIndicatorWrapper, obj);
+      const obj2 = { onPress };
+      tmp3Result = closure_2_12(GlobalStatusIndicatorWrapper, obj2);
     }
     children[1] = tmp3Result;
     return closure_2_14(map1, { children });

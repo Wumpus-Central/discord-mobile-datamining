@@ -6,17 +6,17 @@ import BillingError from "BillingError" /* 4316 */;
 const prototype = function StripeError(error) {
   error = error.error;
   if (null != error.param) {
-    let obj = { body: null };
-    obj = {};
+    const obj = { body: null };
+    const obj2 = {};
     ({ param, message } = error);
     const items = [message];
-    obj[param] = items;
-    obj.body = obj;
-    tmp = new tmp(obj, message, param, items);
+    obj2[param] = items;
+    obj.body = obj2;
+    let tmp8 = new tmp(obj, message, param, items);
   } else {
-    tmp = new tmp(error.message, tmp3, tmp2, error);
+    tmp8 = new tmp(error.message, tmp3, tmp2, error);
   }
-  return tmp;
+  return tmp8;
 }.prototype;
 class prototype extends tmp2 {
 }

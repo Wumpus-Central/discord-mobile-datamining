@@ -3,7 +3,7 @@
 // Module 8256 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -27,7 +27,6 @@ let closure_14 = async function _updateAssets() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: closure_2_6.APPLICATION_ASSETS(closure_0), oldFormErrors: true, rejectWithError: false });
   const body = value.body;
-  { url: timestampProducer.APPLICATION_ASSETS(closure_0), oldFormErrors: true, rejectWithError: false };
   closure_130_1(closure_130_2[7]).dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_129_0, assets: body });
   return closure_130_5.getApplicationAssets(closure_129_0);
 };
@@ -69,8 +68,8 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -84,8 +83,8 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp;
           closure_4 = tmp4;
@@ -103,12 +102,12 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
           if (0 !== found.length) {
             let HTTP = HTTPUtils.HTTP;
             let request = { url: timestampProducer.APPLICATION_EXTERNAL_ASSETS(closure_0), body: null, oldFormErrors: true, rejectWithError: false };
-            let obj1 = { urls: found };
-            request.body = obj1;
+            let obj4 = { urls: found };
+            request.body = obj4;
             c8 = 1;
             c9 = 1;
-            let obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            let obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         }
       } else if (1 === tmp4) {
@@ -117,7 +116,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           body = value.body;
@@ -239,8 +238,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
       throw value;
     } else if (arg0 === 2) {
       c6 = 3;
-      let obj1 = { value, done: true };
-      return obj1;
+      return { value, done: true };
     } else {
       closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH", applicationId: closure_131_0 });
       closure_131_3 = [];
@@ -286,14 +284,13 @@ let closure_22 = async function _fetchAssetIds(arg0) {
       return { value, done: true };
     } else {
       closure_131_5 = value;
-      let obj5 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 };
-      closure_132_1(closure_132_2[7]).dispatch(obj5);
+      closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 });
       if (closure_132_20(closure_131_1, closure_131_3, closure_131_5, closure_131_2)) {
         closure_132_13(closure_131_0).then(() => closure_2_21(closure_1_0, closure_1_1, closure_1_2 - 1));
         closure_132_13(closure_131_0);
       } else {
-        obj1 = closure_132_1(closure_132_2[7]);
-        obj1.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+        closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+        closure_132_1(closure_132_2[7]);
       }
       c6 = 3;
       closure_132_1(closure_132_2[7]);
@@ -306,8 +303,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     return { value, done: true };
   }
   if (closure_132_19(closure_131_1, closure_131_3)) {
-    obj5 = closure_132_1(closure_132_2[7]);
-    obj5.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+    closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
     return closure_131_3;
   }
   await closure_132_16(closure_131_0);
@@ -326,44 +322,41 @@ const Constants = fn(1074);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;
 const re10 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/;
-let obj = {
-  deserialize(arg0) {
-    return "" + c8 + encodeURIComponent(arg0);
-  },
-  serialize(arg0) {
-    return arg0.split(c8)[1];
-  }
-};
-obj = {
-  deserialize(arg0, arg1) {
-    return "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + encodeURIComponent(arg0) + "-" + arg1[0] + "x" + arg1[1] + ".jpg";
-  },
-  serialize(str) {
-    const match = str.match(re9);
-    let tmp2 = null;
-    if (null != match) {
-      tmp2 = match[1];
-    }
-    return tmp2;
-  }
-};
-obj = {
-  deserialize(arg0) {
-    return "https://i.ytimg.com/vi/" + encodeURIComponent(arg0) + "/hqdefault_live.jpg";
-  },
-  serialize(str) {
-    const match = str.match(re10);
-    let tmp2 = null;
-    if (null != match) {
-      tmp2 = match[1];
-    }
-    return tmp2;
-  }
-};
 let closure_11 = {
-  [PlatformTypes.SPOTIFY]: obj,
-  [PlatformTypes.TWITCH]: obj,
-  [PlatformTypes.YOUTUBE]: obj,
+  [PlatformTypes.SPOTIFY]: {
+    deserialize(arg0) {
+      return "" + c8 + encodeURIComponent(arg0);
+    },
+    serialize(arg0) {
+      return arg0.split(c8)[1];
+    }
+  },
+  [PlatformTypes.TWITCH]: {
+    deserialize(arg0, arg1) {
+      return "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + encodeURIComponent(arg0) + "-" + arg1[0] + "x" + arg1[1] + ".jpg";
+    },
+    serialize(str) {
+      const match = str.match(re9);
+      let tmp2 = null;
+      if (null != match) {
+        tmp2 = match[1];
+      }
+      return tmp2;
+    }
+  },
+  [PlatformTypes.YOUTUBE]: {
+    deserialize(arg0) {
+      return "https://i.ytimg.com/vi/" + encodeURIComponent(arg0) + "/hqdefault_live.jpg";
+    },
+    serialize(str) {
+      const match = str.match(re10);
+      let tmp2 = null;
+      if (null != match) {
+        tmp2 = match[1];
+      }
+      return tmp2;
+    }
+  },
   mp: {
     deserialize(str) {
       _modDef38(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
@@ -427,7 +420,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
   }
   if (null != media_assets_large_image) {
     if (media_assets_large_image.includes(":")) {
-      [tmp21, tmp22] = _slicedToArray(media_assets_large_image.split(":"), 2);
+      [tmp21, tmp22] = media_assets_large_image.split(":");
       if (tmp21 === PlatformTypes.TWITCH) {
         if (null != items) {
           if (typeof items !== "number") {

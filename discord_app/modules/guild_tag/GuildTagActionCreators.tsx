@@ -1,7 +1,7 @@
-// === Module 14001: GuildTagActionCreators ===
+// === Module 14002: GuildTagActionCreators ===
 
-// Module 14001 (GuildTagActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1272 */;
+// Module 14002 (GuildTagActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -18,8 +18,8 @@ let closure_6 = async function _adoptGuildIdentity() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,8 +32,8 @@ let closure_6 = async function _adoptGuildIdentity() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -41,38 +41,37 @@ let closure_6 = async function _adoptGuildIdentity() {
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.USER_SET_GUILD_IDENTITY, body: null, rejectWithError: false };
-            const obj1 = { identity_guild_id, identity_enabled };
-            request.body = obj1;
+            const obj4 = { identity_guild_id, identity_enabled };
+            request.body = obj4;
             c6 = 2;
             c7 = 1;
-            const obj2 = { value: HTTP.put(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.put(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c5 = 0;
           c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_130_0 = value;
-          let obj6 = closure_131_1(closure_131_2[4]);
-          const obj5 = { type: "CURRENT_USER_UPDATE", user: null };
-          obj6 = {};
+          const obj9 = { type: "CURRENT_USER_UPDATE", user: null };
+          const obj10 = {};
           const merged = Object.assign(closure_131_4.getCurrentUser());
           const merged1 = Object.assign(closure_130_0.body);
-          obj5.user = obj6;
-          obj6.dispatch(obj5);
+          obj9.user = obj10;
+          closure_131_1(closure_131_2[4]).dispatch(obj9);
           c5 = 0;
           c7 = 3;
-          obj = { value: closure_130_0, done: true };
+          const obj = { value: closure_130_0, done: true };
           return obj;
         }
       } catch (tmp9) {

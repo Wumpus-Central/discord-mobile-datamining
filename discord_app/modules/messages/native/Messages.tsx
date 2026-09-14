@@ -1,22 +1,22 @@
-// === Module 11557: Messages ===
+// === Module 11558: Messages ===
 
-// Module 11557 (Messages)
+// Module 11558 (Messages)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7266 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11119 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11385 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11120 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11386 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4628 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8257 */;
 import ApplicationStore from "ApplicationStore" /* 4864 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11558 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
 import CacheStore from "CacheStore" /* 7579 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11441 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11442 */;
 import EmojiStore from "EmojiStore" /* 5540 */;
 import ExperimentStore from "ExperimentStore" /* 4552 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7396 */;
@@ -27,23 +27,23 @@ import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7560 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8230 */;
 import InteractionStore from "InteractionStore" /* 8045 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11559 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11560 */;
 import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 8046 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
 import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4850 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7555 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11561 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11562 */;
 import PendingReplyStore from "PendingReplyStore" /* 7782 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
-import SummaryStore from "SummaryStore" /* 11478 */;
+import SummaryStore from "SummaryStore" /* 11479 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7409 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import ThemeStore from "ThemeStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1181 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import EditMessageStore from "EditMessageStore" /* 7783 */;
-import GiftCodeStore from "GiftCodeStore" /* 11562 */;
+import GiftCodeStore from "GiftCodeStore" /* 11563 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5494 */;
@@ -58,11 +58,11 @@ import UploadStore from "UploadStore" /* 7940 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4655 */;
 import SKUStore from "SKUStore" /* 5591 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11589 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11590 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4660 */;
 
 require = fn;
-const PollsInteractionStore = fn(11560);
+const PollsInteractionStore = fn(11561);
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ ActivityActionTypes: closure_58, ChannelTypesSets: closure_59, ME: closure_60, MessageTypes: closure_61, Permissions: closure_62 } = Constants);
@@ -74,21 +74,21 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   channel = channel.channel;
   let tmp = channel;
   const tmp2 = id;
-  let obj = channel(id[57]);
   let items = [MessageStore];
   const items1 = [channel.id];
-  const stateFromStores = obj.useStateFromStores(items, () => MessageStore.getMessages(channel.id), items1);
+  const stateFromStores = channel(id[57]).useStateFromStores(items, () => MessageStore.getMessages(channel.id), items1);
   id = channel.id;
   const guildId = channel.getGuildId();
+  let obj = channel(id[57]);
   const items2 = [GuildStore];
   const stateFromStores1 = channel(id[57]).useStateFromStores(items2, () => GuildStore.getGuild(guildId));
   let systemChannelFlags;
   if (stateFromStores1 != null) {
     systemChannelFlags = stateFromStores1.systemChannelFlags;
   }
-  let tmpResult = tmp(tmp2[57]);
+  let obj2 = channel(id[57]);
   const items3 = [AuthenticationStore];
-  const stateFromStores2 = tmpResult.useStateFromStores(items3, () => id.getId(), []);
+  const stateFromStores2 = tmp(tmp2[57]).useStateFromStores(items3, () => id.getId(), []);
   const InlineAttachmentMedia = tmp(tmp2[62]).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
   const InlineEmbedMedia = tmp(tmp2[62]).InlineEmbedMedia;
@@ -107,10 +107,10 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const setting7 = GifAutoPlay.useSetting();
   const TimestampHourCycle = tmp(tmp2[62]).TimestampHourCycle;
   const setting8 = TimestampHourCycle.useSetting();
-  tmpResult = tmp(tmp2[57]);
+  const tmpResult = tmp(tmp2[57]);
   const items4 = [ThemeStore];
-  const stateFromStores3 = tmpResult.useStateFromStores(items4, () => theme.theme, []);
-  let obj2 = channel(id[57]);
+  const stateFromStores3 = tmp(tmp2[57]).useStateFromStores(items4, () => theme.theme, []);
+  const tmpResult76 = tmp(tmp2[57]);
   closure_129_0 = stateFromStores;
   const items5 = [stateFromStores];
   const isMessageSwipeActionsEnabled = tmp(tmp2[63]).useIsMessageSwipeActionsEnabled();
@@ -125,7 +125,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     return obj;
   }, items5);
   closure_129_1 = memo;
-  const tmpResult1 = tmp(tmp2[63]);
+  const tmpResult77 = tmp(tmp2[63]);
   const items6 = [PresenceStore];
   const items7 = [memo];
   const linkedLobby = channel.linkedLobby;
@@ -165,27 +165,27 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     obj = discord_common_shallowEqual;
   }, items9);
   const tmp25 = guildId;
-  const tmpResult2 = tmp(tmp2[57]);
+  const tmpResult78 = tmp(tmp2[57]);
   [tmp27, r10127] = guildId(stateFromStores(tmp2[64])(stateFromStores, channel), 2);
   const tmp26 = guildId(stateFromStores(tmp2[64])(stateFromStores, channel), 2);
   const items10 = [InviteStore];
   const stateFromStores4 = tmp(tmp2[57]).useStateFromStores(items10, () => InviteStore.getInvites(), []);
-  const tmpResult3 = tmp(tmp2[57]);
+  const tmpResult79 = tmp(tmp2[57]);
   const fetchVoiceChannelInviteStartTimes = tmp(tmp2[65]).useFetchVoiceChannelInviteStartTimes(stateFromStores4);
-  const tmpResult4 = tmp(tmp2[65]);
+  const tmpResult80 = tmp(tmp2[65]);
   const items11 = [ApplicationDirectoryApplicationsStore];
   const stateFromStoresObject1 = tmp(tmp2[57]).useStateFromStoresObject(items11, () => ({ appDirectoryEmbedApplications: ApplicationDirectoryApplicationsStore.getApplications(), invalidAppDirectoryEmbedApplicationIds: ApplicationDirectoryApplicationsStore.getInvalidApplicationIds(), appDirectoryEmbedApplicationFetchStates: ApplicationDirectoryApplicationsStore.getApplicationFetchStates() }), []);
   ({ appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, appDirectoryEmbedApplicationFetchStates } = stateFromStoresObject1);
-  const tmpResult5 = tmp(tmp2[57]);
+  const tmpResult81 = tmp(tmp2[57]);
   const items12 = [items68];
   const stateFromStoresArray = tmp(tmp2[57]).useStateFromStoresArray(items12, () => items68.getFetchingOrFailedFetchingIds());
-  const tmpResult6 = tmp(tmp2[57]);
+  const tmpResult82 = tmp(tmp2[57]);
   const items13 = [channelSummariesExperiment];
   const stateFromStoresArray1 = tmp(tmp2[57]).useStateFromStoresArray(items13, () => channelSummariesExperiment.getFetchingIds());
-  const tmpResult7 = tmp(tmp2[57]);
+  const tmpResult83 = tmp(tmp2[57]);
   const items14 = [SKUStore];
   const stateFromStoresArray2 = tmp(tmp2[57]).useStateFromStoresArray(items14, () => fetchingSkuIds.getFetchingSkuIds());
-  const tmpResult8 = tmp(tmp2[57]);
+  const tmpResult84 = tmp(tmp2[57]);
   const items15 = [closure_6];
   const items16 = [id];
   const stateFromStoresArray3 = tmp(tmp2[57]).useStateFromStoresArray(items15, () => {
@@ -193,7 +193,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     const mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
     return mapped.filter(GlobalUtils.isNotNullish);
   }, items16);
-  const tmpResult9 = tmp(tmp2[57]);
+  const tmpResult85 = tmp(tmp2[57]);
   const items17 = [closure_6, PresenceStore];
   const stateFromStoresArray4 = tmp(tmp2[57]).useStateFromStoresArray(items17, () => {
     const items = [];
@@ -218,7 +218,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return items;
   });
-  const tmpResult10 = tmp(tmp2[57]);
+  const tmpResult86 = tmp(tmp2[57]);
   const items18 = [closure_6];
   const stateFromStoresArray5 = tmp(tmp2[57]).useStateFromStoresArray(items18, () => {
     const set = new Set();
@@ -234,7 +234,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     });
     return Array.from(set);
   });
-  const tmpResult11 = tmp(tmp2[57]);
+  const tmpResult87 = tmp(tmp2[57]);
   const items19 = [closure_6];
   const stateFromStoresArray6 = tmp(tmp2[57]).useStateFromStoresArray(items19, () => {
     const launchStates = closure_6.getLaunchStates();
@@ -256,24 +256,24 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return items;
   });
-  const tmpResult12 = tmp(tmp2[57]);
+  const tmpResult88 = tmp(tmp2[57]);
   const items20 = [MediaPostEmbedStore];
   const stateFromStores5 = tmp(tmp2[57]).useStateFromStores(items20, () => mediaPostEmbeds.getMediaPostEmbeds());
-  const tmpResult13 = tmp(tmp2[57]);
+  const tmpResult89 = tmp(tmp2[57]);
   const items21 = [GuildTemplateStore];
   const stateFromStores6 = tmp(tmp2[57]).useStateFromStores(items21, () => guildTemplates.getGuildTemplates(), []);
-  const tmpResult14 = tmp(tmp2[57]);
+  const tmpResult90 = tmp(tmp2[57]);
   const items22 = [stateFromStoresArray8];
   const stateFromStores7 = tmp(tmp2[57]).useStateFromStores(items22, () => stateFromStoresArray8.getBuildOverrides(), []);
-  const tmpResult15 = tmp(tmp2[57]);
+  const tmpResult91 = tmp(tmp2[57]);
   const codedLinksExperimentEmbeds = tmp(tmp2[66]).useCodedLinksExperimentEmbeds();
-  const tmpResult16 = tmp(tmp2[66]);
-  quests = tmp(tmp2[67]).useQuests({ fetchPolicy: "cache-or-network", callerSource: "messages_native" });
-  ({ quests, isFetchingCurrentQuests } = quests);
+  const tmpResult92 = tmp(tmp2[66]);
+  const quests1 = tmp(tmp2[67]).useQuests({ fetchPolicy: "cache-or-network", callerSource: "messages_native" });
+  ({ quests, isFetchingCurrentQuests } = quests1);
   let found = stateFromStores.filter((type) => type.type === constants.PREMIUM_REFERRAL);
   let mapped = found.map((referralTrialOfferId) => referralTrialOfferId.referralTrialOfferId);
   closure_6 = mapped.filter(tmp(tmp2[61]).isNotNullish);
-  const tmpResult17 = tmp(tmp2[67]);
+  const tmpResult93 = tmp(tmp2[67]);
   const items23 = [ReferralTrialStore];
   const stateFromStoresArray7 = tmp(tmp2[57]).useStateFromStoresArray(items23, () => {
     const mapped = closure_6.map((item) => {
@@ -286,16 +286,16 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     });
     return mapped.filter(GlobalUtils.isNotNullish);
   });
-  const tmpResult18 = tmp(tmp2[57]);
+  const tmpResult94 = tmp(tmp2[57]);
   const trialOffer = tmp(tmp2[68]).useTrialOffer(closure_63);
-  const tmpResult19 = tmp(tmp2[68]);
+  const tmpResult95 = tmp(tmp2[68]);
   const items24 = [UserStore];
   const stateFromStores8 = tmp(tmp2[57]).useStateFromStores(items24, () => stateFromStores(id[69]).isPremiumExactly(authStore2.getCurrentUser(), TIER_2.TIER_2));
-  const tmpResult20 = tmp(tmp2[57]);
+  const tmpResult96 = tmp(tmp2[57]);
   const items25 = [EditMessageStore];
   const items26 = [id];
   const stateFromStores9 = tmp(tmp2[57]).useStateFromStores(items25, () => EditMessageStore.getEditingMessageId(id), items26);
-  const tmpResult21 = tmp(tmp2[57]);
+  const tmpResult97 = tmp(tmp2[57]);
   const items27 = [PendingReplyStore];
   const items28 = [id];
   const stateFromStores10 = tmp(tmp2[57]).useStateFromStores(items27, () => {
@@ -306,11 +306,11 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return id;
   }, items28);
-  const tmpResult22 = tmp(tmp2[57]);
+  const tmpResult98 = tmp(tmp2[57]);
   const items29 = [ReadStateStore];
   const items30 = [id];
   const stateFromStores11 = tmp(tmp2[57]).useStateFromStores(items29, () => ReadStateStore.getOldestUnreadMessageId(id), items30);
-  const tmpResult23 = tmp(tmp2[57]);
+  const tmpResult99 = tmp(tmp2[57]);
   const items31 = [GuildVerificationStore];
   const items32 = [guildId];
   const stateFromStores12 = tmp(tmp2[57]).useStateFromStores(items31, () => {
@@ -320,19 +320,19 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return canChatInGuildResult;
   }, items32);
-  const tmpResult24 = tmp(tmp2[57]);
+  const tmpResult100 = tmp(tmp2[57]);
   const items33 = [PermissionStore];
   const items34 = [channel];
   const stateFromStores13 = tmp(tmp2[57]).useStateFromStores(items33, () => PermissionStore.can(constants2.SEND_MESSAGES, channel), items34);
-  const tmpResult25 = tmp(tmp2[57]);
+  const tmpResult101 = tmp(tmp2[57]);
   const tmp54 = stateFromStores(tmp2[70])(id);
   const items35 = [VoiceStateStore];
   const items36 = [stateFromStores2];
   const stateFromStores14 = tmp(tmp2[57]).useStateFromStores(items35, () => VoiceStateStore.getUserVoiceChannelId(closure_2_60, stateFromStores2), items36);
-  const tmpResult26 = tmp(tmp2[57]);
+  const tmpResult102 = tmp(tmp2[57]);
   const items37 = [RTCConnectionStore];
   const stateFromStores15 = tmp(tmp2[57]).useStateFromStores(items37, () => channelId.getChannelId(), []);
-  const tmpResult27 = tmp(tmp2[57]);
+  const tmpResult103 = tmp(tmp2[57]);
   const items38 = [ReferencedMessageStore];
   const items39 = [channel];
   const stateFromStores16 = tmp(tmp2[57]).useStateFromStores(items38, () => {
@@ -348,36 +348,36 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return message;
   }, items39);
-  const tmpResult28 = tmp(tmp2[57]);
+  const tmpResult104 = tmp(tmp2[57]);
   const items40 = [GiftCodeStore];
   const stateFromStoresObject2 = tmp(tmp2[57]).useStateFromStoresObject(items40, () => ({ resolvingGiftCodes: GiftCodeStore.getResolvingCodes(), resolvedGiftCodes: GiftCodeStore.getResolvedCodes(), acceptingGiftCodes: GiftCodeStore.getAcceptingCodes() }), []);
   ({ resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes } = stateFromStoresObject2);
-  const tmpResult29 = tmp(tmp2[57]);
+  const tmpResult105 = tmp(tmp2[57]);
   const items41 = [ChannelRTCStore];
   const items42 = [id];
   const stateFromStores17 = tmp(tmp2[57]).useStateFromStores(items41, () => ChannelRTCStore.getParticipants(id).length, items42);
-  const tmpResult30 = tmp(tmp2[57]);
+  const tmpResult106 = tmp(tmp2[57]);
   const items43 = [UploadStore];
   const items44 = [id];
   const stateFromStores18 = tmp(tmp2[57]).useStateFromStores(items43, () => UploadStore.getFiles(id), items44);
-  const tmpResult31 = tmp(tmp2[57]);
+  const tmpResult107 = tmp(tmp2[57]);
   const items45 = [ReferencedMessageStore];
   const items46 = [id];
   const stateFromStores19 = tmp(tmp2[57]).useStateFromStores(items45, () => ReferencedMessageStore.getReplyIdsForChannel(id), items46);
-  const tmpResult32 = tmp(tmp2[57]);
+  const tmpResult108 = tmp(tmp2[57]);
   const items47 = [stateFromStores2];
   const stateFromStoresObject3 = tmp(tmp2[57]).useStateFromStoresObject(items47, () => ({ useReducedMotion: stateFromStores2.useReducedMotion, roleStyle: stateFromStores2.roleStyle, officialMessageStyle: stateFromStores2.officialMessageStyle, saturation: stateFromStores2.saturation, displayNameStylesEnabled: stateFromStores2.displayNameStylesEnabled }), []);
   ({ useReducedMotion, roleStyle, officialMessageStyle, saturation, displayNameStylesEnabled } = stateFromStoresObject3);
-  const tmpResult33 = tmp(tmp2[57]);
+  const tmpResult109 = tmp(tmp2[57]);
   const items48 = [ThreadMessageStore];
   const items49 = [id];
   const stateFromStores20 = tmp(tmp2[57]).useStateFromStores(items48, () => ThreadMessageStore.getChannelThreadsVersion(id), items49);
-  const tmpResult34 = tmp(tmp2[57]);
+  const tmpResult110 = tmp(tmp2[57]);
   const items50 = [InteractionStore];
   const stateFromStoresObject4 = tmp(tmp2[57]).useStateFromStoresObject(items50, () => messageInteractionStates.getMessageInteractionStates());
-  const tmpResult35 = tmp(tmp2[57]);
+  const tmpResult111 = tmp(tmp2[57]);
   const items51 = [LocalInteractionComponentStateStore];
-  const tmpResult36 = tmp(tmp2[57]);
+  const tmpResult112 = tmp(tmp2[57]);
   [tmp67, tmp68] = guildId(tmp(tmp2[57]).useStateFromStores(items51, () => {
     const items = [LocalInteractionComponentStateStore.getInteractionComponentStates(), LocalInteractionComponentStateStore.getInteractionComponentStateVersion()];
     return items;
@@ -388,9 +388,9 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   }, [], tmp(tmp2[71]).isVersionEqual), 2);
   const items52 = [ExperimentStore];
   let stateFromStores21 = tmp(tmp2[57]).useStateFromStores(items52, () => hasLoadedExperiments.hasLoadedExperiments);
-  const tmpResult37 = tmp(tmp2[57]);
+  const tmpResult113 = tmp(tmp2[57]);
   const isSpamMessageRequest = tmp(tmp2[72]).useIsSpamMessageRequest(channel.id);
-  const tmpResult38 = tmp(tmp2[72]);
+  const tmpResult114 = tmp(tmp2[72]);
   let tmp72 = null != stateFromStores;
   const isMessageRequest = tmp(tmp2[73]).useIsMessageRequest(channel.id);
   if (tmp72) {
@@ -399,16 +399,16 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   }
   const tmp74 = null != stateFromStores && stateFromStores.cached;
   const tmp75 = null != stateFromStores && stateFromStores.ready && !stateFromStores.loadingMore;
-  const tmpResult39 = tmp(tmp2[73]);
+  const tmpResult115 = tmp(tmp2[73]);
   const items53 = [GuildScheduledEventStore];
   const stateFromStores22 = tmp(tmp2[57]).useStateFromStores(items53, () => rsvpVersion.getRsvpVersion());
-  const tmpResult40 = tmp(tmp2[57]);
+  const tmpResult116 = tmp(tmp2[57]);
   const items54 = [GuildAutomodMessageStore];
   const stateFromStores23 = tmp(tmp2[57]).useStateFromStores(items54, () => messagesVersion.getMessagesVersion());
-  const tmpResult41 = tmp(tmp2[57]);
+  const tmpResult117 = tmp(tmp2[57]);
   const items55 = [GuildMemberStore];
   const stateFromStores24 = tmp(tmp2[57]).useStateFromStores(items55, () => communicationDisabledVersion.getCommunicationDisabledVersion());
-  const tmpResult42 = tmp(tmp2[57]);
+  const tmpResult118 = tmp(tmp2[57]);
   const items56 = [GuildMemberStore];
   const items57 = [guildId, stateFromStores];
   const stateFromStoresObject5 = tmp(tmp2[57]).useStateFromStoresObject(items56, () => {
@@ -433,20 +433,20 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return {};
   }, items57);
-  const tmpResult43 = tmp(tmp2[57]);
+  const tmpResult119 = tmp(tmp2[57]);
   const items58 = [PermissionStore];
   const stateFromStores25 = tmp(tmp2[57]).useStateFromStores(items58, () => PermissionStore.can(constants2.MODERATE_MEMBERS, stateFromStores1));
-  const tmpResult44 = tmp(tmp2[57]);
-  id = undefined;
+  const tmpResult120 = tmp(tmp2[57]);
+  let id1;
   if (stateFromStores1 != null) {
-    id = stateFromStores1.id;
+    id1 = stateFromStores1.id;
   }
-  const tmpResult45 = tmp(tmp2[75]);
+  const tmpResult121 = tmp(tmp2[75]);
   const items59 = [LocaleStore];
   const stateFromStores26 = tmp(tmp2[57]).useStateFromStores(items59, () => locale.locale);
-  const tmpResult46 = tmp(tmp2[57]);
+  const tmpResult122 = tmp(tmp2[57]);
   const isPaymentsBlocked = tmp(tmp2[76]).useIsPaymentsBlocked();
-  const tmpResult47 = tmp(tmp2[76]);
+  const tmpResult123 = tmp(tmp2[76]);
   const items60 = [JoinedThreadsStore];
   const stateFromStores27 = tmp(tmp2[57]).useStateFromStores(items60, () => {
     let hasJoinedResult = channel.isForumPost();
@@ -455,21 +455,21 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return hasJoinedResult;
   });
-  const tmpResult48 = tmp(tmp2[57]);
+  const tmpResult124 = tmp(tmp2[57]);
   const items61 = [MediaPostSharePromptStore];
   const stateFromStores28 = tmp(tmp2[57]).useStateFromStores(items61, () => MediaPostSharePromptStore.shouldDisplayPrompt(id));
-  const tmpResult49 = tmp(tmp2[57]);
+  const tmpResult125 = tmp(tmp2[57]);
   const items62 = [PushFeedbackStore];
   const stateFromStores29 = tmp(tmp2[57]).useStateFromStores(items62, () => eligible.isEligible());
-  const tmpResult50 = tmp(tmp2[57]);
+  const tmpResult126 = tmp(tmp2[57]);
   const items63 = [CacheStore];
   const stateFromStores30 = tmp(tmp2[57]).useStateFromStores(items63, () => lazyCacheStatus.getLazyCacheStatus());
-  const tmpResult51 = tmp(tmp2[57]);
+  const tmpResult127 = tmp(tmp2[57]);
   const messageJumpAndroidKeyboardHeight = tmp(tmp2[77]).useMessageJumpAndroidKeyboardHeight();
-  const tmpResult52 = tmp(tmp2[77]);
+  const tmpResult128 = tmp(tmp2[77]);
   const tmp89 = stateFromStores(tmp2[78])();
   channelSummariesExperiment = tmp(tmp2[79]).useChannelSummariesExperiment(channel);
-  const tmpResult53 = tmp(tmp2[79]);
+  const tmpResult129 = tmp(tmp2[79]);
   const items64 = [SummaryStore];
   const items65 = [channelSummariesExperiment, channel.id];
   const items66 = [channel.id, , , , ];
@@ -499,17 +499,17 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       const result = obj.updateChannelDimensions(channel.id, Date.now(), 1, 1, 0);
     }
   }, items66);
-  const tmpResult54 = tmp(tmp2[57]);
+  const tmpResult130 = tmp(tmp2[57]);
   const shouldTrackAnnouncementMessageViews = tmp(tmp2[81]).useShouldTrackAnnouncementMessageViews({ guild: stateFromStores1, channel, messages: stateFromStores, isMessagesReady: tmp72 });
-  const tmpResult55 = tmp(tmp2[81]);
+  const tmpResult131 = tmp(tmp2[81]);
   const shouldTrackRichPresenceInviteEmbedViews = tmp(tmp2[81]).useShouldTrackRichPresenceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
-  const tmpResult56 = tmp(tmp2[81]);
+  const tmpResult132 = tmp(tmp2[81]);
   const shouldTrackOfficialMessageViews = tmp(tmp2[81]).useShouldTrackOfficialMessageViews({ guild: stateFromStores1, messages: stateFromStores, isMessagesReady: tmp72 });
-  const tmpResult57 = tmp(tmp2[81]);
+  const tmpResult133 = tmp(tmp2[81]);
   const shouldTrackVoiceInviteEmbedViews = tmp(tmp2[81]).useShouldTrackVoiceInviteEmbedViews({ messages: stateFromStores, isMessagesReady: tmp72 });
-  const tmpResult58 = tmp(tmp2[81]);
+  const tmpResult134 = tmp(tmp2[81]);
   const shouldDisplaySpoilerObscurity = tmp(tmp2[82]).useShouldDisplaySpoilerObscurity(channel);
-  const tmpResult59 = tmp(tmp2[82]);
+  const tmpResult135 = tmp(tmp2[82]);
   const items67 = [id, guildId];
   const isAgeVerified = tmp(tmp2[83]).useIsAgeVerified();
   const effect2 = obj6.useEffect(() => {
@@ -518,10 +518,10 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       stateFromStores(id[84]).handleChannelSelect();
     };
   }, items67);
-  const tmpResult60 = tmp(tmp2[83]);
+  const tmpResult136 = tmp(tmp2[83]);
   const shouldDisableInteractiveComponents = tmp(tmp2[85]).useShouldDisableInteractiveComponents(channel.id);
   items68 = [];
-  const tmpResult61 = tmp(tmp2[85]);
+  const tmpResult137 = tmp(tmp2[85]);
   let item = stateFromStores.forEach((messageReference) => {
     messageReference = messageReference.messageReference;
     let message_id;
@@ -537,10 +537,10 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const items69 = [ExplicitMediaStore];
   const items70 = [id];
   const stateFromStores32 = tmp(tmp2[57]).useStateFromStores(items69, () => ExplicitMediaStore.getChannelFpInfo(id), items70);
-  const tmpResult62 = tmp(tmp2[57]);
+  const tmpResult138 = tmp(tmp2[57]);
   const items71 = [FamilyCenterPendingConnectionStore];
   const stateFromStores33 = tmp(tmp2[57]).useStateFromStores(items71, () => pendingConnection.getPendingConnection());
-  const tmpResult63 = tmp(tmp2[57]);
+  const tmpResult139 = tmp(tmp2[57]);
   const tmp106 = stateFromStores(tmp2[86])();
   ({ unloadedContentEntryMessageIds, unloadableContentEntryMessageIds } = stateFromStores(tmp2[87])(stateFromStores));
   const tmp107 = stateFromStores(tmp2[87])(stateFromStores);
@@ -556,15 +556,15 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return flag;
   });
-  const tmpResult64 = tmp(tmp2[57]);
+  const tmpResult140 = tmp(tmp2[57]);
   const items73 = [BasicGuildStore];
   const stateFromStores35 = tmp(tmp2[57]).useStateFromStores(items73, () => version.getVersion());
-  const tmpResult65 = tmp(tmp2[57]);
+  const tmpResult141 = tmp(tmp2[57]);
   const colorStore = tmp(tmp2[88]).useColorStore((palette) => Object.keys(palette.palette).length);
-  const tmpResult66 = tmp(tmp2[88]);
+  const tmpResult142 = tmp(tmp2[88]);
   const items74 = [EmojiStore];
   const stateFromStores36 = tmp(tmp2[57]).useStateFromStores(items74, () => EmojiStore.getGuildEmoji(guildId));
-  const tmpResult67 = tmp(tmp2[57]);
+  const tmpResult143 = tmp(tmp2[57]);
   const items75 = [VoiceStateStore];
   const items76 = [guildId];
   const stateFromStores37 = tmp(tmp2[57]).useStateFromStores(items75, () => {
@@ -575,7 +575,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       return messages_MessagesUtils.getVoiceStateChannelSummaryFromVoiceStates(voiceStates);
     }
   }, items76);
-  const tmpResult68 = tmp(tmp2[57]);
+  const tmpResult144 = tmp(tmp2[57]);
   const items77 = [SortedVoiceStateStore, VoiceChannelStartTimeStore, InviteStore, ChannelStore];
   const stateFromStoresObject6 = tmp(tmp2[57]).useStateFromStoresObject(items77, () => {
     const obj = {};
@@ -586,20 +586,20 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       channel = nextResult.channel;
-      id = undefined;
+      let id1;
       if (channel != null) {
-        id = channel.id;
+        id1 = channel.id;
       }
-      if (null != id) {
+      if (null != id1) {
         let obj4 = channel(id[89]);
         if (obj4.isVoiceChannelInvite(tmp3)) {
           id = tmp3.channel.id;
           let guild = tmp3.guild;
-          let id1;
+          let id2;
           if (guild != null) {
-            id1 = guild.id;
+            id2 = guild.id;
           }
-          voiceStatesForChannelAlt = voiceStatesForChannelAlt.getVoiceStatesForChannelAlt(id, id1);
+          voiceStatesForChannelAlt = voiceStatesForChannelAlt.getVoiceStatesForChannelAlt(id, id2);
           let mapped = voiceStatesForChannelAlt.map((voiceState) => {
             let str = "";
             if (voiceState.voiceState.selfStream) {
@@ -620,13 +620,13 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return obj;
   });
-  const tmpResult69 = tmp(tmp2[57]);
+  const tmpResult145 = tmp(tmp2[57]);
   const items78 = [SessionsStore];
   stateFromStoresArray8 = tmp(tmp2[57]).useStateFromStoresArray(items78, () => {
     const items = [...closure_1_51.getRemoteActivities(), ...closure_1_51.getHiddenActivities()];
     return items.filter(channel(id[61]).isNotNullish);
   });
-  const tmpResult70 = tmp(tmp2[57]);
+  const tmpResult146 = tmp(tmp2[57]);
   const items79 = [ActivityLauncherStore];
   const stateFromStoresObject7 = tmp(tmp2[57]).useStateFromStoresObject(items79, () => stateFromStoresArray8.reduce((acc, application_id) => {
     if (null == application_id.application_id) {
@@ -639,13 +639,13 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
       return acc;
     }
   }, {}));
-  const tmpResult71 = tmp(tmp2[57]);
+  const tmpResult147 = tmp(tmp2[57]);
   const items80 = [AuthorizedAppsStore];
   const stateFromStoresArray9 = tmp(tmp2[57]).useStateFromStoresArray(items80, () => {
     const items = [authStore.getNewestTokens(), authStore.getApplicationFetchStateVersion()];
     return items;
   }, []);
-  const tmpResult72 = tmp(tmp2[57]);
+  const tmpResult148 = tmp(tmp2[57]);
   const items81 = [UserStore];
   const stateFromStores38 = tmp(tmp2[57]).useStateFromStores(items81, () => {
     const currentUser = authStore2.getCurrentUser();
@@ -655,73 +655,73 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     }
     return displayNameStyles;
   });
-  const tmpResult73 = tmp(tmp2[57]);
+  const tmpResult149 = tmp(tmp2[57]);
   const fetchSocialLayerStorefrontProductDetailsEmbedData = tmp(tmp2[90]).useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores);
-  obj = { profile: null, children: null };
-  let tmp24Result = tmp24(tmp2[91]);
-  obj.profile = tmp(tmp2[91]).Profiles.Messages;
+  const obj3 = { profile: null, children: null };
+  const tmpResult150 = tmp(tmp2[90]);
+  obj3.profile = tmp(tmp2[91]).Profiles.Messages;
   let isThreadResult = channel.isThread();
   if (isThreadResult) {
     isThreadResult = closure_65(tmp24(tmp2[92]), { absolute: true });
   }
   const items82 = [isThreadResult, ];
-  obj = { ref, theme: stateFromStores3, saturation, isStaff: stateFromStores34, animateEmoji: setting5, animateStickers: setting6, containerWidth: tmp106, gifAutoPlay: setting7, timestampHourCycle: setting8, inlineAttachmentMedia: setting, inlineEmbedMedia: setting1, renderEmbeds: setting2, renderReactions: setting3, developerMode: setting4, roleStyle, officialMessageStyle, guildId, currentUserId: stateFromStores2, channelId: id, isMessagesReady: tmp72, isMessagesCached: tmp74, isMessagesAckable: tmp75, isMessageRequest, isSpamMessageRequest, messageAuthorActivities: stateFromStoresObject, invites: stateFromStores4, appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, invalidApplicationIds: stateFromStoresArray, applicationAssetFetchingIds: stateFromStoresArray1, messages: stateFromStores, messagesWithActivitiesLaunching: stateFromStoresArray6, activityInstanceIds: stateFromStoresArray3, activityParticipants: stateFromStoresArray5, activityInstancePresenceDetails: stateFromStoresArray4, appDirectoryEmbedApplicationFetchStates, mediaPostPreviewEmbeds: stateFromStores5, guildTemplates: stateFromStores6, buildOverrides: stateFromStores7, fetchingSkuIds: stateFromStoresArray2, experimentEmbeds: codedLinksExperimentEmbeds, quests, isFetchingCurrentQuests, editingMessageId: stateFromStores9, replyingMessageId: stateFromStores10, oldestUnreadMessageId: stateFromStores11, canChat: stateFromStores12, canSendMessages: stateFromStores13, isCallActive: tmp54, voiceStatePrivateChannelId: stateFromStores14, currentClientVoiceChannelId: stateFromStores15, voiceStateChannelIdSummaryForGuild: stateFromStores37, resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes, participantsLength: stateFromStores17, uploads: stateFromStores18, repliedIds: stateFromStores19, useReducedMotion, displayNameStylesEnabled, channelThreadsVersion: stateFromStores20, rsvpVersion: stateFromStores22, failedMessagesVersion: stateFromStores23, communicationDisabledVersion: stateFromStores24, messageAuthorMembers: stateFromStoresObject5, forwardGuildsVersion: stateFromStores35, interactionStates: stateFromStoresObject4, interactionComponentStates: tmp67, interactionComponentStatesVersion: tmp68, hasLoadedExperiments: null, guildSystemChannelFlags: null, currentUserCommunicationDisabled: null, renderCommunicationDisabled: null, userSettingsLocale: null, paymentsBlocked: null, isFollowingForumPost: null, showMediaPostSharePrompt: null, showPushFeedback: null, cacheStoreLoaded: null, androidKeyboardHeight: null, selectedSummary: null, keyboardType: null, shouldTrackAnnouncementMessageViews: null, shouldTrackRichPresenceInviteEmbedViews: null, shouldTrackOfficialMessageViews: null, shouldTrackVoiceInviteEmbedViews: null, shouldObscureSpoiler: null, shouldDisableInteractiveComponents: null, channelPolls: null, messageReferencePolls: null, explicitMediaFalsePositiveInfo: null, familyCenterPendingConnection: null, threadStartingReferenceMessage: null, unloadedContentEntryMessageIds: null, unloadableContentEntryMessageIds: null, resolvedReferralTrialOfferIds: null, referralTrialOfferId: null, isPremiumTier2User: null, activityInviteMessageIds: null, guildInviteColorsFetched: null, isAgeVerified: null, guildEmojis: null, enableSwipeActions: null, selfActivities: null, activityLaunchJoinStates: null, authorizedAppsTokens: null, currentUserDisplayNameStyles: null, voiceInviteDataByChannelId: null, officialMessageColor: null };
-  tmp24Result = tmp24(tmp2[93]);
+  let obj4 = { ref, theme: stateFromStores3, saturation, isStaff: stateFromStores34, animateEmoji: setting5, animateStickers: setting6, containerWidth: tmp106, gifAutoPlay: setting7, timestampHourCycle: setting8, inlineAttachmentMedia: setting, inlineEmbedMedia: setting1, renderEmbeds: setting2, renderReactions: setting3, developerMode: setting4, roleStyle, officialMessageStyle, guildId, currentUserId: stateFromStores2, channelId: id, isMessagesReady: tmp72, isMessagesCached: tmp74, isMessagesAckable: tmp75, isMessageRequest, isSpamMessageRequest, messageAuthorActivities: stateFromStoresObject, invites: stateFromStores4, appDirectoryEmbedApplications, invalidAppDirectoryEmbedApplicationIds, invalidApplicationIds: stateFromStoresArray, applicationAssetFetchingIds: stateFromStoresArray1, messages: stateFromStores, messagesWithActivitiesLaunching: stateFromStoresArray6, activityInstanceIds: stateFromStoresArray3, activityParticipants: stateFromStoresArray5, activityInstancePresenceDetails: stateFromStoresArray4, appDirectoryEmbedApplicationFetchStates, mediaPostPreviewEmbeds: stateFromStores5, guildTemplates: stateFromStores6, buildOverrides: stateFromStores7, fetchingSkuIds: stateFromStoresArray2, experimentEmbeds: codedLinksExperimentEmbeds, quests, isFetchingCurrentQuests, editingMessageId: stateFromStores9, replyingMessageId: stateFromStores10, oldestUnreadMessageId: stateFromStores11, canChat: stateFromStores12, canSendMessages: stateFromStores13, isCallActive: tmp54, voiceStatePrivateChannelId: stateFromStores14, currentClientVoiceChannelId: stateFromStores15, voiceStateChannelIdSummaryForGuild: stateFromStores37, resolvingGiftCodes, resolvedGiftCodes, acceptingGiftCodes, participantsLength: stateFromStores17, uploads: stateFromStores18, repliedIds: stateFromStores19, useReducedMotion, displayNameStylesEnabled, channelThreadsVersion: stateFromStores20, rsvpVersion: stateFromStores22, failedMessagesVersion: stateFromStores23, communicationDisabledVersion: stateFromStores24, messageAuthorMembers: stateFromStoresObject5, forwardGuildsVersion: stateFromStores35, interactionStates: stateFromStoresObject4, interactionComponentStates: tmp67, interactionComponentStatesVersion: tmp68, hasLoadedExperiments: null, guildSystemChannelFlags: null, currentUserCommunicationDisabled: null, renderCommunicationDisabled: null, userSettingsLocale: null, paymentsBlocked: null, isFollowingForumPost: null, showMediaPostSharePrompt: null, showPushFeedback: null, cacheStoreLoaded: null, androidKeyboardHeight: null, selectedSummary: null, keyboardType: null, shouldTrackAnnouncementMessageViews: null, shouldTrackRichPresenceInviteEmbedViews: null, shouldTrackOfficialMessageViews: null, shouldTrackVoiceInviteEmbedViews: null, shouldObscureSpoiler: null, shouldDisableInteractiveComponents: null, channelPolls: null, messageReferencePolls: null, explicitMediaFalsePositiveInfo: null, familyCenterPendingConnection: null, threadStartingReferenceMessage: null, unloadedContentEntryMessageIds: null, unloadableContentEntryMessageIds: null, resolvedReferralTrialOfferIds: null, referralTrialOfferId: null, isPremiumTier2User: null, activityInviteMessageIds: null, guildInviteColorsFetched: null, isAgeVerified: null, guildEmojis: null, enableSwipeActions: null, selfActivities: null, activityLaunchJoinStates: null, authorizedAppsTokens: null, currentUserDisplayNameStyles: null, voiceInviteDataByChannelId: null, officialMessageColor: null };
+  const tmp24Result = stateFromStores(tmp2[91]);
   if (stateFromStores21) {
     stateFromStores21 = tmp72;
   }
-  obj.hasLoadedExperiments = stateFromStores21;
-  obj.guildSystemChannelFlags = systemChannelFlags;
-  obj.currentUserCommunicationDisabled = tmp25(tmpResult45.useCurrentUserCommunicationDisabled(id), 2)[1];
-  obj.renderCommunicationDisabled = stateFromStores25;
-  obj.userSettingsLocale = stateFromStores26;
-  obj.paymentsBlocked = isPaymentsBlocked;
-  obj.isFollowingForumPost = stateFromStores27;
-  obj.showMediaPostSharePrompt = stateFromStores28;
-  obj.showPushFeedback = stateFromStores29;
-  obj.cacheStoreLoaded = "initializing" !== stateFromStores30;
-  obj.androidKeyboardHeight = messageJumpAndroidKeyboardHeight;
-  obj.selectedSummary = stateFromStores31;
-  obj.keyboardType = tmp89;
-  obj.shouldTrackAnnouncementMessageViews = shouldTrackAnnouncementMessageViews;
-  obj.shouldTrackRichPresenceInviteEmbedViews = shouldTrackRichPresenceInviteEmbedViews;
-  obj.shouldTrackOfficialMessageViews = shouldTrackOfficialMessageViews;
-  obj.shouldTrackVoiceInviteEmbedViews = shouldTrackVoiceInviteEmbedViews;
-  obj.shouldObscureSpoiler = shouldDisplaySpoilerObscurity;
-  obj.shouldDisableInteractiveComponents = shouldDisableInteractiveComponents;
-  obj.channelPolls = tmp101;
-  obj.messageReferencePolls = tmp103;
-  obj.explicitMediaFalsePositiveInfo = stateFromStores32;
-  obj.familyCenterPendingConnection = stateFromStores33;
-  obj.threadStartingReferenceMessage = stateFromStores16;
-  obj.unloadedContentEntryMessageIds = unloadedContentEntryMessageIds;
-  obj.unloadableContentEntryMessageIds = unloadableContentEntryMessageIds;
-  obj.resolvedReferralTrialOfferIds = stateFromStoresArray7;
-  let id1;
+  obj4.hasLoadedExperiments = stateFromStores21;
+  obj4.guildSystemChannelFlags = systemChannelFlags;
+  obj4.currentUserCommunicationDisabled = tmp25(tmpResult121.useCurrentUserCommunicationDisabled(id1), 2)[1];
+  obj4.renderCommunicationDisabled = stateFromStores25;
+  obj4.userSettingsLocale = stateFromStores26;
+  obj4.paymentsBlocked = isPaymentsBlocked;
+  obj4.isFollowingForumPost = stateFromStores27;
+  obj4.showMediaPostSharePrompt = stateFromStores28;
+  obj4.showPushFeedback = stateFromStores29;
+  obj4.cacheStoreLoaded = "initializing" !== stateFromStores30;
+  obj4.androidKeyboardHeight = messageJumpAndroidKeyboardHeight;
+  obj4.selectedSummary = stateFromStores31;
+  obj4.keyboardType = tmp89;
+  obj4.shouldTrackAnnouncementMessageViews = shouldTrackAnnouncementMessageViews;
+  obj4.shouldTrackRichPresenceInviteEmbedViews = shouldTrackRichPresenceInviteEmbedViews;
+  obj4.shouldTrackOfficialMessageViews = shouldTrackOfficialMessageViews;
+  obj4.shouldTrackVoiceInviteEmbedViews = shouldTrackVoiceInviteEmbedViews;
+  obj4.shouldObscureSpoiler = shouldDisplaySpoilerObscurity;
+  obj4.shouldDisableInteractiveComponents = shouldDisableInteractiveComponents;
+  obj4.channelPolls = tmp101;
+  obj4.messageReferencePolls = tmp103;
+  obj4.explicitMediaFalsePositiveInfo = stateFromStores32;
+  obj4.familyCenterPendingConnection = stateFromStores33;
+  obj4.threadStartingReferenceMessage = stateFromStores16;
+  obj4.unloadedContentEntryMessageIds = unloadedContentEntryMessageIds;
+  obj4.unloadableContentEntryMessageIds = unloadableContentEntryMessageIds;
+  obj4.resolvedReferralTrialOfferIds = stateFromStoresArray7;
+  let id2;
   if (trialOffer != null) {
-    id1 = trialOffer.id;
+    id2 = trialOffer.id;
   }
-  obj.referralTrialOfferId = id1;
-  obj.isPremiumTier2User = stateFromStores8;
-  obj.activityInviteMessageIds = tmp27;
-  obj.guildInviteColorsFetched = colorStore;
-  obj.isAgeVerified = isAgeVerified;
-  obj.guildEmojis = stateFromStores36;
-  obj.enableSwipeActions = isMessageSwipeActionsEnabled;
-  obj.selfActivities = stateFromStoresArray8;
-  obj.activityLaunchJoinStates = stateFromStoresObject7;
-  obj.authorizedAppsTokens = stateFromStoresArray9;
-  obj.currentUserDisplayNameStyles = stateFromStores38;
-  obj.voiceInviteDataByChannelId = stateFromStoresObject6;
+  obj4.referralTrialOfferId = id2;
+  obj4.isPremiumTier2User = stateFromStores8;
+  obj4.activityInviteMessageIds = tmp27;
+  obj4.guildInviteColorsFetched = colorStore;
+  obj4.isAgeVerified = isAgeVerified;
+  obj4.guildEmojis = stateFromStores36;
+  obj4.enableSwipeActions = isMessageSwipeActionsEnabled;
+  obj4.selfActivities = stateFromStoresArray8;
+  obj4.activityLaunchJoinStates = stateFromStoresObject7;
+  obj4.authorizedAppsTokens = stateFromStoresArray9;
+  obj4.currentUserDisplayNameStyles = stateFromStores38;
+  obj4.voiceInviteDataByChannelId = stateFromStoresObject6;
   let officialMessageColor;
   if (stateFromStores1 != null) {
     officialMessageColor = stateFromStores1.officialMessageColor;
   }
-  obj.officialMessageColor = officialMessageColor;
+  obj4.officialMessageColor = officialMessageColor;
   const merged = Object.assign(channel);
-  items82[1] = closure_65(tmp24Result, obj);
-  obj.children = items82;
-  return closure_66(tmp24Result, obj);
+  items82[1] = closure_65(stateFromStores(tmp2[93]), obj4);
+  obj3.children = items82;
+  return closure_66(tmp24Result, obj3);
 });
 forwardRefResult.displayName = "MessagesConnected";
 const size = fn(2);
