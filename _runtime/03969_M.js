@@ -1,6 +1,7 @@
 // _runtime/03969_M.js
-import 03968__ from "metro/03968__.js";
+import module_3968_mod from "metro/03968__.js";
 
+let module_3968 = module_3968_mod;
 if (!module_3968) {
   const obj = { default: module_3968 };
   let tmp3 = obj;

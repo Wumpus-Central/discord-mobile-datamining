@@ -10,6 +10,8 @@ import _mod731 from "metro/00731__.js";
 import applyClientOptions from "00735_applyClientOptions.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 function captureCheckIn(arg0, arg1) {
   const currentScope = _mod713.getCurrentScope();
   const client = _mod713.getClient();
@@ -34,8 +36,8 @@ let closure_4 = async function _flush(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -47,7 +49,7 @@ let closure_4 = async function _flush(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         const client = require("metro/00713__.js").getClient();
@@ -77,8 +79,8 @@ let closure_5 = async function _close(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -90,7 +92,7 @@ let closure_5 = async function _close(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         const client = require("metro/00713__.js").getClient();
@@ -134,11 +136,10 @@ export const captureMessage = function captureMessage(arg0, captureContext) {
   }
   let tmp2;
   if (typeof captureContext !== "string") {
-    let obj = { captureContext };
-    tmp2 = obj;
+    const obj2 = { captureContext };
+    tmp2 = obj2;
   }
-  obj = _mod713;
-  const currentScope = obj.getCurrentScope();
+  const currentScope = _mod713.getCurrentScope();
   return currentScope.captureMessage(arg0, tmp, tmp2);
 };
 export const captureSession = function captureSession() {
@@ -152,11 +153,11 @@ export const captureSession = function captureSession() {
     const currentScope = obj3.getCurrentScope();
     const tmp6 = currentScope.getSession() || isolationScope.getSession();
     if (tmp6) {
-      let tmpResult = closeSession;
-      tmpResult.closeSession(tmp6);
+      closeSession.closeSession(tmp6);
+      const tmpResult = closeSession;
     }
-    tmpResult = _mod713;
-    const isolationScope1 = tmpResult.getIsolationScope();
+    const isolationScope1 = _mod713.getIsolationScope();
+    const tmpResult3 = _mod713;
     const client = _mod713.getClient();
     const session = isolationScope1.getSession();
     let tmp9 = session;
@@ -167,7 +168,7 @@ export const captureSession = function captureSession() {
       client.captureSession(session);
     }
     isolationScope.setSession();
-    const tmpResult1 = _mod713;
+    const tmpResult4 = _mod713;
   } else {
     const client1 = obj3.getClient();
     const session1 = isolationScope.getSession();
@@ -195,11 +196,11 @@ export const endSession = function endSession() {
   const currentScope = _mod713.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
-    let tmpResult = closeSession;
-    tmpResult.closeSession(tmp3);
+    closeSession.closeSession(tmp3);
+    const tmpResult = closeSession;
   }
-  tmpResult = _mod713;
-  const isolationScope1 = tmpResult.getIsolationScope();
+  const isolationScope1 = _mod713.getIsolationScope();
+  const tmpResult3 = _mod713;
   const client = _mod713.getClient();
   const session = isolationScope1.getSession();
   let tmp6 = session;
@@ -210,7 +211,7 @@ export const endSession = function endSession() {
     client.captureSession(session);
   }
   isolationScope.setSession();
-  const tmpResult1 = _mod713;
+  const tmpResult4 = _mod713;
 };
 export const flush = function flush(arg0) {
   const self = this;
@@ -270,42 +271,41 @@ export const setUser = function setUser(arg0) {
   isolationScope.setUser(arg0);
 };
 export const startSession = function startSession(arg0) {
-  let obj = _mod713;
-  const isolationScope = obj.getIsolationScope();
+  const isolationScope = _mod713.getIsolationScope();
   const currentScope = _mod713.getCurrentScope();
   const userAgent = _mod686.GLOBAL_OBJ.navigator || {}.userAgent;
-  let tmpResult = closeSession;
   const tmp3 = _mod686.GLOBAL_OBJ.navigator || {};
-  obj = { user: currentScope.getUser() || isolationScope.getUser() };
+  const tmpResult = closeSession;
+  const tmp4 = currentScope.getUser() || isolationScope.getUser();
   let tmp5 = userAgent;
   if (userAgent) {
-    obj = { userAgent };
-    tmp5 = obj;
+    const obj4 = { userAgent };
+    tmp5 = obj4;
   }
   const merged = Object.assign(tmp5);
   const merged1 = Object.assign(arg0);
-  const session = tmpResult.makeSession(obj);
+  const session = tmpResult.makeSession({ user: currentScope.getUser() || isolationScope.getUser() });
   const session1 = isolationScope.getSession();
   let status;
   if (session1 != null) {
     status = session1.status;
   }
   if ("ok" === status) {
-    tmpResult = closeSession;
-    tmpResult.updateSession(session1, { status: "exited" });
+    closeSession.updateSession(session1, { status: "exited" });
+    const tmpResult7 = closeSession;
   }
-  const tmp4 = currentScope.getUser() || isolationScope.getUser();
+  const obj2 = { user: currentScope.getUser() || isolationScope.getUser() };
   const isolationScope1 = _mod713.getIsolationScope();
-  const tmpResult1 = _mod713;
+  const tmpResult8 = _mod713;
   const currentScope1 = _mod713.getCurrentScope();
   const tmp12 = currentScope1.getSession() || isolationScope1.getSession();
   if (tmp12) {
     closeSession.closeSession(tmp12);
-    const tmpResult3 = closeSession;
+    const tmpResult10 = closeSession;
   }
-  const tmpResult2 = _mod713;
+  const tmpResult9 = _mod713;
   const isolationScope2 = _mod713.getIsolationScope();
-  const tmpResult4 = _mod713;
+  const tmpResult11 = _mod713;
   const client = _mod713.getClient();
   const session2 = isolationScope2.getSession();
   let tmp15 = session2;

@@ -165,65 +165,65 @@ let closure_9 = {
     closure_2.stable[debugLogging] = arg0;
   },
 };
-let obj = { experiment: null, stable: null };
-obj = {};
-Object.defineProperty(obj, "synchronousScreenUpdatesEnabled", {
+const obj = { experiment: null, stable: null };
+const obj2 = {};
+Object.defineProperty(obj2, "synchronousScreenUpdatesEnabled", {
   get: () => closure_3.get(),
   set: (arg0) => {
     const result = closure_3.set(arg0);
   },
 });
-Object.defineProperty(obj, "synchronousHeaderConfigUpdatesEnabled", {
+Object.defineProperty(obj2, "synchronousHeaderConfigUpdatesEnabled", {
   get: () => closure_4.get(),
   set: (arg0) => {
     const result = closure_4.set(arg0);
   },
 });
-Object.defineProperty(obj, "synchronousHeaderSubviewUpdatesEnabled", {
+Object.defineProperty(obj2, "synchronousHeaderSubviewUpdatesEnabled", {
   get: () => closure_5.get(),
   set: (arg0) => {
     const result = closure_5.set(arg0);
   },
 });
-Object.defineProperty(obj, "androidLegacyTopInsetBehavior", {
+Object.defineProperty(obj2, "androidLegacyTopInsetBehavior", {
   get: () => closure_6.get(),
   set: (arg0) => {
     const result = closure_6.set(arg0);
   },
 });
-Object.defineProperty(obj, "androidResetScreenShadowStateOnOrientationChangeEnabled", {
+Object.defineProperty(obj2, "androidResetScreenShadowStateOnOrientationChangeEnabled", {
   get: () => closure_7.get(),
   set: (arg0) => {
     const result = closure_7.set(arg0);
   },
 });
-Object.defineProperty(obj, "iosOrientationInheritanceFixEnabled", {
+Object.defineProperty(obj2, "iosOrientationInheritanceFixEnabled", {
   get: () => closure_8.get(),
   set: (arg0) => {
     const result = closure_8.set(arg0);
   },
 });
-Object.defineProperty(obj, "iosPreventReattachmentOfDismissedScreens", {
+Object.defineProperty(obj2, "iosPreventReattachmentOfDismissedScreens", {
   get: () => true,
   set: (arg0) => {},
 });
-Object.defineProperty(obj, "iosPreventReattachmentOfDismissedModals", {
+Object.defineProperty(obj2, "iosPreventReattachmentOfDismissedModals", {
   get: () => true,
   set: (arg0) => {},
 });
-Object.defineProperty(obj, "ios26AllowInteractionsDuringTransition", {
+Object.defineProperty(obj2, "ios26AllowInteractionsDuringTransition", {
   get: () => true,
   set: (arg0) => {},
 });
-obj.experiment = obj;
-obj = {};
-Object.defineProperty(obj, "debugLogging", {
+obj.experiment = obj2;
+const obj3 = {};
+Object.defineProperty(obj3, "debugLogging", {
   get: () => closure_9.get(),
   set: (arg0) => {
     const result = closure_9.set(arg0);
   },
 });
-obj.stable = obj;
+obj.stable = obj3;
 
 export default obj;
 export const compatibilityFlags = {

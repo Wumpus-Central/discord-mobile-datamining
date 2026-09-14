@@ -50,7 +50,6 @@ const __initData = {
 fn = function n(userConfig, fn) {
   _require = userConfig;
   dependencyMap = fn;
-  require("01676__.js");
   fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
     if (obj) {
@@ -61,7 +60,7 @@ fn = function n(userConfig, fn) {
         return closure_0[item];
       });
     }
-    obj = {
+    const obj3 = {
       onFrame: userConfig(callback[2]).isValidRubberBandConfig(obj)
         ? (current, lastTimestamp) => {
             obj = rubberBandDecay;
@@ -93,19 +92,20 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "GUILD_SETTINGS_VANITY_URL_RESET",
-      reduceMotion: "GUILD_SETTINGS_VANITY_URL_SET",
+      startTimestamp: "text-xxs/medium",
+      reduceMotion: 10,
     };
     let num = obj.velocity;
     if (num == null) {
       num = 0;
     }
-    obj.velocity = num;
+    obj3.velocity = num;
     const obj2 = userConfig(callback[2]);
-    obj.reduceMotion = userConfig(callback[1]).getReduceMotionForAnimation(obj.reduceMotion);
-    return obj;
+    obj3.reduceMotion = userConfig(callback[1]).getReduceMotionForAnimation(obj.reduceMotion);
+    return obj3;
   };
-  let obj = {
+  let obj = require("01676__.js");
+  fn.__closure = {
     userConfig,
     isValidRubberBandConfig: require("01712__.js").isValidRubberBandConfig,
     rubberBandDecay: require("rubberBandDecay").rubberBandDecay,
@@ -114,7 +114,6 @@ fn = function n(userConfig, fn) {
     callback: fn,
     getReduceMotionForAnimation: require("01676__.js").getReduceMotionForAnimation,
   };
-  fn.__closure = obj;
   fn.__workletHash = 17099614658252;
   fn.__initData = __initData;
   return obj.defineAnimation(0, fn);

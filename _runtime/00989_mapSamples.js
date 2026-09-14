@@ -45,44 +45,45 @@ function mapSamples(samples) {
         let arr = items.push(obj);
         continue;
       }
-      obj = { samples: items, hermesStacks: set1, jsThreads: set };
-      return obj;
+      let obj2 = { samples: items, hermesStacks: set1, jsThreads: set };
+      return obj2;
     }
     NumberResult = Number(first.ts);
   } else {
     const debug = _mod682.debug;
     debug.warn("[Profiling] No samples found in profile.");
-    const obj1 = { samples: items, hermesStacks: set1, jsThreads: set };
-    return obj1;
+    const obj3 = { samples: items, hermesStacks: set1, jsThreads: set };
+    return obj3;
   }
 }
 function parseHermesJSStackFrame(category) {
   if ("JavaScript" !== category.category) {
     if ("[root]" === category.name) {
-      let obj = { function: category.name, in_app: false };
+      const obj2 = { function: category.name, in_app: false };
+      let obj3 = obj2;
     } else {
-      obj = { function: category.name };
+      obj3 = { function: category.name };
     }
-    return obj;
+    return obj3;
   } else {
     if (undefined !== category.funcVirtAddr) {
       if (undefined !== category.offset) {
-        const obj1 = { function: category.name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: 1, colno: null };
+        const obj4 = { function: category.name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: 1, colno: null };
         const _Number3 = Number;
         const _Number4 = Number;
-        obj1.colno = Number(category.funcVirtAddr) + Number(category.offset) + 1;
-        return obj1;
+        obj4.colno = Number(category.funcVirtAddr) + Number(category.offset) + 1;
+        return obj4;
       }
     }
-    let name = category.name;
-    const index = name.indexOf("(");
+    const name1 = category.name;
+    const index = name1.indexOf("(");
     if (-1 !== index) {
-      name = category.name.substring(0, index) || undefined;
+      let name = category.name.substring(0, index) || undefined;
       const tmp2 = category.name.substring(0, index) || undefined;
     } else {
       name = category.name;
     }
-    obj = { function: name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: null, colno: null };
+    const obj = { function: name, abs_path: _mod985.DEFAULT_BUNDLE_NAME, lineno: null, colno: null };
     let NumberResult1;
     if (undefined !== category.line) {
       const _Number = Number;
@@ -163,7 +164,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
             tmp3 = parent;
           } while (undefined !== parent);
         }
-        arr = stacks.push(items1);
+        let arr2 = stacks.push(items1);
         continue;
       }
       return { stacks, hermesStackToSentryStackMap };
@@ -186,17 +187,16 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       }
       continue;
     }
-    let obj = {};
+    const obj = {};
     for (const item10034 of jsThreads) {
       obj[item10034] = { name: "JavaScriptThread", priority: 1 };
       continue;
     }
-    obj = { samples, frames: tmp22.frames, stacks: tmp23.stacks, thread_metadata: null, active_thread_id: null };
-    obj.thread_metadata = obj;
+    const obj2 = { samples, frames: tmp22.frames, stacks: tmp23.stacks, thread_metadata: obj, active_thread_id: null };
     let _Object = Object;
     const tmp21 = mapSamples(hermesProfile.samples);
-    obj.active_thread_id = Object.keys(obj)[0] || "0";
-    return obj;
+    obj2.active_thread_id = Object.keys(obj)[0] || "0";
+    return obj2;
   }
 };
 export { mapSamples };

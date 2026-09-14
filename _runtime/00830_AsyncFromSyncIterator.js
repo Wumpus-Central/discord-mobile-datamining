@@ -102,21 +102,21 @@ function processChatCompletionToolCalls(tool_calls, chatCompletionToolCalls) {
           let tmp10 = chatCompletionToolCalls[tmp3];
           let _arguments = tmp2.function.arguments;
           if (_arguments) {
-            let _function;
+            let _function1;
             if (tmp10 != null) {
-              _function = tmp10.function;
+              _function1 = tmp10.function;
             }
-            _arguments = _function;
+            _arguments = _function1;
           }
           if (_arguments) {
-            _function = tmp10.function;
+            let _function = tmp10.function;
             _function.arguments = _function.arguments + tmp2.function.arguments;
           }
         } else {
           let obj = {};
           let merged = Object.assign(nextResult);
-          obj = { name: tmp2.function.name, arguments: tmp2.function.arguments || "" };
-          obj.function = obj;
+          let obj2 = { name: tmp2.function.name, arguments: tmp2.function.arguments || "" };
+          obj.function = obj2;
           chatCompletionToolCalls[tmp3] = obj;
         }
       }
@@ -171,7 +171,7 @@ function processChatCompletionChunk(id, responseId, arg2) {
     }
     if (item10020.finish_reason) {
       let finishReasons = arg1.finishReasons;
-      arr = finishReasons.push(item10020.finish_reason);
+      let arr2 = finishReasons.push(item10020.finish_reason);
     }
     continue;
   }
@@ -181,10 +181,10 @@ function processResponsesApiEvent(type, responsesApiToolCalls, arg2, setStatus) 
     if (typeof type === "object") {
       const _Error = Error;
       if (type instanceof Error) {
-        let obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+        const obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
         setStatus.setStatus(obj);
-        obj = { mechanism: { handled: false, type: "auto.ai.openai.stream-response" } };
-        captureCheckIn.captureException(type, obj);
+        const obj3 = { mechanism: { handled: false, type: "auto.ai.openai.stream-response" } };
+        captureCheckIn.captureException(type, obj3);
       } else if ("type" in type) {
         const RESPONSE_EVENT_TYPES = INSTRUMENTED_METHODS.RESPONSE_EVENT_TYPES;
         if (RESPONSE_EVENT_TYPES.includes(type.type)) {
@@ -266,8 +266,8 @@ let closure_8 = async function _instrumentStream(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -281,8 +281,8 @@ let closure_8 = async function _instrumentStream(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c22 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_17 = tmp4;
               closure_18 = tmp15;
@@ -293,7 +293,7 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_7 = undefined;
               let value4;
               closure_146_9 = undefined;
-              let obj1 = {
+              const obj5 = {
                 eventTypes: [],
                 responseTexts: [],
                 finishReasons: [],
@@ -302,11 +302,11 @@ let closure_8 = async function _instrumentStream(arg0) {
                 responseTimestamp: 0,
                 promptTokens: "r",
                 completionTokens: "WireType",
-                totalTokens: "assign",
+                totalTokens: "bottom",
                 chatCompletionToolCalls: {},
                 responsesApiToolCalls: [],
               };
-              closure_146_2 = obj1;
+              closure_146_2 = obj5;
               closure_146_4 = false;
               closure_146_5 = false;
               c19 = 4;
@@ -329,12 +329,11 @@ let closure_8 = async function _instrumentStream(arg0) {
                     let tmp5 = arg0[str];
                     if (null != tmp5) {
                       let call = tmp5.call;
-                      let tmp10 = closure_1_4;
                       let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
                       let tmp12 = new.target;
                       let tmp13 = new.target;
-                      tmp10 = new tmp10(tmp11);
-                      return tmp10;
+                      let tmp102 = new closure_1_4(tmp11);
+                      return tmp102;
                     }
                   }
                   num = num - 1;
@@ -357,8 +356,8 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_7 = iter;
               c21 = 5;
               c22 = 1;
-              const obj2 = { value: _awaitAsyncGenerator(iter.next()), done: false };
-              return obj2;
+              const obj6 = { value: _awaitAsyncGenerator(iter.next()), done: false };
+              return obj6;
             }
             break;
           case 1:
@@ -377,26 +376,26 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_2.completionTokens,
               closure_146_2.totalTokens,
             );
-            const obj3 = {};
-            obj3[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-            closure_146_0.setAttributes(obj3);
+            const obj7 = {};
+            obj7[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+            closure_146_0.setAttributes(obj7);
             if (closure_146_2.finishReasons.length) {
-              const obj4 = {};
+              const obj10 = {};
               const _JSON17 = JSON;
-              obj4[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+              obj10[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                 closure_146_2.finishReasons,
               );
-              closure_146_0.setAttributes(obj4);
+              closure_146_0.setAttributes(obj10);
             }
             let length9 = closure_146_1;
             if (closure_146_1) {
               length9 = closure_146_2.responseTexts.length;
             }
             if (length9) {
-              const obj5 = {};
+              const obj11 = {};
               const responseTexts9 = closure_146_2.responseTexts;
-              obj5[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
-              closure_146_0.setAttributes(obj5);
+              obj11[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+              closure_146_0.setAttributes(obj11);
             }
             closure_12 = 0;
             const _Object9 = Object;
@@ -405,11 +404,11 @@ let closure_8 = async function _instrumentStream(arg0) {
             closure_12 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_12);
             closure_146_9 = items;
             if (closure_146_9.length > 0) {
-              const obj6 = {};
+              const obj12 = {};
               const _JSON18 = JSON;
-              obj6[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+              obj12[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                 JSON.stringify(closure_146_9);
-              closure_146_0.setAttributes(obj6);
+              closure_146_0.setAttributes(obj12);
             }
             closure_146_0.end();
             throw closure_20;
@@ -430,8 +429,8 @@ let closure_8 = async function _instrumentStream(arg0) {
             } else {
               c21 = 16;
               c22 = 1;
-              let obj7 = { value: closure_145_2(closure_146_7.return()), done: false };
-              return obj7;
+              const obj13 = { value: closure_145_2(closure_146_7.return()), done: false };
+              return obj13;
             }
             break;
           case 3:
@@ -454,48 +453,48 @@ let closure_8 = async function _instrumentStream(arg0) {
             if (tmp500) {
               c21 = 15;
               c22 = 1;
-              let obj8 = { value: closure_145_2(closure_146_7.return()), done: false };
-              return obj8;
+              const obj14 = { value: closure_145_2(closure_146_7.return()), done: false };
+              return obj14;
             } else {
               c19 = 1;
               if (closure_146_5) {
                 throw closure_146_3;
               } else {
                 c19 = 0;
-                let obj55 = closure_145_0(closure_145_1[5]);
-                const result2 = obj55.setCommonResponseAttributes(
+                const obj56 = closure_145_0(closure_145_1[5]);
+                const result2 = obj56.setCommonResponseAttributes(
                   closure_146_0,
                   closure_146_2.responseId,
                   closure_146_2.responseModel,
                   closure_146_2.responseTimestamp,
                 );
-                let obj56 = closure_145_0(closure_145_1[5]);
-                const result3 = obj56.setTokenUsageAttributes(
+                const obj57 = closure_145_0(closure_145_1[5]);
+                const result3 = obj57.setTokenUsageAttributes(
                   closure_146_0,
                   closure_146_2.promptTokens,
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                const obj9 = {};
-                obj9[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj9);
+                const obj15 = {};
+                obj15[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj15);
                 if (closure_146_2.finishReasons.length) {
-                  const obj10 = {};
+                  const obj18 = {};
                   const _JSON15 = JSON;
-                  obj10[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj18[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj10);
+                  closure_146_0.setAttributes(obj18);
                 }
                 let length8 = closure_146_1;
                 if (closure_146_1) {
                   length8 = closure_146_2.responseTexts.length;
                 }
                 if (length8) {
-                  const obj11 = {};
+                  const obj19 = {};
                   const responseTexts8 = closure_146_2.responseTexts;
-                  obj11[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
-                  closure_146_0.setAttributes(obj11);
+                  obj19[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
+                  closure_146_0.setAttributes(obj19);
                 }
                 closure_11 = 0;
                 const _Object8 = Object;
@@ -507,11 +506,11 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_11 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_11);
                 closure_146_9 = items1;
                 if (closure_146_9.length > 0) {
-                  const obj12 = {};
+                  const obj20 = {};
                   const _JSON16 = JSON;
-                  obj12[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj20[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj12);
+                  closure_146_0.setAttributes(obj20);
                 }
                 closure_146_0.end();
                 c22 = 3;
@@ -534,48 +533,48 @@ let closure_8 = async function _instrumentStream(arg0) {
                 if (tmp430) {
                   c21 = 8;
                   c22 = 1;
-                  const obj13 = { value: closure_145_2(closure_146_7.return()), done: false };
-                  return obj13;
+                  const obj21 = { value: closure_145_2(closure_146_7.return()), done: false };
+                  return obj21;
                 } else {
                   c19 = 1;
                   if (closure_146_5) {
                     throw closure_146_3;
                   } else {
                     c19 = 0;
-                    let obj47 = closure_145_0(closure_145_1[5]);
-                    const result4 = obj47.setCommonResponseAttributes(
+                    const obj48 = closure_145_0(closure_145_1[5]);
+                    const result4 = obj48.setCommonResponseAttributes(
                       closure_146_0,
                       closure_146_2.responseId,
                       closure_146_2.responseModel,
                       closure_146_2.responseTimestamp,
                     );
-                    let obj48 = closure_145_0(closure_145_1[5]);
-                    const result5 = obj48.setTokenUsageAttributes(
+                    const obj49 = closure_145_0(closure_145_1[5]);
+                    const result5 = obj49.setTokenUsageAttributes(
                       closure_146_0,
                       closure_146_2.promptTokens,
                       closure_146_2.completionTokens,
                       closure_146_2.totalTokens,
                     );
-                    const obj14 = {};
-                    obj14[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                    closure_146_0.setAttributes(obj14);
+                    const obj22 = {};
+                    obj22[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_146_0.setAttributes(obj22);
                     if (closure_146_2.finishReasons.length) {
-                      let obj15 = {};
+                      const obj23 = {};
                       const _JSON13 = JSON;
-                      obj15[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                      obj23[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                         closure_146_2.finishReasons,
                       );
-                      closure_146_0.setAttributes(obj15);
+                      closure_146_0.setAttributes(obj23);
                     }
                     let length7 = closure_146_1;
                     if (closure_146_1) {
                       length7 = closure_146_2.responseTexts.length;
                     }
                     if (length7) {
-                      let obj16 = {};
+                      const obj26 = {};
                       const responseTexts7 = closure_146_2.responseTexts;
-                      obj16[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
-                      closure_146_0.setAttributes(obj16);
+                      obj26[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
+                      closure_146_0.setAttributes(obj26);
                     }
                     closure_4 = 0;
                     const _Object7 = Object;
@@ -587,16 +586,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                     closure_4 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_4);
                     closure_146_9 = items2;
                     if (closure_146_9.length > 0) {
-                      const obj17 = {};
+                      const obj27 = {};
                       const _JSON14 = JSON;
-                      obj17[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                      obj27[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                         JSON.stringify(closure_146_9);
-                      closure_146_0.setAttributes(obj17);
+                      closure_146_0.setAttributes(obj27);
                     }
                     closure_146_0.end();
                     c22 = 3;
-                    const obj18 = { value: value3, done: true };
-                    return obj18;
+                    const obj28 = { value: value3, done: true };
+                    return obj28;
                   }
                 }
               } else {
@@ -607,17 +606,17 @@ let closure_8 = async function _instrumentStream(arg0) {
                   c19 = 2;
                 } else {
                   value4 = closure_146_6.value;
-                  let obj45 = closure_145_0(closure_145_1[5]);
-                  if (obj45.isChatCompletionChunk(value4)) {
+                  if (obj46.isChatCompletionChunk(value4)) {
                     closure_145_6(value4, closure_146_2, closure_146_1);
                   } else {
-                    let obj46 = closure_145_0(closure_145_1[5]);
-                    if (obj46.isResponsesApiStreamEvent(value4)) {
+                    if (obj47.isResponsesApiStreamEvent(value4)) {
                       closure_145_7(value4, closure_146_2, closure_146_1, closure_146_0);
                     }
+                    obj47 = closure_145_0(closure_145_1[5]);
                   }
                   c21 = 11;
                   c22 = 1;
+                  obj46 = closure_145_0(closure_145_1[5]);
                 }
               }
             }
@@ -637,48 +636,48 @@ let closure_8 = async function _instrumentStream(arg0) {
                 if (tmp337) {
                   c21 = 10;
                   c22 = 1;
-                  const obj19 = { value: closure_145_2(closure_146_7.return()), done: false };
-                  return obj19;
+                  const obj29 = { value: closure_145_2(closure_146_7.return()), done: false };
+                  return obj29;
                 } else {
                   c19 = 1;
                   if (closure_146_5) {
                     throw closure_146_3;
                   } else {
                     c19 = 0;
-                    let obj37 = closure_145_0(closure_145_1[5]);
-                    const result6 = obj37.setCommonResponseAttributes(
+                    const obj38 = closure_145_0(closure_145_1[5]);
+                    const result6 = obj38.setCommonResponseAttributes(
                       closure_146_0,
                       closure_146_2.responseId,
                       closure_146_2.responseModel,
                       closure_146_2.responseTimestamp,
                     );
-                    let obj38 = closure_145_0(closure_145_1[5]);
-                    const result7 = obj38.setTokenUsageAttributes(
+                    const obj39 = closure_145_0(closure_145_1[5]);
+                    const result7 = obj39.setTokenUsageAttributes(
                       closure_146_0,
                       closure_146_2.promptTokens,
                       closure_146_2.completionTokens,
                       closure_146_2.totalTokens,
                     );
-                    const obj20 = {};
-                    obj20[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                    closure_146_0.setAttributes(obj20);
+                    const obj30 = {};
+                    obj30[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_146_0.setAttributes(obj30);
                     if (closure_146_2.finishReasons.length) {
-                      const obj21 = {};
+                      const obj33 = {};
                       const _JSON11 = JSON;
-                      obj21[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                      obj33[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                         closure_146_2.finishReasons,
                       );
-                      closure_146_0.setAttributes(obj21);
+                      closure_146_0.setAttributes(obj33);
                     }
                     let length6 = closure_146_1;
                     if (closure_146_1) {
                       length6 = closure_146_2.responseTexts.length;
                     }
                     if (length6) {
-                      const obj22 = {};
+                      const obj34 = {};
                       const responseTexts6 = closure_146_2.responseTexts;
-                      obj22[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
-                      closure_146_0.setAttributes(obj22);
+                      obj34[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                      closure_146_0.setAttributes(obj34);
                     }
                     closure_6 = 0;
                     const _Object6 = Object;
@@ -690,16 +689,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                     closure_6 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_6);
                     closure_146_9 = items3;
                     if (closure_146_9.length > 0) {
-                      let obj23 = {};
+                      const obj35 = {};
                       const _JSON12 = JSON;
-                      obj23[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                      obj35[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                         JSON.stringify(closure_146_9);
-                      closure_146_0.setAttributes(obj23);
+                      closure_146_0.setAttributes(obj35);
                     }
                     closure_146_0.end();
                     c22 = 3;
-                    let obj24 = { value: value2, done: true };
-                    return obj24;
+                    const obj36 = { value: value2, done: true };
+                    return obj36;
                   }
                 }
               } else {
@@ -727,40 +726,40 @@ let closure_8 = async function _instrumentStream(arg0) {
                 throw closure_146_3;
               } else {
                 c19 = 0;
-                let obj30 = closure_145_0(closure_145_1[5]);
-                const result8 = obj30.setCommonResponseAttributes(
+                const obj31 = closure_145_0(closure_145_1[5]);
+                const result8 = obj31.setCommonResponseAttributes(
                   closure_146_0,
                   closure_146_2.responseId,
                   closure_146_2.responseModel,
                   closure_146_2.responseTimestamp,
                 );
-                let obj31 = closure_145_0(closure_145_1[5]);
-                const result9 = obj31.setTokenUsageAttributes(
+                const obj32 = closure_145_0(closure_145_1[5]);
+                const result9 = obj32.setTokenUsageAttributes(
                   closure_146_0,
                   closure_146_2.promptTokens,
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                const obj25 = {};
-                obj25[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj25);
+                const obj37 = {};
+                obj37[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj37);
                 if (closure_146_2.finishReasons.length) {
-                  const obj26 = {};
+                  const obj40 = {};
                   const _JSON9 = JSON;
-                  obj26[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj40[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj26);
+                  closure_146_0.setAttributes(obj40);
                 }
                 let length5 = closure_146_1;
                 if (closure_146_1) {
                   length5 = closure_146_2.responseTexts.length;
                 }
                 if (length5) {
-                  const obj27 = {};
+                  const obj41 = {};
                   const responseTexts5 = closure_146_2.responseTexts;
-                  obj27[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
-                  closure_146_0.setAttributes(obj27);
+                  obj41[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                  closure_146_0.setAttributes(obj41);
                 }
                 closure_3 = 0;
                 const _Object5 = Object;
@@ -769,16 +768,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_3 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_3);
                 closure_146_9 = items4;
                 if (closure_146_9.length > 0) {
-                  const obj28 = {};
+                  const obj42 = {};
                   const _JSON10 = JSON;
-                  obj28[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj42[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj28);
+                  closure_146_0.setAttributes(obj42);
                 }
                 closure_146_0.end();
                 c22 = 3;
-                const obj29 = { value, done: true };
-                return obj29;
+                const obj43 = { value, done: true };
+                return obj43;
               }
             }
             break;
@@ -800,40 +799,40 @@ let closure_8 = async function _instrumentStream(arg0) {
                 throw closure_146_3;
               } else {
                 c19 = 0;
-                obj23 = closure_145_0(closure_145_1[5]);
-                const result10 = obj23.setCommonResponseAttributes(
+                const obj24 = closure_145_0(closure_145_1[5]);
+                const result10 = obj24.setCommonResponseAttributes(
                   closure_146_0,
                   closure_146_2.responseId,
                   closure_146_2.responseModel,
                   closure_146_2.responseTimestamp,
                 );
-                obj24 = closure_145_0(closure_145_1[5]);
-                const result11 = obj24.setTokenUsageAttributes(
+                const obj25 = closure_145_0(closure_145_1[5]);
+                const result11 = obj25.setTokenUsageAttributes(
                   closure_146_0,
                   closure_146_2.promptTokens,
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                obj30 = {};
-                obj30[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj30);
+                const obj44 = {};
+                obj44[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj44);
                 if (closure_146_2.finishReasons.length) {
-                  obj31 = {};
+                  const obj45 = {};
                   const _JSON7 = JSON;
-                  obj31[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj45[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj31);
+                  closure_146_0.setAttributes(obj45);
                 }
                 let length4 = closure_146_1;
                 if (closure_146_1) {
                   length4 = closure_146_2.responseTexts.length;
                 }
                 if (length4) {
-                  const obj32 = {};
+                  const obj50 = {};
                   const responseTexts4 = closure_146_2.responseTexts;
-                  obj32[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
-                  closure_146_0.setAttributes(obj32);
+                  obj50[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                  closure_146_0.setAttributes(obj50);
                 }
                 closure_5 = 0;
                 const _Object4 = Object;
@@ -842,16 +841,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_5 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_5);
                 closure_146_9 = items5;
                 if (closure_146_9.length > 0) {
-                  const obj33 = {};
+                  const obj51 = {};
                   const _JSON8 = JSON;
-                  obj33[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj51[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj33);
+                  closure_146_0.setAttributes(obj51);
                 }
                 closure_146_0.end();
                 c22 = 3;
-                const obj34 = { value, done: true };
-                return obj34;
+                const obj52 = { value, done: true };
+                return obj52;
               }
             }
             break;
@@ -868,48 +867,48 @@ let closure_8 = async function _instrumentStream(arg0) {
               if (tmp145) {
                 c21 = 13;
                 c22 = 1;
-                const obj35 = { value: closure_145_2(closure_146_7.return()), done: false };
-                return obj35;
+                const obj53 = { value: closure_145_2(closure_146_7.return()), done: false };
+                return obj53;
               } else {
                 c19 = 1;
                 if (closure_146_5) {
                   throw closure_146_3;
                 } else {
                   c19 = 0;
-                  obj15 = closure_145_0(closure_145_1[5]);
-                  const result12 = obj15.setCommonResponseAttributes(
+                  const obj16 = closure_145_0(closure_145_1[5]);
+                  const result12 = obj16.setCommonResponseAttributes(
                     closure_146_0,
                     closure_146_2.responseId,
                     closure_146_2.responseModel,
                     closure_146_2.responseTimestamp,
                   );
-                  obj16 = closure_145_0(closure_145_1[5]);
-                  const result13 = obj16.setTokenUsageAttributes(
+                  const obj17 = closure_145_0(closure_145_1[5]);
+                  const result13 = obj17.setTokenUsageAttributes(
                     closure_146_0,
                     closure_146_2.promptTokens,
                     closure_146_2.completionTokens,
                     closure_146_2.totalTokens,
                   );
-                  const obj36 = {};
-                  obj36[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  closure_146_0.setAttributes(obj36);
+                  const obj54 = {};
+                  obj54[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                  closure_146_0.setAttributes(obj54);
                   if (closure_146_2.finishReasons.length) {
-                    obj37 = {};
+                    const obj55 = {};
                     const _JSON5 = JSON;
-                    obj37[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    obj55[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                       closure_146_2.finishReasons,
                     );
-                    closure_146_0.setAttributes(obj37);
+                    closure_146_0.setAttributes(obj55);
                   }
                   let length3 = closure_146_1;
                   if (closure_146_1) {
                     length3 = closure_146_2.responseTexts.length;
                   }
                   if (length3) {
-                    obj38 = {};
+                    const obj58 = {};
                     const responseTexts3 = closure_146_2.responseTexts;
-                    obj38[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
-                    closure_146_0.setAttributes(obj38);
+                    obj58[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
+                    closure_146_0.setAttributes(obj58);
                   }
                   closure_8 = 0;
                   const _Object3 = Object;
@@ -921,24 +920,24 @@ let closure_8 = async function _instrumentStream(arg0) {
                   closure_8 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_8);
                   closure_146_9 = items6;
                   if (closure_146_9.length > 0) {
-                    const obj39 = {};
+                    const obj59 = {};
                     const _JSON6 = JSON;
-                    obj39[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                    obj59[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                       JSON.stringify(closure_146_9);
-                    closure_146_0.setAttributes(obj39);
+                    closure_146_0.setAttributes(obj59);
                   }
                   closure_146_0.end();
                   c22 = 3;
-                  const obj40 = { value, done: true };
-                  return obj40;
+                  const obj60 = { value, done: true };
+                  return obj60;
                 }
               }
             } else {
               closure_146_4 = false;
               c21 = 6;
               c22 = 1;
-              const obj41 = { value: closure_145_2(closure_146_7.next()), done: false };
-              return obj41;
+              const obj61 = { value: closure_145_2(closure_146_7.next()), done: false };
+              return obj61;
             }
             break;
           case 12:
@@ -959,40 +958,40 @@ let closure_8 = async function _instrumentStream(arg0) {
                 throw closure_146_3;
               } else {
                 c19 = 0;
-                obj7 = closure_145_0(closure_145_1[5]);
-                const result14 = obj7.setCommonResponseAttributes(
+                const obj8 = closure_145_0(closure_145_1[5]);
+                const result14 = obj8.setCommonResponseAttributes(
                   closure_146_0,
                   closure_146_2.responseId,
                   closure_146_2.responseModel,
                   closure_146_2.responseTimestamp,
                 );
-                obj8 = closure_145_0(closure_145_1[5]);
-                const result15 = obj8.setTokenUsageAttributes(
+                const obj9 = closure_145_0(closure_145_1[5]);
+                const result15 = obj9.setTokenUsageAttributes(
                   closure_146_0,
                   closure_146_2.promptTokens,
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                const obj42 = {};
-                obj42[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj42);
+                const obj62 = {};
+                obj62[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj62);
                 if (closure_146_2.finishReasons.length) {
-                  const obj43 = {};
+                  const obj63 = {};
                   const _JSON3 = JSON;
-                  obj43[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj63[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj43);
+                  closure_146_0.setAttributes(obj63);
                 }
                 let length2 = closure_146_1;
                 if (closure_146_1) {
                   length2 = closure_146_2.responseTexts.length;
                 }
                 if (length2) {
-                  const obj44 = {};
+                  const obj66 = {};
                   const responseTexts2 = closure_146_2.responseTexts;
-                  obj44[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
-                  closure_146_0.setAttributes(obj44);
+                  obj66[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
+                  closure_146_0.setAttributes(obj66);
                 }
                 closure_7 = 0;
                 const _Object2 = Object;
@@ -1001,16 +1000,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_7 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_7);
                 closure_146_9 = items7;
                 if (closure_146_9.length > 0) {
-                  obj45 = {};
+                  const obj67 = {};
                   const _JSON4 = JSON;
-                  obj45[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj67[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj45);
+                  closure_146_0.setAttributes(obj67);
                 }
                 closure_146_0.end();
                 c22 = 3;
-                obj46 = { value, done: true };
-                return obj46;
+                const obj68 = { value, done: true };
+                return obj68;
               }
             }
             break;
@@ -1032,40 +1031,40 @@ let closure_8 = async function _instrumentStream(arg0) {
                 throw closure_146_3;
               } else {
                 c19 = 0;
-                obj = closure_145_0(closure_145_1[5]);
+                const obj = closure_145_0(closure_145_1[5]);
                 const result16 = obj.setCommonResponseAttributes(
                   closure_146_0,
                   closure_146_2.responseId,
                   closure_146_2.responseModel,
                   closure_146_2.responseTimestamp,
                 );
-                obj1 = closure_145_0(closure_145_1[5]);
-                const result17 = obj1.setTokenUsageAttributes(
+                const obj2 = closure_145_0(closure_145_1[5]);
+                const result17 = obj2.setTokenUsageAttributes(
                   closure_146_0,
                   closure_146_2.promptTokens,
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                obj47 = {};
-                obj47[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj47);
+                const obj69 = {};
+                obj69[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj69);
                 if (closure_146_2.finishReasons.length) {
-                  obj48 = {};
+                  const obj70 = {};
                   const _JSON = JSON;
-                  obj48[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj70[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj48);
+                  closure_146_0.setAttributes(obj70);
                 }
                 let length = closure_146_1;
                 if (closure_146_1) {
                   length = closure_146_2.responseTexts.length;
                 }
                 if (length) {
-                  const obj49 = {};
+                  const obj71 = {};
                   const responseTexts = closure_146_2.responseTexts;
-                  obj49[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
-                  closure_146_0.setAttributes(obj49);
+                  obj71[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+                  closure_146_0.setAttributes(obj71);
                 }
                 closure_9 = 0;
                 const _Object = Object;
@@ -1074,16 +1073,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_9 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_9);
                 closure_146_9 = items8;
                 if (closure_146_9.length > 0) {
-                  const obj50 = {};
+                  const obj74 = {};
                   const _JSON2 = JSON;
-                  obj50[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj74[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj50);
+                  closure_146_0.setAttributes(obj74);
                 }
                 closure_146_0.end();
                 c22 = 3;
-                const obj51 = { value, done: true };
-                return obj51;
+                const obj75 = { value, done: true };
+                return obj75;
               }
             }
             break;
@@ -1111,26 +1110,26 @@ let closure_8 = async function _instrumentStream(arg0) {
                   closure_146_2.completionTokens,
                   closure_146_2.totalTokens,
                 );
-                const obj52 = {};
-                obj52[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_146_0.setAttributes(obj52);
+                const obj76 = {};
+                obj76[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_146_0.setAttributes(obj76);
                 if (closure_146_2.finishReasons.length) {
-                  const obj53 = {};
+                  const obj77 = {};
                   const _JSON19 = JSON;
-                  obj53[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj77[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_146_2.finishReasons,
                   );
-                  closure_146_0.setAttributes(obj53);
+                  closure_146_0.setAttributes(obj77);
                 }
                 let length10 = closure_146_1;
                 if (closure_146_1) {
                   length10 = closure_146_2.responseTexts.length;
                 }
                 if (length10) {
-                  const obj54 = {};
+                  const obj78 = {};
                   const responseTexts10 = closure_146_2.responseTexts;
-                  obj54[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
-                  closure_146_0.setAttributes(obj54);
+                  obj78[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
+                  closure_146_0.setAttributes(obj78);
                 }
                 closure_10 = 0;
                 const _Object10 = Object;
@@ -1142,16 +1141,16 @@ let closure_8 = async function _instrumentStream(arg0) {
                 closure_10 = HermesBuiltin.arraySpread(closure_146_2.responsesApiToolCalls, closure_10);
                 closure_146_9 = items9;
                 if (closure_146_9.length > 0) {
-                  obj55 = {};
+                  const obj79 = {};
                   const _JSON20 = JSON;
-                  obj55[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                  obj79[closure_145_0(closure_145_1[6]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
                     JSON.stringify(closure_146_9);
-                  closure_146_0.setAttributes(obj55);
+                  closure_146_0.setAttributes(obj79);
                 }
                 closure_146_0.end();
                 c22 = 3;
-                obj56 = { value, done: true };
-                return obj56;
+                const obj80 = { value, done: true };
+                return obj80;
               }
             }
         }

@@ -6,7 +6,7 @@ const dependencyMap = arg6;
 
 export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2, length) {
   const sum = arg2 + 3;
-  let obj = { item: { dataReferenceIndex: 2, extentCount: 2, extent: {} } };
+  const obj = { item: { dataReferenceIndex: 2, extentCount: 2, extent: {} } };
   if (uint8 < 2) {
     obj.itemCount = 2;
     obj.item.itemId = 2;
@@ -20,20 +20,20 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
     num2 = 0;
   }
   obj.item.constructionMethod = num2;
-  obj = { offsetSize: sum, lengthSize: sum, baseOffsetSize: null, indexSize: null };
+  const obj2 = { offsetSize: sum, lengthSize: sum, baseOffsetSize: null, indexSize: null };
   const sum1 = sum + 1;
-  obj.baseOffsetSize = sum1;
-  obj.indexSize = sum1;
-  obj.itemCount = sum + 2;
-  obj.items = obj.itemCount + obj.itemCount;
-  obj.item = { itemId: 0 };
-  obj.item.constructionMethod = obj.item.itemId + obj.item.itemId;
-  obj.item.dataReferenceIndex = obj.item.constructionMethod + obj.item.constructionMethod;
-  const tmp4 = getUint8.getUint8(obj.offsetSize) >> 4;
+  obj2.baseOffsetSize = sum1;
+  obj2.indexSize = sum1;
+  obj2.itemCount = sum + 2;
+  obj2.items = obj2.itemCount + obj.itemCount;
+  obj2.item = { itemId: 0 };
+  obj2.item.constructionMethod = obj2.item.itemId + obj.item.itemId;
+  obj2.item.dataReferenceIndex = obj2.item.constructionMethod + obj.item.constructionMethod;
+  const tmp4 = getUint8.getUint8(obj2.offsetSize) >> 4;
   obj.item.extent.extentOffset = tmp4;
-  const tmp5 = 15 & getUint8.getUint8(obj.lengthSize);
+  const tmp5 = 15 & getUint8.getUint8(obj2.lengthSize);
   obj.item.extent.extentLength = tmp5;
-  obj.item.baseOffset = getUint8.getUint8(obj.baseOffsetSize) >> 4;
+  obj.item.baseOffset = getUint8.getUint8(obj2.baseOffsetSize) >> 4;
   if (1 === uint8) {
     const tmp7 = 15 & getUint8.getUint8(tmp6);
   }
@@ -42,34 +42,35 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
     num3 = tmp7;
   }
   obj.item.extent.extentIndex = num3;
-  const itemCount = obj.itemCount;
+  const itemCount = obj2.itemCount;
   if (uint8 < 2) {
     let uint16 = getUint8.getUint16(itemCount);
   } else if (2 === uint8) {
     uint16 = getUint8.getUint32(itemCount);
   }
   if (undefined === uint16) {
-    let items = [];
+    let items1 = [];
   } else {
-    const items1 = [];
+    const items2 = [];
+    let items = obj2.items;
     let num9 = 0;
-    items = items1;
+    items1 = items2;
     if (0 < uint16) {
       while (true) {
-        obj = { extents: [] };
+        let obj3 = { extents: [] };
         if (uint8 < 2) {
           let uint161 = getUint8.getUint16(items);
         } else if (2 === uint8) {
           uint161 = getUint8.getUint32(items);
         }
-        obj.itemId = uint161;
+        obj3.itemId = uint161;
         let sum2 = items + obj.item.itemId;
         if (tmp2) {
           let tmp13 = 15 & getUint8.getUint16(sum2);
         }
-        obj.constructionMethod = tmp13;
+        obj3.constructionMethod = tmp13;
         let sum3 = sum2 + obj.item.constructionMethod;
-        obj.dataReferenceIndex = getUint8.getUint16(sum3);
+        obj3.dataReferenceIndex = getUint8.getUint16(sum3);
         let sum4 = sum3 + obj.item.dataReferenceIndex;
         let baseOffset = obj.item.baseOffset;
         if (4 === baseOffset) {
@@ -85,19 +86,20 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
             num4 = obj4.get64BitValue(getUint8, sum4);
           }
         }
-        obj.baseOffset = num4;
+        obj3.baseOffset = num4;
         let sum5 = sum4 + obj.item.baseOffset;
-        obj.extentCount = getUint8.getUint16(sum5);
+        obj3.extentCount = getUint8.getUint16(sum5);
         let sum6 = sum5 + obj.item.extentCount;
         let num5 = 0;
-        if (0 < obj.extentCount) {
+        let tmp21 = sum6;
+        if (0 < obj3.extentCount) {
           while (true) {
             if (tmp2) {
               if (tmp7 > 0) {
                 break;
               }
             }
-            let obj1 = { extentIndex: tmp24 };
+            let obj6 = { extentIndex: tmp24 };
             let sum7 = sum6 + obj.item.extent.extentIndex;
             if (4 === tmp4) {
               let num7 = getUint8.getUint32(sum7);
@@ -112,7 +114,7 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
                 num7 = obj7.get64BitValue(getUint8, sum7);
               }
             }
-            obj1.extentOffset = num7;
+            obj6.extentOffset = num7;
             let sum8 = sum7 + obj.item.extent.extentOffset;
             if (4 === tmp5) {
               let num8 = getUint8.getUint32(sum8);
@@ -127,11 +129,12 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
                 num8 = obj8.get64BitValue(getUint8, sum8);
               }
             }
-            obj1.extentLength = num8;
+            obj6.extentLength = num8;
             sum6 = sum8 + obj.item.extent.extentLength;
-            let extents = obj.extents;
-            let arr = extents.push(obj1);
+            let extents = obj3.extents;
+            let arr = extents.push(obj6);
             num5 = num5 + 1;
+            tmp21 = sum6;
             continue;
           }
           if (4 === tmp7) {
@@ -145,11 +148,12 @@ export const parseItemLocationBox = function parseItemLocationBox(getUint8, uint
             num6 = obj5.get64BitValue(getUint8, sum6);
           }
         }
-        arr = items1.push(obj);
+        let arr2 = items2.push(obj3);
         num9 = num9 + 1;
-        items = items1;
+        items = tmp21;
+        items1 = items2;
       }
     }
   }
-  return { type: "iloc", items, length };
+  return { type: "iloc", items: items1, length };
 };

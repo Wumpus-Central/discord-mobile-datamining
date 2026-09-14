@@ -54,9 +54,9 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let string = { localeError: null };
-        string = { string: null, file: null, array: null, set: null };
-        string = {
+        const obj = { localeError: null };
+        const obj2 = { string: null, file: null, array: null, set: null };
+        const obj3 = {
           unit: {
             one: "\u0441\u0438\u043C\u0432\u043E\u043B",
             few: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430",
@@ -64,8 +64,8 @@ if (self2) {
           },
           verb: "\u0438\u043C\u0435\u0442\u044C",
         };
-        string.string = string;
-        const obj1 = {
+        obj2.string = obj3;
+        const obj4 = {
           unit: {
             one: "\u0431\u0430\u0439\u0442",
             few: "\u0431\u0430\u0439\u0442\u0430",
@@ -73,8 +73,8 @@ if (self2) {
           },
           verb: "\u0438\u043C\u0435\u0442\u044C",
         };
-        string.file = obj1;
-        const obj2 = {
+        obj2.file = obj4;
+        const obj5 = {
           unit: {
             one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
             few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
@@ -82,8 +82,8 @@ if (self2) {
           },
           verb: "\u0438\u043C\u0435\u0442\u044C",
         };
-        string.array = obj2;
-        const obj3 = {
+        obj2.array = obj5;
+        const obj6 = {
           unit: {
             one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442",
             few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
@@ -91,7 +91,7 @@ if (self2) {
           },
           verb: "\u0438\u043C\u0435\u0442\u044C",
         };
-        string.set = obj3;
+        obj2.set = obj6;
         closure_1 = {
           regex: "\u0432\u0432\u043E\u0434",
           email: "email \u0430\u0434\u0440\u0435\u0441",
@@ -127,7 +127,7 @@ if (self2) {
           number: "\u0447\u0438\u0441\u043B\u043E",
           array: "\u043C\u0430\u0441\u0441\u0438\u0432",
         };
-        string.localeError = (code) => {
+        obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
               let expected = closure_2[code.expected];
@@ -139,7 +139,6 @@ if (self2) {
               if (tmp50 == null) {
                 tmp50 = parsedTypeResult;
               }
-              const obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -174,7 +173,7 @@ if (self2) {
               if (code.inclusive) {
                 str26 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -235,7 +234,7 @@ if (self2) {
               if (code.inclusive) {
                 str20 = ">=";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
@@ -357,7 +356,7 @@ if (self2) {
               return "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435";
           }
         };
-        return string;
+        return obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }

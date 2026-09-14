@@ -121,13 +121,12 @@ export default {
   addEventListener(arg0, arg1) {
     value = map.get(arg0);
     if (null == value) {
-      let obj = {
+      const obj2 = {
         remove() {},
       };
-      let addListenerResult = obj;
+      let addListenerResult = obj2;
     } else {
-      obj = _modDef92;
-      addListenerResult = obj.addListener(value, arg1);
+      addListenerResult = _modDef92.addListener(value, arg1);
     }
     return addListenerResult;
   },

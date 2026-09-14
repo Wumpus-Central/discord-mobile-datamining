@@ -1,5 +1,5 @@
 // _runtime/metro/00171__.js
-import _get from "00096__get.js";
+import _get_mod from "00096__get.js";
 import _createClass from "00042__createClass.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _get = _get_mod;
 class TaskAttributionTiming {
   constructor() {
     self = this;

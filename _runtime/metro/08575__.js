@@ -6,6 +6,8 @@ import _mod8681 from "08681__.js";
 import _fetchText from "../08683__fetchText.js";
 import RNSVGCircle from "../08684_RNSVGCircle.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("08576__.js")) {
   arg5[key10013] = require("08576__.js")[key10013];
   continue;

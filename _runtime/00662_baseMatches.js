@@ -1,6 +1,8 @@
 // _runtime/00662_baseMatches.js
 import baseIsMatch from "00664_baseIsMatch.js";
 
+const require = globalThis.__r;
+
 export default function baseMatches(arg0) {
   _require = arg0;
   arr = require("metro/00663__.js")(arg0);

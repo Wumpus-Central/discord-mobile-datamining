@@ -1,3 +1,3 @@
 // _runtime/metro/01283__.js
 
-export default TypeError;
+export default Object.getOwnPropertyDescriptor;

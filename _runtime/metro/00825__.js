@@ -79,15 +79,15 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(
 ) {
   let num = promptTokens;
   if (tmp) {
-    let obj = {};
+    const obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = completionTokens;
   if (tmp5) {
-    obj = {};
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
-    setAttributes.setAttributes(obj);
+    const obj2 = {};
+    obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
+    setAttributes.setAttributes(obj2);
   }
   let num3 = cacheCreationInputTokens;
   let num4 = cacheReadInputTokens;

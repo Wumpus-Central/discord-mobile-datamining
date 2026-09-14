@@ -4,6 +4,8 @@ import convertToHandlerTag from "../06780_convertToHandlerTag.js";
 import RNGestureHandlerModuleDefault from "../06785_RNGestureHandlerModule.js";
 import transformIntoHandlerTags from "../06787_transformIntoHandlerTags.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;

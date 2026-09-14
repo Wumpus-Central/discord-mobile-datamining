@@ -104,11 +104,11 @@ export default function equalByTag(byteLength, byteLength2, arg2, arg3, arg4, fn
         }
         const call2 = valueOf.call;
         if (typeof call2 === "unknown") {
-          let tmp2Result = valueOf();
+          let tmp2Result2 = valueOf();
         } else {
-          tmp2Result = call2(byteLength2);
+          tmp2Result2 = call2(byteLength2);
         }
-        return callResult == tmp2Result;
+        return callResult == tmp2Result2;
       }
       break;
   }

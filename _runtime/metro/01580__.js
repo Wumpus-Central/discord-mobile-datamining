@@ -6,11 +6,12 @@ function validatePathConfig(config) {
   if (arg1 === undefined) {
     flag = true;
   }
+  let obj2;
   let obj = null;
   if (!flag) {
     obj = { alias: "array", exact: "boolean", stringify: "object", parse: "object" };
   }
-  obj = { path: "string", initialRouteName: "string", screens: "object" };
+  obj2 = { path: "string", initialRouteName: "string", screens: "object" };
   const merged = Object.assign(obj);
   if (typeof config === "object") {
     if (null !== config) {
@@ -18,7 +19,7 @@ function validatePathConfig(config) {
       const _Object5 = Object;
       const keys = Object.keys(config);
       const mapped = keys.map((item) => {
-        if (item in obj) {
+        if (item in obj2) {
           if (undefined !== closure_0[item]) {
             if ("array" === tmp) {
               const _Array = Array;
@@ -55,20 +56,20 @@ function validatePathConfig(config) {
           const joined = mapped1.join("\n");
           if (typeof tmp9 === "function") {
             const _Object3 = Object;
-            const entries1 = Object.entries(obj);
+            const entries1 = Object.entries(obj2);
             const mapped2 = entries1.map((item) => {
               [tmp, tmp2] = item;
               return "- " + tmp + " (" + tmp2 + ")";
             });
             let _HermesInternal2 = HermesInternal;
-            tmp8 = new tmp8(
+            const tmp82 = new tmp8(
               "Found invalid properties in the configuration:\n" +
                 joined +
                 "\n\nYou can only specify the following properties:\n" +
                 mapped2.join("\n") +
                 "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.",
             );
-            throw tmp8;
+            throw tmp82;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -99,7 +100,7 @@ function validatePathConfig(config) {
           const item = entries2.forEach((item) => {
             [, tmp] = item;
             if (typeof tmp !== "string") {
-              obj(tmp, false);
+              obj2(tmp, false);
             }
           });
         }

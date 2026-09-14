@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "karakter", verb: "memiliki" },
           file: { unit: "byte", verb: "memiliki" },
           array: { unit: "item", verb: "memiliki" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Input tidak valid: diharapkan instanceof " + code.expected + ", diterima " + tmp48;
@@ -127,7 +126,7 @@ if (self2) {
               if (code.inclusive) {
                 str25 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -136,13 +135,13 @@ if (self2) {
                 if (str26 == null) {
                   str26 = "value";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str32 = tmp27.unit;
                 if (str32 == null) {
                   str32 = "elemen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Terlalu besar: diharapkan " + str26 + " memiliki " + str25 + str + " " + str32;
+                let combined2 = "Terlalu besar: diharapkan " + str26 + " memiliki " + str25 + str1 + " " + str32;
               } else {
                 let str27 = str26;
                 if (str26 == null) {
@@ -157,18 +156,18 @@ if (self2) {
               if (code.inclusive) {
                 str19 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str46 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Terlalu kecil: diharapkan " + origin + " memiliki " + str19 + str1 + " " + tmp15.unit;
+                let combined3 = "Terlalu kecil: diharapkan " + origin + " memiliki " + str19 + str46 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Terlalu kecil: diharapkan " + origin + " menjadi " + str19 + str1;
+                combined3 = "Terlalu kecil: diharapkan " + origin + " menjadi " + str19 + str46;
               }
               return combined3;
             case "invalid_format":
@@ -210,7 +209,6 @@ if (self2) {
               return "Input tidak valid";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Nilai tidak valid di ";
               return "Nilai tidak valid di " + code.origin;
             default:
               return "Input tidak valid";

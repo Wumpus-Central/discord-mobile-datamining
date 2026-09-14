@@ -8,6 +8,8 @@ import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const require = globalThis.__r;
+
 const ReactNativeElement = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -201,15 +203,15 @@ let items = [
   {
     key: "setNativeProps",
     value: function setNativeProps(arg0) {
-      let obj = ReactNativeElement(146);
-      obj = obj.create(arg0, this.__viewConfig.validAttributes);
+      const obj4 = ReactNativeElement(146).create(arg0, this.__viewConfig.validAttributes);
+      const obj = ReactNativeElement(146);
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (tmp4) {
-        require("NativeDOMCxx").setNativeProps(nativeElementReference, obj);
+        require("NativeDOMCxx").setNativeProps(nativeElementReference, obj4);
         const obj3 = require("NativeDOMCxx");
       }
       const obj2 = ReactNativeElement(136);
-      tmp4 = null != nativeElementReference && null != obj;
+      tmp4 = null != nativeElementReference && null != obj4;
     },
   },
 ];

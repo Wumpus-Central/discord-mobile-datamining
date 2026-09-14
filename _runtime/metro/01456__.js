@@ -1,4 +1,6 @@
 // _runtime/metro/01456__.js
+const require = globalThis.__r;
+
 function hasPropertyDescriptors() {
   return require("flag");
 }

@@ -1,8 +1,8 @@
 // _runtime/08442_merged2.js
 import "module_4466";
-import emptyFunction from "metro/04466__.js";
+import emptyFunction_mod from "metro/04466__.js";
 
-let obj = {
+const obj = {
   transform: null,
   transformMatrix: null,
   decomposedMatrix: null,
@@ -12,28 +12,40 @@ let obj = {
   translateX: null,
   translateY: null,
 };
-obj = { perspective: emptyFunction.number };
-const items = [emptyFunction.shape(obj), , , , , , , , , , ,];
-obj = { rotate: emptyFunction.string };
-items[1] = emptyFunction.shape(obj);
+let emptyFunction = emptyFunction_mod;
+const items = [emptyFunction.shape({ perspective: emptyFunction.number }), , , , , , , , , , ,];
+let emptyFunction = emptyFunction_mod;
+const obj2 = { perspective: emptyFunction.number };
+items[1] = emptyFunction.shape({ rotate: emptyFunction.string });
+let emptyFunction = emptyFunction_mod;
+const obj3 = { rotate: emptyFunction.string };
 items[2] = emptyFunction.shape({ rotateX: emptyFunction.string });
-const obj1 = { rotateX: emptyFunction.string };
+let emptyFunction = emptyFunction_mod;
+const obj4 = { rotateX: emptyFunction.string };
 items[3] = emptyFunction.shape({ rotateY: emptyFunction.string });
-const obj2 = { rotateY: emptyFunction.string };
+let emptyFunction = emptyFunction_mod;
+const obj5 = { rotateY: emptyFunction.string };
 items[4] = emptyFunction.shape({ rotateZ: emptyFunction.string });
-const obj3 = { rotateZ: emptyFunction.string };
+let emptyFunction = emptyFunction_mod;
+const obj6 = { rotateZ: emptyFunction.string };
 items[5] = emptyFunction.shape({ scale: emptyFunction.number });
-const obj4 = { scale: emptyFunction.number };
+let emptyFunction = emptyFunction_mod;
+const obj7 = { scale: emptyFunction.number };
 items[6] = emptyFunction.shape({ scaleX: emptyFunction.number });
-const obj5 = { scaleX: emptyFunction.number };
+let emptyFunction = emptyFunction_mod;
+const obj8 = { scaleX: emptyFunction.number };
 items[7] = emptyFunction.shape({ scaleY: emptyFunction.number });
-const obj6 = { scaleY: emptyFunction.number };
+let emptyFunction = emptyFunction_mod;
+const obj9 = { scaleY: emptyFunction.number };
 items[8] = emptyFunction.shape({ translateX: emptyFunction.number });
-const obj7 = { translateX: emptyFunction.number };
+let emptyFunction = emptyFunction_mod;
+const obj10 = { translateX: emptyFunction.number };
 items[9] = emptyFunction.shape({ translateY: emptyFunction.number });
-const obj8 = { translateY: emptyFunction.number };
+let emptyFunction = emptyFunction_mod;
+const obj11 = { translateY: emptyFunction.number };
 items[10] = emptyFunction.shape({ skewX: emptyFunction.string });
-const obj9 = { skewX: emptyFunction.string };
+let emptyFunction = emptyFunction_mod;
+const obj12 = { skewX: emptyFunction.string };
 items[11] = emptyFunction.shape({ skewY: emptyFunction.string });
 obj.transform = emptyFunction.arrayOf(emptyFunction.oneOfType(items));
 obj.transformMatrix = function transformMatrix(arg0, arg1, arg2) {

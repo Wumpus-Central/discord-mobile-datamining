@@ -5,6 +5,5 @@ require = arg1;
 const dependencyMap = arg6;
 
 export const supabaseIntegration = function supabaseIntegration(supabaseClient) {
-  const obj = { supabaseClient: supabaseClient.supabaseClient };
-  return obj.supabaseIntegration(obj);
+  return feedbackAsyncIntegration.supabaseIntegration({ supabaseClient: supabaseClient.supabaseClient });
 };

@@ -1,6 +1,7 @@
 // _runtime/metro/01667__.js
-import 01639__ from "01639__.js";
+import module_1639_mod from "01639__.js";
 
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.shouldBeUseWeb();
 const SymbolResult = Symbol("shareable flag");
 let weakMap = null;
@@ -10,9 +11,7 @@ if (!module_1639) {
 }
 const obj = { set: null, get: null };
 if (module_1639) {
-  obj.set = function set() {
-
-  };
+  obj.set = function set() {};
   obj.get = function get() {
     return null;
   };

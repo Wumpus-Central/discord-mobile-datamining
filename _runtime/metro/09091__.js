@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "karakter", verb: "legyen" },
           file: { unit: "byte", verb: "legyen" },
           array: { unit: "elem", verb: "legyen" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -139,7 +138,7 @@ if (self2) {
               if (code.inclusive) {
                 str26 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -148,13 +147,13 @@ if (self2) {
                 if (str27 == null) {
                   str27 = "\u00E9rt\u00E9k";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str33 = tmp27.unit;
                 if (str33 == null) {
                   str33 = "elem";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "T\u00FAl nagy: " + str27 + " m\u00E9rete t\u00FAl nagy " + str26 + str + " " + str33;
+                let combined2 = "T\u00FAl nagy: " + str27 + " m\u00E9rete t\u00FAl nagy " + str26 + str1 + " " + str33;
               } else {
                 let str28 = str27;
                 if (str27 == null) {
@@ -174,12 +173,12 @@ if (self2) {
               if (code.inclusive) {
                 str20 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str47 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
@@ -187,12 +186,12 @@ if (self2) {
                   origin +
                   " m\u00E9rete t\u00FAl kicsi " +
                   str20 +
-                  str1 +
+                  str47 +
                   " " +
                   tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " + origin + " t\u00FAl kicsi " + str20 + str1;
+                combined3 = "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " + origin + " t\u00FAl kicsi " + str20 + str47;
               }
               return combined3;
             case "invalid_format":
@@ -238,7 +237,6 @@ if (self2) {
               return "\u00C9rv\u00E9nytelen bemenet";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "\u00C9rv\u00E9nytelen \u00E9rt\u00E9k: ";
               return "\u00C9rv\u00E9nytelen \u00E9rt\u00E9k: " + code.origin;
             default:
               return "\u00C9rv\u00E9nytelen bemenet";

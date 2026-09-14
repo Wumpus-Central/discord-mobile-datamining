@@ -1,33 +1,37 @@
 // _runtime/03942_eachWeekendOfYear.js
-import eachWeekendOfInterval from "03939_eachWeekendOfInterval.js";
-import endOfYear from "03943_endOfYear.js";
-import startOfYear from "03944_startOfYear.js";
-import requiredArgs from "03726_requiredArgs.js";
+import eachWeekendOfInterval_mod from "03939_eachWeekendOfInterval.js";
+import endOfYear_mod from "03943_endOfYear.js";
+import startOfYear_mod from "03944_startOfYear.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let eachWeekendOfInterval = eachWeekendOfInterval_mod;
 if (!eachWeekendOfInterval) {
-  let obj = { default: eachWeekendOfInterval };
+  const obj = { default: eachWeekendOfInterval };
   let tmp3 = obj;
 } else {
   tmp3 = eachWeekendOfInterval;
 }
 eachWeekendOfInterval = tmp3;
+let endOfYear = endOfYear_mod;
 if (!endOfYear) {
-  obj = { default: endOfYear };
-  let tmp5 = obj;
+  const obj2 = { default: endOfYear };
+  let tmp5 = obj2;
 } else {
   tmp5 = endOfYear;
 }
 endOfYear = tmp5;
+let startOfYear = startOfYear_mod;
 if (!startOfYear) {
-  obj = { default: startOfYear };
-  let tmp7 = obj;
+  const obj3 = { default: startOfYear };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfYear;
 }
 startOfYear = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

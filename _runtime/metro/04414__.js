@@ -2,6 +2,8 @@
 import ArtboardByIndex from "../04403_ArtboardByIndex.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 ({ useMemo: c2, useRef: c3 } = noop);
 
 export const useViewModelInstance = function useViewModelInstance(arg0, instanceName) {
@@ -44,54 +46,51 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
   }
   const tmp5 = viewModelName(onInit);
   tmp5.current = onInit;
-  let obj = require("04407__.js");
   const items = [arg0, instanceName, artboardName, viewModelName, flag];
-  const disposableMemo = obj.useDisposableMemo(
+  const disposableMemo = require("04407__.js").useDisposableMemo(
     () => {
-      let obj = closure_0;
       if (closure_0) {
-        let tmp6 = null != obj;
+        let tmp6 = null != closure_0;
         if (tmp6) {
-          tmp6 = "getViewModelInstance" in obj;
+          tmp6 = "getViewModelInstance" in closure_0;
         }
         if (tmp6) {
-          let viewModelInstance = obj.getViewModelInstance();
+          let viewModelInstance = closure_0.getViewModelInstance();
           if (viewModelInstance == null) {
             viewModelInstance = null;
           }
-          obj = { instance: viewModelInstance, needsDispose: false };
-          let obj7 = obj;
+          const obj2 = { instance: viewModelInstance, needsDispose: false };
+          let obj11 = obj2;
         } else {
-          let tmp7 = null != obj;
+          let tmp7 = null != closure_0;
           if (tmp7) {
-            tmp7 = "defaultArtboardViewModel" in obj;
+            tmp7 = "defaultArtboardViewModel" in closure_0;
           }
           if (tmp7) {
             if (viewModelName) {
-              let viewModelByNameResult = obj.viewModelByName(viewModelName);
+              let viewModelByNameResult = closure_0.viewModelByName(viewModelName);
               if (!viewModelByNameResult) {
-                obj = { instance: null, needsDispose: false, error: null };
+                const obj3 = { instance: null, needsDispose: false, error: null };
                 const _HermesInternal3 = HermesInternal;
-                obj.error = "ViewModel '" + viewModelName + "' not found";
-                obj7 = obj;
+                obj3.error = "ViewModel '" + viewModelName + "' not found";
+                obj11 = obj3;
               }
             } else {
               let ArtboardByNameResult;
               if (artboardName) {
-                let obj4 = ArtboardByIndex;
-                ArtboardByNameResult = obj4.ArtboardByName(artboardName);
+                ArtboardByNameResult = ArtboardByIndex.ArtboardByName(artboardName);
               }
-              viewModelByNameResult = obj.defaultArtboardViewModel(ArtboardByNameResult);
+              viewModelByNameResult = closure_0.defaultArtboardViewModel(ArtboardByNameResult);
               if (!viewModelByNameResult) {
                 if (artboardName) {
-                  const obj1 = { instance: null, needsDispose: false, error: null };
+                  const obj4 = { instance: null, needsDispose: false, error: null };
                   const _HermesInternal2 = HermesInternal;
-                  obj1.error = "Artboard '" + artboardName + "' not found or has no ViewModel";
-                  let obj2 = obj1;
+                  obj4.error = "Artboard '" + artboardName + "' not found or has no ViewModel";
+                  let obj6 = obj4;
                 } else {
-                  obj2 = { instance: null, needsDispose: false };
+                  obj6 = { instance: null, needsDispose: false };
                 }
-                obj7 = obj2;
+                obj11 = obj6;
               }
             }
             if (instanceName) {
@@ -101,49 +100,49 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
             }
             if (!instanceByName) {
               if (instanceName) {
-                let obj3 = { instance: null, needsDispose: false, error: null };
+                let obj7 = { instance: null, needsDispose: false, error: null };
                 const _HermesInternal4 = HermesInternal;
-                obj3.error = "ViewModel instance '" + instanceName + "' not found";
+                obj7.error = "ViewModel instance '" + instanceName + "' not found";
               }
-              obj7 = obj3;
+              obj11 = obj7;
             }
             if (instanceByName == null) {
               instanceByName = null;
             }
-            obj4 = { instance: instanceByName, needsDispose: true };
-            obj3 = obj4;
+            const obj8 = { instance: instanceByName, needsDispose: true };
+            obj7 = obj8;
           } else {
             if (instanceName) {
-              let instanceByName1 = obj.createInstanceByName(instanceName);
+              let instanceByName1 = closure_0.createInstanceByName(instanceName);
               if (!instanceByName1) {
-                const obj5 = { instance: null, needsDispose: false, error: null };
+                const obj9 = { instance: null, needsDispose: false, error: null };
                 const _HermesInternal = HermesInternal;
-                obj5.error = "ViewModel instance '" + instanceName + "' not found";
-                obj7 = obj5;
+                obj9.error = "ViewModel instance '" + instanceName + "' not found";
+                obj11 = obj9;
               }
             } else if (tmp4) {
-              instanceByName1 = obj.createInstance();
+              instanceByName1 = closure_0.createInstance();
             } else {
-              instanceByName1 = obj.createDefaultInstance();
+              instanceByName1 = closure_0.createDefaultInstance();
             }
             if (instanceByName1 == null) {
               instanceByName1 = null;
             }
-            const obj6 = { instance: instanceByName1, needsDispose: true };
-            obj7 = obj6;
+            const obj10 = { instance: instanceByName1, needsDispose: true };
+            obj11 = obj10;
           }
         }
       } else {
-        obj7 = { instance: "PX_16", needsDispose: true };
+        obj11 = { instance: "PX_16", needsDispose: true };
       }
-      let current = obj7.instance;
+      let current = obj11.instance;
       if (current) {
         current = ref.current;
       }
       if (current) {
-        ref.current(obj7.instance);
+        ref.current(obj11.instance);
       }
-      return obj7;
+      return obj11;
     },
     (needsDispose) => {
       if (tmp) {
@@ -155,6 +154,7 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
     items,
   );
   const items1 = [disposableMemo.error];
+  let obj = require("04407__.js");
   if (flag2) {
     if (null === disposableMemo.instance) {
       let str =
@@ -169,11 +169,12 @@ export const useViewModelInstance = function useViewModelInstance(arg0, instance
   }
   const instance = disposableMemo.instance;
   if (disposableMemo.instance) {
-    obj = { instance, error: null };
+    let obj2 = { instance, error: null };
+    let obj3 = obj2;
   } else if (undefined === instance) {
-    obj = { instance: "Array", error: 0 };
+    obj3 = { instance: "Array", error: 0 };
   } else {
-    obj = { instance: null, error: tmp7 };
+    obj3 = { instance: null, error: tmp7 };
   }
-  return obj;
+  return obj3;
 };

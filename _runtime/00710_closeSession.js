@@ -103,7 +103,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const closeSession = function closeSession(status, status2) {
   if (status2) {
-    let obj = { status: status2 };
+    const obj2 = { status: status2 };
+    let obj = obj2;
   } else {
     obj = {};
     if ("ok" === status.status) {
@@ -113,51 +114,54 @@ export const closeSession = function closeSession(status, status2) {
   updateSession(status, obj);
 };
 export const makeSession = function makeSession(arg0) {
-  let obj = dateTimestampInSeconds;
-  const timestampInSecondsResult = obj.timestampInSeconds();
-  obj = {
-    sid: uuid4.uuid4(),
+  const timestampInSecondsResult = dateTimestampInSeconds.timestampInSeconds();
+  const obj2 = {
+    sid: null,
     init: true,
-    timestamp: timestampInSecondsResult,
-    started: timestampInSecondsResult,
+    timestamp: null,
+    started: null,
     duration: 0,
     status: "ok",
     errors: 0,
     ignoreDuration: false,
-    toJSON() {
-      obj = {
-        sid: "" + obj.sid,
-        init: obj.init,
-        started: new Date(1000 * obj.started).toISOString(),
-        timestamp: null,
-        status: null,
-        errors: null,
-        did: null,
-        duration: null,
-        abnormal_mechanism: null,
-        attrs: null,
-      };
-      const date = new Date(1000 * obj.started);
-      obj.timestamp = new Date(1000 * obj.timestamp).toISOString();
-      ({ status: obj.status, errors: obj.errors } = obj);
-      if (typeof obj.did === "number") {
-        const _HermesInternal = HermesInternal;
-        const combined = "" + tmp.did;
-      }
-      obj.did = combined;
-      ({ duration: obj.duration, abnormal_mechanism: obj.abnormal_mechanism } = obj);
-      obj.attrs = {
-        release: obj.release,
-        environment: obj.environment,
-        ip_address: obj.ipAddress,
-        user_agent: obj.userAgent,
-      };
-      return obj;
-    },
+    toJSON: null,
+  };
+  obj2.sid = uuid4.uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj = {
+      sid: "" + obj2.sid,
+      init: obj2.init,
+      started: new Date(1000 * obj2.started).toISOString(),
+      timestamp: null,
+      status: null,
+      errors: null,
+      did: null,
+      duration: null,
+      abnormal_mechanism: null,
+      attrs: null,
+    };
+    const date = new Date(1000 * obj2.started);
+    obj.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj.status, errors: obj.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
+    }
+    obj.did = combined;
+    ({ duration: obj.duration, abnormal_mechanism: obj.abnormal_mechanism } = obj2);
+    obj.attrs = {
+      release: obj2.release,
+      environment: obj2.environment,
+      ip_address: obj2.ipAddress,
+      user_agent: obj2.userAgent,
+    };
+    return obj;
   };
   if (arg0) {
-    updateSession(obj, arg0);
+    updateSession(obj2, arg0);
   }
-  return obj;
+  return obj2;
 };
 export { updateSession };

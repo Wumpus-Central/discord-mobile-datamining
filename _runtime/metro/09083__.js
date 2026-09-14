@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "characters", verb: "to have" },
           file: { unit: "bytes", verb: "to have" },
           array: { unit: "items", verb: "to have" },
@@ -122,7 +122,7 @@ if (self2) {
               if (code.inclusive) {
                 str24 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -131,13 +131,13 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "value";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str31 = tmp27.unit;
                 if (str31 == null) {
                   str31 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str + " " + str31;
+                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str1 + " " + str31;
               } else {
                 let str26 = str25;
                 if (str25 == null) {
@@ -152,18 +152,18 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str43 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined2 = "Too small: expected " + origin + " to have " + str18 + str1 + " " + tmp15.unit;
+                let combined2 = "Too small: expected " + origin + " to have " + str18 + str43 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined2 = "Too small: expected " + origin + " to be " + str18 + str1;
+                combined2 = "Too small: expected " + origin + " to be " + str18 + str43;
               }
               return combined2;
             case "invalid_format":
@@ -205,7 +205,6 @@ if (self2) {
               return "Invalid input";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Invalid value in ";
               return "Invalid value in " + code.origin;
             default:
               return "Invalid input";

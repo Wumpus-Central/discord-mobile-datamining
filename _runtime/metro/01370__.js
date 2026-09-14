@@ -8,7 +8,7 @@ export const parse = function parse(str, arg1) {
     const typeError = new TypeError("argument str must be a string");
     throw typeError;
   } else {
-    let obj = {};
+    let obj = arg1;
     if (!arg1) {
       obj = {};
     }
@@ -24,7 +24,7 @@ export const parse = function parse(str, arg1) {
         if ('"' == trimmed1[0]) {
           substr = trimmed1.slice(1, -1);
         }
-        if (null == obj[trimmed]) {
+        if (null == obj2[trimmed]) {
           tmp3[trimmed] = (function tryDecode(substr, fn) {
             try {
               return fn(substr);
@@ -36,7 +36,7 @@ export const parse = function parse(str, arg1) {
         const str2 = arr.substr(index + 1, arr.length);
       }
     });
-    return obj;
+    return {};
   }
 };
 export const serialize = function serialize(arg0, arg1, arg2) {

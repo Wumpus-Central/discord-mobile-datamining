@@ -1,11 +1,11 @@
 // _runtime/metro/04470__.js
-import noop from "00019__.js";
-import emptyFunction from "04466__.js";
+import noop_mod from "00019__.js";
+import emptyFunction_mod from "04466__.js";
 import warning from "../01107_warning.js";
-import invariant from "../01108_invariant.js";
-import parse from "04471__.js";
+import invariant_mod from "../01108_invariant.js";
+import parse_mod from "04471__.js";
 import AsyncMode from "../04473_AsyncMode.js";
-import 04475__ from "04475__.js";
+import module_4475_mod from "04475__.js";
 
 let Component6 = require;
 let closure_1 = dependencyMap;
@@ -56,6 +56,7 @@ let fn = function _setPrototypeOf(arg0, Component) {
 function noop() {
 
 }
+let noop = noop_mod;
 if (noop) {
   if (typeof noop === "object") {
     if ("default" in noop) {
@@ -63,6 +64,7 @@ if (noop) {
     }
   }
 }
+let emptyFunction = emptyFunction_mod;
 if (emptyFunction) {
   if (typeof emptyFunction === "object") {
     if ("default" in emptyFunction) {
@@ -70,6 +72,7 @@ if (emptyFunction) {
     }
   }
 }
+let invariant = invariant_mod;
 if (invariant) {
   if (typeof invariant === "object") {
     if ("default" in invariant) {
@@ -77,6 +80,7 @@ if (invariant) {
     }
   }
 }
+let parse = parse_mod;
 if (parse) {
   if (typeof parse === "object") {
     if ("default" in parse) {
@@ -84,6 +88,7 @@ if (parse) {
     }
   }
 }
+let module_4475 = module_4475_mod;
 if (module_4475) {
   if (typeof module_4475 === "object") {
     if ("default" in module_4475) {
@@ -136,7 +141,7 @@ const tmp9 = noop.createContext || (function createReactContext(keys, arg1) {
             },
         off(arg0) {
               closure_0 = arg0;
-              closure_1 = closure_1.filter(/* F126106 */ function() { ... });
+              closure_1 = closure_1.filter(/* F126109 */ function() { ... });
             },
         get() {
               return value;
@@ -160,19 +165,19 @@ const tmp9 = noop.createContext || (function createReactContext(keys, arg1) {
     const self = this;
     if (this.props.value !== value.value) {
       value = self.props.value;
-      value = value.value;
-      if (value === value) {
+      value2 = value.value;
+      if (value === value2) {
         let tmp2 = 0 !== value;
         if (!tmp2) {
-          tmp2 = 1 / value === 1 / value;
+          tmp2 = 1 / value === 1 / value2;
         }
         let tmp = tmp2;
       } else {
-        tmp = value != value && value != value;
+        tmp = value != value && value2 != value2;
       }
       if (!tmp) {
         if (typeof closure_1 === "function") {
-          let tmp3Result = tmp3(value, value);
+          let tmp3Result = tmp3(value, value2);
         } else {
           tmp3Result = c9;
         }
@@ -186,8 +191,7 @@ const tmp9 = noop.createContext || (function createReactContext(keys, arg1) {
   prototype.render = function() {
     return this.props.children;
   };
-  let obj = { [`${"__create-react-context-" + tmp2}__`]: emptyFunction.object.isRequired };
-  t.childContextTypes = obj;
+  t.childContextTypes = { [`${"__create-react-context-" + tmp2}__`]: emptyFunction.object.isRequired };
   Component2 = noop.Component;
   class t {
     constructor() {
@@ -202,13 +206,12 @@ const tmp9 = noop.createContext || (function createReactContext(keys, arg1) {
       obj = call.apply(Component, items.concat(array)) || this;
       self = obj;
       obj.observedBits = undefined;
-      obj = { value: obj.getValue() };
-      obj.state = obj;
+      obj1 = { value: obj.getValue() };
+      obj.state = obj1;
       obj.onUpdate = (arg0, arg1) => {
         if (obj.observedBits & arg1) {
-          obj = { value: null };
-          obj.value = obj.getValue();
-          obj.setState(obj);
+          const obj2 = { value: obj.getValue() };
+          obj.setState(obj2);
         }
       };
       return obj;
@@ -259,8 +262,7 @@ const tmp9 = noop.createContext || (function createReactContext(keys, arg1) {
     return first(this.state.value);
   };
   t.contextTypes = { [`${"__create-react-context-" + tmp2}__`]: emptyFunction.object };
-  obj = { Provider: t, Consumer: t };
-  return obj;
+  return { Provider: t, Consumer: t };
 });
 function generatePath(arg0, arg1) {
   let str = arg0;
@@ -274,20 +276,20 @@ function generatePath(arg0, arg1) {
   if ("/" === str) {
     return str;
   } else {
-    obj = closure_15;
+    let obj2 = closure_15;
     if (closure_15[str]) {
-      let tmp4 = obj[str];
+      let tmp4 = obj2[str];
     } else {
       const compileResult = parse.compile(str);
       tmp4 = compileResult;
       if (closure_16 < 10000) {
-        obj[str] = compileResult;
+        obj2[str] = compileResult;
         closure_16 = closure_16 + 1;
         tmp4 = compileResult;
       }
     }
-    obj = { pretty: true };
-    tmp4(obj, obj);
+    obj2 = { pretty: true };
+    tmp4(obj, obj2);
   }
 }
 function matchPath(pathname, arg1) {
@@ -303,9 +305,8 @@ function matchPath(pathname, arg1) {
   }
   let tmp2 = obj;
   if (!tmp) {
-    obj = { path: null };
-    obj.path = obj;
-    tmp2 = obj;
+    const obj2 = { path: obj };
+    tmp2 = obj2;
   }
   let exact = tmp2.exact;
   let tmp3 = undefined !== exact;
@@ -328,26 +329,24 @@ function matchPath(pathname, arg1) {
     if (acc) {
       return acc;
     } else {
-      let obj = { end, strict, sensitive };
+      const obj = { end, strict, sensitive };
       const sum = "" + obj.end + obj.strict + obj.sensitive;
       let tmp7 = closure_2_17[sum];
       if (!tmp7) {
-        obj = {};
-        tmp6[sum] = obj;
-        tmp7 = obj;
+        const obj2 = {};
+        tmp6[sum] = obj2;
+        tmp7 = obj2;
       }
       if (tmp7[path]) {
         let tmp10 = tmp7[path];
       } else {
         const items = [];
-        obj = { regexp: null, keys: null };
-        obj.regexp = closure_2_5(path, items, obj);
-        obj.keys = items;
-        tmp10 = obj;
+        const obj3 = { regexp: closure_2_5(path, items, obj), keys: items };
+        tmp10 = obj3;
         if (closure_18 < 10000) {
-          tmp7[path] = obj;
+          tmp7[path] = obj3;
           closure_18 = closure_18 + 1;
-          tmp10 = obj;
+          tmp10 = obj3;
         }
       }
       ({ regexp, keys } = tmp10);
@@ -356,18 +355,18 @@ function matchPath(pathname, arg1) {
         const first = match[0];
         closure_0 = match.slice(1);
         if (!end) {
-          const obj1 = { path, url: null, isExact: null, params: null };
+          const obj4 = { path, url: null, isExact: null, params: null };
           let str2 = "/";
           if ("/" !== path) {
             str2 = first;
           }
-          obj1.url = str2;
-          obj1.isExact = tmp15;
-          obj1.params = keys.reduce((acc, name, index) => {
+          obj4.url = str2;
+          obj4.isExact = tmp15;
+          obj4.params = keys.reduce((acc, name, index) => {
             acc[name.name] = closure_0[index];
             return acc;
           }, {});
-          let tmp16 = obj1;
+          let tmp16 = obj4;
         } else {
           tmp16 = null;
         }
@@ -381,12 +380,12 @@ function matchPath(pathname, arg1) {
 function useLocation() {
   return useContext(closure_12).location;
 }
-let tmp9Result = tmp9();
+const tmp9Result = tmp9();
 tmp9Result.displayName = "Router-History";
 const redux = tmp9Result;
-tmp9Result = tmp9();
-tmp9Result.displayName = "Router";
-const redux2 = tmp9Result;
+const tmp9Result2 = tmp9();
+tmp9Result2.displayName = "Router";
+const redux2 = tmp9Result2;
 let Component = noop.Component;
 Component6 = Component;
 class t {
@@ -426,15 +425,14 @@ prototype.componentDidMount = function() {
   if (!self.props.staticContext) {
     const history = self.props.history;
     self.unlisten = history.listen((location) => {
-      let obj = self;
       if (self._isMounted) {
-        obj = { location };
-        obj.setState(obj);
+        const obj2 = { location };
+        self.setState(obj2);
       }
     });
   }
   if (self._pendingLocation) {
-    let obj = { location: self._pendingLocation };
+    const obj = { location: self._pendingLocation };
     self.setState(obj);
   }
 };
@@ -447,15 +445,12 @@ prototype.componentWillUnmount = function() {
   }
 };
 prototype.render = function() {
-  let obj = { value: null };
-  obj = { history: this.props.history, location: this.state.location, match: closure_1.computeRootMatch(this.state.location.pathname), staticContext: this.props.staticContext };
-  obj.value = obj;
+  const obj = { value: { history: this.props.history, location: this.state.location, match: closure_1.computeRootMatch(this.state.location.pathname), staticContext: this.props.staticContext } };
   let children = this.props.children;
   if (!children) {
     children = null;
   }
-  obj = { children, value: this.props.history };
-  return <redux2.Provider children={children} value={this.props.history}><redux.Provider children={children} value={this.props.history} /></redux2.Provider>;
+  return <redux2.Provider value={{ history: this.props.history, location: this.state.location, match: closure_1.computeRootMatch(this.state.location.pathname), staticContext: this.props.staticContext }}><redux.Provider children={children} value={this.props.history} /></redux2.Provider>;
 };
 let closure_13 = t;
 let Component2 = noop.Component;
@@ -576,28 +571,28 @@ class e {
       if (!location) {
         invariant(false);
       }
-      let obj = { location: tmp4, match: null };
-      let props = self.props;
+      const obj = { location: self.props.location || location.location, match: null };
+      const props = self.props;
       if (self.props.computedMatch) {
         let match = props.computedMatch;
       } else if (props.path) {
-        props = self.props;
+        let props1 = self.props;
         const pathname = tmp4.pathname;
         let exact;
         closure_2 = undefined;
         closure_3 = undefined;
-        if (undefined === props) {
-          props = {};
+        if (undefined === props1) {
+          props1 = {};
         }
-        let tmp6 = typeof props !== "string";
-        if (typeof props !== "string") {
+        let tmp6 = typeof props1 !== "string";
+        if (typeof props1 !== "string") {
           const _Array = Array;
-          tmp6 = !Array.isArray(props);
+          tmp6 = !Array.isArray(props1);
         }
-        let tmp7 = props;
+        let tmp7 = props1;
         if (!tmp6) {
-          obj = { path: props };
-          tmp7 = obj;
+          const obj2 = { path: props1 };
+          tmp7 = obj2;
         }
         exact = tmp7.exact;
         let tmp8 = undefined !== exact;
@@ -620,26 +615,24 @@ class e {
           if (acc) {
             return acc;
           } else {
-            let obj = { end, strict, sensitive };
+            const obj = { end, strict, sensitive };
             const sum = "" + obj.end + obj.strict + obj.sensitive;
             let tmp7 = closure_2_17[sum];
             if (!tmp7) {
-              obj = {};
-              tmp6[sum] = obj;
-              tmp7 = obj;
+              const obj2 = {};
+              tmp6[sum] = obj2;
+              tmp7 = obj2;
             }
             if (tmp7[path]) {
               let tmp10 = tmp7[path];
             } else {
               const items = [];
-              obj = { regexp: null, keys: null };
-              obj.regexp = closure_2_5(path, items, obj);
-              obj.keys = items;
-              tmp10 = obj;
+              const obj3 = { regexp: closure_2_5(path, items, obj), keys: items };
+              tmp10 = obj3;
               if (closure_18 < 10000) {
-                tmp7[path] = obj;
+                tmp7[path] = obj3;
                 closure_18 = closure_18 + 1;
-                tmp10 = obj;
+                tmp10 = obj3;
               }
             }
             ({ regexp, keys } = tmp10);
@@ -648,18 +641,18 @@ class e {
               const first = match[0];
               closure_0 = match.slice(1);
               if (!end) {
-                const obj1 = { path, url: null, isExact: null, params: null };
+                const obj4 = { path, url: null, isExact: null, params: null };
                 let str2 = "/";
                 if ("/" !== path) {
                   str2 = first;
                 }
-                obj1.url = str2;
-                obj1.isExact = tmp15;
-                obj1.params = keys.reduce((acc, name, index) => {
+                obj4.url = str2;
+                obj4.isExact = tmp15;
+                obj4.params = keys.reduce((acc, name, index) => {
                   acc[name.name] = closure_0[index];
                   return acc;
                 }, {});
-                let tmp16 = obj1;
+                let tmp16 = obj4;
               } else {
                 tmp16 = null;
               }
@@ -700,11 +693,11 @@ class e {
           }
         }
       } else {
-        tmp12Result = null;
+        let tmp12Result2 = null;
         if (typeof tmp12 === "function") {
-          tmp12Result = tmp12(tmp5Result);
+          tmp12Result2 = tmp12(tmp5Result);
         }
-        return tmp13(tmp14, { value: tmp5Result }, tmp12Result);
+        return tmp13(tmp14, { value: tmp5Result }, tmp12Result2);
       }
     });
   }
@@ -749,18 +742,18 @@ prototype3.navigateTo = function(tmp4Result, action) {
     context = {};
   }
   context.action = action;
-  let _location = Component6(closure_1[7]).createLocation(tmp4Result);
-  let tmp5Result = _location;
+  const _location1 = Component6(closure_1[7]).createLocation(tmp4Result);
+  let tmp5Result = _location1;
   if (str) {
     let text = str;
     if ("/" !== str.charAt(0)) {
       text = `/${str}`;
     }
-    const obj = { pathname: text + _location.pathname };
-    tmp5Result = closure_7({}, _location, obj);
+    const obj = { pathname: text + _location1.pathname };
+    tmp5Result = closure_7({}, _location1, obj);
   }
   context.location = tmp5Result;
-  _location = context.location;
+  const _location = context.location;
   let path = _location;
   if (typeof _location !== "string") {
     path = Component6(closure_1[7]).createPath(_location);
@@ -781,7 +774,7 @@ prototype3.render = function() {
   if (undefined === staticContext) {
     staticContext = {};
   }
-  let _location = props.location;
+  const _location = props.location;
   let str2 = "/";
   if (undefined !== _location) {
     str2 = _location;
@@ -790,17 +783,23 @@ prototype3.render = function() {
   if (null == props) {
     let obj = {};
   } else {
-    obj = {};
+    const obj2 = {};
     const _Object = Object;
     const keys = Object.keys(props);
-    for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-      let tmp2 = keys[num3];
-      if (0 > items.indexOf(tmp2)) {
-        obj[tmp2] = props[tmp2];
-      }
+    let num3 = 0;
+    obj = obj2;
+    if (0 < keys.length) {
+      do {
+        let tmp2 = keys[num3];
+        if (0 > items.indexOf(tmp2)) {
+          obj2[tmp2] = props[tmp2];
+        }
+        num3 = num3 + 1;
+        obj = obj2;
+      } while (num3 < keys.length);
     }
   }
-  const obj1 = {
+  const obj3 = {
     createHref(_location) {
       let path = _location;
       if (typeof _location !== "string") {
@@ -823,34 +822,34 @@ prototype3.render = function() {
     listen: null,
     block: null
   };
-  _location = str(dependencyMap[7]).createLocation(str2);
-  let tmp5 = _location;
+  const _location1 = str(dependencyMap[7]).createLocation(str2);
+  let tmp5 = _location1;
   if (str) {
     let text = str;
     if ("/" !== str.charAt(0)) {
       text = `/${str}`;
     }
-    const pathname = _location.pathname;
-    let tmp7 = _location;
+    const pathname = _location1.pathname;
+    let tmp7 = _location1;
     if (0 === pathname.indexOf(text)) {
-      const obj2 = { pathname: _location.pathname.substr(text.length) };
-      tmp7 = closure_7({}, _location, obj2);
+      const obj6 = { pathname: _location1.pathname.substr(text.length) };
+      tmp7 = closure_7({}, _location1, obj6);
     }
     tmp5 = tmp7;
   }
-  obj1.location = tmp5;
+  obj3.location = tmp5;
   ({ handlePush: obj4.push, handleReplace: obj4.replace } = self);
-  obj1.go = () => {
+  obj3.go = () => {
     invariant(false);
   };
-  obj1.goBack = () => {
+  obj3.goBack = () => {
     invariant(false);
   };
-  obj1.goForward = () => {
+  obj3.goForward = () => {
     invariant(false);
   };
   ({ handleListen: obj4.listen, handleBlock: obj4.block } = self);
-  return <closure_13 {......closure_7({}, obj, { history: obj1, staticContext })} />;
+  return <closure_13 {......closure_7({}, obj, { history: obj3, staticContext })} />;
 };
 Component6 = noop.Component;
 class e {
@@ -882,7 +881,6 @@ class e {
       if (!_location) {
         _location = location.location;
       }
-      let obj = noop;
       const Children = noop.Children;
       const item = Children.forEach(self.props.children, (icon) => {
         if (null == match) {
@@ -891,24 +889,23 @@ class e {
             let reduce = path.props.path || path.props.from;
             if (reduce) {
               let obj = { path: reduce };
-              obj = closure_2_7({}, path.props, obj);
+              let obj2 = closure_2_7({}, path.props, obj);
               const pathname = _location.pathname;
               let end;
               let strict;
               let sensitive;
-              if (undefined === obj) {
-                obj = {};
+              if (undefined === obj2) {
+                obj2 = {};
               }
-              let tmp4 = typeof obj !== "string";
-              if (typeof obj !== "string") {
+              let tmp4 = typeof obj2 !== "string";
+              if (typeof obj2 !== "string") {
                 const _Array = Array;
-                tmp4 = !Array.isArray(obj);
+                tmp4 = !Array.isArray(obj2);
               }
-              let tmp5 = obj;
+              let tmp5 = obj2;
               if (!tmp4) {
-                obj = { path: null };
-                obj.path = obj;
-                tmp5 = obj;
+                let obj3 = { path: obj2 };
+                tmp5 = obj3;
               }
               ({ path, exact } = tmp5);
               end = undefined !== exact && exact;
@@ -928,26 +925,24 @@ class e {
                 if (acc) {
                   return acc;
                 } else {
-                  let obj = { end, strict, sensitive };
+                  const obj = { end, strict, sensitive };
                   const sum = "" + obj.end + obj.strict + obj.sensitive;
                   let tmp7 = closure_2_17[sum];
                   if (!tmp7) {
-                    obj = {};
-                    tmp6[sum] = obj;
-                    tmp7 = obj;
+                    const obj2 = {};
+                    tmp6[sum] = obj2;
+                    tmp7 = obj2;
                   }
                   if (tmp7[path]) {
                     let tmp10 = tmp7[path];
                   } else {
                     const items = [];
-                    obj = { regexp: null, keys: null };
-                    obj.regexp = closure_2_5(path, items, obj);
-                    obj.keys = items;
-                    tmp10 = obj;
+                    const obj3 = { regexp: closure_2_5(path, items, obj), keys: items };
+                    tmp10 = obj3;
                     if (closure_18 < 10000) {
-                      tmp7[path] = obj;
+                      tmp7[path] = obj3;
                       closure_18 = closure_18 + 1;
-                      tmp10 = obj;
+                      tmp10 = obj3;
                     }
                   }
                   ({ regexp, keys } = tmp10);
@@ -956,18 +951,18 @@ class e {
                     const first = match[0];
                     closure_0 = match.slice(1);
                     if (!end) {
-                      const obj1 = { path, url: null, isExact: null, params: null };
+                      const obj4 = { path, url: null, isExact: null, params: null };
                       let str2 = "/";
                       if ("/" !== path) {
                         str2 = first;
                       }
-                      obj1.url = str2;
-                      obj1.isExact = tmp15;
-                      obj1.params = keys.reduce((acc, name, index) => {
+                      obj4.url = str2;
+                      obj4.isExact = tmp15;
+                      obj4.params = keys.reduce((acc, name, index) => {
                         acc[name.name] = closure_0[index];
                         return acc;
                       }, {});
-                      let tmp16 = obj1;
+                      let tmp16 = obj4;
                     } else {
                       tmp16 = null;
                     }
@@ -985,8 +980,8 @@ class e {
       });
       let cloneElementResult = null;
       if (match) {
-        obj = { location: _location, computedMatch: match };
-        cloneElementResult = obj.cloneElement(path, obj);
+        let obj2 = { location: _location, computedMatch: match };
+        cloneElementResult = noop.cloneElement(path, obj2);
       }
       return cloneElementResult;
     });
@@ -1089,23 +1084,23 @@ export const Redirect = function Redirect(arg0) {
           params1 = {};
         }
         if ("/" === str) {
-          obj = { pathname: str };
-          tmp30Result = closure_7({}, tmp7, obj);
+          let obj2 = { pathname: str };
+          tmp30Result = closure_7({}, tmp7, obj2);
         } else {
-          let obj1 = dependencyMap2;
+          let obj3 = dependencyMap2;
           if (dependencyMap2[str]) {
-            let tmp13 = obj1[str];
+            let tmp13 = obj3[str];
           } else {
             const compileResult1 = parse.compile(str);
             tmp13 = compileResult1;
             if (closure_16 < 10000) {
-              obj1[str] = compileResult1;
+              obj3[str] = compileResult1;
               closure_16 = closure_16 + 1;
               tmp13 = compileResult1;
             }
           }
-          obj1 = { pretty: true };
-          tmp13(params1, obj1);
+          obj3 = { pretty: true };
+          tmp13(params1, obj3);
         }
       }
     } else {
@@ -1115,31 +1110,31 @@ export const Redirect = function Redirect(arg0) {
         tmp3(tmp5Result);
         let element = null;
       } else {
-        let obj2 = {
+        const obj4 = {
           onMount() {
                 closure_0(closure_1);
               },
           onUpdate(arg0, to) {
-                let obj = Component6(1101);
-                const _location = obj.createLocation(to.to);
-                obj = { key: _location.key };
-                if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj))) {
+                const _location = Component6(1101).createLocation(to.to);
+                const obj = Component6(1101);
+                if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj3))) {
                   closure_0(closure_1);
                 }
                 obj2 = Component6(1101);
+                obj3 = { key: _location.key };
               },
           to: tmp7
         };
         element = <closure_14 onMount={function onMount() {
           closure_0(closure_1);
         }} onUpdate={function onUpdate(arg0, to) {
-          let obj = Component6(1101);
-          const _location = obj.createLocation(to.to);
-          obj = { key: _location.key };
-          if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj))) {
+          const _location = Component6(1101).createLocation(to.to);
+          const obj = Component6(1101);
+          if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj3))) {
             closure_0(closure_1);
           }
           obj2 = Component6(1101);
+          obj3 = { key: _location.key };
         }} to={tmp7} />;
       }
       return element;
@@ -1151,7 +1146,7 @@ export const Router = t;
 export const StaticRouter = t;
 export const Switch = e;
 export const __HistoryContext = tmp9Result;
-export const __RouterContext = tmp9Result;
+export const __RouterContext = tmp9Result2;
 export { generatePath };
 export { matchPath };
 export const useHistory = function useHistory() {
@@ -1180,9 +1175,8 @@ export const useRouteMatch = function useRouteMatch(Routes) {
     }
     let tmp2 = obj;
     if (!tmp) {
-      obj = { path: null };
-      obj.path = obj;
-      tmp2 = obj;
+      const obj2 = { path: obj };
+      tmp2 = obj2;
     }
     exact = tmp2.exact;
     let tmp3 = undefined !== exact;
@@ -1205,26 +1199,24 @@ export const useRouteMatch = function useRouteMatch(Routes) {
       if (acc) {
         return acc;
       } else {
-        let obj = { end, strict, sensitive };
+        const obj = { end, strict, sensitive };
         const sum = "" + obj.end + obj.strict + obj.sensitive;
         let tmp7 = closure_2_17[sum];
         if (!tmp7) {
-          obj = {};
-          tmp6[sum] = obj;
-          tmp7 = obj;
+          const obj2 = {};
+          tmp6[sum] = obj2;
+          tmp7 = obj2;
         }
         if (tmp7[path]) {
           let tmp10 = tmp7[path];
         } else {
           const items = [];
-          obj = { regexp: null, keys: null };
-          obj.regexp = closure_2_5(path, items, obj);
-          obj.keys = items;
-          tmp10 = obj;
+          const obj3 = { regexp: closure_2_5(path, items, obj), keys: items };
+          tmp10 = obj3;
           if (closure_18 < 10000) {
-            tmp7[path] = obj;
+            tmp7[path] = obj3;
             closure_18 = closure_18 + 1;
-            tmp10 = obj;
+            tmp10 = obj3;
           }
         }
         ({ regexp, keys } = tmp10);
@@ -1233,18 +1225,18 @@ export const useRouteMatch = function useRouteMatch(Routes) {
           const first = match[0];
           closure_0 = match.slice(1);
           if (!end) {
-            const obj1 = { path, url: null, isExact: null, params: null };
+            const obj4 = { path, url: null, isExact: null, params: null };
             let str2 = "/";
             if ("/" !== path) {
               str2 = first;
             }
-            obj1.url = str2;
-            obj1.isExact = tmp15;
-            obj1.params = keys.reduce((acc, name, index) => {
+            obj4.url = str2;
+            obj4.isExact = tmp15;
+            obj4.params = keys.reduce((acc, name, index) => {
               acc[name.name] = closure_0[index];
               return acc;
             }, {});
-            let tmp16 = obj1;
+            let tmp16 = obj4;
           } else {
             tmp16 = null;
           }
@@ -1263,24 +1255,27 @@ export const withRouter = function withRouter(displayName) {
     wrappedComponentRef = wrappedComponentRef.wrappedComponentRef;
     const items = ["wrappedComponentRef"];
     if (null == wrappedComponentRef) {
-      let obj = {};
+      const obj2 = {};
     } else {
-      obj = {};
+      const obj = {};
       const _Object = Object;
       const keys = Object.keys(wrappedComponentRef);
-      for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-        let tmp2 = keys[num3];
-        if (0 > items.indexOf(tmp2)) {
-          obj[tmp2] = wrappedComponentRef[tmp2];
-        }
+      let num3 = 0;
+      if (0 < keys.length) {
+        do {
+          let tmp2 = keys[num3];
+          if (0 > items.indexOf(tmp2)) {
+            obj[tmp2] = wrappedComponentRef[tmp2];
+          }
+          num3 = num3 + 1;
+        } while (num3 < keys.length);
       }
     }
     return <Consumer.Consumer>{(arg0) => {
       if (!arg0) {
         invariant(false);
       }
-      obj = { ref: wrappedComponentRef };
-      return <closure_0 {......closure_7({}, obj, arg0, obj)} />;
+      return <closure_0 {......closure_7({}, obj2, arg0, { ref: wrappedComponentRef })} />;
     }}</Consumer.Consumer>;
   };
   fn.displayName = `withRouter(${displayName.displayName || displayName.name})`;

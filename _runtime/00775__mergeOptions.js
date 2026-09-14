@@ -4,39 +4,38 @@ import consoleSandbox from "00689_consoleSandbox.js";
 import uuid4 from "00695_uuid4.js";
 import _mod697 from "metro/00697__.js";
 import _mod753 from "metro/00753__.js";
-import setupIntegration from "00752_setupIntegration.js";
+import setupIntegration_mod from "00752_setupIntegration.js";
 
 function _mergeOptions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = options;
   if (options === undefined) {
-    obj = {};
+    const obj2 = {};
   }
   items = [...(obj.allowUrls || []), ...tmp2];
-  obj = { allowUrls: items, denyUrls: null, ignoreErrors: null, ignoreTransactions: null };
+  const obj3 = { allowUrls: items, denyUrls: null, ignoreErrors: null, ignoreTransactions: null };
   const items1 = [...(obj.denyUrls || []), ...tmp4];
-  obj.denyUrls = items1;
+  obj3.denyUrls = items1;
   const items2 = [...(obj.ignoreErrors || []), ...tmp6, ...tmp7];
-  obj.ignoreErrors = items2;
+  obj3.ignoreErrors = items2;
   const items3 = [...(obj.ignoreTransactions || []), ...tmp9];
-  obj.ignoreTransactions = items3;
-  return obj;
+  obj3.ignoreTransactions = items3;
+  return obj3;
 }
 function _getEventFilterUrl(exception) {
   try {
     exception = exception.exception;
-    items = undefined;
+    let items1;
     if (exception != null) {
-      items = exception.values;
+      items1 = exception.values;
     }
-    if (items == null) {
-      items = [];
+    if (items1 == null) {
+      items1 = [];
     }
     items = [];
-    HermesBuiltin.arraySpread(items, 0);
+    HermesBuiltin.arraySpread(items1, 0);
     const reversed = items.reverse();
     const found = reversed.find((mechanism) => {
       mechanism = mechanism.mechanism;
@@ -116,13 +115,13 @@ let items = [
   /^Non-Error promise rejection captured with value: Object Not Found Matching Id:\d+, MethodName:simulateEvent, ParamCount:\d+$/,
   /^Java exception was raised during method invocation$/,
 ];
+let setupIntegration = setupIntegration_mod;
 const defineIntegrationResult = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
   if (arg0 === undefined) {
-    obj = {};
+    let obj = {};
   }
   closure_1 = undefined;
-  obj = {
+  return {
     name: "EventFilters",
     setup(getOptions) {
       closure_1 = _mergeOptions(obj, getOptions.getOptions());
@@ -194,9 +193,9 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
           const exception = type.exception;
           let length2;
           if (exception != null) {
-            let values = exception.values;
-            if (values != null) {
-              length2 = values.length;
+            const values2 = exception.values;
+            if (values2 != null) {
+              length2 = values2.length;
             }
           }
           let flag2 = false;
@@ -204,7 +203,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
             const message = type.message;
             let tmp11 = !message;
             if (!message) {
-              values = type.exception.values;
+              const values = type.exception.values;
               tmp11 = !values.some((stacktrace) => {
                 stacktrace = stacktrace.stacktrace;
                 if (!stacktrace) {
@@ -304,9 +303,9 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
       return tmp72;
     },
   };
-  return obj;
 });
 let c3 = defineIntegrationResult;
+let setupIntegration = setupIntegration_mod;
 
 export const eventFiltersIntegration = defineIntegrationResult;
 export const inboundFiltersIntegration = setupIntegration.defineIntegration(() => {
@@ -314,8 +313,8 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(defineIntegrationResult(obj));
-  obj.name = "InboundFilters";
-  return obj;
+  obj2.name = "InboundFilters";
+  return obj2;
 });

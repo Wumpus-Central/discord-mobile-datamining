@@ -108,21 +108,21 @@ function initialCalculations() {
     const dampingRatio = skipAnimation.dampingRatio;
     const _Math4 = Math;
     const sqrtResult = Math.sqrt(skipAnimation.stiffness / num);
-    let obj = { zeta: dampingRatio, omega0: sqrtResult, omega1: null };
+    const obj2 = { zeta: dampingRatio, omega0: sqrtResult, omega1: null };
     let num7 = 0;
     if (dampingRatio < 1) {
       const _Math5 = Math;
       num7 = sqrtResult * Math.sqrt(1 - dampingRatio ** 2);
     }
-    obj.omega1 = num7;
-    return obj;
+    obj2.omega1 = num7;
+    return obj2;
   } else {
     ({ mass, stiffness } = skipAnimation);
     const _Math = Math;
     const result = skipAnimation.damping / (2 * Math.sqrt(stiffness * mass));
     const _Math2 = Math;
     const sqrtResult1 = Math.sqrt(stiffness / mass);
-    obj = { zeta: result, omega0: sqrtResult1, omega1: null };
+    const obj = { zeta: result, omega0: sqrtResult1, omega1: null };
     let num4 = 0;
     if (result < 1) {
       const _Math3 = Math;
@@ -151,7 +151,7 @@ function scaleZetaToMatchClamps(toValue, clamp) {
       items1 = [,];
       ({ max: arr[0], min: arr[1] } = clamp);
     }
-    [tmp4, tmp5] = _slicedToArray(items1, 2);
+    [tmp4, tmp5] = items1;
     let absolute;
     if (undefined !== tmp5) {
       const _Math = Math;

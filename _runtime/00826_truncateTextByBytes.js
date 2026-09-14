@@ -148,16 +148,16 @@ function hasInlineData(inlineData) {
   return tmp;
 }
 function stripInlineMediaFromSingleMessage(source) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(source);
   if (isContentMedia(obj.source)) {
     obj.source = stripInlineMediaFromSingleMessage(obj.source);
   }
   if (hasInlineData(source)) {
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(source.inlineData);
-    obj.data = data;
-    obj.inlineData = obj;
+    obj2.data = data;
+    obj.inlineData = obj2;
   }
   for (const item10024 of closure_9) {
     if (typeof obj[item10024] === "string") {
@@ -212,10 +212,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
             isArray = Array.isArray(content.content);
           }
           if (isArray) {
-            let obj = {};
+            let obj2 = {};
             let merged = Object.assign(content);
             content = content.content;
-            obj.content = content.map((content) => {
+            obj2.content = content.map((content) => {
               let tmp = content;
               if (content) {
                 tmp = typeof content === "object";
@@ -236,10 +236,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   isArray = Array.isArray(content.content);
                 }
                 if (isArray) {
-                  let obj = {};
+                  let obj2 = {};
                   let merged = Object.assign(content);
                   content = content.content;
-                  obj.content = content.map((content) => {
+                  obj2.content = content.map((content) => {
                     let tmp = content;
                     if (content) {
                       tmp = typeof content === "object";
@@ -260,10 +260,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         isArray = Array.isArray(content.content);
                       }
                       if (isArray) {
-                        let obj = {};
+                        let obj2 = {};
                         let merged = Object.assign(content);
                         content = content.content;
-                        obj.content = content.map((content) => {
+                        obj2.content = content.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -284,18 +284,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -320,11 +320,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -333,14 +333,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        let tmp9 = obj;
+                        let tmp9 = obj2;
                       } else {
                         let tmp7 = "content" in content;
                         if (tmp7) {
                           tmp7 = closure_1_6(content.content);
                         }
                         if (tmp7) {
-                          obj = {};
+                          let obj = {};
                           let merged1 = Object.assign(content);
                           obj.content = closure_1_10(content.content);
                           tmp9 = obj;
@@ -365,10 +365,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         if (tmp9 == null) {
                           tmp19 = content;
                         }
-                        obj = {};
+                        let obj3 = {};
                         let merged2 = Object.assign(tmp19);
                         let parts = content.parts;
-                        obj.parts = parts.map((content) => {
+                        obj3.parts = parts.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -389,18 +389,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -425,11 +425,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -438,7 +438,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        tmp18 = obj;
+                        tmp18 = obj3;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
@@ -447,14 +447,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       }
                     }
                   });
-                  let tmp9 = obj;
+                  let tmp9 = obj2;
                 } else {
                   let tmp7 = "content" in content;
                   if (tmp7) {
                     tmp7 = closure_1_6(content.content);
                   }
                   if (tmp7) {
-                    obj = {};
+                    let obj = {};
                     let merged1 = Object.assign(content);
                     obj.content = closure_1_10(content.content);
                     tmp9 = obj;
@@ -479,10 +479,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   if (tmp9 == null) {
                     tmp19 = content;
                   }
-                  obj = {};
+                  let obj3 = {};
                   let merged2 = Object.assign(tmp19);
                   let parts = content.parts;
-                  obj.parts = parts.map((content) => {
+                  obj3.parts = parts.map((content) => {
                     let tmp = content;
                     if (content) {
                       tmp = typeof content === "object";
@@ -503,10 +503,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         isArray = Array.isArray(content.content);
                       }
                       if (isArray) {
-                        let obj = {};
+                        let obj2 = {};
                         let merged = Object.assign(content);
                         content = content.content;
-                        obj.content = content.map((content) => {
+                        obj2.content = content.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -527,18 +527,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -563,11 +563,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -576,14 +576,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        let tmp9 = obj;
+                        let tmp9 = obj2;
                       } else {
                         let tmp7 = "content" in content;
                         if (tmp7) {
                           tmp7 = closure_1_6(content.content);
                         }
                         if (tmp7) {
-                          obj = {};
+                          let obj = {};
                           let merged1 = Object.assign(content);
                           obj.content = closure_1_10(content.content);
                           tmp9 = obj;
@@ -608,10 +608,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         if (tmp9 == null) {
                           tmp19 = content;
                         }
-                        obj = {};
+                        let obj3 = {};
                         let merged2 = Object.assign(tmp19);
                         let parts = content.parts;
-                        obj.parts = parts.map((content) => {
+                        obj3.parts = parts.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -632,18 +632,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -668,11 +668,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -681,7 +681,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        tmp18 = obj;
+                        tmp18 = obj3;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
@@ -690,7 +690,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       }
                     }
                   });
-                  tmp18 = obj;
+                  tmp18 = obj3;
                 }
                 if (closure_1_6(tmp18)) {
                   let tmp24 = closure_1_10(tmp18);
@@ -699,14 +699,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                 }
               }
             });
-            let tmp9 = obj;
+            let tmp9 = obj2;
           } else {
             let tmp7 = "content" in content;
             if (tmp7) {
               tmp7 = closure_1_6(content.content);
             }
             if (tmp7) {
-              obj = {};
+              let obj = {};
               let merged1 = Object.assign(content);
               obj.content = closure_1_10(content.content);
               tmp9 = obj;
@@ -731,10 +731,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
             if (tmp9 == null) {
               tmp19 = content;
             }
-            obj = {};
+            let obj3 = {};
             let merged2 = Object.assign(tmp19);
             let parts = content.parts;
-            obj.parts = parts.map((content) => {
+            obj3.parts = parts.map((content) => {
               let tmp = content;
               if (content) {
                 tmp = typeof content === "object";
@@ -755,10 +755,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   isArray = Array.isArray(content.content);
                 }
                 if (isArray) {
-                  let obj = {};
+                  let obj2 = {};
                   let merged = Object.assign(content);
                   content = content.content;
-                  obj.content = content.map((content) => {
+                  obj2.content = content.map((content) => {
                     let tmp = content;
                     if (content) {
                       tmp = typeof content === "object";
@@ -779,10 +779,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         isArray = Array.isArray(content.content);
                       }
                       if (isArray) {
-                        let obj = {};
+                        let obj2 = {};
                         let merged = Object.assign(content);
                         content = content.content;
-                        obj.content = content.map((content) => {
+                        obj2.content = content.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -803,18 +803,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -839,11 +839,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -852,14 +852,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        let tmp9 = obj;
+                        let tmp9 = obj2;
                       } else {
                         let tmp7 = "content" in content;
                         if (tmp7) {
                           tmp7 = closure_1_6(content.content);
                         }
                         if (tmp7) {
-                          obj = {};
+                          let obj = {};
                           let merged1 = Object.assign(content);
                           obj.content = closure_1_10(content.content);
                           tmp9 = obj;
@@ -884,10 +884,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         if (tmp9 == null) {
                           tmp19 = content;
                         }
-                        obj = {};
+                        let obj3 = {};
                         let merged2 = Object.assign(tmp19);
                         let parts = content.parts;
-                        obj.parts = parts.map((content) => {
+                        obj3.parts = parts.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -908,18 +908,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -944,11 +944,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -957,7 +957,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        tmp18 = obj;
+                        tmp18 = obj3;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
@@ -966,14 +966,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       }
                     }
                   });
-                  let tmp9 = obj;
+                  let tmp9 = obj2;
                 } else {
                   let tmp7 = "content" in content;
                   if (tmp7) {
                     tmp7 = closure_1_6(content.content);
                   }
                   if (tmp7) {
-                    obj = {};
+                    let obj = {};
                     let merged1 = Object.assign(content);
                     obj.content = closure_1_10(content.content);
                     tmp9 = obj;
@@ -998,10 +998,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   if (tmp9 == null) {
                     tmp19 = content;
                   }
-                  obj = {};
+                  let obj3 = {};
                   let merged2 = Object.assign(tmp19);
                   let parts = content.parts;
-                  obj.parts = parts.map((content) => {
+                  obj3.parts = parts.map((content) => {
                     let tmp = content;
                     if (content) {
                       tmp = typeof content === "object";
@@ -1022,10 +1022,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         isArray = Array.isArray(content.content);
                       }
                       if (isArray) {
-                        let obj = {};
+                        let obj2 = {};
                         let merged = Object.assign(content);
                         content = content.content;
-                        obj.content = content.map((content) => {
+                        obj2.content = content.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -1046,18 +1046,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -1082,11 +1082,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -1095,14 +1095,14 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        let tmp9 = obj;
+                        let tmp9 = obj2;
                       } else {
                         let tmp7 = "content" in content;
                         if (tmp7) {
                           tmp7 = closure_1_6(content.content);
                         }
                         if (tmp7) {
-                          obj = {};
+                          let obj = {};
                           let merged1 = Object.assign(content);
                           obj.content = closure_1_10(content.content);
                           tmp9 = obj;
@@ -1127,10 +1127,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         if (tmp9 == null) {
                           tmp19 = content;
                         }
-                        obj = {};
+                        let obj3 = {};
                         let merged2 = Object.assign(tmp19);
                         let parts = content.parts;
-                        obj.parts = parts.map((content) => {
+                        obj3.parts = parts.map((content) => {
                           let tmp = content;
                           if (content) {
                             tmp = typeof content === "object";
@@ -1151,18 +1151,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               isArray = Array.isArray(content.content);
                             }
                             if (isArray) {
-                              let obj = {};
+                              let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj.content = content.map(() => { ... });
-                              let tmp9 = obj;
+                              obj2.content = content.map(() => { ... });
+                              let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
                               if (tmp7) {
                                 tmp7 = closure_1_6(content.content);
                               }
                               if (tmp7) {
-                                obj = {};
+                                let obj = {};
                                 let merged1 = Object.assign(content);
                                 obj.content = closure_1_10(content.content);
                                 tmp9 = obj;
@@ -1187,11 +1187,11 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                               if (tmp9 == null) {
                                 tmp19 = content;
                               }
-                              obj = {};
+                              let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj.parts = parts.map(() => { ... });
-                              tmp18 = obj;
+                              obj3.parts = parts.map(() => { ... });
+                              tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
@@ -1200,7 +1200,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                           }
                         });
-                        tmp18 = obj;
+                        tmp18 = obj3;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
@@ -1209,7 +1209,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       }
                     }
                   });
-                  tmp18 = obj;
+                  tmp18 = obj3;
                 }
                 if (closure_1_6(tmp18)) {
                   let tmp24 = closure_1_10(tmp18);
@@ -1218,7 +1218,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                 }
               }
             });
-            tmp18 = obj;
+            tmp18 = obj3;
           }
           if (closure_1_6(tmp18)) {
             let tmp24 = closure_1_10(tmp18);
@@ -1329,7 +1329,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                         if (0 === items.length) {
                           let tmp18 = truncateTextByBytes(tmp9, diff1);
                           if (tmp18) {
-                            arr = items.push(withPartText(item10022, tmp19));
+                            let arr2 = items.push(withPartText(item10022, tmp19));
                           }
                           obj3.return();
                           break;
@@ -1342,10 +1342,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       if (items.length <= 0) {
                         let items1 = [];
                       } else {
-                        obj = {};
+                        let obj2 = {};
                         let merged1 = Object.assign(arg0);
-                        obj.parts = items;
-                        items1 = [obj];
+                        obj2.parts = items;
+                        items1 = [obj2];
                       }
                       return items1;
                     }
@@ -1367,10 +1367,10 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                 if (diff1 <= 0) {
                   let items2 = [];
                 } else {
-                  obj = {};
+                  let obj2 = {};
                   let merged1 = Object.assign(tmp15);
-                  obj.content = truncateTextByBytes(tmp15.content, diff1);
-                  items2 = [obj];
+                  obj2.content = truncateTextByBytes(tmp15.content, diff1);
+                  items2 = [obj2];
                   const tmp31 = truncateTextByBytes(tmp15.content, diff1);
                 }
               } else {

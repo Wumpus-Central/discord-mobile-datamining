@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "car\u00E0cters", verb: "contenir" },
           file: { unit: "bytes", verb: "contenir" },
           array: { unit: "elements", verb: "contenir" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp50 == null) {
                 tmp50 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Tipus inv\u00E0lid: s'esperava instanceof " + code.expected + ", s'ha rebut " + tmp50;
@@ -127,7 +126,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "com a m\u00E0xim";
               }
-              let tmp29 = obj[code.origin];
+              let tmp29 = obj2[code.origin];
               if (tmp29 == null) {
                 tmp29 = null;
               }
@@ -136,14 +135,14 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "el valor";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str37 = tmp29.unit;
                 if (str37 == null) {
                   str37 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str + " " + str37;
+                  "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str1 + " " + str37;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -158,19 +157,26 @@ if (self2) {
               if (code.inclusive) {
                 str20 = "com a m\u00EDnim";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str53 = minimum.toString();
               if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str1 + " " + tmp17.unit;
+                  "Massa petit: s'esperava que " +
+                  origin +
+                  " contingu\u00E9s " +
+                  str20 +
+                  " " +
+                  str53 +
+                  " " +
+                  tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str1;
+                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str53;
               }
               return combined3;
             case "invalid_format":
@@ -216,7 +222,6 @@ if (self2) {
               return "Entrada inv\u00E0lida";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Element inv\u00E0lid a ";
               return "Element inv\u00E0lid a " + code.origin;
             default:
               return "Entrada inv\u00E0lida";

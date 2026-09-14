@@ -1,17 +1,19 @@
 // _runtime/metro/03906__.js
-import startOfDay from "../03889_startOfDay.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import startOfDay_mod from "../03889_startOfDay.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
-  let obj = { default: startOfDay };
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
   tmp3 = startOfDay;
 }
 startOfDay = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

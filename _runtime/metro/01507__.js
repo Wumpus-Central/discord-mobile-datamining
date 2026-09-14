@@ -9,8 +9,7 @@ export const useChildListeners = function useChildListeners() {
     addListener: noop.useCallback((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      let arr = closure_0[arg0];
-      arr = arr.push(arg1);
+      closure_0[arg0].push(arg1);
       c2 = false;
       return () => {
         const index = current[closure_0].indexOf(closure_1);

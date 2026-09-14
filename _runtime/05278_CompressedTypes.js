@@ -9,7 +9,7 @@ class CompressedTypes {
   }
 }
 const _moduleResult = _createClass(CompressedTypes);
-let obj = {
+const obj = {
   extension: "7z",
   mimeType: "application/x-7z-compressed",
   description: "7-Zip compressed file",
@@ -18,7 +18,7 @@ let obj = {
 const items = [{ sequence: [55, 122, 188, 175, 39, 28] }];
 obj.signatures = items;
 _moduleResult._7Z = obj;
-obj = {
+const obj2 = {
   extension: "lzh",
   mimeType: "application/x-lzh-compressed",
   description: "Compressed file using Lempel-Ziv and Haruyasu (LZH) compression algorithm",
@@ -36,9 +36,9 @@ const items1 = [
     compatibleExtensions: ["lha"],
   },
 ];
-obj.signatures = items1;
-_moduleResult.LZH = obj;
-obj = {
+obj2.signatures = items1;
+_moduleResult.LZH = obj2;
+const obj3 = {
   extension: "rar",
   mimeType: "application/x-rar-compressed",
   description: "Roshal ARchive compressed archive file",
@@ -48,9 +48,9 @@ const items2 = [
   { sequence: [82, 97, 114, 33, 26, 7, 0], description: "Compressed archive v5.00 onwards" },
   { sequence: [82, 97, 114, 33, 26, 7, 1, 0], description: "Compressed archive v1.50 onwards" },
 ];
-obj.signatures = items2;
-_moduleResult.RAR = obj;
-const obj1 = {
+obj3.signatures = items2;
+_moduleResult.RAR = obj3;
+const obj4 = {
   extension: "zip",
   mimeType: "application/zip",
   description: "Compressed archive file",
@@ -141,7 +141,7 @@ const items3 = [
     ],
   },
 ];
-obj1.signatures = items3;
-_moduleResult.ZIP = obj1;
+obj4.signatures = items3;
+_moduleResult.ZIP = obj4;
 
 export const CompressedTypes = _moduleResult;

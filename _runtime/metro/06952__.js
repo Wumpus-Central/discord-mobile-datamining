@@ -1,11 +1,12 @@
 // _runtime/metro/06952__.js
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
 let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
 let noop = fn(19);
 const forwardRef = noop.forwardRef;
 ({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 try {
   const FlashList = fn(6953);

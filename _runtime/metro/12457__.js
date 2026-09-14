@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 48,
   height: 48,
   scales: [2, 3],
-  hash: "893aae6cf122fe5e14fe174c0b878442",
-  name: "img_friends",
+  hash: "85eeca45f06e729242432730811186c4",
+  name: "img_local_community",
   type: "png",
 });

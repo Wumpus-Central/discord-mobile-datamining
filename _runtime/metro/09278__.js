@@ -116,7 +116,7 @@ export const fromByteArray = function fromByteArray(uint8Array) {
           sum2 = sum2 + 3;
         } while (sum2 < tmp5);
       }
-      arr = items.push(items1.join(""));
+      let arr2 = items.push(items1.join(""));
       num = sum;
     } while (sum < diff);
   }

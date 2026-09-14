@@ -55,13 +55,14 @@ export default function ScrollViewStickyHeader(ref) {
   const tmp18 = closure_8(() => {
     let diffClampResult = null;
     if (true === hiddenOnScroll) {
-      let obj = { extrapolateLeft: "clamp", inputRange: null, outputRange: null };
+      const obj2 = { extrapolateLeft: "clamp", inputRange: null, outputRange: null };
       const items = [first1, first1 + 1];
-      obj.inputRange = items;
-      obj.outputRange = [0, 1];
-      obj = { inputRange: [0, 1], outputRange: [0, -1] };
-      diffClampResult = obj.diffClamp(scrollAnimatedValue.interpolate(obj).interpolate(obj), -first2, 0);
-      const interpolateResult = scrollAnimatedValue.interpolate(obj);
+      obj2.inputRange = items;
+      obj2.outputRange = [0, 1];
+      const obj = get_FlatListDefault;
+      const obj3 = { inputRange: [0, 1], outputRange: [0, -1] };
+      diffClampResult = obj.diffClamp(scrollAnimatedValue.interpolate(obj2).interpolate(obj3), -first2, 0);
+      const interpolateResult = scrollAnimatedValue.interpolate(obj2);
     }
     return diffClampResult;
   }, items);
@@ -176,15 +177,15 @@ export default function ScrollViewStickyHeader(ref) {
     tmp24 = null;
     if (null != first3) {
       let obj = { style: null };
-      obj = { transform: null };
-      obj = { translateY: first3 };
-      const items3 = [obj];
-      obj.transform = items3;
-      obj.style = obj;
+      let obj2 = { transform: null };
+      let obj3 = { translateY: first3 };
+      const items3 = [obj3];
+      obj2.transform = items3;
+      obj.style = obj2;
       tmp24 = obj;
     }
   }
-  const obj1 = {
+  const obj4 = {
     collapsable: false,
     nativeID: merged.nativeID,
     onLayout(nativeEvent) {
@@ -213,12 +214,12 @@ export default function ScrollViewStickyHeader(ref) {
     children: null,
   };
   const items4 = [onlyResult.props.style, closure_12.header];
-  let obj2 = { transform: null };
+  const obj5 = { transform: null };
   const items5 = [{ translateY: tmp19[0] }];
-  obj2.transform = items5;
-  items4[2] = obj2;
-  obj1.style = items4;
-  const obj3 = { onLayout: "Array", style: closure_12.fill };
-  obj1.children = first(onlyResult, obj3);
-  return first3(tmp15(tmp16[5]).View, obj1);
+  obj5.transform = items5;
+  items4[2] = obj5;
+  obj4.style = items4;
+  const obj6 = { onLayout: "Array", style: closure_12.fill };
+  obj4.children = first(onlyResult, obj6);
+  return first3(tmp15(tmp16[5]).View, obj4);
 }

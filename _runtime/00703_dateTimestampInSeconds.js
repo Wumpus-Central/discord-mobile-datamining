@@ -20,9 +20,9 @@ export const browserPerformanceTimeOrigin = function browserPerformanceTimeOrigi
     }
     let tmp3;
     if (now) {
-      let tmp7Result = safeDateNow;
-      const result = tmp7Result.withRandomSafeContext(() => _performance.now());
-      tmp7Result = safeDateNow;
+      const result = safeDateNow.withRandomSafeContext(() => _performance.now());
+      const tmp7Result = safeDateNow;
+      const tmp7Result2 = safeDateNow;
       timeOrigin = _performance.timeOrigin;
       if (typeof timeOrigin !== "number") {
         const timing = _performance.timing;
@@ -40,7 +40,7 @@ export const browserPerformanceTimeOrigin = function browserPerformanceTimeOrigi
         const _Math = Math;
         tmp3 = timeOrigin;
       }
-      safeDateNowResult = tmp7Result.safeDateNow();
+      safeDateNowResult = safeDateNow.safeDateNow();
     }
     timeOrigin = tmp3;
     tmp = tmp3;

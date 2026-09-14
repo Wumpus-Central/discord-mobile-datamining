@@ -1,18 +1,31 @@
 // _runtime/metro/13036__.js
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
+export const flatten = function flatten(arr) {
+  const items = [];
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(() => { ... });
+                } else {
+                  arr = closure_1_0.push(arr);
+                }
+              });
+            } else {
+              arr = closure_1_0.push(arr);
+            }
+          });
+        } else {
+          arr = closure_1_0.push(arr);
+        }
+      });
     } else {
-      str = "warning";
+      arr = closure_1_0.push(arr);
     }
-    tmp = str;
-  }
-  return tmp;
+  });
+  return items;
 };

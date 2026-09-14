@@ -28,15 +28,14 @@ function valueEqual(state, state2) {
             valueOfResult = typeof call === "unknown" ? valueOf() : call(state);
           }
           if (state2.valueOf) {
-            valueOfResult = state2.valueOf();
+            let valueOfResult2 = state2.valueOf();
           } else {
             const _Object2 = Object;
-            valueOf = Object.prototype.valueOf;
-            const call2 = valueOf.call;
-            valueOfResult = typeof call2 === "unknown" ? valueOf() : call2(state2);
+            const call2 = valueOf2.call;
+            valueOfResult2 = typeof call2 === "unknown" ? valueOf2() : call2(state2);
           }
           if (valueOfResult === state) {
-            if (valueOfResult === state2) {
+            if (valueOfResult2 === state2) {
               const _Object3 = Object;
               const _Object4 = Object;
               const keys = Object.keys(Object.assign({}, state, state2));
@@ -44,7 +43,7 @@ function valueEqual(state, state2) {
             }
             return everyResult;
           }
-          everyResult = valueEqual(valueOfResult, valueOfResult);
+          everyResult = valueEqual(valueOfResult, valueOfResult2);
         }
       }
     }

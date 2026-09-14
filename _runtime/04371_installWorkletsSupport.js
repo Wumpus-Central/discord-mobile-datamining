@@ -17,20 +17,20 @@ export const installWorkletsSupport = function installWorkletsSupport() {
     const NitroModules = _mod4376.NitroModules;
     const boxResult = NitroModules.box(_mod4376.NitroModules);
     require = boxResult;
-    let obj = { name: "nitro.HybridObject", determine: null, pack: null, unpack: null };
+    const obj = { name: "nitro.HybridObject", determine: null, pack: null, unpack: null };
     const fn = function _(arg0) {
       return boxResult.unbox().isHybridObject(arg0);
     };
-    obj = { boxedNitroProxy: boxResult };
-    fn.__closure = obj;
+    const obj2 = { boxedNitroProxy: boxResult };
+    fn.__closure = obj2;
     fn.__workletHash = 17379885884344;
     fn.__initData = __initData;
     obj.determine = fn;
     const fn2 = function c(arg0) {
       return boxResult.unbox().box(arg0);
     };
-    obj = { boxedNitroProxy: boxResult };
-    fn2.__closure = obj;
+    const obj3 = { boxedNitroProxy: boxResult };
+    fn2.__closure = obj3;
     fn2.__workletHash = 15686149812025;
     fn2.__initData = __initData2;
     obj.pack = fn2;

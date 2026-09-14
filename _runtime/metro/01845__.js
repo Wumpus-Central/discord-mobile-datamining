@@ -1,9 +1,11 @@
 // _runtime/metro/01845__.js
 import jsxProd from "../react/00021_jsxProd.js";
 import cancelAnimation from "../01636_cancelAnimation.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 ({ useMemo: c3, forwardRef } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 let closure_5 = {
   code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}",
@@ -44,15 +46,15 @@ export default forwardRef((offset, ref) => {
     obj.transform = items1;
     return obj;
   };
-  let obj = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
-  fn.__closure = obj;
+  const obj3 = num(style[3]);
+  fn.__closure = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
   fn.__workletHash = 13627085806149;
   fn.__initData = progress;
   let items = [num, num2, flag];
-  const animatedStyle = num(style[3]).useAnimatedStyle(fn, items);
+  const animatedStyle = obj3.useAnimatedStyle(fn, items);
   let items1 = [style, animatedStyle];
-  const obj3 = num(style[3]);
-  obj = {
+  let obj = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
+  const obj4 = {
     ref,
     style: flag(() => {
       const items = [style, animatedStyle];
@@ -60,6 +62,6 @@ export default forwardRef((offset, ref) => {
     }, items1),
   };
   const merged1 = Object.assign(merged);
-  obj.children = offset.children;
-  return height(num2(style[3]).View, obj);
+  obj4.children = offset.children;
+  return height(num2(style[3]).View, obj4);
 });

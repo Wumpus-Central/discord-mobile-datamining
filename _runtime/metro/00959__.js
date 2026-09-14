@@ -42,7 +42,7 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
     obj = {};
   }
   closure_0 = obj.sidecarUrl || "http://localhost:8969/stream";
-  obj = {
+  return {
     name: SpotlightBrowser,
     setup() {
       if (_mod937.DEBUG_BUILD) {
@@ -122,5 +122,4 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
       });
     },
   };
-  return obj;
 });

@@ -8,11 +8,7 @@ require = fn;
 let closure_2 = ["screen", "if"];
 let closure_3 = ["screens", "groups"];
 const jsx = fn(21).jsx;
-const memoResult = noop.memo((component) => {
-  let obj = _mod1523;
-  obj = { route: obj.useRoute() };
-  return <component.component route={obj.useRoute()} />;
-});
+const memoResult = noop.memo((component) => <component.component route={_mod1523.useRoute()} />);
 memoResult.displayName = "Memo(Screen)";
 function getItemsFromScreens(merged, screens) {
   closure_0 = merged;
@@ -61,7 +57,7 @@ function getItemsFromScreens(merged, screens) {
       if (flag) {
         element = <component />;
       } else {
-        obj = { component };
+        const obj4 = { component };
         element = <closure_1_7 component={component} />;
       }
       return () => {
@@ -159,7 +155,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               if (flag) {
                 element = <component />;
               } else {
-                obj = { component };
+                const obj4 = { component };
                 element = <closure_1_7 component={component} />;
               }
               return () => {
@@ -196,7 +192,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
       let _Object2 = Object;
       let entries1 = Object.entries(groups);
       let items2 = [];
-      arraySpreadResult = HermesBuiltin.arraySpread(
+      let arraySpreadResult2 = HermesBuiltin.arraySpread(
         entries1.map((item) => {
           [closure_0] = item;
           closure_3 = getItemsFromScreens(merged, merged.screens);
@@ -231,21 +227,21 @@ export const createComponentForStaticNavigation = function createComponentForSta
         closure_0 = config;
         if (typeof config.screenOptions !== "function") {
           if (typeof closure_3.screenOptions !== "function") {
-            obj = {};
-            tmp11 = obj;
+            obj1 = {};
+            tmp11 = obj1;
             merged = Object.assign(tmp10.screenOptions);
-            tmp13 = obj;
+            tmp13 = obj1;
             merged1 = Object.assign(config.screenOptions);
-            fn = obj;
+            fn = obj1;
           }
           if (typeof config.screenListeners !== "function") {
             if (typeof closure_3.screenListeners !== "function") {
-              obj1 = {};
-              tmp16 = obj1;
+              obj4 = {};
+              tmp16 = obj4;
               merged2 = Object.assign(tmp15.screenListeners);
-              tmp18 = obj1;
+              tmp18 = obj4;
               merged3 = Object.assign(config.screenListeners);
-              fn2 = obj1;
+              fn2 = obj4;
             }
             tmp2 = closure_1_6;
             tmp3 = closure_0;
@@ -262,13 +258,11 @@ export const createComponentForStaticNavigation = function createComponentForSta
             return closure_1_6(closure_0, obj);
           }
           fn2 = (arg0) => {
-            let obj = closure_3;
             if (typeof closure_3.screenListeners === "function") {
-              let screenListeners = obj.screenListeners(arg0);
+              let screenListeners = closure_3.screenListeners(arg0);
             } else {
-              screenListeners = obj.screenListeners;
+              screenListeners = closure_3.screenListeners;
             }
-            obj = {};
             const merged = Object.assign(screenListeners);
             if (typeof screenOptions.screenListeners === "function") {
               let screenListeners2 = screenOptions.screenListeners(arg0);
@@ -276,17 +270,15 @@ export const createComponentForStaticNavigation = function createComponentForSta
               screenListeners2 = screenOptions.screenListeners;
             }
             const merged1 = Object.assign(screenListeners2);
-            return obj;
+            return {};
           };
         }
         fn = (arg0) => {
-          let obj = closure_3;
           if (typeof closure_3.screenOptions === "function") {
-            screenOptions = obj.screenOptions(arg0);
+            screenOptions = closure_3.screenOptions(arg0);
           } else {
-            screenOptions = obj.screenOptions;
+            screenOptions = closure_3.screenOptions;
           }
-          obj = {};
           const merged = Object.assign(screenOptions);
           if (typeof screenOptions.screenOptions === "function") {
             let screenOptions2 = obj3.screenOptions(arg0);
@@ -294,7 +286,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
             screenOptions2 = obj3.screenOptions;
           }
           const merged1 = Object.assign(screenOptions2);
-          return obj;
+          return {};
         };
         return;
       }
@@ -329,16 +321,16 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
       initialRouteName = screen.config.initialRouteName;
     }
     if (null != initialRouteName) {
-      let screens = screen.config.screens;
-      if (screens == null) {
-        screens = {};
+      let screens1 = screen.config.screens;
+      if (screens1 == null) {
+        screens1 = {};
       }
-      const set = new Set(Object.keys(screens));
-      let groups = screen.config.groups;
-      if (groups == null) {
-        groups = {};
+      const set = new Set(Object.keys(screens1));
+      let groups1 = screen.config.groups;
+      if (groups1 == null) {
+        groups1 = {};
       }
-      const values = Object.values(groups);
+      const values = Object.values(groups1);
       for (const item10023 of values) {
         let _Object = Object;
         let keys = Object.keys(item10023.screens);
@@ -409,8 +401,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
         if ("initialRouteName" in obj) {
           if (typeof obj.initialRouteName === "string") {
-            obj = { initialRouteName: null };
-            obj.initialRouteName = obj.initialRouteName;
+            const obj2 = { initialRouteName: obj.initialRouteName };
           }
         }
         if ("screens" in obj && null != obj.screens) {
@@ -545,7 +536,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
     }
     obj = {};
     for (const key10053 in arg0.config) {
-      screens = "screens" === key10053;
+      let screens = "screens" === key10053;
       if (screens) {
         screens = arg0.config.screens;
       }
@@ -559,7 +550,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
         let merged = Object.assign(obj, createPathConfigForScreens(arg0.config.screens, initialRouteName1));
       }
-      groups = "groups" === key10053;
+      let groups = "groups" === key10053;
       if (groups) {
         groups = arg0.config.groups;
       }

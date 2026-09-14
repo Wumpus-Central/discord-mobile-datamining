@@ -6,7 +6,7 @@ if (!globalThis) {
 }
 function tryCatch(call, arg1, arg2) {
   try {
-    obj = arg2;
+    let obj = arg2;
     call = call.call;
     if (typeof call === "unknown") {
       let callResult = call(obj);
@@ -15,8 +15,8 @@ function tryCatch(call, arg1, arg2) {
     }
     obj = { type: "normal", arg: callResult };
   } catch (tmp4) {
-    obj = { type: "throw", arg: tmp4 };
-    return obj;
+    obj2 = { type: "throw", arg: tmp4 };
+    return obj2;
   }
 }
 class Generator {
@@ -1466,7 +1466,7 @@ function maybeInvokeDelegate(iterator, method) {
   }
 }
 function pushTryEntry(tryLoc) {
-  obj = { tryLoc: tryLoc[0] };
+  const obj = { tryLoc: tryLoc[0] };
   if (1 in tryLoc) {
     obj.catchLoc = tryLoc[1];
   }
@@ -1517,11 +1517,11 @@ if (regeneratorRuntime) {
       tmp = Generator;
     }
     let items = arg3;
-    obj = Object.create(tmp.prototype);
+    obj2 = Object.create(tmp.prototype);
     if (!arg3) {
       items = [];
     }
-    obj = Object.create(Context.prototype);
+    const obj = Object.create(Context.prototype);
     const items1 = [{ tryLoc: "root" }];
     obj.tryEntries = items1;
     const item = items.forEach(pushTryEntry, obj);
@@ -1529,7 +1529,7 @@ if (regeneratorRuntime) {
     closure_0 = arg0;
     closure_1 = arg2;
     closure_3 = closure_4;
-    obj._invoke = function invoke(method, arg) {
+    obj2._invoke = function invoke(method, arg) {
       if (closure_3 === timestampProducer) {
         const _Error = Error;
         const error = new Error("Generator is already running");
@@ -1596,7 +1596,7 @@ if (regeneratorRuntime) {
         throw iter.arg;
       }
     };
-    return obj;
+    return obj2;
   };
   class Generator {
     constructor() {
@@ -3059,8 +3059,8 @@ if (regeneratorRuntime) {
         }
         return { next };
       }
-      obj = Object.create(obj);
-      Generator.prototype = obj;
+      let obj2 = Object.create(obj);
+      Generator.prototype = obj2;
       class Generator {
         constructor() {
           return;
@@ -4484,7 +4484,7 @@ if (regeneratorRuntime) {
             arg0[tmp2] = "GeneratorFunction";
           }
         }
-        arg0.prototype = Object.create(obj);
+        arg0.prototype = Object.create(obj2);
         return arg0;
       };
       tmp6.awrap = (__await) => ({ __await });
@@ -4516,18 +4516,18 @@ if (regeneratorRuntime) {
           tmp3 = fn;
         }
         let items = arg3;
-        obj = Object.create(tmp3.prototype);
+        obj2 = Object.create(tmp3.prototype);
         if (!arg3) {
           items = [];
         }
-        obj = Object.create(Context.prototype);
+        let obj = Object.create(Context.prototype);
         const items1 = [{ tryLoc: "root" }];
         obj.tryEntries = items1;
         const item = items.forEach(pushTryEntry, obj);
         obj.reset(true);
         closure_1 = arg2;
         generatorFunction = closure_4;
-        obj._invoke = function invoke(method, arg) {
+        obj2._invoke = function invoke(method, arg) {
           if (closure_3 === timestampProducer) {
             const _Error = Error;
             const error = new Error("Generator is already running");
@@ -4595,7 +4595,7 @@ if (regeneratorRuntime) {
           }
         };
         let iter = Object.create(AsyncIterator.prototype);
-        closure_129_0 = obj;
+        closure_129_0 = obj2;
         closure_129_1 = undefined;
         iter._invoke = function enqueue(arg0, arg1) {
           closure_0 = arg0;
@@ -5061,7 +5061,7 @@ if (regeneratorRuntime) {
         }
         return nextPromise;
       };
-      let closure_130_0 = obj;
+      let closure_130_0 = obj2;
       let items1 = ["next", "throw", "return"];
       const item1 = items1.forEach((item) => {
         closure_0 = item;
@@ -5069,11 +5069,11 @@ if (regeneratorRuntime) {
           return this._invoke(closure_0, arg0);
         };
       });
-      obj[tmp5] = "Generator";
-      obj[tmp3] = function() {
+      obj2[tmp5] = "Generator";
+      obj2[tmp3] = function() {
         return this;
       };
-      obj.toString = () => "[object Generator]";
+      obj2.toString = () => "[object Generator]";
       tmp6.keys = (obj) => {
         closure_0 = obj;
         const items = [];
@@ -5084,8 +5084,7 @@ if (regeneratorRuntime) {
         const reversed = items.reverse();
         next = function next() {
           if (items.length) {
-            const arr = items.pop();
-            next.value = arr;
+            next.value = items.pop();
             next.done = false;
             return next;
           }
@@ -5095,10 +5094,10 @@ if (regeneratorRuntime) {
         return next;
       };
       tmp6.values = values;
-      obj = {
+      const obj3 = {
         constructor: Context,
         reset(arg0) {
-                obj = { prev: 0, next: 0, _sent: undefined, sent: undefined, done: false, delegate: null, method: "next", arg: undefined };
+                const obj = { prev: 0, next: 0, _sent: undefined, sent: undefined, done: false, delegate: null, method: "next", arg: undefined };
                 const tryEntries = obj.tryEntries;
                 const item = tryEntries.forEach(resetTryEntry);
                 if (!arg0) {
@@ -5310,16 +5309,16 @@ if (regeneratorRuntime) {
                   while (this.tryEntries[diff].tryLoc !== arg0) {
                     diff = diff - 1;
                   }
-                  let completion = tmp4.completion;
+                  const completion = tmp4.completion;
                   let arg;
                   if ("throw" === completion.type) {
-                    completion = tmp4.completion;
-                    if (!completion) {
-                      completion = {};
+                    let completion1 = tmp4.completion;
+                    if (!completion1) {
+                      completion1 = {};
                     }
-                    completion.type = "normal";
+                    completion1.type = "normal";
                     delete tmp[tmp2];
-                    tmp4.completion = completion;
+                    tmp4.completion = completion1;
                     arg = completion.arg;
                   }
                   return arg;
@@ -5329,7 +5328,7 @@ if (regeneratorRuntime) {
               },
         delegateYield(next, resultName, nextLoc) {
                 if (!next) {
-                  obj = { next };
+                  const obj = { next };
                   let tmp3 = obj;
                 } else if (next[sum1]) {
                   let call = tmp2.call;
@@ -5373,7 +5372,7 @@ if (regeneratorRuntime) {
                 return closure_8;
               }
       };
-      Context.prototype = obj;
+      Context.prototype = obj3;
     } else {
       let call2 = hasOwnProperty.call;
       typeof call2 === "unknown" ? hasOwnProperty(tmp3) : call2(tmp7, tmp3);
@@ -5420,8 +5419,8 @@ if (regeneratorRuntime) {
           }
         }
       }
-      const obj1 = { next: doneResult };
-      tmp10 = obj1;
+      const obj6 = { next: doneResult };
+      tmp10 = obj6;
     }
   }
 }

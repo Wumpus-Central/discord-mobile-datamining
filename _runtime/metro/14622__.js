@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4d2adea177cc0cf5fd8e4a93e093db12",
-  name: "mic",
+  hash: "72603ac548e054665a7efcd4a8c834e5",
+  name: "disconnect",
   type: "png",
 });

@@ -1,25 +1,28 @@
 // _runtime/04123_previousDay.js
-import requiredArgs from "03726_requiredArgs.js";
-import 03988__ from "metro/03988__.js";
-import subDays from "04096_subDays.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
+import module_3988_mod from "metro/03988__.js";
+import subDays_mod from "04096_subDays.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let module_3988 = module_3988_mod;
 if (!module_3988) {
-  obj = { default: module_3988 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3988 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3988;
 }
 module_3988 = tmp5;
+let subDays = subDays_mod;
 if (!subDays) {
-  obj = { default: subDays };
-  let tmp7 = obj;
+  const obj3 = { default: subDays };
+  let tmp7 = obj3;
 } else {
   tmp7 = subDays;
 }

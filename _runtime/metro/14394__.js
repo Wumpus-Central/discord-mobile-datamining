@@ -1,7 +1,12 @@
 // _runtime/metro/14394__.js
-import _mod14392 from "14392__.js";
+import _mod14390 from "14390__.js";
 
-let closure_0 = _mod14392({}.toString);
-let closure_1 = _mod14392("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default !_mod14390(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

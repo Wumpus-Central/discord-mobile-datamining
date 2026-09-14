@@ -2,6 +2,8 @@
 import extractPathFromURL from "../01592_extractPathFromURL.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: c3, Platform } = get_ActivityIndicator);

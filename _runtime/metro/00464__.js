@@ -1,6 +1,8 @@
 // _runtime/metro/00464__.js
 import merge from "../00067_merge.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 

@@ -1,6 +1,8 @@
 // _runtime/04606_Patterns.js
 import _modDef4607 from "metro/04607__.js";
 
+const require = globalThis.__r;
+
 for (const key10016 in require("HapticFeedbackTypes")) {
   arg5[key10016] = require("HapticFeedbackTypes")[key10016];
   continue;

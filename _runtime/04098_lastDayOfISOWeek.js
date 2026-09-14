@@ -1,17 +1,19 @@
 // _runtime/04098_lastDayOfISOWeek.js
-import lastDayOfWeek from "04099_lastDayOfWeek.js";
-import requiredArgs from "03726_requiredArgs.js";
+import lastDayOfWeek_mod from "04099_lastDayOfWeek.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let lastDayOfWeek = lastDayOfWeek_mod;
 if (!lastDayOfWeek) {
-  let obj = { default: lastDayOfWeek };
+  const obj = { default: lastDayOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = lastDayOfWeek;
 }
 lastDayOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

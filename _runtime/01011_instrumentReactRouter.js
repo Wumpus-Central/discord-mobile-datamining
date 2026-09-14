@@ -4,8 +4,10 @@ import feedbackAsyncIntegration from "00889_feedbackAsyncIntegration.js";
 import _slicedToArray from "metro/00032__.js";
 import noop from "metro/00019__.js";
 
-function instrumentReactRouter(f108676, arg1, arg2, location, reactrouter_v4) {
-  _require = f108676;
+const require = globalThis.__r;
+
+function instrumentReactRouter(f108679, arg1, arg2, location, reactrouter_v4) {
+  _require = f108679;
   dependencyMap = reactrouter_v4;
   let items = _slicedToArray;
   if (_slicedToArray === undefined) {
@@ -43,16 +45,16 @@ function instrumentReactRouter(f108676, arg1, arg2, location, reactrouter_v4) {
     }
     if (pathname) {
       [tmp5, tmp6] = items(normalizeTransactionName(pathname), 2);
-      require("feedbackAsyncIntegration");
-      let obj = { name: tmp5, attributes: null };
-      obj = {};
-      obj[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
-      let _HermesInternal = HermesInternal;
-      obj[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
-      obj[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
-      obj.attributes = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f108676, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
+      let obj2 = { name: tmp5, attributes: null };
+      let obj3 = {};
+      obj3[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+      let _HermesInternal = HermesInternal;
+      obj3[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
+      obj3[require("metro/00682__.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
+      obj2.attributes = obj3;
+      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f108679, obj2);
+      let obj = require("feedbackAsyncIntegration");
     }
   }
   let listen = arg2;
@@ -63,16 +65,16 @@ function instrumentReactRouter(f108676, arg1, arg2, location, reactrouter_v4) {
     location.listen((pathname, arg1) => {
       if (arg1) {
         if ("PUSH" === arg1) {
-          [tmp5, tmp6] = _slicedToArray(normalizeTransactionName(pathname.pathname), 2);
-          let obj = { name: tmp5, attributes: null };
-          obj = {};
-          obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
-          const _HermesInternal = HermesInternal;
-          obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react." + closure_1;
-          obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
-          obj.attributes = obj;
-          const result = obj.startBrowserTracingNavigationSpan(closure_0, obj);
+          [tmp5, tmp6] = normalizeTransactionName(pathname.pathname);
           const tmp4 = _slicedToArray(normalizeTransactionName(pathname.pathname), 2);
+          const obj2 = { name: tmp5, attributes: null };
+          const obj3 = {};
+          obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+          const _HermesInternal = HermesInternal;
+          obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react." + closure_1;
+          obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
+          obj2.attributes = obj3;
+          const result = feedbackAsyncIntegration.startBrowserTracingNavigationSpan(closure_0, obj2);
         }
       }
     });
@@ -88,18 +90,15 @@ function matchRoutes(pathname, search, arg2) {
   pathname.some((path) => {
     if (path.path) {
       let match = closure_1_1(closure_1_0, path);
+    } else if (closure_1_2.length) {
+      match = closure_1_2[closure_1_2.length - 1].match;
     } else {
-      let arr = closure_1_2;
-      if (closure_1_2.length) {
-        match = arr[arr.length - 1].match;
-      } else {
-        match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
-      }
+      match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
     }
     if (match) {
       items = closure_1_2;
       let obj = { route: path, match };
-      arr = closure_1_2.push(obj);
+      closure_1_2.push(obj);
       if (path.routes) {
         let routes = path.routes;
         items = undefined;
@@ -111,18 +110,15 @@ function matchRoutes(pathname, search, arg2) {
         routes.some((path) => {
           if (path.path) {
             let match = closure_1_1(closure_1_0, path);
+          } else if (closure_1_2.length) {
+            match = closure_1_2[closure_1_2.length - 1].match;
           } else {
-            let arr = closure_1_2;
-            if (closure_1_2.length) {
-              match = arr[arr.length - 1].match;
-            } else {
-              match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
-            }
+            match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
           }
           if (match) {
             items = closure_1_2;
             let obj = { route: path, match };
-            arr = closure_1_2.push(obj);
+            closure_1_2.push(obj);
             if (path.routes) {
               let routes = path.routes;
               items = undefined;
@@ -134,18 +130,15 @@ function matchRoutes(pathname, search, arg2) {
               routes.some((path) => {
                 if (path.path) {
                   let match = closure_1_1(closure_1_0, path);
+                } else if (closure_1_2.length) {
+                  match = closure_1_2[closure_1_2.length - 1].match;
                 } else {
-                  let arr = closure_1_2;
-                  if (closure_1_2.length) {
-                    match = arr[arr.length - 1].match;
-                  } else {
-                    match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
-                  }
+                  match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
                 }
                 if (match) {
                   items = closure_1_2;
                   let obj = { route: path, match };
-                  arr = closure_1_2.push(obj);
+                  closure_1_2.push(obj);
                   if (path.routes) {
                     let routes = path.routes;
                     items = undefined;
@@ -157,18 +150,15 @@ function matchRoutes(pathname, search, arg2) {
                     routes.some((path) => {
                       if (path.path) {
                         let match = closure_1_1(closure_1_0, path);
+                      } else if (closure_1_2.length) {
+                        match = closure_1_2[closure_1_2.length - 1].match;
                       } else {
-                        let arr = closure_1_2;
-                        if (closure_1_2.length) {
-                          match = arr[arr.length - 1].match;
-                        } else {
-                          match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
-                        }
+                        match = { path: "/", url: "/", params: {}, isExact: "/" === closure_1_0 };
                       }
                       if (match) {
                         items = closure_1_2;
                         let obj = { route: path, match };
-                        arr = closure_1_2.push(obj);
+                        closure_1_2.push(obj);
                         if (path.routes) {
                           let routes = path.routes;
                           items = undefined;
@@ -199,42 +189,42 @@ function matchRoutes(pathname, search, arg2) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const reactRouterV4BrowserTracingIntegration = function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
-  let obj = {};
+  const obj2 = {};
   const merged = Object.assign(instrumentNavigation);
-  obj.instrumentPageLoad = false;
-  obj.instrumentNavigation = false;
-  const result = obj.browserTracingIntegration(obj);
+  obj2.instrumentPageLoad = false;
+  obj2.instrumentNavigation = false;
+  const result = feedbackAsyncIntegration.browserTracingIntegration(obj2);
   const require = result;
   ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
   closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(result);
-  obj.afterAllSetup = function afterAllSetup(f108676) {
-    result.afterAllSetup(f108676);
-    instrumentReactRouter(f108676, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f108679) {
+    result.afterAllSetup(f108679);
+    instrumentReactRouter(f108679, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
   };
-  return obj;
+  return obj3;
 };
 export const reactRouterV5BrowserTracingIntegration = function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
-  let obj = {};
+  const obj2 = {};
   const merged = Object.assign(instrumentNavigation);
-  obj.instrumentPageLoad = false;
-  obj.instrumentNavigation = false;
-  const result = obj.browserTracingIntegration(obj);
+  obj2.instrumentPageLoad = false;
+  obj2.instrumentNavigation = false;
+  const result = feedbackAsyncIntegration.browserTracingIntegration(obj2);
   const require = result;
   ({ history: dependencyMap, routes: _slicedToArray, matchPath: noop, instrumentPageLoad } = instrumentNavigation);
   closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(result);
-  obj.afterAllSetup = function afterAllSetup(f108676) {
-    result.afterAllSetup(f108676);
-    instrumentReactRouter(f108676, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f108679) {
+    result.afterAllSetup(f108679);
+    instrumentReactRouter(f108679, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
   };
-  return obj;
+  return obj3;
 };
 export const withSentryRouting = function withSentryRouting(displayName) {
   _require = displayName;
@@ -279,9 +269,9 @@ export const withSentryRouting = function withSentryRouting(displayName) {
           attr = tmp6.setAttribute(tmp2(tmp3[3]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
         }
       }
-      obj = {};
+      obj1 = {};
       merged = Object.assign(displayName);
-      return closure_3.createElement(closure_0, obj);
+      return closure_3.createElement(closure_0, obj1);
     }
   }
   WrappedRoute.displayName = "sentryRoute(" + displayName.displayName || displayName.name + ")";

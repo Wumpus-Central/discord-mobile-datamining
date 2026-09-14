@@ -1,18 +1,20 @@
 // _runtime/03927_differenceInQuarters.js
 import _mod3919 from "metro/03919__.js";
-import differenceInMonths from "03923_differenceInMonths.js";
-import requiredArgs from "03726_requiredArgs.js";
+import differenceInMonths_mod from "03923_differenceInMonths.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let differenceInMonths = differenceInMonths_mod;
 if (!differenceInMonths) {
-  let obj = { default: differenceInMonths };
+  const obj = { default: differenceInMonths };
   let tmp3 = obj;
 } else {
   tmp3 = differenceInMonths;
 }
 differenceInMonths = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

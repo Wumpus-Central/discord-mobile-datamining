@@ -75,7 +75,6 @@ export const StepsIndicator = function StepsIndicator(options) {
   const renderStepNumber = options.renderStepNumber;
   const thumbImage = options.thumbImage;
   let items = [options.length];
-  let obj = currentValue;
   const memo = currentValue.useMemo(() => {
     if (options.length > 9) {
       let fontSize = _mod8400.constants.STEP_NUMBER_TEXT_FONT_SMALL;
@@ -91,41 +90,39 @@ export const StepsIndicator = function StepsIndicator(options) {
       let tmp6 = require;
     } else {
       const _Object = Object;
-      let obj = { marginHorizontal: sliderWidth * _mod8400.constants.MARGIN_HORIZONTAL_PADDING };
+      const obj = { marginHorizontal: sliderWidth * _mod8400.constants.MARGIN_HORIZONTAL_PADDING };
       stepsIndicator = Object.assign({}, _mod8401.styles.stepsIndicator, obj);
       tmp6 = require;
     }
-    obj = { stepIndicatorContainerStyle: stepsIndicator, stepIndicatorElementStyle: null };
+    const obj2 = { stepIndicatorContainerStyle: stepsIndicator, stepIndicatorElementStyle: null };
     if ("web" === get_ActivityIndicator.Platform.OS) {
       const _Object2 = Object;
-      obj = { width: tmp6(8400).constants.THUMB_SIZE, justifyContent: "space-between" };
-      let stepIndicatorElement = Object.assign({}, tmp6(8401).styles.stepIndicatorElement, obj);
+      const obj3 = { width: tmp6(8400).constants.THUMB_SIZE, justifyContent: "space-between" };
+      let stepIndicatorElement = Object.assign({}, tmp6(8401).styles.stepIndicatorElement, obj3);
     } else {
       stepIndicatorElement = tmp6(8401).styles.stepIndicatorElement;
     }
-    obj.stepIndicatorElementStyle = stepIndicatorElement;
-    return obj;
+    obj2.stepIndicatorElementStyle = stepIndicatorElement;
+    return obj2;
   }, items1);
   let reversed = options;
   if (options.isLTR) {
     reversed = options.reverse();
   }
   const items2 = [currentValue, StepMarker, options, thumbImage, renderStepNumber, memo, memo1.stepIndicatorElementStyle];
-  closure_8 = obj.useCallback((index, index2) => {
-    let obj = { style: memo1.stepIndicatorElementStyle, children: null };
-    obj = jsxProd;
+  closure_8 = currentValue.useCallback((index, index2) => {
+    const obj2 = { style: memo1.stepIndicatorElementStyle, children: null };
     const range = { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] };
     const items = [jsxProd.jsx(SliderTrackMark.SliderTrackMark, { isTrue: currentValue === index, index, thumbImage, StepMarker, currentValue, min: options[0], max: options[options.length - 1] }, "" + index2 + "-SliderTrackMark"), ];
     let jsxResult = null;
     if (renderStepNumber) {
-      obj = { i: index, index: index2, style: memo };
+      const obj3 = { i: index, index: index2, style: memo };
       const _HermesInternal = HermesInternal;
-      jsxResult = obj.jsx(StepNumber.StepNumber, { i: index, index: index2, style: memo }, "" + index2 + "th-step");
+      jsxResult = jsxProd.jsx(StepNumber.StepNumber, { i: index, index: index2, style: memo }, "" + index2 + "th-step");
     }
     items[1] = jsxResult;
-    obj.children = items;
-    return < key={index2}><get ActivityIndicator.View key={"" + index2 + "-View"} {...obj} /></>;
+    obj2.children = items;
+    return < key={index2}><get ActivityIndicator.View key={"" + index2 + "-View"} style={memo1.stepIndicatorElementStyle}>{null}</get ActivityIndicator.View></>;
   }, items2);
-  obj = { pointerEvents: "none", testID: "StepsIndicator-Container", style: memo1.stepIndicatorContainerStyle, children: reversed.map((item, index) => closure_8(item, index)) };
   return <StepMarker.View pointerEvents="none" testID="StepsIndicator-Container" style={memo1.stepIndicatorContainerStyle}>{reversed.map((item, index) => closure_8(item, index))}</StepMarker.View>;
 };

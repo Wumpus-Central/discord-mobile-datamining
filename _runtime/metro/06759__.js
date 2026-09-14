@@ -6,8 +6,7 @@ import _mod6763 from "06763__.js";
 import TouchEventType from "../06764_TouchEventType.js";
 
 function onGestureHandlerEvent(handlerTag) {
-  let obj = handlerIDToTag;
-  const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
+  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {
       if (handlerTag.oldState === _mod6762.State.UNDETERMINED) {
@@ -134,11 +133,11 @@ function onGestureHandlerEvent(handlerTag) {
   } else {
     const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
     if (result2) {
-      obj = { nativeEvent: handlerTag };
+      const obj2 = { nativeEvent: handlerTag };
       if (null != handlerTag.oldState) {
-        result2.onGestureStateChange(obj);
+        result2.onGestureStateChange(obj2);
       } else {
-        result2.onGestureEvent(obj);
+        result2.onGestureEvent(obj2);
       }
     }
     const tmpResult = handlerIDToTag;

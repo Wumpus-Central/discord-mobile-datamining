@@ -14,7 +14,7 @@ export default function renderApplication(arg0) {
   ({ initialProps, rootTag, debugName, displayMode } = arg0);
   ({ RootComponent, WrapperComponent, rootViewStyle, isLogBox, useOffscreen } = arg0);
   _modDef38(rootTag, "Expect to have a valid rootTag, instead got ", rootTag);
-  let obj = {
+  const obj = {
     rootTag,
     WrapperComponent,
     rootViewStyle,
@@ -29,23 +29,32 @@ export default function renderApplication(arg0) {
   }
   obj.initialProps = frozen;
   obj.internal_excludeLogBox = isLogBox;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(initialProps);
-  obj.rootTag = rootTag;
+  obj2.rootTag = rootTag;
   obj.children = <RootComponent />;
-  let tmp4Result = jsx(childrenDefault, {});
+  const tmp4Result = jsx(childrenDefault, {
+    rootTag,
+    WrapperComponent,
+    rootViewStyle,
+    initialProps: null,
+    internal_excludeLogBox: null,
+    children: null,
+  });
+  let tmp4Result2 = tmp4Result;
   if (true === useOffscreen) {
+    tmp4Result2 = tmp4Result;
     if (null != displayMode) {
       let str = "hidden";
       if (displayMode === frozenDefault.VISIBLE) {
         str = "visible";
       }
-      obj = { mode: str, children: tmp4Result };
-      tmp4Result = <noop.unstable_Activity mode={str}>{tmp4Result}</noop.unstable_Activity>;
+      const obj3 = { mode: str, children: tmp4Result };
+      tmp4Result2 = <noop.unstable_Activity mode={str}>{tmp4Result}</noop.unstable_Activity>;
     }
   }
-  const obj1 = { element: tmp4Result, rootTag: null };
+  const obj5 = { element: tmp4Result2, rootTag: null };
   const obj4 = renderElementAll;
-  obj1.rootTag = RootTagContext.createRootTag(rootTag);
-  obj4.renderElement(obj1);
+  obj5.rootTag = RootTagContext.createRootTag(rootTag);
+  obj4.renderElement(obj5);
 }

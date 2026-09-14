@@ -4,6 +4,8 @@ import allowedNativeProps from "06814_allowedNativeProps.js";
 import _mod6823 from "metro/06823__.js";
 import _slicedToArray from "metro/00032__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function hash(str) {
   let num = 5381;
@@ -96,7 +98,8 @@ export const bindSharedValues = function bindSharedValues(shouldUseReanimatedDet
             if (shouldUseReanimatedDetector) {
               tmp4 = !arg0;
             }
-            let obj = { dispatchesReanimatedEvents: tmp4 };
+            const obj2 = { dispatchesReanimatedEvents: tmp4 };
+            let obj = obj2;
           } else {
             obj = {};
             obj[tmp3] = arg0;

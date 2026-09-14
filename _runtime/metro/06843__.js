@@ -3,6 +3,8 @@ import _mod6799 from "06799__.js";
 import eventHandler from "../06842_eventHandler.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
 let closure_5 = [
   "onGestureHandlerReanimatedEvent",

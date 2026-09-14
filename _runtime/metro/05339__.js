@@ -13,15 +13,13 @@ let c3 = 16;
 export default {
   read(buffer, c5, arg2) {
     let iter;
-    let obj = _modDef5299;
-    const byteOrder = obj.getByteOrder(buffer, c5);
-    let obj1 = get0thIfdOffset;
-    let obj2 = get0thIfdOffset;
-    const ifd = obj1.readIfd(
+    const byteOrder = _modDef5299.getByteOrder(buffer, c5);
+    const obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(
       buffer,
       IFD_TYPE_0TH.IFD_TYPE_MPF,
       c5,
-      obj2.get0thIfdOffset(buffer, c5, byteOrder),
+      get0thIfdOffset.get0thIfdOffset(buffer, c5, byteOrder),
       byteOrder,
       arg2,
     );
@@ -34,8 +32,8 @@ export default {
           items[num13] = {};
           value = ifd.MPEntry.value;
           let result = num13 * c3;
-          let obj3 = _modDef5311;
-          let typeSize = obj3.getTypeSize("LONG");
+          let obj4 = _modDef5311;
+          let typeSize = obj4.getTypeSize("LONG");
           if (byteOrder === _modDef5299.LITTLE_ENDIAN) {
             let num17 = 0;
             let num18 = 0;
@@ -66,25 +64,25 @@ export default {
             let arr = items2.push("Dependent Parent Image");
           }
           if (items1[1]) {
-            arr = items2.push("Dependent Child Image");
+            let arr2 = items2.push("Dependent Child Image");
           }
           if (items1[2]) {
-            let arr1 = items2.push("Representative Image");
+            let arr3 = items2.push("Representative Image");
           }
-          obj = { value: items1, description: null };
+          let obj5 = { value: items1, description: null };
           let tmp14 = items2.join(", ") || "None";
-          obj.description = tmp14;
-          items[num13].ImageFlags = obj;
+          obj5.description = tmp14;
+          items[num13].ImageFlags = obj5;
           let tmp15 = (num16 >> 24) & 7;
-          obj = { value: tmp15, description: null };
+          let obj6 = { value: tmp15, description: null };
           let str11 = "Unknown";
           if (0 === tmp15) {
             str11 = "JPEG";
           }
-          obj.description = str11;
-          items[num13].ImageFormat = obj;
+          obj6.description = str11;
+          items[num13].ImageFormat = obj6;
           let tmp16 = 16777215 & num16;
-          obj1 = { value: tmp16, description: null };
+          let obj7 = { value: tmp16, description: null };
           let str12 = {
             196608: "Baseline MP Primary Image",
             65537: "Large Thumbnail (VGA equivalent)",
@@ -97,9 +95,9 @@ export default {
           if (!str12) {
             str12 = "Unknown";
           }
-          obj1.description = str12;
-          items[num13].ImageType = obj1;
-          value = ifd.MPEntry.value;
+          obj7.description = str12;
+          items[num13].ImageType = obj7;
+          value2 = ifd.MPEntry.value;
           let sum = num13 * c3 + 4;
           let obj8 = _modDef5311;
           let typeSize1 = obj8.getTypeSize("LONG");
@@ -109,7 +107,7 @@ export default {
             let num25 = 0;
             if (0 < typeSize1) {
               do {
-                num24 = num24 + (value[sum + num23] << (8 * num23));
+                num24 = num24 + (value2[sum + num23] << (8 * num23));
                 num23 = num23 + 1;
                 num25 = num24;
               } while (num23 < typeSize1);
@@ -121,21 +119,21 @@ export default {
             num22 = 0;
             if (0 < typeSize1) {
               do {
-                num21 = num21 + (value[sum + num20] << (8 * (typeSize1 - 1 - num20)));
+                num21 = num21 + (value2[sum + num20] << (8 * (typeSize1 - 1 - num20)));
                 num20 = num20 + 1;
                 num22 = num21;
               } while (num20 < typeSize1);
             }
           }
-          obj2 = { value: num22, description: "" + num22 };
-          items[num13].ImageSize = obj2;
+          let obj9 = { value: num22, description: "" + num22 };
+          items[num13].ImageSize = obj9;
           iter = ifd.MPEntry;
           if (0 !== num13) {
             break;
           } else {
-            obj3 = { value: 0, description: "" };
-            items[num13].ImageOffset = obj3;
-            value = ifd.MPEntry.value;
+            let obj10 = { value: 0, description: "" };
+            items[num13].ImageOffset = obj10;
+            let value3 = ifd.MPEntry.value;
             let sum1 = num13 * c3 + 12;
             let obj11 = _modDef5311;
             let typeSize2 = obj11.getTypeSize("SHORT");
@@ -145,7 +143,7 @@ export default {
               let num38 = 0;
               if (0 < typeSize2) {
                 do {
-                  num37 = num37 + (value[sum1 + num36] << (8 * num36));
+                  num37 = num37 + (value3[sum1 + num36] << (8 * num36));
                   num36 = num36 + 1;
                   num38 = num37;
                 } while (num36 < typeSize2);
@@ -157,15 +155,15 @@ export default {
               num35 = 0;
               if (0 < typeSize2) {
                 do {
-                  num34 = num34 + (value[sum1 + num33] << (8 * (typeSize2 - 1 - num33)));
+                  num34 = num34 + (value3[sum1 + num33] << (8 * (typeSize2 - 1 - num33)));
                   num33 = num33 + 1;
                   num35 = num34;
                 } while (num33 < typeSize2);
               }
             }
-            let obj4 = { value: num35, description: "" + num35 };
-            items[num13].DependentImage1EntryNumber = obj4;
-            let value1 = ifd.MPEntry.value;
+            let obj12 = { value: num35, description: "" + num35 };
+            items[num13].DependentImage1EntryNumber = obj12;
+            let value4 = ifd.MPEntry.value;
             let sum2 = num13 * c3 + 14;
             let obj13 = _modDef5311;
             let typeSize3 = obj13.getTypeSize("SHORT");
@@ -175,7 +173,7 @@ export default {
               let num44 = 0;
               if (0 < typeSize3) {
                 do {
-                  num43 = num43 + (value1[sum2 + num42] << (8 * num42));
+                  num43 = num43 + (value4[sum2 + num42] << (8 * num42));
                   num42 = num42 + 1;
                   num44 = num43;
                 } while (num42 < typeSize3);
@@ -187,14 +185,14 @@ export default {
               num41 = 0;
               if (0 < typeSize3) {
                 do {
-                  num40 = num40 + (value1[sum2 + num39] << (8 * (typeSize3 - 1 - num39)));
+                  num40 = num40 + (value4[sum2 + num39] << (8 * (typeSize3 - 1 - num39)));
                   num39 = num39 + 1;
                   num41 = num40;
                 } while (num39 < typeSize3);
               }
             }
-            let obj5 = { value: num41, description: "" + num41 };
-            items[num13].DependentImage2EntryNumber = obj5;
+            let obj14 = { value: num41, description: "" + num41 };
+            items[num13].DependentImage2EntryNumber = obj14;
             buffer = buffer.buffer;
             items[num13].image = buffer.slice(0, num22);
             let obj15 = _mod5294;
@@ -205,7 +203,7 @@ export default {
             let _Math2 = Math;
           }
         }
-        value2 = iter.value;
+        const value5 = iter.value;
         const sum3 = num13 * c3 + 8;
         const typeSize4 = _modDef5311.getTypeSize("LONG");
         if (byteOrder === _modDef5299.LITTLE_ENDIAN) {
@@ -214,7 +212,7 @@ export default {
           let num32 = 0;
           if (0 < typeSize4) {
             do {
-              num31 = num31 + (value2[sum3 + num30] << (8 * num30));
+              num31 = num31 + (value5[sum3 + num30] << (8 * num30));
               num30 = num30 + 1;
               num32 = num31;
             } while (num30 < typeSize4);
@@ -226,7 +224,7 @@ export default {
           num29 = 0;
           if (0 < typeSize4) {
             do {
-              num28 = num28 + (value2[sum3 + num27] << (8 * (typeSize4 - 1 - num27)));
+              num28 = num28 + (value5[sum3 + num27] << (8 * (typeSize4 - 1 - num27)));
               num27 = num27 + 1;
               num29 = num28;
             } while (num27 < typeSize4);

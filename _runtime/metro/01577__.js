@@ -2,6 +2,8 @@
 import _slicedToArray from "00032__.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 const require = arg1;
 
 export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {

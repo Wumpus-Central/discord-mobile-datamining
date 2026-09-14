@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "merkki\u00E4", subject: "merkkijonon" },
           file: { unit: "tavua", subject: "tiedoston" },
           array: { unit: "alkiota", subject: "listan" },
@@ -108,7 +108,6 @@ if (self2) {
               if (tmp35 == null) {
                 tmp35 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal15 = HermesInternal;
                 let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp35;
@@ -133,7 +132,7 @@ if (self2) {
               if (code.inclusive) {
                 str28 = "<=";
               }
-              let tmp20 = obj[code.origin];
+              let tmp20 = obj2[code.origin];
               if (tmp20 == null) {
                 tmp20 = null;
               }
@@ -165,7 +164,7 @@ if (self2) {
               if (code.inclusive) {
                 str20 = ">=";
               }
-              let tmp13 = obj[code.origin];
+              let tmp13 = obj2[code.origin];
               if (tmp13 == null) {
                 tmp13 = null;
               }

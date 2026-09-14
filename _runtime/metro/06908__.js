@@ -2,6 +2,8 @@
 import cancelAnimation from "../01636_cancelAnimation.js";
 import _slicedToArray from "00032__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useMemo: c3, useState: closure_4 } = noop);
@@ -23,8 +25,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp = first(animatedFooterHeight(0), 2);
   first = tmp[0];
   closure_3 = tmp3;
-  let obj = require("06736__.js");
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = require("06736__.js").useBottomSheetInternal();
   animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
   let items = [contentContainerStyle];
@@ -46,6 +47,7 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   }, items);
   Platform = tmp5;
   const items1 = [first, flag, tmp5];
+  let obj = require("06736__.js");
   const tmp6 = closure_3(() => {
     if (closure_0) {
       let num = 0;
@@ -89,17 +91,17 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
       cancelAnimation.runOnJS(closure_3)(arg0);
     }
   };
-  obj = {
+  const obj2 = require("cancelAnimation");
+  fn.__closure = {
     enableFooterMarginAdjustment: flag,
     runOnJS: require("cancelAnimation").runOnJS,
-    setFooterHeight: tmp3,
+    setFooterHeight: tmp[1],
     Platform,
     animatedContentHeight,
   };
-  fn.__closure = obj;
   fn.__workletHash = 1149497927090;
   fn.__initData = __initData2;
   const items2 = [animatedFooterHeight, animatedContentHeight, flag];
-  const animatedReaction = require("cancelAnimation").useAnimatedReaction(H, fn, items2);
+  const animatedReaction = obj2.useAnimatedReaction(H, fn, items2);
   return tmp6;
 };

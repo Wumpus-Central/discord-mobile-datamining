@@ -1,6 +1,8 @@
 // _runtime/metro/01466__.js
 import _mod17 from "00017__.js";
 
+const require = globalThis.__r;
+
 const NativeEventEmitter = _mod17.NativeEventEmitter;
 if (require("01467__.js")) {
   let closure_3 = null;

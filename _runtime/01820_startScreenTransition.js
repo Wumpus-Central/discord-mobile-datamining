@@ -1,8 +1,9 @@
 // _runtime/01820_startScreenTransition.js
 import applyStyle from "01821_applyStyle.js";
 import computeEasingProgress from "01822_computeEasingProgress.js";
-import configureProps from "01735_configureProps.js";
+import configureProps_mod from "01735_configureProps.js";
 
+let configureProps = configureProps_mod;
 configureProps = configureProps.configureProps();
 function startScreenTransition(sharedEvent) {
   closure_0 = sharedEvent;
@@ -11,8 +12,7 @@ function startScreenTransition(sharedEvent) {
     applyStyle.applyStyle(closure_0, sharedEvent.value);
   });
 }
-let obj = { applyStyle: applyStyle.applyStyle };
-startScreenTransition.__closure = obj;
+startScreenTransition.__closure = { applyStyle: applyStyle.applyStyle };
 startScreenTransition.__workletHash = 9428952089760;
 startScreenTransition.__initData = {
   code: "function startScreenTransition_Pnpm_animationManagerTs1(screenTransitionConfig){const{applyStyle}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent}=screenTransitionConfig;sharedEvent.addListener(stackTag,function(){applyStyle(screenTransitionConfig,sharedEvent.value);});}",
@@ -54,8 +54,8 @@ function finishScreenTransition(stackTag) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-obj = { getLockAxis, getSwipeSimulator: computeEasingProgress.getSwipeSimulator };
-finishScreenTransition.__closure = obj;
+let obj = { applyStyle: applyStyle.applyStyle };
+finishScreenTransition.__closure = { getLockAxis, getSwipeSimulator: computeEasingProgress.getSwipeSimulator };
 finishScreenTransition.__workletHash = 6937010294861;
 finishScreenTransition.__initData = {
   code: "function finishScreenTransition_Pnpm_animationManagerTs3(screenTransitionConfig){const{getLockAxis,getSwipeSimulator}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent,goBackGesture:goBackGesture}=screenTransitionConfig;sharedEvent.removeListener(stackTag);const lockAxis=getLockAxis(goBackGesture);const step=getSwipeSimulator(sharedEvent.value,screenTransitionConfig,lockAxis);step();}",

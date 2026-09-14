@@ -53,37 +53,36 @@ class BounceIn {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.55 * duration };
-        const withTimingResult = obj4.withTiming(1.2, { duration: 0.55 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { scale: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.55 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(1.2, { duration: 0.55 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(0.9, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(1.1, obj3);
-        obj4 = { duration: 0.15 * duration };
-        obj.scale = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(1.1, { duration: 0.15 * duration });
+        obj3.scale = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(1, obj4),
+            delayFunction(1708).withTiming(1, { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ scale: 0 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -162,38 +161,36 @@ class BounceInDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        let obj6 = delayFunction(1708);
-        const obj1 = { duration: 0.55 * duration };
-        const obj2 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(-20, { duration: 0.55 * duration });
-        const withTimingResult1 = obj6.withTiming(10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateY: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.55 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(-20, { duration: 0.55 * duration });
+        const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(-10, obj3);
-        obj4 = { duration: 0.15 * duration };
-        obj.translateY = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
+        obj3.translateY = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(0, obj4),
+            delayFunction(1708).withTiming(0, { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
-        obj6 = { translateY: translateY.windowHeight };
-        const items1 = [obj6];
-        obj5.transform = items1;
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
+        const items1 = [{ translateY: translateY.windowHeight }];
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -272,38 +269,36 @@ class BounceInUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        let obj6 = delayFunction(1708);
-        const obj1 = { duration: 0.55 * duration };
-        const obj2 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(20, { duration: 0.55 * duration });
-        const withTimingResult1 = obj6.withTiming(-10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateY: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.55 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(20, { duration: 0.55 * duration });
+        const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(10, obj3);
-        obj4 = { duration: 0.15 * duration };
-        obj.translateY = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
+        obj3.translateY = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(0, obj4),
+            delayFunction(1708).withTiming(0, { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
-        obj6 = { translateY: -translateY.windowHeight };
-        const items1 = [obj6];
-        obj5.transform = items1;
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
+        const items1 = [{ translateY: -translateY.windowHeight }];
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -382,38 +377,36 @@ class BounceInLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        let obj6 = delayFunction(1708);
-        const obj1 = { duration: 0.55 * duration };
-        const obj2 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(20, { duration: 0.55 * duration });
-        const withTimingResult1 = obj6.withTiming(-10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateX: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.55 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(20, { duration: 0.55 * duration });
+        const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(10, obj3);
-        obj4 = { duration: 0.15 * duration };
-        obj.translateX = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
+        obj3.translateX = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(0, obj4),
+            delayFunction(1708).withTiming(0, { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
-        obj6 = { translateX: -translateX.windowWidth };
-        const items1 = [obj6];
-        obj5.transform = items1;
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
+        const items1 = [{ translateX: -translateX.windowWidth }];
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -492,38 +485,36 @@ class BounceInRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        let obj6 = delayFunction(1708);
-        const obj1 = { duration: 0.55 * duration };
-        const obj2 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(-20, { duration: 0.55 * duration });
-        const withTimingResult1 = obj6.withTiming(10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateX: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.55 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(-20, { duration: 0.55 * duration });
+        const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
+        const withTimingResult1 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(-10, obj3);
-        obj4 = { duration: 0.15 * duration };
-        obj.translateX = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
+        obj3.translateX = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(0, obj4),
+            delayFunction(1708).withTiming(0, { duration: 0.15 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
-        obj6 = { translateX: translateX.windowWidth };
-        const items1 = [obj6];
-        obj5.transform = items1;
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
+        const items1 = [{ translateX: translateX.windowWidth }];
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -602,37 +593,36 @@ class BounceOut {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(1.1, { duration: 0.15 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { scale: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.15 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(1.1, { duration: 0.15 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(0.9, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(1.2, obj3);
-        obj4 = { duration: 0.55 * duration };
-        obj.scale = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(1.2, { duration: 0.15 * duration });
+        obj3.scale = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(0, obj4),
+            delayFunction(1708).withTiming(0, { duration: 0.55 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ scale: 1 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -711,37 +701,36 @@ class BounceOutDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(-10, { duration: 0.15 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateY: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.15 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(-20, obj3);
-        obj4 = { duration: 0.55 * duration };
-        obj.translateY = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(-20, { duration: 0.15 * duration });
+        obj3.translateY = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(windowHeight.windowHeight, obj4),
+            delayFunction(1708).withTiming(windowHeight.windowHeight, { duration: 0.55 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ translateY: 0 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -820,37 +809,36 @@ class BounceOutUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(10, { duration: 0.15 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateY: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.15 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(20, obj3);
-        obj4 = { duration: 0.55 * duration };
-        obj.translateY = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(20, { duration: 0.15 * duration });
+        obj3.translateY = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(-windowHeight.windowHeight, obj4),
+            delayFunction(1708).withTiming(-windowHeight.windowHeight, { duration: 0.55 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ translateY: 0 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -929,37 +917,36 @@ class BounceOutLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(10, { duration: 0.15 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateX: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.15 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(20, obj3);
-        obj4 = { duration: 0.55 * duration };
-        obj.translateX = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(20, { duration: 0.15 * duration });
+        obj3.translateX = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(-windowWidth.windowWidth, obj4),
+            delayFunction(1708).withTiming(-windowWidth.windowWidth, { duration: 0.55 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ translateX: 0 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };
@@ -1038,37 +1025,36 @@ class BounceOutRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: null };
-        delayFunction(1708);
-        let obj4 = delayFunction(1708);
-        const obj1 = { duration: 0.15 * duration };
-        const withTimingResult = obj4.withTiming(-10, { duration: 0.15 * duration });
-        const obj2 = { duration: 0.15 * duration };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const obj3 = { translateX: null };
+        const obj4 = delayFunction(1708);
+        const obj5 = delayFunction(1708);
+        const obj6 = { duration: 0.15 * duration };
+        const withTimingResult = delayFunction(1708).withTiming(-10, { duration: 0.15 * duration });
         const obj7 = delayFunction(1708);
+        const obj8 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(1708).withTiming(10, { duration: 0.15 * duration });
-        const obj3 = { duration: 0.15 * duration };
+        const obj10 = { duration: 0.15 * duration };
         const obj9 = delayFunction(1708);
-        const withTimingResult2 = delayFunction(1708).withTiming(-20, obj3);
-        obj4 = { duration: 0.55 * duration };
-        obj.translateX = delayFunction(
+        const withTimingResult2 = delayFunction(1708).withTiming(-20, { duration: 0.15 * duration });
+        obj3.translateX = delayFunction(
           delay,
-          obj3.withSequence(
+          obj4.withSequence(
             withTimingResult,
             withTimingResult1,
             withTimingResult2,
-            delayFunction(1708).withTiming(windowWidth.windowWidth, obj4),
+            delayFunction(1708).withTiming(windowWidth.windowWidth, { duration: 0.55 * duration }),
           ),
         );
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj5 = { transform: null };
+        const items = [obj3];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj13 = { transform: null };
         const items1 = [{ translateX: 0 }];
-        obj5.transform = items1;
+        obj13.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj13;
         obj.callback = callbackV;
         return obj;
       };

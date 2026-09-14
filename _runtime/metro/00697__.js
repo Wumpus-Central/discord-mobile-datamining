@@ -15,12 +15,10 @@ export const isMatchingPattern = function isMatchingPattern(arr, test) {
   if (!isStringResult) {
     return isStringResult;
   } else {
-    let tmpResult = _mod692;
     if (tmpResult.isRegExp(test)) {
       let isMatch = test.test(arr);
     } else {
-      tmpResult = _mod692;
-      isMatch = tmpResult.isString(test);
+      isMatch = _mod692.isString(test);
       if (isMatch) {
         if (flag) {
           let hasItem = arr === test;
@@ -28,7 +26,9 @@ export const isMatchingPattern = function isMatchingPattern(arr, test) {
           hasItem = arr.includes(test);
         }
       }
+      const tmpResult2 = _mod692;
     }
+    tmpResult = _mod692;
   }
 };
 export const safeJoin = function safeJoin(__v_isVNode, arg1) {
@@ -39,11 +39,11 @@ export const safeJoin = function safeJoin(__v_isVNode, arg1) {
       try {
         const push = items.push;
         if (obj.isVueViewModel(tmp2)) {
-          let arr = push(_mod698.getVueInternalName(tmp2));
+          push(_mod698.getVueInternalName(tmp2));
           const tmp4Result = _mod698;
         } else {
           const _String = String;
-          arr = push(String(tmp2));
+          push(String(tmp2));
         }
         num = num + 1;
         obj = _mod692;
@@ -105,12 +105,10 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(transa
     if (!isStringResult) {
       return isStringResult;
     } else {
-      let tmpResult = _mod692;
       if (tmpResult.isRegExp(test)) {
         let isMatch = test.test(transaction);
       } else {
-        tmpResult = _mod692;
-        isMatch = tmpResult.isString(test);
+        isMatch = _mod692.isString(test);
         if (isMatch) {
           if (flag) {
             let hasItem = transaction === test;
@@ -118,7 +116,9 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(transa
             hasItem = transaction.includes(test);
           }
         }
+        const tmpResult2 = _mod692;
       }
+      tmpResult = _mod692;
     }
   });
 };

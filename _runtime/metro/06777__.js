@@ -278,12 +278,11 @@ let items = [
     key: "initialize",
     value: function initialize() {
       const self = this;
-      let handlers = ContinousBaseGesture(6778);
-      this.handlerTag = handlers.getNextHandlerTag();
-      handlers = {};
+      this.handlerTag = ContinousBaseGesture(6778).getNextHandlerTag();
+      const obj2 = {};
       const merged = Object.assign(this.handlers);
-      handlers.handlerTag = this.handlerTag;
-      this.handlers = handlers;
+      obj2.handlerTag = this.handlerTag;
+      this.handlers = obj2;
       if (this.config.ref) {
         self.config.ref.current = self;
       }
@@ -310,7 +309,7 @@ let items = [
       }
       if (tmp) {
         tmp = !ContinousBaseGesture(6761).isRemoteDebuggingEnabled();
-        obj = ContinousBaseGesture(6761);
+        const obj = ContinousBaseGesture(6761);
       }
       return tmp;
     },

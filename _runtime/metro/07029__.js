@@ -1,11 +1,13 @@
 // _runtime/metro/07029__.js
 import _mod17 from "00017__.js";
 import jsxProd from "../react/00021_jsxProd.js";
-import GESTURE_SOURCE from "../06729_GESTURE_SOURCE.js";
+import value2 from "../06729_value2.js";
 import _mod7030 from "07030__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 ({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
+let noop = noop_mod;
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
@@ -24,12 +26,12 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
     Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }),
   );
   let animatedScrollableContentOffsetY;
-  let obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
   animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj = onLayout(animatedScrollableContentOffsetY[3]);
   const bottomSheetContentContainerStyle = onLayout(
     animatedScrollableContentOffsetY[3],
   ).useBottomSheetContentContainerStyle(flag, style);
@@ -43,12 +45,12 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
   }, items);
   const tmp5 = enableDynamicSizing(() => {
     animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = GESTURE_SOURCE.SCROLLABLE_TYPE.VIEW;
+    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
   }, items1);
   focusHook(tmp5);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.onLayout = enableDynamicSizing((nativeEvent) => {
+  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
     if (enableDynamicSizing) {
       const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
     }
@@ -56,8 +58,8 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
       tmp3(nativeEvent);
     }
   }, items2);
-  obj.style = tmp4;
-  obj.children = children;
+  obj3.style = tmp4;
+  obj3.children = children;
   return <bottomSheetContentContainerStyle />;
 });
 memoResult.displayName = "BottomSheetView";

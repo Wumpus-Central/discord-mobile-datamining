@@ -162,7 +162,7 @@ let fn = function t() {
               tmp9 = tmp10;
             }
             if (tmp9) {
-              let arr = items.push([]);
+              items.push([]);
             }
           } else {
             let tmp4 = "text" !== type.type;
@@ -173,8 +173,7 @@ let fn = function t() {
             if (!tmp4) {
               type.content = type.content.replace(length, "");
             }
-            arr = items[items.length - 1];
-            arr = arr.push(type);
+            items[items.length - 1].push(type);
           }
         });
         let str3 = str2;
@@ -211,7 +210,7 @@ let fn = function t() {
                       tmp9 = tmp10;
                     }
                     if (tmp9) {
-                      let arr = items.push([]);
+                      items.push([]);
                     }
                   } else {
                     let tmp4 = "text" !== type.type;
@@ -222,8 +221,7 @@ let fn = function t() {
                     if (!tmp4) {
                       type.content = type.content.replace(length, "");
                     }
-                    arr = items[items.length - 1];
-                    arr = arr.push(type);
+                    items[items.length - 1].push(type);
                   }
                 });
                 return items;
@@ -285,8 +283,8 @@ let fn = function t() {
     function ignoreCapture() {
       return {};
     }
-    let defaultRules = { Array: null, heading: null, nptable: null, lheading: null, hr: null, codeBlock: null, fence: null, blockQuote: null, list: null, def: null, table: null, newline: null, paragraph: null, escape: null, tableSeparator: null, autolink: null, mailto: null, url: null, link: null, image: null, reflink: null, refimage: null, em: null, strong: null, u: null, del: null, inlineCode: null, br: null, text: null };
-    defaultRules = {
+    const defaultRules = { Array: null, heading: null, nptable: null, lheading: null, hr: null, codeBlock: null, fence: null, blockQuote: null, list: null, def: null, table: null, newline: null, paragraph: null, escape: null, tableSeparator: null, autolink: null, mailto: null, url: null, link: null, image: null, reflink: null, refimage: null, em: null, strong: null, u: null, del: null, inlineCode: null, br: null, text: null };
+    let obj2 = {
       react(arg0, fn, key) {
           const items = [];
           num = 0;
@@ -374,8 +372,8 @@ let fn = function t() {
           return str2;
         }
     };
-    defaultRules.Array = defaultRules;
-    defaultRules = {
+    defaultRules.Array = obj2;
+    let obj3 = {
       order: 0,
       match: blockRegex(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
       parse(level, fn, inline) {
@@ -409,10 +407,10 @@ let fn = function t() {
           return htmlTag(`h${content.level}`, fn(content.content, key));
         }
     };
-    defaultRules.heading = defaultRules;
-    const obj1 = { order: 1, match: blockRegex(/^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/), parse: tmp6, react: null, html: null };
-    defaultRules.nptable = obj1;
-    const obj2 = {
+    defaultRules.heading = obj3;
+    const obj4 = { order: 1, match: blockRegex(/^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/), parse: tmp6, react: null, html: null };
+    defaultRules.nptable = obj4;
+    const obj5 = {
       order: 2,
       match: blockRegex(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
       parse(arg0, fn, inline) {
@@ -433,8 +431,8 @@ let fn = function t() {
       react: null,
       html: null
     };
-    defaultRules.lheading = obj2;
-    const obj3 = {
+    defaultRules.lheading = obj5;
+    const obj6 = {
       order: 3,
       match: blockRegex(/^( *[-*_]){3,} *(?:\n *)+\n/),
       parse: ignoreCapture,
@@ -456,8 +454,8 @@ let fn = function t() {
           return "<hr>";
         }
     };
-    defaultRules.hr = obj3;
-    const obj4 = {
+    defaultRules.hr = obj6;
+    const obj7 = {
       order: 4,
       match: blockRegex(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
       parse(arg0, arg1, arg2) {
@@ -469,11 +467,11 @@ let fn = function t() {
           if (children.lang) {
             text = `markdown-code-${children.lang}`;
           }
-          let props = { className: text, children: children.content };
+          const props = { className: text, children: children.content };
           if (typeof reactElement === "function") {
-            props = { children: null };
+            const obj2 = { children: null };
             const element = { $$typeof: num, type: "code", key: undefined, ref: null, props, _owner: null };
-            props.children = element;
+            obj2.children = element;
             if (typeof tmp2 === "function") {
               const element1 = { $$typeof: tmp3, type: "pre", key: null, ref: null, props: null, _owner: null };
               let tmp5;
@@ -481,7 +479,7 @@ let fn = function t() {
                 tmp5 = key;
               }
               element1.key = tmp5;
-              element1.props = props;
+              element1.props = obj2;
               return element1;
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -503,8 +501,8 @@ let fn = function t() {
           }
         }
     };
-    defaultRules.codeBlock = obj4;
-    const obj5 = {
+    defaultRules.codeBlock = obj7;
+    const obj8 = {
       order: 5,
       match: blockRegex(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
       parse(content, arg1, arg2) {
@@ -513,8 +511,8 @@ let fn = function t() {
       react: null,
       html: null
     };
-    defaultRules.fence = obj5;
-    const obj6 = {
+    defaultRules.fence = obj8;
+    const obj9 = {
       order: 6,
       match: blockRegex(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
       parse(arg0, fn, key) {
@@ -540,8 +538,8 @@ let fn = function t() {
           return htmlTag("blockquote", fn(content.content, key));
         }
     };
-    defaultRules.blockQuote = obj6;
-    const obj7 = {
+    defaultRules.blockQuote = obj9;
+    const obj10 = {
       order: 7,
       match(arg0, prevCapture) {
           let str = "";
@@ -646,8 +644,8 @@ let fn = function t() {
           return htmlTag(str, joined, { start: ordered.start });
         }
     };
-    defaultRules.list = obj7;
-    const obj8 = {
+    defaultRules.list = obj10;
+    const obj11 = {
       order: 8,
       match: blockRegex(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
       parse(arg0, arg1, _refs) {
@@ -671,8 +669,8 @@ let fn = function t() {
           return "";
         }
     };
-    defaultRules.def = obj8;
-    const obj9 = {
+    defaultRules.def = obj11;
+    const obj12 = {
       order: 9,
       match: blockRegex(/^ *(\|.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/),
       parse: fnResult,
@@ -684,17 +682,17 @@ let fn = function t() {
           const mapped = header.map((item, index) => {
             const text = `${index}`;
             if (null == align.align[index]) {
-              let props = {};
+              let style = {};
             } else {
-              props = { textAlign: tmp3.align[index] };
+              style = { textAlign: tmp3.align[index] };
             }
-            props = { style: props, scope: "col", children: closure_1(item, closure_2) };
             if (typeof reactElement === "function") {
-              const element = { $$typeof: num, type: "th", key: text, ref: null, props, _owner: null };
+              const element = { $$typeof: num, type: "th", key: text, ref: null, props: obj2, _owner: null };
               return element;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
+            obj2 = { style, scope: "col", children: closure_1(item, closure_2) };
           });
           if (typeof reactElement === "function") {
             let props = { children: null };
@@ -703,12 +701,12 @@ let fn = function t() {
             if (typeof reactElement === "function") {
               const element1 = { $$typeof: num, type: "thead", key: "thead", ref: null, props, _owner: null };
               const items = [element1, ];
-              props = { children: tmp2 };
+              let obj2 = { children: tmp2 };
               if (typeof reactElement === "function") {
-                props = { children: null };
-                const element2 = { $$typeof: num, type: "tbody", key: "tbody", ref: null, props, _owner: null };
+                const obj3 = { children: null };
+                const element2 = { $$typeof: num, type: "tbody", key: "tbody", ref: null, props: obj2, _owner: null };
                 items[1] = element2;
-                props.children = items;
+                obj3.children = items;
                 if (typeof reactElement === "function") {
                   const element3 = { $$typeof: num, type: "table", key: null, ref: null, props: null, _owner: null };
                   let tmp6;
@@ -716,7 +714,7 @@ let fn = function t() {
                     tmp6 = key;
                   }
                   element3.key = tmp6;
-                  element3.props = props;
+                  element3.props = obj3;
                   return element3;
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -758,8 +756,8 @@ let fn = function t() {
           return htmlTag("table", htmlTag("thead", htmlTag("tr", joined)) + htmlTag("tbody", joined1));
         }
     };
-    defaultRules.table = obj9;
-    const obj10 = {
+    defaultRules.table = obj12;
+    const obj13 = {
       order: 10,
       requiredFirstCharacters: ["\n"],
       match: blockRegex(/^(?:\n *)*\n/),
@@ -771,8 +769,8 @@ let fn = function t() {
           return "\n";
         }
     };
-    defaultRules.newline = obj10;
-    const obj11 = {
+    defaultRules.newline = obj13;
+    const obj14 = {
       order: 11,
       match: blockRegex(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
       parse: parseCaptureInline,
@@ -795,8 +793,8 @@ let fn = function t() {
           return htmlTag("div", fn(content.content, key), { class: "paragraph" });
         }
     };
-    defaultRules.paragraph = obj11;
-    const obj12 = {
+    defaultRules.paragraph = obj14;
+    const obj15 = {
       order: 12,
       requiredFirstCharacters: ["\\"],
       match: inlineRegex(/^\\([^0-9A-Za-z\s])/),
@@ -806,8 +804,8 @@ let fn = function t() {
       react: null,
       html: null
     };
-    defaultRules.escape = obj12;
-    const obj13 = {
+    defaultRules.escape = obj15;
+    const obj16 = {
       order: 13,
       match(arg0, inTable) {
           let match = null;
@@ -827,23 +825,22 @@ let fn = function t() {
           return " &vert; ";
         }
     };
-    defaultRules.tableSeparator = obj13;
-    const obj14 = {
+    defaultRules.tableSeparator = obj16;
+    const obj17 = {
       order: 14,
       requiredFirstCharacters: ["<"],
       match: inlineRegex(/^<([^: >]+:\/[^ >]+)>/),
       parse(content, arg1, arg2) {
           obj = { type: "link", content: null, target: content[1] };
-          obj = { type: "text", content: content[1] };
-          const items = [obj];
+          const items = [{ type: "text", content: content[1] }];
           obj.content = items;
           return obj;
         },
       react: null,
       html: null
     };
-    defaultRules.autolink = obj14;
-    const obj15 = {
+    defaultRules.autolink = obj17;
+    const obj18 = {
       order: 15,
       match: inlineRegex(/^<([^ >]+@[^ >]+)>/),
       parse(content, arg1, arg2) {
@@ -859,27 +856,26 @@ let fn = function t() {
       react: null,
       html: null
     };
-    defaultRules.mailto = obj15;
-    const obj16 = {
+    defaultRules.mailto = obj18;
+    const obj19 = {
       order: 16,
       requiredFirstCharacters: ["h"],
       match: inlineRegex(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
       parse(content, arg1, arg2) {
           obj = { type: "link", content: null, target: content[1], title: "call" };
-          obj = { type: "text", content: content[1] };
-          const items = [obj];
+          const items = [{ type: "text", content: content[1] }];
           obj.content = items;
           return obj;
         },
       react: null,
       html: null
     };
-    defaultRules.url = obj16;
-    const obj17 = { order: 17, requiredFirstCharacters: ["["], match: null, parse: null, react: null, html: null };
+    defaultRules.url = obj19;
+    const obj20 = { order: 17, requiredFirstCharacters: ["["], match: null, parse: null, react: null, html: null };
     const _RegExp3 = RegExp;
     const regExp5 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\(\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*\\)");
-    obj17.match = inlineRegex(regExp5);
-    obj17.parse = function parse(arg0, fn, key) {
+    obj20.match = inlineRegex(regExp5);
+    obj20.parse = function parse(arg0, fn, key) {
       obj = { content: fn(arg0[1], key), target: null, title: null };
       if (typeof unescapeUrl === "function") {
         obj.target = str.replace(re18, "$1");
@@ -890,7 +886,7 @@ let fn = function t() {
       }
       str = arg0[2];
     };
-    obj17.react = function react(target, fn, key) {
+    obj20.react = function react(target, fn, key) {
       const props = { href: sanitizeUrl(target.target), title: target.title, children: fn(target.content, key) };
       if (typeof reactElement === "function") {
         const element = { $$typeof: num, type: "a", key: null, ref: null, props: null, _owner: null };
@@ -905,15 +901,15 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj17.html = function html(target, fn, key) {
+    obj20.html = function html(target, fn, key) {
       return htmlTag("a", fn(target.content, key), { href: sanitizeUrl(target.target), title: target.title });
     };
-    defaultRules.link = obj17;
-    const obj18 = { order: 18, match: null, parse: null, react: null, html: null };
+    defaultRules.link = obj20;
+    const obj21 = { order: 18, match: null, parse: null, react: null, html: null };
     const _RegExp4 = RegExp;
     const regExp6 = new RegExp("^!\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\(\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*\\)");
-    obj18.match = inlineRegex(regExp6);
-    obj18.parse = function parse(alt, arg1, arg2) {
+    obj21.match = inlineRegex(regExp6);
+    obj21.parse = function parse(alt, arg1, arg2) {
       obj = { alt: alt[1], target: null, title: null };
       if (typeof unescapeUrl === "function") {
         obj.target = str.replace(re18, "$1");
@@ -924,7 +920,7 @@ let fn = function t() {
       }
       str = alt[2];
     };
-    obj18.react = function react(alt, arg1, key) {
+    obj21.react = function react(alt, arg1, key) {
       const props = { src: sanitizeUrl(alt.target), alt: alt.alt, title: alt.title };
       if (typeof reactElement === "function") {
         const element = { $$typeof: num, type: "img", key: null, ref: null, props: null, _owner: null };
@@ -939,15 +935,15 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj18.html = function html(alt, arg1, arg2) {
+    obj21.html = function html(alt, arg1, arg2) {
       return htmlTag("img", "", { src: sanitizeUrl(alt.target), alt: alt.alt, title: alt.title }, false);
     };
-    defaultRules.image = obj18;
-    const obj19 = { order: 19, match: null, parse: null, react: null, html: null };
+    defaultRules.image = obj21;
+    const obj22 = { order: 19, match: null, parse: null, react: null, html: null };
     const _RegExp5 = RegExp;
     const regExp7 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\s*\\[([^\\]]*)\\]");
-    obj19.match = inlineRegex(regExp7);
-    obj19.parse = function parse(arg0, fn, _defs) {
+    obj22.match = inlineRegex(regExp7);
+    obj22.parse = function parse(arg0, fn, _defs) {
       obj = { type: "link", content: fn(arg0[1], _defs) };
       if (typeof parseRef === "function") {
         const formatted = arg0[2] || arg0[1].replace(/\s+/g, " ").toLowerCase();
@@ -968,12 +964,12 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    defaultRules.reflink = obj19;
-    const obj20 = { order: 20, match: null, parse: null, react: null, html: null };
+    defaultRules.reflink = obj22;
+    const obj23 = { order: 20, match: null, parse: null, react: null, html: null };
     const _RegExp6 = RegExp;
     const regExp8 = new RegExp("^!\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\s*\\[([^\\]]*)\\]");
-    obj20.match = inlineRegex(regExp8);
-    obj20.parse = function parse(alt, arg1, _defs) {
+    obj23.match = inlineRegex(regExp8);
+    obj23.parse = function parse(alt, arg1, _defs) {
       obj = { type: "image", alt: alt[1] };
       if (typeof parseRef === "function") {
         const formatted = alt[2] || alt[1].replace(/\s+/g, " ").toLowerCase();
@@ -994,8 +990,8 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    defaultRules.refimage = obj20;
-    const obj21 = { order: 21, match: null, quality: null, parse: null, react: null, html: null };
+    defaultRules.refimage = obj23;
+    const obj24 = { order: 21, match: null, quality: null, parse: null, react: null, html: null };
     function parserFor(rules, arg1) {
       dependencyMap = rules;
       closure_1 = arg1;
@@ -1092,8 +1088,8 @@ let fn = function t() {
           return items;
         } else {
           const _Object = Object;
-          obj = { _parseDepth: sum };
-          const merged = Object.assign({}, tmp, obj);
+          const obj2 = { _parseDepth: sum };
+          const merged = Object.assign({}, tmp, obj2);
           obj = merged;
           let str3 = content;
           if (content) {
@@ -1217,7 +1213,7 @@ let fn = function t() {
                   if (null == parsed.type) {
                     parsed.type = tmp11;
                   }
-                  let arr = items.push(parsed);
+                  let arr2 = items.push(parsed);
                 }
                 merged.prevCapture = tmp9;
                 str3 = str3.substring(merged.prevCapture[0].length);
@@ -1284,14 +1280,14 @@ let fn = function t() {
       return str.replace(re9, "").replace(re8, "    ");
     }
     const regExp9 = new RegExp(str8 + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)");
-    obj21.match = inlineRegex(regExp9);
-    obj21.quality = function quality(arg0) {
+    obj24.match = inlineRegex(regExp9);
+    obj24.quality = function quality(arg0) {
       return arg0[0].length + 0.2;
     };
-    obj21.parse = function parse(arg0, fn, key) {
+    obj24.parse = function parse(arg0, fn, key) {
       return { content: fn(arg0[2] || arg0[1], key) };
     };
-    obj21.react = function react(content, fn, key) {
+    obj24.react = function react(content, fn, key) {
       const props = { children: fn(content.content, key) };
       if (typeof reactElement === "function") {
         const element = { $$typeof: num, type: "em", key: null, ref: null, props: null, _owner: null };
@@ -1306,11 +1302,11 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj21.html = function html(content, fn, key) {
+    obj24.html = function html(content, fn, key) {
       return htmlTag("em", fn(content.content, key));
     };
-    defaultRules.em = obj21;
-    const obj22 = {
+    defaultRules.em = obj24;
+    const obj25 = {
       order: 21,
       requiredFirstCharacters: ["*"],
       match: inlineRegex(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
@@ -1337,8 +1333,8 @@ let fn = function t() {
           return htmlTag("strong", fn(content.content, key));
         }
     };
-    defaultRules.strong = obj22;
-    const obj23 = {
+    defaultRules.strong = obj25;
+    const obj26 = {
       order: 21,
       requiredFirstCharacters: ["_"],
       match: inlineRegex(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
@@ -1365,8 +1361,8 @@ let fn = function t() {
           return htmlTag("u", fn(content.content, key));
         }
     };
-    defaultRules.u = obj23;
-    const obj24 = {
+    defaultRules.u = obj26;
+    const obj27 = {
       order: 22,
       requiredFirstCharacters: ["~"],
       match: inlineRegex(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
@@ -1390,8 +1386,8 @@ let fn = function t() {
           return htmlTag("del", fn(content.content, key));
         }
     };
-    defaultRules.del = obj24;
-    const obj25 = {
+    defaultRules.del = obj27;
+    const obj28 = {
       order: 23,
       requiredFirstCharacters: ["`"],
       match: inlineRegex(/^(`+)([\s\S]*?[^`])\1(?!`)/),
@@ -1423,8 +1419,8 @@ let fn = function t() {
           }
         }
     };
-    defaultRules.inlineCode = obj25;
-    const obj26 = {
+    defaultRules.inlineCode = obj28;
+    const obj29 = {
       order: 24,
       requiredFirstCharacters: [" "],
       match: anyScopeRegex(/^ {2,}\n/),
@@ -1447,8 +1443,8 @@ let fn = function t() {
           return "<br>";
         }
     };
-    defaultRules.br = obj26;
-    const obj27 = {
+    defaultRules.br = obj29;
+    const obj30 = {
       order: 25,
       match: anyScopeRegex(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/),
       parse(content, arg1, arg2) {
@@ -1466,7 +1462,7 @@ let fn = function t() {
           }
         }
     };
-    defaultRules.text = obj27;
+    defaultRules.text = obj30;
     function outputFor(Array, html, arg2) {
       let _Array = Array;
       closure_1 = html;
@@ -1566,7 +1562,7 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    const obj28 = {
+    const obj31 = {
       defaultRules,
       parserFor,
       outputFor,
@@ -1593,7 +1589,7 @@ let fn = function t() {
           }
         },
       ReactMarkdown(obj) {
-          let props = {};
+          const props = {};
           for (const key10006 in arg0) {
             let tmp10 = "source" !== key10006;
             if (!tmp10) {
@@ -1617,8 +1613,8 @@ let fn = function t() {
           }
           if (typeof markdownToReact === "function") {
             if (typeof defaultBlockParse === "function") {
-              props = { inline: false };
-              props.children = tmp4(parserForResult(tmp3, props), undefined);
+              const obj2 = { inline: false };
+              props.children = tmp4(parserForResult(tmp3, obj2), undefined);
               if (typeof reactElement === "function") {
                 const element = { $$typeof: num, type: "div", key: undefined, ref: null, props, _owner: null };
                 return element;
@@ -1772,7 +1768,7 @@ let fn = function t() {
           return applyArgumentsResult;
         }
     };
-    return obj28;
+    return obj31;
   } catch (err) {
   }
 };

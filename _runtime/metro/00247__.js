@@ -42,9 +42,8 @@ let obj = {
   },
   addEventListener(arg0, arg1) {
     closure_0 = arg1;
-    let arr = closure_3;
     if (-1 === closure_3.indexOf(arg1)) {
-      arr = arr.push(arg1);
+      closure_3.push(arg1);
     }
     return {
       remove() {

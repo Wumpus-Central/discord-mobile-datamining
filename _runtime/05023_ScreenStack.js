@@ -21,7 +21,6 @@ const jsx = fn(21).jsx;
 export default function ScreenStack(arg0) {
   ({ goBackGesture, screensRefs, currentScreenId, screenEdgeGesture, nativeContainerStyle } = arg0);
   ({ transitionAnimation, onFinishTransitioning, children } = arg0);
-  let obj = noop;
   let current;
   if (screensRefs != null) {
     current = screensRefs.current;
@@ -31,12 +30,12 @@ export default function ScreenStack(arg0) {
   }
   const ref = noop.useRef(current);
   const tmp = _objectWithoutProperties(arg0, closure_3);
-  const context = obj.useContext(_mod5025.GHContext);
-  obj = {
+  const context = noop.useContext(_mod5025.GHContext);
+  const obj2 = {
     stackUseEffectCallback(ref1) {},
   };
-  const ref1 = obj.useRef(null);
-  const effect = obj.useEffect(() => {
+  const ref1 = noop.useRef(null);
+  const effect = noop.useEffect(() => {
     const current = ref2.current;
     const result = current.stackUseEffectCallback(ref1);
   });
@@ -48,9 +47,11 @@ export default function ScreenStack(arg0) {
     undefined !== goBackGesture && null === ref && undefined === currentScreenId,
     "Custom Screen Transition require screensRefs and currentScreenId to be provided.",
   );
-  obj = { value: ref, children: null };
-  const obj1 = {
-    gestureDetectorBridge: obj.useRef(obj),
+  const obj3 = { value: ref, children: null };
+  const obj4 = {
+    gestureDetectorBridge: noop.useRef({
+      stackUseEffectCallback(ref1) {},
+    }),
     goBackGesture,
     transitionAnimation,
     screenEdgeGesture: null,
@@ -61,11 +62,13 @@ export default function ScreenStack(arg0) {
   if (screenEdgeGesture == null) {
     screenEdgeGesture = false;
   }
-  obj1.screenEdgeGesture = screenEdgeGesture;
-  obj1.screensRefs = ref;
-  obj1.currentScreenId = currentScreenId;
-  const obj2 = {};
-  const ref2 = obj.useRef(obj);
+  obj4.screenEdgeGesture = screenEdgeGesture;
+  obj4.screensRefs = ref;
+  obj4.currentScreenId = currentScreenId;
+  const obj5 = {};
+  const ref2 = noop.useRef({
+    stackUseEffectCallback(ref1) {},
+  });
   const tmp12 = undefined !== goBackGesture && null === ref && undefined === currentScreenId;
   const tmp9 = "GHWrapper" !== context.name && undefined !== goBackGesture;
   const merged = Object.assign(tmp);
@@ -73,14 +76,16 @@ export default function ScreenStack(arg0) {
   if (nativeContainerStyle != null) {
     backgroundColor = nativeContainerStyle.backgroundColor;
   }
-  obj2.nativeContainerBackgroundColor = backgroundColor;
-  obj2.onFinishTransitioning = onFinishTransitioning;
-  obj2.ref = ref1;
-  obj2.children = children;
-  obj1.children = jsx(_modDef5026, {});
-  obj.children = (
+  obj5.nativeContainerBackgroundColor = backgroundColor;
+  obj5.onFinishTransitioning = onFinishTransitioning;
+  obj5.ref = ref1;
+  obj5.children = children;
+  obj4.children = jsx(_modDef5026, {});
+  obj3.children = (
     <context
-      gestureDetectorBridge={obj.useRef(obj)}
+      gestureDetectorBridge={noop.useRef({
+        stackUseEffectCallback(ref1) {},
+      })}
       goBackGesture={goBackGesture}
       transitionAnimation={transitionAnimation}
       screenEdgeGesture={null}

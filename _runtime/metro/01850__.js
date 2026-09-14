@@ -44,9 +44,8 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
     }),
   );
   let derivedValue;
+  const sharedValue = bottomPadding(contentInset[3]).useSharedValue(null);
   let obj = bottomPadding(contentInset[3]);
-  const sharedValue = obj.useSharedValue(null);
-  let obj1 = bottomPadding(contentInset[3]);
   class T {
     constructor() {
       num = 0;
@@ -69,7 +68,7 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
       if (!num3) {
         num3 = 0;
       }
-      rect = { top: num + num3, bottom: null, left: null, right: null };
+      rect1 = { top: num + num3, bottom: null, left: null, right: null };
       num4 = undefined;
       if (rect != null) {
         num4 = rect.bottom;
@@ -77,7 +76,7 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
       if (!num4) {
         num4 = 0;
       }
-      rect.bottom = num2 + num4;
+      rect1.bottom = num2 + num4;
       num5 = undefined;
       if (rect != null) {
         num5 = rect.left;
@@ -85,7 +84,7 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
       if (!num5) {
         num5 = 0;
       }
-      rect.left = num5;
+      rect1.left = num5;
       num6 = undefined;
       if (rect != null) {
         num6 = rect.right;
@@ -93,8 +92,8 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
       if (!num6) {
         num6 = 0;
       }
-      rect.right = num6;
-      obj.effective = rect;
+      rect1.right = num6;
+      obj.effective = rect1;
       return obj;
     }
   }
@@ -122,8 +121,8 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
     right = contentInset.right;
   }
   items[4] = right;
-  derivedValue = obj1.useDerivedValue(T, items);
-  let tmp2Result = tmp2(tmp3[3]);
+  derivedValue = bottomPadding(contentInset[3]).useDerivedValue(T, items);
+  const obj2 = bottomPadding(contentInset[3]);
   class B {
     constructor() {
       return closure_8.value.effective;
@@ -152,13 +151,13 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
       }
     }
   };
-  obj = { onContentInsetChange, runOnJS: tmp2(tmp3[3]).runOnJS };
-  fn.__closure = obj;
+  const tmp2Result = bottomPadding(contentInset[3]);
+  fn.__closure = { onContentInsetChange, runOnJS: bottomPadding(contentInset[3]).runOnJS };
   fn.__workletHash = 12461544130657;
   fn.__initData = sharedValue;
   const items1 = [onContentInsetChange];
   const animatedReaction = tmp2Result.useAnimatedReaction(B, fn, items1);
-  tmp2Result = tmp2(tmp3[3]);
+  const obj3 = { onContentInsetChange, runOnJS: bottomPadding(contentInset[3]).runOnJS };
   const fn2 = function w() {
     value = derivedValue.value;
     let iter = scrollIndicatorPadding;
@@ -169,7 +168,7 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
     if (inverted) {
       num = iter.value;
     }
-    let rect = scrollIndicatorInsets;
+    const rect = scrollIndicatorInsets;
     let num2;
     if (scrollIndicatorInsets != null) {
       num2 = rect.top;
@@ -195,24 +194,24 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
     if (!num4) {
       num4 = 0;
     }
-    rect = { bottom: num3 + num4, top: sum, right: null, left: null };
+    const rect1 = { bottom: num3 + num4, top: sum, right: null, left: null };
     let right;
     if (rect != null) {
       right = rect.right;
     }
-    rect.right = right;
+    rect1.right = right;
     let left;
     if (rect != null) {
       left = rect.left;
     }
-    rect.left = left;
-    obj.scrollIndicatorInsets = rect;
+    rect1.left = left;
+    obj.scrollIndicatorInsets = rect1;
     ({ bottom: obj.contentInsetBottom, top: obj.contentInsetTop } = value.dynamic);
     if (contentOffsetY) {
-      value = contentOffsetY.value;
-      if (value !== sharedValue.value) {
-        sharedValue.value = value;
-        const point = { x: 0, y: value };
+      value2 = contentOffsetY.value;
+      if (value2 !== sharedValue.value) {
+        sharedValue.value = value2;
+        const point = { x: 0, y: value2 };
         obj.contentOffset = point;
       }
     }
@@ -251,16 +250,16 @@ export default fn(19).forwardRef((bottomPadding, ref) => {
   items2[3] = left1;
   items2[4] = inverted;
   items2[5] = contentOffsetY;
-  const animatedProps = tmp2Result.useAnimatedProps(fn2, items2);
-  obj = {
+  const animatedProps = bottomPadding(contentInset[3]).useAnimatedProps(fn2, items2);
+  const obj4 = {
     animatedProps,
     applyWorkaroundForContentInsetHitTestBug,
-    style: scrollIndicatorPadding(tmp3[5]).container,
+    style: scrollIndicatorPadding(contentInset[5]).container,
     children: null,
   };
-  obj1 = { ref, animatedProps };
+  const obj5 = { ref, animatedProps };
   const merged1 = Object.assign(merged);
-  obj1.children = children;
-  obj.children = scrollIndicatorInsets(ScrollViewComponent, obj1);
-  return scrollIndicatorInsets(inverted, obj);
+  obj5.children = children;
+  obj4.children = scrollIndicatorInsets(ScrollViewComponent, obj5);
+  return scrollIndicatorInsets(inverted, obj4);
 });

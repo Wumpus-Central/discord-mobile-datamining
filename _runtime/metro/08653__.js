@@ -53,7 +53,13 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = {
+    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const obj = {
       name: props.id,
       refX: props.refX,
       refY: props.refY,
@@ -62,15 +68,9 @@ const entry = {
       markerWidth,
       markerHeight,
     };
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(Marker(8587)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
+    obj2.children = children;
     return jsx(Marker(8654), {
       ref(arg0) {
         return self.refMethod(arg0);

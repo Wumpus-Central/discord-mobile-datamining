@@ -7,7 +7,7 @@ import severityLevelFromString from "../00785_severityLevelFromString.js";
 import setupIntegration from "../00752_setupIntegration.js";
 
 function addConsoleBreadcrumb(level, args) {
-  let obj = {
+  const obj = {
     category: "console",
     data: { arguments: args, logger: "console" },
     level: severityLevelFromString.severityLevelFromString(level),
@@ -30,10 +30,10 @@ function addConsoleBreadcrumb(level, args) {
           obj.data.arguments = substr;
         } else {
           if (!("util" in _mod686.GLOBAL_OBJ)) {
-            let tmpResult = _mod697;
-            let safeJoinResult = tmpResult.safeJoin(substr, " ");
+            let safeJoinResult = _mod697.safeJoin(substr, " ");
             const _HermesInternal = HermesInternal;
             const combined = "Assertion failed: " + safeJoinResult;
+            const tmpResult = _mod697;
           }
           const util2 = _mod686.GLOBAL_OBJ.util;
           const format2 = util2.format;
@@ -43,12 +43,12 @@ function addConsoleBreadcrumb(level, args) {
         }
       }
     }
-    tmpResult = _mod773;
-    obj = { input: args, level };
-    tmpResult.addBreadcrumb(obj, obj);
+    const obj3 = { input: args, level };
+    _mod773.addBreadcrumb(obj, obj3);
+    const tmpResult3 = _mod773;
   }
   applyResult = _mod697.safeJoin(args, " ");
-  const tmpResult1 = _mod697;
+  const tmpResult4 = _mod697;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -64,7 +64,7 @@ export const consoleIntegration = setupIntegration.defineIntegration(() => {
     CONSOLE_LEVELS = set(689).CONSOLE_LEVELS;
   }
   set = new Set(CONSOLE_LEVELS);
-  obj = {
+  return {
     name: "Console",
     setup(arg0) {
       closure_0 = arg0;
@@ -80,5 +80,4 @@ export const consoleIntegration = setupIntegration.defineIntegration(() => {
       });
     },
   };
-  return obj;
 });

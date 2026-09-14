@@ -38,10 +38,10 @@ function mapStringToNumericComponents(str) {
     if (!tmp) {
       num3 = 0;
     }
-    let obj = { isColor: true, components: null };
+    const obj2 = { isColor: true, components: null };
     const items = [(4278190080 & num3) >>> 24, (16711680 & num3) >>> 16, (65280 & num3) >>> 8, (255 & num3) / 255];
-    obj.components = items;
-    return obj;
+    obj2.components = items;
+    return obj2;
   } else {
     const items1 = [];
     let match = re7.exec(str);
@@ -52,7 +52,7 @@ function mapStringToNumericComponents(str) {
         let arr = items1.push(str.substring(num, match.index));
       }
       let _parseFloat = parseFloat;
-      arr = items1.push(parseFloat(match[0]));
+      let arr2 = items1.push(parseFloat(match[0]));
       num = match.index + match[0].length;
       match = re7.exec(str);
       num2 = num;
@@ -61,7 +61,7 @@ function mapStringToNumericComponents(str) {
     if (num2 < "outputRange must contain color or value with numeric component".length) {
       items1.push(str.substring(num2, str.length));
     }
-    obj = { isColor: false, components: items1 };
+    const obj = { isColor: false, components: items1 };
     return obj;
   }
   const tmp2 = AnimatedInterpolation(38);
@@ -483,17 +483,17 @@ let items = [
   {
     key: "interpolate",
     value: function interpolate(_config) {
-      let obj = Object.create(AnimatedInterpolation.prototype);
-      _classCallCheck(obj, AnimatedInterpolation);
+      const obj2 = Object.create(AnimatedInterpolation.prototype);
+      _classCallCheck(obj2, AnimatedInterpolation);
       const items = [_config];
-      obj = _getPrototypeOf(AnimatedInterpolation);
+      const obj = _getPrototypeOf(AnimatedInterpolation);
       if (metroRequire()) {
         const _Reflect = Reflect;
-        let constructResult = Reflect.construct(obj, items, _getPrototypeOf(obj).constructor);
+        let constructResult = Reflect.construct(obj, items, _getPrototypeOf(obj2).constructor);
       } else {
-        constructResult = obj.apply(obj, items);
+        constructResult = obj.apply(obj2, items);
       }
-      const tmp4Result = _possibleConstructorReturn(obj, constructResult);
+      const tmp4Result = _possibleConstructorReturn(obj2, constructResult);
       tmp4Result._parent = this;
       tmp4Result._config = _config;
       return tmp4Result;

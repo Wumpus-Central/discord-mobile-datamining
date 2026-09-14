@@ -6,17 +6,16 @@ import _slicedToArray from "00032__.js";
 
 require = arg1;
 function getTagName(dataView, sum1) {
-  let obj = _mod5294;
-  const tmp = _slicedToArray(obj.getPascalStringFromDataView(dataView, sum1), 2);
+  const tmp = _slicedToArray(_mod5294.getPascalStringFromDataView(dataView, sum1), 2);
   const first = tmp[0];
-  obj = { tagName: tmp[1], tagNameSize: null };
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
   let num = 0;
   const sum = 1 + first;
   if (first % 2 === 0) {
     num = 1;
   }
-  obj.tagNameSize = sum + num;
-  return obj;
+  obj2.tagNameSize = sum + num;
+  return obj2;
 }
 let c4 = "8BIM";
 let c5 = 2;
@@ -25,10 +24,9 @@ let c6 = 4;
 
 export default {
   read(arg0, arg1) {
-    let obj = _mod5294;
     const uint8Array = new Uint8Array(arg0);
-    const dataView = obj.getDataView(uint8Array.buffer);
-    obj = {};
+    const dataView = _mod5294.getDataView(uint8Array.buffer);
+    const obj2 = {};
     let num = 0;
     if (0 < arg0.length) {
       const sum = num + React5;
@@ -41,28 +39,28 @@ export default {
       const longAt = _modDef5311.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
-        let tmp5Result = _mod5294;
-        const dataView1 = tmp5Result.getDataView(dataView.buffer, sum3, longAt);
-        obj = { id: shortAt, value: null };
-        tmp5Result = _mod5294;
-        obj.value = tmp5Result.getStringFromDataView(dataView1, 0, longAt);
+        const dataView1 = _mod5294.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod5294;
+        obj7.value = _mod5294.getStringFromDataView(dataView1, 0, longAt);
         if (_modDef5334[shortAt]) {
           try {
-            obj.description = _modDef5334[shortAt].description(dataView1);
+            obj7.description = _modDef5334[shortAt].description(dataView1);
             if (!name) {
               name = _modDef5334[shortAt].name;
             }
-            obj[name] = obj;
+            obj2[name] = obj7;
           } catch (err) {
             tmp.description = tmp2;
           }
         } else if (arg1) {
           const _HermesInternal = HermesInternal;
-          obj["undefined-" + shortAt] = obj;
+          obj2["undefined-" + shortAt] = obj7;
         }
+        const tmp5Result2 = _mod5294;
       }
       num = sum3 + (longAt + (longAt % 2));
     }
-    return obj;
+    return obj2;
   },
 };

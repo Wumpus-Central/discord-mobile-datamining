@@ -1,6 +1,6 @@
 // _runtime/metro/04051__.js
 import Parser2 from "../04031_Parser.js";
-import 04049__ from "04049__.js";
+import module_4049_mod from "04049__.js";
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -54,6 +54,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4049 = module_4049_mod;
 if (!module_4049) {
   let obj = { default: module_4049 };
   let tmp3 = obj;
@@ -99,7 +100,12 @@ class StandAloneLocalDayParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -149,8 +155,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true } };
-StandAloneLocalDayParser.prototype = Object.create(prototype, obj);
+StandAloneLocalDayParser.prototype = Object.create(prototype, {
+  constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true },
+});
 if (Parser) {
   _setPrototypeOf(StandAloneLocalDayParser, Parser);
 }
@@ -216,25 +223,40 @@ const entry = {
   value: function parse(arg0, arg1, ordinalNumber, arg3) {
     const weekStartsOn = arg3;
     function valueCallback(arg0) {
-      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
+      return ((arg0 + weekStartsOn.weekStartsOn + 6) % 7) + 7 * Math.floor((arg0 - 1) / 7);
     }
     if ("c" !== arg1) {
       if ("cc" !== arg1) {
         if ("co" === arg1) {
           return _createSuperInternal(4033).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
         } else if ("ccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+          return (
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
+          );
         } else if ("ccccc" === arg1) {
           return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
         } else if ("cccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+          return (
+            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
+          );
         } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+          return (
+            ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
+          );
         }
       }
     }
-    return _createSuperInternal(4033).mapValue(_createSuperInternal(4033).parseNDigits(arg1.length, arg0), valueCallback);
-  }
+    return _createSuperInternal(4033).mapValue(
+      _createSuperInternal(4033).parseNDigits(arg1.length, arg0),
+      valueCallback,
+    );
+  },
 };
 let items = [
   entry,
@@ -246,7 +268,7 @@ let items = [
         tmp = arg1 <= 6;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -254,8 +276,8 @@ let items = [
       const defaultResult = module_4049.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

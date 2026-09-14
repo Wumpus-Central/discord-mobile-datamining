@@ -25,17 +25,19 @@ export default {
     );
     let objectAssignResult = ifd;
     if (undefined !== ifd[c3]) {
-      const tmp3Result = get0thIfdOffset;
-      objectAssignResult = tmp3Result.objectAssign(
-        ifd,
-        tmp3Result.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
-    }
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result2 = get0thIfdOffset;
+      const tmp3Result6 = get0thIfdOffset;
       objectAssignResult = _mod5294.objectAssign(
+        ifd,
+        tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
+      );
+      const tmp3Result = _mod5294;
+    }
+    let objectAssignResult3 = objectAssignResult;
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result8 = get0thIfdOffset;
+      objectAssignResult3 = _mod5294.objectAssign(
         objectAssignResult,
-        tmp3Result2.readIfd(
+        tmp3Result8.readIfd(
           getUint16,
           IFD_TYPE_0TH.IFD_TYPE_GPS,
           c5,
@@ -44,24 +46,24 @@ export default {
           arg2,
         ),
       );
-      const tmp3Result1 = _mod5294;
+      const tmp3Result7 = _mod5294;
     }
-    let objectAssignResult1 = objectAssignResult;
-    if (undefined !== objectAssignResult[c5]) {
-      const tmp3Result4 = get0thIfdOffset;
-      objectAssignResult1 = _mod5294.objectAssign(
-        objectAssignResult,
-        tmp3Result4.readIfd(
+    let objectAssignResult4 = objectAssignResult3;
+    if (undefined !== objectAssignResult3[c5]) {
+      const tmp3Result10 = get0thIfdOffset;
+      objectAssignResult4 = _mod5294.objectAssign(
+        objectAssignResult3,
+        tmp3Result10.readIfd(
           getUint16,
           IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
           c5,
-          c5 + objectAssignResult[tmp19].value,
+          c5 + objectAssignResult3[tmp19].value,
           byteOrder,
           arg2,
         ),
       );
-      const tmp3Result3 = _mod5294;
+      const tmp3Result9 = _mod5294;
     }
-    return { tags: objectAssignResult1, byteOrder };
+    return { tags: objectAssignResult4, byteOrder };
   },
 };

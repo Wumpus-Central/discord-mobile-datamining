@@ -1,7 +1,7 @@
 // _runtime/metro/07721__.js
 import _mod637 from "00637__.js";
 import _mod654 from "00654__.js";
-import noop from "07722__.js";
+import noop_mod from "07722__.js";
 
 if (_mod637) {
   const _module = _mod654;
@@ -12,3 +12,4 @@ if (_mod637) {
   }
   module.exports = noop;
 }
+let noop = noop_mod;

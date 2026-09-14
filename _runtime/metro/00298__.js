@@ -93,15 +93,15 @@ class TextImpl {
     tmp4 = null == busy && null == checked && null == disabled && null == expanded && null == selected;
     tmp5 = accessibilityState;
     if (tmp4) {
-      disabled = undefined;
+      disabled1 = undefined;
       if (tmp5 != null) {
-        disabled = tmp5.disabled;
+        disabled1 = tmp5.disabled;
       }
       tmp8 = disabled2;
       if (disabled2 == null) {
-        tmp8 = disabled;
+        tmp8 = disabled1;
       }
-      tmp9 = tmp8 !== disabled;
+      tmp9 = tmp8 !== disabled1;
       if (tmp9) {
         tmp10 = null != tmp8;
         if (tmp10) {
@@ -109,10 +109,10 @@ class TextImpl {
           tmp10 = false !== tmp8;
         }
         if (!tmp10) {
-          tmp11 = null != disabled;
+          tmp11 = null != disabled1;
           if (tmp11) {
             flag2 = false;
-            tmp11 = false !== disabled;
+            tmp11 = false !== disabled1;
           }
           tmp10 = tmp11;
         }
@@ -177,33 +177,33 @@ class TextImpl {
         if (null != tmp24) {
           tmp58 = null;
           if (typeof tmp24.fontWeight === "number") {
-            obj = {};
+            obj1 = {};
             tmp59 = globalThis;
             _String = String;
-            obj.fontWeight = String(tmp24.fontWeight);
-            tmp58 = obj;
+            obj1.fontWeight = String(tmp24.fontWeight);
+            tmp58 = obj1;
           }
           tmp27 = tmp58;
           if (null != tmp24.userSelect) {
             tmp28 = closure_12;
-            obj1 = tmp58;
+            obj17 = tmp58;
             if (!tmp58) {
-              obj1 = {};
+              obj17 = {};
             }
-            obj1.userSelect = undefined;
-            tmp27 = obj1;
+            obj17.userSelect = undefined;
+            tmp27 = obj17;
             selectable = closure_12[tmp24.userSelect];
           }
           tmp29 = tmp27;
           if (null != tmp24.verticalAlign) {
-            obj2 = tmp27;
+            obj18 = tmp27;
             if (!tmp27) {
-              obj2 = {};
+              obj18 = {};
             }
             tmp30 = closure_13;
-            obj2.textAlignVertical = closure_13[tmp24.verticalAlign];
-            obj2.verticalAlign = undefined;
-            tmp29 = obj2;
+            obj18.textAlignVertical = closure_13[tmp24.verticalAlign];
+            obj18.verticalAlign = undefined;
+            tmp29 = obj18;
           }
           tmp25 = selectable;
           tmp26 = style;
@@ -256,20 +256,20 @@ class TextImpl {
           merged.role = tmp17;
         }
         if (tmp15) {
-          obj3 = { onLongPress: null, onPress: null, onPressIn: null, onPressOut: null, onResponderGrant: null, onResponderMove: null, onResponderRelease: null, onResponderTerminate: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null, pressRetentionOffset: null, suppressHighlighting: null };
-          obj3.onLongPress = onLongPress;
-          obj3.onPress = onPress;
-          obj3.onPressIn = onPressIn;
-          obj3.onPressOut = onPressOut;
-          obj3.onResponderGrant = onResponderGrant;
-          obj3.onResponderMove = onResponderMove;
-          obj3.onResponderRelease = onResponderRelease;
-          obj3.onResponderTerminate = onResponderTerminate;
-          obj3.onResponderTerminationRequest = onResponderTerminationRequest;
-          obj3.onStartShouldSetResponder = onStartShouldSetResponder;
-          obj3.pressRetentionOffset = pressRetentionOffset;
-          obj3.suppressHighlighting = suppressHighlighting;
-          obj5 = obj3;
+          obj19 = { onLongPress: null, onPress: null, onPressIn: null, onPressOut: null, onResponderGrant: null, onResponderMove: null, onResponderRelease: null, onResponderTerminate: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null, pressRetentionOffset: null, suppressHighlighting: null };
+          obj19.onLongPress = onLongPress;
+          obj19.onPress = onPress;
+          obj19.onPressIn = onPressIn;
+          obj19.onPressOut = onPressOut;
+          obj19.onResponderGrant = onResponderGrant;
+          obj19.onResponderMove = onResponderMove;
+          obj19.onResponderRelease = onResponderRelease;
+          obj19.onResponderTerminate = onResponderTerminate;
+          obj19.onResponderTerminationRequest = onResponderTerminationRequest;
+          obj19.onStartShouldSetResponder = onStartShouldSetResponder;
+          obj19.pressRetentionOffset = pressRetentionOffset;
+          obj19.suppressHighlighting = suppressHighlighting;
+          obj21 = obj19;
         }
         tmp34 = useContext;
         if (useContext(tmp22(tmp23[6]))) {
@@ -277,23 +277,23 @@ class TextImpl {
           merged.children = children;
           tmp51 = jsx;
           if (tmp15) {
-            obj4 = { ref: null, textProps: null, textPressabilityProps: null };
-            obj4.ref = ref;
-            obj4.textProps = merged;
+            obj20 = { ref: null, textProps: null, textPressabilityProps: null };
+            obj20.ref = ref;
+            obj20.textProps = merged;
             tmp57 = closure_10;
-            if (obj5 == null) {
-              obj5 = {};
+            if (obj21 == null) {
+              obj21 = {};
             }
-            obj4.textPressabilityProps = obj5;
-            tmp51Result = tmp51(tmp57, obj4);
+            obj20.textPressabilityProps = obj21;
+            tmp51Result = tmp51(tmp57, obj20);
           } else {
             tmp52 = closure_0;
-            obj6 = {};
-            tmp53 = obj6;
+            obj22 = {};
+            tmp53 = obj22;
             tmp54 = merged;
             merged1 = Object.assign(merged);
-            obj6.ref = ref;
-            tmp51Result = tmp51(closure_0(tmp23[7]).NativeVirtualText, obj6);
+            obj22.ref = ref;
+            tmp51Result = tmp51(closure_0(tmp23[7]).NativeVirtualText, obj22);
           }
           return tmp51Result;
         } else {
@@ -308,17 +308,17 @@ class TextImpl {
           merged.children = children;
           tmp35 = jsx;
           if (tmp15) {
-            obj7 = { ref: null, selectable: null, textProps: null, textPressabilityProps: null };
-            obj7.ref = ref;
-            obj7.selectable = tmp25;
-            obj7.textProps = merged;
-            obj8 = obj5;
+            obj23 = { ref: null, selectable: null, textProps: null, textPressabilityProps: null };
+            obj23.ref = ref;
+            obj23.selectable = tmp25;
+            obj23.textProps = merged;
+            obj24 = obj21;
             tmp42 = closure_11;
-            if (obj5 == null) {
-              obj8 = {};
+            if (obj21 == null) {
+              obj24 = {};
             }
-            obj7.textPressabilityProps = obj8;
-            tmp35Result = tmp35(tmp42, obj7);
+            obj23.textPressabilityProps = obj24;
+            tmp35Result = tmp35(tmp42, obj23);
           } else {
             flag6 = true;
             if (true === tmp25) {
@@ -328,12 +328,12 @@ class TextImpl {
               tmp36 = closure_0;
               NativeText = closure_0(tmp23[7]).NativeText;
             }
-            obj9 = {};
-            tmp38 = obj9;
+            obj25 = {};
+            tmp38 = obj25;
             tmp39 = merged;
             merged2 = Object.assign(merged);
-            obj9.ref = ref;
-            tmp35Result = tmp35(NativeText, obj9);
+            obj25.ref = ref;
+            tmp35Result = tmp35(NativeText, obj25);
           }
           if (null == children) {
             return tmp35Result;
@@ -367,9 +367,9 @@ class TextImpl {
               tmp48 = jsx;
               tmp49 = closure_1;
               tmp50 = closure_3;
-              obj10 = { value: true, children: null };
-              obj10.children = tmp35Result;
-              return jsx(closure_1(closure_3[6]), obj10);
+              obj26 = { value: true, children: null };
+              obj26.children = tmp35Result;
+              return jsx(closure_1(closure_3[6]), obj26);
             }
             if (typeof children !== "object") {
               return tmp35Result;
@@ -378,9 +378,9 @@ class TextImpl {
         }
       } else {
         if (null == tmp5) {
-          obj11 = { disabled: null };
-          obj11.disabled = disabled2;
-          tmp5 = obj11;
+          obj27 = { disabled: null };
+          obj27.disabled = disabled2;
+          tmp5 = obj27;
         } else {
           tmp5.disabled = tmp8;
         }
@@ -391,25 +391,25 @@ class TextImpl {
         if (busy == null) {
           busy = accessibilityState.busy;
         }
-        obj12 = { busy: null, checked: null, disabled: null, expanded: null, selected: null };
-        obj12.busy = busy;
+        obj28 = { busy: null, checked: null, disabled: null, expanded: null, selected: null };
+        obj28.busy = busy;
         if (checked == null) {
           checked = accessibilityState.checked;
         }
-        obj12.checked = checked;
+        obj28.checked = checked;
         if (disabled == null) {
           disabled = accessibilityState.disabled;
         }
-        obj12.disabled = disabled;
+        obj28.disabled = disabled;
         if (expanded == null) {
           expanded = accessibilityState.expanded;
         }
-        obj12.expanded = expanded;
+        obj28.expanded = expanded;
         if (selected == null) {
           selected = accessibilityState.selected;
         }
-        obj12.selected = selected;
-        obj = obj12;
+        obj28.selected = selected;
+        obj = obj28;
       } else {
         obj = { busy: null, checked: null, disabled: null, expanded: null, selected: null };
         obj.busy = busy;

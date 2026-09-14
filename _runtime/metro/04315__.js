@@ -693,12 +693,12 @@ let fn = () => {
             const obj = /Version\/[\d.]+/i;
           }
           if (isMatch) {
-            userAgent = userAgent2;
+            let userAgent1 = userAgent2;
             if (!userAgent2) {
               const _window3 = window;
-              userAgent = window.navigator.userAgent;
+              userAgent1 = window.navigator.userAgent;
             }
-            isMatch = userAgent.indexOf("Opera Mini") <= -1;
+            isMatch = userAgent1.indexOf("Opera Mini") <= -1;
           }
           if (isMatch) {
             isMatch = !closure_5(userAgent2);
@@ -706,12 +706,12 @@ let fn = () => {
           tmp2 = isMatch;
         }
         if (!tmp2) {
-          let userAgent1 = userAgent;
+          let userAgent3 = userAgent;
           if (!userAgent) {
             const _window4 = window;
-            userAgent1 = window.navigator.userAgent;
+            userAgent3 = window.navigator.userAgent;
           }
-          tmp2 = userAgent1.indexOf("Opera Mini") > -1;
+          tmp2 = userAgent3.indexOf("Opera Mini") > -1;
         }
         if (!tmp2) {
           let str3 = userAgent;
@@ -826,7 +826,7 @@ let fn = () => {
           _events = this._events;
           if (this._events[global]) {
             arr2 = _events[global];
-            arr = arr2.push(module);
+            arr1 = arr2.push(module);
           } else {
             items = [];
             items[0] = module;
@@ -894,18 +894,18 @@ let fn = () => {
             obj = ExtendedPromise;
             tmp = new.target;
             tmp2 = new.target;
-            promise = new ExtendedPromise.Promise(() => { ... });
-            tmp4 = promise;
-            self._promise = promise;
-            obj = global;
+            promise1 = new ExtendedPromise.Promise(() => { ... });
+            tmp4 = promise1;
+            self._promise = promise1;
+            obj1 = global;
             if (!global) {
-              obj = {};
+              obj1 = {};
             }
-            self._onResolve = obj.onResolve || obj.defaultOnResolve;
-            self._onReject = obj.onReject || obj.defaultOnReject;
-            if (obj.shouldCatchExceptions(obj)) {
+            self._onResolve = obj1.onResolve || obj.defaultOnResolve;
+            self._onReject = obj1.onReject || obj.defaultOnReject;
+            if (obj.shouldCatchExceptions(obj1)) {
               _promise = self._promise;
-              catchPromise = _promise.catch(/* F125069 */ function() { ... });
+              catchPromise = _promise.catch(/* F125072 */ function() { ... });
             }
             _resetStateResult = self._resetState();
           } else {
@@ -913,9 +913,9 @@ let fn = () => {
             tmp8 = new.target;
             tmp9 = new.target;
             tmp10 = global;
-            promise1 = new ExtendedPromise.Promise(global);
-            tmp12 = promise1;
-            self._promise = promise1;
+            promise2 = new ExtendedPromise.Promise(global);
+            tmp12 = promise2;
+            self._promise = promise2;
           }
           return;
         }
@@ -1046,12 +1046,12 @@ let fn = () => {
           obj = {};
         }
         const element = <iframe />;
-        obj = closure_2.assign({}, defaultAttributes.defaultAttributes, obj);
+        const obj2 = closure_2.assign({}, defaultAttributes.defaultAttributes, obj);
         if (tmp4) {
-          obj = closure_2.assign(element.style, obj.style);
+          closure_2.assign(element.style, obj2.style);
           delete tmp[tmp2];
         }
-        attributes.setAttributes(element, obj);
+        attributes.setAttributes(element, obj2);
         if (!element.getAttribute("id")) {
           element.id = element.name;
         }
@@ -1358,15 +1358,15 @@ let fn = () => {
               amd1 = typeof window.requirejs.config === "function";
             }
             if (amd1) {
-              let paths = { paths: null };
-              paths = {};
-              paths[fastlane] = combined2;
-              paths.paths = paths;
-              globalThis.requirejs.config(paths);
+              obj2 = { paths: null };
+              const obj3 = {};
+              obj3[fastlane] = combined2;
+              obj2.paths = obj3;
+              globalThis.requirejs.config(obj2);
             }
             const concat = "".concat;
             const combined = "".concat(fastlane, "/");
-            const AXO_ASSET_NAME = paths.AXO_ASSET_NAME;
+            const AXO_ASSET_NAME = obj2.AXO_ASSET_NAME;
             closure_0 = combined.concat(flag ? AXO_ASSET_NAME.minified : AXO_ASSET_NAME.unminified);
             const promise = new Promise((arg0, arg1) => {
               const items = [closure_0];
@@ -1374,20 +1374,20 @@ let fn = () => {
             });
             return promise;
           } else {
-            paths = { id: "axo-id", src: combined2, forceScriptReload: true };
-            return loadScript$1(paths);
+            const obj = { id: "axo-id", src: combined2, forceScriptReload: true };
+            return loadScript$1(obj);
           }
         }
-        constants = {};
+        let obj = {};
         closure_0 = {};
         loadScript$1.clearCache = () => {
           closure_0 = {};
         };
-        constants.loadScript = undefined;
+        obj.loadScript = undefined;
         loadScript$1 = undefined;
-        constants.loadStylesheet = undefined;
-        constants.loadScript = loadScript$1;
-        constants.loadStylesheet = function loadStylesheet(href) {
+        obj.loadStylesheet = undefined;
+        obj.loadScript = loadScript$1;
+        obj.loadStylesheet = function loadStylesheet(href) {
           const element = document.querySelector("link[href=\"".concat(href.href, "\"]"));
           if (element) {
             return Promise.resolve(element);
@@ -1412,42 +1412,42 @@ let fn = () => {
           }
         };
         const fastlane = "fastlane";
-        constants = { AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" }, AXO_ASSET_PATH: "connect-boba", LOCALE_PATH: "".concat("connect-boba", "/locales/"), CDNX_PROD: "https://www.paypalobjects.com" };
+        let obj2 = { AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" }, AXO_ASSET_PATH: "connect-boba", LOCALE_PATH: "".concat("connect-boba", "/locales/"), CDNX_PROD: "https://www.paypalobjects.com" };
         const BT = "BT";
         const PPCP = "PPCP";
-        constants = { client: "client", hostedFields: "hosted-fields" };
-        const obj1 = {};
-        const obj2 = { id: "client", module: "client", amdModule: null, script: null };
-        const obj3 = { unminified: null, minified: null };
-        let combined = "".concat("braintree", "/");
-        obj3.unminified = combined.concat(constants.client);
-        let combined1 = "".concat("braintree", "/");
-        obj3.minified = combined1.concat(constants.client, ".min");
-        obj2.amdModule = obj3;
-        obj2.script = { unminified: "".concat(constants.client, ".js"), minified: "".concat(constants.client, ".min.js") };
-        obj1.client = obj2;
-        const obj5 = { id: "hcf", module: "hostedFields", amdModule: null, script: null };
+        let obj3 = { client: "client", hostedFields: "hosted-fields" };
+        const obj4 = {};
+        const obj5 = { id: "client", module: "client", amdModule: null, script: null };
         const obj6 = { unminified: null, minified: null };
-        let combined2 = "".concat("braintree", "/");
-        obj6.unminified = combined2.concat(constants.hostedFields);
-        let combined3 = "".concat("braintree", "/");
-        obj6.minified = combined3.concat(constants.hostedFields, ".min");
+        let combined = "".concat("braintree", "/");
+        obj6.unminified = combined.concat(obj3.client);
+        let combined1 = "".concat("braintree", "/");
+        obj6.minified = combined1.concat(obj3.client, ".min");
         obj5.amdModule = obj6;
-        const obj4 = { unminified: "".concat(constants.client, ".js"), minified: "".concat(constants.client, ".min.js") };
+        obj5.script = { unminified: "".concat(obj3.client, ".js"), minified: "".concat(obj3.client, ".min.js") };
+        obj4.client = obj5;
+        const obj8 = { id: "hcf", module: "hostedFields", amdModule: null, script: null };
+        const obj9 = { unminified: null, minified: null };
+        let combined2 = "".concat("braintree", "/");
+        obj9.unminified = combined2.concat(obj3.hostedFields);
+        let combined3 = "".concat("braintree", "/");
+        obj9.minified = combined3.concat(obj3.hostedFields, ".min");
+        obj8.amdModule = obj9;
+        const obj7 = { unminified: "".concat(obj3.client, ".js"), minified: "".concat(obj3.client, ".min.js") };
         ({ concat, concat: concat2 } = "");
-        obj5.script = { unminified: "".concat(constants.hostedFields, ".js"), minified: "".concat(constants.hostedFields, ".min.js") };
-        obj1.hostedFields = obj5;
-        arg0.constants = constants;
+        obj8.script = { unminified: "".concat(obj3.hostedFields, ".js"), minified: "".concat(obj3.hostedFields, ".min.js") };
+        obj4.hostedFields = obj8;
+        arg0.constants = obj2;
         arg0.loadAxo = function loadAxo(arg0) {
           const self = this;
-          const f125086 = () => {
+          const f125089 = () => {
             let minified = () => { ... };
             closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
-            obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
+            let obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
             let btSdkVersion = 2;
             if (typeof Symbol === "function") {
               let _Symbol = Symbol;
-              obj[Symbol.iterator] = /* F125080 */ function() { ... };
+              obj[Symbol.iterator] = /* F125083 */ function() { ... };
             }
             return obj;
           };
@@ -1465,11 +1465,11 @@ let fn = () => {
               fn(value);
             } else {
               closure_0 = value;
-              let tmp = value;
+              let tmp4 = value;
               if (!(value instanceof closure_1)) {
-                tmp = new tmp(() => { ... });
+                tmp4 = new tmp(() => { ... });
               }
-              tmp.then(fulfilled, rejected);
+              tmp4.then(fulfilled, rejected);
             }
           });
         };
@@ -1672,42 +1672,39 @@ let fn = () => {
   obj[43] = items42;
   const items43 = [
     (arg0, arg1, arg2) => {
-      let obj = { visa: { niceType: "Visa", type: "visa", patterns: [4], gaps: [4, 8, 12], lengths: [16, 18, 19], code: { name: "CVV", size: 3 } }, mastercard: null, "american-express": null, "diners-club": null, discover: null, jcb: null, unionpay: null, maestro: null, elo: null, mir: null, hiper: null, hipercard: null };
-      obj = { niceType: "Mastercard", type: "mastercard", patterns: null, gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } };
+      const obj = { visa: { niceType: "Visa", type: "visa", patterns: [4], gaps: [4, 8, 12], lengths: [16, 18, 19], code: { name: "CVV", size: 3 } }, mastercard: null, "american-express": { niceType: "American Express", type: "american-express", patterns: [34, 37], gaps: [4, 10], lengths: [15], code: { name: "CID", size: 4 } }, "diners-club": null, discover: null, jcb: null, unionpay: null, maestro: null, elo: null, mir: null, hiper: { niceType: "Hiper", type: "hiper", patterns: [637095, 63737423, 63743358, 637568, 637599, 637609, 637612], gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } }, hipercard: { niceType: "Hipercard", type: "hipercard", patterns: [606282], gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } } };
+      const obj2 = { niceType: "Mastercard", type: "mastercard", patterns: null, gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } };
       const items = [[51, 55], [2221, 2229], [223, 229], [23, 26], [270, 271], 2720];
-      obj.patterns = items;
-      obj.mastercard = obj;
-      obj["american-express"] = { niceType: "American Express", type: "american-express", patterns: [34, 37], gaps: [4, 10], lengths: [15], code: { name: "CID", size: 4 } };
-      obj = { niceType: "Diners Club", type: "diners-club", patterns: null, gaps: [4, 10], lengths: [14, 16, 19], code: { name: "CVV", size: 3 } };
+      obj2.patterns = items;
+      obj.mastercard = obj2;
+      const obj3 = { niceType: "Diners Club", type: "diners-club", patterns: null, gaps: [4, 10], lengths: [14, 16, 19], code: { name: "CVV", size: 3 } };
       const items1 = [[300, 305], 36, 38, 39];
-      obj.patterns = items1;
-      obj["diners-club"] = obj;
-      const obj1 = { niceType: "Discover", type: "discover", patterns: null, gaps: [4, 8, 12], lengths: [16, 19], code: { name: "CID", size: 3 } };
+      obj3.patterns = items1;
+      obj["diners-club"] = obj3;
+      const obj4 = { niceType: "Discover", type: "discover", patterns: null, gaps: [4, 8, 12], lengths: [16, 19], code: { name: "CID", size: 3 } };
       const items2 = [6011, [644, 649], 65];
-      obj1.patterns = items2;
-      obj.discover = obj1;
-      const obj2 = { niceType: "JCB", type: "jcb", patterns: null, gaps: [4, 8, 12], lengths: [16, 17, 18, 19], code: { name: "CVV", size: 3 } };
+      obj4.patterns = items2;
+      obj.discover = obj4;
+      const obj5 = { niceType: "JCB", type: "jcb", patterns: null, gaps: [4, 8, 12], lengths: [16, 17, 18, 19], code: { name: "CVV", size: 3 } };
       const items3 = [2131, 1800, [3528, 3589]];
-      obj2.patterns = items3;
-      obj.jcb = obj2;
-      const obj3 = { niceType: "UnionPay", type: "unionpay", patterns: null, gaps: [4, 8, 12], lengths: [14, 15, 16, 17, 18, 19], code: { name: "CVN", size: 3 } };
+      obj5.patterns = items3;
+      obj.jcb = obj5;
+      const obj6 = { niceType: "UnionPay", type: "unionpay", patterns: null, gaps: [4, 8, 12], lengths: [14, 15, 16, 17, 18, 19], code: { name: "CVN", size: 3 } };
       const items4 = [620, [62100, 62182], [62184, 62187], [62185, 62197], [62200, 62205], [622010, 622999], 622018, [62207, 62209], [623, 626], 6270, 6272, 6276, [627700, 627779], [627781, 627799], [6282, 6289], 6291, 6292, 810, [8110, 8131], [8132, 8151], [8152, 8163], [8164, 8171]];
-      obj3.patterns = items4;
-      obj.unionpay = obj3;
-      const obj4 = { niceType: "Maestro", type: "maestro", patterns: null, gaps: [4, 8, 12], lengths: [12, 13, 14, 15, 16, 17, 18, 19], code: { name: "CVC", size: 3 } };
+      obj6.patterns = items4;
+      obj.unionpay = obj6;
+      const obj7 = { niceType: "Maestro", type: "maestro", patterns: null, gaps: [4, 8, 12], lengths: [12, 13, 14, 15, 16, 17, 18, 19], code: { name: "CVC", size: 3 } };
       const items5 = [493698, [500000, 504174], [504176, 506698], [506779, 508999], [56, 59], 63, 67, 6];
-      obj4.patterns = items5;
-      obj.maestro = obj4;
-      const obj5 = { niceType: "Elo", type: "elo", patterns: null, gaps: [4, 8, 12], lengths: [16], code: { name: "CVE", size: 3 } };
+      obj7.patterns = items5;
+      obj.maestro = obj7;
+      const obj8 = { niceType: "Elo", type: "elo", patterns: null, gaps: [4, 8, 12], lengths: [16], code: { name: "CVE", size: 3 } };
       const items6 = [401178, 401179, 438935, 457631, 457632, 431274, 451416, 457393, 504175, [506699, 506778], [509000, 509999], 627780, 636297, 636368, [650031, 650033], [650035, 650051], [650405, 650439], [650485, 650538], [650541, 650598], [650700, 650718], [650720, 650727], [650901, 650978], [651652, 651679], [655000, 655019], [655021, 655058]];
-      obj5.patterns = items6;
-      obj.elo = obj5;
-      const obj6 = { niceType: "Mir", type: "mir", patterns: null, gaps: [4, 8, 12], lengths: [16, 17, 18, 19], code: { name: "CVP2", size: 3 } };
+      obj8.patterns = items6;
+      obj.elo = obj8;
+      const obj9 = { niceType: "Mir", type: "mir", patterns: null, gaps: [4, 8, 12], lengths: [16, 17, 18, 19], code: { name: "CVP2", size: 3 } };
       const items7 = [[2200, 2204]];
-      obj6.patterns = items7;
-      obj.mir = obj6;
-      obj.hiper = { niceType: "Hiper", type: "hiper", patterns: [637095, 63737423, 63743358, 637568, 637599, 637609, 637612], gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } };
-      obj.hipercard = { niceType: "Hipercard", type: "hipercard", patterns: [606282], gaps: [4, 8, 12], lengths: [16], code: { name: "CVC", size: 3 } };
+      obj9.patterns = items7;
+      obj.mir = obj9;
       module.exports = obj;
     },
     {}
@@ -1811,15 +1808,15 @@ let fn = () => {
       class Framebus {
         constructor(arg0) {
           obj = {};
-          obj = fn;
+          obj1 = fn;
           if (undefined === fn) {
-            obj = {};
+            obj1 = {};
           }
-          obj.origin = obj.origin || "*";
-          obj.channel = obj.channel || "";
-          obj.verifyDomain = obj.verifyDomain;
-          obj.targetFrames = obj.targetFrames || [];
-          obj.limitBroadcastToFramesArray = Boolean(obj.targetFrames);
+          obj.origin = obj1.origin || "*";
+          obj.channel = obj1.channel || "";
+          obj.verifyDomain = obj1.verifyDomain;
+          obj.targetFrames = obj1.targetFrames || [];
+          obj.limitBroadcastToFramesArray = Boolean(obj1.targetFrames);
           obj.isDestroyed = false;
           obj.listeners = [];
           limitBroadcastToFramesArray = obj.verifyDomain;
@@ -1835,30 +1832,30 @@ let fn = () => {
         }
         static target(arg0) {
           obj = fn;
-          obj = Object.create(Framebus.prototype);
-          obj1 = {};
+          obj1 = Object.create(Framebus.prototype);
+          obj3 = {};
           if (undefined === fn) {
             obj = {};
           }
-          obj1.origin = obj.origin || "*";
-          obj1.channel = obj.channel || "";
-          obj1.verifyDomain = obj.verifyDomain;
-          obj1.targetFrames = obj.targetFrames || [];
-          obj1.limitBroadcastToFramesArray = Boolean(obj.targetFrames);
-          obj1.isDestroyed = false;
-          obj1.listeners = [];
-          limitBroadcastToFramesArray = obj1.verifyDomain;
+          obj3.origin = obj.origin || "*";
+          obj3.channel = obj.channel || "";
+          obj3.verifyDomain = obj.verifyDomain;
+          obj3.targetFrames = obj.targetFrames || [];
+          obj3.limitBroadcastToFramesArray = Boolean(obj.targetFrames);
+          obj3.isDestroyed = false;
+          obj3.listeners = [];
+          limitBroadcastToFramesArray = obj3.verifyDomain;
           if (!limitBroadcastToFramesArray) {
-            limitBroadcastToFramesArray = obj1.limitBroadcastToFramesArray;
+            limitBroadcastToFramesArray = obj3.limitBroadcastToFramesArray;
           }
-          obj1.hasAdditionalChecksForOnListeners = Boolean(limitBroadcastToFramesArray);
-          return obj1;
+          obj3.hasAdditionalChecksForOnListeners = Boolean(limitBroadcastToFramesArray);
+          return obj3;
         }
         addTargetFrame(arg0) {
           if (this.limitBroadcastToFramesArray) {
             tmp2 = fn;
             targetFrames = tmp.targetFrames;
-            arr = targetFrames.push(fn);
+            arr1 = targetFrames.push(fn);
           }
           return;
         }
@@ -1871,7 +1868,7 @@ let fn = () => {
               if (flag) {
                 tmp3 = Framebus;
                 childWindows = Framebus.childWindows;
-                arr = childWindows.push(fn);
+                arr1 = childWindows.push(fn);
                 flag = true;
               }
               tmp2 = flag;
@@ -1919,8 +1916,8 @@ let fn = () => {
                   item = result.forEach(() => { ... });
                   flag = true;
                 } else {
-                  obj = { origin: null, frame: null };
-                  obj.origin = origin;
+                  obj1 = { origin: null, frame: null };
+                  obj1.origin = origin;
                   tmp11 = globalThis;
                   _window = window;
                   _self = window.top;
@@ -1928,8 +1925,8 @@ let fn = () => {
                     _window2 = window;
                     _self = window.self;
                   }
-                  obj.frame = _self;
-                  broadcastResult = obj.broadcast(packagePayloadResult, obj);
+                  obj1.frame = _self;
+                  broadcastResult = obj.broadcast(packagePayloadResult, obj1);
                   flag = true;
                 }
               }
@@ -1967,19 +1964,19 @@ let fn = () => {
               obj.eventName = namespaceEventResult;
               obj.handler = fn;
               obj.originalHandler = arg1;
-              arr = listeners.push(obj);
-              obj = tmp3.subscribers[origin];
-              if (!obj) {
-                obj = {};
+              arr1 = listeners.push(obj);
+              obj1 = tmp3.subscribers[origin];
+              if (!obj1) {
+                obj1 = {};
               }
-              tmp3.subscribers[origin] = obj;
+              tmp3.subscribers[origin] = obj1;
               items = tmp3.subscribers[origin][namespaceEventResult];
               if (!items) {
                 items = [];
               }
               tmp3.subscribers[origin][namespaceEventResult] = items;
               arr3 = tmp3.subscribers[origin][namespaceEventResult];
-              arr1 = arr3.push(fn);
+              arr4 = arr3.push(fn);
               flag = true;
             }
             return flag;
@@ -2076,7 +2073,7 @@ let fn = () => {
           if (this.limitBroadcastToFramesArray) {
             targetFrames = this.targetFrames;
             mapped = targetFrames.map(() => { ... });
-            found = mapped.filter(/* F125093 */ function() { ... });
+            found = mapped.filter(/* F125096 */ function() { ... });
           } else {
             found = [];
           }
@@ -2089,7 +2086,7 @@ let fn = () => {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
             _Boolean = Boolean;
-            return Boolean(result.find(/* F125094 */ function() { ... }));
+            return Boolean(result.find(/* F125097 */ function() { ... }));
           } else {
             flag = true;
             return true;
@@ -2185,14 +2182,13 @@ let fn = () => {
         let diff = closure_0.childWindows.length - 1;
         if (0 <= diff) {
           do {
-            let obj = closure_0;
             let tmp2 = closure_0.childWindows[diff];
             if (tmp2.closed) {
-              let childWindows = obj.childWindows;
+              let childWindows = closure_0.childWindows;
               let spliceResult = childWindows.splice(diff, 1);
             } else if (source !== tmp2) {
-              obj = { origin, frame: tmp2.top };
-              let broadcastResult = obj.broadcast(data, obj);
+              let obj2 = { origin, frame: tmp2.top };
+              let broadcastResult = closure_0.broadcast(data, obj2);
             }
             diff = diff - 1;
           } while (0 <= diff);
@@ -2217,15 +2213,15 @@ let fn = () => {
             hasOpenerResult = frame.opener.top !== window.top;
           }
           if (hasOpenerResult) {
-            let obj = { origin, frame: frame.opener.top };
+            const obj = { origin, frame: frame.opener.top };
             broadcast(packagePayloadResult, obj);
           }
           let tmp10 = tmp9;
           if (frame.frames[num]) {
             do {
-              obj = { origin, frame: null };
-              obj.frame = tmp10;
-              let tmp13 = broadcast(packagePayloadResult, obj);
+              let obj2 = { origin, frame: null };
+              obj2.frame = tmp10;
+              let tmp13 = broadcast(packagePayloadResult, obj2);
               let sum = num + 1;
               num = sum;
               tmp10 = frame.frames[sum];
@@ -2468,14 +2464,15 @@ let fn = () => {
       arg2.subscriptionArgsInvalid = undefined;
       closure_0 = fn("./");
       arg2.subscriptionArgsInvalid = function subscriptionArgsInvalid(namespaceEventResult, fn, origin) {
-        let isntStringResult = closure_0.isntString(namespaceEventResult);
-        if (!isntStringResult) {
-          isntStringResult = typeof fn !== "function";
+        let isntStringResult1 = closure_0.isntString(namespaceEventResult);
+        if (!isntStringResult1) {
+          let isntStringResult = typeof fn !== "function";
           if (typeof fn === "function") {
             isntStringResult = closure_0.isntString(origin);
           }
+          isntStringResult1 = isntStringResult;
         }
-        return isntStringResult;
+        return isntStringResult1;
       };
     },
     { "./": 57 }
@@ -2768,16 +2765,16 @@ let fn = () => {
           if (nonce) {
             self = this;
             tmp12 = assign;
-            obj = { _meta: null, paymentMethodNonce: null };
-            obj._meta = { source: "american-express" };
-            obj.paymentMethodNonce = nonce;
+            obj1 = { _meta: null, paymentMethodNonce: null };
+            obj1._meta = { source: "american-express" };
+            obj1.paymentMethodNonce = nonce;
             str = "nonce";
-            tmp13 = assign(obj, global);
+            tmp13 = assign(obj1, global);
             delete tmp2[tmp];
             _client = this._client;
-            obj1 = { method: "get", endpoint: "payment_methods/amex_rewards_balance", data: null };
-            obj1.data = tmp13;
-            requestResult = _client.request(obj1);
+            obj4 = { method: "get", endpoint: "payment_methods/amex_rewards_balance", data: null };
+            obj4.data = tmp13;
+            requestResult = _client.request(obj4);
             catchPromise = requestResult.catch(() => { ... });
           } else {
             tmp3 = globalThis;
@@ -2800,14 +2797,14 @@ let fn = () => {
           if (global.nonce) {
             self = this;
             _client = this._client;
-            obj = { method: "get", endpoint: null, data: null };
+            obj1 = { method: "get", endpoint: null, data: null };
             str = "payment_methods/amex_express_checkout_cards/";
-            obj.endpoint = `payment_methods/amex_express_checkout_cards/${global.nonce}`;
-            obj1 = { _meta: null, paymentMethodNonce: null };
-            obj1._meta = { source: "american-express" };
-            obj1.paymentMethodNonce = global.nonce;
-            obj.data = obj1;
-            requestResult = _client.request(obj);
+            obj1.endpoint = `payment_methods/amex_express_checkout_cards/${global.nonce}`;
+            obj4 = { _meta: null, paymentMethodNonce: null };
+            obj4._meta = { source: "american-express" };
+            obj4.paymentMethodNonce = global.nonce;
+            obj1.data = obj4;
+            requestResult = _client.request(obj1);
             catchPromise = requestResult.catch(() => { ... });
           } else {
             tmp = globalThis;
@@ -2925,7 +2922,7 @@ let fn = () => {
           tmp = applePayWeb.merchantCapabilities || ["supports3DS"];
           obj.merchantCapabilities = tmp;
           supportedNetworks = applePayWeb.supportedNetworks;
-          obj.supportedNetworks = supportedNetworks.map(/* F121334 */ function() { ... });
+          obj.supportedNetworks = supportedNetworks.map(/* F121337 */ function() { ... });
           return Object.assign({}, obj, global);
         }
         performValidation(arg0) {
@@ -3002,9 +2999,8 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           return closure_3.verify({ name: "Apple Pay", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_4.create(client.authorization), name: "Apple Pay" };
-            obj = closure_5.create(obj);
-            const nextPromise = obj.then((getConfiguration) => {
+            const obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_4.create(client.authorization), name: "Apple Pay" };
+            const nextPromise = closure_5.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_4.create(client.authorization), name: "Apple Pay" }).then((getConfiguration) => {
               if (getConfiguration.getConfiguration().gatewayConfiguration.applePayWeb) {
                 closure_1_1.sendEvent(getConfiguration, "applepay.initialized");
                 let rejectResult = getConfiguration;
@@ -3038,12 +3034,12 @@ let fn = () => {
       class Client {
         constructor(arg0) {
           obj = {};
-          obj = global;
+          obj1 = global;
           if (!global) {
-            obj = {};
+            obj1 = {};
           }
-          closure_0 = JSON.stringify(obj);
-          gatewayConfiguration = obj.gatewayConfiguration;
+          closure_0 = JSON.stringify(obj1);
+          gatewayConfiguration = obj1.gatewayConfiguration;
           if (gatewayConfiguration) {
             items = ["assetsUrl", "clientApiUrl", "configUrl"];
             item = items.forEach((item) => {
@@ -3065,24 +3061,24 @@ let fn = () => {
               tmp9 = closure_3;
               if (closure_3(gatewayConfiguration.graphQL.url)) {
                 tmp17 = gatewayConfiguration;
-                obj1 = { graphQL: null };
-                obj1.graphQL = gatewayConfiguration.graphQL;
+                obj5 = { graphQL: null };
+                obj5.graphQL = gatewayConfiguration.graphQL;
                 tmp18 = new.target;
                 tmp19 = new.target;
-                tmp20 = obj1;
-                tmp21 = new gatewayConfiguration(obj1);
+                tmp20 = obj5;
+                tmp21 = new gatewayConfiguration(obj5);
                 tmp22 = tmp21;
                 obj._graphQL = tmp21;
               } else {
                 tmp10 = closure_4;
-                obj2 = { type: null, code: null, message: "graphQL.url property is on an invalid domain." };
+                obj6 = { type: null, code: null, message: "graphQL.url property is on an invalid domain." };
                 tmp11 = closure_13;
-                obj2.type = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
-                obj2.code = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
+                obj6.type = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
+                obj6.code = closure_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
                 tmp12 = new.target;
                 tmp13 = new.target;
-                tmp14 = obj2;
-                tmp15 = new closure_4(obj2);
+                tmp14 = obj6;
+                tmp15 = new closure_4(obj6);
                 tmp16 = tmp15;
                 throw tmp15;
               }
@@ -3168,8 +3164,8 @@ let fn = () => {
             element = appendChildResult;
           }
           configuration = this.getConfiguration();
-          obj = { rda_tenant: "bt_card", mid: configuration.gatewayConfiguration.merchantId };
-          closure_0 = obj;
+          obj1 = { rda_tenant: "bt_card", mid: configuration.gatewayConfiguration.merchantId };
+          closure_0 = obj1;
           str4 = configuration.authorizationFingerprint;
           if (str4) {
             str5 = "&";
@@ -3185,8 +3181,8 @@ let fn = () => {
               }
             });
           }
-          obj1 = { f: global.substr(0, 32), fp: obj, bu: false, s: FRAUDNET_SOURCE };
-          element.text = JSON.stringify(obj1);
+          obj4 = { f: global.substr(0, 32), fp: obj1, bu: false, s: FRAUDNET_SOURCE };
+          element.text = JSON.stringify(obj4);
           return;
         }
         request(arg0, arg1) {
@@ -3214,42 +3210,38 @@ let fn = () => {
               tmp3 = str;
             }
             if (tmp3) {
-              let obj = { type: constants.CLIENT_OPTION_REQUIRED.type, code: constants.CLIENT_OPTION_REQUIRED.code, message: `${tmp3} is required when making a request.` };
-              const tmp22 = new closure_1_4(obj);
+              let obj3 = { type: constants.CLIENT_OPTION_REQUIRED.type, code: constants.CLIENT_OPTION_REQUIRED.code, message: `${tmp3} is required when making a request.` };
+              const tmp22 = new closure_1_4(obj3);
               throw tmp22;
             } else {
               str5 = "clientApi";
               if ("api" in tmp) {
                 str5 = tmp.api;
               }
-              obj = { method: tmp.method, graphQL: null, timeout: null, metadata: null };
-              let obj1 = str5;
-              obj.graphQL = str5._graphQL;
-              obj.timeout = tmp.timeout;
-              obj.metadata = str5._configuration.analyticsMetadata;
+              let obj = { method: tmp.method, graphQL: str5._graphQL, timeout: tmp.timeout, metadata: str5._configuration.analyticsMetadata };
               if ("clientApi" === str5) {
-                let _clientApiBaseUrl = obj1._clientApiBaseUrl;
-                obj.data = closure_1_8.addMetadata(obj1._configuration, tmp.data);
+                let _clientApiBaseUrl = obj2._clientApiBaseUrl;
+                obj.data = closure_1_8.addMetadata(obj2._configuration, tmp.data);
               } else if ("graphQLApi" !== str5) {
-                obj = { type: constants.CLIENT_OPTION_INVALID.type, code: constants.CLIENT_OPTION_INVALID.code, message: "options.api is invalid." };
-                const tmp12 = new closure_1_4(obj);
+                let obj4 = { type: constants.CLIENT_OPTION_INVALID.type, code: constants.CLIENT_OPTION_INVALID.code, message: "options.api is invalid." };
+                const tmp12 = new closure_1_4(obj4);
                 throw tmp12;
               } else {
-                _clientApiBaseUrl = GRAPHQL_URLS[obj1._configuration.gatewayConfiguration.environment];
+                _clientApiBaseUrl = GRAPHQL_URLS[obj2._configuration.gatewayConfiguration.environment];
                 tmp.endpoint = "";
                 obj.method = "post";
-                obj1 = { clientSdkMetadata: null };
-                const obj2 = { platform: obj1._configuration.analyticsMetadata.platform, source: obj1._configuration.analyticsMetadata.source, integration: obj1._configuration.analyticsMetadata.integration, sessionId: obj1._configuration.analyticsMetadata.sessionId, version };
-                obj1.clientSdkMetadata = obj2;
-                obj.data = assign(obj1, tmp.data);
-                const _configuration = obj1._configuration;
-                const obj3 = { Authorization: `Bearer ${_configuration.authorizationFingerprint || _configuration.authorization}`, "Braintree-Version": endpoint };
-                obj.headers = obj3;
+                const obj5 = { clientSdkMetadata: null };
+                const obj6 = { platform: obj2._configuration.analyticsMetadata.platform, source: obj2._configuration.analyticsMetadata.source, integration: obj2._configuration.analyticsMetadata.integration, sessionId: obj2._configuration.analyticsMetadata.sessionId, version };
+                obj5.clientSdkMetadata = obj6;
+                obj.data = assign(obj5, tmp.data);
+                const _configuration = obj2._configuration;
+                const obj7 = { Authorization: `Bearer ${_configuration.authorizationFingerprint || _configuration.authorization}`, "Braintree-Version": endpoint };
+                obj.headers = obj7;
                 const tmp4 = _configuration.authorizationFingerprint || _configuration.authorization;
               }
               obj.url = _clientApiBaseUrl + tmp.endpoint;
               obj.sendAnalyticsEvent = function sendAnalyticsEvent() { ... };
-              obj1._request(obj, () => { ... });
+              str5._request(obj, () => { ... });
             }
           });
           tmp = promise;
@@ -3351,7 +3343,7 @@ let fn = () => {
             if (!sessionId) {
               tmp = closure_2();
             }
-            let metadata = { merchantAppId: window.location.host, platform: constants.PLATFORM, sdkVersion: constants.VERSION, source: constants.SOURCE, integration: constants.INTEGRATION, integrationType: constants.INTEGRATION, sessionId: tmp };
+            const metadata = { merchantAppId: window.location.host, platform: constants.PLATFORM, sdkVersion: constants.VERSION, source: constants.SOURCE, integration: constants.INTEGRATION, integrationType: constants.INTEGRATION, sessionId: tmp };
             const attrs = closure_0.attrs;
             attrs._meta = metadata;
             attrs.braintreeLibraryVersion = constants.BRAINTREE_LIBRARY_VERSION;
@@ -3360,10 +3352,10 @@ let fn = () => {
             if (attrs.authorizationFingerprint) {
               if (tmp3.graphQL) {
                 if (closure_7(tmp3.graphQL.date, BRAINTREE_VERSION)) {
-                  metadata = { graphQL: null };
-                  metadata = { url: tmp3.graphQL.url, features: ["configuration"] };
-                  metadata.graphQL = metadata;
-                  const tmp17 = new closure_5(metadata);
+                  const obj2 = { graphQL: null };
+                  let obj3 = { url: tmp3.graphQL.url, features: ["configuration"] };
+                  obj2.graphQL = obj3;
+                  const tmp17 = new closure_5(obj2);
                   request.graphQL = tmp17;
                 }
                 request.metadata = metadata;
@@ -3377,18 +3369,18 @@ let fn = () => {
                   } else {
                     CLIENT_GATEWAY_NETWORK = constants2.CLIENT_GATEWAY_NETWORK;
                   }
-                  let analyticsMetadata = { type: null, code: null, message: null, details: null };
+                  const obj3 = { type: null, code: null, message: null, details: null };
                   ({ type: obj2.type, code: obj2.code, message: obj2.message } = CLIENT_GATEWAY_NETWORK);
-                  analyticsMetadata = { originalError };
-                  analyticsMetadata.details = analyticsMetadata;
-                  const tmp15 = new closure_0(analyticsMetadata);
+                  const obj5 = { originalError };
+                  obj3.details = obj5;
+                  const tmp15 = new closure_0(obj3);
                   closure_1(tmp15);
                 } else {
                   let str = "CLIENT_TOKEN";
                   if (attrs.tokenizationKey) {
                     str = "TOKENIZATION_KEY";
                   }
-                  analyticsMetadata = { authorizationType: str, authorizationFingerprint: attrs.authorizationFingerprint, analyticsMetadata: null, gatewayConfiguration: null };
+                  const analyticsMetadata = { authorizationType: str, authorizationFingerprint: attrs.authorizationFingerprint, analyticsMetadata: null, gatewayConfiguration: null };
                   analyticsMetadata.analyticsMetadata = analyticsMetadata;
                   analyticsMetadata.gatewayConfiguration = gatewayConfiguration;
                   closure_0(analyticsMetadata);
@@ -3396,10 +3388,10 @@ let fn = () => {
               });
             }
             if (attrs.tokenizationKey) {
-              const obj1 = { graphQL: null };
-              const obj2 = { url: GRAPHQL_URLS[tmp3.environment], features: ["configuration"] };
-              obj1.graphQL = obj2;
-              const tmp9 = new closure_5(obj1);
+              const obj4 = { graphQL: null };
+              let obj5 = { url: GRAPHQL_URLS[tmp3.environment], features: ["configuration"] };
+              obj4.graphQL = obj5;
+              const tmp9 = new closure_5(obj4);
               request.graphQL = tmp9;
               request.metadata = metadata;
             }
@@ -3615,16 +3607,16 @@ let fn = () => {
         if (data.data) {
           if (!data.errors) {
             const clientConfiguration = data.data.clientConfiguration;
-            let obj = { environment: clientConfiguration.environment.toLowerCase(), clientApiUrl: null, assetsUrl: null, analytics: null, merchantId: null, venmo: "off" };
+            const obj = { environment: clientConfiguration.environment.toLowerCase(), clientApiUrl: null, assetsUrl: null, analytics: null, merchantId: null, venmo: "off" };
             ({ clientApiUrl: obj.clientApiUrl, assetsUrl: obj.assetsUrl } = clientConfiguration);
-            obj = { url: clientConfiguration.analyticsUrl };
-            obj.analytics = obj;
+            const obj2 = { url: clientConfiguration.analyticsUrl };
+            obj.analytics = obj2;
             obj.merchantId = clientConfiguration.merchantId;
             if (clientConfiguration.supportedFeatures) {
-              obj = { url: _graphQL._graphQL._config.url, features: null };
+              const obj3 = { url: _graphQL._graphQL._config.url, features: null };
               const supportedFeatures = clientConfiguration.supportedFeatures;
-              obj.features = supportedFeatures.map((item) => item.toLowerCase());
-              obj.graphQL = obj;
+              obj3.features = supportedFeatures.map((item) => item.toLowerCase());
+              obj.graphQL = obj3;
             }
             if (clientConfiguration.braintreeApi) {
               obj.braintreeApi = clientConfiguration.braintreeApi;
@@ -3650,47 +3642,47 @@ let fn = () => {
               obj.ideal = clientConfiguration.ideal;
             }
             if (clientConfiguration.kount) {
-              const obj1 = { kountMerchantId: clientConfiguration.kount.merchantId };
-              obj.kount = obj1;
+              const obj4 = { kountMerchantId: clientConfiguration.kount.merchantId };
+              obj.kount = obj4;
             }
             if (clientConfiguration.creditCard) {
               const challenges = clientConfiguration.creditCard.challenges;
               obj.challenges = challenges.map((item) => item.toLowerCase());
-              const obj2 = { supportedCardTypes: null };
+              const obj5 = { supportedCardTypes: null };
               const supportedCardBrands1 = clientConfiguration.creditCard.supportedCardBrands;
               closure_0 = closure_2;
-              obj2.supportedCardTypes = supportedCardBrands1.reduce((arr, item) => {
+              obj5.supportedCardTypes = supportedCardBrands1.reduce((arr, item) => {
                 let combined = arr;
                 if (closure_0.hasOwnProperty(item)) {
                   combined = arr.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
-              obj.creditCards = obj2;
+              obj.creditCards = obj5;
               obj.threeDSecureEnabled = clientConfiguration.creditCard.threeDSecureEnabled;
               obj.threeDSecure = clientConfiguration.creditCard.threeDSecure;
             } else {
               obj.challenges = [];
-              const obj3 = { supportedCardTypes: [] };
-              obj.creditCards = obj3;
+              const obj6 = { supportedCardTypes: [] };
+              obj.creditCards = obj6;
               obj.threeDSecureEnabled = false;
             }
             if (clientConfiguration.googlePay) {
-              const obj4 = { displayName: clientConfiguration.googlePay.displayName, enabled: true, environment: clientConfiguration.googlePay.environment.toLowerCase(), googleAuthorizationFingerprint: clientConfiguration.googlePay.googleAuthorization, paypalClientId: clientConfiguration.googlePay.paypalClientId, supportedNetworks: null };
+              const obj7 = { displayName: clientConfiguration.googlePay.displayName, enabled: true, environment: clientConfiguration.googlePay.environment.toLowerCase(), googleAuthorizationFingerprint: clientConfiguration.googlePay.googleAuthorization, paypalClientId: clientConfiguration.googlePay.paypalClientId, supportedNetworks: null };
               const supportedCardBrands2 = clientConfiguration.googlePay.supportedCardBrands;
               closure_0 = closure_5;
-              obj4.supportedNetworks = supportedCardBrands2.reduce((arr, item) => {
+              obj7.supportedNetworks = supportedCardBrands2.reduce((arr, item) => {
                 let combined = arr;
                 if (closure_0.hasOwnProperty(item)) {
                   combined = arr.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
-              obj.androidPay = obj4;
+              obj.androidPay = obj7;
             }
             if (clientConfiguration.venmo) {
-              const obj5 = { merchantId: clientConfiguration.venmo.merchantId, accessToken: clientConfiguration.venmo.accessToken, environment: clientConfiguration.venmo.environment.toLowerCase(), enrichedCustomerDataEnabled: clientConfiguration.venmo.enrichedCustomerDataEnabled };
-              obj.payWithVenmo = obj5;
+              const obj8 = { merchantId: clientConfiguration.venmo.merchantId, accessToken: clientConfiguration.venmo.accessToken, environment: clientConfiguration.venmo.environment.toLowerCase(), enrichedCustomerDataEnabled: clientConfiguration.venmo.enrichedCustomerDataEnabled };
+              obj.payWithVenmo = obj8;
             }
             if (clientConfiguration.paypal) {
               obj.paypalEnabled = true;
@@ -3703,41 +3695,41 @@ let fn = () => {
               obj.paypalEnabled = false;
             }
             if (clientConfiguration.unionPay) {
-              const obj6 = { enabled: true, merchantAccountId: clientConfiguration.unionPay.merchantAccountId };
-              obj.unionPay = obj6;
+              const obj9 = { enabled: true, merchantAccountId: clientConfiguration.unionPay.merchantAccountId };
+              obj.unionPay = obj9;
             }
             if (clientConfiguration.visaCheckout) {
-              const obj7 = { apikey: clientConfiguration.visaCheckout.apiKey, encryptionKey: clientConfiguration.visaCheckout.encryptionKey, externalClientId: clientConfiguration.visaCheckout.externalClientId, supportedCardTypes: null };
+              const obj10 = { apikey: clientConfiguration.visaCheckout.apiKey, encryptionKey: clientConfiguration.visaCheckout.encryptionKey, externalClientId: clientConfiguration.visaCheckout.externalClientId, supportedCardTypes: null };
               const supportedCardBrands3 = clientConfiguration.visaCheckout.supportedCardBrands;
               closure_0 = closure_4;
-              obj7.supportedCardTypes = supportedCardBrands3.reduce((arr, item) => {
+              obj10.supportedCardTypes = supportedCardBrands3.reduce((arr, item) => {
                 let combined = arr;
                 if (closure_0.hasOwnProperty(item)) {
                   combined = arr.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
-              obj.visaCheckout = obj7;
+              obj.visaCheckout = obj10;
             }
             if (clientConfiguration.masterpass) {
-              const obj8 = { merchantCheckoutId: clientConfiguration.masterpass.merchantCheckoutId, supportedNetworks: null };
+              const obj11 = { merchantCheckoutId: clientConfiguration.masterpass.merchantCheckoutId, supportedNetworks: null };
               const supportedCardBrands4 = clientConfiguration.masterpass.supportedCardBrands;
               closure_0 = closure_6;
-              obj8.supportedNetworks = supportedCardBrands4.reduce((arr, item) => {
+              obj11.supportedNetworks = supportedCardBrands4.reduce((arr, item) => {
                 let combined = arr;
                 if (closure_0.hasOwnProperty(item)) {
                   combined = arr.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
-              obj.masterpass = obj8;
+              obj.masterpass = obj11;
             }
             let tmp10 = obj;
             if (clientConfiguration.usBankAccount) {
-              const obj9 = { routeId: clientConfiguration.usBankAccount.routeId, plaid: null };
-              const obj10 = { publicKey: clientConfiguration.usBankAccount.plaidPublicKey };
-              obj9.plaid = obj10;
-              obj.usBankAccount = obj9;
+              const obj12 = { routeId: clientConfiguration.usBankAccount.routeId, plaid: null };
+              const obj13 = { publicKey: clientConfiguration.usBankAccount.plaidPublicKey };
+              obj12.plaid = obj13;
+              obj.usBankAccount = obj12;
               tmp10 = obj;
             }
           }
@@ -3781,30 +3773,32 @@ let fn = () => {
                 }
               });
             }
-            let obj = { binData, consumed: false, description: null, nonce: null, details: null, type: "CreditCard", threeDSecureInfo: null };
+            const obj = { binData, consumed: false, description: null, nonce: null, details: null, type: "CreditCard", threeDSecureInfo: null };
             let str4 = "";
             if (str2) {
               str4 = `ending in ${str2}`;
             }
             obj.description = str4;
             obj.nonce = tokenizeCreditCardForPayPalConnect.paymentMethod.id;
-            obj = { cardholderName: null, expirationMonth: null, expirationYear: null, bin: null, cardType: null, lastFour: null, lastTwo: null };
+            const obj3 = { cardholderName: null, expirationMonth: null, expirationYear: null, bin: null, cardType: null, lastFour: null, lastTwo: null };
             ({ cardholderName: obj2.cardholderName, expirationMonth: obj2.expirationMonth, expirationYear: obj2.expirationYear } = details);
-            obj.bin = details.bin || "";
-            obj.cardType = closure_1[details.brandCode] || "Unknown";
-            obj = { creditCards: null, lastFour: details.last4 || "", lastTwo: str2 };
-            obj.details = obj;
+            obj3.bin = details.bin || "";
+            obj3.cardType = closure_1[details.brandCode] || "Unknown";
+            const obj4 = { creditCards: null };
+            obj3.lastFour = details.last4 || "";
+            obj3.lastTwo = str2;
+            obj.details = obj3;
             const items2 = [obj];
-            obj.creditCards = items2;
-            let tmp5 = obj;
+            obj4.creditCards = items2;
+            let tmp5 = obj4;
             if (tokenizeCreditCardForPayPalConnect.authenticationInsight) {
               let formatted = closure_3[str6];
               if (!formatted) {
                 formatted = str6.toLowerCase();
               }
-              const obj1 = { regulationEnvironment: formatted };
-              obj.creditCards[0].authenticationInsight = obj1;
-              tmp5 = obj;
+              const obj7 = { regulationEnvironment: formatted };
+              obj4.creditCards[0].authenticationInsight = obj7;
+              tmp5 = obj4;
             }
             const tmp4 = details.last4 || "";
           }
@@ -3848,30 +3842,32 @@ let fn = () => {
                 }
               });
             }
-            let obj = { binData, consumed: false, description: null, nonce: null, details: null, type: "CreditCard", threeDSecureInfo: null };
+            const obj = { binData, consumed: false, description: null, nonce: null, details: null, type: "CreditCard", threeDSecureInfo: null };
             let str4 = "";
             if (str2) {
               str4 = `ending in ${str2}`;
             }
             obj.description = str4;
             obj.nonce = tokenizeCreditCard.token;
-            obj = { cardholderName: null, expirationMonth: null, expirationYear: null, bin: null, cardType: null, lastFour: null, lastTwo: null };
+            const obj3 = { cardholderName: null, expirationMonth: null, expirationYear: null, bin: null, cardType: null, lastFour: null, lastTwo: null };
             ({ cardholderName: obj2.cardholderName, expirationMonth: obj2.expirationMonth, expirationYear: obj2.expirationYear } = creditCard);
-            obj.bin = creditCard.bin || "";
-            obj.cardType = closure_1[creditCard.brandCode] || "Unknown";
-            obj = { creditCards: null, lastFour: creditCard.last4 || "", lastTwo: str2 };
-            obj.details = obj;
+            obj3.bin = creditCard.bin || "";
+            obj3.cardType = closure_1[creditCard.brandCode] || "Unknown";
+            const obj4 = { creditCards: null };
+            obj3.lastFour = creditCard.last4 || "";
+            obj3.lastTwo = str2;
+            obj.details = obj3;
             const items2 = [obj];
-            obj.creditCards = items2;
-            let tmp5 = obj;
+            obj4.creditCards = items2;
+            let tmp5 = obj4;
             if (tokenizeCreditCard.authenticationInsight) {
               let formatted = closure_3[str6];
               if (!formatted) {
                 formatted = str6.toLowerCase();
               }
-              const obj1 = { regulationEnvironment: formatted };
-              obj.creditCards[0].authenticationInsight = obj1;
-              tmp5 = obj;
+              const obj7 = { regulationEnvironment: formatted };
+              obj4.creditCards[0].authenticationInsight = obj7;
+              tmp5 = obj4;
             }
             const tmp4 = creditCard.last4 || "";
           }
@@ -3893,14 +3889,14 @@ let fn = () => {
               closure_0 = field;
             }
           });
-          if (!obj) {
-            obj = { field, fieldErrors: [] };
-            arr = fieldErrors.push(obj);
+          if (!obj2) {
+            obj2 = { field, fieldErrors: [] };
+            arr = fieldErrors.push(obj2);
           }
-          addFieldError(arr.slice(1), message, obj.fieldErrors);
+          addFieldError(arr.slice(1), message, obj2.fieldErrors);
         } else {
-          obj = { code: tmp, field, message: message.message };
-          arr = fieldErrors.push(obj);
+          const obj = { code: tmp, field, message: message.message };
+          fieldErrors.push(obj);
         }
       }
       module.exports = function errorResponseAdapter(errors) {
@@ -3913,20 +3909,19 @@ let fn = () => {
             if (tmp) {
               const inputPath = extensions.extensions.inputPath;
               const substr = inputPath.slice(1);
-              let arr2 = items;
               items = undefined;
               const first = substr[0];
               let first1 = first;
               if (1 !== substr.length) {
-                const item = arr2.forEach((field) => {
+                const item = arr3.forEach((field) => {
                   if (field.field === first1) {
                     closure_0 = field;
                   }
                 });
                 if (!items) {
-                  let obj = { field: first, fieldErrors: [] };
-                  items = obj;
-                  arr2.push(items);
+                  const obj2 = { field: first, fieldErrors: [] };
+                  items = obj2;
+                  arr3.push(items);
                 }
                 const substr1 = substr.slice(1);
                 const fieldErrors = items.fieldErrors;
@@ -3939,40 +3934,40 @@ let fn = () => {
                     }
                   });
                   if (!items) {
-                    obj = { field: first1, fieldErrors: [] };
-                    items = obj;
+                    const obj3 = { field: first1, fieldErrors: [] };
+                    items = obj3;
                     fieldErrors.push(items);
                   }
                   addFieldError(substr1.slice(1), extensions, items.fieldErrors);
                 } else {
-                  const obj1 = { code: tmp10, field: first1, message: extensions.message };
-                  fieldErrors.push(obj1);
+                  const obj4 = { code: tmp10, field: first1, message: extensions.message };
+                  fieldErrors.push(obj4);
                 }
               } else {
-                obj = { code: tmp2, field: first, message: extensions.message };
-                arr2 = arr2.push(obj);
+                const obj = { code: tmp2, field: first, message: extensions.message };
+                arr3.push(obj);
               }
             }
             tmp = extensions.extensions && extensions.extensions.inputPath;
           });
           if (0 === items.length) {
-            let obj = { error: null };
-            obj = { message: null };
+            let obj2 = { error: null };
+            let obj3 = { message: null };
             message = message.errors[0].message;
-            obj.message = message;
-            obj.error = obj;
-            let obj1 = obj;
+            obj3.message = message;
+            obj2.error = obj3;
+            let obj4 = obj2;
           } else {
-            obj1 = { error: null, fieldErrors: null };
-            const obj2 = { message: { creditCard: "Credit card is invalid" }[items[0].field] };
-            obj1.error = obj2;
-            obj1.fieldErrors = items;
+            obj4 = { error: null, fieldErrors: null };
+            const obj5 = { message: { creditCard: "Credit card is invalid" }[items[0].field] };
+            obj4.error = obj5;
+            obj4.fieldErrors = items;
           }
         } else {
-          obj = { error: null, fieldErrors: null };
+          let obj = { error: null, fieldErrors: null };
           if (tmp) {
-            const obj3 = { message: message.errors[0].message };
-            obj.error = obj3;
+            const obj6 = { message: message.errors[0].message };
+            obj.error = obj6;
             obj.fieldErrors = [];
             let tmp2 = obj;
           } else {
@@ -4014,7 +4009,7 @@ let fn = () => {
         if (BooleanResult) {
           text1 = `${str}) {   tokenizeCreditCardForPayPalConnect(input: $input) {     clientMutationId     paymentMethod {       id       details {         ... on CreditCardDetails {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }         }       }     }    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }`;
         }
-        let obj = { query: `${tmp3}  } }`, variables: null, operationName: "TokenizeCreditCardForPayPalConnect" };
+        const obj = { query: `${tmp3}  } }`, variables: null, operationName: "TokenizeCreditCardForPayPalConnect" };
         const creditCard = authenticationInsight.creditCard;
         const tmp4 = creditCard.fastlane || {};
         let termsAndConditionsVersion = "fastlane" in creditCard;
@@ -4068,45 +4063,46 @@ let fn = () => {
         if (creditCard2) {
           number = creditCard2.number;
         }
-        obj = { number, expirationMonth: tmp5, expirationYear: tmp7, cvv: null, cardholderName: null };
+        const obj2 = { number, expirationMonth: tmp5, expirationYear: tmp7, cvv: null, cardholderName: null };
         let cvv = creditCard2;
         if (creditCard2) {
           cvv = creditCard2.cvv;
         }
-        obj.cvv = cvv;
+        obj2.cvv = cvv;
         let cardholderName = creditCard2;
         if (creditCard2) {
           cardholderName = creditCard2.cardholderName;
         }
-        obj = { input: { creditCard: obj, options: {} }, cardholderName };
+        const obj3 = { input: { creditCard: obj2, options: {} } };
+        obj2.cardholderName = cardholderName;
         if (BooleanResult) {
-          const obj1 = { merchantAccountId: authenticationInsight.merchantAccountId };
-          obj.authenticationInsightInput = obj1;
+          const obj4 = { merchantAccountId: authenticationInsight.merchantAccountId };
+          obj3.authenticationInsightInput = obj4;
         }
         if (billingAddress) {
-          obj.input.creditCard.billingAddress = billingAddress;
+          obj3.input.creditCard.billingAddress = billingAddress;
         }
-        const input = obj.input;
+        const input = obj3.input;
         if (authenticationInsight.creditCard) {
           if (authenticationInsight.creditCard.options) {
             if (typeof authenticationInsight.creditCard.options.validate === "boolean") {
               let flag = authenticationInsight.creditCard.options.validate;
             }
             if (typeof flag === "boolean") {
-              const obj2 = { validate: flag };
-              input.options = assign(obj2, input.options);
+              const obj5 = { validate: flag };
+              input.options = assign(obj5, input.options);
             }
-            obj.input = input;
-            const obj3 = { email: creditCard.email, optIn: hasBuyerConsent, phone: creditCard.phone, termsAndConditionsVersion };
-            const tmp10 = assign({}, obj.input, obj3);
+            obj3.input = input;
+            const obj6 = { email: creditCard.email, optIn: hasBuyerConsent, phone: creditCard.phone, termsAndConditionsVersion };
+            const tmp10 = assign({}, obj3.input, obj6);
             if ("authAssertion" in tmp4) {
               tmp10.authAssertion = tmp4.authAssertion;
             }
             if (shippingAddress) {
               tmp10.shippingAddress = shippingAddress;
             }
-            const obj4 = { input: tmp10 };
-            obj.variables = obj4;
+            const obj7 = { input: tmp10 };
+            obj.variables = obj7;
             return obj;
           }
         }
@@ -4143,7 +4139,7 @@ let fn = () => {
         if (BooleanResult) {
           text1 = `${str}) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }     authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }`;
         }
-        let obj = { query: `${tmp3}  } }`, variables: null, operationName: "TokenizeCreditCard" };
+        const obj = { query: `${tmp3}  } }`, variables: null, operationName: "TokenizeCreditCard" };
         const creditCard = authenticationInsight.creditCard;
         let billingAddress = creditCard;
         if (creditCard) {
@@ -4183,36 +4179,37 @@ let fn = () => {
         if (creditCard) {
           number = creditCard.number;
         }
-        obj = { number, expirationMonth: tmp4, expirationYear: tmp6, cvv: null, cardholderName: null };
+        const obj2 = { number, expirationMonth: tmp4, expirationYear: tmp6, cvv: null, cardholderName: null };
         let cvv = creditCard;
         if (creditCard) {
           cvv = creditCard.cvv;
         }
-        obj.cvv = cvv;
+        obj2.cvv = cvv;
         let cardholderName = creditCard;
         if (creditCard) {
           cardholderName = creditCard.cardholderName;
         }
-        obj = { input: { creditCard: obj, options: {} }, cardholderName };
+        const obj3 = { input: { creditCard: obj2, options: {} } };
+        obj2.cardholderName = cardholderName;
         if (BooleanResult) {
-          const obj1 = { merchantAccountId: authenticationInsight.merchantAccountId };
-          obj.authenticationInsightInput = obj1;
+          const obj4 = { merchantAccountId: authenticationInsight.merchantAccountId };
+          obj3.authenticationInsightInput = obj4;
         }
         if (billingAddress) {
-          obj.input.creditCard.billingAddress = billingAddress;
+          obj3.input.creditCard.billingAddress = billingAddress;
         }
-        const input = obj.input;
+        const input = obj3.input;
         if (authenticationInsight.creditCard) {
           if (authenticationInsight.creditCard.options) {
             if (typeof authenticationInsight.creditCard.options.validate === "boolean") {
               let flag = authenticationInsight.creditCard.options.validate;
             }
             if (typeof flag === "boolean") {
-              const obj2 = { validate: flag };
-              input.options = assign(obj2, input.options);
+              const obj5 = { validate: flag };
+              input.options = assign(obj5, input.options);
             }
-            obj.input = input;
-            obj.variables = obj;
+            obj3.input = input;
+            obj.variables = obj3;
             return obj;
           }
         }
@@ -4332,8 +4329,8 @@ let fn = () => {
               closure_1_1[tmp] = closure_1_0[item];
             }
           });
-          obj = { clientSdkMetadata: this._clientSdkMetadata };
-          return JSON.stringify(closure_1(obj, this._generator(obj, closure_3(this._data.creditCard))));
+          obj1 = { clientSdkMetadata: this._clientSdkMetadata };
+          return JSON.stringify(closure_1(obj1, this._generator(obj, closure_3(this._data.creditCard))));
         }
         getMethod() {
           return "POST";
@@ -4574,17 +4571,17 @@ let fn = () => {
           body = document.body;
           ({ sessionId: sessionId2, _beaconId } = self);
           appendChildResult = body.appendChild(document.createElement("script"));
-          obj = { f: sessionId2, s: FRAUDNET_SOURCE, b: _beaconId };
+          obj1 = { f: sessionId2, s: FRAUDNET_SOURCE, b: _beaconId };
           if ("production" !== environment) {
             flag = true;
-            obj.sandbox = true;
+            obj1.sandbox = true;
           }
           appendChildResult.type = "application/json";
           attr = appendChildResult.setAttribute("fncls", FRAUDNET_FNCLS);
-          appendChildResult.text = JSON.stringify(obj);
+          appendChildResult.text = JSON.stringify(obj1);
           self._parameterBlock = appendChildResult;
-          obj1 = { src: FRAUDNET_URL };
-          promise = loadScript(obj1);
+          obj5 = { src: FRAUDNET_URL };
+          promise = loadScript(obj5);
           nextPromise = promise.then((_thirdPartyBlock) => {
             self._thirdPartyBlock = _thirdPartyBlock;
             return self;
@@ -4641,15 +4638,15 @@ let fn = () => {
           if (!arg0) {
             obj = {};
           }
-          obj = Object.create(Fraudnet.prototype);
+          const obj2 = Object.create(Fraudnet.prototype);
           if (!obj.sessionId) {
             if (sessionId) {
-              obj.sessionId = sessionId;
-              let resolved = Promise.resolve(obj);
+              obj2.sessionId = sessionId;
+              let resolved = Promise.resolve(obj2);
             }
             return resolved;
           }
-          resolved = obj.initialize(obj);
+          resolved = obj2.initialize(obj);
         },
         clearSessionIdCache() {
           c0 = null;
@@ -4677,20 +4674,20 @@ let fn = () => {
           return closure_3.verify({ name: "Data Collector", client: client.client, authorization: client.authorization }).then(() => {
             closure_2._instantiatedWithAClient = !client.useDeferredClient;
             let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_5.create(client.authorization), name: "Data Collector" };
-            obj = closure_4.create(obj);
-            const nextPromise = obj.then((getConfiguration) => {
+            let obj2 = closure_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_5.create(client.authorization), name: "Data Collector" });
+            const nextPromise = closure_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_5.create(client.authorization), name: "Data Collector" }).then((getConfiguration) => {
               const configuration = getConfiguration.getConfiguration();
               if (true === closure_0.kount) {
                 if (configuration.gatewayConfiguration.kount) {
                   try {
-                    let obj = { environment: configuration.gatewayConfiguration.environment, merchantId: configuration.gatewayConfiguration.kount.kountMerchantId };
+                    const obj = { environment: configuration.gatewayConfiguration.environment, merchantId: configuration.gatewayConfiguration.kount.kountMerchantId };
                     const setupResult = closure_0.setup(obj);
                     let deviceData = setupResult.deviceData;
                     const _instances = closure_1_2._instances;
                     _instances.push(setupResult);
                   } catch (tmp8) {
-                    obj = { type: constants.DATA_COLLECTOR_KOUNT_ERROR.type, code: constants.DATA_COLLECTOR_KOUNT_ERROR.code, message: tmp8.message };
-                    const tmp15 = new closure_2(obj);
+                    const obj2 = { type: constants.DATA_COLLECTOR_KOUNT_ERROR.type, code: constants.DATA_COLLECTOR_KOUNT_ERROR.code, message: tmp8.message };
+                    const tmp15 = new closure_2(obj2);
                     return Promise.reject(tmp15);
                   }
                 }
@@ -4698,19 +4695,19 @@ let fn = () => {
               }
               deviceData = {};
             });
-            closure_2._createPromise = obj.then((getConfiguration) => {
+            closure_2._createPromise = closure_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_5.create(client.authorization), name: "Data Collector" }).then((getConfiguration) => {
               const configuration = getConfiguration.getConfiguration();
               if (true === closure_0.kount) {
                 if (configuration.gatewayConfiguration.kount) {
                   try {
-                    let obj = { environment: configuration.gatewayConfiguration.environment, merchantId: configuration.gatewayConfiguration.kount.kountMerchantId };
+                    const obj = { environment: configuration.gatewayConfiguration.environment, merchantId: configuration.gatewayConfiguration.kount.kountMerchantId };
                     const setupResult = closure_0.setup(obj);
                     let deviceData = setupResult.deviceData;
                     const _instances = closure_1_2._instances;
                     _instances.push(setupResult);
                   } catch (tmp8) {
-                    obj = { type: constants.DATA_COLLECTOR_KOUNT_ERROR.type, code: constants.DATA_COLLECTOR_KOUNT_ERROR.code, message: tmp8.message };
-                    const tmp15 = new closure_2(obj);
+                    const obj2 = { type: constants.DATA_COLLECTOR_KOUNT_ERROR.type, code: constants.DATA_COLLECTOR_KOUNT_ERROR.code, message: tmp8.message };
+                    const tmp15 = new closure_2(obj2);
                     return Promise.reject(tmp15);
                   }
                 }
@@ -4862,34 +4859,33 @@ let fn = () => {
       }
       handler = global("./vendor/sjcl");
       closure_1 = global("../lib/camel-case-to-snake-case");
-      let exports = { development: "https://assets.qa.braintreepayments.com/data", qa: "https://assets.qa.braintreepayments.com/data", sandbox: "https://assets.braintreegateway.com/sandbox/data", production: "https://assets.braintreegateway.com/data" };
+      const environmentUrls = { development: "https://assets.qa.braintreepayments.com/data", qa: "https://assets.qa.braintreepayments.com/data", sandbox: "https://assets.braintreegateway.com/sandbox/data", production: "https://assets.braintreegateway.com/data" };
       closure_3 = {};
-      exports = {
+      module.exports = {
         setup(arg0) {
-          obj = arg0;
+          let obj = arg0;
           if (null == arg0) {
             obj = {};
           }
-          obj = Object.create(Kount.prototype);
+          const obj3 = Object.create(Kount.prototype);
           const cachedDeviceData = Kount.getCachedDeviceData(obj.merchantId);
           if (cachedDeviceData) {
-            obj.deviceData = cachedDeviceData;
-            obj._isCached = true;
+            obj3.deviceData = cachedDeviceData;
+            obj3._isCached = true;
           } else {
-            obj._currentEnvironment = obj._initializeEnvironment(obj);
+            obj3._currentEnvironment = obj3._initializeEnvironment(obj);
             const random = closure_0.random;
             random.startCollectors();
-            obj._deviceSessionId = obj._generateDeviceSessionId();
-            obj.deviceData = obj._getDeviceData();
-            Kount.setCachedDeviceData(obj.merchantId, obj.deviceData);
-            obj._iframe = obj._setupIFrame();
+            obj3._deviceSessionId = obj3._generateDeviceSessionId();
+            obj3.deviceData = obj3._getDeviceData();
+            Kount.setCachedDeviceData(obj.merchantId, obj3.deviceData);
+            obj3._iframe = obj3._setupIFrame();
           }
-          return obj;
+          return obj3;
         },
         Kount,
-        environmentUrls: exports
+        environmentUrls
       };
-      module.exports = exports;
     },
     { "../lib/camel-case-to-snake-case": 144, "./vendor/sjcl": 116 }
   ];
@@ -5053,7 +5049,7 @@ let fn = () => {
         const aes = new obj.cipher.aes(g.b);
         g.C = aes;
       }
-      let exports = {
+      const exports = {
         cipher: {},
         hash: {},
         keyexchange: {},
@@ -5145,7 +5141,7 @@ let fn = () => {
           diff1 = diff1 - 1;
         }
       };
-      exports = {
+      let obj2 = {
         encrypt(g) {
           return t(this, g, 0);
         },
@@ -5209,8 +5205,8 @@ let fn = () => {
       let items1 = [items, ];
       let items2 = [[], [], [], [], []];
       items1[1] = items2;
-      exports.l = items1;
-      exports.cipher.aes.prototype = exports;
+      obj2.l = items1;
+      exports.cipher.aes.prototype = obj2;
       exports.bitArray = {
         bitSlice(arr, arg1, arg2) {
           const bitArray = obj.bitArray;
@@ -5331,13 +5327,13 @@ let fn = () => {
           } else {
             let num3 = 0;
             let tmp5 = num2;
-            let arr1 = num2;
+            let arr6 = num2;
             if (0 < arr.length) {
               do {
-                arr = items.push(tmp5 | arr[num3] >>> tmp2);
+                let arr5 = items.push(tmp5 | arr[num3] >>> tmp2);
                 tmp5 = arr[num3] << 32 - tmp2;
                 num3 = num3 + 1;
-                arr1 = tmp5;
+                arr6 = tmp5;
                 length = arr.length;
               } while (num3 < length);
             }
@@ -5349,9 +5345,9 @@ let fn = () => {
             const partial = bitArray.getPartial(num4);
             const bitArray2 = obj.bitArray;
             if (32 >= tmp2 + partial) {
-              arr1 = items.pop();
+              arr6 = items.pop();
             }
-            items.push(bitArray2.partial(tmp2 + partial & 31, arr1, 1));
+            items.push(bitArray2.partial(tmp2 + partial & 31, arr6, 1));
             return items;
           }
         },
@@ -5697,8 +5693,8 @@ let fn = () => {
               }
               if (self.H >= 1 << self.c.length) {
                 const c = self.c;
-                let sha256 = new obj.hash.sha256();
-                c.push(sha256);
+                const sha2561 = new obj.hash.sha256();
+                c.push(sha2561);
                 const i = self.i;
                 i.push(0);
               }
@@ -5707,7 +5703,7 @@ let fn = () => {
                 self.j = num6;
               }
               self.H = self.H + 1;
-              sha256 = obj.hash.sha256;
+              const sha256 = obj.hash.sha256;
               const b = self.b;
               self.b = sha256.hash(b.concat(tmp9));
               const aes = new obj.cipher.aes(self.b);
@@ -5745,7 +5741,7 @@ let fn = () => {
               }
               C = self.C;
               let encryptResult = C.encrypt(self.g);
-              let arr2 = items1.push(encryptResult[0], encryptResult[1], encryptResult[2], encryptResult[3]);
+              let arr4 = items1.push(encryptResult[0], encryptResult[1], encryptResult[2], encryptResult[3]);
             }
             y(self);
             return items1.slice(0, arg0);
@@ -5808,14 +5804,14 @@ let fn = () => {
               const items1 = [];
               let num10 = 0;
               num3 = 0;
-              let arr1 = items1;
+              let arr2 = items1;
               if (0 < _performance.length) {
                 do {
                   let arr = items1.push(_performance[num10]);
                   let sum = num10 + 1;
                   num10 = sum;
                   num3 = 0;
-                  arr1 = items1;
+                  arr2 = items1;
                   tmp16 = sum < _performance.length;
                 } while (tmp16);
               }
@@ -5825,11 +5821,11 @@ let fn = () => {
                 num6 = 1;
               }
               num3 = num6;
-              arr1 = _performance;
+              arr2 = _performance;
               if (0 < _performance.length) {
                 let tmp13 = num6;
                 let num8 = 0;
-                arr1 = _performance;
+                arr2 = _performance;
                 num3 = num6;
                 if (!num6) {
                   while (true) {
@@ -5839,14 +5835,14 @@ let fn = () => {
                     }
                     let sum1 = num8 + 1;
                     num3 = num7;
-                    arr1 = _performance;
+                    arr2 = _performance;
                     if (sum1 >= _performance.length) {
                       break;
                     } else {
                       tmp13 = num7;
                       num8 = sum1;
                       num3 = num7;
-                      arr1 = _performance;
+                      arr2 = _performance;
                       if (num7) {
                         break;
                       }
@@ -5863,9 +5859,9 @@ let fn = () => {
                 let num13 = 0;
                 let num14 = 0;
                 num11 = 0;
-                if (0 < arr1.length) {
+                if (0 < arr2.length) {
                   do {
-                    let tmp17 = arr1[num13];
+                    let tmp17 = arr2[num13];
                     let sum2 = num14;
                     let tmp20 = num14;
                     if (0 < tmp17) {
@@ -5878,7 +5874,7 @@ let fn = () => {
                     num13 = num13 + 1;
                     num14 = tmp20;
                     num11 = tmp20;
-                  } while (num13 < arr1.length);
+                  } while (num13 < arr2.length);
                 }
               }
               const items2 = [tmp3, , , , , ];
@@ -5887,8 +5883,8 @@ let fn = () => {
               items2[2] = 2;
               items2[3] = num11;
               items2[4] = valueOfResult;
-              items2[5] = arr1.length;
-              self.c[num].update(items2.concat(arr1));
+              items2[5] = arr2.length;
+              self.c[num].update(items2.concat(arr2));
               tmp9 = num11;
               num4 = num3;
             }
@@ -5931,7 +5927,7 @@ let fn = () => {
                   if (!seeded.hasOwnProperty(key10119)) {
                     continue;
                   } else {
-                    arr = items4.push(seeded[key10119]);
+                    let arr3 = items4.push(seeded[key10119]);
                     continue;
                   }
                   continue;
@@ -5945,13 +5941,14 @@ let fn = () => {
                   } while (num17 < length2);
                 }
               }
+              const progress = obj.random.B.progress;
               const items5 = [];
-              const progress = self.getProgress();
+              const progress1 = self.getProgress();
               for (const key10138 in progress) {
                 if (!progress.hasOwnProperty(key10138)) {
                   continue;
                 } else {
-                  arr1 = items5.push(progress[key10138]);
+                  let arr4 = items5.push(progress[key10138]);
                   continue;
                 }
                 continue;
@@ -5959,7 +5956,7 @@ let fn = () => {
               let num18 = 0;
               if (0 < items5.length) {
                 do {
-                  let tmp31 = items5[num18](progress);
+                  let tmp31 = items5[num18](progress1);
                   num18 = num18 + 1;
                   length3 = items5.length;
                 } while (num18 < length3);
@@ -6336,9 +6333,7 @@ let fn = () => {
   obj[116] = items115;
   const items116 = [
     (arg0, arg1, arg2) => {
-      let obj = { FASTLANE_SDK_LOAD_ERROR: null };
-      obj = { type: global("../lib/braintree-error").types.MERCHANT, code: "FASTLANE_SDK_LOAD_ERROR" };
-      obj.FASTLANE_SDK_LOAD_ERROR = obj;
+      const obj = { FASTLANE_SDK_LOAD_ERROR: { type: global("../lib/braintree-error").types.MERCHANT, code: "FASTLANE_SDK_LOAD_ERROR" } };
       module.exports = obj;
     },
     { "../lib/braintree-error": 143 }
@@ -6410,17 +6405,17 @@ let fn = () => {
           tmp = global.googlePayVersion || 1;
           if (obj._isUnsupportedGooglePayAPIVersion()) {
             tmp2 = closure_5;
-            obj = { code: null, message: null, type: null };
+            obj1 = { code: null, message: null, type: null };
             tmp3 = closure_6;
-            obj.code = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.code;
+            obj1.code = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.code;
             str = "The Braintree SDK does not support Google Pay version ";
             str2 = ". Please upgrade the version of your Braintree SDK and contact support if this error persists.";
-            obj.message = `The Braintree SDK does not support Google Pay version ${obj._googlePayVersion}. Please upgrade the version of your Braintree SDK and contact support if this error persists.`;
-            obj.type = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type;
+            obj1.message = `The Braintree SDK does not support Google Pay version ${obj._googlePayVersion}. Please upgrade the version of your Braintree SDK and contact support if this error persists.`;
+            obj1.type = closure_6.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = obj;
-            tmp7 = new closure_5(obj);
+            tmp6 = obj1;
+            tmp7 = new closure_5(obj1);
             tmp8 = tmp7;
             throw tmp7;
           } else {
@@ -6533,9 +6528,8 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           return closure_4.verify({ name: "Google Pay", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Google Pay" };
-            obj = closure_1_3.create(obj);
-            const nextPromise = obj.then((client) => {
+            const obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Google Pay" };
+            const nextPromise = closure_1_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Google Pay" }).then((client) => {
               let rejectResult = client;
               closure_0.client = client;
               if (!client.getConfiguration().gatewayConfiguration.androidPay) {
@@ -6572,8 +6566,8 @@ let fn = () => {
         if (allowedAttributes.hasOwnProperty(key10009)) {
           if (null == str) {
             if (!tmp10) {
-              let obj = { type: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.type, code: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.code, message: `Value "${str}" is not allowed for "${key10009}" attribute.` };
-              let tmp7 = new closure_0(obj);
+              const obj2 = { type: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.type, code: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.code, message: `Value "${str}" is not allowed for "${key10009}" attribute.` };
+              let tmp7 = new closure_0(obj2);
             }
           } else if ("string" === allowedAttributes[key10009]) {
             let tmp13 = typeof str === "string";
@@ -6594,7 +6588,7 @@ let fn = () => {
             }
           }
         } else {
-          obj = { type: constants.HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED.type, code: constants.HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED.code, message: `The "${key10009}" attribute is not supported in Hosted Fields.` };
+          const obj = { type: constants.HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED.type, code: constants.HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED.code, message: `The "${key10009}" attribute is not supported in Hosted Fields.` };
           tmp7 = new closure_0(obj);
         }
         return tmp7;
@@ -6713,16 +6707,14 @@ let fn = () => {
                   const index = arr.indexOf(element);
                   direction = direction.direction;
                   if (navigationDirections.BACK === direction) {
-                    let obj = {
+                    const obj2 = {
                       checkIndexBounds(arg0) {
                                 return arg0 < 0;
                               },
                       indexChange: -1
                     };
-                  } else if (tmp5.FORWARD !== direction) {
-                    obj = {};
                   }
-                  obj = {
+                  const obj3 = {
                     checkIndexBounds(arg0) {
                             return arg0 > length - 1;
                           },
@@ -6793,12 +6785,12 @@ let fn = () => {
             tmp2 = closure_1;
             tmp4 = globalThis;
             _Boolean = Boolean;
-            obj = closure_1.create(global.authorization);
+            obj1 = closure_1.create(global.authorization);
             isDebug = Boolean(global.isDebug);
-            assetsUrl = obj;
+            assetsUrl = obj1;
           }
-          obj1 = { client: global.client, authorization: global.authorization, debug: isDebug, assetsUrl, name: "Hosted Fields", sessionId };
-          self._clientPromise = closure_6.create(obj1);
+          obj7 = { client: global.client, authorization: global.authorization, debug: isDebug, assetsUrl, name: "Hosted Fields", sessionId };
+          self._clientPromise = closure_6.create(obj7);
           closure_2 = closure_8(assetsUrl, tmp, isDebug);
           if (global.fields) {
             tmp6 = globalThis;
@@ -6820,25 +6812,25 @@ let fn = () => {
               tmp12 = tmp11;
               self._destructor = tmp11;
               self._fields = obj;
-              obj2 = { fields: null, cards: null };
-              obj2.fields = {};
+              obj8 = { fields: null, cards: null };
+              obj8.fields = {};
               tmp13 = closure_26;
               str = "";
-              obj2.cards = closure_26("");
-              self._state = obj2;
+              obj8.cards = closure_26("");
+              self._state = obj8;
               tmp14 = closure_5;
-              obj3 = { channel: null, verifyDomain: null, targetFrames: null };
-              obj3.channel = tmp;
+              obj9 = { channel: null, verifyDomain: null, targetFrames: null };
+              obj9.channel = tmp;
               tmp15 = closure_2;
-              obj3.verifyDomain = closure_2;
+              obj9.verifyDomain = closure_2;
               _window = window;
               items1 = [];
               items1[0] = window;
-              obj3.targetFrames = items1;
+              obj9.targetFrames = items1;
               tmp16 = new.target;
               tmp17 = new.target;
-              tmp18 = obj3;
-              tmp19 = new closure_5(obj3);
+              tmp18 = obj9;
+              tmp19 = new closure_5(obj9);
               tmp20 = tmp19;
               self._bus = tmp19;
               _destructor = self._destructor;
@@ -6867,10 +6859,10 @@ let fn = () => {
               onResult = _bus.on(events.REMOVE_FOCUS_INTERCEPTS, () => { ... });
               _bus2 = self._bus;
               tmp29 = closure_28;
-              obj4 = { onRemoveFocusIntercepts: null, onTriggerInputFocus: null };
-              obj4.onRemoveFocusIntercepts = function onRemoveFocusIntercepts() { ... };
-              obj4.onTriggerInputFocus = function onTriggerInputFocus() { ... };
-              onResult1 = _bus2.on(events.TRIGGER_FOCUS_CHANGE, closure_28.createFocusChangeHandler(tmp, obj4));
+              obj10 = { onRemoveFocusIntercepts: null, onTriggerInputFocus: null };
+              obj10.onRemoveFocusIntercepts = function onRemoveFocusIntercepts() { ... };
+              obj10.onTriggerInputFocus = function onTriggerInputFocus() { ... };
+              onResult1 = _bus2.on(events.TRIGGER_FOCUS_CHANGE, closure_28.createFocusChangeHandler(tmp, obj10));
               _bus3 = self._bus;
               onResult2 = _bus3.on(events.READY_FOR_CLIENT, () => { ... });
               _bus4 = self._bus;
@@ -6898,8 +6890,8 @@ let fn = () => {
               return;
             }
           }
-          obj5 = { type: closure_25.INSTANTIATION_OPTION_REQUIRED.type, code: closure_25.INSTANTIATION_OPTION_REQUIRED.code, message: "options.fields is required when instantiating Hosted Fields." };
-          tmp41 = new closure_7(obj5);
+          obj11 = { type: closure_25.INSTANTIATION_OPTION_REQUIRED.type, code: closure_25.INSTANTIATION_OPTION_REQUIRED.code, message: "options.fields is required when instantiating Hosted Fields." };
+          tmp41 = new closure_7(obj11);
           throw tmp41;
         }
         _setupLabelFocus(arg0, arg1) {
@@ -7029,23 +7021,23 @@ let fn = () => {
               tmp12 = module;
               _bus = self._bus;
               tmp13 = events;
-              obj = { field: null, classname: null };
-              obj.field = global;
-              obj.classname = module;
-              emitResult = _bus.emit(events.ADD_CLASS, obj);
+              obj1 = { field: null, classname: null };
+              obj1.field = global;
+              obj1.classname = module;
+              emitResult = _bus.emit(events.ADD_CLASS, obj1);
             } else {
               tmp7 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp8 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot add class to \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot add class to "${global}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot add class to "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj1;
-              tmp6 = new closure_7(obj1);
+              tmp11 = obj4;
+              tmp6 = new closure_7(obj4);
             }
           } else {
             tmp = closure_7;
@@ -7077,23 +7069,23 @@ let fn = () => {
               tmp12 = module;
               _bus = self._bus;
               tmp13 = events;
-              obj = { field: null, classname: null };
-              obj.field = global;
-              obj.classname = module;
-              emitResult = _bus.emit(events.REMOVE_CLASS, obj);
+              obj1 = { field: null, classname: null };
+              obj1.field = global;
+              obj1.classname = module;
+              emitResult = _bus.emit(events.REMOVE_CLASS, obj1);
             } else {
               tmp7 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp8 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot remove class from \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot remove class from "${global}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot remove class from "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj1;
-              tmp6 = new closure_7(obj1);
+              tmp11 = obj4;
+              tmp6 = new closure_7(obj4);
             }
           } else {
             tmp = closure_7;
@@ -7127,23 +7119,23 @@ let fn = () => {
               if (!tmp6) {
                 _bus = self._bus;
                 tmp13 = events;
-                obj = { field: null, attribute: null, value: null };
+                obj1 = { field: null, attribute: null, value: null };
                 ({ field: obj3.field, attribute: obj3.attribute, value: obj3.value } = global);
-                emitResult = _bus.emit(events.SET_ATTRIBUTE, obj);
+                emitResult = _bus.emit(events.SET_ATTRIBUTE, obj1);
               }
             } else {
               tmp7 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp8 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot set attribute for \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot set attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot set attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj1;
-              tmp6 = new closure_7(obj1);
+              tmp11 = obj4;
+              tmp6 = new closure_7(obj4);
             }
           } else {
             tmp = closure_7;
@@ -7214,23 +7206,23 @@ let fn = () => {
               if (!tmp6) {
                 _bus = self._bus;
                 tmp13 = events;
-                obj = { field: null, attribute: null };
+                obj1 = { field: null, attribute: null };
                 ({ field: obj3.field, attribute: obj3.attribute } = global);
-                emitResult = _bus.emit(events.REMOVE_ATTRIBUTE, obj);
+                emitResult = _bus.emit(events.REMOVE_ATTRIBUTE, obj1);
               }
             } else {
               tmp7 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp8 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot remove attribute for \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot remove attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot remove attribute for "${global.field}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj1;
-              tmp6 = new closure_7(obj1);
+              tmp11 = obj4;
+              tmp6 = new closure_7(obj4);
             }
           } else {
             tmp = closure_7;
@@ -7265,22 +7257,22 @@ let fn = () => {
             if (_fields.hasOwnProperty(global)) {
               _bus = self._bus;
               tmp12 = events;
-              obj = { field: null };
-              obj.field = global;
-              emitResult = _bus.emit(events.CLEAR_FIELD, obj);
+              obj1 = { field: null };
+              obj1.field = global;
+              emitResult = _bus.emit(events.CLEAR_FIELD, obj1);
             } else {
               tmp7 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp8 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot clear \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot clear "${global}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot clear "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj1;
-              tmp6 = new closure_7(obj1);
+              tmp11 = obj4;
+              tmp6 = new closure_7(obj4);
             }
           } else {
             tmp = closure_7;
@@ -7315,9 +7307,9 @@ let fn = () => {
               focusResult = frameElement.focus();
               _bus = self._bus;
               tmp14 = events;
-              obj = { field: null };
-              obj.field = global;
-              emitResult = _bus.emit(events.TRIGGER_INPUT_FOCUS, obj);
+              obj1 = { field: null };
+              obj1.field = global;
+              emitResult = _bus.emit(events.TRIGGER_INPUT_FOCUS, obj1);
               tmp16 = closure_15;
               if (closure_15.isIos()) {
                 tmp17 = globalThis;
@@ -7327,17 +7319,17 @@ let fn = () => {
               }
             } else {
               tmp8 = closure_7;
-              obj1 = { type: null, code: null, message: null };
+              obj4 = { type: null, code: null, message: null };
               tmp9 = closure_11;
-              obj1.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
-              obj1.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
+              obj4.type = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.type;
+              obj4.code = closure_11.HOSTED_FIELDS_FIELD_NOT_PRESENT.code;
               str3 = "Cannot focus \"";
               str4 = "\" field because it is not part of the current Hosted Fields options.";
-              obj1.message = `Cannot focus "${global}" field because it is not part of the current Hosted Fields options.`;
+              obj4.message = `Cannot focus "${global}" field because it is not part of the current Hosted Fields options.`;
               tmp10 = new.target;
               tmp11 = new.target;
-              tmp12 = obj1;
-              tmp7 = new closure_7(obj1);
+              tmp12 = obj4;
+              tmp7 = new closure_7(obj4);
             }
           } else {
             tmp2 = closure_7;
@@ -7490,11 +7482,9 @@ let fn = () => {
   const items130 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/enumerate");
-      let obj = { VERSION: "3.112.1", maxExpirationYearAge: 19, externalEvents: { FOCUS: "focus", BLUR: "blur", EMPTY: "empty", NOT_EMPTY: "notEmpty", VALIDITY_CHANGE: "validityChange", CARD_TYPE_CHANGE: "cardTypeChange" }, defaultMaxLengths: { number: 19, postalCode: 8, expirationDate: 7, expirationMonth: 2, expirationYear: 4, cvv: 3 }, externalClasses: { FOCUSED: "braintree-hosted-fields-focused", INVALID: "braintree-hosted-fields-invalid", VALID: "braintree-hosted-fields-valid" }, navigationDirections: { BACK: "before", FORWARD: "after" }, defaultIFrameStyle: { border: "none", width: "100%", height: "100%", float: "left" }, tokenizationErrorCodes: null, allowedStyles: ["-moz-appearance", "-moz-box-shadow", "-moz-osx-font-smoothing", "-moz-tap-highlight-color", "-moz-transition", "-webkit-appearance", "-webkit-box-shadow", "-webkit-font-smoothing", "-webkit-tap-highlight-color", "-webkit-transition", "appearance", "box-shadow", "color", "direction", "font", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-weight", "letter-spacing", "line-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "opacity", "outline", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "text-align", "text-shadow", "transition"], allowedFields: null, allowedAttributes: { "aria-invalid": "boolean", "aria-required": "boolean", disabled: "boolean", placeholder: "string" }, allowedBillingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], allowedShippingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], autocompleteMappings: { "cardholder-name": "cc-name", "credit-card-number": "cc-number", expiration: "cc-exp", "expiration-month": "cc-exp-month", "expiration-year": "cc-exp-year", cvv: "cc-csc", "postal-code": "billing postal-code" } };
-      obj = { 81724: null, 81736: null };
+      const obj = { VERSION: "3.112.1", maxExpirationYearAge: 19, externalEvents: { FOCUS: "focus", BLUR: "blur", EMPTY: "empty", NOT_EMPTY: "notEmpty", VALIDITY_CHANGE: "validityChange", CARD_TYPE_CHANGE: "cardTypeChange" }, defaultMaxLengths: { number: 19, postalCode: 8, expirationDate: 7, expirationMonth: 2, expirationYear: 4, cvv: 3 }, externalClasses: { FOCUSED: "braintree-hosted-fields-focused", INVALID: "braintree-hosted-fields-invalid", VALID: "braintree-hosted-fields-valid" }, navigationDirections: { BACK: "before", FORWARD: "after" }, defaultIFrameStyle: { border: "none", width: "100%", height: "100%", float: "left" }, tokenizationErrorCodes: null, allowedStyles: ["-moz-appearance", "-moz-box-shadow", "-moz-osx-font-smoothing", "-moz-tap-highlight-color", "-moz-transition", "-webkit-appearance", "-webkit-box-shadow", "-webkit-font-smoothing", "-webkit-tap-highlight-color", "-webkit-transition", "appearance", "box-shadow", "color", "direction", "font", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-weight", "letter-spacing", "line-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "opacity", "outline", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "text-align", "text-shadow", "transition"], allowedFields: { cardholderName: { name: "cardholder-name", label: "Cardholder Name" }, number: { name: "credit-card-number", label: "Credit Card Number" }, cvv: { name: "cvv", label: "CVV" }, expirationDate: { name: "expiration", label: "Expiration Date" }, expirationMonth: { name: "expiration-month", label: "Expiration Month" }, expirationYear: { name: "expiration-year", label: "Expiration Year" }, postalCode: { name: "postal-code", label: "Postal Code" } }, allowedAttributes: { "aria-invalid": "boolean", "aria-required": "boolean", disabled: "boolean", placeholder: "string" }, allowedBillingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], allowedShippingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], autocompleteMappings: { "cardholder-name": "cc-name", "credit-card-number": "cc-number", expiration: "cc-exp", "expiration-month": "cc-exp-month", "expiration-year": "cc-exp-year", cvv: "cc-csc", "postal-code": "billing postal-code" } };
       ({ HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE: obj2[81724], HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED: obj2[81736] } = global("./errors"));
-      obj.tokenizationErrorCodes = obj;
-      obj.allowedFields = { cardholderName: { name: "cardholder-name", label: "Cardholder Name" }, number: { name: "credit-card-number", label: "Credit Card Number" }, cvv: { name: "cvv", label: "CVV" }, expirationDate: { name: "expiration", label: "Expiration Date" }, expirationMonth: { name: "expiration-month", label: "Expiration Month" }, expirationYear: { name: "expiration-year", label: "Expiration Year" }, postalCode: { name: "postal-code", label: "Postal Code" } };
+      obj.tokenizationErrorCodes = { 81724: null, 81736: null };
       obj.events = globalResult(["ADD_CLASS", "AUTOFILL_DATA_AVAILABLE", "BIN_AVAILABLE", "CARD_FORM_ENTRY_HAS_BEGUN", "CLEAR_FIELD", "CONFIGURATION", "FRAME_READY", "INPUT_EVENT", "READY_FOR_CLIENT", "REMOVE_ATTRIBUTE", "REMOVE_CLASS", "REMOVE_FOCUS_INTERCEPTS", "SET_ATTRIBUTE", "SET_MESSAGE", "SET_MONTH_OPTIONS", "TOKENIZATION_REQUEST", "TRIGGER_FOCUS_CHANGE", "TRIGGER_INPUT_FOCUS", "VALIDATE_STRICT"], "hosted-fields:");
       module.exports = obj;
     },
@@ -7736,17 +7726,17 @@ let fn = () => {
           const resolved = Promise.resolve(arg0);
           return resolved.then((getConfiguration) => {
             const sum = constants.ANALYTICS_PREFIX + constants;
-            let obj = { events: [], tracking: [] };
+            const obj = { events: [], tracking: [] };
             const addEventMetadataResult = closure_1.addEventMetadata(getConfiguration, obj);
             addEventMetadataResult.event_name = sum;
             addEventMetadataResult.t = t;
-            obj = { level: "info", event: sum, payload: null };
+            const obj2 = { level: "info", event: sum, payload: null };
             let str = "sandbox";
             if ("production" === getConfiguration.getConfiguration().gatewayConfiguration.environment) {
               str = "production";
             }
-            obj.payload = { env: str, timestamp: t };
-            const items = [obj];
+            obj2.payload = { env: str, timestamp: t };
+            const items = [obj2];
             obj.events = items;
             const items1 = [addEventMetadataResult];
             obj.tracking = items1;
@@ -7809,21 +7799,21 @@ let fn = () => {
             ({ name, client, authorization } = arg0);
             if (!client) {
               if (!authorization) {
-                let obj = { type: constants.INSTANTIATION_OPTION_REQUIRED.type, code: constants.INSTANTIATION_OPTION_REQUIRED.code, message: `options.client is required when instantiating ${name}.` };
-                const tmp15 = new closure_0(obj);
+                const obj2 = { type: constants.INSTANTIATION_OPTION_REQUIRED.type, code: constants.INSTANTIATION_OPTION_REQUIRED.code, message: `options.client is required when instantiating ${name}.` };
+                const tmp15 = new closure_0(obj2);
                 Promise.reject(tmp15);
               }
             }
             if (!authorization) {
               if (client.getVersion() !== c2) {
-                obj = { type: constants.INCOMPATIBLE_VERSIONS.type, code: constants.INCOMPATIBLE_VERSIONS.code, message: `Client (version ${client.getVersion()}) and ${name} (version ${tmp17}) components must be from the same SDK version.` };
-                const tmp28 = new closure_0(obj);
+                const obj3 = { type: constants.INCOMPATIBLE_VERSIONS.type, code: constants.INCOMPATIBLE_VERSIONS.code, message: `Client (version ${client.getVersion()}) and ${name} (version ${tmp17}) components must be from the same SDK version.` };
+                const tmp28 = new closure_0(obj3);
                 let rejectResult1 = Promise.reject(tmp28);
               }
             }
             rejectResult1 = Promise.resolve();
           } else {
-            obj = { type: constants.INVALID_USE_OF_INTERNAL_FUNCTION.type, code: constants.INVALID_USE_OF_INTERNAL_FUNCTION.code, message: "Options must be passed to basicComponentVerification function." };
+            const obj = { type: constants.INVALID_USE_OF_INTERNAL_FUNCTION.type, code: constants.INVALID_USE_OF_INTERNAL_FUNCTION.code, message: "Options must be passed to basicComponentVerification function." };
             const tmp7 = new closure_0(obj);
             return Promise.reject(tmp7);
           }
@@ -7861,7 +7851,7 @@ let fn = () => {
                 let tmpResult = tmp(null);
               }
             } else {
-              arrResult = arr(finish);
+              let arrResult2 = arr(finish);
             }
           }
         } else {
@@ -8144,15 +8134,15 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       closure_0 = global("./braintree-error");
       module.exports = function convertToBraintreeError(originalError, arg1) {
-        let tmp = originalError;
+        let tmp2 = originalError;
         if (!(originalError instanceof closure_0)) {
-          let obj = { type: null, code: null, message: null, details: null };
+          const obj = { type: null, code: null, message: null, details: null };
           ({ type: obj.type, code: obj.code, message: obj.message } = arg1);
-          obj = { originalError };
-          obj.details = obj;
-          tmp = new tmp(obj);
+          const obj2 = { originalError };
+          obj.details = obj2;
+          tmp2 = new tmp(obj);
         }
-        return tmp;
+        return tmp2;
       };
     },
     { "./braintree-error": 143 }
@@ -8217,22 +8207,20 @@ let fn = () => {
               let obj = { src: `${client.assetsUrl}/web/${c3}/js/client.min.js` };
               const script = closure_1.loadScript(obj);
               resolved = script.catch((error) => {
-                let obj = { type: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.type, code: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.code, message: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.message, details: null };
-                obj = { originalError: error };
-                obj.details = obj;
+                const obj = { type: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.type, code: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.code, message: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.message, details: { originalError: error } };
                 return Promise.reject(new closure_0(obj));
               });
             }
             resolved1 = resolved.then(() => {
               if (window.braintree.client.VERSION !== c3) {
-                let obj = { type: constants.INCOMPATIBLE_VERSIONS.type, code: constants.INCOMPATIBLE_VERSIONS.code, message: null };
+                const obj2 = { type: constants.INCOMPATIBLE_VERSIONS.type, code: constants.INCOMPATIBLE_VERSIONS.code, message: null };
                 const _window2 = window;
-                obj.message = `Client (version ${window.braintree.client.VERSION}) and ${closure_0.name} (version ${tmp}) components must be from the same SDK version.`;
-                const tmp10 = new name(obj);
+                obj2.message = `Client (version ${window.braintree.client.VERSION}) and ${closure_0.name} (version ${tmp}) components must be from the same SDK version.`;
+                const tmp10 = new name(obj2);
                 let rejectResult = Promise.reject(tmp10);
               } else {
                 const _window = window;
-                obj = { authorization: null, debug: null };
+                const obj = { authorization: null, debug: null };
                 ({ authorization: obj.authorization, debug: obj.debug } = name);
                 rejectResult = client.create(obj);
               }
@@ -8271,7 +8259,7 @@ let fn = () => {
           if (typeof global === "function") {
             self = this;
             _teardownRegistry = this._teardownRegistry;
-            arr = _teardownRegistry.push(global);
+            arr1 = _teardownRegistry.push(global);
           }
           return;
         }
@@ -8397,12 +8385,12 @@ let fn = () => {
               this._options = size;
               self.state = global.state || {};
               tmp14 = closure_3;
-              obj = { channel: null };
-              obj.channel = self._serviceId;
+              obj1 = { channel: null };
+              obj1.channel = self._serviceId;
               tmp15 = new.target;
               tmp16 = new.target;
-              tmp17 = obj;
-              tmp18 = new closure_3(obj);
+              tmp17 = obj1;
+              tmp18 = new closure_3(obj1);
               tmp19 = tmp18;
               self._bus = tmp18;
               _setBusEventsResult = self._setBusEvents();
@@ -8543,22 +8531,22 @@ let fn = () => {
             obj = {};
           }
           closure_0 = obj;
-          obj = { close: null, focus: null };
+          obj1 = { close: null, focus: null };
           fn = function() {
             if (obj.beforeClose) {
               obj.beforeClose();
             }
             this.close();
           };
-          obj.close = fn.bind(this);
+          obj1.close = fn.bind(this);
           fn2 = function() {
             if (obj.beforeFocus) {
               obj.beforeFocus();
             }
             this.focus();
           };
-          obj.focus = fn2.bind(this);
-          return obj;
+          obj1.focus = fn2.bind(this);
+          return obj1;
         }
         createNoopHandler() {
           obj = { close: noop, focus: noop };
@@ -8669,11 +8657,11 @@ let fn = () => {
       class Modal {
         constructor(arg0) {
           obj = { _closed: null, _frame: null };
-          obj = global;
+          obj1 = global;
           if (!global) {
-            obj = {};
+            obj1 = {};
           }
-          obj._options = obj;
+          obj._options = obj1;
           body = obj._options.container;
           if (!body) {
             tmp = globalThis;
@@ -8983,78 +8971,78 @@ let fn = () => {
           str = "PRODUCTION";
         }
         if (2 === apiVersion) {
-          let obj = { apiVersion: 2, apiVersionMinor: 0, environment: str, allowedPaymentMethods: null };
-          obj = { type: "CARD", parameters: null, tokenizationSpecification: null };
-          obj = { allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"], allowedCardNetworks: null };
+          const obj = { apiVersion: 2, apiVersionMinor: 0, environment: str, allowedPaymentMethods: null };
+          const obj2 = { type: "CARD", parameters: null, tokenizationSpecification: null };
+          const obj3 = { allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"], allowedCardNetworks: null };
           const supportedNetworks = androidPay.supportedNetworks;
-          obj.allowedCardNetworks = supportedNetworks.map((item) => item.toUpperCase());
-          obj.parameters = obj;
-          const obj1 = { type: "PAYMENT_GATEWAY", parameters: null };
-          const obj2 = { "braintree:authorizationFingerprint": androidPay.googleAuthorizationFingerprint };
-          const obj3 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
+          obj3.allowedCardNetworks = supportedNetworks.map((item) => item.toUpperCase());
+          obj2.parameters = obj3;
+          const obj4 = { type: "PAYMENT_GATEWAY", parameters: null };
+          const obj5 = { "braintree:authorizationFingerprint": androidPay.googleAuthorizationFingerprint };
+          const obj6 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
           const _JSON = JSON;
           ({ source: obj7.source, integration: obj7.integration, sessionId: obj7.sessionId, platform: obj7.platform } = gatewayConfiguration.analyticsMetadata);
-          obj3["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
-          obj1.parameters = assign({}, obj3, obj2);
-          obj.tokenizationSpecification = obj1;
-          const items = [obj];
+          obj6["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
+          obj4.parameters = assign({}, obj6, obj5);
+          obj2.tokenizationSpecification = obj4;
+          const items = [obj2];
           obj.allowedPaymentMethods = items;
           if (merchantId) {
-            const obj5 = { merchantId };
-            obj.merchantInfo = obj5;
+            const obj9 = { merchantId };
+            obj.merchantInfo = obj9;
           }
           let tmp = obj;
           if (androidPay.paypalClientId) {
-            const obj6 = { type: "PAYPAL", parameters: null, tokenizationSpecification: null };
-            const obj7 = { purchase_context: null };
-            const obj8 = { purchase_units: null };
-            const obj9 = { payee: null, recurring_payment: true };
-            const obj10 = { client_id: androidPay.paypalClientId };
-            obj9.payee = obj10;
-            const items1 = [obj9];
-            obj8.purchase_units = items1;
-            obj7.purchase_context = obj8;
-            obj6.parameters = obj7;
-            const obj11 = { type: "PAYMENT_GATEWAY", parameters: null };
-            const obj12 = { "braintree:paypalClientId": androidPay.paypalClientId };
-            const obj13 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
+            const obj10 = { type: "PAYPAL", parameters: null, tokenizationSpecification: null };
+            const obj11 = { purchase_context: null };
+            const obj12 = { purchase_units: null };
+            const obj13 = { payee: null, recurring_payment: true };
+            const obj14 = { client_id: androidPay.paypalClientId };
+            obj13.payee = obj14;
+            const items1 = [obj13];
+            obj12.purchase_units = items1;
+            obj11.purchase_context = obj12;
+            obj10.parameters = obj11;
+            const obj15 = { type: "PAYMENT_GATEWAY", parameters: null };
+            const obj16 = { "braintree:paypalClientId": androidPay.paypalClientId };
+            const obj18 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
             const _JSON2 = JSON;
             ({ source: obj17.source, integration: obj17.integration, sessionId: obj17.sessionId, platform: obj17.platform } = gatewayConfiguration.analyticsMetadata);
-            obj13["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
-            obj11.parameters = assign({}, obj13, obj12);
-            obj6.tokenizationSpecification = obj11;
+            obj18["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
+            obj15.parameters = assign({}, obj18, obj16);
+            obj10.tokenizationSpecification = obj15;
             const prop = obj.allowedPaymentMethods;
-            prop.push(obj6);
+            prop.push(obj10);
             tmp = obj;
-            const obj14 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
+            const obj19 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
           }
-          const obj4 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
+          const obj8 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
         } else {
-          const obj15 = { environment: str, allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"], paymentMethodTokenizationParameters: null, cardRequirements: null };
-          const obj16 = { tokenizationType: "PAYMENT_GATEWAY", parameters: null };
-          const obj17 = { "braintree:authorizationFingerprint": androidPay.googleAuthorizationFingerprint };
-          const obj18 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
+          const obj20 = { environment: str, allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"], paymentMethodTokenizationParameters: null, cardRequirements: null };
+          const obj21 = { tokenizationType: "PAYMENT_GATEWAY", parameters: null };
+          const obj23 = { "braintree:authorizationFingerprint": androidPay.googleAuthorizationFingerprint };
+          const obj45 = { gateway: "braintree", "braintree:merchantId": gatewayConfiguration.gatewayConfiguration.merchantId, "braintree:apiVersion": "v1", "braintree:sdkVersion": "3.112.1", "braintree:metadata": null };
           const _JSON3 = JSON;
           ({ source: obj22.source, integration: obj22.integration, sessionId: obj22.sessionId, platform: obj22.platform } = gatewayConfiguration.analyticsMetadata);
-          obj18["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
-          obj16.parameters = assign({}, obj18, obj17);
-          obj15.paymentMethodTokenizationParameters = obj16;
-          const obj20 = { allowedCardNetworks: null };
+          obj45["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
+          obj21.parameters = assign({}, obj45, obj23);
+          obj20.paymentMethodTokenizationParameters = obj21;
+          const obj47 = { allowedCardNetworks: null };
           const supportedNetworks1 = androidPay.supportedNetworks;
-          obj20.allowedCardNetworks = supportedNetworks1.map((item) => item.toUpperCase());
-          obj15.cardRequirements = obj20;
+          obj47.allowedCardNetworks = supportedNetworks1.map((item) => item.toUpperCase());
+          obj20.cardRequirements = obj47;
           if ("TOKENIZATION_KEY" === gatewayConfiguration.authorizationType) {
-            obj15.paymentMethodTokenizationParameters.parameters["braintree:clientKey"] = gatewayConfiguration.authorization;
+            obj20.paymentMethodTokenizationParameters.parameters["braintree:clientKey"] = gatewayConfiguration.authorization;
           }
           if (merchantId) {
-            obj15.merchantId = merchantId;
+            obj20.merchantId = merchantId;
           }
-          tmp = obj15;
+          tmp = obj20;
           if (apiVersion) {
-            obj15.apiVersion = apiVersion;
-            tmp = obj15;
+            obj20.apiVersion = apiVersion;
+            tmp = obj20;
           }
-          const obj19 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
+          const obj46 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
         }
         return tmp;
       };
@@ -9200,7 +9188,7 @@ let fn = () => {
                 let _encodeURIComponent = encodeURIComponent;
                 let _encodeURIComponent2 = encodeURIComponent;
                 let text = `${encodeURIComponent(tmp8)}=`;
-                arr = items.push(`${encodeURIComponent(tmp8)}=` + encodeURIComponent(tmp));
+                let arr3 = items.push(`${encodeURIComponent(tmp8)}=` + encodeURIComponent(tmp));
                 continue;
               }
               continue;
@@ -9618,7 +9606,7 @@ let fn = () => {
                     tmp9 = closure_10;
                     prop = closure_10.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE;
                     str9 = "onPaymentStart";
-                    arr = prop.push("onPaymentStart");
+                    arr1 = prop.push("onPaymentStart");
                   }
                   tmp11 = closure_10;
                   num3 = 0;
@@ -9698,7 +9686,7 @@ let fn = () => {
                 tmp3 = closure_10;
                 prop1 = closure_10.REQUIRED_OPTIONS_FOR_START_PAYMENT;
                 str6 = "onPaymentStart";
-                arr1 = prop1.push("onPaymentStart");
+                arr6 = prop1.push("onPaymentStart");
               }
               tmp5 = closure_10;
               num = 0;
@@ -9749,28 +9737,28 @@ let fn = () => {
             tmp41 = global.address || {};
             tmp42 = global.fallback || {};
             tmp43 = global.billingAddress || {};
-            obj = { amount: null, billingAddress: null, birthDate: null, blikOptions: null, city: null, correlationId: null, countryCode: null, currencyIsoCode: null, discountAmount: null, experienceProfile: null, firstName: null, fundingSource: null, intent: "sale", lastName: null, line1: null, line2: null, lineItems: null, merchantAccountId: null, merchantOrPartnerCustomerId: null, payerEmail: null, paymentTypeCountryCode: null, phone: null, phoneCountryCode: null, postalCode: null, recurrent: null, shippingAmount: null, state: null };
-            obj.amount = global.amount;
-            obj1 = { line1: null, line2: null, city: null, state: null, postalCode: null, countryCode: null };
+            obj1 = { amount: null, billingAddress: null, birthDate: null, blikOptions: null, city: null, correlationId: null, countryCode: null, currencyIsoCode: null, discountAmount: null, experienceProfile: null, firstName: null, fundingSource: null, intent: "sale", lastName: null, line1: null, line2: null, lineItems: null, merchantAccountId: null, merchantOrPartnerCustomerId: null, payerEmail: null, paymentTypeCountryCode: null, phone: null, phoneCountryCode: null, postalCode: null, recurrent: null, shippingAmount: null, state: null };
+            obj1.amount = global.amount;
+            obj16 = { line1: null, line2: null, city: null, state: null, postalCode: null, countryCode: null };
             ({ streetAddress: obj7.line1, extendedAddress: obj7.line2, locality: obj7.city, region: obj7.state, postalCode: obj7.postalCode, countryCode: obj7.countryCode } = tmp43);
-            obj.billingAddress = obj1;
+            obj1.billingAddress = obj16;
             ({ birthDate: obj6.birthDate, blikOptions: obj6.blikOptions } = global);
-            obj.city = tmp41.locality;
-            obj.correlationId = global.correlationId;
-            obj.countryCode = tmp41.countryCode;
+            obj1.city = tmp41.locality;
+            obj1.correlationId = global.correlationId;
+            obj1.countryCode = tmp41.countryCode;
             ({ currencyCode: obj6.currencyIsoCode, discountAmount: obj6.discountAmount } = global);
-            obj2 = { brandName: null, customerServiceInstructions: null, locale: null, noShipping: null };
+            obj17 = { brandName: null, customerServiceInstructions: null, locale: null, noShipping: null };
             ({ displayName: obj8.brandName, customerServiceInstructions: obj8.customerServiceInstructions, locale: obj8.locale } = global);
-            obj2.noShipping = !global.shippingAddressRequired;
-            obj.experienceProfile = obj2;
+            obj17.noShipping = !global.shippingAddressRequired;
+            obj1.experienceProfile = obj17;
             ({ givenName: obj6.firstName, paymentType: obj6.fundingSource, surname: obj6.lastName } = global);
             ({ streetAddress: obj6.line1, extendedAddress: obj6.line2 } = tmp41);
-            obj.lineItems = global.lineItems;
-            obj.merchantAccountId = self._merchantAccountId;
+            obj1.lineItems = global.lineItems;
+            obj1.merchantAccountId = self._merchantAccountId;
             ({ customerId: obj6.merchantOrPartnerCustomerId, email: obj6.payerEmail, paymentTypeCountryCode: obj6.paymentTypeCountryCode, phone: obj6.phone, phoneCountryCode: obj6.phoneCountryCode } = global);
-            obj.postalCode = tmp41.postalCode;
+            obj1.postalCode = tmp41.postalCode;
             ({ recurrent: obj6.recurrent, shippingAmount: obj6.shippingAmount } = global);
-            obj.state = tmp41.region;
+            obj1.state = tmp41.region;
             obj9 = closure_9;
             queryify = closure_9.queryify;
             if (self._isRedirectFlow) {
@@ -9780,30 +9768,30 @@ let fn = () => {
               str21 = "/html/local-payment-redirect-frame";
               text = `${self._assetsUrl}/html/local-payment-redirect-frame`;
               tmp45 = closure_2;
-              obj3 = { channel: null, r: null, t: null, c: 1 };
-              obj3.channel = _serviceId;
+              obj18 = { channel: null, r: null, t: null, c: 1 };
+              obj18.channel = _serviceId;
               url = tmp42.cancelUrl;
               text1 = `${self._assetsUrl}/html/local-payment-redirect-frame${closure_2(self._isDebug)}`;
               if (!url) {
                 url = tmp42.url;
               }
-              obj3.r = url;
+              obj18.r = url;
               tmp47 = tmp42.cancelButtonText || tmp42.buttonText;
               str22 = ".html";
-              obj3.t = tmp47;
-              queryifyResult1 = queryify(`${tmp46}.html`, obj3);
+              obj18.t = tmp47;
+              queryifyResult1 = queryify(`${tmp46}.html`, obj18);
               text2 = `${self._assetsUrl}/html/local-payment-redirect-frame`;
-              obj4 = { channel: null, r: null, t: null };
-              obj4.channel = _serviceId;
+              obj19 = { channel: null, r: null, t: null };
+              obj19.channel = _serviceId;
               ({ url: obj11.r, buttonText: obj11.t } = tmp42);
-              _redirectUrl = obj9.queryify(`${`${self._assetsUrl}/html/local-payment-redirect-frame`}${tmp45(self._isDebug)}.html`, obj4);
+              _redirectUrl = obj9.queryify(`${`${self._assetsUrl}/html/local-payment-redirect-frame`}${tmp45(self._isDebug)}.html`, obj19);
               queryifyResult = queryifyResult1;
             }
             tmp51 = assign;
-            obj5 = { cancelUrl: null, returnUrl: null };
-            obj5.cancelUrl = queryifyResult;
-            obj5.returnUrl = _redirectUrl;
-            tmp52 = assign(obj, obj5);
+            obj20 = { cancelUrl: null, returnUrl: null };
+            obj20.cancelUrl = queryifyResult;
+            obj20.returnUrl = _redirectUrl;
+            tmp52 = assign(obj1, obj20);
             str23 = global.paymentType;
             self._paymentType = str23.toLowerCase();
             if (self._authorizationInProgress) {
@@ -9859,15 +9847,15 @@ let fn = () => {
               if (!num15) {
                 num15 = 1282;
               }
-              size = { width: null, height: null };
-              size.width = num15;
-              size.height = size.height || 720;
-              openResult = _frameService.open(size, self._startPaymentCallback);
+              size1 = { width: null, height: null };
+              size1.width = num15;
+              size1.height = size.height || 720;
+              openResult = _frameService.open(size1, self._startPaymentCallback);
             }
             _client = self._client;
-            obj6 = { method: "post", endpoint: "local_payments/create", data: null };
-            obj6.data = obj;
-            requestResult = _client.request(obj6);
+            obj21 = { method: "post", endpoint: "local_payments/create", data: null };
+            obj21.data = obj1;
+            requestResult = _client.request(obj21);
             nextPromise = requestResult.then(() => { ... });
             catchPromise = nextPromise.catch(() => { ... });
             rejectResult = tmp66;
@@ -9893,20 +9881,20 @@ let fn = () => {
                 tmp4 = globalThis;
                 _Promise = Promise;
                 tmp5 = _client;
-                obj = { type: null, code: null, message: null, details: null };
+                obj1 = { type: null, code: null, message: null, details: null };
                 tmp6 = closure_11;
-                obj.type = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.type;
-                obj.code = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.code;
-                obj.message = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.message;
-                obj1 = { originalError: null };
-                obj2 = { errorcode: null, token: null };
+                obj1.type = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.type;
+                obj1.code = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.code;
+                obj1.message = closure_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.message;
+                obj7 = { originalError: null };
+                obj8 = { errorcode: null, token: null };
                 ({ errorcode: obj4.errorcode, btLpToken: obj4.token } = queryItems);
-                obj1.originalError = obj2;
-                obj.details = obj1;
+                obj7.originalError = obj8;
+                obj1.details = obj7;
                 tmp7 = new.target;
                 tmp8 = new.target;
-                tmp9 = obj;
-                tmp10 = new _client(obj);
+                tmp9 = obj1;
+                tmp10 = new _client(obj1);
                 tmp11 = tmp10;
                 rejectResult = Promise.reject(tmp10);
               } else {
@@ -9919,10 +9907,10 @@ let fn = () => {
             }
             return rejectResult;
           }
-          obj3 = { type: closure_11.LOCAL_PAYMENT_CANCELED.type, code: closure_11.LOCAL_PAYMENT_CANCELED.code, message: closure_11.LOCAL_PAYMENT_CANCELED.message, details: null };
-          obj4 = { originalError: { errorcode: queryItems.errorcode, token: queryItems.btLpToken } };
-          obj3.details = obj4;
-          tmp12 = new _client(obj3);
+          obj9 = { type: closure_11.LOCAL_PAYMENT_CANCELED.type, code: closure_11.LOCAL_PAYMENT_CANCELED.code, message: closure_11.LOCAL_PAYMENT_CANCELED.message, details: null };
+          obj10 = { originalError: { errorcode: queryItems.errorcode, token: queryItems.btLpToken } };
+          obj9.details = obj10;
+          tmp12 = new _client(obj9);
           rejectResult = Promise.reject(tmp12);
           return;
         }
@@ -9954,16 +9942,16 @@ let fn = () => {
           if (global.paypalAccounts) {
             first = global.paypalAccounts[0];
           }
-          obj = { nonce: first.nonce, details: {}, type: first.type };
+          obj1 = { nonce: first.nonce, details: {}, type: first.type };
           if (first.details) {
             if (first.details.payerInfo) {
-              obj.details = first.details.payerInfo;
+              obj1.details = first.details.payerInfo;
             }
             if (first.details.correlationId) {
-              obj.correlationId = first.details.correlationId;
+              obj1.correlationId = first.details.correlationId;
             }
           }
-          return obj;
+          return obj1;
         }
         hasTokenizationParams() {
           parsed = closure_9.parse();
@@ -9988,8 +9976,8 @@ let fn = () => {
           if (!token) {
             token = global.token;
           }
-          obj = { correlationId: token, paymentToken: global.btLpPaymentId || global.paymentId, payerId: global.btLpPayerId || global.PayerID, unilateral: _client.getConfiguration().gatewayConfiguration.paypal.unvettedMerchant, intent: "sale" };
-          obj.paypalAccount = obj;
+          obj1 = { correlationId: token, paymentToken: global.btLpPaymentId || global.paymentId, payerId: global.btLpPayerId || global.PayerID, unilateral: _client.getConfiguration().gatewayConfiguration.paypal.unvettedMerchant, intent: "sale" };
+          obj.paypalAccount = obj1;
           return obj;
         }
         teardown() {
@@ -10170,10 +10158,10 @@ let fn = () => {
           this._authInProgress = true;
           _client = this._client;
           obj = { method: "post", endpoint: "masterpass/request_token", data: null };
-          obj = { requestToken: null };
-          obj1 = { originUrl: `${window.location.protocol}//${window.location.hostname}`, subtotal: global.subtotal, currencyCode: global.currencyCode, callbackUrl: this._callbackUrl };
-          obj.requestToken = obj1;
-          obj.data = obj;
+          obj1 = { requestToken: null };
+          obj4 = { originUrl: `${window.location.protocol}//${window.location.hostname}`, subtotal: global.subtotal, currencyCode: global.currencyCode, callbackUrl: this._callbackUrl };
+          obj1.requestToken = obj4;
+          obj.data = obj1;
           requestResult = _client.request(obj);
           nextPromise = requestResult.then(() => { ... });
           return nextPromise.catch(() => { ... });
@@ -10221,11 +10209,11 @@ let fn = () => {
             } else {
               _client = self._client;
               obj = { endpoint: "payment_methods/masterpass_cards", method: "post", data: null };
-              obj = { masterpassCard: null };
-              obj1 = { checkoutResourceUrl: null, requestToken: null, verifierToken: null };
+              obj1 = { masterpassCard: null };
+              obj4 = { checkoutResourceUrl: null, requestToken: null, verifierToken: null };
               ({ checkout_resource_url: obj3.checkoutResourceUrl, oauth_token: obj3.requestToken, oauth_verifier: obj3.verifierToken } = global);
-              obj.masterpassCard = obj1;
-              obj.data = obj;
+              obj1.masterpassCard = obj4;
+              obj.data = obj1;
               requestResult = _client.request(obj);
               nextPromise = requestResult.then(() => { ... });
               rejectResult = nextPromise.catch(() => { ... });
@@ -10369,8 +10357,8 @@ let fn = () => {
           keys = Object.keys(self._supportedPaymentMethods);
           fn = () => { ... };
           self._defaultSupportedPaymentMethods = keys.map(fn.bind(self));
-          obj = { channel: self._componentId };
-          tmp4 = new closure_2(obj);
+          obj1 = { channel: self._componentId };
+          tmp4 = new closure_2(obj1);
           self._bus = tmp4;
           return;
         }
@@ -10387,19 +10375,19 @@ let fn = () => {
           }
           obj = {};
           if (tmp2) {
-            obj = { supportedMethods: "basic-card", data: null };
-            obj1 = { supportedNetworks: null };
+            obj1 = { supportedMethods: "basic-card", data: null };
+            obj5 = { supportedNetworks: null };
             supportedCardTypes = creditCards.supportedCardTypes;
-            obj1.supportedNetworks = supportedCardTypes.reduce(() => { ... }, []);
-            obj.data = obj1;
-            obj.basicCard = obj;
+            obj5.supportedNetworks = supportedCardTypes.reduce(() => { ... }, []);
+            obj1.data = obj5;
+            obj.basicCard = obj1;
           }
           tmp3 = self._enabledPaymentMethods.googlePay && androidPay && androidPay.enabled;
           if (tmp3) {
-            obj2 = { supportedMethods: "https://google.com/pay", data: null };
+            obj6 = { supportedMethods: "https://google.com/pay", data: null };
             tmp4 = closure_4;
-            obj2.data = closure_4(configuration, self._googlePayVersion, self._googleMerchantId);
-            obj.googlePay = obj2;
+            obj6.data = closure_4(configuration, self._googlePayVersion, self._googleMerchantId);
+            obj.googlePay = obj6;
           }
           return obj;
         }
@@ -10515,18 +10503,18 @@ let fn = () => {
           self = this;
           if ("AbortError" === name) {
             tmp24 = closure_10;
-            obj = { type: null, code: null, message: null, details: null };
+            obj1 = { type: null, code: null, message: null, details: null };
             tmp25 = errors;
-            obj.type = errors.PAYMENT_REQUEST_CANCELED.type;
-            obj.code = errors.PAYMENT_REQUEST_CANCELED.code;
-            obj.message = errors.PAYMENT_REQUEST_CANCELED.message;
-            obj1 = { originalError: null };
-            obj1.originalError = global;
-            obj.details = obj1;
+            obj1.type = errors.PAYMENT_REQUEST_CANCELED.type;
+            obj1.code = errors.PAYMENT_REQUEST_CANCELED.code;
+            obj1.message = errors.PAYMENT_REQUEST_CANCELED.message;
+            obj11 = { originalError: null };
+            obj11.originalError = global;
+            obj1.details = obj11;
             tmp26 = new.target;
             tmp27 = new.target;
-            tmp28 = obj;
-            tmp29 = new closure_10(obj);
+            tmp28 = obj1;
+            tmp29 = new closure_10(obj1);
             tmp30 = closure_0;
             str2 = "payment-request.tokenize.canceled";
             sendEventResult = closure_0.sendEvent(self._client, "payment-request.tokenize.canceled");
@@ -10536,50 +10524,50 @@ let fn = () => {
             str3 = "PAYMENT_REQUEST_INITIALIZATION_FAILED";
             if ("PAYMENT_REQUEST_INITIALIZATION_FAILED" === name) {
               tmp17 = closure_10;
-              obj2 = { type: null, code: null, message: null, details: null };
+              obj12 = { type: null, code: null, message: null, details: null };
               tmp18 = errors;
-              obj2.type = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
-              obj2.code = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code;
-              obj2.message = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message;
-              obj3 = { originalError: null };
-              obj3.originalError = global;
-              obj2.details = obj3;
+              obj12.type = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
+              obj12.code = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code;
+              obj12.message = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message;
+              obj13 = { originalError: null };
+              obj13.originalError = global;
+              obj12.details = obj13;
               tmp19 = new.target;
               tmp20 = new.target;
-              tmp21 = obj2;
-              tmp = new closure_10(obj2);
+              tmp21 = obj12;
+              tmp1 = new closure_10(obj12);
             } else {
               str4 = "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR";
               if ("BRAINTREE_GATEWAY_GOOGLE_PAYMENT_TOKENIZATION_ERROR" === name) {
                 tmp12 = closure_10;
-                obj4 = { type: null, code: null, message: null, details: null };
+                obj14 = { type: null, code: null, message: null, details: null };
                 tmp13 = errors;
-                obj4.type = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.type;
-                obj4.code = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.code;
-                obj4.message = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.message;
-                obj5 = { originalError: null };
-                obj5.originalError = global;
-                obj4.details = obj5;
+                obj14.type = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.type;
+                obj14.code = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.code;
+                obj14.message = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE.message;
+                obj15 = { originalError: null };
+                obj15.originalError = global;
+                obj14.details = obj15;
                 tmp14 = new.target;
                 tmp15 = new.target;
-                tmp16 = obj4;
-                tmp = new closure_10(obj4);
+                tmp16 = obj14;
+                tmp1 = new closure_10(obj14);
               } else {
                 str5 = "BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR";
                 if ("BRAINTREE_GATEWAY_GOOGLE_PAYMENT_PARSING_ERROR" === name) {
                   tmp7 = closure_10;
-                  obj6 = { type: null, code: null, message: null, details: null };
+                  obj16 = { type: null, code: null, message: null, details: null };
                   tmp8 = errors;
-                  obj6.type = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.type;
-                  obj6.code = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.code;
-                  obj6.message = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.message;
-                  obj7 = { originalError: null };
-                  obj7.originalError = global;
-                  obj6.details = obj7;
+                  obj16.type = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.type;
+                  obj16.code = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.code;
+                  obj16.message = errors.PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR.message;
+                  obj17 = { originalError: null };
+                  obj17.originalError = global;
+                  obj16.details = obj17;
                   tmp9 = new.target;
                   tmp10 = new.target;
-                  tmp11 = obj6;
-                  tmp = new closure_10(obj6);
+                  tmp11 = obj16;
+                  tmp1 = new closure_10(obj16);
                 } else {
                   tmp = closure_10;
                   obj = { code: null, type: null, message: null, details: null };
@@ -10591,54 +10579,54 @@ let fn = () => {
                   }
                   obj.type = CUSTOMER;
                   obj.message = tmp2.PAYMENT_REQUEST_NOT_COMPLETED.message;
-                  obj8 = { originalError: null };
-                  obj8.originalError = global;
-                  obj.details = obj8;
+                  obj18 = { originalError: null };
+                  obj18.originalError = global;
+                  obj.details = obj18;
                   tmp3 = new.target;
                   tmp4 = new.target;
                   tmp5 = obj;
-                  tmp = new tmp(obj);
+                  tmp1 = new tmp(obj);
                 }
               }
             }
             tmp22 = closure_0;
             str = "payment-request.tokenize.failed";
             sendEventResult1 = closure_0.sendEvent(self._client, "payment-request.tokenize.failed");
-            return tmp;
+            return tmp1;
           }
         }
         _formatCanMakePaymentError(arg0) {
           name = global.name;
           if ("PAYMENT_REQUEST_INITIALIZATION_FAILED" === name) {
             tmp12 = closure_10;
-            obj = { type: null, code: null, message: null, details: null };
+            obj1 = { type: null, code: null, message: null, details: null };
             tmp13 = errors;
-            obj.type = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
-            obj.code = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code;
-            obj.message = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message;
-            obj1 = { originalError: null };
-            obj1.originalError = global;
-            obj.details = obj1;
+            obj1.type = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.type;
+            obj1.code = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.code;
+            obj1.message = errors.PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED.message;
+            obj7 = { originalError: null };
+            obj7.originalError = global;
+            obj1.details = obj7;
             tmp14 = new.target;
             tmp15 = new.target;
-            tmp16 = obj;
-            tmp6 = new closure_10(obj);
+            tmp16 = obj1;
+            tmp6 = new closure_10(obj1);
           } else {
             str = "NotAllowedError";
             if ("NotAllowedError" === name) {
               tmp7 = closure_10;
-              obj2 = { type: null, code: null, message: null, details: null };
+              obj8 = { type: null, code: null, message: null, details: null };
               tmp8 = errors;
-              obj2.type = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.type;
-              obj2.code = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.code;
-              obj2.message = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.message;
-              obj3 = { originalError: null };
-              obj3.originalError = global;
-              obj2.details = obj3;
+              obj8.type = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.type;
+              obj8.code = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.code;
+              obj8.message = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED.message;
+              obj9 = { originalError: null };
+              obj9.originalError = global;
+              obj8.details = obj9;
               tmp9 = new.target;
               tmp10 = new.target;
-              tmp11 = obj2;
-              tmp6 = new closure_10(obj2);
+              tmp11 = obj8;
+              tmp6 = new closure_10(obj8);
             } else {
               tmp = closure_10;
               obj = { code: null, type: null, message: null, details: null };
@@ -10646,9 +10634,9 @@ let fn = () => {
               obj.code = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.code;
               obj.type = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.type;
               obj.message = errors.PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED.message;
-              obj4 = { originalError: null };
-              obj4.originalError = global;
-              obj.details = obj4;
+              obj10 = { originalError: null };
+              obj10.originalError = global;
+              obj.details = obj10;
               tmp3 = new.target;
               tmp4 = new.target;
               tmp5 = obj;
@@ -10669,7 +10657,7 @@ let fn = () => {
       closure_7 = global("../../lib/use-min");
       query = global("../../lib/methods");
       const globalResult = global("@braintree/event-emitter");
-      closure_10 = global("../../lib/braintree-error");
+      const types = global("../../lib/braintree-error");
       const globalResult1 = global("../shared/constants");
       ({ events: closure_12, errors: closure_13 } = globalResult1);
       closure_14 = { Visa: "visa", MasterCard: "mastercard", "American Express": "amex", "Diners Club": "diners", Discover: "discover", JCB: "jcb", UnionPay: "unionpay", Maestro: "maestro" };
@@ -10759,10 +10747,10 @@ let fn = () => {
           if (global.client) {
             client = global.client;
             configuration = client.getConfiguration();
-            obj = { fingerprint: null, environment: null };
-            obj.fingerprint = configuration.authorizationFingerprint;
-            obj.environment = configuration.gatewayConfiguration.environment;
-            self._authorizationInformation = obj;
+            obj1 = { fingerprint: null, environment: null };
+            obj1.fingerprint = configuration.authorizationFingerprint;
+            obj1.environment = configuration.gatewayConfiguration.environment;
+            self._authorizationInformation = obj1;
           } else {
             tmp = closure_10;
             tmp2 = closure_10(global.authorization);
@@ -10771,13 +10759,13 @@ let fn = () => {
             obj.environment = tmp2.environment;
             self._authorizationInformation = obj;
           }
-          obj1 = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: closure_3.create(global.authorization), name: "PayPal Checkout" };
-          obj2 = closure_2.create(obj1);
+          obj4 = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: closure_3.create(global.authorization), name: "PayPal Checkout" };
+          obj5 = closure_2.create(obj4);
           fn = () => { ... };
-          self._clientPromise = obj2.then(fn.bind(self));
+          self._clientPromise = obj5.then(fn.bind(self));
           if (global.client) {
             _clientPromise = self._clientPromise;
-            fn2 = /* F121473 */ function() { ... };
+            fn2 = /* F121476 */ function() { ... };
             nextPromise = _clientPromise.then(fn2.bind(self));
           } else {
             tmp4 = globalThis;
@@ -10796,9 +10784,9 @@ let fn = () => {
           obj._assetsUrl = `${tmp2.gatewayConfiguration.paypal.assetsUrl}/web/3.112.1`;
           obj._isDebug = configuration.isDebug;
           obj._loadingFrameUrl = `${`${obj._assetsUrl}/html/paypal-landing-frame`}${closure_12(obj._isDebug)}.html`;
-          obj = { name: "braintreepaypallanding", dispatchFrameUrl: `${`${obj._assetsUrl}/html/dispatch-frame`}${closure_12(obj._isDebug)}.html`, openFrameUrl: obj._loadingFrameUrl };
+          obj1 = { name: "braintreepaypallanding", dispatchFrameUrl: `${`${obj._assetsUrl}/html/dispatch-frame`}${closure_12(obj._isDebug)}.html`, openFrameUrl: obj._loadingFrameUrl };
           fn = () => { ... };
-          obj1 = closure_9.create(obj, fn.bind(obj));
+          obj3 = closure_9.create(obj1, fn.bind(obj));
           return tmp;
         }
         createPayment(arg0) {
@@ -10855,8 +10843,8 @@ let fn = () => {
               if (self._verifyConsistentCurrency(global)) {
                 str3 = "paypal-checkout.updatePayment";
                 sendEventResult = sendEvent(_clientPromise, "paypal-checkout.updatePayment");
-                _clientPromise = self._clientPromise;
-                nextPromise = _clientPromise.then(() => { ... });
+                _clientPromise1 = self._clientPromise;
+                nextPromise = _clientPromise1.then(() => { ... });
                 catchPromise = nextPromise.catch(() => { ... });
               } else {
                 str = "paypal-checkout.updatePayment.inconsistent-currencies";
@@ -10869,15 +10857,15 @@ let fn = () => {
                 obj.type = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.type;
                 obj.code = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.code;
                 obj.message = closure_7.PAYPAL_INVALID_PAYMENT_OPTION.message;
-                obj = { originalError: null };
+                obj1 = { originalError: null };
                 _Error = Error;
                 tmp7 = new.target;
                 str2 = "One or more shipping option currencies differ from checkout currency.";
                 tmp8 = new.target;
                 error = new Error("One or more shipping option currencies differ from checkout currency.");
                 tmp10 = error;
-                obj.originalError = error;
-                obj.details = obj;
+                obj1.originalError = error;
+                obj.details = obj1;
                 tmp11 = new.target;
                 tmp12 = new.target;
                 tmp13 = obj;
@@ -11107,7 +11095,7 @@ let fn = () => {
             }
             fn2 = () => { ... };
             nextPromise = resolved.then(fn2.bind(self));
-            fn3 = /* F121497 */ function() { ... };
+            fn3 = /* F121500 */ function() { ... };
             return promise.then(fn3.bind(self));
           } else {
             if (dataAttributes["client-metadata-id"]) {
@@ -11150,10 +11138,10 @@ let fn = () => {
           }
           obj = { returnUrl: str2, cancelUrl: module.cancelUrl || "https://www.paypal.com/checkoutnow/error", offerPaypalCredit: true === global.offerCredit, merchantAccountId: self._merchantAccountId, experienceProfile: null, shippingOptions: null, payer_email: null };
           tmp = global.displayName || this._configuration.gatewayConfiguration.paypal.displayName;
-          obj = { brandName: tmp, localeCode: global.locale, noShipping: null, addressOverride: false === global.shippingAddressEditable, landingPageType: global.landingPageType };
+          obj1 = { brandName: tmp, localeCode: global.locale, noShipping: null, addressOverride: false === global.shippingAddressEditable, landingPageType: global.landingPageType };
           str3 = !global.enableShippingAddress;
-          obj.noShipping = str3.toString();
-          obj.experienceProfile = obj;
+          obj1.noShipping = str3.toString();
+          obj.experienceProfile = obj1;
           ({ shippingOptions: obj.shippingOptions, userAuthenticationEmail: obj.payer_email } = global);
           if ("checkout" === global.flow) {
             ({ amount: obj.amount, currency: obj.currencyIsoCode, requestBillingAgreement: obj.requestBillingAgreement } = global);
@@ -11319,47 +11307,47 @@ let fn = () => {
           if (vault) {
             vault = global.vault;
           }
-          obj = { paypalAccount: obj };
+          obj1 = { paypalAccount: obj };
           obj.options = { validate: vault };
-          paypalAccount = obj.paypalAccount;
+          paypalAccount = obj1.paypalAccount;
           if (tmp) {
             paypalAccount.billingAgreementToken = module.billingToken;
           } else {
             paypalAccount.paymentToken = module.paymentId || module.orderId;
-            obj.paypalAccount.payerId = module.payerId;
-            obj.paypalAccount.unilateral = gatewayConfiguration.paypal.unvettedMerchant;
+            obj1.paypalAccount.payerId = module.payerId;
+            obj1.paypalAccount.unilateral = gatewayConfiguration.paypal.unvettedMerchant;
             if (global.intent) {
-              obj.paypalAccount.intent = global.intent;
+              obj1.paypalAccount.intent = global.intent;
             }
           }
           if (self._merchantAccountId) {
-            obj.merchantAccountId = self._merchantAccountId;
+            obj1.merchantAccountId = self._merchantAccountId;
           }
-          return obj;
+          return obj1;
         }
         _formatTokenizePayload(arg0) {
           first = {};
           if (global.paypalAccounts) {
             first = global.paypalAccounts[0];
           }
-          obj = { nonce: first.nonce, details: {}, type: first.type };
+          obj1 = { nonce: first.nonce, details: {}, type: first.type };
           tmp = first.details && first.details.payerInfo;
           if (tmp) {
-            obj.details = first.details.payerInfo;
+            obj1.details = first.details.payerInfo;
           }
           tmp2 = first.details && first.details.creditFinancingOffered;
           if (tmp2) {
-            obj.creditFinancingOffered = first.details.creditFinancingOffered;
+            obj1.creditFinancingOffered = first.details.creditFinancingOffered;
           }
           tmp3 = first.details && first.details.shippingOptionId;
           if (tmp3) {
-            obj.shippingOptionId = first.details.shippingOptionId;
+            obj1.shippingOptionId = first.details.shippingOptionId;
           }
           tmp4 = first.details && first.details.cobrandedCardLabel;
           if (tmp4) {
-            obj.cobrandedCardLabel = first.details.cobrandedCardLabel;
+            obj1.cobrandedCardLabel = first.details.cobrandedCardLabel;
           }
-          return obj;
+          return obj1;
         }
         teardown() {
           self = this;
@@ -11371,7 +11359,7 @@ let fn = () => {
             removeChildResult = parentNode.removeChild(self._paypalScript);
           }
           _frameServicePromise = self._frameServicePromise;
-          catchPromise = _frameServicePromise.catch(/* F121499 */ function() { ... });
+          catchPromise = _frameServicePromise.catch(/* F121502 */ function() { ... });
           return catchPromise.then(() => { ... });
         }
       }
@@ -11416,8 +11404,7 @@ let fn = () => {
           }, INTEGRATION_TIMEOUT_MS);
           promise = new Promise((arg0) => {
             _self = arg0;
-            let obj = { name: constants.LANDING_FRAME_NAME, dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${closure_1_3(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl };
-            obj = self.create(obj, () => { ... });
+            self.create({ name: constants.LANDING_FRAME_NAME, dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${closure_1_3(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl }, () => { ... });
           });
           return promise;
         }
@@ -11523,7 +11510,6 @@ let fn = () => {
             closure_2(new closure_1(constants.PAYPAL_POPUP_CLOSED));
             const tmp6 = new closure_1(constants.PAYPAL_POPUP_CLOSED);
           }) : ((code, arg1) => {
-            let obj = self;
             self._authorizationInProgress = false;
             if (code) {
               if ("FRAME_SERVICE_FRAME_CLOSED" === code.code) {
@@ -11533,21 +11519,21 @@ let fn = () => {
               } else {
                 code = code.code;
                 if (code) {
-                  code = code.code;
-                  code = code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1;
+                  const code1 = code.code;
+                  code = code1.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1;
                 }
                 if (code) {
-                  obj = { code: constants.PAYPAL_POPUP_OPEN_FAILED.code, type: constants.PAYPAL_POPUP_OPEN_FAILED.type, message: constants.PAYPAL_POPUP_OPEN_FAILED.message, details: null };
-                  obj = { originalError: code };
-                  obj.details = obj;
-                  const tmp14 = new closure_1(obj);
+                  const obj2 = { code: constants.PAYPAL_POPUP_OPEN_FAILED.code, type: constants.PAYPAL_POPUP_OPEN_FAILED.type, message: constants.PAYPAL_POPUP_OPEN_FAILED.message, details: null };
+                  const obj3 = { originalError: code };
+                  obj2.details = obj3;
+                  const tmp14 = new closure_1(obj2);
                   closure_2(tmp14);
                 }
               }
             } else if (arg1) {
-              const _tokenizePayPalResult = obj._tokenizePayPal(closure_0, arg1);
-              obj._tokenizePayPal(closure_0, arg1).then(closure_1).catch(closure_2);
-              const nextPromise = obj._tokenizePayPal(closure_0, arg1).then(closure_1);
+              const _tokenizePayPalResult = self._tokenizePayPal(closure_0, arg1);
+              self._tokenizePayPal(closure_0, arg1).then(closure_1).catch(closure_2);
+              const nextPromise = self._tokenizePayPal(closure_0, arg1).then(closure_1);
             }
           });
         }
@@ -11595,16 +11581,16 @@ let fn = () => {
           if (global.paypalAccounts) {
             first = global.paypalAccounts[0];
           }
-          obj = { nonce: first.nonce, details: {}, type: first.type };
+          obj1 = { nonce: first.nonce, details: {}, type: first.type };
           tmp = first.details && first.details.payerInfo;
           if (tmp) {
-            obj.details = first.details.payerInfo;
+            obj1.details = first.details.payerInfo;
           }
           tmp2 = first.details && first.details.creditFinancingOffered;
           if (tmp2) {
-            obj.creditFinancingOffered = first.details.creditFinancingOffered;
+            obj1.creditFinancingOffered = first.details.creditFinancingOffered;
           }
-          return obj;
+          return obj1;
         }
         _formatTokenizeData(arg0, arg1) {
           _client = this._client;
@@ -11620,20 +11606,20 @@ let fn = () => {
             str = "TOKENIZATION_KEY";
             tmp2 = "TOKENIZATION_KEY" !== authorizationType;
           }
-          obj = { paypalAccount: obj };
+          obj1 = { paypalAccount: obj };
           obj.options = { validate: tmp2 };
-          paypalAccount = obj.paypalAccount;
+          paypalAccount = obj1.paypalAccount;
           if (module.ba_token) {
             paypalAccount.billingAgreementToken = module.ba_token;
           } else {
             ({ paymentId: paypalAccount.paymentToken, PayerID: obj2.paypalAccount.payerId } = module);
-            obj.paypalAccount.unilateral = gatewayConfiguration.paypal.unvettedMerchant;
+            obj1.paypalAccount.unilateral = gatewayConfiguration.paypal.unvettedMerchant;
             str2 = "intent";
             if (global.hasOwnProperty("intent")) {
-              obj.paypalAccount.intent = global.intent;
+              obj1.paypalAccount.intent = global.intent;
             }
           }
-          return obj;
+          return obj1;
         }
         _navigateFrameToAuth(arg0) {
           closure_0 = global;
@@ -11662,13 +11648,13 @@ let fn = () => {
             _frameService.close();
             self._authorizationInProgress = false;
             if (422 === tmp) {
-              let obj = { type: constants.PAYPAL_INVALID_PAYMENT_OPTION.type, code: constants.PAYPAL_INVALID_PAYMENT_OPTION.code, message: constants.PAYPAL_INVALID_PAYMENT_OPTION.message, details: null };
-              obj = { originalError: error };
-              obj.details = obj;
-              const tmp17 = new closure_1(obj);
+              const obj2 = { type: constants.PAYPAL_INVALID_PAYMENT_OPTION.type, code: constants.PAYPAL_INVALID_PAYMENT_OPTION.code, message: constants.PAYPAL_INVALID_PAYMENT_OPTION.message, details: null };
+              const obj3 = { originalError: error };
+              obj2.details = obj3;
+              const tmp17 = new closure_1(obj2);
               let rejectResult = Promise.reject(tmp17);
             } else {
-              obj = { type: constants.PAYPAL_FLOW_FAILED.type, code: constants.PAYPAL_FLOW_FAILED.code, message: constants.PAYPAL_FLOW_FAILED.message };
+              const obj = { type: constants.PAYPAL_FLOW_FAILED.type, code: constants.PAYPAL_FLOW_FAILED.code, message: constants.PAYPAL_FLOW_FAILED.message };
               rejectResult = Promise.reject(_client(error, obj));
             }
             return rejectResult;
@@ -11680,10 +11666,10 @@ let fn = () => {
           _serviceId = this._frameService._serviceId;
           obj = { returnUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/redirect-frame${closure_3(this._isDebug)}.html?channel=${_serviceId}`, cancelUrl: `${`${gatewayConfiguration.paypal.assetsUrl}/web/`}${c5}/html/cancel-frame${closure_3(this._isDebug)}.html?channel=${_serviceId}`, offerPaypalCredit: true === global.offerCredit, offerPayLater: true === global.offerPayLater, experienceProfile: null };
           tmp = global.displayName || gatewayConfiguration.paypal.displayName;
-          obj = { brandName: tmp, localeCode: global.locale, noShipping: null, addressOverride: false === global.shippingAddressEditable, landingPageType: global.landingPageType };
+          obj1 = { brandName: tmp, localeCode: global.locale, noShipping: null, addressOverride: false === global.shippingAddressEditable, landingPageType: global.landingPageType };
           str = !global.enableShippingAddress;
-          obj.noShipping = str.toString();
-          obj.experienceProfile = obj;
+          obj1.noShipping = str.toString();
+          obj.experienceProfile = obj1;
           popupBridge = window.popupBridge;
           if (popupBridge) {
             _window = window;
@@ -11842,8 +11828,8 @@ let fn = () => {
         initialize(arg0) {
           self = this;
           obj = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: closure_1.create(global.authorization), name: "PreferredPaymentMethods" };
-          obj = closure_2.create(obj);
-          this._clientPromise = obj.catch(() => { ... });
+          obj1 = closure_2.create(obj);
+          this._clientPromise = obj1.catch(() => { ... });
           sendEventResult = closure_0.sendEvent(this._clientPromise, "preferred-payment-methods.initialized");
           return Promise.resolve(this);
         }
@@ -11877,9 +11863,7 @@ let fn = () => {
       c9 = 570;
       module.exports = {
         createMandate(_client, locale) {
-          let data = { sepa_debit: null, locale: locale.locale, cancel_url: locale.cancelUrl, return_url: locale.returnUrl, merchant_account_id: locale.merchantAccountId };
-          data = { account_holder_name: locale.accountHolderName, billing_address: { country_code: locale.countryCode }, iban: locale.iban, merchant_or_partner_customer_id: locale.customerId, mandate_type: locale.mandateType };
-          data.sepa_debit = data;
+          const data = { sepa_debit: { account_holder_name: locale.accountHolderName, billing_address: { country_code: locale.countryCode }, iban: locale.iban, merchant_or_partner_customer_id: locale.customerId, mandate_type: locale.mandateType }, locale: locale.locale, cancel_url: locale.cancelUrl, return_url: locale.returnUrl, merchant_account_id: locale.merchantAccountId };
           if (locale.billingAddress) {
             const item = BILLING_ADDRESS_OPTIONS.forEach((item) => {
               const tmp = closure_6(item);
@@ -11888,11 +11872,12 @@ let fn = () => {
               }
             });
           }
+          const obj2 = { account_holder_name: locale.accountHolderName, billing_address: { country_code: locale.countryCode }, iban: locale.iban, merchant_or_partner_customer_id: locale.customerId, mandate_type: locale.mandateType };
           const requestResult = _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data });
           return _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data }).then((message) => {
             const sepaDebitAccount = message.message.body.sepaDebitAccount;
             if (sepaDebitAccount) {
-              obj = { approvalUrl: null, last4: null, bankReferenceToken: null };
+              const obj = { approvalUrl: null, last4: null, bankReferenceToken: null };
               ({ approvalUrl: obj.approvalUrl, last4: obj.last4, bankReferenceToken: obj.bankReferenceToken } = sepaDebitAccount);
               return obj;
             } else {
@@ -11956,12 +11941,12 @@ let fn = () => {
           const nextPromise = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${result.cart_id}` }).then((sepaDebitMandateDetail) => {
             sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
             closure_3.sendEvent(client, "sepa.redirect.mandate.approved");
-            let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            assign(constants, obj);
+            assign(constants, { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken });
             client = constants;
-            obj = { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId };
-            const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
-            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((nonce) => {
+            let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
+            const obj2 = { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId };
+            const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId } });
+            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId } }).then((nonce) => {
               if (nonce.nonce) {
                 const obj = { nonce: nonce.nonce, ibanLastFour: null, customerId: null, mandateType: null };
                 ({ last4: obj.ibanLastFour, customerId: obj.customerId, mandateType: obj.mandateType } = closure_0);
@@ -11977,12 +11962,12 @@ let fn = () => {
           return client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${result.cart_id}` }).then((sepaDebitMandateDetail) => {
             sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
             closure_3.sendEvent(client, "sepa.redirect.mandate.approved");
-            let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            assign(constants, obj);
+            assign(constants, { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken });
             client = constants;
-            obj = { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId };
-            const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
-            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((nonce) => {
+            let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
+            const obj2 = { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId };
+            const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId } });
+            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: { sepa_debit_account: { last_4: constants.last4, merchant_or_partner_customer_id: constants.customerId, bank_reference_token: constants.bankReferenceToken, mandate_type: constants.mandateType }, merchant_account_id: constants.merchantAccountId } }).then((nonce) => {
               if (nonce.nonce) {
                 const obj = { nonce: nonce.nonce, ibanLastFour: null, customerId: null, mandateType: null };
                 ({ last4: obj.ibanLastFour, customerId: obj.customerId, mandateType: obj.mandateType } = closure_0);
@@ -12713,7 +12698,7 @@ let fn = () => {
         }
         _addV1IframeToPage() {
           obj = { element: this._v1Modal };
-          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F121545 */ function() { ... });
+          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F121548 */ function() { ... });
           return;
         }
         _setupFrameworkSpecificListeners() {
@@ -12918,7 +12903,7 @@ let fn = () => {
           dfReferenceId = this.getDfReferenceId();
           nextPromise = dfReferenceId.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
-          catchPromise = nextPromise1.catch(/* F121559 */ function() { ... });
+          catchPromise = nextPromise1.catch(/* F121562 */ function() { ... });
           nextPromise2 = catchPromise.then(() => { ... });
           return nextPromise2.then(() => { ... });
         }
@@ -13027,7 +13012,7 @@ let fn = () => {
         }
         setCardinalListener(arg0, arg1) {
           _cardinalEvents = this._cardinalEvents;
-          arr = _cardinalEvents.push(global);
+          arr1 = _cardinalEvents.push(global);
           Cardinal = window.Cardinal;
           onResult = Cardinal.on(global, module);
           return;
@@ -13198,12 +13183,12 @@ let fn = () => {
             obj = { AcsUrl: null, Payload: null };
             obj.AcsUrl = global.lookup.acsUrl;
             obj.Payload = global.lookup.pareq;
-            obj = { OrderDetails: null };
-            obj1 = { TransactionId: null };
-            obj1.TransactionId = global.lookup.transactionId;
-            obj.OrderDetails = obj1;
+            obj1 = { OrderDetails: null };
+            obj4 = { TransactionId: null };
+            obj4.TransactionId = global.lookup.transactionId;
+            obj1.OrderDetails = obj4;
             str = "cca";
-            continueResult = Cardinal.continue("cca", obj, obj);
+            continueResult = Cardinal.continue("cca", obj, obj1);
           }
           return;
         }
@@ -13355,19 +13340,16 @@ let fn = () => {
                 if ("2-cardinal-modal" !== StringResult) {
                   if ("2-bootstrap3-modal" !== StringResult) {
                     if ("2-inline-iframe" !== StringResult) {
-                      let obj = { code: constants.THREEDS_UNRECOGNIZED_VERSION.code, type: constants.THREEDS_UNRECOGNIZED_VERSION.type, message: `Version \`${version.version}\` is not a recognized version. You may need to update the version of your Braintree SDK to support this version.` };
+                      const obj = { code: constants.THREEDS_UNRECOGNIZED_VERSION.code, type: constants.THREEDS_UNRECOGNIZED_VERSION.type, message: `Version \`${version.version}\` is not a recognized version. You may need to update the version of your Braintree SDK to support this version.` };
                       let tmp7 = new closure_5(obj);
                       throw tmp7;
                     }
                   }
                 }
-                obj = { name: "3D Secure", client: null, authorization: null };
                 ({ client: obj2.client, authorization: obj2.authorization } = version);
-                return closure_2.verify(obj).then(() => {
-                  let obj = closure_1_4.create(version.authorization);
-                  obj = { authorization: version.authorization, client: version.client, debug: version.debug, assetsUrl: obj, name: "3D Secure" };
-                  obj = closure_1_3.create(obj);
-                  const nextPromise = obj.then((getConfiguration) => {
+                return closure_2.verify({ name: "3D Secure", client: null, authorization: null }).then(() => {
+                  const obj2 = closure_1_4.create(version.authorization);
+                  const nextPromise = closure_1_3.create({ authorization: version.authorization, client: version.client, debug: version.debug, assetsUrl: obj2, name: "3D Secure" }).then((getConfiguration) => {
                     let rejectResult = getConfiguration;
                     const configuration = getConfiguration.getConfiguration();
                     const gatewayConfiguration = configuration.gatewayConfiguration;
@@ -13403,7 +13385,7 @@ let fn = () => {
                     }
                     return rejectResult;
                   });
-                  const tmp2 = new version({ client: version.client, assetsUrl: obj, createPromise: nextPromise, loggingEnabled: version.loggingEnabled, cardinalSDKConfig: version.cardinalSDKConfig, framework: str3 });
+                  const tmp2 = new version({ client: version.client, assetsUrl: obj2, createPromise: nextPromise, loggingEnabled: version.loggingEnabled, cardinalSDKConfig: version.cardinalSDKConfig, framework: str3 });
                   let nextPromise1 = tmp2;
                   version = tmp2;
                   if (version.client) {
@@ -13414,8 +13396,7 @@ let fn = () => {
               }
             }
           }
-          obj = { code: constants.THREEDS_UNSUPPORTED_VERSION.code, type: constants.THREEDS_UNSUPPORTED_VERSION.type, message: constants.THREEDS_UNSUPPORTED_VERSION.message };
-          throw new closure_5(obj);
+          throw new closure_5({ code: constants.THREEDS_UNSUPPORTED_VERSION.code, type: constants.THREEDS_UNSUPPORTED_VERSION.type, message: constants.THREEDS_UNSUPPORTED_VERSION.message });
         }),
         VERSION: "3.112.1"
       };
@@ -13525,12 +13506,12 @@ let fn = () => {
           }
           if (number) {
             obj = { method: "get", endpoint: "payment_methods/credit_cards/capabilities", data: null };
-            obj = { _meta: null, creditCard: null };
-            obj._meta = { source: "unionpay" };
-            obj1 = { number: null };
-            obj1.number = number;
-            obj.creditCard = obj1;
-            obj.data = obj;
+            obj1 = { _meta: null, creditCard: null };
+            obj1._meta = { source: "unionpay" };
+            obj4 = { number: null };
+            obj4.number = number;
+            obj1.creditCard = obj4;
+            obj.data = obj1;
             requestResult = client.request(obj);
             nextPromise = requestResult.then(() => { ... });
             rejectResult = nextPromise.catch(() => { ... });
@@ -13602,10 +13583,10 @@ let fn = () => {
                 if (card.number) {
                   obj = { _meta: null, unionPayEnrollment: null };
                   obj._meta = { source: "unionpay" };
-                  obj = { number: null, mobileCountryCode: null, mobileNumber: null };
-                  obj.number = card.number;
+                  obj1 = { number: null, mobileCountryCode: null, mobileNumber: null };
+                  obj1.number = card.number;
                   ({ countryCode: obj2.mobileCountryCode, number: obj2.mobileNumber } = mobile);
-                  obj.unionPayEnrollment = obj;
+                  obj.unionPayEnrollment = obj1;
                   if (card.expirationDate) {
                     obj.unionPayEnrollment.expirationDate = card.expirationDate;
                   } else if (card.expirationMonth) {
@@ -13624,9 +13605,9 @@ let fn = () => {
                     tmp21 = tmp20;
                     return Promise.reject(tmp20);
                   }
-                  obj1 = { method: "post", endpoint: "union_pay_enrollments", data: null };
-                  obj1.data = obj;
-                  requestResult = client.request(obj1);
+                  obj4 = { method: "post", endpoint: "union_pay_enrollments", data: null };
+                  obj4.data = obj;
+                  requestResult = client.request(obj4);
                   nextPromise = requestResult.then(() => { ... });
                   return nextPromise.catch(() => { ... });
                 }
@@ -13676,14 +13657,14 @@ let fn = () => {
           if (card) {
             obj = { _meta: null, creditCard: null };
             obj._meta = { source: "unionpay" };
-            obj = { number: null, options: null };
-            obj.number = global.card.number;
-            obj1 = { unionPayEnrollment: null };
-            obj2 = { id: null };
-            obj2.id = global.enrollmentId;
-            obj1.unionPayEnrollment = obj2;
-            obj.options = obj1;
-            obj.creditCard = obj;
+            obj1 = { number: null, options: null };
+            obj1.number = global.card.number;
+            obj6 = { unionPayEnrollment: null };
+            obj7 = { id: null };
+            obj7.id = global.enrollmentId;
+            obj6.unionPayEnrollment = obj7;
+            obj1.options = obj6;
+            obj.creditCard = obj1;
             if (global.smsCode) {
               obj.creditCard.options.unionPayEnrollment.smsCode = global.smsCode;
             }
@@ -13698,9 +13679,9 @@ let fn = () => {
             if (global.card.cvv) {
               obj.creditCard.cvv = global.card.cvv;
             }
-            obj3 = { method: "post", endpoint: "payment_methods/credit_cards", data: null };
-            obj3.data = obj;
-            requestResult = client.request(obj3);
+            obj8 = { method: "post", endpoint: "payment_methods/credit_cards", data: null };
+            obj8.data = obj;
+            requestResult = client.request(obj8);
             nextPromise = requestResult.then(() => { ... });
             rejectResult = nextPromise.catch(() => { ... });
           } else {
@@ -13710,7 +13691,7 @@ let fn = () => {
               if (hostedFields._bus) {
                 tmp16 = new.target;
                 tmp17 = new.target;
-                _Promise2 = new _Promise2(() => { ... });
+                _Promise21 = new _Promise2(() => { ... });
               } else {
                 tmp9 = self;
                 tmp10 = closure_7;
@@ -13718,9 +13699,9 @@ let fn = () => {
                 tmp12 = new.target;
                 tmp13 = new self(closure_7.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID);
                 tmp14 = tmp13;
-                _Promise2 = _Promise2.reject(tmp13);
+                _Promise21 = _Promise2.reject(tmp13);
               }
-              tmp18 = _Promise2;
+              tmp18 = _Promise21;
             } else {
               _Promise = Promise;
               tmp2 = self;
@@ -13849,14 +13830,14 @@ let fn = () => {
                 tmp9 = globalThis;
                 _Promise2 = Promise;
                 tmp10 = closure_0;
-                obj = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin." };
+                obj1 = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin." };
                 tmp11 = closure_2;
-                obj.type = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
-                obj.code = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
+                obj1.type = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
+                obj1.code = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
                 tmp12 = new.target;
                 tmp13 = new.target;
-                tmp14 = obj;
-                tmp15 = new closure_0(obj);
+                tmp14 = obj1;
+                tmp15 = new closure_0(obj1);
                 tmp16 = tmp15;
                 _tokenizeBankDetailsResult = Promise.reject(tmp15);
               }
@@ -13865,28 +13846,28 @@ let fn = () => {
             tmp18 = globalThis;
             _Promise3 = Promise;
             tmp19 = closure_0;
-            obj1 = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin, not both." };
+            obj5 = { type: null, code: null, message: "tokenize must be called with bankDetails or bankLogin, not both." };
             tmp20 = closure_2;
-            obj1.type = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type;
-            obj1.code = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code;
+            obj5.type = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type;
+            obj5.code = closure_2.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code;
             tmp21 = new.target;
             tmp22 = new.target;
-            tmp23 = obj1;
-            tmp24 = new closure_0(obj1);
+            tmp23 = obj5;
+            tmp24 = new closure_0(obj5);
             tmp25 = tmp24;
             _tokenizeBankDetailsResult = Promise.reject(tmp24);
           } else {
             tmp = globalThis;
             _Promise = Promise;
             tmp2 = closure_0;
-            obj2 = { type: null, code: null, message: "mandateText property is required." };
+            obj6 = { type: null, code: null, message: "mandateText property is required." };
             tmp3 = closure_2;
-            obj2.type = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
-            obj2.code = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
+            obj6.type = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.type;
+            obj6.code = closure_2.US_BANK_ACCOUNT_OPTION_REQUIRED.code;
             tmp4 = new.target;
             tmp5 = new.target;
-            tmp6 = obj2;
-            tmp7 = new closure_0(obj2);
+            tmp6 = obj6;
+            tmp7 = new closure_0(obj6);
             tmp8 = tmp7;
             return Promise.reject(tmp7);
           }
@@ -13901,23 +13882,23 @@ let fn = () => {
           tmp = bankDetails.billingAddress || {};
           obj.billingAddress = { streetAddress: tmp.streetAddress, extendedAddress: tmp.extendedAddress, city: tmp.locality, state: tmp.region, zipCode: tmp.postalCode };
           if ("personal" === bankDetails.ownershipType) {
-            obj = { firstName: null, lastName: null };
+            obj1 = { firstName: null, lastName: null };
             ({ firstName: obj3.firstName, lastName: obj3.lastName } = bankDetails);
-            obj.individualOwner = obj;
+            obj.individualOwner = obj1;
           } else {
             str2 = "business";
             if ("business" === bankDetails.ownershipType) {
-              obj1 = { businessName: null };
-              obj1.businessName = bankDetails.businessName;
-              obj.businessOwner = obj1;
+              obj7 = { businessName: null };
+              obj7.businessName = bankDetails.businessName;
+              obj.businessOwner = obj7;
             }
           }
-          obj2 = { api: "graphQLApi", data: null };
-          obj3 = { query: c8, variables: null };
-          obj4 = { input: { usBankAccount: obj } };
-          obj3.variables = obj4;
-          obj2.data = obj3;
-          requestResult = _client.request(obj2);
+          obj8 = { api: "graphQLApi", data: null };
+          obj9 = { query: c8, variables: null };
+          obj10 = { input: { usBankAccount: obj } };
+          obj9.variables = obj10;
+          obj8.data = obj9;
+          requestResult = _client.request(obj8);
           nextPromise = requestResult.then(() => { ... });
           return nextPromise.catch(() => { ... });
         }
@@ -14071,9 +14052,8 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           return client.verify({ name: "Vault Manager", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { createPromise: null };
-            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_2.create(client.authorization), name: "Vault Manager" };
-            obj.createPromise = closure_1.create(obj);
+            const obj = { createPromise: closure_1.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_2.create(client.authorization), name: "Vault Manager" }) };
+            const obj2 = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_2.create(client.authorization), name: "Vault Manager" };
             return new closure_3(obj);
           });
         }),
@@ -14102,9 +14082,7 @@ let fn = () => {
           c0 = num;
           _createPromise = this._createPromise;
           nextPromise = _createPromise.then((request) => {
-            let obj = { endpoint: "payment_methods", method: "get", data: null };
-            obj = { defaultFirst: num };
-            obj.data = obj;
+            const obj = { endpoint: "payment_methods", method: "get", data: { defaultFirst: num } };
             return request.request(obj);
           });
           fn = function(paymentMethods) {
@@ -14121,12 +14099,12 @@ let fn = () => {
             singleUseTokenId = getConfiguration;
             if ("CLIENT_TOKEN" === getConfiguration.getConfiguration().authorizationType) {
               let obj = { api: "graphQLApi", data: null };
-              obj = { query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}", variables: null, operationName: "DeletePaymentMethodFromSingleUseToken" };
-              obj = { input: null };
-              let obj1 = { singleUseTokenId };
-              obj.input = obj1;
-              obj.variables = obj;
-              obj.data = obj;
+              let obj2 = { query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}", variables: null, operationName: "DeletePaymentMethodFromSingleUseToken" };
+              let obj3 = { input: null };
+              let obj4 = { singleUseTokenId };
+              obj3.input = obj4;
+              obj2.variables = obj3;
+              obj.data = obj2;
               const requestResult = getConfiguration.request(obj);
               let catchPromise = getConfiguration.request(obj).then(() => { ... }).catch(() => { ... });
               const nextPromise = getConfiguration.request(obj).then(() => { ... });
@@ -14272,9 +14250,9 @@ let fn = () => {
       class VenmoDesktop {
         constructor(arg0) {
           obj = { isHidden: true, env: fn.environment, id: closure_3.default(), profileId: fn.profileId, displayName: fn.displayName, paymentMethodUsage: fn.paymentMethodUsage, shouldUseLegacyQRCodeMutation: !obj.paymentMethodUsage };
-          obj = { channel: obj.id, verifyDomain: fn.verifyDomain, targetFrames: [] };
+          obj1 = { channel: obj.id, verifyDomain: fn.verifyDomain, targetFrames: [] };
           text = `${fn.url}#${obj.env}_${obj.id}`;
-          _default = new closure_1.default(obj);
+          _default = new closure_1.default(obj1);
           obj.bus = _default;
           ({ apiRequest: obj.apiRequest, sendEvent: obj.sendEvent, Promise: obj.Promise } = fn);
           obj.alertBox = document.createElement("div");
@@ -14510,21 +14488,20 @@ let fn = () => {
             } else {
               result1 = self.lookupVenmoDesktopPaymentContext();
               nextPromise = result1.then((status) => {
-                let obj = self;
                 if (self.venmoContextId) {
                   if (status) {
                     status = status.status;
                     if (status !== status) {
-                      obj.sendEvent(`venmo.tokenize.desktop.status-change.${status.toLowerCase()}`);
+                      self.sendEvent(`venmo.tokenize.desktop.status-change.${status.toLowerCase()}`);
                       if ("CREATED" !== status) {
                         if ("EXPIRED" !== tmp13) {
                           if ("FAILED" !== tmp13) {
                             if ("CANCELED" !== tmp13) {
                               if ("SCANNED" === tmp13) {
-                                obj.authorizing();
+                                self.authorizing();
                               } else if ("APPROVED" === tmp13) {
-                                obj.authorize();
-                                return obj.Promise.resolve(status);
+                                self.authorize();
+                                return self.Promise.resolve(status);
                               }
                             }
                           }
@@ -14533,12 +14510,12 @@ let fn = () => {
                         if ("CANCELED" === tmp13) {
                           str5 = "The authorization was canceled";
                         }
-                        obj.displayError(str5);
-                        obj = { allowUIToHandleError: true, reason: status };
-                        return obj.Promise.reject(obj);
+                        self.displayError(str5);
+                        const obj2 = { allowUIToHandleError: true, reason: status };
+                        return self.Promise.reject(obj2);
                       }
                     }
-                    const promise = new obj.Promise((arg0, arg1) => {
+                    const promise = new self.Promise((arg0, arg1) => {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       const timerId = setTimeout(() => { ... }, 1000);
@@ -14546,7 +14523,7 @@ let fn = () => {
                     return promise;
                   }
                 }
-                return obj.Promise.resolve();
+                return self.Promise.resolve();
               });
             }
             tmp3 = nextPromise;
@@ -14581,8 +14558,8 @@ let fn = () => {
         }
         createPaymentContextFromGraphqlLegacyQRCodeMutation(arg0) {
           obj = { input: null };
-          obj = { environment: this.env, intent: fn };
-          obj.input = obj;
+          obj1 = { environment: this.env, intent: fn };
+          obj.input = obj1;
           apiRequestResult = this.apiRequest(closure_5.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, obj);
           return apiRequestResult.then((createVenmoQRCodePaymentContext) => createVenmoQRCodePaymentContext.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext);
         }
@@ -14621,14 +14598,14 @@ let fn = () => {
           self = this;
           if (this.venmoContextId) {
             tmp = fn;
-            obj = { input: null };
-            tmp2 = f121609;
-            obj1 = { id: null, status: null };
-            obj1.id = self.venmoContextId;
-            obj1.status = fn;
-            obj.input = f121609(obj1, obj);
+            obj1 = { input: null };
+            tmp2 = f121612;
+            obj4 = { id: null, status: null };
+            obj4.id = self.venmoContextId;
+            obj4.status = fn;
+            obj1.input = f121612(obj4, obj);
             tmp3 = closure_5;
-            apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj);
+            apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj1);
             return apiRequestResult.then(() => {
 
             });
@@ -14683,9 +14660,8 @@ let fn = () => {
                 rejectResult = Promise.reject(tmp10);
               }
             }
-            let obj = { authorization: tmp.authorization, client: tmp.client, debug: tmp.debug, assetsUrl: closure_1_3.create(tmp.authorization), name: "Venmo" };
-            obj = closure_1_2.create(obj);
-            const nextPromise = obj.then((client) => {
+            const obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Venmo" };
+            const nextPromise = closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Venmo" }).then((client) => {
               let rejectResult = client;
               closure_0.client = client;
               if (!client.getConfiguration().gatewayConfiguration.payWithVenmo) {
@@ -14695,6 +14671,7 @@ let fn = () => {
               return rejectResult;
             });
             client.createPromise = nextPromise;
+            const obj2 = closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Venmo" });
             client = new closure_1_6(client);
             client.sendEvent(nextPromise, "venmo.initialized");
             rejectResult = nextPromise.then(() => closure_0);
@@ -14838,29 +14815,28 @@ let fn = () => {
       closure_1 = global("../../lib/in-iframe");
       module.exports = {
         isBrowserSupported(arg0) {
-          let obj = android;
           let isAndroidResult = android.isAndroid();
           let isIosResult = isAndroidResult;
           if (!isAndroidResult) {
-            isIosResult = obj.isIos();
+            isIosResult = android.isIos();
           }
           if (isAndroidResult) {
-            isAndroidResult = obj.isChrome();
+            isAndroidResult = android.isChrome();
           }
-          let tmp3 = obj.isIosSafari() || isAndroidResult;
-          obj = arg0;
+          let tmp3 = android.isIosSafari() || isAndroidResult;
+          let obj2 = arg0;
           if (!arg0) {
-            obj = {};
+            obj2 = {};
           }
-          const hasOwnPropertyResult = obj.hasOwnProperty("allowNewBrowserTab");
+          const hasOwnPropertyResult = obj2.hasOwnProperty("allowNewBrowserTab");
           let allowNewBrowserTab = !hasOwnPropertyResult;
           if (hasOwnPropertyResult) {
-            allowNewBrowserTab = obj.allowNewBrowserTab;
+            allowNewBrowserTab = obj2.allowNewBrowserTab;
           }
-          const hasOwnPropertyResult1 = obj.hasOwnProperty("allowWebviews");
+          const hasOwnPropertyResult1 = obj2.hasOwnProperty("allowWebviews");
           let allowWebviews = !hasOwnPropertyResult1;
           if (hasOwnPropertyResult1) {
-            allowWebviews = obj.allowWebviews;
+            allowWebviews = obj2.allowWebviews;
           }
           let tmp7 = allowNewBrowserTab;
           if (allowNewBrowserTab) {
@@ -14868,20 +14844,20 @@ let fn = () => {
           }
           let isIosChromeResult = !tmp7;
           if (!tmp7) {
-            isIosChromeResult = obj.isIosChrome();
+            isIosChromeResult = android.isIosChrome();
           }
           if (!isIosChromeResult) {
-            isIosChromeResult = obj.isFacebookOwnedBrowserOnAndroid();
+            isIosChromeResult = android.isFacebookOwnedBrowserOnAndroid();
           }
           if (!isIosChromeResult) {
-            isIosChromeResult = obj.isSamsung();
+            isIosChromeResult = android.isSamsung();
           }
           let tmp10 = !isIosChromeResult;
           if (!isIosChromeResult) {
             let tmp11 = !allowWebviews;
             if (!allowWebviews) {
-              tmp11 = obj.isAndroidWebview() || obj.isIosWebview();
-              const tmp12 = obj.isAndroidWebview() || obj.isIosWebview();
+              tmp11 = android.isAndroidWebview() || android.isIosWebview();
+              const tmp12 = android.isAndroidWebview() || android.isIosWebview();
             }
             let tmp13 = !tmp11;
             if (!tmp11) {
@@ -15139,17 +15115,17 @@ let fn = () => {
           }
           if (self._shouldCreateVenmoPaymentContext) {
             if (self._shouldUseLegacyFlow) {
-              obj = { api: "graphQLApi", data: null };
-              obj1 = { query: null, variables: null };
+              obj1 = { api: "graphQLApi", data: null };
+              obj12 = { query: null, variables: null };
               tmp13 = closure_17;
-              obj1.query = closure_17.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY;
-              obj2 = { input: null };
-              obj3 = { environment: null, intent: "PAY_FROM_APP" };
-              obj3.environment = self._mobilePollingContextEnvironment;
-              obj2.input = obj3;
-              obj1.variables = obj2;
-              obj.data = obj1;
-              requestResult = global.request(obj);
+              obj12.query = closure_17.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY;
+              obj13 = { input: null };
+              obj14 = { environment: null, intent: "PAY_FROM_APP" };
+              obj14.environment = self._mobilePollingContextEnvironment;
+              obj13.input = obj14;
+              obj12.variables = obj13;
+              obj1.data = obj12;
+              requestResult = global.request(obj1);
               nextPromise = requestResult.then(() => { ... });
             } else {
               if (self._collectCustomerBillingAddress) {
@@ -15175,27 +15151,27 @@ let fn = () => {
               tmp10 = globalThis;
               _Object = Object;
               keys = Object.keys(obj);
-              obj4 = { query: null, variables: null };
+              obj15 = { query: null, variables: null };
               tmp11 = closure_17;
-              obj4.query = closure_17.CREATE_PAYMENT_CONTEXT_QUERY;
-              obj5 = { paymentMethodUsage: null, intent: "CONTINUE", customerClient: null, isFinalAmount: null, displayName: null, paysheetDetails: null };
-              obj5.paymentMethodUsage = self._paymentMethodUsage;
-              obj5.customerClient = str;
+              obj15.query = closure_17.CREATE_PAYMENT_CONTEXT_QUERY;
+              obj16 = { paymentMethodUsage: null, intent: "CONTINUE", customerClient: null, isFinalAmount: null, displayName: null, paysheetDetails: null };
+              obj16.paymentMethodUsage = self._paymentMethodUsage;
+              obj16.customerClient = str;
               ({ _isFinalAmount: obj4.isFinalAmount, _displayName: obj4.displayName } = self);
-              obj6 = { collectCustomerBillingAddress: null, collectCustomerShippingAddress: null, transactionDetails: null };
+              obj17 = { collectCustomerBillingAddress: null, collectCustomerShippingAddress: null, transactionDetails: null };
               ({ _collectCustomerBillingAddress: obj5.collectCustomerBillingAddress, _collectCustomerShippingAddress: obj5.collectCustomerShippingAddress } = self);
               tmp12 = undefined;
               if (keys.some(() => { ... })) {
                 tmp12 = obj;
               }
-              obj7 = { api: "graphQLApi", data: null };
-              obj8 = { input: null };
-              obj6.transactionDetails = tmp12;
-              obj5.paysheetDetails = obj6;
-              obj8.input = obj5;
-              obj4.variables = obj8;
-              obj7.data = obj4;
-              requestResult1 = global.request(obj7);
+              obj18 = { api: "graphQLApi", data: null };
+              obj19 = { input: null };
+              obj17.transactionDetails = tmp12;
+              obj16.paysheetDetails = obj17;
+              obj19.input = obj16;
+              obj15.variables = obj19;
+              obj18.data = obj15;
+              requestResult1 = global.request(obj18);
               nextPromise = requestResult1.then(() => { ... });
             }
             return nextPromise.then(() => { ... });
@@ -15667,12 +15643,12 @@ let fn = () => {
               if (global.encPaymentData) {
                 _client = tmp._client;
                 obj = { method: "post", endpoint: "payment_methods/visa_checkout_cards", data: null };
-                obj = { _meta: null, visaCheckoutCard: null };
-                obj._meta = { source: "visa-checkout" };
-                obj1 = { callId: null, encryptedPaymentData: null, encryptedKey: null };
+                obj1 = { _meta: null, visaCheckoutCard: null };
+                obj1._meta = { source: "visa-checkout" };
+                obj4 = { callId: null, encryptedPaymentData: null, encryptedKey: null };
                 ({ callid: obj3.callId, encPaymentData: obj3.encryptedPaymentData, encKey: obj3.encryptedKey } = global);
-                obj.visaCheckoutCard = obj1;
-                obj.data = obj;
+                obj1.visaCheckoutCard = obj4;
+                obj.data = obj1;
                 requestResult = _client.request(obj);
                 nextPromise = requestResult.then(() => { ... });
                 catchPromise = nextPromise.catch(() => { ... });

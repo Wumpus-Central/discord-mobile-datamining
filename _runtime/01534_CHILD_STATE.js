@@ -22,11 +22,11 @@ export const getFocusedRouteNameFromRoute = function getFocusedRouteNameFromRout
     }
     let screen = routes[index].name;
   } else {
-    screen = undefined;
+    let screen1;
     if (params != null) {
-      screen = params.screen;
+      screen1 = params.screen;
     }
-    if (typeof screen === "string") {
+    if (typeof screen1 === "string") {
       screen = params.screen;
     }
   }

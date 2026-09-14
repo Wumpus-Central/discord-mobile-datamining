@@ -55,15 +55,15 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(Path(8589).extract(this, props));
     obj.d = props.d;
-    obj = {
+    const obj2 = Path(8589);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const obj2 = Path(8589);
     const merged1 = Object.assign(obj);
     return jsx(_modDef8659, {
       ref(arg0) {

@@ -22,15 +22,19 @@ export const NavigationProvider = function NavigationProvider(route) {
   if (!tmp5) {
     tmp6 = context1 === route.key;
   }
-  let obj = { value: route, children: null };
-  obj = { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) };
-  obj.children = jsx(NavigationContext.NavigationContext.Provider, {
-    value: navigation,
-    children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }),
-  });
+  const obj = {
+    value: route,
+    children: jsx(NavigationContext.NavigationContext.Provider, {
+      value: navigation,
+      children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }),
+    }),
+  };
   return (
-    <context.Provider value={navigation}>
-      {jsx(context12.IsFocusedContext.Provider, { value: tmp6, children })}
+    <context.Provider value={route}>
+      {jsx(NavigationContext.NavigationContext.Provider, {
+        value: navigation,
+        children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }),
+      })}
     </context.Provider>
   );
 };

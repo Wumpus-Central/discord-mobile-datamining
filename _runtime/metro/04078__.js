@@ -1,17 +1,19 @@
 // _runtime/metro/04078__.js
-import startOfSecond from "../04079_startOfSecond.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import startOfSecond_mod from "../04079_startOfSecond.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let startOfSecond = startOfSecond_mod;
 if (!startOfSecond) {
-  let obj = { default: startOfSecond };
+  const obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
   tmp3 = startOfSecond;
 }
 startOfSecond = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

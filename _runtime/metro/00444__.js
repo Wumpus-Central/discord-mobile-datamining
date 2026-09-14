@@ -56,13 +56,13 @@ export default {
         result = FALLBACK_ESTIMATED_WIDTH;
       }
       c0 = result;
-      obj = {
+      const obj2 = {
         itemCount: diff / result,
         spacerStyle(arg0) {
           return { width: arg0 * c0 };
         },
       };
-      return obj;
+      return obj2;
     } else {
       const _Error = Error;
       const error = new Error(

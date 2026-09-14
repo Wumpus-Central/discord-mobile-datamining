@@ -9,6 +9,8 @@ import _mod1686 from "metro/01686__.js";
 import controlEdgeToEdgeValues from "metro/01681__.js";
 import 01639__ from "metro/01639__.js";
 
+const require = globalThis.__r;
+
 let closure_3 = controlEdgeToEdgeValues.isEdgeToEdge();
 let closure_4 = module_1639.shouldBeUseWeb();
 function isReanimated3() {

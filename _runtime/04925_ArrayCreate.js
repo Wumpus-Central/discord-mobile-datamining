@@ -1,19 +1,19 @@
 // _runtime/04925_ArrayCreate.js
-import _mod1282 from "metro/01282__.js";
-import _mod1283 from "metro/01283__.js";
+import _mod1280 from "metro/01280__.js";
+import _mod1281 from "metro/01281__.js";
+import _mod1300 from "metro/01300__.js";
 import _mod1302 from "metro/01302__.js";
-import _mod1304 from "metro/01304__.js";
 import _mod4922 from "metro/04922__.js";
 import _mod4926 from "metro/04926__.js";
 import _mod4927 from "metro/04927__.js";
 
-let closure_2 = _mod1282("%Array.prototype%");
+let closure_2 = _mod1280("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
   if (_mod4922(arg0)) {
     if (arg0 >= 0) {
       if (arg0 > _mod4926) {
-        const tmp12 = new _mod1302("length is greater than (2**32 - 1)");
+        const tmp12 = new _mod1300("length is greater than (2**32 - 1)");
         throw tmp12;
       } else {
         const tmp3 = arguments.length > 1 ? arguments[1] : closure_2;
@@ -22,7 +22,7 @@ export default function ArrayCreate(arg0) {
           if (_mod4927) {
             _mod4927(items, tmp3);
           } else {
-            const tmp7 = new _mod1304(
+            const tmp7 = new _mod1302(
               "ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]",
             );
             throw tmp7;
@@ -35,5 +35,5 @@ export default function ArrayCreate(arg0) {
       }
     }
   }
-  throw new _mod1283("Assertion failed: `length` must be an integer Number >= 0");
+  throw new _mod1281("Assertion failed: `length` must be an integer Number >= 0");
 }

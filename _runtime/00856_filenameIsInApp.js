@@ -43,11 +43,11 @@ export function node(arg0) {
   return (filename) => {
     const match = filename.match(re3);
     if (match) {
-      let obj = { filename: null, function: null };
+      const obj3 = { filename: null, function: null };
       const _HermesInternal2 = HermesInternal;
-      obj.filename = "<data:" + match[2] + ">";
-      obj.function = match[1];
-      return obj;
+      obj3.filename = "<data:" + match[2] + ">";
+      obj3.function = match[1];
+      return obj3;
     } else {
       const match1 = filename.match(re2);
       if (match1) {
@@ -109,24 +109,31 @@ export function node(arg0) {
           const _decodeURI = decodeURI;
           decodeURIResult = decodeURI(result);
         }
-        obj = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
+        const obj4 = {
+          filename: decodeURIResult,
+          module: null,
+          function: null,
+          lineno: null,
+          colno: null,
+          in_app: null,
+        };
         let tmp28;
         if (closure_0) {
           tmp28 = closure_0(result);
         }
-        obj.module = tmp28;
-        obj.function = tmp6;
+        obj4.module = tmp28;
+        obj4.function = tmp6;
         let str7 = match1[3];
         if (!str7) {
           str7 = "";
         }
-        obj.lineno = parseInt(str7, 10) || undefined;
+        obj4.lineno = parseInt(str7, 10) || undefined;
         let str8 = match1[4];
         if (!str8) {
           str8 = "";
         }
         const tmp30 = parseInt(str7, 10) || undefined;
-        obj.colno = parseInt(str8, 10) || undefined;
+        obj4.colno = parseInt(str8, 10) || undefined;
         let str9 = result;
         if (!result) {
           str9 = "";
@@ -154,12 +161,12 @@ export function node(arg0) {
         if (tmp33) {
           tmp33 = !str9.includes("node_modules/");
         }
-        obj.in_app = tmp33;
-        return obj;
+        obj4.in_app = tmp33;
+        return obj4;
       } else {
         let tmp5;
         if (filename.match(re1)) {
-          obj = { filename };
+          const obj = { filename };
           tmp5 = obj;
         }
         return tmp5;
@@ -177,11 +184,11 @@ export function nodeStackLineParser(arg0) {
     (filename) => {
       const match = filename.match(re3);
       if (match) {
-        let obj = { filename: null, function: null };
+        const obj3 = { filename: null, function: null };
         const _HermesInternal2 = HermesInternal;
-        obj.filename = "<data:" + match[2] + ">";
-        obj.function = match[1];
-        return obj;
+        obj3.filename = "<data:" + match[2] + ">";
+        obj3.function = match[1];
+        return obj3;
       } else {
         const match1 = filename.match(re2);
         if (match1) {
@@ -243,24 +250,31 @@ export function nodeStackLineParser(arg0) {
             const _decodeURI = decodeURI;
             decodeURIResult = decodeURI(result);
           }
-          obj = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
+          const obj4 = {
+            filename: decodeURIResult,
+            module: null,
+            function: null,
+            lineno: null,
+            colno: null,
+            in_app: null,
+          };
           let tmp28;
           if (closure_0) {
             tmp28 = closure_0(result);
           }
-          obj.module = tmp28;
-          obj.function = tmp6;
+          obj4.module = tmp28;
+          obj4.function = tmp6;
           let str7 = match1[3];
           if (!str7) {
             str7 = "";
           }
-          obj.lineno = parseInt(str7, 10) || undefined;
+          obj4.lineno = parseInt(str7, 10) || undefined;
           let str8 = match1[4];
           if (!str8) {
             str8 = "";
           }
           const tmp30 = parseInt(str7, 10) || undefined;
-          obj.colno = parseInt(str8, 10) || undefined;
+          obj4.colno = parseInt(str8, 10) || undefined;
           let str9 = result;
           if (!result) {
             str9 = "";
@@ -288,12 +302,12 @@ export function nodeStackLineParser(arg0) {
           if (tmp33) {
             tmp33 = !str9.includes("node_modules/");
           }
-          obj.in_app = tmp33;
-          return obj;
+          obj4.in_app = tmp33;
+          return obj4;
         } else {
           let tmp5;
           if (filename.match(re1)) {
-            obj = { filename };
+            const obj = { filename };
             tmp5 = obj;
           }
           return tmp5;

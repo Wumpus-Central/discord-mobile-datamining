@@ -1,7 +1,8 @@
 // _runtime/06999_VelocityTracker.js
 import _modDef6968 from "metro/06968__.js";
-import _classCallCheck from "metro/06967__.js";
+import _classCallCheck_mod from "metro/06967__.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class VelocityTracker {
   constructor() {
     tmp = closure_0(this, VelocityTracker);

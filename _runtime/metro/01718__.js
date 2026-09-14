@@ -11,7 +11,6 @@ fn = function n(toValue, userConfig, callback) {
   _require = toValue;
   dependencyMap = userConfig;
   __initData = callback;
-  require("01676__.js");
   const fn = function u() {
     let obj = {
       damping: 10,
@@ -23,8 +22,8 @@ fn = function n(toValue, userConfig, callback) {
       velocity: 0,
       duration: 2000,
       dampingRatio: 0.5,
-      reduceMotion: "children",
-      clamp: "id",
+      reduceMotion: "call",
+      clamp: "children",
     };
     const merged = Object.assign(dependencyMap);
     let duration;
@@ -45,7 +44,7 @@ fn = function n(toValue, userConfig, callback) {
     if (0 === obj.duration) {
       obj.skipAnimation = true;
     }
-    obj = {
+    let obj3 = {
       onFrame: function springOnFrame(toValue, lastTimestamp) {
         toValue = toValue.toValue;
         if (obj.useDuration) {
@@ -67,13 +66,13 @@ fn = function n(toValue, userConfig, callback) {
           const diff = toValue - toValue.current;
           ({ zeta, omega0 } = toValue);
           if (zeta < 1) {
-            obj = { zeta, v0: tmp5, x0: diff, omega0, omega1: tmp7, t: result };
-            let result1 = closure_0(1719).underDampedSpringCalculations(toValue, obj);
+            const obj2 = { zeta, v0: tmp5, x0: diff, omega0, omega1: tmp7, t: result };
+            let result1 = closure_0(1719).underDampedSpringCalculations(toValue, obj2);
             const obj3 = closure_0(1719);
           } else {
-            closure_0(1719);
-            obj = { v0: tmp5, x0: diff, omega0, t: result };
-            result1 = obj.criticallyDampedSpringCalculations(toValue, obj);
+            obj = closure_0(1719);
+            const obj4 = { v0: tmp5, x0: diff, omega0, t: result };
+            result1 = obj.criticallyDampedSpringCalculations(toValue, obj4);
           }
           ({ position: toValue.current, velocity: toValue.velocity } = result1);
           const result2 = closure_0(1719).isAnimationTerminatingCalculation(toValue, tmp2);
@@ -117,11 +116,11 @@ fn = function n(toValue, userConfig, callback) {
           lastTimestamp = toValue === toValue.toValue;
         }
         if (lastTimestamp) {
-          let duration;
+          let duration1;
           if (lastTimestamp != null) {
-            duration = lastTimestamp.duration;
+            duration1 = lastTimestamp.duration;
           }
-          lastTimestamp = duration === toValue.duration;
+          lastTimestamp = duration1 === toValue.duration;
         }
         if (lastTimestamp) {
           let dampingRatio;
@@ -130,7 +129,7 @@ fn = function n(toValue, userConfig, callback) {
           }
           lastTimestamp = dampingRatio === toValue.dampingRatio;
         }
-        duration = tmp.duration;
+        const duration = tmp.duration;
         if (lastTimestamp) {
           let startValue;
           if (lastTimestamp != null) {
@@ -275,13 +274,14 @@ fn = function n(toValue, userConfig, callback) {
     if (!num) {
       num = 0;
     }
-    obj.velocity = num;
-    obj.current = toValue;
-    obj.callback = callback;
-    obj.reduceMotion = _mod1676.getReduceMotionForAnimation(obj.reduceMotion);
-    return obj;
+    obj3.velocity = num;
+    obj3.current = toValue;
+    obj3.callback = callback;
+    obj3.reduceMotion = _mod1676.getReduceMotionForAnimation(obj.reduceMotion);
+    return obj3;
   };
-  let obj = {
+  let obj = require("01676__.js");
+  fn.__closure = {
     userConfig,
     checkIfConfigIsValid: require("01719__.js").checkIfConfigIsValid,
     underDampedSpringCalculations: require("01719__.js").underDampedSpringCalculations,
@@ -294,7 +294,6 @@ fn = function n(toValue, userConfig, callback) {
     callback,
     getReduceMotionForAnimation: require("01676__.js").getReduceMotionForAnimation,
   };
-  fn.__closure = obj;
   fn.__workletHash = 3229069592929;
   fn.__initData = __initData;
   return obj.defineAnimation(toValue, fn);

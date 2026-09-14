@@ -25,7 +25,7 @@ export default function useAndroidRippleForView(arg0, arg1) {
         }
       }
     }
-    let obj = {
+    const obj = {
       type: "RippleAndroid",
       color: processColorDefault(color),
       borderless: true === borderless,
@@ -39,14 +39,13 @@ export default function useAndroidRippleForView(arg0, arg1) {
     }
     obj.alpha = tmp4;
     if (true === foreground) {
-      obj = { nativeForegroundAndroid: null };
-      obj.nativeForegroundAndroid = obj;
+      const obj2 = { nativeForegroundAndroid: obj };
+      let obj3 = obj2;
     } else {
-      obj = { nativeBackgroundAndroid: null };
-      obj.nativeBackgroundAndroid = obj;
+      obj3 = { nativeBackgroundAndroid: obj };
     }
     return {
-      viewProps: obj,
+      viewProps: obj3,
       onPressIn(nativeEvent) {
         const current = ref.current;
         if (null != current) {

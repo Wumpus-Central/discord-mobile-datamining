@@ -5,29 +5,34 @@ import _mod682 from "00682__.js";
 require = arg1;
 const dependencyMap = arg6;
 function createSpanJSON(span_id) {
-  let obj = _mod682;
   const merged = Object.assign({ status: "ok" }, span_id);
   if (span_id.span_id) {
     span_id = span_id.span_id;
   } else {
-    let tmpResult = _mod682;
-    span_id = tmpResult.uuid4().substring(16);
-    const str = tmpResult.uuid4();
+    const tmpResult = _mod682;
+    span_id = _mod682.uuid4().substring(16);
+    const str = _mod682.uuid4();
   }
-  obj = { span_id, trace_id: null, data: null };
+  const obj2 = { span_id, trace_id: null, data: null };
   if (span_id.trace_id) {
     let trace_id = span_id.trace_id;
   } else {
-    tmpResult = _mod682;
-    trace_id = tmpResult.uuid4();
+    trace_id = _mod682.uuid4();
+    const tmpResult3 = _mod682;
   }
-  obj.trace_id = trace_id;
-  obj = {
-    [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op,
-    [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin,
-  };
-  obj.data = _mod682.dropUndefinedKeys(Object.assign(obj, span_id.data ? span_id.data : {}));
-  return obj.dropUndefinedKeys(Object.assign(merged, obj));
+  obj2.trace_id = trace_id;
+  const obj = _mod682;
+  const tmpResult4 = _mod682;
+  obj2.data = tmpResult4.dropUndefinedKeys(
+    Object.assign(
+      {
+        [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op,
+        [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin,
+      },
+      span_id.data ? span_id.data : {},
+    ),
+  );
+  return obj.dropUndefinedKeys(Object.assign(merged, obj2));
 }
 let closure_2 = Date.now();
 
@@ -59,23 +64,22 @@ export const setSpanDurationAsMeasurement = function setSpanDurationAsMeasuremen
 };
 export const setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(
   time_to_initial_display,
-  arg1,
+  span,
   activeSpan,
 ) {
-  let obj = _mod682;
-  ({ timestamp, start_timestamp } = obj.spanToJSON(arg1));
+  ({ timestamp, start_timestamp } = _mod682.spanToJSON(span));
   let tmp4 = timestamp;
   if (timestamp) {
     tmp4 = start_timestamp;
   }
   if (tmp4) {
-    obj = {};
+    const obj2 = {};
     const result = 1000 * (timestamp - start_timestamp);
-    obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = result;
-    obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
-    activeSpan.addEvent(time_to_initial_display, obj);
+    obj2[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = result;
+    obj2[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
+    activeSpan.addEvent(time_to_initial_display, obj2);
   }
-  const spanToJSONResult = obj.spanToJSON(arg1);
+  const spanToJSONResult = _mod682.spanToJSON(span);
 };
 export const setSpanMeasurement = function setSpanMeasurement(addEvent, STALL_COUNT, value, unit) {
   addEvent.addEvent(STALL_COUNT, {

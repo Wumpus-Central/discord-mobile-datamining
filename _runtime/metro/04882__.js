@@ -1,12 +1,14 @@
 // _runtime/metro/04882__.js
-import _mod1282 from "01282__.js";
+import _mod1280 from "01280__.js";
 import requirePromise from "../04880_requirePromise.js";
 import PromiseResolve from "../04956_PromiseResolve.js";
-import callBind from "../01454_callBind.js";
+import callBind_mod from "../01454_callBind.js";
 
 requirePromise();
-let closure_2 = callBind(_mod1282("%Promise.all%"));
-let closure_3 = callBind(_mod1282("%Promise.reject%"));
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1280("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1280("%Promise.reject%"));
 
 export default function allSettled(arg0) {
   const self = this;

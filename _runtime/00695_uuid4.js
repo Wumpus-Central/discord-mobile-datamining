@@ -2,6 +2,8 @@
 import _mod687 from "metro/00687__.js";
 import _mod697 from "metro/00697__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -42,7 +44,7 @@ export const addExceptionMechanism = function addExceptionMechanism(exception, d
   }
   if (first) {
     const mechanism = first.mechanism;
-    let obj = { type: "generic", handled: true };
+    const obj = { type: "generic", handled: true };
     const merged = Object.assign(mechanism);
     const merged1 = Object.assign(data);
     first.mechanism = obj;
@@ -52,10 +54,10 @@ export const addExceptionMechanism = function addExceptionMechanism(exception, d
         if (mechanism != null) {
           data = mechanism.data;
         }
-        obj = {};
+        const obj2 = {};
         const merged2 = Object.assign(data);
         const merged3 = Object.assign(data.data);
-        first.mechanism.data = obj;
+        first.mechanism.data = obj2;
       }
     }
   }

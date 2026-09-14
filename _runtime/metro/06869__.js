@@ -233,15 +233,15 @@ const entry1 = {
     if (flattenResult == null) {
       flattenResult = {};
     }
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(_objectWithoutProperties(props, closure_4));
     obj.ref = self.props.innerRef;
     obj.style = flattenResult;
     obj.onActiveStateChange = self.onActiveStateChange;
-    obj = { style: null };
+    const obj2 = { style: null };
     const items = [underlay.underlay, { opacity: self.opacity, backgroundColor: self.props.underlayColor, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
-    obj.style = items;
-    const items1 = [closure_1_12(Animated.View, obj), children];
+    obj2.style = items;
+    const items1 = [closure_1_12(Animated.View, obj2), children];
     obj.children = items1;
     return map1(LegacyBaseButton, obj);
   }

@@ -50,7 +50,7 @@ export const useDescriptors = function useDescriptors(state) {
   c23 = undefined;
   ({ router, emitter } = state);
   const theme = noop.useContext(state(1520).ThemeContext);
-  [c12, tmp2] = _slicedToArray(noop.useState({}), 2);
+  [c12, tmp2] = noop.useState({});
   c13 = tmp2;
   const context = noop.useContext(state(1513).NavigationBuilderContext);
   const onDispatchAction = context.onDispatchAction;
@@ -91,10 +91,17 @@ export const useDescriptors = function useDescriptors(state) {
     }),
     items,
   );
-  let obj = state(1570);
-  const navigationCache = obj.useNavigationCache({ state, getState, navigation, setOptions: tmp2, router, emitter });
-  ({ base: c22, navigations: c23 } = navigationCache);
   let tmp = _slicedToArray(noop.useState({}), 2);
+  const navigationCache = state(1570).useNavigationCache({
+    state,
+    getState,
+    navigation,
+    setOptions: tmp2,
+    router,
+    emitter,
+  });
+  ({ base: c22, navigations: c23 } = navigationCache);
+  let obj = state(1570);
   const routeCache = state(1535).useRouteCache(state.routes);
   function getOptions(arg0, arg1, arg2) {}
   function render(route, navigation, options, routeState) {
@@ -107,7 +114,7 @@ export const useDescriptors = function useDescriptors(state) {
     if (layout == null) {
       layout = closure_4;
     }
-    let obj = {
+    const tmp5 = onAction(state(1571).SceneView, {
       navigation,
       route,
       screen: props,
@@ -125,15 +132,17 @@ export const useDescriptors = function useDescriptors(state) {
           }
         });
       },
-    };
-    const tmp5 = onAction(state(1571).SceneView, obj);
+    });
     let layoutResult = tmp5;
     if (null != layout) {
-      obj = { route, navigation, options, theme, children: tmp5 };
-      layoutResult = layout(obj);
+      const obj2 = { route, navigation, options, theme, children: tmp5 };
+      layoutResult = layout(obj2);
     }
-    obj = { value, children: onAction(state(1524).NavigationProvider, { route, navigation, children: layoutResult }) };
-    return onAction(state(1513).NavigationBuilderContext.Provider, obj, route.key);
+    const obj3 = {
+      value,
+      children: onAction(state(1524).NavigationProvider, { route, navigation, children: layoutResult }),
+    };
+    return onAction(state(1513).NavigationBuilderContext.Provider, obj3, route.key);
   }
   let reduced = routeCache.reduce((acc, route, index) => {
     if (typeof getOptions === "function") {
@@ -173,7 +182,7 @@ export const useDescriptors = function useDescriptors(state) {
       throw new TypeError("Trying to call a non-function");
     }
   }, {});
-  obj = {
+  return {
     describe(route, arg1) {
       if (arg1) {
         if (typeof getOptions === "function") {
@@ -186,10 +195,9 @@ export const useDescriptors = function useDescriptors(state) {
           } else {
             found = [];
           }
-          let obj = {};
           const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
           items[arraySpreadResult] = dependencyMap[route.name].props.options;
-          items[arraySpreadResult + 1] = obj;
+          items[arraySpreadResult + 1] = {};
           reduced = items.reduce((acc, fn) => {
             let tmp = fn;
             if (typeof fn === "function") {
@@ -199,7 +207,7 @@ export const useDescriptors = function useDescriptors(state) {
             return Object.assign(acc, tmp);
           }, {});
           route = render(route, navigation, reduced, undefined);
-          obj = {
+          const obj2 = {
             route,
             navigation,
             render() {
@@ -207,7 +215,7 @@ export const useDescriptors = function useDescriptors(state) {
             },
             options: reduced,
           };
-          return obj;
+          return obj2;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -222,5 +230,4 @@ export const useDescriptors = function useDescriptors(state) {
     },
     descriptors: reduced,
   };
-  return obj;
 };

@@ -1,6 +1,6 @@
 // _runtime/metro/06878__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
@@ -24,21 +24,22 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 function changeEventCalculator(translationX, translationX2) {
   if (undefined === translationX2) {
-    let obj = { changeX: null, changeY: null };
     ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
     obj = {
       changeX: translationX.translationX - translationX2.translationX,
       changeY: translationX.translationY - translationX2.translationY,
     };
   }
-  obj = {};
   const merged = Object.assign(translationX);
   const merged1 = Object.assign(obj);
-  return obj;
+  return {};
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 1947784830943;

@@ -14,7 +14,6 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_7, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const forwardRefResult = noop.forwardRef((hidden, ref) => {
-  let obj = _mod5015;
   let flag = hidden.disableTopInsetApplication;
   if (flag == null) {
     flag = false;
@@ -31,23 +30,23 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
   if (flag4 == null) {
     flag4 = false;
   }
-  const edgeInsetApplication = obj.useEdgeInsetApplication(!hidden.hidden, flag, flag2, flag3, flag4);
+  const edgeInsetApplication = _mod5015.useEdgeInsetApplication(!hidden.hidden, flag, flag2, flag3, flag4);
   ({ headerLeftBarButtonItems, headerRightBarButtonItems } = hidden);
   let result;
   ({ appliesTopInset, useLegacyBehavior, consumeLeftInset, consumeRightInset, consumeBottomInset } =
     edgeInsetApplication);
   if (headerLeftBarButtonItems) {
     if (tmp(5012).isHeaderBarButtonsAvailableForCurrentPlatform) {
-      let tmpResult = tmp(5016);
-      result = tmpResult.prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
+      result = tmp(5016).prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
+      const tmpResult = tmp(5016);
     }
   }
   require = result;
   let result1;
   if (headerRightBarButtonItems) {
     if (tmp(5012).isHeaderBarButtonsAvailableForCurrentPlatform) {
-      tmpResult = tmp(5016);
-      result1 = tmpResult.prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
+      result1 = tmp(5016).prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
+      const tmpResult2 = tmp(5016);
     }
   }
   let isHeaderBarButtonsAvailableForCurrentPlatform = tmp(5012).isHeaderBarButtonsAvailableForCurrentPlatform;
@@ -154,23 +153,24 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
       }
     };
   }
-  obj = {};
+  const obj2 = {};
+  let tmp3 = !hidden.hidden;
   const merged = Object.assign(hidden);
-  obj.userInterfaceStyle = hidden.experimental_userInterfaceStyle;
-  obj.headerLeftBarButtonItems = result;
-  obj.headerRightBarButtonItems = result1;
-  obj.onPressHeaderBarButtonItem = fn;
-  obj.onPressHeaderBarButtonMenuItem = fn2;
-  obj.ref = ref;
-  obj.style = closure_9.headerConfig;
-  obj.pointerEvents = "box-none";
-  obj.synchronousShadowStateUpdatesEnabled =
+  obj2.userInterfaceStyle = hidden.experimental_userInterfaceStyle;
+  obj2.headerLeftBarButtonItems = result;
+  obj2.headerRightBarButtonItems = result1;
+  obj2.onPressHeaderBarButtonItem = fn;
+  obj2.onPressHeaderBarButtonMenuItem = fn2;
+  obj2.ref = ref;
+  obj2.style = closure_9.headerConfig;
+  obj2.pointerEvents = "box-none";
+  obj2.synchronousShadowStateUpdatesEnabled =
     get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderConfigUpdatesEnabled;
-  obj.consumeTopInset = appliesTopInset;
-  obj.consumeLeftInset = consumeLeftInset;
-  obj.consumeRightInset = consumeRightInset;
-  obj.consumeBottomInset = consumeBottomInset;
-  obj.legacyTopInsetBehavior = useLegacyBehavior;
+  obj2.consumeTopInset = appliesTopInset;
+  obj2.consumeLeftInset = consumeLeftInset;
+  obj2.consumeRightInset = consumeRightInset;
+  obj2.consumeBottomInset = consumeBottomInset;
+  obj2.legacyTopInsetBehavior = useLegacyBehavior;
   return jsx(_modDef5017, {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";

@@ -9,17 +9,16 @@ function createNormalizedConfigs(arg0) {
 
 export const getActionFromState = function getActionFromState(index, initialRouteName) {
   if (initialRouteName) {
-    let obj2 = weakMap;
-    let obj1 = weakMap.get(initialRouteName);
-    if (!obj1) {
+    let obj4 = weakMap.get(initialRouteName);
+    if (!obj4) {
       if (typeof createNormalizedConfigItem === "function") {
         if (typeof initialRouteName !== "object") {
           let obj = {};
-          const result = obj2.set(initialRouteName, obj);
+          const result = weakMap.set(initialRouteName, obj);
         } else {
           let tmp2 = null;
         }
-        obj = { initialRouteName: initialRouteName.initialRouteName, screens: null };
+        const obj3 = { initialRouteName: initialRouteName.initialRouteName, screens: null };
         tmp2 = tmp2 != initialRouteName.screens;
         let reduced;
         if (tmp2) {
@@ -31,7 +30,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
               if (typeof closure_1_1 === "function") {
                 if (typeof tmp2 === "object") {
                   if (null != tmp2) {
-                    let obj = { initialRouteName: tmp2.initialRouteName, screens: null };
+                    let obj2 = { initialRouteName: tmp2.initialRouteName, screens: null };
                     let reduced;
                     if (null != tmp2.screens) {
                       if (typeof closure_1_2 === "function") {
@@ -42,7 +41,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
                           if (typeof closure_1_1 === "function") {
                             if (typeof tmp2 === "object") {
                               if (null != tmp2) {
-                                let obj = { initialRouteName: tmp2.initialRouteName, screens: null };
+                                let obj2 = { initialRouteName: tmp2.initialRouteName, screens: null };
                                 let reduced;
                                 if (null != tmp2.screens) {
                                   if (typeof closure_1_2 === "function") {
@@ -53,7 +52,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
                                       if (typeof closure_1_1 === "function") {
                                         if (typeof tmp2 === "object") {
                                           if (null != tmp2) {
-                                            let obj = { initialRouteName: tmp2.initialRouteName, screens: null };
+                                            let obj2 = { initialRouteName: tmp2.initialRouteName, screens: null };
                                             let reduced;
                                             if (null != tmp2.screens) {
                                               if (typeof closure_1_2 === "function") {
@@ -64,7 +63,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
                                                   if (typeof closure_1_1 === "function") {
                                                     if (typeof tmp2 === "object") {
                                                       if (null != tmp2) {
-                                                        let obj = { initialRouteName: tmp2.initialRouteName, screens: null };
+                                                        let obj2 = { initialRouteName: tmp2.initialRouteName, screens: null };
                                                         let reduced;
                                                         if (null != tmp2.screens) {
                                                           if (typeof closure_1_2 === "function") {
@@ -75,7 +74,8 @@ export const getActionFromState = function getActionFromState(index, initialRout
                                                             throw new TypeError("Trying to call a non-function");
                                                           }
                                                         }
-                                                        obj.screens = reduced;
+                                                        obj2.screens = reduced;
+                                                        let obj = obj2;
                                                       }
                                                       acc[tmp] = obj;
                                                       return acc;
@@ -89,7 +89,8 @@ export const getActionFromState = function getActionFromState(index, initialRout
                                                 throw new TypeError("Trying to call a non-function");
                                               }
                                             }
-                                            obj.screens = reduced;
+                                            obj2.screens = reduced;
+                                            let obj = obj2;
                                           }
                                           acc[tmp] = obj;
                                           return acc;
@@ -103,7 +104,8 @@ export const getActionFromState = function getActionFromState(index, initialRout
                                     throw new TypeError("Trying to call a non-function");
                                   }
                                 }
-                                obj.screens = reduced;
+                                obj2.screens = reduced;
+                                let obj = obj2;
                               }
                               acc[tmp] = obj;
                               return acc;
@@ -117,7 +119,8 @@ export const getActionFromState = function getActionFromState(index, initialRout
                         throw new TypeError("Trying to call a non-function");
                       }
                     }
-                    obj.screens = reduced;
+                    obj2.screens = reduced;
+                    let obj = obj2;
                   }
                   acc[tmp] = obj;
                   return acc;
@@ -131,17 +134,18 @@ export const getActionFromState = function getActionFromState(index, initialRout
             throw new TypeError("Trying to call a non-function");
           }
         }
-        obj.screens = reduced;
+        obj3.screens = reduced;
+        obj = obj3;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
   } else {
-    obj1 = {};
+    obj4 = {};
   }
   if (null != index.index) {
-    routes = index.routes;
-    let substr = routes.slice(0, index.index + 1);
+    const routes1 = index.routes;
+    let substr = routes1.slice(0, index.index + 1);
   } else {
     substr = index.routes;
   }
@@ -150,8 +154,8 @@ export const getActionFromState = function getActionFromState(index, initialRout
       if (2 === substr.length) {
         if (undefined === substr[0].key) {
           initialRouteName = undefined;
-          if (obj1 != null) {
-            initialRouteName = obj1.initialRouteName;
+          if (obj4 != null) {
+            initialRouteName = obj4.initialRouteName;
           }
         }
       }
@@ -162,12 +166,12 @@ export const getActionFromState = function getActionFromState(index, initialRout
     if (index == null) {
       index = index.routes.length - 1;
     }
-    let state;
+    let state1;
     if (routes[index] != null) {
-      state = tmp10.state;
+      state1 = tmp10.state;
     }
-    if (obj1 != null) {
-      let screens = obj1.screens;
+    if (obj4 != null) {
+      const screens = obj4.screens;
       if (screens != null) {
         let name;
         if (tmp10 != null) {
@@ -176,22 +180,22 @@ export const getActionFromState = function getActionFromState(index, initialRout
         let tmp12 = screens[name];
       }
     }
-    obj2 = {};
+    let obj5 = {};
     const merged = Object.assign(tmp10.params);
     let tmp16;
     if (routes[index]) {
-      const obj3 = { name: null, path: null, params: null };
+      const obj8 = { name: null, path: null, params: null };
       ({ name: obj7.name, path: obj7.path } = tmp10);
-      obj3.params = obj2;
-      tmp16 = obj3;
+      obj8.params = obj5;
+      tmp16 = obj8;
     }
     let length = tmp16;
     if (tmp16) {
-      screens = undefined;
+      let screens1;
       if (tmp12 != null) {
-        screens = tmp12.screens;
+        screens1 = tmp12.screens;
       }
-      length = screens;
+      length = screens1;
     }
     if (length) {
       const _Object2 = Object;
@@ -200,32 +204,32 @@ export const getActionFromState = function getActionFromState(index, initialRout
     if (length) {
       tmp16.pop = true;
     }
-    if (state) {
-      while (0 !== state.routes.length) {
-        if (null != state.index) {
-          let routes1 = state.routes;
-          let substr1 = routes1.slice(0, state.index + 1);
+    if (state1) {
+      while (0 !== state1.routes.length) {
+        if (null != state1.index) {
+          let routes2 = state1.routes;
+          let substr1 = routes2.slice(0, state1.index + 1);
         } else {
-          substr1 = state.routes;
+          substr1 = state1.routes;
         }
         let tmp23 = substr1[substr1.length - 1];
         let _Object3 = Object;
-        let merged1 = Object.assign(obj2, { initial: "Array", screen: "call", params: "borderRadius", state: "assign" });
+        let merged1 = Object.assign(obj5, { initial: "r", screen: "accessible", params: "to", state: "variant" });
         if (1 === substr1.length) {
           if (undefined === substr1[0].key) {
-            obj2.initial = true;
-            obj2.screen = tmp23.name;
+            obj5.initial = true;
+            obj5.screen = tmp23.name;
             if (tmp23.state) {
-              let obj4 = {};
+              let obj9 = {};
               let merged2 = Object.assign(tmp23.params);
-              obj2.params = obj4;
-              obj2.pop = true;
-              let params = obj2.params;
+              obj5.params = obj9;
+              obj5.pop = true;
+              let params = obj5.params;
             } else {
               ({ path: obj6.path, params: obj6.params } = tmp23);
-              params = obj2;
+              params = obj5;
             }
-            state = tmp23.state;
+            let state = tmp23.state;
             let tmp28;
             if (tmp12 != null) {
               let screens2 = tmp12.screens;
@@ -233,19 +237,20 @@ export const getActionFromState = function getActionFromState(index, initialRout
                 tmp28 = screens2[tmp23.name];
               }
             }
-            let screens1;
+            let screens3;
             if (tmp28 != null) {
-              screens1 = tmp28.screens;
+              screens3 = tmp28.screens;
             }
-            if (screens1) {
+            if (screens3) {
               let _Object4 = Object;
-              screens1 = Object.keys(tmp28.screens).length;
+              screens3 = Object.keys(tmp28.screens).length;
             }
-            if (screens1) {
+            if (screens3) {
               params.pop = true;
             }
-            obj2 = params;
+            obj5 = params;
             tmp12 = tmp28;
+            state1 = state;
           }
         }
         if (2 === substr1.length) {
@@ -256,13 +261,13 @@ export const getActionFromState = function getActionFromState(index, initialRout
             }
             if (substr1[0].name === initialRouteName1) {
               if (undefined === substr1[1].key) {
-                obj2.initial = false;
-                obj2.screen = tmp23.name;
+                obj5.initial = false;
+                obj5.screen = tmp23.name;
               }
             }
           }
         }
-        obj2.state = state;
+        obj5.state = state1;
       }
     }
     let screen;
@@ -270,11 +275,11 @@ export const getActionFromState = function getActionFromState(index, initialRout
       screen = tmp16.params.screen;
     }
     if (!screen) {
-      let state1;
+      let state2;
       if (tmp16 != null) {
-        state1 = tmp16.params.state;
+        state2 = tmp16.params.state;
       }
-      screen = state1;
+      screen = state2;
     }
     if (screen) {
       tmp16.pop = true;

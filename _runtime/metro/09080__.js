@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "znak\u016F", verb: "m\u00EDt" },
           file: { unit: "bajt\u016F", verb: "m\u00EDt" },
           array: { unit: "prvk\u016F", verb: "m\u00EDt" },
@@ -110,7 +110,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -140,7 +139,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -149,7 +148,7 @@ if (self2) {
                 if (str28 == null) {
                   str28 = "hodnota";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp28.unit;
                 if (str34 == null) {
                   str34 = "prvk\u016F";
@@ -160,7 +159,7 @@ if (self2) {
                   str28 +
                   " mus\u00ED m\u00EDt " +
                   str27 +
-                  str +
+                  str1 +
                   " " +
                   str34;
               } else {
@@ -182,7 +181,7 @@ if (self2) {
               if (code.inclusive) {
                 str16 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -191,7 +190,7 @@ if (self2) {
                 if (str17 == null) {
                   str17 = "hodnota";
                 }
-                const str1 = code.minimum.toString();
+                const str48 = code.minimum.toString();
                 let str23 = tmp15.unit;
                 if (str23 == null) {
                   str23 = "prvk\u016F";
@@ -202,7 +201,7 @@ if (self2) {
                   str17 +
                   " mus\u00ED m\u00EDt " +
                   str16 +
-                  str1 +
+                  str48 +
                   " " +
                   str23;
               } else {
@@ -254,7 +253,6 @@ if (self2) {
               return "Neplatn\u00FD vstup";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Neplatn\u00E1 hodnota v ";
               return "Neplatn\u00E1 hodnota v " + code.origin;
             default:
               return "Neplatn\u00FD vstup";

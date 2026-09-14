@@ -10,8 +10,8 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const client = _mod682.getClient();
           if (client) {
@@ -38,13 +38,13 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
               c2 = 1;
               c1 = 2;
               c0 = 1;
-              const obj1 = {
+              const obj4 = {
                 value: _mod682.suppressTracing(() =>
                   fetch(str, { body: "{}", method: "POST", mode: "cors", credentials: "omit" }),
                 ),
                 done: false,
               };
-              return obj1;
+              return obj4;
             } else {
               c0 = 3;
               return { value: "no-dsn-configured", done: true };
@@ -64,7 +64,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       } else if (arg0 === 2) {
         c2 = 0;
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c2 = 0;

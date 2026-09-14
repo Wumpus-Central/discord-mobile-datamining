@@ -8,7 +8,7 @@ import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const f19542 = (arg0) => {};
+const f19543 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_PRESS_IN = "RESPONDER_ACTIVE_PRESS_IN";
@@ -24,18 +24,18 @@ let obj = {
   RESPONDER_ACTIVE_LONG_PRESS_OUT: false,
   ERROR: false,
 };
-obj = {};
+let obj2 = {};
 const merged = Object.assign(obj);
-obj.RESPONDER_ACTIVE_PRESS_OUT = true;
-obj.RESPONDER_ACTIVE_PRESS_IN = true;
-obj = {};
+obj2.RESPONDER_ACTIVE_PRESS_OUT = true;
+obj2.RESPONDER_ACTIVE_PRESS_IN = true;
+let obj3 = {};
 const merged1 = Object.assign(obj);
-obj.RESPONDER_INACTIVE_PRESS_IN = true;
-obj.RESPONDER_ACTIVE_PRESS_IN = true;
-obj.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
-const obj1 = {};
+obj3.RESPONDER_INACTIVE_PRESS_IN = true;
+obj3.RESPONDER_ACTIVE_PRESS_IN = true;
+obj3.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
+let obj4 = {};
 const merged2 = Object.assign(obj);
-obj1.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
+obj4.RESPONDER_ACTIVE_LONG_PRESS_IN = true;
 const DELAY = "DELAY";
 const RESPONDER_GRANT = "RESPONDER_GRANT";
 const RESPONDER_RELEASE = "RESPONDER_RELEASE";
@@ -117,7 +117,7 @@ const dependencyMap = {
     LONG_PRESS_DETECTED: "NOT_RESPONDER",
   },
 };
-let obj2 = {
+const obj5 = {
   componentDidMount() {
     const isTV = get_VersionDefault.isTV;
   },
@@ -237,7 +237,7 @@ let obj2 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f19542 === "function") {
+      if (typeof f19543 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -426,7 +426,7 @@ let obj2 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f19542 === "function") {
+    if (typeof f19543 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {
@@ -457,7 +457,7 @@ let obj2 = {
           locationY = first.locationY;
         }
         const self = this;
-        obj = { pageX, pageY, locationX, locationY };
+        const obj = { pageX, pageY, locationX, locationY };
         this.pressInLocation = obj;
       }
       if (tmp) {
@@ -490,15 +490,15 @@ let obj2 = {
     }
     if (!tmp6) {
       let tmp9 = !tmp8;
-      if (!obj[touchState]) {
-        tmp9 = obj[touchState];
+      if (!obj2[touchState]) {
+        tmp9 = obj2[touchState];
       }
       tmp6 = tmp9;
     }
     if (tmp6) {
       const result1 = self._remeasureMetricsOnActivation();
     }
-    let touchableHandleLongPress = obj[touchState];
+    let touchableHandleLongPress = obj3[touchState];
     if (touchableHandleLongPress) {
       touchableHandleLongPress = arg2 === LONG_PRESS_DETECTED;
     }
@@ -512,9 +512,9 @@ let obj2 = {
       if (!_isHighlightResult) {
         self._startHighlight(nativeEvent);
       }
-      if (tmp11[touchState]) {
+      if (obj3[touchState]) {
         if (arg2 === RESPONDER_RELEASE) {
-          let tmp20 = obj1[touchState];
+          let tmp20 = obj4[touchState];
           if (tmp20) {
             const onLongPress = self.props.onLongPress;
             let tmp19 = !onLongPress;
@@ -524,7 +524,7 @@ let obj2 = {
             tmp20 = tmp19;
           }
           let touchableHandlePress = !tmp21;
-          if (obj1[touchState]) {
+          if (obj4[touchState]) {
             touchableHandlePress = tmp20;
           }
           if (touchableHandlePress) {
@@ -539,8 +539,7 @@ let obj2 = {
               self._endHighlight(nativeEvent);
             }
             if (!self.props.touchSoundDisabled) {
-              obj = SoundManagerDefault;
-              obj.playTouchSound();
+              SoundManagerDefault.playTouchSound();
             }
             self.touchableHandlePress(nativeEvent);
           }
@@ -559,7 +558,6 @@ let obj2 = {
     if (tmp15) {
       self._endHighlight(nativeEvent);
     }
-    tmp11 = obj;
   },
   _startHighlight(nativeEvent) {
     const self = this;
@@ -585,11 +583,11 @@ let obj2 = {
   },
   withoutDefaultFocusAndBlur: {},
 };
-({ touchableHandleFocus, touchableHandleBlur } = obj2);
-obj2.withoutDefaultFocusAndBlur = _objectWithoutProperties(obj2, ["touchableHandleFocus", "touchableHandleBlur"]);
+({ touchableHandleFocus, touchableHandleBlur } = obj5);
+obj5.withoutDefaultFocusAndBlur = _objectWithoutProperties(obj5, ["touchableHandleFocus", "touchableHandleBlur"]);
 
 export default {
-  Mixin: obj2,
+  Mixin: obj5,
   renderDebugView(arg0) {
     ({ color, hitSlop } = arg0);
     return null;

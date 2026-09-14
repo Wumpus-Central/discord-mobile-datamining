@@ -8,8 +8,7 @@ export default function _unsupportedIterableToArray(str, arg1) {
     } else {
       const toString = {}.toString;
       const call = toString.call;
-      let arr = typeof call === "unknown" ? toString() : call(str);
-      const substr = arr.slice(8, -1);
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
       let name = substr;
       if (tmp3) {
         name = str.constructor.name;
@@ -17,13 +16,14 @@ export default function _unsupportedIterableToArray(str, arg1) {
       if ("Map" !== name) {
         if ("Set" !== name) {
           if ("Arguments" === name) {
-            arr = _arrayLikeToArray(str, arg1);
+            let arr2 = _arrayLikeToArray(str, arg1);
           }
         }
-        return arr;
+        return arr2;
       }
       const _Array = Array;
-      arr = Array.from(str);
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
       tmp3 = "Object" === substr && "Object".constructor;
     }
   }

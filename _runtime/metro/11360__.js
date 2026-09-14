@@ -1,10 +1,6 @@
 // _runtime/metro/11360__.js
-import _mod11359 from "11359__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11359.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

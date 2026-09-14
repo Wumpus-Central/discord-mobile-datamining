@@ -1,15 +1,15 @@
 // _runtime/metro/04930__.js
-import _mod1283 from "01283__.js";
-import _mod1284 from "01284__.js";
-import callBindBasic from "../01293_callBindBasic.js";
+import _mod1281 from "01281__.js";
+import _mod1282 from "01282__.js";
+import callBindBasic from "../01291_callBindBasic.js";
 
 const obj = {};
 try {
   obj.__proto__ = null;
-  let _module = _mod1284;
+  let _module = _mod1282;
   if (_module) {
     const _Object = Object;
-    _module = _mod1284(Object.prototype, "__proto__");
+    _module = _mod1282(Object.prototype, "__proto__");
   }
   let tmp6 = !("toString" in obj);
   if (tmp6) {
@@ -24,7 +24,7 @@ try {
     if (!setDunder) {
       setDunder = function setDunder(arg0, arg1) {
         if (null == arg0) {
-          const tmp6 = new _mod1283("set Object.prototype.__proto__ called on null or undefined");
+          const tmp6 = new _mod1281("set Object.prototype.__proto__ called on null or undefined");
           throw tmp6;
         } else {
           arg0.__proto__ = arg1;

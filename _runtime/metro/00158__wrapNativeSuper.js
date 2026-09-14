@@ -31,9 +31,9 @@ function _wrapNativeSuper(fn) {
             }
           }
           const _Object = Object;
-          let obj = { constructor: null };
-          obj = { value: Wrapper, enumerable: false, writable: true, configurable: true };
-          obj.constructor = obj;
+          const obj = { constructor: null };
+          const obj2 = { value: Wrapper, enumerable: false, writable: true, configurable: true };
+          obj.constructor = obj2;
           Wrapper.prototype = Object.create(fn.prototype, obj);
           return _setPrototypeOf(Wrapper, fn);
         }

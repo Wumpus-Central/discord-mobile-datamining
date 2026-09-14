@@ -125,20 +125,27 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(this._animationConfig);
       obj.toValue = undefined;
       const _animationClass = new this._animationClass(obj);
-      obj = { type: "tracking", animationId: null, animationConfig: null, toValue: null, value: null, debugID: null };
+      const obj2 = {
+        type: "tracking",
+        animationId: null,
+        animationConfig: null,
+        toValue: null,
+        value: null,
+        debugID: null,
+      };
       const result = _animationClass.__getNativeAnimationConfig();
-      obj.animationId = AnimatedTracking(357).generateNewAnimationId();
-      obj.animationConfig = result;
+      obj2.animationId = AnimatedTracking(357).generateNewAnimationId();
+      obj2.animationConfig = result;
       const _parent = this._parent;
-      obj.toValue = _parent.__getNativeTag();
+      obj2.toValue = _parent.__getNativeTag();
       const _value = this._value;
-      obj.value = _value.__getNativeTag();
-      obj.debugID = this.__getDebugID();
-      return obj;
+      obj2.value = _value.__getNativeTag();
+      obj2.debugID = this.__getDebugID();
+      return obj2;
     },
   },
 ];

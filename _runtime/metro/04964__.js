@@ -84,16 +84,22 @@ let fn = function t(exports, React) {
       return {};
     } else {
       if (null == arg0) {
-        let obj = {};
+        let obj2 = {};
       } else {
-        obj = {};
+        const obj = {};
         const _Object = Object;
         const keys = Object.keys(arg0);
-        for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
-          let tmp2 = keys[num3];
-          if (arr.indexOf(tmp2) < 0) {
-            obj[tmp2] = arg0[tmp2];
-          }
+        let num3 = 0;
+        obj2 = obj;
+        if (0 < keys.length) {
+          do {
+            let tmp2 = keys[num3];
+            if (arr.indexOf(tmp2) < 0) {
+              obj[tmp2] = arg0[tmp2];
+            }
+            num3 = num3 + 1;
+            obj2 = obj;
+          } while (num3 < keys.length);
         }
       }
       const _Object2 = Object;
@@ -106,12 +112,12 @@ let fn = function t(exports, React) {
             let _Object4 = Object;
             let call = propertyIsEnumerable.call;
             if (typeof call === "unknown" ? propertyIsEnumerable(tmp5) : call(arg0, tmp5)) {
-              obj[tmp5] = arg0[tmp5];
+              obj2[tmp5] = arg0[tmp5];
             }
           }
         }
       }
-      return obj;
+      return obj2;
     }
   }
   function _slicedToArray(iterable, arg1) {
@@ -155,7 +161,7 @@ let fn = function t(exports, React) {
                   const done2 = iter5.done;
                   tmp11 = done2;
                   while (!done2) {
-                    let arr = items.push(iter6.value);
+                    let arr3 = items.push(iter6.value);
                     if (!arg1) {
                       continue;
                     } else if (items.length === arg1) {
@@ -227,8 +233,7 @@ let fn = function t(exports, React) {
         if (typeof iterable !== "string") {
           const _Object = Object;
           let call = toString.call;
-          let arr = typeof call === "unknown" ? toString() : call(iterable);
-          const substr = arr.slice(8, -1);
+          const substr = typeof call === "unknown" ? toString() : call(iterable).slice(8, -1);
           let name = substr;
           if (tmp4) {
             name = iterable.constructor.name;
@@ -241,14 +246,12 @@ let fn = function t(exports, React) {
                   num5 = iterable.length;
                 }
                 const _Array = Array;
-                let array = new Array(num5);
+                const array = new Array(num5);
                 let num6 = 0;
-                arr = array;
                 if (0 < num5) {
                   do {
                     array[num6] = iterable[num6];
                     num6 = num6 + 1;
-                    arr = array;
                   } while (num6 < num5);
                 }
               } else {
@@ -257,7 +260,8 @@ let fn = function t(exports, React) {
             }
           }
           const _Array2 = Array;
-          arr = Array.from(iterable);
+          const arr2 = Array.from(iterable);
+          const arr = typeof call === "unknown" ? toString() : call(iterable);
           tmp4 = "Object" === substr && iterable.constructor;
         }
       }
@@ -266,11 +270,11 @@ let fn = function t(exports, React) {
         num8 = iterable.length;
       }
       const _Array3 = Array;
-      array = new Array(num8);
+      const array2 = new Array(num8);
       let num9 = 0;
       if (0 < num8) {
         do {
-          array[num9] = iterable[num9];
+          array2[num9] = iterable[num9];
           num9 = num9 + 1;
         } while (num9 < num8);
       }
@@ -481,17 +485,17 @@ let fn = function t(exports, React) {
           tmp5 = typeof options.then === "function";
         }
         if (tmp5) {
-          let obj = { tag: "async", stripePromise: null };
+          const obj2 = { tag: "async", stripePromise: null };
           const resolved = Promise.resolve(options);
-          obj.stripePromise = resolved.then((result) => {
+          obj2.stripePromise = resolved.then((result) => {
             validateStripe(result, closure_0);
             return result;
           });
-          return obj;
+          return obj2;
         } else {
           validateStripe(options, tmp);
           if (null === options) {
-            obj = { tag: "empty" };
+            let obj = { tag: "empty" };
           } else {
             obj = { tag: "sync", stripe: options };
           }
@@ -520,14 +524,14 @@ let fn = function t(exports, React) {
       closure_2 = memo;
       tmp2 = closure_4(
         options.useState(() => {
-          let stripe = null;
+          let stripe1 = null;
           if ("sync" === memo.tag) {
-            stripe = memo.stripe;
+            stripe1 = memo.stripe;
           }
-          const obj = { stripe, elements: null };
+          const obj = { stripe: stripe1, elements: null };
           let elementsResult = null;
           if ("sync" === memo.tag) {
-            stripe = memo.stripe;
+            const stripe = memo.stripe;
             elementsResult = stripe.elements(ref1);
           }
           obj.elements = elementsResult;
@@ -663,17 +667,17 @@ let fn = function t(exports, React) {
                             if (!acc) {
                               obj = {};
                             }
-                            obj = {};
-                            ref14(obj, obj);
-                            obj = {};
-                            if (item in obj) {
+                            const obj2 = {};
+                            ref14(obj2, obj);
+                            const obj3 = {};
+                            if (item in obj3) {
                               const _Object = Object;
-                              const obj1 = { value: tmp15, enumerable: true, configurable: true, writable: true };
-                              Object.defineProperty(obj, item, obj1);
+                              const obj4 = { value: tmp15, enumerable: true, configurable: true, writable: true };
+                              Object.defineProperty(obj3, item, obj4);
                             } else {
-                              obj[item] = tmp15;
+                              obj3[item] = tmp15;
                             }
-                            ref14(obj, {}, obj);
+                            ref14(obj2, {}, obj3);
                           }
                         }
                         return tmp11;
@@ -719,9 +723,9 @@ let fn = function t(exports, React) {
             }
           }, items6);
           tmp13 = closure_16;
-          obj = { value: null };
-          obj.value = first;
-          return obj.createElement(closure_16.Provider, obj, exports.children);
+          obj1 = { value: null };
+          obj1.value = first;
+          return obj.createElement(closure_16.Provider, obj1, exports.children);
         } else {
           str2 = "Trying to call a non-function";
           throw new TypeError("Trying to call a non-function");
@@ -1015,15 +1019,15 @@ let fn = function t(exports, React) {
             element = null;
             if (first1.checkoutSdk) {
               tmp20 = closure_20;
-              obj = { value: null };
-              obj.value = first1;
-              tmp21 = closure_22;
               obj1 = { value: null };
-              obj1.value = tmp18;
+              obj1.value = first1;
+              tmp21 = closure_22;
+              obj4 = { value: null };
+              obj4.value = tmp18;
               element = obj.createElement(
                 closure_20.Provider,
-                obj,
-                obj.createElement(closure_22.Provider, obj1, exports.children),
+                obj1,
+                obj.createElement(closure_22.Provider, obj4, exports.children),
               );
             }
             return element;
@@ -1041,9 +1045,11 @@ let fn = function t(exports, React) {
       }
     }
   }
-  let obj = { stripe: _default.any, options: null };
-  obj = { fetchClientSecret: _default.func.isRequired, elementsOptions: _default.object };
-  obj.options = _default.shape(obj).isRequired;
+  let obj = {
+    stripe: _default.any,
+    options: _default.shape({ fetchClientSecret: _default.func.isRequired, elementsOptions: _default.object })
+      .isRequired,
+  };
   CheckoutProvider.propTypes = obj;
   function useElementsOrCheckoutSdkContextWithUseCase(arg0) {}
   closure_24 = ["mode"];
@@ -1104,7 +1110,6 @@ let fn = function t(exports, React) {
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            const obj = { id: null, className: null };
             ({ id: obj2.id, className: obj2.className } = arg0);
             return <div id={null} className={null} />;
           } else {
@@ -1191,10 +1196,8 @@ let fn = function t(exports, React) {
               checkoutSdk = context1.checkoutSdk;
             }
             onReady = checkoutSdk;
-            let tmp22 = _slicedToArray(address.useState(null), 2);
-            const first = tmp22[0];
+            [first, closure_5] = address.useState(null);
             let ref13 = first;
-            closure_5 = tmp22[1];
             address.useRef(null);
             const ref = address.useRef(null);
             if (typeof useAttachEvent === "function") {
@@ -1757,22 +1760,22 @@ let fn = function t(exports, React) {
                                                           if (!acc) {
                                                             obj = {};
                                                           }
-                                                          obj = {};
-                                                          ref14(obj, obj);
-                                                          obj = {};
-                                                          if (item in obj) {
+                                                          const obj2 = {};
+                                                          ref14(obj2, obj);
+                                                          const obj3 = {};
+                                                          if (item in obj3) {
                                                             const _Object = Object;
-                                                            const obj1 = {
+                                                            const obj4 = {
                                                               value: tmp15,
                                                               enumerable: true,
                                                               configurable: true,
                                                               writable: true,
                                                             };
-                                                            Object.defineProperty(obj, item, obj1);
+                                                            Object.defineProperty(obj3, item, obj4);
                                                           } else {
-                                                            obj[item] = tmp15;
+                                                            obj3[item] = tmp15;
                                                           }
-                                                          ref14(obj, {}, obj);
+                                                          ref14(obj2, {}, obj3);
                                                         }
                                                       }
                                                       return tmp11;
@@ -1920,7 +1923,7 @@ let fn = function t(exports, React) {
       ? function EmbeddedCheckoutServerElement(arg0) {
           if (typeof useEmbeddedCheckoutContext === "function") {
             if (React.useContext(context3)) {
-              const obj = { id: tmp, className: tmp2 };
+              const obj2 = { id: tmp, className: tmp2 };
               return <div id={tmp} className={tmp2} />;
             } else {
               const _Error = Error;
@@ -1933,14 +1936,13 @@ let fn = function t(exports, React) {
         }
       : function EmbeddedCheckoutClientElement(arg0) {
           if (typeof useEmbeddedCheckoutContext === "function") {
-            let obj = React;
             context = React.useContext(context3);
             if (context) {
               const embeddedCheckout = context.embeddedCheckout;
-              obj.useRef(false);
-              const ref = obj.useRef(null);
+              React.useRef(false);
+              const ref = React.useRef(null);
               const items = [embeddedCheckout];
-              const layoutEffect = obj.useLayoutEffect(() => {
+              const layoutEffect = React.useLayoutEffect(() => {
                 const current = ref.current;
                 let tmp2 = !current;
                 if (!current) {
@@ -1964,7 +1966,7 @@ let fn = function t(exports, React) {
                   }
                 };
               }, items);
-              obj = { ref, id: tmp, className: tmp2 };
+              const obj2 = { ref, id: tmp, className: tmp2 };
               return <div ref={ref} id={tmp} className={tmp2} />;
             } else {
               const _Error = Error;
@@ -1979,7 +1981,6 @@ let fn = function t(exports, React) {
     stripe = stripe.stripe;
     let options = stripe.options;
     let ref2 = options;
-    let obj = options;
     const items = [stripe];
     const memo = options.useMemo(
       () =>
@@ -2177,7 +2178,7 @@ let fn = function t(exports, React) {
             }
           }
         }, items7);
-        obj = { value };
+        const obj2 = { value };
         return <context3.Provider value={value}>{stripe.children}</context3.Provider>;
       } else {
         throw new TypeError("Trying to call a non-function");

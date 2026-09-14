@@ -23,8 +23,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         let keepFocus;
         if (closure_0 != null) {
@@ -72,7 +72,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           }
         });
         c3 = 3;
-        obj = { value: promise, done: true };
+        const obj = { value: promise, done: true };
         return obj;
       }
     } catch (tmp13) {
@@ -81,7 +81,9 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-obj = {
+const date = new Date();
+
+export const KeyboardController = {
   setDefaultMode: fn(1626).KeyboardControllerNative.setDefaultMode,
   setInputMode: fn(1626).KeyboardControllerNative.setInputMode,
   setFocusTo: fn(1626).KeyboardControllerNative.setFocusTo,
@@ -103,5 +105,3 @@ obj = {
     return global;
   },
 };
-
-export const KeyboardController = obj;

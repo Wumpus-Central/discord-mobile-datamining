@@ -37,19 +37,18 @@ export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatur
   }
 };
 export const _INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
-  let obj = _mod713;
-  const currentScope = obj.getCurrentScope();
+  const currentScope = _mod713.getCurrentScope();
   const flags = currentScope.getScopeData().contexts.flags;
   const arr = flags ? flags.values : [];
   if (arr.length) {
     if (undefined === contexts.contexts) {
       contexts.contexts = {};
     }
-    obj = { values: null };
+    const obj2 = { values: null };
     const items = [];
     HermesBuiltin.arraySpread(arr, 0);
-    obj.values = items;
-    contexts.contexts.flags = obj;
+    obj2.values = items;
+    contexts.contexts.flags = obj2;
   }
   return contexts;
 };
@@ -58,12 +57,11 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
   if (arg2 === undefined) {
     num = 100;
   }
-  let obj = _mod713;
-  const currentScope = obj.getCurrentScope();
+  const currentScope = _mod713.getCurrentScope();
   const contexts = currentScope.getScopeData().contexts;
   if (!contexts.flags) {
-    obj = { values: [] };
-    contexts.flags = obj;
+    const obj2 = { values: [] };
+    contexts.flags = obj2;
   }
   const values = contexts.flags.values;
   closure_0 = flagKey;
@@ -82,8 +80,8 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
       if (values.length === num) {
         values.shift();
       }
-      obj = { flag: flagKey, result: value };
-      values.push(obj);
+      const obj3 = { flag: flagKey, result: value };
+      values.push(obj3);
     }
   }
 };
@@ -105,7 +103,7 @@ export const _INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffe
         arr = arr.shift();
       }
       const obj = { flag, result };
-      arr = arr.push(obj);
+      arr.push(obj);
     }
   }
 };

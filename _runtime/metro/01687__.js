@@ -8,9 +8,8 @@ fn = function t(toValue, userConfig, callback) {
   _require = toValue;
   dependencyMap = userConfig;
   __initData = callback;
-  require("01676__.js");
   const fn = function u() {
-    let current = { duration: 300, easing: null };
+    const current = { duration: 300, easing: null };
     const Easing = toValue(userConfig[1]).Easing;
     current.easing = Easing.inOut(toValue(userConfig[1]).Easing.quad);
     if (userConfig) {
@@ -21,7 +20,7 @@ fn = function t(toValue, userConfig, callback) {
         return dependencyMap[item];
       });
     }
-    current = {
+    const obj2 = {
       type: "timing",
       onFrame: function timing(startTime, arg1) {
         ({ toValue, startValue } = startTime);
@@ -70,17 +69,17 @@ fn = function t(toValue, userConfig, callback) {
     if (userConfig != null) {
       reduceMotion = userConfig.reduceMotion;
     }
-    current.reduceMotion = toValue(userConfig[0]).getReduceMotionForAnimation(reduceMotion);
-    return current;
+    obj2.reduceMotion = toValue(userConfig[0]).getReduceMotionForAnimation(reduceMotion);
+    return obj2;
   };
-  const obj = {
+  const obj = require("01676__.js");
+  fn.__closure = {
     Easing: require("linear").Easing,
     userConfig,
     toValue,
     callback,
     getReduceMotionForAnimation: require("01676__.js").getReduceMotionForAnimation,
   };
-  fn.__closure = obj;
   fn.__workletHash = 16704866504175;
   fn.__initData = __initData;
   return obj.defineAnimation(toValue, fn);

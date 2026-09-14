@@ -9,7 +9,7 @@ import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
-import emptyFunction from "04466__.js";
+import emptyFunction_mod from "04466__.js";
 import "module_4466";
 
 const Video = importDefault;
@@ -395,7 +395,7 @@ let items = [
         ScaleNone = viewManagerConfig.Constants.ScaleNone;
       }
       const merged = Object.assign({}, self.props);
-      let obj = {
+      const obj = {
         style: null,
         resizeMode: ScaleNone,
         src: null,
@@ -426,7 +426,7 @@ let items = [
       };
       const items = [base.base, merged.style];
       obj.style = items;
-      obj = {
+      const obj2 = {
         uri: str2,
         isNetwork: !tmp9,
         isAsset: !tmp10,
@@ -440,16 +440,16 @@ let items = [
       if (!str5) {
         str5 = "";
       }
-      obj.type = str5;
-      obj.mainVer = tmp3.mainVer || 0;
-      obj.patchVer = tmp3.patchVer || 0;
+      obj2.type = str5;
+      obj2.mainVer = tmp3.mainVer || 0;
+      obj2.patchVer = tmp3.patchVer || 0;
       if (tmp3.headers) {
         let stringsOnlyObjectResult = self.stringsOnlyObject(tmp3.headers);
       } else {
         stringsOnlyObjectResult = {};
       }
-      obj.requestHeaders = stringsOnlyObjectResult;
-      obj.src = obj;
+      obj2.requestHeaders = stringsOnlyObjectResult;
+      obj.src = obj2;
       ({
         _onLoadStart: obj.onVideoLoadStart,
         _onLoad: obj.onVideoLoad,
@@ -479,24 +479,24 @@ let items = [
         _onRestoreUserInterfaceForPictureInPictureStop: obj.onRestoreUserInterfaceForPictureInPictureStop,
       } = self);
       const merged1 = Object.assign(merged, obj);
-      obj = {};
+      const obj3 = {};
       const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-      obj.resizeMode = self.props.posterResizeMode || "contain";
-      const obj1 = { style: merged.style, children: null };
-      const obj2 = { ref: self._assignRoot };
+      obj3.resizeMode = self.props.posterResizeMode || "contain";
+      const obj4 = { style: merged.style, children: null };
+      const obj5 = { ref: self._assignRoot };
       const merged3 = Object.assign(merged);
-      obj2.style = StyleSheet.absoluteFill;
-      const items1 = [closure_1_12(closure_16, obj2)];
+      obj5.style = StyleSheet.absoluteFill;
+      const items1 = [closure_1_12(closure_16, obj5)];
       let showPoster = self.state.showPoster;
       if (showPoster) {
-        const obj3 = { style: obj, source: null };
-        const obj4 = { uri: self.props.poster };
-        obj3.source = obj4;
-        showPoster = closure_1_12(React7, obj3);
+        const obj6 = { style: obj3, source: null };
+        const obj7 = { uri: self.props.poster };
+        obj6.source = obj7;
+        showPoster = closure_1_12(React7, obj6);
       }
       items1[1] = showPoster;
-      obj1.children = items1;
-      return map1(React6, obj1);
+      obj4.children = items1;
+      return map1(React6, obj4);
     },
   },
 ];
@@ -584,6 +584,7 @@ let obj = {
   translateY: null,
   rotation: null,
 };
+let emptyFunction = emptyFunction_mod;
 let items1 = [
   _modDef8429.NONE,
   _modDef8429.INVERT,
@@ -605,6 +606,7 @@ let items1 = [
 obj.filter = emptyFunction.oneOf(items1);
 obj.filterEnabled = emptyFunction.bool;
 obj.src = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
 const items2 = [emptyFunction.number, emptyFunction.object];
 obj.seek = emptyFunction.oneOfType(items2);
 obj.fullscreen = emptyFunction.bool;
@@ -623,10 +625,10 @@ obj.onVideoFullscreenPlayerWillPresent = emptyFunction.func;
 obj.onVideoFullscreenPlayerDidPresent = emptyFunction.func;
 obj.onVideoFullscreenPlayerWillDismiss = emptyFunction.func;
 obj.onVideoFullscreenPlayerDidDismiss = emptyFunction.func;
-obj = { uri: emptyFunction.string };
-const items3 = [emptyFunction.shape(obj), emptyFunction.number];
+let emptyFunction = emptyFunction_mod;
+const items3 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
 obj.source = emptyFunction.oneOfType(items3);
-let obj1 = {
+let obj3 = {
   type: null,
   licenseServer: null,
   headers: null,
@@ -634,14 +636,16 @@ let obj1 = {
   certificateUrl: null,
   getLicense: null,
 };
+let emptyFunction = emptyFunction_mod;
 const items4 = [_modDef8430.CLEARKEY, _modDef8430.FAIRPLAY, _modDef8430.WIDEVINE, _modDef8430.PLAYREADY];
-obj1.type = emptyFunction.oneOf(items4);
-obj1.licenseServer = emptyFunction.string;
-obj1.headers = emptyFunction.shape({});
-obj1.base64Certificate = emptyFunction.bool;
-obj1.certificateUrl = emptyFunction.string;
-obj1.getLicense = emptyFunction.func;
-obj.drm = emptyFunction.shape(obj1);
+obj3.type = emptyFunction.oneOf(items4);
+obj3.licenseServer = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj3.headers = emptyFunction.shape({});
+obj3.base64Certificate = emptyFunction.bool;
+obj3.certificateUrl = emptyFunction.string;
+obj3.getLicense = emptyFunction.func;
+obj.drm = emptyFunction.shape(obj3);
 obj.minLoadRetryCount = emptyFunction.number;
 obj.maxBitRate = emptyFunction.number;
 obj.resizeMode = emptyFunction.string;
@@ -650,26 +654,36 @@ obj.posterResizeMode = fn(8431).ImagePropTypes.resizeMode;
 obj.repeat = emptyFunction.bool;
 obj.automaticallyWaitsToMinimizeStalling = emptyFunction.bool;
 obj.allowsExternalPlayback = emptyFunction.bool;
-let obj2 = { type: emptyFunction.string.isRequired, value: null };
-const items5 = [emptyFunction.string, emptyFunction.number];
-obj2.value = emptyFunction.oneOfType(items5);
-obj.selectedAudioTrack = emptyFunction.shape(obj2);
-let obj3 = { type: emptyFunction.string.isRequired, value: null };
-const items6 = [emptyFunction.string, emptyFunction.number];
-obj3.value = emptyFunction.oneOfType(items6);
-obj.selectedVideoTrack = emptyFunction.shape(obj3);
+let emptyFunction = emptyFunction_mod;
 let obj4 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
+const items5 = [emptyFunction.string, emptyFunction.number];
+obj4.value = emptyFunction.oneOfType(items5);
+obj.selectedAudioTrack = emptyFunction.shape(obj4);
+let emptyFunction = emptyFunction_mod;
+let obj5 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
+const items6 = [emptyFunction.string, emptyFunction.number];
+obj5.value = emptyFunction.oneOfType(items6);
+obj.selectedVideoTrack = emptyFunction.shape(obj5);
+let emptyFunction = emptyFunction_mod;
+let obj6 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
 const items7 = [emptyFunction.string, emptyFunction.number];
-obj4.value = emptyFunction.oneOfType(items7);
-obj.selectedTextTrack = emptyFunction.shape(obj4);
-const obj5 = { title: emptyFunction.string, uri: emptyFunction.string.isRequired, type: null, language: null };
+obj6.value = emptyFunction.oneOfType(items7);
+obj.selectedTextTrack = emptyFunction.shape(obj6);
+let emptyFunction = emptyFunction_mod;
+let obj7 = { title: emptyFunction.string, uri: emptyFunction.string.isRequired, type: null, language: null };
+let emptyFunction = emptyFunction_mod;
 const items8 = [_modDef8449.SRT, _modDef8449.TTML, _modDef8449.VTT];
-obj5.type = emptyFunction.oneOf(items8);
-obj5.language = emptyFunction.string.isRequired;
-obj.textTracks = emptyFunction.arrayOf(emptyFunction.shape(obj5));
+obj7.type = emptyFunction.oneOf(items8);
+obj7.language = emptyFunction.string.isRequired;
+obj.textTracks = emptyFunction.arrayOf(emptyFunction.shape(obj7));
 obj.paused = emptyFunction.bool;
 obj.muted = emptyFunction.bool;
 obj.volume = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+let obj2 = { uri: emptyFunction.string };
 obj.bufferConfig = emptyFunction.shape({
   minBufferMs: emptyFunction.number,
   maxBufferMs: emptyFunction.number,
@@ -682,6 +696,7 @@ obj.pictureInPicture = emptyFunction.bool;
 obj.playInBackground = emptyFunction.bool;
 obj.preferredForwardBufferDuration = emptyFunction.number;
 obj.playWhenInactive = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.ignoreSilentSwitch = emptyFunction.oneOf(["ignore", "obey"]);
 obj.reportBandwidth = emptyFunction.bool;
 obj.disableFocus = emptyFunction.bool;
@@ -689,6 +704,7 @@ obj.controls = emptyFunction.bool;
 obj.audioOnly = emptyFunction.bool;
 obj.currentTime = emptyFunction.number;
 obj.fullscreenAutorotate = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.fullscreenOrientation = emptyFunction.oneOf(["all", "landscape", "portrait"]);
 obj.progressUpdateInterval = emptyFunction.number;
 obj.useTextureView = emptyFunction.bool;

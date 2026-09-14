@@ -16,10 +16,9 @@ if (typeof apply === "function") {
       const _Object = Object;
       let obj = {
         get() {
-          throw obj;
+          throw obj2;
         },
       };
-      obj = {};
       apply(
         () => {
           throw 42;
@@ -29,6 +28,7 @@ if (typeof apply === "function") {
       );
       let tmp3 = apply;
       const definePropertyResult = Object.defineProperty({}, "length", obj);
+      const obj2 = {};
     } catch (tmp8) {
       tmp3 = tmp2;
       if (tmp8 !== tmp) {
@@ -141,7 +141,7 @@ if (typeof apply === "function") {
             }
             return tmp9;
           } catch (tmp5) {
-            if (tmp5 !== obj) {
+            if (tmp5 !== obj2) {
               return false;
             }
           }
@@ -171,7 +171,7 @@ if (typeof apply === "function") {
             }
             if (tmp5) {
               tmp5 = !/^\[object HTML/.test(tmp4);
-              obj = /^\[object HTML/;
+              const obj = /^\[object HTML/;
             }
             let tmp6 = !tmp5;
             if (!tmp5) {

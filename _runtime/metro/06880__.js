@@ -1,6 +1,6 @@
 // _runtime/metro/06880__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
@@ -24,17 +24,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 function changeEventCalculator(rotation, rotation2) {
   if (undefined === rotation2) {
-    let obj = { rotationChange: rotation.rotation };
+    const obj2 = { rotationChange: rotation.rotation };
+    let obj = obj2;
   } else {
     obj = { rotationChange: rotation.rotation - rotation2.rotation };
   }
-  obj = {};
   const merged = Object.assign(rotation);
   const merged1 = Object.assign(obj);
-  return obj;
+  return {};
 }
 changeEventCalculator.__closure = {};
 changeEventCalculator.__workletHash = 11988645380499;

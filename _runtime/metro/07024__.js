@@ -10,7 +10,7 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg2;
   let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _slicedToArray(_mod6976.useLayoutState(0), 2);
+  [r10015, tmp3] = _mod6976.useLayoutState(0);
   React4(() => {
     let tmpResult = closure_0;
     if (typeof closure_0 === "function") {

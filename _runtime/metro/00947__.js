@@ -22,14 +22,14 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
       }
       flag = false;
       if (id) {
-        let tmpResult = _mod682;
-        const locationHref = tmpResult.getLocationHref();
+        const locationHref = _mod682.getLocationHref();
         let someResult = ignoreNextOnError.WINDOW === ignoreNextOnError.WINDOW.top;
         if (someResult) {
           const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
           someResult = items.some((item) => closure_0.startsWith("" + item + "://"));
         }
         flag = !someResult;
+        const tmpResult = _mod682;
       }
     }
   }
@@ -37,13 +37,13 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
   if (flag2) {
     flag2 = true;
     if (_mod937.DEBUG_BUILD) {
-      tmpResult = _mod682;
-      tmpResult.consoleSandbox(() => {
+      _mod682.consoleSandbox(() => {
         console.error(
           "[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/",
         );
       });
       flag2 = true;
+      const tmpResult2 = _mod682;
     }
   }
   return flag2;

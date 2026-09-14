@@ -4,7 +4,9 @@ import _makeShareableClone from "../01646__makeShareableClone.js";
 import _mod1679 from "01679__.js";
 import validateTransformOrigin from "../01738_validateTransformOrigin.js";
 import ComponentRegistry2 from "../01739_ComponentRegistry.js";
-import 01639__ from "01639__.js";
+import module_1639_mod from "01639__.js";
+
+const require = globalThis.__r;
 
 function updatePropsOnReactJS(arg0, arg1) {
   const ComponentRegistry = ComponentRegistry2.ComponentRegistry;
@@ -13,6 +15,7 @@ function updatePropsOnReactJS(arg0, arg1) {
     const result = component._updateReanimatedProps(arg1);
   }
 }
+let module_1639 = module_1639_mod;
 if (module_1639.shouldBeUseWeb()) {
   const fn2 = function o(value, arg1, arg2) {
     closure_0 = arg1;
@@ -24,12 +27,16 @@ if (module_1639.shouldBeUseWeb()) {
       });
     }
   };
-  let obj = { _updatePropsJS: null };
-  obj = { code: "function pnpm_updatePropsTs1(viewDescriptors,updates,isAnimatedProps){const{_updatePropsJS}=this.__closure;var _viewDescriptors$valu;(_viewDescriptors$valu=viewDescriptors.value)===null||_viewDescriptors$valu===void 0||_viewDescriptors$valu.forEach(function(viewDescriptor){const component=viewDescriptor.tag;_updatePropsJS(updates,component,isAnimatedProps);});}", _updatePropsJS: _makeShareableClone._updatePropsJS };
+  let obj = { _updatePropsJS: _makeShareableClone._updatePropsJS };
   fn2.__closure = obj;
   fn2.__workletHash = 17381979125683;
-  fn2.__initData = obj;
+  fn2.__initData = {
+    code: "function pnpm_updatePropsTs1(viewDescriptors,updates,isAnimatedProps){const{_updatePropsJS}=this.__closure;var _viewDescriptors$valu;(_viewDescriptors$valu=viewDescriptors.value)===null||_viewDescriptors$valu===void 0||_viewDescriptors$valu.forEach(function(viewDescriptor){const component=viewDescriptor.tag;_updatePropsJS(updates,component,isAnimatedProps);});}",
+  };
   let fn = fn2;
+  let obj2 = {
+    code: "function pnpm_updatePropsTs1(viewDescriptors,updates,isAnimatedProps){const{_updatePropsJS}=this.__closure;var _viewDescriptors$valu;(_viewDescriptors$valu=viewDescriptors.value)===null||_viewDescriptors$valu===void 0||_viewDescriptors$valu.forEach(function(viewDescriptor){const component=viewDescriptor.tag;_updatePropsJS(updates,component,isAnimatedProps);});}",
+  };
 } else {
   fn = function s(value, transformOrigin) {
     _global = transformOrigin;
@@ -39,11 +46,11 @@ if (module_1639.shouldBeUseWeb()) {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(closure_0);
-      global.lastUpdateByTag[tag.tag] = obj;
+      global.lastUpdateByTag[tag.tag] = {};
       global.lastUpdateFrameTimeByTag[tag.tag] = global.__frameTimestamp;
+      const obj2 = {};
     });
     _mod1679.processColorsInProps(transformOrigin);
     if ("transformOrigin" in transformOrigin) {
@@ -53,18 +60,30 @@ if (module_1639.shouldBeUseWeb()) {
     const UpdatePropsManager = _global.UpdatePropsManager;
     UpdatePropsManager.update(value, transformOrigin);
   };
-  const obj1 = { processColorsInProps: _mod1679.processColorsInProps, processTransformOrigin: validateTransformOrigin.processTransformOrigin };
-  fn.__closure = obj1;
+  const obj3 = {
+    processColorsInProps: _mod1679.processColorsInProps,
+    processTransformOrigin: validateTransformOrigin.processTransformOrigin,
+  };
+  fn.__closure = obj3;
   fn.__workletHash = 9641647469033;
-  fn.__initData = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
-  let obj2 = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
+  fn.__initData = {
+    code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}",
+  };
+  const obj4 = {
+    code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}",
+  };
 }
-const __initData = { code: "function checkUpdate_Pnpm_updatePropsTs4(tag){const checkUpdate_Pnpm_updatePropsTs4=this._recur;const{runOnJS,updatePropsOnReactJS,scheduledFrameIds}=this.__closure;const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate_Pnpm_updatePropsTs4(tag);});}" };
-let closure_6 = { code: "function pnpm_updatePropsTs5(){const{scheduledFrameIds,tag,checkUpdate}=this.__closure;scheduledFrameIds[tag]=undefined;checkUpdate(tag);}" };
+const __initData = {
+  code: "function checkUpdate_Pnpm_updatePropsTs4(tag){const checkUpdate_Pnpm_updatePropsTs4=this._recur;const{runOnJS,updatePropsOnReactJS,scheduledFrameIds}=this.__closure;const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate_Pnpm_updatePropsTs4(tag);});}",
+};
+let closure_6 = {
+  code: "function pnpm_updatePropsTs5(){const{scheduledFrameIds,tag,checkUpdate}=this.__closure;scheduledFrameIds[tag]=undefined;checkUpdate(tag);}",
+};
+let module_1639 = module_1639_mod;
 if (module_1639.isFabric()) {
   const fn4 = function l() {
     let checkUpdate = [];
-    let __closure = {};
+    const scheduledFrameIds = {};
     checkUpdate = function checkUpdate(tag) {
       checkUpdate = tag;
       const __frameTimestamp = global.__frameTimestamp;
@@ -88,16 +107,23 @@ if (module_1639.isFabric()) {
         }
       }
     };
-    __closure = { runOnJS: __closure(checkUpdate[5]).runOnJS, updatePropsOnReactJS, scheduledFrameIds: __closure };
-    checkUpdate.__closure = __closure;
+    checkUpdate.__closure = {
+      runOnJS: scheduledFrameIds(checkUpdate[5]).runOnJS,
+      updatePropsOnReactJS,
+      scheduledFrameIds,
+    };
     checkUpdate.__workletHash = 1753947436463;
     checkUpdate.__initData = __initData;
-    __closure = {
+    return {
       update(value, updates) {
         const self = this;
         value = value.value;
         const item = value.forEach((shadowNodeWrapper) => {
-          checkUpdate.push({ shadowNodeWrapper: shadowNodeWrapper.shadowNodeWrapper, updates, tag: shadowNodeWrapper.tag });
+          checkUpdate.push({
+            shadowNodeWrapper: shadowNodeWrapper.shadowNodeWrapper,
+            updates,
+            tag: shadowNodeWrapper.tag,
+          });
           if (1 === checkUpdate.length) {
             const _queueMicrotask = queueMicrotask;
             queueMicrotask(self.flush);
@@ -111,16 +137,19 @@ if (module_1639.isFabric()) {
           checkUpdate(tag.tag);
         });
         checkUpdate.length = 0;
-      }
+      },
     };
-    return __closure;
   };
-  const obj3 = { runOnJS: runWorkletOnJS.runOnJS, updatePropsOnReactJS };
-  fn4.__closure = obj3;
+  const obj5 = { runOnJS: runWorkletOnJS.runOnJS, updatePropsOnReactJS };
+  fn4.__closure = obj5;
   fn4.__workletHash = 7650186665575;
-  fn4.__initData = { code: "function pnpm_updatePropsTs3(){const{runOnJS,updatePropsOnReactJS}=this.__closure;const operations=[];const scheduledFrameIds={};function checkUpdate(tag){'worklet';const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate(tag);});}return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){const tag=viewDescriptor.tag;operations.push({shadowNodeWrapper:viewDescriptor.shadowNodeWrapper,updates:updates,tag:tag});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsFabric(operations);operations.forEach(function({tag:tag}){checkUpdate(tag);});operations.length=0;}};}" };
+  fn4.__initData = {
+    code: "function pnpm_updatePropsTs3(){const{runOnJS,updatePropsOnReactJS}=this.__closure;const operations=[];const scheduledFrameIds={};function checkUpdate(tag){'worklet';const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate(tag);});}return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){const tag=viewDescriptor.tag;operations.push({shadowNodeWrapper:viewDescriptor.shadowNodeWrapper,updates:updates,tag:tag});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsFabric(operations);operations.forEach(function({tag:tag}){checkUpdate(tag);});operations.length=0;}};}",
+  };
   let fn3 = fn4;
-  const obj4 = { code: "function pnpm_updatePropsTs3(){const{runOnJS,updatePropsOnReactJS}=this.__closure;const operations=[];const scheduledFrameIds={};function checkUpdate(tag){'worklet';const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate(tag);});}return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){const tag=viewDescriptor.tag;operations.push({shadowNodeWrapper:viewDescriptor.shadowNodeWrapper,updates:updates,tag:tag});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsFabric(operations);operations.forEach(function({tag:tag}){checkUpdate(tag);});operations.length=0;}};}" };
+  const obj6 = {
+    code: "function pnpm_updatePropsTs3(){const{runOnJS,updatePropsOnReactJS}=this.__closure;const operations=[];const scheduledFrameIds={};function checkUpdate(tag){'worklet';const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate(tag);});}return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){const tag=viewDescriptor.tag;operations.push({shadowNodeWrapper:viewDescriptor.shadowNodeWrapper,updates:updates,tag:tag});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsFabric(operations);operations.forEach(function({tag:tag}){checkUpdate(tag);});operations.length=0;}};}",
+  };
 } else {
   fn3 = function c() {
     closure_0 = [];
@@ -129,7 +158,6 @@ if (module_1639.isFabric()) {
         const self = this;
         value = value.value;
         const item = value.forEach((tag) => {
-          let arr = updates;
           const obj = { tag: tag.tag, name: null, updates: null };
           let str = tag.name;
           if (!str) {
@@ -137,8 +165,8 @@ if (module_1639.isFabric()) {
           }
           obj.name = str;
           obj.updates = updates;
-          arr = updates.push(obj);
-          if (1 === arr.length) {
+          updates.push(obj);
+          if (1 === updates.length) {
             const _queueMicrotask = queueMicrotask;
             queueMicrotask(self.flush);
           }
@@ -147,51 +175,62 @@ if (module_1639.isFabric()) {
       flush() {
         global._updatePropsPaper(closure_0);
         closure_0.length = 0;
-      }
+      },
     };
   };
   fn3.__closure = {};
   fn3.__workletHash = 8150032191515;
-  fn3.__initData = { code: "function pnpm_updatePropsTs6(){const operations=[];return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){operations.push({tag:viewDescriptor.tag,name:viewDescriptor.name||'RCTView',updates:updates});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsPaper(operations);operations.length=0;}};}" };
+  fn3.__initData = {
+    code: "function pnpm_updatePropsTs6(){const operations=[];return{update:function(viewDescriptors,updates){var _this=this;viewDescriptors.value.forEach(function(viewDescriptor){operations.push({tag:viewDescriptor.tag,name:viewDescriptor.name||'RCTView',updates:updates});if(operations.length===1){queueMicrotask(_this.flush);}});},flush:function(){global._updatePropsPaper(operations);operations.length=0;}};}",
+  };
 }
+let module_1639 = module_1639_mod;
 if (module_1639.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new require("01647__.js").ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
+      const reanimatedError = new require("01647__.js").ReanimatedError(
+        "`UpdatePropsManager` is not available on non-native platform.",
+      );
       throw reanimatedError;
     }
     obj = require("01639__.js");
   }
   const _Proxy = Proxy;
-  const obj5 = {
+  const obj7 = {
     get: maybeThrowError,
     set() {
-        if (typeof maybeThrowError === "function") {
-          if (obj.isJest()) {
-            return false;
-          } else {
-            const reanimatedError = new require("01647__.js").ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
-            throw reanimatedError;
-          }
-          obj = require("01639__.js");
+      if (typeof maybeThrowError === "function") {
+        if (obj.isJest()) {
+          return false;
         } else {
-          throw new TypeError("Trying to call a non-function");
+          const reanimatedError = new require("01647__.js").ReanimatedError(
+            "`UpdatePropsManager` is not available on non-native platform.",
+          );
+          throw reanimatedError;
         }
+        obj = require("01639__.js");
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
+    },
   };
-  const proxy = new Proxy({}, obj5);
+  const proxy = new Proxy({}, obj7);
   global.UpdatePropsManager = proxy;
 } else {
   const _module3 = runWorkletOnJS;
   const fn5 = function _() {
     global.UpdatePropsManager = fn3();
   };
-  const obj7 = { createUpdatePropsManager: fn3 };
-  fn5.__closure = obj7;
+  const obj9 = { createUpdatePropsManager: fn3 };
+  fn5.__closure = obj9;
   fn5.__workletHash = 4015188324291;
-  fn5.__initData = { code: "function pnpm_updatePropsTs7(){const{createUpdatePropsManager}=this.__closure;global.UpdatePropsManager=createUpdatePropsManager();}" };
+  fn5.__initData = {
+    code: "function pnpm_updatePropsTs7(){const{createUpdatePropsManager}=this.__closure;global.UpdatePropsManager=createUpdatePropsManager();}",
+  };
   _module3.runOnUIImmediately(fn5)();
-  const obj6 = { code: "function pnpm_updatePropsTs7(){const{createUpdatePropsManager}=this.__closure;global.UpdatePropsManager=createUpdatePropsManager();}" };
+  const obj8 = {
+    code: "function pnpm_updatePropsTs7(){const{createUpdatePropsManager}=this.__closure;global.UpdatePropsManager=createUpdatePropsManager();}",
+  };
 }
 
 export default fn;

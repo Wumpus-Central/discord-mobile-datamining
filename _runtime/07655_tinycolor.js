@@ -4,7 +4,8 @@ let min;
 let max;
 let random;
 let color;
-let obj;
+let hexNames;
+let obj2;
 class tinycolor {
   constructor(arg0, arg1) {
     obj = require;
@@ -23,12 +24,12 @@ class tinycolor {
       if (this instanceof tmp) {
         tmp4 = str;
         if (typeof str !== "string") {
-          obj = { r: 0, g: 0, b: 0 };
+          obj1 = { r: 0, g: 0, b: 0 };
           num7 = 1;
           flag3 = false;
           flag4 = false;
           num8 = 1;
-          tmp23 = obj;
+          tmp23 = obj1;
           if (typeof str === "object") {
             tmp79 = closure_28;
             CSS_UNIT9 = closure_28.CSS_UNIT;
@@ -37,13 +38,13 @@ class tinycolor {
               if (CSS_UNIT.exec(str.g)) {
                 CSS_UNIT2 = tmp79.CSS_UNIT;
                 if (CSS_UNIT2.exec(str.b)) {
-                  obj1 = { r: null, g: null, b: null };
+                  obj7 = { r: null, g: null, b: null };
                   tmp66 = bound01;
                   num33 = 255;
                   ({ g, b } = str);
-                  obj1.r = 255 * bound01(str.r, 255);
-                  obj1.g = 255 * bound01(g, 255);
-                  obj1.b = 255 * bound01(b, 255);
+                  obj7.r = 255 * bound01(str.r, 255);
+                  obj7.g = 255 * bound01(g, 255);
+                  obj7.b = 255 * bound01(b, 255);
                   tmp67 = globalThis;
                   _String = String;
                   str12 = String(str.r);
@@ -55,7 +56,7 @@ class tinycolor {
                   }
                   flag5 = true;
                   str7 = str13;
-                  obj = obj1;
+                  obj1 = obj7;
                 }
                 str15 = "a";
                 num35 = 1;
@@ -65,7 +66,7 @@ class tinycolor {
                 num8 = num35;
                 flag3 = str7;
                 flag4 = flag5;
-                tmp23 = obj;
+                tmp23 = obj1;
               }
             }
             CSS_UNIT3 = tmp79.CSS_UNIT;
@@ -123,14 +124,14 @@ class tinycolor {
                   items2[3] = tmp58;
                   items2[4] = tmp58;
                   items2[5] = result2;
-                  obj2 = { r: null, g: null, b: null };
+                  obj8 = { r: null, g: null, b: null };
                   num32 = 255;
-                  obj2.r = 255 * items[result4];
-                  obj2.g = 255 * items1[result4];
-                  obj2.b = 255 * items2[result4];
+                  obj8.r = 255 * items[result4];
+                  obj8.g = 255 * items1[result4];
+                  obj8.b = 255 * items2[result4];
                   str7 = "hsv";
                   flag5 = true;
-                  obj = obj2;
+                  obj1 = obj8;
                 }
               }
             }
@@ -170,14 +171,14 @@ class tinycolor {
               num13 = 0;
               tmp33 = tmp30;
               if (0 === tmp29) {
-                obj3 = { r: null, g: null, b: null };
+                obj9 = { r: null, g: null, b: null };
                 num26 = 255;
-                obj3.r = 255 * tmp32;
-                obj3.g = 255 * tmp31;
-                obj3.b = 255 * tmp30;
+                obj9.r = 255 * tmp32;
+                obj9.g = 255 * tmp31;
+                obj9.b = 255 * tmp30;
                 str7 = "hsl";
                 flag5 = true;
-                obj = obj3;
+                obj1 = obj9;
               } else {
                 num41 = 0.5;
                 if (tmp30 < 0.5) {
@@ -319,9 +320,9 @@ class tinycolor {
           tmp78 = re2;
           str18 = str17.replace(re2, "");
           formatted = str18.toLowerCase();
-          obj4 = closure_25;
+          obj10 = closure_25;
           if (closure_25[formatted]) {
-            tmp5 = obj4[formatted];
+            tmp5 = obj10[formatted];
             flag = true;
           } else {
             str2 = "transparent";
@@ -337,144 +338,144 @@ class tinycolor {
           formatted = rgb.exec(tmp5);
           tmp8 = tmp5;
           if (formatted) {
-            obj4 = { r: null, g: null, b: null };
-            obj4.r = formatted[1];
-            obj4.g = formatted[2];
+            obj10 = { r: null, g: null, b: null };
+            obj10.r = formatted[1];
+            obj10.g = formatted[2];
             formatted = formatted[3];
-            obj4.b = formatted;
-            flag2 = obj4;
+            obj10.b = formatted;
+            flag2 = obj10;
           } else {
             rgba = tmp6.rgba;
             match = rgba.exec(tmp5);
             if (match) {
-              obj4 = { r: null, g: null, b: null, a: null };
-              obj4.r = match[1];
-              obj4.g = match[2];
-              obj4.b = match[3];
-              obj4.a = match[4];
-              flag2 = obj4;
+              obj10 = { r: null, g: null, b: null, a: null };
+              obj10.r = match[1];
+              obj10.g = match[2];
+              obj10.b = match[3];
+              obj10.a = match[4];
+              flag2 = obj10;
             } else {
               hsl = tmp6.hsl;
               match1 = hsl.exec(tmp5);
               if (match1) {
-                obj4 = { h: null, s: null, l: null };
-                obj4.h = match1[1];
-                obj4.s = match1[2];
-                obj4.l = match1[3];
-                flag2 = obj4;
+                obj10 = { h: null, s: null, l: null };
+                obj10.h = match1[1];
+                obj10.s = match1[2];
+                obj10.l = match1[3];
+                flag2 = obj10;
               } else {
                 hsla = tmp6.hsla;
                 match2 = hsla.exec(tmp5);
                 if (match2) {
-                  obj4 = { h: null, s: null, l: null, a: null };
-                  obj4.h = match2[1];
-                  obj4.s = match2[2];
-                  obj4.l = match2[3];
-                  obj4.a = match2[4];
-                  flag2 = obj4;
+                  obj10 = { h: null, s: null, l: null, a: null };
+                  obj10.h = match2[1];
+                  obj10.s = match2[2];
+                  obj10.l = match2[3];
+                  obj10.a = match2[4];
+                  flag2 = obj10;
                 } else {
                   hsv = tmp6.hsv;
                   match3 = hsv.exec(tmp5);
                   if (match3) {
-                    obj4 = { h: null, s: null, v: null };
-                    obj4.h = match3[1];
-                    obj4.s = match3[2];
-                    obj4.v = match3[3];
-                    flag2 = obj4;
+                    obj10 = { h: null, s: null, v: null };
+                    obj10.h = match3[1];
+                    obj10.s = match3[2];
+                    obj10.v = match3[3];
+                    flag2 = obj10;
                   } else {
                     hsva = tmp6.hsva;
                     match4 = hsva.exec(tmp5);
                     if (match4) {
-                      obj4 = { h: null, s: null, v: null, a: null };
-                      obj4.h = match4[1];
-                      obj4.s = match4[2];
-                      obj4.v = match4[3];
-                      obj4.a = match4[4];
-                      flag2 = obj4;
+                      obj10 = { h: null, s: null, v: null, a: null };
+                      obj10.h = match4[1];
+                      obj10.s = match4[2];
+                      obj10.v = match4[3];
+                      obj10.a = match4[4];
+                      flag2 = obj10;
                     } else {
                       hex8 = tmp6.hex8;
                       match5 = hex8.exec(tmp5);
                       if (match5) {
-                        obj4 = { r: null, g: null, b: null, a: null, format: null };
+                        obj10 = { r: null, g: null, b: null, a: null, format: null };
                         tmp21 = globalThis;
                         _parseInt11 = parseInt;
                         num5 = 16;
-                        obj4.r = parseInt(match5[1], 16);
+                        obj10.r = parseInt(match5[1], 16);
                         _parseInt12 = parseInt;
-                        obj4.g = parseInt(match5[2], 16);
+                        obj10.g = parseInt(match5[2], 16);
                         _parseInt13 = parseInt;
-                        obj4.b = parseInt(match5[3], 16);
+                        obj10.b = parseInt(match5[3], 16);
                         _parseInt14 = parseInt;
                         num6 = 255;
-                        obj4.a = parseInt(match5[4], 16) / 255;
+                        obj10.a = parseInt(match5[4], 16) / 255;
                         str6 = "hex8";
                         if (flag) {
                           str6 = "name";
                         }
-                        obj4.format = str6;
-                        flag2 = obj4;
+                        obj10.format = str6;
+                        flag2 = obj10;
                       } else {
                         hex6 = tmp6.hex6;
                         match6 = hex6.exec(tmp5);
                         if (match6) {
-                          obj4 = { r: null, g: null, b: null, format: null };
+                          obj10 = { r: null, g: null, b: null, format: null };
                           tmp20 = globalThis;
                           _parseInt8 = parseInt;
                           num4 = 16;
-                          obj4.r = parseInt(match6[1], 16);
+                          obj10.r = parseInt(match6[1], 16);
                           _parseInt9 = parseInt;
-                          obj4.g = parseInt(match6[2], 16);
+                          obj10.g = parseInt(match6[2], 16);
                           _parseInt10 = parseInt;
-                          obj4.b = parseInt(match6[3], 16);
+                          obj10.b = parseInt(match6[3], 16);
                           str5 = "hex";
                           if (flag) {
                             str5 = "name";
                           }
-                          obj4.format = str5;
-                          flag2 = obj4;
+                          obj10.format = str5;
+                          flag2 = obj10;
                         } else {
                           hex4 = tmp6.hex4;
                           match7 = hex4.exec(tmp5);
                           if (match7) {
-                            obj4 = { r: null, g: null, b: null, a: null, format: null };
+                            obj10 = { r: null, g: null, b: null, a: null, format: null };
                             tmp19 = globalThis;
                             _parseInt4 = parseInt;
                             num2 = 16;
-                            obj4.r = parseInt("" + match7[1] + match7[1], 16);
+                            obj10.r = parseInt("" + match7[1] + match7[1], 16);
                             _parseInt5 = parseInt;
-                            obj4.g = parseInt("" + match7[2] + match7[2], 16);
+                            obj10.g = parseInt("" + match7[2] + match7[2], 16);
                             _parseInt6 = parseInt;
-                            obj4.b = parseInt("" + match7[3] + match7[3], 16);
+                            obj10.b = parseInt("" + match7[3] + match7[3], 16);
                             _parseInt7 = parseInt;
                             num3 = 255;
-                            obj4.a = parseInt("" + match7[4] + match7[4], 16) / 255;
+                            obj10.a = parseInt("" + match7[4] + match7[4], 16) / 255;
                             str4 = "hex8";
                             if (flag) {
                               str4 = "name";
                             }
-                            obj4.format = str4;
-                            flag2 = obj4;
+                            obj10.format = str4;
+                            flag2 = obj10;
                           } else {
                             hex3 = tmp6.hex3;
-                            obj4 = hex3.exec;
-                            obj2Result = obj4(tmp5);
+                            obj10 = hex3.exec;
+                            obj2Result = obj10(tmp5);
                             flag2 = false;
                             if (obj2Result) {
-                              obj4 = { r: null, g: null, b: null, format: null };
+                              obj10 = { r: null, g: null, b: null, format: null };
                               tmp18 = globalThis;
                               _parseInt = parseInt;
                               num = 16;
-                              obj4.r = parseInt("" + obj2Result[1] + obj2Result[1], 16);
+                              obj10.r = parseInt("" + obj2Result[1] + obj2Result[1], 16);
                               _parseInt2 = parseInt;
-                              obj4.g = parseInt("" + obj2Result[2] + obj2Result[2], 16);
+                              obj10.g = parseInt("" + obj2Result[2] + obj2Result[2], 16);
                               _parseInt3 = parseInt;
-                              obj4.b = parseInt("" + obj2Result[3] + obj2Result[3], 16);
+                              obj10.b = parseInt("" + obj2Result[3] + obj2Result[3], 16);
                               str3 = "hex";
                               if (flag) {
                                 str3 = "name";
                               }
-                              obj4.format = str3;
-                              flag2 = obj4;
+                              obj10.format = str3;
+                              flag2 = obj10;
                             }
                           }
                         }
@@ -564,13 +565,13 @@ class tinycolor {
     obj2 = tinycolor(require);
     toRgbResult1 = obj2.toRgb();
     result = num2 / 100;
-    obj = {
+    obj1 = {
       r: (toRgbResult1.r - toRgbResult.r) * result + toRgbResult.r,
       g: (toRgbResult1.g - toRgbResult.g) * result + toRgbResult.g,
       b: (toRgbResult1.b - toRgbResult.b) * result + toRgbResult.b,
       a: (toRgbResult1.a - toRgbResult.a) * result + toRgbResult.a,
     };
-    return tinycolor(obj);
+    return tinycolor(obj1);
   }
   static readability(arg0, arg1) {
     obj = tinycolor(global);
@@ -676,7 +677,7 @@ function rgbToHsl(_r, _r, _r) {
   const tmp5 = min(result2, tmp2, tmp3);
   const result = (tmp4 + tmp5) / 2;
   if (tmp4 == tmp5) {
-    obj = { h: 0, s: 0, l: result };
+    const obj = { h: 0, s: 0, l: result };
     return obj;
   } else {
     const diff = tmp4 - tmp5;
@@ -703,25 +704,24 @@ function rgbToHsl(_r, _r, _r) {
   }
 }
 function rgbToHex(arg0, arg1, arg2, arg3) {
-  let str = round(arg0);
-  str = str.toString(16);
-  if (1 == str.length) {
-    let str2 = "0";
+  const str = round(arg0);
+  if (1 == str1.length) {
     let text = `0${arr}`;
   } else {
     text = `${arr}`;
   }
   const items = [text, ,];
+  str1 = round(arg0).toString(16);
   const str3 = round(arg1);
-  if (1 == str1.length) {
+  if (1 == str16.length) {
     let text1 = `0${arr3}`;
   } else {
     text1 = `${arr3}`;
   }
   items[1] = text1;
-  str1 = round(arg1).toString(16);
-  str2 = round(arg2).toString(16);
-  if (1 == str2.length) {
+  str16 = round(arg1).toString(16);
+  const str5 = round(arg2);
+  if (1 == str17.length) {
     let text2 = `0${arr4}`;
   } else {
     text2 = `${arr4}`;
@@ -745,36 +745,35 @@ function rgbToHex(arg0, arg1, arg2, arg3) {
     str8 = items[0];
   }
   sum1 = items.join("");
-  const str5 = round(arg2);
+  str17 = round(arg2).toString(16);
 }
 function rgbaToArgbHex(_r, _g, _b, _a) {
-  let str = Math.round(255 * parseFloat(_a));
-  str = str.toString(16);
-  if (1 == str.length) {
-    let str2 = "0";
+  const str = Math.round(255 * parseFloat(_a));
+  if (1 == str1.length) {
     let text = `0${arr}`;
   } else {
     text = `${arr}`;
   }
   const items = [text, , ,];
-  let str3 = round(_r);
-  if (1 == str1.length) {
+  str1 = Math.round(255 * parseFloat(_a)).toString(16);
+  const str3 = round(_r);
+  if (1 == str9.length) {
     let text1 = `0${arr3}`;
   } else {
     text1 = `${arr3}`;
   }
   items[1] = text1;
-  str1 = str3.toString(16);
-  str2 = round(_g).toString(16);
-  if (1 == str2.length) {
+  str9 = round(_r).toString(16);
+  const str5 = round(_g);
+  if (1 == str10.length) {
     let text2 = `0${arr4}`;
   } else {
     text2 = `${arr4}`;
   }
   items[2] = text2;
-  const str5 = round(_g);
-  str3 = round(_b).toString(16);
-  if (1 == str3.length) {
+  str10 = round(_g).toString(16);
+  const str7 = round(_b);
+  if (1 == str11.length) {
     let text3 = `0${arr5}`;
   } else {
     text3 = `${arr5}`;
@@ -872,37 +871,34 @@ function complement(toHslResult) {
   return tinycolor(toHslResult);
 }
 function triad(toHslResult) {
-  obj = tinycolor(toHslResult);
-  toHslResult = obj.toHsl();
+  toHslResult = tinycolor(toHslResult).toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), ,];
-  obj = { h: (h + 120) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[1] = tinycolor(obj);
-  obj = { h: (h + 240) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[2] = tinycolor(obj);
+  const items = [
+    tinycolor(toHslResult),
+    tinycolor({ h: (h + 120) % 360, s: toHslResult.s, l: toHslResult.l }),
+    tinycolor({ h: (h + 240) % 360, s: toHslResult.s, l: toHslResult.l }),
+  ];
   return items;
 }
 function tetrad(toHslResult) {
-  obj = tinycolor(toHslResult);
-  toHslResult = obj.toHsl();
+  toHslResult = tinycolor(toHslResult).toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), , ,];
-  obj = { h: (h + 90) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[1] = tinycolor(obj);
-  obj = { h: (h + 180) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[2] = tinycolor(obj);
-  items[3] = tinycolor({ h: (h + 270) % 360, s: toHslResult.s, l: toHslResult.l });
+  const items = [
+    tinycolor(toHslResult),
+    tinycolor({ h: (h + 90) % 360, s: toHslResult.s, l: toHslResult.l }),
+    tinycolor({ h: (h + 180) % 360, s: toHslResult.s, l: toHslResult.l }),
+    tinycolor({ h: (h + 270) % 360, s: toHslResult.s, l: toHslResult.l }),
+  ];
   return items;
 }
 function splitcomplement(toHslResult) {
-  obj = tinycolor(toHslResult);
-  toHslResult = obj.toHsl();
+  toHslResult = tinycolor(toHslResult).toHsl();
   const h = toHslResult.h;
-  const items = [tinycolor(toHslResult), ,];
-  obj = { h: (h + 72) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[1] = tinycolor(obj);
-  obj = { h: (h + 216) % 360, s: toHslResult.s, l: toHslResult.l };
-  items[2] = tinycolor(obj);
+  const items = [
+    tinycolor(toHslResult),
+    tinycolor({ h: (h + 72) % 360, s: toHslResult.s, l: toHslResult.l }),
+    tinycolor({ h: (h + 216) % 360, s: toHslResult.s, l: toHslResult.l }),
+  ];
   return items;
 }
 function analogous(toHslResult, arg1, arg2) {
@@ -932,14 +928,14 @@ function monochromatic(toHslResult, arg1) {
   if (!arg1) {
     num = 6;
   }
-  obj = tinycolor(toHslResult);
-  let v = obj.toHsv().v;
+  const obj = tinycolor(toHslResult);
+  let v = tinycolor(toHslResult).toHsv().v;
   const items = [];
   let diff = tmp5 - 1;
   if (+num) {
     do {
-      obj = { h: tmp2, s: tmp3, v };
-      let arr = items.push(tinycolor(obj));
+      obj2 = { h: tmp2, s: tmp3, v };
+      let arr = items.push(tinycolor(obj2));
       v = (v + tmp4) % 1;
       tmp9 = +diff;
       diff = tmp9 - 1;
@@ -1062,7 +1058,7 @@ tinycolor.prototype = {
       num = diff / tmp4;
     }
     if (tmp4 == tmp5) {
-      obj = { h: 0, s: num, v: tmp4, a: this._a };
+      const obj = { h: 0, s: num, v: tmp4, a: this._a };
       return obj;
     } else {
       if (result === tmp4) {
@@ -1147,33 +1143,32 @@ tinycolor.prototype = {
   },
   toHex8(arg0) {
     ({ _g, _b, _a } = this);
-    let str = round(this._r);
-    str = str.toString(16);
-    if (1 == str.length) {
-      let str2 = "0";
+    const str = round(this._r);
+    if (1 == str1.length) {
       let text = `0${arr}`;
     } else {
       text = `${arr}`;
     }
     const items = [text, , ,];
-    let str3 = round(_g);
-    if (1 == str1.length) {
+    str1 = round(this._r).toString(16);
+    const str3 = round(_g);
+    if (1 == str21.length) {
       let text1 = `0${arr3}`;
     } else {
       text1 = `${arr3}`;
     }
     items[1] = text1;
-    str1 = str3.toString(16);
-    str2 = round(_b).toString(16);
-    if (1 == str2.length) {
+    str21 = round(_g).toString(16);
+    const str5 = round(_b);
+    if (1 == str22.length) {
       let text2 = `0${arr4}`;
     } else {
       text2 = `${arr4}`;
     }
     items[2] = text2;
-    const str5 = round(_b);
-    str3 = Math.round(255 * parseFloat(_a)).toString(16);
-    if (1 == str3.length) {
+    str22 = round(_b).toString(16);
+    const str7 = Math.round(255 * parseFloat(_a));
+    if (1 == str23.length) {
       let text3 = `0${arr5}`;
     } else {
       text3 = `${arr5}`;
@@ -1202,7 +1197,7 @@ tinycolor.prototype = {
       str10 = items[0];
     }
     sum2 = items.join("");
-    const str7 = Math.round(255 * parseFloat(_a));
+    str23 = Math.round(255 * parseFloat(_a)).toString(16);
   },
   toHex8String(arg0) {
     return "#" + this.toHex8(arg0);
@@ -1541,18 +1536,18 @@ color = {
   yellowgreen: "9acd32",
 };
 tinycolor.names = color;
-obj = {};
+hexNames = {};
 for (const key10080 in color) {
   if (!color.hasOwnProperty(key10080)) {
     continue;
   } else {
-    obj[color[key10080]] = key10080;
+    hexNames[color[key10080]] = key10080;
     continue;
   }
   continue;
 }
-tinycolor.hexNames = obj;
-obj = {
+tinycolor.hexNames = hexNames;
+obj2 = {
   CSS_UNIT: null,
   rgb: null,
   rgba: null,
@@ -1566,35 +1561,35 @@ obj = {
   hex8: null,
 };
 const regExp = new RegExp("(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)");
-obj.CSS_UNIT = regExp;
+obj2.CSS_UNIT = regExp;
 const regExp1 = new RegExp(
   "rgb[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.rgb = regExp1;
+obj2.rgb = regExp1;
 const regExp2 = new RegExp(
   "rgba[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.rgba = regExp2;
+obj2.rgba = regExp2;
 const regExp3 = new RegExp(
   "hsl[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.hsl = regExp3;
+obj2.hsl = regExp3;
 const regExp4 = new RegExp(
   "hsla[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.hsla = regExp4;
+obj2.hsla = regExp4;
 const regExp5 = new RegExp(
   "hsv[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.hsv = regExp5;
+obj2.hsv = regExp5;
 const regExp6 = new RegExp(
   "hsva[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?",
 );
-obj.hsva = regExp6;
-obj.hex3 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-obj.hex6 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
-obj.hex4 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-obj.hex8 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
+obj2.hsva = regExp6;
+obj2.hex3 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+obj2.hex6 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
+obj2.hex4 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+obj2.hex8 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
 if (undefined !== module) {
   if (module.exports) {
     module.exports = tinycolor;

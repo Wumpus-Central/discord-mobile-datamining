@@ -1,17 +1,19 @@
 // _runtime/04117_nextSunday.js
-import nextDay from "04113_nextDay.js";
-import requiredArgs from "03726_requiredArgs.js";
+import nextDay_mod from "04113_nextDay.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let nextDay = nextDay_mod;
 if (!nextDay) {
-  let obj = { default: nextDay };
+  const obj = { default: nextDay };
   let tmp3 = obj;
 } else {
   tmp3 = nextDay;
 }
 nextDay = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

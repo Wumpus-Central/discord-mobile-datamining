@@ -35,14 +35,9 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 
 export const HeaderSegment = function HeaderSegment(progress) {
-  let obj = direction(leftLabel[5]);
-  direction = obj.useLocale().direction;
-  const tmp3 = _slicedToArray(handleTitleLayout.useState(undefined), 2);
-  leftLabel = tmp3[0];
-  closure_2 = tmp3[1];
-  const tmp5 = _slicedToArray(handleTitleLayout.useState(undefined), 2);
-  const first1 = tmp5[0];
-  _slicedToArray = tmp5[1];
+  direction = direction(leftLabel[5]).useLocale().direction;
+  [leftLabel, closure_2] = handleTitleLayout.useState(undefined);
+  [first1, _slicedToArray] = handleTitleLayout.useState(undefined);
   handleTitleLayout = function handleTitleLayout(nativeEvent) {
     ({ height: direction, width: first } = nativeEvent.nativeEvent.layout);
     closure_4((arg0) => {
@@ -50,12 +45,13 @@ export const HeaderSegment = function HeaderSegment(progress) {
       if (arg0) {
         return size;
       }
-      size = { height, width };
+      const size1 = { height, width };
+      size = size1;
     });
   };
   function handleLeftLabelLayout(nativeEvent) {
     ({ height, width } = nativeEvent.nativeEvent.layout);
-    let size = first;
+    const size = first;
     let tmp = first;
     if (first) {
       tmp = height === size.height;
@@ -64,8 +60,8 @@ export const HeaderSegment = function HeaderSegment(progress) {
       tmp = width === size.width;
     }
     if (!tmp) {
-      size = { height, width };
-      closure_2(size);
+      const size1 = { height, width };
+      closure_2(size1);
     }
   }
   progress = progress.progress;
@@ -101,14 +97,15 @@ export const HeaderSegment = function HeaderSegment(progress) {
   } = progress);
   ({ headerTitleContainerStyle, headerLeftContainerStyle, headerRightContainerStyle, headerBackgroundContainerStyle } =
     progress);
-  const obj2 = handleTitleLayout;
+  let obj = direction(leftLabel[5]);
+  let obj2 = handleTitleLayout;
   const tmp7 = first1(progress, closure_2);
   const defaultHeaderHeight = direction(leftLabel[6]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight);
-  obj = headerStyle;
+  let obj3 = headerStyle;
   if (!headerStyle) {
-    obj = {};
+    obj3 = {};
   }
-  let height = handleLeftLabelLayout.flatten(obj).height;
+  let height = handleLeftLabelLayout.flatten(obj3).height;
   if (undefined === height) {
     height = defaultHeaderHeight;
   }
@@ -119,18 +116,18 @@ export const HeaderSegment = function HeaderSegment(progress) {
   height = tmp10;
   let items = [styleInterpolator, progress, direction, tmp10, layout, first1, leftLabel];
   const memo = obj2.useMemo(() => {
-    let obj = { current: { progress: progress.current }, next: null, direction: null, layouts: null };
+    const obj = { current: { progress: progress.current }, next: null, direction: null, layouts: null };
     let next = progress.next;
     if (next) {
-      obj = { progress: iter.next };
-      next = obj;
+      const obj2 = { progress: iter.next };
+      next = obj2;
     }
     obj.next = next;
     obj.direction = direction;
-    obj = { header: null, screen: layout, title: first1, leftLabel };
+    const obj3 = { header: null, screen: layout, title: first1, leftLabel };
     const size = { height, width: layout.width };
-    obj.header = size;
-    obj.layouts = obj;
+    obj3.header = size;
+    obj.layouts = obj3;
     return styleInterpolator(obj);
   }, items);
   const leftLabelStyle = memo.leftLabelStyle;
@@ -166,7 +163,7 @@ export const HeaderSegment = function HeaderSegment(progress) {
       return headerRight(obj);
     };
   }
-  obj = {
+  const obj4 = {
     modal,
     layout,
     headerTitle:
@@ -194,13 +191,13 @@ export const HeaderSegment = function HeaderSegment(progress) {
     headerStatusBarHeight,
   };
   const items1 = [titleStyle, headerTitleContainerStyle];
-  obj.headerTitleContainerStyle = items1;
+  obj4.headerTitleContainerStyle = items1;
   const items2 = [leftButtonStyle, headerLeftContainerStyle];
-  obj.headerLeftContainerStyle = items2;
+  obj4.headerLeftContainerStyle = items2;
   const items3 = [rightButtonStyle, headerRightContainerStyle];
-  obj.headerRightContainerStyle = items3;
+  obj4.headerRightContainerStyle = items3;
   const items4 = [backgroundStyle, headerBackgroundContainerStyle];
-  obj.headerBackgroundContainerStyle = items4;
+  obj4.headerBackgroundContainerStyle = items4;
   let merged = Object.assign(tmp7);
-  return progress(direction(leftLabel[6]).Header, obj);
+  return progress(direction(leftLabel[6]).Header, obj4);
 };

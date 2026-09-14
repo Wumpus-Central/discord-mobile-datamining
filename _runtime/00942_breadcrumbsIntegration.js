@@ -6,48 +6,50 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = 1024;
 
 export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
-  if (data === undefined) {
-    data = {};
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  data = { console: true, dom: true, fetch: true, history: true, sentry: true, xhr: true };
-  let merged = Object.assign(data);
-  data = {
+  let obj2 = { console: true, dom: true, fetch: true, history: true, sentry: true, xhr: true };
+  let merged = Object.assign(obj);
+  return {
     name: "Breadcrumbs",
     setup(on) {
-      if (obj.console) {
-        obj = registerSpanErrorInstrumentation;
-        const result = obj.addConsoleInstrumentationHandler(function _consoleBreadcrumb(args) {
-          data = data(682);
-          if (data.getClient() === closure_0) {
-            data = { category: "console", data: null, level: null, message: null };
-            data = { arguments: args.args, logger: "console" };
-            data.data = data;
-            let tmpResult = tmp(682);
-            data.level = tmpResult.severityLevelFromString(args.level);
-            tmpResult = tmp(682);
-            data.message = tmpResult.safeJoin(args.args, " ");
-            if ("assert" === args.level) {
-              if (false === args.args[0]) {
-                args = args.args;
-                const tmpResult1 = tmp(682);
-                const _HermesInternal = HermesInternal;
-                data.message = "Assertion failed: " + tmp(682).safeJoin(args.slice(1), " ") || "console.assert";
-                const args1 = args.args;
-                data.data.arguments = args1.slice(1);
-                const tmp3 = tmp(682).safeJoin(args.slice(1), " ") || "console.assert";
+      if (obj2.console) {
+        const result = registerSpanErrorInstrumentation.addConsoleInstrumentationHandler(
+          function _consoleBreadcrumb(args) {
+            if (obj.getClient() === closure_0) {
+              obj2 = { category: "console", data: null, level: null, message: null };
+              const obj4 = { arguments: args.args, logger: "console" };
+              obj2.data = obj4;
+              obj2.level = tmp(682).severityLevelFromString(args.level);
+              const tmpResult = tmp(682);
+              obj2.message = tmp(682).safeJoin(args.args, " ");
+              if ("assert" === args.level) {
+                if (false === args.args[0]) {
+                  args = args.args;
+                  const tmpResult5 = tmp(682);
+                  const _HermesInternal = HermesInternal;
+                  obj2.message = "Assertion failed: " + tmp(682).safeJoin(args.slice(1), " ") || "console.assert";
+                  const args1 = args.args;
+                  obj2.data.arguments = args1.slice(1);
+                  const tmp3 = tmp(682).safeJoin(args.slice(1), " ") || "console.assert";
+                }
               }
+              const tmpResult4 = tmp(682);
+              ({ args: obj3.input, level: obj3.level } = args);
+              tmp(682).addBreadcrumb(obj2, { input: null, level: null });
+              const obj5 = { input: null, level: null };
+              const tmpResult6 = tmp(682);
             }
-            ({ args: obj3.input, level: obj3.level } = args);
-            tmp(682).addBreadcrumb(data, { input: null, level: null });
-            const obj1 = { input: null, level: null };
-            const tmpResult2 = tmp(682);
-          }
-        });
+            obj = obj2(682);
+          },
+        );
       }
-      if (obj.dom) {
+      if (obj2.dom) {
+        obj2 = triggerHandlers;
         const dom = tmp.dom;
-        const result1 = triggerHandlers.addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
-          obj = obj(682);
+        const result1 = obj2.addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
           if (obj.getClient() === closure_0) {
             let serializeAttribute;
             if (typeof dom === "object") {
@@ -92,37 +94,37 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
               } else {
                 target = event;
               }
-              let tmpResult = tmp(682);
-              obj = { keyAttrs: tmp9, maxStringLength: tmp6 };
-              let str3 = tmpResult.htmlTreeAsString(target, obj);
-              tmpResult = tmp(682);
-              const componentName = tmpResult.getComponentName(target);
+              obj2 = { keyAttrs: tmp9, maxStringLength: tmp6 };
+              let str3 = tmp(682).htmlTreeAsString(target, obj2);
+              const tmpResult = tmp(682);
+              const componentName = tmp(682).getComponentName(target);
               if (0 !== str3.length) {
-                obj = { category: null, message: null };
+                const obj3 = { category: null, message: null };
                 const _HermesInternal2 = HermesInternal;
-                obj.category = "ui." + event.name;
-                obj.message = str3;
+                obj3.category = "ui." + event.name;
+                obj3.message = str3;
                 if (componentName) {
-                  const obj1 = { "ui.component_name": componentName };
-                  obj.data = obj1;
+                  const obj4 = { "ui.component_name": componentName };
+                  obj3.data = obj4;
                 }
                 ({ event: obj7.event, name: obj7.name, global: obj7.global } = event);
-                tmp(682).addBreadcrumb(obj, { event: null, name: null, global: null });
-                const obj2 = { event: null, name: null, global: null };
-                const tmpResult1 = tmp(682);
+                tmp(682).addBreadcrumb(obj3, { event: null, name: null, global: null });
+                const obj5 = { event: null, name: null, global: null };
+                const tmpResult4 = tmp(682);
               }
+              const tmpResult3 = tmp(682);
             } catch (err) {
               str3 = "<unknown>";
             }
           }
+          obj = obj2(682);
         });
       }
-      if (obj.xhr) {
+      if (obj2.xhr) {
         const result2 = triggerHandlers.addXhrInstrumentationHandler(function _xhrBreadcrumb(xhr) {
-          obj = obj(682);
           if (obj.getClient() === on) {
             ({ startTimestamp, endTimestamp, xhr } = xhr);
-            const tmp6 = xhr[tmp(undefined, 898).SENTRY_XHR_DATA_KEY];
+            const tmp6 = xhr[on(undefined, 898).SENTRY_XHR_DATA_KEY];
             if (startTimestamp) {
               if (endTimestamp) {
                 if (tmp6) {
@@ -130,77 +132,84 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                   const request = { method: null, url: null, status_code: null };
                   ({ method: obj3.method, url: obj3.url } = tmp6);
                   request.status_code = status_code;
-                  obj = { xhr: xhr.xhr, input: tmp6.body, startTimestamp, endTimestamp };
-                  obj = { category: "xhr", data: request, type: "http", level: null };
-                  let tmpResult = tmp(682);
-                  obj.level = tmpResult.getBreadcrumbLogLevelFromHttpStatusCode(status_code);
-                  on.emit("beforeOutgoingRequestBreadcrumb", obj, obj);
-                  tmpResult = tmp(682);
-                  tmpResult.addBreadcrumb(obj, obj);
+                  const obj4 = { xhr: xhr.xhr, input: tmp6.body, startTimestamp, endTimestamp };
+                  const obj5 = {
+                    category: "xhr",
+                    data: request,
+                    type: "http",
+                    level: on(682).getBreadcrumbLogLevelFromHttpStatusCode(status_code),
+                  };
+                  on.emit("beforeOutgoingRequestBreadcrumb", obj5, obj4);
+                  const tmpResult = on(682);
+                  on(682).addBreadcrumb(obj5, obj4);
+                  const tmpResult2 = on(682);
                 }
               }
             }
           }
+          obj = on(682);
         });
       }
-      if (obj.fetch) {
+      if (obj2.fetch) {
         const result3 = registerSpanErrorInstrumentation.addFetchInstrumentationHandler(
           function _fetchBreadcrumb(fetchData) {
-            obj = obj(682);
-            let obj1 = closure_0;
-            if (obj.getClient() === closure_0) {
+            if (obj.getClient() === on) {
               ({ startTimestamp, endTimestamp } = fetchData);
               if (endTimestamp) {
                 if (!str.match(/sentry_key/)) {
                   const method = fetchData.fetchData.method;
                   const url = fetchData.fetchData.url;
                   if (fetchData.error) {
-                    obj = { data: null, input: null, startTimestamp: null, endTimestamp: null };
+                    const obj3 = { data: null, input: null, startTimestamp: null, endTimestamp: null };
                     ({ error: obj8.data, args: obj8.input } = fetchData);
-                    obj.startTimestamp = startTimestamp;
-                    obj.endTimestamp = endTimestamp;
-                    obj = { category: "fetch", data: fetchData.fetchData, level: "error", type: "http" };
-                    obj1.emit("beforeOutgoingRequestBreadcrumb", obj, obj);
-                    let tmpResult = tmp(682);
-                    tmpResult.addBreadcrumb(obj, obj);
+                    obj3.startTimestamp = startTimestamp;
+                    obj3.endTimestamp = endTimestamp;
+                    const obj4 = { category: "fetch", data: fetchData.fetchData, level: "error", type: "http" };
+                    on.emit("beforeOutgoingRequestBreadcrumb", obj4, obj3);
+                    on(682).addBreadcrumb(obj4, obj3);
+                    const tmpResult = on(682);
                   } else {
                     const response = fetchData.response;
-                    obj1 = {};
+                    const obj5 = {};
                     const merged = Object.assign(fetchData.fetchData);
                     let status;
                     if (response != null) {
                       status = response.status;
                     }
-                    obj1.status_code = status;
+                    obj5.status_code = status;
                     const request_body_size = fetchData.fetchData.request_body_size;
                     const response_body_size = fetchData.fetchData.response_body_size;
-                    const obj2 = { input: fetchData.args, response, startTimestamp, endTimestamp };
-                    const obj3 = { category: "fetch", data: obj1, type: "http", level: null };
-                    tmpResult = tmp(682);
-                    obj3.level = tmpResult.getBreadcrumbLogLevelFromHttpStatusCode(obj1.status_code);
-                    obj1.emit("beforeOutgoingRequestBreadcrumb", obj3, obj2);
-                    tmp(682).addBreadcrumb(obj3, obj2);
-                    const tmpResult1 = tmp(682);
+                    const obj6 = { input: fetchData.args, response, startTimestamp, endTimestamp };
+                    const obj7 = {
+                      category: "fetch",
+                      data: obj5,
+                      type: "http",
+                      level: on(682).getBreadcrumbLogLevelFromHttpStatusCode(obj5.status_code),
+                    };
+                    on.emit("beforeOutgoingRequestBreadcrumb", obj7, obj6);
+                    const tmpResult3 = on(682);
+                    on(682).addBreadcrumb(obj7, obj6);
+                    const tmpResult4 = on(682);
                   }
                 }
                 str = fetchData.fetchData.url;
               }
             }
+            obj = on(682);
           },
         );
       }
-      if (obj.history) {
+      if (obj2.history) {
         const result4 = triggerHandlers.addHistoryInstrumentationHandler(function _historyBreadcrumb(arg0) {
-          data = data(682);
-          if (data.getClient() === closure_0) {
+          if (obj.getClient() === closure_0) {
             ({ from, to } = arg0);
-            let tmpResult = tmp(682);
-            const url2 = tmpResult.parseUrl(tmp(893).WINDOW.location.href);
+            const url2 = tmp(682).parseUrl(tmp(893).WINDOW.location.href);
             let parseUrlResult;
             if (from) {
-              tmpResult = tmp(682);
-              parseUrlResult = tmpResult.parseUrl(from);
+              parseUrlResult = tmp(682).parseUrl(from);
+              const tmpResult4 = tmp(682);
             }
+            const tmpResult = tmp(682);
             const url = tmp(682).parseUrl(to);
             let path;
             if (parseUrlResult != null) {
@@ -218,34 +227,34 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             tmp6 = url2.protocol === url.protocol && url2.host === url.host;
             tmp7 = url2.protocol === parseUrlResult.protocol && url2.host === parseUrlResult.host;
-            const tmpResult1 = tmp(682);
-            data = { category: "navigation", data: null };
-            data = { from: relative, to };
-            data.data = data;
-            tmp(682).addBreadcrumb(data);
-            const tmpResult2 = tmp(682);
+            const tmpResult5 = tmp(682);
+            obj2 = { category: "navigation", data: null };
+            const obj3 = { from: relative, to };
+            obj2.data = obj3;
+            tmp(682).addBreadcrumb(obj2);
+            const tmpResult6 = tmp(682);
           }
+          obj = obj2(682);
         });
       }
-      if (obj.sentry) {
+      if (obj2.sentry) {
         on.on("beforeSendEvent", function addSentryBreadcrumb(type) {
-          obj = obj(682);
           if (obj.getClient() === closure_0) {
-            let tmpResult = tmp(682);
             let str = "event";
             if ("transaction" === type.type) {
               str = "transaction";
             }
-            obj = { category: `sentry.${str}`, event_id: null, level: null, message: null };
+            const obj3 = { category: `sentry.${str}`, event_id: null, level: null, message: null };
             ({ event_id: obj2.event_id, level: obj2.level } = type);
-            tmpResult = tmp(682);
-            obj.message = tmpResult.getEventDescription(type);
-            obj = { event: type };
-            tmpResult.addBreadcrumb(obj, obj);
+            const tmpResult = obj2(682);
+            obj3.message = obj2(682).getEventDescription(type);
+            const obj4 = { event: type };
+            tmpResult.addBreadcrumb(obj3, obj4);
+            const tmpResult2 = obj2(682);
           }
+          obj = obj2(682);
         });
       }
     },
   };
-  return data;
 });

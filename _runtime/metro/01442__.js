@@ -41,21 +41,19 @@ const bindResult = call.bind(toString);
 const hasOwnProperty = bindResult;
 const call2 = valueOf.call;
 let closure_6 = call2.bind(valueOf);
-valueOf = String.prototype.valueOf;
-const call3 = valueOf.call;
-let closure_7 = call3.bind(valueOf);
-valueOf = Boolean.prototype.valueOf;
-const call4 = valueOf.call;
-let closure_8 = call4.bind(valueOf);
+const call3 = valueOf2.call;
+let closure_7 = call3.bind(valueOf2);
+const call4 = valueOf3.call;
+let closure_8 = call4.bind(valueOf3);
 if (typeof BigInt !== "undefined") {
   const _BigInt = BigInt;
-  const call5 = valueOf1.call;
-  let closure_9 = call5.bind(valueOf1);
+  const call5 = valueOf4.call;
+  let closure_9 = call5.bind(valueOf4);
 }
 if (typeof Symbol !== "undefined") {
   const _Symbol = Symbol;
-  const call6 = valueOf2.call;
-  let closure_10 = call6.bind(valueOf2);
+  const call6 = valueOf5.call;
+  let closure_10 = call6.bind(valueOf5);
 }
 let tmp2 = typeof Map !== "undefined";
 if (typeof Map !== "undefined") {
@@ -90,7 +88,7 @@ function isWeakSetToString(arg0) {
 let tmp6 = typeof ArrayBuffer !== "undefined";
 if (typeof ArrayBuffer !== "undefined") {
   let _ArrayBuffer2 = ArrayBuffer;
-  let arrayBuffer = new ArrayBuffer();
+  const arrayBuffer = new ArrayBuffer();
   tmp6 = "[object ArrayBuffer]" === bindResult(arrayBuffer);
 }
 isArrayBufferToString.working = tmp6;
@@ -102,8 +100,8 @@ if (typeof ArrayBuffer !== "undefined") {
 if (tmp7) {
   let _DataView = DataView;
   let _ArrayBuffer = ArrayBuffer;
-  arrayBuffer = new ArrayBuffer(1);
-  const dataView = new DataView(arrayBuffer, 0, 1);
+  const arrayBuffer2 = new ArrayBuffer(1);
+  const dataView = new DataView(arrayBuffer2, 0, 1);
   tmp7 = "[object DataView]" === bindResult(dataView);
 }
 isDataViewToString.working = tmp7;
@@ -266,20 +264,19 @@ export const isDataView = function isDataView(arg0) {
   }
 };
 export const isSharedArrayBuffer = function isSharedArrayBuffer(arg0) {
-  let tmp = _SharedArrayBuffer;
   if (undefined === _SharedArrayBuffer) {
     return tmp2;
   } else {
     if (undefined === isSharedArrayBufferToString.working) {
-      tmp = new tmp();
-      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp);
+      const tmp6 = new _SharedArrayBuffer();
+      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp6);
     }
     let tmp9 = arg0;
     if (isSharedArrayBufferToString.working) {
       tmp9 = bindResult(tmp9);
       let tmp10 = "[object SharedArrayBuffer]" === tmp9;
     } else {
-      tmp10 = tmp9 instanceof tmp;
+      tmp10 = tmp9 instanceof _SharedArrayBuffer;
     }
   }
 };
@@ -330,17 +327,18 @@ export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
     tmpResult = checkBoxedPrimitive(arg0, closure_8);
   }
   if (!tmpResult) {
-    tmpResult = closure_3;
+    let tmpResult3 = closure_3;
     if (closure_3) {
-      tmpResult = checkBoxedPrimitive(arg0, closure_9);
+      tmpResult3 = checkBoxedPrimitive(arg0, closure_9);
     }
+    tmpResult = tmpResult3;
   }
   if (!tmpResult) {
-    let tmpResult1 = closure_4;
+    let tmpResult4 = closure_4;
     if (closure_4) {
-      tmpResult1 = checkBoxedPrimitive(arg0, closure_10);
+      tmpResult4 = checkBoxedPrimitive(arg0, closure_10);
     }
-    tmpResult = tmpResult1;
+    tmpResult = tmpResult4;
   }
   return tmpResult;
 };
@@ -352,19 +350,18 @@ export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
     let tmp17 = typeof ArrayBuffer !== "undefined";
     if (typeof ArrayBuffer === "undefined") {
       if (!tmp17) {
-        let tmp5 = _SharedArrayBuffer;
         if (undefined === _SharedArrayBuffer) {
           tmp17 = tmp6;
         } else {
           if (undefined === isSharedArrayBufferToString.working) {
-            tmp5 = new tmp5();
-            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp5);
+            const tmp52 = new _SharedArrayBuffer();
+            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp52);
           }
           if (isSharedArrayBufferToString.working) {
             tmp15 = bindResult(tmp15);
             let tmp13 = "[object SharedArrayBuffer]" === tmp15;
           } else {
-            tmp13 = tmp15 instanceof tmp5;
+            tmp13 = tmp15 instanceof _SharedArrayBuffer;
           }
         }
       }

@@ -2,36 +2,38 @@
 import 03722__ from "03722__.js";
 import 03723__ from "03723__.js";
 import 03724__ from "03724__.js";
-import date from "03731__.js";
-import date from "03732__.js";
+import date_mod from "03731__.js";
+import date_mod from "03732__.js";
 
 if (!module_3722) {
-  let obj = { default: module_3722 };
+  const obj = { default: module_3722 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3722;
 }
 if (!module_3723) {
-  obj = { default: module_3723 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3723 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3723;
 }
 if (!module_3724) {
-  obj = { default: module_3724 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3724 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3724;
 }
+let date = date_mod;
 if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
+  const obj4 = { default: date };
+  let tmp9 = obj4;
 } else {
   tmp9 = date;
 }
+let date = date_mod;
 if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
+  const obj5 = { default: date };
+  let tmp11 = obj5;
 } else {
   tmp11 = date;
 }

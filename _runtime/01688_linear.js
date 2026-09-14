@@ -182,12 +182,11 @@ const tmp14 = (() => {
     dependencyMap = y1;
     closure_2 = x2;
     closure_3 = y2;
-    let obj = { factory: null };
+    const obj = { factory: null };
     const fn = function _() {
       return calcBezier.Bezier(closure_0, closure_1, closure_2, closure_3);
     };
-    obj = { Bezier: closure_0(1689).Bezier, x1, y1, x2, y2 };
-    fn.__closure = obj;
+    fn.__closure = { Bezier: closure_0(1689).Bezier, x1, y1, x2, y2 };
     fn.__workletHash = 4393056133737;
     fn.__initData = __initData;
     obj.factory = fn;
@@ -324,8 +323,8 @@ const iter = entries[Symbol.iterator]();
 while (iter !== undefined) {
   let importDefaultResultResult = _slicedToArray(iter.next(), 2);
   let _Object = Object;
-  obj = { value: importDefaultResultResult[0], configurable: false, enumerable: false, writable: false };
-  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult[1], SymbolResult, obj);
+  let obj2 = { value: importDefaultResultResult[0], configurable: false, enumerable: false, writable: false };
+  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult[1], SymbolResult, obj2);
   continue;
 }
 

@@ -1,15 +1,16 @@
 // _runtime/metro/03973__.js
 import _mod3730 from "03730__.js";
-import compareAsc from "../03901_compareAsc.js";
-import differenceInMonths from "../03923_differenceInMonths.js";
-import differenceInSeconds from "../03928_differenceInSeconds.js";
-import code from "03971__.js";
-import _typeof from "03725__.js";
-import cloneObject from "../03974_cloneObject.js";
-import assign from "../03975_assign.js";
-import 03888__ from "03888__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import compareAsc_mod from "../03901_compareAsc.js";
+import differenceInMonths_mod from "../03923_differenceInMonths.js";
+import differenceInSeconds_mod from "../03928_differenceInSeconds.js";
+import code_mod from "03971__.js";
+import _typeof_mod from "03725__.js";
+import cloneObject_mod from "../03974_cloneObject.js";
+import assign_mod from "../03975_assign.js";
+import module_3888_mod from "03888__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
   let obj = { default: compareAsc };
   let tmp3 = obj;
@@ -17,58 +18,66 @@ if (!compareAsc) {
   tmp3 = compareAsc;
 }
 compareAsc = tmp3;
+let differenceInMonths = differenceInMonths_mod;
 if (!differenceInMonths) {
-  obj = { default: differenceInMonths };
-  let tmp5 = obj;
+  const obj2 = { default: differenceInMonths };
+  let tmp5 = obj2;
 } else {
   tmp5 = differenceInMonths;
 }
 differenceInMonths = tmp5;
+let differenceInSeconds = differenceInSeconds_mod;
 if (!differenceInSeconds) {
-  obj = { default: differenceInSeconds };
-  let tmp7 = obj;
+  const obj3 = { default: differenceInSeconds };
+  let tmp7 = obj3;
 } else {
   tmp7 = differenceInSeconds;
 }
 differenceInSeconds = tmp7;
+let code = code_mod;
 if (!code) {
-  const obj1 = { default: code };
-  let tmp9 = obj1;
+  const obj4 = { default: code };
+  let tmp9 = obj4;
 } else {
   tmp9 = code;
 }
 code = tmp9;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp11 = obj2;
+  const obj5 = { default: _typeof };
+  let tmp11 = obj5;
 } else {
   tmp11 = _typeof;
 }
 _typeof = tmp11;
+let cloneObject = cloneObject_mod;
 if (!cloneObject) {
-  const obj3 = { default: cloneObject };
-  let tmp13 = obj3;
+  const obj6 = { default: cloneObject };
+  let tmp13 = obj6;
 } else {
   tmp13 = cloneObject;
 }
 cloneObject = tmp13;
+let assign = assign_mod;
 if (!assign) {
-  const obj4 = { default: assign };
-  let tmp15 = obj4;
+  const obj7 = { default: assign };
+  let tmp15 = obj7;
 } else {
   tmp15 = assign;
 }
 assign = tmp15;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  const obj5 = { default: module_3888 };
-  let tmp17 = obj5;
+  const obj8 = { default: module_3888 };
+  let tmp17 = obj8;
 } else {
   tmp17 = module_3888;
 }
 module_3888 = tmp17;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj6 = { default: requiredArgs };
-  let tmp19 = obj6;
+  const obj9 = { default: requiredArgs };
+  let tmp19 = obj9;
 } else {
   tmp19 = requiredArgs;
 }

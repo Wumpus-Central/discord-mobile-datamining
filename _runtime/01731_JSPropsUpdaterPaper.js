@@ -76,10 +76,10 @@ class JSPropsUpdaterFabric {
           runWorkletOnJS.runOnJS(updater)(arg0, arg1);
         };
       };
-      obj = { runOnJS: null, updater: null };
-      obj.runOnJS = closure_1(closure_2[4]).runOnJS;
-      obj.updater = updater;
-      fn.__closure = obj;
+      obj1 = { runOnJS: null, updater: null };
+      obj1.runOnJS = closure_1(closure_2[4]).runOnJS;
+      obj1.updater = updater;
+      fn.__closure = obj1;
       num = 2068327241111;
       fn.__workletHash = 2068327241111;
       tmp5 = closure_5;

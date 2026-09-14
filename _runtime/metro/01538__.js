@@ -35,7 +35,7 @@ function getStateFromRouteParams(params) {
       if ("screen" in params) {
         if (params.screen) {
           if (typeof params.screen === "string") {
-            let obj = { name: params.screen, params: null, path: null, state: null };
+            const obj2 = { name: params.screen, params: null, path: null, state: null };
             params = undefined;
             if ("params" in params) {
               if (typeof params.params === "object") {
@@ -44,14 +44,14 @@ function getStateFromRouteParams(params) {
                 }
               }
             }
-            obj.params = params;
+            obj2.params = params;
             let path;
             if ("path" in params) {
               if (typeof params.path === "string") {
                 path = params.path;
               }
             }
-            obj.path = path;
+            obj2.path = path;
             let tmp4;
             if ("params" in params) {
               if (typeof params.params === "object") {
@@ -60,8 +60,9 @@ function getStateFromRouteParams(params) {
                 }
               }
             }
-            obj = { routes: null, state: tmp4 };
-            const items = [obj];
+            const obj = { routes: null };
+            obj2.state = tmp4;
+            const items = [obj2];
             obj.routes = items;
             state = obj;
           }

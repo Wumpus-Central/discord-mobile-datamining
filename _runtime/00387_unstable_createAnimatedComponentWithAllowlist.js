@@ -17,13 +17,14 @@ export default function createAnimatedComponent(displayName) {
       tmp = closure_2(closure_1(Object.assign(displayName, Object.assign({ ref: 0 }))), 2);
       first = tmp[0];
       ({ passthroughAnimatedPropExplicitValues, style } = first);
-      style = undefined;
+      style1 = undefined;
       tmp3 = closure_0(closure_1[4])(tmp[1], displayName.ref);
       if (passthroughAnimatedPropExplicitValues != null) {
-        style = passthroughAnimatedPropExplicitValues.style;
+        style1 = passthroughAnimatedPropExplicitValues.style;
       }
+      style = style1;
       items = [, ];
-      items[0] = style;
+      items[0] = style1;
       items[1] = style;
       obj = {};
       tmp5 = useMemo(() => { ... }, items);
@@ -47,13 +48,14 @@ export const unstable_createAnimatedComponentWithAllowlist = function unstable_c
       tmp = closure_2(closure_1(Object.assign(displayName, Object.assign({ ref: 0 }))), 2);
       first = tmp[0];
       ({ passthroughAnimatedPropExplicitValues, style } = first);
-      style = undefined;
+      style1 = undefined;
       tmp3 = closure_0(closure_1[4])(tmp[1], displayName.ref);
       if (passthroughAnimatedPropExplicitValues != null) {
-        style = passthroughAnimatedPropExplicitValues.style;
+        style1 = passthroughAnimatedPropExplicitValues.style;
       }
+      style = style1;
       items = [, ];
-      items[0] = style;
+      items[0] = style1;
       items[1] = style;
       obj = {};
       tmp5 = useMemo(() => { ... }, items);

@@ -30,7 +30,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -52,14 +52,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -73,16 +73,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 
@@ -96,8 +95,8 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -109,14 +108,13 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const promise = new Promise((fn) => {
             stack = fn;
             try {
-              let obj = stack(680);
-              const stealthXhr = obj.createStealthXhr();
+              const stealthXhr = stack(680).createStealthXhr();
               if (stealthXhr) {
                 const tmp8 = (function getSentryMetroSourceContextUrl() {
                   const tmp = closure_1_3();
@@ -129,8 +127,8 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
                   stealthXhr.open("POST", tmp9, true);
                   stealthXhr.setRequestHeader("Content-Type", "application/json");
                   let _JSON = JSON;
-                  obj = { stack };
-                  stealthXhr.send(JSON.stringify(obj));
+                  const obj2 = { stack };
+                  stealthXhr.send(JSON.stringify(obj2));
                   stealthXhr.onreadystatechange = () => {
                     if (stealthXhr.readyState === c0(closure_3_1[0]).XHR_READYSTATE_DONE) {
                       if (200 !== stealthXhr.status) {
@@ -161,6 +159,7 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
               } else {
                 fn(stack);
               }
+              const obj = stack(680);
             } catch (tmp21) {
               const debug2 = stack(682).debug;
               debug2.error("Could not fetch source context.", tmp21);
@@ -168,7 +167,7 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
             }
           });
           c0 = 3;
-          obj = { value: promise, done: true };
+          let obj = { value: promise, done: true };
           return obj;
         }
       } catch (tmp9) {

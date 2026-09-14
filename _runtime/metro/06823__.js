@@ -4,12 +4,12 @@ export const isComposedGesture = function isComposedGesture(gesture) {
   return "handlerTags" in gesture;
 };
 export const prepareRelations = function prepareRelations(config, handlerTag) {
-  let simultaneousWith = config.simultaneousWith;
+  const simultaneousWith1 = config.simultaneousWith;
   closure_0 = handlerTag;
-  if (simultaneousWith) {
+  if (simultaneousWith1) {
     const _Array = Array;
-    if (Array.isArray(simultaneousWith)) {
-      const item = simultaneousWith.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+    if (Array.isArray(simultaneousWith1)) {
+      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
         if ("handlerTags" in externalSimultaneousHandlers) {
           let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
         } else {
@@ -20,17 +20,17 @@ export const prepareRelations = function prepareRelations(config, handlerTag) {
         }
       });
     } else {
-      if ("handlerTags" in simultaneousWith) {
-        let prop = simultaneousWith.externalSimultaneousHandlers;
+      if ("handlerTags" in simultaneousWith1) {
+        let prop = simultaneousWith1.externalSimultaneousHandlers;
       } else {
-        prop = simultaneousWith.gestureRelations.simultaneousHandlers;
+        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
       }
       if (!prop.includes(handlerTag)) {
         prop.push(handlerTag);
       }
     }
   }
-  simultaneousWith = config.simultaneousWith;
+  const simultaneousWith = config.simultaneousWith;
   if (simultaneousWith) {
     const _Array2 = Array;
     if (Array.isArray(simultaneousWith)) {

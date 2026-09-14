@@ -1,4 +1,6 @@
 // _runtime/00272_get_BatchedBridge.js
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => require("metro/00039__.js").default, set: undefined });
 Object.defineProperty(obj, "ExceptionsManager", { get: () => require("metro/00189__.js").default, set: undefined });

@@ -1,6 +1,8 @@
 // _runtime/metro/01722__.js
 import _makeShareableClone from "../01646__makeShareableClone.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 const weakMap = new WeakMap();

@@ -1,25 +1,28 @@
 // _runtime/03914_differenceInCalendarWeeks.js
-import startOfWeek from "03884_startOfWeek.js";
-import 03888__ from "metro/03888__.js";
-import requiredArgs from "03726_requiredArgs.js";
+import startOfWeek_mod from "03884_startOfWeek.js";
+import module_3888_mod from "metro/03888__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  let obj = { default: startOfWeek };
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  obj = { default: module_3888 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3888 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3888;
 }
 module_3888 = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

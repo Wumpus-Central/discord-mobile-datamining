@@ -1,5 +1,5 @@
 // _runtime/metro/06747__.js
-import GESTURE_SOURCE from "../06729_GESTURE_SOURCE.js";
+import value2 from "../06729_value2.js";
 
 const cancelAnimation = tmp3(1636);
 require = fn;
@@ -11,27 +11,27 @@ fn = function n(arg0) {
   }
   ({ overrideReduceMotion, onComplete } = arg0);
   if (!configs) {
-    configs = GESTURE_SOURCE.ANIMATION_CONFIGS;
+    configs = value2.ANIMATION_CONFIGS;
   }
   if (overrideReduceMotion) {
     configs.reduceMotion = overrideReduceMotion;
   }
   if (!("duration" in configs)) {
     if (!("easing" in configs)) {
-      let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
+      let TIMING = value2.ANIMATION_METHOD.SPRING;
     }
-    if (TIMING === GESTURE_SOURCE.ANIMATION_METHOD.TIMING) {
-      let tmp3Result = cancelAnimation;
-      let withTimingResult = tmp3Result.withTiming(point, configs, onComplete);
+    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
+      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
+      const tmp3Result = cancelAnimation;
     } else {
-      tmp3Result = cancelAnimation;
       const _Object = Object;
       const obj = { velocity };
-      withTimingResult = tmp3Result.withSpring(point, Object.assign(obj, configs), onComplete);
+      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
+      const tmp3Result2 = cancelAnimation;
     }
     return withTimingResult;
   }
-  TIMING = GESTURE_SOURCE.ANIMATION_METHOD.TIMING;
+  TIMING = value2.ANIMATION_METHOD.TIMING;
 };
 fn.__closure = {
   ANIMATION_CONFIGS: fn(6729).ANIMATION_CONFIGS,

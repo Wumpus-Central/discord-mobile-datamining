@@ -1,17 +1,19 @@
 // _runtime/metro/04070__.js
-import startOfHour from "../04071_startOfHour.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import startOfHour_mod from "../04071_startOfHour.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let startOfHour = startOfHour_mod;
 if (!startOfHour) {
-  let obj = { default: startOfHour };
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
   tmp3 = startOfHour;
 }
 startOfHour = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

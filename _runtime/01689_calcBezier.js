@@ -341,14 +341,14 @@ class Bezier {
                         }
                         return tmp4;
                       };
-                      obj = { mX1: null, mY1: null, mX2: null, mY2: null, calcBezier: null, getTForX: null };
-                      obj.mX1 = arg0;
-                      obj.mY1 = arg1;
-                      obj.mX2 = arg2;
-                      obj.mY2 = arg3;
-                      obj.calcBezier = tmp7;
-                      obj.getTForX = getTForX;
-                      fn.__closure = obj;
+                      obj1 = { mX1: null, mY1: null, mX2: null, mY2: null, calcBezier: null, getTForX: null };
+                      obj1.mX1 = arg0;
+                      obj1.mY1 = arg1;
+                      obj1.mX2 = arg2;
+                      obj1.mY2 = arg3;
+                      obj1.calcBezier = tmp7;
+                      obj1.getTForX = getTForX;
+                      fn.__closure = obj1;
                       num8 = 4633198201234;
                       fn.__workletHash = 4633198201234;
                       tmp23 = closure_13;

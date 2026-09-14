@@ -29,13 +29,13 @@ export default {
     return tmp;
   },
   findPngOffsets(byteLength, flag2) {
-    let obj = { hasAppMarkers: false };
+    const obj = { hasAppMarkers: false };
     let length = u0089PNGrnu001An.length;
     if (length + c4 + c5 <= byteLength.byteLength) {
       while (true) {
         if (_modDef5297.USE_PNG_FILE) {
-          let obj1 = _mod5294;
-          if ("IHDR" === obj1.getStringFromDataView(byteLength, length + c7, c5)) {
+          let obj2 = _mod5294;
+          if ("IHDR" === obj2.getStringFromDataView(byteLength, length + c7, c5)) {
             obj.hasAppMarkers = true;
             obj.pngHeaderOffset = length + c8;
             let sum = length + (byteLength.getUint32(length + c6) + c4 + c5 + 4);
@@ -80,8 +80,8 @@ export default {
             }
             if (undefined !== tmp46) {
               obj.hasAppMarkers = true;
-              obj = { dataOffset: tmp46, length: byteLength.getUint32(length + c6) - (tmp46 - (length + c8)) };
-              let items = [obj];
+              let obj4 = { dataOffset: tmp46, length: byteLength.getUint32(length + c6) - (tmp46 - (length + c8)) };
+              let items = [obj4];
               obj.xmpChunks = items;
             }
           }
@@ -104,23 +104,23 @@ export default {
             obj.pngTextChunks = [];
           }
           let pngTextChunks = obj.pngTextChunks;
-          obj = { length: byteLength.getUint32(length + c6), type: stringFromDataView1, offset: length + c8 };
-          let arr = pngTextChunks.push(obj);
+          let obj6 = { length: byteLength.getUint32(length + c6), type: stringFromDataView1, offset: length + c8 };
+          let arr = pngTextChunks.push(obj6);
         } else {
-          tmp14Result = _mod5294;
-          if (tmp14Result.getStringFromDataView(byteLength, length + c7, c5) === eXIf) {
+          let tmp14Result5 = _mod5294;
+          if (tmp14Result5.getStringFromDataView(byteLength, length + c7, c5) === eXIf) {
             obj.hasAppMarkers = true;
             obj.tiffHeaderOffset = length + c8;
           } else {
             if (_modDef5297.USE_ICC) {
               if (flag2) {
-                let tmp14Result1 = _mod5294;
-                if (tmp14Result1.getStringFromDataView(byteLength, length + c7, c5) === iCCP) {
+                let tmp14Result6 = _mod5294;
+                if (tmp14Result6.getStringFromDataView(byteLength, length + c7, c5) === iCCP) {
                   obj.hasAppMarkers = true;
                   let sum4 = length + c8;
                   let uint32 = byteLength.getUint32(length + c6);
-                  let tmp14Result2 = _mod5294;
-                  let nullTerminatedStringFromDataView = tmp14Result2.getNullTerminatedStringFromDataView(
+                  let tmp14Result7 = _mod5294;
+                  let nullTerminatedStringFromDataView = tmp14Result7.getNullTerminatedStringFromDataView(
                     byteLength,
                     sum4,
                   );
@@ -131,7 +131,7 @@ export default {
                   }
                   let sum6 = sum5 + 1;
                   let iccChunks = obj.iccChunks;
-                  obj1 = {
+                  let obj7 = {
                     offset: sum6,
                     length: uint32 - (sum6 - sum4),
                     chunkNumber: 1,
@@ -139,19 +139,19 @@ export default {
                     profileName: nullTerminatedStringFromDataView,
                     compressionMethod: uint8,
                   };
-                  arr = iccChunks.push(obj1);
+                  let arr2 = iccChunks.push(obj7);
                 }
               }
             }
             let items1 = [pHYs, tIME];
-            let tmp14Result3 = _mod5294;
-            if (items1.includes(tmp14Result3.getStringFromDataView(byteLength, length + c7, c5))) {
+            let tmp14Result8 = _mod5294;
+            if (items1.includes(tmp14Result8.getStringFromDataView(byteLength, length + c7, c5))) {
               obj.hasAppMarkers = true;
               if (!obj.pngChunkOffsets) {
                 obj.pngChunkOffsets = [];
               }
               let pngChunkOffsets = obj.pngChunkOffsets;
-              let arr1 = pngChunkOffsets.push(length + c6);
+              let arr3 = pngChunkOffsets.push(length + c6);
             }
           }
         }

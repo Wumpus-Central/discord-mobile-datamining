@@ -3,44 +3,54 @@ import _mod5294 from "metro/05294__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-let obj = { 4: null, 8: null, 12: null, 16: null, 20: null, 24: null, 36: null, 40: null, 48: null, 52: null, 64: null, 80: null };
-obj = {
-  name: "Preferred CMM type",
-  value(dataView, sum) {
-    return _mod5294.getStringFromDataView(dataView, sum, 4);
-  },
-  description(str) {
-    if (null === str) {
-      return "";
-    } else {
-      const formatted = str.toLowerCase();
-      if ("appl" === formatted) {
-        let str6 = "Apple";
-      } else if ("adbe" === formatted) {
-        str6 = "Adobe";
-      } else if ("msft" === formatted) {
-        str6 = "Microsoft";
+const obj = {
+  4: null,
+  8: null,
+  12: null,
+  16: null,
+  20: {
+    name: "Preferred CMM type",
+    value(dataView, sum) {
+      return _mod5294.getStringFromDataView(dataView, sum, 4);
+    },
+    description(str) {
+      if (null === str) {
+        return "";
       } else {
-        if ("sunw" === formatted) {
-          str6 = "Sun Microsystems";
-        } else if ("sgi" !== formatted) {
-          str6 = "Taligent";
+        const formatted = str.toLowerCase();
+        if ("appl" === formatted) {
+          let str6 = "Apple";
+        } else if ("adbe" === formatted) {
+          str6 = "Adobe";
+        } else if ("msft" === formatted) {
+          str6 = "Microsoft";
+        } else {
+          if ("sunw" === formatted) {
+            str6 = "Sun Microsystems";
+          } else if ("sgi" !== formatted) {
+            str6 = "Taligent";
+          }
+          str6 = "Silicon Graphics";
         }
-        str6 = "Silicon Graphics";
       }
     }
-  }
-};
-obj[4] = obj;
-obj[8] = {
-  name: "Profile Version",
-  value(getUint8, sum) {
-    const str = getUint8.getUint8(sum);
-    const text = `${str.toString(10)}.`;
-    const str2 = getUint8.getUint8(sum + 1) >> 4;
-    const text1 = `${str.toString(10)}.${str2.toString(10)}`;
-    return `${str.toString(10)}.${str2.toString(10)}` + "." + getUint8.getUint8(sum + 1) % 16.toString(10);
-  }
+  },
+  24: null,
+  36: null,
+  40: null,
+  48: {
+    name: "Profile Version",
+    value(getUint8, sum) {
+      const str = getUint8.getUint8(sum);
+      const text = `${str.toString(10)}.`;
+      const str2 = getUint8.getUint8(sum + 1) >> 4;
+      const text1 = `${str.toString(10)}.${str2.toString(10)}`;
+      return `${str.toString(10)}.${str2.toString(10)}` + "." + getUint8.getUint8(sum + 1) % 16.toString(10);
+    }
+  },
+  52: null,
+  64: null,
+  80: null
 };
 obj[12] = {
   name: "Profile/Device class",

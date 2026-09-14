@@ -8,7 +8,7 @@ function validateTransformOrigin(arg0) {
     const reanimatedError = new _mod1647.ReanimatedError("Transform origin must have exactly 3 values.");
     throw reanimatedError;
   } else {
-    [obj, obj2, tmp30] = _slicedToArray(arg0, 3);
+    [obj, obj2, tmp30] = arg0;
     if (typeof obj !== "number") {
       const _HermesInternal = HermesInternal;
       const reanimatedError1 = new _mod1647.ReanimatedError(

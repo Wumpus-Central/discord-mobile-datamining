@@ -16,30 +16,30 @@ function useOnLoad(arg0, arg1) {
     }
     if (isFirstLayoutComplete) {
       ref.current = true;
-      f81293();
+      f81296();
     }
   });
 }
 
 export const useOnListLoad = (recyclerViewManager, onLoad) => {
   let isFirstLayoutComplete = recyclerViewManager;
-  let f81293 = onLoad;
+  let f81296 = onLoad;
   hasOwnProperty(Date.now());
-  [tmp3, closure_3] = _slicedToArray(timestampProducer(false), 2);
+  [tmp3, closure_3] = timestampProducer(false);
   const dataLength = recyclerViewManager.getDataLength();
-  let obj = _mod7003;
-  const requestAnimationFrame = obj.useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const tmp2 = _slicedToArray(timestampProducer(false), 2);
+  const requestAnimationFrame = _mod7003.useUnmountAwareAnimationFrame().requestAnimationFrame;
   const items = [dataLength];
   React4(() => {
     closure_2.current = Date.now();
   }, items);
   if (typeof useOnLoad === "function") {
     isFirstLayoutComplete = recyclerViewManager;
-    f81293 = () => {
+    f81296 = () => {
       const elapsedTimeInMs = Date.now() - ref.current;
       requestAnimationFrame(() => {
         elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f81293 != null) {
+        if (f81296 != null) {
           const obj = { elapsedTimeInMs };
           tmp(obj);
         }
@@ -54,14 +54,13 @@ export const useOnListLoad = (recyclerViewManager, onLoad) => {
       }
       if (isFirstLayoutComplete) {
         ref.current = true;
-        f81293();
+        f81296();
       }
     });
-    obj = { isLoaded: tmp3 };
-    return obj;
+    const obj2 = { isLoaded: tmp3 };
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
 };
 export { useOnLoad };

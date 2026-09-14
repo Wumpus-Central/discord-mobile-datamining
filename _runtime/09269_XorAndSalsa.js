@@ -184,8 +184,8 @@ function scryptInit(B, B, arg2) {
                   const error1 = new Error("Scrypt: parameters too large, " + result1 + " (128 * r * (N + p)) > " + maxmem + " (maxmem)");
                   throw error1;
                 } else {
-                  let obj = { c: 1, dkLen: result * p };
-                  const pbkdf2Result = pbkdf2Init.pbkdf2(_mod9275.sha256, B, B, obj);
+                  const obj2 = { c: 1, dkLen: result * p };
+                  const pbkdf2Result = pbkdf2Init.pbkdf2(_mod9275.sha256, B, B, obj2);
                   const _Uint8Array = Uint8Array;
                   const uint8Array = new Uint8Array(result * N);
                   const u32Result = _asyncLoop.u32(pbkdf2Result);
@@ -216,7 +216,7 @@ function scryptInit(B, B, arg2) {
                       }
                     };
                   }
-                  obj = { N, r, p, dkLen, blockSize32: result / 4, V: u32Result1, B32: u32Result, B: pbkdf2Result, tmp: _asyncLoop.u32(uint8Array1), blockMixCb, asyncTick };
+                  const obj = { N, r, p, dkLen, blockSize32: result / 4, V: u32Result1, B32: u32Result, B: pbkdf2Result, tmp: _asyncLoop.u32(uint8Array1), blockMixCb, asyncTick };
                   return obj;
                 }
               }
@@ -249,8 +249,8 @@ let closure_7 = async function _scryptAsync(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -263,8 +263,8 @@ let closure_7 = async function _scryptAsync(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c12 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_8 = tmp3;
           closure_7 = tmp7;
@@ -299,8 +299,8 @@ let closure_7 = async function _scryptAsync(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -313,8 +313,8 @@ let closure_7 = async function _scryptAsync(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_0 = tmp5;
                     closure_128_0 = undefined;
@@ -327,7 +327,7 @@ let closure_7 = async function _scryptAsync(arg0) {
                     closure_128_1 = 0;
                     c2 = 1;
                     c3 = 1;
-                    const obj1 = {
+                    const obj4 = {
                       value: closure_0(tmp2[1]).asyncLoop(closure_2_1 - 1, closure_2_11, async () => {
                                 let sum5 = sum;
                                 sum = sum + closure_2_5;
@@ -359,7 +359,7 @@ let closure_7 = async function _scryptAsync(arg0) {
                               }),
                       done: false
                     };
-                    return obj1;
+                    return obj4;
                   }
                 } else if (1 === tmp5) {
                   if (arg0 === 1) {
@@ -367,14 +367,14 @@ let closure_7 = async function _scryptAsync(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
+                    const obj5 = { value, done: true };
+                    return obj5;
                   } else {
                     iter4(closure_129_6, (closure_129_1 - 1) * closure_129_5, closure_129_7, closure_128_0, closure_129_2);
                     closure_129_10();
                     c2 = 2;
                     c3 = 1;
-                    const obj3 = {
+                    const obj6 = {
                       value: closure_0(tmp2[1]).asyncLoop(closure_129_1, closure_129_11, async () => {
                                 let tmp = closure_2_7;
                                 let tmp2 = closure_1_0;
@@ -416,14 +416,14 @@ let closure_7 = async function _scryptAsync(arg0) {
                               }),
                       done: false
                     };
-                    return obj3;
+                    return obj6;
                   }
                 } else if (arg0 === 1) {
                   c3 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c3 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 } else {
                   c3 = 3;
@@ -447,8 +447,8 @@ let closure_7 = async function _scryptAsync(arg0) {
             closure_136_0(closure_136_1[1]).byteSwap32(closure_135_7);
           }
           c12 = 3;
-          let obj1 = { value: closure_136_6(closure_135_0, closure_135_4, closure_135_8, closure_135_6, closure_135_9), done: true };
-          return obj1;
+          let obj4 = { value: closure_136_6(closure_135_0, closure_135_4, closure_135_8, closure_135_6, closure_135_9), done: true };
+          return obj4;
         }
       } else {
         if (1 === tmp7) {
@@ -464,14 +464,14 @@ let closure_7 = async function _scryptAsync(arg0) {
               const method = HermesBuiltin.getMethod("return");
               if (method === undefined) {
                 c12 = 3;
-                let obj2 = { value, done: true };
-                return obj2;
+                let obj5 = { value, done: true };
+                return obj5;
               } else {
                 const iter2 = method(closure_3);
                 HermesBuiltin.ensureObject("iterator.return() did not return an object");
                 if (iter2.done) {
                   c12 = 3;
-                  obj = { value: iter2.value, done: true };
+                  let obj = { value: iter2.value, done: true };
                   return obj;
                 } else {
                   c11 = 1;

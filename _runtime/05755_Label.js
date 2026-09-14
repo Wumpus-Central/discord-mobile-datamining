@@ -10,13 +10,13 @@ const label = StyleSheet.create({ label: { textAlign: "center", backgroundColor:
 export const Label = function Label(tintColor) {
   tintColor = tintColor.tintColor;
   const merged = Object.assign(tintColor, Object.assign({ tintColor: 0, style: 0 }));
-  let obj = { numberOfLines: 1 };
+  const obj = { numberOfLines: 1 };
   const merged1 = Object.assign(merged);
   const items = [label.label, ,];
   let tmp4 = null != tintColor;
   if (tmp4) {
-    obj = { color: tintColor };
-    tmp4 = obj;
+    const obj2 = { color: tintColor };
+    tmp4 = obj2;
   }
   items[1] = tmp4;
   items[2] = tintColor.style;

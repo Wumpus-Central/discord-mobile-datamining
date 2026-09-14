@@ -1,6 +1,6 @@
 // _runtime/metro/00157__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
@@ -26,6 +26,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 let closure_5 = {
   IndexSizeError: 1,
@@ -126,14 +127,13 @@ class DOMException {
 }
 _classCallCheck = DOMException;
 _inherits(DOMException, _wrapNativeSuper(Error));
-obj = {
-  key: "name",
-  get() {
-    return _classPrivateFieldBase(this, closure_6)[closure_6];
-  },
-};
 let items = [
-  obj,
+  {
+    key: "name",
+    get() {
+      return _classPrivateFieldBase(this, closure_6)[closure_6];
+    },
+  },
   {
     key: "code",
     get() {
@@ -144,20 +144,29 @@ let items = [
 const importDefaultResultResult = _createClass(DOMException, items);
 for (const key10045 in obj) {
   let _Object = Object;
-  obj = { enumerable: true, value: null };
-  obj.value = obj[key10045];
-  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult, key10045, obj);
+  let obj4 = { enumerable: true, value: obj[key10045] };
+  let definePropertyResult1 = Object.defineProperty(importDefaultResultResult, key10045, obj4);
   let _Object2 = Object;
-  let obj1 = { enumerable: true, value: obj[key10045] };
-  let definePropertyResult2 = Object.defineProperty(importDefaultResultResult.prototype, key10045, obj1);
+  let obj5 = { enumerable: true, value: obj[key10045] };
+  let definePropertyResult2 = Object.defineProperty(importDefaultResultResult.prototype, key10045, obj5);
   continue;
 }
-fn(126);
-const module_126 = {
+const module_126 = fn(126);
+module_126.setPlatformObject(importDefaultResultResult, {
+  clone(message) {
+    return new importDefaultResultResult(message.message, message.name);
+  },
+});
+const obj2 = {
+  key: "name",
+  get() {
+    return _classPrivateFieldBase(this, closure_6)[closure_6];
+  },
+};
+const obj6 = {
   clone(message) {
     return new importDefaultResultResult(message.message, message.name);
   },
 };
-module_126.setPlatformObject(importDefaultResultResult, module_126);
 
 export default importDefaultResultResult;

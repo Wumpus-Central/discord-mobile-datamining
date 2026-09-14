@@ -6,6 +6,8 @@ import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const require = globalThis.__r;
+
 const ReadOnlyCharacterData = arg1;
 function _isNativeReflectConstruct() {
   try {

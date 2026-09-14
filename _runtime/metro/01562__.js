@@ -34,21 +34,20 @@ export const useFocusEvents = function useFocusEvents(arg0) {
   const items2 = [key, emitter, context];
   const effect2 = noop.useEffect(() => {
     const current = ref.current;
-    let obj = context;
     let isFocusedResult = !context;
     if (context) {
-      isFocusedResult = obj.isFocused();
+      isFocusedResult = context.isFocused();
     }
     if (isFocusedResult) {
       ref.current = key;
     }
     let tmp5 = tmp4;
     if (undefined === current) {
-      tmp5 = obj;
+      tmp5 = context;
     }
     if (!tmp5) {
-      obj = { type: "focus", target: key };
-      emitter.emit(obj);
+      const obj2 = { type: "focus", target: key };
+      emitter.emit(obj2);
     }
     let tmp10 = current !== key;
     if (tmp10) {
@@ -58,10 +57,10 @@ export const useFocusEvents = function useFocusEvents(arg0) {
       tmp10 = tmp4;
     }
     if (tmp10) {
-      obj = { type: "blur", target: current };
-      emitter.emit(obj);
-      const obj1 = { type: "focus", target: key };
-      emitter.emit(obj1);
+      const obj3 = { type: "blur", target: current };
+      emitter.emit(obj3);
+      const obj4 = { type: "focus", target: key };
+      emitter.emit(obj4);
     }
   }, items2);
 };

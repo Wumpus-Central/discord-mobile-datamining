@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "znak\u00F3w", verb: "mie\u0107" },
           file: { unit: "bajt\u00F3w", verb: "mie\u0107" },
           array: { unit: "element\u00F3w", verb: "mie\u0107" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -134,7 +133,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -143,7 +142,7 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "warto\u015B\u0107";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str36 = tmp28.unit;
                 if (str36 == null) {
                   str36 = "element\u00F3w";
@@ -154,7 +153,7 @@ if (self2) {
                   str30 +
                   " b\u0119dzie mie\u0107 " +
                   str29 +
-                  str +
+                  str1 +
                   " " +
                   str36;
               } else {
@@ -176,7 +175,7 @@ if (self2) {
               if (code.inclusive) {
                 str18 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -185,7 +184,7 @@ if (self2) {
                 if (str19 == null) {
                   str19 = "warto\u015B\u0107";
                 }
-                const str1 = code.minimum.toString();
+                const str50 = code.minimum.toString();
                 let str25 = tmp15.unit;
                 if (str25 == null) {
                   str25 = "element\u00F3w";
@@ -196,7 +195,7 @@ if (self2) {
                   str19 +
                   " b\u0119dzie mie\u0107 " +
                   str18 +
-                  str1 +
+                  str50 +
                   " " +
                   str25;
               } else {
@@ -254,7 +253,6 @@ if (self2) {
               return "Nieprawid\u0142owe dane wej\u015Bciowe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Nieprawid\u0142owa warto\u015B\u0107 w ";
               return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
             default:
               return "Nieprawid\u0142owe dane wej\u015Bciowe";

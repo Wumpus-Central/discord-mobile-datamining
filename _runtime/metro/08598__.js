@@ -53,18 +53,24 @@ const entry = {
   value: function multiply(arg0) {
     ({ a, b, c, d } = this);
     ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg0);
-    let obj = {
+    const obj2 = Object.create(Shape.prototype);
+    hasOwnProperty(obj2, Shape);
+    ({
+      a: tmp.a,
+      b: tmp.b,
+      c: tmp.c,
+      d: tmp.d,
+      e: tmp.e,
+      f: tmp.f,
+    } = {
       a: a * a2 + c * b2,
       c: a * c2 + c * d2,
       e: a * e + c * f + this.e,
       b: b * a2 + d * b2,
       d: b * c2 + d * d2,
       f: b * e + d * f + this.f,
-    };
-    obj = Object.create(Shape.prototype);
-    hasOwnProperty(obj, Shape);
-    ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-    return obj;
+    });
+    return obj2;
   },
 };
 let items = [
@@ -74,56 +80,73 @@ let items = [
     value: function inverse() {
       ({ a, b, c, d, e, f } = this);
       const diff = a * d - b * c;
-      let obj = {
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp2.a,
+        b: tmp2.b,
+        c: tmp2.c,
+        d: tmp2.d,
+        e: tmp2.e,
+        f: tmp2.f,
+      } = {
         a: d / diff,
         b: -b / diff,
         c: -c / diff,
         d: a / diff,
         e: (c * f - d * e) / diff,
         f: -a * f - (b * e) / diff,
-      };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
-      return obj;
+      });
+      return obj2;
     },
   },
   {
     key: "translate",
     value: function translate(arg0, arg1) {
       ({ a, b, c, d } = this);
-      let obj = { a, c, e: a * arg0 + c * arg1 + this.e, b, d, f: b * arg0 + d * arg1 + this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp.a,
+        b: tmp.b,
+        c: tmp.c,
+        d: tmp.d,
+        e: tmp.e,
+        f: tmp.f,
+      } = { a, c, e: a * arg0 + c * arg1 + this.e, b, d, f: b * arg0 + d * arg1 + this.f });
+      return obj2;
     },
   },
   {
     key: "scale",
     value: function scale(mapped) {
-      let obj = {
-        a: this.a * mapped,
-        c: this.c * mapped,
-        e: this.e,
-        b: this.b * mapped,
-        d: this.d * mapped,
-        f: this.f,
-      };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp.a,
+        b: tmp.b,
+        c: tmp.c,
+        d: tmp.d,
+        e: tmp.e,
+        f: tmp.f,
+      } = { a: this.a * mapped, c: this.c * mapped, e: this.e, b: this.b * mapped, d: this.d * mapped, f: this.f });
+      return obj2;
     },
   },
   {
     key: "scaleNonUniform",
     value: function scaleNonUniform(arg0, arg1) {
-      let obj = { a: this.a * arg0, c: this.c * arg1, e: this.e, b: this.b * arg0, d: this.d * arg1, f: this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp.a,
+        b: tmp.b,
+        c: tmp.c,
+        d: tmp.d,
+        e: tmp.e,
+        f: tmp.f,
+      } = { a: this.a * arg0, c: this.c * arg1, e: this.e, b: this.b * arg0, d: this.d * arg1, f: this.f });
+      return obj2;
     },
   },
   {
@@ -132,18 +155,24 @@ let items = [
       const cosResult = Math.cos(closure_8 * arg0);
       const sinResult = Math.sin(closure_8 * arg0);
       ({ a, b, c, d } = this);
-      let obj = {
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp4.a,
+        b: tmp4.b,
+        c: tmp4.c,
+        d: tmp4.d,
+        e: tmp4.e,
+        f: tmp4.f,
+      } = {
         a: a * cosResult + c * sinResult,
-        c: a * tmp3 + c * cosResult,
+        c: a * -sinResult + c * cosResult,
         e: this.e,
         b: b * cosResult + d * sinResult,
-        d: b * tmp3 + d * cosResult,
+        d: b * -sinResult + d * cosResult,
         f: this.f,
-      };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp4.a, b: tmp4.b, c: tmp4.c, d: tmp4.d, e: tmp4.e, f: tmp4.f } = obj);
-      return obj;
+      });
+      return obj2;
     },
   },
   {
@@ -153,38 +182,56 @@ let items = [
       const cosResult = Math.cos(closure_8 * atan2Result);
       const sinResult = Math.sin(closure_8 * atan2Result);
       ({ a, b, c, d } = this);
-      let obj = {
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp5.a,
+        b: tmp5.b,
+        c: tmp5.c,
+        d: tmp5.d,
+        e: tmp5.e,
+        f: tmp5.f,
+      } = {
         a: a * cosResult + c * sinResult,
-        c: a * tmp4 + c * cosResult,
+        c: a * -sinResult + c * cosResult,
         e: this.e,
         b: b * cosResult + d * sinResult,
-        d: b * tmp4 + d * cosResult,
+        d: b * -sinResult + d * cosResult,
         f: this.f,
-      };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp5.a, b: tmp5.b, c: tmp5.c, d: tmp5.d, e: tmp5.e, f: tmp5.f } = obj);
-      return obj;
+      });
+      return obj2;
     },
   },
   {
     key: "flipX",
     value: function flipX() {
-      let obj = { a: this.a * -1, c: this.c, e: this.e, b: this.b * -1, d: this.d, f: this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp.a,
+        b: tmp.b,
+        c: tmp.c,
+        d: tmp.d,
+        e: tmp.e,
+        f: tmp.f,
+      } = { a: this.a * -1, c: this.c, e: this.e, b: this.b * -1, d: this.d, f: this.f });
+      return obj2;
     },
   },
   {
     key: "flipY",
     value: function flipY() {
-      let obj = { a: this.a, c: this.c * -1, e: this.e, b: this.b, d: this.d * -1, f: this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp.a, b: tmp.b, c: tmp.c, d: tmp.d, e: tmp.e, f: tmp.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp.a,
+        b: tmp.b,
+        c: tmp.c,
+        d: tmp.d,
+        e: tmp.e,
+        f: tmp.f,
+      } = { a: this.a, c: this.c * -1, e: this.e, b: this.b, d: this.d * -1, f: this.f });
+      return obj2;
     },
   },
   {
@@ -192,11 +239,17 @@ let items = [
     value: function skewX(arg0) {
       const tanResult = Math.tan(closure_8 * arg0);
       ({ a, b } = this);
-      let obj = { a, c: a * tanResult + this.c, e: this.e, b, d: b * tanResult + this.d, f: this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp2.a,
+        b: tmp2.b,
+        c: tmp2.c,
+        d: tmp2.d,
+        e: tmp2.e,
+        f: tmp2.f,
+      } = { a, c: a * tanResult + this.c, e: this.e, b, d: b * tanResult + this.d, f: this.f });
+      return obj2;
     },
   },
   {
@@ -204,11 +257,17 @@ let items = [
     value: function skewY(arg0) {
       const tanResult = Math.tan(closure_8 * arg0);
       ({ c, d } = this);
-      let obj = { a: this.a + c * tanResult, c, e: this.e, b: this.b + d * tanResult, d, f: this.f };
-      obj = Object.create(Shape.prototype);
-      hasOwnProperty(obj, Shape);
-      ({ a: tmp2.a, b: tmp2.b, c: tmp2.c, d: tmp2.d, e: tmp2.e, f: tmp2.f } = obj);
-      return obj;
+      const obj2 = Object.create(Shape.prototype);
+      hasOwnProperty(obj2, Shape);
+      ({
+        a: tmp2.a,
+        b: tmp2.b,
+        c: tmp2.c,
+        d: tmp2.d,
+        e: tmp2.e,
+        f: tmp2.f,
+      } = { a: this.a + c * tanResult, c, e: this.e, b: this.b + d * tanResult, d, f: this.f });
+      return obj2;
     },
   },
 ];
@@ -292,16 +351,16 @@ class Shape {
       if (!arg0) {
         obj = {};
       }
-      let fill = obj.fill;
-      fill = undefined === fill || fill;
-      let stroke = obj.stroke;
-      stroke = undefined === stroke || stroke;
-      let markers = obj.markers;
-      markers = undefined === markers || markers;
-      let clipped = obj.clipped;
-      clipped = undefined === clipped || clipped;
+      const fill = obj.fill;
+      const fill2 = undefined === fill || fill;
+      const stroke = obj.stroke;
+      const stroke2 = undefined === stroke || stroke;
+      const markers = obj.markers;
+      const markers2 = undefined === markers || markers;
+      const clipped = obj.clipped;
+      const clipped2 = undefined === clipped || clipped;
       const tmp5 = findNodeHandle(closure_0.root);
-      return Shape(8600).default.getBBox(tmp5, { fill, stroke, markers, clipped });
+      return Shape(8600).default.getBBox(tmp5, { fill: fill2, stroke: stroke2, markers: markers2, clipped: clipped2 });
     };
     tmp3Result.getCTM = () => {
       const tmp = findNodeHandle(closure_0.root);

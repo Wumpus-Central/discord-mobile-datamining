@@ -59,21 +59,21 @@ const entry = {
     if (undefined !== _in) {
       str = _in;
     }
-    let obj = { children: null };
+    const obj = { children: null };
     ({ dx, dy, result } = props);
     const items = [
       timestampProducer(FeDropShadow(8624), { in: str, stdDeviation: props.stdDeviation }),
       timestampProducer(FeDropShadow(8626), { dx, dy, result: "offsetblur" }),
-      ,
-      ,
+      timestampProducer(FeDropShadow(8628), {
+        floodColor: self.props.floodColor,
+        floodOpacity: self.props.floodOpacity,
+      }),
+      timestampProducer(FeDropShadow(8617), { in2: "offsetblur", operator: "in" }),
     ];
-    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
-    items[2] = timestampProducer(FeDropShadow(8628), obj);
-    items[3] = timestampProducer(FeDropShadow(8617), { in2: "offsetblur", operator: "in" });
-    obj = { result, children: null };
+    const obj3 = { result, children: null };
     const items1 = [timestampProducer(FeDropShadow(8632), {}), timestampProducer(FeDropShadow(8632), { in: str })];
-    obj.children = items1;
-    items[4] = React5(FeDropShadow(8630), obj);
+    obj3.children = items1;
+    items[4] = React5(FeDropShadow(8630), obj3);
     obj.children = items;
     return React5(noop.Fragment, obj);
   },

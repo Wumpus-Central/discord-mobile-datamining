@@ -1,5 +1,5 @@
 // _runtime/04954_IsGenericDescriptor.js
-import _mod1283 from "metro/01283__.js";
+import _mod1281 from "metro/01281__.js";
 import _mod4936 from "metro/04936__.js";
 import IsDataDescriptor from "04940_IsDataDescriptor.js";
 import IsAccessorDescriptor from "04949_IsAccessorDescriptor.js";
@@ -15,7 +15,7 @@ export default function IsGenericDescriptor(arg0) {
     }
     return tmp8;
   } else {
-    const tmp5 = new _mod1283("Assertion failed: `Desc` must be a Property Descriptor");
+    const tmp5 = new _mod1281("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
 }

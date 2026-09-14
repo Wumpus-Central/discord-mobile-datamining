@@ -14,26 +14,25 @@ require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {
   let tmp = propagateTraceparent;
-  let obj = { span, propagateTraceparent };
-  const traceData = obj.getTraceData(obj);
+  const traceData = _mod769.getTraceData({ span, propagateTraceparent });
   ({ sentry-trace: tmp5, baggage, traceparent } = traceData);
   if (tmp5) {
     headers = headers2.headers;
     if (!headers) {
-      let tmp2Result = _mod692;
       let headers1;
       if (tmp2Result.isRequest(headers)) {
         headers1 = headers.headers;
       }
       headers = headers1;
+      tmp2Result = _mod692;
     }
     if (headers) {
       const _Headers = Headers;
       let isInstanceOfResult = typeof Headers !== "undefined";
       if (typeof Headers !== "undefined") {
-        tmp2Result = _mod692;
         const _Headers3 = Headers;
-        isInstanceOfResult = tmp2Result.isInstanceOf(headers, Headers);
+        isInstanceOfResult = _mod692.isInstanceOf(headers, Headers);
+        const tmp2Result2 = _mod692;
       }
       if (isInstanceOfResult) {
         const _Headers2 = Headers;
@@ -112,40 +111,40 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
           if ("traceparent" in headers) {
             const traceparent2 = headers.traceparent;
           }
-          baggage = undefined;
+          let baggage1;
           if ("baggage" in headers) {
-            baggage = headers.baggage;
+            baggage1 = headers.baggage;
           }
-          if (baggage) {
+          if (baggage1) {
             const _Array2 = Array;
-            if (Array.isArray(baggage)) {
+            if (Array.isArray(baggage1)) {
               const items4 = [];
-              HermesBuiltin.arraySpread(baggage, 0);
+              HermesBuiltin.arraySpread(baggage1, 0);
               let items5 = items4;
             } else {
-              items5 = [baggage];
+              items5 = [baggage1];
             }
           } else {
             const items6 = [];
-            if (!baggage) {
+            if (!baggage1) {
               let tmp23 = baggage;
               if (baggage) {
-                tmp23 = !baggage;
+                tmp23 = !baggage1;
               }
               if (tmp23) {
                 items6.push(baggage);
               }
-              obj = {};
+              const obj3 = {};
               const merged = Object.assign(headers);
               if (prop == null) {
                 prop = tmp5;
               }
-              obj["sentry-trace"] = prop;
+              obj3["sentry-trace"] = prop;
               let joined;
               if (items6.length > 0) {
                 joined = items6.join(",");
               }
-              obj.baggage = joined;
+              obj3.baggage = joined;
               let tmp30 = tmp;
               if (tmp) {
                 tmp30 = traceparent;
@@ -154,13 +153,13 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
                 tmp30 = !traceparent2;
               }
               if (tmp30) {
-                obj.traceparent = traceparent;
+                obj3.traceparent = traceparent;
               }
-              return obj;
+              return obj3;
             } else {
               const _Array3 = Array;
-              if (Array.isArray(baggage)) {
-                let found = baggage.find((item) => {
+              if (Array.isArray(baggage1)) {
+                let found = baggage1.find((item) => {
                   const parts = item.split(",");
                   return parts.some((item) => {
                     const trimmed = item.trim();
@@ -168,7 +167,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
                   });
                 });
               } else {
-                const parts1 = baggage.split(",");
+                const parts1 = baggage1.split(",");
                 found = parts1.some((item) => {
                   const trimmed = item.trim();
                   return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
@@ -179,11 +178,12 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
         }
       }
     } else {
-      const obj1 = {};
+      const obj4 = {};
       const merged1 = Object.assign(traceData);
-      return obj1;
+      return obj4;
     }
   }
+  const obj2 = { span, propagateTraceparent };
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
@@ -205,11 +205,10 @@ export const _callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, respon
     onRequestSpanEnd(arg0, obj);
   }
 };
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3, onRequestSpanEnd) {
+export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, setAttribute, onRequestSpanEnd) {
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
-    let obj = _mod720;
-    let hasSpansEnabledResult = obj.hasSpansEnabled();
+    let hasSpansEnabledResult = _mod720.hasSpansEnabled();
     if (hasSpansEnabledResult) {
       hasSpansEnabledResult = fn(url);
     }
@@ -217,14 +216,13 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
       if (hasSpansEnabledResult) {
         const __span = fetchData.fetchData.__span;
         if (__span) {
-          if (arg3[__span]) {
+          if (setAttribute[__span]) {
             if (fetchData.response) {
-              let tmp3Result = SPAN_STATUS_ERROR;
-              tmp3Result.setHttpStatus(obj20, fetchData.response.status);
+              SPAN_STATUS_ERROR.setHttpStatus(obj20, fetchData.response.status);
               const response = fetchData.response;
               value = undefined;
               if (response != null) {
-                let headers = response.headers;
+                const headers = response.headers;
                 if (headers != null) {
                   value = headers.get("content-length");
                 }
@@ -236,9 +234,10 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
                   const attr = obj20.setAttribute("http.response_content_length", parsed);
                 }
               }
+              const tmp3Result = SPAN_STATUS_ERROR;
             } else if (fetchData.error) {
-              obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
-              obj20.setStatus(obj);
+              const obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+              obj20.setStatus(obj2);
             }
             obj20.end();
             onRequestSpanEnd = undefined;
@@ -249,12 +248,12 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
             }
             if (onRequestSpanEnd != null) {
               const response2 = fetchData.response;
-              headers = undefined;
+              let headers1;
               if (response2 != null) {
-                headers = response2.headers;
+                headers1 = response2.headers;
               }
-              obj = { headers, error: fetchData.error };
-              onRequestSpanEnd(obj20, obj);
+              const obj3 = { headers: headers1, error: fetchData.error };
+              onRequestSpanEnd(obj20, obj3);
             }
             delete tmp2[tmp];
           }
@@ -263,8 +262,8 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
     }
     let tmp9 = onRequestSpanEnd;
     if (typeof onRequestSpanEnd !== "object") {
-      const obj1 = { spanOrigin: onRequestSpanEnd };
-      tmp9 = obj1;
+      const obj4 = { spanOrigin: onRequestSpanEnd };
+      tmp9 = obj4;
     }
     const spanOrigin = tmp9.spanOrigin;
     let str = "auto.http.browser";
@@ -272,87 +271,87 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
       str = spanOrigin;
     }
     const propagateTraceparent = tmp9.propagateTraceparent;
-    tmp3Result = spanToJSON;
-    const activeSpan = tmp3Result.getActiveSpan();
+    const activeSpan = spanToJSON.getActiveSpan();
     if (hasSpansEnabledResult) {
       if (activeSpan) {
-        const tmp3Result1 = _mod731;
-        let tmp3Result2 = _mod765;
+        const tmp3Result12 = _mod731;
+        let tmp3Result13 = _mod765;
         if (startsWithResult) {
-          const obj2 = { name: null, attributes: null };
+          const obj5 = { name: null, attributes: null };
           const _HermesInternal2 = HermesInternal;
-          obj2.name = "" + method + " " + tmp3Result2.stripDataUrlContent(url);
-          const obj3 = { url: null, type: "fetch", "http.method": null };
-          tmp3Result2 = _mod765.stripDataUrlContent(url);
-          obj3.url = tmp3Result2;
-          obj3["http.method"] = method;
-          obj3[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+          obj5.name = "" + method + " " + tmp3Result13.stripDataUrlContent(url);
+          const obj6 = { url: null, type: "fetch", "http.method": null };
+          tmp3Result13 = _mod765.stripDataUrlContent(url);
+          obj6.url = tmp3Result13;
+          obj6["http.method"] = method;
+          obj6[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
           str = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP;
           method = "http.client";
-          obj3[str] = "http.client";
-          obj2.attributes = obj3;
-          let obj4 = obj2;
-          const tmp3Result3 = _mod765;
+          obj6[str] = "http.client";
+          obj5.attributes = obj6;
+          let obj7 = obj5;
+          const tmp3Result14 = _mod765;
         } else {
-          const result = tmp3Result2.parseStringToURLObject(url);
+          const result = tmp3Result13.parseStringToURLObject(url);
           let sanitizedUrlStringFromUrlObject = url;
           if (result) {
             sanitizedUrlStringFromUrlObject = _mod765.getSanitizedUrlStringFromUrlObject(result);
-            const tmp3Result4 = _mod765;
+            const tmp3Result15 = _mod765;
           }
-          obj4 = { name: null, attributes: null };
+          obj7 = { name: null, attributes: null };
           const _HermesInternal = HermesInternal;
-          obj4.name = "" + method + " " + sanitizedUrlStringFromUrlObject;
-          const obj5 = { url: _mod765.stripDataUrlContent(url), type: "fetch", "http.method": method };
-          obj5[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-          obj5[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+          obj7.name = "" + method + " " + sanitizedUrlStringFromUrlObject;
+          const obj8 = { url: _mod765.stripDataUrlContent(url), type: "fetch", "http.method": method };
+          obj8[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+          obj8[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
           if (result) {
-            if (!tmp3Result6.isURLObjectRelative(result)) {
-              obj5["http.url"] = _mod765.stripDataUrlContent(result.href);
-              obj5["server.address"] = result.host;
-              const tmp3Result7 = _mod765;
+            if (!tmp3Result17.isURLObjectRelative(result)) {
+              obj8["http.url"] = _mod765.stripDataUrlContent(result.href);
+              obj8["server.address"] = result.host;
+              const tmp3Result18 = _mod765;
             }
             if (result.search) {
-              obj5["http.query"] = result.search;
+              obj8["http.query"] = result.search;
             }
             if (result.hash) {
-              obj5["http.fragment"] = result.hash;
+              obj8["http.fragment"] = result.hash;
             }
-            tmp3Result6 = _mod765;
+            tmp3Result17 = _mod765;
           }
-          obj4.attributes = obj5;
-          const tmp3Result5 = _mod765;
+          obj7.attributes = obj8;
+          const tmp3Result16 = _mod765;
         }
-        tmp3Result1.startInactiveSpan(obj4);
+        tmp3Result12.startInactiveSpan(obj7);
         startsWithResult = url.startsWith("data:");
       }
     }
     const sentryNonRecordingSpan = new SentryNonRecordingSpan.SentryNonRecordingSpan();
     fetchData.fetchData.__span = sentryNonRecordingSpan.spanContext().spanId;
-    arg3[sentryNonRecordingSpan.spanContext().spanId] = sentryNonRecordingSpan;
+    setAttribute[sentryNonRecordingSpan.spanContext().spanId] = sentryNonRecordingSpan;
     if (fn2(fetchData.fetchData.url)) {
       const first = fetchData.args[0];
       const tmp23 = fetchData.args[1] || {};
-      const obj6 = {};
+      const obj9 = {};
       const merged = Object.assign(tmp23);
       let tmp28;
-      if (tmp3Result8.hasSpansEnabled()) {
+      if (tmp3Result19.hasSpansEnabled()) {
         if (activeSpan) {
           tmp28 = sentryNonRecordingSpan;
         }
       }
-      const tmp27Result = _addTracingHeadersToFetchRequest(first, obj6, tmp28, tmp10);
+      const tmp27Result = _addTracingHeadersToFetchRequest(first, obj9, tmp28, tmp10);
       if (tmp27Result) {
-        fetchData.args[1] = obj6;
-        obj6.headers = tmp27Result;
+        fetchData.args[1] = obj9;
+        obj9.headers = tmp27Result;
       }
-      tmp3Result8 = _mod720;
+      tmp3Result19 = _mod720;
     }
+    const tmp3Result11 = spanToJSON;
     const client = _mod713.getClient();
     if (client) {
       ({ args: obj19.input, response: obj19.response, startTimestamp: obj19.startTimestamp, endTimestamp: obj19.endTimestamp } = fetchData);
       client.emit("beforeOutgoingRequestSpan", sentryNonRecordingSpan, { input: null, response: null, startTimestamp: null, endTimestamp: null });
-      const obj7 = { input: null, response: null, startTimestamp: null, endTimestamp: null };
+      const obj10 = { input: null, response: null, startTimestamp: null, endTimestamp: null };
     }
     return sentryNonRecordingSpan;
   }

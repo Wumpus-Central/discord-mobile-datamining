@@ -14,11 +14,12 @@ let obj = {
   borderTopRightRadius: true,
   borderTopStartRadius: true,
 };
+let obj2 = obj;
 if (null == prop) {
-  obj = {};
+  obj2 = {};
 }
-obj = { color: true, tintColor: true, shadowColor: true, placeholderTextColor: true };
-const obj1 = {
+let obj3 = { color: true, tintColor: true, shadowColor: true, placeholderTextColor: true };
+const obj4 = {
   opacity: true,
   transform: true,
   backgroundColor: true,
@@ -32,20 +33,20 @@ const obj1 = {
   shadowOpacity: true,
   shadowRadius: true,
 };
-const merged = Object.assign(obj);
-obj1.scaleX = true;
-obj1.scaleY = true;
-obj1.translateX = true;
-obj1.translateY = true;
-let obj2 = obj;
+const merged = Object.assign(obj2);
+obj4.scaleX = true;
+obj4.scaleY = true;
+obj4.translateX = true;
+obj4.translateY = true;
+let obj5 = obj3;
 if (null == prop) {
-  obj2 = {};
+  obj5 = {};
 }
-const obj3 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
-const merged1 = Object.assign(obj2);
-obj3.UI_THREAD_PROPS_WHITELIST = obj1;
+const obj6 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
+const merged1 = Object.assign(obj5);
+obj6.UI_THREAD_PROPS_WHITELIST = obj4;
 if (null != prop) {
-  obj = {};
+  obj3 = {};
 }
 const size = {
   borderBottomWidth: true,
@@ -124,11 +125,11 @@ const size = {
   justifyContent: true,
   position: true,
 };
-const merged2 = Object.assign(obj);
+const merged2 = Object.assign(obj3);
 if (null != prop) {
   obj = {};
 }
 const merged3 = Object.assign(obj);
-obj3.NATIVE_THREAD_PROPS_WHITELIST = size;
+obj6.NATIVE_THREAD_PROPS_WHITELIST = size;
 
-export const PropsAllowlists = obj3;
+export const PropsAllowlists = obj6;

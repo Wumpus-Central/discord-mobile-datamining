@@ -9,7 +9,7 @@ let c2 = "app:///index.android.bundle";
 export const ANDROID_DEFAULT_BUNDLE_NAME = "app:///index.android.bundle";
 export const IOS_DEFAULT_BUNDLE_NAME = "app:///main.jsbundle";
 export const createReactNativeRewriteFrames = function createReactNativeRewriteFrames() {
-  const obj = {
+  return _mod682.rewriteFramesIntegration({
     iteratee(platform) {
       if ("java" !== platform.platform) {
         if ("cocoa" !== platform.platform) {
@@ -32,13 +32,11 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
                 if (isHermesEnabledResult) {
                   platform.colno = platform.colno + 1;
                 }
-                let tmp9Result = _mod867;
                 if (tmp9Result.isExpo()) {
                   platform.filename = filename;
                   return platform;
                 } else {
-                  tmp9Result = _mod867;
-                  tmp9Result.isExpo();
+                  _mod867.isExpo();
                   if ("/InternalBytecode.js" === platform.filename) {
                     platform.in_app = false;
                   }
@@ -53,6 +51,7 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
                   platform.filename = combined;
                   return platform;
                 }
+                tmp9Result = _mod867;
               }
             }
             return platform;
@@ -63,6 +62,5 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
       }
       return platform;
     },
-  };
-  return obj.rewriteFramesIntegration(obj);
+  });
 };

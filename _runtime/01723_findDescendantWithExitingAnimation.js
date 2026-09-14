@@ -96,14 +96,13 @@ export const insertWebAnimation = function insertWebAnimation(name, result1) {
     if (element.sheet) {
       const sheet = element.sheet;
       sheet.insertRule(result1, 0);
-      let arr = closure_5.unshift(name);
+      closure_5.unshift(name);
       const result = map.set(name, 0);
       let num3 = 1;
       if (1 < closure_5.length) {
-        arr = closure_5;
         value = map.get(closure_5[num3]);
         while (undefined !== value) {
-          result1 = map.set(arr[num3], value + 1);
+          result1 = map.set(closure_5[num3], value + 1);
           num3 = num3 + 1;
         }
         const reanimatedError = new _mod1647.ReanimatedError("Failed to obtain animation index.");
@@ -137,9 +136,9 @@ export const scheduleAnimationCleanup = function scheduleAnimationCleanup(animat
           closure_5.splice(sum, 1);
           map.delete(closure_0);
           if (sum < closure_5.length) {
-            value = map.get(closure_5[sum]);
-            while (undefined !== value) {
-              let result = map.set(closure_5[sum], value - 1);
+            value2 = map.get(closure_5[sum]);
+            while (undefined !== value2) {
+              let result = map.set(closure_5[sum], value2 - 1);
               sum = sum + 1;
             }
             const reanimatedError1 = new _mod1647.ReanimatedError("Failed to obtain animation index.");

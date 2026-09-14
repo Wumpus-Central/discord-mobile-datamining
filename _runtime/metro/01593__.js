@@ -21,8 +21,8 @@ export const useThenable = function useThenable(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -35,8 +35,8 @@ export const useThenable = function useThenable(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp3;
               closure_0 = tmp7;
@@ -44,8 +44,8 @@ export const useThenable = function useThenable(arg0) {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj1 = { value, done: false };
-              return obj1;
+              const obj4 = { value, done: false };
+              return obj4;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -64,7 +64,7 @@ export const useThenable = function useThenable(arg0) {
               noop(items1);
             }
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;

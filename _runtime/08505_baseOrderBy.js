@@ -28,9 +28,9 @@ export default function baseOrderBy(arg0, arg1, arg2) {
     tmp4 = tmp;
   }
   c2 = -1;
-  tmp4(tmp3[0]);
-  const tmp4Result = tmp4(tmp3[4]);
-  closure_0 = tmp4Result(items, tmp4Result(tmp4(tmp3[5])));
+  const tmp4Result = tmp4(tmp3[0]);
+  closure_0 = tmp4Result(items, tmp4(tmp3[4])(tmp4(tmp3[5])));
+  const tmp4Result2 = tmp4(tmp3[4]);
   return tmp4(tmp3[7])(
     tmp4(tmp3[6])(arg0, (value, arg1, arg2) => {
       closure_0 = value;

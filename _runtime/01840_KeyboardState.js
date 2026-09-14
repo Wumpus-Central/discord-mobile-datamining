@@ -17,7 +17,7 @@ export const useAnimatedKeyboard = () => {
   height = KeyboardState.useSharedValue(0);
   state = height(state[0]).useSharedValue(KeyboardState.UNKNOWN);
   const obj2 = height(state[0]);
-  KeyboardState = { onStart: null, onMove: null, onInteractive: null, onEnd: null };
+  const obj4 = { onStart: null, onMove: null, onInteractive: null, onEnd: null };
   const fn = function u(height) {
     if (height.height > 0) {
       let CLOSING = obj.OPENING;
@@ -29,21 +29,21 @@ export const useAnimatedKeyboard = () => {
   fn.__closure = { state, KeyboardState };
   fn.__workletHash = 14565322463725;
   fn.__initData = __initData;
-  KeyboardState.onStart = fn;
+  obj4.onStart = fn;
   const fn2 = function c(height) {
     const result = height.set(height.height);
   };
   fn2.__closure = { height };
   fn2.__workletHash = 10176723030164;
   fn2.__initData = __initData2;
-  KeyboardState.onMove = fn2;
+  obj4.onMove = fn2;
   const fn3 = function _(height) {
     const result = height.set(height.height);
   };
   fn3.__closure = { height };
   fn3.__workletHash = 5410731249621;
   fn3.__initData = __initData3;
-  KeyboardState.onInteractive = fn3;
+  obj4.onInteractive = fn3;
   const fn4 = function n(height) {
     if (height.height > 0) {
       let CLOSED = obj.OPEN;
@@ -56,7 +56,7 @@ export const useAnimatedKeyboard = () => {
   fn4.__closure = { state, KeyboardState, height };
   fn4.__workletHash = 1401367954247;
   fn4.__initData = __initData4;
-  KeyboardState.onEnd = fn4;
-  height(state[1]).useKeyboardHandler(KeyboardState, []);
+  obj4.onEnd = fn4;
+  height(state[1]).useKeyboardHandler(obj4, []);
   return { height, state };
 };

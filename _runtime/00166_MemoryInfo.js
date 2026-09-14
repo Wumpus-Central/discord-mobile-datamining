@@ -1,9 +1,10 @@
 // _runtime/00166_MemoryInfo.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
 import _classPrivateFieldKey from "00091__classPrivateFieldKey.js";
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_2 = _classPrivateFieldKey("jsHeapSizeLimit");
 let closure_3 = _classPrivateFieldKey("totalJSHeapSize");
 let closure_4 = _classPrivateFieldKey("usedJSHeapSize");

@@ -78,13 +78,13 @@ export const buildWorkletsHash = function buildWorkletsHash(items1) {
   return values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), "");
 };
 export const buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
-  let values = Object.values(memoizedGestureCallbacks);
+  const values = Object.values(memoizedGestureCallbacks);
   const found = values.filter((item) => undefined !== item);
   let tmp2 = found;
   if (arr) {
     const _Object = Object;
-    values = Object.values(found);
-    arr = arr.push(values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
+    const values2 = Object.values(found);
+    arr = arr.push(values2.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
     tmp2 = arr;
   }
   return tmp2;

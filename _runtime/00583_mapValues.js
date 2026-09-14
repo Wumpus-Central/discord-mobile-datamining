@@ -1,6 +1,8 @@
 // _runtime/00583_mapValues.js
 import baseAssignValue from "00668_baseAssignValue.js";
 
+const require = globalThis.__r;
+
 export default function mapValues(arg0, arg1) {
   _require = arg1;
   const obj = {};

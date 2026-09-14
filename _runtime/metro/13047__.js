@@ -1,6 +1,24 @@
 // _runtime/metro/13047__.js
+import _mod12928 from "12928__.js";
 
-export const escapeStringForRegex = function escapeStringForRegex(str) {
-  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
-  return str.replace(/-/g, "\\x2d");
+require = arg1;
+const dependencyMap = arg6;
+
+export const vercelWaitUntil = function vercelWaitUntil(arg0) {
+  const obj = _mod12928.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
+  if (obj) {
+    if (obj.get) {
+      if (obj.get()) {
+        let obj1 = obj.get();
+      }
+      let waitUntil = obj1;
+      if (obj1) {
+        waitUntil = obj1.waitUntil;
+      }
+      if (waitUntil) {
+        obj1.waitUntil(arg0);
+      }
+    }
+  }
+  obj1 = {};
 };

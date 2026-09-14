@@ -1,6 +1,6 @@
 // _runtime/metro/04050__.js
 import Parser2 from "../04031_Parser.js";
-import 04049__ from "04049__.js";
+import module_4049_mod from "04049__.js";
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -54,6 +54,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4049 = module_4049_mod;
 if (!module_4049) {
   let obj = { default: module_4049 };
   let tmp3 = obj;
@@ -99,7 +100,12 @@ class LocalDayParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 90,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 90;
           applyResult.priority = 90;
@@ -149,8 +155,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: LocalDayParser, writable: true, configurable: true } };
-LocalDayParser.prototype = Object.create(prototype, obj);
+LocalDayParser.prototype = Object.create(prototype, {
+  constructor: { value: LocalDayParser, writable: true, configurable: true },
+});
 if (Parser) {
   _setPrototypeOf(LocalDayParser, Parser);
 }
@@ -216,25 +223,40 @@ const entry = {
   value: function parse(arg0, arg1, ordinalNumber, arg3) {
     const weekStartsOn = arg3;
     function valueCallback(arg0) {
-      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
+      return ((arg0 + weekStartsOn.weekStartsOn + 6) % 7) + 7 * Math.floor((arg0 - 1) / 7);
     }
     if ("e" !== arg1) {
       if ("ee" !== arg1) {
         if ("eo" === arg1) {
           return _createSuperInternal(4033).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
         } else if ("eee" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         } else if ("eeeee" === arg1) {
           return ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         } else if ("eeeeee" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+          return (
+            ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
+            ordinalNumber.day(arg0, { width: "narrow", context: "formatting" })
+          );
         }
       }
     }
-    return _createSuperInternal(4033).mapValue(_createSuperInternal(4033).parseNDigits(arg1.length, arg0), valueCallback);
-  }
+    return _createSuperInternal(4033).mapValue(
+      _createSuperInternal(4033).parseNDigits(arg1.length, arg0),
+      valueCallback,
+    );
+  },
 };
 let items = [
   entry,
@@ -246,7 +268,7 @@ let items = [
         tmp = arg1 <= 6;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
@@ -254,8 +276,8 @@ let items = [
       const defaultResult = module_4049.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

@@ -2,12 +2,12 @@
 import _mod600 from "metro/00600__.js";
 
 export default function hashClear() {
-  let obj = {};
+  const obj = {};
   if (_mod600) {
-    obj = _mod600(null);
+    let obj2 = _mod600(null);
   } else {
-    obj = {};
+    obj2 = {};
   }
-  obj.__data__ = obj;
+  obj.__data__ = obj2;
   obj.size = 0;
 }

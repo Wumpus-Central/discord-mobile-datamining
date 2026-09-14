@@ -136,10 +136,10 @@ function patch(arg0, arg1, fn) {
         }
         tmp5.prototype = prototype;
         const _Object = Object;
-        __rrweb_original__ = { __rrweb_original__: null };
-        __rrweb_original__ = { enumerable: false, value: tmp2 };
-        __rrweb_original__.__rrweb_original__ = __rrweb_original__;
-        Object.defineProperties(tmp5, __rrweb_original__);
+        const obj = { __rrweb_original__: null };
+        const obj2 = { enumerable: false, value: tmp2 };
+        obj.__rrweb_original__ = obj2;
+        Object.defineProperties(tmp5, obj);
       }
       arg0[arg1] = tmp4;
       return () => {
@@ -396,7 +396,7 @@ function serializeArg(buffer, arg1, arg2) {
                     if (!(buffer instanceof Uint8ClampedArray)) {
                       const _ArrayBuffer = ArrayBuffer;
                       if (buffer instanceof ArrayBuffer) {
-                        let obj = { rr_type: buffer.constructor.name, base64: null };
+                        const obj2 = { rr_type: buffer.constructor.name, base64: null };
                         const _Uint8Array2 = Uint8Array;
                         const uint8Array = new Uint8Array(buffer);
                         let str = "";
@@ -419,31 +419,31 @@ function serializeArg(buffer, arg1, arg2) {
                             text = `${str2.substring(0, str2.length - 2)}==`;
                           }
                         }
-                        obj.base64 = text;
-                        return obj;
+                        obj2.base64 = text;
+                        return obj2;
                       } else {
                         const _DataView = DataView;
                         if (buffer instanceof DataView) {
-                          obj = { rr_type: buffer.constructor.name, args: null };
+                          obj3 = { rr_type: buffer.constructor.name, args: null };
                           const items = [serializeArg(buffer.buffer, arg1, arg2), , ];
                           ({ byteOffset: arr4[1], byteLength: arr4[2] } = buffer);
-                          obj.args = items;
-                          return obj;
+                          obj3.args = items;
+                          return obj3;
                         } else {
                           if (buffer instanceof globalThis.HTMLImageElement) {
-                            const obj1 = { rr_type: buffer.constructor.name, src: buffer.src };
-                            return obj1;
+                            const obj4 = { rr_type: buffer.constructor.name, src: buffer.src };
+                            return obj4;
                           } else {
                             if (buffer instanceof globalThis.HTMLCanvasElement) {
-                              const obj2 = { rr_type: "HTMLImageElement", src: buffer.toDataURL() };
-                              return obj2;
+                              const obj5 = { rr_type: "HTMLImageElement", src: buffer.toDataURL() };
+                              return obj5;
                             } else {
                               if (buffer instanceof globalThis.ImageData) {
-                                const obj3 = { rr_type: buffer.constructor.name, args: null };
+                                const obj6 = { rr_type: buffer.constructor.name, args: null };
                                 const items1 = [serializeArg(buffer.data, arg1, arg2), , ];
                                 ({ width: arr3[1], height: arr3[2] } = buffer);
-                                obj3.args = items1;
-                                let tmp3 = obj3;
+                                obj6.args = items1;
+                                let tmp3 = obj6;
                               } else if (typeof closure_26 === "function") {
                                 closure_0 = buffer;
                                 closure_1 = arg1;
@@ -451,7 +451,7 @@ function serializeArg(buffer, arg1, arg2) {
                                 const found = items2.filter((item) => typeof dependencyMap[item] === "function");
                                 const _Boolean = Boolean;
                                 if (Boolean(found.find((item) => closure_0 instanceof dependencyMap[item]))) {
-                                  obj = { rr_type: buffer.constructor.name, index: closure_23(buffer, arg1, arg2) };
+                                  const obj = { rr_type: buffer.constructor.name, index: closure_23(buffer, arg1, arg2) };
                                   tmp3 = obj;
                                 } else {
                                   tmp3 = buffer;
@@ -473,11 +473,11 @@ function serializeArg(buffer, arg1, arg2) {
         }
       }
     }
-    const obj4 = { rr_type: buffer.constructor.name, args: null };
+    const obj7 = { rr_type: buffer.constructor.name, args: null };
     const _Object = Object;
     const items3 = [Object.values(buffer)];
-    obj4.args = items3;
-    return obj4;
+    obj7.args = items3;
+    return obj7;
   }
 }
 function initCanvasContextObserver(HTMLCanvasElement, arg1, arg2, arg3, arg4) {
@@ -615,9 +615,9 @@ let closure_8 = (() => {
           str2 = "nodeMetaMap";
           if ("nodeMetaMap" in self) {
             tmp11 = defineProperty;
-            obj = { enumerable: true, configurable: true, writable: true, value: null };
-            obj.value = weakMap;
-            tmp12 = defineProperty(self, "nodeMetaMap", obj);
+            obj1 = { enumerable: true, configurable: true, writable: true, value: null };
+            obj1.value = weakMap;
+            tmp12 = defineProperty(self, "nodeMetaMap", obj1);
           } else {
             self.nodeMetaMap = weakMap;
           }
@@ -738,7 +738,7 @@ let closure_8 = (() => {
   return _createClass(Mirror, items);
 })();
 let c10 = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
-let __rrweb_original__ = {
+let obj = {
   map: {},
   getId() {
     console.error(c10);
@@ -770,7 +770,7 @@ if (_Reflect) {
 }
 if (_Reflect) {
   const _Proxy = Proxy;
-  __rrweb_original__ = {
+  let obj2 = {
     get(arg0, arg1, arg2) {
         if ("map" === arg1) {
           const _console = console;
@@ -779,21 +779,20 @@ if (_Reflect) {
         return Reflect.get(arg0, arg1, arg2);
       }
   };
-  const proxy = new Proxy(__rrweb_original__, __rrweb_original__);
+  const proxy = new Proxy(obj, obj2);
 }
-let str = Date.now();
-str = str.toString();
+Date.now().toString();
 let closure_14 = {};
-__rrweb_original__ = {};
-((__rrweb_original__) => {
-  __rrweb_original__["2D"] = 0;
-  __rrweb_original__[0] = "2D";
-  __rrweb_original__.WebGL = 1;
-  __rrweb_original__[1] = "WebGL";
-  __rrweb_original__.WebGL2 = 2;
-  __rrweb_original__[2] = "WebGL2";
-  return __rrweb_original__;
-})(__rrweb_original__);
+let obj3 = {};
+((arg0) => {
+  arg0["2D"] = 0;
+  arg0[0] = "2D";
+  arg0.WebGL = 1;
+  arg0[1] = "WebGL";
+  arg0.WebGL2 = 2;
+  arg0[2] = "WebGL2";
+  return arg0;
+})(obj3);
 function callbackWrapper(arg0) {
 
 }

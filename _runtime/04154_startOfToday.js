@@ -1,6 +1,7 @@
 // _runtime/04154_startOfToday.js
-import startOfDay from "03889_startOfDay.js";
+import startOfDay_mod from "03889_startOfDay.js";
 
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
   const obj = { default: startOfDay };
   let tmp3 = obj;

@@ -25,56 +25,51 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
   }
 };
 export const completeSpanWithResults = function completeSpanWithResults(arg0, id, result, self) {
-  let setAttributesResult = weakMap;
   value = weakMap.get(arg0);
   if (!value) {
     const _Map = Map;
     const map = new Map();
-    result = setAttributesResult.set(arg0, map);
+    result = weakMap.set(arg0, map);
     value = map;
   }
-  value = value.get(id);
-  if (value) {
+  value2 = value.get(id);
+  if (value2) {
     let protocolVersion = result;
-    ({ span, method } = value);
+    ({ span, method } = value2);
     if ("initialize" === method) {
       const result1 = extractClientInfo.extractSessionDataFromInitializeResponse(protocolVersion);
-      setAttributesResult = {};
+      let obj2 = {};
       const merged = Object.assign(extractClientInfo.buildServerAttributesFromInfo(result1.serverInfo));
       protocolVersion = result1.protocolVersion;
       if (protocolVersion) {
-        setAttributesResult[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
+        obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
       }
-      setAttributesResult = span.setAttributes(setAttributesResult);
+      span.setAttributes(obj2);
       span.end();
       value.delete(id);
     } else {
-      setAttributesResult = self;
+      obj2 = self;
       if ("tools/call" !== method) {
         if ("prompts/get" === method) {
           span.setAttributes(
-            extractPromptResultAttributes.extractPromptResultAttributes(
-              protocolVersion,
-              setAttributesResult.recordOutputs,
-            ),
+            extractPromptResultAttributes.extractPromptResultAttributes(protocolVersion, obj2.recordOutputs),
           );
         }
       }
     }
-    setAttributesResult = span.setAttributes(
-      extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, setAttributesResult.recordOutputs),
+    obj2 = span.setAttributes(
+      extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, obj2.recordOutputs),
     );
   }
 };
 export const storeSpanForRequest = function storeSpanForRequest(self, id, startInactiveSpanResult, method) {
-  let obj = weakMap;
   value = weakMap.get(self);
   if (!value) {
     const _Map = Map;
     const map = new Map();
-    const result = obj.set(self, map);
+    const result = weakMap.set(self, map);
     value = map;
   }
-  obj = { span: startInactiveSpanResult, method, startTime: Date.now() };
-  const result1 = value.set(id, obj);
+  const result1 = value.set(id, { span: startInactiveSpanResult, method, startTime: Date.now() });
+  const obj2 = { span: startInactiveSpanResult, method, startTime: Date.now() };
 };

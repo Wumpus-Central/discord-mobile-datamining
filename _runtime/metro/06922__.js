@@ -1,9 +1,11 @@
 // _runtime/metro/06922__.js
 import jsxProd from "../react/00021_jsxProd.js";
 import LegacyBaseButton from "../06756_LegacyBaseButton.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 ({ useMemo: c3, memo } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 const memoResult = memo((nativeGestureRef) => {
   nativeGestureRef = nativeGestureRef.nativeGestureRef;
@@ -14,8 +16,7 @@ const memoResult = memo((nativeGestureRef) => {
     Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
   );
   let enableContentPanningGesture;
-  let obj = nativeGestureRef(enableContentPanningGesture[2]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
   enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
   const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
   const waitFor = bottomSheetInternal.waitFor;
@@ -23,8 +24,9 @@ const memoResult = memo((nativeGestureRef) => {
   const activeOffsetY = bottomSheetInternal.activeOffsetY;
   const failOffsetX = bottomSheetInternal.failOffsetX;
   const failOffsetY = bottomSheetInternal.failOffsetY;
-  let obj1 = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
+  const obj = nativeGestureRef(enableContentPanningGesture[2]);
+  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
+    .contentPanGestureHandler;
   let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
   const tmp3 = simultaneousHandlers(() => {
     const items = [];
@@ -109,14 +111,14 @@ const memoResult = memo((nativeGestureRef) => {
     }
     return failOffsetYResult;
   }, items1);
-  obj = { gesture: tmp4, children: null };
-  obj = { value: tmp4, children: null };
-  obj1 = { style };
+  const obj3 = { gesture: tmp4, children: null };
+  const obj4 = { value: tmp4, children: null };
+  const obj5 = { style };
   const merged1 = Object.assign(merged);
-  obj1.children = children;
-  obj.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj1);
-  obj.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj);
+  obj5.children = children;
+  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
+  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
+  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
 });
 memoResult.displayName = "BottomSheetDraggableView";
 

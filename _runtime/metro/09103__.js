@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "aksara", verb: "mempunyai" },
           file: { unit: "bait", verb: "mempunyai" },
           array: { unit: "elemen", verb: "mempunyai" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp47 == null) {
                 tmp47 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Input tidak sah: dijangka instanceof " + code.expected + ", diterima " + tmp47;
@@ -127,7 +126,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp25 = obj[code.origin];
+              let tmp25 = obj2[code.origin];
               if (tmp25 == null) {
                 tmp25 = null;
               }
@@ -137,13 +136,13 @@ if (self2) {
                   str28 = "nilai";
                 }
                 const verb = tmp25.verb;
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp25.unit;
                 if (str34 == null) {
                   str34 = "elemen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Terlalu besar: dijangka " + str28 + " " + verb + " " + str27 + str + " " + str34;
+                let combined2 = "Terlalu besar: dijangka " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -158,7 +157,7 @@ if (self2) {
               if (code.inclusive) {
                 str17 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -215,7 +214,6 @@ if (self2) {
               return "Input tidak sah";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Nilai tidak sah dalam ";
               return "Nilai tidak sah dalam " + code.origin;
             default:
               return "Input tidak sah";

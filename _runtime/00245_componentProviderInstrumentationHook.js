@@ -5,6 +5,8 @@ import frozen from "00257_frozen.js";
 import _modDef258 from "metro/00258__.js";
 import _modDef261 from "metro/00261__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 importDefault = arg2;
 const dependencyMap = {};
@@ -151,10 +153,9 @@ export const getRunnable = function getRunnable(Discord) {
   return dependencyMap[Discord];
 };
 export const getRegistry = function getRegistry() {
-  let obj = { sections: Object.keys(closure_6), runnables: null };
-  obj = {};
+  const obj = { sections: Object.keys(closure_6), runnables: null };
   const merged = Object.assign(closure_5);
-  obj.runnables = obj;
+  obj.runnables = {};
   return obj;
 };
 export function setComponentProviderInstrumentationHook(arg0) {
@@ -172,8 +173,8 @@ export const runApplication = function runApplication(name, arg1, arg2) {
       name +
       "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.",
   );
-  const obj = { name };
-  obj.setActiveScene(obj);
+  _modDef258.setActiveScene({ name });
+  const obj2 = { name };
   dependencyMap[name](arg1, frozen.coerceDisplayMode(arg2));
 };
 export const setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {

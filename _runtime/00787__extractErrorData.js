@@ -10,11 +10,10 @@ import setupIntegration from "00752_setupIntegration.js";
 function _extractErrorData(cause, arg1, arg2) {
   try {
     const items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
-    let obj = {};
+    const obj = {};
     const _Object = Object;
     const keys = Object.keys(cause);
     const iter = keys[Symbol.iterator]();
-    let str = "";
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp9 = nextResult;
@@ -46,9 +45,9 @@ function _extractErrorData(cause, arg1, arg2) {
           if (!name) {
             name = cause.cause.constructor.name;
           }
-          obj = {};
-          obj[name] = _extractErrorData(cause.cause, false, arg2);
-          obj.cause = obj;
+          const obj2 = {};
+          obj2[name] = _extractErrorData(cause.cause, false, arg2);
+          obj.cause = obj2;
         } else {
           obj.cause = cause.cause;
         }
@@ -64,11 +63,11 @@ function _extractErrorData(cause, arg1, arg2) {
         let str2 = tmp24;
         let obj4 = _mod692;
         if (obj4.isError(tmp24)) {
-          str = str2.toString();
+          let str1 = str2.toString();
         } else {
-          str = str2;
+          str1 = str2;
         }
-        obj[item10058] = str;
+        obj[item10058] = str1;
         continue;
       }
       const tmp53 = toJSONResult;
@@ -93,7 +92,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
   const depth = obj.depth;
   const captureErrorCause = obj.captureErrorCause;
   closure_1 = undefined === captureErrorCause || captureErrorCause;
-  obj = {
+  return {
     name: "ExtraErrorData",
     processEvent(contexts, arg1, getOptions) {
       let obj = arg1;
@@ -107,24 +106,20 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
           const tmp8 = _extractErrorData(obj.originalException, closure_1, getOptions.getOptions().maxValueLength);
           tmp3 = contexts;
           if (tmp8) {
-            obj = {};
+            const obj3 = {};
             const merged = Object.assign(contexts.contexts);
             const normalizer = normalize;
             const normalizeResult = normalizer.normalize(tmp8, num);
-            let tmp4Result = _mod692;
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              tmp4Result = _mod687;
-              const result = tmp4Result.addNonEnumerableProperty(
-                normalizeResult,
-                "__sentry_skip_normalization__",
-                true,
-              );
-              obj[tmp6] = normalizeResult;
+              const result = _mod687.addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              obj3[tmp6] = normalizeResult;
+              const tmp4Result2 = _mod687;
             }
-            obj = {};
+            const obj4 = {};
             const merged1 = Object.assign(contexts);
-            obj.contexts = obj;
-            tmp3 = obj;
+            obj4.contexts = obj3;
+            tmp3 = obj4;
+            tmp4Result = _mod692;
           }
           tmp6 = obj.originalException.name || obj.originalException.constructor.name;
         }
@@ -133,5 +128,4 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       return tmp3;
     },
   };
-  return obj;
 });

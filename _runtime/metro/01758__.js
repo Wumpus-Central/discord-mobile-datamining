@@ -1,5 +1,5 @@
 // _runtime/metro/01758__.js
-import _slicedToArray from "00032__.js";
+import _slicedToArray_mod from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
   code: "function pnpm_PinwheelTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{scale:delayFunction(delay,animation(1,config))},{rotate:delayFunction(delay,animation('0rad',config))}]},initialValues:{opacity:0,transform:[{scale:0},{rotate:'5rad'}],...initialValues},callback:callback};}",
 };
@@ -55,17 +56,18 @@ class PinwheelIn {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("0rad", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj2 = { opacity: 0, transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ scale: delayFunction(delay, first(1, closure_2)) }];
+        const obj3 = { scale: delayFunction(delay, first(1, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("0rad", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { opacity: 0, transform: null };
         const items1 = [{ scale: 0 }, { rotate: "5rad" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };
@@ -119,17 +121,18 @@ class PinwheelOut {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("5rad", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj2 = { opacity: 1, transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ scale: delayFunction(delay, first(0, closure_2)) }];
+        const obj3 = { scale: delayFunction(delay, first(0, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("5rad", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { opacity: 1, transform: null };
         const items1 = [{ scale: 1 }, { rotate: "0rad" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };

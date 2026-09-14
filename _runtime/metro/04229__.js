@@ -176,17 +176,6 @@ const fn = function t(moment) {
       default:
     }
   }
-  let obj = {
-    standalone:
-      "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
-        "_",
-      ),
-    format:
-      "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
-        "_",
-      ),
-    isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
-  };
   const items = [
     /^led/i,
     /^úno/i,
@@ -203,8 +192,30 @@ const fn = function t(moment) {
   ];
   const tmp =
     /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
-  obj = {
-    months: obj,
+  const obj = {
+    standalone:
+      "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
+        "_",
+      ),
+    format:
+      "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
+        "_",
+      ),
+    isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+  };
+  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
+  return moment.defineLocale("cs", {
+    months: {
+      standalone:
+        "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
+          "_",
+        ),
+      format:
+        "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
+          "_",
+        ),
+      isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+    },
     monthsShort: "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split(
       "_",
     ),
@@ -298,9 +309,7 @@ const fn = function t(moment) {
     dayOfMonthOrdinalParse: /\d{1,2}\./,
     ordinal: "%d.",
     week: { dow: 1, doy: 4 },
-  };
-  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
-  return moment.defineLocale("cs", obj);
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {

@@ -33,6 +33,8 @@ import _mod1578 from "metro/01578__.js";
 import _mod1579 from "metro/01579__.js";
 import _mod1580 from "metro/01580__.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("PrivateValueStore")) {
   arg5[key10013] = require("PrivateValueStore")[key10013];
   continue;

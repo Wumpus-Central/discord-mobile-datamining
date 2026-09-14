@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "k\u00FD t\u1EF1", verb: "c\u00F3" },
           file: { unit: "byte", verb: "c\u00F3" },
           array: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp47 == null) {
                 tmp47 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -139,7 +138,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp25 = obj[code.origin];
+              let tmp25 = obj2[code.origin];
               if (tmp25 == null) {
                 tmp25 = null;
               }
@@ -149,14 +148,14 @@ if (self2) {
                   str28 = "gi\u00E1 tr\u1ECB";
                 }
                 const verb = tmp25.verb;
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp25.unit;
                 if (str34 == null) {
                   str34 = "ph\u1EA7n t\u1EED";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "Qu\u00E1 l\u1EDBn: mong \u0111\u1EE3i " + str28 + " " + verb + " " + str27 + str + " " + str34;
+                  "Qu\u00E1 l\u1EDBn: mong \u0111\u1EE3i " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -171,7 +170,7 @@ if (self2) {
               if (code.inclusive) {
                 str17 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -237,7 +236,6 @@ if (self2) {
               return "\u0110\u1EA7u v\u00E0o kh\u00F4ng h\u1EE3p l\u1EC7";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Gi\u00E1 tr\u1ECB kh\u00F4ng h\u1EE3p l\u1EC7 trong ";
               return "Gi\u00E1 tr\u1ECB kh\u00F4ng h\u1EE3p l\u1EC7 trong " + code.origin;
             default:
               return "\u0110\u1EA7u v\u00E0o kh\u00F4ng h\u1EE3p l\u1EC7";

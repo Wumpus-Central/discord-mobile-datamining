@@ -1,6 +1,6 @@
 // _runtime/01454_callBind.js
-import callBindBasic from "01293_callBindBasic.js";
-import flag from "01306_flag.js";
+import callBindBasic from "01291_callBindBasic.js";
+import flag from "01304_flag.js";
 import _mod1455 from "metro/01455__.js";
 import applyBind from "01458_applyBind.js";
 

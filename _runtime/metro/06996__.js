@@ -1,6 +1,6 @@
 // _runtime/metro/06996__.js
 import _modDef6986 from "06986__.js";
-import _classCallCheck from "06967__.js";
+import _classCallCheck_mod from "06967__.js";
 import _createClass from "06968__.js";
 import _getPrototypeOf from "06988__.js";
 import _get from "06989__.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _modDef6986;
 class RVGridLayoutManagerImpl {
   constructor(arg0, arg1) {

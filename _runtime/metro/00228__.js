@@ -46,24 +46,25 @@ class AbortSignal {
 }
 AbortController = AbortSignal;
 _inherits(AbortSignal, Event.EventTarget);
-let obj = {
-  key: "aborted",
-  get() {
-    const self = this;
-    value = weakMap.get(this);
-    if (typeof value !== "boolean") {
-      let str = "null";
-      if (null !== self) {
-        str = typeof self;
+const items = [
+  {
+    key: "aborted",
+    get() {
+      const self = this;
+      value = weakMap.get(this);
+      if (typeof value !== "boolean") {
+        let str = "null";
+        if (null !== self) {
+          str = typeof self;
+        }
+        const typeError = new TypeError("Expected 'this' to be an 'AbortSignal' object, but got " + str);
+        throw typeError;
+      } else {
+        return value;
       }
-      const typeError = new TypeError("Expected 'this' to be an 'AbortSignal' object, but got " + str);
-      throw typeError;
-    } else {
-      return value;
-    }
+    },
   },
-};
-const items = [obj];
+];
 const _moduleResult = _createClass(AbortSignal, items);
 const metroRequire = _moduleResult;
 Event.defineEventAttribute(_moduleResult.prototype, "abort");
@@ -96,25 +97,24 @@ class AbortController {
     return;
   }
 }
-obj = {
-  key: "signal",
-  get() {
-    const self = this;
-    value = weakMap1.get(this);
-    if (null == value) {
-      let str = "null";
-      if (null !== self) {
-        str = typeof self;
-      }
-      const typeError = new TypeError("Expected 'this' to be an 'AbortController' object, but got " + str);
-      throw typeError;
-    } else {
-      return value;
-    }
-  },
-};
 const items1 = [
-  obj,
+  {
+    key: "signal",
+    get() {
+      const self = this;
+      value = weakMap1.get(this);
+      if (null == value) {
+        let str = "null";
+        if (null !== self) {
+          str = typeof self;
+        }
+        const typeError = new TypeError("Expected 'this' to be an 'AbortController' object, but got " + str);
+        throw typeError;
+      } else {
+        return value;
+      }
+    },
+  },
   {
     key: "abort",
     value: function abort() {

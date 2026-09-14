@@ -110,7 +110,7 @@ const entry = {
   key: "attachInlineProps",
   value: function attachInlineProps(self, self2) {
     const props = self.props;
-    let _inlineProps = {};
+    const _inlineProps = {};
     for (const key10008 in props) {
       let tmp20 = props[key10008];
       if ("style" === key10008) {
@@ -187,8 +187,8 @@ const entry = {
           const tmp7Result = tmp7(1735);
         }
         const _inlinePropsViewDescriptors = self._inlinePropsViewDescriptors;
-        _inlineProps = { tag: viewTag, name: viewName, shadowNodeWrapper };
-        _inlinePropsViewDescriptors.add(_inlineProps);
+        const obj5 = { tag: viewTag, name: viewName, shadowNodeWrapper };
+        _inlinePropsViewDescriptors.add(obj5);
         tmp10 = Object.keys(_inlineProps).length && viewConfig;
       }
       const shareableViewDescriptors = self._inlinePropsViewDescriptors.shareableViewDescriptors;
@@ -197,24 +197,21 @@ const entry = {
         obj = InlinePropManager(1736);
         obj.updateProps(dependencyMap, getInlinePropsUpdate(obj));
       };
-      _inlineProps = { getInlinePropsUpdate, newInlineProps: null, updateProps: null, shareableViewDescriptors: null };
-      _inlineProps.newInlineProps = _inlineProps;
-      _inlineProps.updateProps = _inlineProps(1736).updateProps;
-      _inlineProps.shareableViewDescriptors = shareableViewDescriptors;
-      fn.__closure = _inlineProps;
+      const obj6 = { getInlinePropsUpdate, newInlineProps: _inlineProps, updateProps: _inlineProps(1736).updateProps, shareableViewDescriptors };
+      fn.__closure = obj6;
       fn.__workletHash = 4459550727912;
       fn.__initData = __initData;
       self._inlineProps = _inlineProps;
       if (self._inlinePropsMapperId) {
-        let tmp14Result = tmp14(1684);
-        tmp14Result.stopMapper(self._inlinePropsMapperId);
+        tmp14(1684).stopMapper(self._inlinePropsMapperId);
+        const tmp14Result = tmp14(1684);
       }
       self._inlinePropsMapperId = null;
       const _Object2 = Object;
       if (Object.keys(_inlineProps).length) {
-        tmp14Result = tmp14(1684);
         const _Object3 = Object;
-        self._inlinePropsMapperId = tmp14Result.startMapper(fn, Object.values(_inlineProps));
+        self._inlinePropsMapperId = tmp14(1684).startMapper(fn, Object.values(_inlineProps));
+        const tmp14Result2 = tmp14(1684);
       }
     }
   }

@@ -70,7 +70,7 @@ export default function processBackgroundSize(str) {
             } else {
               let point1 = { x: null, y: "auto" };
               point1.x = tmp21;
-              arr = items.push(point1);
+              let arr2 = items.push(point1);
             }
           }
           continue;

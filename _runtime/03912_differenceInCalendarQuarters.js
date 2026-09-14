@@ -1,25 +1,28 @@
 // _runtime/03912_differenceInCalendarQuarters.js
-import 03913__ from "metro/03913__.js";
-import _typeof from "metro/03725__.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3913_mod from "metro/03913__.js";
+import _typeof_mod from "metro/03725__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3913 = module_3913_mod;
 if (!module_3913) {
-  let obj = { default: module_3913 };
+  const obj = { default: module_3913 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3913;
 }
 module_3913 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

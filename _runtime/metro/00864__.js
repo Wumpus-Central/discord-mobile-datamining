@@ -7,8 +7,7 @@ const dependencyMap = arg6;
 export default function getDevServer() {
   let str = first;
   if (undefined === first) {
-    let obj = _modDef82;
-    str2 = obj.getConstants().scriptURL;
+    str2 = _modDef82.getConstants().scriptURL;
     const match = str2.match(/^https?:\/\/.*?\//);
     first = null;
     if (match) {
@@ -24,6 +23,5 @@ export default function getDevServer() {
   if (str == null) {
     str = "http://localhost:8081/";
   }
-  obj = { url: str, fullBundleUrl: str2, bundleLoadedFromServer: null !== first };
-  return obj;
+  return { url: str, fullBundleUrl: str2, bundleLoadedFromServer: null !== first };
 }

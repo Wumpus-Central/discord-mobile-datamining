@@ -1,7 +1,8 @@
 // _runtime/metro/04142__.js
 import _mod3730 from "03730__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   let obj = { default: requiredArgs };
   let tmp3 = obj;

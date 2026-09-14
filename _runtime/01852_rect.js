@@ -4,7 +4,7 @@ import TEST_ID_KEYBOARD_TOOLBAR from "01854_TEST_ID_KEYBOARD_TOOLBAR.js";
 import Background from "01857_Background.js";
 import _slicedToArray from "metro/00032__.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 require = fn;
 let closure_3 = [
@@ -26,6 +26,7 @@ let closure_3 = [
 ];
 let noop = fn(19);
 ({ useEffect: metroRequire, useMemo: closure_7, useState: closure_8 } = noop);
+let noop = noop_mod;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c10 } = get_ActivityIndicator);
 const jsxProd = fn(21);
@@ -112,9 +113,7 @@ class KeyboardToolbar {
     items1 = [];
     items1[0] = insets;
     tmp20 = closure_7(() => {
-      const items = [doneText.toolbar, , ,];
-      let obj = { backgroundColor: "" + theme[keyboardState].background + DEFAULT_OPACITY };
-      items[1] = obj;
+      const items = [doneText.toolbar, { backgroundColor: "" + theme[keyboardState].background + DEFAULT_OPACITY }, ,];
       let tmp4 = null;
       if (!TEST_ID_KEYBOARD_TOOLBAR.KEYBOARD_HAS_ROUNDED_CORNERS) {
         const rect = insets;
@@ -122,13 +121,13 @@ class KeyboardToolbar {
         if (insets != null) {
           left = rect.left;
         }
-        obj = { paddingLeft: left, paddingRight: null };
+        const obj2 = { paddingLeft: left, paddingRight: null };
         let right;
         if (rect != null) {
           right = rect.right;
         }
-        obj.paddingRight = right;
-        tmp4 = obj;
+        obj2.paddingRight = right;
+        tmp4 = obj2;
       }
       items[2] = tmp4;
       let floating = null;
@@ -145,7 +144,7 @@ class KeyboardToolbar {
       const items = [doneText.sticky];
       let tmp = null;
       if (TEST_ID_KEYBOARD_TOOLBAR.KEYBOARD_HAS_ROUNDED_CORNERS) {
-        let rect = insets;
+        const rect = insets;
         num = undefined;
         if (insets != null) {
           num = rect.left;
@@ -153,7 +152,7 @@ class KeyboardToolbar {
         if (num == null) {
           num = 0;
         }
-        rect = { left: num + 16, right: null };
+        const rect1 = { left: num + 16, right: null };
         let num3;
         if (rect != null) {
           num3 = rect.right;
@@ -161,8 +160,8 @@ class KeyboardToolbar {
         if (num3 == null) {
           num3 = 0;
         }
-        rect.right = num3 + 16;
-        tmp = rect;
+        rect1.right = num3 + 16;
+        tmp = rect1;
       }
       items[1] = tmp;
       return items;
@@ -204,16 +203,16 @@ class KeyboardToolbar {
       if (closure_9) {
         tmp39 = closure_11;
         tmp40 = closure_10;
-        obj = { style: null, children: null };
+        obj1 = { style: null, children: null };
         tmp41 = closure_13;
-        obj.style = closure_13.arrows;
+        obj1.style = closure_13.arrows;
         tmp42 = closure_9;
         items3 = [,];
         items3[0] = closure_9;
         tmp43 = closure_10;
         items3[1] = closure_10;
-        obj.children = items3;
-        tmp38 = closure_11(closure_10, obj);
+        obj1.children = items3;
+        tmp38 = closure_11(closure_10, obj1);
       } else {
         tmp37 = closure_10;
         tmp38 = null;
@@ -221,10 +220,10 @@ class KeyboardToolbar {
       tmp44 = closure_11;
       if (closure_11 == null) {
         tmp45 = closure_12;
-        obj1 = { children: null };
+        obj13 = { children: null };
         tmp46 = closure_11;
-        obj1.children = closure_11;
-        tmp44 = closure_12(tmp9(tmp10[11]).Content, obj1);
+        obj13.children = closure_11;
+        tmp44 = closure_12(tmp9(tmp10[11]).Content, obj13);
       }
       tmp31 = tmp44;
       tmp28Result = tmp35;
@@ -235,35 +234,35 @@ class KeyboardToolbar {
       if (tmp3) {
         tmp24 = closure_11;
         tmp25 = closure_10;
-        obj2 = { style: null, children: null };
+        obj14 = { style: null, children: null };
         tmp26 = closure_13;
-        obj2.style = closure_13.arrows;
+        obj14.style = closure_13.arrows;
         tmp27 = closure_12;
-        obj3 = { button: null, icon: null, onPress: null };
-        obj3.button = button;
-        obj3.icon = icon;
-        obj3.onPress = onPrevCallback;
+        obj15 = { button: null, icon: null, onPress: null };
+        obj15.button = button;
+        obj15.icon = icon;
+        obj15.onPress = onPrevCallback;
         items4 = [,];
-        items4[0] = closure_12(tmp9(tmp10[11]).Prev, obj3);
-        obj4 = { button: null, icon: null, onPress: null };
-        obj4.button = button;
-        obj4.icon = icon;
-        obj4.onPress = onNextCallback;
-        items4[1] = closure_12(tmp9(tmp10[11]).Next, obj4);
-        obj2.children = items4;
-        tmp23 = closure_11(closure_10, obj2);
+        items4[0] = closure_12(tmp9(tmp10[11]).Prev, obj15);
+        obj16 = { button: null, icon: null, onPress: null };
+        obj16.button = button;
+        obj16.icon = icon;
+        obj16.onPress = onNextCallback;
+        items4[1] = closure_12(tmp9(tmp10[11]).Next, obj16);
+        obj14.children = items4;
+        tmp23 = closure_11(closure_10, obj14);
       }
       tmp28 = closure_12;
-      obj5 = { children: null };
-      obj5.children = global.content;
+      obj17 = { children: null };
+      obj17.children = global.content;
       tmp28Result = null;
-      tmp29 = closure_12(tmp9(tmp10[11]).Content, obj5);
+      tmp29 = closure_12(tmp9(tmp10[11]).Content, obj17);
       if (str) {
-        obj6 = { button: null, text: null, onPress: null };
-        obj6.button = button;
-        obj6.text = str;
-        obj6.onPress = onDoneCallback;
-        tmp28Result = tmp28(tmp9(tmp10[11]).Done, obj6);
+        obj18 = { button: null, text: null, onPress: null };
+        obj18.button = button;
+        obj18.text = str;
+        obj18.onPress = onDoneCallback;
+        tmp28Result = tmp28(tmp9(tmp10[11]).Done, obj18);
       }
       tmp31 = tmp29;
     }
@@ -272,22 +271,22 @@ class KeyboardToolbar {
     items5[1] = tmp14;
     items5[2] = tmp15;
     tmp19Result = tmp19(() => ({ theme, isPrevDisabled, isNextDisabled }), items5);
-    obj7 = { value: tmp19Result, children: null };
-    obj8 = { enabled: tmp7, offset: tmp22, style: tmp21, children: null };
-    obj9 = {};
+    obj19 = { value: tmp19Result, children: null };
+    obj20 = { enabled: tmp7, offset: tmp22, style: tmp21, children: null };
+    obj21 = {};
     tmp48 = DEFAULT_OPACITY(tmp10[13]);
     merged = Object.assign(tmp8);
-    obj9.style = tmp20;
-    obj9.testID = tmp9(tmp10[6]).TEST_ID_KEYBOARD_TOOLBAR;
+    obj21.style = tmp20;
+    obj21.testID = tmp9(tmp10[6]).TEST_ID_KEYBOARD_TOOLBAR;
     items6 = [, , ,];
     items6[0] = tmp4;
     items6[1] = tmp23;
     items6[2] = tmp31;
     items6[3] = tmp28Result;
-    obj9.children = items6;
-    obj8.children = closure_11(closure_10, obj9);
-    obj7.children = closure_12(tmp48, obj8);
-    return closure_12(tmp9(tmp10[12]).ToolbarContext.Provider, obj7);
+    obj21.children = items6;
+    obj20.children = closure_11(closure_10, obj21);
+    obj19.children = closure_12(tmp48, obj20);
+    return closure_12(tmp9(tmp10[12]).ToolbarContext.Provider, obj19);
   }
 }
 let obj = { sticky: null, toolbar: null, arrows: null, floating: null };

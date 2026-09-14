@@ -1,6 +1,8 @@
 // _runtime/04413__temp2.js
 import _slicedToArray from "metro/00032__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 function _temp2(arg0) {
   return arg0 + 1;
@@ -18,12 +20,12 @@ const noop = fn(19);
 export const useRiveList = function useRiveList(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
-  let obj = require("c");
-  const cResult = obj.c(39);
-  [tmp5, _slicedToArray] = _slicedToArray(disposableMemo(null), 2);
+  const cResult = require("c").c(39);
+  const obj = require("c");
   let tmp = _require;
+  [tmp5, _slicedToArray] = disposableMemo(null);
   const tmp4 = _slicedToArray(disposableMemo(null), 2);
-  [r10021, closure_3] = _slicedToArray(disposableMemo(0), 2);
+  [r10021, closure_3] = disposableMemo(0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
       _slicedToArray(null);
@@ -316,7 +318,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 }
               }
             }
-            obj = {
+            const obj2 = {
               length: undefined,
               getInstanceAt: R,
               addInstance: tmp24,
@@ -334,7 +336,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
             cResult[35] = O;
             cResult[36] = tmp28;
             cResult[37] = tmp30;
-            cResult[38] = obj;
+            cResult[38] = obj2;
           }
         }
         const fn3 = function b() {

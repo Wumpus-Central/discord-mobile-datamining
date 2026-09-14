@@ -1,7 +1,8 @@
 // _runtime/04167_yearsToMonths.js
 import daysInWeek from "03904_daysInWeek.js";
-import requiredArgs from "03726_requiredArgs.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

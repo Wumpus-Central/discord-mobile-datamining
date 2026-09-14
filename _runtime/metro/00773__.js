@@ -9,8 +9,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   closure_0 = arg1;
-  let consoleSandboxResult = _mod713;
-  const client = consoleSandboxResult.getClient();
+  const client = _mod713.getClient();
   const isolationScope = _mod713.getIsolationScope();
   if (client) {
     const options = client.getOptions();
@@ -26,21 +25,19 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
       num = maxBreadcrumbs;
     }
     if (num > 0) {
-      consoleSandboxResult = { timestamp: null };
-      let tmpResult = dateTimestampInSeconds;
-      consoleSandboxResult.timestamp = tmpResult.dateTimestampInSeconds();
+      let obj2 = { timestamp: dateTimestampInSeconds.dateTimestampInSeconds() };
       const merged = Object.assign(arg0);
-      closure_2 = consoleSandboxResult;
       if (tmp5) {
-        tmpResult = consoleSandbox;
-        consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(consoleSandboxResult, closure_0));
+        obj2 = consoleSandbox.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = consoleSandbox;
       }
-      if (null !== consoleSandboxResult) {
+      if (null !== obj2) {
         if (client.emit) {
-          client.emit("beforeAddBreadcrumb", consoleSandboxResult, arg1);
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
         }
-        isolationScope.addBreadcrumb(consoleSandboxResult, num);
+        isolationScope.addBreadcrumb(obj2, num);
       }
+      const tmpResult = dateTimestampInSeconds;
     }
   }
 };

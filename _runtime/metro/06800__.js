@@ -10,11 +10,11 @@ let obj = {
     closure_1 = handlerTag;
     dependencyMap = config;
     const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj = closure_2;
+      let obj2 = closure_2;
       if (!closure_2) {
-        obj = {};
+        obj2 = {};
       }
-      obj.createGestureHandler(closure_0, closure_1, obj);
+      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
     });
   },
   setGestureHandlerConfig(handlerTag, result) {
@@ -33,8 +33,10 @@ fn = function n(arg0, arg1) {
   const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
   RNGestureHandlerModuleDefault.flushOperations();
 };
-obj = { updateGestureHandlerConfig: fn(6785).updateGestureHandlerConfig, flushOperations: fn(6785).flushOperations };
-fn.__closure = obj;
+fn.__closure = {
+  updateGestureHandlerConfig: fn(6785).updateGestureHandlerConfig,
+  flushOperations: fn(6785).flushOperations,
+};
 fn.__workletHash = 12442858879797;
 fn.__initData = {
   code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",

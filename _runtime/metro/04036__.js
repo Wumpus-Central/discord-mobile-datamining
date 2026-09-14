@@ -1,6 +1,6 @@
 // _runtime/metro/04036__.js
 import Parser2 from "../04031_Parser.js";
-import startOfUTCISOWeek from "../03962_startOfUTCISOWeek.js";
+import startOfUTCISOWeek_mod from "../03962_startOfUTCISOWeek.js";
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -54,6 +54,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
 if (!startOfUTCISOWeek) {
   let obj = { default: startOfUTCISOWeek };
   let tmp3 = obj;
@@ -154,8 +155,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: ISOWeekYearParser, writable: true, configurable: true } };
-ISOWeekYearParser.prototype = Object.create(prototype, obj);
+ISOWeekYearParser.prototype = Object.create(prototype, {
+  constructor: { value: ISOWeekYearParser, writable: true, configurable: true },
+});
 if (Parser) {
   _setPrototypeOf(ISOWeekYearParser, Parser);
 }

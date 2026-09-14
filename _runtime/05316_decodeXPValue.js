@@ -4,7 +4,7 @@ function decodeXPValue(arg0) {
   const uint8Array = new Uint8Array(arg0);
   return decoder.decode(uint8Array).replace(/\u0000+$/, "");
 }
-let obj = {
+const obj = {
   11: "ProcessingSoftware",
   254: null,
   255: null,
@@ -235,10 +235,9 @@ obj[274] = {
     return str;
   },
 };
-obj = { name: "XResolution", description: fn(5317).XResolution };
-obj[282] = obj;
-obj = { name: "YResolution", description: fn(5317).YResolution };
-obj[283] = obj;
+obj[282] = { name: "XResolution", description: fn(5317).XResolution };
+const obj2 = { name: "XResolution", description: fn(5317).XResolution };
+obj[283] = { name: "YResolution", description: fn(5317).YResolution };
 obj[286] = {
   name: "XPosition",
   description(arg0) {
@@ -257,6 +256,7 @@ obj[290] = {
     return { 1: "0.1", 2: "0.001", 3: "0.0001", 4: "1e-05", 5: "1e-06" }[arg0] || "Unknown";
   },
 };
+const obj3 = { name: "YResolution", description: fn(5317).YResolution };
 obj[296] = { name: "ResolutionUnit", description: fn(5317).ResolutionUnit };
 obj[318] = {
   name: "WhitePoint",
@@ -341,9 +341,9 @@ obj[50741] = {
     return { 0: "Unsafe", 1: "Safe" }[arg0] || "Unknown";
   },
 };
-const obj1 = { name: "ResolutionUnit", description: fn(5317).ResolutionUnit };
+const obj4 = { name: "ResolutionUnit", description: fn(5317).ResolutionUnit };
 obj[50778] = { name: "CalibrationIlluminant1", description: fn(5317).LightSource };
-const obj2 = { name: "CalibrationIlluminant1", description: fn(5317).LightSource };
+const obj5 = { name: "CalibrationIlluminant1", description: fn(5317).LightSource };
 obj[50779] = { name: "CalibrationIlluminant2", description: fn(5317).LightSource };
 obj[50941] = {
   name: "ProfileEmbedPolicy",

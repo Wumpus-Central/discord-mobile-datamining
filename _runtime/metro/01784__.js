@@ -15,7 +15,7 @@ export const useAnimatedKeyboard = function useAnimatedKeyboard() {
     obj = { isStatusBarTranslucentAndroid: "Array", isNavigationBarTranslucentAndroid: "PX_16" };
   }
   let ref2;
-  obj = undefined;
+  let obj2;
   const tmp = ref2(null);
   dependencyMap = tmp;
   const tmp2 = ref2(-1);
@@ -23,22 +23,20 @@ export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   const tmp3 = ref2(false);
   ref2 = tmp3;
   if (null === tmp.current) {
-    obj = { state: null, height: null };
-    obj.state = obj(1680).makeMutable(obj(1661).KeyboardState.UNKNOWN);
+    obj2 = { state: obj(1680).makeMutable(obj(1661).KeyboardState.UNKNOWN), height: null };
     const obj3 = obj(1680);
-    obj.height = obj(1680).makeMutable(0);
+    obj2.height = obj(1680).makeMutable(0);
     const obj4 = obj(1680);
     let fn = function c(value, value2) {
-      obj.state.value = value;
-      obj.height.value = value2;
+      obj2.state.value = value;
+      obj2.height.value = value2;
     };
-    obj = { keyboardEventData: null };
-    obj.keyboardEventData = obj;
-    fn.__closure = obj;
+    const obj6 = { keyboardEventData: obj2 };
+    fn.__closure = obj6;
     fn.__workletHash = 4393537867728;
-    fn.__initData = obj;
+    fn.__initData = obj2;
     tmp2.current = obj(1680).subscribeForKeyboardEvents(fn, obj);
-    tmp.current = obj;
+    tmp.current = obj2;
     tmp3.current = true;
     const obj5 = obj(1680);
   }
@@ -46,13 +44,13 @@ export const useAnimatedKeyboard = function useAnimatedKeyboard() {
     if (false === ref2.current) {
       if (null !== ref.current) {
         const current = ref.current;
-        obj(ref[1]);
+        obj = obj(ref[1]);
         const fn = function u(value, value2) {
           current.state.value = value;
           current.height.value = value2;
         };
-        obj = { _keyboardEventData: current };
-        fn.__closure = obj;
+        obj2 = { _keyboardEventData: current };
+        fn.__closure = obj2;
         fn.__workletHash = 5041909921996;
         fn.__initData = __initData;
         ref.current = obj.subscribeForKeyboardEvents(fn, current);

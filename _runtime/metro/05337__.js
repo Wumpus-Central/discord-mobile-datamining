@@ -8,14 +8,13 @@ const dependencyMap = arg6;
 
 export default {
   read(byteLength, sum, arg2, byteOrder, arg4) {
-    let obj = get0thIfdOffset;
-    const ifd = obj.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
     let tmp6 = ifd;
     if (ifd.ShotInfo) {
       value = ifd.ShotInfo.value;
-      obj = {};
+      const obj2 = {};
       if (undefined !== value[27]) {
-        obj = { value: value[27], description: null };
+        const obj3 = { value: value[27], description: null };
         let str = "None";
         if (0 !== value[27]) {
           let str2 = "Rotate 90 CW";
@@ -32,13 +31,13 @@ export default {
           }
           str = str2;
         }
-        obj.description = str;
-        obj.AutoRotate = obj;
+        obj3.description = str;
+        obj2.AutoRotate = obj3;
       }
       const tmp3Result = _mod5294;
       delete tmp[tmp2];
-      tmp6 = _mod5294.objectAssign({}, ifd, obj);
-      const objectAssignResult = _mod5294.objectAssign({}, ifd, obj);
+      tmp6 = _mod5294.objectAssign({}, ifd, obj2);
+      const objectAssignResult = _mod5294.objectAssign({}, ifd, obj2);
     }
     return tmp6;
   },

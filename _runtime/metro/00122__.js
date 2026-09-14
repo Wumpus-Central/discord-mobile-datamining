@@ -2,6 +2,8 @@
 import _mod27 from "00027__.js";
 import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
 
+const require = globalThis.__r;
+
 const global = arg0;
 require = arg1;
 const dependencyMap = arg6;

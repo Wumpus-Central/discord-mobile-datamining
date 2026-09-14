@@ -103,7 +103,7 @@ export default function extractGradient(gradientTransform, parent) {
     const items2 = [];
     for (let num11 = 0; num11 < length2; num11 = num11 + 1) {
       let tmp20 = items[num11];
-      arr = items2.push(tmp20[0], tmp20[1]);
+      let arr2 = items2.push(tmp20[0], tmp20[1]);
     }
     const obj = { name: id, gradient: items2, children: mapped, gradientUnits: null, gradientTransform: null };
     let num12 = gradientUnits;

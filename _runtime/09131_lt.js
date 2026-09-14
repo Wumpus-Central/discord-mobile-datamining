@@ -1,9 +1,11 @@
 // _runtime/09131_lt.js
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 
-export const lt = require("metro/09064__.js")._gt;
-export const lte = require("metro/09064__.js")._gt;
+export const lt = require("metro/09064__.js")._lt;
+export const lte = require("metro/09064__.js")._lte;
 export const gt = require("metro/09064__.js")._gt;
 export const gte = require("metro/09064__.js")._gte;
 export const positive = require("metro/09064__.js")._positive;

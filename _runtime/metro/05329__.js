@@ -32,22 +32,21 @@ function readTags(_raw, buffer, arg2) {
   try {
     let str = _raw._raw;
     ({ doc, raw } = (function getDocument(byteLength, arg1) {
-      let obj = _modDef5330;
-      value = obj.get(arg1);
+      value = _modDef5330.get(arg1);
       if (value) {
         let str2 = byteLength;
         if (typeof byteLength !== "string") {
           str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
           const obj3 = ParseError(dependencyMap[7]);
         }
-        obj = {
+        const obj2 = {
           doc: parseFromString(
             value,
             str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
           ),
           raw: str2,
         };
-        return obj;
+        return obj2;
       } else {
         const _console = console;
         console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
@@ -61,22 +60,21 @@ function readTags(_raw, buffer, arg2) {
     }
     _raw._raw = str + raw;
     const tmp4 = (function getDocument(byteLength, arg1) {
-      let obj = _modDef5330;
-      value = obj.get(arg1);
+      value = _modDef5330.get(arg1);
       if (value) {
         let str2 = byteLength;
         if (typeof byteLength !== "string") {
           str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
           const obj3 = ParseError(dependencyMap[7]);
         }
-        obj = {
+        const obj2 = {
           doc: parseFromString(
             value,
             str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
           ),
           raw: str2,
         };
-        return obj;
+        return obj2;
       } else {
         const _console = console;
         console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
@@ -151,12 +149,10 @@ function convertToObject(childNodes, arg1) {
   }
   if (tmp2) {
     if (flag) {
-      let nodeValue = {};
-    } else {
-      nodeValue = items[0].nodeValue;
+      let obj2 = {};
     }
   } else {
-    nodeValue = {};
+    let attributes = {};
     const item = items.forEach((nodeName) => {
       let length;
       nodeName = nodeName.nodeName;
@@ -164,33 +160,33 @@ function convertToObject(childNodes, arg1) {
         nodeName = "#text" !== nodeName.nodeName;
       }
       if (nodeName) {
-        let obj = {};
+        attributes = {};
         let num3 = 0;
         if (0 < nodeName.attributes.length) {
           do {
             let _decodeURIComponent = decodeURIComponent;
             let _escape = escape;
-            obj[nodeName.attributes[num3].nodeName] = decodeURIComponent(escape(nodeName.attributes[num3].value));
+            attributes[nodeName.attributes[num3].nodeName] = decodeURIComponent(
+              escape(nodeName.attributes[num3].value),
+            );
             num3 = num3 + 1;
             length = nodeName.attributes.length;
           } while (num3 < length);
         }
-        obj = { attributes: null, value: null };
-        obj.attributes = obj;
-        obj.value = convertToObject(nodeName);
-        if (undefined !== nodeValue[nodeName.nodeName]) {
+        const obj2 = { attributes, value: convertToObject(nodeName) };
+        if (undefined !== attributes[nodeName.nodeName]) {
           const _Array = Array;
-          if (!Array.isArray(nodeValue[nodeName.nodeName])) {
-            const items = [nodeValue[nodeName.nodeName]];
-            nodeValue[nodeName.nodeName] = items;
+          if (!Array.isArray(tmp3[nodeName.nodeName])) {
+            const items = [tmp3[nodeName.nodeName]];
+            tmp3[nodeName.nodeName] = items;
           }
-          nodeValue[nodeName.nodeName].push(obj);
+          tmp3[nodeName.nodeName].push(obj2);
         } else {
-          nodeValue[nodeName.nodeName] = obj;
+          tmp3[nodeName.nodeName] = obj2;
         }
       }
     });
-    return nodeValue;
+    return attributes;
   }
 }
 function parseXMPObject(str) {
@@ -206,7 +202,7 @@ function parseXMPObject(str) {
         arr2 = items;
       }
       let item = arr2.forEach((attributes) => {
-        const obj = ParseError(5294);
+        obj = ParseError(5294);
         obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
         if (typeof attributes.value === "object") {
           ParseError(5294).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
@@ -221,14 +217,14 @@ function parseXMPObject(str) {
   obj = {};
 }
 function parseNodeAttributesAsTags(attributes) {
-  let obj = {};
+  const obj = {};
   for (const key10005 in arg0) {
     try {
       if (isTagAttribute(key10005)) {
-        obj = { value: arg0[key10005], attributes: {}, description: null };
+        let obj2 = { value: arg0[key10005], attributes: {}, description: null };
         let tmp3 = getLocalName(key10005);
-        obj.description = getDescription(arg0[key10005], key10005);
-        obj[tmp3] = obj;
+        obj2.description = getDescription(arg0[key10005], key10005);
+        obj[tmp3] = obj2;
       }
       continue;
     } catch (err) {
@@ -359,8 +355,8 @@ function parseNodeAsTag(attributes, key10005) {
       tmp = "" === attributes.value.trim();
     }
     if (tmp) {
-      let obj = { value: "", attributes: {}, description: "" };
-      tmp9 = obj;
+      const obj3 = { value: "", attributes: {}, description: "" };
+      tmp9 = obj3;
     } else {
       let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
       if (tmp2) {
@@ -399,14 +395,14 @@ function parseNodeAsTag(attributes, key10005) {
           }
           if (tmp6) {
             const tmp16 = parseNodeAttributesAsTags(attributes.attributes);
-            obj = { value: tmp16, attributes: {}, description: getDescription(tmp16, key10005) };
-            tmp9 = obj;
+            const obj4 = { value: tmp16, attributes: {}, description: getDescription(tmp16, key10005) };
+            tmp9 = obj4;
           } else {
             value = attributes.value;
             if (undefined !== tmp7) {
-              value = attributes.value;
-              const prop = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"].value["rdf:li"];
-              obj = {};
+              value2 = attributes.value;
+              const prop = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"].value["rdf:li"];
+              let obj = {};
               for (const key10070 in arg0.attributes) {
                 let tmp11 = "rdf:parseType" === key10070;
                 if (!tmp11) {
@@ -418,9 +414,9 @@ function parseNodeAsTag(attributes, key10005) {
                 if (tmp11) {
                   continue;
                 } else {
-                  let obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+                  let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
                   let str9 = "RatingPercent";
-                  if (!obj1.test(key10070)) {
+                  if (!obj2.test(key10070)) {
                     str9 = key10070.split(":")[1];
                   }
                   obj[str9] = arg0.attributes[key10070];
@@ -486,10 +482,10 @@ function parseNodeAsTag(attributes, key10005) {
                 }
                 items.push(value);
               });
-              obj1 = { value: items, attributes: obj, description: null };
+              const obj5 = { value: items, attributes: obj, description: null };
               obj = getDescription(items, key10005);
-              obj1.description = obj;
-              const iter = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"];
+              obj5.description = obj;
+              const iter = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"];
             } else {
               tmp9 = parseNodeAsSimpleValue(attributes, key10005);
             }
@@ -502,7 +498,7 @@ function parseNodeAsTag(attributes, key10005) {
   return tmp9;
 }
 function parseNodeAsSimpleRdfDescription(attributes, key10005) {
-  let obj = {};
+  const obj = {};
   for (const key10009 in arg0.attributes) {
     let tmp = "rdf:parseType" === key10009;
     if (!tmp) {
@@ -514,9 +510,9 @@ function parseNodeAsSimpleRdfDescription(attributes, key10005) {
     if (tmp) {
       continue;
     } else {
-      let obj1 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
       let str = "RatingPercent";
-      if (!obj1.test(key10009)) {
+      if (!obj2.test(key10009)) {
         str = key10009.split(":")[1];
       }
       obj[str] = arg0.attributes[key10009];
@@ -528,7 +524,7 @@ function parseNodeAsSimpleRdfDescription(attributes, key10005) {
   if (undefined !== attributes.value["rdf:Description"]) {
     iter = attributes.value["rdf:Description"];
   }
-  obj = {};
+  const obj4 = {};
   for (const key10035 in iter.attributes) {
     let tmp2 = "rdf:parseType" === key10035;
     if (!tmp2) {
@@ -545,12 +541,12 @@ function parseNodeAsSimpleRdfDescription(attributes, key10005) {
       if (!obj5.test(key10035)) {
         str2 = key10035.split(":")[1];
       }
-      obj[str2] = iter.attributes[key10035];
+      obj4[str2] = iter.attributes[key10035];
       continue;
     }
     continue;
   }
-  obj = {};
+  const obj6 = {};
   for (const key10052 in iter.value) {
     let tmp3 = "rdf:value" === key10052;
     if (!tmp3) {
@@ -564,23 +560,30 @@ function parseNodeAsSimpleRdfDescription(attributes, key10005) {
       if (!obj7.test(key10052)) {
         str3 = key10052.split(":")[1];
       }
-      obj[str3] = iter.value[key10052].value;
+      obj6[str3] = iter.value[key10052].value;
       continue;
     }
     continue;
   }
-  ParseError(5294).objectAssign(obj, obj, obj);
+  ParseError(5294).objectAssign(obj, obj4, obj6);
   const prop = iter.value["rdf:value"];
-  obj1 = { value: tmp6, attributes: obj, description: getDescription(tmp6, key10005) };
-  return obj1;
+  const obj3 = ParseError(5294);
+  return {
+    value: (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
+    attributes: obj,
+    description: getDescription(
+      (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
+      key10005,
+    ),
+  };
 }
 function parseNodeAsStructureRdfDescription(value, key10005) {
-  let obj = { value: {}, attributes: {} };
+  const obj = { value: {}, attributes: {} };
   let iter = value;
   if (undefined !== value.value["rdf:Description"]) {
     ParseError(5294).objectAssign(obj.value, parseNodeAttributesAsTags(value.value["rdf:Description"].attributes));
     const obj4 = ParseError(5294);
-    obj = {};
+    const obj6 = {};
     for (const key10008 in arg0.attributes) {
       let tmp = "rdf:parseType" === key10008;
       if (!tmp) {
@@ -597,12 +600,12 @@ function parseNodeAsStructureRdfDescription(value, key10005) {
         if (!obj2.test(key10008)) {
           str = key10008.split(":")[1];
         }
-        obj[str] = arg0.attributes[key10008];
+        obj6[str] = arg0.attributes[key10008];
         continue;
       }
       continue;
     }
-    ParseError(5294).objectAssign(obj.attributes, obj);
+    ParseError(5294).objectAssign(obj.attributes, obj6);
     iter = value.value["rdf:Description"];
     const obj5 = ParseError(5294);
   }
@@ -614,13 +617,13 @@ function parseNodeAsSimpleValue(attributes, key10005) {
   let tmp2 = attributes.attributes && attributes.attributes["rdf:resource"];
   if (!tmp2) {
     value = attributes.value;
-    attributes = {};
+    let obj = {};
     let tmp3 = value;
     if (typeof value !== "string") {
-      tmp3 = attributes;
+      tmp3 = obj;
       const keys = Object.keys();
       if (keys !== undefined) {
-        tmp3 = attributes;
+        tmp3 = obj;
         while (keys[tmp] !== undefined) {
           let tmp11 = value[tmp4];
           let _Array = Array;
@@ -630,7 +633,7 @@ function parseNodeAsSimpleValue(attributes, key10005) {
             arr2 = items;
           }
           let item = arr2.forEach((attributes) => {
-            const obj = ParseError(5294);
+            obj = ParseError(5294);
             obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
             if (typeof attributes.value === "object") {
               ParseError(5294).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
@@ -644,8 +647,8 @@ function parseNodeAsSimpleValue(attributes, key10005) {
     }
     tmp2 = tmp3;
   }
-  attributes = { value: tmp2, attributes: null, description: null };
-  attributes = {};
+  const obj2 = { value: tmp2, attributes: null, description: null };
+  const obj3 = {};
   for (const key10021 in arg0.attributes) {
     let tmp6 = "rdf:parseType" === key10021;
     if (!tmp6) {
@@ -662,14 +665,14 @@ function parseNodeAsSimpleValue(attributes, key10005) {
       if (!obj4.test(key10021)) {
         str = key10021.split(":")[1];
       }
-      attributes[str] = arg0.attributes[key10021];
+      obj3[str] = arg0.attributes[key10021];
       continue;
     }
     continue;
   }
-  attributes.attributes = attributes;
-  attributes.description = getDescription(tmp2, key10005);
-  return attributes;
+  obj2.attributes = obj3;
+  obj2.description = getDescription(tmp2, key10005);
+  return obj2;
 }
 class ParseError {
   constructor(arg0) {
@@ -753,7 +756,7 @@ export default {
           }
           const _DataView2 = DataView;
           const dataView1 = new DataView(uint8Array2.buffer);
-          arr = items1.push(dataView1);
+          items1.push(dataView1);
           items = items1;
         }
       }
@@ -785,7 +788,7 @@ export default {
           }
           const _DataView3 = DataView;
           const dataView2 = new DataView(uint8Array4.buffer);
-          tmp25Result = readTags(obj, dataView2, arg2);
+          readTags(obj, dataView2, arg2);
         }
       }
       return obj;

@@ -10,7 +10,6 @@ const jsx = fn(21).jsx;
 export const NativeDetector = function NativeDetector(gesture) {
   gesture = gesture.gesture;
   ({ children, touchAction, userSelect, enableContextMenu } = gesture);
-  let obj = gesture(6812);
   if (gesture.config.dispatchesAnimatedEvents) {
     let ReanimatedNativeDetector = tmp(6770).AnimatedNativeDetector;
   } else if (gesture.config.shouldUseReanimatedDetector) {
@@ -18,10 +17,10 @@ export const NativeDetector = function NativeDetector(gesture) {
   } else {
     ReanimatedNativeDetector = _modDef6771;
   }
-  let tmpResult = tmp(6830);
-  const result = tmpResult.ensureNativeDetectorComponent(ReanimatedNativeDetector);
-  tmpResult = tmp(6831);
-  const gestureRelationsUpdater = tmpResult.useGestureRelationsUpdater(gesture);
+  const obj = gesture(6812);
+  const result = gesture(6830).ensureNativeDetectorComponent(ReanimatedNativeDetector);
+  const tmpResult = gesture(6830);
+  const gestureRelationsUpdater = gesture(6831).useGestureRelationsUpdater(gesture);
   const items = [gesture];
   const tmp6 = useMemo(() => {
     if (obj.isComposedGesture(gesture)) {
@@ -31,26 +30,10 @@ export const NativeDetector = function NativeDetector(gesture) {
     }
     return handlerTags;
   }, items);
+  const tmpResult3 = gesture(6831);
   const detectorAttachmentGuard = gesture(6832).useDetectorAttachmentGuard(tmp6);
-  obj = { onGestureHandlerReanimatedEvent: gesture.detectorCallbacks.reanimatedEventHandler };
-  obj = {
-    onStartShouldSetResponder: obj.useJSResponderHandler(gesture).handleStartShouldSetResponder,
-    touchAction,
-    userSelect,
-    enableContextMenu,
-    pointerEvents: "box-none",
-    onGestureHandlerStateChange: gesture.detectorCallbacks.jsEventHandler,
-    onGestureHandlerEvent: gesture.detectorCallbacks.jsEventHandler,
-    onGestureHandlerTouchEvent: gesture.detectorCallbacks.jsEventHandler,
-    onGestureHandlerReanimatedStateChange: obj.onGestureHandlerReanimatedStateChange,
-    onGestureHandlerReanimatedEvent: obj.onGestureHandlerReanimatedEvent,
-    onGestureHandlerReanimatedTouchEvent: obj.onGestureHandlerReanimatedTouchEvent,
-    onGestureHandlerAnimatedEvent: gesture.detectorCallbacks.animatedEventHandler,
-    moduleId: globalThis._RNGH_MODULE_ID,
-    handlerTags: tmp6,
-    style: tmp(6770).nativeDetectorStyles.detector,
-    children,
-  };
+  const obj2 = { onGestureHandlerReanimatedEvent: gesture.detectorCallbacks.reanimatedEventHandler };
+  const tmpResult4 = gesture(6832);
   return (
     <ReanimatedNativeDetector
       onStartShouldSetResponder={obj.useJSResponderHandler(gesture).handleStartShouldSetResponder}
@@ -61,13 +44,13 @@ export const NativeDetector = function NativeDetector(gesture) {
       onGestureHandlerStateChange={gesture.detectorCallbacks.jsEventHandler}
       onGestureHandlerEvent={gesture.detectorCallbacks.jsEventHandler}
       onGestureHandlerTouchEvent={gesture.detectorCallbacks.jsEventHandler}
-      onGestureHandlerReanimatedStateChange={obj.onGestureHandlerReanimatedStateChange}
-      onGestureHandlerReanimatedEvent={obj.onGestureHandlerReanimatedEvent}
-      onGestureHandlerReanimatedTouchEvent={obj.onGestureHandlerReanimatedTouchEvent}
+      onGestureHandlerReanimatedStateChange={obj2.onGestureHandlerReanimatedStateChange}
+      onGestureHandlerReanimatedEvent={obj2.onGestureHandlerReanimatedEvent}
+      onGestureHandlerReanimatedTouchEvent={obj2.onGestureHandlerReanimatedTouchEvent}
       onGestureHandlerAnimatedEvent={gesture.detectorCallbacks.animatedEventHandler}
       moduleId={globalThis._RNGH_MODULE_ID}
       handlerTags={tmp6}
-      style={tmp(6770).nativeDetectorStyles.detector}
+      style={gesture(6770).nativeDetectorStyles.detector}
     >
       {children}
     </ReanimatedNativeDetector>

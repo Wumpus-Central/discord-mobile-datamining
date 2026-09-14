@@ -1,4 +1,6 @@
 // _runtime/metro/00017__.js
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "ActivityIndicator", { get: () => require("ActivityIndicator").default, set: undefined });
 Object.defineProperty(obj, "Button", { get: () => require("Button").default, set: undefined });

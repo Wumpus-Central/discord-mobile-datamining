@@ -1,5 +1,5 @@
 // _runtime/metro/07457__.js
-let obj = {
+const obj = {
   v: "4.8.0",
   meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
   fr: 60,
@@ -14,8 +14,8 @@ let obj = {
   markers: [],
 };
 const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
-obj = { id: "comp_0", layers: null };
-obj = {
+const obj2 = { id: "comp_0", layers: null };
+const obj3 = {
   ddd: 0,
   ind: 3,
   ty: 2,
@@ -35,11 +35,11 @@ obj = {
   st: 0,
   bm: 0,
 };
-const items1 = [obj];
-obj.layers = items1;
-items[1] = obj;
+const items1 = [obj3];
+obj2.layers = items1;
+items[1] = obj2;
 obj.assets = items;
-const obj2 = {
+const obj5 = {
   ddd: 0,
   ind: 1,
   ty: 4,
@@ -59,8 +59,8 @@ const obj2 = {
   st: -1,
   bm: 0,
 };
-const items2 = [obj2, , , , ,];
-const obj4 = {
+const items2 = [obj5, , , , ,];
+const obj7 = {
   ddd: 0,
   ind: 2,
   ty: 0,
@@ -77,8 +77,8 @@ const obj4 = {
   st: 6,
   bm: 0,
 };
-const obj5 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
-const obj6 = { a: 1, k: null, ix: 10 };
+const obj8 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj9 = { a: 1, k: null, ix: 10 };
 const items3 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 11, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 28, s: [-19.578] },
@@ -96,9 +96,9 @@ const items3 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 134, s: [-14.7] },
   { t: 136, s: [0] },
 ];
-obj6.k = items3;
-obj5.r = obj6;
-const obj21 = { a: 1, k: null, ix: 2 };
+obj9.k = items3;
+obj8.r = obj9;
+const obj24 = { a: 1, k: null, ix: 2 };
 const items4 = [
   {
     i: { x: 1, y: 1 },
@@ -174,9 +174,9 @@ const items4 = [
   },
   { t: 136, s: [933.972, 0, 0] },
 ];
-obj21.k = items4;
-obj5.p = obj21;
-const obj22 = { a: 1, k: null, ix: 6 };
+obj24.k = items4;
+obj8.p = obj24;
+const obj25 = { a: 1, k: null, ix: 6 };
 const items5 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -288,11 +288,11 @@ const items5 = [
   },
   { t: 136, s: [394.08, 323.36, 100] },
 ];
-obj22.k = items5;
-obj5.s = obj22;
-obj4.ks = obj5;
-items2[1] = obj4;
-const obj41 = {
+obj25.k = items5;
+obj8.s = obj25;
+obj7.ks = obj8;
+items2[1] = obj7;
+const obj44 = {
   ddd: 0,
   ind: 3,
   ty: 4,
@@ -312,8 +312,8 @@ const obj41 = {
   st: 21,
   bm: 0,
 };
-items2[2] = obj41;
-const obj43 = {
+items2[2] = obj44;
+const obj46 = {
   ddd: 0,
   ind: 4,
   ty: 0,
@@ -330,8 +330,8 @@ const obj43 = {
   st: 17,
   bm: 0,
 };
-const obj44 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
-const obj45 = { a: 1, k: null, ix: 10 };
+const obj47 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj48 = { a: 1, k: null, ix: 10 };
 const items6 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 22, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 39, s: [-19.578] },
@@ -349,9 +349,9 @@ const items6 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 145, s: [-14.7] },
   { t: 147, s: [0] },
 ];
-obj45.k = items6;
-obj44.r = obj45;
-const obj60 = { a: 1, k: null, ix: 2 };
+obj48.k = items6;
+obj47.r = obj48;
+const obj63 = { a: 1, k: null, ix: 2 };
 const items7 = [
   {
     i: { x: 1, y: 1 },
@@ -427,9 +427,9 @@ const items7 = [
   },
   { t: 147, s: [933.972, 0, 0] },
 ];
-obj60.k = items7;
-obj44.p = obj60;
-const obj61 = { a: 1, k: null, ix: 6 };
+obj63.k = items7;
+obj47.p = obj63;
+const obj64 = { a: 1, k: null, ix: 6 };
 const items8 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -541,11 +541,11 @@ const items8 = [
   },
   { t: 147, s: [394.08, 323.36, 100] },
 ];
-obj61.k = items8;
-obj44.s = obj61;
-obj43.ks = obj44;
-items2[3] = obj43;
-const obj80 = {
+obj64.k = items8;
+obj47.s = obj64;
+obj46.ks = obj47;
+items2[3] = obj46;
+const obj83 = {
   ddd: 0,
   ind: 5,
   ty: 4,
@@ -565,8 +565,8 @@ const obj80 = {
   st: 2,
   bm: 0,
 };
-items2[4] = obj80;
-const obj82 = {
+items2[4] = obj83;
+const obj85 = {
   ddd: 0,
   ind: 6,
   ty: 0,
@@ -583,8 +583,8 @@ const obj82 = {
   st: -31,
   bm: 0,
 };
-const obj83 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
-const obj84 = { a: 1, k: null, ix: 10 };
+const obj86 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [20, 40, 0], ix: 1 }, s: null };
+const obj87 = { a: 1, k: null, ix: 10 };
 const items9 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: -26, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: -9, s: [-19.578] },
@@ -602,9 +602,9 @@ const items9 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 97, s: [-14.7] },
   { t: 99, s: [0] },
 ];
-obj84.k = items9;
-obj83.r = obj84;
-const obj99 = { a: 1, k: null, ix: 2 };
+obj87.k = items9;
+obj86.r = obj87;
+const obj102 = { a: 1, k: null, ix: 2 };
 const items10 = [
   {
     i: { x: 1, y: 1 },
@@ -680,9 +680,9 @@ const items10 = [
   },
   { t: 99, s: [933.972, 0, 0] },
 ];
-obj99.k = items10;
-obj83.p = obj99;
-const obj100 = { a: 1, k: null, ix: 6 };
+obj102.k = items10;
+obj86.p = obj102;
+const obj103 = { a: 1, k: null, ix: 6 };
 const items11 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 0.833] },
@@ -794,10 +794,10 @@ const items11 = [
   },
   { t: 99, s: [394.08, 323.36, 100] },
 ];
-obj100.k = items11;
-obj83.s = obj100;
-obj82.ks = obj83;
-items2[5] = obj82;
+obj103.k = items11;
+obj86.s = obj103;
+obj85.ks = obj86;
+items2[5] = obj85;
 obj.layers = items2;
 
 export default obj;

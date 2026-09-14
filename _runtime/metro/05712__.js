@@ -5,6 +5,8 @@ import _modDef5715 from "05715__.js";
 import _modDef5716 from "05716__.js";
 import _modDef5717 from "05717__.js";
 
+const require = globalThis.__r;
+
 const items = [_modDef5713, _modDef5714, _modDef5715, _modDef5716, _modDef5717];
 for (const key10025 in require("05718__.js")) {
   arg5[key10025] = require("05718__.js")[key10025];

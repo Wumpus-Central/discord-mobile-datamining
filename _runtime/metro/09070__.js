@@ -117,8 +117,9 @@ if (self2) {
       _zod._zod.check = (value) => {
         let iter = value;
         let iter2 = closure_1;
-        value = closure_1.value;
-        if (!(closure_1.inclusive ? value <= value : value < value)) {
+        value = value.value;
+        value2 = closure_1.value;
+        if (!(closure_1.inclusive ? value <= value2 : value < value2)) {
           const issues = iter.issues;
           let obj = {
             origin,
@@ -130,8 +131,8 @@ if (self2) {
             continue: null,
           };
           if (typeof iter2.value === "object") {
-            value = iter2.value;
-            let time = value.getTime();
+            const value3 = iter2.value;
+            let time = value3.getTime();
           } else {
             time = iter2.value;
           }
@@ -172,8 +173,9 @@ if (self2) {
       _zod._zod.check = (value) => {
         let iter = value;
         let iter2 = closure_1;
-        value = closure_1.value;
-        if (!(closure_1.inclusive ? value >= value : value > value)) {
+        value = value.value;
+        value2 = closure_1.value;
+        if (!(closure_1.inclusive ? value >= value2 : value > value2)) {
           const issues = iter.issues;
           let obj = {
             origin,
@@ -185,8 +187,8 @@ if (self2) {
             continue: null,
           };
           if (typeof iter2.value === "object") {
-            value = iter2.value;
-            let time = value.getTime();
+            const value3 = iter2.value;
+            let time = value3.getTime();
           } else {
             time = iter2.value;
           }
@@ -256,7 +258,7 @@ if (self2) {
       if (hasItem) {
         str2 = "int";
       }
-      [closure_4, closure_5] = _slicedToArray(maximum.NUMBER_FORMAT_RANGES[format.format], 2);
+      [closure_4, closure_5] = maximum.NUMBER_FORMAT_RANGES[format.format];
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
@@ -276,7 +278,7 @@ if (self2) {
             if (!Number.isSafeInteger(value)) {
               if (value > 0) {
                 const issues = value.issues;
-                let obj = {
+                const obj2 = {
                   input: value,
                   code: "too_big",
                   maximum: null,
@@ -287,14 +289,14 @@ if (self2) {
                   continue: null,
                 };
                 const _Number4 = Number;
-                obj.maximum = Number.MAX_SAFE_INTEGER;
-                obj.inst = inst;
-                obj.origin = str2;
-                obj.continue = !closure_1.abort;
-                issues.push(obj);
+                obj2.maximum = Number.MAX_SAFE_INTEGER;
+                obj2.inst = inst;
+                obj2.origin = str2;
+                obj2.continue = !closure_1.abort;
+                issues.push(obj2);
               } else {
                 const issues1 = value.issues;
-                obj = {
+                const obj3 = {
                   input: value,
                   code: "too_small",
                   minimum: null,
@@ -305,16 +307,16 @@ if (self2) {
                   continue: null,
                 };
                 const _Number3 = Number;
-                obj.minimum = Number.MIN_SAFE_INTEGER;
-                obj.inst = inst;
-                obj.origin = str2;
-                obj.continue = !closure_1.abort;
-                issues1.push(obj);
+                obj3.minimum = Number.MIN_SAFE_INTEGER;
+                obj3.inst = inst;
+                obj3.origin = str2;
+                obj3.continue = !closure_1.abort;
+                issues1.push(obj3);
               }
             }
           } else {
             const issues2 = value.issues;
-            obj = {
+            const obj = {
               expected: str2,
               format: closure_1.format,
               code: "invalid_type",
@@ -327,7 +329,7 @@ if (self2) {
         }
         if (value < minimum) {
           const issues3 = value.issues;
-          const obj1 = {
+          const obj4 = {
             origin: "number",
             input: value,
             code: "too_small",
@@ -336,11 +338,11 @@ if (self2) {
             inst,
             continue: !closure_1.abort,
           };
-          issues3.push(obj1);
+          issues3.push(obj4);
         }
         if (value > maximum) {
           const issues4 = value.issues;
-          const obj2 = {
+          const obj5 = {
             origin: "number",
             input: value,
             code: "too_big",
@@ -349,7 +351,7 @@ if (self2) {
             inst,
             continue: !closure_1.abort,
           };
-          issues4.push(obj2);
+          issues4.push(obj5);
         }
       };
     });
@@ -358,7 +360,7 @@ if (self2) {
       closure_1 = arg1;
       const $ZodCheck = exports.$ZodCheck;
       $ZodCheck.init(_zod, arg1);
-      [self2, __setModuleDefault] = _slicedToArray(closure_5.BIGINT_FORMAT_RANGES[arg1.format], 2);
+      [self2, __setModuleDefault] = closure_5.BIGINT_FORMAT_RANGES[arg1.format];
       const onattach = _zod._zod.onattach;
       onattach.push((_zod) => {
         const bag = _zod._zod.bag;
@@ -370,7 +372,7 @@ if (self2) {
         value = value.value;
         if (value < minimum) {
           const issues = value.issues;
-          let obj = {
+          const obj = {
             origin: "bigint",
             input: value,
             code: "too_small",
@@ -383,7 +385,7 @@ if (self2) {
         }
         if (value > maximum) {
           const issues1 = value.issues;
-          obj = {
+          const obj2 = {
             origin: "bigint",
             input: value,
             code: "too_big",
@@ -392,7 +394,7 @@ if (self2) {
             inst,
             continue: !closure_1.abort,
           };
-          issues1.push(obj);
+          issues1.push(obj2);
         }
       };
     });
@@ -515,22 +517,22 @@ if (self2) {
         let abort = size;
         if (size !== size.size) {
           const issues = iter.issues;
-          let arr = { origin: closure_5.getSizableOrigin(value) };
+          let obj2 = { origin: closure_5.getSizableOrigin(value) };
           if (tmp5) {
-            const obj = { code: "too_big", maximum: abort.size };
-            arr = obj;
+            const obj3 = { code: "too_big", maximum: abort.size };
+            let obj = obj3;
           } else {
-            arr = { code: "too_small", minimum: abort.size };
+            obj = { code: "too_small", minimum: abort.size };
           }
-          const merged = Object.assign(arr);
-          arr.inclusive = true;
-          arr.exact = true;
+          const merged = Object.assign(obj);
+          obj2.inclusive = true;
+          obj2.exact = true;
           iter = iter.value;
-          arr.input = iter;
-          arr.inst = inst;
+          obj2.input = iter;
+          obj2.inst = inst;
           abort = abort.abort;
-          arr.continue = !abort;
-          arr = issues.push(arr);
+          obj2.continue = !abort;
+          obj2 = issues.push(obj2);
           tmp5 = size > abort.size;
         }
       };
@@ -652,22 +654,22 @@ if (self2) {
         let abort = length;
         if (value.length !== value.length.length) {
           const issues = iter.issues;
-          let arr = { origin: closure_5.getLengthableOrigin(value) };
+          let obj2 = { origin: closure_5.getLengthableOrigin(value) };
           if (length > abort.length) {
-            const obj = { code: "too_big", maximum: abort.length };
-            arr = obj;
+            const obj3 = { code: "too_big", maximum: abort.length };
+            let obj = obj3;
           } else {
-            arr = { code: "too_small", minimum: abort.length };
+            obj = { code: "too_small", minimum: abort.length };
           }
-          const merged = Object.assign(arr);
-          arr.inclusive = true;
-          arr.exact = true;
+          const merged = Object.assign(obj);
+          obj2.inclusive = true;
+          obj2.exact = true;
           iter = iter.value;
-          arr.input = iter;
-          arr.inst = inst;
+          obj2.input = iter;
+          obj2.inst = inst;
           abort = abort.abort;
-          arr.continue = !abort;
-          arr = issues.push(arr);
+          obj2.continue = !abort;
+          obj2 = issues.push(obj2);
         }
       };
     });
@@ -701,12 +703,12 @@ if (self2) {
               const issues = value.issues;
               let obj = { origin: "string", code: "invalid_format", format: abort.format, input: value.value };
               if (abort.pattern) {
-                obj = { pattern: abort.pattern.toString() };
-                let obj1 = obj;
+                const obj2 = { pattern: abort.pattern.toString() };
+                let obj3 = obj2;
               } else {
-                obj1 = {};
+                obj3 = {};
               }
-              const merged = Object.assign(obj1);
+              const merged = Object.assign(obj3);
               obj.inst = inst;
               abort = abort.abort;
               obj.continue = !abort;

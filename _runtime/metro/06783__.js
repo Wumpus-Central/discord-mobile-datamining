@@ -149,11 +149,10 @@ export default function createHandler(name) {
       };
       tmp3Result.attachGestureHandler = (viewTag) => {
         closure_0.viewTag = viewTag;
-        const obj = {
+        let result = handlerIDToTag2.registerOldGestureHandler(closure_0.handlerTag, {
           onGestureEvent: closure_0.onGestureHandlerEvent,
           onGestureStateChange: closure_0.onGestureHandlerStateChange,
-        };
-        let result = obj.registerOldGestureHandler(closure_0.handlerTag, obj);
+        });
         const props = closure_0.props;
         let onGestureEvent;
         if (props != null) {
@@ -178,15 +177,19 @@ export default function createHandler(name) {
             REANIMATED_WORKLET = ActionType.ActionType.JS_FUNCTION_OLD_API;
           }
           RNGestureHandlerModuleDefault.attachGestureHandler(closure_0.handlerTag, viewTag, REANIMATED_WORKLET);
-          let tmp2Result = transformIntoHandlerTags;
-          const result1 = tmp2Result.scheduleFlushOperations();
-          tmp2Result = ghQueueMicrotask;
-          tmp2Result.ghQueueMicrotask(() => {
+          const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+          const tmp2Result = transformIntoHandlerTags;
+          ghQueueMicrotask.ghQueueMicrotask(() => {
             const MountRegistry = Handler(config[16]).MountRegistry;
             const result = MountRegistry.gestureHandlerWillMount(closure_1_0);
           });
+          const tmp2Result2 = ghQueueMicrotask;
         }
         REANIMATED_WORKLET = ActionType.ActionType.REANIMATED_WORKLET;
+        const obj2 = {
+          onGestureEvent: closure_0.onGestureHandlerEvent,
+          onGestureStateChange: closure_0.onGestureHandlerStateChange,
+        };
       };
       tmp3Result.setGestureHandlerConfig = (config) => {
         closure_0.config = config;
@@ -437,7 +440,7 @@ export default function createHandler(name) {
             if (self.state.allowTouches) {
               tmp4 = tmp2;
             }
-            let obj = { onGestureHandlerEvent: tmp4, onGestureHandlerStateChange: null };
+            const obj = { onGestureHandlerEvent: tmp4, onGestureHandlerStateChange: null };
             let tmp5;
             if (self.state.allowTouches) {
               tmp5 = tmp3;
@@ -445,24 +448,23 @@ export default function createHandler(name) {
             obj.onGestureHandlerStateChange = tmp5;
             self.propsRef.current = obj;
             try {
-              let obj1 = noop;
               const Children = noop.Children;
               const onlyResult = Children.only(self.props.children);
-              obj = { ref: self.refHandler, collapsable: false };
+              const obj3 = { ref: self.refHandler, collapsable: false };
               if (obj4.isTestEnv()) {
-                obj = { handlerType: Handler, handlerTag: self.handlerTag, enabled: self.props.enabled };
-                obj1 = obj;
+                const obj5 = { handlerType: Handler, handlerTag: self.handlerTag, enabled: self.props.enabled };
+                let obj6 = obj5;
               } else {
-                obj1 = {};
+                obj6 = {};
               }
-              const merged = Object.assign(obj1);
+              const merged = Object.assign(obj6);
               let testID = self.props.testID;
               if (testID == null) {
                 testID = onlyResult.props.testID;
               }
-              obj.testID = testID;
+              obj3.testID = testID;
               const merged1 = Object.assign(obj);
-              return obj1.cloneElement(onlyResult, obj, onlyResult.props.children);
+              return noop.cloneElement(onlyResult, obj3, onlyResult.props.children);
             } catch (err) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;

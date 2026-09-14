@@ -13,8 +13,7 @@ export const initMetric = (CLS, arg1) => {
   if (arg1 === undefined) {
     num = -1;
   }
-  let obj = _mod908;
-  const navigationEntry = obj.getNavigationEntry();
+  const navigationEntry = _mod908.getNavigationEntry();
   let str = "navigate";
   let str2 = "navigate";
   if (navigationEntry) {
@@ -25,7 +24,6 @@ export const initMetric = (CLS, arg1) => {
     }
     let str4 = "prerender";
     if (!prerendering) {
-      let tmpResult = _mod907;
       str4 = "prerender";
       if (tmpResult.getActivationStart() <= 0) {
         const _document2 = _mod904.WINDOW.document;
@@ -42,12 +40,12 @@ export const initMetric = (CLS, arg1) => {
         }
         str4 = str5;
       }
+      tmpResult = _mod907;
     }
     str2 = str4;
   }
-  obj = { name: CLS, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
-  tmpResult = generateUniqueID;
-  obj.id = tmpResult.generateUniqueID();
-  obj.navigationType = str2;
-  return obj;
+  const obj2 = { name: CLS, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
+  obj2.id = generateUniqueID.generateUniqueID();
+  obj2.navigationType = str2;
+  return obj2;
 };

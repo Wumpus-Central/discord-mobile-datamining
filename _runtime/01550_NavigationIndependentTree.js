@@ -10,24 +10,24 @@ require = fn;
 const jsx = fn(21).jsx;
 
 export const NavigationIndependentTree = function NavigationIndependentTree(children) {
-  let obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
-  const obj1 = {
+  const obj = { value: "Array", children: 0 };
+  const obj2 = { value: "Array", children: 0 };
+  const obj3 = { value: "Array", children: 0 };
+  const obj4 = {
     value: "Array",
     children: jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, {
       value: true,
       children: children.children,
     }),
   };
-  obj.children = jsx(context1.IsFocusedContext.Provider, {
+  obj3.children = jsx(context1.IsFocusedContext.Provider, {
     value: "Array",
     children: jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, {
       value: true,
       children: children.children,
     }),
   });
-  obj.children = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, {
+  obj2.children = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, {
     value: "Array",
     children: 0,
   });

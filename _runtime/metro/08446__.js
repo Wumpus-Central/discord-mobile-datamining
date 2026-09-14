@@ -2,13 +2,15 @@
 import colorPropType from "../08432_colorPropType.js";
 import _mod8436 from "08436__.js";
 import _mod8447 from "08447__.js";
-import emptyFunction from "04466__.js";
+import emptyFunction_mod from "04466__.js";
 import "module_4466";
 
 const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
-let obj = {};
+const obj = {};
 const module_8436 = Object.assign(_mod8436);
+let emptyFunction = emptyFunction_mod;
 obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
+let emptyFunction = emptyFunction_mod;
 obj.autoCompleteType = emptyFunction.oneOf([
   "cc-csc",
   "cc-exp",
@@ -30,6 +32,7 @@ obj.autoFocus = emptyFunction.bool;
 obj.allowFontScaling = emptyFunction.bool;
 obj.maxFontSizeMultiplier = emptyFunction.number;
 obj.editable = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.keyboardType = emptyFunction.oneOf([
   "default",
   "email-address",
@@ -46,7 +49,9 @@ obj.keyboardType = emptyFunction.oneOf([
   "ascii-capable-number-pad",
   "visible-password",
 ]);
+let emptyFunction = emptyFunction_mod;
 obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
+let emptyFunction = emptyFunction_mod;
 obj.returnKeyType = emptyFunction.oneOf([
   "done",
   "go",
@@ -68,6 +73,7 @@ obj.numberOfLines = emptyFunction.number;
 obj.disableFullscreenUI = emptyFunction.bool;
 obj.enablesReturnKeyAutomatically = emptyFunction.bool;
 obj.multiline = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
 obj.onBlur = emptyFunction.func;
 obj.onFocus = emptyFunction.func;
@@ -86,10 +92,11 @@ obj.placeholderTextColor = colorPropType;
 obj.scrollEnabled = emptyFunction.bool;
 obj.secureTextEntry = emptyFunction.bool;
 obj.selectionColor = colorPropType;
-obj = { start: emptyFunction.number.isRequired, end: emptyFunction.number };
-obj.selection = emptyFunction.shape(obj);
+let emptyFunction = emptyFunction_mod;
+obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
 obj.value = emptyFunction.string;
 obj.defaultValue = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
 obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
 obj.clearTextOnFocus = emptyFunction.bool;
 obj.selectTextOnFocus = emptyFunction.bool;
@@ -99,12 +106,15 @@ obj.underlineColorAndroid = colorPropType;
 obj.inlineImageLeft = emptyFunction.string;
 obj.inlineImagePadding = emptyFunction.number;
 obj.rejectResponderTermination = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 const items1 = [emptyFunction.oneOf(items)];
+let emptyFunction = emptyFunction_mod;
 items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
 obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
 obj.caretHidden = emptyFunction.bool;
 obj.contextMenuHidden = emptyFunction.bool;
 obj.inputAccessoryViewID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
 obj.textContentType = emptyFunction.oneOf([
   "none",
   "URL",

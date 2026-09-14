@@ -1,9 +1,10 @@
 // _runtime/00167_ReactNativeStartupTiming.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
 import _classPrivateFieldKey from "00091__classPrivateFieldKey.js";
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_2 = _classPrivateFieldKey("startTime");
 let closure_3 = _classPrivateFieldKey("initializeRuntimeStart");
 let closure_4 = _classPrivateFieldKey("executeJavaScriptBundleEntryPointStart");

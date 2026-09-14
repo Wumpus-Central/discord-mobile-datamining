@@ -17,8 +17,8 @@ export default {
       formData = tmp3.formData;
     }
     if (formData) {
-      formData = tmp3.formData;
-      tmp3.formData = formData.map((headers) => {
+      const formData1 = tmp3.formData;
+      tmp3.formData = formData1.map((headers) => {
         const obj = {};
         const merged = Object.assign(headers);
         headers = headers.headers;

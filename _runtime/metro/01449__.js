@@ -1,11 +1,13 @@
 // _runtime/metro/01449__.js
-import _mod1284 from "01284__.js";
-import _mod1288 from "01288__.js";
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
+import _mod1282 from "01282__.js";
+import _mod1286 from "01286__.js";
+import callBoundIntrinsic from "../01314_callBoundIntrinsic.js";
 import _mod1444 from "01444__.js";
 import availableTypedArrays from "../01450_availableTypedArrays.js";
 import _mod1452 from "01452__.js";
 import callBind from "../01454_callBind.js";
+
+const require = globalThis.__r;
 
 let closure_2 = callBoundIntrinsic("Object.prototype.toString");
 let tmp = _mod1444();
@@ -30,22 +32,22 @@ let closure_7 =
   };
 let closure_8 = Object.create(null);
 if (tmp) {
-  if (_mod1284) {
-    if (_mod1288) {
+  if (_mod1282) {
+    if (_mod1286) {
       _mod1452(tmp2, (arg0) => {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
-          if (_mod1288) {
-            const tmp4 = _mod1288(tmp);
+          if (_mod1286) {
+            const tmp4 = _mod1286(tmp);
             const _Symbol = Symbol;
-            const tmp5 = _mod1284(tmp4, Symbol.toStringTag);
+            const tmp5 = _mod1282(tmp4, Symbol.toStringTag);
             let tmp6 = tmp5;
             if (!tmp5) {
               tmp6 = tmp5;
               if (tmp4) {
                 const _Symbol2 = Symbol;
-                tmp6 = _mod1284(_mod1288(tmp4), Symbol.toStringTag);
-                const tmp7 = _mod1288(tmp4);
+                tmp6 = _mod1282(_mod1286(tmp4), Symbol.toStringTag);
+                const tmp7 = _mod1286(tmp4);
               }
             }
             const text = `$${arg0}`;
@@ -59,7 +61,7 @@ if (tmp) {
         if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
-            if (require("01284__.js")) {
+            if (require("01282__.js")) {
               closure_129_0 = obj;
               closure_129_1 = false;
               require("01452__.js")(closure_8, (fn, arg1) => {

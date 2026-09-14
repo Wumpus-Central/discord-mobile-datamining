@@ -65,15 +65,15 @@ class WebSocket {
       items[0] = arg1;
       tmp8 = items;
     }
-    obj = importDefault;
+    obj1 = importDefault;
     if (!importDefault) {
-      obj = {};
+      obj1 = {};
     }
-    headers = obj.headers;
+    headers = obj1.headers;
     if (undefined === headers) {
       headers = {};
     }
-    tmp9 = closure_4(obj, closure_3);
+    tmp9 = closure_4(obj1, closure_3);
     tmp10 = tmp9;
     if (tmp9) {
       tmp10 = typeof tmp9.origin === "string";
@@ -111,8 +111,8 @@ class WebSocket {
     tmp5Result._socketId = tmp16;
     _registerEventsResult = tmp5Result._registerEvents();
     obj6 = closure_1(c2[7]);
-    obj1 = { headers };
-    connectResult = obj6.connect(global, tmp14, obj1, tmp5Result._socketId);
+    obj8 = { headers };
+    connectResult = obj6.connect(global, tmp14, obj8, tmp5Result._socketId);
     return tmp5Result;
   }
 }
@@ -135,11 +135,11 @@ let items = [
       if (!tmp2) {
         _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
         if ("blob" === _binaryType) {
-          let tmp3Result = BlobManagerDefault;
-          tmp3Result.addWebSocketHandler(self._socketId);
+          BlobManagerDefault.addWebSocketHandler(self._socketId);
+          const tmp3Result = BlobManagerDefault;
         } else {
-          tmp3Result = BlobManagerDefault;
-          const result = tmp3Result.removeWebSocketHandler(self._socketId);
+          const result = BlobManagerDefault.removeWebSocketHandler(self._socketId);
+          const tmp3Result2 = BlobManagerDefault;
         }
       }
       self._binaryType = _binaryType;
@@ -165,10 +165,10 @@ let items = [
         const error = new Error("INVALID_STATE_ERR");
         throw error;
       } else if (str instanceof BlobDefault) {
-        let tmp16Result = _modDef38;
-        tmp16Result(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
-        tmp16Result = BlobManagerDefault;
-        tmp16Result.sendOverSocket(str, self._socketId);
+        _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
+        const tmp16Result = _modDef38;
+        BlobManagerDefault.sendOverSocket(str, self._socketId);
+        const tmp16Result4 = BlobManagerDefault;
       } else if (typeof str !== "string") {
         const _ArrayBuffer = ArrayBuffer;
         if (!(str instanceof ArrayBuffer)) {
@@ -180,10 +180,10 @@ let items = [
           }
         }
         WebSocketModuleDefault.sendBinary(binaryToBase64Default(str), self._socketId);
-        const tmp16Result1 = WebSocketModuleDefault;
+        const tmp16Result5 = WebSocketModuleDefault;
       } else {
         WebSocketModuleDefault.send(str, self._socketId);
-        const tmp16Result2 = WebSocketModuleDefault;
+        const tmp16Result6 = WebSocketModuleDefault;
       }
     },
   },
@@ -232,7 +232,6 @@ let items = [
       const items = [
         _eventEmitter.addListener("websocketMessage", (id) => {
           let dispatchEventResult = id;
-          let obj = self;
           if (id.id === self._socketId) {
             ({ data, type } = dispatchEventResult);
             if ("binary" === type) {
@@ -240,9 +239,9 @@ let items = [
             } else if ("blob" === type) {
               data = BlobManagerDefault.createFromOptions(dispatchEventResult.data);
             }
-            obj = { data, raw_length: dispatchEventResult.raw_length };
-            const tmp11 = new _modDef220("message", obj);
-            dispatchEventResult = obj.dispatchEvent(tmp11);
+            const obj4 = { data, raw_length: dispatchEventResult.raw_length };
+            const tmp11 = new _modDef220("message", obj4);
+            dispatchEventResult = self.dispatchEvent(tmp11);
           }
         }),
         ,
@@ -259,29 +258,27 @@ let items = [
       });
       const _eventEmitter3 = this._eventEmitter;
       items[2] = _eventEmitter3.addListener("websocketClosed", (id) => {
-        let obj = self;
         if (id.id === self._socketId) {
-          obj.readyState = obj.CLOSED;
-          obj = { code: null, reason: null };
+          self.readyState = self.CLOSED;
+          const obj3 = { code: null, reason: null };
           ({ code: obj2.code, reason: obj2.reason } = id);
-          const tmp6 = new _modDef221("close", obj);
-          obj.dispatchEvent(tmp6);
-          obj._unregisterEvents();
-          obj.close();
+          const tmp6 = new _modDef221("close", obj3);
+          self.dispatchEvent(tmp6);
+          self._unregisterEvents();
+          self.close();
         }
       });
       const _eventEmitter4 = this._eventEmitter;
       items[3] = _eventEmitter4.addListener("websocketFailed", (id) => {
-        let obj = self;
         if (id.id === self._socketId) {
-          obj.readyState = obj.CLOSED;
+          self.readyState = self.CLOSED;
           const tmp5 = new EventDefault("error");
-          obj.dispatchEvent(tmp5);
-          obj = { code: 1006, reason: id.message };
-          const tmp11 = new _modDef221("close", obj);
-          obj.dispatchEvent(tmp11);
-          obj._unregisterEvents();
-          obj.close();
+          self.dispatchEvent(tmp5);
+          const obj2 = { code: 1006, reason: id.message };
+          const tmp11 = new _modDef221("close", obj2);
+          self.dispatchEvent(tmp11);
+          self._unregisterEvents();
+          self.close();
         }
       });
       this._subscriptions = items;

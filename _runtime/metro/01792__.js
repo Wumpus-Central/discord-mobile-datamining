@@ -4,6 +4,8 @@ import _mod1661 from "01661__.js";
 import runOnRuntime from "../01680_runOnRuntime.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
 function eulerToQuaternion(arg0, arg1, arg2) {
   const cosResult = Math.cos(arg0 / 2);
@@ -68,8 +70,10 @@ function adjustRotationToInterfaceOrientation(pitch) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-let obj = { InterfaceOrientation: _mod1661.InterfaceOrientation, eulerToQuaternion };
-adjustRotationToInterfaceOrientation.__closure = obj;
+adjustRotationToInterfaceOrientation.__closure = {
+  InterfaceOrientation: _mod1661.InterfaceOrientation,
+  eulerToQuaternion,
+};
 adjustRotationToInterfaceOrientation.__workletHash = 16635654688360;
 adjustRotationToInterfaceOrientation.__initData = {
   code: "function adjustRotationToInterfaceOrientation_Pnpm_useAnimatedSensorTs2(data){const{InterfaceOrientation,eulerToQuaternion}=this.__closure;const{interfaceOrientation:interfaceOrientation,pitch:pitch,roll:roll,yaw:yaw}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.pitch=roll;data.roll=-pitch;data.yaw=yaw-Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.pitch=-roll;data.roll=pitch;data.yaw=yaw+Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.pitch*=-1;data.roll*=-1;data.yaw*=-1;}const q=eulerToQuaternion(data.pitch,data.roll,data.yaw);data.qx=q[0];data.qy=q[1];data.qz=q[2];data.qw=q[3];return data;}",
@@ -88,8 +92,8 @@ function adjustVectorToInterfaceOrientation(arg0) {
   }
   return arg0;
 }
-obj = { InterfaceOrientation: _mod1661.InterfaceOrientation };
-adjustVectorToInterfaceOrientation.__closure = obj;
+let obj = { InterfaceOrientation: _mod1661.InterfaceOrientation, eulerToQuaternion };
+adjustVectorToInterfaceOrientation.__closure = { InterfaceOrientation: _mod1661.InterfaceOrientation };
 adjustVectorToInterfaceOrientation.__workletHash = 5352466445526;
 adjustVectorToInterfaceOrientation.__initData = {
   code: "function adjustVectorToInterfaceOrientation_Pnpm_useAnimatedSensorTs3(data){const{InterfaceOrientation}=this.__closure;const{interfaceOrientation:interfaceOrientation,x:x,y:y}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.x=-y;data.y=x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.x=y;data.y=-x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.x*=-1;data.y*=-1;}return data;}",
@@ -147,13 +151,13 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     return { interval: "auto", adjustToInterfaceOrientation: true, iosReferenceFrame: _mod1661.IOSReferenceFrame.Auto };
   }, items);
   let config = tmp13;
-  obj = {
+  let obj2 = {
     sensor: require("runOnRuntime").initializeSensor(arg0, tmp13),
     unregister() {},
     isAvailable: false,
     config: tmp13,
   };
-  tmpResult = closure_4(obj);
+  tmpResult = closure_4(obj2);
   const items1 = [arg0, tmp13];
   config(() => {
     let obj = {
@@ -189,7 +193,8 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
       sensor.value = pitch;
       runWorkletOnJS.callMicrotasks();
     };
-    obj = {
+    const obj3 = closure_0(ref[2]);
+    fn.__closure = {
       adjustToInterfaceOrientation,
       sensorType: sensor,
       SensorType: closure_0(ref[1]).SensorType,
@@ -198,10 +203,9 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
       sensorData: sensor,
       callMicrotasks: closure_0(ref[3]).callMicrotasks,
     };
-    fn.__closure = obj;
     fn.__workletHash = 6807952122364;
     fn.__initData = __initData;
-    const registerSensorResult = closure_0(ref[2]).registerSensor(sensor, config, fn);
+    const registerSensorResult = obj3.registerSensor(sensor, config, fn);
     config = registerSensorResult;
     if (-1 !== registerSensorResult) {
       ref2.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);

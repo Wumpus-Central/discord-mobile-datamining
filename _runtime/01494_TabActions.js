@@ -14,13 +14,13 @@ const TabActions = {
 
 export { TabActions };
 export const TabRouter = function TabRouter(merged) {
-  let actionCreators = SwitchRouter;
+  const actionCreators = SwitchRouter;
   const SwitchRouterResult = actionCreators.SwitchRouter(merged);
   require = SwitchRouterResult;
-  actionCreators = {};
+  const obj2 = {};
   merged = Object.assign(SwitchRouterResult);
-  actionCreators.type = "tab";
-  actionCreators.getInitialState = function getInitialState(arg0) {
+  obj2.type = "tab";
+  obj2.getInitialState = function getInitialState(arg0) {
     const initialState = SwitchRouterResult.getInitialState(arg0);
     obj = {};
     const merged = Object.assign(initialState);
@@ -28,7 +28,7 @@ export const TabRouter = function TabRouter(merged) {
     obj.key = "tab-" + initialState.key;
     return obj;
   };
-  actionCreators.getRehydratedState = function getRehydratedState(stale, arg1) {
+  obj2.getRehydratedState = function getRehydratedState(stale, arg1) {
     if (false === stale.stale) {
       return stale;
     } else {
@@ -41,6 +41,6 @@ export const TabRouter = function TabRouter(merged) {
       return obj;
     }
   };
-  actionCreators.actionCreators = actionCreators;
-  return actionCreators;
+  obj2.actionCreators = actionCreators;
+  return obj2;
 };

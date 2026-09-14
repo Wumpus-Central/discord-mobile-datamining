@@ -1,19 +1,18 @@
 // _runtime/04904_StringToNumber.js
-import _mod1282 from "metro/01282__.js";
-import _mod1283 from "metro/01283__.js";
-import callBoundIntrinsic from "01316_callBoundIntrinsic.js";
+import _mod1280 from "metro/01280__.js";
+import _mod1281 from "metro/01281__.js";
+import callBoundIntrinsic from "01314_callBoundIntrinsic.js";
 import regexTester from "01446_regexTester.js";
 import trim from "04905_trim.js";
 
-let tmp = _mod1282("%RegExp%");
-const React2 = _mod1282("%parseInt%");
+const React2 = _mod1280("%parseInt%");
 const React3 = callBoundIntrinsic("String.prototype.slice");
 const React4 = regexTester(/^0b[01]+$/i);
 const hasOwnProperty = regexTester(/^0o[0-7]+$/i);
 const timestampProducer = regexTester(/^[-+]0x[0-9a-f]+$/i);
 const items = ["\u0085", "\u200B", "\uFFFE"];
-tmp = new tmp("[" + items.join("") + "]", "g");
-const React5 = regexTester(tmp);
+const tmp = _mod1280("%RegExp%");
+const React5 = regexTester(new _mod1280("%RegExp%")("[" + items.join("") + "]", "g"));
 class StringToNumber {
   constructor(arg0) {
     if (typeof global !== "string") {

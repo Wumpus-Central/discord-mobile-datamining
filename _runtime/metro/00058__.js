@@ -288,7 +288,7 @@ function parseBackgroundPositionCSSString(str) {
         let rect = { top: null, left: null };
         rect.top = str2;
         rect.left = str3;
-        arr = items.push(rect);
+        let arr2 = items.push(rect);
         continue;
       }
     }
@@ -297,7 +297,7 @@ function parseBackgroundPositionCSSString(str) {
         let rect1 = { bottom: null, right: null };
         rect1.bottom = str5;
         rect1.right = str4;
-        let arr1 = items.push(rect1);
+        let arr3 = items.push(rect1);
       }
     }
     if (null != str2) {
@@ -305,7 +305,7 @@ function parseBackgroundPositionCSSString(str) {
         let rect2 = { top: null, right: null };
         rect2.top = str2;
         rect2.right = str4;
-        let arr2 = items.push(rect2);
+        let arr4 = items.push(rect2);
       }
     }
     if (null != str5) {
@@ -313,7 +313,7 @@ function parseBackgroundPositionCSSString(str) {
         let rect3 = { bottom: null, left: null };
         rect3.bottom = str5;
         rect3.left = str3;
-        let arr3 = items.push(rect3);
+        let arr6 = items.push(rect3);
       }
     }
     let items16 = [];

@@ -1,6 +1,8 @@
 // _runtime/metro/00925__.js
 import _mod904 from "00904__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

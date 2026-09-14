@@ -16,6 +16,8 @@ import _mod1603 from "metro/01603__.js";
 import _mod1604 from "metro/01604__.js";
 import _mod1605 from "metro/01605__.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("metro/01485__.js")) {
   arg5[key10013] = require("metro/01485__.js")[key10013];
   continue;

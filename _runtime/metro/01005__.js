@@ -13,7 +13,7 @@ function getStatics($$typeof) {
     $$typeof = $$typeof.$$typeof;
     let tmp3 = $$typeof;
     if ($$typeof) {
-      tmp3 = obj[$$typeof];
+      tmp3 = obj2[$$typeof];
     }
     if (!tmp3) {
       tmp3 = closure_0;
@@ -38,15 +38,15 @@ let closure_0 = {
 let closure_1 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
 let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
 const forResult1 = Symbol.for("react.memo");
-obj = {};
-obj[Symbol.for("react.forward_ref")] = {
+const obj2 = {};
+obj2[Symbol.for("react.forward_ref")] = {
   $$typeof: true,
   render: true,
   defaultProps: true,
   displayName: true,
   propTypes: true,
 };
-obj[forResult1] = obj;
+obj2[forResult1] = obj;
 let closure_6 = defineProperty.bind(Object);
 let closure_7 = getOwnPropertyNames.bind(Object);
 let bindResult;

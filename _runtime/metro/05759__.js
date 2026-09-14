@@ -7,7 +7,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let size = Dimensions.get("window");
+const size = Dimensions.get("window");
 const width = size.width;
 let num = 0;
 if (undefined !== width) {
@@ -20,8 +20,8 @@ if (undefined !== height) {
 }
 if (null == fn(1614).initialWindowMetrics) {
   let obj = { frame: null, insets: null };
-  size = { x: 0, y: 0, width: num, height: num2 };
-  obj.frame = size;
+  const size1 = { x: 0, y: 0, width: num, height: num2 };
+  obj.frame = size1;
   obj.insets = { top: 0, left: 0, right: 0, bottom: 0 };
   let initialWindowMetrics = obj;
 } else {
@@ -37,17 +37,17 @@ class SafeAreaProviderCompat {
       render(onLayout) {
         onLayout = onLayout.onLayout;
         if (closure_2) {
-          let obj = { ref: tmp, onLayout, style: null, children: null };
+          const obj2 = { ref: tmp, onLayout, style: null, children: null };
           const items = [container.container, style];
-          obj.style = items;
-          obj.children = children;
+          obj2.style = items;
+          obj2.children = children;
           let tmp2Result = (
             <React3 ref={tmp} onLayout={onLayout} style={null}>
               {null}
             </React3>
           );
         } else {
-          obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
+          const obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
           tmp2Result = jsx(_mod1614.SafeAreaProvider, {
             initialMetrics: initialWindowMetrics,
             style,

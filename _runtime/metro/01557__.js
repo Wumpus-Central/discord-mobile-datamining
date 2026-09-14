@@ -11,6 +11,8 @@ import _slicedToArray from "00032__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_3 = ["children", "layout", "screenOptions", "screenLayout", "screenListeners", "UNSTABLE_router"];
 const jsx = fn(21).jsx;
@@ -32,7 +34,6 @@ function getRouteConfigsFromChildren(children) {
   c2 = undefined;
   const Children = noop.Children;
   return Children.toArray(children).reduce((arr, type) => {
-    let obj = closure_2_6;
     if (closure_2_6.isValidElement(type)) {
       if (type.type === closure_2_0(closure_2_2[5]).Screen) {
         if (typeof type.props === "object") {
@@ -46,14 +47,14 @@ function getRouteConfigsFromChildren(children) {
                   let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                   throw error;
                 }
-                obj = { keys: null, options: null, layout: null, props: null };
+                let obj2 = { keys: null, options: null, layout: null, props: null };
                 let items = [];
                 items[HermesBuiltin.arraySpread(closure_1_0, 0)] = type.props.navigationKey;
-                obj.keys = items;
-                obj.options = closure_1_1;
-                obj.layout = closure_1_2;
-                obj.props = type.props;
-                arr = arr.push(obj);
+                obj2.keys = items;
+                obj2.options = closure_1_1;
+                obj2.layout = closure_1_2;
+                obj2.props = type.props;
+                arr = arr.push(obj2);
                 return arr;
               }
             }
@@ -68,7 +69,7 @@ function getRouteConfigsFromChildren(children) {
         let error2 = new Error("Got an invalid element for screen.");
         throw error2;
       } else {
-        let tmp4 = type.type === obj.Fragment;
+        let tmp4 = type.type === closure_2_6.Fragment;
         if (!tmp4) {
           tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
         }
@@ -107,10 +108,9 @@ function getRouteConfigsFromChildren(children) {
             if (items4 === undefined) {
               items4 = [];
             }
-            let Children = obj.Children;
+            let Children = closure_2_6.Children;
             let items5 = [];
             HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-              let obj = closure_2_6;
               if (closure_2_6.isValidElement(type)) {
                 if (type.type === closure_2_0(closure_2_2[5]).Screen) {
                   if (typeof type.props === "object") {
@@ -124,14 +124,14 @@ function getRouteConfigsFromChildren(children) {
                             let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                             throw error;
                           }
-                          obj = { keys: null, options: null, layout: null, props: null };
+                          let obj2 = { keys: null, options: null, layout: null, props: null };
                           let items = [];
                           items[HermesBuiltin.arraySpread(closure_1_0, 0)] = type.props.navigationKey;
-                          obj.keys = items;
-                          obj.options = closure_1_1;
-                          obj.layout = closure_1_2;
-                          obj.props = type.props;
-                          arr = arr.push(obj);
+                          obj2.keys = items;
+                          obj2.options = closure_1_1;
+                          obj2.layout = closure_1_2;
+                          obj2.props = type.props;
+                          arr = arr.push(obj2);
                           return arr;
                         }
                       }
@@ -146,7 +146,7 @@ function getRouteConfigsFromChildren(children) {
                   let error2 = new Error("Got an invalid element for screen.");
                   throw error2;
                 } else {
-                  let tmp4 = type.type === obj.Fragment;
+                  let tmp4 = type.type === closure_2_6.Fragment;
                   if (!tmp4) {
                     tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                   }
@@ -185,10 +185,9 @@ function getRouteConfigsFromChildren(children) {
                       if (items4 === undefined) {
                         items4 = [];
                       }
-                      let Children = obj.Children;
+                      let Children = closure_2_6.Children;
                       let items5 = [];
                       HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-                        let obj = closure_2_6;
                         if (closure_2_6.isValidElement(type)) {
                           if (type.type === closure_2_0(closure_2_2[5]).Screen) {
                             if (typeof type.props === "object") {
@@ -202,14 +201,14 @@ function getRouteConfigsFromChildren(children) {
                                       let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                                       throw error;
                                     }
-                                    obj = { keys: null, options: null, layout: null, props: null };
+                                    let obj2 = { keys: null, options: null, layout: null, props: null };
                                     let items = [];
                                     items[HermesBuiltin.arraySpread(closure_1_0, 0)] = type.props.navigationKey;
-                                    obj.keys = items;
-                                    obj.options = closure_1_1;
-                                    obj.layout = closure_1_2;
-                                    obj.props = type.props;
-                                    arr = arr.push(obj);
+                                    obj2.keys = items;
+                                    obj2.options = closure_1_1;
+                                    obj2.layout = closure_1_2;
+                                    obj2.props = type.props;
+                                    arr = arr.push(obj2);
                                     return arr;
                                   }
                                 }
@@ -224,7 +223,7 @@ function getRouteConfigsFromChildren(children) {
                             let error2 = new Error("Got an invalid element for screen.");
                             throw error2;
                           } else {
-                            let tmp4 = type.type === obj.Fragment;
+                            let tmp4 = type.type === closure_2_6.Fragment;
                             if (!tmp4) {
                               tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                             }
@@ -263,10 +262,9 @@ function getRouteConfigsFromChildren(children) {
                                 if (items4 === undefined) {
                                   items4 = [];
                                 }
-                                let Children = obj.Children;
+                                let Children = closure_2_6.Children;
                                 let items5 = [];
                                 HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
-                                  let obj = closure_2_6;
                                   if (closure_2_6.isValidElement(type)) {
                                     if (type.type === closure_2_0(closure_2_2[5]).Screen) {
                                       if (typeof type.props === "object") {
@@ -280,14 +278,14 @@ function getRouteConfigsFromChildren(children) {
                                                 let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                                                 throw error;
                                               }
-                                              obj = { keys: null, options: null, layout: null, props: null };
+                                              let obj2 = { keys: null, options: null, layout: null, props: null };
                                               let items = [];
                                               items[HermesBuiltin.arraySpread(closure_1_0, 0)] = type.props.navigationKey;
-                                              obj.keys = items;
-                                              obj.options = closure_1_1;
-                                              obj.layout = closure_1_2;
-                                              obj.props = type.props;
-                                              arr = arr.push(obj);
+                                              obj2.keys = items;
+                                              obj2.options = closure_1_1;
+                                              obj2.layout = closure_1_2;
+                                              obj2.props = type.props;
+                                              arr = arr.push(obj2);
                                               return arr;
                                             }
                                           }
@@ -302,7 +300,7 @@ function getRouteConfigsFromChildren(children) {
                                       let error2 = new Error("Got an invalid element for screen.");
                                       throw error2;
                                     } else {
-                                      let tmp4 = type.type === obj.Fragment;
+                                      let tmp4 = type.type === closure_2_6.Fragment;
                                       if (!tmp4) {
                                         tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                                       }
@@ -341,7 +339,7 @@ function getRouteConfigsFromChildren(children) {
                                           if (items4 === undefined) {
                                             items4 = [];
                                           }
-                                          let Children = obj.Children;
+                                          let Children = closure_2_6.Children;
                                           let items5 = [];
                                           HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(() => { ... }, []), 0);
                                           HermesBuiltin.apply(items5, arr);
@@ -352,7 +350,7 @@ function getRouteConfigsFromChildren(children) {
                                       }
                                     }
                                   }
-                                  if (obj.isValidElement(type)) {
+                                  if (closure_2_6.isValidElement(type)) {
                                     if (typeof type.type === "string") {
                                       let name = type.type;
                                     } else {
@@ -368,12 +366,12 @@ function getRouteConfigsFromChildren(children) {
                                         str2 = "";
                                         if ("name" in type.props) {
                                           let props = type.props;
-                                          name = undefined;
+                                          let name1;
                                           if (props != null) {
-                                            name = props.name;
+                                            name1 = props.name;
                                           }
                                           str2 = "";
-                                          if (name) {
+                                          if (name1) {
                                             let _HermesInternal = HermesInternal;
                                             str2 = " for the screen '" + type.props.name + "'";
                                           }
@@ -401,7 +399,7 @@ function getRouteConfigsFromChildren(children) {
                             }
                           }
                         }
-                        if (obj.isValidElement(type)) {
+                        if (closure_2_6.isValidElement(type)) {
                           if (typeof type.type === "string") {
                             let name = type.type;
                           } else {
@@ -417,12 +415,12 @@ function getRouteConfigsFromChildren(children) {
                               str2 = "";
                               if ("name" in type.props) {
                                 let props = type.props;
-                                name = undefined;
+                                let name1;
                                 if (props != null) {
-                                  name = props.name;
+                                  name1 = props.name;
                                 }
                                 str2 = "";
-                                if (name) {
+                                if (name1) {
                                   let _HermesInternal = HermesInternal;
                                   str2 = " for the screen '" + type.props.name + "'";
                                 }
@@ -450,7 +448,7 @@ function getRouteConfigsFromChildren(children) {
                   }
                 }
               }
-              if (obj.isValidElement(type)) {
+              if (closure_2_6.isValidElement(type)) {
                 if (typeof type.type === "string") {
                   let name = type.type;
                 } else {
@@ -466,12 +464,12 @@ function getRouteConfigsFromChildren(children) {
                     str2 = "";
                     if ("name" in type.props) {
                       let props = type.props;
-                      name = undefined;
+                      let name1;
                       if (props != null) {
-                        name = props.name;
+                        name1 = props.name;
                       }
                       str2 = "";
-                      if (name) {
+                      if (name1) {
                         let _HermesInternal = HermesInternal;
                         str2 = " for the screen '" + type.props.name + "'";
                       }
@@ -499,7 +497,7 @@ function getRouteConfigsFromChildren(children) {
         }
       }
     }
-    if (obj.isValidElement(type)) {
+    if (closure_2_6.isValidElement(type)) {
       if (typeof type.type === "string") {
         let name = type.type;
       } else {
@@ -515,12 +513,12 @@ function getRouteConfigsFromChildren(children) {
           str2 = "";
           if ("name" in type.props) {
             let props = type.props;
-            name = undefined;
+            let name1;
             if (props != null) {
-              name = props.name;
+              name1 = props.name;
             }
             str2 = "";
-            if (name) {
+            if (name1) {
               let _HermesInternal = HermesInternal;
               str2 = " for the screen '" + type.props.name + "'";
             }
@@ -541,9 +539,9 @@ function getRouteConfigsFromChildren(children) {
     throw error4;
   }, []);
 }
-function getStateFromParams(params, type) {
-  if (params != null) {
-    const state = params.state;
+function getStateFromParams(params1, type) {
+  if (params1 != null) {
+    const state = params1.state;
   }
   if (typeof isNavigationState === "function") {
     let isArray = null != state && typeof state === "object";
@@ -558,19 +556,18 @@ function getStateFromParams(params, type) {
       return state;
     } else {
       let screen;
-      if (params != null) {
-        screen = params.screen;
+      if (params1 != null) {
+        screen = params1.screen;
       }
       if (typeof screen === "string") {
         let initial;
-        if (params != null) {
-          initial = params.initial;
+        if (params1 != null) {
+          initial = params1.initial;
         }
         if (false !== initial) {
-          let obj = { routes: null };
-          obj = { name: null, params: null, path: null };
-          ({ screen: obj2.name, params: obj2.params, path: obj2.path } = params);
-          const items = [obj];
+          const obj = { routes: null };
+          ({ screen: obj2.name, params: obj2.params, path: obj2.path } = params1);
+          const items = [{ name: null, params: null, path: null }];
           obj.routes = items;
           return obj;
         }
@@ -584,8 +581,7 @@ function getStateFromParams(params, type) {
 export const useNavigationBuilder = function useNavigationBuilder(StackRouter, UNSTABLE_routeNamesChangeBehavior) {
   _require = StackRouter;
   importDefault = UNSTABLE_routeNamesChangeBehavior;
-  let obj = require("01558__.js");
-  dependencyMap = obj.useRegisterNavigator();
+  dependencyMap = require("01558__.js").useRegisterNavigator();
   const context = noop.useContext(require("01524__.js").NavigationRouteContext);
   const context1 = noop.useContext(require("ConsumedParamsContext").ConsumedParamsContext);
   let params;
@@ -608,6 +604,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
   ({ children, screenOptions, screenLayout } = UNSTABLE_routeNamesChangeBehavior);
   getRouteConfigsFromChildren = hasItem(UNSTABLE_routeNamesChangeBehavior, context);
   const arr = getRouteConfigsFromChildren(children);
+  let obj = require("01558__.js");
   const lazyValue = require("01506__.js").useLazyValue(() => {
     if (null != initialRouteName.initialRouteName) {
       if (arr.every((props) => props.props.name !== initialRouteName.initialRouteName)) {
@@ -620,7 +617,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     const tmp3 = StackRouter(initialRouteName);
     if (null != isNavigationState) {
       const tmp4 = isNavigationState(tmp3);
-      obj = {};
+      const obj = {};
       const merged = Object.assign(tmp3);
       const merged1 = Object.assign(tmp4);
       return obj;
@@ -630,17 +627,17 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
   });
   let mapped = arr.map((props) => props.props.name);
   if (mapped.length) {
-    obj = {};
-    obj = {};
-    let obj1 = {};
-    const obj2 = {};
+    let obj2 = {};
+    let obj3 = {};
+    let obj4 = {};
+    const obj5 = {};
     const iter = arr[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp17 = nextResult;
       let name = nextResult.props.name;
       let tmp18 = name;
-      if (name in obj) {
+      if (name in obj2) {
         let _Error2 = Error;
         let _HermesInternal = HermesInternal;
         let str2 = "')";
@@ -650,17 +647,16 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         let error = new Error("A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '" + tmp18 + "')");
         throw error;
       } else {
-        obj[tmp18] = tmp17;
-        obj[tmp18] = tmp17.keys;
-        obj1[tmp18] = tmp17.props.initialParams;
+        obj2[tmp18] = tmp17;
+        obj3[tmp18] = tmp17.keys;
+        obj4[tmp18] = tmp17.props.initialParams;
         let _Object = Object;
-        let obj3 = {};
-        obj3[tmp18] = tmp17.props.getId;
-        let merged = Object.assign(obj2, obj3);
+        let obj6 = {};
+        obj6[tmp18] = tmp17.props.getId;
+        let merged = Object.assign(obj5, obj6);
         continue;
       }
     }
-    let obj9 = noop;
     let items = [lazyValue.type];
     const callback = noop.useCallback((type) => {
       let tmp = undefined === type.type;
@@ -709,8 +705,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             if (callback1(ref2.current)) {
               current = ref2.current;
             } else {
-              obj = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-              current = lazyValue.getRehydratedState(ref2.current, obj);
+              obj2 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5 };
+              current = lazyValue.getRehydratedState(ref2.current, obj2);
             }
             items[1] = current;
             items[2] = false;
@@ -720,7 +716,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
       }
       const reduced = mapped.reduce((acc, item) => {
-        const initialParams = closure_1_13[item].props.initialParams;
+        const initialParams = obj2[item].props.initialParams;
         state = undefined;
         if (context != null) {
           const params = context.params;
@@ -750,7 +746,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           }
         }
         if (undefined !== initialParams) {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(initialParams);
           const merged1 = Object.assign(params2);
           const tmp5 = obj;
@@ -777,7 +773,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           if (typeof screen !== "string") {
             if (!hasItem) {
               const items1 = [undefined, , , ];
-              obj = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
+              let obj = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj5 };
               items1[1] = lazyValue.getInitialState(obj);
               items1[2] = true;
               items1[3] = undefined;
@@ -796,11 +792,11 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       }
       let tmp15;
       if (!hasItem) {
-        params = undefined;
+        let params1;
         if (context != null) {
-          params = context.params;
+          params1 = context.params;
         }
-        tmp15 = params;
+        tmp15 = params1;
       }
       let tmp18;
       if (tmp15) {
@@ -810,11 +806,11 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         tmp18 = tmp5;
       }
       if (null == tmp18) {
-        obj = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
-        let initialState = lazyValue.getInitialState(obj);
+        obj3 = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj5 };
+        let initialState = lazyValue.getInitialState(obj3);
       } else {
-        obj1 = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
-        initialState = lazyValue.getRehydratedState(tmp18, obj1);
+        obj4 = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj5 };
+        initialState = lazyValue.getRehydratedState(tmp18, obj4);
       }
       if (null != tmp18) {
         if (callback(tmp18)) {
@@ -836,18 +832,17 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }, items3), 4);
     [tmp38, tmp39] = tmp37;
     closure_30 = tmp39;
-    const ref = noop.useRef(obj);
+    const ref = noop.useRef(obj3);
     const insertionEffect = noop.useInsertionEffect(() => {
-      ref.current = obj;
+      ref.current = obj3;
     });
     let current = ref.current;
     const _Object2 = Object;
-    let keys = Object.keys(obj);
+    let keys = Object.keys(obj3);
     let found = keys.filter((item) => {
       let tmp3 = null != tmp && null != tmp2;
       if (tmp3) {
-        obj = _mod1547;
-        tmp3 = !obj.isArrayEqual(tmp, tmp2);
+        tmp3 = !_mod1547.isArrayEqual(tmp, tmp2);
       }
       return tmp3;
     });
@@ -899,12 +894,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             }
             let stateForAction = null;
             if (tmp62) {
-              const obj4 = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-              stateForAction = lazyValue.getStateForAction(rehydratedState, tmp62, obj4);
+              const obj7 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5 };
+              stateForAction = lazyValue.getStateForAction(rehydratedState, tmp62, obj7);
             }
             if (null !== stateForAction) {
-              const obj5 = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-              rehydratedState = lazyValue.getRehydratedState(stateForAction, obj5);
+              const obj8 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5 };
+              rehydratedState = lazyValue.getRehydratedState(stateForAction, obj8);
             }
             stateForRouteNamesChange = rehydratedState;
             tmp58 = rehydratedState;
@@ -928,8 +923,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
               }
             }
             const action = { type: "NAVIGATE", payload: null };
-            const obj6 = { name: context.params.screen, params: context.params.params, path: context.params.path, merge: context.params.merge, pop: context.params.pop };
-            action.payload = obj6;
+            const obj9 = { name: context.params.screen, params: context.params.params, path: context.params.path, merge: context.params.merge, pop: context.params.pop };
+            action.payload = obj9;
             tmp62 = action;
             flag4 = true;
           }
@@ -941,7 +936,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         params3 = context.params;
       }
       items4[2] = params3;
-      const effect = obj9.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let tmp = context1;
         if (context1) {
           tmp = c37;
@@ -961,8 +956,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
       }, items4);
       closure_38 = tmp39 !== tmp58;
-      let tmp30Result = tmp30(1560);
-      const scheduleUpdate = tmp30Result.useScheduleUpdate(() => {
+      const scheduleUpdate = tmp30(1560).useScheduleUpdate(() => {
         if (closure_38) {
           closure_29(stateForRouteNamesChange);
           if (c36) {
@@ -971,11 +965,11 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
       });
       rehydratedState = tmp58;
-      const effect1 = obj9.useEffect(() => {
+      const effect1 = noop.useEffect(() => {
         closure_28.current = rehydratedState;
       });
-      obj9.useRef(null);
-      const effect2 = obj9.useEffect(() => {
+      noop.useRef(null);
+      const effect2 = noop.useEffect(() => {
         closure_27.current = false;
         closure_1_23(closure_2);
         let tmp2 = closure_1_25();
@@ -1008,8 +1002,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         }
         return deepFreeze.deepFreeze(tmp);
       });
-      tmp30Result = tmp30(1511);
-      const eventEmitter = tmp30Result.useEventEmitter((target) => {
+      const tmp30Result = tmp30(1560);
+      const eventEmitter = tmp30(1511).useEventEmitter((target) => {
         const items = [];
         const routes = rehydratedState.routes;
         if (target.target) {
@@ -1028,7 +1022,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           route = routes[tmp.index];
           const push = items.push;
           let _Object = Object;
-          let keys = Object.keys(obj);
+          let keys = Object.keys(obj2);
           const items1 = [];
           HermesBuiltin.arraySpread(keys.filter((item) => {
             let name;
@@ -1050,7 +1044,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             HermesBuiltin.arraySpread(items3.map((fn) => {
               let tmp = fn;
               if (typeof fn === "function") {
-                obj = { route, navigation };
+                const obj = { route, navigation };
                 tmp = fn(obj);
               }
               const type = tmp;
@@ -1087,46 +1081,45 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           }
         }
       }, context3.onEmitEvent);
-      const obj7 = { state: tmp58, emitter: eventEmitter };
-      const focusEvents = tmp30(1562).useFocusEvents(obj7);
+      const tmp30Result14 = tmp30(1511);
+      const obj11 = { state: tmp58, emitter: eventEmitter };
+      const focusEvents = tmp30(1562).useFocusEvents(obj11);
       const items5 = [eventEmitter, tmp58];
-      const effect3 = obj9.useEffect(() => {
-        obj = { type: "state", data: null };
-        obj = { state: rehydratedState };
-        obj.data = obj;
+      const effect3 = noop.useEffect(() => {
+        const obj = { type: "state", data: { state: rehydratedState } };
         eventEmitter.emit(obj);
       }, items5);
-      const tmp30Result1 = tmp30(1562);
+      const tmp30Result15 = tmp30(1562);
       const childListeners = tmp30(1507).useChildListeners();
       ({ listeners, addListener } = childListeners);
-      const tmp30Result2 = tmp30(1507);
+      const tmp30Result16 = tmp30(1507);
       const keyedChildListeners = tmp30(1508).useKeyedChildListeners();
       ({ keyedListeners, addKeyedListener } = keyedChildListeners);
-      const tmp30Result3 = tmp30(1508);
-      const obj8 = { router: lazyValue, getState: tmp75, setState: tmp35, key: null, actionListeners: null, beforeRemoveListeners: null, routerConfigOptions: null, emitter: null };
+      const tmp30Result17 = tmp30(1508);
+      const obj12 = { router: lazyValue, getState: tmp75, setState: tmp35, key: null, actionListeners: null, beforeRemoveListeners: null, routerConfigOptions: null, emitter: null };
       let key;
       if (context != null) {
         key = context.key;
       }
-      obj8.key = key;
-      obj8.actionListeners = listeners.action;
-      obj8.beforeRemoveListeners = keyedListeners.beforeRemove;
-      obj9 = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-      obj8.routerConfigOptions = obj9;
-      obj8.emitter = eventEmitter;
-      const onAction = tmp30(1563).useOnAction(obj8);
-      const tmp30Result4 = tmp30(1563);
-      const obj10 = { router: lazyValue, key: null, getState: null, setState: null };
+      obj12.key = key;
+      obj12.actionListeners = listeners.action;
+      obj12.beforeRemoveListeners = keyedListeners.beforeRemove;
+      const obj13 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5 };
+      obj12.routerConfigOptions = obj13;
+      obj12.emitter = eventEmitter;
+      const onAction = tmp30(1563).useOnAction(obj12);
+      const tmp30Result18 = tmp30(1563);
+      const obj14 = { router: lazyValue, key: null, getState: null, setState: null };
       let key1;
       if (context != null) {
         key1 = context.key;
       }
-      obj10.key = key1;
-      obj10.getState = tmp75;
-      obj10.setState = tmp35;
-      const onRouteFocus = tmp30(1565).useOnRouteFocus(obj10);
-      closure_41 = obj9.useContext(tmp30(1516).UnhandledActionContext);
-      const tmp30Result5 = tmp30(1565);
+      obj14.key = key1;
+      obj14.getState = tmp75;
+      obj14.setState = tmp35;
+      const onRouteFocus = tmp30(1565).useOnRouteFocus(obj14);
+      closure_41 = noop.useContext(tmp30(1516).UnhandledActionContext);
+      const tmp30Result19 = tmp30(1565);
       const tmp85 = tmp34(1505)((type) => {
         if ("lastUnhandled" === UNSTABLE_routeNamesChangeBehavior.UNSTABLE_routeNamesChangeBehavior) {
           if ("NAVIGATE" === type.type) {
@@ -1134,7 +1127,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
               if ("name" in type.payload) {
                 if (typeof type.payload.name === "string") {
                   if (!mapped.includes(type.payload.name)) {
-                    obj = { name: type.payload.name, params: null, path: null };
+                    const obj = { name: type.payload.name, params: null, path: null };
                     let params;
                     if ("params" in type.payload) {
                       if (typeof type.payload.params === "object") {
@@ -1150,10 +1143,11 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
                         path = type.payload.path;
                       }
                     }
-                    obj = { routes: null, path };
+                    obj2 = { routes: null };
+                    obj.path = path;
                     const items = [obj];
-                    obj.routes = items;
-                    tmp44(obj);
+                    obj2.routes = items;
+                    tmp44(obj2);
                   }
                 }
               }
@@ -1164,42 +1158,42 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           tmp5(type);
         }
       });
-      const obj11 = { id: UNSTABLE_routeNamesChangeBehavior.id, onAction, onUnhandledAction: tmp85, getState: tmp75, state: tmp58, emitter: eventEmitter, router: lazyValue };
-      const navigationHelpers = tmp30(1566).useNavigationHelpers(obj11);
-      const tmp30Result6 = tmp30(1566);
-      const obj12 = { navigation: navigationHelpers, focusedListeners: listeners.focus };
-      const focusedListenersChildrenAdapter = tmp30(1567).useFocusedListenersChildrenAdapter(obj12);
-      const tmp30Result7 = tmp30(1567);
-      const obj13 = { getState: tmp75, getStateListeners: keyedListeners.getState };
-      const onGetState = tmp30(1568).useOnGetState(obj13);
-      const tmp30Result8 = tmp30(1568);
-      const obj14 = { state: tmp58, screens: obj, navigation: navigationHelpers, screenOptions, screenLayout, onAction, getState: tmp75, setState: tmp35, onRouteFocus, addListener, addKeyedListener, router: lazyValue, emitter: eventEmitter };
-      let descriptors = tmp30(1569).useDescriptors(obj14);
-      descriptors = descriptors.descriptors;
-      const tmp30Result9 = tmp30(1569);
-      const obj15 = { state: tmp58, navigation: navigationHelpers, descriptors };
-      const currentRender = tmp30(1573).useCurrentRender(obj15);
-      const tmp30Result10 = tmp30(1573);
-      const obj16 = {
+      const obj15 = { id: UNSTABLE_routeNamesChangeBehavior.id, onAction, onUnhandledAction: tmp85, getState: tmp75, state: tmp58, emitter: eventEmitter, router: lazyValue };
+      const navigationHelpers = tmp30(1566).useNavigationHelpers(obj15);
+      const tmp30Result20 = tmp30(1566);
+      const obj16 = { navigation: navigationHelpers, focusedListeners: listeners.focus };
+      const focusedListenersChildrenAdapter = tmp30(1567).useFocusedListenersChildrenAdapter(obj16);
+      const tmp30Result21 = tmp30(1567);
+      const obj17 = { getState: tmp75, getStateListeners: keyedListeners.getState };
+      const onGetState = tmp30(1568).useOnGetState(obj17);
+      const tmp30Result22 = tmp30(1568);
+      const obj18 = { state: tmp58, screens: obj2, navigation: navigationHelpers, screenOptions, screenLayout, onAction, getState: tmp75, setState: tmp35, onRouteFocus, addListener, addKeyedListener, router: lazyValue, emitter: eventEmitter };
+      const descriptors1 = tmp30(1569).useDescriptors(obj18);
+      const descriptors = descriptors1.descriptors;
+      const tmp30Result23 = tmp30(1569);
+      const obj19 = { state: tmp58, navigation: navigationHelpers, descriptors };
+      const currentRender = tmp30(1573).useCurrentRender(obj19);
+      const tmp30Result24 = tmp30(1573);
+      const obj20 = {
         state: tmp58,
         navigation: navigationHelpers,
-        describe: descriptors.describe,
+        describe: descriptors1.describe,
         descriptors,
         NavigationContent: tmp30(1574).useComponent((children) => {
               let tmpResult = children;
               if (null != noop) {
-                obj = { state: rehydratedState, descriptors, navigation: navigationHelpers, children };
+                const obj = { state: rehydratedState, descriptors, navigation: navigationHelpers, children };
                 tmpResult = tmp(obj);
               }
-              obj = { value: "Array", children: 0 };
-              obj = { value: navigationHelpers, children: null };
-              obj1 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) };
-              obj.children = jsx(NavigationStateListenerProvider.NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) });
-              obj.children = jsx(NavigationHelpersContext.NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
-              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: navigationHelpers, children: null });
+              obj2 = { value: "Array", children: 0 };
+              obj3 = { value: navigationHelpers, children: null };
+              obj4 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) };
+              obj3.children = jsx(NavigationStateListenerProvider.NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) });
+              obj2.children = jsx(NavigationHelpersContext.NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
+              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: 0 });
             })
       };
-      return obj16;
+      return obj20;
     }
     let everyResult;
     if (tmp43 != null) {
@@ -1214,19 +1208,19 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       }
       if (everyResult1) {
         c36 = true;
-        const obj17 = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-        const rehydratedState1 = lazyValue.getRehydratedState(tmp43, obj17);
+        const obj21 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5 };
+        const rehydratedState1 = lazyValue.getRehydratedState(tmp43, obj21);
         stateForRouteNamesChange = rehydratedState1;
         rehydratedState = rehydratedState1;
       }
     }
     const tmp42 = context1(noop.useState(tmp38), 2);
     tmp45 = "lastUnhandled" === UNSTABLE_routeNamesChangeBehavior.UNSTABLE_routeNamesChangeBehavior && tmp38 && tmp43 !== tmp38;
-    const tmp30Result12 = require("01547__.js");
+    const tmp30Result26 = require("01547__.js");
     rehydratedState = tmp39;
     if (!tmp51) {
-      const obj18 = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2, routeKeyChanges: found };
-      stateForRouteNamesChange = lazyValue.getStateForRouteNamesChange(tmp39, obj18);
+      const obj22 = { routeNames: mapped, routeParamList: obj4, routeGetIdList: obj5, routeKeyChanges: found };
+      stateForRouteNamesChange = lazyValue.getStateForRouteNamesChange(tmp39, obj22);
       rehydratedState = stateForRouteNamesChange;
     }
     tmp51 = require("01547__.js").isArrayEqual(tmp39.routeNames, mapped) && 0 === found.length;

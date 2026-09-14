@@ -1,4 +1,7 @@
 // _runtime/metro/14122__.js
-import _mod14116 from "14116__.js";
+import _mod14120 from "14120__.js";
 
-export default (arg0, arg1, arg2) => _mod14116(arg0, arg1, arg2) > 0;
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod14120(arg1, arg0, closure_0));
+};

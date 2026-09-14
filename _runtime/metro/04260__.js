@@ -57,17 +57,17 @@ export const shallow = function shallow(current, current2) {
       } else if (typeof isIterable === "function") {
         const _Symbol = Symbol;
         if (!(Symbol.iterator in current)) {
-          let obj = {
+          const obj = {
             entries() {
               return Object.entries(closure_0);
             },
           };
-          obj = {
+          const obj2 = {
             entries() {
               return Object.entries(closure_1);
             },
           };
-          compareEntries(obj, obj);
+          compareEntries(obj, obj2);
         } else if (typeof tmp6 === "function") {
           const _Symbol2 = Symbol;
         } else {

@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 let c3 =
   "If you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details.";
-let obj = { warn: 1, [1]: "warn", error: 2, [2]: "error" };
+const LogLevel = { warn: 1, [1]: "warn", error: 2, [2]: "error" };
 function logToConsole(level) {
   level = level.level;
   if ("warn" === level) {
@@ -22,7 +22,7 @@ logToConsole.__workletHash = 4297880609329;
 logToConsole.__initData = {
   code: "function logToConsole_Pnpm_loggerTs1(data){switch(data.level){case'warn':console.warn(data.message.content);break;case'error':case'fatal':case'syntax':console.error(data.message.content);break;}}",
 };
-obj = { logFunction: logToConsole, level: obj.warn, strict: true };
+const obj2 = { logFunction: logToConsole, level: LogLevel.warn, strict: true };
 function formatMessage(arg0) {
   return "[Reanimated] " + arg0;
 }
@@ -34,8 +34,8 @@ function createLog(level, arg1) {
     const _HermesInternal = HermesInternal;
     const combined = "[Reanimated] " + arg1;
     const error = { level, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
-    obj = { content: combined, substitutions: [] };
-    error.message = obj;
+    const message = { content: combined, substitutions: [] };
+    error.message = message;
     error.category = combined;
     error.componentStack = [];
     const _Error = Error;
@@ -60,11 +60,11 @@ registerLoggerConfig.__initData = {
   code: "function registerLoggerConfig_Pnpm_loggerTs4(config){global.__reanimatedLoggerConfig=config;}",
 };
 function replaceLoggerImplementation(fn) {
-  obj = {};
+  const __reanimatedLoggerConfig = {};
   const merged = Object.assign(global.__reanimatedLoggerConfig);
-  obj.logFunction = fn;
+  __reanimatedLoggerConfig.logFunction = fn;
   if (typeof registerLoggerConfig === "function") {
-    global.__reanimatedLoggerConfig = obj;
+    global.__reanimatedLoggerConfig = __reanimatedLoggerConfig;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -75,31 +75,31 @@ replaceLoggerImplementation.__initData = {
   code: "function replaceLoggerImplementation_Pnpm_loggerTs5(logFunction){const{registerLoggerConfig}=this.__closure;registerLoggerConfig({...global.__reanimatedLoggerConfig,logFunction:logFunction});}",
 };
 function updateLoggerConfig(level) {
-  obj = {};
+  const __reanimatedLoggerConfig = {};
   const merged = Object.assign(global.__reanimatedLoggerConfig);
   level = undefined;
   if (level != null) {
     level = level.level;
   }
   if (level == null) {
-    level = obj.level;
+    level = obj2.level;
   }
-  obj.level = level;
+  __reanimatedLoggerConfig.level = level;
   let strict;
   if (level != null) {
     strict = level.strict;
   }
   if (strict == null) {
-    strict = obj.strict;
+    strict = obj2.strict;
   }
-  obj.strict = strict;
+  __reanimatedLoggerConfig.strict = strict;
   if (typeof registerLoggerConfig === "function") {
-    global.__reanimatedLoggerConfig = obj;
+    global.__reanimatedLoggerConfig = __reanimatedLoggerConfig;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 }
-updateLoggerConfig.__closure = { registerLoggerConfig, DEFAULT_LOGGER_CONFIG: obj };
+updateLoggerConfig.__closure = { registerLoggerConfig, DEFAULT_LOGGER_CONFIG: obj2 };
 updateLoggerConfig.__workletHash = 14435084623184;
 updateLoggerConfig.__initData = {
   code: "function updateLoggerConfig_Pnpm_loggerTs6(options){const{registerLoggerConfig,DEFAULT_LOGGER_CONFIG}=this.__closure;var _options$level,_options$strict;registerLoggerConfig({...global.__reanimatedLoggerConfig,level:(_options$level=options===null||options===void 0?void 0:options.level)!==null&&_options$level!==void 0?_options$level:DEFAULT_LOGGER_CONFIG.level,strict:(_options$strict=options===null||options===void 0?void 0:options.strict)!==null&&_options$strict!==void 0?_options$strict:DEFAULT_LOGGER_CONFIG.strict});}",
@@ -108,7 +108,7 @@ function handleLog(error, arg1, strict) {
   const __reanimatedLoggerConfig = global.__reanimatedLoggerConfig;
   let tmp = strict.strict && !__reanimatedLoggerConfig.strict;
   if (!tmp) {
-    tmp = obj[error] < __reanimatedLoggerConfig.level;
+    tmp = message[error] < __reanimatedLoggerConfig.level;
   }
   if (!tmp) {
     let sum = arg1;
@@ -129,8 +129,8 @@ function handleLog(error, arg1, strict) {
           stack: null,
         };
         error.level = error;
-        obj = { content: combined, substitutions: [] };
-        error.message = obj;
+        message = { content: combined, substitutions: [] };
+        error.message = message;
         error.category = combined;
         error.componentStack = [];
         const _Error = Error;
@@ -146,7 +146,7 @@ function handleLog(error, arg1, strict) {
   }
 }
 handleLog.__closure = {
-  LogLevel: obj,
+  LogLevel,
   DOCS_REFERENCE:
     "If you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details.",
   createLog,
@@ -155,7 +155,7 @@ handleLog.__workletHash = 5113579927044;
 handleLog.__initData = {
   code: 'function handleLog_Pnpm_loggerTs7(level,message,options){const{LogLevel,DOCS_REFERENCE,createLog}=this.__closure;const config=global.__reanimatedLoggerConfig;if(options.strict&&!config.strict||LogLevel[level]<config.level){return;}if(options.strict){message+="\\n\\n"+DOCS_REFERENCE;}config.logFunction(createLog(level,message));}',
 };
-obj = { warn: null, error: null };
+const obj3 = { warn: null, error: null };
 const fn = function v(arg0) {
   obj = strict;
   if (strict === undefined) {
@@ -168,7 +168,7 @@ fn.__workletHash = 13521870617115;
 fn.__initData = {
   code: "function warn_Pnpm_loggerTs8(message,options={}){const{handleLog}=this.__closure;handleLog('warn',message,options);}",
 };
-obj.warn = fn;
+obj3.warn = fn;
 class L {
   constructor(arg0) {
     obj = arg1;
@@ -184,10 +184,10 @@ L.__workletHash = 10275432056698;
 L.__initData = {
   code: "function error_Pnpm_loggerTs9(message,options={}){const{handleLog}=this.__closure;handleLog('error',message,options);}",
 };
-obj.error = L;
+obj3.error = L;
 
-export const LogLevel = obj;
-export const DEFAULT_LOGGER_CONFIG = obj;
+export { LogLevel };
+export const DEFAULT_LOGGER_CONFIG = obj2;
 export const logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
   _mod1641.addLogBoxLog(level);
   if (typeof logToConsole === "function") {
@@ -206,4 +206,4 @@ export const logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
 export { registerLoggerConfig };
 export { replaceLoggerImplementation };
 export { updateLoggerConfig };
-export const logger = obj;
+export const logger = obj3;

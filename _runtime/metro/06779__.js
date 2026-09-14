@@ -2,9 +2,11 @@
 import jsxProd from "../react/00021_jsxProd.js";
 import _modDef6791 from "06791__.js";
 import attachHandlers from "../06804_attachHandlers.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 ({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 
 export const GestureDetector = (gesture) => {
@@ -27,45 +29,45 @@ export const GestureDetector = (gesture) => {
     let items = [gesture];
     let gesturesToAttach = current2(() => gesture.toGestureArray(), items);
     const someResult = gesturesToAttach.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-    let obj1 = gesture(webEventHandlers[2]);
-    webEventHandlers = obj1.useWebEventHandlers();
+    webEventHandlers = gesture(webEventHandlers[2]).useWebEventHandlers();
     const current = detectorUpdater({
       firstRender: true,
       viewRef: null,
       previousViewTag: -1,
       forceRebuildReanimatedEvent: false,
     }).current;
-    gesturesToAttach = {
+    const obj3 = {
       attachedGestures: [],
       animatedEventHandler: null,
       animatedHandlers: null,
       shouldUseReanimated: someResult,
       isMounted: false,
     };
-    current2 = noop.useRef(gesturesToAttach).current;
+    current2 = noop.useRef(obj3).current;
     const obj4 = gesture(webEventHandlers[3]);
     detectorUpdater = obj4.useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers);
+    const obj2 = gesture(webEventHandlers[2]);
     const viewRefHandler = gesture(webEventHandlers[4]).useViewRefHandler(current, detectorUpdater);
     let needsToReattachResult = current.firstRender || current.forceRebuildReanimatedEvent;
     if (!needsToReattachResult) {
-      let tmp9Result = tmp9(tmp10[5]);
-      needsToReattachResult = tmp9Result.needsToReattach(current2, gesturesToAttach);
+      needsToReattachResult = tmp9(tmp10[5]).needsToReattach(current2, gesturesToAttach);
+      const tmp9Result = tmp9(tmp10[5]);
     }
     current.forceRebuildReanimatedEvent = false;
-    tmp9Result = tmp9(tmp10[6]);
-    const animatedGesture = tmp9Result.useAnimatedGesture(current2, needsToReattachResult);
     const obj5 = gesture(webEventHandlers[4]);
+    const animatedGesture = gesture(webEventHandlers[6]).useAnimatedGesture(current2, needsToReattachResult);
+    const tmp9Result5 = gesture(webEventHandlers[6]);
     const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
       current2.isMounted = true;
       gesturesToAttach = attachHandlers;
-      gesturesToAttach = {
+      const tmp = _modDef6791(current.viewRef);
+      gesturesToAttach.attachHandlers({
         preparedGesture: current2,
         gestureConfig: gesture,
         gesturesToAttach,
         webEventHandlersRef: webEventHandlers,
         viewTag: _modDef6791(current.viewRef),
-      };
-      gesturesToAttach.attachHandlers(gesturesToAttach);
+      });
       return () => {
         current2.isMounted = false;
         gesture(webEventHandlers[10]).dropHandlers(current2);
@@ -79,23 +81,23 @@ export const GestureDetector = (gesture) => {
         detectorUpdater();
       }
     }, items1);
-    const tmp9Result1 = gesture(webEventHandlers[7]);
+    const tmp9Result6 = gesture(webEventHandlers[7]);
     const mountReactions = gesture(webEventHandlers[11]).useMountReactions(detectorUpdater, current2);
-    const tmp9Result3 = gesture(webEventHandlers[12]);
+    const tmp9Result8 = gesture(webEventHandlers[12]);
     if (someResult) {
-      gesturesToAttach = {
+      const obj6 = {
         ref: viewRefHandler,
         onGestureHandlerEvent: current2.animatedEventHandler,
         children: gesture.children,
       };
       let tmp28Result = (
-        <tmp9Result3.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>
+        <tmp9Result8.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>
           {gesture.children}
-        </tmp9Result3.AnimatedWrap>
+        </tmp9Result8.AnimatedWrap>
       );
     } else {
-      obj1 = { ref: viewRefHandler, children: gesture.children };
-      tmp28Result = <tmp9Result3.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result3.Wrap>;
+      const obj7 = { ref: viewRefHandler, children: gesture.children };
+      tmp28Result = <tmp9Result8.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result8.Wrap>;
     }
     return tmp28Result;
   } else {

@@ -1,9 +1,10 @@
 // _runtime/04939_DefineOwnProperty.js
-import flag2 from "01306_flag.js";
-import callBoundIntrinsic from "01316_callBoundIntrinsic.js";
+import flag2 from "01304_flag.js";
+import callBoundIntrinsic from "01314_callBoundIntrinsic.js";
 import _mod4924 from "metro/04924__.js";
-import flag from "metro/01456__.js";
+import flag_mod from "metro/01456__.js";
 
+let flag = flag_mod;
 flag = flag.hasArrayLengthDefineBug();
 if (flag) {
   flag = _mod4924;

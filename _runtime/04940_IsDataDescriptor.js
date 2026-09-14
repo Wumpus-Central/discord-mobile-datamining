@@ -1,20 +1,20 @@
 // _runtime/04940_IsDataDescriptor.js
-import _mod1283 from "metro/01283__.js";
-import _mod1315 from "metro/01315__.js";
+import _mod1281 from "metro/01281__.js";
+import _mod1313 from "metro/01313__.js";
 import _mod4936 from "metro/04936__.js";
 
 export default function IsDataDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
   } else if (_mod4936(arg0)) {
-    const tmp7 = _mod1315(arg0, "[[Value]]");
+    const tmp7 = _mod1313(arg0, "[[Value]]");
     let tmp8 = !tmp7;
     if (!tmp7) {
-      tmp8 = !_mod1315(arg0, "[[Writable]]");
+      tmp8 = !_mod1313(arg0, "[[Writable]]");
     }
     return !tmp8;
   } else {
-    const tmp5 = new _mod1283("Assertion failed: `Desc` must be a Property Descriptor");
+    const tmp5 = new _mod1281("Assertion failed: `Desc` must be a Property Descriptor");
     throw tmp5;
   }
 }

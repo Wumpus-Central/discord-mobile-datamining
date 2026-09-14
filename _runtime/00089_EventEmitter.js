@@ -1,9 +1,10 @@
 // _runtime/00089_EventEmitter.js
 import _classPrivateFieldKeyDefault from "00091__classPrivateFieldKey.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
 
+let _classCallCheck = _classCallCheck_mod;
 let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {
   constructor() {
@@ -31,15 +32,15 @@ const entry = {
         tmp16[arg0] = set;
         obj = set;
       }
-      obj = {
+      const obj2 = {
         context,
         listener,
         remove() {
-          obj.delete(obj);
+          obj.delete(obj2);
         },
       };
-      obj.add(obj);
-      return obj;
+      obj.add(obj2);
+      return obj2;
     }
   },
 };

@@ -55,19 +55,19 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = {};
+    const obj = {};
     ({ x1, y1, x2, y2 } = props);
     const merged = Object.assign(Line(8589).extract(this, props));
     obj.x1 = x1;
     obj.y1 = y1;
     obj.x2 = x2;
     obj.y2 = y2;
-    obj = {
+    const obj2 = Line(8589);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const obj2 = Line(8589);
     const merged1 = Object.assign(obj);
     return jsx(_modDef8648, {
       ref(arg0) {

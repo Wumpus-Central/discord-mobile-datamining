@@ -3,11 +3,11 @@ import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 14,
-  height: 14,
+  httpServerLocation: "/assets/modules/guild_home/native/images",
+  width: 1100,
+  height: 275,
   scales: [2, 3],
-  hash: "c34a0c861b7d42ccaa05d56a524cbcd8",
-  name: "ic_public",
+  hash: "ba87a4f1a3775c9189bf0599d24fcb24",
+  name: "dark_home_header_placeholder",
   type: "png",
 });

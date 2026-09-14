@@ -13,8 +13,8 @@ let closure_0 = async function _fromURL(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_0 = async function _fromURL(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_131_2 = undefined;
@@ -48,17 +48,17 @@ let closure_0 = async function _fromURL(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj1 = { value, done: true };
-        return obj1;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         let tmp12;
         if (closure_131_1) {
-          obj = { data: closure_131_1 };
+          const obj = { data: closure_131_1 };
           tmp12 = obj;
         }
         c6 = 3;
-        const obj2 = { value: tmp2.fromURL(closure_131_0, closure_131_2, tmp12), done: true };
-        return obj2;
+        const obj5 = { value: tmp2.fromURL(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -76,8 +76,8 @@ let asyncGeneratorStep = function _fromFileURL() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -90,8 +90,8 @@ let asyncGeneratorStep = function _fromFileURL() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp5;
             closure_131_1 = undefined;
@@ -112,17 +112,17 @@ let asyncGeneratorStep = function _fromFileURL() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           let tmp12;
           if (closure_131_1) {
-            obj = { data: closure_131_1 };
+            const obj = { data: closure_131_1 };
             tmp12 = obj;
           }
           c6 = 3;
-          const obj2 = { value: tmp2.fromFileURL(closure_131_0, closure_131_2, tmp12), done: true };
-          return obj2;
+          const obj5 = { value: tmp2.fromFileURL(closure_131_0, closure_131_2, tmp12), done: true };
+          return obj5;
         }
       } catch (tmp17) {
         c6 = tmp;
@@ -147,8 +147,8 @@ const Image = async function _fromResource(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -161,8 +161,8 @@ const Image = async function _fromResource(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_131_2 = undefined;
@@ -182,17 +182,17 @@ const Image = async function _fromResource(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj1 = { value, done: true };
-        return obj1;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         let tmp12;
         if (closure_131_1) {
-          obj = { data: closure_131_1 };
+          const obj = { data: closure_131_1 };
           tmp12 = obj;
         }
         c6 = 3;
-        const obj2 = { value: tmp2.fromResource(closure_131_0, closure_131_2, tmp12), done: true };
-        return obj2;
+        const obj5 = { value: tmp2.fromResource(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -208,8 +208,8 @@ let closure_3 = async function _fromBytes(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -222,8 +222,8 @@ let closure_3 = async function _fromBytes(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_131_2 = undefined;
@@ -243,17 +243,17 @@ let closure_3 = async function _fromBytes(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj1 = { value, done: true };
-        return obj1;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         let tmp12;
         if (closure_131_1) {
-          obj = { data: closure_131_1 };
+          const obj = { data: closure_131_1 };
           tmp12 = obj;
         }
         c6 = 3;
-        const obj2 = { value: tmp2.fromBytes(closure_131_0, closure_131_2, tmp12), done: true };
-        return obj2;
+        const obj5 = { value: tmp2.fromBytes(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj5;
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -269,8 +269,8 @@ let closure_4 = async function _fromSource(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -283,8 +283,8 @@ let closure_4 = async function _fromSource(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -310,8 +310,8 @@ let closure_4 = async function _fromSource(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           let tmp70 = null;
           if (typeof closure_131_0 === "number") {
@@ -338,13 +338,10 @@ let closure_4 = async function _fromSource(arg0) {
             c6 = 1;
             if (closure_131_5.match(/https?:\/\//)) {
               closure_0.fromURL(closure_131_5, closure_131_1, closure_131_2);
+            } else if (closure_131_5.match(/file:\/\//)) {
+              closure_0.fromFileURL(closure_131_5, closure_131_1, closure_131_2);
             } else {
-              obj = closure_0;
-              if (closure_131_5.match(/file:\/\//)) {
-                obj.fromFileURL(closure_131_5, closure_131_1, closure_131_2);
-              } else {
-                obj.fromResource(closure_131_5, closure_131_1, closure_131_2);
-              }
+              closure_0.fromResource(closure_131_5, closure_131_1, closure_131_2);
             }
             c6 = 0;
             c8 = 3;

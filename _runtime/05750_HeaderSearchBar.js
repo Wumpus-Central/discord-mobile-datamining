@@ -71,14 +71,14 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   );
   let first;
   c6 = undefined;
+  const navigation = visible(onClose[4]).useNavigation();
   let obj = visible(onClose[4]);
-  const navigation = obj.useNavigation();
-  let obj1 = visible(onClose[4]);
-  const theme = obj1.useTheme();
+  const theme = visible(onClose[4]).useTheme();
   ({ dark, colors } = theme);
   const tmp6 = navigation(first.useState(""), 2);
   first = tmp6[0];
   RN = tmp8;
+  const obj2 = visible(onClose[4]);
   [tmp10, c6] = navigation(first.useState(visible), 2);
   const first1 = navigation(
     first.useState(() => {
@@ -210,50 +210,57 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   if (visible) {
     str = "auto";
   }
-  obj = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: null, children: null };
+  const obj3 = { pointerEvents: str, "aria-live": "polite", "aria-hidden": !visible, style: null, children: null };
   const items6 = [closure_12.container, { opacity: first1 }, visible.style];
-  obj.style = items6;
-  obj = { style: closure_12.searchbarContainer, children: null };
-  obj1 = { source: onChangeText(tmp3[6]), tintColor: text, style: closure_12.inputSearchIcon };
-  const items7 = [first2(visible(onClose[5]).HeaderIcon, obj1), ,];
-  const obj2 = {};
+  obj3.style = items6;
+  const obj4 = { style: closure_12.searchbarContainer, children: null };
+  const tmp24 = first1;
+  const tmp9 = navigation(first.useState(visible), 2);
+  const items7 = [
+    first2(visible(onClose[5]).HeaderIcon, {
+      source: onChangeText(onClose[6]),
+      tintColor: text,
+      style: closure_12.inputSearchIcon,
+    }),
+    ,
+  ];
+  const obj8 = {};
   const merged1 = Object.assign(merged);
-  obj2.ref = ref;
-  obj2.onChange = onChangeText;
-  obj2.onChangeText = tmp6[1];
-  obj2.autoFocus = autoFocus;
+  obj8.ref = ref;
+  obj8.onChange = onChangeText;
+  obj8.onChangeText = tmp6[1];
+  obj8.autoFocus = autoFocus;
   let tmp29;
   if ("systemDefault" !== autoCapitalize) {
     tmp29 = autoCapitalize;
   }
-  obj2.autoCapitalize = tmp29;
+  obj8.autoCapitalize = tmp29;
   if (inputType == null) {
     inputType = "text";
   }
-  obj2.inputMode = ref2[inputType];
-  obj2.enterKeyHint = enterKeyHint;
-  obj2.placeholder = placeholder;
-  const tmp24 = first1;
+  obj8.inputMode = ref2[inputType];
+  obj8.enterKeyHint = enterKeyHint;
+  obj8.placeholder = placeholder;
+  const obj5 = { source: onChangeText(onClose[6]), tintColor: text, style: closure_12.inputSearchIcon };
   const tmp27 = c6;
-  const tmp9 = navigation(first.useState(visible), 2);
   const obj7 = onChangeText(onClose[7])(text);
-  obj2.placeholderTextColor = onChangeText(onClose[7])(text).alpha(0.5).string();
+  obj8.placeholderTextColor = onChangeText(onClose[7])(text).alpha(0.5).string();
   ({ primary: obj6.cursorColor, primary: obj6.selectionHandleColor } = colors);
   const alphaResult = onChangeText(onClose[7])(text).alpha(0.5);
   const obj9 = onChangeText(onClose[7])(colors.primary);
-  obj2.selectionColor = onChangeText(onClose[7])(colors.primary).alpha(0.3).string();
+  obj8.selectionColor = onChangeText(onClose[7])(colors.primary).alpha(0.3).string();
   const items8 = [theme.fonts.regular, closure_12.searchbar];
-  const obj3 = { backgroundColor: "transparent", color: text, borderBottomColor: null };
+  const obj10 = { backgroundColor: "transparent", color: text, borderBottomColor: null };
   const alphaResult1 = onChangeText(onClose[7])(colors.primary).alpha(0.3);
   const obj12 = onChangeText(onClose[7])(text);
-  obj3.borderBottomColor = onChangeText(onClose[7])(text).alpha(0.2).string();
-  items8[2] = obj3;
-  obj2.style = items8;
-  items7[1] = first2(tmp27, obj2);
+  obj10.borderBottomColor = onChangeText(onClose[7])(text).alpha(0.2).string();
+  items8[2] = obj10;
+  obj8.style = items8;
+  items7[1] = first2(tmp27, obj8);
   items7[2] = null;
-  obj.children = items7;
-  const items9 = [ref(tmp24, obj), ,];
-  const obj4 = {
+  obj4.children = items7;
+  const items9 = [ref(tmp24, obj4), ,];
+  const obj11 = {
     onPress() {
       if (first) {
         callback1();
@@ -265,9 +272,9 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
     children: null,
   };
   const alphaResult2 = onChangeText(onClose[7])(text).alpha(0.2);
-  obj4.children = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });
-  items9[1] = first2(visible(onClose[8]).HeaderButton, obj4);
+  obj11.children = first2(visible(onClose[5]).HeaderIcon, { source: onChangeText(onClose[9]), tintColor: text });
+  items9[1] = first2(visible(onClose[8]).HeaderButton, obj11);
   items9[2] = null;
-  obj.children = items9;
-  return ref(RN.View, obj);
+  obj3.children = items9;
+  return ref(RN.View, obj3);
 });

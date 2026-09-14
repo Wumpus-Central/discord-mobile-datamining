@@ -12,12 +12,13 @@ import httpContextIntegration from "../00945_httpContextIntegration.js";
 import linkedErrorsIntegration from "00944__.js";
 import INTEGRATION_NAME from "00959__.js";
 
+const require = globalThis.__r;
+
 function addPreviousTraceSpanLink(spanContext, spanContext2, propagationContext) {
   _require = propagationContext;
-  let obj = require("00682__.js");
-  const spanToJSONResult = obj.spanToJSON(spanContext2);
+  const spanToJSONResult = require("00682__.js").spanToJSON(spanContext2);
   dependencyMap = spanToJSONResult;
-  obj = {
+  const obj2 = {
     spanContext: spanContext2.spanContext(),
     startTimestamp: spanToJSONResult.start_timestamp,
     sampleRate: (function getSampleRate() {
@@ -48,23 +49,23 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, propagationContext)
     let tmp4 = spanContext;
     if (spanContext.traceId !== spanToJSONResult.trace_id) {
       const _Date = Date;
-      tmp4 = obj;
+      tmp4 = obj2;
       if (Date.now() / 1000 - spanContext.startTimestamp <= 3600) {
         if (tmp(937).DEBUG_BUILD) {
           const debug = tmp(682).debug;
           const _JSON = JSON;
           const json = JSON.stringify(spanContext);
           const _JSON2 = JSON;
-          obj = { op: spanToJSONResult.op };
+          const obj3 = { op: spanToJSONResult.op };
           const merged = Object.assign(spanContext2.spanContext());
           const _HermesInternal = HermesInternal;
-          debug.log("Adding previous_trace `" + json + "` link to span `" + JSON.stringify(obj) + "`");
+          debug.log("Adding previous_trace `" + json + "` link to span `" + JSON.stringify(obj3) + "`");
         }
-        const obj1 = { context: spanContext, attributes: null };
-        const obj2 = {};
-        obj2[tmp(682).SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE] = "previous_trace";
-        obj1.attributes = obj2;
-        spanContext2.addLink(obj1);
+        const obj4 = { context: spanContext, attributes: null };
+        const obj5 = {};
+        obj5[tmp(682).SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE] = "previous_trace";
+        obj4.attributes = obj5;
+        spanContext2.addLink(obj4);
         ({ traceId, spanId } = spanContext);
         let num2 = 0;
         if (1 === spanContext.traceFlags) {
@@ -72,13 +73,14 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, propagationContext)
         }
         const _HermesInternal2 = HermesInternal;
         const attr = spanContext2.setAttribute(c3, "" + traceId + "-" + spanId + "-" + num2);
-        tmp4 = obj;
+        tmp4 = obj2;
       }
     }
     return tmp4;
   } else {
-    return obj;
+    return obj2;
   }
+  const obj = require("00682__.js");
 }
 function storePreviousTraceInSessionStorage(arg0) {
   try {
@@ -138,31 +140,30 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
   if (linkPreviousTrace.consistentTraceSampling) {
     on.on("beforeSampling", (spanAttributes) => {
       if (closure_1) {
-        let obj = _mod682;
-        const currentScope = obj.getCurrentScope();
+        const currentScope = _mod682.getCurrentScope();
         const propagationContext = currentScope.getPropagationContext();
         if (c2) {
           if (propagationContext.parentSpanId) {
             c2 = false;
           }
         }
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(propagationContext);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(propagationContext.dsc);
         const _String = String;
-        obj.sample_rate = String(closure_1.sampleRate);
+        obj3.sample_rate = String(closure_1.sampleRate);
         const _String2 = String;
-        obj.sampled = String(1 === closure_1.spanContext.traceFlags);
-        obj.dsc = obj;
-        obj.sampleRand = closure_1.sampleRand;
-        const result = currentScope.setPropagationContext(obj);
+        obj3.sampled = String(1 === closure_1.spanContext.traceFlags);
+        obj2.dsc = obj3;
+        obj2.sampleRand = closure_1.sampleRand;
+        const result = currentScope.setPropagationContext(obj2);
         spanAttributes.parentSampled = 1 === closure_1.spanContext.traceFlags;
         spanAttributes.parentSampleRate = closure_1.sampleRate;
-        const obj1 = {};
+        const obj4 = {};
         const merged2 = Object.assign(spanAttributes.spanAttributes);
-        obj1[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = closure_1.sampleRate;
-        spanAttributes.spanAttributes = obj1;
+        obj4[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = closure_1.sampleRate;
+        spanAttributes.spanAttributes = obj4;
       }
     });
   }

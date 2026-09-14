@@ -1,5 +1,5 @@
 // _runtime/metro/01759__.js
-import _slicedToArray from "00032__.js";
+import _slicedToArray_mod from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
   code: "function pnpm_RollTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('0deg',config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{rotate:'-180deg'}],...initialValues},callback:callback};}",
 };
@@ -55,17 +56,18 @@ class RollInLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("0deg", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
+        const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
+        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { transform: null };
         const items1 = [{ translateX: -translateX.windowWidth }, { rotate: "-180deg" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };
@@ -119,17 +121,18 @@ class RollInRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("0deg", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
+        const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
+        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { transform: null };
         const items1 = [{ translateX: translateX.windowWidth }, { rotate: "180deg" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };
@@ -183,17 +186,18 @@ class RollOutLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("-180deg", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
+        const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
+        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("-180deg", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { transform: null };
         const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };
@@ -247,17 +251,18 @@ class RollOutRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("180deg", closure_2)) }];
-        obj.transform = items;
-        obj.animations = obj;
+        const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
+        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }];
+        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        items[1] = { rotate: delayFunction(delay, first("180deg", closure_2)) };
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj5 = { transform: null };
         const items1 = [{ translateX: 0 }, { rotate: "0deg" }];
-        obj2.transform = items1;
+        obj5.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj2;
+        obj.initialValues = obj5;
         obj.callback = callbackV;
         return obj;
       };

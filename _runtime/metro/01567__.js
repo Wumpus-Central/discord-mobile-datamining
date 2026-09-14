@@ -15,13 +15,13 @@ export const useFocusedListenersChildrenAdapter = function useFocusedListenersCh
         let item10012Result = item10012(arg0);
         let handled = item10012Result.handled;
         if (handled) {
-          let obj = { handled, result: tmp5 };
+          let obj2 = { handled, result: tmp5 };
           obj.return();
-          return obj;
+          return obj2;
         }
       }
-      obj = { handled: true, result: fn(navigation) };
-      return obj;
+      const obj3 = { handled: true, result: fn(navigation) };
+      return obj3;
     } else {
       return { handled: false, result: null };
     }

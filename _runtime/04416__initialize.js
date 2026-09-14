@@ -13,8 +13,8 @@ let asyncGeneratorStep = function _initialize() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -27,20 +27,20 @@ let asyncGeneratorStep = function _initialize() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: tmp4.initialize(), done: false };
-            return obj1;
+            const obj4 = { value: tmp4.initialize(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (tmp4.isInitialized) {
           c3 = 3;

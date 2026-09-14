@@ -79,16 +79,16 @@ _inherits(TSpan, _modDef8598);
 const entry = {
   key: "render",
   value: function render() {
-    let obj = TSpan(8589);
-    const propsAndStylesResult = obj.propsAndStyles(this.props);
-    obj = {};
+    const propsAndStylesResult = TSpan(8589).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = TSpan(8589);
     const merged = Object.assign(propsAndStylesResult);
-    obj.x = null;
-    obj.y = null;
-    const tmp2Result = extractPropsDefault(obj, this);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
     const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
     tmp2Result.ref = this.refMethod;
-    obj = {};
+    const obj3 = {};
     const merged2 = Object.assign(tmp2Result);
     return jsx(_modDef8674, {});
   },

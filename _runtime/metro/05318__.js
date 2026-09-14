@@ -3,7 +3,7 @@ import _mod5319 from "05319__.js";
 
 require = fn;
 const dependencyMap = arg6;
-let obj = {
+const obj = {
   33434: null,
   33437: null,
   34850: null,
@@ -110,10 +110,10 @@ let obj = {
   65111: "Smoothness",
   65112: "MoireFilter",
 };
-obj = { name: "ExposureTime", description: fn2(5317).ExposureTime };
-obj[33434] = obj;
-obj = { name: "FNumber", description: fn2(5317).FNumber };
-obj[33437] = obj;
+obj[33434] = { name: "ExposureTime", description: fn2(5317).ExposureTime };
+const obj2 = { name: "ExposureTime", description: fn2(5317).ExposureTime };
+obj[33437] = { name: "FNumber", description: fn2(5317).FNumber };
+const obj3 = { name: "FNumber", description: fn2(5317).FNumber };
 obj[34850] = { name: "ExposureProgram", description: fn2(5317).ExposureProgram };
 obj[34856] = {
   name: "OECF",
@@ -143,11 +143,11 @@ obj[36864] = {
     return _mod5319.getStringValue(value);
   },
 };
-const obj1 = { name: "ExposureProgram", description: fn2(5317).ExposureProgram };
+const obj4 = { name: "ExposureProgram", description: fn2(5317).ExposureProgram };
 obj[37121] = { name: "ComponentsConfiguration", description: fn2(5317).ComponentsConfiguration };
-const obj2 = { name: "ComponentsConfiguration", description: fn2(5317).ComponentsConfiguration };
+const obj5 = { name: "ComponentsConfiguration", description: fn2(5317).ComponentsConfiguration };
 obj[37377] = { name: "ShutterSpeedValue", description: fn2(5317).ShutterSpeedValue };
-const obj3 = { name: "ShutterSpeedValue", description: fn2(5317).ShutterSpeedValue };
+const obj6 = { name: "ShutterSpeedValue", description: fn2(5317).ShutterSpeedValue };
 obj[37378] = { name: "ApertureValue", description: fn2(5317).ApertureValue };
 obj[37381] = {
   name: "MaxApertureValue",
@@ -161,9 +161,9 @@ obj[37382] = {
     return arg0[0] / arg0[1] + " m";
   },
 };
-const obj4 = { name: "ApertureValue", description: fn2(5317).ApertureValue };
+const obj7 = { name: "ApertureValue", description: fn2(5317).ApertureValue };
 obj[37383] = { name: "MeteringMode", description: fn2(5317).MeteringMode };
-const obj5 = { name: "MeteringMode", description: fn2(5317).MeteringMode };
+const obj8 = { name: "MeteringMode", description: fn2(5317).MeteringMode };
 obj[37384] = { name: "LightSource", description: fn2(5317).LightSource };
 obj[37385] = {
   name: "Flash",
@@ -263,7 +263,7 @@ obj[37385] = {
     return str;
   },
 };
-const obj6 = { name: "LightSource", description: fn2(5317).LightSource };
+const obj9 = { name: "LightSource", description: fn2(5317).LightSource };
 obj[37386] = { name: "FocalLength", description: fn2(5317).FocalLength };
 obj[37394] = {
   name: "SecurityClassification",
@@ -296,7 +296,7 @@ obj[37500] = {
     return "[Raw maker note data]";
   },
 };
-const obj7 = { name: "FocalLength", description: fn2(5317).FocalLength };
+const obj10 = { name: "FocalLength", description: fn2(5317).FocalLength };
 obj[37510] = { name: "UserComment", description: fn(5319).getEncodedString };
 obj[37888] = {
   name: "AmbientTemperature",
@@ -341,7 +341,7 @@ obj[40960] = {
     return mapped.join("");
   },
 };
-const obj8 = { name: "UserComment", description: fn(5319).getEncodedString };
+const obj11 = { name: "UserComment", description: fn(5319).getEncodedString };
 obj[40961] = { name: "ColorSpace", description: fn2(5317).ColorSpace };
 obj[41484] = {
   name: "SpatialFrequencyResponse",
@@ -349,7 +349,7 @@ obj[41484] = {
     return "[Raw SFR table data]";
   },
 };
-const obj9 = { name: "ColorSpace", description: fn2(5317).ColorSpace };
+const obj12 = { name: "ColorSpace", description: fn2(5317).ColorSpace };
 obj[41488] = { name: "FocalPlaneResolutionUnit", description: fn2(5317).FocalPlaneResolutionUnit };
 obj[41492] = {
   name: "SubjectLocation",
@@ -418,11 +418,11 @@ obj[41730] = {
     return "[Raw CFA pattern table data]";
   },
 };
-const obj10 = { name: "FocalPlaneResolutionUnit", description: fn2(5317).FocalPlaneResolutionUnit };
+const obj13 = { name: "FocalPlaneResolutionUnit", description: fn2(5317).FocalPlaneResolutionUnit };
 obj[41985] = { name: "CustomRendered", description: fn2(5317).CustomRendered };
-const obj11 = { name: "CustomRendered", description: fn2(5317).CustomRendered };
+const obj14 = { name: "CustomRendered", description: fn2(5317).CustomRendered };
 obj[41986] = { name: "ExposureMode", description: fn2(5317).ExposureMode };
-const obj12 = { name: "ExposureMode", description: fn2(5317).ExposureMode };
+const obj15 = { name: "ExposureMode", description: fn2(5317).ExposureMode };
 obj[41987] = { name: "WhiteBalance", description: fn2(5317).WhiteBalance };
 obj[41988] = {
   name: "DigitalZoomRatio",
@@ -434,9 +434,9 @@ obj[41988] = {
     return str;
   },
 };
-const obj13 = { name: "WhiteBalance", description: fn2(5317).WhiteBalance };
+const obj16 = { name: "WhiteBalance", description: fn2(5317).WhiteBalance };
 obj[41989] = { name: "FocalLengthIn35mmFilm", description: fn2(5317).FocalLengthIn35mmFilm };
-const obj14 = { name: "FocalLengthIn35mmFilm", description: fn2(5317).FocalLengthIn35mmFilm };
+const obj17 = { name: "FocalLengthIn35mmFilm", description: fn2(5317).FocalLengthIn35mmFilm };
 obj[41990] = { name: "SceneCaptureType", description: fn2(5317).SceneCaptureType };
 obj[41991] = {
   name: "GainControl",
@@ -464,11 +464,11 @@ obj[41991] = {
     return str;
   },
 };
-const obj15 = { name: "SceneCaptureType", description: fn2(5317).SceneCaptureType };
+const obj18 = { name: "SceneCaptureType", description: fn2(5317).SceneCaptureType };
 obj[41992] = { name: "Contrast", description: fn2(5317).Contrast };
-const obj16 = { name: "Contrast", description: fn2(5317).Contrast };
+const obj19 = { name: "Contrast", description: fn2(5317).Contrast };
 obj[41993] = { name: "Saturation", description: fn2(5317).Saturation };
-const obj17 = { name: "Saturation", description: fn2(5317).Saturation };
+const obj20 = { name: "Saturation", description: fn2(5317).Saturation };
 obj[41994] = { name: "Sharpness", description: fn2(5317).Sharpness };
 obj[41995] = {
   name: "DeviceSettingDescription",

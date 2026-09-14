@@ -3,6 +3,8 @@ import _mod682 from "metro/00682__.js";
 import _mod937 from "metro/00937__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const startProfileForSpan = function startProfileForSpan(rootSpan) {
@@ -25,8 +27,8 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -38,11 +40,10 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           if (rootSpan) {
-            obj = dependencyMap;
             if (dependencyMap) {
               if (React3) {
                 if (v3(937).DEBUG_BUILD) {
@@ -55,10 +56,10 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
                   const tmp5Result = tmp5(682);
                 }
               } else {
-                const stopResult = obj.stop();
+                const stopResult = dependencyMap.stop();
                 v3 = 3;
-                const obj1 = {
-                  value: obj
+                const obj4 = {
+                  value: dependencyMap
                     .stop()
                     .then((result) => {
                       if (c4) {
@@ -94,7 +95,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
                     }),
                   done: true,
                 };
-                return obj1;
+                return obj4;
               }
             }
           }
@@ -107,28 +108,27 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
       }
     }
   };
-  let obj = require("metro/00966__.js");
   if (obj.isAutomatedPageLoadSpan(rootSpan)) {
+    let result = 1000 * tmp(682).timestampInSeconds();
     let tmpResult = tmp(682);
-    let result = 1000 * tmpResult.timestampInSeconds();
   }
-  tmpResult = tmp(966);
-  const startJSSelfProfileResult = tmpResult.startJSSelfProfile();
+  obj = require("metro/00966__.js");
+  const startJSSelfProfileResult = require("metro/00966__.js").startJSSelfProfile();
   dependencyMap = startJSSelfProfileResult;
   if (startJSSelfProfileResult) {
     if (tmp(937).DEBUG_BUILD) {
       let debug = tmp(682).debug;
       let _HermesInternal = HermesInternal;
       debug.log("[Profiling] started profiling span: " + tmp(682).spanToJSON(rootSpan).description);
-      const tmpResult1 = tmp(682);
+      const tmpResult6 = tmp(682);
     }
     const uuid4Result = tmp(682).uuid4();
     asyncGeneratorStep = uuid4Result;
     c3 = null;
-    const tmpResult2 = tmp(682);
+    const tmpResult7 = tmp(682);
     const currentScope = tmp(682).getCurrentScope();
-    obj = { profile_id: uuid4Result, start_timestamp: result };
-    currentScope.setContext("profile", obj);
+    let obj2 = { profile_id: uuid4Result, start_timestamp: result };
+    currentScope.setContext("profile", obj2);
     let WINDOW = tmp(893).WINDOW;
     const timeout = WINDOW.setTimeout(() => {
       if (_mod937.DEBUG_BUILD) {
@@ -160,6 +160,6 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
       }
       return tmp3;
     };
-    const tmpResult3 = tmp(682);
+    const tmpResult8 = tmp(682);
   }
 };

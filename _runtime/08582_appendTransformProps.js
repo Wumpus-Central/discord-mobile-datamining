@@ -150,9 +150,9 @@ function props2transform(transform) {
       }
       translateY = first1;
     }
-    universal2axis(translate, translateX, translateY);
-    const tmp6Result = universal2axis(origin, originX, originY);
-    const tmp6Result1 = universal2axis(scale, scaleX, scaleY, 1);
+    const tmp6Result = universal2axis(translate, translateX, translateY);
+    const tmp6Result4 = universal2axis(origin, originX, originY);
+    const tmp6Result5 = universal2axis(scale, scaleX, scaleY, 1);
     let num4 = 0;
     if (null != rotation) {
       num4 = +rotation || 0;
@@ -169,8 +169,8 @@ function props2transform(transform) {
       x: null,
       y: null,
     };
-    [obj.originX, obj.originY] = tmp6Result;
-    [obj.scaleX, obj.scaleY] = tmp6Result1;
+    [obj.originX, obj.originY] = tmp6Result4;
+    [obj.scaleX, obj.scaleY] = tmp6Result5;
     [obj.skewX, obj.skewY] = universal2axis(skew, skewX, skewY);
     [obj.x, obj.y] = tmp6Result;
     return point;
@@ -192,7 +192,7 @@ function transformToMatrix(arg0, arr) {
     const _Array = Array;
     if (Array.isArray(arr)) {
       if (typeof arr[0] === "number") {
-        let tmp3Result = append;
+        const tmp3Result = append;
         tmp3Result.append(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
       } else {
         const tmp24 = props2transform(transformsArrayToProps(arr));
@@ -202,10 +202,10 @@ function transformToMatrix(arg0, arr) {
       }
     } else if (typeof arr === "string") {
       try {
-        tmp3Result = peg$SyntaxError;
-        const parsed = tmp3Result.parse(arr);
-        const tmp3Result1 = append;
-        tmp3Result1.append(parsed[0], parsed[3], parsed[1], parsed[4], parsed[2], parsed[5]);
+        const parsed = peg$SyntaxError.parse(arr);
+        const tmp3Result5 = append;
+        tmp3Result5.append(parsed[0], parsed[3], parsed[1], parsed[4], parsed[2], parsed[5]);
+        const tmp3Result4 = peg$SyntaxError;
       } catch (tmp14) {
         const _console = tmp.console;
         _console.error(tmp14);

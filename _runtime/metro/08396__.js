@@ -100,17 +100,16 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   let lowerLimit = onSlidingComplete.lowerLimit;
   if (undefined === lowerLimit) {
     const Platform = get_ActivityIndicator.Platform;
-    let obj = { web: num, default: _mod8400.constants.LIMIT_MIN_VALUE };
+    const obj = { web: num, default: _mod8400.constants.LIMIT_MIN_VALUE };
     lowerLimit = Platform.select(obj);
   }
   let upperLimit = onSlidingComplete.upperLimit;
   if (undefined === upperLimit) {
     const Platform2 = get_ActivityIndicator.Platform;
-    obj = { web: num2, default: _mod8400.constants.LIMIT_MAX_VALUE };
-    upperLimit = Platform2.select(obj);
+    const obj2 = { web: num2, default: _mod8400.constants.LIMIT_MAX_VALUE };
+    upperLimit = Platform2.select(obj2);
   }
   const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
-  let obj2 = value;
   let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
   if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
     SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
@@ -121,7 +120,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
   const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
   const tmp4 = undefined !== tapToSeek && tapToSeek;
-  [tmp17, closure_8] = _slicedToArray.default(obj2.useState(0), 2);
+  [tmp17, closure_8] = _slicedToArray.default(value.useState(0), 2);
   let DEFAULT_STEP_RESOLUTION = num3;
   if (!num3) {
     DEFAULT_STEP_RESOLUTION = _mod8400.constants.DEFAULT_STEP_RESOLUTION;
@@ -135,8 +134,8 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
   if (num3) {
     DEFAULT_STEP_RESOLUTION = result;
   }
-  obj = { length: DEFAULT_STEP_RESOLUTION + 1 };
-  const defaultResult2 = _slicedToArray.default(obj2.useState(0), 2);
+  const defaultResult2 = _slicedToArray.default(value.useState(0), 2);
+  const obj4 = { length: DEFAULT_STEP_RESOLUTION + 1 };
   if ("ios" === get_ActivityIndicator.Platform.OS) {
     let defaultSlider = _mod8401.styles.defaultSlideriOS;
     let tmp24 = require;
@@ -149,16 +148,16 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     let disabled = defaultResult.disabled;
   } else {
     const accessibilityState2 = defaultResult.accessibilityState;
-    disabled = undefined;
+    let disabled1;
     if (null != accessibilityState2) {
-      disabled = accessibilityState2.disabled;
+      disabled1 = accessibilityState2.disabled;
     }
-    disabled = true === disabled;
+    disabled = true === disabled1;
   }
   if (typeof defaultResult.disabled === "boolean") {
     const _Object = Object;
-    const obj1 = { disabled: defaultResult.disabled };
-    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj1);
+    const obj5 = { disabled: defaultResult.disabled };
+    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj5);
   } else {
     accessibilityState = defaultResult.accessibilityState;
   }
@@ -187,13 +186,13 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     }
   }
   const items1 = [lowerLimit, upperLimit];
-  const effect = obj2.useEffect(() => {
+  const effect = value.useEffect(() => {
     if (lowerLimit >= upperLimit) {
       const _console = console;
       console.warn("Invalid configuration: lower limit is supposed to be smaller than upper limit");
     }
   }, items1);
-  obj2 = {
+  const obj7 = {
     onLayout(nativeEvent) {
       closure_1_8(nativeEvent.nativeEvent.layout.width);
     },
@@ -201,17 +200,17 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     children: null
   };
   const items2 = [items, { justifyContent: "center" }];
-  obj2.style = items2;
+  obj7.style = items2;
   if (defaultResult.StepMarker) {
-    const obj3 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
+    const obj9 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
     ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
-    obj3.isLTR = tmp3;
+    obj9.isLTR = tmp3;
     let jsxResult = jsxProd.jsx(tmp24(8402).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
   } else {
     jsxResult = null;
   }
   const items3 = [jsxResult, ];
-  const obj4 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
+  const obj15 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
   if ("web" === get_ActivityIndicator.Platform.OS) {
     let thumbImage = defaultResult.thumbImage;
   } else if (!defaultResult.StepMarker) {
@@ -226,30 +225,30 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     }
     jsxProd(nativeEvent.nativeEvent.value);
   }
-  obj4.thumbImage = thumbImage;
-  obj4.ref = ref;
+  obj15.thumbImage = thumbImage;
+  obj15.ref = ref;
   const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
-  obj4.style = items4;
-  obj4.onChange = onValueChangeEvent;
-  obj4.onRNCSliderSlidingStart = fn;
-  obj4.onRNCSliderSlidingComplete = fn2;
-  obj4.onRNCSliderValueChange = onValueChangeEvent;
-  obj4.disabled = disabled;
-  obj4.onStartShouldSetResponder = function onStartShouldSetResponder() {
+  obj15.style = items4;
+  obj15.onChange = onValueChangeEvent;
+  obj15.onRNCSliderSlidingStart = fn;
+  obj15.onRNCSliderSlidingComplete = fn2;
+  obj15.onRNCSliderValueChange = onValueChangeEvent;
+  obj15.disabled = disabled;
+  obj15.onStartShouldSetResponder = function onStartShouldSetResponder() {
     return true;
   };
-  obj4.onResponderTerminationRequest = function onResponderTerminationRequest() {
+  obj15.onResponderTerminationRequest = function onResponderTerminationRequest() {
     return false;
   };
-  obj4.onRNCSliderAccessibilityAction = fn3;
+  obj15.onRNCSliderAccessibilityAction = fn3;
   if (!defaultResult.thumbImage) {
     let str = defaultResult.thumbTintColor;
   } else {
     str = "transparent";
   }
-  obj4.thumbTintColor = str;
-  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj4)} />;
-  obj2.children = items3;
+  obj15.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj15)} />;
+  obj7.children = items3;
   return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
     closure_1_8(nativeEvent.nativeEvent.layout.width);
   }} style={null}>{null}</get ActivityIndicator.View>;

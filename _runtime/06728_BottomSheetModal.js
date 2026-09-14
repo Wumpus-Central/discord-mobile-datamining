@@ -24,8 +24,10 @@ import _modDef7031 from "metro/07031__.js";
 import BottomSheetBackdrop from "07033_BottomSheetBackdrop.js";
 import TouchableOpacityDefault from "07037_TouchableOpacity.js";
 
-for (const key10013 in require("GESTURE_SOURCE")) {
-  arg5[key10013] = require("GESTURE_SOURCE")[key10013];
+const require = globalThis.__r;
+
+for (const key10013 in require("value2")) {
+  arg5[key10013] = require("value2")[key10013];
   continue;
 }
 

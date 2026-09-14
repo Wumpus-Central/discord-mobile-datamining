@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "tecken", verb: "att ha" },
           file: { unit: "bytes", verb: "att ha" },
           array: { unit: "objekt", verb: "att inneh\u00E5lla" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ogiltig inmatning: f\u00F6rv\u00E4ntat instanceof " + code.expected + ", fick " + tmp48;
@@ -128,7 +127,7 @@ if (self2) {
               if (code.inclusive) {
                 str31 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -137,14 +136,14 @@ if (self2) {
                 if (str32 == null) {
                   str32 = "v\u00E4rdet";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str38 = tmp27.unit;
                 if (str38 == null) {
                   str38 = "element";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "F\u00F6r stor(t): f\u00F6rv\u00E4ntade " + str32 + " att ha " + str31 + str + " " + str38;
+                  "F\u00F6r stor(t): f\u00F6rv\u00E4ntade " + str32 + " att ha " + str31 + str1 + " " + str38;
               } else {
                 let str33 = str32;
                 if (str32 == null) {
@@ -160,7 +159,7 @@ if (self2) {
               if (code.inclusive) {
                 str21 = ">=";
               }
-              let tmp17 = obj[code.origin];
+              let tmp17 = obj2[code.origin];
               if (tmp17 == null) {
                 tmp17 = null;
               }
@@ -230,7 +229,7 @@ if (self2) {
             case "invalid_union":
               return "Ogiltig input";
             case "invalid_element":
-              str = code.origin;
+              let str = code.origin;
               if (str == null) {
                 str = "v\u00E4rdet";
               }

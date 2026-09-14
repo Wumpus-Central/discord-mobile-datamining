@@ -54,8 +54,8 @@ function merge(arg0, obj) {
 }
 
 export default function getNativeComponentAttributes(uiViewClassName) {
-  let _default = measure.default;
-  const viewManagerConfig = _default.getViewManagerConfig(uiViewClassName);
+  let baseModuleName1;
+  const viewManagerConfig = measure.default.getViewManagerConfig(uiViewClassName);
   if (null == viewManagerConfig) {
     return null;
   } else {
@@ -72,173 +72,176 @@ export default function getNativeComponentAttributes(uiViewClassName) {
     let tmp6 = NativeProps;
     let tmp7 = directEventTypes;
     let tmp8 = bubblingEventTypes;
-    while (baseModuleName) {
-      let _default2 = measure.default;
-      let viewManagerConfig1 = _default2.getViewManagerConfig(baseModuleName);
-      let tmp15 = tmp4;
-      let tmp16 = tmp3;
-      let tmp17 = tmp5;
-      baseModuleName = null;
-      if (viewManagerConfig1) {
-        let obj = {};
-        let merged = Object.assign(viewManagerConfig1.bubblingEventTypes);
-        let merged1 = Object.assign(tmp14);
-        obj = {};
-        let merged2 = Object.assign(viewManagerConfig1.directEventTypes);
-        let merged3 = Object.assign(tmp13);
-        let obj1 = {};
-        let merged4 = Object.assign(viewManagerConfig1.NativeProps);
-        let merged5 = Object.assign(tmp12);
-        baseModuleName = viewManagerConfig1.baseModuleName;
-        tmp15 = obj1;
-        tmp16 = obj;
-        tmp17 = obj;
-      }
-      tmp4 = tmp15;
-      tmp3 = tmp16;
-      tmp5 = tmp17;
-      tmp6 = tmp15;
-      tmp7 = tmp16;
-      tmp8 = tmp17;
+    if (baseModuleName) {
+      do {
+        let _default2 = measure.default;
+        let viewManagerConfig1 = _default2.getViewManagerConfig(baseModuleName);
+        let tmp15 = tmp4;
+        let tmp16 = tmp3;
+        let tmp17 = tmp5;
+        baseModuleName1 = null;
+        if (viewManagerConfig1) {
+          let obj = {};
+          let merged = Object.assign(viewManagerConfig1.bubblingEventTypes);
+          let merged1 = Object.assign(tmp14);
+          let obj2 = {};
+          let merged2 = Object.assign(viewManagerConfig1.directEventTypes);
+          let merged3 = Object.assign(tmp13);
+          let obj3 = {};
+          let merged4 = Object.assign(viewManagerConfig1.NativeProps);
+          let merged5 = Object.assign(tmp12);
+          baseModuleName1 = viewManagerConfig1.baseModuleName;
+          tmp15 = obj3;
+          tmp16 = obj2;
+          tmp17 = obj;
+        }
+        tmp4 = tmp15;
+        tmp3 = tmp16;
+        tmp5 = tmp17;
+        baseModuleName = baseModuleName1;
+        tmp6 = tmp15;
+        tmp7 = tmp16;
+        tmp8 = tmp17;
+      } while (baseModuleName1);
     }
-    const obj2 = {};
+    const obj4 = {};
     for (const key10063 in tmp6) {
       let tmp117 = tmp6[key10063];
       if ("CATransform3D" === tmp117) {
-        _default = matricesDiffer.default;
+        let _default1 = matricesDiffer.default;
       } else {
         if ("CGPoint" !== tmp117) {
           if ("Point" !== tmp117) {
             if ("CGSize" === tmp117) {
-              _default = sizesDiffer.default;
+              _default1 = sizesDiffer.default;
             } else if ("UIEdgeInsets" === tmp117) {
-              _default = insetsDiffer.default;
+              _default1 = insetsDiffer.default;
             } else {
-              _default = null;
+              _default1 = null;
             }
           }
         }
-        _default = pointsDiffer.default;
+        _default1 = pointsDiffer.default;
       }
-      let _default1 = null;
+      let _default4 = null;
       switch (tmp117) {
         case "CGColor":
           let tmp66 = processColor;
-          _default1 = tmp66.default;
-          if (null == _default) {
-            let tmp67 = null == _default1;
+          _default4 = tmp66.default;
+          if (null == _default1) {
+            let tmp67 = null == _default4;
             if (!tmp67) {
-              let obj3 = { process: _default1 };
-              tmp67 = obj3;
+              let obj5 = { process: _default4 };
+              tmp67 = obj5;
             }
-            let obj5 = tmp67;
-          } else if (null == _default1) {
-            let obj4 = { diff: _default };
-            obj5 = obj4;
+            let obj7 = tmp67;
+          } else if (null == _default4) {
+            let obj6 = { diff: _default1 };
+            obj7 = obj6;
           } else {
-            obj5 = { diff: _default, process: _default1 };
+            obj7 = { diff: _default1, process: _default4 };
           }
-          obj2[key10063] = obj5;
+          obj4[key10063] = obj7;
           continue;
           break;
         case "UIColor":
           tmp66 = processColor;
-          _default1 = tmp66.default;
-          if (null == _default) {
-            tmp67 = null == _default1;
+          _default4 = tmp66.default;
+          if (null == _default1) {
+            tmp67 = null == _default4;
             if (!tmp67) {
-              obj3 = { process: _default1 };
-              tmp67 = obj3;
+              obj5 = { process: _default4 };
+              tmp67 = obj5;
             }
-            obj5 = tmp67;
-          } else if (null == _default1) {
-            obj4 = { diff: _default };
-            obj5 = obj4;
+            obj7 = tmp67;
+          } else if (null == _default4) {
+            obj6 = { diff: _default1 };
+            obj7 = obj6;
           } else {
-            obj5 = { diff: _default, process: _default1 };
+            obj7 = { diff: _default1, process: _default4 };
           }
-          obj2[key10063] = obj5;
+          obj4[key10063] = obj7;
           continue;
           break;
         case "Color":
           tmp66 = processColor;
-          _default1 = tmp66.default;
-          if (null == _default) {
-            tmp67 = null == _default1;
+          _default4 = tmp66.default;
+          if (null == _default1) {
+            tmp67 = null == _default4;
             if (!tmp67) {
-              obj3 = { process: _default1 };
-              tmp67 = obj3;
+              obj5 = { process: _default4 };
+              tmp67 = obj5;
             }
-            obj5 = tmp67;
-          } else if (null == _default1) {
-            obj4 = { diff: _default };
-            obj5 = obj4;
+            obj7 = tmp67;
+          } else if (null == _default4) {
+            obj6 = { diff: _default1 };
+            obj7 = obj6;
           } else {
-            obj5 = { diff: _default, process: _default1 };
+            obj7 = { diff: _default1, process: _default4 };
           }
-          obj2[key10063] = obj5;
+          obj4[key10063] = obj7;
           continue;
           break;
         case "CGColorArray":
           let tmp63 = processColorElement;
-          _default1 = tmp63.default;
+          _default4 = tmp63.default;
           break;
         case "UIColorArray":
           tmp63 = processColorElement;
-          _default1 = tmp63.default;
+          _default4 = tmp63.default;
           break;
         case "ColorArray":
           tmp63 = processColorElement;
-          _default1 = tmp63.default;
+          _default4 = tmp63.default;
           break;
         case "CGImage":
           let tmp60 = resolveAssetSource;
-          _default1 = tmp60.default;
+          _default4 = tmp60.default;
           break;
         case "UIImage":
           tmp60 = resolveAssetSource;
-          _default1 = tmp60.default;
+          _default4 = tmp60.default;
           break;
         case "RCTImageSource":
           tmp60 = resolveAssetSource;
-          _default1 = tmp60.default;
+          _default4 = tmp60.default;
           break;
         case "ImageSource":
           tmp60 = resolveAssetSource;
-          _default1 = tmp60.default;
+          _default4 = tmp60.default;
           break;
         case "BoxShadowArray":
-          _default1 = _modDef55;
+          _default4 = _modDef55;
           break;
         case "BoxShadow":
-          _default1 = _modDef55;
+          _default4 = _modDef55;
           break;
         case "FilterArray":
           let tmp55 = _getFilterAmount;
-          _default1 = tmp55.default;
+          _default4 = tmp55.default;
           break;
         case "Filter":
           tmp55 = _getFilterAmount;
-          _default1 = tmp55.default;
+          _default4 = tmp55.default;
           break;
         case "BackgroundImage":
-          _default1 = processColorStops.default;
+          _default4 = processColorStops.default;
           break;
         case "BackgroundPosition":
-          _default1 = _mod58.default;
+          _default4 = _mod58.default;
           break;
         case "BackgroundRepeat":
-          _default1 = _mod59.default;
+          _default4 = _mod59.default;
           break;
         case "BackgroundSize":
-          _default1 = _mod57.default;
+          _default4 = _mod57.default;
           break;
       }
     }
-    obj2.style = _mod26.default;
+    obj4.style = _mod26.default;
     const _Object = Object;
-    const obj6 = { uiViewClassName, validAttributes: obj2, bubblingEventTypes: tmp8, directEventTypes: tmp7 };
-    const merged6 = Object.assign(viewManagerConfig, obj6);
+    const obj8 = { uiViewClassName, validAttributes: obj4, bubblingEventTypes: tmp8, directEventTypes: tmp7 };
+    const merged6 = Object.assign(viewManagerConfig, obj8);
     constants = measure.default.getConstants();
     if (!constants.ViewManagerNames) {
       if (!constants.LazyViewManagersEnabled) {
@@ -449,4 +452,5 @@ export default function getNativeComponentAttributes(uiViewClassName) {
     }
     const tmp68Result = nullthrows;
   }
+  const _default = measure.default;
 }

@@ -1,25 +1,28 @@
 // _runtime/03887_differenceInCalendarDays.js
-import 03888__ from "metro/03888__.js";
-import startOfDay from "03889_startOfDay.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3888_mod from "metro/03888__.js";
+import startOfDay_mod from "03889_startOfDay.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3888 = module_3888_mod;
 if (!module_3888) {
-  let obj = { default: module_3888 };
+  const obj = { default: module_3888 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3888;
 }
 module_3888 = tmp3;
+let startOfDay = startOfDay_mod;
 if (!startOfDay) {
-  obj = { default: startOfDay };
-  let tmp5 = obj;
+  const obj2 = { default: startOfDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfDay;
 }
 startOfDay = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

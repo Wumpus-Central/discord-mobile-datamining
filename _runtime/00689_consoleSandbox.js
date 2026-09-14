@@ -58,8 +58,11 @@ function _maybeLog(arg0) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let originalConsoleMethods = {};
-originalConsoleMethods = {
+const originalConsoleMethods = {};
+
+export const CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+export { consoleSandbox };
+export const debug = {
   enable() {
     if (_mod688.DEBUG_BUILD) {
       let globalSingleton = _mod690.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
@@ -103,8 +106,4 @@ originalConsoleMethods = {
     _maybeLog();
   },
 };
-
-export const CONSOLE_LEVELS = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-export { consoleSandbox };
-export const debug = originalConsoleMethods;
 export { originalConsoleMethods };

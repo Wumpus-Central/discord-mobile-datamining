@@ -16,27 +16,26 @@ export const useNavigationCache = function useNavigationCache(getState) {
   const base = emitter.useMemo(() => {
     const tmp = router(dispatch, setOptions);
     closure_0 = tmp;
-    let obj = {};
     const merged = Object.assign(router.actionCreators);
     const merged1 = Object.assign(getState(navigation[3]).CommonActions);
     dispatch = function dispatch() {
       const error = new Error("Actions cannot be dispatched from a placeholder screen.");
       throw error;
     };
-    const keys = Object.keys(obj);
+    const keys = Object.keys({});
     const reduced = keys.reduce((acc, item) => {
       acc[item] = dispatch;
       return acc;
     }, {});
-    obj = {};
+    const obj2 = {};
     const merged2 = Object.assign(tmp);
     const merged3 = Object.assign(reduced);
-    obj.addListener = function addListener() {
+    obj2.addListener = function addListener() {
       return () => {};
     };
-    obj.removeListener = function removeListener() {};
-    obj.dispatch = dispatch;
-    obj.getParent = function getParent(arg0) {
+    obj2.removeListener = function removeListener() {};
+    obj2.dispatch = dispatch;
+    obj2.getParent = function getParent(arg0) {
       if (undefined !== arg0) {
         if (arg0 === closure_0.getId()) {
           let parent = base;
@@ -45,14 +44,14 @@ export const useNavigationCache = function useNavigationCache(getState) {
       }
       parent = closure_0.getParent(arg0);
     };
-    obj.setOptions = function setOptions() {
+    obj2.setOptions = function setOptions() {
       const error = new Error("Options cannot be set from a placeholder screen.");
       throw error;
     };
-    obj.isFocused = function isFocused() {
+    obj2.isFocused = function isFocused() {
       return false;
     };
-    return obj;
+    return obj2;
   }, items);
   const items1 = [base, getState, navigation, setOptions, emitter];
   emitter.useMemo(() => ({ current: {} }), items1);
@@ -94,11 +93,11 @@ export const useNavigationCache = function useNavigationCache(getState) {
         };
         return acc;
       }, {});
-      obj = {};
+      const obj2 = {};
       let merged2 = Object.assign(base);
       const merged3 = Object.assign(reduced);
       const merged4 = Object.assign(obj.create(key.key));
-      obj.dispatch = function dispatch(arg0) {
+      obj2.dispatch = function dispatch(arg0) {
         closure_0 = arg0;
         withStack(() => {
           if (typeof dispatch === "function") {
@@ -116,7 +115,7 @@ export const useNavigationCache = function useNavigationCache(getState) {
           }
         });
       };
-      obj.getParent = function getParent(arg0) {
+      obj2.getParent = function getParent(arg0) {
         if (undefined !== arg0) {
           if (arg0 === base.getId()) {
             let parent = acc[key.key];
@@ -125,19 +124,18 @@ export const useNavigationCache = function useNavigationCache(getState) {
         }
         parent = base.getParent(arg0);
       };
-      obj.setOptions = function setOptions(arg0) {
+      obj2.setOptions = function setOptions(arg0) {
         closure_0 = arg0;
         dispatch((arg0) => {
           obj = {};
           const merged = Object.assign(arg0);
-          obj = {};
           const merged1 = Object.assign(arg0[closure_1.key]);
           const merged2 = Object.assign(closure_0);
-          obj[closure_1.key] = obj;
+          obj[closure_1.key] = {};
           return obj;
         });
       };
-      obj.isFocused = function isFocused() {
+      obj2.isFocused = function isFocused() {
         const state = base.getState();
         let tmp2 = state.routes[state.index].key === key.key;
         if (tmp2) {
@@ -149,7 +147,7 @@ export const useNavigationCache = function useNavigationCache(getState) {
         }
         return tmp2;
       };
-      acc[key.key] = obj;
+      acc[key.key] = obj2;
     }
     return acc;
   }, {});

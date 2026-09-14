@@ -7,6 +7,8 @@ import bindReporter from "00912_bindReporter.js";
 import _mod914 from "metro/00914__.js";
 import LayoutShiftManager from "00915_LayoutShiftManager.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

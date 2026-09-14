@@ -40,7 +40,7 @@ function clone(screen, arg1) {
         }
         let tmp8;
         if (keys === closure_5) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(screen);
           tmp8 = obj;
         }
@@ -63,27 +63,26 @@ function clone(screen, arg1) {
         while (iter !== undefined) {
           let _Reflect = Reflect;
           let tmp21 = nextResult;
-          value = Reflect.get(screen, nextResult);
-          let tmp23 = value;
+          value2 = Reflect.get(screen, nextResult);
+          let tmp23 = value2;
           if ("params" === nextResult) {
             let tmp25 = closure_5;
           } else {
             tmp25 = closure_4;
           }
-          let tmp24Result = clone(value, tmp25, weakMap);
+          let tmp24Result = clone(value2, tmp25, weakMap);
           if (tmp24Result !== tmp23) {
             if (tmp12 != null) {
               let result1 = weakMap.set(screen, tmp12);
               let _Object = Object;
-              obj = {};
-              obj[tmp21] = tmp29;
-              let merged1 = Object.assign(tmp12, obj);
+              let obj2 = {};
+              obj2[tmp21] = tmp29;
+              let merged1 = Object.assign(tmp12, obj2);
             } else if (isArray) {
               let items = [];
               let arraySpreadResult = HermesBuiltin.arraySpread(screen, 0);
-              obj = items;
             } else {
-              obj = {};
+              let obj3 = {};
               let merged2 = Object.assign(screen);
             }
           }
@@ -105,7 +104,6 @@ let closure_5 = ["params", "state"];
 export const useLinkProps = function useLinkProps(arg0) {
   ({ screen: require, params: importDefault, action: dependencyMap } = arg0);
   const merged = Object.assign(arg0, Object.assign({ screen: 0, params: 0, action: 0 }));
-  let obj = merged;
   const context = merged.useContext(BaseNavigationContainer.NavigationContainerRefContext);
   let context1 = merged.useContext(BaseNavigationContainer.NavigationHelpersContext);
   if (context1 == null) {
@@ -143,10 +141,10 @@ export const useLinkProps = function useLinkProps(arg0) {
     if (options != null) {
       config = options.config;
     }
-    obj = { href: null, role: "link", onPress: null };
+    const obj2 = { href: null, role: "link", onPress: null };
     items[3] = config;
-    obj.href = obj.useMemo(() => merged.href, items);
-    obj.onPress = tmp14;
-    return obj;
+    obj2.href = obj.useMemo(() => merged.href, items);
+    obj2.onPress = tmp14;
+    return obj2;
   }
 };

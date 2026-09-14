@@ -15,17 +15,17 @@ function shouldAttachHeaders(url, dependencyMap) {
       const uRL1 = new URL(locationHref);
       let tmp18 = tmp17;
       if (dependencyMap) {
-        let tmpResult = _mod682;
-        let result = tmpResult.stringMatchesSomePattern(str.toString(), dependencyMap);
+        let result = _mod682.stringMatchesSomePattern(str.toString(), dependencyMap);
         if (!result) {
           let result1 = tmp17;
           if (tmp17) {
-            tmpResult = _mod682;
-            result1 = tmpResult.stringMatchesSomePattern(uRL.pathname, dependencyMap);
+            result1 = _mod682.stringMatchesSomePattern(uRL.pathname, dependencyMap);
+            const tmpResult3 = _mod682;
           }
           result = result1;
         }
         tmp18 = result;
+        const tmpResult = _mod682;
       }
       return tmp18;
     } catch (err) {
@@ -35,7 +35,7 @@ function shouldAttachHeaders(url, dependencyMap) {
     let result2 = url.match(/^\/(?!\/)/);
     if (dependencyMap) {
       result2 = _mod682.stringMatchesSomePattern(url, dependencyMap);
-      const tmpResult1 = _mod682;
+      const tmpResult4 = _mod682;
     }
     return result2;
   }
@@ -89,26 +89,24 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
       });
     }
     let result1 = _mod682.addFetchInstrumentationHandler((response) => {
-      let obj = { propagateTraceparent, onRequestSpanEnd };
-      const result = obj.instrumentFetchRequest(response, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, closure_6, obj);
+      const result = _mod682.instrumentFetchRequest(response, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, closure_6, { propagateTraceparent, onRequestSpanEnd });
       if (tmp3) {
         const result1 = weakMap.set(response.response, response.fetchData.__span);
       }
       if (result) {
-        let tmpResult = baggageHeaderHasSentryValues;
-        const fullURL = tmpResult.getFullURL(response.fetchData.url);
+        const fullURL = baggageHeaderHasSentryValues.getFullURL(response.fetchData.url);
         let host;
         if (fullURL) {
-          tmpResult = _mod682;
-          host = tmpResult.parseUrl(fullURL).host;
+          host = _mod682.parseUrl(fullURL).host;
+          const tmpResult5 = _mod682;
         }
         let stripDataUrlContentResult;
         if (fullURL) {
           stripDataUrlContentResult = _mod682.stripDataUrlContent(fullURL);
-          const tmpResult1 = _mod682;
+          const tmpResult6 = _mod682;
         }
-        obj = { "http.url": stripDataUrlContentResult, "server.address": host };
-        result.setAttributes(obj);
+        const obj3 = { "http.url": stripDataUrlContentResult, "server.address": host };
+        result.setAttributes(obj3);
         if (closure_1_0) {
           closure_0 = result;
           const url = _mod682.spanToJSON(result).data.url;
@@ -131,16 +129,18 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                   const obj = startInactiveSpanResult(url2[1]);
                 });
               });
-              const tmpResult3 = triggerHandlers;
+              const tmpResult8 = triggerHandlers;
             }
           }
-          const tmpResult2 = _mod682;
+          const tmpResult7 = _mod682;
         }
         if (closure_1_2 != null) {
-          const obj1 = { headers: response.headers };
-          tmp11(result, obj1);
+          const obj4 = { headers: response.headers };
+          tmp11(result, obj4);
         }
+        const tmpResult = baggageHeaderHasSentryValues;
       }
+      const obj2 = { propagateTraceparent, onRequestSpanEnd };
       tmp3 = response.response && response.fetchData.__span;
     });
   }
@@ -155,8 +155,7 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
         if (!xhr.__sentry_own_request__) {
           if (tmp8) {
             ({ url, method } = tmp8);
-            let obj = _mod682;
-            const tmp14 = obj.hasSpansEnabled() && shouldCreateSpanForRequest(url);
+            const tmp14 = _mod682.hasSpansEnabled() && shouldCreateSpanForRequest(url);
             if (xhr.endTimestamp) {
               if (tmp14) {
                 const __sentry_xhr_span_id__ = xhr.__sentry_xhr_span_id__;
@@ -169,46 +168,44 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                     _mod682.setHttpStatus(obj19, tmp8.status_code);
                     obj19.end();
                     if (onRequestSpanEnd != null) {
-                      obj = { headers: null, error: null };
+                      const obj6 = { headers: null, error: null };
                       const obj22 = baggageHeaderHasSentryValues;
-                      obj.headers = obj22.createHeadersSafely(triggerHandlers.parseXhrResponseHeaders(xhr));
-                      obj.error = xhr.error;
-                      onRequestSpanEnd(obj19, obj);
+                      obj6.headers = obj22.createHeadersSafely(triggerHandlers.parseXhrResponseHeaders(xhr));
+                      obj6.error = xhr.error;
+                      onRequestSpanEnd(obj19, obj6);
                     }
                     delete tmp2[tmp];
                   }
                 }
               }
             }
-            let obj1 = baggageHeaderHasSentryValues;
-            const fullURL = obj1.getFullURL(url);
+            const fullURL = baggageHeaderHasSentryValues.getFullURL(url);
             const parseUrl = _mod682.parseUrl;
             const tmp21 = fullURL ? parseUrl(fullURL) : parseUrl(url);
-            let obj2 = _mod682;
-            let obj3 = _mod682;
-            let obj4 = _mod682;
-            const activeSpan = obj4.getActiveSpan();
+            const obj3 = _mod682;
+            const stripDataUrlContentResult = obj3.stripDataUrlContent(_mod682.stripUrlQueryAndFragment(url));
+            const activeSpan = _mod682.getActiveSpan();
             if (tmp14) {
               if (activeSpan) {
-                obj = { name: null, attributes: null };
+                const obj8 = { name: null, attributes: null };
                 const _HermesInternal = HermesInternal;
-                obj.name = "" + method + " " + stripDataUrlContentResult;
-                obj1 = { url: null, type: "xhr", "http.method": null, "http.url": null, "server.address": null };
+                obj8.name = "" + method + " " + stripDataUrlContentResult;
+                const obj9 = { url: null, type: "xhr", "http.method": null, "http.url": null, "server.address": null };
                 const obj7 = _mod682;
-                obj1.url = _mod682.stripDataUrlContent(url);
-                obj1["http.method"] = method;
+                obj9.url = _mod682.stripDataUrlContent(url);
+                obj9["http.method"] = method;
                 let stripDataUrlContentResult1;
                 if (fullURL) {
                   stripDataUrlContentResult1 = _mod682.stripDataUrlContent(fullURL);
                 }
-                obj1["http.url"] = stripDataUrlContentResult1;
+                obj9["http.url"] = stripDataUrlContentResult1;
                 let host;
                 if (tmp21 != null) {
                   host = tmp21.host;
                 }
-                obj1["server.address"] = host;
-                obj1[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.http.browser";
-                obj1[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+                obj9["server.address"] = host;
+                obj9[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.http.browser";
+                obj9[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
                 let search;
                 if (tmp21 != null) {
                   search = tmp21.search;
@@ -218,8 +215,8 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                   if (tmp21 != null) {
                     search1 = tmp21.search;
                   }
-                  obj2 = { "http.query": search1 };
-                  search = obj2;
+                  const obj12 = { "http.query": search1 };
+                  search = obj12;
                 }
                 const merged = Object.assign(search);
                 let hash;
@@ -231,12 +228,12 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                   if (tmp21 != null) {
                     hash1 = tmp21.hash;
                   }
-                  obj3 = { "http.fragment": hash1 };
-                  hash = obj3;
+                  const obj13 = { "http.fragment": hash1 };
+                  hash = obj13;
                 }
                 const merged1 = Object.assign(hash);
-                obj.attributes = obj1;
-                let startInactiveSpanResult = obj7.startInactiveSpan(obj);
+                obj8.attributes = obj9;
+                let startInactiveSpanResult = obj7.startInactiveSpan(obj8);
               }
               xhr.__sentry_xhr_span_id__ = startInactiveSpanResult.spanContext().spanId;
               closure_6[xhr.__sentry_xhr_span_id__] = startInactiveSpanResult;
@@ -249,8 +246,8 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                     }
                   }
                   obj14 = _mod682;
-                  obj4 = { span: tmp61, propagateTraceparent };
-                  const traceData = _mod682.getTraceData(obj4);
+                  const obj16 = { span: tmp61, propagateTraceparent };
+                  const traceData = _mod682.getTraceData(obj16);
                   ({ sentry-trace: tmp65, baggage, traceparent } = traceData);
                   if (tmp65) {
                     (function setHeaderOnXhr(xhr, StringResult, baggage, traceparent) {
@@ -309,7 +306,6 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
               }
             }
             startInactiveSpanResult = new _mod682.SentryNonRecordingSpan();
-            stripDataUrlContentResult = obj2.stripDataUrlContent(obj3.stripUrlQueryAndFragment(url));
           }
         }
       }
@@ -346,8 +342,8 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
           if (__sentry_xhr_v3__ != null) {
             request_headers = __sentry_xhr_v3__.request_headers;
           }
-          const obj5 = { headers: baggageHeaderHasSentryValues.createHeadersSafely(request_headers) };
-          tmp87(tmp11, obj5);
+          const obj18 = { headers: baggageHeaderHasSentryValues.createHeadersSafely(request_headers) };
+          tmp87(tmp11, obj18);
         }
       }
     });

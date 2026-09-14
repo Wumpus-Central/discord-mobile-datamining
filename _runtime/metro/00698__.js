@@ -53,30 +53,29 @@ function createStackParser() {
 function stripSentryFramesAndReverse(arg0) {
   if (arg0.length) {
     const _Array = Array;
-    let arr = Array.from(arg0);
-    let obj = /sentryWrapped/;
-    obj = arr[arr.length - 1];
-    if (!obj) {
-      obj = {};
+    const arr = Array.from(arg0);
+    let obj2 = arr[arr.length - 1];
+    if (!obj2) {
+      obj2 = {};
     }
     if (obj.test(tmp2)) {
-      arr = arr.pop();
+      arr.pop();
     }
     const reversed = arr.reverse();
-    obj = arr[arr.length - 1];
-    if (!obj) {
-      obj = {};
+    let obj4 = arr[arr.length - 1];
+    if (!obj4) {
+      obj4 = {};
     }
     if (re1.test(tmp5)) {
-      arr = arr.pop();
-      let obj1 = arr[arr.length - 1];
-      if (!obj1) {
-        obj1 = {};
+      arr.pop();
+      let obj5 = arr[arr.length - 1];
+      if (!obj5) {
+        obj5 = {};
       }
       if (re1.test(tmp7)) {
         arr.pop();
       }
-      tmp7 = obj1.function || "";
+      tmp7 = obj5.function || "";
     }
     const substr = arr.slice(0, 50);
     return substr.map((filename) => {

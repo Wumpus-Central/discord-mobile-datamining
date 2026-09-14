@@ -21,7 +21,7 @@ function extractFont(propsAndStylesResult) {
     fontVariantLigatures,
     fontVariationSettings,
   } = propsAndStylesResult);
-  let obj = {
+  const obj2 = {
     fontData,
     fontStyle,
     fontVariant,
@@ -44,21 +44,21 @@ function extractFont(propsAndStylesResult) {
     replaced = fontFamily.split(re9)[0].replace(re7, "").replace(re8, "");
     const str3 = fontFamily.split(re9)[0].replace(re7, "");
   }
-  obj.fontFamily = replaced;
-  obj.textAnchor = textAnchor;
-  obj.textDecoration = textDecoration;
-  obj.letterSpacing = letterSpacing;
-  obj.wordSpacing = wordSpacing;
-  obj.kerning = kerning;
-  obj.fontFeatureSettings = fontFeatureSettings;
-  obj.fontVariantLigatures = fontVariantLigatures;
-  obj.fontVariationSettings = fontVariationSettings;
-  const pickNotNilResult = obj.pickNotNil(obj);
+  obj2.fontFamily = replaced;
+  obj2.textAnchor = textAnchor;
+  obj2.textDecoration = textDecoration;
+  obj2.letterSpacing = letterSpacing;
+  obj2.wordSpacing = wordSpacing;
+  obj2.kerning = kerning;
+  obj2.fontFeatureSettings = fontFeatureSettings;
+  obj2.fontVariantLigatures = fontVariantLigatures;
+  obj2.fontVariationSettings = fontVariationSettings;
+  const pickNotNilResult = pickNotNil.pickNotNil(obj2);
   if (typeof font !== "string") {
-    obj = {};
+    const obj5 = {};
     const merged = Object.assign(tmp6);
     const merged1 = Object.assign(pickNotNilResult);
-    return obj;
+    return obj5;
   } else {
     const _Object = Object;
     hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -75,25 +75,25 @@ function extractFont(propsAndStylesResult) {
     if (!num) {
       num = 12;
     }
-    const obj1 = { fontSize: num, fontWeight: null, fontStyle: null, fontFamily: null };
+    const obj6 = { fontSize: num, fontWeight: null, fontStyle: null, fontFamily: null };
     let str4 = "normal";
     let str5 = "normal";
     if (match) {
       str5 = "bold";
     }
-    obj1.fontWeight = str5;
+    obj6.fontWeight = str5;
     if (match1) {
       str4 = "italic";
     }
-    obj1.fontStyle = str4;
+    obj6.fontStyle = str4;
     let replaced1 = null;
     if (fontFeatureSettings[3]) {
       const str7 = str6.split(re9)[0];
       replaced1 = str6.split(re9)[0].replace(re7, "").replace(re8, "");
       const str9 = str6.split(re9)[0].replace(re7, "");
     }
-    obj1.fontFamily = replaced1;
-    dependencyMap[font] = obj1;
+    obj6.fontFamily = replaced1;
+    dependencyMap[font] = obj6;
     const obj3 = /bold/;
     const obj4 = /italic/;
   }

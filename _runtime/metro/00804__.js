@@ -32,9 +32,9 @@ export const storeSessionDataForTransport = function storeSessionDataForTranspor
 export const updateSessionDataForTransport = function updateSessionDataForTransport(sessionId, arg1) {
   if (sessionId.sessionId) {
     const tmp = weakMap.get(sessionId) || {};
-    const obj = {};
+    const obj2 = {};
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(arg1);
-    const result = obj.set(sessionId, obj);
+    const result = weakMap.set(sessionId, obj2);
   }
 };

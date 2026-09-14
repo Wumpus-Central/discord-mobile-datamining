@@ -51,13 +51,13 @@ function _onInp(metric) {
       });
       if (found) {
         const interactionId = found.interactionId;
-        tmp12(924);
-        const tmp12Result = tmp12(682);
-        const msToSecResult1 = tmp12Result.msToSec(tmp12Result.browserPerformanceTimeOrigin() + found.startTime);
+        const tmp12Result = tmp12(924);
+        const msToSecResult1 = tmp12Result.msToSec(tmp12(682).browserPerformanceTimeOrigin() + found.startTime);
+        const tmp12Result7 = tmp12(682);
         const activeSpan = tmp12(682).getActiveSpan();
         if (activeSpan) {
           const rootSpan = tmp12(682).getRootSpan(activeSpan);
-          const tmp12Result2 = tmp12(682);
+          const tmp12Result9 = tmp12(682);
         }
         value = undefined;
         if (null != interactionId) {
@@ -70,11 +70,11 @@ function _onInp(metric) {
         if (!span) {
           span = rootSpan;
         }
-        const tmp12Result3 = tmp12(682);
+        const tmp12Result10 = tmp12(682);
         if (span) {
-          let transactionName = tmp12Result3.spanToJSON(span).description;
+          let transactionName = tmp12Result10.spanToJSON(span).description;
         } else {
-          const currentScope = tmp12Result3.getCurrentScope();
+          const currentScope = tmp12Result10.getCurrentScope();
           transactionName = currentScope.getScopeData().transactionName;
         }
         let elementName;
@@ -83,26 +83,24 @@ function _onInp(metric) {
         }
         if (!elementName) {
           elementName = tmp12(682).htmlTreeAsString(found.target);
-          const tmp12Result4 = tmp12(682);
+          const tmp12Result11 = tmp12(682);
         }
-        let obj = {};
+        const obj = {};
         obj[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.http.browser.inp";
         const _HermesInternal = HermesInternal;
         obj[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "ui.interaction." + closure_5[found.name];
         obj[tmp12(682).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = found.duration;
-        const tmp12Result1 = tmp12(682);
-        obj = { name: elementName, transaction: transactionName, attributes: null, startTime: null };
-        obj.attributes = obj;
-        obj.startTime = msToSecResult1;
-        const result = tmp12(924).startStandaloneWebVitalSpan(obj);
+        const tmp12Result8 = tmp12(682);
+        const obj2 = { name: elementName, transaction: transactionName, attributes: obj, startTime: msToSecResult1 };
+        const result = tmp12(924).startStandaloneWebVitalSpan(obj2);
         if (result) {
-          const obj1 = {};
-          obj1[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
-          obj1[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = iter.value;
-          result.addEvent("inp", obj1);
+          const obj3 = {};
+          obj3[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
+          obj3[tmp12(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = iter.value;
+          result.addEvent("inp", obj3);
           result.end(msToSecResult1 + msToSecResult);
         }
-        const tmp12Result5 = tmp12(924);
+        const tmp12Result12 = tmp12(924);
       }
     }
     const obj13 = iter(924);
@@ -150,7 +148,6 @@ export const registerInpInteractionListener = function registerInpInteractionLis
       let tmpResult = tmp(682);
     }
     const item = entries.forEach((interactionId) => {
-      let obj = captureElementFromEvent(899);
       if (obj.isPerformanceEventTiming(interactionId)) {
         interactionId = interactionId.interactionId;
         if (null != interactionId) {
@@ -178,36 +175,35 @@ export const registerInpInteractionListener = function registerInpInteractionLis
                 str = "<unknown>";
               }
             }
-            let arr = length;
             if (length.length > 10) {
-              map.delete(arr.shift());
+              map.delete(length.shift());
             }
-            arr = arr.push(interactionId);
-            obj = { span: rootSpan, elementName: str };
-            const result = map.set(interactionId, obj);
+            length.push(interactionId);
+            const obj2 = { span: rootSpan, elementName: str };
+            const result = map.set(interactionId, obj2);
           }
         }
       }
+      obj = captureElementFromEvent(899);
     });
     let obj = rootSpan(682);
     tmp = rootSpan;
   }
-  let tmpResult = tmp(899);
-  let result = tmpResult.addPerformanceInstrumentationHandler("event", handleEntries);
-  tmpResult = tmp(899);
-  const result1 = tmpResult.addPerformanceInstrumentationHandler("first-input", handleEntries);
   obj = captureElementFromEvent(682);
+  let result = captureElementFromEvent(899).addPerformanceInstrumentationHandler("event", handleEntries);
+  let tmpResult = captureElementFromEvent(899);
+  const result1 = captureElementFromEvent(899).addPerformanceInstrumentationHandler("first-input", handleEntries);
+  const tmpResult2 = captureElementFromEvent(899);
 };
 export const startTrackingINP = function startTrackingINP() {
   if (obj.getBrowserPerformanceAPI()) {
-    let tmpResult = _mod682;
     if (tmpResult.browserPerformanceTimeOrigin()) {
-      tmpResult = _mod899;
-      closure_0 = tmpResult.addInpInstrumentationHandler(_onInp);
+      closure_0 = _mod899.addInpInstrumentationHandler(_onInp);
       return () => {
         closure_0();
       };
     }
+    tmpResult = _mod682;
   }
   return () => {};
 };

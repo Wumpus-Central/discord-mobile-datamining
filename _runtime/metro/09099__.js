@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "\u178F\u17BD\u17A2\u1780\u17D2\u179F\u179A", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
           file: { unit: "\u1794\u17C3", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
           array: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
@@ -111,7 +111,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -146,7 +145,7 @@ if (self2) {
               if (code.inclusive) {
                 str26 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -155,7 +154,7 @@ if (self2) {
                 if (str27 == null) {
                   str27 = "\u178F\u1798\u17D2\u179B\u17C3";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str35 = tmp27.unit;
                 if (str35 == null) {
                   str35 = "\u1792\u17B6\u178F\u17BB";
@@ -167,7 +166,7 @@ if (self2) {
                   " " +
                   str26 +
                   " " +
-                  str +
+                  str1 +
                   " " +
                   str35;
               } else {
@@ -190,12 +189,12 @@ if (self2) {
               if (code.inclusive) {
                 str16 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str51 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
@@ -204,7 +203,7 @@ if (self2) {
                   " " +
                   str16 +
                   " " +
-                  str1 +
+                  str51 +
                   " " +
                   tmp15.unit;
               } else {
@@ -215,7 +214,7 @@ if (self2) {
                   " " +
                   str16 +
                   " " +
-                  str1;
+                  str51;
               }
               return combined3;
             case "invalid_format":
@@ -274,8 +273,6 @@ if (self2) {
               return "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str =
-                "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 ";
               return (
                 "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " +
                 code.origin

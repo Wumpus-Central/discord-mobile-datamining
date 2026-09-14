@@ -53,15 +53,14 @@ const entry = {
   value: function render() {
     const self = this;
     const props = this.props;
-    let obj = { name: props.id };
-    obj = {
+    const obj2 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(obj);
+    const merged = Object.assign({ name: props.id });
     const merged1 = Object.assign(Symbol(8587)(props));
-    obj.children = props.children;
+    obj2.children = props.children;
     return jsx(Symbol(8671), {
       ref(arg0) {
         return self.refMethod(arg0);

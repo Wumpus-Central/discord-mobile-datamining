@@ -14,13 +14,12 @@ function structuredCloneInternal(source) {
           if ("bigint" !== tmp107) {
             if (typeof source !== "object") {
               const _String2 = String;
-              let tmp101 = _modDef157;
               const _HermesInternal2 = HermesInternal;
-              tmp101 = new tmp101(
+              const tmp1012 = new _modDef157(
                 "Failed to execute 'structuredClone' on 'Window': " + String(source) + " could not be cloned.",
                 "DataCloneError",
               );
-              throw tmp101;
+              throw tmp1012;
             } else if (map.has(source)) {
               return obj8.get(source);
             } else {
@@ -40,26 +39,26 @@ function structuredCloneInternal(source) {
               } else {
                 const _Object = Object;
                 if (Object.getPrototypeOf(source) === closure_6) {
-                  let obj = {};
-                  const result1 = obj8.set(source, obj);
+                  const obj2 = {};
+                  const result1 = obj8.set(source, obj2);
                   const _Object3 = Object;
                   const keys1 = Object.keys(source);
                   const iter = keys1[Symbol.iterator]();
                   const nextResult1 = iter.next();
                   while (iter !== undefined) {
-                    obj[nextResult1] = structuredCloneInternal(source[nextResult1]);
+                    obj2[nextResult1] = structuredCloneInternal(source[nextResult1]);
                     continue;
                   }
-                  return obj;
+                  return obj2;
                 } else {
                   for (const item10013 of items) {
                     if (arg0 instanceof item10013) {
                       let tmp5 = new.target;
                       let tmp6 = new.target;
-                      let item10013 = new item10013(arg0);
-                      let result2 = map.set(arg0, item10013);
+                      let item100131 = new item10013(arg0);
+                      let result2 = map.set(arg0, item100131);
                       obj9.return();
-                      return item10013;
+                      return item100131;
                     }
                   }
                   const _Map = Map;
@@ -95,8 +94,7 @@ function structuredCloneInternal(source) {
                         const result6 = map.set(source, regExp);
                         return regExp;
                       } else {
-                        obj = _mod126;
-                        const platformObjectClone = obj.getPlatformObjectClone(source);
+                        const platformObjectClone = _mod126.getPlatformObjectClone(source);
                         if (null != platformObjectClone) {
                           const platformObjectCloneResult = platformObjectClone(source);
                           const result7 = map.set(source, platformObjectCloneResult);
@@ -104,22 +102,22 @@ function structuredCloneInternal(source) {
                         } else {
                           const _Error2 = Error;
                           if (source instanceof Error) {
-                            let _Error = Error;
+                            const _Error = Error;
                             const message = source.message;
                             if (source.cause) {
-                              obj = { cause: source.cause };
-                              _Error = new _Error(message, obj);
+                              const obj3 = { cause: source.cause };
+                              let _Error1 = new _Error(message, obj3);
                             } else {
-                              _Error = new _Error(message);
+                              _Error1 = new _Error(message);
                             }
-                            const result8 = map.set(source, _Error);
+                            const result8 = map.set(source, _Error1);
                             if (set.has(source.name)) {
-                              _Error.name = source.name;
+                              _Error1.name = source.name;
                             } else {
-                              _Error.name = "Error";
+                              _Error1.name = "Error";
                             }
-                            _Error.stack = source.stack;
-                            return _Error;
+                            _Error1.stack = source.stack;
+                            return _Error1;
                           } else {
                             if (
                               !(function isNonSerializableObject(source) {
@@ -127,28 +125,27 @@ function structuredCloneInternal(source) {
                               })(source)
                             ) {
                               if (!tmp14Result.isPlatformObject(source)) {
-                                const obj1 = {};
-                                const result9 = map.set(source, obj1);
+                                const obj4 = {};
+                                const result9 = map.set(source, obj4);
                                 const _Object2 = Object;
                                 const keys2 = Object.keys(source);
                                 for (const item10058 of keys2) {
-                                  obj1[item10058] = structuredCloneInternal(arg0[item10058]);
+                                  obj4[item10058] = structuredCloneInternal(arg0[item10058]);
                                   continue;
                                 }
-                                return obj1;
+                                return obj4;
                               }
                               tmp14Result = _mod126;
                             }
                             const _String = String;
-                            let tmp25 = _modDef157;
                             const _HermesInternal = HermesInternal;
-                            tmp25 = new tmp25(
+                            const tmp252 = new _modDef157(
                               "Failed to execute 'structuredClone' on 'Window': " +
                                 String(source) +
                                 " could not be cloned.",
                               "DataCloneError",
                             );
-                            throw tmp25;
+                            throw tmp252;
                           }
                         }
                       }

@@ -1,6 +1,8 @@
 // _runtime/metro/00905__.js
 import _mod906 from "00906__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -42,8 +44,7 @@ function onVisibilityUpdate(type) {
 export const getVisibilityWatcher = () => {
   if (require("00904__.js").WINDOW.document) {
     if (num2 < 0) {
-      let tmpResult = tmp(907);
-      _require = tmpResult.getActivationStart();
+      _require = tmp(907).getActivationStart();
       let tmp8;
       if (!tmp(904).WINDOW.document.prerendering) {
         const _globalThis = globalThis;
@@ -81,12 +82,13 @@ export const getVisibilityWatcher = () => {
         tmp8 = num2;
       }
       num2 = tmp8;
-      tmpResult = tmp(906);
-      tmpResult.addPageListener("visibilitychange", onVisibilityUpdate, true);
+      const tmpResult = tmp(907);
+      tmp(906).addPageListener("visibilitychange", onVisibilityUpdate, true);
+      const tmpResult4 = tmp(906);
       tmp(906).addPageListener("pagehide", onVisibilityUpdate, true);
-      const tmpResult1 = tmp(906);
+      const tmpResult5 = tmp(906);
       tmp(906).addPageListener("prerenderingchange", onVisibilityUpdate, true);
-      const tmpResult2 = tmp(906);
+      const tmpResult6 = tmp(906);
     }
   }
   const obj = {};

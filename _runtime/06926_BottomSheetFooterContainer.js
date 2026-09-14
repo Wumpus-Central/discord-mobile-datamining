@@ -1,6 +1,6 @@
 // _runtime/06926_BottomSheetFooterContainer.js
 import _mod19 from "metro/00019__.js";
-import GESTURE_SOURCE from "06729_GESTURE_SOURCE.js";
+import value2 from "06729_value2.js";
 import DEFAULT_HANDLE_HEIGHT from "06732_DEFAULT_HANDLE_HEIGHT.js";
 
 let closure_2 = {
@@ -9,35 +9,36 @@ let closure_2 = {
 const memoResult = _mod19.memo((renderFooter) => {
   let animatedContainerHeight;
   let animatedHandleHeight;
-  let obj = animatedContainerHeight(animatedHandleHeight[1]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = animatedContainerHeight(animatedHandleHeight[1]).useBottomSheetInternal();
   animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
   animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
   const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
   const animatedPosition = bottomSheetInternal.animatedPosition;
   const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
   const animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
-  obj = { animatedFooterPosition: null };
+  const obj2 = { animatedFooterPosition: null };
+  const obj = animatedContainerHeight(animatedHandleHeight[1]);
   const fn = function o() {
     value = animatedHandleHeight.get();
     if (value === DEFAULT_HANDLE_HEIGHT.INITIAL_HANDLE_HEIGHT) {
       return 0;
     } else {
-      value = animatedKeyboardHeightInContainer.get();
-      const value1 = animatedContainerHeight.get();
-      value2 = animatedPosition.get();
-      const value3 = animatedKeyboardState.get();
+      const value6 = animatedKeyboardHeightInContainer.get();
+      const value7 = animatedContainerHeight.get();
+      const value8 = animatedPosition.get();
+      const value9 = animatedKeyboardState.get();
       const _Math = Math;
-      const value4 = animatedFooterHeight.get();
-      const bound = Math.max(0, value1 - value2);
+      const value10 = animatedFooterHeight.get();
+      const bound = Math.max(0, value7 - value8);
       let diff = bound;
-      if (value3 === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-        diff = bound - value;
+      if (value9 === value2.KEYBOARD_STATE.SHOWN) {
+        diff = bound - value6;
       }
-      return diff - value4 - value;
+      return diff - value10 - value;
     }
   };
-  obj = {
+  const obj3 = animatedContainerHeight(animatedHandleHeight[2]);
+  fn.__closure = {
     animatedHandleHeight,
     INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT,
     animatedKeyboardHeightInContainer,
@@ -47,7 +48,6 @@ const memoResult = _mod19.memo((renderFooter) => {
     animatedFooterHeight,
     KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE,
   };
-  fn.__closure = obj;
   fn.__workletHash = 8297656659240;
   fn.__initData = animatedFooterHeight;
   const items = [
@@ -58,8 +58,8 @@ const memoResult = _mod19.memo((renderFooter) => {
     animatedFooterHeight,
     animatedHandleHeight,
   ];
-  obj.animatedFooterPosition = animatedContainerHeight(animatedHandleHeight[2]).useDerivedValue(fn, items);
-  return renderFooter.renderFooter(obj);
+  obj2.animatedFooterPosition = obj3.useDerivedValue(fn, items);
+  return renderFooter.renderFooter(obj2);
 });
 memoResult.displayName = "BottomSheetFooterContainer";
 

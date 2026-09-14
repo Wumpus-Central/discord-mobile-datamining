@@ -1,17 +1,19 @@
 // _runtime/metro/04073__.js
-import startOfWeek from "../03884_startOfWeek.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import startOfWeek_mod from "../03884_startOfWeek.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  let obj = { default: startOfWeek };
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

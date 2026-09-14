@@ -47,7 +47,6 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
       const item = arr.forEach((addEventListener) => {
         const listener = addEventListener.addEventListener("message", (event) => {
           const data = event.data;
-          let obj = closure_1_0(dependencyMap[0]);
           let flag = false;
           if (obj.isPlainObject(data)) {
             flag = false;
@@ -58,24 +57,24 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                 }
               }
               if ("_sentryDebugIds" in data) {
-                let tmpResult = closure_1_0(dependencyMap[0]);
                 if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
                   flag = false;
                 }
+                tmpResult = closure_1_0(dependencyMap[0]);
               }
               if ("_sentryModuleMetadata" in data) {
-                tmpResult = closure_1_0(dependencyMap[0]);
-                if (!tmpResult.isPlainObject(data._sentryModuleMetadata)) {
+                if (!tmpResult8.isPlainObject(data._sentryModuleMetadata)) {
                   flag = false;
                 }
+                tmpResult8 = closure_1_0(dependencyMap[0]);
               }
               flag = true;
               if (tmp26) {
                 flag = true;
-                if (!tmpResult1.isPlainObject(data._sentryWorkerError)) {
+                if (!tmpResult9.isPlainObject(data._sentryWorkerError)) {
                   flag = false;
                 }
-                tmpResult1 = closure_1_0(dependencyMap[0]);
+                tmpResult9 = closure_1_0(dependencyMap[0]);
               }
               tmp26 = "_sentryWorkerError" in data;
             }
@@ -87,20 +86,20 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                 const debug = closure_1_0(dependencyMap[0]).debug;
                 debug.log("Sentry debugId web worker message received", event.data);
               }
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(event.data._sentryDebugIds);
               const merged1 = Object.assign(closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds);
-              closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds = obj;
+              closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds = obj2;
             }
             if (event.data._sentryModuleMetadata) {
               if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
                 const debug2 = closure_1_0(dependencyMap[0]).debug;
                 debug2.log("Sentry module metadata web worker message received", event.data);
               }
-              obj = {};
+              const obj3 = {};
               const merged2 = Object.assign(event.data._sentryModuleMetadata);
               const merged3 = Object.assign(closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata);
-              closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata = obj;
+              closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata = obj3;
             }
             if (event.data._sentryWorkerError) {
               if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
@@ -113,43 +112,43 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                 const stackParser = client.getOptions().stackParser;
                 const attachStacktrace = client.getOptions().attachStacktrace;
                 const reason = _sentryWorkerError.reason;
-                if (tmpResult3.isPrimitive(reason)) {
+                if (tmpResult11.isPrimitive(reason)) {
                   let result1 = closure_1_0(dependencyMap[3])._eventFromRejectionWithPrimitive(reason);
-                  const tmpResult4 = closure_1_0(dependencyMap[3]);
+                  const tmpResult12 = closure_1_0(dependencyMap[3]);
                 } else {
-                  const tmpResult5 = closure_1_0(dependencyMap[4]);
-                  result1 = tmpResult5.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
+                  const tmpResult13 = closure_1_0(dependencyMap[4]);
+                  result1 = tmpResult13.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
                 }
                 result1.level = "error";
                 if (_sentryWorkerError.filename) {
-                  const obj1 = {};
+                  const obj4 = {};
                   const merged4 = Object.assign(result1.contexts);
-                  const obj2 = { filename: _sentryWorkerError.filename };
-                  obj1.worker = obj2;
-                  result1.contexts = obj1;
+                  const obj5 = { filename: _sentryWorkerError.filename };
+                  obj4.worker = obj5;
+                  result1.contexts = obj4;
                 }
-                tmpResult3 = closure_1_0(dependencyMap[0]);
-                const obj3 = {
+                tmpResult11 = closure_1_0(dependencyMap[0]);
+                const obj6 = {
                   originalException: reason,
                   mechanism: { handled: false, type: "auto.browser.web_worker.onunhandledrejection" },
                 };
-                closure_1_0(dependencyMap[0]).captureEvent(result1, obj3);
+                closure_1_0(dependencyMap[0]).captureEvent(result1, obj6);
                 if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
                   const debug4 = closure_1_0(dependencyMap[0]).debug;
                   debug4.log("Captured worker unhandled rejection", reason);
                 }
-                const tmpResult6 = closure_1_0(dependencyMap[0]);
+                const tmpResult14 = closure_1_0(dependencyMap[0]);
               }
-              const tmpResult2 = closure_1_0(dependencyMap[0]);
+              const tmpResult10 = closure_1_0(dependencyMap[0]);
             }
           }
+          obj = closure_1_0(dependencyMap[0]);
         });
       });
     },
     addWorker(addEventListener) {
       const listener = addEventListener.addEventListener("message", (event) => {
         const data = event.data;
-        let obj = closure_1_0(dependencyMap[0]);
         let flag = false;
         if (obj.isPlainObject(data)) {
           flag = false;
@@ -160,24 +159,24 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               }
             }
             if ("_sentryDebugIds" in data) {
-              let tmpResult = closure_1_0(dependencyMap[0]);
               if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
                 flag = false;
               }
+              tmpResult = closure_1_0(dependencyMap[0]);
             }
             if ("_sentryModuleMetadata" in data) {
-              tmpResult = closure_1_0(dependencyMap[0]);
-              if (!tmpResult.isPlainObject(data._sentryModuleMetadata)) {
+              if (!tmpResult8.isPlainObject(data._sentryModuleMetadata)) {
                 flag = false;
               }
+              tmpResult8 = closure_1_0(dependencyMap[0]);
             }
             flag = true;
             if (tmp26) {
               flag = true;
-              if (!tmpResult1.isPlainObject(data._sentryWorkerError)) {
+              if (!tmpResult9.isPlainObject(data._sentryWorkerError)) {
                 flag = false;
               }
-              tmpResult1 = closure_1_0(dependencyMap[0]);
+              tmpResult9 = closure_1_0(dependencyMap[0]);
             }
             tmp26 = "_sentryWorkerError" in data;
           }
@@ -189,20 +188,20 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               const debug = closure_1_0(dependencyMap[0]).debug;
               debug.log("Sentry debugId web worker message received", event.data);
             }
-            obj = {};
+            const obj2 = {};
             const merged = Object.assign(event.data._sentryDebugIds);
             const merged1 = Object.assign(closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds);
-            closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds = obj;
+            closure_1_0(dependencyMap[2]).WINDOW._sentryDebugIds = obj2;
           }
           if (event.data._sentryModuleMetadata) {
             if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
               const debug2 = closure_1_0(dependencyMap[0]).debug;
               debug2.log("Sentry module metadata web worker message received", event.data);
             }
-            obj = {};
+            const obj3 = {};
             const merged2 = Object.assign(event.data._sentryModuleMetadata);
             const merged3 = Object.assign(closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata);
-            closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata = obj;
+            closure_1_0(dependencyMap[2]).WINDOW._sentryModuleMetadata = obj3;
           }
           if (event.data._sentryWorkerError) {
             if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
@@ -215,36 +214,37 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               const stackParser = client.getOptions().stackParser;
               const attachStacktrace = client.getOptions().attachStacktrace;
               const reason = _sentryWorkerError.reason;
-              if (tmpResult3.isPrimitive(reason)) {
+              if (tmpResult11.isPrimitive(reason)) {
                 let result1 = closure_1_0(dependencyMap[3])._eventFromRejectionWithPrimitive(reason);
-                const tmpResult4 = closure_1_0(dependencyMap[3]);
+                const tmpResult12 = closure_1_0(dependencyMap[3]);
               } else {
-                const tmpResult5 = closure_1_0(dependencyMap[4]);
-                result1 = tmpResult5.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
+                const tmpResult13 = closure_1_0(dependencyMap[4]);
+                result1 = tmpResult13.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
               }
               result1.level = "error";
               if (_sentryWorkerError.filename) {
-                const obj1 = {};
+                const obj4 = {};
                 const merged4 = Object.assign(result1.contexts);
-                const obj2 = { filename: _sentryWorkerError.filename };
-                obj1.worker = obj2;
-                result1.contexts = obj1;
+                const obj5 = { filename: _sentryWorkerError.filename };
+                obj4.worker = obj5;
+                result1.contexts = obj4;
               }
-              tmpResult3 = closure_1_0(dependencyMap[0]);
-              const obj3 = {
+              tmpResult11 = closure_1_0(dependencyMap[0]);
+              const obj6 = {
                 originalException: reason,
                 mechanism: { handled: false, type: "auto.browser.web_worker.onunhandledrejection" },
               };
-              closure_1_0(dependencyMap[0]).captureEvent(result1, obj3);
+              closure_1_0(dependencyMap[0]).captureEvent(result1, obj6);
               if (closure_1_0(dependencyMap[1]).DEBUG_BUILD) {
                 const debug4 = closure_1_0(dependencyMap[0]).debug;
                 debug4.log("Captured worker unhandled rejection", reason);
               }
-              const tmpResult6 = closure_1_0(dependencyMap[0]);
+              const tmpResult14 = closure_1_0(dependencyMap[0]);
             }
-            const tmpResult2 = closure_1_0(dependencyMap[0]);
+            const tmpResult10 = closure_1_0(dependencyMap[0]);
           }
         }
+        obj = closure_1_0(dependencyMap[0]);
       });
     },
   };

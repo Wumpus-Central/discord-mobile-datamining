@@ -3,11 +3,11 @@ import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/user_profile",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "48bef4d1edd4b10e6493d22c68a2543a",
-  name: "ic_video_disabled_dark",
+  hash: "f0c32854a135e6d60a3190ac067a0b08",
+  name: "ic_headset_deafened_dark_24px",
   type: "png",
 });

@@ -14,6 +14,7 @@ import FullWindowOverlayDefault from "05036_FullWindowOverlay.js";
 import _modDef5038 from "metro/05038__.js";
 import RNSModule from "04989_RNSModule.js";
 
+const require = globalThis.__r;
 const _modDef5005 = _mod5005;
 
 for (const key10015 in require("Tabs")) {

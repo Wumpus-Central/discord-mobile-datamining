@@ -81,7 +81,7 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     if (str) {
       const parts = str.split("\r\n");
       let reduced = parts.reduce((acc, item) => {
-        [str, tmp2] = _slicedToArray(item.split(": "), 2);
+        [str, tmp2] = item.split(": ");
         if (tmp2) {
           acc[str.toLowerCase()] = tmp2;
         }

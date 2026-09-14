@@ -25,7 +25,7 @@ const memoResult = memo(function Pressable(ref) {
   ({ children, delayHoverIn } = merged);
   const delayHoverOut = merged.delayHoverOut;
   const delayLongPress = merged.delayLongPress;
-  let disabled = merged.disabled;
+  const disabled = merged.disabled;
   const hitSlop = merged.hitSlop;
   const onBlur = merged.onBlur;
   const onFocus = merged.onFocus;
@@ -44,10 +44,10 @@ const memoResult = memo(function Pressable(ref) {
   const tmp12 = _modDef415(android_ripple, tmp8);
   closure_19 = tmp12;
   const tmp11 = _modDef334(ref.ref, tmp8);
-  [tmp15, tmp16] = _slicedToArray(React5(false), 2);
+  [tmp15, tmp16] = React5(false);
   const items = [tmp15, tmp16];
   const tmp14 = _slicedToArray(React5(false), 2);
-  [tmp18, tmp19] = _slicedToArray(items, 2);
+  [tmp18, tmp19] = items;
   c20 = tmp19;
   let tmp20 = typeof children === "function";
   if (typeof children !== "function") {
@@ -60,7 +60,7 @@ const memoResult = memo(function Pressable(ref) {
       busy = accessibilityState.busy;
     }
   }
-  let obj = { busy: tmp2, checked: null, disabled: null, expanded: null, selected: null };
+  const obj = { busy: tmp2, checked: null, disabled: null, expanded: null, selected: null };
   if (tmp3 == null) {
     let checked;
     if (accessibilityState != null) {
@@ -69,9 +69,9 @@ const memoResult = memo(function Pressable(ref) {
   }
   obj.checked = tmp3;
   if (tmp4 == null) {
-    disabled = undefined;
+    let disabled1;
     if (accessibilityState != null) {
-      disabled = accessibilityState.disabled;
+      disabled1 = accessibilityState.disabled;
     }
   }
   obj.disabled = tmp4;
@@ -91,10 +91,10 @@ const memoResult = memo(function Pressable(ref) {
   obj.selected = tmp6;
   let tmp26 = obj;
   if (null != disabled) {
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(obj);
-    obj.disabled = disabled;
-    tmp26 = obj;
+    obj2.disabled = disabled;
+    tmp26 = obj2;
   }
   let prop = merged["aria-valuemax"];
   if (prop == null) {
@@ -146,25 +146,25 @@ const memoResult = memo(function Pressable(ref) {
   if (accessibilityLabel == null) {
     accessibilityLabel = merged.accessibilityLabel;
   }
-  obj = {};
+  const obj3 = {};
   const merged2 = Object.assign(tmp7);
   let viewProps;
   if (tmp12 != null) {
     viewProps = tmp12.viewProps;
   }
   const merged3 = Object.assign(viewProps);
-  obj.accessible = false !== accessible;
+  obj3.accessible = false !== accessible;
   let accessibilityViewIsModal = tmp7["aria-modal"];
   if (accessibilityViewIsModal == null) {
     accessibilityViewIsModal = tmp7.accessibilityViewIsModal;
   }
-  obj.accessibilityViewIsModal = accessibilityViewIsModal;
-  obj.accessibilityLiveRegion = str;
-  obj.accessibilityLabel = accessibilityLabel;
-  obj.accessibilityState = tmp26;
-  obj.focusable = false !== focusable;
-  obj.accessibilityValue = range;
-  obj.hitSlop = hitSlop;
+  obj3.accessibilityViewIsModal = accessibilityViewIsModal;
+  obj3.accessibilityLiveRegion = str;
+  obj3.accessibilityLabel = accessibilityLabel;
+  obj3.accessibilityState = tmp26;
+  obj3.focusable = false !== focusable;
+  obj3.accessibilityValue = range;
+  obj3.hitSlop = hitSlop;
   const items1 = [android_disableSound, tmp12, blockNativeResponder, cancelable, delayHoverIn, delayHoverOut, delayLongPress, disabled, hitSlop, onBlur, onFocus, onHoverIn, onHoverOut, onLongPress, onPress, onPressIn, onPressMove, onPressOut, pressRetentionOffset, tmp19, tmp20, unstable_pressDelay];
   const tmp13Result = _slicedToArray(items, 2);
   const tmp41 = hasOwnProperty(() => ({
@@ -215,7 +215,7 @@ const memoResult = memo(function Pressable(ref) {
     },
     blockNativeResponder
   }), items1);
-  const obj1 = {};
+  const obj4 = {};
   const tmp42 = _modDef301(hasOwnProperty(() => ({
     cancelable,
     disabled,
@@ -264,23 +264,24 @@ const memoResult = memo(function Pressable(ref) {
     },
     blockNativeResponder
   }), items1));
-  const merged4 = Object.assign(obj);
+  const merged4 = Object.assign(obj3);
   const merged5 = Object.assign(tmp42);
-  obj1.ref = tmp11;
+  obj4.ref = tmp11;
+  let style1 = style;
   if (typeof style === "function") {
-    const obj2 = { pressed: tmp18 };
-    style = style(obj2);
+    const obj5 = { pressed: tmp18 };
+    style1 = style(obj5);
   }
-  obj1.style = style;
-  obj1.collapsable = false;
+  obj4.style = style1;
+  obj4.collapsable = false;
   let childrenResult = children;
   if (typeof children === "function") {
-    const obj3 = { pressed: tmp18 };
-    childrenResult = children(obj3);
+    const obj6 = { pressed: tmp18 };
+    childrenResult = children(obj6);
   }
   const items2 = [childrenResult, null];
-  obj1.children = items2;
-  return React6(ViewDefault, obj1);
+  obj4.children = items2;
+  return React6(ViewDefault, obj4);
 });
 memoResult.displayName = "Pressable";
 

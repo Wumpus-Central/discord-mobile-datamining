@@ -12,7 +12,8 @@ export const getTVProps = function getTVProps(focusable) {
     if (flag == null) {
       flag = true;
     }
-    let obj = { isTVSelectable: flag };
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
   } else {
     obj = {};
   }

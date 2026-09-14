@@ -6,23 +6,22 @@ const dependencyMap = arg6;
 
 export default {
   read(dataView, sum) {
-    let obj = _modDef5311;
-    const shortAt = obj.getShortAt(dataView, sum);
+    const shortAt = _modDef5311.getShortAt(dataView, sum);
     let tmp4;
     if (8 <= shortAt) {
-      let tmpResult = _modDef5311;
-      const byteAt = tmpResult.getByteAt(dataView, sum + 7);
-      obj = { value: byteAt, description: "" + byteAt };
-      tmp4 = obj;
+      const byteAt = _modDef5311.getByteAt(dataView, sum + 7);
+      const obj2 = { value: byteAt, description: "" + byteAt };
+      tmp4 = obj2;
+      const tmpResult = _modDef5311;
     }
     let tmp6;
     if (3 <= shortAt) {
-      tmpResult = _modDef5311;
-      const byteAt1 = tmpResult.getByteAt(dataView, sum + 2);
-      obj = { value: byteAt1, description: "" + byteAt1 };
-      tmp6 = obj;
+      const byteAt1 = _modDef5311.getByteAt(dataView, sum + 2);
+      const obj3 = { value: byteAt1, description: "" + byteAt1 };
+      tmp6 = obj3;
+      const tmpResult4 = _modDef5311;
     }
-    const obj1 = {
+    const obj4 = {
       "Bits Per Sample": tmp6,
       "Image Height": null,
       "Image Width": null,
@@ -32,24 +31,24 @@ export default {
     let tmp8;
     if (5 <= shortAt) {
       const shortAt1 = _modDef5311.getShortAt(dataView, sum + 3);
-      const obj2 = { value: shortAt1, description: null };
+      const obj5 = { value: shortAt1, description: null };
       const _HermesInternal = HermesInternal;
-      obj2.description = "" + shortAt1 + "px";
-      tmp8 = obj2;
-      const tmpResult1 = _modDef5311;
+      obj5.description = "" + shortAt1 + "px";
+      tmp8 = obj5;
+      const tmpResult5 = _modDef5311;
     }
-    obj1["Image Height"] = tmp8;
+    obj4["Image Height"] = tmp8;
     let tmp11;
     if (7 <= shortAt) {
       const shortAt2 = _modDef5311.getShortAt(dataView, sum + 5);
-      const obj3 = { value: shortAt2, description: null };
+      const obj6 = { value: shortAt2, description: null };
       const _HermesInternal2 = HermesInternal;
-      obj3.description = "" + shortAt2 + "px";
-      tmp11 = obj3;
-      const tmpResult2 = _modDef5311;
+      obj6.description = "" + shortAt2 + "px";
+      tmp11 = obj6;
+      const tmpResult6 = _modDef5311;
     }
-    obj1["Image Width"] = tmp11;
-    obj1["Color Components"] = tmp4;
+    obj4["Image Width"] = tmp11;
+    obj4["Color Components"] = tmp4;
     let tmp14 = tmp4;
     if (tmp4) {
       value = tmp4.value;
@@ -66,7 +65,7 @@ export default {
           items1[2] = obj13.getByteAt(dataView, sum + 2);
           let arr = items.push(items1);
         }
-        const obj4 = { value: items, description: null };
+        const obj7 = { value: items, description: null };
         let str6 = "";
         if (items.length > 1) {
           closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
@@ -76,7 +75,7 @@ export default {
           if (0 !== items.length) {
             str7 = "";
             if (undefined !== items[0][1]) {
-              const obj5 = {
+              const obj8 = {
                 17: "4:4:4 (1 1)",
                 18: "4:4:0 (1 2)",
                 20: "4:4:1 (1 4)",
@@ -87,19 +86,19 @@ export default {
                 66: "4:1:0 (4 2)",
               };
               str7 = "";
-              if (undefined !== obj5[items[0][1]]) {
-                str7 = obj5[items[0][1]];
+              if (undefined !== obj8[items[0][1]]) {
+                str7 = obj8[items[0][1]];
               }
             }
           }
           str6 = joined + str7;
         }
-        obj4.description = str6;
-        tmp15 = obj4;
+        obj7.description = str6;
+        tmp15 = obj7;
       }
       tmp14 = tmp15;
     }
-    obj1.Subsampling = tmp14;
-    return obj1;
+    obj4.Subsampling = tmp14;
+    return obj4;
   },
 };

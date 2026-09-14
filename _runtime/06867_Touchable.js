@@ -1,7 +1,7 @@
 // _runtime/06867_Touchable.js
 import _mod6828 from "metro/06828__.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 require = fn;
 let closure_3 = [
@@ -23,6 +23,7 @@ let closure_3 = [
 ];
 let noop = fn(19);
 ({ use: hasOwnProperty, useCallback: metroRequire, useRef: closure_7 } = noop);
+let noop = noop_mod;
 const Platform = fn(17).Platform;
 let jsx = fn(21).jsx;
 let closure_9 = { rippleColor: "transparent" };
@@ -83,13 +84,14 @@ export const Touchable = (hitSlop) => {
         num12 = animationDuration;
       }
     }
-    obj = {
+    const obj2 = {
       tapAnimationInDuration: num12,
       tapAnimationOutDuration: num12,
       longPressAnimationOutDuration: num12,
       hoverAnimationInDuration: num12,
       hoverAnimationOutDuration: num12,
     };
+    obj = obj2;
   } else {
     let num5 = 0;
     if ("in" in animationDuration) {
@@ -294,73 +296,6 @@ export const Touchable = (hitSlop) => {
     }
     closure_11();
   }, items4);
-  let obj2 = onLongPress(onPressIn[5]);
-  obj = {
-    onBegin: tmp24,
-    onActivate: tmp25,
-    onFinalize: tmp26,
-    onUpdate: ref2((pointerInside) => {
-      if (!closure_9.current) {
-        if (ref.current !== closure_10.UNKNOWN) {
-          const current = ref.current;
-          if (pointerInside.pointerInside) {
-            if (current === closure_10.OUTSIDE) {
-              if (onPressIn != null) {
-                tmp9(pointerInside);
-              }
-            }
-            ref.current = closure_10.INSIDE;
-          } else {
-            if (current === closure_10.INSIDE) {
-              if (onPressOut != null) {
-                tmp3(pointerInside);
-              }
-              if (undefined !== closure_7.current) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_7.current);
-                closure_7.current = undefined;
-              }
-            }
-            ref.current = closure_10.OUTSIDE;
-          }
-        }
-      }
-    }, items5),
-    hitSlop: hitSlop.hitSlop,
-    testID: hitSlop.testID,
-    enabled: !tmp,
-    shouldCancelWhenOutside: tmp2,
-    disableReanimated: true,
-    shouldActivateOnStart: false,
-    disallowInterruption: true,
-    yieldsToContinuousGestures: true,
-  };
-  const nativeGesture = obj2.useNativeGesture(obj);
-  if (undefined !== androidRipple) {
-    let color;
-    if (androidRipple != null) {
-      color = androidRipple.color;
-    }
-    const obj1 = { rippleColor: color, rippleRadius: null, borderless: null, foreground: null };
-    let radius;
-    if (androidRipple != null) {
-      radius = androidRipple.radius;
-    }
-    obj1.rippleRadius = radius;
-    let borderless;
-    if (androidRipple != null) {
-      borderless = androidRipple.borderless;
-    }
-    obj1.borderless = borderless;
-    let foreground;
-    if (androidRipple != null) {
-      foreground = androidRipple.foreground;
-    }
-    obj1.foreground = foreground;
-    let tmp29 = obj1;
-  } else {
-    tmp29 = closure_9;
-  }
   const tmp27 = ref2((pointerInside) => {
     if (!closure_9.current) {
       if (ref.current !== closure_10.UNKNOWN) {
@@ -388,9 +323,63 @@ export const Touchable = (hitSlop) => {
       }
     }
   }, items5);
+  const nativeGesture = onLongPress(onPressIn[5]).useNativeGesture({
+    onBegin: tmp24,
+    onActivate: tmp25,
+    onFinalize: tmp26,
+    onUpdate: tmp27,
+    hitSlop: hitSlop.hitSlop,
+    testID: hitSlop.testID,
+    enabled: !tmp,
+    shouldCancelWhenOutside: tmp2,
+    disableReanimated: true,
+    shouldActivateOnStart: false,
+    disallowInterruption: true,
+    yieldsToContinuousGestures: true,
+  });
+  if (undefined !== androidRipple) {
+    let color;
+    if (androidRipple != null) {
+      color = androidRipple.color;
+    }
+    const obj5 = { rippleColor: color, rippleRadius: null, borderless: null, foreground: null };
+    let radius;
+    if (androidRipple != null) {
+      radius = androidRipple.radius;
+    }
+    obj5.rippleRadius = radius;
+    let borderless;
+    if (androidRipple != null) {
+      borderless = androidRipple.borderless;
+    }
+    obj5.borderless = borderless;
+    let foreground;
+    if (androidRipple != null) {
+      foreground = androidRipple.foreground;
+    }
+    obj5.foreground = foreground;
+    let tmp29 = obj5;
+  } else {
+    tmp29 = closure_9;
+  }
+  const obj3 = onLongPress(onPressIn[5]);
+  const obj4 = {
+    onBegin: tmp24,
+    onActivate: tmp25,
+    onFinalize: tmp26,
+    onUpdate: tmp27,
+    hitSlop: hitSlop.hitSlop,
+    testID: hitSlop.testID,
+    enabled: !tmp,
+    shouldCancelWhenOutside: tmp2,
+    disableReanimated: true,
+    shouldActivateOnStart: false,
+    disallowInterruption: true,
+    yieldsToContinuousGestures: true,
+  };
   const tVProps = onLongPress(onPressIn[6]).getTVProps(tmp4);
-  obj2 = { gesture: nativeGesture, children: null };
-  const obj3 = {};
+  const obj6 = { gesture: nativeGesture, children: null };
+  const obj7 = {};
   const tmp17Result = onLongPress(onPressIn[6]);
   const merged = Object.assign(tmp4);
   const merged1 = Object.assign(tVProps);
@@ -399,14 +388,14 @@ export const Touchable = (hitSlop) => {
   if (ref == null) {
     ref = null;
   }
-  obj3.ref = ref;
-  obj3.enabled = !tmp;
-  obj3.defaultOpacity = num3;
-  obj3.defaultUnderlayOpacity = num;
-  obj3.activeUnderlayOpacity = num2;
-  obj3.underlayColor = str;
-  obj3.longPressDuration = num13;
-  obj3.children = hitSlop.children;
-  obj2.children = jsx(onPress(onPressIn[8]), obj3);
-  return jsx(onLongPress(onPressIn[7]).NativeDetector, obj2);
+  obj7.ref = ref;
+  obj7.enabled = !tmp;
+  obj7.defaultOpacity = num3;
+  obj7.defaultUnderlayOpacity = num;
+  obj7.activeUnderlayOpacity = num2;
+  obj7.underlayColor = str;
+  obj7.longPressDuration = num13;
+  obj7.children = hitSlop.children;
+  obj6.children = jsx(onPress(onPressIn[8]), obj7);
+  return jsx(onLongPress(onPressIn[7]).NativeDetector, obj6);
 };

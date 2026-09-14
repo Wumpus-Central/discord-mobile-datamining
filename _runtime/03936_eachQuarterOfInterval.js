@@ -1,9 +1,10 @@
 // _runtime/03936_eachQuarterOfInterval.js
-import 03891__ from "metro/03891__.js";
-import startOfQuarter from "03937_startOfQuarter.js";
-import _typeof from "metro/03725__.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3891_mod from "metro/03891__.js";
+import startOfQuarter_mod from "03937_startOfQuarter.js";
+import _typeof_mod from "metro/03725__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3891 = module_3891_mod;
 if (!module_3891) {
   let obj = { default: module_3891 };
   let tmp3 = obj;
@@ -11,23 +12,26 @@ if (!module_3891) {
   tmp3 = module_3891;
 }
 module_3891 = tmp3;
+let startOfQuarter = startOfQuarter_mod;
 if (!startOfQuarter) {
-  obj = { default: startOfQuarter };
-  let tmp5 = obj;
+  const obj2 = { default: startOfQuarter };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfQuarter;
 }
 startOfQuarter = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

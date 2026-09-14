@@ -48,11 +48,11 @@ class TouchableNativeFeedback {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    obj = { pressability: null };
+    obj1 = { pressability: null };
     tmp6 = closure_1(c2[8]);
-    tmp6 = new tmp6(tmp3Result._createPressabilityConfig());
-    obj.pressability = tmp6;
-    tmp3Result.state = obj;
+    tmp61 = new tmp6(tmp3Result._createPressabilityConfig());
+    obj1.pressability = tmp61;
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
@@ -64,10 +64,11 @@ const entry = {
     let disabled = this.props["aria-disabled"];
     if (disabled == null) {
       const accessibilityState = self.props.accessibilityState;
-      disabled = undefined;
+      let disabled1;
       if (accessibilityState != null) {
-        disabled = accessibilityState.disabled;
+        disabled1 = accessibilityState.disabled;
       }
+      disabled = disabled1;
     }
     const obj = {
       cancelable: !self.props.rejectResponderTermination,
@@ -174,7 +175,7 @@ let items = [
         }
         prop = busy;
       }
-      let obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
+      const obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
       let prop1 = self.props["aria-checked"];
       if (prop1 == null) {
         const accessibilityState2 = self.props.accessibilityState;
@@ -217,10 +218,10 @@ let items = [
       obj.selected = prop4;
       let tmp14 = obj;
       if (null != self.props.disabled) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
-        obj.disabled = self.props.disabled;
-        tmp14 = obj;
+        obj2.disabled = self.props.disabled;
+        tmp14 = obj2;
       }
       let prop5 = self.props["aria-valuemax"];
       if (prop5 == null) {
@@ -275,7 +276,7 @@ let items = [
         accessibilityLabel = self.props.accessibilityLabel;
       }
       const items1 = [onlyResult];
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(_objectWithoutProperties(eventHandlers, c3));
       if (undefined === self.props.background) {
         let background = TouchableNativeFeedback.SelectableBackground();
@@ -285,55 +286,55 @@ let items = [
       if (typeof closure_12 === "function") {
         if (true === tmp30) {
           if (importDefaultResultResult.canUseNativeForeground()) {
-            const obj1 = { nativeForegroundAndroid: background };
-            let obj2 = obj1;
+            const obj4 = { nativeForegroundAndroid: background };
+            let obj5 = obj4;
           }
-          const merged2 = Object.assign(obj2);
-          obj.accessible = false !== self.props.accessible;
-          obj.accessibilityHint = self.props.accessibilityHint;
-          obj.accessibilityLanguage = self.props.accessibilityLanguage;
-          obj.accessibilityLabel = accessibilityLabel;
-          obj.accessibilityRole = self.props.accessibilityRole;
-          obj.accessibilityState = tmp14;
-          obj.accessibilityActions = self.props.accessibilityActions;
-          obj.onAccessibilityAction = self.props.onAccessibilityAction;
-          obj.accessibilityValue = range;
+          const merged2 = Object.assign(obj5);
+          obj3.accessible = false !== self.props.accessible;
+          obj3.accessibilityHint = self.props.accessibilityHint;
+          obj3.accessibilityLanguage = self.props.accessibilityLanguage;
+          obj3.accessibilityLabel = accessibilityLabel;
+          obj3.accessibilityRole = self.props.accessibilityRole;
+          obj3.accessibilityState = tmp14;
+          obj3.accessibilityActions = self.props.accessibilityActions;
+          obj3.onAccessibilityAction = self.props.onAccessibilityAction;
+          obj3.accessibilityValue = range;
           let str2 = "no-hide-descendants";
           if (true !== self.props["aria-hidden"]) {
             str2 = self.props.importantForAccessibility;
           }
-          obj.importantForAccessibility = str2;
+          obj3.importantForAccessibility = str2;
           let accessibilityViewIsModal = self.props["aria-modal"];
           if (accessibilityViewIsModal == null) {
             accessibilityViewIsModal = self.props.accessibilityViewIsModal;
           }
-          obj.accessibilityViewIsModal = accessibilityViewIsModal;
-          obj.accessibilityLiveRegion = str;
+          obj3.accessibilityViewIsModal = accessibilityViewIsModal;
+          obj3.accessibilityLiveRegion = str;
           let accessibilityElementsHidden = self.props["aria-hidden"];
           if (accessibilityElementsHidden == null) {
             accessibilityElementsHidden = self.props.accessibilityElementsHidden;
           }
-          obj.accessibilityElementsHidden = accessibilityElementsHidden;
-          obj.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
-          obj.hitSlop = self.props.hitSlop;
-          obj.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
+          obj3.accessibilityElementsHidden = accessibilityElementsHidden;
+          obj3.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
+          obj3.hitSlop = self.props.hitSlop;
+          obj3.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
           let nativeID = self.props.id;
           if (nativeID == null) {
             nativeID = self.props.nativeID;
           }
-          obj.nativeID = nativeID;
-          obj.nextFocusDown = self.props.nextFocusDown;
-          obj.nextFocusForward = self.props.nextFocusForward;
-          obj.nextFocusLeft = self.props.nextFocusLeft;
-          obj.nextFocusRight = self.props.nextFocusRight;
-          obj.nextFocusUp = self.props.nextFocusUp;
-          obj.onLayout = self.props.onLayout;
-          obj.testID = self.props.testID;
-          items1[1] = obj;
+          obj3.nativeID = nativeID;
+          obj3.nextFocusDown = self.props.nextFocusDown;
+          obj3.nextFocusForward = self.props.nextFocusForward;
+          obj3.nextFocusLeft = self.props.nextFocusLeft;
+          obj3.nextFocusRight = self.props.nextFocusRight;
+          obj3.nextFocusUp = self.props.nextFocusUp;
+          obj3.onLayout = self.props.onLayout;
+          obj3.testID = self.props.testID;
+          items1[1] = obj3;
           HermesBuiltin.arraySpread(items, 2);
           return HermesBuiltin.apply(items1, undefined);
         }
-        obj2 = { nativeBackgroundAndroid: background };
+        obj5 = { nativeBackgroundAndroid: background };
       } else {
         throw new TypeError("Trying to call a non-function");
       }

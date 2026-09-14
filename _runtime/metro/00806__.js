@@ -16,11 +16,11 @@ function createMcpSpan(arg0) {
   let name = method;
   ({ transport, extra, callback } = arg0);
   if ("request" === type) {
-    let obj = params;
+    let obj2 = params;
     if (!params) {
-      obj = {};
+      obj2 = {};
     }
-    const target = obj.extractTargetInfo(method, obj).target;
+    const target = extractTargetInfo.extractTargetInfo(method, obj2).target;
     let combined = method;
     if (target) {
       const _HermesInternal = HermesInternal;
@@ -28,9 +28,9 @@ function createMcpSpan(arg0) {
     }
     name = combined;
   }
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(extractClientInfo.buildTransportAttributes(transport, extra));
-  obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_METHOD_NAME_ATTRIBUTE] = method;
+  obj3[CLIENT_ADDRESS_ATTRIBUTE.MCP_METHOD_NAME_ATTRIBUTE] = method;
   let recordInputs;
   if (options != null) {
     recordInputs = options.recordInputs;
@@ -46,64 +46,64 @@ function createMcpSpan(arg0) {
     MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = CLIENT_ADDRESS_ATTRIBUTE.MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
     MCP_NOTIFICATION_ORIGIN_VALUE = CLIENT_ADDRESS_ATTRIBUTE.MCP_NOTIFICATION_ORIGIN_VALUE;
   }
-  const obj1 = {};
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = MCP_NOTIFICATION_ORIGIN_VALUE;
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = CLIENT_ADDRESS_ATTRIBUTE.MCP_ROUTE_SOURCE_VALUE;
-  const merged2 = Object.assign(obj1);
-  let tmp6Result = _mod713;
-  const client = tmp6Result.getClient();
+  const obj6 = {};
+  obj6[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
+  obj6[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = MCP_NOTIFICATION_ORIGIN_VALUE;
+  obj6[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = CLIENT_ADDRESS_ATTRIBUTE.MCP_ROUTE_SOURCE_VALUE;
+  const merged2 = Object.assign(obj6);
+  const client = _mod713.getClient();
   let sendDefaultPii;
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
-  tmp6Result = filterMcpPiiFromSpanData;
-  const attributes = tmp6Result.filterMcpPiiFromSpanData(obj, Boolean(sendDefaultPii));
+  const tmp6Result = _mod713;
   const BooleanResult = Boolean(sendDefaultPii);
+  const attributes = filterMcpPiiFromSpanData.filterMcpPiiFromSpanData(obj3, BooleanResult);
+  const tmp6Result3 = filterMcpPiiFromSpanData;
   return _mod731.startSpan({ name, forceTransaction: true, attributes }, callback);
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const buildMcpServerSpanConfig = function buildMcpServerSpanConfig(message, self, extra, recordInputs) {
   ({ method, params } = message);
-  let obj = params;
+  let obj2 = params;
   if (!params) {
-    obj = {};
+    obj2 = {};
   }
-  const target = obj.extractTargetInfo(method, obj).target;
+  const target = extractTargetInfo.extractTargetInfo(method, obj2).target;
   let combined = method;
   if (target) {
     const _HermesInternal = HermesInternal;
     combined = "" + method + " " + target;
   }
-  obj = {};
-  let tmpResult = extractClientInfo;
-  const merged = Object.assign(tmpResult.buildTransportAttributes(self, extra));
-  obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_METHOD_NAME_ATTRIBUTE] = method;
-  tmpResult = _mod808;
+  const obj3 = {};
+  const merged = Object.assign(extractClientInfo.buildTransportAttributes(self, extra));
+  obj3[CLIENT_ADDRESS_ATTRIBUTE.MCP_METHOD_NAME_ATTRIBUTE] = method;
+  const tmpResult = extractClientInfo;
   recordInputs = undefined;
   if (recordInputs != null) {
     recordInputs = recordInputs.recordInputs;
   }
-  const merged1 = Object.assign(tmpResult.buildTypeSpecificAttributes("request", message, params, recordInputs));
-  const obj1 = {};
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_OP_VALUE;
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] =
+  const merged1 = Object.assign(_mod808.buildTypeSpecificAttributes("request", message, params, recordInputs));
+  const obj4 = {};
+  obj4[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_OP_VALUE;
+  obj4[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] =
     CLIENT_ADDRESS_ATTRIBUTE.MCP_FUNCTION_ORIGIN_VALUE;
-  obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = CLIENT_ADDRESS_ATTRIBUTE.MCP_ROUTE_SOURCE_VALUE;
-  const merged2 = Object.assign(obj1);
+  obj4[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = CLIENT_ADDRESS_ATTRIBUTE.MCP_ROUTE_SOURCE_VALUE;
+  const merged2 = Object.assign(obj4);
+  const tmpResult4 = _mod808;
   const client = _mod713.getClient();
   let sendDefaultPii;
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
-  const tmpResult1 = _mod713;
+  const tmpResult5 = _mod713;
   const BooleanResult = Boolean(sendDefaultPii);
-  const obj2 = { name: combined, op: null, forceTransaction: true, attributes: null };
-  const result = filterMcpPiiFromSpanData.filterMcpPiiFromSpanData(obj, BooleanResult);
-  obj2.op = CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_OP_VALUE;
-  obj2.attributes = result;
-  return obj2;
+  const obj5 = { name: combined, op: null, forceTransaction: true, attributes: null };
+  const result = filterMcpPiiFromSpanData.filterMcpPiiFromSpanData(obj3, BooleanResult);
+  obj5.op = CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_OP_VALUE;
+  obj5.attributes = result;
+  return obj5;
 };
 export const createMcpNotificationSpan = function createMcpNotificationSpan(message, self, extra, options, callback) {
   return createMcpSpan({ type: "notification-incoming", message, transport: self, extra, callback, options });

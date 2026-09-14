@@ -24,13 +24,13 @@ export default function _default(rippleRadius) {
     button = keyboardState(theme[3]);
   }
   theme = undefined;
-  let obj = onPress(theme[4]);
-  keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
+  keyboardState = onPress(theme[4]).useKeyboardState((appearance) => appearance.appearance);
+  const obj = onPress(theme[4]);
   theme = onPress(theme[5]).useToolbarContext().theme;
   let items = [keyboardState, theme];
   const items1 = [onPress];
   const obj2 = onPress(theme[5]);
-  obj = {
+  const obj3 = {
     accessibilityHint: "Closes the keyboard",
     accessibilityLabel: "Done",
     rippleRadius: num,
@@ -44,9 +44,9 @@ export default function _default(rippleRadius) {
     const items = [doneButton.doneButton, { color: theme[keyboardState].primary }];
     return items;
   }, items);
-  obj.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
-  obj.theme = theme;
-  obj.onPress = closure_3((isDefaultPrevented) => {
+  obj3.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
+  obj3.theme = theme;
+  obj3.onPress = closure_3((isDefaultPrevented) => {
     if (onPress != null) {
       tmp(isDefaultPrevented);
     }
@@ -55,21 +55,29 @@ export default function _default(rippleRadius) {
       KeyboardController.dismiss();
     }
   }, items1);
-  obj = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
+  const obj4 = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
   if (children == null) {
     children = text;
   }
   if (children == null) {
     children = "Done";
   }
-  obj.children = children;
-  obj.children = (
+  obj4.children = children;
+  obj3.children = (
     <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>
       {null}
     </closure_5>
   );
   return (
-    <button maxFontSizeMultiplier={1.3} style={tmp4}>
+    <button
+      accessibilityHint="Closes the keyboard"
+      accessibilityLabel="Done"
+      rippleRadius={num}
+      style={doneButtonContainer.doneButtonContainer}
+      testID={null}
+      theme={null}
+      onPress={null}
+    >
       {null}
     </button>
   );

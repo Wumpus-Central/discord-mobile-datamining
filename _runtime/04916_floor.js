@@ -1,10 +1,10 @@
 // _runtime/04916_floor.js
-import _mod1308 from "metro/01308__.js";
+import _mod1306 from "metro/01306__.js";
 
 export default function floor(arg0) {
   let tmp = arg0;
   if (typeof arg0 !== "bigint") {
-    tmp = _mod1308(arg0);
+    tmp = _mod1306(arg0);
   }
   return tmp;
 }

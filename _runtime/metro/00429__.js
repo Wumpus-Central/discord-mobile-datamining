@@ -46,13 +46,13 @@ class TouchableOpacity {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    obj = { anim: null, pressability: null };
+    obj1 = { anim: null, pressability: null };
     value = new closure_0(closure_1[8]).Value(tmp3Result._getChildStyleOpacityWithDefault());
-    obj.anim = value;
+    obj1.anim = value;
     tmp7 = closure_0(closure_1[9]);
-    tmp7 = new tmp7(tmp3Result._createPressabilityConfig());
-    obj.pressability = tmp7;
-    tmp3Result.state = obj;
+    tmp71 = new tmp7(tmp3Result._createPressabilityConfig());
+    obj1.pressability = tmp71;
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
@@ -141,15 +141,11 @@ let items = [
   {
     key: "_setOpacityTo",
     value: function _setOpacityTo(toValue, duration) {
-      TouchableOpacity(397);
-      const obj = {
-        toValue,
-        duration,
-        easing: TouchableOpacity(364).inOut(TouchableOpacity(364).quad),
-        useNativeDriver: true,
-      };
+      const obj2 = { toValue, duration, easing: null, useNativeDriver: true };
+      const obj = TouchableOpacity(397);
+      obj2.easing = TouchableOpacity(364).inOut(TouchableOpacity(364).quad);
       const obj3 = TouchableOpacity(364);
-      obj.timing(this.state.anim, obj).start();
+      obj.timing(this.state.anim, obj2).start();
     },
   },
   {
@@ -199,7 +195,7 @@ let items = [
         }
         prop = busy;
       }
-      let obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
+      const obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
       let prop1 = self.props["aria-checked"];
       if (prop1 == null) {
         const accessibilityState2 = self.props.accessibilityState;
@@ -242,10 +238,10 @@ let items = [
       obj.selected = prop4;
       let tmp13 = obj;
       if (null != self.props.disabled) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
-        obj.disabled = self.props.disabled;
-        tmp13 = obj;
+        obj2.disabled = self.props.disabled;
+        tmp13 = obj2;
       }
       let prop5 = self.props["aria-valuemax"];
       if (prop5 == null) {
@@ -299,7 +295,7 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      obj = {
+      const obj3 = {
         accessible: false !== self.props.accessible,
         accessibilityLabel,
         accessibilityHint: self.props.accessibilityHint,
@@ -331,40 +327,40 @@ let items = [
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
       }
-      obj.importantForAccessibility = str2;
+      obj3.importantForAccessibility = str2;
       let accessibilityViewIsModal = self.props["aria-modal"];
       if (accessibilityViewIsModal == null) {
         accessibilityViewIsModal = self.props.accessibilityViewIsModal;
       }
-      obj.accessibilityViewIsModal = accessibilityViewIsModal;
-      obj.accessibilityLiveRegion = str;
+      obj3.accessibilityViewIsModal = accessibilityViewIsModal;
+      obj3.accessibilityLiveRegion = str;
       let accessibilityElementsHidden = self.props["aria-hidden"];
       if (accessibilityElementsHidden == null) {
         accessibilityElementsHidden = self.props.accessibilityElementsHidden;
       }
-      obj.accessibilityElementsHidden = accessibilityElementsHidden;
+      obj3.accessibilityElementsHidden = accessibilityElementsHidden;
       const items = [self.props.style, { opacity: self.state.anim }];
-      obj.style = items;
+      obj3.style = items;
       let nativeID = self.props.id;
       if (nativeID == null) {
         nativeID = self.props.nativeID;
       }
-      obj.nativeID = nativeID;
-      obj.testID = self.props.testID;
-      obj.onLayout = self.props.onLayout;
-      obj.nextFocusDown = self.props.nextFocusDown;
-      obj.nextFocusForward = self.props.nextFocusForward;
-      obj.nextFocusLeft = self.props.nextFocusLeft;
-      obj.nextFocusRight = self.props.nextFocusRight;
-      obj.nextFocusUp = self.props.nextFocusUp;
-      obj.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
-      obj.hitSlop = self.props.hitSlop;
-      obj.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
-      obj.ref = self.props.hostRef;
+      obj3.nativeID = nativeID;
+      obj3.testID = self.props.testID;
+      obj3.onLayout = self.props.onLayout;
+      obj3.nextFocusDown = self.props.nextFocusDown;
+      obj3.nextFocusForward = self.props.nextFocusForward;
+      obj3.nextFocusLeft = self.props.nextFocusLeft;
+      obj3.nextFocusRight = self.props.nextFocusRight;
+      obj3.nextFocusUp = self.props.nextFocusUp;
+      obj3.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
+      obj3.hitSlop = self.props.hitSlop;
+      obj3.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
+      obj3.ref = self.props.hostRef;
       const merged1 = Object.assign(_objectWithoutProperties(eventHandlers, closure_2));
       const items1 = [self.props.children, null];
-      obj.children = items1;
-      return React6(TouchableOpacity(397).View, obj);
+      obj3.children = items1;
+      return React6(TouchableOpacity(397).View, obj3);
     },
   },
   {

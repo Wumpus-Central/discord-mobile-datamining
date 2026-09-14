@@ -21,14 +21,16 @@ export const ScrollableContainer = fn(19).forwardRef(function ScrollableContaine
       ScrollableComponent: 0,
     }),
   );
-  let obj = { scrollableGesture: nativeGesture, children: null };
-  obj = { ref };
+  const obj = { scrollableGesture: nativeGesture, children: null };
   const merged1 = Object.assign(merged);
   obj.children = <ScrollableComponent ref={ref} />;
-  const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, { ref });
+  const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, {
+    scrollableGesture: nativeGesture,
+    children: null,
+  });
   let tmp2Result = tmp6;
   if (onRefresh) {
-    obj = {
+    const obj3 = {
       scrollableGesture: nativeGesture,
       refreshing,
       progressViewOffset,

@@ -1,10 +1,12 @@
 // _runtime/metro/06928__.js
 import _mod6930 from "06930__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 import jsxProd from "../react/00021_jsxProd.js";
 
+let noop = noop_mod;
 const useMemo = noop.useMemo;
+let noop = noop_mod;
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const memoResult = noop.memo(function BottomSheetHandleComponent(style) {

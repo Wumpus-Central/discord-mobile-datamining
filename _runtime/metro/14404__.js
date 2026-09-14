@@ -1,32 +1,14 @@
 // _runtime/metro/14404__.js
-import _mod14385 from "14385__.js";
-import _mod14389 from "14389__.js";
-import _mod14405 from "14405__.js";
+import prop_mod from "14405__.js";
 
-let prop = Object.getOwnPropertySymbols;
+let prop = prop_mod;
 if (prop) {
-  prop = !_mod14389(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod14385.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
-    }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod14405;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod14405 < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
 }
 
 export default prop;

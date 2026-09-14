@@ -109,7 +109,7 @@ const entry = {
     }
     ({ onDrawerStateChanged, onDrawerOpen, onDrawerClose } = props);
     let tmp2 = null != self.props.statusBarBackgroundColor;
-    let obj = { style: null, pointerEvents: null, collapsable: false, children: null };
+    const obj = { style: null, pointerEvents: null, collapsable: false, children: null };
     const items = [drawerSubview.drawerSubview, { width: self.props.drawerWidth, backgroundColor: str }];
     obj.style = items;
     let str2 = "none";
@@ -121,51 +121,50 @@ const entry = {
     const items1 = [props.renderNavigationView()];
     let tmp8 = tmp2;
     if (tmp2) {
-      obj = { style: drawerSubview.drawerStatusBar };
-      tmp8 = React7(ViewDefault, obj);
+      const obj2 = { style: drawerSubview.drawerStatusBar };
+      tmp8 = React7(ViewDefault, obj2);
     }
     items1[1] = tmp8;
     obj.children = items1;
-    let tmp3Result = closure_1_10(ViewDefault, obj);
-    obj = { style: drawerSubview.mainSubview, collapsable: false, children: null };
+    const obj3 = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    let tmp4Result = ViewDefault;
+    const tmp3Result = closure_1_10(ViewDefault, obj);
     if (tmp2) {
-      const obj1 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
-      tmp12 = React7(_modDef304, obj1);
+      const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
+      tmp12 = React7(_modDef304, obj4);
     }
     const items2 = [tmp12, ,];
     if (tmp2) {
-      const obj2 = { style: null };
+      const obj5 = { style: null };
       const items3 = [drawerSubview.statusBar];
-      const obj3 = { backgroundColor: self.props.statusBarBackgroundColor };
-      items3[1] = obj3;
-      obj2.style = items3;
-      tmp2 = React7(ViewDefault, obj2);
+      const obj6 = { backgroundColor: self.props.statusBarBackgroundColor };
+      items3[1] = obj6;
+      obj5.style = items3;
+      tmp2 = React7(ViewDefault, obj5);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;
-    obj.children = items2;
-    tmp3Result = closure_1_10(tmp4Result, obj);
-    const obj4 = {};
-    tmp4Result = _modDef309;
+    obj3.children = items2;
+    const tmp4Result = ViewDefault;
+    const obj13 = {};
+    const tmp3Result2 = closure_1_10(ViewDefault, obj3);
     const merged = Object.assign(tmp);
-    obj4.ref = self._nativeRef;
-    obj4.drawerBackgroundColor = str;
-    obj4.drawerWidth = self.props.drawerWidth;
-    obj4.drawerPosition = self.props.drawerPosition;
-    obj4.drawerLockMode = self.props.drawerLockMode;
+    obj13.ref = self._nativeRef;
+    obj13.drawerBackgroundColor = str;
+    obj13.drawerWidth = self.props.drawerWidth;
+    obj13.drawerPosition = self.props.drawerPosition;
+    obj13.drawerLockMode = self.props.drawerLockMode;
     const items4 = [drawerSubview.base, self.props.style];
-    obj4.style = items4;
+    obj13.style = items4;
     ({
       _onDrawerSlide: obj7.onDrawerSlide,
       _onDrawerOpen: obj7.onDrawerOpen,
       _onDrawerClose: obj7.onDrawerClose,
       _onDrawerStateChanged: obj7.onDrawerStateChanged,
     } = self);
-    const items5 = [tmp3Result, tmp3Result];
-    obj4.children = items5;
-    return closure_1_10(tmp4Result, obj4);
+    const items5 = [tmp3Result2, tmp3Result];
+    obj13.children = items5;
+    return closure_1_10(_modDef309, obj13);
   },
 };
 let items = [
@@ -221,6 +220,25 @@ let items = [
     },
   },
 ];
+let items1 = [
+  {
+    key: "positions",
+    get() {
+      console.warn(
+        'Setting DrawerLayoutAndroid drawerPosition using `DrawerLayoutAndroid.positions` is deprecated. Instead pass the string value "left" or "right"',
+      );
+      return { Left: "left", Right: "right" };
+    },
+  },
+];
+let obj2 = {
+  base: { flex: 1, elevation: 16 },
+  mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
+  drawerSubview: { position: "absolute", top: 0, bottom: 0 },
+  statusBar: null,
+  drawerStatusBar: null,
+};
+const importDefaultResultResult = _createClass(DrawerLayoutAndroid, items, items1);
 let obj = {
   key: "positions",
   get() {
@@ -230,16 +248,7 @@ let obj = {
     return { Left: "left", Right: "right" };
   },
 };
-let items1 = [obj];
-obj = {
-  base: { flex: 1, elevation: 16 },
-  mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
-  drawerSubview: { position: "absolute", top: 0, bottom: 0 },
-  statusBar: null,
-  drawerStatusBar: null,
-};
-const importDefaultResultResult = _createClass(DrawerLayoutAndroid, items, items1);
-obj.statusBar = { height: _modDef304.currentHeight };
+obj2.statusBar = { height: _modDef304.currentHeight };
 const rect = {
   position: "absolute",
   top: 0,
@@ -248,7 +257,7 @@ const rect = {
   height: _modDef304.currentHeight,
   backgroundColor: "rgba(0, 0, 0, 0.251)",
 };
-obj.drawerStatusBar = rect;
-const drawerSubview = get_hairlineWidth.create(obj);
+obj2.drawerStatusBar = rect;
+const drawerSubview = get_hairlineWidth.create(obj2);
 
 export default importDefaultResultResult;

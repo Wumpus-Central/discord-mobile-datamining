@@ -47,19 +47,18 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
     }
   }
   const types = obj.types || ["crash", "deprecation", "intervention"];
-  obj = {
+  return {
     name: "ReportingObserver",
     setupOnce() {
-      let obj = registerSpanErrorInstrumentation;
       if (obj.supportsReportingObserver()) {
-        obj = { buffered: true, types };
-        const reportingObserver = new registerSpanErrorInstrumentation.GLOBAL_OBJ.ReportingObserver(handler, obj);
+        const obj2 = { buffered: true, types };
+        const reportingObserver = new registerSpanErrorInstrumentation.GLOBAL_OBJ.ReportingObserver(handler, obj2);
         reportingObserver.observe();
       }
+      obj = registerSpanErrorInstrumentation;
     },
     setup(arg0) {
       const result = map.set(arg0, true);
     },
   };
-  return obj;
 });

@@ -1,68 +1,17 @@
 // _runtime/metro/12942__.js
-import _mod12932 from "12932__.js";
-import _slicedToArray from "00032__.js";
 
-const _sentryMetrics = "_sentryMetrics";
-
-export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        let items = [];
-        obj[tmp10] = items;
-        arr = items;
-      }
-      let obj2 = _mod12932;
-      arr = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
-    }
-    return obj;
-  }
-};
-export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
-  activeSpan,
-  metricType,
-  sanitizeMetricKeyResult,
-  min,
-  sanitizeUnitResult,
-  tags,
-  bucketKey,
-) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
-  }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    _slicedToArray(value, 2)[1];
-    const items = [combined];
-    const range = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range.sum = sum1;
-    range.tags = range.tags;
-    items[1] = range;
-    const result = obj.set(bucketKey, items);
-  } else {
-    const items1 = [combined];
-    const range1 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range1;
-    const result1 = obj.set(bucketKey, items1);
-  }
-};
+export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
+export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
+export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
+export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
+export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
+export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
+export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
+export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
+export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
+export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";

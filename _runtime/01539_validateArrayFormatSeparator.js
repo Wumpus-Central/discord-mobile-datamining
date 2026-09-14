@@ -63,7 +63,7 @@ function parseValue(str, parseNumbers) {
   }
 }
 function parse(str, arg1) {
-  let obj = globalThis;
+  let obj2 = globalThis;
   const merged = Object.assign(
     {
       decode: true,
@@ -76,7 +76,7 @@ function parse(str, arg1) {
     arg1,
   );
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
-  obj = Object.create(null);
+  let obj = Object.create(null);
   if (typeof str !== "string") {
     return obj;
   } else {
@@ -130,7 +130,7 @@ function parse(str, arg1) {
         return obj;
       } else {
         if (true === merged.sort) {
-          const _Object4 = obj.Object;
+          const _Object4 = obj2.Object;
           const keys2 = _Object4.keys(obj);
           let sorted = keys2.sort();
         } else {
@@ -138,8 +138,8 @@ function parse(str, arg1) {
           const keys3 = Object.keys(obj);
           sorted = keys3.sort(merged.sort);
         }
-        const _Object5 = obj.Object;
-        obj = _Object5.create(null);
+        const _Object5 = obj2.Object;
+        obj2 = _Object5.create(null);
         const reduced = sorted.reduce((acc, item) => {
           if (Boolean(obj[item])) {
             if (typeof obj === "object") {
@@ -176,7 +176,7 @@ function parse(str, arg1) {
             }
           }
           acc[item] = obj[item];
-        }, obj);
+        }, obj2);
       }
     } else {
       return obj;
@@ -709,7 +709,7 @@ export const stringify = (arg0, merged) => {
 };
 export const parseUrl = (arr, arg1) => {
   const merged = Object.assign({ decode: true }, arg1);
-  [str, tmp5] = _slicedToArray(_mod1542(arr, "#"), 2);
+  [str, tmp5] = _mod1542(arr, "#");
   const tmp4 = _slicedToArray(_mod1542(arr, "#"), 2);
   const request = { url: str.split("?")[0] || "", query: null };
   const index = arr.indexOf("#");

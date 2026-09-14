@@ -75,7 +75,7 @@ function parse(str, delimiter) {
         }
       }
       obj.pattern = str7;
-      arr = items.push(obj);
+      let arr4 = items.push(obj);
     }
     match = regExp.exec(str);
     num2 = sum1;
@@ -202,7 +202,7 @@ function pathToRegexp(source, items, arg2) {
       let num3 = 0;
       if (0 < match.length) {
         do {
-          obj = {
+          let obj2 = {
             name: num3,
             prefix: null,
             delimiter: null,
@@ -212,7 +212,7 @@ function pathToRegexp(source, items, arg2) {
             asterisk: false,
             pattern: null,
           };
-          let arr = items.push(obj);
+          let arr = items.push(obj2);
           num3 = num3 + 1;
           length2 = match.length;
         } while (num3 < length2);
@@ -225,7 +225,7 @@ function pathToRegexp(source, items, arg2) {
     let num = 0;
     if (0 < source.length) {
       do {
-        arr = items1.push(pathToRegexp(source[num], items, obj).source);
+        let arr3 = items1.push(pathToRegexp(source[num], items, obj).source);
         num = num + 1;
         length = source.length;
       } while (num < length);
@@ -263,11 +263,11 @@ module.exports.compile = function compile(arg0, arg1) {
     if (!arg0) {
       obj = {};
     }
-    obj = arg1;
+    let obj2 = arg1;
     if (!arg1) {
-      obj = {};
+      obj2 = {};
     }
-    if (obj.pretty) {
+    if (obj2.pretty) {
       let _encodeURIComponent = encodeURIComponentPretty;
     } else {
       _encodeURIComponent = encodeURIComponent;
@@ -403,11 +403,11 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
     if (!arg0) {
       obj = {};
     }
-    obj = arg1;
+    let obj2 = arg1;
     if (!arg1) {
-      obj = {};
+      obj2 = {};
     }
-    if (obj.pretty) {
+    if (obj2.pretty) {
       let _encodeURIComponent = encodeURIComponentPretty;
     } else {
       _encodeURIComponent = encodeURIComponent;

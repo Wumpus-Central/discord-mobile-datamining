@@ -54,25 +54,25 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj = {
+    obj1 = {
       routes: [],
       previousState: "y",
-      openingRouteKeys: 0.5,
+      openingRouteKeys: 0.4,
       closingRouteKeys: null,
-      replacingRouteKeys: null,
-      descriptors: null,
+      replacingRouteKeys: "THREEDS_CARDINAL_SDK_ERROR",
+      descriptors: "A general error has occurred with Cardinal. See description for more information.",
     };
-    obj.openingRouteKeys = [];
-    obj.closingRouteKeys = [];
-    obj.replacingRouteKeys = [];
-    obj.descriptors = {};
-    tmp3Result.state = obj;
+    obj1.openingRouteKeys = [];
+    obj1.closingRouteKeys = [];
+    obj1.replacingRouteKeys = [];
+    obj1.descriptors = {};
+    tmp3Result.state = obj1;
     tmp3Result.getPreviousRoute = (route) => {
       route = route.route;
       c1 = undefined;
       c2 = undefined;
-      ({ closingRouteKeys: c1, replacingRouteKeys: c2 } = state.state);
-      const routes = state.state.routes;
+      ({ closingRouteKeys: c1, replacingRouteKeys: c2 } = closure_0.state);
+      const routes = closure_0.state.routes;
       const found = routes.filter((key) => {
         let tmp = key.key === route.key;
         if (!tmp) {
@@ -89,12 +89,12 @@ class StackView {
     };
     tmp3Result.renderHeader = (arg0) => {
       const merged = Object.assign(arg0);
-      return jsx(state(7111).HeaderContainer, {});
+      return jsx(closure_0(7111).HeaderContainer, {});
     };
     tmp3Result.handleOpenRoute = (route) => {
       route = route.route;
-      ({ state, navigation } = state.props);
-      ({ closingRouteKeys, replacingRouteKeys } = state.state);
+      ({ state, navigation } = closure_0.props);
+      ({ closingRouteKeys, replacingRouteKeys } = closure_0.state);
       if (closingRouteKeys.some((item) => item === route.key)) {
         if (replacingRouteKeys.every((item) => item !== route.key)) {
           const routeNames = state.routeNames;
@@ -121,11 +121,11 @@ class StackView {
           }
         }
       }
-      state.setState((routes) => {
+      closure_0.setState((routes) => {
         closure_0 = routes;
         routes = routes.routes;
-        routes = routes.routes;
-        const substr = routes.slice(
+        const routes1 = routes.routes;
+        const substr = routes1.slice(
           0,
           routes.findIndex((key) => key.key === closure_0.key),
         );
@@ -135,8 +135,8 @@ class StackView {
         });
         const set = new Set(found.map((key) => key.key));
         const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null, replacingRouteKeys: null };
-        const routes1 = routes.routes;
-        obj.routes = routes1.filter((key) => !set.has(key.key));
+        const routes2 = routes.routes;
+        obj.routes = routes2.filter((key) => !set.has(key.key));
         const openingRouteKeys = routes.openingRouteKeys;
         obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== closure_0.key);
         const closingRouteKeys = routes.closingRouteKeys;
@@ -148,18 +148,17 @@ class StackView {
     };
     tmp3Result.handleCloseRoute = (route) => {
       route = route.route;
-      let obj = state;
-      ({ state, navigation } = state.props);
+      ({ state, navigation } = closure_0.props);
       let routes = state.routes;
       if (routes.some((key) => key.key === route.key)) {
-        obj = {};
+        const obj2 = {};
         const StackActions = StackView(1484).StackActions;
         const merged = Object.assign(StackActions.pop());
-        obj.source = route.key;
-        obj.target = state.key;
-        navigation.dispatch(obj);
+        obj2.source = route.key;
+        obj2.target = state.key;
+        navigation.dispatch(obj2);
       } else {
-        obj.setState((routes) => {
+        closure_0.setState((routes) => {
           const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null };
           routes = routes.routes;
           obj.routes = routes.filter((key) => key.key !== route.key);
@@ -172,29 +171,25 @@ class StackView {
       }
     };
     tmp3Result.handleTransitionStart = (route, closing) => {
-      const navigation = state.props.navigation;
-      let obj = { type: "transitionStart", data: null, target: route.route.key };
-      obj = { closing };
-      obj.data = obj;
+      const navigation = closure_0.props.navigation;
+      const obj = { type: "transitionStart", data: { closing }, target: route.route.key };
       return navigation.emit(obj);
     };
     tmp3Result.handleTransitionEnd = (route, closing) => {
-      const navigation = state.props.navigation;
-      let obj = { type: "transitionEnd", data: null, target: route.route.key };
-      obj = { closing };
-      obj.data = obj;
+      const navigation = closure_0.props.navigation;
+      const obj = { type: "transitionEnd", data: { closing }, target: route.route.key };
       return navigation.emit(obj);
     };
     tmp3Result.handleGestureStart = (route) => {
-      const navigation = state.props.navigation;
+      const navigation = closure_0.props.navigation;
       navigation.emit({ type: "gestureStart", target: route.route.key });
     };
     tmp3Result.handleGestureEnd = (route) => {
-      const navigation = state.props.navigation;
+      const navigation = closure_0.props.navigation;
       navigation.emit({ type: "gestureEnd", target: route.route.key });
     };
     tmp3Result.handleGestureCancel = (route) => {
-      const navigation = state.props.navigation;
+      const navigation = closure_0.props.navigation;
       navigation.emit({ type: "gestureCancel", target: route.route.key });
     };
     return tmp3Result;
@@ -224,44 +219,45 @@ const entry = {
       acc[key.key] = describeResult;
       return acc;
     }, {});
-    let obj = { style: container.container, children: null };
-    obj = { children: self(StackView(state[12]).SafeAreaProviderCompat, obj) };
-    obj = {
-      children(arg0) {
-        closure_0 = arg0;
-        return self(closure_0(state[14]).ModalPresentationContext.Consumer, {
-          children(arg0) {
-            closure_0 = arg0;
-            return self(closure_0(state[12]).HeaderShownContext.Consumer, {
-              children(isParentHeaderShown) {
-                const merged = Object.assign(closure_2);
-                return jsx(StackView(7117).CardStack, {
-                  insets: preloadedDescriptors,
-                  isParentHeaderShown,
-                  isParentModal: preloadedDescriptors,
-                  getPreviousRoute: self.getPreviousRoute,
-                  routes,
-                  openingRouteKeys,
-                  closingRouteKeys,
-                  onOpenRoute: self.handleOpenRoute,
-                  onCloseRoute: self.handleCloseRoute,
-                  onTransitionStart: self.handleTransitionStart,
-                  onTransitionEnd: self.handleTransitionEnd,
-                  renderHeader: self.renderHeader,
-                  state,
-                  descriptors,
-                  onGestureStart: self.handleGestureStart,
-                  onGestureEnd: self.handleGestureEnd,
-                  onGestureCancel: self.handleGestureCancel,
-                  preloadedDescriptors,
-                });
-              },
-            });
-          },
-        });
-      },
+    const obj = { style: container.container, children: null };
+    const obj2 = {
+      children: self(StackView(state[13]).SafeAreaInsetsContext.Consumer, {
+        children(arg0) {
+          closure_0 = arg0;
+          return self(closure_0(state[14]).ModalPresentationContext.Consumer, {
+            children(arg0) {
+              closure_0 = arg0;
+              return self(closure_0(state[12]).HeaderShownContext.Consumer, {
+                children(isParentHeaderShown) {
+                  const merged = Object.assign(closure_2);
+                  return jsx(StackView(7117).CardStack, {
+                    insets: preloadedDescriptors,
+                    isParentHeaderShown,
+                    isParentModal: preloadedDescriptors,
+                    getPreviousRoute: self.getPreviousRoute,
+                    routes,
+                    openingRouteKeys,
+                    closingRouteKeys,
+                    onOpenRoute: self.handleOpenRoute,
+                    onCloseRoute: self.handleCloseRoute,
+                    onTransitionStart: self.handleTransitionStart,
+                    onTransitionEnd: self.handleTransitionEnd,
+                    renderHeader: self.renderHeader,
+                    state,
+                    descriptors,
+                    onGestureStart: self.handleGestureStart,
+                    onGestureEnd: self.handleGestureEnd,
+                    onGestureCancel: self.handleGestureCancel,
+                    preloadedDescriptors,
+                  });
+                },
+              });
+            },
+          });
+        },
+      }),
     };
-    obj.children = self(StackView(state[13]).SafeAreaInsetsContext.Consumer, obj);
+    obj.children = self(StackView(state[12]).SafeAreaProviderCompat, obj2);
     return self(GestureHandlerRootView, obj);
   },
 };
@@ -333,7 +329,7 @@ const entry1 = {
             }
             const items4 = [];
             HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(mapped2, 0));
-            let obj = {
+            const obj3 = {
               routes: mapped2,
               previousState: state.state,
               descriptors: items4.reduce((acc, key) => {
@@ -345,7 +341,7 @@ const entry1 = {
                 return acc;
               }, {}),
             };
-            return obj;
+            return obj3;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -381,11 +377,11 @@ const entry1 = {
         if (tmp6.key !== tmp7.key) {
           if (arr3.some((key) => key.key === closure_7.key)) {
             if (!substr1.some((key) => key.key === closure_6.key)) {
-              obj = arr3(7117);
               let animation;
               if ((state.descriptors[tmp6.key] || previousState.descriptors[tmp6.key]) != null) {
                 animation = tmp18.options.animation;
               }
+              const obj = arr3(7117);
               let tmp9 = found3;
               let tmp10 = found2;
               let found4 = openingRouteKeys;
@@ -404,7 +400,7 @@ const entry1 = {
                 tmp10 = items5;
                 arr11 = items6;
               }
-              tmp23 = obj.getAnimationEnabled(animation) && !found2.includes(tmp6.key);
+              tmp23 = arr3(7117).getAnimationEnabled(animation) && !found2.includes(tmp6.key);
             }
           }
           let animation1;
@@ -488,7 +484,7 @@ const entry1 = {
         if (arr11.length) {
           const items12 = [];
           HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(arr11, 0));
-          obj = {
+          const obj4 = {
             routes: arr11,
             previousState: state.state,
             openingRouteKeys: found4,
@@ -503,7 +499,7 @@ const entry1 = {
               return acc;
             }, {}),
           };
-          return obj;
+          return obj4;
         } else {
           const _Error = Error;
           const error = new Error("There should always be at least one route in the navigation state.");

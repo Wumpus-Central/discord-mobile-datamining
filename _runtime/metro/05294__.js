@@ -152,12 +152,12 @@ export const getBase64Image = function getBase64Image(image) {
       const _Buffer4 = Buffer;
       if (undefined !== Buffer.from) {
         const _Buffer2 = Buffer;
-        let str = Buffer.from(image).toString("base64");
+        let str1 = Buffer.from(image).toString("base64");
         const str3 = Buffer.from(image);
       } else {
         const _Buffer = Buffer;
-        str = new Buffer(image);
-        str = str.toString("base64");
+        const str = new Buffer(image);
+        str1 = str.toString("base64");
       }
     }
   }
@@ -234,19 +234,19 @@ export const decompress = function decompress(dataView, compressionMethod, arg2)
       if ("dataview" === str) {
         const _Response2 = Response;
         const response = new Response(pipeThroughResult);
-        let arrayBufferResult = response.arrayBuffer();
-        let nextPromise = arrayBufferResult.then((result) => {
+        let nextPromise = response.arrayBuffer().then((result) => {
           const dataView = new DataView(result);
           return dataView;
         });
+        const arrayBufferResult = response.arrayBuffer();
       } else {
         const _Response = Response;
         const response1 = new Response(pipeThroughResult);
-        arrayBufferResult = response1.arrayBuffer();
-        nextPromise = arrayBufferResult.then((result) => {
+        nextPromise = response1.arrayBuffer().then((result) => {
           const decoder = new TextDecoder(closure_0);
           return decoder.decode(result);
         });
+        const arrayBufferResult2 = response1.arrayBuffer();
       }
       return nextPromise;
     }

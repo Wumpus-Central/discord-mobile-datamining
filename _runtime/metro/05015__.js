@@ -12,7 +12,6 @@ let context = noop.createContext({
 
 export const EdgeInsetApplicationContext = context;
 export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  let obj = noop;
   context = noop.useContext(context);
   const topAlreadyApplied = context.topAlreadyApplied;
   ({ leftDisabled, rightDisabled, bottomDisabled } = context);
@@ -47,13 +46,13 @@ export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, fl
     bottomDisabled = flag4;
   }
   const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  obj = {
+  return {
     appliesTopInset: tmp4,
     consumeLeftInset: !leftDisabled,
     consumeRightInset: !rightDisabled,
     consumeBottomInset: !bottomDisabled,
     useLegacyBehavior: flag,
-    nextContextValue: obj.useMemo(() => {
+    nextContextValue: noop.useMemo(() => {
       let tmp = topAlreadyApplied;
       if (!topAlreadyApplied) {
         tmp = closure_1;
@@ -61,5 +60,4 @@ export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, fl
       return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
     }, items),
   };
-  return obj;
 };

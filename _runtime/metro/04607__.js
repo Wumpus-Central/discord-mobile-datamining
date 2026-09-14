@@ -33,10 +33,10 @@ export default {
     }
     if (global) {
       try {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedbackDefault.trigger(selection, obj);
+        RNHapticFeedbackDefault.trigger(selection, obj3);
       } catch (tmp12) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
@@ -67,10 +67,10 @@ export default {
     }
     if (global) {
       try {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedbackDefault.triggerPattern(arg0, obj);
+        RNHapticFeedbackDefault.triggerPattern(arg0, obj3);
       } catch (tmp11) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
@@ -105,12 +105,12 @@ export default {
       const _Math = Math;
       const _Math2 = Math;
       try {
-        obj = { time: 0, intensity: tmp7, sharpness: num2 };
-        const items = [obj];
-        obj = {};
+        const obj3 = { time: 0, intensity: tmp7, sharpness: num2 };
+        const items = [obj3];
+        const obj4 = {};
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
-        RNHapticFeedbackDefault.triggerPattern(items, obj);
+        RNHapticFeedbackDefault.triggerPattern(items, obj4);
       } catch (tmp17) {
         const _console = tmp.console;
         _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);
@@ -126,8 +126,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -140,33 +140,32 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c2 = 1;
-              let obj3 = RNHapticFeedbackDefault;
               c1 = 2;
               c0 = 1;
-              const obj1 = { value: obj3.getSystemHapticStatus(), done: false };
-              return obj1;
+              const obj5 = { value: RNHapticFeedbackDefault.getSystemHapticStatus(), done: false };
+              return obj5;
             }
           } else if (1 === tmp6) {
             c2 = 0;
             c0 = 3;
-            const obj2 = { value: { vibrationEnabled: false, ringerMode: null }, done: true };
-            return obj2;
+            const obj6 = { value: { vibrationEnabled: false, ringerMode: null }, done: true };
+            return obj6;
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 0;
             c0 = 3;
-            obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             c2 = 0;
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp9) {

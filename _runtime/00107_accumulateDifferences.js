@@ -28,7 +28,7 @@ function accumulateDifferences(items, arr2, obj, arg3) {
         if (null != tmp6) {
           let arr = arg1.push(key10009);
           let tmp19 = accumulateDifferences(arg0, arg1, tmp5, tmp6);
-          arr = arg1.pop();
+          arr2 = arg1.pop();
           continue;
         }
       }
@@ -40,13 +40,13 @@ function accumulateDifferences(items, arr2, obj, arg3) {
       if (result) {
         continue;
       } else {
-        obj = { path: null, type: "unequal", nativeValue: null, staticValue: null };
+        let obj3 = { path: null, type: "unequal", nativeValue: null, staticValue: null };
         items = [];
         items[HermesBuiltin.arraySpread(arg1, 0)] = key10009;
-        obj.path = items;
-        obj.nativeValue = tmp22;
-        obj.staticValue = tmp4;
-        let arr1 = arg0.push(obj);
+        obj3.path = items;
+        obj3.nativeValue = tmp22;
+        obj3.staticValue = tmp4;
+        let arr6 = arg0.push(obj3);
         continue;
       }
       continue;
@@ -56,7 +56,7 @@ function accumulateDifferences(items, arr2, obj, arg3) {
       items1[HermesBuiltin.arraySpread(arg1, 0)] = key10009;
       obj.path = items1;
       obj.nativeValue = tmp22;
-      arr2 = arg0.push(obj);
+      let arr7 = arg0.push(obj);
       continue;
     }
     continue;
@@ -65,25 +65,28 @@ function accumulateDifferences(items, arr2, obj, arg3) {
 
 export const validate = function validate(arg0, bubblingEventTypes, bubblingEventTypes2) {
   const items = [];
-  let obj = {
-    bubblingEventTypes: bubblingEventTypes.bubblingEventTypes,
-    directEventTypes: bubblingEventTypes.directEventTypes,
-    uiViewClassName: bubblingEventTypes.uiViewClassName,
-    validAttributes: bubblingEventTypes.validAttributes,
-  };
-  obj = {
-    bubblingEventTypes: bubblingEventTypes2.bubblingEventTypes,
-    directEventTypes: bubblingEventTypes2.directEventTypes,
-    uiViewClassName: bubblingEventTypes2.uiViewClassName,
-    validAttributes: bubblingEventTypes2.validAttributes,
-  };
-  accumulateDifferences(items, [], obj, obj);
+  accumulateDifferences(
+    items,
+    [],
+    {
+      bubblingEventTypes: bubblingEventTypes.bubblingEventTypes,
+      directEventTypes: bubblingEventTypes.directEventTypes,
+      uiViewClassName: bubblingEventTypes.uiViewClassName,
+      validAttributes: bubblingEventTypes.validAttributes,
+    },
+    {
+      bubblingEventTypes: bubblingEventTypes2.bubblingEventTypes,
+      directEventTypes: bubblingEventTypes2.directEventTypes,
+      uiViewClassName: bubblingEventTypes2.uiViewClassName,
+      validAttributes: bubblingEventTypes2.validAttributes,
+    },
+  );
   if (0 === items.length) {
-    obj = { type: "valid" };
+    let obj3 = { type: "valid" };
   } else {
-    obj = { type: "invalid", differences: items };
+    obj3 = { type: "invalid", differences: items };
   }
-  return obj;
+  return obj3;
 };
 export const stringifyValidationResult = function stringifyValidationResult(arg0, validateResult) {
   const items = ["StaticViewConfigValidator: Invalid static view config for '" + arg0 + "'.", ""];

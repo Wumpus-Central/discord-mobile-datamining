@@ -211,14 +211,14 @@ let items = [
       }
       self._updateValue(_startingValue, !self.__isNative);
       if (self.__isNative) {
-        let str = self.__getNativeTag();
-        str = str.toString();
+        const str1 = self.__getNativeTag().toString();
         const API = AnimatedValue(357).API;
-        const result = API.setWaitingForIdentifier(str);
+        const result = API.setWaitingForIdentifier(str1);
         const API2 = AnimatedValue(357).API;
         API2.setAnimatedNodeValue(self.__getNativeTag(), _startingValue);
         const API3 = AnimatedValue(357).API;
-        const result1 = API3.unsetWaitingForIdentifier(str);
+        const result1 = API3.unsetWaitingForIdentifier(str1);
+        const str = self.__getNativeTag();
       }
     },
   },
@@ -252,14 +252,14 @@ let items = [
       this._offset = this._offset + this._value;
       this._value = 0;
       if (this.__isNative) {
-        let str = self.__getNativeTag();
-        str = str.toString();
+        const str1 = self.__getNativeTag().toString();
         const API = AnimatedValue(357).API;
-        const result = API.setWaitingForIdentifier(str);
+        const result = API.setWaitingForIdentifier(str1);
         const API2 = AnimatedValue(357).API;
         const result1 = API2.extractAnimatedNodeOffset(self.__getNativeTag());
         const API3 = AnimatedValue(357).API;
-        const result2 = API3.unsetWaitingForIdentifier(str);
+        const result2 = API3.unsetWaitingForIdentifier(str1);
+        const str = self.__getNativeTag();
       }
     },
   },

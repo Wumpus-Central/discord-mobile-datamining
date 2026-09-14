@@ -57,7 +57,7 @@ class FadingTransition {
       const result = num / 2;
       closure_3 = result;
       const fn = function t(originX) {
-        let obj = {
+        const obj = {
           initialValues: {
             opacity: 1,
             originX: originX.currentOriginX,
@@ -70,14 +70,14 @@ class FadingTransition {
         };
         const size = { opacity: null, originX: null, originY: null, width: null, height: null };
         const obj3 = delayFunction(1708);
-        obj = { duration: result };
+        const obj2 = { duration: result };
         const obj4 = delayFunction(1708);
-        const withTimingResult = delayFunction(1708).withTiming(0, obj);
-        obj = { duration: result };
+        const withTimingResult = delayFunction(1708).withTiming(0, { duration: result });
         size.opacity = delayFunction(
           delay,
-          obj3.withSequence(withTimingResult, delayFunction(1708).withTiming(1, obj)),
+          obj3.withSequence(withTimingResult, delayFunction(1708).withTiming(1, { duration: result })),
         );
+        const obj5 = { duration: result };
         const obj6 = delayFunction(1708);
         const sum = delay + result;
         const obj8 = delayFunction(1708);

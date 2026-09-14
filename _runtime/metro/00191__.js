@@ -19,7 +19,6 @@ export const parse = function parse(str) {
     if (match) {
       let tmp3 = match[2];
       if (tmp3) {
-        arr = match[2];
         tmp3 = 0 === arr.indexOf("native");
       }
       let tmp4 = match[2];
@@ -39,7 +38,7 @@ export const parse = function parse(str) {
       if (!tmp3) {
         tmp7 = match[2];
       }
-      let obj = { file: tmp7, methodName: match[1] || closure_1_0, arguments: null, lineNumber: null, column: null };
+      const obj = { file: tmp7, methodName: match[1] || closure_1_0, arguments: null, lineNumber: null, column: null };
       if (tmp3) {
         const items = [match[2]];
         let items1 = items;
@@ -63,7 +62,7 @@ export const parse = function parse(str) {
       const match2 = regex3.exec(item);
       let tmp12 = null;
       if (match2) {
-        obj = {
+        const obj2 = {
           file: match2[2],
           methodName: match2[1] || closure_1_0,
           arguments: [],
@@ -74,8 +73,8 @@ export const parse = function parse(str) {
         if (match2[4]) {
           tmp13 = +match2[4];
         }
-        obj.column = tmp13;
-        tmp12 = obj;
+        obj2.column = tmp13;
+        tmp12 = obj2;
       }
       tmp2 = tmp12;
     }
@@ -96,7 +95,7 @@ export const parse = function parse(str) {
           match3[4] = match4[2];
           match3[5] = null;
         }
-        obj = {
+        const obj3 = {
           file: match3[3],
           methodName: match3[1] || closure_1_0,
           arguments: null,
@@ -108,18 +107,18 @@ export const parse = function parse(str) {
         } else {
           parts = [];
         }
-        obj.arguments = parts;
+        obj3.arguments = parts;
         let tmp20 = null;
         if (match3[4]) {
           tmp20 = +match3[4];
         }
-        obj.lineNumber = tmp20;
+        obj3.lineNumber = tmp20;
         let tmp21 = null;
         if (match3[5]) {
           tmp21 = +match3[5];
         }
-        obj.column = tmp21;
-        tmp16 = obj;
+        obj3.column = tmp21;
+        tmp16 = obj3;
       }
       tmp2 = tmp16;
     }
@@ -127,7 +126,7 @@ export const parse = function parse(str) {
       const match5 = regex7.exec(item);
       let tmp24 = null;
       if (match5) {
-        const obj1 = {
+        const obj4 = {
           file: match5[2],
           methodName: match5[1] || closure_1_0,
           arguments: [],
@@ -138,8 +137,8 @@ export const parse = function parse(str) {
         if (match5[4]) {
           tmp25 = +match5[4];
         }
-        obj1.column = tmp25;
-        tmp24 = obj1;
+        obj4.column = tmp25;
+        tmp24 = obj4;
       }
       tmp2 = tmp24;
     }
@@ -147,7 +146,7 @@ export const parse = function parse(str) {
       const match6 = regex6.exec(item);
       let tmp28 = null;
       if (match6) {
-        const obj2 = {
+        const obj5 = {
           file: match6[3],
           methodName: match6[1] || closure_1_0,
           arguments: [],
@@ -158,13 +157,13 @@ export const parse = function parse(str) {
         if (match6[5]) {
           tmp29 = +match6[5];
         }
-        obj2.column = tmp29;
-        tmp28 = obj2;
+        obj5.column = tmp29;
+        tmp28 = obj5;
       }
       tmp2 = tmp28;
     }
     if (tmp2) {
-      arr = arr.push(tmp2);
+      arr.push(tmp2);
     }
     return arr;
   }, []);

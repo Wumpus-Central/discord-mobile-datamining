@@ -1,6 +1,7 @@
 // _runtime/04104_milliseconds.js
-import requiredArgs from "03726_requiredArgs.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

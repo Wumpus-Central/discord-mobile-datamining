@@ -1,17 +1,19 @@
 // _runtime/metro/03993__.js
-import _typeof from "03725__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import _typeof_mod from "03725__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

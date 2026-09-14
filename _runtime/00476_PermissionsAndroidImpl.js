@@ -1,8 +1,9 @@
 // _runtime/00476_PermissionsAndroidImpl.js
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+let _classCallCheck = _classCallCheck_mod;
 const React3 = Object.freeze({ GRANTED: "granted", DENIED: "denied", NEVER_ASK_AGAIN: "never_ask_again" });
 const React4 = Object.freeze({
   READ_CALENDAR: "android.permission.READ_CALENDAR",
@@ -122,8 +123,8 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -136,8 +137,8 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -147,12 +148,12 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             if (dependencyMap) {
               c4 = 1;
               c5 = 1;
-              let obj1 = { value: closure_0(477).shouldShowRequestPermissionRationale(closure_0), done: false };
-              return obj1;
+              const obj6 = { value: closure_0(477).shouldShowRequestPermissionRationale(closure_0), done: false };
+              return obj6;
             } else {
-              obj1 = closure_0(477);
-              const permission = obj1.requestPermission(closure_130_0);
+              const permission = closure_0(477).requestPermission(closure_130_0);
               c5 = 3;
+              const obj2 = closure_0(477);
             }
             const tmp31 = closure_0(38);
           }
@@ -179,7 +180,7 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
           }
         }
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp22) {
         c5 = tmp;

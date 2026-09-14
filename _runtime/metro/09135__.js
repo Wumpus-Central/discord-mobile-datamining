@@ -1,4 +1,6 @@
 // _runtime/metro/09135__.js
+const require = globalThis.__r;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -83,13 +85,13 @@ if (self2) {
     };
     Object.defineProperty(exports, "$brand", obj);
     const _Object5 = Object;
-    obj = {
+    const obj2 = {
       enumerable: true,
       get() {
         return require("09064__.js").config;
       },
     };
-    Object.defineProperty(exports, "config", obj);
+    Object.defineProperty(exports, "config", obj2);
     exports.ZodFirstPartyTypeKind = {};
   } else {
     const _Object2 = Object;

@@ -1,6 +1,6 @@
 // _runtime/05011_Suspender.js
 import jsxProd from "react/00021_jsxProd.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 function Suspender(children) {
   const freeze = children.freeze;
@@ -28,7 +28,9 @@ function Suspender(children) {
   }
   return <framebus>{children.children}</framebus>;
 }
+let noop = noop_mod;
 ({ Suspense: closure_0, Fragment: closure_1, use: c2 } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 
 export const Freeze = function Freeze(placeholder) {

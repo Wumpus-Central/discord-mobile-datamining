@@ -53,7 +53,7 @@ let obj = {
       numberActiveTouches: 0,
       _accountsForMovesUpTo: 0,
     };
-    obj = {
+    return {
       panHandlers: {
         onStartShouldSetResponder(arg0) {
           let result = null != closure_0.onStartShouldSetPanResponder;
@@ -180,7 +180,6 @@ let obj = {
         return null;
       },
     };
-    return obj;
   },
 };
 

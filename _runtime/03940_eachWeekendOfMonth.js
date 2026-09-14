@@ -1,9 +1,10 @@
 // _runtime/03940_eachWeekendOfMonth.js
-import eachWeekendOfInterval from "03939_eachWeekendOfInterval.js";
-import startOfMonth from "03941_startOfMonth.js";
-import endOfMonth from "03926_endOfMonth.js";
-import requiredArgs from "03726_requiredArgs.js";
+import eachWeekendOfInterval_mod from "03939_eachWeekendOfInterval.js";
+import startOfMonth_mod from "03941_startOfMonth.js";
+import endOfMonth_mod from "03926_endOfMonth.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let eachWeekendOfInterval = eachWeekendOfInterval_mod;
 if (!eachWeekendOfInterval) {
   let obj = { default: eachWeekendOfInterval };
   let tmp3 = obj;
@@ -11,23 +12,26 @@ if (!eachWeekendOfInterval) {
   tmp3 = eachWeekendOfInterval;
 }
 eachWeekendOfInterval = tmp3;
+let startOfMonth = startOfMonth_mod;
 if (!startOfMonth) {
-  obj = { default: startOfMonth };
-  let tmp5 = obj;
+  const obj2 = { default: startOfMonth };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfMonth;
 }
 startOfMonth = tmp5;
+let endOfMonth = endOfMonth_mod;
 if (!endOfMonth) {
-  obj = { default: endOfMonth };
-  let tmp7 = obj;
+  const obj3 = { default: endOfMonth };
+  let tmp7 = obj3;
 } else {
   tmp7 = endOfMonth;
 }
 endOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

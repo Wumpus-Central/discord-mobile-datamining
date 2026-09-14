@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "Zeichen", verb: "zu haben" },
           file: { unit: "Bytes", verb: "zu haben" },
           array: { unit: "Elemente", verb: "zu haben" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ung\u00FCltige Eingabe: erwartet instanceof " + code.expected + ", erhalten " + tmp48;
@@ -127,7 +126,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -136,13 +135,13 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "Wert";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str37 = tmp27.unit;
                 if (str37 == null) {
                   str37 = "Elemente";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Zu gro\u00DF: erwartet, dass " + str30 + " " + str29 + str + " " + str37 + " hat";
+                let combined2 = "Zu gro\u00DF: erwartet, dass " + str30 + " " + str29 + str1 + " " + str37 + " hat";
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -157,18 +156,18 @@ if (self2) {
               if (code.inclusive) {
                 str20 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str53 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " " + tmp15.unit + " hat";
+                let combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str53 + " " + tmp15.unit + " hat";
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " ist";
+                combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str53 + " ist";
               }
               return combined3;
             case "invalid_format":
@@ -210,7 +209,6 @@ if (self2) {
               return "Ung\u00FCltige Eingabe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Ung\u00FCltiger Wert in ";
               return "Ung\u00FCltiger Wert in " + code.origin;
             default:
               return "Ung\u00FCltige Eingabe";

@@ -129,13 +129,13 @@ let items = [
         let num = 0;
         let flag = true;
         let tmp3 = nextResult.offset || 0;
-        let skippedBytes;
+        let skippedBytes1;
         let tmp4 = tmp3;
         if (null != tmp2) {
-          skippedBytes = tmp2.skippedBytes;
+          skippedBytes1 = tmp2.skippedBytes;
         }
         let length = tmp2.sequence.length;
-        if (skippedBytes) {
+        if (skippedBytes1) {
           let sum = length + tmp2.skippedBytes.length;
         } else {
           sum = length;
@@ -144,7 +144,7 @@ let items = [
         if (0 < sum) {
           do {
             if (tmp2.skippedBytes) {
-              skippedBytes = tmp2.skippedBytes;
+              let skippedBytes = tmp2.skippedBytes;
               if (skippedBytes.includes(num2)) {
                 num = num + 1;
                 let sum1 = num2 + 1;

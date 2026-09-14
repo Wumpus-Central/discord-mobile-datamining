@@ -4,10 +4,10 @@ import registerAsset from "01120__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
+  width: 8,
+  height: 12,
   scales: [2, 3],
-  hash: "b452f17f7046013be582dffe125561c0",
-  name: "StatusIdle",
+  hash: "62f99171df821200253910f3b9f2a1f7",
+  name: "StatusMobileOnline",
   type: "png",
 });

@@ -1,6 +1,7 @@
 // _runtime/03974_cloneObject.js
-import assign from "03975_assign.js";
+import assign_mod from "03975_assign.js";
 
+let assign = assign_mod;
 if (!assign) {
   const obj = { default: assign };
   let tmp3 = obj;

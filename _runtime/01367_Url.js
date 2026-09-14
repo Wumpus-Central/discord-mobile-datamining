@@ -1,5 +1,5 @@
 // _runtime/01367_Url.js
-import _mod1275 from "metro/01275__.js";
+import _mod1273 from "metro/01273__.js";
 import decode from "01368_decode.js";
 
 require = arg1;
@@ -217,8 +217,8 @@ class Url {
                 tmp44 = re10;
                 match2 = str19.match(re10);
                 if (match2) {
-                  arr = substr3.push(match2[1]);
-                  arr1 = substr4.unshift(match2[2]);
+                  arr1 = substr3.push(match2[1]);
+                  arr11 = substr4.unshift(match2[2]);
                 }
                 text1 = substr2;
                 if (substr4.length) {
@@ -393,10 +393,10 @@ class Url {
     } else {
       flag = false;
       if (self.hostname) {
-        hostname = self.hostname;
+        hostname1 = self.hostname;
         str7 = ":";
         num = -1;
-        if (-1 === hostname.indexOf(":")) {
+        if (-1 === hostname1.indexOf(":")) {
           hostname = self.hostname;
         } else {
           str8 = "[";
@@ -516,7 +516,7 @@ class Url {
       tmp2Result = tmp2(tmp5);
       return tmp2Result.format();
     }
-    obj = Object.create(Url.prototype);
+    obj1 = Object.create(Url.prototype);
     url = {
       protocol: null,
       slashes: null,
@@ -539,7 +539,7 @@ class Url {
     url = arg0;
     if (typeof arg0 === "string") {
       tmp49 = Url;
-      obj = Object.create(Url.prototype);
+      obj1 = Object.create(Url.prototype);
       obj = {};
       tmp51 = null;
       obj.protocol = null;
@@ -559,7 +559,7 @@ class Url {
       parsed = obj.parse(arg0, false, true);
       url = obj;
     }
-    obj1 = Object.create(Url.prototype);
+    obj2 = Object.create(Url.prototype);
     url2 = {
       protocol: null,
       slashes: null,
@@ -624,13 +624,13 @@ class Url {
                 str36 = "/";
                 parts = str35.split("/");
                 if (parts.length) {
-                  arr = parts.shift();
-                  url.host = arr;
-                  if (!arr) {
+                  arr1 = parts.shift();
+                  url.host = arr1;
+                  if (!arr1) {
                     while (parts.length) {
-                      arr1 = parts.shift();
-                      url.host = arr1;
-                      if (arr1) {
+                      arr13 = parts.shift();
+                      url.host = arr13;
+                      if (arr13) {
                         break;
                       }
                     }
@@ -643,11 +643,11 @@ class Url {
                   url.hostname = "";
                 }
                 if ("" !== parts[0]) {
-                  arr2 = parts.unshift("");
+                  arr14 = parts.unshift("");
                 }
                 num7 = 2;
                 if (parts.length < 2) {
-                  arr3 = parts.unshift("");
+                  arr15 = parts.unshift("");
                 }
                 url2.pathname = parts.join("/");
               }
@@ -707,23 +707,23 @@ class Url {
         tmp8 = url2.host && url.pathname;
         tmp7 = tmp8;
       }
-      pathname = url2.pathname;
-      if (pathname) {
+      pathname1 = url2.pathname;
+      if (pathname1) {
         str7 = url2.pathname;
         str8 = "/";
-        pathname = str7.split("/");
-      }
-      if (!pathname) {
-        pathname = [];
-      }
-      pathname1 = url.pathname;
-      if (pathname1) {
-        str9 = url.pathname;
-        str10 = "/";
-        pathname1 = str9.split("/");
+        pathname1 = str7.split("/");
       }
       if (!pathname1) {
         pathname1 = [];
+      }
+      pathname3 = url.pathname;
+      if (pathname3) {
+        str9 = url.pathname;
+        str10 = "/";
+        pathname3 = str9.split("/");
+      }
+      if (!pathname3) {
+        pathname3 = [];
       }
       protocol = url2.protocol;
       if (protocol) {
@@ -735,17 +735,17 @@ class Url {
         url2.hostname = "";
         url2.port = null;
         if (url2.host) {
-          if ("" === pathname[0]) {
-            pathname[0] = url2.host;
+          if ("" === pathname1[0]) {
+            pathname1[0] = url2.host;
           } else {
-            arr4 = pathname.unshift(url2.host);
+            arr16 = pathname1.unshift(url2.host);
           }
         }
         url2.host = "";
         if (!url.protocol) {
           tmp13 = tmp7;
           if (tmp7) {
-            tmp14 = "" === pathname1[0] || "" === pathname[0];
+            tmp14 = "" === pathname3[0] || "" === pathname1[0];
             tmp13 = tmp14;
           }
           tmp10 = tmp13;
@@ -754,10 +754,10 @@ class Url {
           url.port = null;
           if (!url.host) {
             url.host = null;
-          } else if ("" !== pathname1[0]) {
-            arr5 = pathname1.unshift(url.host);
+          } else if ("" !== pathname3[0]) {
+            arr17 = pathname3.unshift(url.host);
           }
-          pathname1[0] = url.host;
+          pathname3[0] = url.host;
         }
       }
       if (host) {
@@ -772,30 +772,30 @@ class Url {
             }
             url2.hostname = hostname;
             ({ search: url2.search, query: url2.query } = url);
-            tmp17 = pathname1;
+            tmp17 = pathname3;
           }
           hostname = url.hostname;
         }
         host3 = url.host;
       } else {
-        if (pathname1.length) {
-          items = pathname;
-          if (!pathname) {
+        if (pathname3.length) {
+          items = pathname1;
+          if (!pathname1) {
             items = [];
           }
-          arr6 = items.pop();
-          combined = items.concat(pathname1);
+          arr18 = items.pop();
+          combined = items.concat(pathname3);
           ({ search: url2.search, query: url2.query } = url);
         } else {
-          combined = pathname;
+          combined = pathname1;
           if (null != url.search) {
             if (protocol) {
-              url2.host = pathname.shift();
+              url2.host = pathname1.shift();
               ({ host: url2.hostname, host: host2 } = url2);
               if (host2) {
-                host = url2.host;
+                host1 = url2.host;
                 str11 = "@";
-                host2 = host.indexOf("@") > 0;
+                host2 = host1.indexOf("@") > 0;
               }
               parts1 = host2;
               if (parts1) {
@@ -873,7 +873,7 @@ class Url {
               diff = num5 - 1;
               if (num5) {
                 do {
-                  arr7 = combined.unshift("..");
+                  arr19 = combined.unshift("..");
                   tmp30 = diff;
                   diff = diff - 1;
                 } while (tmp30);
@@ -894,7 +894,7 @@ class Url {
             tmp31 = first1;
           }
           if (!tmp31) {
-            arr8 = combined.unshift("");
+            arr20 = combined.unshift("");
           }
           if (tmp19) {
             str23 = "/";
@@ -902,7 +902,7 @@ class Url {
             tmp19 = "/" !== str24.substr(-1);
           }
           if (tmp19) {
-            arr9 = combined.push("");
+            arr21 = combined.push("");
           }
           tmp35 = "" === combined[0];
           if (!tmp35) {
@@ -926,9 +926,9 @@ class Url {
             url2.hostname = str27;
             ({ hostname: url2.host, host: host4 } = url2);
             if (host4) {
-              host1 = url2.host;
+              host5 = url2.host;
               str29 = "@";
-              host4 = host1.indexOf("@") > 0;
+              host4 = host5.indexOf("@") > 0;
             }
             parts2 = host4;
             if (parts2) {
@@ -950,7 +950,7 @@ class Url {
             tmp10 = !tmp35;
           }
           if (tmp10) {
-            arr10 = combined.unshift("");
+            arr22 = combined.unshift("");
           }
           if (combined.length > 0) {
             str32 = "/";
@@ -1115,7 +1115,7 @@ export const format = function urlFormat(str) {
       obj = tmp5;
     }
     Object.create(Url.prototype);
-    obj = {
+    const obj4 = {
       protocol: null,
       slashes: null,
       auth: null,
@@ -1129,8 +1129,8 @@ export const format = function urlFormat(str) {
       path: null,
       href: null,
     };
-    const parsed = obj.parse(str, undefined, undefined);
-    tmp5 = obj;
+    const parsed = obj4.parse(str, undefined, undefined);
+    tmp5 = obj4;
   }
   if (obj instanceof Url) {
     let formatResult = obj.format();

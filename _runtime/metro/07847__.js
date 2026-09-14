@@ -27,30 +27,30 @@ class RBTree {
     self = this;
     if (null === this._root) {
       tmp25 = Node;
-      obj = Object.create(Node.prototype);
-      obj1 = {};
-      obj1.data = global;
-      obj1.left = null;
-      obj1.right = null;
+      obj1 = Object.create(Node.prototype);
+      obj10 = {};
+      obj10.data = global;
+      obj10.left = null;
+      obj10.right = null;
       flag3 = true;
-      obj1.red = true;
-      self._root = obj1;
+      obj10.red = true;
+      self._root = obj10;
       self.size = self.size + 1;
       flag = true;
     } else {
       tmp27 = Node;
-      obj2 = Object.create(Node.prototype);
-      obj3 = {};
-      obj3.data = undefined;
-      obj3.left = null;
-      obj3.right = null;
+      obj11 = Object.create(Node.prototype);
+      obj12 = {};
+      obj12.data = undefined;
+      obj12.left = null;
+      obj12.right = null;
       flag4 = true;
-      obj3.red = true;
+      obj12.red = true;
       ({ _root, _root: obj6.right } = self);
       num3 = 0;
       flag5 = false;
       tmp23 = null;
-      tmp22 = obj3;
+      tmp22 = obj12;
       tmp24 = null;
       num = 0;
       num2 = 0;
@@ -65,15 +65,15 @@ class RBTree {
         tmp2 = tmp23;
         if (null === _root) {
           tmp9 = Node;
-          obj4 = Object.create(Node.prototype);
-          obj5 = {};
-          obj5.data = global;
-          obj5.left = null;
-          obj5.right = null;
-          obj5.red = true;
-          set_childResult = tmp23.set_child(num2, obj5);
+          obj13 = Object.create(Node.prototype);
+          obj14 = {};
+          obj14.data = global;
+          obj14.left = null;
+          obj14.right = null;
+          obj14.red = true;
+          set_childResult = tmp23.set_child(num2, obj14);
           self.size = self.size + 1;
-          obj2 = obj5;
+          obj2 = obj14;
           flag = true;
         } else {
           left = _root.left;
@@ -145,7 +145,7 @@ class RBTree {
           continue;
         }
       }
-      self._root = obj3.right;
+      self._root = obj12.right;
     }
     self._root.red = false;
     return flag;
@@ -157,25 +157,25 @@ class RBTree {
       return false;
     } else {
       tmp43 = Node;
-      obj = Object.create(Node.prototype);
-      obj1 = {};
-      obj1.data = undefined;
-      obj1.left = null;
-      obj1.right = null;
+      obj1 = Object.create(Node.prototype);
+      obj11 = {};
+      obj11.data = undefined;
+      obj11.left = null;
+      obj11.right = null;
       flag2 = true;
-      obj1.red = true;
-      obj1.right = self._root;
+      obj11.red = true;
+      obj11.right = self._root;
       num2 = 1;
       flag3 = false;
       num3 = 0;
       num = 1;
       tmp38 = null;
       tmp37 = null;
-      obj8 = obj1;
+      obj8 = obj11;
       tmp39 = null;
-      obj9 = obj1;
+      obj9 = obj11;
       tmp40 = null;
-      if (null !== obj1.get_child(1)) {
+      if (null !== obj11.get_child(1)) {
         do {
           get_childResult = obj8.get_child(num);
           _comparatorResult = self._comparator(global, get_childResult.data);
@@ -282,7 +282,7 @@ class RBTree {
         set_childResult12 = set_child(right === obj9, obj9.get_child(null === obj9.left));
         self.size = self.size - 1;
       }
-      self._root = obj1.right;
+      self._root = obj11.right;
       if (null !== self._root) {
         self._root.red = false;
       }

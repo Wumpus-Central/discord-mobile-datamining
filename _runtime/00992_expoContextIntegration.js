@@ -5,17 +5,16 @@ import _mod868 from "metro/00868__.js";
 require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {
-  let obj = _mod868;
-  const expoUpdates = obj.getExpoUpdates();
+  const expoUpdates = _mod868.getExpoUpdates();
   if (expoUpdates) {
-    obj = { is_enabled: expoUpdates.isEnabled, is_embedded_launch: expoUpdates.isEmbeddedLaunch, is_emergency_launch: expoUpdates.isEmergencyLaunch, is_using_embedded_assets: expoUpdates.isUsingEmbeddedAssets };
+    const obj2 = { is_enabled: expoUpdates.isEnabled, is_embedded_launch: expoUpdates.isEmbeddedLaunch, is_emergency_launch: expoUpdates.isEmergencyLaunch, is_using_embedded_assets: expoUpdates.isUsingEmbeddedAssets };
     const updateId = expoUpdates.updateId;
     let updateId2 = typeof updateId === "string";
     if (typeof updateId === "string") {
       updateId2 = expoUpdates.updateId;
     }
     if (updateId2) {
-      obj.update_id = expoUpdates.updateId.toLowerCase();
+      obj2.update_id = expoUpdates.updateId.toLowerCase();
     }
     const channel = expoUpdates.channel;
     let channel2 = typeof channel === "string";
@@ -23,7 +22,7 @@ function getExpoUpdatesContext() {
       channel2 = expoUpdates.channel;
     }
     if (channel2) {
-      obj.channel = expoUpdates.channel.toLowerCase();
+      obj2.channel = expoUpdates.channel.toLowerCase();
     }
     const runtimeVersion = expoUpdates.runtimeVersion;
     let runtimeVersion2 = typeof runtimeVersion === "string";
@@ -31,7 +30,7 @@ function getExpoUpdatesContext() {
       runtimeVersion2 = expoUpdates.runtimeVersion;
     }
     if (runtimeVersion2) {
-      obj.runtime_version = expoUpdates.runtimeVersion.toLowerCase();
+      obj2.runtime_version = expoUpdates.runtimeVersion.toLowerCase();
     }
     const checkAutomatically = expoUpdates.checkAutomatically;
     let checkAutomatically2 = typeof checkAutomatically === "string";
@@ -39,7 +38,7 @@ function getExpoUpdatesContext() {
       checkAutomatically2 = expoUpdates.checkAutomatically;
     }
     if (checkAutomatically2) {
-      obj.check_automatically = expoUpdates.checkAutomatically.toLowerCase();
+      obj2.check_automatically = expoUpdates.checkAutomatically.toLowerCase();
     }
     const emergencyLaunchReason = expoUpdates.emergencyLaunchReason;
     let emergencyLaunchReason2 = typeof emergencyLaunchReason === "string";
@@ -47,17 +46,17 @@ function getExpoUpdatesContext() {
       emergencyLaunchReason2 = expoUpdates.emergencyLaunchReason;
     }
     if (emergencyLaunchReason2) {
-      obj.emergency_launch_reason = expoUpdates.emergencyLaunchReason;
+      obj2.emergency_launch_reason = expoUpdates.emergencyLaunchReason;
     }
     if (typeof expoUpdates.launchDuration === "number") {
-      obj.launch_duration = expoUpdates.launchDuration;
+      obj2.launch_duration = expoUpdates.launchDuration;
     }
     const _Date = Date;
     if (expoUpdates.createdAt instanceof Date) {
       const createdAt = expoUpdates.createdAt;
-      obj.created_at = createdAt.toISOString();
+      obj2.created_at = createdAt.toISOString();
     }
-    return obj;
+    return obj2;
   } else {
     return { is_enabled: false };
   }
@@ -100,22 +99,19 @@ export () => {
       });
     },
     processEvent(contexts) {
-      let obj = _mod867;
       if (obj.isExpo()) {
-        let tmpResult = _mod867;
         if (tmpResult.isExpoGo()) {
-          tmpResult = _mod868;
-          const expoDevice = tmpResult.getExpoDevice();
+          const expoDevice = _mod868.getExpoDevice();
           let tmp4;
           if (expoDevice) {
-            obj = { name: expoDevice.deviceName, simulator: null, model: null, manufacturer: null, memory_size: null };
+            const obj2 = { name: expoDevice.deviceName, simulator: null, model: null, manufacturer: null, memory_size: null };
             let isDevice;
             if (null != expoDevice) {
               isDevice = expoDevice.isDevice;
             }
-            obj.simulator = !isDevice;
+            obj2.simulator = !isDevice;
             ({ modelName: obj4.model, manufacturer: obj4.manufacturer, totalMemory: obj4.memory_size } = expoDevice);
-            tmp4 = obj;
+            tmp4 = obj2;
           }
           if (tmp4) {
             contexts.contexts = contexts.contexts || {};
@@ -123,12 +119,13 @@ export () => {
             const _Object2 = Object;
             contexts.contexts.device = Object.assign(Object.assign({}, tmp4), contexts.contexts.device);
           }
+          const tmpResult3 = _mod868;
           const expoDevice1 = _mod868.getExpoDevice();
           let tmp9;
           if (expoDevice1) {
-            obj = { build: null, version: null, name: null };
             ({ osBuildId: obj6.build, osVersion: obj6.version, osName: obj6.name } = expoDevice1);
-            tmp9 = obj;
+            tmp9 = { build: null, version: null, name: null };
+            const obj3 = { build: null, version: null, name: null };
           }
           if (tmp9) {
             contexts.contexts = contexts.contexts || {};
@@ -136,7 +133,7 @@ export () => {
             const _Object4 = Object;
             contexts.contexts.os = Object.assign(Object.assign({}, tmp9), contexts.contexts.os);
           }
-          const tmpResult1 = _mod868;
+          const tmpResult4 = _mod868;
         }
         contexts.contexts = contexts.contexts || {};
         let tmp13 = closure_0;
@@ -146,6 +143,7 @@ export () => {
           tmp13 = tmp15;
         }
         contexts.contexts[ota_updates] = Object.assign({}, tmp13);
+        tmpResult = _mod867;
       }
       return contexts;
     }

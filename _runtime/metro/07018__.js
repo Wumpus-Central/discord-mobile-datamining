@@ -48,8 +48,8 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -62,8 +62,8 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -99,8 +99,8 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
               const obj5 = Cancellable;
               c5 = 1;
               c6 = 1;
-              let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
-              return obj1;
+              const obj6 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
+              return obj6;
             }
           }
         }
@@ -110,24 +110,24 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          obj1 = closure_132_0(closure_132_1[3]);
+          const obj2 = closure_132_0(closure_132_1[3]);
           c5 = 2;
           c6 = 1;
-          const obj3 = {
-            value: obj1.autoScroll(closure_131_6, closure_131_4, closure_131_5, 0, 0, closure_131_2, closure_131_1),
+          const obj8 = {
+            value: obj2.autoScroll(closure_131_6, closure_131_4, closure_131_5, 0, 0, closure_131_2, closure_131_1),
             done: false,
           };
-          return obj3;
+          return obj8;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
       c6 = 3;
@@ -183,8 +183,8 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -197,8 +197,8 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_128_0 = undefined;
                 closure_128_1 = undefined;
@@ -263,8 +263,8 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
             }
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: runScrollBenchmark(tmp2, tmp2, num11), done: false };
-            return obj1;
+            const obj4 = { value: runScrollBenchmark(tmp2, tmp2, num11), done: false };
+            return obj4;
           } catch (tmp43) {
             c3 = tmp;
             throw tmp43;

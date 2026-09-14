@@ -1,5 +1,5 @@
 // _runtime/metro/01761__.js
-import _slicedToArray from "00032__.js";
+import _slicedToArray_mod from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
   code: "function pnpm_SlideTs1(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{originX:delayFunction(delay,animation(values.targetOriginX,config))},initialValues:{originX:values.targetOriginX+values.windowWidth,...initialValues},callback:callback};}",
 };
@@ -55,12 +56,13 @@ class SlideInRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(targetOriginX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(targetOriginX.targetOriginX, closure_2)) };
-        obj.animations = obj;
-        obj = { originX: targetOriginX.targetOriginX + targetOriginX.windowWidth };
+        const obj = {
+          animations: { originX: delayFunction(delay, first(targetOriginX.targetOriginX, closure_2)) },
+          initialValues: null,
+          callback: null,
+        };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originX: targetOriginX.targetOriginX + targetOriginX.windowWidth };
         obj.callback = callbackV;
         return obj;
       };
@@ -114,12 +116,13 @@ class SlideInLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(targetOriginX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originX: delayFunction(delay, first(targetOriginX.targetOriginX, closure_2)) };
-        obj.animations = obj;
-        obj = { originX: targetOriginX.targetOriginX - targetOriginX.windowWidth };
+        const obj = {
+          animations: { originX: delayFunction(delay, first(targetOriginX.targetOriginX, closure_2)) },
+          initialValues: null,
+          callback: null,
+        };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originX: targetOriginX.targetOriginX - targetOriginX.windowWidth };
         obj.callback = callbackV;
         return obj;
       };
@@ -173,20 +176,21 @@ class SlideOutRight {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(currentOriginX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = {
-          originX: delayFunction(
-            delay,
-            first(
-              Math.max(currentOriginX.currentOriginX + currentOriginX.windowWidth, currentOriginX.windowWidth),
-              closure_2,
+        const obj = {
+          animations: {
+            originX: delayFunction(
+              delay,
+              first(
+                Math.max(currentOriginX.currentOriginX + currentOriginX.windowWidth, currentOriginX.windowWidth),
+                closure_2,
+              ),
             ),
-          ),
+          },
+          initialValues: null,
+          callback: null,
         };
-        obj.animations = obj;
-        obj = { originX: currentOriginX.currentOriginX };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originX: currentOriginX.currentOriginX };
         obj.callback = callbackV;
         return obj;
       };
@@ -240,20 +244,21 @@ class SlideOutLeft {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(currentOriginX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = {
-          originX: delayFunction(
-            delay,
-            first(
-              Math.min(currentOriginX.currentOriginX - currentOriginX.windowWidth, -currentOriginX.windowWidth),
-              closure_2,
+        const obj = {
+          animations: {
+            originX: delayFunction(
+              delay,
+              first(
+                Math.min(currentOriginX.currentOriginX - currentOriginX.windowWidth, -currentOriginX.windowWidth),
+                closure_2,
+              ),
             ),
-          ),
+          },
+          initialValues: null,
+          callback: null,
         };
-        obj.animations = obj;
-        obj = { originX: currentOriginX.currentOriginX };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originX: currentOriginX.currentOriginX };
         obj.callback = callbackV;
         return obj;
       };
@@ -307,12 +312,13 @@ class SlideInUp {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(originY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(originY.targetOriginY, closure_2)) };
-        obj.animations = obj;
-        obj = { originY: -originY.windowHeight };
+        const obj = {
+          animations: { originY: delayFunction(delay, first(originY.targetOriginY, closure_2)) },
+          initialValues: null,
+          callback: null,
+        };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originY: -originY.windowHeight };
         obj.callback = callbackV;
         return obj;
       };
@@ -366,12 +372,13 @@ class SlideInDown {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(targetOriginY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { originY: delayFunction(delay, first(targetOriginY.targetOriginY, closure_2)) };
-        obj.animations = obj;
-        obj = { originY: targetOriginY.targetOriginY + targetOriginY.windowHeight };
+        const obj = {
+          animations: { originY: delayFunction(delay, first(targetOriginY.targetOriginY, closure_2)) },
+          initialValues: null,
+          callback: null,
+        };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originY: targetOriginY.targetOriginY + targetOriginY.windowHeight };
         obj.callback = callbackV;
         return obj;
       };
@@ -425,20 +432,21 @@ class SlideOutUp {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(currentOriginY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = {
-          originY: delayFunction(
-            delay,
-            first(
-              Math.min(currentOriginY.currentOriginY - currentOriginY.windowHeight, -currentOriginY.windowHeight),
-              closure_2,
+        const obj = {
+          animations: {
+            originY: delayFunction(
+              delay,
+              first(
+                Math.min(currentOriginY.currentOriginY - currentOriginY.windowHeight, -currentOriginY.windowHeight),
+                closure_2,
+              ),
             ),
-          ),
+          },
+          initialValues: null,
+          callback: null,
         };
-        obj.animations = obj;
-        obj = { originY: currentOriginY.currentOriginY };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originY: currentOriginY.currentOriginY };
         obj.callback = callbackV;
         return obj;
       };
@@ -492,20 +500,21 @@ class SlideOutDown {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function e(currentOriginY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = {
-          originY: delayFunction(
-            delay,
-            first(
-              Math.max(currentOriginY.currentOriginY + currentOriginY.windowHeight, currentOriginY.windowHeight),
-              closure_2,
+        const obj = {
+          animations: {
+            originY: delayFunction(
+              delay,
+              first(
+                Math.max(currentOriginY.currentOriginY + currentOriginY.windowHeight, currentOriginY.windowHeight),
+                closure_2,
+              ),
             ),
-          ),
+          },
+          initialValues: null,
+          callback: null,
         };
-        obj.animations = obj;
-        obj = { originY: currentOriginY.currentOriginY };
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj;
+        obj.initialValues = { originY: currentOriginY.currentOriginY };
         obj.callback = callbackV;
         return obj;
       };

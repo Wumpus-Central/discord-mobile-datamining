@@ -10,8 +10,7 @@ let c3 = "Route Change";
 const defaultIdleOptions = { idleTimeout: 1000, finalTimeout: 600000 };
 function startIdleSpan(name, arg1) {
   ({ finalTimeout, idleTimeout } = arg1);
-  let obj = _mod682;
-  const client = obj.getClient();
+  const client = _mod682.getClient();
   if (client) {
     if ("background" === AppState.currentState) {
       const debug2 = _mod682.debug;
@@ -20,17 +19,17 @@ function startIdleSpan(name, arg1) {
       const sentryNonRecordingSpan = new _mod682.SentryNonRecordingSpan();
       return sentryNonRecordingSpan;
     } else {
-      let tmpResult = _mod682;
-      const currentScope = tmpResult.getCurrentScope();
-      obj = { traceId: null, sampleRand: null };
-      tmpResult = _mod682;
-      obj.traceId = tmpResult.generateTraceId();
+      const currentScope = _mod682.getCurrentScope();
+      const obj2 = { traceId: null, sampleRand: null };
+      const tmpResult = _mod682;
+      obj2.traceId = _mod682.generateTraceId();
       const _Math = Math;
-      obj.sampleRand = Math.random();
-      const result = currentScope.setPropagationContext(obj);
-      obj = { finalTimeout, idleTimeout };
-      const startIdleSpanResult = _mod682.startIdleSpan(name, obj);
-      const tmpResult1 = _mod682;
+      obj2.sampleRand = Math.random();
+      const result = currentScope.setPropagationContext(obj2);
+      const tmpResult4 = _mod682;
+      const obj3 = { finalTimeout, idleTimeout };
+      const startIdleSpanResult = _mod682.startIdleSpan(name, obj3);
+      const tmpResult5 = _mod682;
       _mod1026.cancelInBackground(client, startIdleSpanResult);
       return startIdleSpanResult;
     }
@@ -65,24 +64,23 @@ export const startIdleNavigationSpan = (arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  let obj1 = _mod682;
-  const client = obj1.getClient();
+  const client = _mod682.getClient();
   const obj3 = _mod682;
   if (client) {
     const activeSpan = obj3.getActiveSpan();
     let isRootSpanResult = activeSpan;
     if (activeSpan) {
-      let tmp5Result = _mod987;
-      isRootSpanResult = tmp5Result.isRootSpan(activeSpan);
+      isRootSpanResult = _mod987.isRootSpan(activeSpan);
+      const tmp5Result = _mod987;
     }
     if (isRootSpanResult) {
       const items = [
         SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION,
         SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION,
       ];
-      tmp5Result = _mod682;
-      isRootSpanResult = items.includes(tmp5Result.spanToJSON(activeSpan).origin || "");
-      const tmp10 = tmp5Result.spanToJSON(activeSpan).origin || "";
+      const tmp5Result7 = _mod682;
+      isRootSpanResult = items.includes(_mod682.spanToJSON(activeSpan).origin || "");
+      const tmp10 = _mod682.spanToJSON(activeSpan).origin || "";
     }
     const currentScope = _mod682.getCurrentScope();
     delete tmp2[tmp];
@@ -95,14 +93,14 @@ export const startIdleNavigationSpan = (arg0) => {
             _mod682.spanToJSON(activeSpan).op +
             " transaction because navigation is from app restart - preserving error context.",
         );
-        const tmp5Result2 = _mod682;
+        const tmp5Result9 = _mod682;
       }
       const _Object = Object;
       const _Object2 = Object;
-      obj = { name, op: "navigation", forceTransaction: true, scope: _mod682.getCurrentScope() };
-      const merged = Object.assign(Object.assign({}, obj), arg0);
-      obj = { finalTimeout, idleTimeout };
-      const obj14 = startIdleSpan(merged, obj);
+      const obj4 = { name, op: "navigation", forceTransaction: true, scope: _mod682.getCurrentScope() };
+      const merged = Object.assign(Object.assign({}, obj4), arg0);
+      const obj5 = { finalTimeout, idleTimeout };
+      const obj14 = startIdleSpan(merged, obj5);
       const debug4 = _mod682.debug;
       let str6 = merged.op;
       if (!str6) {
@@ -110,7 +108,7 @@ export const startIdleNavigationSpan = (arg0) => {
       }
       const _HermesInternal3 = HermesInternal;
       debug4.log("[startIdleNavigationSpan] Starting " + str6 + ' transaction "' + merged.name + '" on scope');
-      const tmp5Result3 = _mod682;
+      const tmp5Result10 = _mod682;
       const result = _mod1026.adjustTransactionDuration(client, obj14, finalTimeout);
       const attr = obj14.setAttribute(
         _mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
@@ -126,12 +124,12 @@ export const startIdleNavigationSpan = (arg0) => {
           _mod682.spanToJSON(activeSpan).op +
           " transaction because of a new navigation root span.",
       );
-      obj1 = { code: _mod682.SPAN_STATUS_ERROR, message: "cancelled" };
-      activeSpan.setStatus(obj1);
+      const obj6 = { code: _mod682.SPAN_STATUS_ERROR, message: "cancelled" };
+      activeSpan.setStatus(obj6);
       activeSpan.end();
-      const tmp5Result5 = _mod682;
+      const tmp5Result12 = _mod682;
     }
-    const tmp5Result1 = _mod682;
+    const tmp5Result8 = _mod682;
   } else {
     const debug = obj3.debug;
     debug.warn("[startIdleNavigationSpan] Can't create route change span, missing client.");

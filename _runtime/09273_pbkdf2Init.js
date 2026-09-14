@@ -19,12 +19,10 @@ function pbkdf2Init(sha256, B, B, arg3) {
     const toBytesResult = _asyncLoop.toBytes(B);
     const uint8Array = new Uint8Array(dkLen);
     const hmac = _mod9274.hmac;
-    hmac.create(sha256, toBytesResult);
+    const obj = hmac.create(sha256, toBytesResult);
     const toBytesResult1 = _asyncLoop.toBytes(B);
-    const obj = { c, dkLen, asyncTick, DK: uint8Array, PRF: null, PRFSalt: null };
-    obj.PRF = obj;
-    obj.PRFSalt = obj._cloneInto().update(toBytesResult1);
-    return obj;
+    const obj2 = { c, dkLen, asyncTick, DK: uint8Array, PRF: obj, PRFSalt: obj._cloneInto().update(toBytesResult1) };
+    return obj2;
   }
   const checkOptsResult = _asyncLoop.checkOpts({ dkLen: 32, asyncTick: 10 }, arg3);
 }
@@ -45,8 +43,8 @@ let closure_5 = async function _pbkdf2Async(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -59,8 +57,8 @@ let closure_5 = async function _pbkdf2Async(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c13 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_9 = tmp3;
           const int32 = tmp7;
@@ -98,8 +96,8 @@ let closure_5 = async function _pbkdf2Async(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -112,8 +110,8 @@ let closure_5 = async function _pbkdf2Async(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     v3 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     const subarrayResult = closure_2_4.subarray(closure_2_12, closure_2_12 + outputLen.outputLen);
                     v3 = subarrayResult;
@@ -123,7 +121,7 @@ let closure_5 = async function _pbkdf2Async(arg0) {
                     const result = subarrayResult.set(tmp3.subarray(0, subarrayResult.length));
                     c1 = 1;
                     v3 = 1;
-                    const obj1 = {
+                    const obj4 = {
                       value: v3(c1[2]).asyncLoop(closure_2_1 - 1, closure_2_3, async () => {
                         let length;
                         _cloneIntoResult = outputLen._cloneInto(c0);
@@ -140,14 +138,14 @@ let closure_5 = async function _pbkdf2Async(arg0) {
                       }),
                       done: false,
                     };
-                    return obj1;
+                    return obj4;
                   }
                 } else if (arg0 === 1) {
                   v3 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   v3 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 } else {
                   v3 = 3;
@@ -170,8 +168,8 @@ let closure_5 = async function _pbkdf2Async(arg0) {
           }
           closure_137_4(closure_136_5, PRFSalt, closure_136_4, closure_136_0, closure_136_9);
           c13 = 3;
-          let obj1 = { value: closure_136_4, done: true };
-          return obj1;
+          let obj4 = { value: closure_136_4, done: true };
+          return obj4;
         }
       } else {
         if (1 === tmp7) {
@@ -187,14 +185,14 @@ let closure_5 = async function _pbkdf2Async(arg0) {
               const method = HermesBuiltin.getMethod("return");
               if (method === undefined) {
                 c13 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
                 const iter2 = method(closure_4);
                 HermesBuiltin.ensureObject("iterator.return() did not return an object");
                 if (iter2.done) {
                   c13 = 3;
-                  obj = { value: iter2.value, done: true };
+                  let obj = { value: iter2.value, done: true };
                   return obj;
                 } else {
                   c12 = 1;

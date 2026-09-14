@@ -4,10 +4,10 @@ import registerAsset from "01120__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "b62bcdbe576aad312fb756c1125d76bb",
-  name: "ic_upload",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "5870bc3ada01ff369d707eaeba6296c2",
+  name: "camera_upload_light",
   type: "png",
 });

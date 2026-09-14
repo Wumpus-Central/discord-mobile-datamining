@@ -1,25 +1,28 @@
 // _runtime/metro/04095__.js
-import 03906__ from "03906__.js";
-import subDays from "../04096_subDays.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import module_3906_mod from "03906__.js";
+import subDays_mod from "../04096_subDays.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let module_3906 = module_3906_mod;
 if (!module_3906) {
-  let obj = { default: module_3906 };
+  const obj = { default: module_3906 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3906;
 }
 module_3906 = tmp3;
+let subDays = subDays_mod;
 if (!subDays) {
-  obj = { default: subDays };
-  let tmp5 = obj;
+  const obj2 = { default: subDays };
+  let tmp5 = obj2;
 } else {
   tmp5 = subDays;
 }
 subDays = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

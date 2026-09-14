@@ -5,7 +5,7 @@ if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
       const _module = _mod4228;
-      let obj = {
+      const obj2 = {
         months: null,
         monthsShort: null,
         weekdays: null,
@@ -21,35 +21,35 @@ if (typeof exports === "object") {
       const split =
         "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438"
           .split;
-      obj.months =
+      obj2.months =
         "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
           "_",
         );
       const split2 =
         "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A"
           .split;
-      obj.monthsShort =
+      obj2.monthsShort =
         "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A".split(
           "_",
         );
       const split3 =
         "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430"
           .split;
-      obj.weekdays =
+      obj2.weekdays =
         "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430".split(
           "_",
         );
       const split4 =
         "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431"
           .split;
-      obj.weekdaysShort =
+      obj2.weekdaysShort =
         "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431".split(
           "_",
         );
       const split5 = "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split;
-      obj.weekdaysMin =
+      obj2.weekdaysMin =
         "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split("_");
-      obj.longDateFormat = {
+      obj2.longDateFormat = {
         LT: "H:mm",
         LTS: "H:mm:ss",
         L: "D.MM.YYYY",
@@ -57,7 +57,7 @@ if (typeof exports === "object") {
         LLL: "D MMMM YYYY H:mm",
         LLLL: "dddd, D MMMM YYYY H:mm",
       };
-      obj = {
+      const obj3 = {
         sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
         nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
         nextWeek: "dddd [\u0432] LT",
@@ -75,8 +75,8 @@ if (typeof exports === "object") {
         },
         sameElse: "L",
       };
-      obj.calendar = obj;
-      obj.relativeTime = {
+      obj2.calendar = obj3;
+      obj2.relativeTime = {
         future: "\u0441\u043B\u0435\u0434 %s",
         past: "\u043F\u0440\u0435\u0434\u0438 %s",
         s: "\u043D\u044F\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
@@ -94,8 +94,8 @@ if (typeof exports === "object") {
         y: "\u0433\u043E\u0434\u0438\u043D\u0430",
         yy: "%d \u0433\u043E\u0434\u0438\u043D\u0438",
       };
-      obj.dayOfMonthOrdinalParse = /\d{1,2}-(ев|ен|ти|ви|ри|ми)/;
-      obj.ordinal = function ordinal(arg0) {
+      obj2.dayOfMonthOrdinalParse = /\d{1,2}-(ев|ен|ти|ви|ри|ми)/;
+      obj2.ordinal = function ordinal(arg0) {
         const result = arg0 % 10;
         const result1 = arg0 % 100;
         if (0 === arg0) {
@@ -123,15 +123,15 @@ if (typeof exports === "object") {
         }
         return text;
       };
-      obj.week = { dow: 1, doy: 7 };
-      _module.defineLocale("bg", obj);
+      obj2.week = { dow: 1, doy: 7 };
+      _module.defineLocale("bg", obj2);
     }
   }
 }
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function t(defineLocale) {
-      let obj = {
+      const obj = {
         months:
           "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
             "_",
@@ -159,7 +159,24 @@ if (typeof globalThis.define === "function") {
           LLL: "D MMMM YYYY H:mm",
           LLLL: "dddd, D MMMM YYYY H:mm",
         },
-        calendar: null,
+        calendar: {
+          sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+          nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+          nextWeek: "dddd [\u0432] LT",
+          lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+          lastWeek() {
+            const dayResult = this.day();
+            if (0 !== dayResult) {
+              if (3 !== dayResult) {
+                if (6 !== dayResult) {
+                  return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
+                }
+              }
+            }
+            return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+          },
+          sameElse: "L",
+        },
         relativeTime: {
           future: "\u0441\u043B\u0435\u0434 %s",
           past: "\u043F\u0440\u0435\u0434\u0438 %s",
@@ -209,31 +226,12 @@ if (typeof globalThis.define === "function") {
         },
         week: { dow: 1, doy: 7 },
       };
-      obj = {
-        sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
-        nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
-        nextWeek: "dddd [\u0432] LT",
-        lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
-        lastWeek() {
-          const dayResult = this.day();
-          if (0 !== dayResult) {
-            if (3 !== dayResult) {
-              if (6 !== dayResult) {
-                return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
-              }
-            }
-          }
-          return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
-        },
-        sameElse: "L",
-      };
-      obj.calendar = obj;
       return defineLocale.defineLocale("bg", obj);
     });
   }
 }
 const moment = this.moment;
-obj = {
+let obj = {
   months:
     "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
       "_",
@@ -327,7 +325,7 @@ obj = {
   week: { dow: 1, doy: 7 },
 };
 moment.defineLocale("bg", obj);
-const obj1 = {
+const obj4 = {
   sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
   nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
   nextWeek: "dddd [\u0432] LT",

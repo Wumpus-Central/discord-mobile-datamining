@@ -266,18 +266,7 @@ let items = [
       } else {
         hitSlop = self.props.hitSlop;
       }
-      let obj = {
-        accessible: false !== self.props.accessible,
-        accessibilityLabel: self.props.accessibilityLabel,
-        accessibilityHint: self.props.accessibilityHint,
-        accessibilityRole: self.props.accessibilityRole,
-        accessibilityState: self.props.accessibilityState,
-        accessibilityActions: self.props.accessibilityActions,
-        onAccessibilityAction: self.props.onAccessibilityAction,
-        nativeID: self.props.nativeID,
-        onLayout: self.props.onLayout,
-      };
-      obj = {
+      const obj2 = {
         style: self.props.containerStyle,
         onHandlerStateChange: null,
         onGestureEvent: null,
@@ -293,25 +282,35 @@ let items = [
       if (!self.props.disabled) {
         onHandlerStateChange = self.onHandlerStateChange;
       }
-      obj.onHandlerStateChange = onHandlerStateChange;
-      obj.onGestureEvent = self.onGestureEvent;
-      obj.hitSlop = hitSlop;
-      obj.userSelect = self.props.userSelect;
-      obj.shouldActivateOnStart = self.props.shouldActivateOnStart;
-      obj.disallowInterruption = self.props.disallowInterruption;
-      obj.testID = self.props.testID;
+      obj2.onHandlerStateChange = onHandlerStateChange;
+      obj2.onGestureEvent = self.onGestureEvent;
+      obj2.hitSlop = hitSlop;
+      obj2.userSelect = self.props.userSelect;
+      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
+      obj2.disallowInterruption = self.props.disallowInterruption;
+      obj2.testID = self.props.testID;
       let flag = self.props.touchSoundDisabled;
       if (flag == null) {
         flag = false;
       }
-      obj.touchSoundDisabled = flag;
-      obj.enabled = !self.props.disabled;
+      obj2.touchSoundDisabled = flag;
+      obj2.enabled = !self.props.disabled;
       const merged = Object.assign(self.props.extraButtonProps);
-      const obj1 = {};
-      const merged1 = Object.assign(obj);
-      obj1.style = self.props.style;
-      obj1.children = self.props.children;
-      obj.children = <Animated.View />;
+      const obj3 = {};
+      const merged1 = Object.assign({
+        accessible: false !== self.props.accessible,
+        accessibilityLabel: self.props.accessibilityLabel,
+        accessibilityHint: self.props.accessibilityHint,
+        accessibilityRole: self.props.accessibilityRole,
+        accessibilityState: self.props.accessibilityState,
+        accessibilityActions: self.props.accessibilityActions,
+        onAccessibilityAction: self.props.onAccessibilityAction,
+        nativeID: self.props.nativeID,
+        onLayout: self.props.onLayout,
+      });
+      obj3.style = self.props.style;
+      obj3.children = self.props.children;
+      obj2.children = <Animated.View />;
       return jsx(GenericTouchable(6869).LegacyBaseButton, {
         style: self.props.containerStyle,
         onHandlerStateChange: null,

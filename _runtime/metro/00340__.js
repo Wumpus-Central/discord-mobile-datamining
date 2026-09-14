@@ -5,12 +5,7 @@ const noop = fn(19);
 ({ useEffect: c3, useState: closure_4 } = noop);
 
 export default function useWindowDimensions() {
-  const tmp = _slicedToArray(
-    closure_4(() => first(88).get("window")),
-    2,
-  );
-  const first = tmp[0];
-  dependencyMap = tmp[1];
+  [first, dependencyMap] = closure_4(() => first(88).get("window"));
   const items = [first];
   closure_3(() => {
     styles = first(88).addEventListener("change", function handleChange(event) {

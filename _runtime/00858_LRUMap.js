@@ -1,8 +1,9 @@
 // _runtime/00858_LRUMap.js
 import _readOnlyError from "metro/00377__readOnlyError.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LRUMap {
   constructor(arg0) {

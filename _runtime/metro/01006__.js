@@ -69,11 +69,11 @@ class ErrorBoundary {
           _lastEventId = type.event_id === closure_1._lastEventId;
         }
         if (_lastEventId) {
-          ErrorBoundary(889);
-          const obj = {};
+          const obj2 = {};
           const merged = Object.assign(showDialog.dialogOptions);
-          obj.eventId = closure_1._lastEventId;
-          obj.showReportDialog(obj);
+          obj2.eventId = closure_1._lastEventId;
+          ErrorBoundary(889).showReportDialog(obj2);
+          const obj = ErrorBoundary(889);
         }
       });
     }
@@ -98,30 +98,31 @@ const entry = {
       if (_getPrototypeOf) {
         tmp(arg0, error, componentStack);
       }
-      let obj = self;
       if (null != self.props.handled) {
-        let handled = obj.props.handled;
+        let handled = self.props.handled;
       } else {
-        handled = obj.props.fallback;
+        handled = self.props.fallback;
       }
-      let obj1 = ErrorBoundary(1002);
-      obj = { mechanism: { handled, type: "auto.function.react.error_boundary" } };
-      const result = obj1.captureReactException(error, closure_2, obj);
+      const result = ErrorBoundary(1002).captureReactException(error, closure_2, {
+        mechanism: { handled, type: "auto.function.react.error_boundary" },
+      });
       if (_isNativeReflectConstruct) {
         tmp10(error, componentStack, result);
       }
       if (noop) {
-        obj._lastEventId = result;
-        if (obj._openFallbackReportDialog) {
-          obj = {};
+        self._lastEventId = result;
+        if (self._openFallbackReportDialog) {
+          const obj4 = {};
           const merged = Object.assign(closure_1_0);
-          obj.eventId = result;
-          ErrorBoundary(889).showReportDialog(obj);
+          obj4.eventId = result;
+          ErrorBoundary(889).showReportDialog(obj4);
           const tmp6Result = ErrorBoundary(889);
         }
       }
-      obj1 = { error, componentStack, eventId: result };
-      obj.setState(obj1);
+      self.setState({ error, componentStack, eventId: result });
+      const obj2 = ErrorBoundary(1002);
+      const obj3 = { mechanism: { handled, type: "auto.function.react.error_boundary" } };
+      const obj5 = { error, componentStack, eventId: result };
     });
   },
 };
@@ -212,9 +213,7 @@ export const withErrorBoundary = function withErrorBoundary(displayName, arg1) {
   ErrorBoundary = displayName;
   dependencyMap = arg1;
   const memoResult = noop.memo((arg0) => {
-    let obj = {};
     const merged = Object.assign(closure_1);
-    obj = {};
     const merged1 = Object.assign(arg0);
     return (
       <_moduleResult>

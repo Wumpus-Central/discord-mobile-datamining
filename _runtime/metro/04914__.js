@@ -1,5 +1,5 @@
 // _runtime/metro/04914__.js
-import _mod1314 from "01314__.js";
+import _mod1312 from "01312__.js";
 
 export default function isFinite(num) {
   let tmp = typeof num === "number";
@@ -7,7 +7,7 @@ export default function isFinite(num) {
     tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !_mod1314(num);
+    tmp = !_mod1312(num);
   }
   if (tmp) {
     tmp = num !== Infinity;

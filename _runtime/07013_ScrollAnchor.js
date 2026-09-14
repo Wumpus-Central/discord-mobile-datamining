@@ -1,19 +1,19 @@
 // _runtime/07013_ScrollAnchor.js
 import CompatView from "07008_CompatView.js";
 import _slicedToArray from "metro/06958__.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 require = fn;
 let noop = fn(19);
 ({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
+  first = undefined;
   _slicedToArray = undefined;
-  const tmp = _slicedToArray(closure_5(1000000), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
+  [first, _slicedToArray] = closure_5(1000000);
   closure_3(
     horizontal.scrollAnchorRef,
     () => ({

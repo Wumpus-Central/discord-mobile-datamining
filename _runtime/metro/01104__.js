@@ -68,7 +68,7 @@ export default function resolvePathname(str, arg1) {
             sum = sum + 1;
           } while (sum < length4);
         }
-        let arr = combined.pop();
+        let arr2 = combined.pop();
         let sum4 = num7;
       } else if (".." === tmp6) {
         let sum2 = length + 1;
@@ -81,7 +81,7 @@ export default function resolvePathname(str, arg1) {
             sum2 = sum2 + 1;
           } while (sum2 < length3);
         }
-        let arr1 = combined.pop();
+        let arr3 = combined.pop();
         sum4 = num7 + 1;
       } else {
         sum4 = num7;
@@ -96,7 +96,7 @@ export default function resolvePathname(str, arg1) {
               sum5 = sum5 + 1;
             } while (sum5 < length2);
           }
-          let arr2 = combined.pop();
+          let arr9 = combined.pop();
           sum4 = num7 - 1;
         }
       }
@@ -108,7 +108,7 @@ export default function resolvePathname(str, arg1) {
       let diff = num8 - 1;
       if (num8) {
         do {
-          let arr3 = combined.unshift("..");
+          let arr10 = combined.unshift("..");
           tmp21 = diff;
           diff = diff - 1;
         } while (tmp21);

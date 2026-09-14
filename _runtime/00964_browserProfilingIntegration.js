@@ -13,7 +13,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
     if (!tmp4) {
       options.profileLifecycle = "manual";
     }
-    let tmp2Result = tmp2(966);
+    tmp4 = uIProfiler(966).hasLegacyProfiling(options) || options.profileLifecycle;
     if (tmp2Result.hasLegacyProfiling(options)) {
       if (!options.profilesSampleRate) {
         if (tmp2(937).DEBUG_BUILD) {
@@ -22,15 +22,15 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
         }
       }
     }
-    tmp2Result = tmp2(682);
-    let activeSpan = tmp2Result.getActiveSpan();
+    tmp2Result = uIProfiler(966);
+    let activeSpan = uIProfiler(682).getActiveSpan();
     let rootSpan = activeSpan;
     if (activeSpan) {
       rootSpan = tmp2(682).getRootSpan(activeSpan);
-      const tmp2Result1 = tmp2(682);
+      const tmp2Result10 = tmp2(682);
     }
-    tmp4 = uIProfiler(966).hasLegacyProfiling(options) || options.profileLifecycle;
-    const tmp2Result2 = uIProfiler(966);
+    const tmp2Result9 = uIProfiler(682);
+    const tmp2Result11 = uIProfiler(966);
     if (tmp8) {
       let debug2 = tmp2(682).debug;
       debug2.warn(
@@ -41,29 +41,29 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
       uIProfiler(966).hasLegacyProfiling(options) &&
       undefined !== options.profileSessionSampleRate &&
       uIProfiler(937).DEBUG_BUILD;
-    if (tmp2Result3.hasLegacyProfiling(options)) {
+    if (tmp2Result12.hasLegacyProfiling(options)) {
       let result = rootSpan;
       if (rootSpan) {
         result = tmp2(966).isAutomatedPageLoadSpan(rootSpan);
-        const tmp2Result4 = tmp2(966);
+        const tmp2Result13 = tmp2(966);
       }
       if (result) {
         result = tmp2(966).shouldProfileSpanLegacy(rootSpan);
-        const tmp2Result5 = tmp2(966);
+        const tmp2Result14 = tmp2(966);
       }
       if (result) {
         tmp2(967).startProfileForSpan(rootSpan);
-        const tmp2Result6 = tmp2(967);
+        const tmp2Result15 = tmp2(967);
       }
       getOptions.on("spanStart", (rootSpan) => {
         let result = rootSpan === uIProfiler(682).getRootSpan(rootSpan);
         if (result) {
-          let tmpResult = uIProfiler(966);
-          result = tmpResult.shouldProfileSpanLegacy(rootSpan);
+          result = uIProfiler(966).shouldProfileSpanLegacy(rootSpan);
+          const tmpResult = uIProfiler(966);
         }
         if (result) {
-          tmpResult = uIProfiler(967);
-          tmpResult.startProfileForSpan(rootSpan);
+          uIProfiler(967).startProfileForSpan(rootSpan);
+          const tmpResult2 = uIProfiler(967);
         }
         const obj = uIProfiler(682);
       });
@@ -97,11 +97,11 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
               }
               if (typeof tmp20 === "string") {
                 if (tmp20) {
-                  profile = undefined;
+                  let profile1;
                   if (tmp18 != null) {
-                    profile = tmp18.profile;
+                    profile1 = tmp18.profile;
                   }
-                  if (profile) {
+                  if (profile1) {
                     delete tmp2[tmp];
                   }
                   let obj3 = uIProfiler(966);
@@ -141,7 +141,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
       if ("manual" === profileLifecycle) {
         uIProfiler.initialize(getOptions);
       } else if ("trace" === profileLifecycle) {
-        if (tmp2Result7.hasSpansEnabled(options)) {
+        if (tmp2Result16.hasSpansEnabled(options)) {
           uIProfiler.initialize(getOptions);
           if (rootSpan) {
             uIProfiler.notifyRootSpanActive(rootSpan);
@@ -164,10 +164,10 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
             "[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.",
           );
         }
-        tmp2Result7 = tmp2(682);
+        tmp2Result16 = tmp2(682);
       }
     }
-    tmp2Result3 = uIProfiler(966);
+    tmp2Result12 = uIProfiler(966);
   },
   processEvent(contexts) {
     return _mod966.attachProfiledThreadToEvent(contexts);

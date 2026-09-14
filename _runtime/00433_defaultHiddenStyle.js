@@ -3,7 +3,7 @@ import _modDef434 from "metro/00434__.js";
 import _slicedToArray from "metro/00032__.js";
 import "module_19";
 import measure from "00068_measure.js";
-import __INTERNAL_VIEW_CONFIG from "metro/00435__.js";
+import __INTERNAL_VIEW_CONFIG_mod from "metro/00435__.js";
 
 let c0 = fn;
 let c1 = importDefault;
@@ -27,11 +27,11 @@ if (measure.hasViewManagerConfig("VirtualView")) {
     }
     ({ nativeID, style, onModeChange: closure_1 } = hiddenStyle);
     c2 = undefined;
-    [tmp2, c2] = _slicedToArray(timestampProducer(obj), 2);
+    [tmp2, c2] = timestampProducer(obj);
     closure_3 = tmp3;
     obj = c0(436);
     ref = obj.useVirtualViewLogging(tmp3, nativeID);
-    obj = {
+    let obj2 = {
       initialHidden,
       nativeID,
       ref,
@@ -41,14 +41,14 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       onModeChange: null,
       children: null,
     };
-    obj.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
+    obj2.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
     let composeResult = style;
     if (tmp2 !== c9) {
       composeResult = initialHidden(254).compose(style, initialHidden(70)(tmp2));
       const obj3 = initialHidden(254);
     }
-    obj.style = composeResult;
-    obj.onModeChange = function onModeChange(nativeEvent) {
+    obj2.style = composeResult;
+    obj2.onModeChange = function onModeChange(nativeEvent) {
       const tmpResult = initialHidden(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
       obj = {
         mode: tmpResult,
@@ -108,7 +108,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
     if (tmp2 === c9) {
       children = hiddenStyle.children;
     }
-    obj.children = children;
+    obj2.children = children;
     return (
       <__INTERNAL_VIEW_CONFIG
         initialHidden={initialHidden}
@@ -136,11 +136,11 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       }
       ({ nativeID, style, onModeChange: closure_1 } = hiddenStyle);
       c2 = undefined;
-      [tmp2, c2] = _slicedToArray(timestampProducer(obj), 2);
+      [tmp2, c2] = timestampProducer(obj);
       closure_3 = tmp3;
       obj = c0(436);
       ref = obj.useVirtualViewLogging(tmp3, nativeID);
-      obj = {
+      let obj2 = {
         initialHidden,
         nativeID,
         ref,
@@ -150,14 +150,14 @@ if (measure.hasViewManagerConfig("VirtualView")) {
         onModeChange: null,
         children: null,
       };
-      obj.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
+      obj2.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
       let composeResult = style;
       if (tmp2 !== c9) {
         composeResult = initialHidden(254).compose(style, initialHidden(70)(tmp2));
         const obj3 = initialHidden(254);
       }
-      obj.style = composeResult;
-      obj.onModeChange = function onModeChange(nativeEvent) {
+      obj2.style = composeResult;
+      obj2.onModeChange = function onModeChange(nativeEvent) {
         const tmpResult = initialHidden(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
         obj = {
           mode: tmpResult,
@@ -217,7 +217,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       if (tmp2 === c9) {
         children = hiddenStyle.children;
       }
-      obj.children = children;
+      obj2.children = children;
       return (
         <__INTERNAL_VIEW_CONFIG
           initialHidden={initialHidden}
@@ -235,3 +235,4 @@ if (measure.hasViewManagerConfig("VirtualView")) {
   };
   exports._logs = {};
 }
+let __INTERNAL_VIEW_CONFIG = __INTERNAL_VIEW_CONFIG_mod;

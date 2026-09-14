@@ -1,8 +1,9 @@
 // _runtime/metro/04121__.js
 import daysInWeek from "../03904_daysInWeek.js";
-import requiredArgs from "../03726_requiredArgs.js";
-import 03729__ from "03729__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
+import module_3729_mod from "03729__.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   let obj = { default: requiredArgs };
   let tmp3 = obj;
@@ -10,9 +11,10 @@ if (!requiredArgs) {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp5 = obj;
+  let obj2 = { default: module_3729 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3729;
 }
@@ -56,7 +58,7 @@ export default function parseISO(claimedAt, arg1) {
       return date;
     }
   }
-  let obj = {};
+  const obj = {};
   const parts = claimedAt.split(dateTimeDelimiter.dateTimeDelimiter);
   if (parts.length <= 2) {
     const first = parts[0];
@@ -183,13 +185,13 @@ export default function parseISO(claimedAt, arg1) {
             }
           }
           const _isNaN3 = isNaN;
-          let _Date6 = Date;
+          const _Date6 = Date;
           if (isNaN(num38)) {
-            _Date6 = new _Date6(NaN);
-            return _Date6;
-          } else {
-            const _Date61 = new _Date6(time + num26 + num38);
+            const _Date61 = new _Date6(NaN);
             return _Date61;
+          } else {
+            const _Date62 = new _Date6(time + num26 + num38);
+            return _Date62;
           }
         } else {
           const _Date4 = Date;
@@ -230,16 +232,17 @@ export default function parseISO(claimedAt, arg1) {
       if (null !== parsed2) {
         parsed1 = 100 * parsed2;
       }
-      obj = { year: parsed1, restDateString: null };
+      const obj2 = { year: parsed1, restDateString: null };
       let arr2 = match3[1];
       if (!arr2) {
         arr2 = match3[2];
       }
-      obj.restDateString = str4.slice(arr2.length);
+      obj2.restDateString = str4.slice(arr2.length);
+      let obj3 = obj2;
     } else {
-      obj = { year: NaN, restDateString: "" };
+      obj3 = { year: NaN, restDateString: "" };
     }
-    ({ restDateString, year } = obj);
+    ({ restDateString, year } = obj3);
     if (null === year) {
       const _Date3 = Date;
       let match4 = new.target;
@@ -285,15 +288,15 @@ export default function parseISO(claimedAt, arg1) {
       if (tmp48) {
         tmp48 = diff1 <= 6;
       }
-      let _Date2 = date5.Date;
+      const _Date2 = date5.Date;
       if (tmp48) {
-        _Date2 = new _Date2(0);
-        _Date2.setUTCFullYear(year, 0, num4);
+        const _Date21 = new _Date2(0);
+        _Date21.setUTCFullYear(year, 0, num4);
         num4 = parsed6 - num;
-        const diff2 = 7 * num4 + diff1 + num - (_Date2.getUTCDay() || 7);
-        _Date2.setUTCDate(_Date2.getUTCDate() + diff2);
-        match4 = _Date2;
-        const tmp54 = _Date2.getUTCDay() || 7;
+        const diff2 = 7 * num4 + diff1 + num - (_Date21.getUTCDay() || 7);
+        _Date21.setUTCDate(_Date21.getUTCDate() + diff2);
+        match4 = _Date21;
+        const tmp54 = _Date21.getUTCDay() || 7;
       } else {
         match4 = new _Date2(NaN);
       }

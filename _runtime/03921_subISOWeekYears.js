@@ -1,25 +1,28 @@
 // _runtime/03921_subISOWeekYears.js
-import 03881__ from "metro/03881__.js";
-import requiredArgs from "03726_requiredArgs.js";
-import 03729__ from "metro/03729__.js";
+import module_3881_mod from "metro/03881__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
+import module_3729_mod from "metro/03729__.js";
 
+let module_3881 = module_3881_mod;
 if (!module_3881) {
-  let obj = { default: module_3881 };
+  const obj = { default: module_3881 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3881;
 }
 module_3881 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3729 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3729;
 }

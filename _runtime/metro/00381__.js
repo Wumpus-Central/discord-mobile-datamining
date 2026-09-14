@@ -4,7 +4,7 @@ import _modDef366 from "00366__.js";
 import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import hasOwnProperty_mod from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
@@ -28,6 +28,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let hasOwnProperty = hasOwnProperty_mod;
 class AnimatedStyle {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;
@@ -172,15 +173,14 @@ let items = [
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
       const self = this;
-      let obj = {};
+      const obj = {};
       const _nodes = this._nodes;
       for (let num = 0; num < length; num = num + 1) {
         let obj2 = _nodes[num];
         let __makeNativeResult = obj2.__makeNative(tmp);
         obj[this._nodeKeys[num]] = obj2.__getNativeTag();
       }
-      obj = { type: "style", style: obj, debugID: self.__getDebugID() };
-      return obj;
+      return { type: "style", style: obj, debugID: self.__getDebugID() };
     },
   },
 ];
@@ -193,7 +193,7 @@ const entry1 = {
     } else {
       const items = [];
       const items1 = [];
-      let obj = {};
+      const obj3 = {};
       let construct = globalThis;
       const _Object = Object;
       const keys = Object.keys(arg0);
@@ -204,7 +204,7 @@ const entry1 = {
           tmp2 = arg0[tmp];
           if (null != arg1) {
             if (!c10(arg1, tmp)) {
-              obj[tmp] = tmp2;
+              obj3[tmp] = tmp2;
             }
             num = num + 1;
           }
@@ -215,15 +215,15 @@ const entry1 = {
           }
           let fromResult = tmp2;
           if (!(tmp2 instanceof AnimatedStyle(367))) {
-            obj = AnimatedStyle(382);
+            let obj = AnimatedStyle(382);
             fromResult = obj.from(tmp2);
           }
           if (null == fromResult) {
-            obj[tmp] = tmp2;
+            obj3[tmp] = tmp2;
           } else {
-            items.push(tmp);
-            let arr = items1.push(fromResult);
-            obj[tmp] = fromResult;
+            let arr = items.push(tmp);
+            let arr3 = items1.push(fromResult);
+            obj3[tmp] = fromResult;
           }
         }
         let tmp12 = AnimatedStyle;
@@ -238,25 +238,25 @@ const entry1 = {
         }
         obj2 = _modAll27;
       }
-      const items2 = [items, items1, obj];
+      const items2 = [items, items1, obj3];
       const arr2 = _slicedToArray(items2, 3)[1];
       if (0 === arr2.length) {
         return null;
       } else {
-        obj = Object.create(AnimatedStyle.prototype);
-        _classCallCheck(obj, AnimatedStyle);
+        const obj4 = Object.create(AnimatedStyle.prototype);
+        _classCallCheck(obj4, AnimatedStyle);
         const items3 = [undefined];
         let constructor = metroRequire;
         const obj5 = metroRequire(AnimatedStyle);
         if (_isNativeReflectConstruct()) {
           const _Reflect = construct.Reflect;
           construct = _Reflect.construct;
-          constructor = constructor(obj).constructor;
+          constructor = constructor(obj4).constructor;
           let constructResult = construct(obj5, items3, constructor);
         } else {
-          constructResult = obj5.apply(obj, items3);
+          constructResult = obj5.apply(obj4, items3);
         }
-        const tmp29Result = hasOwnProperty(obj, constructResult);
+        const tmp29Result = hasOwnProperty(obj4, constructResult);
         tmp29Result._nodeKeys = tmp19;
         tmp29Result._nodes = arr2;
         tmp29Result._style = tmp20;

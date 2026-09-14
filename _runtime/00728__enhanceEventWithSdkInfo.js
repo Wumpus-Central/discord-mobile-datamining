@@ -9,7 +9,7 @@ const dependencyMap = arg6;
 function _enhanceEventWithSdkInfo(sdk, name) {
   if (name) {
     const tmp = sdk.sdk || {};
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(tmp);
     obj.name = tmp.name || name.name;
     obj.version = tmp.version || name.version;
@@ -22,9 +22,9 @@ function _enhanceEventWithSdkInfo(sdk, name) {
       integrations = [];
     }
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
     const tmp9 = name.integrations || [];
-    arraySpreadResult = HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
     obj.integrations = items;
     const sdk2 = sdk.sdk;
     let packages;
@@ -35,9 +35,9 @@ function _enhanceEventWithSdkInfo(sdk, name) {
       packages = [];
     }
     const items1 = [];
-    const arraySpreadResult1 = HermesBuiltin.arraySpread(packages, 0);
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
     const tmp17 = name.packages || [];
-    HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
     obj.packages = items1;
     const sdk3 = sdk.sdk;
     let settings;
@@ -50,10 +50,10 @@ function _enhanceEventWithSdkInfo(sdk, name) {
       if (sdk4 != null) {
         settings1 = sdk4.settings;
       }
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(settings1);
       const merged2 = Object.assign(name.settings);
-      const tmp23 = obj;
+      const tmp23 = obj2;
     }
     obj.settings = tmp23;
     sdk.sdk = obj;
@@ -79,30 +79,33 @@ export const createEventEnvelope = function createEventEnvelope(type, url, sdk, 
     sdk = sdk.sdk;
   }
   _enhanceEventWithSdkInfo(type, sdk);
-  let tmp3Result = forEachEnvelopeItem;
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  const eventEnvelopeHeaders = forEachEnvelopeItem.createEventEnvelopeHeaders(
+    type,
+    sdkMetadataForEnvelopeHeader,
+    arg3,
+    url,
+  );
   delete tmp[tmp2];
   const items = [{ type: str }, type];
-  tmp3Result = forEachEnvelopeItem;
+  const tmp3Result = forEachEnvelopeItem;
   const items1 = [items];
-  return tmp3Result.createEnvelope(eventEnvelopeHeaders, items1);
+  return forEachEnvelopeItem.createEnvelope(eventEnvelopeHeaders, items1);
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
-  let obj = forEachEnvelopeItem;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
-  obj = { sent_at: new Date().toISOString() };
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
   let tmp4 = sdkMetadataForEnvelopeHeader;
   if (sdkMetadataForEnvelopeHeader) {
-    obj = { sdk: sdkMetadataForEnvelopeHeader };
-    tmp4 = obj;
+    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
   }
   const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && arg1;
+  let tmp6 = arg3 && url;
   if (tmp6) {
-    const obj1 = { dsn: null };
-    let tmpResult = _mod702;
-    obj1.dsn = tmpResult.dsnToString(arg1);
-    tmp6 = obj1;
+    const obj4 = { dsn: _mod702.dsnToString(url) };
+    tmp6 = obj4;
+    const tmpResult = _mod702;
   }
   const merged1 = Object.assign(tmp6);
   if ("aggregates" in toJSON) {
@@ -111,13 +114,12 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
-  tmpResult = forEachEnvelopeItem;
+  const date = new Date();
   const items2 = [items1];
-  return tmpResult.createEnvelope(obj, items2);
+  return forEachEnvelopeItem.createEnvelope(obj2, items2);
 };
 export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
-  let obj = beforeSendSpan(ignoreSpans[2]);
-  const dynamicSamplingContextFromSpan = obj.getDynamicSamplingContextFromSpan(arr[0]);
+  const dynamicSamplingContextFromSpan = beforeSendSpan(ignoreSpans[2]).getDynamicSamplingContextFromSpan(arr[0]);
   let dsn;
   if (getDsn != null) {
     dsn = getDsn.getDsn();
@@ -126,19 +128,20 @@ export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
   if (getDsn != null) {
     tunnel = getDsn.getOptions().tunnel;
   }
-  obj = { sent_at: new Date().toISOString() };
+  let obj = beforeSendSpan(ignoreSpans[2]);
+  const obj2 = { sent_at: new Date().toISOString() };
   let tmp8 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
     return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
   })(dynamicSamplingContextFromSpan);
   if (tmp8) {
-    obj = { trace: dynamicSamplingContextFromSpan };
-    tmp8 = obj;
+    const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp8 = obj3;
   }
   const merged = Object.assign(tmp8);
   let tmp10 = tunnel && dsn;
   if (tmp10) {
-    const obj1 = { dsn: tmp2(tmp4[1]).dsnToString(dsn) };
-    tmp10 = obj1;
+    const obj4 = { dsn: tmp2(tmp4[1]).dsnToString(dsn) };
+    tmp10 = obj4;
     const tmp2Result = tmp2(tmp4[1]);
   }
   const merged1 = Object.assign(tmp10);

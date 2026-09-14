@@ -1,6 +1,6 @@
 // _runtime/metro/06997__.js
 import _modDef6986 from "06986__.js";
-import _classCallCheck from "06967__.js";
+import _classCallCheck_mod from "06967__.js";
 import _createClass from "06968__.js";
 import _getPrototypeOf from "06988__.js";
 import _get from "06989__.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _modDef6986;
 class RVLinearLayoutManagerImpl {
   constructor(arg0, arg1) {
@@ -123,13 +124,13 @@ let items = [
       if (0 === this.layouts.length) {
         return { width: 0, height: 0 };
       } else {
-        let size = self.layouts[self.layouts.length - 1];
+        const size = self.layouts[self.layouts.length - 1];
         if (self.horizontal) {
           let boundedSize = size.x + size.width;
         } else {
           boundedSize = self.boundedSize;
         }
-        size = { width: boundedSize, height: null };
+        const size1 = { width: boundedSize, height: null };
         if (self.horizontal) {
           const tallestItem = self.tallestItem;
           let height;
@@ -143,8 +144,8 @@ let items = [
         } else {
           sum = size.y + size.height;
         }
-        size.height = sum;
-        return size;
+        size1.height = sum;
+        return size1;
       }
     },
   },

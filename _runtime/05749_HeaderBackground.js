@@ -10,12 +10,11 @@ const container = StyleSheet.create({ container: { flex: 1, elevation: 4 } });
 
 export const HeaderBackground = function HeaderBackground(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  let obj = Link;
-  const theme = obj.useTheme();
+  const theme = Link.useTheme();
   ({ colors, dark } = theme);
-  obj = { style: null };
+  const obj2 = { style: null };
   const items = [container.container, { backgroundColor: colors.card, borderBottomColor: colors.border }, style.style];
-  obj.style = items;
+  obj2.style = items;
   const merged1 = Object.assign(merged);
   return <RN.View style={null} />;
 };

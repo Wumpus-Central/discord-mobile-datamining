@@ -7,8 +7,7 @@ const IFD_TYPE_0THDefault = IFD_TYPE_0TH2;
 
 require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
-  obj = _modDef5311;
-  const typeSize = obj.getTypeSize("SHORT");
+  const typeSize = _modDef5311.getTypeSize("SHORT");
   sum = typeSize + _modDef5311.getTypeSize("SHORT");
   const sum1 = sum + _modDef5311.getTypeSize("LONG");
   const shortAt = _modDef5311.getShortAt(byteLength, sum, byteOrder);
@@ -95,8 +94,8 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
       combined = IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt];
       descriptionResult = `${tmp34[0] / tmp34[1]}`;
     }
-    obj = { id: shortAt, name: combined, value: tmp34, description: descriptionResult, __offset: tmp21 };
-    return obj;
+    const obj7 = { id: shortAt, name: combined, value: tmp34, description: descriptionResult, __offset: tmp21 };
+    return obj7;
   }
 }
 function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
@@ -149,14 +148,13 @@ obj[9] = _modDef5311.getSlongAt;
 obj[10] = _modDef5311.getSrationalAt;
 obj[13] = _modDef5311.getIfdPointerAt;
 function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
-  obj = _modDef5311;
-  const typeSize = obj.getTypeSize("SHORT");
+  const typeSize = _modDef5311.getTypeSize("SHORT");
   let num = 0;
   if (sum + obj2.getTypeSize("SHORT") <= byteLength.byteLength) {
     num = _modDef5311.getShortAt(byteLength, sum, byteOrder);
     const tmpResult = _modDef5311;
   }
-  obj = {};
+  const obj3 = {};
   sum = sum + typeSize;
   let tmp5 = sum;
   if (0 < num) {
@@ -167,16 +165,16 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
       while (true) {
         let tmp13 = readTag(byteLength, IFD_TYPE_0TH, sum, tmp22, byteOrder, arg5);
         if (undefined !== tmp13) {
-          obj = { id: null, value: null, description: null };
+          let obj4 = { id: null, value: null, description: null };
           ({ id: obj7.id, value: obj7.value, description: obj7.description } = tmp13);
-          obj[tmp13.name] = obj;
+          obj3[tmp13.name] = obj4;
           let tmp19 = "MakerNote" === tmp13.name;
           if (!tmp19) {
             let tmp18 = IFD_TYPE_0TH === IFD_TYPE_0TH2.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
             tmp19 = tmp18;
           }
           if (tmp19) {
-            obj[tmp13.name].__offset = tmp13.__offset;
+            obj3[tmp13.name].__offset = tmp13.__offset;
           }
         }
         let sum1 = tmp22 + 12;
@@ -196,20 +194,20 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
     }
   }
   if (_modDef5297.USE_THUMBNAIL) {
-    let tmp23Result = _modDef5311;
     if (tmp5 < byteLength.byteLength - tmp23Result.getTypeSize("LONG")) {
-      tmp23Result = _modDef5311;
-      const longAt = tmp23Result.getLongAt(byteLength, tmp5, byteOrder);
+      const longAt = _modDef5311.getLongAt(byteLength, tmp5, byteOrder);
       let tmp26 = 0 !== longAt;
       if (tmp26) {
         tmp26 = IFD_TYPE_0TH === IFD_TYPE_0TH2.IFD_TYPE_0TH;
       }
       if (tmp26) {
-        obj.Thumbnail = readIfd(byteLength, IFD_TYPE_0TH2.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
+        obj3.Thumbnail = readIfd(byteLength, IFD_TYPE_0TH2.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
       }
+      const tmp23Result2 = _modDef5311;
     }
+    tmp23Result = _modDef5311;
   }
-  return obj;
+  return obj3;
 }
 
 export const get0thIfdOffset = function get0thIfdOffset(buffer, c5, byteOrder) {

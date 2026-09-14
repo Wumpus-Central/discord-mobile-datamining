@@ -54,28 +54,28 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let string = { localeError: null };
-        string = { string: null, file: null, array: null, set: null };
-        string = {
+        const obj = { localeError: null };
+        const obj2 = { string: null, file: null, array: null, set: null };
+        const obj3 = {
           unit: { one: "\u0576\u0577\u0561\u0576", many: "\u0576\u0577\u0561\u0576\u0576\u0565\u0580" },
           verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C",
         };
-        string.string = string;
-        const obj1 = {
+        obj2.string = obj3;
+        const obj4 = {
           unit: { one: "\u0562\u0561\u0575\u0569", many: "\u0562\u0561\u0575\u0569\u0565\u0580" },
           verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C",
         };
-        string.file = obj1;
-        const obj2 = {
+        obj2.file = obj4;
+        const obj5 = {
           unit: { one: "\u057F\u0561\u0580\u0580", many: "\u057F\u0561\u0580\u0580\u0565\u0580" },
           verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C",
         };
-        string.array = obj2;
-        const obj3 = {
+        obj2.array = obj5;
+        const obj6 = {
           unit: { one: "\u057F\u0561\u0580\u0580", many: "\u057F\u0561\u0580\u0580\u0565\u0580" },
           verb: "\u0578\u0582\u0576\u0565\u0576\u0561\u056C",
         };
-        string.set = obj3;
+        obj2.set = obj6;
         closure_1 = {
           regex: "\u0574\u0578\u0582\u057F\u0584",
           email: "\u0567\u056C. \u0570\u0561\u057D\u0581\u0565",
@@ -107,7 +107,7 @@ if (self2) {
           template_literal: "\u0574\u0578\u0582\u057F\u0584",
         };
         closure_2 = { nan: "NaN", number: "\u0569\u056B\u057E", array: "\u0566\u0561\u0576\u0563\u057E\u0561\u056E" };
-        string.localeError = (code) => {
+        obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
               let expected = closure_2[code.expected];
@@ -119,7 +119,6 @@ if (self2) {
               if (tmp43 == null) {
                 tmp43 = parsedTypeResult;
               }
-              const obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -154,7 +153,7 @@ if (self2) {
               if (code.inclusive) {
                 str38 = "<=";
               }
-              let tmp25 = obj[code.origin];
+              let tmp25 = obj2[code.origin];
               if (tmp25 == null) {
                 tmp25 = null;
               }
@@ -217,7 +216,7 @@ if (self2) {
               if (code.inclusive) {
                 str26 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -354,7 +353,7 @@ if (self2) {
               return "\u054D\u056D\u0561\u056C \u0574\u0578\u0582\u057F\u0584\u0561\u0563\u0580\u0578\u0582\u0574";
           }
         };
-        return string;
+        return obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }

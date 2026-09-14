@@ -1,6 +1,8 @@
 // _runtime/06835_VirtualDetector.js
 import _slicedToArray from "metro/00032__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const noop = fn(19);
 ({ useCallback: c3, useEffect: closure_4, useMemo: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
@@ -10,8 +12,7 @@ const jsx = fn(21).jsx;
 
 export const VirtualDetector = function VirtualDetector(children) {
   _require = children;
-  let obj = require("metro/06834__.js");
-  const interceptingDetectorContext = obj.useInterceptingDetectorContext();
+  const interceptingDetectorContext = require("metro/06834__.js").useInterceptingDetectorContext();
   if (interceptingDetectorContext) {
     register = interceptingDetectorContext.register;
     const unregister = interceptingDetectorContext.unregister;
@@ -22,8 +23,19 @@ export const VirtualDetector = function VirtualDetector(children) {
     const first = tmp14[0];
     closure_6 = tmp14[1];
     const items = [children.children];
-    let tmpResult = tmp(tmp2[6]);
-    const nativeGestureRole = tmpResult.useNativeGestureRole(tmp11, children.children);
+    const tmp17 = setMode((current) => {
+      closure_4.current = current;
+      if (current) {
+        let num2 = React6(current);
+        if (num2 == null) {
+          num2 = -1;
+        }
+        closure_6(num2);
+      } else {
+        closure_6(-1);
+      }
+    }, items);
+    const nativeGestureRole = tmp(tmp2[6]).useNativeGestureRole(tmp11, children.children);
     const items1 = [children.gesture];
     const tmp20 = first(() => {
       const gesture = children.gesture;
@@ -35,8 +47,8 @@ export const VirtualDetector = function VirtualDetector(children) {
       return handlerTags;
     }, items1);
     handlerTags = tmp20;
-    tmpResult = tmp(tmp2[8]);
-    const detectorAttachmentGuard = tmpResult.useDetectorAttachmentGuard(tmp20);
+    const tmpResult = tmp(tmp2[6]);
+    const detectorAttachmentGuard = tmp(tmp2[8]).useDetectorAttachmentGuard(tmp20);
     const items2 = [first, children.gesture, tmp20, , , , , ,];
     ({ userSelect: arr3[3], touchAction: arr3[4], enableContextMenu: arr3[5] } = children);
     items2[6] = register;
@@ -61,9 +73,9 @@ export const VirtualDetector = function VirtualDetector(children) {
             handlerTags,
             methods: tmp2.gesture.detectorCallbacks,
             viewRef: "a",
-            userSelect: "c\u0103ldur\u0103",
-            touchAction: "fa\u021B\u0103",
-            enableContextMenu: "\u00EEnsorit",
+            userSelect: true,
+            touchAction: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000027349850532621987,
+            enableContextMenu: 12339292380640374000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
           };
           ({
             userSelect: obj.userSelect,
@@ -77,20 +89,9 @@ export const VirtualDetector = function VirtualDetector(children) {
         }
       }
     }, items2);
-    const tmp17 = setMode((current) => {
-      closure_4.current = current;
-      if (current) {
-        let num2 = React6(current);
-        if (num2 == null) {
-          num2 = -1;
-        }
-        closure_6(num2);
-      } else {
-        closure_6(-1);
-      }
-    }, items);
+    const tmpResult4 = tmp(tmp2[8]);
     const gestureRelationsUpdater = tmp(tmp2[9]).useGestureRelationsUpdater(children.gesture);
-    obj = { ref: tmp17, children: children.children };
+    const obj2 = { ref: tmp17, children: children.children };
     return jsx(tmp(tmp2[10]).Wrap, { ref: tmp17, children: children.children });
   } else {
     let _Error = Error;
@@ -99,4 +100,5 @@ export const VirtualDetector = function VirtualDetector(children) {
     );
     throw error;
   }
+  let obj = require("metro/06834__.js");
 };

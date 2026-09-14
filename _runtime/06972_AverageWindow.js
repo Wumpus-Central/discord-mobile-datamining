@@ -1,7 +1,8 @@
 // _runtime/06972_AverageWindow.js
-import _classCallCheck from "metro/06967__.js";
+import _classCallCheck_mod from "metro/06967__.js";
 import _createClass from "metro/06968__.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class AverageWindow {
   constructor(arg0, arg1) {
     self = this;

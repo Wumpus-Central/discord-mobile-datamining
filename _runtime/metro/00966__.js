@@ -3,6 +3,8 @@ import _mod682 from "00682__.js";
 import ignoreNextOnError from "../00893_ignoreNextOnError.js";
 import _mod937 from "00937__.js";
 
+const require = globalThis.__r;
+
 function createProfilePayload(event_id, arg1, resources, type) {
   if ("transaction" !== type.type) {
     const _TypeError2 = TypeError;
@@ -50,7 +52,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
       } else {
         result = 1000 * _mod682.timestampInSeconds();
       }
-      let obj = {
+      const obj = {
         event_id,
         timestamp: null,
         platform: "javascript",
@@ -73,12 +75,12 @@ function createProfilePayload(event_id, arg1, resources, type) {
         DEFAULT_ENVIRONMENT = _mod682.DEFAULT_ENVIRONMENT;
       }
       obj.environment = DEFAULT_ENVIRONMENT;
-      obj = { name: "javascript", version: ignoreNextOnError.WINDOW.navigator.userAgent };
-      obj.runtime = obj;
-      obj = { name, version, build_number: manufacturer };
-      obj.os = obj;
-      const obj1 = { locale: str3, model, manufacturer, architecture, is_emulator: false };
-      obj.device = obj1;
+      const obj2 = { name: "javascript", version: ignoreNextOnError.WINDOW.navigator.userAgent };
+      obj.runtime = obj2;
+      const obj3 = { name, version, build_number: manufacturer };
+      obj.os = obj3;
+      const obj4 = { locale: str3, model, manufacturer, architecture, is_emulator: false };
+      obj.device = obj4;
       const client = _mod682.getClient();
       let options;
       if (client != null) {
@@ -89,15 +91,15 @@ function createProfilePayload(event_id, arg1, resources, type) {
         stackParser = options.stackParser;
       }
       if (stackParser) {
-        let tmp22Result = _mod682;
-        let debugImagesForResources = tmp22Result.getDebugImagesForResources(stackParser, resources.resources);
+        let debugImagesForResources = _mod682.getDebugImagesForResources(stackParser, resources.resources);
+        const tmp22Result = _mod682;
       } else {
         debugImagesForResources = [];
       }
-      const obj2 = { images: debugImagesForResources };
-      obj.debug_meta = obj2;
+      const obj5 = { images: debugImagesForResources };
+      obj.debug_meta = obj5;
       obj.profile = tmp8;
-      const obj3 = {
+      const obj7 = {
         name: type.transaction || "",
         id: null,
         trace_id: null,
@@ -107,15 +109,15 @@ function createProfilePayload(event_id, arg1, resources, type) {
       };
       event_id = type.event_id;
       if (!event_id) {
-        tmp22Result = _mod682;
-        event_id = tmp22Result.uuid4();
+        event_id = _mod682.uuid4();
+        const tmp22Result2 = _mod682;
       }
-      obj3.id = event_id;
-      obj3.trace_id = str4;
-      obj3.active_thread_id = StringResult;
+      obj7.id = event_id;
+      obj7.trace_id = str4;
+      obj7.active_thread_id = StringResult;
       const result1 = 1000000 * (result - arg1);
-      obj3.relative_end_ns = result1.toFixed(0);
-      const items = [obj3];
+      obj7.relative_end_ns = result1.toFixed(0);
+      const items = [obj7];
       obj.transactions = items;
       return obj;
     } else if (typeof type.start_timestamp === "number") {
@@ -128,9 +130,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
 function convertJSSelfProfileToSampledFormat(samples) {
   _require = samples;
   let stack_id2 = 0;
-  let obj = { samples: [], stacks: [], frames: [], thread_metadata: null };
-  obj = { name: timestamp };
-  obj.thread_metadata = { [closure_3]: obj };
+  let obj = { samples: [], stacks: [], frames: [], thread_metadata: { [closure_3]: { name: timestamp } } };
   const first = samples.samples[0];
   if (first) {
     timestamp = first.timestamp;
@@ -158,12 +158,12 @@ function convertJSSelfProfileToSampledFormat(samples) {
           obj.stacks[stack_id] = [];
           stack_id2 = stack_id2 + 1;
         }
-        obj = { elapsed_since_start_ns: null, stack_id: null, thread_id: null };
+        const obj2 = { elapsed_since_start_ns: null, stack_id: null, thread_id: null };
         const result = (stackId.timestamp + closure_5 - timestamp) * c2;
-        obj.elapsed_since_start_ns = result.toFixed(0);
-        obj.stack_id = stack_id;
-        obj.thread_id = StringResult;
-        obj.samples[index] = obj;
+        obj2.elapsed_since_start_ns = result.toFixed(0);
+        obj2.stack_id = stack_id;
+        obj2.thread_id = StringResult;
+        obj.samples[index] = obj2;
       } else {
         let tmp10 = samples.stacks[stackId.stackId];
         const items = [];
@@ -192,13 +192,13 @@ function convertJSSelfProfileToSampledFormat(samples) {
             tmp10 = tmp9;
           } while (tmp9);
         }
-        obj = { elapsed_since_start_ns: null, stack_id: null, thread_id: null };
+        const obj3 = { elapsed_since_start_ns: null, stack_id: null, thread_id: null };
         const result1 = (stackId.timestamp + closure_5 - timestamp) * c2;
-        obj.elapsed_since_start_ns = result1.toFixed(0);
-        obj.stack_id = stack_id2;
-        obj.thread_id = StringResult;
+        obj3.elapsed_since_start_ns = result1.toFixed(0);
+        obj3.stack_id = stack_id2;
+        obj3.thread_id = StringResult;
         obj.stacks[stack_id2] = items;
-        obj.samples[index] = obj;
+        obj.samples[index] = obj3;
         stack_id2 = stack_id2 + 1;
       }
     });
@@ -206,6 +206,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
   } else {
     return obj;
   }
+  let obj2 = { name: timestamp };
 }
 function isValidSampleRate(concat) {
   if (typeof concat === "number") {
@@ -396,7 +397,7 @@ export const addProfilesToEnvelope = function addProfilesToEnvelope(arg0, arg1) 
     while (tmp2 !== undefined) {
       let arr = arg0[1];
       let items = [{ type: "profile" }, tmp4];
-      arr = arr.push(items);
+      let arr2 = arr.push(items);
       continue;
     }
     return arg0;
@@ -416,19 +417,19 @@ export const attachProfiledThreadToEvent = function attachProfiledThreadToEvent(
   if (profile) {
     if (contexts.contexts) {
       const contexts2 = contexts.contexts;
-      let trace;
+      let trace1;
       if (contexts2 != null) {
-        trace = contexts2.trace;
+        trace1 = contexts2.trace;
       }
-      if (trace == null) {
-        trace = {};
+      if (trace1 == null) {
+        trace1 = {};
       }
       let obj = {};
-      let merged = Object.assign(trace);
+      let merged = Object.assign(trace1);
       const contexts3 = contexts.contexts;
       let data;
       if (contexts3 != null) {
-        trace = contexts3.trace;
+        const trace = contexts3.trace;
         if (trace != null) {
           data = trace.data;
         }
@@ -436,11 +437,11 @@ export const attachProfiledThreadToEvent = function attachProfiledThreadToEvent(
       if (data == null) {
         data = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(data);
-      obj["thread.id"] = StringResult;
-      obj["thread.name"] = str;
-      obj.data = obj;
+      obj2["thread.id"] = StringResult;
+      obj2["thread.name"] = str;
+      obj.data = obj2;
       contexts.contexts.trace = obj;
       const spans = contexts.spans;
       if (spans != null) {
@@ -498,8 +499,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
         items1[num2] = items2;
       }
     }
-    let obj1 = _mod682;
-    let result = obj1.browserPerformanceTimeOrigin();
+    let result = _mod682.browserPerformanceTimeOrigin();
     const _performance = performance;
     if (typeof performance.timeOrigin === "number") {
       const _performance2 = performance;
@@ -522,15 +522,15 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
         if (num6 == null) {
           num6 = 0;
         }
-        obj = { stack_id: num6, thread_id: StringResult, timestamp: result1 };
-        items3[num5] = obj;
+        let obj3 = { stack_id: num6, thread_id: StringResult, timestamp: result1 };
+        items3[num5] = obj3;
       }
     }
-    obj = { frames: items, stacks: items1, samples: items3, thread_metadata: null };
-    obj1 = {};
-    const obj2 = { name: str };
-    obj1[StringResult] = obj2;
-    obj.thread_metadata = obj1;
+    const obj4 = { frames: items, stacks: items1, samples: items3, thread_metadata: null };
+    const obj5 = {};
+    const obj6 = { name: str };
+    obj5[StringResult] = obj6;
+    obj4.thread_metadata = obj5;
     const options = _client.getOptions();
     const getSdkMetadata = _client.getSdkMetadata;
     let sdk;
@@ -540,8 +540,8 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
         sdk = sdkMetadata.sdk;
       }
     }
-    const obj3 = {
-      chunk_id: _mod682.uuid4(),
+    const obj7 = {
+      chunk_id: null,
       client_sdk: null,
       profiler_id: null,
       platform: "javascript",
@@ -551,6 +551,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
       debug_meta: null,
       profile: null,
     };
+    obj7.chunk_id = _mod682.uuid4();
     str = undefined;
     if (sdk != null) {
       str = sdk.name;
@@ -558,7 +559,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
     if (str == null) {
       str = "sentry.javascript.browser";
     }
-    const obj4 = { name: str, version: null };
+    const obj9 = { name: str, version: null };
     let str2;
     if (sdk != null) {
       str2 = sdk.version;
@@ -567,25 +568,24 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
       str2 = "0.0.0";
     }
     let uuid4Result = _profilerId;
-    obj4.version = str2;
-    obj3.client_sdk = obj4;
+    obj9.version = str2;
+    obj7.client_sdk = obj9;
     if (!_profilerId) {
-      let tmp24Result = _mod682;
-      uuid4Result = tmp24Result.uuid4();
+      uuid4Result = _mod682.uuid4();
+      const tmp24Result = _mod682;
     }
-    obj3.profiler_id = uuid4Result;
+    obj7.profiler_id = uuid4Result;
     str3 = options.release;
     if (str3 == null) {
       str3 = "";
     }
-    obj3.release = str3;
+    obj7.release = str3;
     let str4 = options.environment;
     if (str4 == null) {
       str4 = "production";
     }
-    obj3.environment = str4;
-    tmp24Result = _mod682;
-    const client = tmp24Result.getClient();
+    obj7.environment = str4;
+    const client = _mod682.getClient();
     let options1;
     if (client != null) {
       options1 = client.getOptions();
@@ -596,14 +596,14 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
     }
     if (stackParser) {
       let debugImagesForResources = _mod682.getDebugImagesForResources(stackParser, frames.resources);
-      const tmp24Result1 = _mod682;
+      const tmp24Result4 = _mod682;
     } else {
       debugImagesForResources = [];
     }
-    const obj5 = { images: debugImagesForResources };
-    obj3.debug_meta = obj5;
-    obj3.profile = obj;
-    return obj3;
+    const obj10 = { images: debugImagesForResources };
+    obj7.debug_meta = obj10;
+    obj7.profile = obj4;
+    return obj7;
   }
 };
 export { createProfilePayload };
@@ -838,16 +838,10 @@ export const validateProfileChunk = function validateProfileChunk(profiler_id) {
               const profile = profiler_id.profile;
               if (profile) {
                 const _Array = Array;
-                if (!Array.isArray(tmp3.frames)) {
-                  let obj = { reason: "profile has no frames" };
-                }
                 const _Array2 = Array;
-                if (!Array.isArray(tmp3.stacks)) {
-                  obj = { reason: "profile has no stacks" };
-                }
                 const _Array3 = Array;
                 if (!Array.isArray(tmp3.samples)) {
-                  obj = { reason: "profile has no samples" };
+                  let obj = { reason: "profile has no samples" };
                 }
                 obj = { valid: true };
               } else {
@@ -867,9 +861,9 @@ export const validateProfileChunk = function validateProfileChunk(profiler_id) {
     }
     return { reason: "chunk is not an object" };
   } catch (tmp11) {
-    const obj1 = { reason: null };
+    const obj4 = { reason: null };
     const _HermesInternal = HermesInternal;
-    obj1.reason = "unknown validation error: " + tmp11;
-    return obj1;
+    obj4.reason = "unknown validation error: " + tmp11;
+    return obj4;
   }
 };

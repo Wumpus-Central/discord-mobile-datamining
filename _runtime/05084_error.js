@@ -19,7 +19,7 @@ function ucs2decode(str) {
               let arr = items.push(((1023 & charCodeAtResult) << 10) + (1023 & charCodeAtResult1) + 65536);
               let diff = sum1;
             } else {
-              arr = items.push(charCodeAtResult);
+              let arr4 = items.push(charCodeAtResult);
               diff = sum1 - 1;
             }
             num = diff;
@@ -29,7 +29,7 @@ function ucs2decode(str) {
           }
         }
       }
-      let arr1 = items.push(charCodeAtResult);
+      let arr5 = items.push(charCodeAtResult);
       diff = sum;
     }
   }
@@ -212,10 +212,10 @@ function decode(arr) {
 }
 function encode(arg0) {
   const items = [];
-  let arr1 = ucs2decode(arg0);
+  const arr2 = ucs2decode(arg0);
   let num = 0;
   let num2 = 72;
-  const iter = arr1[Symbol.iterator]();
+  const iter = arr2[Symbol.iterator]();
   let num3 = 128;
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -230,7 +230,7 @@ function encode(arg0) {
   }
   if (sum2 < length) {
     let num4 = 2147483647;
-    const iter2 = arr1[Symbol.iterator]();
+    const iter2 = arr2[Symbol.iterator]();
     while (true) {
       let nextResult1 = iter2.next();
       while (iter2 !== undefined) {
@@ -249,7 +249,7 @@ function encode(arg0) {
         break;
       } else {
         let num5 = num + (num4 - num3) * sum;
-        for (const item10065 of arr1) {
+        for (const item10065 of arr2) {
           let tmp25 = item10065 < num4;
           if (tmp25) {
             let sum1 = num5 + 1;
@@ -280,13 +280,13 @@ function encode(arg0) {
                 } else {
                   let diff1 = tmp45 - tmp35;
                   let diff2 = 36 - tmp35;
-                  arr1 = items.push(fromCharCode(digitToBasic(tmp35 + (diff1 % diff2), 0)));
+                  let arr7 = items.push(fromCharCode(digitToBasic(tmp35 + (diff1 % diff2), 0)));
                   tmp45 = floor(diff1 / diff2);
                   num8 = num8 + 36;
                   continue;
                 }
               }
-              let arr2 = items.push(fromCharCode(digitToBasic(tmp45, 0)));
+              let arr8 = items.push(fromCharCode(digitToBasic(tmp45, 0)));
               num2 = adapt(num5, sum, sum2 == length2);
               num5 = 0;
               sum2 = sum2 + 1;

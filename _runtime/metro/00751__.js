@@ -21,10 +21,10 @@ export const createMetricEnvelope = function createMetricEnvelope(items, sdk, tu
   if (sdk != null) {
     sdk = sdk.sdk;
   }
-  let obj = {};
+  const obj = {};
   if (sdk) {
-    obj = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj;
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
   let tmp2 = tunnel;
   if (tunnel) {
@@ -33,12 +33,12 @@ export const createMetricEnvelope = function createMetricEnvelope(items, sdk, tu
   if (tmp2) {
     obj.dsn = _mod702.dsnToString(dsn);
   }
-  obj = {
+  items = [,];
+  items[0] = {
     type: "trace_metric",
     item_count: items.length,
     content_type: "application/vnd.sentry.items.trace-metric+json",
   };
-  items = [obj];
   items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);

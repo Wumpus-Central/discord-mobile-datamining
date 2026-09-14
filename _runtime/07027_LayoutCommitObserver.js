@@ -2,16 +2,17 @@
 import _mod6976 from "metro/06976__.js";
 import _mod6977 from "metro/06977__.js";
 import _slicedToArray from "metro/06958__.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 require = fn;
 let noop = fn(19);
 ({ useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo((children) => {
   const onCommitLayoutEffect = children.onCommitLayoutEffect;
   const recyclerViewContext = _mod6977.useRecyclerViewContext();
-  [r10018, tmp3] = _slicedToArray(_mod6976.useLayoutState(0), 2);
+  [r10018, tmp3] = _mod6976.useLayoutState(0);
   _slicedToArray = tmp3;
   const tmp2 = _slicedToArray(_mod6976.useLayoutState(0), 2);
   const current = hasOwnProperty(new Set()).current;

@@ -1,8 +1,9 @@
 // _runtime/03932_eachHourOfInterval.js
-import 03879__ from "metro/03879__.js";
-import _typeof from "metro/03725__.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3879_mod from "metro/03879__.js";
+import _typeof_mod from "metro/03725__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3879 = module_3879_mod;
 if (!module_3879) {
   let obj = { default: module_3879 };
   let tmp3 = obj;
@@ -10,16 +11,18 @@ if (!module_3879) {
   tmp3 = module_3879;
 }
 module_3879 = tmp3;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

@@ -5,19 +5,19 @@ import ListCache from "00612_ListCache.js";
 
 export default function stackSet(arg0, arg1) {
   const self = this;
-  let __data__ = this.__data__;
+  const __data__ = this.__data__;
   let obj = __data__;
   if (__data__ instanceof ListCache) {
-    __data__ = __data__.__data__;
+    const __data__1 = __data__.__data__;
     if (_mod611) {
-      if (__data__.length >= 199) {
-        const tmp6 = new MapCache(__data__);
+      if (__data__1.length >= 199) {
+        const tmp6 = new MapCache(__data__1);
         self.__data__ = tmp6;
         obj = tmp6;
       }
     }
     const items = [arg0, arg1];
-    __data__.push(items);
+    __data__1.push(items);
     const sum = __data__.size + 1;
     __data__.size = sum;
     self.size = sum;

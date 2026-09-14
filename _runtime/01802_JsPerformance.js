@@ -1,5 +1,5 @@
 // _runtime/01802_JsPerformance.js
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 import get_ActivityIndicator from "metro/00017__.js";
 import jsxProd from "react/00021_jsxProd.js";
 import configureProps from "01735_configureProps.js";
@@ -9,16 +9,15 @@ function JsPerformance(smoothingFrames) {
   smoothingFrames = smoothingFrames.smoothingFrames;
   let sharedValue;
   dependencyMap = undefined;
-  let obj = sharedValue(1779);
-  sharedValue = obj.useSharedValue(null);
+  sharedValue = sharedValue(1779).useSharedValue(null);
   sharedValue(1779);
   if (typeof createCircularDoublesBuffer === "function") {
-    obj = { next: 0, buffer: null, size: null, count: 0, push: null, front: null, back: null };
+    const obj2 = { next: 0, buffer: null, size: null, count: 0, push: null, front: null, back: null };
     const _Float32Array = Float32Array;
     const float32Array = new Float32Array(smoothingFrames);
-    obj.buffer = float32Array;
-    obj.size = smoothingFrames;
-    obj.push = function push(arg0) {
+    obj2.buffer = float32Array;
+    obj2.size = smoothingFrames;
+    obj2.push = function push(arg0) {
       this.buffer[this.next] = arg0;
       this.next = (this.next + 1) % this.size;
       this.count = Math.min(this.size, this.count + 1);
@@ -28,7 +27,7 @@ function JsPerformance(smoothingFrames) {
       }
       return tmp;
     };
-    obj.front = function front() {
+    obj2.front = function front() {
       const self = this;
       if (this.count > 0) {
         let diff = self.next - 1;
@@ -40,7 +39,7 @@ function JsPerformance(smoothingFrames) {
         return null;
       }
     };
-    obj.back = function back() {
+    obj2.back = function back() {
       const self = this;
       let tmp = null;
       if (this.count > 0) {
@@ -48,7 +47,7 @@ function JsPerformance(smoothingFrames) {
       }
       return tmp;
     };
-    dependencyMap = tmp6(obj);
+    dependencyMap = tmp6(obj2);
     const items = [sharedValue, tmp5];
     closure_2(() => {
       c0 = 0;
@@ -111,26 +110,27 @@ function JsPerformance(smoothingFrames) {
       const text = `${"JS: " + str} `;
       return { text, defaultValue: text };
     };
-    obj = { jsFps: sharedValue };
-    fn.__closure = obj;
+    const obj3 = { jsFps: sharedValue };
+    fn.__closure = obj3;
     fn.__workletHash = 12993491204154;
     fn.__initData = __initData;
-    const obj1 = { style: closure_16.container, children: null };
-    const obj2 = { style: closure_16.text, animatedProps: tmp(1779).useAnimatedProps(fn), editable: false };
-    obj1.children = closure_5(closure_8, obj2);
-    return closure_5(closure_4, obj1);
+    const obj4 = { style: closure_16.container, children: null };
+    const obj5 = { style: closure_16.text, animatedProps: tmp(1779).useAnimatedProps(fn), editable: false };
+    obj4.children = closure_5(closure_8, obj5);
+    return closure_5(closure_4, obj4);
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+  const obj = sharedValue(1779);
   tmp = sharedValue;
 }
 function UiPerformance(smoothingFrames) {
   smoothingFrames = smoothingFrames.smoothingFrames;
   let sharedValue;
+  sharedValue = smoothingFrames(sharedValue[5]).useSharedValue(null);
   let obj = smoothingFrames(sharedValue[5]);
-  sharedValue = obj.useSharedValue(null);
-  let obj1 = smoothingFrames(sharedValue[5]);
-  const sharedValue1 = obj1.useSharedValue(null);
+  const sharedValue1 = smoothingFrames(sharedValue[5]).useSharedValue(null);
+  const obj2 = smoothingFrames(sharedValue[5]);
   const fn = function n(arg0) {
     if (null === sharedValue1.value) {
       if (typeof createCircularDoublesBuffer === "function") {
@@ -192,18 +192,24 @@ function UiPerformance(smoothingFrames) {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  obj = {
+  fn.__closure = {
     circularBuffer: sharedValue1,
     createCircularDoublesBuffer,
     smoothingFrames,
     completeBufferRoutine,
     uiFps: sharedValue,
   };
-  fn.__closure = obj;
   fn.__workletHash = 10137562113926;
   fn.__initData = __initData2;
   smoothingFrames(sharedValue[5]).useFrameCallback(fn);
   const obj3 = smoothingFrames(sharedValue[5]);
+  const obj4 = {
+    circularBuffer: sharedValue1,
+    createCircularDoublesBuffer,
+    smoothingFrames,
+    completeBufferRoutine,
+    uiFps: sharedValue,
+  };
   const fn2 = function s() {
     let str = sharedValue.value;
     if (str == null) {
@@ -215,16 +221,18 @@ function UiPerformance(smoothingFrames) {
   fn2.__closure = { uiFps: sharedValue };
   fn2.__workletHash = 1865752198941;
   fn2.__initData = __initData3;
-  obj = { style: closure_16.container, children: null };
-  obj1 = {
+  const obj6 = { style: closure_16.container, children: null };
+  const obj5 = smoothingFrames(sharedValue[5]);
+  obj6.children = closure_5(closure_8, {
     style: closure_16.text,
     animatedProps: smoothingFrames(sharedValue[5]).useAnimatedProps(fn2),
     editable: false,
-  };
-  obj.children = closure_5(closure_8, obj1);
-  return closure_5(closure_4, obj);
+  });
+  return closure_5(closure_4, obj6);
 }
+let noop = noop_mod;
 ({ useEffect: c2, useRef: c3 } = noop);
+let noop = noop_mod;
 ({ StyleSheet, View: closure_4, TextInput } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 function createCircularDoublesBuffer(size) {

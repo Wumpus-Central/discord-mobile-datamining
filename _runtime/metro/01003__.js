@@ -54,7 +54,7 @@ class Profiler {
       return tmp3Result1;
     }
     obj2 = closure_0(closure_1[7]);
-    obj = {
+    obj1 = {
       name: "<" + name + ">",
       onlyIfParent: true,
       op: closure_0(closure_1[8]).REACT_MOUNT_OP,
@@ -63,7 +63,7 @@ class Profiler {
         "ui.component_name": name,
       },
     };
-    tmp3Result._mountSpan = obj2.startInactiveSpan(obj);
+    tmp3Result._mountSpan = obj2.startInactiveSpan(obj1);
     tmp3Result1 = tmp3Result;
     return;
   }
@@ -101,23 +101,22 @@ let items = [
               Profiler = Profiler(updateProps[9]).timestampInSeconds();
               let obj = Profiler(updateProps[9]);
               self._updateSpan = Profiler(updateProps[9]).withActiveSpan(self._mountSpan, () => {
-                Profiler(889);
-                let obj = {
+                const obj2 = {
                   name: "<" + self.props.name + ">",
                   onlyIfParent: true,
                   op: Profiler(1004).REACT_UPDATE_OP,
                   startTime,
                   attributes: null,
                 };
-                obj = {
+                const obj = Profiler(889);
+                obj2.attributes = {
                   [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
                   "ui.component_name": self.props.name,
                   "ui.react.changed_props": found,
                 };
-                obj.attributes = obj;
-                return obj.startInactiveSpan(obj);
+                return obj.startInactiveSpan(obj2);
               });
-              const obj2 = Profiler(updateProps[9]);
+              let obj2 = Profiler(updateProps[9]);
             }
           }
         }
@@ -144,28 +143,31 @@ let items = [
       ({ name: dependencyMap, includeRender } = this.props);
       if (self._mountSpan) {
         if (tmp3) {
-          let tmpResult = tmp(682);
-          const timestamp = tmpResult.spanToJSON(self._mountSpan).timestamp;
-          tmpResult = tmp(682);
-          tmpResult.withActiveSpan(self._mountSpan, () => {
-            Profiler(889);
-            let obj = {
+          const timestamp = tmp(682).spanToJSON(self._mountSpan).timestamp;
+          const tmpResult = tmp(682);
+          tmp(682).withActiveSpan(self._mountSpan, () => {
+            const obj2 = {
               onlyIfParent: true,
               name: "<" + dependencyMap + ">",
               op: Profiler(1004).REACT_RENDER_OP,
               startTime: timestamp,
               attributes: null,
             };
-            obj = {
+            const obj = Profiler(889);
+            obj2.attributes = {
               [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
               "ui.component_name": dependencyMap,
             };
-            obj.attributes = obj;
-            const startInactiveSpanResult = obj.startInactiveSpan(obj);
+            const startInactiveSpanResult = obj.startInactiveSpan(obj2);
             if (startInactiveSpanResult) {
               startInactiveSpanResult.end(closure_0);
             }
+            const obj3 = {
+              [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler",
+              "ui.component_name": dependencyMap,
+            };
           });
+          const tmpResult2 = tmp(682);
         }
       }
       let obj = Profiler(682);
@@ -188,27 +190,27 @@ export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
 export const useProfiler = function useProfiler(arg0) {
   closure_0 = arg0;
-  if (attributes === undefined) {
-    attributes = { disabled: false, hasRenderSpan: true };
+  if (arg1 === undefined) {
+    let obj = { disabled: false, hasRenderSpan: true };
   }
   name = undefined;
   name = name(
     noop.useState(() => {
       let disabled;
-      if (attributes != null) {
-        disabled = attributes.disabled;
+      if (obj != null) {
+        disabled = obj.disabled;
       }
       if (!disabled) {
-        Profiler(889);
-        attributes = { name: null, onlyIfParent: true, op: null, attributes: null };
+        obj = Profiler(889);
+        const obj2 = { name: null, onlyIfParent: true, op: null, attributes: null };
         const _HermesInternal = HermesInternal;
-        attributes.name = "<" + closure_0 + ">";
-        attributes.op = Profiler(1004).REACT_MOUNT_OP;
-        attributes = {};
-        attributes[Profiler(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
-        attributes["ui.component_name"] = closure_0;
-        attributes.attributes = attributes;
-        return attributes.startInactiveSpan(attributes);
+        obj2.name = "<" + closure_0 + ">";
+        obj2.op = Profiler(1004).REACT_MOUNT_OP;
+        const obj3 = {};
+        obj3[Profiler(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
+        obj3["ui.component_name"] = closure_0;
+        obj2.attributes = obj3;
+        return obj.startInactiveSpan(obj2);
       }
     }),
     1,
@@ -220,23 +222,23 @@ export const useProfiler = function useProfiler(arg0) {
     return () => {
       if (closure_1_2) {
         if (hasRenderSpan.hasRenderSpan) {
-          attributes = closure_0(attributes[9]);
-          const obj2 = closure_0(attributes[9]);
-          const timestampInSecondsResult = closure_0(attributes[9]).timestampInSeconds();
-          attributes = { name: null, onlyIfParent: true, op: null, startTime: null, attributes: null };
+          obj = closure_0(obj[9]);
+          const obj2 = closure_0(obj[9]);
+          const timestampInSecondsResult = closure_0(obj[9]).timestampInSeconds();
+          const obj4 = { name: null, onlyIfParent: true, op: null, startTime: null, attributes: null };
           const _HermesInternal = HermesInternal;
-          attributes.name = "<" + closure_1_0 + ">";
-          attributes.op = closure_0(attributes[8]).REACT_RENDER_OP;
-          attributes.startTime = attributes.spanToJSON(tmp).timestamp;
-          attributes = {};
-          attributes[closure_0(attributes[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
-          attributes["ui.component_name"] = closure_1_0;
-          attributes.attributes = attributes;
-          const startInactiveSpanResult = closure_0(attributes[7]).startInactiveSpan(attributes);
+          obj4.name = "<" + closure_1_0 + ">";
+          obj4.op = closure_0(obj[8]).REACT_RENDER_OP;
+          obj4.startTime = obj.spanToJSON(tmp).timestamp;
+          const obj5 = {};
+          obj5[closure_0(obj[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
+          obj5["ui.component_name"] = closure_1_0;
+          obj4.attributes = obj5;
+          const startInactiveSpanResult = closure_0(obj[7]).startInactiveSpan(obj4);
           if (startInactiveSpanResult) {
             startInactiveSpanResult.end(timestampInSecondsResult);
           }
-          const obj3 = closure_0(attributes[7]);
+          const obj3 = closure_0(obj[7]);
         }
       }
     };
@@ -264,9 +266,9 @@ export const withProfiler = function withProfiler(displayName, name) {
       merged = Object.assign(closure_1);
       obj.name = closure_2;
       obj.updateProps = displayName;
-      obj = {};
+      obj1 = {};
       merged1 = Object.assign(displayName);
-      return closure_7.createElement(closure_9, obj, closure_7.createElement(closure_0, obj));
+      return closure_7.createElement(closure_9, obj, closure_7.createElement(closure_0, obj1));
     }
   }
   Wrapped.displayName = "profiler(" + name + ")";

@@ -6,6 +6,8 @@ import _mod1055 from "metro/01055__.js";
 import _mod1056 from "metro/01056__.js";
 import sentryTraceGesture from "01058_sentryTraceGesture.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("DEFAULT")) {
   arg5[key10013] = require("DEFAULT")[key10013];
   continue;

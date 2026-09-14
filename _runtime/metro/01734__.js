@@ -9,10 +9,9 @@ let closure_3 = {
 };
 
 export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
-  let obj = mutable(set[0]);
-  mutable = obj.makeMutable([]);
+  mutable = mutable(set[0]).makeMutable([]);
   set = new Set();
-  obj = {
+  return {
     shareableViewDescriptors: mutable,
     add(tag, current) {
       closure_0 = tag;
@@ -57,5 +56,4 @@ export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
       return set.has(arg0);
     },
   };
-  return obj;
 };

@@ -25,7 +25,8 @@ export const extractFilter = (props) => {
 };
 export const extractIn = (props) => {
   if (props.in) {
-    let obj = { in1: props.in };
+    const obj2 = { in1: props.in };
+    let obj = obj2;
   } else {
     obj = {};
   }

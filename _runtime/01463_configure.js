@@ -4,6 +4,8 @@ import NetInfoStateTypeAll from "01470_NetInfoStateType.js";
 import _slicedToArray from "metro/00032__.js";
 import 01464__ from "metro/01464__.js";
 
+const require = globalThis.__r;
+
 function configure(arg0) {
   const merged = Object.assign(module_1464);
   const merged1 = Object.assign(arg0);
@@ -45,13 +47,13 @@ function refresh() {
     }
   }
   if (c10) {
-    let cleanupPromise = new Promise((arg0) => {
+    let promise = new Promise((arg0) => {
       closure_11.push(arg0);
     });
   } else {
     c10 = true;
     const _fetchCurrentStateResult = obj._fetchCurrentState();
-    cleanupPromise = obj._fetchCurrentState().then((result) => {
+    promise = obj._fetchCurrentState().then((result) => {
       closure_0 = result;
       const item = closure_11.forEach((fn) => fn(closure_0));
       closure_11 = [];
@@ -66,7 +68,7 @@ function refresh() {
       return result;
     });
   }
-  return cleanupPromise;
+  return promise;
 }
 function addEventListener(notifyListeners) {
   importDefault = notifyListeners;
@@ -83,7 +85,7 @@ function addEventListener(notifyListeners) {
   obj.add(notifyListeners);
   return () => {
     if (closure_8) {
-      closure_8.remove(f73582);
+      closure_8.remove(f73585);
     }
   };
 }
@@ -104,11 +106,10 @@ function useNetInfo(arg0) {
     obj2 = closure_8;
     tmp = importDefault;
   }
-  obj = { type: NetInfoStateTypeAll.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
-  const tmp15 = _slicedToArray(closure_4(obj), 2);
+  const tmp15 = _slicedToArray(closure_4({ type: NetInfoStateTypeAll.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null }), 2);
   importDefault = tmp15[1];
   closure_5(() => {
-    let f73582 = closure_0;
+    let f73585 = closure_0;
     obj = closure_8;
     if (!closure_8) {
       if (typeof createState === "function") {
@@ -120,13 +121,13 @@ function useNetInfo(arg0) {
       }
     }
     obj.add(closure_0);
-    f73582 = () => {
+    f73585 = () => {
       if (closure_8) {
-        closure_8.remove(f73582);
+        closure_8.remove(f73585);
       }
     };
     return () => {
-      if (typeof f73582 === "function") {
+      if (typeof f73585 === "function") {
         if (closure_1_8) {
           closure_1_8.remove(closure_128_0);
         }
@@ -143,13 +144,11 @@ function useNetInfoInstance() {
     flag = false;
   }
   importAll = arg1;
+  first = undefined;
   _slicedToArray = undefined;
   closure_4 = undefined;
-  let tmp = _slicedToArray(closure_4(), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
-  let obj = { type: require("NetInfoStateType").NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
-  const tmp3 = _slicedToArray(closure_4(obj), 2);
+  [first, _slicedToArray] = closure_4();
+  const tmp3 = _slicedToArray(closure_4({ type: require("NetInfoStateType").NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null }), 2);
   closure_4 = tmp3[1];
   const items = [flag, arg1];
   closure_5(() => {
@@ -163,9 +162,9 @@ function useNetInfoInstance() {
       return obj2.tearDown;
     }
   }, items);
-  obj = { netInfo: tmp3[0], refresh: null };
+  let obj2 = { netInfo: tmp3[0], refresh: null };
   const items1 = [first];
-  obj.refresh = closure_6(() => {
+  obj2.refresh = closure_6(() => {
     let tmp = first;
     if (first) {
       tmp = !c10;
@@ -178,7 +177,7 @@ function useNetInfoInstance() {
       const _fetchCurrentStateResult = first._fetchCurrentState();
     }
   }, items1);
-  return obj;
+  return obj2;
 }
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useCallback: metroRequire } = noop);

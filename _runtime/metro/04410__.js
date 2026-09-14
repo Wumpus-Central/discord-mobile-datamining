@@ -9,9 +9,8 @@ function getEnumProperty(enumProperty, arg1) {
 }
 
 export const useRiveEnum = function useRiveEnum(FillColor, instance) {
-  let obj = c;
-  const cResult = obj.c(4);
-  [tmp3, tmp4, tmp5] = _slicedToArray(_mod4406.useRiveProperty(instance, FillColor, getEnumProperty), 3);
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4406.useRiveProperty(instance, FillColor, getEnumProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {
@@ -20,10 +19,10 @@ export const useRiveEnum = function useRiveEnum(FillColor, instance) {
       return tmp6;
     }
   }
-  obj = { value: tmp3, setValue: tmp4, error: tmp5 };
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
   cResult[0] = tmp5;
   cResult[1] = tmp4;
   cResult[2] = tmp3;
-  cResult[3] = obj;
-  tmp6 = obj;
+  cResult[3] = obj3;
+  tmp6 = obj3;
 };

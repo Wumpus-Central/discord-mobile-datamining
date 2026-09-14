@@ -1,5 +1,5 @@
 // _runtime/metro/03725__.js
-import requiredArgs from "../03726_requiredArgs.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,6 +26,7 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj = { default: requiredArgs };
   let tmp3 = obj;

@@ -1,6 +1,8 @@
 // _runtime/05233_launchCamera.js
 import _mod17 from "metro/00017__.js";
 
+const require = globalThis.__r;
+
 const NativeModules = _mod17.NativeModules;
 let closure_1 = {
   mediaType: "photo",

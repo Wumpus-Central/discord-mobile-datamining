@@ -2,6 +2,8 @@
 import _mod4994 from "04994__.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 

@@ -1,5 +1,5 @@
 // _runtime/metro/04907__.js
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
+import callBoundIntrinsic from "../01314_callBoundIntrinsic.js";
 import RequireObjectCoercible from "../04894_RequireObjectCoercible.js";
 import ToString from "../04908_ToString.js";
 

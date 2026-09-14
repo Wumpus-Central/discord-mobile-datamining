@@ -107,7 +107,7 @@ const entry = {
       const _Object2 = Object;
       applyResult = HermesBuiltin.apply(items, Object);
     }
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(applyResult);
     const merged1 = Object.assign(tmp);
     ({ width, height, focusable } = obj);
@@ -151,10 +151,10 @@ const entry = {
     if (null != opacity) {
       num2 = extractOpacityDefault(opacity);
     }
-    obj = {};
+    const obj2 = {};
     let flag = false;
     if (!isNaN(num2)) {
-      obj.opacity = num2;
+      obj2.opacity = num2;
       flag = true;
     }
     let flag2 = flag;
@@ -178,17 +178,17 @@ const entry = {
         if (isNaNResult) {
           parsed = width;
         }
-        obj.width = parsed;
+        obj2.width = parsed;
         if (isNaNResult1) {
           parsed1 = height;
         }
-        obj.height = parsed1;
-        obj.flex = 0;
+        obj2.height = parsed1;
+        obj2.flex = 0;
         flag2 = true;
       }
     }
     if (flag2) {
-      items1.push(obj);
+      items1.push(obj2);
     }
     if (items1.length <= 1) {
       items1 = svg;
@@ -210,13 +210,13 @@ const entry = {
       tmp.transform = Svg(8582).extractTransformSvgView(tmp);
       const obj3 = Svg(8582);
     }
-    obj = {};
+    const obj4 = {};
     const merged3 = Object.assign(tmp);
-    obj.ref = function ref(arg0) {
+    obj4.ref = function ref(arg0) {
       return self.refMethod(arg0);
     };
     const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
-    obj.children = jsx(_modDef8588, {
+    obj4.children = jsx(_modDef8588, {
       children,
       style: merged2,
       font,

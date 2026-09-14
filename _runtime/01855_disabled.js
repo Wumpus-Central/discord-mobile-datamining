@@ -15,21 +15,11 @@ export default function _default(disabled) {
     num = 18;
   }
   ({ style, theme } = disabled);
-  let obj = disabled(num[3]);
-  const keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
+  const keyboardState = disabled(num[3]).useKeyboardState((appearance) => appearance.appearance);
   const items = [disabled];
   const items1 = [keyboardState, num, theme];
-  obj = {
-    accessibilityHint,
-    accessibilityLabel,
-    accessibilityRole: "button",
-    accessibilityState: theme(() => ({ disabled }), items),
-    background: theme(() => React3.Ripple(theme[keyboardState].ripple, true, num), items1),
-    style,
-    testID,
-    onPress,
-    children: <closure_4 style={style}>{children}</closure_4>,
-  };
+  const obj = disabled(num[3]);
+  const tmp2 = theme(() => ({ disabled }), items);
   return (
     <keyboardState
       accessibilityHint={accessibilityHint}

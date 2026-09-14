@@ -148,7 +148,7 @@ let items = [
         const NumberResult1 = Number(BigIntResult & BigIntResult2);
       }
       self.process(view, 0);
-      view = HashMD(9270).createView(content);
+      const view1 = HashMD(9270).createView(content);
       const outputLen = self.outputLen;
       if (outputLen % 4) {
         const _Error2 = Error;
@@ -165,7 +165,7 @@ let items = [
           let num5 = 0;
           if (0 < result) {
             do {
-              let setUint32Result2 = view.setUint32(4 * num5, value[num5], isLE);
+              let setUint32Result2 = view1.setUint32(4 * num5, value[num5], isLE);
               num5 = num5 + 1;
             } while (num5 < result);
           }

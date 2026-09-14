@@ -70,7 +70,7 @@ export const propagationContextFromHeaders = function propagationContextFromHead
           flag = false;
         }
       }
-      let obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
       tmp = obj;
     }
   }
@@ -80,53 +80,53 @@ export const propagationContextFromHeaders = function propagationContextFromHead
     traceId = tmp.traceId;
   }
   if (traceId) {
-    let tmp4Result = _mod701;
     let sample_rand;
     if (result != null) {
       sample_rand = result.sample_rand;
     }
-    const str3 = tmp4Result.parseSampleRate(sample_rand);
+    const str3 = _mod701.parseSampleRate(sample_rand);
     if (undefined !== str3) {
       if (result) {
         result.sample_rand = str3.toString();
       }
-      obj = { traceId: null, parentSpanId: null, sampled: null, dsc: null, sampleRand: null };
+      const obj3 = { traceId: null, parentSpanId: null, sampled: null, dsc: null, sampleRand: null };
       ({ traceId: obj10.traceId, parentSpanId: obj10.parentSpanId, parentSampled: obj10.sampled } = tmp);
       if (!result) {
         result = {};
       }
-      obj.dsc = result;
-      obj.sampleRand = str3;
-      return obj;
+      obj3.dsc = result;
+      obj3.sampleRand = str3;
+      return obj3;
     } else {
-      tmp4Result = _mod701;
       let sample_rate;
       if (result != null) {
         sample_rate = result.sample_rate;
       }
-      const parseSampleRateResult = tmp4Result.parseSampleRate(sample_rate);
+      const parseSampleRateResult = _mod701.parseSampleRate(sample_rate);
       if (!parseSampleRateResult) {
         safeDateNow.safeMathRandom();
-        const tmp4Result1 = safeDateNow;
+        const tmp4Result7 = safeDateNow;
       } else {
         let parentSampled;
         if (tmp != null) {
           parentSampled = tmp.parentSampled;
         }
       }
+      const tmp4Result6 = _mod701;
       const safeMathRandomResult1 = safeDateNow.safeMathRandom();
       if (tmp.parentSampled) {
         let result1 = safeMathRandomResult1 * parseSampleRateResult;
       } else {
         result1 = parseSampleRateResult + safeMathRandomResult1 * (1 - parseSampleRateResult);
       }
-      const tmp4Result2 = safeDateNow;
+      const tmp4Result8 = safeDateNow;
     }
+    const tmp4Result = _mod701;
   } else {
-    obj = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
-    const tmp4Result3 = generateSpanId;
-    obj.sampleRand = safeDateNow.safeMathRandom();
-    return obj;
+    const obj4 = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
+    const tmp4Result9 = generateSpanId;
+    obj4.sampleRand = safeDateNow.safeMathRandom();
+    return obj4;
   }
 };
 export const shouldContinueTrace = function shouldContinueTrace(client, org_id) {

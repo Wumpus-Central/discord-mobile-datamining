@@ -1,5 +1,5 @@
 // _runtime/metro/04927__.js
-import _mod1283 from "01283__.js";
+import _mod1281 from "01281__.js";
 import _mod4928 from "04928__.js";
 import _mod4929 from "04929__.js";
 import _mod4930 from "04930__.js";
@@ -9,7 +9,7 @@ if (_mod4928) {
     if (_mod4928(arg0, arg1)) {
       return arg0;
     } else {
-      const tmp5 = new _mod1283("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      const tmp5 = new _mod1281("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       throw tmp5;
     }
   }

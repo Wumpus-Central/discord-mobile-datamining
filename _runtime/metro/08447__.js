@@ -3,7 +3,7 @@ import colorPropType from "../08432_colorPropType.js";
 import _mod8434 from "08434__.js";
 import _mod8448 from "08448__.js";
 import flattenStyle from "08437__.js";
-import emptyFunction from "04466__.js";
+import emptyFunction_mod from "04466__.js";
 
 const obj = {
   ellipsizeMode: null,
@@ -28,8 +28,10 @@ const obj = {
   dataDetectorType: null,
 };
 const module_8448 = flattenStyle(_mod8448);
+let emptyFunction = emptyFunction_mod;
 obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
 obj.numberOfLines = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
 obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
 obj.onLayout = emptyFunction.func;
 obj.onPress = emptyFunction.func;
@@ -47,6 +49,7 @@ obj.accessible = emptyFunction.bool;
 obj.adjustsFontSizeToFit = emptyFunction.bool;
 obj.minimumFontScale = emptyFunction.number;
 obj.disabled = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
 
 export default obj;

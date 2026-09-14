@@ -34,7 +34,7 @@ export default function Switch(ref) {
   c0 = undefined;
   importDefault = undefined;
   ref = undefined;
-  let first;
+  first = undefined;
   _slicedToArray = undefined;
   ({ disabled, ios_backgroundColor, onChange: c0, onValueChange: c1, trackColor, value } = merged);
   dependencyMap = value;
@@ -50,9 +50,7 @@ export default function Switch(ref) {
   }
   const tmp6 = closure_8(null);
   ref = tmp6;
-  const tmp10 = _slicedToArray(closure_9({ value: null }), 2);
-  first = tmp10[0];
-  _slicedToArray = tmp10[1];
+  [first, _slicedToArray] = closure_9({ value: null });
   const items = [value, first];
   closure_7(() => {
     let tmp2 = null != first.value && first.value !== tmp;
@@ -73,23 +71,24 @@ export default function Switch(ref) {
   const tmp2Result = _objectWithoutProperties(tmp3, first);
   const accessibilityState = tmp2Result.accessibilityState;
   if (null == disabled) {
-    disabled = undefined;
+    let disabled1;
     if (accessibilityState != null) {
-      disabled = accessibilityState.disabled;
+      disabled1 = accessibilityState.disabled;
     }
+    disabled = disabled1;
   }
-  let disabled1;
+  let disabled2;
   if (accessibilityState != null) {
-    disabled1 = accessibilityState.disabled;
+    disabled2 = accessibilityState.disabled;
   }
   let tmp16 = accessibilityState;
-  if (disabled !== disabled1) {
-    let obj = {};
+  if (disabled !== disabled2) {
+    const obj = {};
     const merged1 = Object.assign(accessibilityState);
     obj.disabled = disabled;
     tmp16 = obj;
   }
-  obj = {
+  const obj2 = {
     accessibilityState: tmp16,
     enabled: true !== disabled,
     on: true === value,
@@ -102,17 +101,17 @@ export default function Switch(ref) {
   if (true === value) {
     _false = _true;
   }
-  obj.trackTintColor = _false;
-  obj = {};
+  obj2.trackTintColor = _false;
+  const obj3 = {};
   const tmp9 = _modDef334(tmp6, ref.ref);
   const merged2 = Object.assign(tmp2Result);
-  const merged3 = Object.assign(obj);
+  const merged3 = Object.assign(obj2);
   let str = merged.accessibilityRole;
   if (str == null) {
     str = "switch";
   }
-  obj.accessibilityRole = str;
-  obj.onChange = function onChange(nativeEvent) {
+  obj3.accessibilityRole = str;
+  obj3.onChange = function onChange(nativeEvent) {
     if (c0 != null) {
       tmp(nativeEvent);
     }
@@ -121,8 +120,8 @@ export default function Switch(ref) {
     }
     closure_5({ value: nativeEvent.nativeEvent.value });
   };
-  obj.onResponderTerminationRequest = returnsFalse;
-  obj.onStartShouldSetResponder = returnsTrue;
-  obj.ref = tmp9;
+  obj3.onResponderTerminationRequest = returnsFalse;
+  obj3.onStartShouldSetResponder = returnsTrue;
+  obj3.ref = tmp9;
   return jsx(_modDef421, {});
 }

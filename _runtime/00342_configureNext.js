@@ -80,7 +80,8 @@ let obj = {
     delete: { type: "linear", property: "opacity" },
   },
 };
-obj = {
+
+export default {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
     return { duration, create: { type, property }, update: { type }, delete: { type, property } };
@@ -103,5 +104,3 @@ obj = {
   spring: configureNext.bind(null, obj.spring),
   setEnabled: function setLayoutAnimationEnabled(arg0) {},
 };
-
-export default obj;

@@ -18,16 +18,14 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
   return useMemo(
     () => ({
       trigger(arg0, arg1) {
-        const obj = {};
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg1);
-        obj.trigger(arg0, obj);
+        _modDef4607.trigger(arg0, {});
       },
       triggerPattern(arg0, arg1) {
-        const obj = {};
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg1);
-        obj.triggerPattern(arg0, obj);
+        _modDef4607.triggerPattern(arg0, {});
       },
       stop() {
         closure_1_1(4607).stop();
@@ -36,17 +34,14 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
         return closure_1_1(4607).isSupported();
       },
       playHaptic(arg0, arg1, arg2) {
-        closure_0(4611);
-        const obj = {};
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg2);
-        return obj.playHaptic(arg0, arg1, obj);
+        return closure_0(4611).playHaptic(arg0, arg1, {});
       },
       impact(arg0, arg1, arg2) {
-        const obj = {};
         const merged = Object.assign(enableVibrateFallback);
         const merged1 = Object.assign(arg2);
-        obj.impact(arg0, arg1, obj);
+        _modDef4607.impact(arg0, arg1, {});
       },
       setEnabled: _modDef4607.setEnabled,
       isEnabled: _modDef4607.isEnabled,

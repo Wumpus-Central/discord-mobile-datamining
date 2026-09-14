@@ -192,14 +192,14 @@ export const withoutXY = function withoutXY(self, props) {
       const _Object2 = Object;
       applyResult = HermesBuiltin.apply(items, Object);
     }
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(applyResult);
     const merged1 = Object.assign(props);
     tmp2 = obj;
   }
-  obj = {};
+  const obj2 = {};
   const merged2 = Object.assign(tmp2);
-  obj.x = null;
-  obj.y = null;
-  return extractProps(obj, self);
+  obj2.x = null;
+  obj2.y = null;
+  return extractProps(obj2, self);
 };

@@ -17,10 +17,8 @@ function addPxToTransform(transform) {
     const obj = {};
     const entries = Object.entries(item);
     while (tmp2 !== undefined) {
-      let tmp5 = _slicedToArray(tmp3, 2);
-      let first = tmp5[0];
+      [first, tmp6] = tmp3;
       let obj3 = first;
-      let tmp6 = tmp5[1];
       if (first.includes("translate")) {
         if (typeof tmp6 === "number") {
           let _HermesInternal = HermesInternal;
@@ -104,14 +102,18 @@ export const createAnimationWithInitialValues = function createAnimationWithInit
       first.transform = tmp5;
     }
   }
-  let obj = {};
   const merged = Object.assign(structuredCloneResult[0]);
   const merged1 = Object.assign(_objectWithoutProperties(initialValues, closure_2));
-  structuredCloneResult[0] = obj;
+  structuredCloneResult[0] = {};
   const tmp30 = generateNextCustomKeyframeName();
-  obj = { name: tmp30, style: structuredCloneResult, duration: TransitionType.AnimationsData[presetName].duration };
+  const obj = {};
   const tmp3 = _objectWithoutProperties(initialValues, closure_2);
-  const result2 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj);
+  const obj2 = {
+    name: tmp30,
+    style: structuredCloneResult,
+    duration: TransitionType.AnimationsData[presetName].duration,
+  };
+  const result2 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(obj2);
   findDescendantWithExitingAnimation.insertWebAnimation(tmp30, result2);
   return tmp30;
 };
@@ -119,21 +121,21 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
   closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
   if (TransitionType.TransitionType.LINEAR === ENTRY_EXIT) {
-    let tmp3Result = LinearTransition;
-    firstKeyframeObj = tmp3Result.LinearTransition(`REA${tmp}`, easingY);
+    firstKeyframeObj = LinearTransition.LinearTransition(`REA${tmp}`, easingY);
+    const tmp3Result = LinearTransition;
   } else if (TransitionType.TransitionType.SEQUENCED === ENTRY_EXIT) {
-    tmp3Result = SequencedTransition;
-    firstKeyframeObj = tmp3Result.SequencedTransition(`REA${tmp}`, easingY);
+    firstKeyframeObj = SequencedTransition.SequencedTransition(`REA${tmp}`, easingY);
+    const tmp3Result10 = SequencedTransition;
   } else if (TransitionType.TransitionType.FADING === ENTRY_EXIT) {
     firstKeyframeObj = FadingTransition.FadingTransition(`REA${tmp}`, easingY);
-    const tmp3Result1 = FadingTransition;
+    const tmp3Result11 = FadingTransition;
   } else if (TransitionType.TransitionType.JUMPING === ENTRY_EXIT) {
     firstKeyframeObj = JumpingTransition.JumpingTransition(`REA${tmp}`, easingY);
-    const tmp3Result2 = JumpingTransition;
+    const tmp3Result12 = JumpingTransition;
   } else if (TransitionType.TransitionType.CURVED === ENTRY_EXIT) {
     closure_6 = tmp7 + 1;
     const text1 = `REA${tmp7}`;
-    const tmp3Result3 = prepareCurvedTransition;
+    const tmp3Result13 = prepareCurvedTransition;
     ({ firstKeyframeObj, secondKeyframeObj } = prepareCurvedTransition.CurvedTransition(
       `REA${tmp}`,
       `REA${+closure_6}`,
@@ -141,16 +143,16 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
     ));
     const CurvedTransitionResult = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
     const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(secondKeyframeObj);
-    const tmp3Result4 = convertAnimationObjectToKeyframes;
+    const tmp3Result14 = convertAnimationObjectToKeyframes;
     findDescendantWithExitingAnimation.insertWebAnimation(`REA${+closure_6}`, result);
     const dummyTransitionKeyframeName = text1;
-    const tmp3Result5 = findDescendantWithExitingAnimation;
+    const tmp3Result15 = findDescendantWithExitingAnimation;
   } else if (TransitionType.TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
     firstKeyframeObj = _mod1730.EntryExitTransition(`REA${tmp}`, easingY);
-    const tmp3Result6 = _mod1730;
+    const tmp3Result16 = _mod1730;
   }
   const result1 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(firstKeyframeObj);
-  const tmp3Result7 = convertAnimationObjectToKeyframes;
+  const tmp3Result17 = convertAnimationObjectToKeyframes;
   findDescendantWithExitingAnimation.insertWebAnimation(transitionKeyframeName, result1);
   return { transitionKeyframeName, dummyTransitionKeyframeName };
 };

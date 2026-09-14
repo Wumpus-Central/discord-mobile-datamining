@@ -1,6 +1,8 @@
 // _runtime/08574_inlineStyles.js
 import _modDef8575 from "metro/08575__.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("metro/08575__.js")) {
   arg5[key10013] = require("metro/08575__.js")[key10013];
   continue;

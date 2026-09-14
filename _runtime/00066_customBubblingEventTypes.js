@@ -3,13 +3,13 @@ import _modDef38 from "metro/00038__.js";
 
 importDefault = arg2;
 const dependencyMap = arg6;
-let obj = {};
-obj = {};
+const customBubblingEventTypes = {};
+const obj2 = {};
 const map = new Map();
 const map1 = new Map();
 
-export const customBubblingEventTypes = obj;
-export const customDirectEventTypes = obj;
+export { customBubblingEventTypes };
+export const customDirectEventTypes = obj2;
 export const register = function register(APNGDecorationView, fn) {
   _modDef38(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
   let str = "null";
@@ -28,11 +28,11 @@ export const register = function register(APNGDecorationView, fn) {
 export const get = function get(arg0) {
   value = map1.get(arg0);
   if (null == value) {
-    value = map.get(arg0);
-    if (typeof value !== "function") {
+    value2 = map.get(arg0);
+    if (typeof value2 !== "function") {
       let str = "null";
-      if (null !== value) {
-        str = typeof value;
+      if (null !== value2) {
+        str = typeof value2;
       }
       let str3 = "";
       if (typeof arg0[0] === "string") {
@@ -50,7 +50,7 @@ export const get = function get(arg0) {
         str3,
       );
     }
-    const value1Result = value();
+    const value1Result = value2();
     _modDef38(value1Result, "View config not found for component `%s`", arg0);
     ({ bubblingEventTypes, directEventTypes } = value1Result);
     if (null != bubblingEventTypes) {
@@ -66,7 +66,7 @@ export const get = function get(arg0) {
     }
     if (null != directEventTypes) {
       for (const key10032 in directEventTypes) {
-        if (null != map1[key10032]) {
+        if (null != map[key10032]) {
           continue;
         } else {
           tmp21[key10032] = directEventTypes[key10032];

@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "\u00E0mi", verb: "n\u00ED" },
           file: { unit: "bytes", verb: "n\u00ED" },
           array: { unit: "nkan", verb: "n\u00ED" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp38 == null) {
                 tmp38 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -139,7 +138,7 @@ if (self2) {
               if (code.inclusive) {
                 str23 = "<=";
               }
-              let tmp22 = obj[code.origin];
+              let tmp22 = obj2[code.origin];
               if (tmp22 == null) {
                 tmp22 = null;
               }
@@ -169,7 +168,7 @@ if (self2) {
               if (code.inclusive) {
                 str16 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }

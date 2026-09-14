@@ -1,9 +1,11 @@
 // _runtime/metro/06931__.js
 import jsxProd from "../react/00021_jsxProd.js";
 import LegacyBaseButton from "../06756_LegacyBaseButton.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 ({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
 const jsx = jsxProd.jsx;
 const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
   simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
@@ -17,14 +19,15 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   let failOffsetX;
   ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
   const tmp3 = failOffsetX(null);
-  let obj = simultaneousHandlers(handleHeight[3]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = simultaneousHandlers(handleHeight[3]).useBottomSheetInternal();
   const activeOffsetX = bottomSheetInternal.activeOffsetX;
   const activeOffsetY = bottomSheetInternal.activeOffsetY;
   failOffsetX = bottomSheetInternal.failOffsetX;
   const failOffsetY = bottomSheetInternal.failOffsetY;
   const waitFor = bottomSheetInternal.waitFor;
   const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
+  const obj = simultaneousHandlers(handleHeight[3]);
+  const tmp4 = simultaneousHandlers;
   const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers()
     .handlePanGestureHandler;
   let items = [simultaneousHandlers2, simultaneousHandlers];
@@ -67,7 +70,6 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   } = handlePanGestureHandler);
   const items2 = [handleHeight];
   const obj2 = simultaneousHandlers(handleHeight[3]);
-  const tmp4 = simultaneousHandlers;
   const items3 = [handleHeight];
   const tmp8 = activeOffsetY(() => {
     const Gesture = LegacyBaseButton.Gesture;
@@ -122,23 +124,23 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
   if (handleComponent == null) {
     handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
-  obj = { gesture: tmp8, children: null };
-  obj = {
-    ref: tmp3,
-    onLayout: tmp9,
-    children: failOffsetY(handleComponent, {
-      animatedIndex,
-      animatedPosition,
-      style: handleStyle,
-      indicatorStyle: handleIndicatorStyle,
-    }),
-  };
-  obj.children = failOffsetY(
+  const obj4 = { gesture: tmp8, children: null };
+  const obj3 = simultaneousHandlers(handleHeight[3]);
+  obj4.children = failOffsetY(
     DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View,
-    obj,
+    {
+      ref: tmp3,
+      onLayout: tmp9,
+      children: failOffsetY(handleComponent, {
+        animatedIndex,
+        animatedPosition,
+        style: handleStyle,
+        indicatorStyle: handleIndicatorStyle,
+      }),
+    },
     "BottomSheetHandleContainer",
   );
-  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj);
+  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj4);
 });
 memoResult.displayName = "BottomSheetHandleContainer";
 

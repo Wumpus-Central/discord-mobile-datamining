@@ -3,6 +3,8 @@ import _mod5722 from "metro/05722__.js";
 import _mod5726 from "metro/05726__.js";
 import _slicedToArray from "metro/00032__.js";
 
+const require = globalThis.__r;
+
 class Color {
   constructor(arg0, arg1) {
     self = this;
@@ -139,7 +141,7 @@ class Color {
             num2 = 0;
             if (0 < labels.length) {
               do {
-                arr = items2.push(global[labels[num2]]);
+                arr1 = items2.push(global[labels[num2]]);
                 num2 = num2 + 1;
                 length = labels.length;
               } while (num2 < length);
@@ -349,7 +351,7 @@ while (iter !== undefined) {
               num2 = 0;
               if (0 < labels.length) {
                 do {
-                  arr = items2.push(global[labels[num2]]);
+                  arr1 = items2.push(global[labels[num2]]);
                   num2 = num2 + 1;
                   length = labels.length;
                 } while (num2 < length);

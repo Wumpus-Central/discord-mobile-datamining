@@ -16,12 +16,12 @@ export default function buildMatchPatternFn(arg0) {
           } else {
             first = match1[0];
           }
-          let valueCallbackResult = first;
+          let valueCallbackResult2 = first;
           if (obj.valueCallback) {
-            valueCallbackResult = obj.valueCallback(first);
+            valueCallbackResult2 = obj.valueCallback(first);
           }
-          obj = { value: valueCallbackResult, rest: str.slice(match[0].length) };
-          return obj;
+          const obj3 = { value: valueCallbackResult2, rest: str.slice(match[0].length) };
+          return obj3;
         } else {
           return null;
         }

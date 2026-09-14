@@ -36,10 +36,10 @@ export const EntryExitTransition = function EntryExitTransition(name, translateX
   obj.translateX = "" + translateX.translateX + "px";
   obj.translateY = "" + translateX.translateY + "px";
   obj.scale = "" + translateX.scaleX + "," + translateX.scaleY;
-  obj = { name, style: {}, duration: 300 };
-  addTransformToKeepPosition(obj.style, structuredCloneResult.style, obj, true);
+  const obj2 = { name, style: {}, duration: 300 };
+  addTransformToKeepPosition(obj2.style, structuredCloneResult.style, obj, true);
   addTransformToKeepPosition(
-    obj.style,
+    obj2.style,
     structuredClone(TransitionType.AnimationsData[translateX.entering]).style,
     { translateX: "0px", translateY: "0px", scale: "1,1" },
     false,
@@ -55,15 +55,13 @@ export const EntryExitTransition = function EntryExitTransition(name, translateX
       const result3 = map.set(51, 1);
     }
     while (tmp6 !== undefined) {
-      let tmp9 = _slicedToArray(tmp7, 2);
-      let first = tmp9[0];
+      [first, obj.opacity] = tmp7;
       let obj = {};
       let merged = Object.assign(style[first]);
-      obj.opacity = tmp9[1];
       style[first] = obj;
       continue;
     }
     tmp6 = map[Symbol.iterator]();
-  })(obj.style);
-  return obj;
+  })(obj2.style);
+  return obj2;
 };

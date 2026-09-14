@@ -106,8 +106,8 @@ const items = [
         const fn2 = function n(c12, tmpResult) {
           return BaseAnimationBuilder(1708).withDelay(c12, tmpResult, reduceMotion);
         };
-        let obj = { withDelay: reduceMotion(1708).withDelay, reduceMotion };
-        fn2.__closure = obj;
+        const obj2 = { withDelay: reduceMotion(1708).withDelay, reduceMotion };
+        fn2.__closure = obj2;
         fn2.__workletHash = 15544853359686;
         fn2.__initData = __initData;
         let fn = fn2;
@@ -116,7 +116,7 @@ const items = [
           arg1.reduceMotion = BaseAnimationBuilder(1676).getReduceMotionFromConfig(reduceMotion);
           return arg1;
         };
-        obj = { getReduceMotionFromConfig: reduceMotion(1676).getReduceMotionFromConfig, reduceMotion };
+        const obj = { getReduceMotionFromConfig: reduceMotion(1676).getReduceMotionFromConfig, reduceMotion };
         fn.__closure = obj;
         fn.__workletHash = 8417033392474;
         fn.__initData = __initData2;

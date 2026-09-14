@@ -1,17 +1,19 @@
 // _runtime/metro/03978__.js
-import 03976__ from "03976__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import module_3976_mod from "03976__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let module_3976 = module_3976_mod;
 if (!module_3976) {
-  let obj = { default: module_3976 };
+  const obj = { default: module_3976 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3976;
 }
 module_3976 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

@@ -28,7 +28,7 @@ class TreeBase {
       tmp3 = _root;
       while (0 !== _comparatorResult) {
         _ancestors = iteratorResult._ancestors;
-        arr = _ancestors.push(_root);
+        arr1 = _ancestors.push(_root);
         _root = _root.get_child(_comparatorResult > 0);
       }
       iteratorResult._cursor = _root;
@@ -45,7 +45,7 @@ class TreeBase {
       tmp3 = _root;
       while (0 !== _comparatorResult) {
         _ancestors = iteratorResult._ancestors;
-        arr = _ancestors.push(_root);
+        arr1 = _ancestors.push(_root);
         _root = _root.get_child(_comparatorResult > 0);
       }
       iteratorResult._cursor = _root;
@@ -118,7 +118,7 @@ class TreeBase {
     }
   }
   iterator() {
-    obj = Object.create(Iterator.prototype);
+    obj1 = Object.create(Iterator.prototype);
     obj = { _tree: this, _ancestors: [], _cursor: null };
     return obj;
   }
@@ -171,7 +171,7 @@ class Iterator {
       self._cursor = null;
     } else {
       _ancestors1 = self._ancestors;
-      arr = _ancestors1.push(self._cursor);
+      arr1 = _ancestors1.push(self._cursor);
       _minNodeResult1 = self._minNode(self._cursor.right);
     }
     data = null;
@@ -195,7 +195,7 @@ class Iterator {
       self._cursor = null;
     } else {
       _ancestors1 = self._ancestors;
-      arr = _ancestors1.push(self._cursor);
+      arr1 = _ancestors1.push(self._cursor);
       _maxNodeResult1 = self._maxNode(self._cursor.left);
     }
     data = null;
@@ -211,7 +211,7 @@ class Iterator {
     if (null !== global.left) {
       do {
         _ancestors = self._ancestors;
-        arr = _ancestors.push(tmp);
+        arr1 = _ancestors.push(tmp);
         left = tmp.left;
         tmp = left;
         tmp2 = left;
@@ -228,7 +228,7 @@ class Iterator {
     if (null !== global.right) {
       do {
         _ancestors = self._ancestors;
-        arr = _ancestors.push(tmp);
+        arr1 = _ancestors.push(tmp);
         right = tmp.right;
         tmp = right;
         tmp2 = right;

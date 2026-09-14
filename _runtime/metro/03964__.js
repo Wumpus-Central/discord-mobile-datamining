@@ -1,25 +1,28 @@
 // _runtime/metro/03964__.js
-import _typeof from "03725__.js";
-import requiredArgs from "../03726_requiredArgs.js";
-import startOfUTCISOWeek from "../03962_startOfUTCISOWeek.js";
+import _typeof_mod from "03725__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
+import startOfUTCISOWeek_mod from "../03962_startOfUTCISOWeek.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
 if (!startOfUTCISOWeek) {
-  obj = { default: startOfUTCISOWeek };
-  let tmp7 = obj;
+  const obj3 = { default: startOfUTCISOWeek };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfUTCISOWeek;
 }

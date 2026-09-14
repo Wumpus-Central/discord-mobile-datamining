@@ -141,8 +141,9 @@ class ValueSetter {
   }
 }
 let closure_130_1 = ValueSetter;
-let obj = { constructor: { value: ValueSetter, writable: true, configurable: true } };
-ValueSetter.prototype = Object.create(Setter.prototype, obj);
+ValueSetter.prototype = Object.create(Setter.prototype, {
+  constructor: { value: ValueSetter, writable: true, configurable: true },
+});
 _setPrototypeOf(ValueSetter, Setter);
 _typeof = ValueSetter;
 _setPrototypeOf = (function _isNativeReflectConstruct() {
@@ -301,8 +302,9 @@ class DateToSystemTimezoneSetter {
   }
 }
 let closure_131_1 = DateToSystemTimezoneSetter;
-obj = { constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true } };
-DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, obj);
+DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, {
+  constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true },
+});
 _setPrototypeOf(DateToSystemTimezoneSetter, Setter);
 _typeof = DateToSystemTimezoneSetter;
 _setPrototypeOf = (function _isNativeReflectConstruct() {

@@ -54,7 +54,7 @@ const forwardRefResult = noop.forwardRef(function View_withRef(arg0, ref) {
             busy = accessibilityState.busy;
           }
         }
-        let obj = { busy: tmp, checked: null, disabled: null, expanded: null, selected: null };
+        const obj = { busy: tmp, checked: null, disabled: null, expanded: null, selected: null };
         if (tmp2 == null) {
           let checked;
           if (accessibilityState != null) {
@@ -123,16 +123,17 @@ const forwardRefResult = noop.forwardRef(function View_withRef(arg0, ref) {
     }
     obj6 = _modAll27;
     if (null == ref) {
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(tmp24);
+      let obj3 = obj2;
     } else {
-      obj = {};
+      obj3 = {};
       const merged2 = Object.assign(tmp24);
-      obj.ref = ref;
+      obj3.ref = ref;
     }
-    const tmp30Result = jsx(CommandsDefault, obj);
+    const tmp30Result = jsx(CommandsDefault, obj3);
     if (tmp44) {
-      const obj1 = { value: false, children: tmp30Result };
+      const obj4 = { value: false, children: tmp30Result };
       return jsx(_modDef111, { value: false, children: tmp30Result });
     } else {
       return tmp30Result;

@@ -4,11 +4,12 @@ import ACTIONS from "../04513_ACTIONS.js";
 import PortalHost from "../04514_PortalHost.js";
 import registerHost from "../04517_registerHost.js";
 import _slicedToArray from "00032__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
 require = fn;
 let noop = fn(19);
 ({ useReducer: c3, memo } = noop);
+let noop = noop_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const memoResult = memo((rootHostName) => {
@@ -20,17 +21,17 @@ const memoResult = memo((rootHostName) => {
   if (flag === undefined) {
     flag = true;
   }
-  [tmp4, tmp5] = _slicedToArray(React3(registerHost.reducer, ACTIONS.INITIAL_STATE), 2);
-  let obj = { value: tmp5, children: null };
-  obj = { value: tmp4, children: null };
+  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
+  const obj = { value: tmp5, children: null };
+  const obj2 = { value: tmp4, children: null };
   const items = [rootHostName.children];
   if (flag) {
-    obj = { name: str };
-    flag = React4(PortalHost.PortalHost, obj);
+    const obj3 = { name: str };
+    flag = React4(PortalHost.PortalHost, obj3);
   }
   items[1] = flag;
-  obj.children = items;
-  obj.children = hasOwnProperty(_mod4512.PortalStateContext.Provider, obj);
+  obj2.children = items;
+  obj.children = hasOwnProperty(_mod4512.PortalStateContext.Provider, obj2);
   return React4(_mod4512.PortalDispatchContext.Provider, obj);
 });
 memoResult.displayName = "PortalProvider";

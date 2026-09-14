@@ -21,7 +21,7 @@ export default function extractFill(arg0, arg1, arr) {
   } else {
     arg0.fill = action;
     if (null != fillOpacity) {
-      arr = arr.push("fillOpacity");
+      arr.push("fillOpacity");
       arg0.fillOpacity = extractOpacityDefault(fillOpacity);
     }
     if (null != fillRule) {

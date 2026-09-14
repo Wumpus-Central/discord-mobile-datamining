@@ -10,7 +10,7 @@ export const Lazy = function Lazy(arg0) {
   if (tmp) {
     tmp = visible;
   }
-  [tmp3, tmp4] = _slicedToArray(noop.useState(tmp), 2);
+  [tmp3, tmp4] = noop.useState(tmp);
   c0 = tmp4;
   if (!enabled) {
     enabled = visible;

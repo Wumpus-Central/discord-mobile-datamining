@@ -2,9 +2,11 @@
 import _mod17 from "00017__.js";
 import jsxProd from "../react/00021_jsxProd.js";
 import _mod6918 from "06918__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
+let noop = noop_mod;
 const useMemo = noop.useMemo;
+let noop = noop_mod;
 const StyleSheet = _mod17.StyleSheet;
 const jsx = jsxProd.jsx;
 const memoResult = noop.memo((arg0) => {

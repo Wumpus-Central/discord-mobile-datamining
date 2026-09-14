@@ -45,34 +45,34 @@ export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
         if (null == phasedRegistrationNames) {
           continue;
         } else {
-          let bubbled = phasedRegistrationNames.bubbled;
-          if (bubbled == null) {
-            bubbled = null;
+          let bubbled1 = phasedRegistrationNames.bubbled;
+          if (bubbled1 == null) {
+            bubbled1 = null;
           }
-          let obj = { bubbled, captured: null };
+          let obj2 = { bubbled: bubbled1, captured: null };
           let captured = phasedRegistrationNames.captured;
           if (captured == null) {
             captured = null;
           }
-          obj.captured = captured;
+          obj2.captured = captured;
         }
-        if (null == obj) {
+        if (null == obj2) {
           return null;
         } else {
-          tmp2[arg0] = obj;
+          tmp2[arg0] = obj2;
           if (arg1) {
-            bubbled = obj.captured;
+            let bubbled = obj2.captured;
           } else {
-            bubbled = obj.bubbled;
+            bubbled = obj2.bubbled;
           }
         }
       }
       continue;
     }
-    obj = null;
+    obj2 = null;
     const keys = Object.keys();
     if (keys !== undefined) {
-      obj = null;
+      obj2 = null;
       while (keys[tmp] !== undefined) {
         let charCodeAtResult1 = arr.charCodeAt(3);
         let formatted1 = arr;
@@ -93,7 +93,8 @@ export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
           if (null == tmp16.registrationName) {
             continue;
           } else {
-            obj = { bubbled: tmp16.registrationName, captured: null };
+            let obj = { bubbled: tmp16.registrationName, captured: null };
+            obj2 = obj;
             break;
           }
           break;

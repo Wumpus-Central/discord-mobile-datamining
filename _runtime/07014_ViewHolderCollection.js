@@ -1,11 +1,12 @@
 // _runtime/07014_ViewHolderCollection.js
 import ViewHolder from "07012_ViewHolder.js";
 import _slicedToArray from "metro/06958__.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 require = fn;
 let noop = fn(19);
 ({ useEffect: c3, useImperativeHandle: closure_4, useLayoutEffect: hasOwnProperty } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 
 export const ViewHolderCollection = (data) => {
@@ -44,8 +45,7 @@ export const ViewHolderCollection = (data) => {
   } else if (!tmp4) {
     width = size.width;
   }
-  let obj = data(6977);
-  closure_17 = obj.useRecyclerViewContext();
+  closure_17 = data(6977).useRecyclerViewContext();
   const items = [width];
   extraData(() => {
     if (first > 0) {
@@ -86,38 +86,38 @@ export const ViewHolderCollection = (data) => {
   }
   let tmp13;
   if (horizontal) {
-    width = undefined;
+    let width1;
     if (size != null) {
-      width = size.width;
+      width1 = size.width;
     }
-    tmp13 = width;
+    tmp13 = width1;
   }
-  size = { width: tmp13, height: null, marginTop: null, marginLeft: null, opacity: null };
+  const size1 = { width: tmp13, height: null, marginTop: null, marginLeft: null, opacity: null };
   let height1;
   if (size != null) {
     height1 = size.height;
   }
-  size.height = height1;
+  size1.height = height1;
   let adjustmentMargin;
   if (!horizontal) {
     adjustmentMargin = getAdjustmentMargin();
   }
-  size.marginTop = adjustmentMargin;
+  size1.marginTop = adjustmentMargin;
   let adjustmentMargin1;
   if (horizontal) {
     adjustmentMargin1 = getAdjustmentMargin();
   }
-  size.marginLeft = adjustmentMargin1;
+  size1.marginLeft = adjustmentMargin1;
   let num = 0;
   if (first > 0) {
     num = 1;
   }
-  size.opacity = num;
+  size1.opacity = num;
   let tmp19 = tmp12;
   if (tmp12) {
-    tmp19 = size;
+    tmp19 = size1;
   }
-  obj = { style: tmp19, children: null };
+  const obj2 = { style: tmp19, children: null };
   if (size) {
     size = tmp12;
   }
@@ -131,7 +131,7 @@ export const ViewHolderCollection = (data) => {
           tmp5 = tmp3[tmp2 + 1];
         }
       }
-      let obj = {
+      const obj = {
         index: tmp2,
         item: data[tmp2],
         trailingItem: tmp5,
@@ -147,9 +147,8 @@ export const ViewHolderCollection = (data) => {
         hidden: null,
         inverted: null,
       };
-      obj = {};
       const merged = Object.assign(dependencyMap(tmp2));
-      obj.layout = obj;
+      obj.layout = {};
       obj.refHolder = refHolder;
       obj.onSizeChanged = onSizeChanged;
       obj.renderItem = renderItem;
@@ -163,9 +162,28 @@ export const ViewHolderCollection = (data) => {
       }
       obj.hidden = tmp11;
       obj.inverted = inverted;
-      return jsx(ViewHolder.ViewHolder, {}, tmp);
+      return jsx(
+        ViewHolder.ViewHolder,
+        {
+          index: tmp2,
+          item: data[tmp2],
+          trailingItem: tmp5,
+          layout: null,
+          refHolder: null,
+          onSizeChanged: null,
+          target: "Cell",
+          renderItem: null,
+          extraData: null,
+          CellRendererComponent: null,
+          ItemSeparatorComponent: null,
+          horizontal: null,
+          hidden: null,
+          inverted: null,
+        },
+        tmp,
+      );
     });
   }
-  obj.children = size;
+  obj2.children = size;
   return jsx(data(7008).CompatView, { style: tmp19, children: null });
 };

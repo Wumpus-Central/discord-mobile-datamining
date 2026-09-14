@@ -3,6 +3,8 @@ import PlatformConfig from "../06973_PlatformConfig.js";
 import asyncGeneratorStep from "07001__.js";
 import _slicedToArray from "06958__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useCallback: closure_4, useImperativeHandle: hasOwnProperty, useMemo: metroRequire, useRef: closure_7, useState: closure_8 } = noop);
@@ -34,18 +36,17 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   closure_11 = tmp3;
   const items1 = [recyclerViewManager];
   const computeFirstVisibleIndexForOffsetCorrection = closure_4(() => {
-    let obj = closure_0;
     if (closure_0.getIsFirstLayoutComplete()) {
-      if (obj.hasStableDataKeys()) {
-        if (obj.getDataLength() > 0) {
-          if (obj.shouldMaintainVisibleContentPosition()) {
+      if (closure_0.hasStableDataKeys()) {
+        if (closure_0.getDataLength() > 0) {
+          if (closure_0.shouldMaintainVisibleContentPosition()) {
             const _Math = Math;
-            const bound = Math.max(0, obj.computeVisibleIndices().startIndex);
+            const bound = Math.max(0, closure_0.computeVisibleIndices().startIndex);
             if (tmp3) {
-              closure_8.current = obj.getDataKey(bound);
-              obj = {};
-              const merged = Object.assign(obj.getLayout(bound));
-              closure_9.current = obj;
+              closure_8.current = closure_0.getDataKey(bound);
+              const obj2 = {};
+              const merged = Object.assign(closure_0.getLayout(bound));
+              closure_9.current = obj2;
             }
             tmp3 = undefined !== bound && bound >= 0;
           }
@@ -56,18 +57,17 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   const items2 = [recyclerViewManager, arg3, arg2, _setTimeout, tmp3, computeFirstVisibleIndexForOffsetCorrection];
   const items3 = [recyclerViewManager, arg2, _setTimeout, unmountFlag, tmp3];
   const applyOffsetCorrection = closure_4(() => {
-    let obj = closure_0;
     ({ horizontal, data } = closure_0.props);
-    let current = ref7.current;
+    const current1 = ref7.current;
     ref7.current = [];
-    const item = current.forEach((fn) => fn());
+    const item = current1.forEach((fn) => fn());
     const dataLength = closure_0.getDataLength();
     if (closure_0.getIsFirstLayoutComplete()) {
-      if (obj.hasStableDataKeys()) {
+      if (closure_0.hasStableDataKeys()) {
         if (dataLength > 0) {
-          if (obj.shouldMaintainVisibleContentPosition()) {
+          if (closure_0.shouldMaintainVisibleContentPosition()) {
             if (ref5.current) {
-              const engagedIndices = obj.getEngagedIndices();
+              const engagedIndices = closure_0.getEngagedIndices();
               let findValueResult = engagedIndices.findValue((bound) => recyclerViewManager.getDataKey(bound) === ref.current);
               if (findValueResult == null) {
                 if (tmp5) {
@@ -81,7 +81,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
               }
               if (undefined !== findValueResult) {
                 if (findValueResult >= 0) {
-                  const point = obj.getLayout(findValueResult);
+                  const point = closure_0.getLayout(findValueResult);
                   if (horizontal) {
                     let diff = point.x - ref6.current.x;
                     let tmp10 = ref6;
@@ -89,12 +89,12 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                     tmp10 = ref6;
                     diff = point.y - ref6.current.y;
                   }
-                  obj = {};
-                  const merged = Object.assign(obj.getLayout(findValueResult));
-                  tmp10.current = obj;
+                  const obj2 = {};
+                  const merged = Object.assign(closure_0.getLayout(findValueResult));
+                  tmp10.current = obj2;
                   if (0 !== diff) {
                     if (!ref3.current) {
-                      if (!obj.animationOptimizationsEnabled) {
+                      if (!closure_0.animationOptimizationsEnabled) {
                         if (PlatformConfig.PlatformConfig.supportsOffsetCorrection) {
                           const current2 = ref2.current;
                           if (current2 != null) {
@@ -102,22 +102,21 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                           }
                         } else {
                           if (horizontal) {
-                            obj = { x: null, animated: false };
-                            obj.x = obj.getAbsoluteLastScrollOffset() + diff;
-                            let obj1 = obj;
+                            const obj3 = { x: closure_0.getAbsoluteLastScrollOffset() + diff, animated: false };
+                            let obj4 = obj3;
                           } else {
-                            obj1 = { y: obj.getAbsoluteLastScrollOffset() + diff, animated: false };
+                            obj4 = { y: closure_0.getAbsoluteLastScrollOffset() + diff, animated: false };
                           }
-                          current = ref.current;
+                          const current = ref.current;
                           if (current != null) {
-                            current.scrollTo(obj1);
+                            current.scrollTo(obj4);
                           }
                         }
                         if (tmp5) {
-                          closure_11(obj.getAbsoluteLastScrollOffset() + diff, () => {
+                          closure_11(closure_0.getAbsoluteLastScrollOffset() + diff, () => {
 
                           });
-                          obj.ignoreScrollEvents = true;
+                          closure_0.ignoreScrollEvents = true;
                           _setTimeout(() => {
                             recyclerViewManager.ignoreScrollEvents = false;
                           }, 100);
@@ -133,7 +132,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
         }
       }
     }
-    ref4.current = obj.getDataLength();
+    ref4.current = closure_0.getDataLength();
   }, items2);
   const handlerMethods = ref4(() => {
     let obj = {};
@@ -143,14 +142,13 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       if (skipFirstItemOffset === undefined) {
         skipFirstItemOffset = true;
       }
-      let obj = closure_0;
       const horizontal = closure_0.props.horizontal;
       let scrollToResult = ref;
       if (ref.current) {
         if (!tmp3) {
           let num = 0;
           if (!skipFirstItemOffset) {
-            num = obj.firstItemOffset;
+            num = closure_0.firstItemOffset;
           }
           let current = offset + num;
           if (horizontal) {
@@ -160,13 +158,13 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             point1 = { x: 0, y: current };
           }
           current = scrollToResult.current;
-          obj = {};
+          const obj3 = {};
           const merged = Object.assign(point1);
-          obj.animated = animated.animated;
-          scrollToResult = current.scrollTo(obj);
+          obj3.animated = animated.animated;
+          scrollToResult = current.scrollTo(obj3);
         } else {
-          const firstItemOffset = obj.firstItemOffset;
-          const sum = closure_0(dependencyMap[7]).adjustOffsetForRTL(offset, obj.getChildContainerDimensions().width, obj.getWindowSize().width) + (skipFirstItemOffset ? firstItemOffset : -firstItemOffset);
+          const firstItemOffset = closure_0.firstItemOffset;
+          const sum = closure_0(dependencyMap[7]).adjustOffsetForRTL(offset, closure_0.getChildContainerDimensions().width, closure_0.getWindowSize().width) + (skipFirstItemOffset ? firstItemOffset : -firstItemOffset);
           const obj2 = closure_0(dependencyMap[7]);
         }
         tmp3 = isRTL.isRTL && horizontal;
@@ -231,11 +229,11 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
           }
         }, 0);
         yield "HermesInternal";
-        let obj1 = engagedIndices;
+        let obj4 = engagedIndices;
         if (engagedIndices === undefined) {
-          obj1 = {};
+          obj4 = {};
         }
-        animated = obj1.animated;
+        animated = obj4.animated;
         return "PX_16";
       })();
       iter.next();
@@ -256,8 +254,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       if (arg0 === undefined) {
         obj = {};
       }
-      obj = { offset: 0, animated: obj.animated };
-      handlerMethods.scrollToOffset(obj);
+      handlerMethods.scrollToOffset({ offset: 0, animated: obj.animated });
     };
     obj.scrollToIndex = function scrollToIndex(arg0) {
       ({ index: closure_0, animated: closure_1, viewPosition: closure_2, viewOffset: closure_3 } = arg0);
@@ -319,8 +316,8 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                       let obj = { offset: bound, animated: false, skipFirstItemOffset: true };
                       closure_2_13.scrollToOffset(obj);
                     }
-                    obj = { offset: maxScrollOffset, animated: horizontal, skipFirstItemOffset: true };
-                    closure_2_13.scrollToOffset(obj);
+                    const obj2 = { offset: maxScrollOffset, animated: horizontal, skipFirstItemOffset: true };
+                    closure_2_13.scrollToOffset(obj2);
                     let num5 = 200;
                     if (horizontal) {
                       num5 = 300;
@@ -403,7 +400,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
   const items4 = [handlerMethods, recyclerViewManager, _setTimeout];
   const items5 = [handlerMethods, arg2, recyclerViewManager];
   const applyInitialScrollIndex = closure_4(() => {
-    let obj = closure_0;
     ({ data, initialScrollIndexParams, horizontal } = closure_0.props);
     let num = closure_0.getInitialScrollIndex();
     if (num == null) {
@@ -440,8 +436,8 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             }
             closure_0 = sum;
             num4 = handlerMethods.scrollToOffset;
-            obj = { offset: sum, animated: false, skipFirstItemOffset: false };
-            num4(obj);
+            const obj2 = { offset: sum, animated: false, skipFirstItemOffset: false };
+            num4(obj2);
             point = _setTimeout(() => {
               handlerMethods.scrollToOffset({ offset: sum, animated: false, skipFirstItemOffset: false });
             }, 0);
@@ -451,17 +447,16 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
     }
   }, items4);
   ref3(arg1, () => {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(ref.current);
     const merged1 = Object.assign(handlerMethods);
-    obj = {
+    Object.defineProperty(obj, "props", {
       get() {
         return props.props;
       },
       enumerable: true,
       configurable: true
-    };
-    Object.defineProperty(obj, "props", obj);
+    });
     return obj;
   }, items5);
   return { applyOffsetCorrection, computeFirstVisibleIndexForOffsetCorrection, applyInitialScrollIndex, handlerMethods };

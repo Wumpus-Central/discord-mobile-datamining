@@ -5,10 +5,9 @@ import weakSet from "../00106_weakSet.js";
 import 00065__ from "00065__.js";
 
 const codegenNativeComponent = _mod17.codegenNativeComponent;
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
-__INTERNAL_VIEW_CONFIG = { nativeContainerBackgroundColor: _mod26.colorAttribute };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
 
 export default module_65.get("RNSScreenStack", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

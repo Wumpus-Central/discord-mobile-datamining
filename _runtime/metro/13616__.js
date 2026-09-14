@@ -4,10 +4,10 @@ import registerAsset from "01120__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 24,
-  height: 24,
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "3301eac470d1db4f813dc4b19265d85e",
-  name: "audio",
+  hash: "4f7f3933dfbb31e71ae1545e9b3d82b6",
+  name: "sticker",
   type: "png",
 });

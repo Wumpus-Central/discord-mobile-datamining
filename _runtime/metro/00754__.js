@@ -10,15 +10,15 @@ export const createClientReportEnvelope = function createClientReportEnvelope(di
   let result = arg2;
   const items = [{ type: "client_report" }];
   if (!arg2) {
-    let obj = dateTimestampInSeconds;
-    result = obj.dateTimestampInSeconds();
+    result = dateTimestampInSeconds.dateTimestampInSeconds();
   }
   items[1] = { timestamp: result, discarded_events };
   if (dsn) {
-    obj = { dsn };
+    const obj3 = { dsn };
+    let obj4 = obj3;
   } else {
-    obj = {};
+    obj4 = {};
   }
   const items1 = [items];
-  return forEachEnvelopeItem.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj4, items1);
 };

@@ -64,9 +64,9 @@ export const isParameterizedString = function isParameterizedString(obj) {
   }
   return tmp;
 };
-export const isPlainObject = function isPlainObject(arg0) {
+export const isPlainObject = function isPlainObject(normalizeResult) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  return (typeof call === "unknown" ? toString() : call(normalizeResult)) === "[object " + "Object" + "]";
 };
 export const isPrimitive = function isPrimitive(obj) {
   let tmp = null === obj;

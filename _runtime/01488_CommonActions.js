@@ -5,6 +5,8 @@ import openDrawer from "01493_openDrawer.js";
 import TabActions from "01494_TabActions.js";
 import StackActions from "01497_StackActions.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("metro/01489__.js")) {
   arg5[key10013] = require("metro/01489__.js")[key10013];
   continue;

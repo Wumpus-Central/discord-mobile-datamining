@@ -1,18 +1,20 @@
 // _runtime/03929_differenceInWeeks.js
 import _mod3919 from "metro/03919__.js";
-import compareLocalAsc from "03916_compareLocalAsc.js";
-import requiredArgs from "03726_requiredArgs.js";
+import compareLocalAsc_mod from "03916_compareLocalAsc.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let compareLocalAsc = compareLocalAsc_mod;
 if (!compareLocalAsc) {
-  let obj = { default: compareLocalAsc };
+  const obj = { default: compareLocalAsc };
   let tmp3 = obj;
 } else {
   tmp3 = compareLocalAsc;
 }
 compareLocalAsc = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

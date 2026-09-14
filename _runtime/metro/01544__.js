@@ -22,10 +22,12 @@ export const getPatternParts = function getPatternParts(path) {
         let sum = num2;
         let flag7 = true;
         let flag8 = flag4;
+        let obj2 = obj;
         if (":" !== obj.segment) {
           sum = num2;
           flag7 = flag3;
           flag8 = flag4;
+          obj2 = obj;
           if (!flag4) {
             let tmp30 = globalThis;
             let _Error4 = Error;
@@ -40,8 +42,8 @@ export const getPatternParts = function getPatternParts(path) {
         let tmp35 = flag6;
         let tmp36 = flag2;
         if (flag8) {
-          obj.regex = obj.regex || "";
-          obj.regex = obj.regex + tmp;
+          obj2.regex = obj2.regex || "";
+          obj2.regex = obj2.regex + tmp;
           let tmp37 = flag6;
           let flag10 = false;
           if (!flag2) {
@@ -73,16 +75,16 @@ export const getPatternParts = function getPatternParts(path) {
         let tmp26 = tmp36;
         let flag9 = flag7;
         let tmp27 = flag8;
-        let tmp28 = obj;
+        let tmp28 = obj2;
         if (tmp39) {
-          obj.param = obj.param || "";
-          obj.param = obj.param + tmp;
+          obj2.param = obj2.param || "";
+          obj2.param = obj2.param + tmp;
           tmp24 = sum;
           tmp25 = tmp35;
           tmp26 = tmp36;
           flag9 = flag7;
           tmp27 = flag8;
-          tmp28 = obj;
+          tmp28 = obj2;
         }
       } else {
         if ("(" === tmp) {
@@ -94,10 +96,12 @@ export const getPatternParts = function getPatternParts(path) {
                 sum = num2;
                 flag7 = flag3;
                 flag8 = true;
+                obj2 = obj;
                 if (flag4) {
                   sum = num2 + 1;
                   flag7 = flag3;
                   flag8 = flag4;
+                  obj2 = obj;
                 }
               }
             }
@@ -112,11 +116,13 @@ export const getPatternParts = function getPatternParts(path) {
                     sum = num2 - 1;
                     flag7 = flag3;
                     flag8 = flag4;
+                    obj2 = obj;
                   } else {
                     obj.regex = obj.regex + tmp;
                     sum = num2;
                     flag7 = false;
                     flag8 = false;
+                    obj2 = obj;
                   }
                 }
               }
@@ -138,6 +144,7 @@ export const getPatternParts = function getPatternParts(path) {
               sum = num2;
               flag7 = false;
               flag8 = flag4;
+              obj2 = obj;
             } else {
               let tmp19 = globalThis;
               let _Error3 = Error;
@@ -172,7 +179,7 @@ export const getPatternParts = function getPatternParts(path) {
             let arr = items.push(obj);
             flag5 = flag4;
             if (null != tmp) {
-              obj = { segment: "" };
+              obj2 = { segment: "" };
               sum = num2;
               flag7 = false;
               flag8 = flag4;
@@ -182,10 +189,12 @@ export const getPatternParts = function getPatternParts(path) {
           sum = num2;
           flag7 = flag3;
           flag8 = flag4;
+          obj2 = obj;
           if ("/" === tmp) {
             sum = num2;
             flag7 = flag3;
             flag8 = flag4;
+            obj2 = obj;
           }
         }
       }

@@ -67,8 +67,8 @@ class HMAC {
       tmp22 = uint8Array;
       digestResult = toBytesResult;
       if (toBytesResult.length > blockLen) {
-        obj = global.create();
-        updateResult = obj.update(toBytesResult);
+        obj1 = global.create();
+        updateResult = obj1.update(toBytesResult);
         digestResult = updateResult.digest();
       }
       result = uint8Array.set(digestResult);

@@ -1,7 +1,8 @@
 // _runtime/metro/03994__.js
 import _mod3730 from "03730__.js";
-import assign from "../03975_assign.js";
+import assign_mod from "../03975_assign.js";
 
+let assign = assign_mod;
 if (!assign) {
   const obj = { default: assign };
   let tmp3 = obj;

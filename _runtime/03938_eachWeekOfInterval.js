@@ -1,9 +1,10 @@
 // _runtime/03938_eachWeekOfInterval.js
-import 03893__ from "metro/03893__.js";
-import startOfWeek from "03884_startOfWeek.js";
-import _typeof from "metro/03725__.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3893_mod from "metro/03893__.js";
+import startOfWeek_mod from "03884_startOfWeek.js";
+import _typeof_mod from "metro/03725__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3893 = module_3893_mod;
 if (!module_3893) {
   let obj = { default: module_3893 };
   let tmp3 = obj;
@@ -11,23 +12,26 @@ if (!module_3893) {
   tmp3 = module_3893;
 }
 module_3893 = tmp3;
+let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  obj = { default: startOfWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfWeek;
 }
 startOfWeek = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

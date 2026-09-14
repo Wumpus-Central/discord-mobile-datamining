@@ -106,7 +106,7 @@ fn3.__initData = {
   code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}",
 };
 let obj = { convert: null };
-obj = { fromRgb: null, toRgb: fn2 };
+const obj2 = { fromRgb: null, toRgb: fn2 };
 const fn4 = function o(arg0) {
   ({ r, g, b } = arg0);
   if (typeof fn3 === "function") {
@@ -171,7 +171,7 @@ fn4.__workletHash = 7438857771706;
 fn4.__initData = {
   code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}",
 };
-obj.fromRgb = fn4;
-obj.convert = obj;
+obj2.fromRgb = fn4;
+obj.convert = obj2;
 
 export default obj;

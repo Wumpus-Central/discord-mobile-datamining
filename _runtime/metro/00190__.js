@@ -31,16 +31,16 @@ export default function parseErrorStack(arg0) {
               tmp4 = "INTERNAL_BYTECODE" !== tmp10.type;
             }
             if (tmp4) {
-              let obj = { methodName: null, file: null, lineNumber: null, column: null };
-              obj.methodName = functionName;
+              let obj1 = { methodName: null, file: null, lineNumber: null, column: null };
+              obj1.methodName = functionName;
               ({ sourceUrl: obj.file, line1Based: obj.lineNumber } = tmp10);
               if ("SOURCE" === tmp10.type) {
                 let virtualOffset0Based = tmp10.column1Based - 1;
               } else {
                 virtualOffset0Based = tmp10.virtualOffset0Based;
               }
-              obj.column = virtualOffset0Based;
-              obj = items.push(obj);
+              obj1.column = virtualOffset0Based;
+              obj1 = items.push(obj1);
             }
           }
           continue;

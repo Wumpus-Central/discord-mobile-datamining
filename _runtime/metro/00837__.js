@@ -108,8 +108,8 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         }
         obj.message = str2;
         setStatus.setStatus(obj);
-        obj = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
-        captureCheckIn.captureException(type.error, obj);
+        let obj2 = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
+        captureCheckIn.captureException(type.error, obj2);
         flag = true;
         const tmp2Result = captureCheckIn;
       }
@@ -154,8 +154,8 @@ function processEvent(type, finishReasons, arg2, setStatus) {
             tmp11 = "server_tool_use" !== type.content_block.type;
           }
           if (!tmp11) {
-            obj = { id: type.content_block.id, name: type.content_block.name, inputJsonParts: [] };
-            finishReasons.activeToolBlocks[type.index] = obj;
+            const obj3 = { id: type.content_block.id, name: type.content_block.name, inputJsonParts: [] };
+            finishReasons.activeToolBlocks[type.index] = obj3;
           }
         }
         if ("content_block_delta" === type.type) {
@@ -197,7 +197,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
                   }
                   let tmp6 = parsed;
                   const toolCalls = activeToolBlocks.toolCalls;
-                  let obj = { type: "tool_use", id: null, name: null, input: null };
+                  const obj = { type: "tool_use", id: null, name: null, input: null };
                   ({ id: obj3.id, name } = name);
                   obj.name = name;
                   obj.input = tmp6;
@@ -205,8 +205,8 @@ function processEvent(type, finishReasons, arg2, setStatus) {
                   activeToolBlocks = activeToolBlocks.activeToolBlocks;
                   delete tmp2[tmp];
                 } catch (err) {
-                  obj = { __unparsed: tmp7 };
-                  tmp6 = obj;
+                  const obj2 = { __unparsed: tmp7 };
+                  tmp6 = obj2;
                 }
               }
             }
@@ -232,8 +232,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -247,8 +247,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c12 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_7 = tmp4;
               closure_8 = tmp16;
@@ -258,19 +258,19 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               let value4;
-              const obj1 = {
+              const obj5 = {
                 responseTexts: [],
                 finishReasons: [],
                 responseId: "",
                 responseModel: "",
                 promptTokens: "r",
                 completionTokens: "w",
-                cacheCreationInputTokens: "tag",
-                cacheReadInputTokens: "size",
+                cacheCreationInputTokens: "sa",
+                cacheReadInputTokens: "current",
                 toolCalls: [],
                 activeToolBlocks: {},
               };
-              closure_136_2 = obj1;
+              closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
               c9 = 4;
@@ -293,12 +293,11 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                     let tmp5 = arg0[str];
                     if (null != tmp5) {
                       let call = tmp5.call;
-                      let tmp10 = value2;
                       let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
                       let tmp12 = new.target;
                       let tmp13 = new.target;
-                      tmp10 = new tmp10(tmp11);
-                      return tmp10;
+                      let tmp102 = new value2(tmp11);
+                      return tmp102;
                     }
                   }
                   num = num - 1;
@@ -321,62 +320,62 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_7 = iter;
               c11 = 5;
               c12 = 1;
-              let obj2 = { value: _awaitAsyncGenerator(iter.next()), done: false };
-              return obj2;
+              const obj6 = { value: _awaitAsyncGenerator(iter.next()), done: false };
+              return obj6;
             }
             break;
           case 1:
             c9 = 0;
             if (closure_136_2.responseId) {
-              const obj3 = {};
-              obj3[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-              closure_136_0.setAttributes(obj3);
+              const obj7 = {};
+              obj7[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+              closure_136_0.setAttributes(obj7);
             }
             if (closure_136_2.responseModel) {
-              const obj4 = {};
-              obj4[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-              closure_136_0.setAttributes(obj4);
+              const obj8 = {};
+              obj8[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+              closure_136_0.setAttributes(obj8);
             }
-            let obj71 = closure_135_0(closure_135_1[5]);
-            const result = obj71.setTokenUsageAttributes(
+            const obj72 = closure_135_0(closure_135_1[5]);
+            const result = obj72.setTokenUsageAttributes(
               closure_136_0,
               closure_136_2.promptTokens,
               closure_136_2.completionTokens,
               closure_136_2.cacheCreationInputTokens,
               closure_136_2.cacheReadInputTokens,
             );
-            const obj5 = {};
-            obj5[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-            closure_136_0.setAttributes(obj5);
+            const obj9 = {};
+            obj9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+            closure_136_0.setAttributes(obj9);
             if (closure_136_2.finishReasons.length > 0) {
-              const obj6 = {};
+              const obj10 = {};
               const _JSON17 = JSON;
-              obj6[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+              obj10[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                 closure_136_2.finishReasons,
               );
-              closure_136_0.setAttributes(obj6);
+              closure_136_0.setAttributes(obj10);
             }
             let tmp665 = closure_136_1;
             if (closure_136_1) {
               tmp665 = closure_136_2.responseTexts.length > 0;
             }
             if (tmp665) {
-              const obj7 = {};
+              const obj12 = {};
               const responseTexts9 = closure_136_2.responseTexts;
-              obj7[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
-              closure_136_0.setAttributes(obj7);
+              obj12[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+              closure_136_0.setAttributes(obj12);
             }
             let tmp675 = closure_136_1;
             if (closure_136_1) {
               tmp675 = closure_136_2.toolCalls.length > 0;
             }
             if (tmp675) {
-              const obj8 = {};
+              const obj13 = {};
               const _JSON18 = JSON;
-              obj8[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+              obj13[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                 closure_136_2.toolCalls,
               );
-              closure_136_0.setAttributes(obj8);
+              closure_136_0.setAttributes(obj13);
             }
             closure_136_0.end();
             throw closure_10;
@@ -397,8 +396,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
             } else {
               c11 = 16;
               c12 = 1;
-              const obj9 = { value: closure_135_2(closure_136_7.return()), done: false };
-              return obj9;
+              const obj14 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj14;
             }
             break;
           case 3:
@@ -421,8 +420,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
             if (tmp535) {
               c11 = 15;
               c12 = 1;
-              let obj10 = { value: closure_135_2(closure_136_7.return()), done: false };
-              return obj10;
+              const obj15 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj15;
             } else {
               c9 = 1;
               if (closure_136_5) {
@@ -430,55 +429,55 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  const obj11 = {};
-                  obj11[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                  closure_136_0.setAttributes(obj11);
+                  const obj16 = {};
+                  obj16[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj16);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj12 = {};
-                  obj12[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj12);
+                  const obj17 = {};
+                  obj17[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj17);
                 }
-                let obj62 = closure_135_0(closure_135_1[5]);
-                const result1 = obj62.setTokenUsageAttributes(
+                const obj63 = closure_135_0(closure_135_1[5]);
+                const result1 = obj63.setTokenUsageAttributes(
                   closure_136_0,
                   closure_136_2.promptTokens,
                   closure_136_2.completionTokens,
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                const obj13 = {};
-                obj13[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj13);
+                const obj18 = {};
+                obj18[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj18);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj14 = {};
+                  const obj20 = {};
                   const _JSON15 = JSON;
-                  obj14[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj20[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj14);
+                  closure_136_0.setAttributes(obj20);
                 }
                 let tmp580 = closure_136_1;
                 if (closure_136_1) {
                   tmp580 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp580) {
-                  const obj15 = {};
+                  const obj21 = {};
                   const responseTexts8 = closure_136_2.responseTexts;
-                  obj15[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
-                  closure_136_0.setAttributes(obj15);
+                  obj21[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
+                  closure_136_0.setAttributes(obj21);
                 }
                 let tmp590 = closure_136_1;
                 if (closure_136_1) {
                   tmp590 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp590) {
-                  const obj16 = {};
+                  const obj22 = {};
                   const _JSON16 = JSON;
-                  obj16[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj22[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj16);
+                  closure_136_0.setAttributes(obj22);
                 }
                 closure_136_0.end();
                 c12 = 3;
@@ -501,8 +500,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 if (tmp458) {
                   c11 = 9;
                   c12 = 1;
-                  const obj17 = { value: closure_135_2(closure_136_7.return()), done: false };
-                  return obj17;
+                  const obj23 = { value: closure_135_2(closure_136_7.return()), done: false };
+                  return obj23;
                 } else {
                   c9 = 1;
                   if (closure_136_5) {
@@ -510,61 +509,61 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                   } else {
                     c9 = 0;
                     if (closure_136_2.responseId) {
-                      let obj18 = {};
-                      obj18[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                      closure_136_0.setAttributes(obj18);
+                      const obj24 = {};
+                      obj24[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                      closure_136_0.setAttributes(obj24);
                     }
                     if (closure_136_2.responseModel) {
-                      const obj19 = {};
-                      obj19[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                      const obj25 = {};
+                      obj25[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
                         closure_136_2.responseModel;
-                      closure_136_0.setAttributes(obj19);
+                      closure_136_0.setAttributes(obj25);
                     }
-                    let obj53 = closure_135_0(closure_135_1[5]);
-                    const result2 = obj53.setTokenUsageAttributes(
+                    const obj54 = closure_135_0(closure_135_1[5]);
+                    const result2 = obj54.setTokenUsageAttributes(
                       closure_136_0,
                       closure_136_2.promptTokens,
                       closure_136_2.completionTokens,
                       closure_136_2.cacheCreationInputTokens,
                       closure_136_2.cacheReadInputTokens,
                     );
-                    const obj20 = {};
-                    obj20[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                    closure_136_0.setAttributes(obj20);
+                    const obj26 = {};
+                    obj26[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_136_0.setAttributes(obj26);
                     if (closure_136_2.finishReasons.length > 0) {
-                      const obj21 = {};
+                      const obj28 = {};
                       const _JSON13 = JSON;
-                      obj21[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                         closure_136_2.finishReasons,
                       );
-                      closure_136_0.setAttributes(obj21);
+                      closure_136_0.setAttributes(obj28);
                     }
                     let tmp503 = closure_136_1;
                     if (closure_136_1) {
                       tmp503 = closure_136_2.responseTexts.length > 0;
                     }
                     if (tmp503) {
-                      const obj22 = {};
+                      const obj29 = {};
                       const responseTexts7 = closure_136_2.responseTexts;
-                      obj22[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
-                      closure_136_0.setAttributes(obj22);
+                      obj29[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
+                      closure_136_0.setAttributes(obj29);
                     }
                     let tmp513 = closure_136_1;
                     if (closure_136_1) {
                       tmp513 = closure_136_2.toolCalls.length > 0;
                     }
                     if (tmp513) {
-                      const obj23 = {};
+                      const obj30 = {};
                       const _JSON14 = JSON;
-                      obj23[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                      obj30[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                         closure_136_2.toolCalls,
                       );
-                      closure_136_0.setAttributes(obj23);
+                      closure_136_0.setAttributes(obj30);
                     }
                     closure_136_0.end();
                     c12 = 3;
-                    const obj24 = { value: value3, done: true };
-                    return obj24;
+                    const obj31 = { value: value3, done: true };
+                    return obj31;
                   }
                 }
               } else {
@@ -586,8 +585,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                   if (tmp295) {
                     c11 = 11;
                     c12 = 1;
-                    const obj25 = { value: closure_135_2(closure_136_7.return()), done: false };
-                    return obj25;
+                    const obj32 = { value: closure_135_2(closure_136_7.return()), done: false };
+                    return obj32;
                   } else {
                     c9 = 1;
                     if (closure_136_5) {
@@ -595,60 +594,60 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                     } else {
                       c9 = 0;
                       if (closure_136_2.responseId) {
-                        let obj26 = {};
-                        obj26[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                        closure_136_0.setAttributes(obj26);
+                        const obj33 = {};
+                        obj33[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                        closure_136_0.setAttributes(obj33);
                       }
                       if (closure_136_2.responseModel) {
-                        const obj27 = {};
-                        obj27[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                        const obj34 = {};
+                        obj34[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
                           closure_136_2.responseModel;
-                        closure_136_0.setAttributes(obj27);
+                        closure_136_0.setAttributes(obj34);
                       }
-                      let obj34 = closure_135_0(closure_135_1[5]);
-                      const result3 = obj34.setTokenUsageAttributes(
+                      const obj35 = closure_135_0(closure_135_1[5]);
+                      const result3 = obj35.setTokenUsageAttributes(
                         closure_136_0,
                         closure_136_2.promptTokens,
                         closure_136_2.completionTokens,
                         closure_136_2.cacheCreationInputTokens,
                         closure_136_2.cacheReadInputTokens,
                       );
-                      const obj28 = {};
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                      closure_136_0.setAttributes(obj28);
+                      const obj36 = {};
+                      obj36[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                      closure_136_0.setAttributes(obj36);
                       if (closure_136_2.finishReasons.length > 0) {
-                        const obj29 = {};
+                        const obj37 = {};
                         const _JSON9 = JSON;
-                        obj29[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                        obj37[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
                           JSON.stringify(closure_136_2.finishReasons);
-                        closure_136_0.setAttributes(obj29);
+                        closure_136_0.setAttributes(obj37);
                       }
                       let tmp340 = closure_136_1;
                       if (closure_136_1) {
                         tmp340 = closure_136_2.responseTexts.length > 0;
                       }
                       if (tmp340) {
-                        const obj30 = {};
+                        const obj38 = {};
                         const responseTexts5 = closure_136_2.responseTexts;
-                        obj30[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
-                        closure_136_0.setAttributes(obj30);
+                        obj38[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                        closure_136_0.setAttributes(obj38);
                       }
                       let tmp350 = closure_136_1;
                       if (closure_136_1) {
                         tmp350 = closure_136_2.toolCalls.length > 0;
                       }
                       if (tmp350) {
-                        const obj31 = {};
+                        const obj39 = {};
                         const _JSON10 = JSON;
-                        obj31[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                        obj39[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                           closure_136_2.toolCalls,
                         );
-                        closure_136_0.setAttributes(obj31);
+                        closure_136_0.setAttributes(obj39);
                       }
                       closure_136_0.end();
                       c12 = 3;
-                      const obj32 = { value: value2, done: true };
-                      return obj32;
+                      const obj40 = { value: value2, done: true };
+                      return obj40;
                     }
                   }
                 }
@@ -668,8 +667,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               if (tmp373) {
                 c11 = 13;
                 c12 = 1;
-                const obj33 = { value: closure_135_2(closure_136_7.return()), done: false };
-                return obj33;
+                const obj41 = { value: closure_135_2(closure_136_7.return()), done: false };
+                return obj41;
               } else {
                 c9 = 1;
                 if (closure_136_5) {
@@ -677,69 +676,69 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 } else {
                   c9 = 0;
                   if (closure_136_2.responseId) {
-                    obj34 = {};
-                    obj34[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                    closure_136_0.setAttributes(obj34);
+                    const obj42 = {};
+                    obj42[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                    closure_136_0.setAttributes(obj42);
                   }
                   if (closure_136_2.responseModel) {
-                    const obj35 = {};
-                    obj35[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    const obj43 = {};
+                    obj43[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
                       closure_136_2.responseModel;
-                    closure_136_0.setAttributes(obj35);
+                    closure_136_0.setAttributes(obj43);
                   }
-                  let obj44 = closure_135_0(closure_135_1[5]);
-                  const result4 = obj44.setTokenUsageAttributes(
+                  const obj45 = closure_135_0(closure_135_1[5]);
+                  const result4 = obj45.setTokenUsageAttributes(
                     closure_136_0,
                     closure_136_2.promptTokens,
                     closure_136_2.completionTokens,
                     closure_136_2.cacheCreationInputTokens,
                     closure_136_2.cacheReadInputTokens,
                   );
-                  const obj36 = {};
-                  obj36[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  closure_136_0.setAttributes(obj36);
+                  const obj44 = {};
+                  obj44[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                  closure_136_0.setAttributes(obj44);
                   if (closure_136_2.finishReasons.length > 0) {
-                    const obj37 = {};
+                    const obj46 = {};
                     const _JSON11 = JSON;
-                    obj37[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    obj46[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                       closure_136_2.finishReasons,
                     );
-                    closure_136_0.setAttributes(obj37);
+                    closure_136_0.setAttributes(obj46);
                   }
                   let tmp418 = closure_136_1;
                   if (closure_136_1) {
                     tmp418 = closure_136_2.responseTexts.length > 0;
                   }
                   if (tmp418) {
-                    const obj38 = {};
+                    const obj47 = {};
                     const responseTexts6 = closure_136_2.responseTexts;
-                    obj38[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
-                    closure_136_0.setAttributes(obj38);
+                    obj47[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                    closure_136_0.setAttributes(obj47);
                   }
                   let tmp428 = closure_136_1;
                   if (closure_136_1) {
                     tmp428 = closure_136_2.toolCalls.length > 0;
                   }
                   if (tmp428) {
-                    const obj39 = {};
+                    const obj48 = {};
                     const _JSON12 = JSON;
-                    obj39[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    obj48[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                       closure_136_2.toolCalls,
                     );
-                    closure_136_0.setAttributes(obj39);
+                    closure_136_0.setAttributes(obj48);
                   }
                   closure_136_0.end();
                   c12 = 3;
-                  const obj40 = { value, done: true };
-                  return obj40;
+                  const obj49 = { value, done: true };
+                  return obj49;
                 }
               }
             } else {
               closure_136_4 = false;
               c11 = 7;
               c12 = 1;
-              const obj41 = { value: closure_135_2(closure_136_7.next()), done: false };
-              return obj41;
+              const obj50 = { value: closure_135_2(closure_136_7.next()), done: false };
+              return obj50;
             }
             break;
           case 7:
@@ -774,60 +773,60 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  const obj42 = {};
-                  obj42[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                  closure_136_0.setAttributes(obj42);
+                  const obj51 = {};
+                  obj51[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj51);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj43 = {};
-                  obj43[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj43);
+                  const obj52 = {};
+                  obj52[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj52);
                 }
-                obj26 = closure_135_0(closure_135_1[5]);
-                const result5 = obj26.setTokenUsageAttributes(
+                const obj27 = closure_135_0(closure_135_1[5]);
+                const result5 = obj27.setTokenUsageAttributes(
                   closure_136_0,
                   closure_136_2.promptTokens,
                   closure_136_2.completionTokens,
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                obj44 = {};
-                obj44[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj44);
+                const obj53 = {};
+                obj53[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj53);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj45 = {};
+                  const obj55 = {};
                   const _JSON7 = JSON;
-                  obj45[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj55[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj45);
+                  closure_136_0.setAttributes(obj55);
                 }
                 let tmp265 = closure_136_1;
                 if (closure_136_1) {
                   tmp265 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp265) {
-                  const obj46 = {};
+                  const obj56 = {};
                   const responseTexts4 = closure_136_2.responseTexts;
-                  obj46[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
-                  closure_136_0.setAttributes(obj46);
+                  obj56[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                  closure_136_0.setAttributes(obj56);
                 }
                 let tmp275 = closure_136_1;
                 if (closure_136_1) {
                   tmp275 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp275) {
-                  const obj47 = {};
+                  const obj57 = {};
                   const _JSON8 = JSON;
-                  obj47[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj57[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj47);
+                  closure_136_0.setAttributes(obj57);
                 }
                 closure_136_0.end();
                 c12 = 3;
-                const obj48 = { value, done: true };
-                return obj48;
+                const obj58 = { value, done: true };
+                return obj58;
               }
             }
             break;
@@ -850,60 +849,60 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  const obj49 = {};
-                  obj49[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                  closure_136_0.setAttributes(obj49);
+                  const obj59 = {};
+                  obj59[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj59);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj50 = {};
-                  obj50[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj50);
+                  const obj60 = {};
+                  obj60[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj60);
                 }
-                obj18 = closure_135_0(closure_135_1[5]);
-                const result6 = obj18.setTokenUsageAttributes(
+                const obj19 = closure_135_0(closure_135_1[5]);
+                const result6 = obj19.setTokenUsageAttributes(
                   closure_136_0,
                   closure_136_2.promptTokens,
                   closure_136_2.completionTokens,
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                const obj51 = {};
-                obj51[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj51);
+                const obj61 = {};
+                obj61[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj61);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj52 = {};
+                  const obj62 = {};
                   const _JSON5 = JSON;
-                  obj52[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj62[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj52);
+                  closure_136_0.setAttributes(obj62);
                 }
                 let tmp196 = closure_136_1;
                 if (closure_136_1) {
                   tmp196 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp196) {
-                  obj53 = {};
+                  const obj64 = {};
                   const responseTexts3 = closure_136_2.responseTexts;
-                  obj53[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
-                  closure_136_0.setAttributes(obj53);
+                  obj64[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
+                  closure_136_0.setAttributes(obj64);
                 }
                 let tmp206 = closure_136_1;
                 if (closure_136_1) {
                   tmp206 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp206) {
-                  const obj54 = {};
+                  const obj65 = {};
                   const _JSON6 = JSON;
-                  obj54[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj65[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj54);
+                  closure_136_0.setAttributes(obj65);
                 }
                 closure_136_0.end();
                 c12 = 3;
-                const obj55 = { value, done: true };
-                return obj55;
+                const obj66 = { value, done: true };
+                return obj66;
               }
             }
             break;
@@ -926,60 +925,60 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  const obj56 = {};
-                  obj56[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                  closure_136_0.setAttributes(obj56);
+                  const obj67 = {};
+                  obj67[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj67);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj57 = {};
-                  obj57[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj57);
+                  const obj68 = {};
+                  obj68[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj68);
                 }
-                obj10 = closure_135_0(closure_135_1[5]);
-                const result7 = obj10.setTokenUsageAttributes(
+                const obj11 = closure_135_0(closure_135_1[5]);
+                const result7 = obj11.setTokenUsageAttributes(
                   closure_136_0,
                   closure_136_2.promptTokens,
                   closure_136_2.completionTokens,
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                const obj58 = {};
-                obj58[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj58);
+                const obj69 = {};
+                obj69[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj69);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj59 = {};
+                  const obj70 = {};
                   const _JSON3 = JSON;
-                  obj59[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj70[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj59);
+                  closure_136_0.setAttributes(obj70);
                 }
                 let tmp127 = closure_136_1;
                 if (closure_136_1) {
                   tmp127 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp127) {
-                  const obj60 = {};
+                  const obj71 = {};
                   const responseTexts2 = closure_136_2.responseTexts;
-                  obj60[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
-                  closure_136_0.setAttributes(obj60);
+                  obj71[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
+                  closure_136_0.setAttributes(obj71);
                 }
                 let tmp137 = closure_136_1;
                 if (closure_136_1) {
                   tmp137 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp137) {
-                  const obj61 = {};
+                  const obj73 = {};
                   const _JSON4 = JSON;
-                  obj61[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj73[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj61);
+                  closure_136_0.setAttributes(obj73);
                 }
                 closure_136_0.end();
                 c12 = 3;
-                obj62 = { value, done: true };
-                return obj62;
+                const obj74 = { value, done: true };
+                return obj74;
               }
             }
             break;
@@ -1002,60 +1001,60 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  obj = {};
+                  const obj = {};
                   obj[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
                   closure_136_0.setAttributes(obj);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj63 = {};
-                  obj63[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj63);
+                  const obj75 = {};
+                  obj75[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj75);
                 }
-                obj2 = closure_135_0(closure_135_1[5]);
-                const result8 = obj2.setTokenUsageAttributes(
+                const obj3 = closure_135_0(closure_135_1[5]);
+                const result8 = obj3.setTokenUsageAttributes(
                   closure_136_0,
                   closure_136_2.promptTokens,
                   closure_136_2.completionTokens,
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                const obj64 = {};
-                obj64[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj64);
+                const obj76 = {};
+                obj76[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj76);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj65 = {};
+                  const obj77 = {};
                   const _JSON = JSON;
-                  obj65[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj77[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj65);
+                  closure_136_0.setAttributes(obj77);
                 }
                 let tmp58 = closure_136_1;
                 if (closure_136_1) {
                   tmp58 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp58) {
-                  const obj66 = {};
+                  const obj78 = {};
                   const responseTexts = closure_136_2.responseTexts;
-                  obj66[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
-                  closure_136_0.setAttributes(obj66);
+                  obj78[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+                  closure_136_0.setAttributes(obj78);
                 }
                 let tmp68 = closure_136_1;
                 if (closure_136_1) {
                   tmp68 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp68) {
-                  const obj67 = {};
+                  const obj79 = {};
                   const _JSON2 = JSON;
-                  obj67[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj79[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj67);
+                  closure_136_0.setAttributes(obj79);
                 }
                 closure_136_0.end();
                 c12 = 3;
-                const obj68 = { value, done: true };
-                return obj68;
+                const obj80 = { value, done: true };
+                return obj80;
               }
             }
             break;
@@ -1070,14 +1069,14 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               } else {
                 c9 = 0;
                 if (closure_136_2.responseId) {
-                  const obj69 = {};
-                  obj69[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
-                  closure_136_0.setAttributes(obj69);
+                  const obj82 = {};
+                  obj82[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj82);
                 }
                 if (closure_136_2.responseModel) {
-                  const obj70 = {};
-                  obj70[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
-                  closure_136_0.setAttributes(obj70);
+                  const obj83 = {};
+                  obj83[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj83);
                 }
                 const obj81 = closure_135_0(closure_135_1[5]);
                 const result9 = obj81.setTokenUsageAttributes(
@@ -1087,43 +1086,43 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                   closure_136_2.cacheCreationInputTokens,
                   closure_136_2.cacheReadInputTokens,
                 );
-                obj71 = {};
-                obj71[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                closure_136_0.setAttributes(obj71);
+                const obj84 = {};
+                obj84[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj84);
                 if (closure_136_2.finishReasons.length > 0) {
-                  const obj72 = {};
+                  const obj85 = {};
                   const _JSON19 = JSON;
-                  obj72[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                  obj85[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.finishReasons,
                   );
-                  closure_136_0.setAttributes(obj72);
+                  closure_136_0.setAttributes(obj85);
                 }
                 let tmp734 = closure_136_1;
                 if (closure_136_1) {
                   tmp734 = closure_136_2.responseTexts.length > 0;
                 }
                 if (tmp734) {
-                  const obj73 = {};
+                  const obj86 = {};
                   const responseTexts10 = closure_136_2.responseTexts;
-                  obj73[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
-                  closure_136_0.setAttributes(obj73);
+                  obj86[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
+                  closure_136_0.setAttributes(obj86);
                 }
                 let tmp744 = closure_136_1;
                 if (closure_136_1) {
                   tmp744 = closure_136_2.toolCalls.length > 0;
                 }
                 if (tmp744) {
-                  const obj74 = {};
+                  const obj87 = {};
                   const _JSON20 = JSON;
-                  obj74[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                  obj87[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
                     closure_136_2.toolCalls,
                   );
-                  closure_136_0.setAttributes(obj74);
+                  closure_136_0.setAttributes(obj87);
                 }
                 closure_136_0.end();
                 c12 = 3;
-                const obj75 = { value, done: true };
-                return obj75;
+                const obj88 = { value, done: true };
+                return obj88;
               }
             }
         }
@@ -1175,8 +1174,8 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     responseModel: "",
     promptTokens: "r",
     completionTokens: "w",
-    cacheCreationInputTokens: "tag",
-    cacheReadInputTokens: "size",
+    cacheCreationInputTokens: "sa",
+    cacheReadInputTokens: "current",
     toolCalls: [],
     activeToolBlocks: {},
   };
@@ -1184,68 +1183,66 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     processEvent(arg0, obj, closure_1, closure_0);
   });
   applyResult.on("message", () => {
-    obj = closure_0;
     let tmp2 = closure_1;
     if (closure_0.isRecording()) {
-      if (tmp.responseId) {
-        obj = {};
-        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = tmp.responseId;
-        obj.setAttributes(obj);
-      }
-      if (tmp.responseModel) {
-        obj = {};
-        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = tmp.responseModel;
-        obj.setAttributes(obj);
-      }
-      let obj3 = _mod825;
-      const result = obj3.setTokenUsageAttributes(
-        obj,
-        tmp.promptTokens,
-        tmp.completionTokens,
-        tmp.cacheCreationInputTokens,
-        tmp.cacheReadInputTokens,
-      );
-      const obj1 = {};
-      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-      obj.setAttributes(obj1);
-      if (tmp.finishReasons.length > 0) {
+      if (closure_0.responseId) {
         const obj2 = {};
+        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_0.responseId;
+        closure_0.setAttributes(obj2);
+      }
+      if (closure_0.responseModel) {
+        const obj3 = {};
+        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_0.responseModel;
+        closure_0.setAttributes(obj3);
+      }
+      const obj4 = _mod825;
+      const result = obj4.setTokenUsageAttributes(
+        closure_0,
+        closure_0.promptTokens,
+        closure_0.completionTokens,
+        closure_0.cacheCreationInputTokens,
+        closure_0.cacheReadInputTokens,
+      );
+      const obj5 = {};
+      obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+      closure_0.setAttributes(obj5);
+      if (closure_0.finishReasons.length > 0) {
+        const obj6 = {};
         const _JSON = JSON;
-        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-          tmp.finishReasons,
+        obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+          closure_0.finishReasons,
         );
-        obj.setAttributes(obj2);
+        closure_0.setAttributes(obj6);
       }
       let tmp21 = tmp2;
       if (tmp2) {
-        tmp21 = tmp.responseTexts.length > 0;
+        tmp21 = closure_0.responseTexts.length > 0;
       }
       if (tmp21) {
-        obj3 = {};
-        const responseTexts = tmp.responseTexts;
-        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
-        obj.setAttributes(obj3);
+        const obj7 = {};
+        const responseTexts = closure_0.responseTexts;
+        obj7[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+        closure_0.setAttributes(obj7);
       }
       if (tmp2) {
-        tmp2 = tmp.toolCalls.length > 0;
+        tmp2 = closure_0.toolCalls.length > 0;
       }
       if (tmp2) {
-        const obj4 = {};
+        const obj8 = {};
         const _JSON2 = JSON;
-        obj4[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-          tmp.toolCalls,
+        obj8[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+          closure_0.toolCalls,
         );
-        obj.setAttributes(obj4);
+        closure_0.setAttributes(obj8);
       }
-      obj.end();
+      closure_0.end();
     }
   });
   applyResult.on("error", (error) => {
-    obj = captureCheckIn;
-    obj.captureException(error, { mechanism: { handled: false, type: "auto.ai.anthropic.stream_error" } });
+    captureCheckIn.captureException(error, { mechanism: { handled: false, type: "auto.ai.anthropic.stream_error" } });
     if (closure_0.isRecording()) {
-      obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "stream_error" };
-      closure_0.setStatus(obj);
+      const obj3 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "stream_error" };
+      closure_0.setStatus(obj3);
       closure_0.end();
     }
   });

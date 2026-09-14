@@ -1,5 +1,7 @@
 // _runtime/metro/05027__.js
+import _modDef5005 from "05005__.js";
 import _modDef5024 from "05024__.js";
+import styleDefault from "../05029_style.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
@@ -42,7 +44,6 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (headerConfig != null) {
     hidden = headerConfig.hidden;
   }
-  let obj = screenId(5015);
   let flag;
   if (headerConfig != null) {
     flag = headerConfig.disableTopInsetApplication;
@@ -71,7 +72,6 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (flag4 == null) {
     flag4 = false;
   }
-  let obj1 = flag5;
   importDefault = flag5.useRef(null);
   dependencyMap = flag5.useContext(screenId(5025).RNSScreensRefContext);
   const imperativeHandle = flag5.useImperativeHandle(arg1, () => ref.current);
@@ -85,9 +85,9 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (flag5 == null) {
     flag5 = false;
   }
-  closure_4 = obj1.useRef(flag5);
+  closure_4 = obj2.useRef(flag5);
   const items = [flag5, stackPresentation];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     _modDef5024(
       false,
       "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
@@ -108,6 +108,8 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (tmp10) {
     tmp10 = "none" !== headerConfig.blurEffect;
   }
+  let obj = screenId(5015);
+  const tmp3 = !hidden;
   if (isIOS26OrHigher) {
     isIOS26OrHigher = tmp10;
   }
@@ -125,28 +127,27 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   } else {
     container = closure_7.container;
   }
-  obj = { value: obj.useEdgeInsetApplication(!hidden, flag, flag2, flag3, flag4).nextContextValue, children: null };
-  obj = { contentStyle, style: container, stackPresentation, children: null };
+  const obj3 = { value: obj.useEdgeInsetApplication(tmp3, flag, flag2, flag3, flag4).nextContextValue, children: null };
+  const obj4 = { contentStyle, style: container, stackPresentation, children: null };
   let tmp19Result = children;
-  let tmp11Result = tmp11(5029);
   if (screenId(5028).isIOS26OrHigher) {
-    obj1 = { edges: {}, children };
-    tmp19Result = tmp19(screenId(5032).SafeAreaView, obj1);
+    const obj5 = { edges: {}, children };
+    tmp19Result = tmp19(screenId(5032).SafeAreaView, obj5);
   }
-  obj.children = tmp19Result;
-  obj.children = closure_4(tmp11Result, obj);
-  const items1 = [closure_4(screenId(5015).EdgeInsetApplicationContext.Provider, obj), ,];
+  obj4.children = tmp19Result;
+  obj3.children = closure_4(styleDefault, obj4);
+  const items1 = [closure_4(screenId(5015).EdgeInsetApplicationContext.Provider, obj3), ,];
   const merged1 = Object.assign(headerConfig);
   items1[1] = closure_4(screenId(5014).ScreenStackHeaderConfig, {});
-  tmp19Result = "formSheet" === stackPresentation && unstable_sheetFooter;
-  if (tmp19Result) {
-    const obj3 = { children: unstable_sheetFooter() };
-    tmp19Result = tmp19(screenId(5034).FooterComponent, obj3);
+  let tmp19Result2 = "formSheet" === stackPresentation && unstable_sheetFooter;
+  if (tmp19Result2) {
+    const obj7 = { children: unstable_sheetFooter() };
+    tmp19Result2 = tmp19(screenId(5034).FooterComponent, obj7);
   }
-  items1[2] = tmp19Result;
-  const obj2 = {};
-  const tmp3 = !hidden;
-  const obj4 = {
+  items1[2] = tmp19Result2;
+  const obj6 = {};
+  const tmp11Result = styleDefault;
+  const obj8 = {
     ref(current) {
       closure_1.current = current;
       if (null !== closure_2) {
@@ -176,20 +177,20 @@ export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
     onHeaderHeightChange: null,
   };
   let flag6;
-  tmp11Result = tmp11(5005);
+  const tmp17Result = closure_6(closure_5, { children: items1 });
   if (headerConfig != null) {
     flag6 = headerConfig.largeTitle;
   }
   if (flag6 == null) {
     flag6 = false;
   }
-  obj4.hasLargeHeader = flag6;
-  obj4.sheetAllowedDetents = sheetAllowedDetents;
+  obj8.hasLargeHeader = flag6;
+  obj8.sheetAllowedDetents = sheetAllowedDetents;
   const items2 = [style, undefined];
-  obj4.style = items2;
-  obj4.scrollEdgeEffects = scrollEdgeEffects;
-  obj4.onHeaderHeightChange = onHeaderHeightChange;
+  obj8.style = items2;
+  obj8.scrollEdgeEffects = scrollEdgeEffects;
+  obj8.onHeaderHeightChange = onHeaderHeightChange;
   const merged2 = Object.assign(merged);
-  obj4.children = closure_6(closure_5, { children: items1 });
-  return closure_4(tmp11Result, obj4);
+  obj8.children = tmp17Result;
+  return closure_4(_modDef5005, obj8);
 });

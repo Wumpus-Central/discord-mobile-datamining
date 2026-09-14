@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "simvol", verb: "olmal\u0131d\u0131r" },
           file: { unit: "bayt", verb: "olmal\u0131d\u0131r" },
           array: { unit: "element", verb: "olmal\u0131d\u0131r" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -136,7 +135,7 @@ if (self2) {
               if (code.inclusive) {
                 str29 = "<=";
               }
-              let tmp27 = obj[code.origin];
+              let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
@@ -145,14 +144,14 @@ if (self2) {
                 if (str30 == null) {
                   str30 = "d\u0259y\u0259r";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str36 = tmp27.unit;
                 if (str36 == null) {
                   str36 = "element";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "\u00C7ox b\u00F6y\u00FCk: g\u00F6zl\u0259nil\u0259n " + str30 + " " + str29 + str + " " + str36;
+                  "\u00C7ox b\u00F6y\u00FCk: g\u00F6zl\u0259nil\u0259n " + str30 + " " + str29 + str1 + " " + str36;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
@@ -172,19 +171,19 @@ if (self2) {
               if (code.inclusive) {
                 str22 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str51 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "\u00C7ox ki\u00E7ik: g\u00F6zl\u0259nil\u0259n " + origin + " " + str22 + str1 + " " + tmp15.unit;
+                  "\u00C7ox ki\u00E7ik: g\u00F6zl\u0259nil\u0259n " + origin + " " + str22 + str51 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "\u00C7ox ki\u00E7ik: g\u00F6zl\u0259nil\u0259n " + origin + " " + str22 + str1;
+                combined3 = "\u00C7ox ki\u00E7ik: g\u00F6zl\u0259nil\u0259n " + origin + " " + str22 + str51;
               }
               return combined3;
             case "invalid_format":
@@ -232,7 +231,6 @@ if (self2) {
               return "Yanl\u0131\u015F d\u0259y\u0259r";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " daxilind\u0259 yanl\u0131\u015F d\u0259y\u0259r";
               return "" + code.origin + " daxilind\u0259 yanl\u0131\u015F d\u0259y\u0259r";
             default:
               return "Yanl\u0131\u015F d\u0259y\u0259r";

@@ -74,49 +74,48 @@ let items = [
     key: "render",
     value: function render() {
       const self = this;
-      let obj = FeedbackButton(1064);
-      const theme = obj.getTheme();
+      const theme = FeedbackButton(1064).getTheme();
       const merged = Object.assign(Object.assign({}, FeedbackButton(1066).defaultButtonConfiguration), this.props);
-      let obj1 = FeedbackButton(1067);
+      const obj = FeedbackButton(1064);
       const styles = this.props.styles;
       let triggerButton;
-      const merged1 = Object.assign({}, obj1.defaultButtonStyles(theme).triggerButton);
+      const merged1 = Object.assign({}, FeedbackButton(1067).defaultButtonStyles(theme).triggerButton);
       if (null !== styles) {
         if (undefined !== styles) {
           triggerButton = styles.triggerButton;
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = FeedbackButton(1067);
+      const obj2 = FeedbackButton(1067);
       const styles2 = self.props.styles;
       let triggerText;
-      const merged3 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerText);
+      const merged3 = Object.assign({}, FeedbackButton(1067).defaultButtonStyles(theme).triggerText);
       if (null !== styles2) {
         if (undefined !== styles2) {
           triggerText = styles2.triggerText;
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = FeedbackButton(1067);
+      const tmpResult = FeedbackButton(1067);
       const styles3 = self.props.styles;
       let triggerIcon;
-      const merged5 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerIcon);
+      const merged5 = Object.assign({}, FeedbackButton(1067).defaultButtonStyles(theme).triggerIcon);
       if (null !== styles3) {
         if (undefined !== styles3) {
           triggerIcon = styles3.triggerIcon;
         }
       }
-      obj = { style: merged2, onPress: null, accessibilityLabel: null };
+      const obj3 = { style: merged2, onPress: null, accessibilityLabel: null };
       const merged6 = Object.assign(merged5, triggerIcon);
-      obj.onPress = FeedbackButton(1062).showFeedbackWidget;
-      obj.accessibilityLabel = merged.triggerAriaLabel;
-      obj = { source: null, style: null };
-      obj1 = { uri: FeedbackButton(1068).feedbackIcon };
-      obj.source = obj1;
-      obj.style = merged6;
+      obj3.onPress = FeedbackButton(1062).showFeedbackWidget;
+      obj3.accessibilityLabel = merged.triggerAriaLabel;
+      const obj4 = { source: null, style: null };
+      const tmpResult2 = FeedbackButton(1067);
+      obj4.source = { uri: FeedbackButton(1068).feedbackIcon };
+      obj4.style = merged6;
       const element = <React5 source={null} style={null} />;
       return (
-        <React7 source={null} style={null}>
+        <React7 style={merged2} onPress={null} accessibilityLabel={null}>
           {element}
           <React6 style={style} testID="sentry-feedback-button">
             {merged.triggerLabel}

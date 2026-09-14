@@ -101,13 +101,13 @@ const entry = {
                 } else {
                   const self = this;
                   const result = this._getOrCreateMutationObserverId();
-                  const obj = { mutationObserverId: result, target, subtree: null };
+                  const obj2 = { mutationObserverId: result, target, subtree: null };
                   let subtree;
                   if (childList != null) {
                     subtree = childList.subtree;
                   }
-                  obj.subtree = Boolean(subtree);
-                  obj.observe(obj);
+                  obj2.subtree = Boolean(subtree);
+                  notifyMutationObserversAll.observe(obj2);
                 }
               }
             }

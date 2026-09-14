@@ -2,6 +2,8 @@
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_2 = ["itemLayoutAnimation", "skipEnteringExitingAnimations", "CellRendererComponentStyle"];
 const useRef = fn(19).useRef;
@@ -25,24 +27,24 @@ export const ReanimatedFlatList = module_1775.componentWithRef((skipEnteringExit
   let obj = { ref };
   const memo = noop.useMemo(
     () => (onLayout) => {
-      let current;
-      if (ref != null) {
-        current = ref.current;
-      }
-      let obj = { layout: current, onLayout: onLayout.onLayout, style: null, children: null };
-      const items = [onLayout.style];
       let current1;
       if (ref != null) {
         current1 = ref.current;
       }
-      if (typeof current1 === "function") {
+      const obj = { layout: current1, onLayout: onLayout.onLayout, style: null, children: null };
+      const items = [onLayout.style];
+      let current2;
+      if (ref != null) {
+        current2 = ref.current;
+      }
+      if (typeof current2 === "function") {
         let currentResult;
         if (ref != null) {
-          obj = { index: null, item: null };
           ({ index: obj3.index, item: obj3.item } = onLayout);
-          currentResult = ref.current(obj);
+          currentResult = ref.current({ index: null, item: null });
+          const obj4 = { index: null, item: null };
         }
-        current = currentResult;
+        let current = currentResult;
       } else if (ref != null) {
         current = ref.current;
       }
@@ -50,7 +52,7 @@ export const ReanimatedFlatList = module_1775.componentWithRef((skipEnteringExit
       obj.style = items;
       obj.children = onLayout.children;
       return jsx(ref(ref[5]).AnimatedView, {
-        layout: current,
+        layout: current1,
         onLayout: onLayout.onLayout,
         style: null,
         children: null,
@@ -63,7 +65,7 @@ export const ReanimatedFlatList = module_1775.componentWithRef((skipEnteringExit
   const tmp7 = <closure_7 ref={ref} />;
   let tmp5Result = tmp7;
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
-    obj = { skipEntering: true, skipExiting: true, children: tmp7 };
+    const obj2 = { skipEntering: true, skipExiting: true, children: tmp7 };
     tmp5Result = jsx(require("metro/01774__.js").LayoutAnimationConfig, {
       skipEntering: true,
       skipExiting: true,

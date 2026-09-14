@@ -4,7 +4,7 @@ import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
 const LayoutAnimationConfig = fn;
 function _isNativeReflectConstruct() {
@@ -40,6 +40,7 @@ function SkipEntering(children) {
 }
 let noop = fn(19);
 ({ Children: hasOwnProperty, useEffect: metroRequire, useRef: closure_7, Component, createContext } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 const module_1639 = fn(1639);
 let closure_10 = module_1639.isReact19();

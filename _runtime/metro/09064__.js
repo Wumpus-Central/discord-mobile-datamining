@@ -14,6 +14,8 @@ import _mod9125 from "09125__.js";
 import initializeContext from "../09126_initializeContext.js";
 import _mod9129 from "09129__.js";
 
+const require = globalThis.__r;
+
 const self = this;
 let self2 = this;
 if (this) {
@@ -122,13 +124,13 @@ if (self2) {
     };
     Object.defineProperty(exports, "toJSONSchema", obj);
     const _Object5 = Object;
-    obj = {
+    const obj2 = {
       enumerable: true,
       get() {
         return require("JSONSchemaGenerator").JSONSchemaGenerator;
       },
     };
-    Object.defineProperty(exports, "JSONSchemaGenerator", obj);
+    Object.defineProperty(exports, "JSONSchemaGenerator", obj2);
     exports.JSONSchema = fn2(_mod9129);
   } else {
     const _Object2 = Object;

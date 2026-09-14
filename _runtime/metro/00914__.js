@@ -10,7 +10,7 @@ export const initUnique = function initUnique(visibilityWatcher, InteractionMana
     }
     return weakMap.get(visibilityWatcher);
   } catch (err) {
-    tmp = new tmp();
-    return tmp;
+    const tmp7 = new tmp();
+    return tmp7;
   }
 };

@@ -12,10 +12,8 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   const tmp = React3(null);
   closure_0 = tmp;
   if (null === tmp.current) {
-    let obj = { context: null, savedDependencies: null };
-    obj.context = obj.makeShareable({});
-    obj.savedDependencies = [];
-    tmp.current = obj;
+    const obj2 = { context: freezeObjectInDev.makeShareable({}), savedDependencies: [] };
+    tmp.current = obj2;
   }
   React2(
     () => () => {
@@ -40,7 +38,7 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   }
   const dependencies = _mod1782.buildDependencies(items10, memoizedGestureCallbacks);
   tmp.current.savedDependencies = dependencies;
-  obj = {
+  const obj5 = {
     context,
     doDependenciesDiffer: !_mod1782.areDependenciesEqual(dependencies, savedDependencies),
     useWeb: null,
@@ -50,6 +48,6 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
     isWebResult = _mod1639.isJest();
     const tmp9Result = _mod1639;
   }
-  obj.useWeb = isWebResult;
-  return obj;
+  obj5.useWeb = isWebResult;
+  return obj5;
 };

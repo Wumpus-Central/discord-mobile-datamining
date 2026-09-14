@@ -1,6 +1,6 @@
 // _runtime/metro/06910__.js
 import cancelAnimation from "../01636_cancelAnimation.js";
-import GESTURE_SOURCE from "../06729_GESTURE_SOURCE.js";
+import value2 from "../06729_value2.js";
 import _mod6733 from "06733__.js";
 import BottomSheetContext from "../06739_BottomSheetContext.js";
 import noop from "00019__.js";
@@ -14,13 +14,13 @@ export default function _default(children) {
   if (useGestureEventsHandlersDefault === undefined) {
     useGestureEventsHandlersDefault = _mod6733.useGestureEventsHandlersDefault;
   }
-  const sharedValue = cancelAnimation.useSharedValue(GESTURE_SOURCE.GESTURE_SOURCE.UNDETERMINED);
+  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
   const bottomSheetInternal = _mod6733.useBottomSheetInternal();
   ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
   ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
   const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
   const gestureHandler = _mod6733.useGestureHandler(
-    GESTURE_SOURCE.GESTURE_SOURCE.CONTENT,
+    value2.GESTURE_SOURCE.CONTENT,
     animatedContentGestureState,
     sharedValue,
     handleOnStart,
@@ -29,7 +29,7 @@ export default function _default(children) {
     handleOnFinalize,
   );
   const gestureHandler1 = _mod6733.useGestureHandler(
-    GESTURE_SOURCE.GESTURE_SOURCE.HANDLE,
+    value2.GESTURE_SOURCE.HANDLE,
     animatedHandleGestureState,
     sharedValue,
     handleOnStart,

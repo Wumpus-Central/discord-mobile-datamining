@@ -1,7 +1,7 @@
 // _runtime/metro/00124__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import DOMRectReadOnlyDefault from "../00125_DOMRectReadOnly.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 class DOMRect {
   constructor() {
@@ -47,17 +48,16 @@ class DOMRect {
 }
 _classCallCheck = DOMRect;
 _inherits(DOMRect, DOMRectReadOnlyDefault);
-let obj = {
-  key: "x",
-  get() {
-    return this.__getInternalX();
-  },
-  set(arg0) {
-    this.__setInternalX(arg0);
-  },
-};
 const items = [
-  obj,
+  {
+    key: "x",
+    get() {
+      return this.__getInternalX();
+    },
+    set(arg0) {
+      this.__setInternalX(arg0);
+    },
+  },
   {
     key: "y",
     get() {
@@ -102,11 +102,10 @@ const entry = {
 const items1 = [entry];
 const importDefaultResultResult = _createClass(DOMRect, items, items1);
 const module_126 = fn(126);
-obj = {
+module_126.setPlatformObject(importDefaultResultResult, {
   clone(arg0) {
     return new importDefaultResultResult(arg0.x, arg0.y, arg0.width, arg0.height);
   },
-};
-module_126.setPlatformObject(importDefaultResultResult, obj);
+});
 
 export default importDefaultResultResult;

@@ -8,20 +8,21 @@ const dependencyMap = arg6;
 export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
   fileChunk = _mod5266.getFileChunk(fileChunk);
   const FileTypes = _mod5267.FileTypes;
-  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "aac");
-  if (!checkByFileTypeResult) {
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
     excludeSimilarTypes = undefined;
     if (null != excludeSimilarTypes) {
       excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-    checkByFileTypeResult = !excludeSimilarTypes;
+    let checkByFileTypeResult = !excludeSimilarTypes;
     if (!excludeSimilarTypes) {
       const fileChunk1 = _mod5266.getFileChunk(fileChunk);
       const FileTypes2 = _mod5267.FileTypes;
       checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
     }
+    checkByFileTypeResult1 = checkByFileTypeResult;
   }
-  return checkByFileTypeResult;
+  return checkByFileTypeResult1;
 };
 export const isAMR = function isAMR(fileChunk) {
   fileChunk = _mod5266.getFileChunk(fileChunk);

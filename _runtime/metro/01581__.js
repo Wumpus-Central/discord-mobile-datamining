@@ -5,6 +5,8 @@ import _mod1584 from "01584__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_2 = [
   "children",
@@ -46,15 +48,17 @@ export const createStandardNavigationFactories = function createStandardNavigati
     let obj = {
       createNavigator: require("BaseNavigationContainer").createNavigatorFactory(
         function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
-          let obj = BaseNavigationContainer;
-          const navigationBuilder = obj.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
+          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(
+            closure_0,
+            UNSTABLE_routeNamesChangeBehavior,
+          );
           closure_1 = _mod1582.useBuildHref();
           let tmp2 = _mod1584;
           let flag = tmp2.useMemoArray;
           if (!("preloadedRoutes" in navigationBuilder.state)) {
-            let routes = navigationBuilder.state.routes;
+            let routes1 = navigationBuilder.state.routes;
             const flagResult = flag(
-              routes.map((key) => {
+              routes1.map((key) => {
                 const tmp = closure_1(key.name, key.params);
                 const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }];
                 const items1 = [, , ,];
@@ -66,7 +70,6 @@ export const createStandardNavigationFactories = function createStandardNavigati
             );
             closure_2 = flagResult;
             let items = [navigationBuilder.state.index, flagResult];
-            obj = {};
             const routes2 = noop.useMemo(
               () => ({ index: navigationBuilder.state.index, routes: flagResult }),
               items,
@@ -76,8 +79,8 @@ export const createStandardNavigationFactories = function createStandardNavigati
           } else {
             const _Array = Array;
           }
-          routes = navigationBuilder.state.routes;
-          routes = routes.concat(navigationBuilder.state.preloadedRoutes);
+          const routes = navigationBuilder.state.routes;
+          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
         },
       ),
       createScreen: null,

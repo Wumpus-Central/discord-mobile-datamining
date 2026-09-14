@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: {
             unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430",
             verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430",
@@ -116,7 +116,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -151,7 +150,7 @@ if (self2) {
               if (code.inclusive) {
                 str31 = "<=";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -160,7 +159,7 @@ if (self2) {
                 if (str32 == null) {
                   str32 = "\u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str38 = tmp28.unit;
                 if (str38 == null) {
                   str38 = "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430";
@@ -171,7 +170,7 @@ if (self2) {
                   str32 +
                   " \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 " +
                   str31 +
-                  str +
+                  str1 +
                   " " +
                   str38;
               } else {
@@ -193,12 +192,12 @@ if (self2) {
               if (code.inclusive) {
                 str25 = ">=";
               }
-              let tmp16 = obj[code.origin];
+              let tmp16 = obj2[code.origin];
               if (tmp16 == null) {
                 tmp16 = null;
               }
               ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              const str54 = minimum.toString();
               if (tmp16) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
@@ -206,7 +205,7 @@ if (self2) {
                   origin +
                   " \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 " +
                   str25 +
-                  str1 +
+                  str54 +
                   " " +
                   tmp16.unit;
               } else {
@@ -216,7 +215,7 @@ if (self2) {
                   origin +
                   " \u0434\u0430 \u0431\u044A\u0434\u0435 " +
                   str25 +
-                  str1;
+                  str54;
               }
               return combined3;
             case "invalid_format":
@@ -305,8 +304,6 @@ if (self2) {
               return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str =
-                "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 ";
               return (
                 "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 " +
                 code.origin

@@ -40,7 +40,7 @@ export const colorToHex = function colorToHex(arr) {
       let str11 = "";
       let str5 = "";
       if (3 === items.length) {
-        [tmp30, tmp31, tmp32] = _slicedToArray(items, 3);
+        [tmp30, tmp31, tmp32] = items;
         if (0 === tmp31) {
           const _Math = Math;
           const items1 = [Math.round(255 * tmp34), ,];
@@ -58,7 +58,7 @@ export const colorToHex = function colorToHex(arr) {
             const _parseInt3 = parseInt;
             const text3 = `#${obj2.padStart(2, "0")}${obj3.padStart(2, "0")}`;
             const str15 = parseInt(items1[1], 10);
-            str5 = parseInt(items1[2], 10).toString(16);
+            parseInt(items1[2], 10).toString(16);
             str11 = `#${obj2.padStart(2, "0")}${obj3.padStart(2, "0")}${obj4.padStart(2, "0")}`;
             const str16 = parseInt(items1[2], 10);
           }

@@ -9,9 +9,7 @@ require = fn;
 function ButtonLink(arg0) {
   ({ screen, params, action, href } = arg0);
   const merged = Object.assign(arg0, Object.assign({ screen: 0, params: 0, action: 0, href: 0 }));
-  let obj = Link;
-  const linkProps = obj.useLinkProps({ screen, params, action, href });
-  obj = {};
+  const linkProps = Link.useLinkProps({ screen, params, action, href });
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(linkProps);
   return <ButtonBase />;
@@ -27,8 +25,7 @@ function ButtonBase(variant) {
     variant,
     Object.assign({ variant: 0, color: 0, android_ripple: 0, style: 0, children: 0 }),
   );
-  let obj = Link;
-  const theme = obj.useTheme();
+  const theme = Link.useTheme();
   if (color == null) {
     color = theme.colors.primary;
   }
@@ -43,30 +40,30 @@ function ButtonBase(variant) {
   } else if ("filled" === str) {
     let str4 = "white";
     if (!obj11.isDark()) {
-      let obj1 = ColorDefault(color);
-      str4 = obj1.darken(0.71).string();
-      const darkenResult = obj1.darken(0.71);
+      const obj2 = ColorDefault(color);
+      str4 = ColorDefault(color).darken(0.71).string();
+      const darkenResult = ColorDefault(color).darken(0.71);
     }
     tmp5 = str4;
     str3 = color;
     obj11 = ColorDefault(color);
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj = { radius: 40, color: null };
+  const obj5 = { radius: 40, color: null };
   const obj8 = ColorDefault(tmp5);
-  obj.color = ColorDefault(tmp5).fade(0.85).string();
+  obj5.color = ColorDefault(tmp5).fade(0.85).string();
   const merged2 = Object.assign(android_ripple);
-  obj.android_ripple = obj;
-  obj.pressOpacity = 1;
-  obj.hoverEffect = { color: tmp5 };
+  obj3.android_ripple = obj5;
+  obj3.pressOpacity = 1;
+  obj3.hoverEffect = { color: tmp5 };
   const items = [{ backgroundColor: str3 }, closure_6.button, style];
-  obj.style = items;
-  obj1 = { style: null, children };
+  obj3.style = items;
+  const obj6 = { style: null, children };
   const items1 = [{ color: tmp5 }, theme.fonts.regular, closure_6.text];
-  obj1.style = items1;
-  obj.children = jsx(Text.Text, { style: null, children });
-  return jsx(_mod5730.PlatformPressable, { radius: 40, color: null });
+  obj6.style = items1;
+  obj3.children = jsx(Text.Text, { style: null, children });
+  return jsx(_mod5730.PlatformPressable, {});
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet } = get_ActivityIndicator);

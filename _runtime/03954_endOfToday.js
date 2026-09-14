@@ -1,6 +1,7 @@
 // _runtime/03954_endOfToday.js
-import endOfDay from "03925_endOfDay.js";
+import endOfDay_mod from "03925_endOfDay.js";
 
+let endOfDay = endOfDay_mod;
 if (!endOfDay) {
   const obj = { default: endOfDay };
   let tmp3 = obj;

@@ -10,10 +10,10 @@ export const isHardCrash = function isHardCrash(str) {
           values = exception.values;
         }
       }
-      values[Symbol.iterator]();
+      values2[Symbol.iterator]();
       str = "onerror";
     }
-    values = str.exception.values;
+    values2 = str.exception.values;
   }
-  values = [];
+  values2 = [];
 };

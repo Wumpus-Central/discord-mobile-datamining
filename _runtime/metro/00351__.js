@@ -11,10 +11,10 @@ export default {
     if (undefined !== debug.debug) {
       _mod38(FrameRateLoggerDefault, "Trying to debug FrameRateLogger without the native module!");
     }
-    let obj = FrameRateLoggerDefault;
+    const obj = FrameRateLoggerDefault;
     if (obj != null) {
-      obj = { debug: debug.debug };
-      obj.setGlobalOptions(obj);
+      const obj2 = { debug: debug.debug };
+      obj.setGlobalOptions(obj2);
     }
   },
   setContext(arg0) {

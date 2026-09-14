@@ -17,9 +17,9 @@ export const observe = (type, handleEntries, arg2) => {
           entries(entries.getEntries());
         });
       });
-      obj = { type, buffered: true };
+      const obj2 = { type, buffered: true };
       const merged = Object.assign(obj);
-      performanceObserver.observe(obj);
+      performanceObserver.observe(obj2);
       return performanceObserver;
     }
   } catch (err) {}

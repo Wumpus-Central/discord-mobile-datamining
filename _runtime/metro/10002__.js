@@ -1,7 +1,7 @@
 // _runtime/metro/10002__.js
 import _mod9998 from "09998__.js";
 import QRPolynomial from "../10003_QRPolynomial.js";
-import _mod10004 from "10004__.js";
+import array2 from "../10004_array2.js";
 
 const exports = {
   PATTERN_POSITION_TABLE: null,
@@ -94,12 +94,12 @@ const exports = {
     if (0 < diff) {
       do {
         let tmp5 = QRPolynomial;
-        let obj2 = _mod10004;
+        let obj2 = array2;
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;
         let tmp7 = new.target;
-        tmp5 = new tmp5(items, 0);
-        multiplyResult = multiplyResult.multiply(tmp5);
+        let tmp52 = new tmp5(items, 0);
+        multiplyResult = multiplyResult.multiply(tmp52);
         num = num + 1;
         tmp2 = multiplyResult;
       } while (num < diff);

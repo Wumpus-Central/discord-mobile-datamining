@@ -1,9 +1,11 @@
 // _runtime/metro/06828__.js
 import jsxProd from "../react/00021_jsxProd.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 
+let noop = noop_mod;
 ({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
 ({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let c7 = 0;
@@ -75,25 +77,11 @@ export default function _default(children) {
   }, []);
   const items1 = [keyboardShouldPersistTaps];
   let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
-  let obj = { value: tmp2, children: null };
-  obj = {
-    collapsable: false,
-    onStartShouldSetResponderCapture: keyboardShouldPersistTaps(() => {
-      closure_1.current = false;
-      return false;
-    }, []),
-    onStartShouldSetResponder: keyboardShouldPersistTaps(() => {
-      let current = "handled" === keyboardShouldPersistTaps;
-      if (current) {
-        current = isRNGHResponderEvent.current;
-      }
-      isRNGHResponderEvent.current = false;
-      return current;
-    }, items1),
-    pointerEvents: "box-none",
-    style: logicalResponder.logicalResponder,
-    children: children.children,
-  };
+  const obj = { value: tmp2, children: null };
+  const tmp4 = keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, []);
   obj.children = (
     <closure_5
       collapsable={false}
@@ -115,27 +103,7 @@ export default function _default(children) {
       {children.children}
     </closure_5>
   );
-  return (
-    <context
-      collapsable={false}
-      onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-        closure_1.current = false;
-        return false;
-      }, [])}
-      onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
-        let current = "handled" === keyboardShouldPersistTaps;
-        if (current) {
-          current = isRNGHResponderEvent.current;
-        }
-        isRNGHResponderEvent.current = false;
-        return current;
-      }, items1)}
-      pointerEvents="box-none"
-      style={logicalResponder.logicalResponder}
-    >
-      {children.children}
-    </context>
-  );
+  return <context value={tmp2}>{null}</context>;
 }
 export const JSResponderContext = context;
 export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {

@@ -1,117 +1,73 @@
 // _runtime/metro/13006__.js
-import extractRequestData from "../13007_extractRequestData.js";
-import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import setupIntegration from "12982__.js";
+import _mod12928 from "12928__.js";
 
-let closure_4 = ["ip", "user"];
-let obj = {
-  include: {
-    cookies: true,
-    data: true,
-    headers: true,
-    ip: false,
-    query_string: true,
-    url: true,
-    user: { id: true, username: true, email: true },
-  },
-  transactionNamingScheme: "methodPath",
-};
-
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  if (include === undefined) {
-    include = {};
-  }
-  include = {};
-  const merged = Object.assign(include);
-  const merged1 = Object.assign(include);
-  include = {};
-  const merged2 = Object.assign(include.include);
-  const merged3 = Object.assign(include.include);
-  if (include.include) {
-    if (typeof include.include.user === "boolean") {
-      let user = include.include.user;
-    }
-    include.user = user;
-    include.include = include;
-    const obj1 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-        if (undefined === prop) {
-          prop = {};
-        }
-        ({ request, normalizedRequest } = prop);
-        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-          include = include.include;
-          const user = include.user;
-          const items = ["method"];
-          const entries = Object.entries(closure_1_3(include, closure_1_4));
-          while (tmp2 !== undefined) {
-            let tmp5 = closure_1_2(tmp3, 2);
-            let first = tmp5[0];
-            if (tmp5[1]) {
-              let arr = items.push(first);
+require = arg1;
+const dependencyMap = arg6;
+function getMetadataForUrl(fn, arg1) {
+  (function ensureMetadataStacksAreParsed(fn) {
+    if (_mod12928.GLOBAL_OBJ._sentryModuleMetadata) {
+      const _Object = Object;
+      const keys = Object.keys(_mod12928.GLOBAL_OBJ._sentryModuleMetadata);
+      for (const item10026 of keys) {
+        let tmp16 = _mod12928.GLOBAL_OBJ._sentryModuleMetadata[item10026];
+        if (!set.has(item10026)) {
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
+          let reversed = obj2.reverse();
+          for (const item10050 of reversed) {
+            if (item10050.filename) {
+              let result = map.set(tmp22.filename, tmp16);
+              obj3.return();
+              break;
             }
             continue;
           }
-          let flag = true;
-          if (undefined !== user) {
-            flag = user;
-            if (typeof user !== "boolean") {
-              const items1 = [];
-              const _Object = Object;
-              const entries1 = Object.entries(user);
-              flag = items1;
-              for (const item10032 of entries1) {
-                let tmp11 = closure_1_2(item10032, 2);
-                let first1 = tmp11[0];
-                if (tmp11[1]) {
-                  arr = items1.push(first1);
-                }
-                continue;
+        }
+        continue;
+      }
+    }
+  })(fn);
+  return map.get(arg1);
+}
+const map = new Map();
+const set = new Set();
+
+export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
+  closure_0 = arg0;
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp = stacktrace.stacktrace.frames || [];
+        for (const item10010 of tmp) {
+          if (item10010.filename) {
+            if (!item10010.module_metadata) {
+              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
+              if (tmp9) {
+                item10010.module_metadata = tmp10;
               }
             }
           }
-          include = { ip: include.ip, user: flag, request: null, transaction: null };
-          let tmp15;
-          if (0 !== items.length) {
-            tmp15 = items;
-          }
-          include.request = tmp15;
-          include.transaction = include.transactionNamingScheme;
-          return { include };
-        })(obj);
-        if (normalizedRequest) {
-          let tmp5;
-          if (request) {
-            let ip = request.ip;
-            if (!ip) {
-              ip = request.socket && request.socket.remoteAddress;
-              const tmp6 = request.socket && request.socket.remoteAddress;
-            }
-            tmp5 = ip;
-          }
-          let user;
-          if (request) {
-            user = request.user;
-          }
-          const obj3 = extractRequestData;
-          obj = { ipAddress: tmp5, user };
-          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-          return sdkProcessingMetadata;
-        } else {
-          let result1 = sdkProcessingMetadata;
-          if (request) {
-            result1 = extractRequestData.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          }
-          return result1;
+          continue;
         }
-      },
-    };
-    return obj1;
-  }
-  user = {};
-  const merged4 = Object.assign(include.include.user);
-  const merged5 = Object.assign(include.include || {}.user);
-});
+      }
+    });
+  } catch (err) {}
+};
+export { getMetadataForUrl };
+export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp3 = stacktrace.stacktrace.frames || [];
+        const iter = tmp3[Symbol.iterator]();
+        iter.next();
+        while (iter !== undefined) {
+          delete tmp2[tmp];
+          continue;
+        }
+      }
+    });
+  } catch (err) {}
+};

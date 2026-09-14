@@ -47,9 +47,8 @@ const entry = {
     if (_nativeModule != null) {
       _nativeModule.addListener(arg0);
     }
-    let obj = NativeEventEmitter(92);
-    c0 = obj.addListener(arg0, arg1, arg2);
-    obj = {
+    c0 = NativeEventEmitter(92).addListener(arg0, arg1, arg2);
+    return {
       remove() {
         if (null != _null) {
           const _nativeModule = self._nativeModule;
@@ -61,7 +60,6 @@ const entry = {
         }
       },
     };
-    return obj;
   },
 };
 let items = [

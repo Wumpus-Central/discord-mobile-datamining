@@ -6,7 +6,7 @@ import normalize from "00730_normalize.js";
 import _slicedToArray from "metro/00032__.js";
 
 function exceptionFromError(fn, name) {
-  let obj = { type: name.name || name.constructor.name, value: null };
+  const obj = { type: name.name || name.constructor.name, value: null };
   let isErrorResult = _mod692.isError(name);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in name;
@@ -24,8 +24,8 @@ function exceptionFromError(fn, name) {
   obj.value = combined;
   const arr = fn(name.stack || "", 1);
   if (arr.length) {
-    obj = { frames: arr };
-    obj.stacktrace = obj;
+    const obj3 = { frames: arr };
+    obj.stacktrace = obj3;
   }
   return obj;
 }
@@ -57,7 +57,7 @@ export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
   if (event_id != null) {
     event_id = event_id.event_id;
   }
-  let obj = { event_id, level: str };
+  const obj = { event_id, level: str };
   if (arg4) {
     let syntheticException;
     if (event_id != null) {
@@ -66,13 +66,13 @@ export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
     if (syntheticException) {
       const arr = fn(event_id.syntheticException.stack || "", 1);
       if (arr.length) {
-        obj = { values: null };
-        obj = { value, stacktrace: null };
-        const obj1 = { frames: arr };
-        obj.stacktrace = obj1;
-        const items = [obj];
-        obj.values = items;
-        obj.exception = obj;
+        const obj2 = { values: null };
+        const obj3 = { value, stacktrace: null };
+        const obj4 = { frames: arr };
+        obj3.stacktrace = obj4;
+        const items = [obj3];
+        obj2.values = items;
+        obj.exception = obj2;
         const result = uuid4.addExceptionMechanism(obj, { synthetic: true });
       }
       const tmp3 = event_id.syntheticException.stack || "";
@@ -99,21 +99,17 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (!data) {
     data = { handled: true, type: "generic" };
   }
-  let obj1 = _mod692;
-  if (obj1.isError(name)) {
+  if (obj2.isError(name)) {
     const items = [name, undefined];
     let items3 = items;
   } else {
     data.synthetic = true;
-    let tmp2Result = _mod692;
     if (tmp2Result.isPlainObject(name)) {
       let normalizeDepth;
       if (getOptions != null) {
         normalizeDepth = getOptions.getOptions().normalizeDepth;
       }
-      let obj = { __serialized__: null };
-      tmp2Result = normalize;
-      obj.__serialized__ = tmp2Result.normalizeToSize(name, normalizeDepth);
+      const obj = { __serialized__: normalize.normalizeToSize(name, normalizeDepth) };
       let tmp14;
       const keys = Object.keys();
       if (keys !== undefined) {
@@ -198,6 +194,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
         }
         obj7 = _mod692;
       }
+      const tmp2Result2 = normalize;
     } else {
       let syntheticException1;
       if (data != null) {
@@ -211,26 +208,28 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
       syntheticException1.message = "" + name;
       items3 = [syntheticException1, undefined];
     }
+    tmp2Result = _mod692;
   }
   const tmp29 = _slicedToArray(items3, 2);
-  obj = { exception: null };
-  obj1 = { values: null };
+  const obj3 = { exception: null };
+  const obj4 = { values: null };
   const items4 = [exceptionFromError(arg1, tmp29[0])];
-  obj1.values = items4;
-  obj.exception = obj1;
+  obj4.values = items4;
+  obj3.exception = obj4;
   if (tmp29[1]) {
-    obj.extra = tmp30;
+    obj3.extra = tmp30;
   }
-  const result1 = uuid4.addExceptionTypeValue(obj, undefined, undefined);
-  const result2 = uuid4.addExceptionMechanism(obj, data);
-  const obj2 = {};
-  const merged = Object.assign(obj);
+  obj2 = _mod692;
+  const result1 = uuid4.addExceptionTypeValue(obj3, undefined, undefined);
+  const result2 = uuid4.addExceptionMechanism(obj3, data);
+  const obj5 = {};
+  const merged = Object.assign(obj3);
   let event_id;
   if (data != null) {
     event_id = data.event_id;
   }
-  obj2.event_id = event_id;
-  return obj2;
+  obj5.event_id = event_id;
+  return obj5;
 };
 export { exceptionFromError };
 export const parseStackFrames = function parseStackFrames(fn, stack) {

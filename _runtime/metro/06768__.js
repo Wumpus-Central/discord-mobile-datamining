@@ -6,15 +6,18 @@ import transformLongPressProps from "../06837_transformLongPressProps.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 const useEffect = fn(19).useEffect;
 const jsx = fn(21).jsx;
 
-export default function createNativeWrapper(displayName) {
+export default function createNativeWrapper(displayName, arg1) {
   _require = displayName;
-  if (gestureHandlerProps === undefined) {
-    gestureHandlerProps = {};
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
   let Native = Intercepting;
   if (Intercepting === undefined) {
@@ -51,9 +54,9 @@ export default function createNativeWrapper(displayName) {
       closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
       keys = Object.keys(closure_3(displayName, closure_2));
       obj = { gestureHandlerProps: null, childProps: null };
-      obj = {};
+      obj1 = {};
       merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj;
+      obj.gestureHandlerProps = obj1;
       obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
       reduced = keys.reduce(() => { ... }, obj);
       ({ gestureHandlerProps, childProps } = reduced);
@@ -78,12 +81,12 @@ export default function createNativeWrapper(displayName) {
       } else {
         NativeDetector = tmp3(tmp4[7]).NativeDetector;
       }
-      obj1 = { gesture: nativeGesture, children: null };
-      obj2 = {};
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
       merged1 = Object.assign(childProps);
-      obj2.ref = displayName.ref;
-      obj1.children = jsx(closure_0, obj2);
-      return jsx(NativeDetector, obj1);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
     }
   }
   ComponentWrapper.displayName = str;

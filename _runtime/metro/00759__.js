@@ -7,14 +7,14 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
-  let obj = { sent_at: new Date().toISOString() };
+  const obj = { sent_at: new Date().toISOString() };
   sdk = undefined;
   if (sdk != null) {
     sdk = sdk.sdk;
   }
   if (sdk) {
-    obj = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj;
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
   let tmp2 = arg3;
   if (arg3) {

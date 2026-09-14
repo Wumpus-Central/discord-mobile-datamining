@@ -180,21 +180,13 @@ let items = [
         if (this._isEnabled()) {
           const options = self.getOptions();
           const tunnel = options.tunnel;
-          let obj = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
+          const obj5 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
           ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
           ({ release: obj2.release, environment: obj2.environment } = options);
           if ("duration" in checkInId) {
-            obj.duration = checkInId.duration;
+            obj5.duration = checkInId.duration;
           }
           if (arg1) {
-            obj = {
-              schedule: null,
-              checkin_margin: null,
-              max_runtime: null,
-              timezone: null,
-              failure_issue_threshold: null,
-              recovery_threshold: null,
-            };
             ({
               schedule: obj3.schedule,
               checkinMargin: obj3.checkin_margin,
@@ -203,17 +195,32 @@ let items = [
               failureIssueThreshold: obj3.failure_issue_threshold,
               recoveryThreshold: obj3.recovery_threshold,
             } = arg1);
-            obj.monitor_config = obj;
+            obj5.monitor_config = {
+              schedule: null,
+              checkin_margin: null,
+              max_runtime: null,
+              timezone: null,
+              failure_issue_threshold: null,
+              recovery_threshold: null,
+            };
+            const obj6 = {
+              schedule: null,
+              checkin_margin: null,
+              max_runtime: null,
+              timezone: null,
+              failure_issue_threshold: null,
+              recovery_threshold: null,
+            };
           }
           const obj4 = ServerRuntimeClient(746);
-          [tmp11, tmp12] = _slicedToArray(ServerRuntimeClient(746)._getTraceInfoFromScope(self, arg2), 2);
+          [tmp11, tmp12] = ServerRuntimeClient(746)._getTraceInfoFromScope(self, arg2);
           if (tmp12) {
-            const obj1 = { trace: tmp12 };
-            obj.contexts = obj1;
+            const obj9 = { trace: tmp12 };
+            obj5.contexts = obj9;
           }
           const tmp7Result = ServerRuntimeClient(759);
           const sdkMetadata = self.getSdkMetadata();
-          const checkInEnvelope = tmp7Result.createCheckInEnvelope(obj, tmp11, sdkMetadata, tunnel, self.getDsn());
+          const checkInEnvelope = tmp7Result.createCheckInEnvelope(obj5, tmp11, sdkMetadata, tunnel, self.getDsn());
           if (ServerRuntimeClient(688).DEBUG_BUILD) {
             const debug2 = ServerRuntimeClient(689).debug;
             debug2.log("Sending checkin:", checkInId.monitorSlug, checkInId.status);
@@ -228,8 +235,8 @@ let items = [
           return checkInId;
         }
       }
-      obj = ServerRuntimeClient(695);
-      checkInId = obj.uuid4();
+      checkInId = ServerRuntimeClient(695).uuid4();
+      const obj = ServerRuntimeClient(695);
     },
   },
   {

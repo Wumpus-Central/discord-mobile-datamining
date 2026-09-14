@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 48,
   height: 45,
   scales: [1, 2, 3],
-  hash: "fb99def53a2e7c887031d561bd6a6700",
-  name: "wreath_light",
+  hash: "c5d12ec01d5a82b43884ceb5bc673c98",
+  name: "wreath_dark",
   type: "png",
 });

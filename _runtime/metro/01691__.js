@@ -26,8 +26,8 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
   if (entering) {
     const tmp5 = entering instanceof BaseAnimationBuilder.Keyframe;
     if (tmp5) {
-      let tmpResult = TransitionGenerator;
-      let presetName = tmpResult.createCustomKeyFrameAnimation(entering.definitions);
+      let presetName = TransitionGenerator.createCustomKeyFrameAnimation(entering.definitions);
+      const tmpResult = TransitionGenerator;
     } else if (typeof entering === "function") {
       presetName = entering.presetName;
     } else {
@@ -35,8 +35,11 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
     }
     let animationWithInitialValues = presetName;
     if (undefined !== entering.initialValues) {
-      tmpResult = TransitionGenerator;
-      animationWithInitialValues = tmpResult.createAnimationWithInitialValues(presetName, entering.initialValues);
+      animationWithInitialValues = TransitionGenerator.createAnimationWithInitialValues(
+        presetName,
+        entering.initialValues,
+      );
+      const tmpResult8 = TransitionGenerator;
     }
     let flag =
       !(animationWithInitialValues in TransitionType.Animations) &&
@@ -65,7 +68,7 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
         }
       }
       processedConfig = maybeModifyStyleForKeyframe.getProcessedConfig(animationWithInitialValues, ENTERING, entering);
-      const tmpResult1 = maybeModifyStyleForKeyframe;
+      const tmpResult9 = maybeModifyStyleForKeyframe;
     }
     const tmp8 = ENTERING === _mod1661.LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues;
   }
@@ -108,27 +111,26 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
   if (processedConfig) {
     if (_mod1661.LayoutAnimationType.ENTERING === ENTERING) {
       maybeModifyStyleForKeyframe.setElementAnimation(_componentDOMRef, processedConfig, true);
-      const tmpResult3 = maybeModifyStyleForKeyframe;
+      const tmpResult11 = maybeModifyStyleForKeyframe;
     } else if (_mod1661.LayoutAnimationType.LAYOUT === ENTERING) {
       easingY.reversed = processedConfig.reversed;
       const result1 = maybeModifyStyleForKeyframe.handleLayoutTransition(_componentDOMRef, processedConfig, easingY);
-      const tmpResult4 = maybeModifyStyleForKeyframe;
+      const tmpResult12 = maybeModifyStyleForKeyframe;
     } else if (_mod1661.LayoutAnimationType.EXITING === ENTERING) {
       const result2 = maybeModifyStyleForKeyframe.handleExitingAnimation(_componentDOMRef, processedConfig);
-      const tmpResult5 = maybeModifyStyleForKeyframe;
+      const tmpResult13 = maybeModifyStyleForKeyframe;
     }
   } else {
     const elementVisible = _mod1722.makeElementVisible(_componentDOMRef, 0);
-    const tmpResult6 = _mod1722;
+    const tmpResult14 = _mod1722;
   }
-  const tmpResult2 = maybeModifyStyleForKeyframe;
+  const tmpResult10 = maybeModifyStyleForKeyframe;
 }
 
 export { startWebLayoutAnimation };
 export const tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _componentDOMRef, arg2) {
   if (props.layout) {
     const size = _componentDOMRef.getBoundingClientRect();
-    let obj = findDescendantWithExitingAnimation;
     if (!obj.areDOMRectsEqual(size, arg2)) {
       const enteringV = props.layout.enteringV;
       let presetName;
@@ -140,7 +142,7 @@ export const tryActivateLayoutTransition = function tryActivateLayoutTransition(
       if (exitingV != null) {
         presetName1 = exitingV.presetName;
       }
-      obj = {
+      const obj2 = {
         translateX: arg2.x - size.x + (arg2.width - size.width) / 2,
         translateY: arg2.y - size.y + (arg2.height - size.height) / 2,
         scaleX: arg2.width / size.width,
@@ -159,7 +161,7 @@ export const tryActivateLayoutTransition = function tryActivateLayoutTransition(
       if (str == null) {
         str = "ease";
       }
-      obj.easingX = str;
+      obj2.easingX = str;
       const easingYV = props.layout.easingYV;
       let str2;
       if (easingYV != null) {
@@ -168,10 +170,11 @@ export const tryActivateLayoutTransition = function tryActivateLayoutTransition(
       if (str2 == null) {
         str2 = "ease";
       }
-      obj.easingY = str2;
-      obj.entering = presetName;
-      obj.exiting = presetName1;
-      startWebLayoutAnimation(props, _componentDOMRef, _mod1661.LayoutAnimationType.LAYOUT, obj);
+      obj2.easingY = str2;
+      obj2.entering = presetName;
+      obj2.exiting = presetName1;
+      startWebLayoutAnimation(props, _componentDOMRef, _mod1661.LayoutAnimationType.LAYOUT, obj2);
     }
+    obj = findDescendantWithExitingAnimation;
   }
 };

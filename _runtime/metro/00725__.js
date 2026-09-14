@@ -43,10 +43,10 @@ class SentrySpan {
     self._startTime = startTimestamp;
     self._links = obj.links;
     self._attributes = {};
-    obj = { [closure_2_0(closure_2_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
-    obj[closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
+    obj1 = { [closure_2_0(closure_2_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
+    obj1[closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
     merged = Object.assign(obj.attributes);
-    setAttributesResult = self.setAttributes(obj);
+    setAttributesResult = self.setAttributes(obj1);
     self._name = obj.name;
     if (obj.parentSpanId) {
       self._parentSpanId = obj.parentSpanId;
@@ -194,15 +194,15 @@ let items = [
       obj.measurements = SentrySpan(727).timedEventsToMeasurements(this._events);
       let _isStandaloneSpan = this._isStandaloneSpan;
       if (_isStandaloneSpan) {
-        let tmpResult = SentrySpan(684);
-        _isStandaloneSpan = tmpResult.getRootSpan(self) === self;
+        _isStandaloneSpan = SentrySpan(684).getRootSpan(self) === self;
+        const tmpResult = SentrySpan(684);
       }
       obj.is_segment = _isStandaloneSpan;
       let spanId;
       if (self._isStandaloneSpan) {
-        tmpResult = SentrySpan(684);
-        const rootSpan = tmpResult.getRootSpan(self);
+        const rootSpan = SentrySpan(684).getRootSpan(self);
         spanId = rootSpan.spanContext().spanId;
+        const tmpResult3 = SentrySpan(684);
       }
       obj.segment_id = spanId;
       const obj3 = SentrySpan(727);
@@ -244,8 +244,8 @@ let items = [
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
-          let tmpResult = SentrySpan(703);
-          timestampInSecondsResult = tmpResult.timestampInSeconds();
+          timestampInSecondsResult = SentrySpan(703).timestampInSeconds();
+          const tmpResult = SentrySpan(703);
         }
         tmp7 = timestampInSecondsResult;
       }
@@ -269,12 +269,9 @@ let items = [
           obj = {};
         }
       }
-      obj = { name, time: null, attributes: null };
-      tmpResult = SentrySpan(684);
-      obj.time = tmpResult.spanTimeInputToSeconds(tmp7);
-      obj.attributes = obj;
+      const obj2 = { name, time: SentrySpan(684).spanTimeInputToSeconds(tmp7), attributes: obj };
       const _events = this._events;
-      _events.push(obj);
+      _events.push(obj2);
       return this;
     },
   },
@@ -295,11 +292,10 @@ let items = [
       if (self._isStandaloneSpan) {
         if (self._isStandaloneSpan) {
           if (self._sampled) {
-            let tmpResult = SentrySpan(728);
             const items = [self];
-            const spanEnvelope = tmpResult.createSpanEnvelope(items, client);
-            tmpResult = SentrySpan(713);
-            const client1 = tmpResult.getClient();
+            const spanEnvelope = SentrySpan(728).createSpanEnvelope(items, client);
+            const tmpResult = SentrySpan(728);
+            const client1 = SentrySpan(713).getClient();
             if (client1) {
               if (spanEnvelope[1]) {
                 if (0 !== arr2.length) {
@@ -308,6 +304,7 @@ let items = [
               }
               client1.recordDroppedEvent("before_send", "span");
             }
+            const tmpResult5 = SentrySpan(713);
           } else {
             if (SentrySpan(688).DEBUG_BUILD) {
               const debug = SentrySpan(689).debug;
@@ -323,10 +320,10 @@ let items = [
             let scope = SentrySpan(685).getCapturedScopesOnSpan(self).scope;
             if (!scope) {
               scope = SentrySpan(713).getCurrentScope();
-              const tmpResult2 = SentrySpan(713);
+              const tmpResult7 = SentrySpan(713);
             }
             scope.captureEvent(result);
-            const tmpResult1 = SentrySpan(685);
+            const tmpResult6 = SentrySpan(685);
           }
         }
       } else {
@@ -339,8 +336,7 @@ let items = [
     key: "_convertSpanToTransaction",
     value: function _convertSpanToTransaction() {
       const self = this;
-      let obj = self(684);
-      const spanToJSONResult = obj.spanToJSON(this);
+      const spanToJSONResult = self(684).spanToJSON(this);
       if (tmp6) {
         if (!self._name) {
           if (tmp3(688).DEBUG_BUILD) {
@@ -349,8 +345,7 @@ let items = [
           }
           self._name = "<unlabeled transaction>";
         }
-        let tmp3Result = tmp3(685);
-        const capturedScopesOnSpan = tmp3Result.getCapturedScopesOnSpan(self);
+        const capturedScopesOnSpan = tmp3(685).getCapturedScopesOnSpan(self);
         const scope = capturedScopesOnSpan.scope;
         if (scope != null) {
           const sdkProcessingMetadata = scope.getScopeData().sdkProcessingMetadata;
@@ -359,8 +354,7 @@ let items = [
           }
         }
         if (true === self._sampled) {
-          tmp3Result = tmp3(684);
-          const spanDescendants = tmp3Result.getSpanDescendants(self);
+          const spanDescendants = tmp3(684).getSpanDescendants(self);
           const found = spanDescendants.filter((isStandaloneSpan) => {
             let tmp = isStandaloneSpan !== self;
             if (tmp) {
@@ -379,7 +373,7 @@ let items = [
             const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = self(704).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
             delete tmp2[tmp];
           });
-          obj = {
+          const obj2 = {
             contexts: null,
             spans: null,
             start_timestamp: null,
@@ -389,8 +383,10 @@ let items = [
             sdkProcessingMetadata: null,
             request: null,
           };
-          obj = { trace: tmp3(684).spanToTransactionTraceContext(self) };
-          obj.contexts = obj;
+          const obj3 = { trace: null };
+          const tmp3Result5 = tmp3(684);
+          obj3.trace = tmp3(684).spanToTransactionTraceContext(self);
+          obj2.contexts = obj3;
           let substr = found1;
           if (found1.length > 1000) {
             const sorted = found1.sort(
@@ -398,26 +394,26 @@ let items = [
             );
             substr = sorted.slice(0, 1000);
           }
-          obj.spans = substr;
+          obj2.spans = substr;
           ({ _startTime: obj4.start_timestamp, _endTime: obj4.timestamp, _name: obj4.transaction } = self);
-          const obj1 = {
+          const obj5 = {
             capturedSpanScope: scope,
             capturedSpanIsolationScope: capturedScopesOnSpan.isolationScope,
             dynamicSamplingContext: null,
           };
-          const tmp3Result1 = tmp3(684);
-          obj1.dynamicSamplingContext = tmp3(722).getDynamicSamplingContextFromSpan(self);
-          obj.sdkProcessingMetadata = obj1;
-          obj.request = normalizedRequest;
+          const tmp3Result6 = tmp3(684);
+          obj5.dynamicSamplingContext = tmp3(722).getDynamicSamplingContextFromSpan(self);
+          obj2.sdkProcessingMetadata = obj5;
+          obj2.request = normalizedRequest;
           let tmp14 = tmp11;
           if (tmp11) {
-            const obj2 = { transaction_info: null };
-            const obj3 = { source: tmp11 };
-            obj2.transaction_info = obj3;
-            tmp14 = obj2;
+            const obj6 = { transaction_info: null };
+            const obj7 = { source: tmp11 };
+            obj6.transaction_info = obj7;
+            tmp14 = obj6;
           }
           const merged = Object.assign(tmp14);
-          const tmp3Result2 = tmp3(722);
+          const tmp3Result7 = tmp3(722);
           const result = tmp3(727).timedEventsToMeasurements(self._events);
           let length = result;
           if (result) {
@@ -433,11 +429,13 @@ let items = [
                 JSON.stringify(result, undefined, 2),
               );
             }
-            obj.measurements = result;
+            obj2.measurements = result;
           }
-          return obj;
+          return obj2;
         }
+        const tmp3Result = tmp3(685);
       }
+      const obj = self(684);
       tmp6 =
         spanToJSONResult.start_timestamp &&
         spanToJSONResult.timestamp &&

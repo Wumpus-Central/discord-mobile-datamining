@@ -44,14 +44,14 @@ class BaseButton {
     };
     obj = closure_0(closure_1[6]);
     tVProps = obj.getTVProps(tmp);
-    obj = { style: null };
+    obj1 = { style: null };
     items = [, ];
     items[0] = global.style;
     items[1] = false;
-    obj.style = items;
+    obj1.style = items;
     merged = Object.assign(tmp);
     merged1 = Object.assign(tVProps);
-    obj.onBegin = function onBegin(pointerInside) {
+    obj1.onBegin = function onBegin(pointerInside) {
       if (pointerInside.pointerInside) {
         if (useRef != null) {
           tmp(true);
@@ -67,7 +67,7 @@ class BaseButton {
         }
       }
     };
-    obj.onActivate = function onActivate(pointerInside) {
+    obj1.onActivate = function onActivate(pointerInside) {
       pointerInside = pointerInside.pointerInside;
       if (!pointerInside) {
         pointerInside = undefined === ref2.current;
@@ -82,13 +82,13 @@ class BaseButton {
         onActivate(pointerInside);
       }
     };
-    obj.onDeactivate = function onDeactivate(arg0) {
+    obj1.onDeactivate = function onDeactivate(arg0) {
       const onDeactivate = delayLongPress.onDeactivate;
       if (onDeactivate != null) {
         onDeactivate(arg0);
       }
     };
-    obj.onFinalize = function onFinalize(canceled) {
+    obj1.onFinalize = function onFinalize(canceled) {
       if (useRef != null) {
         tmp(false);
       }
@@ -111,7 +111,7 @@ class BaseButton {
         onFinalize(canceled);
       }
     };
-    return jsx(RawButton, obj);
+    return jsx(RawButton, obj1);
   }
 }
 let closure_14 = Animated.createAnimatedComponent(BaseButton);
@@ -131,7 +131,7 @@ export const RectButton = (children) => {
     style = {};
   }
   const flattenResult = StyleSheet.flatten(style);
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(_objectWithoutProperties(children, closure_3));
   obj.style = flattenResult;
   obj.onActiveStateChange = function onActiveStateChange(arg0) {
@@ -140,10 +140,10 @@ export const RectButton = (children) => {
       onActiveStateChange(arg0);
     }
   };
-  obj = { style: null };
+  const obj2 = { style: null };
   const items = [underlay.underlay, { opacity: useRef(value).current, backgroundColor: str, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
-  obj.style = items;
-  const items1 = [React7(Animated.View, obj), children.children];
+  obj2.style = items;
+  const items1 = [React7(Animated.View, obj2), children.children];
   obj.children = items1;
   return closure_1_10(BaseButton, obj);
 };

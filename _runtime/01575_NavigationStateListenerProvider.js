@@ -15,7 +15,6 @@ export const useNavigationState = function useNavigationState(select) {
     const error = new Error("A selector function must be provided (got " + typeof select + ").");
     throw error;
   } else {
-    let obj = noop;
     const store = noop.useContext(closure_6);
     if (null == store) {
       const _Error = Error;
@@ -25,18 +24,18 @@ export const useNavigationState = function useNavigationState(select) {
       const getState = store.getState;
       const subscribe = store.subscribe;
       closure_3 = _slicedToArray(
-        obj.useReducer((arg0) => arg0 + 1, 0),
+        noop.useReducer((arg0) => arg0 + 1, 0),
         2,
       )[1];
       const tmp14 = select(getState());
       const selected = tmp14;
-      obj = { select, selected: tmp14 };
-      obj.useRef(obj);
+      const obj2 = { select, selected: tmp14 };
+      noop.useRef(obj2);
       const clientLayoutEffect = _mod1561.useClientLayoutEffect(() => {
         closure_5.current = { select, selected };
       });
       const items = [getState, subscribe];
-      const effect = obj.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let current = ref.current;
         ({ selected, select } = current);
         if (!Object.is(selected, select(getState()))) {
@@ -68,20 +67,12 @@ export const NavigationStateListenerProvider = function NavigationStateListenerP
     };
   });
   const subscribe = tmp;
-  let obj = _mod1561;
   const items = [state];
-  const clientLayoutEffect = obj.useClientLayoutEffect(() => {
+  const clientLayoutEffect = _mod1561.useClientLayoutEffect(() => {
     const current = ref.current;
     const item = current.forEach((fn) => fn());
   }, items);
   const items1 = [getState, tmp];
-  obj = {
-    value: noop.useMemo(() => {
-      const store = { getState, subscribe };
-      return store;
-    }, items1),
-    children,
-  };
   return (
     <redux.Provider
       value={noop.useMemo(() => {

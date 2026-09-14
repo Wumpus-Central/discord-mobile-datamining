@@ -111,10 +111,10 @@ export const getDebugImagesForResources = function getDebugImagesForResources(ar
       let result = obj.normalizeStackTracePath(nextResult);
       let tmp11 = result;
       if (result) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp11];
-        let arr = items.push(obj);
+        let obj2 = { type: "sourcemap", code_file: null, debug_id: null };
+        obj2.code_file = tmp7;
+        obj2.debug_id = tmp[tmp11];
+        let arr = items.push(obj2);
       }
       continue;
     }

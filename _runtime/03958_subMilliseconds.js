@@ -1,25 +1,28 @@
 // _runtime/03958_subMilliseconds.js
-import 03880__ from "metro/03880__.js";
-import requiredArgs from "03726_requiredArgs.js";
-import 03729__ from "metro/03729__.js";
+import module_3880_mod from "metro/03880__.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
+import module_3729_mod from "metro/03729__.js";
 
+let module_3880 = module_3880_mod;
 if (!module_3880) {
-  let obj = { default: module_3880 };
+  const obj = { default: module_3880 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3880;
 }
 module_3880 = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_3729 = module_3729_mod;
 if (!module_3729) {
-  obj = { default: module_3729 };
-  let tmp7 = obj;
+  const obj3 = { default: module_3729 };
+  let tmp7 = obj3;
 } else {
   tmp7 = module_3729;
 }

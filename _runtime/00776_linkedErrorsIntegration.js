@@ -12,7 +12,7 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
   }
   closure_0 = obj.limit || 5;
   closure_1 = obj.key || "cause";
-  obj = {
+  return {
     name: "LinkedErrors",
     preprocessEvent(exception, originalException, getOptions) {
       const options = getOptions.getOptions();
@@ -26,5 +26,4 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
       );
     },
   };
-  return obj;
 });

@@ -1,6 +1,6 @@
 // _runtime/04937_ToPropertyDescriptor.js
-import _mod1283 from "metro/01283__.js";
-import _mod1315 from "metro/01315__.js";
+import _mod1281 from "metro/01281__.js";
+import _mod1313 from "metro/01313__.js";
 import _mod4885 from "metro/04885__.js";
 import _mod4920 from "metro/04920__.js";
 import ToBoolean from "04938_ToBoolean.js";
@@ -8,46 +8,46 @@ import ToBoolean from "04938_ToBoolean.js";
 export default function ToPropertyDescriptor(enumerable) {
   if (_mod4885(enumerable)) {
     const obj = {};
-    if (_mod1315(enumerable, "enumerable")) {
+    if (_mod1313(enumerable, "enumerable")) {
       obj["[[Enumerable]]"] = ToBoolean(enumerable.enumerable);
     }
-    if (_mod1315(enumerable, "configurable")) {
+    if (_mod1313(enumerable, "configurable")) {
       obj["[[Configurable]]"] = ToBoolean(enumerable.configurable);
     }
-    if (_mod1315(enumerable, "value")) {
+    if (_mod1313(enumerable, "value")) {
       obj["[[Value]]"] = enumerable.value;
     }
-    if (_mod1315(enumerable, "writable")) {
+    if (_mod1313(enumerable, "writable")) {
       obj["[[Writable]]"] = ToBoolean(enumerable.writable);
     }
-    if (_mod1315(enumerable, "get")) {
+    if (_mod1313(enumerable, "get")) {
       const get = enumerable.get;
       if (undefined !== get) {
         if (!_mod4920(get)) {
-          const tmp9 = new _mod1283("getter must be a function");
+          const tmp9 = new _mod1281("getter must be a function");
           throw tmp9;
         }
       }
       obj["[[Get]]"] = get;
     }
-    if (_mod1315(enumerable, "set")) {
+    if (_mod1313(enumerable, "set")) {
       if (undefined !== enumerable.set) {
         if (!_mod4920(set)) {
-          const tmp13 = new _mod1283("setter must be a function");
+          const tmp13 = new _mod1281("setter must be a function");
           throw tmp13;
         }
       }
       obj["[[Set]]"] = enumerable.set;
     }
-    if (_mod1315(obj, "[[Get]]")) {
-      const tmp17 = new _mod1283(
+    if (_mod1313(obj, "[[Get]]")) {
+      const tmp17 = new _mod1281(
         "Invalid property descriptor. Cannot both specify accessors and a value or writable attribute",
       );
       throw tmp17;
     }
     return obj;
   } else {
-    const tmp5 = new _mod1283("ToPropertyDescriptor requires an object");
+    const tmp5 = new _mod1281("ToPropertyDescriptor requires an object");
     throw tmp5;
   }
 }

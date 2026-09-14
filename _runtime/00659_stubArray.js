@@ -1,6 +1,8 @@
 // _runtime/00659_stubArray.js
 import _mod660 from "metro/00660__.js";
 
+const require = globalThis.__r;
+
 if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     _require = arg0;

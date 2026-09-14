@@ -3,7 +3,7 @@ import _mod8434 from "08434__.js";
 import _mod8439 from "08439__.js";
 import _mod8443 from "08443__.js";
 import flattenStyle from "08437__.js";
-import emptyFunction from "04466__.js";
+import emptyFunction_mod from "04466__.js";
 
 const obj = {
   accessible: null,
@@ -47,12 +47,16 @@ const module_8439 = flattenStyle(_mod8439);
 obj.accessible = emptyFunction.bool;
 obj.accessibilityLabel = emptyFunction.node;
 obj.accessibilityHint = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
 obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
 obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
 obj.accessibilityRole = emptyFunction.oneOf(_mod8443.DeprecatedAccessibilityRoles);
 obj.accessibilityState = emptyFunction.object;
 obj.accessibilityValue = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
 obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
+let emptyFunction = emptyFunction_mod;
 obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
 obj.accessibilityViewIsModal = emptyFunction.bool;
 obj.accessibilityElementsHidden = emptyFunction.bool;
@@ -73,6 +77,7 @@ obj.onMoveShouldSetResponder = emptyFunction.func;
 obj.onMoveShouldSetResponderCapture = emptyFunction.func;
 obj.hitSlop = _mod8434;
 obj.onLayout = emptyFunction.func;
+let emptyFunction = emptyFunction_mod;
 obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
 obj.style = module_8439;
 obj.removeClippedSubviews = emptyFunction.bool;

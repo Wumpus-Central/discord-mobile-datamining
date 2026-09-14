@@ -1,4 +1,6 @@
 // _runtime/metro/01640__.js
+const require = globalThis.__r;
+
 for (const key10013 in require("01641__.js")) {
   arg5[key10013] = require("01641__.js")[key10013];
   continue;

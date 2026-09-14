@@ -1,17 +1,19 @@
 // _runtime/metro/03727__.js
-import requiredArgs from "../03726_requiredArgs.js";
-import startOfUTCWeek from "../03728_startOfUTCWeek.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
+import startOfUTCWeek_mod from "../03728_startOfUTCWeek.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }

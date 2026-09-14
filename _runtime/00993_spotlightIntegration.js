@@ -6,7 +6,6 @@ const dependencyMap = arg6;
 function getDefaultSidecarUrl() {
   try {
     const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
-    let obj = Devtools;
     let devServer;
     if (null !== Devtools) {
       if (undefined !== obj) {
@@ -15,9 +14,9 @@ function getDefaultSidecarUrl() {
     }
     if (null !== devServer) {
       if (undefined !== tmp7) {
-        obj = devServer;
+        let obj2 = devServer;
       }
-      const url = obj.url;
+      const url = obj2.url;
       if (url) {
         const _HermesInternal = HermesInternal;
         let combined =
@@ -40,7 +39,7 @@ function getDefaultSidecarUrl() {
       }
       return combined;
     }
-    obj = {};
+    obj2 = {};
   } catch (err) {
     return c2;
   }
@@ -58,7 +57,7 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
   }
   let debug = sidecarUrl(682).debug;
   debug.log("[Spotlight] Using Sidecar URL", sidecarUrl);
-  obj = {
+  return {
     name: "Spotlight",
     setupOnce() {},
     setup(on) {
@@ -113,6 +112,5 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
       }
     },
   };
-  return obj;
 };
 export { getDefaultSidecarUrl };

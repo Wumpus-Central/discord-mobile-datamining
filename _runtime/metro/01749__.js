@@ -10,17 +10,18 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
           uiViewClassName = viewConfig2.uiViewClassName;
         }
       }
-      let obj = { viewName: uiViewClassName, viewTag: null, viewConfig: null };
+      const obj2 = { viewName: uiViewClassName, viewTag: null, viewConfig: null };
       let _nativeTag;
       if (findHostInstanceResult != null) {
         _nativeTag = findHostInstanceResult._nativeTag;
       }
-      obj.viewTag = _nativeTag;
-      let viewConfig;
+      obj2.viewTag = _nativeTag;
+      let viewConfig1;
       if (findHostInstanceResult != null) {
-        viewConfig = findHostInstanceResult.viewConfig;
+        viewConfig1 = findHostInstanceResult.viewConfig;
       }
-      obj.viewConfig = viewConfig;
+      obj2.viewConfig = viewConfig1;
+      let obj = obj2;
     }
     return obj;
   }
@@ -41,18 +42,19 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
       if (__viewConfig != null) {
         uiViewClassName1 = __viewConfig.uiViewClassName;
       }
-      obj = { viewName: uiViewClassName1, viewTag: null, viewConfig: null };
+      const obj3 = { viewName: uiViewClassName1, viewTag: null, viewConfig: null };
       let __nativeTag;
       if (findHostInstanceResult != null) {
         __nativeTag = findHostInstanceResult.__nativeTag;
       }
-      obj.viewTag = __nativeTag;
-      obj.viewConfig = __viewConfig;
+      obj3.viewTag = __nativeTag;
+      obj3.viewConfig = __viewConfig;
+      obj = obj3;
     }
   }
   let uiViewClassName2;
   if (findHostInstanceResult != null) {
-    viewConfig = findHostInstanceResult.viewConfig;
+    const viewConfig = findHostInstanceResult.viewConfig;
     if (viewConfig != null) {
       uiViewClassName2 = viewConfig.uiViewClassName;
     }
@@ -63,9 +65,9 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
     _nativeTag1 = findHostInstanceResult._nativeTag;
   }
   obj.viewTag = _nativeTag1;
-  let viewConfig1;
+  let viewConfig3;
   if (findHostInstanceResult != null) {
-    viewConfig1 = findHostInstanceResult.viewConfig;
+    viewConfig3 = findHostInstanceResult.viewConfig;
   }
-  obj.viewConfig = viewConfig1;
+  obj.viewConfig = viewConfig3;
 };

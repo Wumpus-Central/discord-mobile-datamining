@@ -10,7 +10,6 @@ const __initData = {
 fn = function n(config, _animationToClamp) {
   _require = config;
   dependencyMap = _animationToClamp;
-  require("01676__.js");
   const fn = function u() {
     let tmpResult = strippedValue;
     if (typeof strippedValue === "function") {
@@ -20,15 +19,15 @@ fn = function n(config, _animationToClamp) {
     let range = config;
     strippedValue = undefined;
     if (undefined !== config.min) {
-      let obj = config(1676);
-      strippedValue = obj.recognizePrefixSuffix(range.min).strippedValue;
+      strippedValue = config(1676).recognizePrefixSuffix(range.min).strippedValue;
+      const obj = config(1676);
     }
     let strippedValue1;
     if (undefined !== range.max) {
       strippedValue1 = config(1676).recognizePrefixSuffix(range.max).strippedValue;
       const obj2 = config(1676);
     }
-    obj = {
+    const obj3 = {
       isHigherOrder: true,
       onFrame: function clampOnFrame(arg0, arg1) {
         if (undefined === previousAnimation.current) {
@@ -94,16 +93,16 @@ fn = function n(config, _animationToClamp) {
       previousAnimation: null,
       reduceMotion: config(1676).getReduceMotionForAnimation(range.reduceMotion),
     };
-    return obj;
+    return obj3;
   };
-  let obj = {
+  let obj = require("01676__.js");
+  fn.__closure = {
     _animationToClamp,
     config,
     recognizePrefixSuffix: require("01676__.js").recognizePrefixSuffix,
     logger: require("01640__.js").logger,
     getReduceMotionForAnimation: require("01676__.js").getReduceMotionForAnimation,
   };
-  fn.__closure = obj;
   fn.__workletHash = 9293031098818;
   fn.__initData = __initData;
   return obj.defineAnimation(_animationToClamp, fn);

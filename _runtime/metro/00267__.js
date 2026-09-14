@@ -1,6 +1,8 @@
 // _runtime/metro/00267__.js
 import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

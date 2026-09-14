@@ -26,17 +26,18 @@ obj.compose = composeStylesDefault;
 obj.flatten = flattenStyleDefault;
 obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0, process) {
   if (true === _modDef26[arg0]) {
-    let obj = { process };
+    const obj = { process };
+    let obj2 = obj;
   } else if (typeof _modDef26[arg0] !== "object") {
     const _console = console;
     const _HermesInternal = HermesInternal;
     console.error("" + arg0 + " is not a valid style attribute");
   } else {
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(_modDef26[arg0]);
-    obj.process = process;
+    obj2.process = process;
   }
-  _modDef26[arg0] = obj;
+  _modDef26[arg0] = obj2;
 };
 obj.create = function create(arg0) {
   return arg0;

@@ -18,7 +18,7 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = {
+  return {
     name: "ContextLines",
     processEvent(exception) {
       closure_0 = num;
@@ -73,5 +73,4 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
       return exception;
     },
   };
-  return obj;
 });

@@ -27,9 +27,9 @@ class JSONSchemaGenerator {
       metadata = global.metadata;
     }
     if (metadata) {
-      obj = { metadata: null };
-      obj.metadata = global.metadata;
-      metadata = obj;
+      obj1 = { metadata: null };
+      obj1.metadata = global.metadata;
+      metadata = obj1;
     }
     merged = Object.assign(metadata);
     unrepresentable = undefined;
@@ -37,9 +37,9 @@ class JSONSchemaGenerator {
       unrepresentable = global.unrepresentable;
     }
     if (unrepresentable) {
-      obj1 = { unrepresentable: null };
-      obj1.unrepresentable = global.unrepresentable;
-      unrepresentable = obj1;
+      obj6 = { unrepresentable: null };
+      obj6.unrepresentable = global.unrepresentable;
+      unrepresentable = obj6;
     }
     merged1 = Object.assign(unrepresentable);
     override = undefined;
@@ -47,9 +47,9 @@ class JSONSchemaGenerator {
       override = global.override;
     }
     if (override) {
-      obj2 = { override: null };
-      obj2.override = global.override;
-      override = obj2;
+      obj7 = { override: null };
+      obj7.override = global.override;
+      override = obj7;
     }
     merged2 = Object.assign(override);
     io = undefined;
@@ -57,9 +57,9 @@ class JSONSchemaGenerator {
       io = global.io;
     }
     if (io) {
-      obj3 = { io: null };
-      obj3.io = global.io;
-      io = obj3;
+      obj8 = { io: null };
+      obj8.io = global.io;
+      io = obj8;
     }
     merged3 = Object.assign(io);
     this.ctx = closure_0(closure_1[3]).initializeContext(obj);

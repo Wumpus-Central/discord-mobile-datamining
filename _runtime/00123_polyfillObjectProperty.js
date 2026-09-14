@@ -13,8 +13,8 @@ export const polyfillObjectProperty = function polyfillObjectProperty(_navigator
   }
   const configurable = obj.configurable;
   if (!ownPropertyDescriptor) {
-    obj = { get, enumerable: false !== tmp2, writable: false !== tmp3 };
-    defineLazyObjectProperty.default(_navigator, product, obj);
+    const obj3 = { get, enumerable: false !== tmp2, writable: false !== tmp3 };
+    defineLazyObjectProperty.default(_navigator, product, obj3);
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${product} is not configurable.`);
@@ -28,8 +28,8 @@ export const polyfillGlobal = function polyfillGlobal(cancelIdleCallback, get) {
   }
   const configurable = obj.configurable;
   if (!ownPropertyDescriptor) {
-    obj = { get, enumerable: false !== tmp3, writable: false !== tmp4 };
-    defineLazyObjectProperty.default(global, cancelIdleCallback, obj);
+    const obj3 = { get, enumerable: false !== tmp3, writable: false !== tmp4 };
+    defineLazyObjectProperty.default(global, cancelIdleCallback, obj3);
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${cancelIdleCallback} is not configurable.`);

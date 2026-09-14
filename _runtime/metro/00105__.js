@@ -1,11 +1,11 @@
 // _runtime/metro/00105__.js
 import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
+import weakSet_mod from "../00106_weakSet.js";
 
 const _modDef26 = _mod26;
 
-let obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
-obj = {
+const obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
+const obj2 = {
   topAccessibilityAction: { registrationName: "onAccessibilityAction" },
   onGestureHandlerEvent: null,
   onGestureHandlerStateChange: null,
@@ -22,24 +22,26 @@ obj = {
   topScroll: null,
   topLayout: null,
 };
-obj.onGestureHandlerEvent = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
-obj.onGestureHandlerStateChange = weakSet.DynamicallyInjectedByGestureHandler({
+let weakSet = weakSet_mod;
+obj2.onGestureHandlerEvent = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
+let weakSet = weakSet_mod;
+obj2.onGestureHandlerStateChange = weakSet.DynamicallyInjectedByGestureHandler({
   registrationName: "onGestureHandlerStateChange",
 });
-obj.topContentSizeChange = { registrationName: "onContentSizeChange" };
-obj.topScrollBeginDrag = { registrationName: "onScrollBeginDrag" };
-obj.topMessage = { registrationName: "onMessage" };
-obj.topSelectionChange = { registrationName: "onSelectionChange" };
-obj.topLoadingFinish = { registrationName: "onLoadingFinish" };
-obj.topMomentumScrollEnd = { registrationName: "onMomentumScrollEnd" };
-obj.topLoadingStart = { registrationName: "onLoadingStart" };
-obj.topLoadingError = { registrationName: "onLoadingError" };
-obj.topMomentumScrollBegin = { registrationName: "onMomentumScrollBegin" };
-obj.topScrollEndDrag = { registrationName: "onScrollEndDrag" };
-obj.topScroll = { registrationName: "onScroll" };
-obj.topLayout = { registrationName: "onLayout" };
-obj.directEventTypes = obj;
-obj = {
+obj2.topContentSizeChange = { registrationName: "onContentSizeChange" };
+obj2.topScrollBeginDrag = { registrationName: "onScrollBeginDrag" };
+obj2.topMessage = { registrationName: "onMessage" };
+obj2.topSelectionChange = { registrationName: "onSelectionChange" };
+obj2.topLoadingFinish = { registrationName: "onLoadingFinish" };
+obj2.topMomentumScrollEnd = { registrationName: "onMomentumScrollEnd" };
+obj2.topLoadingStart = { registrationName: "onLoadingStart" };
+obj2.topLoadingError = { registrationName: "onLoadingError" };
+obj2.topMomentumScrollBegin = { registrationName: "onMomentumScrollBegin" };
+obj2.topScrollEndDrag = { registrationName: "onScrollEndDrag" };
+obj2.topScroll = { registrationName: "onScroll" };
+obj2.topLayout = { registrationName: "onLayout" };
+obj.directEventTypes = obj2;
+obj.bubblingEventTypes = {
   topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } },
   topSelect: { phasedRegistrationNames: { captured: "onSelectCapture", bubbled: "onSelect" } },
   topTouchEnd: { phasedRegistrationNames: { captured: "onTouchEndCapture", bubbled: "onTouchEnd" } },
@@ -64,8 +66,7 @@ obj = {
   topKeyDown: { phasedRegistrationNames: { captured: "onKeyDownCapture", bubbled: "onKeyDown" } },
   topKeyUp: { phasedRegistrationNames: { captured: "onKeyUpCapture", bubbled: "onKeyUp" } },
 };
-obj.bubblingEventTypes = obj;
-const obj1 = {};
+const obj4 = {};
 const size = {
   backgroundColor: _mod26.colorAttribute,
   transform: true,
@@ -241,37 +242,37 @@ const size = {
   backfaceVisibility: true,
 };
 const merged = Object.assign(size);
-obj1.onLayout = true;
-obj1.onMoveShouldSetResponder = true;
-obj1.onMoveShouldSetResponderCapture = true;
-obj1.onStartShouldSetResponder = true;
-obj1.onStartShouldSetResponderCapture = true;
-obj1.onResponderGrant = true;
-obj1.onResponderReject = true;
-obj1.onResponderStart = true;
-obj1.onResponderEnd = true;
-obj1.onResponderRelease = true;
-obj1.onResponderMove = true;
-obj1.onResponderTerminate = true;
-obj1.onResponderTerminationRequest = true;
-obj1.onShouldBlockNativeResponder = true;
-obj1.onTouchStart = true;
-obj1.onTouchMove = true;
-obj1.onTouchEnd = true;
-obj1.onTouchCancel = true;
-obj1.onClick = true;
-obj1.onClickCapture = true;
-obj1.onPointerEnter = true;
-obj1.onPointerEnterCapture = true;
-obj1.onPointerLeave = true;
-obj1.onPointerLeaveCapture = true;
-obj1.onPointerMove = true;
-obj1.onPointerMoveCapture = true;
-obj1.onPointerOut = true;
-obj1.onPointerOutCapture = true;
-obj1.onPointerOver = true;
-obj1.onPointerOverCapture = true;
-obj1.preventClipping = true;
-obj.validAttributes = obj1;
+obj4.onLayout = true;
+obj4.onMoveShouldSetResponder = true;
+obj4.onMoveShouldSetResponderCapture = true;
+obj4.onStartShouldSetResponder = true;
+obj4.onStartShouldSetResponderCapture = true;
+obj4.onResponderGrant = true;
+obj4.onResponderReject = true;
+obj4.onResponderStart = true;
+obj4.onResponderEnd = true;
+obj4.onResponderRelease = true;
+obj4.onResponderMove = true;
+obj4.onResponderTerminate = true;
+obj4.onResponderTerminationRequest = true;
+obj4.onShouldBlockNativeResponder = true;
+obj4.onTouchStart = true;
+obj4.onTouchMove = true;
+obj4.onTouchEnd = true;
+obj4.onTouchCancel = true;
+obj4.onClick = true;
+obj4.onClickCapture = true;
+obj4.onPointerEnter = true;
+obj4.onPointerEnterCapture = true;
+obj4.onPointerLeave = true;
+obj4.onPointerLeaveCapture = true;
+obj4.onPointerMove = true;
+obj4.onPointerMoveCapture = true;
+obj4.onPointerOut = true;
+obj4.onPointerOutCapture = true;
+obj4.onPointerOver = true;
+obj4.onPointerOverCapture = true;
+obj4.preventClipping = true;
+obj.validAttributes = obj4;
 
 export default obj;

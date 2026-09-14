@@ -1,8 +1,8 @@
 // _runtime/metro/04924__.js
-import _mod1282 from "01282__.js";
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
+import _mod1280 from "01280__.js";
+import callBoundIntrinsic from "../01314_callBoundIntrinsic.js";
 
-const tmp = _mod1282("%Array%");
+const tmp = _mod1280("%Array%");
 const isArray = tmp.isArray;
 let tmp2 = !isArray;
 if (!isArray) {

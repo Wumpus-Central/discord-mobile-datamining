@@ -244,19 +244,19 @@ const entry1 = {
     if (0 === arr.length) {
       return null;
     } else {
-      let obj = Object.create(AnimatedObject.prototype);
-      _classCallCheck(obj, AnimatedObject);
+      const obj2 = Object.create(AnimatedObject.prototype);
+      _classCallCheck(obj2, AnimatedObject);
       const items = [undefined];
       let constructor = _getPrototypeOf;
-      obj = _getPrototypeOf(AnimatedObject);
+      const obj = _getPrototypeOf(AnimatedObject);
       if (_isNativeReflectConstruct()) {
         const _Reflect = Reflect;
-        constructor = constructor(obj).constructor;
+        constructor = constructor(obj2).constructor;
         let constructResult = Reflect.construct(obj, items, constructor);
       } else {
-        constructResult = obj.apply(obj, items);
+        constructResult = obj.apply(obj2, items);
       }
-      const tmp9Result = _possibleConstructorReturn(obj, constructResult);
+      const tmp9Result = _possibleConstructorReturn(obj2, constructResult);
       tmp9Result._nodes = arr;
       tmp9Result._value = _value;
     }

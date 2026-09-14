@@ -1,8 +1,8 @@
 // _runtime/00913_runOnce.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export (arg0) => {
-  closure_0 = arg0;
+export (fn) => {
+  closure_0 = fn;
   c1 = false;
   return () => {
     if (!c1) {

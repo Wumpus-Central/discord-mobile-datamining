@@ -1,4 +1,6 @@
 // _runtime/09074_ar.js
+const require = globalThis.__r;
+
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;
@@ -17,8 +19,8 @@ if (!fn) {
   };
 }
 
-export const ar = fn(require("metro/09077__.js")).default;
-export const az = fn(require("metro/09077__.js")).default;
+export const ar = fn(require("metro/09075__.js")).default;
+export const az = fn(require("metro/09076__.js")).default;
 export const be = fn(require("metro/09077__.js")).default;
 export const bg = fn(require("metro/09078__.js")).default;
 export const ca = fn(require("metro/09079__.js")).default;

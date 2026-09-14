@@ -61,12 +61,12 @@ const entry = {
     ({ maskElement, children } = props);
     const tmp = _objectWithoutProperties(props, MaskedView);
     if (noop.isValidElement(maskElement)) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(tmp);
-      obj = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
-      const items = [React6(timestampProducer, obj), children];
-      obj.children = items;
-      let tmp9 = React7(closure_11, obj);
+      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
+      const items = [React6(timestampProducer, obj3), children];
+      obj2.children = items;
+      let tmp9 = React7(closure_11, obj2);
     } else {
       if (!self._hasWarnedInvalidRenderMask) {
         const _console = console;
@@ -75,7 +75,7 @@ const entry = {
         );
         self._hasWarnedInvalidRenderMask = true;
       }
-      obj = {};
+      const obj = {};
       const merged1 = Object.assign(tmp);
       obj.children = children;
       tmp9 = React6(timestampProducer, obj);

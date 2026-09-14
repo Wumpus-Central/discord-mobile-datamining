@@ -54,10 +54,10 @@ function prepareConfigResources(screens) {
         }
         return num9;
       } else {
-        if (tmpResult1.arrayStartsWith(segments.segments, segments2.segments)) {
+        if (tmpResult5.arrayStartsWith(segments.segments, segments2.segments)) {
           return -1;
         } else {
-          if (tmpResult2.arrayStartsWith(segments2.segments, segments.segments)) {
+          if (tmpResult6.arrayStartsWith(segments2.segments, segments.segments)) {
             return 1;
           } else {
             const _Math = Math;
@@ -125,9 +125,9 @@ function prepareConfigResources(screens) {
             }
             return segments.segments.length - segments2.segments.length;
           }
-          tmpResult2 = initialRoutes(dependencyMap[3]);
+          tmpResult6 = initialRoutes(dependencyMap[3]);
         }
-        tmpResult1 = initialRoutes(dependencyMap[3]);
+        tmpResult5 = initialRoutes(dependencyMap[3]);
       }
       obj = initialRoutes(dependencyMap[2]);
     });
@@ -151,17 +151,17 @@ function prepareConfigResources(screens) {
     const _HermesInternal2 = HermesInternal;
     prefixRegex = new RegExp("^" + mapped.join("/"));
   }
-  const configsByScreen = {};
+  let obj = {};
   const map = new Map();
   const iter = configs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp12 = nextResult;
     let screen = nextResult.screen;
-    let arr2 = configsByScreen[screen];
+    let arr2 = obj[screen];
     if (arr2 == null) {
       let items = [];
-      configsByScreen[screen] = items;
+      obj[screen] = items;
       arr2 = items;
     }
     let arr = arr2.push(tmp12);
@@ -171,7 +171,7 @@ function prepareConfigResources(screens) {
     let result = map.set(joined, tmp12);
     continue;
   }
-  return { initialRoutes, configs, configsByScreen, prefixRegex };
+  return { initialRoutes, configs, configsByScreen: obj, prefixRegex };
 }
 function checkForDuplicatedConfigs(map, routeNames2, joined) {
   if (map) {
@@ -197,10 +197,10 @@ function getStaticSegmentPattern(arg0) {
     let encodeURIComponentResult = encodeURIComponent(str);
     if (encodeURIComponentResult === str) {
       str = str.charCodeAt(0);
-      str = str.toString(16);
+      const str1 = str.toString(16);
       const _HermesInternal = HermesInternal;
-      encodeURIComponentResult = "%" + str.padStart(2, "0").toUpperCase();
-      const str3 = str.padStart(2, "0");
+      encodeURIComponentResult = "%" + str.toString(16).padStart(2, "0").toUpperCase();
+      const str3 = str.toString(16).padStart(2, "0");
     }
     return "(?:" + path(1546)(str) + "|" + path(1546)(encodeURIComponentResult) + ")";
   }).join("");
@@ -240,10 +240,10 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
           const nextResult = iter.next();
           while (iter !== undefined) {
             let tmp12 = nextResult;
-            let arr1 = closure_2[nextResult];
+            let arr2 = closure_2[nextResult];
             let found;
-            if (arr1 != null) {
-              found = arr1.find((segments) => iter(items[3]).arrayStartsWith(iter.segments, segments.segments));
+            if (arr2 != null) {
+              found = arr2.find((segments) => iter(items[3]).arrayStartsWith(iter.segments, segments.segments));
             }
             let tmp15 = found;
             let fromEntriesResult;
@@ -312,16 +312,16 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
             if (fromEntriesResult) {
               let _Object2 = Object;
               if (Object.keys(fromEntriesResult).length) {
-                let obj = { name: null, params: null };
-                obj.name = tmp12;
-                obj.params = fromEntriesResult;
-                arr = items.push(obj);
+                let obj2 = { name: null, params: null };
+                obj2.name = tmp12;
+                obj2.params = fromEntriesResult;
+                let arr3 = items.push(obj2);
                 continue;
               }
             }
-            obj = { name: null };
-            obj.name = tmp12;
-            arr1 = items.push(obj);
+            let obj3 = { name: null };
+            obj3.name = tmp12;
+            let arr4 = items.push(obj3);
           }
         }
       } else {
@@ -374,16 +374,16 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
   closure_0 = arr;
   closure_3 = arr3;
   let items = [];
-  arr3.push(screen);
-  arr = parentScreens.push(screen);
+  arr = arr3.push(screen);
+  arr2 = parentScreens.push(screen);
   if (typeof arg1[screen] === "string") {
-    let obj = { screen, path: tmp3 };
-    arr2.push(obj);
+    const obj2 = { screen, path: tmp3 };
+    arr3 = arr2.push(obj2);
     let items1 = [];
     HermesBuiltin.arraySpread(arr3, 0);
     let items2 = [];
     HermesBuiltin.arraySpread(arr2, 0);
-    arr2 = items.push(createConfigItem(screen, items1, items2));
+    items.push(createConfigItem(screen, items1, items2));
   } else if (typeof tmp3 === "object") {
     const screens = tmp3.screens;
     if (typeof tmp3.path === "string") {
@@ -397,32 +397,32 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
       }
       const items3 = [];
       if (tmp3.alias) {
-        let alias = tmp3.alias;
+        const alias = tmp3.alias;
         for (const item10023 of alias) {
           if (typeof item10023 === "string") {
             let items4 = [];
-            let arraySpreadResult1 = HermesBuiltin.arraySpread(arg5, 0);
+            let arraySpreadResult8 = HermesBuiltin.arraySpread(arg5, 0);
             let items5 = [];
-            obj = { screen: arg0, path: item10023 };
+            let obj = { screen: arg0, path: item10023 };
             items5[HermesBuiltin.arraySpread(arg3, 0)] = obj;
-            arr3 = items3.push(createConfigItem(arg0, items4, items5, tmp3.parse, tmp5));
+            let arr5 = items3.push(createConfigItem(arg0, items4, items5, tmp3.parse, tmp5));
           } else if (typeof item10023 === "object") {
             let items6 = [];
-            let arraySpreadResult2 = HermesBuiltin.arraySpread(arg5, 0);
-            obj = { screen: null, path: null };
+            let arraySpreadResult9 = HermesBuiltin.arraySpread(arg5, 0);
+            let obj3 = { screen: null, path: null };
             let items7 = [];
             if (item10023.exact) {
-              obj.screen = arg0;
-              obj.path = item10023.path;
-              items7[0] = obj;
+              obj3.screen = arg0;
+              obj3.path = item10023.path;
+              items7[0] = obj3;
               let tmp12 = items7;
             } else {
-              obj.screen = arg0;
-              obj.path = item10023.path;
-              items7[HermesBuiltin.arraySpread(arg3, 0)] = obj;
+              obj3.screen = arg0;
+              obj3.path = item10023.path;
+              items7[HermesBuiltin.arraySpread(arg3, 0)] = obj3;
               tmp12 = items7;
             }
-            let arr4 = items3.push(createConfigItem(arg0, items6, tmp12, item10023.parse, tmp5));
+            let arr6 = items3.push(createConfigItem(arg0, items6, tmp12, item10023.parse, tmp5));
           }
           continue;
         }
@@ -430,8 +430,8 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
       if (tmp3.exact) {
         arr2.length = 0;
       }
-      const obj1 = { screen, path: tmp3.path };
-      arr2.push(obj1);
+      const obj4 = { screen, path: tmp3.path };
+      arr2.push(obj4);
       const items8 = [];
       HermesBuiltin.arraySpread(arr3, 0);
       const items9 = [];
@@ -444,10 +444,10 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
     }
     if (typeof tmp3 !== "string") {
       if (typeof tmp3.path !== "string") {
-        alias = tmp3.alias;
+        const alias1 = tmp3.alias;
         let length;
-        if (alias != null) {
-          length = alias.length;
+        if (alias1 != null) {
+          length = alias1.length;
         }
         if (length) {
           const _Error = Error;
@@ -459,8 +459,8 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
     }
     if (screens) {
       if (tmp3.initialRouteName) {
-        const obj2 = { initialRouteName: tmp3.initialRouteName, parentScreens };
-        arr.push(obj2);
+        const obj5 = { initialRouteName: tmp3.initialRouteName, parentScreens };
+        arr.push(obj5);
       }
       const _Object = Object;
       const keys = Object.keys(screens);
@@ -527,10 +527,10 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
               let encodeURIComponentResult = encodeURIComponent(str);
               if (encodeURIComponentResult === str) {
                 str = str.charCodeAt(0);
-                str = str.toString(16);
+                const str1 = str.toString(16);
                 const _HermesInternal = HermesInternal;
-                encodeURIComponentResult = "%" + str.padStart(2, "0").toUpperCase();
-                const str3 = str.padStart(2, "0");
+                encodeURIComponentResult = "%" + str.toString(16).padStart(2, "0").toUpperCase();
+                const str3 = str.toString(16).padStart(2, "0");
               }
               return "(?:" + path(1546)(str) + "|" + path(1546)(encodeURIComponentResult) + ")";
             }).join("") + "\\/";
@@ -538,10 +538,10 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
               let encodeURIComponentResult = encodeURIComponent(str);
               if (encodeURIComponentResult === str) {
                 str = str.charCodeAt(0);
-                str = str.toString(16);
+                const str1 = str.toString(16);
                 const _HermesInternal = HermesInternal;
-                encodeURIComponentResult = "%" + str.padStart(2, "0").toUpperCase();
-                const str3 = str.padStart(2, "0");
+                encodeURIComponentResult = "%" + str.toString(16).padStart(2, "0").toUpperCase();
+                const str3 = str.toString(16).padStart(2, "0");
               }
               return "(?:" + path(1546)(str) + "|" + path(1546)(encodeURIComponentResult) + ")";
             });
@@ -581,8 +581,8 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
     }
     continue;
   }
-  obj = { screen, regex: regExp, segments: mapped1, params: items1, routeNames: items1, parse, explicitParamNames: getExplicitParamNames(parse), pathParamNames: set, hasNestedScreens: flag };
-  return obj;
+  tmp9 = entries[Symbol.iterator]();
+  return { screen, regex: regExp, segments: mapped1, params: items1, routeNames: items1, parse, explicitParamNames: getExplicitParamNames(parse), pathParamNames: set, hasNestedScreens: flag };
 }
 function findInitialRoute(name, items, initialRoutes) {
   const iter = initialRoutes[Symbol.iterator]();
@@ -616,52 +616,52 @@ function createStateObject(arg0, arg1, arg2) {
 
 }
 function createNestedStateObject(str, items, initialRoutes, config) {
-  let arr = items.shift();
+  const arr = items.shift();
   items = [];
   let items1 = findInitialRoute(arr.name, items, initialRoutes);
-  arr = items.push(arr.name);
+  items.push(arr.name);
   if (typeof createStateObject === "function") {
     if (0 === items.length) {
       if (items1) {
-        let obj = { index: 1, routes: null };
-        obj = { name: items1 };
-        items1 = [obj, arr];
-        obj.routes = items1;
-        let obj1 = obj;
+        const obj2 = { index: 1, routes: null };
+        const obj3 = { name: items1 };
+        items1 = [obj3, arr];
+        obj2.routes = items1;
+        let obj4 = obj2;
       } else {
-        obj1 = { routes: null };
+        obj4 = { routes: null };
         const items2 = [arr];
-        obj1.routes = items2;
+        obj4.routes = items2;
       }
     } else {
       if (items1) {
-        const obj2 = { index: 1, routes: null };
-        const obj3 = { name: items1 };
-        const items3 = [obj3, ];
-        const obj4 = {};
+        const obj5 = { index: 1, routes: null };
+        const obj6 = { name: items1 };
+        const items3 = [obj6, ];
+        const obj7 = {};
         const merged = Object.assign(arr);
-        const obj5 = { routes: [] };
-        obj4.state = obj5;
-        items3[1] = obj4;
-        obj2.routes = items3;
-        obj = obj2;
+        const obj8 = { routes: [] };
+        obj7.state = obj8;
+        items3[1] = obj7;
+        obj5.routes = items3;
+        let obj = obj5;
       } else {
         obj = { routes: null };
-        const obj6 = {};
+        const obj9 = {};
         const merged1 = Object.assign(arr);
-        const obj7 = { routes: [] };
-        obj6.state = obj7;
-        const items4 = [obj6];
+        const obj10 = { routes: [] };
+        obj9.state = obj10;
+        const items4 = [obj9];
         obj.routes = items4;
       }
       if (items.length > 0) {
-        let arr1 = items.shift();
+        let arr3 = items.shift();
         let tmp25 = obj;
-        if (arr1) {
+        if (arr3) {
           while (true) {
-            let items5 = findInitialRoute(arr1.name, items, initialRoutes);
+            let items5 = findInitialRoute(arr3.name, items, initialRoutes);
             let index = tmp25.index;
-            let tmp11 = arr1;
+            let tmp11 = arr3;
             if (!index) {
               index = tmp25.routes.length - 1;
             }
@@ -669,44 +669,44 @@ function createNestedStateObject(str, items, initialRoutes, config) {
               break;
             } else if (0 === tmp15) {
               if (items5) {
-                let obj8 = { index: 1, routes: null };
-                let obj9 = { name: items5 };
-                items5 = [obj9, arr1];
-                obj8.routes = items5;
-                let obj10 = obj8;
+                let obj11 = { index: 1, routes: null };
+                let obj12 = { name: items5 };
+                items5 = [obj12, arr3];
+                obj11.routes = items5;
+                let obj13 = obj11;
               } else {
-                obj10 = { routes: null };
-                let items6 = [arr1];
-                obj10.routes = items6;
+                obj13 = { routes: null };
+                let items6 = [arr3];
+                obj13.routes = items6;
               }
             } else {
               if (items5) {
-                let obj11 = { index: 1, routes: null };
-                let obj12 = { name: items5 };
-                let items7 = [obj12, ];
-                let obj13 = {};
-                let merged2 = Object.assign(tmp11);
-                let obj14 = { routes: [] };
-                obj13.state = obj14;
-                items7[1] = obj13;
-                obj11.routes = items7;
-                let obj15 = obj11;
-              } else {
-                obj15 = { routes: null };
+                let obj14 = { index: 1, routes: null };
+                let obj15 = { name: items5 };
+                let items7 = [obj15, ];
                 let obj16 = {};
-                let merged3 = Object.assign(tmp11);
+                let merged2 = Object.assign(tmp11);
                 let obj17 = { routes: [] };
                 obj16.state = obj17;
-                let items8 = [obj16];
-                obj15.routes = items8;
+                items7[1] = obj16;
+                obj14.routes = items7;
+                let obj18 = obj14;
+              } else {
+                obj18 = { routes: null };
+                let obj19 = {};
+                let merged3 = Object.assign(tmp11);
+                let obj20 = { routes: [] };
+                obj19.state = obj20;
+                let items8 = [obj19];
+                obj18.routes = items8;
               }
-              tmp13.state = obj15;
+              tmp13.state = obj18;
               let state = tmp25;
               if (items.length > 0) {
                 state = tmp25.routes[index].state;
               }
-              let arr2 = items.push(arr1.name);
-              arr1 = items.shift();
+              let arr4 = items.push(arr3.name);
+              arr3 = items.shift();
               tmp25 = state;
             }
           }
@@ -733,10 +733,10 @@ function createNestedStateObject(str, items, initialRoutes, config) {
       }
       const tmp31Result = parseQueryParams("", parse, pathParamNames, explicitParamNames, hasNestedScreens, findFocusedRouteResult.params);
       if (tmp31Result) {
-        const obj18 = {};
+        const obj22 = {};
         const merged4 = Object.assign(findFocusedRouteResult.params);
         const merged5 = Object.assign(tmp31Result);
-        findFocusedRouteResult.params = obj18;
+        findFocusedRouteResult.params = obj22;
       }
       return obj;
     }

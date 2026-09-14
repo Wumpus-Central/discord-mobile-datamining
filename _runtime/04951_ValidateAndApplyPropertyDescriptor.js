@@ -1,5 +1,5 @@
 // _runtime/04951_ValidateAndApplyPropertyDescriptor.js
-import _mod1283 from "metro/01283__.js";
+import _mod1281 from "metro/01281__.js";
 import _mod4885 from "metro/04885__.js";
 import _mod4932 from "metro/04932__.js";
 import _mod4936 from "metro/04936__.js";
@@ -16,19 +16,19 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
   const tmp3 = _mod4952(arg0);
   if (undefined !== arg0) {
     if (!_mod4885(arg0)) {
-      const tmp6 = new _mod1283("Assertion failed: O must be undefined or an Object");
+      const tmp6 = new _mod1281("Assertion failed: O must be undefined or an Object");
       throw tmp6;
     }
   }
   if (_mod4932(arg1)) {
     if (typeof flag !== "boolean") {
-      const tmp88 = new _mod1283("Assertion failed: extensible must be a Boolean");
+      const tmp88 = new _mod1281("Assertion failed: extensible must be a Boolean");
       throw tmp88;
     } else if (_mod4936(__Configurable__)) {
       let prop = arg4;
       if (undefined !== arg4) {
         if (!_mod4936(prop)) {
-          const tmp20 = new _mod1283("Assertion failed: current must be a Property Descriptor, or undefined");
+          const tmp20 = new _mod1281("Assertion failed: current must be a Property Descriptor, or undefined");
           throw tmp20;
         }
       }
@@ -38,27 +38,28 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
           if ("Undefined" === tmp3) {
             tmp65 = tmp66;
           } else {
-            const tmpResult = IsDataDescriptor;
-            const tmpResult1 = SameValue;
-            const tmpResult2 = FromPropertyDescriptor;
+            const tmpResult = DefineOwnProperty;
+            const tmpResult17 = IsDataDescriptor;
+            const tmpResult18 = SameValue;
+            const tmpResult19 = FromPropertyDescriptor;
             if (tmp67) {
-              let tmpResultResult = tmpResult(tmpResult, tmpResult1, tmpResult2, arg0, arg1, __Configurable__);
+              let tmpResultResult = tmpResult(tmpResult17, tmpResult18, tmpResult19, arg0, arg1, __Configurable__);
             } else {
-              let obj = {
+              const obj2 = {
                 "[[Configurable]]": __Configurable__["[[Configurable]]"],
                 "[[Enumerable]]": __Configurable__["[[Enumerable]]"],
                 "[[Value]]": __Configurable__["[[Value]]"],
                 "[[Writable]]": __Configurable__["[[Writable]]"],
               };
-              tmpResultResult = tmpResult(tmpResult, tmpResult1, tmpResult2, arg0, arg1, obj);
+              tmpResultResult = tmpResult(tmpResult17, tmpResult18, tmpResult19, arg0, arg1, obj2);
             }
             tmp67 = IsAccessorDescriptor(__Configurable__);
           }
         }
         return tmp65;
       } else {
-        obj = { IsAccessorDescriptor, IsDataDescriptor };
-        if (tmpResult3(obj, prop)) {
+        const obj3 = { IsAccessorDescriptor, IsDataDescriptor };
+        if (tmpResult20(obj3, prop)) {
           if (!prop["[[Configurable]]"]) {
             if ("[[Configurable]]" in __Configurable__) {
               if (__Configurable__["[[Configurable]]"]) {
@@ -71,8 +72,8 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
               }
             }
             if (!IsGenericDescriptor(__Configurable__)) {
-              const tmpResult4 = SameValue;
-              if (!tmpResult4(tmp27, IsAccessorDescriptor(prop))) {
+              const tmpResult21 = SameValue;
+              if (!tmpResult21(tmp27, IsAccessorDescriptor(prop))) {
                 return false;
               }
               tmp27 = IsAccessorDescriptor(__Configurable__);
@@ -115,10 +116,10 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
                   if ("[[Enumerable]]" in __Configurable__) {
                     tmp38 = __Configurable__;
                   }
-                  const tmpResult6 = IsDataDescriptor;
-                  const tmpResult7 = SameValue;
-                  const tmpResult8 = FromPropertyDescriptor;
-                  obj = {
+                  const tmpResult23 = IsDataDescriptor;
+                  const tmpResult24 = SameValue;
+                  const tmpResult25 = FromPropertyDescriptor;
+                  const obj = {
                     "[[Configurable]]": tmp37["[[Configurable]]"],
                     "[[Enumerable]]": tmp38["[[Enumerable]]"],
                     "[[Value]]": null,
@@ -134,21 +135,21 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
                     tmp44 = __Configurable__;
                   }
                   obj["[[Writable]]"] = tmp44["[[Writable]]"];
-                  let tmpResult6Result = DefineOwnProperty(tmpResult6, tmpResult7, tmpResult8, arg0, arg1, obj);
-                  const tmpResult5 = DefineOwnProperty;
+                  let tmpResult6Result = DefineOwnProperty(tmpResult23, tmpResult24, tmpResult25, arg0, arg1, obj);
+                  const tmpResult22 = DefineOwnProperty;
                 }
               }
-              const tmpResult10 = IsDataDescriptor;
-              const tmpResult9 = DefineOwnProperty;
-              tmpResult6Result = tmpResult9(
-                tmpResult10,
+              const tmpResult27 = IsDataDescriptor;
+              const tmpResult26 = DefineOwnProperty;
+              tmpResult6Result = tmpResult26(
+                tmpResult27,
                 SameValue,
                 FromPropertyDescriptor,
                 arg0,
                 arg1,
                 __Configurable__,
               );
-              const tmpResult11 = SameValue;
+              const tmpResult28 = SameValue;
             }
             let tmp51 = prop;
             if ("[[Configurable]]" in __Configurable__) {
@@ -158,10 +159,10 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             if ("[[Enumerable]]" in __Configurable__) {
               tmp52 = __Configurable__;
             }
-            const tmpResult13 = IsDataDescriptor;
-            const tmpResult14 = SameValue;
-            const tmpResult15 = FromPropertyDescriptor;
-            const obj1 = {
+            const tmpResult30 = IsDataDescriptor;
+            const tmpResult31 = SameValue;
+            const tmpResult32 = FromPropertyDescriptor;
+            const obj4 = {
               "[[Configurable]]": tmp51["[[Configurable]]"],
               "[[Enumerable]]": tmp52["[[Enumerable]]"],
               "[[Get]]": null,
@@ -171,29 +172,29 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __C
             if ("[[Get]]" in __Configurable__) {
               tmp57 = __Configurable__;
             }
-            obj1["[[Get]]"] = tmp57["[[Get]]"];
+            obj4["[[Get]]"] = tmp57["[[Get]]"];
             if ("[[Set]]" in __Configurable__) {
               prop = __Configurable__;
             }
             prop = prop["[[Set]]"];
-            obj1["[[Set]]"] = prop;
-            tmpResult6Result = DefineOwnProperty(tmpResult13, tmpResult14, tmpResult15, arg0, arg1, obj1);
-            const tmpResult12 = DefineOwnProperty;
+            obj4["[[Set]]"] = prop;
+            tmpResult6Result = DefineOwnProperty(tmpResult30, tmpResult31, tmpResult32, arg0, arg1, obj4);
+            const tmpResult29 = DefineOwnProperty;
           }
         } else {
-          const tmp24 = new _mod1283(
+          const tmp24 = new _mod1281(
             "`current`, when present, must be a fully populated and valid Property Descriptor",
           );
           throw tmp24;
         }
-        tmpResult3 = _mod4953;
+        tmpResult20 = _mod4953;
       }
     } else {
-      const tmp15 = new _mod1283("Assertion failed: Desc must be a Property Descriptor");
+      const tmp15 = new _mod1281("Assertion failed: Desc must be a Property Descriptor");
       throw tmp15;
     }
   } else {
-    const tmp10 = new _mod1283("Assertion failed: P must be a Property Key");
+    const tmp10 = new _mod1281("Assertion failed: P must be a Property Key");
     throw tmp10;
   }
 }

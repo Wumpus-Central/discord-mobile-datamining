@@ -47,20 +47,20 @@ class Promise {
       tmp13 = new.target;
       tmp14 = new.target;
       constructor = new self.constructor((arg0, arg1) => {
-        let obj = Object.create(Promise.prototype);
-        if (typeof obj !== "object") {
+        const obj3 = Object.create(Promise.prototype);
+        if (typeof obj3 !== "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Promises must be constructed via new");
           throw typeError;
         } else {
-          obj._x = 0;
-          obj._y = 0;
-          obj._z = null;
-          obj._A = null;
+          obj3._x = 0;
+          obj3._y = 0;
+          obj3._z = null;
+          obj3._A = null;
           // // eliminated: always false
-          obj.then(arg0, arg1);
+          obj3.then(arg0, arg1);
           Object.create(Handler.prototype);
-          obj = {};
+          const obj = {};
           let tmp11 = null;
           if (typeof closure_1 === "function") {
             tmp11 = closure_1;
@@ -71,7 +71,7 @@ class Promise {
             tmp12 = closure_2;
           }
           obj.onRejected = tmp12;
-          obj.promise = obj;
+          obj.promise = obj3;
           handle(self, obj);
         }
       });
@@ -79,8 +79,8 @@ class Promise {
       return constructor;
     } else {
       tmp17 = self;
-      obj = Object.create(tmp.prototype);
-      if (typeof obj !== "object") {
+      obj1 = Object.create(tmp.prototype);
+      if (typeof obj1 !== "object") {
         tmp8 = globalThis;
         _TypeError = TypeError;
         tmp9 = new.target;
@@ -91,15 +91,15 @@ class Promise {
         throw typeError;
       } else {
         num = 0;
-        obj._x = 0;
-        obj._y = 0;
+        obj1._x = 0;
+        obj1._y = 0;
         tmp19 = null;
-        obj._z = null;
-        obj._A = null;
+        obj1._z = null;
+        obj1._A = null;
         // // eliminated: always false
         tmp3 = Handler;
         tmp2 = handle;
-        obj1 = Object.create(Handler.prototype);
+        obj2 = Object.create(Handler.prototype);
         obj = {};
         tmp5 = null;
         if (typeof global === "function") {
@@ -111,9 +111,9 @@ class Promise {
           tmp6 = require;
         }
         obj.onRejected = tmp6;
-        obj.promise = obj;
+        obj.promise = obj1;
         tmp2Result = tmp2(self, obj);
-        return obj;
+        return obj1;
       }
     }
   }
@@ -168,17 +168,16 @@ function handle(_y, _A) {
           }
         })(onRejected, tmp._z);
         if (tmp11 === closure_2) {
-          let promise = tmp2.promise;
-          promise._y = 2;
-          promise._z = _z;
+          tmp2.promise._y = 2;
+          tmp2.promise._z = _z;
           if (Promise._C) {
             Promise._C(promise, tmp15);
           }
-          if (1 === promise._x) {
+          if (1 === tmp2.promise._x) {
             handle(promise, promise._A);
             promise._A = null;
           }
-          if (2 === promise._x) {
+          if (2 === tmp2.promise._x) {
             let num6 = 0;
             if (0 < promise._A.length) {
               do {
@@ -195,27 +194,26 @@ function handle(_y, _A) {
       } else if (1 === tmp._y) {
         resolve(tmp2.promise, tmp._z);
       } else {
-        promise = tmp2.promise;
         _z = tmp._z;
-        promise._y = 2;
-        promise._z = _z;
+        tmp2.promise._y = 2;
+        tmp2.promise._z = _z;
         if (Promise._C) {
-          Promise._C(promise, _z);
+          Promise._C(promise2, _z);
         }
-        if (1 === promise._x) {
-          handle(promise, promise._A);
-          promise._A = null;
+        if (1 === tmp2.promise._x) {
+          handle(promise2, promise2._A);
+          promise2._A = null;
         }
-        if (2 === promise._x) {
+        if (2 === tmp2.promise._x) {
           let num2 = 0;
-          if (0 < promise._A.length) {
+          if (0 < promise2._A.length) {
             do {
-              let tmp8 = handle(promise, promise._A[num2]);
+              let tmp8 = handle(promise2, promise2._A[num2]);
               num2 = num2 + 1;
-              length = promise._A.length;
+              length = promise2._A.length;
             } while (num2 < length);
           }
-          promise._A = null;
+          promise2._A = null;
         }
       }
     });

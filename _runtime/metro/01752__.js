@@ -1,6 +1,8 @@
 // _runtime/metro/01752__.js
 import startObservingProgress from "../01672_startObservingProgress.js";
 
+const require = globalThis.__r;
+
 for (const key10015 in require("BaseAnimationBuilder")) {
   arg5[key10015] = require("BaseAnimationBuilder")[key10015];
   continue;

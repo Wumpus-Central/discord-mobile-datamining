@@ -9,26 +9,24 @@ export const Header = noop.memo(function Header(navigation) {
   ({ back, options, route } = navigation);
   navigation = navigation.navigation;
   ({ layout, progress, styleInterpolator } = navigation);
-  let obj = route(navigation[2]);
-  const safeAreaInsets = obj.useSafeAreaInsets();
+  const safeAreaInsets = route(navigation[2]).useSafeAreaInsets();
   if (undefined !== options.headerBackTitle) {
     let headerBackTitle = options.headerBackTitle;
   } else if (back) {
     headerBackTitle = back.title;
   }
-  let tmpResult = route(tmp2[3]);
+  const obj = route(navigation[2]);
   const items = [navigation, route.key];
   const callback = noop.useCallback(
-    tmpResult.throttle(() => {
-      let obj = navigation;
+    route(navigation[3]).throttle(() => {
       if (tmp) {
-        obj = {};
+        const obj2 = {};
         const StackActions = Link.StackActions;
         const merged = Object.assign(StackActions.pop());
-        obj.source = route.key;
-        obj.dispatch(obj);
+        obj2.source = route.key;
+        navigation.dispatch(obj2);
       }
-      tmp = navigation.isFocused() && obj.canGoBack();
+      tmp = navigation.isFocused() && navigation.canGoBack();
     }, 50),
     items,
   );
@@ -44,28 +42,28 @@ export const Header = noop.memo(function Header(navigation) {
       }
     }
   }
-  obj = {};
+  let obj2 = {};
   let merged = Object.assign(options);
-  tmpResult = route(tmp2[6]);
-  obj.title = tmpResult.getHeaderTitle(options, route.name);
-  obj.progress = progress;
-  obj.layout = layout;
-  obj.modal = context;
+  const tmpResult = route(navigation[3]);
+  obj2.title = route(navigation[6]).getHeaderTitle(options, route.name);
+  obj2.progress = progress;
+  obj2.layout = layout;
+  obj2.modal = context;
   if (undefined !== options.headerBackTitle) {
     headerBackTitle = options.headerBackTitle;
   }
-  obj.headerBackTitle = headerBackTitle;
-  obj.headerStatusBarHeight = num;
+  obj2.headerBackTitle = headerBackTitle;
+  obj2.headerStatusBarHeight = num;
   let tmp9;
   if (back) {
     tmp9 = callback;
   }
-  obj.onGoBack = tmp9;
+  obj2.onGoBack = tmp9;
   let href;
   if (back) {
     href = back.href;
   }
-  obj.backHref = href;
-  obj.styleInterpolator = styleInterpolator;
+  obj2.backHref = href;
+  obj2.styleInterpolator = styleInterpolator;
   return jsx(route(navigation[7]).HeaderSegment, {});
 });

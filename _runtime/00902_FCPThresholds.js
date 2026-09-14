@@ -4,6 +4,8 @@ import _mod909 from "metro/00909__.js";
 import observe from "00911_observe.js";
 import bindReporter from "00912_bindReporter.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

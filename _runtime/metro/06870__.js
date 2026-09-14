@@ -8,10 +8,10 @@ const noop = fn(19);
 const jsx = fn(21).jsx;
 let items = [...fn(6798).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
 
-export default function createNativeWrapper(displayName) {
+export default function createNativeWrapper(displayName, arg1) {
   _require = displayName;
-  if (gestureHandlerProps === undefined) {
-    gestureHandlerProps = {};
+  if (arg1 === undefined) {
+    let obj = {};
   }
   let str;
   if (displayName != null) {
@@ -42,9 +42,9 @@ export default function createNativeWrapper(displayName) {
       closure_0 = displayName;
       keys = Object.keys(displayName);
       obj = { gestureHandlerProps: null, childProps: null };
-      obj = {};
+      obj1 = {};
       merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj;
+      obj.gestureHandlerProps = obj1;
       obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
       reduced = keys.reduce(() => { ... }, obj);
       ({ gestureHandlerProps, childProps } = reduced);
@@ -56,14 +56,14 @@ export default function createNativeWrapper(displayName) {
       items[0] = tmp3;
       items[1] = tmp4;
       tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
-      obj1 = {};
+      obj5 = {};
       merged1 = Object.assign(gestureHandlerProps);
-      obj1.ref = tmp4;
-      obj2 = {};
+      obj5.ref = tmp4;
+      obj6 = {};
       merged2 = Object.assign(childProps);
-      obj2.ref = tmp3;
-      obj1.children = jsx(closure_0, obj2);
-      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj1);
+      obj6.ref = tmp3;
+      obj5.children = jsx(closure_0, obj6);
+      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj5);
     }
   }
   ComponentWrapper.displayName = str;

@@ -19,37 +19,40 @@ export default function _default(icon) {
   if (icon === undefined) {
     icon = _modDef1856;
   }
-  let obj = onPress(1861);
-  const toolbarContext = obj.useToolbarContext();
+  const toolbarContext = onPress(1861).useToolbarContext();
   const theme = toolbarContext.theme;
   if (disabled == null) {
     disabled = toolbarContext.isPrevDisabled;
   }
   const items = [onPress];
-  obj = {
+  const obj2 = {
     accessibilityHint: "Moves focus to the previous field",
     accessibilityLabel: "Previous",
     disabled,
     rippleRadius,
     style,
-    testID: onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS,
-    theme,
-    onPress: useCallback((isDefaultPrevented) => {
-      if (onPress != null) {
-        tmp(isDefaultPrevented);
-      }
-      if (!isDefaultPrevented.isDefaultPrevented()) {
-        const KeyboardController = _mod1828.KeyboardController;
-        KeyboardController.setFocusTo("prev");
-      }
-    }, items),
+    testID: null,
+    theme: null,
+    onPress: null,
     children: null,
   };
+  const obj = onPress(1861);
+  obj2.testID = onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS;
+  obj2.theme = theme;
+  obj2.onPress = useCallback((isDefaultPrevented) => {
+    if (onPress != null) {
+      tmp(isDefaultPrevented);
+    }
+    if (!isDefaultPrevented.isDefaultPrevented()) {
+      const KeyboardController = _mod1828.KeyboardController;
+      KeyboardController.setFocusTo("prev");
+    }
+  }, items);
   if (children == null) {
-    obj = { disabled, theme, type: "prev" };
+    const obj3 = { disabled, theme, type: "prev" };
     children = <icon disabled={disabled} theme={theme} type="prev" />;
   }
-  obj.children = children;
+  obj2.children = children;
   return (
     <button
       accessibilityHint="Moves focus to the previous field"
@@ -57,17 +60,9 @@ export default function _default(icon) {
       disabled={disabled}
       rippleRadius={rippleRadius}
       style={style}
-      testID={onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS}
-      theme={theme}
-      onPress={useCallback((isDefaultPrevented) => {
-        if (onPress != null) {
-          tmp(isDefaultPrevented);
-        }
-        if (!isDefaultPrevented.isDefaultPrevented()) {
-          const KeyboardController = _mod1828.KeyboardController;
-          KeyboardController.setFocusTo("prev");
-        }
-      }, items)}
+      testID={null}
+      theme={null}
+      onPress={null}
     >
       {null}
     </button>

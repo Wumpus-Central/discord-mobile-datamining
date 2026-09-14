@@ -43,10 +43,10 @@ let items = [
       const _childrenToCellKey2 = this._childrenToCellKey;
       _childrenToCellKey2.delete(arg0);
       const _cellKeyToChildren = this._cellKeyToChildren;
-      value = _cellKeyToChildren.get(value);
-      ChildListCollection(38)(value, "_cellKeyToChildren should contain cellKey");
-      value.delete(arg0);
-      if (0 === value.size) {
+      value2 = _cellKeyToChildren.get(value);
+      ChildListCollection(38)(value2, "_cellKeyToChildren should contain cellKey");
+      value2.delete(arg0);
+      if (0 === value2.size) {
         const _cellKeyToChildren2 = this._cellKeyToChildren;
         _cellKeyToChildren2.delete(value);
       }

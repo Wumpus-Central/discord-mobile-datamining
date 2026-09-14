@@ -21,8 +21,11 @@ import pinchHandlerName from "06894_pinchHandlerName.js";
 import rotationHandlerName from "06895_rotationHandlerName.js";
 import PointerType from "06896_PointerType.js";
 import 06757__ from "metro/06757__.js";
-import initialize from "metro/06758__.js";
+import initialize_mod from "metro/06758__.js";
 
+const require = globalThis.__r;
+
+let initialize = initialize_mod;
 initialize = initialize.initialize();
 for (const key10019 in require("BaseButton")) {
   arg5[key10019] = require("BaseButton")[key10019];

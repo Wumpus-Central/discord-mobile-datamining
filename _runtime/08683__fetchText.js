@@ -1,5 +1,5 @@
 // _runtime/08683__fetchText.js
-import Buffer from "01253_Buffer.js";
+import Buffer from "01251_Buffer.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -11,8 +11,8 @@ let closure_3 = async function _fetchText(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,11 +24,11 @@ let closure_3 = async function _fetchText(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else if (!_require) {
         c1 = 3;
-        obj = { value: null, done: true };
+        const obj = { value: null, done: true };
         return obj;
       } else if (_require.startsWith("data:image/svg+xml;utf8")) {
         let tmp4 = (function dataUriToXml(arg0) {

@@ -50,10 +50,9 @@ export const resolveInternalConfigProps = function resolveInternalConfigProps(us
 export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
   shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
   if (shouldUseReanimatedDetector) {
-    let obj = hash;
-    shouldUseReanimatedDetector = !obj.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
+    shouldUseReanimatedDetector = !hash.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
   }
-  obj = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
+  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
   const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
   let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
   if (EMPTY_WHITE_LIST == null) {
@@ -61,10 +60,8 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(ar
   }
   const entries = Object.entries(shouldUseReanimatedDetector);
   while (tmp12 !== undefined) {
-    let tmp15 = _slicedToArray(tmp13, 2);
-    let first = tmp15[0];
+    [first, iter] = tmp13;
     let tmp17 = first;
-    let iter = tmp15[1];
     let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
     if (!allowedNativeProps.has(first)) {
       if (!EMPTY_WHITE_LIST.has(tmp17)) {
@@ -91,9 +88,9 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(ar
     if (Reanimated != null) {
       isSharedValueResult = Reanimated.isSharedValue(iter);
     }
-    obj[tmp17] = isSharedValueResult ? iter.value : iter;
+    obj2[tmp17] = isSharedValueResult ? iter.value : iter;
   }
-  return obj;
+  return obj2;
 };
 export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
   closure_0 = gestureHandlerProps;

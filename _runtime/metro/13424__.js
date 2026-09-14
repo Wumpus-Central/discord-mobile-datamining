@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 297,
   height: 238,
   scales: [1],
-  hash: "ee27927c992063817a4891d6fea39469",
-  name: "wumpus-bookmark",
+  hash: "2a38db2647d78740ca056c705d4301a7",
+  name: "wumpus-clock",
   type: "png",
 });

@@ -1,6 +1,8 @@
 // _runtime/00551_debounce.js
 import _mod556 from "metro/00556__.js";
 
+const require = globalThis.__r;
+
 export default function debounce(fn, arg1, leading) {
   _require = fn;
   dependencyMap = arg1;

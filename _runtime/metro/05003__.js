@@ -11,10 +11,10 @@ export const parseAndroidIconToNativeProps = function parseAndroidIconToNativePr
         const _console = console;
         console.error("[RNScreens] Failed to resolve an asset.");
       }
-      let obj = { imageIconResource: assetSource };
-      return obj;
+      const obj2 = { imageIconResource: assetSource };
+      return obj2;
     } else if ("drawableResource" === icon.type) {
-      obj = { drawableIconResourceName: icon.name };
+      const obj = { drawableIconResourceName: icon.name };
       return obj;
     } else {
       const _Error = Error;

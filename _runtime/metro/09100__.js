@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "\uBB38\uC790", verb: "to have" },
           file: { unit: "\uBC14\uC774\uD2B8", verb: "to have" },
           array: { unit: "\uAC1C", verb: "to have" },
@@ -104,7 +104,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
@@ -147,7 +146,7 @@ if (self2) {
               if ("\uBBF8\uB9CC" === str33) {
                 str34 = "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4";
               }
-              let tmp28 = obj[code.origin];
+              let tmp28 = obj2[code.origin];
               if (tmp28 == null) {
                 tmp28 = null;
               }
@@ -198,7 +197,7 @@ if (self2) {
               if ("\uC774\uC0C1" === str18) {
                 str19 = "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }

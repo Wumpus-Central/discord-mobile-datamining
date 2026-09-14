@@ -1,33 +1,37 @@
 // _runtime/metro/03965__.js
-import _typeof from "03725__.js";
-import startOfUTCWeek from "../03728_startOfUTCWeek.js";
-import startOfUTCWeekYear from "../03966_startOfUTCWeekYear.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import _typeof_mod from "03725__.js";
+import startOfUTCWeek_mod from "../03728_startOfUTCWeek.js";
+import startOfUTCWeekYear_mod from "../03966_startOfUTCWeekYear.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }
 startOfUTCWeek = tmp5;
+let startOfUTCWeekYear = startOfUTCWeekYear_mod;
 if (!startOfUTCWeekYear) {
-  obj = { default: startOfUTCWeekYear };
-  let tmp7 = obj;
+  const obj3 = { default: startOfUTCWeekYear };
+  let tmp7 = obj3;
 } else {
   tmp7 = startOfUTCWeekYear;
 }
 startOfUTCWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }

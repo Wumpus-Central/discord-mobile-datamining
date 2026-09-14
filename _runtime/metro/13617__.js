@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eb1c3c11742bff2f0226498ea684aa95",
-  name: "upload",
+  hash: "3301eac470d1db4f813dc4b19265d85e",
+  name: "audio",
   type: "png",
 });

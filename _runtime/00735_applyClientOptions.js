@@ -3,6 +3,8 @@ import _mod697 from "metro/00697__.js";
 import normalize from "00730_normalize.js";
 import _mod739 from "metro/00739__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {
@@ -202,13 +204,13 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
         });
       }
     }
-    const obj4 = require("metro/00739__.js");
+    let obj4 = require("metro/00739__.js");
   }
   const captureContext = event_id2.captureContext;
   if (!captureContext) {
     if (event_id2.mechanism) {
       const result = require("uuid4").addExceptionMechanism(obj, event_id2.mechanism);
-      const obj6 = require("uuid4");
+      let obj6 = require("uuid4");
     }
     if (emit) {
       let eventProcessors = emit.getEventProcessors();
@@ -222,15 +224,15 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
     if (items1.length) {
       event_id2.attachments = items1;
     }
-    let tmp28Result = tmp28(tmp29[2]);
-    const result1 = tmp28Result.applyScopeDataToEvent(obj, combinedScopeData);
+    const obj7 = require("mergeScopeData");
+    const result1 = require("mergeScopeData").applyScopeDataToEvent(obj, combinedScopeData);
     const items2 = [];
     HermesBuiltin.arraySpread(combinedScopeData.eventProcessors, HermesBuiltin.arraySpread(eventProcessors, 0));
-    tmp28Result = tmp28(tmp29[3]);
-    const result2 = tmp28Result.notifyEventProcessors(items2, obj, event_id2);
+    const tmp28Result = require("mergeScopeData");
+    const result2 = require("_notifyEventProcessors").notifyEventProcessors(items2, obj, event_id2);
     return result2.then((exception) => {
       if (exception) {
-        let obj = {};
+        const obj = {};
         closure_0 = obj;
         exception = exception.exception;
         if (exception != null) {
@@ -281,50 +283,49 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
           images2 = num2;
           let tmp32 = null;
           if (exception) {
-            obj = {};
+            let obj2 = {};
             let merged = Object.assign(exception);
             let breadcrumbs = exception.breadcrumbs;
             if (breadcrumbs) {
-              obj = { breadcrumbs: null };
-              breadcrumbs = exception.breadcrumbs;
-              obj.breadcrumbs = breadcrumbs.map((data) => {
-                let obj = {};
+              const obj3 = { breadcrumbs: null };
+              const breadcrumbs1 = exception.breadcrumbs;
+              obj3.breadcrumbs = breadcrumbs1.map((data) => {
                 const merged = Object.assign(data);
                 data = data.data;
                 if (data) {
-                  obj = { data: null };
+                  const obj2 = { data: null };
                   const normalizer = closure_0(num2[7]);
-                  obj.data = normalizer.normalize(data.data, closure_0, closure_1);
-                  data = obj;
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
                 }
                 const merged1 = Object.assign(data);
-                return obj;
+                return {};
               });
-              breadcrumbs = obj;
+              breadcrumbs = obj3;
             }
             let merged1 = Object.assign(breadcrumbs);
             let user = exception.user;
             if (user) {
-              const obj1 = { user: null };
+              const obj4 = { user: null };
               let normalizer = normalize;
-              obj1.user = normalizer.normalize(exception.user, tmp5, tmp35);
-              user = obj1;
+              obj4.user = normalizer.normalize(exception.user, tmp5, tmp35);
+              user = obj4;
             }
             const merged2 = Object.assign(user);
             let contexts = exception.contexts;
             if (contexts) {
-              const obj2 = { contexts: null };
+              const obj5 = { contexts: null };
               const normalizer2 = normalize;
-              obj2.contexts = normalizer2.normalize(exception.contexts, tmp5, tmp35);
-              contexts = obj2;
+              obj5.contexts = normalizer2.normalize(exception.contexts, tmp5, tmp35);
+              contexts = obj5;
             }
             const merged3 = Object.assign(contexts);
             let extra = exception.extra;
             if (extra) {
-              const obj3 = { extra: null };
+              const obj6 = { extra: null };
               const normalizer3 = normalize;
-              obj3.extra = normalizer3.normalize(exception.extra, tmp5, tmp35);
-              extra = obj3;
+              obj6.extra = normalizer3.normalize(exception.extra, tmp5, tmp35);
+              extra = obj6;
             }
             const merged4 = Object.assign(extra);
             const contexts2 = exception.contexts;
@@ -333,29 +334,28 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
               trace = contexts2.trace;
             }
             if (trace) {
-              trace = obj.contexts;
+              trace = obj2.contexts;
             }
             if (trace) {
-              obj.contexts.trace = exception.contexts.trace;
+              obj2.contexts.trace = exception.contexts.trace;
               if (exception.contexts.trace.data) {
                 const normalizer4 = normalize;
-                obj.contexts.trace.data = normalizer4.normalize(exception.contexts.trace.data, tmp5, tmp35);
+                obj2.contexts.trace.data = normalizer4.normalize(exception.contexts.trace.data, tmp5, tmp35);
               }
             }
             if (exception.spans) {
               const spans = exception.spans;
-              obj.spans = spans.map((data) => {
-                let obj = {};
+              obj2.spans = spans.map((data) => {
                 const merged = Object.assign(data);
                 data = data.data;
                 if (data) {
-                  obj = { data: null };
+                  const obj2 = { data: null };
                   const normalizer = closure_0(num2[7]);
-                  obj.data = normalizer.normalize(data.data, closure_0, closure_1);
-                  data = obj;
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
                 }
                 const merged1 = Object.assign(data);
-                return obj;
+                return {};
               });
             }
             const contexts3 = exception.contexts;
@@ -364,13 +364,13 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
               flags = contexts3.flags;
             }
             if (flags) {
-              flags = obj.contexts;
+              flags = obj2.contexts;
             }
-            tmp32 = obj;
+            tmp32 = obj2;
             if (flags) {
               const normalizer5 = normalize;
-              obj.contexts.flags = normalizer5.normalize(exception.contexts.flags, 3, tmp35);
-              tmp32 = obj;
+              obj2.contexts.flags = normalizer5.normalize(exception.contexts.flags, 3, tmp35);
+              tmp32 = obj2;
             }
           }
           tmp6 = tmp32;

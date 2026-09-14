@@ -22,16 +22,16 @@ export const useRouteCache = function useRouteCache(routes) {
     const tmp2 = _objectWithoutProperties(key, closure_2);
     let tmp3 = tmp2;
     if (value) {
-      let obj = _mod1536;
       tmp3 = tmp2;
       if (obj.isRecordEqual(value, tmp2)) {
         tmp3 = value;
       }
+      obj = _mod1536;
     }
     if (tmp3[SymbolResult] !== state) {
       const _Object = Object;
-      obj = { enumerable: false, configurable: true, value: state };
-      Object.defineProperty(tmp3, tmp6, obj);
+      const obj2 = { enumerable: false, configurable: true, value: state };
+      Object.defineProperty(tmp3, tmp6, obj2);
     }
     const result = set.set(key.key, tmp3);
     return set;

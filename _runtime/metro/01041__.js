@@ -71,10 +71,10 @@ class ReactNativeClient {
         settings = sdk1.settings;
       }
     }
-    obj = { sdk: null };
-    obj1 = { settings: Object.assign({ infer_ip: str }, settings) };
-    obj.sdk = Object.assign(merged1, obj1);
-    global._metadata = Object.assign(merged, obj);
+    obj1 = { sdk: null };
+    obj6 = { settings: Object.assign({ infer_ip: str }, settings) };
+    obj1.sdk = Object.assign(merged1, obj6);
+    global._metadata = Object.assign(merged, obj1);
     global.parentSpanIsAlwaysRootSpan =
       undefined === global.parentSpanIsAlwaysRootSpan || global.parentSpanIsAlwaysRootSpan;
     ({ enableLogs: enableLogs2, enableLogs } = global);
@@ -182,9 +182,14 @@ let items = [
   {
     key: "captureUserFeedback",
     value: function captureUserFeedback(arg0) {
-      ReactNativeClient(1043);
-      const obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "Array" };
-      this.sendEnvelope(obj.createUserFeedbackEnvelope(arg0, obj));
+      const obj = ReactNativeClient(1043);
+      this.sendEnvelope(
+        obj.createUserFeedbackEnvelope(arg0, {
+          metadata: this._options._metadata,
+          dsn: this.getDsn(),
+          tunnel: "Array",
+        }),
+      );
     },
   },
   {
@@ -268,7 +273,7 @@ let items = [
     value: function _initNativeSdk() {
       const self = this;
       const NATIVE = self(866).NATIVE;
-      let obj = {
+      const obj = {
         defaultSidecarUrl: null,
         devServerUrl: null,
         mobileReplayOptions: null,
@@ -276,7 +281,7 @@ let items = [
       };
       const merged = Object.assign({}, this._options);
       obj.defaultSidecarUrl = self(993).getDefaultSidecarUrl();
-      const obj2 = self(993);
+      let obj2 = self(993);
       const devServer = self(679).getDevServer();
       let str;
       if (null !== devServer) {
@@ -321,7 +326,6 @@ let items = [
           },
         )
         .then((didCallNativeInit) => {
-          let obj = self;
           const _options = self._options;
           const onReady = _options.onReady;
           let tmp = null === onReady;
@@ -330,14 +334,14 @@ let items = [
           }
           if (!tmp) {
             const call = onReady.call;
-            obj = { didCallNativeInit };
+            const obj2 = { didCallNativeInit };
             if (typeof call === "unknown") {
-              onReady(obj);
+              onReady(obj2);
             } else {
-              call(_options, obj);
+              call(_options, obj2);
             }
           }
-          obj.emit("afterInit");
+          self.emit("afterInit");
         })
         .then(undefined, (arg0) => {
           const debug = self(dependencyMap[10]).debug;
@@ -352,7 +356,6 @@ let items = [
           },
         )
         .then((didCallNativeInit) => {
-          let obj = self;
           const _options = self._options;
           const onReady = _options.onReady;
           let tmp = null === onReady;
@@ -361,14 +364,14 @@ let items = [
           }
           if (!tmp) {
             const call = onReady.call;
-            obj = { didCallNativeInit };
+            const obj2 = { didCallNativeInit };
             if (typeof call === "unknown") {
-              onReady(obj);
+              onReady(obj2);
             } else {
-              call(_options, obj);
+              call(_options, obj2);
             }
           }
-          obj.emit("afterInit");
+          self.emit("afterInit");
         });
     },
   },

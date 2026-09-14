@@ -4,10 +4,10 @@ import registerAsset from "01120__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 91,
-  height: 90,
+  width: 106,
+  height: 80,
   scales: [2, 3],
-  hash: "055143aab1e4ce106d248b3615fa3d2c",
-  name: "img_bundle_banner",
+  hash: "f9a535d371ee710b8f1909e45896c667",
+  name: "img_wumpus_nitro_rev",
   type: "png",
 });

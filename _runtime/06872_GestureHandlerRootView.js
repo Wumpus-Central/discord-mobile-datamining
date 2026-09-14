@@ -13,10 +13,10 @@ export default function GestureHandlerRootView(style) {
   if (container == null) {
     container = container.container;
   }
-  let obj = { value: true, children: null };
-  obj = { style: container };
+  const obj = { value: true, children: null };
+  const obj2 = { style: container };
   const merged1 = Object.assign(merged);
-  obj.moduleId = globalThis._RNGH_MODULE_ID;
+  obj2.moduleId = globalThis._RNGH_MODULE_ID;
   obj.children = jsx(_modDef6873, { style: container });
-  return <tmp3 style={container} />;
+  return <tmp3 value>{null}</tmp3>;
 }

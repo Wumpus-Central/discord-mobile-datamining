@@ -15,6 +15,8 @@ function transformPreventedRoutes(first1) {
 }
 
 export const PreventRemoveProvider = function PreventRemoveProvider(children) {
+  first1 = undefined;
+  dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
   let notifyPreventRemove;
@@ -23,12 +25,7 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
     noop.useState(() => first(1492).nanoid()),
     1,
   )[0];
-  const tmp2 = _slicedToArray(
-    noop.useState(() => new Map()),
-    2,
-  );
-  const first1 = tmp2[0];
-  dependencyMap = tmp2[1];
+  [first1, dependencyMap] = noop.useState(() => new Map());
   _slicedToArray = noop.useRef(new Map());
   noop = noop.useContext(first(1549).NavigationHelpersContext);
   const context = noop.useContext(first(1524).NavigationRouteContext);

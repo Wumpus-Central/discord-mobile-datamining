@@ -1,6 +1,8 @@
 // _runtime/00817_safeJoinConsoleArgs.js
 import normalize from "00730_normalize.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

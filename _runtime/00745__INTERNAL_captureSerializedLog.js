@@ -67,78 +67,77 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
   let currentScope = scope;
   if (scope === undefined) {
-    let obj1 = _mod713;
-    currentScope = obj1.getCurrentScope();
+    currentScope = _mod713.getCurrentScope();
   }
   let tmp3 = arg2;
   if (arg2 === undefined) {
     tmp3 = _INTERNAL_captureSerializedLog;
   }
   let beforeSendLog;
-  let obj;
+  attributes = undefined;
+  let obj4;
   let client;
   if (currentScope != null) {
     client = currentScope.getClient();
   }
   if (client == null) {
-    let obj2 = _mod713;
-    client = obj2.getClient();
+    client = _mod713.getClient();
   }
   if (client) {
     const options = client.getOptions();
     ({ release, environment, enableLogs } = options);
     beforeSendLog = options.beforeSendLog;
     if (tmp11) {
-      let tmp12Result = _getTraceInfoFromScope;
-      const tmp17 = _slicedToArray(tmp12Result._getTraceInfoFromScope(client, currentScope), 2)[1];
-      obj = {};
+      const tmp17 = _slicedToArray(_getTraceInfoFromScope._getTraceInfoFromScope(client, currentScope), 2)[1];
+      attributes = {};
       const merged = Object.assign(attributes.attributes);
-      tmp12Result = mergeScopeData;
-      const combinedScopeData = tmp12Result.getCombinedScopeData(_mod713.getIsolationScope(), currentScope);
+      const tmp12Result = _getTraceInfoFromScope;
+      const tmp12Result9 = mergeScopeData;
+      const combinedScopeData = tmp12Result9.getCombinedScopeData(_mod713.getIsolationScope(), currentScope);
       ({ id, email, username } = combinedScopeData.user);
-      attributes = combinedScopeData.attributes;
-      if (undefined === attributes) {
-        attributes = {};
+      let attributes1 = combinedScopeData.attributes;
+      if (undefined === attributes1) {
+        attributes1 = {};
       }
       let tmp21 = !id;
       if (id) {
-        tmp21 = obj["user.id"] && true;
-        const tmp22 = obj["user.id"] && true;
+        tmp21 = attributes["user.id"] && true;
+        const tmp22 = attributes["user.id"] && true;
       }
       if (!tmp21) {
-        obj["user.id"] = id;
+        attributes["user.id"] = id;
       }
       let tmp23 = !email;
       if (email) {
-        tmp23 = obj["user.email"] && true;
-        const tmp24 = obj["user.email"] && true;
+        tmp23 = attributes["user.email"] && true;
+        const tmp24 = attributes["user.email"] && true;
       }
       if (!tmp23) {
-        obj["user.email"] = email;
+        attributes["user.email"] = email;
       }
       let tmp25 = !username;
       if (username) {
-        tmp25 = obj["user.name"] && true;
-        const tmp26 = obj["user.name"] && true;
+        tmp25 = attributes["user.name"] && true;
+        const tmp26 = attributes["user.name"] && true;
       }
       if (!tmp25) {
-        obj["user.name"] = username;
+        attributes["user.name"] = username;
       }
       let tmp27 = !release;
       if (release) {
-        tmp27 = obj["sentry.release"] && false;
-        const tmp28 = obj["sentry.release"] && false;
+        tmp27 = attributes["sentry.release"] && false;
+        const tmp28 = attributes["sentry.release"] && false;
       }
       if (!tmp27) {
-        obj["sentry.release"] = release;
+        attributes["sentry.release"] = release;
       }
       let tmp29 = !environment;
       if (environment) {
-        tmp29 = obj["sentry.environment"] && false;
-        const tmp30 = obj["sentry.environment"] && false;
+        tmp29 = attributes["sentry.environment"] && false;
+        const tmp30 = attributes["sentry.environment"] && false;
       }
       if (!tmp29) {
-        obj["sentry.environment"] = environment;
+        attributes["sentry.environment"] = environment;
       }
       const sdkMetadata = client.getSdkMetadata();
       let sdk;
@@ -151,19 +150,19 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
       ({ name, version } = sdk);
       let tmp32 = !name;
       if (name) {
-        tmp32 = obj["sentry.sdk.name"] && false;
-        const tmp33 = obj["sentry.sdk.name"] && false;
+        tmp32 = attributes["sentry.sdk.name"] && false;
+        const tmp33 = attributes["sentry.sdk.name"] && false;
       }
       if (!tmp32) {
-        obj["sentry.sdk.name"] = name;
+        attributes["sentry.sdk.name"] = name;
       }
       let tmp34 = !version;
       if (version) {
-        tmp34 = obj["sentry.sdk.version"] && false;
-        const tmp35 = obj["sentry.sdk.version"] && false;
+        tmp34 = attributes["sentry.sdk.version"] && false;
+        const tmp35 = attributes["sentry.sdk.version"] && false;
       }
       if (!tmp34) {
-        obj["sentry.sdk.version"] = version;
+        attributes["sentry.sdk.version"] = version;
       }
       const integrationByName = client.getIntegrationByName("Replay");
       let replayId;
@@ -172,11 +171,11 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
       }
       let tmp37 = !replayId;
       if (replayId) {
-        tmp37 = obj["sentry.replay_id"] && false;
-        const tmp38 = obj["sentry.replay_id"] && false;
+        tmp37 = attributes["sentry.replay_id"] && false;
+        const tmp38 = attributes["sentry.replay_id"] && false;
       }
       if (!tmp37) {
-        obj["sentry.replay_id"] = replayId;
+        attributes["sentry.replay_id"] = replayId;
       }
       if (replayId) {
         let recordingMode;
@@ -187,13 +186,13 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
       }
       if (replayId) {
         if (!tmp40) {
-          obj["sentry._internal.replay_is_buffering"] = true;
+          attributes["sentry._internal.replay_is_buffering"] = true;
         }
-        tmp40 = obj["sentry._internal.replay_is_buffering"] && false;
+        tmp40 = attributes["sentry._internal.replay_is_buffering"] && false;
       }
       const message = attributes.message;
-      const tmp12Result1 = _mod713;
-      if (tmp12Result2.isParameterizedString(message)) {
+      const tmp12Result10 = _mod713;
+      if (tmp12Result11.isParameterizedString(message)) {
         ({ __sentry_template_values__, __sentry_template_string__ } = message);
         if (undefined === __sentry_template_values__) {
           __sentry_template_values__ = [];
@@ -203,13 +202,13 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
           length = __sentry_template_values__.length;
         }
         if (length) {
-          obj["sentry.message.template"] = __sentry_template_string__;
+          attributes["sentry.message.template"] = __sentry_template_string__;
         }
         const item = __sentry_template_values__.forEach((item, index) => {
           obj["sentry.message.parameter." + index] = item;
         });
       }
-      tmp12Result2 = _mod692;
+      tmp12Result11 = _mod692;
       const _getSpanForScopeResult = _getSpanForScope._getSpanForScope(currentScope);
       let spanId;
       if (_getSpanForScopeResult != null) {
@@ -217,27 +216,27 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
       }
       let tmp44 = !spanId;
       if (spanId) {
-        tmp44 = obj["sentry.trace.parent_span_id"] && false;
-        const tmp45 = obj["sentry.trace.parent_span_id"] && false;
+        tmp44 = attributes["sentry.trace.parent_span_id"] && false;
+        const tmp45 = attributes["sentry.trace.parent_span_id"] && false;
       }
       if (!tmp44) {
-        obj["sentry.trace.parent_span_id"] = spanId;
+        attributes["sentry.trace.parent_span_id"] = spanId;
       }
-      obj = {};
+      obj4 = {};
       const merged1 = Object.assign(attributes);
-      obj.attributes = obj;
-      client.emit("beforeCaptureLog", obj);
+      obj4.attributes = attributes;
+      client.emit("beforeCaptureLog", obj4);
       if (beforeSendLog) {
-        obj = consoleSandbox.consoleSandbox(() => beforeSendLog(obj));
-        const tmp12Result4 = consoleSandbox;
+        obj4 = consoleSandbox.consoleSandbox(() => beforeSendLog(obj4));
+        const tmp12Result13 = consoleSandbox;
       }
-      if (obj) {
-        ({ level, attributes, message: message2 } = obj);
+      if (obj4) {
+        ({ level, attributes, message: message2 } = obj4);
         if (undefined === attributes) {
           attributes = {};
         }
-        let severityNumber = obj.severityNumber;
-        obj1 = {
+        let severityNumber = obj4.severityNumber;
+        const obj5 = {
           timestamp: dateTimestampInSeconds.timestampInSeconds(),
           level,
           body: message2,
@@ -249,20 +248,20 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
         if (tmp17 != null) {
           trace_id = tmp17.trace_id;
         }
-        obj1.trace_id = trace_id;
+        obj5.trace_id = trace_id;
         if (severityNumber == null) {
           severityNumber = SEVERITY_TEXT_TO_SEVERITY_NUMBER.SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
         }
-        obj1.severity_number = severityNumber;
-        obj2 = {};
-        const tmp12Result5 = dateTimestampInSeconds;
-        const merged2 = Object.assign(_mod748.serializeAttributes(attributes));
-        const tmp12Result6 = _mod748;
+        obj5.severity_number = severityNumber;
+        const obj6 = {};
+        const tmp12Result14 = dateTimestampInSeconds;
+        const merged2 = Object.assign(_mod748.serializeAttributes(attributes1));
+        const tmp12Result15 = _mod748;
         const merged3 = Object.assign(_mod748.serializeAttributes(attributes, true));
-        obj1.attributes = obj2;
-        tmp3(client, obj1);
-        client.emit("afterCaptureLog", obj);
-        const tmp12Result7 = _mod748;
+        obj5.attributes = obj6;
+        tmp3(client, obj5);
+        client.emit("afterCaptureLog", obj4);
+        const tmp12Result16 = _mod748;
       } else {
         client.recordDroppedEvent("before_send", "log_item", 1);
         if (_mod688.DEBUG_BUILD) {
@@ -270,7 +269,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
           debug3.warn("beforeSendLog returned null, log will not be captured.");
         }
       }
-      const tmp12Result3 = _getSpanForScope;
+      const tmp12Result12 = _getSpanForScope;
     } else if (_mod688.DEBUG_BUILD) {
       const debug2 = consoleSandbox.debug;
       debug2.warn("logging option not enabled, log will not be captured.");

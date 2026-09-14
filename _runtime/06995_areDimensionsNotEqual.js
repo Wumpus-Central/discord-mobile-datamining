@@ -15,15 +15,15 @@ export const roundOffPixel = function roundOffPixel(arg0) {
   return PixelRatio.roundToNearestPixel(arg0);
 };
 export const measureParentSize = function measureParentSize(current) {
-  let size = { x: 0, y: 0, width: 0, height: 0 };
+  const size = { x: 0, y: 0, width: 0, height: 0 };
   current.measureLayout(current, (x, y, arg2, arg3) => {
     size.x = x;
     size.y = y;
     size.width = PixelRatio.roundToNearestPixel(arg2);
     size.height = PixelRatio.roundToNearestPixel(arg3);
   });
-  size = { width: size.width, height: size.height };
-  return size;
+  const size1 = { width: size.width, height: size.height };
+  return size1;
 };
 export const measureFirstChildLayout = function measureFirstChildLayout(current, current2) {
   const size = { x: 0, y: 0, width: 0, height: 0 };

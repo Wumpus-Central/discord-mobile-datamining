@@ -2,6 +2,8 @@
 import _mod874 from "metro/00874__.js";
 import base64StringFromByteArray from "00876_base64StringFromByteArray.js";
 
+const require = globalThis.__r;
+
 for (const key10013 in require("metro/00873__.js")) {
   arg5[key10013] = require("metro/00873__.js")[key10013];
   continue;

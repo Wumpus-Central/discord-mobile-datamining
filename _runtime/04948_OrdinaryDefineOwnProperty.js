@@ -1,7 +1,7 @@
 // _runtime/04948_OrdinaryDefineOwnProperty.js
-import _mod1283 from "metro/01283__.js";
-import _mod1284 from "metro/01284__.js";
-import _mod1304 from "metro/01304__.js";
+import _mod1281 from "metro/01281__.js";
+import _mod1282 from "metro/01282__.js";
+import _mod1302 from "metro/01302__.js";
 import _mod4885 from "metro/04885__.js";
 import _mod4932 from "metro/04932__.js";
 import _mod4936 from "metro/04936__.js";
@@ -15,15 +15,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (_mod4885(arg0)) {
     if (_mod4932(arg1)) {
       if (_mod4936(__Writable__)) {
-        if (_mod1284) {
-          const tmp30 = _mod1284(arg0, arg1);
+        if (_mod1282) {
+          const tmp30 = _mod1282(arg0, arg1);
           let tmp31 = tmp30;
           if (tmp30) {
             tmp31 = ToPropertyDescriptor(tmp30);
           }
           return ValidateAndApplyPropertyDescriptor(arg0, arg1, _mod4950(arg0), __Writable__, tmp31);
         } else if (IsAccessorDescriptor(__Writable__)) {
-          const tmp28 = new _mod1304("This environment does not support accessor property descriptors.");
+          const tmp28 = new _mod1302("This environment does not support accessor property descriptors.");
           throw tmp28;
         } else {
           let tmp17 =
@@ -52,7 +52,7 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           }
           if (!tmp17) {
             if (!tmp18) {
-              const tmp24 = new _mod1304(
+              const tmp24 = new _mod1302(
                 "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
               );
               throw tmp24;
@@ -62,15 +62,15 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           return SameValue(arg0[arg1], __Writable__["[[Value]]"]);
         }
       } else {
-        const tmp15 = new _mod1283("Assertion failed: Desc must be a Property Descriptor");
+        const tmp15 = new _mod1281("Assertion failed: Desc must be a Property Descriptor");
         throw tmp15;
       }
     } else {
-      const tmp10 = new _mod1283("Assertion failed: P must be a Property Key");
+      const tmp10 = new _mod1281("Assertion failed: P must be a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new _mod1283("Assertion failed: O must be an Object");
+    const tmp5 = new _mod1281("Assertion failed: O must be an Object");
     throw tmp5;
   }
 }

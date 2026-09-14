@@ -205,7 +205,7 @@ function encode(str) {
               let arr = items.push(((1023 & charCodeAtResult) << 10) + (1023 & charCodeAtResult1) + 65536);
               let diff = sum1;
             } else {
-              arr = items.push(charCodeAtResult);
+              let arr2 = items.push(charCodeAtResult);
               diff = sum1 - 1;
             }
             num = diff;
@@ -215,7 +215,7 @@ function encode(str) {
           }
         }
       }
-      let arr1 = items.push(charCodeAtResult);
+      let arr9 = items.push(charCodeAtResult);
       diff = sum;
     }
   }
@@ -224,7 +224,7 @@ function encode(str) {
   for (let num3 = 0; num3 < length2; num3 = num3 + 1) {
     let tmp9 = items[num3];
     if (tmp9 < num2) {
-      let arr2 = items1.push(fromCharCode(tmp9));
+      let arr10 = items1.push(fromCharCode(tmp9));
     }
   }
   if (items1.length) {
@@ -299,7 +299,7 @@ function encode(str) {
                     let diff2 = tmp40 - num9;
                     let diff3 = c2 - num9;
                     let sum5 = num9 + (diff2 % diff3);
-                    let arr4 = items1.push(fromCharCode(sum5 + 22 + 75 * (sum5 < 26)));
+                    let arr12 = items1.push(fromCharCode(sum5 + 22 + 75 * (sum5 < 26)));
                     tmp49 = floor(diff2 / diff3);
                     let sum6 = tmp51 + c2;
                     num10 = 1;
@@ -316,7 +316,7 @@ function encode(str) {
                     tmp41 = tmp49;
                   } while (tmp49 >= num10);
                 }
-                let arr5 = items1.push(fromCharCode(tmp41 + 22 + 75 * (tmp41 < 26)));
+                let arr13 = items1.push(fromCharCode(tmp41 + 22 + 75 * (tmp41 < 26)));
                 if (tmp62 == length3) {
                   let tmp54 = floor(tmp35 / 700);
                 } else {
@@ -426,7 +426,7 @@ const punycode = {
                   let arr = items.push(((1023 & charCodeAtResult) << 10) + (1023 & charCodeAtResult1) + 65536);
                   let diff = sum1;
                 } else {
-                  arr = items.push(charCodeAtResult);
+                  let arr4 = items.push(charCodeAtResult);
                   diff = sum1 - 1;
                 }
                 num = diff;
@@ -436,7 +436,7 @@ const punycode = {
               }
             }
           }
-          let arr1 = items.push(charCodeAtResult);
+          let arr5 = items.push(charCodeAtResult);
           diff = sum;
         }
       }

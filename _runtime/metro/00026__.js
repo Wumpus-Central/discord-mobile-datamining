@@ -11,52 +11,53 @@ import processTransformOriginDefault from "../00061_processTransformOrigin.js";
 import processFontVariantDefault from "../00062_processFontVariant.js";
 import processAspectRatioDefault from "../00063_processAspectRatio.js";
 import sizesDifferDefault from "../00064_sizesDiffer.js";
-import javaScriptFlagGetter from "00027__.js";
+import javaScriptFlagGetter_mod from "00027__.js";
 
+let javaScriptFlagGetter = javaScriptFlagGetter_mod;
 javaScriptFlagGetter = javaScriptFlagGetter.enableNativeCSSParsing();
 if (!javaScriptFlagGetter) {
-  let obj = { process: processColorDefault };
+  const obj = { process: processColorDefault };
   javaScriptFlagGetter = obj;
 }
 if (!javaScriptFlagGetter) {
-  obj = { process: _getFilterAmountDefault };
-  javaScriptFlagGetter = obj;
-}
-if (!javaScriptFlagGetter) {
-  const obj1 = { process: _modDef55 };
-  javaScriptFlagGetter = obj1;
-}
-if (!javaScriptFlagGetter) {
-  const obj2 = { process: processColorStopsDefault };
+  const obj2 = { process: _getFilterAmountDefault };
   javaScriptFlagGetter = obj2;
 }
 if (!javaScriptFlagGetter) {
-  const obj3 = { process: _modDef57 };
+  const obj3 = { process: _modDef55 };
   javaScriptFlagGetter = obj3;
 }
 if (!javaScriptFlagGetter) {
-  const obj4 = { process: _modDef58 };
+  const obj4 = { process: processColorStopsDefault };
   javaScriptFlagGetter = obj4;
 }
 if (!javaScriptFlagGetter) {
-  const obj5 = { process: _modDef59 };
+  const obj5 = { process: _modDef57 };
   javaScriptFlagGetter = obj5;
 }
 if (!javaScriptFlagGetter) {
-  const obj6 = { process: _getKeyAndValueFromCSSTransformDefault };
+  const obj6 = { process: _modDef58 };
   javaScriptFlagGetter = obj6;
 }
 if (!javaScriptFlagGetter) {
-  const obj7 = { process: processTransformOriginDefault };
+  const obj7 = { process: _modDef59 };
   javaScriptFlagGetter = obj7;
 }
 if (!javaScriptFlagGetter) {
-  const obj8 = { process: processFontVariantDefault };
+  const obj8 = { process: _getKeyAndValueFromCSSTransformDefault };
   javaScriptFlagGetter = obj8;
 }
 if (!javaScriptFlagGetter) {
-  const obj9 = { process: processAspectRatioDefault };
+  const obj9 = { process: processTransformOriginDefault };
   javaScriptFlagGetter = obj9;
+}
+if (!javaScriptFlagGetter) {
+  const obj10 = { process: processFontVariantDefault };
+  javaScriptFlagGetter = obj10;
+}
+if (!javaScriptFlagGetter) {
+  const obj11 = { process: processAspectRatioDefault };
+  javaScriptFlagGetter = obj11;
 }
 const size = {
   alignContent: true,

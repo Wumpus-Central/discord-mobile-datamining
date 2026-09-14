@@ -1,5 +1,5 @@
 // _runtime/metro/01762__.js
-import _slicedToArray from "00032__.js";
+import _slicedToArray_mod from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
   code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}",
 };
@@ -55,17 +56,16 @@ class StretchInX {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleX: delayFunction(delay, first(1, closure_2)) };
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj1 = { transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const items = [{ scaleX: delayFunction(delay, first(1, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { transform: null };
         const items1 = [{ scaleX: 0 }];
-        obj1.transform = items1;
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj1;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
@@ -119,17 +119,16 @@ class StretchInY {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleY: delayFunction(delay, first(1, closure_2)) };
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj1 = { transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const items = [{ scaleY: delayFunction(delay, first(1, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { transform: null };
         const items1 = [{ scaleY: 0 }];
-        obj1.transform = items1;
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj1;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
@@ -183,17 +182,16 @@ class StretchOutX {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleX: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj1 = { transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const items = [{ scaleX: delayFunction(delay, first(0, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { transform: null };
         const items1 = [{ scaleX: 1 }];
-        obj1.transform = items1;
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj1;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
@@ -247,17 +245,16 @@ class StretchOutY {
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleY: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj];
-        obj.transform = items;
-        obj.animations = obj;
-        const obj1 = { transform: null };
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { transform: null };
+        const items = [{ scaleY: delayFunction(delay, first(0, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { transform: null };
         const items1 = [{ scaleY: 1 }];
-        obj1.transform = items1;
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj1;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };

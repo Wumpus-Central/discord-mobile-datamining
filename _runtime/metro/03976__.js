@@ -1,13 +1,14 @@
 // _runtime/metro/03976__.js
 import _mod3730 from "03730__.js";
-import 03888__ from "03888__.js";
-import compareAsc from "../03901_compareAsc.js";
-import _typeof from "03725__.js";
-import cloneObject from "../03974_cloneObject.js";
-import assign from "../03975_assign.js";
-import code from "03971__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import module_3888_mod from "03888__.js";
+import compareAsc_mod from "../03901_compareAsc.js";
+import _typeof_mod from "03725__.js";
+import cloneObject_mod from "../03974_cloneObject.js";
+import assign_mod from "../03975_assign.js";
+import code_mod from "03971__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let module_3888 = module_3888_mod;
 if (!module_3888) {
   let obj = { default: module_3888 };
   let tmp3 = obj;
@@ -15,44 +16,50 @@ if (!module_3888) {
   tmp3 = module_3888;
 }
 module_3888 = tmp3;
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
-  obj = { default: compareAsc };
-  let tmp5 = obj;
+  const obj2 = { default: compareAsc };
+  let tmp5 = obj2;
 } else {
   tmp5 = compareAsc;
 }
 compareAsc = tmp5;
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp7 = obj;
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
+let cloneObject = cloneObject_mod;
 if (!cloneObject) {
-  const obj1 = { default: cloneObject };
-  let tmp9 = obj1;
+  const obj4 = { default: cloneObject };
+  let tmp9 = obj4;
 } else {
   tmp9 = cloneObject;
 }
 cloneObject = tmp9;
+let assign = assign_mod;
 if (!assign) {
-  const obj2 = { default: assign };
-  let tmp11 = obj2;
+  const obj5 = { default: assign };
+  let tmp11 = obj5;
 } else {
   tmp11 = assign;
 }
 assign = tmp11;
+let code = code_mod;
 if (!code) {
-  const obj3 = { default: code };
-  let tmp13 = obj3;
+  const obj6 = { default: code };
+  let tmp13 = obj6;
 } else {
   tmp13 = code;
 }
 code = tmp13;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp15 = obj4;
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
 } else {
   tmp15 = requiredArgs;
 }

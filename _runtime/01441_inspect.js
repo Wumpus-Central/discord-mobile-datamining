@@ -248,9 +248,9 @@ function formatValue(customInspect, inspect, arg2) {
                     if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(inspect, StringResult)) {
                       let _String2 = String;
                       let flag3 = true;
-                      let arr = push(formatProperty(customInspect, inspect, arg2, obj, String(num4), true));
+                      let arr2 = push(formatProperty(customInspect, inspect, arg2, obj, String(num4), true));
                     } else {
-                      let arr1 = push(str17);
+                      let arr5 = push(str17);
                     }
                   }
                   const item1 = ownPropertyNames.forEach((item) => {
@@ -434,15 +434,15 @@ function callbackifyOnRejected(reason, fn) {
 }
 let closure_1 =
   Object.getOwnPropertyDescriptors ||
-  function getOwnPropertyDescriptors(_Object6Result) {
+  function getOwnPropertyDescriptors(arg0) {
     let length;
-    const keys = Object.keys(_Object6Result);
+    const keys = Object.keys(arg0);
     const obj = {};
     let num = 0;
     if (0 < keys.length) {
       do {
         let _Object = Object;
-        obj[keys[num]] = Object.getOwnPropertyDescriptor(_Object6Result, keys[num]);
+        obj[keys[num]] = Object.getOwnPropertyDescriptor(arg0, keys[num]);
         num = num + 1;
         length = keys.length;
       } while (num < length);
@@ -833,8 +833,8 @@ export const promisify = function promisify(fn) {
           throw typeError1;
         } else {
           const _Object5 = Object;
-          let obj = { value: tmp5, enumerable: false, writable: false, configurable: true };
-          Object.defineProperty(tmp5, SymbolResult, obj);
+          const obj2 = { value: tmp5, enumerable: false, writable: false, configurable: true };
+          Object.defineProperty(tmp5, SymbolResult, obj2);
           return tmp5;
         }
       }
@@ -874,7 +874,7 @@ export const promisify = function promisify(fn) {
     Object.setPrototypeOf(value, Object.getPrototypeOf(fn));
     if (SymbolResult) {
       const _Object3 = Object;
-      obj = { value, enumerable: false, writable: false, configurable: true };
+      const obj = { value, enumerable: false, writable: false, configurable: true };
       Object.defineProperty(value, SymbolResult, obj);
     }
     const _Object4 = Object;
@@ -899,15 +899,14 @@ export const callbackify = function callbackify(fn) {
           length = arguments.length;
         } while (num < length);
       }
-      arr = items.pop();
-      if (typeof arr !== "function") {
+      if (typeof arr3 !== "function") {
         const _TypeError = TypeError;
         const typeError = new TypeError("The last argument must be of type Function");
         throw typeError;
       } else {
         const self = this;
         function cb() {
-          const apply = arr.apply;
+          const apply = arr3.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -925,6 +924,7 @@ export const callbackify = function callbackify(fn) {
         );
         const applyResult = closure_0.apply(this, items);
       }
+      arr3 = items.pop();
     }
     const _Object = Object;
     const _Object2 = Object;

@@ -2,7 +2,9 @@
 import cancelAnimation from "../01636_cancelAnimation.js";
 import _mod1848 from "01848__.js";
 import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 let noop = fn(19);
@@ -13,6 +15,7 @@ let noop = fn(19);
   useMemo: closure_7,
   forwardRef,
 } = noop);
+let noop = noop_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = {
@@ -24,7 +27,7 @@ let closure_12 = {
 let closure_13 = {
   code: "function pnpm_indexTsx3(newPosition){const{scrollPosition,maybeScroll,keyboardHeight}=this.__closure;const prevScroll=scrollPosition.value;scrollPosition.value=newPosition;maybeScroll(keyboardHeight.value,true);scrollPosition.value=prevScroll;}",
 };
-const value2 = {
+let value2 = {
   code: "function pnpm_indexTsx4(e){const{interpolate,keyboardHeight,extraKeyboardSpace,currentKeyboardFrameHeight}=this.__closure;const keyboardFrame=interpolate(e.height,[0,keyboardHeight.value],[0,keyboardHeight.value+extraKeyboardSpace]);currentKeyboardFrameHeight.value=keyboardFrame;}",
 };
 let closure_15 = {
@@ -33,7 +36,7 @@ let closure_15 = {
 let closure_16 = {
   code: "function pnpm_indexTsx6(){const{layout,updateLayoutFromSelection,performScrollWithPositionRestoration,position}=this.__closure;const prevLayout=layout.value;if(!updateLayoutFromSelection()){return;}performScrollWithPositionRestoration(position.value);layout.value=prevLayout;}",
 };
-const value3 = {
+let value3 = {
   code: "function pnpm_indexTsx7(){const{scrollFromCurrentPosition}=this.__closure;scrollFromCurrentPosition();}",
 };
 let closure_18 = {
@@ -114,26 +117,26 @@ export default forwardRef((bottomOffset, arg1) => {
   closure_35 = undefined;
   closure_36 = undefined;
   closure_37 = undefined;
-  let obj = require("cancelAnimation");
-  const animatedRef = obj.useAnimatedRef();
+  const animatedRef = require("cancelAnimation").useAnimatedRef();
   ref = ref.useRef(null);
   const tmp8 = num(flag[4])(animatedRef, ref);
-  let obj1 = require("cancelAnimation");
-  const sharedValue = obj1.useSharedValue(null);
+  let obj = require("cancelAnimation");
+  const sharedValue = require("cancelAnimation").useSharedValue(null);
   let obj2 = require("cancelAnimation");
-  const sharedValue1 = obj2.useSharedValue(0);
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
   let tmp11 = num(flag[5])(animatedRef);
   const offset = tmp11.offset;
   let layout = tmp11.layout;
   const size = tmp11.size;
   let obj3 = require("cancelAnimation");
-  const sharedValue2 = obj3.useSharedValue(0);
+  const sharedValue2 = require("cancelAnimation").useSharedValue(0);
   let obj4 = require("cancelAnimation");
-  const sharedValue3 = obj4.useSharedValue(0);
+  const sharedValue3 = require("cancelAnimation").useSharedValue(0);
   let obj5 = require("cancelAnimation");
-  const sharedValue4 = obj5.useSharedValue(false);
+  const sharedValue4 = require("cancelAnimation").useSharedValue(false);
   let obj6 = require("cancelAnimation");
-  const sharedValue5 = obj6.useSharedValue(-1);
+  const sharedValue5 = require("cancelAnimation").useSharedValue(-1);
+  const obj7 = require("cancelAnimation");
   const sharedValue6 = require("cancelAnimation").useSharedValue(0);
   const obj8 = require("cancelAnimation");
   const sharedValue7 = require("cancelAnimation").useSharedValue(0);
@@ -163,8 +166,8 @@ export default forwardRef((bottomOffset, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -177,8 +180,8 @@ export default forwardRef((bottomOffset, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -193,8 +196,8 @@ export default forwardRef((bottomOffset, arg1) => {
               const KeyboardControllerNative = closure_0(flag[8]).KeyboardControllerNative;
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult), done: false };
-              return obj1;
+              const obj4 = { value: KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult), done: false };
+              return obj4;
             }
             const obj5 = closure_0(flag[7]);
           }
@@ -211,7 +214,7 @@ export default forwardRef((bottomOffset, arg1) => {
           }
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c5 = 3;
@@ -257,19 +260,19 @@ export default forwardRef((bottomOffset, arg1) => {
         } else {
           iter2 = closure_15;
           diff = height - closure_15.value;
-          value = iter.value;
+          value1 = iter.value;
           num2 = undefined;
           tmp34 = height;
-          if (value != null) {
-            num2 = value.layout.absoluteY;
+          if (value1 != null) {
+            num2 = value1.layout.absoluteY;
           }
           if (!num2) {
             num2 = 0;
           }
-          value1 = iter.value;
+          value4 = iter.value;
           num3 = undefined;
-          if (value1 != null) {
-            num3 = value1.layout.height;
+          if (value4 != null) {
+            num3 = value4.layout.height;
           }
           if (!num3) {
             num3 = 0;
@@ -333,7 +336,8 @@ export default forwardRef((bottomOffset, arg1) => {
       }
     }
   }
-  obj = {
+  const obj17 = require("01830__.js");
+  M.__closure = {
     enabled: flag2,
     layout: sharedValue8,
     scrollViewTarget: sharedValue,
@@ -349,7 +353,6 @@ export default forwardRef((bottomOffset, arg1) => {
     scrollViewAnimatedRef: animatedRef,
     scrollViewPageY: sharedValue13,
   };
-  M.__closure = obj;
   M.__workletHash = 1454504363777;
   M.__initData = offset;
   let items1 = [num, flag2, height, snapToOffsets];
@@ -400,7 +403,23 @@ export default forwardRef((bottomOffset, arg1) => {
       return flag;
     }
   }
-  obj = {
+  const obj18 = {
+    enabled: flag2,
+    layout: sharedValue8,
+    scrollViewTarget: sharedValue,
+    height,
+    keyboardHeight: sharedValue3,
+    bottomOffset: num,
+    interpolate: require("cancelAnimation").interpolate,
+    initialKeyboardSize: sharedValue6,
+    scrollDistanceWithRespectToSnapPoints: require("01848__.js").scrollDistanceWithRespectToSnapPoints,
+    scrollPosition: sharedValue1,
+    snapToOffsets,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollViewAnimatedRef: animatedRef,
+    scrollViewPageY: sharedValue13,
+  };
+  Y.__closure = {
     mode: str,
     keyboardWillAppear: sharedValue4,
     ghostViewSpace: sharedValue10,
@@ -411,7 +430,6 @@ export default forwardRef((bottomOffset, arg1) => {
     initialKeyboardSize: sharedValue6,
     keyboardHeight: sharedValue3,
   };
-  Y.__closure = obj;
   Y.__workletHash = 17351526068375;
   Y.__initData = layout;
   const items2 = [str];
@@ -442,13 +460,23 @@ export default forwardRef((bottomOffset, arg1) => {
       return;
     }
   }
-  obj1 = {
+  const obj19 = {
+    mode: str,
+    keyboardWillAppear: sharedValue4,
+    ghostViewSpace: sharedValue10,
+    scrollTo: require("cancelAnimation").scrollTo,
+    scrollViewAnimatedRef: animatedRef,
+    scrollPosition: sharedValue1,
+    interpolate: require("cancelAnimation").interpolate,
+    initialKeyboardSize: sharedValue6,
+    keyboardHeight: sharedValue3,
+  };
+  B.__closure = {
     interpolate: require("cancelAnimation").interpolate,
     keyboardHeight: sharedValue3,
     extraKeyboardSpace: num2,
     currentKeyboardFrameHeight: sharedValue2,
   };
-  B.__closure = obj1;
   B.__workletHash = 6643520179794;
   B.__initData = sharedValue2;
   const items4 = [num2];
@@ -461,10 +489,10 @@ export default forwardRef((bottomOffset, arg1) => {
         y = value.selection.end.y;
       }
       iter = input;
-      value = input.value;
+      value1 = input.value;
       layout = undefined;
-      if (value != null) {
-        layout = value.layout;
+      if (value1 != null) {
+        layout = value1.layout;
       }
       num = !layout;
       if (layout) {
@@ -475,23 +503,28 @@ export default forwardRef((bottomOffset, arg1) => {
         obj = {};
         tmp3 = obj;
         merged = Object.assign(iter.value);
-        obj = {};
-        tmp5 = obj;
+        obj1 = {};
+        tmp5 = obj1;
         merged1 = Object.assign(iter.value.layout);
         tmp7 = closure_0;
         tmp8 = closure_2;
         obj3 = closure_0(closure_2[3]);
         num2 = 0;
-        obj.height = obj3.clamp(y, 0, iter.value.layout.height);
-        obj.layout = obj;
+        obj1.height = obj3.clamp(y, 0, iter.value.layout.height);
+        obj.layout = obj1;
         closure_22.value = obj;
         num = 0;
       }
       return !num;
     }
   }
-  obj2 = { lastSelection: sharedValue9, input, layout: sharedValue8, clamp: require("cancelAnimation").clamp };
-  G.__closure = obj2;
+  const obj20 = {
+    interpolate: require("cancelAnimation").interpolate,
+    keyboardHeight: sharedValue3,
+    extraKeyboardSpace: num2,
+    currentKeyboardFrameHeight: sharedValue2,
+  };
+  G.__closure = { lastSelection: sharedValue9, input, layout: sharedValue8, clamp: require("cancelAnimation").clamp };
   G.__workletHash = 619310634941;
   G.__initData = sharedValue3;
   const items5 = [input, sharedValue9, sharedValue8];
@@ -540,9 +573,9 @@ export default forwardRef((bottomOffset, arg1) => {
       if (value != null) {
         target = value.target;
       }
-      value = iter.value;
-      if (value != null) {
-        selection = value.selection;
+      value1 = iter.value;
+      if (value1 != null) {
+        selection = value1.selection;
       }
       iter.value = bottomOffset;
       closure_26.value = true;
@@ -571,9 +604,9 @@ export default forwardRef((bottomOffset, arg1) => {
         tmp8 = closure_33;
         tmp9 = closure_33();
         tmp10 = closure_16;
-        value1 = closure_16.value;
-        tmp11 = !value1;
-        if (!value1) {
+        value4 = closure_16.value;
+        tmp11 = !value4;
+        if (!value4) {
           tmp12 = closure_15;
           num = 0;
           tmp11 = closure_15.value > 0;
@@ -604,11 +637,11 @@ export default forwardRef((bottomOffset, arg1) => {
   N.__initData = sharedValue6;
   const items9 = [tmp31, tmp33, tmp30, tmp26];
   const tmp34 = num2(N, items9);
-  const obj17 = require("01830__.js");
+  const obj21 = { lastSelection: sharedValue9, input, layout: sharedValue8, clamp: require("cancelAnimation").clamp };
   const items10 = [tmp34];
   require("01830__.js").useFocusedInputHandler({ onSelectionChange: tmp34 }, items10);
   const obj22 = require("01830__.js");
-  obj3 = { onStart: null, onMove: null, onEnd: null };
+  const obj24 = { onStart: null, onMove: null, onEnd: null };
   class Q {
     constructor(arg0) {
       iter = closure_15;
@@ -692,10 +725,10 @@ export default forwardRef((bottomOffset, arg1) => {
           target = value.target;
         }
         if (target !== bottomOffset.target) {
-          value = iter3.value;
+          value1 = iter3.value;
           target1 = undefined;
-          if (value != null) {
-            target1 = value.target;
+          if (value1 != null) {
+            target1 = value1.target;
           }
           if (target1 === bottomOffset.target) {
             tmp20 = closure_33;
@@ -745,7 +778,7 @@ export default forwardRef((bottomOffset, arg1) => {
   };
   Q.__workletHash = 4279285643383;
   Q.__initData = sharedValue7;
-  obj3.onStart = Q;
+  obj24.onStart = Q;
   class J {
     constructor(arg0) {
       if (!closure_30(bottomOffset.height)) {
@@ -778,7 +811,7 @@ export default forwardRef((bottomOffset, arg1) => {
   };
   J.__workletHash = 15263617220981;
   J.__initData = input;
-  obj3.onMove = J;
+  obj24.onMove = J;
   const fn2 = function q(height) {
     closure_30(height.height);
     sharedValue3.value = height.height;
@@ -802,9 +835,9 @@ export default forwardRef((bottomOffset, arg1) => {
   };
   fn2.__workletHash = 15672596601321;
   fn2.__initData = update;
-  obj3.onEnd = fn2;
+  obj24.onEnd = fn2;
   const items11 = [str, tmp26, tmp27, flag, tmp29];
-  require("01849__.js").useSmoothKeyboardHandler(obj3, items11);
+  require("01849__.js").useSmoothKeyboardHandler(obj24, items11);
   const items12 = [update, tmp31];
   const tmp37 = num2(
     flag2(function* () {
@@ -815,8 +848,8 @@ export default forwardRef((bottomOffset, arg1) => {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -829,30 +862,30 @@ export default forwardRef((bottomOffset, arg1) => {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: update(), done: false };
-              return obj1;
+              const obj4 = { value: update(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             const fn = function e() {
               closure_1_34();
             };
             closure_128_0 = fn;
-            const obj2 = { scrollFromCurrentPosition: closure_129_34 };
-            fn.__closure = obj2;
+            const obj6 = { scrollFromCurrentPosition: closure_129_34 };
+            fn.__closure = obj6;
             closure_128_0.__workletHash = 15498084251450;
             closure_128_0.__initData = __initData;
             tmp2(c2[3]).runOnUI(closure_128_0)();
@@ -965,27 +998,27 @@ export default forwardRef((bottomOffset, arg1) => {
   ze.__initData = sharedValue12;
   const items16 = [flag2, str];
   if ("layout" === str) {
-    obj4 = { ref: tmp8 };
+    const obj27 = { ref: tmp8 };
     let merged1 = Object.assign(merged);
-    obj4.scrollEventThrottle = 16;
-    obj4.onLayout = tmp25;
+    obj27.scrollEventThrottle = 16;
+    obj27.onLayout = tmp25;
     const items17 = [children];
     if (flag2) {
-      obj5 = { style: tmp43 };
-      flag2 = sharedValue(tmp7(tmp4[3]).View, obj5);
+      const obj28 = { style: tmp43 };
+      flag2 = sharedValue(tmp7(tmp4[3]).View, obj28);
     }
     items17[1] = flag2;
-    obj4.children = items17;
-    let tmp50Result = sharedValue1(ScrollView, obj4);
+    obj27.children = items17;
+    let tmp50Result = sharedValue1(ScrollView, obj27);
   } else {
-    obj6 = { ref: tmp8 };
+    const obj29 = { ref: tmp8 };
     const merged2 = Object.assign(merged);
-    obj6.bottomPadding = derivedValue;
-    obj6.scrollEventThrottle = 16;
-    obj6.ScrollViewComponent = ScrollView;
-    obj6.onLayout = tmp25;
-    obj6.children = children;
-    tmp50Result = sharedValue(tmp7(tmp4[11]), obj6);
+    obj29.bottomPadding = derivedValue;
+    obj29.scrollEventThrottle = 16;
+    obj29.ScrollViewComponent = ScrollView;
+    obj29.onLayout = tmp25;
+    obj29.children = children;
+    tmp50Result = sharedValue(tmp7(tmp4[11]), obj29);
     const tmp7Result = tmp7(tmp4[11]);
   }
   return tmp50Result;

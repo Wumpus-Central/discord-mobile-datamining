@@ -3,7 +3,7 @@ import cancelAnimation from "../01636_cancelAnimation.js";
 import LegacyBaseButton from "../06756_LegacyBaseButton.js";
 import _mod7036 from "07036__.js";
 import _slicedToArray from "00032__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 
 require = fn;
 let noop = fn(19);
@@ -15,6 +15,7 @@ let noop = fn(19);
   useState: closure_8,
   memo,
 } = noop);
+let noop = noop_mod;
 const jsx = fn(21).jsx;
 let closure_10 = {
   code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
@@ -62,8 +63,7 @@ const memoResult = memo((animatedIndex) => {
   __initData = undefined;
   __initData2 = undefined;
   let animatedStyle;
-  let obj = animatedIndex(onPress[5]);
-  const bottomSheet = obj.useBottomSheet();
+  const bottomSheet = animatedIndex(onPress[5]).useBottomSheet();
   const snapToIndex = bottomSheet.snapToIndex;
   const close = bottomSheet.close;
   const ref = opacity(false);
@@ -109,7 +109,18 @@ const memoResult = memo((animatedIndex) => {
   }, []);
   __initData2 = tmp19;
   let items1 = [tmp18];
-  let tmp13Result = tmp13(tmp14[4]);
+  let obj = animatedIndex(onPress[5]);
+  const tmp20 = ref(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const fn = function n() {
+      animatedIndex(onPress[4]).runOnJS(handleOnPress)();
+    };
+    const TapResult = Gesture.Tap();
+    fn.__closure = { runOnJS: cancelAnimation.runOnJS, handleOnPress };
+    fn.__workletHash = 10704059633145;
+    fn.__initData = __initData;
+    return TapResult.onEnd(fn);
+  }, items1);
   class P {
     constructor() {
       obj = { opacity: null };
@@ -123,32 +134,32 @@ const memoResult = memo((animatedIndex) => {
       return obj;
     }
   }
-  obj = {
-    interpolate: tmp13(tmp14[4]).interpolate,
+  const tmp13Result = animatedIndex(onPress[4]);
+  P.__closure = {
+    interpolate: animatedIndex(onPress[4]).interpolate,
     animatedIndex,
     disappearsOnIndex,
     appearsOnIndex,
     opacity,
-    Extrapolation: tmp13(tmp14[4]).Extrapolation,
+    Extrapolation: animatedIndex(onPress[4]).Extrapolation,
   };
-  P.__closure = obj;
   P.__workletHash = 7085425846204;
   P.__initData = __initData;
   const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
   animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
   const items3 = [style, animatedStyle];
-  const tmp20 = ref(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const fn = function n() {
-      animatedIndex(onPress[4]).runOnJS(handleOnPress)();
-    };
-    const TapResult = Gesture.Tap();
-    fn.__closure = { runOnJS: cancelAnimation.runOnJS, handleOnPress };
-    fn.__workletHash = 10704059633145;
-    fn.__initData = __initData;
-    return TapResult.onEnd(fn);
-  }, items1);
-  tmp13Result = tmp13(tmp14[4]);
+  const obj2 = {
+    interpolate: animatedIndex(onPress[4]).interpolate,
+    animatedIndex,
+    disappearsOnIndex,
+    appearsOnIndex,
+    opacity,
+    Extrapolation: animatedIndex(onPress[4]).Extrapolation,
+  };
+  const tmp22 = ref(() => {
+    const items = [_mod7036.styles.backdrop, style, animatedStyle];
+    return items;
+  }, items3);
   class H {
     constructor() {
       return Math.round(animatedIndex.value) <= closure_9;
@@ -162,23 +173,20 @@ const memoResult = memo((animatedIndex) => {
       cancelAnimation.runOnJS(closure_12)(arg0);
     }
   };
-  obj = { runOnJS: tmp13(tmp14[4]).runOnJS, handleContainerTouchability: tmp19 };
-  fn.__closure = obj;
+  const tmp13Result2 = animatedIndex(onPress[4]);
+  fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleContainerTouchability: tmp19 };
   fn.__workletHash = 17426135168622;
   fn.__initData = animatedStyle;
   const items4 = [disappearsOnIndex];
-  const animatedReaction = tmp13Result.useAnimatedReaction(H, fn, items4);
+  const animatedReaction = tmp13Result2.useAnimatedReaction(H, fn, items4);
   close(() => {
     closure_6.current = true;
     return () => {
       ref.current = false;
     };
   }, []);
-  const obj1 = {
-    style: ref(() => {
-      const items = [_mod7036.styles.backdrop, style, animatedStyle];
-      return items;
-    }, items3),
+  const obj4 = {
+    style: tmp22,
     pointerEvents: tmp17[0],
     accessible: DEFAULT_ACCESSIBLE,
     accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE,
@@ -194,14 +202,15 @@ const memoResult = memo((animatedIndex) => {
     const _HermesInternal = HermesInternal;
     DEFAULT_ACCESSIBILITY_HINT = "Tap to " + str2 + " the Bottom Sheet";
   }
-  obj1.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  obj1.children = children;
-  let tmp25Result = tmp25(ViewComponent, obj1);
+  obj4.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  obj4.children = children;
+  const tmp25Result = disappearsOnIndex(ViewComponent, obj4);
+  let tmp25Result2 = tmp25Result;
   if ("none" !== pressBehavior) {
-    const obj2 = { gesture: tmp20, children: tmp25Result };
-    tmp25Result = tmp25(tmp13(tmp14[6]).GestureDetector, obj2);
+    const obj5 = { gesture: tmp20, children: tmp25Result };
+    tmp25Result2 = tmp25(tmp13(tmp14[6]).GestureDetector, obj5);
   }
-  return tmp25Result;
+  return tmp25Result2;
 });
 memoResult.displayName = "BottomSheetBackdrop";
 

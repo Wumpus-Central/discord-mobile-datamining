@@ -3,11 +3,11 @@ import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "14e9f26f2a47abbd4dc478a8a748d9e9",
-  name: "history",
+  hash: "72525f866a43ec6d6f9f30f81847a5d3",
+  name: "ic_star_filled",
   type: "png",
 });

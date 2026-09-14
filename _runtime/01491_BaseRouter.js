@@ -35,8 +35,8 @@ export const BaseRouter = {
                           if (payload.index < payload.routes.length) {
                             let obj = {};
                             let merged = Object.assign(payload);
-                            let routes = payload.routes;
-                            obj.routes = routes.map((name) => {
+                            const routes1 = payload.routes;
+                            obj.routes = routes1.map((name) => {
                               if (!("key" in name)) {
                                 const obj = {};
                                 const merged = Object.assign(name);
@@ -68,17 +68,17 @@ export const BaseRouter = {
       }
     }
     if (type.source) {
-      routes = routeNames.routes;
+      const routes = routeNames.routes;
       let index = routes.findIndex((key) => key.key === type.source);
     } else {
       index = routeNames.index;
     }
     let tmp9 = null;
     if (-1 !== index) {
-      obj = {};
+      let obj2 = {};
       let merged1 = Object.assign(routeNames);
-      const routes1 = routeNames.routes;
-      obj.routes = routes1.map((params, index) => {
+      const routes3 = routeNames.routes;
+      obj2.routes = routes3.map((params, index) => {
         if (index !== index) {
           return params;
         } else {
@@ -95,7 +95,7 @@ export const BaseRouter = {
           obj.params = params;
         }
       });
-      tmp9 = obj;
+      tmp9 = obj2;
     }
     return tmp9;
   },

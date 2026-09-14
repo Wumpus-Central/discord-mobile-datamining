@@ -29,18 +29,18 @@ function dispatchResponderEvent(c5, responderEnd, responderIgnoreScroll, self) {
         tmp16 = self;
       }
       obj.setTarget(tmp14, tmp16);
-      let tmp15Result = COMPOSED_PATH_KEY;
-      tmp15Result.setCurrentTarget(tmp14, c5);
+      COMPOSED_PATH_KEY.setCurrentTarget(tmp14, c5);
       try {
-        tmp15Result = COMPOSED_PATH_KEY;
-        tmp15Result.setCurrentTarget(tmp14, null);
-        return tmp4(tmp14);
+        const tmp4Result = tmp4(tmp14);
+        COMPOSED_PATH_KEY.setCurrentTarget(tmp14, null);
+        return tmp4Result;
       } catch (tmp21) {
         if (!c9) {
           c9 = true;
           c8 = tmp21;
         }
       }
+      const tmp15Result = COMPOSED_PATH_KEY;
     }
   }
 }
@@ -199,9 +199,9 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   num7 = num7 + 1;
                   tmp40 = require;
                 }
-                tmp42Result = COMPOSED_PATH_KEY;
-                tmp42Result.setCurrentTarget(tmp34, null);
+                COMPOSED_PATH_KEY.setCurrentTarget(tmp34, null);
                 tmp21 = tmp41;
+                const tmp42Result2 = COMPOSED_PATH_KEY;
               }
               let diff = items.length - 1;
               if (0 <= diff) {
@@ -223,9 +223,9 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   diff = diff - 1;
                   tmp40 = require;
                 }
-                tmp50Result = COMPOSED_PATH_KEY;
-                tmp50Result.setCurrentTarget(tmp34, null);
+                COMPOSED_PATH_KEY.setCurrentTarget(tmp34, null);
                 tmp21 = tmp49;
+                const tmp50Result2 = COMPOSED_PATH_KEY;
               }
               tmp40(134).setCurrentTarget(tmp34, null);
               tmp21 = null;
@@ -273,22 +273,22 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 _null = tmp21;
                 const fabricUIManager = _mod71.getFabricUIManager();
                 if (null != _null) {
-                  let tmp74Result = _mod136;
-                  const nativeElementReference = tmp74Result.getNativeElementReference(tmp73);
+                  const nativeElementReference = _mod136.getNativeElementReference(tmp73);
                   if (null != nativeElementReference) {
                     if (fabricUIManager != null) {
                       fabricUIManager.setIsJSResponder(nativeElementReference, false, tmp119);
                     }
                   }
+                  const tmp74Result = _mod136;
                 }
                 if (null != tmp21) {
-                  tmp74Result = _mod136;
-                  const nativeElementReference1 = tmp74Result.getNativeElementReference(tmp21);
+                  const nativeElementReference1 = _mod136.getNativeElementReference(tmp21);
                   if (null != nativeElementReference1) {
                     if (fabricUIManager != null) {
                       fabricUIManager.setIsJSResponder(nativeElementReference1, true, tmp119);
                     }
                   }
+                  const tmp74Result2 = _mod136;
                 }
                 tmp73 = _null;
               } else {
@@ -298,22 +298,22 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               _null = tmp21;
               const fabricUIManager1 = _mod71.getFabricUIManager();
               if (null != _null) {
-                let tmp122Result = _mod136;
-                const nativeElementReference2 = tmp122Result.getNativeElementReference(tmp121);
+                const nativeElementReference2 = _mod136.getNativeElementReference(tmp121);
                 if (null != nativeElementReference2) {
                   if (fabricUIManager1 != null) {
                     fabricUIManager1.setIsJSResponder(nativeElementReference2, false, tmp119);
                   }
                 }
+                const tmp122Result = _mod136;
               }
               if (null != tmp21) {
-                tmp122Result = _mod136;
-                const nativeElementReference3 = tmp122Result.getNativeElementReference(tmp21);
+                const nativeElementReference3 = _mod136.getNativeElementReference(tmp21);
                 if (null != nativeElementReference3) {
                   if (fabricUIManager1 != null) {
                     fabricUIManager1.setIsJSResponder(nativeElementReference3, true, tmp119);
                   }
                 }
+                const tmp122Result2 = _mod136;
               }
               tmp121 = _null;
             }

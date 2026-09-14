@@ -60,15 +60,15 @@ export default function baseIsEqualDeep(value, value2, arr, height, fn, arg5) {
         if (flag) {
           valueResult = value.value();
         }
-        valueResult = value2;
+        let valueResult2 = value2;
         if (tmp6) {
-          valueResult = value2.value();
+          valueResult2 = value2.value();
         }
         let tmp34 = tmp8;
         if (!tmp8) {
           tmp34 = new Stack();
         }
-        return fn(valueResult, valueResult, arr, height, tmp34);
+        return fn(valueResult, valueResult2, arr, height, tmp34);
       } else {
         const call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {

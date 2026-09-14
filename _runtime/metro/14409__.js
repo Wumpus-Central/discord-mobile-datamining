@@ -1,4 +1,10 @@
 // _runtime/metro/14409__.js
-import _mod14395 from "14395__.js";
+import _mod14393 from "14393__.js";
+import _mod14410 from "14410__.js";
 
-export default (arg0) => Object(_mod14395(arg0));
+let closure_2 = _mod14393({}.hasOwnProperty);
+
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod14410(arg0), arg1);
+  };

@@ -2,6 +2,8 @@
 import _mod9064 from "09064__.js";
 import _mod9068 from "09068__.js";
 
+const require = globalThis.__r;
+
 const self = this;
 let self2 = this;
 if (this) {

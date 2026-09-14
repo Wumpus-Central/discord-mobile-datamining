@@ -1,17 +1,19 @@
 // _runtime/metro/04122__.js
-import _typeof from "03725__.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import _typeof_mod from "03725__.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -21,7 +23,7 @@ export default function parseJSON(str) {
   requiredArgs.default(1, arguments);
   if (typeof str === "string") {
     const match = str.match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})(?:\.(\d{0,7}))?(?:Z|(.)(\d{2}):?(\d{2})?)?/);
-    let _Date = Date;
+    const _Date = Date;
     if (match) {
       const _Date2 = Date;
       let num2 = +match[9];
@@ -44,14 +46,14 @@ export default function parseJSON(str) {
       const text = `${tmp13}00`;
       const diff1 = +match[4] - num2 * num3;
       const diff2 = +match[5] - num4 * num5;
-      _Date = new _Date(Date.UTC(tmp7, diff, tmp9, diff1, diff2, tmp12, +`${tmp13}00`.substring(0, 3)));
+      let _Date1 = new _Date(Date.UTC(tmp7, diff, tmp9, diff1, diff2, tmp12, +`${tmp13}00`.substring(0, 3)));
       const tmp10 = +match[4];
       const tmp11 = +match[5];
       const tmp8 = +match[2];
     } else {
-      _Date = new _Date(NaN);
+      _Date1 = new _Date(NaN);
     }
-    return _Date;
+    return _Date1;
   } else {
     return _typeof.default(str);
   }

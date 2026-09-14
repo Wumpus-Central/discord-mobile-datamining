@@ -2,7 +2,7 @@
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import EventDefault from "../00133_Event.js";
 import _createClass from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
 class HardwareBackPressEvent {
   constructor(arg0) {

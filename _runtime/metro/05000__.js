@@ -32,14 +32,6 @@ export default function TabsScreen(arg0) {
   const ref = noop.useRef(null);
   ({ onDidAppear, onDidDisappear, onWillAppear, onWillDisappear, children, style } = tmp2);
   const tmp4 = _objectWithoutProperties(tmp2, closure_4);
-  let obj = {
-    componentNodeRef: ref,
-    onDidAppear,
-    onDidDisappear,
-    onWillAppear,
-    onWillDisappear,
-    screenKey: tmp4.screenKey,
-  };
   let icon;
   if (android != null) {
     icon = android.icon;
@@ -48,21 +40,30 @@ export default function TabsScreen(arg0) {
   if (android != null) {
     selectedIcon = android.selectedIcon;
   }
-  let tmp5Result = _mod5003;
-  const result = tmp5Result.parseAndroidIconToNativeProps(icon);
-  tmp5Result = _mod5003;
-  const result1 = tmp5Result.parseAndroidIconToNativeProps(selectedIcon);
-  obj = {
+  const obj = _mod5001;
+  const obj2 = {
+    componentNodeRef: ref,
+    onDidAppear,
+    onDidDisappear,
+    onWillAppear,
+    onWillDisappear,
+    screenKey: tmp4.screenKey,
+  };
+  const result = _mod5003.parseAndroidIconToNativeProps(icon);
+  const tmp5Result = _mod5003;
+  const result1 = _mod5003.parseAndroidIconToNativeProps(selectedIcon);
+  const obj4 = { collapsable: false, style: null, ref };
+  const items = [style, fillParent.fillParent];
+  obj4.style = items;
+  const obj3 = {
     imageIconResource: result.imageIconResource,
     drawableIconResourceName: result.drawableIconResourceName,
     selectedImageIconResource: result1.imageIconResource,
     selectedDrawableIconResourceName: result1.drawableIconResourceName,
   };
-  const obj1 = { collapsable: false, style: null, ref };
-  const items = [style, fillParent.fillParent];
-  obj1.style = items;
-  const merged = Object.assign(obj.useTabsScreen(obj).lifecycleCallbacks);
-  const merged1 = Object.assign(obj);
+  const tmp5Result2 = _mod5003;
+  const merged = Object.assign(obj.useTabsScreen(obj2).lifecycleCallbacks);
+  const merged1 = Object.assign(obj3);
   const merged2 = Object.assign(tmp4);
   let standardAppearance;
   if (android != null) {
@@ -71,7 +72,7 @@ export default function TabsScreen(arg0) {
   let tmp17;
   if (standardAppearance) {
     ({ normal, selected, focused, disabled, tabBarItemTitleFontWeight } = standardAppearance);
-    const obj2 = {};
+    const obj5 = {};
     ({
       tabBarBackgroundColor,
       tabBarItemRippleColor,
@@ -80,60 +81,60 @@ export default function TabsScreen(arg0) {
       tabBarItemBadgeTextColor,
     } = standardAppearance);
     const merged3 = Object.assign(_objectWithoutProperties(standardAppearance, closure_5));
-    obj2.tabBarBackgroundColor = React7(tabBarBackgroundColor);
-    obj2.tabBarItemRippleColor = React7(tabBarItemRippleColor);
+    obj5.tabBarBackgroundColor = React7(tabBarBackgroundColor);
+    obj5.tabBarItemRippleColor = React7(tabBarItemRippleColor);
     let tmp22;
     if (normal) {
-      const obj3 = {};
+      const obj6 = {};
       ({ tabBarItemTitleFontColor, tabBarItemIconColor } = normal);
       const merged4 = Object.assign(_objectWithoutProperties(normal, closure_6));
-      obj3.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor);
-      obj3.tabBarItemIconColor = React7(tabBarItemIconColor);
-      tmp22 = obj3;
+      obj6.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor);
+      obj6.tabBarItemIconColor = React7(tabBarItemIconColor);
+      tmp22 = obj6;
     }
-    obj2.normal = tmp22;
+    obj5.normal = tmp22;
     let tmp26;
     if (selected) {
-      const obj4 = {};
+      const obj7 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor2, tabBarItemIconColor: tabBarItemIconColor2 } = selected);
       const merged5 = Object.assign(_objectWithoutProperties(selected, closure_6));
-      obj4.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor2);
-      obj4.tabBarItemIconColor = React7(tabBarItemIconColor2);
-      tmp26 = obj4;
+      obj7.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor2);
+      obj7.tabBarItemIconColor = React7(tabBarItemIconColor2);
+      tmp26 = obj7;
     }
-    obj2.selected = tmp26;
+    obj5.selected = tmp26;
     let tmp30;
     if (focused) {
-      const obj5 = {};
+      const obj8 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor3, tabBarItemIconColor: tabBarItemIconColor3 } = focused);
       const merged6 = Object.assign(_objectWithoutProperties(focused, closure_6));
-      obj5.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor3);
-      obj5.tabBarItemIconColor = React7(tabBarItemIconColor3);
-      tmp30 = obj5;
+      obj8.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor3);
+      obj8.tabBarItemIconColor = React7(tabBarItemIconColor3);
+      tmp30 = obj8;
     }
-    obj2.focused = tmp30;
+    obj5.focused = tmp30;
     let tmp34;
     if (disabled) {
-      const obj6 = {};
+      const obj9 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor4, tabBarItemIconColor: tabBarItemIconColor4 } = disabled);
       const merged7 = Object.assign(_objectWithoutProperties(disabled, closure_6));
-      obj6.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor4);
-      obj6.tabBarItemIconColor = React7(tabBarItemIconColor4);
-      tmp34 = obj6;
+      obj9.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor4);
+      obj9.tabBarItemIconColor = React7(tabBarItemIconColor4);
+      tmp34 = obj9;
     }
-    obj2.disabled = tmp34;
-    obj2.tabBarItemActiveIndicatorColor = React7(tabBarItemActiveIndicatorColor);
+    obj5.disabled = tmp34;
+    obj5.tabBarItemActiveIndicatorColor = React7(tabBarItemActiveIndicatorColor);
     let StringResult;
     if (undefined !== tabBarItemTitleFontWeight) {
       const _String = String;
       StringResult = String(tabBarItemTitleFontWeight);
     }
-    obj2.tabBarItemTitleFontWeight = StringResult;
-    obj2.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor);
-    obj2.tabBarItemBadgeTextColor = React7(tabBarItemBadgeTextColor);
-    tmp17 = obj2;
+    obj5.tabBarItemTitleFontWeight = StringResult;
+    obj5.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor);
+    obj5.tabBarItemBadgeTextColor = React7(tabBarItemBadgeTextColor);
+    tmp17 = obj5;
   }
-  obj1.standardAppearance = tmp17;
-  obj1.children = children;
+  obj4.standardAppearance = tmp17;
+  obj4.children = children;
   return jsx(_modDef5002, { collapsable: false, style: null, ref });
 }

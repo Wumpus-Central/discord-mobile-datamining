@@ -8,18 +8,18 @@ const dependencyMap = arg6;
 
 export default function convertRequestBody(string) {
   if (typeof string === "string") {
-    let obj = { string };
-    let tmp2 = obj;
+    const obj2 = { string };
+    let tmp2 = obj2;
   } else if (string instanceof Blob.default) {
-    obj = { blob: string.data };
-    tmp2 = obj;
+    const obj3 = { blob: string.data };
+    tmp2 = obj3;
   } else if (string instanceof FormData.default) {
-    const obj1 = { formData: string.getParts() };
-    tmp2 = obj1;
+    const obj4 = { formData: string.getParts() };
+    tmp2 = obj4;
   } else {
     const _ArrayBuffer = ArrayBuffer;
     if (string instanceof ArrayBuffer) {
-      obj = { base64: binaryToBase64.default(string) };
+      const obj = { base64: binaryToBase64.default(string) };
       tmp2 = obj;
       const tmp3Result = binaryToBase64;
     } else {

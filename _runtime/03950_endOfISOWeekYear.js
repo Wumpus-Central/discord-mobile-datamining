@@ -1,25 +1,28 @@
 // _runtime/03950_endOfISOWeekYear.js
-import 03882__ from "metro/03882__.js";
-import startOfISOWeek from "03883_startOfISOWeek.js";
-import requiredArgs from "03726_requiredArgs.js";
+import module_3882_mod from "metro/03882__.js";
+import startOfISOWeek_mod from "03883_startOfISOWeek.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let module_3882 = module_3882_mod;
 if (!module_3882) {
-  let obj = { default: module_3882 };
+  const obj = { default: module_3882 };
   let tmp3 = obj;
 } else {
   tmp3 = module_3882;
 }
 module_3882 = tmp3;
+let startOfISOWeek = startOfISOWeek_mod;
 if (!startOfISOWeek) {
-  obj = { default: startOfISOWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfISOWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfISOWeek;
 }
 startOfISOWeek = tmp5;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp7 = obj;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }

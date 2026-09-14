@@ -25,16 +25,16 @@ function notifyMutationObservers() {
             arr = items;
             let result = map.set(item10013.mutationObserverId, items);
           }
-          arr = arr.push(createMutationRecord(item10013));
+          let arr2 = arr.push(createMutationRecord(item10013));
           continue;
         }
         const obj = map[Symbol.iterator]();
         while (obj !== undefined) {
           let tmp17 = _slicedToArray(tmp14, 2);
           let tmp18 = tmp17[1];
-          value = closure_1_8.get(tmp17[0]);
-          let tmp21 = value;
-          if (value) {
+          value2 = closure_1_8.get(tmp17[0]);
+          let tmp21 = value2;
+          if (value2) {
             ({ observer, callback } = tmp21);
             let call = callback.call;
             if (typeof call === "unknown") {
@@ -88,17 +88,19 @@ export const observe = function observe(mutationObserverId) {
   ({ target, subtree } = mutationObserverId);
   if (null != NativeMutationObserverCxxDefault) {
     if (null != map.get(mutationObserverId)) {
-      let obj = _mod136;
-      const nativeNodeReference = obj.getNativeNodeReference(target);
+      const nativeNodeReference = _mod136.getNativeNodeReference(target);
       if (null != nativeNodeReference) {
         if (!c7) {
-          let tmpResult = NativeMutationObserverCxxDefault;
-          tmpResult.connect(notifyMutationObservers, renderElement.getPublicInstanceFromInternalInstanceHandle);
+          NativeMutationObserverCxxDefault.connect(
+            notifyMutationObservers,
+            renderElement.getPublicInstanceFromInternalInstanceHandle,
+          );
           c7 = true;
+          const tmpResult = NativeMutationObserverCxxDefault;
         }
-        tmpResult = NativeMutationObserverCxxDefault;
-        obj = { mutationObserverId, targetShadowNode: nativeNodeReference, subtree };
-        tmpResult.observe(obj);
+        const obj2 = { mutationObserverId, targetShadowNode: nativeNodeReference, subtree };
+        NativeMutationObserverCxxDefault.observe(obj2);
+        const tmpResult2 = NativeMutationObserverCxxDefault;
       }
     } else {
       const _console = console;

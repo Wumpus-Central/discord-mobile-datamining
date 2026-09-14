@@ -21,7 +21,7 @@ function spanToJSON(getSpanJSON) {
     ({ spanId, traceId } = getSpanJSON.spanContext());
     if (tmp) {
       ({ attributes, startTime, endTime, status, links } = getSpanJSON);
-      let obj = {
+      const obj2 = {
         span_id: spanId,
         trace_id: traceId,
         data: attributes,
@@ -38,13 +38,13 @@ function spanToJSON(getSpanJSON) {
         let parentSpanId = getSpanJSON.parentSpanId;
       } else if ("parentSpanContext" in getSpanJSON) {
         const parentSpanContext = getSpanJSON.parentSpanContext;
-        spanId = undefined;
+        let spanId1;
         if (parentSpanContext != null) {
-          spanId = parentSpanContext.spanId;
+          spanId1 = parentSpanContext.spanId;
         }
-        parentSpanId = spanId;
+        parentSpanId = spanId1;
       }
-      obj.parent_span_id = parentSpanId;
+      obj2.parent_span_id = parentSpanId;
       if (typeof startTime === "number") {
         let result = startTime;
         if (startTime > 9999999999) {
@@ -69,7 +69,7 @@ function spanToJSON(getSpanJSON) {
           }
         }
       }
-      obj.start_timestamp = sum;
+      obj2.start_timestamp = sum;
       if (typeof endTime === "number") {
         let result2 = endTime;
         if (endTime > 9999999999) {
@@ -94,7 +94,7 @@ function spanToJSON(getSpanJSON) {
           }
         }
       }
-      obj.timestamp = sum1;
+      obj2.timestamp = sum1;
       let tmp16;
       if (status) {
         if (status.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
@@ -106,9 +106,9 @@ function spanToJSON(getSpanJSON) {
           tmp16 = str3;
         }
       }
-      obj.status = tmp16;
-      obj.op = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP];
-      obj.origin = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
+      obj2.status = tmp16;
+      obj2.op = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP];
+      obj2.origin = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
       let mapped;
       if (links) {
         if (links.length > 0) {
@@ -122,10 +122,10 @@ function spanToJSON(getSpanJSON) {
           });
         }
       }
-      obj.links = mapped;
-      return obj;
+      obj2.links = mapped;
+      return obj2;
     } else {
-      obj = { span_id: spanId, trace_id: traceId, start_timestamp: 0, data: {} };
+      const obj = { span_id: spanId, trace_id: traceId, start_timestamp: 0, data: {} };
       return obj;
     }
     const spanContextResult = getSpanJSON.spanContext();
@@ -179,8 +179,9 @@ export const getActiveSpan = function getActiveSpan() {
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
-    const tmpResult = _mod713;
-    activeSpan = tmpResult._getSpanForScope(tmpResult.getCurrentScope());
+    const tmpResult = _getSpanForScope;
+    activeSpan = tmpResult._getSpanForScope(_mod713.getCurrentScope());
+    const tmpResult2 = _mod713;
   }
   return activeSpan;
 };
@@ -271,9 +272,8 @@ export const spanToTraceContext = function spanToTraceContext(spanContext) {
   if (!isRemote) {
     parent_span_id = spanToJSON(spanContext).parent_span_id;
   }
-  let obj = unwrapScopeFromWeakRef;
-  const scope = obj.getCapturedScopesOnSpan(spanContext).scope;
-  obj = { parent_span_id, span_id: null, trace_id: null };
+  const scope = unwrapScopeFromWeakRef.getCapturedScopesOnSpan(spanContext).scope;
+  const obj2 = { parent_span_id, span_id: null, trace_id: null };
   if (isRemote) {
     let propagationSpanId;
     if (scope != null) {
@@ -285,9 +285,9 @@ export const spanToTraceContext = function spanToTraceContext(spanContext) {
     }
     spanId = propagationSpanId;
   }
-  obj.span_id = spanId;
-  obj.trace_id = spanContextResult.traceId;
-  return obj;
+  obj2.span_id = spanId;
+  obj2.trace_id = spanContextResult.traceId;
+  return obj2;
 };
 export const spanToTraceHeader = function spanToTraceHeader(spanContext) {
   ({ traceId, spanId } = spanContext.spanContext());

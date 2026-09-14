@@ -128,22 +128,22 @@ export { extractTokenUsageFromMessage };
 export { extractToolCalls };
 export const extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(builder) {
   builder = builder.builder;
-  let tools;
+  let tools1;
   if (builder != null) {
     const nodes = builder.nodes;
     if (nodes != null) {
-      tools = nodes.tools;
+      const tools = nodes.tools;
       if (tools != null) {
         const runnable = tools.runnable;
         if (runnable != null) {
-          tools = runnable.tools;
+          tools1 = runnable.tools;
         }
       }
     }
   }
-  if (tools) {
+  if (tools1) {
     const builder2 = builder.builder;
-    let tools1;
+    let tools3;
     if (builder2 != null) {
       const nodes2 = builder2.nodes;
       if (nodes2 != null) {
@@ -151,19 +151,19 @@ export const extractToolsFromCompiledGraph = function extractToolsFromCompiledGr
         if (tools2 != null) {
           const runnable2 = tools2.runnable;
           if (runnable2 != null) {
-            tools1 = runnable2.tools;
+            tools3 = runnable2.tools;
           }
         }
       }
     }
     let mapped = null;
-    if (tools1) {
+    if (tools3) {
       const _Array = Array;
       mapped = null;
-      if (Array.isArray(tools1)) {
+      if (Array.isArray(tools3)) {
         mapped = null;
-        if (0 !== tools1.length) {
-          mapped = tools1.map((lc_kwargs) => {
+        if (0 !== tools3.length) {
+          mapped = tools3.map((lc_kwargs) => {
             lc_kwargs = lc_kwargs.lc_kwargs;
             let name;
             if (lc_kwargs != null) {

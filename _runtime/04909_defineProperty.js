@@ -24,7 +24,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
             let flag2 = true;
             let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
           } else {
-            tmp14Result = tmp14(prototype, tmp7, tmp8);
+            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
           }
         } else if (true !== tmp9) {
           if (typeof tmp9 === "function") {

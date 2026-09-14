@@ -4,6 +4,8 @@ import convertToNormalizedObject from "../00879_convertToNormalizedObject.js";
 import DEFAULT_BREADCRUMB_LEVEL2 from "../00880_DEFAULT_BREADCRUMB_LEVEL.js";
 import init from "../01000_init.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 const weakMap = new WeakMap();

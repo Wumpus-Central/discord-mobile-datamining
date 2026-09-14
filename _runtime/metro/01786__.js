@@ -6,7 +6,9 @@ import _mod1736 from "01736__.js";
 import _mod1782 from "01782__.js";
 import o from "../01787_o.js";
 import noop from "00019__.js";
-import 01639__ from "01639__.js";
+import module_1639_mod from "01639__.js";
+
+const require = globalThis.__r;
 
 function checkSharedValueUsage(value, nextResult) {
   if (Array.isArray(value)) {
@@ -35,7 +37,9 @@ function checkSharedValueUsage(value, nextResult) {
         if (null !== value) {
           if (undefined !== value.value) {
             const _HermesInternal = HermesInternal;
-            const reanimatedError = new _mod1647.ReanimatedError("Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?");
+            const reanimatedError = new _mod1647.ReanimatedError(
+              "Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?",
+            );
             throw reanimatedError;
           }
         }
@@ -48,6 +52,7 @@ function animatedStyleHandleToJSON() {
 }
 ({ useEffect: c3, useRef: closure_4 } = noop);
 const Platform = _mod17.Platform;
+let module_1639 = module_1639_mod;
 module_1639 = module_1639.shouldBeUseWeb();
 function prepareAnimation(arg0, onFrame, animations, styleUpdater) {
   closure_0 = arg0;
@@ -84,18 +89,18 @@ function prepareAnimation(arg0, onFrame, animations, styleUpdater) {
         iter = iter.value;
         current = iter;
       } else if (undefined !== iter.onFrame) {
-        current = undefined;
+        let current1;
         if (current != null) {
-          current = current.current;
+          current1 = current.current;
         }
-        if (undefined !== current) {
+        if (undefined !== current1) {
           current = current.current;
         } else {
-          let current1;
+          let current2;
           if (iter != null) {
-            current1 = iter.current;
+            current2 = iter.current;
           }
-          if (undefined !== current1) {
+          if (undefined !== current2) {
             current = iter.current;
           }
         }
@@ -121,7 +126,9 @@ function prepareAnimation(arg0, onFrame, animations, styleUpdater) {
 let closure_129_0 = prepareAnimation;
 prepareAnimation.__closure = {};
 prepareAnimation.__workletHash = 14540565048240;
-prepareAnimation.__initData = { code: "function prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp,lastAnimation,lastValue){const prepareAnimation_Pnpm_useAnimatedStyleTs1=this._recur;if(Array.isArray(animatedProp)){animatedProp.forEach(function(prop,index){prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,prop,lastAnimation&&lastAnimation[index],lastValue&&lastValue[index]);});}if(typeof animatedProp==='object'&&animatedProp.onFrame){const animation=animatedProp;let value=animation.current;if(lastValue!==undefined&&lastValue!==null){if(typeof lastValue==='object'){if(lastValue.value!==undefined){value=lastValue.value;}else if(lastValue.onFrame!==undefined){if((lastAnimation===null||lastAnimation===void 0?void 0:lastAnimation.current)!==undefined){value=lastAnimation.current;}else if((lastValue===null||lastValue===void 0?void 0:lastValue.current)!==undefined){value=lastValue.current;}}}else{value=lastValue;}}animation.callStart=function(timestamp){animation.onStart(animation,value,timestamp,lastAnimation);};animation.callStart(frameTimestamp);animation.callStart=null;}else if(typeof animatedProp==='object'){Object.keys(animatedProp).forEach(function(key){return prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp[key],lastAnimation&&lastAnimation[key],lastValue&&lastValue[key]);});}}" };
+prepareAnimation.__initData = {
+  code: "function prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp,lastAnimation,lastValue){const prepareAnimation_Pnpm_useAnimatedStyleTs1=this._recur;if(Array.isArray(animatedProp)){animatedProp.forEach(function(prop,index){prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,prop,lastAnimation&&lastAnimation[index],lastValue&&lastValue[index]);});}if(typeof animatedProp==='object'&&animatedProp.onFrame){const animation=animatedProp;let value=animation.current;if(lastValue!==undefined&&lastValue!==null){if(typeof lastValue==='object'){if(lastValue.value!==undefined){value=lastValue.value;}else if(lastValue.onFrame!==undefined){if((lastAnimation===null||lastAnimation===void 0?void 0:lastAnimation.current)!==undefined){value=lastAnimation.current;}else if((lastValue===null||lastValue===void 0?void 0:lastValue.current)!==undefined){value=lastValue.current;}}}else{value=lastValue;}}animation.callStart=function(timestamp){animation.onStart(animation,value,timestamp,lastAnimation);};animation.callStart(frameTimestamp);animation.callStart=null;}else if(typeof animatedProp==='object'){Object.keys(animatedProp).forEach(function(key){return prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp[key],lastAnimation&&lastAnimation[key],lastValue&&lastValue[key]);});}}",
+};
 function runAnimations(animations, timestamp, keys, arg3, value, arg5) {
   closure_1 = timestamp;
   closure_2 = keys;
@@ -196,7 +203,9 @@ function runAnimations(animations, timestamp, keys, arg3, value, arg5) {
 let closure_130_0 = runAnimations;
 runAnimations.__closure = {};
 runAnimations.__workletHash = 2714844766543;
-runAnimations.__initData = { code: "function runAnimations_Pnpm_useAnimatedStyleTs2(animation,timestamp,key,result,animationsActive,forceCopyAnimation){const runAnimations_Pnpm_useAnimatedStyleTs2=this._recur;if(!animationsActive.value){return true;}if(Array.isArray(animation)){result[key]=[];let allFinished=true;forceCopyAnimation=key==='boxShadow';animation.forEach(function(entry,index){if(!runAnimations_Pnpm_useAnimatedStyleTs2(entry,timestamp,index,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else if(typeof animation==='object'&&animation.onFrame){let finished=true;if(!animation.finished){if(animation.callStart){animation.callStart(timestamp);animation.callStart=null;}finished=animation.onFrame(animation,timestamp);animation.timestamp=timestamp;if(finished){animation.finished=true;animation.callback&&animation.callback(true);}}if(forceCopyAnimation){result[key]={...animation.current};}else{result[key]=animation.current;}return finished;}else if(typeof animation==='object'){result[key]={};let allFinished=true;Object.keys(animation).forEach(function(k){if(!runAnimations_Pnpm_useAnimatedStyleTs2(animation[k],timestamp,k,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else{result[key]=animation;return true;}}" };
+runAnimations.__initData = {
+  code: "function runAnimations_Pnpm_useAnimatedStyleTs2(animation,timestamp,key,result,animationsActive,forceCopyAnimation){const runAnimations_Pnpm_useAnimatedStyleTs2=this._recur;if(!animationsActive.value){return true;}if(Array.isArray(animation)){result[key]=[];let allFinished=true;forceCopyAnimation=key==='boxShadow';animation.forEach(function(entry,index){if(!runAnimations_Pnpm_useAnimatedStyleTs2(entry,timestamp,index,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else if(typeof animation==='object'&&animation.onFrame){let finished=true;if(!animation.finished){if(animation.callStart){animation.callStart(timestamp);animation.callStart=null;}finished=animation.onFrame(animation,timestamp);animation.timestamp=timestamp;if(finished){animation.finished=true;animation.callback&&animation.callback(true);}}if(forceCopyAnimation){result[key]={...animation.current};}else{result[key]=animation.current;}return finished;}else if(typeof animation==='object'){result[key]={};let allFinished=true;Object.keys(animation).forEach(function(k){if(!runAnimations_Pnpm_useAnimatedStyleTs2(animation[k],timestamp,k,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else{result[key]=animation;return true;}}",
+};
 function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
   let tmp7;
   _global = shareableViewDescriptors;
@@ -223,7 +232,7 @@ function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
     require("o").processBoxShadow(obj);
     const obj3 = require("o");
   }
-  obj = {};
+  let obj2 = {};
   let flag2 = false;
   let flag3 = false;
   let flag4 = false;
@@ -244,7 +253,7 @@ function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
         flag3 = true;
         continue;
       } else {
-        obj[tmp13] = tmp29;
+        obj2[tmp13] = tmp29;
         delete tmp2[tmp3];
         flag2 = true;
         continue;
@@ -312,7 +321,7 @@ function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
       frame(tmp8);
     }
     if (flag4) {
-      require("01736__.js").updateProps(shareableViewDescriptors, obj);
+      require("01736__.js").updateProps(shareableViewDescriptors, obj2);
       const obj8 = require("01736__.js");
     }
   } else {
@@ -331,25 +340,34 @@ function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
   }
   styleUpdater.last = obj;
 }
-let obj = { SHOULD_BE_USE_WEB: module_1639, processBoxShadow: o.processBoxShadow, isAnimated: _mod1782.isAnimated, prepareAnimation, runAnimations, updateProps: _mod1736.updateProps, shallowEqual: _mod1782.shallowEqual };
-styleUpdater.__closure = obj;
+styleUpdater.__closure = {
+  SHOULD_BE_USE_WEB: module_1639,
+  processBoxShadow: o.processBoxShadow,
+  isAnimated: _mod1782.isAnimated,
+  prepareAnimation,
+  runAnimations,
+  updateProps: _mod1736.updateProps,
+  shallowEqual: _mod1782.shallowEqual,
+};
 styleUpdater.__workletHash = 3108907120254;
-styleUpdater.__initData = { code: "function styleUpdater_Pnpm_useAnimatedStyleTs3(viewDescriptors,updater,state,animationsActive,isAnimatedProps=false,forceUpdate){const{SHOULD_BE_USE_WEB,processBoxShadow,isAnimated,prepareAnimation,runAnimations,updateProps,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;const nonAnimatedNewValues={};let hasAnimations=false;let frameTimestamp;let hasNonAnimatedValues=false;if(!SHOULD_BE_USE_WEB&&newValues.boxShadow){processBoxShadow(newValues);}for(const key in newValues){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}else{hasNonAnimatedValues=true;nonAnimatedNewValues[key]=value;delete animations[key];}}if(hasAnimations){const frame=function(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;for(const propName in animations){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){if(Array.isArray(updates[propName])){updates[propName].forEach(function(obj){for(const prop in obj){if(!last[propName]||typeof last[propName]!=='object'){last[propName]={};}last[propName][prop]=obj[prop];}});}else{last[propName]=updates[propName];}delete animations[propName];}else{allFinished=false;}}if(updates){updateProps(viewDescriptors,updates);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}};state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}if(hasNonAnimatedValues){updateProps(viewDescriptors,nonAnimatedNewValues);}}else{state.isAnimationCancelled=true;state.animations=[];if(!shallowEqual(oldValues,newValues)||forceUpdate){updateProps(viewDescriptors,newValues,isAnimatedProps);}}state.last=newValues;}" };
+styleUpdater.__initData = {
+  code: "function styleUpdater_Pnpm_useAnimatedStyleTs3(viewDescriptors,updater,state,animationsActive,isAnimatedProps=false,forceUpdate){const{SHOULD_BE_USE_WEB,processBoxShadow,isAnimated,prepareAnimation,runAnimations,updateProps,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;const nonAnimatedNewValues={};let hasAnimations=false;let frameTimestamp;let hasNonAnimatedValues=false;if(!SHOULD_BE_USE_WEB&&newValues.boxShadow){processBoxShadow(newValues);}for(const key in newValues){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}else{hasNonAnimatedValues=true;nonAnimatedNewValues[key]=value;delete animations[key];}}if(hasAnimations){const frame=function(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;for(const propName in animations){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){if(Array.isArray(updates[propName])){updates[propName].forEach(function(obj){for(const prop in obj){if(!last[propName]||typeof last[propName]!=='object'){last[propName]={};}last[propName][prop]=obj[prop];}});}else{last[propName]=updates[propName];}delete animations[propName];}else{allFinished=false;}}if(updates){updateProps(viewDescriptors,updates);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}};state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}if(hasNonAnimatedValues){updateProps(viewDescriptors,nonAnimatedNewValues);}}else{state.isAnimationCancelled=true;state.animations=[];if(!shallowEqual(oldValues,newValues)||forceUpdate){updateProps(viewDescriptors,newValues,isAnimatedProps);}}state.last=newValues;}",
+};
 function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
   closure_0 = D;
   let last = arg3;
-  let obj = keys;
-  animations = animations.animations;
-  if (animations == null) {
-    animations = {};
+  let obj2 = keys;
+  let animations1 = animations.animations;
+  if (animations1 == null) {
+    animations1 = {};
   }
-  obj = fn();
+  let obj = fn();
   if (obj == null) {
     obj = {};
   }
   last = animations.last;
   c9 = false;
-  keys = Object.keys(animations);
+  keys = Object.keys(animations1);
   let item = keys.forEach((item) => {
     obj = _mod1782;
     if (!obj.isAnimated(obj[item])) {
@@ -362,13 +380,13 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
     if (obj.isAnimated(obj[item])) {
       const tmp2 = global.__frameTimestamp || global._getAnimationTimestamp();
       closure_5 = tmp2;
-      prepareAnimation(tmp2, tmp, animations[item], last[item]);
-      animations[item] = tmp;
+      prepareAnimation(tmp2, tmp, animations1[item], last[item]);
+      animations1[item] = tmp;
       c9 = true;
     }
   });
   if (c9) {
-    animations.animations = animations;
+    animations.animations = animations1;
     if (!animations.isAnimationRunning) {
       animations.isAnimationCancelled = false;
       animations.isAnimationRunning = true;
@@ -393,7 +411,7 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
           });
           const _Object2 = Object;
           if (Object.keys(obj).length) {
-            const obj2 = animations(last[5]);
+            obj2 = animations(last[5]);
             const result = obj2.updatePropsJestWrapper(closure_0, obj, obj, c4);
           }
           if (c4) {
@@ -406,14 +424,14 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
       }
       closure_0 = closure_5;
       animations = undefined;
-      obj = undefined;
+      obj2 = undefined;
       c4 = undefined;
       animations = animations.animations;
       last = animations.last;
       if (animations.isAnimationCancelled) {
         animations.isAnimationRunning = false;
       } else {
-        obj = {};
+        obj2 = {};
         c4 = true;
         let _Object = Object;
         const keys2 = Object.keys(animations);
@@ -426,9 +444,9 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
           }
         });
         let _Object2 = Object;
-        if (Object.keys(obj).length) {
+        if (Object.keys(obj2).length) {
           const obj4 = animations(last[5]);
-          let result = obj4.updatePropsJestWrapper(D, obj, keys, c4);
+          let result = obj4.updatePropsJestWrapper(D, obj2, keys, c4);
         }
         if (c4) {
           animations.isAnimationRunning = false;
@@ -455,15 +473,41 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
   tmp15 = animations;
   tmp16 = last;
 }
-obj = { isAnimated: _mod1782.isAnimated, prepareAnimation, runAnimations, updatePropsJestWrapper: _mod1736.updatePropsJestWrapper, shallowEqual: _mod1782.shallowEqual };
-jestStyleUpdater.__closure = obj;
+let obj = {
+  SHOULD_BE_USE_WEB: module_1639,
+  processBoxShadow: o.processBoxShadow,
+  isAnimated: _mod1782.isAnimated,
+  prepareAnimation,
+  runAnimations,
+  updateProps: _mod1736.updateProps,
+  shallowEqual: _mod1782.shallowEqual,
+};
+jestStyleUpdater.__closure = {
+  isAnimated: _mod1782.isAnimated,
+  prepareAnimation,
+  runAnimations,
+  updatePropsJestWrapper: _mod1736.updatePropsJestWrapper,
+  shallowEqual: _mod1782.shallowEqual,
+};
 jestStyleUpdater.__workletHash = 12729247822121;
-jestStyleUpdater.__initData = { code: "function jestStyleUpdater_Pnpm_useAnimatedStyleTs4(viewDescriptors,updater,state,animationsActive,animatedValues,adapters,forceUpdate){const{isAnimated,prepareAnimation,runAnimations,updatePropsJestWrapper,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;let hasAnimations=false;let frameTimestamp;Object.keys(animations).forEach(function(key){const value=newValues[key];if(!isAnimated(value)){delete animations[key];}});Object.keys(newValues).forEach(function(key){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}});function frame(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;Object.keys(animations).forEach(function(propName){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){last[propName]=updates[propName];delete animations[propName];}else{allFinished=false;}});if(Object.keys(updates).length){updatePropsJestWrapper(viewDescriptors,updates,animatedValues,adapters);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}}if(hasAnimations){state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}}else{state.isAnimationCancelled=true;state.animations=[];}state.last=newValues;if(!shallowEqual(oldValues,newValues)||forceUpdate){updatePropsJestWrapper(viewDescriptors,newValues,animatedValues,adapters);}}" };
-let closure_11 = { code: "function pnpm_useAnimatedStyleTs5(){const{updater,adaptersArray}=this.__closure;const newValues=updater();adaptersArray.forEach(function(adapter){adapter(newValues);});return newValues;}" };
-let closure_12 = { code: "function pnpm_useAnimatedStyleTs6(forceUpdate){const{jestStyleUpdater,shareableViewDescriptors,updater,remoteState,areAnimationsActive,jestAnimatedValues,adaptersArray}=this.__closure;jestStyleUpdater(shareableViewDescriptors,updater,remoteState,areAnimationsActive,jestAnimatedValues,adaptersArray,forceUpdate);}" };
-let closure_13 = { code: "function pnpm_useAnimatedStyleTs7(forceUpdate){const{styleUpdater,shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps}=this.__closure;styleUpdater(shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps,forceUpdate);}" };
-let closure_14 = { code: "function pnpm_useAnimatedStyleTs8(){const{styleUpdater,shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps}=this.__closure;styleUpdater(shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps);remoteState.isFirstRun=false;}" };
-let closure_15 = { code: "function pnpm_useAnimatedStyleTs9(){const{remoteState}=this.__closure;return remoteState.isFirstRun=true;}" };
+jestStyleUpdater.__initData = {
+  code: "function jestStyleUpdater_Pnpm_useAnimatedStyleTs4(viewDescriptors,updater,state,animationsActive,animatedValues,adapters,forceUpdate){const{isAnimated,prepareAnimation,runAnimations,updatePropsJestWrapper,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;let hasAnimations=false;let frameTimestamp;Object.keys(animations).forEach(function(key){const value=newValues[key];if(!isAnimated(value)){delete animations[key];}});Object.keys(newValues).forEach(function(key){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}});function frame(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;Object.keys(animations).forEach(function(propName){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){last[propName]=updates[propName];delete animations[propName];}else{allFinished=false;}});if(Object.keys(updates).length){updatePropsJestWrapper(viewDescriptors,updates,animatedValues,adapters);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}}if(hasAnimations){state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}}else{state.isAnimationCancelled=true;state.animations=[];}state.last=newValues;if(!shallowEqual(oldValues,newValues)||forceUpdate){updatePropsJestWrapper(viewDescriptors,newValues,animatedValues,adapters);}}",
+};
+let closure_11 = {
+  code: "function pnpm_useAnimatedStyleTs5(){const{updater,adaptersArray}=this.__closure;const newValues=updater();adaptersArray.forEach(function(adapter){adapter(newValues);});return newValues;}",
+};
+let closure_12 = {
+  code: "function pnpm_useAnimatedStyleTs6(forceUpdate){const{jestStyleUpdater,shareableViewDescriptors,updater,remoteState,areAnimationsActive,jestAnimatedValues,adaptersArray}=this.__closure;jestStyleUpdater(shareableViewDescriptors,updater,remoteState,areAnimationsActive,jestAnimatedValues,adaptersArray,forceUpdate);}",
+};
+let closure_13 = {
+  code: "function pnpm_useAnimatedStyleTs7(forceUpdate){const{styleUpdater,shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps}=this.__closure;styleUpdater(shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps,forceUpdate);}",
+};
+let closure_14 = {
+  code: "function pnpm_useAnimatedStyleTs8(){const{styleUpdater,shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps}=this.__closure;styleUpdater(shareableViewDescriptors,updaterFn,remoteState,areAnimationsActive,isAnimatedProps);remoteState.isFirstRun=false;}",
+};
+let closure_15 = {
+  code: "function pnpm_useAnimatedStyleTs9(){const{remoteState}=this.__closure;return remoteState.isFirstRun=true;}",
+};
 
 export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3) {
   _require = arg2;
@@ -514,12 +558,11 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   }
   let workletsHash = null;
   if (arg2) {
-    let obj1 = require("01782__.js");
-    workletsHash = obj1.buildWorkletsHash(items1);
+    workletsHash = require("01782__.js").buildWorkletsHash(items1);
+    let obj2 = require("01782__.js");
   }
-  let obj2 = require("01788__.js");
-  sharedValue = obj2.useSharedValue(true);
-  let tmpResult = tmp({});
+  sharedValue = require("01788__.js").useSharedValue(true);
+  let tmpResult = closure_4({});
   jestAnimatedValues = tmpResult;
   if (items) {
     items.push(updater.__workletHash);
@@ -533,18 +576,24 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     arr5.push(workletsHash);
   }
   if (!tmp2.current) {
-    let tmp10Result = tmp10(tmp11[8]);
-    const initialUpdaterRunResult = tmp10Result.initialUpdaterRun(updater);
+    const initialUpdaterRunResult = tmp10(tmp11[8]).initialUpdaterRun(updater);
     let obj = { initial: null, remoteState: null, viewDescriptors: null, styleUpdaterContainer: null };
-    obj = { value: initialUpdaterRunResult, updater };
-    obj.initial = obj;
-    tmp10Result = tmp10(tmp11[9]);
-    obj1 = { last: initialUpdaterRunResult, animations: {}, isAnimationCancelled: false, isAnimationRunning: false, isFirstRun: true };
-    obj.remoteState = tmp10Result.makeShareable(obj1);
+    let obj4 = { value: initialUpdaterRunResult, updater };
+    obj.initial = obj4;
+    const tmp10Result = tmp10(tmp11[8]);
+    const obj5 = {
+      last: initialUpdaterRunResult,
+      animations: {},
+      isAnimationCancelled: false,
+      isAnimationRunning: false,
+      isFirstRun: true,
+    };
+    obj.remoteState = tmp10(tmp11[9]).makeShareable(obj5);
+    const tmp10Result4 = tmp10(tmp11[9]);
     obj.viewDescriptors = tmp10(tmp11[10]).makeViewDescriptorsSet();
     obj.styleUpdaterContainer = { current: "r" };
     tmp2.current = obj;
-    const tmp10Result1 = tmp10(tmp11[10]);
+    const tmp10Result5 = tmp10(tmp11[10]);
   }
   ({ initial, remoteState: c8, viewDescriptors } = tmp2.current);
   shareableViewDescriptors = viewDescriptors.shareableViewDescriptors;
@@ -570,8 +619,16 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       const fn3 = function l(arg0) {
         shareableViewDescriptors(closure_1_9, fn, remoteState, sharedValue, jestAnimatedValues, items1, arg0);
       };
-      obj = { jestStyleUpdater: shareableViewDescriptors, shareableViewDescriptors, updater: tmp, remoteState: _undefined, areAnimationsActive: sharedValue, jestAnimatedValues, adaptersArray: items1 };
-      fn3.__closure = obj;
+      const obj3 = {
+        jestStyleUpdater: shareableViewDescriptors,
+        shareableViewDescriptors,
+        updater: tmp,
+        remoteState: _undefined,
+        areAnimationsActive: sharedValue,
+        jestAnimatedValues,
+        adaptersArray: items1,
+      };
+      fn3.__closure = obj3;
       fn3.__workletHash = 11745429083106;
       fn3.__initData = __initData2;
       let tmp13 = fn3;
@@ -579,8 +636,15 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       const fn2 = function o(arg0) {
         styleUpdater(shareableViewDescriptors, fn, c8, sharedValue, flag, arg0);
       };
-      obj = { styleUpdater: _undefined, shareableViewDescriptors, updaterFn: tmp2, remoteState: _undefined, areAnimationsActive: sharedValue, isAnimatedProps: flag };
-      fn2.__closure = obj;
+      const obj4 = {
+        styleUpdater: _undefined,
+        shareableViewDescriptors,
+        updaterFn: tmp2,
+        remoteState: _undefined,
+        areAnimationsActive: sharedValue,
+        isAnimatedProps: flag,
+      };
+      fn2.__closure = obj4;
       fn2.__workletHash = 6831194621571;
       fn2.__initData = __initData3;
       const _globalThis = globalThis;
@@ -596,11 +660,17 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
             c8(shareableViewDescriptors, updaterFn, remoteState, sharedValue, flag);
             remoteState.isFirstRun = false;
           };
-          const obj = { styleUpdater, shareableViewDescriptors, updaterFn, remoteState, areAnimationsActive: sharedValue, isAnimatedProps: flag };
-          updaterFn.__closure = obj;
+          updaterFn.__closure = {
+            styleUpdater,
+            shareableViewDescriptors,
+            updaterFn,
+            remoteState,
+            areAnimationsActive: sharedValue,
+            isAnimatedProps: flag,
+          };
           updaterFn.__workletHash = 11622360674991;
           updaterFn.__initData = __initData;
-          obj.runOnUI(updaterFn)();
+          runOnRuntime.runOnUI(updaterFn)();
         });
         tmp13 = fn2;
       }
@@ -611,15 +681,14 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     obj2 = closure_1(flag[2]);
     closure_1 = closure_1(flag[9]).startMapper(tmp13, closure_4);
     return () => {
-      let obj = runOnRuntime;
-      obj.stopMapper(closure_1);
+      runOnRuntime.stopMapper(closure_1);
       if (!globalThis._IS_FABRIC) {
         const fn = function t() {
           remoteState.isFirstRun = true;
           return true;
         };
-        obj = { remoteState };
-        fn.__closure = obj;
+        const obj2 = { remoteState };
+        fn.__closure = obj2;
         fn.__workletHash = 6168210089002;
         fn.__initData = __initData2;
         runOnRuntime.runOnUI(fn)();
@@ -635,18 +704,25 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     };
   }, items3);
   checkSharedValueUsage(initial.value);
-  tmpResult = tmp(null);
-  if (tmpResult.current) {
-    return tmpResult.current;
+  const tmpResult2 = closure_4(null);
+  if (tmpResult2.current) {
+    return tmpResult2.current;
   } else {
     const styleUpdaterContainer = tmp2.current.styleUpdaterContainer;
-    if (tmp10Result2.isJest()) {
-      obj2 = { viewDescriptors, initial, jestAnimatedValues: tmpResult, toJSON: animatedStyleHandleToJSON, styleUpdaterContainer };
-      let obj3 = obj2;
+    if (tmp10Result6.isJest()) {
+      const obj6 = {
+        viewDescriptors,
+        initial,
+        jestAnimatedValues: tmpResult,
+        toJSON: animatedStyleHandleToJSON,
+        styleUpdaterContainer,
+      };
+      let obj7 = obj6;
     } else {
-      obj3 = { viewDescriptors, initial, styleUpdaterContainer };
+      obj7 = { viewDescriptors, initial, styleUpdaterContainer };
     }
-    tmpResult.current = obj3;
-    tmp10Result2 = tmp10(tmp11[2]);
+    tmpResult2.current = obj7;
+    tmp10Result6 = tmp10(tmp11[2]);
   }
+  let obj3 = require("01788__.js");
 };

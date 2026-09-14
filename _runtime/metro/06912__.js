@@ -1,12 +1,13 @@
 // _runtime/metro/06912__.js
 import jsxProd from "../react/00021_jsxProd.js";
-import GESTURE_SOURCE from "../06729_GESTURE_SOURCE.js";
-import _mod6733 from "06733__.js";
+import value2 from "../06729_value2.js";
 import _mod6913 from "06913__.js";
-import noop from "00019__.js";
+import noop_mod from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 
+let noop = noop_mod;
 ({ useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
 ({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
@@ -27,7 +28,18 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   const tmp = num(null);
   const ref = tmp;
   let items = [style, detached, topInset, num];
-  const obj = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
+  const tmp2 = topInset(() => {
+    const items = [style, _mod6913.styles.container];
+    const rect = { top: topInset, bottom: num, overflow: null };
+    let str = "hidden";
+    if (detached) {
+      str = "visible";
+    }
+    rect.overflow = str;
+    items[2] = rect;
+    return items;
+  }, items);
+  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
   let stableCallback;
   if (flag) {
     stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
@@ -51,27 +63,17 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
             if (num3 == null) {
               num3 = 0;
             }
-            rect.bottom = Math.max(0, GESTURE_SOURCE.WINDOW_HEIGHT - (sum + num3));
+            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
             tmp.value = rect;
           }
         });
       }
     });
   }
-  obj.onLayout = stableCallback;
-  obj.style = topInset(() => {
-    const items = [style, _mod6913.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
-    }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  obj.children = bottomInset.children;
-  return ref(style, obj);
+  obj2.onLayout = stableCallback;
+  obj2.style = tmp2;
+  obj2.children = bottomInset.children;
+  return ref(style, obj2);
 });
 memoResult.displayName = "BottomSheetHostingContainer";
 

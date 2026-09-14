@@ -1,6 +1,9 @@
 // _runtime/metro/04370__.js
-import installWorkletsSupport from "../04371_installWorkletsSupport.js";
+import installWorkletsSupport_mod from "../04371_installWorkletsSupport.js";
 
+const require = globalThis.__r;
+
+let installWorkletsSupport = installWorkletsSupport_mod;
 installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
 for (const key10017 in require("04380__.js")) {
   arg5[key10017] = require("04380__.js")[key10017];

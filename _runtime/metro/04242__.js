@@ -65,9 +65,19 @@ const fn = function n(moment) {
     y: "metai_met\u0173_metus",
     yy: "metai_met\u0173_metus",
   };
-  let obj = {
-    months: null,
-    monthsShort: null,
+  const obj = {
+    months: {
+      format:
+        "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split(
+          "_",
+        ),
+      standalone:
+        "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split(
+          "_",
+        ),
+      isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/,
+    },
+    monthsShort: "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_"),
     weekdays: null,
     weekdaysShort: null,
     weekdaysMin: null,
@@ -79,7 +89,7 @@ const fn = function n(moment) {
     ordinal: null,
     week: null,
   };
-  obj = {
+  const obj2 = {
     format:
       "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split(
         "_",
@@ -90,9 +100,7 @@ const fn = function n(moment) {
       ),
     isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/,
   };
-  obj.months = obj;
-  obj.monthsShort = "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_");
-  obj = {
+  obj.weekdays = {
     format:
       "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split(
         "_",
@@ -103,7 +111,6 @@ const fn = function n(moment) {
       ),
     isFormat: /dddd HH:mm/,
   };
-  obj.weekdays = obj;
   obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
   obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
   obj.longDateFormat = {

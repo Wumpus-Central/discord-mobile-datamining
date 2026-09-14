@@ -8,6 +8,8 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import javaScriptFlagGetter from "00027__.js";
 
+const require = globalThis.__r;
+
 const ReadOnlyNode = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -152,7 +154,7 @@ let items = [
           items2 = [arr, index];
         }
       }
-      [arr5, tmp9] = _slicedToArray(items2, 2);
+      [arr5, tmp9] = items2;
       let tmp10 = null;
       if (tmp9 !== arr5.length - 1) {
         tmp10 = arr5[tmp9 + 1];

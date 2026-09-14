@@ -13,8 +13,8 @@ export const trpcMiddleware = function trpcMiddleware() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -27,8 +27,8 @@ export const trpcMiddleware = function trpcMiddleware() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp28;
@@ -44,9 +44,9 @@ export const trpcMiddleware = function trpcMiddleware() {
             if (client != null) {
               options = client.getOptions();
             }
-            let obj1 = { procedure_path: path, procedure_type: closure_0.type };
-            closure_130_2 = obj1;
-            let obj2 = closure_0(687);
+            let obj6 = { procedure_path: path, procedure_type: closure_0.type };
+            closure_130_2 = obj6;
+            const obj8 = closure_0(713);
             let normalizeDepth;
             if (options != null) {
               normalizeDepth = options.normalizeDepth;
@@ -55,7 +55,11 @@ export const trpcMiddleware = function trpcMiddleware() {
             if (normalizeDepth == null) {
               c1 = 5;
             }
-            const result = obj2.addNonEnumerableProperty(obj1, "__sentry_override_normalization_depth__", 1 + c1);
+            const result = closure_0(687).addNonEnumerableProperty(
+              obj6,
+              "__sentry_override_normalization_depth__",
+              1 + c1,
+            );
             if (undefined !== closure_0.attachRpcInput) {
               let sendDefaultPii = closure_0.attachRpcInput;
             } else if (options != null) {
@@ -64,19 +68,19 @@ export const trpcMiddleware = function trpcMiddleware() {
             if (sendDefaultPii) {
               if (undefined !== rawInput) {
                 const normalizer2 = closure_0(730);
-                obj1.input = normalizer2.normalize(rawInput);
+                obj6.input = normalizer2.normalize(rawInput);
               }
               if (undefined !== getRawInput) {
                 if (typeof getRawInput === "function") {
                   c4 = 1;
                   c5 = 2;
                   c6 = 1;
-                  obj2 = { value: getRawInput(), done: false };
-                  return obj2;
+                  const obj7 = { value: getRawInput(), done: false };
+                  return obj7;
                 }
               }
             }
-            const obj8 = closure_0(713);
+            const obj3 = closure_0(687);
           }
         } else {
           if (1 === tmp7) {
@@ -92,21 +96,12 @@ export const trpcMiddleware = function trpcMiddleware() {
           }
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         closure_0(713).withIsolationScope((setContext) => {
           setContext.setContext("trpc", closure_2);
-          closure_0(731);
-          let obj = {
-            name: "trpc/" + closure_0,
-            op: "rpc.server",
-            attributes: {
-              [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route",
-              [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc",
-            },
-            forceTransaction: closure_1_0.forceTransaction,
-          };
+          let obj = closure_0(731);
           closure_0 = closure_2(function* (arg0) {
             if (c6 === 2) {
               c6 = 3;
@@ -115,8 +110,8 @@ export const trpcMiddleware = function trpcMiddleware() {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -129,8 +124,8 @@ export const trpcMiddleware = function trpcMiddleware() {
                     throw value;
                   } else if (arg0 === 2) {
                     c6 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj4 = { value, done: true };
+                    return obj4;
                   } else {
                     closure_2 = tmp3;
                     closure_1 = tmp7;
@@ -139,14 +134,13 @@ export const trpcMiddleware = function trpcMiddleware() {
                     c4 = 1;
                     c5 = 2;
                     c6 = 1;
-                    const obj1 = { value: closure_1(), done: false };
-                    return obj1;
+                    const obj5 = { value: closure_1(), done: false };
+                    return obj5;
                   }
                 } else if (1 === tmp7) {
                   c4 = 0;
                   closure_129_2 = closure_3;
-                  let obj2 = closure_3_0(734);
-                  obj2.captureException(closure_129_2, closure_3_3);
+                  closure_3_0(734).captureException(closure_129_2, closure_3_3);
                   closure_129_0.end();
                   throw closure_129_2;
                 } else if (arg0 === 1) {
@@ -155,8 +149,8 @@ export const trpcMiddleware = function trpcMiddleware() {
                 } else if (arg0 === 2) {
                   c4 = 0;
                   c6 = 3;
-                  obj2 = { value, done: true };
-                  return obj2;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   closure_129_1 = value;
                   (function captureIfError(ok) {
@@ -181,7 +175,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                   closure_129_0.end();
                   c4 = 0;
                   c6 = 3;
-                  obj = { value: closure_129_1, done: true };
+                  let obj = { value: closure_129_1, done: true };
                   return obj;
                 }
               } catch (tmp27) {
@@ -195,19 +189,30 @@ export const trpcMiddleware = function trpcMiddleware() {
               }
             }
           });
-          return obj.startSpanManual(obj, function (arg0) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          });
+          return obj.startSpanManual(
+            {
+              name: "trpc/" + closure_0,
+              op: "rpc.server",
+              attributes: {
+                [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route",
+                [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc",
+              },
+              forceTransaction: closure_1_0.forceTransaction,
+            },
+            function (arg0) {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            },
+          );
         });
         c6 = 3;
-        const obj4 = closure_0(713);
+        let obj4 = closure_0(713);
       } catch (tmp27) {
         if (tmp4 === c4) {
           c6 = tmp2;

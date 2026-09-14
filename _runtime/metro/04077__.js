@@ -1,17 +1,19 @@
 // _runtime/metro/04077__.js
-import startOfQuarter from "../03937_startOfQuarter.js";
-import requiredArgs from "../03726_requiredArgs.js";
+import startOfQuarter_mod from "../03937_startOfQuarter.js";
+import requiredArgs_mod from "../03726_requiredArgs.js";
 
+let startOfQuarter = startOfQuarter_mod;
 if (!startOfQuarter) {
-  let obj = { default: startOfQuarter };
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
   tmp3 = startOfQuarter;
 }
 startOfQuarter = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

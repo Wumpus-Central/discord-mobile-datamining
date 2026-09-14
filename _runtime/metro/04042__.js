@@ -1,7 +1,7 @@
 // _runtime/metro/04042__.js
 import Parser2 from "../04031_Parser.js";
-import 04043__ from "04043__.js";
-import startOfUTCWeek from "../03728_startOfUTCWeek.js";
+import module_4043_mod from "04043__.js";
+import startOfUTCWeek_mod from "../03728_startOfUTCWeek.js";
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -55,6 +55,7 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4043 = module_4043_mod;
 if (!module_4043) {
   let obj = { default: module_4043 };
   let tmp3 = obj;
@@ -62,9 +63,10 @@ if (!module_4043) {
   tmp3 = module_4043;
 }
 module_4043 = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
 if (!startOfUTCWeek) {
-  obj = { default: startOfUTCWeek };
-  let tmp5 = obj;
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
 } else {
   tmp5 = startOfUTCWeek;
 }
@@ -107,7 +109,12 @@ class LocalWeekParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 100,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
           num3 = 100;
           applyResult.priority = 100;
@@ -157,8 +164,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { constructor: { value: LocalWeekParser, writable: true, configurable: true } };
-LocalWeekParser.prototype = Object.create(prototype, obj);
+LocalWeekParser.prototype = Object.create(prototype, {
+  constructor: { value: LocalWeekParser, writable: true, configurable: true },
+});
 if (Parser) {
   _setPrototypeOf(LocalWeekParser, Parser);
 }
@@ -229,7 +237,7 @@ const entry = {
     } else {
       return _createSuperInternal(4033).parseNDigits(arg1.length, arg0);
     }
-  }
+  },
 };
 let items = [
   entry,
@@ -241,14 +249,14 @@ let items = [
         tmp = arg1 <= 53;
       }
       return tmp;
-    }
+    },
   },
   {
     key: "set",
     value: function set(arg0, arg1, arg2, arg3) {
       return startOfUTCWeek.default(module_4043.default(arg0, arg2, arg3), arg3);
-    }
-  }
+    },
+  },
 ];
 if (0 < items.length) {
   do {

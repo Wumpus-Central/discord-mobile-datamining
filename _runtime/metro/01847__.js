@@ -10,8 +10,7 @@ const __initData = {
 };
 
 export default function _default(arg0) {
-  let obj = cancelAnimation;
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = cancelAnimation.useSharedValue(0);
   const sharedValue1 = cancelAnimation.useSharedValue({ width: 0, height: 0 });
   const sharedValue2 = cancelAnimation.useSharedValue({ width: 0, height: 0 });
   closure_3 = _mod1825.useEventHandlerRegistration(arg0);
@@ -32,7 +31,10 @@ export default function _default(arg0) {
   }, []);
   const items = [sharedValue1];
   const items1 = [sharedValue2];
-  obj = {
+  const tmp5 = React2((nativeEvent) => {
+    sharedValue1.value = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
+  }, items);
+  return {
     offset: sharedValue,
     layout: sharedValue1,
     size: sharedValue2,
@@ -47,5 +49,4 @@ export default function _default(arg0) {
       sharedValue2.value = size;
     }, items1),
   };
-  return obj;
 }

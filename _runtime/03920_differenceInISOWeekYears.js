@@ -1,41 +1,46 @@
 // _runtime/03920_differenceInISOWeekYears.js
-import _typeof from "metro/03725__.js";
-import differenceInCalendarISOWeekYears from "03909_differenceInCalendarISOWeekYears.js";
-import compareAsc from "03901_compareAsc.js";
-import subISOWeekYears from "03921_subISOWeekYears.js";
-import requiredArgs from "03726_requiredArgs.js";
+import _typeof_mod from "metro/03725__.js";
+import differenceInCalendarISOWeekYears_mod from "03909_differenceInCalendarISOWeekYears.js";
+import compareAsc_mod from "03901_compareAsc.js";
+import subISOWeekYears_mod from "03921_subISOWeekYears.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let differenceInCalendarISOWeekYears = differenceInCalendarISOWeekYears_mod;
 if (!differenceInCalendarISOWeekYears) {
-  obj = { default: differenceInCalendarISOWeekYears };
-  let tmp5 = obj;
+  const obj2 = { default: differenceInCalendarISOWeekYears };
+  let tmp5 = obj2;
 } else {
   tmp5 = differenceInCalendarISOWeekYears;
 }
 differenceInCalendarISOWeekYears = tmp5;
+let compareAsc = compareAsc_mod;
 if (!compareAsc) {
-  obj = { default: compareAsc };
-  let tmp7 = obj;
+  const obj3 = { default: compareAsc };
+  let tmp7 = obj3;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
+let subISOWeekYears = subISOWeekYears_mod;
 if (!subISOWeekYears) {
-  const obj1 = { default: subISOWeekYears };
-  let tmp9 = obj1;
+  const obj4 = { default: subISOWeekYears };
+  let tmp9 = obj4;
 } else {
   tmp9 = subISOWeekYears;
 }
 subISOWeekYears = tmp9;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp11 = obj2;
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
 } else {
   tmp11 = requiredArgs;
 }

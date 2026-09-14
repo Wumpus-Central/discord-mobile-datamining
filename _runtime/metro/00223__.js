@@ -68,23 +68,23 @@ const items = [
         if (self._aborted) {
           let tmpResult = EventDefault;
           let tmp6 = new.target;
-          tmpResult = new tmpResult("abort");
-          self.dispatchEvent(tmpResult);
+          const tmpResult1 = new tmpResult("abort");
+          self.dispatchEvent(tmpResult1);
           dispatchEvent = EventDefault;
           const tmp = new.target;
-          dispatchEvent = new dispatchEvent("loadend");
-          self.dispatchEvent(dispatchEvent);
+          const dispatchEvent1 = new dispatchEvent("loadend");
+          self.dispatchEvent(dispatchEvent1);
         } else {
           ({ dispatchEvent, _error } = self);
           tmpResult = EventDefault;
           tmp6 = new.target;
           if (!_error) {
-            const tmpResult1 = new tmpResult("load");
-            dispatchEvent(tmpResult1);
+            const tmpResult2 = new tmpResult("load");
+            dispatchEvent(tmpResult2);
           }
         }
-        const tmpResult2 = new tmpResult("error");
-        dispatchEvent(tmpResult2);
+        const tmpResult3 = new tmpResult("error");
+        dispatchEvent(tmpResult3);
       }
     },
   },

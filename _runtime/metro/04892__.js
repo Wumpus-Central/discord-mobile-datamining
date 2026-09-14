@@ -1,5 +1,5 @@
 // _runtime/metro/04892__.js
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
+import callBoundIntrinsic from "../01314_callBoundIntrinsic.js";
 import ToObject from "../04893_ToObject.js";
 import _mod4895 from "04895__.js";
 import ToUint32 from "../04896_ToUint32.js";

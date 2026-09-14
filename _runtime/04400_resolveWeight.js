@@ -2,6 +2,8 @@
 import "module_32";
 import "asyncGeneratorStep";
 
+const require = globalThis.__r;
+
 function resolveWeight(arg0) {
   let num = 0;
   if ("default" !== arg0) {
@@ -33,8 +35,8 @@ let _slicedToArray = function _loadFont() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,14 +48,14 @@ let _slicedToArray = function _loadFont() {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const _ArrayBuffer = ArrayBuffer;
           if (closure_0 instanceof ArrayBuffer) {
             c1 = 3;
-            let obj1 = { value: closure_1_3.loadFontFromBytes(closure_0), done: true };
-            return obj1;
+            const obj5 = { value: closure_1_3.loadFontFromBytes(closure_0), done: true };
+            return obj5;
           } else if (typeof closure_0 === "number") {
             const assetSource = closure_1_2.resolveAssetSource(closure_0);
             let uri;
@@ -62,8 +64,8 @@ let _slicedToArray = function _loadFont() {
             }
             if (uri) {
               c1 = 3;
-              const obj2 = { value: loadFontByURI(assetSource.uri), done: true };
-              return obj2;
+              const obj6 = { value: loadFontByURI(assetSource.uri), done: true };
+              return obj6;
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -78,27 +80,27 @@ let _slicedToArray = function _loadFont() {
             if (typeof closure_0 === "object") {
               if ("name" in closure_0) {
                 c1 = 3;
-                const obj3 = { value: closure_1_3.loadFontByName(closure_0.name), done: true };
-                return obj3;
+                const obj7 = { value: closure_1_3.loadFontByName(closure_0.name), done: true };
+                return obj7;
               }
             }
             if (typeof closure_0 === "object") {
               if ("uri" in closure_0) {
                 c1 = 3;
-                const obj4 = { value: loadFontByURI(closure_0.uri), done: true };
-                return obj4;
+                const obj8 = { value: loadFontByURI(closure_0.uri), done: true };
+                return obj8;
               }
             }
             if (typeof closure_0 === "string") {
-              obj = /^https?:\/\//;
               if (!obj.test(closure_0)) {
-                obj1 = /^file:\/\//;
-                if (!obj1.test(closure_0)) {
+                if (!obj2.test(closure_0)) {
                   const fontFromResource = closure_1_3.loadFontFromResource(closure_0);
                 }
                 c1 = 3;
+                obj2 = /^file:\/\//;
               }
               const fontFromURL = closure_1_3.loadFontFromURL(closure_0);
+              obj = /^https?:\/\//;
             } else {
               const _Error2 = Error;
               const _String = String;
@@ -133,8 +135,8 @@ let asyncGeneratorStep = function _setFallbackFonts() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -147,8 +149,8 @@ let asyncGeneratorStep = function _setFallbackFonts() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             let _Object = Object;
             let entries = Object.entries(closure_0);
@@ -165,8 +167,8 @@ let asyncGeneratorStep = function _setFallbackFonts() {
             }
             v2 = 2;
             c3 = 1;
-            let obj1 = { value: c3.applyFallbackFonts(), done: false };
-            return obj1;
+            let obj4 = { value: c3.applyFallbackFonts(), done: false };
+            return obj4;
           }
         } else if (1 === tmp3) {
           c6 = 0;
@@ -177,7 +179,7 @@ let asyncGeneratorStep = function _setFallbackFonts() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c3 = 3;
@@ -203,8 +205,8 @@ const Image = async function _clearFallbackFonts() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -216,11 +218,11 @@ const Image = async function _clearFallbackFonts() {
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         c0 = 3;
-        obj = { value: closure_1_3.clearFallbackFonts(), done: true };
+        const obj = { value: closure_1_3.clearFallbackFonts(), done: true };
         return obj;
       }
     } catch (tmp5) {

@@ -54,10 +54,10 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let string = { localeError: null };
-        string = { string: null, file: null, array: null, set: null };
-        string = { unit: { one: "simbolis", few: "simboliai", many: "simboli\u0173" }, verb: null };
-        const obj1 = {
+        let obj = { localeError: null };
+        let obj2 = { string: null, file: null, array: null, set: null };
+        const obj3 = { unit: { one: "simbolis", few: "simboliai", many: "simboli\u0173" }, verb: null };
+        const obj4 = {
           smaller: {
             inclusive: "turi b\u016Bti ne ilgesn\u0117 kaip",
             notInclusive: "turi b\u016Bti trumpesn\u0117 kaip",
@@ -67,29 +67,29 @@ if (self2) {
             notInclusive: "turi b\u016Bti ilgesn\u0117 kaip",
           },
         };
-        string.verb = obj1;
-        string.string = string;
-        const obj2 = { unit: { one: "baitas", few: "baitai", many: "bait\u0173" }, verb: null };
-        const obj3 = {
+        obj3.verb = obj4;
+        obj2.string = obj3;
+        const obj5 = { unit: { one: "baitas", few: "baitai", many: "bait\u0173" }, verb: null };
+        const obj6 = {
           smaller: { inclusive: "turi b\u016Bti ne didesnis kaip", notInclusive: "turi b\u016Bti ma\u017Eesnis kaip" },
           bigger: { inclusive: "turi b\u016Bti ne ma\u017Eesnis kaip", notInclusive: "turi b\u016Bti didesnis kaip" },
         };
-        obj2.verb = obj3;
-        string.file = obj2;
-        const obj4 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
-        const obj5 = {
+        obj5.verb = obj6;
+        obj2.file = obj5;
+        const obj7 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
+        const obj8 = {
           smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" },
           bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" },
         };
-        obj4.verb = obj5;
-        string.array = obj4;
-        const obj6 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
-        const obj7 = {
+        obj7.verb = obj8;
+        obj2.array = obj7;
+        const obj9 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
+        const obj10 = {
           smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" },
           bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" },
         };
-        obj6.verb = obj7;
-        string.set = obj6;
+        obj9.verb = obj10;
+        obj2.set = obj9;
         closure_1 = {
           regex: "\u012Fvestis",
           email: "el. pa\u0161to adresas",
@@ -133,7 +133,7 @@ if (self2) {
           object: "objektas",
           null: "nulin\u0117 reik\u0161m\u0117",
         };
-        string.localeError = (code) => {
+        obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
               let expected = closure_2[code.expected];
@@ -189,25 +189,25 @@ if (self2) {
               if (flag2 == null) {
                 flag2 = false;
               }
-              let tmp53 = obj[code.origin];
+              let tmp53 = obj2[code.origin];
               if (tmp53 == null) {
                 tmp53 = null;
               }
               let tmp54 = tmp53;
               if (null !== tmp53) {
-                obj = { unit: tmp53.unit[str46], verb: null };
+                obj2 = { unit: tmp53.unit[str46], verb: null };
                 let str48 = "notInclusive";
                 if (flag2) {
                   str48 = "inclusive";
                 }
-                obj.verb = tmp53.verb.smaller[str48];
-                tmp54 = obj;
+                obj2.verb = tmp53.verb.smaller[str48];
+                tmp54 = obj2;
               }
-              let verb;
+              let verb1;
               if (tmp54 != null) {
-                verb = tmp54.verb;
+                verb1 = tmp54.verb;
               }
-              if (verb) {
+              if (verb1) {
                 if (str45 == null) {
                   str45 = code.origin;
                 }
@@ -218,13 +218,13 @@ if (self2) {
                   const formatted = str45.charAt(0).toUpperCase();
                   const sum = formatted + str45.slice(1);
                   const verb2 = tmp54.verb;
-                  let str = code.maximum.toString();
+                  const str1 = code.maximum.toString();
                   let str60 = tmp54.unit;
                   if (str60 == null) {
                     str60 = "element\u0173";
                   }
                   const _HermesInternal12 = HermesInternal;
-                  return "" + sum + " " + verb2 + " " + str + " " + str60;
+                  return "" + sum + " " + verb2 + " " + str1 + " " + str60;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -243,13 +243,13 @@ if (self2) {
                 if (typeof capitalizeFirstCharacter === "function") {
                   const formatted1 = str50.charAt(0).toUpperCase();
                   const sum1 = formatted1 + str50.slice(1);
-                  const str1 = code.maximum.toString();
+                  const str82 = code.maximum.toString();
                   let unit;
                   if (tmp54 != null) {
                     unit = tmp54.unit;
                   }
                   const _HermesInternal11 = HermesInternal;
-                  return "" + sum1 + " turi b\u016Bti " + str49 + " " + str1 + " " + unit;
+                  return "" + sum1 + " turi b\u016Bti " + str49 + " " + str82 + " " + unit;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -281,13 +281,13 @@ if (self2) {
               if (flag == null) {
                 flag = false;
               }
-              let tmp26 = obj[code.origin];
+              let tmp26 = obj2[code.origin];
               if (tmp26 == null) {
                 tmp26 = null;
               }
               let tmp27 = tmp26;
               if (null !== tmp26) {
-                obj = { unit: tmp26.unit[str25], verb: null };
+                const obj = { unit: tmp26.unit[str25], verb: null };
                 let str27 = "notInclusive";
                 if (flag) {
                   str27 = "inclusive";
@@ -295,11 +295,11 @@ if (self2) {
                 obj.verb = tmp26.verb.bigger[str27];
                 tmp27 = obj;
               }
-              let verb1;
+              let verb3;
               if (tmp27 != null) {
-                verb1 = tmp27.verb;
+                verb3 = tmp27.verb;
               }
-              if (verb1) {
+              if (verb3) {
                 if (str24 == null) {
                   str24 = code.origin;
                 }
@@ -309,14 +309,14 @@ if (self2) {
                 if (typeof capitalizeFirstCharacter === "function") {
                   const formatted2 = str24.charAt(0).toUpperCase();
                   const sum2 = formatted2 + str24.slice(1);
-                  verb = tmp27.verb;
-                  let str2 = code.minimum.toString();
+                  const verb = tmp27.verb;
+                  const str83 = code.minimum.toString();
                   let str39 = tmp27.unit;
                   if (str39 == null) {
                     str39 = "element\u0173";
                   }
                   const _HermesInternal10 = HermesInternal;
-                  return "" + sum2 + " " + verb + " " + str2 + " " + str39;
+                  return "" + sum2 + " " + verb + " " + str83 + " " + str39;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -335,13 +335,13 @@ if (self2) {
                 if (typeof capitalizeFirstCharacter === "function") {
                   const formatted3 = str29.charAt(0).toUpperCase();
                   const sum3 = formatted3 + str29.slice(1);
-                  let str3 = code.minimum.toString();
+                  const str84 = code.minimum.toString();
                   let unit1;
                   if (tmp27 != null) {
                     unit1 = tmp27.unit;
                   }
                   const _HermesInternal9 = HermesInternal;
-                  return "" + sum3 + " turi b\u016Bti " + str28 + " " + str3 + " " + unit1;
+                  return "" + sum3 + " turi b\u016Bti " + str28 + " " + str84 + " " + unit1;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -388,7 +388,7 @@ if (self2) {
             case "invalid_union":
               return "Klaidinga \u012Fvestis";
             case "invalid_element":
-              str = closure_2[code.origin];
+              let str = closure_2[code.origin];
               if (str == null) {
                 str = code.origin;
               }
@@ -399,10 +399,8 @@ if (self2) {
                 str = "reik\u0161m\u0117";
               }
               if (typeof capitalizeFirstCharacter === "function") {
-                str2 = str.charAt(0);
-                const formatted4 = str2.toUpperCase();
+                const formatted4 = str.charAt(0).toUpperCase();
                 const _HermesInternal = HermesInternal;
-                str3 = " turi klaiding\u0105 \u012Fvest\u012F";
                 return "" + formatted4 + str.slice(1) + " turi klaiding\u0105 \u012Fvest\u012F";
               } else {
                 throw new TypeError("Trying to call a non-function");
@@ -412,7 +410,7 @@ if (self2) {
               return "Klaidinga \u012Fvestis";
           }
         };
-        return string;
+        return obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }

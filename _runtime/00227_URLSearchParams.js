@@ -1,8 +1,9 @@
 // _runtime/00227_URLSearchParams.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray_mod from "metro/00032__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
+let _slicedToArray = _slicedToArray_mod;
 class URLSearchParams {
   constructor(arg0) {
     self = this;
@@ -135,8 +136,8 @@ let items = [
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -150,8 +151,8 @@ let items = [
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  let obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_5 = tmp3;
                   closure_133_0 = undefined;
@@ -184,7 +185,7 @@ let items = [
                 c8 = 0;
                 closure_1.return();
                 c9 = 3;
-                obj = { value, done: true };
+                let obj = { value, done: true };
                 return obj;
               } else {
                 c8 = 1;
@@ -196,8 +197,8 @@ let items = [
                 closure_133_1 = tmp20;
                 c6 = 3;
                 c9 = 1;
-                let obj1 = { value: closure_133_1, done: false };
-                return obj1;
+                let obj4 = { value: closure_133_1, done: false };
+                return obj4;
               }
             }
           }
@@ -221,8 +222,8 @@ let items = [
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -236,8 +237,8 @@ let items = [
                   throw value;
                 } else if (arg0 === 2) {
                   c10 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  let obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_6 = tmp;
                   closure_5 = tmp2;
@@ -277,7 +278,7 @@ let items = [
                 c8 = 0;
                 closure_1.return();
                 c10 = 3;
-                obj = { value, done: true };
+                let obj = { value, done: true };
                 return obj;
               } else {
                 c8 = 1;
@@ -291,8 +292,8 @@ let items = [
                 items[1] = closure_133_4;
                 c9 = 3;
                 c10 = 1;
-                let obj1 = { value: items, done: false };
-                return obj1;
+                let obj4 = { value: items, done: false };
+                return obj4;
               }
             }
           }

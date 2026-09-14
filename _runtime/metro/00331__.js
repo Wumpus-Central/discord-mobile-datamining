@@ -5,7 +5,7 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
   let tmp = width(height[1])(source.source);
   ({ referrerPolicy, src, srcSet, width } = source);
   height = source.height;
-  let headers = {};
+  const headers = {};
   if ("use-credentials" === source.crossOrigin) {
     headers["Access-Control-Allow-Credentials"] = "true";
   }
@@ -62,10 +62,10 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
         const _Object = Object;
         tmp2 = tmp;
         if (Object.keys(headers).length > 0) {
-          headers = {};
+          const obj2 = {};
           const merged = Object.assign(tmp);
-          headers.headers = headers;
-          const items2 = [headers];
+          obj2.headers = headers;
+          const items2 = [obj2];
           tmp2 = items2;
         }
       }

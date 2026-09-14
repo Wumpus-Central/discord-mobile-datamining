@@ -8,22 +8,22 @@ import enrichAndroidProfileWithEventContext from "00983_enrichAndroidProfileWith
 import _mod987 from "metro/00987__.js";
 import mapSamples from "00989_mapSamples.js";
 
+const require = globalThis.__r;
+
 function stopProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;
   const stopProfilingResult = NATIVE.stopProfiling();
   if (stopProfilingResult) {
     const _Date = Date;
     const result = Date.now() * c2;
-    let tmpResult = mapSamples;
-    const result1 = tmpResult.convertToSentryProfile(stopProfilingResult.hermesProfile);
+    const result1 = mapSamples.convertToSentryProfile(stopProfilingResult.hermesProfile);
     if (result1) {
-      tmpResult = enrichAndroidProfileWithEventContext;
-      const hermesProfilingEvent = tmpResult.createHermesProfilingEvent(result1);
+      const hermesProfilingEvent = enrichAndroidProfileWithEventContext.createHermesProfilingEvent(result1);
       if (hermesProfilingEvent) {
         if (stopProfilingResult.androidProfile) {
           const _Object3 = Object;
           const _Object4 = Object;
-          let obj = {
+          const obj = {
             platform: "android",
             js_profile: hermesProfilingEvent.profile,
             duration_ns: null,
@@ -39,7 +39,7 @@ function stopProfiling(arg0) {
           let measurements = stopProfilingResult.nativeProfile;
           const _Object = Object;
           const _Object2 = Object;
-          obj = { profile: null };
+          const obj2 = { profile: null };
           const profile = hermesProfilingEvent.profile;
           const merged1 = Object.assign({}, hermesProfilingEvent);
           addNativeThreadCpuProfileToHermes(
@@ -47,8 +47,8 @@ function stopProfiling(arg0) {
             measurements.profile,
             hermesProfilingEvent.transaction.active_thread_id,
           );
-          obj.profile = profile;
-          let merged2 = Object.assign(merged1, obj);
+          obj2.profile = profile;
+          let merged2 = Object.assign(merged1, obj2);
           const debug_meta = measurements.debug_meta;
           let images;
           if (null !== debug_meta) {
@@ -57,25 +57,27 @@ function stopProfiling(arg0) {
             }
           }
           if (images) {
-            const obj1 = { debug_meta: null };
-            const obj2 = { images: measurements.debug_meta.images };
-            obj1.debug_meta = obj2;
-            let obj3 = obj1;
+            const obj3 = { debug_meta: null };
+            const obj4 = { images: measurements.debug_meta.images };
+            obj3.debug_meta = obj4;
+            let obj5 = obj3;
           } else {
-            obj3 = {};
+            obj5 = {};
           }
-          merged2 = Object.assign(merged2, obj3);
-          const obj4 = { measurements: null };
+          merged2 = Object.assign(merged2, obj5);
+          const obj6 = { measurements: null };
           measurements = measurements.measurements;
-          obj4.measurements = measurements;
-          const merged3 = Object.assign(merged2, obj4);
+          obj6.measurements = measurements;
+          const merged3 = Object.assign(merged2, obj6);
         }
       } else {
         return null;
       }
+      const tmpResult2 = enrichAndroidProfileWithEventContext;
     } else {
       return null;
     }
+    const tmpResult = mapSamples;
   } else {
     return null;
   }
@@ -85,12 +87,12 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
   profile.thread_metadata = Object.assign(Object.assign({}, profile2.thread_metadata), profile.thread_metadata);
   profile.queue_metadata = Object.assign(Object.assign({}, profile2.queue_metadata), profile.queue_metadata);
   if (profile2.frames) {
-    let frames = profile2.frames;
+    const frames = profile2.frames;
     for (const item10032 of frames) {
-      frames = arg0.frames;
+      let frames1 = arg0.frames;
       let obj = { function: null, instruction_addr: null, platform: "Array" };
       ({ function: obj.function, instruction_addr: obj.instruction_addr } = item10032);
-      let arr = frames.push(obj);
+      let arr = frames1.push(obj);
       continue;
     }
   }
@@ -125,8 +127,9 @@ export const hermesProfilingIntegration = () => {
       _finishCurrentProfile();
       if (typeof _shouldStartProfiling === "function") {
         const tmpResult = _mod682;
+        const tmpResult2 = _mod682;
         if (spanIsSampledResult) {
-          const client = tmpResult.getClient();
+          const client = tmpResult2.getClient();
           let getOptions;
           if (null != client) {
             getOptions = client.getOptions;
@@ -159,11 +162,11 @@ export const hermesProfilingIntegration = () => {
             }
           }
         } else {
-          const debug = tmpResult.debug;
+          const debug = tmpResult2.debug;
           debug.log("[Profiling] Transaction is not sampled, skipping profiling");
           // // eliminated: always false
         }
-        spanIsSampledResult = tmpResult.spanIsSampled(activeSpan);
+        spanIsSampledResult = _mod682.spanIsSampled(activeSpan);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -235,16 +238,16 @@ export const hermesProfilingIntegration = () => {
         trace = contexts.trace;
       }
     }
-    let data;
+    let data1;
     if (null !== trace) {
       if (undefined !== trace) {
-        data = trace.data;
+        data1 = trace.data;
       }
     }
     let profile_id;
-    if (null !== data) {
-      if (undefined !== data) {
-        profile_id = data.profile_id;
+    if (null !== data1) {
+      if (undefined !== data1) {
+        profile_id = data1.profile_id;
       }
     }
     if (typeof profile_id !== "string") {
@@ -262,20 +265,20 @@ export const hermesProfilingIntegration = () => {
           trace1 = contexts1.trace;
         }
       }
-      let data1;
+      let data2;
       if (null !== trace1) {
         if (undefined !== trace1) {
-          data1 = trace1.data;
+          data2 = trace1.data;
         }
       }
       let profile_id1;
-      if (null !== data1) {
-        if (undefined !== data1) {
-          profile_id1 = data1.profile_id;
+      if (null !== data2) {
+        if (undefined !== data2) {
+          profile_id1 = data2.profile_id;
         }
       }
       if (profile_id1) {
-        data = contexts.contexts.trace.data;
+        const data = contexts.contexts.trace.data;
         delete tmp2[tmp];
       }
       const PROFILE_QUEUE = _undefined(_undefined2[3]).PROFILE_QUEUE;
@@ -374,7 +377,7 @@ export const createAndroidWithHermesProfile = function createAndroidWithHermesPr
   return Object.assign(merged, obj);
 };
 export const addNativeProfileToHermesProfile = function addNativeProfileToHermesProfile(profile, measurements) {
-  let obj = { profile: null };
+  const obj = { profile: null };
   profile = profile.profile;
   const merged = Object.assign({}, profile);
   addNativeThreadCpuProfileToHermes(profile, measurements.profile, profile.transaction.active_thread_id);
@@ -388,13 +391,13 @@ export const addNativeProfileToHermesProfile = function addNativeProfileToHermes
     }
   }
   if (images) {
-    obj = { debug_meta: null };
-    obj = { images: measurements.debug_meta.images };
-    obj.debug_meta = obj;
-    let obj1 = obj;
+    const obj2 = { debug_meta: null };
+    const obj3 = { images: measurements.debug_meta.images };
+    obj2.debug_meta = obj3;
+    let obj4 = obj2;
   } else {
-    obj1 = {};
+    obj4 = {};
   }
-  return Object.assign(Object.assign(merged1, obj1), { measurements: measurements.measurements });
+  return Object.assign(Object.assign(merged1, obj4), { measurements: measurements.measurements });
 };
 export { addNativeThreadCpuProfileToHermes };

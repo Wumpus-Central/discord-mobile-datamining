@@ -1,17 +1,19 @@
 // _runtime/04130_previousWednesday.js
-import requiredArgs from "03726_requiredArgs.js";
-import previousDay from "04123_previousDay.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
+import previousDay_mod from "04123_previousDay.js";
 
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
+let previousDay = previousDay_mod;
 if (!previousDay) {
-  obj = { default: previousDay };
-  let tmp5 = obj;
+  const obj2 = { default: previousDay };
+  let tmp5 = obj2;
 } else {
   tmp5 = previousDay;
 }

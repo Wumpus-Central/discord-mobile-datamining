@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof typeLabel === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        let obj2 = {
           string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA", gender: "f" },
           number: { label: "\u05DE\u05E1\u05E4\u05E8", gender: "m" },
           boolean: { label: "\u05E2\u05E8\u05DA \u05D1\u05D5\u05DC\u05D9\u05D0\u05E0\u05D9", gender: "m" },
@@ -78,7 +78,7 @@ if (self2) {
           unknown: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2", gender: "m" },
           value: { label: "\u05E2\u05E8\u05DA", gender: "m" },
         };
-        obj = {
+        const obj3 = {
           string: {
             unit: "\u05EA\u05D5\u05D5\u05D9\u05DD",
             shortLabel: "\u05E7\u05E6\u05E8",
@@ -106,7 +106,7 @@ if (self2) {
         function withDefinite(arg0) {}
         function verbFor(arg0) {}
         function getSizing(arg0) {}
-        const obj1 = {
+        const obj4 = {
           regex: { label: "\u05E7\u05DC\u05D8", gender: "m" },
           email: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC", gender: "f" },
           url: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05E8\u05E9\u05EA", gender: "f" },
@@ -155,15 +155,16 @@ if (self2) {
                 const parsedTypeResult = typeEntry.parsedType(code.input);
                 let tmp119 = dependencyMap[parsedTypeResult];
                 if (tmp119 == null) {
-                  label = undefined;
-                  if (obj[parsedTypeResult] != null) {
-                    label = tmp121.label;
+                  let label1;
+                  if (obj2[parsedTypeResult] != null) {
+                    label1 = tmp121.label;
                   }
-                  tmp119 = label;
+                  tmp119 = label1;
                 }
                 if (tmp119 == null) {
                   tmp119 = parsedTypeResult;
                 }
+                obj2 = /^[A-Z]/;
                 if (obj2.test(code.expected)) {
                   const _HermesInternal33 = HermesInternal;
                   let combined =
@@ -184,12 +185,12 @@ if (self2) {
                 if (typeof typeEntry === "function") {
                   let tmp113;
                   if (label) {
-                    tmp113 = obj[label];
+                    tmp113 = obj2[label];
                   }
                   if (tmp113) {
                     label = tmp113.label;
                   } else if (label == null) {
-                    label = obj.unknown.label;
+                    label = obj2.unknown.label;
                   }
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -233,7 +234,7 @@ if (self2) {
               if (typeof getSizing === "function") {
                 let tmp67 = null;
                 if (origin3) {
-                  let tmp69 = obj[origin3];
+                  let tmp69 = obj3[origin3];
                   if (tmp69 == null) {
                     tmp69 = null;
                   }
@@ -248,12 +249,12 @@ if (self2) {
                     if (typeof typeEntry === "function") {
                       let tmp73;
                       if (str79) {
-                        tmp73 = obj[str79];
+                        tmp73 = obj2[str79];
                       }
                       if (tmp73) {
                         str79 = tmp73.label;
                       } else if (str79 == null) {
-                        str79 = obj.unknown.label;
+                        str79 = obj2.unknown.label;
                       }
                       const _HermesInternal20 = HermesInternal;
                       const combined1 = "\u05D4" + str79;
@@ -265,7 +266,7 @@ if (self2) {
                         if (str118 == null) {
                           str118 = "\u05D0\u05E8\u05D5\u05DA";
                         }
-                        let str = code.maximum.toString();
+                        const str1 = code.maximum.toString();
                         let str120;
                         if (tmp67 != null) {
                           str120 = tmp67.unit;
@@ -284,7 +285,7 @@ if (self2) {
                           " \u05DE\u05D3\u05D9: " +
                           combined1 +
                           " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " +
-                          str +
+                          str1 +
                           " " +
                           str120 +
                           " " +
@@ -320,7 +321,7 @@ if (self2) {
                               if (typeof tmp72 === "function") {
                                 let tmp79;
                                 if (str83) {
-                                  tmp79 = obj[str83];
+                                  tmp79 = obj2[str83];
                                 }
                                 let str84;
                                 if (tmp79 != null) {
@@ -434,7 +435,7 @@ if (self2) {
               if (typeof getSizing === "function") {
                 let tmp25 = null;
                 if (origin) {
-                  let tmp27 = obj[origin];
+                  let tmp27 = obj3[origin];
                   if (tmp27 == null) {
                     tmp27 = null;
                   }
@@ -449,12 +450,12 @@ if (self2) {
                     if (typeof typeEntry === "function") {
                       let tmp31;
                       if (str25) {
-                        tmp31 = obj[str25];
+                        tmp31 = obj2[str25];
                       }
                       if (tmp31) {
                         str25 = tmp31.label;
                       } else if (str25 == null) {
-                        str25 = obj.unknown.label;
+                        str25 = obj2.unknown.label;
                       }
                       const _HermesInternal10 = HermesInternal;
                       const combined4 = "\u05D4" + str25;
@@ -466,7 +467,7 @@ if (self2) {
                         if (str68 == null) {
                           str68 = "\u05E7\u05E6\u05E8";
                         }
-                        const str1 = code.minimum.toString();
+                        const str167 = code.minimum.toString();
                         let str70;
                         if (tmp25 != null) {
                           str70 = tmp25.unit;
@@ -485,7 +486,7 @@ if (self2) {
                           " \u05DE\u05D3\u05D9: " +
                           combined4 +
                           " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " +
-                          str1 +
+                          str167 +
                           " " +
                           str70 +
                           " " +
@@ -521,7 +522,7 @@ if (self2) {
                               if (typeof tmp30 === "function") {
                                 let tmp37;
                                 if (str29) {
-                                  tmp37 = obj[str29];
+                                  tmp37 = obj2[str29];
                                 }
                                 let str30;
                                 if (tmp37 != null) {
@@ -679,15 +680,15 @@ if (self2) {
                   code.pattern
                 );
               } else {
-                let label1;
-                if (obj1[code.format] != null) {
-                  label1 = tmp15.label;
+                let label2;
+                if (obj4[code.format] != null) {
+                  label2 = tmp15.label;
                 }
-                if (label1 == null) {
-                  label1 = code.format;
+                if (label2 == null) {
+                  label2 = code.format;
                 }
                 let str13;
-                if (obj1[code.format] != null) {
+                if (obj4[code.format] != null) {
                   str13 = tmp15.gender;
                 }
                 if (str13 == null) {
@@ -698,7 +699,7 @@ if (self2) {
                   str14 = "\u05EA\u05E7\u05D9\u05E0\u05D4";
                 }
                 const _HermesInternal5 = HermesInternal;
-                return "" + label1 + " \u05DC\u05D0 " + str14;
+                return "" + label2 + " \u05DC\u05D0 " + str14;
               }
               break;
             case "not_multiple_of":
@@ -730,7 +731,7 @@ if (self2) {
             case "invalid_union":
               return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";
             case "invalid_element":
-              str = code.origin;
+              let str = code.origin;
               if (str == null) {
                 str = "array";
               }
@@ -739,12 +740,12 @@ if (self2) {
                   if (typeof typeEntry === "function") {
                     let tmp5;
                     if (str) {
-                      tmp5 = obj[str];
+                      tmp5 = obj2[str];
                     }
                     if (tmp5) {
                       str = tmp5.label;
                     } else if (str == null) {
-                      str = obj.unknown.label;
+                      str = obj2.unknown.label;
                     }
                     const _HermesInternal = HermesInternal;
                     const _HermesInternal2 = HermesInternal;

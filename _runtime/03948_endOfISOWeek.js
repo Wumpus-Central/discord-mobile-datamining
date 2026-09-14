@@ -1,17 +1,19 @@
 // _runtime/03948_endOfISOWeek.js
-import endOfWeek from "03949_endOfWeek.js";
-import requiredArgs from "03726_requiredArgs.js";
+import endOfWeek_mod from "03949_endOfWeek.js";
+import requiredArgs_mod from "03726_requiredArgs.js";
 
+let endOfWeek = endOfWeek_mod;
 if (!endOfWeek) {
-  let obj = { default: endOfWeek };
+  const obj = { default: endOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = endOfWeek;
 }
 endOfWeek = tmp3;
+let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }

@@ -1,11 +1,10 @@
 // _runtime/metro/05323__.js
-let obj = { 4: null };
-obj = {
+const obj = { 4: null };
+obj[4] = {
   name: "ShotInfo",
   description(arg0) {
     return arg0;
   },
 };
-obj[4] = obj;
 
 export default obj;

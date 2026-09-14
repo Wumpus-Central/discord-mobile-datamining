@@ -8,11 +8,11 @@ try {
   exports.MaybeScreenContainer = (enabled) => {
     const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
     if (null != closure_0) {
-      let obj = { enabled: enabled.enabled };
+      const obj2 = { enabled: enabled.enabled };
       const merged1 = Object.assign(merged);
       let tmp8 = <tmp2.ScreenContainer enabled={enabled.enabled} />;
     } else {
-      obj = {};
+      const obj = {};
       const merged2 = Object.assign(merged);
       tmp8 = <View />;
     }
@@ -22,11 +22,11 @@ try {
     ({ enabled, active } = arg0);
     const merged = Object.assign(arg0, Object.assign({ enabled: 0, active: 0 }));
     if (null != closure_0) {
-      let obj = { enabled, activityState: active };
+      const obj2 = { enabled, activityState: active };
       const merged1 = Object.assign(merged);
       let tmp8 = <tmp2.Screen enabled={enabled} activityState={active} />;
     } else {
-      obj = {};
+      const obj = {};
       const merged2 = Object.assign(merged);
       tmp8 = <View />;
     }

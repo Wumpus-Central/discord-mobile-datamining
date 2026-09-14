@@ -1,5 +1,5 @@
 // _runtime/metro/07470__.js
-let obj = {
+const obj = {
   v: "4.8.0",
   meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
   fr: 60,
@@ -14,8 +14,8 @@ let obj = {
   markers: [],
 };
 const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
-obj = { id: "comp_0", layers: null };
-obj = {
+const obj2 = { id: "comp_0", layers: null };
+const obj3 = {
   ddd: 0,
   ind: 3,
   ty: 2,
@@ -35,11 +35,11 @@ obj = {
   st: 0,
   bm: 0,
 };
-const items1 = [obj];
-obj.layers = items1;
-items[1] = obj;
+const items1 = [obj3];
+obj2.layers = items1;
+items[1] = obj2;
 obj.assets = items;
-const obj2 = {
+const obj5 = {
   ddd: 0,
   ind: 1,
   ty: 0,
@@ -55,14 +55,14 @@ const obj2 = {
   st: 30,
   bm: 0,
 };
-const obj3 = {
+const obj6 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: { a: 0, k: [512, 512, 100], ix: 6 },
 };
-const obj4 = { a: 1, k: null, ix: 2 };
+const obj7 = { a: 1, k: null, ix: 2 };
 const items2 = [
   {
     i: { x: 0.833, y: 0.833 },
@@ -74,11 +74,11 @@ const items2 = [
   },
   { t: 87, s: [809.6, 960, 0] },
 ];
-obj4.k = items2;
-obj3.p = obj4;
-obj2.ks = obj3;
-const items3 = [obj2, , , ,];
-const obj5 = {
+obj7.k = items2;
+obj6.p = obj7;
+obj5.ks = obj6;
+const items3 = [obj5, , , ,];
+const obj8 = {
   ddd: 0,
   ind: 2,
   ty: 0,
@@ -94,14 +94,14 @@ const obj5 = {
   st: 41,
   bm: 0,
 };
-const obj6 = {
+const obj9 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: { a: 0, k: [583.2, 583.2, 100], ix: 6 },
 };
-const obj7 = { a: 1, k: null, ix: 2 };
+const obj10 = { a: 1, k: null, ix: 2 };
 const items4 = [
   {
     i: { x: 0.833, y: 0.833 },
@@ -113,11 +113,11 @@ const items4 = [
   },
   { t: 77, s: [313.6, 960, 0] },
 ];
-obj7.k = items4;
-obj6.p = obj7;
-obj5.ks = obj6;
-items3[1] = obj5;
-const obj8 = {
+obj10.k = items4;
+obj9.p = obj10;
+obj8.ks = obj9;
+items3[1] = obj8;
+const obj11 = {
   ddd: 0,
   ind: 3,
   ty: 0,
@@ -133,14 +133,14 @@ const obj8 = {
   st: 19,
   bm: 0,
 };
-const obj9 = {
+const obj12 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: { a: 0, k: [583.2, 583.2, 100], ix: 6 },
 };
-const obj10 = { a: 1, k: null, ix: 2 };
+const obj13 = { a: 1, k: null, ix: 2 };
 const items5 = [
   {
     i: { x: 0.833, y: 0.833 },
@@ -152,11 +152,11 @@ const items5 = [
   },
   { t: 55, s: [1065.6, 960, 0] },
 ];
-obj10.k = items5;
-obj9.p = obj10;
-obj8.ks = obj9;
-items3[2] = obj8;
-const obj11 = {
+obj13.k = items5;
+obj12.p = obj13;
+obj11.ks = obj12;
+items3[2] = obj11;
+const obj14 = {
   ddd: 0,
   ind: 4,
   ty: 0,
@@ -172,14 +172,14 @@ const obj11 = {
   st: 7,
   bm: 0,
 };
-const obj12 = {
+const obj15 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: { a: 0, k: [412.8, 412.8, 100], ix: 6 },
 };
-const obj13 = { a: 1, k: null, ix: 2 };
+const obj16 = { a: 1, k: null, ix: 2 };
 const items6 = [
   {
     i: { x: 0.833, y: 0.833 },
@@ -191,11 +191,11 @@ const items6 = [
   },
   { t: 77, s: [704, 960, 0] },
 ];
-obj13.k = items6;
-obj12.p = obj13;
-obj11.ks = obj12;
-items3[3] = obj11;
-const obj14 = {
+obj16.k = items6;
+obj15.p = obj16;
+obj14.ks = obj15;
+items3[3] = obj14;
+const obj17 = {
   ddd: 0,
   ind: 5,
   ty: 0,
@@ -211,14 +211,14 @@ const obj14 = {
   st: 0,
   bm: 0,
 };
-const obj15 = {
+const obj18 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: { a: 0, k: [512, 512, 100], ix: 6 },
 };
-const obj16 = { a: 1, k: null, ix: 2 };
+const obj19 = { a: 1, k: null, ix: 2 };
 const items7 = [
   {
     i: { x: 0.833, y: 0.833 },
@@ -230,10 +230,10 @@ const items7 = [
   },
   { t: 57, s: [156.8, 960, 0] },
 ];
-obj16.k = items7;
-obj15.p = obj16;
-obj14.ks = obj15;
-items3[4] = obj14;
+obj19.k = items7;
+obj18.p = obj19;
+obj17.ks = obj18;
+items3[4] = obj17;
 obj.layers = items3;
 
 export default obj;

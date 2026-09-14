@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300.5,
   height: 175,
   scales: [2, 3],
-  hash: "767971903774f3e283939a2d77b5c958",
-  name: "server_boosts",
+  hash: "034593f3dac51b7d85899e7191ac5a9f",
+  name: "client_theme",
   type: "png",
 });

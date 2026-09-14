@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "caracteres", verb: "tener" },
           file: { unit: "bytes", verb: "tener" },
           array: { unit: "elementos", verb: "tener" },
@@ -130,7 +130,6 @@ if (self2) {
               if (tmp56 == null) {
                 tmp56 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Entrada inv\u00E1lida: se esperaba instanceof " + code.expected + ", recibido " + tmp56;
@@ -153,7 +152,7 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp34 = obj[code.origin];
+              let tmp34 = obj2[code.origin];
               if (tmp34 == null) {
                 tmp34 = null;
               }
@@ -165,13 +164,13 @@ if (self2) {
                 if (str28 == null) {
                   str28 = "valor";
                 }
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str34 = tmp34.unit;
                 if (str34 == null) {
                   str34 = "elementos";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Demasiado grande: se esperaba que " + str28 + " tuviera " + str27 + str + " " + str34;
+                let combined2 = "Demasiado grande: se esperaba que " + str28 + " tuviera " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
@@ -186,7 +185,7 @@ if (self2) {
               if (code.inclusive) {
                 str20 = ">=";
               }
-              let tmp21 = obj[code.origin];
+              let tmp21 = obj2[code.origin];
               if (tmp21 == null) {
                 tmp21 = null;
               }
@@ -194,14 +193,14 @@ if (self2) {
               if (origin3 == null) {
                 origin3 = code.origin;
               }
-              const str1 = code.minimum.toString();
+              const str48 = code.minimum.toString();
               if (tmp21) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "Demasiado peque\u00F1o: se esperaba que " + origin3 + " tuviera " + str20 + str1 + " " + tmp21.unit;
+                  "Demasiado peque\u00F1o: se esperaba que " + origin3 + " tuviera " + str20 + str48 + " " + tmp21.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " fuera " + str20 + str1;
+                combined3 = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " fuera " + str20 + str48;
               }
               return combined3;
             case "invalid_format":
@@ -255,7 +254,6 @@ if (self2) {
                 origin = code.origin;
               }
               const _HermesInternal = HermesInternal;
-              str = "Valor inv\u00E1lido en ";
               return "Valor inv\u00E1lido en " + origin;
             default:
               return "Entrada inv\u00E1lida";

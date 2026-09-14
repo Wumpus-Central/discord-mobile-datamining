@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 40,
   height: 40.5,
   scales: [2, 3],
-  hash: "4247c923735157dd7bfbbedd55448819",
-  name: "role_subscription_benefit_bunny_avatar",
+  hash: "a3768a48fee4076951a25e660d265530",
+  name: "role_subscription_benefit_wise_avatar",
   type: "png",
 });

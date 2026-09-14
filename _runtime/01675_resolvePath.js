@@ -55,44 +55,42 @@ const __initData = {
 };
 function withStyleAnimation(animations) {
   _require = animations;
-  require("metro/01676__.js");
   const fn = function i() {
     return {
       isHigherOrder: true,
       onFrame(styleAnimations, arg1) {
-        let obj = { value: styleAnimations.styleAnimations, path: [] };
-        const items = [obj];
+        const items = [{ value: styleAnimations.styleAnimations, path: [] }];
         let flag = false;
         let flag2 = false;
         while (items.length > 0) {
           let iter = items.pop();
           let _Array = Array;
-          value = iter.value;
+          value2 = iter.value;
           if (Array.isArray(iter.value)) {
             let num = 0;
             let tmp2 = flag;
-            if (0 < value.length) {
+            if (0 < value2.length) {
               do {
-                obj = { value: iter.value[num], path: null };
+                let obj2 = { value: iter.value[num], path: null };
                 let path2 = iter.path;
-                obj.path = path2.concat(num);
-                let arr = items.push(obj);
+                obj2.path = path2.concat(num);
+                let arr = items.push(obj2);
                 num = num + 1;
                 tmp2 = flag;
                 length = iter.value.length;
               } while (num < length);
             }
           } else {
-            if (typeof value === "object") {
+            if (typeof value2 === "object") {
               if (undefined === iter.value.onFrame) {
                 let _Object = Object;
                 let keys = Object.keys(iter.value);
                 tmp2 = flag;
                 for (const item10057 of keys) {
-                  obj = { value: iter.value[item10057], path: null };
+                  let obj3 = { value: iter.value[item10057], path: null };
                   let path = iter.path;
-                  obj.path = path.concat(item10057);
-                  arr = items.push(obj);
+                  obj3.path = path.concat(item10057);
+                  let arr2 = items.push(obj3);
                   continue;
                 }
               }
@@ -127,35 +125,34 @@ function withStyleAnimation(animations) {
         return !flag2;
       },
       onStart(current, styleAnimations, arg2, styleAnimations) {
-        let obj = { value, path: [] };
-        const items = [obj];
+        const items = [{ value, path: [] }];
         if (items.length > 0) {
           do {
             let iter = items.pop();
             let _Array = Array;
-            value = iter.value;
+            value2 = iter.value;
             if (Array.isArray(iter.value)) {
               let num = 0;
-              if (0 < value.length) {
+              if (0 < value2.length) {
                 do {
-                  obj = { value: iter.value[num], path: null };
+                  let obj3 = { value: iter.value[num], path: null };
                   let path2 = iter.path;
-                  obj.path = path2.concat(num);
-                  let arr = items.push(obj);
+                  obj3.path = path2.concat(num);
+                  let arr = items.push(obj3);
                   num = num + 1;
                   length = iter.value.length;
                 } while (num < length);
               }
             } else {
-              if (typeof value === "object") {
+              if (typeof value2 === "object") {
                 if (undefined === iter.value.onStart) {
                   let _Object = Object;
                   let keys = Object.keys(iter.value);
                   for (const item10061 of keys) {
-                    obj = { value: iter.value[item10061], path: null };
+                    let obj4 = { value: iter.value[item10061], path: null };
                     let path = iter.path;
-                    obj.path = path.concat(item10061);
-                    arr = items.push(obj);
+                    obj4.path = path.concat(item10061);
+                    let arr2 = items.push(obj4);
                     continue;
                   }
                 }
@@ -187,6 +184,7 @@ function withStyleAnimation(animations) {
             }
           } while (items.length > 0);
         }
+        const obj = { value, path: [] };
       },
       current: {},
       styleAnimations,
@@ -199,7 +197,7 @@ function withStyleAnimation(animations) {
               let _Array = Array;
               if (Array.isArray(arr)) {
                 for (const item10031 of arr) {
-                  arr = items.push(item10031);
+                  let arr4 = items.push(item10031);
                   continue;
                 }
               } else {
@@ -208,7 +206,7 @@ function withStyleAnimation(animations) {
                     let _Object = Object;
                     let values = Object.values(arr);
                     for (const item10023 of values) {
-                      let arr1 = items.push(item10023);
+                      let arr5 = items.push(item10023);
                       continue;
                     }
                   }
@@ -228,7 +226,8 @@ function withStyleAnimation(animations) {
       },
     };
   };
-  let obj = {
+  let obj = require("metro/01676__.js");
+  fn.__closure = {
     ColorProperties: require("metro/01679__.js").ColorProperties,
     setPath,
     processColor: require("metro/01679__.js").processColor,
@@ -239,7 +238,6 @@ function withStyleAnimation(animations) {
     isValidLayoutAnimationProp: require("metro/01676__.js").isValidLayoutAnimationProp,
     withTiming: require("metro/01687__.js").withTiming,
   };
-  fn.__closure = obj;
   fn.__workletHash = 1293354823532;
   fn.__initData = __initData;
   return obj.defineAnimation({}, fn);

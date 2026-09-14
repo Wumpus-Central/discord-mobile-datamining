@@ -11,7 +11,6 @@ function _createNativeObserver2() {
   const self = this;
   _classPrivateFieldBase(this, closure_11)[closure_11] = false;
   const observer = NativePerformanceCxx.createObserver(() => {
-    let obj = NativePerformanceCxx;
     const takeRecordsResult = NativePerformanceCxx.takeRecords(observer, true);
     if (takeRecordsResult) {
       if (0 !== takeRecordsResult.length) {
@@ -20,11 +19,11 @@ function _createNativeObserver2() {
         );
         let num2 = 0;
         if (!_classPrivateFieldBase(self, closure_11)[closure_11]) {
-          num2 = obj.getDroppedEntriesCount(observer);
+          num2 = NativePerformanceCxx.getDroppedEntriesCount(observer);
           _classPrivateFieldBase(self, closure_11)[closure_11] = true;
         }
-        obj = { droppedEntriesCount: num2 };
-        _classPrivateFieldBase(self, closure_9)[closure_9](tmp11, self, obj);
+        const obj2 = { droppedEntriesCount: num2 };
+        _classPrivateFieldBase(self, closure_9)[closure_9](tmp11, self, obj2);
         const tmp12Result = _classPrivateFieldBase(self, closure_9);
       }
     }
@@ -149,8 +148,8 @@ class PerformanceObserver {
     tmp = closure_3(this, PerformanceObserver);
     obj = { value: closure_2_15 };
     definePropertyResult = Object.defineProperty(this, closure_13, obj);
-    obj = { value: closure_2_14 };
-    definePropertyResult1 = Object.defineProperty(this, closure_12, obj);
+    obj1 = { value: closure_2_14 };
+    definePropertyResult1 = Object.defineProperty(this, closure_12, obj1);
     definePropertyResult2 = Object.defineProperty(this, closure_8, { writable: true, value: null });
     definePropertyResult3 = Object.defineProperty(this, closure_9, { writable: true, value: "a" });
     definePropertyResult4 = Object.defineProperty(this, c10, { writable: true, value: "a" });
@@ -165,21 +164,21 @@ const entry1 = {
     const self = this;
     _classPrivateFieldBase(this, closure_13)[closure_13](entryTypes);
     if (null == _classPrivateFieldBase(this, closure_8)[closure_8]) {
-      _classPrivateFieldBase(self, closure_8);
-      const tmpResult = _classPrivateFieldBase(self, closure_12);
-      tmpResult[closure_8] = tmpResult[closure_12]();
+      const tmpResult = _classPrivateFieldBase(self, closure_8);
+      tmpResult[closure_8] = _classPrivateFieldBase(self, closure_12)[closure_12]();
+      const tmpResult2 = _classPrivateFieldBase(self, closure_12);
     }
     const tmp2 = _classPrivateFieldBase(this, closure_13);
     const tmp9Result = nullthrows(_classPrivateFieldBase(self, closure_8)[closure_8]);
     if (entryTypes.entryTypes) {
       _classPrivateFieldBase(self, closure_10)[closure_10] = "multiple";
-      let obj = { entryTypes: null };
+      const obj3 = { entryTypes: null };
       entryTypes = entryTypes.entryTypes;
-      obj.entryTypes = entryTypes.map(PerformanceObserver(170).performanceEntryTypeToRaw);
-      NativePerformanceCxx.observe(tmp9Result, obj);
+      obj3.entryTypes = entryTypes.map(PerformanceObserver(170).performanceEntryTypeToRaw);
+      NativePerformanceCxx.observe(tmp9Result, obj3);
     } else if (entryTypes.type) {
       _classPrivateFieldBase(self, closure_10)[closure_10] = "single";
-      obj = {
+      const obj = {
         type: PerformanceObserver(170).performanceEntryTypeToRaw(entryTypes.type),
         buffered: null,
         durationThreshold: null,

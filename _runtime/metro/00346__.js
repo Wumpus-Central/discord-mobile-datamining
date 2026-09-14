@@ -50,8 +50,8 @@ class Modal {
     tmp7 = +closure_8;
     closure_8 = tmp7 + 1;
     tmp3Result._identifier = tmp7;
-    obj = { isRendered: true === global.visible };
-    tmp3Result.state = obj;
+    obj1 = { isRendered: true === global.visible };
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
@@ -95,7 +95,7 @@ let items = [
     value: function render() {
       const self = this;
       if (this._shouldShowModal()) {
-        let obj = {};
+        const obj = {};
         if (true === self.props.transparent) {
           obj.backgroundColor = "transparent";
         } else if (null != self.props.backdropColor) {
@@ -109,7 +109,7 @@ let items = [
           }
           presentationStyle = str2;
         }
-        obj = {
+        const obj2 = {
           animationType: self.props.animationType || "none",
           presentationStyle,
           transparent: self.props.transparent,
@@ -130,16 +130,36 @@ let items = [
           testID: self.props.testID,
           children: null,
         };
-        obj = { children: null };
-        const obj1 = { value: null, children: null };
-        const obj2 = { style: null, collapsable: false, children: null };
+        const obj3 = { children: null };
+        const obj4 = { value: null, children: null };
+        const obj5 = { style: null, collapsable: false, children: null };
         const items = [closure_10.container, self.props.style, obj];
-        obj2.style = items;
-        obj2.children = self.props.children;
-        obj1.children = jsx(Modal(108).default, { style: null, collapsable: false, children: null });
-        obj.children = jsx(Modal(349).default.Context.Provider, { value: null, children: null });
-        obj.children = jsx(get_VirtualizedListDefault.VirtualizedListContextResetter, { children: null });
-        return jsx(_modDef347, { children: null });
+        obj5.style = items;
+        obj5.children = self.props.children;
+        obj4.children = jsx(Modal(108).default, { style: null, collapsable: false, children: null });
+        obj3.children = jsx(Modal(349).default.Context.Provider, { value: null, children: null });
+        obj2.children = jsx(get_VirtualizedListDefault.VirtualizedListContextResetter, { children: null });
+        return jsx(_modDef347, {
+          animationType: self.props.animationType || "none",
+          presentationStyle,
+          transparent: self.props.transparent,
+          hardwareAccelerated: self.props.hardwareAccelerated,
+          onRequestClose: self.props.onRequestClose,
+          onShow: self.props.onShow,
+          onDismiss() {},
+          ref: self.props.modalRef,
+          visible: self.props.visible,
+          statusBarTranslucent: self.props.statusBarTranslucent,
+          navigationBarTranslucent: self.props.navigationBarTranslucent,
+          identifier: self._identifier,
+          style: closure_10.modal,
+          onStartShouldSetResponder: self._shouldSetResponder,
+          supportedOrientations: self.props.supportedOrientations,
+          onOrientationChange: self.props.onOrientationChange,
+          allowSwipeDismissal: self.props.allowSwipeDismissal,
+          testID: self.props.testID,
+          children: null,
+        });
       } else {
         return null;
       }

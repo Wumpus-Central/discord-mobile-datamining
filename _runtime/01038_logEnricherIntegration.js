@@ -14,7 +14,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -36,14 +36,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -57,16 +57,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 let c3;
@@ -84,8 +83,8 @@ export () => ({
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -98,8 +97,8 @@ export () => ({
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_0 = tmp7;
                 closure_128_0 = undefined;
@@ -107,24 +106,24 @@ export () => ({
                 const NATIVE = closure_0(tmp3[1]).NATIVE;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: NATIVE.fetchNativeLogAttributes(), done: false };
-                return obj1;
+                const obj4 = { value: NATIVE.fetchNativeLogAttributes(), done: false };
+                return obj4;
               }
             } else if (1 === tmp7) {
               c3 = 0;
               closure_128_1 = closure_2;
               const _HermesInternal = HermesInternal;
               c5 = 3;
-              const obj2 = { value: Promise.reject("[LOGS]: Failed to prepare attributes from Native Layer: " + closure_128_1), done: true };
-              return obj2;
+              const obj5 = { value: Promise.reject("[LOGS]: Failed to prepare attributes from Native Layer: " + closure_128_1), done: true };
+              return obj5;
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_128_0 = value;
               let contexts;
@@ -132,14 +131,14 @@ export () => ({
                 contexts = closure_128_0.contexts;
               }
               closure_129_0 = contexts;
-              let device;
+              let device1;
               if (null !== contexts) {
                 if (undefined !== contexts) {
-                  device = contexts.device;
+                  device1 = contexts.device;
                 }
               }
-              if (device) {
-                device = closure_128_0.contexts.device;
+              if (device1) {
+                const device = closure_128_0.contexts.device;
                 closure_129_1 = device;
                 let brand;
                 if (null !== device) {
@@ -147,7 +146,7 @@ export () => ({
                     brand = closure_129_1.brand;
                   }
                 }
-                obj = { brand, model: null, family: null };
+                const obj = { brand, model: null, family: null };
                 const device2 = closure_128_0.contexts.device;
                 closure_129_2 = device2;
                 let model;
@@ -166,10 +165,10 @@ export () => ({
                   }
                 }
                 obj.family = family;
-                device = obj;
+                device1 = obj;
               }
               let contexts1;
-              const merged = Object.assign({}, device);
+              const merged = Object.assign({}, device1);
               if (null != closure_128_0) {
                 contexts1 = closure_128_0.contexts;
               }
@@ -181,8 +180,8 @@ export () => ({
                 }
               }
               if (os) {
-                const obj4 = { os: closure_128_0.contexts.os.name, version: closure_128_0.contexts.os.version };
-                os = obj4;
+                const obj7 = { os: closure_128_0.contexts.os.name, version: closure_128_0.contexts.os.version };
+                os = obj7;
               }
               let contexts2;
               const merged1 = Object.assign(merged, os);
@@ -197,14 +196,14 @@ export () => ({
                 }
               }
               if (release) {
-                const obj5 = { release: closure_128_0.contexts.release };
-                release = obj5;
+                const obj8 = { release: closure_128_0.contexts.release };
+                release = obj8;
               }
               c3 = Object.assign(merged1, release);
               c3 = 0;
               c5 = 3;
-              const obj6 = { value: Promise.resolve(), done: true };
-              return obj6;
+              const obj9 = { value: Promise.resolve(), done: true };
+              return obj9;
             }
           } catch (tmp62) {
             closure_2 = tmp62;

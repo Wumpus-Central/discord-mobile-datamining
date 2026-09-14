@@ -2,7 +2,7 @@
 import hsl from "../05723_hsl.js";
 
 export default (arg0) => {
-  let obj = {};
+  const obj = {};
   const keys = Object.keys(hsl);
   for (let num = 0; num < length; num = num + 1) {
     obj[keys[num]] = { distance: -1, parent: null };
@@ -20,11 +20,11 @@ export default (arg0) => {
       if (-1 === tmp5.distance) {
         tmp5.distance = obj[arr].distance + 1;
         tmp5.parent = arr;
-        arr = items.unshift(tmp4);
+        let arr2 = items.unshift(tmp4);
       }
     }
   }
-  obj = {};
+  const obj2 = {};
   const keys2 = Object.keys(obj);
   for (let num3 = 0; num3 < length3; num3 = num3 + 1) {
     let tmp8 = keys2[num3];
@@ -35,7 +35,7 @@ export default (arg0) => {
       let tmp13 = fn;
       if (obj[parent3].parent) {
         do {
-          let arr1 = items1.unshift(obj[parent3].parent);
+          let arr3 = items1.unshift(obj[parent3].parent);
           closure_0 = hsl[obj[parent3].parent][parent3];
           fn = (arg0) => fn(closure_0(arg0));
           let parent = obj[parent3].parent;
@@ -45,8 +45,8 @@ export default (arg0) => {
         } while (parent2);
       }
       tmp13.conversion = items1;
-      obj[tmp8] = tmp13;
+      obj2[tmp8] = tmp13;
     }
   }
-  return obj;
+  return obj2;
 };

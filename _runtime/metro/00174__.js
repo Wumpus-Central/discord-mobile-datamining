@@ -1,6 +1,8 @@
 // _runtime/metro/00174__.js
 import polyfillObjectProperty from "../00123_polyfillObjectProperty.js";
 
+const require = globalThis.__r;
+
 let hasPromiseResult;
 if (global != null) {
   const _HermesInternal = global.HermesInternal;

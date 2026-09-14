@@ -1,8 +1,8 @@
 // _runtime/metro/01167__.js
-import _mod1159 from "01159__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod1157 from "01157__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c2 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -24,55 +24,24 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function formatToAst(content, arg1) {
-  if (typeof content === "string") {
-    const obj = { type: AstBuilder.Text, content };
-    const items = [obj];
-    let bindFormatValuesResult = items;
-  } else {
+function formatToPlainString(k2UNz_, time) {
+  let first = k2UNz_;
+  if (typeof k2UNz_ !== "string") {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(_moduleResult, content, arg1);
+    first = this.bindFormatValues(_moduleResult, k2UNz_, time)[0];
   }
-  return bindFormatValuesResult;
+  return first;
 }
-let obj = {};
-const AstBuilder = obj;
-obj.Text = "text";
-obj.Strong = "strong";
-obj.Emphasis = "em";
-obj.Strikethrough = "s";
-obj.Code = "inlineCode";
-obj.Link = "link";
-obj.Paragraph = "paragraph";
-const dependencyMap = {
-  $b(content) {
-    return { type: AstBuilder.Strong, content };
-  },
-  $i(content) {
-    return { type: AstBuilder.Emphasis, content };
-  },
-  $del(content) {
-    return { type: AstBuilder.Strikethrough, content };
-  },
-  $code(content) {
-    return { type: AstBuilder.Code, content };
-  },
-  $link(content, arg1, arg2) {
-    [tmp] = arg2;
-    return { type: AstBuilder.Link, target: tmp, content };
-  },
-  $p(content) {
-    return { type: AstBuilder.Paragraph, content };
-  },
-};
-class AstBuilder {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class StringBuilder {
   constructor() {
     self = this;
-    tmp = closure_1(this, AstBuilder);
-    tmp2 = closure_3;
-    obj = closure_3(AstBuilder);
-    tmp3 = c2;
-    if (closure_4()) {
+    tmp = closure_0(this, StringBuilder);
+    tmp2 = c2;
+    obj = c2(StringBuilder);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -83,30 +52,19 @@ class AstBuilder {
       constructResult = obj(...arguments);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.result = [];
+    tmp3Result.result = "";
     return tmp3Result;
   }
 }
-_inherits(AstBuilder, _mod1159.FormatBuilder);
+_classCallCheck = StringBuilder;
+_inherits(StringBuilder, _mod1157.FormatBuilder);
 const entry = {
   key: "pushRichTextTag",
-  value: function pushRichTextTag(formatting, arg1, arg2) {
-    if (formatting in dependencyMap) {
-      const self = this;
-      const tmp4 = dependencyMap[formatting](arg1, "", arg2);
-      const _Array = Array;
-      const result = this.result;
-      const push = result.push;
-      if (Array.isArray(tmp4)) {
-        const items = [];
-        HermesBuiltin.arraySpread(tmp4, 0);
-        HermesBuiltin.apply(items, result);
-      } else {
-        push(tmp4);
-      }
-    } else {
-      const _HermesInternal = HermesInternal;
-      throw "" + formatting + " is not a known rich text formatting tag";
+  value: function pushRichTextTag(arg0, arg1, arg2) {
+    const self = this;
+    while (tmp !== undefined) {
+      self.result = self.result + tmp2;
+      continue;
     }
   },
 };
@@ -114,34 +72,33 @@ let items = [
   entry,
   {
     key: "pushLiteralText",
-    value: function pushLiteralText(content) {
-      if (null != this.result[this.result.length - 1]) {
-        if (tmp.type === AstBuilder.Text) {
-          tmp.content = tmp.content + content;
-        }
-      }
-      const result = this.result;
-      result.push({ type: AstBuilder.Text, content });
-      const obj = { type: AstBuilder.Text, content };
+    value: function pushLiteralText(arg0) {
+      this.result = this.result + arg0;
     },
   },
   {
     key: "pushObject",
     value: function pushObject(arg0) {
-      const result = this.result;
-      result.push(arg0);
+      let tmp = null != arg0;
+      if (tmp) {
+        tmp = "toString" in arg0;
+      }
+      if (tmp) {
+        const self = this;
+        this.result = this.result + arg0.toString();
+      }
     },
   },
   {
     key: "finish",
     value: function finish() {
-      return this.result;
+      const items = [this.result];
+      return items;
     },
   },
 ];
-const _moduleResult = _createClass(AstBuilder, items);
-const metroRequire = _moduleResult;
+const _moduleResult = _createClass(StringBuilder, items);
 
-export { formatToAst };
-export const RichTextNodeType = obj;
-export const astFormatter = { format: formatToAst, builder: _moduleResult };
+export { formatToPlainString };
+export const StringBuilder = _moduleResult;
+export const stringFormatter = { format: formatToPlainString, builder: _moduleResult };

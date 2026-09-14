@@ -1,17 +1,19 @@
 // _runtime/metro/03724__.js
-import _typeof from "03725__.js";
-import 03727__ from "03727__.js";
+import _typeof_mod from "03725__.js";
+import module_3727_mod from "03727__.js";
 
+let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
+let module_3727 = module_3727_mod;
 if (!module_3727) {
-  obj = { default: module_3727 };
-  let tmp5 = obj;
+  const obj2 = { default: module_3727 };
+  let tmp5 = obj2;
 } else {
   tmp5 = module_3727;
 }

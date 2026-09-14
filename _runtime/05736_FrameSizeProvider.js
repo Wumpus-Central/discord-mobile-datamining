@@ -97,16 +97,18 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
       });
     }
   }, items1);
-  let obj = { value: memo, children: null };
-  obj = {
-    ref,
-    onLayout(nativeEvent) {
-      const layout = nativeEvent.nativeEvent.layout;
-      const size = { width: layout.width, height: layout.height };
-      closure_5(size);
-    },
-  };
-  const items2 = [null, initialFrame.render(obj)];
+  const obj = { value: memo, children: null };
+  const items2 = [
+    null,
+    initialFrame.render({
+      ref,
+      onLayout(nativeEvent) {
+        const layout = nativeEvent.nativeEvent.layout;
+        const size = { width: layout.width, height: layout.height };
+        closure_5(size);
+      },
+    }),
+  ];
   obj.children = items2;
   return React4(redux.Provider, obj);
 };

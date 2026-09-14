@@ -41,7 +41,6 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
     }),
   );
   closure_6 = arg1;
-  disabled(1484);
   const first = _slicedToArray(
     noop.useState(() => {
       value = new pressOpacity.Value(1);
@@ -80,7 +79,7 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
       }
     }
   }, items1);
-  let obj = {
+  const obj2 = {
     ref: callback,
     accessible: true,
     role: "button",
@@ -98,7 +97,7 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
       }
     };
   }
-  obj.onPress = fn;
+  obj2.onPress = fn;
   let fn2;
   if (!disabled) {
     fn2 = (arg0) => {
@@ -121,7 +120,7 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
       }
     };
   }
-  obj.onPressIn = fn2;
+  obj2.onPressIn = fn2;
   let fn3;
   if (!disabled) {
     fn3 = (arg0) => {
@@ -144,7 +143,7 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
       }
     };
   }
-  obj.onPressOut = fn3;
+  obj2.onPressOut = fn3;
   let tmp8;
   if (ref) {
     if (!disabled) {
@@ -155,12 +154,12 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
         }
         pressColor = str;
       }
-      obj = { color: pressColor };
+      const obj3 = { color: pressColor };
       const merged1 = Object.assign(android_ripple);
-      tmp8 = obj;
+      tmp8 = obj3;
     }
   }
-  obj.android_ripple = tmp8;
+  obj2.android_ripple = tmp8;
   let num = 1;
   if (!ref) {
     num = 1;
@@ -169,17 +168,17 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
     }
   }
   const items2 = [{ cursor: "auto", opacity: num }, style];
-  obj.style = items2;
+  obj2.style = items2;
   const merged2 = Object.assign(merged);
   let tmp13 = null;
   if (!disabled) {
-    const obj1 = {};
+    const obj4 = {};
     const merged3 = Object.assign(hoverEffect);
-    tmp13 = closure_6(f37173, obj1);
+    tmp13 = closure_6(f37174, obj4);
   }
   const items3 = [tmp13, children];
-  obj.children = items3;
-  return first(animateTo, obj);
+  obj2.children = items3;
+  return first(animateTo, obj2);
 });
 forwardRefResult.displayName = "PlatformPressable";
 String.raw(
@@ -198,7 +197,7 @@ String.raw(
   "__react-navigation_elements_Pressable_hover",
   "__react-navigation_elements_Pressable_hover",
 );
-const f37173 = (arg0) => {
+const f37174 = (arg0) => {
   ({ color, hoverOpacity, activeOpacity } = arg0);
   return null;
 };

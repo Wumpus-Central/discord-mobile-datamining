@@ -48,16 +48,16 @@ class TouchableHighlightImpl {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result._isMounted = false;
-    obj = { pressability: null, extraStyles: null };
+    obj1 = { pressability: null, extraStyles: null };
     tmp6 = closure_0(closure_1[8]);
-    tmp6 = new tmp6(tmp3Result._createPressabilityConfig());
-    obj.pressability = tmp6;
+    tmp61 = new tmp6(tmp3Result._createPressabilityConfig());
+    obj1.pressability = tmp61;
     _createExtraStylesResult = null;
     if (true === tmp3Result.props.testOnly_pressed) {
       _createExtraStylesResult = tmp3Result._createExtraStyles();
     }
-    obj.extraStyles = _createExtraStylesResult;
-    tmp3Result.state = obj;
+    obj1.extraStyles = _createExtraStylesResult;
+    tmp3Result.state = obj1;
     return tmp3Result;
   }
 }
@@ -234,7 +234,7 @@ let items = [
       const eventHandlers = pressability.getEventHandlers();
       ({ onBlur, onFocus } = eventHandlers);
       if (null != this.props.disabled) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(self.props.accessibilityState);
         obj.disabled = self.props.disabled;
         let accessibilityState = obj;
@@ -293,7 +293,7 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      obj = {
+      const obj2 = {
         accessible: false !== self.props.accessible,
         accessibilityLabel,
         accessibilityHint: self.props.accessibilityHint,
@@ -326,52 +326,55 @@ let items = [
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
       }
-      obj.importantForAccessibility = str2;
+      obj2.importantForAccessibility = str2;
       let accessibilityViewIsModal = self.props["aria-modal"];
       if (accessibilityViewIsModal == null) {
         accessibilityViewIsModal = self.props.accessibilityViewIsModal;
       }
-      obj.accessibilityViewIsModal = accessibilityViewIsModal;
-      obj.accessibilityLiveRegion = str;
+      obj2.accessibilityViewIsModal = accessibilityViewIsModal;
+      obj2.accessibilityLiveRegion = str;
       let accessibilityElementsHidden = self.props["aria-hidden"];
       if (accessibilityElementsHidden == null) {
         accessibilityElementsHidden = self.props.accessibilityElementsHidden;
       }
-      obj.accessibilityElementsHidden = accessibilityElementsHidden;
-      let tmp15Result = TouchableHighlightImpl(254);
+      obj2.accessibilityElementsHidden = accessibilityElementsHidden;
+      const tmp17 = TouchableHighlightImpl(108);
       const extraStyles = self.state.extraStyles;
       let underlay;
       if (extraStyles != null) {
         underlay = extraStyles.underlay;
       }
-      obj.style = tmp15Result.compose(self.props.style, underlay);
-      obj.onLayout = self.props.onLayout;
-      obj.hitSlop = self.props.hitSlop;
-      obj.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
-      obj.nextFocusDown = self.props.nextFocusDown;
-      obj.nextFocusForward = self.props.nextFocusForward;
-      obj.nextFocusLeft = self.props.nextFocusLeft;
-      obj.nextFocusRight = self.props.nextFocusRight;
-      obj.nextFocusUp = self.props.nextFocusUp;
-      obj.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
+      obj2.style = TouchableHighlightImpl(254).compose(self.props.style, underlay);
+      obj2.onLayout = self.props.onLayout;
+      obj2.hitSlop = self.props.hitSlop;
+      obj2.hasTVPreferredFocus = self.props.hasTVPreferredFocus;
+      obj2.nextFocusDown = self.props.nextFocusDown;
+      obj2.nextFocusForward = self.props.nextFocusForward;
+      obj2.nextFocusLeft = self.props.nextFocusLeft;
+      obj2.nextFocusRight = self.props.nextFocusRight;
+      obj2.nextFocusUp = self.props.nextFocusUp;
+      obj2.focusable = false !== self.props.focusable && undefined !== self.props.onPress && !self.props.disabled;
       let nativeID = self.props.id;
       if (nativeID == null) {
         nativeID = self.props.nativeID;
       }
-      obj.nativeID = nativeID;
-      obj.testID = self.props.testID;
-      obj.ref = self.props.hostRef;
+      obj2.nativeID = nativeID;
+      obj2.testID = self.props.testID;
+      obj2.ref = self.props.hostRef;
       const merged1 = Object.assign(tmp3);
-      tmp15Result = TouchableHighlightImpl(254);
+      const tmp15Result = TouchableHighlightImpl(254);
       const extraStyles2 = self.state.extraStyles;
       let child;
       if (extraStyles2 != null) {
         child = extraStyles2.child;
       }
-      obj = { style: tmp15Result.compose(onlyResult.props.style, child) };
-      const items = [cloneElement(onlyResult, obj), null];
-      obj.children = items;
-      return closure_1_10(TouchableHighlightImpl(108), obj);
+      const tmp15Result2 = TouchableHighlightImpl(254);
+      const items = [
+        cloneElement(onlyResult, { style: TouchableHighlightImpl(254).compose(onlyResult.props.style, child) }),
+        null,
+      ];
+      obj2.children = items;
+      return closure_1_10(tmp17, obj2);
     },
   },
   {

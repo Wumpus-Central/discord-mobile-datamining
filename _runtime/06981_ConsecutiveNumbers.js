@@ -1,7 +1,8 @@
 // _runtime/06981_ConsecutiveNumbers.js
 import _modDef6968 from "metro/06968__.js";
-import _classCallCheck from "metro/06967__.js";
+import _classCallCheck_mod from "metro/06967__.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class ConsecutiveNumbers {
   constructor(arg0, arg1) {
     tmp = closure_0(this, ConsecutiveNumbers);
@@ -132,8 +133,8 @@ const entry = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -146,8 +147,8 @@ const entry = {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               endIndex = self;
               closure_1 = tmp4;
@@ -156,8 +157,8 @@ const entry = {
               if (startIndex <= self.endIndex) {
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: startIndex, done: false };
-                return obj1;
+                const obj4 = { value: startIndex, done: false };
+                return obj4;
               } else {
                 c4 = 3;
               }
@@ -169,7 +170,7 @@ const entry = {
             startIndex = startIndex + 1;
           }
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp13) {
           c4 = tmp;
@@ -180,8 +181,7 @@ const entry = {
   },
 };
 items[9] = entry;
-let tmp2 = _modDef6968(ConsecutiveNumbers, items);
-tmp2 = new tmp2(-1, -2);
-tmp2.EMPTY = tmp2;
+const tmp2 = _modDef6968(ConsecutiveNumbers, items);
+tmp2.EMPTY = new tmp2(-1, -2);
 
 export const ConsecutiveNumbers = tmp2;

@@ -11,7 +11,7 @@ export const linkedErrorsIntegration = registerSpanErrorInstrumentation.defineIn
   }
   closure_0 = obj.limit || 5;
   closure_1 = obj.key || "cause";
-  obj = {
+  return {
     name: "LinkedErrors",
     preprocessEvent(arg0, arg1, getOptions) {
       const options = getOptions.getOptions();
@@ -25,5 +25,4 @@ export const linkedErrorsIntegration = registerSpanErrorInstrumentation.defineIn
       );
     },
   };
-  return obj;
 });

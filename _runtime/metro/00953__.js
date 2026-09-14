@@ -10,6 +10,8 @@ import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 
+const require = globalThis.__r;
+
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -72,7 +74,7 @@ function stringifyStylesheet(styleSheet) {
   }
 }
 function stringifyRule(styleSheet) {
-  cssText = undefined;
+  let cssText1;
   if ((function isCSSImportRule(styleSheet) {
     return "styleSheet" in styleSheet;
   })(styleSheet)) {
@@ -103,7 +105,7 @@ function stringifyRule(styleSheet) {
           }
         })(styleSheet);
       }
-      cssText = tmp5;
+      cssText1 = tmp5;
     } catch (err) {
     }
   } else if ((function isCSSStyleRule(styleSheet) {
@@ -151,10 +153,10 @@ function stringifyRule(styleSheet) {
     }
     return tmp3;
   }
-  if (!cssText) {
-    cssText = styleSheet.cssText;
+  if (!cssText1) {
+    cssText1 = styleSheet.cssText;
   }
-  return cssText;
+  return cssText1;
 }
 function shouldMaskInput(arg0) {
   ({ maskInputOptions, tagName, type } = arg0);
@@ -339,9 +341,9 @@ function absoluteToStylesheet(parentNode, rootId) {
               let tmp8 = nextResult;
               if ("." !== nextResult) {
                 if (".." === tmp8) {
-                  let arr = parts.pop();
+                  let arr4 = parts.pop();
                 } else {
-                  let arr1 = parts.push(tmp8);
+                  let arr5 = parts.push(tmp8);
                 }
               }
               continue;
@@ -422,15 +424,15 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
           let str31 = "";
           tmp44 = str;
           if ("" !== str.trim()) {
-            value = weakMap.get(createElement);
-            if (!value) {
+            let value7 = weakMap.get(createElement);
+            if (!value7) {
               const element1 = <a />;
               const result1 = weakMap.set(createElement, element1);
-              value = element1;
+              value7 = element1;
             }
             if (!str) {
-              const attr1 = value.setAttribute("href", str31);
-              let href4 = value.href;
+              const attr1 = value7.setAttribute("href", str31);
+              let href4 = value7.href;
             } else {
               href4 = str;
               if (!str.startsWith("blob:")) {
@@ -468,16 +470,16 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                 if (str28) {
                   tmp35 = str28;
                   if ("" !== str28.trim()) {
-                    let value1 = weakMap.get(createElement);
-                    if (!value1) {
+                    let value8 = weakMap.get(createElement);
+                    if (!value8) {
                       let element2 = <a />;
                       let result2 = weakMap.set(createElement, element2);
-                      value1 = element2;
+                      value8 = element2;
                     }
                     let str29 = "";
                     if (!str28) {
-                      let attr2 = value1.setAttribute("href", ``);
-                      let href3 = value1.href;
+                      let attr2 = value8.setAttribute("href", ``);
+                      let href3 = value8.href;
                     } else {
                       href3 = str28;
                       if (!str28.startsWith("blob:")) {
@@ -494,16 +496,16 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                 if (str23) {
                   tmp23 = str23;
                   if ("" !== str23.trim()) {
-                    value2 = weakMap.get(createElement);
-                    if (!value2) {
+                    let value9 = weakMap.get(createElement);
+                    if (!value9) {
                       let element3 = <a />;
                       let result3 = weakMap.set(createElement, element3);
-                      value2 = element3;
+                      value9 = element3;
                     }
                     let str24 = "";
                     if (!str23) {
-                      let attr3 = value2.setAttribute("href", ``);
-                      let href2 = value2.href;
+                      let attr3 = value9.setAttribute("href", ``);
+                      let href2 = value9.href;
                     } else {
                       href2 = str23;
                       if (!str23.startsWith("blob:")) {
@@ -530,7 +532,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                   } else if ("," === charAtResult) {
                     sum2 = sum1 + 1;
                     let str26 = tmp23 + str25;
-                    arr = items.push(str26.trim());
+                    let arr2 = items.push(str26.trim());
                   } else {
                     flag2 = flag;
                     if ("(" === charAtResult) {
@@ -539,7 +541,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                   }
                 }
                 let str27 = tmp23 + str25;
-                let arr1 = items.push(str27.trim());
+                let arr5 = items.push(str27.trim());
                 sum2 = sum1;
               }
               let match2 = regex2.exec(str.substring(sum2));
@@ -554,14 +556,14 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
         }
         return joined;
       } else if ("style" === value) {
-        let value3 = weakMap.get(createElement);
-        if (!value3) {
+        let value10 = weakMap.get(createElement);
+        if (!value10) {
           const element4 = <a />;
           const result4 = weakMap.set(createElement, element4);
-          value3 = element4;
+          value10 = element4;
         }
-        const attr4 = value3.setAttribute("href", "");
-        let href = value3.href;
+        const attr4 = value10.setAttribute("href", "");
+        let href = value10.href;
         let str15 = str;
         if (!str) {
           str15 = "";
@@ -609,9 +611,9 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                     let tmp8 = nextResult;
                     if ("." !== nextResult) {
                       if (".." === tmp8) {
-                        let arr = parts.pop();
+                        let arr4 = parts.pop();
                       } else {
-                        let arr1 = parts.push(tmp8);
+                        let arr5 = parts.push(tmp8);
                       }
                     }
                     continue;
@@ -652,7 +654,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                           let arr = items.push(arr2);
                         }
                       } else {
-                        arr = items.push(arr2);
+                        let arr4 = items.push(arr2);
                       }
                     }
                     continue;
@@ -685,15 +687,15 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
               let str9 = "";
               tmp5 = str;
               if ("" !== str.trim()) {
-                let value4 = weakMap.get(createElement);
-                if (!value4) {
+                let value11 = weakMap.get(createElement);
+                if (!value11) {
                   const element5 = <a />;
                   const result5 = weakMap.set(createElement, element5);
-                  value4 = element5;
+                  value11 = element5;
                 }
                 if (!str) {
-                  const attr5 = value4.setAttribute("href", str9);
-                  href = value4.href;
+                  const attr5 = value11.setAttribute("href", str9);
+                  href = value11.href;
                 } else {
                   href = str;
                   if (!str.startsWith("blob:")) {
@@ -719,15 +721,15 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
       let str39 = "";
       tmp52 = str;
       if ("" !== str.trim()) {
-        let value5 = weakMap.get(createElement);
-        if (!value5) {
+        let value12 = weakMap.get(createElement);
+        if (!value12) {
           const element6 = <a />;
           const result6 = weakMap.set(createElement, element6);
-          value5 = element6;
+          value12 = element6;
         }
         if (!str) {
-          const attr6 = value5.setAttribute("href", str39);
-          let href6 = value5.href;
+          const attr6 = value12.setAttribute("href", str39);
+          let href6 = value12.href;
         } else {
           href6 = str;
           if (!str.startsWith("blob:")) {
@@ -834,40 +836,40 @@ function needMaskingText(nodeType, maskTextClass, maskTextSelector, unmaskTextCl
         }
       }
       if (maskAllText) {
-        let tmp9Result = distanceToMatch(obj, createMatchPredicate(unmaskTextClass, unmaskTextSelector));
-        let tmp9Result2 = tmp9Result;
+        const tmp9Result = distanceToMatch(obj, createMatchPredicate(unmaskTextClass, unmaskTextSelector));
+        let tmp9Result6 = tmp9Result;
         if (tmp9Result < 0) {
           return true;
         } else {
           let num7 = Infinity;
-          let tmp11Result = createMatchPredicate(maskTextClass, maskTextSelector);
-          if (tmp9Result2 >= 0) {
-            num7 = tmp9Result2;
+          if (tmp9Result6 >= 0) {
+            num7 = tmp9Result6;
           }
-          tmp9Result = distanceToMatch(parentElement, tmp11Result, num7);
+          let tmp9Result4 = distanceToMatch(parentElement, createMatchPredicate(maskTextClass, maskTextSelector), num7);
+          const tmp11Result = createMatchPredicate(maskTextClass, maskTextSelector);
         }
       } else {
-        const tmp9Result1 = distanceToMatch(obj, createMatchPredicate(maskTextClass, maskTextSelector));
-        tmp9Result = tmp9Result1;
-        if (tmp9Result1 < 0) {
+        const tmp9Result5 = distanceToMatch(obj, createMatchPredicate(maskTextClass, maskTextSelector));
+        tmp9Result4 = tmp9Result5;
+        if (tmp9Result5 < 0) {
           return false;
         } else {
           let num5 = Infinity;
-          tmp11Result = createMatchPredicate(unmaskTextClass, unmaskTextSelector);
-          if (tmp9Result >= 0) {
-            num5 = tmp9Result;
+          if (tmp9Result4 >= 0) {
+            num5 = tmp9Result4;
           }
-          tmp9Result2 = distanceToMatch(obj, tmp11Result, num5);
+          tmp9Result6 = distanceToMatch(obj, createMatchPredicate(unmaskTextClass, unmaskTextSelector), num5);
+          const tmp11Result2 = createMatchPredicate(unmaskTextClass, unmaskTextSelector);
         }
       }
-      if (tmp9Result >= 0) {
-        let tmp25 = tmp9Result2 < 0;
+      if (tmp9Result4 >= 0) {
+        let tmp25 = tmp9Result6 < 0;
         if (!tmp25) {
-          tmp25 = tmp9Result <= tmp9Result2;
+          tmp25 = tmp9Result4 <= tmp9Result6;
         }
         let tmp23 = tmp25;
       } else {
-        tmp23 = tmp9Result2 < 0;
+        tmp23 = tmp9Result6 < 0;
         if (tmp23) {
           tmp23 = maskAllText;
         }
@@ -900,23 +902,19 @@ function serializeNode(nodeType, newlyAddedElement) {
   nodeType = nodeType.nodeType;
   if (nodeType.DOCUMENT_NODE === nodeType) {
     if ("CSS1Compat" !== nodeType.compatMode) {
-      obj = { type: null, childNodes: null, compatMode: null };
-      obj.type = obj.Document;
-      obj.childNodes = [];
-      obj.compatMode = nodeType.compatMode;
+      let obj2 = { type: obj.Document, childNodes: [], compatMode: nodeType.compatMode };
+      let obj3 = obj2;
     } else {
-      obj = { type: null, childNodes: null };
-      obj.type = obj.Document;
-      obj.childNodes = [];
+      obj3 = { type: obj.Document, childNodes: [] };
     }
-    return obj;
+    return obj3;
   } else if (nodeType.DOCUMENT_TYPE_NODE === nodeType) {
-    obj1 = { type: obj.DocumentType, name: null, publicId: null, systemId: null, rootId: null };
+    const obj4 = { type: obj.DocumentType, name: null, publicId: null, systemId: null, rootId: null };
     ({ name: obj5.name, publicId: obj5.publicId, systemId: obj5.systemId } = nodeType);
-    obj1.rootId = tmp2;
-    return obj1;
+    obj4.rootId = tmp2;
+    return obj4;
   } else if (nodeType.ELEMENT_NODE === nodeType) {
-    obj2 = { doc, blockClass, blockSelector, unblockSelector, inlineStylesheet, maskAttributeFn, maskInputOptions, maskInputFn, dataURLOptions, inlineImages, recordCanvas, keepIframeSrcFn, newlyAddedElement: tmp, rootId: tmp2, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, ignoreCSSAttributes: newlyAddedElement.ignoreCSSAttributes };
+    obj6 = { doc, blockClass, blockSelector, unblockSelector, inlineStylesheet, maskAttributeFn, maskInputOptions, maskInputFn, dataURLOptions, inlineImages, recordCanvas, keepIframeSrcFn, newlyAddedElement: tmp, rootId: tmp2, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, ignoreCSSAttributes: newlyAddedElement.ignoreCSSAttributes };
     return (function serializeElementNode(attributes, newlyAddedElement) {
       ({ doc, blockClass, blockSelector, unblockSelector, maskInputOptions, inlineStylesheet } = newlyAddedElement);
       if (undefined === maskInputOptions) {
@@ -976,6 +974,7 @@ function serializeNode(nodeType, newlyAddedElement) {
         }
       })(attributes);
       obj = {};
+      let obj2 = obj;
       for (let num = 0; num < length; num = num + 1) {
         let iter = attributes.attributes[num];
         let name = iter.name;
@@ -1107,10 +1106,10 @@ function serializeNode(nodeType, newlyAddedElement) {
                   closure_2_37.width = attributes2.naturalWidth;
                   closure_2_37.height = attributes2.naturalHeight;
                   closure_2_38.drawImage(attributes2, 0, 0);
-                  obj.rr_dataURL = closure_2_37.toDataURL(dataURLOptions.type, dataURLOptions.quality);
+                  attributes2.rr_dataURL = closure_2_37.toDataURL(dataURLOptions.type, dataURLOptions.quality);
                   if ("anonymous" === attributes2.crossOrigin) {
                     if (crossOrigin) {
-                      obj.crossOrigin = tmp15;
+                      attributes2.crossOrigin = tmp15;
                     } else {
                       attributes2.removeAttribute("crossorigin");
                     }
@@ -1162,13 +1161,12 @@ function serializeNode(nodeType, newlyAddedElement) {
           let tmp44 = obj;
           if (tmp7) {
             const size = attributes.getBoundingClientRect();
-            obj = { class: null, rr_width: null, rr_height: null };
-            obj.class = obj.class;
+            obj2 = { class: obj.class, rr_width: null, rr_height: null };
             let _HermesInternal = HermesInternal;
-            obj.rr_width = "" + size.width + "px";
+            obj2.rr_width = "" + size.width + "px";
             const _HermesInternal2 = HermesInternal;
-            obj.rr_height = "" + size.height + "px";
-            tmp44 = obj;
+            obj2.rr_height = "" + size.height + "px";
+            tmp44 = obj2;
           }
           if (!tmp46) {
             let tmp47 = tmp7;
@@ -1181,8 +1179,8 @@ function serializeNode(nodeType, newlyAddedElement) {
             delete tmp2[tmp];
           }
           try {
-            obj = { type: RN.Element, tagName: tmp8, attributes: tmp44, childNodes: [], isSVG: closure_50(attributes), needBlock: tmp7, rootId: tmp6, isCustom: flag };
-            return obj;
+            const obj3 = { type: RN.Element, tagName: tmp8, attributes: tmp44, childNodes: [], isSVG: closure_50(attributes), needBlock: tmp7, rootId: tmp6, isCustom: flag };
+            return obj3;
           } catch (err) {
           }
           tmp46 = "iframe" !== tmp8 || keepIframeSrcFn(tmp44.src);
@@ -1194,9 +1192,9 @@ function serializeNode(nodeType, newlyAddedElement) {
       if ("submit" !== tmp28) {
         if ("button" !== tmp28) {
           if (tmp30) {
-            obj1 = { type: tmp28, tagName: closure_27(tmp8), maskInputOptions };
-            obj2 = { isMasked: closure_56(attributes, maskTextClass, maskTextSelector, unmaskTextClass, unmaskTextSelector, closure_24(obj1)), element: attributes, value: tmp30, maskInputFn };
-            obj.value = closure_25(obj2);
+            obj5 = { type: tmp28, tagName: closure_27(tmp8), maskInputOptions };
+            obj6 = { isMasked: closure_56(attributes, maskTextClass, maskTextSelector, unmaskTextClass, unmaskTextSelector, closure_24(obj5)), element: attributes, value: tmp30, maskInputFn };
+            obj.value = closure_25(obj6);
           }
         }
       }
@@ -1204,9 +1202,9 @@ function serializeNode(nodeType, newlyAddedElement) {
         obj.checked = checked;
       }
       length = attributes.attributes.length;
-    })(nodeType, obj2);
+    })(nodeType, obj6);
   } else if (nodeType.TEXT_NODE === nodeType) {
-    obj3 = { doc, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, maskTextFn, maskInputOptions, maskInputFn, rootId: tmp2 };
+    obj7 = { doc, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, maskTextFn, maskInputOptions, maskInputFn, rootId: tmp2 };
     return (function serializeTextNode(parentNode, rootId) {
       let tmp = rootId;
       ({ maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, maskTextFn, maskInputOptions, maskInputFn } = rootId);
@@ -1271,22 +1269,22 @@ function serializeNode(nodeType, newlyAddedElement) {
           if ("OPTION" === tagName) {
             if (str) {
               obj = { isMasked: null, element: null, value: null, maskInputFn: null };
-              obj = { type: null, tagName, maskInputOptions };
-              obj.isMasked = needMaskingText(parentNode, maskTextClass, maskTextSelector, unmaskTextClass, unmaskTextSelector, shouldMaskInput(obj));
+              const obj2 = { type: null, tagName, maskInputOptions };
+              obj.isMasked = needMaskingText(parentNode, maskTextClass, maskTextSelector, unmaskTextClass, unmaskTextSelector, shouldMaskInput(obj2));
               obj.element = parentNode;
               obj.value = str;
               obj.maskInputFn = maskInputFn;
               str = maskInputValue(obj);
             }
           }
-          obj = { type: RN.Text, textContent: null, isStyle: null, rootId: null };
+          const obj3 = { type: RN.Text, textContent: null, isStyle: null, rootId: null };
           if (!str) {
             str = "";
           }
-          obj.textContent = str;
-          obj.isStyle = tmp2;
-          obj.rootId = rootId.rootId;
-          return obj;
+          obj3.textContent = str;
+          obj3.isStyle = tmp2;
+          obj3.rootId = rootId.rootId;
+          return obj3;
         } else if (maskInputFn) {
           let maskInputFnResult = maskInputFn(str, parentNode.parentNode);
         } else {
@@ -1297,10 +1295,10 @@ function serializeNode(nodeType, newlyAddedElement) {
       } else {
         maskTextFnResult = str.replace(/[\S]/g, "*");
       }
-    })(nodeType, obj3);
+    })(nodeType, obj7);
   } else if (nodeType.CDATA_SECTION_NODE === nodeType) {
-    obj4 = { type: obj.CDATA, textContent: "", rootId: tmp2 };
-    return obj4;
+    const obj13 = { type: obj.CDATA, textContent: "", rootId: tmp2 };
+    return obj13;
   } else if (nodeType.COMMENT_NODE === nodeType) {
     obj = { type: null, textContent: null, rootId: null };
     obj.type = obj.Comment;
@@ -1604,7 +1602,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
             c28 = false;
             flag = false;
           }
-          obj = { doc, mirror, blockClass, blockSelector, maskAllText, unblockSelector, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: tmp3, inlineStylesheet: tmp4, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages: tmp5, recordCanvas: tmp6, preserveWhiteSpace: flag, onSerialize, onIframeLoad, iframeLoadTimeout: num2, onBlockedImageLoad, onStylesheetLoad, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
+          const obj2 = { doc, mirror, blockClass, blockSelector, maskAllText, unblockSelector, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: tmp3, inlineStylesheet: tmp4, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages: tmp5, recordCanvas: tmp6, preserveWhiteSpace: flag, onSerialize, onIframeLoad, iframeLoadTimeout: num2, onBlockedImageLoad, onStylesheetLoad, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
           if (iframeContentDocument.childNodes) {
             const _Array = Array;
             let items = Array.from(iframeContentDocument.childNodes);
@@ -1811,10 +1809,10 @@ function patch(arg0, arg1, fn) {
         }
         tmp5.prototype = prototype;
         const _Object = Object;
-        __rrweb_original__ = { __rrweb_original__: null };
-        __rrweb_original__ = { enumerable: false, value: tmp2 };
-        __rrweb_original__.__rrweb_original__ = __rrweb_original__;
-        Object.defineProperties(tmp5, __rrweb_original__);
+        obj = { __rrweb_original__: null };
+        const obj2 = { enumerable: false, value: tmp2 };
+        obj.__rrweb_original__ = obj2;
+        Object.defineProperties(tmp5, obj);
       }
       arg0[arg1] = tmp4;
       return () => {
@@ -2353,9 +2351,9 @@ function initMutationObserver(doc, doc) {
         }
       };
     }
-    __rrMutationObserver = new __rrMutationObserver(fn);
-    __rrMutationObserver.observe(doc, { attributes: true, attributeOldValue: true, characterData: true, characterDataOldValue: true, childList: true, subtree: true });
-    return __rrMutationObserver;
+    const __rrMutationObserver1 = new __rrMutationObserver(fn);
+    __rrMutationObserver1.observe(doc, { attributes: true, attributeOldValue: true, characterData: true, characterDataOldValue: true, childList: true, subtree: true });
+    return __rrMutationObserver1;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -2377,7 +2375,7 @@ function initMouseInteractionObserver(doc) {
       closure_7 = [];
       c8 = null;
       const _Object = Object;
-      const keys = Object.keys(obj3);
+      const keys = Object.keys(obj7);
       const found = keys.filter((item) => {
         let isNaNResult = Number.isNaN(Number(item));
         if (isNaNResult) {
@@ -2406,22 +2404,22 @@ function initMouseInteractionObserver(doc) {
             if ("pointerType" in event) {
               const pointerType = event.pointerType;
               if ("mouse" === pointerType) {
-                let Mouse = obj4.Mouse;
+                let Mouse = obj8.Mouse;
               } else if ("touch" === pointerType) {
-                Mouse = obj4.Touch;
+                Mouse = obj8.Touch;
               } else {
                 Mouse = null;
                 if ("pen" === pointerType) {
-                  Mouse = obj4.Pen;
+                  Mouse = obj8.Pen;
                 }
               }
-              if (Mouse === obj4.Touch) {
+              if (Mouse === obj8.Touch) {
                 let str2 = "TouchStart";
                 let Touch = Mouse;
-                if (obj3[replaced] !== obj3.MouseDown) {
+                if (obj7[replaced] !== obj7.MouseDown) {
                   str2 = replaced;
                   Touch = Mouse;
-                  if (obj3[replaced] === obj3.MouseUp) {
+                  if (obj7[replaced] === obj7.MouseUp) {
                     str2 = "TouchEnd";
                     Touch = Mouse;
                   }
@@ -2436,7 +2434,7 @@ function initMouseInteractionObserver(doc) {
               str2 = replaced;
               Touch = null;
               if (Boolean(event.changedTouches)) {
-                Touch = obj4.Touch;
+                Touch = obj8.Touch;
                 str2 = replaced;
               }
             }
@@ -2444,12 +2442,12 @@ function initMouseInteractionObserver(doc) {
               c8 = Touch;
               let startsWithResult = str2.startsWith("Touch");
               if (startsWithResult) {
-                startsWithResult = Touch === obj4.Touch;
+                startsWithResult = Touch === obj8.Touch;
               }
               if (!startsWithResult) {
                 let startsWithResult1 = str2.startsWith("Mouse");
                 if (startsWithResult1) {
-                  startsWithResult1 = Touch === obj4.Mouse;
+                  startsWithResult1 = Touch === obj8.Mouse;
                 }
                 startsWithResult = startsWithResult1;
               }
@@ -2459,7 +2457,7 @@ function initMouseInteractionObserver(doc) {
               }
             } else {
               tmp14 = Touch;
-              if (obj3[replaced] === obj3.Click) {
+              if (obj7[replaced] === obj7.Click) {
                 tmp14 = c8;
                 c8 = null;
               }
@@ -2491,7 +2489,7 @@ function initMouseInteractionObserver(doc) {
                     }
                   };
                 }
-                const point = { type: obj3[str2], id: tmp22, x: tmp23, y: tmp24 };
+                const point = { type: obj7[str2], id: tmp22, x: tmp23, y: tmp24 };
                 let tmp28 = null !== tmp14;
                 if (tmp28) {
                   obj = { pointerType: tmp14 };
@@ -2740,7 +2738,8 @@ function initInputObserver(sampling) {
                       repeatResult = "*".repeat(tmp21Result.length);
                     }
                     if (closure_10) {
-                      obj = { text: repeatResult, isChecked: flag2, userTriggered: isTrusted.isTrusted };
+                      let obj2 = { text: repeatResult, isChecked: flag2, userTriggered: isTrusted.isTrusted };
+                      obj = obj2;
                     } else {
                       obj = { text: repeatResult, isChecked: flag2 };
                     }
@@ -2767,7 +2766,8 @@ function initInputObserver(sampling) {
                                   repeatResult = "*".repeat(tmpResult.length);
                                 }
                                 if (sentryReplaySession) {
-                                  obj = { text: repeatResult, isChecked: !checked, userTriggered: false };
+                                  const obj2 = { text: repeatResult, isChecked: !checked, userTriggered: false };
+                                  obj = obj2;
                                 } else {
                                   obj = { text: repeatResult, isChecked: !checked };
                                 }
@@ -2794,10 +2794,10 @@ function initInputObserver(sampling) {
                                       }
                                     };
                                   }
-                                  obj = {};
+                                  const obj4 = {};
                                   const merged = Object.assign(obj);
-                                  obj.id = tmp9;
-                                  fn(obj);
+                                  obj4.id = tmp9;
+                                  fn(obj4);
                                 } else {
                                   throw new TypeError("Trying to call a non-function");
                                 }
@@ -2832,10 +2832,10 @@ function initInputObserver(sampling) {
                           }
                         };
                       }
-                      obj = {};
+                      let obj4 = {};
                       let merged = Object.assign(obj);
-                      obj.id = tmp27;
-                      fn(obj);
+                      obj4.id = tmp27;
+                      fn(obj4);
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
@@ -2949,7 +2949,7 @@ function initInputObserver(sampling) {
         let _Object = _window.Object;
         let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
         let _Object2 = _window.Object;
-        obj = {
+        _Object2.defineProperty(tmp, tmp2, {
           set(arg0) {
             const self = this;
             closure_0 = arg0;
@@ -2973,8 +2973,7 @@ function initInputObserver(sampling) {
               }
             }
           }
-        };
-        _Object2.defineProperty(tmp, tmp2, obj);
+        });
         return () => {
           obj = ownPropertyDescriptor;
           if (!ownPropertyDescriptor) {
@@ -3063,8 +3062,8 @@ function getNestedCSSRulePositions(parentRule) {
         }
         if (parentRule.parentStyleSheet) {
           const _Array = Array;
-          let arr = Array.from(parentRule.parentStyleSheet.cssRules);
-          arr = items.unshift(arr.indexOf(parentRule));
+          items.unshift(Array.from(parentRule.parentStyleSheet.cssRules).indexOf(parentRule));
+          const arr = Array.from(parentRule.parentStyleSheet.cssRules);
         }
       } else {
       }
@@ -3190,7 +3189,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f71826;
+      let f71829;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3241,7 +3240,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f71826 = function() {
+          f71829 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -3389,9 +3388,9 @@ function initObservers(doc) {
               if (doc === undefined) {
                 _document2 = document;
               }
-              obj = { capture: true, passive: true };
-              closure_3 = obj;
-              const listener1 = _document2.addEventListener("touchmove", fn3, obj);
+              const obj2 = { capture: true, passive: true };
+              closure_3 = obj2;
+              const listener1 = _document2.addEventListener("touchmove", fn3, obj2);
               items[1] = () => document.removeEventListener(selectionchange, fn, obj);
               closure_2 = undefined;
               drag = "drag";
@@ -3399,9 +3398,9 @@ function initObservers(doc) {
                 doc = document;
               }
               closure_2 = doc;
-              obj = { capture: true, passive: true };
-              closure_3 = obj;
-              const listener2 = doc.addEventListener("drag", fn3, obj);
+              const obj3 = { capture: true, passive: true };
+              closure_3 = obj3;
+              const listener2 = doc.addEventListener("drag", fn3, obj3);
               items[2] = () => document.removeEventListener(selectionchange, fn, obj);
               if (typeof closure_86 === "function") {
                 let fn4 = () => {
@@ -3599,7 +3598,7 @@ function initObservers(doc) {
     })(doc, obj);
     closure_5 = initInputObserver(doc);
     closure_6 = (function initMediaInteractionObserver(doc) {
-      ({ mediaInteractionCb: ratechange, blockClass: fnResult4, blockSelector: doc, unblockSelector: obj2, mirror: closure_4, sampling: closure_5, doc } = doc);
+      ({ mediaInteractionCb: ratechange, blockClass: fnResult4, blockSelector: doc, unblockSelector: obj5, mirror: closure_4, sampling: closure_5, doc } = doc);
       items = undefined;
       if (typeof closure_86 === "function") {
         let fn = (type) => {
@@ -3607,7 +3606,7 @@ function initObservers(doc) {
             type = (arg0) => {
               const tmp = getEventTarget(arg0);
               if (tmp) {
-                if (!isBlocked(tmp, fnResult4, doc, obj2, true)) {
+                if (!isBlocked(tmp, fnResult4, doc, obj5, true)) {
                   obj = { type, id: null, currentTime: null, volume: null, muted: null, playbackRate: null };
                   ({ currentTime, volume, muted, playbackRate } = tmp);
                   obj.id = id.getId(tmp);
@@ -3707,7 +3706,7 @@ function initObservers(doc) {
           _document = document;
         }
         obj = { capture: true, passive: true };
-        obj2 = obj;
+        obj5 = obj;
         const listener = _document.addEventListener("play", fnResult, obj);
         items = [() => document.removeEventListener(selectionchange, fn, obj), , , , ];
         const fnResult1 = fn(Play.Pause);
@@ -3718,9 +3717,9 @@ function initObservers(doc) {
         if (doc === undefined) {
           _document2 = document;
         }
-        obj = { capture: true, passive: true };
-        obj2 = obj;
-        const listener1 = _document2.addEventListener("pause", fnResult1, obj);
+        const obj2 = { capture: true, passive: true };
+        obj5 = obj2;
+        const listener1 = _document2.addEventListener("pause", fnResult1, obj2);
         items[1] = () => document.removeEventListener(selectionchange, fn, obj);
         const fnResult2 = fn(Play.Seeked);
         doc = undefined;
@@ -3730,9 +3729,9 @@ function initObservers(doc) {
         if (doc === undefined) {
           _document3 = document;
         }
-        obj = { capture: true, passive: true };
-        obj2 = obj;
-        const listener2 = _document3.addEventListener("seeked", fnResult2, obj);
+        const obj3 = { capture: true, passive: true };
+        obj5 = obj3;
+        const listener2 = _document3.addEventListener("seeked", fnResult2, obj3);
         items[2] = () => document.removeEventListener(selectionchange, fn, obj);
         const fnResult3 = fn(Play.VolumeChange);
         doc = undefined;
@@ -3742,9 +3741,9 @@ function initObservers(doc) {
         if (doc === undefined) {
           _document4 = document;
         }
-        obj1 = { capture: true, passive: true };
-        obj2 = obj1;
-        const listener3 = _document4.addEventListener("volumechange", fnResult3, obj1);
+        const obj4 = { capture: true, passive: true };
+        obj5 = obj4;
+        const listener3 = _document4.addEventListener("volumechange", fnResult3, obj4);
         items[3] = () => document.removeEventListener(selectionchange, fn, obj);
         fnResult4 = fn(Play.RateChange);
         doc = undefined;
@@ -3752,8 +3751,8 @@ function initObservers(doc) {
         if (doc === undefined) {
           doc = document;
         }
-        obj2 = { capture: true, passive: true };
-        const listener4 = doc.addEventListener("ratechange", fnResult4, obj2);
+        obj5 = { capture: true, passive: true };
+        const listener4 = doc.addEventListener("ratechange", fnResult4, obj5);
         items[4] = () => document.removeEventListener(selectionchange, fn, obj);
         if (typeof tmp === "function") {
           let fn2 = () => {
@@ -3800,7 +3799,7 @@ function initObservers(doc) {
 
     };
     if (doc.recordDOM) {
-      obj = { win: defaultView };
+      let obj2 = { win: defaultView };
       closure_7 = (function initStyleSheetObserver(doc, win) {
         ({ styleSheetRuleCb: closure_0, mirror: closure_1, stylesheetManager: closure_2 } = doc);
         win = win.win;
@@ -3808,7 +3807,7 @@ function initObservers(doc) {
         let replace;
         let replaceSync;
         let deleteRule;
-        obj2 = undefined;
+        obj5 = undefined;
         closure_9 = undefined;
         if (win.CSSStyleSheet) {
           if (win.CSSStyleSheet.prototype) {
@@ -3816,15 +3815,14 @@ function initObservers(doc) {
             if (typeof closure_86 === "function") {
               let fn = (apply, ownerNode, arg2) => {
                 closure_6(arg2, 2);
-                obj = closure_1_1;
                 const styleMirror = closure_1_2.styleMirror;
                 if (ownerNode) {
                   if (ownerNode.ownerNode) {
-                    id = obj.getId(ownerNode.ownerNode);
+                    const id1 = closure_1_1.getId(ownerNode.ownerNode);
                   } else {
-                    const id1 = styleMirror.getId(ownerNode);
+                    const id2 = styleMirror.getId(ownerNode);
                   }
-                  obj = { styleId: id1, id };
+                  const obj2 = { styleId: id2, id: id1 };
                 } else {
                   ({ id, styleId } = {});
                   let tmp7 = id;
@@ -3839,11 +3837,11 @@ function initObservers(doc) {
                     tmp7 = tmp8;
                   }
                   if (tmp7) {
-                    obj = { id, styleId, adds: null };
-                    obj1 = { rule: tmp2, index: tmp3 };
-                    items = [obj1];
-                    obj.adds = items;
-                    closure_1_0(obj);
+                    const obj3 = { id, styleId, adds: null };
+                    const obj4 = { rule: tmp2, index: tmp3 };
+                    items = [obj4];
+                    obj3.adds = items;
+                    closure_1_0(obj3);
                   }
                   return apply.apply(ownerNode, arg2);
                 }
@@ -3869,20 +3867,19 @@ function initObservers(doc) {
                 };
               }
               obj = { apply: fn };
-              tmp3 = new tmp3(insertRule, obj);
-              tmp.insertRule = tmp3;
+              const tmp37 = new tmp3(insertRule, obj);
+              tmp.insertRule = tmp37;
               deleteRule = win.CSSStyleSheet.prototype.deleteRule;
               if (typeof closure_86 === "function") {
                 let fn2 = (apply, ownerNode, arg2) => {
-                  obj = closure_1_1;
                   const styleMirror = closure_1_2.styleMirror;
                   if (ownerNode) {
                     if (ownerNode.ownerNode) {
-                      id = obj.getId(ownerNode.ownerNode);
+                      const id1 = closure_1_1.getId(ownerNode.ownerNode);
                     } else {
-                      const id1 = styleMirror.getId(ownerNode);
+                      const id2 = styleMirror.getId(ownerNode);
                     }
-                    obj = { styleId: id1, id };
+                    const obj2 = { styleId: id2, id: id1 };
                   } else {
                     ({ id, styleId } = {});
                     let tmp5 = id;
@@ -3897,11 +3894,11 @@ function initObservers(doc) {
                       tmp5 = tmp6;
                     }
                     if (tmp5) {
-                      obj = { id, styleId, removes: null };
-                      obj1 = { index: tmp };
-                      items = [obj1];
-                      obj.removes = items;
-                      closure_1_0(obj);
+                      const obj3 = { id, styleId, removes: null };
+                      const obj4 = { index: tmp };
+                      items = [obj4];
+                      obj3.removes = items;
+                      closure_1_0(obj3);
                     }
                     return apply.apply(ownerNode, arg2);
                   }
@@ -3926,22 +3923,21 @@ function initObservers(doc) {
                     }
                   };
                 }
-                obj = { apply: fn2 };
-                tmp13 = new tmp13(deleteRule, obj);
-                tmp12.deleteRule = tmp13;
+                let obj2 = { apply: fn2 };
+                const tmp132 = new tmp13(deleteRule, obj2);
+                tmp12.deleteRule = tmp132;
                 if (win.CSSStyleSheet.prototype.replace) {
                   replace = win.CSSStyleSheet.prototype.replace;
                   if (typeof closure_86 === "function") {
                     let fn3 = (apply, ownerNode, arg2) => {
-                      obj = closure_1_1;
                       const styleMirror = closure_1_2.styleMirror;
                       if (ownerNode) {
                         if (ownerNode.ownerNode) {
-                          id = obj.getId(ownerNode.ownerNode);
+                          const id1 = closure_1_1.getId(ownerNode.ownerNode);
                         } else {
-                          const id1 = styleMirror.getId(ownerNode);
+                          const id2 = styleMirror.getId(ownerNode);
                         }
-                        obj = { styleId: id1, id };
+                        const obj2 = { styleId: id2, id: id1 };
                       } else {
                         ({ id, styleId } = {});
                         let tmp5 = id;
@@ -3956,8 +3952,8 @@ function initObservers(doc) {
                           tmp5 = tmp6;
                         }
                         if (tmp5) {
-                          obj = { id, styleId, replace: tmp };
-                          closure_1_0(obj);
+                          const obj3 = { id, styleId, replace: tmp };
+                          closure_1_0(obj3);
                         }
                         return apply.apply(ownerNode, arg2);
                       }
@@ -3982,9 +3978,9 @@ function initObservers(doc) {
                         }
                       };
                     }
-                    obj = { apply: fn3 };
-                    tmp22 = new tmp22(replace, obj);
-                    tmp21.replace = tmp22;
+                    let obj3 = { apply: fn3 };
+                    const tmp222 = new tmp22(replace, obj3);
+                    tmp21.replace = tmp222;
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
@@ -3993,15 +3989,14 @@ function initObservers(doc) {
                   replaceSync = win.CSSStyleSheet.prototype.replaceSync;
                   if (typeof closure_86 === "function") {
                     let fn4 = (apply, ownerNode, arg2) => {
-                      obj = closure_1_1;
                       const styleMirror = closure_1_2.styleMirror;
                       if (ownerNode) {
                         if (ownerNode.ownerNode) {
-                          id = obj.getId(ownerNode.ownerNode);
+                          const id1 = closure_1_1.getId(ownerNode.ownerNode);
                         } else {
-                          const id1 = styleMirror.getId(ownerNode);
+                          const id2 = styleMirror.getId(ownerNode);
                         }
-                        obj = { styleId: id1, id };
+                        const obj2 = { styleId: id2, id: id1 };
                       } else {
                         ({ id, styleId } = {});
                         let tmp5 = id;
@@ -4016,8 +4011,8 @@ function initObservers(doc) {
                           tmp5 = tmp6;
                         }
                         if (tmp5) {
-                          obj = { id, styleId, replaceSync: tmp };
-                          closure_1_0(obj);
+                          const obj3 = { id, styleId, replaceSync: tmp };
+                          closure_1_0(obj3);
                         }
                         return apply.apply(ownerNode, arg2);
                       }
@@ -4042,14 +4037,14 @@ function initObservers(doc) {
                         }
                       };
                     }
-                    obj1 = { apply: fn4 };
-                    tmp31 = new tmp31(replaceSync, obj1);
-                    tmp30.replaceSync = tmp31;
+                    let obj4 = { apply: fn4 };
+                    const tmp312 = new tmp31(replaceSync, obj4);
+                    tmp30.replaceSync = tmp312;
                   } else {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                obj2 = {};
+                obj5 = {};
                 const _window = window;
                 let prototype = undefined !== window.CSSGroupingRule;
                 if (prototype) {
@@ -4065,7 +4060,7 @@ function initObservers(doc) {
                   prototype = "deleteRule" in window.CSSGroupingRule.prototype;
                 }
                 if (Boolean(prototype)) {
-                  obj2.CSSGroupingRule = win.CSSGroupingRule;
+                  obj5.CSSGroupingRule = win.CSSGroupingRule;
                 } else {
                   const _window5 = window;
                   let prototype2 = undefined !== window.CSSMediaRule;
@@ -4082,7 +4077,7 @@ function initObservers(doc) {
                     prototype2 = "deleteRule" in window.CSSMediaRule.prototype;
                   }
                   if (Boolean(prototype2)) {
-                    obj2.CSSMediaRule = win.CSSMediaRule;
+                    obj5.CSSMediaRule = win.CSSMediaRule;
                   }
                   const _window9 = window;
                   let prototype3 = undefined !== window.CSSConditionRule;
@@ -4099,7 +4094,7 @@ function initObservers(doc) {
                     prototype3 = "deleteRule" in window.CSSConditionRule.prototype;
                   }
                   if (Boolean(prototype3)) {
-                    obj2.CSSConditionRule = win.CSSConditionRule;
+                    obj5.CSSConditionRule = win.CSSConditionRule;
                   }
                   const _window13 = window;
                   let prototype4 = undefined !== window.CSSSupportsRule;
@@ -4116,12 +4111,12 @@ function initObservers(doc) {
                     prototype4 = "deleteRule" in window.CSSSupportsRule.prototype;
                   }
                   if (Boolean(prototype4)) {
-                    obj2.CSSSupportsRule = win.CSSSupportsRule;
+                    obj5.CSSSupportsRule = win.CSSSupportsRule;
                   }
                 }
                 closure_9 = {};
                 const _Object = Object;
-                let entries = Object.entries(obj2);
+                let entries = Object.entries(obj5);
                 let item = entries.forEach((item) => {
                   [tmp, tmp2] = item;
                   closure_9[tmp] = { insertRule: tmp2.prototype.insertRule, deleteRule: tmp2.prototype.deleteRule };
@@ -4133,11 +4128,11 @@ function initObservers(doc) {
                       const styleMirror = closure_1_2.styleMirror;
                       if (parentStyleSheet) {
                         if (parentStyleSheet.ownerNode) {
-                          id = closure_1_1.getId(parentStyleSheet.ownerNode);
+                          const id1 = closure_1_1.getId(parentStyleSheet.ownerNode);
                         } else {
-                          const id1 = styleMirror.getId(parentStyleSheet);
+                          const id2 = styleMirror.getId(parentStyleSheet);
                         }
-                        parentStyleSheet = { styleId: id1, id };
+                        parentStyleSheet = { styleId: id2, id: id1 };
                       } else {
                         ({ id, styleId } = {});
                         let tmp6 = id;
@@ -4153,14 +4148,14 @@ function initObservers(doc) {
                         }
                         if (tmp6) {
                           obj = { id, styleId, adds: null };
-                          obj = { rule: tmp2, index: null };
+                          const obj3 = { rule: tmp2, index: null };
                           items = [];
                           if (!num) {
                             num = 0;
                           }
                           items[HermesBuiltin.arraySpread(closure_2_95(parentStyleSheet), 0)] = num;
-                          obj.index = items;
-                          const items1 = [obj];
+                          obj3.index = items;
+                          const items1 = [obj3];
                           obj.adds = items1;
                           fn2(obj);
                           const arraySpreadResult = HermesBuiltin.arraySpread(closure_2_95(parentStyleSheet), 0);
@@ -4190,8 +4185,8 @@ function initObservers(doc) {
                       };
                     }
                     obj = { apply: fn };
-                    tmp5 = new tmp5(insertRule, obj);
-                    tmp4.insertRule = tmp5;
+                    const tmp52 = new tmp5(insertRule, obj);
+                    tmp4.insertRule = tmp52;
                     deleteRule = tmp3[tmp].deleteRule;
                     if (typeof tmp6 === "function") {
                       fn2 = (apply, parentStyleSheet, arg2) => {
@@ -4199,11 +4194,11 @@ function initObservers(doc) {
                         const styleMirror = closure_1_2.styleMirror;
                         if (parentStyleSheet) {
                           if (parentStyleSheet.ownerNode) {
-                            id = closure_1_1.getId(parentStyleSheet.ownerNode);
+                            const id1 = closure_1_1.getId(parentStyleSheet.ownerNode);
                           } else {
-                            const id1 = styleMirror.getId(parentStyleSheet);
+                            const id2 = styleMirror.getId(parentStyleSheet);
                           }
-                          parentStyleSheet = { styleId: id1, id };
+                          parentStyleSheet = { styleId: id2, id: id1 };
                         } else {
                           ({ id, styleId } = {});
                           let tmp5 = id;
@@ -4219,11 +4214,11 @@ function initObservers(doc) {
                           }
                           if (tmp5) {
                             obj = { id, styleId, removes: null };
-                            obj = { index: null };
+                            const obj3 = { index: null };
                             items = [];
                             items[HermesBuiltin.arraySpread(closure_2_95(parentStyleSheet), 0)] = tmp;
-                            obj.index = items;
-                            const items1 = [obj];
+                            obj3.index = items;
+                            const items1 = [obj3];
                             obj.removes = items1;
                             fn2(obj);
                           }
@@ -4249,9 +4244,9 @@ function initObservers(doc) {
                           }
                         };
                       }
-                      obj = { apply: fn2 };
-                      tmp15 = new tmp15(deleteRule, obj);
-                      tmp14.deleteRule = tmp15;
+                      const obj2 = { apply: fn2 };
+                      const tmp152 = new tmp15(deleteRule, obj2);
+                      tmp14.deleteRule = tmp152;
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
@@ -4269,7 +4264,7 @@ function initObservers(doc) {
                     if (replaceSync) {
                       win.CSSStyleSheet.prototype.replaceSync = tmp3;
                     }
-                    const entries = Object.entries(obj2);
+                    const entries = Object.entries(obj5);
                     const item = entries.forEach((item) => {
                       [tmp, tmp2] = item;
                       tmp2.prototype.insertRule = dependencyMap[tmp].insertRule;
@@ -4311,9 +4306,9 @@ function initObservers(doc) {
         return () => {
 
         };
-      })(doc, obj);
+      })(doc, obj2);
       closure_8 = initAdoptedStyleSheetObserver(doc, doc.doc);
-      obj = { win: defaultView };
+      let obj3 = { win: defaultView };
       closure_9 = (function initStyleDeclarationObserver(doc, win) {
         ({ styleDeclarationCb: closure_0, mirror: closure_1, ignoreCSSAttributes: closure_2, stylesheetManager: closure_3 } = doc);
         win = win.win;
@@ -4334,11 +4329,11 @@ function initObservers(doc) {
               const styleMirror = closure_1_3.styleMirror;
               if (parentStyleSheet) {
                 if (parentStyleSheet.ownerNode) {
-                  id = closure_1_1.getId(parentStyleSheet.ownerNode);
+                  const id1 = closure_1_1.getId(parentStyleSheet.ownerNode);
                 } else {
-                  const id1 = styleMirror.getId(parentStyleSheet);
+                  const id2 = styleMirror.getId(parentStyleSheet);
                 }
-                parentStyleSheet = { styleId: id1, id };
+                parentStyleSheet = { styleId: id2, id: id1 };
               } else {
                 ({ id, styleId } = {});
                 let tmp10 = id;
@@ -4353,11 +4348,11 @@ function initObservers(doc) {
                   tmp10 = tmp11;
                 }
                 if (tmp10) {
-                  set = { id, styleId, set: null, index: null };
-                  set = { property: tmp2, value: tmp3, priority: tmp4 };
-                  set.set = set;
-                  set.index = getNestedCSSRulePositions(parentRule.parentRule);
-                  closure_1_0(set);
+                  obj = { id, styleId, set: null, index: null };
+                  const obj3 = { property: tmp2, value: tmp3, priority: tmp4 };
+                  obj.set = obj3;
+                  obj.index = getNestedCSSRulePositions(parentRule.parentRule);
+                  closure_1_0(obj);
                 }
                 return apply.apply(parentRule, arg2);
               }
@@ -4385,8 +4380,8 @@ function initObservers(doc) {
             };
           }
           obj = { apply: fn };
-          tmp2 = new tmp2(setProperty, obj);
-          tmp.setProperty = tmp2;
+          const tmp22 = new tmp2(setProperty, obj);
+          tmp.setProperty = tmp22;
           removeProperty = win.CSSStyleDeclaration.prototype.removeProperty;
           if (typeof closure_86 === "function") {
             let fn2 = (apply, parentRule, arg2) => {
@@ -4403,11 +4398,11 @@ function initObservers(doc) {
                 const styleMirror = closure_1_3.styleMirror;
                 if (parentStyleSheet) {
                   if (parentStyleSheet.ownerNode) {
-                    id = closure_1_1.getId(parentStyleSheet.ownerNode);
+                    const id1 = closure_1_1.getId(parentStyleSheet.ownerNode);
                   } else {
-                    const id1 = styleMirror.getId(parentStyleSheet);
+                    const id2 = styleMirror.getId(parentStyleSheet);
                   }
-                  parentStyleSheet = { styleId: id1, id };
+                  parentStyleSheet = { styleId: id2, id: id1 };
                 } else {
                   ({ id, styleId } = {});
                   let tmp7 = id;
@@ -4422,11 +4417,11 @@ function initObservers(doc) {
                     tmp7 = tmp8;
                   }
                   if (tmp7) {
-                    let remove = { id, styleId, remove: null, index: null };
-                    remove = { property: first };
-                    remove.remove = remove;
-                    remove.index = getNestedCSSRulePositions(parentRule.parentRule);
-                    closure_1_0(remove);
+                    obj = { id, styleId, remove: null, index: null };
+                    const obj3 = { property: first };
+                    obj.remove = obj3;
+                    obj.index = getNestedCSSRulePositions(parentRule.parentRule);
+                    closure_1_0(obj);
                   }
                   return apply.apply(parentRule, arg2);
                 }
@@ -4452,9 +4447,9 @@ function initObservers(doc) {
                 }
               };
             }
-            obj = { apply: fn2 };
-            tmp12 = new tmp12(removeProperty, obj);
-            tmp11.removeProperty = tmp12;
+            const obj2 = { apply: fn2 };
+            const tmp122 = new tmp12(removeProperty, obj2);
+            tmp11.removeProperty = tmp122;
             if (typeof closure_86 === "function") {
               let fn3 = () => {
                 win.CSSStyleDeclaration.prototype.setProperty = setProperty;
@@ -4490,7 +4485,7 @@ function initObservers(doc) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      })(doc, obj);
+      })(doc, obj3);
       if (doc.collectFonts) {
         closure_10 = (function initFontObserver(doc) {
           ({ fontCb: closure_0, doc } = doc);
@@ -4543,7 +4538,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F108511 */ function() { ... };
+                            return /* F108514 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4609,7 +4604,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F108511 */ function() { ... };
+                            return /* F108514 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4663,8 +4658,8 @@ function initObservers(doc) {
                   num = num + 1;
                 } while (num < tmp4);
               }
-              obj = { ranges: items };
-              closure_1_5(obj);
+              const obj2 = { ranges: items };
+              closure_1_5(obj2);
             } else {
               let isCollapsed;
               if (selection != null) {
@@ -4712,10 +4707,10 @@ function initObservers(doc) {
             closure_0 = arg0;
             return function(name, arg1, arg2) {
               try {
-                let define = { define: null };
-                define = { name };
-                define.define = define;
-                customElementCb(define);
+                obj = { define: null };
+                const obj2 = { name };
+                obj.define = obj2;
+                customElementCb(obj);
                 const self = this;
                 items = [name, arg1, arg2];
                 return closure_0.apply(this, items);
@@ -4762,9 +4757,9 @@ function initObservers(doc) {
   }
 }
 function record() {
-  slimDOMOptions = arg0;
+  obj = arg0;
   if (arg0 === undefined) {
-    slimDOMOptions = {};
+    obj = {};
   }
   c1 = undefined;
   c2 = undefined;
@@ -4797,7 +4792,7 @@ function record() {
   c31 = undefined;
   let timestamp;
   maskInputOptions = undefined;
-  slimDOMOptions = undefined;
+  let obj2;
   c35 = undefined;
   let eventProcessor;
   let wrappedMutationEmit;
@@ -4812,100 +4807,100 @@ function record() {
   c46 = undefined;
   c47 = undefined;
   c48 = undefined;
-  const emit = slimDOMOptions.emit;
-  ({ checkoutEveryNms: c1, checkoutEveryNth: c2, blockClass } = slimDOMOptions);
+  const emit = obj.emit;
+  ({ checkoutEveryNms: c1, checkoutEveryNth: c2, blockClass } = obj);
   let str = "rr-block";
   if (undefined !== blockClass) {
     str = blockClass;
   }
-  blockSelector = slimDOMOptions.blockSelector;
+  blockSelector = obj.blockSelector;
   let tmp = null;
   if (undefined !== blockSelector) {
     tmp = blockSelector;
   }
   blockSelector = tmp;
-  unblockSelector = slimDOMOptions.unblockSelector;
+  unblockSelector = obj.unblockSelector;
   let tmp2 = null;
   if (undefined !== unblockSelector) {
     tmp2 = unblockSelector;
   }
   unblockSelector = tmp2;
-  const ignoreClass = slimDOMOptions.ignoreClass;
-  ignoreSelector = slimDOMOptions.ignoreSelector;
+  const ignoreClass = obj.ignoreClass;
+  ignoreSelector = obj.ignoreSelector;
   let tmp3 = null;
   if (undefined !== ignoreSelector) {
     tmp3 = ignoreSelector;
   }
   ignoreSelector = tmp3;
   maskAllText = tmp4;
-  let maskTextClass = slimDOMOptions.maskTextClass;
+  let maskTextClass = obj.maskTextClass;
   str3 = "rr-mask";
   if (undefined !== maskTextClass) {
     str3 = maskTextClass;
   }
-  unmaskTextClass = slimDOMOptions.unmaskTextClass;
+  unmaskTextClass = obj.unmaskTextClass;
   let tmp5 = null;
   if (undefined !== unmaskTextClass) {
     tmp5 = unmaskTextClass;
   }
   unmaskTextClass = tmp5;
-  maskTextSelector = slimDOMOptions.maskTextSelector;
+  maskTextSelector = obj.maskTextSelector;
   let tmp6 = null;
   if (undefined !== maskTextSelector) {
     tmp6 = maskTextSelector;
   }
   maskTextSelector = tmp6;
-  unmaskTextSelector = slimDOMOptions.unmaskTextSelector;
+  unmaskTextSelector = obj.unmaskTextSelector;
   let tmp7 = null;
   if (undefined !== unmaskTextSelector) {
     tmp7 = unmaskTextSelector;
   }
   unmaskTextSelector = tmp7;
   inlineStylesheet = tmp8;
-  ({ maskInputOptions, slimDOMOptions, maskAttributeFn } = slimDOMOptions);
-  maskInputFn = slimDOMOptions.maskInputFn;
-  maskTextFn = slimDOMOptions.maskTextFn;
-  const maxCanvasSize = slimDOMOptions.maxCanvasSize;
+  ({ maskInputOptions, slimDOMOptions, maskAttributeFn } = obj);
+  maskInputFn = obj.maskInputFn;
+  maskTextFn = obj.maskTextFn;
+  const maxCanvasSize = obj.maxCanvasSize;
   let tmp9 = null;
   if (undefined !== maxCanvasSize) {
     tmp9 = maxCanvasSize;
   }
-  ({ packFn: c17, sampling } = slimDOMOptions);
+  ({ packFn: c17, sampling } = obj);
   if (undefined === sampling) {
     sampling = {};
   }
-  dataURLOptions = slimDOMOptions.dataURLOptions;
+  dataURLOptions = obj.dataURLOptions;
   if (undefined === dataURLOptions) {
     dataURLOptions = {};
   }
-  ({ mousemoveWait, recordDOM } = slimDOMOptions);
+  ({ mousemoveWait, recordDOM } = obj);
   closure_20 = undefined === recordDOM || recordDOM;
   recordCanvas = tmp10;
-  const recordCrossOriginIframes = slimDOMOptions.recordCrossOriginIframes;
-  recordAfter = slimDOMOptions.recordAfter;
+  const recordCrossOriginIframes = obj.recordCrossOriginIframes;
+  recordAfter = obj.recordAfter;
   if (undefined === recordAfter) {
     let str4 = "load";
-    if ("DOMContentLoaded" === slimDOMOptions.recordAfter) {
-      str4 = slimDOMOptions.recordAfter;
+    if ("DOMContentLoaded" === obj.recordAfter) {
+      str4 = obj.recordAfter;
     }
     recordAfter = str4;
   }
-  const userTriggeredOnInput = slimDOMOptions.userTriggeredOnInput;
+  const userTriggeredOnInput = obj.userTriggeredOnInput;
   closure_23 = undefined !== userTriggeredOnInput && userTriggeredOnInput;
-  const collectFonts = slimDOMOptions.collectFonts;
+  const collectFonts = obj.collectFonts;
   closure_24 = undefined !== collectFonts && collectFonts;
   inlineImages = tmp12;
-  plugins = slimDOMOptions.plugins;
-  keepIframeSrcFn = slimDOMOptions.keepIframeSrcFn;
+  plugins = obj.plugins;
+  keepIframeSrcFn = obj.keepIframeSrcFn;
   if (undefined === keepIframeSrcFn) {
     keepIframeSrcFn = () => false;
   }
-  ignoreCSSAttributes = slimDOMOptions.ignoreCSSAttributes;
+  ignoreCSSAttributes = obj.ignoreCSSAttributes;
   if (undefined === ignoreCSSAttributes) {
     let _Set = Set;
     ignoreCSSAttributes = new Set([]);
   }
-  ({ errorHandler, onMutation } = slimDOMOptions);
+  ({ errorHandler, onMutation } = obj);
   (function registerErrorHandler(errorHandler) {
     closure_79 = errorHandler;
   })(errorHandler);
@@ -4948,15 +4943,16 @@ function record() {
     sampling.mousemove = mousemoveWait;
   }
   navigation.reset();
-  if (true === slimDOMOptions.maskAllInputs) {
+  if (true === obj.maskAllInputs) {
     maskInputOptions = { color: true, date: true, "datetime-local": true, email: true, month: true, number: true, range: true, search: true, tel: true, text: true, time: true, url: true, week: true, textarea: true, select: true, radio: true, checkbox: true };
   } else if (undefined === maskInputOptions) {
     maskInputOptions = {};
   }
   if (true !== slimDOMOptions) {
     if ("all" !== slimDOMOptions) {
+      obj2 = slimDOMOptions;
       if (!slimDOMOptions) {
-        slimDOMOptions = {};
+        obj2 = {};
       }
     }
     (function polyfill$1() {
@@ -5030,12 +5026,12 @@ function record() {
       }
       let tmp2 = !isFrozenResult;
       if (isFrozenResult) {
-        tmp2 = type.type === obj1.FullSnapshot;
+        tmp2 = type.type === obj5.FullSnapshot;
       }
       if (!tmp2) {
-        let tmp5 = type.type === obj1.IncrementalSnapshot;
+        let tmp5 = type.type === obj5.IncrementalSnapshot;
         if (tmp5) {
-          tmp5 = type.data.source === obj2.Mutation;
+          tmp5 = type.data.source === obj6.Mutation;
         }
         tmp2 = tmp5;
       }
@@ -5054,7 +5050,7 @@ function record() {
         const _window2 = window;
         parent.postMessage(obj, "*");
       }
-      if (type.type === obj1.FullSnapshot) {
+      if (type.type === obj5.FullSnapshot) {
         timestamp = type;
         c35 = 0;
       } else if (type.type === tmp15.IncrementalSnapshot) {
@@ -5080,37 +5076,33 @@ function record() {
       }
     }
     wrappedMutationEmit = function wrappedMutationEmit(arg0) {
-      let data = { type: obj1.IncrementalSnapshot, data: null };
-      data = { source: obj2.Mutation };
+      obj = { type: obj5.IncrementalSnapshot, data: null };
       const merged = Object.assign(arg0);
-      data.data = data;
-      le(data);
+      obj.data = { source: obj6.Mutation };
+      le(obj);
     };
     wrappedScrollEmit = function wrappedScrollEmit(arg0) {
-      let data = { type: obj1.IncrementalSnapshot, data: null };
-      data = { source: obj2.Scroll };
+      obj = { type: obj5.IncrementalSnapshot, data: null };
       const merged = Object.assign(arg0);
-      data.data = data;
-      le(data);
+      obj.data = { source: obj6.Scroll };
+      le(obj);
     };
     wrappedCanvasMutationEmit = function wrappedCanvasMutationEmit(arg0) {
-      let data = { type: obj1.IncrementalSnapshot, data: null };
-      data = { source: obj2.CanvasMutation };
+      obj = { type: obj5.IncrementalSnapshot, data: null };
       const merged = Object.assign(arg0);
-      data.data = data;
-      le(data);
+      obj.data = { source: obj6.CanvasMutation };
+      le(obj);
     };
-    slimDOMOptions = {
+    let obj3 = {
       mutationCb: wrappedMutationEmit,
       adoptedStyleSheetCb(arg0) {
-          let data = { type: obj1.IncrementalSnapshot, data: null };
-          data = { source: obj2.AdoptedStyleSheet };
+          obj = { type: obj5.IncrementalSnapshot, data: null };
           const merged = Object.assign(arg0);
-          data.data = data;
-          le(data);
+          obj.data = { source: obj6.AdoptedStyleSheet };
+          le(obj);
         }
     };
-    let tmp35 = new closure_106(slimDOMOptions);
+    let tmp35 = new closure_106(obj3);
     navigation = tmp35;
     if (typeof globalThis.__RRWEB_EXCLUDE_IFRAME__ === "boolean") {
       if (globalThis.__RRWEB_EXCLUDE_IFRAME__) {
@@ -5121,35 +5113,33 @@ function record() {
         plugins = [];
       }
       for (const item10140 of plugins) {
-        let obj6 = item10140;
         if (item10140.getMirror) {
-          obj1 = { nodeMirror: null, crossOriginIframeMirror: null, crossOriginIframeStyleMirror: null };
-          obj1.nodeMirror = navigation;
+          let obj4 = { nodeMirror: null, crossOriginIframeMirror: null, crossOriginIframeStyleMirror: null };
+          obj4.nodeMirror = navigation;
           ({ crossOriginIframeMirror: obj8.crossOriginIframeMirror, crossOriginIframeStyleMirror: obj8.crossOriginIframeStyleMirror } = tmp44);
-          let mirror = obj6.getMirror(obj1);
+          let mirror = item10140.getMirror(obj4);
         }
         continue;
       }
       const tmp57 = new closure_107();
       closure_42 = tmp57;
-      obj2 = { mirror: navigation, win: null, mutationCb: null, recordCanvas: null, blockClass: null, blockSelector: null, unblockSelector: null, maxCanvasSize: null, sampling: null, dataURLOptions: null, errorHandler: null };
+      obj5 = { mirror: navigation, win: null, mutationCb: null, recordCanvas: null, blockClass: null, blockSelector: null, unblockSelector: null, maxCanvasSize: null, sampling: null, dataURLOptions: null, errorHandler: null };
       let _window4 = window;
-      obj2.win = window;
-      obj2.mutationCb = function mutationCb(attributes) {
-        let data = { type: obj1.IncrementalSnapshot, data: null };
-        data = { source: obj2.CanvasMutation };
-        const merged = Object.assign(attributes);
-        data.data = data;
-        le(data);
+      obj5.win = window;
+      obj5.mutationCb = function mutationCb(arg0) {
+        obj = { type: obj5.IncrementalSnapshot, data: null };
+        const merged = Object.assign(arg0);
+        obj.data = { source: obj6.CanvasMutation };
+        le(obj);
       };
-      obj2.recordCanvas = tmp10;
-      obj2.blockClass = str;
-      obj2.blockSelector = tmp;
-      obj2.unblockSelector = tmp2;
-      obj2.maxCanvasSize = tmp9;
-      obj2.sampling = sampling.canvas;
-      obj2.dataURLOptions = dataURLOptions;
-      obj2.errorHandler = errorHandler;
+      obj5.recordCanvas = tmp10;
+      obj5.blockClass = str;
+      obj5.blockSelector = tmp;
+      obj5.unblockSelector = tmp2;
+      obj5.maxCanvasSize = tmp9;
+      obj5.sampling = sampling.canvas;
+      obj5.dataURLOptions = dataURLOptions;
+      obj5.errorHandler = errorHandler;
       const tmp61 = (function _getCanvasManager(getCanvasManager, arg1) {
         try {
           if (getCanvasManager) {
@@ -5164,14 +5154,14 @@ function record() {
           const tmp12 = new closure_1_105();
           return tmp12;
         }
-      })(slimDOMOptions.getCanvasManager, obj2);
+      })(obj.getCanvasManager, obj5);
       closure_43 = tmp61;
       if (typeof globalThis.__RRWEB_EXCLUDE_SHADOW_DOM__ !== "boolean") {
-        obj3 = { mutationCb: wrappedMutationEmit, scrollCb: wrappedScrollEmit, bypassOptions: null, mirror: null };
-        obj4 = { onMutation, blockClass: str, blockSelector: tmp, unblockSelector: tmp2, maskAllText: tmp4, maskTextClass: str3, unmaskTextClass: tmp5, maskTextSelector: tmp6, unmaskTextSelector: tmp7, inlineStylesheet: tmp8, maskInputOptions, dataURLOptions, maskAttributeFn, maskTextFn, maskInputFn, recordCanvas: tmp10, inlineImages: tmp12, sampling, slimDOMOptions, iframeManager: tmp44, stylesheetManager: tmp35, canvasManager: tmp61, keepIframeSrcFn, processedNodeManager: tmp57, ignoreCSSAttributes };
-        obj3.bypassOptions = obj4;
-        obj3.mirror = tmp59;
-        let tmp66 = new closure_102(obj3);
+        obj6 = { mutationCb: wrappedMutationEmit, scrollCb: wrappedScrollEmit, bypassOptions: null, mirror: null };
+        obj9 = { onMutation, blockClass: str, blockSelector: tmp, unblockSelector: tmp2, maskAllText: tmp4, maskTextClass: str3, unmaskTextClass: tmp5, maskTextSelector: tmp6, unmaskTextSelector: tmp7, inlineStylesheet: tmp8, maskInputOptions, dataURLOptions, maskAttributeFn, maskTextFn, maskInputFn, recordCanvas: tmp10, inlineImages: tmp12, sampling, slimDOMOptions: obj2, iframeManager: tmp44, stylesheetManager: tmp35, canvasManager: tmp61, keepIframeSrcFn, processedNodeManager: tmp57, ignoreCSSAttributes };
+        obj6.bypassOptions = obj9;
+        obj6.mirror = tmp59;
+        let tmp66 = new closure_102(obj6);
         closure_44 = tmp66;
         takeFullSnapshot2 = function takeFullSnapshot2(arg0) {
           let flag = arg0;
@@ -5179,7 +5169,7 @@ function record() {
             flag = false;
           }
           if (closure_20) {
-            let slimDOM = { type: obj1.Meta, data: null };
+            obj = { type: navigation.Meta, data: null };
             let size = { href: null, width: null, height: null };
             const _window = window;
             size.href = window.location.href;
@@ -5223,34 +5213,18 @@ function record() {
               innerHeight = clientHeight2;
             }
             size.height = innerHeight;
-            slimDOM.data = size;
-            closure_2_103(slimDOM, flag);
-            obj2 = navigation;
+            obj.data = size;
+            closure_2_103(obj, flag);
             navigation.reset();
             closure_44.init();
             const item = closure_87.forEach((lock) => lock.lock());
             const _document9 = document;
-            slimDOM = { mirror: null, blockClass: null, blockSelector: null, unblockSelector: null, maskAllText: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, inlineStylesheet: null, maskAllInputs: null, maskAttributeFn: null, maskInputFn: null, maskTextFn: null, slimDOM: null, dataURLOptions: null, recordCanvas: null, inlineImages: null, onSerialize: null, onIframeLoad: null, onStylesheetLoad: null, onBlockedImageLoad: null, keepIframeSrcFn: null, ignoreCSSAttributes: null };
-            obj4 = navigation;
-            slimDOM.mirror = navigation;
-            slimDOM.blockClass = str;
-            slimDOM.blockSelector = blockSelector;
-            slimDOM.unblockSelector = unblockSelector;
-            slimDOM.maskAllText = maskAllText;
-            slimDOM.maskTextClass = str3;
-            slimDOM.unmaskTextClass = unmaskTextClass;
-            slimDOM.maskTextSelector = maskTextSelector;
-            slimDOM.unmaskTextSelector = unmaskTextSelector;
-            slimDOM.inlineStylesheet = inlineStylesheet;
-            slimDOM.maskAllInputs = maskInputOptions;
-            slimDOM.maskAttributeFn = maskAttributeFn;
-            slimDOM.maskInputFn = maskInputFn;
-            slimDOM.maskTextFn = maskTextFn;
-            slimDOM.slimDOM = slimDOM;
-            slimDOM.dataURLOptions = dataURLOptions;
-            slimDOM.recordCanvas = recordCanvas;
-            slimDOM.inlineImages = inlineImages;
-            slimDOM.onSerialize = function onSerialize(nodeName) {
+            obj2 = { mirror: navigation, blockClass: str, blockSelector, unblockSelector, maskAllText, maskTextClass: str3, unmaskTextClass, maskTextSelector, unmaskTextSelector, inlineStylesheet, maskAllInputs: maskInputOptions, maskAttributeFn, maskInputFn, maskTextFn, slimDOM: null, dataURLOptions: null, recordCanvas: null, inlineImages: null, onSerialize: null, onIframeLoad: null, onStylesheetLoad: null, onBlockedImageLoad: null, keepIframeSrcFn: null, ignoreCSSAttributes: null };
+            obj2.slimDOM = obj2;
+            obj2.dataURLOptions = dataURLOptions;
+            obj2.recordCanvas = recordCanvas;
+            obj2.inlineImages = inlineImages;
+            obj2.onSerialize = function onSerialize(nodeName) {
               let meta = "IFRAME" === nodeName.nodeName;
               if (meta) {
                 meta = closure_2_108.getMeta(nodeName);
@@ -5283,135 +5257,135 @@ function record() {
                 closure_1_44.addShadowRoot(nodeName.shadowRoot, document);
               }
             };
-            slimDOM.onIframeLoad = function onIframeLoad(contentWindow, arg1) {
+            obj2.onIframeLoad = function onIframeLoad(contentWindow, arg1) {
               closure_1_41.attachIframe(contentWindow, arg1);
               if (contentWindow.contentWindow) {
                 closure_1_43.addWindow(contentWindow.contentWindow);
               }
               closure_1_44.observeAttachShadow(contentWindow);
             };
-            slimDOM.onStylesheetLoad = function onStylesheetLoad(nodeName, attributes) {
+            obj2.onStylesheetLoad = function onStylesheetLoad(nodeName, attributes) {
               navigation.attachLinkElement(nodeName, attributes);
             };
-            slimDOM.onBlockedImageLoad = function onBlockedImageLoad(arg0, id, width) {
-              let attributes = { adds: [], removes: [], texts: [], attributes: null };
-              attributes = { id: id.id, attributes: null };
-              attributes = { style: null };
+            obj2.onBlockedImageLoad = function onBlockedImageLoad(arg0, id, width) {
+              obj = { adds: [], removes: [], texts: [], attributes: null };
+              obj2 = { id: id.id, attributes: null };
+              const obj3 = { style: null };
               const size = { width: "" + width.width + "px", height: "" + width.height + "px" };
-              attributes.style = size;
-              attributes.attributes = attributes;
-              const items = [attributes];
-              attributes.attributes = items;
+              obj3.style = size;
+              obj2.attributes = obj3;
+              const items = [obj2];
+              obj.attributes = items;
               if (typeof wrappedMutationEmit === "function") {
-                obj1 = { type: IncrementalSnapshot.IncrementalSnapshot, data: null };
-                obj2 = { source: Mutation.Mutation };
-                const merged = Object.assign(attributes);
-                obj1.data = obj2;
-                le(obj1);
+                const obj4 = { type: IncrementalSnapshot.IncrementalSnapshot, data: null };
+                obj5 = { source: obj6.Mutation };
+                const merged = Object.assign(obj);
+                obj4.data = obj5;
+                le(obj4);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
             };
-            slimDOM.keepIframeSrcFn = keepIframeSrcFn;
-            slimDOM.ignoreCSSAttributes = ignoreCSSAttributes;
-            let mirror = slimDOM.mirror;
+            obj2.keepIframeSrcFn = keepIframeSrcFn;
+            obj2.ignoreCSSAttributes = ignoreCSSAttributes;
+            let mirror = obj2.mirror;
             if (undefined === mirror) {
               mirror = new closure_23();
             }
-            const blockClass = slimDOM.blockClass;
+            const blockClass = obj2.blockClass;
             str = "rr-block";
             if (undefined !== blockClass) {
               str = blockClass;
             }
-            blockSelector = slimDOM.blockSelector;
+            blockSelector = obj2.blockSelector;
             let tmp31 = null;
             if (undefined !== blockSelector) {
               tmp31 = blockSelector;
             }
-            unblockSelector = slimDOM.unblockSelector;
+            unblockSelector = obj2.unblockSelector;
             let tmp32 = null;
             if (undefined !== unblockSelector) {
               tmp32 = unblockSelector;
             }
-            maskAllText = slimDOM.maskAllText;
-            const maskTextClass = slimDOM.maskTextClass;
+            maskAllText = obj2.maskAllText;
+            const maskTextClass = obj2.maskTextClass;
             str2 = "rr-mask";
             if (undefined !== maskTextClass) {
               str2 = maskTextClass;
             }
-            unmaskTextClass = slimDOM.unmaskTextClass;
+            unmaskTextClass = obj2.unmaskTextClass;
             let tmp34 = null;
             if (undefined !== unmaskTextClass) {
               tmp34 = unmaskTextClass;
             }
-            maskTextSelector = slimDOM.maskTextSelector;
+            maskTextSelector = obj2.maskTextSelector;
             let tmp35 = null;
             if (undefined !== maskTextSelector) {
               tmp35 = maskTextSelector;
             }
-            unmaskTextSelector = slimDOM.unmaskTextSelector;
+            unmaskTextSelector = obj2.unmaskTextSelector;
             let tmp36 = null;
             if (undefined !== unmaskTextSelector) {
               tmp36 = unmaskTextSelector;
             }
-            inlineStylesheet = slimDOM.inlineStylesheet;
-            inlineImages = slimDOM.inlineImages;
-            recordCanvas = slimDOM.recordCanvas;
-            const maskAllInputs = slimDOM.maskAllInputs;
-            obj1 = undefined !== maskAllInputs && maskAllInputs;
-            slimDOM = slimDOM.slimDOM;
+            inlineStylesheet = obj2.inlineStylesheet;
+            inlineImages = obj2.inlineImages;
+            recordCanvas = obj2.recordCanvas;
+            const maskAllInputs = obj2.maskAllInputs;
+            obj6 = undefined !== maskAllInputs && maskAllInputs;
+            const slimDOM = obj2.slimDOM;
             let tmp40 = undefined !== slimDOM;
-            ({ maskAttributeFn, maskTextFn, maskInputFn } = slimDOM);
+            ({ maskAttributeFn, maskTextFn, maskInputFn } = obj2);
             if (tmp40) {
               tmp40 = slimDOM;
             }
-            ({ keepIframeSrcFn, dataURLOptions, preserveWhiteSpace, onSerialize, onIframeLoad, iframeLoadTimeout, onBlockedImageLoad, onStylesheetLoad, stylesheetLoadTimeout } = slimDOM);
+            ({ keepIframeSrcFn, dataURLOptions, preserveWhiteSpace, onSerialize, onIframeLoad, iframeLoadTimeout, onBlockedImageLoad, onStylesheetLoad, stylesheetLoadTimeout } = obj2);
             if (undefined === keepIframeSrcFn) {
               keepIframeSrcFn = () => false;
             }
-            ignoreCSSAttributes = slimDOM.ignoreCSSAttributes;
-            slimDOM = { doc: _document9, mirror, blockClass: str, blockSelector: tmp31, unblockSelector: tmp32, maskAllText: undefined !== maskAllText && maskAllText, maskTextClass: str2, unmaskTextClass: tmp34, maskTextSelector: tmp35, unmaskTextSelector: tmp36, skipChild: false, inlineStylesheet: undefined === inlineStylesheet || inlineStylesheet, maskInputOptions: null, maskAttributeFn: null, maskTextFn: null, maskInputFn: null, slimDOMOptions: null, dataURLOptions: null, inlineImages: null, recordCanvas: null, preserveWhiteSpace: null, onSerialize: null, onIframeLoad: null, iframeLoadTimeout: null, onBlockedImageLoad: null, onStylesheetLoad: null, stylesheetLoadTimeout: null, keepIframeSrcFn: null, newlyAddedElement: false, ignoreCSSAttributes: null };
-            if (true === obj1) {
-              obj1 = { color: true, date: true, "datetime-local": true, email: true, month: true, number: true, range: true, search: true, tel: true, text: true, time: true, url: true, week: true, textarea: true, select: true };
-            } else if (false === obj1) {
-              obj1 = {};
+            ignoreCSSAttributes = obj2.ignoreCSSAttributes;
+            let obj4 = { doc: _document9, mirror, blockClass: str, blockSelector: tmp31, unblockSelector: tmp32, maskAllText: undefined !== maskAllText && maskAllText, maskTextClass: str2, unmaskTextClass: tmp34, maskTextSelector: tmp35, unmaskTextSelector: tmp36, skipChild: false, inlineStylesheet: undefined === inlineStylesheet || inlineStylesheet, maskInputOptions: null, maskAttributeFn: null, maskTextFn: null, maskInputFn: null, slimDOMOptions: null, dataURLOptions: null, inlineImages: null, recordCanvas: null, preserveWhiteSpace: null, onSerialize: null, onIframeLoad: null, iframeLoadTimeout: null, onBlockedImageLoad: null, onStylesheetLoad: null, stylesheetLoadTimeout: null, keepIframeSrcFn: null, newlyAddedElement: false, ignoreCSSAttributes: null };
+            if (true === obj6) {
+              obj6 = { color: true, date: true, "datetime-local": true, email: true, month: true, number: true, range: true, search: true, tel: true, text: true, time: true, url: true, week: true, textarea: true, select: true };
+            } else if (false === obj6) {
+              obj6 = {};
             }
-            slimDOM.maskInputOptions = obj1;
-            slimDOM.maskAttributeFn = maskAttributeFn;
-            slimDOM.maskTextFn = maskTextFn;
-            slimDOM.maskInputFn = maskInputFn;
+            obj4.maskInputOptions = obj6;
+            obj4.maskAttributeFn = maskAttributeFn;
+            obj4.maskTextFn = maskTextFn;
+            obj4.maskInputFn = maskInputFn;
             if (true !== tmp40) {
               if ("all" !== tmp40) {
-                obj2 = tmp40;
+                obj7 = tmp40;
                 if (false === tmp40) {
-                  obj2 = {};
+                  obj7 = {};
                 }
               }
-              slimDOM.slimDOMOptions = obj2;
-              slimDOM.dataURLOptions = dataURLOptions;
-              slimDOM.inlineImages = tmp38;
-              slimDOM.recordCanvas = tmp39;
-              slimDOM.preserveWhiteSpace = preserveWhiteSpace;
-              slimDOM.onSerialize = onSerialize;
-              slimDOM.onIframeLoad = onIframeLoad;
-              slimDOM.iframeLoadTimeout = iframeLoadTimeout;
-              slimDOM.onBlockedImageLoad = onBlockedImageLoad;
-              slimDOM.onStylesheetLoad = onStylesheetLoad;
-              slimDOM.stylesheetLoadTimeout = stylesheetLoadTimeout;
-              slimDOM.keepIframeSrcFn = keepIframeSrcFn;
+              obj4.slimDOMOptions = obj7;
+              obj4.dataURLOptions = dataURLOptions;
+              obj4.inlineImages = tmp38;
+              obj4.recordCanvas = tmp39;
+              obj4.preserveWhiteSpace = preserveWhiteSpace;
+              obj4.onSerialize = onSerialize;
+              obj4.onIframeLoad = onIframeLoad;
+              obj4.iframeLoadTimeout = iframeLoadTimeout;
+              obj4.onBlockedImageLoad = onBlockedImageLoad;
+              obj4.onStylesheetLoad = onStylesheetLoad;
+              obj4.stylesheetLoadTimeout = stylesheetLoadTimeout;
+              obj4.keepIframeSrcFn = keepIframeSrcFn;
               if (undefined === ignoreCSSAttributes) {
                 const _Set = Set;
                 ignoreCSSAttributes = new Set([]);
               }
-              slimDOM.ignoreCSSAttributes = ignoreCSSAttributes;
-              const tmp41Result = serializeNodeWithId(_document9, slimDOM);
+              obj4.ignoreCSSAttributes = ignoreCSSAttributes;
+              const tmp41Result = serializeNodeWithId(_document9, obj4);
               if (tmp41Result) {
-                obj3 = { type: tmp2.FullSnapshot, data: null };
-                obj4 = { node: tmp41Result, initialOffset: null };
+                obj8 = { type: navigation.FullSnapshot, data: null };
+                obj9 = { node: tmp41Result, initialOffset: null };
                 const _window4 = window;
-                obj4.initialOffset = getWindowScroll(window);
-                obj3.data = obj4;
-                closure_2_103(obj3);
+                obj9.initialOffset = getWindowScroll(window);
+                obj8.data = obj9;
+                closure_2_103(obj8);
                 const item1 = closure_87.forEach((unlock) => unlock.unlock());
                 const _document10 = document;
                 if (adoptedStyleSheets) {
@@ -5421,16 +5395,15 @@ function record() {
                 if (adoptedStyleSheets) {
                   const _document12 = document;
                   const _document13 = document;
-                  obj2.adoptStyleSheets(document.adoptedStyleSheets, obj4.getId(document));
+                  navigation.adoptStyleSheets(document.adoptedStyleSheets, navigation.getId(document));
                 }
               } else {
                 const _console = console;
                 return console.warn("Failed to snapshot the document");
               }
             }
-            obj5 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaDescKeywords: "all" === tmp40, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaAuthorship: true, headMetaVerification: true };
-            obj2 = obj5;
-            tmp2 = obj1;
+            const obj10 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaDescKeywords: "all" === tmp40, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaAuthorship: true, headMetaVerification: true };
+            obj7 = obj10;
             const tmp33 = undefined !== maskAllText && maskAllText;
             const tmp37 = undefined === inlineStylesheet || inlineStylesheet;
             tmp38 = undefined !== inlineImages && inlineImages;
@@ -5442,11 +5415,11 @@ function record() {
       tmp66 = new closure_101();
       tmp59 = navigation;
     }
-    obj5 = { mirror: tmp27, mutationCb: wrappedMutationEmit, stylesheetManager: tmp35, recordCrossOriginIframes: tmp11, wrappedEmit: le };
-    tmp44 = new closure_100(obj5);
+    let obj10 = { mirror: tmp27, mutationCb: wrappedMutationEmit, stylesheetManager: tmp35, recordCrossOriginIframes: tmp11, wrappedEmit: le };
+    tmp44 = new closure_100(obj10);
   }
-  obj6 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaVerification: true, headMetaAuthorship: "all" === slimDOMOptions, headMetaDescKeywords: "all" === slimDOMOptions };
-  slimDOMOptions = obj6;
+  const obj11 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaVerification: true, headMetaAuthorship: "all" === slimDOMOptions, headMetaDescKeywords: "all" === slimDOMOptions };
+  obj2 = obj11;
   tmp25 = undefined !== mousemoveWait && undefined === sampling.mousemove;
   tmp27 = navigation;
 }
@@ -5461,17 +5434,17 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       const result = triggerUserActivity.checkAndHandleExpiredSession();
     }
     triggerUserActivity.addUpdate(() => {
-      data = { type: Custom.Custom, timestamp: null, data: null };
+      obj = { type: Custom.Custom, timestamp: null, data: null };
       let num = _null.timestamp;
       if (!num) {
         num = 0;
       }
-      data.timestamp = 1000 * num;
-      data = { tag: "breadcrumb", payload: null };
-      const normalizer = f108553(map[8]);
-      data.payload = normalizer.normalize(_null, 10, 1000);
-      data.data = data;
-      data.throttledAddEvent(data);
+      obj.timestamp = 1000 * num;
+      const obj2 = { tag: "breadcrumb", payload: null };
+      const normalizer = f108556(map[8]);
+      obj2.payload = normalizer.normalize(_null, 10, 1000);
+      obj.data = obj2;
+      obj.throttledAddEvent(obj);
       return "console" === _null.category;
     });
   }
@@ -5523,7 +5496,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
       if (set.has(source)) {
         registerMutation.registerMutation(data.timestamp);
       }
-      if (tmp3 === obj2.Scroll) {
+      if (tmp3 === obj6.Scroll) {
         registerMutation.registerScroll(data.timestamp);
       }
       if ((function isIncrementalMouseInteraction(data) {
@@ -5534,7 +5507,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
         const node = mirror.getNode(data.id);
         let tmp13 = node instanceof globalThis.HTMLElement;
         if (tmp13) {
-          tmp13 = data.type === obj3.Click;
+          tmp13 = data.type === obj7.Click;
         }
         if (tmp13) {
           registerMutation.registerClick(node);
@@ -5565,16 +5538,16 @@ function getBaseDomBreadcrumb(arg0, message) {
       tmp5 = meta;
     }
   }
-  node = { message, data: null };
+  obj = { message, data: null };
   if (tmp5) {
-    node = { nodeId: id, node: null };
-    node = { id, tagName: tmp5.tagName, textContent: null, attributes: null };
+    const obj2 = { nodeId: id, node: null };
+    const obj3 = { id, tagName: tmp5.tagName, textContent: null, attributes: null };
     const _Array = Array;
     const mapped = Array.from(tmp5.childNodes).map((type) => type.type === RN.Text && type.textContent);
     const _Boolean = Boolean;
     const found = mapped.filter(Boolean);
     const mapped1 = found.map((item) => item.trim());
-    node.textContent = mapped1.join("");
+    obj3.textContent = mapped1.join("");
     const attributes = tmp5.attributes;
     const prop = attributes["data-sentry-component"];
     let prop1 = !prop;
@@ -5584,7 +5557,7 @@ function getBaseDomBreadcrumb(arg0, message) {
     if (prop1) {
       attributes["data-sentry-component"] = attributes["data-sentry-element"];
     }
-    obj1 = {};
+    const obj4 = {};
     for (const key10049 in attributes) {
       if (!set2.has(key10049)) {
         continue;
@@ -5597,20 +5570,20 @@ function getBaseDomBreadcrumb(arg0, message) {
         if (!tmp11) {
           str5 = "testId";
         }
-        obj1[str5] = attributes[key10049];
+        obj4[str5] = attributes[key10049];
         continue;
       }
       continue;
     }
-    node.attributes = obj1;
-    node.node = node;
-    obj2 = node;
+    obj3.attributes = obj4;
+    obj2.node = obj3;
+    obj5 = obj2;
     const arr = Array.from(tmp5.childNodes);
   } else {
-    obj2 = {};
+    obj5 = {};
   }
-  node.data = obj2;
-  return node;
+  obj.data = obj5;
+  return obj;
 }
 function createPerformanceEntry(arg0) {
   let tmpResult = null;
@@ -5630,10 +5603,9 @@ function getLargestContentfulPaint(arg0) {
     tmp3 = items;
   }
   ({ value, rating } = arg0);
-  let data = _mod682;
-  const result = ((data.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  data = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  data = { value, size: value, rating, nodeIds: null, attributions: "fill" };
+  const result = ((_mod682.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  const obj2 = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fill" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5641,9 +5613,9 @@ function getLargestContentfulPaint(arg0) {
       return mirror.getId(item);
     });
   }
-  data.nodeIds = mapped;
-  data.data = data;
-  return data;
+  obj3.nodeIds = mapped;
+  obj2.data = obj3;
+  return obj2;
 }
 function isLayoutShift(item10012) {
   return undefined !== item10012.sources;
@@ -5661,7 +5633,7 @@ function getCumulativeLayoutShift(rating) {
           let mirror = record.mirror;
           let id = mirror.getId(item10023.node);
           if (id) {
-            arr = items2.push(tmp11);
+            let arr2 = items2.push(tmp11);
           }
         }
         continue;
@@ -5672,7 +5644,7 @@ function getCumulativeLayoutShift(rating) {
         tmp17 = items2;
       }
       obj.nodeIds = tmp17;
-      let arr1 = items.push(obj);
+      let arr3 = items.push(obj);
     }
     continue;
   }
@@ -5689,10 +5661,9 @@ function getInteractionToNextPaint(arg0) {
     tmp3 = items;
   }
   ({ value, rating } = arg0);
-  let data = _mod682;
-  const result = ((data.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  data = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  data = { value, size: value, rating, nodeIds: null, attributions: "fill" };
+  const result = ((_mod682.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  const obj2 = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fill" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5700,16 +5671,15 @@ function getInteractionToNextPaint(arg0) {
       return mirror.getId(item);
     });
   }
-  data.nodeIds = mapped;
-  data.data = data;
-  return data;
+  obj3.nodeIds = mapped;
+  obj2.data = obj3;
+  return obj2;
 }
 function getWebVital(rating, name, items1, items) {
   value = rating.value;
-  let data = _mod682;
-  const result = ((data.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  data = { type: "web-vital", name, start: result, end: result, data: null };
-  data = { value, size: value, rating: rating.rating, nodeIds: null, attributions: null };
+  const result = ((_mod682.browserPerformanceTimeOrigin() || _mod682.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
+  const obj2 = { type: "web-vital", name, start: result, end: result, data: null };
+  const obj3 = { value, size: value, rating: rating.rating, nodeIds: null, attributions: null };
   let mapped;
   if (items1) {
     mapped = items1.map((item) => {
@@ -5717,10 +5687,10 @@ function getWebVital(rating, name, items1, items) {
       return mirror.getId(item);
     });
   }
-  data.nodeIds = mapped;
-  data.attributions = items;
-  data.data = data;
-  return data;
+  obj3.nodeIds = mapped;
+  obj3.attributions = items;
+  obj2.data = obj3;
+  return obj2;
 }
 function hasSessionStorage() {
   try {
@@ -5759,19 +5729,17 @@ function makeSession(id) {
   const timestamp = Date.now();
   id = id.id;
   if (!id) {
-    obj = _mod682;
-    id = obj.uuid4();
+    id = _mod682.uuid4();
   }
-  obj = { id, started: id.started || timestamp, lastActivity: id.lastActivity || timestamp, segmentId: id.segmentId || 0, sampled: id.sampled, previousSessionId: id.previousSessionId, dirty: id.dirty || false };
-  return obj;
+  return { id, started: id.started || timestamp, lastActivity: id.lastActivity || timestamp, segmentId: id.segmentId || 0, sampled: id.sampled, previousSessionId: id.previousSessionId, dirty: id.dirty || false };
 }
-function createSession(allowBuffering) {
+function createSession(allowBuffering, arg1) {
   ({ sessionSampleRate, stickySession } = allowBuffering);
   if (stickySession === undefined) {
     stickySession = false;
   }
-  obj = session;
-  if (session === undefined) {
+  obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   let tmp = undefined !== sessionSampleRate;
@@ -5784,17 +5752,17 @@ function createSession(allowBuffering) {
     str = allowBuffering.allowBuffering && "buffer";
     const tmp3 = allowBuffering.allowBuffering && "buffer";
   }
-  obj = { sampled: str, previousSessionId: obj.previousSessionId };
+  const obj2 = { sampled: str, previousSessionId: obj.previousSessionId };
   const timestamp = Date.now();
-  let id = obj.id;
+  let id = obj2.id;
   if (!id) {
     id = _mod682.uuid4();
   }
-  obj = { id, started: obj.started || timestamp, lastActivity: obj.lastActivity || timestamp, segmentId: obj.segmentId || 0, sampled: obj.sampled, previousSessionId: obj.previousSessionId, dirty: obj.dirty || false };
+  const obj4 = { id, started: obj2.started || timestamp, lastActivity: obj2.lastActivity || timestamp, segmentId: obj2.segmentId || 0, sampled: obj2.sampled, previousSessionId: obj2.previousSessionId, dirty: obj2.dirty || false };
   if (stickySession) {
-    saveSession(obj);
+    saveSession(obj4);
   }
-  return obj;
+  return obj4;
 }
 function isSessionExpired(started, arg1) {
   ({ maxReplayDuration, sessionIdleExpire, targetTime } = arg1);
@@ -5864,8 +5832,8 @@ function loadOrCreateSession(arg0, stickySession) {
     })();
   }
   if (stickySession) {
-    obj = { sessionIdleExpire, maxReplayDuration };
-    let tmp7 = isSessionExpired(stickySession, obj);
+    const obj2 = { sessionIdleExpire, maxReplayDuration };
+    let tmp7 = isSessionExpired(stickySession, obj2);
     if (tmp7) {
       let tmp8 = "buffer" !== stickySession.sampled;
       if (!tmp8) {
@@ -5878,8 +5846,8 @@ function loadOrCreateSession(arg0, stickySession) {
       if (closure_1_130) {
         closure_1_133.infoTick("Session in sessionStorage is expired, creating new one...");
       }
-      obj = { previousSessionId: stickySession.id };
-      tmp9 = createSession(stickySession, obj);
+      const obj3 = { previousSessionId: stickySession.id };
+      tmp9 = createSession(stickySession, obj3);
     }
     let tmp5 = tmp9;
   } else {
@@ -5954,8 +5922,8 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -5968,8 +5936,8 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp5;
@@ -6016,8 +5984,8 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
               if (tmp41) {
                 c7 = 2;
                 c8 = 1;
-                obj1 = { value: eventBuffer.addEvent(tmp41), done: false };
-                return obj1;
+                obj5 = { value: eventBuffer.addEvent(tmp41), done: false };
+                return obj5;
               } else {
                 c6 = 0;
                 c8 = 3;
@@ -6040,8 +6008,7 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
             str = "addEventSizeExceeded";
           }
           closure_131_4 = str;
-          obj3 = closure_132_0(closure_132_1[8]);
-          client = obj3.getClient();
+          client = closure_132_0(closure_132_1[8]).getClient();
           if (client) {
             let str2 = "internal_sdk_error";
             if (closure_131_3) {
@@ -6059,11 +6026,11 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
             }
           }
           closure_131_0.handleException(closure_131_7);
-          obj2 = { reason: closure_131_4 };
+          obj6 = { reason: closure_131_4 };
           c7 = 3;
           c8 = 1;
-          obj3 = { value: closure_131_0.stop(obj2), done: false };
-          return obj3;
+          obj7 = { value: closure_131_0.stop(obj6), done: false };
+          return obj7;
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c8 = 3;
@@ -6071,13 +6038,13 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            obj8 = { value, done: true };
+            return obj8;
           } else {
             c6 = 0;
             c8 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            obj9 = { value, done: true };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c8 = 3;
@@ -6107,22 +6074,20 @@ function resetReplayIdOnDynamicSamplingContext() {
   if (currentScope.getPropagationContext().dsc) {
     delete tmp4[tmp3];
   }
-  let tmp5Result = _mod682;
-  const activeSpan = tmp5Result.getActiveSpan();
+  const activeSpan = _mod682.getActiveSpan();
   if (activeSpan) {
-    tmp5Result = _mod682;
-    const dynamicSamplingContextFromSpan = tmp5Result.getDynamicSamplingContextFromSpan(activeSpan);
+    const dynamicSamplingContextFromSpan = _mod682.getDynamicSamplingContextFromSpan(activeSpan);
     delete tmp2[tmp];
+    const tmp5Result2 = _mod682;
   }
+  const tmp5Result = _mod682;
 }
 function createPerformanceSpans(arg0, arr) {
   closure_0 = arg0;
   return arr.map((op) => {
     const start = op.start;
-    data = { type: Custom.Custom, timestamp: start, data: null };
-    data = { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } };
-    data.data = data;
-    let throttledAddEventResult = closure_0.throttledAddEvent(data);
+    const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
+    let throttledAddEventResult = closure_0.throttledAddEvent(obj);
     if (typeof throttledAddEventResult === "string") {
       throttledAddEventResult = Promise.resolve(null);
     }
@@ -6144,17 +6109,15 @@ function addNetworkBreadcrumb(isEnabled, name) {
     if (isSentryRequestUrlResult) {
       obj = require("00682__.js");
       isSentryRequestUrlResult = obj.isSentryRequestUrl(name.name, require("00682__.js").getClient());
-      obj2 = require("00682__.js");
+      const obj2 = require("00682__.js");
     }
     if (!isSentryRequestUrlResult) {
       isEnabled.addUpdate(() => {
         const items = [closure_1];
         const mapped = items.map((op) => {
           const start = op.start;
-          data = { type: Custom.Custom, timestamp: start, data: null };
-          data = { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } };
-          data.data = data;
-          let throttledAddEventResult = closure_0.throttledAddEvent(data);
+          const obj = { type: Custom.Custom, timestamp: start, data: { tag: "performanceSpan", payload: { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data } } };
+          let throttledAddEventResult = closure_0.throttledAddEvent(obj);
           if (typeof throttledAddEventResult === "string") {
             throttledAddEventResult = Promise.resolve(null);
           }
@@ -6198,33 +6161,32 @@ function getBodySize(size) {
   }
 }
 function mergeWarning(_meta, arg1) {
-  _meta = {};
+  const headers = {};
   if (_meta) {
     const merged = Object.assign(_meta._meta);
-    const tmp3 = _meta.warnings || [];
+    const tmp3 = headers.warnings || [];
     const items = [];
     items[HermesBuiltin.arraySpread(tmp3, 0)] = arg1;
-    _meta.warnings = items;
-    _meta._meta = _meta;
+    headers.warnings = items;
+    _meta._meta = headers;
     return _meta;
   } else {
-    _meta = { headers: null, size: "Array", _meta: -1 };
-    _meta.headers = _meta;
-    _meta = { warnings: null };
+    const obj2 = { headers, size: "Array", _meta: -1 };
+    const obj3 = { warnings: null };
     const items1 = [arg1];
-    _meta.warnings = items1;
-    _meta._meta = _meta;
-    return _meta;
+    obj3.warnings = items1;
+    obj2._meta = obj3;
+    return obj2;
   }
 }
 function makeNetworkReplayBreadcrumb(type, startTimestamp) {
   let tmp = null;
   if (startTimestamp) {
-    let data = { type, start: startTimestamp.startTimestamp / 1000, end: startTimestamp.endTimestamp / 1000, name: startTimestamp.url, data: null };
-    data = { method: null, statusCode: null, request: null, response: null };
+    obj = { type, start: startTimestamp.startTimestamp / 1000, end: startTimestamp.endTimestamp / 1000, name: startTimestamp.url, data: null };
     ({ method: obj2.method, statusCode: obj2.statusCode, request: obj2.request, response: obj2.response } = startTimestamp);
-    data.data = data;
-    tmp = data;
+    obj.data = { method: null, statusCode: null, request: null, response: null };
+    tmp = obj;
+    const obj3 = { method: null, statusCode: null, request: null, response: null };
   }
   return tmp;
 }
@@ -6236,7 +6198,7 @@ function buildNetworkRequestOrResponse(headers, size, body) {
     const _Object = Object;
   }
   if (size) {
-    let _meta = { headers, size };
+    const obj3 = { headers, size };
     if (body) {
       ({ warnings, body: obj2.body } = (function normalizeNetworkBody(body) {
         if (body) {
@@ -6258,21 +6220,21 @@ function buildNetworkRequestOrResponse(headers, size, body) {
             })(body);
             if (tmp6) {
               const substr = body.slice(0, closure_1_12);
-              obj = { body: null, warnings: null };
+              const obj2 = { body: null, warnings: null };
               if (tmp7) {
-                obj.body = substr;
-                obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                let tmp4 = obj;
+                obj2.body = substr;
+                obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                let tmp4 = obj2;
               } else {
                 const _HermesInternal = HermesInternal;
-                obj.body = "" + substr + "\u2026";
-                obj.warnings = ["TEXT_TRUNCATED"];
-                tmp4 = obj;
+                obj2.body = "" + substr + "\u2026";
+                obj2.warnings = ["TEXT_TRUNCATED"];
+                tmp4 = obj2;
               }
               return tmp4;
             } else if (!tmp7) {
-              obj = { body };
-              return obj;
+              const obj3 = { body };
+              return obj3;
             } else {
               try {
                 obj = { body: null };
@@ -6292,16 +6254,16 @@ function buildNetworkRequestOrResponse(headers, size, body) {
         length = warnings.length;
       }
       if (length) {
-        _meta = { warnings };
-        _meta._meta = _meta;
+        obj5 = { warnings };
+        obj3._meta = obj5;
       }
-      return _meta;
+      return obj3;
     } else {
-      return _meta;
+      return obj3;
     }
   } else {
-    _meta = { headers };
-    return _meta;
+    obj = { headers };
+    return obj;
   }
 }
 function urlMatches(str, networkDetailAllowUrls) {
@@ -6391,8 +6353,8 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             closure_3 = tmp2;
             closure_131_0 = undefined;
@@ -6434,13 +6396,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                   if (1 === input.length) {
                     if (typeof input[0] !== "string") {
                       const first = input[0];
-                      if (!first) {
-                        let headers = {};
-                      }
-                      headers = first.headers;
-                      if (!headers) {
-                        headers = {};
-                      }
+                      let headers = first.headers;
                       const _Headers2 = Headers;
                       if (headers instanceof Headers) {
                         let headers1 = headers;
@@ -6454,12 +6410,12 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                       } else {
                         const _Array2 = Array;
                         if (Array.isArray(headers)) {
-                          obj1 = {};
+                          let obj4 = {};
                         } else {
                           headers1 = headers;
                           const _Object2 = Object;
                           const entries = Object.entries(headers);
-                          obj1 = entries.reduce((acc, item) => {
+                          obj4 = entries.reduce((acc, item) => {
                             [str, tmp] = item;
                             const formatted = str.toLowerCase();
                             let hasItem = networkResponseHeaders.includes(formatted);
@@ -6490,11 +6446,11 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                       } else {
                         const _Array = Array;
                         if (Array.isArray(headers1)) {
-                          obj3 = {};
+                          obj6 = {};
                         } else {
                           const _Object = Object;
                           const entries1 = Object.entries(headers1);
-                          obj3 = entries1.reduce((acc, item) => {
+                          obj6 = entries1.reduce((acc, item) => {
                             [str, tmp] = item;
                             const formatted = str.toLowerCase();
                             let hasItem = networkResponseHeaders.includes(formatted);
@@ -6509,21 +6465,21 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         }
                       }
                     } else {
-                      obj4 = {};
+                      obj7 = {};
                     }
                   } else {
-                    obj4 = {};
+                    obj7 = {};
                   }
                 } else {
                   headers = {};
                   if (tmp) {
-                    let obj11 = data(898);
-                    const fetchRequestArgBody = obj11.getFetchRequestArgBody(input);
-                    let obj12 = data(898);
-                    [tmp20, tmp21] = closure_1_6(obj12.getBodyString(fetchRequestArgBody, closure_1_133), 2);
+                    const fetchRequestArgBody = data(898).getFetchRequestArgBody(input);
+                    const obj12 = data(898);
+                    const obj13 = data(898);
+                    [tmp20, tmp21] = closure_1_6(data(898).getBodyString(fetchRequestArgBody, closure_1_133), 2);
                     if (request_body_size) {
                       if (request_body_size) {
-                        obj5 = { headers, size: request_body_size };
+                        obj8 = { headers, size: request_body_size };
                         if (tmp20) {
                           ({ warnings, body: obj15.body } = (function normalizeNetworkBody(body) {
                             if (body) {
@@ -6545,21 +6501,21 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                 })(body);
                                 if (tmp6) {
                                   const substr = body.slice(0, closure_1_12);
-                                  obj = { body: null, warnings: null };
+                                  const obj2 = { body: null, warnings: null };
                                   if (tmp7) {
-                                    obj.body = substr;
-                                    obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                    let tmp4 = obj;
+                                    obj2.body = substr;
+                                    obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                    let tmp4 = obj2;
                                   } else {
                                     const _HermesInternal = HermesInternal;
-                                    obj.body = "" + substr + "\u2026";
-                                    obj.warnings = ["TEXT_TRUNCATED"];
-                                    tmp4 = obj;
+                                    obj2.body = "" + substr + "\u2026";
+                                    obj2.warnings = ["TEXT_TRUNCATED"];
+                                    tmp4 = obj2;
                                   }
                                   return tmp4;
                                 } else if (!tmp7) {
-                                  obj = { body };
-                                  return obj;
+                                  const obj3 = { body };
+                                  return obj3;
                                 } else {
                                   try {
                                     obj = { body: null };
@@ -6578,11 +6534,11 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                           if (warnings != null) {
                             length = warnings.length;
                           }
-                          let tmp23 = obj5;
+                          let tmp23 = obj8;
                           if (length) {
-                            const obj6 = { warnings };
-                            obj5._meta = obj6;
-                            tmp23 = obj5;
+                            obj9 = { warnings };
+                            obj8._meta = obj9;
+                            tmp23 = obj8;
                           }
                           const tmp24 = (function normalizeNetworkBody(body) {
                             if (body) {
@@ -6604,21 +6560,21 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                 })(body);
                                 if (tmp6) {
                                   const substr = body.slice(0, closure_1_12);
-                                  obj = { body: null, warnings: null };
+                                  const obj2 = { body: null, warnings: null };
                                   if (tmp7) {
-                                    obj.body = substr;
-                                    obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                    let tmp4 = obj;
+                                    obj2.body = substr;
+                                    obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                    let tmp4 = obj2;
                                   } else {
                                     const _HermesInternal = HermesInternal;
-                                    obj.body = "" + substr + "\u2026";
-                                    obj.warnings = ["TEXT_TRUNCATED"];
-                                    tmp4 = obj;
+                                    obj2.body = "" + substr + "\u2026";
+                                    obj2.warnings = ["TEXT_TRUNCATED"];
+                                    tmp4 = obj2;
                                   }
                                   return tmp4;
                                 } else if (!tmp7) {
-                                  obj = { body };
-                                  return obj;
+                                  const obj3 = { body };
+                                  return obj3;
                                 } else {
                                   try {
                                     obj = { body: null };
@@ -6634,45 +6590,45 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                             return { body };
                           })(tmp20);
                         } else {
-                          tmp23 = obj5;
+                          tmp23 = obj8;
                         }
                       } else {
-                        const obj7 = { headers };
-                        tmp23 = obj7;
+                        const obj10 = { headers };
+                        tmp23 = obj10;
                       }
                     } else {
                       const _Object4 = Object;
                     }
                     if (tmp21) {
-                      const obj8 = {};
+                      const obj11 = {};
                       if (tmp23) {
                         const merged = Object.assign(tmp23._meta);
-                        const tmp29 = obj8.warnings || [];
+                        const tmp29 = obj11.warnings || [];
                         const items = [];
                         items[HermesBuiltin.arraySpread(tmp29, 0)] = tmp21;
-                        obj8.warnings = items;
-                        tmp23._meta = obj8;
-                        let obj9 = tmp23;
+                        obj11.warnings = items;
+                        tmp23._meta = obj11;
+                        let obj14 = tmp23;
                       } else {
-                        obj9 = { headers: obj8, size: "Array", _meta: -1 };
-                        const obj10 = { warnings: null };
+                        obj14 = { headers: obj11, size: "Array", _meta: -1 };
+                        const obj16 = { warnings: null };
                         const items1 = [tmp21];
-                        obj10.warnings = items1;
-                        obj9._meta = obj10;
+                        obj16.warnings = items1;
+                        obj14._meta = obj16;
                       }
-                      return obj9;
+                      return obj14;
                     } else {
                       return tmp23;
                     }
-                    const tmp19 = closure_1_6(obj12.getBodyString(fetchRequestArgBody, closure_1_133), 2);
+                    const tmp19 = closure_1_6(data(898).getBodyString(fetchRequestArgBody, closure_1_133), 2);
                   } else {
                     if (request_body_size) {
                       if (request_body_size) {
-                        obj11 = { headers, size: request_body_size };
-                        let tmp13 = obj11;
+                        const obj17 = { headers, size: request_body_size };
+                        let tmp13 = obj17;
                       } else {
-                        obj12 = { headers };
-                        tmp13 = obj12;
+                        const obj18 = { headers };
+                        tmp13 = obj18;
                       }
                     } else {
                       const _Object3 = Object;
@@ -6703,14 +6659,14 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj1 = { value, done: true };
-          return obj1;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_131_6 = value;
           const request = { startTimestamp: closure_131_0, endTimestamp: closure_131_1, url: closure_131_2, method: closure_131_3, statusCode: closure_131_4, request: closure_131_5, response: closure_131_6 };
           c5 = 3;
-          obj2 = { value: request, done: true };
-          return obj2;
+          let obj4 = { value: request, done: true };
+          return obj4;
         }
       } catch (tmp22) {
         c5 = tmp;
@@ -6727,8 +6683,8 @@ let closure_160 = async function _getResponseInfo2(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -6741,8 +6697,8 @@ let closure_160 = async function _getResponseInfo2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp5;
           closure_4 = tmp2;
@@ -6770,26 +6726,26 @@ let closure_160 = async function _getResponseInfo2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           if (!closure_132_0) {
             if (undefined !== closure_132_4) {
               c7 = 3;
-              obj2 = { value: closure_133_155(closure_132_4), done: true };
-              return obj2;
+              obj5 = { value: closure_133_155(closure_132_4), done: true };
+              return obj5;
             }
           }
           if (closure_132_3) {
-            obj3 = closure_133_162(closure_132_3.headers, closure_132_2);
+            obj6 = closure_133_162(closure_132_3.headers, closure_132_2);
           } else {
-            obj3 = {};
+            obj6 = {};
           }
-          closure_132_5 = obj3;
+          closure_132_5 = obj6;
           if (closure_132_3) {
             c6 = 2;
             c7 = 1;
-            obj4 = {
+            obj7 = {
               value: (function _parseFetchResponseBody(arg0) {
                           const self = this;
                           const apply = closure_1_161.apply;
@@ -6802,11 +6758,11 @@ let closure_160 = async function _getResponseInfo2(arg0) {
                         })(closure_132_3),
               done: false
             };
-            return obj4;
+            return obj7;
           }
           c7 = 3;
-          obj5 = { value: closure_133_156(closure_132_5, closure_132_4, undefined), done: true };
-          return obj5;
+          obj8 = { value: closure_133_156(closure_132_5, closure_132_4, undefined), done: true };
+          return obj8;
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -6820,7 +6776,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
         closure_132_7 = closure_133_6(closure_132_6, 2);
         closure_132_8 = closure_132_7[0];
         closure_132_9 = closure_132_7[1];
-        const obj6 = { networkCaptureBodies: closure_132_1, responseBodySize: closure_132_4, captureDetails: closure_132_0, headers: closure_132_5 };
+        obj9 = { networkCaptureBodies: closure_132_1, responseBodySize: closure_132_4, captureDetails: closure_132_0, headers: closure_132_5 };
         closure_132_10 = (function getResponseData(arg0, responseBodySize) {
           responseBodySize = responseBodySize.responseBodySize;
           try {
@@ -6849,7 +6805,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
             }
             return closure_1_156(tmp2, tmp3, tmp);
           }
-        })(closure_132_8, obj6);
+        })(closure_132_8, obj9);
         if (closure_132_9) {
           closure_133_153(closure_132_10, closure_132_9);
         }
@@ -6869,8 +6825,8 @@ let closure_161 = async function _parseFetchResponseBody2(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -6883,8 +6839,8 @@ let closure_161 = async function _parseFetchResponseBody2(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -6902,7 +6858,7 @@ let closure_161 = async function _parseFetchResponseBody2(arg0) {
             c4 = 1;
             c5 = 2;
             c6 = 1;
-            obj1 = {
+            const obj4 = {
               value: (function _tryGetResponseText(arg0) {
                           closure_0 = arg0;
                           return new Promise((arg0, arg1) => {
@@ -6937,12 +6893,12 @@ let closure_161 = async function _parseFetchResponseBody2(arg0) {
                         })(tmp28),
               done: false
             };
-            return obj1;
+            return obj4;
           } else {
             const items = [undefined, "BODY_PARSE_ERROR"];
             c6 = 3;
-            obj2 = { value: items, done: true };
-            return obj2;
+            obj5 = { value: items, done: true };
+            return obj5;
           }
         }
       } else if (1 === tmp7) {
@@ -6968,8 +6924,8 @@ let closure_161 = async function _parseFetchResponseBody2(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_129_0 = value;
         const items3 = [closure_129_0];
@@ -7018,8 +6974,8 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -7080,8 +7036,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                       } else {
                         reduced = {};
                       }
-                      let tmp5Result = closure_1_0(dependencyMap[9]);
-                      const result = tmp5Result.parseXhrResponseHeaders(xhr);
+                      const result = closure_1_0(dependencyMap[9]).parseXhrResponseHeaders(xhr);
                       request_headers = result;
                       networkResponseHeaders = networkDetailAllowUrls.networkResponseHeaders;
                       const _Object2 = Object;
@@ -7099,11 +7054,12 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                         return acc;
                       }, {});
                       if (networkDetailAllowUrls.networkCaptureBodies) {
-                        tmp5Result = closure_1_0(dependencyMap[9]);
-                        let bodyString = tmp5Result.getBodyString(startTimestamp.input, closure_1_133);
+                        let bodyString = closure_1_0(dependencyMap[9]).getBodyString(startTimestamp.input, closure_1_133);
+                        const tmp5Result2 = closure_1_0(dependencyMap[9]);
                       } else {
                         bodyString = [undefined];
                       }
+                      const tmp5Result = closure_1_0(dependencyMap[9]);
                       [tmp13, tmp14] = closure_1_6(bodyString, 2);
                       if (networkDetailAllowUrls.networkCaptureBodies) {
                         let items = (function _getXhrResponseBody(xhr) {
@@ -7112,7 +7068,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             return items;
                           } catch (tmp2) {
                             let items1 = [];
-                            let arr = items1.push(tmp2);
+                            items1.push(tmp2);
                             try {
                               return (function _parseXhrResponse(response, responseType) {
                                 try {
@@ -7154,7 +7110,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                 }
                               })(tmp.response, tmp.responseType);
                             } catch (tmp4) {
-                              arr = arr.push(tmp4);
+                              arr.push(tmp4);
                               if (closure_1_130) {
                                 warn = warn.warn;
                                 let items2 = ["Failed to get xhr response body"];
@@ -7173,7 +7129,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                       [tmp16, tmp17] = closure_1_6(items, 2);
                       if (request_body_size) {
                         if (request_body_size) {
-                          let _meta = { headers: reduced, size: request_body_size };
+                          obj = { headers: reduced, size: request_body_size };
                           if (tmp13) {
                             ({ warnings, body: obj5.body } = (function normalizeNetworkBody(body) {
                               if (body) {
@@ -7195,21 +7151,21 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                   })(body);
                                   if (tmp6) {
                                     const substr = body.slice(0, closure_1_12);
-                                    obj = { body: null, warnings: null };
+                                    const obj2 = { body: null, warnings: null };
                                     if (tmp7) {
-                                      obj.body = substr;
-                                      obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                      let tmp4 = obj;
+                                      obj2.body = substr;
+                                      obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                      let tmp4 = obj2;
                                     } else {
                                       const _HermesInternal = HermesInternal;
-                                      obj.body = "" + substr + "\u2026";
-                                      obj.warnings = ["TEXT_TRUNCATED"];
-                                      tmp4 = obj;
+                                      obj2.body = "" + substr + "\u2026";
+                                      obj2.warnings = ["TEXT_TRUNCATED"];
+                                      tmp4 = obj2;
                                     }
                                     return tmp4;
                                   } else if (!tmp7) {
-                                    obj = { body };
-                                    return obj;
+                                    const obj3 = { body };
+                                    return obj3;
                                   } else {
                                     try {
                                       obj = { body: null };
@@ -7228,11 +7184,11 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             if (warnings != null) {
                               length = warnings.length;
                             }
-                            let tmp18 = _meta;
+                            let tmp18 = obj;
                             if (length) {
-                              _meta = { warnings };
-                              _meta._meta = _meta;
-                              tmp18 = _meta;
+                              let obj2 = { warnings };
+                              obj._meta = obj2;
+                              tmp18 = obj;
                             }
                             const tmp19 = (function normalizeNetworkBody(body) {
                               if (body) {
@@ -7254,21 +7210,21 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                   })(body);
                                   if (tmp6) {
                                     const substr = body.slice(0, closure_1_12);
-                                    obj = { body: null, warnings: null };
+                                    const obj2 = { body: null, warnings: null };
                                     if (tmp7) {
-                                      obj.body = substr;
-                                      obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                      let tmp4 = obj;
+                                      obj2.body = substr;
+                                      obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                      let tmp4 = obj2;
                                     } else {
                                       const _HermesInternal = HermesInternal;
-                                      obj.body = "" + substr + "\u2026";
-                                      obj.warnings = ["TEXT_TRUNCATED"];
-                                      tmp4 = obj;
+                                      obj2.body = "" + substr + "\u2026";
+                                      obj2.warnings = ["TEXT_TRUNCATED"];
+                                      tmp4 = obj2;
                                     }
                                     return tmp4;
                                   } else if (!tmp7) {
-                                    obj = { body };
-                                    return obj;
+                                    const obj3 = { body };
+                                    return obj3;
                                   } else {
                                     try {
                                       obj = { body: null };
@@ -7284,18 +7240,18 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                               return { body };
                             })(tmp13);
                           } else {
-                            tmp18 = _meta;
+                            tmp18 = obj;
                           }
                         } else {
-                          obj1 = { headers: reduced };
-                          tmp18 = obj1;
+                          let obj3 = { headers: reduced };
+                          tmp18 = obj3;
                         }
                       } else {
                         const _Object3 = Object;
                       }
                       if (response_body_size) {
                         if (response_body_size) {
-                          obj2 = { headers: reduced1, size: response_body_size };
+                          const obj4 = { headers: reduced1, size: response_body_size };
                           if (tmp16) {
                             ({ warnings: warnings2, body: obj8.body } = (function normalizeNetworkBody(body) {
                               if (body) {
@@ -7317,21 +7273,21 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                   })(body);
                                   if (tmp6) {
                                     const substr = body.slice(0, closure_1_12);
-                                    obj = { body: null, warnings: null };
+                                    const obj2 = { body: null, warnings: null };
                                     if (tmp7) {
-                                      obj.body = substr;
-                                      obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                      let tmp4 = obj;
+                                      obj2.body = substr;
+                                      obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                      let tmp4 = obj2;
                                     } else {
                                       const _HermesInternal = HermesInternal;
-                                      obj.body = "" + substr + "\u2026";
-                                      obj.warnings = ["TEXT_TRUNCATED"];
-                                      tmp4 = obj;
+                                      obj2.body = "" + substr + "\u2026";
+                                      obj2.warnings = ["TEXT_TRUNCATED"];
+                                      tmp4 = obj2;
                                     }
                                     return tmp4;
                                   } else if (!tmp7) {
-                                    obj = { body };
-                                    return obj;
+                                    const obj3 = { body };
+                                    return obj3;
                                   } else {
                                     try {
                                       obj = { body: null };
@@ -7350,11 +7306,11 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             if (warnings2 != null) {
                               length1 = warnings2.length;
                             }
-                            let tmp22 = obj2;
+                            let tmp22 = obj4;
                             if (length1) {
-                              obj3 = { warnings: warnings2 };
-                              obj2._meta = obj3;
-                              tmp22 = obj2;
+                              obj6 = { warnings: warnings2 };
+                              obj4._meta = obj6;
+                              tmp22 = obj4;
                             }
                             const tmp23 = (function normalizeNetworkBody(body) {
                               if (body) {
@@ -7376,21 +7332,21 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                   })(body);
                                   if (tmp6) {
                                     const substr = body.slice(0, closure_1_12);
-                                    obj = { body: null, warnings: null };
+                                    const obj2 = { body: null, warnings: null };
                                     if (tmp7) {
-                                      obj.body = substr;
-                                      obj.warnings = ["MAYBE_JSON_TRUNCATED"];
-                                      let tmp4 = obj;
+                                      obj2.body = substr;
+                                      obj2.warnings = ["MAYBE_JSON_TRUNCATED"];
+                                      let tmp4 = obj2;
                                     } else {
                                       const _HermesInternal = HermesInternal;
-                                      obj.body = "" + substr + "\u2026";
-                                      obj.warnings = ["TEXT_TRUNCATED"];
-                                      tmp4 = obj;
+                                      obj2.body = "" + substr + "\u2026";
+                                      obj2.warnings = ["TEXT_TRUNCATED"];
+                                      tmp4 = obj2;
                                     }
                                     return tmp4;
                                   } else if (!tmp7) {
-                                    obj = { body };
-                                    return obj;
+                                    const obj3 = { body };
+                                    return obj3;
                                   } else {
                                     try {
                                       obj = { body: null };
@@ -7406,11 +7362,11 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                               return { body };
                             })(tmp16);
                           } else {
-                            tmp22 = obj2;
+                            tmp22 = obj4;
                           }
                         } else {
-                          obj4 = { headers: reduced1 };
-                          tmp22 = obj4;
+                          obj7 = { headers: reduced1 };
+                          tmp22 = obj7;
                         }
                       } else {
                         const _Object4 = Object;
@@ -7422,39 +7378,39 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           request.response = tmp22;
                           return request;
                         } else {
-                          obj5 = {};
+                          obj9 = {};
                           if (tmp22) {
                             const merged = Object.assign(tmp22._meta);
-                            const tmp36 = obj5.warnings || [];
+                            const tmp36 = obj9.warnings || [];
                             let items1 = [];
                             items1[HermesBuiltin.arraySpread(tmp36, 0)] = tmp17;
-                            obj5.warnings = items1;
-                            tmp22._meta = obj5;
-                            let obj6 = tmp22;
+                            obj9.warnings = items1;
+                            tmp22._meta = obj9;
+                            let obj10 = tmp22;
                           } else {
-                            obj6 = { headers: obj5, size: "Array", _meta: -1 };
-                            const obj7 = { warnings: null };
+                            obj10 = { headers: obj9, size: "Array", _meta: -1 };
+                            const obj11 = { warnings: null };
                             let items2 = [tmp17];
-                            obj7.warnings = items2;
-                            obj6._meta = obj7;
+                            obj11.warnings = items2;
+                            obj10._meta = obj11;
                           }
                         }
                       } else {
-                        const obj8 = {};
+                        const obj12 = {};
                         if (tmp18) {
                           const merged1 = Object.assign(tmp18._meta);
-                          const tmp29 = obj8.warnings || [];
+                          const tmp29 = obj12.warnings || [];
                           let items3 = [];
                           items3[HermesBuiltin.arraySpread(tmp29, 0)] = tmp14;
-                          obj8.warnings = items3;
-                          tmp18._meta = obj8;
-                          let obj9 = tmp18;
+                          obj12.warnings = items3;
+                          tmp18._meta = obj12;
+                          let obj13 = tmp18;
                         } else {
-                          obj9 = { headers: obj8, size: "Array", _meta: -1 };
-                          const obj10 = { warnings: null };
+                          obj13 = { headers: obj12, size: "Array", _meta: -1 };
+                          const obj14 = { warnings: null };
                           let items4 = [tmp14];
-                          obj10.warnings = items4;
-                          obj9._meta = obj10;
+                          obj14.warnings = items4;
+                          obj13._meta = obj14;
                         }
                       }
                       const tmp11Result = closure_1_6(items, 2);
@@ -7462,14 +7418,14 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                   }
                 }
                 const request1 = { startTimestamp, endTimestamp, url, method, statusCode: num, request: null, response: null };
-                const obj11 = { headers: {}, size: request_body_size, _meta: null };
-                const obj12 = { warnings: ["URL_SKIPPED"] };
-                obj11._meta = obj12;
-                request1.request = obj11;
-                const obj13 = { headers: {}, size: response_body_size, _meta: null };
-                const obj14 = { warnings: ["URL_SKIPPED"] };
-                obj13._meta = obj14;
-                request1.response = obj13;
+                const obj15 = { headers: {}, size: request_body_size, _meta: null };
+                const obj16 = { warnings: ["URL_SKIPPED"] };
+                obj15._meta = obj16;
+                request1.request = obj15;
+                const obj17 = { headers: {}, size: response_body_size, _meta: null };
+                const obj18 = { warnings: ["URL_SKIPPED"] };
+                obj17._meta = obj18;
+                request1.response = obj17;
                 return request1;
               } else {
                 return null;
@@ -7543,11 +7499,10 @@ function enrichXhrBreadcrumb(data, xhr) {
   }
 }
 function handleNetworkBreadcrumbs(getOptions) {
-  obj = obj(682);
-  const client = obj.getClient();
+  const client = obj2(682).getClient();
   try {
     const options = getOptions.getOptions();
-    obj = { replay: getOptions, networkDetailAllowUrls: null, networkDetailDenyUrls: null, networkCaptureBodies: null, networkRequestHeaders: null, networkResponseHeaders: null };
+    obj2 = { replay: getOptions, networkDetailAllowUrls: null, networkDetailDenyUrls: null, networkCaptureBodies: null, networkRequestHeaders: null, networkResponseHeaders: null };
     ({ networkDetailAllowUrls: obj3.networkDetailAllowUrls, networkDetailDenyUrls: obj3.networkDetailDenyUrls, networkCaptureBodies: obj3.networkCaptureBodies, networkRequestHeaders: obj3.networkRequestHeaders, networkResponseHeaders: obj3.networkResponseHeaders } = options);
     if (client) {
       client.on("beforeAddBreadcrumb", (data, xhr) => {
@@ -7641,7 +7596,7 @@ function handleNetworkBreadcrumbs(getOptions) {
               }
             }
           }
-        })(obj, data, xhr);
+        })(obj2, data, xhr);
       });
     }
   } catch (err) {
@@ -7655,8 +7610,8 @@ let closure_167 = async function _addMemoryEntry(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -7669,23 +7624,23 @@ let closure_167 = async function _addMemoryEntry(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           c3 = 1;
           const _Date = Date;
           ({ jsHeapSizeLimit, totalJSHeapSize, usedJSHeapSize } = require("00682__.js").GLOBAL_OBJ.performance.memory);
           const result = Date.now() / 1000;
-          obj1 = { type: "memory", name: "memory", start: result, end: result, data: null };
-          obj2 = { memory: null };
-          obj3 = { jsHeapSizeLimit, totalJSHeapSize, usedJSHeapSize };
-          obj2.memory = obj3;
-          obj1.data = obj2;
-          const items = [obj1];
+          const obj4 = { type: "memory", name: "memory", start: result, end: result, data: null };
+          obj5 = { memory: null };
+          obj6 = { jsHeapSizeLimit, totalJSHeapSize, usedJSHeapSize };
+          obj5.memory = obj6;
+          obj4.data = obj5;
+          const items = [obj4];
           c3 = 0;
           c1 = 3;
-          obj4 = { value: Promise.all(createPerformanceSpans(closure_0, items)), done: true };
-          return obj4;
+          obj7 = { value: Promise.all(createPerformanceSpans(closure_0, items)), done: true };
+          return obj7;
         }
       } else {
         c3 = 0;
@@ -7717,44 +7672,42 @@ function getHandleRecordingEmit(arg0) {
         updateClickDetectorForRecordingEvent(obj.clickDetector, data);
       }
       obj.addUpdate(() => {
-        let payload = recordingMode;
         if (tmp) {
-          payload.setInitialState();
+          recordingMode.setInitialState();
         }
-        if (addEventSync(payload, recordingMode, c1)) {
+        if (addEventSync(recordingMode, recordingMode, c1)) {
           if (c1) {
-            const session = payload.session;
+            const session = recordingMode.session;
             if (c1) {
-              if (payload.session) {
-                if (0 === payload.session.segmentId) {
-                  const options = payload.getOptions();
-                  payload = { type: obj1.Custom, timestamp: null, data: null };
+              if (recordingMode.session) {
+                if (0 === recordingMode.session.segmentId) {
+                  const options = recordingMode.getOptions();
+                  const obj2 = { type: obj5.Custom, timestamp: null, data: null };
                   const _Date2 = Date;
-                  payload.timestamp = Date.now();
-                  payload = { shouldRecordCanvas: null, sessionSampleRate: null, errorSampleRate: null, useCompressionOption: null, blockAllMedia: null, maskAllText: null, maskAllInputs: null, useCompression: null, networkDetailHasUrls: null, networkCaptureBodies: null, networkRequestHasHeaders: null, networkResponseHasHeaders: null };
-                  payload.shouldRecordCanvas = payload.isRecordingCanvas();
+                  obj2.timestamp = Date.now();
+                  const obj3 = { shouldRecordCanvas: recordingMode.isRecordingCanvas(), sessionSampleRate: null, errorSampleRate: null, useCompressionOption: null, blockAllMedia: null, maskAllText: null, maskAllInputs: null, useCompression: null, networkDetailHasUrls: null, networkCaptureBodies: null, networkRequestHasHeaders: null, networkResponseHasHeaders: null };
                   ({ sessionSampleRate: obj4.sessionSampleRate, errorSampleRate: obj4.errorSampleRate, useCompression: obj4.useCompressionOption, blockAllMedia: obj4.blockAllMedia, maskAllText: obj4.maskAllText, maskAllInputs: obj4.maskAllInputs } = options);
-                  let eventBuffer = payload.eventBuffer;
-                  if (eventBuffer) {
-                    eventBuffer = "worker" === payload.eventBuffer.type;
+                  let eventBuffer1 = recordingMode.eventBuffer;
+                  if (eventBuffer1) {
+                    eventBuffer1 = "worker" === recordingMode.eventBuffer.type;
                   }
-                  obj1 = { tag: "options", payload: null };
-                  payload.useCompression = eventBuffer;
-                  payload.networkDetailHasUrls = options.networkDetailAllowUrls.length > 0;
-                  payload.networkCaptureBodies = options.networkCaptureBodies;
-                  payload.networkRequestHasHeaders = options.networkRequestHeaders.length > 0;
-                  payload.networkResponseHasHeaders = options.networkResponseHeaders.length > 0;
-                  obj1.payload = payload;
-                  payload.data = obj1;
-                  addEventSync(payload, payload, false);
+                  obj7 = { tag: "options", payload: null };
+                  obj3.useCompression = eventBuffer1;
+                  obj3.networkDetailHasUrls = options.networkDetailAllowUrls.length > 0;
+                  obj3.networkCaptureBodies = options.networkCaptureBodies;
+                  obj3.networkRequestHasHeaders = options.networkRequestHeaders.length > 0;
+                  obj3.networkResponseHasHeaders = options.networkResponseHeaders.length > 0;
+                  obj7.payload = obj3;
+                  obj2.data = obj7;
+                  addEventSync(recordingMode, obj2, false);
                 }
               }
             }
-            if ("buffer" === payload.recordingMode) {
+            if ("buffer" === recordingMode.recordingMode) {
               if (session) {
-                if (payload.eventBuffer) {
+                if (recordingMode.eventBuffer) {
                   if (!session.dirty) {
-                    eventBuffer = payload.eventBuffer;
+                    const eventBuffer = recordingMode.eventBuffer;
                     const earliestTimestamp = eventBuffer.getEarliestTimestamp();
                     if (earliestTimestamp) {
                       if (closure_3_130) {
@@ -7764,7 +7717,7 @@ function getHandleRecordingEmit(arg0) {
                         closure_3_133.log("Updating session start time to earliest event in buffer to " + date);
                       }
                       session.started = earliestTimestamp;
-                      if (payload.getOptions().stickySession) {
+                      if (recordingMode.getOptions().stickySession) {
                         saveSession(session);
                       }
                     }
@@ -7777,8 +7730,8 @@ function getHandleRecordingEmit(arg0) {
               previousSessionId = session.previousSessionId;
             }
             if (!previousSessionId) {
-              if ("session" === payload.recordingMode) {
-                payload.flush();
+              if ("session" === recordingMode.recordingMode) {
+                recordingMode.flush();
               }
             }
             return true;
@@ -7817,8 +7770,8 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -7844,10 +7797,10 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj1 = { value, done: true };
-          return obj1;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          obj2 = { event_id: closure_129_2, integrations: null };
+          const obj4 = { event_id: closure_129_2, integrations: null };
           let keys;
           if (typeof closure_129_0._integrations === "object") {
             if (null !== closure_129_0._integrations) {
@@ -7858,24 +7811,23 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
               }
             }
           }
-          obj2.integrations = keys;
-          closure_129_4 = obj2;
+          obj4.integrations = keys;
+          closure_129_4 = obj4;
           closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
-          obj4 = closure_130_0(closure_130_1[8]);
-          const options = closure_129_0.getOptions();
           obj5 = closure_130_0(closure_130_1[8]);
+          const options = closure_129_0.getOptions();
           c3 = 2;
           c4 = 1;
-          obj3 = { value: obj4.prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, obj5.getIsolationScope()), done: false };
-          return obj3;
+          obj7 = { value: obj5.prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, closure_130_0(closure_130_1[8]).getIsolationScope()), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_129_5 = value;
         if (closure_129_5) {
@@ -7897,23 +7849,23 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
           name = closure_129_7.name;
           version = closure_129_7.version;
           settings = closure_129_7.settings;
-          obj5 = {};
+          obj9 = {};
           const merged = Object.assign(closure_129_5.sdk);
           let str3 = name;
           if (!name) {
             str3 = "sentry.javascript.unknown";
           }
-          obj5.name = str3;
+          obj9.name = str3;
           let str4 = version;
           if (!version) {
             str4 = "0.0.0";
           }
-          obj5.version = str4;
-          obj5.settings = settings;
-          closure_129_5.sdk = obj5;
+          obj9.version = str4;
+          obj9.settings = settings;
+          closure_129_5.sdk = obj9;
           c4 = 3;
-          const obj6 = { value: closure_129_5, done: true };
-          return obj6;
+          const obj10 = { value: closure_129_5, done: true };
+          return obj10;
         } else {
           c4 = 3;
           return { value: null, done: true };
@@ -7933,8 +7885,8 @@ let closure_171 = async function _sendReplayRequest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -7947,8 +7899,8 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp4;
           dependencyMap = tmp10;
@@ -7984,12 +7936,12 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj1 = { value, done: true };
-          return obj1;
+          obj5 = { value, done: true };
+          return obj5;
         } else {
-          obj2 = { recordingData: closure_129_0, headers: null };
-          obj3 = { segment_id: closure_129_2 };
-          obj2.headers = obj3;
+          obj6 = { recordingData: closure_129_0, headers: null };
+          obj7 = { segment_id: closure_129_2 };
+          obj6.headers = obj7;
           closure_129_6 = (function prepareRecordingData(recordingData) {
             recordingData = recordingData.recordingData;
             const combined = "" + JSON.stringify(recordingData.headers) + "\n";
@@ -8007,7 +7959,7 @@ let closure_171 = async function _sendReplayRequest(arg0) {
               const result1 = uint8Array.set(recordingData, encodeResult.length);
             }
             return combined1;
-          })(obj2);
+          })(obj6);
           urls = closure_129_3.urls;
           errorIds = closure_129_3.errorIds;
           traceIds = closure_129_3.traceIds;
@@ -8020,22 +7972,21 @@ let closure_171 = async function _sendReplayRequest(arg0) {
             transport = client.getTransport();
           }
           closure_129_13 = transport;
-          let obj7 = client;
           let dsn;
           if (client != null) {
-            dsn = obj7.getDsn();
+            dsn = client.getDsn();
           }
           closure_129_14 = dsn;
           if (client) {
             if (closure_129_13) {
               if (closure_129_14) {
                 if (closure_129_5.sampled) {
-                  obj4 = { type: "replay_event", replay_start_timestamp: initialTimestamp / 1000, timestamp: closure_129_4 / 1000, error_ids: errorIds, trace_ids: traceIds, urls, replay_id: closure_129_1, segment_id: closure_129_2, replay_type: closure_129_5.sampled };
-                  closure_129_15 = obj4;
-                  obj5 = { scope: currentScope, client, replayId: closure_129_1, event: closure_129_15 };
+                  obj9 = { type: "replay_event", replay_start_timestamp: initialTimestamp / 1000, timestamp: closure_129_4 / 1000, error_ids: errorIds, trace_ids: traceIds, urls, replay_id: closure_129_1, segment_id: closure_129_2, replay_type: closure_129_5.sampled };
+                  closure_129_15 = obj9;
+                  const obj10 = { scope: currentScope, client, replayId: closure_129_1, event: closure_129_15 };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = {
+                  const obj11 = {
                     value: (function prepareReplayEvent(arg0) {
                                       const self = this;
                                       const apply = closure_1_170.apply;
@@ -8045,17 +7996,17 @@ let closure_171 = async function _sendReplayRequest(arg0) {
                                         applyArgumentsResult = apply(self, arguments);
                                       }
                                       return applyArgumentsResult;
-                                    })(obj5),
+                                    })(obj10),
                     done: false
                   };
-                  return obj6;
+                  return obj11;
                 }
               }
             }
           }
           c6 = 3;
-          obj7 = { value: Promise.resolve({}), done: true };
-          return obj7;
+          const obj12 = { value: Promise.resolve({}), done: true };
+          return obj12;
         }
       } else if (2 === tmp10) {
         if (arg0 === 1) {
@@ -8063,15 +8014,15 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           closure_129_16 = value;
           if (closure_129_16) {
             delete tmp7[tmp3];
             closure_129_18 = (function createReplayEnvelope(arg0, str, arg2, tunnel) {
               obj = closure_1_0(682);
-              obj2 = closure_1_0(682);
+              const obj2 = closure_1_0(682);
               const items = [{ type: "replay_event" }, arg0];
               const items1 = [items, ];
               const eventEnvelopeHeaders = obj2.createEventEnvelopeHeaders(arg0, closure_1_0(682).getSdkMetadataForEnvelopeHeader(arg0), tunnel, arg2);
@@ -8089,16 +8040,16 @@ let closure_171 = async function _sendReplayRequest(arg0) {
             c4 = 1;
             c5 = 5;
             c6 = 1;
-            const obj9 = { value: closure_129_13.send(closure_129_18), done: false };
-            return obj9;
+            const obj14 = { value: closure_129_13.send(closure_129_18), done: false };
+            return obj14;
           } else {
             client.recordDroppedEvent("event_processor", "replay");
             if (closure_130_130) {
               closure_130_133.log("An event processor returned `null`, will not send event.");
             }
             c6 = 3;
-            const obj10 = { value: Promise.resolve({}), done: true };
-            return obj10;
+            const obj15 = { value: Promise.resolve({}), done: true };
+            return obj15;
           }
         }
       } else {
@@ -8119,8 +8070,8 @@ let closure_171 = async function _sendReplayRequest(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj16 = { value, done: true };
+          return obj16;
         } else {
           closure_129_17 = value;
           c4 = 0;
@@ -8128,17 +8079,17 @@ let closure_171 = async function _sendReplayRequest(arg0) {
             const tmp33 = new closure_130_172(closure_129_17.statusCode);
             throw tmp33;
           }
+          closure_129_20 = closure_130_0(closure_130_1[8]).updateRateLimits({}, closure_129_17);
           obj = closure_130_0(closure_130_1[8]);
-          closure_129_20 = obj.updateRateLimits({}, closure_129_17);
-          obj1 = closure_130_0(closure_130_1[8]);
-          if (obj1.isRateLimited(closure_129_20, "replay")) {
+          if (obj2.isRateLimited(closure_129_20, "replay")) {
             const tmp25 = new closure_130_173(closure_129_20);
             throw tmp25;
           } else {
             c6 = 3;
-            const obj12 = { value: closure_129_17, done: true };
-            return obj12;
+            const obj17 = { value: closure_129_17, done: true };
+            return obj17;
           }
+          obj2 = closure_130_0(closure_130_1[8]);
         }
         throw closure_129_19;
       }
@@ -8173,8 +8124,8 @@ let closure_175 = async function _sendReplay(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -8187,18 +8138,18 @@ let closure_175 = async function _sendReplay(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp4;
           closure_2 = tmp9;
           closure_130_1 = undefined;
           closure_130_0 = closure_0;
-          obj1 = interval;
+          obj5 = interval;
           if (interval === undefined) {
-            obj1 = { count: 0, interval: 5000 };
+            obj5 = { count: 0, interval: 5000 };
           }
-          closure_130_1 = obj1;
+          closure_130_1 = obj5;
           let recordingData;
           let onError;
           closure_130_4 = undefined;
@@ -8212,8 +8163,8 @@ let closure_175 = async function _sendReplay(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          obj6 = { value, done: true };
+          return obj6;
         } else {
           recordingData = closure_130_0.recordingData;
           onError = closure_130_0.onError;
@@ -8221,7 +8172,7 @@ let closure_175 = async function _sendReplay(arg0) {
             c5 = 1;
             c6 = 3;
             c7 = 1;
-            obj3 = {
+            obj7 = {
               value: (function sendReplayRequest(arg0) {
                           const self = this;
                           const apply = closure_1_171.apply;
@@ -8234,7 +8185,7 @@ let closure_175 = async function _sendReplay(arg0) {
                         })(closure_130_0),
               done: false
             };
-            return obj3;
+            return obj7;
           } else {
             c7 = 3;
             return { value: "HermesInternal", done: null };
@@ -8246,9 +8197,8 @@ let closure_175 = async function _sendReplay(arg0) {
           closure_130_5 = closure_4;
           if (!(closure_130_5 instanceof closure_131_172)) {
             if (!(closure_130_5 instanceof closure_131_173)) {
-              obj1 = closure_131_0(closure_131_1[8]);
-              obj4 = { _retryCount: closure_130_1.count };
-              obj1.setContext("Replays", obj4);
+              obj8 = { _retryCount: closure_130_1.count };
+              closure_131_0(closure_131_1[8]).setContext("Replays", obj8);
               if (onError) {
                 onError(closure_130_5);
               }
@@ -8285,9 +8235,10 @@ let closure_175 = async function _sendReplay(arg0) {
                   }), interval.interval);
                 });
                 c7 = 3;
-                obj5 = { value: promise, done: true };
-                return obj5;
+                obj9 = { value: promise, done: true };
+                return obj9;
               }
+              const obj2 = closure_131_0(closure_131_1[8]);
             }
           }
           throw closure_130_5;
@@ -8376,9 +8327,9 @@ let closure_23 = (() => {
           str2 = "nodeMetaMap";
           if ("nodeMetaMap" in self) {
             tmp11 = defineProperty;
-            obj = { enumerable: true, configurable: true, writable: true, value: null };
-            obj.value = weakMap;
-            tmp12 = defineProperty(self, "nodeMetaMap", obj);
+            obj1 = { enumerable: true, configurable: true, writable: true, value: null };
+            obj1.value = weakMap;
+            tmp12 = defineProperty(self, "nodeMetaMap", obj1);
           } else {
             self.nodeMetaMap = weakMap;
           }
@@ -8498,7 +8449,7 @@ let closure_23 = (() => {
   ];
   return _createClass(Mirror, items);
 })();
-let __rrweb_original__ = "__rrweb_original__";
+const __rrweb_original__ = "__rrweb_original__";
 let closure_32 = {};
 let closure_39 = 1;
 const regExp = new RegExp("[^a-z0-9-_:]");
@@ -8510,7 +8461,7 @@ const re47 = /^[^ \t\n\r\u000c]+/;
 const re48 = /^[, \t\n\r\u000c]+/;
 let weakMap = new WeakMap();
 let c60 = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.";
-obj = {
+let obj2 = {
   map: {},
   getId() {
     console.error(c60);
@@ -8542,7 +8493,7 @@ if (_Reflect) {
 }
 if (_Reflect) {
   const _Proxy = Proxy;
-  obj = {
+  let obj3 = {
     get(arg0, arg1, arg2) {
         if ("map" === arg1) {
           const _console = console;
@@ -8551,11 +8502,10 @@ if (_Reflect) {
         return Reflect.get(arg0, arg1, arg2);
       }
   };
-  const proxy = new Proxy(obj, obj);
+  const proxy = new Proxy(obj2, obj3);
 }
 let W = Date.now;
-let obj3 = /[1-9][0-9]{12}/;
-if (!obj3.test(str.toString())) {
+if (!obj4.test(str.toString())) {
   W = function W() {
     return new Date().getTime();
   };
@@ -8640,7 +8590,7 @@ let closure_68 = (() => {
   return _createClass(StyleSheetMirror, items);
 })();
 let closure_70 = {};
-let obj1 = {};
+let obj5 = {};
 ((arg0) => {
   arg0.DomContentLoaded = 0;
   arg0[0] = "DomContentLoaded";
@@ -8657,8 +8607,8 @@ let obj1 = {};
   arg0.Plugin = 6;
   arg0[6] = "Plugin";
   return arg0;
-})(obj1);
-let obj2 = {};
+})(obj5);
+let obj6 = {};
 ((arg0) => {
   arg0.Mutation = 0;
   arg0[0] = "Mutation";
@@ -8695,8 +8645,8 @@ let obj2 = {};
   arg0.CustomElement = 16;
   arg0[16] = "CustomElement";
   return arg0;
-})(obj2);
-obj3 = {};
+})(obj6);
+let obj7 = {};
 ((arg0) => {
   arg0.MouseUp = 0;
   arg0[0] = "MouseUp";
@@ -8721,8 +8671,8 @@ obj3 = {};
   arg0.TouchCancel = 10;
   arg0[10] = "TouchCancel";
   return arg0;
-})(obj3);
-let obj4 = {};
+})(obj7);
+let obj8 = {};
 ((arg0) => {
   arg0.Mouse = 0;
   arg0[0] = "Mouse";
@@ -8731,8 +8681,8 @@ let obj4 = {};
   arg0.Touch = 2;
   arg0[2] = "Touch";
   return arg0;
-})(obj4);
-let obj5 = {};
+})(obj8);
+let obj9 = {};
 ((arg0) => {
   arg0.Play = 0;
   arg0[0] = "Play";
@@ -8745,7 +8695,7 @@ let obj5 = {};
   arg0.RateChange = 4;
   arg0[4] = "RateChange";
   return arg0;
-})(obj5);
+})(obj9);
 let closure_80 = (() => {
   class DoubleLinkedList {
     constructor() {
@@ -8960,14 +8910,14 @@ let closure_82 = (() => {
                     } while (-2 === id1);
                     if (-1 !== id) {
                       if (-1 !== id1) {
-                        obj = { doc: null, mirror: null, blockClass: null, blockSelector: null, maskAllText: null, unblockSelector: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, skipChild: true, newlyAddedElement: true, inlineStylesheet: null, maskInputOptions: null, maskAttributeFn: null, maskTextFn: null, maskInputFn: null, slimDOMOptions: null, dataURLOptions: null, recordCanvas: null, inlineImages: null, onSerialize: null, onIframeLoad: null, onStylesheetLoad: null, onBlockedImageLoad: null, ignoreCSSAttributes: null };
+                        let obj3 = { doc: null, mirror: null, blockClass: null, blockSelector: null, maskAllText: null, unblockSelector: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, skipChild: true, newlyAddedElement: true, inlineStylesheet: null, maskInputOptions: null, maskAttributeFn: null, maskTextFn: null, maskInputFn: null, slimDOMOptions: null, dataURLOptions: null, recordCanvas: null, inlineImages: null, onSerialize: null, onIframeLoad: null, onStylesheetLoad: null, onBlockedImageLoad: null, ignoreCSSAttributes: null };
                         ({ doc: obj2.doc, mirror: obj2.mirror, blockClass: obj2.blockClass, blockSelector: obj2.blockSelector, maskAllText: obj2.maskAllText, unblockSelector: obj2.unblockSelector, maskTextClass: obj2.maskTextClass, unmaskTextClass: obj2.unmaskTextClass, maskTextSelector: obj2.maskTextSelector, unmaskTextSelector: obj2.unmaskTextSelector, inlineStylesheet: obj2.inlineStylesheet, maskInputOptions: obj2.maskInputOptions, maskAttributeFn: obj2.maskAttributeFn, maskTextFn: obj2.maskTextFn, maskInputFn: obj2.maskInputFn, slimDOMOptions: obj2.slimDOMOptions, dataURLOptions: obj2.dataURLOptions, recordCanvas: obj2.recordCanvas, inlineImages: obj2.inlineImages } = self);
-                        obj.onSerialize = function onSerialize() { ... };
-                        obj.onIframeLoad = function onIframeLoad() { ... };
-                        obj.onStylesheetLoad = function onStylesheetLoad() { ... };
-                        obj.onBlockedImageLoad = function onBlockedImageLoad() { ... };
-                        obj.ignoreCSSAttributes = self.ignoreCSSAttributes;
-                        const tmp24 = serializeNodeWithId(value, obj);
+                        obj3.onSerialize = function onSerialize() { ... };
+                        obj3.onIframeLoad = function onIframeLoad() { ... };
+                        obj3.onStylesheetLoad = function onStylesheetLoad() { ... };
+                        obj3.onBlockedImageLoad = function onBlockedImageLoad() { ... };
+                        obj3.ignoreCSSAttributes = self.ignoreCSSAttributes;
+                        const tmp24 = serializeNodeWithId(value, obj3);
                         if (tmp24) {
                           obj = { parentId: id, nextId: id1, node: tmp24 };
                           items.push(obj);
@@ -9023,17 +8973,17 @@ let closure_82 = (() => {
                 let addResult = droppedSet.add(item10064);
               }
             }
-            let previous = null;
+            let previous1 = null;
             if (arr2.length) {
               while (true) {
                 let tmp51 = null;
-                if (previous) {
+                if (previous1) {
                   let mirror2 = items.mirror;
-                  let id = mirror2.getId(previous.value.parentNode);
-                  let tmp55 = -1 !== id && -1 !== getNextId(previous.value);
+                  let id = mirror2.getId(previous1.value.parentNode);
+                  let tmp55 = -1 !== id && -1 !== getNextId(previous1.value);
                   tmp51 = null;
                   if (tmp55) {
-                    tmp51 = previous;
+                    tmp51 = previous1;
                   }
                 }
                 let iter2 = tmp51;
@@ -9042,7 +8992,7 @@ let closure_82 = (() => {
                   iter2 = tmp51;
                   if (iter3) {
                     while (true) {
-                      previous = iter3.previous;
+                      let previous = iter3.previous;
                       if (iter3) {
                         let mirror3 = items.mirror;
                         let tmp58 = items;
@@ -9078,7 +9028,7 @@ let closure_82 = (() => {
                 if (!iter2) {
                   break;
                 } else {
-                  previous = iter2.previous;
+                  previous1 = iter2.previous;
                   let removeNodeResult = arr2.removeNode(iter2.value);
                   let pushAddResult3 = pushAdd(iter2.value);
                 }
@@ -9157,7 +9107,6 @@ let closure_82 = (() => {
       };
       this.processMutation = (target) => {
         _self = target;
-        obj = _self;
         if (!closure_1_66(target.target, _self.mirror)) {
           const type = target.type;
           if ("characterData" === type) {
@@ -9174,8 +9123,8 @@ let closure_82 = (() => {
                   }
                 }
               }
-              obj = { value: tmp48, node: target.target };
-              texts.push(obj);
+              const obj2 = { value: tmp48, node: target.target };
+              texts.push(obj2);
             }
             tmp46 = closure_1_65(target.target, obj.blockClass, obj.blockSelector, obj.unblockSelector, false) || target.target.textContent === target.oldValue;
           } else if ("attributes" === type) {
@@ -9184,12 +9133,9 @@ let closure_82 = (() => {
             if ("value" === attributeName) {
               const tmp55 = closure_1_29(target);
               const tagName = target.tagName;
-              obj = { maskInputOptions: null, tagName: null, type: null };
-              obj.maskInputOptions = obj.maskInputOptions;
-              obj.tagName = tagName;
-              obj.type = tmp55;
-              obj1 = { isMasked: closure_1_56(target.target, obj.maskTextClass, obj.maskTextSelector, obj.unmaskTextClass, obj.unmaskTextSelector, closure_1_24(obj)), element: target, value: closure_1_30(target, tagName, tmp55), maskInputFn: obj.maskInputFn };
-              attr = closure_1_25(obj1);
+              const obj3 = { maskInputOptions: obj.maskInputOptions, tagName, type: tmp55 };
+              const obj4 = { isMasked: closure_1_56(target.target, obj.maskTextClass, obj.maskTextSelector, obj.unmaskTextClass, obj.unmaskTextSelector, closure_1_24(obj3)), element: target, value: closure_1_30(target, tagName, tmp55), maskInputFn: obj.maskInputFn };
+              attr = closure_1_25(obj4);
               const tmp57 = closure_1_30(target, tagName, tmp55);
             }
             if (!closure_1_65(target.target, obj.blockClass, obj.blockSelector, obj.unblockSelector, false)) {
@@ -9208,12 +9154,12 @@ let closure_82 = (() => {
                 }
                 let tmp7 = value;
                 if (!value) {
-                  obj2 = { node: target.target, attributes: {}, styleDiff: {}, _unchangedStyles: {} };
+                  obj5 = { node: target.target, attributes: {}, styleDiff: {}, _unchangedStyles: {} };
                   const attributes = obj.attributes;
-                  attributes.push(obj2);
+                  attributes.push(obj5);
                   const attributeMap = obj.attributeMap;
-                  const result = attributeMap.set(target.target, obj2);
-                  tmp7 = obj2;
+                  const result = attributeMap.set(target.target, obj5);
+                  tmp7 = obj5;
                 }
                 let tmp10 = "type" === str5;
                 if (tmp10) {
@@ -9244,8 +9190,8 @@ let closure_82 = (() => {
                       const attr2 = element.setAttribute("style", target.oldValue);
                     }
                     const _Array = Array;
-                    const arr1 = Array.from(target.style);
-                    const iter = arr1[Symbol.iterator]();
+                    const arr3 = Array.from(target.style);
+                    const iter = arr3[Symbol.iterator]();
                     const nextResult = iter.next();
                     while (iter !== undefined) {
                       let tmp27 = nextResult;
@@ -9273,8 +9219,8 @@ let closure_82 = (() => {
                       tmp7.styleDiff[tmp27] = items1;
                     }
                     const _Array2 = Array;
-                    const arr2 = Array.from(element.style);
-                    for (const item10147 of arr2) {
+                    const arr4 = Array.from(element.style);
+                    for (const item10147 of arr4) {
                       let style5 = target.style;
                       if ("" === style5.getPropertyValue(item10147)) {
                         tmp7.styleDiff[item10147] = false;
@@ -9292,7 +9238,7 @@ let closure_82 = (() => {
               let item = addedNodes.forEach((item) => self.genAdds(item, target.target));
               const removedNodes = target.removedNodes;
               let item1 = removedNodes.forEach((childNodes) => {
-                let arr = self;
+                let arr2 = self;
                 const mirror = self.mirror;
                 const id = mirror.getId(childNodes);
                 target = target.target;
@@ -9304,7 +9250,7 @@ let closure_82 = (() => {
                 if (host != null) {
                   shadowRoot = host.shadowRoot;
                 }
-                const mirror2 = arr.mirror;
+                const mirror2 = arr2.mirror;
                 const getId = mirror2.getId;
                 const target2 = tmp3.target;
                 if (Boolean(shadowRoot === target)) {
@@ -9312,17 +9258,17 @@ let closure_82 = (() => {
                 } else {
                   id1 = getId(target2);
                 }
-                let tmp7 = isBlocked(tmp3.target, arr.blockClass, arr.blockSelector, arr.unblockSelector, false);
+                let tmp7 = isBlocked(tmp3.target, arr2.blockClass, arr2.blockSelector, arr2.unblockSelector, false);
                 if (!tmp7) {
-                  const mirror3 = arr.mirror;
+                  const mirror3 = arr2.mirror;
                   tmp7 = -2 === mirror3.getId(childNodes);
                 }
                 if (!tmp7) {
-                  const mirror4 = arr.mirror;
+                  const mirror4 = arr2.mirror;
                   tmp7 = -1 === mirror4.getId(childNodes);
                 }
                 if (!tmp7) {
-                  ({ addedSet, addedSet: addedSet2 } = arr);
+                  ({ addedSet, addedSet: addedSet2 } = arr2);
                   if (addedSet.has(childNodes)) {
                     let movedSet2 = addedSet2;
                     addedSet2.delete(childNodes);
@@ -9330,7 +9276,7 @@ let closure_82 = (() => {
                     if (childNodes != null) {
                       let item = childNodes.forEach(() => { ... });
                     }
-                    const droppedSet = arr.droppedSet;
+                    const droppedSet = arr2.droppedSet;
                     droppedSet.add(childNodes);
                   } else {
                     let hasItem = addedSet2.has(tmp3.target);
@@ -9339,7 +9285,7 @@ let closure_82 = (() => {
                     }
                     if (!hasItem) {
                       const target3 = tmp3.target;
-                      const mirror5 = arr.mirror;
+                      const mirror5 = arr2.mirror;
                       let host1;
                       if (target3 != null) {
                         host1 = target3.host;
@@ -9404,9 +9350,9 @@ let closure_82 = (() => {
                       hasItem = flag;
                     }
                     if (!hasItem) {
-                      const movedSet = arr.movedSet;
+                      const movedSet = arr2.movedSet;
                       if (!movedSet.has(childNodes)) {
-                        const removes = arr.removes;
+                        const removes = arr2.removes;
                         obj = { parentId: id1, id, isShadow: null };
                         const target4 = tmp3.target;
                         let host3;
@@ -9420,7 +9366,7 @@ let closure_82 = (() => {
                         const BooleanResult = Boolean(shadowRoot3 === target4);
                         if (!BooleanResult) {
                           obj.isShadow = !tmp27;
-                          arr = removes.push(obj);
+                          removes.push(obj);
                           const tmp30 = !tmp27;
                         } else {
                           const target5 = tmp3.target;
@@ -9437,15 +9383,15 @@ let closure_82 = (() => {
                         throw new TypeError("Trying to call a non-function");
                       }
                     }
-                    movedSet2 = arr.movedSet;
+                    movedSet2 = arr2.movedSet;
                     movedSet2.delete(childNodes);
                     const childNodes1 = childNodes.childNodes;
                     if (childNodes1 != null) {
                       const item1 = childNodes1.forEach(() => { ... });
                     }
                   }
-                  const mapRemoves = arr.mapRemoves;
-                  arr = mapRemoves.push(childNodes);
+                  const mapRemoves = arr2.mapRemoves;
+                  arr2 = mapRemoves.push(childNodes);
                 }
               });
             }
@@ -9816,9 +9762,8 @@ let closure_100 = (() => {
       value: function attachIframe(contentWindow, node) {
         const self = this;
         obj = { adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
-        obj = { parentId: mirror.getId(contentWindow), nextId: null, node };
         ({ mirror, mutationCb } = this);
-        const items = [obj];
+        const items = [{ parentId: mirror.getId(contentWindow), nextId: null, node }];
         obj.adds = items;
         obj.removes = [];
         obj.texts = [];
@@ -9885,19 +9830,19 @@ let closure_100 = (() => {
           let crossOriginIframeRootIdMap = self.crossOriginIframeRootIdMap;
           const result = crossOriginIframeRootIdMap.set(value, id);
           self.patchRootIdOnNode(event.data.node, id);
-          let data = { timestamp: event.timestamp, type: FullSnapshot.IncrementalSnapshot, data: null };
-          data = { source: obj2.Mutation, adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
-          data = { parentId: null, nextId: null, node: null };
+          obj = { timestamp: event.timestamp, type: FullSnapshot.IncrementalSnapshot, data: null };
+          const obj2 = { source: obj6.Mutation, adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
+          const obj3 = { parentId: null, nextId: null, node: null };
           const mirror = self.mirror;
-          data.parentId = mirror.getId(value);
-          data.node = event.data.node;
-          const items = [data];
-          data.adds = items;
-          data.removes = [];
-          data.texts = [];
-          data.attributes = [];
-          data.data = data;
-          return data;
+          obj3.parentId = mirror.getId(value);
+          obj3.node = event.data.node;
+          const items = [obj3];
+          obj2.adds = items;
+          obj2.removes = [];
+          obj2.texts = [];
+          obj2.attributes = [];
+          obj.data = obj2;
+          return obj;
         } else {
           if (FullSnapshot.Meta !== type) {
             if (FullSnapshot.Load !== type) {
@@ -9910,7 +9855,7 @@ let closure_100 = (() => {
                 } else {
                   if (FullSnapshot.IncrementalSnapshot === type) {
                     const source = event.data.source;
-                    if (obj2.Mutation === source) {
+                    if (obj6.Mutation === source) {
                       const adds = event.data.adds;
                       const item = adds.forEach((node) => {
                         self.replaceIds(node, closure_0, ["parentId", "nextId", "previousId"]);
@@ -9935,28 +9880,28 @@ let closure_100 = (() => {
                       });
                       return event;
                     } else {
-                      if (obj2.Drag !== source) {
-                        if (obj2.TouchMove !== source) {
-                          if (obj2.MouseMove !== source) {
-                            if (obj2.ViewportResize === source) {
+                      if (obj6.Drag !== source) {
+                        if (obj6.TouchMove !== source) {
+                          if (obj6.MouseMove !== source) {
+                            if (obj6.ViewportResize === source) {
                               return false;
                             } else {
-                              if (obj2.MediaInteraction !== source) {
-                                if (obj2.MouseInteraction !== source) {
-                                  if (obj2.Scroll !== source) {
-                                    if (obj2.CanvasMutation !== source) {
-                                      if (obj2.Input !== source) {
-                                        if (obj2.StyleSheetRule !== source) {
-                                          if (obj2.StyleDeclaration !== source) {
-                                            if (obj2.Font === source) {
+                              if (obj6.MediaInteraction !== source) {
+                                if (obj6.MouseInteraction !== source) {
+                                  if (obj6.Scroll !== source) {
+                                    if (obj6.CanvasMutation !== source) {
+                                      if (obj6.Input !== source) {
+                                        if (obj6.StyleSheetRule !== source) {
+                                          if (obj6.StyleDeclaration !== source) {
+                                            if (obj6.Font === source) {
                                               return event;
-                                            } else if (obj2.Selection === source) {
+                                            } else if (obj6.Selection === source) {
                                               const ranges = event.data.ranges;
                                               const item4 = ranges.forEach((item) => {
                                                 self.replaceIds(item, closure_0, ["start", "end"]);
                                               });
                                               return event;
-                                            } else if (obj2.AdoptedStyleSheet === source) {
+                                            } else if (obj6.AdoptedStyleSheet === source) {
                                               self.replaceIds(event.data, value, ["id"]);
                                               self.replaceStyleIds(event.data, value, ["styleIds"]);
                                               const styles = event.data.styles;
@@ -10145,12 +10090,12 @@ let closure_102 = (() => {
             obj.shadowDomManager = self;
             closure_0 = closure_89(obj, doc);
             self.restoreHandlers.push(() => closure_0.disconnect());
-            obj = {};
+            const obj2 = {};
             const merged1 = Object.assign(self.bypassOptions);
-            obj.scrollCb = self.scrollCb;
-            obj.doc = doc;
-            obj.mirror = self.mirror;
-            self.restoreHandlers.push(closure_91(obj));
+            obj2.scrollCb = self.scrollCb;
+            obj2.doc = doc;
+            obj2.mirror = self.mirror;
+            self.restoreHandlers.push(closure_91(obj2));
             closure_72(() => {
               let adoptedStyleSheets = doc.adoptedStyleSheets;
               if (adoptedStyleSheets) {

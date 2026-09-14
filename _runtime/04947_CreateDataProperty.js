@@ -1,5 +1,5 @@
 // _runtime/04947_CreateDataProperty.js
-import _mod1283 from "metro/01283__.js";
+import _mod1281 from "metro/01281__.js";
 import _mod4885 from "metro/04885__.js";
 import _mod4932 from "metro/04932__.js";
 import OrdinaryDefineOwnProperty from "04948_OrdinaryDefineOwnProperty.js";
@@ -11,11 +11,11 @@ export default function CreateDataProperty(arg0, arg1, __Value__) {
       const obj = { "[[Configurable]]": true, "[[Enumerable]]": true, [[Value]], "[[Writable]]": true };
       return OrdinaryDefineOwnProperty(arg0, arg1, obj);
     } else {
-      const tmp10 = new _mod1283("Assertion failed: P is not a Property Key");
+      const tmp10 = new _mod1281("Assertion failed: P is not a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new _mod1283("Assertion failed: Type(O) is not Object");
+    const tmp5 = new _mod1281("Assertion failed: Type(O) is not Object");
     throw tmp5;
   }
 };

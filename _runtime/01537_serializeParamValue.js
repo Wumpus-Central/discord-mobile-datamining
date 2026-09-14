@@ -1,6 +1,8 @@
 // _runtime/01537_serializeParamValue.js
 import _mod1538 from "metro/01538__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 let importAll = arg3;
 const dependencyMap = arg6;
@@ -40,16 +42,16 @@ export const getPathFromState = function getPathFromState(state, screens) {
     const _HermesInternal4 = HermesInternal;
     throw Error("Got '" + String(state) + "' for the navigation state. You must pass a valid state object.");
   } else {
-    screens = undefined;
+    let screens1;
     if (screens != null) {
-      screens = screens.screens;
+      screens1 = screens.screens;
     }
-    if (screens) {
-      let screens1;
+    if (screens1) {
+      let screens2;
       if (screens != null) {
-        screens1 = screens.screens;
+        screens2 = screens.screens;
       }
-      let obj = screens.get(screens1);
+      let obj = screens.get(screens2);
       if (!obj) {
         if (typeof closure_6 === "function") {
           let _Object = Object;
@@ -59,15 +61,15 @@ export const getPathFromState = function getPathFromState(state, screens) {
             [tmp, tmp2] = item;
             if (typeof tmp2 === "string") {
               let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
-              let obj = { parts: null, ownParts: null };
+              let obj2 = { parts: null, ownParts: null };
               if (closure_1_0) {
                 let items = [];
                 HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
-                obj.parts = items;
-                obj.ownParts = patternParts;
+                obj2.parts = items;
+                obj2.ownParts = patternParts;
               } else {
-                obj.parts = patternParts;
-                obj.ownParts = patternParts;
+                obj2.parts = patternParts;
+                obj2.ownParts = patternParts;
               }
               let obj3 = closure_2_0(closure_2_2[2]);
             } else {
@@ -79,8 +81,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                 }
               }
               if (tmp2.path) {
-                obj = closure_2_0(closure_2_2[2]);
-                patternParts1 = obj.getPatternParts(tmp2.path);
+                patternParts1 = closure_2_0(closure_2_2[2]).getPatternParts(tmp2.path);
+                let obj = closure_2_0(closure_2_2[2]);
               } else {
                 patternParts1 = [];
               }
@@ -106,15 +108,15 @@ export const getPathFromState = function getPathFromState(state, screens) {
                     [tmp, tmp2] = item;
                     if (typeof tmp2 === "string") {
                       let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
-                      let obj = { parts: null, ownParts: null };
+                      let obj2 = { parts: null, ownParts: null };
                       if (closure_1_0) {
                         let items = [];
                         HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
-                        obj.parts = items;
-                        obj.ownParts = patternParts;
+                        obj2.parts = items;
+                        obj2.ownParts = patternParts;
                       } else {
-                        obj.parts = patternParts;
-                        obj.ownParts = patternParts;
+                        obj2.parts = patternParts;
+                        obj2.ownParts = patternParts;
                       }
                       let obj3 = closure_2_0(closure_2_2[2]);
                     } else {
@@ -126,8 +128,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                         }
                       }
                       if (tmp2.path) {
-                        obj = closure_2_0(closure_2_2[2]);
-                        patternParts1 = obj.getPatternParts(tmp2.path);
+                        patternParts1 = closure_2_0(closure_2_2[2]).getPatternParts(tmp2.path);
+                        let obj = closure_2_0(closure_2_2[2]);
                       } else {
                         patternParts1 = [];
                       }
@@ -153,15 +155,15 @@ export const getPathFromState = function getPathFromState(state, screens) {
                             [tmp, tmp2] = item;
                             if (typeof tmp2 === "string") {
                               let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
-                              let obj = { parts: null, ownParts: null };
+                              let obj2 = { parts: null, ownParts: null };
                               if (closure_1_0) {
                                 let items = [];
                                 HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
-                                obj.parts = items;
-                                obj.ownParts = patternParts;
+                                obj2.parts = items;
+                                obj2.ownParts = patternParts;
                               } else {
-                                obj.parts = patternParts;
-                                obj.ownParts = patternParts;
+                                obj2.parts = patternParts;
+                                obj2.ownParts = patternParts;
                               }
                               let obj3 = closure_2_0(closure_2_2[2]);
                             } else {
@@ -173,8 +175,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                 }
                               }
                               if (tmp2.path) {
-                                obj = closure_2_0(closure_2_2[2]);
-                                patternParts1 = obj.getPatternParts(tmp2.path);
+                                patternParts1 = closure_2_0(closure_2_2[2]).getPatternParts(tmp2.path);
+                                let obj = closure_2_0(closure_2_2[2]);
                               } else {
                                 patternParts1 = [];
                               }
@@ -200,15 +202,15 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                     [tmp, tmp2] = item;
                                     if (typeof tmp2 === "string") {
                                       let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
-                                      let obj = { parts: null, ownParts: null };
+                                      let obj2 = { parts: null, ownParts: null };
                                       if (closure_1_0) {
                                         let items = [];
                                         HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
-                                        obj.parts = items;
-                                        obj.ownParts = patternParts;
+                                        obj2.parts = items;
+                                        obj2.ownParts = patternParts;
                                       } else {
-                                        obj.parts = patternParts;
-                                        obj.ownParts = patternParts;
+                                        obj2.parts = patternParts;
+                                        obj2.ownParts = patternParts;
                                       }
                                       let obj3 = closure_2_0(closure_2_2[2]);
                                     } else {
@@ -220,8 +222,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                         }
                                       }
                                       if (tmp2.path) {
-                                        obj = closure_2_0(closure_2_2[2]);
-                                        patternParts1 = obj.getPatternParts(tmp2.path);
+                                        patternParts1 = closure_2_0(closure_2_2[2]).getPatternParts(tmp2.path);
+                                        let obj = closure_2_0(closure_2_2[2]);
                                       } else {
                                         patternParts1 = [];
                                       }
@@ -248,8 +250,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                           throw new TypeError("Trying to call a non-function");
                                         }
                                       }
-                                      obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
-                                      let items3 = [tmp, obj];
+                                      let obj4 = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+                                      let items3 = [tmp, obj4];
                                       return items3;
                                     }
                                   }));
@@ -257,8 +259,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                   throw new TypeError("Trying to call a non-function");
                                 }
                               }
-                              obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
-                              let items3 = [tmp, obj];
+                              let obj4 = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+                              let items3 = [tmp, obj4];
                               return items3;
                             }
                           }));
@@ -266,8 +268,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                           throw new TypeError("Trying to call a non-function");
                         }
                       }
-                      obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
-                      let items3 = [tmp, obj];
+                      let obj4 = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+                      let items3 = [tmp, obj4];
                       return items3;
                     }
                   }));
@@ -275,8 +277,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
-              obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
-              let items3 = [tmp, obj];
+              let obj4 = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+              let items3 = [tmp, obj4];
               return items3;
             }
           }));
@@ -319,19 +321,19 @@ export const getPathFromState = function getPathFromState(state, screens) {
           params2 = "state" in tmp15Result.params;
         }
         if (params2) {
-          screens = undefined;
-          if (screens != null) {
-            screens = screens.screens;
-          }
-          params2 = screens;
-        }
-        value = undefined;
-        if (tmp15Result.params) {
           let screens1;
           if (screens != null) {
             screens1 = screens.screens;
           }
-          if (screens1) {
+          params2 = screens1;
+        }
+        value = undefined;
+        if (tmp15Result.params) {
+          let screens2;
+          if (screens != null) {
+            screens2 = screens.screens;
+          }
+          if (screens2) {
             if (params) {
               if (!set.has(tmp15Result)) {
                 const result = set.set(tmp15Result, _mod1538.getStateFromRouteParams(tmp15Result.params));
@@ -372,11 +374,11 @@ export const getPathFromState = function getPathFromState(state, screens) {
           }
           const routeState1 = getRouteState(tmp15Result, tmp21);
           if (routeState1) {
-            let screens2;
+            let screens3;
             if (tmp21 != null) {
-              screens2 = tmp21.screens;
+              screens3 = tmp21.screens;
             }
-            tmp15Result = tmp15(routeState1, screens2, getRouteState);
+            tmp15Result = tmp15(routeState1, screens3, getRouteState);
           }
           tmp19 = tmp15Result;
         } else {

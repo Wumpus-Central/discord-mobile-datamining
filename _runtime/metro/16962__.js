@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 292,
   height: 182,
   scales: [2, 3],
-  hash: "4eb5c147e02fe50003e9c4d31a0b00b8",
-  name: "webhook_empty_light",
+  hash: "f94bdada98ce42ab7be865282d2b8eba",
+  name: "webhook_empty_dark",
   type: "png",
 });

@@ -1,6 +1,8 @@
 // _runtime/metro/06754__.js
 import cancelAnimation from "../01636_cancelAnimation.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 let __initData = {
@@ -23,10 +25,9 @@ export const useScrollHandler = () => {
   __initData = onScrollEndDrag;
   let workletNoop2;
   let workletNoop3;
+  const animatedRef = require("cancelAnimation").useAnimatedRef();
   let obj = require("cancelAnimation");
-  const animatedRef = obj.useAnimatedRef();
-  let obj1 = require("cancelAnimation");
-  const sharedValue = obj1.useSharedValue(0);
+  const sharedValue = require("cancelAnimation").useSharedValue(0);
   const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(
     animatedRef,
     sharedValue,
@@ -52,32 +53,33 @@ export const useScrollHandler = () => {
   if (undefined === workletNoop5) {
     workletNoop5 = tmp3(6745).workletNoop;
   }
-  obj = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
-  obj = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
+  const obj3 = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
+  let obj2 = require("cancelAnimation");
+  const obj4 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
   const fn = function v(nativeEvent, arg1) {
     workletNoop(nativeEvent, arg1);
     if (closure_0) {
-      const obj = { nativeEvent };
-      obj.runOnJS(tmp2)(obj);
-    }
-  };
-  obj1 = { handleOnScroll: workletNoop, onScroll, runOnJS: tmp3(1636).runOnJS };
-  fn.__closure = obj1;
-  fn.__workletHash = 13105350120634;
-  fn.__initData = __initData;
-  obj.onScroll = fn;
-  const fn2 = function _(nativeEvent, arg1) {
-    workletNoop2(nativeEvent, arg1);
-    if (closure_1) {
-      const obj = { nativeEvent };
-      obj.runOnJS(tmp2)(obj);
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
     }
   };
   const tmp3Result = require("cancelAnimation");
+  fn.__closure = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn.__workletHash = 13105350120634;
+  fn.__initData = __initData;
+  obj4.onScroll = fn;
+  const fn2 = function _(nativeEvent, arg1) {
+    workletNoop2(nativeEvent, arg1);
+    if (closure_1) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const obj5 = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
   fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
   fn2.__workletHash = 803385440782;
   fn2.__initData = workletNoop;
-  obj.onBeginDrag = fn2;
+  obj4.onBeginDrag = fn2;
   class O {
     constructor(arg0, arg1) {
       tmp = workletNoop(scrollEventsHandlersHook, onScroll);
@@ -85,20 +87,20 @@ export const useScrollHandler = () => {
         tmp3 = closure_0;
         tmp4 = closure_1;
         obj = closure_0(closure_1[1]);
-        obj = { nativeEvent: null };
-        obj.nativeEvent = scrollEventsHandlersHook;
-        tmp5 = obj.runOnJS(tmp2)(obj);
+        obj1 = { nativeEvent: null };
+        obj1.nativeEvent = scrollEventsHandlersHook;
+        tmp5 = obj.runOnJS(tmp2)(obj1);
       }
       return;
     }
   }
-  const obj2 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  const obj6 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
   O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("cancelAnimation").runOnJS };
   O.__workletHash = 3274737678599;
   O.__initData = workletNoop2;
-  obj.onEndDrag = O;
-  obj.onMomentumBegin = workletNoop5;
-  obj.onMomentumEnd = workletNoop4;
+  obj4.onEndDrag = O;
+  obj4.onMomentumBegin = workletNoop5;
+  obj4.onMomentumEnd = workletNoop4;
   const items = [
     workletNoop,
     workletNoop2,
@@ -109,8 +111,8 @@ export const useScrollHandler = () => {
     onScrollBeginDrag,
     onScrollEndDrag,
   ];
-  obj.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj, items);
-  obj.scrollableRef = animatedRef;
-  obj.scrollableContentOffsetY = sharedValue;
-  return obj;
+  obj3.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj4, items);
+  obj3.scrollableRef = animatedRef;
+  obj3.scrollableContentOffsetY = sharedValue;
+  return obj3;
 };

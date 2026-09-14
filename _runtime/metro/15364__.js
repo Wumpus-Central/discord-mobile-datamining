@@ -3,11 +3,11 @@ import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 192,
+  height: 144,
   scales: [1],
-  hash: "483ce0fdce44b3dc03843ae26158121f",
-  name: "amanda_1",
+  hash: "2bbd6220afd7d7de1fa25c481ae56a3d",
+  name: "ExampleSketchheadsActivity",
   type: "png",
 });

@@ -42,7 +42,7 @@ export const filterConfig = function filterConfig(config, ALLOWED_PROPS) {
   if (config2 === undefined) {
     obj = {};
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
   const iter = ALLOWED_PROPS[Symbol.iterator]();
   const nextResult = iter.next();
@@ -85,12 +85,12 @@ export const filterConfig = function filterConfig(config, ALLOWED_PROPS) {
             tmp5 = rect;
           }
         }
-        obj[tmp3] = tmp5;
+        obj2[tmp3] = tmp5;
       }
       tmp5 = transformIntoHandlerTags(config[tmp3]);
     }
   }
-  return obj;
+  return obj2;
 };
 export { transformIntoHandlerTags };
 export const findNodeHandle = function findNodeHandle(current) {

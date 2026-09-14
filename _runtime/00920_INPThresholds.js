@@ -6,6 +6,8 @@ import _mod914 from "metro/00914__.js";
 import _mod921 from "metro/00921__.js";
 import InteractionManager from "00922_InteractionManager.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

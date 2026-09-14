@@ -10,8 +10,8 @@ function instrumentXHR() {
     let obj = {
       apply(apply, onreadystatechange, arg2) {
         const error = new Error();
+        const startTimestamp = 1000 * onreadystatechange(error[1]).timestampInSeconds();
         let obj = onreadystatechange(error[1]);
-        const startTimestamp = 1000 * obj.timestampInSeconds();
         let formatted;
         if (obj2.isString(arg2[0])) {
           formatted = arg2[0].toUpperCase();
@@ -53,17 +53,17 @@ function instrumentXHR() {
             if ("onreadystatechange" in onreadystatechange) {
               if (typeof onreadystatechange.onreadystatechange === "function") {
                 const _Proxy = Proxy;
-                obj = {
+                let obj3 = {
                   apply(apply, arg1, arg2) {
                     onreadystatechangeHandler();
                     return apply.apply(arg1, arg2);
                   },
                 };
-                const proxy = new Proxy(onreadystatechange.onreadystatechange, obj);
+                const proxy = new Proxy(onreadystatechange.onreadystatechange, obj3);
                 onreadystatechange.onreadystatechange = proxy;
               }
               const _Proxy2 = Proxy;
-              obj = {
+              const obj4 = {
                 apply(apply, arg1, arg2) {
                   [str, tmp2] = startTimestamp(arg2, 2);
                   let isStringResult = tmp3;
@@ -81,7 +81,7 @@ function instrumentXHR() {
                   return apply.apply(arg1, arg2);
                 },
               };
-              const proxy1 = new Proxy(onreadystatechange.setRequestHeader, obj);
+              const proxy1 = new Proxy(onreadystatechange.setRequestHeader, obj4);
               onreadystatechange.setRequestHeader = proxy1;
               return apply.apply(onreadystatechange, arg2);
             }
@@ -95,7 +95,7 @@ function instrumentXHR() {
     let proxy = new Proxy(prototype.open, obj);
     prototype.open = proxy;
     let _Proxy2 = Proxy;
-    obj = {
+    let obj2 = {
       apply(apply, xhr, arg2) {
         if (xhr[__sentry_xhr_v3__]) {
           if (undefined !== arg2[0]) {
@@ -109,7 +109,7 @@ function instrumentXHR() {
         }
       },
     };
-    let proxy1 = new Proxy(prototype.send, obj);
+    let proxy1 = new Proxy(prototype.send, obj2);
     prototype.send = proxy1;
   }
 }

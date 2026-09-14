@@ -1,16 +1,16 @@
 // _runtime/metro/01455__.js
+import _mod1280 from "01280__.js";
+import _mod1281 from "01281__.js";
 import _mod1282 from "01282__.js";
-import _mod1283 from "01283__.js";
-import _mod1284 from "01284__.js";
 import _mod1456 from "01456__.js";
 import defineDataProperty from "../01457_defineDataProperty.js";
 
 let closure_2 = _mod1456();
-let closure_3 = _mod1282("%Math.floor%");
+let closure_3 = _mod1280("%Math.floor%");
 
 export default function setFunctionLength(fn, num) {
   if (typeof fn !== "function") {
-    const tmp25 = new _mod1283("`fn` is not a function");
+    const tmp25 = new _mod1281("`fn` is not a function");
     throw tmp25;
   } else {
     if (typeof num === "number") {
@@ -22,8 +22,8 @@ export default function setFunctionLength(fn, num) {
             if ("length" in fn) {
               flag = true;
               flag2 = true;
-              if (_mod1284) {
-                const tmp4 = _mod1284(fn, "length");
+              if (_mod1282) {
+                const tmp4 = _mod1282(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
                   tmp5 = !tmp4.configurable;
@@ -63,7 +63,7 @@ export default function setFunctionLength(fn, num) {
         }
       }
     }
-    const tmp19 = new _mod1283("`length` must be a positive 32-bit integer");
+    const tmp19 = new _mod1281("`length` must be a positive 32-bit integer");
     throw tmp19;
   }
 }

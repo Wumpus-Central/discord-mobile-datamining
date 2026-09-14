@@ -1,88 +1,66 @@
 // _runtime/metro/13045__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import stackParserFromStackParserOptions from "../12930_stackParserFromStackParserOptions.js";
+import _mod12933 from "12933__.js";
+import _mod13043 from "13043__.js";
 
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
+require = arg1;
+const dependencyMap = arg6;
+
+export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
+  let replaced;
+  if (str) {
+    replaced = str.replace(/^file:\/\//, "");
   }
-}
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
+  let sum;
+  if (location.location.columnNumber) {
+    sum = location.location.columnNumber + 1;
+  }
+  let sum1;
+  if (location.location.lineNumber) {
+    sum1 = location.location.lineNumber + 1;
+  }
+  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
+  const obj = _mod12933;
+  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
+  obj2.colno = sum;
+  obj2.lineno = sum1;
+  let filenameIsInAppResult;
+  if (replaced) {
+    filenameIsInAppResult = _mod13043.filenameIsInApp(replaced);
+    const tmp4Result = _mod13043;
+  }
+  obj2.in_app = filenameIsInAppResult;
+  return obj.dropUndefinedKeys(obj2);
+};
+export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  const navigation = fn();
+  c4 = false;
+  closure_5 = true;
+  const timerId = setInterval(() => {
+    const timeMs = navigation.getTimeMs();
+    let tmp2 = false === c4;
+    if (tmp2) {
+      tmp2 = timeMs > closure_0 + closure_1;
+    }
+    if (tmp2) {
+      c4 = true;
+      if (closure_5) {
+        closure_2();
       }
+    }
+    if (timeMs < closure_0 + closure_1) {
+      c4 = false;
+    }
+  }, 20);
+  return {
+    poll() {
+      navigation.reset();
     },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
+    enabled(arg0) {
+      closure_5 = arg0;
     },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
-];
-
-export const LRUMap = _createClass(LRUMap, items);
+  };
+};

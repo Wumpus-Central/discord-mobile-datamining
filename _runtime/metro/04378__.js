@@ -1,5 +1,7 @@
 // _runtime/metro/04378__.js
-let obj = {
+const require = globalThis.__r;
+
+const obj = {
   name: "react-native-nitro-modules",
   version: "0.35.4",
   description: "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI.",
@@ -89,10 +91,10 @@ let obj = {
   },
   "react-native-builder-bob": null,
 };
-obj = { source: "src", output: "lib", targets: null };
+const obj2 = { source: "src", output: "lib", targets: null };
 const items = ["typescript", { project: "tsconfig.build.json" }];
 const items1 = ["commonjs", "module", items];
-obj.targets = items1;
-obj["react-native-builder-bob"] = obj;
+obj2.targets = items1;
+obj["react-native-builder-bob"] = obj2;
 
 export default obj;

@@ -30,16 +30,16 @@ export const setEventHandlerAttribute = function setEventHandlerAttribute(remove
   }
   if (null != handleEvent) {
     if (typeof handleEvent === "function") {
-      obj = { handleEvent };
+      const obj2 = { handleEvent };
       try {
-        const listener = removeEventListener.addEventListener(error, obj);
+        const listener = removeEventListener.addEventListener(error, obj2);
         if (null == obj) {
           const _Map = Map;
           const map = new Map();
           obj = map;
           setEventHandlerAttributeMap(removeEventListener, map);
         }
-        const result = obj.set(error, obj);
+        const result = obj.set(error, obj2);
       } catch (err) {}
     }
   }

@@ -20,29 +20,30 @@ class InnerKeyframe {
       const callbackV = self.callbackV;
       if (!self.parsedAnimation) {
         const fn = function n() {
-          let animations = {};
+          const animations = {};
           function addAnimation(arr) {
             let first = keyframes[arr];
             if (0 !== first.length) {
               if (1 === first.length) {
-                self(1708);
-                let obj = { duration: first[0].duration, easing: null };
+                let obj = self(1708);
+                let obj2 = { duration: first[0].duration, easing: null };
                 if (first[0].easing) {
                   first = first[0];
                   let linear = first.easing;
                 } else {
                   linear = self(1688).Easing.linear;
                 }
-                obj.easing = linear;
-                obj.withTiming(first[0].value, obj);
+                obj2.easing = linear;
+                obj.withTiming(first[0].value, obj2);
               } else {
                 const tmp3 = self(1708);
                 const withSequence = tmp3.withSequence;
                 const items = [];
                 HermesBuiltin.arraySpread(first.map((duration) => {
-                  animations(addAnimation[3]);
-                  const obj = { duration: duration.duration, easing: duration.easing || animations(addAnimation[4]).Easing.linear };
-                  return obj.withTiming(duration.value, obj);
+                  const obj2 = { duration: duration.duration, easing: null };
+                  const obj = animations(addAnimation[3]);
+                  obj2.easing = duration.easing || animations(addAnimation[4]).Easing.linear;
+                  return obj.withTiming(duration.value, obj2);
                 }), 0);
                 const tmp17Result = tmp17(tmp18, HermesBuiltin.apply(items, tmp3));
                 if (arr.includes("transform")) {
@@ -50,9 +51,9 @@ class InnerKeyframe {
                     tmp15.transform = [];
                   }
                   const transform = tmp15.transform;
-                  obj = {};
-                  obj[arr.split(":")[1]] = tmp17Result;
-                  arr = transform.push(obj);
+                  const obj3 = {};
+                  obj3[arr.split(":")[1]] = tmp17Result;
+                  arr = transform.push(obj3);
                 } else {
                   tmp15[arr] = tmp17Result;
                 }
@@ -78,8 +79,7 @@ class InnerKeyframe {
               addAnimation(arr);
             }
           });
-          animations = { animations, initialValues, callback: callbackV };
-          return animations;
+          return { animations, initialValues, callback: callbackV };
         };
         let obj = { keyframes, delayFunction, delay: delayV, withTiming: InnerKeyframe(1708).withTiming, Easing: InnerKeyframe(1688).Easing, withSequence: InnerKeyframe(1708).withSequence, initialValues, makeKeyframeKey, callback: callbackV };
         fn.__closure = obj;
@@ -97,7 +97,7 @@ const entry = {
   key: "parseDefinitions",
   value: function parseDefinitions() {
     const self = this;
-    let keyframes = {};
+    const keyframes = {};
     if (this.definitions.from) {
       if (self.definitions[0]) {
         let reanimatedError = new getAnimationDuration(keyframes[5]).ReanimatedError("You cannot provide both keyframe 0 and 'from' as they both specified initial values.");
@@ -229,9 +229,8 @@ const entry = {
         let reanimatedError = new getAnimationDuration(obj[5]).ReanimatedError("Keyframe should be in between range 0 - 100.");
         throw reanimatedError;
       });
-      keyframes = { initialValues, keyframes: null };
-      keyframes.keyframes = keyframes;
-      return keyframes;
+      const obj2 = { initialValues, keyframes };
+      return obj2;
     } else {
       const reanimatedError2 = new getAnimationDuration(keyframes[5]).ReanimatedError("Please provide 0 or 'from' keyframe with initial state of your object.");
       throw reanimatedError2;
@@ -276,8 +275,8 @@ let items = [
         const fn2 = function t(c12, tmpResult) {
           return InnerKeyframe(1708).withDelay(c12, tmpResult, reduceMotionV);
         };
-        let obj = { withDelay: reduceMotionV(1708).withDelay, reduceMotion: reduceMotionV };
-        fn2.__closure = obj;
+        const obj2 = { withDelay: reduceMotionV(1708).withDelay, reduceMotion: reduceMotionV };
+        fn2.__closure = obj2;
         fn2.__workletHash = 6884672498893;
         fn2.__initData = __initData;
         let fn = fn2;
@@ -286,7 +285,7 @@ let items = [
           arg1.reduceMotion = InnerKeyframe(1676).getReduceMotionFromConfig(reduceMotionV);
           return arg1;
         };
-        obj = { getReduceMotionFromConfig: reduceMotionV(1676).getReduceMotionFromConfig, reduceMotion: reduceMotionV };
+        const obj = { getReduceMotionFromConfig: reduceMotionV(1676).getReduceMotionFromConfig, reduceMotion: reduceMotionV };
         fn.__closure = obj;
         fn.__workletHash = 14632587413843;
         fn.__initData = __initData2;

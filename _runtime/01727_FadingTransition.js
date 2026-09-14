@@ -2,16 +2,16 @@
 
 export const FadingTransition = function FadingTransition(name, translateX) {
   ({ translateX, translateY, scaleX, scaleY } = translateX);
-  let obj = { name, style: null, duration: 300 };
-  obj = { 0: null, 20: null, 60: null, 100: null };
-  obj = { opacity: 1, transform: null };
+  const obj = { name, style: null, duration: 300 };
+  const obj2 = { 0: null, 20: null, 60: null, 100: null };
+  const obj3 = { opacity: 1, transform: null };
   const items = [
     { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY },
   ];
-  obj.transform = items;
-  obj.opacity = obj;
-  const obj2 = { opacity: 0, transform: null };
-  const obj1 = {
+  obj3.transform = items;
+  obj2[0] = obj3;
+  const obj5 = { opacity: 0, transform: null };
+  const obj4 = {
     translateX: "" + translateX + "px",
     translateY: "" + translateY + "px",
     scale: "" + scaleX + "," + scaleY,
@@ -19,16 +19,16 @@ export const FadingTransition = function FadingTransition(name, translateX) {
   const items1 = [
     { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY },
   ];
-  obj2.transform = items1;
-  obj[20] = obj2;
-  const obj4 = { opacity: 0, transform: null };
+  obj5.transform = items1;
+  obj2[20] = obj5;
+  const obj7 = { opacity: 0, transform: null };
   const items2 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj4.transform = items2;
-  obj[60] = obj4;
-  const obj5 = { opacity: 1, transform: null };
+  obj7.transform = items2;
+  obj2[60] = obj7;
+  const obj8 = { opacity: 1, transform: null };
   const items3 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj5.transform = items3;
-  obj[100] = obj5;
-  obj.style = obj;
+  obj8.transform = items3;
+  obj2[100] = obj8;
+  obj.style = obj2;
   return obj;
 };

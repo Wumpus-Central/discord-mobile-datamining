@@ -1,7 +1,7 @@
 // _runtime/10008_QRCodeSvg.js
 import inlineStyles from "08574_inlineStyles.js";
 import emptyFunction from "metro/10005__.js";
-import noop from "metro/00019__.js";
+import noop_mod from "metro/00019__.js";
 
 let fn = Object.assign;
 if (!fn) {
@@ -35,14 +35,15 @@ if (!emptyFunction) {
 } else {
   tmp3 = emptyFunction;
 }
+let noop = noop_mod;
 if (!noop) {
-  obj = { default: noop };
-  let tmp4 = obj;
+  const obj2 = { default: noop };
+  let tmp4 = obj2;
 } else {
   tmp4 = noop;
 }
 noop = tmp4;
-obj = {
+const obj3 = {
   bgColor: null,
   bgD: tmp3.default.string.isRequired,
   fgColor: null,
@@ -51,9 +52,9 @@ obj = {
   viewBoxSize: tmp3.default.number.isRequired,
 };
 let items = [tmp3.default.object, tmp3.default.string];
-obj.bgColor = tmp3.default.oneOfType(items).isRequired;
+obj3.bgColor = tmp3.default.oneOfType(items).isRequired;
 const items1 = [tmp3.default.object, tmp3.default.string];
-obj.fgColor = tmp3.default.oneOfType(items1).isRequired;
+obj3.fgColor = tmp3.default.oneOfType(items1).isRequired;
 const forwardRefResult = noop.forwardRef((obj, ref) => {
   ({ size, viewBoxSize } = obj);
   const items = ["bgColor", "bgD", "fgD", "fgColor", "size", "viewBoxSize"];
@@ -81,7 +82,7 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
     }
     continue;
   }
-  size = {
+  const size1 = {
     height: size,
     ref,
     style: { height: size, width: size },
@@ -91,13 +92,13 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
   const element = noop.default.createElement(inlineStyles.Path, { d: bgD, fill: bgColor });
   return noop.default.createElement(
     inlineStyles.Svg,
-    fn({}, obj, size),
+    fn({}, obj, size1),
     element,
     noop.default.createElement(inlineStyles.Path, { d, fill }),
   );
 });
 forwardRefResult.displayName = "QRCodeSvg";
-forwardRefResult.propTypes = obj;
+forwardRefResult.propTypes = obj3;
 forwardRefResult.defaultProps = {};
 
 export default forwardRefResult;

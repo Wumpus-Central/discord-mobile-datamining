@@ -54,8 +54,8 @@ if (self2) {
     const _Object3 = Object;
     exports.default = function default_1() {
       if (typeof error === "function") {
-        let obj = { localeError: null };
-        obj = {
+        const obj = { localeError: null };
+        const obj2 = {
           string: { unit: "tegn", verb: "havde" },
           file: { unit: "bytes", verb: "havde" },
           array: { unit: "elementer", verb: "indeholdt" },
@@ -113,7 +113,6 @@ if (self2) {
               if (tmp49 == null) {
                 tmp49 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined = "Ugyldigt input: forventede instanceof " + code.expected + ", fik " + tmp49;
@@ -136,7 +135,7 @@ if (self2) {
               if (code.inclusive) {
                 str31 = "<=";
               }
-              let tmp26 = obj[code.origin];
+              let tmp26 = obj2[code.origin];
               if (tmp26 == null) {
                 tmp26 = null;
               }
@@ -149,13 +148,13 @@ if (self2) {
                   str32 = "value";
                 }
                 const verb = tmp26.verb;
-                let str = code.maximum.toString();
+                const str1 = code.maximum.toString();
                 let str39 = tmp26.unit;
                 if (str39 == null) {
                   str39 = "elementer";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "For stor: forventede " + str32 + " " + verb + " " + str31 + " " + str + " " + str39;
+                let combined2 = "For stor: forventede " + str32 + " " + verb + " " + str31 + " " + str1 + " " + str39;
               } else {
                 let str33 = str32;
                 if (str32 == null) {
@@ -170,7 +169,7 @@ if (self2) {
               if (code.inclusive) {
                 str19 = ">=";
               }
-              let tmp15 = obj[code.origin];
+              let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
@@ -235,7 +234,6 @@ if (self2) {
               return "Ugyldigt input: matcher ingen af de tilladte typer";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
               return "Ugyldig v\u00E6rdi i " + code.origin;
             default:
               return "Ugyldigt input";

@@ -1,6 +1,7 @@
 // _runtime/00488_SHORT.js
-import ToastAndroid from "00489_ToastAndroid.js";
+import ToastAndroid_mod from "00489_ToastAndroid.js";
 
+let ToastAndroid = ToastAndroid_mod;
 ToastAndroid = ToastAndroid.getConstants();
 
 export default {

@@ -1,7 +1,7 @@
 // _runtime/metro/01447__.js
-import _mod1284 from "01284__.js";
-import _mod1315 from "01315__.js";
-import callBoundIntrinsic from "../01316_callBoundIntrinsic.js";
+import _mod1282 from "01282__.js";
+import _mod1313 from "01313__.js";
+import callBoundIntrinsic from "../01314_callBoundIntrinsic.js";
 
 if (tmp) {
   let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
@@ -18,9 +18,9 @@ if (tmp) {
   function isRegex(obj) {
     if (obj) {
       if (typeof obj === "object") {
-        const tmp8 = _mod1284(obj, "lastIndex");
+        const tmp8 = _mod1282(obj, "lastIndex");
         if (tmp8) {
-          if (_mod1315(tmp8, "value")) {
+          if (_mod1313(tmp8, "value")) {
             try {
               closure_2(obj, obj);
             } catch (tmp4) {

@@ -14,7 +14,7 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
   visible = visible.visible;
   ({ children, style } = visible);
   const merged = Object.assign(visible, Object.assign({ visible: 0, children: 0, style: 0 }));
-  let obj = { style: null, pointerEvents: null, children: null };
+  const obj = { style: null, pointerEvents: null, children: null };
   const items = [container.container, style];
   obj.style = items;
   let str = "none";
@@ -26,13 +26,6 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
   if (visible) {
     str = "auto";
   }
-  obj = {
-    collapsable: false,
-    removeClippedSubviews: true,
-    pointerEvents: str,
-    style: visible ? container.attached : container.detached,
-    children,
-  };
   obj.children = (
     <React
       collapsable={false}
@@ -44,13 +37,8 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
     </React>
   );
   return (
-    <React
-      collapsable={false}
-      removeClippedSubviews
-      pointerEvents={str}
-      style={visible ? container.attached : container.detached}
-    >
-      {children}
+    <React style={null} pointerEvents={null}>
+      {null}
     </React>
   );
 };

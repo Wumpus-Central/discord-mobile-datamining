@@ -1,8 +1,9 @@
 // _runtime/01028_AsyncExpiringMap.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _slicedToArray from "metro/00032__.js";
+import _slicedToArray_mod from "metro/00032__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
+let _slicedToArray = _slicedToArray_mod;
 class AsyncExpiringMap {
   constructor() {
     obj = global;
@@ -37,26 +38,25 @@ const entry = {
     if (typeof value === "object") {
       if (value) {
         if ("then" in value) {
-          let obj = { value: "r", expiresAt: "flexDirection", promise: value };
+          const obj2 = { value: "r", expiresAt: "flexDirection", promise: value };
           const _map2 = self._map;
-          const result = _map2.set(arg0, obj);
+          const result = _map2.set(arg0, obj2);
           value.then(
             (value) => {
-              obj.value = value;
-              obj.expiresAt = Date.now() + self._ttl;
-              obj.promise = null;
+              obj2.value = value;
+              obj2.expiresAt = Date.now() + self._ttl;
+              obj2.promise = null;
             },
             () => {
-              obj.expiresAt = Date.now() + self._ttl;
-              obj.promise = null;
+              obj2.expiresAt = Date.now() + self._ttl;
+              obj2.promise = null;
             },
           );
         }
       }
     }
     const _map = self._map;
-    obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
-    const result1 = _map.set(arg0, obj);
+    const result1 = _map.set(arg0, { value, expiresAt: Date.now() + self._ttl, promise: null });
   },
 };
 const items = [

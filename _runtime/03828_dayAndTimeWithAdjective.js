@@ -1,6 +1,7 @@
 // _runtime/03828_dayAndTimeWithAdjective.js
-import 03727__ from "metro/03727__.js";
+import module_3727_mod from "metro/03727__.js";
 
+let module_3727 = module_3727_mod;
 if (!module_3727) {
   const obj = { default: module_3727 };
   let tmp3 = obj;

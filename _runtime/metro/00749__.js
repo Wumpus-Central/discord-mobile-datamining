@@ -17,10 +17,10 @@ export const createLogEnvelope = function createLogEnvelope(items, _metadata, tu
   if (_metadata != null) {
     sdk = _metadata.sdk;
   }
-  let obj = {};
+  const obj = {};
   if (sdk) {
-    obj = { name: _metadata.sdk.name, version: _metadata.sdk.version };
-    obj.sdk = obj;
+    const obj2 = { name: _metadata.sdk.name, version: _metadata.sdk.version };
+    obj.sdk = obj2;
   }
   let tmp2 = tunnel;
   if (tunnel) {
@@ -29,8 +29,8 @@ export const createLogEnvelope = function createLogEnvelope(items, _metadata, tu
   if (tmp2) {
     obj.dsn = _mod702.dsnToString(dsn);
   }
-  obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
-  items = [obj];
+  items = [,];
+  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
   items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);

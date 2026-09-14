@@ -15,12 +15,12 @@ function convertPromptToMessages(data) {
         ({ prompt: _prompt, system } = tmp4);
         const items = [];
         if (typeof system === "string") {
-          let obj = { role: "system", content: system };
+          const obj = { role: "system", content: system };
           items.push(obj);
         }
         if (typeof _prompt === "string") {
-          obj = { role: "user", content: _prompt };
-          items.push(obj);
+          const obj2 = { role: "user", content: _prompt };
+          items.push(obj2);
         }
         return items;
       }
@@ -135,11 +135,11 @@ export const getSpanOpFromName = function getSpanOpFromName(description) {
 };
 export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
   if (data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]) {
-    let tmpResult = _mod825;
     const attr = setAttribute.setAttribute(
       "gen_ai.prompt",
-      tmpResult.getTruncatedJsonString(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]),
+      _mod825.getTruncatedJsonString(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]),
     );
+    const tmpResult = _mod825;
   }
   const tmp4 = data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
@@ -147,12 +147,12 @@ export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setA
       if (!data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE]) {
         const arr = convertPromptToMessages(tmp4);
         if (arr.length) {
-          let obj = {};
-          tmpResult = _mod825;
+          const obj = {};
           obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] =
-            tmpResult.getTruncatedJsonString(arr);
+            _mod825.getTruncatedJsonString(arr);
           obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = arr.length;
           setAttribute.setAttributes(obj);
+          const tmpResult3 = _mod825;
         }
       }
     }
@@ -163,14 +163,14 @@ export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setA
       const parsed = JSON.parse(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE]);
       const _Array = Array;
       if (Array.isArray(parsed)) {
-        obj = {};
-        obj[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
-        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] =
+        const obj2 = {};
+        obj2[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
+        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] =
           _mod825.getTruncatedJsonString(parsed);
-        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
+        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
           parsed.length;
-        setAttribute.setAttributes(obj);
-        const tmpResult1 = _mod825;
+        setAttribute.setAttributes(obj2);
+        const tmpResult4 = _mod825;
       }
     } catch (err) {}
   }

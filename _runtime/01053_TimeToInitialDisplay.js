@@ -5,6 +5,8 @@ import _mod1054 from "metro/01054__.js";
 import _slicedToArray from "metro/00032__.js";
 import noop from "metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 class TimeToInitialDisplay {
   constructor(arg0) {
@@ -22,8 +24,8 @@ class TimeToInitialDisplay {
       tmpResult = tmp(tmp2[2]);
       span_id = tmpResult.spanToJSON(activeSpan).span_id;
     }
-    obj = { initialDisplay: global.record, parentSpanId: span_id };
-    return closure_3.createElement(TimeToDisplay, obj, global.children);
+    obj1 = { initialDisplay: global.record, parentSpanId: span_id };
+    return closure_3.createElement(TimeToDisplay, obj1, global.children);
   }
 }
 class TimeToFullDisplay {
@@ -37,32 +39,28 @@ class TimeToFullDisplay {
       tmpResult = tmp(tmp2[2]);
       span_id = tmpResult.spanToJSON(activeSpan).span_id;
     }
-    obj = { fullDisplay: global.record, parentSpanId: span_id };
-    return closure_3.createElement(TimeToDisplay, obj, global.children);
+    obj1 = { fullDisplay: global.record, parentSpanId: span_id };
+    return closure_3.createElement(TimeToDisplay, obj1, global.children);
   }
 }
 function TimeToDisplay(initialDisplay) {
-  const obj = { initialDisplay: initialDisplay.initialDisplay, fullDisplay: initialDisplay.fullDisplay, parentSpanId: initialDisplay.parentSpanId };
-  return <>{noop.createElement(obj.getRNSentryOnDrawReporter(), { initialDisplay: initialDisplay.initialDisplay, fullDisplay: initialDisplay.fullDisplay, parentSpanId: initialDisplay.parentSpanId })}{initialDisplay.children}</>;
+  return <>{noop.createElement(_mod1054.getRNSentryOnDrawReporter(), { initialDisplay: initialDisplay.initialDisplay, fullDisplay: initialDisplay.fullDisplay, parentSpanId: initialDisplay.parentSpanId })}{initialDisplay.children}</>;
 }
 function startTimeToInitialDisplaySpan(isAutoInstrumented) {
-  let obj = _mod682;
-  const activeSpan = obj.getActiveSpan();
+  const activeSpan = _mod682.getActiveSpan();
   const obj2 = _mod682;
   if (activeSpan) {
     const spanDescendants = obj2.getSpanDescendants(activeSpan);
     const found = spanDescendants.find((item) => "ui.load.initial_display" === startInactiveSpanResult(dependencyMap[2]).spanToJSON(item).op);
-    let tmpResult = tmp(682);
+    const tmpResult = tmp(682);
     if (found) {
       const debug2 = tmpResult.debug;
       debug2.log("[TimeToDisplay] Found existing ui.load.initial_display span.");
       return found;
     } else {
       const _Object = Object;
-      obj = { op: "ui.load.initial_display", name: "Time To Initial Display", startTime: null };
-      tmpResult = tmp(682);
-      obj.startTime = tmpResult.spanToJSON(activeSpan).start_timestamp;
-      const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj, isAutoInstrumented));
+      const obj3 = { op: "ui.load.initial_display", name: "Time To Initial Display", startTime: tmp(682).spanToJSON(activeSpan).start_timestamp };
+      const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj3, isAutoInstrumented));
       const require = startInactiveSpanResult;
       if (startInactiveSpanResult) {
         const spanId = startInactiveSpanResult.spanContext().spanId;
@@ -74,8 +72,8 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -88,8 +86,8 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_0 = tmp7;
                   closure_128_0 = undefined;
@@ -99,8 +97,8 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj1 = { value: fetchNativeFramesWithTimeout(), done: false };
-                    return obj1;
+                    const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                    return obj4;
                   }
                 }
               } else {
@@ -125,7 +123,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
                     }
                   }, 60000);
                   if (!map.has(closure_129_0)) {
-                    obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                    const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
                     const result = map.set(closure_129_0, obj);
                   }
                   closure_128_2 = map.get(closure_129_0);
@@ -144,14 +142,14 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
                     debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                     c3 = 0;
                     c5 = 3;
-                    const obj2 = { value: undefined, done: true };
-                    return obj2;
+                    const obj5 = { value: undefined, done: true };
+                    return obj5;
                   }
                 }
                 c3 = 0;
                 c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               }
               c5 = 3;
             } catch (tmp48) {
@@ -180,6 +178,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
         }
         return startInactiveSpanResult;
       }
+      const tmpResult2 = tmp(682);
     }
   } else {
     let debug = obj2.debug;
@@ -201,17 +200,15 @@ function startTimeToFullDisplaySpan(arg0) {
     found = spanDescendants.find((item) => "ui.load.initial_display" === found(_undefined[2]).spanToJSON(item).op);
     if (found) {
       const found1 = spanDescendants.find((item) => "ui.load.full_display" === found(_undefined[2]).spanToJSON(item).op);
-      let tmpResult = tmp(682);
+      const tmpResult = tmp(682);
       if (found1) {
         let debug3 = tmpResult.debug;
         debug3.log("[TimeToDisplay] Found existing ui.load.full_display span.");
         return found1;
       } else {
         const _Object = Object;
-        obj = { op: "ui.load.full_display", name: "Time To Full Display", startTime: null };
-        tmpResult = tmp(682);
-        obj.startTime = tmpResult.spanToJSON(found).start_timestamp;
-        const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj, obj));
+        let obj4 = { op: "ui.load.full_display", name: "Time To Full Display", startTime: tmp(682).spanToJSON(found).start_timestamp };
+        const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj4, obj));
         dependencyMap = startInactiveSpanResult;
         if (startInactiveSpanResult) {
           let spanId = startInactiveSpanResult.spanContext().spanId;
@@ -223,8 +220,8 @@ function startTimeToFullDisplaySpan(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -237,8 +234,8 @@ function startTimeToFullDisplaySpan(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_0 = tmp7;
                     closure_128_0 = undefined;
@@ -248,8 +245,8 @@ function startTimeToFullDisplaySpan(arg0) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      const obj1 = { value: fetchNativeFramesWithTimeout(), done: false };
-                      return obj1;
+                      const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                      return obj4;
                     }
                   }
                 } else {
@@ -274,7 +271,7 @@ function startTimeToFullDisplaySpan(arg0) {
                       }
                     }, 60000);
                     if (!map.has(closure_129_0)) {
-                      obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                      const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
                       const result = map.set(closure_129_0, obj);
                     }
                     closure_128_2 = map.get(closure_129_0);
@@ -293,14 +290,14 @@ function startTimeToFullDisplaySpan(arg0) {
                       debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                       c3 = 0;
                       c5 = 3;
-                      const obj2 = { value: undefined, done: true };
-                      return obj2;
+                      const obj5 = { value: undefined, done: true };
+                      return obj5;
                     }
                   }
                   c3 = 0;
                   c5 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 }
                 c5 = 3;
               } catch (tmp48) {
@@ -319,10 +316,9 @@ function startTimeToFullDisplaySpan(arg0) {
           });
           let _setTimeout = setTimeout;
           timeout = setTimeout(() => {
-            let obj = _mod682;
             if (!obj.spanToJSON(status).timestamp) {
-              obj = { code: _mod682.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
-              status.setStatus(obj);
+              let obj3 = { code: _mod682.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+              status.setStatus(obj3);
               const promise = fn(undefined, undefined, undefined, function*() {
                 if (c5 === 2) {
                   c5 = 3;
@@ -331,8 +327,8 @@ function startTimeToFullDisplaySpan(arg0) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -345,8 +341,8 @@ function startTimeToFullDisplaySpan(arg0) {
                         throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         obj2 = tmp8;
                         closure_128_0 = undefined;
@@ -365,8 +361,8 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            const obj1 = { value: closure_1_15(), done: false };
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
                             let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
@@ -393,7 +389,7 @@ function startTimeToFullDisplaySpan(arg0) {
                         }
                         map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value, done: true };
+                        let obj = { value, done: true };
                         return obj;
                       } else {
                         closure_128_2 = value;
@@ -458,8 +454,8 @@ function startTimeToFullDisplaySpan(arg0) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -472,8 +468,8 @@ function startTimeToFullDisplaySpan(arg0) {
                         throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         obj2 = tmp8;
                         closure_128_0 = undefined;
@@ -492,8 +488,8 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            const obj1 = { value: closure_1_15(), done: false };
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
                             let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
@@ -520,7 +516,7 @@ function startTimeToFullDisplaySpan(arg0) {
                         }
                         map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value, done: true };
+                        let obj = { value, done: true };
                         return obj;
                       } else {
                         closure_128_2 = value;
@@ -599,8 +595,8 @@ function startTimeToFullDisplaySpan(arg0) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -613,8 +609,8 @@ function startTimeToFullDisplaySpan(arg0) {
                         throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         obj2 = tmp8;
                         closure_128_0 = undefined;
@@ -633,8 +629,8 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            const obj1 = { value: closure_1_15(), done: false };
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
                             let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
@@ -661,7 +657,7 @@ function startTimeToFullDisplaySpan(arg0) {
                         }
                         map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value, done: true };
+                        let obj = { value, done: true };
                         return obj;
                       } else {
                         closure_128_2 = value;
@@ -725,6 +721,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", _undefined);
               });
             }
+            obj = _mod682;
           }, obj.timeoutMs);
           let promise = fn(undefined, undefined, undefined, function*() {
             if (c5 === 2) {
@@ -734,8 +731,8 @@ function startTimeToFullDisplaySpan(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -748,8 +745,8 @@ function startTimeToFullDisplaySpan(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     closure_0 = tmp7;
                     closure_128_0 = undefined;
@@ -759,8 +756,8 @@ function startTimeToFullDisplaySpan(arg0) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      const obj1 = { value: fetchNativeFramesWithTimeout(), done: false };
-                      return obj1;
+                      const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                      return obj4;
                     }
                   }
                 } else {
@@ -785,7 +782,7 @@ function startTimeToFullDisplaySpan(arg0) {
                       }
                     }, 60000);
                     if (!map.has(closure_129_0)) {
-                      obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                      const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
                       const result = map.set(closure_129_0, obj);
                     }
                     closure_128_2 = map.get(closure_129_0);
@@ -804,14 +801,14 @@ function startTimeToFullDisplaySpan(arg0) {
                       debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                       c3 = 0;
                       c5 = 3;
-                      const obj2 = { value: undefined, done: true };
-                      return obj2;
+                      const obj5 = { value: undefined, done: true };
+                      return obj5;
                     }
                   }
                   c3 = 0;
                   c5 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 }
                 c5 = 3;
               } catch (tmp48) {
@@ -843,14 +840,15 @@ function startTimeToFullDisplaySpan(arg0) {
           }
           const setAttribute = startInactiveSpanResult.setAttribute;
           const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
-          const tmpResult2 = tmp(1023);
+          const tmpResult6 = tmp(1023);
           if (isAutoInstrumented) {
-            let attr = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult2.SPAN_ORIGIN_AUTO_UI_TIME_TO_DISPLAY);
+            let attr = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult6.SPAN_ORIGIN_AUTO_UI_TIME_TO_DISPLAY);
           } else {
-            let attr1 = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult2.SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY);
+            let attr1 = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult6.SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY);
           }
           return startInactiveSpanResult;
         }
+        const tmpResult4 = tmp(682);
       }
     } else {
       let debug2 = tmp(682).debug;
@@ -862,27 +860,27 @@ function startTimeToFullDisplaySpan(arg0) {
   }
   let obj2 = found(682);
 }
-function updateFullDisplaySpan(arg0, arg1) {
+function updateFullDisplaySpan(arg0, span) {
   _require = arg0;
   const activeSpan = require("metro/00682__.js").getActiveSpan();
   if (activeSpan) {
-    let found = arg1;
-    if (!arg1) {
-      let tmpResult = tmp(tmp2[2]);
-      const spanDescendants = tmpResult.getSpanDescendants(activeSpan);
+    let found = span;
+    if (!span) {
+      const spanDescendants = tmp(tmp2[2]).getSpanDescendants(activeSpan);
       found = spanDescendants.find((item) => "ui.load.initial_display" === closure_0(timestamp[2]).spanToJSON(item).op);
+      let tmpResult = tmp(tmp2[2]);
     }
     timestamp = found;
     if (found) {
-      tmpResult = tmp(tmp2[2]);
-      timestamp = tmpResult.spanToJSON(found).timestamp;
+      timestamp = tmp(tmp2[2]).spanToJSON(found).timestamp;
+      const tmpResult3 = tmp(tmp2[2]);
     }
     if (timestamp) {
       const tmp10 = startTimeToFullDisplaySpan({ isAutoInstrumented: true });
       closure_2 = tmp10;
-      const tmpResult1 = tmp(tmp2[2]);
+      const tmpResult4 = tmp(tmp2[2]);
       if (tmp10) {
-        const spanToJSONResult = tmpResult1.spanToJSON(tmp10);
+        const spanToJSONResult = tmpResult4.spanToJSON(tmp10);
         noop = spanToJSONResult;
         if (spanToJSONResult.timestamp) {
           const debug4 = tmp(tmp2[2]).debug;
@@ -898,8 +896,8 @@ function updateFullDisplaySpan(arg0, arg1) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -912,8 +910,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -932,8 +930,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -960,7 +958,7 @@ function updateFullDisplaySpan(arg0, arg1) {
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1025,8 +1023,8 @@ function updateFullDisplaySpan(arg0, arg1) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1039,8 +1037,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -1059,8 +1057,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -1087,7 +1085,7 @@ function updateFullDisplaySpan(arg0, arg1) {
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1179,8 +1177,8 @@ function updateFullDisplaySpan(arg0, arg1) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1193,8 +1191,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -1213,8 +1211,8 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -1241,7 +1239,7 @@ function updateFullDisplaySpan(arg0, arg1) {
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1315,7 +1313,7 @@ function updateFullDisplaySpan(arg0, arg1) {
           });
         }
       } else {
-        const debug3 = tmpResult1.debug;
+        const debug3 = tmpResult4.debug;
         debug3.warn("[TimeToDisplay] No TimeToFullDisplay span found or created, possibly performance is disabled.");
       }
     } else {
@@ -1378,7 +1376,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -1400,14 +1398,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -1421,16 +1419,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 const weakMap = new WeakMap();
@@ -1451,7 +1448,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
   let activeSpan = obj.activeSpan;
   if (activeSpan === undefined) {
     activeSpan = require("metro/00682__.js").getActiveSpan();
-    const obj2 = require("metro/00682__.js");
+    let obj2 = require("metro/00682__.js");
   }
   let span = obj.span;
   if (span === undefined) {
@@ -1460,14 +1457,12 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
   let obj3 = require("metro/00682__.js");
   if (span) {
     if (activeSpan) {
-      let tmp4Result = tmp4(tmp5[2]);
       if (obj3.spanToJSON(span).parent_span_id === tmp4Result.spanToJSON(activeSpan).span_id) {
-        tmp4Result = tmp4(tmp5[2]);
-        if (tmp4Result.spanToJSON(span).timestamp) {
+        if (tmp4Result3.spanToJSON(span).timestamp) {
           const debug4 = tmp4(tmp5[2]).debug;
           let _HermesInternal = HermesInternal;
           debug4.warn("[TimeToDisplay] " + tmp4(tmp5[2]).spanToJSON(span).description + " span already ended.");
-          const tmp4Result1 = tmp4(tmp5[2]);
+          const tmp4Result4 = tmp4(tmp5[2]);
         } else {
           closure_129_0 = span;
           const promise = fn(undefined, undefined, undefined, function*() {
@@ -1478,8 +1473,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1492,8 +1487,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -1512,8 +1507,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -1540,7 +1535,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1605,8 +1600,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1619,8 +1614,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -1639,8 +1634,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -1667,7 +1662,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1725,33 +1720,33 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
             }
           }).then(() => {
             span.end(closure_0);
-            const obj = { code: _mod682.SPAN_STATUS_OK };
-            span.setStatus(obj);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
             const debug = _mod682.debug;
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
             debug.log("[TimeToDisplay] " + _mod682.spanToJSON(span).description + " span updated with end timestamp and frame data.");
             if (weakMap1.has(activeSpan)) {
               weakMap1.delete(activeSpan);
               const debug2 = _mod682.debug;
               const _HermesInternal = HermesInternal;
-              debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              updateFullDisplaySpan(closure_0, obj);
+              debug2.log("[TimeToDisplay] Updating full display with initial display (" + span.spanContext().spanId + ") end.");
+              updateFullDisplaySpan(closure_0, span);
             }
-            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, activeSpan);
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", span, activeSpan);
             const tmp3Result = _mod1021;
           }).catch((error) => {
             const debug = _mod682.debug;
             debug.log("[TimeToDisplay] Failed to capture frame data for initial display span.", error);
             span.end(closure_0);
-            const obj = { code: _mod682.SPAN_STATUS_OK };
-            span.setStatus(obj);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
             if (weakMap1.has(activeSpan)) {
               weakMap1.delete(activeSpan);
               const debug2 = _mod682.debug;
               const _HermesInternal = HermesInternal;
-              debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              updateFullDisplaySpan(closure_0, obj);
+              debug2.log("[TimeToDisplay] Updating full display with initial display (" + span.spanContext().spanId + ") end.");
+              updateFullDisplaySpan(closure_0, span);
             }
-            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, activeSpan);
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", span, activeSpan);
             const tmpResult = _mod1021;
           });
           const nextPromise = fn(undefined, undefined, undefined, function*() {
@@ -1762,8 +1757,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1776,8 +1771,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     obj2 = tmp8;
                     closure_128_0 = undefined;
@@ -1796,8 +1791,8 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        const obj1 = { value: closure_1_15(), done: false };
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
                         let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
@@ -1824,7 +1819,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                     }
                     map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_2 = value;
@@ -1882,25 +1877,27 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
             }
           }).then(() => {
             span.end(closure_0);
-            const obj = { code: _mod682.SPAN_STATUS_OK };
-            span.setStatus(obj);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
             const debug = _mod682.debug;
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
             debug.log("[TimeToDisplay] " + _mod682.spanToJSON(span).description + " span updated with end timestamp and frame data.");
             if (weakMap1.has(activeSpan)) {
               weakMap1.delete(activeSpan);
               const debug2 = _mod682.debug;
               const _HermesInternal = HermesInternal;
-              debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              updateFullDisplaySpan(closure_0, obj);
+              debug2.log("[TimeToDisplay] Updating full display with initial display (" + span.spanContext().spanId + ") end.");
+              updateFullDisplaySpan(closure_0, span);
             }
-            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, activeSpan);
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", span, activeSpan);
             const tmp3Result = _mod1021;
           });
         }
+        tmp4Result3 = tmp4(tmp5[2]);
       } else {
         const debug3 = tmp4(tmp5[2]).debug;
         debug3.warn("[TimeToDisplay] Initial display span is not a child of current active span.");
       }
+      tmp4Result = tmp4(tmp5[2]);
     } else {
       let debug2 = obj3.debug;
       debug2.warn("[TimeToDisplay] No active span found to attach ui.load.initial_display to.");

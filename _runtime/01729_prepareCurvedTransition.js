@@ -97,30 +97,30 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   return { dummy, dummyAnimationConfig };
 };
 export const CurvedTransition = function CurvedTransition(name, name2, translateX) {
-  let obj = { firstKeyframeObj: null, secondKeyframeObj: null };
-  obj = { name, style: null, duration: 300 };
-  obj = { 0: null };
-  const obj1 = { transform: null };
+  const obj = { firstKeyframeObj: null, secondKeyframeObj: null };
+  const obj2 = { name, style: null, duration: 300 };
+  const obj3 = { 0: null };
+  const obj4 = { transform: null };
   const items = [
     { translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
   ];
-  obj1.transform = items;
-  obj[0] = obj1;
-  obj.style = obj;
-  obj.firstKeyframeObj = obj;
-  const obj3 = { name: name2, style: null, duration: 300 };
-  const obj4 = { 0: null };
-  const obj5 = { transform: null };
-  const obj2 = {
+  obj4.transform = items;
+  obj3[0] = obj4;
+  obj2.style = obj3;
+  obj.firstKeyframeObj = obj2;
+  const obj6 = { name: name2, style: null, duration: 300 };
+  const obj7 = { 0: null };
+  const obj8 = { transform: null };
+  const obj5 = {
     translateX: "" + translateX.translateX + "px",
     scale: "" + translateX.scaleX + "," + translateX.scaleY,
   };
   const items1 = [
     { translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
   ];
-  obj5.transform = items1;
-  obj4[0] = obj5;
-  obj3.style = obj4;
-  obj.secondKeyframeObj = obj3;
+  obj8.transform = items1;
+  obj7[0] = obj8;
+  obj6.style = obj7;
+  obj.secondKeyframeObj = obj6;
   return obj;
 };

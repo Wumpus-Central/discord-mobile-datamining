@@ -73,9 +73,9 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
       };
     }
   }, items3);
-  obj = { trigger: null, error: tmp5[0] };
+  const obj3 = { trigger: null, error: tmp5[0] };
   const items4 = [startAnimation];
-  obj.trigger = React3(() => {
+  obj3.trigger = React3(() => {
     if (ref.current) {
       const current = ref.current;
       current.trigger();
@@ -99,5 +99,5 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
       }
     }
   }, items4);
-  return obj;
+  return obj3;
 };

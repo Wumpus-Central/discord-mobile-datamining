@@ -1,7 +1,8 @@
 // _runtime/04559_ref.js
 import noop from "metro/00019__.js";
-import shallowEqual from "04560_shallowEqual.js";
+import shallowEqual_mod from "04560_shallowEqual.js";
 
+let shallowEqual = shallowEqual_mod;
 if (shallowEqual) {
   if (typeof shallowEqual === "object") {
     if ("default" in shallowEqual) {

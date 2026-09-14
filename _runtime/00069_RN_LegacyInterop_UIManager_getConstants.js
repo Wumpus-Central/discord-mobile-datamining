@@ -4,16 +4,16 @@ import nullthrowsDefault from "00070_nullthrows.js";
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f18464 = () => {};
+const f18465 = () => {};
 ({
   RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7,
   RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8,
 } = global);
 let c0 = false;
 let c1 = null;
-const f69456 = () => {};
+const f69459 = () => {};
 let obj = {};
-obj = {
+const merged = Object.assign({
   measure(arg0, arg1) {
     console.error(
       "" + "[ReactNative Architecture][JS] '" + "measure" + "' is not available in the new React Native architecture.",
@@ -51,9 +51,8 @@ obj = {
         "' is not available in the new React Native architecture.",
     );
   },
-};
-const merged = Object.assign(obj);
-obj = {
+});
+const merged1 = Object.assign({
   getConstantsForViewManager(arg0) {
     if (React5) {
       obj = tmp(arg0);
@@ -72,7 +71,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (React6) {
-      if (typeof f69456 === "function") {
+      if (typeof f69459 === "function") {
         if (!closure_137_0) {
           closure_137_1 = _null(70)(React6)();
           closure_137_0 = true;
@@ -122,8 +121,7 @@ obj = {
       console.error("sendAccessibilityEvent() dropping event: Cannot find view with tag #" + arg0);
     }
   },
-};
-const merged1 = Object.assign(obj);
+});
 const merged2 = Object.assign({
   createView(arg0, arg1, arg2, arg3) {
     console.error(
@@ -176,7 +174,7 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18464 === "function") {
+    if (typeof f18465 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
@@ -219,7 +217,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18464 === "function") {
+    if (typeof f18465 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -303,7 +301,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f18464 === "function") {
+    if (typeof f18465 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;

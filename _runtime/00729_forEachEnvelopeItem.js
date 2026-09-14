@@ -48,8 +48,7 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
   if (typeof data.data === "string") {
     data = data.data;
-    let obj = _mod690;
-    const sentryCarrier = obj.getSentryCarrier(_mod686.GLOBAL_OBJ);
+    const sentryCarrier = _mod690.getSentryCarrier(_mod686.GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
     } else {
@@ -58,10 +57,16 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
       encodePolyfillResult = encoder.encode(data);
     }
   } else {
-    data = data.data;
-    obj = { type: "attachment", length: data.length, filename: null, content_type: null, attachment_type: null };
+    const data1 = data.data;
+    const obj2 = {
+      type: "attachment",
+      length: data1.length,
+      filename: null,
+      content_type: null,
+      attachment_type: null,
+    };
     ({ filename: obj3.filename, contentType: obj3.content_type, attachmentType: obj3.attachment_type } = data);
-    const items = [obj, data];
+    const items = [obj2, data1];
     return items;
   }
 };
@@ -79,23 +84,23 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   if (sdkProcessingMetadata != null) {
     prop = sdkProcessingMetadata.dynamicSamplingContext;
   }
-  let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
+  const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let tmp2 = sdk;
   if (sdk) {
-    obj = { sdk };
-    tmp2 = obj;
+    const obj2 = { sdk };
+    tmp2 = obj2;
   }
   const merged = Object.assign(tmp2);
   let tmp4 = arg2 && url;
   if (tmp4) {
-    obj = { dsn: _mod702.dsnToString(url) };
-    tmp4 = obj;
+    const obj3 = { dsn: _mod702.dsnToString(url) };
+    tmp4 = obj3;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;
   if (prop) {
-    const obj1 = { trace: prop };
-    tmp8 = obj1;
+    const obj4 = { trace: prop };
+    tmp8 = obj4;
   }
   const merged2 = Object.assign(tmp8);
   return obj;
@@ -177,7 +182,6 @@ export const parseEnvelope = function parseEnvelope(arr) {
 };
 export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
   function append(json) {
-    let arr = sum;
     if (typeof sum === "string") {
       if (typeof json === "string") {
         sum = arr + json;
@@ -193,7 +197,7 @@ export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
         sum = [encodePolyfillResult, json];
       }
     } else if (typeof json !== "string") {
-      arr = arr.push(json);
+      arr.push(json);
     } else {
       const sentryCarrier1 = _mod690.getSentryCarrier(_mod686.GLOBAL_OBJ);
       if (sentryCarrier1.encodePolyfill) {

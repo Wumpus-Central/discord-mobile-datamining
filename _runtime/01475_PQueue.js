@@ -55,7 +55,7 @@ class VBox {
 }
 class CMap {
   constructor() {
-    f108986 = (vbox, vbox2) => {
+    f108989 = (vbox, vbox2) => {
       vbox = vbox.vbox;
       vbox2 = vbox.vbox;
       const vbox3 = vbox2.vbox;
@@ -384,9 +384,9 @@ export default function quantize(arr, arg1) {
                   let items2 = [];
                   let items3 = [];
                   if (maxResult == sum) {
-                    sum = arr.r1;
+                    let r1 = arr.r1;
                     let num12 = 0;
-                    while (sum <= arr.r2) {
+                    while (r1 <= arr.r2) {
                       let g13 = arr.g1;
                       let num13 = 0;
                       let num14 = 0;
@@ -396,7 +396,7 @@ export default function quantize(arr, arg1) {
                         let tmp32 = num13;
                         if (b13 <= arr.b2) {
                           do {
-                            let num15 = closure_0[(sum << 10) + (g13 << 5) + b13];
+                            let num15 = closure_0[(r1 << 10) + (g13 << 5) + b13];
                             if (!num15) {
                               num15 = 0;
                             }
@@ -411,24 +411,24 @@ export default function quantize(arr, arg1) {
                       }
                       let sum3 = num12 + num14;
                       sum8 = sum3;
-                      items2[sum] = sum3;
-                      sum = sum + 1;
+                      items2[r1] = sum3;
+                      r1 = r1 + 1;
                       num12 = sum3;
                     }
                   } else if (maxResult == sum1) {
                     let g12 = arr.g1;
                     let num8 = 0;
                     while (g12 <= arr.g2) {
-                      let r1 = arr.r1;
+                      let r12 = arr.r1;
                       let num9 = 0;
                       let num10 = 0;
-                      while (r1 <= arr.r2) {
+                      while (r12 <= arr.r2) {
                         let b12 = arr.b1;
                         let sum4 = num9;
                         let tmp24 = num9;
                         if (b12 <= arr.b2) {
                           do {
-                            let num11 = closure_0[(r1 << 10) + (g12 << 5) + b12];
+                            let num11 = closure_0[(r12 << 10) + (g12 << 5) + b12];
                             if (!num11) {
                               num11 = 0;
                             }
@@ -437,7 +437,7 @@ export default function quantize(arr, arg1) {
                             tmp24 = sum4;
                           } while (b12 <= arr.b2);
                         }
-                        r1 = r1 + 1;
+                        r12 = r12 + 1;
                         num9 = tmp24;
                         num10 = tmp24;
                       }
@@ -548,10 +548,10 @@ export default function quantize(arr, arg1) {
               if (!tmp56) {
                 break;
               } else {
-                arr = activeDotStyle.push(tmp56);
+                let arr2 = activeDotStyle.push(tmp56);
                 let sum11 = num2;
                 if (tmp57) {
-                  let arr1 = activeDotStyle.push(tmp57);
+                  let arr3 = activeDotStyle.push(tmp57);
                   sum11 = num2 + 1;
                 }
                 if (sum11 < arg1) {
@@ -560,7 +560,7 @@ export default function quantize(arr, arg1) {
                 }
               }
             } else {
-              let arr2 = activeDotStyle.push(arr);
+              let arr4 = activeDotStyle.push(arr);
               sum12 = num + 1;
               tmp5 = num2;
             }
@@ -607,18 +607,18 @@ export default function quantize(arr, arg1) {
             closure_8 = tmp;
           }
         });
-        let obj = Object.create(VBox.prototype);
-        obj.r1 = 1000000;
-        obj.r2 = 0;
-        obj.g1 = g1;
-        obj.g2 = g2;
-        obj.b1 = b1;
-        obj.b2 = b2;
-        obj.histo = array;
+        const obj2 = Object.create(VBox.prototype);
+        obj2.r1 = 1000000;
+        obj2.r2 = 0;
+        obj2.g1 = g1;
+        obj2.g2 = g2;
+        obj2.b1 = b1;
+        obj2.b2 = b2;
+        obj2.histo = array;
         const prototype2 = PQueue.prototype;
         PQueue = (count, count2) => closure_0.naturalOrder(count.count(), count2.count());
         VBox = [];
-        obj = {
+        const obj3 = {
           push(arg0) {
             closure_1.push(arg0);
             closure_2 = false;
@@ -655,8 +655,8 @@ export default function quantize(arr, arg1) {
             return closure_1;
           },
         };
-        arr = obj.push(obj);
-        iter(obj, 0.75 * arg1);
+        arr = obj3.push(obj2);
+        iter(obj3, 0.75 * arg1);
         const prototype3 = PQueue.prototype;
         PQueue = (count, count2) => {
           const result = count.count() * count.volume();
@@ -665,7 +665,7 @@ export default function quantize(arr, arg1) {
         };
         VBox = [];
         CMap = false;
-        const obj1 = {
+        const obj7 = {
           push(arg0) {
             closure_1.push(arg0);
             closure_2 = false;
@@ -702,14 +702,14 @@ export default function quantize(arr, arg1) {
             return closure_1;
           },
         };
-        if (obj.size()) {
+        if (obj3.size()) {
           do {
-            arr = obj1.push(obj.pop());
-            sizeResult = obj.size();
+            let arr2 = obj7.push(obj3.pop());
+            sizeResult = obj3.size();
           } while (sizeResult);
         }
-        iter(obj1, arg1 - obj1.size());
-        const obj2 = Object.create(CMap.prototype);
+        iter(obj7, arg1 - obj7.size());
+        const obj8 = Object.create(CMap.prototype);
         const prototype = PQueue.prototype;
         PQueue = (vbox, vbox2) => {
           vbox = vbox.vbox;
@@ -722,7 +722,7 @@ export default function quantize(arr, arg1) {
         };
         VBox = [];
         CMap = false;
-        obj = {
+        const obj = {
           push(arg0) {
             closure_1.push(arg0);
             closure_2 = false;
@@ -759,14 +759,14 @@ export default function quantize(arr, arg1) {
             return closure_1;
           },
         };
-        obj2.vboxes = obj;
-        if (obj1.size()) {
+        obj8.vboxes = obj;
+        if (obj7.size()) {
           do {
-            let arr1 = obj2.push(obj1.pop());
-            sizeResult1 = obj1.size();
+            let arr5 = obj8.push(obj7.pop());
+            sizeResult1 = obj7.size();
           } while (sizeResult1);
         }
-        return obj2;
+        return obj8;
       }
     }
   }

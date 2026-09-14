@@ -2,6 +2,8 @@
 import decodeComponents from "01541_decodeComponents.js";
 import _mod5538 from "metro/05538__.js";
 
+const require = globalThis.__r;
+
 require = arg1;
 let dependencyMap = arg6;
 function keysSorter(arr) {

@@ -5,7 +5,7 @@ import _createClass from "00042__createClass.js";
 import _classPrivateFieldKey from "../00091__classPrivateFieldKey.js";
 
 const JSReanimated = fn;
-let module_1639 = fn(1639);
+const module_1639 = fn(1639);
 if (!module_1639.isJest()) {
   const _globalThis = globalThis;
   if (requestAnimationFrame) {
@@ -32,8 +32,8 @@ if (!module_1639.isJest()) {
               if (self(dependencyMap[7]).SensorType.MAGNETIC_FIELD !== arg1) {
                 if (self(dependencyMap[7]).SensorType.ROTATION === arg1) {
                   return () => {
-                    [tmp2, tmp3, tmp4, tmp5] = _slicedToArray(closure_0.quaternion, 4);
-                    if (self.platform === module_1639.WEB_ANDROID) {
+                    [tmp2, tmp3, tmp4, tmp5] = closure_0.quaternion;
+                    if (self.platform === obj2.WEB_ANDROID) {
                       const items = [tmp5, -tmp4];
                       [tmp7, tmp6] = items;
                     }
@@ -81,7 +81,7 @@ if (!module_1639.isJest()) {
         }
         return () => {
           ({ x, y, z } = closure_0);
-          if (self.platform === module_1639.WEB_ANDROID) {
+          if (self.platform === obj2.WEB_ANDROID) {
             const items = [-x, -y, -z];
             [tmp3, tmp2, tmp] = items;
           }
@@ -145,12 +145,11 @@ if (!module_1639.isJest()) {
         const logger3 = JSReanimated(1640).logger;
         logger3.warn("Layout Animations are not supported on web yet.");
       } else {
-        let tmpResult = JSReanimated(1639);
         if (tmpResult.isJest()) {
           const logger2 = JSReanimated(1640).logger;
           logger2.warn("Layout Animations are no-ops when using Jest.");
         } else {
-          tmpResult = JSReanimated(1639);
+          const tmpResult2 = JSReanimated(1639);
           const logger = JSReanimated(1640).logger;
           const warn = logger.warn;
           if (isChromeDebuggerResult) {
@@ -158,8 +157,9 @@ if (!module_1639.isJest()) {
           } else {
             warn("Layout Animations are not supported on this configuration.");
           }
-          isChromeDebuggerResult = tmpResult.isChromeDebugger();
+          isChromeDebuggerResult = JSReanimated(1639).isChromeDebugger();
         }
+        tmpResult = JSReanimated(1639);
       }
       obj = JSReanimated(1639);
     },
@@ -209,7 +209,7 @@ if (!module_1639.isJest()) {
               str2 = " Make sure you use secure origin with `npx expo start --web --https`.";
             }
           }
-          if (self.platform === module_1639.WEB_IOS) {
+          if (self.platform === obj2.WEB_IOS) {
             str =
               " For iOS web, you will also have to also grant permission in the browser: https://dev.to/li/how-to-requestpermission-for-devicemotion-and-deviceorientation-events-in-ios-13-46g2.";
           }
@@ -244,12 +244,11 @@ if (!module_1639.isJest()) {
         const logger3 = JSReanimated(1640).logger;
         logger3.warn("useAnimatedKeyboard is not available on web yet.");
       } else {
-        let tmpResult = JSReanimated(1639);
         if (tmpResult.isJest()) {
           const logger2 = JSReanimated(1640).logger;
           logger2.warn("useAnimatedKeyboard is not available when using Jest.");
         } else {
-          tmpResult = JSReanimated(1639);
+          const tmpResult2 = JSReanimated(1639);
           const logger = JSReanimated(1640).logger;
           const warn = logger.warn;
           if (isChromeDebuggerResult) {
@@ -257,8 +256,9 @@ if (!module_1639.isJest()) {
           } else {
             warn("useAnimatedKeyboard is not available on this configuration.");
           }
-          isChromeDebuggerResult = tmpResult.isChromeDebugger();
+          isChromeDebuggerResult = JSReanimated(1639).isChromeDebugger();
         }
+        tmpResult = JSReanimated(1639);
       }
       return -1;
     },
@@ -342,17 +342,17 @@ if (!module_1639.isJest()) {
       }
       const self = this;
       if (undefined === opera) {
-        self.platform = module_1639.UNKNOWN;
+        self.platform = obj2.UNKNOWN;
       } else {
         if (obj.test(opera)) {
-          self.platform = module_1639.WEB_IOS;
+          self.platform = obj2.WEB_IOS;
         } else {
-          if (obj2.test(opera)) {
-            self.platform = module_1639.WEB_ANDROID;
-          } else {
-            self.platform = module_1639.WEB;
-          }
           obj2 = /android/i;
+          if (obj2.test(opera)) {
+            self.platform = tmp.WEB_ANDROID;
+          } else {
+            self.platform = tmp.WEB;
+          }
         }
         obj = /iPad|iPhone|iPod/;
       }
@@ -408,10 +408,10 @@ if (!module_1639.isJest()) {
   };
   items[20] = entry20;
   let closure_6 = _createClass(JSReanimated, items);
-  module_1639 = { WEB_IOS: "web iOS", WEB_ANDROID: "web Android", WEB: "web", UNKNOWN: "unknown" };
+  let obj2 = { WEB_IOS: "web iOS", WEB_ANDROID: "web Android", WEB: "web", UNKNOWN: "unknown" };
   exports.createJSReanimatedModule = function createJSReanimatedModule() {
     return new closure_6();
   };
-  exports.Platform = module_1639;
+  exports.Platform = obj2;
 }
 mockedRequestAnimationFrame = fn(1651).mockedRequestAnimationFrame;

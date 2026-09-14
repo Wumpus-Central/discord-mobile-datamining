@@ -91,7 +91,7 @@ let items = [
     value: function _installSetStateHooks() {
       const self = this;
       ({ props: closure_1, state: closure_2 } = this);
-      let obj = {
+      Object.defineProperty(this, "props", {
         get() {
           StateSafePureComponent(38)(
             !self._inAsyncStateUpdate,
@@ -102,9 +102,8 @@ let items = [
         set(arg0) {
           closure_1 = arg0;
         },
-      };
-      Object.defineProperty(this, "props", obj);
-      obj = {
+      });
+      Object.defineProperty(this, "state", {
         get() {
           StateSafePureComponent(38)(
             !self._inAsyncStateUpdate,
@@ -115,8 +114,7 @@ let items = [
         set(arg0) {
           closure_2 = arg0;
         },
-      };
-      Object.defineProperty(this, "state", obj);
+      });
     },
   },
 ];

@@ -79,8 +79,8 @@ class KeyboardAvoidingView {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -93,8 +93,8 @@ class KeyboardAvoidingView {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp5;
               closure_1 = tmp2;
@@ -112,8 +112,8 @@ class KeyboardAvoidingView {
               if (!tmp8) {
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: closure_0._updateBottomIfNecessary(), done: false };
-                return obj1;
+                const obj4 = { value: closure_0._updateBottomIfNecessary(), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -121,7 +121,7 @@ class KeyboardAvoidingView {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           if (closure_0.props.onLayout) {
@@ -147,15 +147,14 @@ class KeyboardAvoidingView {
       return applyArgumentsResult;
     };
     tmp3Result._setBottom = (_bottom) => {
-      let obj = closure_0;
       let flag = closure_0.props.enabled;
       if (flag == null) {
         flag = true;
       }
-      obj._bottom = _bottom;
+      closure_0._bottom = _bottom;
       if (flag) {
-        obj = { bottom: _bottom };
-        obj.setState(obj);
+        const obj2 = { bottom: _bottom };
+        closure_0.setState(obj2);
       }
     };
     tmp3Result._updateBottomIfNecessary = closure_4(async () => {
@@ -166,8 +165,8 @@ class KeyboardAvoidingView {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -180,8 +179,8 @@ class KeyboardAvoidingView {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_2 = tmp2;
               closure_129_0 = undefined;
@@ -192,8 +191,8 @@ class KeyboardAvoidingView {
                 ({ duration: closure_129_0, easing: closure_129_1 } = _keyboardEvent);
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: _true._relativeKeyboardHeight(_keyboardEvent.endCoordinates), done: false };
-                return obj1;
+                const obj4 = { value: _true._relativeKeyboardHeight(_keyboardEvent.endCoordinates), done: false };
+                return obj4;
               } else {
                 _true._setBottom(0);
                 c4 = 3;
@@ -219,30 +218,30 @@ class KeyboardAvoidingView {
                 tmp7 = closure_129_1;
               }
               if (tmp7) {
-                obj = _true(tmp3[9]);
                 let num3 = 10;
                 let num4 = 10;
                 if (closure_129_0 > 10) {
                   num4 = closure_129_0;
                 }
-                const obj2 = { duration: num4, update: null };
+                const obj5 = { duration: num4, update: null };
                 if (closure_129_0 > num3) {
                   num3 = closure_129_0;
                 }
-                const obj3 = { duration: num3, type: null };
+                const obj6 = { duration: num3, type: null };
                 let str = _true(tmp3[9]).Types[closure_129_1];
                 if (!str) {
                   str = "keyboard";
                 }
-                obj3.type = str;
-                obj2.update = obj3;
-                obj.configureNext(obj2);
+                obj6.type = str;
+                obj5.update = obj6;
+                _true(tmp3[9]).configureNext(obj5);
+                const obj = _true(tmp3[9]);
               }
             }
           }
           c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } catch (tmp29) {
           c4 = tmp;
           throw tmp29;
@@ -268,8 +267,8 @@ dependencyMap = asyncGeneratorStep(async function (arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -281,7 +280,7 @@ dependencyMap = asyncGeneratorStep(async function (arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           let sum = self;
@@ -354,12 +353,12 @@ let items = [
         self._keyboardEvent = null;
         self._setBottom(0);
       }
-      let tmpResult = KeyboardAvoidingView(343);
-      const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide)];
-      tmpResult = KeyboardAvoidingView(343);
-      items[1] = tmpResult.addListener("keyboardDidShow", self._onKeyboardChange);
-      self._subscriptions = items;
       obj = KeyboardAvoidingView(343);
+      const items = [KeyboardAvoidingView(343).addListener("keyboardDidHide", self._onKeyboardHide)];
+      const tmpResult = KeyboardAvoidingView(343);
+      items[1] = KeyboardAvoidingView(343).addListener("keyboardDidShow", self._onKeyboardChange);
+      self._subscriptions = items;
+      const tmpResult2 = KeyboardAvoidingView(343);
     },
   },
   {
@@ -390,39 +389,39 @@ let items = [
       if ("height" === behavior) {
         let tmp27;
         if (tmp26) {
-          let obj = { height: self._initialFrameHeight - num, flex: 0 };
-          tmp27 = obj;
+          const obj2 = { height: self._initialFrameHeight - num, flex: 0 };
+          tmp27 = obj2;
         }
-        obj = { ref: self.viewRef, style: null, onLayout: null };
+        const obj4 = { ref: self.viewRef, style: null, onLayout: null };
         tmp26 = null != self._frame && self.state.bottom > 0;
         const tmp31 = KeyboardAvoidingView(108);
-        obj.style = KeyboardAvoidingView(254).compose(style, tmp27);
-        obj.onLayout = self._onLayout;
+        obj4.style = KeyboardAvoidingView(254).compose(style, tmp27);
+        obj4.onLayout = self._onLayout;
         const merged = Object.assign(tmp2);
-        obj.children = children;
+        obj4.children = children;
         return <tmp31 ref={self.viewRef} style={null} onLayout={null} />;
       } else if ("position" === behavior) {
-        const obj1 = { ref: self.viewRef, style, onLayout: self._onLayout };
+        const obj5 = { ref: self.viewRef, style, onLayout: self._onLayout };
         const merged1 = Object.assign(tmp2);
-        let obj2 = { style: null, children: null };
+        const obj6 = { style: null, children: null };
         const tmp20 = KeyboardAvoidingView(108);
         const tmp24 = KeyboardAvoidingView(108);
-        const obj3 = { bottom: num };
-        obj2.style = KeyboardAvoidingView(254).compose(props.contentContainerStyle, obj3);
-        obj2.children = children;
-        obj1.children = <tmp24 style={null}>{null}</tmp24>;
+        const obj8 = { bottom: num };
+        obj6.style = KeyboardAvoidingView(254).compose(props.contentContainerStyle, obj8);
+        obj6.children = children;
+        obj5.children = <tmp24 style={null}>{null}</tmp24>;
         return <tmp20 ref={self.viewRef} style={style} onLayout={self._onLayout} />;
       } else if ("padding" === behavior) {
-        const obj4 = { ref: self.viewRef, style: null, onLayout: null };
-        obj2 = KeyboardAvoidingView(254);
-        const obj5 = { paddingBottom: num };
-        obj4.style = obj2.compose(style, obj5);
-        obj4.onLayout = self._onLayout;
+        const obj9 = { ref: self.viewRef, style: null, onLayout: null };
+        const tmp13 = KeyboardAvoidingView(108);
+        const obj10 = { paddingBottom: num };
+        obj9.style = KeyboardAvoidingView(254).compose(style, obj10);
+        obj9.onLayout = self._onLayout;
         const merged2 = Object.assign(tmp2);
-        obj4.children = children;
-        return jsx(KeyboardAvoidingView(108), { ref: self.viewRef, style: null, onLayout: null });
+        obj9.children = children;
+        return <tmp13 ref={self.viewRef} style={null} onLayout={null} />;
       } else {
-        obj = { ref: null, onLayout: null, style: null };
+        const obj = { ref: null, onLayout: null, style: null };
         ({ viewRef: obj.ref, _onLayout: obj.onLayout } = self);
         obj.style = style;
         const merged3 = Object.assign(tmp2);

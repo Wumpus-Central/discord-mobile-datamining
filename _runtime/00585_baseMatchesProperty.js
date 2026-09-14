@@ -3,6 +3,8 @@ import _mod590 from "metro/00590__.js";
 import _mod629 from "metro/00629__.js";
 import baseIsEqual from "00632_baseIsEqual.js";
 
+const require = globalThis.__r;
+
 export default function baseMatchesProperty(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;

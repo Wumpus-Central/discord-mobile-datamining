@@ -12,8 +12,8 @@ function processEvent(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -26,8 +26,8 @@ function processEvent(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             let fingerprint = tmp7;
             let user2;
@@ -44,8 +44,8 @@ function processEvent(arg0, arg1, arg2) {
             const NATIVE = fingerprint(tmp3[1]).NATIVE;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: NATIVE.fetchNativeDeviceContexts(), done: false };
-            return obj1;
+            const obj4 = { value: NATIVE.fetchNativeDeviceContexts(), done: false };
+            return obj4;
           }
         } else {
           if (1 === tmp7) {
@@ -60,7 +60,7 @@ function processEvent(arg0, arg1, arg2) {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;
@@ -78,15 +78,15 @@ function processEvent(arg0, arg1, arg2) {
             }
             contexts = closure_128_0.contexts;
             if ("unknown" !== tmp121.currentState) {
-              let obj2 = contexts;
+              let obj5 = contexts;
               if (!contexts) {
-                obj2 = {};
+                obj5 = {};
               }
-              contexts = obj2;
+              contexts = obj5;
               const _Object = Object;
               const _Object2 = Object;
-              const obj3 = { in_foreground: "active" === tmp121.currentState };
-              obj2.app = Object.assign(Object.assign({}, contexts.app), obj3);
+              const obj6 = { in_foreground: "active" === tmp121.currentState };
+              obj5.app = Object.assign(Object.assign({}, contexts.app), obj6);
             }
             if (contexts) {
               const _Object3 = Object;
@@ -183,8 +183,8 @@ function processEvent(arg0, arg1, arg2) {
                 closure_129_0.breadcrumbs = sorted.slice(-closure_128_9);
               }
               c5 = 3;
-              const obj4 = { value: closure_129_0, done: true };
-              return obj4;
+              const obj7 = { value: closure_129_0, done: true };
+              return obj7;
             } else {
               fingerprint = closure_129_0.fingerprint;
               closure_129_2 = fingerprint;
@@ -202,8 +202,8 @@ function processEvent(arg0, arg1, arg2) {
             }
           } else {
             c5 = 3;
-            const obj5 = { value: closure_129_0, done: true };
-            return obj5;
+            const obj8 = { value: closure_129_0, done: true };
+            return obj8;
           }
         }
       } catch (tmp121) {
@@ -231,7 +231,7 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn, arg1) => {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -253,14 +253,14 @@ if (!fn) {
         if (done.done) {
           closure_0(done.value);
         } else {
-          let tmp = done.value;
-          closure_0 = tmp;
-          if (!(tmp instanceof Promise)) {
-            tmp = new tmp((fn) => {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
               fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -274,16 +274,15 @@ if (!fn) {
         fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
+          tmp32 = new tmp3((fn) => {
             fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 

@@ -1,4 +1,6 @@
 // _runtime/08431_get_ColorPropType.js
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "ColorPropType", { get: () => require("colorPropType"), set: undefined });
 Object.defineProperty(obj, "EdgeInsetsPropType", { get: () => require("metro/08434__.js"), set: undefined });

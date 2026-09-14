@@ -51,8 +51,8 @@ class CellRenderer {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj = { separatorProps: { highlighted: false, leadingItem: tmp3Result.props.item } };
-    tmp3Result.state = obj;
+    obj1 = { separatorProps: { highlighted: false, leadingItem: tmp3Result.props.item } };
+    tmp3Result.state = obj1;
     tmp3Result._separators = {
       highlight() {
         ({ props, props: props2 } = closure_0);
@@ -100,11 +100,10 @@ const entry = {
   value: function updateSeparatorProps(_cellRefs) {
     closure_0 = _cellRefs;
     this.setState((separatorProps) => {
-      let obj = { separatorProps: null };
-      obj = {};
+      const obj = { separatorProps: null };
       const merged = Object.assign(separatorProps.separatorProps);
       const merged1 = Object.assign(closure_0);
-      obj.separatorProps = obj;
+      obj.separatorProps = {};
       return obj;
     });
   },
@@ -133,10 +132,10 @@ let items = [
       }
       const self = this;
       if (ListItemComponent) {
-        let obj = { item, index, separators: self._separators };
-        let tmp7 = React6(ListItemComponent, obj);
+        const obj2 = { item, index, separators: self._separators };
+        let tmp7 = React6(ListItemComponent, obj2);
       } else if (renderItem) {
-        obj = { item, index, separators: self._separators };
+        const obj = { item, index, separators: self._separators };
         tmp7 = renderItem(obj);
       } else {
         _modDef38(
@@ -159,7 +158,7 @@ let items = [
       if (!isValidElement(ItemSeparatorComponent)) {
         let tmp3 = ItemSeparatorComponent;
         if (ItemSeparatorComponent) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(self.state.separatorProps);
           tmp3 = React6(ItemSeparatorComponent, obj);
         }
@@ -182,29 +181,29 @@ let items = [
           tmp7 = items2;
         }
         if (CellRendererComponent) {
-          obj = { cellKey: props.cellKey, index, item, style: tmp7, onFocusCapture: self._onCellFocusCapture };
+          const obj2 = { cellKey: props.cellKey, index, item, style: tmp7, onFocusCapture: self._onCellFocusCapture };
           if (onCellLayout) {
-            obj = { onLayout: self._onLayout };
-            onCellLayout = obj;
+            const obj3 = { onLayout: self._onLayout };
+            onCellLayout = obj3;
           }
           const merged1 = Object.assign(onCellLayout);
           const items3 = [_renderElementResult, tmp2];
-          obj.children = items3;
-          let tmp10Result = React7(CellRendererComponent, obj);
+          obj2.children = items3;
+          let tmp10Result = React7(CellRendererComponent, obj2);
         } else {
-          const obj1 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
+          const obj4 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
           let tmp12 = onCellLayout;
           if (onCellLayout) {
-            const obj2 = { onLayout: self._onLayout };
-            tmp12 = obj2;
+            const obj5 = { onLayout: self._onLayout };
+            tmp12 = obj5;
           }
           const merged2 = Object.assign(tmp12);
           const items4 = [_renderElementResult, tmp2];
-          obj1.children = items4;
-          tmp10Result = React7(React5, obj1);
+          obj4.children = items4;
+          tmp10Result = React7(React5, obj4);
         }
-        const obj3 = { cellKey: self.props.cellKey, children: tmp10Result };
-        return React6(CellRenderer(322).VirtualizedListCellContextProvider, obj3);
+        const obj6 = { cellKey: self.props.cellKey, children: tmp10Result };
+        return React6(CellRenderer(322).VirtualizedListCellContextProvider, obj6);
       }
     },
   },
@@ -214,11 +213,11 @@ const entry1 = {
   value: function getDerivedStateFromProps(item, separatorProps) {
     let tmp = null;
     if (item.item !== separatorProps.separatorProps.leadingItem) {
-      let obj = { separatorProps: null };
-      obj = {};
+      const obj = { separatorProps: null };
+      const obj2 = {};
       const merged = Object.assign(separatorProps.separatorProps);
-      obj.leadingItem = item.item;
-      obj.separatorProps = obj;
+      obj2.leadingItem = item.item;
+      obj.separatorProps = obj2;
       tmp = obj;
     }
     return tmp;

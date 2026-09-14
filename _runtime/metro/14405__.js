@@ -1,46 +1,32 @@
 // _runtime/metro/14405__.js
-import _mod14385 from "14385__.js";
+import _mod14386 from "14386__.js";
+import _mod14390 from "14390__.js";
 import _mod14406 from "14406__.js";
 
-let tmp = _mod14385.process && _mod14385.process.versions;
-if (!tmp) {
-  tmp = _mod14385.Deno && _mod14385.Deno.version;
-  const tmp2 = _mod14385.Deno && _mod14385.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod14406;
-}
-if (_module) {
-  const match = _mod14406.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod14406.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod14390(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod14386.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod14406;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod14406 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
 }
 
-export default tmp3;
+export default prop;

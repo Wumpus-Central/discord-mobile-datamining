@@ -1,9 +1,55 @@
 // _runtime/metro/05320__.js
-let obj = {
-  0: null,
-  1: null,
-  2: null,
-  3: null,
+const obj = {
+  0: {
+    name: "GPSVersionID",
+    description(arg0) {
+      let str = "Unknown";
+      if (2 === arg0[0]) {
+        str = "Unknown";
+        if (2 === arg0[1]) {
+          str = "Unknown";
+          if (0 === arg0[2]) {
+            str = "Unknown";
+            if (0 === arg0[3]) {
+              str = "Version 2.2";
+            }
+          }
+        }
+      }
+      return str;
+    },
+  },
+  1: {
+    name: "GPSLatitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "North latitude";
+      if ("N" !== joined) {
+        let str2 = "Unknown";
+        if ("S" === joined) {
+          str2 = "South latitude";
+        }
+        str = str2;
+      }
+      return str;
+    },
+  },
+  2: { name: "GPSLatitude", description: fn(5319).getCalculatedGpsValue },
+  3: {
+    name: "GPSLongitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "East longitude";
+      if ("E" !== joined) {
+        let str2 = "Unknown";
+        if ("W" === joined) {
+          str2 = "West longitude";
+        }
+        str = str2;
+      }
+      return str;
+    },
+  },
   4: null,
   5: null,
   6: null,
@@ -33,7 +79,7 @@ let obj = {
   30: null,
   31: "GPSHPositioningError",
 };
-obj = {
+const obj2 = {
   name: "GPSVersionID",
   description(arg0) {
     let str = "Unknown";
@@ -52,39 +98,7 @@ obj = {
     return str;
   },
 };
-obj.name = obj;
-obj.description = {
-  name: "GPSLatitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "North latitude";
-    if ("N" !== joined) {
-      let str2 = "Unknown";
-      if ("S" === joined) {
-        str2 = "South latitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
-obj = { name: "GPSLatitude", description: fn(5319).getCalculatedGpsValue };
-obj[2] = obj;
-obj[3] = {
-  name: "GPSLongitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "East longitude";
-    if ("E" !== joined) {
-      let str2 = "Unknown";
-      if ("W" === joined) {
-        str2 = "West longitude";
-      }
-      str = str2;
-    }
-    return str;
-  },
-};
+const obj3 = { name: "GPSLatitude", description: fn(5319).getCalculatedGpsValue };
 obj[4] = { name: "GPSLongitude", description: fn(5319).getCalculatedGpsValue };
 obj[5] = {
   name: "GPSAltitudeRef",
@@ -277,9 +291,9 @@ obj[25] = {
     return str;
   },
 };
-const obj1 = { name: "GPSLongitude", description: fn(5319).getCalculatedGpsValue };
+const obj4 = { name: "GPSLongitude", description: fn(5319).getCalculatedGpsValue };
 obj[27] = { name: "GPSProcessingMethod", description: fn(5319).getEncodedString };
-const obj2 = { name: "GPSProcessingMethod", description: fn(5319).getEncodedString };
+const obj5 = { name: "GPSProcessingMethod", description: fn(5319).getEncodedString };
 obj[28] = { name: "GPSAreaInformation", description: fn(5319).getEncodedString };
 obj[30] = {
   name: "GPSDifferential",
